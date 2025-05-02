@@ -1,0 +1,1 @@
+/home/kidrek/SynologyDrive/00_Cybersecurity/00_projects/202504_VeilleCyber/cti_daily_report/2025/2025-05-02-report.md
