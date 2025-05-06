@@ -1,553 +1,295 @@
 # ⚠️Important Vulnerabilities (CVSS > 7.5)⚠️
-* 🐛 Critical Vulnerability in Tenable Identity Exposure (CVE-2025-32433)
-* 🐛 Multiple Critical Vulnerabilities in Microsoft Azure (CVE-2025-30390, CVE-2025-30392)
-* 🐛 Multiple High/Critical Vulnerabilities in IBM Products
-* 🐛 High Vulnerability in Elastic Logstash (CVE-2024-47561)
-* 🐛 High Vulnerability in Mozilla Products (CVE-2025-4083)
-* 🐛 High Vulnerability in Ubuntu Linux Kernel (CVE-2024-47685)
-* 🐛 High Vulnerability in VMware Tanzu Greenplum (CVE-2024-45337)
-* 🐛 Critical Vulnerability in SAP NetWeaver (CVE-2025-31324)
-* 🐛 High Vulnerability in Broadcom Fabric Operating System (CVE-2025-1976)
-* 🐛 SonicWall SMA Vulnerabilities (Chaînes d'exploitation Haute/Critique)
-* 🐛 Vulnérabilités AirPlay "Wormable" (AirBorne) Permettent l'Exécution de Code à Distance (RCE) sans Clic sur les Appareils Apple
-* 🐛 Vulnérabilités Commvault (Critique CVE-2025-34028 Activement Exploitée)
-* 🐛 BuddyBoss Platform Pro Plugin WordPress : Vulnérabilité de Contournement d'Authentification (CVE-2025-1909)
-* 🐛 Plugin WordPress External Image Replace : Vulnérabilité de Téléversement Arbitraire de Fichiers (CVE-2025-4279)
-* 🐛 OpenCTI : Vulnérabilité d'Escalade de Privilèges dans les Conteneurs (CVE-2025-24977)
-* 🐛 Multiples Vulnérabilités d'Injection SQL Hautes/Critiques dans le Portail Kashipara
-* 🐛 Tenda AC9 : Vulnérabilité d'Injection de Commandes (CVE-2025-45042)
-* 🐛 Output Messenger : Vulnérabilité de Parcours de Répertoire (CVE-2025-27920)
-* 🐛 WSO2 API Manager : Vulnérabilité XXE (CVE-2025-2905)
-* 🐛 Vulnérabilité Haute dans les Chipsets MediaTek (CVE-2025-20666)
-* 🐛 Vulnérabilité Critique dans Apache Parquet Java (CVE-2025-46762)
-* 🐛 Webmin : Vulnérabilité d'Escalade de Privilèges (CVE-2025-2774)
-* 🐛 Vulnérabilité Critique d'Injection SQL dans la Bibliothèque PHP ADOdb (CVE-2025-46337)
-* 🐛 Microsoft Office (macOS) : Vulnérabilité d'Évasion de Sandbox (CVE-2025-31191)
+* 🐞 Vulnérabilités Multiples dans SeaCMS v13.3
+* 🐛 Vulnérabilité Critique d'Injection SQL dans la Librairie PHP ADOdb (CVE-2025-46337)
+* 🔐 Vulnérabilités Critiques dans les Panneaux d'Alarme Honeywell MB-Secure (CVE-2025-2605)
+* 💥 Vulnérabilités Multiples Activement Exploitées dans Langflow (CVE-2025-3248) et Android/FreeType (CVE-2025-27363), et Commvault (CVE-2025-34028)
+* 🔓 Vulnérabilité Critique dans le Plugin WordPress OttoKit (CVE-2025-27007)
+* 🔐 Vulnérabilité Critique dans OpenCTI (CVE-2025-24977)
+* ⚠️ Vulnérabilités Critiques/Élevées dans IBM Cognos Analytics (CVE-2024-51466, CVE-2024-40695)
+* 🖱️ Vulnérabilités Élevées/Critiques dans Google Chrome/Edge (CVE-2025-4096, CVE-2025-4050)
+* 🔄 Vulnérabilités Critiques dans Tenda AC9 (CVE-2025-45042) et Output Messenger (CVE-2025-27920)
+* 🔑 Vulnérabilités Critiques d'Authentification/PrivEsc dans brcc (CVE-2025-45616) et yaoqishan (CVE-2025-45615), et BuddyBoss (CVE-2025-1909)
+* 💾 Vulnérabilités Critiques/Élevées d'Injection SQL dans Kashipara Online Service Management Portal (CVE-2025-45322, CVE-2025-45321)
+* 🌐 Vulnérabilités Élevées de Buffer Overflow dans Tenda AC1206 (CVE-2025-4299, CVE-2025-4298)
+* 📂 Vulnérabilité Élevée de Téléversement de Fichiers dans le Plugin WordPress External Image Replace (CVE-2025-4279)
+* 🖥️ Vulnérabilité Élevée d'Escalade de Privilèges dans Webmin (CVE-2025-2774)
+* 칩셋 Vulnérabilités Multiples dans les Chipsets MediaTek
+* 🍏 Vulnérabilités Corrigées Potentiellement Critiques/Ver dans Apple AirPlay
+* ☁️ Vulnérabilité Élevée dans AWS Amplify Studio (CVE-2025-4318)
+* 🚪 Vulnérabilité Élevée dans Digigram PYKO-OUT (CVE-2025-3927)
 
 ## Table of Contents
-* [Vulnérabilités Apple AirPlay (AirBorne)](#vulnérabilités-apple-airplay-airborne)
-* [Vulnérabilités Commvault](#vulnérabilités-commvault)
-* [Vulnérabilités SonicWall SMA](#vulnérabilités-sonicwall-sma)
-* [Multiples Vulnérabilités IBM](#multiples-vulnérabilités-ibm)
-* [Multiples Vulnérabilités Microsoft Azure](#multiples-vulnérabilités-microsoft-azure)
-* [Vulnérabilité Tenable Identity Exposure](#vulnérabilité-tenable-identity-exposure)
-* [Vulnérabilité Elastic Logstash](#vulnérabilité-elastic-logstash)
-* [Multiples Vulnérabilités Mozilla](#multiples-vulnérabilités-mozilla)
-* [Vulnérabilité Ubuntu Linux Kernel](#vulnérabilité-ubuntu-linux-kernel)
-* [Vulnérabilité VMware Tanzu Greenplum](#vulnérabilité-vmware-tanzu-greenplum)
-* [Vulnérabilité SAP NetWeaver](#vulnérabilité-sap-netweaver)
-* [Vulnérabilité Broadcom Fabric Operating System](#vulnérabilité-broadcom-fabric-operating-system)
-* [Vulnérabilité Netapp Ontap](#vulnérabilité-netapp-ontap)
-* [Vulnérabilité Apache Http Server](#vulnérabilité-apache-http-server)
-* [Vulnérabilité AWS Amplify Studio](#vulnérabilité-aws-amplify-studio)
-* [Vulnérabilité BuddyBoss Platform Pro Plugin WordPress](#vulnérabilité-buddyboss-platform-pro-plugin-wordpress)
-* [Vulnérabilité Plugin WordPress External Image Replace](#vulnérabilité-plugin-wordpress-external-image-replace)
-* [Vulnérabilité OpenCTI Container Escalation](#vulnérabilité-opencti-container-escalation)
-* [Vulnérabilités d'Injection SQL Kashipara Online Service Management Portal](#vulnérabilités-dinjection-sql-kashipara-online-service-management-portal)
-* [Vulnérabilité Tenda AC9](#vulnérabilité-tenda-ac9)
-* [Vulnérabilité Output Messenger](#vulnérabilité-output-messenger)
-* [Vulnérabilité WSO2 API Manager](#vulnérabilité-wso2-api-manager)
-* [Multiples Vulnérabilités Chipsets MediaTek](#multiples-vulnérabilités-chipsets-mediatek)
-* [Vulnérabilité Apache Parquet Java](#vulnérabilité-apache-parquet-java)
-* [Vulnérabilité Webmin Privilege Escalation](#vulnérabilité-webmin-privilege-escalation)
-* [Vulnérabilité Critique Bibliothèque PHP ADOdb](#vulnérabilité-critique-bibliothèque-php-adodb)
-* [Vulnérabilité Microsoft Office macOS Sandbox Escape](#vulnérabilité-microsoft-office-macos-sandbox-escape)
-* [Campagne d'Extorsion Luna Moth](#campagne-dextorsion-luna-moth)
-* [Contournement EDR "Bring Your Own Installer" et Ransomware Babuk](#contournement-edr-bring-your-own-installer-et-ransomware-babuk)
-* [Violation de Données TeleMessage](#violation-de-données-telemessage)
-* [Opération Darcula PhaaS](#opération-darcula-phaas)
-* [Cyberattaques Contre les Détaillants Britanniques et Campagne RomCom](#cyberattaques-contre-les-détaillants-britanniques-et-campagne-romcom)
-* [Campagne de l'APT Iranien Lemon Sandstorm](#campagne-de-lapt-iranien-lemon-sandstorm)
-* [Activité de l'APT China-Nexus PurpleHaze](#activité-de-lapt-china-nexus-purplehaze)
-* [Évolutions des Ransomwares RansomHub et Qilin](#évolutions-des-ransomwares-ransomhub-et-qilin)
-* [Attaque par Chaîne d'Approvisionnement Magento](#attaque-par-chaîne-dapprovisionnement-magento)
-* [Tendance : Scans de Tokens et Secrets Git](#tendance--scans-de-tokens-et-secrets-git)
-* [Attribution Française des Attaques d'APT28 à la Russie](#attribution-française-des-attaques-dapt28-à-la-russie)
-* [Rapport DDoS Cloudflare T1 2025](#rapport-ddos-cloudflare-t1-2025)
-* [Babuk2 Bjorka : Commodisation des Données](#babuk2-bjorka--commodisation-des-données)
-* [Le FBI Publie les IoC des Domaines de Phishing LabHost](#le-fbi-publie-les-ioc-des-domaines-de-phishing-labhost)
-* [Vulnérabilités dans les Portefeuilles de Navigateur (Browser Wallets)](#vulnérabilités-dans-les-portefeuilles-de-navigateur-browser-wallets)
-* [Schéma d'Attaque Reverse NFCGate](#schéma-dattacque-reverse-nfcgate)
-* [Malware Golden Chickens (TerraStealerV2, TerraLogger) et Tendances Stealer](#malware-golden-chickens-terrastealerv2-terralogger-et-tendances-stealer)
-* [Campagne du Loader SocGholish](#campagne-du-loader-socgholish)
-* [Conseils de Sécurité pour Google Workspace](#conseils-de-sécurité-pour-google-workspace)
+* [THREATS](#threats)
+    * [🕷️ UNC3944 (Scattered Spider) et DragonForce ciblant le secteur de la vente au détail au Royaume-Uni et ailleurs](#️-unc3944-scattered-spider-et-dragonforce-ciblant-le-secteur-de-la-vente-au-détail-au-royaume-uni-et-ailleurs)
+    * [🌕 Luna Moth (Silent Ransom Group) ciblant les entreprises américaines par hameçonnage de rappel (Callback Phishing)](#-luna-moth-silent-ransom-group-ciblant-les-entreprises-américaines-par-hameçonnage-de-rappel-callback-phishing)
+    * [🧛‍♂️ Darcula PhaaS : Plateforme d'Hameçonnage-as-a-Service pour le Vol de Cartes de Crédit](#-darcula-phaas--plateforme-d'hameçonnage-as-a-service-pour-le-vol-de-cartes-de-crédit)
+    * [🍼 Nouvelle technique de contournement d'EDR ("Bring Your Own Installer") utilisée dans des attaques par ransomware Babuk](#-nouvelle-technique-de-contournement-dedr-bring-your-own-installer-utilisée-dans-des-attaques-par-ransomware-babuk)
+* [VULNERABILITIES](#vulnerabilities)
+    * [🐛 Vulnérabilité Critique d'Injection SQL dans la Librairie PHP ADOdb (CVE-2025-46337)](#-vulnérabilité-critique-dinjection-sql-dans-la-librairie-php-adodb-cve-2025-46337)
+    * [🔐 Vulnérabilités Critiques dans les Panneaux d'Alarme Honeywell MB-Secure (CVE-2025-2605)](#-vulnérabilités-critiques-dans-les-panneaux-dalarme-honeywell-mb-secure-cve-2025-2605)
+    * [💥 Vulnérabilités Multiples Activement Exploitées dans Langflow (CVE-2025-3248), Android/FreeType (CVE-2025-27363), et Commvault (CVE-2025-34028)](#-vulnérabilités-multiples-activement-exploitées-dans-langflow-cve-2025-3248-androidfreetype-cve-2025-27363-et-commvault-cve-2025-34028)
+    * [🔓 Vulnérabilité Critique dans le Plugin WordPress OttoKit (CVE-2025-27007)](#-vulnérabilité-critique-dans-le-plugin-wordpress-ottokit-cve-2025-27007)
+    * [🔐 Vulnérabilité Critique dans OpenCTI (CVE-2025-24977)](#-vulnérabilité-critique-dans-opencti-cve-2025-24977)
+    * [⚠️ Vulnérabilités Critiques/Élevées dans IBM Cognos Analytics (CVE-2024-51466, CVE-2024-40695)](#-vulnérabilités-critiquesélevées-dans-ibm-cognos-analytics-cve-2024-51466-cve-2024-40695)
+    * [🐞 Vulnérabilités Multiples dans SeaCMS v13.3](#-vulnérabilités-multiples-dans-seacms-v133)
+    * [🖱️ Vulnérabilités Élevées/Critiques dans Google Chrome/Edge (CVE-2025-4096, CVE-2025-4050)](#️-vulnérabilités-élevéescritiques-dans-google-chromeedge-cve-2025-4096-cve-2025-4050)
+    * [🔄 Vulnérabilités Critiques dans Tenda AC9 (CVE-2025-45042) et Output Messenger (CVE-2025-27920)](#-vulnérabilités-critiques-dans-tenda-ac9-cve-2025-45042-et-output-messenger-cve-2025-27920)
+    * [🔑 Vulnérabilités Critiques d'Authentification/PrivEsc dans brcc (CVE-2025-45616), yaoqishan (CVE-2025-45615) et BuddyBoss (CVE-2025-1909)](#-vulnérabilités-critiques-dauthentificationprivesc-dans-brcc-cve-2025-45616-yaoqishan-cve-2025-45615-et-buddyboss-cve-2025-1909)
+    * [💾 Vulnérabilités Critiques/Élevées d'Injection SQL dans Kashipara Online Service Management Portal (CVE-2025-45322, CVE-2025-45321)](#-vulnérabilités-critiquesélevées-dinjection-sql-dans-kashipara-online-service-management-portal-cve-2025-45322-cve-2025-45321)
+    * [🌐 Vulnérabilités Élevées de Buffer Overflow dans Tenda AC1206 (CVE-2025-4299, CVE-2025-4298)](#-vulnérabilités-élevées-de-buffer-overflow-dans-tenda-ac1206-cve-2025-4299-cve-2025-4298)
+    * [📂 Vulnérabilité Élevée de Téléversement de Fichiers dans le Plugin WordPress External Image Replace (CVE-2025-4279)](#-vulnérabilité-élevée-de-téléversement-de-fichiers-dans-le-plugin-wordpress-external-image-replace-cve-2025-4279)
+    * [🖥️ Vulnérabilité Élevée d'Escalade de Privilèges dans Webmin (CVE-2025-2774)](#️-vulnérabilité-élevée-descalade-de-privilèges-dans-webmin-cve-2025-2774)
+    * [칩셋 Vulnérabilités Multiples dans les Chipsets MediaTek](#칩셋-vulnérabilités-multiples-dans-les-chipsets-mediatek)
+    * [🍏 Vulnérabilités Corrigées Potentiellement Critiques/Ver dans Apple AirPlay](#-vulnérabilités-corrigées-potentiellement-critiquesver-dans-apple-airplay)
+    * [☁️ Vulnérabilité Élevée dans AWS Amplify Studio (CVE-2025-4318)](#️-vulnérabilité-élevée-dans-aws-amplify-studio-cve-2025-4318)
+    * [🚪 Vulnérabilité Élevée dans Digigram PYKO-OUT (CVE-2025-3927)](#-vulnérabilité-élevée-dans-digigram-pyko-out-cve-2025-3927)
 
-## Vulnérabilités Apple AirPlay (AirBorne)
-Des chercheurs en cybersécurité ont divulgué une série de vulnérabilités, maintenant corrigées, dans le protocole et le logiciel AirPlay d'Apple, collectivement nommées AirBorne. Certaines de ces failles peuvent être enchaînées (CVE-2025-24252 et CVE-2025-24132) pour créer un exploit RCE "wormable" sans clic, permettant aux acteurs malveillants de déployer des malwares qui se propagent sur le réseau local auquel l'appareil infecté se connecte. D'autres failles notables incluent des contournements d'ACL, des exécutions de code arbitraire, des fuites d'informations sensibles, et des dénis de service. L'exploitation est potentielle sur macOS si le récepteur AirPlay est activé et configuré sur "Anyone on the same network" ou "Everyone" 🔥.
+# THREATS
+
+## 🕷️ UNC3944 (Scattered Spider) et DragonForce ciblant le secteur de la vente au détail au Royaume-Uni et ailleurs
+Des rapports récents lient les activités d'UNC3944 (alias Scattered Spider) et du groupe de ransomware DragonForce, en particulier dans des attaques contre de grands détaillants britanniques (Marks & Spencer, Co-op, Harrods). Ces acteurs partagent des tactiques, notamment l'utilisation de l'ingénierie sociale pour compromettre les équipes de support informatique (help desk) et obtenir un accès initial. UNC3944 est connu pour ses tactiques persistantes d'ingénierie sociale et ciblant divers secteurs, principalement dans les pays anglophones. DragonForce, qui a évolué d'un groupe hacktiviste à une opération RaaS axée sur le profit, utilise un modèle de multi-extorsion et des payloads basés sur le codebase de Conti. Des actions récentes des forces de l'ordre avaient temporairement réduit l'activité d'UNC3944, mais le groupe s'adapte et continue de cibler de grandes organisations.
+
+* Publication date : 2025/05/06
+* 🗺️ Source : https://cloud.google.com/blog/topics/threat-intelligence/unc3944-proactive-hardening-recommendations/, https://www.bleepingcomputer.com/news/security/uk-shares-security-tips-after-major-retail-cyberattacks/, https://securityonline.info/dragonforce-ransomware-cartel-hits-uk-retailers-with-custom-payloads-and-global-extortion-campaign/
+* 🧑‍💻 Threat Actor : UNC3944 (Scattered Spider, Lapsus$, The Com), DragonForce (RansomBay)
+* 🎯 Threat Target : Organisations de vente au détail (UK, US), Technologie, Télécommunications, Services Financiers, Externalisation des processus métier (BPO), Jeux, Hôtellerie, Médias & Divertissement, Gouvernements (Palau, Honolulu OTS), Entreprises (Coca-Cola Singapore, Ohio State Lottery, Yakult Australia), Cabinets d'avocats, Pratiques médicales. Géographie : Principalement pays anglophones (US, CA, UK, AU), récemment Singapour, Inde, Israël, Arabie Saoudite.
+* 🦹 Threat Tactic : Ingénierie Sociale (usurpation d'identité help desk, de l'équipe IT), Hameçonnage (Phishing), Credential Stuffing (sur RDP), Exploitation de Vulnérabilités, Mouvement Latéral, Escalade de Privilèges, Persistance, Exfiltration de Données, Extorsion, RaaS (Ransomware-as-a-Service).
+* 🛠️ Threat Tools : Ransomware DragonForce (variant de Conti v3, utilise AES et ChaCha8), Cobalt Strike, mimikatz, SystemBC, PingCastle, ADRecon, ADExplorer, SharpHound, Outils RMM (AnyDesk, Splashtop, Syncro, SuperOps, Zoho Assist, Atera), WinSCP (via SFTP), Rclone (cloud syncing), RansomBay (site de fuite de données).
+* ❓ MITRE ATT&CK : Ingénierie Sociale (T1348), Obtention d'Accès Initial (T1598.003 - Spearphishing Link), Mouvement Latéral (TA0008), Escalade de Privilèges (TA0004), Exfiltration (TA0010), Impact (TA0040). Specific techniques mentioned in the article include T1078 (Valid Accounts), T1078.003 (Remote Services), T1059 (Command and Scripting Interpreter), T1047 (Windows Management Instrumentation), T1543.003 (Create or Modify System Process: Windows Service), T1021.001 (Remote Services: RDP), T1021.004 (Remote Services: SSH), T1021.006 (Remote Services: WinRM), T1021.005 (Remote Services: VNC), T1021.002 (Remote Services: SMB/Windows Admin Shares), T1190 (Exploit Public-Facing Application), T1059 (Command and Scripting Interpreter), T1059.001 (PowerShell), T1059.003 (Windows Command Shell), T1059.004 (Unix Shell), T1059.005 (Visual Basic), T1059.006 (Python), T1059.007 (JavaScript), T1219 (Remote Access Software), T1105 (Ingress Tool Transfer), T1572 (Protocol Tunneling), T1041 (Exfiltration Over C2 Channel), T1567 (Exfiltration Over Web Service), T1567.002 (Exfiltration to Cloud Storage), T1490 (Inhibit System Recovery), T1486 (Data Encrypted for Impact), T1485 (Data Destruction), T1491 (Defacement).
+* 🛡️ Security Recommandations : Renforcer les processus de vérification d'identité pour le help desk (vérification sur caméra/en personne, ID, questions défi/réponse non publiques). Désactiver/améliorer la validation des réinitialisations de mot de passe en libre-service. Ne pas utiliser les données publiques pour la vérification. Désactiver temporairement les réinitialisations MFA en libre-service pendant les périodes de menace élevée. Supprimer SMS/appel téléphonique/email comme facteurs d'authentification. Utiliser des applications d'authentification résistantes au hameçonnage (correspondance de numéros, géovérification). Transition vers l'authentification sans mot de passe (passwordless). Utiliser des clés de sécurité FIDO2 pour les comptes privilégiés. Empêcher les admins d'enregistrer/utiliser les méthodes MFA héritées. Appliquer des critères multi-contextes pour l'authentification (appareil, emplacement). Restreindre l'enregistrement MFA aux emplacements de confiance et à la conformité des appareils. Investiguer/alerter sur le même MFA/numéro de téléphone enregistré sur plusieurs comptes. Revoir les emplacements IP qui peuvent contourner la MFA. Découpler l'annuaire d'identité (AD) des plateformes d'infrastructure/services cloud pour l'accès privilégié. Créer des comptes admin locaux avec des mots de passe complexes et MFA. Restreindre les portails admin aux emplacements de confiance/identités privilégiées. Utiliser des contrôles JIT pour les identifiants privilégiés. Appliquer le principe du moindre privilège. Hardener les comptes privilégiés pour éviter leur exposition sur des endpoints non-PAW. Inclure la révocation de tokens/clés d'accès, la revue des enregistrements MFA, des changements d'authentification et des appareils nouvellement inscrits dans les playbooks de réponse. Appliquer des contrôles de posture pour les appareils (certificat, OS, version, EDR). Surveiller les hôtes bastion/VMs non autorisés. Renforcer les politiques de jonction de domaine (Entra/AD). Examiner les logs d'authentification pour les noms d'hôte par défaut. Limiter l'utilisation des comptes locaux pour l'authentification réseau. Désactiver/restreindre l'accès distant aux partages admin/cachés. Appliquer des règles de pare-feu locales pour bloquer SMB, RDP, WinRM, PowerShell, WMI entrants. Restreindre l'utilisation des comptes de service/privilégiés pour l'authentification distante via GPO (Deny log on locally, Deny log on through Remote Desktop Services, Deny access to this computer from network, Deny log on as a batch, Deny log on as a service). Désactiver la modification des configurations d'agent VPN par les utilisateurs finaux. Assurer la journalisation des changements de configuration VPN. Envisager un VPN "Always-On" pour les appareils gérés. Isoler et restreindre l'accès aux systèmes PAM. Réduire le périmètre des comptes ayant accès aux systèmes PAM et exiger la MFA. Appliquer le RBAC dans les systèmes PAM. Suivre le principe JIT pour les identifiants stockés dans les systèmes PAM. Isoler et restreindre l'accès à l'infrastructure de virtualisation (ESXi, vCenter). Assurer l'isolation, la sécurisation et l'immutabilité des sauvegardes VM. Découpler l'authentification admin des plateformes de virtualisation de l'IdP centralisé. Faire pivoter proactivement les mots de passe root/admin locaux pour les identités privilégiées associées aux plateformes de virtualisation. Utiliser une MFA plus forte et la lier au SSO local pour tout accès admin à l'infra de virtualisation. Appliquer des mots de passe aléatoires pour les identités root/admin locales. Désactiver/restreindre l'accès SSH aux plateformes de virtualisation. Activer le mode verrouillé sur tous les hôtes ESXi. Renforcer le monitoring des tentatives d'authentification/activités suspectes sur les plateformes de virtualisation. Utiliser des identifiants uniques et séparés (non intégrés à l'IdP) pour l'accès/gestion de l'infra de sauvegarde et appliquer la MFA. S'assurer que les serveurs de sauvegarde sont isolés et résident dans un réseau dédié. Les sauvegardes doivent être dans une solution immuable si possible. Mettre en place des contrôles d'accès pour restreindre le trafic entrant vers les interfaces admin de l'infra de sauvegarde. Valider périodiquement la protection/intégrité des sauvegardes par simulation (red teaming). Segmenter l'accès admin aux plateformes d'outils de sécurité endpoint. Réduire le périmètre des identités ayant la capacité de créer, modifier ou supprimer des GPO. Si Intune est utilisé, appliquer des politiques d'accès nécessitant une approbation multi-admin. Surveiller les accès non autorisés aux technologies EDR et de gestion des correctifs. Surveiller le déploiement de scripts/applications via les technologies EDR et de gestion des correctifs. Revoir les exécutables, processus, chemins, applications autorisés. Inventaire des applications installées sur les endpoints et vérification des installations non autorisées d'outils RAT/reconnaissance. Surveiller et examiner les configurations de ressources cloud (nouvelles ressources, services exposés). Surveiller les créations/modifications de règles de groupe de sécurité réseau (NSG), règles de pare-feu, ressources exposées publiquement. Surveiller la création de clés/identifiants programmatiques (clés d'accès). Utiliser le balayage de vulnérabilités pour identifier les domaines/IPs/CIDR exposés publiquement. Appliquer une authentification forte (MFA résistante au hameçonnage) pour les applications/services publics. Pour les données/applications sensibles, restreindre la connectivité aux environnements cloud/SaaS à des plages d'IP spécifiques (de confiance). Bloquer les nœuds de sortie TOR et les plages d'IP VPS. Restreindre l'accès à l'infrastructure de services de confiance (TSI) aux segments réseau internes/durcis ou aux PAW. Créer des détections basées sur le monitoring du trafic réseau vers le TSI et alerter sur les anomalies. Restreindre les communications sortantes de tous les serveurs, en particulier ceux du TSI, des contrôleurs de domaine AD et des serveurs d'applications/données critiques. Bloquer le trafic sortant vers des noms de domaine/adresses IP malveillants et ceux associés aux outils d'accès à distance (RAT). S'assurer que les sites/portails contenant de la documentation sensible (provisionnement, MFA, schémas réseau, identifiants partagés) ont des restrictions d'accès. Balayer les documents/feuilles de calcul qui pourraient contenir des identifiants partagés. Implémenter des règles d'alerte sur les endpoints avec EDR pour l'exécution d'outils de reconnaissance connus (ADRecon, ADExplorer, SharpHound). Si une solution de monitoring d'identité est utilisée, s'assurer que les règles de détection et les alertes pour la reconnaissance/découverte sont activées. Mettre en place un mécanisme automatisé pour surveiller en continu les enregistrements de domaine imitant les conventions de nommage de l'organisation ([VotreNomOrganisation]-helpdesk.com, [VotreNomOrganisation]-SSO.com). Examiner les logs pour identifier les événements liés à l'enregistrement/ajout de nouveaux appareils/méthodes MFA. Vérifier la légitimité des nouveaux enregistrements par rapport au comportement utilisateur attendu. Contacter les utilisateurs si de nouveaux enregistrements sont détectés. Examiner les politiques organisationnelles concernant les outils de communication (Microsoft Teams). N'autoriser que les domaines externes de confiance pour les fournisseurs/partenaires attendus. Si les domaines externes ne peuvent pas être bloqués, créer une base de référence des domaines de confiance et alerter sur les nouveaux domaines qui tentent de contacter les employés. Sensibiliser les employés à contacter directement le help desk s'ils reçoivent des appels/messages suspects. Implémenter des détections pour l'authentification à partir d'emplacements inhabituels (proxies, VPNs). Surveiller les tentatives de changement de méthodes/critères d'authentification. Surveiller les anomalies d'authentification basées sur les tactiques d'ingénierie sociale. Pour Entra ID, surveiller les modifications des Trusted Named Locations. Pour Entra ID, surveiller les changements des politiques d'accès conditionnel qui imposent la MFA, en se concentrant sur les exclusions. S'assurer que le SOC a une visibilité sur les rejeux de tokens ou les logins suspects et déclencher une réauthentification si nécessaire. Pour Entra ID, surveiller l'abus potentiel de la fédération d'identité (vérifier les domaines fédérés, examiner la configuration de fédération, surveiller la création de nouveaux domaines/changement de méthode d'authentification). Durcir tous les comptes admin, portails et accès programmatiques. Sensibiliser les utilisateurs aux tactiques d'ingénierie sociale spécifiques à UNC3944/DragonForce (SMS phishing, appels téléphoniques, MFA fatigue, usurpation d'identité sur Teams, menaces de doxxing).
+
+## 🌕 Luna Moth (Silent Ransom Group) ciblant les entreprises américaines par hameçonnage de rappel (Callback Phishing)
+Le groupe d'extorsion de données Luna Moth, également connu sous le nom de Silent Ransom Group, a intensifié ses campagnes d'hameçonnage de rappel ciblant les institutions juridiques et financières aux États-Unis. Leur objectif principal est le vol de données suivi d'extorsion. Luna Moth utilisait auparavant des campagnes BazarCall pour obtenir un accès initial pour Ryuk et Conti. Après la dissolution de Conti, ils ont formé le Silent Ransom Group (SRG). Les attaques actuelles impliquent l'usurpation d'identité du support informatique par email, faux sites et appels téléphoniques, s'appuyant uniquement sur l'ingénierie sociale sans déployer de ransomware sur les machines des victimes. Ils incitent les victimes à installer des logiciels légitimes de surveillance et de gestion à distance (RMM) à partir de faux sites d'assistance, leur donnant ainsi accès aux systèmes. Les données volées sont ensuite exfiltrées et utilisées pour faire chanter les organisations.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/wormable-airplay-flaws-enable-zero.html, https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0258/, https://support.apple.com/en-us/122375
-* 🐛 CVE : [CVE-2025-24252](https://www.cve.org/CVERecord?id=CVE-2025-24252), [CVE-2025-24132](https://www.cve.org/CVERecord?id=CVE-2025-24132), [CVE-2025-24271](https://www.cve.org/CVERecord?id=CVE-2025-24271), [CVE-2025-24137](https://www.cve.org/CVERecord?id=CVE-2025-24137), [CVE-2025-24206](https://www.cve.org/CVERecord?id=CVE-2025-24206), [CVE-2025-24270](https://www.cve.org/CVERecord?id=CVE-2025-24270), [CVE-2025-24251](https://www.cve.org/CVERecord?id=CVE-2025-24251), [CVE-2025-31197](https://www.cve.org/CVERecord?id=CVE-2025-31197), [CVE-2025-30445](https://www.cve.org/CVERecord?id=CVE-2025-30445), [CVE-2025-31203](https://www.cve.org/CVERecord?id=CVE-2025-31203), [CVE-2025-30422](https://www.cve.org/CVERecord?id=CVE-2025-30422)
-* 📦 CVE IMPACTED PRODUCT : Apple AirPlay protocol/SDK, macOS (Ventura < 13.7.5, Sonoma < 14.7.5, Sequoia < 15.4), iOS < 18.4, iPadOS < 17.7.6 / < 18.4, tvOS < 18.4, visionOS < 2.4, AirPlay audio SDK < 2.7.1, AirPlay video SDK < 3.6.0.126, CarPlay Communication Plug-in < R18.1, third-party devices using AirPlay SDK
-* 💯 CVSS : Non spécifié (Haut/Critique implicite)
-* 💡 Security recommandations : Mettre à jour immédiatement tous les appareils Apple et tiers prenant en charge AirPlay vers les versions corrigées. S'assurer que les utilisateurs de l'organisation mettent également à jour leurs appareils personnels 🛡️.
+* 🗺️ Source : https://www.bleepingcomputer.com/news/security/luna-moth-extortion-hackers-pose-as-it-help-desks-to-breach-us-firms/
+* 🧑‍💻 Threat Actor : Luna Moth (Silent Ransom Group)
+* 🎯 Threat Target : Institutions juridiques et financières aux États-Unis (mentionne également US Customs and Border Protection, Coinbase, diverses institutions financières comme Scotiabank via les données compromises).
+* 🦹 Threat Tactic : Hameçonnage (Phishing de rappel), Ingénierie Sociale (usurpation d'identité IT help desk), Vol de données, Extorsion.
+* 🛠️ Threat Tools : Logiciels RMM légitimes (Syncro, SuperOps, Zoho Assist, Atera, AnyDesk, Splashtop), WinSCP (via SFTP), Rclone (cloud syncing).
+* 🛡️ Security Recommandations : Ajouter les domaines de hameçonnage et les adresses IP associés à une liste de blocage. Envisager de restreindre l'exécution des outils RMM qui ne sont pas utilisés dans l'environnement de l'organisation.
+* 🚩 Indicator of Compromise :
+    * DOMAIN : helpdesk[.]com (utilise des modèles de typosquatted patterns comme [company_name]-helpdesk.com et [company_name]helpdesk.com)
 
-## Vulnérabilités Commvault
-La CISA a ajouté une faille critique (CVE-2025-34028) impactant Commvault Command Center à son catalogue KEV, confirmant son exploitation active. Cette faille (CVSS 10.0) est un parcours de répertoire permettant l'exécution de code arbitraire via le téléversement de fichiers ZIP malveillants vers l'endpoint `deployWebpackage.do` 🚩. Une autre vulnérabilité (CVE-2025-3928, CVSS 8.7), permettant l'exécution de code via des webshells authentifiées, est également activement exploitée, bien que Commvault indique qu'elle n'a affecté qu'un petit nombre de clients et qu'il n'y a pas eu d'accès non autorisé aux données de sauvegarde.
+## 🧛‍♂️ Darcula PhaaS : Plateforme d'Hameçonnage-as-a-Service pour le Vol de Cartes de Crédit
+La plateforme d'hameçonnage-as-a-service (PhaaS) Darcula a volé 884 000 cartes de crédit suite à 13 millions de clics sur des liens malveillants envoyés par SMS à des cibles mondiales sur sept mois (2023-2024). Darcula cible les utilisateurs Android et iPhone dans plus de 100 pays, utilisant 20 000 domaines pour usurper l'identité de marques connues. Initialement remarquée pour son utilisation de RCS et iMessage, la plateforme a évolué pour inclure la génération automatique de kits de hameçonnage, des fonctionnalités furtives, un convertisseur carte de crédit vers carte virtuelle, et l'intégration de l'IA générative pour créer des escroqueries personnalisées. L'opération utilise un toolkit appelé 'Magic Cat'. Les chercheurs ont infiltré un groupe Telegram associé, identifiant environ 600 opérateurs (clients de la plateforme) et traçant l'opération jusqu'à un individu et une entreprise en Chine.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/commvault-cve-2025-34028-added-to-cisa.html, https://cybersecuritynews.com/commvault-cve-2025-34028-added-to-cisa.html, https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/
-* 🐛 CVE : [CVE-2025-34028](https://www.cve.org/CVERecord?id=CVE-2025-34028), [CVE-2025-3928](https://www.cve.org/CVERecord?id=CVE-2025-3928)
-* 📦 CVE IMPACTED PRODUCT : Commvault Command Center < 11.38.20 / < 11.38.25, Commvault Web Server
-* 💯 CVSS : 10.0 (CVE-2025-34028), 8.7 (CVE-2025-3928)
-* Threat Tactic : Exécution de code à distance, Parcours de répertoire, SSRF, Téléversement de fichiers
-* 💡 Security recommandations : Appliquer immédiatement les correctifs disponibles (versions 11.38.20 et 11.38.25 pour CVE-2025-34028) 🛡️. Auditer pour détecter des fichiers non autorisés ou des sessions admin suspectes. Monitorer les logs pour les tentatives d'exploitation sur les endpoints vulnérables.
-* 📡 Observables :
-    * DOMAIN: deploywebpackage[.]do, deployservicecommcell[.]do
+* 🗺️ Source : https://www.bleepingcomputer.com/news/security/darcula-phaas-steals-884-000-credit-cards-via-phishing-texts/, https://cybersecuritynews.com/darcula-phaas-stolen-884000-credit-card-details/
+* 🧑‍💻 Threat Actor : Opération Darcula (Silent Ransom Group mentionné dans le texte mais il s'agit d'une erreur d'attribution, l'acteur est le collectif Darcula), Opérateurs (env. 600 clients), 'x66/Kris' (utilisateur basé en Thaïlande, potentiel rôle hiérarchique élevé).
+* 🎯 Threat Target : Utilisateurs Android et iPhone dans plus de 100 pays, victimes d'escroqueries simulant des amendes de péage ou des notifications d'expédition de colis.
+* 🦹 Threat Tactic : Hameçonnage-as-a-Service (PhaaS), Smishing (hameçonnage par SMS via RCS, iMessage), Usurpation de marque, Vol d'identifiants et de cartes de crédit, Extorsion de données (via des sites de hameçonnage imitant des pages de connexion/paiement).
+* 🛠️ Threat Tools : Plateforme Darcula, Toolkit 'Magic Cat', Faux sites de hameçonnage (20 000 domaines), Logiciels/matériel de ferme de SIM.
+* 🛡️ Security Recommandations : Être vigilant face aux messages texte/emails inattendus demandant des informations personnelles ou de cliquer sur des liens. Vérifier l'authenticité des communications directement avec l'entreprise concernée via ses canaux officiels. Utiliser la MFA. Ne pas installer de logiciels ou fournir d'informations sensibles via des liens ou des appels non sollicités. Se méfier des offres trop belles pour être vraies. Les forces de l'ordre ont été informées.
 
-## Vulnérabilités SonicWall SMA
-Une chaîne d'exploitation critique nommée "SonicBoom" a été révélée, permettant aux attaquants distants de contourner l'authentification et de prendre le contrôle administratif des appliances SonicWall Secure Mobile Access (SMA). Cette chaîne combine CVE-2024-38475 (CVSS 9.1, Apache HTTP Server, contournement d'authentification via `mod_rewrite`) et CVE-2023-44221 (CVSS 7.2, injection de commande post-authentification dans l'interface de gestion SMA) 💥. Une autre vulnérabilité SonicWall (CVE-2025-23006) est également mentionnée comme exploitée. L'exploitation de la chaîne SonicBoom permet d'accéder à des pages admin restreintes, de voler des tokens de session et d'exécuter des commandes arbitraires avec des privilèges élevés. Les CVEs 2023-44221 et 2024-38475 ont été ajoutées au catalogue CISA KEV.
+## 🍼 Nouvelle technique de contournement d'EDR ("Bring Your Own Installer") utilisée dans des attaques par ransomware Babuk
+Une nouvelle technique de contournement d'EDR, surnommée "Bring Your Own Installer", est exploitée pour désactiver la fonction de protection contre l'altération de SentinelOne, permettant ainsi le déploiement du ransomware Babuk. Cette technique abuse du processus de mise à jour de l'agent SentinelOne lui-même. Les attaquants exécutent un programme d'installation légitime de SentinelOne, qui termine les processus de l'agent en cours d'exécution juste avant l'écrasement des fichiers, puis terminent de force le processus d'installation, laissant l'appareil sans protection. Cette technique a été découverte par les chercheurs de Stroz Friedberg lors d'une réponse à incident impliquant une attaque par ransomware. Elle ne repose pas sur des outils ou des pilotes tiers.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://cybersecuritynews.com/sonicboom-attack-chain-bypass-authentication/, https://securityonline.info/sonicwall-exploit-chain-exposes-admin-hijack-risk-via-cve-2023-44221-and-cve-2024-38475/, https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/
-* 🐛 CVE : [CVE-2024-38475](https://www.cve.org/CVERecord?id=CVE-2024-38475), [CVE-2023-44221](https://www.cve.org/CVERecord?id=CVE-2023-44221), [CVE-2025-23006](https://www.cve.org/CVERecord?id=CVE-2025-23006)
-* 📦 CVE IMPACTED PRODUCT : Sonicwall Sma 500V Firmware, Sma 400 Firmware, Sma 210 Firmware, Sma 410 Firmware, Sma 200 Firmware, SMA 100 Series (SMA 200, 210, 400, 410, 500v) < 10.2.1.14-75sv, Apache Http Server < 2.4.59
-* 💯 CVSS : 9.1 (CVE-2024-38475), 7.2 (CVE-2023-44221), Non spécifié (CVE-2025-23006)
-* Threat Tactic : Contournement d'authentification, Injection de commande, Vol de session, Exécution de code à distance
-* 💡 Security recommandations : Mettre à jour toutes les appliances SMA affectées vers la version 10.2.1.14-75sv ou ultérieure 🛡️. Auditer pour détecter des fichiers non autorisés ou des sessions admin suspectes. Monitorer les logs pour les tentatives d'exploitation.
-* 📡 Observables :
-    * IPv4: 10[.]2[.]1[.]14
+* 🗺️ Source : https://www.bleepingcomputer.com/news/security/new-bring-your-own-installer-edr-bypass-used-in-ransomware-attack/, https://cybersecuritynews.com/threat-actor-bypass-sentinelone-edr/
+* 🧑‍💻 Threat Actor : Acteurs de la menace utilisant le ransomware Babuk (affiliés), potentiellement ceux qui ont obtenu un accès administratif via une vulnérabilité antérieure.
+* 🎯 Threat Target : Appareils exécutant l'agent EDR SentinelOne, entreprises victimes du ransomware Babuk.
+* 🦹 Threat Tactic : Contournement d'EDR ("Bring Your Own Installer"), Déploiement de Ransomware.
+* 🛠️ Threat Tools : Programme d'installation légitime de SentinelOne, Ransomware Babuk, processus Windows Installer ("msiexec.exe").
+* 🛡️ Security Recommandations : Les clients de SentinelOne doivent activer le paramètre "Online Authorization" dans les paramètres de politique Sentinel. Ce paramètre exige une approbation de la console de gestion SentinelOne avant que les mises à niveau, les rétrogradations ou les désinstallations locales de l'agent puissent avoir lieu. Auditer les logs pour détecter les tentatives d'interrompre le processus msiexec.exe après l'arrêt des services de l'agent SentinelOne.
 
-## Multiples Vulnérabilités IBM
-Plusieurs vulnérabilités critiques et hautes ont été rapportées dans divers produits IBM. Cela inclut une faille critique (CVE-2025-24813, CVSS 9.8) dans IBM QRadar SIEM, permettant une atteinte à la confidentialité des données et une exécution de code arbitraire à distance, qui est activement exploitée 🚨. Deux vulnérabilités hautes/critiques (CVE-2016-8735, CVSS 9.8 et CVE-2016-5018, CVSS 9.1) impactent IBM Sterling B2B Integrator, la première permettant une exécution de code arbitraire à distance et la seconde un contournement de politique de sécurité. Une vulnérabilité haute (CVE-2024-51466, CVSS 9.0) dans IBM Cognos Analytics permet une atteinte à la confidentialité, un déni de service à distance et une exécution de code arbitraire à distance.
+# VULNERABILITIES
+
+## 🐛 Vulnérabilité Critique d'Injection SQL dans la Librairie PHP ADOdb (CVE-2025-46337)
+Une vulnérabilité critique d'injection SQL (CVSS 10.0) a été découverte dans ADOdb, une bibliothèque PHP d'abstraction de base de données largement utilisée. La faille réside dans la méthode `pg_insert_id()` du pilote PostgreSQL. Une échappement incorrect d'un paramètre de requête permet à un attaquant d'exécuter des commandes SQL arbitraires si la fonction est appelée avec des données fournies par l'utilisateur. Cela peut permettre le vol, la suppression de données, voire l'exécution de code à distance dans le pire scénario d'utilisation.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/
-* 🐛 CVE : [CVE-2025-24813](https://www.cve.org/CVERecord?id=CVE-2025-24813), [CVE-2016-8735](https://www.cve.org/CVERecord?id=CVE-2016-8735), [CVE-2016-5018](https://www.cve.org/CVERecord?id=CVE-2016-5018), [CVE-2024-51466](https://www.cve.org/CVERecord?id=CVE-2024-51466)
-* 📦 CVE IMPACTED PRODUCT : IBM QRadar SIEM, IBM Sterling B2B Integrator, IBM Cognos Analytics
-* 💯 CVSS : 9.8 (CVE-2025-24813), 9.8 (CVE-2016-8735), 9.1 (CVE-2016-5018), 9.0 (CVE-2024-51466)
-* Threat Tactic : Atteinte à la confidentialité, Exécution de code arbitraire à distance, Contournement de politique de sécurité, Déni de service à distance
-* 💡 Security recommandations : Se référer aux avis de l'éditeur (IBM) pour obtenir les correctifs et les appliquer dans les plus brefs délais 🛡️.
+* 🗺️ Source : https://securityonline.info/critical-sql-injection-vulnerability-found-in-adodb-php-library-cve-2025-46337-cvss-10-0/
+* 🐞 CVE : [CVE-2025-46337](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-46337)
+* 📦 CVE IMPACTED PRODUCT : ADOdb PHP library (versions <= 5.22.8)
+* ⚖️ CVSS : 10.0
+* 🛡️ Security Recommandations : Mettre à niveau vers ADOdb version 5.22.9 ou ultérieure. Si la mise à niveau immédiate n'est pas possible, ne passer que des données contrôlées au paramètre $fieldname de la méthode pg_insert_id(), ou l'échapper d'abord avec pg_escape_identifier().
 
-## Multiples Vulnérabilités Microsoft Azure
-Deux vulnérabilités critiques (CVE-2025-30390, CVSS 9.9 et CVE-2025-30392, CVSS 9.8) affectent Microsoft Azure, permettant toutes deux un contournement de la politique de sécurité 🔐. Bien qu'aucune information sur l'exploitabilité publique ne soit disponible dans le bulletin, leur score de criticité élevé nécessite une attention immédiate.
+## 🔐 Vulnérabilités Critiques dans les Panneaux d'Alarme Honeywell MB-Secure (CVE-2025-2605)
+Honeywell a publié un avis urgent concernant une vulnérabilité critique (CVSS 9.9) dans ses panneaux de contrôle d'alarme MB-Secure et MB-Secure PRO. La faille, une injection de commande OS, permet à un attaquant disposant d'un accès limité d'exécuter des commandes OS non autorisées avec des privilèges élevés (CAPEC-122).
+
+* Publication date : 2025/05/06
+* 🗺️ Source : https://securityonline.info/cve-2025-2605-cvss-9-9-critical-vulnerability-found-in-honeywell-mb-secure-alarm-panels/
+* 🐞 CVE : [CVE-2025-2605](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-2605)
+* 📦 CVE IMPACTED PRODUCT : Honeywell MB-Secure (V11.04 à V12.52), Honeywell MB-Secure PRO (V01.06 à V03.08)
+* ⚖️ CVSS : 9.9
+* ❓ MITRE ATT&CK : CAPEC-122: Privilege Abuse
+* 🛡️ Security Recommandations : Mettre à niveau vers MB-Secure version V12.53 et MB-Secure PRO version V03.09. Ces mises à jour sont destinées au personnel qualifié avec des identifiants administratifs.
+
+## 💥 Vulnérabilités Multiples Activement Exploitées dans Langflow (CVE-2025-3248), Android/FreeType (CVE-2025-27363), et Commvault (CVE-2025-34028)
+Plusieurs vulnérabilités critiques et élevées, activement exploitées dans la nature, ont été signalées.
+Une vulnérabilité critique (CVSS 9.8), **CVE-2025-3248**, dans la plateforme open-source Langflow permet l'exécution de code arbitraire à distance sans authentification via l'endpoint `/api/v1/validate/code`. La CISA l'a ajoutée à son catalogue KEV.
+Une vulnérabilité élevée (CVSS 8.1), **CVE-2025-27363**, dans le composant Système d'Android et la librairie FreeType, permettant l'exécution de code localement sans privilèges supplémentaires. Google a publié des correctifs et indique qu'elle est sous exploitation limitée et ciblée.
+Une vulnérabilité de sévérité maximale (CVSS 10.0), **CVE-2025-34028**, impactant Commvault Command Center via une faille de path traversal (traversée de chemins) permet à un attaquant non authentifié d'exécuter du code arbitraire. La CISA l'a ajoutée à son catalogue KEV.
+
+* Publication date : 2025/05/06, 2025/05/05
+* 🗺️ Source : https://thehackernews.com/2025/05/critical-langflow-flaw-added-to-cisa.html, https://thehackernews.com/2025/05/google-fixes-actively-exploited-android.html, https://www.security.nl/posting/886659/Google+komt+met+Android-updates+voor+aangevallen+FreeType-lek?channel=rss, https://securityonline.info/android-security-bulletin-may-2025-multi-vulnerabilities-including-actively-exploited-cve-2025-27363/, https://securityonline.info/langflow-under-attack-cisa-warns-of-active-exploitation-of-cve-2025-3248/, https://thehackernews.com/2025/05/commvault-cve-2025-34028-added-to-cisa.html
+* 🐞 CVE : [CVE-2025-3248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-3248), [CVE-2025-27363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-27363), [CVE-2025-34028](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-34028)
+* 📦 CVE IMPACTED PRODUCT : Langflow (la plupart des versions, corrigé en 1.3.0), Android System component (Android 13, 14, 15), FreeType library (<= 2.13.0), Commvault Command Center (11.38 Innovation Release, versions 11.38.0 à 11.38.19)
+* ⚖️ CVSS : 9.8 (CVE-2025-3248), 8.1 (CVE-2025-27363), 10.0 (CVE-2025-34028)
+* 🕵️ Exploitation : CVE-2025-3248 (Activement exploitée), CVE-2025-27363 (Exploitation limitée, ciblée), CVE-2025-34028 (Activement exploitée)
+* 🛡️ Security Recommandations :
+    *   Pour Langflow : Mettre à niveau vers la version 1.3.0 ou ultérieure. Appliquer les correctifs requis par la CISA avant le 26 mai 2025 pour les agences fédérales américaines.
+    *   Pour Android : Installer les mises à jour de sécurité Android de mai 2025 (niveaux de patch 2025-05-05 ou ultérieurs). Mettre à niveau FreeType vers une version supérieure à 2.13.0.
+    *   Pour Commvault Command Center : Mettre à niveau vers les versions 11.38.20, 11.38.25 ou ultérieures. Appliquer les correctifs requis par la CISA avant le 23 mai 2025 pour les agences fédérales américaines.
+* 🚩 Indicator of Compromise :
+    * IPv4 : 10[.]0[.]220[.]200 (exemple PoC pour Langflow)
+    * URL : hxxp[:]//10[.]0[.]220[.]200[:]8000/api/v1/validate/code (exemple PoC pour Langflow)
+
+## 🔓 Vulnérabilité Critique dans le Plugin WordPress OttoKit (CVE-2025-27007)
+Une vulnérabilité critique (CVSS 9.8) dans le plugin WordPress populaire OttoKit (plus de 100 000 installations) permet une escalade de privilèges non authentifiée. La faille réside dans la fonction `create_wp_connection` de l'API REST du plugin. Un attaquant peut obtenir le contrôle total du site, y compris la création de comptes administrateur, simplement en connaissant le nom d'utilisateur de l'administrateur, et en contournant l'authentification si aucun mot de passe d'application n'est défini. L'exploitation a été observée activement dans l'heure suivant la divulgation.
+
+* Publication date : 2025/05/06
+* 🗺️ Source : https://securityonline.info/cve-2025-27007-critical-ottokit-wordpress-plugin-flaw-exploited-after-disclosure-100k-sites-at-risk/
+* 🐞 CVE : [CVE-2025-27007](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-27007)
+* 📦 CVE IMPACTED PRODUCT : OttoKit WordPress plugin (versions <= 1.0.82)
+* ⚖️ CVSS : 9.8
+* 🕵️ Exploitation : Activement exploitée.
+* 🛡️ Security Recommandations : Mettre à niveau vers OttoKit version 1.0.83 ou ultérieure. Examiner les logs d'accès pour les requêtes suspectes vers `/wp-json/sure-triggers/v1/connection/create-wp-connection` et `/wp-json/sure-triggers/v1/automation/action`, ainsi que les payloads contenant `"type_event": "create_user_if_not_exists"`. Auditer les comptes utilisateur pour détecter les nouvelles entrées d'administrateur inattendues.
+
+## 🔐 Vulnérabilité Critique dans OpenCTI (CVE-2025-24977)
+Une vulnérabilité critique (CVSS 9.1) a été découverte dans la plateforme open source de Cyber Threat Intelligence OpenCTI. Avant la version 6.4.11, tout utilisateur disposant de la capacité `manage customizations` pouvait exécuter des commandes sur l'infrastructure sous-jacente et accéder aux secrets côté serveur en abusant des webhooks. Cela permet d'obtenir un shell root dans un conteneur et d'ouvrir l'environnement d'infrastructure à d'autres attaques.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-30390, https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-30392
-* 🐛 CVE : [CVE-2025-30390](https://www.cve.org/CVERecord?id=CVE-2025-30390), [CVE-2025-30392](https://www.cve.org/CVERecord?id=CVE-2025-30392)
-* 📦 CVE IMPACTED PRODUCT : Microsoft Azure
-* 💯 CVSS : 9.9 (CVE-2025-30390), 9.8 (CVE-2025-30392)
-* Threat Tactic : Contournement de politique de sécurité
-* 💡 Security recommandations : Se référer aux avis de l'éditeur (Microsoft) pour obtenir les correctifs et les appliquer dans les plus brefs délais 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-24977
+* 🐞 CVE : [CVE-2025-24977](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24977)
+* 📦 CVE IMPACTED PRODUCT : OpenCTI (versions antérieures à 6.4.11)
+* ⚖️ CVSS : 9.1
+* 🛡️ Security Recommandations : Mettre à niveau vers OpenCTI version 6.4.11 ou ultérieure.
 
-## Vulnérabilité Tenable Identity Exposure
-Une vulnérabilité critique (CVE-2025-32433, CVSS 10.0) a été découverte dans Tenable Identity Exposure, permettant une exécution de code arbitraire à distance 💻. Un code d'exploitation public est disponible pour cette faille, augmentant le risque d'exploitation.
+## ⚠️ Vulnérabilités Critiques/Élevées dans IBM Cognos Analytics (CVE-2024-51466, CVE-2024-40695)
+IBM a publié des mises à jour de sécurité pour corriger deux vulnérabilités affectant sa plateforme IBM Cognos Analytics. La plus sévère, **CVE-2024-51466** (CVSS 9.0), est une injection EL (Expression Language) permettant à un attaquant distant d'exposer des informations sensibles, de consommer des ressources mémoire et/ou de provoquer un crash du serveur. La seconde, **CVE-2024-40695** (CVSS 8.0), résulte d'une validation inadequate des téléversements de fichiers via l'interface web, permettant l'upload de fichiers exécutables malveillants et potentiellement l'exécution de code à distance.
+
+* Publication date : 2025/05/06
+* 🗺️ Source : https://securityonline.info/critical-ibm-cognos-analytics-vulnerabilities-demand-urgent-patching/
+* 🐞 CVE : [CVE-2024-51466](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-51466), [CVE-2024-40695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40695)
+* 📦 CVE IMPACTED PRODUCT : IBM Cognos Analytics (12.0.0 – 12.0.4, 11.2.0 – 11.2.4 FP4)
+* ⚖️ CVSS : 9.0 (CVE-2024-51466), 8.0 (CVE-2024-40695)
+* 🛡️ Security Recommandations : Appliquer les correctifs : 12.0.4 Interim Fix 1 pour les versions 12.0.0 à 12.0.4, et 11.2.4 FP5 pour les versions 11.2.0 à 11.2.4 FP4. IBM recommande fortement d'appliquer la mise à niveau immédiatement.
+
+## 🐞 Vulnérabilités Multiples dans SeaCMS v13.3
+Trois vulnérabilités critiques ont été découvertes dans SeaCMS v13.3. **CVE-2025-44074** et **CVE-2025-44072** sont des vulnérabilités d'injection SQL via les composants `admin_topic.php` et `admin_manager.php` respectivement (CVSS 9.8). **CVE-2025-44071** est une vulnérabilité d'exécution de code à distance (RCE) via le composant `phomebak.php` (CVSS 9.8), permettant l'exécution de code arbitraire via une requête craftée.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://www.tenable.com/security/tns-2025-07
-* 🐛 CVE : [CVE-2025-32433](https://www.cve.org/CVERecord?id=CVE-2025-32433)
-* 📦 CVE IMPACTED PRODUCT : Tenable Identity Exposure
-* 💯 CVSS : 10.0
-* Threat Tactic : Exécution de code arbitraire à distance
-* 💡 Security recommandations : Appliquer les correctifs fournis par l'éditeur (Tenable) sans délai 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-44074, https://cvefeed.io/vuln/detail/CVE-2025-44072, https://cvefeed.io/vuln/detail/CVE-2025-44071
+* 🐞 CVE : [CVE-2025-44074](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-44074), [CVE-2025-44072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-44072), [CVE-2025-44071](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-44071)
+* 📦 CVE IMPACTED PRODUCT : SeaCMS (v13.3)
+* ⚖️ CVSS : 9.8 (pour chaque CVE)
+* 🛡️ Security Recommandations : Aucune correction ou mise à jour spécifique mentionnée dans les sources, au-delà de la divulgation. Il est recommandé de restreindre l'accès aux panneaux d'administration et de surveiller les activités suspectes sur les fichiers mentionnés (`admin_topic.php`, `admin_manager.php`, `phomebak.php`).
 
-## Vulnérabilité Elastic Logstash
-Une vulnérabilité haute (CVE-2024-47561, CVSS 9.2) affecte Elastic Logstash, permettant une exécution de code arbitraire à distance 💥. Aucune information n'indique l'existence d'un code d'exploitation public dans le bulletin, mais la criticité reste élevée.
+## 🖱️ Vulnérabilités Élevées/Critiques dans Google Chrome/Edge (CVE-2025-4096, CVE-2025-4050)
+Google a corrigé plusieurs vulnérabilités dans Chrome, affectant également Microsoft Edge Chromium. **CVE-2025-4096** est un dépassement de tampon (Heap Buffer Overflow) dans HTML (CVSS 8.8, sévérité Haute pour Chromium). **CVE-2025-4050** est un accès hors limites (Out-of-Bounds Access) dans DevTools (CVSS 8.8, sévérité Moyenne pour Chromium). Ces failles pourraient permettre à un attaquant distant, via une page HTML craftée ou des gestes d'interface utilisateur spécifiques, d'exploiter la corruption du tas. Des PoC publiques sont disponibles.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://discuss.elastic.co/t/logstash-8-15-3-security-update-esa-2024-38/377707
-* 🐛 CVE : [CVE-2024-47561](https://www.cve.org/CVERecord?id=CVE-2024-47561)
-* 📦 CVE IMPACTED PRODUCT : Elastic Logstash
-* 💯 CVSS : 9.2
-* Threat Tactic : Exécution de code arbitraire à distance
-* 💡 Security recommandations : Appliquer les mises à jour de sécurité fournies par l'éditeur (Elastic) 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-4096, https://cvefeed.io/vuln/detail/CVE-2025-4050
+* 🐞 CVE : [CVE-2025-4096](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4096), [CVE-2025-4050](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4050)
+* 📦 CVE IMPACTED PRODUCT : Google Chrome (antérieur à 136.0.7103.59), Microsoft Edge Chromium (versions basées sur les versions Chrome vulnérables)
+* ⚖️ CVSS : 8.8 (pour chaque CVE)
+* 🕵️ Exploitation : PoC publics disponibles.
+* 🛡️ Security Recommandations : Mettre à jour Google Chrome vers la version 136.0.7103.59 ou ultérieure et Microsoft Edge Chromium vers la version corrigée correspondante.
 
-## Multiples Vulnérabilités Mozilla
-De multiples vulnérabilités hautes (CVE-2025-4083, CVSS 9.1 et d'autres mentionnées dans les avis CERT-FR) affectent les produits Mozilla (Firefox, Firefox ESR, Thunderbird), permettant un contournement de la politique de sécurité 🚫.
+## 🔄 Vulnérabilités Critiques dans Tenda AC9 (CVE-2025-45042) et Output Messenger (CVE-2025-27920)
+Deux vulnérabilités critiques ont été signalées. **CVE-2025-45042** (CVSS 9.8) est une vulnérabilité d'injection de commande dans Tenda AC9 v15.03.05.14 via la fonction Telnet. **CVE-2025-27920** (CVSS 9.8) est une vulnérabilité de traversée de répertoire (Directory Traversal) dans Output Messenger avant la version 2.0.63, due à une gestion incorrecte des chemins de fichiers, permettant potentiellement la fuite de configuration ou l'accès arbitraire aux fichiers.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://www.mozilla.org/en-US/security/advisories/mfsa2025-32/, https://www.mozilla.org/en-US/security/advisories/mfsa2025-31/, https://www.mozilla.org/en-US/security/advisories/mfsa2025-30/, https://www.mozilla.org/en-US/security/advisories/mfsa2025-29/, https://www.mozilla.org/en-US/security/advisories/mfsa2025-28/
-* 🐛 CVE : [CVE-2025-4083](https://www.cve.org/CVERecord?id=CVE-2025-4083)
-* 📦 CVE IMPACTED PRODUCT : Mozilla Firefox, Firefox ESR, Thunderbird
-* 💯 CVSS : 9.1 (CVE-2025-4083)
-* Threat Tactic : Contournement de politique de sécurité
-* 💡 Security recommandations : Mettre à jour les produits Mozilla vers les versions corrigées 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-45042, https://cvefeed.io/vuln/detail/CVE-2025-27920
+* 🐞 CVE : [CVE-2025-45042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45042), [CVE-2025-27920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-27920)
+* 📦 CVE IMPACTED PRODUCT : Tenda AC9 (v15.03.05.14), Output Messenger (avant 2.0.63)
+* ⚖️ CVSS : 9.8 (pour chaque CVE)
+* 🛡️ Security Recommandations : Pour Tenda AC9, désactiver ou restreindre l'accès à la fonction Telnet si elle n'est pas essentielle. Pour Output Messenger, mettre à niveau vers la version 2.0.63 ou ultérieure.
 
-## Vulnérabilité Ubuntu Linux Kernel
-Une vulnérabilité haute (CVE-2024-47685, CVSS 9.1) non spécifiée affecte le noyau Linux d'Ubuntu 🐧.
+## 🔑 Vulnérabilités Critiques d'Authentification/PrivEsc dans brcc (CVE-2025-45616), yaoqishan (CVE-2025-45615) et BuddyBoss (CVE-2025-1909)
+Trois vulnérabilités critiques liées à l'authentification ou l'escalade de privilèges ont été signalées. **CVE-2025-45616** (CVSS 9.8) est un contournement d'authentification dans l'API `/admin/**` de brcc v1.2.0. **CVE-2025-45615** (CVSS 9.8) est une escalade de privilèges administrative non authentifiée dans l'API `/admin/` de yaoqishan v0.0.1-SNAPSHOT. **CVE-2025-1909** (CVSS 9.8) est un contournement d'authentification dans le plugin WordPress BuddyBoss Platform Pro <= 2.7.01 via Apple OAuth. Ces failles permettent aux attaquants d'obtenir des droits d'administration ou de se connecter en tant qu'utilisateur existant (y compris administrateur).
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://ubuntu.com/security/notices/USN-7468-1
-* 🐛 CVE : [CVE-2024-47685](https://www.cve.org/CVERecord?id=CVE-2024-47685)
-* 📦 CVE IMPACTED PRODUCT : Ubuntu Linux Kernel
-* 💯 CVSS : 9.1
-* 💡 Security recommandations : Appliquer les mises à jour de sécurité fournies par Ubuntu 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-45616, https://cvefeed.io/vuln/detail/CVE-2025-45615, https://cvefeed.io/vuln/detail/CVE-2025-1909
+* 🐞 CVE : [CVE-2025-45616](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45616), [CVE-2025-45615](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45615), [CVE-2025-1909](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-1909)
+* 📦 CVE IMPACTED PRODUCT : brcc (v1.2.0), yaoqishan (v0.0.1-SNAPSHOT), BuddyBoss Platform Pro plugin for WordPress (versions <= 2.7.01)
+* ⚖️ CVSS : 9.8 (pour chaque CVE)
+* 🛡️ Security Recommandations : Pour brcc et yaoqishan, restreindre l'accès à l'API /admin/ si possible et surveiller les accès non autorisés. Pour BuddyBoss Platform Pro, mettre à niveau vers une version supérieure à 2.7.01.
 
-## Vulnérabilité VMware Tanzu Greenplum
-Une vulnérabilité haute (CVE-2024-45337, CVSS 9.1) affecte VMware Tanzu Greenplum, permettant un contournement de la politique de sécurité 🛡️.
+## 💾 Vulnérabilités Critiques/Élevées d'Injection SQL dans Kashipara Online Service Management Portal (CVE-2025-45322, CVE-2025-45321)
+Le portail de gestion de services en ligne Kashipara V1.0 est affecté par deux vulnérabilités d'injection SQL. **CVE-2025-45322** (CVSS 9.8) via le paramètre `checkid` dans `CheckStatus.php`, et **CVE-2025-45321** (CVSS 8.8) via le paramètre `rPassword` dans `/osms/Requester/Requesterchangepass.php`. Ces failles permettent l'injection SQL.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/25664
-* 🐛 CVE : [CVE-2024-45337](https://www.cve.org/CVERecord?id=CVE-2024-45337)
-* 📦 CVE IMPACTED PRODUCT : VMware Tanzu Greenplum
-* 💯 CVSS : 9.1
-* Threat Tactic : Contournement de politique de sécurité
-* 💡 Security recommandations : Appliquer les correctifs fournis par l'éditeur (Broadcom/VMware) 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-45322, https://cvefeed.io/vuln/detail/CVE-2025-45321
+* 🐞 CVE : [CVE-2025-45322](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45322), [CVE-2025-45321](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45321)
+* 📦 CVE IMPACTED PRODUCT : kashipara Online Service Management Portal (V1.0)
+* ⚖️ CVSS : 9.8 (CVE-2025-45322), 8.8 (CVE-2025-45321)
+* 🛡️ Security Recommandations : Assainir et valider toutes les entrées utilisateur, en particulier les paramètres mentionnés (`checkid`, `rPassword`), avant de les utiliser dans les requêtes SQL. Utiliser des requêtes paramétrées ou des procédures stockées.
 
-## Vulnérabilité SAP NetWeaver
-Une alerte a été émise concernant une vulnérabilité (CVE-2025-31324) dans SAP NetWeaver, qui permet l'exécution de code arbitraire à distance pour un utilisateur non authentifié 👻. Causée par un contournement de politique de sécurité lors du téléversement de fichiers arbitraires, cette faille impacte le composant Visual Composer development server. Le CERT-FR a connaissance de plusieurs compromissions liées à cette vulnérabilité, malgré l'absence de mention d'exploitation active dans le bulletin de sécurité mis à jour par SAP.
+## 🌐 Vulnérabilités Élevées de Buffer Overflow dans Tenda AC1206 (CVE-2025-4299, CVE-2025-4298)
+Plusieurs vulnérabilités de dépassement de tampon (Buffer Overflow) classées comme critiques/élevées (CVSS 8.8) ont été trouvées dans Tenda AC1206 jusqu'à la version 15.03.06.23. **CVE-2025-4299** affecte la fonction `setSchedWifi` et **CVE-2025-4298** affecte la fonction `formSetCfm`. Ces vulnérabilités peuvent être initiées à distance et des exploits publics sont disponibles.
+
+* Publication date : 2025/05/06
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-4299, https://cvefeed.io/vuln/detail/CVE-2025-4298
+* 🐞 CVE : [CVE-2025-4299](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4299), [CVE-2025-4298](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4298)
+* 📦 CVE IMPACTED PRODUCT : Tenda AC1206 (jusqu'à 15.03.06.23)
+* ⚖️ CVSS : 8.8 (pour chaque CVE)
+* 🕵️ Exploitation : Exploit public disponible.
+* 🛡️ Security Recommandations : Vérifier si une mise à jour du firmware est disponible pour Tenda AC1206 et l'appliquer. Restreindre l'accès administratif au routeur à des réseaux de confiance.
+* 🚩 Indicator of Compromise :
+    * URL : hxxps[:]//github[.]com/CH13hh/tmp_store_cc/blob/main/AC1206/AC1206setSchedWifi/setSchedWifi[.]md (PoC pour CVE-2025-4299)
+    * URL : hxxps[:]//github[.]com/CH13hh/tmp_store_cc/blob/main/AC1206/AC1206formSetCfm/formSetCfm[.]md (PoC pour CVE-2025-4298)
+
+## 📂 Vulnérabilité Élevée de Téléversement de Fichiers dans le Plugin WordPress External Image Replace (CVE-2025-4279)
+Le plugin WordPress External Image Replace, versions <= 1.0.8, est vulnérable au téléversement arbitraire de fichiers (CVSS 8.8). La faille réside dans la fonction `external_image_replace_get_posts::replace_post` en raison d'une validation manquante du type de fichier. Cela permet aux attaquants authentifiés, avec des permissions de niveau contributeur ou supérieur, de téléverser des fichiers arbitraires sur le serveur, rendant possible l'exécution de code à distance.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-005/, https://me.sap.com/notes/3593336, https://me.sap.com/notes/3596125
-* 🐛 CVE : [CVE-2025-31324](https://www.cve.org/CVERecord?id=CVE-2025-31324)
-* 📦 CVE IMPACTED PRODUCT : SAP NetWeaver (Visual Composer development server)
-* 💯 CVSS : Non spécifié (Critique implicite)
-* Threat Tactic : Exécution de code arbitraire à distance, Contournement de politique de sécurité, Téléversement de fichiers arbitraires
-* Threat Tools : Webshell
-* 💡 Security recommandations : Appliquer les correctifs fournis par SAP. Examiner les systèmes pour détecter des signes de compromission (webshells, activité anormale) 🛡️.
+* 🗺️ Source : https://cvefeed.io/vuln/detail/CVE-2025-4279
+* 🐞 CVE : [CVE-2025-4279](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4279)
+* 📦 CVE IMPACTED PRODUCT : External image replace plugin for WordPress (versions <= 1.0.8)
+* ⚖️ CVSS : 8.8
+* 🛡️ Security Recommandations : Mettre à niveau le plugin External Image Replace vers la version corrigée (aucune version corrigée n'est explicitement mentionnée dans la source, mais il faut rechercher une version supérieure à 1.0.8). Restreindre les privilèges des utilisateurs au strict minimum nécessaire.
 
-## Vulnérabilité Broadcom Fabric Operating System
-Une vulnérabilité haute (CVE-2025-1976, CVSS 8.6) a été identifiée dans Broadcom Fabric Operating System et est activement exploitée 🚨. Elle permet une exécution de code arbitraire.
+## 🖥️ Vulnérabilité Élevée d'Escalade de Privilèges dans Webmin (CVE-2025-2774)
+Une vulnérabilité de sécurité critique/élevée (CVSS 8.8) a été découverte dans Webmin, un outil d'administration système basé sur le web. La faille, **CVE-2025-2774**, est une injection CRLF dans la gestion des requêtes CGI qui permet aux attaquants authentifiés d'escalader leurs privilèges et d'exécuter du code avec des droits root sur les serveurs affectés (versions antérieures à 2.302).
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/25602
-* 🐛 CVE : [CVE-2025-1976](https://www.cve.org/CVERecord?id=CVE-2025-1976)
-* 📦 CVE IMPACTED PRODUCT : Broadcom Fabric Operating System
-* 💯 CVSS : 8.6
-* Threat Tactic : Exécution de code arbitraire
-* 💡 Security recommandations : Appliquer les correctifs fournis par l'éditeur (Broadcom) 🛡️.
+* 🗺️ Source : https://cybersecuritynews.com/webmin-vulnerability-escalate-privileges/
+* 🐞 CVE : [CVE-2025-2774](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-2774)
+* 📦 CVE IMPACTED PRODUCT : Webmin (versions antérieures à 2.302)
+* ⚖️ CVSS : 8.8
+* 🛡️ Security Recommandations : Mettre à jour Webmin vers la version 2.302 ou ultérieure. Restreindre l'accès à Webmin aux réseaux de confiance et appliquer des pratiques d'authentification forte. Examiner les logs système pour détecter les activités inhabituelles. Adhérer aux principes du moindre privilège.
 
-## Vulnérabilité Netapp Ontap
-Une vulnérabilité haute (CVE-2024-38475, CVSS 9.1), partagée avec SonicWall et Apache HTTP Server, affecte Netapp Ontap 9. Elle permet l'exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un contournement de la politique de sécurité. Cette faille est activement exploitée 🚨.
+## 칩셋 Vulnérabilités Multiples dans les Chipsets MediaTek
+MediaTek a publié un bulletin de sécurité pour mai 2025, détaillant plusieurs vulnérabilités affectant une large gamme de ses chipsets utilisés dans les smartphones, tablettes, appareils AIoT, systèmes audio et TV. Parmi les six CVE signalées, une est classée haute sévérité (**CVE-2025-20666**, CVSS non fourni mais décrit comme élevé), une assertion atteignable dans le composant Modem pouvant conduire à un déni de service (DoS) à distance si un appareil se connecte à une fausse station de base. Cinq autres sont de sévérité moyenne (CVSS non fournis mais décrits comme moyens), incluant des écritures hors limites, une force de chiffrement inadequate, une validation de certificat incorrecte et une exposition d'informations.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://security.netapp.com/advisory/ntap-20240712-0001/
-* 🐛 CVE : [CVE-2024-38475](https://www.cve.org/CVERecord?id=CVE-2024-38475)
-* 📦 CVE IMPACTED PRODUCT : Netapp Ontap 9
-* 💯 CVSS : 9.1
-* Threat Tactic : Exécution de code arbitraire à distance, Atteinte à la confidentialité des données, Contournement de la politique de sécurité
-* 💡 Security recommandations : Appliquer les correctifs fournis par l'éditeur (Netapp) 🛡️.
+* 🗺️ Source : https://cybersecuritynews.com/mediatek-patches-multiple-flaws/, https://securityonline.info/mediatek-may-2025-security-bulletin-chipset-vulnerabilities-disclosed/
+* 🐞 CVE : [CVE-2025-20666](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20666), [CVE-2025-20667](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20667), [CVE-2025-20671](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20671), [CVE-2025-20668](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20668), [CVE-2025-20670](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20670), [CVE-2025-20665](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20665)
+* 📦 CVE IMPACTED PRODUCT : Chipsets MediaTek (MT6833, MT6877, MT6893, et plus de 30 autres) affectés par diverses CVE et versions de firmware/Android (Modem NR15, Modem LR12A, LR13, NR15, NR16, NR17, NR17R firmware, Android 13.0, 14.0, 15.0).
+* ⚖️ CVSS : N/A (Décrit comme Haute/Moyenne sévérité)
+* 🛡️ Security Recommandations : Installer les dernières mises à jour logicielles fournies par les fabricants d'appareils dès qu'elles sont disponibles.
 
-## Vulnérabilité Apache Http Server
-Une vulnérabilité haute (CVE-2024-38475, CVSS 9.1), partagée avec SonicWall et Netapp, affecte Apache Http Server. Elle permet l'exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un contournement de la politique de sécurité. Cette faille est activement exploitée 🚨.
+## 🍏 Vulnérabilités Corrigées Potentiellement Critiques/Ver dans Apple AirPlay
+Des chercheurs en cybersécurité ont divulgué une série de vulnérabilités désormais corrigées dans le protocole AirPlay d'Apple. Ces failles, collectivement nommées AirBorne, si exploitées avec succès, pourraient permettre à un attaquant de prendre le contrôle des appareils compatibles. Certaines vulnérabilités, comme **CVE-2025-24252** et **CVE-2025-24132**, pourraient être enchaînées pour créer un exploit RCE (Remote Code Execution) sans clic et "wormable", capable de se propager sur le réseau local. D'autres failles permettent le contournement des listes de contrôle d'accès (ACL), la lecture de fichiers arbitraires locaux, la divulgation d'informations, les attaques de type "adversary-in-the-middle" (AitM) et le déni de service (DoS).
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/, https://httpd.apache.org/security/vulnerabilities_24.html
-* 🐛 CVE : [CVE-2024-38475](https://www.cve.org/CVERecord?id=CVE-2024-38475)
-* 📦 CVE IMPACTED PRODUCT : Apache Http Server
-* 💯 CVSS : 9.1
-* Threat Tactic : Exécution de code arbitraire à distance, Atteinte à la confidentialité des données, Contournement de la politique de sécurité
-* 💡 Security recommandations : Appliquer les correctifs fournis par l'éditeur (Apache) 🛡️.
+* 🗺️ Source : https://thehackernews.com/2025/05/wormable-airplay-flaws-enable-zero.html
+* 🐞 CVE : [CVE-2025-24252](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24252), [CVE-2025-24132](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24132), [CVE-2025-24206](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24206), [CVE-2025-24271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24271), [CVE-2025-24137](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24137), [CVE-2025-24270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24270), [CVE-2025-24251](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-24251), [CVE-2025-31197](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31197), [CVE-2025-30445](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-30445), [CVE-2025-31203](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31203), [CVE-2025-30422](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-30422)
+* 📦 CVE IMPACTED PRODUCT : Appareils Apple et tiers prenant en charge le protocole AirPlay, iOS (versions < 18.4), iPadOS (versions < 18.4 et < 17.7.6), macOS (versions < Sequoia 15.4, < Sonoma 14.7.5, < Ventura 13.7.5), tvOS (versions < 18.4), visionOS (versions < 2.4), AirPlay audio SDK (< 2.7.1), AirPlay video SDK (< 3.6.0.126), CarPlay Communication Plug-in (< R18.1).
+* ⚖️ CVSS : N/A (Non explicitement fourni dans l'article, mais impact décrit comme RCE sans clic, potentiellement critique)
+* 🛡️ Security Recommandations : Mettre à jour immédiatement tous les appareils Apple et les appareils tiers prenant en charge AirPlay vers les dernières versions logicielles corrigées (iOS 18.4+, iPadOS 18.4+ ou 17.7.6+, macOS Sequoia 15.4+, macOS Sonoma 14.7.5+, macOS Ventura 13.7.5+, tvOS 18.4+, visionOS 2.4+, AirPlay audio SDK 2.7.1+, AirPlay video SDK 3.6.0.126+, CarPlay Communication Plug-in R18.1+).
 
-## Vulnérabilité AWS Amplify Studio
-Une vulnérabilité de validation d'entrée (CVE-2025-4318, CVSS 7.2, Haute) a été découverte dans le composant `amplify-codegen-ui` d'AWS Amplify Studio 🛠️. Elle permet à un utilisateur authentifié avec la capacité `manage customizations` d'exécuter du code JavaScript arbitraire pendant le rendu et le processus de build du composant. La faille réside dans la fonction `expression-binding` qui ne valide pas correctement les propriétés du schéma du composant.
+## ☁️ Vulnérabilité Élevée dans AWS Amplify Studio (CVE-2025-4318)
+Une vulnérabilité de validation d'entrée (CVSS non précisé, mais impact RCE suggère un score élevé) a été identifiée dans le composant UI d'AWS Amplify Studio, spécifiquement dans le package `amplify-codegen-ui` (versions <= 2.20.2). La faille permet à un utilisateur authentifié disposant des droits de créer ou modifier des composants d'exécuter du code JavaScript arbitraire lors du rendu et du processus de build du composant, car la fonction `expression-binding` ne valide pas correctement les propriétés du schéma de composant.
+
 * Publication date : 2025/05/05
-* 🔗 Source : https://aws.amazon.com/security/security-bulletins/AWS-2025-010/, https://github.com/aws-amplify/amplify-codegen-ui/security/advisories/GHSA-hf3j-86p7-mfw8
-* 🐛 CVE : [CVE-2025-4318](https://www.cve.org/CVERecord?id=CVE-2025-4318)
-* 📦 CVE IMPACTED PRODUCT : AWS Amplify Studio amplify-codegen-ui <= 2.20.2
-* 💯 CVSS : 7.2
-* Threat Tactic : Exécution de code arbitraire, Validation d'entrée incorrecte
-* 💡 Security recommandations : Mettre à niveau vers la version 2.20.3 ou ultérieure 🛡️. S'assurer que tout code forké ou dérivé intègre les correctifs.
-* 📡 Observables :
-    * EMAIL: aws-security@amazon[.]com
+* 🗺️ Source : https://aws.amazon.com/security/security-bulletins/AWS-2025-010/
+* 🐞 CVE : [CVE-2025-4318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4318)
+* 📦 CVE IMPACTED PRODUCT : AWS Amplify Studio amplify-codegen-ui (versions <= 2.20.2)
+* ⚖️ CVSS : N/A (Implique un impact RCE pour utilisateur authentifié, probable sévérité Élevée)
+* 🛡️ Security Recommandations : Mettre à niveau le package `aws-amplify/amplify-codegen-ui` vers la version 2.20.3 ou ultérieure. S'assurer que tout code forké ou dérivé intègre les correctifs de la nouvelle version.
 
-## Vulnérabilité BuddyBoss Platform Pro Plugin WordPress
-Une vulnérabilité critique (CVE-2025-1909, CVSS 9.8) affecte le plugin BuddyBoss Platform Pro pour WordPress (versions <= 2.7.01) 🔐. Elle permet un contournement d'authentification via une vérification insuffisante lors des requêtes d'authentification Apple OAuth. Des attaquants non authentifiés peuvent se connecter en tant qu'utilisateur existant (y compris administrateur) s'ils connaissent son adresse email.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-1909, https://www.wordfence.com/threat-intel/vulnerabilities/id/7cce9b8b-0589-4b09-b184-a66fc86fcb46?source=cve, https://www.buddyboss.com/resources/buddyboss-platform-pro-releases/2-7-10/
-* 🐛 CVE : [CVE-2025-1909](https://www.cve.org/CVERecord?id=CVE-2025-1909)
-* 📦 CVE IMPACTED PRODUCT : BuddyBoss Platform Pro plugin for WordPress <= 2.7.01
-* 💯 CVSS : 9.8
-* Threat Tactic : Contournement d'authentification, Usurpation d'identité
-* 💡 Security recommandations : Mettre à jour le plugin vers la version 2.7.10 ou ultérieure 🛡️.
-* 📡 Observables :
-    * EMAIL: security@wordfence[.]com
+## 🚪 Vulnérabilité Élevée dans Digigram PYKO-OUT (CVE-2025-3927)
+Une vulnérabilité (CVSS non précisé, mais décrite comme "significative") a été identifiée dans les appareils Digigram PYKO-OUT AoIP (Audio-over-IP), classés comme End-of-Life (EOL). La faille réside dans la configuration par défaut du serveur web de l'appareil, qui ne requiert aucune authentification ni mot de passe. N'importe quel attaquant connaissant l'adresse IP de l'appareil (par défaut 192.168.0.100) peut accéder et manipuler sa configuration, contrôler les entrées/sorties audio, et potentiellement pivoter vers d'autres appareils connectés. Digigram ne fournira pas de correctif car le produit est EOL.
 
-## Vulnérabilité Plugin WordPress External Image Replace
-Une vulnérabilité haute (CVE-2025-4279, CVSS 8.8) a été découverte dans le plugin External image replace pour WordPress (versions <= 1.0.8) 🖼️. Elle permet le téléversement arbitraire de fichiers en raison d'une validation manquante du type de fichier dans la fonction `external_image_replace_get_posts::replace_post`. Des attaquants authentifiés avec des permissions de niveau contributeur ou supérieur peuvent téléverser des fichiers, menant potentiellement à l'exécution de code à distance.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-4279, https://www.wordfence.com/threat-intel/vulnerabilities/id/ee1624fd-d98b-4953-99dc-a952dda48aa1?source=cve, https://plugins.trac.wordpress.org/browser/external-image-replace/tags/1.0.8/class.php#L87
-* 🐛 CVE : [CVE-2025-4279](https://www.cve.org/CVERecord?id=CVE-2025-4279)
-* 📦 CVE IMPACTED PRODUCT : External image replace plugin for WordPress <= 1.0.8
-* 💯 CVSS : 8.8
-* Threat Tactic : Téléversement arbitraire de fichiers, Exécution de code à distance
-* 💡 Security recommandations : Mettre à jour le plugin vers une version corrigée (implicite après 1.0.8) 🛡️.
-* 📡 Observables :
-    * EMAIL: security@wordfence[.]com
-
-## Vulnérabilité OpenCTI Container Escalation
-Une vulnérabilité critique (CVE-2025-24977, CVSS 9.1) a été identifiée dans la plateforme OpenCTI (versions antérieures à 6.4.11) 📊. Tout utilisateur disposant de la capacité `manage customizations` peut exécuter des commandes sur l'infrastructure sous-jacente et accéder aux secrets internes côté serveur en abusant des webhooks. Cela octroie un shell root à l'intérieur d'un conteneur, ouvrant l'environnement d'infrastructure à d'autres attaques.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-24977, https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-mf88-g2wq-p7qm
-* 🐛 CVE : [CVE-2025-24977](https://www.cve.org/CVERecord?id=CVE-2025-24977)
-* 📦 CVE IMPACTED PRODUCT : OpenCTI prior to 6.4.11
-* 💯 CVSS : 9.1
-* Threat Tactic : Escalade de privilèges, Exécution de commande, Accès à des secrets
-* 💡 Security recommandations : Mettre à jour la plateforme OpenCTI vers la version 6.4.11 ou ultérieure 🛡️.
-* 📡 Observables :
-    * EMAIL: security-advisories@github[.]com
-
-## Vulnérabilités d'Injection SQL Kashipara Online Service Management Portal
-Deux vulnérabilités d'injection SQL (CVE-2025-45322, CVSS 9.8 et CVE-2025-45321, CVSS 8.8) affectent Kashipara Online Service Management Portal V1.0 💉. La faille critique (CVE-2025-45322) se trouve dans `osms/Requester/CheckStatus.php` via le paramètre `checkid`. La faille haute (CVE-2025-45321) se trouve dans `/osms/Requester/Requesterchangepass.php` via le paramètre `rPassword`.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-45322, https://cvefeed.io/vuln/detail/CVE-2025-45321, https://github.com/0xBhushan/Writeups/blob/main/CVE/Kashipara/Online%20Service%20Management%20Portal/SQL%20Injection-CheckStatus.pdf, https://github.com/0xBhushan/Writeups/blob/main/CVE/Kashipara/Online%20Service%20Management%20Portal/SQL%20Injection-Requesterchangepass.pdf
-* 🐛 CVE : [CVE-2025-45322](https://www.cve.org/CVERecord?id=CVE-2025-45322), [CVE-2025-45321](https://www.cve.org/CVERecord?id=CVE-2025-45321)
-* 📦 CVE IMPACTED PRODUCT : kashipara Online Service Management Portal V1.0
-* 💯 CVSS : 9.8 (CVE-2025-45322), 8.8 (CVE-2025-45321)
-* Threat Tactic : Injection SQL
-* 💡 Security recommandations : Appliquer les correctifs de l'éditeur (si disponibles). Assainir les entrées utilisateur utilisées dans les requêtes SQL 🛡️.
-* 📡 Observables :
-    * EMAIL: cve@mitre[.]org
-
-## Vulnérabilité Tenda AC9
-Une vulnérabilité critique (CVE-2025-45042, CVSS 9.8) d'injection de commandes a été découverte dans Tenda AC9 v15.03.05.14 via la fonction Telnet 🔌.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-45042, https://github.com/Ghostsuzhijian/Iot-/blob/main/ac9_telnetd/rx3_telnetd.md
-* 🐛 CVE : [CVE-2025-45042](https://www.cve.org/CVERecord?id=CVE-2025-45042)
-* 📦 CVE IMPACTED PRODUCT : Tenda AC9 v15.03.05.14
-* 💯 CVSS : 9.8
-* Threat Tactic : Injection de commandes
-* 💡 Security recommandations : Mettre à jour le firmware du Tenda AC9 vers une version corrigée (si disponible) 🛡️. Désactiver la fonction Telnet si elle n'est pas utilisée.
-* 📡 Observables :
-    * EMAIL: cve@mitre[.]org
-
-## Vulnérabilité Output Messenger
-Une vulnérabilité critique (CVE-2025-27920, CVSS 9.8) de parcours de répertoire affecte Output Messenger avant la version 2.0.63 📁. La faille est due à une gestion incorrecte des chemins de fichiers, permettant aux attaquants d'accéder à des fichiers sensibles en dehors du répertoire prévu en utilisant des séquences `../`. Cela peut mener à des fuites de configuration ou un accès arbitraire aux fichiers.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-27920, https://www.outputmessenger.com/cve-2025-27920/, https://www.srimax.com/products-2/output-messenger/
-* 🐛 CVE : [CVE-2025-27920](https://www.cve.org/CVERecord?id=CVE-2025-27920)
-* 📦 CVE IMPACTED PRODUCT : Output Messenger before 2.0.63
-* 💯 CVSS : 9.8
-* Threat Tactic : Parcours de répertoire, Fuite d'informations, Accès arbitraire aux fichiers
-* 💡 Security recommandations : Mettre à jour Output Messenger vers la version 2.0.63 ou ultérieure 🛡️.
-* 📡 Observables :
-    * EMAIL: cve@mitre[.]org
-
-## Vulnérabilité WSO2 API Manager
-Une vulnérabilité d'entité externe XML (XXE) (CVE-2025-2905, CVSS 9.1) a été découverte dans le composant passerelle de WSO2 API Manager 📄. Elle est due à une validation insuffisante des entrées XML dans les chemins d'URL, permettant la résolution d'entités externes. Un attaquant distant non authentifié peut l'exploiter pour lire des fichiers du système de fichiers du serveur ou effectuer des attaques par déni de service (DoS), comme des charges utiles "Billion Laughs". L'étendue de la lecture de fichiers dépend de la version du JDK.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-2905, https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2025/WSO2-2025-3993/
-* 🐛 CVE : [CVE-2025-2905](https://www.cve.org/CVERecord?id=CVE-2025-2905)
-* 📦 CVE IMPACTED PRODUCT : WSO2 API Manager (gateway component)
-* 💯 CVSS : 9.1
-* Threat Tactic : XXE, Lecture de fichiers, Déni de service
-* 💡 Security recommandations : Appliquer les correctifs ou configurations recommandés par WSO2 🛡️. Configurer les parseurs XML pour désactiver la résolution d'entités externes.
-
-## Multiples Vulnérabilités Chipsets MediaTek
-MediaTek a publié des correctifs de sécurité pour six vulnérabilités affectant une large gamme de chipsets utilisés dans les smartphones, tablettes, et téléviseurs 📱📺. La plus sévère est CVE-2025-20666 (Haute criticité), une assertion atteignable dans le composant Modem qui pourrait mener à un déni de service à distance si un appareil se connecte à une station de base malveillante 📶. D'autres vulnérabilités (CVE-2025-20667, CVE-2025-20671, CVE-2025-20668, CVE-2025-20670, CVE-2025-20665) sont de gravité moyenne, permettant potentiellement la divulgation d'informations, l'escalade de privilèges locale, ou le contournement de permissions.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cybersecuritynews.com/mediatek-patches-multiple-flaws/, https://securityonline.info/mediatek-may-2025-security-bulletin-chipset-vulnerabilities-disclosed/, https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-019/
-* 🐛 CVE : [CVE-2025-20666](https://www.cve.org/CVERecord?id=CVE-2025-20666), [CVE-2025-20667](https://www.cve.org/CVERecord?id=CVE-2025-20667), [CVE-2025-20671](https://www.cve.org/CVERecord?id=CVE-2025-20671), [CVE-2025-20668](https://www.cve.org/CVERecord?id=CVE-2025-20668), [CVE-2025-20670](https://www.cve.org/CVERecord?id=CVE-2025-20670), [CVE-2025-20665](https://www.cve.org/CVERecord?id=CVE-2025-20665)
-* 📦 CVE IMPACTED PRODUCT : MediaTek chipsets (MT6833, MT6877, MT6893, etc.)
-* 💯 CVSS : Non spécifié (Haute pour CVE-2025-20666, Moyenne pour les autres)
-* Threat Tactic : Déni de service à distance, Divulgation d'informations, Escalade de privilèges, Contournement de permissions
-* 💡 Security recommandations : Installer les dernières mises à jour logicielles fournies par les fabricants d'appareils dès qu'elles sont disponibles 🛡️.
-
-## Vulnérabilité Apache Parquet Java
-Une vulnérabilité critique (CVE-2025-46762) affecte Apache Parquet Java (parquet-avro module, versions <= 1.15.1), permettant l'exécution de code arbitraire à distance 💻. La faille réside dans le processus d'analyse du schéma Avro intégré dans les métadonnées des fichiers Parquet. Lorsque les modèles "specific" ou "reflect" sont utilisés, des classes malveillantes peuvent être exécutées à partir de paquets approuvés par défaut.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thecyberexpress.com/apache-parquet-java-flaw-cve-2025-46762/, https://cybersecuritynews.com/apache-parquet-java-vulnerability/, https://securityonline.info/cve-2025-46762-apache-parquet-java-flaw-allows-potential-rce-via-avro-schema/
-* 🐛 CVE : [CVE-2025-46762](https://www.cve.org/CVERecord?id=CVE-2025-46762), [CVE-2025-30065](https://www.cve.org/CVERecord?id=CVE-2025-30065)
-* 📦 CVE IMPACTED PRODUCT : Apache Parquet Java (parquet-avro module) <= 1.15.1
-* 💯 CVSS : Non spécifié (Critique implicite)
-* Threat Tactic : Exécution de code arbitraire à distance, Désérialisation de données non fiable
-* 💡 Security recommandations : Mettre à niveau vers Apache Parquet Java 1.15.2 ou ultérieure 🛡️. Si la mise à niveau n'est pas immédiate, définir la propriété système JVM `-Dorg.apache.parquet.avro.SERIALIZABLE_PACKAGES=""`. Privilégier l'utilisation du modèle Avro "generic" qui n'est pas affecté.
-
-## Vulnérabilité Webmin Privilege Escalation
-Une vulnérabilité haute (CVE-2025-2774, CVSS 8.8) a été découverte dans Webmin (versions antérieures à 2.302), permettant l'escalade de privilèges et l'exécution de code avec des droits root 📈. La faille est une injection CRLF dans la gestion des requêtes CGI, exploitable par des attaquants *authentifiés* pour manipuler les réponses du serveur et exécuter des commandes sous l'utilisateur `nobody`, puis escalader vers root.
-* Publication date : 2025/05/05
-* 🔗 Source : https://cybersecuritynews.com/webmin-vulnerability-escalate-privileges/
-* 🐛 CVE : [CVE-2025-2774](https://www.cve.org/CVERecord?id=CVE-2025-2774), [CVE-2024-12828](https://www.cve.org/CVERecord?id=CVE-2024-12828)
-* 📦 CVE IMPACTED PRODUCT : Webmin prior to 2.302
-* 💯 CVSS : 8.8 (CVE-2025-2774), Non spécifié (CVE-2024-12828)
-* Threat Tactic : Escalade de privilèges, Injection CRLF, Exécution de code
-* 💡 Security recommandations : Mettre à jour Webmin vers la version 2.302 ou ultérieure 🛡️. Restreindre l'accès à Webmin aux réseaux de confiance et appliquer des pratiques d'authentification fortes. Examiner les logs système pour l'activité inhabituelle.
-
-## Vulnérabilité Critique Bibliothèque PHP ADOdb
-Une faille de sécurité critique (CVE-2025-46337, CVSS 10.0) a été divulguée dans ADOdb, une bibliothèque PHP d'abstraction de base de données largement utilisée (plus de 2,8 millions d'installations) 💻📚. La vulnérabilité réside dans la méthode `pg_insert_id()` du pilote PostgreSQL (versions <= 5.22.8) en raison d'un échappement incorrect d'un paramètre de requête. Cela permet à un attaquant d'exécuter des commandes SQL arbitraires lorsque du code utilisant ADOdb se connecte à une base de données PostgreSQL et appelle `pg_insert_id()` avec des données fournies par l'utilisateur.
-* Publication date : 2025/05/05
-* 🔗 Source : https://securityonline.info/critical-sql-injection-vulnerability-found-in-adodb-php-library-cve-2025-46337-cvss-10-0/
-* 🐛 CVE : [CVE-2025-46337](https://www.cve.org/CVERecord?id=CVE-2025-46337)
-* 📦 CVE IMPACTED PRODUCT : ADOdb PHP library (PostgreSQL drivers: postgres64, postgres7, postgres8, postgres9) <= 5.22.8
-* 💯 CVSS : 10.0
-* Threat Tactic : Injection SQL
-* 💡 Security recommandations : Mettre à niveau vers ADOdb version 5.22.9 ou ultérieure 🛡️. En alternative, ne passer que des données contrôlées au paramètre `$fieldname` de `pg_insert_id()` ou l'échapper avec `pg_escape_identifier()`.
-
-## Vulnérabilité Microsoft Office macOS Sandbox Escape
-Microsoft Threat Intelligence a divulgué une vulnérabilité significative (CVE-2025-31191, CVSS 7.8, Haute) dans Microsoft Office pour macOS 🍎. Cette faille permet aux attaquants de contourner la sandbox de l'application et d'exécuter du code non autorisé en manipulant les "security-scoped bookmarks" et l'entrée du trousseau (`com.apple.scopedbookmarksagent.xpc`). L'exploitation peut se faire sans interaction utilisateur et permet l'évasion de la sandbox, potentiellement menant à l'escalade de privilèges, l'exfiltration de données ou le déploiement d'autres charges utiles.
-* Publication date : 2025/05/05
-* 🔗 Source : https://securityonline.info/cve-2025-31191-microsoft-exposes-macos-vulnerability-allowing-app-sandbox-escape/, https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-31191
-* 🐛 CVE : [CVE-2025-31191](https://www.cve.org/CVERecord?id=CVE-2025-31191)
-* 📦 CVE IMPACTED PRODUCT : Microsoft Office on macOS
-* 💯 CVSS : 7.8
-* Threat Tactic : Évasion de sandbox, Escalade de privilèges (potentielle), Exécution de code non autorisé
-* 💡 Security recommandations : Appliquer les mises à jour de sécurité d'Apple qui incluent le correctif (macOS Sequoia 15.4 et ultérieur) 🛡️.
-
-## Campagne d'Extorsion Luna Moth
-Le groupe d'extorsion de données Luna Moth, également connu sous le nom de Silent Ransom Group (SRG), intensifie ses campagnes de phishing par rappel ("callback phishing") ciblant les institutions juridiques et financières aux États-Unis 📞💸. Luna Moth, issu des opérateurs BazarCall liés à Ryuk/Conti, n'utilise plus de ransomware dans ses attaques actuelles mais se concentre sur le vol et l'extorsion de données. Les attaquants se font passer pour le support informatique par email, faux sites web et appels téléphoniques, utilisant l'ingénierie sociale pour convaincre les victimes d'installer des logiciels RMM légitimes (Syncro, SuperOps, Zoho Assist, Atera, AnyDesk, Splashtop). Une fois l'accès obtenu, ils exfiltrent des données sensibles via WinSCP (SFTP) ou Rclone, puis menacent de les divulguer sur leur site clearweb si une rançon n'est pas payée.
-* Publication date : 2025/05/05
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/luna-moth-extortion-hackers-pose-as-it-help-desks-to-breach-us-firms/
-* 🎭 Threat Actor : Luna Moth, Silent Ransom Group (SRG), BazarCall
-* 🛡️ Threat Target : Institutions juridiques et financières aux États-Unis
-* 🗺️ Threat Tactic : Phishing par rappel (Callback Phishing), Ingénierie sociale, Usurpation d'identité (Support IT), Abus de logiciels légitimes (RMM), Mouvement latéral (post-accès), Vol de données, Extorsion
-* 🔧 Threat Tools : Syncro, SuperOps, Zoho Assist, Atera, AnyDesk, Splashtop (logiciels RMM abusés), WinSCP (via SFTP), Rclone, Faux sites web (typosquattés)
-* 💡 Security recommandations : Sensibiliser les employés aux risques du phishing par rappel. Vérifier l'identité des interlocuteurs demandant l'installation de logiciels. Restreindre l'exécution des outils RMM qui ne sont pas utilisés dans l'environnement de l'organisation 🛡️. Bloquer les domaines d'indicateurs de compromission connus.
-* 📡 Observables :
-    * DOMAIN: helpdesk[.]com, [company_name]-helpdesk.com, [company_name]helpdesk.com
-
-## Contournement EDR "Bring Your Own Installer" et Ransomware Babuk
-Une nouvelle technique de contournement d'EDR appelée "Bring Your Own Installer" est utilisée dans des attaques pour désactiver la fonction de protection contre la falsification de SentinelOne et déployer le ransomware Babuk 🦠🔒. La technique exploite une faille dans le processus de mise à niveau de l'agent SentinelOne, qui permet de terminer les processus de l'agent avant d'installer la nouvelle version. Les attaquants exécutent l'installeur légitime, puis terminent de force le processus d'installation après l'arrêt des services de l'agent, laissant l'appareil sans protection avant de déployer le ransomware. Cette technique n'utilise pas d'outils ou de pilotes tiers, mais abuse de l'installeur de l'EDR lui-même. La faille est efficace sur plusieurs versions de l'agent SentinelOne et n'est pas dépendante de la version spécifique observée dans l'incident.
-* Publication date : 2025/05/05
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/new-bring-your-own-installer-edr-bypass-used-in-ransomware-attack/
-* 📦 CVE IMPACTED PRODUCT : SentinelOne EDR
-* 🎭 Threat Actor : Non spécifié (Groupes de ransomware)
-* 🗺️ Threat Tactic : Contournement d'EDR, Persistance (potentielle), Déploiement de ransomware, Abus de processus système (msiexec.exe)
-* 🔧 Threat Tools : Installeur SentinelOne légitime (abusé), Ransomware Babuk
-* 💡 Security recommandations : Activer le paramètre "Online Authorization" dans les politiques SentinelOne, qui nécessite une approbation de la console de gestion pour les mises à niveau, les rétrogradations ou les désinstallations locales de l'agent 🛡️.
-
-## Violation de Données TeleMessage
-TeleMessage, une société israélienne qui propose un outil non officiel d'archivage de messages Signal utilisé par certains responsables gouvernementaux américains, a suspendu tous ses services après avoir été piratée 😟📧. Smarsh, la société mère, a confirmé un "incident de sécurité potentiel". Un hacker a affirmé à 404 Media avoir accédé aux messages directs et aux discussions de groupe archivées via TM SGNL (le clone non officiel de Signal de TeleMessage). Bien que les messages des responsables de l'administration Trump ne semblent pas avoir été compromis, les données extraites incluraient des informations de contact de responsables gouvernementaux, une partie du contenu des messages et des identifiants de connexion au backend de TeleMessage. Des captures d'écran lient les données volées à l'US Customs and Border Protection, Coinbase et diverses institutions financières comme Scotiabank.
-* Publication date : 2025/05/05
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/unofficial-signal-app-used-by-trump-officials-investigates-hack/
-* 📦 CVE IMPACTED PRODUCT : TeleMessage (TM SGNL)
-* 🛡️ Threat Target : Utilisateurs de TeleMessage (incluant responsables gouvernementaux américains, US Customs and Border Protection, Coinbase, Scotiabank)
-* 🗺️ Threat Tactic : Piratage, Accès non autorisé, Vol de données
-* 🔧 Threat Tools : Non spécifié (potentiellement exploitation de vulnérabilités comme des identifiants codés en dur)
-* 💡 Security recommandations : Surveiller les communications de TeleMessage/Smarsh pour les mises à jour et les conseils spécifiques. Réinitialiser les identifiants de connexion au backend si utilisés. Envisager l'utilisation d'applications officielles et approuvées avec des mesures de sécurité robustes 🛡️.
-
-## Opération Darcula PhaaS
-La plateforme Phishing-as-a-Service (PhaaS) Darcula, alias Magic Cat, a volé 884 000 cartes de crédit suite à 13 millions de clics sur des liens malveillants envoyés par SMS à des cibles mondiales 🌍💳. L'opération, menée entre 2023 et 2024, cible les utilisateurs Android et iPhone dans plus de 100 pays à l'aide de 20 000 domaines usurpant des marques connues (amendes de péage, notifications d'expédition). Darcula se distingue par sa capacité à utiliser RCS et iMessage en plus des SMS, et a évolué pour permettre la génération automatique de kits de phishing pour n'importe quelle marque, incluant des fonctionnalités furtives et un convertisseur de carte de crédit en carte virtuelle. Des recherches ont lié l'opération à un individu chinois et à une entreprise qui aurait créé "Magic Cat" 🇨🇳. Environ 600 opérateurs (clients cybercriminels) utilisent Darcula, communiquent principalement en chinois, et utilisent des fermes de SIM et du matériel pour l'envoi de messages de masse et le traitement des cartes volées.
-* Publication date : 2025/05/05
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/darcula-phaas-steals-884-000-credit-cards-via-phishing-texts/, https://securityonline.info/critical-sql-injection-vulnerability-found-in-adodb-php-library-cve-2025-46337-cvss-10-0/
-* 🎭 Threat Actor : Darcula, Silent Ransom Group, Magic Cat (toolkit), x66/Kris (opérateur)
-* 🛡️ Threat Target : Utilisateurs Android et iPhone dans le monde, Clients de marques connues (péages, expédition), Institutions financières (traitement cartes)
-* 🗺️ Threat Tactic : Phishing-as-a-Service (PhaaS), Phishing par SMS/RCS/iMessage, Usurpation de marque, Création de faux sites web (typosquattés), Ingénierie sociale, Vol de données (identifiants, cartes de crédit), Extorsion (implicite), Fermes de SIM, Traitement de cartes volées
-* 🔧 Threat Tools : Magic Cat (phishing toolkit), Fermes de SIM, Matériel pour traitement de cartes, Rclone, WinSCP
-* 💡 Security recommandations : Être vigilant face aux messages texte inattendus, en particulier ceux demandant des informations personnelles ou des clics sur des liens. Vérifier l'authenticité des expéditeurs et des URL. Ne pas installer d'applications ni fournir d'informations sensibles via des liens reçus par SMS 🛡️.
-* 📡 Observables :
-    * DOMAIN: discuss[.]elastic[.]co, msrc[.]microsoft[.]com, www[.]mozilla[.]org, me[.]sap[.]com, france[.]fr, legifrance[.]gouv[.]fr, psirt[.]global[.]sonicwall[.]com, service-public[.]fr, hxxpd[.]apache[.]org, www[.]tenable[.]com, support[.]broadcom[.]com, info[.]gouv[.]fr, www[.]ibm[.]com, cyber[.]gouv[.]fr, security[.]netapp[.]com, ubuntu[.]com, documentation[.]commvault[.]com, www[.]cert[.]ssi[.]gouv[.]fr, support[.]apple[.]com, gdrive-share[.]online, 1dv365[.]live, opn[.]to, gcloud-drive[.]com, cloudedrive[.]com, datadrv1[.]com
-
-## Cyberattaques Contre les Détaillants Britanniques et Campagne RomCom
-Trois cyberattaques de haut profil ciblant de grands détaillants britanniques (Marks & Spencer, Co-op, Harrods) ont incité le NCSC britannique à publier des conseils de sécurité 🛒🇬🇧. Les attaques sont attribuées à l'opération DragonForce, utilisant des tactiques associées à Scattered Spider et Lapsus$ ("the Com"). Les attaques ont commencé par de l'ingénierie sociale : les acteurs menaçants se sont fait passer pour des employés pour contacter le support informatique et obtenir la réinitialisation de leurs identifiants, gagnant ainsi un accès initial au réseau. Si M&S a subi une attaque par ransomware (DragonForce), Co-op a pu détecter et arrêter l'attaque avant le déploiement du chiffreur, mais une quantité "significative" de données clients a été volée. Harrods a rapporté une tentative de violation.
-
-Parallèlement, le groupe RomCom (alias Storm-0978, etc.) a lancé une nouvelle campagne d'espionnage cybernétique, "Operation Deceptive Prospect", ciblant les organisations britanniques de vente au détail, d'hôtellerie et d'infrastructures critiques nationales (CNI) 🏨🔌. Cette campagne utilise une approche nouvelle : les portails de commentaires clients comme vecteur d'attaque. RomCom soumet de fausses plaintes convaincantes via ces portails, utilisant des adresses email Yahoo et des liens vers de faux documents hébergés sur des domaines contrôlés par les attaquants (se faisant passer pour Google Drive ou Microsoft OneDrive). L'analyse suggère l'utilisation d'IA pour générer le contenu des emails. Les liens mènent à une chaîne de redirection complexe et finalement à des pages imitant OneDrive pour livrer des charges utiles malveillantes (exécutables Windows signés par "GMC CONSTRUCTION AND TRADING COMPANY LIMITED"). L'analyse du malware indique des chevauchements avec le backdoor SnipBot (RomCom 5.0). Le groupe utilise des tactiques comme l'abus de WebDAV et de fichiers SCF sur SMB pour la collecte d'identifiants NTLM, ainsi que le "port-hopping" pour la communication C2. RomCom est également connu pour exploiter des vulnérabilités (CVE-2023-36884, CVE-2024-9680, CVE-2024-49039).
-* Publication date : 2025/05/05
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/uk-shares-security-tips-after-major-retail-cyberattacks/, https://securityonline.info/bridewell-uncovers-operation-deceptive-prospect-targeting-uk-organizations-via-feedback-portals/, https://en.wikipedia.org/wiki/Lapsus$, https://doublepulsar.com
-* 🎭 Threat Actor : DragonForce, Scattered Spider, Lapsus$, "the Com", RomCom, Storm-0978, Tropical Scorpius, UNC2596, Void Rabisu, UAC-0180
-* 🛡️ Threat Target : Détaillants britanniques (Marks & Spencer, Co-op, Harrods), Organisations britanniques (vente au détail, hôtellerie, CNI)
-* 🗺️ Threat Tactic : Ingénierie sociale (usurpation d'employés, support IT), Réinitialisation de mots de passe, Accès initial, Mouvement latéral, Déploiement de ransomware (DragonForce), Vol de données, Extorsion, Espionnage cybernétique, Phishing (via portails de commentaires clients), Usurpation d'identité (clients), Utilisation d'IA (potentielle), Chaînes de redirection, Abus de plateformes cloud légitimes (Google Drive, Microsoft OneDrive), Livraison de malware, Abus de protocole (WebDAV), Collecte d'identifiants (NTLM), Abus de fichiers SCF, Port-hopping (C2)
-* 🔧 Threat Tools : Ransomware DragonForce, SnipBot (RomCom 5.0 backdoor), Exécutables Windows signés (GMC CONSTRUCTION AND TRADING COMPANY LIMITED), 7-Zip, Potentiellement Havoc (via RemoteInjector), Outils pour WebDAV et SCF
-* 💡 Security recommandations : Déployer l'authentification multi-facteurs (MFA) de manière exhaustive 🛡️. Surveiller l'utilisation non autorisée des comptes, en particulier les connexions risquées. Auditer régulièrement les comptes administrateurs et les permissions. Revoir les procédures de réinitialisation des mots de passe du support technique pour garantir une vérification d'identité solide. Permettre aux équipes de sécurité de détecter les connexions provenant de sources inhabituelles (VPN résidentiels). Pour la campagne RomCom : Sensibiliser les employés traitant les commentaires clients aux risques de phishing. Mettre en place des règles de filtrage et de surveillance des emails provenant de portails de commentaires et contenant des liens externes. Examiner attentivement les signatures des fichiers téléchargés.
-* 📡 Observables :
-    * DOMAIN: doublepulsar[.]com, en[.]wikipedia[.]org, gdrive-share[.]online, 1dv365[.]live, opn[.]to, gcloud-drive[.]com, cloudedrive[.]com, datadrv1[.]com
-    * URL: hxxps[:]//en[.]wikipedia[.]org/wiki/Lapsus$
-
-## Campagne de l'APT Iranien Lemon Sandstorm
-L'équipe FortiGuard Incident Response a détaillé une intrusion d'APT iranien, probablement Lemon Sandstorm (alias HanifNet, HXLibrary, NeoExpressRAT), visant une infrastructure critique nationale (CNI) au Moyen-Orient 🇮🇷⚔️. L'attaque, débutée dès mai 2023 et potentiellement en mai 2021, a impliqué un accès via des identifiants compromis, le déploiement de webshells et de backdoors personnalisés (HanifNet, NeoExpressRAT, HXLibrary), et l'utilisation de chaînes de proxies pour l'évasion. Le groupe a fait preuve de discipline opérationnelle, changeant fréquemment d'outils et d'infrastructure. Cinq nouvelles familles de malwares ont été identifiées (HanifNet, NeoExpressRAT, HXLibrary, RemoteInjector, CredInterceptor). Les attaquants ont également modifié des fichiers JavaScript OWA légitimes pour siphoner silencieusement les identifiants. L'adversaire a établi une présence dans le réseau OT segmenté, mais l'atteinte des systèmes OT n'a pas été confirmée.
-* Publication date : 2025/05/05
-* 🔗 Source : https://securityonline.info/iranian-apt-group-breaches-middle-eastern-critical-infrastructure-in-stealth-campaign/
-* 🎭 Threat Actor : Lemon Sandstorm, Iranian state-backed threat group, HanifNet, HXLibrary, NeoExpressRAT
-* 🛡️ Threat Target : Infrastructure critique nationale (CNI) au Moyen-Orient
-* 🗺️ Threat Tactic : Accès initial (identifiants compromis), Accès VPN SSL, Déploiement de webshells, Déploiement de backdoors, Chaînes de proxies (évasion), Espionnage, Prépositionnement, Collecte d'identifiants (OWA JavaScript, LSASS hooks), Mouvement latéral, Tentatives de réentrée (phishing, exploitation de serveurs web)
-* 🔧 Threat Tools : Webshells (default.aspx, UpdateChecker.aspx), HanifNet (.NET backdoor), NeoExpressRAT (RAT via DLL side-loading), HXLibrary (IIS module), MeshCentral, plink, Ngrok, ReverseSocks5, SystemBC, RemoteInjector (loader pour Havoc), CredInterceptor (LSASS password harvester), OWA JavaScript modifié (flogon.js)
-* 💡 Security recommandations : Renforcer la sécurité des accès VPN SSL. Mettre en place une surveillance rigoureuse pour détecter les webshells et les backdoors personnalisés. Utiliser des solutions de sécurité pour détecter l'abus de logiciels légitimes et les techniques d'évasion. Segmenter les réseaux (IT/OT) et monitorer activement les communications 🛡️. Revoir les configurations des serveurs web (OWA, IIS) pour détecter les modifications malveillantes.
-
-## Activité de l'APT China-Nexus PurpleHaze
-SentinelOne a rapporté que le groupe de menace PurpleHaze, lié à la Chine et ayant des liens lâches avec APT15, a mené des tentatives de reconnaissance contre son infrastructure et certains de ses clients de grande valeur 🇨🇳 reconnaissance 🕵️. PurpleHaze a également ciblé une entité de soutien gouvernemental en Asie du Sud en octobre 2024, utilisant un réseau d'ORB (Operational Relay Box) et un backdoor Windows nommé GoReShell.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🎭 Threat Actor : PurpleHaze, China-nexus threat cluster, APT15 (liens lâches)
-* 🛡️ Threat Target : Infrastructure SentinelOne, Clients de grande valeur de SentinelOne, Entité de soutien gouvernemental en Asie du Sud
-* 🗺️ Threat Tactic : Reconnaissance, Accès initial, Réseau ORB (Operational Relay Box)
-* 🔧 Threat Tools : GoReShell (backdoor Windows)
-* 💡 Security recommandations : Renforcer la surveillance des tentatives de reconnaissance et des accès non autorisés. Mettre en place des défenses pour détecter l'activité de GoReShell et l'utilisation de réseaux ORB 🛡️.
-
-## Évolutions des Ransomwares RansomHub et Qilin
-Le groupe de ransomware-as-a-service (RaaS) agressif RansomHub semble s'être brusquement mis hors ligne début avril 2025 💀. Cela a soulevé des spéculations selon lesquelles les cybercriminels associés pourraient avoir migré vers Qilin, qui a connu une résurgence récente, ou vers DragonForce, un groupe rival qui a annoncé la formation d'un nouveau "cartel". RansomHub était connu pour offrir plus d'autonomie à ses affiliés pour communiquer directement avec les victimes et collecter les rançons.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🎭 Threat Actor : RansomHub (groupe inactif ?), Qilin, DragonForce
-* 🗺️ Threat Tactic : Ransomware-as-a-Service (RaaS), Extorsion, Vol de données (implicite)
-* 🔧 Threat Tools : Encrypteur multi-plateforme (RansomHub)
-* 💡 Security recommandations : Maintenir des sauvegardes hors ligne régulières. Appliquer une gestion stricte des accès et des privilèges. Mettre en place des stratégies de détection et de réponse pour les activités de ransomware connues 🛡️. Surveiller les communications des affiliés de ransomware et les sites de fuite de données.
-
-## Attaque par Chaîne d'Approvisionnement Magento
-Une attaque coordonnée par chaîne d'approvisionnement a backdoored des centaines de boutiques e-commerce fonctionnant sous Magento depuis fin avril 2025 🛍️ supply-chain. Des chercheurs ont identifié 21 paquets d'applications de fournisseurs (Tigren, Meetanshi, MGS) injectés avec le même backdoor. L'infrastructure de ces fournisseurs a été compromise pour injecter des backdoors dans leurs serveurs de téléchargement. Le backdoor se présente comme une fausse vérification de licence dans un fichier PHP (`License.php` ou `LicenseApi.php`) et inclut du code pour téléverser des charges utiles arbitraires, comme des webshells. L'injection des backdoors a eu lieu il y a six ans, mais elles ont été activées en avril 2025.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🛡️ Threat Target : Boutiques e-commerce Magento
-* 🗺️ Threat Tactic : Attaque par chaîne d'approvisionnement, Compromission d'infrastructure de fournisseurs, Injection de backdoor, Téléversement de fichiers arbitraires
-* 🔧 Threat Tools : Backdoor (PHP file `License.php`/`LicenseApi.php`), Webshells
-* 💡 Security recommandations : Auditer les paquets d'applications des fournisseurs pour détecter des backdoors. Vérifier l'intégrité des fichiers téléchargés depuis les fournisseurs. Surveiller l'activité suspecte sur les serveurs e-commerce Magento (création de fichiers inconnus, accès non autorisés) 🛡️. Mettre à jour et sécuriser les plateformes e-commerce et les plugins.
-* 📡 Observables :
-    * FILE_HASH_SHA1: Non disponible
-    * FILE_HASH_SHA256: Non disponible
-
-## Tendance : Scans de Tokens et Secrets Git
-GreyNoise a observé une augmentation significative de l'activité de crawling ciblant les fichiers de configuration Git entre le 20 et le 21 avril 2025 🔍🔑. Cela vise probablement à accéder aux bases de code internes, aux workflows de développeurs et potentiellement aux identifiants sensibles. Près de 4 800 adresses IP uniques ont participé à cet effort, principalement depuis Singapour, les États-Unis, l'Allemagne, le Royaume-Uni et l'Inde. Cette tendance suit plusieurs pics similaires depuis septembre 2024. Parallèlement, il y a eu une forte baisse des scans opportunistes des portails Palo Alto Networks PAN-OS GlobalProtect. La majorité des IPs associées à l'activité de scan Git sont liées au fournisseur 3xK Tech GmbH.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🗺️ Threat Tactic : Scanning, Reconnaissance, Collecte d'identifiants, Accès non autorisé (potentiel)
-* 💡 Security recommandations : Scanner régulièrement les dépôts et systèmes pour les secrets ou identifiants exposés. Appliquer une gestion stricte des tokens et des clés API 🛡️. Surveiller le trafic réseau pour détecter les tentatives de crawling des fichiers de configuration Git.
-
-## Attribution Française des Attaques d'APT28 à la Russie
-La France a accusé l'agence de renseignement militaire russe GRU d'avoir mené des cyberattaques contre une douzaine d'entités françaises (ministères, entreprises de défense, centres de recherche, think tanks) depuis 2021 🇫🇷🇷🇺. Ces attaques sont liées au groupe APT28 (alias BlueDelta ou Fancy Bear). Les intrusions, remontant à 2015 (attaque TV5Monde), visent à obtenir des renseignements stratégiques et utilisent des tactiques comme le phishing, l'exploitation de vulnérabilités (CVE-2023-23397), les dispositifs de périphérie mal sécurisés, et les attaques par force brute contre les webmails. APT28 a également ciblé à plusieurs reprises les serveurs de messagerie Roundcube pour exfiltrer des données et a distribué des malwares (HeadLace, OCEANMAP) en se cachant derrière des infrastructures externalisées à faible coût.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🎭 Threat Actor : APT28, GRU (Russie), BlueDelta, Fancy Bear
-* 🛡️ Threat Target : Entités françaises (ministères, entreprises de défense, centres de recherche, think tanks)
-* 🗺️ Threat Tactic : Espionnage cybernétique, Phishing, Exploitation de vulnérabilités, Attaques par force brute (webmail), Accès initial, Mouvement latéral, Exfiltration de données, Déploiement de malware, Utilisation d'infrastructure externalisée
-* 🔧 Threat Tools : Malware HeadLace, Malware OCEANMAP
-* 💡 Security recommandations : Mettre à jour les systèmes pour corriger les vulnérabilités connues (y compris CVE-2023-23397) 🛡️. Renforcer les politiques de mots de passe et implémenter la MFA pour les accès webmail. Sécuriser les dispositifs de périphérie. Sensibiliser les utilisateurs aux risques de phishing. Surveiller les accès anormaux aux serveurs de messagerie (Roundcube).
-
-## Rapport DDoS Cloudflare T1 2025
-Cloudflare a rapporté avoir bloqué 20,5 millions d'attaques DDoS au premier trimestre 2025, soit une augmentation de 358 % par rapport à l'année précédente 📈💥. Cela dépasse le nombre total d'attaques bloquées sur toute l'année 2024 (21,3 millions). Sur ce total, 16,8 millions étaient des attaques au niveau réseau, dont 6,6 millions ciblaient directement l'infrastructure de Cloudflare. Les attaques observées incluent des SYN floods, des attaques générées par Mirai et des attaques par amplification SSDP, faisant partie d'une campagne multi-vectorielle de 18 jours. Cloudflare a également atténué environ 700 attaques hyper-volumétriques dépassant 1 Tbps ou 1 Bpps, incluant un pic record de 5,8 Tbps en avril 2025.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🗺️ Threat Tactic : Attaques par Déni de Service Distribué (DDoS)
-* 🔧 Threat Tools : Botnets Mirai, Techniques d'amplification (SSDP), SYN flood
-* 💡 Security recommandations : Utiliser des services de protection DDoS (comme Cloudflare) 🛡️. Mettre en place des stratégies de réponse aux incidents DDoS. Sécuriser les systèmes pour éviter qu'ils ne soient intégrés à des botnets DDoS.
-
-## Babuk2 Bjorka : Commodisation des Données
-Une opération cybercriminelle nommée Babuk2 Bjorka, se présentant comme une évolution de l'opération RaaS Babuk, est en réalité une "entreprise de commodisation de données à échelle industrielle" 🛍️📊. Elle opère en vendant des données volées recyclées provenant d'autres groupes de ransomware sur les forums cybercriminels. Selon Trustwave SpiderLabs, le groupe ne se contente pas de copier/coller d'anciennes fuites, mais bâtit une marque et un modèle opérationnel durable.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🎭 Threat Actor : Babuk2 Bjorka
-* 🗺️ Threat Tactic : Revente de données volées, Commodisation de données
-* 💡 Security recommandations : Surveillance des sites de fuite de données et des forums cybercriminels pour les données de votre organisation 🛡️. Renforcer les défenses contre les ransomwares et les vols de données pour éviter que vos données ne soient revendues.
-
-## Le FBI Publie les IoC des Domaines de Phishing LabHost
-Le FBI a publié une liste massive de 42 000 domaines de phishing liés à la plateforme cybercriminelle LabHost 📋🎣. Ces domaines, obtenus à partir des serveurs backend après le démantèlement de la plateforme en avril 2024, ont été enregistrés entre novembre 2021 et avril 2024. Bien qu'historique, cette liste peut fournir des informations précieuses sur les tactiques et techniques des adversaires pour les défenseurs et les analystes CTI.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🎭 Threat Actor : Opérateurs de la plateforme LabHost
-* 🗺️ Threat Tactic : Phishing
-* 💡 Security recommandations : Utiliser cette liste de domaines pour mettre à jour les listes de blocage (pare-feu, proxys, DNS) et les systèmes de détection 🛡️. Analyser les logs passés pour identifier d'éventuelles interactions avec ces domaines.
-* 📡 Observables :
-    * DOMAIN: breachforums[.]st, breachforums[.]sx
-
-## Vulnérabilités dans les Portefeuilles de Navigateur (Browser Wallets)
-Des vulnérabilités de sécurité ont été identifiées dans plusieurs portefeuilles de navigateur, notamment Stellar Freighter, Frontier Wallet et Coin98 👛💻. Ces failles pourraient permettre aux attaquants de vider les fonds sans nécessiter d'ingénierie sociale ou de phishing. Simplement visiter un site malveillant pourrait silencieusement exposer la phrase de récupération, même si le portefeuille est verrouillé et sans nécessiter d'approbation utilisateur pour se connecter. Aucune preuve d'exploitation active dans la nature n'a été trouvée à ce jour.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 📦 CVE IMPACTED PRODUCT : Stellar Freighter, Frontier Wallet, Coin98 (portefeuilles de navigateur)
-* 🛡️ Threat Target : Utilisateurs de portefeuilles de cryptomonnaies
-* 🗺️ Threat Tactic : Vol de données (phrase de récupération), Accès non autorisé aux fonds, Exploitation de vulnérabilités de sécurité web
-* 💡 Security recommandations : Vérifier si les éditeurs des portefeuilles concernés ont publié des mises à jour ou des avis de sécurité. Limiter l'utilisation des portefeuilles de navigateur sur des sites de confiance uniquement 🛡️. Envisager des options de stockage plus sécurisées pour des montants importants.
-
-## Schéma d'Attaque Reverse NFCGate
-Un nouveau schéma d'attaque nommé "reverse NFCGate" a été révélé, basé sur l'application légitime NFCGate, pour voler des fonds aux clients des banques russes 🇷🇺📱💳. Les fraudeurs modifient l'application, la déguisent en service gouvernemental ou bancaire, et incitent les victimes à l'installer pour "sécuriser" leurs comptes. Une fois installée et ouverte, l'application demande à la victime de la définir comme application par défaut pour les paiements sans contact. L'attaque dirige ensuite les victimes vers un distributeur automatique (ATM) pour déposer de l'argent sur "leur propre compte". Cependant, l'application relaie les données d'une carte de dépôt contrôlée par l'attaquant via le module NFC du téléphone de la victime, et l'argent est envoyé sur le compte lié à la carte de dépôt. Des dizaines de milliers d'appareils compromis et des milliers d'attaques réussies ont été signalés en Russie.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/weekly-recap-nation-state-hacks-spyware.html
-* 🛡️ Threat Target : Clients de banques russes, Utilisateurs d'appareils Android
-* 🗺️ Threat Tactic : Vol de fonds, Abus de logiciels légitimes (NFCGate), Ingénierie sociale, Phishing (déguisement d'application), Attaque par relais NFC, Abus de Distributeur Automatique (ATM)
-* 🔧 Threat Tools : Application NFCGate (modifiée), Malware CraxsRAT
-* 💡 Security recommandations : Être extrêmement prudent avec les applications demandant des permissions sensibles, en particulier celles liées aux paiements. Ne télécharger des applications qu'à partir de sources officielles (Google Play Store). Ne pas définir une application inconnue comme application de paiement sans contact par défaut. Se méfier des instructions demandant de déposer de l'argent sur un compte via un ATM après l'installation d'une application "de sécurité" 🛡️.
-
-## Malware Golden Chickens (TerraStealerV2, TerraLogger) et Tendances Stealer
-Le groupe Golden Chickens (alias Venom Spider, badbullzvenom) est associé à deux nouvelles familles de malwares : TerraStealerV2 et TerraLogger 🐔✨. TerraStealerV2 est conçu pour voler des identifiants de navigateur, des données de portefeuilles de cryptomonnaies et des informations d'extensions de navigateur. TerraLogger est un keylogger autonome. Ces malwares sont distribués via différents formats (EXEs, DLLs, MSI, LNK) et le payload (.OCX) est récupéré à partir d'un domaine externe (`wetransfers[.]io`). TerraStealerV2 utilise `regsvr32.exe` et `mshta.exe` pour l'évasion et exfiltre les données via Telegram et le domaine externe. TerraLogger enregistre les frappes clavier mais ne semble pas inclure de fonctionnalité C2 ou d'exfiltration (potentiellement en développement ou utilisé avec d'autres outils Golden Chickens). L'article mentionne également l'émergence d'autres familles de stealers (Hannibal, Gremlin, Nullpoint) et des versions mises à jour de StealC (v2.2.4) et Lumma Stealer (v2), distribuées via le phishing (ClickFix pour Lumma) ou d'autres loaders (Amadey pour StealC).
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/golden-chickens-deploy-terrastealerv2.html, https://securityonline.info/socgholish-reloaded-darktrace-uncovers-ransomware-primed-loader-campaign/
-* 🎭 Threat Actor : Golden Chickens, Venom Spider, badbullzvenom, RansomHub (affiliés)
-* 🛡️ Threat Target : Utilisateurs de navigateurs, détenteurs de cryptomonnaies, utilisateurs d'applications (messagerie, e-mail, etc.), cibles de campagnes de phishing/malvertising (SocGholish, ClickFix)
-* 🗺️ Threat Tactic : Malware-as-a-Service (MaaS), Distribution de malware (EXEs, DLLs, MSI, LNK), Récupération de payload (OCX), Vol d'identifiants/données, Keylogging, Évasion (abus de binaires légitimes), Exfiltration de données (Telegram, HTTP), Campagnes de phishing/malvertising (SocGholish, ClickFix)
-* 🔧 Threat Tools : TerraStealerV2, TerraLogger, More_eggs, More_eggs lite, VenomLNK, TerraLoader, TerraCrypt, regsvr32.exe, mshta.exe, Hannibal Stealer, Gremlin Stealer, Nullpoint Stealer, StealC (v2), Lumma Stealer (v2), Amadey (loader), Keitaro TDS, Python-based backdoor (SocGholish)
-* 💡 Security recommandations : Maintenir les logiciels et systèmes d'exploitation à jour 🛡️. Utiliser des solutions de sécurité (antivirus, EDR) capables de détecter les stealers et les comportements suspects (abus de binaires légitimes, communications C2 anormales). Être prudent lors du téléchargement de fichiers, surtout à partir de sources non fiables ou via des liens reçus par email/message. Utiliser des gestionnaires de mots de passe sécurisés. Protéger les portefeuilles de cryptomonnaies.
-* 📡 Observables :
-    * DOMAIN: wetransfers[.]io, packedbrick[.]com, rednosehorse[.]com, blackshelter[.]org, blacksaltys[.]com, garagebevents[.]com
-
-## Campagne du Loader SocGholish
-Une campagne de malware sophistiquée implique le loader SocGholish, un malware de première étape basé sur JavaScript, maintenant utilisé par les affiliés de ransomware (comme RansomHub) 💥. SocGholish, actif depuis 2017, est généralement associé aux fausses mises à jour de navigateur diffusées via des sites web compromis (souvent des sites WordPress avec des plugins non patchés). Le malware établit la persistance et permet le mouvement latéral pour préparer le déploiement de ransomware. Il utilise des systèmes de distribution de trafic (Keitaro TDS) pour rediriger vers des endpoints de livraison de payloads finaux. Une fois dans le réseau, SocGholish mène des campagnes de collecte d'identifiants internes en abusant des protocoles legacy comme WebDAV et des fichiers SCF sur SMB (permettant la collecte d'hashs NTLM). Pour l'évasion, il utilise le "port-hopping" pour les communications C2.
-* Publication date : 2025/05/05
-* 🔗 Source : https://securityonline.info/socgholish-reloaded-darktrace-uncovers-ransomware-primed-loader-campaign/
-* 🎭 Threat Actor : SocGholish, Affiliés de Ransomware (ex: RansomHub)
-* 🛡️ Threat Target : Réseaux d'entreprise, Sites web (compromission), Utilisateurs visitant des sites web compromis
-* 🗺️ Threat Tactic : Loader, Accès initial, Persistance, Mouvement latéral, Déploiement de ransomware (phase ultérieure), Fausses mises à jour (navigateur), Compromission de site web (plugins non patchés), Redirection (Keitaro TDS), Collecte d'identifiants (WebDAV, SCF files/SMB, NTLM), Port-hopping (C2)
-* 🔧 Threat Tools : SocGholish (loader JavaScript), Keitaro TDS, Fichiers SCF, Outils pour WebDAV/SMB, Backdoor basé sur Python (utilisé par affiliés RansomHub)
-* 💡 Security recommandations : Maintenir les sites web (notamment WordPress) et les plugins à jour 🛡️. Sensibiliser les utilisateurs aux risques des fausses mises à jour de navigateur. Surveiller le trafic réseau pour détecter les communications avec les domaines Keitaro TDS connus ou l'activité de "port-hopping". Implémenter des politiques pour restreindre l'utilisation de protocoles legacy comme WebDAV et bloquer l'exécution de fichiers SCF. Mettre en place une surveillance pour la collecte d'identifiants NTLM.
-* 📡 Observables :
-    * DOMAIN: packedbrick[.]com, rednosehorse[.]com, blackshelter[.]org, blacksaltys[.]com, garagebevents[.]com
-
-## Conseils de Sécurité pour Google Workspace
-Un article fournit des conseils de sécurité pour les petites équipes gérant Google Workspace, soulignant l'importance d'utiliser les contrôles de sécurité intégrés et de compléter avec des outils dédiés 🛡️ cloud. Même si Google gère l'infrastructure et le spam, la sécurité du périmètre, qui est de plus en plus centrée sur l'identité et les données, reste la responsabilité de l'organisation.
-* Publication date : 2025/05/05
-* 🔗 Source : https://thehackernews.com/2025/05/perfection-is-myth-leverage-isnt-how.html
-* 📦 CVE IMPACTED PRODUCT : Google Workspace (Gmail, Google Drive, Google Chat, Admin console)
-* 🗺️ Threat Tactic : Accès non autorisé (identifiants volés, misconfigurations), Phishing, Vol de données, Fuite de données (partage externe, misconfigurations DLP), Shadow IT
-* 💡 Security recommandations : Renforcer la sécurité de l'identité (MFA pour tous, accès contextuel, minimiser les accès admin) 🛡️. Sécuriser l'email (protections Gmail améliorées, configurer SPF/DKIM/DMARC, alerter sur les règles de redirection). Prévenir la perte de données (utiliser des labels, restreindre le partage externe, utiliser les règles DLP par défaut). Établir une visibilité (Alert Center, audit des logs, intégration SIEM). Nettoyer les paramètres existants. Prévenir la dérive de configuration par une surveillance continue. Utiliser des outils de sécurité Google Workspace dédiés (mention de Material Security).
+* Publication date : 2025/05/06
+* 🗺️ Source : https://securityonline.info/digigram-pyko-out-aoip-devices-exposed-to-attacks-due-to-missing-default-password/
+* 🐞 CVE : [CVE-2025-3927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-3927)
+* 📦 CVE IMPACTED PRODUCT : Digigram PYKO-OUT AoIP devices (produit End-of-Life)
+* ⚖️ CVSS : N/A (Décrit comme "significatif", probable sévérité Élevée ou Critique)
+* 🛡️ Security Recommandations : Modifier manuellement les paramètres de mot de passe dans l'interface web de l'appareil. Isoler les appareils PYKO-OUT sur un réseau séparé ou restreindre l'accès à leur interface web.
+* 🚩 Indicator of Compromise :
+    * IPv4 : 192[.]168[.]0[.]100 (adresse IP par défaut du serveur web)
