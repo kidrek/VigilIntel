@@ -1,4 +1,5 @@
-# Threats daily report
+
+![](./img/logo.png)
 
 Dans le cadre de l’amélioration continue des capacités de veille cyber, ce projet vise à fournir une synthèse quotidienne des menaces émergentes à partir de sources ouvertes fiables, notamment via l’agrégation de flux RSS spécialisés. Ces sources couvrent aussi bien les vulnérabilités techniques que les campagnes d’attaques menées par des acteurs malveillants à travers le monde.
 
