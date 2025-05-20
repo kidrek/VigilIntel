@@ -1,97 +1,104 @@
 # ⚠️Important Vulnerabilities (CVSS > 8)⚠️
-* 💥 Multiples vulnérabilités critiques dans Mojoomla WPAMS
-* 💥 Vulnérabilité critique Danny Vink User Profile Meta Manager (CVE-2025-48340)
-* 💥 Vulnérabilité critique Solid Plugins AnalyticsWP (CVE-2025-39389)
-* 💥 Vulnérabilité HP Officejet et LaserJet Printer (CVE-2025-3079)
-* 💥 Vulnérabilité Xerox Printer (CVE-2025-3078)
-* 💥 Multiples vulnérabilités dans les produits Netgate (CERTFR-2025-AVI-0423)
-* 💥 Vulnérabilités Zero-Day Mozilla Firefox exploitées à Pwn2Own Berlin 2025
+* 💥 CVE-2025-39402, CVE-2025-39401, CVE-2025-39395 - Multiples vulnérabilités critiques dans Mojoomla WPAMS
+* 🛡️ CVE-2025-48340 - Vulnérabilité critique de type CSRF et d'escalade de privilèges dans Danny Vink User Profile Meta Manager
+* 💾 CVE-2025-39389 - Vulnérabilité critique d'injection SQL dans Solid Plugins AnalyticsWP
+* 🖨️ CVE-2025-3079 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes HP
+* 🖨️ CVE-2025-3078 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes Xerox
 
 ## Table of Contents
-## Category : VULNERABILITIES
-* [Multiples vulnérabilités critiques dans Mojoomla WPAMS](#multiples-vulnerabilites-mooomla-wpams)
-* [Vulnérabilité critique Danny Vink User Profile Meta Manager (CVE-2025-48340)](#vulnerabilite-critique-danny-vink-user-profile-meta-manager-cve-2025-48340)
-* [Vulnérabilité critique Solid Plugins AnalyticsWP (CVE-2025-39389)](#vulnerabilite-critique-solid-plugins-analyticswp-cve-2025-39389)
-* [Vulnérabilité HP Officejet et LaserJet Printer (CVE-2025-3079)](#vulnerabilite-hp-officejet-et-laserjet-printer-cve-2025-3079)
-* [Vulnérabilité Xerox Printer (CVE-2025-3078)](#vulnerabilite-xerox-printer-cve-2025-3078)
-* [Multiples vulnérabilités dans les produits Netgate (CERTFR-2025-AVI-0423)](#multiples-vulnerabilites-netgate)
-* [Vulnérabilités Zero-Day Mozilla Firefox exploitées à Pwn2Own Berlin 2025](#zero-day-mozilla-firefox-pwn2own)
+* [Category : Vulnerabilities](#category--vulnerabilities)
+    * [CVE-2025-39402, CVE-2025-39401, CVE-2025-39395 - Multiples vulnérabilités critiques dans Mojoomla WPAMS](#cve-2025-39402-cve-2025-39401-cve-2025-39395---multiples-vulnérabilités-critiques-dans-mojoomla-wpams)
+    * [CVE-2025-48340 - Vulnérabilité critique de type CSRF et d'escalade de privilèges dans Danny Vink User Profile Meta Manager](#cve-2025-48340---vulnérabilité-critique-de-type-csrf-et-descalade-de-privilèges-dans-danny-vink-user-profile-meta-manager)
+    * [CVE-2025-39389 - Vulnérabilité critique d'injection SQL dans Solid Plugins AnalyticsWP](#cve-2025-39389---vulnérabilité-critique-dinjection-sql-dans-solid-plugins-analyticscp)
+    * [CVE-2025-3079 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes HP](#cve-2025-3079---vulnérabilité-dimpression-passback-à-haute-gravité-dans-les-imprimantes-hp)
+    * [CVE-2025-3078 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes Xerox](#cve-2025-3078---vulnérabilité-dimpression-passback-à-haute-gravité-dans-les-imprimantes-xerox)
+* [Category : Threats](#category--threats)
+    * [Campagne de Ransomware ESXi via un faux gestionnaire de mots de passe KeePass](#campagne-de-ransomware-esxi-via-un-faux-gestionnaire-de-mots-de-passe-keepass)
+    * [Attaque de Ransomware ELPACO-team exploitant une vulnérabilité Confluence non patchée](#attaque-de-ransomware-elpaco-team-exploitant-une-vulnérabilité-confluence-non-patchée)
+    * [Cyberattaque confirmée chez Arla Foods](#cyberattaque-confirmée-chez-arla-foods)
 
-## Category : THREATS
-* [Campagne Ransomware ELPACO-team et acteur UNC4696 via exploitation Confluence et faux KeePass](#campagne-ransomware-elpaco-team-unc4696)
-
-## Category : VULNERABILITIES
-### Multiples vulnérabilités critiques dans Mojoomla WPAMS
-💥 Plusieurs vulnérabilités critiques ont été découvertes dans Mojoomla WPAMS, notamment des injections SQL et des téléchargements de fichiers sans restriction de type, permettant une exécution de code à distance ou l'upload de webshells. Ces failles affectent les versions jusqu'à la 44.0 (17-08-2023). Leur exploitation peut mener à une compromission complète du système.
+## Category : Vulnerabilities
+### <a id="cve-2025-39402-cve-2025-39401-cve-2025-39395---multiples-vulnérabilités-critiques-dans-mojoomla-wpams"></a>CVE-2025-39402, CVE-2025-39401, CVE-2025-39395 - Multiples vulnérabilités critiques dans Mojoomla WPAMS
+De multiples vulnérabilités critiques ont été découvertes dans le plugin WPAMS de Mojoomla. 😱 Ces failles, notamment des injections SQL et des téléchargements de fichiers non restreints, peuvent permettre à un attaquant de télécharger un shell web, d'exécuter du code arbitraire à distance ou de provoquer une injection SQL. Les versions affectées vont jusqu'à la version 44.0. 📉
 * Publication date : 2025/05/19
 * 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-39402, https://cvefeed.io/vuln/detail/CVE-2025-39401, https://cvefeed.io/vuln/detail/CVE-2025-39395
-* 🐞 CVE : CVE-2025-39402, CVE-2025-39401, CVE-2025-39395
-* Affected Product : Mojoomla WPAMS (versions <= 44.0)
-* 📈 CVSS : 9.9, 10.0, 9.3
-* 🧑‍🏫 Security recommandations : Appliquer les correctifs disponibles dès que possible. Restreindre les permissions d'upload de fichiers. Implémenter des mécanismes de validation strictes des entrées utilisateur pour prévenir les injections SQL.
+* 🐞 CVE : CVE-2025-39402 ([https://nvd.nist.gov/vuln/detail/CVE-2025-39402](https://nvd.nist.gov/vuln/detail/CVE-2025-39402)), CVE-2025-39401 ([https://nvd.nist.gov/vuln/detail/CVE-2025-39401](https://nvd.nist.gov/vuln/detail/CVE-2025-39401)), CVE-2025-39395 ([https://nvd.nist.gov/vuln/detail/CVE-2025-39395](https://nvd.nist.gov/vuln/detail/CVE-2025-39395))
+*  affected_product : Mojoomla WPAMS (versions jusqu'à 44.0)
+* 📊 CVSS : 9.9, 10.0, 9.3
+* 💡 Security recommandations : Appliquer les mises à jour du fournisseur dès que possible. Réviser les configurations de sécurité pour restreindre les téléchargements de fichiers aux types autorisés et implémenter des mesures contre les injections SQL.
 
-### Vulnérabilité critique Danny Vink User Profile Meta Manager (CVE-2025-48340)
-💥 Une vulnérabilité de Cross-Site Request Forgery (CSRF) a été identifiée dans Danny Vink User Profile Meta Manager. Cette faille permet une escalade de privilèges. Elle affecte les versions jusqu'à la 1.02 incluse. Son exploitation peut permettre à un attaquant d'obtenir des droits supérieurs sur le système.
+### <a id="cve-2025-48340---vulnérabilité-critique-de-type-csrf-et-descalade-de-privilèges-dans-danny-vink-user-profile-meta-manager"></a>CVE-2025-48340 - Vulnérabilité critique de type CSRF et d'escalade de privilèges dans Danny Vink User Profile Meta Manager
+Une vulnérabilité critique de type Cross-Site Request Forgery (CSRF) a été découverte dans le plugin User Profile Meta Manager de Danny Vink. 💀 Cette faille permet une escalade de privilèges. Les versions affectées vont jusqu'à la version 1.02.
 * Publication date : 2025/05/19
 * 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-48340
-* 🐞 CVE : CVE-2025-48340
-* Affected Product : Danny Vink User Profile Meta Manager (versions <= 1.02)
-* 📈 CVSS : 9.8
-* 🧑‍🏫 Security recommandations : Appliquer les correctifs ou mises à jour disponibles. Mettre en place des mécanismes de protection contre la CSRF (tokens synchronizer, vérification de l'en-tête Referer, etc.).
+* 🐞 CVE : CVE-2025-48340 ([https://nvd.nist.gov/vuln/detail/CVE-2025-48340](https://nvd.nist.gov/vuln/detail/CVE-2025-48340))
+* affected_product : Danny Vink User Profile Meta Manager (versions jusqu'à 1.02)
+* 📊 CVSS : 9.8
+* 💡 Security recommandations : Appliquer les mises à jour du fournisseur. Mettre en place des protections contre les attaques CSRF (tokens, vérification de l'origine).
 
-### Vulnérabilité critique Solid Plugins AnalyticsWP (CVE-2025-39389)
-💥 Une vulnérabilité d'injection SQL a été découverte dans Solid Plugins AnalyticsWP, affectant les versions jusqu'à la 2.1.2. Cette faille critique permet à un attaquant d'injecter des commandes SQL, potentiellement pour accéder ou modifier des données sensibles dans la base de données.
+### <a id="cve-2025-39389---vulnérabilité-critique-dinjection-sql-dans-solid-plugins-analyticscp"></a>CVE-2025-39389 - Vulnérabilité critique d'injection SQL dans Solid Plugins AnalyticsWP
+Une vulnérabilité critique d'injection SQL a été signalée dans le plugin AnalyticsWP de Solid Plugins. 💾 Cette faille est due à une neutralisation incorrecte des éléments spéciaux dans les commandes SQL. Elle affecte les versions jusqu'à 2.1.2. Un attaquant pourrait potentiellement exploiter cette vulnérabilité pour accéder à des données sensibles ou modifier la base de données. 🚨
 * Publication date : 2025/05/19
 * 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-39389
-* 🐞 CVE : CVE-2025-39389
-* Affected Product : Solid Plugins AnalyticsWP (versions <= 2.1.2)
-* 📈 CVSS : 9.3
-* 🧑‍🏫 Security recommandations : Appliquer les mises à jour fournies par l'éditeur. Utiliser des requêtes préparées ou des ORM pour interagir avec la base de données et se prémunir contre les injections SQL.
+* 🐞 CVE : CVE-2025-39389 ([https://nvd.nist.gov/vuln/detail/CVE-2025-39389](https://nvd.nist.gov/vuln/detail/CVE-2025-39389))
+* affected_product : Solid Plugins AnalyticsWP (versions jusqu'à 2.1.2)
+* 📊 CVSS : 9.3
+* 💡 Security recommandations : Appliquer les correctifs disponibles. Utiliser des requêtes préparées et une validation stricte des entrées utilisateur pour prévenir les injections SQL.
 
-### Vulnérabilité HP Officejet et LaserJet Printer (CVE-2025-3079)
-💥 Une vulnérabilité de type "passback" a été signalée dans certaines imprimantes multifonctions et laser HP Officejet et LaserJet. Cette faille de sévérité élevée concerne les imprimantes de bureau et petites entreprises.
+### <a id="cve-2025-3079---vulnérabilité-dimpression-passback-à-haute-gravité-dans-les-imprimantes-hp"></a>CVE-2025-3079 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes HP
+Une vulnérabilité de type "passback" a été identifiée dans plusieurs modèles d'imprimantes multifonctions de bureau/petite entreprise et d'imprimantes laser HP. 🖨️ Bien que les détails techniques spécifiques ne soient pas entièrement divulgués dans l'article, la gravité élevée (CVSS 8.7) suggère un risque significatif pour la confidentialité ou l'intégrité des données traitées par les imprimantes affectées. ⚠️
 * Publication date : 2025/05/20
 * 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-3079
-* 🐞 CVE : CVE-2025-3079
-* Affected Product : HP Officejet and LaserJet Printers (Office/Small Office Multifunction and Laser Printers)
-* 📈 CVSS : 8.7
-* 🧑‍🏫 Security recommandations : Se référer à l'avis de sécurité du fabricant HP pour obtenir des détails spécifiques sur les versions affectées et les correctifs disponibles.
+* 🐞 CVE : CVE-2025-3079 ([https://nvd.nist.gov/vuln/detail/CVE-2025-3079](https://nvd.nist.gov/vuln/detail/CVE-2025-3079))
+* affected_product : Imprimantes multifonctions et laser HP (modèles non spécifiés dans l'article)
+* 📊 CVSS : 8.7
+* 💡 Security recommandations : Consulter l'avis de sécurité du fournisseur (HP) pour obtenir la liste exacte des produits affectés et appliquer les correctifs ou atténuations recommandés. Isoler les imprimantes sur un réseau séparé si possible.
 
-### Vulnérabilité Xerox Printer (CVE-2025-3078)
-💥 Une vulnérabilité de type "passback" a été identifiée dans des imprimantes Xerox de production et multifonctions de bureau. Cette faille est classée avec une sévérité élevée.
+### <a id="cve-2025-3078---vulnérabilité-dimpression-passback-à-haute-gravité-dans-les-imprimantes-xerox"></a>CVE-2025-3078 - Vulnérabilité d'impression "Passback" à haute gravité dans les imprimantes Xerox
+Une vulnérabilité de type "passback" a été découverte dans les imprimantes de production et les imprimantes multifonctions de bureau Xerox. 🖨️ Similaire à la vulnérabilité HP, cette faille présente une gravité élevée (CVSS 8.7). Les implications exactes du "passback" ne sont pas détaillées, mais la gravité indique un risque potentiel sérieux. 🛡️
 * Publication date : 2025/05/20
 * 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-3078
-* 🐞 CVE : CVE-2025-3078
-* Affected Product : Xerox Printers (Production Printers, Office Multifunction Printers)
-* 📈 CVSS : 8.7
-* 🧑‍🏫 Security recommandations : Consulter l'avis de sécurité de Xerox pour connaître les modèles exacts impactés et les mesures d'atténuation ou correctifs recommandés.
+* 🐞 CVE : CVE-2025-3078 ([https://nvd.nist.gov/vuln/detail/CVE-2025-3078](https://nvd.nist.gov/vuln/detail/CVE-2025-3078))
+* affected_product : Imprimantes de production et imprimantes multifonctions de bureau Xerox (modèles non spécifiés dans l'article)
+* 📊 CVSS : 8.7
+* 💡 Security recommandations : Consulter l'avis de sécurité du fournisseur (Xerox) pour les détails précis sur les produits affectés et les mesures correctives. Examiner les options d'isolement réseau pour ces appareils.
 
-### Multiples vulnérabilités dans les produits Netgate (CERTFR-2025-AVI-0423)
-💥 De multiples vulnérabilités ont été découvertes dans les produits Netgate. Certaines de ces failles critiques peuvent permettre une exécution de code arbitraire à distance (RCE), un déni de service à distance (DoS) ou une atteinte à la confidentialité des données.
+## Category : Threats
+### <a id="campagne-de-ransomware-esxi-via-un-faux-gestionnaire-de-mots-de-passe-keepass"></a>Campagne de Ransomware ESXi via un faux gestionnaire de mots de passe KeePass
+Des acteurs de la menace distribuent des versions piégées du gestionnaire de mots de passe KeePass depuis au moins huit mois. 😈 Ces logiciels malveillants, nommés KeeLoader, installent des beacons Cobalt Strike, volent les identifiants et déploient ultimement des ransomwares (potentiellement liés à Black Basta) sur le réseau des victimes, ciblant notamment les systèmes ESXi. Les attaquants utilisent la malvertising sur Bing et des domaines en typosquatting pour tromper les utilisateurs. 🕵️‍♂️
 * Publication date : 2025/05/19
-* 🔗 Source : https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0423/
-* Affected Product : Netgate Products
-* 🧑‍🏫 Security recommandations : Appliquer les mises à jour ou correctifs fournis par Netgate. Surveiller les avis de sécurité pour des détails techniques et des étapes de mitigation spécifiques.
+* 🔗 Source : https://www.bleepingcomputer.com/news/security/fake-keepass-password-manager-leads-to-esxi-ransomware-attack/
+* 👤 Threat Actor : UNC4696 (attribution modérée), Initial Access Brokers (potentiellement liés à Black Basta)
+* 📈 Threat Tactic : Distribution de logiciels piégés (Trojanized Software), Publicité malveillante (Malvertising), Vol d'identifiants (Credential Theft), Mouvement latéral (Lateral Movement), Déploiement de Ransomware.
+* 🎯 Threat Target : Réseaux d'entreprise, systèmes ESXi.
+* 🛠️ Threat Tools : KeeLoader (version piégée de KeePass), Cobalt Strike beacon, Mimikatz (implicite pour vol d'identifiants), AnyDesk, Ransomware ESXi.
+* 💡 Security recommandations : Éviter de télécharger des logiciels via des publicités sur les moteurs de recherche. Télécharger toujours les logiciels depuis les sites officiels des éditeurs. Sensibiliser les utilisateurs aux risques de typosquatting et de malvertising. Déployer une solution EDR pour détecter les activités suspectes (installation d'outils d'accès à distance, beacons, vol d'identifiants). Mettre en place une segmentation réseau pour protéger les systèmes critiques comme ESXi.
+* compromise :
+    *   DOMAIN : `aenys[.]com`
+    *   DOMAIN : `keegass[.]com`
+    *   DOMAIN : `keepass[.]me`
+    *   DOMAIN : `keeppaswrd[.]com`
 
-### Vulnérabilités Zero-Day Mozilla Firefox exploitées à Pwn2Own Berlin 2025
-💥 Deux vulnérabilités zero-day critiques ont été découvertes et exploitées dans le navigateur Mozilla Firefox lors de la compétition Pwn2Own Berlin 2025. Ces failles pourraient potentiellement permettre l'accès à des données sensibles ou l'exécution de code, bien qu'elles n'aient pas permis de sortir de la sandbox. Mozilla a rapidement publié des mises à jour pour corriger ces problèmes. D'autres produits comme VMware Workstation, ESXi, Windows et NVIDIA ont également été affectés par des zero-days lors de cet événement.
+### <a id="attaque-de-ransomware-elpaco-team-exploitant-une-vulnérabilité-confluence-non-patchée"></a>Attaque de Ransomware ELPACO-team exploitant une vulnérabilité Confluence non patchée
+Le rapport DFIR détaille une attaque de ransomware menée par l'équipe ELPACO, qui a débuté par l'exploitation d'une vulnérabilité non patchée dans un serveur Atlassian Confluence (CVE-2023-22527). 💥 L'attaque a impliqué une série de tactiques post-exploitation, notamment l'exécution de code arbitraire, l'escalade de privilèges via diverses techniques (dont l'impersonation de named pipe), la découverte du réseau (scan SMB, rpcdump), le vol d'identifiants (Mimikatz, Secretsdump) et le mouvement latéral (wmiexec, RDP). 🔑 Des outils comme Metasploit (Meterpreter), AnyDesk, NetScan et plusieurs outils d'Impacket ont été utilisés. Le ransomware ELPACO-team (identifié comme une variante de Mimic ransomware) a été déployé environ 62 heures après l'intrusion initiale, ciblant les serveurs de sauvegarde et de fichiers. Fait inhabituel, peu d'exfiltration de données a été observée avant le chiffrement. 📉
 * Publication date : 2025/05/19
-* 🔗 Source : https://securityaffairs.com/178064/security/mozilla-fixed-zero-days-demonstrated-at-pwn2own-berlin-2025.html, https://www.bleepingcomputer.com/news/security/mozilla-fixed-zero-days-recently-demonstrated-at-pwn2own-berlin-2025/, https://securityaffairs.com/178040/hacking/pwn2own-berlin-2025-total-prize-money-reached-1078750.html
-* Affected Product : Mozilla Firefox (versions avant 138.0.4, ESR avant 128.10.1, ESR avant 115.23.1, Firefox pour Android), VMware Workstation, VMware ESXi, Microsoft Windows, NVIDIA Products.
-* 🧑‍🏫 Security recommandations : Mettre à jour Mozilla Firefox vers les versions 138.0.4, ESR 128.10.1, ESR 115.23.1 ou ultérieures (incluant la version Android). Appliquer également les correctifs disponibles pour les produits VMware, Windows et NVIDIA si affectés par les zero-days démontrés.
+* 🔗 Source : https://thedfirreport.com/2025/05/19/another-confluence-bites-the-dust-falling-to-elpaco-team-ransomware/
+* 👤 Threat Actor : ELPACO-team, potentiellement lié à UNC4696 ou des groupes associés à Black Basta/ALPHV.
+* 📈 Threat Tactic : Exploitation de vulnérabilités (CVE-2023-22527), Exécution de code à distance, Persistance (Installation AnyDesk en service, création utilisateur), Escalade de privilèges (Impersonation Named Pipe, Token Duplication), Découverte (Scan réseau, Énumération SMB/RPC), Accès aux identifiants (LSASS dump, Secretsdump), Mouvement latéral (wmiexec, RDP), Déploiement de Ransomware, Impact (Chiffrement de données, arrêt de VMs).
+* 🎯 Threat Target : Serveurs Atlassian Confluence (non patchés), serveurs de sauvegarde, serveurs de fichiers, contrôleurs de domaine.
+* 🛠️ Threat Tools : Metasploit (Meterpreter loader), curl, AnyDesk, SoftPerfect’s NetScan, zero.exe (outil Zerologon), Mimikatz, ProcessHacker, Impacket (Secretsdump, wmiexec, rpcdump.exe), RDP, PowerShell cmdlets (Get-VM, Stop-VM, Get-VHD, Get-DiskImage, Dismount-DiskImage), DefenderControl, ELPACO-team.exe (Mimic ransomware).
+* 💡 Security recommandations : Appliquer immédiatement les correctifs pour CVE-2023-22527, CVE-2020-1472 et CVE-2021-34527. Mettre en place une surveillance réseau et endpoint robuste pour détecter les TTPs observés (tentatives d'escalade, utilisation d'outils post-exploitation, accès à LSASS, installation d'outils d'accès à distance non autorisés comme AnyDesk, création d'utilisateurs inhabituels). Segmenter le réseau pour limiter le mouvement latéral en cas de compromission initiale. Sauvegardes hors ligne et testées.
+* 🐞 CVE : CVE-2023-22527 ([https://nvd.nist.gov/vuln/detail/CVE-2023-22527](https://nvd.nist.gov/vuln/detail/CVE-2023-22527)), CVE-2020-1472 ([https://nvd.nist.gov/vuln/detail/CVE-2020-1472](https://nvd.nist.gov/vuln/detail/CVE-2020-1472)), CVE-2021-34527 ([https://nvd.nist.gov/vuln/detail/CVE-2021-34527](https://nvd.nist.gov/vuln/detail/CVE-2021-34527))
+* 🔪 Indicator of Compromise :
+    *   DOMAIN : `delete[.]me`
+    *   IPv4 : `185[.]228[.]19[.]244`
+    *   IPv4 : `45[.]227[.]254[.]124`
+    *   IPv4 : `91[.]191[.]209[.]46`
 
-## Category : THREATS
-### Campagne Ransomware ELPACO-team et acteur UNC4696 via exploitation Confluence et faux KeePass
-👹 L'acteur de menace UNC4696, potentiellement lié à Nitrogen Loader et Black Basta, mène une campagne utilisant plusieurs vecteurs d'accès initiaux pour déployer le ransomware ELPACO-team (une variante de Mimic). Un vecteur observé est l'exploitation de serveurs Atlassian Confluence non patchés via la vulnérabilité CVE-2023-22527 pour établir un accès initial, puis déployer Metasploit (Meterpreter) et AnyDesk. Un autre vecteur utilise la distribution de faux installateurs du gestionnaire de mots de passe KeePass via des publicités malveillantes (Bing Ads), qui installent un backdoor (KeeLoader) pour voler des identifiants et déposer des beacons Cobalt Strike. Suite à l'accès initial, l'acteur effectue une escalade de privilèges (impersonation de pipe nommée, dump LSASS, exploitation de comptes admin de domaine), de la persistance (compte local, service AnyDesk), de la découverte (NetScan, rpcdump) et des mouvements latéraux (wmiexec, RDP, SMB) avant de déployer le ransomware sur les serveurs ciblés (notamment ESXi, backup et fichiers). L'acteur utilise une variété d'outils post-exploitation comme Mimikatz, ProcessHacker, Impacket.
+### <a id="cyberattaque-confirmée-chez-arla-foods"></a>Cyberattaque confirmée chez Arla Foods
+Arla Foods a confirmé avoir été victime d'une cyberattaque. L'incident a entraîné des perturbations dans leurs opérations de production et causé des retards. 🏭 Les détails spécifiques sur le type d'attaque (ransomware, etc.), les auteurs ou l'impact complet ne sont pas fournis dans cet article. 📰
 * Publication date : 2025/05/19
-* 🔗 Source : https://www.bleepingcomputer.com/news/security/fake-keepass-password-manager-leads-to-esxi-ransomware-attack/, https://thedfirreport.com/2025/05/19/another-confluence-bites-the-dust-falling-to-elpaco-team-ransomware/
-* 🧑‍💻 Threat Actor : UNC4696 (modérée confiance), potentiellement lié à Black Basta
-* 🎯 Threat Target : Organisations exploitant des serveurs Atlassian Confluence non patchés, utilisateurs téléchargeant KeePass depuis des sources non officielles, réseaux d'entreprise (serveurs, notamment ESXi, backup, fichiers).
-* 🔍 Threat Tactic : Accès initial (Exploitation de vulnérabilités publiques, Distribution de logiciels piégés via publicités malveillantes), Exécution, Persistance, Escalade de privilèges, Évasion de défense, Accès aux identifiants, Découverte, Mouvement latéral, Impact (Ransomware).
-* 🛠️ Threat Tools : Metasploit (Meterpreter), AnyDesk, Cobalt Strike, KeeLoader, Mimic Ransomware (ELPACO-team variant), Nitrogen Loader, Black Basta (potentiel), SoftPerfect’s NetScan, Impacket (Secretsdump, wmiexec), Mimikatz, ProcessHacker, DefenderControl, zero.exe, rpcdump.exe.
-* 🛡️ MITRE ATT&CK : T1190 - Exploit Public-Facing Application, T1553.005 - Compromise Accounts or Credentials: Credential Acquisition, T1059 - Command and Scripting Interpreter, T1021.001 - Remote Services: RDP, T1047 - Windows Management Instrumentation, T1003 - OS Credential Dumping, T1078 - Valid Accounts, T1083 - File and Directory Discovery, T1046 - Network Service Scanning, T1018 - Remote System Discovery, T1486 - Data Encrypted for Impact, T1070.004 - File Deletion.
-* 🧑‍🏫 Security recommandations : Appliquer immédiatement les correctifs pour Atlassian Confluence, en particulier CVE-2023-22527, CVE-2020-1472 (Zerologon) et CVE-2021-34527 (PrintNightmare). Télécharger les logiciels uniquement depuis les sites officiels des éditeurs. Sensibiliser les utilisateurs aux risques des publicités malveillantes et du téléchargement de logiciels depuis des sources non fiables. Surveiller les systèmes pour les indicateurs d'activités malveillantes (processus suspects, accès LSASS, connexions AnyDesk directes, utilisation d'outils post-exploitation connus). Renforcer l'hygiène des identifiants et les accès RDP. Mettre en œuvre une segmentation réseau et des sauvegardes robustes.
-* 🦠 Indicator of Compromise :
-    *   CVE : CVE-2023-22527, CVE-2020-1472, CVE-2021-34527
-    *   DOMAIN : aenys[.]com, keepass[.]me, keegass[.]com, keeppaswrd[.]com, delete[.]me
-    *   IPv4 : 45[.]227[.]254[.]124, 91[.]191[.]209[.]46, 109[.]160[.]16[.]68, 185[.]228[.]19[.]244, 185[.]220[.]101[.]185
+* 🔗 Source : https://www.bleepingcomputer.com/news/security/arla-foods-confirms-cyberattack-disrupts-production-causes-delays/
+* 🎯 Threat Target : Arla Foods (secteur agroalimentaire)
+* 📈 Threat Tactic : Cyberattaque (type non spécifié)
+* 💡 Security recommandations : Renforcer les défenses cyber. Mettre en place un plan de réponse aux incidents pour minimiser l'impact des attaques.
