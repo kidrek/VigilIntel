@@ -1,270 +1,166 @@
 # ⚠️Important Vulnerabilities (CVSS > 8)⚠️
-*   💥 Vulnérabilité RCE DELmia Apriso (CVE-2025-5086)
-*   💥 Vulnérabilité critique dans Cisco IOS XE WLC (CVE-2025-20188)
-*   💥 Vulnérabilité d'Authentification Bypass HPE StoreOnce (CVE-2025-37093)
-*   💥 CISA avertit d'une vulnérabilité critique Instantel Micromate (CVE-2025-1907)
-*   💥 Vulnérabilité RCE Sonos Era 300 (CVE-2025-1051)
-*   💥 Vulnérabilités dans Catdoc et Xls2csv (CVE-2024-54028, CVE-2024-52035, CVE-2024-48877)
-*   💥 Avis ZDI à venir pour Oracle (ZDI-CAN-27154)
-*   💥 Patch Tuesday Microsoft Mai 2025 : Cinq Zero-Days et Cinq Vulnérabilités Critiques (CVE-2025-29966, CVE-2025-29967, CVE-2025-30377, CVE-2025-30386)
+* 🐞 Vulnérabilités critiques dans Google Chrome activement exploitées
+* 🐞 Vulnérabilité critique dans les processeurs Samsung Exynos
+* 🐞 Vulnérabilité importante dans les enceintes Sonos Era 300
+* 🐞 Vulnérabilité critique dans DELMIA Apriso
+* 🐞 Vulnérabilité importante dans Splunk Universal Forwarder pour Windows
+* 🐞 Vulnérabilité importante dans Catdoc
+* 🐞 Vulnérabilité critique dans les appareils Instantel Micromate
+* 🐞 Vulnérabilité critique dans Cisco IOS XE WLC
 
 ## Table of Contents
-- [VULNERABILITIES](#vulnerabilities)
-  - [Vulnérabilité dans Roundcube](#vulnérabilité-dans-roundcube)
-  - [Vulnérabilité dans les produits Synology](#vulnérabilité-dans-les-produits-synology)
-  - [Vulnérabilité dans les produits Moxa](#vulnérabilité-dans-les-produits-moxa)
-  - [Qualcomm a corrigé trois zero-days exploités](#qualcomm-a-corrigé-trois-zero-days-exploités)
-  - [Vulnérabilité critique dans Cisco IOS XE WLC (CVE-2025-20188)](#vulnérabilité-critique-dans-cisco-ios-xe-wlc-cve-2025-20188)
-  - [Vulnérabilité RCE Sonos Era 300 (CVE-2025-1051)](#vulnérabilité-rce-sonos-era-300-cve-2025-1051)
-  - [Vulnérabilité RCE DELmia Apriso (CVE-2025-5086)](#vulnérabilité-rce-delmia-apriso-cve-2025-5086)
-  - [Vulnérabilité d'Élévation de Privilèges Splunk Universal Forwarder (CVE-2025-20298)](#vulnérabilité-délévation-de-privilèges-splunk-universal-forwarder-cve-2025-20298)
-  - [Vulnérabilités dans Catdoc et Xls2csv (CVE-2024-54028, CVE-2024-52035, CVE-2024-48877)](#vulnérabilités-dans-catdoc-et-xls2csv-cve-2024-54028-cve-2024-52035-cve-2024-48877)
-  - [Vulnérabilité d'Authentification Bypass HPE StoreOnce (CVE-2025-37093)](#vulnérabilité-dauthentification-bypass-hpe-storeonce-cve-2025-37093)
-  - [Routeur FiberGateway Hacked (CVE-2025-25246)](#routeur-fibergateway-hacked-cve-2025-25246)
-  - [Failles Linux exposant des données sensibles via Core Dumps (CVE-2025-5054, CVE-2025-4598)](#failles-linux-exposant-des-données-sensibles-via-core-dumps-cve-2025-5054-cve-2025-4598)
-  - [Rapport Kaspersky : Vieux exploits et vulnérabilités OS en Q1 2025](#rapport-kaspersky--vieux-exploits-et-vulnérabilités-os-en-q1-2025)
-  - [CISA avertit d'une vulnérabilité critique Instantel Micromate (CVE-2025-1907)](#cisa-avertit-dune-vulnérabilité-critique-instantel-micromate-cve-2025-1907)
-  - [CISA ajoute 5 vulnérabilités activement exploitées au catalogue KEV](#cisa-ajoute-5-vulnérabilités-activement-exploitées-au-catalogue-kev)
-  - [Alerte Zero-Day Chrome (CVE-2025-5419)](#alerte-zero-day-chrome-cve-2025-5419)
-  - [Patch Tuesday Microsoft Mai 2025 : Cinq Zero-Days et Cinq Vulnérabilités Critiques](#patch-tuesday-microsoft-mai-2025--cinq-zero-days-et-cinq-vulnérabilités-critiques)
-  - [Avis ZDI à venir pour Oracle (ZDI-CAN-27154)](#avis-zdi-à-venir-pour-oracle-zdi-can-27154)
-  - [Microsoft publie un patch d'urgence pour les échecs de démarrage de Windows 11](#microsoft-publie-un-patch-durgence-pour-les-échecs-de-démarrage-de-windows-11)
-- [THREATS](#threats)
-  - [Cartier révèle une violation de données](#cartier-révèle-une-violation-de-données)
-  - [The North Face avertit ses clients d'une attaque par credential stuffing](#the-north-face-avertit-ses-clients-dune-attaque-par-credential-stuffing)
-  - [Le marché 'Russian Market' devient une plateforme de référence pour les identifiants volés](#le-marché-russian-market-devient-une-plateforme-de-référence-pour-les-identifiants-volés)
-  - [La police démantèle plusieurs services populaires de contre-antivirus (CAV)](#la-police-démantèle-plusieurs-services-populaires-de-contre-antivirus-cav)
-  - [Une cyberattaque frappe les hôpitaux gérés par Covenant Health](#une-cyberattaque-frappe-les-hôpitaux-gérés-par-covenant-health)
+* [Vulnerabilities](#vulnerabilities)
+    * [Vulnérabilités critiques dans Google Chrome activement exploitées](#vulnérabilités-critiques-dans-google-chrome-activement-exploitées)
+    * [Vulnérabilité critique dans les processeurs Samsung Exynos](#vulnérabilité-critique-dans-les-processeurs-samsung-exynos)
+    * [Vulnérabilité importante dans les enceintes Sonos Era 300](#vulnérabilité-importante-dans-les-enceintes-sonos-era-300)
+    * [Vulnérabilité critique dans DELMIA Apriso](#vulnérabilité-critique-dans-delmia-apriso)
+    * [Vulnérabilité importante dans Splunk Universal Forwarder pour Windows](#vulnérabilité-importante-dans-splunk-universal-forwarder-pour-windows)
+    * [Vulnérabilité importante dans Catdoc](#vulnérabilité-importante-dans-catdoc)
+    * [Vulnérabilité critique dans les appareils Instantel Micromate](#vulnérabilité-critique-dans-les-appareils-instantel-micromate)
+    * [Vulnérabilité critique dans Cisco IOS XE WLC](#vulnérabilité-critique-dans-cisco-ios-xe-wlc)
+* [Threats](#threats)
+    * [Violations de données dans le secteur de la distribution (Cartier, The North Face)](#violations-de-données-dans-le-secteur-de-la-distribution-cartier-the-north-face)
+    * [Le "Russian Market" devient une plateforme majeure pour les identifiants volés](#le-russian-market-devient-une-plateforme-majeure-pour-les-identifiants-volés)
+    * [Démantèlement de services de contournement d'antivirus (CAV)](#démantèlement-de-services-de-contournement-dantivirus-cav)
+    * [Cyberattaque contre les hôpitaux de Covenant Health](#cyberattaque-contre-les-hôpitaux-de-covenant-health)
+    * [Exploitation d'une chaîne de vulnérabilités dans les routeurs FiberGateway](#exploitation-dune-chaîne-de-vulnérabilités-dans-les-routeurs-fibergateway)
+    * [Le CISA ajoute des vulnérabilités activement exploitées à son catalogue KEV](#le-cisa-ajoute-des-vulnérabilités-activement-exploitées-à-son-catalogue-kev)
 
-## VULNERABILITIES
-### Vulnérabilité dans Roundcube
-Une vulnérabilité a été découverte dans Roundcube Webmail. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance (RCE). 🐞
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2025-AVI-0468/
-*   🩹 CVE Impacted Poduct : Roundcube Roundcube Webmail
-*   🛡️ Security recommandations : Consulter l'avis du CERT-FR pour les mesures correctives.
+## Category : Vulnerabilities
+### Vulnérabilités critiques dans Google Chrome activement exploitées {#vulnérabilités-critiques-dans-google-chrome-activement-exploitées}
+Plusieurs vulnérabilités, dont une zero-day activement exploitée, ont été corrigées dans Google Chrome version 137.0.7151.68/.69. La vulnérabilité zero-day (CVE-2025-5419), de haute gravité, est une lecture/écriture hors limites dans le moteur V8, permettant une corruption de la mémoire heap potentiellement exploitable via une page HTML malveillante. Google a confirmé son exploitation active dans la nature et a déployé des mesures d'atténuation d'urgence avant le patch complet. Une autre vulnérabilité (CVE-2025-5068), une utilisation après libération dans Blink, a également été corrigée.
+* Publication date : 2025/06/02
+* 📰 Sources : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-5419, hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-5068, hxxps[:]//cybersecuritynews[.]com/chrome-0-day-vulnerability-exploited-in-the-wild/, hxxps[:]//securityonline[.]info/chrome-zero-day-alert-cve-2025-5419-actively-exploited-in-the-wild/
+* 🐞 CVE : [CVE-2025-5419](https://nvd.nist.gov/vuln/detail/CVE-2025-5419), [CVE-2025-5068](https://nvd.nist.gov/vuln/detail/CVE-2025-5068)
+* 💻 CVE Impacted Product : Google Chrome < 137.0.7151.68/.69 (Windows, Mac, Linux)
+* 📈 CVSS : 8.8
+* 👨‍💻 Threat Actor : Inconnu (potentiellement acteurs étatiques selon securityonline.info)
+* 💥 Threat Tactic : Exploitation de vulnérabilité (zero-day)
+* 🛡️ Security recommandations : Mettre à jour Google Chrome vers la version 137.0.7151.68 ou supérieure immédiatement. Pour les entreprises, prioriser ce patch.
 
-### Vulnérabilité dans les produits Synology
-Une vulnérabilité a été découverte dans les produits Synology. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité. 🚦
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2025-AVI-0469/
-*   🩹 CVE Impacted Poduct : Produits Synology
-*   🛡️ Security recommandations : Consulter l'avis du CERT-FR pour les mesures correctives.
+### Vulnérabilité critique dans les processeurs Samsung Exynos {#vulnérabilité-critique-dans-les-processeurs-samsung-exynos}
+Une vulnérabilité critique a été découverte dans les processeurs mobiles Samsung Exynos 1480 et 2400. Un manque de vérification de longueur dans le traitement des données conduit à des écritures hors limites.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-23099
+* 🐞 CVE : [CVE-2025-23099](https://nvd.nist.gov/vuln/detail/CVE-2025-23099)
+* 💻 CVE Impacted Product : Samsung Mobile Processor Exynos 1480, Samsung Mobile Processor Exynos 2400
+* 📈 CVSS : 9.1
+* 🛡️ Security recommandations : Appliquer les mises à jour fournies par Samsung dès qu'elles sont disponibles.
 
-### Vulnérabilité dans les produits Moxa
-Une vulnérabilité a été découverte dans les produits Moxa. Elle permet à un attaquant de provoquer un déni de service (DoS) à distance. ✋
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2025-AVI-0470/
-*   🩹 CVE Impacted Poduct : Produits Moxa
-*   🛡️ Security recommandations : Consulter l'avis du CERT-FR pour les mesures correctives.
+### Vulnérabilité importante dans les enceintes Sonos Era 300 {#vulnérabilité-importante-dans-les-enceintes-sonos-era-300}
+Une vulnérabilité de débordement de tampon basé sur le heap a été découverte dans les enceintes Sonos Era 300. Elle permet à des attaquants adjacents au réseau d'exécuter du code arbitraire sans authentification. Le défaut réside dans le traitement des données ALAC, dû à un manque de validation de la longueur des données fournies par l'utilisateur avant de les copier dans un tampon sur le heap. L'exploitation permet l'exécution de code dans le contexte de l'utilisateur 'anacapa'.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-1051
+* 🐞 CVE : [CVE-2025-1051](https://nvd.nist.gov/vuln/detail/CVE-2025-1051)
+* 💻 CVE Impacted Product : Sonos Era 300
+* 📈 CVSS : 8.8
+* 🛡️ Security recommandations : Appliquer les mises à jour logicielles de Sonos dès qu'elles sont disponibles. Isoler les appareils sur un réseau séparé si possible.
 
-### Qualcomm a corrigé trois zero-days exploités
-Qualcomm a corrigé trois vulnérabilités zero-day qui, selon l'entreprise, ont été exploitées dans des attaques limitées et ciblées. Les trois problèmes, suivis sous les références CVE-2025-21479, CVE-2025-21480, CVE-2025-27038, ont été signalés par l'équipe Google Android Security. Des indications de Google Threat Analysis Group suggèrent que ces CVEs pourraient être sous exploitation limitée et ciblée. Les patchs pour les pilotes Adreno Graphics Processing Unit (GPU) ont été mis à la disposition des OEMs. 🎯🕵️
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//securityaffairs[.]com/178532/hacking/qualcomm-fixed-three-zero-days-exploited-in-limited-targeted-attacks[.]html
-*   💥 CVE : CVE-2025-21479, CVE-2025-21480, CVE-2025-27038 (Exploités dans la nature), CVE-2024-43047 (Précédemment ajouté au catalogue KEV de CISA)
-*   👥 Threat Actor : Google Threat Analysis Group (attribution), Vendeurs potentiels de logiciels espions commerciaux (implication basée sur les organisations de signalement de CVE-2024-43047)
-*   🛡️ Security recommandations : Appliquer les mises à jour du micrologiciel fournies par les fabricants d'appareils dès que possible.
+### Vulnérabilité critique dans DELMIA Apriso {#vulnérabilité-critique-dans-delmia-apriso}
+Une vulnérabilité de désérialisation de données non fiables affectant DELMIA Apriso (Release 2020 à Release 2025) pourrait mener à une exécution de code arbitraire à distance.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-5086
+* 🐞 CVE : [CVE-2025-5086](https://nvd.nist.gov/vuln/detail/CVE-2025-5086)
+* 💻 CVE Impacted Product : DELMIA Apriso Release 2020, DELMIA Apriso Release 2021, DELMIA Apriso Release 2022, DELMIA Apriso Release 2023, DELMIA Apriso Release 2024, DELMIA Apriso Release 2025
+* 📈 CVSS : 10.0
+* 🛡️ Security recommandations : Appliquer les correctifs ou mises à jour du fournisseur dès que possible.
 
-### Vulnérabilité critique dans Cisco IOS XE WLC (CVE-2025-20188)
-Des détails techniques sur une faille critique de Cisco IOS XE WLC (CVE-2025-20188) sont désormais publics, augmentant le risque de voir un exploit fonctionnel apparaître bientôt. La vulnérabilité (CVSS 10.0) permet à un attaquant distant non authentifié de télécharger des fichiers arbitraires sur un système affecté via la fonction Out-of-Band Access Point (AP) Image Download. Elle est due à la présence d'un JSON Web Token (JWT) codé en dur et à une validation faible du chemin. L'exploitation peut mener à l'exécution de commandes arbitraires avec des privilèges root. 🚨⚙️
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//securityaffairs[.]com/178497/security/cisco-ios-xe-wlc-flaw-cve-2025-20188[.]html
-*   💥 CVE : [CVE-2025-20188](https://nvd.nist.gov/vuln/detail/CVE-2025-20188)
-*   💯 CVSS : 10.0
-*   🩹 CVE Impacted Poduct : Cisco IOS XE Software for Wireless LAN Controllers (WLCs)
-*   🛡️ Security recommandations : Appliquer les mises à jour logicielles dès que possible. Si la mise à jour n'est pas immédiatement possible, atténuer le risque en désactivant la fonction Out-of-Band AP Image Download.
-*   Indicators of Compromise :
-    *   DOMAIN : pvp[.]sh
+### Vulnérabilité importante dans Splunk Universal Forwarder pour Windows {#vulnérabilité-importante-dans-splunk-universal-forwarder-pour-windows}
+Dans les versions de Splunk Universal Forwarder pour Windows antérieures à 9.4.2, 9.3.4, 9.2.6 et 9.1.9, une nouvelle installation ou une mise à niveau vers une version affectée peut entraîner une attribution de permissions incorrecte dans le répertoire d'installation. Cela permet aux utilisateurs non-administrateurs d'accéder au répertoire et à son contenu, conduisant à une escalade de privilèges.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-20298
+* 🐞 CVE : [CVE-2025-20298](https://nvd.nist.gov/vuln/detail/CVE-2025-20298)
+* 💻 CVE Impacted Product : Splunk Universal Forwarder for Windows < 9.4.2, 9.3.4, 9.2.6, 9.1.9
+* 📈 CVSS : 8.0
+* 🛡️ Security recommandations : Mettre à jour Splunk Universal Forwarder pour Windows vers une version corrigée (9.4.2+, 9.3.4+, 9.2.6+, 9.1.9+).
 
-### Vulnérabilité RCE Sonos Era 300 (CVE-2025-1051)
-Une vulnérabilité de dépassement de tampon basé sur le tas dans Sonos Era 300 (CVE-2025-1051) permet aux attaquants adjacents au réseau d'exécuter du code arbitraire sur les enceintes Sonos Era 300 affectées. L'authentification n'est pas requise. La faille réside dans le traitement des données ALAC en raison d'un manque de validation de la longueur des données fournies par l'utilisateur. Un attaquant peut exploiter cette vulnérabilité pour exécuter du code dans le contexte de l'utilisateur anacapa. 🔊 exploiter CVE-2025-1051)
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-1051
-*   💥 CVE : [CVE-2025-1051](https://nvd.nist.gov/vuln/detail/CVE-2025-1051)
-*   💯 CVSS : 8.8
-*   🩹 CVE Impacted Poduct : Sonos Era 300
-*   🛡️ Security recommandations : Mettre à jour le logiciel de l'appareil dès que possible.
+### Vulnérabilité importante dans Catdoc {#vulnérabilité-importante-dans-catdoc}
+Une vulnérabilité de dépassement d'entier existe dans la fonctionnalité du parseur OLE Document DIFAT de catdoc 0.95. Un fichier malformé spécialement conçu peut entraîner une corruption de la mémoire heap. Un attaquant peut fournir un fichier malveillant pour déclencher cette vulnérabilité.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2024-54028
+* 🐞 CVE : [CVE-2024-54028](https://nvd.nist.gov/vuln/detail/CVE-2024-54028)
+* 💻 CVE Impacted Product : catdoc 0.95
+* 📈 CVSS : 8.4
+* 🛡️ Security recommandations : Mettre à jour catdoc vers une version corrigée. Être prudent avec les fichiers provenant de sources non fiables.
 
-### Vulnérabilité RCE DELmia Apriso (CVE-2025-5086)
-Une vulnérabilité de désérialisation de données non fiables affectant DELMIA Apriso de la Release 2020 à la Release 2025 (CVE-2025-5086) pourrait entraîner une exécution de code à distance. 🏭💥
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-5086
-*   💥 CVE : [CVE-2025-5086](https://nvd.nist.gov/vuln/detail/CVE-2025-5086)
-*   💯 CVSS : 10.0
-*   🩹 CVE Impacted Poduct : DELMIA Apriso (Release 2020 à 2025)
-*   🛡️ Security recommandations : Mettre à jour vers une version corrigée dès que disponible.
+### Vulnérabilité critique dans les appareils Instantel Micromate {#vulnérabilité-critique-dans-les-appareils-instantel-micromate}
+Le CISA a émis un avis concernant une vulnérabilité critique affectant toutes les versions d'Instantel Micromate, un appareil de surveillance des vibrations et du bruit. Le défaut (CVE-2025-1907, CVSS 9.8) est une absence de mécanisme d'authentification sur le port de configuration, permettant à un attaquant non authentifié d'accéder et d'exécuter des commandes si un accès réseau au port est possible. Cela pourrait permettre la manipulation de l'appareil, l'altération de données et l'utilisation de l'appareil comme point de pivot.
+* Publication date : 2025/06/03
+* 📰 Sources : hxxps[:]//securityonline[.]info/cisa-warns-of-critical-unauthenticated-access-vulnerability-in-instantel-micromate-devices/, hxxps[:]//microsec[.]io
+* 🐞 CVE : [CVE-2025-1907](https://nvd.nist.gov/vuln/detail/CVE-2025-1907)
+* 💻 CVE Impacted Product : Instantel Micromate (toutes versions)
+* 📈 CVSS : 9.8
+* 🛡️ Security recommandations : Isoler l'appareil sur un réseau protégé ou un VLAN séparé, et restreindre l'accès réseau au port de configuration. Surveiller les mises à jour firmware du fournisseur pour un correctif.
 
-### Vulnérabilité d'Élévation de Privilèges Splunk Universal Forwarder (CVE-2025-20298)
-Dans Splunk Universal Forwarder pour Windows versions inférieures à 9.4.2, 9.3.4, 9.2.6 et 9.1.9, une nouvelle installation ou une mise à niveau vers une version affectée peut entraîner une attribution de permissions incorrecte dans le répertoire d'installation. Cela permet aux utilisateurs non-administrateurs sur la machine d'accéder au répertoire et à tout son contenu. 📊🔑
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-20298
-*   💥 CVE : [CVE-2025-20298](https://nvd.nist.gov/vuln/detail/CVE-2025-20298)
-*   💯 CVSS : 8.0
-*   🩹 CVE Impacted Poduct : Splunk Universal Forwarder for Windows (< 9.4.2, 9.3.4, 9.2.6, and 9.1.9)
-*   🛡️ Security recommandations : Mettre à jour Universal Forwarder pour Windows vers une version corrigée.
+### Vulnérabilité critique dans Cisco IOS XE WLC {#vulnérabilité-critique-dans-cisco-ios-xe-wlc}
+Des détails techniques sur une vulnérabilité critique (CVE-2025-20188, CVSS 10.0) dans Cisco IOS XE WLC ont été rendus publics, augmentant le risque d'exploitation. La vulnérabilité est due à un JWT codé en dur et une validation de chemin faible dans la fonction Out-of-Band Access Point (AP) Image Download. Cela permet à un attaquant distant non authentifié de télécharger des fichiers arbitraires, d'effectuer du path traversal et d'exécuter des commandes avec les privilèges root.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//securityaffairs[.]com/178497/security/cisco-ios-xe-wlc-flaw-cve-2025-20188.html
+* 🐞 CVE : [CVE-2025-20188](https://nvd.nist.gov/vuln/detail/CVE-2025-20188)
+* 💻 CVE Impacted Product : Cisco IOS XE Software for Wireless LAN Controllers (WLCs)
+* 📈 CVSS : 10.0
+* 🛡️ Security recommandations : Désactiver la fonction Out-of-Band AP Image Download si possible. Appliquer les mises à jour logicielles de Cisco dès que possible. Évaluer l'impact de la désactivation avant de l'appliquer.
+* 🧬 Indicator of Compromise :
+    * DOMAIN : pvp[.]sh
 
-### Vulnérabilités dans Catdoc et Xls2csv (CVE-2024-54028, CVE-2024-52035, CVE-2024-48877)
-Plusieurs vulnérabilités de corruption de mémoire (dépassement de tampon, dépassement/sous-dépassement d'entier) ont été découvertes dans les utilitaires `catdoc` et `xls2csv` version 0.95 lors de l'analyse de fichiers OLE (Object Linking and Embedding). Un fichier malformé spécialement conçu peut entraîner une corruption de la mémoire basée sur le tas. Un attaquant peut fournir un fichier malveillant pour déclencher ces vulnérabilités. 📄💣
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2024-54028, hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2024-52035, hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2024-48877
-*   💥 CVE : [CVE-2024-54028](https://nvd.nist.gov/vuln/detail/CVE-2024-54028), [CVE-2024-52035](https://nvd.nist.gov/vuln/detail/CVE-2024-52035), [CVE-2024-48877](https://nvd.nist.gov/vuln/detail/CVE-2024-48877)
-*   💯 CVSS : 8.4 (pour chaque CVE)
-*   🩹 CVE Impacted Poduct : catdoc 0.95, xls2csv 0.95
-*   🛡️ Security recommandations : Mettre à jour les utilitaires affectés vers une version corrigée dès que disponible. Éviter d'ouvrir des fichiers provenant de sources non fiables avec ces utilitaires.
+## Category : Threats
+### Violations de données dans le secteur de la distribution (Cartier, The North Face) {#violations-de-données-dans-le-secteur-de-la-distribution-cartier-the-north-face}
+La marque de luxe Cartier a révélé avoir subi une violation de données exposant les informations personnelles de ses clients suite à une compromission de ses systèmes. Parallèlement, The North Face, détaillant de vêtements d'extérieur, a alerté ses clients d'une attaque par "credential stuffing" en avril, au cours de laquelle des informations personnelles ont été volées. Adidas a également signalé une violation de données le mois précédent via un fournisseur tiers, exposant des informations de contact.
+* Publication date : 2025/06/02
+* 📰 Sources : hxxps[:]//www[.]bleepingcomputer[.]com/news/security/cartier-discloses-data-breach-amid-fashion-brand-cyberattacks/, hxxps[:]//www[.]bleepingcomputer[.]com/news/security/the-north-face-warns-customers-of-april-credential-stuffing-attack/
+* 🎯 Threat Target : Clients de Cartier, The North Face, Timberland, Adidas
+* 💥 Threat Tactic : Compromission de systèmes (Cartier), Credential stuffing (The North Face), Compromission d'un fournisseur tiers (Adidas)
+* 🛡️ Security recommandations : Les clients doivent être vigilants face aux tentatives de phishing. The North Face devrait envisager l'application de l'authentification multi-facteurs (MFA).
+* 🧬 Indicator of Compromise :
+    * DOMAIN : thenorthface[.]com, timberland[.]com
 
-### Vulnérabilité d'Authentification Bypass HPE StoreOnce (CVE-2025-37093)
-Une vulnérabilité de contournement d'authentification existe dans HPE StoreOnce Software. 💾🔒
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//cvefeed[.]io/vuln/detail/CVE-2025-37093
-*   💥 CVE : [CVE-2025-37093](https://nvd.nist.gov/vuln/detail/CVE-2025-37093)
-*   💯 CVSS : 9.8
-*   🩹 CVE Impacted Poduct : HPE StoreOnce Software
-*   🛡️ Security recommandations : Mettre à jour vers une version corrigée dès que disponible.
+### Le "Russian Market" devient une plateforme majeure pour les identifiants volés {#le-russian-market-devient-une-plateforme-majeure-pour-les-identifiants-volés}
+Le marché cybercriminel "Russian Market" est devenu une plateforme populaire pour la vente d'identifiants volés par des logiciels espions (infostealers). Sa popularité a augmenté, en partie à cause du démantèlement du Genesis Market. Bien que la majorité des identifiants soient "recyclés", la plateforme offre une large sélection de logs d'infostealers contenant mots de passe, cookies, données de carte de crédit, crypto-monnaie et données de profil système. Les logs contiennent souvent des identifiants pour les services SaaS (Google Workspace, Zoom, Salesforce) et SSO.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//www[.]bleepingcomputer[.]com/news/security/russian-market-emerges-as-a-go-to-shop-for-stolen-credentials/
+* 👤 Threat Actor : Vendeurs sur le "Russian Market" (utilisant des infostealers comme Lumma, Acreed)
+* 🎯 Threat Target : Utilisateurs infectés par des infostealers
+* 💥 Threat Tactic : Vente d'identifiants volés via marketplace
+* 🛠️ Threat Tools : Infostealers (Lumma, Acreed, etc.)
+* 🛡️ Security recommandations : Utiliser l'authentification multi-facteurs pour les comptes sensibles. Être vigilant face aux emails de phishing, malvertising et téléchargements de logiciels provenant de sources non fiables pour éviter l'infection par infostealers.
 
-### Routeur FiberGateway Hacked (CVE-2025-25246)
-Un chercheur en sécurité a publié une analyse détaillée d'une chaîne d'exploit complète affectant le routeur FiberGateway GR241AG, utilisé par plus de 1,6 million de foyers au Portugal. L'exploit, qui inclut l'accès root via UART, la découverte d'identifiants en clair, et une vulnérabilité d'injection de paramètres dans `tcpdump` (CVE-2025-25246), permet l'exécution de code à distance sans accès physique via le réseau, y compris le WiFi public MEO. 🌐🔓
-*   Publication date : 2025/06/03
-*   🔗 Source : hxxps[:]//securityonline[.]info/fibergateway-router-hacked-portugals-1-6m-homes-at-risk/
-*   💥 CVE : [CVE-2025-25246](https://cvefeed.io/vuln/detail/CVE-2025-25246) (Identifiée comme une vulnérabilité d'injection dans tcpdump)
-*   🩹 CVE Impacted Poduct : FiberGateway GR241AG router
-*   🛡️ Security recommandations : Appliquer les mises à jour de micrologiciel fournies par le fournisseur Meo dès que possible.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info
+### Démantèlement de services de contournement d'antivirus (CAV) {#démantèlement-de-services-de-contournement-dantivirus-cav}
+Dans le cadre de l'Opération Endgame, une opération internationale menée par le département de la Justice américain, plusieurs sites offrant des services de cryptage et de contournement d'antivirus (CAV) ont été saisis le 27 mai 2025, notamment AvCheck, Cryptor et Crypt.guru. Ces services permettaient aux cybercriminels de tester et rendre leurs malwares indétectables par les programmes antivirus, facilitant ainsi les accès non autorisés et les attaques furtives. Des liens avec des groupes de ransomware ont été établis. Le démantèlement vise à perturber les activités des cybercriminels dès les premières étapes.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//securityaffairs[.]com/178518/cyber-crime/police-took-down-several-popular-counter-antivirus-cav-services-including-avcheck.html
+* 👤 Threat Actor : Fournisseurs de services CAV, groupes de ransomware
+* 💥 Threat Tactic : Fourniture d'outils et services pour l'évasion de détection de malware
+* 🛠️ Threat Tools : Services de cryptage et de CAV (AvCheck, Cryptor, Crypt.guru)
+* 🛡️ Security recommandations : Les défenseurs peuvent utiliser les informations sur ces services démantelés pour mieux comprendre les techniques d'évasion utilisées par les malwares.
+* 🧬 Indicator of Compromise :
+    * DOMAIN : avcheck[.]net, cryptor[.]biz, crypt[.]guru
 
-### Failles Linux exposant des données sensibles via Core Dumps (CVE-2025-5054, CVE-2025-4598)
-Qualys Threat Research Unit a découvert deux vulnérabilités locales de divulgation d'informations affectant les mécanismes de rapport de crash dans les principales distributions Linux. CVE-2025-5054 (Apport, Ubuntu) et CVE-2025-4598 (systemd-coredump, RHEL, Fedora, autres systemd-based) exploitent des conditions de concurrence ("race conditions") pour potentiellement permettre aux attaquants locaux d'accéder à la mémoire système sensible, y compris les hachages de mots de passe dans `/etc/shadow`. 🐧👁️
-*   Publication date : 2025/06/03
-*   🔗 Source : hxxps[:]//securityonline[.]info/linux-flaws-expose-sensitive-data-via-core-dumps/
-*   💥 CVE : [CVE-2025-5054](https://cvefeed.io/vuln/detail/CVE-2025-5054), [CVE-2025-4598](https://cvefeed.io/vuln/detail/CVE-2025-4598)
-*   🩹 CVE Impacted Poduct : Apport (Ubuntu), systemd-coredump (RHEL, Fedora, distributions systemd-based)
-*   🛡️ Security recommandations : Appliquer les mises à jour des distributions Linux affectées dès que disponibles.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info
+### Cyberattaque contre les hôpitaux de Covenant Health {#cyberattaque-contre-les-hôpitaux-de-covenant-health}
+Une cyberattaque a frappé trois hôpitaux gérés par Covenant Health (St. Mary's, St. Joseph Hospital), les forçant à arrêter leurs systèmes pour contenir l'incident. L'attaque, débutée le 26 mai 2025, a perturbé les systèmes (téléphones, documentation, laboratoires externes) à travers les hôpitaux, cliniques et cabinets. L'organisation a engagé des experts en cybersécurité pour enquêter. Il n'est pas clair si des données ont été volées ou si des ransomwares ont été utilisés, bien que le secteur de la santé soit une cible fréquente de ransomwares.
+* Publication date : 2025/06/02
+* 📰 Source : hxxps[:]//securityaffairs[.]com/178507/cyber-crime/a-cyberattack-hit-hospitals-operated-by-covenant-health.html
+* 🎯 Threat Target : Hôpitaux de Covenant Health (St. Mary's Health System, St. Joseph Hospital)
+* 💥 Threat Tactic : Cyberattaque (potentiellement ransomware ou autre) provoquant l'arrêt des systèmes
+* 🛡️ Security recommandations : Les organisations du secteur de la santé doivent renforcer leurs défenses contre les ransomwares et autres cyberattaques, y compris la segmentation du réseau, les sauvegardes régulières et les plans de réponse aux incidents.
 
-### Rapport Kaspersky : Vieux exploits et vulnérabilités OS en Q1 2025
-Selon un rapport de Kaspersky, les attaquants ciblent de plus en plus les exploits anciens, les faiblesses spécifiques aux plateformes et les mises à jour mal gérées. Au premier trimestre 2025, plus de 9700 vulnérabilités ont été signalées. Les vulnérabilités Linux proviennent souvent d'erreurs de codage fondamentales (CWE-476, CWE-416, CWE-125). Sur Windows, les vulnérabilités dans Microsoft Office restent un vecteur d'attaque majeur, notamment CVE-2017-11882 et CVE-2018-0802 liées à Equation Editor, qui sont toujours activement exploitées. 📉🕰️
-*   Publication date : 2025/06/03
-*   🔗 Source : hxxps[:]//securityonline[.]info/kaspersky-report-reveals-growing-threat-from-old-exploits-and-os-vulnerabilities-in-q1-2025/
-*   💥 CVE : CVE-2017-11882 (Activement exploité), CVE-2018-0802 (Activement exploité), CVE-2025-24071, CVE-2025-21333, CVE-2025-0282, CVE-2024-35250, CVE-2024-3400, CVE-2023-48788, CVE-2023-38831, CVE-2023-28461
-*   🩹 CVE Impacted Poduct : Microsoft Office (particulièrement via Equation Editor), Noyau Linux
-*   🛡️ Security recommandations : Appliquer rapidement toutes les mises à jour de sécurité pour les systèmes d'exploitation et les applications, en particulier Microsoft Office. Mettre l'accent sur la gestion des correctifs.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info
+### Exploitation d'une chaîne de vulnérabilités dans les routeurs FiberGateway {#exploitation-dune-chaîne-de-vulnérabilités-dans-les-routeurs-fibergateway}
+Un chercheur en sécurité a publié une analyse détaillée d'une chaîne d'exploitation complète affectant le routeur FiberGateway GR241AG, utilisé par plus de 1,6 million de foyers au Portugal (clients Meo). La chaîne, partie d'une frustration DNS personnelle, a mené à l'accès root et à l'exécution de code à distance (RCE) via WiFi public. Les techniques utilisées incluent l'accès via UART, le dumping de firmware révélant des identifiants admin en clair, l'exploitation d'une vulnérabilité d'injection de paramètre dans `tcpdump`, l'utilisation d'IPv6 NDP pour la découverte d'adresses IP internes et l'obtention d'un reverse shell. Les découvertes ont été divulguées et Meo/CNCS ont corrigé les vulnérabilités dans les semaines qui ont suivi.
+* Publication date : 2025/06/03
+* 📰 Source : hxxps[:]//securityonline[.]info/fibergateway-router-hacked-portugals-1-6m-homes-at-risk/
+* 🎯 Threat Target : Routeurs FiberGateway GR241AG (clients Meo, Portugal)
+* 💥 Threat Tactic : Exploitation de vulnérabilités, accès physique (UART), reverse engineering, injection de commandes (`tcpdump`), découverte d'adresses IP (IPv6 NDP), exécution de code à distance, obtention d'accès root
+* 🛡️ Security recommandations : Appliquer les mises à jour firmware du routeur. Séparer les réseaux publics (WiFi invité) des réseaux privés.
+* 🧬 Indicator of Compromise :
+    * DOMAIN : securityonline[.]info
 
-### CISA avertit d'une vulnérabilité critique Instantel Micromate (CVE-2025-1907)
-La CISA a émis un avis de sécurité concernant une vulnérabilité critique affectant toutes les versions d'Instantel Micromate, un appareil utilisé pour la surveillance des vibrations et du bruit. Identifiée comme CVE-2025-1907 (CVSS v3.1 base score de 9.8), la faille réside dans l'absence d'un mécanisme d'authentification sur le port de configuration. Un attaquant non authentifié peut, avec un accès réseau au port, exécuter des commandes arbitraires, potentiellement manipuler l'appareil, altérer les données ou l'utiliser comme point de pivot. ⚠️🏭
-*   Publication date : 2025/06/03
-*   🔗 Source : hxxps[:]//securityonline[.]info/cisa-warns-of-critical-unauthenticated-access-vulnerability-in-instantel-micromate-devices/
-*   💥 CVE : [CVE-2025-1907](https://cvefeed.io/vuln/detail/CVE-2025-1907)
-*   💯 CVSS : 9.8
-*   🩹 CVE Impacted Poduct : Instantel Micromate (Toutes versions)
-*   🛡️ Security recommandations : Un patch est en cours de développement. En attendant, restreindre l'accès réseau au port de configuration de l'appareil.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info, microsec[.]io
-
-### CISA ajoute 5 vulnérabilités activement exploitées au catalogue KEV
-La CISA a ajouté cinq nouvelles vulnérabilités à son catalogue Known Exploited Vulnerabilities (KEV) en raison de preuves vérifiées d'exploitation active dans la nature. Ces failles touchent diverses technologies :
-*   Vulnérabilités dans les routeurs ASUS, possiblement exploitées par le botnet "AyySSHush".
-*   Une faille d'injection de code dans Craft CMS (CVE-2024-56145) menant à l'exécution de code à distance dans des configurations spécifiques.
-*   Une deuxième faille Craft CMS (CVE-2025-35939) permettant le stockage de code PHP dans des fichiers de session par des utilisateurs non authentifiés.
-*   Une faille dans ConnectWise ScreenConnect (CVE-2025-3935) liée à la désérialisation non sécurisée de ViewState, permettant l'exécution de code à distance si les clés machine du serveur sont compromises. 📜🛠️
-*   Publication date : 2025/06/03
-*   🔗 Source : hxxps[:]//securityonline[.]info/cisa-adds-5-actively-exploited-vulnerabilities-to-kev-catalog-asus-routers-craft-cms-and-connectwise-targeted/
-*   💥 CVE : [CVE-2025-35939](https://cvefeed.io/vuln/detail/CVE-2025-35939), [CVE-2025-3935](https://cvefeed.io/vuln/detail/CVE-2025-3935), [CVE-2024-56145](https://cvefeed.io/vuln/detail/CVE-2024-56145), [CVE-2023-39780](https://cvefeed.io/vuln/detail/CVE-2023-39780), [CVE-2021-32030](https://cvefeed.io/vuln/detail/CVE-2021-32030)
-*   👥 Threat Actor : "AyySSHush" botnet (pour les routeurs ASUS)
-*   🛠️ Threat Tools : Brute-force, Exploits pour injection de clé SSH et activation de daemon SSH, injection de code.
-*   🩹 CVE Impacted Poduct : ASUS routers, Craft CMS, ConnectWise ScreenConnect, Cisco, D-Link, Linksys, QNAP, Araknis Networks devices.
-*   🛡️ Security recommandations : Appliquer les mises à jour fournies par les vendeurs (ASUS, Craft CMS, ConnectWise). Vérifier la configuration PHP (register_argc_argv) pour Craft CMS.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info, asp[.]net
-
-### Alerte Zero-Day Chrome (CVE-2025-5419)
-Google a publié une mise à jour de sécurité critique pour Chrome Stable, corrigeant plusieurs vulnérabilités, dont un zero-day (CVE-2025-5419) déjà activement exploité. CVE-2025-5419 est une vulnérabilité de lecture/écriture hors limites de haute gravité dans V8 (moteur JavaScript de Chrome), rapportée par Google TAG. Elle peut permettre l'exécution de code arbitraire ou l'évasion du sandbox. Une autre vulnérabilité, CVE-2025-5068 (use-after-free de gravité moyenne dans Blink), est également corrigée. 🌐🚨
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//securityonline[.]info/chrome-zero-day-alert-cve-2025-5419-actively-exploited-in-the-wild/
-*   💥 CVE : [CVE-2025-5419](https://cvefeed.io/vuln/detail/CVE-2025-5419) (Zero-day, activement exploité), [CVE-2025-5068](https://cvefeed.io/vuln/detail/CVE-2025-5068)
-*   👥 Threat Actor : Google Threat Analysis Group (attribution du rapport), potentiellement des acteurs parrainés par des États (implication basée sur l'utilisation de zero-days ciblés)
-*   🩹 CVE Impacted Poduct : Google Chrome (versions antérieures à 137.0.7151.68/.69 pour Windows/Mac, 137.0.7151.68 pour Linux)
-*   🛡️ Security recommandations : Mettre à jour immédiatement Google Chrome vers la version 137.0.7151.68 ou ultérieure.
-*   Indicators of Compromise :
-    *   DOMAIN : securityonline[.]info
-
-### Patch Tuesday Microsoft Mai 2025 : Cinq Zero-Days et Cinq Vulnérabilités Critiques
-Microsoft a corrigé 72 vulnérabilités lors de son Patch Tuesday de mai 2025, incluant des correctifs pour cinq vulnérabilités zero-day activement exploitées et cinq vulnérabilités critiques.
-*   CVE-2025-32706 et CVE-2025-32701 : Vulnérabilités d'élévation de privilèges importantes (CVSS 7.8) dans le Windows Common Log File System, activement exploitées.
-*   CVE-2025-32709 : Vulnérabilité d'élévation de privilèges importante (CVSS 7.8) dans le Windows Ancillary Function Driver for WinSock, activement exploitée.
-*   CVE-2025-30400 : Vulnérabilité d'élévation de privilèges importante (CVSS 7.8) dans la Microsoft Desktop Windows Manager (DWM) Core Library, activement exploitée.
-*   CVE-2025-30397 : Vulnérabilité de corruption de mémoire importante (CVSS 7.5) dans le Microsoft Scripting Engine, activement exploitée.
-*   CVE-2025-29966 et CVE-2025-29967 : Vulnérabilités RCE critiques (CVSS 8.8) dans les services Bureau à distance Windows, exploitables côté client sans authentification ni interaction.
-*   CVE-2025-30377 et CVE-2025-30386 : Vulnérabilités RCE critiques (CVSS 8.4) dans Microsoft Office (Use-After-Free), nécessitant l'ouverture d'un fichier malveillant, le volet de prévisualisation étant un vecteur d'attaque possible.
-*   CVE-2025-29833 : Vulnérabilité RCE critique (CVSS 7.1) dans Windows Virtual Machine Bus (condition de concurrence TOCTOU). 🩹🔑💻
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]crowdstrike[.]com/en-us/blog/patch-tuesday-analysis-may-2025/
-*   💥 CVE : CVE-2025-32706 (Zero-day, exploité), CVE-2025-32701 (Zero-day, exploité), CVE-2025-32709 (Zero-day, exploité), CVE-2025-30400 (Zero-day, exploité), CVE-2025-30397 (Zero-day, exploité), CVE-2025-29966 (Critique, RCE), CVE-2025-29967 (Critique, RCE), CVE-2025-30377 (Critique, RCE), CVE-2025-30386 (Critique, RCE), CVE-2025-29833 (Critique, RCE)
-*   💯 CVSS : 8.8 (CVE-2025-29966, CVE-2025-29967), 8.4 (CVE-2025-30377, CVE-2025-30386), 7.8 (CVE-2025-32706, CVE-2025-32701, CVE-2025-32709, CVE-2025-30400), 7.5 (CVE-2025-30397), 7.1 (CVE-2025-29833)
-*   🩹 CVE Impacted Poduct : Windows Common Log File System, Windows Ancillary Function Driver for WinSock, Microsoft Desktop Windows Manager (DWM) Core Library, Microsoft Scripting Engine, Windows Remote Desktop Services, Microsoft Office, Windows Virtual Machine Bus.
-*   🛡️ Security recommandations : Appliquer rapidement les mises à jour de sécurité Microsoft de mai 2025. Planifier la migration des systèmes Windows 10 avant la fin du support en octobre 2025. Améliorer la posture de sécurité globale au-delà du simple patching.
-
-### Avis ZDI à venir pour Oracle (ZDI-CAN-27154)
-Une vulnérabilité de gravité élevée (CVSS 8.2) a été découverte par des chercheurs de STAR Labs SG Pte. Ltd. et signalée à Oracle le 2 juin 2025. Le vendeur a jusqu'au 30 septembre 2025 pour publier un correctif. Les clients de Trend Micro sont protégés contre l'exploitation via des filtres IPS en attendant la divulgation publique. ⏳🛡️
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxp[:]//www[.]zerodayinitiative[.]com/advisories/upcoming/
-*   💯 CVSS : 8.2
-*   🩹 CVE Impacted Poduct : Oracle (Produit spécifique non précisé publiquement)
-*   🛡️ Security recommandations : Les clients de Trend Micro devraient s'assurer que leurs filtres IPS sont à jour. Les autres clients Oracle devraient surveiller les avis de sécurité du vendeur.
-
-### Microsoft publie un patch d'urgence pour les échecs de démarrage de Windows 11
-Microsoft a publié une mise à jour hors bande (KB5062170) pour résoudre un problème connu entraînant le passage en mode récupération et l'échec du démarrage de certains systèmes Windows 11 après l'installation de la mise à jour de sécurité de mai 2025 (KB5058405). Le problème provoque des erreurs 0xc0000098 dans ACPI.sys et affecte principalement les environnements d'entreprise virtualisés (Azure VM, AVD, Citrix/Hyper-V). 🛠️🔵
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]bleepingcomputer[.]com/news/microsoft/microsoft-ships-emergency-patch-to-fix-windows-11-installation-issues/
-*   🩹 CVE Impacted Poduct : Windows 11 22H2/23H2 systems (en environnements virtualisés) après installation de KB5058405
-*   🛡️ Security recommandations : Installer la mise à jour hors bande KB5062170. Pour les clients Azure ayant déjà le problème, utiliser les commandes de réparation Azure Virtual Machine comme solution de contournement.
-
-## THREATS
-### Cartier révèle une violation de données
-La marque de mode de luxe Cartier avertit ses clients qu'elle a subi une violation de données qui a exposé des informations personnelles de clients après la compromission de ses systèmes. L'étendue exacte des données concernées n'est pas entièrement précisée. 👗💼
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]bleepingcomputer[.]com/news/security/cartier-discloses-data-breach-amid-fashion-brand-cyberattacks/
-*   🎯 Threat Target : Clients de Cartier
-*   🛡️ Security recommandations : Les clients concernés doivent être vigilants face aux tentatives de phishing et autres activités frauduleuses. Cartier devrait fournir des détails sur les données exposées et les mesures de protection.
-*   Indicators of Compromise :
-    *   DOMAIN : bleepingcomputer[.]com
-
-### The North Face avertit ses clients d'une attaque par credential stuffing
-Le détaillant de vêtements de plein air The North Face avertit ses clients que leurs informations personnelles ont été volées lors d'attaques par credential stuffing ciblant le site web de l'entreprise en avril. Il s'agit de la quatrième attaque de ce type depuis 2020, soulignant un manque de MFA généralisé. Les informations de paiement n'ont pas été exposées car traitées par un fournisseur externe. ⛰️👟
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]bleepingcomputer[.]com/news/security/the-north-face-warns-customers-of-april-credential-stuffing-attack/
-*   🎯 Threat Target : Comptes clients de thenorthface.com
-*   🔪 Threat Tactic : Credential Stuffing
-*   🛡️ Security recommandations : Les clients devraient changer leurs mots de passe et activer la MFA si elle est disponible. Les entreprises devraient appliquer la MFA sur tous les comptes.
-*   Indicators of Compromise :
-    *   DOMAIN : thenorthface[.]com, timberland[.]com
-
-### Le marché 'Russian Market' devient une plateforme de référence pour les identifiants volés
-Le marché cybercriminel "Russian Market" est devenu l'une des plateformes les plus populaires pour l'achat et la vente d'identifiants volés par des malwares de type "info-stealer". Sa popularité a augmenté suite au démantèlement du Genesis Market. Il vend des "logs" d'info-stealers contenant mots de passe, cookies, données de carte bancaire, etc., souvent obtenus via des campagnes de phishing, malvertising ou vidéos malveillantes. Des familles d'info-stealers comme Lumma et Acreed sont associées à ce marché. 🛒💸
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//www[.]bleepingcomputer[.]com/news/security/russian-market-emerges-as-a-go-to-shop-for-stolen-credentials/
-*   🎯 Threat Target : Utilisateurs infectés par des info-stealers
-*   🔪 Threat Tactic : Vente d'identifiants volés, distribution d'info-stealers (via phishing, malvertising, etc.)
-*   🛠️ Threat Tools : Info-stealers (Lumma, Acreed)
-*   🛡️ Security recommandations : Être vigilant face au phishing, télécharger des logiciels uniquement à partir de sources fiables, utiliser la MFA partout où c'est possible.
-
-### La police démantèle plusieurs services populaires de contre-antivirus (CAV)
-Une opération internationale menée par le Département de la Justice américain a démantelé des services en ligne (incluant AvCheck, Cryptor, et Crypt.guru) utilisés par des cybercriminels pour tester et crypter des malwares afin d'éviter la détection par les antivirus. Ces services CAV permettent aux attaquants de rendre leurs malwares plus difficiles à détecter, facilitant ainsi les intrusions. Des preuves lient ces services à des groupes de ransomware connus. 🚨🔒
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//securityaffairs[.]com/178518/cyber-crime/police-took-down-several-popular-counter-antivirus-cav-services-including-avcheck[.]html
-*   🎯 Threat Target : Infrastructure cybercriminelle (services CAV)
-*   🔪 Threat Tactic : Cryptage de malware, test d'évasion antivirus (Utilisé par les cybercriminels)
-*   🛠️ Threat Tools : Services CAV (AvCheck, Cryptor, Crypt.guru)
-*   🛡️ Security recommandations : Cette action perturbe l'écosystème criminel. Les défenseurs doivent continuer à améliorer leurs capacités de détection face aux techniques d'obfuscation en constante évolution.
-*   Indicators of Compromise :
-    *   DOMAIN : avcheck[.]net, cryptor[.]biz, crypt[.]guru
-
-### Une cyberattaque frappe les hôpitaux gérés par Covenant Health
-Trois hôpitaux gérés par Covenant Health ont été touchés par une cyberattaque, les forçant à arrêter tous leurs systèmes pour contenir l'incident. L'impact exact (vol de données, ransomware) n'est pas encore clair. L'organisation a fait appel à des experts en cybersécurité. Les services continuent avec des perturbations minimales, mais certains systèmes et laboratoires ambulatoires sont affectés. 🏥💻
-*   Publication date : 2025/06/02
-*   🔗 Source : hxxps[:]//securityaffairs[.]com/178507/cyber-crime/a-cyberattack-hit-hospitals-operated-by-covenant-health[.]html
-*   🎯 Threat Target : Hôpitaux gérés par Covenant Health (St. Mary’s, St. Joseph Hospital, et deux autres hôpitaux du Maine)
-*   🔪 Threat Tactic : Cyberattaque (nature exacte indéterminée, potentiellement ransomware ou vol de données)
-*   🛡️ Security recommandations : Isoler les systèmes affectés, mener une enquête approfondie, restaurer à partir de sauvegardes si nécessaire, et renforcer la sécurité du réseau hospitalier. Tirer les leçons des attaques précédentes contre le secteur de la santé.
+### Le CISA ajoute des vulnérabilités activement exploitées à son catalogue KEV {#le-cisa-ajoute-des-vulnérabilités-activement-exploitées-à-son-catalogue-kev}
+Le CISA a ajouté cinq nouvelles vulnérabilités à son catalogue KEV (Known Exploited Vulnerabilities), indiquant une exploitation active dans la nature. L'article met en évidence des campagnes d'exploitation, notamment le botnet "AyySSHush" ciblant plus de 9000 routeurs ASUS (ainsi que des appareils Cisco, D-Link, Linksys, QNAP, Araknis) par force brute et exploitation pour injecter des clés SSH et ouvrir un backdoor persistant. D'autres vulnérabilités ajoutées au KEV incluent `CVE-2024-56145` et `CVE-2025-35939` affectant Craft CMS, et `CVE-2025-3935` affectant ConnectWise ScreenConnect, qui peuvent conduire à l'exécution de code à distance dans certaines configurations ou en étant chaînées.
+* Publication date : 2025/06/03
+* 📰 Source : hxxps[:]//securityonline[.]info/cisa-adds-5-actively-exploited-vulnerabilities-to-kev-catalog-asus-routers-craft-cms-and-connectwise-targeted/
+* 👤 Threat Actor : Botnet "AyySSHush" (selon GreyNoise et Sekoia), acteurs exploitant les vulnérabilités KEV
+* 🎯 Threat Target : Routeurs ASUS (et potentiellement Cisco, D-Link, Linksys, QNAP, Araknis), Craft CMS, ConnectWise ScreenConnect
+* 💥 Threat Tactic : Force brute, exploitation de vulnérabilités (injection de code, désérialisation dangereuse), injection de clé SSH, création de backdoor
+* 🐞 CVE : [CVE-2025-3935](https://nvd.nist.gov/vuln/detail/CVE-2025-3935), [CVE-2024-56145](https://nvd.nist.gov/vuln/detail/CVE-2024-56145), [CVE-2025-35939](https://nvd.nist.gov/vuln/detail/CVE-2025-35939)
+* 🛡️ Security recommandations : Appliquer immédiatement les correctifs pour les vulnérabilités listées par le CISA KEV. Utiliser des mots de passe forts et l'authentification multi-facteurs pour les routeurs et les systèmes de gestion à distance. Vérifier les configurations (e.g., `register_argc_argv` dans PHP pour Craft CMS).
+* 🧬 Indicator of Compromise :
+    * DOMAIN : securityonline[.]info, asp[.]net
