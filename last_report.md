@@ -1,365 +1,232 @@
 # ⚠️Important Vulnerabilities (CVSS > 8)⚠️
-*   🐛 Google Chrome Vulnerabilities (Exploited Zero-Days)
-*   🐛 HPE StoreOnce Critical Authentication Bypass (CVE-2025-37093)
-*   🐛 Tenda RX3 Stack-Based Buffer Overflow (CVE-2025-5527)
-*   🐛 Samsung Exynos Double Free (CVE-2025-23102)
-*   🐛 Audiocodes Mediapack Remote Code Execution (CVE-2025-32106)
-*   🐛 Sangoma IMG2020 Remote Code Execution (CVE-2025-32105)
-*   🐛 Samsung Exynos Out-of-Bounds Write (CVE-2025-23107)
-*   🐛 JEHC-BPM File Upload RCE (CVE-2025-45854)
-*   🐛 MailEnable Cross Site Scripting (CVE-2025-44148)
-*   🐛 Microsoft May 2025 Patch Tuesday: Critical Vulnerabilities
-*   🐛 Roundcube Critical RCE Vulnerability (CVE-2025-49113)
-*   🐛 OttoKit WordPress Plugin Critical Vulnerability (CVE-2025-27007)
-*   🐛 Langflow Critical RCE Vulnerability (CVE-2025-3248)
-*   🐛 SAP NetWeaver Critical Vulnerability Exploited by Chaya_004 (CVE-2025-31324)
-*   🐛 Output Messenger Zero-Day Exploited by Marbled Dust
+* 🚨 Vulnérabilités multiples zero-day activement exploitées dans Google Chrome
+* 🔐 Vulnérabilité critique de contournement d'authentification dans HPE StoreOnce (CVE-2025-37093)
+* 💥 Vulnérabilité de débordement de tampon basé sur la pile dans Tenda RX3 (CVE-2025-5527)
+* 📱 Vulnérabilités de double libération et d'écriture hors limites dans les processeurs Samsung Exynos (CVE-2025-23102, CVE-2025-23107)
+* 📞 Vulnérabilité d'exécution de code à distance critique dans Audiocodes Mediapack (CVE-2025-32106)
+* 📞 Vulnérabilité d'exécution de code à distance critique dans le serveur HTTP Sangoma IMG2020 (CVE-2025-32105)
+* 📁 Vulnérabilité d'exécution de code à distance par téléchargement de fichier dans JEHC-BPM (CVE-2025-45854)
+* 📧 Vulnérabilité de Cross Site Scripting (XSS) dans MailEnable (CVE-2025-44148)
+* 📰 Analyse du Patch Tuesday Microsoft de mai 2025 : Cinq zero-days et vulnérabilités critiques
+* 🛡️ Vulnérabilités critiques dans IBM QRadar et Cloud Pak for Security
+* 🇺🇸 Nouvelles vulnérabilités ajoutées au catalogue CISA KEV, dont ASUS RT-AX55 et ConnectWise ScreenConnect
+* ☁️ Problème de résolution DNS dans Azure OpenAI potentiellement critique
 
 ## Table of Contents
-*   [Category : Vulnerabilities](#category--vulnerabilities)
-    *   [Audiocodes Mediapack Remote Code Execution (CVE-2025-32106)](#audiocodes-mediapack-remote-code-execution-cve-2025-32106)
-    *   [Azure OpenAI DNS Resolution Misconfiguration](#azure-openai-dns-resolution-misconfiguration)
-    *   [Google Chrome Vulnerabilities (Exploited Zero-Days)](#google-chrome-vulnerabilities-exploited-zero-days)
-    *   [HPE StoreOnce Critical Authentication Bypass (CVE-2025-37093)](#hpe-storeonce-critical-authentication-bypass-cve-2025-37093)
-    *   [JEHC-BPM File Upload RCE (CVE-2025-45854)](#jehc-bpm-file-upload-rce-cve-2025-45854)
-    *   [Langflow Critical RCE Vulnerability (CVE-2025-3248)](#langflow-critical-rce-vulnerability-cve-2025-3248)
-    *   [MailEnable Cross Site Scripting (CVE-2025-44148)](#mailenable-cross-site-scripting-cve-2025-44148)
-    *   [Microsoft May 2025 Patch Tuesday: Critical Vulnerabilities](#microsoft-may-2025-patch-tuesday-critical-vulnerabilities)
-    *   [Microsoft May 2025 Patch Tuesday: Exploited Zero-Days](#microsoft-may-2025-patch-tuesday-exploited-zero-days)
-    *   [OttoKit WordPress Plugin Critical Vulnerability (CVE-2025-27007)](#ottokit-wordpress-plugin-critical-vulnerability-cve-2025-27007)
-    *   [Output Messenger Zero-Day Exploited by Marbled Dust](#output-messenger-zero-day-exploited-by-marbled-dust)
-    *   [Roundcube Critical RCE Vulnerability (CVE-2025-49113)](#roundcube-critical-rce-vulnerability-cve-2025-49113)
-    *   [Samsung Exynos Vulnerabilities (CVE-2025-23102, CVE-2025-23107)](#samsung-exynos-vulnerabilities-cve-2025-23102-cve-2025-23107)
-    *   [Sangoma IMG2020 Remote Code Execution (CVE-2025-32105)](#sangoma-img2020-remote-code-execution-cve-2025-32105)
-    *   [SAP NetWeaver Critical Vulnerability Exploited by Chaya_004 (CVE-2025-31324)](#sap-netweaver-critical-vulnerability-exploited-by-chaya_004-cve-2025-31324)
-    *   [Tenda RX3 Stack-Based Buffer Overflow (CVE-2025-5527)](#tenda-rx3-stack-based-buffer-overflow-cve-2025-5527)
-*   [Category : Threats](#category--threats)
-    *   [China-linked APT15 Cyberespionage (Guatemala Foreign Ministry)](#china-linked-apt15-cyberespionage-guatemala-foreign-ministry)
-    *   [China-linked APT31 Cyberespionage (Czech Foreign Ministry)](#china-linked-apt31-cyberespionage-czech-foreign-ministry)
-    *   [Coinbase Data Breach Tied to Insider Threat](#coinbase-data-breach-tied-to-insider-threat)
-    *   [DarkCloud Stealer Campaign via Phishing](#darkcloud-stealer-campaign-via-phishing)
-    *   [Iran-linked APT35 Poses as German Modeling Agency](#iran-linked-apt35-poses-as-german-modeling-agency)
-    *   [Lampion Malware Operators Use ClickFix Tactic](#lampion-malware-operators-use-clickfix-tactic)
-    *   [LexisNexis Data Breach](#lexisnexis-data-breach)
-    *   [Malicious Go Modules Supply Chain Attack (Disk-Wiping)](#malicious-go-modules-supply-chain-attack-disk-wiping)
-    *   [Malicious NPM Packages Target Cursor AI](#malicious-npm-packages-target-cursor-ai)
-    *   [Malicious RubyGems Impersonate Fastlane Plugins](#malicious-rubygems-impersonate-fastlane-plugins)
-    *   [Marbled Dust Exploits Output Messenger Zero-Day](#marbled-dust-exploits-output-messenger-zero-day)
-    *   [Pakistan-linked APT36 Spoofs India Ministry of Defence](#pakistan-linked-apt36-spoofs-india-ministry-of-defence)
-    *   [Pro-Russia NoName057(16) DDoS Attacks](#pro-russia-noname05716-ddos-attacks)
-    *   [Russia/APT29 Attack on Azerbaijan Media](#russiaapt29-attack-on-azerbaijan-media)
-    *   [Russia-linked ColdRiver Deploys Lostkeys Malware](#russia-linked-coldriver-deploys-lostkeys-malware)
-    *   [Russia-linked Laundry Bear Cyberespionage](#russia-linked-laundry-bear-cyberespionage)
-    *   [SK Telecoms Data Breach](#sk-telecoms-data-breach)
-    *   [xAI Developer API Key Leak](#xai-developer-api-key-leak)
+* [Category : VULNERABILITIES](#category--vulnerabilities)
+    * [Vulnérabilités multiples zero-day activement exploitées dans Google Chrome](#vulnrabilits-multiples-zero-day-activement-exploites-dans-google-chrome)
+    * [Vulnérabilité critique de contournement d'authentification dans HPE StoreOnce (CVE-2025-37093)](#vulnrabilit-critique-de-contournement-dauthentification-dans-hpe-storeonce-cve-2025-37093)
+    * [Vulnérabilité de débordement de tampon basé sur la pile dans Tenda RX3 (CVE-2025-5527)](#vulnrabilit-de-dbordement-de-tampon-bas-sur-la-pile-dans-tenda-rx3-cve-2025-5527)
+    * [Vulnérabilités de double libération et d'écriture hors limites dans les processeurs Samsung Exynos (CVE-2025-23102, CVE-2025-23107)](#vulnrabilits-de-double-libration-et-dcriture-hors-limites-dans-les-processeurs-samsung-exynos-cve-2025-23102--cve-2025-23107)
+    * [Vulnérabilité d'exécution de code à distance critique dans Audiocodes Mediapack (CVE-2025-32106)](#vulnrabilit-dexcution-de-code-distance-critique-dans-audiocodes-mediapack-cve-2025-32106)
+    * [Vulnérabilité d'exécution de code à distance critique dans le serveur HTTP Sangoma IMG2020 (CVE-2025-32105)](#vulnrabilit-dexcution-de-code-distance-critique-dans-le-serveur-http-sangoma-img2020-cve-2025-32105)
+    * [Vulnérabilité d'exécution de code à distance par téléchargement de fichier dans JEHC-BPM (CVE-2025-45854)](#vulnrabilit-dexcution-de-code-distance-par-tlchargement-de-fichier-dans-jehc-bpm-cve-2025-45854)
+    * [Vulnérabilité de Cross Site Scripting (XSS) dans MailEnable (CVE-2025-44148)](#vulnrabilit-de-cross-site-scripting-xss-dans-mailenable-cve-2025-44148)
+    * [Analyse du Patch Tuesday Microsoft de mai 2025 : Cinq zero-days et vulnérabilités critiques](#analyse-du-patch-tuesday-microsoft-de-mai-2025--cinq-zero-days-et-vulnrabilits-critiques)
+    * [Vulnérabilités critiques dans IBM QRadar et Cloud Pak for Security](#vulnrabilits-critiques-dans-ibm-qradar-et-cloud-pak-for-security)
+    * [Nouvelles vulnérabilités ajoutées au catalogue CISA KEV, dont ASUS RT-AX55 et ConnectWise ScreenConnect](#nouvelles-vulnrabilits-ajoutes-au-catalogue-cisa-kev--dont-asus-rt-ax55-et-connectwise-screenconnect)
+    * [Problème de résolution DNS dans Azure OpenAI potentiellement critique](#problme-de-rsolution-dns-dans-azure-openai-potentiellement-critique)
+* [Category : THREATS](#category--threats)
+    * [Violation de données chez Coinbase liée à la corruption d'agents de support TaskUs](#violation-de-donnes-chez-coinbase-lie-la-corruption-dagents-de-support-taskus)
+    * [Packages RubyGems malveillants se faisant passer pour Fastlane pour voler des données CI/CD](#packages-rubygems-malveillants-se-faisant-passer-pour-fastlane-pour-voler-des-donnes-ci-cd)
+    * [Le cheval de Troie bancaire Android Crocodilus évolue rapidement et devient mondial](#le-cheval-de-troie-bancaire-android-crocodilus-volue-rapidement-et-devient-mondial)
+    * [Campagne de cryptojacking ciblant les outils DevOps exposés](#campagne-de-cryptojacking-ciblant-les-outils-devops-exposs)
 
-## Category : Vulnerabilities
-### Audiocodes Mediapack Remote Code Execution (CVE-2025-32106)
-Une vulnérabilité critique a été découverte dans Audiocodes Mediapack MP-11x (jusqu'à 6.60A.369.002). Une requête POST spécifiquement conçue peut permettre à un attaquant distant non authentifié d'exécuter du code arbitraire. La vulnérabilité a été divulguée publiquement et pourrait être exploitée.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-32106
-🐛 CVE : CVE-2025-32106 [https://nvd.nist.gov/vuln/detail/CVE-2025-32106](https://nvd.nist.gov/vuln/detail/CVE-2025-32106)
-📦 CVE Impacted Product : Audiocodes Mediapack MP-11x
-🔢 CVSS : 9.8
+## Category : VULNERABILITIES
+### Vulnérabilités multiples zero-day activement exploitées dans Google Chrome
+Des vulnérabilités multiples ont été découvertes dans Google Chrome, dont plusieurs sont activement exploitées en tant que zero-days. L'une d'elles, CVE-2025-5419, est une faille de lecture et d'écriture hors limites dans le moteur V8 JavaScript, permettant potentiellement une exécution de code arbitraire via une page HTML piégée. Google TAG a signalé cette vulnérabilité et une mise à jour de configuration a été déployée pour la mitiger. Deux autres zero-days activement exploités depuis début 2025 sont également mentionnés : CVE-2025-2783, une faille dans Mojo sur Windows permettant l'évasion de sandbox, et CVE-2025-4664, une application de politique insuffisante dans Loader. Ces vulnérabilités soulignent l'importance de maintenir les navigateurs à jour en raison des menaces actives.
+* Publication date : 2025/06/03
+* 📚 Sources : https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0471/, https://securityaffairs.com/178560/hacking/google-fixed-the-second-actively-exploited-chrome-zero-day-since-the-start-of-the-year.html, https://go.theregister.com/feed/www.theregister.com/2025/06/03/google_chrome_zero_day_emergency_fix/
+* 🧩 CVE : CVE-2025-5419 (Activement exploitée) [https://nvd.nist.gov/vuln/detail/CVE-2025-5419](https://nvd.nist.gov/vuln/detail/CVE-2025-5419)
+* 💻 CVE Impacted Product : Google Chrome, Moteur V8 JavaScript, Mojo (Windows), Loader
+* 💥 CVE : CVE-2025-2783 (Activement exploitée) [https://nvd.nist.gov/vuln/detail/CVE-2025-2783](https://nvd.nist.gov/vuln/detail/CVE-2025-2783)
+* 💻 CVE Impacted Product : Google Chrome (Windows), Mojo
+* 💥 CVE : CVE-2025-4664 (Activement exploitée) [https://nvd.nist.gov/vuln/detail/CVE-2025-4664](https://nvd.nist.gov/vuln/detail/CVE-2025-4664)
+* 💻 CVE Impacted Product : Google Chrome, Loader
+* 🛡️ Security recommandations : Appliquer immédiatement les mises à jour ou correctifs disponibles. Être vigilant face aux pages HTML suspectes.
 
-### Azure OpenAI DNS Resolution Misconfiguration
-Une misconfiguration de la résolution DNS dans Azure OpenAI a été découverte, permettant potentiellement des fuites de données inter-tenants et des attaques de type "Meddler-in-the-Middle" (MitM). Le problème provenait d'une différence dans la gestion des noms de domaine personnalisés entre l'API et l'interface utilisateur, permettant à plusieurs tenants de partager un domaine spécifique (test.openai.azure[.]com) qui se résolvait vers une adresse IP externe non fiable. Microsoft a rapidement corrigé le problème en supprimant l'enregistrement DNS incriminé.
-📅 Publication date : 2025/06/03
-📜 Sources : https://unit42.paloaltonetworks.com/azure-openai-dns-resolution/
-📦 CVE Impacted Product : Azure OpenAI Service
-🛡️ Security recommandations : Monitorer et valider régulièrement les résolutions DNS des ressources cloud pour s'assurer que les adresses IP appartiennent au fournisseur de services cloud (CSP). Examiner attentivement les workflows basés sur les API.
-📍 Indicator of Compromise :
-DOMAIN :
-test[.]openai[.]azure[.]com
-name[.]api[.]cognitive[.]microsoft[.]com
-likemargol[.]openai[.]azure[.]com
-IPv4 :
-66[.]66[.]66[.]66
+### Vulnérabilité critique de contournement d'authentification dans HPE StoreOnce (CVE-2025-37093)
+Hewlett Packard Enterprise (HPE) a publié un bulletin de sécurité concernant plusieurs vulnérabilités dans sa solution de sauvegarde et de déduplication sur disque StoreOnce. La plus critique est un contournement d'authentification de gravité critique (CVSS 9.8), suivi sous le nom de CVE-2025-37093. Cette faille, découverte par Zero Day Initiative (ZDI), réside dans l'implémentation de la méthode `machineAccountCheck` suite à une implémentation incorrecte d'un algorithme d'authentification. Bien que les correctifs aient mis sept mois à être disponibles après leur signalement, aucune exploitation active n'a été signalée à ce jour.
+* Publication date : 2025/06/03
+* 📚 Sources : https://www.bleepingcomputer.com/news/security/hewlett-packard-enterprise-warns-of-critical-storeonce-auth-bypass/, https://cvefeed.io/news/52064/thumbnail.jpg
+* 🧩 CVE : CVE-2025-37093 [https://nvd.nist.gov/vuln/detail/CVE-2025-37093](https://nvd.nist.gov/vuln/detail/CVE-2025-37093)
+* 💻 CVE Impacted Product : HPE StoreOnce
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Appliquer les correctifs fournis par HPE dès que possible.
 
-### Google Chrome Vulnerabilities (Exploited Zero-Days)
-De multiples vulnérabilités ont été découvertes dans Google Chrome, dont plusieurs zero-days activement exploités. La vulnérabilité CVE-2025-5419 est une faille de lecture et écriture hors limites (out-of-bounds read/write) dans le moteur V8 JavaScript, permettant potentiellement à un attaquant distant de corrompre la mémoire et de détourner l'exécution via une page HTML malveillante. Google a déployé une modification de configuration d'urgence pour atténuer l'exploitation de CVE-2025-5419. D'autres zero-days activement exploités, CVE-2025-2783 (évasion de sandbox) et CVE-2025-4664 (contournement de politique de chargement, permettant fuite de données inter-origines et potentielle prise de contrôle de compte), ont été corrigés dans des mises à jour précédentes mais récentes.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0471/, https://go.theregister.com/feed/www.theregister.com/2025/06/03/google_chrome_zero_day_emergency_fix/, https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🐛 CVE : CVE-2025-5419 [https://nvd.nist.gov/vuln/detail/CVE-2025-5419](https://nvd.nist.gov/vuln/detail/CVE-2025-5419), CVE-2025-4664 [https://nvd.nist.gov/vuln/detail/CVE-2025-4664](https://nvd.nist.gov/vuln/detail/CVE-2025-4664), CVE-2025-2783 [https://nvd.nist.gov/vuln/detail/CVE-2025-2783](https://nvd.nist.gov/vuln/detail/CVE-2025-2783)
-📦 CVE Impacted Product : Google Chrome, Moteur V8 JavaScript, Chrome Loader
-☠️ Threat Actor : Acteurs inconnus exploitant les zero-days
-🔥 Exploitation Activity : Exploitation active dans la nature (in the wild).
-🛡️ Security recommandations : Appliquer immédiatement les mises à jour de sécurité de Google Chrome.
+### Vulnérabilité de débordement de tampon basé sur la pile dans Tenda RX3 (CVE-2025-5527)
+Une vulnérabilité de débordement de tampon basé sur la pile, classée comme critique (CVSS 8.8), a été découverte dans le routeur Tenda RX3 (version 16.03.13.11_multi_TDE01). Le problème affecte la fonction `save_staticroute_data` dans le fichier `/goform/SetStaticRouteCfg`. La manipulation de l'argument 'list' peut entraîner le débordement. L'attaque peut être initiée à distance et un exploit public a été divulgué.
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-5527
+* 🧩 CVE : CVE-2025-5527 [https://nvd.nist.gov/vuln/detail/CVE-2025-5527](https://nvd.nist.gov/vuln/detail/CVE-2025-5527)
+* 💻 CVE Impacted Product : Tenda RX3 16.03.13.11_multi_TDE01
+* 💯 CVSS : 8.8
+* 🛡️ Security recommandations : Consulter le fournisseur (Tenda) pour obtenir un correctif ou une mitigation. Limiter l'accès à l'interface d'administration.
 
-### HPE StoreOnce Critical Authentication Bypass (CVE-2025-37093)
-Hewlett Packard Enterprise (HPE) a averti de multiples vulnérabilités dans sa solution de sauvegarde et de déduplication StoreOnce. Parmi elles, une vulnérabilité critique de contournement d'authentification (CVE-2025-37093) avec un score CVSS v3.1 de 9.8. Cette faille réside dans l'implémentation de la méthode `machineAccountCheck`, due à une implémentation incorrecte d'un algorithme d'authentification. D'autres failles incluent l'exécution de code à distance et des traversées de répertoire. Les correctifs sont disponibles, mais aucune exploitation active n'a été signalée.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.bleepingcomputer.com/news/security/hewlett-packard-enterprise-warns-of-critical-storeonce-auth-bypass/, https://cvefeed.io/news/52064/thumbnail.jpg
-🐛 CVE : CVE-2025-37093 [https://nvd.nist.gov/vuln/detail/CVE-2025-37093](https://nvd.nist.gov/vuln/detail/CVE-2025-37093)
-📦 CVE Impacted Product : HPE StoreOnce
-🔢 CVSS : 9.8
-🛡️ Security recommandations : Appliquer les correctifs fournis par HPE dès que possible.
+### Vulnérabilités de double libération et d'écriture hors limites dans les processeurs Samsung Exynos (CVE-2025-23102, CVE-2025-23107)
+Des vulnérabilités affectant plusieurs processeurs mobiles Samsung Exynos ont été signalées. CVE-2025-23102 (CVSS 8.8, HIGH) est un problème de double libération (Double Free) pouvant entraîner une élévation de privilèges. CVE-2025-23107 (CVSS 8.6, HIGH) est un problème d'écriture hors limites (Out-of-Bounds Write) causé par un manque de vérification de longueur.
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-23102, https://cvefeed.io/vuln/detail/CVE-2025-23107
+* 🧩 CVE : CVE-2025-23102 [https://nvd.nist.gov/vuln/detail/CVE-2025-23102](https://nvd.nist.gov/vuln/detail/CVE-2025-23102)
+* 💻 CVE Impacted Product : Samsung Mobile Processor Exynos 9820, 9825, 980, 990, 1080, 2100, 1280, 2200, 1380
+* 💯 CVSS : 8.8
+* 💥 CVE : CVE-2025-23107 [https://nvd.nist.gov/vuln/detail/CVE-2025-23107](https://nvd.nist.gov/vuln/detail/CVE-2025-23107)
+* 💻 CVE Impacted Product : Samsung Mobile Processor Exynos 1480, 2400
+* 💯 CVSS : 8.6
+* 🛡️ Security recommandations : Appliquer les mises à jour logicielles fournies par Samsung ou les fabricants d'appareils utilisant ces processeurs.
 
-### JEHC-BPM File Upload RCE (CVE-2025-45854)
-Une vulnérabilité critique de téléchargement de fichier arbitraire a été trouvée dans JEHC-BPM v2.0.1. Elle affecte le composant `/server/executeExec` et permet à des attaquants d'exécuter du code arbitraire en téléchargeant un fichier malveillant.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-45854
-📦 CVE Impacted Product : JEHC-BPM
-🔢 CVSS : 9.8
+### Vulnérabilité d'exécution de code à distance critique dans Audiocodes Mediapack (CVE-2025-32106)
+Une vulnérabilité critique (CVSS 9.8) a été découverte dans les appareils Audiocodes Mediapack MP-11x (versions jusqu'à 6.60A.369.002). Un attaquant non authentifié peut exécuter du code non autorisé à distance en envoyant une requête POST spécifiquement conçue.
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-32106
+* 🧩 CVE : CVE-2025-32106 [https://nvd.nist.gov/vuln/detail/CVE-2025-32106](https://nvd.nist.gov/vuln/detail/CVE-2025-32106)
+* 💻 CVE Impacted Product : Audiocodes Mediapack MP-11x through 6.60A.369.002
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Appliquer les correctifs disponibles du fournisseur. Restreindre l'accès réseau aux appareils affectés.
 
-### Langflow Critical RCE Vulnerability (CVE-2025-3248)
-Une vulnérabilité critique d'exécution de code à distance (CVE-2025-3248) a été découverte dans Langflow, un outil open-source pour construire des workflows d'IA. La vulnérabilité est activement exploitée dans la nature. Elle permet aux attaquants d'exécuter du code sur les serveurs exécutant des versions vulnérables de Langflow (antérieures à 1.3.0).
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🐛 CVE : CVE-2025-3248 [https://nvd.nist.gov/vuln/detail/CVE-2025-3248](https://nvd.nist.gov/vuln/detail/CVE-2025-3248)
-📦 CVE Impacted Product : Langflow < 1.3.0
-🔥 Exploitation Activity : Exploitation active dans la nature.
-🛡️ Security recommandations : Mettre à jour Langflow immédiatement vers la version 1.3.0 ou supérieure.
+### Vulnérabilité d'exécution de code à distance critique dans le serveur HTTP Sangoma IMG2020 (CVE-2025-32105)
+Un débordement de tampon (Buffer Overflow) dans le serveur HTTP de Sangoma IMG2020 (versions jusqu'à 2.3.9.6) permet à un attaquant non authentifié d'obtenir une exécution de code à distance. Cette vulnérabilité est classée comme critique (CVSS 9.8).
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-32105
+* 🧩 CVE : CVE-2025-32105 [https://nvd.nist.gov/vuln/detail/CVE-2025-32105](https://nvd.nist.gov/vuln/detail/CVE-2025-32105)
+* 💻 CVE Impacted Product : Sangoma IMG2020 HTTP server through 2.3.9.6
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Appliquer les correctifs disponibles du fournisseur. Restreindre l'accès réseau au serveur HTTP affecté.
 
-### MailEnable Cross Site Scripting (CVE-2025-44148)
-Une vulnérabilité de Cross Site Scripting (XSS) dans MailEnable avant la v10 permet à un attaquant distant d'exécuter du code arbitraire via le composant `failure.aspx`. La vulnérabilité a été classée comme critique.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-44148
-📦 CVE Impacted Product : MailEnable < v10
-🔢 CVSS : 9.8
+### Vulnérabilité d'exécution de code à distance par téléchargement de fichier dans JEHC-BPM (CVE-2025-45854)
+Une vulnérabilité critique de téléchargement de fichier arbitraire (CVSS 9.8) a été identifiée dans JEHC-BPM v2.0.1. La faille se trouve dans le composant `/server/executeExec` et permet aux attaquants d'exécuter du code arbitraire en téléchargeant un fichier malveillant.
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-45854
+* 🧩 CVE : CVE-2025-45854 [https://nvd.nist.gov/vuln/detail/CVE-2025-45854](https://nvd.nist.gov/vuln/detail/CVE-2025-45854)
+* 💻 CVE Impacted Product : JEHC-BPM v2.0.1
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Rechercher les mises à jour ou correctifs du fournisseur. Restreindre l'accès au composant vulnérable.
 
-### Microsoft May 2025 Patch Tuesday: Critical Vulnerabilities
-Le Patch Tuesday de mai 2025 de Microsoft a corrigé plusieurs vulnérabilités classées comme critiques avec un score CVSS élevé. Parmi elles, CVE-2025-29966 et CVE-2025-29967 (CVSS 8.8), des vulnérabilités d'exécution de code à distance (RCE) affectant les Services Bureau à distance (RDP) de Microsoft Windows, qui pourraient permettre à des attaquants distants avec le contrôle d'un serveur RDP malveillant de déclencher une RCE sur une machine cliente RDP. CVE-2025-30377 et CVE-2025-30386 (CVSS 8.4) sont des vulnérabilités RCE dans Microsoft Office (use-after-free), nécessitant l'ouverture d'un fichier malveillant.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-may-2025/
-🐛 CVE : CVE-2025-29966 [https://nvd.nist.gov/vuln/detail/CVE-2025-29966](https://nvd.nist.gov/vuln/detail/CVE-2025-29966), CVE-2025-29967 [https://nvd.nist.gov/vuln/detail/CVE-2025-29967](https://nvd.nist.gov/vuln/detail/CVE-2025-29967), CVE-2025-30377 [https://nvd.nist.gov/vuln/detail/CVE-2025-30377](https://nvd.nist.gov/vuln/detail/CVE-2025-30377), CVE-2025-30386 [https://nvd.nist.gov/vuln/detail/CVE-2025-30386](https://nvd.nist.gov/vuln/detail/CVE-2025-30386)
-📦 CVE Impacted Product : Microsoft Windows Remote Desktop Services (RDP), Microsoft Office
-🔢 CVSS : 8.8 (CVE-2025-29966, CVE-2025-29967), 8.4 (CVE-2025-30377, CVE-2025-30386)
-🛡️ Security recommandations : Appliquer les mises à jour de sécurité Microsoft pour corriger ces vulnérabilités. Revoir et améliorer la posture de sécurité globale, notamment pour les systèmes en fin de support (Windows 10 en octobre 2025).
+### Vulnérabilité de Cross Site Scripting (XSS) dans MailEnable (CVE-2025-44148)
+Une vulnérabilité de Cross Site Scripting (XSS) de gravité critique (CVSS 9.8) a été découverte dans MailEnable avant la version v10. Un attaquant distant peut exécuter du code arbitraire via le composant `failure.aspx`.
+* Publication date : 2025/06/03
+* 📚 Sources : https://cvefeed.io/vuln/detail/CVE-2025-44148
+* 🧩 CVE : CVE-2025-44148 [https://nvd.nist.gov/vuln/detail/CVE-2025-44148](https://nvd.nist.gov/vuln/detail/CVE-2025-44148)
+* 💻 CVE Impacted Product : MailEnable before v10
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Mettre à jour MailEnable vers la version v10 ou supérieure.
 
-### Microsoft May 2025 Patch Tuesday: Exploited Zero-Days
-Le Patch Tuesday de mai 2025 de Microsoft a corrigé cinq vulnérabilités zero-day activement exploitées dans la nature, bien que leur score CVSS soit inférieur à 8. Ces failles incluent des élévations de privilèges dans le Windows Common Log File System (CVE-2025-32706, CVE-2025-32701, CVSS 7.8), une élévation de privilèges dans le Windows Ancillary Function Driver for WinSock (CVE-2025-32709, CVSS 7.8), une élévation de privilèges dans Microsoft Desktop Windows Manager (DWM) Core Library (CVE-2025-30400, CVSS 7.8), et une corruption de mémoire dans le Microsoft Scripting Engine (CVE-2025-30397, CVSS 7.5) exploitable via Edge IE mode. L'exploitation de ces failles permet à des attaquants, souvent localement authentifiés ou via interaction utilisateur (ouverture de fichier/site web malveillant), d'exécuter du code avec des privilèges élevés ou les privilèges de l'utilisateur.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-may-2025/
-🐛 CVE : CVE-2025-32706 [https://nvd.nist.gov/vuln/detail/CVE-2025-32706](https://nvd.nist.gov/vuln/detail/CVE-2025-32706), CVE-2025-32701 [https://nvd.nist.gov/vuln/detail/CVE-2025-32701](https://nvd.nist.gov/vuln/detail/CVE-2025-32701), CVE-2025-32709 [https://nvd.nist.gov/vuln/detail/CVE-2025-32709](https://nvd.nist.gov/vuln/detail/CVE-2025-32709), CVE-2025-30400 [https://nvd.nist.gov/vuln/detail/CVE-2025-30400](https://nvd.nist.gov/vuln/detail/CVE-2025-30400), CVE-2025-30397 [https://nvd.nist.gov/vuln/detail/CVE-2025-30397](https://nvd.nist.gov/vuln/detail/CVE-2025-30397)
-📦 CVE Impacted Product : Windows Common Log File System, Windows Ancillary Function Driver for WinSock, Microsoft Desktop Windows Manager (DWM) Core Library, Microsoft Scripting Engine (Edge IE mode)
-🔢 CVSS : 7.8 (CVE-2025-32706, CVE-2025-32701, CVE-2025-32709, CVE-2025-30400), 7.5 (CVE-2025-30397)
-🔥 Exploitation Activity : Exploitation active dans la nature.
-🛡️ Security recommendations : Appliquer les mises à jour de sécurité Microsoft pour corriger ces vulnérabilités zero-day. Sensibiliser les utilisateurs aux risques liés à l'ouverture de fichiers ou la visite de sites web suspects.
+### Analyse du Patch Tuesday Microsoft de mai 2025 : Cinq zero-days et vulnérabilités critiques
+Microsoft a publié des correctifs pour 72 vulnérabilités lors du Patch Tuesday de mai 2025, dont cinq zero-days activement exploités et cinq vulnérabilités critiques. Parmi les zero-days, plusieurs sont des élévations de privilèges dans le système de fichiers CLFS (CVE-2025-32706, CVE-2025-32701), dans AFD (CVE-2025-32709), dans DWM Core Library (CVE-2025-30400), et une corruption de mémoire dans Scripting Engine (CVE-2025-30397) affectant Edge en mode IE. Les vulnérabilités critiques (CVSS >= 8) incluent des RCE dans Windows Remote Desktop Services (CVE-2025-29966, CVE-2025-29967, CVSS 8.8), et des RCE dans Microsoft Office (CVE-2025-30377, CVE-2025-30386, CVSS 8.4), souvent exploitées via l'ouverture de fichiers malveillants.
+* Publication date : 2025/06/03, 2025/06/04
+* 📚 Sources : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-may-2025/, https://cvefeed.io/news/52103/thumbnail.jpg
+* 💥 CVE : CVE-2025-32706 (Activement exploitée) [https://cvefeed.io/vuln/detail/CVE-2025-32706](https://cvefeed.io/vuln/detail/CVE-2025-32706)
+* 💻 CVE Impacted Product : Windows Common Log File System
+* 💯 CVSS : 7.8
+* 💥 CVE : CVE-2025-32701 (Activement exploitée) [https://cvefeed.io/vuln/detail/CVE-2025-32701](https://cvefeed.io/vuln/detail/CVE-2025-32701)
+* 💻 CVE Impacted Product : Windows Common Log File System
+* 💯 CVSS : 7.8
+* 💥 CVE : CVE-2025-32709 (Activement exploitée) [https://cvefeed.io/vuln/detail/CVE-2025-32709](https://cvefeed.io/vuln/detail/CVE-2025-32709)
+* 💻 CVE Impacted Product : Windows Ancillary Function Driver for WinSock
+* 💯 CVSS : 7.8
+* 💥 CVE : CVE-2025-30400 (Activement exploitée) [https://cvefeed.io/vuln/detail/CVE-2025-30400](https://cvefeed.io/vuln/detail/CVE-2025-30400)
+* 💻 CVE Impacted Product : Microsoft Desktop Windows Manager (DWM) Core Library
+* 💯 CVSS : 7.8
+* 💥 CVE : CVE-2025-30397 (Activement exploitée) [https://cvefeed.io/vuln/detail/CVE-2025-30397](https://cvefeed.io/vuln/detail/CVE-2025-30397)
+* 💻 CVE Impacted Product : Microsoft Scripting Engine
+* 💯 CVSS : 7.5
+* 🧩 CVE : CVE-2025-29966 [https://cvefeed.io/vuln/detail/CVE-2025-29966](https://cvefeed.io/vuln/detail/CVE-2025-29966)
+* 💻 CVE Impacted Product : Microsoft Windows Remote Desktop Services
+* 💯 CVSS : 8.8
+* 🧩 CVE : CVE-2025-29967 [https://cvefeed.io/vuln/detail/CVE-2025-29967](https://cvefeed.io/vuln/detail/CVE-2025-29967)
+* 💻 CVE Impacted Product : Microsoft Windows Remote Desktop Services
+* 💯 CVSS : 8.8
+* 🧩 CVE : CVE-2025-30377 [https://cvefeed.io/vuln/detail/CVE-2025-30377](https://cvefeed.io/vuln/detail/CVE-2025-30377)
+* 💻 CVE Impacted Product : Microsoft Office
+* 💯 CVSS : 8.4
+* 🧩 CVE : CVE-2025-30386 [https://cvefeed.io/vuln/detail/CVE-2025-30386](https://cvefeed.io/vuln/detail/CVE-2025-30386)
+* 💻 CVE Impacted Product : Microsoft Office
+* 💯 CVSS : 8.4
+* 🛡️ Security recommandations : Appliquer toutes les mises à jour de sécurité Microsoft du Patch Tuesday de mai 2025. Envisager la migration des systèmes Windows 10 avant la fin du support en octobre 2025.
 
-### OttoKit WordPress Plugin Critical Vulnerability (CVE-2025-27007)
-Une vulnérabilité critique (CVE-2025-27007) a été découverte dans le plugin WordPress OttoKit. La faille permettait à des attaquants non authentifiés de créer des comptes administrateur malveillants via son API. Des attaquants ont commencé à exploiter la faille peu après sa divulgation publique le 11 avril. Cependant, la plupart des utilisateurs du plugin ont été automatiquement mis à jour vers une version corrigée avant le 24 avril.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🐛 CVE : CVE-2025-27007 [https://nvd.nist.gov/vuln/detail/CVE-2025-27007](https://nvd.nist.gov/vuln/detail/CVE-2025-27007)
-📦 CVE Impacted Product : OttoKit WordPress Plugin
-🔥 Exploitation Activity : Exploitation active peu après la divulgation.
-🛡️ Security recommendations : S'assurer que le plugin OttoKit est mis à jour vers une version non vulnérable.
+### Vulnérabilités critiques dans IBM QRadar et Cloud Pak for Security
+IBM a publié un avis de sécurité concernant plusieurs vulnérabilités affectant ses plateformes QRadar Suite Software et Cloud Pak for Security, dont certaines sont classées comme critiques (CVSS jusqu'à 9.6). Ces failles présentent des risques tels que l'exécution de code à distance, la divulgation d'informations et les attaques par déni de service.
+* Publication date : 2025/06/04
+* 📚 Sources : https://securityonline.info/critical-cvss-9-6-ibm-qradar-cloud-pak-security-flaws-exposed/, https://upload.cvefeed.io/news/52104/thumbnail.jpg
+* 🧩 CVE : CVE-2025-25022 [https://cvefeed.io/vuln/detail/CVE-2025-25022](https://cvefeed.io/vuln/detail/CVE-2025-25022)
+* 💻 CVE Impacted Product : IBM QRadar Suite Software, Cloud Pak for Security
+* 🧩 CVE : CVE-2025-25021 [https://cvefeed.io/vuln/detail/CVE-2025-25021](https://cvefeed.io/vuln/detail/CVE-2025-25021)
+* 💻 CVE Impacted Product : IBM QRadar Suite Software, Cloud Pak for Security
+* 🧩 CVE : CVE-2025-25020 [https://cvefeed.io/vuln/detail/CVE-2025-25020](https://cvefeed.io/vuln/detail/CVE-2025-25020)
+* 💻 CVE Impacted Product : IBM QRadar Suite Software, Cloud Pak for Security
+* 🧩 CVE : CVE-2025-25019 [https://cvefeed.io/vuln/detail/CVE-2025-25019](https://cvefeed.io/vuln/detail/CVE-2025-25019)
+* 💻 CVE Impacted Product : IBM QRadar Suite Software, Cloud Pak for Security
+* 🧩 CVE : CVE-2025-1334 [https://cvefeed.io/vuln/detail/CVE-2025-1334](https://cvefeed.io/vuln/detail/CVE-2025-1334)
+* 💻 CVE Impacted Product : IBM QRadar Suite Software, Cloud Pak for Security
+* 💯 CVSS : 9.6 (au moins une vulnérabilité a ce score)
+* 🛡️ Security recommandations : Consulter l'avis de sécurité d'IBM et appliquer les correctifs nécessaires pour QRadar Suite Software et Cloud Pak for Security.
 
-### Output Messenger Zero-Day Exploited by Marbled Dust
-Le groupe d'acteurs de menace Marbled Dust a exploité une vulnérabilité zero-day (aucune CVE spécifiée) dans Output Messenger pour obtenir un accès authentifié, déployer des malwares et exfiltrer des données. La cible était des entités militaires kurdes en Irak. Microsoft a divulgué le problème au développeur qui a depuis publié un correctif.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-📦 CVE Impacted Product : Output Messenger
-☠️ Threat Actor : Marbled Dust (supposé lié à la Turquie)
-🔥 Exploitation Activity : Exploitation active dans la nature.
-🎯 Threat Target : Entités militaires kurdes en Irak
-🛡️ Security recommendations : Appliquer les correctifs pour Output Messenger dès qu'ils sont disponibles. Surveiller les systèmes pour détecter les signes d'exploitation ou d'accès non autorisé.
+### Nouvelles vulnérabilités ajoutées au catalogue CISA KEV, dont ASUS RT-AX55 et ConnectWise ScreenConnect
+La CISA américaine a ajouté plusieurs vulnérabilités à son catalogue Known Exploited Vulnerabilities (KEV), signalant leur exploitation active dans la nature. Parmi elles figurent des failles affectant les appareils ASUS RT-AX55 et ConnectWise ScreenConnect. La vulnérabilité ConnectWise ScreenConnect, CVE-2025-3935, est une potentielle exécution de code à distance via des clés machine volées, liée à une activité suspecte détectée par ConnectWise attribuée à un acteur étatique avancé. La faille ASUS RT-AX55, CVE-2023-39780, est exploitée par le botnet AyySSHush pour installer une backdoor SSH persistante sur plus de 9 000 routeurs ASUS compromis. Les agences FCEB (Federal Civilian Executive Branch) sont tenues de corriger ces vulnérabilités avant les dates limites spécifiées.
+* Publication date : 2025/06/03
+* 📚 Sources : https://securityaffairs.com/178591/hacking/u-s-cisa-adds-asus-rt-ax55-devices-craft-cms-and-connectwise-screenconnect-flaws-to-its-known-exploited-vulnerabilities-catalog.html
+* 🇺🇸 CVE : CVE-2025-3935 (Activement exploitée, ajoutée au CISA KEV)
+* 💻 CVE Impacted Product : ConnectWise ScreenConnect
+* 🌐 CVE : CVE-2023-39780 (Activement exploitée, ajoutée au CISA KEV)
+* 💻 CVE Impacted Product : ASUS RT-AX55
+* 🎭 Threat Actor : Acteur étatique avancé (lié à CVE-2025-3935), Botnet AyySSHush (lié à CVE-2023-39780)
+* 🛡️ Security recommandations : Appliquer immédiatement les correctifs pour ConnectWise ScreenConnect et ASUS RT-AX55. Surveiller l'activité réseau pour détecter les signes d'exploitation du botnet AyySSHush.
 
-### Roundcube Critical RCE Vulnerability (CVE-2025-49113)
-Une vulnérabilité critique d'exécution de code à distance (RCE) vieille de dix ans (CVE-2025-49113) a été découverte dans Roundcube Webmail. La faille, résidant dans la validation insuffisante du paramètre `_from` dans le fichier `program/actions/settings/upload.php`, permet à des attaquants authentifiés de manipuler des objets PHP sérialisés et d'exécuter du code arbitraire sur le serveur. Cette vulnérabilité pourrait affecter des millions d'installations. Des acteurs de menace avancés comme APT28 et Winter Vivern ont historiquement exploité des vulnérabilités Roundcube. Des versions corrigées (1.6.11 et 1.5.10 LTS) sont disponibles.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cybersecuritynews.com/10-year-old-roundcube-rce-vulnerability/
-🐛 CVE : CVE-2025-49113 [https://nvd.nist.gov/vuln/detail/CVE-2025-49113](https://nvd.nist.gov/vuln/detail/CVE-2025-49113)
-📦 CVE Impacted Product : Roundcube Webmail (versions vulnérables)
-☠️ Threat Actor : Historiquement exploité par APT28, Winter Vivern. Acteurs exploitant la nouvelle vulnérabilité potentiellement liés.
-🔥 Exploitation Activity : Le PoC doit être publié "bientôt".
-🛡️ Security recommendations : Appliquer immédiatement les mises à jour Roundcube vers les versions 1.6.11, 1.5.10 LTS ou supérieures. Mettre en place une surveillance renforcée pour détecter les activités suspectes.
+### Problème de résolution DNS dans Azure OpenAI potentiellement critique
+Une configuration erronée a été découverte dans Azure OpenAI qui permettait potentiellement des fuites de données inter-tenants et des attaques de type "meddler-in-the-middle" (MitM). Le problème provenait d'une incohérence entre l'API et l'interface utilisateur d'Azure OpenAI concernant l'application de noms de domaine personnalisés uniques. Une seule exception permettait à plusieurs tenants de partager le domaine `test.openai.azure[.]com`, qui résolvait de manière inattendue vers une adresse IP externe non fiable (66.66.66[.]66) au lieu d'une IP Azure. Cela exposait potentiellement les appels API, les données sensibles et les identifiants à une interception par une entité externe. Microsoft a rapidement corrigé le problème en supprimant l'enregistrement DNS pointant vers l'IP externe. Bien qu'il ne s'agisse pas d'une vulnérabilité logicielle traditionnelle, cette misconfiguration a eu un impact potentiel critique.
+* Publication date : 2025/06/03
+* 📚 Sources : https://unit42.paloaltonetworks.com/azure-openai-dns-resolution/, https://unit42.paloaltonetworks.com/azure-openai-dns-resolution/
+* 💻 CVE Impacted Product : Azure OpenAI API/UI
+* 💯 CVSS : Potentiellement > 8 (Basé sur la description de l'impact : fuite de données, MitM)
+* 🛡️ Security recommandations : Surveiller et valider régulièrement les résolutions DNS des ressources cloud. Examiner attentivement les workflows basés sur l'API. Auditer les services gérés pour les erreurs de configuration.
+* 📡 Indicator of Compromise :
+    * DOMAIN : test[.]openai[.]azure[.]com
+    * DOMAIN : name[.]api[.]cognitive[.]microsoft[.]com
+    * DOMAIN : likemargol[.]openai[.]azure[.]com
+    * IPv4 : 66[.]66[.]66[.]66
 
-### Samsung Exynos Vulnerabilities (CVE-2025-23102, CVE-2025-23107)
-Deux vulnérabilités importantes ont été découvertes dans les processeurs mobiles Samsung Exynos. CVE-2025-23102 (CVSS 8.8) est une double libération (Double Free) dans plusieurs modèles (9820, 9825, 980, 990, 1080, 2100, 1280, 2200, 1380) conduisant à une élévation de privilèges. CVE-2025-23107 (CVSS 8.6) est une écriture hors limites (Out-of-Bounds Write) dans les modèles 1480 et 2400 due à un manque de vérification de longueur.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-23102, https://cvefeed.io/vuln/detail/CVE-2025-23107
-🐛 CVE : CVE-2025-23102 [https://nvd.nist.gov/vuln/detail/CVE-2025-23102](https://nvd.nist.gov/vuln/detail/CVE-2025-23102), CVE-2025-23107 [https://nvd.nist.gov/vuln/detail/CVE-2025-23107](https://nvd.nist.gov/vuln/detail/CVE-2025-23107)
-📦 CVE Impacted Product : Samsung Mobile Processor Exynos 9820, 9825, 980, 990, 1080, 2100, 1280, 2200, 1380, 1480, 2400
-🔢 CVSS : 8.8 (CVE-2025-23102), 8.6 (CVE-2025-23107)
-🛡️ Security recommendations : Appliquer les mises à jour de sécurité fournies par Samsung pour les appareils concernés.
+## Category : THREATS
+### Violation de données chez Coinbase liée à la corruption d'agents de support TaskUs
+Une violation de données récemment divulguée chez Coinbase est liée à la corruption d'agents de support client basés en Inde, travaillant pour l'entreprise d'externalisation TaskUs. Des acteurs de la menace ont soudoyé ces employés pour voler des données d'utilisateurs de Coinbase. Les agents ont été surpris en train de prendre des photos d'écrans d'ordinateur, et une enquête a révélé que deux d'entre eux transmettaient des données sensibles à des hackers externes en échange de pots-de-vin. Les données volées incluent noms, e-mails, informations financières partielles, SSN, historique des transactions et scans de documents d'identité. Les attaquants ont utilisé ces informations pour des attaques d'ingénierie sociale. Coinbase a estimé les pertes potentielles jusqu'à 400 millions de dollars et a mis fin à ses opérations avec TaskUs dans la localisation affectée.
+* Publication date : 2025/06/03
+* 📚 Sources : https://www.bleepingcomputer.com/news/security/coinbase-breach-tied-to-bribed-taskus-support-agents-in-india/
+* 🎭 Threat Actor : Acteurs de la menace (non nommés), Agents de support internes corrompus
+* 🧍 Threat Target : Utilisateurs de Coinbase
+* 🏹 Threat Tactic : Corruption, Menace interne, Ingénierie sociale, Vol de données
+* 🛡️ Security recommandations : Renforcer la surveillance de l'activité des employés ayant accès aux données sensibles. Mettre en place des contrôles stricts sur l'accès aux données par les sous-traitants et les partenaires. Sensibiliser les employés aux risques d'ingénierie sociale et de corruption. Limiter la possibilité de photographier les écrans ou d'extraire des données vers des appareils personnels.
 
-### Sangoma IMG2020 Remote Code Execution (CVE-2025-32105)
-Une vulnérabilité de débordement de tampon (buffer overflow) dans le serveur HTTP de Sangoma IMG2020 (jusqu'à 2.3.9.6) permet à un utilisateur non authentifié de réaliser une exécution de code à distance (RCE). La vulnérabilité a été classée comme critique.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-32105
-📦 CVE Impacted Product : Sangoma IMG2020 <= 2.3.9.6
-🔢 CVSS : 9.8
+### Packages RubyGems malveillants se faisant passer pour Fastlane pour voler des données CI/CD
+Deux packages RubyGems malveillants, `fastlane-plugin-telegram-proxy` et `fastlane-plugin-proxy_teleram`, se font passer pour des plugins Fastlane légitimes pour les développeurs d'applications mobiles. Ces packages interceptent et redirigent les requêtes API Telegram (normalement utilisées pour la notification dans les pipelines CI/CD) vers des serveurs contrôlés par les attaquants. L'objectif est de voler des données sensibles, notamment les jetons d'API de bot Telegram, qui pourraient être utilisés pour usurper l'identité du bot, supprimer ou manipuler des communications. Cette attaque de chaîne d'approvisionnement ciblant les développeurs est attribuée à un acteur utilisant des pseudonymes vietnamiens.
+* Publication date : 2025/06/03, 2025/06/04
+* 📚 Sources : https://www.bleepingcomputer.com/news/security/malicious-rubygems-pose-as-fastlane-to-steal-telegram-api-data/, https://securityonline.info/alert-malicious-rubygems-impersonate-fastlane-plugins-steal-ci-cd-data/, https://upload.cvefeed.io/news/52098/thumbnail.jpg
+* 🎭 Threat Actor : Acteur utilisant les pseudonymes Bùi nam, buidanhnam, si_mobile
+* 🧍 Threat Target : Développeurs utilisant Fastlane et RubyGems, Pipelines CI/CD, Données API Telegram, Jetons de bot Telegram
+* 🏹 Threat Tactic : Attaque de chaîne d'approvisionnement (Supply Chain Attack), Usurpation de package (Typosquatting probable), Interception de données, Redirection de trafic
+* 🛠️ Threat Tools : Packages RubyGems malveillants (`fastlane-plugin-telegram-proxy`, `fastlane-plugin-proxy_teleram`), Serveur proxy contrôlé par l'attaquant
+* 🛡️ Security recommandations : Supprimer immédiatement les packages RubyGems malveillants. Recompiler les binaires mobiles produits après l'installation des gems. Faire pivoter tous les jetons de bot Telegram utilisés avec Fastlane. Vérifier l'authenticité des packages avant de les installer.
+* 📡 Indicator of Compromise :
+    * DOMAIN : api[.]telegram[.]org
+    * DOMAIN : rough-breeze-0c37[.]buidanhnam95[.]workers[.]dev
+    * URL : hxxps[:]//api[.]telegram[.]org/
 
-### SAP NetWeaver Critical Vulnerability Exploited by Chaya_004 (CVE-2025-31324)
-Une vulnérabilité critique dans SAP NetWeaver (CVE-2025-31324) est activement exploitée par le groupe de menace chinois Chaya_004. Le groupe utilise des webshells et des backdoors comme Supershell dans des attaques ciblées.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🐛 CVE : CVE-2025-31324 [https://nvd.nist.gov/vuln/detail/CVE-2025-31324](https://nvd.nist.gov/vuln/detail/CVE-2025-31324)
-📦 CVE Impacted Product : SAP NetWeaver
-☠️ Threat Actor : Chaya_004 (groupe de menace chinois)
-🔥 Exploitation Activity : Exploitation active dans la nature.
-🛠️ Threat Tools : Webshells, Backdoor Supershell.
-🛡️ Security recommendations : Appliquer les correctifs pour SAP NetWeaver. Surveiller les systèmes pour les outils et tactiques de Chaya_004.
+### Le cheval de Troie bancaire Android Crocodilus évolue rapidement et devient mondial
+Crocodilus est un nouveau cheval de Troie bancaire Android qui gagne rapidement du terrain, ciblant initialement l'Europe et l'Amérique du Sud, mais étendant sa portée à d'autres régions, y compris les États-Unis, l'Indonésie et l'Inde. Le malware se propage via des publicités malveillantes sur les réseaux sociaux, se déguisant en fausses applications bancaires ou de shopping, ou en mises à jour de navigateur. Les nouvelles variantes incluent des techniques d'obfuscation améliorées (empaquetage de code, chiffrement XOR) pour échapper à la détection. Une fonctionnalité clé est la capacité à modifier la liste de contacts de la victime pour ajouter de faux contacts ("Bank Support") et faciliter l'ingénierie sociale. Le malware cible également les portefeuilles de crypto-monnaies, capable d'extraire des phrases de récupération et des clés privées.
+* Publication date : 2025/06/03
+* 📚 Sources : https://securityaffairs.com/178578/malware/android-banking-trojan-crocodilus-evolves-fast-and-goes-global.html
+* 🛠️ Threat Tools : Cheval de Troie bancaire Android Crocodilus
+* 🧍 Threat Target : Utilisateurs Android en Europe, Amérique du Sud, et potentiellement d'autres régions ; Utilisateurs d'applications bancaires et de portefeuilles crypto
+* 🏹 Threat Tactic : Distribution via publicité malveillante sur réseaux sociaux, Applications malveillantes, Usurpation d'identité (applications/mises à jour), Ingénierie sociale, Obfuscation, Vol de données (identifiants bancaires, informations personnelles, phrases de récupération/clés privées)
+* 🛡️ Security recommandations : Éviter de cliquer sur des publicités suspectes ou des liens non sollicités sur les réseaux sociaux. Télécharger des applications uniquement depuis les boutiques officielles (Google Play Store). Être prudent avec les demandes de mise à jour de navigateur inattendues. Vérifier l'authenticité des contacts et des communications des banques ou des services financiers. Utiliser un logiciel de sécurité mobile réputé.
 
-### Tenda RX3 Stack-Based Buffer Overflow (CVE-2025-5527)
-Une vulnérabilité critique (CVSS 8.8) a été trouvée dans le routeur Tenda RX3 version 16.03.13.11_multi_TDE01. Le problème affecte la fonction `save_staticroute_data` dans le fichier `/goform/SetStaticRouteCfg`. La manipulation de l'argument `list` conduit à un débordement de tampon basé sur la pile (stack-based buffer overflow). L'attaque peut être initiée à distance, et un exploit a été divulgué publiquement.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cvefeed.io/vuln/detail/CVE-2025-5527
-🐛 CVE : CVE-2025-5527 [https://nvd.nist.gov/vuln/detail/CVE-2025-5527](https://nvd.nist.gov/vuln/detail/CVE-2025-5527)
-📦 CVE Impacted Product : Tenda RX3 16.03.13.11_multi_TDE01
-🔢 CVSS : 8.8
-🔥 Exploitation Activity : Exploit divulgué publiquement.
-🛡️ Security recommendations : Rechercher et appliquer les mises à jour du firmware pour le routeur Tenda RX3. Si aucun correctif n'est disponible, envisager des mesures d'atténuation comme la restriction de l'accès au panneau d'administration.
-
-## Category : Threats
-### China-linked APT15 Cyberespionage (Guatemala Foreign Ministry)
-Le groupe de cyberespionnage APT15, lié à la Chine, a été exposé par les États-Unis et le Guatemala pour avoir infiltré les systèmes du Ministère des Affaires Étrangères du Guatemala entre septembre 2022 et février 2025.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : APT15 (lié à la Chine)
-🎯 Threat Target : Ministère des Affaires Étrangères du Guatemala
-🔥 Exploitation Activity : Infiltration de systèmes.
-
-### China-linked APT31 Cyberespionage (Czech Foreign Ministry)
-Le gouvernement tchèque a publiquement attribué une campagne de cyberespionnage prolongée visant son Ministère des Affaires Étrangères (réseau non classifié considéré comme infrastructure critique) depuis 2022 au groupe lié à la Chine APT31.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : APT31 (lié à la Chine)
-🎯 Threat Target : Ministère des Affaires Étrangères tchèque (réseau non classifié)
-🔥 Exploitation Activity : Campagne de cyberespionnage prolongée.
-
-### Coinbase Data Breach Tied to Insider Threat
-Une violation de données chez Coinbase a été liée à des agents de support client basés en Inde de l'entreprise d'externalisation TaskUs, qui ont été soudoyés par des acteurs de menace pour voler des données. L'incident a été découvert en janvier 2025. Des agents insiders ont abusé de leur accès aux systèmes de support client pour voler les données (noms, emails, infos financières partielles, SSN, historique des transactions, scans de documents d'identité) d'un petit sous-ensemble de clients. TaskUs a confirmé l'implication, licencié les individus et cessé les opérations dans un site en Inde. Coinbase estime les pertes potentielles jusqu'à 400 millions USD.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.bleepingcomputer.com/news/security/coinbase-breach-tied-to-bribed-taskus-support-agents-in-india/
-☠️ Threat Actor : Insiders (agents de support TaskUs), Acteurs de menace externes
-🎯 Threat Target : Clients de Coinbase
-🛠️ Threat Tools : Bribes, accès abusif aux systèmes de support client.
-🏴‍☠️ Threat Tactic : Menace interne, corruption, vol de données, ingénierie sociale.
-💥 Business Impact : Fuite de données sensibles, pertes financières potentielles ($400M USD).
-
-### DarkCloud Stealer Campaign via Phishing
-Des campagnes utilisant des emails de phishing et des droppers compilés avec AutoIt ciblent les secteurs gouvernementaux et technologiques. Le malware utilisé, nommé DarkCloud Stealer, est conçu pour voler des identifiants et des données de navigateur. Des échantillons ont été observés aux États-Unis, au Brésil, aux Pays-Bas et en Hongrie.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🛠️ Threat Tools : DarkCloud Stealer (malware), Droppers compilés avec AutoIt.
-🏴‍☠️ Threat Tactic : Phishing.
-🎯 Threat Target : Secteurs gouvernementaux et technologiques (US, Brésil, Pays-Bas, Hongrie).
-
-### Iran-linked APT35 Poses as German Modeling Agency
-Des acteurs cyber iraniens, avec une faible confiance liée à APT35, ont créé un faux site web imitant une agence de mannequins allemande. Le site collectait des données sur les visiteurs via du JavaScript obfusqué et présentait un profil de mannequin fictif, dans le cadre d'une opération de cyberespionnage ou de collecte d'informations.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : Acteurs iraniens (faible confiance APT35)
-🏴‍☠️ Threat Tactic : Phishing, Collecte de données, Utilisation de faux sites web.
-
-### Lampion Malware Operators Use ClickFix Tactic
-Les opérateurs du malware Lampion ont ciblé les secteurs gouvernementaux, financiers et des transports au Portugal en utilisant une nouvelle technique appelée "ClickFix". Les victimes étaient incitées à exécuter des commandes PowerShell malveillantes sous prétexte de résoudre des problèmes. La chaîne d'attaque impliquait des scripts obfusqués et des chargeurs étagés.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🛠️ Threat Tools : Malware Lampion, Scripts PowerShell obfusqués.
-🏴‍☠️ Threat Tactic : ClickFix, Ingénierie sociale, Utilisation de chargeurs étagés.
-🎯 Threat Target : Secteurs gouvernementaux, financiers et des transports au Portugal.
-
-### LexisNexis Data Breach
-Un courtier en données, LexisNexis Risk Solutions (basé aux États-Unis), a divulgué une violation de données affectant 364 000 personnes. La violation, survenue en décembre 2024 et détectée en avril 2025, impliquait un accès non autorisé via un compte GitHub compromis. Les données exposées comprenaient des noms, des coordonnées, des numéros de sécurité sociale et de permis de conduire, ainsi que des dates de naissance.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🎯 Threat Target : LexisNexis Risk Solutions, 364 000 individus
-🏴‍☠️ Threat Tactic : Compromission de compte GitHub, Vol de données.
-💥 Business Impact : Fuite de données personnelles sensibles à grande échelle.
-
-### Malicious Go Modules Supply Chain Attack (Disk-Wiping)
-Socket a découvert une attaque destructrice de chaîne d'approvisionnement impliquant trois modules Go malveillants. Ces modules utilisaient l'obfuscation pour télécharger et exécuter un script de suppression de disque (disk-wiping) ciblant Linux. L'acteur de menace a exploité l'écosystème décentralisé de Go et l'ambiguïté des espaces de noms pour masquer le code destructeur dans des packages apparemment légitimes, entraînant une perte de données irréversible et une défaillance du système s'ils étaient exécutés.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🛠️ Threat Tools : Modules Go malveillants, script de suppression de disque (Linux).
-🏴‍☠️ Threat Tactic : Attaque de chaîne d'approvisionnement, Obfuscation, Suppression de données.
-🎯 Threat Target : Systèmes Linux utilisant les modules Go infectés.
-
-### Malicious NPM Packages Target Cursor AI
-Des acteurs de menace ont utilisé trois packages NPM malveillants ciblant la version macOS de l'éditeur de code Cursor AI. Les packages ont été téléchargés plus de 3200 fois et étaient toujours disponibles en ligne. Une fois installés, ils peuvent être utilisés pour voler les identifiants des utilisateurs, récupérer une charge utile chiffrée, écraser le fichier `main.js` de Cursor et maintenir la persistance en désactivant les mises à jour automatiques.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🛠️ Threat Tools : Packages NPM malveillants, Charge utile chiffrée, Modification de fichiers système (`main.js`).
-🏴‍☠️ Threat Tactic : Distribution de malware via référentiels de logiciels, Vol d'identifiants, Persistance, Désactivation de mises à jour.
-🎯 Threat Target : Utilisateurs de Cursor AI sur macOS.
-
-### Malicious RubyGems Impersonate Fastlane Plugins
-Deux packages RubyGems malveillants se faisant passer pour des plugins légitimes de Fastlane CI/CD (`fastlane-plugin-telegram-proxy`, `fastlane-plugin-proxy_teleram`) ont été utilisés dans une attaque ciblée sur la chaîne d'approvisionnement. Ces gems redirigent les requêtes API Telegram vers des serveurs contrôlés par l'attaquant pour intercepter et voler des données sensibles, notamment des tokens de bot Telegram. L'acteur de menace utilise des alias vietnamiens (Bùi nam, buidanhnam, si_mobile) et a exploité la demande de contournements Telegram au Vietnam. Les développeurs ayant installé ces gems doivent les supprimer, reconstruire les binaires mobiles produits et faire pivoter tous les tokens de bot Telegram utilisés avec Fastlane.
-📅 Publication date : 2025/06/03
-📜 Sources : https://www.bleepingcomputer.com/news/security/malicious-rubygems-pose-as-fastlane-to-steal-telegram-api-data/, https://securityonline.info/alert-malicious-rubygems-impersonate-fastlane-plugins-steal-ci-cd-data/, https://cvefeed.io/news/52098/thumbnail.jpg
-☠️ Threat Actor : Acteur utilisant les alias Bùi nam, buidanhnam, si_mobile
-🎯 Threat Target : Développeurs utilisant Fastlane et des bots Telegram.
-🛠️ Threat Tools : Packages RubyGems malveillants, serveurs proxy (rough-breeze-0c37[.]buidanhnam95[.]workers[.]dev).
-🏴‍☠️ Threat Tactic : Attaque de chaîne d'approvisionnement, Usurpation (masquerade), Redirection de trafic, Vol de données sensibles (tokens API Telegram).
-🛡️ Security recommendations : Supprimer les packages malveillants. Reconstruire les binaires affectés. Faire pivoter les tokens de bot Telegram. N'installer les plugins qu'à partir de sources fiables et vérifier leur authenticité.
-📍 Indicator of Compromise :
-DOMAIN :
-rough-breeze-0c37[.]buidanhnam95[.]workers[.]dev
-api[.]telegram[.]org
-securityonline[.]info
-URL :
-hxxps[:]//api[.]telegram[.]org/
-
-### Marbled Dust Exploits Output Messenger Zero-Day
-Le groupe d'acteurs de menace Marbled Dust, supposé lié à la Turquie, a exploité une vulnérabilité zero-day dans Output Messenger pour obtenir un accès authentifié, déployer des malwares et exfiltrer des données. La cible était des entités militaires kurdes en Irak. Microsoft a divulgué le problème au développeur qui a depuis publié un correctif. (Voir aussi l'entrée sous Vulnérabilités).
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : Marbled Dust (supposé lié à la Turquie)
-🎯 Threat Target : Entités militaires kurdes en Irak
-🛠️ Threat Tools : Malware inconnu.
-🏴‍☠️ Threat Tactic : Exploitation de zero-day, Accès non autorisé, Déploiement de malware, Exfiltration de données.
-🛡️ Security recommendations : Appliquer les correctifs pour Output Messenger dès qu'ils sont disponibles. Surveiller les systèmes pour détecter les signes d'exploitation ou d'accès non autorisé.
-
-### Pakistan-linked APT36 Spoofs India Ministry of Defence
-Le groupe APT36, lié au Pakistan, a imité le portail des communiqués de presse du Ministère de la Défense indien en mars. Le faux site utilisait une méthode de style "ClickFix" pour copier des commandes malveillantes dans le presse-papiers des utilisateurs, dans le but de distribuer des malwares multiplateformes.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : APT36 (lié au Pakistan)
-🎯 Threat Target : Utilisateurs ciblant le Ministère de la Défense indien.
-🛠️ Threat Tools : Site web falsifié, Malware multiplateforme inconnu.
-🏴‍☠️ Threat Tactic : Usurpation (spoofing), Phishing, ClickFix, Utilisation du presse-papiers.
-
-### Pro-Russia NoName057(16) DDoS Attacks
-Le groupe pro-russe NoName057(16) a revendiqué des attaques par déni de service distribué (DDoS) visant des services publics et privés néerlandais (sites web de provinces et municipalités) le 30 avril, en représailles à l'aide militaire à l'Ukraine. Le groupe a également revendiqué des attaques DDoS contre des sites web roumains le 4 mai, coïncidant avec le premier tour de l'élection présidentielle roumaine (site de la Cour constitutionnelle, portail gouvernemental principal, Ministère des Affaires Étrangères, sites de candidats).
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : NoName057(16) (groupe pro-russe)
-🎯 Threat Target : Organisations publiques et privées néerlandaises, Sites web gouvernementaux et de candidats roumains.
-🏴‍☠️ Threat Tactic : Attaques par déni de service distribué (DDoS).
-🤝 Motivation : Politiquement motivé (soutien à la Russie, représailles).
-
-### Russia/APT29 Attack on Azerbaijan Media
-Le Président de la Commission parlementaire azerbaïdjanaise contre les interférences étrangères a révélé que la cyberattaque de février 2025 contre les médias azerbaïdjanais était liée à la Russie, spécifiquement à APT29. Il a suggéré que l'attaque était une riposte à la fermeture du Centre d'Information et Culturel russe et des opérations de Sputnik en Azerbaïdjan.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : Russie / APT29
-🎯 Threat Target : Médias azerbaïdjanais.
-🏴‍☠️ Threat Tactic : Cyberattaque (type spécifique non précisé).
-🤝 Motivation : Politiquement motivé (représailles).
-
-### Russia-linked ColdRiver Deploys Lostkeys Malware
-Google Cloud a signalé que le groupe ColdRiver, lié à la Russie, a déployé un nouveau malware nommé Lostkeys. Ce malware est conçu pour voler des fichiers et des données système auprès de conseillers gouvernementaux, d'ONG, de journalistes et d'individus liés à l'Ukraine. Lostkeys est distribué via de fausses pages CAPTCHA incitant les utilisateurs à exécuter des scripts PowerShell.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : ColdRiver (lié à la Russie)
-🎯 Threat Target : Conseillers gouvernementaux, ONG, journalistes, individus liés à l'Ukraine.
-🛠️ Threat Tools : Malware Lostkeys, Scripts PowerShell.
-🏴‍☠️ Threat Tactic : Distribution de malware, Vol de données, Ingénierie sociale (fausses pages CAPTCHA).
-
-### Russia-linked Laundry Bear Cyberespionage
-Microsoft et le gouvernement néerlandais ont signalé que le groupe Laundry Bear, lié à la Russie, mène des opérations de cyberespionnage depuis au moins avril 2024. En septembre 2024, Laundry Bear a compromis la police néerlandaise et exfiltré des données de contact en utilisant des cookies de session volés. En avril 2025, ils ont mené une campagne de spear-phishing ciblant des individus impliqués dans le secteur de la défense européenne.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-☠️ Threat Actor : Laundry Bear (lié à la Russie)
-🎯 Threat Target : Police néerlandaise, Individus dans le secteur de la défense européenne.
-🏴‍☠️ Threat Tactic : Cyberespionnage, Vol de cookies de session, Spear-phishing, Exfiltration de données.
-
-### SK Telecoms Data Breach
-SK Telecoms, un important opérateur de réseau mobile sud-coréen, a fourni des détails supplémentaires sur une violation de données qu'il avait divulguée en avril. L'attaque était en cours depuis au moins 2022 et a affecté 26,5 millions d'utilisateurs, exposant leurs données sensibles.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🎯 Threat Target : 26,5 millions d'utilisateurs de SK Telecoms.
-🔥 Exploitation Activity : Accès non autorisé aux données utilisateurs.
-💥 Business Impact : Fuite de données personnelles sensibles à grande échelle.
-
-### xAI Developer API Key Leak
-Un développeur xAI a involontairement exposé une clé API sur GitHub, donnant accès à plus de 60 grands modèles linguistiques (LLM) privés et non publiés, entraînés avec des données propriétaires de SpaceX, Tesla et Twitter/X. Bien qu'une alerte ait été émise le 2 mars, la clé est restée active jusqu'au 30 avril, soulevant des préoccupations quant aux pratiques de sécurité interne de xAI Dev et à l'utilisation potentielle de modèles d'IA sensibles.
-📅 Publication date : 2025/06/03
-📜 Sources : https://cert.europa.eu/publications/threat-intelligence/cb25-06/
-🎯 Threat Target : xAI, SpaceX, Tesla, Twitter/X (données utilisées pour entraîner les LLM).
-🏴‍☠️ Threat Tactic : Exposition involontaire de secrets (clé API) sur GitHub, Fuite de données/accès.
-💥 Business Impact : Accès non autorisé potentiel à des modèles d'IA propriétaires et aux données d'entraînement associées.
+### Campagne de cryptojacking ciblant les outils DevOps exposés
+Une campagne de cryptojacking, nommée JINX-0132, cible les serveurs DevOps exposés tels que Nomad, Consul, Docker et Gitea pour miner secrètement des crypto-monnaies. Les attaquants exploitent des configurations erronées et des vulnérabilités connues sur ces plateformes pour télécharger et exécuter des mineurs. Ils utilisent une approche "living-off-open-source", téléchargeant des outils comme XMRig directement depuis des dépôts GitHub publics, ce qui complique l'attribution et la détection par les IoCs traditionnels. L'abus des fonctionnalités par défaut (comme la file d'attente de tâches Nomad sans authentification) permet l'exécution de commandes arbitraires. Des milliers d'instances Consul et Nomad exposées sont trouvées en ligne, dont beaucoup sont mal configurées.
+* Publication date : 2025/06/03
+* 📚 Sources : https://securityaffairs.com/178548/cyber-crime/cryptojacking-campaign-relies-on-devops-tools.html
+* 🎭 Threat Actor : JINX-0132
+* 🧍 Threat Target : Serveurs DevOps exposés et mal configurés (Nomad, Consul, Docker, Gitea)
+* 🏹 Threat Tactic : Exploitation de misconfigurations et vulnérabilités, Abus de fonctionnalités (job queue Nomad, service registration/health check Consul, Docker Engine API), Living off open source, Cryptojacking
+* 🛠️ Threat Tools : XMRig (mineur de crypto-monnaie), Outils GitHub publics
+* 🛡️ Security recommandations : Sécuriser correctement l'accès aux API des outils DevOps (Nomad, Consul, Docker). Appliquer les configurations recommandées par les fournisseurs. Éviter d'exposer les interfaces d'administration ou les API sensibles à Internet. Surveiller l'activité des processus sur les serveurs DevOps pour détecter l'exécution inattendue de mineurs ou de commandes.
+* 📡 Indicator of Compromise :
+    * IPv4 : 0[.]0[.]0[.]0
+    * URL : hxxp[:]//0[.]0[.]0[.]0[:]2375
