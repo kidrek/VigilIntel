@@ -1,225 +1,324 @@
 # ⚠️Important Vulnerabilities (CVSS > 8)⚠️
-* 💥 Critiques Failles dans les routeurs ELECOM : JPCERT/CC émet un avertissement concernant les risques d'injection de commandes et de XSS
-* 🏭 Alerte Urgente Advantech : Des failles critiques (CVSS 9.6) exposent l'automatisation industrielle à la prise de contrôle à distance, PoC publiées
-* 🔥 Pas de panique, mais ce n'est qu'une question de temps avant que le critique 'CitrixBleed 2' ne soit attaqué
-* 🗓️ Patch Tuesday de juin 2025 : Un Zero-Day et Neuf Vulnérabilités Critiques parmi 66 CVEs
-* 🌐 Multiples vulnérabilités dans Sitecore CMS
-* 💬 CVE-2025-52572 - Vulnérabilité d'exécution de code à distance et de prise de contrôle de compte dans Hikka Telegram Userbot
-* 💬 CVE-2025-52571 - Vulnérabilité de prise de contrôle de compte non authentifiée et de compromission de serveur dans Hikka Telegram
-* 🤖 CVE-2024-37743 - Vulnérabilité d'exécution de code arbitraire dans KnowledgeGPT
-* 🏫 CVE-2025-4378 - Vulnérabilité de transmission en clair et de références codées en dur dans l'application mobile Ataturk University ATA-AOF
-* 📡 CVE-2025-4383 - Contournement d'abus d'authentification dans Art-in Bilişim Teknolojileri ve Yazılım Hizm. Tic. Ltd. Şti. Wi-Fi Cloud Hotspot
-* 📶 CVE-2025-6568 - Débordement de tampon dans le gestionnaire de requêtes HTTP POST de TOTOLINK EX1200T
-* 🛡️ CVE-2025-32977 - Vulnérabilité de téléchargement de fichiers dans Quest KACE Systems Management Appliance
+* 🚨 Vulnérabilités Critiques multiples dans Citrix NetScaler ADC et Gateway
+* 🚨 Vulnérabilité XSS dans Discourse via les Connexions Sociales
+* 🚨 Vulnérabilité dans Cyberduck et Mountain Duck affectant le Certificate Pinning TLS
+* 🚨 Divulgation du Mot de Passe Administrateur par Défaut dans les Imprimantes Brother/Konica Minolta
+* 🚨 Vulnérabilité d'Escalade de Privilèges dans IBM Facsimile Support for i
+* 🚨 Vulnérabilités Critiques multiples dans Hikka Telegram Userbot
+* 🚨 Vulnérabilité d'Exécution de Code Arbitraire dans KnowledgeGPT
+* 🚨 Vulnérabilité Critique dans Elastic Kibana permettant RCE et Corruption de Heap
 
 ## Table of Contents
 * [Category : Vulnerabilities](#category--vulnerabilities)
-    * [Critiques Failles dans les routeurs ELECOM : JPCERT/CC émet un avertissement concernant les risques d'injection de commandes et de XSS](#critiques-failles-dans-les-routeurs-elecom--jcertcc-émet-un-avertissement-concernant-les-risques-dinjection-de-commandes-et-de-xss)
-    * [Alerte Urgente Advantech : Des failles critiques (CVSS 9.6) exposent l'automatisation industrielle à la prise de contrôle à distance, PoC publiées](#alerte-urgente-advantech--des-failles-critiques-cvss-96-exposent-lautomatisation-industrielle-à-la-prise-de-contrôle-à-distance-poc-publiées)
-    * [Pas de panique, but it's only a matter of time before critical 'CitrixBleed 2' is under attack](#pas-de-panique-but-its-only-a-matter-of-time-before-critical-citrixbleed-2-is-under-attack)
-    * [June 2025 Patch Tuesday: One Zero-Day and Nine Critical Vulnerabilities Among 66 CVEs](#june-2025-patch-tuesday-one-zero-day-and-nine-critical-vulnerabilities-among-66-cves)
-    * [Multiple vulnerabilities in Sitecore CMS](#multiple-vulnerabilities-in-sitecore-cms)
-    * [CVE-2025-52572 - Hikka Telegram Userbot Remote Code Execution and Account Takeover Vulnerability](#cve-2025-52572---hikka-telegram-userbot-remote-code-execution-and-account-takeover-vulnerability)
-    * [CVE-2025-52571 - Hikka Telegram Unauthenticated Account Takeover and Server Compromise Vulnerability](#cve-2025-52571---hikka-telegram-unauthenticated-account-takeover-and-server-compromise-vulnerability)
-    * [CVE-2024-37743 - KnowledgeGPT Arbitrary Code Execution Vulnerability](#cve-2024-37743---knowledgegpt-arbitrary-code-execution-vulnerability)
-    * [CVE-2025-4378 - Ataturk University ATA-AOF Mobile Application Cleartext Transmission and Hard-coded Credentials Vulnerability](#cve-2025-4378---ataturk-university-ata-aof-mobile-application-cleartext-transmission-and-hard-coded-credentials-vulnerability)
-    * [CVE-2025-4383 - Art-in Bilişim Teknolojileri ve Yazılım Hizm. Tic. Ltd. Şti. Wi-Fi Cloud Hotspot Authentication Abuse Bypass](#cve-2025-4383---art-in-bilisim-teknolojileri-ve-yazilim-hizm-tic-ltd-sti-wi-fi-cloud-hotspot-authentication-abuse-bypass)
-    * [CVE-2025-6568 - TOTOLINK EX1200T HTTP POST Request Handler Buffer Overflow](#cve-2025-6568---totolink-ex1200t-http-post-request-handler-buffer-overflow)
-    * [CVE-2025-32977 - Quest KACE Systems Management Appliance File Upload Vulnerability](#cve-2025-32977---quest-kace-systems-management-appliance-file-upload-vulnerability)
+    * [Vulnérabilités Critiques multiples dans Citrix NetScaler ADC et Gateway](#vulnérabilités-critiques-multiples-dans-citrix-netscaler-adc-et-gateway)
+    * [Vulnérabilité XSS dans Discourse via les Connexions Sociales](#vulnérabilité-xss-dans-discourse-via-les-connexions-sociales)
+    * [Vulnérabilité dans Cyberduck et Mountain Duck affectant le Certificate Pinning TLS](#vulnérabilité-dans-cyberduck-et-mountain-duck-affectant-le-certificate-pinning-tls)
+    * [Divulgation du Mot de Passe Administrateur par Défaut dans les Imprimantes Brother/Konica Minolta](#divulgation-du-mot-de-passe-administrateur-par-défaut-dans-les-imprimantes-brotherkonica-minolta)
+    * [Vulnérabilité d'Escalade de Privilèges dans IBM Facsimile Support for i](#vulnérabilité-descalade-de-privilèges-dans-ibm-facsimile-support-for-i)
+    * [Vulnérabilités Critiques multiples dans Hikka Telegram Userbot](#vulnérabilités-critiques-multiples-dans-hikka-telegram-userbot)
+    * [Vulnérabilité d'Exécution de Code Arbitraire dans KnowledgeGPT](#vulnérabilité-dexécution-de-code-arbitraire-dans-knowledgegpt)
+    * [Vulnérabilité Critique dans Elastic Kibana permettant RCE et Corruption de Heap](#vulnérabilité-critique-dans-elastic-kibana-permettant-rce-et-corruption-de-heap)
 * [Category : Threats](#category--threats)
-    * [Russia-linked APT28 use Signal chats to target Ukraine official with malware / UAC-0001 (APT28) Activity Detection](#russia-linked-apt28-use-signal-chats-to-target-ukraine-official-with-malware--uac-0001-apt28-activity-detection)
-    * [SonicWall warns of trojanized NetExtender stealing VPN logins](#sonicwall-warns-of-trojanized-netextender-stealing-vpn-logins)
-    * [The U.S. House banned WhatsApp on government devices due to security concerns](#the-us-house-banned-whatsapp-on-government-devices-due-to-security-concerns)
-    * [China-linked APT Salt Typhoon targets Canadian Telecom companies](#china-linked-apt-salt-typhoon-targets-canadian-telecom-companies)
-    * [U.S. warns of incoming cyber threats following Iran airstrikes](#us-warns-of-incoming-cyber-threats-following-iran-airstrikes)
-    * [Cybercriminals Abuse Open-Source Tools To Target Africa’s Financial Sector](#cybercriminals-abuse-open-source-tools-to-target-africas-financial-sector)
-    * [Rogue WordPress Plugin Unmasked: Stealthy Malware Skims Credit Cards & Steals Credentials](#rogue-wordpress-plugin-unmasked-stealthy-malware-skims-credit-cards--steals-credentials)
-    * [How Falcon Next-Gen SIEM Protects Enterprises from VMware vCenter Attacks](#how-falcon-next-gen-siem-protects-enterprises-from-vmware-vcenter-attacks)
+    * [Arrestations Signalées des Opérateurs du Forum de Hacking BreachForums](#arrestations-signalées-des-opérateurs-du-forum-de-hacking-breachforums)
+    * [Alerte concernant un Client SonicWall NetExtender Trojanisé Volant des Identifiants VPN](#alerte-concernant-un-client-sonicwall-netextender-trojanisé-volant-des-identifiants-vpn)
+    * [Phishing OAuth Microsoft Entra ID et Détections](#phishing-oauth-microsoft-entra-id-et-détections)
+    * [Cyberattaques ciblant les PME en 2025 : Tendances et Techniques](#cyberattaques-ciblant-les-pme-en-2025--tendances-et-techniques)
+    * [Violation de Données chez Mainline Health Systems](#violation-de-données-chez-mainline-health-systems)
+    * [Hausse d'Activité du Botnet Prometei](#hausse-dactivité-du-botnet-prometei)
+    * [Le Groupe APT28 (UAC-0001) Cible les Entités Gouvernementales Ukrainiennes via Phishing et Malware](#le-groupe-apt28-uac-0001-cible-les-entités-gouvernementales-ukrainiennes-via-phishing-et-malware)
+    * [Le Groupe APT Salt Typhoon lié à la Chine Cible les Entreprises de Télécommunications Canadiennes](#le-groupe-apt-salt-typhoon-lié-à-la-chine-cible-les-entreprises-de-télécommunications-canadiennes)
+    * [Avertissement Américain sur les Cybermenaces Potentielles suite aux Frappes contre l'Iran](#avertissement-américain-sur-les-cybermenaces-potentielles-suite-aux-frappes-contre-liran)
+    * [Violation de Données chez Robinsons Malls](#violation-de-données-chez-robinsons-malls)
+    *   [Violation de Données chez Have Fun Teaching](#violation-de-données-chez-have-fun-teaching)
+    * [Abus Cybercriminel des Modèles de Langage Large (LLMs)](#abus-cybercriminel-des-modèles-de-langage-large-llms)
+    * [Cybercriminels ciblent le secteur financier africain en abusant d'outils Open Source](#cybercriminels-ciblent-le-secteur-financier-africain-en-abusant-doutils-open-source)
 
 
 ## Category : Vulnerabilities
-### Critiques Failles dans les routeurs ELECOM : JPCERT/CC émet un avertissement concernant les risques d'injection de commandes et de XSS
-JPCERT/CC a mis en garde contre plusieurs vulnérabilités critiques affectant une gamme de routeurs sans fil ELECOM. Ces failles incluent l'exécution de code à distance non authentifiée, l'injection de commandes et le Cross-Site Scripting (XSS) stocké, représentant des risques significatifs. Les modèles concernés incluent les séries WRC-2533GST2, WRC-X3000GS, WRC-1167GHBK2-S et WRH-733GBK/WRH-733GWH. Certaines vulnérabilités, classées comme critiques (CVSS 9.8), permettent l'exécution de commandes système à distance sans authentification. Pour les modèles non pris en charge affectés par des failles critiques, l'arrêt de l'utilisation est recommandé.
+### Vulnérabilités Critiques multiples dans Citrix NetScaler ADC et Gateway
+Plusieurs vulnérabilités affectent les produits Citrix NetScaler ADC et Gateway. La vulnérabilité critique CVE-2025-6543 (CVSS 9.2) est un débordement de mémoire qui peut entraîner un déni de service et affecte plusieurs versions supportées et EOL. Les vulnérabilités CVE-2025-5777 et CVE-2025-5349, surnommées "CitrixBleed 2", sont des problèmes de contrôle d'accès qui permettent le vol de tokens de session et d'informations sensibles, similaire à la vulnérabilité exploitée activement CVE-2023-4966 (CitrixBleed) 🩸. L'exploitation de CVE-2025-5777 est active dans la nature.
 * Publication date : 2025/06/25
-* 📰 Source : https://securityonline.info/critical-flaws-in-elecom-routers-jpcert-cc-issues-warning-over-command-injection-and-xss-risks/
-* 🎯 CVE : [CVE-2025-43879](https://nvd.nist.gov/vuln/detail/CVE-2025-43879), [CVE-2025-41427](https://nvd.nist.gov/vuln/detail/CVE-2025-41427), [CVE-2025-36519](https://nvd.nist.gov/vuln/detail/CVE-2025-36519)
-* 📦 CVE Impacted Poduct : ELECOM WRC-X3000GS, WRC-X3000GSA, WRC-X3000GSN (firmware v1.0.34 et antérieur ou v1.0.9 et antérieur), WRH-733GBK, WRH-733GWH, WRC-2533GST2 (v1.31 et antérieur), WRC-1167GST2 (v1.34 et antérieur), WRC-1167GHBK2-S (toutes versions)
-* 📏 CVSS : 8.8, 9.8, 9.8
-* 📝 Security recommandations : Appliquer immédiatement les mises à jour firmware disponibles pour les vulnérabilités corrigées (CVE-2025-36519 et CVE-2025-41427). Pour les produits affectés qui ne sont plus pris en charge (incluant ceux impactés par CVE-2025-43877, CVE-2025-43879 et CVE-2025-48890), il est recommandé de cesser complètement l'utilisation des routeurs.
+* 🔗 Source : https://www.bleepingcomputer.com/news/security/new-citrixbleed-2-netscaler-flaw-let-hackers-hijack-sessions/, https://cybersecuritynews.com/netscaler-adc-and-gateway-vulnerability/, https://thehackernews.com/2025/06/citrix-bleed-2-flaw-enables-token-theft.html
+* 💥 CVE : [CVE-2025-6543](https://cvefeed.io/vuln/detail/CVE-2025-6543), [CVE-2025-5777](https://cvefeed.io/vuln/detail/CVE-2025-5777), [CVE-2025-5349](https://cvefeed.io/vuln/detail/CVE-2025-5349), [CVE-2023-4966](https://cvefeed.io/vuln/detail/CVE-2023-4966), [CVE-2023-3519](https://cvefeed.io/vuln/detail/CVE-2023-3519)
+* Affected Products : NetScaler ADC and Gateway versions 14.1 before 14.1-43.56/14.1-47.46+, 13.1 before 13.1-58.32/13.1-59.19+, 13.1-FIPS/NDcPP before 13.1-37.235-FIPS/NDcPP/13.1-37.236+. Versions 12.1 and 13.0 (EOL) sont également impactées.
+* 💯 CVSS : 9.2 (CVE-2025-6543), 9.4 (CVE-2023-4966)
+* 🛡️ Security recommandations : Appliquer immédiatement les mises à jour (14.1-47.46+, 13.1-59.19+, 13.1-FIPS/NDcPP 13.1-37.236+). Terminer toutes les sessions ICA et PCoIP actives après la mise à jour. Les utilisateurs des versions EOL 12.1 et 13.0 doivent migrer vers une version supportée.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-5349
+        * CVE-2023-4966
+        * CVE-2025-5777
+        * CVE-2023-3519
+        * CVE-2025-6543
 
-### Alerte Urgente Advantech : Des failles critiques (CVSS 9.6) exposent l'automatisation industrielle à la prise de contrôle à distance, PoC publiées
-L'Agence de cybersécurité de Singapour (CSA) a émis un avis urgent concernant de multiples vulnérabilités à fort impact affectant les produits d'automatisation industrielle d'Advantech, spécifiquement les séries WISE-4010LAN, WISE-4050LAN et WISE-4060LAN. Ces appareils, largement déployés dans les systèmes de contrôle industriel (ICS), présentent des failles (CVE-2025-48461 à CVE-2025-48470) qui pourraient permettre à un attaquant non authentifié de réaliser des attaques par force brute, des prises de contrôle de compte, des redémarrages système, des manipulations Modbus et potentiellement la compromission physique de l'appareil. Advantech a publié des correctifs et des stratégies d'atténuation, mais une action urgente est nécessaire.
+### Vulnérabilité XSS dans Discourse via les Connexions Sociales
+Une vulnérabilité de Cross-Site Scripting (XSS) (CVE-2025-48954) a été découverte dans la plateforme de discussion open source Discourse. Elle affecte les versions antérieures à la 3.5.0.beta6 lorsque la politique de sécurité de contenu (CSP) n'est pas activée 🚨.
 * Publication date : 2025/06/25
-* 📰 Source : https://securityonline.info/urgent-advantech-alert-critical-flaws-cvss-9-6-expose-industrial-automation-to-remote-takeover-poc-releases/
-* 🎯 CVE : [CVE-2025-48461](https://nvd.nist.gov/vuln/detail/CVE-2025-48461), [CVE-2025-48462](https://nvd.nist.gov/vuln/detail/CVE-2025-48462), [CVE-2025-48463](https://nvd.nist.gov/vuln/detail/CVE-2025-48463), [CVE-2025-48466](https://nvd.nist.gov/vuln/detail/CVE-2025-48466), [CVE-2025-48467](https://nvd.nist.gov/vuln/detail/CVE-2025-48467), [CVE-2025-48468](https://nvd.nist.gov/vuln/detail/CVE-2025-48468), [CVE-2025-48469](https://nvd.nist.gov/vuln/detail/CVE-2025-48469), [CVE-2025-48470](https://nvd.nist.gov/vuln/detail/CVE-2025-48470)
-* 📦 CVE Impacted Poduct : Advantech WISE-4010LAN, WISE-4050LAN, WISE-4060LAN series
-* 📏 CVSS : 9.6
-* 📝 Security recommandations : Appliquer immédiatement les correctifs de sécurité et mettre en œuvre les stratégies d'atténuation fournies par Advantech.
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-48954
+* 💥 CVE : [CVE-2025-48954](https://cvefeed.io/vuln/detail/CVE-2025-48954)
+* Affected Products : Discourse versions antérieures à 3.5.0.beta6.
+* 💯 CVSS : 8.1
+* 🛡️ Security recommandations : Mettre à jour vers la version 3.5.0.beta6. Activer la politique de sécurité de contenu (CSP) comme solution de contournement.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-48954
 
-### Don't panic, but it's only a matter of time before critical 'CitrixBleed 2' is under attack
-Citrix a corrigé une vulnérabilité critique dans ses produits NetScaler ADC et NetScaler Gateway, comparée au célèbre CitrixBleed (CVE-2023-4966) exploité par des groupes de ransomware. La nouvelle faille, appelée officieusement "CitrixBleed 2" (CVE-2025-5777), permet à un attaquant d'accéder à la mémoire de l'appareil sans authentification et potentiellement de lire des jetons de session ou d'autres informations sensibles. Les versions 12.1 et 13.0, en fin de vie, sont vulnérables et devraient être mises à niveau. Bien qu'aucune exploitation active n'ait été rapportée au moment de la publication, les experts estiment que l'exploitation est inévitable.
+### Vulnérabilité dans Cyberduck et Mountain Duck affectant le Certificate Pinning TLS
+Cyberduck (jusqu'à 9.1.6) et Mountain Duck (jusqu'à 4.17.5) gèrent incorrectement le certificate pinning TLS pour les certificats non approuvés (auto-signés par exemple) (CVE-2025-41255) 🔓. Cela entraîne une installation inutile du certificat dans le magasin de certificats Windows de l'utilisateur actuel sans restriction.
+* Publication date : 2025/06/25
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-41255
+* 💥 CVE : [CVE-2025-41255](https://cvefeed.io/vuln/detail/CVE-2025-41255)
+* Affected Products : Cyberduck versions jusqu'à 9.1.6, Mountain Duck versions jusqu'à 4.17.5.
+* 💯 CVSS : 8.0
+* 🛡️ Security recommandations : Mettre à jour vers les versions corrigées (pas de versions spécifiques mentionnées, se référer aux advisories officiels).
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-41255
+
+### Divulgation du Mot de Passe Administrateur par Défaut dans les Imprimantes Brother/Konica Minolta
+Une vulnérabilité critique (CVE-2024-51978) affecte des centaines de modèles d'imprimantes Brother et quelques modèles Konica Minolta 🔑. Un attaquant non authentifié connaissant le numéro de série de l'appareil peut générer le mot de passe administrateur par défaut. Le numéro de série peut être découvert via une autre vulnérabilité (CVE-2024-51977) ou d'autres méthodes (PJL, SNMP).
+* Publication date : 2025/06/25
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2024-51978, https://www.security.nl/posting/893697/Kritiek+lek+in+honderden+Brother-printers+kan+aanvaller+admintoegang+geven?channel=rss
+* 💥 CVE : [CVE-2024-51978](https://cvefeed.io/vuln/detail/CVE-2024-51978), [CVE-2024-51977](https://cvefeed.io/vuln/detail/CVE-2024-51977)
+* Affected Products : Des centaines de modèles d'imprimantes Brother et certains modèles Konica Minolta.
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Appliquer les mises à jour firmware disponibles immédiatement. Modifier le mot de passe administrateur par défaut après la mise à jour. Pour les modèles sans mise à jour, appliquer les solutions de contournement recommandées par le fabricant (Brother recommande un nouveau processus de production pour les modèles concernés car le firmware seul ne corrige pas entièrement le problème).
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2024-51977
+        * CVE-2024-51978
+
+### Vulnérabilité d'Escalade de Privilèges dans IBM Facsimile Support for i
+IBM i 7.2, 7.3, 7.4 et 7.5 sont vulnérables à une élévation de privilèges (CVE-2025-36004) due à un appel de librairie non qualifié dans IBM Facsimile Support for i 📈. Un acteur malveillant peut exécuter du code contrôlé par l'utilisateur avec des privilèges d'administrateur.
+* Publication date : 2025/06/25
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-36004
+* 💥 CVE : [CVE-2025-36004](https://cvefeed.io/vuln/detail/CVE-2025-36004)
+* Affected Products : IBM i 7.2, 7.3, 7.4, 7.5.
+* 💯 CVSS : 8.8
+* 🛡️ Security recommandations : Appliquer les mises à jour fournies par IBM.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-36004
+
+### Vulnérabilités Critiques multiples dans Hikka Telegram Userbot
+Deux vulnérabilités critiques affectent Hikka, un userbot Telegram, et la plupart de ses forks 🔥. CVE-2025-52571 (CVSS 9.6) permet à un attaquant non authentifié de prendre le contrôle du compte Telegram de la victime et d'accéder entièrement au serveur dans les versions antérieures à 1.6.2. CVE-2025-52572 (CVSS 10.0) permet l'exécution de code à distance et la prise de contrôle de compte même avec une session authentifiée, exploitant un manque d'avertissement dans le processus d'authentification web. Le scénario 2 de CVE-2025-52572 est activement exploité dans la nature 💥.
 * Publication date : 2025/06/24
-* 📰 Source : https://go.theregister.com/feed/www.theregister.com/2025/06/24/critical_citrix_bug_citrixbleed/
-* 🎯 CVE : [CVE-2025-5777](https://nvd.nist.gov/vuln/detail/CVE-2025-5777), [CVE-2023-4966](https://nvd.nist.gov/vuln/detail/CVE-2023-4966)
-* 📦 CVE Impacted Poduct : Citrix NetScaler ADC et NetScaler Gateway versions 12.1, 13.0 (End-of-Life), ainsi que 13.1, 14.1, 15.0 antérieures aux versions corrigées ; Déploiements Secure Private Access on-prem ou Secure Private Access Hybrid utilisant des instances NetScaler.
-* 📏 CVSS : 9.4 (pour CVE-2023-4966), Critique (pour CVE-2025-5777, score exact non précisé mais supérieur à 8)
-* 📝 Security recommandations : Mettre à niveau immédiatement les instances NetScaler vers les versions recommandées par Citrix. Exécuter les commandes suggérées par le fournisseur après le déploiement des correctifs sur les paires HA et les nœuds de cluster.
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2025-52572, https://cvefeed.io/vuln/detail/CVE-2025-52571
+* 💥 CVE : [CVE-2025-52572](https://cvefeed.io/vuln/detail/CVE-2025-52572), [CVE-2025-52571](https://cvefeed.io/vuln/detail/CVE-2025-52571)
+* Affected Products : Hikka Telegram userbot versions antérieures à 1.6.2 et la plupart des forks (CVE-2025-52571). Toutes les versions de Hikka (CVE-2025-52572).
+* 💯 CVSS : 10.0 (CVE-2025-52572), 9.6 (CVE-2025-52571)
+* 🛡️ Security recommandations : Mettre à jour vers la version 1.6.2 (corrige CVE-2025-52571). Pour CVE-2025-52572 (pas de patch connu), utiliser le flag `--no-web`, fermer le port du serveur après l'authentification web, et ne pas cliquer sur "Allow" dans le bot d'assistance sauf si c'est une action explicite.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-52572
+        * CVE-2025-52571
 
-### June 2025 Patch Tuesday: One Zero-Day and Nine Critical Vulnerabilities Among 66 CVEs
-Microsoft a publié les mises à jour de sécurité de juin 2025, corrigeant 66 vulnérabilités. Parmi celles-ci, on compte un zero-day activement exploité et neuf vulnérabilités critiques. Les vulnérabilités critiques incluent des failles d'exécution de code à distance (RCE) affectant WebDAV (CVSS 8.8), Microsoft Office (CVSS 8.4), Windows Cryptographic Services (Schannel) (CVSS 8.1), Windows Remote Desktop Services (CVSS 8.1), Windows KDC Proxy Service (KPSSVC) (CVSS 8.1), et Microsoft SharePoint Server (CVSS 8.8). Des vulnérabilités d'élévation de privilèges critiques ont également été corrigées dans Windows Netlogon (CVSS 8.1) et Windows SMB Client (CVSS 8.8). L'une des vulnérabilités RCE affectant Microsoft Office (CVE-2025-47953) est activement exploitée.
+### Vulnérabilité d'Exécution de Code Arbitraire dans KnowledgeGPT
+Une vulnérabilité (CVE-2024-37743) dans mmzdev KnowledgeGPT V.0.0.5 permet à un attaquant distant d'exécuter du code arbitraire via le composant Document Display 💻.
 * Publication date : 2025/06/24
-* 📰 Source : https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-june-2025/
-* 🎯 CVE : [CVE-2025-47953](https://nvd.nist.gov/vuln/detail/CVE-2025-47953), [CVE-2025-47172](https://nvd.nist.gov/vuln/detail/CVE-2025-47172), [CVE-2025-47167](https://nvd.nist.gov/vuln/detail/CVE-2025-47167), [CVE-2025-47164](https://nvd.nist.gov/vuln/detail/CVE-2025-47164), [CVE-2025-47162](https://nvd.nist.gov/vuln/detail/CVE-2025-47162), [CVE-2025-33073](https://nvd.nist.gov/vuln/detail/CVE-2025-33073), [CVE-2025-33071](https://nvd.nist.gov/vuln/detail/CVE-2025-33071), [CVE-2025-33070](https://nvd.nist.gov/vuln/detail/CVE-2025-33070), [CVE-2025-33053](https://nvd.nist.gov/vuln/detail/CVE-2025-33053), [CVE-2025-32710](https://nvd.nist.gov/vuln/detail/CVE-2025-32710), [CVE-2025-29828](https://nvd.nist.gov/vuln/detail/CVE-2025-29828)
-* 📦 CVE Impacted Poduct : Microsoft Web Distributed Authoring and Versioning (WebDAV), Microsoft Office, Windows Netlogon, Windows Cryptographic Services (Schannel), Windows Remote Desktop Services, Windows KDC Proxy Service (KPSSVC), Microsoft SharePoint Server, Windows SMB Client.
-* 📏 CVSS : 8.8, 8.8, 8.4, 8.4, 8.4, 8.1, 8.1, 8.1, 8.1, 8.1, 8.8
-* 📝 Security recommandations : Appliquer les mises à jour de sécurité Microsoft de juin 2025 dès que possible. Revoir la stratégie de cybersécurité globale et planifier la mise à niveau des systèmes Windows 10 qui atteindront la fin de support en octobre 2025.
+* 🔗 Source : https://cvefeed.io/vuln/detail/CVE-2024-37743
+* 💥 CVE : [CVE-2024-37743](https://cvefeed.io/vuln/detail/CVE-2024-37743)
+* Affected Products : mmzdev KnowledgeGPT V.0.0.5.
+* 💯 CVSS : 9.8
+* 🛡️ Security recommandations : Mettre à jour vers une version corrigée.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2024-37743
 
-### Multiple vulnerabilities in Sitecore CMS
-Des chercheurs ont découvert trois vulnérabilités dans le système de gestion de contenu populaire, Sitecore Experience Platform. La vulnérabilité CVE-2025-34509 (CVSS 8.1) concerne un mot de passe codé en dur trivial ('b') pour le compte par défaut `sitecoreServicesAPI`, contournable via un bypass de la vérification de base de données. La CVE-2025-34510 est une vulnérabilité de chemin d'accès (Zip Slip) dans le mécanisme de téléchargement de fichiers ZIP, permettant à un attaquant authentifié de charger un webshell vers un répertoire arbitraire. La CVE-2025-34511 affecte le module Sitecore PowerShell Extensions, permettant également à un attaquant authentifié de charger n'importe quel fichier vers n'importe quel répertoire. Des correctifs ont été publiés en mai 2025, mais l'exploitation en l'état n'est pas prouvée.
-* Publication date : 2025/06/24
-* 📰 Source : https://www.kaspersky.co.uk/blog/vulnerabilities-sitecore-experience-platform/29090/
-* 🎯 CVE : [CVE-2025-34509](https://nvd.nist.gov/vuln/detail/CVE-2025-34509), [CVE-2025-34510](https://nvd.nist.gov/vuln/detail/CVE-2025-34510), [CVE-2025-34511](https://nvd.nist.gov/vuln/detail/CVE-2025-34511), [CVE-2025-6019](https://nvd.nist.gov/vuln/detail/CVE-2025-6019), [CVE-2025-33053](https://nvd.nist.gov/vuln/detail/CVE-2025-33053)
-* 📦 CVE Impacted Poduct : Sitecore Experience Manager, Experience Platform versions 10.1 à 10.1.4 rev. 011974 PRE, toutes variantes de 10.2, 10.3 à 10.3.3 rev. 011967 PRE, et 10.4 à 10.4.1 rev. 011941 PRE ; Experience Manager, Experience Platform, et Experience Commerce versions 9.0 à 9.3 et 10.0 à 10.4 ; Sitecore PowerShell Extensions jusqu'à la version 7.0.
-* 📏 CVSS : 8.1 (pour CVE-2025-34509, autres probablement >= 8)
-* 📝 Security recommandations : Mettre à jour le CMS Sitecore, en particulier si le module Sitecore PowerShell Extensions est utilisé. Surveiller les futures mises à jour du fournisseur car d'autres vulnérabilités sont connues mais non encore divulguées.
-
-### CVE-2025-52572 - Hikka Telegram Userbot Remote Code Execution and Account Takeover Vulnerability
-Une vulnérabilité (CVE-2025-52572) affecte toutes les versions de Hikka, un userbot Telegram. Cette faille, classée comme critique, présente deux scénarios d'exploitation possibles via l'interface web. Si la session n'est pas authentifiée, un attaquant peut utiliser son propre compte Telegram pour obtenir une exécution de code à distance (RCE) sur le serveur en s'authentifiant. Si la session est authentifiée, en incitant l'utilisateur à cliquer sur "Autoriser" dans le menu "Autoriser les opérations de l'application web", l'attaquant obtient la RCE et l'accès au compte Telegram du propriétaire. Le second scénario est connu pour être exploité dans la nature. Aucun correctif n'est disponible, mais des solutions de contournement existent.
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-52572
-* 🎯 CVE : [CVE-2025-52572](https://nvd.nist.gov/vuln/detail/CVE-2025-52572)
-* 📦 CVE Impacted Poduct : Hikka Telegram userbot, toutes les versions.
-* 📏 CVSS : 10.0
-* 📝 Security recommandations : Utiliser le flag `--no-web` pour ne pas démarrer le userbot avec l'interface web. Si l'interface web a été utilisée, fermer le port sur le serveur et/ou redémarrer le userbot avec le flag `--no-web`. Ne pas cliquer sur "Autoriser" dans le bot helper sauf si l'action correspond à une action explicite requise par l'utilisateur.
-
-### CVE-2025-52571 - Hikka Telegram Unauthenticated Account Takeover and Server Compromise Vulnerability
-Une vulnérabilité (CVE-2025-52571) affecte Hikka, un userbot Telegram, dans toutes les versions inférieures à 1.6.2, y compris la plupart des forks. Classée comme critique (CVSS 9.6), cette faille permet à un attaquant non authentifié d'accéder au compte Telegram de la victime ainsi qu'un accès complet au serveur. Le problème a été corrigé dans la version 1.6.2.
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-52571
-* 🎯 CVE : [CVE-2025-52571](https://nvd.nist.gov/vuln/detail/CVE-2025-52571)
-* 📦 CVE Impacted Poduct : Hikka Telegram userbot, versions inférieures à 1.6.2 (incluant la plupart des forks).
-* 📏 CVSS : 9.6
-* 📝 Security recommandations : Mettre à jour Hikka vers la version 1.6.2 ou supérieure.
-
-### CVE-2024-37743 - KnowledgeGPT Arbitrary Code Execution Vulnerability
-Une vulnérabilité (CVE-2024-37743) dans mmzdev KnowledgeGPT V.0.0.5 permet à un attaquant distant d'exécuter du code arbitraire via le composant Document Display. Cette faille est classée comme critique (CVSS 9.8).
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2024-37743
-* 🎯 CVE : [CVE-2024-37743](https://nvd.nist.gov/vuln/detail/CVE-2024-37743)
-* 📦 CVE Impacted Poduct : mmzdev KnowledgeGPT V.0.0.5
-* 📏 CVSS : 9.8
-
-### CVE-2025-4378 - Ataturk University ATA-AOF Mobile Application Cleartext Transmission and Hard-coded Credentials Vulnerability
-Une vulnérabilité (CVE-2025-4378) dans l'application mobile Ataturk University ATA-AOF, affectant les versions antérieures au 20.06.2025, permet la transmission en clair d'informations sensibles et l'utilisation de références codées en dur. Cette faille, classée comme critique (CVSS 10.0), peut mener à un abus d'authentification et à un contournement d'authentification.
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-4378
-* 🎯 CVE : [CVE-2025-4378](https://nvd.nist.gov/vuln/detail/CVE-2025-4378)
-* 📦 CVE Impacted Poduct : Ataturk University ATA-AOF Mobile Application versions antérieures au 20.06.2025.
-* 📏 CVSS : 10.0
-
-### CVE-2025-4383 - Art-in Bilişim Teknolojileri ve Yazılım Hizm. Tic. Ltd. Şti. Wi-Fi Cloud Hotspot Authentication Abuse Bypass
-Une vulnérabilité (CVE-2025-4383) dans Art-in Bilişim Teknolojileri ve Yazılım Hizm. Tic. Ltd. Şti. Wi-Fi Cloud Hotspot, affectant les versions antérieures au 30.05.2025, est due à une restriction insuffisante des tentatives d'authentification excessives. Cette faille, classée comme critique (CVSS 9.3), permet l'abus d'authentification et le contournement d'authentification.
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-4383
-* 🎯 CVE : [CVE-2025-4383](https://nvd.nist.gov/vuln/detail/CVE-2025-4383)
-* 📦 CVE Impacted Poduct : Art-in Bilişim Teknolojileri ve Yazılım Hizm. Tic. Ltd. Şti. Wi-Fi Cloud Hotspot versions antérieures au 30.05.2025.
-* 📏 CVSS : 9.3
-
-### CVE-2025-6568 - TOTOLINK EX1200T HTTP POST Request Handler Buffer Overflow
-Une vulnérabilité (CVE-2025-6568) classée comme critique (CVSS 8.8) a été trouvée dans TOTOLINK EX1200T 4.1.2cu.5232_B20210713. Affectant une fonction inconnue dans le fichier `/boafrm/formIpv6Setup` du composant HTTP POST Request Handler, la manipulation de l'argument `submit-url` entraîne un débordement de tampon. L'attaque peut être lancée à distance et un exploit a été divulgué publiquement.
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-6568
-* 🎯 CVE : [CVE-2025-6568](https://nvd.nist.gov/vuln/detail/CVE-2025-6568)
-* 📦 CVE Impacted Poduct : TOTOLINK EX1200T 4.1.2cu.5232_B20210713
-* 📏 CVSS : 8.8
-
-### CVE-2025-32977 - Quest KACE Systems Management Appliance File Upload Vulnerability
-Une vulnérabilité (CVE-2025-32977) affectant Quest KACE Systems Management Appliance (SMA) permet aux utilisateurs non authentifiés de télécharger des fichiers de sauvegarde sur le système. Bien qu'une validation de signature soit implémentée, des faiblesses dans le processus peuvent être exploitées pour télécharger un contenu de sauvegarde malveillant susceptible de compromettre l'intégrité du système. Cette faille est classée comme critique (CVSS 9.6). Les versions affectées sont 13.0.x avant 13.0.385, 13.1.x avant 13.1.81, 13.2.x avant 13.2.183, 14.0.x avant 14.0.341 (Patch 5), et 14.1.x avant 14.1.101 (Patch 4).
-* Publication date : 2025/06/24
-* 📰 Source : https://cvefeed.io/vuln/detail/CVE-2025-32977
-* 🎯 CVE : [CVE-2025-32977](https://nvd.nist.gov/vuln/detail/CVE-2025-32977)
-* 📦 CVE Impacted Poduct : Quest KACE Systems Management Appliance (SMA) 13.0.x avant 13.0.385, 13.1.x avant 13.1.81, 13.2.x avant 13.2.183, 14.0.x avant 14.0.341 (Patch 5), et 14.1.x avant 14.1.101 (Patch 4).
-* 📏 CVSS : 9.6
-
+### Vulnérabilité Critique dans Elastic Kibana permettant RCE et Corruption de Heap
+Une vulnérabilité critique (CVE-2025-2135) affecte Elastic Kibana, permettant une corruption de heap et une exécution de code arbitraire à distance via des pages HTML spécialement conçues 🌐💥. Le problème vient d'une confusion de types.
+* Publication date : 2025/06/25
+* 🔗 Source : https://cybersecuritynews.com/kibana-vulnerabilities-allows-code-execution/, https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0533/
+* 💥 CVE : [CVE-2025-2135](https://cvefeed.io/vuln/detail/CVE-2025-2135)
+* Affected Products : Kibana versions 7.17.0 à 7.17.28, 8.0.0 à 8.17.7, 8.18.0 à 8.18.2, 9.0.0 à 9.0.2. Produits Elastic affectés (détails non spécifiés par CERTFR).
+* 💯 CVSS : 9.2
+* 🛡️ Security recommandations : Mettre à jour immédiatement vers les versions 7.17.29, 8.17.8, 8.18.3 ou 9.0.3. Des options de mitigation sont disponibles pour les organisations ne pouvant pas mettre à jour immédiatement.
+* 🦠 Indicator of Compromise :
+    * CVE:
+        * CVE-2025-2135
 
 ## Category : Threats
-### Russia-linked APT28 use Signal chats to target Ukraine official with malware / UAC-0001 (APT28) Activity Detection
-Le groupe cyber-espionnage russe APT28 (également connu sous les noms UAC-0001, Fancy Bear, Forest Blizzard, STRONTIUM, Pawn Storm) cible les fonctionnaires du gouvernement ukrainien en utilisant les discussions Signal comme vecteur d'attaque. Ils diffusent deux nouvelles souches de logiciels malveillants, BEARDSHELL et SLIMAGENT, ainsi que des composants du framework COVENANT. L'exploitation ne vise pas Signal lui-même, mais tire parti de sa popularité pour rendre les tentatives de phishing plus convaincantes via des documents malveillants contenant des macros. Les attaquants utilisent des techniques de détournement de COM, des tâches planifiées pour la persistance, et abusent de services cloud légitimes comme Icedrive et Koofr pour l'exfiltration de données et le C2. L'activité a été observée en mars-avril 2024 et mai 2025.
-* Publication date : 2025/06/24
-* 📰 Source : https://securityaffairs.com/179288/apt/russia-linked-apt28-use-signal-chats-to-target-ukraine-official-with-malware.html, https://socprime.com/blog/detect-uac-0001-aka-apt28-attacks-against-ukraine/
-* 👾 Threat Actor : APT28 (UAC-0001, Fancy Bear, Forest Blizzard, STRONTIUM, Pawn Storm)
-* 🎯 Threat Target : Fonctionnaires et agences du gouvernement ukrainien.
-* ✍️ Threat Tactic : Phishing via Signal (diffusion de documents malveillants), Macros, Détournement de COM (COM hijacking), Tâches planifiées, Abus de services cloud légitimes (Icedrive API, Koofr API) pour C2 et exfiltration. Utilisation de stéganographie (code shell dans un fichier PNG/WAV).
-* 🛠️ Threat Tools : BEARDSHELL (backdoor C++), SLIMAGENT (malware C++ pour capture d'écran), COVENANT framework, PowerShell scripts, DLLs malveillantes (`ctec.dll`, `PlaySndSrv.dll`), exécutables (`ksmqsyck.dx4.exe`). Ancien TTP : Exploitation de CVE-2022-38028 (Windows Print Spooler), GooseEgg malware, utilisation de METASPLOIT.
-* 📝 Security recommandations : Auditer, surveiller et restreindre l'exécution des macros. Analyser et limiter le trafic réseau vers les services cloud (app.koofr.net, api.icedrive.net) qui pourraient être abusés pour le C2. Utiliser des règles de détection pour identifier les activités de UAC-0001/APT28.
-* 🗃️ Indicator of Compromise :
-    *   DOMAIN : gov[.]ua, specificallyapp[.]koofr[.]netandapi[.]icedrive[.]net
-    *   CVE : [CVE-2022-38028](https://nvd.nist.gov/vuln/detail/CVE-2022-38028)
-    *   FILE_NAME : ctec[.]dll, ksmqsyck[.]dx4[.]exe, PlaySndSrv[.]dll, sample-03[.]wav
-
-### SonicWall warns of trojanized NetExtender stealing VPN logins
-SonicWall alerte ses clients sur la distribution d'une version trojanisée de son client SSL VPN NetExtender, utilisée par des acteurs malveillants pour voler les identifiants de connexion VPN. Le logiciel malveillant est conçu pour fonctionner avec les appliances et pare-feux SonicWall SSL VPN. Une fois les détails de configuration VPN saisis et le bouton "Connecter" cliqué, le code malveillant effectue sa propre validation avant d'envoyer les données (nom d'utilisateur, mot de passe, domaine, etc.) à un serveur distant.
-* Publication date : 2025/06/24
-* 📰 Source : https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-trojanized-netextender-stealing-vpn-logins/
-* 🎯 Threat Target : Utilisateurs de SonicWall NetExtender (petites/moyennes entreprises, administrateurs IT, contractants).
-* ✍️ Threat Tactic : Distribution d'un client VPN légitime modifié (trojanisé). Vol d'identifiants via le client trojanisé.
-* 🛠️ Threat Tools : Client SonicWall NetExtender trojanisé.
-* 📝 Security recommandations : Être vigilant quant à la source d'installation du client NetExtender. Ne télécharger le logiciel que depuis les canaux officiels de SonicWall.
-
-### The U.S. House banned WhatsApp on government devices due to security concerns
-La Chambre des représentants des États-Unis a interdit l'utilisation de WhatsApp sur les appareils officiels en raison de préoccupations de sécurité. Le Chief Administrative Officer a cité le manque de transparence de l'application dans la protection des données utilisateurs, l'absence de chiffrement des données stockées (Meta conteste ce point en affirmant que les messages sont chiffrés de bout en bout par défaut), et les risques de sécurité potentiels. Des restrictions similaires s'appliquent aux outils IA comme ChatGPT, aux applications ByteDance et à Microsoft Copilot. Meta affirme que le chiffrement de bout en bout de WhatsApp offre un niveau de sécurité supérieur à la plupart des applications approuvées.
-* Publication date : 2025/06/24
-* 📰 Source : https://securityaffairs.com/179297/mobile-2/us-house-banned-whatsapp-on-government-devices.html
-* 🎯 Threat Target : Appareils gouvernementaux de la Chambre des représentants des États-Unis.
-* ✍️ Threat Tactic : Utilisation d'applications jugées à haut risque pour la sécurité des données sur les appareils officiels. Contexte de campagnes de spyware antérieures ayant ciblé des utilisateurs de WhatsApp.
-* 📝 Security recommandations : Interdiction d'utiliser des applications jugées à haut risque sur les appareils officiels.
-
-### China-linked APT Salt Typhoon targets Canadian Telecom companies
-Le Centre Canadien pour la Cybersécurité et le FBI alertent que le groupe cyber-espionnage APT Salt Typhoon, lié à la Chine, cible les entreprises de télécommunications canadiennes dans des opérations d'espionnage en cours. La campagne de Salt Typhoon est active depuis 1 à 2 ans et a déjà ciblé des fournisseurs de télécommunications aux États-Unis en exploitant la vulnérabilité non corrigée CVE-2023-20198 dans les appareils réseau Cisco IOS XE. Le groupe s'est introduit dans au moins trois appareils télécoms canadiens en février 2025 en utilisant cette faille pour voler des fichiers de configuration et installer un tunnel GRE afin de collecter du trafic. L'activité d'espionnage devrait se poursuivre.
-* Publication date : 2025/06/24
-* 📰 Source : https://securityaffairs.com/179278/apt/china-linked-apt-salt-typhoon-targets-canadian-telecom-companies.html
-* 👾 Threat Actor : Salt Typhoon (groupe APT lié à la Chine)
-* 🎯 Threat Target : Entreprises de télécommunications canadiennes, potentiellement leurs clients ; Entreprises de télécommunications américaines précédemment.
-* ✍️ Threat Tactic : Cyber-espionnage, reconnaissance réseau, exploitation de vulnérabilités (CVE-2023-20198), vol de configurations, installation de tunnels GRE pour la collecte de données.
-* 🛠️ Threat Tools : Exploitation de la vulnérabilité CVE-2023-20198 dans Cisco IOS XE.
-* 📝 Security recommandations : Corriger la vulnérabilité CVE-2023-20198 dans les appareils Cisco IOS XE. Surveiller les activités de Salt Typhoon.
-
-### U.S. warns of incoming cyber threats following Iran airstrikes
-Le DHS américain met en garde contre une augmentation des cybermenaces aux États-Unis suite aux frappes aériennes américaines sur les sites nucléaires iraniens et dans le contexte du conflit Iran-Israël. Des attaques cyber de faible niveau par des hacktivistes pro-iraniens sont probables, et des acteurs cyber affiliés au gouvernement iranien pourraient mener des attaques contre les réseaux américains, notamment des infrastructures critiques. L'Iran reste déterminé à cibler les officiels américains jugés responsables de la mort d'un commandant militaire en 2020. Le conflit pourrait également alimenter la violence extrémiste intérieure.
-* Publication date : 2025/06/24
-* 📰 Source : https://securityaffairs.com/179266/cyber-warfare-2/u-s-warns-of-incoming-cyber-threats-following-iran-airstrikes.html
-* 👾 Threat Actor : Hacktivistes pro-iraniens, acteurs cyber affiliés au gouvernement iranien, extrémistes violents.
-* 🎯 Threat Target : Réseaux américains, infrastructures critiques américaines, officiels du gouvernement américain, cibles sur le territoire américain (potentiellement liées à un sentiment anti-sémite/anti-israélien).
-* ✍️ Threat Tactic : Cyberattaques de faible niveau (hacktivisme), attaques étatiques contre les réseaux/infrastructures américaines, reconnaissance et planification d'attaques contre des cibles d'infrastructure, attaques cyber-activées.
-
-### Cybercriminals Abuse Open-Source Tools To Target Africa’s Financial Sector
-Des cybercriminels, suivis sous le nom de CL-CRI-1014 et évalués comme étant des courtiers en accès initial (IAB), ciblent des organisations financières à travers l'Afrique depuis juillet 2023. Ils utilisent un playbook cohérent basé sur des outils open-source et disponibles publiquement pour établir leur infrastructure d'attaque, créer des tunnels pour la communication réseau et effectuer de l'administration à distance. Ils forgent des signatures de fichiers pour masquer leurs outils et activités, se faisant passer pour des produits légitimes. Parmi les outils utilisés figurent PoshC2, Chisel et Classroom Spy (qui a remplacé MeshAgent récemment). Ils déploient Classroom Spy via des scripts PowerShell et utilisent un packer basé sur Nim pour les implants PoshC2, avec des mécanismes anti-analyse.
-* Publication date : 2025/06/24
-* 📰 Source : https://unit42.paloaltonetworks.com/cybercriminals-attack-financial-sector-across-africa/
-* 👾 Threat Actor : Cybercriminels (CL-CRI-1014), Courtiers en Accès Initial (IAB).
-* 🎯 Threat Target : Organisations financières en Afrique.
-* ✍️ Threat Tactic : Obtention d'accès initial, vente d'accès sur le dark web, utilisation d'outils open-source/publics, forge de signatures de fichiers, création de tunnels, administration à distance, déploiement de logiciels malveillants via scripts PowerShell, utilisation de packers avec mécanismes anti-analyse.
-* 🛠️ Threat Tools : PoshC2 (implants C#, PowerShell), Chisel (utilitaire de tunneling, proxy SOCKS), Classroom Spy (outil d'administration à distance), MeshAgent (anciennement), scripts PowerShell (`slr.ps1`, `sqlx.ps1`, `sav.ps1`, `cfg.ps1`), packer Nim. Noms d'outils déguisés (`CortexUpdater.exe`, `Palo Alto Cortex Services`).
-* 🗃️ Indicator of Compromise :
-    *   DOMAIN : sav[.]ps1andcfg[.]ps, sqlx[.]ps, asslr[.]ps
-    *   FILE_NAME : CortexUpdater[.]exe, Palo Alto Cortex Services
-
-### Rogue WordPress Plugin Unmasked: Stealthy Malware Skims Credit Cards & Steals Credentials
-L'équipe Wordfence Threat Intelligence a découvert un puissant framework de malware opérant sous la forme d'un plugin WordPress malveillant. Identifiée en mai 2025, cette campagne utilise une famille de souches de malware multifonctionnelles capables de réaliser de l'écrémage de cartes de crédit, du vol d'identifiants WordPress, de la fraude publicitaire et de l'exécution de commandes à distance. Un variant intègre un système backend vivant hébergé directement sur les sites infectés pour l'usage de l'attaquant, une méthode jusqu'alors inédite, le tout déguisé en plugin WordPress légitime. Les données volées sont encodées et exfiltrées en tant que chaîne de requête ajoutée à une fausse image (image-view.php).
+### Arrestations Signalées des Opérateurs du Forum de Hacking BreachForums
+La police française aurait arrêté cinq opérateurs du forum cybercriminel BreachForums 🚓🔗, une plateforme utilisée pour divulguer et vendre des données volées. Des rumeurs suggèrent également l'arrestation du cybercriminel "IntelBroker" en février 2025. BreachForums a servi de communauté pour échanger des données volées, vendre l'accès à des réseaux d'entreprise et d'autres services illégaux. Des acteurs comme ShinyHunters et IntelBroker étaient admins/propriétaires.
 * Publication date : 2025/06/25
-* 📰 Source : https://securityonline.info/rogue-wordpress-plugin-unmasked-stealthy-malware-skims-credit-cards-steals-credentials/
-* 🎯 Threat Target : Sites web WordPress et leurs utilisateurs (particulièrement ceux effectuant des transactions).
-* ✍️ Threat Tactic : Déguisement en plugin WordPress légitime, écrémage de cartes de crédit (card skimming), vol d'identifiants, fraude publicitaire, exécution de commandes à distance, exfiltration de données encodées via requêtes GET déguisées (fausse image).
-* 🛠️ Threat Tools : Plugin WordPress malveillant, framework malware multifonctionnel, système backend hébergé sur les sites infectés.
-* 📝 Security recommandations : Examiner attentivement les plugins installés et leur code source pour détecter les activités suspectes. Utiliser des solutions de sécurité (comme Wordfence) pour scanner les sites WordPress.
+* 🔗 Source : https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-operators-reportedly-arrested-in-france/
+* 🕵️ Threat Actor : Opérateurs de BreachForums, IntelBroker, ShinyHunters, Hollow, depressed, noct
+* 🎯 Threat Target : Millions de personnes (via données volées), entreprises (accès aux réseaux).
+* 👹 Threat Tactic : Vente/Divulgation de données volées, vente d'accès initiaux, services cybercriminels.
+* 📍 Indicator of Compromise :
+    * Threat Actor:
+        * IntelBroker
+        * ShinyHunters
 
-### How Falcon Next-Gen SIEM Protects Enterprises from VMware vCenter Attacks
-Cet article analyse les tactiques utilisées par les adversaires pour attaquer les instances VMware vCenter, souvent accessibles via Internet. Un vCenter compromis peut entraîner un contrôle total de l'infrastructure virtuelle. L'exploitation de la vulnérabilité critique CVE-2023-34048 (corrigée en octobre 2023) a été observée en janvier 2024. Les attaquants cherchent à établir la persistance en téléchargeant/utilisant des fichiers ISO malveillants pour créer des machines virtuelles (VM) non gérées, ou en créant des "VM fantômes" (VirtualGHOST) via SSH vers ESXi pour contourner la surveillance. Ils ciblent également les disques virtuels (VMDK) de systèmes critiques virtualisés, comme les contrôleurs de domaine, pour voler des identifiants en utilisant des outils comme Impacket ou secretsdump.py. La surveillance des logs vCenter est essentielle pour détecter ces activités.
+### Alerte concernant un Client SonicWall NetExtender Trojanisé Volant des Identifiants VPN
+SonicWall alerte ses clients sur la distribution d'une version trojanisée de son client SSL VPN NetExtender, conçue pour voler les identifiants VPN 🛡️🎣. Le logiciel malveillant cible le personnel distant, les administrateurs informatiques et les contractants, et vole les informations de configuration du VPN (nom d'utilisateur, mot de passe, domaine, etc.).
 * Publication date : 2025/06/24
-* 📰 Source : https://www.crowdstrike.com/en-us/blog/falcon-next-gen-siem-protects-against-vmware-vcenter-attacks/
-* 🎯 Threat Target : Instances VMware vCenter accessibles depuis Internet, systèmes virtualisés critiques (Contrôleurs de Domaine, bases de données, serveurs de fichiers).
-* ✍️ Threat Tactic : Exploitation de vulnérabilités (e.g., CVE-2023-34048), établissement de persistance (utilisation/création de VMs via ISOs, création de "VMs fantômes" via SSH ESXi), accès aux données sensibles (ciblage de VMDKs), vol d'identifiants (NTDS.dit).
-* 🛠️ Threat Tools : Exploitation de CVE-2023-34048, fichiers ISO malveillants, VMs non gérées, VMs fantômes (VirtualGHOST), accès SSH à ESXi, Impacket, secretsdump.py.
-* 📝 Security recommandations : Appliquer les correctifs de sécurité pour les vulnérabilités connues (e.g., CVE-2023-34048). Ingestérer les logs vCenter dans un SIEM pour une surveillance et une détection accrues. Surveiller la création de VMs, l'attachement d'ISOs, les connexions SSH à ESXi, et l'accès aux disques virtuels sensibles.
-* 🗃️ Indicator of Compromise :
-    *   CVE : [CVE-2023-34048](https://nvd.nist.gov/vuln/detail/CVE-2023-34048)
+* 🔗 Source : https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-trojanized-netextender-stealing-vpn-logins/
+* 🎯 Threat Target : Utilisateurs du client SonicWall NetExtender SSL VPN (personnel distant, admins IT, contractants).
+* 👹 Threat Tactic : Distribution de logiciel trojanisé, vol d'identifiants.
+* ⚒️ Threat Tools : Version trojanisée de SonicWall NetExtender.
+* 🛡️ Security recommandations : Ne télécharger le client NetExtender qu'à partir de sources officielles et vérifier son intégrité. Mettre en œuvre l'authentification multifacteur (MFA) pour les accès VPN.
+
+### Phishing OAuth Microsoft Entra ID et Détections
+Cet article explore les techniques de phishing OAuth et d'abus de tokens dans Microsoft Entra ID (Azure AD), inspiré par des campagnes attribuées à des acteurs comme UTA0352 ☁️🎣. Les attaquants abusent des flux OAuth légitimes et d'outils comme ROADtools/ROADtx pour récolter des tokens, enregistrer des appareils virtuels, obtenir des PRTs (Primary Refresh Tokens) et accéder à des données sensibles via Microsoft Graph (emails, SharePoint) sans interaction utilisateur ultérieure. L'émulation de ces techniques a permis de surface des indicateurs comportementaux pour la détection.
+* Publication date : 2025/06/25
+* 🔗 Source : https://www.elastic.co/security-labs/entra-id-oauth-phishing-detection
+* 🕵️ Threat Actor : UTA0352 (inspiration)
+* 🎯 Threat Target : Utilisateurs de Microsoft Entra ID/Microsoft 365.
+* 👹 Threat Tactic : Phishing OAuth, Vol de tokens, Enregistrement de dispositif, Abus de PRT, Accès aux données cloud.
+* ⚒️ Threat Tools : ROADtools, ROADtx
+* 🛡️ Security recommandations : Surveiller les journaux de connexion et d'audit Entra ID pour les activités suspectes (connexions multiples IPs sur même session, utilisation de clients first-party inhabituels, enregistrements de dispositifs inattendus, usage de refresh tokens/PRTs). Mettre en œuvre des politiques d'accès conditionnel (CAP) robustes. Éduquer les utilisateurs sur les risques du phishing OAuth. Restreindre l'exécution de macros (vector initial possible). Analyser et limiter le trafic réseau vers des services cloud légitimes potentiellement utilisés pour le C2 (Koofr, Icedrive). Utiliser MFA.
+* 📍 Indicator of Compromise :
+    * URL:
+        * hxxps[:]//graph[.]microsoft[.]com/[.]defaultinstructs
+        * hxxps[:]//login[.]microsoftonline[.]com/[tenant_id]/oauth2/v2[.]0/token
+    * DOMAIN:
+        * login[.]microsoftonline[.]com
+        * mail[.]read
+        * graph[.]microsoft[.]com
+        * enterpriseregistration[.]windows[.]net
+
+### Cyberattaques ciblant les PME en 2025 : Tendances et Techniques
+Un rapport met en évidence les tendances des cyberattaques ciblant les petites et moyennes entreprises (PME) en 2025 🏢🎯. Les PME sont considérées comme des cibles plus faciles. Les attaques basées sur les relations de confiance restent une méthode clé. Les attaques basées sur l'IA et l'usurpation d'outils légitimes (IA, plateformes de collaboration comme Zoom, Microsoft Office) sont en augmentation. Les menaces principales incluent les downloaders, les Trojans, et les adwares. Les campagnes de phishing et d'arnaques restent courantes, imitant des marques populaires pour voler des identifiants ou manipuler les victimes. Le Trojan-Downloader "TookPS" est distribué via de faux sites web.
+* Publication date : 2025/06/25
+* 🔗 Source : https://securelist.com/smb-threat-report-2025/116830/
+* 🎯 Threat Target : Petites et Moyennes Entreprises (PME).
+* 👹 Threat Tactic : Attaques basées sur les relations de confiance, Usurpation de logiciels légitimes (IA, collaboration, Office), Phishing, Scams, Distribution de malware via faux sites web.
+* ⚒️ Threat Tools : Downloaders, Trojans, Adware, Trojan-Dropper, Backdoor, Trojan-Downloader, HackTool, Trojan-PSW, PSW-Tool, TookPS.
+* 🛡️ Security recommandations : Investir dans des solutions de cybersécurité complètes. Renforcer la sensibilisation des employés (phishing, scams). Mettre en œuvre des filtres anti-spam, des protocoles d'authentification email, et des procédures de vérification strictes. Promouvoir des pratiques de mots de passe robustes et la MFA. Interdire le téléchargement de logiciels depuis des sources non officielles ; centraliser les installations par l'équipe IT.
+* 📍 Indicator of Compromise :
+    * DOMAIN:
+        * sqlx[.]ps
+        * asslr[.]ps
+        * sav[.]ps1andcfg[.]ps
+
+### Violation de Données chez Mainline Health Systems
+Mainline Health Systems, un centre de santé à but non lucratif, a divulgué une violation de données ayant affecté plus de 100 000 personnes 🏥💔. L'incident, remontant à mai 2025, a exposé des informations personnelles protégées. Le groupe de ransomware INC RANSOM a revendiqué la responsabilité de cette violation. Ce groupe est connu pour avoir ciblé d'autres organisations par le passé.
+* Publication date : 2025/06/25
+* 🔗 Source : https://securityaffairs.com/179322/data-breach/mainline-health-systems-disclosed-a-data-breach.html
+* 🕵️ Threat Actor : INC RANSOM
+* 🎯 Threat Target : Mainline Health Systems
+* 👹 Threat Tactic : Ransomware, Violation de données.
+* 📍 Indicator of Compromise :
+    * Threat Actor:
+        * INC RANSOM
+
+### Hausse d'Activité du Botnet Prometei
+Une augmentation significative de l'activité du botnet Prometei est observée depuis mars 2025 👀📈, avec une nouvelle variante se propageant rapidement. Prometei cible les systèmes Linux pour le minage de Monero et le vol d'identifiants. Le bot est activement développé, utilisant une architecture modulaire, des algorithmes de génération de domaine (DGA) et des fonctionnalités d'auto-mise à jour pour l'évasion. Il exploite notamment les vulnérabilités EternalBlue et SMB.
+* Publication date : 2025/06/25
+* 🔗 Source : https://securityaffairs.com/179303/cyber-crime/prometei-botnet-activity-has-surged-since-march-2025.html
+* 🕵️ Threat Actor : Prometei botnet operators
+* 🎯 Threat Target : Systèmes Linux.
+* 👹 Threat Tactic : Cryptomining (Monero), Vol d'identifiants, Exploitation de vulnérabilités (EternalBlue, SMB), Brute-force, Distribution HTTP, Utilisation de UPX pour obfuscation.
+* ⚒️ Threat Tools : Prometei malware (variante Linux), UPX packer, DGA, JSON config trailer.
+* 🛡️ Security recommandations : Appliquer les patchs pour les vulnérabilités connues (EternalBlue, SMB). Mettre en œuvre des politiques de mot de passe robustes pour contrer le brute-force. Utiliser une règle YARA pour détecter les échantillons packés avec UPX et comportant le trailer JSON. Surveiller le trafic réseau pour les communications liées au minage de crypto et aux C2.
+* 📍 Indicator of Compromise :
+    * FILE_NAME:
+        * .php (disguise)
+
+### Le Groupe APT28 (UAC-0001) Cible les Entités Gouvernementales Ukrainiennes via Phishing et Malware
+Le groupe cyberespion russe APT28 (également connu sous les noms UAC-0001, Fancy Bear, Forest Blizzard, STRONTIUM, Pawn Storm) cible les entités gouvernementales ukrainiennes 🇺🇦🇷🇺 via du phishing et des malwares sophistiqués 📧😈. Récemment observé utilisant des chats Signal comme vecteur de livraison pour des documents malveillants (contenant des macros), le groupe déploie les malwares BEARDSHELL et COVENANT. BEARDSHELL exécute des scripts PowerShell et utilise l'API Icedrive pour l'exfiltration. COVENANT déploie d'autres composants et utilise l'API Koofr comme canal C2. Le groupe utilise le COM hijacking et les tâches planifiées pour la persistance et a été observé exploitant CVE-2022-38028 (Windows Print Spooler).
+* Publication date : 2025/06/24, 2025/06/24
+* 🔗 Source : https://securityaffairs.com/179288/apt/russia-linked-apt28-use-signal-chats-to-target-ukraine-official-with-malware.html, https://socprime.com/blog/detect-uac-0001-aka-apt28-attacks-against-ukraine/
+* 🕵️ Threat Actor : APT28 (UAC-0001, Fighting Ursa, Fancy Bear, Forest Blizzard, STRONTIUM, Pawn Storm)
+* 🎯 Threat Target : Entités gouvernementales ukrainiennes, Organisations en Europe de l'Ouest et Amérique du Nord (campagnes précédentes).
+* 👹 Threat Tactic : Phishing, Exploitation de vulnérabilités (CVE-2022-38028), Distribution de malware via chat Signal, Utilisation de macros malveillantes, COM hijacking, Tâches planifiées, Utilisation d'APIs cloud légitimes pour le C2 (Icedrive, Koofr), Vol de captures d'écran, Chiffrement de données.
+* ⚒️ Threat Tools : BEARDSHELL (backdoor), SLIMAGENT (capture d'écran, chiffrement), COVENANT (framework), METASPLOIT, GooseEgg.
+* 💥 CVE : [CVE-2022-38028](https://cve.mitre.org/cgi-bin/cnnvdname.cgi?CVE-2022-38028)
+* 🛡️ Security recommandations : Auditer, surveiller et restreindre l'exécution des macros. Appliquer les mises à jour de sécurité, notamment pour CVE-2022-38028. Analyser et limiter le trafic réseau vers les services cloud légitimes potentiellement abusés pour le C2 (app.koofr.net, api.icedrive.net). Mettre en œuvre une défense en profondeur.
+* 📍 Indicator of Compromise :
+    * DOMAIN:
+        * gov[.]ua
+        * specificallyapp[.]koofr[.]netandapi[.]icedrive[.]net
+
+### Le Groupe APT Salt Typhoon lié à la Chine Cible les Entreprises de Télécommunications Canadiennes
+Le groupe APT Salt Typhoon, lié à la Chine, cible les entreprises de télécommunications canadiennes dans le cadre d'opérations d'espionnage cybernétique 🇨🇦🇨🇳. Ce groupe est actif depuis 1 à 2 ans et a également ciblé des fournisseurs de télécommunications américains. Ils exploitent notamment la vulnérabilité CVE-2023-20198 dans les périphériques réseau Cisco IOS XE pour voler des configurations et mettre en place des tunnels GRE pour la collecte de trafic. L'activité d'espionnage devrait se poursuivre.
+* Publication date : 2025/06/24
+* 🔗 Source : https://securityaffairs.com/179278/apt/china-linked-apt-salt-typhoon-targets-canadian-telecom-companies.html
+* 🕵️ Threat Actor : Salt Typhoon (Groupe lié à la Chine)
+* 🎯 Threat Target : Entreprises de télécommunications canadiennes, Entreprises de télécommunications américaines, clients des télécoms.
+* 👹 Threat Tactic : Cyberespionnage, Exploitation de vulnérabilités (CVE-2023-20198), Vol de configurations, Mise en place de tunnels (GRE) pour la collecte de données, Reconnaissance réseau.
+* 💥 CVE : [CVE-2023-20198](https://cve.mitre.org/cgi-bin/cnnvdname.cgi?CVE-2023-20198)
+* 🛡️ Security recommandations : Appliquer les mises à jour pour les périphériques réseau Cisco IOS XE vulnérables à CVE-2023-20198. Surveiller le trafic réseau pour les activités inhabituelles, notamment la mise en place de tunnels non autorisés. Mettre en œuvre une segmentation réseau pour limiter les mouvements latéraux.
+* 📍 Indicator of Compromise :
+    * CVE:
+        * CVE-2023-20198
+
+### Avertissement Américain sur les Cybermenaces Potentielles suite aux Frappes contre l'Iran
+Le DHS américain met en garde contre une augmentation des cybermenaces potentielles contre les réseaux et infrastructures critiques américains 🇺🇸🇮🇷 suite aux frappes aériennes américaines sur des sites nucléaires iraniens 💥. Des attaques de faible intensité par des hacktivistes pro-iraniens sont probables, et des cyberacteurs affiliés au gouvernement iranien pourraient mener des attaques plus importantes. L'Iran reste déterminé à cibler les responsables américains liés à la mort d'un commandant militaire en 2020. Le conflit actuel pourrait également exacerber la violence extrémiste intérieure.
+* Publication date : 2025/06/24
+* 🔗 Source : https://securityaffairs.com/179266/cyber-warfare-2/u-s-warns-of-incoming-cyber-threats-following-iran-airstrikes.html
+* 🕵️ Threat Actor : Hacktivistes pro-iraniens, Acteurs affiliés au gouvernement iranien.
+* 🎯 Threat Target : Réseaux américains, Infrastructures critiques américaines, Responsables gouvernementaux américains.
+* 👹 Threat Tactic : Cyberattaques (potentiellement disruptives), Espionnage, Plots intérieurs.
+* 🛡️ Security recommandations : Augmenter la vigilance. Examiner les plans de réponse aux incidents. Renforcer les défenses contre les attaques courantes et les tactiques connues des acteurs iraniens. Surveiller les indicateurs liés aux groupes pro-iraniens.
+
+### Violation de Données chez Robinsons Malls
+En juin 2024, Robinsons Malls, le plus grand opérateur de centres commerciaux aux Philippines, a subi une violation de données via son application mobile 🛍️📉. L'incident a exposé 195 597 adresses email uniques ainsi que des noms, numéros de téléphone, dates de naissance, genres et informations de ville/province des utilisateurs. Aucun acteur spécifique n'a été mentionné comme responsable.
+* Publication date : 2025/06/25
+* 🔗 Source : https://haveibeenpwned.com/Breach/RobinsonsMalls
+* 🎯 Threat Target : Utilisateurs de l'application mobile Robinsons Malls.
+* 👹 Threat Tactic : Violation de données.
+* 📍 Indicator of Compromise :
+    * EMAIL (Count):
+        * 195597
+
+### Violation de Données chez Have Fun Teaching
+En août 2021, le site de ressources pédagogiques Have Fun Teaching a subi une violation de données 🍎📚. 80 000 transactions WooCommerce ont été divulguées et publiées sur un forum de hacking. Les données contenaient 27 126 adresses email uniques, des adresses physiques et IP, des noms, des méthodes de paiement et les articles achetés. Le site est conscient de l'incident.
+* Publication date : 2025/06/25
+* 🔗 Source : https://haveibeenpwned.com/Breach/HaveFunTeaching
+* 🎯 Threat Target : Utilisateurs du site Have Fun Teaching (clients WooCommerce).
+* 👹 Threat Tactic : Violation de données, Fuite de données.
+* 📍 Indicator of Compromise :
+    * EMAIL (Count):
+        * 27126
+
+### Abus Cybercriminel des Modèles de Langage Large (LLMs)
+Les cybercriminels exploitent de plus en plus les modèles de langage large (LLMs) pour améliorer leurs attaques 🤖🔓. Ils se tournent vers les LLMs non censurés, développent leurs propres LLMs dédiés à la cybercriminalité (FraudGPT, DarkestGPT, etc.) ou tentent de "jailbreaker" les LLMs légitimes via des techniques d'injection de prompt, d'obfuscation ou d'usurpation de persona. Les LLMs sont utilisés pour générer du code malveillant (ransomware, RATs), des emails de phishing, et pour la reconnaissance. De plus, des risques émergent liés à l'empoisonnement des bases de données RAG et à l'inclusion de malware dans les fichiers modèles.
+* Publication date : 2025/06/25
+* 🔗 Source : https://blog.talosintelligence.com/cybercriminal-abuse-of-large-language-models/
+* 🕵️ Threat Actor : Cybercriminels (utilisateurs/développeurs de LLMs malveillants), CanadianKingpin12 (scammer).
+* 🎯 Threat Target : Utilisateurs de LLMs, systèmes ciblés via des attaques facilitées par les LLMs.
+* 👹 Threat Tactic : Utilisation de LLMs pour la création de malware/scripts, génération de contenu de phishing, reconnaissance, Scams, Injection de prompt/Jailbreaking LLM, Empoisonnement RAG, Distribution de malware via fichiers modèles.
+* ⚒️ Threat Tools : LLMs non censurés (Llama 2 Uncensored, WhiteRabbitNeo), LLMs cybercriminels (GhostGPT, WormGPT, DarkGPT, DarkestGPT, FraudGPT), Techniques de jailbreaking (DAN, Grandma, basé sur les maths, etc.), Nmap (intégré aux LLMs).
+* 🛡️ Security recommandations : Sensibiliser aux risques liés aux LLMs non sécurisés. Télécharger les modèles AI uniquement depuis des sources fiables. Scanner les modèles téléchargés pour détecter les codes malveillants potentiels. Utiliser des sandboxes pour exécuter des modèles non fiables. Être vigilant face aux contenus générés potentiellement malveillants (emails, messages).
+* 📍 Indicator of Compromise :
+    * Threat Actor:
+        * CanadianKingpin12
+    * Tools:
+        * GhostGPT
+        * WormGPT
+        * DarkGPT
+        * DarkestGPT
+        * FraudGPT
+        * Ollama
+        * Llama 2 Uncensored
+        * WhiteRabbitNeo
+
+### Cybercriminels ciblent le secteur financier africain en abusant d'outils Open Source
+Un groupe cybercriminel, suivi sous le nom de CL-CRI-1014, cible les organisations financières à travers l'Afrique 🌍💰. L'objectif serait d'obtenir un accès initial aux réseaux des institutions financières pour ensuite le vendre sur les marchés du dark web. Le groupe utilise un ensemble cohérent d'outils open source et publiquement disponibles dans son "playbook", notamment PoshC2, Chisel et Classroom Spy. Ils forgent les signatures de fichiers pour dissimuler leurs activités et utilisent PowerShell pour déployer et installer leurs outils.
+* Publication date : 2025/06/24
+* 🔗 Source : https://unit42.paloaltonetworks.com/cybercriminals-attack-financial-sector-across-africa/
+* 🕵️ Threat Actor : CL-CRI-1014 (Cluster d'activité)
+* 🎯 Threat Target : Organisations financières en Afrique.
+* 👹 Threat Tactic : Obtention d'accès initial, Vente d'accès sur le dark web, Utilisation d'outils open source, Forgerie de signatures, Création de tunnels (SOCKS proxy via Chisel), Administration à distance, Déploiement via scripts PowerShell, Packing binaire, Anti-analyse (vérification domaine AD).
+* ⚒️ Threat Tools : PoshC2 (framework C2), Chisel (outil de tunneling), Classroom Spy (outil d'administration à distance), MeshAgent (outil de gestion à distance), Scripts PowerShell (slr.ps1, sqlx.ps1, sav.ps1, cfg.ps1), Packer basé sur Nim.
+* 📍 Indicator of Compromise :
+    * FILE_NAME:
+        * slr[.]ps1
+        * sqlx[.]ps1
+        * sav[.]ps1
+        * cfg[.]ps1
+        * CortexUpdater[.]exe
+    * DOMAIN:
+        * sqlx[.]ps
+        * asslr[.]ps
+        * sav[.]ps1andcfg[.]ps
+    * Threat Actor:
+        * CL-CRI-1014
+    * Tools:
+        * PoshC2
+        * Chisel
+        * Classroom Spy
+        * MeshAgent
+
