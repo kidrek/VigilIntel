@@ -404,7 +404,7 @@
   ],
   "Synthèse des vulnérabilités": [
     {
-      "cve-id": "CVE-2025-12686",
+      "cve_id": "CVE-2025-12686",
       "cvss": 9.8,
       "product": "Synology BeeStation",
       "description": "Exécution de code arbitraire à distance (RCE) via un dépassement de tampon, démontrée lors de Pwn2Own Ireland 2025, permettant un compromis complet de l'appareil.",
@@ -425,7 +425,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-59367",
+      "cve_id": "CVE-2025-59367",
       "cvss": 9.3,
       "product": "ASUS DSL series routers",
       "description": "Contournement d'authentification permettant à des attaquants distants d'obtenir un accès non autorisé au système affecté.",
@@ -443,7 +443,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-12733",
+      "cve_id": "CVE-2025-12733",
       "cvss": 8.8,
       "product": "WordPress WP All Import plugin",
       "description": "Exécution de code à distance (RCE) authentifiée (Administrateur+) via la logique conditionnelle, due à l'utilisation de `eval()` sur une entrée utilisateur non assainie.",
@@ -463,7 +463,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-11923",
+      "cve_id": "CVE-2025-11923",
       "cvss": 8.8,
       "product": "WordPress LifterLMS plugin",
       "description": "Élévation de privilèges authentifiée (niveau Étudiant+) due à une validation d'identité incorrecte via l'API REST, permettant la modification de rôle vers administrateur.",
@@ -483,7 +483,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2023-7329",
+      "cve_id": "CVE-2023-7329",
       "cvss": 8.7,
       "product": "Tinycontrol LAN Controller v3 (LK3)",
       "description": "Déni de service à distance (DoS) en raison d'une authentification manquante sur le point de terminaison `stm.cgi`, permettant le redémarrage forcé ou la réinitialisation d'usine par un attaquant non authentifié.",
@@ -502,7 +502,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2023-7327",
+      "cve_id": "CVE-2023-7327",
       "cvss": 8.7,
       "product": "Ozeki SMS Gateway",
       "description": "Lecture arbitraire de fichiers non authentifiée via une vulnérabilité de traversée de chemin, permettant la divulgation d'informations sensibles.",
@@ -522,7 +522,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2023-7326",
+      "cve_id": "CVE-2023-7326",
       "cvss": 8.7,
       "product": "Epson Stylus SX510W Printer",
       "description": "Déni de service à distance (DoS) causé par une mauvaise gestion des caractères 'ampersand' consécutifs dans les paramètres de requête, entraînant l'arrêt ou la mise hors tension de l'imprimante.",
@@ -540,7 +540,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2022-4982",
+      "cve_id": "CVE-2022-4982",
       "cvss": 8.7,
       "product": "DBLTek GoIP-1",
       "description": "Inclusion de fichier local (LFI) non authentifiée permettant la lecture de fichiers arbitraires du système de fichiers via des séquences de traversée de répertoire.",
@@ -559,7 +559,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-62215",
+      "cve_id": "CVE-2025-62215",
       "cvss": null,
       "product": "Windows Kernel",
       "description": "Vulnérabilité zero-day d'élévation de privilèges dans le noyau Windows, activement exploitée.",
@@ -581,7 +581,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-5777",
+      "cve_id": "CVE-2025-5777",
       "cvss": null,
       "product": "Citrix NetScaler ADC and Gateway",
       "description": "Vulnérabilité zero-day critique (\"Citrix Bleed 2\") exploitée par un acteur de la menace avancé.",
@@ -602,7 +602,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-20337",
+      "cve_id": "CVE-2025-20337",
       "cvss": null,
       "product": "Cisco Identity Service Engine (ISE)",
       "description": "Vulnérabilité zero-day exploitée par un acteur de la menace avancé.",
@@ -621,7 +621,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-9242",
+      "cve_id": "CVE-2025-9242",
       "cvss": null,
       "product": "WatchGuard Firebox security appliances / Fireware",
       "description": "Vulnérabilité critique d'écriture hors limites (out-of-bounds write) exploitée dans des attaques, exposant 54 000 Fireboxes à des attaques sans authentification.",
@@ -641,7 +641,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-54918",
+      "cve_id": "CVE-2025-54918",
       "cvss": null,
       "product": "Domain controllers running LDAP or LDAPS services",
       "description": "Vulnérabilité de contournement d'authentification NTLM LDAP permettant une élévation de privilèges d'un utilisateur de domaine à SYSTEM.",
@@ -660,7 +660,7 @@
       "date": "2025-11-13"
     },
     {
-      "cve-id": "CVE-2025-59499",
+      "cve_id": "CVE-2025-59499",
       "cvss": null,
       "product": "Microsoft SQL Server",
       "description": "Vulnérabilité permettant à des attaquants d'obtenir des privilèges système plus élevés.",
