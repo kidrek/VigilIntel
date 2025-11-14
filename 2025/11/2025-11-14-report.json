@@ -1,0 +1,2308 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la cybersécurité est actuellement marqué par plusieurs tendances convergentes. Les **ransomwares** demeurent une menace prépondérante et en pleine évolution, comme en témoignent les groupes Kraken et Akira, ciblant activement des systèmes variés, y compris les machines virtuelles Nutanix AHV. La fragmentation des services de Ransomware-as-a-Service (RaaS) et la résurgence de groupes comme Lockbit soulignent une persistance de ces menaces. Parallèlement, la **coopération internationale** prend de l'ampleur, avec des opérations majeures comme ENDGAME démantelant des infrastructures cybercriminelles clés (infostealers, RATs, botnets) et compromettant des millions de comptes. Les **attaques sur la chaîne d'approvisionnement** et les risques tiers sont également une préoccupation croissante, illustrés par le ver 'IndonesianFoods' inondant npm et les détections d'attaques complexes impliquant des outils comme TruffleHog dans les environnements cloud. L'**exploitation de vulnérabilités critiques et de zero-days** est active, notamment sur Fortinet FortiWeb, Cisco ISE et Citrix NetScaler, exposant des points d'entrée critiques. Les techniques d'**évasion** sont de plus en plus sophistiquées, avec l'utilisation de méthodes comme le 'process hollowing' analysées en détail. Enfin, les **campagnes de phishing** restent un vecteur d'attaque de base, souvent à grande échelle, comme le montre la poursuite judiciaire contre un 'triad' chinois de phishing SMS. Sur le plan géopolitique, des tensions persistantes en Syrie et des dynamiques économiques entre grandes puissances influencent indirectement l'environnement cyber. La mention de l'IA dans les discussions économiques souligne son impact grandissant, à la fois comme opportunité et risque potentiel pour la sécurité. En conclusion, l'état général des menaces est caractérisé par une sophistication croissante des attaquants, une diversification des vecteurs d'attaque (notamment la chaîne d'approvisionnement et les environnements virtualisés), et une course à l'armement continue entre attaquants et défenseurs. La collaboration internationale et l'adoption de stratégies de défense multicouches sont plus que jamais essentielles.",
+      "date": "2025-11-14"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Rhadamanthys Stealer",
+        "secteur": "Cybercriminalité (global)",
+        "modop": "Infostealer, fait partie d'infrastructures de cybercriminalité démantelées dans le cadre de l'Opération ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Venom RAT",
+        "secteur": "Cybercriminalité (global)",
+        "modop": "Remote Access Trojan (RAT), fait partie d'infrastructures de cybercriminalité démantelées dans le cadre de l'Opération ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "rat",
+          "remote_access_trojan",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Elysium Botnet",
+        "secteur": "Cybercriminalité (global)",
+        "modop": "Botnet, infrastructure de cybercriminalité démantelée dans le cadre de l'Opération ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Kraken ransomware group",
+        "secteur": "Divers (attaques ciblées, 'big-game hunting')",
+        "modop": "Ransomware (Windows, Linux/VMware ESXi), évalue les systèmes pour optimiser le chiffrement sans les surcharger, double extorsion. Descendant du cartel HelloKitty, russophone.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "double_extortion",
+          "big_game_hunting",
+          "linux",
+          "windows",
+          "vmware_esxi",
+          "russian_speaking"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/kraken-ransomware-benchmarks-systems-for-optimal-encryption-choice/",
+          "https://blog.talosintelligence.com/kraken-ransomware-group/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Akira ransomware operation",
+        "secteur": "Cible les environnements virtualisés (Nutanix AHV VMs)",
+        "modop": "Déploie un chiffreur Linux pour cibler et chiffrer les machines virtuelles Nutanix AHV.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "linux",
+          "nutanix_ahv",
+          "vm"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-akira-ransomware-linux-encryptor-targeting-nutanix-vms/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "DragonBreath",
+        "secteur": "Cible Windows, évasion des solutions EDR chinoises",
+        "modop": "Utilise RONINGLOADER, un chargeur multi-étapes déployant une variante mise à jour du gh0st RAT. Exploite des drivers signés, l'injection de 'thread-pool' et l'abus de PPL pour désactiver Defender et échapper aux EDR chinois.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "gh0st_rat",
+          "roniningloader",
+          "malware",
+          "evasion",
+          "windows",
+          "ppl_abuse"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Chinese SMS Phishing Triad",
+        "secteur": "Services financiers, e-commerce (usurpation de marques)",
+        "modop": "Opère un service de phishing mobile par SMS, usurpe l'identité de centaines de marques, collecte des données de cartes de paiement et les convertit en portefeuilles mobiles (Apple/Google).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "phishing",
+          "sms_phishing",
+          "financial_fraud",
+          "mobile_wallets"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Acteur de menace avancé (non nommé)",
+        "secteur": "Non spécifié, cible les infrastructures réseau critiques",
+        "modop": "Exploitation de vulnérabilités zero-day dans Cisco Identity Service Engine (ISE) et Citrix NetScaler ADC pour déployer des malwares personnalisés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "zero_day",
+          "custom_malware",
+          "cisco_ise",
+          "citrix_netscaler"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184561/hacking/amazon-alerts-advanced-threat-actor-exploits-cisco-ise-citrix-netscaler-zero-days/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "AgentTesla",
+        "secteur": "Cybercriminalité (large)",
+        "modop": "Infostealer commercial, utilise des techniques d'obfuscation et de multi-staging, et l'injection de code (process hollowing) via un 'dropper' .NET.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "infostealer",
+          "process_hollowing",
+          ".net_malware",
+          "evasion",
+          "commodity_malware"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/time-travel-debugging-using-net-process-hollowing/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services de paiement, hébergement cloud",
+        "modop": "Attaque des systèmes de stockage cloud tiers, menant à des violations de données (anciennes données compromises).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "cloud_storage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://gbhackers.com/checkout-com-suffers-data-breach/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Sécurité nationale, Société",
+        "theme": "Commémoration, Lutte antiterroriste",
+        "description": "Commémoration des attentats terroristes du 13 novembre 2015 à Paris, rappelant la nécessité de la lutte antiterroriste et la résilience face à la division.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "terrorisme",
+          "france",
+          "commemoration",
+          "securite_nationale"
+        ],
+        "sources": [
+          "https://www.iris-france.org/13-novembre-dix-ans-apres/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Sécurité, Défense, Société, Relations internationales",
+        "theme": "Stabilisation post-conflit, Fragmentation étatique, Conflits régionaux",
+        "description": "Analyse de la situation sécuritaire fragmentée en Syrie post-Assad, avec les défis du DDR (désarmement, démobilisation, réintégration) des groupes armés (FDS, PKK, Daech) et les influences externes (Turquie, Israël, Iran, USA). Souligne la nécessité d'une réintégration sociale et économique pour une stabilisation durable et l'importance du soutien international.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syrie",
+          "ddr",
+          "post_conflit",
+          "etats_unis",
+          "israel",
+          "turquie",
+          "iran",
+          "daech",
+          "fds",
+          "pkk",
+          "reconstruction",
+          "stabilite_regionale"
+        ],
+        "sources": [
+          "https://www.iris-france.org/desarmement-demobilisation-et-reintegration-ddr-en-syrie-derniere-marche-sur-la-route-de-la-normalisation/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Économie, Technologie, Relations internationales",
+        "theme": "Tarifs commerciaux, Matières premières critiques, Influence technologique",
+        "description": "Lors d'une rencontre Xi-Trump, la Chine a suspendu pour un an les restrictions sur les terres rares et s'est engagée à affiner les plans, offrant un répit temporaire pour la bulle de l'IA.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "etats_unis",
+          "commerce",
+          "terres_rares",
+          "ia",
+          "technologie",
+          "economie"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/xi-trump-pause-rare-earths-tariff-shields-ai-bubble-temporarily"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Économie, Relations internationales",
+        "theme": "Diplomatie économique, Stabilité bilatérale",
+        "description": "Un sommet entre le président Trump et Takaichi a consolidé la stabilité bilatérale entre les États-Unis et le Japon, avec un accent plus marqué sur les questions économiques que sur la défense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "japon",
+          "economie",
+          "diplomatie",
+          "commerce",
+          "politique_etatique"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/trump-takaichi-summit-and-japans-emerging-economic-statecraft"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Livraison de repas, Services numériques",
+        "victime": "DoorDash",
+        "description": "Violation de données survenue en octobre, exposant des informations d'utilisateurs. Des millions de clients à travers les États-Unis, le Canada, l'Australie et la Nouvelle-Zélande ont été impactés.",
+        "tags": [
+          "violation",
+          "breach",
+          "doordash",
+          "livraison_de_repas",
+          "donnees_utilisateurs",
+          "ecommerce"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/doordash-hit-by-new-data-breach-in-october-exposing-user-information/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Médias",
+        "victime": "The Washington Post",
+        "description": "Près de 10 000 employés et contractuels ont été affectés par une violation de données suite à une attaque de vol de données ciblant Oracle. Des informations personnelles et financières ont été exposées.",
+        "tags": [
+          "violation",
+          "breach",
+          "washington_post",
+          "medias",
+          "employes",
+          "contractuels",
+          "donnees_personnelles",
+          "donnees_financieres"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/washington-post-data-breach-impacts-nearly-10k-employees-contractors/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Cybercriminalité (infrastructures démantelées)",
+        "victime": "2,046,030 comptes utilisateurs affectés (emails et mots de passe)",
+        "description": "La dernière phase de l'Opération ENDGAME a conduit au démantèlement d'infrastructures cybercriminelles (Rhadamanthys, VenomRAT, Elysium) et à la divulgation de 2 millions d'adresses email et 7,4 millions de mots de passe compromis à Have I Been Pwned (HIBP).",
+        "tags": [
+          "violation",
+          "breach",
+          "operation_endgame",
+          "comptes_compromis",
+          "emails",
+          "mots_de_passe",
+          "cybercriminalite",
+          "rhadamanthys",
+          "venomrat",
+          "elysium"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Services de paiement",
+        "victime": "Checkout.com",
+        "description": "Violation de données suite à une attaque du groupe ShinyHunters sur un système de stockage cloud tiers. D'anciennes données ont été compromises, mais l'environnement de traitement des paiements en direct, les fonds des marchands et les numéros de carte n'ont pas été affectés.",
+        "tags": [
+          "violation",
+          "breach",
+          "checkout_com",
+          "services_de_paiement",
+          "shinyhunters",
+          "cloud_storage",
+          "donnees_anciennes"
+        ],
+        "sources": [
+          "https://gbhackers.com/checkout-com-suffers-data-breach/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-36250",
+        "cvss": 10.0,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Exécution de code arbitraire à distance dans le service NIM server (nimesis) due à des contrôles de processus inappropriés.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_execution",
+          "ibm_aix",
+          "ibm_vios",
+          "nim_server",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36250"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2022-40684",
+        "cvss": 9.8,
+        "product": "Fortinet FortiWeb",
+        "description": "Vulnérabilité de traversée de chemin activement exploitée pour créer de nouveaux utilisateurs administratifs sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "path_traversal",
+          "rce",
+          "fortinet",
+          "fortiweb",
+          "admin_access",
+          "exploited_in_the_wild",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortiweb-flaw-with-public-poc-actively-exploited-to-create-admin-users/",
+          "https://cybersecuritynews.com/fortinet-fortiweb-vulnerability/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-24085",
+        "cvss": 9.8,
+        "product": "Apple iOS (iMessage)",
+        "description": "Vulnérabilité 'zero-click' iMessage menant à une compromission persistante d'iOS et à la mise hors service de l'appareil.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_click",
+          "ios",
+          "imessage",
+          "remote_code_execution",
+          "persistent_compromise",
+          "critical"
+        ],
+        "sources": [
+          "https://seclists.org/fulldisclosure/2025/Nov/18"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-24201",
+        "cvss": 9.8,
+        "product": "Apple iOS (iMessage)",
+        "description": "Vulnérabilité 'zero-click' iMessage menant à une compromission persistante d'iOS et à la mise hors service de l'appareil.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_click",
+          "ios",
+          "imessage",
+          "remote_code_execution",
+          "persistent_compromise",
+          "critical"
+        ],
+        "sources": [
+          "https://seclists.org/fulldisclosure/2025/Nov/18"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36251",
+        "cvss": 9.6,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Exécution de commandes à distance dans les implémentations SSL/TLS du service nimsh due à des contrôles de processus inappropriés.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "command_execution",
+          "ibm_aix",
+          "ibm_vios",
+          "nimsh",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36251"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-59367",
+        "cvss": 9.3,
+        "product": "ASUS DSL Series Router",
+        "description": "Vulnérabilité critique de contournement d'authentification permettant un accès à distance non authentifié.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "remote_access",
+          "asus",
+          "dsl_router",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-asus-dsl-router-flaw-cve-2025-59367-cvss-9-3-allows-unauthenticated-remote-access/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36096",
+        "cvss": 9.0,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Accès non sécurisé aux clés privées NIM utilisées dans les environnements NIM, les rendant vulnérables aux attaques de type Man-in-the-Middle.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "credentials",
+          "mitm",
+          "authentication",
+          "ibm_aix",
+          "ibm_vios",
+          "nim",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36096"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43432",
+        "cvss": 8.8,
+        "product": "Apple Safari JavaScriptCore",
+        "description": "Exécution de code arbitraire à distance par 'Use-After-Free' lors de l'analyse des fonctions Wasm.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "use_after_free",
+          "apple_safari",
+          "javascriptcore",
+          "wasm"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1011/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43457",
+        "cvss": 8.8,
+        "product": "Apple Safari JavaScriptCore",
+        "description": "Exécution de code arbitraire à distance par 'Use-After-Free' lors de la substitution de nœuds de graphe de la phase DFG CSE.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "use_after_free",
+          "apple_safari",
+          "javascriptcore",
+          "dfg"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1010/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-64444",
+        "cvss": 8.6,
+        "product": "NCP-HG100 1.4.48.16 et versions antérieures",
+        "description": "Injection de commandes OS permettant à un attaquant distant, ayant les informations d'authentification, d'exécuter des commandes OS arbitraires avec des privilèges root.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "ncp_hg100",
+          "remote",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64444"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-13131",
+        "cvss": 8.5,
+        "product": "Sonarr 4.0.15.2940",
+        "description": "Permissions par défaut incorrectes dans 'Sonarr.Console.exe' (Service) permettant un accès local potentiellement privilégié (classé 'low severity' par le vendeur).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "permissions",
+          "privilege_escalation",
+          "sonarr",
+          "local_access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13131"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-13130",
+        "cvss": 8.5,
+        "product": "Radarr 5.28.0.10274",
+        "description": "Permissions par défaut incorrectes dans 'Radarr.Console.exe' (Service) permettant un accès local potentiellement privilégié.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "permissions",
+          "privilege_escalation",
+          "radarr",
+          "local_access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13130"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-52970",
+        "cvss": 8.3,
+        "product": "Fortinet FortiWeb",
+        "description": "Vulnérabilité de contournement d'authentification activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "fortinet",
+          "fortiweb",
+          "exploited_in_the_wild",
+          "high"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/fortiweb-authentication-vulnerability-exploited/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36236",
+        "cvss": 8.2,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Traversée de chemin dans le service NIM server (nimesis) permettant à un attaquant distant d'écrire des fichiers arbitraires via des requêtes URL spécialement conçues.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "path_traversal",
+          "file_write",
+          "ibm_aix",
+          "ibm_vios",
+          "nim_server",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36236"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43384",
+        "cvss": 7.8,
+        "product": "Apple macOS USD library",
+        "description": "Exécution de code arbitraire à distance par débordement de tampon basé sur le tas dans 'readAccessorData'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "heap_overflow",
+          "apple_macos",
+          "usd_library"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1009/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43380",
+        "cvss": 7.8,
+        "product": "Apple macOS ICC Profile Parsing",
+        "description": "Exécution de code arbitraire à distance par écriture hors limites lors de l'analyse des profils ICC.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "out_of_bounds_write",
+          "apple_macos",
+          "icc_profile"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1008/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43445",
+        "cvss": 6.3,
+        "product": "Apple macOS CoreText Font Glyph Parsing",
+        "description": "Exécution de code arbitraire à distance par lecture hors limites lors de l'analyse des glyphes de police CoreText.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "out_of_bounds_read",
+          "apple_macos",
+          "coretext"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1006/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA Alerte sur l'Encrypteur Linux du Ransomware Akira ciblant les VMs Nutanix",
+        "description": "La CISA a émis un avertissement concernant l'opération du ransomware Akira, qui a été observée déployant un encrypteur Linux pour cibler et chiffrer les machines virtuelles Nutanix AHV lors des attaques.",
+        "threat_actor": "Akira ransomware operation",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)"
+        ],
+        "analyse": "L'extension d'Akira aux machines virtuelles Nutanix AHV avec un encrypteur Linux dédié marque une menace croissante pour les environnements virtualisés, composants essentiels des infrastructures d'entreprise. Ce développement souligne la nécessité de stratégies de protection robustes adaptées aux plateformes virtualisées, incluant la segmentation et les instantanés.",
+        "recommandations": [
+          "Isoler les machines virtuelles Nutanix AHV sur des réseaux dédiés.",
+          "Mettre en œuvre des sauvegardes immuables et régulièrement testées des VMs.",
+          "Appliquer des correctifs de sécurité régulièrement aux hyperviseurs et aux systèmes d'exploitation invités.",
+          "Utiliser une détection des menaces spécifiquement pour les environnements Linux et virtualisés.",
+          "Restreindre les accès aux VMs Nutanix AHV selon le principe du moindre privilège."
+        ],
+        "tags": [
+          "akira_ransomware",
+          "ransomware",
+          "linux",
+          "nutanix_ahv",
+          "vm",
+          "cisa",
+          "warning",
+          "t1486",
+          "t1078",
+          "t1562.001",
+          "t1059.006",
+          "t1059.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-akira-ransomware-linux-encryptor-targeting-nutanix-vms/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Le Nouveau Ver 'IndonesianFoods' Inonde npm de 100 000 Paquets",
+        "description": "Un paquet auto-propageant, surnommé le ver 'IndonesianFoods', a inondé le registre npm en générant de nouveaux paquets toutes les sept secondes, créant un volume massif d'entrées indésirables.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1587.001 (Develop Malware: Spearphishing Attachment)",
+          "T1559 (System Customization: Environmental Variables)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "La capacité du ver 'IndonesianFoods' à inonder rapidement le registre npm avec des paquets indésirables met en évidence une forme unique de perturbation de la chaîne d'approvisionnement. Bien que l'impact immédiat semble être la pollution du dépôt, une telle activité peut dégrader la confiance, compliquer la découverte de paquets légitimes et potentiellement servir de rideau de fumée pour des insertions de paquets malveillants plus ciblées ou être un test pour de futures attaques automatisées plus dangereuses.",
+        "recommandations": [
+          "Mettre en œuvre des analyses de sécurité robustes pour les dépendances logicielles.",
+          "Utiliser des registres de paquets privés pour les projets sensibles.",
+          "Surveiller l'activité des dépôts de paquets publics pour détecter des anomalies.",
+          "Éduquer les développeurs sur les risques liés à l'utilisation de paquets non vérifiés ou de sources douteuses.",
+          "Mettre en place des politiques de vérification de l'intégrité des paquets et de signature."
+        ],
+        "tags": [
+          "npm",
+          "supply_chain",
+          "worm",
+          "package_spam",
+          "software_development",
+          "repository_security",
+          "t1587.001",
+          "t1559",
+          "t1566.001",
+          "t1547.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-indonesianfoods-worm-floods-npm-with-100-000-packages/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Analyse des Tactiques du Groupe Ransomware Kraken",
+        "description": "Le groupe ransomware Kraken, une entité russophone issue des vestiges du cartel HelloKitty, se livre à des attaques de 'big-game hunting' et à la double extorsion. Il cible les systèmes Windows, Linux et VMware ESXi, en particulier en évaluant les machines pour optimiser la vitesse de chiffrement sans les surcharger.",
+        "threat_actor": "Kraken ransomware group (russophone, successeur de HelloKitty)",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1529 (System Shutdown/Reboot)",
+          "T1078 (Valid Accounts)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1003 (OS Credential Dumpings)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "L'approche unique de Kraken, qui consiste à évaluer les systèmes avant le chiffrement, démontre un niveau sophistiqué de planification opérationnelle visant à maximiser l'impact et à échapper à la détection. Son ciblage de divers systèmes d'exploitation et environnements virtuels (Windows, Linux, VMware ESXi) souligne la polyvalence et l'étendue du paysage des menaces posées par les groupes de rançongiciels modernes issus de cartels établis.",
+        "recommandations": [
+          "Mettre en œuvre une stratégie de sauvegarde 3-2-1 (3 copies, 2 formats différents, 1 hors site/hors ligne).",
+          "Renforcer la sécurité des accès aux systèmes critiques, y compris les machines virtuelles.",
+          "Déployer des solutions EDR/XDR avec des capacités d'analyse comportementale pour détecter les activités d'évaluation et de chiffrement.",
+          "Segmenter le réseau pour limiter la propagation latérale en cas d'infection.",
+          "Former les équipes de sécurité à la réponse aux incidents de ransomware et à la gestion de la double extorsion."
+        ],
+        "tags": [
+          "kraken_ransomware",
+          "ransomware",
+          "double_extortion",
+          "big_game_hunting",
+          "linux",
+          "windows",
+          "vmware_esxi",
+          "russian_speaking",
+          "hellokitty",
+          "t1486",
+          "t1529",
+          "t1078",
+          "t1059",
+          "t1560.001",
+          "t1003",
+          "t1041",
+          "t1567"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/kraken-ransomware-benchmarks-systems-for-optimal-encryption-choice/",
+          "https://blog.talosintelligence.com/kraken-ransomware-group/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Le Rapport sur l'État des Ransomwares – T3 2025",
+        "description": "Le rapport de Check Point pour le T3 2025 sur les ransomwares indique une fragmentation croissante des services RaaS (Ransomware-as-a-Service), avec plus de 85 sites de fuite de données actifs répertoriant 1 592 nouvelles victimes. Le rapport note également le retour ou l'activité continue du groupe Lockbit, maintenant un taux stable mais élevé de publication de victimes par rapport au T2 2025.",
+        "threat_actor": "Lockbit (et autres groupes RaaS)",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "Le rapport sur les ransomwares du T3 2025 confirme la menace persistante et évolutive des ransomwares, caractérisée par une fragmentation accrue du RaaS. Le nombre élevé de victimes et l'activité continue de groupes majeurs comme Lockbit soulignent la nécessité de stratégies de défense complètes et adaptatives. L'utilisation de sites de fuite de données dans le cadre des tactiques de double extorsion reste un point de pression significatif pour les victimes.",
+        "recommandations": [
+          "Mettre en œuvre des mesures robustes de prévention des ransomwares, y compris l'EDR/XDR et la segmentation réseau.",
+          "Développer et tester des plans de réponse aux incidents de ransomware et de récupération après sinistre.",
+          "Renforcer la formation des employés sur la cybersécurité pour réduire les risques d'ingénierie sociale et de phishing.",
+          "Surveiller les nouvelles variantes de ransomwares et les TTPs des groupes RaaS émergents.",
+          "Collaborer avec les communautés de threat intelligence pour partager des informations sur les menaces."
+        ],
+        "tags": [
+          "ransomware",
+          "raas",
+          "lockbit",
+          "cybercrime",
+          "data_leak_sites",
+          "double_extortion",
+          "threat_report",
+          "t1486",
+          "t1560",
+          "t1567",
+          "t1078"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/the-state-of-ransomware-q3-2025/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Triage par Voyage Temporel : Introduction au Débogage par Voyage Temporel avec une Étude de Cas sur le Process Hollowing .NET",
+        "description": "Cette analyse technique présente le Débogage par Voyage Temporel (TTD) utilisant WinDbg pour analyser efficacement les 'droppers' .NET multi-étapes et obfuscés qui réalisent du 'process hollowing', illustré par une charge utile AgentTesla. Le TTD permet aux analystes d'enregistrer et de rejouer l'exécution du programme, d'identifier rapidement les appels d'API clés comme `CreateProcess` et `WriteProcessMemory`, de contourner l'obfuscation et d'extraire les charges utiles finales.",
+        "threat_actor": "AgentTesla (charge utile)",
+        "indicator_of_compromise": [
+          "SHA256: b7268f91f02ca9cffd66e7c64ee11a4b.bin (échantillon original)",
+          "SHA256: 4dfe67a8f1751ce0c29f7f44295e6028ad83bb8b3a7e85f84d6e251a0d7e3076 (charge utile extraite)"
+        ],
+        "mitre_ttps": [
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1036.004 (Masquerading: Masquerade Task or Service)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "L'étude de cas sur le Débogage par Voyage Temporel offre des informations précieuses sur les techniques avancées d'analyse de logiciels malveillants. En démontrant comment disséquer efficacement des 'droppers' .NET complexes employant le 'process hollowing', elle souligne l'importance des outils et méthodologies spécialisés pour contourner l'obfuscation et extraire les informations critiques de la charge utile, accélérant considérablement la réponse aux incidents et les efforts de renseignement sur les menaces.",
+        "recommandations": [
+          "Intégrer des outils de débogage avancés comme TTD dans les workflows d'analyse forensique et de malware.",
+          "Déployer des solutions EDR capables de détecter les techniques d'injection de processus et d'évasion.",
+          "Surveiller l'exécution de processus légitimes (ex: InstallUtil.exe) lorsqu'ils sont lancés par des processus suspects.",
+          "Sensibiliser les équipes d'analyse aux techniques d'obfuscation et de multi-staging.",
+          "Maintenir une veille sur les dernières méthodologies d'analyse de malwares pour améliorer les capacités de défense."
+        ],
+        "tags": [
+          "time_travel_debugging",
+          "ttd",
+          "malware_analysis",
+          "process_hollowing",
+          ".net_malware",
+          "agenttesla",
+          "obfuscation",
+          "win_dbg",
+          "dfir",
+          "t1055.012",
+          "t1027",
+          "t1059.003",
+          "t1036.004",
+          "t1562.001"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/time-travel-debugging-using-net-process-hollowing/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "L'Application de la Loi Internationale Démantèle une Infrastructure Cybercriminelle Majeure lors de l'Opération ENDGAME",
+        "description": "La phase III de l'Opération ENDGAME, une coopération judiciaire internationale, a démantelé des infrastructures cybercriminelles associées au 'Rhadamanthys Stealer', 'Venom RAT' et au botnet 'Elysium'. Les actions menées entre le 3 et le 13 novembre 2025 ont entraîné le démantèlement de 1025 serveurs et l'identification de plus de 2 millions de comptes e-mail compromis et 7,4 millions de mots de passe, fournis à Have I Been Pwned (HIBP).",
+        "threat_actor": "Rhadamanthys Stealer, Venom RAT, Elysium botnet",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1587.001 (Develop Malware: Spearphishing Attachment)",
+          "T1588.002 (Obtain Capabilities: Tool: Malware)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1133 (External Remote Services)",
+          "T1567.002 (Exfiltration Over Web Service: Exfiltration to Cloud Storage)",
+          "T1078 (Valid Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Cette opération marque un succès significatif des efforts internationaux contre la cybercriminalité, ciblant l'infrastructure centrale de plusieurs familles de malwares proéminentes. L'ampleur du démantèlement (1025 serveurs) et le nombre de comptes compromis soulignent l'impact généralisé de ces menaces et la nécessité d'une collaboration transfrontalière pour les combattre. La distribution des identifiants compromis à HIBP vise à informer et protéger les individus affectés.",
+        "recommandations": [
+          "Renforcer la sécurité des comptes par l'authentification multifacteur (MFA) et des mots de passe uniques.",
+          "Surveiller les alertes de compromission de comptes (e.g., via HIBP) et changer immédiatement les mots de passe concernés.",
+          "Mettre en œuvre des solutions de détection et de réponse aux menaces pour identifier les malwares tels que les infostealers et les RATs.",
+          "Maintenir à jour les systèmes et logiciels pour prévenir l'exploitation de vulnérabilités.",
+          "Sensibiliser les utilisateurs aux risques du phishing et de l'ingénierie sociale."
+        ],
+        "tags": [
+          "operation_endgame",
+          "cybercrime",
+          "international_cooperation",
+          "infostealer",
+          "rat",
+          "botnet",
+          "law_enforcement",
+          "threat_disruption",
+          "credential_theft",
+          "t1587.001",
+          "t1588.002",
+          "t1071.001",
+          "t1133",
+          "t1567.002",
+          "t1078",
+          "t1547.001"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "RONINGLOADER : Nouvelle Voie de DragonBreath vers l'Abus de PPL",
+        "description": "Elastic Security Labs a découvert RONINGLOADER, un chargeur multi-étapes employé par l'acteur de la menace DragonBreath. Cette campagne déploie une variante mise à jour du gh0st RAT, exploitant des drivers signés, l'injection de 'thread-pool' et l'abus de PPL pour désactiver Windows Defender et échapper aux solutions EDR chinoises.",
+        "threat_actor": "DragonBreath",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1574.008 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1078 (Valid Accounts)",
+          "T1055.001 (Process Injection: Dynamic-link Library Injection)",
+          "T1574.001 (Hijack Execution Flow: DLL Search Order Hijacking)"
+        ],
+        "analyse": "L'émergence de RONINGLOADER avec le gh0st RAT de DragonBreath démontre des techniques d'évasion avancées, y compris l'utilisation de drivers signés et l'abus de PPL, ciblant spécifiquement la désactivation de logiciels de sécurité comme Windows Defender et l'évasion des EDR chinois. Cette approche sophistiquée met en évidence la course aux armements continue dans la sécurité des endpoints et le défi de détecter les malwares furtifs et multi-étapes.",
+        "recommandations": [
+          "Déployer des solutions EDR/XDR avancées avec des capacités d'analyse comportementale et de détection des abus de PPL.",
+          "Mettre en œuvre le contrôle d'application (liste blanche d'applications) pour prévenir l'exécution de drivers non approuvés.",
+          "Surveiller les injections de processus et les manipulations de threads.",
+          "Auditer régulièrement les configurations de sécurité des endpoints, y compris Windows Defender.",
+          "Mener des chasses aux menaces proactives pour détecter les TTPs avancés."
+        ],
+        "tags": [
+          "roniningloader",
+          "dragonbreath",
+          "gh0st_rat",
+          "malware",
+          "loader",
+          "ppl_abuse",
+          "windows_defender",
+          "edr_evasion",
+          "signed_drivers",
+          "thread_pool_injection",
+          "t1055.012",
+          "t1574.008",
+          "t1562.001",
+          "t1078",
+          "t1055.001",
+          "t1574.001"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Google Poursuit en Justice pour Démanteler une Triade Chinoise de Phishing par SMS",
+        "description": "Google intente une action en justice contre plus de deux douzaines d'individus non identifiés impliqués dans un service de phishing mobile basé en Chine. Ce service aide les escrocs à usurper l'identité de centaines de marques, à envoyer des leurres de phishing SMS de masse et à convertir les données de cartes de paiement volées en portefeuilles mobiles Apple et Google.",
+        "threat_actor": "Chinese SMS Phishing Triad",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1534 (Internal Spearphishing)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1552.003 (Unsecured Credentials: Credentials in Web Browsers)",
+          "T1552.006 (Unsecured Credentials: Email Accounts)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "La poursuite judiciaire de Google contre une triade chinoise de phishing par SMS souligne les efforts croissants pour lutter contre les entreprises cybercriminelles à grande échelle qui exploitent les plateformes mobiles. La sophistication de l'usurpation d'identité de nombreuses marques et la capacité à monétiser les identifiants volés via des portefeuilles mobiles indiquent un réseau criminel bien organisé et adaptable.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques du phishing par SMS (smishing) et à la vérification des sources.",
+          "Implémenter l'authentification multifacteur (MFA) pour tous les comptes en ligne, en particulier ceux liés aux services financiers.",
+          "Surveiller les tentatives d'usurpation d'identité de marque via les canaux mobiles et signaler les campagnes de phishing.",
+          "Mettre en place des systèmes d'alerte pour la détection de l'utilisation frauduleuse de portefeuilles mobiles.",
+          "Revoir les politiques de sécurité des transactions pour les paiements mobiles."
+        ],
+        "tags": [
+          "chinese_sms_phishing_triad",
+          "phishing",
+          "smishing",
+          "mobile_phishing",
+          "financial_fraud",
+          "brand_impersonation",
+          "mobile_wallets",
+          "google",
+          "lawsuit",
+          "cybercrime",
+          "t1566.001",
+          "t1566.002",
+          "t1534",
+          "t1059.007",
+          "t1552.001",
+          "t1552.003",
+          "t1552.006",
+          "t1078"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Détection de TruffleHog dans AWS : Activité Cloud de l'Attaque sur la Chaîne d'Approvisionnement Salesloft Drift",
+        "description": "L'analyse de Red Canary détaille comment ils ont détecté une activité cloud liée à l'attaque sur la chaîne d'approvisionnement Salesloft Drift, impliquant spécifiquement l'outil TruffleHog dans les environnements AWS, avant même que l'incident ne soit rendu public.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1195.003 (Supply Chain Compromise: Compromise of Third-Party Software Supply Chain)",
+          "T1538 (Cloud Service Discovery)",
+          "T1098.001 (Account Manipulation: Additional Cloud Credentials)",
+          "T1078 (Valid Accounts)",
+          "T1574 (Hijack Execution Flow)"
+        ],
+        "analyse": "La détection de l'attaque sur la chaîne d'approvisionnement Salesloft Drift impliquant TruffleHog dans les environnements AWS souligne l'importance des capacités de détection des menaces 'cloud-native' et de la chasse proactive aux menaces. Les compromissions de la chaîne d'approvisionnement peuvent avoir des impacts de grande portée, et la détection précoce, même avant la divulgation publique, est cruciale pour atténuer les dommages et protéger les actifs cloud.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance continue des activités cloud (AWS CloudTrail, GuardDuty, etc.) pour détecter les anomalies et les utilisations d'outils suspects comme TruffleHog.",
+          "Renforcer la sécurité de la chaîne d'approvisionnement logicielle et des dépendances tierces.",
+          "Réaliser des audits réguliers des configurations AWS et des politiques IAM.",
+          "Appliquer le principe du moindre privilège pour toutes les identités et services cloud.",
+          "Intégrer la threat intelligence pour identifier les TTPs associés aux attaques de la chaîne d'approvisionnement."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "salesloft_drift",
+          "trufflehog",
+          "aws",
+          "cloud_security",
+          "threat_detection",
+          "early_detection",
+          "t1195.003",
+          "t1538",
+          "t1098.001",
+          "t1078",
+          "t1574"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/trufflehog-aws/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Alertes Amazon : Acteur de Menace Avancé Exploite les Zero-Days Cisco ISE & Citrix NetScaler",
+        "description": "Les chercheurs en veille sur les menaces d'Amazon ont détecté un acteur de menace avancé exploitant deux vulnérabilités zero-day précédemment non divulguées dans Cisco Identity Service Engine (ISE) et Citrix NetScaler ADC pour déployer des malwares personnalisés. Plusieurs vulnérabilités non divulguées ont également été exploitées.",
+        "threat_actor": "Acteur de menace avancé (non nommé)",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1210 (Exploitation for Client Execution)",
+          "T1588.002 (Obtain Capabilities: Tool: Malware)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "L'exploitation de zero-days dans des composants d'infrastructure réseau critiques comme Cisco ISE et Citrix NetScaler ADC par un acteur de menace avancé représente un risque grave, indiquant des capacités très sophistiquées. Ces dispositifs servent souvent de points d'accès critiques et de systèmes de gestion des identités, faisant de leur compromission une passerelle significative pour l'intrusion réseau et le mouvement latéral.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance continue des équipements critiques (Cisco ISE, Citrix NetScaler) pour détecter des activités anormales.",
+          "Appliquer immédiatement les correctifs dès leur disponibilité pour les vulnérabilités zero-day.",
+          "Utiliser la segmentation réseau pour limiter l'impact d'une compromission de ces équipements.",
+          "Renforcer l'authentification et l'autorisation pour l'accès aux interfaces d'administration.",
+          "Mener des audits de sécurité réguliers sur l'infrastructure critique et les dispositifs périphériques."
+        ],
+        "tags": [
+          "advanced_threat_actor",
+          "zero_day",
+          "cisco_ise",
+          "citrix_netscaler",
+          "custom_malware",
+          "network_infrastructure",
+          "critical_vulnerabilities",
+          "t1190",
+          "t1210",
+          "t1588.002",
+          "t1071.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184561/hacking/amazon-alerts-advanced-threat-actor-exploits-cisco-ise-citrix-netscaler-zero-days/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Viasat et la Très Mauvaise Journée (Analyse du Hack Satellite de 2022)",
+        "description": "Cet article retrace l'enquête sur le piratage du satellite Viasat en 2022, offrant une analyse rétrospective de l'incident. Il détaille le parcours pour démêler l'histoire et les surprises de cybersécurité rencontrées.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "Le piratage du satellite Viasat constitue une étude de cas significative démontrant les vulnérabilités des infrastructures critiques et les effets en cascade d'une cyberattaque réussie. L'analyse rétrospective de tels incidents est cruciale pour tirer des leçons, améliorer la résilience dans les secteurs spatial et des télécommunications, et développer des stratégies de défense plus efficaces contre des adversaires sophistiqués.",
+        "recommandations": [
+          "Mettre en œuvre une architecture de sécurité par couches pour les systèmes critiques et les infrastructures spatiales.",
+          "Renforcer la sécurité des accès et l'authentification pour les infrastructures de gestion de satellites.",
+          "Mener des exercices de simulation d'attaques pour évaluer la résilience face à des menaces sophistiquées.",
+          "Établir des plans de contingence robustes pour les services essentiels en cas de compromission.",
+          "Partager les leçons apprises des incidents passés pour améliorer la sécurité collective."
+        ],
+        "tags": [
+          "viasat",
+          "satellite_hack",
+          "critical_infrastructure",
+          "telecommunications",
+          "incident_analysis",
+          "cybersecurity_surprises",
+          "lessons_learned",
+          "t1190",
+          "t1078",
+          "t1537",
+          "t1098"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/viasat-and-the-terrible-horrible-no-good-very-bad-day/"
+        ],
+        "date": "2025-11-14"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cybersecurity landscape is currently marked by several converging trends. **Ransomware** remains a prevalent and evolving threat, as evidenced by groups like Kraken and Akira, actively targeting various systems, including Nutanix AHV virtual machines. The fragmentation of Ransomware-as-a-Service (RaaS) operations and the resurgence of groups like Lockbit highlight the persistence of these threats. Simultaneously, **international cooperation** is gaining momentum, with major operations like ENDGAME dismantling key cybercriminal infrastructures (infostealers, RATs, botnets) and compromising millions of accounts. **Supply chain attacks** and third-party risks are also a growing concern, illustrated by the 'IndonesianFoods' worm flooding npm and detections of complex attacks involving tools like TruffleHog in cloud environments. The **exploitation of critical vulnerabilities and zero-days** is active, notably on Fortinet FortiWeb, Cisco ISE, and Citrix NetScaler, exposing critical entry points. **Evasion techniques** are becoming increasingly sophisticated, with methods like 'process hollowing' being analyzed in detail. Finally, **phishing campaigns** remain a fundamental, often large-scale, attack vector, as shown by the lawsuit against a Chinese SMS phishing 'triad'. Geopolitically, persistent tensions in Syria and economic dynamics between major powers indirectly influence the cyber environment. The mention of AI in economic discussions underscores its growing impact, both as an opportunity and a potential security risk. In conclusion, the general state of threats is characterized by increasing sophistication of attackers, diversification of attack vectors (especially supply chain and virtualized environments), and a continuous arms race between attackers and defenders. International collaboration and the adoption of multi-layered defense strategies are more essential than ever.",
+      "date": "2025-11-14"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Rhadamanthys Stealer",
+        "secteur": "Cybercrime (global)",
+        "modop": "Infostealer, part of cybercriminal infrastructures dismantled as part of Operation ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Venom RAT",
+        "secteur": "Cybercrime (global)",
+        "modop": "Remote Access Trojan (RAT), part of cybercriminal infrastructures dismantled as part of Operation ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "rat",
+          "remote_access_trojan",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Elysium Botnet",
+        "secteur": "Cybercrime (global)",
+        "modop": "Botnet, cybercriminal infrastructure dismantled as part of Operation ENDGAME.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "cybercrime",
+          "malware",
+          "operation_endgame"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Kraken ransomware group",
+        "secteur": "Various (big-game hunting attacks)",
+        "modop": "Ransomware (Windows, Linux/VMware ESXi), benchmarks systems to optimize encryption without overloading them, double extortion. Descended from the HelloKitty ransomware cartel, Russian-speaking.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "double_extortion",
+          "big_game_hunting",
+          "linux",
+          "windows",
+          "vmware_esxi",
+          "russian_speaking"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/kraken-ransomware-benchmarks-systems-for-optimal-encryption-choice/",
+          "https://blog.talosintelligence.com/kraken-ransomware-group/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Akira ransomware operation",
+        "secteur": "Targets virtualized environments (Nutanix AHV VMs)",
+        "modop": "Deploys a Linux encryptor to target and encrypt Nutanix AHV virtual machines.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "linux",
+          "nutanix_ahv",
+          "vm"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-akira-ransomware-linux-encryptor-targeting-nutanix-vms/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "DragonBreath",
+        "secteur": "Targets Windows, evasion of Chinese EDR solutions",
+        "modop": "Uses RONINGLOADER, a multi-stage loader deploying an updated gh0st RAT variant. Leverages signed drivers, thread-pool injection, and PPL abuse to disable Defender and evade Chinese EDRs.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "gh0st_rat",
+          "roniningloader",
+          "malware",
+          "evasion",
+          "windows",
+          "ppl_abuse"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Chinese SMS Phishing Triad",
+        "secteur": "Financial services, e-commerce (brand impersonation)",
+        "modop": "Operates a mobile SMS phishing service, impersonates hundreds of brands, collects payment card data, and converts it into Apple and Google mobile wallets.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "phishing",
+          "sms_phishing",
+          "financial_fraud",
+          "mobile_wallets"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "Advanced Threat Actor (unnamed)",
+        "secteur": "Unspecified, targets critical network infrastructure",
+        "modop": "Exploitation of zero-day vulnerabilities in Cisco Identity Service Engine (ISE) and Citrix NetScaler ADC to deploy custom malware.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "zero_day",
+          "custom_malware",
+          "cisco_ise",
+          "citrix_netscaler"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184561/hacking/amazon-alerts-advanced-threat-actor-exploits-cisco-ise-citrix-netscaler-zero-days/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "AgentTesla",
+        "secteur": "Cybercrime (broad)",
+        "modop": "Commodity stealer, uses obfuscation and multi-staging techniques, and code injection (process hollowing) via a .NET dropper.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "infostealer",
+          "process_hollowing",
+          ".net_malware",
+          "evasion",
+          "commodity_malware"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/time-travel-debugging-using-net-process-hollowing/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Payment services, cloud hosting",
+        "modop": "Attacks third-party cloud storage systems, leading to data breaches (old data compromised).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "cloud_storage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://gbhackers.com/checkout-com-suffers-data-breach/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "National Security, Society",
+        "theme": "Commemoration, Counter-terrorism",
+        "description": "Commemoration of the November 13, 2015, terrorist attacks in Paris, emphasizing the ongoing need for counter-terrorism efforts and resilience against division.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "terrorism",
+          "france",
+          "commemoration",
+          "national_security"
+        ],
+        "sources": [
+          "https://www.iris-france.org/13-novembre-dix-ans-apres/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Security, Defense, Society, International Relations",
+        "theme": "Post-conflict stabilization, State fragmentation, Regional conflicts",
+        "description": "Analysis of the fragmented security situation in post-Assad Syria, including challenges of DDR (disarmament, demobilization, reintegration) for armed groups (SDF, PKK, ISIS) and external influences (Turkey, Israel, Iran, USA). Highlights the need for social and economic reintegration for lasting stability and the importance of international support.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syria",
+          "ddr",
+          "post_conflict",
+          "united_states",
+          "israel",
+          "turkey",
+          "iran",
+          "isis",
+          "sdf",
+          "pkk",
+          "reconstruction",
+          "regional_stability"
+        ],
+        "sources": [
+          "https://www.iris-france.org/desarmement-demobilisation-et-reintegration-ddr-en-syrie-derniere-marche-sur-la-route-de-la-normalisation/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Economy, Technology, International Relations",
+        "theme": "Trade tariffs, Critical raw materials, Technological influence",
+        "description": "At a Xi-Trump meeting, China paused rare-earths restrictions for a year and pledged to refine detailed plans, offering a cautious, temporary reprieve for the AI bubble.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "united_states",
+          "trade",
+          "rare_earths",
+          "ai",
+          "technology",
+          "economy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/xi-trump-pause-rare-earths-tariff-shields-ai-bubble-temporarily"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Economy, International Relations",
+        "theme": "Economic diplomacy, Bilateral stability",
+        "description": "A summit between President Trump and Takaichi solidified bilateral stability between the US and Japan, with a stronger focus on economic matters than on defense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "japan",
+          "economy",
+          "diplomacy",
+          "trade",
+          "statecraft"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/trump-takaichi-summit-and-japans-emerging-economic-statecraft"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Food Delivery, Digital Services",
+        "victime": "DoorDash",
+        "description": "Data breach occurred in October, exposing user information. Millions of customers across the U.S., Canada, Australia, and New Zealand were impacted.",
+        "tags": [
+          "violation",
+          "breach",
+          "doordash",
+          "food_delivery",
+          "user_data",
+          "ecommerce"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/doordash-hit-by-new-data-breach-in-october-exposing-user-information/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Media",
+        "victime": "The Washington Post",
+        "description": "Nearly 10,000 employees and contractors were affected by a data breach following an Oracle data theft attack. Personal and financial data were exposed.",
+        "tags": [
+          "violation",
+          "breach",
+          "washington_post",
+          "media",
+          "employees",
+          "contractors",
+          "personal_data",
+          "financial_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/washington-post-data-breach-impacts-nearly-10k-employees-contractors/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Cybercrime (dismantled infrastructures)",
+        "victime": "2,046,030 user accounts affected (emails and passwords)",
+        "description": "The latest phase of Operation ENDGAME led to the dismantling of cybercriminal infrastructures (Rhadamanthys, VenomRAT, Elysium) and the disclosure of 2 million compromised email addresses and 7.4 million passwords to Have I Been Pwned (HIBP).",
+        "tags": [
+          "violation",
+          "breach",
+          "operation_endgame",
+          "compromised_accounts",
+          "emails",
+          "passwords",
+          "cybercrime",
+          "rhadamanthys",
+          "venomrat",
+          "elysium"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "secteur": "Payment Services",
+        "victime": "Checkout.com",
+        "description": "Data breach following an attack by the ShinyHunters group on a third-party cloud storage system. Old data was compromised, but the live payment processing environment, merchant funds, and card numbers were not affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "checkout_com",
+          "payment_services",
+          "shinyhunters",
+          "cloud_storage",
+          "old_data"
+        ],
+        "sources": [
+          "https://gbhackers.com/checkout-com-suffers-data-breach/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-36250",
+        "cvss": 10.0,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Remote code execution in NIM server (nimesis) service due to improper process controls.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_execution",
+          "ibm_aix",
+          "ibm_vios",
+          "nim_server",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36250"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2022-40684",
+        "cvss": 9.8,
+        "product": "Fortinet FortiWeb",
+        "description": "Path traversal vulnerability actively exploited to create new administrative users without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "path_traversal",
+          "rce",
+          "fortinet",
+          "fortiweb",
+          "admin_access",
+          "exploited_in_the_wild",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortiweb-flaw-with-public-poc-actively-exploited-to-create-admin-users/",
+          "https://cybersecuritynews.com/fortinet-fortiweb-vulnerability/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-24085",
+        "cvss": 9.8,
+        "product": "Apple iOS (iMessage)",
+        "description": "Zero-Click iMessage vulnerability leading to persistent iOS compromise and device bricking.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_click",
+          "ios",
+          "imessage",
+          "remote_code_execution",
+          "persistent_compromise",
+          "critical"
+        ],
+        "sources": [
+          "https://seclists.org/fulldisclosure/2025/Nov/18"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-24201",
+        "cvss": 9.8,
+        "product": "Apple iOS (iMessage)",
+        "description": "Zero-Click iMessage vulnerability leading to persistent iOS compromise and device bricking.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_click",
+          "ios",
+          "imessage",
+          "remote_code_execution",
+          "persistent_compromise",
+          "critical"
+        ],
+        "sources": [
+          "https://seclists.org/fulldisclosure/2025/Nov/18"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36251",
+        "cvss": 9.6,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Remote command execution in nimsh service SSL/TLS implementations due to improper process controls.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "command_execution",
+          "ibm_aix",
+          "ibm_vios",
+          "nimsh",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36251"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-59367",
+        "cvss": 9.3,
+        "product": "ASUS DSL Series Router",
+        "description": "Critical authentication bypass vulnerability allowing unauthenticated remote access.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "remote_access",
+          "asus",
+          "dsl_router",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-asus-dsl-router-flaw-cve-2025-59367-cvss-9-3-allows-unauthenticated-remote-access/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36096",
+        "cvss": 9.0,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Insecure storage of NIM private keys used in NIM environments, susceptible to Man-in-the-Middle attacks.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "credentials",
+          "mitm",
+          "authentication",
+          "ibm_aix",
+          "ibm_vios",
+          "nim",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36096"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43432",
+        "cvss": 8.8,
+        "product": "Apple Safari JavaScriptCore",
+        "description": "Wasm Function Parsing Use-After-Free Remote Code Execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "use_after_free",
+          "apple_safari",
+          "javascriptcore",
+          "wasm"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1011/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43457",
+        "cvss": 8.8,
+        "product": "Apple Safari JavaScriptCore",
+        "description": "DFG CSE Phase Graph Node Substitution Use-After-Free Remote Code Execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "use_after_free",
+          "apple_safari",
+          "javascriptcore",
+          "dfg"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1010/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-64444",
+        "cvss": 8.6,
+        "product": "NCP-HG100 1.4.48.16 and earlier",
+        "description": "OS Command Injection vulnerability allowing remote attackers with authentication to execute arbitrary OS commands with root privileges.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "ncp_hg100",
+          "remote",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64444"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-13131",
+        "cvss": 8.5,
+        "product": "Sonarr 4.0.15.2940",
+        "description": "Incorrect default permissions in 'Sonarr.Console.exe' (Service) allowing local privilege escalation (vendor classified as 'low severity').",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "permissions",
+          "privilege_escalation",
+          "sonarr",
+          "local_access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13131"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-13130",
+        "cvss": 8.5,
+        "product": "Radarr 5.28.0.10274",
+        "description": "Incorrect default permissions in 'Radarr.Console.exe' (Service) allowing local privilege escalation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "permissions",
+          "privilege_escalation",
+          "radarr",
+          "local_access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13130"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-52970",
+        "cvss": 8.3,
+        "product": "Fortinet FortiWeb",
+        "description": "Authentication bypass vulnerability actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "fortinet",
+          "fortiweb",
+          "exploited_in_the_wild",
+          "high"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/fortiweb-authentication-vulnerability-exploited/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-36236",
+        "cvss": 8.2,
+        "product": "IBM AIX 7.2, 7.3 and IBM VIOS 3.1, 4.1",
+        "description": "Path traversal in NIM server (nimesis) service allowing remote attackers to write arbitrary files via specially crafted URL requests.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "path_traversal",
+          "file_write",
+          "ibm_aix",
+          "ibm_vios",
+          "nim_server",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-36236"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43384",
+        "cvss": 7.8,
+        "product": "Apple macOS USD library",
+        "description": "Heap-based Buffer Overflow Remote Code Execution vulnerability in 'readAccessorData'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "heap_overflow",
+          "apple_macos",
+          "usd_library"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1009/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43380",
+        "cvss": 7.8,
+        "product": "Apple macOS ICC Profile Parsing",
+        "description": "Out-Of-Bounds Write Remote Code Execution vulnerability.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "out_of_bounds_write",
+          "apple_macos",
+          "icc_profile"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1008/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "cve_id": "CVE-2025-43445",
+        "cvss": 6.3,
+        "product": "Apple macOS CoreText Font Glyph Parsing",
+        "description": "Out-Of-Bounds Read Remote Code Execution vulnerability.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "out_of_bounds_read",
+          "apple_macos",
+          "coretext"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1006/"
+        ],
+        "date": "2025-11-14"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA Warns of Akira Ransomware Linux Encryptor Targeting Nutanix VMs",
+        "description": "CISA issued a warning about the Akira ransomware operation, which has been observed deploying a Linux encryptor to target and encrypt Nutanix AHV virtual machines in attacks.",
+        "threat_actor": "Akira ransomware operation",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)"
+        ],
+        "analyse": "Akira's expansion to target Nutanix AHV virtual machines with a dedicated Linux encryptor signifies a growing threat to virtualized environments, which are critical components of enterprise infrastructure. This development underscores the need for robust protection strategies specifically tailored for virtualized platforms, including segmentation and snapshotting.",
+        "recommandations": [
+          "Isolate Nutanix AHV virtual machines on dedicated networks.",
+          "Implement immutable and regularly tested backups of VMs.",
+          "Apply security patches regularly to hypervisors and guest operating systems.",
+          "Utilize threat detection specifically for Linux and virtualized environments.",
+          "Restrict access to Nutanix AHV VMs based on the principle of least privilege."
+        ],
+        "tags": [
+          "akira_ransomware",
+          "ransomware",
+          "linux",
+          "nutanix_ahv",
+          "vm",
+          "cisa",
+          "warning",
+          "t1486",
+          "t1078",
+          "t1562.001",
+          "t1059.006",
+          "t1059.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-akira-ransomware-linux-encryptor-targeting-nutanix-vms/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "New ‘IndonesianFoods’ Worm Floods npm with 100,000 Packages",
+        "description": "A self-spreading package, dubbed the 'IndonesianFoods' worm, has flooded the npm registry by generating new packages every seven seconds, creating a massive volume of junk entries.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1587.001 (Develop Malware: Spearphishing Attachment)",
+          "T1559 (System Customization: Environmental Variables)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "The 'IndonesianFoods' worm's ability to rapidly flood the npm registry with junk packages highlights a unique form of supply chain disruption. While the immediate impact appears to be repository pollution, such activity can degrade trust, complicate legitimate package discovery, and potentially serve as a smokescreen for more targeted malicious package insertions or be a test for future, more dangerous, automated attacks.",
+        "recommandations": [
+          "Implement robust security scanning for software dependencies.",
+          "Use private package registries for sensitive projects.",
+          "Monitor public package repository activity to detect anomalies.",
+          "Educate developers on the risks associated with using unverified or suspicious packages.",
+          "Establish package integrity verification and signing policies."
+        ],
+        "tags": [
+          "npm",
+          "supply_chain",
+          "worm",
+          "package_spam",
+          "software_development",
+          "repository_security",
+          "t1587.001",
+          "t1559",
+          "t1566.001",
+          "t1547.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-indonesianfoods-worm-floods-npm-with-100-000-packages/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Analysis of the Kraken Ransomware Group's Tactics",
+        "description": "The Kraken ransomware group, a Russian-speaking entity that emerged from the remnants of the HelloKitty cartel, engages in big-game hunting and double extortion. It targets Windows, Linux, and VMware ESXi systems, notably benchmarking machines to optimize encryption speed without overloading them.",
+        "threat_actor": "Kraken ransomware group (Russian-speaking, successor to HelloKitty)",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1529 (System Shutdown/Reboot)",
+          "T1078 (Valid Accounts)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1003 (OS Credential Dumpings)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "Kraken's unique approach of benchmarking systems before encryption demonstrates a sophisticated level of operational planning aimed at maximizing impact and evasion of detection. Its targeting of diverse operating systems and virtual environments (Windows, Linux, VMware ESXi) highlights the versatility and broad threat landscape posed by modern ransomware groups that evolve from established cartels.",
+        "recommandations": [
+          "Implement a 3-2-1 backup strategy (3 copies, 2 different formats, 1 offsite/offline).",
+          "Strengthen access security to critical systems, including virtual machines.",
+          "Deploy EDR/XDR solutions with behavioral analytics capabilities to detect benchmarking and encryption activities.",
+          "Segment the network to limit lateral movement in case of infection.",
+          "Train security teams on ransomware incident response and double extortion management."
+        ],
+        "tags": [
+          "kraken_ransomware",
+          "ransomware",
+          "double_extortion",
+          "big_game_hunting",
+          "linux",
+          "windows",
+          "vmware_esxi",
+          "russian_speaking",
+          "hellokitty",
+          "t1486",
+          "t1529",
+          "t1078",
+          "t1059",
+          "t1560.001",
+          "t1003",
+          "t1041",
+          "t1567"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/kraken-ransomware-benchmarks-systems-for-optimal-encryption-choice/",
+          "https://blog.talosintelligence.com/kraken-ransomware-group/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "The State of Ransomware – Q3 2025 Report",
+        "description": "Check Point's Q3 2025 report on ransomware indicates that RaaS (Ransomware-as-a-Service) fragmentation is increasing, with over 85 active data leak sites listing 1,592 new victims. The report also notes the return or continued activity of the Lockbit ransomware group, maintaining a stable but high rate of victim publication compared to Q2 2025.",
+        "threat_actor": "Lockbit (and other RaaS groups)",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "The Q3 2025 ransomware report confirms the persistent and evolving threat of ransomware, characterized by increased RaaS fragmentation. The high number of victims and the continued activity of major groups like Lockbit highlight the need for comprehensive and adaptive defense strategies. The use of data leak sites as part of double extortion tactics remains a significant pressure point for victims.",
+        "recommandations": [
+          "Implement robust ransomware prevention measures, including EDR/XDR and network segmentation.",
+          "Develop and test ransomware incident response and disaster recovery plans.",
+          "Strengthen employee cybersecurity training to reduce social engineering and phishing risks.",
+          "Monitor for new ransomware variants and TTPs of emerging RaaS groups.",
+          "Collaborate with threat intelligence communities to share threat information."
+        ],
+        "tags": [
+          "ransomware",
+          "raas",
+          "lockbit",
+          "cybercrime",
+          "data_leak_sites",
+          "double_extortion",
+          "threat_report",
+          "t1486",
+          "t1560",
+          "t1567",
+          "t1078"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/the-state-of-ransomware-q3-2025/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Time Travel Triage: An Introduction to Time Travel Debugging using a .NET Process Hollowing Case Study",
+        "description": "This technical analysis introduces Time Travel Debugging (TTD) using WinDbg to efficiently analyze obfuscated multi-stage .NET droppers that perform process hollowing, exemplified by an AgentTesla payload. TTD allows analysts to record and replay program execution, quickly identify key API calls like `CreateProcess` and `WriteProcessMemory`, bypass obfuscation, and extract final payloads.",
+        "threat_actor": "AgentTesla (payload)",
+        "indicator_of_compromise": [
+          "SHA256: b7268f91f02ca9cffd66e7c64ee11a4b.bin (original sample)",
+          "SHA256: 4dfe67a8f1751ce0c29f7f44295e6028ad83bb8b3a7e85f84d6e251a0d7e3076 (extracted payload)"
+        ],
+        "mitre_ttps": [
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1036.004 (Masquerading: Masquerade Task or Service)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "The case study on Time Travel Debugging provides valuable insights into advanced malware analysis techniques. By demonstrating how to efficiently dissect complex .NET droppers employing process hollowing, it highlights the importance of specialized tools and methodologies for bypassing obfuscation and extracting critical payload information, significantly accelerating incident response and threat intelligence efforts.",
+        "recommandations": [
+          "Integrate advanced debugging tools like TTD into forensic analysis and malware workflows.",
+          "Deploy EDR solutions capable of detecting process injection and evasion techniques.",
+          "Monitor the execution of legitimate processes (e.g., InstallUtil.exe) when launched by suspicious processes.",
+          "Educate analysis teams on obfuscation and multi-staging techniques.",
+          "Stay updated on the latest malware analysis methodologies to enhance defensive capabilities."
+        ],
+        "tags": [
+          "time_travel_debugging",
+          "ttd",
+          "malware_analysis",
+          "process_hollowing",
+          ".net_malware",
+          "agenttesla",
+          "obfuscation",
+          "win_dbg",
+          "dfir",
+          "t1055.012",
+          "t1027",
+          "t1059.003",
+          "t1036.004",
+          "t1562.001"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/time-travel-debugging-using-net-process-hollowing/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "International Law Enforcement Disrupts Major Cybercrime Infrastructure in Operation ENDGAME",
+        "description": "Phase III of Operation ENDGAME, a global judicial cooperation, has dismantled cybercrime infrastructures associated with Rhadamanthys Stealer, Venom RAT, and Elysium botnet. Actions conducted between November 3 and 13, 2025, led to the takedown of 1025 servers and identified over 2 million breached email accounts and 7.4 million passwords, provided to Have I Been Pwned (HIBP).",
+        "threat_actor": "Rhadamanthys Stealer, Venom RAT, Elysium botnet",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1587.001 (Develop Malware: Spearphishing Attachment)",
+          "T1588.002 (Obtain Capabilities: Tool: Malware)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1133 (External Remote Services)",
+          "T1567.002 (Exfiltration Over Web Service: Exfiltration to Cloud Storage)",
+          "T1078 (Valid Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "This operation marks a significant success in international efforts against cybercrime, targeting the core infrastructure of multiple prominent malware families. The scale of the takedown (1025 servers) and the number of compromised accounts highlight the widespread impact of these threats and the necessity of cross-border collaboration to combat them. The distribution of compromised credentials to HIBP aims to inform and protect affected individuals.",
+        "recommandations": [
+          "Strengthen account security with multi-factor authentication (MFA) and unique passwords.",
+          "Monitor for account compromise alerts (e.g., via HIBP) and immediately change affected passwords.",
+          "Implement threat detection and response solutions to identify malware such as infostealers and RATs.",
+          "Keep systems and software updated to prevent vulnerability exploitation.",
+          "Educate users on the risks of phishing and social engineering."
+        ],
+        "tags": [
+          "operation_endgame",
+          "cybercrime",
+          "international_cooperation",
+          "infostealer",
+          "rat",
+          "botnet",
+          "law_enforcement",
+          "threat_disruption",
+          "credential_theft",
+          "t1587.001",
+          "t1588.002",
+          "t1071.001",
+          "t1133",
+          "t1567.002",
+          "t1078",
+          "t1547.001"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-011/",
+          "https://securityaffairs.com/184581/cyber-crime/a-new-round-of-europols-operation-endgame-dismantled-rhadamanthys-venom-rat-and-elysium-botnet.html",
+          "https://databreaches.net/2025/11/13/end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down/?pk_campaign=feed&pk_kwd=end-of-the-game-for-cybercrime-infrastructure-1025-servers-taken-down",
+          "https://haveibeenpwned.com/Breach/OperationEndgame3"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "RONINGLOADER: DragonBreath’s New Path to PPL Abuse",
+        "description": "Elastic Security Labs uncovered RONINGLOADER, a multi-stage loader employed by the DragonBreath threat actor. This campaign deploys an updated gh0st RAT variant, leveraging signed drivers, thread-pool injection, and PPL abuse to disable Windows Defender and evade Chinese EDR solutions.",
+        "threat_actor": "DragonBreath",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1574.008 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1078 (Valid Accounts)",
+          "T1055.001 (Process Injection: Dynamic-link Library Injection)",
+          "T1574.001 (Hijack Execution Flow: DLL Search Order Hijacking)"
+        ],
+        "analyse": "The emergence of RONINGLOADER with DragonBreath's gh0st RAT showcases advanced evasion techniques, including the use of signed drivers and PPL abuse, specifically targeting the disabling of security software like Windows Defender and evading Chinese EDRs. This sophisticated approach highlights the continuous arms race in endpoint security and the challenge of detecting stealthy, multi-stage malware.",
+        "recommandations": [
+          "Deploy advanced EDR/XDR solutions with behavioral analysis capabilities and PPL abuse detection.",
+          "Implement application control (application whitelisting) to prevent the execution of unapproved drivers.",
+          "Monitor for process injections and thread manipulations.",
+          "Regularly audit endpoint security configurations, including Windows Defender.",
+          "Conduct proactive threat hunting to detect advanced TTPs."
+        ],
+        "tags": [
+          "roniningloader",
+          "dragonbreath",
+          "gh0st_rat",
+          "malware",
+          "loader",
+          "ppl_abuse",
+          "windows_defender",
+          "edr_evasion",
+          "signed_drivers",
+          "thread_pool_injection",
+          "t1055.012",
+          "t1574.008",
+          "t1562.001",
+          "t1078",
+          "t1055.001",
+          "t1574.001"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Google Sues to Disrupt Chinese SMS Phishing Triad",
+        "description": "Google is suing over two dozen unidentified individuals involved in a China-based mobile phishing service. This service helps scammers impersonate hundreds of brands, send mass SMS phishing lures, and convert stolen payment card data into Apple and Google mobile wallets.",
+        "threat_actor": "Chinese SMS Phishing Triad",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1534 (Internal Spearphishing)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1552.003 (Unsecured Credentials: Credentials in Web Browsers)",
+          "T1552.006 (Unsecured Credentials: Email Accounts)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "The lawsuit by Google against a Chinese SMS phishing triad underscores the increasing efforts to combat large-scale cybercriminal enterprises that leverage mobile platforms. The sophistication of impersonating numerous brands and the ability to monetize stolen credentials via mobile wallets indicate a well-organized and adaptable criminal network.",
+        "recommandations": [
+          "Educate users on the risks of SMS phishing (smishing) and how to verify sources.",
+          "Implement multi-factor authentication (MFA) for all online accounts, especially those linked to financial services.",
+          "Monitor for brand impersonation attempts via mobile channels and report phishing campaigns.",
+          "Establish alert systems for detecting fraudulent use of mobile wallets.",
+          "Review transaction security policies for mobile payments."
+        ],
+        "tags": [
+          "chinese_sms_phishing_triad",
+          "phishing",
+          "smishing",
+          "mobile_phishing",
+          "financial_fraud",
+          "brand_impersonation",
+          "mobile_wallets",
+          "google",
+          "lawsuit",
+          "cybercrime",
+          "t1566.001",
+          "t1566.002",
+          "t1534",
+          "t1059.007",
+          "t1552.001",
+          "t1552.003",
+          "t1552.006",
+          "t1078"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Sniffing Out TruffleHog in AWS: Detecting Cloud Activity from the Salesloft Drift Supply Chain Attack",
+        "description": "Red Canary's analysis details how they detected cloud activity linked to the Salesloft Drift supply chain attack, specifically involving the TruffleHog tool in AWS environments, even before the incident was publicly disclosed.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1195.003 (Supply Chain Compromise: Compromise of Third-Party Software Supply Chain)",
+          "T1538 (Cloud Service Discovery)",
+          "T1098.001 (Account Manipulation: Additional Cloud Credentials)",
+          "T1078 (Valid Accounts)",
+          "T1574 (Hijack Execution Flow)"
+        ],
+        "analyse": "The detection of the Salesloft Drift supply chain attack involving TruffleHog in AWS environments highlights the importance of cloud-native threat detection capabilities and proactive threat hunting. Supply chain compromises can have far-reaching impacts, and early detection, even before public disclosure, is critical for mitigating damage and protecting cloud assets.",
+        "recommandations": [
+          "Implement continuous monitoring of cloud activities (AWS CloudTrail, GuardDuty, etc.) to detect anomalies and the use of suspicious tools like TruffleHog.",
+          "Strengthen software supply chain security and third-party dependencies.",
+          "Conduct regular audits of AWS configurations and IAM policies.",
+          "Apply the principle of least privilege for all cloud identities and services.",
+          "Integrate threat intelligence to identify TTPs associated with supply chain attacks."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "salesloft_drift",
+          "trufflehog",
+          "aws",
+          "cloud_security",
+          "threat_detection",
+          "early_detection",
+          "t1195.003",
+          "t1538",
+          "t1098.001",
+          "t1078",
+          "t1574"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/trufflehog-aws/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Amazon Alerts: Advanced Threat Actor Exploits Cisco ISE & Citrix NetScaler Zero-Days",
+        "description": "Amazon's threat intelligence researchers detected an advanced threat actor exploiting two previously undisclosed zero-day vulnerabilities in Cisco Identity Service Engine (ISE) and Citrix NetScaler ADC to deploy custom malware. Multiple undisclosed vulnerabilities were also exploited.",
+        "threat_actor": "Advanced Threat Actor (unnamed)",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1210 (Exploitation for Client Execution)",
+          "T1588.002 (Obtain Capabilities: Tool: Malware)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "The exploitation of zero-days in critical network infrastructure components like Cisco ISE and Citrix NetScaler ADC by an advanced threat actor represents a severe risk, indicating highly sophisticated capabilities. These devices often serve as critical access points and identity management systems, making their compromise a significant gateway for network intrusion and lateral movement.",
+        "recommandations": [
+          "Implement continuous monitoring of critical equipment (Cisco ISE, Citrix NetScaler) to detect abnormal activities.",
+          "Immediately apply patches as they become available for zero-day vulnerabilities.",
+          "Use network segmentation to limit the impact of a compromise of these devices.",
+          "Strengthen authentication and authorization for access to administrative interfaces.",
+          "Conduct regular security audits on critical infrastructure and peripheral devices."
+        ],
+        "tags": [
+          "advanced_threat_actor",
+          "zero_day",
+          "cisco_ise",
+          "citrix_netscaler",
+          "custom_malware",
+          "network_infrastructure",
+          "critical_vulnerabilities",
+          "t1190",
+          "t1210",
+          "t1588.002",
+          "t1071.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184561/hacking/amazon-alerts-advanced-threat-actor-exploits-cisco-ise-citrix-netscaler-zero-days/"
+        ],
+        "date": "2025-11-14"
+      },
+      {
+        "title": "Viasat and the Terrible, Horrible, No Good, Very Bad Day (2022 Satellite Hack Analysis)",
+        "description": "This article recounts the investigation into the 2022 Viasat satellite hack, providing a retrospective analysis of the incident. It details the journey of uncovering the story and the cybersecurity surprises encountered.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "The Viasat satellite hack serves as a significant case study demonstrating the vulnerabilities of critical infrastructure and the cascading effects of a successful cyberattack. Retrospective analysis of such incidents is crucial for extracting lessons learned, improving resilience in the space and telecommunications sectors, and developing more effective defense strategies against sophisticated adversaries.",
+        "recommandations": [
+          "Implement a layered security architecture for critical systems and space infrastructure.",
+          "Strengthen access security and authentication for satellite management infrastructures.",
+          "Conduct attack simulation exercises to assess resilience against sophisticated threats.",
+          "Establish robust contingency plans for essential services in case of compromise.",
+          "Share lessons learned from past incidents to improve collective security."
+        ],
+        "tags": [
+          "viasat",
+          "satellite_hack",
+          "critical_infrastructure",
+          "telecommunications",
+          "incident_analysis",
+          "cybersecurity_surprises",
+          "lessons_learned",
+          "t1190",
+          "t1078",
+          "t1537",
+          "t1098"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/viasat-and-the-terrible-horrible-no-good-very-bad-day/"
+        ],
+        "date": "2025-11-14"
+      }
+    ]
+  }
+}
