@@ -1,0 +1,1142 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une prévalence continue des attaques par rançongiciel et des violations de données, souvent facilitées par l'exploitation de vulnérabilités connues ou de failles dans la chaîne d'approvisionnement logicielle. Les acteurs étatiques, notamment la Corée du Nord (APT38/BlueNoroff), continuent de mener des opérations cyberfinancières pour contourner les sanctions. L'utilisation de techniques d'évasion sophistiquées par des groupes comme DragonBreath, exploitant des chargeurs multi-étapes et l'abus de PPL, souligne une sophistication croissante des menaces. Les vulnérabilités critiques, en particulier celles permettant l'exécution de code à distance (RCE) ou liées à des problèmes d'authentification et de gestion des identités, restent des cibles privilégiées, comme l'illustrent les exploits contre Fortinet FortiWeb, D-Link DIR-816L, et XWiki. Le protocole 'Finger', bien que désuet, est réactivé par des acteurs de la menace pour la livraison de malwares, démontrant une adaptation et une recherche de méthodes d'attaque discrètes. L'impact financier des cyberattaques reste significatif, comme en témoigne le coût de plus de 220 millions de dollars pour Jaguar Land Rover. Les violations de données affectent un large éventail d'organisations, des médias aux services gouvernementaux, exposant des informations personnelles sensibles. En conclusion, le paysage des menaces cyber est caractérisé par l'ingéniosité des attaquants à exploiter les points faibles des systèmes existants, la persistance des motivations financières et géopolitiques, et la nécessité critique pour les organisations de maintenir une posture de sécurité robuste, axée sur la gestion des vulnérabilités, la sensibilisation aux techniques d'évasion et la réponse aux incidents.",
+      "date": "2025-11-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "DragonBreath (via RONINGLOADER)",
+        "secteur": "Non spécifié, mais vise des systèmes Windows avec évasion EDR.",
+        "modop": "Utilisation de chargeurs multi-étapes (RONINGLOADER), déploiement du RAT gh0st mis à jour, abus de pilotes signés, injection de pool de threads, abus de PPL pour désactiver Defender et contourner les EDR chinois.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "malware_delivery",
+          "EDR_evasion",
+          "PPL_abuse",
+          "RAT",
+          "gh0st"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "RondoDox",
+        "secteur": "Organisations utilisant XWiki, à des fins de botnet DDoS.",
+        "modop": "Exploitation de vulnérabilités RCE critiques (CVE-2025-24893) dans les instances XWiki non patchées pour ajouter des appareils à son botnet et lancer des attaques DDoS, ou déployer des mineurs de crypto et des shells inversés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "DDoS",
+          "RCE_exploitation",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Fabrication (Logitech), divers secteurs (Accellion, GoAnywhere, MOVEit).",
+        "modop": "Attaques par rançongiciel et extorsion suite à des violations de données massives (1,8 TB dans le cas de Logitech) via l'exploitation de vulnérabilités zero-day, notamment dans la chaîne d'approvisionnement (ex: Oracle E-Business Suite).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_breach",
+          "zero_day_exploitation",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115555724471114038",
+          "https://www.bleepingcomputer.com/news/security/logitech-confirms-data-breach-after-clop-extortion-attack/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "APT38 (BlueNoroff)",
+        "secteur": "Financier, tout secteur susceptible de générer des revenus pour la Corée du Nord.",
+        "modop": "Fraude liée aux travailleurs IT (utilisation de fausses identités, 'fermes d'ordinateurs portables') pour générer des revenus illicites, vol de cryptomonnaies.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "state_sponsored",
+          "financial_crime",
+          "cryptocurrency_theft",
+          "fraud",
+          "North_Korea"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/five-us-citizens-plead-guilty-to.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services de paiement en ligne (Checkout.com)",
+        "modop": "Vol de données suivi d'une demande de rançon.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_theft",
+          "extortion",
+          "ransom"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115556430787148492"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Services IT",
+        "theme": "Financement illicite d'états-nations",
+        "description": "Cinq citoyens américains ont plaidé coupable d'avoir aidé la Corée du Nord à générer des revenus illicites via une fraude aux travailleurs IT, impactant plus de 136 entreprises américaines et générant 2,2 millions de dollars pour le régime. Cette action juridique, associée à la confiscation de plus de 15 millions de dollars en cryptomonnaie volés par l'APT38 (BlueNoroff), vise à perturber le financement des programmes d'armement de la Corée du Nord.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "North_Korea",
+          "DPRK",
+          "APT38",
+          "BlueNoroff",
+          "cybercrime",
+          "sanctions",
+          "illicit_finance",
+          "IT_worker_fraud"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/five-us-citizens-plead-guilty-to.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Automobile",
+        "victime": "Jaguar Land Rover (JLR)",
+        "description": "Jaguar Land Rover a publié ses résultats financiers, révélant que le coût d'une cyberattaque récente s'est élevé à 196 millions de livres sterling (220 millions de dollars) au cours du trimestre.",
+        "tags": [
+          "violation",
+          "breach",
+          "automobile",
+          "JLR",
+          "financial_impact",
+          "cyberattack_cost"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/jaguar-land-rover-cyberattack-cost-the-company-over-220-million/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Média, Presse",
+        "victime": "The Washington Post",
+        "description": "Les informations personnelles de près de 10 000 employés, contractuels et contributeurs du Washington Post ont été exposées suite à une violation de données. Des personnalités de haut niveau, comme l'ancien conseiller à la sécurité nationale John Bolton, sont parmi les personnes affectées.",
+        "tags": [
+          "violation",
+          "breach",
+          "media",
+          "press",
+          "Washington_Post",
+          "personal_data",
+          "employee_data",
+          "contractor_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/15/washington-post-hack-exposes-personal-data-of-john-bolton-almost-10000-others/?pk_campaign=feed&pk_kwd=washington-post-hack-exposes-personal-data-of-john-bolton-almost-10000-others"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Administration publique, Collectivités territoriales",
+        "victime": "Ville de Brest (France)",
+        "description": "Une partie des systèmes informatiques de la Ville de Brest a été impactée par une attaque, entraînant une fuite de données personnelles. La ville appelle à la vigilance.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_administration",
+          "local_government",
+          "Ville_de_Brest",
+          "France",
+          "personal_data_leak"
+        ],
+        "sources": [
+          "https://nanao.cybtex.fr/@minus/115557821669084591",
+          "https://brest.fr/actualites/fuite-de-donnees-personnelles-la-ville-de-brest-appelle-la-vigilance"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Gouvernement, Services de l'immigration",
+        "victime": "Système de visa électronique de la Somalie",
+        "description": "Une violation majeure du système de visa électronique de la Somalie aurait exposé les informations personnelles de plus de 35 000 demandeurs, y compris des citoyens américains. Les données exposées incluent les noms, les photos et d'autres informations sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "immigration",
+          "Somalia",
+          "e_visa_system",
+          "personal_data",
+          "applicant_data"
+        ],
+        "sources": [
+          "https://techhub.social/@bobkmertz/115556696569893829",
+          "https://infosec.exchange/@DevaOnBreaches/115556430732052997",
+          "https://www.bbc.com/news/articles/c620e43z2q5o"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Services de paiement en ligne",
+        "victime": "Checkout.com",
+        "description": "Checkout.com a été victime d'une violation de données par le groupe ShinyHunters. L'entreprise a refusé de payer la rançon et a annoncé vouloir faire un don équivalent à la somme demandée.",
+        "tags": [
+          "violation",
+          "breach",
+          "payment_services",
+          "Checkout.com",
+          "ShinyHunters",
+          "extortion",
+          "ransom"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115556430787148492",
+          "https://www.bleepingcomputer.com/news/security/checkoutcom-snubs-shinyhunters-hackers-to-donate-ransom-instead/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Fabrication, Matériel informatique",
+        "victime": "Logitech",
+        "description": "Logitech a confirmé une violation de données suite à une demande d'extorsion du groupe Clop, qui a fait fuiter 1,8 TB de données. La brèche a été causée par une vulnérabilité zero-day tierce (probablement CVE-2025-61882 dans Oracle E-Business Suite) exploitée par Clop. Aucune donnée sensible d'identification nationale ou de carte de crédit n'aurait été compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "hardware",
+          "Logitech",
+          "Clop",
+          "extortion",
+          "zero_day",
+          "supply_chain",
+          "Oracle_E-Business_Suite"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115555724471114038",
+          "https://www.bleepingcomputer.com/news/security/logitech-confirms-data-breach-after-clop-extortion-attack/"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-58083",
+        "cvss": "10.0",
+        "product": "General Industrial Controls Lynx+ Gateway",
+        "description": "Manque d'authentification critique dans le serveur web intégré, permettant à un attaquant de réinitialiser l'appareil à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "critical",
+          "ICS",
+          "OT",
+          "General_Industrial_Controls_Lynx_Gateway"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58083"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "9.1",
+        "product": "Fortinet FortiWeb",
+        "description": "Problème de traversée de chemin relatif ('relative path traversal') permettant l'exécution de code à distance. Exploité activement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "path_traversal",
+          "Fortinet_FortiWeb",
+          "WAF",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184652/hacking/u-s-cisa-adds-fortinet-fortiweb-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
+          "https://cybersecuritynews.com/fortiweb-waf-exploit-tool/",
+          "https://cybersecuritynews.com/cisco-catalyst-center-vulnerability/",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13191",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Débordement de tampon basé sur la pile dans la fonction `soapcgi_main` du fichier `/soap.cgi`, permettant une attaque à distance. L'exploit est public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13191"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13190",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Débordement de tampon basé sur la pile dans la fonction `scandir_main` du fichier `/portal/__ajax_exporer.sgi` via l'argument `en`, permettant une attaque à distance. L'exploit est public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13190"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13189",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Débordement de tampon basé sur la pile dans la fonction `genacgi_main` du fichier `gena.cgi` via l'argument `SERVER_ID/HTTP_SID`, permettant une attaque à distance. L'exploit est public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13189"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-24893",
+        "cvss": "9.8",
+        "product": "XWiki instances",
+        "description": "Vulnérabilité critique d'injection d'évaluation ('eval injection') permettant l'exécution de code arbitraire via le endpoint `/bin/get/Main/SolrSearch`. Activement exploitée par le botnet RondoDox.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "eval_injection",
+          "XWiki",
+          "botnet",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-64309",
+        "cvss": "8.6",
+        "product": "Brightpick Mission Control / Internal Logic Control",
+        "description": "Divulgation d'informations de télémétrie, de configuration et d'identifiants via le trafic WebSocket à des utilisateurs non authentifiés, via une URL non authentifiée, découvrable par scan réseau.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "unauthenticated_access",
+          "credential_disclosure",
+          "ICS",
+          "OT",
+          "Brightpick"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64309"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-9317",
+        "cvss": "8.4",
+        "product": "AVEVA Edge",
+        "description": "Utilisation d'un algorithme cryptographique faible ou cassé, permettant à un malfaiteur ayant un accès en lecture aux fichiers de projet ou de cache Edge de rétro-ingénier les mots de passe des utilisateurs via la force brute.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "weak_cryptography",
+          "password_brute_force",
+          "ICS",
+          "OT",
+          "AVEVA_Edge"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9317"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-55034",
+        "cvss": "8.2",
+        "product": "General Industrial Controls Lynx+ Gateway",
+        "description": "Vulnérabilité de faibles exigences de mot de passe, pouvant permettre une attaque par force brute pour obtenir un accès non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "weak_password_requirements",
+          "brute_force",
+          "unauthorized_access",
+          "ICS",
+          "OT",
+          "General_Industrial_Controls_Lynx_Gateway"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-55034"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Decades-old ‘Finger’ protocol abused in ClickFix malware attacks",
+        "description": "Des acteurs de la menace utilisent le protocole 'finger' (port TCP 79), datant de plusieurs décennies, pour récupérer et exécuter des commandes à distance sur des appareils Windows dans le cadre d'attaques de malwares ClickFix. La technique consiste à diriger la sortie d'une commande 'finger' directement vers cmd.exe. Les campagnes observées déploient des infostealers basés sur Python ou le RAT NetSupport Manager, incluant parfois des vérifications anti-analyse.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "finger.cloudmega[.]org"
+        ],
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1059.003: Command and Scripting Interpreter: Windows Command Shell",
+          "T1105: Ingress Tool Transfer",
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Cette campagne démontre l'ingéniosité des attaquants à réutiliser des protocoles anciens et souvent négligés pour des livraisons de malwares discrètes. L'utilisation d'infostealers et de RAT indique des objectifs d'espionnage ou de contrôle à distance. L'impact potentiel est l'exfiltration de données sensibles ou le contrôle total des systèmes compromis.",
+        "recommandations": [
+          "Bloquer le trafic sortant vers le port TCP 79 (protocole Finger).",
+          "Surveiller l'exécution de processus inattendus via cmd.exe ou PowerShell.",
+          "Déployer des solutions de détection de points de terminaison (EDR) avec des capacités d'analyse comportementale pour détecter les activités suspectes.",
+          "Mettre en place une formation de sensibilisation des utilisateurs sur les risques liés à l'exécution de commandes non vérifiées."
+        ],
+        "tags": [
+          "malware",
+          "ClickFix",
+          "finger_protocol",
+          "Windows",
+          "infostealer",
+          "RAT",
+          "T1059.003",
+          "T1105",
+          "T1071.001",
+          "T1027"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/decades-old-finger-protocol-abused-in-clickfix-malware-attacks/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "Multiple Vulnerabilities in GoSign Desktop lead to Remote Code Execution",
+        "description": "Des chercheurs ont découvert plusieurs vulnérabilités critiques dans GoSign Desktop, une solution de signature électronique, notamment une validation de certificat TLS désactivée et un mécanisme de mise à jour non signé. Ces failles peuvent conduire à l'exécution de code à distance (RCE), compromettant l'intégrité du système de signature utilisé par des administrations publiques et des entreprises.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1203: Exploitation for Client Execution",
+          "T1573: Encrypted Channel"
+        ],
+        "analyse": "La compromission d'une solution de signature électronique a un impact significatif sur la confiance numérique et l'intégrité des documents. Les vulnérabilités RCE combinées à l'absence de validation TLS et de mécanismes de mise à jour sécurisés représentent un risque élevé, car elles peuvent permettre à des attaquants d'exécuter du code arbitraire et potentiellement d'usurper des identités ou de falsifier des documents signés. L'impact est à la fois technique et fiduciaire.",
+        "recommandations": [
+          "Mettre à jour GoSign Desktop vers la dernière version corrigée dès que possible.",
+          "Vérifier l'intégrité des exécutables et des mises à jour de logiciels critiques via des signatures numériques fiables.",
+          "Appliquer le principe du moindre privilège pour les applications et les utilisateurs.",
+          "Surveiller les connexions réseau sortantes non autorisées depuis les systèmes critiques."
+        ],
+        "tags": [
+          "vulnerabilité",
+          "RCE",
+          "GoSign_Desktop",
+          "e_signature",
+          "TLS_validation",
+          "unsigned_updates",
+          "T1203",
+          "T1573"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184672/hacking/multiple-vulnerabilities-in-gosign-desktop-lead-to-remote-code-execution.html"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "RONINGLOADER: DragonBreath’s New Path to PPL Abuse",
+        "description": "Elastic Security Labs a découvert RONINGLOADER, un chargeur multi-étapes utilisé par le groupe DragonBreath pour déployer une variante mise à jour du RAT gh0st. La campagne utilise des pilotes signés, l'injection de pool de threads et l'abus de la Protection des Processus Légers (PPL) pour désactiver Windows Defender et contourner les outils EDR chinois. Cette méthode avancée permet une persistance et une évasion efficaces.",
+        "threat_actor": "DragonBreath",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "TA0003: Persistence",
+          "TA0005: Defense Evasion",
+          "TA0002: Execution",
+          "T1574.001: Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003: Create or Modify System Process: Windows Service",
+          "T1055.001: Process Injection: Dynamic-link Library Injection",
+          "T1055: Process Injection",
+          "T1484.001: Group Policy Modification: Group Policy Modification"
+        ],
+        "analyse": "L'exploitation de RONINGLOADER par DragonBreath représente une menace sophistiquée, ciblant les capacités de défense des systèmes Windows et des EDR. L'abus de PPL et l'utilisation de pilotes signés confèrent une furtivité et une persistance accrues, rendant la détection et la suppression particulièrement difficiles. L'objectif probable est l'espionnage à long terme ou le vol de propriété intellectuelle, avec un ciblage potentiel en Asie.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance comportementale avancée pour détecter les anomalies dans l'utilisation des pilotes signés et les injections de processus.",
+          "Renforcer les politiques de sécurité des points de terminaison pour prévenir l'abus de PPL et la désactivation non autorisée des mécanismes de défense.",
+          "Utiliser des solutions EDR capables de détecter les techniques d'évasion sophistiquées.",
+          "Mettre à jour régulièrement les systèmes d'exploitation et les logiciels de sécurité pour patcher les vulnérabilités connues."
+        ],
+        "tags": [
+          "malware",
+          "RONINGLOADER",
+          "DragonBreath",
+          "gh0st_RAT",
+          "PPL_abuse",
+          "EDR_evasion",
+          "signed_drivers",
+          "process_injection",
+          "T1574.001",
+          "T1543.003",
+          "T1055.001"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "RondoDox Exploits Unpatched XWiki Servers to Pull More Devices Into Its Botnet",
+        "description": "Le botnet RondoDox exploite activement la vulnérabilité critique CVE-2025-24893 (RCE, CVSS 9.8) dans les instances XWiki non patchées. Cette faille permet l'exécution de code arbitraire via le endpoint '/bin/get/Main/SolrSearch'. L'exploitation de cette vulnérabilité, connue depuis mars 2025, a conduit à une augmentation des tentatives d'exploitation, RondoDox ajoutant des appareils à son botnet pour des attaques DDoS, et d'autres acteurs déployant des mineurs de crypto ou des shells inversés.",
+        "threat_actor": "RondoDox",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1203: Exploitation for Client Execution",
+          "TA0042: Resource Development",
+          "T1588.006: Obtain Capabilities: Vulnerabilities",
+          "TA0009: Collection"
+        ],
+        "analyse": "L'exploitation continue de cette vulnérabilité XWiki met en évidence l'importance critique des patchs. Le botnet RondoDox vise à étendre sa capacité de DDoS, tandis que d'autres acteurs utilisent cette porte dérobée pour des gains financiers (mineurs de crypto) ou un contrôle persistant (shells inversés). Les organisations utilisant XWiki sont fortement menacées, avec un impact potentiel sur la disponibilité des services et la compromission des données.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2025-24893 sur toutes les instances XWiki.",
+          "Mettre en œuvre une segmentation réseau pour isoler les serveurs XWiki.",
+          "Surveiller les logs pour détecter les activités suspectes ou les tentatives d'exploitation du endpoint '/bin/get/Main/SolrSearch'.",
+          "Utiliser un pare-feu d'application web (WAF) pour filtrer les requêtes malveillantes ciblant XWiki."
+        ],
+        "tags": [
+          "botnet",
+          "RondoDox",
+          "XWiki",
+          "RCE",
+          "vulnerability_exploitation",
+          "CVE-2025-24893",
+          "DDoS",
+          "cryptojacking",
+          "T1203",
+          "T1588.006"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html"
+        ],
+        "date": "2025-11-16"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals a continued prevalence of ransomware attacks and data breaches, often facilitated by the exploitation of known vulnerabilities or flaws in the software supply chain. State-backed actors, notably North Korea (APT38/BlueNoroff), continue to conduct cyber-financial operations to circumvent sanctions. The use of sophisticated evasion techniques by groups like DragonBreath, leveraging multi-stage loaders and PPL abuse, underscores the increasing sophistication of threats. Critical vulnerabilities, especially those allowing Remote Code Execution (RCE) or related to authentication and identity management issues, remain prime targets, as illustrated by exploits against Fortinet FortiWeb, D-Link DIR-816L, and XWiki. The 'Finger' protocol, though decades-old, is being repurposed by threat actors for malware delivery, demonstrating adaptability and a search for discreet attack methods. The financial impact of cyberattacks remains significant, as evidenced by the over $220 million cost to Jaguar Land Rover. Data breaches affect a wide range of organizations, from media to government services, exposing sensitive personal information. In conclusion, the cyber threat landscape is characterized by the ingenuity of attackers in exploiting existing system weaknesses, the persistence of financial and geopolitical motivations, and the critical need for organizations to maintain a robust security posture focused on vulnerability management, awareness of evasion techniques, and incident response.",
+      "date": "2025-11-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "DragonBreath (via RONINGLOADER)",
+        "secteur": "Unspecified, but targets Windows systems with EDR evasion.",
+        "modop": "Uses multi-stage loaders (RONINGLOADER), deploys updated gh0st RAT variant, abuses signed drivers, thread-pool injection, and PPL to disable Defender and evade Chinese EDR tools.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "malware_delivery",
+          "EDR_evasion",
+          "PPL_abuse",
+          "RAT",
+          "gh0st"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "RondoDox",
+        "secteur": "Organizations using XWiki, for botnet DDoS purposes.",
+        "modop": "Exploits critical RCE vulnerabilities (CVE-2025-24893) in unpatched XWiki instances to add devices to its botnet for DDoS attacks, or to deploy crypto miners and reverse shells.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "DDoS",
+          "RCE_exploitation",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Manufacturing (Logitech), various sectors (Accellion, GoAnywhere, MOVEit).",
+        "modop": "Ransomware and extortion attacks following mass data breaches (1.8 TB in Logitech's case) via exploitation of zero-day vulnerabilities, particularly in the supply chain (e.g., Oracle E-Business Suite).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_breach",
+          "zero_day_exploitation",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115555724471114038",
+          "https://www.bleepingcomputer.com/news/security/logitech-confirms-data-breach-after-clop-extortion-attack/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "APT38 (BlueNoroff)",
+        "secteur": "Financial, any sector capable of generating revenue for North Korea.",
+        "modop": "IT worker fraud (using stolen identities, 'laptop farms') to generate illicit revenue, cryptocurrency theft.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "state_sponsored",
+          "financial_crime",
+          "cryptocurrency_theft",
+          "fraud",
+          "North_Korea"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/five-us-citizens-plead-guilty-to.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Online payment services (Checkout.com)",
+        "modop": "Data theft followed by a ransom demand.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_theft",
+          "extortion",
+          "ransom"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115556430787148492"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, IT Services",
+        "theme": "Illicit State-Sponsored Funding",
+        "description": "Five U.S. citizens have pleaded guilty to assisting North Korea's illicit revenue generation through IT worker fraud, impacting over 136 U.S. companies and generating $2.2 million for the DPRK regime. This legal action, alongside the forfeiture of over $15 million in cryptocurrency stolen by APT38 (BlueNoroff), aims to disrupt North Korea's funding for its weapons programs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "North_Korea",
+          "DPRK",
+          "APT38",
+          "BlueNoroff",
+          "cybercrime",
+          "sanctions",
+          "illicit_finance",
+          "IT_worker_fraud"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/five-us-citizens-plead-guilty-to.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Automotive",
+        "victime": "Jaguar Land Rover (JLR)",
+        "description": "Jaguar Land Rover released its financial results, disclosing that a recent cyberattack cost the company £196 million ($220 million) during the quarter.",
+        "tags": [
+          "violation",
+          "breach",
+          "automotive",
+          "JLR",
+          "financial_impact",
+          "cyberattack_cost"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/jaguar-land-rover-cyberattack-cost-the-company-over-220-million/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Media, Press",
+        "victime": "The Washington Post",
+        "description": "Personal information belonging to nearly 10,000 employees, contractors, and contributors at The Washington Post was exposed following a data breach. High-profile individuals, including former national security advisor John Bolton, are among those affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "media",
+          "press",
+          "Washington_Post",
+          "personal_data",
+          "employee_data",
+          "contractor_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/15/washington-post-hack-exposes-personal-data-of-john-bolton-almost-10000-others/?pk_campaign=feed&pk_kwd=washington-post-hack-exposes-personal-data-of-john-bolton-almost-10000-others"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Public Administration, Local Government",
+        "victime": "City of Brest (France)",
+        "description": "Part of the City of Brest's IT systems were impacted by a cyberattack, leading to a personal data leak. The city is urging vigilance.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_administration",
+          "local_government",
+          "Ville_de_Brest",
+          "France",
+          "personal_data_leak"
+        ],
+        "sources": [
+          "https://nanao.cybtex.fr/@minus/115557821669084591",
+          "https://brest.fr/actualites/fuite-de-donnees-personnelles-la-ville-de-brest-appelle-la-vigilance"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Government, Immigration Services",
+        "victime": "Somalia's e-visa system",
+        "description": "A major data breach in Somalia's e-visa system reportedly exposed personal information of over 35,000 applicants, including U.S. citizens. Exposed data includes names, photos, and other sensitive details.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "immigration",
+          "Somalia",
+          "e_visa_system",
+          "personal_data",
+          "applicant_data"
+        ],
+        "sources": [
+          "https://techhub.social/@bobkmertz/115556696569893829",
+          "https://infosec.exchange/@DevaOnBreaches/115556430732052997",
+          "https://www.bbc.com/news/articles/c620e43z2q5o"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Online Payment Services",
+        "victime": "Checkout.com",
+        "description": "Checkout.com was hit by a data breach from the ShinyHunters group. The company refused to pay the ransom and announced its intention to donate an equivalent amount.",
+        "tags": [
+          "violation",
+          "breach",
+          "payment_services",
+          "Checkout.com",
+          "ShinyHunters",
+          "extortion",
+          "ransom"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115556430787148492",
+          "https://www.bleepingcomputer.com/news/security/checkoutcom-snubs-shinyhunters-hackers-to-donate-ransom-instead/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "secteur": "Manufacturing, Computer Hardware",
+        "victime": "Logitech",
+        "description": "Logitech confirmed a data breach following an extortion claim by the Clop group, who leaked 1.8 TB of data. The breach originated from a third-party zero-day vulnerability (likely CVE-2025-61882 in Oracle E-Business Suite) actively exploited by Clop. No sensitive national ID or credit card data was reportedly compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "hardware",
+          "Logitech",
+          "Clop",
+          "extortion",
+          "zero_day",
+          "supply_chain",
+          "Oracle_E-Business_Suite"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115555724471114038",
+          "https://www.bleepingcomputer.com/news/security/logitech-confirms-data-breach-after-clop-extortion-attack/"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-58083",
+        "cvss": "10.0",
+        "product": "General Industrial Controls Lynx+ Gateway",
+        "description": "Missing critical authentication in the embedded web server, allowing an attacker to remotely reset the device.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "critical",
+          "ICS",
+          "OT",
+          "General_Industrial_Controls_Lynx_Gateway"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58083"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "9.1",
+        "product": "Fortinet FortiWeb",
+        "description": "Relative path traversal issue leading to remote code execution. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "path_traversal",
+          "Fortinet_FortiWeb",
+          "WAF",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184652/hacking/u-s-cisa-adds-fortinet-fortiweb-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
+          "https://cybersecuritynews.com/fortiweb-waf-exploit-tool/",
+          "https://cybersecuritynews.com/cisco-catalyst-center-vulnerability/",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13191",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Stack-based buffer overflow in the `soapcgi_main` function of the `/soap.cgi` file, allowing remote attack. Exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13191"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13190",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Stack-based buffer overflow in the `scandir_main` function of the `/portal/__ajax_exporer.sgi` file via the `en` argument, allowing remote attack. Exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13190"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-13189",
+        "cvss": "9.0",
+        "product": "D-Link DIR-816L",
+        "description": "Stack-based buffer overflow in the `genacgi_main` function of the `gena.cgi` file via the `SERVER_ID/HTTP_SID` argument, allowing remote attack. Exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "RCE",
+          "D_Link_DIR_816L",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13189"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-24893",
+        "cvss": "9.8",
+        "product": "XWiki instances",
+        "description": "Critical eval injection vulnerability allowing arbitrary code execution via the `/bin/get/Main/SolrSearch` endpoint. Actively exploited by the RondoDox botnet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "eval_injection",
+          "XWiki",
+          "botnet",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html",
+          "https://infosec.exchange/@soc_goulash/115555724471114038"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-64309",
+        "cvss": "8.6",
+        "product": "Brightpick Mission Control / Internal Logic Control",
+        "description": "Disclosure of device telemetry, configuration, and credential information via WebSocket traffic to unauthenticated users, discoverable through network scanning.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "unauthenticated_access",
+          "credential_disclosure",
+          "ICS",
+          "OT",
+          "Brightpick"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64309"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-9317",
+        "cvss": "8.4",
+        "product": "AVEVA Edge",
+        "description": "Use of a broken or risky cryptographic algorithm, allowing a miscreant with read access to Edge Project or Offline Cache files to reverse engineer user passwords through brute-forcing of weak hashes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "weak_cryptography",
+          "password_brute_force",
+          "ICS",
+          "OT",
+          "AVEVA_Edge"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9317"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "cve_id": "CVE-2025-55034",
+        "cvss": "8.2",
+        "product": "General Industrial Controls Lynx+ Gateway",
+        "description": "Weak password requirement vulnerability, which may allow an attacker to execute a brute-force attack resulting in unauthorized access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "weak_password_requirements",
+          "brute_force",
+          "unauthorized_access",
+          "ICS",
+          "OT",
+          "General_Industrial_Controls_Lynx_Gateway"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-55034"
+        ],
+        "date": "2025-11-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Decades-old ‘Finger’ protocol abused in ClickFix malware attacks",
+        "description": "Threat actors are leveraging the decades-old 'finger' protocol (TCP port 79) to retrieve and execute remote commands on Windows devices in recent ClickFix malware attacks. The technique involves piping the output of a 'finger' command directly into cmd.exe. Observed campaigns deploy Python-based infostealers or NetSupport Manager RAT, sometimes including anti-analysis checks.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "finger.cloudmega[.]org"
+        ],
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1059.003: Command and Scripting Interpreter: Windows Command Shell",
+          "T1105: Ingress Tool Transfer",
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "This campaign demonstrates attackers' ingenuity in reusing old and often overlooked protocols for discreet malware delivery. The use of infostealers and RATs indicates espionage or remote control objectives. The potential impact is the exfiltration of sensitive data or full control over compromised systems.",
+        "recommandations": [
+          "Block outgoing traffic to TCP port 79 (Finger protocol).",
+          "Monitor for unexpected process execution via cmd.exe or PowerShell.",
+          "Deploy Endpoint Detection and Response (EDR) solutions with behavioral analysis capabilities to detect suspicious activities.",
+          "Implement user awareness training on the risks of executing unverified commands."
+        ],
+        "tags": [
+          "malware",
+          "ClickFix",
+          "finger_protocol",
+          "Windows",
+          "infostealer",
+          "RAT",
+          "T1059.003",
+          "T1105",
+          "T1071.001",
+          "T1027"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/decades-old-finger-protocol-abused-in-clickfix-malware-attacks/"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "Multiple Vulnerabilities in GoSign Desktop lead to Remote Code Execution",
+        "description": "Researchers discovered several critical vulnerabilities in GoSign Desktop, an electronic signature solution, including disabled TLS Certificate Validation and an Unsigned Update Mechanism. These flaws can lead to Remote Code Execution (RCE), compromising the integrity of the signature system used by public administrations and businesses.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1203: Exploitation for Client Execution",
+          "T1573: Encrypted Channel"
+        ],
+        "analyse": "The compromise of an electronic signature solution has a significant impact on digital trust and document integrity. RCE vulnerabilities combined with a lack of TLS validation and secure update mechanisms pose a high risk, as they can allow attackers to execute arbitrary code and potentially impersonate identities or forge signed documents. The impact is both technical and fiduciary.",
+        "recommandations": [
+          "Update GoSign Desktop to the latest patched version as soon as possible.",
+          "Verify the integrity of executables and critical software updates using reliable digital signatures.",
+          "Apply the principle of least privilege for applications and users.",
+          "Monitor for unauthorized outbound network connections from critical systems."
+        ],
+        "tags": [
+          "vulnerability",
+          "RCE",
+          "GoSign_Desktop",
+          "e_signature",
+          "TLS_validation",
+          "unsigned_updates",
+          "T1203",
+          "T1573"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184672/hacking/multiple-vulnerabilities-in-gosign-desktop-lead-to-remote-code-execution.html"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "RONINGLOADER: DragonBreath’s New Path to PPL Abuse",
+        "description": "Elastic Security Labs uncovered RONINGLOADER, a multi-stage loader deployed by the DragonBreath group to deliver an updated gh0st RAT variant. The campaign weaponizes signed drivers, thread-pool injection, and PPL abuse to disable Windows Defender and evade Chinese EDR tools. This advanced method ensures effective persistence and evasion.",
+        "threat_actor": "DragonBreath",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "TA0003: Persistence",
+          "TA0005: Defense Evasion",
+          "TA0002: Execution",
+          "T1574.001: Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003: Create or Modify System Process: Windows Service",
+          "T1055.001: Process Injection: Dynamic-link Library Injection",
+          "T1055: Process Injection",
+          "T1484.001: Group Policy Modification: Group Policy Modification"
+        ],
+        "analyse": "DragonBreath's use of RONINGLOADER represents a sophisticated threat, targeting Windows system defenses and EDR capabilities. The abuse of PPL and signed drivers provides increased stealth and persistence, making detection and removal particularly challenging. The likely objective is long-term espionage or intellectual property theft, with potential targeting in Asia.",
+        "recommandations": [
+          "Implement advanced behavioral monitoring to detect anomalies in signed driver usage and process injections.",
+          "Strengthen endpoint security policies to prevent PPL abuse and unauthorized disabling of defense mechanisms.",
+          "Utilize EDR solutions capable of detecting sophisticated evasion techniques.",
+          "Regularly update operating systems and security software to patch known vulnerabilities."
+        ],
+        "tags": [
+          "malware",
+          "RONINGLOADER",
+          "DragonBreath",
+          "gh0st_RAT",
+          "PPL_abuse",
+          "EDR_evasion",
+          "signed_drivers",
+          "process_injection",
+          "T1574.001",
+          "T1543.003",
+          "T1055.001"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/roningloader"
+        ],
+        "date": "2025-11-16"
+      },
+      {
+        "title": "RondoDox Exploits Unpatched XWiki Servers to Pull More Devices Into Its Botnet",
+        "description": "The RondoDox botnet is actively exploiting critical vulnerability CVE-2025-24893 (RCE, CVSS 9.8) in unpatched XWiki instances. This flaw allows arbitrary code execution via the '/bin/get/Main/SolrSearch' endpoint. The exploitation of this vulnerability, known since March 2025, has led to a surge in exploitation attempts, with RondoDox adding devices to its botnet for DDoS attacks, and other actors deploying crypto miners or reverse shells.",
+        "threat_actor": "RondoDox",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "TA0002: Execution",
+          "T1203: Exploitation for Client Execution",
+          "TA0042: Resource Development",
+          "T1588.006: Obtain Capabilities: Vulnerabilities",
+          "TA0009: Collection"
+        ],
+        "analyse": "The ongoing exploitation of this XWiki vulnerability highlights the critical importance of patching. The RondoDox botnet aims to expand its DDoS capacity, while other actors use this backdoor for financial gain (crypto miners) or persistent control (reverse shells). Organizations using XWiki are highly threatened, with potential impact on service availability and data compromise.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2025-24893 on all XWiki instances.",
+          "Implement network segmentation to isolate XWiki servers.",
+          "Monitor logs for suspicious activity or exploitation attempts on the '/bin/get/Main/SolrSearch' endpoint.",
+          "Use a Web Application Firewall (WAF) to filter malicious requests targeting XWiki."
+        ],
+        "tags": [
+          "botnet",
+          "RondoDox",
+          "XWiki",
+          "RCE",
+          "vulnerability_exploitation",
+          "CVE-2025-24893",
+          "DDoS",
+          "cryptojacking",
+          "T1203",
+          "T1588.006"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/rondodox-exploits-unpatched-xwiki.html"
+        ],
+        "date": "2025-11-16"
+      }
+    ]
+  }
+}
