@@ -1,0 +1,978 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une sophistication croissante, notamment l'intégration de l'intelligence artificielle autonome dans les campagnes d'espionnage par des acteurs étatiques, comme le démontrent les attaques liées à la Chine. Les attaques contre la supply chain restent une préoccupation majeure, avec un incident record impliquant plus de 150 000 packages npm malveillants, ciblant la blockchain et les récompenses de farming de tokens. Parallèlement, les groupes parrainés par des États continuent de mener des opérations de contournement de sanctions via des stratagèmes d'employés IT, tandis que les services de phishing-as-a-service automatisés se répandent, rendant les attaques de phishing plus accessibles. Les vulnérabilités critiques, en particulier les exécutions de code à distance (RCE) et les injections de commandes OS ou SQL avec des scores CVSS très élevés, continuent de poser des risques importants et sont activement exploitées. Les violations de données sont fréquentes, touchant divers secteurs allant des services financiers aux gouvernements et aux organisations politiques. La conclusion générale est une augmentation des techniques avancées (IA, supply chain), une persistance des tactiques d'ingénierie sociale (phishing) et une dépendance continue aux vulnérabilités fondamentales, exigeant une vigilance et une défense multicouche constantes.",
+      "date": "2025-11-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs liés à la Chine",
+        "secteur": "Espionnage, secteurs gouvernementaux et technologiques",
+        "modop": "Utilisation d'outils basés sur l'IA (Anthropic) avec des capacités 'agentiques' pour automatiser et exécuter des cyberattaques d'espionnage à grande échelle, visant potentiellement l'extraction d'informations sensibles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "china",
+          "state_sponsored",
+          "espionage",
+          "ai_powered_attack",
+          "automation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "nom": "Individus soutenus par la Corée du Nord",
+        "secteur": "Financier, Technologies de l'Information (pour le contournement des sanctions)",
+        "modop": "Mise en œuvre de stratagèmes illégaux d'employés informaticiens pour générer des revenus pour la Corée du Nord, en violation des sanctions internationales.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "north_korea",
+          "state_sponsored",
+          "sanctions_evasion",
+          "financial_crime",
+          "it_worker_schemes"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "nom": "Groupe de hackers non identifié",
+        "secteur": "Services de paiement",
+        "modop": "Tentative d'extorsion suite à une violation de données d'un système de stockage cloud tiers obsolète.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "data_breach",
+          "cloud_system"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/16/checkout-com-discloses-data-breach-after-extortion-attempt/?pk_campaign=feed&pk_kwd=checkout-com-discloses-data-breach-after-extortion-attempt"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International, Gouvernemental, Technologies de l'information",
+        "theme": "Contournement de sanctions, financement illicite",
+        "description": "Cinq personnes ont plaidé coupables d'avoir aidé la Corée du Nord à générer secrètement des revenus via des stratagèmes illégaux d'employés informaticiens, violant les sanctions internationales.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "coree_du_nord",
+          "sanctions",
+          "financement_illicite",
+          "it_workers"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Gouvernemental, Défense, Technologie",
+        "theme": "Espionnage étatique, utilisation de l'IA dans les cyberattaques",
+        "description": "Des acteurs liés à la Chine ont utilisé l'IA d'Anthropic pour automatiser et exécuter des cyberattaques sophistiquées dans une campagne d'espionnage en septembre 2025, exploitant des capacités 'agentiques' avancées.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "espionnage",
+          "ia",
+          "cyberattaque",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Gouvernemental, Tourisme, Relations Internationales",
+        "theme": "Violation de données, implications diplomatiques",
+        "description": "La Somalie a confirmé une violation majeure de son système d'e-Visa, exposant les données de plus de 35 000 demandeurs, après des avertissements des États-Unis et du Royaume-Uni. L'incident a entraîné des répercussions diplomatiques et des tensions renouvelées avec le Somaliland.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "somalie",
+          "violation_donnees",
+          "e_visa",
+          "relations_internationales"
+        ],
+        "sources": [
+          "https://saxafimedia.com/somalia-visa-data-breach-us-uk-travelers-exposed/"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services de paiement, Fintech",
+        "victime": "Checkout.com",
+        "description": "Révélation d'une violation de données affectant un ancien système de stockage de fichiers cloud tiers, inutilisé depuis 2020. L'incident n'a pas impacté la plateforme de traitement des paiements principale mais a été suivi d'une tentative d'extorsion par un groupe de hackers connu.",
+        "tags": [
+          "violation",
+          "breach",
+          "checkout_com",
+          "services_paiement",
+          "cloud",
+          "extorsion"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/16/checkout-com-discloses-data-breach-after-extortion-attempt/?pk_campaign=feed&pk_kwd=checkout-com-discloses-data-breach-after-extortion-attempt"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Gouvernemental",
+        "victime": "Système d'e-Visa de la Somalie",
+        "description": "Confirmation d'une violation majeure du système, ayant potentiellement compromis les données de plus de 35 000 demandeurs. Des avertissements avaient été émis par les États-Unis et le Royaume-Uni.",
+        "tags": [
+          "violation",
+          "breach",
+          "somalie",
+          "e_visa",
+          "donnees_personnelles",
+          "gouvernement"
+        ],
+        "sources": [
+          "https://saxafimedia.com/somalia-visa-data-breach-us-uk-travelers-exposed/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Politique, Organisations à but non lucratif",
+        "victime": "AIPAC (American Israel Public Affairs Committee)",
+        "description": "Divulgation d'une violation de données de plusieurs mois suite à un accès externe à un système, affectant des centaines d'individus.",
+        "tags": [
+          "violation",
+          "breach",
+          "aipac",
+          "politique",
+          "usa",
+          "israel",
+          "acces_externe"
+        ],
+        "sources": [
+          "https://hackread.com/aipac-data-breach-hundreds-affected/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "zolota skrynia (Ukraine)",
+        "description": "Forte confiance en une violation de données affectant spécifiquement cette entité du secteur des services financiers ukrainiens.",
+        "tags": [
+          "violation",
+          "breach",
+          "zolota_skrynia",
+          "ukraine",
+          "services_financiers"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115561859786490498"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Automobile, Technologie, Éducation, Médias, Livraison de repas",
+        "victime": "Hyundai, Kia, Genesis, Logitech, Princeton, The Washington Post, DoorDash",
+        "description": "Multiples violations de données signalées cette semaine, affectant un large éventail d'entreprises et d'organisations.",
+        "tags": [
+          "violation",
+          "breach",
+          "hyundai",
+          "kia",
+          "genesis",
+          "logitech",
+          "princeton",
+          "washington_post",
+          "doordash",
+          "multi_sector"
+        ],
+        "sources": [
+          "https://mastodon.social/@NickAEsp/115561804453336021",
+          "https://soundcloud.com/nickaesp/b2025-11-16"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-36250",
+        "cvss": "10.0",
+        "product": "IBM AIX 7.2, AIX 7.3, VIOS 3.1/4.1 (NIM)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) critique exposant les clés privées NIM et présentant des risques de Directory Traversal.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ibm",
+          "aix",
+          "nim",
+          "private_keys",
+          "directory_traversal",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-ibm-aix-rce-cve-2025-36250-cvss-10-0-flaw-exposes-nim-private-keys-and-risks-directory-traversal/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "10.0",
+        "product": "Lynx+ Gateway (General Industrial Controls)",
+        "description": "Vulnérabilité critique permettant une réinitialisation à distance non authentifiée. Le fournisseur n'est pas réactif (CISA advisory).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_reset",
+          "unauthenticated",
+          "gateway",
+          "ics",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-critical-lynx-gateway-flaw-cvss-10-0-allows-unauthenticated-remote-reset-vendor-non-responsive/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13284",
+        "cvss": "9.8",
+        "product": "ThinPLUS",
+        "description": "Vulnérabilité d'injection de commande OS, permettant à des attaquants distants non authentifiés d'injecter et d'exécuter des commandes OS arbitraires sur le serveur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "os_command_injection",
+          "thinplus",
+          "unauthenticated",
+          "remote_code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13284"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-10460",
+        "cvss": "9.4",
+        "product": "BEIMS Contractor Web (Version 5.7.139 et potentiellement toutes les versions)",
+        "description": "Vulnérabilité d'injection SQL en raison d'une validation d'entrée incorrecte, permettant à un utilisateur non autorisé de récupérer des contenus de base de données sensibles. Produit obsolète et non maintenu.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "beims",
+          "legacy_product",
+          "data_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10460"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-12762",
+        "cvss": "9.1",
+        "product": "pgAdmin (versions jusqu'à 9.9)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) via les fichiers de dump PostgreSQL.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pgadmin",
+          "postgresql",
+          "remote_code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-flaws-cve-2025-12762-cvss-9-1-allow-remote-code-execution-via-postgresql-dump-files/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13258",
+        "cvss": "9.0",
+        "product": "Tenda AC20 (jusqu'à 16.03.08.12)",
+        "description": "Dépassement de tampon (buffer overflow) dans la fonction WifiExtraSet du fichier /goform/WifiExtraSet via l'argument wpapsk_crypto. L'attaque peut être lancée à distance et un exploit public est disponible.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "tenda",
+          "ac20",
+          "wifi",
+          "remote",
+          "public_exploit",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13258"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13282",
+        "cvss": "8.1",
+        "product": "Chunghwa Telecom TenderDocTransfer",
+        "description": "Vulnérabilité de suppression de fichier arbitraire due à un manque de protection CSRF dans les API et une vulnérabilité de traversée de chemin absolu, permettant aux attaquants de supprimer des fichiers arbitraires via du phishing.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_delete",
+          "chunghwa_telecom",
+          "tenderdoctransfer",
+          "csrf",
+          "path_traversal",
+          "phishing",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13282"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2024-21635",
+        "cvss": "High-Severity",
+        "product": "Memos",
+        "description": "Vulnérabilité de gestion de session permettant aux attaquants de maintenir l'accès même après un changement de mot de passe.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_management",
+          "authentication",
+          "access_control",
+          "memos",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-memos-flaw-cve-2024-21635-allows-hackers-to-stay-logged-in-after-password-change/"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Anthropic: Des hackers soutenus par la Chine lancent la première cyberattaque autonome à grande échelle basée sur l'IA",
+        "description": "Une campagne d'espionnage sophistiquée menée en septembre 2025 par des acteurs liés à la Chine a utilisé l'IA d'Anthropic. Les attaquants ont exploité des capacités 'agentiques' avancées pour automatiser et exécuter des cyberattaques, allant au-delà de la simple guidance de l'IA.",
+        "threat_actor": "Acteurs liés à la Chine",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cette attaque démontre une nouvelle étape dans l'utilisation de l'IA par les acteurs étatiques, passant de l'assistance à l'autonomie dans l'exécution des cyberattaques. L'impact est stratégique, signalant une escalade potentielle dans les capacités offensives et les risques d'espionnage avancés pour les gouvernements et les industries critiques à l'échelle mondiale.",
+        "recommandations": [
+          "Déployer des défenses basées sur l'IA pour contrer les attaques IA-générées",
+          "Renforcer la détection des comportements anormaux et autonomes",
+          "Investir dans la recherche sur la sécurité de l'IA et les contre-mesures"
+        ],
+        "tags": [
+          "ai",
+          "cyberattaque",
+          "espionnage",
+          "chine",
+          "state_sponsored",
+          "automation",
+          "agentic_ai",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Cinq personnes admettent avoir aidé la Corée du Nord à contourner les sanctions via des stratagèmes d'employés informaticiens",
+        "description": "Cinq individus ont plaidé coupables d'avoir facilité des stratagèmes illégaux d'employés informaticiens pour la Corée du Nord, lui permettant de générer des revenus en secret et de contourner les sanctions internationales, comme annoncé par le Département de la Justice des États-Unis.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'impact est significatif sur la sécurité économique et nationale, car cela met en lumière les méthodes utilisées par des États pour contourner les sanctions et financer leurs activités. Géographiquement, cela affecte les pays cherchant à faire respecter les sanctions contre la Corée du Nord, ainsi que les entreprises qui pourraient être exploitées involontairement par ces travailleurs.",
+        "recommandations": [
+          "Renforcer la diligence raisonnable (due diligence) sur les prestataires de services informatiques et les employés à distance",
+          "Améliorer la coopération internationale pour identifier et perturber les réseaux de contournement de sanctions"
+        ],
+        "tags": [
+          "north_korea",
+          "sanctions_evasion",
+          "illicit_finance",
+          "cybercrime",
+          "it_worker_schemes",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Phishing-as-a-Service dévoilé : un kit automatisé usurpe l'identité d'Aruba S.p.A. pour voler des identifiants et des cartes de crédit",
+        "description": "Un nouveau rapport de Group-IB révèle un framework de phishing hautement automatisé conçu pour usurper l'identité de l'entreprise italienne Aruba S.p.A., afin de voler les identifiants de connexion et les informations de cartes de crédit de ses plus de 5,4 millions de clients.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "TA0001 Initial Access",
+          "T1566 Phishing",
+          "T1566.002 Spearphishing Link",
+          "TA0006 Credential Access",
+          "T1078 Valid Accounts"
+        ],
+        "analyse": "L'impact est potentiellement très large pour les clients d'Aruba S.p.A., risquant des pertes financières et un vol d'identité. La nature automatisée du kit PhaaS rend ces attaques plus scalables et accessibles, augmentant la menace pour les entreprises de services web et leurs utilisateurs à l'échelle mondiale.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques de phishing",
+          "Implémenter l'authentification multifacteur (MFA)",
+          "Utiliser des passerelles de sécurité de messagerie et des outils de détection du phishing",
+          "Surveiller les tentatives d'usurpation d'identité de marque"
+        ],
+        "tags": [
+          "phishing",
+          "phishing_as_a_service",
+          "paas",
+          "aruba",
+          "credential_theft",
+          "credit_card_theft",
+          "automation",
+          "group_ib",
+          "initial_access",
+          "credential_access"
+        ],
+        "sources": [
+          "https://securityonline.info/phishing-as-a-service-uncovered-automated-kit-impersonates-aruba-s-p-a-to-steal-credentials-and-credit-cards/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Attaque record sur la supply chain : plus de 150 000 packages npm malveillants ont inondé le registre pour des récompenses de 'token farming'",
+        "description": "Des chercheurs en sécurité d'Amazon Inspector ont découvert plus de 150 000 packages npm malveillants liés à une campagne coordonnée de 'token farming' (tea.xyz), constituant l'un des plus grands incidents de supply chain open source jamais enregistrés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": [
+          "TA0001 Initial Access",
+          "T1195 Supply Chain Compromise",
+          "T1195.002 Compromise Software Supply Chain"
+        ],
+        "analyse": "Cet événement représente une menace massive pour l'écosystème open source et toutes les entités qui en dépendent. L'impact est potentiellement financier (token farming) et pourrait conduire à l'injection de code malveillant dans de nombreuses applications. Le risque est global étant donné l'ubiquité des packages npm dans le développement logiciel.",
+        "recommandations": [
+          "Implémenter des scans de sécurité pour les dépendances logicielles",
+          "Utiliser des dépôts de packages internes et vérifiés",
+          "Renforcer la vérification des packages open source avant l'intégration",
+          "Sensibiliser les développeurs aux risques de supply chain"
+        ],
+        "tags": [
+          "supply_chain",
+          "npm",
+          "open_source",
+          "malicious_packages",
+          "token_farming",
+          "blockchain",
+          "amazon_inspector",
+          "initial_access",
+          "supply_chain_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/record-supply-chain-attack-150000-malicious-npm-packages-flooded-registry-for-token-farming-rewards/"
+        ],
+        "date": "2025-11-17"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is marked by increasing sophistication, notably the integration of autonomous artificial intelligence into espionage campaigns by state actors, as demonstrated by China-linked attacks. Supply chain attacks remain a major concern, with a record incident involving over 150,000 malicious npm packages targeting blockchain and token farming rewards. Concurrently, state-sponsored groups continue to conduct sanctions evasion operations via IT worker schemes, while automated phishing-as-a-service offerings proliferate, making phishing attacks more accessible. Critical vulnerabilities, especially Remote Code Execution (RCE) and OS or SQL command injections with very high CVSS scores, continue to pose significant risks and are actively exploited. Data breaches are frequent, affecting various sectors ranging from financial services to governments and political organizations. The overall conclusion is an increase in advanced techniques (AI, supply chain), persistence of social engineering tactics (phishing), and continued reliance on fundamental vulnerabilities, requiring constant vigilance and multi-layered defense.",
+      "date": "2025-11-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "China-linked threat actors",
+        "secteur": "Espionage, governmental and technological sectors",
+        "modop": "Use of AI-powered tools (Anthropic) with 'agentic' capabilities to automate and execute large-scale espionage cyberattacks, potentially aiming for sensitive information exfiltration.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "china",
+          "state_sponsored",
+          "espionage",
+          "ai_powered_attack",
+          "automation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "nom": "North Korea-backed individuals",
+        "secteur": "Financial, Information Technology (for sanctions evasion)",
+        "modop": "Implementation of illegal IT worker schemes to generate revenue for North Korea, in violation of international sanctions.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "north_korea",
+          "state_sponsored",
+          "sanctions_evasion",
+          "financial_crime",
+          "it_worker_schemes"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "nom": "Unnamed Hacking Group",
+        "secteur": "Payment Services",
+        "modop": "Extortion attempt following a data breach of a legacy third-party cloud file storage system.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "data_breach",
+          "cloud_system"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/16/checkout-com-discloses-data-breach-after-extortion-attempt/?pk_campaign=feed&pk_kwd=checkout-com-discloses-data-breach-after-extortion-attempt"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International, Governmental, Information Technology",
+        "theme": "Sanctions evasion, illicit financing",
+        "description": "Five individuals pleaded guilty to helping North Korea secretly generate revenue through illegal IT worker schemes, violating international sanctions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "north_korea",
+          "sanctions",
+          "illicit_financing",
+          "it_workers"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Governmental, Defense, Technology",
+        "theme": "State-sponsored espionage, use of AI in cyberattacks",
+        "description": "China-linked threat actors used Anthropic's AI to automate and execute sophisticated cyberattacks in an espionage campaign in September 2025, leveraging advanced 'agentic' capabilities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "espionage",
+          "ai",
+          "cyberattack",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Governmental, Tourism, International Relations",
+        "theme": "Data breach, diplomatic implications",
+        "description": "Somalia confirmed a major e-Visa system data breach, potentially compromising data from over 35,000 applicants, following warnings from the US & UK. The incident triggered diplomatic fallout and renewed tensions with Somaliland.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "somalia",
+          "data_breach",
+          "e_visa",
+          "international_relations"
+        ],
+        "sources": [
+          "https://saxafimedia.com/somalia-visa-data-breach-us-uk-travelers-exposed/"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Payment Services, Fintech",
+        "victime": "Checkout.com",
+        "description": "Disclosure of a data breach affecting a legacy, third-party cloud file storage system, which had not been used since 2020. The incident did not impact their core payment processing platform but was followed by an extortion attempt by a known hacking group.",
+        "tags": [
+          "violation",
+          "breach",
+          "checkout_com",
+          "payment_services",
+          "cloud",
+          "extortion"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/16/checkout-com-discloses-data-breach-after-extortion-attempt/?pk_campaign=feed&pk_kwd=checkout-com-discloses-data-breach-after-extortion-attempt"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Governmental",
+        "victime": "Somalia e-Visa system",
+        "description": "Confirmation of a major system data breach, potentially compromising data from over 35,000 applicants. Warnings had been issued by the US and UK.",
+        "tags": [
+          "violation",
+          "breach",
+          "somalia",
+          "e_visa",
+          "personal_data",
+          "government"
+        ],
+        "sources": [
+          "https://saxafimedia.com/somalia-visa-data-breach-us-uk-travelers-exposed/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Political, Non-profit Organizations",
+        "victime": "AIPAC (American Israel Public Affairs Committee)",
+        "description": "Disclosure of a months-long data breach after external system access impacted hundreds of individuals.",
+        "tags": [
+          "violation",
+          "breach",
+          "aipac",
+          "political",
+          "usa",
+          "israel",
+          "external_access"
+        ],
+        "sources": [
+          "https://hackread.com/aipac-data-breach-hundreds-affected/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "zolota skrynia (Ukraine)",
+        "description": "High confidence of a data breach affecting the Ukrainian financial services sector, specifically targeting zolota skrynia.",
+        "tags": [
+          "violation",
+          "breach",
+          "zolota_skrynia",
+          "ukraine",
+          "financial_services"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115561859786490498"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "secteur": "Automotive, Technology, Education, Media, Food Delivery",
+        "victime": "Hyundai, Kia, Genesis, Logitech, Princeton, The Washington Post, DoorDash",
+        "description": "Multiple data breaches reported this week, affecting a wide range of companies and organizations.",
+        "tags": [
+          "violation",
+          "breach",
+          "hyundai",
+          "kia",
+          "genesis",
+          "logitech",
+          "princeton",
+          "washington_post",
+          "doordash",
+          "multi_sector"
+        ],
+        "sources": [
+          "https://mastodon.social/@NickAEsp/115561804453336021",
+          "https://soundcloud.com/nickaesp/b2025-11-16"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-36250",
+        "cvss": "10.0",
+        "product": "IBM AIX 7.2, AIX 7.3, VIOS 3.1/4.1 (NIM)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability exposing NIM private keys and risking Directory Traversal.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ibm",
+          "aix",
+          "nim",
+          "private_keys",
+          "directory_traversal",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-ibm-aix-rce-cve-2025-36250-cvss-10-0-flaw-exposes-nim-private-keys-and-risks-directory-traversal/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "Not specified",
+        "cvss": "10.0",
+        "product": "Lynx+ Gateway (General Industrial Controls)",
+        "description": "Critical vulnerability allowing unauthenticated remote reset. Vendor is non-responsive (CISA advisory).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_reset",
+          "unauthenticated",
+          "gateway",
+          "ics",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-critical-lynx-gateway-flaw-cvss-10-0-allows-unauthenticated-remote-reset-vendor-non-responsive/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13284",
+        "cvss": "9.8",
+        "product": "ThinPLUS",
+        "description": "OS Command Injection vulnerability, allowing unauthenticated remote attackers to inject and execute arbitrary OS commands on the server.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "os_command_injection",
+          "thinplus",
+          "unauthenticated",
+          "remote_code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13284"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-10460",
+        "cvss": "9.4",
+        "product": "BEIMS Contractor Web (Version 5.7.139 and potentially all versions)",
+        "description": "SQL Injection vulnerability due to improper input validation, allowing an unauthorized user to retrieve sensitive database contents. Legacy and unmaintained product.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "beims",
+          "legacy_product",
+          "data_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10460"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-12762",
+        "cvss": "9.1",
+        "product": "pgAdmin (versions up to 9.9)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability via PostgreSQL Dump Files.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pgadmin",
+          "postgresql",
+          "remote_code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-flaws-cve-2025-12762-cvss-9-1-allow-remote-code-execution-via-postgresql-dump-files/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13258",
+        "cvss": "9.0",
+        "product": "Tenda AC20 (up to 16.03.08.12)",
+        "description": "Buffer overflow in the WifiExtraSet function of the /goform/WifiExtraSet file via the wpapsk_crypto argument. The attack can be launched remotely, and a public exploit is available.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "tenda",
+          "ac20",
+          "wifi",
+          "remote",
+          "public_exploit",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13258"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2025-13282",
+        "cvss": "8.1",
+        "product": "Chunghwa Telecom TenderDocTransfer",
+        "description": "Arbitrary File Delete vulnerability due to a lack of CSRF protection in APIs and an Absolute Path Traversal vulnerability, allowing attackers to delete arbitrary files through phishing.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_delete",
+          "chunghwa_telecom",
+          "tenderdoctransfer",
+          "csrf",
+          "path_traversal",
+          "phishing",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13282"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "cve_id": "CVE-2024-21635",
+        "cvss": "High-Severity",
+        "product": "Memos",
+        "description": "Session-management flaw allowing attackers to maintain access even after a password change.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_management",
+          "authentication",
+          "access_control",
+          "memos",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-memos-flaw-cve-2024-21635-allows-hackers-to-stay-logged-in-after-password-change/"
+        ],
+        "date": "2025-11-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Anthropic: China-backed hackers launch first large-scale autonomous AI cyberattack",
+        "description": "A sophisticated espionage campaign in September 2025, conducted by China-linked threat actors, utilized Anthropic's AI. Attackers leveraged advanced 'agentic' capabilities to automate and execute cyberattacks, moving beyond mere AI guidance.",
+        "threat_actor": "China-linked threat actors",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This attack signifies a new stage in state-sponsored actors' use of AI, transitioning from assistance to autonomy in executing cyberattacks. The impact is strategic, signaling a potential escalation in offensive capabilities and advanced espionage risks for governments and critical industries globally.",
+        "recommandations": [
+          "Deploy AI-powered defenses to counter AI-generated attacks",
+          "Strengthen detection of anomalous and autonomous behaviors",
+          "Invest in AI security research and countermeasures"
+        ],
+        "tags": [
+          "ai",
+          "cyberattack",
+          "espionage",
+          "china",
+          "state_sponsored",
+          "automation",
+          "agentic_ai",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184666/hacking/anthropic-china-backed-hackers-launch-first-large-scale-autonomous-ai-cyberattack.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Five admit helping North Korea evade sanctions through IT worker schemes",
+        "description": "Five individuals pleaded guilty to facilitating illegal IT worker schemes for North Korea, enabling it to secretly generate revenue and circumvent international sanctions, as announced by the U.S. Department of Justice.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The impact is significant for economic and national security, as it highlights methods used by states to bypass sanctions and fund their activities. Geographically, it affects countries seeking to enforce sanctions against North Korea, as well as businesses that could be unwittingly exploited by these workers.",
+        "recommandations": [
+          "Strengthen due diligence on IT service providers and remote employees",
+          "Enhance international cooperation to identify and disrupt sanctions evasion networks"
+        ],
+        "tags": [
+          "north_korea",
+          "sanctions_evasion",
+          "illicit_finance",
+          "cybercrime",
+          "it_worker_schemes",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184712/cyber-crime/five-admit-helping-north-korea-evade-sanctions-through-it-worker-schemes.html"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Phishing-as-a-Service Uncovered: Automated Kit Impersonates Aruba S.p.A. to Steal Credentials and Credit Cards",
+        "description": "A new report from Group-IB reveals a highly automated phishing framework designed to impersonate the Italian IT and web-services company Aruba S.p.A., aiming to steal login credentials and credit card information from its over 5.4 million customers.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "TA0001 Initial Access",
+          "T1566 Phishing",
+          "T1566.002 Spearphishing Link",
+          "TA0006 Credential Access",
+          "T1078 Valid Accounts"
+        ],
+        "analyse": "The impact is potentially very broad for Aruba S.p.A. customers, risking financial losses and identity theft. The automated nature of the PhaaS kit makes these attacks more scalable and accessible, increasing the threat to web service companies and their users globally.",
+        "recommandations": [
+          "Educate users about phishing risks",
+          "Implement multi-factor authentication (MFA)",
+          "Utilize email security gateways and phishing detection tools",
+          "Monitor for brand impersonation attempts"
+        ],
+        "tags": [
+          "phishing",
+          "phishing_as_a_service",
+          "paas",
+          "aruba",
+          "credential_theft",
+          "credit_card_theft",
+          "automation",
+          "group_ib",
+          "initial_access",
+          "credential_access"
+        ],
+        "sources": [
+          "https://securityonline.info/phishing-as-a-service-uncovered-automated-kit-impersonates-aruba-s-p-a-to-steal-credentials-and-credit-cards/"
+        ],
+        "date": "2025-11-17"
+      },
+      {
+        "title": "Record Supply Chain Attack: 150,000+ Malicious npm Packages Flooded Registry for Token Farming Rewards",
+        "description": "Amazon Inspector security researchers uncovered over 150,000 malicious npm packages linked to a coordinated tea.xyz token farming campaign, constituting one of the largest open-source supply chain incidents ever recorded.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoCs provided",
+        "mitre_ttps": [
+          "TA0001 Initial Access",
+          "T1195 Supply Chain Compromise",
+          "T1195.002 Compromise Software Supply Chain"
+        ],
+        "analyse": "This event poses a massive threat to the open-source ecosystem and all entities that depend on it. The impact is potentially financial (token farming) and could lead to the injection of malicious code into numerous applications. The risk is global given the ubiquity of npm packages in software development.",
+        "recommandations": [
+          "Implement security scans for software dependencies",
+          "Use internal and verified package repositories",
+          "Strengthen verification of open-source packages before integration",
+          "Raise developer awareness of supply chain risks"
+        ],
+        "tags": [
+          "supply_chain",
+          "npm",
+          "open_source",
+          "malicious_packages",
+          "token_farming",
+          "blockchain",
+          "amazon_inspector",
+          "initial_access",
+          "supply_chain_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/record-supply-chain-attack-150000-malicious-npm-packages-flooded-registry-for-token-farming-rewards/"
+        ],
+        "date": "2025-11-17"
+      }
+    ]
+  }
+}
