@@ -1,0 +1,678 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Les tendances observées révèlent une intensification des attaques hautement impactantes ciblant les vulnérabilités de la chaîne d'approvisionnement logicielle et l'infrastructure Cloud/AI. Les acteurs malveillants, tels que IronErn440, exploitent des failles critiques (comme CVE-2023-48022 dans Ray Clusters) pour le cryptojacking et l'exfiltration de données sensibles (modèles IA, code source). L'utilisation de l'IA par les attaquants pour générer des charges utiles complexes est également signalée. Le paysage des menaces est marqué par la multiplication des vulnérabilités critiques non authentifiées (RCE dans W3 Total Cache, FortiWeb) et des zero-days activement exploités (Google Chrome V8, FortiWeb, Windows Kernel EoP), nécessitant une réaction immédiate. Les groupes de Ransomware (Howling Scorpius/Akira, Inc Ransom) restent une menace prédominante, utilisant le social engineering (fausses CAPTCHA) et exploitant des lacunes fondamentales comme les patchs non appliqués et la réutilisation des identifiants (souvent récupérés via infostealers, comme vu avec l'acteur Kazu). Le secteur de la Santé est particulièrement ciblé par les fuites de données massives (Doctor Alliance, Weda), soulignant la criticité des données de santé et le risque lié aux systèmes d'information des professionnels. L'état général des menaces est élevé, caractérisé par des menaces persistantes (Ransomware, zero-days) et l'émergence de techniques d'attaque tirant parti des nouvelles technologies (AI infrastructure, LLM-generated payloads), exigeant une priorisation des correctifs basée sur le contexte réel d'exploitation plutôt que sur le seul score CVSS théorique.",
+      "date": "2025-11-19"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "IronErn440",
+        "secteur": "Infrastructure AI, Cloud, GPU/CPU hosting",
+        "modop": "Exploitation de la vulnérabilité RCE CVE-2023-48022 dans les Ray Clusters exposés. Utilisation de charges utiles générées par IA pour le cryptojacking, le vol de données (modèles IA, code source) et les attaques DDoS. Persistence via cron jobs et systemd.",
+        "tags": "actor, theat_actor, cryptojacking, RCE, botnet, AI_infrastructure",
+        "sources": "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/, https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet_ray_clusters/",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Howling Scorpius",
+        "secteur": "Stockage de données mondial, Infrastructure",
+        "modop": "Accès initial via social engineering (fausse CAPTCHA/ClickFix) pour livrer SectopRAT. Mouvement latéral en utilisant des identifiants privilégiés. Exfiltration de données et déploiement du ransomware Akira.",
+        "tags": "actor, theat_actor, ransomware, Akira, social_engineering, exfiltration",
+        "sources": "https://unit42.paloaltonetworks.com/fake-captcha-to-compromise/",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Inc Ransom",
+        "secteur": "Gouvernement (Justice)",
+        "modop": "Attaque par ransomware/extorsion, vol de 5,7 TB de données sensibles (fichiers d'enquêtes, données personnelles/médicales).",
+        "tags": "actor, theat_actor, ransomware, extorsion, gouvernement",
+        "sources": "https://securityaffairs.com/184795/data-breach/pennsylvania-office-of-the-attorney-general-oag-confirms-data-breach-after-august-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Kazu",
+        "secteur": "Santé (Services aux médecins)",
+        "modop": "Double violation de données. Exploitation de vulnérabilité non patchée combinée à l'utilisation de comptes administrateur compromis (via des logs d'infostealers). Exfiltration massive de données de santé (PHI).",
+        "tags": "actor, theat_actor, fuite_de_donnees, unpatched_vulnerability, healthcare, infostealer",
+        "sources": "https://databreaches.net/2025/11/18/from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor/?pk_campaign=feed&pk_kwd=from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Asie-Pacifique",
+        "theme": "Tensions Régionales, Souveraineté",
+        "description": "Escalade des tensions entre Pékin et Tokyo concernant Taïwan, suite à la déclaration du Premier ministre japonais (Sanae Takaichi) prêt à recourir à la force en cas de menace territoriale ou de blocus. Contexte de désengagement américain.",
+        "tags": "geopolitique, geopolitic, Taiwan, Japon, Chine, souverainete",
+        "sources": "https://www.iris-france.org/tensions-entre-pekin-et-tokyo-sur-taiwan/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Défense, Afrique",
+        "theme": "Crise au Sahel, Ingérence étrangère",
+        "description": "Le Sahel central (Mali, Burkina Faso, Niger) est en proie au chaos. Les juntes militaires ont aggravé la crise sécuritaire, favorisé l'expansion djihadiste (GSIM) et remplacé la coopération occidentale par de nouveaux partenariats (Russie/Chine).",
+        "tags": "geopolitique, geopolitic, Afrique, Sahel, Mali, Burkina_Faso, Niger, djihadisme, Russie",
+        "sources": "https://www.iris-france.org/mali-burkina-faso-et-niger-de-lenthousiasme-a-la-desillusion/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Défense, Sécurité Stratégique",
+        "theme": "Dissuasion Nucléaire",
+        "description": "Analyse du désordre croissant dans les mécanismes de dissuasion nucléaire, alimenté par des essais (Russie/USA/Trump) et une rhétorique agressive, menant à une potentielle spirale de course aux armements.",
+        "tags": "geopolitique, geopolitic, dissuasion_nucleaire, course_aux_armements, Russie, USA",
+        "sources": "https://www.iris-france.org/le-grand-desordre-de-la-dissuasion-nucleaire/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Cybercrime, Géopolitique",
+        "theme": "Lutte contre le cybercrime organisé",
+        "description": "La police néerlandaise a démantelé un important service d'hébergement 'bulletproof hosting' (potentiellement CrazyRDP), ayant saisi 250 serveurs et lié cette infrastructure à plus de 80 enquêtes de cybercriminalité depuis 2022.",
+        "tags": "geopolitique, geopolitic, cybercrime, bulletproof_hosting, Pays_Bas",
+        "sources": "https://securityaffairs.com/184757/cyber-crime/dutch-police-takes-down-bulletproof-hosting-hub-linked-to-80-cybercrime-cases.html",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Doctor Alliance",
+        "description": "Deux violations consécutives par 'Kazu'. Vol de 1.27 TB (5 millions de fichiers) de Données de Santé Protégées (PHI), exploitant la même vulnérabilité non corrigée et utilisant des identifiants d'administrateur volés.",
+        "tags": "violation, breach, sante, healthcare, PHI, ransomware, fuite_de_donnees, Kazu",
+        "sources": "https://databreaches.net/2025/11/18/from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor/?pk_campaign=feed&pk_kwd=from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Administration Publique, France",
+        "victime": "Pajemploi (URSSAF)",
+        "description": "Violation de données affectant 1,2 million de personnes (parents employeurs et assistants maternels) suite à une intrusion dans les systèmes d'information. Données personnelles exposées.",
+        "tags": "violation, breach, administration, public, France, Pajemploi, URSSAF, fuite_de_donnees",
+        "sources": "https://www.bleepingcomputer.com/news/security/french-agency-pajemploi-reports-data-breach-affecting-12m-people/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Administration Publique, Justice",
+        "victime": "Pennsylvania Office of the Attorney General (OAG)",
+        "description": "Confirmation d'une violation de données après l'attaque par ransomware du groupe Inc Ransom en août 2025. Vol de 5.7 TB de données sensibles, y compris des informations personnelles et médicales.",
+        "tags": "violation, breach, gouvernement, justice, ransomware, Inc_Ransom, fuite_de_donnees",
+        "sources": "https://securityaffairs.com/184795/data-breach/pennsylvania-office-of-the-attorney-general-oag-confirms-data-breach-after-august-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Logistique, Livraison",
+        "victime": "DoorDash",
+        "description": "Violation de données suite à une attaque d'ingénierie sociale ciblant un employé. Exposition de noms, adresses, emails et numéros de téléphone des utilisateurs, Dashers et commerçants.",
+        "tags": "violation, breach, logistique, social_engineering, fuite_de_donnees",
+        "sources": "https://securityaffairs.com/184780/data-breach/doordash-data-breach-exposes-personal-info-after-social-engineering-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Santé, Logiciel",
+        "victime": "Weda (Logiciel médical)",
+        "description": "Cyberattaque provoquant la paralysie du logiciel de gestion de dossiers médicaux utilisé par 23 000 professionnels de santé en France, avec fuite potentielle de dossiers patients.",
+        "tags": "violation, breach, sante, healthcare, logiciel, France, Weda, fuite_de_donnees",
+        "sources": "https://www.lemonde.fr/pixels/article/2025/11/18/une-cyberattaque-contre-weda-logiciel-utilise-par-des-milliers-de-medecins-provoque-paralysie-et-fuite-de-donnees_6653915_4408996.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Télécommunications, Technologie de Surveillance",
+        "victime": "Protei",
+        "description": "Le fournisseur de technologie de surveillance et de censure (basé en Russie/Jordanie) a été piraté, ses données volées et son site web défiguré.",
+        "tags": "violation, breach, telecommunications, surveillance, piratage",
+        "sources": "https://databreaches.net/2025/11/18/surveillance-tech-provider-protei-was-hacked-its-data-stolen-and-its-website-defaced/?pk_campaign=feed&pk_kwd=surveillance-tech-provider-protei-was-hacked-its-data-stolen-and-its-website-defaced",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-60724",
+        "cvss": "9.8",
+        "product": "Microsoft Graphics Component (GDI+)",
+        "description": "Exécution de code à distance critique (RCE) via un débordement de tampon basé sur le tas dans GDI+.",
+        "tags": "vulnerabilité, vulnerability, RCE, Microsoft, GDI+, critique, critical",
+        "sources": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2023-48022",
+        "cvss": "9.8",
+        "product": "Ray (Framework AI)",
+        "description": "Exécution de code à distance (RCE) non patchée dans les clusters Ray exposés, activement exploitée par IronErn440 (ShadowRay 2.0).",
+        "tags": "vulnerabilité, vulnerability, RCE, zero_day, Ray, AI_infrastructure, cryptomining, exploitation",
+        "sources": "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/, https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet-ray-clusters/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-13051",
+        "cvss": "9.3",
+        "product": "ABP and AES service",
+        "description": "Exécution de code non autorisée avec privilèges LocalSystem via un chemin de recherche non contrôlé (DLL planting).",
+        "tags": "vulnerabilité, vulnerability, RCE, EoP, DLL_planting, critique, critical, LocalSystem",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-13051",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-65015",
+        "cvss": "9.2",
+        "product": "joserfc Python library",
+        "description": "Consommation de ressources non contrôlée (DoS) déclenchée par l'enregistrement de charges utiles JWT arbitrairement grandes.",
+        "tags": "vulnerabilité, vulnerability, DoS, JWT, supply_chain, python, critique, critical",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-65015",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-9501",
+        "cvss": "9.0",
+        "product": "W3 Total Cache (WordPress Plugin)",
+        "description": "Injection de commande non authentifiée (RCE) via la fonction plugin_parse_dynamic_mfunc.",
+        "tags": "vulnerabilité, vulnerability, RCE, Wordpress, command_injection, unauthenticated, critique, critical",
+        "sources": "https://thecyberexpress.com/w3-total-cache-cve-2025-9501-wordpress-risk/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-58692",
+        "cvss": "8.8",
+        "product": "Fortinet FortiVoice",
+        "description": "Injection SQL (SQLi) permettant l'exécution de code ou de commandes non autorisées par un attaquant authentifié.",
+        "tags": "vulnerabilité, vulnerability, SQLi, Fortinet, FortiVoice, RCE, authentification",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-58692",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64324",
+        "cvss": "8.5",
+        "product": "KubeVirt (Kubernetes add-on)",
+        "description": "Lecture et écriture arbitraire de fichiers hôtes via un bug logique dans la fonctionnalité hostDisk.",
+        "tags": "vulnerabilité, vulnerability, kubernetes, cloud, containerization, privilege_escalation",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-64324",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64325",
+        "cvss": "8.4",
+        "product": "Emby Server",
+        "description": "Exécution de code à distance (RCE) via Cross-Site Scripting (XSS) dans le tableau de bord d'administration (authentification requise).",
+        "tags": "vulnerabilité, vulnerability, RCE, XSS, Emby_Server, authentification",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-64325",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-12852",
+        "cvss": "8.4",
+        "product": "NEC RakurakuMusen Start EX",
+        "description": "Exécution de code à distance (RCE) par chargement de DLL (DLL Loading).",
+        "tags": "vulnerabilité, vulnerability, RCE, DLL_Loading, NEC",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-12852",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-62406",
+        "cvss": "8.1",
+        "product": "Piwigo",
+        "description": "Prise de contrôle de compte en un clic via la manipulation de l'en-tête Host lors de la réinitialisation du mot de passe (Faille d'authentification).",
+        "tags": "vulnerabilité, vulnerability, account_takeover, authentification, Piwigo",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-62406",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-30398",
+        "cvss": "8.1",
+        "product": "Nuance PowerScribe 360/One",
+        "description": "Divulgation d'informations critique due à une autorisation manquante, permettant la divulgation des paramètres de configuration.",
+        "tags": "vulnerabilité, vulnerability, information_disclosure, Nuance, healthcare, authentification",
+        "sources": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": "6.7",
+        "product": "FortiWeb",
+        "description": "Injection de commande OS (Authenticated), activement exploitée comme zero-day. Potentiel de chaîne d'attaque pour obtenir une RCE non authentifiée.",
+        "tags": "vulnerabilité, vulnerability, zero_day, OS_Command_Injection, Fortinet, exploitation, authentication",
+        "sources": "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch, https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-13223",
+        "cvss": "N/A",
+        "product": "Google Chrome (V8)",
+        "description": "Confusion de type V8 (Type Confusion), activement exploitée comme zero-day, pouvant entraîner une exécution de code. (7ème zero-day Chrome en 2025).",
+        "tags": "vulnerabilité, vulnerability, zero_day, Type_Confusion, exploitation, Google_Chrome",
+        "sources": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1018/, https://securityaffairs.com/184764/hacking/google-fixed-the-seventh-chrome-zero-day-in-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "N/A",
+        "product": "FortiWeb",
+        "description": "Zero-day FortiWeb activement exploité permettant l'exécution non authentifiée de commandes administratives via une traversée de chemin relatif (Partie de chaîne RCE).",
+        "tags": "vulnerabilité, vulnerability, zero_day, path_traversal, Fortinet, exploitation, unauthenticated",
+        "sources": "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch, https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+        "date": "2025-11-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Anatomie d'une attaque Ransomware Akira : une fausse CAPTCHA conduit à 42 jours de compromission par Howling Scorpius",
+        "description": "Incident de 42 jours contre une entreprise mondiale de stockage de données, orchestré par Howling Scorpius (Akira). L'accès initial a été obtenu via une attaque de social engineering \"ClickFix\" (fausse CAPTCHA) téléchargeant le malware SectopRAT. L'acteur a compromis des comptes privilégiés, exfiltré 1 TB de données via FileZillaPortable et déployé le ransomware Akira après la suppression des sauvegardes.",
+        "threat_actor": "Howling Scorpius (Akira Ransomware)",
+        "indicator_of_compromise": [
+          "SectopRAT",
+          "FileZillaPortable (utilisé pour exfiltration)"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1566.001:Phishing (Social Engineering)",
+          "T1219:Remote Access Software (SectopRAT RAT)",
+          "T1078.002:Domain Accounts",
+          "T1021.001:Remote Desktop Protocol",
+          "T1021.004:SSH",
+          "T1486:Data Encrypted for Impact (Akira)",
+          "T1490:Inhibit System Recovery (Backup deletion)"
+        ],
+        "analyse": "L'incident illustre le risque persistant lié à l'erreur humaine (social engineering) et le danger du 'silence' (logs sans alertes) dans les environnements sécurisés. Le délai de 42 jours met en lumière l'importance d'une détection et d'une réponse rapides aux TTPs post-exploitation.",
+        "recommandations": [
+          "Renforcer la sensibilisation contre le social engineering (ClickFix/CAPTCHA malveillants).",
+          "Mettre en œuvre une surveillance comportementale granulaire pour détecter l'utilisation anormale de protocoles légitimes (RDP/SSH) et l'exécution d'outils d'exfiltration (FileZillaPortable).",
+          "S'assurer que les solutions EDR/XDR sont correctement configurées pour générer des alertes sur les TTPs clés (ex: suppression de sauvegardes)."
+        ],
+        "tags": "ransomware, Howling_Scorpius, Akira, social_engineering, SectopRAT, exfiltration, T1566, T1486, DFIR, T1078",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/fake-captcha-to-compromise/"
+        ],
+        "date": "2025-11-19"
+      },
+      {
+        "title": "Exploitation active de deux vulnérabilités zero-day FortiWeb (CVE-2025-58034 et CVE-2025-64446) par des acteurs malveillants",
+        "description": "Fortinet a publié des correctifs pour deux zero-days FortiWeb activement exploités dans la nature. CVE-2025-58034 est une injection de commande OS (authentifiée) et CVE-2025-64446 permet l'exécution non authentifiée de commandes administratives. Les deux failles pourraient être chaînées pour obtenir une exécution de code à distance non authentifiée sur le pare-feu d'application Web (WAF).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "Aucun IoC spécifique n'est fourni"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1190:Exploit Public-Facing Application"
+        ],
+        "analyse": "Les appliances Fortinet, en tant qu'actifs périmétriques critiques, sont des cibles primordiales pour les acteurs sophistiqués. L'exploitation simultanée de multiples zero-days expose les organisations à un risque de contournement de leurs protections de périphérie.",
+        "recommandations": [
+          "Appliquer immédiatement les mises à jour de sécurité Fortinet (FortiWeb).",
+          "Limiter l'accès à l'interface de gestion FortiWeb aux réseaux de confiance uniquement.",
+          "Surveiller les logs WAF pour toute tentative d'injection de commandes ou de traversée de chemin visant le répertoire de l'application."
+        ],
+        "tags": "zero_day, Fortinet, FortiWeb, OS_Command_Injection, Path_Traversal, RCE, T1190, exploitation, WAF, périmètre, authentification",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+          "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-fortinet-products-could-allow-for-arbitrary-code-execution_2025-108"
+        ],
+        "date": "2025-11-19"
+      },
+      {
+        "title": "Campagne ShadowRay 2.0 ciblant les clusters Ray non sécurisés pour le cryptojacking et l'espionnage",
+        "description": "L'acteur IronErn440 exploite la vulnérabilité RCE CVE-2023-48022 (CVSS 9.8) dans les clusters Ray (plateforme de calcul distribué pour l'IA) exposés à Internet. Utilisation de charges utiles générées par des LLM pour déployer un botnet auto-propagateur de cryptomining. L'attaque permet aussi le mouvement latéral, le vol de données sensibles (modèles AI, code source) et le lancement d'attaques DDoS.",
+        "threat_actor": "IronErn440",
+        "indicator_of_compromise": [
+          "interact[.]sh",
+          "dns-filter (nom de processus factice)"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1584:Compromise Infrastructure",
+          "T1496:Resource Hijacking (Cryptomining)",
+          "T1071.001:Application Layer Protocol (Python reverse shells)",
+          "T1547.001:Boot or Logon Autostart Execution (Persistence)"
+        ],
+        "analyse": "Impact critique sur l'infrastructure d'IA et de calcul haute performance. L'exploitation cible une vulnérabilité non patchée par conception (Ray étant prévu pour un environnement de confiance), exposant les organisations à un risque de supply chain indirect. L'utilisation présumée de l'IA pour générer les charges utiles marque une sophistication croissante des attaquants.",
+        "recommandations": [
+          "Isoler les clusters Ray dans des environnements de réseau strictement contrôlés et non exposés à Internet.",
+          "Surveiller l'utilisation anormale des ressources CPU/GPU.",
+          "Déployer des règles de détection basées sur les noms de processus factices (ex: ‘dns-filter’).",
+          "Mettre en œuvre des contrôles d'accès forts même si la plateforme est considérée comme interne."
+        ],
+        "tags": "AI_infrastructure, RCE, cryptojacking, botnet, T1496, T1584, CVE-2023-48022, IronErn440, LLM_usage, exfiltration",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet_ray_clusters/"
+        ],
+        "date": "2025-11-19"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The observed trends show an intensification of high-impact attacks targeting software supply chain vulnerabilities and Cloud/AI infrastructure. Malicious actors, such as IronErn440, are exploiting critical flaws (like CVE-2023-48022 in Ray Clusters) for cryptojacking and the exfiltration of sensitive data (AI models, source code). The use of AI by attackers to generate complex payloads is also reported. The threat landscape is characterized by multiple critical unauthenticated vulnerabilities (RCE in W3 Total Cache, FortiWeb) and actively exploited zero-days (Google Chrome V8, FortiWeb, Windows Kernel EoP), demanding immediate remediation. Ransomware groups (Howling Scorpius/Akira, Inc Ransom) remain a dominant threat, employing social engineering (fake CAPTCHA) and exploiting fundamental shortcomings like unapplied patches and credential reuse (often harvested via infostealers, as seen with actor Kazu). The Healthcare sector is particularly affected by massive data leaks (Doctor Alliance, Weda), highlighting the criticality of health data and the risks associated with professional information systems. The overall threat level is high, characterized by persistent threats (Ransomware, zero-days) and the emergence of attack techniques leveraging new technologies (AI infrastructure, LLM-generated payloads), requiring patch prioritization based on real-world exploitation context rather than solely on the theoretical CVSS score.",
+      "date": "2025-11-19"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "IronErn440",
+        "secteur": "AI Infrastructure, Cloud, GPU/CPU hosting",
+        "modop": "Exploiting RCE vulnerability CVE-2023-48022 in exposed Ray Clusters. Uses AI-generated payloads for cryptojacking, data theft (AI models, source code), and DDoS attacks. Persistence via cron jobs and systemd.",
+        "tags": "actor, theat_actor, cryptojacking, RCE, botnet, AI_infrastructure",
+        "sources": "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/, https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet_ray_clusters/",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Howling Scorpius",
+        "secteur": "Global Data Storage, Infrastructure (Target: Storage company)",
+        "modop": "Initial access via social engineering (fake CAPTCHA/ClickFix) to deliver SectopRAT. Lateral movement using retrieved privileged credentials. Data exfiltration and deployment of Akira ransomware.",
+        "tags": "actor, theat_actor, ransomware, Akira, social_engineering, exfiltration",
+        "sources": "https://unit42.paloaltonetworks.com/fake-captcha-to-compromise/",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Inc Ransom",
+        "secteur": "Government (Legal)",
+        "modop": "Ransomware/extortion attack, resulting in the theft of 5.7 TB of sensitive data (investigation files, personal/medical data).",
+        "tags": "actor, theat_actor, ransomware, extortion, government",
+        "sources": "https://securityaffairs.com/184795/data-breach/pennsylvania-office-of-the-attorney-general-oag-confirms-data-breach-after-august-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "nom": "Kazu",
+        "secteur": "Healthcare (Medical Services)",
+        "modop": "Double data breach. Exploitation of an unpatched vulnerability combined with the use of compromised administrator accounts (via infostealer logs). Massive exfiltration of Protected Health Information (PHI).",
+        "tags": "actor, theat_actor, data_leak, unpatched_vulnerability, healthcare, infostealer",
+        "sources": "https://databreaches.net/2025/11/18/from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor/?pk_campaign=feed&pk_kwd=from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Asia-Pacific",
+        "theme": "Regional Tensions, Sovereignty",
+        "description": "Escalating tensions between Beijing and Tokyo over Taiwan, following a statement by the Japanese Prime Minister (Sanae Takaichi) expressing readiness to use force in case of territorial threat or blockade. This occurs amidst perceived US disengagement.",
+        "tags": "geopolitique, geopolitic, Taiwan, Japan, China, sovereignty",
+        "sources": "https://www.iris-france.org/tensions-entre-pekin-et-tokyo-sur-taiwan/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Defense, Africa",
+        "theme": "Sahel Crisis, Foreign Interference",
+        "description": "The Central Sahel (Mali, Burkina Faso, Niger) is engulfed in chaos. Military juntas have worsened the security crisis, favored jihadist expansion (GSIM), and replaced Western cooperation with new partnerships (Russia/China).",
+        "tags": "geopolitique, geopolitic, Africa, Sahel, Mali, Burkina_Faso, Niger, jihadism, Russia",
+        "sources": "https://www.iris-france.org/mali-burkina-faso-et-niger-de-lenthousiasme-a-la-desillusion/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Defense, Strategic Security",
+        "theme": "Nuclear Deterrence",
+        "description": "Analysis of the growing disorder in nuclear deterrence mechanisms (Russia/US/Trump), fueled by tests and aggressive rhetoric, potentially leading to an arms race spiral.",
+        "tags": "geopolitique, geopolitic, nuclear_deterrence, arms_race, Russia, USA",
+        "sources": "https://www.iris-france.org/le-grand-desordre-de-la-dissuasion-nucleaire/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Cybercrime, Geopolitics",
+        "theme": "Fight against Organized Cybercrime",
+        "description": "Dutch police dismantled a major 'bulletproof hosting' service (potentially CrazyRDP), seizing 250 servers and linking the infrastructure to over 80 cybercrime investigations since 2022.",
+        "tags": "geopolitique, geopolitic, cybercrime, bulletproof_hosting, Netherlands",
+        "sources": "https://securityaffairs.com/184757/cyber-crime/dutch-police-takes-down-bulletproof-hosting-hub-linked-to-80-cybercrime-cases.html",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Doctor Alliance",
+        "description": "Two consecutive breaches by 'Kazu'. Theft of 1.27 TB (5 million files) of Protected Health Information (PHI), exploiting the same unpatched vulnerability and using stolen administrator credentials.",
+        "tags": "violation, breach, healthcare, PHI, ransomware, data_leak, Kazu",
+        "sources": "https://databreaches.net/2025/11/18/from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor/?pk_campaign=feed&pk_kwd=from-bad-to-worse-doctor-alliance-hacked-again-by-same-threat-actor",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Government Administration, France",
+        "victime": "Pajemploi (URSSAF)",
+        "description": "Data breach affecting 1.2 million individuals (employing parents and home-based caregivers) following an intrusion into information systems. Personal data exposed.",
+        "tags": "violation, breach, government, public, France, Pajemploi, URSSAF, data_leak",
+        "sources": "https://www.bleepingcomputer.com/news/security/french-agency-pajemploi-reports-data-breach-affecting-12m-people/",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Government Administration, Legal",
+        "victime": "Pennsylvania Office of the Attorney General (OAG)",
+        "description": "Confirmation of a data breach following the Inc Ransom group's ransomware attack in August 2025. 5.7 TB of sensitive data stolen, including personal and medical information.",
+        "tags": "violation, breach, government, legal, ransomware, Inc_Ransom, data_leak",
+        "sources": "https://securityaffairs.com/184795/data-breach/pennsylvania-office-of-the-attorney-general-oag-confirms-data-breach-after-august-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Logistics, Delivery",
+        "victime": "DoorDash",
+        "description": "Data breach following a social engineering attack targeting an employee. Exposure of names, addresses, emails, and phone numbers of users, Dashers, and merchants.",
+        "tags": "violation, breach, logistics, social_engineering, data_leak",
+        "sources": "https://securityaffairs.com/184780/data-breach/doordash-data-breach-exposes-personal-info-after-social-engineering-attack.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Healthcare, Software",
+        "victime": "Weda (Medical Software)",
+        "description": "Cyberattack causing paralysis of the medical record management software used by 23,000 health professionals in France, with potential patient file leakage.",
+        "tags": "violation, breach, healthcare, software, France, Weda, data_leak",
+        "sources": "https://www.lemonde.fr/pixels/article/2025/11/18/une-cyberattaque-contre-weda-logiciel-utilise-par-des-milliers-de-medecins-provoque-paralysie-et-fuite-de-donnees_6653915_4408996.html",
+        "date": "2025-11-19"
+      },
+      {
+        "secteur": "Telecommunications, Surveillance Technology",
+        "victime": "Protei",
+        "description": "The surveillance and censorship technology provider (based in Russia/Jordan) was hacked, its data stolen, and its website defaced.",
+        "tags": "violation, breach, telecommunications, surveillance, hacking",
+        "sources": "https://databreaches.net/2025/11/18/surveillance-tech-provider-protei-was-hacked-its-data-stolen-and-its-website-defaced/?pk_campaign=feed&pk_kwd=surveillance-tech-provider-protei-was-hacked-its-data-stolen-and-its-website-defaced",
+        "date": "2025-11-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-60724",
+        "cvss": "9.8",
+        "product": "Microsoft Graphics Component (GDI+)",
+        "description": "Critical Remote Code Execution (RCE) via a heap-based buffer overflow in GDI+.",
+        "tags": "vulnerabilité, vulnerability, RCE, Microsoft, GDI+, critique, critical",
+        "sources": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2023-48022",
+        "cvss": "9.8",
+        "product": "Ray (AI Framework)",
+        "description": "Unpatched Remote Code Execution (RCE) in exposed Ray Clusters, actively exploited by IronErn440 (ShadowRay 2.0).",
+        "tags": "vulnerabilité, vulnerability, RCE, zero_day, Ray, AI_infrastructure, cryptomining, exploitation",
+        "sources": "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/, https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet_ray_clusters/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-13051",
+        "cvss": "9.3",
+        "product": "ABP and AES service",
+        "description": "Unauthorized Code Execution with LocalSystem privileges via an uncontrolled search path element (DLL planting).",
+        "tags": "vulnerabilité, vulnerability, RCE, EoP, DLL_planting, critique, critical, LocalSystem",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-13051",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-65015",
+        "cvss": "9.2",
+        "product": "joserfc Python library",
+        "description": "Possible Uncontrolled Resource Consumption (DoS) triggered by logging arbitrarily large JWT token payloads.",
+        "tags": "vulnerabilité, vulnerability, DoS, JWT, supply_chain, python, critique, critical",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-65015",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-9501",
+        "cvss": "9.0",
+        "product": "W3 Total Cache (WordPress Plugin)",
+        "description": "Unauthenticated Command Injection (RCE) via the plugin_parse_dynamic_mfunc function.",
+        "tags": "vulnerabilité, vulnerability, RCE, Wordpress, command_injection, unauthenticated, critique, critical",
+        "sources": "https://thecyberexpress.com/w3-total-cache-cve-2025-9501-wordpress-risk/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-58692",
+        "cvss": "8.8",
+        "product": "Fortinet FortiVoice",
+        "description": "SQL Injection (SQLi) allowing authenticated attacker to execute unauthorized code or commands.",
+        "tags": "vulnerabilité, vulnerability, SQLi, Fortinet, FortiVoice, RCE, authentification",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-58692",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64324",
+        "cvss": "8.5",
+        "product": "KubeVirt (Kubernetes add-on)",
+        "description": "Arbitrary Host File Read and Write via a logic bug in the hostDisk feature.",
+        "tags": "vulnerabilité, vulnerability, kubernetes, cloud, containerization, privilege_escalation",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-64324",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64325",
+        "cvss": "8.4",
+        "product": "Emby Server",
+        "description": "Remote Code Execution (RCE) via Cross-Site Scripting (XSS) in the Admin dashboard (requires authentication).",
+        "tags": "vulnerabilité, vulnerability, RCE, XSS, Emby_Server, authentification",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-64325",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-12852",
+        "cvss": "8.4",
+        "product": "NEC RakurakuMusen Start EX",
+        "description": "Remote Code Execution (RCE) via DLL Loading vulnerability.",
+        "tags": "vulnerabilité, vulnerability, RCE, DLL_Loading, NEC",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-12852",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-62406",
+        "cvss": "8.1",
+        "product": "Piwigo",
+        "description": "One-click account takeover by modifying the Host header in the password-reset link (Authentication flaw).",
+        "tags": "vulnerabilité, vulnerability, account_takeover, authentification, Piwigo",
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-62406",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-30398",
+        "cvss": "8.1",
+        "product": "Nuance PowerScribe 360/One",
+        "description": "Critical Information Disclosure due to missing authorization, allowing disclosure of configuration settings.",
+        "tags": "vulnerabilité, vulnerability, information_disclosure, Nuance, healthcare, authentification",
+        "sources": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": "6.7",
+        "product": "FortiWeb",
+        "description": "Authenticated OS Command Injection, actively exploited as a zero-day. Potential for attack chaining to achieve unauthenticated RCE.",
+        "tags": "vulnerabilité, vulnerability, zero_day, OS_Command_Injection, Fortinet, exploitation, authentication",
+        "sources": "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch, https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-13223",
+        "cvss": "N/A",
+        "product": "Google Chrome (V8)",
+        "description": "V8 Type Confusion, actively exploited as a zero-day, potentially leading to code execution. (7th Chrome zero-day in 2025).",
+        "tags": "vulnerabilité, vulnerability, zero_day, Type_Confusion, exploitation, Google_Chrome",
+        "sources": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1018/, https://securityaffairs.com/184764/hacking/google-fixed-the-seventh-chrome-zero-day-in-2025/",
+        "date": "2025-11-19"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "N/A",
+        "product": "FortiWeb",
+        "description": "Actively exploited FortiWeb zero-day allowing unauthenticated execution of administrative commands via relative path traversal (Part of RCE chain).",
+        "tags": "vulnerabilité, vulnerability, zero_day, path_traversal, Fortinet, exploitation, unauthenticated",
+        "sources": "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch, https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+        "date": "2025-11-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Anatomy of an Akira Ransomware Attack: When a Fake CAPTCHA Led to 42 Days of Compromise by Howling Scorpius",
+        "description": "42-day incident against a global data storage company, orchestrated by Howling Scorpius (Akira distributor). Initial access was gained via a 'ClickFix' social engineering attack (fake CAPTCHA) downloading the SectopRAT malware. The actor compromised privileged accounts, exfiltrated 1 TB of data via FileZillaPortable, and deployed Akira ransomware after deleting backups.",
+        "threat_actor": "Howling Scorpius (Akira Ransomware)",
+        "indicator_of_compromise": [
+          "SectopRAT",
+          "FileZillaPortable (used for exfiltration)"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1566.001:Phishing (Social Engineering)",
+          "T1219:Remote Access Software (SectopRAT RAT)",
+          "T1078.002:Domain Accounts",
+          "T1021.001:Remote Desktop Protocol",
+          "T1021.004:SSH",
+          "T1486:Data Encrypted for Impact (Akira)",
+          "T1490:Inhibit System Recovery (Backup deletion)"
+        ],
+        "analyse": "The incident highlights the persistent risk posed by human error (social engineering) and the danger of 'silent' security environments (logs without alerts). The 42-day dwell time underscores the importance of rapid detection and response to post-exploitation TTPs.",
+        "recommandations": [
+          "Reinforce employee awareness against social engineering (malicious CAPTCHA/ClickFix).",
+          "Implement granular behavioral monitoring to detect abnormal use of legitimate protocols (RDP/SSH) and the execution of exfiltration tools (FileZillaPortable).",
+          "Ensure EDR/XDR solutions are properly tuned to alert on key TTPs (e.g., backup deletion)."
+        ],
+        "tags": "ransomware, Howling_Scorpius, Akira, social_engineering, SectopRAT, exfiltration, T1566, T1486, DFIR, T1078",
+        "sources": [
+          "https://unit42.paloaltonetworks.com/fake-captcha-to-compromise/"
+        ],
+        "date": "2025-11-19"
+      },
+      {
+        "title": "Active exploitation of two FortiWeb zero-day vulnerabilities (CVE-2025-58034 and CVE-2025-64446) by malicious actors",
+        "description": "Fortinet released patches for two actively exploited FortiWeb zero-days. CVE-2025-58034 is an authenticated OS Command Injection (CWE-78), while CVE-2025-64446 allows unauthenticated administrative command execution via relative path traversal. The threat lies in the potential chaining of these two flaws to achieve unauthenticated RCE on the critical FortiWeb WAF.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "No specific IoCs provided"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1190:Exploit Public-Facing Application"
+        ],
+        "analyse": "Fortinet security appliances, as critical perimeter assets, are prime targets for sophisticated actors. The simultaneous exploitation of multiple zero-days in the same WAF product demonstrates intense attacker pressure and exposes organizations to perimeter protection bypass risks.",
+        "recommandations": [
+          "Immediately apply Fortinet security updates (FortiWeb).",
+          "Limit access to the FortiWeb management interface strictly to trusted networks.",
+          "Monitor WAF logs for any attempts at command injection or path traversal targeting the application directory."
+        ],
+        "tags": "zero_day, Fortinet, FortiWeb, OS_Command_Injection, Path_Traversal, RCE, T1190, exploitation, WAF, perimeter, authentication",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/",
+          "https://fieldeffect.com/blog/fortiweb-flaw-exploited-before-patch",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-fortinet-products-could-allow-for-arbitrary-code-execution_2025-108"
+        ],
+        "date": "2025-11-19"
+      },
+      {
+        "title": "ShadowRay 2.0 campaign targeting exposed Ray clusters for cryptojacking and espionage",
+        "description": "Actor IronErn440 is exploiting the unpatched RCE vulnerability CVE-2023-48022 (CVSS 9.8) in exposed Ray Clusters (AI distributed computing framework). They utilize reportedly LLM-generated payloads to deploy a self-propagating cryptomining botnet. The attack also enables lateral movement, theft of sensitive data (AI models, source code), and launching DDoS attacks.",
+        "threat_actor": "IronErn440",
+        "indicator_of_compromise": [
+          "interact[.]sh",
+          "dns-filter (fake process name)"
+        ],
+        "mitre_ttps": [
+          "TA0001:Initial Access",
+          "T1584:Compromise Infrastructure",
+          "T1496:Resource Hijacking (Cryptomining)",
+          "T1071.001:Application Layer Protocol (Python reverse shells)",
+          "T1547.001:Boot or Logon Autostart Execution (Persistence)"
+        ],
+        "analyse": "Critical impact on AI and high-performance computing infrastructure. The exploitation targets a vulnerability left unpatched by design (Ray intended for trusted environments), exposing organizations to indirect supply chain risk if infrastructure is misconfigured. The alleged use of AI to generate payloads marks growing attacker sophistication.",
+        "recommandations": [
+          "Isolate Ray clusters in strictly controlled network environments, shielded from the public internet.",
+          "Monitor for abnormal CPU/GPU resource utilization.",
+          "Deploy detection rules based on fake process names (e.g., ‘dns-filter’).",
+          "Implement strong access controls even if the platform is deemed internal."
+        ],
+        "tags": "AI_infrastructure, RCE, cryptojacking, botnet, T1496, T1584, CVE-2023-48022, IronErn440, LLM_usage, exfiltration",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-shadowray-attacks-convert-ray-clusters-into-crypto-miners/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/18/selfreplicating_botnet_ray_clusters/"
+        ],
+        "date": "2025-11-19"
+      }
+    ]
+  }
+}
