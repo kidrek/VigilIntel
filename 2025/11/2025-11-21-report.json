@@ -1,0 +1,1634 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber en novembre 2025 est marqué par une intensification des attaques sophistiquées, avec une prépondérance des attaques sur la chaîne d'approapprovisionnement et une utilisation croissante de l'intelligence artificielle (IA) par les acteurs malveillants. Les groupes parrainés par des États, tels qu'APT24 et des acteurs liés à l'Iran, mènent des campagnes d'espionnage et de ciblage cinétique, brouillant les frontières entre les opérations cyber et les actions physiques. Des vulnérabilités critiques sont activement exploitées, notamment des failles d'exécution de code à distance (RCE) et d'élévation de privilèges dans des produits largement utilisés, nécessitant une vigilance et des patchs urgents. Les violations de données à grande échelle restent un problème persistant, souvent le résultat de compromissions de tiers ou de failles d'énumération massives. Enfin, le marché clandestin du cybercrime continue d'évoluer, tirant parti de nouvelles techniques comme les botnets basés sur Node.js et l'utilisation de contrats intelligents sur blockchain pour la résilience de l'infrastructure C2, tandis que l'IA abaisse la barrière à l'entrée pour le développement de malwares et les campagnes de phishing. Cette convergence de menaces exige une approche de sécurité multicouche, une intelligence des menaces en temps réel et une réponse agile pour protéger les infrastructures critiques et les données sensibles.",
+      "date": "2025-11-21"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT24",
+        "secteur": "Divers (visiteurs de sites web, entreprises de marketing numérique, entités à Taïwan)",
+        "modop": "Campagnes d'espionnage via compromission stratégique de sites web, attaques de la chaîne d'approvisionnement (injection JS), et phishing ciblé. Utilisation du malware BADAUDIO (downloader C++ chiffré, exécute Cobalt Strike Beacon), doté d'obfuscation avancée (control flow flattening), persistance via DLL Search Order Hijacking et fichiers complémentaires (VBS, BAT, LNK).",
+        "tags": "actor, threat_actor, espionnage, nation_state, china, bAUDIO, supply_chain_attack, phishing, watering_hole",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-exposes-badaudio-malware-used-in-apt24-espionage-campaigns/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Clop (Graceful Spider)",
+        "secteur": "Technologies (Oracle), clients d'Oracle (supply chain)",
+        "modop": "Attaques de ransomware et extorsion via exploitation de 0-day (Oracle E-Business Suite) pour exfiltrer des données sensibles. Mentionné pour une campagne d'extorsion massive.",
+        "tags": "actor, threat_actor, ransomware, extortion, supply_chain_attack, 0day_exploit",
+        "sources": [
+          "https://cybersecuritynews.com/oracle-breach-clop-ransomware/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Imperial Kitten",
+        "secteur": "Maritime",
+        "modop": "Opérations cybernétiques soutenant des attaques cinétiques réelles. Intrusion dans des plateformes AIS de navires, accès à des CCTV embarquées, puis recherche de données AIS sur des navires spécifiques avant des frappes de missiles. Acteur lié à l'Iran.",
+        "tags": "actor, threat_actor, nation_state, iran, cyber_kinetic, maritime, espionage",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "Utilisateurs grand public",
+        "modop": "Applications NodeJS malveillantes se faisant passer pour des outils d'IA ou des utilitaires. Effectue de la reconnaissance, exécute des commandes arbitraires en mémoire et peut potentiellement effectuer du cryptominage. Utilise des tâches planifiées pour la persistance.",
+        "tags": "actor, threat_actor, trojan, information_stealer, cryptomining, persistence, social_engineering, nodejs",
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "MuddyWater",
+        "secteur": "Gouvernement (Israël), infrastructure de surveillance",
+        "modop": "Opérations cybernétiques soutenant des attaques cinétiques réelles. Mise en place de serveurs de campagne, accès à des flux CCTV en direct de Jérusalem pour obtenir des renseignements en temps réel, coïncidant avec des frappes de missiles. Acteur lié à l'Iran.",
+        "tags": "actor, threat_actor, nation_state, iran, cyber_kinetic, surveillance, espionage",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Qilin",
+        "secteur": "Santé (cliniques de FIV), agences de recrutement",
+        "modop": "Attaques de ransomware avec exfiltration de données. Cible les cliniques de FIV au Royaume-Uni (London Women’s Clinic) et les agences de recrutement (Cornerstone Staffing) pour voler des données sensibles.",
+        "tags": "actor, threat_actor, ransomware, data_exfiltration, healthcare, recruitment",
+        "sources": [
+          "https://databreaches.net/2025/11/20/russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples/?pk_campaign=feed&pk_kwd=russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples",
+          "https://blog.talosintelligence.com/its-not-personal-its-just-business/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Rhadamanthys",
+        "secteur": "Utilisateurs grand public, cryptomonnaies",
+        "modop": "Infostealer écrit en C++, vendu comme service. Vole les identifiants, les portefeuilles de cryptomonnaies et les données de navigateur. Diffusé via des campagnes de phishing par e-mail, des publicités Google et des campagnes 'paste-and-run'. Interrompu par l'opération Endgame d'Europol.",
+        "tags": "actor, threat_actor, information_stealer, malware_as_a_service, phishing, cryptocurrency",
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Scattered Lapsus$ Hunters (ShinyHunters)",
+        "secteur": "IT, CRM (Salesforce, Gainsight), clients de Salesforce",
+        "modop": "Vol de données clients via la compromission d'applications tierces connectées à Salesforce (ex: Salesloft, Gainsight). Exploite des jetons OAuth volés pour accéder aux instances Salesforce. Revendique l'accès à 285 instances Salesforce supplémentaires.",
+        "tags": "actor, threat_actor, data_breach, supply_chain_attack, oauth_tokens, it, crm",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/salesforce-investigates-customer-data-theft-via-gainsight-breach/",
+          "https://databreaches.net/2025/11/20/threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce/?pk_campaign=feed&pk_kwd=threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Sturnus",
+        "secteur": "Services financiers (banque), utilisateurs d'applications de messagerie sécurisée (WhatsApp, Telegram, Signal)",
+        "modop": "Cheval de Troie bancaire Android avec des capacités complètes de prise de contrôle de l'appareil. Contourne le chiffrement des messages en capturant le contenu à l'écran, vole les identifiants bancaires, contrôle l'appareil à distance et masque les actions frauduleuses. Utilise des superpositions HTML et un keylogging basé sur l'accessibilité.",
+        "tags": "actor, threat_actor, mobile_malware, banking_trojan, android, data_theft, remote_control, keylogger",
+        "sources": [
+          "https://securityaffairs.com/184878/cyber-crime/sturnus-new-android-banking-trojan-targets-whatsapp-telegram-and-signal.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Tsundere (koneko)",
+        "secteur": "Industrie du jeu (piraterie), utilisateurs Windows/Linux/macOS",
+        "modop": "Nouveau botnet basé sur Node.js, utilisant les contrats intelligents Ethereum pour la résilience de l'infrastructure C2. Diffusé via des installeurs MSI déguisés en jeux populaires et des scripts PowerShell. Cible la région non-CIS. L'auteur, 'koneko', est également lié au 123 Stealer.",
+        "tags": "actor, threat_actor, botnet, nodejs, blockchain, ethereum, c2, malware_delivery, information_stealer",
+        "sources": [
+          "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Industrie, Économie",
+        "theme": "Guerre économique et protection de la Base Industrielle et Technologique de Défense (BITD) française",
+        "description": "La France fait face à une guerre économique intense, ciblant particulièrement sa BITD (4 000 entreprises, 80% des PME sont des cibles). Entre 500 et 550 attaques caractérisées sont recensées annuellement, incluant pressions capitalistiques, intrusions informatiques, espionnage et manipulations. Les principaux agresseurs proviennent de Russie, Chine, États-Unis et Allemagne. La France a renforcé ses dispositifs (création DID, augmentation SISSE et DRSD, loi de blocage de 1968, contrôle des investissements étrangers) mais le financement des PME de la BITD et la sensibilisation restent des défis majeurs, notamment face aux risques des réseaux sociaux et applications de messagerie.",
+        "tags": "geopolitique, geopolitic, france, defense, industrie, economie, cyber_espionage, supply_chain, pme",
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/defis-strategies-bitd-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Défense, Affaires internationales",
+        "theme": "Augmentation des dépenses de défense et autonomie stratégique européenne",
+        "description": "L'UE et l'OTAN sont engagées dans une dynamique inversée où l'OTAN développe sa propre politique industrielle, autrefois apanage de l'UE. L'impact de l'utilisation de la NATO Support and Procurement Agency (NSPA) sur l'autonomie stratégique européenne et l'EDTIB (European Defence Technological and Industrial Base) est en question, d'autant plus avec l'augmentation des budgets de défense des États membres de l'UE suite à la guerre en Ukraine. La note de l'IRIS aborde cette complexité.",
+        "tags": "geopolitique, geopolitic, europe, otan, defense, strategic_autonomy, ukraine_war",
+        "sources": [
+          "https://www.iris-france.org/the-increase-in-defence-spending-the-role-of-the-nspa-and-the-european-strategic-autonomy/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Défense, Géopolitique",
+        "theme": "Ciblage cinétique cybernétique par des acteurs liés à l'Iran",
+        "description": "Des acteurs liés à l'Iran (Imperial Kitten, MuddyWater) utilisent des opérations cybernétiques pour soutenir et amplifier des attaques physiques réelles. Cela inclut la cartographie des données AIS des navires avant une frappe de missile (secteur maritime) et l'accès à des flux CCTV en direct de Jérusalem pour ajuster le ciblage de missiles. Cette tendance représente une évolution fondamentale de la guerre, où les frontières entre les opérations cyber et cinétiques se dissolvent, menant à un 'ciblage cinétique cybernétique'.",
+        "tags": "geopolitique, geopolitic, iran, cyber_kinetic_targeting, nation_state, maritime, surveillance, missile_strike",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Gouvernement, Cybercriminalité",
+        "theme": "Sanctions coordonnées contre les fournisseurs de bulletproof hosting russes",
+        "description": "Les États-Unis, l'Australie et le Royaume-Uni ont imposé des sanctions coordonnées à deux fournisseurs russes de services d'hébergement 'bulletproof' (Media Land et Aeza Group) accusés de soutenir des opérations de ransomware (comme LockBit, BlackSuit et Play) et d'autres activités cybercriminelles. Ces services fournissent une infrastructure conçue pour échapper à la détection et contrecarrer les efforts des forces de l'ordre. Ces sanctions visent à perturber les opérations de ces groupes et à contrer l'évasion des sanctions.",
+        "tags": "geopolitique, geopolitic, russie, sanctions, cybercrime, ransomware, bulletproof_hosting",
+        "sources": [
+          "https://securityaffairs.com/184871/cyber-crime/coordinated-sanctions-hit-russian-bulletproof-hosting-providers-enabling-top-ransomware-ops.html",
+          "https://databreaches.net/2025/11/20/us-allies-sanction-russian-bulletproof-hosting-services-for-ransomware-support/?pk_campaign=feed&pk_kwd=us-allies-sanction-russian-bulletproof-hosting-services-for-ransomware-support"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Politique internationale, Économie, Défense",
+        "theme": "Plans de paix pour l'Ukraine et crise systémique occidentale",
+        "description": "Le plan de paix de Trump pour l'Ukraine, jugé inacceptable car aligné sur les revendications de Poutine et excluant l'Europe/Ukraine des discussions, contraste avec un plan Zelensky irréalisable du fait de l'impossibilité de reconquérir les territoires. L'Europe est appelée à négocier. Parallèlement, une analyse met en lumière une crise systémique des économies occidentales, avec une bulle financière de l'IA (manque de fiabilité des LLM, financements circulaires) et une pénurie militaire (capacités industrielles inadaptées pour l'Ukraine).",
+        "tags": "geopolitique, geopolitic, ukraine, russie, etats_unis, europe, ia, industrie, defense, economie",
+        "sources": [
+          "https://www.iris-france.org/plan-trump-inacceptable-plan-zelensky-irrealisable/",
+          "https://www.iris-france.org/entre-bulle-de-lia-et-penurie-militaire-une-crise-systemique/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services IT, Transport ferroviaire",
+        "victime": "Almaviva (FS Italiane Group)",
+        "description": "Un acteur de la menace a volé 2,3 To de données du groupe ferroviaire national italien FS Italiane via une violation de son fournisseur de services IT, Almaviva. Les données divulguées sur le dark web incluent des documents confidentiels, des informations d'entreprise sensibles, des partages internes, des référentiels multi-entreprises, de la documentation technique, des contrats avec des entités publiques, des archives RH et des données comptables.",
+        "tags": "violation, breach, almaviva, fs_italiane_group, rail, it_services, data_theft, dark_web, supply_chain",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-steal-23tb-data-from-italian-rail-group-almaviva/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Collectibles, E-commerce",
+        "victime": "Beckett Collectibles",
+        "description": "Beckett Collectibles a subi une violation de données et une défiguration de son site web en novembre 2025. Plus de 500 000 adresses e-mail de clients nord-américains, ainsi que des noms, noms d'utilisateur, numéros de téléphone et adresses physiques, ont été volés et mis en vente sur un forum de hacking.",
+        "tags": "violation, breach, beckett_collectibles, e_commerce, data_exfiltration, hacking_forum, pii",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Beckett",
+          "https://mastodon.social/@RedPacketSecurity/115585454197822735"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Eurofiber France",
+        "description": "Eurofiber France a révélé une violation de données de sa plateforme de gestion de tickets en novembre 2025. Des données contenant 10 000 adresses e-mail uniques, des noms et des numéros de téléphone ont été divulguées. L'acteur de la menace prétend détenir des données plus sensibles, y compris des captures d'écran, des fichiers de configuration VPN, des identifiants, du code source, des certificats, des archives et des sauvegardes SQL.",
+        "tags": "violation, breach, eurofiber_france, telecommunications, ticket_platform, data_exfiltration, credentials, source_code",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Eurofiber",
+          "https://mastodon.social/@RedPacketSecurity/115585454192341858"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Geisinger Health, Nuance",
+        "description": "Un règlement de 5 millions de dollars a été conclu suite à une violation de données interne affectant 1,2 million de patients actuels et anciens de Geisinger Health et Nuance. L'incident concernait une divulgation non autorisée d'informations patient par un employé.",
+        "tags": "violation, breach, geisinger_health, nuance, healthcare, insider_threat, pii, hipaa",
+        "sources": [
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/115584274683599726"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Sports, Communauté",
+        "victime": "International Kiteboarding Organization",
+        "description": "L'International Kiteboarding Organization a subi une violation de données en novembre 2025, exposant 340 000 dossiers d'utilisateurs, y compris des adresses e-mail, noms, noms d'utilisateur, villes et pays. Les données ont été mises en vente sur un forum de hacking.",
+        "tags": "violation, breach, international_kiteboarding_organization, sports, community, data_exfiltration, pii, hacking_forum",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/IKO",
+          "https://mastodon.social/@RedPacketSecurity/115585454189083502"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Santé (clinique de FIV)",
+        "victime": "London Women’s Clinic",
+        "description": "La London Women’s Clinic, une clinique de FIV au Royaume-Uni, a confirmé avoir été compromise par le groupe de ransomware russe Qilin. L'attaque a affecté les systèmes utilisés par des milliers de couples, entraînant une fuite de données massives et sensibles.",
+        "tags": "violation, breach, london_women_s_clinic, healthcare, ivf, ransomware, qilin, russia, sensitive_data",
+        "sources": [
+          "https://databreaches.net/2025/11/20/russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples/?pk_campaign=feed&pk_kwd=russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Santé (laboratoire médical)",
+        "victime": "Lancet Laboratories",
+        "description": "Lancet Laboratories, un grand laboratoire médical en Afrique du Sud, a subi de multiples violations de données et a été condamné à une amende de 100 000 R pour ne pas avoir répondu aux exigences du régulateur sud-africain en matière de lacunes systémiques.",
+        "tags": "violation, breach, lancet_laboratories, healthcare, medical_lab, non_compliance, data_exposure",
+        "sources": [
+          "https://databreaches.net/2025/11/20/large-medical-lab-in-south-africa-suffers-multiple-data-breaches/?pk_campaign=feed&pk_kwd=large-medical-lab-in-south-africa-suffers-multiple-data-breaches"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "IT, CRM (Salesforce, Gainsight), clients de Salesforce",
+        "victime": "Clients Salesforce via la compromission de l'application Gainsight",
+        "description": "Salesforce enquête sur un vol de données client via une violation de Gainsight, une application tierce. L'activité malveillante est liée à la connexion externe de l'application à Salesforce. Les hackers ShinyHunters revendiquent avoir obtenu l'accès à 285 instances Salesforce supplémentaires, ciblant de grandes entreprises comme Verizon, Gitlab, F5, Sonicwall.",
+        "tags": "violation, breach, salesforce, gainsight, crm, it, customer_data, data_theft, supply_chain_attack",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/salesforce-investigates-customer-data-theft-via-gainsight-breach/",
+          "https://databreaches.net/2025/11/20/threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce/?pk_campaign=feed&pk_kwd=threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce",
+          "https://infosec.exchange/@DevaOnBreaches/115585415768699564"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Plateforme cloud",
+        "victime": "Vultr",
+        "description": "Vultr a révélé un incident de sécurité chez un fournisseur tiers (ActiveCampaign) en mars 2023, entraînant l'exposition de 188 000 adresses e-mail uniques, ainsi que des noms, adresses IP et pays d'origine pour un petit nombre d'enregistrements. Aucun système Vultr ou donnée client supplémentaire n'a été impacté.",
+        "tags": "violation, breach, vultr, cloud_platform, third_party_breach, email_addresses, pii",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Vultr",
+          "https://mastodon.social/@RedPacketSecurity/115585454193285959"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Communications, Réseaux sociaux",
+        "victime": "WhatsApp",
+        "description": "Une faille dans WhatsApp a permis à des chercheurs d'énumérer et d'exposer 3,5 milliards de profils d'utilisateurs. La vulnérabilité permettait de sonder plus de 100 millions de numéros de téléphone par heure sans blocage, révélant des informations comme les noms, images de profil et clés publiques E2EE.",
+        "tags": "violation, breach, whatsapp, communications, social_media, data_exposure, enumeration_flaw, pii",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html",
+          "https://databreaches.net/2025/11/20/researchers-claim-largest-leak-ever-after-uncovering-whatsapp-enumeration-flaw/?pk_campaign=feed&pk_kwd=researchers-claim-largest-leak-ever-after-uncovering-whatsapp-enumeration-flaw"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64755",
+        "cvss": "8.7",
+        "product": "Anthropic Claude Code",
+        "description": "Vulnérabilité dans l'outil de codage agentique Claude Code, permettant de contourner la validation en lecture seule via une erreur de parsing de commande 'sed', conduisant à l'écriture de fichiers arbitraires sur le système hôte.",
+        "tags": "vulnerabilité, vulnerability, rce, code_execution, claude_code, ai, arbitrary_file_write",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64755"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64762",
+        "cvss": "8.0",
+        "product": "AuthKit library for Next.js",
+        "description": "Vulnérabilité permettant la mise en cache de cookies de session dans les CDN, en raison de l'absence d'en-têtes anti-mise en cache dans les réponses authentifiées, pouvant entraîner la divulgation de jetons de session à plusieurs utilisateurs.",
+        "tags": "vulnerabilité, vulnerability, authentication, session_management, cdn_caching, data_disclosure",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64762"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-13188",
+        "cvss": "9.8 (Inféree)",
+        "product": "D-Link DIR-816L router",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) pouvant conduire à l'exécution de code à distance (RCE).",
+        "tags": "vulnerabilité, vulnerability, rce, buffer_overflow, dlink, router",
+        "sources": [
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60672",
+        "cvss": "9.8 (Inféree)",
+        "product": "D-Link DIR-878 router",
+        "description": "Vulnérabilité d'exécution de commande à distance (RCE) non authentifiée due à la façon dont l'interface web du routeur traite les requêtes entrantes.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60673",
+        "cvss": "9.8 (Inféree)",
+        "product": "D-Link DIR-878 router",
+        "description": "Vulnérabilité d'exécution de commande à distance (RCE) non authentifiée due à la façon dont l'interface web du routeur traite les requêtes entrantes.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60674",
+        "cvss": "9.8 (Inféree)",
+        "product": "D-Link DIR-878 router",
+        "description": "Vulnérabilité d'exécution de commande à distance (RCE) non authentifiée due à la façon dont l'interface web du routeur traite les requêtes entrantes.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60676",
+        "cvss": "9.8 (Inféree)",
+        "product": "D-Link DIR-878 router",
+        "description": "Vulnérabilité d'exécution de commande à distance (RCE) non authentifiée due à la façon dont l'interface web du routeur traite les requêtes entrantes.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57774",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité d'écriture hors limites (Out-Of-Bounds Write) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-887/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57775",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Dépassement de tampon basé sur le tas (Heap-based Buffer Overflow) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, buffer_overflow, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-888/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57776",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité d'écriture hors limites (Out-Of-Bounds Write) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-889/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57777",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité d'écriture hors limites (Out-Of-Bounds Write) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-890/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57778",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité d'écriture hors limites (Out-Of-Bounds Write) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-891/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-9188",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité d'écriture hors limites (Out-Of-Bounds Write) dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-885/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-9189",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Vulnérabilité de désérialisation de données non fiables dans le parsing des fichiers DSB, permettant l'exécution de code à distance (RCE) suite à l'ouverture d'un fichier malveillant. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, deserialization, file_parsing",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-886/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64310",
+        "cvss": "9.8",
+        "product": "EPSON WebConfig and Epson Web Control for SEIKO EPSON Projector Products",
+        "description": "Vulnérabilité de force brute d'authentification dans WebConfig/Web Control, ne restreignant pas les tentatives excessives, permettant l'identification du mot de passe d'un utilisateur administratif.",
+        "tags": "vulnerabilité, vulnerability, authentication, brute_force, epson, projector, web_control",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64310"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60724",
+        "cvss": "9.8",
+        "product": "Microsoft Graphics Component (GDI+)",
+        "description": "Vulnérabilité d'exécution de code arbitraire à distance (RCE) critique via un dépassement de tampon basé sur le tas (heap-based buffer overflow). Exploitable par l'ouverture d'un document malveillant.",
+        "tags": "vulnerabilité, vulnerability, rce, microsoft, gdiplus, heap_overflow, critical",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-59287",
+        "cvss": "9.8",
+        "product": "Microsoft Windows Server Update Services (WSUS)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) activement exploitée pour déployer le backdoor ShadowPad.",
+        "tags": "vulnerabilité, vulnerability, rce, wsus, microsoft, shadowpad, actively_exploited, critical",
+        "sources": [
+          "https://securityonline.info/critical-wsus-rce-cve-2025-59287-actively-exploited-to-deploy-shadowpad-backdoor/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64655",
+        "cvss": "8.8",
+        "product": "Dynamics OmniChannel SDK Storage Containers",
+        "description": "Vulnérabilité d'élévation de privilèges (EoP) due à une autorisation incorrecte, permettant à un attaquant non autorisé d'élever ses privilèges sur un réseau.",
+        "tags": "vulnerabilité, vulnerability, eop, privilege_escalation, microsoft, dynamics_omnichannel",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64655"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62164",
+        "cvss": "8.8",
+        "product": "vLLM",
+        "description": "Vulnérabilité de corruption de mémoire via désérialisation dans l'API Completions, pouvant entraîner un crash (DoS) et potentiellement l'exécution de code à distance (RCE) avec des tenseurs malveillants.",
+        "tags": "vulnerabilité, vulnerability, rce, dos, vllm, llm, deserialization, memory_corruption",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62164"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62459",
+        "cvss": "8.3",
+        "product": "Microsoft Defender Portal",
+        "description": "Vulnérabilité d'usurpation d'identité (spoofing) dans le portail Microsoft Defender.",
+        "tags": "vulnerabilité, vulnerability, spoofing, microsoft_defender, security_portal",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62459"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62372",
+        "cvss": "8.3",
+        "product": "vLLM",
+        "description": "Vulnérabilité de déni de service (DoS) dans le moteur vLLM pour les modèles multimodaux, causée par des entrées d'embeddings multimodaux de forme incorrecte.",
+        "tags": "vulnerabilité, vulnerability, dos, vllm, llm, multimodal_models",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62372"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-30398",
+        "cvss": "8.1",
+        "product": "Nuance PowerScribe 360 and PowerScribe One",
+        "description": "Vulnérabilité de divulgation d'informations due à une autorisation manquante, permettant à des attaquants non authentifiés de divulguer des paramètres de configuration sensibles.",
+        "tags": "vulnerabilité, vulnerability, information_disclosure, nuance_powerscribe, authorization_bypass",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-0108",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "Vulnérabilité d'injection de commande du système d'exploitation dans PAN-OS, chaîne avec d'autres CVEs, activement exploitée.",
+        "tags": "vulnerabilité, vulnerability, rce, command_injection, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-0111",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "Vulnérabilité d'injection de commande dans PAN-OS, chaîne avec d'autres CVEs, activement exploitée.",
+        "tags": "vulnerabilité, vulnerability, rce, command_injection, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2024-9474",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "Vulnérabilité d'écriture de fichier arbitraire dans PAN-OS, chaîne avec d'autres CVEs, activement exploitée.",
+        "tags": "vulnerabilité, vulnerability, rce, arbitrary_file_write, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62199",
+        "cvss": "7.8",
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité d'exécution de code arbitraire à distance (RCE) via une faille 'use after free', exploitable localement avec interaction de l'utilisateur. La visionneuse est un vecteur d'attaque.",
+        "tags": "vulnerabilité, vulnerability, rce, microsoft_office, use_after_free, local_exploit",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62215",
+        "cvss": "7.0",
+        "product": "Windows kernel",
+        "description": "Vulnérabilité d'élévation de privilèges (EoP) via une condition de concurrence dans le noyau Windows, permettant à un attaquant local authentifié d'obtenir des privilèges SYSTEM. Activement exploitée (0-day).",
+        "tags": "vulnerabilité, vulnerability, eop, windows_kernel, race_condition, actively_exploited, 0day",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-11001",
+        "cvss": "7.5",
+        "product": "WhatsApp",
+        "description": "Faille d'énumération de numéros de téléphone, exposant des données de profil (noms, images de profil, clés publiques E2EE) pour 3,5 milliards de comptes. Facilement exploitable à grande échelle, entraînant un impact sérieux sur la confidentialité.",
+        "tags": "vulnerabilité, vulnerability, whatsapp, enumeration, data_exposure, privacy_breach",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": "7.5",
+        "product": "WhatsApp",
+        "description": "Faille d'énumération de numéros de téléphone, exposant des données de profil (noms, images de profil, clés publiques E2EE) pour 3,5 milliards de comptes. Facilement exploitable à grande échelle, entraînant un impact sérieux sur la confidentialité.",
+        "tags": "vulnerabilité, vulnerability, whatsapp, enumeration, data_exposure, privacy_breach",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-40604",
+        "cvss": "8.5 (Inféree)",
+        "product": "SonicWall Email Security appliances",
+        "description": "Vulnérabilité permettant à des attaquants distants d'obtenir une exécution de code arbitraire persistante.",
+        "tags": "vulnerabilité, vulnerability, rce, sonicwall, email_security, persistent_access",
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1027/",
+          "https://www.bleepingcomputer.com/news/security/new-sonicwall-sonicos-flaw-allows-hackers-to-crash-firewalls/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Google exposes BadAudio malware used in APT24 espionage campaigns / Beyond the Watering Hole: APT24's Pivot to Multi-Vector Attacks",
+        "description": "Ces articles décrivent une campagne d'espionnage de trois ans menée par l'acteur étatique chinois APT24, utilisant le malware BadAudio. Initialement via la compromission stratégique de sites web pour distribuer BadAudio aux systèmes Windows, la campagne a évolué vers des attaques multi-vecteurs, incluant la compromission répétée d'une firme de marketing numérique taïwanaise pour des attaques de chaîne d'approvisionnement (via injection JavaScript) et des campagnes de phishing ciblées. BadAudio est un téléchargeur C++ fortement obfusqué, utilisant le 'control flow flattening', et est capable de télécharger et d'exécuter des charges utiles chiffrées (incluant Cobalt Strike Beacon). Les attaquants ont également utilisé des services cloud légitimes comme Google Drive pour la distribution de malwares.",
+        "threat_actor": "APT24",
+        "indicator_of_compromise": [
+          "smartwebfinder[.]com",
+          "toksearches[.]xyz",
+          "theonlinesearch[.]com",
+          "wispy[.]geneva[.]workers[.]dev",
+          "www[.]twisinbeth[.]com",
+          "cdn[.]jsdelivr[.]net",
+          "roller[.]johallow[.]workers[.]dev",
+          "www[.]growhth[.]com",
+          "www[.]gerikinage[.]com",
+          "www[.]p9-car[.]com",
+          "trcloudflare[.]com",
+          "jarzoda[.]net",
+          "clients[.]brendns[.]workers[.]dev",
+          "components[.]map",
+          "www[.]availableextens[.]com",
+          "taiwantradoshows[.]com",
+          "www[.]cundis[.]com",
+          "www[.]decathlonm[.]com",
+          "tradostw[.]com",
+          "jsdelivrs[.]com",
+          "www[.]brighyt[.]com",
+          "88fa2b5489d178e59d33428ba4088d114025acd1febfa8f7971f29130bda1213",
+          "032c333eab80d58d60228691971d79b2c4cd6b9013bae53374dd986faa0f3f4c",
+          "ae8473a027b0bcc65d1db225848904e54935736ab943edf3590b847cb571f980",
+          "0e98baf6d3b67ca9c994eb5eb9bbd40584be68b0db9ca76f417fb3bcec9cf958",
+          "55e02a81986aa313b663c3049d30ea0158641a451cb8190233c09bef335ef5c7",
+          "07226a716d4c8e012d6fabeffe2545b3abfc0b1b9d2fccfa500d3910e27ca65b",
+          "5c37130523c57a7d8583c1563f56a2e2f21eef5976380fdb3544be62c6ad2de5",
+          "1f31ddd2f598bd193b125a345a709eedc3b5661b0645fc08fa19e93d83ea5459",
+          "c4e910b443b183e6d5d4e865dd8f978fd635cd21c765d988e92a5fd60a4428f5",
+          "2ea075c6cd3c065e541976cdc2ec381a88b748966f960965fdbe72a5ec970d4e",
+          "9ce49c07c6de455d37ac86d0460a8ad2544dc15fb5c2907ed61569b69eefd182",
+          "d23ca261291e4bad67859b5d4ee295a3e1ac995b398ccd4c06d2f96340b4b5f8",
+          "cfade5d162a3d94e4cba1e7696636499756649b571f3285dd79dea1f5311adcd",
+          "f086c65954f911e70261c729be2cdfa2a86e39c939edee23983090198f06503c",
+          "f1e9d57e0433e074c47ee09c5697f93fde7ff50df27317c657f399feac63373a",
+          "176407b1e885496e62e1e761bbbb1686e8c805410e7aec4ee03c95a0c4e9876f",
+          "c7565ed061e5e8b2f8aca67d93b994a74465e6b9b01936ecbf64c09ac6ee38b9",
+          "83fb652af10df4574fa536700fa00ed567637b66f189d0bbdb911bd2634b4f0e",
+          "wispy[.]geneva[.]workers[.]dev/pub/static/img/merged?version=65feddea0367",
+          "www[.]twisinbeth[.]com/query[.]php?id=",
+          "cdn[.]jsdelivr[.]net/npm/@fingerprintjs/fingerprintjs@2/dist/fingerprint2[.]min[.]js",
+          "Watermark_Hash: BeudtKgqnlm0Ruvf+VYxuw==",
+          "rule G_Downloader_BADAUDIO_1",
+          "rule G_Downloader_BADAUDIO_2",
+          "rule G_APT_DOWNLOADER_BADAUDIO_3",
+          "rule G_APT_DOWNLOADER_BADAUDIO_4",
+          "122[.]0[.]0[.]0",
+          "132[.]0[.]0[.]0"
+        ],
+        "mitre_ttps": [
+          "T1195: Supply Chain Compromise",
+          "T1189: Drive-by Compromise",
+          "T1041: Exfiltration Over Command and Control Channel",
+          "T1059: Command-Line Interface",
+          "T1082: System Information Discovery",
+          "T1105: Remote File Copy",
+          "T1574.001: DLL Search Order Hijacking"
+        ],
+        "analyse": "La campagne APT24 vise l'espionnage contre des entités spécifiques, notamment à Taïwan, démontrant une capacité d'adaptation et une sophistication croissante, passant de 'watering holes' opportunistes à des attaques ciblées sur la chaîne d'approvisionnement et du phishing. L'utilisation d'obfuscation avancée et de services cloud légitimes rend la détection plus difficile. L'impact est stratégique, visant le vol d'informations sensibles et l'établissement d'accès persistant sur des réseaux ciblés, avec des implications géopolitiques claires liées à la Chine.",
+        "recommandations": [
+          "Surveiller les injections JavaScript malveillantes sur les sites web publics et dans les bibliothèques tierces.",
+          "Implémenter des politiques strictes de sécurité pour la chaîne d'approvisionnement logicielle.",
+          "Former les utilisateurs aux techniques de phishing et à l'ingénierie sociale.",
+          "Déployer des solutions de détection d'endpoints (EDR) capables de détecter les DLL sideloading et les charges utiles en mémoire.",
+          "Utiliser des règles YARA pour détecter les échantillons de BadAudio et de Cobalt Strike Beacon associés.",
+          "Mettre en œuvre une analyse des comportements réseau pour identifier les communications C2 dissimulées via des requêtes HTTP/HTTPS.",
+          "Bloquer les domaines et adresses IP identifiés comme C2 ou infrastructure malveillante."
+        ],
+        "tags": "apt24, espionnage, nation_state, china, badaudio, supply_chain, phishing, watering_hole, cobalt_strike, obfuscation, dll_sideloading",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-exposes-badaudio-malware-used-in-apt24-espionage-campaigns/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Beyond Spicy Autocomplete: Are LLMs Enough for Static Application Security Testing (SAST)?",
+        "description": "Cet article analyse l'efficacité des grands modèles linguistiques (LLM) pour l'analyse statique de la sécurité des applications (SAST). Il conclut que les LLM, bien qu'utiles pour automatiser l'analyse sommaire et identifier des schémas connus de vulnérabilités, ne peuvent pas remplacer l'expertise humaine. Leurs limites incluent la dépendance aux données d'entraînement, l'incapacité à comprendre les flux d'exécution complexes, la génération de faux positifs et d'hallucinations, et le manque de conscience contextuelle. Ils sont mieux utilisés comme des assistants augmentant l'efficacité des analystes humains plutôt que comme des auditeurs autonomes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "Aucun IoC spécifique n'est fourni"
+        ],
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'impact de l'IA sur la cybersécurité est mitigé. Bien que l'IA puisse accélérer l'identification de vulnérabilités connues et réduire la charge de travail des analystes, son manque de compréhension sémantique et contextuelle représente un risque significatif si elle est utilisée comme seule méthode de SAST. Une dépendance excessive à l'IA peut créer un faux sentiment de sécurité et laisser passer des vulnérabilités subtiles ou non conventionnelles. L'article souligne l'importance d'une approche hybride humain-IA pour une sécurité applicative robuste.",
+        "recommandations": [
+          "Intégrer les outils SAST basés sur les LLM comme des assistants pour les analystes humains, non comme des remplaçants.",
+          "Combiner les LLM avec des outils d'analyse statique traditionnels pour réduire les faux positifs et augmenter le taux de détection.",
+          "Former les analystes à la formulation de requêtes précises pour les LLM et à la validation critique de leurs résultats.",
+          "Maintenir une supervision humaine experte pour interpréter les résultats, valider les découvertes et comprendre les nuances contextuelles."
+        ],
+        "tags": "ia, artificial_intelligence, llm, sast, application_security, vulnerability_detection, human_in_the_loop",
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/beyond-spicy-autocorrect-llms-for-sast/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Blockchain and Node.js abused by Tsundere: an emerging botnet",
+        "description": "Cet article détaille la découverte du botnet Tsundere, un nouveau botnet basé sur Node.js utilisant les contrats intelligents Ethereum pour la résilience de son infrastructure C2. Il est diffusé via des installeurs MSI déguisés en jeux populaires et des scripts PowerShell, ciblant les systèmes Windows, Linux et macOS. Le malware déploie un gestionnaire de paquets Node.js (npm) et utilise pm2 pour la persistance. Les adresses C2 sont stockées et mises à jour via des transactions sur la blockchain Ethereum, rendant la prise de contrôle plus difficile. Le bot exécute du code JavaScript dynamique du C2 et évite d'infecter les systèmes de la région CIS. L'auteur, 'koneko', est également lié à l'infostealer 123 Stealer.",
+        "threat_actor": "Tsundere (alias koneko)",
+        "indicator_of_compromise": [
+          "nodejs[.]org",
+          "07a4[.]net",
+          "kaspersky[.]com",
+          "185[.]28[.]119[.]179",
+          "62[.]60[.]226[.]179",
+          "196[.]251[.]72[.]192",
+          "103[.]246[.]145[.]201",
+          "193[.]24[.]123[.]68",
+          "f11Cb0578EA61e2EDB8a4a12c02E3eF26E80fc36",
+          "52221c293a21D8CA7AFD01Ac6bFAC7175D590A84",
+          "Ec99D2C797Db6E0eBD664128EfED9265fBE54579",
+          "10ca9bE67D03917e9938a7c28601663B191E4413",
+          "db8e8B0ef3ea1105A6D84b27Fc0bAA9845C66FD7",
+          "46b0f9bA6F1fb89eb80347c92c9e91BDF1b9E8CC",
+          "73625B6cdFECC81A4899D221C732E1f73e504a32",
+          "a1b40044EBc2794f207D45143Bd82a1B86156c6b",
+          "hxxp[:]//idk[.]1f2eREDACTED07a4[.]net/api/builds/{BUILD-ID}[.]msi",
+          "intelreports@kaspersky[.]com"
+        ],
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Tsundere représente une menace évoluée avec une infrastructure C2 résiliente grâce à l'utilisation de la blockchain Ethereum, rendant les efforts de démantèlement plus complexes. Sa diffusion via des leurres de jeux populaires et l'utilisation de scripts rend l'infection potentiellement large et difficile à détecter initialement. L'implication de l'acteur 'koneko' dans d'autres menaces, comme 123 Stealer, suggère une escalade continue et une sophistication croissante de ses opérations de cybercriminalité.",
+        "recommandations": [
+          "Bloquer les adresses IP et domaines C2 connus associés à Tsundere.",
+          "Surveiller l'exécution de scripts PowerShell inhabituels et les installations de MSI provenant de sources non fiables.",
+          "Déployer des solutions de sécurité des endpoints (EDR) capables de détecter les activités Node.js malveilluses et les modifications des clés de registre pour la persistance.",
+          "Mettre en place une surveillance de la blockchain Ethereum pour les adresses de contrats intelligents liées aux activités C2.",
+          "Sensibiliser les utilisateurs aux dangers des téléchargements de logiciels piratés et des installeurs déguisés."
+        ],
+        "tags": "botnet, nodejs, blockchain, ethereum, c2_infrastructure, malware_delivery, persistence, msi, powershell, cybercrime",
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Inside the dark web job market",
+        "description": "Ce rapport examine le marché du travail sur le dark web entre janvier 2023 et juin 2025, basé sur plus de 2 000 annonces. Il révèle que le dark web fonctionne comme un marché parallèle avec ses propres normes, pratiques de recrutement et attentes salariales. Les rôles les plus demandés sont les développeurs, les testeurs d'intrusion et les blanchisseurs d'argent, les ingénieurs inverses obtenant les salaires les plus élevés. Il y a une présence significative d'adolescents recherchant des gains rapides. Le rapport note des parallèles avec le marché légal, notamment la priorité aux compétences pratiques et les fluctuations synchronisées de l'offre et de la demande, et prévoit une augmentation de l'âge moyen et des qualifications des chercheurs d'emploi sur le dark web.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "Aucun IoC spécifique n'est fourni"
+        ],
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Le marché du travail du dark web est un baromètre des tendances de la cybercriminalité et des compétences requises. L'augmentation des profils plus qualifiés et expérimentés, potentiellement due aux licenciements dans le secteur légitime, suggère une professionnalisation croissante des groupes cybercriminels. Cela indique également que les attaquants auront accès à des compétences plus avancées pour développer et exécuter des attaques complexes, augmentant ainsi la menace générale pour la cybersécurité.",
+        "recommandations": [
+          "Renforcer les capacités de renseignement sur les menaces pour surveiller les compétences recherchées sur le dark web et anticiper l'évolution des techniques d'attaque.",
+          "Améliorer les programmes de détection des menaces internes (insider threat) en considérant les motivations financières ou les compétences acquises par d'anciens employés.",
+          "Mettre en place des stratégies de rétention pour les talents en cybersécurité afin de réduire le risque qu'ils soient attirés par le marché illégal."
+        ],
+        "tags": "dark_web, cybercrime, job_market, threat_actor_recruitment, developer, penetration_tester, money_laundering, reverse_engineer",
+        "sources": [
+          "https://securelist.com/dark-web-job-market-2023-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Arms Race: AI's Impact on Cybersecurity / It’s not personal, it’s just business",
+        "description": "Ces articles explorent l'impact de l'IA sur la cybersécurité, la décrivant comme une 'course aux armements' entre attaquants et défenseurs. Les attaquants utilisent l'IA générative (LLM) pour améliorer le phishing (rédaction d'e-mails, contournement des protections), le développement de malwares (génération de code malveillant comme des keyloggers ou ransomwares, mais nécessite encore une intervention humaine) et l'émergence d'IA agentiques pour des tâches autonomes (reconnaissance, exfiltration). Les défenseurs utilisent également l'IA pour la détection et la réponse aux menaces (analyse comportementale, prédiction d'attaques). L'IA agentique, bien que prometteuse pour l'efficacité, soulève de nouveaux risques en permettant des actions malveillantes plus autonomes et en abaissant les barrières à l'entrée pour les cybercriminels.",
+        "threat_actor": "Cybercriminels divers (exploitant l'IA)",
+        "indicator_of_compromise": [
+          "Aucun IoC spécifique n'est fourni"
+        ],
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'IA est un facteur d'amplification majeur pour les cybermenaces, rendant les attaques plus sophistiquées, personnalisées et potentiellement autonomes. Cela intensifie la pression sur les défenseurs, qui doivent eux-mêmes intégrer des capacités d'IA pour maintenir un avantage. La facilité avec laquelle l'IA générative peut être détournée pour créer du contenu malveillant et automatiser des étapes d'attaque représente un risque significatif, exigeant des investissements continus dans la recherche et le développement de défenses basées sur l'IA, ainsi qu'une sensibilisation aux vulnérabilités des LLM eux-mêmes.",
+        "recommandations": [
+          "Déployer des systèmes de détection basés sur l'IA et le ML pour identifier les anomalies et les attaques de nouvelle génération.",
+          "Mettre en œuvre une analyse comportementale pour détecter les activités suspectes générées par l'IA ou les agents malveillants.",
+          "Renforcer la formation des utilisateurs aux attaques de phishing de plus en plus sophistiquées, générées par l'IA.",
+          "Développer des défenses proactives contre les malwares assistés par l'IA, y compris la surveillance des forums de discussion sur le dark web concernant les capacités d'IA émergentes.",
+          "Évaluer et mettre à jour régulièrement les contrôles de sécurité des LLM utilisés en interne pour éviter leur détournement."
+        ],
+        "tags": "ia, artificial_intelligence, llm, agentic_ai, cybercrime, phishing, malware_development, threat_intelligence, arms_race",
+        "sources": [
+          "https://www.security.com/threat-intelligence/ai-whitepaper-research",
+          "https://blog.talosintelligence.com/its-not-personal-its-just-business/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Sturnus: New Android banking trojan targets WhatsApp, Telegram, and Signal",
+        "description": "Le cheval de Troie bancaire Android Sturnus est une nouvelle menace capable de prendre le contrôle complet de l'appareil. Il cible les applications de messagerie sécurisée comme WhatsApp, Telegram et Signal en capturant le contenu à l'écran, contournant ainsi le chiffrement de bout en bout. Sturnus vole les identifiants bancaires, peut contrôler l'appareil à distance et masque les actions frauduleuses. Il utilise des superpositions HTML et un keylogging basé sur les services d'accessibilité. Le malware est en développement actif mais déjà fonctionnel et cible des institutions financières en Europe du Sud et centrale.",
+        "threat_actor": "Sturnus (opérateurs)",
+        "indicator_of_compromise": [
+          "Aucun IoC spécifique n'est fourni"
+        ],
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Sturnus représente une menace sophistiquée pour les utilisateurs d'Android et les institutions financières, en particulier en raison de sa capacité à contourner le chiffrement des messageries sécurisées en capturant directement le contenu affiché. L'impact potentiel est une perte significative de confidentialité et de données financières. Sa nature en développement suggère que ses capacités pourraient encore s'étendre, et sa focalisation sur l'Europe indique un ciblage géographique clair. La capacité de prise de contrôle complète et de dissimulation des actions le rend particulièrement dangereux et difficile à détecter pour les utilisateurs.",
+        "recommandations": [
+          "Utiliser des solutions de sécurité mobile robustes pour détecter et bloquer les malwares Android.",
+          "Éviter de télécharger des applications provenant de sources non officielles.",
+          "Revoir et limiter les autorisations des applications, en particulier l'accès aux services d'accessibilité.",
+          "Être vigilant face aux messages suspects et aux demandes d'informations personnelles ou bancaires, même via des applications de messagerie sécurisées.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour les comptes bancaires et autres services sensibles."
+        ],
+        "tags": "android, banking_trojan, mobile_malware, whatsapp, telegram, signal, data_theft, remote_control, keylogger, europe",
+        "sources": [
+          "https://securityaffairs.com/184878/cyber-crime/sturnus-new-android-banking-trojan-targets-whatsapp-telegram-and-signal.html"
+        ],
+        "date": "2025-11-21"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape in November 2025 is characterized by an intensification of sophisticated attacks, with a predominance of supply chain attacks and a growing use of artificial intelligence (AI) by malicious actors. State-sponsored groups, such as APT24 and Iran-linked actors, are conducting espionage and kinetic targeting campaigns, blurring the lines between cyber operations and physical actions. Critical vulnerabilities are actively being exploited, including remote code execution (RCE) and privilege escalation flaws in widely used products, necessitating urgent vigilance and patching. Large-scale data breaches remain a persistent problem, often resulting from third-party compromises or massive enumeration flaws. Finally, the cybercrime underground continues to evolve, leveraging new techniques like Node.js-based botnets and the use of blockchain smart contracts for C2 infrastructure resilience, while AI lowers the barrier to entry for malware development and phishing campaigns. This convergence of threats demands a multi-layered security approach, real-time threat intelligence, and agile response to protect critical infrastructure and sensitive data.",
+      "date": "2025-11-21"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT24",
+        "secteur": "Diverse (website visitors, digital marketing firms, entities in Taiwan)",
+        "modop": "Espionage campaigns via strategic web compromises, supply chain attacks (JS injection), and targeted phishing. Uses BadAudio malware (encrypted C++ downloader, executes Cobalt Strike Beacon), with advanced obfuscation (control flow flattening), persistence via DLL Search Order Hijacking and complementary files (VBS, BAT, LNK).",
+        "tags": "actor, threat_actor, espionage, nation_state, china, badaudio, supply_chain_attack, phishing, watering_hole",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-exposes-badaudio-malware-used-in-apt24-espionage-campaigns/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Clop (Graceful Spider)",
+        "secteur": "Technology (Oracle), Oracle customers (supply chain)",
+        "modop": "Ransomware attacks and extortion via 0-day exploitation (Oracle E-Business Suite) to exfiltrate sensitive data. Noted for a massive extortion campaign.",
+        "tags": "actor, threat_actor, ransomware, extortion, supply_chain_attack, 0day_exploit",
+        "sources": [
+          "https://cybersecuritynews.com/oracle-breach-clop-ransomware/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Imperial Kitten",
+        "secteur": "Maritime",
+        "modop": "Cyber operations supporting real-world kinetic attacks. Breach of vessel AIS platforms, access to onboard CCTV, then searching for AIS data on specific ships prior to missile strikes. Iran-linked actor.",
+        "tags": "actor, threat_actor, nation_state, iran, cyber_kinetic, maritime, espionage",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "General users",
+        "modop": "Malicious NodeJS applications disguised as helpful AI tools or utilities. Performs reconnaissance, executes arbitrary commands in memory, and potentially cryptomining. Uses scheduled tasks for persistence.",
+        "tags": "actor, threat_actor, trojan, information_stealer, cryptomining, persistence, social_engineering, nodejs",
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "MuddyWater",
+        "secteur": "Government (Israel), surveillance infrastructure",
+        "modop": "Cyber operations supporting real-world kinetic attacks. Setup of campaign servers, access to live CCTV feeds from Jerusalem for real-time intelligence, coinciding with missile strikes. Iran-linked actor.",
+        "tags": "actor, threat_actor, nation_state, iran, cyber_kinetic, surveillance, espionage",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Qilin",
+        "secteur": "Healthcare (IVF clinics), recruitment agencies",
+        "modop": "Ransomware attacks with data exfiltration. Targets UK IVF clinics (London Women’s Clinic) and recruitment agencies (Cornerstone Staffing) to steal sensitive data.",
+        "tags": "actor, threat_actor, ransomware, data_exfiltration, healthcare, recruitment",
+        "sources": [
+          "https://databreaches.net/2025/11/20/russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples/?pk_campaign=feed&pk_kwd=russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples",
+          "https://blog.talosintelligence.com/its-not-personal-its-just-business/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Rhadamanthys",
+        "secteur": "General users, cryptocurrency",
+        "modop": "C++ information stealer, offered as-a-service. Steals credentials, cryptocurrency wallets, and browser data. Distributed via email phishing campaigns, Google ads, and 'paste-and-run' campaigns. Disrupted by Europol's Operation Endgame.",
+        "tags": "actor, threat_actor, information_stealer, malware_as_a_service, phishing, cryptocurrency",
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Scattered Lapsus$ Hunters (ShinyHunters)",
+        "secteur": "IT, CRM (Salesforce, Gainsight), Salesforce customers",
+        "modop": "Customer data theft via compromise of third-party applications connected to Salesforce (e.g., Salesloft, Gainsight). Exploits stolen OAuth tokens to access Salesforce instances. Claims access to an additional 285 Salesforce instances.",
+        "tags": "actor, threat_actor, data_breach, supply_chain_attack, oauth_tokens, it, crm",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/salesforce-investigates-customer-data-theft-via-gainsight-breach/",
+          "https://databreaches.net/2025/11/20/threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce/?pk_campaign=feed&pk_kwd=threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Sturnus",
+        "secteur": "Financial services (banking), secure messaging app users (WhatsApp, Telegram, Signal)",
+        "modop": "Android banking trojan with full device-takeover capabilities. Bypasses encrypted messaging by capturing on-screen content, steals banking credentials, remotely controls the device, and hides fraudulent actions. Uses HTML overlays and accessibility-based keylogging.",
+        "tags": "actor, threat_actor, mobile_malware, banking_trojan, android, data_theft, remote_control, keylogger",
+        "sources": [
+          "https://securityaffairs.com/184878/cyber-crime/sturnus-new-android-banking-trojan-targets-whatsapp-telegram-and-signal.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "nom": "Tsundere (koneko)",
+        "secteur": "Gaming industry (piracy), Windows/Linux/macOS users",
+        "modop": "New Node.js-based botnet, using Ethereum smart contracts for C2 infrastructure resilience. Distributed via MSI installers disguised as popular games and PowerShell scripts. Targets non-CIS region systems. The author, 'koneko', is also linked to the 123 Stealer infostealer.",
+        "tags": "actor, threat_actor, botnet, nodejs, blockchain, ethereum, c2, malware_delivery, information_stealer",
+        "sources": [
+          "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Industry, Economy",
+        "theme": "Economic warfare and protection of the French Defense Industrial and Technological Base (BITD)",
+        "description": "France is facing intense economic warfare, particularly targeting its BITD (4,000 companies, 80% of SMEs are targets). Between 500 and 550 characterized attacks are reported annually, including capital pressures, cyber intrusions, economic espionage, and human/legal manipulations. Main aggressors are from Russia, China, the United States, and Germany. France has strengthened its state mechanisms (creation of DID, increased SISSE and DRSD, reactivation of the 1968 blocking statute, control of foreign investments) but financing SMEs in the BITD and awareness remain major challenges, especially given the risks from social media and messaging applications.",
+        "tags": "geopolitique, geopolitic, france, defense, industry, economy, cyber_espionage, supply_chain, sme",
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/defis-strategies-bitd-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Defense, International Affairs",
+        "theme": "Increase in defense spending and European strategic autonomy",
+        "description": "The EU and NATO are engaged in a reversed dynamic where NATO is developing its own industrial policy, formerly an EU prerogative. The impact of using the NATO Support and Procurement Agency (NSPA) on European strategic autonomy and the EDTIB (European Defence Technological and Industrial Base) is under question, especially with the increase in EU member states' defense budgets following the war in Ukraine. The IRIS note addresses this complexity.",
+        "tags": "geopolitique, geopolitic, europe, nato, defense, strategic_autonomy, ukraine_war",
+        "sources": [
+          "https://www.iris-france.org/the-increase-in-defence-spending-the-role-of-the-nspa-and-the-european-strategic-autonomy/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Defense, Geopolitics",
+        "theme": "Cyber-enabled kinetic targeting by Iran-linked actors",
+        "description": "Iran-linked actors (Imperial Kitten, MuddyWater) are using cyber operations to support and amplify real-world physical attacks. This includes mapping ship AIS data prior to missile strikes (maritime sector) and accessing live CCTV feeds from Jerusalem to adjust missile targeting. This trend represents a fundamental evolution in warfare, where the boundaries between cyber and kinetic operations are dissolving, leading to 'cyber-enabled kinetic targeting'.",
+        "tags": "geopolitique, geopolitic, iran, cyber_kinetic_targeting, nation_state, maritime, surveillance, missile_strike",
+        "sources": [
+          "https://securityaffairs.com/184862/apt/cyber-enabled-kinetic-targeting-iran-linked-actor-uses-cyber-operations-to-support-physical-attacks.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Government, Cybercrime",
+        "theme": "Coordinated sanctions against Russian bulletproof hosting providers",
+        "description": "The US, Australia, and UK have imposed coordinated sanctions on two Russian 'bulletproof' hosting providers (Media Land and Aeza Group) accused of supporting ransomware operations (like LockBit, BlackSuit, and Play) and other cybercriminal activities. These services provide infrastructure designed to evade detection and thwart law enforcement efforts. The sanctions aim to disrupt these groups' operations and counter sanction evasion.",
+        "tags": "geopolitique, geopolitic, russia, sanctions, cybercrime, ransomware, bulletproof_hosting",
+        "sources": [
+          "https://securityaffairs.com/184871/cyber-crime/coordinated-sanctions-hit-russian-bulletproof-hosting-providers-enabling-top-ransomware-ops.html",
+          "https://databreaches.net/2025/11/20/us-allies-sanction-russian-bulletproof-hosting-services-for-ransomware-support/?pk_campaign=feed&pk_kwd=us-allies-sanction-russian-bulletproof-hosting-services-for-ransomware-support"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "International Politics, Economy, Defense",
+        "theme": "Ukraine peace plans and Western systemic crisis",
+        "description": "Trump's peace plan for Ukraine, deemed unacceptable as it aligns with Putin's demands and excludes Europe/Ukraine from discussions, contrasts with an unfeasible Zelensky plan due to the impossibility of reclaiming territories. Europe is urged to negotiate. Concurrently, an analysis highlights a systemic crisis in Western economies, featuring an AI financial bubble (LLM reliability issues, circular funding) and a military shortage (industrial capacities inadequate for Ukraine).",
+        "tags": "geopolitique, geopolitic, ukraine, russia, united_states, europe, ai, industry, defense, economy",
+        "sources": [
+          "https://www.iris-france.org/plan-trump-inacceptable-plan-zelensky-irrealisable/",
+          "https://www.iris-france.org/entre-bulle-de-lia-et-penurie-militaire-une-crise-systemique/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "IT Services, Rail Transport",
+        "victime": "Almaviva (FS Italiane Group)",
+        "description": "A threat actor stole 2.3TB of data from Italy's national railway operator FS Italiane Group via a breach of its IT services provider, Almaviva. Data leaked on the dark web includes confidential documents, sensitive company information, internal shares, multi-company repositories, technical documentation, contracts with public entities, HR archives, and accounting data.",
+        "tags": "violation, breach, almaviva, fs_italiane_group, rail, it_services, data_theft, dark_web, supply_chain",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-steal-23tb-data-from-italian-rail-group-almaviva/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Collectibles, E-commerce",
+        "victime": "Beckett Collectibles",
+        "description": "Beckett Collectibles experienced a data breach and website defacement in November 2025. Over 500,000 email addresses of North American customers, along with names, usernames, phone numbers, and physical addresses, were stolen and advertised for sale on a hacking forum.",
+        "tags": "violation, breach, beckett_collectibles, e_commerce, data_exfiltration, hacking_forum, pii",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Beckett",
+          "https://mastodon.social/@RedPacketSecurity/115585454197822735"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Eurofiber France",
+        "description": "Eurofiber France disclosed a data breach of its ticket management platform in November 2025. Data containing 10,000 unique email addresses, names, and phone numbers was leaked. The threat actor claims to hold more sensitive data, including screenshots, VPN configuration files, credentials, source code, certificates, archives, and SQL backup files.",
+        "tags": "violation, breach, eurofiber_france, telecommunications, ticket_platform, data_exfiltration, credentials, source_code",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Eurofiber",
+          "https://mastodon.social/@RedPacketSecurity/115585454192341858"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Geisinger Health, Nuance",
+        "description": "A $5 million settlement was reached following an insider data breach affecting 1.2 million current and former patients of Geisinger Health and Nuance. The incident involved unauthorized disclosure of patient information by an employee.",
+        "tags": "violation, breach, geisinger_health, nuance, healthcare, insider_threat, pii, hipaa",
+        "sources": [
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/115584274683599726"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Sports, Community",
+        "victime": "International Kiteboarding Organization",
+        "description": "The International Kiteboarding Organization suffered a data breach in November 2025, exposing 340,000 user records, including email addresses, names, usernames, cities, and countries. The data was listed for sale on a hacking forum.",
+        "tags": "violation, breach, international_kiteboarding_organization, sports, community, data_exfiltration, pii, hacking_forum",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/IKO",
+          "https://mastodon.social/@RedPacketSecurity/115585454189083502"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Healthcare (IVF clinic)",
+        "victime": "London Women’s Clinic",
+        "description": "The London Women’s Clinic, a UK IVF clinic, confirmed it was compromised by the Russian ransomware group Qilin. The attack affected systems used by thousands of couples, leading to a massive and sensitive data leak.",
+        "tags": "violation, breach, london_women_s_clinic, healthcare, ivf, ransomware, qilin, russia, sensitive_data",
+        "sources": [
+          "https://databreaches.net/2025/11/20/russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples/?pk_campaign=feed&pk_kwd=russian-hackers-target-ivf-clinics-across-uk-used-by-thousands-of-couples"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Healthcare (medical laboratory)",
+        "victime": "Lancet Laboratories",
+        "description": "Lancet Laboratories, a large medical laboratory in South Africa, suffered multiple data breaches and was fined R100,000 for failing to respond to the South African Information Regulator's demands to address systemic shortcomings.",
+        "tags": "violation, breach, lancet_laboratories, healthcare, medical_lab, non_compliance, data_exposure",
+        "sources": [
+          "https://databreaches.net/2025/11/20/large-medical-lab-in-south-africa-suffers-multiple-data-breaches/?pk_campaign=feed&pk_kwd=large-medical-lab-in-south-africa-suffers-multiple-data-breaches"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "IT, CRM (Salesforce, Gainsight), Salesforce customers",
+        "victime": "Salesforce customers via Gainsight app compromise",
+        "description": "Salesforce is investigating customer data theft via a breach of Gainsight, a third-party application. The malicious activity is related to the app's external connection to Salesforce. ShinyHunters hackers claim to have gained access to an additional 285 Salesforce instances, targeting large companies like Verizon, Gitlab, F5, Sonicwall.",
+        "tags": "violation, breach, salesforce, gainsight, crm, it, customer_data, data_theft, supply_chain_attack",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/salesforce-investigates-customer-data-theft-via-gainsight-breach/",
+          "https://databreaches.net/2025/11/20/threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce/?pk_campaign=feed&pk_kwd=threat-actors-have-reportedly-launched-yet-another-campaign-involving-an-application-connected-to-salesforce",
+          "https://infosec.exchange/@DevaOnBreaches/115585415768699564"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Cloud Platform",
+        "victime": "Vultr",
+        "description": "Vultr disclosed a security incident at a third-party vendor (ActiveCampaign) in March 2023, resulting in the exposure of 188,000 unique email addresses, along with names, IP addresses, and countries of origin for a small number of records. No Vultr systems or additional customer data were impacted.",
+        "tags": "violation, breach, vultr, cloud_platform, third_party_breach, email_addresses, pii",
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Vultr",
+          "https://mastodon.social/@RedPacketSecurity/115585454193285959"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "secteur": "Communications, Social Media",
+        "victime": "WhatsApp",
+        "description": "A flaw in WhatsApp allowed researchers to enumerate and expose 3.5 billion user profiles. The vulnerability enabled probing over 100 million phone numbers per hour without blocking, revealing information such as names, profile pictures, and E2EE public keys.",
+        "tags": "violation, breach, whatsapp, communications, social_media, data_exposure, enumeration_flaw, pii",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html",
+          "https://databreaches.net/2025/11/20/researchers-claim-largest-leak-ever-after-uncovering-whatsapp-enumeration-flaw/?pk_campaign=feed&pk_kwd=researchers-claim-largest-leak-ever-after-uncovering-whatsapp-enumeration-flaw"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64755",
+        "cvss": "8.7",
+        "product": "Anthropic Claude Code",
+        "description": "Vulnerability in the agentic coding tool Claude Code, allowing bypass of read-only validation via a 'sed' command parsing error, leading to arbitrary file writes on the host system.",
+        "tags": "vulnerabilité, vulnerability, rce, code_execution, claude_code, ai, arbitrary_file_write",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64755"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64762",
+        "cvss": "8.0",
+        "product": "AuthKit library for Next.js",
+        "description": "Vulnerability allowing session cookies to be cached in CDNs due to the lack of defensive anti-caching headers in authenticated responses, potentially leading to session token disclosure to multiple users.",
+        "tags": "vulnerabilité, vulnerability, authentication, session_management, cdn_caching, data_disclosure",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64762"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-13188",
+        "cvss": "9.8 (Inferred)",
+        "product": "D-Link DIR-816L router",
+        "description": "Stack-based buffer overflow vulnerability that could lead to remote code execution (RCE).",
+        "tags": "vulnerabilité, vulnerability, rce, buffer_overflow, dlink, router",
+        "sources": [
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60672",
+        "cvss": "9.8 (Inferred)",
+        "product": "D-Link DIR-878 router",
+        "description": "Unauthenticated remote code execution (RCE) vulnerability due to how the router's web interface processes incoming requests.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60673",
+        "cvss": "9.8 (Inferred)",
+        "product": "D-Link DIR-878 router",
+        "description": "Unauthenticated remote code execution (RCE) vulnerability due to how the router's web interface processes incoming requests.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60674",
+        "cvss": "9.8 (Inferred)",
+        "product": "D-Link DIR-878 router",
+        "description": "Unauthenticated remote code execution (RCE) vulnerability due to how the router's web interface processes incoming requests.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60676",
+        "cvss": "9.8 (Inferred)",
+        "product": "D-Link DIR-878 router",
+        "description": "Unauthenticated remote code execution (RCE) vulnerability due to how the router's web interface processes incoming requests.",
+        "tags": "vulnerabilité, vulnerability, rce, dlink, router, authentication_bypass",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/d-link-warns-of-new-rce-flaws-in-end-of-life-dir-878-routers/",
+          "https://fieldeffect.com/blog/pocs-published-for-unpatched-rce-vulnerabilities-in-d-link-routers"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57774",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Out-Of-Bounds Write vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-887/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57775",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Heap-based Buffer Overflow vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, buffer_overflow, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-888/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57776",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Out-Of-Bounds Write vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-889/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57777",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Out-Of-Bounds Write vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-890/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-57778",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Out-Of-Bounds Write vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-891/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-9188",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Out-Of-Bounds Write vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, file_parsing, memory_corruption",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-885/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-9189",
+        "cvss": "7.8",
+        "product": "Digilent DASYLab",
+        "description": "Deserialization of Untrusted Data vulnerability in DSB file parsing, leading to remote code execution (RCE) upon opening a malicious file. (0-Day)",
+        "tags": "vulnerabilité, vulnerability, rce, 0day, digilent_dasylab, deserialization, file_parsing",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-886/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64310",
+        "cvss": "9.8",
+        "product": "EPSON WebConfig and Epson Web Control for SEIKO EPSON Projector Products",
+        "description": "Authentication brute-force vulnerability in WebConfig/Web Control, not restricting excessive attempts, allowing administrative user password identification.",
+        "tags": "vulnerabilité, vulnerability, authentication, brute_force, epson, projector, web_control",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64310"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-60724",
+        "cvss": "9.8",
+        "product": "Microsoft Graphics Component (GDI+)",
+        "description": "Critical remote code execution (RCE) vulnerability via a heap-based buffer overflow. Exploitable by opening a specially crafted malicious document.",
+        "tags": "vulnerabilité, vulnerability, rce, microsoft, gdiplus, heap_overflow, critical",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-59287",
+        "cvss": "9.8",
+        "product": "Microsoft Windows Server Update Services (WSUS)",
+        "description": "Critical remote code execution (RCE) vulnerability actively exploited to deploy the ShadowPad backdoor.",
+        "tags": "vulnerabilité, vulnerability, rce, wsus, microsoft, shadowpad, actively_exploited, critical",
+        "sources": [
+          "https://securityonline.info/critical-wsus-rce-cve-2025-59287-actively-exploited-to-deploy-shadowpad-backdoor/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-64655",
+        "cvss": "8.8",
+        "product": "Dynamics OmniChannel SDK Storage Containers",
+        "description": "Elevation of Privilege (EoP) vulnerability due to improper authorization, allowing an unauthorized attacker to elevate privileges over a network.",
+        "tags": "vulnerabilité, vulnerability, eop, privilege_escalation, microsoft, dynamics_omnichannel",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64655"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62164",
+        "cvss": "8.8",
+        "product": "vLLM",
+        "description": "Memory corruption vulnerability via deserialization in the Completions API endpoint, potentially leading to a crash (DoS) and remote code execution (RCE) with maliciously crafted tensors.",
+        "tags": "vulnerabilité, vulnerability, rce, dos, vllm, llm, deserialization, memory_corruption",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62164"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62459",
+        "cvss": "8.3",
+        "product": "Microsoft Defender Portal",
+        "description": "Spoofing vulnerability in the Microsoft Defender Portal.",
+        "tags": "vulnerabilité, vulnerability, spoofing, microsoft_defender, security_portal",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62459"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62372",
+        "cvss": "8.3",
+        "product": "vLLM",
+        "description": "Denial of Service (DoS) vulnerability in the vLLM engine for multimodal models, caused by passing multimodal embedding inputs with incorrect shape.",
+        "tags": "vulnerabilité, vulnerability, dos, vllm, llm, multimodal_models",
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62372"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-30398",
+        "cvss": "8.1",
+        "product": "Nuance PowerScribe 360 and PowerScribe One",
+        "description": "Information disclosure vulnerability due to missing authorization, allowing unauthenticated attackers to disclose sensitive configuration settings.",
+        "tags": "vulnerabilité, vulnerability, information_disclosure, nuance_powerscribe, authorization_bypass",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-0108",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "OS Command Injection vulnerability in PAN-OS, chained with other CVEs, actively exploited.",
+        "tags": "vulnerabilité, vulnerability, rce, command_injection, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-0111",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "Command Injection vulnerability in PAN-OS, chained with other CVEs, actively exploited.",
+        "tags": "vulnerabilité, vulnerability, rce, command_injection, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2024-9474",
+        "cvss": "9.8",
+        "product": "Palo Alto Networks GlobalProtect / PAN-OS",
+        "description": "Arbitrary File Write vulnerability in PAN-OS, chained with other CVEs, actively exploited.",
+        "tags": "vulnerabilité, vulnerability, rce, arbitrary_file_write, palo_alto_networks, pan_os, globalprotect, actively_exploited",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/globalprotect-vpn-portals-probed-with-23-million-scan-sessions/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62199",
+        "cvss": "7.8",
+        "product": "Microsoft Office",
+        "description": "Remote code execution (RCE) vulnerability via a use-after-free flaw, exploitable locally with user interaction. Preview pane is an attack vector.",
+        "tags": "vulnerabilité, vulnerability, rce, microsoft_office, use_after_free, local_exploit",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-62215",
+        "cvss": "7.0",
+        "product": "Windows kernel",
+        "description": "Elevation of Privilege (EoP) vulnerability via a race condition in the Windows kernel, allowing an authenticated local attacker to gain SYSTEM privileges. Actively exploited (0-day).",
+        "tags": "vulnerabilité, vulnerability, eop, windows_kernel, race_condition, actively_exploited, 0day",
+        "sources": [
+          "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-11001",
+        "cvss": "7.5",
+        "product": "WhatsApp",
+        "description": "Phone number enumeration flaw, exposing profile data (names, profile pictures, E2EE public keys) for 3.5 billion accounts. Easily exploitable at scale, leading to a serious privacy impact.",
+        "tags": "vulnerabilité, vulnerability, whatsapp, enumeration, data_exposure, privacy_breach",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": "7.5",
+        "product": "WhatsApp",
+        "description": "Phone number enumeration flaw, exposing profile data (names, profile pictures, E2EE public keys) for 3.5 billion accounts. Easily exploitable at scale, leading to a serious privacy impact.",
+        "tags": "vulnerabilité, vulnerability, whatsapp, enumeration, data_exposure, privacy_breach",
+        "sources": [
+          "https://securityaffairs.com/184886/mobile-2/researchers-devised-a-new-enumeration-technique-that-exposed-3-5b-whatsapp-profiles.html"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "cve_id": "CVE-2025-40604",
+        "cvss": "8.5 (Inferred)",
+        "product": "SonicWall Email Security appliances",
+        "description": "Vulnerability allowing remote attackers to gain persistent arbitrary code execution.",
+        "tags": "vulnerabilité, vulnerability, rce, sonicwall, email_security, persistent_access",
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1027/",
+          "https://www.bleepingcomputer.com/news/security/new-sonicwall-sonicos-flaw-allows-hackers-to-crash-firewalls/"
+        ],
+        "date": "2025-11-21"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Google exposes BadAudio malware used in APT24 espionage campaigns / Beyond the Watering Hole: APT24's Pivot to Multi-Vector Attacks",
+        "description": "These articles detail a three-year cyber espionage campaign by China-linked state actor APT24, employing the BadAudio malware. Initially using strategic web compromises to deliver BadAudio to Windows systems, the campaign evolved into multi-vector attacks, including the repeated compromise of a Taiwanese digital marketing firm for supply chain attacks (via JavaScript injection) and targeted phishing campaigns. BadAudio is a heavily obfuscated C++ downloader, leveraging 'control flow flattening', and is capable of downloading and executing encrypted payloads (including Cobalt Strike Beacon). Attackers also used legitimate cloud services like Google Drive for malware distribution.",
+        "threat_actor": "APT24",
+        "indicator_of_compromise": [
+          "smartwebfinder[.]com",
+          "toksearches[.]xyz",
+          "theonlinesearch[.]com",
+          "wispy[.]geneva[.]workers[.]dev",
+          "www[.]twisinbeth[.]com",
+          "cdn[.]jsdelivr[.]net",
+          "roller[.]johallow[.]workers[.]dev",
+          "www[.]growhth[.]com",
+          "www[.]gerikinage[.]com",
+          "www[.]p9-car[.]com",
+          "trcloudflare[.]com",
+          "jarzoda[.]net",
+          "clients[.]brendns[.]workers[.]dev",
+          "components[.]map",
+          "www[.]availableextens[.]com",
+          "taiwantradoshows[.]com",
+          "www[.]cundis[.]com",
+          "www[.]decathlonm[.]com",
+          "tradostw[.]com",
+          "jsdelivrs[.]com",
+          "www[.]brighyt[.]com",
+          "88fa2b5489d178e59d33428ba4088d114025acd1febfa8f7971f29130bda1213",
+          "032c333eab80d58d60228691971d79b2c4cd6b9013bae53374dd986faa0f3f4c",
+          "ae8473a027b0bcc65d1db225848904e54935736ab943edf3590b847cb571f980",
+          "0e98baf6d3b67ca9c994eb5eb9bbd40584be68b0db9ca76f417fb3bcec9cf958",
+          "55e02a81986aa313b663c3049d30ea0158641a451cb8190233c09bef335ef5c7",
+          "07226a716d4c8e012d6fabeffe2545b3abfc0b1b9d2fccfa500d3910e27ca65b",
+          "5c37130523c57a7d8583c1563f56a2e2f21eef5976380fdb3544be62c6ad2de5",
+          "1f31ddd2f598bd193b125a345a709eedc3b5661b0645fc08fa19e93d83ea5459",
+          "c4e910b443b183e6d5d4e865dd8f978fd635cd21c765d988e92a5fd60a4428f5",
+          "2ea075c6cd3c065e541976cdc2ec381a88b748966f960965fdbe72a5ec970d4e",
+          "9ce49c07c6de455d37ac86d0460a8ad2544dc15fb5c2907ed61569b69eefd182",
+          "d23ca261291e4bad67859b5d4ee295a3e1ac995b398ccd4c06d2f96340b4b5f8",
+          "cfade5d162a3d94e4cba1e7696636499756649b571f3285dd79dea1f5311adcd",
+          "f086c65954f911e70261c729be2cdfa2a86e39c939edee23983090198f06503c",
+          "f1e9d57e0433e074c47ee09c5697f93fde7ff50df27317c657f399feac63373a",
+          "176407b1e885496e62e1e761bbbb1686e8c805410e7aec4ee03c95a0c4e9876f",
+          "c7565ed061e5e8b2f8aca67d93b994a74465e6b9b01936ecbf64c09ac6ee38b9",
+          "83fb652af10df4574fa536700fa00ed567637b66f189d0bbdb911bd2634b4f0e",
+          "wispy[.]geneva[.]workers[.]dev/pub/static/img/merged?version=65feddea0367",
+          "www[.]twisinbeth[.]com/query[.]php?id=",
+          "cdn[.]jsdelivr[.]net/npm/@fingerprintjs/fingerprintjs@2/dist/fingerprint2[.]min[.]js",
+          "Watermark_Hash: BeudtKgqnlm0Ruvf+VYxuw==",
+          "rule G_Downloader_BADAUDIO_1",
+          "rule G_Downloader_BADAUDIO_2",
+          "rule G_APT_DOWNLOADER_BADAUDIO_3",
+          "rule G_APT_DOWNLOADER_BADAUDIO_4",
+          "122[.]0[.]0[.]0",
+          "132[.]0[.]0[.]0"
+        ],
+        "mitre_ttps": [
+          "T1195: Supply Chain Compromise",
+          "T1189: Drive-by Compromise",
+          "T1041: Exfiltration Over Command and Control Channel",
+          "T1059: Command-Line Interface",
+          "T1082: System Information Discovery",
+          "T1105: Remote File Copy",
+          "T1574.001: DLL Search Order Hijacking"
+        ],
+        "analyse": "The APT24 campaign targets espionage against specific entities, particularly in Taiwan, demonstrating an adaptive capability and increasing sophistication, transitioning from opportunistic watering holes to targeted supply chain attacks and phishing. The use of advanced obfuscation and legitimate cloud services makes detection more difficult. The impact is strategic, aiming to steal sensitive information and establish persistent access on targeted networks, with clear geopolitical implications related to China.",
+        "recommandations": [
+          "Monitor for malicious JavaScript injections on public websites and in third-party libraries.",
+          "Implement strict security policies for the software supply chain.",
+          "Train users on phishing techniques and social engineering.",
+          "Deploy Endpoint Detection and Response (EDR) solutions capable of detecting DLL sideloading and in-memory payloads.",
+          "Use YARA rules to detect associated BadAudio and Cobalt Strike Beacon samples.",
+          "Implement network behavior analysis to identify hidden C2 communications via HTTP/HTTPS requests.",
+          "Block identified C2 domains and IP addresses or malicious infrastructure."
+        ],
+        "tags": "apt24, espionage, nation_state, china, badaudio, supply_chain, phishing, watering_hole, cobalt_strike, obfuscation, dll_sideloading",
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-exposes-badaudio-malware-used-in-apt24-espionage-campaigns/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/apt24-pivot-to-multi-vector-attacks/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Beyond Spicy Autocomplete: Are LLMs Enough for Static Application Security Testing (SAST)?",
+        "description": "This article analyzes the effectiveness of Large Language Models (LLMs) for Static Application Security Testing (SAST). It concludes that LLMs, while useful for automating summary analysis and identifying known vulnerability patterns, cannot replace human expertise. Their limitations include reliance on training data, inability to understand complex execution flows, generation of false positives and hallucinations, and lack of contextual awareness. They are best used as assistants augmenting human analyst efficiency rather than autonomous auditors.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "No specific IoCs are provided"
+        ],
+        "mitre_ttps": "Non mentioned",
+        "analyse": "AI's impact on cybersecurity is mixed. While AI can accelerate the identification of known vulnerabilities and reduce analyst workload, its lack of semantic and contextual understanding poses a significant risk if used as the sole SAST method. Over-reliance on AI can create a false sense of security and allow subtle or unconventional vulnerabilities to slip through. The article emphasizes the importance of a hybrid human-AI approach for robust application security.",
+        "recommandations": [
+          "Integrate LLM-based SAST tools as assistants for human analysts, not as replacements.",
+          "Combine LLMs with traditional static analysis tools to reduce false positives and increase detection rates.",
+          "Train analysts on crafting precise prompts for LLMs and critically validating their outputs.",
+          "Maintain expert human oversight to interpret results, validate findings, and understand contextual nuances."
+        ],
+        "tags": "ai, artificial_intelligence, llm, sast, application_security, vulnerability_detection, human_in_the_loop",
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/beyond-spicy-autocorrect-llms-for-sast/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Blockchain and Node.js abused by Tsundere: an emerging botnet",
+        "description": "This article details the discovery of the Tsundere botnet, a new Node.js-based botnet using Ethereum smart contracts for resilient C2 infrastructure. It is distributed via MSI installers disguised as popular games and PowerShell scripts, targeting Windows, Linux, and macOS systems. The malware deploys a Node.js package manager (npm) and uses pm2 for persistence. C2 addresses are stored and updated via transactions on the Ethereum blockchain, making takedowns more challenging. The bot executes dynamic JavaScript code from the C2 and avoids infecting CIS region systems. The author, 'koneko', is also linked to the 123 Stealer infostealer.",
+        "threat_actor": "Tsundere (aka koneko)",
+        "indicator_of_compromise": [
+          "nodejs[.]org",
+          "07a4[.]net",
+          "kaspersky[.]com",
+          "185[.]28[.]119[.]179",
+          "62[.]60[.]226[.]179",
+          "196[.]251[.]72[.]192",
+          "103[.]246[.]145[.]201",
+          "193[.]24[.]123[.]68",
+          "f11Cb0578EA61e2EDB8a4a12c02E3eF26E80fc36",
+          "52221c293a21D8CA7AFD01Ac6bFAC7175D590A84",
+          "Ec99D2C797Db6E0eBD664128EfED9265fBE54579",
+          "10ca9bE67D03917e9938a7c28601663B191E4413",
+          "db8e8B0ef3ea1105A6D84b27Fc0bAA9845C66FD7",
+          "46b0f9bA6F1fb89eb80347c92c9e91BDF1b9E8CC",
+          "73625B6cdFECC81A4899D221C732E1f73e504a32",
+          "a1b40044EBc2794f207D45143Bd82a1B86156c6b",
+          "hxxp[:]//idk[.]1f2eREDACTED07a4[.]net/api/builds/{BUILD-ID}[.]msi",
+          "intelreports@kaspersky[.]com"
+        ],
+        "mitre_ttps": "Non mentioned",
+        "analyse": "Tsundere represents an evolved threat with resilient C2 infrastructure thanks to the use of the Ethereum blockchain, making takedown efforts more complex. Its spread via popular game lures and use of scripts makes infection potentially widespread and initially difficult to detect. The involvement of actor 'koneko' in other threats, such as 123 Stealer, suggests ongoing escalation and increasing sophistication of their cybercrime operations.",
+        "recommandations": [
+          "Block known C2 IP addresses and domains associated with Tsundere.",
+          "Monitor for unusual PowerShell script executions and MSI installations from untrusted sources.",
+          "Deploy Endpoint Detection and Response (EDR) solutions capable of detecting malicious Node.js activities and registry key modifications for persistence.",
+          "Implement Ethereum blockchain monitoring for smart contract addresses linked to C2 activities.",
+          "Educate users about the dangers of pirated software downloads and disguised installers."
+        ],
+        "tags": "botnet, nodejs, blockchain, ethereum, c2_infrastructure, malware_delivery, persistence, msi, powershell, cybercrime",
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Inside the dark web job market",
+        "description": "This report examines the dark web job market between January 2023 and June 2025, based on over 2,000 job-related posts. It reveals that the dark web operates as a parallel market with its own norms, recruitment practices, and salary expectations. The most in-demand roles are developers, penetration testers, and money launderers, with reverse engineers commanding the highest average salaries. There is a significant presence of teenagers seeking quick earnings. The report notes parallels with the legitimate market, including a prioritization of practical skills and synchronized supply/demand fluctuations, and predicts an increase in the average age and qualifications of dark web job seekers.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": [
+          "No specific IoCs are provided"
+        ],
+        "mitre_ttps": "Non mentioned",
+        "analyse": "The dark web job market serves as a barometer for cybercrime trends and required skills. The increasing presence of more qualified and experienced individuals, potentially due to layoffs in the legitimate sector, suggests a growing professionalization of cybercriminal groups. This also indicates that attackers will have access to more advanced skills to develop and execute complex attacks, thereby increasing the overall cybersecurity threat.",
+        "recommandations": [
+          "Enhance threat intelligence capabilities to monitor skills sought on the dark web and anticipate the evolution of attack techniques.",
+          "Improve insider threat detection programs by considering financial motivations or acquired skills of former employees.",
+          "Implement retention strategies for cybersecurity talent to reduce the risk of them being lured to the illicit market."
+        ],
+        "tags": "dark_web, cybercrime, job_market, threat_actor_recruitment, developer, penetration_tester, money_laundering, reverse_engineer",
+        "sources": [
+          "https://securelist.com/dark-web-job-market-2023-2025/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Arms Race: AI's Impact on Cybersecurity / It’s not personal, it’s just business",
+        "description": "These articles explore AI's impact on cybersecurity, describing it as an 'arms race' between attackers and defenders. Attackers are using generative AI (LLMs) to enhance phishing (email crafting, bypass protections), malware development (generating malicious code like keyloggers or ransomware, though human intervention is still needed), and the emergence of agentic AI for autonomous tasks (reconnaissance, exfiltration). Defenders are also leveraging AI for threat detection and response (behavioral analytics, attack prediction). Agentic AI, while promising for efficiency, introduces new risks by enabling more autonomous malicious actions and lowering the entry barrier for cybercriminals.",
+        "threat_actor": "Various Cybercriminals (leveraging AI)",
+        "indicator_of_compromise": [
+          "No specific IoCs are provided"
+        ],
+        "mitre_ttps": "Non mentioned",
+        "analyse": "AI is a major amplification factor for cyber threats, making attacks more sophisticated, personalized, and potentially autonomous. This intensifies pressure on defenders, who must themselves integrate AI capabilities to maintain an advantage. The ease with which generative AI can be misused to create malicious content and automate attack steps represents a significant risk, demanding continuous investment in AI-driven defense research and development, as well as awareness of LLM vulnerabilities themselves.",
+        "recommandations": [
+          "Deploy AI and ML-based detection systems to identify anomalies and next-generation attacks.",
+          "Implement behavioral analysis to detect suspicious activities generated by AI or malicious agents.",
+          "Strengthen user training against increasingly sophisticated, AI-generated phishing attacks.",
+          "Develop proactive defenses against AI-assisted malware, including monitoring dark web forums for emerging AI capabilities.",
+          "Regularly evaluate and update the security controls of internally used LLMs to prevent their misuse."
+        ],
+        "tags": "ai, artificial_intelligence, llm, agentic_ai, cybercrime, phishing, malware_development, threat_intelligence, arms_race",
+        "sources": [
+          "https://www.security.com/threat-intelligence/ai-whitepaper-research",
+          "https://blog.talosintelligence.com/its-not-personal-its-just-business/"
+        ],
+        "date": "2025-11-21"
+      },
+      {
+        "title": "Sturnus: New Android banking trojan targets WhatsApp, Telegram, and Signal",
+        "description": "The Android banking trojan Sturnus is a new threat capable of full device takeover. It targets secure messaging apps like WhatsApp, Telegram, and Signal by capturing on-screen content, thereby bypassing end-to-end encryption. Sturnus steals banking credentials, can remotely control the device, and hides fraudulent actions. It uses HTML overlays and accessibility service-based keylogging. The malware is under active development but already functional and targets financial institutions across Southern and Central Europe.",
+        "threat_actor": "Sturnus (operators)",
+        "indicator_of_compromise": [
+          "No specific IoCs are provided"
+        ],
+        "mitre_ttps": "Non mentioned",
+        "analyse": "Sturnus poses a sophisticated threat to Android users and financial institutions, particularly due to its ability to bypass secure messaging encryption by directly capturing on-screen content. The potential impact is a significant loss of privacy and financial data. Its developing nature suggests its capabilities could still expand, and its focus on Europe indicates clear geographical targeting. The full device takeover and action-hiding capabilities make it especially dangerous and difficult for users to detect.",
+        "recommandations": [
+          "Use robust mobile security solutions to detect and block Android malware.",
+          "Avoid downloading apps from unofficial sources.",
+          "Review and limit app permissions, especially access to accessibility services.",
+          "Be vigilant against suspicious messages and requests for personal or banking information, even through secure messaging apps.",
+          "Implement multi-factor authentication (MFA) for banking accounts and other sensitive services."
+        ],
+        "tags": "android, banking_trojan, mobile_malware, whatsapp, telegram, signal, data_theft, remote_control, keylogger, europe",
+        "sources": [
+          "https://securityaffairs.com/184878/cyber-crime/sturnus-new-android-banking-trojan-targets-whatsapp-telegram-and-signal.html"
+        ],
+        "date": "2025-11-21"
+      }
+    ]
+  }
+}
