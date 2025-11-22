@@ -1,404 +1,432 @@
 {
   "FR": {
     "Analyse transversale": {
-      "analyse": "La veille révèle une intensification des menaces persistantes et l'émergence de nouvelles tactiques, notamment l'exploitation active de vulnérabilités zero-day, les attaques sur la chaîne d'approvisionnement logicielle, et l'accroissement des menaces internes. Les noyaux Linux (Ubuntu, SUSE, Red Hat), les produits Microsoft (Visual Studio Code, Office, Windows kernel) et IBM, ainsi que les plateformes critiques comme Oracle Identity Manager, Grafana Enterprise et SolarWinds Serv-U sont constamment ciblés par des vulnérabilités (RCE, élévation de privilèges, contournement d'authentification) dont les scores CVSS atteignent souvent le maximum. L'ingénierie sociale et les menaces internes restent des vecteurs d'attaque majeurs, comme en témoignent les incidents chez CrowdStrike et les allégations contre Scattered Lapsus$ Hunters. L'utilisation de l'IA par les attaquants est également mise en lumière, avec des failles dans les systèmes d'IA générative (jailbreaking de LLM) et l'exploitation potentielle de plateformes de codage basées sur l'IA (Roo Code). Sur le plan géopolitique, les cyberattaques sont de plus en plus imbriquées dans des stratégies nationales, comme le montre le groupe Salt Typhoon ciblant les télécoms américains, et la collaboration entre les groupes APT nord-coréens Kimsuky et Lazarus. La centralisation des infrastructures Internet (ex: Cloudflare) pose également des défis en matière de souveraineté numérique et de résilience globale. En conclusion, le paysage des menaces cyber est caractérisé par une sophistication croissante, une exploitation rapide des failles critiques et une diversification des vecteurs d'attaque, exigeant une vigilance constante et des stratégies de défense multicouches, en particulier face aux menaces internes et aux défis posés par l'IA et la centralisation des services.",
+      "analyse": "La période analysée révèle une intensification des menaces cyber, caractérisée par la persistance de vulnérabilités critiques activement exploitées et l'émergence de tactiques d'attaque sophistiquées. Les vulnérabilités d'exécution de code à distance (RCE) et les contournements d'authentification, en particulier dans les systèmes de gestion d'identité (comme Oracle Identity Manager) et les applications d'infrastructure web (comme FortiWeb et Grafana Enterprise), restent des cibles privilégiées et représentent un risque maximal (CVSS 10.0 et 9.8). La rapidité avec laquelle des modules d'exploitation (Metasploit) sont développés pour ces failles, parfois avant la publication de correctifs, met en lumière la fenêtre d'opportunité étroite pour la défense.\nLa supply chain continue d'être un vecteur d'attaque majeur, comme en témoignent la fuite de données de l'opérateur ferroviaire italien via un fournisseur IT, ou la compromission de données Salesforce de centaines d'entreprises via des applications OAuth tierces (Gainsight/Salesloft). Cela souligne la nécessité d'une vigilance accrue sur la sécurité des écosystèmes partenaires et des intégrations logicielles.\nLes acteurs de la menace, tels que le groupe APT ToddyCat, montrent une évolution constante de leurs TTPs, en se concentrant sur le vol discret d'informations d'identification et de données sensibles (e-mails d'entreprise, tokens OAuth) via des outils personnalisés et des techniques d'évasion. Parallèlement, des groupes cybercriminels comme Scattered Lapsus$ Hunters (incluant ShinyHunters et Scattered Spider) continuent d'opérer via l'ingénierie sociale et, dans un cas notable, l'exploitation d'une menace interne chez une entreprise de cybersécurité majeure (CrowdStrike), démontrant la complexité et le coût des menaces internes.\nL'utilisation de l'IA n'est pas directement mentionnée comme un vecteur d'attaque généralisé par les attaquants dans ces articles, mais la vulnérabilité dans \"Roo Code\" (agent de codage IA) et \"LangChain\" (framework LLM) montre que les outils basés sur l'IA deviennent eux-mêmes des cibles ou des produits avec des failles critiques. L'émergence de plateformes MaaS (Malware-as-a-Service) comme Matrix Push C2, qui facilite les attaques de phishing multi-plateformes et sans fichier via les notifications de navigateur, abaisse la barre pour les cybercriminels et augmente la portée potentielle des attaques par ingénierie sociale.\nSur le plan géopolitique, les décisions politiques ont un impact direct sur la cybersécurité nationale, comme l'assouplissement des règles de cybersécurité pour les télécoms américaines malgré les risques d'espionnage étatique. La concentration de l'infrastructure Internet entre quelques acteurs majeurs soulève également des questions de souveraineté numérique et de résilience face aux pannes ou aux décisions politiques.\nEn conclusion, l'état général des menaces est élevé et multifacette. Il exige une approche proactive axée sur le patch management rapide des vulnérabilités critiques, le renforcement de la sécurité de la supply chain et des intégrations tierces, l'amélioration des défenses contre les menaces internes, et une vigilance continue face à l'évolution des TTPs des acteurs malveillants et l'industrialisation des outils d'attaque (MaaS). La convergence entre les vulnérabilités techniques, les failles humaines et les enjeux géopolitiques continue de façonner un paysage de menaces complexe et exigeant.",
       "date": "2025-11-22"
     },
     "Synthèse des acteurs malveillants": [
       {
-        "nom": "Kimsuky",
-        "secteur": "Secteurs critiques (mondial)",
-        "modop": "Campagne d'attaques coordonnées avec Lazarus, exploitation de vulnérabilités zero-day, messages malveillants avec pièces jointes (HWP, MSC) déployant le backdoor FPSpy et le keylogger KLogEXE",
-        "tags": ["actor", "theat_actor", "apt", "nation_state", "zero_day_exploit", "critical_infrastructure", "malware_delivery", "keylogger"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Lazarus",
-        "secteur": "Secteurs critiques (mondial)",
-        "modop": "Campagne d'attaques coordonnées avec Kimsuky, exploitation de vulnérabilités zero-day, utilisation du backdoor InvisibleFerret (trafic HTTPS déguisé, canaux chiffrés, rotation de domaines C2)",
-        "tags": ["actor", "theat_actor", "apt", "nation_state", "zero_day_exploit", "critical_infrastructure", "backdoor", "evasion_techniques"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Salt Typhoon",
-        "secteur": "Télécommunications (opérateurs US), Gouvernement",
-        "modop": "Espionnage par intrusion dans les systèmes centraux de télécommunications, interception de communications sensibles",
-        "tags": ["actor", "theat_actor", "nation_state", "espionage", "telecom_targeting", "data_interception"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
-        "date": "2025-11-22"
-      },
-      {
         "nom": "Scattered Lapsus$ Hunters",
-        "secteur": "Cybersécurité, SaaS, Finance, Assurance, Transport, Luxe, Technologies, Divers",
-        "modop": "Threats internes, vol de données, attaques de phishing vocal, extorsion, ciblage d'applications OAuth, utilisation de plateformes RaaS (ShinySp1d3r, ALPHV/BlackCat, RansomHub, Qilin, DragonForce)",
-        "tags": ["actor", "theat_actor", "insider_threat", "data_theft", "phishing", "extortion", "ransomware", "supply_chain_attack", "sso_bypass"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html", "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/crowdstrike-catches-insider-feeding-information-to-scatteredlapsushunters/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Scattered Spider",
-        "secteur": "Transport, Santé, Retail",
-        "modop": "Cyberattaques avec perturbation des services en ligne et systèmes internes, vol de données clients, infiltration de réseaux, tentatives d'extorsion, attaques sur l'infrastructure critique",
-        "tags": ["actor", "theat_actor", "data_theft", "disruption", "extortion", "critical_infrastructure", "network_intrusion"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "ShinyHunters",
-        "secteur": "SaaS, Technologies, Divers",
-        "modop": "Extorsion, vol de données, ciblage d'applications OAuth (Gainsight), utilisation de plateformes RaaS (ShinySp1d3r, ALPHV/BlackCat, RansomHub, Qilin, DragonForce), exploitation de secrets volés",
-        "tags": ["actor", "theat_actor", "data_theft", "extortion", "ransomware", "supply_chain_attack", "oauth_exploit"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html"],
+        "secteur": "Cybersécurité (cible), Transport (TfL), SaaS (Salesforce via Gainsight/Salesloft), divers (Google, Cisco, etc. pour extorsion)",
+        "modop": "Menace interne (CrowdStrike), ingénierie sociale (hameçonnage vocal), exploitation de vulnérabilités (applications OAuth Gainsight/Salesloft), fuite de données, extorsion.",
+        "tags": ["actor", "theat_actor", "Scattered_Lapsus_Hunters", "ShinyHunters", "Scattered_Spider", "Lapsus$", "insider_threat", "social_engineering", "data_exfiltration", "extortion", "OAuth_exploitation"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html",
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
         "date": "2025-11-22"
       },
       {
         "nom": "ToddyCat APT",
-        "secteur": "Entreprises (e-mail), Cloud (Microsoft 365)",
-        "modop": "Accès furtif à la correspondance professionnelle, vol de cookies, historique de navigation, mots de passe, clés de chiffrement de navigateur, accès aux fichiers OST Outlook, vol de tokens d'accès OAuth 2.0 (JWT) via dump mémoire de processus",
-        "tags": ["actor", "theat_actor", "apt", "espionage", "email_compromise", "credential_theft", "oauth_token_theft", "smb_exploit"],
+        "secteur": "Entreprises (e-mail d'entreprise)",
+        "modop": "Vol d'accès e-mail (Outlook), vol de tokens OAuth 2.0, utilisation d'outils personnalisés (TomBerBil, TCSectorCopy, XstReader) pour l'exfiltration de cookies, mots de passe, fichiers OST.",
+        "tags": ["actor", "theat_actor", "ToddyCat_APT", "email_theft", "OAuth_token_theft", "custom_malware", "data_exfiltration"],
         "sources": ["https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"],
+        "date": "2025-11-22"
+      },
+      {
+        "nom": "Salt Typhoon",
+        "secteur": "Télécommunications",
+        "modop": "Espionnage, accès aux systèmes centraux des télécoms pour espionner les communications privées.",
+        "tags": ["actor", "theat_actor", "Salt_Typhoon", "nation_state", "espionage", "telecommunications"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
+        "date": "2025-11-22"
+      },
+      {
+        "nom": "Matrix Push C2 (en tant que service)",
+        "secteur": "Divers (phishing ciblant les utilisateurs finaux)",
+        "modop": "Hameçonnage multi-plateforme sans fichier via notifications de navigateur, fausses alertes, redirections de liens, ingénierie sociale, plateforme MaaS (Malware-as-a-Service).",
+        "tags": ["actor", "theat_actor", "Matrix_Push_C2", "MaaS", "phishing", "fileless", "social_engineering", "browser_notifications"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse de l'actualité géopolitique": [
       {
-        "secteur": "Environnement, Sécurité, Défense",
-        "theme": "Vulnérabilités Climatiques et Conflits",
-        "description": "Cette analyse explore comment les vulnérabilités climatiques sont utilisées comme levier stratégique dans les conflits contemporains, s'inscrivant dans un continuum d'instrumentalisation et d'arsenalisation. Elle examine également les dégradations environnementales causées par les conflits et leurs implications stratégiques. La note propose des scénarios prospectifs et des recommandations pour le ministère des Armées, soulignant l'interaction croissante des enjeux climatiques et sécuritaires dans un contexte de \"guerre hybride\" et de conflits de \"haute intensité\".",
-        "tags": ["geopolitique", "geopolitic", "climate_security", "conflict_dynamics", "environmental_degradation", "hybrid_warfare", "defense_strategy", "climate_vulnerability"],
-        "sources": ["https://www.iris-france.org/lutilisation-strategique-des-vulnerabilites-climatiques-dans-les-conflits-contemporains-modalites-et-retroactions/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Gouvernement, Économie, Ressources",
-        "theme": "Instabilité Politique, Accaparement des Richesses",
-        "description": "Madagascar, île stratégiquement située et riche en ressources (minières, hydrocarbures), fait face à une pauvreté persistante en raison d'une histoire politique mouvementée, d'une instabilité chronique, de la corruption et de la dépendance à l'aide internationale. L'article souligne que cette centralité et richesse attirent les puissances régionales et internationales, créant une concurrence pour l'influence. Une récente mobilisation de la jeunesse contre un régime corrompu et inefficace met en lumière la nécessité pour le pays de tirer profit de ses richesses pour le bénéfice de tous.",
-        "tags": ["geopolitique", "geopolitic", "madagascar", "political_instability", "resource_exploitation", "corruption", "economic_challenges", "foreign_influence"],
-        "sources": ["https://www.iris-france.org/madagascar-lile-aux-richesses-confisquees-jusqua-quand/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Gouvernement, Télécommunications",
-        "theme": "Régulation et Cybersécurité, Espionnage Étranger",
-        "description": "La FCC (Federal Communications Commission) américaine a annulé une décision exigeant des mesures de cybersécurité plus strictes pour les opérateurs de télécommunications, malgré les risques d'espionnage étatique. Cette annulation fait suite à des pressions des entreprises de télécommunications et à une nouvelle direction de la FCC. L'incident de Salt Typhoon, lié à une campagne d'espionnage chinoise, avait ciblé plusieurs opérateurs américains (Verizon, AT&T, Lumen, T-Mobile, Charter, Consolidated Communications, Windstream) pour espionner des communications sensibles, y compris celles de fonctionnaires gouvernementaux.",
-        "tags": ["geopolitique", "geopolitic", "regulation", "telecom", "espionnage_etatique", "nation_state", "cybersecurity_policy", "salt_typhoon", "chine", "usa"],
+        "secteur": "Télécommunications, Gouvernement",
+        "theme": "Politique de cybersécurité, Espionnage étatique",
+        "description": "La Federal Communications Commission (FCC) a assoupli les exigences de cybersécurité pour les opérateurs télécoms américains, précédemment renforcées suite à l'attaque du groupe d'état chinois Salt Typhoon visant l'espionnage des communications privées. Cette décision est critiquée pour le risque qu'elle représente pour la sécurité nationale des États-Unis.",
+        "tags": ["geopolitique", "geopolitic", "telecommunications", "FCC", "politique_cyber", "state_hacking", "Salt_Typhoon", "espionnage", "national_security", "USA", "Chine"],
         "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
         "date": "2025-11-22"
       },
       {
-        "secteur": "Infrastructure Internet, Gouvernement, Technologies",
-        "theme": "Centralisation d'Internet, Souveraineté Numérique",
-        "description": "Une panne majeure chez Cloudflare le 18 novembre 2025, qui a paralysé des millions de sites web (X, ChatGPT, Uber) pendant 6 heures, met en évidence la fragilité d'une infrastructure internet mondialisée reposant sur un petit nombre d'acteurs centraux. L'article souligne les enjeux de souveraineté numérique découlant de cette concentration (majoritairement américaine) et la portée extraterritoriale de lois comme le Cloud Act, qui peuvent limiter l'accès à des services numériques sur décision politique, comme l'illustre la sanction d'un juge français de la CPI par les États-Unis.",
-        "tags": ["geopolitique", "geopolitic", "internet_infrastructure", "digital_sovereignty", "cloudflare", "cloud_act", "centralisation", "panne_internet", "souverainete_numerique"],
+        "secteur": "Infrastructure Internet, Cloud computing, Services numériques",
+        "theme": "Centralisation de l'infrastructure Internet, Souveraineté numérique",
+        "description": "Des pannes majeures chez Cloudflare et Amazon Web Services (AWS) ont mis en évidence la fragilité d'une infrastructure Internet mondiale centralisée entre les mains de quelques acteurs américains. Cela soulève des préoccupations importantes en matière de souveraineté numérique et de résilience des services critiques face aux incidents ou aux décisions politiques, notamment l'application du Cloud Act américain.",
+        "tags": ["geopolitique", "geopolitic", "souverainete_numerique", "digital_sovereignty", "infrastructure_critique", "critical_infrastructure", "Cloudflare", "AWS", "Cloud_Act", "centralisation_internet"],
         "sources": ["https://www.portail-ie.fr/univers/2025/cloudflare-panne-failles-internet/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Gouvernement, Défense, Intelligence",
-        "theme": "Politique de renseignement, Sécurité nationale",
-        "description": "Un rapport interne du Home Office britannique, datant d'octobre 2025, critique les agences de renseignement du Royaume-Uni pour leur incapacité à suivre le rythme des menaces à la sécurité nationale, citant un manque de coordination. L'article propose d'apprendre de l'approche australienne, notamment la création d'un conseiller principal pour le Premier ministre sur les questions de renseignement, afin d'améliorer la collaboration et le renforcement des capacités face aux menaces étatiques croissantes et à la guerre hybride.",
-        "tags": ["geopolitique", "geopolitic", "national_security", "intelligence_policy", "uk_intelligence", "australia", "threat_landscape", "hybrid_warfare", "government"],
-        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/learning-canberra-smarter-vision-uk-intelligence-and-national-security/"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse des violations de données": [
       {
-        "secteur": "Gouvernement local",
-        "victime": "Ville d'Attleboro, Massachusetts",
-        "description": "La ville d'Attleboro, Massachusetts, enquête sur un \"incident de cybersécurité\" qui a mis hors ligne plusieurs de ses systèmes informatiques. Les services de sécurité publique restent opérationnels, mais la cause et l'ampleur de l'incident sont encore sous investigation par les autorités locales, étatiques et fédérales.",
-        "tags": ["violation", "breach", "attleboro", "local_government", "it_systems", "cyber_incident", "usa_city"],
-        "sources": ["https://databreaches.net/2025/11/21/attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Transport ferroviaire, Services IT",
+        "secteur": "Transports (ferroviaire), Services IT",
         "victime": "Ferrovie dello Stato Italiane (FS), Almaviva",
-        "description": "Des données appartenant à l'opérateur ferroviaire national italien Ferrovie dello Stato Italiane (FS) ont été divulguées suite à une violation de données chez son fournisseur de services informatiques, Almaviva. Un pirate a revendiqué le vol de 2,3 To de données sensibles, incluant des documents fiscaux, administratifs, opérationnels, des bulletins de paie, des contrats et des détails de comptes bancaires. L'attaque suggère un compromis récent plutôt qu'une réutilisation de données anciennes.",
-        "tags": ["violation", "breach", "ferrovie_dello_stato", "almaviva", "railway", "it_services", "data_leak", "italie", "transport"],
-        "sources": ["https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html", "https://infosec.exchange/@DevaOnBreaches/115591154009592509", "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"],
+        "description": "Une fuite massive de 2.3 To de données sensibles (paies, contrats, détails bancaires, configurations web, documents fiscaux, administratifs et opérationnels) a affecté l'opérateur ferroviaire national italien, Ferrovie dello Stato Italiane (FS), suite à une cyberattaque contre son fournisseur de services IT, Almaviva. L'incident présente des indicateurs d'opérations de rançongiciel.",
+        "tags": ["violation", "breach", "data_leak", "ransomware", "supply_chain", "railway", "Ferrovie_dello_Stato", "Almaviva"],
+        "sources": [
+          "https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html",
+          "https://infosec.exchange/@beyondmachines1/115592533884874707",
+          "https://infosec.exchange/@DevaOnBreaches/115591154009592509",
+          "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"
+        ],
         "date": "2025-11-22"
       },
       {
-        "secteur": "SaaS, Technologies",
-        "victime": "Salesforce (clients), Gainsight",
-        "description": "Salesforce a alerté ses utilisateurs concernant une activité inhabituelle impliquant des applications OAuth liées à Gainsight, qui pourrait avoir permis un accès non autorisé à certaines données clients de Salesforce. L'enquête indique que des acteurs malveillants, liés au groupe ShinyHunters, ont utilisé ces intégrations pour accéder aux données. Salesforce a révoqué tous les jetons d'application Gainsight et a retiré les applications de l'AppExchange. Les données volées incluent potentiellement des contacts professionnels, des e-mails, des numéros de téléphone et des informations de licence.",
-        "tags": ["violation", "breach", "salesforce", "gainsight", "oauth_apps", "data_exposure", "shinyhunters", "saas", "cloud_security", "customer_data"],
-        "sources": ["https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html", "https://mastodon.thenewoil.org/@thenewoil/115589932823474119"],
+        "secteur": "SaaS, Divers (clients de Salesforce)",
+        "victime": "Clients de Salesforce utilisant les applications Gainsight et Salesloft",
+        "description": "Des données Salesforce de certains clients ont été exposées suite à une activité inhabituelle impliquant des applications OAuth publiées par Gainsight. Le groupe Scattered Lapsus$ Hunters (ShinyHunters) a revendiqué l'attaque, expliquant avoir obtenu l'accès via des tokens OAuth volés lors d'une précédente compromission de Salesloft Drift, affectant près de 1 000 organisations.",
+        "tags": ["violation", "breach", "data_exposure", "Salesforce", "Gainsight", "Salesloft", "OAuth", "ShinyHunters", "Scattered_Lapsus_Hunters", "supply_chain"],
+        "sources": [
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
         "date": "2025-11-22"
       },
       {
         "secteur": "Transports publics",
         "victime": "Transport for London (TfL)",
-        "description": "L'incident de cybersécurité en août 2024 chez Transport for London (TfL), attribué au collectif de piratage Scattered Spider, a entraîné la perturbation des services en ligne et des systèmes internes, ainsi que le compromis de données clients (noms, adresses, coordonnées). Deux adolescents britanniques ont plaidé non coupables des charges liées à cette attaque, qui a causé des millions de livres sterling de dommages.",
-        "tags": ["violation", "breach", "transport_for_london", "tfl", "scattered_spider", "critical_infrastructure", "customer_data", "uk_transport"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
+        "description": "Incident de cybersécurité ayant perturbé les services en ligne et les systèmes internes, avec compromission de données clients (noms, adresses, coordonnées). Attribué au collectif Scattered Spider.",
+        "tags": ["violation", "breach", "data_compromise", "Transport_for_London", "TfL", "Scattered_Spider", "critical_infrastructure"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Cybersécurité",
+        "victime": "CrowdStrike (interne)",
+        "description": "Un employé interne a partagé des captures d'écran de systèmes internes avec les acteurs de la menace 'Scattered Lapsus$ Hunters' contre 25 000 $. CrowdStrike affirme qu'aucun système n'a été compromis ni donnée client exposée.",
+        "tags": ["violation", "breach", "insider_threat", "CrowdStrike", "data_sharing", "Scattered_Lapsus_Hunters"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Administration publique locale",
+        "victime": "Ville d'Attleboro, Massachusetts",
+        "description": "Un incident de cybersécurité a mis hors ligne plusieurs systèmes informatiques de la ville d'Attleboro, perturbant les opérations sans affecter les services d'urgence. Une enquête est en cours pour identifier la cause et restaurer les services.",
+        "tags": ["violation", "breach", "cybersecurity_incident", "public_administration", "city_government", "disruption"],
+        "sources": ["https://databreaches.net/2025/11/21/attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems/?pk_campaign=feed&pk_kwd=attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems"],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Non spécifié",
+        "victime": "Ancien employeur d'Ezekiel Dean Potter",
+        "description": "Un ancien employé, Ezekiel Dean Potter, a été inculpé pour avoir accédé sans autorisation aux systèmes de son employeur après son licenciement, réinitialisé des identifiants et supprimé ou révoqué l'accès à des comptes. Ces actions ont causé des dizaines de milliers de dollars de pertes et une perturbation généralisée sur plus d'un an et demi.",
+        "tags": ["violation", "breach", "insider_threat", "computer_fraud", "sabotage", "account_takeover", "data_destruction"],
+        "sources": ["https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/?pk_campaign=feed&pk_kwd=des-moines-man-charged-with-computer-fraud"],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Services (gestion des déchets)",
+        "victime": "Ancien employeur de Maxwell Schultz (rapporté comme Waste Management)",
+        "description": "Un ancien contractant IT, Maxwell Schultz, a plaidé coupable d'avoir saboté les systèmes de son ex-employeur après son licenciement. Il a impersonné un autre contractant pour accéder au réseau et a causé près de 1 million de dollars de dommages en effaçant des données ou en perturbant les opérations.",
+        "tags": ["violation", "breach", "insider_threat", "sabotage", "data_destruction", "impersonation", "financial_impact"],
+        "sources": ["https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/?pk_campaign=feed&pk_kwd=fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse des vulnérabilités": [
       {
-        "cve_id": "CVE-2025-41115",
-        "cvss": "10.0",
-        "product": "Grafana Enterprise",
-        "description": "Vulnérabilité critique d'élévation de privilèges et d'usurpation d'identité lorsqu'une option de provisioning SCIM est activée, permettant à un client SCIM malveillant ou compromis d'usurper un compte existant, y compris les administrateurs.",
-        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "impersonation", "grafana_enterprise", "scim", "authentication_bypass", "access_control"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/grafana-warns-of-max-severity-admin-spoofing-vulnerability/", "https://fieldeffect.com/blog/maximum-severity-grafana-enterprise-vulnerability-exposes-identity-provisioning/"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65108",
-        "cvss": "10.0",
+        "cvss": 10.0,
         "product": "md-to-pdf",
-        "description": "Exécution de code arbitraire à distance via injection de code JavaScript lors de l'analyse du 'front matter' dans les fichiers Markdown.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "markdown", "javascript_injection", "code_execution", "critical"],
+        "description": "Exécution de code JavaScript arbitraire à distance via injection de template (front-matter).",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "template_injection", "md-to-pdf", "NodeJS", "Chrome"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65108"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-60724",
-        "cvss": "9.8",
-        "product": "Microsoft Graphics Component (GDI+)",
-        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un dépassement de tampon basé sur le tas (heap-based buffer overflow) affectant GDI+, exploitable par un attaquant non authentifié à distance.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "microsoft", "gdi+", "buffer_overflow", "critical"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
+        "cve_id": "CVE-2025-41115",
+        "cvss": 10.0,
+        "product": "Grafana Enterprise (versions 12.0.0–12.2.1)",
+        "description": "Élévation de privilèges et usurpation d'utilisateur via le provisionnement SCIM (admin spoofing, user impersonation) lorsque les flags 'enableSCIM' et 'user_sync_enabled' sont activés.",
+        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "admin_spoofing", "SCIM", "Grafana", "authentication_bypass"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grafana-warns-of-max-severity-admin-spoofing-vulnerability/",
+          "https://fieldeffect.com/blog/maximum-severity-grafana-enterprise-vulnerability-exposes-identity-provisioning"
+        ],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-40547",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "Vulnérabilité d'exécution de code arbitraire à distance (RCE) via une erreur de logique, permettant à un attaquant authentifié avec privilèges d'administrateur d'exécuter des commandes arbitraires.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "logic_error", "solarwinds", "serv-u", "admin_privileges", "code_execution"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
+        "cve_id": "CVE-2025-61757",
+        "cvss": 9.8,
+        "product": "Oracle Identity Manager (versions 12.2.1.4.0, 14.1.2.1.0)",
+        "description": "Exécution de code arbitraire à distance (RCE) via contournement d'authentification dans les API REST. Cette vulnérabilité est activement exploitée, potentiellement comme un zero-day.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "authentication_bypass", "Oracle", "Identity_Manager", "zero_day", "actively_exploited"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/",
+          "https://www.security.nl/posting/914041/VS+meldt+actief+misbruik+van+kritiek+RCE-lek+in+Oracle+Identity+Manager?channel=rss",
+          "https://thehackernews.com/2025/11/cisa-warns-of-actively-exploited.html"
+        ],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-40548",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "Vulnérabilité RCE due à des déficiences de contrôle d'accès dans Serv-U, permettant à un attaquant authentifié avec privilèges d'administrateur de contourner les vérifications de sécurité et d'exécuter du code arbitraire.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "access_control_bypass", "solarwinds", "serv-u", "admin_privileges", "code_execution"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40549",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "Contournement des restrictions de chemin dans Serv-U, permettant à un attaquant avec des privilèges d'administrateur d'exécuter du code dans des répertoires normalement interdits.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "path_restriction_bypass", "solarwinds", "serv-u", "admin_privileges"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-64446",
-        "cvss": "9.1",
-        "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
-        "description": "Contournement d'authentification critique (path traversal et mauvaise gestion de l'en-tête CGIINFO) permettant à un attaquant non authentifié d'usurper l'identité de l'utilisateur administrateur intégré.",
-        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "path_traversal", "fortinet", "fortiweb", "waf", "admin_impersonation", "critical"],
-        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "cve_id": "CVE-2025-59287",
+        "cvss": 9.8,
+        "product": "Windows Server Update Services (WSUS)",
+        "description": "Vulnérabilité critique non détaillée, exploitée pour l'accès initial dans des campagnes malveillantes, montrant sa facilité d'exploitation et son impact significatif.",
+        "tags": ["vulnerabilité", "vulnerability", "WSUS", "initial_access", "critical"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
         "date": "2025-11-22"
       },
       {
         "cve_id": "CVE-2025-11087",
-        "cvss": "8.8",
-        "product": "Zegen Core plugin for WordPress",
-        "description": "Vulnérabilité CSRF à l'upload de fichiers arbitraires due à l'absence de validation de nonce et de type de fichier, permettant potentiellement l'exécution de code à distance.",
-        "tags": ["vulnerabilité", "vulnerability", "csrf", "file_upload", "rce", "wordpress_plugin", "authentication_bypass", "arbitrary_file_upload"],
+        "cvss": 8.8,
+        "product": "Zegen Core plugin for WordPress (<= 2.0.1)",
+        "description": "Cross-Site Request Forgery (CSRF) vers upload de fichiers arbitraires, rendant possible l'exécution de code à distance (RCE) via une requête forgée.",
+        "tags": ["vulnerabilité", "vulnerability", "CSRF", "file_upload", "RCE", "WordPress", "plugin", "arbitrary_file_upload"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-11087"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-65102",
-        "cvss": "8.7",
-        "product": "PJSIP",
-        "description": "Dépassement de tampon dans Opus PLC pouvant entraîner la terminaison inattendue de l'application (Déni de Service) en raison d'une écriture en mémoire.",
-        "tags": ["vulnerabilité", "vulnerability", "buffer_overflow", "dos", "pjsip", "opus_codec", "memory_overwrite"],
-        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65102"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65947",
-        "cvss": "8.7",
-        "product": "thread-amount",
-        "description": "Fuites de ressources (mémoire et handles) sur Windows et macOS, pouvant entraîner une instabilité du système ou la terminaison du processus (Déni de Service).",
-        "tags": ["vulnerabilité", "vulnerability", "dos", "resource_exhaustion", "memory_leak", "handle_leak", "windows", "macos"],
+        "cvss": 8.7,
+        "product": "thread-amount (outil)",
+        "description": "Fuites de ressources (mémoire et handles) sur les plateformes Windows et Apple, pouvant entraîner une instabilité du système ou la terminaison du processus.",
+        "tags": ["vulnerabilité", "vulnerability", "resource_exhaustion", "memory_leak", "handle_leak", "Windows", "macOS", "system_instability"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65947"],
         "date": "2025-11-22"
       },
       {
+        "cve_id": "CVE-2025-65102",
+        "cvss": 8.7,
+        "product": "PJSIP (avant la version 2.16)",
+        "description": "Débordement de tampon (buffer overflow) dans Opus PLC, pouvant entraîner une terminaison inattendue de l'application.",
+        "tags": ["vulnerabilité", "vulnerability", "buffer_overflow", "DoS", "PJSIP", "Opus_codec", "application_termination"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65102"],
+        "date": "2025-11-22"
+      },
+      {
         "cve_id": "CVE-2025-65109",
-        "cvss": "8.5",
-        "product": "Minder (Helm & Go versions)",
-        "description": "Divulgation d'informations (information disclosure) permettant aux utilisateurs de Minder de récupérer du contenu dans le contexte du serveur Minder, accédant potentiellement à des URLs normalement inaccessibles.",
-        "tags": ["vulnerabilité", "vulnerability", "information_disclosure", "supply_chain_security", "minder", "server_side_request_for_forgery", "access_restriction_bypass"],
+        "cvss": 8.5,
+        "product": "Minder (versions Helm 0.20241106.3386+ref.2507dbf, Go 0.0.72 à 0.0.83)",
+        "description": "Les utilisateurs de Minder peuvent récupérer du contenu dans le contexte du serveur, incluant des URLs normalement inaccessibles, affectant la chaîne d'approvisionnement logicielle.",
+        "tags": ["vulnerabilité", "vulnerability", "supply_chain", "information_disclosure", "Minder", "software_supply_chain"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65109"],
         "date": "2025-11-22"
       },
       {
         "cve_id": "CVE-2025-65106",
-        "cvss": "8.3",
-        "product": "LangChain",
-        "description": "Vulnérabilité d'injection de template dans le système de template de prompt de LangChain, permettant d'accéder aux internes d'objets Python via la syntaxe de template.",
-        "tags": ["vulnerabilité", "vulnerability", "template_injection", "langchain", "llm", "ai_application", "information_disclosure", "code_execution"],
+        "cvss": 8.3,
+        "product": "LangChain (avant 0.3.80; 1.0.0 à 1.0.6)",
+        "description": "Injection de template permettant l'accès aux internes d'objets Python dans les applications basées sur les grands modèles linguistiques (LLM).",
+        "tags": ["vulnerabilité", "vulnerability", "template_injection", "AI", "LLM", "LangChain", "attribute_access", "python"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65106"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-30398",
-        "cvss": "8.1",
-        "product": "Nuance PowerScribe 360 et PowerScribe One",
-        "description": "Divulgation d'informations sensibles via un manque d'autorisation, permettant à des attaquants non authentifiés de révéler les paramètres de configuration.",
-        "tags": ["vulnerabilité", "vulnerability", "information_disclosure", "nuance", "powerscribe", "authentication_bypass"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65946",
-        "cvss": "8.1",
-        "product": "Roo Code",
-        "description": "Exécution de code à distance potentielle via un bug de validation de commande zsh, permettant à l'agent IA d'exécuter des commandes non autorisées.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "ai_agent", "roo_code", "command_injection", "validation_bypass"],
+        "cvss": 8.1,
+        "product": "Roo Code (agent de codage IA) (avant 3.26.7)",
+        "description": "Exécution de code à distance (RCE) via un bug de validation de commande zsh dans cet agent de codage alimenté par l'IA.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "AI", "Roo_Code", "zsh", "command_validation"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65946"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-62199",
-        "cvss": "7.8",
-        "product": "Microsoft Office",
-        "description": "Exécution de code arbitraire via une vulnérabilité 'use after free' dans Microsoft Office, exploitable en ouvrant un fichier malveillant (le volet de prévisualisation étant un vecteur d'attaque).",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "microsoft_office", "use_after_free", "malicious_file", "preview_pane_exploit"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-60716",
-        "cvss": "7.0",
-        "product": "DirectX Graphics kernel",
-        "description": "Vulnérabilité d'élévation de privilèges (EoP) via une vulnérabilité 'use after free' dans le noyau graphique DirectX, permettant à un attaquant local authentifié avec de faibles privilèges d'obtenir des privilèges SYSTEM.",
-        "tags": ["vulnerabilité", "vulnerability", "eop", "directx", "windows_kernel", "use_after_free", "privilege_escalation"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-62215",
-        "cvss": "7.0 (Activement exploitée)",
-        "product": "Windows kernel",
-        "description": "Vulnérabilité d'élévation de privilèges (EoP) due à une condition de course dans le noyau Windows, permettant à un attaquant local authentifié avec de faibles privilèges d'obtenir des privilèges SYSTEM.",
-        "tags": ["vulnerabilité", "vulnerability", "eop", "windows_kernel", "race_condition", "actively_exploited", "privilege_escalation"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40604",
-        "cvss": "Non spécifié (Code Execution)",
-        "product": "SonicWall Email Security appliances",
-        "description": "Exécution de code arbitraire persistante due au chargement d'images de système de fichiers root sans vérification d'intégrité, permettant la modification de fichiers système.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "sonicwall", "email_security", "integrity_bypass", "persistent_code_execution"],
-        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40605",
-        "cvss": "Non spécifié (Path Traversal)",
-        "product": "SonicWall Email Security appliances",
-        "description": "Vulnérabilité de 'Path Traversal' permettant à un attaquant d'accéder à des fichiers et répertoires en dehors des chemins restreints via l'injection de séquences de traversée de répertoire.",
-        "tags": ["vulnerabilité", "vulnerability", "path_traversal", "sonicwall", "email_security", "information_disclosure", "access_restriction_bypass"],
-        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-58034",
-        "cvss": "Non spécifié (Authentifié, RCE)",
+        "cve_id": "CVE-2025-64446",
+        "cvss": 9.1,
         "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
-        "description": "Injection de commande authentifiée dans les API et CLI de FortiWeb, permettant à un utilisateur authentifié d'exécuter des commandes en tant que root, souvent enchaînée avec un contournement d'authentification.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "command_injection", "fortinet", "fortiweb", "waf", "authenticated_rce"],
+        "description": "Contournement d'authentification critique via une vulnérabilité de path traversal combinée à une mauvaise gestion de l'en-tête CGIINFO, permettant la création d'un compte administrateur.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "path_traversal", "Fortinet", "FortiWeb", "WAF", "admin_account_creation"],
         "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-61757",
-        "cvss": "Non spécifié (activement exploitée)",
-        "product": "Oracle Identity Manager",
-        "description": "Contournement d'authentification dans les API REST d'Oracle Identity Manager, permettant une exécution de code à distance (RCE) et activement exploitée en tant que zero-day.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "authentication_bypass", "oracle_identity_manager", "zero_day", "actively_exploited"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/"],
+        "cve_id": "CVE-2025-40549",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Contournement de restriction de chemin permettant l'exécution de code arbitraire à distance (RCE) avec des privilèges d'administrateur.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "path_restriction_bypass", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40548",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Processus de validation manquant permettant l'exécution de code arbitraire à distance (RCE) avec des privilèges d'administrateur.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "missing_validation", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40547",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Erreur logique permettant l'exécution de code arbitraire à distance (RCE) avec des privilèges d'administrateur.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "logic_error", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": 9.0,
+        "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
+        "description": "Injection de commande authentifiée dans l'API et la CLI permettant l'exécution de commandes système en tant que root, souvent chaînée avec un contournement d'authentification.",
+        "tags": ["vulnerabilité", "vulnerability", "command_injection", "RCE", "Fortinet", "FortiWeb", "WAF", "authenticated_access", "root_access"],
+        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40604",
+        "cvss": 9.0,
+        "product": "SonicWall Email Security appliances",
+        "description": "Chargement d'images de système de fichiers root sans vérification de signature, permettant une exécution de code arbitraire persistante.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "integrity_bypass", "SonicWall", "Email_Security", "persistent_code_execution"],
+        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
         "date": "2025-11-22"
       }
     ],
     "Articles": [
       {
-        "title": "CrowdStrike met fin au contrat d'un employé qui partageait des informations avec des hackers (Scattered Lapsus$ Hunters/ShinyHunters)",
-        "description": "CrowdStrike a licencié un employé soupçonné d'avoir partagé des captures d'écran de systèmes internes avec les groupes de hackers Scattered Lapsus$ Hunters et ShinyHunters, qui ont ensuite divulgué ces informations sur Telegram. Bien que l'employé ait été détecté et son accès coupé avant toute compromission de système ou exposition de données clients, les acteurs malveillants auraient proposé 25 000 $ pour un accès au réseau de CrowdStrike et auraient reçu des cookies d'authentification SSO. Les groupes ShinyHunters et Scattered Spider sont également liés à de récentes vagues de vols de données ciblant des instances Salesforce via des applications OAuth liées à Gainsight, ainsi qu'à des attaques de phishing vocal contre des clients Salesforce (Google, Cisco, Allianz Life, Farmers Insurance, Qantas, Adidas, Workday, Dior, Louis Vuitton, Tiffany & Co.). Ils utilisent également de nouvelles plateformes RaaS comme ShinySp1d3r.",
-        "threat_actor": "Scattered Lapsus$ Hunters, ShinyHunters, Scattered Spider",
-        "indicator_of_compromise": ["Aucun IoC spécifique n'est fourni"],
-        "mitre_ttps": ["T1537: Transfer Data to Cloud Account", "T1567.002: Exfiltration Over Web Service (Telegram)", "T1078: Valid Accounts (SSO cookies)", "T1531: Account Access Removal", "T1566.002: Phishing (Voice Phishing)", "T1134: Access Token Manipulation"],
-        "analyse": "L'incident met en évidence la menace persistante des initiés et l'ingénierie sociale visant les employés pour obtenir un accès initial. La portée des activités des groupes Scattered Lapsus$ Hunters et ShinyHunters est large, ciblant un éventail de secteurs et des plateformes SaaS critiques comme Salesforce, via des techniques de chaîne d'approvisionnement et d'ingénierie sociale sophistiquées.",
-        "recommandations": ["Renforcer les programmes de sensibilisation aux menaces internes et à l'ingénierie sociale.", "Mettre en œuvre des contrôles d'accès stricts et une surveillance continue des activités des employés, en particulier pour les comptes privilégiés.", "Détecter et bloquer les transferts de données non autorisés vers l'extérieur.", "Auditer régulièrement les configurations de sécurité des applications tierces intégrées aux plateformes SaaS (ex: OAuth apps).", "Renforcer l'authentification multifacteur (MFA) et surveiller l'utilisation des cookies de session."],
-        "tags": ["crowdstrike", "insider_threat", "scattered_lapsus_hunters", "shinyhunters", "salesforce", "data_theft", "social_engineering", "sso", "saas_security", "supply_chain_attack"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://databreaches.net/2025/11/21/crowdstrike-catches-insider-feeding-information-to-scatteredlapsushunters/", "https://t.me/vxunderground/7696"],
+        "title": "Active Exploitation of Critical RCE Flaw in Oracle Identity Manager",
+        "description": "CISA a émis une alerte concernant l'exploitation active de CVE-2025-61757, une vulnérabilité critique (CVSS 9.8) d'exécution de code à distance (RCE) dans Oracle Identity Manager. Cette faille zero-day, un contournement d'authentification dans les API REST, permet à des attaquants non authentifiés d'exécuter du code malveillant en trompant les filtres de sécurité. Des tentatives d'exploitation ont été observées dès le 30 août.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": ["89.238.132.76", "185.245.82.81", "138.199.29.153"],
+          "DOMAIN": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1078 - Valid Accounts", "T1068 - Exploitation for Privilege Escalation"],
+        "analyse": "Impact élevé en raison du RCE et de l'exploitation active, ciblant des systèmes de gestion d'identité critiques pour la sécurité des entreprises. Potentiellement répandu en raison de l'utilisation d'Oracle Identity Manager. La nature zero-day suggère des attaquants sophistiqués.",
+        "recommandations": ["Appliquer immédiatement les correctifs pour Oracle Identity Manager (CVE-2025-61757).", "Surveiller les tentatives d'accès suspectes aux API REST, en particulier celles avec les paramètres \";.wadl\" ou \"?WSDL\".", "Mettre en œuvre des contrôles d'authentification et d'accès stricts."],
+        "tags": ["RCE", "zero_day", "exploitation_active", "Oracle_Identity_Manager", "contournement_authentification", "CISA", "KEV"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/",
+          "https://thehackernews.com/2025/11/cisa-warns-of-actively-exploited.html",
+          "https://www.security.nl/posting/914041/VS+meldt+actief+misbruik+van+kritiek+RCE-lek+in+Oracle+Identity+Manager?channel=rss"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Les groupes APT nord-coréens Kimsuky et Lazarus unissent leurs forces pour exploiter des vulnérabilités Zero-Day",
-        "description": "Les groupes de hackers nord-coréens Kimsuky et Lazarus collaborent dans une campagne d'attaques mondiales ciblant les secteurs critiques. Ils exploitent des vulnérabilités zero-day et utilisent des messages malveillants avec des pièces jointes (HWP, MSC) pour déployer le backdoor FPSpy et le keylogger KLogEXE. Le backdoor InvisibleFerret, utilisé par Lazarus, se distingue par ses capacités d'évasion avancées, masquant son trafic réseau en requêtes HTTPS normales et utilisant des canaux chiffrés avec rotation quotidienne des domaines C2 déguisés en sites de e-commerce ou d'actualités.",
-        "threat_actor": "Kimsuky, Lazarus",
-        "indicator_of_compromise": ["Aucun IoC spécifique n'est fourni"],
-        "mitre_ttps": ["T1566.001: Phishing (Spearphishing Attachment)", "T1204.002: User Execution (Malicious File)", "T1573.002: Encrypted Channel (Asymmetric Cryptography)", "T1071.001: Application Layer Protocol (HTTPS)", "T1041: Exfiltration Over C2 Channel", "T1027: Obfuscated Files or Information", "T1056.001: Input Capture (Keylogging)"],
-        "analyse": "Cette collaboration entre deux groupes APT majeurs de la Corée du Nord indique une sophistication et une coordination accrues dans leurs opérations d'espionnage. L'utilisation de zero-days et de techniques d'évasion avancées (InvisibleFerret) pose un défi significatif aux défenses, en particulier pour les secteurs critiques à l'échelle mondiale.",
-        "recommandations": ["Mettre en œuvre une sécurité multicouche avec EDR/XDR pour détecter les activités post-exploitation.", "Renforcer la sensibilisation aux menaces par e-mail, en particulier pour les pièces jointes suspectes.", "Utiliser des solutions de Threat Intelligence pour surveiller les TTPs et les IoCs des groupes APT nationaux.", "Segmenter les réseaux pour limiter la propagation latérale en cas de compromission.", "Appliquer rigoureusement les correctifs de sécurité, en particulier pour les vulnérabilités zero-day signalées."],
-        "tags": ["kimsuky", "lazarus", "apt", "north_korea", "zero_day", "critical_sectors", "fpspy", "klogexe", "invisibleferret", "espionage"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
-        "date": "2025-11-22"
-      },
-      {
-        "title": "Des Moines Man Charged with Computer Fraud",
-        "description": "Ezekiel Dean Potter, 34 ans, de Des Moines, a été inculpé pour fraude informatique après avoir accédé sans autorisation aux systèmes informatiques de son ancien employeur pendant plus d'un an et demi (de mai 2023 à janvier 2025), après son licenciement en avril 2023. Il est allégué qu'il a réinitialisé des noms d'utilisateur et des mots de passe, et supprimé ou révoqué l'accès à des comptes, causant des perturbations généralisées et des dizaines de milliers de dollars de pertes.",
-        "threat_actor": "Insider Threat (Ezekiel Dean Potter)",
+        "title": "CrowdStrike Confirms Insider Shared Internal Screenshots with Threat Actors",
+        "description": "La firme de cybersécurité CrowdStrike a confirmé qu'un employé interne a partagé des captures d'écran de systèmes internes avec les acteurs de la menace \"Scattered Lapsus$ Hunters\", qui les ont ensuite divulguées sur Telegram. L'employé, qui a été licencié, aurait reçu 25 000 $. CrowdStrike affirme qu'aucun système n'a été compromis et qu'aucune donnée client n'a été exposée.",
+        "threat_actor": "Scattered Lapsus$ Hunters (ShinyHunters, Scattered Spider, Lapsus$)",
         "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
-        "mitre_ttps": ["T1078.001: Valid Accounts (Local Account)", "T1531: Account Access Removal", "T1485: Data Destruction", "T1078.003: Valid Accounts (Cloud Accounts)"],
-        "analyse": "Cet incident met en lumière les risques importants posés par les menaces internes, en particulier les ex-employés ayant conservé des connaissances ou un accès aux systèmes. L'impact a été une perturbation opérationnelle et des pertes financières significatives pour l'entreprise ciblée.",
-        "recommandations": ["Implémenter des procédures de désactivation de compte immédiates et complètes lors du départ d'un employé.", "Surveiller les accès aux systèmes et les modifications de configuration par des comptes d'anciens employés ou des comptes ayant des privilèges anormaux.", "Utiliser l'authentification multifacteur pour tous les accès, y compris ceux des administrateurs.", "Effectuer des audits réguliers des journaux d'accès et des modifications de comptes."],
-        "tags": ["computer_fraud", "insider_threat", "ex_employee", "account_manipulation", "data_deletion", "operational_disruption", "legal_action"],
-        "sources": ["https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/"],
+        "mitre_ttps": ["T1133 - External Remote Services", "T1078 - Valid Accounts"],
+        "analyse": "Souligne le risque persistant des menaces internes, même pour les entreprises de cybersécurité. Bien qu'aucune violation directe des données clients n'ait été confirmée, l'incident démontre l'efficacité de l'ingénierie sociale et des incitations financières pour l'obtention d'informations internes.",
+        "recommandations": ["Renforcer les programmes de détection des menaces internes.", "Mettre en œuvre des contrôles stricts sur le partage d'informations internes (par exemple, captures d'écran).", "Sensibiliser les employés aux risques et aux conséquences de la collaboration avec des acteurs de la menace."],
+        "tags": ["menace_interne", "Scattered_Lapsus_Hunters", "CrowdStrike", "partage_donnees", "ingenierie_sociale", "facteurs_humains"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html",
+          "https://t.me/vxunderground/7696"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Fired techie admits sabotaging ex-employer, causing $862K in damage",
-        "description": "Maxwell Schultz, 35 ans, un contractant IT de l'Ohio, a plaidé coupable d'avoir saboté les systèmes de son ancien employeur, causant près de 1 million de dollars de dommages après son licenciement. Il a impersonné un autre contractant pour accéder au réseau après la révocation de ses propres identifiants. Les détails de la société ne sont pas spécifiés, mais un rapport local l'identifie comme Waste Management.",
-        "threat_actor": "Insider Threat (Maxwell Schultz)",
+        "title": "Former Employees Charged in Separate Insider Sabotage Incidents",
+        "description": "Deux incidents distincts mettent en évidence de graves menaces internes. Ezekiel Dean Potter a été inculpé pour accès non autorisé, réinitialisations de mots de passe et suppressions de comptes chez son ancien employeur, causant des perturbations importantes pendant plus d'un an. Maxwell Schultz a plaidé coupable d'avoir usurpé l'identité d'un autre contractant pour saboter les systèmes de son ex-employeur après son licenciement, entraînant près d'un million de dollars de dommages.",
+        "threat_actor": "Anciens employés (menaces internes)",
         "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
-        "mitre_ttps": ["T1078.001: Valid Accounts (Local Account)", "T1531: Account Access Removal", "T1485: Data Destruction", "T1078.003: Valid Accounts (Cloud Accounts)", "T1078.004: Valid Accounts (SSH Keys)"],
-        "analyse": "Cet incident illustre une fois de plus la gravité des menaces internes et la nécessité de contrôles robustes post-emploi. Les dommages financiers et la perturbation opérationnelle peuvent être considérables, soulignant l'importance d'une gestion rigoureuse des accès et des identités.",
-        "recommandations": ["Implémenter une révocation immédiate et complète de tous les accès (y compris les identifiants partagés ou utilisés par d'autres contractants) pour les employés et contractants après leur départ.", "Renforcer la surveillance des activités inhabituelles, en particulier celles qui ressemblent à des tentatives d'usurpation d'identité ou d'escalade de privilèges.", "Mettre en place une authentification multifacteur (MFA) forte pour tous les accès critiques.", "Effectuer des audits de sécurité post-emploi pour s'assurer que tous les accès sont révoqués et que les systèmes sont sécurisés."],
-        "tags": ["insider_threat", "sabotage", "ex_employee", "access_revocation", "impersonation", "data_destruction", "financial_loss", "it_contractor"],
-        "sources": ["https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/"],
+        "mitre_ttps": ["T1078 - Valid Accounts", "T1078.002 - Domain Accounts", "T1485 - Data Destruction", "T1531 - Account Access Removal"],
+        "analyse": "Souligne le risque critique et coûteux posé par les anciens employés mécontents ou malveillants. Les menaces internes peuvent entraîner des perturbations prolongées et des pertes financières substantielles, en tirant parti des connaissances existantes et parfois de justificatifs d'identité compromis.",
+        "recommandations": ["Mettre en œuvre des procédures de départ robustes pour révoquer immédiatement tous les accès.", "Surveiller les activités inhabituelles sur les comptes ou les systèmes des anciens employés.", "Mettre en œuvre des contrôles d'accès stricts et le principe du moindre privilège.", "Effectuer des audits et des enregistrements réguliers."],
+        "tags": ["menace_interne", "sabotage", "destruction_donnees", "fraude_informatique", "ancien_employe", "impact_critique"],
+        "sources": [
+          "https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/?pk_campaign=feed&pk_kwd=des-moines-man-charged-with-computer-fraud",
+          "https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/?pk_campaign=feed&pk_kwd=fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Poetry proves potent jailbreak tool for today's top models",
-        "description": "Des chercheurs ont découvert que les invites malveillantes rédigées en vers sont nettement plus efficaces pour contourner les garde-fous des modèles d'IA (jailbreaking de LLM) que les invites typiques. Les tests sur 25 modèles d'IA ont montré une augmentation moyenne de 43 % du taux de réussite des jailbreaks pour les invites poétiques générées par l'IA, et un succès encore plus élevé pour les invites poétiques écrites par des humains (seul Google GeminiPro 2.5 a résisté à 100 %). Cela soulève des questions importantes sur la robustesse des systèmes d'IA face à des variations stylistiques minimales des entrées.",
+        "title": "Massive Data Leak Affects Italian Railway Operator Following Almaviva IT Provider Hack",
+        "description": "L'opérateur ferroviaire national italien, Ferrovie dello Stato Italiane (FS), a subi une fuite massive de 2.3 To de données sensibles (incluant des fiches de paie, des contrats, des coordonnées bancaires et des documents opérationnels) suite à une cyberattaque contre son fournisseur de services IT, Almaviva. Des indicateurs d'opérations de rançongiciel ont été observés.",
         "threat_actor": "Non applicable",
         "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
-        "mitre_ttps": ["T0875: Adversarial LLM Prompts", "T0876: Data Extraction (LLM)", "T0877: Information Disclosure (LLM)"],
-        "analyse": "La découverte montre une vulnérabilité inattendue dans la sécurité des modèles d'IA, soulignant que les approches de test traditionnelles ne sont pas suffisantes. L'exploitation de cette faille pourrait permettre de contourner les restrictions de contenu des LLM, ouvrant la voie à la génération de contenus malveillants ou à l'extraction d'informations sensibles.",
-        "recommandations": ["Renforcer les techniques de 'alignment' et de 'guardrails' des LLM pour mieux résister aux variations stylistiques et aux entrées créatives.", "Développer des méthodes de test plus sophistiquées pour évaluer la robustesse des LLM contre les attaques par 'jailbreaking', incluant des formats d'entrée non conventionnels comme la poésie.", "Mettre en place une surveillance continue des interactions avec les LLM pour détecter les tentatives de contournement des protections."],
-        "tags": ["ai_security", "llm", "jailbreaking", "generative_ai", "adversarial_prompts", "guardrails", "vulnerability_research"],
-        "sources": ["https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/21/poetry_llm_guardrails/"],
+        "mitre_ttps": ["T1529 - System Compromise", "T1537 - Data Encrypted for Impact", "T1020 - Automated Exfiltration"],
+        "analyse": "Impact élevé sur une infrastructure nationale critique (ferroviaire) via une attaque de la chaîne d'approvisionnement contre un fournisseur IT. Le volume important de données sensibles suggère des dommages financiers et de réputation significatifs. Souligne les risques liés à la chaîne d'approvisionnement.",
+        "recommandations": ["Renforcer la cybersécurité de la chaîne d'approvisionnement.", "Mettre en œuvre un chiffrement robuste des données au repos et en transit.", "Sauvegarder régulièrement les données critiques.", "Améliorer les plans de réponse aux incidents pour les violations de tiers."],
+        "tags": ["fuite_donnees", "ferroviaire", "chaine_approvisionnement", "Almaviva", "Ferrovie_dello_Stato", "rancongiciel", "infrastructure_critique"],
+        "sources": [
+          "https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html",
+          "https://infosec.exchange/@beyondmachines1/115592533884874707",
+          "https://infosec.exchange/@DevaOnBreaches/115591154009592509",
+          "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "ToddyCat: your hidden email assistant. Part 1",
-        "description": "Les experts de Kaspersky analysent les attaques APT de ToddyCat ciblant les e-mails d'entreprise. Le groupe utilise une nouvelle version de TomBerBil (PowerShell) pour collecter des cookies, l'historique de navigation et les mots de passe, ainsi que les clés de chiffrement de navigateur. Il utilise également les outils TCSectorCopy pour copier des fichiers OST Outlook verrouillés en contournant l'API Windows, et XstReader pour exporter les messages. Pour exfiltrer des données sans détection, ToddyCat cible les tokens d'accès OAuth 2.0 (JWT) de Microsoft 365, en les extrayant de la mémoire des processus Outlook via des outils comme SharpTokenFinder ou ProcDump, même en cas de blocage par les EPP.",
+        "title": "Matrix Push C2 Platform Leverages Browser Notifications for Fileless Phishing Attacks",
+        "description": "La nouvelle plateforme \"Matrix Push C2\" (Malware-as-a-Service - MaaS) est utilisée par des acteurs de la menace pour des attaques de phishing multi-plateformes et sans fichier. Elle exploite les notifications push des navigateurs et l'ingénierie sociale avec de fausses alertes et des redirections pour distribuer des liens malveillants, contournant les contrôles de sécurité traditionnels. La plateforme offre des modèles configurables et un suivi des victimes en temps réel, et est vendue via des canaux de crimeware.",
+        "threat_actor": "Matrix Push C2 (plateforme utilisée par divers acteurs de la menace)",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1566 - Phishing", "T1566.001 - Spearphishing Link", "T1059 - Command and Scripting Interpreter", "T1204 - User Execution", "T1598 - Phishing for Information"],
+        "analyse": "Représente une tendance émergente dans les techniques de phishing, tirant parti des fonctionnalités intégrées des navigateurs pour contourner la sécurité des endpoints traditionnels. Son modèle MaaS abaisse la barrière à l'entrée pour divers acteurs de la menace, augmentant le potentiel d'attaques généralisées sur différents systèmes d'exploitation et appareils.",
+        "recommandations": ["Éduquer les utilisateurs sur les dangers des notifications de navigateur non sollicitées et comment les gérer.", "Mettre en œuvre des politiques de sécurité de contenu strictes.", "Déployer des solutions avancées de filtrage d'e-mails et de web.", "Surveiller les activités inhabituelles du navigateur et les connexions réseau."],
+        "tags": ["phishing", "sans_fichier", "cross_platform", "notifications_navigateur", "ingenierie_sociale", "MaaS", "Matrix_Push_C2"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Metasploit Module Exploits Chained FortiWeb Zero-Day Vulnerabilities for RCE",
+        "description": "Un nouveau module Metasploit a été publié, ciblant des vulnérabilités zero-day critiques dans le WAF FortiWeb de Fortinet. Il chaîne CVE-2025-64446 (CVSS 9.1, contournement d'authentification via path traversal et manipulation de l'en-tête CGIINFO) et CVE-2025-58034 (injection de commande authentifiée). Cela permet à des attaquants non authentifiés d'obtenir un accès administratif et, par la suite, une exécution de code à distance (RCE) au niveau root sur l'appareil WAF.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1078 - Valid Accounts", "T1068 - Exploitation for Privilege Escalation", "T1059 - Command and Scripting Interpreter", "T1591 - Gather Victim Network Information"],
+        "analyse": "La publication publique d'un module Metasploit pour ces vulnérabilités zero-day chaînées augmente considérablement le risque pour les organisations utilisant des WAF FortiWeb vulnérables. La capacité d'obtenir un RCE au niveau root à partir d'un état non authentifié est critique, soulignant la nécessité d'un patching immédiat et d'audits post-compromission.",
+        "recommandations": ["Appliquer immédiatement les correctifs aux appareils WAF FortiWeb.", "Auditer les listes d'utilisateurs pour détecter tout compte administratif inconnu.", "Examiner les journaux pour les requêtes suspectes vers /api/v2.0/cmdb/system/admin provenant d'adresses IP non fiables.", "Mettre en œuvre une segmentation réseau forte pour les WAF."],
+        "tags": ["zero_day", "FortiWeb", "WAF", "RCE", "contournement_authentification", "injection_commande", "Metasploit", "module_exploit", "vulnerabilite_critique"],
+        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Salesforce Customer Data Exposed Through Compromised Gainsight OAuth Applications",
+        "description": "Salesforce a alerté ses clients d'une exposition potentielle de données due à une activité inhabituelle impliquant des applications OAuth publiées par Gainsight. Le groupe \"Scattered Lapsus$ Hunters\" (ShinyHunters) a revendiqué la responsabilité, déclarant avoir obtenu l'accès en exploitant des tokens OAuth volés lors d'une précédente compromission de Salesloft Drift, affectant près de 1 000 organisations.",
+        "threat_actor": "Scattered Lapsus$ Hunters (ShinyHunters)",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1526 - Compromise Accounts", "T1199 - Trusted Relationship", "T1078 - Valid Accounts"],
+        "analyse": "Démontre le risque des intégrations d'applications tierces et la réutilisation de justificatifs/tokens volés sur différents services. L'incident met en évidence l'interconnexion complexe des environnements cloud et les vulnérabilités de la chaîne d'approvisionnement.",
+        "recommandations": ["Mettre en œuvre une gestion et une surveillance robustes des tokens OAuth.", "Auditer régulièrement les permissions et les connexions des applications tierces.", "Appliquer l'authentification multi-facteurs (MFA).", "Surveiller les modèles d'accès inhabituels provenant des applications intégrées."],
+        "tags": ["exposition_donnees", "Salesforce", "Gainsight", "Salesloft", "OAuth", "ShinyHunters", "Scattered_Lapsus_Hunters", "risque_tiers", "chaine_approvisionnement"],
+        "sources": [
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Suspected Scattered Spider Members Plead Not Guilty in UK Transport for London Hack",
+        "description": "Deux adolescents britanniques, membres présumés du collectif de piratage Scattered Spider, ont plaidé non coupables aux accusations liées à la cyberattaque d'août 2024 contre Transport for London (TfL). L'incident a causé des perturbations importantes et la compromission de données clients, bien que cela ait été initialement nié. Un suspect fait également face à des accusations liées à des attaques contre des entités de santé américaines.",
+        "threat_actor": "Scattered Spider",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1565 - System Compromise", "T1530 - Data Exfiltration", "T1078 - Valid Accounts", "T1567 - Exfiltration Over Web Service"],
+        "analyse": "Souligne l'impact des groupes cybercriminels comme Scattered Spider sur les infrastructures nationales critiques et les actions en justice entreprises contre les membres présumés. Le ciblage à la fois des transports britanniques et des systèmes de santé américains met en évidence leur large portée.",
+        "recommandations": ["Renforcer les défenses des infrastructures critiques.", "Mettre en œuvre des capacités robustes de réponse aux incidents et de criminalistique numérique.", "Examiner régulièrement et sécuriser les processus de traitement des données clients."],
+        "tags": ["Scattered_Spider", "cybercriminalite", "infrastructure_critique", "Transport_for_London", "compromission_donnees", "action_legale", "UK_NCA"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "ToddyCat APT Group Evolves Tactics to Steal Corporate Email Data",
+        "description": "Kaspersky rapporte l'évolution des méthodes du groupe APT ToddyCat pour obtenir un accès discret aux e-mails d'entreprise, ciblant spécifiquement les environnements Microsoft Exchange Server et Microsoft 365. Leurs tactiques incluent une nouvelle variante PowerShell de TomBerBil pour exfiltrer les données de navigateur (cookies, mots de passe, clés de chiffrement) et des outils comme TCSectorCopy et XstReader pour accéder aux fichiers OST locaux d'Outlook et voler les tokens d'accès OAuth 2.0 de la mémoire.",
         "threat_actor": "ToddyCat APT",
-        "indicator_of_compromise": ["C:\\programdata\\uhosts.txt"],
-        "mitre_ttps": ["T1003.003: OS Credential Dumping (LSASS Memory)", "T1056.001: Input Capture (Keylogging)", "T1005: Data from Local System", "T1078: Valid Accounts (Browser Data)", "T1550.002: Use Alternate Authentication Material (Stolen OAuth Tokens)", "T1020: Automated Exfiltration", "T1083: File and Directory Discovery", "T1059.001: Command and Scripting Interpreter (PowerShell)"],
-        "analyse": "ToddyCat APT montre une capacité d'évolution constante de ses techniques pour cibler la correspondance professionnelle, même dans des environnements cloud. L'utilisation de techniques d'accès bas niveau (TCSectorCopy) et de vol de tokens OAuth contournant la détection par les EPP locaux illustre la sophistication du groupe. L'impact est un accès furtif et persistant aux informations sensibles des entreprises via leurs emails.",
-        "recommandations": ["Mettre en place une surveillance accrue des accès aux fichiers OST d'Outlook et des événements Sysmon (ID 9 RawAccessRead) pour détecter les accès directs au disque.", "Déployer des solutions EDR robustes capables de détecter les tentatives de dump mémoire de processus critiques (ex: OUTLOOK.exe).", "Renforcer la surveillance des commandes PowerShell malveillantes et des transferts de fichiers via SMB.", "Sensibiliser les utilisateurs aux risques de compromission des navigateurs et à la protection des identifiants.", "Utiliser une Threat Intelligence avancée pour suivre les TTPs des groupes APT comme ToddyCat."],
-        "tags": ["toddycat_apt", "email_compromise", "credential_theft", "oauth_tokens", "microsoft_365", "outlook", "smb", "dpapi", "threat_actor", "espionage", "data_exfiltration"],
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1537 - Email Collection", "T1114 - Email Collection from Mailbox", "T1003 - OS Credential Dumping", "T1552 - Unsecured Credentials", "T1056 - Input Capture", "T1078 - Valid Accounts", "T1020 - Automated Exfiltration"],
+        "analyse": "Met en évidence la nature sophistiquée et adaptative des groupes APT, se concentrant sur des cibles de grande valeur comme les e-mails d'entreprise. L'utilisation d'outils personnalisés et de techniques évolutives (par exemple, variante PowerShell de TomBerBil, accès direct au disque avec TCSectorCopy, vol de tokens depuis la mémoire) démontre un effort continu pour échapper à la détection.",
+        "recommandations": ["Mettre en œuvre un audit robuste des dossiers de messagerie (%LOCALAPPDATA%\\Microsoft\\Outlook).", "Surveiller les accès directs au disque (ID d'événement 9 dans Sysmon).", "Surveiller les schémas de noms de fichiers OST suspects.", "Déployer des solutions EPP basées sur l'hôte et des systèmes avancés de surveillance des menaces.", "Mettre en place une protection forte des informations d'identification et une MFA."],
+        "tags": ["APT", "ToddyCat", "vol_email", "exfiltration_donnees", "malware_personnalise", "TTPs", "TomBerBil", "TCSectorCopy", "XstReader", "Outlook", "Microsoft_365", "OAuth_tokens"],
         "sources": ["https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"],
         "date": "2025-11-22"
       }
@@ -406,387 +434,435 @@
   },
   "EN": {
     "Analyse transversale": {
-      "analyse": "Threat intelligence reveals an intensification of persistent threats and the emergence of new tactics, including active exploitation of zero-day vulnerabilities, software supply chain attacks, and an increase in insider threats. Linux kernels (Ubuntu, SUSE, Red Hat), Microsoft products (Visual Studio Code, Office, Windows kernel), and IBM, as well as critical platforms like Oracle Identity Manager, Grafana Enterprise, and SolarWinds Serv-U, are constantly targeted by vulnerabilities (RCE, privilege escalation, authentication bypass) whose CVSS scores often reach maximum levels. Social engineering and insider threats remain major attack vectors, as evidenced by incidents at CrowdStrike and allegations against Scattered Lapsus$ Hunters. The use of AI by attackers is also highlighted, with flaws in generative AI systems (LLM jailbreaking) and the potential exploitation of AI-powered coding platforms (Roo Code). Geopolitically, cyberattacks are increasingly intertwined with national strategies, as shown by the Salt Typhoon group targeting US telecoms, and the collaboration between North Korean APT groups Kimsuky and Lazarus. The centralization of Internet infrastructures (e.g., Cloudflare) also poses challenges for digital sovereignty and global resilience. In conclusion, the cyber threat landscape is characterized by increasing sophistication, rapid exploitation of critical flaws, and diversification of attack vectors, requiring constant vigilance and multi-layered defense strategies, particularly against insider threats and the challenges posed by AI and service centralization.",
+      "analyse": "The analyzed period reveals an intensification of cyber threats, characterized by the persistence of actively exploited critical vulnerabilities and the emergence of sophisticated attack tactics. Remote Code Execution (RCE) and authentication bypass vulnerabilities, particularly in identity management systems (such as Oracle Identity Manager) and web infrastructure applications (such as FortiWeb and Grafana Enterprise), remain prime targets and represent a maximum risk (CVSS 10.0 and 9.8). The speed with which exploit modules (Metasploit) are developed for these flaws, sometimes before patches are released, highlights the narrow window of opportunity for defense.\nThe supply chain continues to be a major attack vector, as evidenced by the data leak from the Italian railway operator via an IT provider, or the compromise of Salesforce data for hundreds of companies via third-party OAuth applications (Gainsight/Salesloft). This underscores the need for increased vigilance regarding the security of partner ecosystems and software integrations.\nThreat actors, such as the ToddyCat APT group, show a constant evolution of their TTPs, focusing on the discreet theft of credentials and sensitive data (corporate emails, OAuth tokens) using custom tools and evasion techniques. Concurrently, cybercriminal groups like Scattered Lapsus$ Hunters (including ShinyHunters and Scattered Spider) continue to operate via social engineering and, in a notable case, the exploitation of an insider threat at a major cybersecurity company (CrowdStrike), demonstrating the complexity and cost of insider threats.\nThe use of AI is not directly mentioned as a generalized attack vector by attackers in these articles, but the vulnerabilities in \"Roo Code\" (AI coding agent) and \"LangChain\" (LLM framework) show that AI-based tools are themselves becoming targets or products with critical flaws. The emergence of MaaS (Malware-as-a-Service) platforms like Matrix Push C2, which facilitates fileless, cross-platform phishing attacks via browser notifications, lowers the bar for cybercriminals and increases the potential reach of social engineering attacks.\nFrom a geopolitical perspective, political decisions directly impact national cybersecurity, such as the easing of cybersecurity rules for U.S. telecom companies despite state-sponsored espionage risks. The concentration of Internet infrastructure among a few major players also raises issues of digital sovereignty and resilience in the face of outages or political decisions.\nIn conclusion, the overall threat landscape is high and multifaceted. It requires a proactive approach focused on rapid patch management of critical vulnerabilities, strengthening supply chain security and third-party integrations, improving defenses against insider threats, and continuous vigilance against the evolving TTPs of malicious actors and the industrialization of attack tools (MaaS). The convergence between technical vulnerabilities, human factors, and geopolitical issues continues to shape a complex and demanding threat environment.",
       "date": "2025-11-22"
     },
     "Synthèse des acteurs malveillants": [
       {
-        "nom": "Kimsuky",
-        "secteur": "Critical sectors (worldwide)",
-        "modop": "Coordinated attack campaign with Lazarus, exploitation of zero-day vulnerabilities, malicious messages with attachments (HWP, MSC) deploying FPSpy backdoor and KLogEXE keylogger",
-        "tags": ["actor", "theat_actor", "apt", "nation_state", "zero_day_exploit", "critical_infrastructure", "malware_delivery", "keylogger"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Lazarus",
-        "secteur": "Critical sectors (worldwide)",
-        "modop": "Coordinated attack campaign with Kimsuky, exploitation of zero-day vulnerabilities, use of InvisibleFerret backdoor (disguised HTTPS traffic, encrypted channels, C2 domain rotation)",
-        "tags": ["actor", "theat_actor", "apt", "nation_state", "zero_day_exploit", "critical_infrastructure", "backdoor", "evasion_techniques"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Salt Typhoon",
-        "secteur": "Telecommunications (US operators), Government",
-        "modop": "Espionage by intruding into core telecommunications systems, interception of sensitive communications",
-        "tags": ["actor", "theat_actor", "nation_state", "espionage", "telecom_targeting", "data_interception"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
-        "date": "2025-11-22"
-      },
-      {
         "nom": "Scattered Lapsus$ Hunters",
-        "secteur": "Cybersecurity, SaaS, Finance, Insurance, Transportation, Luxury, Technology, Various",
-        "modop": "Insider threats, data theft, voice phishing attacks, extortion, targeting of OAuth applications, use of RaaS platforms (ShinySp1d3r, ALPHV/BlackCat, RansomHub, Qilin, DragonForce)",
-        "tags": ["actor", "theat_actor", "insider_threat", "data_theft", "phishing", "extortion", "ransomware", "supply_chain_attack", "sso_bypass"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html", "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/crowdstrike-catches-insider-feeding-information-to-scatteredlapsushunters/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "Scattered Spider",
-        "secteur": "Transportation, Healthcare, Retail",
-        "modop": "Cyberattacks disrupting online services and internal systems, customer data theft, network infiltration, extortion attempts, attacks on critical infrastructure",
-        "tags": ["actor", "theat_actor", "data_theft", "disruption", "extortion", "critical_infrastructure", "network_intrusion"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
-        "date": "2025-11-22"
-      },
-      {
-        "nom": "ShinyHunters",
-        "secteur": "SaaS, Technology, Various",
-        "modop": "Extortion, data theft, targeting of OAuth applications (Gainsight), use of RaaS platforms (ShinySp1d3r, ALPHV/BlackCat, RansomHub, Qilin, DragonForce), exploitation of stolen secrets",
-        "tags": ["actor", "theat_actor", "data_theft", "extortion", "ransomware", "supply_chain_attack", "oauth_exploit"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html"],
+        "secteur": "Cybersecurity (target), Transportation (TfL), SaaS (Salesforce via Gainsight/Salesloft), various (Google, Cisco, etc. for extortion)",
+        "modop": "Insider threat (CrowdStrike), social engineering (voice phishing), exploitation of vulnerabilities (Gainsight/Salesloft OAuth apps), data leakage, extortion.",
+        "tags": ["actor", "theat_actor", "Scattered_Lapsus_Hunters", "ShinyHunters", "Scattered_Spider", "Lapsus$", "insider_threat", "social_engineering", "data_exfiltration", "extortion", "OAuth_exploitation"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html",
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
         "date": "2025-11-22"
       },
       {
         "nom": "ToddyCat APT",
-        "secteur": "Corporate (email), Cloud (Microsoft 365)",
-        "modop": "Covert access to business correspondence, theft of cookies, browsing history, passwords, browser encryption keys, access to Outlook OST files, theft of OAuth 2.0 (JWT) access tokens via process memory dump",
-        "tags": ["actor", "theat_actor", "apt", "espionage", "email_compromise", "credential_theft", "oauth_token_theft", "smb_exploit"],
+        "secteur": "Corporate (corporate email)",
+        "modop": "Corporate email access theft (Outlook), OAuth 2.0 token theft, use of custom tools (TomBerBil, TCSectorCopy, XstReader) for cookie, password, and OST file exfiltration.",
+        "tags": ["actor", "theat_actor", "ToddyCat_APT", "email_theft", "OAuth_token_theft", "custom_malware", "data_exfiltration"],
         "sources": ["https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"],
+        "date": "2025-11-22"
+      },
+      {
+        "nom": "Salt Typhoon",
+        "secteur": "Telecommunications",
+        "modop": "Espionage, access to core telecom systems to spy on private communications.",
+        "tags": ["actor", "theat_actor", "Salt_Typhoon", "nation_state", "espionage", "telecommunications"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
+        "date": "2025-11-22"
+      },
+      {
+        "nom": "Matrix Push C2 (as a service)",
+        "secteur": "Various (end-user phishing)",
+        "modop": "Fileless, cross-platform phishing via browser notifications, fake alerts, link redirects, social engineering, MaaS (Malware-as-a-Service) platform.",
+        "tags": ["actor", "theat_actor", "Matrix_Push_C2", "MaaS", "phishing", "fileless", "social_engineering", "browser_notifications"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse de l'actualité géopolitique": [
       {
-        "secteur": "Environment, Security, Defense",
-        "theme": "Climate Vulnerabilities and Conflicts",
-        "description": "This analysis explores how climate vulnerabilities are strategically leveraged in contemporary conflicts, spanning a continuum of instrumentalization and weaponization. It also examines environmental degradation caused by conflicts and its strategic implications. The note proposes prospective scenarios and recommendations for the Ministry of Armed Forces, highlighting the growing interaction of climate and security issues in a context of \"hybrid warfare\" and \"high-intensity\" conflicts.",
-        "tags": ["geopolitique", "geopolitic", "climate_security", "conflict_dynamics", "environmental_degradation", "hybrid_warfare", "defense_strategy", "climate_vulnerability"],
-        "sources": ["https://www.iris-france.org/lutilisation-strategique-des-vulnerabilites-climatiques-dans-les-conflits-contemporains-modalites-et-retroactions/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Government, Economy, Resources",
-        "theme": "Political Instability, Wealth Appropriation",
-        "description": "Madagascar, a strategically located island rich in resources (mining, hydrocarbons), faces persistent poverty due to a turbulent political history, chronic instability, corruption, and dependence on international aid. The article highlights that this centrality and wealth attract regional and international powers, creating competition for influence. A recent youth mobilization against a corrupt and inefficient regime underscores the country's need to leverage its wealth for the benefit of all.",
-        "tags": ["geopolitique", "geopolitic", "madagascar", "political_instability", "resource_exploitation", "corruption", "economic_challenges", "foreign_influence"],
-        "sources": ["https://www.iris-france.org/madagascar-lile-aux-richesses-confisquees-jusqua-quand/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Government, Telecommunications",
-        "theme": "Regulation and Cybersecurity, State Espionage",
-        "description": "The U.S. Federal Communications Commission (FCC) rolled back a previous ruling that required stricter cybersecurity measures for telecom carriers, despite state-hacking risks. This rollback followed lobbying from telecommunication firms and new FCC leadership. The Salt Typhoon incident, linked to a Chinese espionage campaign, had targeted several U.S. operators (Verizon, AT&T, Lumen, T-Mobile, Charter, Consolidated Communications, Windstream) to spy on sensitive communications, including those of government officials.",
-        "tags": ["geopolitique", "geopolitic", "regulation", "telecom", "state_espionage", "nation_state", "cybersecurity_policy", "salt_typhoon", "china", "usa"],
+        "secteur": "Telecommunications, Government",
+        "theme": "Cybersecurity Policy, State-Sponsored Espionage",
+        "description": "The Federal Communications Commission (FCC) has rolled back stricter cybersecurity requirements for U.S. telecom carriers, which were previously implemented after the Chinese state-sponsored group Salt Typhoon's attacks to spy on private communications. This decision is criticized for the risks it poses to U.S. national security.",
+        "tags": ["geopolitique", "geopolitic", "telecommunications", "FCC", "cyber_policy", "state_hacking", "Salt_Typhoon", "espionage", "national_security", "USA", "China"],
         "sources": ["https://www.bleepingcomputer.com/news/security/fcc-rolls-back-cybersecurity-rules-for-telcos-despite-state-hacking-risks/"],
         "date": "2025-11-22"
       },
       {
-        "secteur": "Internet Infrastructure, Government, Technology",
-        "theme": "Internet Centralization, Digital Sovereignty",
-        "description": "A major Cloudflare outage on November 18, 2025, which paralyzed millions of websites (X, ChatGPT, Uber) for 6 hours, highlights the fragility of a globalized internet infrastructure relying on a small number of central players. The article emphasizes the digital sovereignty challenges arising from this concentration (mostly American) and the extraterritorial reach of laws like the Cloud Act, which can limit access to digital services based on political decisions, as illustrated by the sanctioning of a French ICC judge by the United States.",
-        "tags": ["geopolitique", "geopolitic", "internet_infrastructure", "digital_sovereignty", "cloudflare", "cloud_act", "centralization", "internet_outage", "digital_sovereignty"],
+        "secteur": "Internet Infrastructure, Cloud Computing, Digital Services",
+        "theme": "Internet Infrastructure Centralization, Digital Sovereignty",
+        "description": "Major outages at Cloudflare and Amazon Web Services (AWS) have highlighted the fragility of a global internet infrastructure centralized among a few American players. This raises significant concerns regarding digital sovereignty and the resilience of critical services in the face of incidents or political decisions, particularly the application of the U.S. Cloud Act.",
+        "tags": ["geopolitique", "geopolitic", "digital_sovereignty", "critical_infrastructure", "Cloudflare", "AWS", "Cloud_Act", "internet_centralization"],
         "sources": ["https://www.portail-ie.fr/univers/2025/cloudflare-panne-failles-internet/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Government, Defense, Intelligence",
-        "theme": "Intelligence Policy, National Security",
-        "description": "An internal UK Home Office report from October 2025 criticizes the UK's intelligence agencies for failing to keep pace with national security threats, citing a lack of coordination. The article proposes learning from Australia's approach, particularly the designation of a principal adviser to the Prime Minister on intelligence matters, to improve collaboration and capability building in the face of rising state threats and hybrid warfare.",
-        "tags": ["geopolitique", "geopolitic", "national_security", "intelligence_policy", "uk_intelligence", "australia", "threat_landscape", "hybrid_warfare", "government"],
-        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/learning-canberra-smarter-vision-uk-intelligence-and-national-security/"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse des violations de données": [
       {
-        "secteur": "Local Government",
-        "victime": "City of Attleboro, Massachusetts",
-        "description": "The City of Attleboro, Massachusetts, is investigating a \"cybersecurity incident\" that has taken several of its information technology systems offline. Public safety services remain operational, but the cause and extent of the incident are still under investigation by local, state, and federal partners.",
-        "tags": ["violation", "breach", "attleboro", "local_government", "it_systems", "cyber_incident", "usa_city"],
-        "sources": ["https://databreaches.net/2025/11/21/attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems/"],
-        "date": "2025-11-22"
-      },
-      {
-        "secteur": "Railway Transport, IT Services",
+        "secteur": "Transportation (railway), IT Services",
         "victime": "Ferrovie dello Stato Italiane (FS), Almaviva",
-        "description": "Data belonging to Italy's national railway operator Ferrovie dello Stato Italiane (FS) was leaked following a data breach at its IT service provider, Almaviva. A hacker claimed the theft of 2.3 TB of sensitive data, including fiscal, administrative, operational documents, payrolls, contracts, and bank account details. The attack suggests a recent compromise rather than the reuse of old data.",
-        "tags": ["violation", "breach", "ferrovie_dello_stato", "almaviva", "railway", "it_services", "data_leak", "italy", "transport"],
-        "sources": ["https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html", "https://infosec.exchange/@DevaOnBreaches/115591154009592509", "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"],
+        "description": "A massive 2.3 TB data leak of sensitive information (including payrolls, contracts, bank details, web configurations, fiscal, administrative, and operational documents) affected the Italian national railway operator, Ferrovie dello Stato Italiane (FS), following a cyberattack on its IT services provider, Almaviva. The incident showed indicators of ransomware operations.",
+        "tags": ["violation", "breach", "data_leak", "ransomware", "supply_chain", "railway", "Ferrovie_dello_Stato", "Almaviva"],
+        "sources": [
+          "https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html",
+          "https://infosec.exchange/@beyondmachines1/115592533884874707",
+          "https://infosec.exchange/@DevaOnBreaches/115591154009592509",
+          "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"
+        ],
         "date": "2025-11-22"
       },
       {
-        "secteur": "SaaS, Technology",
-        "victime": "Salesforce (customers), Gainsight",
-        "description": "Salesforce alerted its users to unusual activity involving Gainsight-linked OAuth applications, which may have allowed unauthorized access to some Salesforce customer data. The investigation indicates that malicious actors, linked to the ShinyHunters group, used these integrations to access data. Salesforce revoked all active Gainsight app tokens and temporarily removed the applications from the AppExchange. Stolen data potentially includes business contacts, emails, phone numbers, and licensing information.",
-        "tags": ["violation", "breach", "salesforce", "gainsight", "oauth_apps", "data_exposure", "shinyhunters", "saas", "cloud_security", "customer_data"],
-        "sources": ["https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html", "https://mastodon.thenewoil.org/@thenewoil/115589932823474119"],
+        "secteur": "SaaS, Various (Salesforce clients)",
+        "victime": "Salesforce customers using Gainsight and Salesloft applications",
+        "description": "Salesforce data for some customers was exposed due to unusual activity involving Gainsight-published OAuth applications. The Scattered Lapsus$ Hunters group (ShinyHunters) claimed responsibility, stating they gained access via OAuth tokens stolen in a previous Salesloft Drift compromise, affecting nearly 1,000 organizations.",
+        "tags": ["violation", "breach", "data_exposure", "Salesforce", "Gainsight", "Salesloft", "OAuth", "ShinyHunters", "Scattered_Lapsus_Hunters", "supply_chain"],
+        "sources": [
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
         "date": "2025-11-22"
       },
       {
         "secteur": "Public Transportation",
         "victime": "Transport for London (TfL)",
-        "description": "The August 2024 cybersecurity incident at Transport for London (TfL), attributed to the Scattered Spider hacking collective, led to disruption of online services and internal systems, as well as the compromise of customer data (names, addresses, contact details). Two British teenagers pleaded not guilty to charges related to this attack, which caused millions of pounds in damages.",
-        "tags": ["violation", "breach", "transport_for_london", "tfl", "scattered_spider", "critical_infrastructure", "customer_data", "uk_transport"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/", "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"],
+        "description": "Cybersecurity incident disrupted online services and internal systems, with customer data (names, addresses, contact details) compromise. Attributed to the Scattered Spider collective.",
+        "tags": ["violation", "breach", "data_compromise", "Transport_for_London", "TfL", "Scattered_Spider", "critical_infrastructure"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Cybersecurity",
+        "victime": "CrowdStrike (internal)",
+        "description": "An insider employee shared screenshots of internal systems with 'Scattered Lapsus$ Hunters' threat actors for $25,000. CrowdStrike asserts no systems were breached and no customer data was exposed.",
+        "tags": ["violation", "breach", "insider_threat", "CrowdStrike", "data_sharing", "Scattered_Lapsus_Hunters"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Local Public Administration",
+        "victime": "City of Attleboro, Massachusetts",
+        "description": "A cybersecurity incident took several of the city's information technology systems offline, disrupting operations without affecting emergency services. An investigation is underway to identify the cause and restore services.",
+        "tags": ["violation", "breach", "cybersecurity_incident", "public_administration", "city_government", "disruption"],
+        "sources": ["https://databreaches.net/2025/11/21/attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems/?pk_campaign=feed&pk_kwd=attleboro-investigating-cybersecurity-incident-impacting-citys-it-systems"],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Unspecified",
+        "victime": "Ezekiel Dean Potter's former employer",
+        "description": "A former employee, Ezekiel Dean Potter, was charged for unauthorized access to his employer's computer systems after termination, resetting usernames/passwords, and deleting/revoking account access. These actions caused tens of thousands of dollars in losses and widespread disruption over more than a year and a half.",
+        "tags": ["violation", "breach", "insider_threat", "computer_fraud", "sabotage", "account_takeover", "data_destruction"],
+        "sources": ["https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/?pk_campaign=feed&pk_kwd=des-moines-man-charged-with-computer-fraud"],
+        "date": "2025-11-22"
+      },
+      {
+        "secteur": "Services (waste management)",
+        "victime": "Maxwell Schultz's former employer (reported as Waste Management)",
+        "description": "A former IT contractor, Maxwell Schultz, pleaded guilty to sabotaging his ex-employer's systems after being fired. He impersonated another contractor to gain network access and caused nearly $1 million in damages by deleting data or disrupting operations.",
+        "tags": ["violation", "breach", "insider_threat", "sabotage", "data_destruction", "impersonation", "financial_impact"],
+        "sources": ["https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/?pk_campaign=feed&pk_kwd=fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage"],
         "date": "2025-11-22"
       }
     ],
     "Synthèse des vulnérabilités": [
       {
-        "cve_id": "CVE-2025-41115",
-        "cvss": "10.0",
-        "product": "Grafana Enterprise",
-        "description": "Critical privilege escalation and impersonation vulnerability when a SCIM provisioning option is enabled, allowing a malicious or compromised SCIM client to impersonate an existing account, including administrators.",
-        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "impersonation", "grafana_enterprise", "scim", "authentication_bypass", "access_control"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/grafana-warns-of-max-severity-admin-spoofing-vulnerability/", "https://fieldeffect.com/blog/maximum-severity-grafana-enterprise-vulnerability-exposes-identity-provisioning/"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65108",
-        "cvss": "10.0",
+        "cvss": 10.0,
         "product": "md-to-pdf",
-        "description": "Remote arbitrary code execution via JavaScript injection when parsing front matter in Markdown files.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "markdown", "javascript_injection", "code_execution", "critical"],
+        "description": "Arbitrary JavaScript code execution remotely via template injection (front-matter).",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "template_injection", "md-to-pdf", "NodeJS", "Chrome"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65108"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-60724",
-        "cvss": "9.8",
-        "product": "Microsoft Graphics Component (GDI+)",
-        "description": "Remote Code Execution (RCE) vulnerability via a heap-based buffer overflow affecting GDI+, exploitable by an unauthenticated remote attacker.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "microsoft", "gdi+", "buffer_overflow", "critical"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
+        "cve_id": "CVE-2025-41115",
+        "cvss": 10.0,
+        "product": "Grafana Enterprise (versions 12.0.0–12.2.1)",
+        "description": "Privilege escalation and user impersonation via SCIM provisioning (admin spoofing, user impersonation) when 'enableSCIM' feature flag and 'user_sync_enabled' options are enabled.",
+        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "admin_spoofing", "SCIM", "Grafana", "authentication_bypass"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grafana-warns-of-max-severity-admin-spoofing-vulnerability/",
+          "https://fieldeffect.com/blog/maximum-severity-grafana-enterprise-vulnerability-exposes-identity-provisioning"
+        ],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-40547",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "Remote Arbitrary Code Execution (RCE) vulnerability via a logic error, allowing an authenticated attacker with admin privileges to execute arbitrary commands.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "logic_error", "solarwinds", "serv-u", "admin_privileges", "code_execution"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
+        "cve_id": "CVE-2025-61757",
+        "cvss": 9.8,
+        "product": "Oracle Identity Manager (versions 12.2.1.4.0, 14.1.2.1.0)",
+        "description": "Remote Code Execution (RCE) via authentication bypass in REST APIs. This vulnerability is actively exploited, potentially as a zero-day.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "authentication_bypass", "Oracle", "Identity_Manager", "zero_day", "actively_exploited"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/",
+          "https://www.security.nl/posting/914041/VS+meldt+actief+misbruik+van+kritiek+RCE-lek+in+Oracle+Identity+Manager?channel=rss",
+          "https://thehackernews.com/2025/11/cisa-warns-of-actively-exploited.html"
+        ],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-40548",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "RCE vulnerability due to access control deficiencies in Serv-U, allowing an authenticated attacker with admin privileges to bypass security checks and execute arbitrary code.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "access_control_bypass", "solarwinds", "serv-u", "admin_privileges", "code_execution"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40549",
-        "cvss": "9.1",
-        "product": "SolarWinds Serv-U",
-        "description": "Path Restriction Bypass vulnerability in Serv-U, allowing an attacker with admin privileges to execute code in normally restricted directories.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "path_restriction_bypass", "solarwinds", "serv-u", "admin_privileges", "code_execution"],
-        "sources": ["https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html", "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-64446",
-        "cvss": "9.1",
-        "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
-        "description": "Critical authentication bypass (path traversal and improper CGIINFO header handling) allowing an unauthenticated attacker to impersonate the built-in admin user.",
-        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "path_traversal", "fortinet", "fortiweb", "waf", "admin_impersonation", "critical"],
-        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "cve_id": "CVE-2025-59287",
+        "cvss": 9.8,
+        "product": "Windows Server Update Services (WSUS)",
+        "description": "Critical vulnerability, not detailed, exploited for initial access in malicious campaigns, showing ease of exploitation and significant impact.",
+        "tags": ["vulnerabilité", "vulnerability", "WSUS", "initial_access", "critical"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
         "date": "2025-11-22"
       },
       {
         "cve_id": "CVE-2025-11087",
-        "cvss": "8.8",
-        "product": "Zegen Core plugin for WordPress",
-        "description": "CSRF to Arbitrary File Upload vulnerability due to missing nonce validation and file type validation, potentially leading to remote code execution.",
-        "tags": ["vulnerabilité", "vulnerability", "csrf", "file_upload", "rce", "wordpress_plugin", "authentication_bypass", "arbitrary_file_upload"],
+        "cvss": 8.8,
+        "product": "Zegen Core plugin for WordPress (<= 2.0.1)",
+        "description": "Cross-Site Request Forgery (CSRF) to Arbitrary File Upload, enabling Remote Code Execution (RCE) via a forged request.",
+        "tags": ["vulnerabilité", "vulnerability", "CSRF", "file_upload", "RCE", "WordPress", "plugin", "arbitrary_file_upload"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-11087"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-65102",
-        "cvss": "8.7",
-        "product": "PJSIP",
-        "description": "Buffer overflow in Opus PLC potentially leading to unexpected application termination (Denial of Service) due to memory overwrite.",
-        "tags": ["vulnerabilité", "vulnerability", "buffer_overflow", "dos", "pjsip", "opus_codec", "memory_overwrite"],
-        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65102"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65947",
-        "cvss": "8.7",
-        "product": "thread-amount",
-        "description": "Resource leaks (memory and handles) on Windows and macOS, potentially leading to system instability or process termination (Denial of Service).",
-        "tags": ["vulnerabilité", "vulnerability", "dos", "resource_exhaustion", "memory_leak", "handle_leak", "windows", "macos"],
+        "cvss": 8.7,
+        "product": "thread-amount (tool)",
+        "description": "Resource leaks (memory and handles) on Windows and Apple platforms, potentially leading to system instability or process termination.",
+        "tags": ["vulnerabilité", "vulnerability", "resource_exhaustion", "memory_leak", "handle_leak", "Windows", "macOS", "system_instability"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65947"],
         "date": "2025-11-22"
       },
       {
+        "cve_id": "CVE-2025-65102",
+        "cvss": 8.7,
+        "product": "PJSIP (prior to version 2.16)",
+        "description": "Buffer overflow in Opus PLC, potentially leading to unexpected application termination.",
+        "tags": ["vulnerabilité", "vulnerability", "buffer_overflow", "DoS", "PJSIP", "Opus_codec", "application_termination"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65102"],
+        "date": "2025-11-22"
+      },
+      {
         "cve_id": "CVE-2025-65109",
-        "cvss": "8.5",
-        "product": "Minder (Helm & Go versions)",
-        "description": "Information disclosure allowing Minder users to fetch content in the context of the Minder server, potentially accessing normally inaccessible URLs.",
-        "tags": ["vulnerabilité", "vulnerability", "information_disclosure", "supply_chain_security", "minder", "server_side_request_forgery", "access_restriction_bypass"],
+        "cvss": 8.5,
+        "product": "Minder (Helm versions 0.20241106.3386+ref.2507dbf; Go versions 0.0.72 to 0.0.83)",
+        "description": "Minder users may fetch content in the context of the Minder server, including URLs they would not normally have access to, affecting the software supply chain.",
+        "tags": ["vulnerabilité", "vulnerability", "supply_chain", "information_disclosure", "Minder", "software_supply_chain"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65109"],
         "date": "2025-11-22"
       },
       {
         "cve_id": "CVE-2025-65106",
-        "cvss": "8.3",
-        "product": "LangChain",
-        "description": "Template injection vulnerability in LangChain's prompt template system, allowing access to Python object internals via template syntax.",
-        "tags": ["vulnerabilité", "vulnerability", "template_injection", "langchain", "llm", "ai_application", "information_disclosure", "code_execution"],
+        "cvss": 8.3,
+        "product": "LangChain (prior to 0.3.80; 1.0.0 to 1.0.6)",
+        "description": "Template injection allowing attackers to access Python object internals in LLM-powered applications.",
+        "tags": ["vulnerabilité", "vulnerability", "template_injection", "AI", "LLM", "LangChain", "attribute_access", "python"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65106"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-30398",
-        "cvss": "8.1",
-        "product": "Nuance PowerScribe 360 and PowerScribe One",
-        "description": "Sensitive information disclosure via missing authorization, allowing unauthenticated attackers to reveal configuration settings.",
-        "tags": ["vulnerabilité", "vulnerability", "information_disclosure", "nuance", "powerscribe", "authentication_bypass"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
         "cve_id": "CVE-2025-65946",
-        "cvss": "8.1",
-        "product": "Roo Code",
-        "description": "Potential Remote Code Execution via a zsh command validation bug, allowing the AI agent to execute unauthorized commands.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "ai_agent", "roo_code", "command_injection", "validation_bypass"],
+        "cvss": 8.1,
+        "product": "Roo Code (AI-powered coding agent) (prior to 3.26.7)",
+        "description": "Remote Code Execution (RCE) via a zsh command validation bug in this AI-powered coding agent.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "AI", "Roo_Code", "zsh", "command_validation"],
         "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-65946"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-62199",
-        "cvss": "7.8",
-        "product": "Microsoft Office",
-        "description": "Arbitrary code execution via a use-after-free vulnerability in Microsoft Office, exploitable by opening a malicious file (Preview pane is an attack vector).",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "microsoft_office", "use_after_free", "malicious_file", "preview_pane_exploit"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-60716",
-        "cvss": "7.0",
-        "product": "DirectX Graphics kernel",
-        "description": "Elevation of Privilege (EoP) vulnerability via a use-after-free flaw in the Windows DirectX graphics kernel, allowing an authenticated local attacker with low privileges to gain SYSTEM privileges.",
-        "tags": ["vulnerabilité", "vulnerability", "eop", "directx", "windows_kernel", "use_after_free", "privilege_escalation"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-62215",
-        "cvss": "7.0 (Actively exploited)",
-        "product": "Windows kernel",
-        "description": "Elevation of Privilege (EoP) vulnerability due to a race condition in the Windows kernel, allowing an authenticated local attacker with low privileges to gain SYSTEM privileges.",
-        "tags": ["vulnerabilité", "vulnerability", "eop", "windows_kernel", "race_condition", "actively_exploited", "privilege_escalation"],
-        "sources": ["https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-november-2025/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40604",
-        "cvss": "Unspecified (Code Execution)",
-        "product": "SonicWall Email Security appliances",
-        "description": "Persistent arbitrary code execution due to loading root filesystem images without integrity verification, allowing modification of system files.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "sonicwall", "email_security", "integrity_bypass", "persistent_code_execution"],
-        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-40605",
-        "cvss": "Unspecified (Path Traversal)",
-        "product": "SonicWall Email Security appliances",
-        "description": "Path Traversal vulnerability allowing an attacker to access files and directories outside the intended restricted path by injecting crafted directory-traversal sequences.",
-        "tags": ["vulnerabilité", "vulnerability", "path_traversal", "sonicwall", "email_security", "information_disclosure", "access_restriction_bypass"],
-        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
-        "date": "2025-11-22"
-      },
-      {
-        "cve_id": "CVE-2025-58034",
-        "cvss": "Unspecified (Authenticated RCE)",
+        "cve_id": "CVE-2025-64446",
+        "cvss": 9.1,
         "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
-        "description": "Authenticated command injection in FortiWeb's API and CLI, allowing an authenticated user to execute commands as root, often chained with an authentication bypass.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "command_injection", "fortinet", "fortiweb", "waf", "authenticated_rce"],
+        "description": "Critical authentication bypass via a path traversal vulnerability combined with improper handling of the CGIINFO header, allowing administrative account creation.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "path_traversal", "Fortinet", "FortiWeb", "WAF", "admin_account_creation"],
         "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
         "date": "2025-11-22"
       },
       {
-        "cve_id": "CVE-2025-61757",
-        "cvss": "Unspecified (actively exploited)",
-        "product": "Oracle Identity Manager",
-        "description": "Authentication bypass in Oracle Identity Manager's REST APIs, enabling Remote Code Execution (RCE) and actively exploited as a zero-day.",
-        "tags": ["vulnerabilité", "vulnerability", "rce", "authentication_bypass", "oracle_identity_manager", "zero_day", "actively_exploited"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/"],
+        "cve_id": "CVE-2025-40549",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Path restriction bypass allowing Remote Code Execution (RCE) with administrative privileges.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "path_restriction_bypass", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40548",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Missing validation process allowing Remote Code Execution (RCE) with administrative privileges.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "missing_validation", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40547",
+        "cvss": 9.1,
+        "product": "SolarWinds Serv-U",
+        "description": "Logic error allowing Remote Code Execution (RCE) with administrative privileges.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "logic_error", "SolarWinds", "Serv-U", "admin_privileges"],
+        "sources": [
+          "https://securityaffairs.com/184916/security/solarwinds-addressed-three-critical-flaws-in-serv-u.html",
+          "https://thecyberthrone.in/2025/11/22/solarwinds-serv-u-critical-vulnerabilities/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-58034",
+        "cvss": 9.0,
+        "product": "Fortinet FortiWeb Web Application Firewall (WAF)",
+        "description": "Authenticated command injection in the API and CLI allowing root-level system command execution, often chained with an authentication bypass.",
+        "tags": ["vulnerabilité", "vulnerability", "command_injection", "RCE", "Fortinet", "FortiWeb", "WAF", "authenticated_access", "root_access"],
+        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "date": "2025-11-22"
+      },
+      {
+        "cve_id": "CVE-2025-40604",
+        "cvss": 9.0,
+        "product": "SonicWall Email Security appliances",
+        "description": "Loading root filesystem images without signature verification, allowing persistent arbitrary code execution.",
+        "tags": ["vulnerabilité", "vulnerability", "RCE", "code_execution", "integrity_bypass", "SonicWall", "Email_Security", "persistent_code_execution"],
+        "sources": ["https://securityonline.info/sonicwall-patches-two-vulnerabilities-in-email-security-appliances-including-code-execution-flaw-cve-2025-40604/"],
         "date": "2025-11-22"
       }
     ],
     "Articles": [
       {
-        "title": "CrowdStrike Catches Insider Feeding Information to Hackers (Scattered Lapsus$ Hunters/ShinyHunters)",
-        "description": "CrowdStrike terminated an employee suspected of sharing internal system screenshots with the Scattered Lapsus$ Hunters and ShinyHunters hacking groups, who subsequently leaked the information on Telegram. Although the employee was detected and their access cut off before any system compromise or customer data exposure, the malicious actors reportedly offered $25,000 for access to CrowdStrike's network and allegedly received SSO authentication cookies. ShinyHunters and Scattered Spider groups are also linked to recent waves of data theft targeting Salesforce instances via Gainsight-linked OAuth apps, as well as voice phishing attacks against Salesforce customers (Google, Cisco, Allianz Life, Farmers Insurance, Qantas, Adidas, Workday, Dior, Louis Vuitton, Tiffany & Co.). They are also using new RaaS platforms like ShinySp1d3r.",
-        "threat_actor": "Scattered Lapsus$ Hunters, ShinyHunters, Scattered Spider",
-        "indicator_of_compromise": ["No specific IoCs are provided"],
-        "mitre_ttps": ["T1537: Transfer Data to Cloud Account", "T1567.002: Exfiltration Over Web Service (Telegram)", "T1078: Valid Accounts (SSO cookies)", "T1531: Account Access Removal", "T1566.002: Phishing (Voice Phishing)", "T1134: Access Token Manipulation"],
-        "analyse": "The incident highlights the persistent threat of insiders and social engineering targeting employees for initial access. The scope of activities by Scattered Lapsus$ Hunters and ShinyHunters is broad, targeting a range of sectors and critical SaaS platforms like Salesforce, through sophisticated supply chain and social engineering techniques.",
-        "recommandations": ["Strengthen insider threat awareness programs and social engineering training.", "Implement strict access controls and continuous monitoring of employee activities, especially for privileged accounts.", "Detect and block unauthorized external data transfers.", "Regularly audit security configurations of third-party applications integrated into SaaS platforms (e.g., OAuth apps).", "Strengthen multi-factor authentication (MFA) and monitor session cookie usage."],
-        "tags": ["crowdstrike", "insider_threat", "scattered_lapsus_hunters", "shinyhunters", "salesforce", "data_theft", "social_engineering", "sso", "saas_security", "supply_chain_attack"],
-        "sources": ["https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/", "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html", "https://databreaches.net/2025/11/21/crowdstrike-catches-insider-feeding-information-to-scatteredlapsushunters/", "https://t.me/vxunderground/7696"],
+        "title": "Active Exploitation of Critical RCE Flaw in Oracle Identity Manager",
+        "description": "CISA has issued a warning regarding the active exploitation of CVE-2025-61757, a critical (CVSS 9.8) Remote Code Execution (RCE) vulnerability in Oracle Identity Manager. This zero-day flaw, an authentication bypass in REST APIs, allows unauthenticated attackers to execute malicious code by tricking security filters. Attempts to exploit this vulnerability were observed as early as August 30.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": ["89.238.132.76", "185.245.82.81", "138.199.29.153"],
+          "DOMAIN": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1078 - Valid Accounts", "T1068 - Exploitation for Privilege Escalation"],
+        "analyse": "High impact due to RCE and active exploitation, targeting identity management systems which are critical for enterprise security. Potentially widespread due to use of Oracle Identity Manager. Zero-day nature suggests sophisticated attackers.",
+        "recommandations": ["Immediately patch Oracle Identity Manager (CVE-2025-61757).", "Monitor for suspicious access attempts to REST APIs, especially those with \";.wadl\" or \"?WSDL\" parameters.", "Implement strict authentication and access controls."],
+        "tags": ["RCE", "zero_day", "active_exploitation", "Oracle_Identity_Manager", "authentication_bypass", "CISA", "KEV"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-oracle-identity-manager-rce-flaw-is-being-actively-exploited/",
+          "https://thehackernews.com/2025/11/cisa-warns-of-actively-exploited.html",
+          "https://www.security.nl/posting/914041/VS+meldt+actief+misbruik+van+kritiek+RCE-lek+in+Oracle+Identity+Manager?channel=rss"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Des Moines Man Charged with Computer Fraud",
-        "description": "Ezekiel Dean Potter, 34, of Des Moines, was charged with computer fraud after unauthorized access to his former employer's computer systems for over a year and a half (May 2023 to January 2025), following his termination in April 2023. He allegedly reset usernames and passwords and deleted or revoked access to accounts, causing widespread disruption and tens of thousands of dollars in losses.",
-        "threat_actor": "Insider Threat (Ezekiel Dean Potter)",
-        "indicator_of_compromise": "No specific IoCs are provided",
-        "mitre_ttps": ["T1078.001: Valid Accounts (Local Account)", "T1531: Account Access Removal", "T1485: Data Destruction", "T1078.003: Valid Accounts (Cloud Accounts)"],
-        "analyse": "This incident highlights the significant risks posed by insider threats, especially ex-employees who retain knowledge or access to systems. The impact included operational disruption and significant financial losses for the targeted company.",
-        "recommandations": ["Implement immediate and comprehensive account deactivation procedures upon employee departure.", "Monitor system access and configuration changes by former employee accounts or accounts with abnormal privileges.", "Use multi-factor authentication for all accesses, including administrators.", "Conduct regular audits of access logs and account modifications."],
-        "tags": ["computer_fraud", "insider_threat", "ex_employee", "account_manipulation", "data_deletion", "operational_disruption", "legal_action"],
-        "sources": ["https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/"],
+        "title": "CrowdStrike Confirms Insider Shared Internal Screenshots with Threat Actors",
+        "description": "Cybersecurity firm CrowdStrike confirmed that an insider shared screenshots of internal systems with the \"Scattered Lapsus$ Hunters\" threat actors, who then leaked them on Telegram. The insider, who was terminated, allegedly received $25,000. CrowdStrike states no systems were breached and no customer data was exposed.",
+        "threat_actor": "Scattered Lapsus$ Hunters (ShinyHunters, Scattered Spider, Lapsus$)",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1133 - External Remote Services", "T1078 - Valid Accounts"],
+        "analyse": "Highlights the persistent risk of insider threats, even for cybersecurity companies. While no direct breach of customer data was confirmed, the incident demonstrates the effectiveness of social engineering and monetary incentives for insider information.",
+        "recommandations": ["Enhance insider threat detection programs.", "Implement strict controls on internal information sharing (e.g., screenshots).", "Educate employees on the risks and consequences of cooperating with threat actors."],
+        "tags": ["insider_threat", "Scattered_Lapsus_Hunters", "CrowdStrike", "data_sharing", "social_engineering", "human_factors"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/crowdstrike-catches-insider-feeding-information-to-hackers/",
+          "https://securityaffairs.com/184926/security/crowdstrike-denies-breach-after-insider-sent-internal-screenshots-to-hackers.html",
+          "https://t.me/vxunderground/7696"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Fired techie admits sabotaging ex-employer, causing $862K in damage",
-        "description": "Maxwell Schultz, 35, an Ohio IT contractor, pleaded guilty to sabotaging his former employer's systems, causing nearly $1 million in damages after his termination. He impersonated another contractor to gain network access after his own credentials were revoked. The company details are not specified, but a local report identifies it as Waste Management.",
-        "threat_actor": "Insider Threat (Maxwell Schultz)",
-        "indicator_of_compromise": "No specific IoCs are provided",
-        "mitre_ttps": ["T1078.001: Valid Accounts (Local Account)", "T1531: Account Access Removal", "T1485: Data Destruction", "T1078.003: Valid Accounts (Cloud Accounts)", "T1078.004: Valid Accounts (SSH Keys)"],
-        "analyse": "This incident once again illustrates the severity of insider threats and the need for robust post-employment controls. Financial damages and operational disruption can be substantial, emphasizing the importance of rigorous access and identity management.",
-        "recommandations": ["Implement immediate and complete revocation of all access (including shared credentials or those used by other contractors) for employees and contractors upon their departure.", "Enhance monitoring for unusual activities, particularly those resembling impersonation attempts or privilege escalation.", "Implement strong multi-factor authentication (MFA) for all critical accesses.", "Conduct post-employment security audits to ensure all access is revoked and systems are secure."],
-        "tags": ["insider_threat", "sabotage", "ex_employee", "access_revocation", "impersonation", "data_destruction", "financial_loss", "it_contractor"],
-        "sources": ["https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/"],
+        "title": "Former Employees Charged in Separate Insider Sabotage Incidents",
+        "description": "Two separate incidents highlight severe insider threats. Ezekiel Dean Potter was charged for unauthorized access, password resets, and account deletions at his former employer, causing significant disruption for over a year. Maxwell Schultz pleaded guilty to impersonating another contractor to sabotage his ex-employer's systems after being fired, resulting in nearly $1 million in damages.",
+        "threat_actor": "Former employees (insider threats)",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1078 - Valid Accounts", "T1078.002 - Domain Accounts", "T1485 - Data Destruction", "T1531 - Account Access Removal"],
+        "analyse": "Emphasizes the critical and costly risk posed by disgruntled or malicious former employees. Insider threats can lead to prolonged disruption and substantial financial losses, leveraging existing knowledge and sometimes compromised credentials.",
+        "recommandations": ["Implement robust offboarding procedures to immediately revoke all access.", "Monitor for unusual activity on former employee accounts or systems.", "Implement strong access controls and least privilege.", "Conduct regular audits and logging."],
+        "tags": ["insider_threat", "sabotage", "data_destruction", "computer_fraud", "former_employee", "critical_impact"],
+        "sources": [
+          "https://databreaches.net/2025/11/21/des-moines-man-charged-with-computer-fraud/?pk_campaign=feed&pk_kwd=des-moines-man-charged-with-computer-fraud",
+          "https://databreaches.net/2025/11/21/fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage/?pk_campaign=feed&pk_kwd=fired-techie-admits-sabotaging-ex-employer-causing-862k-in-damage"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "North Korean Kimsuky and Lazarus Join Forces to Exploit Zero-Day Vulnerabilities",
-        "description": "North Korean hacking groups Kimsuky and Lazarus are collaborating in a global attack campaign targeting critical sectors. They exploit zero-day vulnerabilities and use malicious messages with attachments (HWP, MSC) to deploy the FPSpy backdoor and the KLogEXE keylogger. The InvisibleFerret backdoor, used by Lazarus, stands out for its advanced evasion capabilities, disguising network traffic as normal HTTPS requests and using encrypted channels with daily rotation of C2 domains disguised as e-commerce or news sites.",
-        "threat_actor": "Kimsuky, Lazarus",
-        "indicator_of_compromise": ["No specific IoCs are provided"],
-        "mitre_ttps": ["T1566.001: Phishing (Spearphishing Attachment)", "T1204.002: User Execution (Malicious File)", "T1573.002: Encrypted Channel (Asymmetric Cryptography)", "T1071.001: Application Layer Protocol (HTTPS)", "T1041: Exfiltration Over C2 Channel", "T1027: Obfuscated Files or Information", "T1056.001: Input Capture (Keylogging)"],
-        "analyse": "This collaboration between two major North Korean APT groups indicates increased sophistication and coordination in their espionage operations. The use of zero-days and advanced evasion techniques (InvisibleFerret) poses a significant challenge to defenses, particularly for critical sectors worldwide.",
-        "recommandations": ["Implement multi-layered security with EDR/XDR to detect post-exploitation activities.", "Strengthen awareness of email threats, especially for suspicious attachments.", "Use Threat Intelligence solutions to monitor TTPs and IoCs of nation-state APT groups.", "Segment networks to limit lateral movement in case of compromise.", "Rigorously apply security patches, especially for reported zero-day vulnerabilities."],
-        "tags": ["kimsuky", "lazarus", "apt", "north_korea", "zero_day", "critical_sectors", "fpspy", "klogexe", "invisibleferret", "espionage"],
-        "sources": ["https://cybersecuritynews.com/north-korean-kimsuky-and-lazarus-join-forces/"],
+        "title": "Massive Data Leak Affects Italian Railway Operator Following Almaviva IT Provider Hack",
+        "description": "Italy's national railway operator, Ferrovie dello Stato Italiane (FS), suffered a massive data leak of 2.3 TB of sensitive data (including payrolls, contracts, bank account details, and operational documents) after its IT services provider, Almaviva, was cyberattacked. Indicators of ransomware operations were observed.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1529 - System Compromise", "T1537 - Data Encrypted for Impact", "T1020 - Automated Exfiltration"],
+        "analyse": "High impact on critical national infrastructure (railway) via a supply chain attack on an IT provider. Large volume of sensitive data suggests significant financial and reputational damage. Highlights supply chain risks.",
+        "recommandations": ["Strengthen supply chain cybersecurity.", "Implement robust data encryption for data at rest and in transit.", "Regularly back up critical data.", "Enhance incident response plans for third-party breaches."],
+        "tags": ["data_breach", "railway", "supply_chain", "Almaviva", "Ferrovie_dello_Stato", "ransomware", "critical_infrastructure"],
+        "sources": [
+          "https://securityaffairs.com/184907/data-breach/massive-data-leak-hits-italian-railway-operator-ferrovie-dello-stato-via-almaviva-hack.html",
+          "https://infosec.exchange/@beyondmachines1/115592533884874707",
+          "https://infosec.exchange/@DevaOnBreaches/115591154009592509",
+          "https://mastodon.thenewoil.org/@thenewoil/115590640777860716"
+        ],
         "date": "2025-11-22"
       },
       {
-        "title": "Poetry proves potent jailbreak tool for today's top models",
-        "description": "Researchers discovered that malicious prompts written in verse are significantly more effective at bypassing AI model guardrails (LLM jailbreaking) than typical prompts. Tests on 25 AI models showed an average 43% increase in jailbreak success rates for AI-poeticized prompts, and even higher success for human-written poetic prompts (only Google GeminiPro 2.5 resisted 100%). This raises significant questions about the robustness of AI systems against minimal stylistic input variations.",
-        "threat_actor": "Not applicable",
-        "indicator_of_compromise": "No specific IoCs are provided",
-        "mitre_ttps": ["T0875: Adversarial LLM Prompts", "T0876: Data Extraction (LLM)", "T0877: Information Disclosure (LLM)"],
-        "analyse": "The finding reveals an unexpected vulnerability in AI model security, indicating that traditional testing approaches are insufficient. Exploiting this flaw could allow bypassing LLM content restrictions, paving the way for generating malicious content or extracting sensitive
+        "title": "Matrix Push C2 Platform Leverages Browser Notifications for Fileless Phishing Attacks",
+        "description": "The new \"Matrix Push C2\" Malware-as-a-Service (MaaS) platform is being used by threat actors for fileless, cross-platform phishing attacks. It exploits browser push notifications and social engineering with fake alerts and redirects to distribute malicious links, bypassing traditional security controls. The platform offers configurable templates and real-time victim tracking, and is sold via crimeware channels.",
+        "threat_actor": "Matrix Push C2 (platform used by various threat actors)",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1566 - Phishing", "T1566.001 - Spearphishing Link", "T1059 - Command and Scripting Interpreter", "T1204 - User Execution", "T1598 - Phishing for Information"],
+        "analyse": "Represents an emerging trend in phishing techniques, leveraging built-in browser functionalities to bypass traditional endpoint security. Its MaaS model lowers the barrier for entry for various threat actors, increasing the potential for widespread attacks across different operating systems and devices.",
+        "recommandations": ["Educate users about the dangers of unsolicited browser notifications and how to manage them.", "Implement strong content security policies.", "Deploy advanced email and web filtering solutions.", "Monitor for unusual browser activity and network connections."],
+        "tags": ["phishing", "fileless", "cross_platform", "browser_notifications", "social_engineering", "MaaS", "Matrix_Push_C2"],
+        "sources": ["https://thehackernews.com/2025/11/matrix-push-c2-uses-browser.html"],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Metasploit Module Exploits Chained FortiWeb Zero-Day Vulnerabilities for RCE",
+        "description": "A new Metasploit module has been released, targeting critical zero-day vulnerabilities in Fortinet's FortiWeb WAF. It chains CVE-2025-64446 (CVSS 9.1, authentication bypass via path traversal and CGIINFO header manipulation) and CVE-2025-58034 (authenticated command injection). This allows unauthenticated attackers to gain administrative access and subsequently achieve root-level Remote Code Execution (RCE) on the WAF device.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1078 - Valid Accounts", "T1068 - Exploitation for Privilege Escalation", "T1059 - Command and Scripting Interpreter", "T1591 - Gather Victim Network Information"],
+        "analyse": "The public release of a Metasploit module for these chained zero-day vulnerabilities significantly increases the risk for organizations using vulnerable FortiWeb WAFs. The ability to achieve root RCE from an unauthenticated state is critical, highlighting the need for immediate patching and post-compromise auditing.",
+        "recommandations": ["Immediately patch FortiWeb WAF devices.", "Audit user lists for any unknown administrative accounts.", "Review logs for suspicious requests to /api/v2.0/cmdb/system/admin from untrusted IPs.", "Implement strong network segmentation for WAFs."],
+        "tags": ["zero_day", "FortiWeb", "WAF", "RCE", "authentication_bypass", "command_injection", "Metasploit", "exploit_module", "critical_vulnerability"],
+        "sources": ["https://cybersecuritynews.com/metasploit-module-fortiweb-0-day/"],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Salesforce Customer Data Exposed Through Compromised Gainsight OAuth Applications",
+        "description": "Salesforce has warned customers of potential data exposure due to unusual activity involving Gainsight-published OAuth applications. The \"Scattered Lapsus$ Hunters\" (ShinyHunters) group claimed responsibility, stating they gained access by exploiting OAuth tokens stolen in a previous Salesloft Drift compromise, affecting nearly 1,000 organizations.",
+        "threat_actor": "Scattered Lapsus$ Hunters (ShinyHunters)",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1526 - Compromise Accounts", "T1199 - Trusted Relationship", "T1078 - Valid Accounts"],
+        "analyse": "Demonstrates the risk of third-party application integrations and the reuse of stolen credentials/tokens across different services. The incident highlights the complex interconnectedness of cloud environments and supply chain vulnerabilities.",
+        "recommandations": ["Implement strong OAuth token management and monitoring.", "Regularly audit third-party application permissions and connections.", "Enforce Multi-Factor Authentication (MFA).", "Monitor for unusual access patterns from integrated applications."],
+        "tags": ["data_exposure", "Salesforce", "Gainsight", "Salesloft", "OAuth", "ShinyHunters", "Scattered_Lapsus_Hunters", "third_party_risk", "supply_chain"],
+        "sources": [
+          "https://securityaffairs.com/184896/hacking/salesforce-alerts-users-to-potential-data-exposure-via-gainsight-oauth-apps.html",
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/11/21/google-says-hackers-stole-data-from-200-companies-following-gainsight-breach/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "Suspected Scattered Spider Members Plead Not Guilty in UK Transport for London Hack",
+        "description": "Two British teenagers, alleged members of the Scattered Spider hacking collective, have pleaded not guilty to charges related to the August 2024 cyberattack on Transport for London (TfL). The incident caused significant disruption and customer data compromise, though initially denied. One suspect also faces charges related to attacks on U.S. healthcare entities.",
+        "threat_actor": "Scattered Spider",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1565 - System Compromise", "T1530 - Data Exfiltration", "T1078 - Valid Accounts", "T1567 - Exfiltration Over Web Service"],
+        "analyse": "Underscores the impact of cybercrime groups like Scattered Spider on critical national infrastructure and the legal actions taken against alleged members. The targeting of both UK transport and US healthcare systems highlights their broad scope.",
+        "recommandations": ["Strengthen defenses for critical infrastructure.", "Implement robust incident response and forensic capabilities.", "Regularly review and secure customer data handling processes."],
+        "tags": ["Scattered_Spider", "cybercrime", "critical_infrastructure", "Transport_for_London", "data_compromise", "legal_action", "UK_NCA"],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/scattered-spider-teens-plead-not-guilty-to-uk-transport-hack/",
+          "https://databreaches.net/2025/11/21/two-suspected-scattered-spider-hackers-plead-not-guilty-over-transport-for-london-cyberattack/"
+        ],
+        "date": "2025-11-22"
+      },
+      {
+        "title": "ToddyCat APT Group Evolves Tactics to Steal Corporate Email Data",
+        "description": "Kaspersky reports on the ToddyCat APT group's evolving methods to gain covert access to corporate email, specifically targeting Microsoft Exchange Server and Microsoft 365 environments. Their tactics include a new PowerShell variant of TomBerBil for exfiltrating browser data (cookies, passwords, encryption keys), and tools like TCSectorCopy and XstReader to access local Outlook OST files and steal OAuth 2.0 access tokens from memory.",
+        "threat_actor": "ToddyCat APT",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1537 - Email Collection", "T1114 - Email Collection from Mailbox", "T1003 - OS Credential Dumping", "T1552 - Unsecured Credentials", "T1056 - Input Capture", "T1078 - Valid Accounts", "T1020 - Automated Exfiltration"],
+        "analyse": "Highlights the sophisticated and adaptive nature of APT groups, focusing on high-value targets like corporate email. The use of custom tools and evolving techniques (e.g., PowerShell variant of TomBerBil, direct disk access with TCSectorCopy, token theft from memory) demonstrates a continuous effort to evade detection.",
+        "recommandations": ["Implement robust auditing for mail folders (%LOCALAPPDATA%\\Microsoft\\Outlook).", "Monitor for raw disk access (Event ID 9 in Sysmon).", "Monitor for suspicious OST file naming patterns.", "Deploy host-based EPP solutions and advanced threat monitoring systems.", "Enforce strong credential protection and MFA."],
+        "tags": ["APT", "ToddyCat", "email_theft", "data_exfiltration", "custom_malware", "TTPs", "TomBerBil", "TCSectorCopy", "XstReader", "Outlook", "Microsoft_365", "OAuth_tokens"],
+        "sources": ["https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"],
+        "date": "2025-11-22"
+      }
+    ]
+  }
+}
