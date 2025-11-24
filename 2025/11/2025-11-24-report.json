@@ -1,0 +1,1192 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber révèle une intensification des menaces, notamment par l'exploitation de vulnérabilités critiques et les attaques sur la chaîne d'approvisionnement. Plusieurs incidents soulignent la persistance des compromissions via les fournisseurs tiers, affectant des secteurs variés comme le transport aérien (Iberia), la finance (SitusAMC) et les télécommunications (Cox). Les vulnérabilités d'exécution de code à distance (RCE) et les contournements d'authentification restent des cibles privilégiées, touchant des équipements réseau (D-Link, Tenda, SonicWall), des plateformes de gestion d'identité (Oracle Identity Manager) et des systèmes industriels (ABB Edgenius). L'émergence de failles dans les infrastructures d'intelligence artificielle (vLLM) met en lumière de nouveaux vecteurs d'attaque. L'exploitation active de certaines de ces vulnérabilités souligne l'urgence pour les organisations d'appliquer les correctifs et de renforcer leurs défenses. La présence d'acteurs alignés avec des États (EdgeStepper) et de groupes de rançongiciels confirme la sophistication et la diversification des menaces. En conclusion, l'état général des menaces est élevé, exigeant une vigilance accrue, une gestion proactive des vulnérabilités et une sécurisation robuste de la chaîne d'approvisionnement.",
+      "date": "2025-11-24"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs de menace alignés avec la Chine (EdgeStepper)",
+        "secteur": "Divers (ciblant les mises à jour logicielles de périphériques réseau)",
+        "modop": "Utilisation d'un kit d'attaque de type 'Man-in-the-Middle' (MITM) pour intercepter le trafic de mise à jour logicielle et déployer des packages malveillants, laissant peu de traces.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "chine",
+          "MITM",
+          "EdgeStepper",
+          "cyberespionnage",
+          "software_supply_chain"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Infrastructures critiques",
+        "theme": "Menace des systèmes d'aéronefs sans pilote (UAS/Drones)",
+        "description": "La CISA a émis un avertissement concernant l'activité persistante et préoccupante de systèmes d'aéronefs sans pilote (drones) au-dessus de sites d'infrastructures critiques sensibles. Cette activité pourrait interférer avec les opérations des installations, perturber les opérations de vol autorisées et fournir des renseignements à des acteurs malveillants.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "CISA",
+          "drones",
+          "UAS",
+          "critical_infrastructure",
+          "espionnage",
+          "surveillance"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services de logement",
+        "victime": "ADDA",
+        "description": "En mars 2025, des données de plus de 1,8 million d'utilisateurs du service de gestion de résidences ADDA ont été divulguées sur un forum de hacking. Les informations exposées comprenaient des adresses email uniques, des noms, des numéros de téléphone et des hachages de mots de passe MD5.",
+        "tags": [
+          "violation",
+          "breach",
+          "ADDA",
+          "housing",
+          "MD5_hashes",
+          "personnel_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/ADDA"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Formation en ligne / Codage",
+        "victime": "CodeStepByStep",
+        "description": "En novembre 2025, l'outil de pratique de codage en ligne CodeStepByStep a subi une violation de données, exposant 17 351 enregistrements, incluant des noms, noms d'utilisateur et adresses email.",
+        "tags": [
+          "violation",
+          "breach",
+          "CodeStepByStep",
+          "education",
+          "online_platform",
+          "personnel_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CodeStepByStep",
+          "https://mastodon.social/@RedPacketSecurity/115602441122355733"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Commerce électronique / IT",
+        "victime": "Coupang (Corée du Sud)",
+        "description": "Coupang, une grande entreprise sud-coréenne de commerce électronique, a signalé une nouvelle violation de données affectant 4 500 clients, soulevant des questions sur l'efficacité des investissements en cybersécurité.",
+        "tags": [
+          "violation",
+          "breach",
+          "Coupang",
+          "e-commerce",
+          "retail",
+          "South_Korea",
+          "customer_data"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115601906250731952"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Cox",
+        "description": "Cox a subi une violation de données via un fournisseur tiers, exposant les noms de clients. L'étendue complète des données volées n'a pas été précisée par l'entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "Cox",
+          "telecommunications",
+          "broadband",
+          "supply_chain",
+          "customer_data"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Gouvernement (Philippines)",
+        "victime": "Department of the Interior and Local Government (DILG)",
+        "description": "Le Department of the Interior and Local Government (DILG) des Philippines enquête sur une allégation de violation de données de ses systèmes internes par des hackers. Le DILG a activé ses protocoles de sécurité et de confinement.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "Philippines",
+          "DILG",
+          "internal_systems",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/23/ph-department-of-the-interior-and-local-government-to-probe-alleged-data-breach-by-hackers/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Transport aérien",
+        "victime": "Iberia",
+        "description": "La compagnie aérienne espagnole Iberia a signalé une fuite de données clients résultant d'une compromission chez l'un de ses fournisseurs. Les données affectées incluent les noms, adresses email et numéros de carte de fidélité. Un acteur malveillant a également revendiqué la vente de 77 Go de données internes d'Iberia, bien que le lien direct avec la fuite de données clients ne soit pas pleinement confirmé par l'entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "Iberia",
+          "airline",
+          "supply_chain",
+          "customer_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/iberia-discloses-customer-data-leak-after-vendor-security-breach/",
+          "https://securityaffairs.com/184985/data-breach/iberia-discloses-security-incident-tied-to-supplier-breach/",
+          "https://infosec.exchange/@DevaOnBreaches/115601693794843884"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Services financiers (immobilier, prêts hypothécaires)",
+        "victime": "SitusAMC (fournisseur de banques)",
+        "description": "SitusAMC, un fournisseur de services pour des centaines de banques et prêteurs dans l'immobilier et les prêts hypothécaires, a subi une cyberattaque le 12 novembre. Des données clients sensibles ont été compromises, et le FBI a ouvert une enquête.",
+        "tags": [
+          "violation",
+          "breach",
+          "SitusAMC",
+          "financial_sector",
+          "banking",
+          "real_estate",
+          "supply_chain",
+          "customer_data",
+          "FBI_investigation"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/23/a-swath-of-bank-customer-data-was-hacked-the-f-b-i-is-investigating/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-10571",
+        "cvss": "9.6",
+        "product": "ABB Ability Edgenius Management Portal (versions 3.2.0.0 et 3.2.1.1)",
+        "description": "Vulnérabilité critique de contournement d'authentification (CWE-288) permettant une exécution de code à distance (RCE) non authentifiée et une prise de contrôle administrative. Un attaquant peut installer/désinstaller des applications et modifier les configurations.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ABB",
+          "SCADA",
+          "OT",
+          "RCE",
+          "authentication_bypass",
+          "industrial_control_systems",
+          "CWE-288"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-abb-flaw-cve-2025-10571-cvss-9-6-allows-unauthenticated-rce-and-admin-takeover-on-edgenius/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-48507",
+        "cvss": "8.6",
+        "product": "Arm® Trusted Firmware (TF-A)",
+        "description": "Exposition de l'état de sécurité du processeur appelant, permettant potentiellement aux processeurs non sécurisés d'accéder aux mémoires sécurisées, aux opérations cryptographiques et de contrôler les sous-systèmes du SoC.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ARM",
+          "firmware",
+          "secure_memory",
+          "privilege_escalation",
+          "SoC"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-48507"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13548",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K et DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Dépassement de tampon dans le fichier `/boafrm/formFirewallAdv` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "firewall"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13548"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13549",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K (version 1.00)",
+        "description": "Dépassement de tampon dans la fonction `sub_455524` du fichier `/boafrm/formNtp` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "NTP"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13549"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13550",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K et DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Dépassement de tampon dans une fonction inconnue du fichier `/boafrm/formVpnConfigSetup` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "VPN"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13550"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13551",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K et DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Dépassement de tampon dans une fonction inconnue du fichier `/boafrm/formWanConfigSetup` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "WAN_configuration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13551"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13552",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K et DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Dépassement de tampon dans une fonction inconnue du fichier `/boafrm/formWlEncrypt` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "encryption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13552"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13553",
+        "cvss": "9.0",
+        "product": "D-Link DWR-M920 (version 1.1.50)",
+        "description": "Dépassement de tampon dans la fonction `sub_41C7FC` du fichier `/boafrm/formPinManageSetup` via la manipulation de l'argument `submit-url`, permettant une attaque à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "PIN_management"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13553"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-65108",
+        "cvss": "10.0",
+        "product": "Package npm 'Markdown to PDF'",
+        "description": "Vulnérabilité critique permettant une exécution de code à distance (RCE) via l'injection de JavaScript dans le 'front-matter' Markdown malveillant, exploitant la bibliothèque `gray-matter`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "npm",
+          "RCE",
+          "JavaScript_injection",
+          "markdown",
+          "supply_chain",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-markdown-to-pdf-flaw-cve-2025-65108-cvss-10-0-allows-rce-via-js-injection-in-markdown-front-matter/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-40601",
+        "cvss": "7.5",
+        "product": "SonicOS SSLVPN (pare-feu Gen7 et Gen8)",
+        "description": "Dépassement de tampon basé sur la pile dans le service SonicOS SSLVPN, permettant à un attaquant distant non authentifié de provoquer un déni de service (DoS) et de faire planter le pare-feu. (Considéré à impact sérieux sur le système).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SSLVPN",
+          "firewall",
+          "DoS",
+          "buffer_overflow",
+          "remote_unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184967/security/sonicwall-flags-sslvpn-flaw-allowing-firewall-crashes.html"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13207",
+        "cvss": "9.0",
+        "product": "Routeurs Tenda 4G03 Pro (firmware jusqu'à v04.03.01.44) et N300",
+        "description": "Vulnérabilité d'injection de commande de niveau root, permettant à un attaquant authentifié via une requête HTTP malveillante d'exécuter des commandes arbitraires avec les privilèges root. (CVSS implicite >= 9.0 pour RCE en tant que root).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "router",
+          "command_injection",
+          "RCE",
+          "root_access",
+          "unpatched_vulnerability"
+        ],
+        "sources": [
+          "https://securityonline.info/cert-cc-warns-of-unpatched-root-level-command-injection-flaws-in-tenda-4g03-pro-and-n300-routers-cve-2025-13207-cve-2024-24481/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2024-24481",
+        "cvss": "9.0",
+        "product": "Routeurs Tenda N300 (firmware jusqu'à v04.03.01.14) et 4G03 Pro",
+        "description": "Vulnérabilité d'injection de commande dans une fonction accessible via le port TCP 7329, permettant une exécution de commande avec les privilèges root. (CVSS implicite >= 9.0 pour RCE en tant que root).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "router",
+          "command_injection",
+          "RCE",
+          "root_access",
+          "unpatched_vulnerability"
+        ],
+        "sources": [
+          "https://securityonline.info/cert-cc-warns-of-unpatched-root-level-command-injection-flaws-in-tenda-4g03-pro-and-n300-routers-cve-2025-13207-cve-2024-24481/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-62164",
+        "cvss": "8.8",
+        "product": "vLLM (versions 0.10.2 et ultérieures)",
+        "description": "Vulnérabilité de corruption de mémoire pouvant entraîner un crash (déni de service) et potentiellement une exécution de code à distance (RCE) via des 'prompt embeddings' malveillants dans le point de terminaison de l'API Completions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vLLM",
+          "LLM",
+          "AI",
+          "RCE",
+          "memory_corruption",
+          "DoS",
+          "prompt_injection",
+          "PyTorch"
+        ],
+        "sources": [
+          "https://securityonline.info/vllm-flaw-cve-2025-62164-risks-remote-code-execution-via-malicious-prompt-embeddings/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-64756",
+        "cvss": "9.0",
+        "product": "Outil CLI glob (versions v10.2.0 à v11.0.3)",
+        "description": "Vulnérabilité d'injection de commande dans l'option `-c/--cmd` de l'outil CLI glob, permettant l'exécution de code arbitraire via des noms de fichiers malveillants sur les systèmes POSIX. (CVSS implicite >= 9.0 pour RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "glob",
+          "npm",
+          "command_injection",
+          "RCE",
+          "supply_chain",
+          "arbitrary_code_execution",
+          "CLI"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA alerte sur une vulnérabilité RCE dans Oracle Identity Manager activement exploitée",
+        "description": "La CISA a émis une alerte concernant une vulnérabilité critique d'exécution de code à distance (RCE) pré-authentification dans Oracle Identity Manager, actuellement exploitée. La faille permet de contourner l'authentification via un filtre `SecurityFilter` mal configuré, puis d'exécuter du code arbitraire en exploitant le point de terminaison `groovyscriptstatus` pour compiler des scripts malveillants. Les attaquants, potentiellement des groupes de rançongiciels ou des acteurs étatiques, peuvent ainsi obtenir un contrôle total sur le système hôte.",
+        "threat_actor": "Groupes de rançongiciels et acteurs étatiques (cités comme exploitants potentiels)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190: Exploiter une application publique",
+          "T1550.002: Contournement d'authentification: Filtrage faible",
+          "T1059.007: Interpréteur de commandes et de scripts: JavaScript/JScript (pour l'exécution de scripts Groovy)"
+        ],
+        "analyse": "Cette vulnérabilité zero-day de RCE représente un risque sévère pour les organisations utilisant Oracle Identity Manager, d'autant plus qu'elle est activement exploitée. La combinaison d'un contournement de pré-authentification trivial et d'une méthode fiable d'exécution de code en fait une cible privilégiée pour des attaques à fort impact telles que les rançongiciels ou l'espionnage parrainé par l'État. Son impact s'étend à divers secteurs s'appuyant sur l'infrastructure Oracle.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs d'Oracle Identity Manager vers la dernière version sécurisée.",
+          "Mettre en œuvre une segmentation réseau forte pour isoler les systèmes critiques.",
+          "Appliquer une validation rigoureuse des entrées pour les applications web.",
+          "Surveiller en continu les activités suspectes indiquant des tentatives de RCE ou de contournement d'authentification."
+        ],
+        "tags": [
+          "Oracle",
+          "Identity_Management",
+          "RCE",
+          "active_exploitation",
+          "authentication_bypass",
+          "T1190",
+          "T1550.002",
+          "T1059.007"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/oracles-identity-manager-rce-vulnerability/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "title": "Failles d'injection de code menaçant la plateforme NVIDIA Isaac-GROOT Robotics",
+        "description": "NVIDIA a publié une mise à jour de sécurité pour corriger deux vulnérabilités d'injection de code de gravité élevée dans son logiciel Isaac-GROOT, un modèle de fondation ouvert pour la robotique humanoïde. Ces failles (CVSS 7.8) proviennent d'une faiblesse dans un composant Python, permettant à un attaquant de provoquer une injection de code, conduisant à une exécution de code non autorisée et à une élévation de privilèges.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059.006: Interpréteur de commandes et de scripts: Python",
+          "T1592: Collecter des informations sur l'hôte victime"
+        ],
+        "analyse": "Ces vulnérabilités sont significatives pour l'industrie robotique en pleine évolution, car elles pourraient permettre à des attaquants de prendre le contrôle de systèmes robotiques avancés. La nature de l'injection de code et de l'élévation de privilèges pourrait entraîner la manipulation du comportement des robots, l'exfiltration de données ou la perturbation d'opérations critiques dans des environnements industriels ou de recherche.",
+        "recommandations": [
+          "Mettre à jour immédiatement le logiciel NVIDIA Isaac-GROOT vers la version patchée (toute branche de code incluant le commit `7f53666`).",
+          "Mettre en œuvre des pratiques de codage sécurisé, en particulier pour la gestion des entrées externes dans les composants Python.",
+          "Appliquer des contrôles d'accès stricts pour les environnements de développement et de déploiement des plateformes robotiques."
+        ],
+        "tags": [
+          "NVIDIA",
+          "robotics",
+          "code_injection",
+          "privilege_escalation",
+          "T1059.006",
+          "T1592"
+        ],
+        "sources": [
+          "https://securityonline.info/code-injection-flaws-threaten-nvidias-isaac-groot-robotics-platform/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "title": "Iberia divulgue une fuite de données client suite à une violation de sécurité chez un fournisseur",
+        "description": "La compagnie aérienne espagnole Iberia a informé ses clients d'un incident de sécurité des données résultant d'une compromission chez l'un de ses fournisseurs. Les données affectées comprenaient les noms, adresses e-mail et numéros d'identification de carte de fidélité. Un acteur de la menace a également revendiqué sur des forums de hackers l'accès à 77 Go de données prétendument volées à la compagnie aérienne, notamment des données techniques d'aéronefs, des fichiers de maintenance et des documents internes, proposées à la vente pour 150 000 dollars. Le lien direct entre cette revendication et la fuite de données client n'est pas entièrement confirmé par Iberia.",
+        "threat_actor": "Un acteur de la menace (non spécifié)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190: Exploiter une application publique (probable via le fournisseur)",
+          "T1598: Hameçonnage pour obtenir des informations (pour des attaques de suivi potentielles sur les clients)",
+          "T1588.001: Obtenir des capacités: Logiciel malveillant (pour l'exfiltration de données internes)"
+        ],
+        "analyse": "Cet incident met en évidence les risques critiques liés à la sécurité de la chaîne d'approvisionnement, où les compromissions de fournisseurs tiers ont un impact direct sur les données clients des entités plus importantes. La vente potentielle de données opérationnelles très sensibles (fichiers de maintenance d'avions, données classifiées ISO 27001/ITAR) suggère des motivations d'espionnage ou de sabotage industriel, affectant potentiellement la sécurité nationale ou l'avantage concurrentiel.",
+        "recommandations": [
+          "Renforcer les programmes de gestion des risques des fournisseurs tiers, y compris des audits de sécurité rigoureux.",
+          "Mettre en œuvre des mesures de minimisation des données pour réduire l'impact des violations.",
+          "Surveiller les forums du dark web pour détecter toute donnée liée à l'organisation.",
+          "Sensibiliser les clients à la vigilance face aux tentatives d'hameçonnage."
+        ],
+        "tags": [
+          "data_breach",
+          "supply_chain",
+          "airline",
+          "Iberia",
+          "sensitive_data",
+          "T1190",
+          "T1598",
+          "T1588.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/iberia-discloses-customer-data-leak-after-vendor-security-breach/",
+          "https://securityaffairs.com/184985/data-breach/iberia-discloses-security-incident-tied-to-supplier-breach/"
+        ],
+        "date": "2025-11-24"
+      }
+    ]
+  },
+  "EN": {
+    "Transversal Analysis": {
+      "analyse": "Cyber intelligence indicates an intensification of threats, particularly through the exploitation of critical vulnerabilities and supply chain attacks. Several incidents highlight the persistence of compromises via third-party vendors, affecting various sectors such as air transport (Iberia), finance (SitusAMC), and telecommunications (Cox). Remote Code Execution (RCE) vulnerabilities and authentication bypasses remain prime targets, impacting network equipment (D-Link, Tenda, SonicWall), identity management platforms (Oracle Identity Manager), and industrial systems (ABB Edgenius). The emergence of flaws in artificial intelligence infrastructures (vLLM) brings new attack vectors to light. The active exploitation of some of these vulnerabilities underscores the urgency for organizations to apply patches and strengthen their defenses. The presence of state-aligned actors (EdgeStepper) and ransomware groups confirms the sophistication and diversification of threats. In conclusion, the overall threat landscape is elevated, demanding increased vigilance, proactive vulnerability management, and robust supply chain security.",
+      "date": "2025-11-24"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "nom": "Chinese-aligned Threat Actors (EdgeStepper)",
+        "secteur": "Various (targeting network device software updates)",
+        "modop": "Using a Man-in-the-Middle (MITM) attack kit to intercept software update traffic and deploy malicious packages, leaving minimal evidence.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "china",
+          "MITM",
+          "EdgeStepper",
+          "cyberespionage",
+          "software_supply_chain"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Summary of Geopolitical News": [
+      {
+        "secteur": "Critical Infrastructure",
+        "theme": "Threat from Unmanned Aircraft Systems (UAS/Drones)",
+        "description": "CISA issued a warning regarding persistent and concerning unmanned aircraft system (drone) activity over sensitive critical infrastructure sites. This activity could interfere with facility operations, disrupt emergency response or authorized flight operations, and provide intelligence to malign actors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "CISA",
+          "drones",
+          "UAS",
+          "critical_infrastructure",
+          "espionage",
+          "surveillance"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Summary of Data Breaches": [
+      {
+        "secteur": "Housing Services",
+        "victime": "ADDA",
+        "description": "In March 2025, data from over 1.8 million users of the ADDA housing societies service was allegedly breached and posted to a public hacking forum. Exposed information included unique email addresses, names, phone numbers, and MD5 password hashes.",
+        "tags": [
+          "violation",
+          "breach",
+          "ADDA",
+          "housing",
+          "MD5_hashes",
+          "personal_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/ADDA"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Online Education / Coding",
+        "victime": "CodeStepByStep",
+        "description": "In November 2025, the online coding practice tool CodeStepByStep suffered a data breach that exposed 17,351 records, including names, usernames, and email addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "CodeStepByStep",
+          "education",
+          "online_platform",
+          "personal_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CodeStepByStep",
+          "https://mastodon.social/@RedPacketSecurity/115602441122355733"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "E-commerce / IT",
+        "victime": "Coupang (South Korea)",
+        "description": "Coupang, a major South Korean e-commerce company, reported a new data breach affecting 4,500 customers, raising questions about the effectiveness of increasing cybersecurity investments.",
+        "tags": [
+          "violation",
+          "breach",
+          "Coupang",
+          "e-commerce",
+          "retail",
+          "South_Korea",
+          "customer_data"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115601906250731952"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Cox",
+        "description": "Cox experienced a data breach stemming from a third-party vendor compromise, exposing customer names. The full extent of the stolen data was not specified by the company.",
+        "tags": [
+          "violation",
+          "breach",
+          "Cox",
+          "telecommunications",
+          "broadband",
+          "supply_chain",
+          "customer_data"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Government (Philippines)",
+        "victime": "Department of the Interior and Local Government (DILG)",
+        "description": "The Philippine Department of the Interior and Local Government (DILG) is investigating an alleged data breach of its internal systems by hackers. The DILG has activated its security and containment protocols.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "Philippines",
+          "DILG",
+          "internal_systems",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/23/ph-department-of-the-interior-and-local-government-to-probe-alleged-data-breach-by-hackers/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Air Transport",
+        "victime": "Iberia",
+        "description": "Spanish flag carrier Iberia reported a customer data leak resulting from a compromise at one of its suppliers. Affected data included names, email addresses, and loyalty card identification numbers. A threat actor also claimed on hacker forums to be selling 77 GB of alleged Iberia internal data, including technical aircraft data and maintenance files, offered for $150,000, though the direct link to the customer data leak is not fully confirmed by the airline.",
+        "tags": [
+          "violation",
+          "breach",
+          "Iberia",
+          "airline",
+          "supply_chain",
+          "customer_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/iberia-discloses-customer-data-leak-after-vendor-security-breach/",
+          "https://securityaffairs.com/184985/data-breach/iberia-discloses-security-incident-tied-to-supplier-breach/",
+          "https://infosec.exchange/@DevaOnBreaches/115601693794843884"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "secteur": "Financial Services (Real Estate, Mortgage Lending)",
+        "victime": "SitusAMC (vendor to banks)",
+        "description": "SitusAMC, a vendor deployed by hundreds of banks and lenders for real estate and mortgage loans, was subjected to a cyberattack on November 12. Sensitive customer data belonging to banks and lenders was compromised, and the FBI is investigating.",
+        "tags": [
+          "violation",
+          "breach",
+          "SitusAMC",
+          "financial_sector",
+          "banking",
+          "real_estate",
+          "supply_chain",
+          "customer_data",
+          "FBI_investigation"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/23/a-swath-of-bank-customer-data-was-hacked-the-f-b-i-is-investigating/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Summary of Vulnerabilities": [
+      {
+        "cve_id": "CVE-2025-10571",
+        "cvss": "9.6",
+        "product": "ABB Ability Edgenius Management Portal (versions 3.2.0.0 and 3.2.1.1)",
+        "description": "Critical authentication bypass vulnerability (CWE-288) allowing unauthenticated Remote Code Execution (RCE) and administrative takeover. An attacker can install/uninstall applications and modify configurations.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ABB",
+          "SCADA",
+          "OT",
+          "RCE",
+          "authentication_bypass",
+          "industrial_control_systems",
+          "CWE-288"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-abb-flaw-cve-2025-10571-cvss-9-6-allows-unauthenticated-rce-and-admin-takeover-on-edgenius/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-48507",
+        "cvss": "8.6",
+        "product": "Arm® Trusted Firmware (TF-A)",
+        "description": "Secure state of the calling processor into Arm® Trusted Firmware (TF-A) is not used, potentially allowing non-secure processors access to secure memories, crypto operations, and control of SoC subsystems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ARM",
+          "firmware",
+          "secure_memory",
+          "privilege_escalation",
+          "SoC"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-48507"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13548",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K and DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Buffer overflow in the `/boafrm/formFirewallAdv` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "firewall"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13548"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13549",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K (version 1.00)",
+        "description": "Buffer overflow in the `sub_455524` function of the `/boafrm/formNtp` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "NTP"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13549"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13550",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K and DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Buffer overflow in an unknown function of the `/boafrm/formVpnConfigSetup` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "VPN"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13550"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13551",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K and DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Buffer overflow in an unknown function of the `/boafrm/formWanConfigSetup` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "WAN_configuration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13551"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13552",
+        "cvss": "9.0",
+        "product": "D-Link DIR-822K and DWR-M920 (versions 1.00_20250513164613/1.1.50)",
+        "description": "Buffer overflow in an unknown function of the `/boafrm/formWlEncrypt` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "encryption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13552"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13553",
+        "cvss": "9.0",
+        "product": "D-Link DWR-M920 (version 1.1.50)",
+        "description": "Buffer overflow in the `sub_41C7FC` function of the `/boafrm/formPinManageSetup` file via manipulation of the `submit-url` argument, allowing a remote attack.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "router",
+          "buffer_overflow",
+          "RCE_potential",
+          "remote_exploit",
+          "PIN_management"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13553"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-65108",
+        "cvss": "10.0",
+        "product": "Markdown to PDF npm package",
+        "description": "Critical vulnerability allowing Remote Code Execution (RCE) via JavaScript injection in malicious Markdown front-matter, exploiting the `gray-matter` library.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "npm",
+          "RCE",
+          "JavaScript_injection",
+          "markdown",
+          "supply_chain",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-markdown-to-pdf-flaw-cve-2025-65108-cvss-10-0-allows-rce-via-js-injection-in-markdown-front-matter/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-40601",
+        "cvss": "7.5",
+        "product": "SonicOS SSLVPN (Gen7 and Gen8 firewalls)",
+        "description": "Stack-based buffer overflow vulnerability in the SonicOS SSLVPN service, allowing a remote unauthenticated attacker to cause Denial of Service (DoS) and crash the firewall. (Considered to have serious system impact).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SSLVPN",
+          "firewall",
+          "DoS",
+          "buffer_overflow",
+          "remote_unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184967/security/sonicwall-flags-sslvpn-flaw-allowing-firewall-crashes.html"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-13207",
+        "cvss": "9.0",
+        "product": "Tenda 4G03 Pro (firmware up to v04.03.01.44) and N300 Routers",
+        "description": "Root-level command injection vulnerability, allowing an authenticated attacker via a crafted HTTP request to execute arbitrary commands with root privileges. (Implied CVSS >= 9.0 for RCE as root).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "router",
+          "command_injection",
+          "RCE",
+          "root_access",
+          "unpatched_vulnerability"
+        ],
+        "sources": [
+          "https://securityonline.info/cert-cc-warns-of-unpatched-root-level-command-injection-flaws-in-tenda-4g03-pro-and-n300-routers-cve-2025-13207-cve-2024-24481/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2024-24481",
+        "cvss": "9.0",
+        "product": "Tenda N300 (firmware up to v04.03.01.14) and 4G03 Pro Routers",
+        "description": "Command injection vulnerability in an accessible function via TCP port 7329, allowing command execution with root privileges. (Implied CVSS >= 9.0 for RCE as root).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "router",
+          "command_injection",
+          "RCE",
+          "root_access",
+          "unpatched_vulnerability"
+        ],
+        "sources": [
+          "https://securityonline.info/cert-cc-warns-of-unpatched-root-level-command-injection-flaws-in-tenda-4g03-pro-and-n300-routers-cve-2025-13207-cve-2024-24481/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-62164",
+        "cvss": "8.8",
+        "product": "vLLM (versions 0.10.2 and later)",
+        "description": "Memory corruption vulnerability leading to a crash (Denial of Service) and potentially Remote Code Execution (RCE) via malicious prompt embeddings in the Completions API endpoint.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vLLM",
+          "LLM",
+          "AI",
+          "RCE",
+          "memory_corruption",
+          "DoS",
+          "prompt_injection",
+          "PyTorch"
+        ],
+        "sources": [
+          "https://securityonline.info/vllm-flaw-cve-2025-62164-risks-remote-code-execution-via-malicious-prompt-embeddings/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "cve_id": "CVE-2025-64756",
+        "cvss": "9.0",
+        "product": "glob CLI tool (versions v10.2.0 through v11.0.3)",
+        "description": "Command injection vulnerability in the `-c/--cmd` option of the glob CLI tool, allowing arbitrary code execution via malicious filenames on POSIX systems. (Implied CVSS >= 9.0 for RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "glob",
+          "npm",
+          "command_injection",
+          "RCE",
+          "supply_chain",
+          "arbitrary_code_execution",
+          "CLI"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2025/11/23/infosec_news_in_brief/"
+        ],
+        "date": "2025-11-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA Warns of Oracle’s Identity Manager RCE Vulnerability Actively Exploited in Attacks",
+        "description": "CISA issued a warning regarding a critical pre-authentication Remote Code Execution (RCE) vulnerability in Oracle Identity Manager, currently being actively exploited. The flaw involves bypassing authentication via a misconfigured `SecurityFilter` mechanism, then executing arbitrary code by exploiting the `groovyscriptstatus` endpoint to compile malicious scripts. Attackers, potentially ransomware groups or state-sponsored actors, can thus gain full control over the host system.",
+        "threat_actor": "Ransomware groups and state-sponsored actors (cited as potential exploiters)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190: Exploit Public-Facing Application",
+          "T1550.002: Authentication Bypass: Weak Filtering",
+          "T1059.007: Command and Scripting Interpreter: JavaScript/JScript (for Groovy script execution)"
+        ],
+        "analyse": "This zero-day RCE poses a severe risk to organizations using Oracle Identity Manager, especially with active exploitation reports. The combination of trivial pre-authentication bypass and reliable code execution makes it a prime target for high-impact attacks like ransomware or state-sponsored espionage. Its impact spans across various sectors relying on Oracle infrastructure.",
+        "recommandations": [
+          "Immediately patch Oracle Identity Manager to the latest secure version.",
+          "Implement strong network segmentation to isolate critical systems.",
+          "Enforce robust input validation for web applications.",
+          "Continuously monitor for suspicious activity indicative of RCE attempts or authentication bypasses."
+        ],
+        "tags": [
+          "Oracle",
+          "Identity_Management",
+          "RCE",
+          "active_exploitation",
+          "authentication_bypass",
+          "T1190",
+          "T1550.002",
+          "T1059.007"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/oracles-identity-manager-rce-vulnerability/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "title": "Code Injection Flaws Threaten NVIDIA’s Isaac-GROOT Robotics Platform",
+        "description": "NVIDIA released a security update to address two high-severity code injection vulnerabilities in its Isaac-GROOT software, an open foundation model for humanoid robot reasoning and skills. These flaws (CVSS 7.8) stem from a weakness in a Python component, allowing an attacker to cause code injection, leading to unauthorized code execution and privilege escalation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059.006: Command and Scripting Interpreter: Python",
+          "T1592: Gather Victim Host Information"
+        ],
+        "analyse": "These vulnerabilities are significant for the rapidly evolving robotics industry, potentially allowing attackers to gain control over advanced robotic systems. The nature of code injection and privilege escalation could lead to manipulation of robot behavior, data exfiltration, or disruption of critical operations in industrial or research settings.",
+        "recommandations": [
+          "Update NVIDIA Isaac-GROOT software immediately to the patched version (any code branch including commit `7f53666`).",
+          "Implement secure coding practices, especially for handling external inputs in Python components.",
+          "Enforce strict access controls for development and deployment environments of robotics platforms."
+        ],
+        "tags": [
+          "NVIDIA",
+          "robotics",
+          "code_injection",
+          "privilege_escalation",
+          "T1059.006",
+          "T1592"
+        ],
+        "sources": [
+          "https://securityonline.info/code-injection-flaws-threaten-nvidias-isaac-groot-robotics-platform/"
+        ],
+        "date": "2025-11-24"
+      },
+      {
+        "title": "Iberia discloses customer data leak after vendor security breach",
+        "description": "Spanish flag carrier Iberia has begun notifying customers of a data security incident stemming from a compromise at one of its suppliers. Customer data, including names, email addresses, and loyalty card IDs, was affected. A threat actor also claimed on hacker forums to have access to 77 GB of alleged Iberia internal data, including technical aircraft documents, maintenance files, and other internal documents, attempting to sell it for $150,000. The direct link between this claim and the customer data leak is not fully confirmed by Iberia.",
+        "threat_actor": "A threat actor (unnamed)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190: Exploit Public-Facing Application (likely via supplier)",
+          "T1598: Phishing for Information (for potential follow-up attacks on customers)",
+          "T1588.001: Obtain Capabilities: Malware (for internal data exfiltration)"
+        ],
+        "analyse": "This incident highlights critical risks in supply chain security, where third-party vendor compromises directly impact customer data of larger entities. The potential sale of highly sensitive operational data (aircraft maintenance files, ISO 27001/ITAR classified) suggests espionage or industrial sabotage motives, impacting national security or competitive advantage.",
+        "recommandations": [
+          "Enhance third-party vendor risk management programs, including stringent security audits for suppliers.",
+          "Implement data minimization measures to reduce the impact of breaches.",
+          "Monitor dark web forums for data related to the organization.",
+          "Educate customers to be vigilant against phishing attempts."
+        ],
+        "tags": [
+          "data_breach",
+          "supply_chain",
+          "airline",
+          "Iberia",
+          "sensitive_data",
+          "T1190",
+          "T1598",
+          "T1588.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/iberia-discloses-customer-data-leak-after-vendor-security-breach/",
+          "https://securityaffairs.com/184985/data-breach/iberia-discloses-security-incident-tied-to-supplier-breach/"
+        ],
+        "date": "2025-11-24"
+      }
+    ]
+  }
+}
