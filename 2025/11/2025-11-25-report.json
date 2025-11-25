@@ -1,0 +1,1936 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification et une diversification des menaces cyber. Les attaques ciblant la chaîne d'approvisionnement restent prédominantes, notamment via les référentiels de logiciels (npm) et les fichiers de modèles 3D malveillants, soulignant la vulnérabilité des dépendances tierces. L'intelligence artificielle, tout en étant un outil de défense, est de plus en plus exploitée par les attaquants (LLMs malveillants) pour industrialiser des techniques de phishing, de génération de malwares et de notes de rançon, abaissant ainsi la barrière technique à l'entrée de la cybercriminalité. De multiples vulnérabilités critiques (exécution de code à distance, élévation de privilèges, contournement d'authentification) sont découvertes et activement exploitées dans des produits largement utilisés (Grafana, Oracle EBS, WSUS, routeurs ASUS, Chrome, HashiCorp Vault), créant des fenêtres d'opportunité significatives pour les acteurs malveillants. Les violations de données sont fréquentes, résultant d'extorsions (gang Clop), de vishing, de compromissions de comptes de messagerie et de fuites accidentelles via des services en ligne (outils de formatage de code). Des campagnes d'espionnage sophistiquées utilisant des spywares et RATs ciblent des individus de grande valeur via les applications de messagerie mobile. L'état général des menaces est élevé, marqué par une professionnalisation croissante des attaquants et l'adoption rapide de nouvelles technologies pour maximiser l'impact de leurs opérations, tandis que les tensions géopolitiques continuent d'influencer la posture de défense nationale et les régulations en matière de données.",
+      "date": "2025-11-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Multiple (Éducation, Fabrication, Services financiers)",
+        "modop": "Exploitation de vulnérabilités zero-day (Oracle E-Business Suite), exfiltration de données, extorsion. A ciblé Accellion FTA, GoAnywhere MFT, Cleo, MOVEit Transfer.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extorsion",
+          "zero_day",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Scattered LAPSUS$ Hunters",
+        "secteur": "Logiciels (Salesforce-Gainsight)",
+        "modop": "Attaque de la chaîne d'approvisionnement, compromission de données de 300 organisations (Verizon, GitLab, Atlassian mentionnées).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "data_breach",
+          "extortion"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/24th-november-threat-intelligence-report/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "StealC V2",
+        "secteur": "Non spécifié, utilisateurs de plateformes de modèles 3D",
+        "modop": "Distribution de malware infostealer via des fichiers Blender malveillants téléchargés sur des marketplaces 3D (ex: CGTrader).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware_distribution",
+          "3d_model_files"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-blender-model-files-deliver-stealC-infostealing-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Shai-Hulud",
+        "secteur": "Développement logiciel (npm, CI/CD, cloud)",
+        "modop": "Attaques de la chaîne d'approvisionnement sur le registre npm, utilisation de packages trojanisés et scripts preinstall malveillants (basés sur Bun) pour le vol d'identifiants (jetons GitHub/npm, identifiants cloud), l'abus de flux de travail GitHub et la propagation. Exfiltration vers des référentiels GitHub.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "credential_theft",
+          "npm_registry",
+          "github",
+          "ci_cd"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/",
+          "https://fieldeffect.com/blog/new-shai-hulud-variant-uses-preinstall-script-for-credential-theft/",
+          "https://databreaches.net/2025/11/24/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/?pk_campaign=feed&pk_kwd=shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Akira ransomware",
+        "secteur": "Multiple, ciblant spécifiquement Nutanix AHV",
+        "modop": "Exploitation de vulnérabilités (SonicWall, Veeam), propagation latérale, vol de données et rançonnage, ciblage d'environnements virtuels (Nutanix AHV).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_theft",
+          "virtual_environments",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-intel-newsletter-2025-11-24/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "STORM-2603",
+        "secteur": "Non spécifié",
+        "modop": "Utilisation d'outils légitimes pour le déploiement de rançongiciels.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_deployment",
+          "living_off_the_land"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/office-hours-november-2025/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "Utilisateurs d'applications mobiles",
+        "modop": "Famille d'applications malveillantes déguisées en outils d'assistance IA pour le vol d'informations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malicious_app",
+          "ai_impersonation"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/office-hours-november-2025/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Acteurs APT liés à la Chine",
+        "secteur": "Systèmes Windows Server (avec WSUS)",
+        "modop": "Distribution du backdoor ShadowPad via l'exploitation de la vulnérabilité RCE WSUS (CVE-2025-59287), utilisation de PowerCat pour un shell, sideloading de DLL, persistance.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "shadowpad",
+          "rce_exploit",
+          "backdoor",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Acteurs alignés sur la Russie (Sandworm, Turla)",
+        "secteur": "Utilisateurs d'applications de messagerie mobile (Signal, WhatsApp)",
+        "modop": "Campagnes d'espionnage utilisant des spywares commerciaux et des RATs, abus de la fonction 'appareils liés' de Signal, phishing, codes QR malveillants, impersonation d'applications, exploits zero-click. Utilisation de malware comme ProSpy, ToSpy, ClayRat, LANDFALL.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "spyware",
+          "rat",
+          "social_engineering",
+          "zero_click_exploit",
+          "mobile_targeting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://thehackernews.com/2025/11/cisa-warns-of-active-spyware-campaigns.html",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/cisa_spyware_gangs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "WormGPT 4",
+        "secteur": "Cybercriminalité (outil)",
+        "modop": "LLM malveillant construit sur GPT-J 6B, entraîné avec des données spécialisées (malware, exploits, modèles de phishing). Génération de phishing sophistiqué, code de malware (PowerShell), et notes de rançon. Démocratisation de la cybercriminalité.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "cybercrime_as_a_service",
+          "phishing",
+          "malware_generation",
+          "ransomware"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "KawaiiGPT",
+        "secteur": "Cybercriminalité (outil)",
+        "modop": "LLM malveillant accessible et gratuit (GitHub), génère des leurres d'ingénierie sociale (spear-phishing), des scripts d'exécution de code (mouvement latéral via Paramiko SSH), et des notes de rançon pour des opérations complètes d'extorsion. Abaisse la barrière technique.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "cybercrime_tool",
+          "social_engineering",
+          "lateral_movement",
+          "data_exfiltration",
+          "ransomware"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Scattered Spider",
+        "secteur": "Multiple (Transports, Santé)",
+        "modop": "Conspiration pour commettre des actes non autorisés contre Transport for London (TfL), infiltration et endommagement de réseaux (SSM Health Care Corporation), tentatives contre Sutter Health, fraude informatique, fraude électronique, blanchiment d'argent, extorsion. Impliqué dans au moins 120 intrusions et 47 entités américaines.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "computer_misuse",
+          "extortion",
+          "data_breach",
+          "fraud",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185000/hacking/scattered-spider-alleged-members-deny-tfl-charges/"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Gouvernement, Technologies de l'information",
+        "theme": "Stratégie nationale d'IA et cybersécurité",
+        "description": "Le gouvernement britannique prévoit d'investir 250 millions de livres sterling dans l'approvisionnement en cloud pour soutenir l'ambition de décupler sa capacité de calcul d'IA d'ici 2030. L'objectif est de fournir aux chercheurs universitaires, aux institutions publiques et aux PME l'accès au matériel nécessaire, avec des exigences de stockage sécurisé des données, d'orchestration pour les charges de travail d'apprentissage automatique, de surveillance de l'utilisation et de gestion active de la sécurité.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "royaume_uni",
+          "ia",
+          "cloud",
+          "recherche",
+          "securite_nationale"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/uk_cloud_ai_research/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Défense, Gouvernement, Régulation",
+        "theme": "Fuite de données gouvernementales et surveillance réglementaire",
+        "description": "Des groupes de la société civile réclament une enquête parlementaire sur l'Information Commissioner's Office (ICO) du Royaume-Uni, l'accusant d'avoir abandonné ses fonctions de contrôle après son refus d'enquêter formellement sur une fuite de données du ministère de la Défense (MoD) liée à des dizaines de décès d'Afghans. La fuite concernait une feuille de calcul révélant les identités et les localisations de plus de 19 000 Afghans fuyant les Talibans. Des recherches initiales suggèrent qu'au moins 49 Afghans ont été tués depuis.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "royaume_uni",
+          "mod",
+          "ico",
+          "fuite_donnees",
+          "surveillance_reglementaire",
+          "afghanistan"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/ico_inquiry_afghan_mod/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Défense, Gouvernement, Technologie",
+        "theme": "Tensions géopolitiques et préparation à la crise",
+        "description": "Taïwan a annoncé la distribution d'une version papier de son guide national d'autodéfense à chaque foyer, en réponse à la pression militaire croissante de la République Populaire de Chine. Le guide vise à préparer la population et les forces militaires à un éventuel conflit, incluant des instructions de cyberdéfense, des tactiques défensives et offensives, ainsi que la préparation civile (kit d'urgence, lutte contre la désinformation, abris). Les tensions sont exacerbées par les incursions aériennes, les exercices militaires chinois et les campagnes de désinformation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "taiwan",
+          "chine",
+          "conflit",
+          "cyberdefense",
+          "resilience_nationale",
+          "desinformation"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/taiwan-crise-chine/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Sécurité nationale, Lutte contre la drogue, Technologie",
+        "theme": "Innovation criminelle et technologie des AUV",
+        "description": "Les trafiquants de drogue latinos-américains innovent en utilisant des véhicules sous-marins autonomes (AUV) pour le transport de stupéfiants. Le 2 juillet 2025, la marine colombienne a capturé le plus grand et le plus avancé de ces prototypes. Ces AUV réduisent les risques d'interception et de fuite d'informations, maximisent la capacité de chargement et compliquent les stratégies antidrogue traditionnelles basées sur la dissuasion et l'intelligence humaine. Cette évolution technologique exige une adaptation des stratégies opérationnelles et un investissement accru dans les capacités de détection.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "trafic_drogue",
+          "auv",
+          "amerique_latine",
+          "technologie_criminelle",
+          "surveillance_maritime"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uncrewed-and-under-radar-how-auvs-transform-drug-smuggling"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Fabrication",
+        "victime": "Canon",
+        "description": "Le gang Clop a compromis un environnement spécifique au sein d'une filiale de Canon USA en exploitant la vulnérabilité zero-day CVE-2025-61882 dans Oracle E-Business Suite. L'attaque a conduit à l'exfiltration de données, bien que l'impact global sur le réseau de Canon ait été contenu.",
+        "tags": [
+          "violation",
+          "breach",
+          "canon",
+          "manufacturing",
+          "clop",
+          "oracle_ebs",
+          "zero_day",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Multiple (gouvernement, infrastructures critiques, banques, technologie, santé)",
+        "victime": "Utilisateurs de JSONFormatter et CodeBeautify",
+        "description": "Des milliers d'identifiants, de clés d'authentification et de données de configuration sensibles, provenant d'organisations de secteurs critiques, ont été exposés publiquement via la fonction 'Recent Links' des outils en ligne JSONFormatter et CodeBeautify, permettant un accès non protégé aux snippets JSON sauvegardés.",
+        "tags": [
+          "violation",
+          "breach",
+          "code_formatters",
+          "secrets_leak",
+          "credentials_exposure",
+          "authentication_keys",
+          "configuration_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/code-formatters-expose-thousands-of-secrets-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Dartmouth College",
+        "description": "L'université a divulgué une violation de données suite à l'exploitation par le gang Clop d'une vulnérabilité zero-day (CVE-2025-61882) dans Oracle E-Business Suite. Des informations personnelles, y compris des noms et des numéros de sécurité sociale, appartenant à au moins 1 494 individus ont été volées et potentiellement divulguées sur le site de fuite de Clop.",
+        "tags": [
+          "violation",
+          "breach",
+          "dartmouth_college",
+          "education",
+          "clop",
+          "extorsion",
+          "oracle_ebs",
+          "zero_day",
+          "donnees_personnelles",
+          "ssn"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cvefeed.io/news/84283/thumbnail.jpg"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Delta Dental of Virginia (DDVA)",
+        "description": "Une violation de données a exposé les données personnelles et de santé d'environ 145 918 clients suite à la compromission d'un compte de messagerie entre le 21 mars et le 23 avril 2025. Les informations potentiellement exposées incluent les noms, numéros de sécurité sociale, numéros d'identification et informations de santé protégées.",
+        "tags": [
+          "violation",
+          "breach",
+          "delta_dental",
+          "healthcare",
+          "email_compromise",
+          "donnees_personnelles",
+          "donnees_sante",
+          "ssn"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185019/data-breach/delta-dental-of-virginia-data-breach-impacts-145918-customers.html",
+          "https://gbhackers.com/major-data-breach-at-delta-dental-of-virginia/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Harvard University",
+        "description": "Les systèmes des Affaires des anciens élèves et du Développement de Harvard ont été compromis via une attaque de vishing. Des données de contact, d'événements, de donation et biographiques d'anciens élèves, de conjoints, de donateurs, de parents d'étudiants, d'étudiants et de membres du personnel ont été exposées. Aucune information de sécurité sociale, mot de passe ou numéro de compte financier n'a été conservée dans les systèmes accédés.",
+        "tags": [
+          "violation",
+          "breach",
+          "harvard_university",
+          "education",
+          "vishing",
+          "donnees_personnelles",
+          "donnees_donateurs",
+          "donnees_alumni"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185034/security/harvard-reports-vishing-breach-exposing-alumni-and-donor-contact-data.html"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Services financiers, Immobilier",
+        "victime": "SitusAMC",
+        "description": "SitusAMC, un fournisseur de services pour les banques et prêteurs du secteur immobilier, a confirmé une violation de données ayant exposé des informations d'entreprise et de clients. Les données compromises incluent des registres comptables, des accords légaux et potentiellement des données des clients de leurs clients. L'incident a été découvert le 12 novembre 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "situsamc",
+          "finance",
+          "immobilier",
+          "donnees_entreprise",
+          "donnees_client",
+          "exposure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/real-estate-finance-services-giant-situsamc-breach-exposes-client-data/",
+          "https://securityaffairs.com/185040/data-breach/situsamc-confirms-data-breach-affecting-customer-information.html",
+          "https://gbhackers.com/retail-finance-giant-situsamc-hit-by-breach/"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-41115",
+        "cvss": "10.0",
+        "product": "Grafana SCIM Component",
+        "description": "Vulnérabilité critique d'élévation de privilèges ou d'usurpation d'utilisateur dans Grafana Enterprise (versions 12.0.0 à 12.2.1) lorsque le provisionnement SCIM est activé. Un client SCIM malveillant peut provisionner un utilisateur avec un 'externalId' numérique qui remplace les ID utilisateur internes, permettant l'usurpation, même d'un compte administrateur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "grafana",
+          "privilege_escalation",
+          "user_impersonation",
+          "scim",
+          "authentication"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-41115-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13559",
+        "cvss": "9.8",
+        "product": "EduKart Pro (plugin WordPress)",
+        "description": "Vulnérabilité d'élévation de privilèges non authentifiée dans toutes les versions d'EduKart Pro <= 1.0.3, due à la fonction 'edukart_pro_register_user_front_end' qui ne restreint pas les rôles d'utilisateur. Permet à un attaquant non authentifié d'enregistrer un compte avec le rôle 'administrateur'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "edukart_pro",
+          "wordpress_plugin",
+          "privilege_escalation",
+          "unauthenticated",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13559"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-6389",
+        "cvss": "9.8",
+        "product": "Sneeit Framework (plugin WordPress)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée dans toutes les versions de Sneeit Framework <= 8.3 via la fonction 'sneeit_articles_pagination_callback()'. La fonction accepte l'entrée utilisateur et la passe à 'call_user_func()', permettant l'exécution de code arbitraire sur le serveur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sneeit_framework",
+          "wordpress_plugin",
+          "rce",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-6389"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-64693",
+        "cvss": "9.8",
+        "product": "MaLion and MaLionCloud Security Point (Windows)",
+        "description": "Débordement de tampon basé sur le tas (heap-based buffer overflow) lors du traitement du Content-Length. Permet l'exécution de code arbitraire avec les privilèges SYSTEM par un attaquant distant non authentifié.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "malion",
+          "malioncloud",
+          "windows",
+          "heap_based_buffer_overflow",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64693"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-62691",
+        "cvss": "9.8",
+        "product": "MaLion and MaLionCloud Security Point (Windows)",
+        "description": "Débordement de tampon basé sur la pile (stack-based buffer overflow) lors du traitement des en-têtes HTTP. Permet l'exécution de code arbitraire avec les privilèges SYSTEM par un attaquant distant non authentifié.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "malion",
+          "malioncloud",
+          "windows",
+          "stack_based_buffer_overflow",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62691"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-61882",
+        "cvss": "9.8",
+        "product": "Oracle E-Business Suite (EBS)",
+        "description": "Vulnérabilité zero-day critique exploitée par le gang Clop pour voler des fichiers sensibles. Permet à des attaquants non authentifiés d'exécuter du code arbitraire à distance sur des serveurs vulnérables.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "oracle_ebs",
+          "zero_day",
+          "rce",
+          "data_theft",
+          "clop"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59287",
+        "cvss": "9.8",
+        "product": "Windows Server Update Services (WSUS)",
+        "description": "Désérialisation de données non fiables dans WSUS permettant à un attaquant non authentifié d'exécuter du code à distance (RCE) avec des privilèges SYSTEM sur un réseau. Activement exploitée pour distribuer le malware ShadowPad.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "wsus",
+          "windows_server",
+          "rce",
+          "deserialization",
+          "system_privileges"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13357",
+        "cvss": "9.8",
+        "product": "HashiCorp Vault Terraform Provider",
+        "description": "Faille de sécurité critique permettant aux attaquants de contourner l'authentification et d'accéder à Vault sans identifiants valides. (CVSS inféré à 9.8 en raison de la description de contournement d'authentification critique).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hashicorp_vault",
+          "terraform_provider",
+          "authentication_bypass",
+          "critical_flaw"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hashicorp-vault-bypass-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-33183",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T robotics platform",
+        "description": "Vulnérabilité critique d'injection de code dans les composants Python de la plateforme robotique Isaac-GR00T. Permet à des attaquants authentifiés d'exécuter du code arbitraire, d'élever des privilèges et d'altérer les données système. (CVSS inféré à 9.8 en raison de la description critique).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "isaac_groot",
+          "robotics",
+          "code_injection",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidias-isaac-groot-robotics-platform-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-33184",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T robotics platform",
+        "description": "Vulnérabilité critique d'injection de code dans les composants Python de la plateforme robotique Isaac-GR00T. Permet à des attaquants authentifiés d'exécuter du code arbitraire, d'élever des privilèges et d'altérer les données système. (CVSS inféré à 9.8 en raison de la description critique).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "isaac_groot",
+          "robotics",
+          "code_injection",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidias-isaac-groot-robotics-platform-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59366",
+        "cvss": "9.2",
+        "product": "ASUS AiCloud",
+        "description": "Vulnérabilité de contournement d'authentification déclenchée par un effet secondaire non intentionnel de la fonctionnalité Samba dans AiCloud, potentiellement exploitée pour permettre l'exécution de fonctions spécifiques sans autorisation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus",
+          "aicloud",
+          "authentication_bypass",
+          "samba"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59366"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-65998",
+        "cvss": "9.0",
+        "product": "Apache Syncope",
+        "description": "Vulnérabilité de conception critique exposant les mots de passe utilisateurs cryptés en raison d'une clé AES codée en dur. Affecte plusieurs versions si la configuration de l'AES est utilisée pour stocker les mots de passe. (CVSS inféré à 9.0 en raison de la description critique).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "apache_syncope",
+          "identity_management",
+          "hardcoded_key",
+          "password_exposure",
+          "encryption_bypass"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-syncope-flaw-cve-2025-65998-exposes-encrypted-user-passwords-due-to-hard-coded-aes-key/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13223",
+        "cvss": "8.8",
+        "product": "Google Chrome V8 engine",
+        "description": "Faille de confusion de type dans le moteur V8 de Chrome, déjà exploitée, pouvant permettre l'exécution de code arbitraire dans le contexte de l'utilisateur connecté via du HTML malveillant. (CVSS inféré à 8.8 en raison de la description de gravité élevée et de l'exploitation active).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "google_chrome",
+          "v8_engine",
+          "type_confusion",
+          "rce",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-intel-newsletter-2025-11-24/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59373",
+        "cvss": "8.5",
+        "product": "ASUS System Control Interface",
+        "description": "Vulnérabilité d'élévation de privilèges locale dans le mécanisme de restauration d'ASUS System Control Interface. Un acteur non privilégié peut copier des fichiers sans validation appropriée dans des chemins système protégés, menant potentiellement à l'exécution de fichiers arbitraires en tant que SYSTEM.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus",
+          "system_control_interface",
+          "local_privilege_escalation",
+          "arbitrary_file_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59373"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-12003",
+        "cvss": "8.2",
+        "product": "ASUS Router Firmware WebDAV",
+        "description": "Vulnérabilité de traversée de chemin (path traversal) dans WebDAV pouvant permettre à des attaquants distants non authentifiés d'impacter l'intégrité du périphérique.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus_router",
+          "webdav",
+          "path_traversal",
+          "unauthenticated",
+          "integrity_impact"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12003"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Comment voir les incidents critiques dans la surcharge d'alertes : Un guide pour les SOC et les MSSP",
+        "description": "L'article aborde le défi de la surcharge d'alertes pour les analystes SOC et MSSP de niveau 1, qui doivent trier des centaines, voire des milliers d'alertes quotidiennes, souvent des faux positifs ou des doublons. Il souligne la perte de clarté et le risque de manquer des incidents critiques. L'article suggère l'adoption d'outils plus efficaces pour séparer le signal du bruit.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article met en lumière un problème opérationnel majeur dans les centres de sécurité, impactant l'efficacité de la détection et de la réponse aux incidents. Une mauvaise gestion de la surcharge d'alertes peut entraîner une fatigue des analystes, des erreurs d'analyse et, par conséquent, un risque accru de compromission des systèmes en cas d'incident réel.",
+        "recommandations": "Mettre en œuvre des systèmes de gestion des alertes plus intelligents, qui priorisent, filtrent et corrèlent les informations pour réduire les faux positifs et les doublons. Investir dans des solutions d'orchestration, d'automatisation et de réponse aux incidents (SOAR) pour améliorer la réactivité des équipes SOC.",
+        "tags": [
+          "soc",
+          "mssp",
+          "alert_overload",
+          "incident_response",
+          "security_operations",
+          "security_management"
+        ],
+        "sources": [
+          "/cybersecurity-blog/fixing-alert-overload/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Attaque ClickFix utilise un faux écran Windows Update pour diffuser des malwares",
+        "description": "De nouvelles variantes de l'attaque ClickFix trompent les utilisateurs avec une animation Windows Update d'apparence réaliste en plein écran dans une page de navigateur, cachant le code malveillant dans des images. Les victimes sont invitées à appuyer sur des touches dans une séquence spécifique pour exécuter des commandes PowerShell et un assembleur .NET (Stego Loader) qui reconstruit la charge utile finale à partir d'une image PNG chiffrée.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1059.001 (Command and Scripting Interpreter: PowerShell), T1036.005 (Masquerading: Match Legitimate Name or Location), T1566.002 (Phishing: Spearphishing Link)",
+        "analyse": "Cette attaque montre une sophistication croissante des tactiques d'ingénierie sociale et d'évasion. En utilisant des leurres crédibles comme les mises à jour Windows et en encodant le malware dans les données de pixels des images, les attaquants augmentent leurs chances de contourner les défenses traditionnelles et d'infecter les systèmes, ce qui peut mener au vol d'informations.",
+        "recommandations": "Sensibiliser les utilisateurs aux techniques de phishing avancées et aux écrans de mise à jour factices. Utiliser des solutions EDR/XDR pour détecter les activités PowerShell suspectes et l'exécution d'assemblages .NET inhabituels. Mettre en place des solutions de sécurité web avancées pour bloquer les sites malveillants et l'exécution de JavaScript non désiré. Examiner les communications concernant les mises à jour système pour s'assurer de leur légitimité.",
+        "tags": [
+          "malware",
+          "infostealer",
+          "clickfix",
+          "phishing",
+          "social_engineering",
+          "windows_update",
+          "stegano"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clickfix-attack-uses-fake-windows-update-screen-to-push-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Fichiers de modèles Blender malveillants délivrent le malware infostealer StealC",
+        "description": "Une campagne liée à la Russie distribue le malware StealC V2, un voleur d'informations, via des fichiers Blender malveillants téléchargés sur des marketplaces de modèles 3D comme CGTrader. Les archives décompressent des fichiers LNK pour la persistance et déploient StealC ainsi qu'un voleur Python auxiliaire. Cette variante est difficilement détectée par les produits anti-virus.",
+        "threat_actor": "Non spécifié (campagne liée à la Russie)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1204.001 (User Execution: Malicious Link), T1078 (Valid Accounts), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder), T1055 (Process Injection), T1548.002 (Abuse Elevation Control Mechanism: Bypass User Account Control)",
+        "analyse": "Cette campagne illustre une tactique d'ingénierie sociale tirant parti de la confiance des utilisateurs envers des plateformes légitimes (marketplaces 3D). La faible détection par les antivirus des nouvelles variantes de StealC représente un risque élevé pour la confidentialité des données des utilisateurs et des développeurs.",
+        "recommandations": "Les utilisateurs de Blender doivent être extrêmement prudents lors de l'utilisation de fichiers provenant de plateformes tierces et envisager de désactiver l'exécution automatique des scripts Python. Mettre en œuvre des solutions de sécurité des endpoints robustes et des pratiques de sécurité logicielle intégrant la détection comportementale et l'analyse de fichiers inconnus.",
+        "tags": [
+          "malware",
+          "infostealer",
+          "stealc",
+          "blender",
+          "3d_model",
+          "supply_chain",
+          "malware_distribution"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-blender-model-files-deliver-stealc-infostealing-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "SCCM et WSUS dans un monde hybride : Pourquoi il est temps d'adopter le patching natif du cloud",
+        "description": "L'article souligne les limitations de SCCM et WSUS pour la gestion des correctifs dans un environnement de travail hybride, où les appareils distants manquent souvent de mises à jour. WSUS étant désormais déprécié, des solutions de patching natif du cloud sont proposées pour maintenir les appareils à jour depuis n'importe quel endroit, renforçant la conformité et la sécurité en éliminant les dépendances aux réseaux locaux et VPN.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Les architectures de gestion des correctifs héritées ne sont plus adaptées aux réalités du travail hybride. Les vulnérabilités non corrigées sur les appareils distants représentent une surface d'attaque significative. La transition vers des solutions cloud-natives est essentielle pour une posture de sécurité cohérente, une meilleure conformité et une réduction des fenêtres de vulnérabilité.",
+        "recommandations": "Évaluer et migrer vers des solutions de gestion des correctifs basées sur le cloud qui ne dépendent pas du réseau d'entreprise. Assurer un patching rapide et cohérent pour tous les endpoints, quel que soit leur emplacement. Réduire la dépendance aux VPN pour les mises à jour de sécurité et rationaliser l'infrastructure de patching pour réduire les coûts et le temps d'administration.",
+        "tags": [
+          "patching",
+          "sccm",
+          "wsus",
+          "cloud_native",
+          "hybrid_work",
+          "endpoint_management",
+          "vulnerability_management"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/sccm-and-wsus-in-a-hybrid-world-why-its-time-for-cloud-native-patching/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Le malware Shai-Hulud infecte 500 packages npm, divulgue des secrets sur GitHub",
+        "description": "Une nouvelle campagne Shai-Hulud a planté des centaines de versions troyanisées de packages npm populaires (Zapier, ENS Domains, PostHog, Postman) pour voler les secrets des développeurs et des CI/CD. Le malware, qui exécute un script de pré-installation, exfiltre les jetons GitHub/npm et les identifiants cloud vers des référentiels GitHub et tente de créer des workflows GitHub non autorisés pour la persistance et la propagation, exploitant la rapidité du runtime Bun.",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1588.002 (Obtain Capabilities: Tool), T1078 (Valid Accounts), T1552.001 (Unsecured Credentials: Credentials in Files), T1020 (Automated Exfiltration), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "Cette attaque de la chaîne d'approvisionnement npm est très préoccupante en raison de sa propagation rapide et de son ciblage des secrets de développement et de CI/CD. L'exploitation du stade de pré-installation augmente la surface d'exposition, compromettant potentiellement les pipelines de construction et les infrastructures cloud. L'utilisation d'une obfuscation extrême rend la détection difficile pour les solutions de sécurité.",
+        "recommandations": "Auditer régulièrement les dépendances npm, faire pivoter tous les identifiants liés à npm, GitHub et aux fournisseurs de cloud. Renforcer les pipelines CI/CD contre l'exécution de scripts de pré-installation malveillants. Déployer des solutions de sécurité MDR (Managed Detection and Response) pour détecter rapidement le vol d'identifiants et contenir la propagation de type ver du malware Shai-Hulud. Être vigilant aux avertissements de publication non autorisée sur les plateformes.",
+        "tags": [
+          "supply_chain",
+          "npm",
+          "shai_hulud",
+          "malware",
+          "credential_theft",
+          "github",
+          "ci_cd",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/",
+          "https://fieldeffect.com/blog/new-shai-hulud-variant-uses-preinstall-script-for-credential-theft/",
+          "https://databreaches.net/2025/11/24/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/?pk_campaign=feed&pk_kwd=shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Est-ce que votre boîtier de streaming Android TV fait partie d'un botnet ?",
+        "description": "Des appareils de streaming Superbox et similaires, vendus comme des solutions pour accéder gratuitement à des milliers de services payants, peuvent installer des applications qui enrôlent la connexion Internet de l'utilisateur dans un réseau de proxy résidentiel distribué, utilisé pour des activités cybercriminelles comme la fraude publicitaire et le vol de comptes. Ces boîtiers utilisent des systèmes Android non certifiés par Google et remplacent le Play Store officiel par des boutiques d'applications non officielles.",
+        "threat_actor": "BADBOX 2.0 botnet",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1071.001 (Application Layer Protocol: Web Protocols), T1584 (Compromise Infrastructure), T1090.002 (Proxy: External Proxy), T1059.006 (Command and Scripting Interpreter: Python)",
+        "analyse": "Cet article révèle une forme insidieuse de compromission de masse où les utilisateurs, attirés par le contenu 'gratuit', deviennent involontairement des participants à des activités illégales. La nature opaque de ces appareils et la distribution d'applications non officielles créent un vaste botnet résidentiel, rendant la détection des activités malveillantes plus difficile et diluant la responsabilité.",
+        "recommandations": "Éviter les appareils de streaming de marques non reconnues ou qui promettent un accès 'gratuit' à du contenu payant. Toujours utiliser des appareils certifiés par Google Play Protect. Surveiller le trafic réseau pour détecter des activités suspectes ou un trafic Internet inexpliqué. Désactiver l'installation d'applications provenant de sources inconnues. Sensibiliser les utilisateurs aux risques des offres 'trop belles pour être vraies'.",
+        "tags": [
+          "botnet",
+          "android_tv",
+          "cybercrime",
+          "fraude_publicitaire",
+          "vol_de_comptes",
+          "proxy_residentiel",
+          "malware"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/is-your-android-tv-streaming-box-part-of-a-botnet/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Le dilemme de la double utilisation de l'IA : les LLM malveillants et les agents d'attaque IA sont des accélérateurs, pas des armes autonomes",
+        "description": "Cet article combiné explore le dilemme de la double utilisation de l'IA, en se concentrant sur les LLM malveillants comme WormGPT 4 et KawaiiGPT. Ces modèles, conçus sans contraintes éthiques, abaissent la barrière technique de la cybercriminalité en générant des phishing sophistiqués, du code malveillant et des notes de rançon. Il distingue également les agents d'attaque IA qui accélèrent les tâches tactiques (génération de scripts, test d'exploits) des armes cybernétiques autonomes, soulignant que les opérateurs humains restent essentiels pour la stratégie et la prise de décision éthique.",
+        "threat_actor": "WormGPT 4, KawaiiGPT",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1589 (Gather Victim Identity Information), T1059 (Command and Scripting Interpreter), T1071 (Application Layer Protocol), T1048 (Exfiltration Over Alternative Protocol), T1486 (Data Encrypted for Impact)",
+        "analyse": "L'émergence des LLM malveillants représente une nouvelle ligne de base pour le risque numérique, permettant aux attaquants novices de lancer des opérations complexes. L'IA agit comme un multiplicateur de force, rendant les attaques plus rapides et plus évolutives. Cela exige que les défenseurs s'adaptent, ne pouvant plus se fier aux signes classiques de mauvaise grammaire ou de codage bâclé.",
+        "recommandations": "Mettre en œuvre des systèmes résilients à la rapidité et à l'échelle des attaques générées par l'IA. Développer des défenses basées sur le comportement et l'intention plutôt que sur des signatures statiques. Sensibiliser le personnel aux techniques de phishing sophistiquées. Renforcer les mesures d'authentification et de contrôle d'accès. Investir dans des solutions d'intelligence de la menace qui suivent l'évolution des outils d'IA offensifs.",
+        "tags": [
+          "ia",
+          "llm",
+          "malware",
+          "phishing",
+          "ransomware",
+          "cybercrime",
+          "dual_use",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184943/security/ai-attack-agents-are-accelerators-not-autonomous-weapons-the-anthropic-attack/",
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Choisir une plateforme d'intelligence des risques numériques : 5 capacités clés à évaluer",
+        "description": "L'article décrit les cinq capacités essentielles pour évaluer une plateforme d'intelligence des risques numériques afin de protéger une marque, ses actifs et sa surface d'attaque. Ces capacités incluent une visibilité continue de la surface d'attaque externe, la protection de la marque et des dirigeants, l'intelligence des tiers et de la chaîne d'approvisionnement, le renseignement sur les identifiants compromis et une vue unifiée des menaces grâce à un graphe d'intelligence.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Le périmètre de sécurité traditionnel n'est plus suffisant. Les organisations sont confrontées à une surface d'attaque étendue et dynamique. Une plateforme d'intelligence des risques numériques intégrée est cruciale pour transformer un déluge d'alertes en renseignements exploitables, permettant une défense proactive contre les menaces externes (Shadow IT, fuites d'identifiants, risques liés aux tiers).",
+        "recommandations": "Évaluer les plateformes DRI sur leurs capacités à cartographier les actifs externes, à surveiller la marque sur toutes les plateformes, à fournir une visibilité continue sur la posture de sécurité des tiers, à détecter les identifiants compromis en temps réel et à corréler les données pour une compréhension unifiée des risques. Adopter une approche intégrée pour la gestion des risques numériques.",
+        "tags": [
+          "digital_risk_intelligence",
+          "attack_surface_management",
+          "brand_protection",
+          "third_party_risk",
+          "threat_intelligence",
+          "vulnerability_intelligence",
+          "cybersecurity_strategy"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/evaluating-digital-risk-intelligence-platforms"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Comment les cybercriminels capitalisent sur le Black Friday : phishing, escroqueries et malwares ciblant les acheteurs et les joueurs en ligne",
+        "description": "Les cybercriminels intensifient leurs activités pendant les périodes de soldes comme le Black Friday, exploitant l'augmentation du commerce électronique et la vigilance réduite des utilisateurs. Les menaces incluent le phishing (imitant des marques comme Amazon, Netflix, Spotify), les escroqueries (fausses promotions par e-mail), et les malwares financiers (Trojans bancaires comme Maverick et Efimer). Le secteur du jeu est également ciblé via des attaques de phishing et des malwares déguisés en mods ou cheats, avec une augmentation notable des attaques via Discord.",
+        "threat_actor": "Maverick (banking Trojan), Efimer (banking Trojan)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1204.001 (User Execution: Malicious Link), T1071.001 (Application Layer Protocol: Web Protocols), T1059 (Command and Scripting Interpreter)",
+        "analyse": "La saison des achats offre un terreau fertile pour la cybercriminalité. La sophistication des leurres (imitation de marques, urgence) combinée à la distribution de malwares financiers et à l'exploitation de plateformes de jeu rend les consommateurs extrêmement vulnérables. L'évolution des cibles (vers les plateformes de jeu et les applications de paiement) montre l'adaptabilité des attaquants.",
+        "recommandations": "Les consommateurs doivent rester extrêmement vigilants pendant les périodes de soldes. Utiliser l'authentification à deux facteurs, des méthodes de paiement sécurisées et naviguer avec prudence. Vérifier attentivement les URL et les expéditeurs. Déployer une solution de sécurité complète qui bloque les malwares, détecte les pages de phishing et protège les données financières. Les entreprises doivent renforcer leurs défenses contre le phishing et les malwares ciblant les applications de paiement.",
+        "tags": [
+          "black_friday",
+          "e_commerce",
+          "phishing",
+          "scams",
+          "malware",
+          "banking_trojan",
+          "gaming",
+          "discord",
+          "online_shopping"
+        ],
+        "sources": [
+          "https://securelist.com/black-friday-threat-report-2025/118083/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Avertissement de la CISA sur les campagnes de logiciels espions ciblant les utilisateurs de Signal et WhatsApp",
+        "description": "La CISA a émis une alerte concernant des acteurs de menaces utilisant activement des logiciels espions commerciaux et des chevaux de Troie d'accès à distance (RATs) pour cibler des utilisateurs de grande valeur sur des applications de messagerie mobile populaires comme WhatsApp et Signal. Les techniques incluent le phishing, les codes QR malveillants, l'usurpation d'applications et les exploits zero-click. Des acteurs alignés sur la Russie ont abusé de la fonction 'appareils liés' de Signal, tandis que des spywares comme LANDFALL ont été déployés via des vulnérabilités iOS/WhatsApp et Samsung.",
+        "threat_actor": "Acteurs alignés sur la Russie, ProSpy, ToSpy, ClayRat, LANDFALL",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.004 (Phishing: Smishing), T1566.003 (Phishing: Spearphishing via Service), T1027 (Obfuscated Files or Information), T1059 (Command and Scripting Interpreter), T1555 (Credentials from Password Stores)",
+        "analyse": "Cette menace met en évidence que même les applications de messagerie chiffrées de bout en bout ne protègent pas contre la compromission de l'appareil lui-même. Les attaquants exploitent des vulnérabilités au niveau du système d'exploitation et des faiblesses d'ingénierie sociale pour contourner les protections, ciblant des individus clés et des organisations de la société civile avec des capacités d'espionnage sophistiquées.",
+        "recommandations": "Maintenir les systèmes d'exploitation et les applications à jour avec les derniers correctifs de sécurité. Se méfier des messages et des codes QR inattendus, même de sources apparemment fiables. Activer l'authentification multifacteur sur tous les comptes. Éviter d'installer des applications provenant de boutiques non officielles. Utiliser des solutions de sécurité mobiles pour détecter les spywares et les comportements anormaux.",
+        "tags": [
+          "cisa",
+          "spyware",
+          "rat",
+          "whatsapp",
+          "signal",
+          "mobile_security",
+          "social_engineering",
+          "zero_click_exploit",
+          "espionnage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://thehackernews.com/2025/11/cisa-warns-of-active-spyware-campaigns.html",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/cisa_spyware_gangs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Les attaquants livrent ShadowPad via une faille RCE WSUS récemment corrigée",
+        "description": "Des acteurs de la menace ont exploité une faille WSUS récemment corrigée (CVE-2025-59287) pour obtenir un accès, utiliser PowerCat pour un shell système, puis télécharger et installer le backdoor ShadowPad. La vulnérabilité permet l'exécution de code à distance avec des privilèges SYSTEM et est activement exploitée par des groupes APT liés à la Chine.",
+        "threat_actor": "Groupes APT liés à la Chine",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "163.61.102.245"
+          ],
+          "FILE_HASH_SHA256": [
+            "ETDCtrlHelper.exe",
+            "ETDApix.dll"
+          ]
+        },
+        "mitre_ttps": "T1210 (Exploitation of Remote Services), T1059.001 (Command and Scripting Interpreter: PowerShell), T1105 (Ingress Tool Transfer), T1574.002 (Hijack Execution Flow: DLL Side-Loading), T1543.003 (Create or Modify System Process: Windows Service), T1071.001 (Application Layer Protocol: Web Protocols)",
+        "analyse": "L'exploitation rapide d'une vulnérabilité critique nouvellement corrigée démontre l'agilité des acteurs de la menace, en particulier les groupes APT. L'utilisation d'outils légitimes (Living Off The Land - PowerCat, curl, certutil) et de techniques d'évasion sophistiquées comme le sideloading de DLL rend la détection difficile pour les défenses traditionnelles. Le déploiement de ShadowPad confère un contrôle persistant et étendu sur les systèmes compromis.",
+        "recommandations": "Appliquer immédiatement les correctifs pour CVE-2025-59287 et toutes les vulnérabilités WSUS. Restreindre l'accès WSUS aux serveurs Microsoft Update. Bloquer le trafic indésirable sur les ports WSUS (8530/8531). Auditer les systèmes pour détecter les utilisations suspectes de PowerShell, certutil, curl et les connexions réseau anormales, en particulier vers des C2 connus. Mettre en œuvre des capacités de détection comportementale et d'analyse des menaces pour identifier les TTP avancés.",
+        "tags": [
+          "shadowpad",
+          "apt",
+          "wsus",
+          "rce",
+          "malware",
+          "exploit",
+          "china_linked",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The period under review reveals an intensification and diversification of cyber threats. Supply chain attacks remain prominent, particularly through software repositories (npm) and malicious 3D model files, highlighting the vulnerability of third-party dependencies. Artificial intelligence, while a defensive tool, is increasingly exploited by attackers (malicious LLMs) to industrialize phishing, malware generation, and ransom note drafting, thereby lowering the technical barrier to entry for cybercrime. Multiple critical vulnerabilities (remote code execution, privilege escalation, authentication bypass) are being discovered and actively exploited in widely used products (Grafana, Oracle EBS, WSUS, ASUS routers, Chrome, HashiCorp Vault), creating significant windows of opportunity for malicious actors. Data breaches are frequent, resulting from extortion (Clop gang), vishing, compromised email accounts, and accidental leaks via online services (code formatting tools). Sophisticated espionage campaigns using spyware and RATs target high-value individuals via mobile messaging applications. The overall threat level is high, marked by the growing professionalization of attackers and the rapid adoption of new technologies to maximize the impact of their operations, while geopolitical tensions continue to influence national defense posture and data regulations.",
+      "date": "2025-11-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Multiple (Education, Manufacturing, Financial Services)",
+        "modop": "Exploitation of zero-day vulnerabilities (Oracle E-Business Suite), data exfiltration, extortion. Past targets include Accellion FTA, GoAnywhere MFT, Cleo, MOVEit Transfer.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "zero_day",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Scattered LAPSUS$ Hunters",
+        "secteur": "Software (Salesforce-Gainsight)",
+        "modop": "Supply-chain attack on Salesforce-integrated platform Gainsight, claimed data compromise from 300 organizations (Verizon, GitLab, Atlassian mentioned).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "data_breach",
+          "extortion"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/24th-november-threat-intelligence-report/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "StealC V2",
+        "secteur": "Unspecified, 3D model marketplace users",
+        "modop": "Distribution of infostealer malware via malicious Blender files uploaded to 3D model marketplaces (e.g., CGTrader).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware_distribution",
+          "3d_model_files"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-blender-model-files-deliver-stealc-infostealing-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Shai-Hulud",
+        "secteur": "Software Development (npm, CI/CD, cloud)",
+        "modop": "Supply-chain attacks on npm registry, using trojanized packages and malicious preinstall scripts (Bun-based) for credential theft (GitHub/npm tokens, cloud credentials), GitHub workflow abuse, and propagation. Exfiltration to GitHub repositories.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "credential_theft",
+          "npm_registry",
+          "github",
+          "ci_cd"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/",
+          "https://fieldeffect.com/blog/new-shai-hulud-variant-uses-preinstall-script-for-credential-theft/",
+          "https://databreaches.net/2025/11/24/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/?pk_campaign=feed&pk_kwd=shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Akira ransomware",
+        "secteur": "Multiple, specifically targeting Nutanix AHV",
+        "modop": "Exploiting vulnerabilities (SonicWall, Veeam), lateral spread, data theft and ransomware, targeting virtual environments (Nutanix AHV).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_theft",
+          "virtual_environments",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-intel-newsletter-2025-11-24/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "STORM-2603",
+        "secteur": "Unspecified",
+        "modop": "Leverages legitimate tools for ransomware deployment.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_deployment",
+          "living_off_the_land"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/office-hours-november-2025/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "Mobile application users",
+        "modop": "Family of malicious apps disguised as AI helper tools for information stealing.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malicious_app",
+          "ai_impersonation"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/office-hours-november-2025/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "China-linked APT groups",
+        "secteur": "Windows Server systems (with WSUS)",
+        "modop": "Distribution of ShadowPad backdoor via exploitation of WSUS RCE flaw (CVE-2025-59287), using PowerCat for a shell, DLL sideloading, persistence.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "shadowpad",
+          "rce_exploit",
+          "backdoor",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Russia-aligned actors (Sandworm, Turla)",
+        "secteur": "Mobile messaging app users (Signal, WhatsApp)",
+        "modop": "Espionage campaigns using commercial spyware and RATs, abusing Signal's 'linked devices' feature, phishing, malicious QR codes, app impersonation, zero-click exploits. Using malware like ProSpy, ToSpy, ClayRat, LANDFALL.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "spyware",
+          "rat",
+          "social_engineering",
+          "zero_click_exploit",
+          "mobile_targeting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://thehackernews.com/2025/11/cisa-warns-of-active-spyware-campaigns.html",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/cisa_spyware_gangs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "WormGPT 4",
+        "secteur": "Cybercrime (tool)",
+        "modop": "Malicious LLM built on GPT-J 6B, trained with specialized data (malware, exploits, phishing templates). Generates sophisticated phishing, malware code (PowerShell), and ransom notes. Democratizes cybercrime.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "cybercrime_as_a_service",
+          "phishing",
+          "malware_generation",
+          "ransomware"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "KawaiiGPT",
+        "secteur": "Cybercrime (tool)",
+        "modop": "Accessible and free malicious LLM (GitHub), generates social engineering lures (spear-phishing), code execution scripts (lateral movement via Paramiko SSH), and ransom notes for full extortion operations. Lowers technical barrier.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "cybercrime_tool",
+          "social_engineering",
+          "lateral_movement",
+          "data_exfiltration",
+          "ransomware"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "nom": "Scattered Spider",
+        "secteur": "Multiple (Transportation, Healthcare)",
+        "modop": "Conspiracy to commit unauthorized acts against Transport for London (TfL), infiltration and damage of networks (SSM Health Care Corporation), attempts against Sutter Health, computer fraud, wire fraud, money laundering, extortion. Implicated in at least 120 intrusions and 47 US entities.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "computer_misuse",
+          "extortion",
+          "data_breach",
+          "fraud",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185000/hacking/scattered-spider-alleged-members-deny-tfl-charges/"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Government, Information Technology",
+        "theme": "National AI Strategy and Cybersecurity",
+        "description": "The UK government plans to invest £250M in cloud procurement to support its ambition of increasing AI compute capacity twentyfold by 2030. The goal is to provide academic researchers, public institutions, and SMEs with access to necessary hardware, with requirements for secure data storage, orchestration for machine learning workloads, usage monitoring, and active security management.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "ai",
+          "cloud",
+          "research",
+          "national_security"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/uk_cloud_ai_research/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Defense, Government, Regulation",
+        "theme": "Government Data Leak and Regulatory Oversight",
+        "description": "Civil society groups are urging MPs to launch a parliamentary inquiry into the UK's Information Commissioner's Office (ICO), accusing it of abandoning enforcement duties after its refusal to formally investigate a Ministry of Defence (MoD) data leak linked to dozens of Afghan deaths. The leak involved a spreadsheet revealing the identities and locations of over 19,000 Afghans fleeing the Taliban. Initial research suggests at least 49 Afghans have since been killed.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "mod",
+          "ico",
+          "data_leak",
+          "regulatory_oversight",
+          "afghanistan"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/ico_inquiry_afghan_mod/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Defense, Government, Technology",
+        "theme": "Geopolitical Tensions and Crisis Preparedness",
+        "description": "Taiwan announced the paper distribution of its national self-defense guide to every household, in response to increasing military pressure from the People's Republic of China. The guide aims to prepare the population and military forces for a potential conflict, including cyber defense instructions, defensive and offensive tactics, and civil preparedness (emergency kit, disinformation countermeasures, shelters). Tensions are exacerbated by Chinese aerial incursions, military exercises, and disinformation campaigns.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "taiwan",
+          "china",
+          "conflict",
+          "cyberdefense",
+          "national_resilience",
+          "disinformation"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/taiwan-crise-chine/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "National Security, Drug Control, Technology",
+        "theme": "Criminal Innovation and AUV Technology",
+        "description": "Latin American drug traffickers are innovating by using Autonomous Underwater Vehicles (AUVs) for drug transport. On July 2, 2025, the Colombian Navy captured the largest and most advanced of these prototypes. These AUVs reduce interception risks and information leakage, maximize cargo capacity, and complicate traditional counternarcotics strategies based on deterrence and human intelligence. This technological evolution demands adaptation of operational strategies and increased investment in detection capabilities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "drug_trafficking",
+          "auv",
+          "latin_america",
+          "criminal_technology",
+          "maritime_surveillance"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uncrewed-and-under-radar-how-auvs-transform-drug-smuggling"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Manufacturing",
+        "victime": "Canon",
+        "description": "The Clop gang compromised a specific environment within a Canon U.S.A. subsidiary by exploiting the CVE-2025-61882 zero-day vulnerability in Oracle E-Business Suite. The attack led to data exfiltration, though the overall impact on Canon's network was contained.",
+        "tags": [
+          "violation",
+          "breach",
+          "canon",
+          "manufacturing",
+          "clop",
+          "oracle_ebs",
+          "zero_day",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Multiple (government, critical infrastructure, banking, tech, healthcare)",
+        "victime": "Users of JSONFormatter and CodeBeautify",
+        "description": "Thousands of sensitive credentials, authentication keys, and configuration data from organizations in critical sectors were publicly exposed via the 'Recent Links' feature of online code formatting tools JSONFormatter and CodeBeautify, allowing unprotected access to saved JSON snippets.",
+        "tags": [
+          "violation",
+          "breach",
+          "code_formatters",
+          "secrets_leak",
+          "credentials_exposure",
+          "authentication_keys",
+          "configuration_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/code-formatters-expose-thousands-of-secrets-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Dartmouth College",
+        "description": "The college disclosed a data breach following the exploitation by the Clop gang of a zero-day vulnerability (CVE-2025-61882) in Oracle E-Business Suite. Personal information, including names and Social Security numbers, belonging to at least 1,494 individuals was stolen and potentially leaked on Clop's dark web leak site.",
+        "tags": [
+          "violation",
+          "breach",
+          "dartmouth_college",
+          "education",
+          "clop",
+          "extortion",
+          "oracle_ebs",
+          "zero_day",
+          "personal_data",
+          "ssn"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cvefeed.io/news/84283/thumbnail.jpg"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Delta Dental of Virginia (DDVA)",
+        "description": "A data breach exposed personal and health data of approximately 145,918 customers following the compromise of an email account between March 21 and April 23, 2025. Potentially exposed information includes names, Social Security numbers, ID numbers, and protected health information.",
+        "tags": [
+          "violation",
+          "breach",
+          "delta_dental",
+          "healthcare",
+          "email_compromise",
+          "personal_data",
+          "health_data",
+          "ssn"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185019/data-breach/delta-dental-of-virginia-data-breach-impacts-145918-customers.html",
+          "https://gbhackers.com/major-data-breach-at-delta-dental-of-virginia/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Harvard University",
+        "description": "Harvard's Alumni Affairs and Development systems were compromised via a vishing attack. Contact, event, donation, and biographical data of alumni, spouses, donors, current student parents, current students, and staff members were exposed. No Social Security numbers, passwords, or financial account numbers were held in the accessed systems.",
+        "tags": [
+          "violation",
+          "breach",
+          "harvard_university",
+          "education",
+          "vishing",
+          "personal_data",
+          "donor_data",
+          "alumni_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185034/security/harvard-reports-vishing-breach-exposing-alumni-and-donor-contact-data.html"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "secteur": "Financial Services, Real Estate",
+        "victime": "SitusAMC",
+        "description": "SitusAMC, a real-estate financing services provider for banks and lenders, confirmed a data breach exposing corporate and client information. Compromised data includes accounting records, legal agreements, and potentially data from their clients' customers. The incident was discovered on November 12, 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "situsamc",
+          "finance",
+          "real_estate",
+          "corporate_data",
+          "client_data",
+          "exposure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/real-estate-finance-services-giant-situsamc-breach-exposes-client-data/",
+          "https://securityaffairs.com/185040/data-breach/situsamc-confirms-data-breach-affecting-customer-information.html",
+          "https://gbhackers.com/retail-finance-giant-situsamc-hit-by-breach/"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-41115",
+        "cvss": "10.0",
+        "product": "Grafana SCIM Component",
+        "description": "Critical privilege escalation or user impersonation vulnerability in Grafana Enterprise (versions 12.0.0 through 12.2.1) when SCIM provisioning is enabled. A malicious SCIM client can provision a user with a numeric 'externalId' potentially overriding internal user IDs, allowing impersonation, even of an admin account.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "grafana",
+          "privilege_escalation",
+          "user_impersonation",
+          "scim",
+          "authentication"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-41115-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13559",
+        "cvss": "9.8",
+        "product": "EduKart Pro (WordPress plugin)",
+        "description": "Unauthenticated Privilege Escalation vulnerability in all versions of EduKart Pro <= 1.0.3, due to the 'edukart_pro_register_user_front_end' function not restricting user roles. Allows an unauthenticated attacker to register an account with the 'administrator' role.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "edukart_pro",
+          "wordpress_plugin",
+          "privilege_escalation",
+          "unauthenticated",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13559"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-6389",
+        "cvss": "9.8",
+        "product": "Sneeit Framework (WordPress plugin)",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability in all versions of Sneeit Framework <= 8.3 via the 'sneeit_articles_pagination_callback()' function. The function accepts user input and passes it through 'call_user_func()', allowing arbitrary code execution on the server.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sneeit_framework",
+          "wordpress_plugin",
+          "rce",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-6389"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-64693",
+        "cvss": "9.8",
+        "product": "MaLion and MaLionCloud Security Point (Windows)",
+        "description": "Heap-based buffer overflow when processing Content-Length. Allows arbitrary code execution with SYSTEM privileges by a remote unauthenticated attacker.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "malion",
+          "malioncloud",
+          "windows",
+          "heap_based_buffer_overflow",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64693"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-62691",
+        "cvss": "9.8",
+        "product": "MaLion and MaLionCloud Security Point (Windows)",
+        "description": "Stack-based buffer overflow when processing HTTP headers. Allows arbitrary code execution with SYSTEM privileges by a remote unauthenticated attacker.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "malion",
+          "malioncloud",
+          "windows",
+          "stack_based_buffer_overflow",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62691"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-61882",
+        "cvss": "9.8",
+        "product": "Oracle E-Business Suite (EBS)",
+        "description": "Critical zero-day vulnerability exploited by the Clop gang to steal sensitive files. Allows unauthenticated attackers to execute arbitrary code remotely on vulnerable servers.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "oracle_ebs",
+          "zero_day",
+          "rce",
+          "data_theft",
+          "clop"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/dartmouth-college-confirms-data-breach-after-clop-extortion-attack/",
+          "https://cybersecuritynews.com/canon-breached-clop-ransomware-oracle-ebs-hack/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59287",
+        "cvss": "9.8",
+        "product": "Windows Server Update Services (WSUS)",
+        "description": "Deserialization of untrusted data in WSUS allowing an unauthenticated attacker to execute code remotely (RCE) with SYSTEM privileges over a network. Actively exploited to distribute ShadowPad malware.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "wsus",
+          "windows_server",
+          "rce",
+          "deserialization",
+          "system_privileges"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13357",
+        "cvss": "9.8",
+        "product": "HashiCorp Vault Terraform Provider",
+        "description": "Critical security flaw allowing attackers to bypass authentication and access Vault without valid credentials. (CVSS inferred at 9.8 due to critical authentication bypass description).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hashicorp_vault",
+          "terraform_provider",
+          "authentication_bypass",
+          "critical_flaw"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hashicorp-vault-bypass-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-33183",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T robotics platform",
+        "description": "Critical code injection vulnerability in Python components of the Isaac-GR00T robotics platform. Allows authenticated attackers to execute arbitrary code, escalate privileges, and alter system data. (CVSS inferred at 9.8 due to critical description).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "isaac_groot",
+          "robotics",
+          "code_injection",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidias-isaac-groot-robitics-platform-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-33184",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T robotics platform",
+        "description": "Critical code injection vulnerability in Python components of the Isaac-GR00T robotics platform. Allows authenticated attackers to execute arbitrary code, escalate privileges, and alter system data. (CVSS inferred at 9.8 due to critical description).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "isaac_groot",
+          "robotics",
+          "code_injection",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidias-isaac-groot-robitics-platform-vulnerability/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59366",
+        "cvss": "9.2",
+        "product": "ASUS AiCloud",
+        "description": "Authentication bypass vulnerability triggered by an unintended side effect of the Samba functionality in AiCloud, potentially exploited to allow execution of specific functions without proper authorization.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus",
+          "aicloud",
+          "authentication_bypass",
+          "samba"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59366"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-65998",
+        "cvss": "9.0",
+        "product": "Apache Syncope",
+        "description": "Critical design flaw exposing encrypted user passwords due to a hard-coded AES key. Affects multiple versions if AES encryption is configured for password storage. (CVSS inferred at 9.0 due to critical description).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "apache_syncope",
+          "identity_management",
+          "hardcoded_key",
+          "password_exposure",
+          "encryption_bypass"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-syncope-flaw-cve-2025-65998-exposes-encrypted-user-passwords-due-to-hard-coded-aes-key/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-13223",
+        "cvss": "8.8",
+        "product": "Google Chrome V8 engine",
+        "description": "Type confusion flaw in Chrome's V8 engine, already exploited, which can enable arbitrary code execution in the context of the logged-on user through malicious HTML. (CVSS inferred at 8.8 due to high-severity description and active exploitation).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "google_chrome",
+          "v8_engine",
+          "type_confusion",
+          "rce",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-intel-newsletter-2025-11-24/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-59373",
+        "cvss": "8.5",
+        "product": "ASUS System Control Interface",
+        "description": "Local privilege escalation vulnerability in the restore mechanism of ASUS System Control Interface. An unprivileged actor can copy files without proper validation into protected system paths, potentially leading to arbitrary file execution as SYSTEM.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus",
+          "system_control_interface",
+          "local_privilege_escalation",
+          "arbitrary_file_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59373"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "cve_id": "CVE-2025-12003",
+        "cvss": "8.2",
+        "product": "ASUS Router Firmware WebDAV",
+        "description": "Path traversal vulnerability identified in WebDAV, which may allow unauthenticated remote attackers to impact the integrity of the device.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "asus_router",
+          "webdav",
+          "path_traversal",
+          "unauthenticated",
+          "integrity_impact"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12003"
+        ],
+        "date": "2025-11-25"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "How to See Critical Incidents in Alert Overload: A Guide for SOCs and MSSPs",
+        "description": "The article addresses the challenge of alert overload for Tier 1 SOC and MSSP analysts, who must triage hundreds, sometimes thousands, of daily alerts, often false positives or duplicates. It highlights the loss of clarity and the risk of missing critical incidents. The article suggests adopting more effective tools to separate signal from noise.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This article highlights a major operational issue in security centers, impacting the effectiveness of incident detection and response. Poor management of alert overload can lead to analyst fatigue, analysis errors, and consequently, an increased risk of system compromise during actual incidents.",
+        "recommandations": "Implement smarter alert management systems that prioritize, filter, and correlate information to reduce false positives and duplicates. Invest in Security Orchestration, Automation, and Response (SOAR) solutions to improve SOC team responsiveness.",
+        "tags": [
+          "soc",
+          "mssp",
+          "alert_overload",
+          "incident_response",
+          "security_operations",
+          "security_management"
+        ],
+        "sources": [
+          "/cybersecurity-blog/fixing-alert-overload/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "ClickFix attack uses fake Windows Update screen to push malware",
+        "description": "New ClickFix attack variants have been observed where threat actors trick users with a realistic-looking Windows Update animation in a full-screen browser page and hide malicious code inside images. Victims are instructed to press specific keys in a certain sequence to execute PowerShell commands and a .NET assembly (Stego Loader) that reconstructs the final payload from an encrypted PNG image.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1059.001 (Command and Scripting Interpreter: PowerShell), T1036.005 (Masquerading: Match Legitimate Name or Location), T1566.002 (Phishing: Spearphishing Link)",
+        "analyse": "This attack demonstrates increasing sophistication in social engineering tactics and evasion. By using credible lures like Windows updates and embedding malware in image pixel data, attackers increase their chances of bypassing traditional defenses and infecting systems, which can lead to information theft.",
+        "recommandations": "Educate users about advanced phishing techniques and fake update screens. Use EDR/XDR solutions to detect suspicious PowerShell activity and unusual .NET assembly execution. Implement advanced web security solutions to block malicious sites and unwanted JavaScript execution. Review communications regarding system updates to ensure their legitimacy.",
+        "tags": [
+          "malware",
+          "infostealer",
+          "clickfix",
+          "phishing",
+          "social_engineering",
+          "windows_update",
+          "stegano"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clickfix-attack-uses-fake-windows-update-screen-to-push-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Malicious Blender model files deliver StealC infostealing malware",
+        "description": "A Russian-linked campaign delivers the StealC V2 information stealer malware through malicious Blender files uploaded to 3D model marketplaces like CGTrader. Archives unpack LNK files for persistence and deploy StealC along with an auxiliary Python stealer. This variant appears to evade detection by many anti-virus products.",
+        "threat_actor": "Unspecified (Russian-linked campaign)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1204.001 (User Execution: Malicious Link), T1078 (Valid Accounts), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder), T1055 (Process Injection), T1548.002 (Abuse Elevation Control Mechanism: Bypass User Account Control)",
+        "analyse": "This campaign illustrates a social engineering tactic that leverages user trust in legitimate platforms (3D marketplaces). The low detection rate by antivirus products for new StealC variants poses a high risk to user and developer data confidentiality.",
+        "recommandations": "Blender users should exercise extreme caution when using files from third-party platforms and consider disabling the auto-execution of Python scripts. Implement robust endpoint security solutions and software security practices that include behavioral detection and unknown file analysis.",
+        "tags": [
+          "malware",
+          "infostealer",
+          "stealc",
+          "blender",
+          "3d_model",
+          "supply_chain",
+          "malware_distribution"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-blender-model-files-deliver-stealc-infostealing-malware/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "SCCM and WSUS in a Hybrid World: Why It’s Time for Cloud-native Patching",
+        "description": "The article highlights the limitations of SCCM and WSUS for patch management in a hybrid work environment, where remote devices often miss updates. With WSUS now deprecated, cloud-native patching solutions are proposed to keep devices updated from any location, strengthening compliance and security by eliminating dependencies on local networks and VPNs.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "Legacy patch management architectures are no longer suitable for the realities of hybrid work. Unpatched vulnerabilities on remote devices represent a significant attack surface. Transitioning to cloud-native solutions is essential for a consistent security posture, improved compliance, and reduced vulnerability windows.",
+        "recommandations": "Evaluate and migrate to cloud-based patch management solutions that do not depend on the corporate network. Ensure fast and consistent patching for all endpoints, regardless of location. Reduce reliance on VPNs for security updates and streamline patching infrastructure to lower costs and administration time.",
+        "tags": [
+          "patching",
+          "sccm",
+          "wsus",
+          "cloud_native",
+          "hybrid_work",
+          "endpoint_management",
+          "vulnerability_management"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/sccm-and-wsus-in-a-hybrid-world-why-its-time-for-cloud-native-patching/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Shai-Hulud malware infects 500 npm packages, leaks secrets on GitHub",
+        "description": "A new Shai-Hulud campaign planted hundreds of trojanized versions of popular npm packages (Zapier, ENS Domains, PostHog, Postman) to steal developer and CI/CD secrets. The malware, which executes a pre-install script, exfiltrates GitHub/npm tokens and cloud credentials to GitHub repositories and attempts to create unauthorized GitHub workflows for persistence and propagation, leveraging the speed of the Bun runtime.",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1588.002 (Obtain Capabilities: Tool), T1078 (Valid Accounts), T1552.001 (Unsecured Credentials: Credentials in Files), T1020 (Automated Exfiltration), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "This npm supply chain attack is highly concerning due to its rapid propagation and targeting of development and CI/CD secrets. Exploiting the pre-install stage increases the exposure surface, potentially compromising build pipelines and cloud infrastructures. The use of extreme obfuscation makes detection difficult for security solutions.",
+        "recommandations": "Regularly audit npm dependencies, rotate all credentials tied to npm, GitHub, and cloud providers. Harden CI/CD pipelines against malicious pre-install script execution. Deploy Managed Detection and Response (MDR) solutions to rapidly detect credential theft and contain the worm-like propagation of Shai-Hulud malware. Be vigilant for warnings about unauthorized package publications on platforms.",
+        "tags": [
+          "supply_chain",
+          "npm",
+          "shai_hulud",
+          "malware",
+          "credential_theft",
+          "github",
+          "ci_cd",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/",
+          "https://fieldeffect.com/blog/new-shai-hulud-variant-uses-preinstall-script-for-credential-theft/",
+          "https://databreaches.net/2025/11/24/shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github/?pk_campaign=feed&pk_kwd=shai-hulud-malware-infects-500-npm-packages-leaks-secrets-on-github"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Is Your Android TV Streaming Box Part of a Botnet?",
+        "description": "Superbox and similar media streaming devices, sold as solutions for free access to thousands of paid services, may install apps that ensnare the user's internet connection in a distributed residential proxy network, used for cybercrime activities like advertising fraud and account takeovers. These boxes use unofficial Android TV systems and replace the official Google Play Store with unofficial app stores.",
+        "threat_actor": "BADBOX 2.0 botnet",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1071.001 (Application Layer Protocol: Web Protocols), T1584 (Compromise Infrastructure), T1090.002 (Proxy: External Proxy), T1059.006 (Command and Scripting Interpreter: Python)",
+        "analyse": "This article reveals an insidious form of mass compromise where users, lured by 'free' content, unwittingly become participants in illegal activities. The opaque nature of these devices and the distribution of unofficial apps create a vast residential botnet, making the detection of malicious activities more difficult and diluting accountability.",
+        "recommandations": "Avoid streaming devices from unrecognized brands or those promising 'free' access to paid content. Always use Google Play Protect certified devices. Monitor network traffic for suspicious activity or unexplained internet traffic. Disable app installation from unknown sources. Educate users about the risks of 'too good to be true' offers.",
+        "tags": [
+          "botnet",
+          "android_tv",
+          "cybercrime",
+          "advertising_fraud",
+          "account_takeover",
+          "residential_proxy",
+          "malware"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/is-your-android-tv-streaming-box-part-of-a-botnet/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "The Dual-Use Dilemma of AI: Malicious LLMs and AI Attack Agents are Accelerators, Not Autonomous Weapons",
+        "description": "This combined article explores the dual-use dilemma of AI, focusing on malicious LLMs like WormGPT 4 and KawaiiGPT. These models, designed without ethical constraints, lower the technical barrier to cybercrime by generating sophisticated phishing, malicious code, and ransom notes. It also distinguishes AI attack agents that accelerate tactical tasks (script generation, exploit testing) from autonomous cyber weapons, emphasizing that human operators remain crucial for strategy and ethical decision-making.",
+        "threat_actor": "WormGPT 4, KawaiiGPT",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1589 (Gather Victim Identity Information), T1059 (Command and Scripting Interpreter), T1071 (Application Layer Protocol), T1048 (Exfiltration Over Alternative Protocol), T1486 (Data Encrypted for Impact)",
+        "analyse": "The emergence of malicious LLMs represents a new baseline for digital risk, enabling novice attackers to launch complex operations. AI acts as a force multiplier, making attacks faster and more scalable. This requires defenders to adapt, no longer able to rely on classic signs of poor grammar or sloppy coding.",
+        "recommandations": "Implement systems resilient to the speed and scale of AI-generated attacks. Develop defenses based on behavior and intent rather than static signatures. Educate staff on sophisticated phishing techniques. Strengthen authentication and access control measures. Invest in threat intelligence solutions that track the evolution of offensive AI tools.",
+        "tags": [
+          "ai",
+          "llm",
+          "malware",
+          "phishing",
+          "ransomware",
+          "cybercrime",
+          "dual_use",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/184943/security/ai-attack-agents-are-accelerators-not-autonomous-weapons-the-anthropic-attack/",
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Choosing a Digital Risk Intelligence Platform: 5 Key Capabilities to Evaluate",
+        "description": "The article describes the five essential capabilities for evaluating a Digital Risk Intelligence (DRI) platform to protect a brand, assets, and attack surface. These capabilities include continuous external attack surface visibility, brand and executive protection, third-party and supply chain intelligence, compromised credential intelligence, and a unified threat view through an intelligence graph.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The traditional security perimeter is no longer sufficient. Organizations face an expanding and dynamic attack surface. An integrated Digital Risk Intelligence platform is crucial for transforming a deluge of alerts into actionable intelligence, enabling proactive defense against external threats (Shadow IT, credential leaks, third-party risks).",
+        "recommandations": "Evaluate DRI platforms based on their ability to map external assets, monitor brand across all platforms, provide continuous visibility into third-party security posture, detect compromised credentials in real-time, and correlate data for a unified understanding of risks. Adopt an integrated approach to digital risk management.",
+        "tags": [
+          "digital_risk_intelligence",
+          "attack_surface_management",
+          "brand_protection",
+          "third_party_risk",
+          "threat_intelligence",
+          "vulnerability_intelligence",
+          "cybersecurity_strategy"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/evaluating-digital-risk-intelligence-platforms"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "To buy or not to buy: How cybercriminals capitalize on Black Friday",
+        "description": "Cybercriminals intensify their activities during sales periods like Black Friday, exploiting increased e-commerce and reduced user vigilance. Threats include phishing (mimicking brands like Amazon, Netflix, Spotify), scams (fake email promotions), and financial malware (banking Trojans like Maverick and Efimer). The gaming sector is also targeted via phishing attacks and malware disguised as mods or cheats, with a notable increase in attacks via Discord.",
+        "threat_actor": "Maverick (banking Trojan), Efimer (banking Trojan)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1204.001 (User Execution: Malicious Link), T1071.001 (Application Layer Protocol: Web Protocols), T1059 (Command and Scripting Interpreter)",
+        "analyse": "The shopping season provides fertile ground for cybercrime. The sophistication of lures (brand impersonation, urgency) combined with the distribution of financial malware and the exploitation of gaming platforms makes consumers highly vulnerable. The evolution of targets (towards gaming platforms and payment apps) shows the adaptability of attackers.",
+        "recommandations": "Consumers should remain extremely vigilant during sales periods. Use two-factor authentication, secure payment methods, and browse cautiously. Carefully check URLs and senders. Deploy a comprehensive security solution that blocks malware, detects phishing pages, and protects financial data. Businesses must strengthen their defenses against phishing and malware targeting payment applications.",
+        "tags": [
+          "black_friday",
+          "e_commerce",
+          "phishing",
+          "scams",
+          "malware",
+          "banking_trojan",
+          "gaming",
+          "discord",
+          "online_shopping"
+        ],
+        "sources": [
+          "https://securelist.com/black-friday-threat-report-2025/118083/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "CISA Warns of Active Spyware Campaigns Hijacking High-Value Signal and WhatsApp Users",
+        "description": "CISA issued an alert regarding threat actors actively using commercial spyware and Remote Access Trojans (RATs) to target high-value users on popular mobile messaging apps like WhatsApp and Signal. Techniques include phishing, malicious QR codes, app impersonation, and zero-click exploits. Russia-aligned actors have abused Signal's 'linked devices' feature, while spyware like LANDFALL has been deployed via iOS/WhatsApp and Samsung vulnerabilities.",
+        "threat_actor": "Russia-aligned actors, ProSpy, ToSpy, ClayRat, LANDFALL",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.004 (Phishing: Smishing), T1566.003 (Phishing: Spearphfishing via Service), T1027 (Obfuscated Files or Information), T1059 (Command and Scripting Interpreter), T1555 (Credentials from Password Stores)",
+        "analyse": "This threat highlights that even end-to-end encrypted messaging applications do not protect against device compromise itself. Attackers exploit OS-level vulnerabilities and social engineering weaknesses to bypass protections, targeting key individuals and civil society organizations with sophisticated espionage capabilities.",
+        "recommandations": "Keep operating systems and applications updated with the latest security patches. Be wary of unexpected messages and QR codes, even from seemingly trusted sources. Enable multi-factor authentication on all accounts. Avoid installing apps from unofficial stores. Use mobile security solutions to detect spyware and abnormal behavior.",
+        "tags": [
+          "cisa",
+          "spyware",
+          "rat",
+          "whatsapp",
+          "signal",
+          "mobile_security",
+          "social_engineering",
+          "zero_click_exploit",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://thehackernews.com/2025/11/cisa-warns-of-active-spyware-campaigns.html",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/11/25/cisa_spyware_gangs/"
+        ],
+        "date": "2025-11-25"
+      },
+      {
+        "title": "Attackers deliver ShadowPad via newly patched WSUS RCE bug",
+        "description": "Threat actors exploited a recently patched WSUS flaw (CVE-2025-59287) to gain access, use PowerCat for a system shell, and then download and install the ShadowPad backdoor. The vulnerability allows remote code execution with SYSTEM privileges and is actively exploited by China-linked APT groups.",
+        "threat_actor": "China-linked APT groups",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "163.61.102.245"
+          ],
+          "FILE_HASH_SHA256": [
+            "ETDCtrlHelper.exe",
+            "ETDApix.dll"
+          ]
+        },
+        "mitre_ttps": "T1210 (Exploitation of Remote Services), T1059.001 (Command and Scripting Interpreter: PowerShell), T1105 (Ingress Tool Transfer), T1574.002 (Hijack Execution Flow: DLL Side-Loading), T1543.003 (Create or Modify System Process: Windows Service), T1071.001 (Application Layer Protocol: Web Protocols)",
+        "analyse": "The rapid exploitation of a newly patched critical vulnerability demonstrates the agility of threat actors, especially APT groups. The use of Living Off The Land tools (PowerCat, curl, certutil) and sophisticated evasion techniques like DLL sideloading makes detection difficult for traditional defenses. ShadowPad deployment grants persistent and extensive control over compromised systems.",
+        "recommandations": "Immediately apply patches for CVE-2025-59287 and all WSUS vulnerabilities. Restrict WSUS access to Microsoft Update servers. Block unwanted traffic on WSUS ports (8530/8531). Audit systems for suspicious PowerShell, certutil, curl usage, and abnormal network connections, especially to known C2s. Implement behavioral detection capabilities and threat analytics to identify advanced TTPs.",
+        "tags": [
+          "shadowpad",
+          "apt",
+          "wsus",
+          "rce",
+          "malware",
+          "exploit",
+          "china_linked",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185007/malware/attackers-deliver-shadowpad-via-newly-patched-wsus-rce-bug/"
+        ],
+        "date": "2025-11-25"
+      }
+    ]
+  }
+}
