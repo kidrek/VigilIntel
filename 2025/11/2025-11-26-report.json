@@ -1,0 +1,2208 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber est marqué par une sophistication croissante, avec l'intégration de l'intelligence artificielle (IA) par les attaquants et des attaques ciblées sur la chaîne d'approvisionnement. Des outils d'IA malveillants comme WormGPT et KawaiiGPT abaissent les barrières techniques pour les cybercriminels, leur permettant de générer des campagnes de phishing très convaincantes et des codes malveillants. Les attaques sur la chaîne d'approvisionnement, illustrées par le ver 'Shai-Hulud' ciblant l'écosystème npm, soulignent le risque systémique posé par la compromission de dépendances logicielles. \n\nLes vulnérabilités critiques (CVSS >= 8) sont omniprésentes, incluant des exécutions de code à distance (RCE), des escalades de privilèges et des contournements d'authentification dans des produits variés (systèmes de transmission, frameworks de pentest, hyperviseurs d'IA, interphones IP, sanitizers HTML, sonnettes connectées). L'ingénierie sociale reste une tactique privilégiée, comme en témoigne la fraude massive au détournement de compte (ATO) ciblant des institutions financières, avec des pertes s'élevant à 262 millions de dollars. Les violations de données sont généralisées, touchant les secteurs de la santé, de l'immobilier financier, de l'éducation et même les systèmes d'alerte d'urgence. Des pratiques de développement insécurisées, telles que l'exposition de données sensibles via des 'beautifiers' de code en ligne, contribuent également à ces fuites. \n\nGéopolitiquement, la cybersécurité est un enjeu de souveraineté technologique, l'Europe cherchant à réduire sa dépendance vis-à-vis des géants technologiques étrangers. Le paysage est également influencé par des acteurs étatiques ou alignés sur des États, comme des groupes russes utilisant des logiciels espions. \n\nEn conclusion, l'état général des menaces est élevé et évolutif. Les organisations doivent se concentrer sur le renforcement des contrôles d'identité, une gestion proactive des vulnérabilités, la sécurisation de la chaîne d'approvisionnement logicielle et l'adaptation des stratégies de défense face à l'utilisation grandissante de l'IA par les adversaires. La sensibilisation aux risques d'ingénierie sociale et l'adoption de pratiques de développement sécurisées sont plus critiques que jamais.",
+      "date": "2025-11-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Cybercriminels (divers)",
+        "secteur": "Jeux vidéo, Secteur financier, Secteurs variés",
+        "modop": "Distribution de logiciels malveillants via des versions piratées de jeux et des 'trainers' (Stealers, agents C2). Ingénierie sociale pour l'usurpation d'identité bancaire et la fraude au détournement de compte (ATO). Diffusion de logiciels espions et RATs. Exploitation de LLM malveillants (WormGPT, KawaiiGPT).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "c2",
+          "social_engineering",
+          "ato",
+          "phishing",
+          "spyware",
+          "rat",
+          "malicious_llm",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-battlefield-6-pirated-games-trainers",
+          "https://www.bleepingcomputer.com/news/security/fbi-cybercriminals-stole-262-million-by-impersonating-bank-support-teams-since-january/",
+          "https://securityaffairs.com/185060/cyber-crime/fbi-bank-impersonators-fuel-262m-surge-in-account-takeover-fraud.html",
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html",
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Acteurs alignés sur la Russie",
+        "secteur": "Utilisateurs d'applications de messagerie (WhatsApp, Signal)",
+        "modop": "Utilisation de logiciels espions commerciaux et RATs, via des messages de phishing, des codes QR malveillants, des exploits zero-click et l'usurpation d'identité d'applications.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "russia_aligned",
+          "spyware",
+          "rat",
+          "phishing",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Éducation (enseignement supérieur)",
+        "modop": "Attaque par rançongiciel et extorsion, fuite de données volées (via Oracle E-Business Suite).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_leak"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115613289797674440",
+          "https://infosec.exchange/@DevaOnBreaches/115613589663908536"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Opérateurs du ver Shai-Hulud",
+        "secteur": "Développement logiciel (écosystème npm, GitHub)",
+        "modop": "Attaque de la chaîne d'approvisionnement logicielle, ver auto-réplicatif. Vol de références (cloud, npm) via phishing MFA, injection de code malveillant dans des packages npm et publication de versions compromises. Utilisation potentielle de LLM pour la génération de scripts.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "worm",
+          "credential_harvesting",
+          "phishing",
+          "llm_assisted"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Opérateurs de WormGPT et KawaiiGPT",
+        "secteur": "Cybercriminalité généraliste",
+        "modop": "Développement et commercialisation de modèles de langage (LLM) malveillants sans contraintes éthiques pour automatiser la cybercriminalité (phishing, ingénierie sociale, génération de code malveillant, notes de rançon).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "ai_powered_attack",
+          "cybercrime_as_a_service",
+          "phishing",
+          "ransomware_builder"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Secteur technologique, Gouvernement",
+        "theme": "Souveraineté numérique, Relations État-Tech",
+        "description": "Un entrepreneur en cybersécurité de 21 ans, Timur Kilin, a été arrêté à Moscou pour trahison après avoir critiqué publiquement l'application de messagerie d'État Max et la législation gouvernementale anti-cybercriminalité. Il avait signalé des vulnérabilités, notamment l'utilisation de bibliothèques logicielles provenant de 'pays hostiles'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "souverainete_technologique",
+          "liberte_d_expression",
+          "cybersecurite_nationale"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/25/russia-arrests-young-cybersecurity-entrepreneur-on-treason-charges/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Technologie, Économie, Gouvernement",
+        "theme": "Indépendance technologique, Souveraineté numérique européenne",
+        "description": "La France et l'Allemagne impulsent une stratégie européenne d'indépendance technologique pour réduire la dépendance au cloud et aux data centers américains, ainsi que pour faire face à la guerre des semi-conducteurs. L'objectif est de combler le retard de puissance de calcul et de faire émerger des champions industriels européens face à l'hégémonie américaine et chinoise.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "souverainete_numerique",
+          "cloud",
+          "data_center",
+          "ia",
+          "semiconducteurs",
+          "economie_numerique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2025/une-offensive-europeenne-pour-lindependance-technologique/"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Éducation (enseignement supérieur)",
+        "victime": "Dartmouth College",
+        "description": "Violation de données suite à une attaque d'extorsion par le rançongiciel Clop. Des données volées de serveurs Oracle E-Business Suite ont été divulguées, affectant 1 494 personnes, y compris leurs numéros de sécurité sociale et données financières.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "enseignement_superieur",
+          "clop",
+          "ransomware",
+          "oracle",
+          "donnees_financieres",
+          "ssn"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115613289797674440",
+          "https://infosec.exchange/@DevaOnBreaches/115613589663908536"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Éducation (enseignement supérieur), Non-profit",
+        "victime": "Harvard University (Systèmes des Affaires des Anciens Élèves et du Développement)",
+        "description": "Violation de données suite à une attaque de 'voice phishing'. Des informations personnelles, y compris des adresses e-mail, des numéros de téléphone, la participation à des événements et les détails de dons, ont été exposées.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "enseignement_superieur",
+          "phishing_vocal",
+          "donnees_personnelles",
+          "donateurs"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115613593384830283"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Pharmacies de Broken Hill (Australie)",
+        "description": "Attaque par rançongiciel entraînant le vol et la publication en ligne de 150 gigaoctets de données de patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "pharmacie",
+          "ransomware",
+          "donnees_patients",
+          "australie"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115613878414794728"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Secteurs multiples (Bancaire, Gouvernemental, Technologies)",
+        "victime": "Utilisateurs d'outils de 'code beautifiers' en ligne (ex: JSONFormatter, CodeBeautify)",
+        "description": "La fonctionnalité 'Recent Links' de ces outils a exposé plus de 80 000 fichiers sensibles, y compris des identifiants et des clés privées, en raison de pages non protégées et de motifs d'URL prévisibles, permettant le 'scraping' automatisé.",
+        "tags": [
+          "violation",
+          "breach",
+          "developpement_logiciel",
+          "donnees_sensibles",
+          "identifiants",
+          "clefs_privées",
+          "banque",
+          "gouvernement",
+          "technologies",
+          "mauvaises_pratiques"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/recent-links-exposes-private-data",
+          "https://www.bleepingcomputer.com/news/security/code-beautifiers-expose-credentials-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Gouvernement (États-Unis), Police, Pompiers",
+        "victime": "OnSolve CodeRED (plateforme d'alerte d'urgence)",
+        "description": "Cyberattaque ayant perturbé les systèmes d'alerte d'urgence à l'échelle nationale. Des données ont été volées, incluant noms, adresses, e-mails, numéros de téléphone et mots de passe des profils utilisateurs CodeRED. Un groupe de rançongiciels revendique l'attaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "infrastructure_critique",
+          "systemes_alerte_urgence",
+          "gouvernement_local",
+          "police",
+          "pompiers",
+          "ransomware",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Services financiers, Immobilier",
+        "victime": "SitusAMC (fournisseur de services financiers immobiliers)",
+        "description": "Violation de données ayant exposé des informations clients. La société, qui fournit des services à des banques majeures comme JPMorgan Chase et Citi, a confirmé l'incident mais pas une attaque par rançongiciel avec chiffrement.",
+        "tags": [
+          "violation",
+          "breach",
+          "services_financiers",
+          "immobilier",
+          "donnees_clients",
+          "banques",
+          "jpmorgan_chase",
+          "citi"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185040/data-breach/situsamc-confirms-data-breach-affecting-customer-information.html",
+          "https://infosec.exchange/@DevaOnBreaches/115613601704623041"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66261",
+        "cvss": 9.9,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Injection de commandes OS non authentifiée (RCE) via le paramètre 'name' de restore_settings.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "os_command_injection",
+          "unauthenticated",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66261"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64127",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Vulnérabilité critique multiple, y compris RCE non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64126",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Vulnérabilité critique multiple, y compris RCE non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64129",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Vulnérabilité critique multiple, y compris RCE non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64128",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Vulnérabilité critique multiple, y compris RCE non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64130",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Vulnérabilité critique multiple, y compris RCE non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66022",
+        "cvss": 9.6,
+        "product": "FACTION PenTesting Report Generation and Collaboration Framework",
+        "description": "Exécution de code à distance (RCE) via le téléchargement d'extension personnalisée non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "pentesting_framework",
+          "faction",
+          "extension_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66022"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-33187",
+        "cvss": 9.3,
+        "product": "NVIDIA DGX Spark",
+        "description": "Défaut critique dans le composant SROOT permettant de contourner les protections système et d'obtenir un contrôle profond du matériel.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "system_compromise",
+          "privileged_access",
+          "ai_supercomputer",
+          "nvidia",
+          "dgx_spark"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-patch-nvidia-dgx-spark-flaw-cve-2025-33187-cvss-9-3-exposes-ai-secrets-to-takeover/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66262",
+        "cvss": 9.3,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Écriture de fichier arbitraire via la traversée de chemin lors de l'extraction d'archives Tar.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_overwrite",
+          "path_traversal",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66262"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66266",
+        "cvss": 9.3,
+        "product": "UPSilon2000V6.0 (RupsMon.exe)",
+        "description": "Permissions de service système insécurisées menant à une escalade de privilèges locale triviale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "lpe",
+          "privilege_escalation",
+          "insecure_permissions",
+          "upsilon2000"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66266"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66263",
+        "cvss": 8.9,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Lecture de fichier arbitraire non authentifiée via injection de 'null byte'.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_read",
+          "unauthenticated",
+          "null_byte_injection",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66263"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-40755",
+        "cvss": 8.8,
+        "product": "Siemens SINEC NMS",
+        "description": "Injection SQL pour l'escalade de privilèges via la méthode getTotalAndFilterCounts.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "privilege_escalation",
+          "siemens",
+          "sinec_nms"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1021/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-6979",
+        "cvss": 8.8,
+        "product": "Arista NG Firewall",
+        "description": "Contournement d'authentification via la fonction dangereuse exposée replace_marker.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "exposed_function",
+          "arista",
+          "ng_firewall"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1019/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64983",
+        "cvss": 8.6,
+        "product": "Ring Video Doorbell",
+        "description": "Code de débogage actif permettant à un attaquant d'accéder à l'appareil via Telnet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "debug_code",
+          "telnet_access",
+          "iot",
+          "ring_video_doorbell"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64983"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66021",
+        "cvss": 8.6,
+        "product": "OWASP Java HTML Sanitizer",
+        "description": "Vulnérabilité XSS via la balise noscript et une sanitisation incorrecte de la balise style.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "html_sanitizer",
+          "owasp",
+          "java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66021"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA: Spyware and RATs used to target WhatsApp and Signal Users",
+        "description": "L'agence CISA alerte sur l'utilisation de logiciels espions commerciaux et de RATs par des acteurs malveillants pour cibler les utilisateurs d'applications de messagerie mobile telles que WhatsApp et Signal. Les attaques impliquent des techniques d'ingénierie sociale, des messages de phishing, des codes QR malveillants et des exploits zero-click. Les cibles incluent des personnalités de haut niveau dans les gouvernements, l'armée, la politique, ainsi que des membres de la société civile aux États-Unis, au Moyen-Orient et en Europe. Des acteurs alignés sur la Russie ont été identifiés dans certaines campagnes.",
+        "threat_actor": "Acteurs alignés sur la Russie, Cybercriminels",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-21042",
+            "CVE-2025-55177",
+            "CVE-2025-43300"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1078 (Valid Accounts)",
+          "T1189 (Drive-by Compromise)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1548.002 (Bypass User Account Control)",
+          "T1555 (Credentials from Password Stores)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "Impact potentiel sévère sur la confidentialité et l'intégrité des communications sensibles. Risque d'espionnage et de compromission de dispositifs mobiles pour des cibles de grande valeur, avec des implications pour la sécurité nationale et la vie privée. L'utilisation d'exploits zero-click rend ces attaques particulièrement dangereuses et difficiles à détecter.",
+        "recommandations": [
+          "Se méfier des messages non sollicités, même de sources apparemment légitimes.",
+          "Vérifier l'authenticité des codes QR avant de les scanner.",
+          "Maintenir les applications et les systèmes d'exploitation mobiles à jour pour patcher les vulnérabilités connues.",
+          "Utiliser des solutions de sécurité mobile robustes.",
+          "Activer l'authentification multifacteur (MFA) sur toutes les applications de messagerie.",
+          "Éviter de cliquer sur des liens suspects ou de télécharger des pièces jointes de sources inconnues."
+        ],
+        "tags": [
+          "cisa",
+          "spyware",
+          "rat",
+          "whatsapp",
+          "signal",
+          "mobile",
+          "phishing",
+          "zero_click_exploit",
+          "russia_aligned",
+          "social_engineering",
+          "T1566.001",
+          "T1566.002",
+          "T1204.001",
+          "T1204.002",
+          "T1078",
+          "T1189",
+          "T1190",
+          "T1203",
+          "T1548.002",
+          "T1555",
+          "T1059",
+          "T1071.001",
+          "T1083",
+          "T1003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Fake Battlefield 6 Pirated Versions and Game Trainers Used to Deploy Stealers and C2 Agents",
+        "description": "Bitdefender Labs a identifié des campagnes de malwares qui exploitent la popularité du jeu 'Battlefield 6'. Des versions piratées, des installateurs de jeux et de faux 'trainers' de jeux sont distribués sur des sites de torrents et des forums souterrains. Ces fichiers infectés livrent des 'stealers', des charges utiles avancées d'évasion et des agents de commandement et de contrôle (C2). Les malwares masquent les appels d'API, effectuent des tests pour détecter les sandboxes, et ciblent des clés API et des identifiants de bases de données. Un agent C2 tente de contacter un domaine Google pour dissimuler les communications ou servir de relais, et est conçu pour l'exécution de commandes à distance ou l'exfiltration de données.",
+        "threat_actor": "Cybercriminels",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ei-in-f101[.]1e100[.]net",
+            "flingtrainer[.]io"
+          ],
+          "IPv4": [
+            "198[.]251[.]84[.]9"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1204 (User Execution)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1003 (OS Credential Dumping)",
+          "T1083 (File and Directory Discovery)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)"
+        ],
+        "analyse": "Cible les joueurs et les utilisateurs cherchant du contenu piraté, transformant un hobby en un vecteur d'infection large. L'impact est la compromission des données personnelles, des identifiants et le contrôle à distance des machines infectées, menaçant la vie privée et la sécurité financière des victimes. La technique d'évasion de sandbox et le camouflage des communications C2 montrent une sophistication accrue.",
+        "recommandations": [
+          "Télécharger les jeux et logiciels uniquement à partir de sources officielles et fiables.",
+          "Éviter les versions piratées et les 'trainers' de jeux provenant de sites non vérifiés.",
+          "Utiliser un logiciel antivirus et EDR à jour avec des capacités de détection comportementale.",
+          "Maintenir les systèmes d'exploitation et toutes les applications à jour.",
+          "Désactiver l'exécution automatique de scripts Python dans des applications comme Blender, sauf si la source est absolument fiable.",
+          "Former les utilisateurs sur les risques liés au contenu piraté et à l'ingénierie sociale."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "c2_agent",
+          "battlefield_6",
+          "jeux_video",
+          "piratage",
+          "evasion",
+          "credential_theft",
+          "T1566",
+          "T1204",
+          "T1027",
+          "T1497",
+          "T1059.003",
+          "T1071.001",
+          "T1041",
+          "T1003",
+          "T1083",
+          "T1070.004"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-battlefield-6-pirated-games-trainers"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "FBI: Cybercriminals stole $262M by impersonating bank support teams / FBI: bank impersonators fuel $262M surge in account takeover fraud",
+        "description": "Le FBI a averti d'une forte augmentation des fraudes au détournement de compte (ATO), où des cybercriminels se font passer pour des institutions financières, volant plus de 262 millions de dollars depuis janvier 2025. Plus de 5 100 plaintes ont été reçues, affectant des particuliers, des entreprises et des organisations de tous secteurs. Les attaquants utilisent l'ingénierie sociale (SMS, appels, e-mails) pour manipuler les victimes et obtenir leurs identifiants de connexion, y compris les codes MFA/OTP. Les fraudeurs prétendent souvent qu'il y a des transactions frauduleuses ou des achats d'armes pour inciter les victimes à visiter des sites de phishing ou à fournir des informations à de faux agents des forces de l'ordre. Les fonds sont rapidement transférés vers des comptes contrôlés par les criminels, souvent liés à des portefeuilles de cryptomonnaies, rendant leur traçabilité difficile.",
+        "threat_actor": "Cybercriminels",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ic3[.]gov",
+            "smartwebfinder[.]com",
+            "toksearches[.]xyz",
+            "theonlinesearch[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1534 (Internal Spearphishing)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1542.003 (Pre-OS Boot: Bootkit)",
+          "T1583.001 (Establish Accounts: Social Media Accounts)",
+          "T1583.006 (Establish Accounts: Email Accounts)",
+          "T1584.004 (Compromise Accounts: Email Accounts)",
+          "T1584.005 (Compromise Accounts: Social Media Accounts)",
+          "T1078.001 (Valid Accounts: Domain Accounts)",
+          "T1078.002 (Valid Accounts: Local Accounts)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1078.004 (Valid Accounts: External Accounts)",
+          "T1114.001 (Email Collection: Local Email Collection)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)"
+        ],
+        "analyse": "Cette vague de fraude ATO représente une menace financière majeure pour les particuliers et les entreprises de tous secteurs. L'efficacité repose sur l'exploitation de la confiance dans les institutions financières et l'utilisation de tactiques d'ingénierie sociale sophistiquées, souvent renforcées par l'empoisonnement SEO pour diriger les victimes vers des sites de phishing. Le déplacement rapide des fonds vers des cryptomonnaies rend la récupération presque impossible.",
+        "recommandations": [
+          "Contacter immédiatement l'institution financière en cas de suspicion de fraude pour demander le rappel des fonds et les documents d'indemnisation.",
+          "Déposer une plainte détaillée auprès du IC3 du FBI.",
+          "Réinitialiser tous les mots de passe potentiellement compromis, en particulier ceux réutilisés.",
+          "Vérifier l'URL des sites web bancaires avant de se connecter et être vigilant face aux liens frauduleux ou publicités par empoisonnement SEO.",
+          "Ne jamais partager d'informations d'identification, y compris les codes MFA/OTP, avec des personnes non sollicitées.",
+          "Être prudent quant aux informations personnelles partagées en ligne pouvant servir à deviner les mots de passe ou questions de sécurité."
+        ],
+        "tags": [
+          "fbi",
+          "ato_fraud",
+          "account_takeover",
+          "phishing",
+          "social_engineering",
+          "bank_impersonation",
+          "financial_fraud",
+          "mfa_bypass",
+          "seo_poisoning",
+          "cryptocurrency",
+          "T1566.001",
+          "T1566.002",
+          "T1078",
+          "T1534",
+          "T1071.001",
+          "T1059",
+          "T1542.003",
+          "T1583.001",
+          "T1583.006",
+          "T1584.004",
+          "T1584.005",
+          "T1078.001",
+          "T1078.002",
+          "T1078.003",
+          "T1078.004",
+          "T1114.001",
+          "T1552.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-cybercriminals-stole-262-million-by-impersonating-bank-support-teams-since-january/",
+          "https://securityaffairs.com/185060/cyber-crime/fbi-bank-impersonators-fuel-262m-surge-in-account-takeover-fraud.html",
+          "https://thehackernews.com/2025/11/fbi-reports-262m-in-ato-fraud-as.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "How to See Critical Incidents in Alert Overload: A Guide for SOCs and MSSPs",
+        "description": "Cet article traite de l'un des défis majeurs pour les analystes de SOC de niveau 1 : la surcharge d'alertes. Chaque jour, des centaines, voire des milliers d'alertes nécessitent d'être triées, catégorisées et escaladées. Beaucoup sont des faux positifs, des doublons ou des notifications de faible valeur qui brouillent le signal, entraînant une perte de clarté et un risque de manquer des incidents critiques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "La surcharge d'alertes est un facteur d'épuisement professionnel et d'inefficacité opérationnelle au sein des SOC. Elle nuit à la capacité des analystes à identifier et à répondre aux menaces réelles, augmentant le temps de détection et de réponse. Cela peut entraîner une visibilité réduite sur les événements de sécurité réels et une posture de sécurité globalement affaiblie.",
+        "recommandations": [
+          "Mettre en œuvre des systèmes de gestion des alertes et d'orchestration de la sécurité pour automatiser le tri et la corrélation.",
+          "Développer des règles de corrélation et des playbooks pour réduire les faux positifs et les alertes de faible valeur.",
+          "Utiliser l'intelligence de la menace pour enrichir les alertes et prioriser les incidents en fonction du risque contextuel.",
+          "Investir dans la formation continue des analystes pour améliorer leurs compétences en tri et en réponse aux incidents.",
+          "Optimiser les outils du SOC pour obtenir une meilleure visibilité et réduire le temps de remédiation.",
+          "Établir un cadre de réponse aux incidents pour traiter efficacement les menaces critiques."
+        ],
+        "tags": [
+          "soc",
+          "mssp",
+          "alert_overload",
+          "incident_response",
+          "security_operations",
+          "threat_intelligence",
+          "efficiency"
+        ],
+        "sources": [
+          "/cybersecurity-blog/fixing-alert-overload/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Morphisec warns StealC V2 malware spread through weaponized blender files",
+        "description": "Morphisec a révélé que des acteurs malveillants russes propagent l'infostealer StealC V2 via des fichiers Blender (.blend) piégés, téléchargés sur des plateformes de modèles 3D comme CGTrader. Ces fichiers exploitent la capacité de Blender à exécuter des scripts Python cachés, qui téléchargent un chargeur PowerShell. Ce dernier déploie StealC V2 et un stealer Python auxiliaire, établit la persistance et utilise un C2 Pyramid pour récupérer des modules chiffrés. La version StealC V2 étendue cible les données de plus de 23 navigateurs, 100 extensions de portefeuilles crypto, 15 applications de portefeuilles et des clients de messagerie/VPN.",
+        "threat_actor": "Acteurs alignés sur la Russie",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1003 (OS Credential Dumping)",
+          "T1555 (Credentials from Password Stores)",
+          "T1083 (File and Directory Discovery)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)"
+        ],
+        "analyse": "Cette campagne illustre une technique d'infection innovante exploitant des logiciels 3D légitimes pour échapper à la détection des sandboxes (les machines physiques avec GPU sont privilégiées). L'impact est un vol de données étendu, ciblant les identifiants de navigation, les cryptomonnaies et les communications privées, avec des implications financières et de confidentialité significatives pour les victimes.",
+        "recommandations": [
+          "Désactiver la fonction 'Auto Run Python Scripts' dans Blender, sauf si la source du fichier est absolument fiable.",
+          "Télécharger les modèles 3D uniquement à partir de plateformes de confiance et vérifier leur intégrité.",
+          "Mettre en place des solutions EDR (Endpoint Detection and Response) avec une capacité d'analyse comportementale avancée.",
+          "Sensibiliser les utilisateurs aux risques des téléchargements de fichiers provenant de sources non vérifiées.",
+          "Renforcer la sécurité des postes de travail, notamment ceux équipés de GPU qui pourraient être ciblés pour l'évasion de sandboxes."
+        ],
+        "tags": [
+          "malware",
+          "stealc_v2",
+          "infostealer",
+          "blender",
+          "3d_models",
+          "python_script",
+          "powershell_loader",
+          "russian_threat_actors",
+          "cryptocurrency_theft",
+          "credential_theft",
+          "T1204.002",
+          "T1059.001",
+          "T1059.006",
+          "T1547.001",
+          "T1071.001",
+          "T1041",
+          "T1003",
+          "T1555",
+          "T1083",
+          "T1027",
+          "T1497"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "“Recent Links” feature used by online formatters exposes private data",
+        "description": "Une faille de sécurité a été découverte dans la fonction 'Recent Links' des outils de 'code beautifying' en ligne (ex: JSONFormatter, CodeBeautify). Cette fonctionnalité, destinée à faciliter l'accès aux extraits de code sauvegardés, a involontairement exposé des identifiants sensibles, des clés privées et des données de configuration de banques, d'agences gouvernementales et d'entreprises technologiques. Les pages sont non authentifiées et suivent des motifs d'URL prévisibles, ce qui facilite le 'scraping' automatisé par des attaquants pour extraire des données via des endpoints API exposés. Des tests ont confirmé que les clés AWS falsifiées étaient accédées dans les 48 heures, même après expiration des liens.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1592 (Gather Victim Host Information)",
+          "T1595 (Active Scanning)",
+          "T1530 (Data from Local System)",
+          "T1003 (OS Credential Dumping)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)",
+          "T1580 (Cloud Infrastructure Discovery)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)"
+        ],
+        "analyse": "Cette exposition n'est pas une violation directe, mais l'exploitation de pratiques de développement insécurisées combinées à des protections de plateforme faibles. L'impact est la fuite généralisée de données sensibles (identifiants Active Directory, chaînes de connexion de bases de données, clés de services cloud, jetons API, secrets CI/CD, jetons de dépôt, PII), menaçant la confidentialité et l'intégrité des systèmes d'entreprises entières. Le risque géographique et stratégique est mondial, touchant une grande variété de secteurs critiques.",
+        "recommandations": [
+          "Établir des directives claires interdisant l'utilisation d'outils en ligne non validés pour manipuler du code sensible ou des identifiants.",
+          "Promouvoir des alternatives internes approuvées, comme des plateformes de revue de code d'entreprise ou des 'pastebins' sécurisés.",
+          "Sensibiliser les développeurs aux risques de coller des secrets dans des utilitaires en ligne et renforcer les pratiques de codage sécurisé.",
+          "Mettre en œuvre des solutions centralisées de gestion des secrets avec rotation automatisée et surveillance des fuites (DLP, veille menace).",
+          "Utiliser des outils MDR (Managed Detection and Response) pour surveiller l'abus d'identifiants compromis via l'analyse comportementale."
+        ],
+        "tags": [
+          "data_exposure",
+          "sensitive_data",
+          "credentials",
+          "private_keys",
+          "code_beautifier",
+          "developer_practices",
+          "api_keys",
+          "supply_chain_risk",
+          "T1592",
+          "T1595",
+          "T1530",
+          "T1003",
+          "T1552.001",
+          "T1580",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/recent-links-exposes-private-data",
+          "https://www.bleepingcomputer.com/news/security/code-beautifiers-expose-credentials-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "The AppSec Reset: Building Trust in AI-powered Software",
+        "description": "Cet article explore le changement fondamental dans la création de logiciels dû à l'IA générative, où les agents d'IA orchestrent désormais des flux de travail de développement entiers. Cela crée de nouveaux défis pour la sécurité des applications (AppSec), car les modèles traditionnels conçus pour le code écrit par l'homme ne sont plus suffisants. L'auteur propose une nouvelle fondation basée sur trois piliers – visibilité, priorisation et gouvernance adaptative – pour construire la confiance dans les outils d'IA et permettre un développement rapide et sécurisé. Des étapes essentielles sont suggérées pour étendre l'AppSec à la couche IA.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'IA est une force transformatrice qui accélère le développement logiciel mais introduit une incertitude significative pour les équipes de sécurité. Le défi est de maintenir la sécurité sans entraver l'innovation. L'analyse met en évidence le besoin d'adapter l'AppSec pour comprendre les décisions probabilistes des machines et les risques spécifiques à l'IA (injection de prompt, paquets hallucinés, accès non autorisé aux modèles). L'impact potentiel est une compromission accrue des applications si les pratiques de sécurité ne s'adaptent pas au rythme de l'IA.",
+        "recommandations": [
+          "Accroître la visibilité sur les systèmes d'IA utilisés, leur intégration et les modèles impliqués.",
+          "Prioriser les problèmes à fort impact liés à l'IA (injection de prompt, paquets hallucinés, accès non autorisé aux modèles) à l'aide de la notation des risques contextuels.",
+          "Définir des politiques de gouvernance adaptatives qui évoluent avec la pile technologique et s'ajustent automatiquement aux nouveaux modèles ou agents d'IA.",
+          "Intégrer la sécurité dès le début du cycle de vie du développement logiciel, en particulier pour les composants IA.",
+          "Former les développeurs et les équipes de sécurité aux risques et aux meilleures pratiques liés à l'IA.",
+          "Évaluer et sélectionner des outils d'IA pour le développement qui intègrent la sécurité par conception."
+        ],
+        "tags": [
+          "appsec",
+          "ia",
+          "generative_ai",
+          "software_development",
+          "security_by_design",
+          "ai_governance",
+          "prompt_injection",
+          "sdlc"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/snyk-appsec-reset/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "The Dual-Use Dilemma of AI: Malicious LLMs",
+        "description": "Cet article de Unit 42 analyse le dilemme du double usage de l'IA, en se concentrant sur les modèles de langage de grande taille (LLM) malveillants tels que WormGPT et KawaiiGPT. Ces LLM sont conçus sans contraintes éthiques pour automatiser la cybercriminalité, depuis la génération de messages de phishing sophistiqués jusqu'à la création de code malveillant fonctionnel (ransomware, scripts d'exfiltration, outils de mouvement latéral). WormGPT, basé sur GPT-J 6B, a été entraîné avec des jeux de données malveillants, tandis que KawaiiGPT est gratuit et facilement accessible, abaissant considérablement les barrières techniques à l'entrée pour les cybercriminels.",
+        "threat_actor": "Opérateurs de WormGPT et KawaiiGPT",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "fakebankverify[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1566.003 (Phishing: Spearphishing via Service)",
+          "T1566.004 (Phishing: Spearphishing via Social Media)",
+          "T1598 (Phishing for Information)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1078 (Valid Accounts)",
+          "T1090 (Proxy)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1560 (Archive Collected Data)",
+          "T1003 (OS Credential Dumping)",
+          "T1505.002 (Server Software Component: Web Shell)",
+          "T1550.002 (Use Alternate Authentication Material: Pass the Hash)",
+          "T1550.003 (Use Alternate Authentication Material: Pass the Ticket)"
+        ],
+        "analyse": "La prolifération de LLM malveillants représente un changement fondamental dans le modèle de menace, rendant les attaques sophistiquées accessibles à un public plus large de cybercriminels. Cela nécessite une réévaluation des signes d'alerte traditionnels (grammaire faible, code bâclé) et une concentration sur la résilience des systèmes. L'impact est une augmentation potentielle du volume et de la sophistication des attaques de phishing, de rançongiciels et de mouvements latéraux, affectant la confidentialité, l'intégrité et la disponibilité des données et des systèmes.",
+        "recommandations": [
+          "Mettre en place une formation de sensibilisation à la cybersécurité avancée pour détecter les messages de phishing générés par l'IA.",
+          "Renforcer l'authentification multifacteur (MFA) et les contrôles d'accès pour contrer les tentatives de prise de contrôle de compte.",
+          "Utiliser des solutions de détection comportementale et d'analyse de menaces basées sur l'IA pour identifier les activités malveillantes générées par l'IA.",
+          "Maintenir une veille technologique constante sur l'évolution des outils d'IA offensifs.",
+          "Encourager une culture de la sécurité où les incidents sont signalés rapidement et les analyses post-mortem sont effectuées.",
+          "Mettre en œuvre des politiques de développement sécurisé et des revues de code pour minimiser les vulnérabilités exploitables par l'IA."
+        ],
+        "tags": [
+          "ia",
+          "llm",
+          "wormgpt",
+          "kawaiigpt",
+          "cybercrime_as_a_service",
+          "phishing",
+          "ransomware",
+          "code_generation",
+          "social_engineering",
+          "dual_use_dilemma",
+          "T1566.001",
+          "T1566.002",
+          "T1566.003",
+          "T1566.004",
+          "T1598",
+          "T1059",
+          "T1059.006",
+          "T1027",
+          "T1041",
+          "T1078",
+          "T1090",
+          "T1070.004",
+          "T1560",
+          "T1003",
+          "T1505.002",
+          "T1550.002",
+          "T1550.003"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "\"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 25)",
+        "description": "Le ver auto-réplicatif 'Shai-Hulud 2.0' a compromis des dizaines de milliers de dépôts GitHub et des centaines de packages dans l'écosystème npm via une attaque de la chaîne d'approvisionnement. L'attaque commence par une campagne de phishing visant à voler les identifiants MFA des développeurs npm. Une fois l'accès obtenu, le ver déploie une charge utile malveillante qui crée un nouveau dépôt GitHub public 'Shai-Hulud' pour exfiltrer les secrets volés, puis injecte du code malveillant dans d'autres packages maintenus par le développeur compromis et les publie. Il est suggéré que l'IA (LLM) a été utilisée pour générer le script bash malveillant. L'attaque vise à voler les identifiants cloud et peut perturber les pipelines CI/CD.",
+        "threat_actor": "Opérateurs du ver Shai-Hulud",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "webhook[.]site"
+          ],
+          "FILE_HASH_SHA256": [
+            "dc67467a39b70d1cd4c1f7f7a459b35058163592f4a9e8fb4dffcbba98ef210c",
+            "b74caeaa75e077c99f7d44f46daaf9796a3be43ecf24f2a1fd381844669da777",
+            "46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09",
+            "4b2399646573bb737c4969563303d8ee2e9ddbd1b271f1ca9e35ea78062538db"
+          ],
+          "URL": [
+            "hxxp[:]//webhook[.]site/bb8ca5f6-4175-45d2-b042-fc9ebb8170b7"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)",
+          "T1580 (Cloud Infrastructure Discovery)",
+          "T1003.003 (OS Credential Dumping: SAM Dump)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.002 (Application Layer Protocol: File Transfer Protocols)",
+          "T1071.003 (Application Layer Protocol: Mail Protocols)"
+        ],
+        "analyse": "Cette attaque représente une escalade significative des menaces sur la chaîne d'approvisionnement logicielle, exploitant la phase de pré-installation des dépendances logicielles. L'impact est double : vol de références cloud de grande valeur pouvant mener à des compromissions de services cloud (vol de données, rançongiciel, cryptominage, suppression d'environnements de production) et potentiellement paralyser des pipelines CI/CD entiers. La nature auto-réplicative et l'intégration de l'IA accélèrent la propagation et augmentent la difficulté de détection.",
+        "recommandations": [
+          "Renforcer les contrôles d'accès et d'identité pour les développeurs, notamment en exigeant une MFA robuste et en surveillant les activités inhabituelles.",
+          "Auditer régulièrement les permissions des jetons npm et des comptes GitHub, et révoquer/réinitialiser les identifiants compromis.",
+          "Mettre en place des scanners de sécurité dans les pipelines CI/CD pour détecter les modifications de code suspectes et les dépendances non sanctionnées.",
+          "Utiliser des solutions EDR/XSIAM pour prévenir l'exécution de malwares connus et inconnus via l'analyse comportementale.",
+          "Sensibiliser les développeurs aux campagnes de phishing ciblant les identifiants de développement.",
+          "Implémenter une segmentation réseau pour limiter le mouvement latéral en cas de compromission."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "npm",
+          "github",
+          "worm",
+          "shai_hulud",
+          "credential_harvesting",
+          "mfa_phishing",
+          "ci_cd",
+          "ai_generated_code",
+          "cloud_security",
+          "T1195.002",
+          "T1566.002",
+          "T1078",
+          "T1547.001",
+          "T1574.002",
+          "T1059.004",
+          "T1041",
+          "T1552.001",
+          "T1580",
+          "T1003.003",
+          "T1071.001",
+          "T1071.002",
+          "T1071.003"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "The AppSec Reset: Building Trust in AI-powered Software",
+        "description": "Cet article explore le changement fondamental dans la création de logiciels dû à l'IA générative, où les agents d'IA orchestrent désormais des flux de travail de développement entiers. Cela crée de nouveaux défis pour la sécurité des applications (AppSec), car les modèles traditionnels conçus pour le code écrit par l'homme ne sont plus suffisants. L'auteur propose une nouvelle fondation basée sur trois piliers – visibilité, priorisation et gouvernance adaptative – pour construire la confiance dans les outils d'IA et permettre un développement rapide et sécurisé. Des étapes essentielles sont suggérées pour étendre l'AppSec à la couche IA.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'IA est une force transformatrice qui accélère le développement logiciel mais introduit une incertitude significative pour les équipes de sécurité. Le défi est de maintenir la sécurité sans entraver l'innovation. L'analyse met en évidence le besoin d'adapter l'AppSec pour comprendre les décisions probabilistes des machines et les risques spécifiques à l'IA (injection de prompt, paquets hallucinés, accès non autorisé aux modèles). L'impact potentiel est une compromission accrue des applications si les pratiques de sécurité ne s'adaptent pas au rythme de l'IA.",
+        "recommandations": [
+          "Accroître la visibilité sur les systèmes d'IA utilisés, leur intégration et les modèles impliqués.",
+          "Prioriser les problèmes à fort impact liés à l'IA (injection de prompt, paquets hallucinés, accès non autorisé aux modèles) à l'aide de la notation des risques contextuels.",
+          "Définir des politiques de gouvernance adaptatives qui évoluent avec la pile technologique et s'ajustent automatiquement aux nouveaux modèles ou agents d'IA.",
+          "Intégrer la sécurité dès le début du cycle de vie du développement logiciel, en particulier pour les composants IA.",
+          "Former les développeurs et les équipes de sécurité aux risques et aux meilleures pratiques liés à l'IA.",
+          "Évaluer et sélectionner des outils d'IA pour le développement qui intègrent la sécurité par conception."
+        ],
+        "tags": [
+          "appsec",
+          "ia",
+          "generative_ai",
+          "software_development",
+          "security_by_design",
+          "ai_governance",
+          "prompt_injection",
+          "sdlc"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/snyk-appsec-reset/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Year-end approaches: How to maximize your cyber spend",
+        "description": "Cet article fournit des conseils sur la manière d'optimiser les dépenses budgétaires en cybersécurité à l'approche de la fin de l'année. Il recommande de se concentrer sur le renforcement des contrôles d'identité, la réduction des outils redondants et l'investissement dans des engagements axés sur les résultats. Il souligne l'importance de cibler les risques liés aux identifiants (crédentials) et de documenter les résultats pour justifier le budget de l'année suivante. Les recommandations incluent l'acquisition de licences d'urgence pour la MFA/PAM, la pré-négociation de contrats de réponse aux incidents et l'augmentation de la capacité cloud/CDN pour les pics de trafic.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Une gestion inefficace du budget peut laisser des lacunes de sécurité critiques ouvertes. L'article propose une approche stratégique pour aligner les dépenses sur la réduction des risques métiers réels, en particulier ceux liés aux identités, qui sont impliqués dans près de 45% des violations de données. En rationalisant les outils et en investissant dans des capacités de réponse et de résilience, les organisations peuvent améliorer leur posture de sécurité et mieux justifier les futurs investissements.",
+        "recommandations": [
+          "Prioriser les investissements qui réduisent les risques liés à l'identité, tels que le renforcement des politiques de mots de passe et les contrôles d'accès.",
+          "Consolider les outils de sécurité redondants pour réduire la complexité et les coûts, et rediriger les économies vers des domaines critiques.",
+          "Pré-négocier des contrats de réponse aux incidents pour assurer une assistance rapide et des tarifs avantageux en cas d'urgence.",
+          "Provisionner une capacité de pointe (cloud, CDN) pour absorber les attaques DDoS et les pics de trafic.",
+          "Acquérir des licences d'urgence pour les systèmes MFA et de gestion des accès à privilèges (PAM) afin de déployer rapidement une capacité supplémentaire.",
+          "Documenter les améliorations de sécurité et les résultats pour justifier les demandes budgétaires futures."
+        ],
+        "tags": [
+          "budget_cyber",
+          "cybersecurity_spend",
+          "identity_management",
+          "credential_risk",
+          "incident_response",
+          "mfa",
+          "pam",
+          "ddos_protection",
+          "cloud_security",
+          "security_strategy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/year-end-approaches-how-to-maximize-your-cyber-spend/"
+        ],
+        "date": "2025-11-26"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by increasing sophistication, with attackers integrating artificial intelligence (AI) and launching targeted supply chain attacks. Malicious AI tools like WormGPT and KawaiiGPT lower technical barriers for cybercriminals, enabling them to generate highly convincing phishing campaigns and malicious code. Supply chain attacks, exemplified by the 'Shai-Hulud' worm targeting the npm ecosystem, highlight the systemic risk posed by compromising software dependencies. \n\nCritical vulnerabilities (CVSS >= 8) are pervasive, including remote code execution (RCE), privilege escalation, and authentication bypasses in various products (transmission systems, pentest frameworks, AI hypervisors, IP intercoms, HTML sanitizers, smart doorbells). Social engineering remains a favored tactic, as evidenced by massive Account Takeover (ATO) fraud targeting financial institutions, with losses reaching $262 million. Data breaches are widespread, affecting healthcare, financial real estate, education, and even emergency alert systems. Insecure development practices, such as the exposure of sensitive data via online code 'beautifiers', also contribute to these leaks. \n\nGeopolitically, cybersecurity is a matter of technological sovereignty, with Europe seeking to reduce its dependence on foreign tech giants. The landscape is also influenced by state or state-aligned actors, such as Russian groups using spyware. \n\nIn conclusion, the overall threat level is high and evolving. Organizations must focus on strengthening identity controls, proactive vulnerability management, securing the software supply chain, and adapting defense strategies against the increasing use of AI by adversaries. Awareness of social engineering risks and the adoption of secure development practices are more critical than ever.",
+      "date": "2025-11-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Cybercriminals (various)",
+        "secteur": "Video Games, Financial Sector, Various Sectors",
+        "modop": "Malware distribution via pirated game versions and 'trainers' (Stealers, C2 agents). Social engineering for bank impersonation and Account Takeover (ATO) fraud. Spread of spyware and RATs. Exploitation of malicious LLMs (WormGPT, KawaiiGPT).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "c2",
+          "social_engineering",
+          "ato",
+          "phishing",
+          "spyware",
+          "rat",
+          "malicious_llm",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-battlefield-6-pirated-games-trainers",
+          "https://www.bleepingcomputer.com/news/security/fbi-cybercriminals-stole-262-million-by-impersonating-bank-support-teams-since-january/",
+          "https://securityaffairs.com/185060/cyber-crime/fbi-bank-impersonators-fuel-262m-surge-in-account-takeover-fraud.html",
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html",
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Russia-aligned actors",
+        "secteur": "Mobile messaging app users (WhatsApp, Signal)",
+        "modop": "Using commercial spyware and RATs, via phishing messages, malicious QR codes, zero-click exploits, and app impersonation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "russia_aligned",
+          "spyware",
+          "rat",
+          "phishing",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html",
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Education (Higher Education)",
+        "modop": "Ransomware attack and extortion, leaking stolen data (via Oracle E-Business Suite).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_leak"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115613289797674440",
+          "https://infosec.exchange/@DevaOnBreaches/115613589663908536"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "Shai-Hulud worm operators",
+        "secteur": "Software development (npm ecosystem, GitHub)",
+        "modop": "Software supply chain attack, self-replicating worm. Credential theft (cloud, npm) via MFA phishing, malicious code injection into npm packages and publishing compromised versions. Potential use of LLMs for script generation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "worm",
+          "credential_harvesting",
+          "phishing",
+          "llm_assisted"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "nom": "WormGPT and KawaiiGPT operators",
+        "secteur": "General Cybercrime",
+        "modop": "Development and commercialization of malicious Large Language Models (LLMs) without ethical constraints to automate cybercrime (phishing, social engineering, malicious code generation, ransomware notes).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malicious_llm",
+          "ai_powered_attack",
+          "cybercrime_as_a_service",
+          "phishing",
+          "ransomware_builder"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technology Sector, Government",
+        "theme": "Technological Sovereignty, State-Tech Relations",
+        "description": "A 21-year-old cybersecurity entrepreneur, Timur Kilin, was arrested in Moscow on treason charges after publicly criticizing the state-owned messaging app Max and the government's anti-cybercrime legislation. He had reported vulnerabilities, including the use of software libraries from 'unfriendly countries'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "technological_sovereignty",
+          "freedom_of_speech",
+          "national_cybersecurity"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/25/russia-arrests-young-cybersecurity-entrepreneur-on-treason-charges/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Technology, Economy, Government",
+        "theme": "Technological Independence, European Digital Sovereignty",
+        "description": "France and Germany are driving a European strategy for technological independence to reduce reliance on American cloud and data centers, and to address the semiconductor 'war'. The goal is to close the computing power gap and foster European industrial champions against American and Chinese hegemony.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "digital_sovereignty",
+          "cloud",
+          "data_center",
+          "ai",
+          "semiconductors",
+          "digital_economy"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2025/une-offensive-europeenne-pour-lindependance-technologique/"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Education (Higher Education)",
+        "victime": "Dartmouth College",
+        "description": "Data breach following an extortion attack by the Clop ransomware gang. Stolen data from Oracle E-Business Suite servers was leaked, affecting 1,494 individuals, including Social Security numbers and financial data.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "clop",
+          "ransomware",
+          "oracle",
+          "financial_data",
+          "ssn"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115613289797674440",
+          "https://infosec.exchange/@DevaOnBreaches/115613589663908536"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Education (Higher Education), Non-profit",
+        "victime": "Harvard University (Alumni Affairs and Development systems)",
+        "description": "Data breach following a voice phishing attack. Personal information, including email addresses, phone numbers, event attendance, and donation details, was exposed.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "voice_phishing",
+          "personal_data",
+          "donors"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115613593384830283"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Broken Hill Pharmacies (Australia)",
+        "description": "Ransomware attack resulting in the theft and online publication of 150 gigabytes of patient data.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "pharmacy",
+          "ransomware",
+          "patient_data",
+          "australia"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115613878414794728"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Multiple sectors (Banking, Government, Technology)",
+        "victime": "Users of online code beautifier tools (e.g., JSONFormatter, CodeBeautify)",
+        "description": "The 'Recent Links' feature of these tools exposed over 80,000 sensitive files, including credentials and private keys, due to unprotected pages and predictable URL patterns, allowing automated scraping.",
+        "tags": [
+          "violation",
+          "breach",
+          "software_development",
+          "sensitive_data",
+          "credentials",
+          "private_keys",
+          "banking",
+          "government",
+          "technology",
+          "poor_practices"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/recent-links-exposes-private-data",
+          "https://www.bleepingcomputer.com/news/security/code-beautifiers-expose-credentials-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Government (United States), Police, Fire Departments",
+        "victime": "OnSolve CodeRED (emergency alert platform)",
+        "description": "Cyberattack disrupted nationwide emergency notification systems. Data was stolen, including names, addresses, emails, phone numbers, and passwords from CodeRED user profiles. A ransomware group claimed responsibility.",
+        "tags": [
+          "violation",
+          "breach",
+          "critical_infrastructure",
+          "emergency_alert_systems",
+          "local_government",
+          "police",
+          "fire_departments",
+          "ransomware",
+          "personal_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/onsolve-codered-cyberattack-disrupts-emergency-alert-systems-nationwide/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "secteur": "Financial Services, Real Estate",
+        "victime": "SitusAMC (real estate financial services provider)",
+        "description": "Data breach exposed customer information. The company, which provides services to major banks like JPMorgan Chase and Citi, confirmed the incident but not a ransomware attack with encryption.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "real_estate",
+          "customer_data",
+          "banks",
+          "jpmorgan_chase",
+          "citi"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185040/data-breach/situsamc-confirms-data-breach-affecting-customer-information.html",
+          "https://infosec.exchange/@DevaOnBreaches/115613601704623041"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66261",
+        "cvss": 9.9,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Unauthenticated OS Command Injection (RCE) via the 'name' parameter of restore_settings.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "os_command_injection",
+          "unauthenticated",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66261"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64127",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Multiple critical vulnerabilities, including unauthenticated RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64126",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Multiple critical vulnerabilities, including unauthenticated RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64129",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Multiple critical vulnerabilities, including unauthenticated RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64128",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Multiple critical vulnerabilities, including unauthenticated RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64130",
+        "cvss": 9.8,
+        "product": "Zenitel TCIV-3+ Intercoms",
+        "description": "Multiple critical vulnerabilities, including unauthenticated RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "intercom",
+          "iot",
+          "zenitel"
+        ],
+        "sources": [
+          "https://securityonline.info/urgent-patch-required-zenitel-tciv-3-intercoms-hit-by-multiple-critical-flaws-cvss-9-8/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66022",
+        "cvss": 9.6,
+        "product": "FACTION PenTesting Report Generation and Collaboration Framework",
+        "description": "Remote Code Execution (RCE) via unauthenticated custom extension upload.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "pentesting_framework",
+          "faction",
+          "extension_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66022"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-33187",
+        "cvss": 9.3,
+        "product": "NVIDIA DGX Spark",
+        "description": "Critical flaw in the SROOT component allowing bypass of system protections and deep hardware control.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "system_compromise",
+          "privileged_access",
+          "ai_supercomputer",
+          "nvidia",
+          "dgx_spark"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-patch-nvidia-dgx-spark-flaw-cve-2025-33187-cvss-9-3-exposes-ai-secrets-to-takeover/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66262",
+        "cvss": 9.3,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Arbitrary File Overwrite via Tar Extraction Path Traversal.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_overwrite",
+          "path_traversal",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66262"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66266",
+        "cvss": 9.3,
+        "product": "UPSilon2000V6.0 (RupsMon.exe)",
+        "description": "Insecure SYSTEM Service Permissions leading to trivial Local Privilege Escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "lpe",
+          "privilege_escalation",
+          "insecure_permissions",
+          "upsilon2000"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66266"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66263",
+        "cvss": 8.9,
+        "product": "DB Electronica Telecomunicazioni S.p.A. Mozart FM Transmitter",
+        "description": "Unauthenticated Arbitrary File Read via Null Byte Injection.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_read",
+          "unauthenticated",
+          "null_byte_injection",
+          "db_electronica",
+          "mozart_fm_transmitter"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66263"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-40755",
+        "cvss": 8.8,
+        "product": "Siemens SINEC NMS",
+        "description": "SQL Injection for Privilege Escalation via the getTotalAndFilterCounts method.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "privilege_escalation",
+          "siemens",
+          "sinec_nms"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1021/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-6979",
+        "cvss": 8.8,
+        "product": "Arista NG Firewall",
+        "description": "Authentication Bypass via the exposed dangerous function replace_marker.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "exposed_function",
+          "arista",
+          "ng_firewall"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1019/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-64983",
+        "cvss": 8.6,
+        "product": "Ring Video Doorbell",
+        "description": "Active debug code vulnerability allowing an attacker to gain device access via Telnet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "debug_code",
+          "telnet_access",
+          "iot",
+          "ring_video_doorbell"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64983"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "cve_id": "CVE-2025-66021",
+        "cvss": 8.6,
+        "product": "OWASP Java HTML Sanitizer",
+        "description": "XSS vulnerability via noscript tag and improper style tag sanitization.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "html_sanitizer",
+          "owasp",
+          "java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66021"
+        ],
+        "date": "2025-11-26"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA: Spyware and RATs used to target WhatsApp and Signal Users",
+        "description": "CISA warns that threat actors are actively using commercial spyware and RATs to target users of mobile messaging applications like WhatsApp and Signal. Attacks involve social engineering techniques, phishing messages, malicious QR codes, and zero-click exploits. Targets include high-value figures in government, military, and politics, as well as civil society members across the U.S., Middle East, and Europe. Russia-aligned actors have been identified in some campaigns.",
+        "threat_actor": "Russia-aligned actors, Cybercriminals",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-21042",
+            "CVE-2025-55177",
+            "CVE-2025-43300"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1078 (Valid Accounts)",
+          "T1189 (Drive-by Compromise)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1548.002 (Bypass User Account Control)",
+          "T1555 (Credentials from Password Stores)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "Severe potential impact on confidentiality and integrity of sensitive communications. Risk of espionage and mobile device compromise for high-value targets, with implications for national security and privacy. The use of zero-click exploits makes these attacks particularly dangerous and difficult to detect.",
+        "recommandations": [
+          "Be wary of unsolicited messages, even from seemingly legitimate sources.",
+          "Verify the authenticity of QR codes before scanning.",
+          "Keep mobile applications and operating systems up to date to patch known vulnerabilities.",
+          "Use robust mobile security solutions.",
+          "Enable multi-factor authentication (MFA) on all messaging applications.",
+          "Avoid clicking on suspicious links or downloading attachments from unknown sources."
+        ],
+        "tags": [
+          "cisa",
+          "spyware",
+          "rat",
+          "whatsapp",
+          "signal",
+          "mobile",
+          "phishing",
+          "zero_click_exploit",
+          "russia_aligned",
+          "social_engineering",
+          "T1566.001",
+          "T1566.002",
+          "T1204.001",
+          "T1204.002",
+          "T1078",
+          "T1189",
+          "T1190",
+          "T1203",
+          "T1548.002",
+          "T1555",
+          "T1059",
+          "T1071.001",
+          "T1083",
+          "T1003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Fake Battlefield 6 Pirated Versions and Game Trainers Used to Deploy Stealers and C2 Agents",
+        "description": "Bitdefender Labs identified malware campaigns exploiting the popularity of the 'Battlefield 6' game. Pirated versions, game installers, and fake game trainers are distributed via torrent sites and underground forums. These infected files deliver 'stealers,' advanced evasion payloads, and command-and-control (C2) agents. The malware hides API calls, performs sandbox detection tests, and targets API keys and database credentials. A C2 agent attempts to contact a Google domain to disguise communications or act as a relay and is designed for remote command execution or data exfiltration.",
+        "threat_actor": "Cybercriminals",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ei-in-f101[.]1e100[.]net",
+            "flingtrainer[.]io"
+          ],
+          "IPv4": [
+            "198[.]251[.]84[.]9"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1204 (User Execution)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1003 (OS Credential Dumping)",
+          "T1083 (File and Directory Discovery)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)"
+        ],
+        "analyse": "Targets gamers and users seeking pirated content, turning a hobby into a broad infection vector. The impact is the compromise of personal data, credentials, and remote control of infected machines, threatening victims' privacy and financial security. Sandbox evasion and C2 communication obfuscation techniques show increased sophistication.",
+        "recommandations": [
+          "Download games and software only from official and trusted sources.",
+          "Avoid pirated versions and game 'trainers' from unverified sites.",
+          "Use up-to-date antivirus and EDR software with behavioral detection capabilities.",
+          "Keep operating systems and all applications updated.",
+          "Disable automatic Python script execution in applications like Blender unless the source is absolutely trusted.",
+          "Educate users on the risks associated with pirated content and social engineering."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "c2_agent",
+          "battlefield_6",
+          "video_games",
+          "piracy",
+          "evasion",
+          "credential_theft",
+          "T1566",
+          "T1204",
+          "T1027",
+          "T1497",
+          "T1059.003",
+          "T1071.001",
+          "T1041",
+          "T1003",
+          "T1083",
+          "T1070.004"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-battlefield-6-pirated-games-trainers"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "FBI: Cybercriminals stole $262M by impersonating bank support teams / FBI: bank impersonators fuel $262M surge in account takeover fraud",
+        "description": "The FBI warned of a massive surge in Account Takeover (ATO) fraud schemes, where cybercriminals impersonate financial institutions, stealing over $262 million since January 2025. Over 5,100 complaints have been received, impacting individuals, businesses, and organizations across all sectors. Attackers use social engineering (texts, calls, emails) to manipulate victims into providing login credentials, including MFA/OTP codes. Fraudsters often claim fraudulent transactions or firearm purchases to trick victims into visiting phishing websites or providing information to fake law enforcement agents. Funds are quickly wired to criminal-controlled accounts, often linked to cryptocurrency wallets, making tracing difficult.",
+        "threat_actor": "Cybercriminals",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ic3[.]gov",
+            "smartwebfinder[.]com",
+            "toksearches[.]xyz",
+            "theonlinesearch[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1534 (Internal Spearphishing)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1542.003 (Pre-OS Boot: Bootkit)",
+          "T1583.001 (Establish Accounts: Social Media Accounts)",
+          "T1583.006 (Establish Accounts: Email Accounts)",
+          "T1584.004 (Compromise Accounts: Email Accounts)",
+          "T1584.005 (Compromise Accounts: Social Media Accounts)",
+          "T1078.001 (Valid Accounts: Domain Accounts)",
+          "T1078.002 (Valid Accounts: Local Accounts)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1078.004 (Valid Accounts: External Accounts)",
+          "T1114.001 (Email Collection: Local Email Collection)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)"
+        ],
+        "analyse": "This wave of ATO fraud represents a major financial threat to individuals and businesses across all sectors. Its effectiveness relies on exploiting trust in financial institutions and using sophisticated social engineering tactics, often enhanced by SEO poisoning to direct victims to phishing sites. The rapid movement of funds to cryptocurrencies makes recovery almost impossible.",
+        "recommandations": [
+          "Immediately contact your financial institution if you suspect fraud to request fund recall and indemnification documents.",
+          "File a detailed complaint with the FBI's IC3.",
+          "Reset all potentially compromised passwords, especially those reused across multiple accounts.",
+          "Verify the URL of banking websites before logging in and be vigilant against fraudulent links or SEO poisoning ads.",
+          "Never share login credentials, including MFA/OTP codes, with unsolicited individuals.",
+          "Be careful about personal information shared online that could be used to guess passwords or security questions."
+        ],
+        "tags": [
+          "fbi",
+          "ato_fraud",
+          "account_takeover",
+          "phishing",
+          "social_engineering",
+          "bank_impersonation",
+          "financial_fraud",
+          "mfa_bypass",
+          "seo_poisoning",
+          "cryptocurrency",
+          "T1566.001",
+          "T1566.002",
+          "T1078",
+          "T1534",
+          "T1071.001",
+          "T1059",
+          "T1542.003",
+          "T1583.001",
+          "T1583.006",
+          "T1584.004",
+          "T1584.005",
+          "T1078.001",
+          "T1078.002",
+          "T1078.003",
+          "T1078.004",
+          "T1114.001",
+          "T1552.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-cybercriminals-stole-262-million-by-impersonating-bank-support-teams-since-january/",
+          "https://securityaffairs.com/185060/cyber-crime/fbi-bank-impersonators-fuel-262m-surge-in-account-takeover-fraud.html",
+          "https://thehackernews.com/2025/11/fbi-reports-262m-in-ato-fraud-as.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "How to See Critical Incidents in Alert Overload: A Guide for SOCs and MSSPs",
+        "description": "This article addresses one of the major challenges for Tier 1 SOC analysts: alert overload. Every day, hundreds, sometimes thousands of alerts need to be triaged, categorized, and escalated. Many are false positives, duplicates, or low-value notifications that obscure the signal, leading to a loss of clarity and a risk of missing critical incidents.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Alert overload is a major contributor to analyst burnout and operational inefficiency within SOCs. It impairs analysts' ability to identify and respond to real threats, increasing detection and response times. This can lead to reduced visibility into actual security events and an overall weakened security posture.",
+        "recommandations": [
+          "Implement alert management and security orchestration systems to automate triage and correlation.",
+          "Develop correlation rules and playbooks to reduce false positives and low-value alerts.",
+          "Utilize threat intelligence to enrich alerts and prioritize incidents based on contextual risk.",
+          "Invest in continuous training for analysts to improve their skills in triage and incident response.",
+          "Optimize SOC tools for better visibility and reduced remediation time.",
+          "Establish an incident response framework to effectively handle critical threats."
+        ],
+        "tags": [
+          "soc",
+          "mssp",
+          "alert_overload",
+          "incident_response",
+          "security_operations",
+          "threat_intelligence",
+          "efficiency"
+        ],
+        "sources": [
+          "/cybersecurity-blog/fixing-alert-overload/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Morphisec warns StealC V2 malware spread through weaponized blender files",
+        "description": "Morphisec revealed that Russian threat actors are spreading the StealC V2 infostealer via weaponized Blender (.blend) files uploaded to 3D model platforms like CGTrader. These files exploit Blender's ability to run hidden Python scripts, which download a PowerShell loader. The loader then deploys StealC V2 and an auxiliary Python stealer, establishes persistence, and uses a Pyramid C2 to retrieve encrypted modules. The expanded StealC V2 version targets data from over 23 browsers, 100 crypto wallet extensions, 15 wallet apps, and messaging/VPN clients.",
+        "threat_actor": "Russia-aligned actors",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1003 (OS Credential Dumping)",
+          "T1555 (Credentials from Password Stores)",
+          "T1083 (File and Directory Discovery)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)"
+        ],
+        "analyse": "This campaign illustrates an innovative infection technique exploiting legitimate 3D software to evade sandbox detection (physical machines with GPUs are preferred). The impact is extensive data theft, targeting browsing credentials, cryptocurrencies, and private communications, with significant financial and privacy implications for victims.",
+        "recommandations": [
+          "Disable the 'Auto Run Python Scripts' feature in Blender unless the file source is absolutely trusted.",
+          "Download 3D models only from trusted platforms and verify their integrity.",
+          "Implement Endpoint Detection and Response (EDR) solutions with advanced behavioral analysis capabilities.",
+          "Educate users on the risks of downloading files from unverified sources.",
+          "Strengthen workstation security, especially those equipped with GPUs that could be targeted for sandbox evasion."
+        ],
+        "tags": [
+          "malware",
+          "stealc_v2",
+          "infostealer",
+          "blender",
+          "3d_models",
+          "python_script",
+          "powershell_loader",
+          "russian_threat_actors",
+          "cryptocurrency_theft",
+          "credential_theft",
+          "T1204.002",
+          "T1059.001",
+          "T1059.006",
+          "T1547.001",
+          "T1071.001",
+          "T1041",
+          "T1003",
+          "T1555",
+          "T1083",
+          "T1027",
+          "T1497"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185052/cyber-crime/stealc-v2-malware-spread-through-weaponized-blender-files.html"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "“Recent Links” feature used by online formatters exposes private data",
+        "description": "A security vulnerability was discovered in the 'Recent Links' feature of online code beautifying tools (e.g., JSONFormatter, CodeBeautify). This feature, intended to facilitate access to saved code snippets, inadvertently exposed sensitive credentials, private keys, and configuration data from banks, government agencies, and technology companies. The pages are unauthenticated and follow predictable URL patterns, facilitating automated scraping by attackers to extract data via exposed API endpoints. Tests confirmed that fake AWS keys were accessed within 48 hours, even after links expired.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1592 (Gather Victim Host Information)",
+          "T1595 (Active Scanning)",
+          "T1530 (Data from Local System)",
+          "T1003 (OS Credential Dumping)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)",
+          "T1580 (Cloud Infrastructure Discovery)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)"
+        ],
+        "analyse": "This exposure is not a direct breach but the exploitation of insecure development practices combined with weak platform protections. The impact is widespread leakage of sensitive data (Active Directory credentials, database connection strings, cloud service keys, API tokens, CI/CD secrets, repository tokens, PII), threatening the confidentiality and integrity of entire enterprise systems. The geographic and strategic risk is global, affecting a wide variety of critical sectors.",
+        "recommandations": [
+          "Establish clear guidelines prohibiting the use of unvetted online tools for handling sensitive code or credentials.",
+          "Promote approved internal alternatives, such as enterprise code review platforms or secure pastebins.",
+          "Educate developers on the risks of pasting secrets into online utilities and reinforce secure coding practices.",
+          "Implement centralized secrets management solutions with automated rotation and leakage monitoring (DLP, threat intelligence).",
+          "Use MDR (Managed Detection and Response) tools to monitor for the abuse of compromised credentials via behavioral analytics."
+        ],
+        "tags": [
+          "data_exposure",
+          "sensitive_data",
+          "credentials",
+          "private_keys",
+          "code_beautifier",
+          "developer_practices",
+          "api_keys",
+          "supply_chain_risk",
+          "T1592",
+          "T1595",
+          "T1530",
+          "T1003",
+          "T1552.001",
+          "T1580",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/recent-links-exposes-private-data",
+          "https://www.bleepingcomputer.com/news/security/code-beautifiers-expose-credentials-from-banks-govt-tech-orgs/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "The AppSec Reset: Building Trust in AI-powered Software",
+        "description": "This article explores the fundamental shift in software creation due to generative AI, where AI agents now orchestrate entire development workflows. This creates new challenges for Application Security (AppSec), as traditional models designed for human-written code are no longer sufficient. The author proposes a new foundation based on three pillars – visibility, prioritization, and adaptive governance – to build trust in AI tools and enable fast, secure development. Essential steps are suggested to extend AppSec to the AI layer.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "AI is a transformative force accelerating software development but introduces significant uncertainty for security teams. The challenge is to maintain security without hindering innovation. The analysis highlights the need to adapt AppSec to understand the probabilistic decisions made by machines and AI-specific risks (prompt injection, hallucinated packages, unauthorized model access). The potential impact is increased application compromise if security practices do not adapt to the pace of AI.",
+        "recommandations": [
+          "Increase visibility into AI systems used, their integration, and involved models.",
+          "Prioritize high-impact AI-related issues (prompt injection, hallucinated packages, unauthorized model access) using context-aware risk scoring.",
+          "Define adaptive governance policies that evolve with the tech stack and automatically adjust as new AI models or agents are introduced.",
+          "Integrate security from the beginning of the software development lifecycle, especially for AI components.",
+          "Train developers and security teams on AI-related risks and best practices.",
+          "Evaluate and select AI tools for development that incorporate security by design."
+        ],
+        "tags": [
+          "appsec",
+          "ai",
+          "generative_ai",
+          "software_development",
+          "security_by_design",
+          "ai_governance",
+          "prompt_injection",
+          "sdlc"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/snyk-appsec-reset/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "The Dual-Use Dilemma of AI: Malicious LLMs",
+        "description": "This Unit 42 article analyzes the dual-use dilemma of AI, focusing on malicious Large Language Models (LLMs) such as WormGPT and KawaiiGPT. These LLMs are designed without ethical constraints to automate cybercrime, from generating sophisticated phishing messages to creating functional malicious code (ransomware, exfiltration scripts, lateral movement tools). WormGPT, based on GPT-J 6B, was trained with malicious datasets, while KawaiiGPT is free and easily accessible, significantly lowering technical barriers to entry for cybercriminals.",
+        "threat_actor": "WormGPT and KawaiiGPT operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "fakebankverify[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1566.003 (Phishing: Spearphishing via Service)",
+          "T1566.004 (Phishing: Spearphishing via Social Media)",
+          "T1598 (Phishing for Information)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1078 (Valid Accounts)",
+          "T1090 (Proxy)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1560 (Archive Collected Data)",
+          "T1003 (OS Credential Dumping)",
+          "T1505.002 (Server Software Component: Web Shell)",
+          "T1550.002 (Use Alternate Authentication Material: Pass the Hash)",
+          "T1550.003 (Use Alternate Authentication Material: Pass the Ticket)"
+        ],
+        "analyse": "The proliferation of malicious LLMs represents a fundamental shift in the threat model, making sophisticated attacks accessible to a broader audience of cybercriminals. This necessitates a re-evaluation of traditional warning signs (poor grammar, sloppy code) and a focus on system resilience. The impact is a potential increase in the volume and sophistication of phishing, ransomware, and lateral movement attacks, affecting the confidentiality, integrity, and availability of data and systems.",
+        "recommandations": [
+          "Implement advanced cybersecurity awareness training to detect AI-generated phishing messages.",
+          "Strengthen multi-factor authentication (MFA) and access controls to counter account takeover attempts.",
+          "Use behavioral detection and AI-driven threat analysis solutions to identify AI-generated malicious activity.",
+          "Maintain constant technological watch on the evolution of offensive AI tools.",
+          "Foster a security culture where incidents are reported promptly and post-mortem analyses are conducted.",
+          "Implement secure development policies and code reviews to minimize AI-exploitable vulnerabilities."
+        ],
+        "tags": [
+          "ai",
+          "llm",
+          "wormgpt",
+          "kawaiigpt",
+          "cybercrime_as_a_service",
+          "phishing",
+          "ransomware",
+          "code_generation",
+          "social_engineering",
+          "dual_use_dilemma",
+          "T1566.001",
+          "T1566.002",
+          "T1566.003",
+          "T1566.004",
+          "T1598",
+          "T1059",
+          "T1059.006",
+          "T1027",
+          "T1041",
+          "T1078",
+          "T1090",
+          "T1070.004",
+          "T1560",
+          "T1003",
+          "T1505.002",
+          "T1550.002",
+          "T1550.003"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "\"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 25)",
+        "description": "The self-replicating 'Shai-Hulud 2.0' worm compromised tens of thousands of GitHub repositories and hundreds of packages in the npm ecosystem via a supply chain attack. The attack begins with a phishing campaign aimed at stealing npm developers' MFA credentials. Once access is gained, the worm deploys a malicious payload that creates a new public GitHub repository 'Shai-Hulud' to exfiltrate stolen secrets, then injects malicious code into other packages maintained by the compromised developer and publishes them. It is suggested that AI (LLM) was used to generate the malicious bash script. The attack aims to steal cloud credentials and can disrupt CI/CD pipelines.",
+        "threat_actor": "Shai-Hulud worm operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "webhook[.]site"
+          ],
+          "FILE_HASH_SHA256": [
+            "dc67467a39b70d1cd4c1f7f7a459b35058163592f4a9e8fb4dffcbba98ef210c",
+            "b74caeaa75e077c99f7d44f46daaf9796a3be43ecf24f2a1fd381844669da777",
+            "46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09",
+            "4b2399646573bb737c4969563303d8ee2e9ddbd1b271f1ca9e35ea78062538db"
+          ],
+          "URL": [
+            "hxxp[:]//webhook[.]site/bb8ca5f6-4175-45d2-b042-fc9ebb8170b7"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1552.001 (Unsecured Credentials: Credential in Files)",
+          "T1580 (Cloud Infrastructure Discovery)",
+          "T1003.003 (OS Credential Dumping: SAM Dump)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.002 (Application Layer Protocol: File Transfer Protocols)",
+          "T1071.003 (Application Layer Protocol: Mail Protocols)"
+        ],
+        "analyse": "This attack represents a significant escalation in software supply chain threats, exploiting the pre-install phase of software dependencies. The impact is twofold: theft of high-value cloud credentials potentially leading to cloud service compromises (data theft, ransomware, cryptomining, deletion of production environments) and potentially crippling entire CI/CD pipelines. The self-replicating nature and AI integration accelerate propagation and increase detection difficulty.",
+        "recommandations": [
+          "Strengthen access and identity controls for developers, particularly by requiring robust MFA and monitoring for unusual activities.",
+          "Regularly audit npm token permissions and GitHub accounts, and revoke/reset compromised credentials.",
+          "Implement security scanners in CI/CD pipelines to detect suspicious code modifications and unsanctioned dependencies.",
+          "Use EDR/XSIAM solutions to prevent the execution of known and unknown malware via behavioral analysis.",
+          "Educate developers on phishing campaigns targeting development credentials.",
+          "Implement network segmentation to limit lateral movement in case of compromise."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "npm",
+          "github",
+          "worm",
+          "shai_hulud",
+          "credential_harvesting",
+          "mfa_phishing",
+          "ci_cd",
+          "ai_generated_code",
+          "cloud_security",
+          "T1195.002",
+          "T1566.002",
+          "T1078",
+          "T1547.001",
+          "T1574.002",
+          "T1059.004",
+          "T1041",
+          "T1552.001",
+          "T1580",
+          "T1003.003",
+          "T1071.001",
+          "T1071.002",
+          "T1071.003"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+        ],
+        "date": "2025-11-26"
+      },
+      {
+        "title": "Year-end approaches: How to maximize your cyber spend",
+        "description": "This article provides advice on how to optimize cybersecurity budget spending as the year-end approaches. It recommends focusing on strengthening identity controls, reducing redundant tools, and investing in outcome-driven engagements. It highlights the importance of targeting credential risks and documenting results to justify next year's budget. Recommendations include acquiring emergency licenses for MFA/PAM, pre-negotiating incident response retainers, and increasing cloud/CDN capacity for traffic spikes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Ineffective budget management can leave critical security gaps open. The article proposes a strategic approach to align spending with real business risk reduction, particularly those related to identities, which are involved in nearly 45% of data breaches. By streamlining tools and investing in response and resilience capabilities, organizations can improve their security posture and better justify future investments.",
+        "recommandations": [
+          "Prioritize investments that reduce identity-related risks, such as strengthening password policies and access controls.",
+          "Consolidate redundant security tools to reduce complexity and costs, redirecting savings to critical areas.",
+          "Pre-negotiate incident response retainers to ensure prompt assistance and favorable rates in emergencies.",
+          "Provision surge capacity (cloud, CDN) to absorb DDoS attacks and traffic spikes.",
+          "Acquire emergency licenses for MFA and Privileged Access Management (PAM) systems to rapidly deploy additional capacity.",
+          "Document security improvements and outcomes to justify future budget requests."
+        ],
+        "tags": [
+          "budget_cyber",
+          "cybersecurity_spend",
+          "identity_management",
+          "credential_risk",
+          "incident_response",
+          "mfa",
+          "pam",
+          "ddos_protection",
+          "cloud_security",
+          "security_strategy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/year-end-approaches-how-to-maximize-your-cyber-spend/"
+        ],
+        "date": "2025-11-26"
+      }
+    ]
+  }
+}
