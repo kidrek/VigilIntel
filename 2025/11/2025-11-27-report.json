@@ -1,0 +1,1796 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification et une diversification des cybermenaces. Les attaques par rançongiciel, notamment celles orchestrées par des groupes comme INC RANSOM et les opérations RaaS émergentes telles que ShinySp1d3r de Scattered LAPSUS$ Hunters, continuent de cibler des infrastructures critiques et des entreprises, soulignant l'impact financier et opérationnel majeur. L'abus de protocoles et de technologies anciennes, comme le NTLM, démontre la persistance des vecteurs d'attaque hérités, avec des techniques de vol d'identifiants et d'élévation de privilèges toujours efficaces. La chaîne d'approvisionnement reste un point faible crucial, comme l'illustre la violation de données de Comcast via un fournisseur tiers, ou la compromission des applications Salesforce via Gainsight. L'utilisation de l'ingénierie sociale et du phishing, souvent sous forme de 'malspam' ou de fausses mises à jour, demeure un moyen privilégié pour l'accès initial, comme observé avec SocGholish et Purelogs. De nouvelles tactiques émergent, telles que l'exploitation de fichiers 3D malveillants (Blender) pour diffuser des infostealers (StealC V2) et l'utilisation de vulnérabilités RCE dans des moteurs d'IA (Ray) via des attaques de DNS rebinding, indiquant une adaptation rapide des attaquants aux environnements technologiques modernes, y compris l'IA et l'IoT (botnet ShadowV2). Le secteur public, y compris les entités gouvernementales et les services d'urgence, est particulièrement visé, entraînant des perturbations de services essentiels et des violations de données sensibles. L'état général des menaces est marqué par une grande agilité des acteurs malveillants, une exploitation continue des faiblesses humaines et techniques, et un paysage de vulnérabilités constant, nécessitant une veille et une défense continues et adaptatives.",
+      "date": "2025-11-27"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Scattered LAPSUS$ Hunters (SLSH)",
+        "secteur": "Multiples (technologie, télécommunications, services financiers, commerce de détail, hôtellerie, énergie)",
+        "modop": "Ingénierie sociale, voice phishing, recrutement d'insiders, exploitation de la chaîne d'approvisionnement, rançongiciel (ShinySp1d3r RaaS), exfiltration de données, extorsion de masse.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extorsion",
+          "insider_threat",
+          "supply_chain_attack",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/",
+          "https://unit42.paloaltonetworks.com/new-shinysp1d3r-ransomware/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "INC RANSOM",
+        "secteur": "Gouvernement (local), Sécurité publique, Santé (passé)",
+        "modop": "Attaque par rançongiciel, chiffrement de fichiers, exfiltration et vente de données, extorsion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extorsion",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185075/cyber-crime/emergency-alerts-go-dark-after-cyberattack-on-onsolve-codered/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "BlindEagle",
+        "secteur": "Entités latino-américaines (Colombie), Gouvernement, Judiciaire",
+        "modop": "Phishing, exploitation de vulnérabilités (ex: CVE-2024-43451 MSHTML via fichiers .url), livraison de RAT (Remcos RAT), vol de portefeuilles de cryptomonnaies.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "espionage",
+          "financial_crime",
+          "phishing",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "Head Mare",
+        "secteur": "Fabrication, Éducation, Gouvernement",
+        "modop": "Phishing, exploitation de vulnérabilités (ex: CVE-2024-43451 via fichiers .url), mouvement latéral, élévation de privilèges (outils Impacket).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "phishing",
+          "vulnerability_exploitation",
+          "lateral_movement",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "RomCom (GRU Unit 29155, Storm-0978, UNC2596)",
+        "secteur": "Ingénierie civile (US), Entités liées à l'Ukraine",
+        "modop": "Distribution de charges utiles (Mythic Agent) via SocGholish (fausses mises à jour de navigateur), injection JavaScript malveillante, reconnaissance PowerShell.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "nation_state",
+          "espionage",
+          "malware_delivery",
+          "socgholish",
+          "mythic_agent"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "SocGholish (TA569)",
+        "secteur": "Multiples",
+        "modop": "Injection JavaScript dans des sites web compromis, affichage de fausses mises à jour de navigateur, distribution de malwares (Mythic Agent, Raspberry Robin, ransomware).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware_delivery",
+          "fake_updates",
+          "initial_access_broker"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "Water Gamayun",
+        "secteur": "Réseaux de grande valeur stratégique (non spécifié)",
+        "modop": "Cyber espionnage, exploitation de vulnérabilité zero-day (MSC EvilTwin/CVE-2025-26633) dans Windows MMC, injection de code PowerShell masqué, vol d'identifiants.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "cyber_espionage",
+          "zero_day_exploit",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/water-gamayun-weaponizes-msc-eviltwin-zero-day-for-stealthy-backdoor-attacks/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Éducation supérieure",
+        "modop": "Exploitation de vulnérabilités zero-day (Oracle E-Business Suite), exfiltration de données, extorsion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extorsion",
+          "zero_day_exploit",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@technadu/115617238833644037"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Diplomatie",
+        "theme": "Conflit armé, Négociations de paix",
+        "description": "Le plan de paix proposé par Donald Trump pour l'Ukraine, révisé à 19 points, reprend les grandes lignes de l'accord avorté d'Istanbul (2022) : renonciation de Kiev au Donbass et à la Crimée, non-entrée dans l'OTAN, levée des sanctions, etc. Ce plan révèle un basculement du rapport de forces au sein du camp occidental, marginalisant l'Europe, et met en lumière les pressions sur Kiev (scandale de corruption, poussée russe, aide américaine menacée). Les Européens se résignent à une paix potentiellement plus favorable à la Russie, cherchant à l'améliorer à la marge, car Kiev ne peut plus gagner la guerre seule et l'aide américaine à long terme n'est pas garantie. Le plan implique l'Europe pour les garanties de sécurité et le financement de la reconstruction.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "etats_unis",
+          "europe",
+          "negociations_paix",
+          "conflit_arme"
+        ],
+        "sources": [
+          "https://www.iris-france.org/paix-ou-renoncement-le-plan-trump-et-limpasse-ukrainienne/",
+          "https://www.iris-france.org/faire-face-a-un-monde-de-crises-avec-alain-bauer/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Défense, Industrie militaire, Diplomatie",
+        "theme": "Vente d'armement, Alliances stratégiques",
+        "description": "Le Royaume-Uni a signé un accord avec la Turquie pour la vente de 20 chasseurs-bombardiers Eurofighter Typhoon (Tranche 4) pour environ 7 milliards de dollars, avec des livraisons prévues en 2030. La Turquie discute également l'achat de 24 Eurofighter d'occasion au Qatar et à Oman. Cette acquisition vise à moderniser la flotte aérienne turque face au vieillissement de ses F-4E et F-16, et en réponse à son éviction du programme F-35 américain (suite à l'achat de S-400 russes). L'accord, qui pourrait inclure des transferts de technologies, renforce les capacités de l'OTAN et la relation stratégique turco-britannique, tout en soulevant des questions sur la capacité de l'UE à s'équiper en matériel européen et les implications politiques de la vente d'armement de 5ème génération à un pays non-membre de l'UE.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "turquie",
+          "royaume_uni",
+          "defense",
+          "eurofighter",
+          "otan",
+          "industrie_militaire"
+        ],
+        "sources": [
+          "https://www.iris-france.org/vente-de-20-eurofighter-a-la-turquie-contexte-et-consequences-industrielles-et-politiques/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Énergie, Diplomatie, Non-prolifération",
+        "theme": "Coopération nucléaire civile, Chaîne d'approvisionnement",
+        "description": "Les États-Unis et l'Arabie Saoudite ont conclu une série d'accords sur la coopération stratégique, de défense et économique, incluant la coopération dans le secteur nucléaire civil et la sécurisation des chaînes d'approvisionnement en uranium et minéraux critiques. L'accord vise à positionner les entreprises américaines comme partenaires privilégiés de l'Arabie Saoudite dans le nucléaire civil, en adhérant à des normes strictes de non-prolifération. Bien que l'Arabie Saoudite ait des réserves d'uranium limitées et n'ait pas d'installation d'enrichissement prévue, les implications stratégiques sont significatives. Il s'agit de contrer l'influence croissante de la Russie et de la Chine dans le secteur nucléaire mondial et de renforcer les normes de non-prolifération dans une région sensible, en particulier au regard des inquiétudes liées au programme nucléaire iranien.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "arabie_saoudite",
+          "nucleaire",
+          "non_proliferation",
+          "chaine_approvisionnement",
+          "iran"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/us-saudi-nuclear-deal-supply-chain-and-non-proliferation-implications"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Application de la loi, Diplomatie",
+        "theme": "Lutte contre le crime organisé, Sanctions",
+        "description": "L'utilisation croissante de sanctions ciblées (gel des avoirs, interdictions de voyager) contre le crime organisé transnational est une tendance mondiale. Le Royaume-Uni a mis en place un régime de sanctions contre les réseaux de passeurs, et l'UE envisage des mesures similaires. Ces sanctions sont des outils de politique étrangère, mais leur efficacité nécessite une meilleure compréhension de leur impact sur des modèles criminels variés (cybercriminalité russe, trafic de drogue, droits de l'homme). La coopération des pays où sont basées les cibles et la construction de coalitions entre États sont cruciales pour leur succès dans un ordre international fragmenté.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "crime_organise",
+          "sanctions",
+          "cybercriminalite",
+          "trafic_humain",
+          "diplomatie"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/disrupting-organised-crime-if-you-cant-beat-them-sanction-them"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Télécommunications, Services financiers (tiers)",
+        "victime": "Comcast (via FBCS, un fournisseur tiers)",
+        "description": "Comcast a été condamné à une amende de 1,5 million de dollars par la FCC suite à une violation de données survenue en février 2024 chez son fournisseur FBCS. L'incident a exposé les informations personnelles de près de 275 000 clients, incluant noms, adresses, numéros de sécurité sociale, dates de naissance et numéros de compte Comcast. Comcast a nié toute faute, affirmant que FBCS était contractuellement responsable de la sécurité.",
+        "tags": [
+          "violation",
+          "breach",
+          "comcast",
+          "fbcs",
+          "telecommunications",
+          "fournisseur_tiers",
+          "donnees_personnelles",
+          "ssn",
+          "amende_reglementaire"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/comcast-to-pay-15-million-fine-after-a-vendor-data-breach-affecting-270-000-customers/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Gouvernement (local), Sécurité publique",
+        "victime": "OnSolve CodeRED (plateforme d'alerte d'urgence)",
+        "description": "Une cyberattaque contre la plateforme d'alerte d'urgence OnSolve CodeRED a perturbé les services pour les agences gouvernementales, de police et de pompiers américaines. Le groupe INC RANSOM a revendiqué l'attaque, affirmant avoir chiffré des fichiers et mis en vente des données utilisateurs (noms, adresses, emails, numéros de téléphone, mots de passe de compte) après le refus d'une rançon de 100 000 $. La ville d'University Park, Texas, a été affectée, confirmant une compromission de données mais sans impact sur ses propres systèmes.",
+        "tags": [
+          "violation",
+          "breach",
+          "onsolve_codered",
+          "inc_ransom",
+          "gouvernement_local",
+          "securite_publique",
+          "alerte_urgence",
+          "ransomware",
+          "exfiltration_donnees",
+          "mots_de_passe"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185075/cyber-crime/emergency-alerts-go-dark-after-cyberattack-on-onsolve-codered/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Éducation supérieure",
+        "victime": "Dartmouth College",
+        "description": "Dartmouth College a confirmé une violation de données après que le groupe de rançongiciel Clop a divulgué des fichiers prétendument volés via une vulnérabilité zero-day dans Oracle E-Business Suite. Au moins 1 494 individus ont été affectés, avec potentiellement plus à mesure que les notifications s'étendent. Les données incluaient des noms, des numéros de sécurité sociale (SSN) et des détails financiers.",
+        "tags": [
+          "violation",
+          "breach",
+          "dartmouth_college",
+          "clop",
+          "education_superieure",
+          "oracle_e_business_suite",
+          "zero_day",
+          "donnees_personnelles",
+          "ssn",
+          "donnees_financieres"
+        ],
+        "sources": [
+          "https://infosec.exchange/@technadu/115617238833644037"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Services d'immigration",
+        "victime": "Gestiona Tu Visa LLC",
+        "description": "Gestiona Tu Visa LLC a exposé 67 Go de données d'immigrants, incluant 49 000 fichiers de formulaires DS-160, des passeports et des contrats clients. Les autorités (CISA, ICE, Orlando Police) ont été notifiées en octobre, mais aucune entité n'a encore pris la responsabilité ou répondu publiquement concernant la gestion de ces données.",
+        "tags": [
+          "violation",
+          "breach",
+          "gestiona_tu_visa_llc",
+          "immigration",
+          "donnees_personnelles",
+          "passeports",
+          "formulaires_ds160"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115618185527729126",
+          "https://infosec.exchange/@chum1ng0/115617955210618302"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Administration gouvernementale",
+        "victime": "Inconnu (en Thaïlande)",
+        "description": "Une violation de données à confiance faible/moyenne a été signalée, ciblant le secteur de l'administration gouvernementale en Thaïlande. Les détails spécifiques de la victime ne sont pas connus à ce stade.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement_thailande",
+          "administration",
+          "donnees_gouvernementales"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115618484232988925",
+          "https://infosec.exchange/@darkwebsonar/115617776722119846"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "secteur": "Organisations à but non lucratif et social",
+        "victime": "centros de integración juvenil (Mexique)",
+        "description": "Une violation de données à faible confiance a été signalée, ciblant 'centros de integración juvenil', une organisation à but non lucratif et sociale au Mexique.",
+        "tags": [
+          "violation",
+          "breach",
+          "mexique",
+          "non_profit",
+          "organisation_sociale"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115617540631562689"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-62593",
+        "cvss": 9.4,
+        "product": "Ray (moteur d'IA)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) via attaque de DNS Rebinding dans les navigateurs Safari et Firefox, due à une protection insuffisante contre les attaques par navigateur (User-Agent vérifié de manière inadéquate). Permet aux attaquants d'exécuter du code arbitraire sur le cluster Ray.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ray_ai",
+          "rce",
+          "dns_rebinding",
+          "authentification",
+          "firefox",
+          "safari",
+          "ia"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62593",
+          "https://securityonline.info/critical-ray-ai-flaw-exposes-devs-via-safari-firefox-cve-2025-62593/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-34351",
+        "cvss": 9.3,
+        "product": "Anyscale Ray v2.52.0",
+        "description": "Configuration par défaut non sécurisée où l'authentification basée sur les jetons pour les interfaces de gestion de Ray est désactivée par défaut. Un attaquant distant avec accès réseau peut soumettre des tâches et exécuter du code arbitraire sur le cluster Ray.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "anyscale_ray",
+          "rce",
+          "authentification",
+          "configuration_insecure",
+          "ia"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34351"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-13316",
+        "cvss": 9.3,
+        "product": "Twonky Server",
+        "description": "Vulnérabilité d'accès API incorrecte permettant un contournement d'authentification. En utilisant le préfixe '/nmc/rpc', les attaquants peuvent accéder à l'API web sans authentification et obtenir les identifiants administrateur en texte clair.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "twonky_server",
+          "authentification_bypass",
+          "api",
+          "media_server",
+          "zero_day"
+        ],
+        "sources": [
+          "https://securityonline.info/zero-day-warning-unpatched-twonky-server-flaws-expose-media-to-total-takeover/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2024-5539",
+        "cvss": 9.2,
+        "product": "ALC WebCTRL et Carrier i-Vu",
+        "description": "Vulnérabilité de contournement de contrôle d'accès permettant à un acteur malveillant d'exposer des informations sensibles via le serveur web d'automatisation des bâtiments.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "alc_webctrl",
+          "carrier_i_vu",
+          "acces_control_bypass",
+          "informations_sensibles",
+          "batiments_intelligents"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-5539"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-0657",
+        "cvss": 8.8,
+        "product": "Automated Logic et Carrier i-Vu Gen5 router",
+        "description": "Faiblesse dans le routeur permettant l'envoi de paquets malformés via le réseau BACnet MS/TP, entraînant un état de défaillance du dispositif qui nécessite un cycle d'alimentation manuel pour restaurer la visibilité réseau.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "automated_logic",
+          "carrier_i_vu",
+          "bacnet",
+          "denial_of_service",
+          "iot",
+          "systemes_de_controle"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-0657"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-0658",
+        "cvss": 8.7,
+        "product": "Automated Logic et Carrier Zone Controllers",
+        "description": "Vulnérabilité dans les contrôleurs de zone via le protocole BACnet qui provoque le plantage de l'appareil. L'envoi d'un deuxième paquet peut le rendre définitivement insensible jusqu'à un cycle d'alimentation manuel.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "automated_logic",
+          "carrier_zone_controllers",
+          "bacnet",
+          "denial_of_service",
+          "iot",
+          "systemes_de_controle"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-0658"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-66031",
+        "cvss": 8.7,
+        "product": "node-forge",
+        "description": "Vulnérabilité de récursion incontrôlée dans les versions 1.3.1 et antérieures, permettant aux attaquants non authentifiés de créer des structures ASN.1 profondes qui déclenchent une analyse récursive illimitée, menant à un déni de service (DoS) via l'épuisement de la pile lors de l'analyse d'entrées DER non fiables.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "node_forge",
+          "denial_of_service",
+          "asn1",
+          "bibliotheque_cryptographique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66031"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2020-36874",
+        "cvss": 8.7,
+        "product": "ACE SECURITY WIP-90113 HD cameras",
+        "description": "Vulnérabilité de divulgation de configuration non authentifiée dans le point de terminaison /web/cgi-bin/hi3510/backup.cgi, permettant le téléchargement à distance d'une sauvegarde de configuration compressée sans authentification. La sauvegarde peut inclure des identifiants administratifs et d'autres paramètres sensibles de l'appareil.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ace_security",
+          "camera_ip",
+          "authentification_bypass",
+          "divulgation_informations",
+          "iot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-36874"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "T√©l√©phones mobiles : √âtat de la menace depuis 2015",
+        "description": "Ce document du CERT-FR (CERTFR-2025-CTI-012) présente les vecteurs techniques exploités par les attaquants pour compromettre les téléphones mobiles et dresse un aperçu des menaces pesant sur les utilisateurs, avec des exemples d'attaques observées en France et à l'étranger. L'augmentation des usages personnels et professionnels des mobiles en fait une cible privilégiée. Le rapport met en évidence les différentes méthodes de compromission des appareils et de leurs données.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'analyse met en lumière la criticité croissante de la sécurité des appareils mobiles. Leur omniprésence dans la vie personnelle et professionnelle les rend des cibles de choix, ouvrant la porte à l'espionnage, au vol de données, et à l'accès non autorisé aux réseaux d'entreprise. L'impact est transversal, touchant aussi bien les individus que les organisations, avec des conséquences potentielles sur la vie privée, la sécurité économique et même nationale.",
+        "recommandations": [
+          "Mettre en œuvre des mesures de sécurité renforcées pour les appareils mobiles.",
+          "Sensibiliser les utilisateurs aux vecteurs d'attaque spécifiques aux mobiles (phishing, applications malveillantes).",
+          "Appliquer les mises à jour de sécurité des systèmes d'exploitation et des applications.",
+          "Utiliser des solutions de gestion des appareils mobiles (MDM) pour les flottes professionnelles.",
+          "Sauvegarder régulièrement les données importantes."
+        ],
+        "tags": [
+          "cert_fr",
+          "mobile",
+          "menace_mobile",
+          "vecteur_attaque",
+          "securite_mobile"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-012/",
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-013/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Cyberattaques majeures en novembre 2025 : XWorm, JSGuLdr Loader, Phoenix Backdoor, menaces mobiles et plus encore",
+        "description": "Ce rapport d'ANY.RUN résume les activités cybercriminelles dominantes de novembre 2025, incluant les infostealers, les chargeurs et les campagnes ciblées. Il détaille l'utilisation du chargement en mémoire basé sur PNG pour déployer XWorm, et JSGuLdr, un chargeur JavaScript-to-PowerShell en trois étapes poussant PhantomStealer. Le rapport mentionne également de nouvelles activités ciblant Windows, Linux et Android, comme des hijackers via chargeurs, des cryptotrojan via Tor, des rançongiciels Linux en Go, des infostealers MaaS et une campagne de propagation via WhatsApp.",
+        "threat_actor": "XWorm operators, JSGuLdr operators, PhantomStealer operators, Phoenix Backdoor operators, Mobile threat operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1055 - Process Injection",
+          "T1059.001 - PowerShell",
+          "T1059.003 - JavaScript",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1486 - Data Encrypted for Impact"
+        ],
+        "analyse": "L'analyse souligne une forte adaptation des menaces multiplateformes (Windows, Linux, Android) et une complexification des méthodes de livraison (chargement en mémoire, loaders multi-étapes). La présence de rançongiciels pour Linux et d'infostealers en tant que service (MaaS) indique une professionnalisation et une diversification des revenus des acteurs malveillants. Les campagnes de propagation via des applications de messagerie (WhatsApp) mettent en évidence l'exploitation des canaux de communication courants pour atteindre les utilisateurs. L'impact est large, allant du vol de données personnelles et professionnelles à la perturbation des systèmes critiques.",
+        "recommandations": [
+          "Mettre en place des solutions EDR/XDR pour la détection des activités de chargement en mémoire et des scripts malveillants.",
+          "Renforcer la surveillance des menaces spécifiques à Linux et Android.",
+          "Éduquer les utilisateurs sur les risques liés aux fichiers suspects et aux campagnes de phishing via messageries.",
+          "Appliquer une segmentation réseau robuste pour limiter la propagation en cas d'infection.",
+          "Mettre à jour régulièrement les systèmes d'exploitation et les logiciels de sécurité."
+        ],
+        "tags": [
+          "any_run",
+          "malware",
+          "ransomware",
+          "infostealer",
+          "botnet",
+          "android_threats",
+          "linux_malware",
+          "windows_malware"
+        ],
+        "sources": [
+          "/cybersecurity-blog/major-cyber-attacks-november-2025/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Danger caché en 3D : des fichiers Blender malveillants libèrent l'infostealer StealC V2",
+        "description": "Morphisec a alerté sur une campagne de malware ciblant les artistes 3D, les développeurs de jeux et les amateurs. Depuis au moins six mois, des acteurs malveillants intègrent du code malveillant dans des fichiers de modèles 3D (ex: scripts Rig_Ui.py) distribués sur des plateformes comme CGTrader. Si l'option 'Auto Run Python Scripts' est activée dans Blender, le malware StealC V2 s'exécute silencieusement en arrière-plan dès l'ouverture du fichier. Cette méthode permet de contourner les sandboxes et environnements virtuels, StealC V2 volant un large éventail de données sensibles.",
+        "threat_actor": "Acteurs russophones associés à la distribution de StealC",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.002 - Malicious File",
+          "T1566.001 - Spearphishing Attachment",
+          "T1059 - Command and Scripting Interpreter",
+          "T1059.006 - Python",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Cette campagne illustre une tactique innovante ciblant une niche spécifique (communauté 3D/gaming) via des vecteurs de confiance (plateformes de modèles 3D). L'exploitation des fonctionnalités d'exécution automatique de scripts et le ciblage de machines puissantes (avec GPU) utilisées pour le rendu contournent les défenses traditionnelles. L'impact est un vol massif de données personnelles, de mots de passe, d'informations financières et de cryptomonnaies, affectant gravement la vie privée et la sécurité financière des victimes, et potentiellement compromettant leurs comptes en ligne et identités numériques.",
+        "recommandations": [
+          "Désactiver la fonction 'Auto Run Python Scripts' dans Blender ou être extrêmement vigilant lors de l'ouverture de fichiers 3D provenant de sources non fiables.",
+          "Installer des solutions de sécurité de pointe avec détection comportementale et anti-infostealer.",
+          "Former les utilisateurs sur les risques liés aux téléchargements de contenu généré par l'utilisateur (UGC).",
+          "Utiliser l'authentification multifacteur (MFA) pour tous les comptes en ligne importants.",
+          "Surveiller l'activité réseau pour détecter les communications C2 d'infostealers."
+        ],
+        "tags": [
+          "blender",
+          "stealcv2",
+          "infostealer",
+          "malware_campaign",
+          "3d_artists",
+          "game_developers",
+          "supply_chain_attack",
+          "python_scripts"
+        ],
+        "sources": [
+          "https://securityonline.info/hidden-danger-in-3d-malicious-blender-files-unleash-stealс-v2-infostealer/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Dissection d'une nouvelle chaîne de malspam distribuant l'infostealer Purelogs",
+        "description": "Le Centre de recherche AISI a publié un rapport analysant une nouvelle chaîne de malspam distribuant l'infostealer Purelogs. Cette campagne utilise des documents Office 'piégés', des objets OLE intégrés et des chaînes d'exploitation complexes pour diffuser le malware à grande échelle. Le malspam exploite l'urgence, la curiosité et la confiance humaine en se faisant passer pour des communications légitimes (alertes de sécurité, documents financiers). Purelogs a ciblé des utilisateurs à l'échelle mondiale, y compris en Italie.",
+        "threat_actor": "Opérateurs de Purelogs infostealer",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 - Spearphishing Attachment",
+          "T1204.002 - Malicious File",
+          "T1059 - Command and Scripting Interpreter",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1003 - OS Credential Dumping"
+        ],
+        "analyse": "Le rapport met en évidence l'efficacité persistante du malspam comme vecteur d'infection initial, malgré les progrès des technologies de protection des endpoints. La sophistication des techniques d'évasion (documents Office, objets OLE, chaînes d'exploitation) démontre une capacité des attaquants à contourner les défenses. L'impact principal est le vol d'informations sensibles (identifiants, données financières, données personnelles), compromettant la sécurité organisationnelle et personnelle. Ces attaques ont un potentiel géographique mondial, affectant divers secteurs.",
+        "recommandations": [
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour l'accès aux comptes de messagerie et services critiques.",
+          "Exiger une vérification téléphonique ou une double confirmation pour les paiements de grande valeur.",
+          "Assurer une formation continue des employés sur le phishing et les techniques d'ingénierie sociale.",
+          "Déployer des solutions d'analyse de la messagerie électronique avancées pour détecter le malspam.",
+          "Configurer les logiciels bureautiques pour désactiver l'exécution automatique des macros et objets OLE."
+        ],
+        "tags": [
+          "malspam",
+          "purelogs",
+          "infostealer",
+          "phishing",
+          "microsoft_office",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185066/cyber-crime/dissecting-a-new-malspam-chain-delivering-purelogs-infostealer.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Exploitation du NTLM, une technologie ancienne mais de nouvelles vulnérabilités en 2025",
+        "description": "Kaspersky Securelist détaille les faiblesses persistantes du protocole d'authentification NTLM de Microsoft, toujours exploité en 2025 malgré sa dépréciation. L'article couvre les attaques de retransmission NTLM, de vol d'identifiants et de mouvement latéral. Il identifie des vulnérabilités récentes comme CVE-2024-43451 (MSHTML via fichiers .url), CVE-2025-24054 (fuite de hash NTLM via fichiers .library-ms) et CVE-2025-33073 (réflexion NTLM pour l'élévation de privilèges). Des groupes comme BlindEagle et Head Mare exploitent activement ces failles pour distribuer des malwares (Remcos RAT, AveMaria Trojan) et escalader les privilèges.",
+        "threat_actor": "BlindEagle, Head Mare",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "185.227.82.72"
+          ]
+        },
+        "mitre_ttps": [
+          "T1558.003 - NTLM Relay",
+          "T1558.004 - NTLM Hash Capture",
+          "T1566 - Phishing",
+          "T1068 - Exploitation for Privilege Escalation",
+          "T1078.001 - Valid Accounts",
+          "T1021.002 - SMB/Windows Admin Shares",
+          "T1204.002 - Malicious File",
+          "T1059.001 - PowerShell",
+          "T1059.003 - Windows Command Shell"
+        ],
+        "analyse": "L'analyse met en évidence le risque persistant lié aux protocoles d'authentification hérités. La réticence à désactiver NTLM pour des raisons de compatibilité crée une surface d'attaque significative. Les attaquants exploitent des vulnérabilités 'anciennes mais nouvelles' qui, combinées à l'ingénierie sociale, permettent le vol d'identifiants, le mouvement latéral et l'élévation de privilèges au sein des réseaux d'entreprise. L'impact est la compromission des systèmes Windows, l'accès non autorisé aux ressources réseau et la distribution de malwares, affectant potentiellement de nombreux secteurs (gouvernement, fabrication, éducation).",
+        "recommandations": [
+          "Désactiver NTLM ou limiter son utilisation aux systèmes critiques, et auditer strictement les dépendances.",
+          "Activer la signature SMB et LDAP pour prévenir les attaques de retransmission NTLM.",
+          "Mettre en œuvre l'Extended Protection for Authentication (EPA) pour lier l'authentification NTLM aux sessions TLS/SSL.",
+          "Surveiller les journaux d'authentification NTLM pour détecter les modèles anormaux.",
+          "Appliquer régulièrement les correctifs de sécurité Microsoft."
+        ],
+        "tags": [
+          "ntlm",
+          "vulnerabilite",
+          "authentification",
+          "relais_ntlm",
+          "hash_leakage",
+          "privilege_escalation",
+          "lateral_movement",
+          "windows",
+          "malware_delivery",
+          "apt"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Pour la première fois, une charge utile RomCom a été observée distribuée via SocGholish",
+        "description": "Arctic Wolf Labs a observé les acteurs malveillants de RomCom, potentiellement liés à l'unité 29155 du GRU russe (Storm-0978/UNC2596), utilisant le chargeur SocGholish pour livrer le Mythic Agent à une entreprise d'ingénierie civile américaine. C'est la première fois que RomCom est vu utilisant SocGholish. SocGholish (TA569) se propage par injection JavaScript sur des sites web compromis et utilise de fausses invites de mise à jour de navigateur pour inciter les utilisateurs à télécharger des charges utiles. L'exécution de la charge utile a eu lieu environ 10 minutes après l'exploitation initiale, le malware étant déguisé en msedge.dll et configuré pour s'exécuter uniquement sur la victime ciblée.",
+        "threat_actor": "RomCom (GRU Unit 29155, Storm-0978, UNC2596), SocGholish (TA569)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [],
+          "URL": [],
+          "DOMAIN": [
+            "mythic_c2_domain_1",
+            "mythic_c2_domain_2",
+            "mythic_c2_domain_3",
+            "mythic_c2_domain_4",
+            "mythic_c2_domain_5",
+            "mythic_c2_domain_6",
+            "mythic_c2_domain_7"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Spearphishing Link",
+          "T1189 - Drive-by Compromise",
+          "T1204.001 - User Execution: Malicious Link",
+          "T1059.003 - JavaScript",
+          "T1059.001 - PowerShell",
+          "T1071.001 - Web Protocols",
+          "T1021.001 - Remote Desktop Protocol",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Cette campagne révèle une évolution des tactiques de RomCom, un acteur étatique pro-russe, en adoptant SocGholish comme vecteur d'accès initial. L'utilisation de fausses mises à jour de navigateur par SocGholish, souvent via des sites légitimes compromis, prouve l'efficacité de l'ingénierie sociale et la difficulté pour les utilisateurs de distinguer le vrai du faux. Le ciblage spécifique (entreprise d'ingénierie civile liée à l'Ukraine) confirme l'alignement géopolitique de RomCom. L'impact inclut l'accès initial au réseau, la reconnaissance et le déploiement de malwares de suivi, menaçant la sécurité des données et des opérations des organisations ciblées.",
+        "recommandations": [
+          "Former les utilisateurs à reconnaître les fausses mises à jour de navigateur et les tactiques d'ingénierie sociale.",
+          "Maintenir les systèmes d'exploitation et navigateurs à jour pour corriger les vulnérabilités exploitées par SocGholish.",
+          "Déployer des solutions de filtrage web et de détection des scripts malveillants.",
+          "Implémenter une surveillance active des communications C2 et des activités de reconnaissance sur le réseau.",
+          "Utiliser des outils d'analyse dynamique des menaces pour identifier les malwares polyvalents comme Mythic Agent."
+        ],
+        "tags": [
+          "romcom",
+          "socgholish",
+          "mythic_agent",
+          "malware_delivery",
+          "fake_updates",
+          "initial_access",
+          "gru",
+          "nation_state",
+          "ukraine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Nouvelle menace : le botnet ShadowV2, basé sur Mirai, a utilisé une panne AWS comme opportunité de test",
+        "description": "Un nouveau botnet basé sur Mirai, nommé 'ShadowV2', a été observé ciblant des dispositifs IoT (D-Link, TP-Link et autres) en exploitant des vulnérabilités connues (ex: CVE-2024-10915). Fortinet a repéré cette activité lors d'une panne majeure d'AWS en octobre, bien que non liée, suggérant une phase de test. ShadowV2 est capable d'attaques par déni de service distribué (DDoS) via les protocoles UDP, TCP et HTTP. Les attaques provenaient de l'adresse IP 198[.]199[.]72[.]27 et ont ciblé des routeurs, NAS et DVR dans sept secteurs, dont le gouvernement, la technologie et la fabrication.",
+        "threat_actor": "Inconnu",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-10915"
+          ],
+          "IPv4": [
+            "198.199.72.27"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1498 - Slow Down/Degrade Service",
+          "T1498.001 - DNS Flood",
+          "T1498.002 - HTTP Flood",
+          "T1498.003 - UDP Flood",
+          "T1498.004 - TCP Flood",
+          "T1071.001 - Web Protocols"
+        ],
+        "analyse": "L'émergence de ShadowV2 démontre la persistance des botnets basés sur Mirai et l'attrait des dispositifs IoT vulnérables pour les attaquants. L'utilisation d'une panne de grande envergure pour un 'test' suggère une planification stratégique ou opportuniste des opérations. La capacité de lancer des attaques DDoS sur divers protocoles indique un potentiel de perturbation significatif pour les entreprises et les services en ligne. Le ciblage multi-secteurs de ShadowV2 souligne l'impact généralisé de ces menaces, pouvant affecter des infrastructures critiques et des services essentiels.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs de sécurité pour les vulnérabilités connues des appareils IoT (routeurs, NAS, DVR).",
+          "Segmenter les réseaux pour isoler les dispositifs IoT et limiter la propagation des botnets.",
+          "Mettre en place des protections DDoS robustes au niveau du périmètre du réseau.",
+          "Changer les identifiants par défaut sur tous les dispositifs IoT.",
+          "Surveiller le trafic réseau pour détecter les activités suspectes liées aux botnets et aux attaques DDoS."
+        ],
+        "tags": [
+          "shadowv2",
+          "botnet",
+          "mirai",
+          "iot",
+          "ddos",
+          "vulnerability_exploitation",
+          "aws",
+          "d_link",
+          "tp_link"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-shadowv2-botnet-malware-used-aws-outage-as-a-test-opportunity/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Systèmes informatiques de plusieurs conseils de Londres perturbés par une cyberattaque",
+        "description": "Plusieurs conseils municipaux de Londres, dont le Royal Borough of Kensington and Chelsea (RBKC) et le Westminster City Council (WCC), ainsi que le London Borough of Hammersmith and Fulham (LBHF), ont subi des perturbations de services suite à une cyberattaque. L'incident pourrait avoir exposé des données de résidents. Les autorités, avec l'aide d'experts en cybersécurité et du National Cyber Security Centre (NCSC), enquêtent activement pour protéger les systèmes et restaurer les services. L'attaque est considérée comme une intrusion sérieuse avec des signes de mouvement latéral.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1565 - Data Destruction",
+          "T1486 - Data Encrypted for Impact",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1078 - Valid Accounts",
+          "T1021 - Remote Services"
+        ],
+        "analyse": "Cette cyberattaque contre les administrations locales de Londres met en évidence la vulnérabilité des infrastructures publiques partagées et l'impact direct sur les services essentiels aux citoyens. La potentielle compromission des données sensibles des résidents (dossiers sociaux, identité, logement, finances) soulève de sérieuses préoccupations en matière de vie privée et de confiance publique. L'attaque, caractérisée par des perturbations et des signes d'intrusion profonde, souligne la nécessité d'une résilience cyber robuste dans le secteur public, où les conséquences peuvent être vastes et affecter des populations entières.",
+        "recommandations": [
+          "Renforcer la sécurité des systèmes IT partagés entre les entités publiques.",
+          "Mettre en place des plans de réponse aux incidents cyber robustes et testés régulièrement.",
+          "Améliorer la segmentation réseau pour limiter le mouvement latéral en cas de compromission.",
+          "Évaluer et renforcer la protection des données sensibles des citoyens.",
+          "Collaborer étroitement avec les centres nationaux de cybersécurité (NCSC) et des experts externes pour la gestion des incidents."
+        ],
+        "tags": [
+          "cyberattaque",
+          "london_councils",
+          "rbkc",
+          "wcc",
+          "lbhf",
+          "secteur_public",
+          "disruption_services",
+          "donnees_citoyens",
+          "mouvement_lateral"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/multiple-london-councils-it-systems-disrupted-by-cyberattack/",
+          "https://securityaffairs.com/185086/security/multiple-london-councils-faced-a-cyberattack.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Rencontre avec Rey, l'administrateur de 'Scattered Lapsus$ Hunters' et 'The Golden Scale: 'Tis the Season for Unwanted Gifts'",
+        "description": "Des rapports de KrebsOnSecurity et Unit 42 détaillent les activités du groupe cybercriminel 'Scattered LAPSUS$ Hunters' (SLSH), une fusion de Scattered Spider, LAPSUS$ et ShinyHunters. SLSH est connu pour ses extorsions de masse et ses vols de données auprès de grandes entreprises (Toyota, FedEx, Disney/Hulu, UPS), souvent via l'ingénierie sociale (voice phishing ciblant Salesforce). Le groupe recrute des insiders, avec un incident impliquant un employé de CrowdStrike. SLSH a lancé son propre RaaS, ShinySp1d3r, et son administrateur, 'Rey' (identifié comme Saif Al-Din Khader), a une histoire liée à Hellcat et BreachForums. Des failles de sécurité personnelles de Rey ont exposé ses propres identifiants, permettant son identification.",
+        "threat_actor": "Scattered LAPSUS$ Hunters (SLSH), Scattered Spider, LAPSUS$, ShinyHunters, Rey (Saif Al-Din Khader), Hellcat, Bling Libra",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "cybero5tdev@proton.me"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Spearphishing Voice",
+          "T1566.001 - Spearphishing Attachment",
+          "T1078.001 - Valid Accounts",
+          "T1567 - Exfiltration Over Web Service",
+          "T1486 - Data Encrypted for Impact",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1558.001 - Steal or Forge Kerberos Tickets",
+          "T1003.003 - LSASS Memory",
+          "T1558.003 - NTLM Relay"
+        ],
+        "analyse": "Ces rapports brossent le tableau d'un groupe cybercriminel très actif, adaptatif et aux motivations financières, exploitant des tactiques variées allant de l'ingénierie sociale avancée aux attaques de la chaîne d'approvisionnement et au recrutement d'insiders. L'émergence d'un service RaaS et EaaS (Extortion as a Service) indique une expansion de leur modèle commercial et un potentiel d'impact accru. L'identification de 'Rey' met en lumière la nature des acteurs derrière ces groupes, souvent de jeunes individus avec des historiques d'activité cybercriminelle. L'impact est significatif sur les grandes entreprises, avec des vols de données massifs et des extorsions, et une perturbation de la confiance dans les systèmes de gestion client comme Salesforce.",
+        "recommandations": [
+          "Renforcer la sensibilisation à l'ingénierie sociale et au voice phishing (formez les employés à vérifier les demandes, même de 'services internes').",
+          "Mettre en œuvre des contrôles d'accès stricts et une surveillance des activités des fournisseurs tiers et des applications connectées (Salesforce, Gainsight).",
+          "Développer des programmes robustes de gestion des menaces internes et de détection des insiders.",
+          "Déployer des solutions de sécurité avancées pour la détection et la prévention des rançongiciels (EDR, XDR).",
+          "Appliquer des politiques de mots de passe robustes et l'authentification multifacteur (MFA) étendue."
+        ],
+        "tags": [
+          "scattered_lapsus_hunters",
+          "slsh",
+          "shinyhunters",
+          "scattered_spider",
+          "lapsus",
+          "extorsion",
+          "ransomware",
+          "raas",
+          "social_engineering",
+          "insider_threat",
+          "supply_chain_attack",
+          "salesforce"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/",
+          "https://unit42.paloaltonetworks.com/new-shinysp1d3r-ransomware/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Water Gamayun arme le zero-day 'MSC EvilTwin' pour des attaques furtives de backdoor",
+        "description": "Zscaler Threat Hunting a découvert une campagne d'espionnage sophistiquée menée par le groupe APT russophone Water Gamayun, qui exploite une vulnérabilité zero-day (MSC EvilTwin, CVE-2025-26633) dans Windows MMC pour infiltrer des réseaux de grande valeur. L'attaque commence par une recherche web inoffensive, puis injecte du code malveillant dans mmc.exe, exécutant des payloads PowerShell masqués. L'objectif principal est la collecte de renseignements stratégiques et le vol d'identifiants, avec une OPSEC élevée pour éviter la détection.",
+        "threat_actor": "Water Gamayun (APT russophone)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-26633"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Spearphishing Link",
+          "T1195.002 - Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
+          "T1059.001 - PowerShell",
+          "T1573 - Encrypted Channel",
+          "T1003 - OS Credential Dumping",
+          "T1021 - Remote Services",
+          "T1055 - Process Injection",
+          "T1027 - Obfuscated Files or Information"
+        ],
+        "analyse": "La campagne de Water Gamayun démontre la sophistication croissante des APT et leur capacité à exploiter des vulnérabilités zero-day dans des composants système de confiance (Windows MMC) pour rester furtifs. L'utilisation d'une chaîne d'exécution complexe et de techniques d'obfuscation avancées rend la détection extrêmement difficile, permettant aux attaquants d'opérer des missions d'espionnage et de vol d'identifiants sur des durées prolongées. L'impact est critique pour les organisations ciblées, avec un risque de perte de propriété intellectuelle, de secrets industriels ou de données gouvernementales sensibles.",
+        "recommandations": [
+          "Mettre en place des solutions de détection et réponse EDR/XDR avancées capables de détecter les injections de code et les activités PowerShell suspectes.",
+          "Renforcer la surveillance des menaces zero-day et des campagnes APT ciblées.",
+          "Mettre à jour régulièrement les systèmes d'exploitation Windows et appliquer les correctifs de sécurité dès leur disponibilité.",
+          "Limiter l'exécution de scripts PowerShell et autres interpréteurs sur les postes de travail.",
+          "Mettre en œuvre des contrôles d'accès stricts et une authentification multifacteur pour toutes les ressources critiques."
+        ],
+        "tags": [
+          "water_gamayun",
+          "apt",
+          "cyber_espionage",
+          "zero_day",
+          "windows_mmc",
+          "powershell",
+          "credential_theft",
+          "russie"
+        ],
+        "sources": [
+          "https://securityonline.info/water-gamayun-weaponizes-msc-eviltwin-zero-day-for-stealthy-backdoor-attacks/"
+        ],
+        "date": "2025-11-27"
+      }
+    ]
+  },
+  "EN": {
+    "Transversal Analysis": {
+      "analysis": "The analyzed period reveals an intensification and diversification of cyber threats. Ransomware attacks, notably those orchestrated by groups like INC RANSOM and emerging RaaS operations such as ShinySp1d3r by Scattered LAPSUS$ Hunters, continue to target critical infrastructure and businesses, highlighting significant financial and operational impact. The abuse of old protocols and technologies, like NTLM, demonstrates the persistence of legacy attack vectors, with credential theft and privilege escalation techniques remaining effective. The supply chain remains a crucial weak point, as illustrated by Comcast's data breach via a third-party vendor, or the compromise of Salesforce applications via Gainsight. The use of social engineering and phishing, often in the form of 'malspam' or fake updates, remains a preferred method for initial access, as observed with SocGholish and Purelogs. New tactics are emerging, such as the exploitation of malicious 3D files (Blender) to spread infostealers (StealC V2) and the use of RCE vulnerabilities in AI engines (Ray) via DNS rebinding attacks, indicating attackers' rapid adaptation to modern technological environments, including AI and IoT (ShadowV2 botnet). The public sector, including government entities and emergency services, is particularly targeted, leading to disruptions of essential services and sensitive data breaches. The overall state of threats is marked by high agility from malicious actors, continuous exploitation of human and technical weaknesses, and a constant vulnerability landscape, requiring continuous and adaptive monitoring and defense.",
+      "date": "2025-11-27"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "name": "Scattered LAPSUS$ Hunters (SLSH)",
+        "sector": "Multiple (Technology, Telecommunications, Financial Services, Retail, Hospitality, Energy)",
+        "modus_operandi": "Social engineering, voice phishing, insider recruitment, supply chain exploitation, ransomware (ShinySp1d3r RaaS), data exfiltration, mass extortion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion",
+          "insider_threat",
+          "supply_chain_attack",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/",
+          "https://unit42.paloaltonetworks.com/new-shinysp1d3r-ransomware/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "INC RANSOM",
+        "sector": "Government (local), Public Safety, Healthcare (past)",
+        "modus_operandi": "Ransomware attack, file encryption, data exfiltration and sale, extortion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185075/cyber-crime/emergency-alerts-go-dark-after-cyberattack-on-onsolve-codered/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "BlindEagle",
+        "sector": "Latin American entities (Colombia), Government, Judicial",
+        "modus_operandi": "Phishing, vulnerability exploitation (e.g., CVE-2024-43451 MSHTML via .url files), RAT delivery (Remcos RAT), cryptocurrency wallet theft.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "espionage",
+          "financial_crime",
+          "phishing",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "Head Mare",
+        "sector": "Manufacturing, Education, Government",
+        "modus_operandi": "Phishing, vulnerability exploitation (e.g., CVE-2024-43451 via .url files), lateral movement, privilege escalation (Impacket tools).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "phishing",
+          "vulnerability_exploitation",
+          "lateral_movement",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "RomCom (GRU Unit 29155, Storm-0978, UNC2596)",
+        "sector": "Civil Engineering (US), Ukraine-linked entities",
+        "modus_operandi": "Payload distribution (Mythic Agent) via SocGholish (fake browser updates), malicious JavaScript injection, PowerShell reconnaissance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "nation_state",
+          "espionage",
+          "malware_delivery",
+          "socgholish",
+          "mythic_agent"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "SocGholish (TA569)",
+        "sector": "Multiple",
+        "modus_operandi": "JavaScript injection into compromised websites, displaying fake browser update prompts, distributing malware (Mythic Agent, Raspberry Robin, ransomware).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware_delivery",
+          "fake_updates",
+          "initial_access_broker"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "Water Gamayun",
+        "sector": "High-value strategic networks (unspecified)",
+        "modus_operandi": "Cyber espionage, zero-day vulnerability exploitation (MSC EvilTwin/CVE-2025-26633) in Windows MMC, hidden PowerShell payload injection, credential theft.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "cyber_espionage",
+          "zero_day_exploit",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/water-gamayun-weaponizes-msc-eviltwin-zero-day-for-stealthy-backdoor-attacks/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "name": "Clop",
+        "sector": "Higher Education",
+        "modus_operandi": "Zero-day vulnerability exploitation (Oracle E-Business Suite), data exfiltration, extortion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion",
+          "zero_day_exploit",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@technadu/115617238833644037"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Summary of Geopolitical News": [
+      {
+        "sector": "Defense, Diplomacy",
+        "theme": "Armed Conflict, Peace Negotiations",
+        "description": "Donald Trump's proposed peace plan for Ukraine, revised to 19 points, reuses the main outlines of the failed Istanbul agreement (2022): Kyiv's renunciation of Donbas and Crimea, non-entry into NATO, lifting of sanctions, etc. This plan reveals a shift in the balance of power within the Western camp, marginalizing Europe, and highlights the pressures on Kyiv (corruption scandal, Russian advance, threatened US aid). Europeans are resigned to a peace potentially more favorable to Russia, seeking marginal improvements, as Kyiv can no longer win the war alone and long-term US aid is not guaranteed. The plan involves Europe for security guarantees and funding for Ukraine's reconstruction.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "united_states",
+          "europe",
+          "peace_negotiations",
+          "armed_conflict"
+        ],
+        "sources": [
+          "https://www.iris-france.org/paix-ou-renoncement-le-plan-trump-et-limpasse-ukrainienne/",
+          "https://www.iris-france.org/faire-face-a-un-monde-de-crises-avec-alain-bauer/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Defense, Military Industry, Diplomacy",
+        "theme": "Arms Sale, Strategic Alliances",
+        "description": "The UK has signed an agreement with Turkey for the sale of 20 Eurofighter Typhoon fighter-bombers (Tranche 4) for approximately $7 billion, with initial deliveries expected in 2030. Turkey is also discussing the purchase of 24 second-hand Eurofighters from Qatar and Oman. This acquisition aims to modernize the Turkish air fleet in response to its aging F-4E and F-16s, and following its exclusion from the US F-35 program (after purchasing Russian S-400 systems). The deal, which could include technology transfers, strengthens NATO capabilities and the Turkish-British strategic relationship, while raising questions about the EU's ability to equip itself with European material and the political implications of selling 5th-generation armament to a non-EU country.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "turkey",
+          "united_kingdom",
+          "defense",
+          "eurofighter",
+          "nato",
+          "military_industry"
+        ],
+        "sources": [
+          "https://www.iris-france.org/vente-de-20-eurofighter-a-la-turquie-contexte-et-consequences-industrielles-et-politiques/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Energy, Diplomacy, Non-Proliferation",
+        "theme": "Civil Nuclear Cooperation, Supply Chain",
+        "description": "The US and Saudi Arabia have concluded a series of agreements on strategic, defense, and economic cooperation, including civil nuclear sector cooperation and securing critical uranium and mineral supply chains. The deal aims to position American companies as preferred partners for Saudi Arabia in civil nuclear power, adhering to strict non-proliferation standards. Although Saudi Arabia has limited uranium reserves and no planned enrichment facilities, the strategic implications are significant. This aims to counter growing Russian and Chinese influence in the global nuclear sector and reinforce non-proliferation norms in a sensitive region, especially regarding concerns about the Iranian nuclear program.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "saudi_arabia",
+          "nuclear",
+          "non_proliferation",
+          "supply_chain",
+          "iran"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/us-saudi-nuclear-deal-supply-chain-and-non-proliferation-implications"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Law Enforcement, Diplomacy",
+        "theme": "Fight against Organized Crime, Sanctions",
+        "description": "The increasing use of targeted sanctions (asset freezes, travel bans) against transnational organized crime is a global trend. The UK has implemented a sanctions regime against people-smuggling networks, and the EU is considering similar measures. These sanctions are foreign policy tools, but their effectiveness requires a better understanding of their impact on various criminal models (Russian cybercrime, drug trafficking, human rights abuse). Cooperation from countries where targets are based and building coalitions between states are crucial for their success in a fragmented international order.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "organized_crime",
+          "sanctions",
+          "cybercrime",
+          "human_trafficking",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/disrupting-organised-crime-if-you-cant-beat-them-sanction-them"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Summary of Data Breaches": [
+      {
+        "sector": "Telecommunications, Financial Services (third-party)",
+        "victim": "Comcast (via FBCS, a third-party vendor)",
+        "description": "Comcast was fined $1.5 million by the FCC following a data breach in February 2024 at its vendor FBCS. The incident exposed personal information of nearly 275,000 customers, including names, addresses, Social Security Numbers, dates of birth, and Comcast account numbers. Comcast denied wrongdoing, stating FBCS was contractually responsible for security.",
+        "tags": [
+          "violation",
+          "breach",
+          "comcast",
+          "fbcs",
+          "telecommunications",
+          "third_party_vendor",
+          "personal_data",
+          "ssn",
+          "regulatory_fine"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/comcast-to-pay-15-million-fine-after-a-vendor-data-breach-affecting-270-000-customers/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Government (local), Public Safety",
+        "victim": "OnSolve CodeRED (emergency alert platform)",
+        "description": "A cyberattack on the OnSolve CodeRED emergency alert platform disrupted services for US state and local government, police, and fire agencies. The INC RANSOM group claimed responsibility, stating they encrypted files and put user data (names, addresses, emails, phone numbers, account passwords) up for sale after a $100,000 ransom refusal. The City of University Park, Texas, was affected, confirming data compromise but no impact on its own systems.",
+        "tags": [
+          "violation",
+          "breach",
+          "onsolve_codered",
+          "inc_ransom",
+          "local_government",
+          "public_safety",
+          "emergency_alert",
+          "ransomware",
+          "data_exfiltration",
+          "passwords"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185075/cyber-crime/emergency-alerts-go-dark-after-cyberattack-on-onsolve-codered/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Higher Education",
+        "victim": "Dartmouth College",
+        "description": "Dartmouth College confirmed a data breach after the Clop ransomware group leaked files allegedly stolen via an Oracle E-Business Suite zero-day vulnerability. At least 1,494 individuals were affected, with potentially more as notifications expand. Data included names, SSNs, and some financial details.",
+        "tags": [
+          "violation",
+          "breach",
+          "dartmouth_college",
+          "clop",
+          "higher_education",
+          "oracle_e_business_suite",
+          "zero_day",
+          "personal_data",
+          "ssn",
+          "financial_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@technadu/115617238833644037"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Immigration Services",
+        "victim": "Gestiona Tu Visa LLC",
+        "description": "Gestiona Tu Visa LLC exposed 67 GB of immigrant data, including 49,000 DS-160 form files, passports, and client contracts. Authorities (CISA, ICE, Orlando Police) were notified in October, but no entity has yet taken responsibility or publicly responded regarding the handling of this data.",
+        "tags": [
+          "violation",
+          "breach",
+          "gestiona_tu_visa_llc",
+          "immigration",
+          "personal_data",
+          "passports",
+          "ds160_forms"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115618185527729126",
+          "https://infosec.exchange/@chum1ng0/115617955210618302"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Government Administration",
+        "victim": "Unknown (in Thailand)",
+        "description": "A low/medium confidence data breach has been reported, targeting the government administration sector in Thailand. Specific victim details are unknown at this stage.",
+        "tags": [
+          "violation",
+          "breach",
+          "thailand_government",
+          "administration",
+          "government_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115618484232988925",
+          "https://infosec.exchange/@darkwebsonar/115617776722119846"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "sector": "Non-profit and Social Organizations",
+        "victim": "centros de integración juvenil (Mexico)",
+        "description": "A low-confidence data breach has been reported, targeting 'centros de integración juvenil', a non-profit and social organization in Mexico.",
+        "tags": [
+          "violation",
+          "breach",
+          "mexico",
+          "non_profit",
+          "social_organization"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115617540631562689"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Summary of Vulnerabilities": [
+      {
+        "cve_id": "CVE-2025-62593",
+        "cvss": 9.4,
+        "product": "Ray (AI engine)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability via DNS Rebinding attack in Safari and Firefox browsers, due to insufficient protection against browser-based attacks (User-Agent inadequately checked). Allows attackers to execute arbitrary code on the Ray cluster.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ray_ai",
+          "rce",
+          "dns_rebinding",
+          "authentication",
+          "firefox",
+          "safari",
+          "ai"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-62593",
+          "https://securityonline.info/critical-ray-ai-flaw-exposes-devs-via-safari-firefox-cve-2025-62593/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-34351",
+        "cvss": 9.3,
+        "product": "Anyscale Ray v2.52.0",
+        "description": "Insecure default configuration where token-based authentication for Ray management interfaces is disabled by default. A remote attacker with network access can submit jobs and execute arbitrary code on the Ray cluster.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "anyscale_ray",
+          "rce",
+          "authentication",
+          "insecure_configuration",
+          "ai"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34351"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-13316",
+        "cvss": 9.3,
+        "product": "Twonky Server",
+        "description": "Improper API access vulnerability allowing authentication bypass. By using the '/nmc/rpc' prefix, attackers can access the web API without authentication and obtain plaintext administrator credentials.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "twonky_server",
+          "authentication_bypass",
+          "api",
+          "media_server",
+          "zero_day"
+        ],
+        "sources": [
+          "https://securityonline.info/zero-day-warning-unpatched-twonky-server-flaws-expose-media-to-total-takeover/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2024-5539",
+        "cvss": 9.2,
+        "product": "ALC WebCTRL and Carrier i-Vu",
+        "description": "Access Control Bypass vulnerability allowing a malicious actor to expose sensitive information via the web-based building automation server.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "alc_webctrl",
+          "carrier_i_vu",
+          "access_control_bypass",
+          "sensitive_information",
+          "smart_buildings"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-5539"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-0657",
+        "cvss": 8.8,
+        "product": "Automated Logic and Carrier i-Vu Gen5 router",
+        "description": "Weakness in the router allowing malformed packets to be sent via the BACnet MS/TP network, leading to a device fault state that requires a manual power cycle to restore network visibility.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "automated_logic",
+          "carrier_i_vu",
+          "bacnet",
+          "denial_of_service",
+          "iot",
+          "control_systems"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-0657"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-0658",
+        "cvss": 8.7,
+        "product": "Automated Logic and Carrier Zone Controllers",
+        "description": "Vulnerability in zone controllers via BACnet protocol that causes the device to crash. Sending a second packet can render it permanently unresponsive until a manual power cycle is performed.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "automated_logic",
+          "carrier_zone_controllers",
+          "bacnet",
+          "denial_of_service",
+          "iot",
+          "control_systems"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-0658"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2025-66031",
+        "cvss": 8.7,
+        "product": "node-forge",
+        "description": "Uncontrolled Recursion vulnerability in versions 1.3.1 and below, enabling unauthenticated attackers to craft deep ASN.1 structures that trigger unbounded recursive parsing, leading to a Denial-of-Service (DoS) via stack exhaustion when parsing untrusted DER inputs.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "node_forge",
+          "denial_of_service",
+          "asn1",
+          "cryptographic_library"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66031"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "cve_id": "CVE-2020-36874",
+        "cvss": 8.7,
+        "product": "ACE SECURITY WIP-90113 HD cameras",
+        "description": "Unauthenticated configuration disclosure vulnerability in the /web/cgi-bin/hi3510/backup.cgi endpoint, allowing remote download of a compressed configuration backup without authentication. The backup may include administrative credentials and other sensitive device settings.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ace_security",
+          "ip_camera",
+          "authentication_bypass",
+          "information_disclosure",
+          "iot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-36874"
+        ],
+        "date": "2025-11-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Dissecting a new malspam chain delivering Purelogs infostealer",
+        "description": "The AISI Research Center published a report analyzing a new malspam chain distributing the Purelogs infostealer. This campaign uses 'weaponized' Office documents, embedded OLE objects, and complex exploit chains to widely disseminate the malware. The malspam exploits human urgency, curiosity, and trust by masquerading as legitimate communications (security alerts, financial documents). Purelogs has targeted users globally, including in Italy.",
+        "threat_actor": "Purelogs infostealer operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 - Spearphishing Attachment",
+          "T1204.002 - Malicious File",
+          "T1059 - Command and Scripting Interpreter",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1003 - OS Credential Dumping"
+        ],
+        "analysis": "The report highlights the persistent effectiveness of malspam as an initial infection vector, despite advancements in endpoint protection technologies. The sophistication of evasion techniques (Office documents, OLE objects, exploit chains) demonstrates attackers' ability to bypass defenses. The primary impact is the theft of sensitive information (credentials, financial data, personal data), compromising organizational and personal security. These attacks have global geographical potential, affecting various sectors.",
+        "recommandations": [
+          "Implement multi-factor authentication (MFA) for email accounts and critical services.",
+          "Require phone verification or double confirmation for high-value payments.",
+          "Ensure continuous employee training on phishing and social engineering techniques.",
+          "Deploy advanced email security solutions for malspam detection.",
+          "Configure office software to disable automatic execution of macros and OLE objects."
+        ],
+        "tags": [
+          "malspam",
+          "purelogs",
+          "infostealer",
+          "phishing",
+          "microsoft_office",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185066/cyber-crime/dissecting-a-new-malspam-chain-delivering-purelogs-infostealer.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "For the first time, a RomCom payload has been observed being distributed via SocGholish",
+        "description": "Arctic Wolf Labs observed RomCom threat actors, potentially linked to Russia's GRU Unit 29155 (Storm-0978/UNC2596), using the SocGholish loader to deliver the Mythic Agent to a U.S. civil engineering firm. This marks the first time RomCom has been observed using SocGholish. SocGholish (TA569) spreads by injecting malicious JavaScript into compromised websites and uses fake browser update prompts to trick users into downloading payloads. Payload execution occurred approximately 10 minutes after initial exploitation, with the malware disguised as msedge.dll and configured to run only on the targeted victim.",
+        "threat_actor": "RomCom (GRU Unit 29155, Storm-0978, UNC2596), SocGholish (TA569)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mythic_c2_domain_1",
+            "mythic_c2_domain_2",
+            "mythic_c2_domain_3",
+            "mythic_c2_domain_4",
+            "mythic_c2_domain_5",
+            "mythic_c2_domain_6",
+            "mythic_c2_domain_7"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Spearphishing Link",
+          "T1189 - Drive-by Compromise",
+          "T1204.001 - User Execution: Malicious Link",
+          "T1059.003 - JavaScript",
+          "T1059.001 - PowerShell",
+          "T1071.001 - Web Protocols",
+          "T1021.001 - Remote Desktop Protocol",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analysis": "This campaign reveals an evolution in RomCom's tactics, a pro-Russian state actor, by adopting SocGholish as an initial access vector. SocGholish's use of fake browser updates, often via compromised legitimate websites, proves the effectiveness of social engineering and the difficulty for users to distinguish legitimate from malicious prompts. The specific targeting (civil engineering firm linked to Ukraine) confirms RomCom's geopolitical alignment. The impact includes initial network access, reconnaissance, and deployment of follow-on malware, threatening the data security and operations of targeted organizations.",
+        "recommandations": [
+          "Train users to recognize fake browser updates and social engineering tactics.",
+          "Keep operating systems and browsers updated to patch vulnerabilities exploited by SocGholish.",
+          "Deploy web filtering and malicious script detection solutions.",
+          "Implement active monitoring of C2 communications and reconnaissance activities on the network.",
+          "Use dynamic threat analysis tools to identify versatile malware like Mythic Agent."
+        ],
+        "tags": [
+          "romcom",
+          "socgholish",
+          "mythic_agent",
+          "malware_delivery",
+          "fake_updates",
+          "initial_access",
+          "gru",
+          "nation_state",
+          "ukraine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185084/security/for-the-first-time-a-romcom-payload-has-been-observed-being-distributed-via-socgholish.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Hidden Danger in 3D: Malicious Blender Files Unleash StealC V2 Infostealer",
+        "description": "Morphisec issued a critical alert regarding a sophisticated malware campaign targeting 3D artists, game developers, and hobbyists. For at least six months, threat actors have been embedding malicious code into 3D model files (e.g., Rig_Ui.py scripts) distributed on platforms like CGTrader. If 'Auto Run Python Scripts' is enabled in Blender, the StealC V2 infostealer executes silently in the background upon file opening. This method bypasses many sandboxes and virtual environments, with StealC V2 stealing a wide range of sensitive data.",
+        "threat_actor": "Russian-speaking threat actors associated with StealC distribution",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.002 - Malicious File",
+          "T1566.001 - Spearphishing Attachment",
+          "T1059 - Command and Scripting Interpreter",
+          "T1059.006 - Python",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analysis": "This campaign illustrates an innovative tactic targeting a specific niche (3D/gaming community) via trusted vectors (3D model platforms). Exploiting auto-run script functionalities and targeting powerful machines (with GPUs) used for rendering bypasses traditional defenses. The impact is a massive theft of personal data, passwords, financial information, and cryptocurrencies, severely affecting victims' privacy and financial security, and potentially compromising their online accounts and digital identities.",
+        "recommandations": [
+          "Disable 'Auto Run Python Scripts' in Blender or be extremely cautious when opening 3D files from untrusted sources.",
+          "Install advanced security solutions with behavioral detection and anti-infostealer capabilities.",
+          "Educate users on the risks associated with downloading user-generated content (UGC).",
+          "Use multi-factor authentication (MFA) for all important online accounts.",
+          "Monitor network activity to detect C2 communications from infostealers."
+        ],
+        "tags": [
+          "blender",
+          "stealcv2",
+          "infostealer",
+          "malware_campaign",
+          "3d_artists",
+          "game_developers",
+          "supply_chain_attack",
+          "python_scripts"
+        ],
+        "sources": [
+          "https://securityonline.info/hidden-danger-in-3d-malicious-blender-files-unleash-stealc-v2-infostealer/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Major Cyber Attacks in November 2025: XWorm, JSGuLdr Loader, Phoenix Backdoor, Mobile Threats, and More",
+        "description": "This ANY.RUN report summarizes dominant cybercriminal activities in November 2025, including infostealers, loaders, and targeted campaigns. It details the use of PNG-based in-memory loading to deploy XWorm, and JSGuLdr, a three-stage JavaScript-to-PowerShell loader pushing PhantomStealer. The report also mentions new activity across Windows, Linux, and Android, such as loader-enabled hijackers, Tor-based cryptotrojan communication, Linux ransomware in Go, MaaS stealers, and a WhatsApp-propagating campaign.",
+        "threat_actor": "XWorm operators, JSGuLdr operators, PhantomStealer operators, Phoenix Backdoor operators, Mobile threat operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1055 - Process Injection",
+          "T1059.001 - PowerShell",
+          "T1059.003 - JavaScript",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1486 - Data Encrypted for Impact"
+        ],
+        "analysis": "The analysis highlights a strong adaptation of cross-platform threats (Windows, Linux, Android) and a complexification of delivery methods (in-memory loading, multi-stage loaders). The presence of Linux ransomware and infostealers as a service (MaaS) indicates professionalization and diversification of revenue streams for malicious actors. Campaigns spreading via messaging apps (WhatsApp) underscore the exploitation of common communication channels to reach users. The impact is broad, ranging from personal and professional data theft to the disruption of critical systems.",
+        "recommandations": [
+          "Implement EDR/XDR solutions for detecting in-memory loading activities and malicious scripts.",
+          "Strengthen monitoring for Linux and Android-specific threats.",
+          "Educate users about the risks associated with suspicious files and phishing campaigns via messengers.",
+          "Apply robust network segmentation to limit propagation in case of infection.",
+          "Regularly update operating systems and security software."
+        ],
+        "tags": [
+          "any_run",
+          "malware",
+          "ransomware",
+          "infostealer",
+          "botnet",
+          "android_threats",
+          "linux_malware",
+          "windows_malware"
+        ],
+        "sources": [
+          "/cybersecurity-blog/major-cyber-attacks-november-2025/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Meet Rey, the Admin of ‘Scattered Lapsus$ Hunters’ and 'The Golden Scale: 'Tis the Season for Unwanted Gifts'",
+        "description": "Reports from KrebsOnSecurity and Unit 42 detail the activities of the cybercriminal group 'Scattered LAPSUS$ Hunters' (SLSH), an amalgamation of Scattered Spider, LAPSUS$, and ShinyHunters. SLSH is known for mass extortion and data theft from major corporations (Toyota, FedEx, Disney/Hulu, UPS), often via social engineering (voice phishing targeting Salesforce). The group recruits insiders, with an incident involving a CrowdStrike employee. SLSH launched its own RaaS, ShinySp1d3r, and its administrator, 'Rey' (identified as Saif Al-Din Khader), has a history linked to Hellcat and BreachForums. Rey's personal security flaws exposed his own credentials, leading to his identification.",
+        "threat_actor": "Scattered LAPSUS$ Hunters (SLSH), Scattered Spider, LAPSUS$, ShinyHunters, Rey (Saif Al-Din Khader), Hellcat, Bling Libra",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "cybero5tdev@proton.me"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Spearphishing Voice",
+          "T1566.001 - Spearphishing Attachment",
+          "T1078.001 - Valid Accounts",
+          "T1567 - Exfiltration Over Web Service",
+          "T1486 - Data Encrypted for Impact",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1558.001 - Steal or Forge Kerberos Tickets",
+          "T1003.003 - LSASS Memory",
+          "T1558.003 - NTLM Relay"
+        ],
+        "analysis": "These reports paint a picture of a highly active, adaptive, and financially motivated cybercriminal group, exploiting varied tactics from advanced social engineering to supply chain attacks and insider recruitment. The emergence of a RaaS and EaaS (Extortion as a Service) indicates an expansion of their business model and increased impact potential. 'Rey''s identification sheds light on the nature of actors behind these groups, often young individuals with histories of cybercriminal activity. The impact is significant on large corporations, with massive data thefts and extortions, and a disruption of trust in customer management systems like Salesforce.",
+        "recommandations": [
+          "Strengthen awareness of social engineering and voice phishing (train employees to verify requests, even from 'internal services').",
+          "Implement strict access controls and monitor activities of third-party vendors and connected applications (Salesforce, Gainsight).",
+          "Develop robust insider threat management programs and detection capabilities.",
+          "Deploy advanced security solutions for ransomware detection and prevention (EDR, XDR).",
+          "Apply strong password policies and extended multi-factor authentication (MFA)."
+        ],
+        "tags": [
+          "scattered_lapsus_hunters",
+          "slsh",
+          "shinyhunters",
+          "scattered_spider",
+          "lapsus",
+          "extortion",
+          "ransomware",
+          "raas",
+          "social_engineering",
+          "insider_threat",
+          "supply_chain_attack",
+          "salesforce"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/11/meet-rey-the-admin-of-scattered-lapsus-hunters/",
+          "https://unit42.paloaltonetworks.com/new-shinysp1d3r-ransomware/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Mobile phones: Threat landscape since 2015",
+        "description": "This CERT-FR document (CERTFR-2025-CTI-013) presents the technical vectors exploited by attackers to compromise mobile phones and provides an overview of the threats facing users, with examples of attacks observed in France and abroad. The increasing personal and professional use of mobile phones makes them a prime target, opening the door to espionage, data theft, and unauthorized access to corporate networks. The report highlights various methods of compromising devices and their data.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analysis": "The analysis underscores the increasing criticality of mobile device security. Their omnipresence in personal and professional life makes them prime targets, opening the door to espionage, data theft, and unauthorized access to corporate networks. The impact is transversal, affecting both individuals and organizations, with potential consequences for privacy, economic, and even national security.",
+        "recommandations": [
+          "Implement enhanced security measures for mobile devices.",
+          "Raise user awareness of mobile-specific attack vectors (phishing, malicious applications).",
+          "Apply security updates for operating systems and applications.",
+          "Use Mobile Device Management (MDM) solutions for professional fleets.",
+          "Regularly back up important data."
+        ],
+        "tags": [
+          "cert_fr",
+          "mobile",
+          "mobile_threat",
+          "attack_vector",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-012/",
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-013/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Multiple London councils' IT systems disrupted by cyberattack",
+        "description": "Several London councils, including the Royal Borough of Kensington and Chelsea (RBKC), Westminster City Council (WCC), and London Borough of Hammersmith and Fulham (LBHF), experienced service disruptions following a cyberattack. The incident could have exposed resident data. Authorities, with the help of cybersecurity experts and the National Cyber Security Centre (NCSC), are actively investigating to protect systems and restore services. The attack is considered a serious intrusion with signs of lateral movement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1565 - Data Destruction",
+          "T1486 - Data Encrypted for Impact",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1078 - Valid Accounts",
+          "T1021 - Remote Services"
+        ],
+        "analysis": "This cyberattack on London's local administrations highlights the vulnerability of shared public infrastructures and the direct impact on essential citizen services. The potential compromise of sensitive resident data (social care records, identity, housing, financial details) raises serious privacy and public trust concerns. The attack, characterized by disruptions and signs of deep intrusion, underscores the need for robust cyber resilience in the public sector, where consequences can be widespread and affect entire populations.",
+        "recommandations": [
+          "Strengthen the security of IT systems shared between public entities.",
+          "Implement robust and regularly tested cyber incident response plans.",
+          "Improve network segmentation to limit lateral movement in case of compromise.",
+          "Assess and enhance the protection of sensitive citizen data.",
+          "Collaborate closely with national cybersecurity centers (NCSC) and external experts for incident management."
+        ],
+        "tags": [
+          "cyberattack",
+          "london_councils",
+          "rbkc",
+          "wcc",
+          "lbhf",
+          "public_sector",
+          "service_disruption",
+          "citizen_data",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/multiple-london-councils-it-systems-disrupted-by-cyberattack/",
+          "https://securityaffairs.com/185086/security/multiple-london-councils-faced-a-cyberattack.html"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "New ShadowV2 botnet malware used AWS outage as a test opportunity",
+        "description": "A new Mirai-based botnet malware named 'ShadowV2' has been observed targeting IoT devices (D-Link, TP-Link, and other vendors) with exploits for known vulnerabilities (e.g., CVE-2024-10915). Fortinet spotted this activity during a major AWS outage in October, though unrelated, suggesting a test run. ShadowV2 is capable of Distributed Denial-of-Service (DDoS) attacks over UDP, TCP, and HTTP protocols. Attacks originated from IP address 198[.]199[.]72[.]27 and targeted routers, NAS devices, and DVRs across seven sectors, including government, technology, and manufacturing.",
+        "threat_actor": "Unknown",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-10915"
+          ],
+          "IPv4": [
+            "198.199.72.27"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1498 - Slow Down/Degrade Service",
+          "T1498.001 - DNS Flood",
+          "T1498.002 - HTTP Flood",
+          "T1498.003 - UDP Flood",
+          "T1498.004 - TCP Flood",
+          "T1071.001 - Web Protocols"
+        ],
+        "analysis": "The emergence of ShadowV2 demonstrates the persistence of Mirai-based botnets and the appeal of vulnerable IoT devices for attackers. The use of a large-scale outage for a 'test run' suggests strategic or opportunistic planning of operations. The ability to launch DDoS attacks across various protocols indicates significant disruption potential for businesses and online services. ShadowV2's multi-sector targeting underscores the widespread impact of these threats, potentially affecting critical infrastructures and essential services.",
+        "recommandations": [
+          "Immediately apply security patches for known vulnerabilities in IoT devices (routers, NAS, DVRs).",
+          "Segment networks to isolate IoT devices and limit botnet propagation.",
+          "Implement robust DDoS protections at the network perimeter.",
+          "Change default credentials on all IoT devices.",
+          "Monitor network traffic to detect suspicious activities related to botnets and DDoS attacks."
+        ],
+        "tags": [
+          "shadowv2",
+          "botnet",
+          "mirai",
+          "iot",
+          "ddos",
+          "vulnerability_exploitation",
+          "aws",
+          "d_link",
+          "tp_link"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-shadowv2-botnet-malware-used-aws-outage-as-a-test-opportunity/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Old tech, new vulnerabilities: NTLM abuse, ongoing exploitation in 2025",
+        "description": "Kaspersky Securelist details the persistent weaknesses of Microsoft's NTLM authentication protocol, still exploited in 2025 despite its deprecation. The article covers NTLM relay attacks, credential theft, and lateral movement. It identifies recent vulnerabilities such as CVE-2024-43451 (MSHTML via .url files), CVE-2025-24054 (NTLM hash leak via .library-ms files), and CVE-2025-33073 (NTLM reflection for privilege escalation). Groups like BlindEagle and Head Mare are actively exploiting these flaws to distribute malware (Remcos RAT, AveMaria Trojan) and escalate privileges.",
+        "threat_actor": "BlindEagle, Head Mare",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "185.227.82.72"
+          ]
+        },
+        "mitre_ttps": [
+          "T1558.003 - NTLM Relay",
+          "T1558.004 - NTLM Hash Capture",
+          "T1566 - Phishing",
+          "T1068 - Exploitation for Privilege Escalation",
+          "T1078.001 - Valid Accounts",
+          "T1021.002 - SMB/Windows Admin Shares",
+          "T1204.002 - Malicious File",
+          "T1059.001 - PowerShell",
+          "T1059.003 - Windows Command Shell"
+        ],
+        "analysis": "The analysis highlights the persistent risk associated with legacy authentication protocols. Reluctance to disable NTLM for compatibility reasons creates a significant attack surface. Attackers exploit 'old but new' vulnerabilities that, combined with social engineering, enable credential theft, lateral movement, and privilege escalation within corporate networks. The impact is the compromise of Windows systems, unauthorized access to network resources, and malware distribution, potentially affecting numerous sectors (government, manufacturing, education).",
+        "recommandations": [
+          "Disable NTLM or limit its use to critical systems, and strictly audit dependencies.",
+          "Enable SMB and LDAP signing to prevent NTLM relay attacks.",
+          "Implement Extended Protection for Authentication (EPA) to bind NTLM authentication to TLS/SSL sessions.",
+          "Monitor NTLM authentication logs to detect abnormal patterns.",
+          "Regularly apply Microsoft security patches."
+        ],
+        "tags": [
+          "ntlm",
+          "vulnerability",
+          "authentication",
+          "ntlm_relay",
+          "hash_leakage",
+          "privilege_escalation",
+          "lateral_movement",
+          "windows",
+          "malware_delivery",
+          "apt"
+        ],
+        "sources": [
+          "https://securelist.com/ntlm-abuse-in-2025/118132/"
+        ],
+        "date": "2025-11-27"
+      },
+      {
+        "title": "Water Gamayun Weaponizes “MSC EvilTwin” Zero-Day for Stealthy Backdoor Attacks",
+        "description": "Zscaler Threat Hunting uncovered a sophisticated espionage campaign by the Russian-aligned APT group Water Gamayun, exploiting a zero-day vulnerability (MSC EvilTwin, CVE-2025-26633) in Windows MMC to infiltrate high-value networks. The attack begins with an innocuous web search, then injects malicious code directly into mmc.exe, executing hidden PowerShell payloads. The primary objectives are strategic intelligence gathering and credential theft, with high OPSEC to evade detection.",
+        "threat_actor": "Water Gamayun (Russian-aligned APT)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-26633"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Spearphishing Link",
+          "T1195.002 - Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
+          "T1059.001 - PowerShell",
+          "T1573 - Encrypted Channel",
+          "T1003 - OS Credential Dumping",
+          "T1021 - Remote Services",
+          "T1055 - Process Injection",
+          "T1027 - Obfuscated Files or Information"
+        ],
+        "analysis": "The Water Gamayun campaign demonstrates the increasing sophistication of APTs and their ability to exploit zero-day vulnerabilities in trusted system components (Windows MMC) to remain stealthy. The use of a complex execution chain and advanced obfuscation techniques makes detection extremely difficult, allowing attackers to conduct espionage and credential theft missions for extended periods. The impact is critical for targeted organizations, with a risk of intellectual property loss, industrial secrets, or sensitive government data.",
+        "recommandations": [
+          "Implement advanced EDR/XDR detection and response solutions capable of detecting code injection and suspicious PowerShell activities.",
+          "Strengthen monitoring for zero-day threats and targeted APT campaigns.",
+          "Regularly update Windows operating systems and apply security patches as soon as they become available.",
+          "Limit the execution of PowerShell scripts and other interpreters on workstations.",
+          "Implement strict access controls and multi-factor authentication for all critical resources."
+        ],
+        "tags": [
+          "water_gamayun",
+          "apt",
+          "cyber_espionage",
+          "zero_day",
+          "windows_mmc",
+          "powershell",
+          "credential_theft",
+          "russia"
+        ],
+        "sources": [
+          "https://securityonline.info/water-gamayun-weaponizes-msc-eviltwin-zero-day-for-stealthy-backdoor-attacks/"
+        ],
+        "date": "2025-11-27"
+      }
+    ]
+  }
+}
