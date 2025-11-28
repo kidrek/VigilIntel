@@ -1,0 +1,1298 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber reste très dynamique et complexe, marqué par plusieurs tendances convergentes. Les vulnérabilités de la chaîne d'approvisionnement et des tiers sont omniprésentes, comme en témoigne la brèche de données d'OpenAI via son fournisseur Mixpanel, ainsi que l'exploitation des failles des routeurs ASUS par la campagne Operation WrtHugh, transformant des millions d'appareils IoT en infrastructure proxy. Le secteur de l'IoT continue d'être une cible privilégiée, avec de nouvelles souches de malware comme ShadowV2 exploitant activement les vulnérabilités d'appareils connectés pour créer des botnets. Parallèlement, les protocoles hérités, tel que NTLM, persistent à représenter des risques critiques, permettant des escalades de privilèges et des vols d'identifiants même en 2025. Une pléthore de vulnérabilités critiques (CVSS >= 8) sont régulièrement découvertes, notamment des exécutions de code à distance (RCE) et des contournements d'authentification dans des produits clés comme GitLab, Splunk, Mattermost, NVIDIA, et des systèmes industriels, offrant des voies directes aux attaquants. Sur le plan géopolitique, l'information est de plus en plus utilisée comme une arme, comme illustré par l'offensive informationnelle de la Chine contre le Japon, combinant pression diplomatique, militaire et économique pour influencer la perception et infliger des coûts. Les incidents de violation de données, qu'ils soient le résultat de ransomwares (Asahi), de vulnérabilités sur des plateformes financières (UPBIT) ou de compromissions de longue date (CSDN), demeurent une menace constante pour la confidentialité des informations. Enfin, les avancées en matière de technologies militaires, telles que le drone intercepteur 'Octopus' en Ukraine, montrent une adaptation rapide aux nouvelles menaces dans les conflits armés, soulignant l'intégration croissante de la technologie dans la défense nationale. En conclusion, l'état général des menaces est caractérisé par une intensification des attaques ciblant les maillons faibles de la chaîne numérique (IoT, supply chain), une exploitation persistante des faiblesses fondamentales des systèmes, et une intégration de plus en plus poussée du cyber dans les stratégies géopolitiques globales. La vigilance et l'investissement dans des défenses multicouches et des mises à jour régulières sont plus que jamais essentiels.",
+      "date": "2025-11-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Operation WrtHugh",
+        "secteur": "IoT (routeurs), résidentiel, petites et moyennes entreprises (PME)",
+        "modop": "Exploitation de vulnérabilités connues (contournement d'authentification, injection de commande) dans le service ASUS AiCloud pour l'exécution de commandes arbitraires et le contrôle total des appareils. Conversion des routeurs en infrastructure proxy pour la persistance, l'anonymisation du trafic malveillant et l'espionnage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "OperationWrtHugh",
+          "IoT",
+          "router_exploitation",
+          "command_injection",
+          "authentication_bypass",
+          "proxy_infrastructure",
+          "espionage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/asus-november-2025-security-advisories",
+          "https://securityaffairs.com/185109/iot/new-asus-firmware-patches-critical-aicloud-vulnerability"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "nom": "ShadowV2",
+        "secteur": "Appareils IoT (large, non spécifié)",
+        "modop": "Exploitation active de vulnérabilités dans des appareils IoT pour assembler un botnet et déployer le malware ShadowV2. La campagne a coïncidé avec une perturbation d'AWS.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ShadowV2",
+          "malware",
+          "IoT_botnet",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-exploiting-iot-flaws-to-deployshadowv2/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Environnement, Géopolitique, Économie, Sécurité",
+        "theme": "Le changement climatique comme force structurante de l'ordre international",
+        "description": "Le changement climatique est une tension fondamentale entre l'histoire du vivant et l'histoire du politique. L'humanité a quitté la zone de stabilité de l'Holocène, rendant le système Terre instable. Le réchauffement climatique s'intensifie, faisant du climat une force structurante qui délimite les marges de manœuvre énergétiques, économiques et sécuritaires des États, recomposant ainsi l'ordre international. La survie des sociétés humaines dans des conditions stables est menacée.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "changement_climatique",
+          "environnement",
+          "sécurité_environnementale",
+          "économie",
+          "société",
+          "relations_internationales"
+        ],
+        "sources": [
+          "https://www.iris-france.org/geopolitique-du-changement-climatique/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Géopolitique, Défense, Sécurité régionale",
+        "theme": "Escalade des tensions et violations de cessez-le-feu au Liban",
+        "description": "Israël a mené des frappes au-delà de ses frontières, ciblant la banlieue sud de Beyrouth et tuant un chef militaire du Hezbollah, Haytham Ali Tabatabaï. Malgré un cessez-le-feu d'un an, la frontière israélo-libanaise reste une ligne de tension. Le Liban souffre d'une incapacité structurelle à imposer sa souveraineté, exacerbée par la faiblesse de son armée et la diminution du soutien international. Washington dicte le tempo, s'impatientant sur le désarmement du Hezbollah. Une escalade israélienne n'est pas exclue, bien que difficile pour Tsahal, déjà épuisée par d'autres fronts. L'occupation israélienne actuelle sert de levier de pression.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Liban",
+          "Israël",
+          "Hezbollah",
+          "escalade",
+          "conflit",
+          "sécurité_régionale",
+          "Moyen_Orient",
+          "désarmement",
+          "diplomatie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/israel-hezbollah-le-liban-face-a-une-escalade-annoncee/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Géopolitique, Économie, Information, Défense",
+        "theme": "Offensive informationnelle chinoise contre le Japon suite aux déclarations sur Taïwan",
+        "description": "Suite aux déclarations de la Première ministre japonaise Sanae Takaichi sur une potentielle intervention en cas d'attaque chinoise contre Taïwan, la Chine a lancé une offensive informationnelle coordonnée. Celle-ci combine pression diplomatique (convocation ambassadeur, annulation de rencontre G20), démonstrations militaires (patrouilles autour des îles Diaoyu/Senkaku) et une guerre narrative visant à délégitimer Takaichi en la dépeignant comme \"militariste\". Des conséquences économiques tangibles sont observées, comme une chute des actions japonaises liées au tourisme et l'annulation de vols et croisières vers le Japon, Pékin cherchant à infliger des coûts pour \"punir\" la posture japonaise et délégitimer sa défense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Chine",
+          "Japon",
+          "Taïwan",
+          "guerre_informationnelle",
+          "influence_cognitive",
+          "pression_économique",
+          "militarisme",
+          "diplomatie"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/le-japon-subit-le-contrecoup-economique-de-lattaque-informationnelle-de-la-chine/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Agroalimentaire (brasserie, boissons)",
+        "victime": "Asahi Group Holdings",
+        "description": "Attaque par rançongiciel en septembre, menant au vol de données personnelles d'environ 2 millions de clients et employés (noms, adresses, numéros de téléphone, adresses e-mail). L'attaque a perturbé les opérations japonaises (commandes, expéditions, service client). L'attaquant a accédé au réseau du centre de données via un équipement réseau. Les informations financières n'ont pas été compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "Asahi_Group_Holdings",
+          "ransomware",
+          "data_theft",
+          "customer_data",
+          "employee_data",
+          "Japan"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185126/data-breach/asahi-says-crooks-stole-data-of-approximately-2m-customers-and-employees.html",
+          "https://infosec.exchange/@DevaOnBreaches/115624790981809770"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Technologie, Développement logiciel",
+        "victime": "China Software Developer Network (CSDN)",
+        "description": "Brèche de données remontant à 2011 exposant plus de 6 millions d'enregistrements d'utilisateurs, incluant adresses e-mail, noms d'utilisateur et mots de passe en texte clair. Cette brèche historique continue d'être référencée.",
+        "tags": [
+          "violation",
+          "breach",
+          "CSDN",
+          "developer_network",
+          "email_addresses",
+          "passwords",
+          "user_data",
+          "historical_breach"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CSDN",
+          "https://www.redpacketsecurity.com/china-software-developer-network-6-414-990-breached-accounts/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Technologie, Services analytiques",
+        "victime": "Clients API OpenAI via Mixpanel",
+        "description": "Brèche de données chez Mixpanel, fournisseur d'analyse tiers d'OpenAI, exposant des informations d'identification limitées des clients API (nom, email, localisation approximative, OS/navigateur, ID organisation/utilisateur, site référent). OpenAI confirme que ses propres systèmes n'ont pas été compromis et que les données sensibles (chats, requêtes API, mots de passe, clés API, détails de paiement) sont sécurisées. Mixpanel a sécurisé les comptes affectés, révoqué les sessions et réinitialisé les mots de passe de ses employés en réponse à une attaque de smishing.",
+        "tags": [
+          "violation",
+          "breach",
+          "OpenAI",
+          "Mixpanel",
+          "API_customers",
+          "data_exposure",
+          "third_party_breach",
+          "smishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/openai-discloses-api-customer-data-breach-via-mixpanel-vendor-hack/",
+          "https://securityaffairs.com/185121/data-breach/openai-data-may-have-been-exposed-after-a-cyberattack-on-analytics-firm-mixpanel.html"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Finance, Cryptomonnaies",
+        "victime": "UPBIT (échange de cryptomonnaies)",
+        "description": "Cyberattaque majeure contre UPBIT, le plus grand échange de cryptomonnaies de Corée du Sud. Des actifs numériques d'une valeur d'environ 369 millions USD (54 milliards KRW) en jetons basés sur Solana ont été transférés vers un portefeuille inconnu. UPBIT a suspendu les retraits, transféré les actifs restants vers des portefeuilles froids et s'est engagé à couvrir toutes les pertes. L'intrusion provient probablement d'une vulnérabilité interne sur le hot wallet de l'échange.",
+        "tags": [
+          "violation",
+          "breach",
+          "UPBIT",
+          "cryptocurrency",
+          "crypto_exchange",
+          "solana_tokens",
+          "financial_impact"
+        ],
+        "sources": [
+          "https://securityonline.info/crypto-crisis-upbit-hacked-for-369-million-in-solana-based-tokens/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-58303",
+        "cvss": "8.4",
+        "product": "Adobe Screen Recorder (module framework d'enregistrement d'écran)",
+        "description": "Vulnérabilité Use-After-Free (UAF) pouvant affecter la disponibilité du service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Adobe",
+          "screen_recorder",
+          "UAF",
+          "denial_of_service",
+          "availability_impact"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58303"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-58310",
+        "cvss": "8.0",
+        "product": "Apache Distributed Component",
+        "description": "Contournement de contrôle de permission pouvant affecter la confidentialité du service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apache",
+          "distributed_component",
+          "permission_bypass",
+          "confidentiality_breach"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58310"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2024-3871",
+        "cvss": "9.8",
+        "product": "Appleton UPSMON-PRO (service UPSMONProService)",
+        "description": "Débordement de tampon basé sur la pile permettant l'exécution de code arbitraire à distance sans authentification avec des privilèges SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Appleton",
+          "UPSMON_PRO",
+          "RCE",
+          "stack_buffer_overflow",
+          "unauthenticated_exploit",
+          "SYSTEM_privileges"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1026/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-59366, CVE-2025-9338, CVE-2025-59373, CVE-2023-41345 à CVE-2023-41348, CVE-2024-12912, CVE-2025-2492",
+        "cvss": "9.8 (CVE-2025-59366), 8.5 (CVE-2025-59373)",
+        "product": "Routeurs ASUS (avec AiCloud activé, familles de routeurs DSL, MyASUS, logiciel Armoury Crate)",
+        "description": "Multiples vulnérabilités incluant un contournement d'authentification critique (CVE-2025-59366, Samba functionality) permettant l'exécution de fonctions à distance sans authentification, une escalade de privilèges locaux dans Armoury Crate (CVE-2025-9338) et MyASUS (CVE-2025-59373), ainsi que d'autres failles (injection de commande OS, exécution de commande arbitraire, authentification inappropriée via AiCloud) activement exploitées par la campagne Operation WrtHugh.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ASUS",
+          "router",
+          "AiCloud",
+          "RCE",
+          "authentication_bypass",
+          "privilege_escalation",
+          "command_injection",
+          "IoT"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/asus-november-2025-security-advisories",
+          "https://securityaffairs.com/185109/iot/new-asus-firmware-patches-critical-aicloud-vulnerability"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-64314",
+        "cvss": "9.3",
+        "product": "Cisco (module de gestion de la mémoire)",
+        "description": "Vulnérabilité de contrôle de permission pouvant affecter la confidentialité des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "memory_management",
+          "permission_control",
+          "confidentiality_breach",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64314"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Non spécifié, CVE-2025-12653",
+        "cvss": "Non spécifié (impliqué >= 8 pour certaines), 8.x (estimé)",
+        "product": "GitLab Community Edition (CE), GitLab Enterprise Edition (EE)",
+        "description": "Multiples vulnérabilités permettant des dénis de service à distance, atteintes à la confidentialité des données, contournement de politique de sécurité et contournement d'authentification (CVE-2025-12653, impactant des utilisateurs non authentifiés).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GitLab",
+          "DoS",
+          "data_confidentiality",
+          "security_policy_bypass",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1042/",
+          "https://cybersecuritynews.com/gitlab-patches-vulnerabilities/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-66359",
+        "cvss": "8.5",
+        "product": "Logpoint (avant 7.7.0)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) due à une validation insuffisante des entrées et un manque d'échappement de sortie dans plusieurs composants.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Logpoint",
+          "XSS",
+          "input_validation",
+          "cross_site_scripting"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66359"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-13699",
+        "cvss": "7.0",
+        "product": "MariaDB (utilitaire mariadb-dump)",
+        "description": "Vulnérabilité de traversée de répertoire lors de la gestion des noms de vues, permettant l'exécution de code arbitraire dans le contexte de l'utilisateur actuel. Bien que le CVSS soit de 7.0, son potentiel d'exécution de code arbitraire la rend significative.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MariaDB",
+          "mariadb_dump",
+          "directory_traversal",
+          "RCE",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1025/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-12421, CVE-2025-12419",
+        "cvss": "9.9 (CRITICAL)",
+        "product": "Mattermost Server (versions 11.0.x, 10.12.x, 10.11.x, 10.5.x)",
+        "description": "Deux vulnérabilités critiques de prise de contrôle de compte. CVE-2025-12421 permet à un utilisateur authentifié une prise de contrôle via le point de terminaison d'échange de code ne vérifiant pas l'origine du jeton. CVE-2025-12419 permet une prise de contrôle sur les serveurs OAuth/OpenID-enabled en manipulant les données d'authentification dues à une validation incorrecte des jetons d'état OAuth.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mattermost",
+          "account_takeover",
+          "authentication_bypass",
+          "OAuth",
+          "OpenID_Connect",
+          "SSO",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1044/",
+          "https://cvefeed.io/vuln/detail/CVE-2025-12421",
+          "https://cvefeed.io/vuln/detail/CVE-2025-12419"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié (impliqué >= 8 pour l'atteinte à la confidentialité)",
+        "product": "MISP",
+        "description": "Vulnérabilité permettant une atteinte à la confidentialité des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MISP",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1045/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-33200 à CVE-2025-33187 (14 CVEs)",
+        "cvss": "Non spécifié (taux de gravité critique implicite)",
+        "product": "NVIDIA DGX Spark (firmware de la station de travail IA)",
+        "description": "Quatorze vulnérabilités dans le firmware, pouvant permettre l'exécution de code malveillant, des attaques par déni de service, le vol de données, la manipulation de système et l'escalade de privilèges. Bien que principalement exploitables avec un accès local, certaines peuvent être déclenchées sans privilèges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "DGX_Spark",
+          "AI_workstation",
+          "firmware",
+          "RCE",
+          "DoS",
+          "data_theft",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidia-dgx-spark-vulnerabilities/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-33073, CVE-2024-43451, CVE-2025-58034, CVE-2025-13223, CVE-2025-24054, CVE-2024-37361",
+        "cvss": "Élevé (CVE-2025-33073, critique implicite), Non spécifié pour les autres",
+        "product": "Windows, systèmes utilisant le protocole d'authentification NTLM",
+        "description": "Le protocole d'authentification NTLM reste une vulnérabilité critique en 2025. `CVE-2025-33073` est une vulnérabilité de réflexion NTLM permettant l'escalade de privilèges au niveau SYSTEM pour un attaquant interne. D'autres failles abusent du moteur MSHTML pour déclencher des tentatives d'authentification NTLM via des fichiers .url malveillants, permettant le vol d'identifiants.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NTLM",
+          "authentication",
+          "protocol_flaw",
+          "privilege_escalation",
+          "credential_theft",
+          "MSHTML",
+          "Windows"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-8890",
+        "cvss": "Non spécifié (potentiellement élevé pour injection de commande)",
+        "product": "Routeurs SDMC NE6037 (firmware avant 7.1.12.2.44)",
+        "description": "Vulnérabilité d'injection de commande shell dans l'outil de diagnostic réseau, nécessitant un accès préalable au portail administratif du routeur (par défaut via les ports LAN).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SDMC",
+          "NE6037",
+          "router",
+          "shell_command_injection",
+          "local_exploit",
+          "IoT"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2025/11/CVE-2025-8890/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-12140",
+        "cvss": "Non spécifié (exécution de code arbitraire implique haute criticité)",
+        "product": "Simple SA Wirtualna Uczelnia (versions antérieures à wu#2016.1.5513)",
+        "description": "Le logiciel interprète incorrectement le paramètre 'redirectUrlParameter' comme une expression Java, permettant l'exécution de code arbitraire par un attaquant non authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Simple_SA",
+          "Wirtualna_Uczelnia",
+          "RCE",
+          "unauthenticated_exploit",
+          "java_expression_injection"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2025/11/CVE-2025-12140/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié (impliqué >= 8 pour RCE)",
+        "product": "Produits Splunk",
+        "description": "Multiples vulnérabilités, certaines permettant l'exécution de code arbitraire, l'atteinte à la confidentialité des données et l'atteinte à l'intégrité des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Splunk",
+          "RCE",
+          "data_confidentiality",
+          "data_integrity"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1043/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers Actively Exploiting IoT Vulnerabilities to Deploy New ShadowV2 Malware",
+        "description": "Une nouvelle campagne de malware, baptisée ShadowV2, a émergé fin octobre 2025, coïncidant avec une perturbation mondiale d'AWS. Cette menace sophistiquée exploite activement des vulnérabilités dans des appareils IoT pour construire un botnet et déployer le malware ShadowV2. L'article mentionne des CVEs spécifiques comme CVE-2023-52163, CVE-2024-53375, CVE-2024-10915, CVE-2024-10914, CVE-2024-3721, CVE-2022-37055, CVE-2020-25506, CVE-2009-2765 qui pourraient être associées à ces exploitations.",
+        "threat_actor": "ShadowV2 malware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001 (Accès Initial)",
+          "T1190 (Exploitation d'applications orientées public)",
+          "TA0002 (Exécution)",
+          "T1059 (Interpréteur de commandes et de scripts)",
+          "TA0003 (Persistance)",
+          "T1543.003 (Créer ou modifier un processus système: Service Windows)",
+          "TA0011 (Commandes et Contrôle)",
+          "T1071.001 (Protocole de couche application: protocoles web)",
+          "TA0010 (Exfiltration)",
+          "T1041 (Exfiltration sur canal C2)"
+        ],
+        "analyse": "La campagne ShadowV2 représente une menace significative pour la sécurité des appareils IoT. L'exploitation active de vulnérabilités pour créer des botnets indique une sophistication des attaquants, ciblant l'infrastructure sous-protégée de l'IoT. La coïncidence avec une perturbation AWS suggère une possible tentative de masquer l'activité ou d'exploiter la confusion. L'impact est une augmentation de la surface d'attaque pour de futures opérations malveillantes (DDoS, spam, vol de données, etc.).",
+        "recommandations": [
+          "Mettre à jour et patcher régulièrement les appareils IoT pour corriger les vulnérabilités connues.",
+          "Appliquer des mesures de segmentation réseau pour isoler les appareils IoT des réseaux critiques.",
+          "Surveiller le trafic réseau des appareils IoT pour détecter des activités anormales ou des communications C2.",
+          "Désactiver les services et ports inutiles sur les appareils IoT.",
+          "Utiliser des mots de passe robustes et uniques pour chaque appareil IoT."
+        ],
+        "tags": [
+          "malware_campaign",
+          "ShadowV2",
+          "IoT_exploitation",
+          "botnet",
+          "vulnerability_exploitation",
+          "AWS_disruption",
+          "cybercrime",
+          "MITRE_ATT&CK_TA0001",
+          "MITRE_ATT&CK_T1190",
+          "MITRE_ATT&CK_TA0002",
+          "MITRE_ATT&CK_T1059",
+          "MITRE_ATT&CK_TA0003",
+          "MITRE_ATT&CK_T1543.003",
+          "MITRE_ATT&CK_TA0011",
+          "MITRE_ATT&CK_T1071.001",
+          "MITRE_ATT&CK_TA0010",
+          "MITRE_ATT&CK_T1041"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-exploiting-iot-flaws-to-deployshadowv2/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "title": "Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+        "description": "Cet article analyse le développement et le déploiement du drone intercepteur 'Octopus' par le Royaume-Uni en collaboration avec l'Ukraine. Conçu pour contrer les drones russes Shahed-136 (Geran-2), l'Octopus est un drone cylindrique avec quatre propulseurs et un capteur frontal, utilisant la reconnaissance d'image pour un guidage autonome. Il représente une solution scalable et rentable pour la défense aérienne contre les drones à basse altitude, bien que des retards bureaucratiques aient entravé sa production initiale. L'article souligne la valeur du processus d'innovation rapide en réponse à une menace évolutive.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cette innovation démontre l'importance de l'adaptation technologique rapide et de la collaboration internationale face aux menaces asymétriques. Le drone Octopus, bien que destiné à un usage militaire conventionnel, illustre la fusion des technologies (IA, drones) dans les conflits modernes. Les défis de portée, d'adaptation des adversaires (vols à basse altitude, drones à réaction) et de saturation des défenses soulignent la complexité de la guerre des drones et la nécessité de stratégies de défense multicouches. Le \"processus\" de développement est la véritable valeur, mettant en évidence l'agilité nécessaire pour contrer les menaces évolutives.",
+        "recommandations": [
+          "Investir dans la recherche et développement de contre-mesures drones agiles et économiques.",
+          "Renforcer la collaboration internationale pour le partage d'informations et le développement technologique.",
+          "Intégrer des systèmes de défense aérienne multicouches pour contrer les menaces évolutives (drones, missiles).",
+          "Évaluer et optimiser les processus d'acquisition et de déploiement pour réduire les délais bureaucratiques."
+        ],
+        "tags": [
+          "défense_aérienne",
+          "anti_drone",
+          "Ukraine",
+          "Russie",
+          "technologie_militaire",
+          "innovation",
+          "défense_asymétrique",
+          "reconnaissance_d_image",
+          "IA",
+          "Shahed-136",
+          "Geran-2"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "title": "Breaking the BeeStation: Inside Our Pwn2Own 2025 Exploit Journey",
+        "description": "Analyse technique détaillée de l'exploitation réussie de la Synology BeeStation Plus (BST170-8T) lors de Pwn2Own Ireland 2025. Les chercheurs ont identifié et exploité une vulnérabilité de débordement de tampon dans la bibliothèque `libsynobeeadmincenter.so` (SYNO::BEE::Auth::AuthManagerImpl::ParseAuthInfo) via une manipulation d'un paramètre base64-encodé dans une requête pré-authentification. L'exploitation a permis d'obtenir un shell root sur l'appareil après avoir contourné les protections comme le canary de pile par bruteforce et l'utilisation de gadgets \"write-what-where\".",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001 (Accès Initial)",
+          "T1190 (Exploitation d'applications orientées public)",
+          "TA0004 (Élévation de privilèges)",
+          "T1068 (Exploitation pour l'élévation de privilèges)",
+          "T1059 (Interpréteur de commandes et de scripts)",
+          "T1548.001 (Élévation de privilèges: SUID et SGID)"
+        ],
+        "analyse": "Cette analyse met en lumière la complexité de l'ingénierie inversée et du développement d'exploits pour des produits NAS, même grand public. L'exploit démontre la persistance des failles de débordement de tampon et la possibilité d'atteindre un shell root sur des appareils réseau, potentiellement via des services exposés comme QuickConnect. L'impact est significatif pour la sécurité des utilisateurs de Synology BeeStation et souligne la nécessité de pratiques de développement sécurisé et de mises à jour rapides des correctifs.",
+        "recommandations": [
+          "Appliquer immédiatement les mises à jour firmware de Synology (version BSM 1.3.2-65648 ou supérieure) qui corrigent la vulnérabilité.",
+          "Surveiller et restreindre l'exposition des services réseau (par exemple, QuickConnect) si non essentiels.",
+          "Segmenter les réseaux pour limiter la portée d'une compromission potentielle en cas d'exploitation d'une vulnérabilité.",
+          "Effectuer des audits de sécurité réguliers et des tests d'intrusion sur les appareils réseau et IoT."
+        ],
+        "tags": [
+          "exploitation",
+          "vulnerability_research",
+          "Pwn2Own",
+          "Synology",
+          "BeeStation",
+          "buffer_overflow",
+          "RCE",
+          "root_shell",
+          "firmware_analysis",
+          "reverse_engineering",
+          "MITRE_ATT&CK_TA0001",
+          "MITRE_ATT&CK_T1190",
+          "MITRE_ATT&CK_TA0004",
+          "MITRE_ATT&CK_T1068",
+          "MITRE_ATT&CK_T1059",
+          "MITRE_ATT&CK_T1548.001"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/breaking-the-beestation-inside-our-pwn2own-2025-exploit-journey.html"
+        ],
+        "date": "2025-11-28"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape remains highly dynamic and complex, marked by several converging trends. Supply chain and third-party vulnerabilities are pervasive, as evidenced by the OpenAI data breach via its vendor Mixpanel, and the exploitation of ASUS router flaws by the Operation WrtHugh campaign, turning millions of IoT devices into proxy infrastructure. The IoT sector continues to be a prime target, with new malware strains like ShadowV2 actively exploiting vulnerabilities in connected devices to create botnets. Concurrently, legacy protocols, such as NTLM, persist as critical risks, enabling privilege escalation and credential theft even in 2025. A plethora of critical vulnerabilities (CVSS >= 8) are regularly discovered, including Remote Code Execution (RCE) and authentication bypasses in key products like GitLab, Splunk, Mattermost, NVIDIA, and industrial systems, offering direct pathways for attackers. On the geopolitical front, information is increasingly wielded as a weapon, as illustrated by China's information offensive against Japan, combining diplomatic, military, and economic pressure to influence perception and inflict tangible costs. Data breach incidents, whether resulting from ransomware (Asahi), vulnerabilities on financial platforms (UPBIT), or long-standing compromises (CSDN), remain a constant threat to information confidentiality. Finally, advancements in military technologies, such as the 'Octopus' interceptor drone in Ukraine, demonstrate rapid adaptation to new threats in armed conflicts, highlighting the growing integration of technology into national defense. In conclusion, the general state of threats is characterized by an intensification of attacks targeting weak links in the digital chain (IoT, supply chain), persistent exploitation of fundamental system weaknesses, and an increasingly sophisticated integration of cyber into overall geopolitical strategies. Vigilance and investment in multi-layered defenses and regular updates are more essential than ever.",
+      "date": "2025-11-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Operation WrtHugh",
+        "secteur": "IoT (routers), residential, small and medium-sized businesses (SMBs)",
+        "modop": "Exploitation of known vulnerabilities (authentication bypass, command injection) in the ASUS AiCloud service for arbitrary command execution and full device control. Conversion of routers into proxy infrastructure for persistence, anonymization of malicious traffic, and espionage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "OperationWrtHugh",
+          "IoT",
+          "router_exploitation",
+          "command_injection",
+          "authentication_bypass",
+          "proxy_infrastructure",
+          "espionage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/asus-november-2025-security-advisories",
+          "https://securityaffairs.com/185109/iot/new-asus-firmware-patches-critical-aicloud-vulnerability"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "nom": "ShadowV2",
+        "secteur": "IoT devices (broad, unspecified)",
+        "modop": "Actively exploits vulnerabilities in IoT devices to assemble a botnet and deploy the ShadowV2 malware. The campaign coincided with a global AWS disruption.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ShadowV2",
+          "malware",
+          "IoT_botnet",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-exploiting-iot-flaws-to-deployshadowv2/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Environment, Geopolitics, Economy, Security",
+        "theme": "Climate Change as a Structuring Force in the International Order",
+        "description": "Climate change represents a fundamental tension between the history of life and the history of politics. Humanity has departed from the stability of the Holocene, rendering the Earth system unstable. Global warming intensifies, making climate a structuring force that limits the energy, economic, and security maneuvering room for states, thereby reshaping the international order. The ability of human societies to maintain stable living conditions is under threat.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "climate_change",
+          "environment",
+          "environmental_security",
+          "economy",
+          "society",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/geopolitique-du-changement-climatique/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Geopolitics, Defense, Regional Security",
+        "theme": "Escalation of Tensions and Ceasefire Violations in Lebanon",
+        "description": "Israel conducted strikes beyond its borders, targeting the southern suburbs of Beirut and killing a Hezbollah military leader, Haytham Ali Tabatabaï. Despite a one-year ceasefire, the Israeli-Lebanese border remains a line of tension. Lebanon suffers from a structural inability to assert its sovereignty, exacerbated by the weakness of its army and reduced international support. Washington dictates the pace, growing impatient over Hezbollah's disarmament. An Israeli escalation is not ruled out, though challenging for the IDF, already strained by other fronts. The current Israeli occupation serves as a leverage point.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Lebanon",
+          "Israel",
+          "Hezbollah",
+          "escalation",
+          "conflict",
+          "regional_security",
+          "Middle_East",
+          "disarmament",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/israel-hezbollah-le-liban-face-a-une-escalade-annoncee/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Geopolitics, Economy, Information, Defense",
+        "theme": "Chinese Information Offensive Against Japan Following Taiwan Remarks",
+        "description": "Following Japanese Prime Minister Sanae Takaichi's remarks about potential intervention in case of a Chinese attack on Taiwan, China launched a coordinated information offensive. This combined diplomatic pressure (ambassador summons, G20 meeting cancellation), military demonstrations (patrols around the Diaoyu/Senkaku islands), and a narrative campaign to delegitimize Takaichi by portraying her as 'militarist.' Tangible economic consequences are observed, such as a drop in Japanese tourism-related stocks and the cancellation of flights and cruises to Japan, as Beijing seeks to inflict economic costs to 'punish' Japan's stance and delegitimize its defense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "China",
+          "Japan",
+          "Taiwan",
+          "information_warfare",
+          "cognitive_influence",
+          "economic_pressure",
+          "militarism",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/le-japon-subit-le-contrecoup-economique-de-lattaque-informationnelle-de-la-chine/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Food & Beverage (brewery, soft drinks)",
+        "victime": "Asahi Group Holdings",
+        "description": "Ransomware attack in September, leading to the theft of personal data from approximately 2 million customers and employees (names, addresses, phone numbers, email addresses). The attack disrupted Japanese operations (orders, shipments, customer service). The attacker gained unauthorized access to the data center network via network equipment. Financial information was not compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "Asahi_Group_Holdings",
+          "ransomware",
+          "data_theft",
+          "customer_data",
+          "employee_data",
+          "Japan"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185126/data-breach/asahi-says-crooks-stole-data-of-approximately-2m-customers-and-employees.html",
+          "https://infosec.exchange/@DevaOnBreaches/115624790981809770"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Technology, Software Development",
+        "victime": "China Software Developer Network (CSDN)",
+        "description": "A data breach dating back to 2011 exposed over 6 million user records, including email addresses, usernames, and plain text passwords. This historical breach continues to be referenced.",
+        "tags": [
+          "violation",
+          "breach",
+          "CSDN",
+          "developer_network",
+          "email_addresses",
+          "passwords",
+          "user_data",
+          "historical_breach"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CSDN",
+          "https://www.redpacketsecurity.com/china-software-developer-network-6-414-990-breached-accounts/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Technology, Analytics Services",
+        "victime": "OpenAI API Customers via Mixpanel",
+        "description": "Data breach at Mixpanel, a third-party analytics provider for OpenAI, exposing limited identifying information of API customers (name, email, rough location, OS/browser info, organization or user ID, and referring website). OpenAI confirmed its own systems were not compromised and that sensitive data (chats, API requests, passwords, API keys, payment details) remained secure. Mixpanel secured affected accounts, revoked sessions, and reset employee passwords in response to a smishing attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "OpenAI",
+          "Mixpanel",
+          "API_customers",
+          "data_exposure",
+          "third_party_breach",
+          "smishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/openai-discloses-api-customer-data-breach-via-mixpanel-vendor-hack/",
+          "https://securityaffairs.com/185121/data-breach/openai-data-may-have-been-exposed-after-a-cyberattack-on-analytics-firm-mixpanel.html"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "secteur": "Finance, Cryptocurrency",
+        "victime": "UPBIT (cryptocurrency exchange)",
+        "description": "Major cyberattack against UPBIT, South Korea’s largest cryptocurrency exchange. Digital assets worth approximately USD 369 million (54 billion KRW) in Solana-based tokens were transferred to an unknown wallet. UPBIT suspended withdrawals, moved remaining assets to cold storage, and pledged to cover all losses. The intrusion likely originated from an internal vulnerability within the exchange's hot wallet.",
+        "tags": [
+          "violation",
+          "breach",
+          "UPBIT",
+          "cryptocurrency",
+          "crypto_exchange",
+          "solana_tokens",
+          "financial_impact"
+        ],
+        "sources": [
+          "https://securityonline.info/crypto-crisis-upbit-hacked-for-369-million-in-solana-based-tokens/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-58303",
+        "cvss": "8.4",
+        "product": "Adobe Screen Recorder (screen recording framework module)",
+        "description": "Use-After-Free (UAF) vulnerability that may affect service availability.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Adobe",
+          "screen_recorder",
+          "UAF",
+          "denial_of_service",
+          "availability_impact"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58303"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-58310",
+        "cvss": "8.0",
+        "product": "Apache Distributed Component",
+        "description": "Permission control bypass vulnerability that may affect service confidentiality.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apache",
+          "distributed_component",
+          "permission_bypass",
+          "confidentiality_breach"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-58310"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2024-3871",
+        "cvss": "9.8",
+        "product": "Appleton UPSMON-PRO (UPSMONProService service)",
+        "description": "Stack-based buffer overflow vulnerability allowing remote unauthenticated arbitrary code execution with SYSTEM privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Appleton",
+          "UPSMON_PRO",
+          "RCE",
+          "stack_buffer_overflow",
+          "unauthenticated_exploit",
+          "SYSTEM_privileges"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1026/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-59366, CVE-2025-9338, CVE-2025-59373, CVE-2023-41345 to CVE-2023-41348, CVE-2024-12912, CVE-2025-2492",
+        "cvss": "9.8 (CVE-2025-59366), 8.5 (CVE-2025-59373)",
+        "product": "ASUS routers (AiCloud-enabled, DSL router families, MyASUS, Armoury Crate software)",
+        "description": "Multiple vulnerabilities including a critical authentication bypass (CVE-2025-59366, Samba functionality) allowing remote unauthenticated function execution, local privilege escalation in Armoury Crate (CVE-2025-9338) and MyASUS (CVE-2025-59373), and other flaws (OS command injection, arbitrary command execution, improper authentication via AiCloud) actively exploited by the Operation WrtHugh campaign.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ASUS",
+          "router",
+          "AiCloud",
+          "RCE",
+          "authentication_bypass",
+          "privilege_escalation",
+          "command_injection",
+          "IoT"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/asus-november-2025-security-advisories",
+          "https://securityaffairs.com/185109/iot/new-asus-firmware-patches-critical-aicloud-vulnerability"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-64314",
+        "cvss": "9.3",
+        "product": "Cisco (memory management module)",
+        "description": "Permission control vulnerability in the memory management module, which may affect data confidentiality.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "memory_management",
+          "permission_control",
+          "confidentiality_breach",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64314"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Not specified, CVE-2025-12653",
+        "cvss": "Not specified (implied >= 8 for some), 8.x (estimated)",
+        "product": "GitLab Community Edition (CE), GitLab Enterprise Edition (EE)",
+        "description": "Multiple vulnerabilities enabling remote denial of service, data confidentiality breaches, security policy bypass, and authentication bypass (CVE-2025-12653, impacting unauthenticated users).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GitLab",
+          "DoS",
+          "data_confidentiality",
+          "security_policy_bypass",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1042/",
+          "https://cybersecuritynews.com/gitlab-patches-vulnerabilities/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-66359",
+        "cvss": "8.5",
+        "product": "Logpoint (before 7.7.0)",
+        "description": "Cross-Site Scripting (XSS) vulnerability due to insufficient input validation and lack of output escaping in multiple components.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Logpoint",
+          "XSS",
+          "input_validation",
+          "cross_site_scripting"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66359"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-13699",
+        "cvss": "7.0",
+        "product": "MariaDB (mariadb-dump utility)",
+        "description": "Directory traversal vulnerability in the mariadb-dump utility when handling view names, allowing arbitrary code execution in the context of the current user. Although CVSS is 7.0, its arbitrary code execution potential makes it significant.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MariaDB",
+          "mariadb_dump",
+          "directory_traversal",
+          "RCE",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1025/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-12421, CVE-2025-12419",
+        "cvss": "9.9 (CRITICAL)",
+        "product": "Mattermost Server (versions 11.0.x, 10.12.x, 10.11.x, 10.5.x)",
+        "description": "Two critical account takeover vulnerabilities. CVE-2025-12421 allows an authenticated user to perform account takeover via the code exchange endpoint that fails to verify token origin. CVE-2025-12419 enables account takeover on OAuth/OpenID-enabled servers by manipulating authentication data due to improper OAuth state token validation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mattermost",
+          "account_takeover",
+          "authentication_bypass",
+          "OAuth",
+          "OpenID_Connect",
+          "SSO",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1044/",
+          "https://cvefeed.io/vuln/detail/CVE-2025-12421",
+          "https://cvefeed.io/vuln/detail/CVE-2025-12419"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Not specified",
+        "cvss": "Not specified (implied >= 8 for data confidentiality impact)",
+        "product": "MISP",
+        "description": "Vulnerability allowing a data confidentiality breach.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MISP",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1045/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-33200 to CVE-2025-33187 (14 CVEs)",
+        "cvss": "Not specified (implied critical severity rating)",
+        "product": "NVIDIA DGX Spark (AI workstation firmware)",
+        "description": "Fourteen vulnerabilities in the firmware, potentially allowing malicious code execution, denial-of-service attacks, data theft, system manipulation, and privilege escalation. While primarily exploitable with local access, some can be triggered without privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "DGX_Spark",
+          "AI_workstation",
+          "firmware",
+          "RCE",
+          "DoS",
+          "data_theft",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/nvidia-dgx-spark-vulnerabilities/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-33073, CVE-2024-43451, CVE-2025-58034, CVE-2025-13223, CVE-2025-24054, CVE-2024-37361",
+        "cvss": "High (CVE-2025-33073, implied critical), Not specified for others",
+        "product": "Windows, systems using NTLM authentication protocol",
+        "description": "The NTLM authentication protocol remains a critical vulnerability in 2025. `CVE-2025-33073` is an NTLM reflection vulnerability allowing SYSTEM-level privilege escalation for an internal attacker. Other flaws abuse the MSHTML engine to trigger NTLM authentication attempts via malicious .url files, leading to credential theft.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NTLM",
+          "authentication",
+          "protocol_flaw",
+          "privilege_escalation",
+          "credential_theft",
+          "MSHTML",
+          "Windows"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-8890",
+        "cvss": "Not specified (potentially high for command injection)",
+        "product": "SDMC NE6037 routers (firmware prior to 7.1.12.2.44)",
+        "description": "Shell command injection vulnerability in the network diagnostics tool, requiring prior login to the router's administrative portal (by default, reachable only via LAN ports).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SDMC",
+          "NE6037",
+          "router",
+          "shell_command_injection",
+          "local_exploit",
+          "IoT"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2025/11/CVE-2025-8890/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "CVE-2025-12140",
+        "cvss": "Not specified (arbitrary code execution implies high criticality)",
+        "product": "Simple SA Wirtualna Uczelnia (versions prior to wu#2016.1.5513)",
+        "description": "The software incorrectly processes the 'redirectUrlParameter' as a Java expression, allowing unauthenticated attackers to perform arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Simple_SA",
+          "Wirtualna_Uczelnia",
+          "RCE",
+          "unauthenticated_exploit",
+          "java_expression_injection"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2025/11/CVE-2025-12140/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "cve_id": "Not specified",
+        "cvss": "Not specified (implied >= 8 for RCE)",
+        "product": "Splunk products",
+        "description": "Multiple vulnerabilities, some allowing arbitrary code execution, data confidentiality breaches, and data integrity breaches.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Splunk",
+          "RCE",
+          "data_confidentiality",
+          "data_integrity"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1043/"
+        ],
+        "date": "2025-11-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers Actively Exploiting IoT Vulnerabilities to Deploy New ShadowV2 Malware",
+        "description": "A new malware campaign, dubbed ShadowV2, emerged in late October 2025, coinciding with a global AWS disruption. This sophisticated threat actively exploits vulnerabilities in IoT devices to assemble a botnet and deploy the ShadowV2 malware. The article mentions specific CVEs such as CVE-2023-52163, CVE-2024-53375, CVE-2024-10915, CVE-2024-10914, CVE-2024-3721, CVE-2022-37055, CVE-2020-25506, CVE-2009-2765 which could be associated with these exploits.",
+        "threat_actor": "ShadowV2 malware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1190 (Exploit Public-Facing Application)",
+          "TA0002 (Execution)",
+          "T1059 (Command and Scripting Interpreter)",
+          "TA0003 (Persistence)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "TA0011 (Command and Control)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "TA0010 (Exfiltration)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "The ShadowV2 campaign poses a significant threat to IoT device security. The active exploitation of vulnerabilities to build botnets indicates attacker sophistication, targeting the under-protected IoT infrastructure. The coincidence with an AWS disruption suggests a possible attempt to obscure activity or exploit confusion. The impact is an increased attack surface for future malicious operations (DDoS, spam, data theft, etc.).",
+        "recommandations": [
+          "Regularly update and patch IoT devices to fix known vulnerabilities.",
+          "Implement network segmentation measures to isolate IoT devices from critical networks.",
+          "Monitor network traffic from IoT devices to detect abnormal activities or C2 communications.",
+          "Disable unnecessary services and ports on IoT devices.",
+          "Use strong and unique passwords for each IoT device."
+        ],
+        "tags": [
+          "malware_campaign",
+          "ShadowV2",
+          "IoT_exploitation",
+          "botnet",
+          "vulnerability_exploitation",
+          "AWS_disruption",
+          "cybercrime",
+          "MITRE_ATT&CK_TA0001",
+          "MITRE_ATT&CK_T1190",
+          "MITRE_ATT&CK_TA0002",
+          "MITRE_ATT&CK_T1059",
+          "MITRE_ATT&CK_TA0003",
+          "MITRE_ATT&CK_T1543.003",
+          "MITRE_ATT&CK_TA0011",
+          "MITRE_ATT&CK_T1071.001",
+          "MITRE_ATT&CK_TA0010",
+          "MITRE_ATT&CK_T1041"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-exploiting-iot-flaws-to-deployshadowv2/"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "title": "Octopus Adds an Additional Layer to Ukraine’s Air Defences",
+        "description": "This article analyzes the development and deployment of the 'Octopus' interceptor drone by the UK in collaboration with Ukraine. Designed to counter Russian Shahed-136 (Geran-2) drones, the Octopus is a cylindrical drone with four tail-mounted propellers and a nose sensor, using image recognition for autonomous guidance. It represents a scalable and cost-effective solution for air defense against low-altitude drones, although bureaucratic delays hindered its initial production. The article highlights the value of the rapid innovation process in response to an evolving threat.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "This innovation demonstrates the importance of rapid technological adaptation and international collaboration in facing asymmetric threats. The Octopus drone, though intended for conventional military use, illustrates the fusion of technologies (AI, drones) in modern conflicts. Challenges such as range, adversary adaptation (low-altitude flights, jet-powered drones), and defense saturation underscore the complexity of drone warfare and the need for multi-layered defense strategies. The 'process' of development is the real value, highlighting the agility required to counter evolving threats.",
+        "recommandations": [
+          "Invest in agile and cost-effective drone countermeasure research and development.",
+          "Strengthen international collaboration for information sharing and technological development.",
+          "Integrate multi-layered air defense systems to counter evolving threats (drones, missiles).",
+          "Evaluate and optimize acquisition and deployment processes to reduce bureaucratic delays."
+        ],
+        "tags": [
+          "air_defense",
+          "anti_drone",
+          "Ukraine",
+          "Russia",
+          "military_technology",
+          "innovation",
+          "asymmetric_defense",
+          "image_recognition",
+          "AI",
+          "Shahed-136",
+          "Geran-2"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/octopus-adds-additional-layer-ukraines-air-defences"
+        ],
+        "date": "2025-11-28"
+      },
+      {
+        "title": "Breaking the BeeStation: Inside Our Pwn2Own 2025 Exploit Journey",
+        "description": "Detailed technical analysis of the successful exploitation of the Synology BeeStation Plus (BST170-8T) at Pwn2Own Ireland 2025. Researchers identified and exploited a stack-based buffer overflow vulnerability in the `libsynobeeadmincenter.so` library (SYNO::BEE::Auth::AuthManagerImpl::ParseAuthInfo) via manipulation of a base64-encoded parameter in a pre-authentication request. The exploitation allowed obtaining a root shell on the device after bypassing protections like stack canaries through bruteforcing and utilizing 'write-what-where' gadgets.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1190 (Exploit Public-Facing Application)",
+          "TA0004 (Privilege Escalation)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1548.001 (Abuse Elevation Control: SUID and SGID)"
+        ],
+        "analyse": "This analysis highlights the complexity of reverse engineering and exploit development for NAS products, even consumer-grade ones. The exploit demonstrates the persistence of buffer overflow flaws and the potential to achieve a root shell on network devices, potentially via exposed services like QuickConnect. The impact is significant for Synology BeeStation users' security and underscores the need for secure development practices and prompt patch updates.",
+        "recommandations": [
+          "Immediately apply Synology firmware updates (BSM version 1.3.2-65648 or higher) that address the vulnerability.",
+          "Monitor and restrict exposure of network services (e.g., QuickConnect) if not essential.",
+          "Segment networks to limit the scope of potential compromise in case of vulnerability exploitation.",
+          "Conduct regular security audits and penetration testing on network and IoT devices."
+        ],
+        "tags": [
+          "exploitation",
+          "vulnerability_research",
+          "Pwn2Own",
+          "Synology",
+          "BeeStation",
+          "buffer_overflow",
+          "RCE",
+          "root_shell",
+          "firmware_analysis",
+          "reverse_engineering",
+          "MITRE_ATT&CK_TA0001",
+          "MITRE_ATT&CK_T1190",
+          "MITRE_ATT&CK_TA0004",
+          "MITRE_ATT&CK_T1068",
+          "MITRE_ATT&CK_T1059",
+          "MITRE_ATT&CK_T1548.001"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/breaking-the-beestation-inside-our-pwn2own-2025-exploit-journey.html"
+        ],
+        "date": "2025-11-28"
+      }
+    ]
+  }
+}
