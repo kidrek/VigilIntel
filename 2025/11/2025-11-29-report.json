@@ -1,0 +1,1830 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage des menaces cyber caractérisé par une persistance de vulnérabilités critiques et une sophistication accrue des acteurs malveillants. Les failles dans la gestion des sessions (OrangeHRM, OpenObserve), les vulnérabilités RCE (AIS-catcher, OrangeHRM) et les problèmes d'escalade de privilèges (Apache Kvrocks, NTLM) continuent d'offrir des points d'entrée privilégiés aux attaquants. La chaîne d'approvisionnement logicielle est également une cible de choix, comme en témoignent les risques de prise de contrôle de domaines liés à des packages Python obsolètes et la fuite massive de secrets via des plateformes de formatage de code ou des dépôts publics. L'utilisation par les attaquants de tactiques d'ingénierie sociale, comme les campagnes de phishing thématiques pour les fêtes, est couplée à l'exploitation de vulnérabilités e-commerce majeures (Adobe Magento). Les groupes APT, à l'instar de Tomiris, affinent leurs modes opératoires en utilisant des infrastructures de commande et contrôle (C2) dissimulées via des services publics (Discord, Telegram) et des malwares multi-langues. Les botnets IoT (ShadowV2, une variante de Mirai) restent une menace significative pour les appareils connectés, exploités pour des attaques DDoS. Enfin, les violations de données sont fréquentes, résultant à la fois de cyberattaques ciblées (Fédération Française de Football) et d'erreurs humaines ou de configurations laxistes (exposition de secrets, fuites d'emails). L'impact de la désinformation en ligne, incluant le contenu généré par IA, est également souligné dans le contexte de la contre-radicalisation. En conclusion, l'état général des menaces est marqué par une diversification des vecteurs d'attaque, une exploitation rapide des faiblesses persistantes et une adaptabilité constante des adversaires, nécessitant une vigilance accrue et des stratégies de défense intégrées.",
+      "date": "2025-11-29"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Tomiris APT",
+        "secteur": "Ministères des affaires étrangères, organisations intergouvernementales, entités gouvernementales",
+        "modop": "Campagnes de spear-phishing avec des archives malveillantes protégées par mot de passe, utilisation de shells inversés multi-langues (Go, Rust, C/C++/C#, Python), déploiement de frameworks post-exploitation (Havoc, AdaptixC2), utilisation de services publics (Discord, Telegram) pour la communication C2.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "spear-phishing",
+          "havoc",
+          "adaptixc2",
+          "c2",
+          "gouvernemental",
+          "intergouvernemental"
+        ],
+        "sources": [
+          "https://securelist.com/tomiris-new-tools/118143/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "nom": "ShadowV2 (variante de Mirai)",
+        "secteur": "Technologie, vente au détail, hôtellerie, fabrication, fournisseurs de services de sécurité gérés, gouvernement, télécommunications, éducation, appareils IoT (DDWRT, D-Link, DigiEver, TBK, TP-Link)",
+        "modop": "Exploitation de vulnérabilités connues dans les appareils IoT pour créer un botnet, lancement d'attaques DDoS (UDP, TCP, HTTP flood), communications via un serveur C2.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "iot",
+          "ddos",
+          "exploitation de vulnérabilité"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "nom": "Attaquant Evil Twin WiFi",
+        "secteur": "Voyageurs (aéroports, vols)",
+        "modop": "Mise en place de réseaux WiFi 'evil twin' pour voler des données personnelles (images, vidéos intimes, identifiants).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "evil-twin",
+          "vol-de-donnees",
+          "fraude",
+          "wifi"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-behind-in-flight-evil-twin-wifi-attacks-gets-7-years-in-prison/"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Relations Internationales",
+        "theme": "Conflit à Gaza",
+        "description": "Le conflit à Gaza semble être relégué au second plan médiatique, malgré un cessez-le-feu non appliqué, le blocus continu de l'aide humanitaire par Israël et le désarmement du Hamas non résolu. La question des prisonniers palestiniens demeure sans solution, le nettoyage ethnique se poursuit en Cisjordanie et la gestion de Gaza reste incertaine, promettant une reprise de la violence et un danger pour l'équilibre au Moyen-Orient.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "conflit",
+          "moyen-orient",
+          "cessez-le-feu",
+          "aide humanitaire"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-telle-une-guerre-oubliee/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Défense et Sécurité Nationale",
+        "theme": "Lutte contre le terrorisme au Royaume-Uni",
+        "description": "La stratégie antiterroriste britannique ('Prevent') doit s'adapter à l'évolution de la menace, passant de groupes organisés à des acteurs isolés motivés par des griefs personnels, souvent amplifiés en ligne par des contenus générés par l'IA et des acteurs étatiques hostiles. Une approche intégrée de prévention de la violence est nécessaire pour traiter un éventail plus large de menaces, sans la stigmatisation associée à l'étiquette antiterroriste.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "royaume-uni",
+          "antiterrorisme",
+          "radicalisation",
+          "menace en ligne",
+          "ia",
+          "acteurs étatiques hostiles"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/future-uk-counterterrorism-case-integrated-violence-prevention"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Relations Internationales",
+        "theme": "Transition et pouvoir pétrolier en Syrie",
+        "description": "La Syrie post-guerre est confrontée à une recomposition politique et une reconstruction fragmentées. La question du pétrole dans le Rojava (Nord-Est syrien) est cruciale, reflétant les rapports de force entre Damas, les Kurdes syriens et les puissances extérieures, déterminant la place future des Kurdes dans une Syrie potentiellement recentralisée.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syrie",
+          "rojava",
+          "pétrole",
+          "recomposition politique",
+          "conflit"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-nord-est-syrien-a-lepreuve-de-la-transition-un-pouvoir-petrolier-sous-contrainte/"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Enseignement",
+        "victime": "Babu Banarasi Das University",
+        "description": "Incident de violation de données ciblant l'Université Babu Banarasi Das en Inde.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "inde",
+          "université",
+          "fuite-de-donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115628865293203470"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Crown Response Office (Royaume-Uni)",
+        "description": "Exposition accidentelle des identités de plus de 30 survivants de torture de Lake Alice par une agence gouvernementale britannique, due à une erreur de gestionnaire (non-utilisation du champ BCC dans un email).",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "erreur-humaine",
+          "confidentialité",
+          "email",
+          "royaume-uni"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/28/trickery-and-f-ery-agency-under-fire-over-senior-managers-serious-privacy-breach/?pk_campaign=feed&pk_kwd=trickery-and-f-ery-agency-under-fire-over-senior-managers-serious-privacy-breach"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Sports",
+        "victime": "Fédération Française de Football (FFF)",
+        "description": "Violation de données suite à une cyberattaque utilisant un compte compromis pour accéder à un logiciel de gestion administrative, entraînant le vol de données des membres (nom, prénom, sexe, date de naissance, nationalité, adresse postale, email, numéro de téléphone, numéro de licence).",
+        "tags": [
+          "violation",
+          "breach",
+          "sport",
+          "fff",
+          "france",
+          "cyberattaque",
+          "compte-compromis",
+          "données-personnelles"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/french-football-federation-fff-discloses-data-breach-after-cyberattack/",
+          "https://securityaffairs.com/185160/data-breach/attackers-stole-member-data-from-french-soccer-federation.html"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Développement Logiciel",
+        "victime": "Utilisateurs de GitLab",
+        "description": "Plus de 17 000 secrets (identifiants, clés privées) exposés sur plus de 2 800 domaines uniques via des dépôts publics GitLab, suite à une mauvaise configuration ou une négligence.",
+        "tags": [
+          "violation",
+          "breach",
+          "developpement-logiciel",
+          "gitlab",
+          "secrets",
+          "exposition-de-donnees",
+          "configuration-incorrecte"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/public-gitlab-repositories-exposed-more-than-17-000-secrets/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Développement Logiciel, Multi-secteurs (gouvernement, finance, santé, télécoms, CNI)",
+        "victime": "Utilisateurs de JSONFormatter et CodeBeautify",
+        "description": "Des milliers de secrets sensibles (identifiants AD, clés cloud, clés privées, jetons API, exportations AWS Secrets Manager) publiés involontairement par des utilisateurs sur des plateformes de formatage de code publiques (JSONFormatter, CodeBeautify) via des URL prévisibles et consultables.",
+        "tags": [
+          "violation",
+          "breach",
+          "developpement-logiciel",
+          "secrets",
+          "exposition-de-donnees",
+          "cloud",
+          "api",
+          "multi-secteurs"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185150/security/thousands-of-sensitive-secrets-published-on-jsonformatter-and-codebeautify.html"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Réseaux et Télécommunications",
+        "victime": "Thailand National Telecom Public Company Limited",
+        "description": "Violation de données avec un niveau de confiance élevé ciblant la société nationale de télécommunications de Thaïlande.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "thailande",
+          "fuite-de-donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115628390256162627"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Voyage et Tourisme",
+        "victime": "Voyageurs (victimes d'attaques Evil Twin WiFi)",
+        "description": "Un homme a été condamné pour avoir opéré un réseau WiFi 'evil twin' dans des aéroports et des vols en Australie, dérobant des milliers d'images et vidéos intimes, des identifiants personnels et des informations de pages WiFi frauduleuses.",
+        "tags": [
+          "violation",
+          "breach",
+          "voyage",
+          "evil-twin",
+          "vol-de-donnees",
+          "australie",
+          "identifiants"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-behind-in-flight-evil-twin-wifi-attacks-gets-7-years-in-prison/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "secteur": "Enseignement",
+        "victime": "Center for Professional Development of Pedagogical Workers of Vinnytsia City Council",
+        "description": "Violation de données ciblant le Centre de développement professionnel des travailleurs pédagogiques du conseil municipal de Vinnytsia en Ukraine.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "ukraine",
+          "fuite-de-donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115629569056619464"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66216",
+        "cvss": 9.3,
+        "product": "AIS-catcher",
+        "description": "Dépassement de tampon de segment de mémoire (Heap Buffer Overflow) dans la classe AIS::Message permettant l'écriture d'environ 1KB de données arbitraires dans un tampon de 128 octets, conduisant à un déni de service (DoS) et potentiellement à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ais-catcher",
+          "buffer-overflow",
+          "rce",
+          "dos",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66216"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66224",
+        "cvss": 9.0,
+        "product": "OrangeHRM",
+        "description": "Exécution de code arbitraire à travers une écriture de fichier arbitraire via injection de paramètres Sendmail. Un défaut de neutralisation des entrées permet aux valeurs contrôlées par l'utilisateur de s'écouler directement dans la commande sendmail, permettant l'écriture de fichiers sur le serveur et potentiellement l'exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "code-execution",
+          "rce",
+          "injection",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66224"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66217",
+        "cvss": 8.8,
+        "product": "AIS-catcher",
+        "description": "Dépassement de tampon de segment de mémoire (Heap Buffer Overflow) provoqué par un débordement d'entier dans la logique d'analyse des paquets MQTT. L'envoi d'un paquet MQTT malformé avec un champ Topic Length manipulé peut entraîner un déni de service immédiat et une exécution de code à distance (RCE) lorsque utilisé comme bibliothèque.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ais-catcher",
+          "integer-underflow",
+          "buffer-overflow",
+          "rce",
+          "dos",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66217"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66225",
+        "cvss": 8.7,
+        "product": "OrangeHRM",
+        "description": "Prise de contrôle de compte (Account Takeover) via un nom d'utilisateur non validé dans le flux de réinitialisation de mot de passe. Un attaquant peut modifier le paramètre de nom d'utilisateur dans la requête finale de réinitialisation pour cibler un autre utilisateur après avoir obtenu un lien de réinitialisation valide.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "account-takeover",
+          "authentification",
+          "privileges",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66225"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66289",
+        "cvss": 8.7,
+        "product": "OrangeHRM",
+        "description": "Accès persistant à la session en raison d'une invalidation manquante après la désactivation de l'utilisateur et le changement de mot de passe. Les cookies de session restent valides indéfiniment, permettant à un utilisateur désactivé ou à un attaquant de conserver l'accès.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "session-management",
+          "authentification",
+          "accès",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66289"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66201",
+        "cvss": 8.6,
+        "product": "LibreChat",
+        "description": "Vulnérabilité de Server-Side Request Forgery (SSRF) dans la fonctionnalité 'Actions'. Un utilisateur authentifié peut utiliser des spécifications OpenAPI spécialement conçues pour accéder à des URL normalement accessibles uniquement au serveur LibreChat (par exemple, services de métadonnées cloud).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "librechat",
+          "ssrf",
+          "accès",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66201"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66223",
+        "cvss": 8.4,
+        "product": "OpenObserve",
+        "description": "Mauvaise configuration du cycle de vie des jetons d'invitation (Invite Token Lifecycle Misconfiguration). Les jetons d'invitation d'organisation n'expirent pas, restent valides après la suppression de l'utilisateur et permettent plusieurs invitations avec différents rôles, entraînant un contrôle d'accès rompu et une escalade de privilèges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openobserve",
+          "accès",
+          "privileges",
+          "escalation",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66223"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-59790",
+        "cvss": "Critique",
+        "product": "Apache Kvrocks",
+        "description": "Faille de gestion des privilèges (Improper Privilege Management) où la commande 'RESET' peut être exploitée pour accorder des privilèges administratifs à un utilisateur non privilégié, contournant les contrôles d'accès.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache-kvrocks",
+          "privilege-escalation",
+          "accès",
+          "critique",
+          "nosql"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-54236",
+        "cvss": "Critique",
+        "product": "Adobe Magento",
+        "description": "Vulnérabilité critique due à une validation d'entrée incorrecte (Improper Input Validation) permettant l'injection de charges utiles malveillantes. Conduit à l'accès administratif, à l'installation de backdoors persistantes ou de web skimmers sur les pages de paiement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe-magento",
+          "e-commerce",
+          "injection",
+          "accès-administratif",
+          "web-skimmer",
+          "critique"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-registered-18000-holiday-themed-domains/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-33073",
+        "cvss": "Élevé",
+        "product": "NTLM Protocol",
+        "description": "Vulnérabilité de réflexion NTLM de haute gravité permettant à un attaquant interne de forcer un système à s'authentifier contre lui-même, obtenant des privilèges SYSTEM et permettant le dumping d'informations d'identification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ntlm",
+          "privilege-escalation",
+          "authentification",
+          "credentials-dumping",
+          "elevé"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-43451",
+        "cvss": "Critique",
+        "product": "NTLM Protocol (MSHTML engine)",
+        "description": "Faille NTLM exploitant le moteur MSHTML permettant à des fichiers .url malveillants de déclencher une tentative d'authentification NTLM vers un serveur contrôlé par l'attaquant, même par de simples actions utilisateur (sélection, clic droit, suppression).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ntlm",
+          "mshtml",
+          "authentification",
+          "exploitation-facile",
+          "critique"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-10914",
+        "cvss": "Élevé",
+        "product": "D-Link NAS",
+        "description": "Vulnérabilité exploitée par le botnet ShadowV2 (Mirai) pour compromettre à distance les systèmes NAS de D-Link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "exploitation-à-distance",
+          "elevé"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-10915",
+        "cvss": "Élevé",
+        "product": "D-Link NAS",
+        "description": "Vulnérabilité exploitée par le botnet ShadowV2 (Mirai) pour compromettre à distance les systèmes NAS de D-Link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "exploitation-à-distance",
+          "elevé"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2022-37055",
+        "cvss": "Élevé",
+        "product": "D-Link NAS",
+        "description": "Vulnérabilité exploitée par le botnet ShadowV2 (Mirai) pour compromettre à distance les systèmes NAS de D-Link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "exploitation-à-distance",
+          "elevé"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowV2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2021-26829",
+        "cvss": "Critique",
+        "product": "OpenPLC ScadaBR",
+        "description": "Vulnérabilité XSS stockée dans le composant system_settings.shtm, activement exploitée. Permet l'injection de scripts malveillants dans l'interface administrative pour détourner des sessions admin, manipuler des processus industriels ou pivoter vers des réseaux OT.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openplc",
+          "scada",
+          "ics",
+          "ot",
+          "xss",
+          "execution-de-code",
+          "privilege-escalation",
+          "critique",
+          "exploitee-activement"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2020-25506",
+        "cvss": "Élevé",
+        "product": "D-Link NAS",
+        "description": "Vulnérabilité exploitée par le botnet ShadowV2 (Mirai) pour compromettre à distance les systèmes NAS de D-Link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "exploitation-à-distance",
+          "elevé"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers Registered 18,000 Holiday-Themed Domains for Cybercrime Campaigns",
+        "description": "Des acteurs de la menace ont enregistré plus de 18 000 domaines thématiques liés aux fêtes (par exemple, 'Christmas', 'Black Friday') pour lancer des campagnes de phishing et d'escroquerie durant la saison des fêtes 2025. Ces campagnes exploitent des outils automatisés et des vulnérabilités critiques de l'e-commerce comme CVE-2025-54236 dans Adobe Magento (validation d'entrée incorrecte) pour obtenir un accès administratif, installer des portes dérobées et déployer des web skimmers sur les pages de paiement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Accès Initial - Phishing)",
+          "T1566 (Phishing)",
+          "T1189 (Compromission par Drive-by - web skimmers)",
+          "TA0004 (Élévation de Privilèges - accès admin)",
+          "TA0003 (Persistance - portes dérobées)"
+        ],
+        "analyse": "L'industrialisation de la cybercriminalité ciblant les événements e-commerce saisonniers représente une menace significative pour les consommateurs et les entreprises. La combinaison de l'ingénierie sociale (domaines thématiques) et des exploits techniques (vulnérabilité Magento, web skimmers) démontre une approche multifacette de la fraude financière et du vol de données.",
+        "recommandations": "Les consommateurs doivent être extrêmement vigilants face aux e-mails et sites web thématiques de vacances suspects. Les entreprises de commerce électronique doivent s'assurer que tous les logiciels, en particulier les plateformes comme Magento, sont entièrement patchés contre les vulnérabilités connues (par exemple, CVE-2025-54236). Mettre en œuvre une validation d'entrée forte, des audits de sécurité réguliers et une surveillance continue des web skimmers et des accès non autorisés aux panneaux d'administration.",
+        "tags": [
+          "cybercriminalité",
+          "saison-des-fêtes",
+          "phishing",
+          "escroqueries",
+          "e-commerce",
+          "adobe-magento",
+          "web-skimmer",
+          "vol-de-données",
+          "exploitation-de-vulnérabilité"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-registered-18000-holiday-themed-domains/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Tomiris wreaks Havoc: New tools and techniques of the APT group",
+        "description": "Analyse des activités du groupe APT Tomiris en 2025, révélant de nouveaux outils et techniques. L'infection initiale se fait par spear-phishing avec des archives malveillantes protégées par mot de passe contenant des exécutables. Les frameworks de post-exploitation incluent Havoc et AdaptixC2, tirant parti de services publics comme Discord et Telegram pour le C2. Des shells inversés multi-langues (Go, Rust, C/C++/C#, Python) sont utilisés pour l'accès à distance, la reconnaissance et l'exfiltration de fichiers.",
+        "threat_actor": "Tomiris",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "62.113.114.209",
+            "188.127.251.146",
+            "192.153.57.9",
+            "193.149.129.113",
+            "195.2.79.245",
+            "62.113.115.89",
+            "82.115.223.78",
+            "85.209.128.171",
+            "88.214.25.249",
+            "89.110.95.151",
+            "89.110.98.234"
+          ],
+          "URL": [
+            "hxxps://discord[.]com/api/webhooks/1370623818858762291/p1DC3l8XyGviRFAR50de6tKYP0CCr1hTAes9B9ljbd-J-dY7bddi31BCV90niZ3bxIMuh",
+            "hxxps://discord[.]com/api/webhooks/1388018607283376231/YYJe-lnt4HyvasKlhoOJECh9yjOtbllL_nalKBMUKUB3xsk7Mj74cU5IfBDYBYX-E78G",
+            "hxxps://discord[.]com/api/webhooks/1386588127791157298/FSOtFTIJaNRT01RVXk5fFsU_sjp_8E0k2QK3t5BUcAcMFR_SHMOEYyLhFUvkY3ndk8-wh",
+            "hxxps://discord[.]com/api/webhooks/1369277038321467503/KqfsoVzebWNNGqFXePMxqi0pta2445WZxYNsY9EsYv1u_iyXAfYL3GGG76bCKy3-a75",
+            "hxxps://discord[.]com/api/webhooks/1396726652565848135/OFds8Do2qH-C_V0ckaF1AJJAqQJuKq-YZVrO1t7cWuvAp7LNfqI7piZlyCcS1qvwpXTZ",
+            "hxxps://discordapp[.]com/api/webhooks/1392383639450423359/TmFw-WY-u3D3HihXqVOOinL73OKqXvi69IBNh_rr15STd3FtffSP2BjAH59ZviWKWJRX",
+            "hxxps://discordapp[.]com/api/webhooks/1363764458815623370/IMErckdJLreUbvxcUA8c8SCfhmnsnivtwYSf7nDJF-bWZcFcSE2VhXdlSgVbheSzhGYEh",
+            "hxxps://discordapp[.]com/api/webhooks/1355019191127904457/xCYi5fx_Y2-ddUE0CdHfiKmgrAC-Cp9oi-Qo3aFG318P5i-GNRfMZiNFOxFrQkZJNJsRh",
+            "hxxp://82.115.223[.]218/",
+            "hxxp://172.86.75[.]102/",
+            "hxxp://193.149.129[.]113/",
+            "hxxps://api.telegram[.]org/bot8044543455:AAG3Pt4fvf6tJj4Umz2TzJTtTZD7ZUArT8E/",
+            "hxxps://api.telegram[.]org/bot7864956192:AAEjExTWgNAMEmGBI2EsSs46AhO7Bw8STcY/",
+            "hxxps://api.telegram[.]org/bot8039791391:AAHcE2qYmeRZ5P29G6mFAylVJl8qH_ZVBh8/",
+            "hxxps://api.telegram[.]org/bot7157076145:AAG79qKudRCPu28blyitJZptX_4z_LlxOS0/",
+            "hxxps://api.telegram[.]org/bot7649829843:AAH_ogPjAfuv-oQ5_Y-s8YmlWR73Gbid5h0/",
+            "hxxp://188.127.251[.]146:8080/sbchost.rar",
+            "hxxp://188.127.251[.]146:8080/sxbchost.exe",
+            "hxxp://192.153.57[.]9/private/svchost.exe",
+            "hxxp://193.149.129[.]113/732.exe",
+            "hxxp://193.149.129[.]113/system.exe",
+            "hxxp://195.2.79[.]245/732.exe",
+            "hxxp://195.2.79[.]245/code.exe",
+            "hxxp://195.2.79[.]245/firefox.exe",
+            "hxxp://195.2.79[.]245/rever.exe",
+            "hxxp://195.2.79[.]245/service.exe",
+            "hxxp://195.2.79[.]245/winload.exe",
+            "hxxp://195.2.79[.]245/winload.rar",
+            "hxxp://195.2.79[.]245/winsrv.rar",
+            "hxxp://195.2.79[.]245/winupdate.exe",
+            "hxxp://62.113.115[.]89/offel.exe",
+            "hxxp://82.115.223[.]78/private/dwm.exe",
+            "hxxp://82.115.223[.]78/private/msview.exe",
+            "hxxp://82.115.223[.]78/private/spoolsvc.exe",
+            "hxxp://82.115.223[.]78/private/svchost.exe",
+            "hxxp://82.115.223[.]78/private/sysmgmt.exe",
+            "hxxp://85.209.128[.]171:8000/AkelPad.rar",
+            "hxxp://88.214.25[.]249:443/netexit.rar",
+            "hxxp://89.110.95[.]151/dwm.exe",
+            "hxxp://89.110.98[.]234/Rar.exe",
+            "hxxp://89.110.98[.]234/code.exe",
+            "hxxp://89.110.98[.]234/rever.rar",
+            "hxxp://89.110.98[.]234/winload.exe",
+            "hxxp://89.110.98[.]234/winload.rar",
+            "hxxp://89.110.98[.]234/winrm.exe",
+            "hxxps://docsino[.]ru/wp-content/private/alone.exe",
+            "hxxps://docsino[.]ru/wp-content/private/winupdate.exe",
+            "hxxps://sss.qwadx[.]com/12345.exe",
+            "hxxps://sss.qwadx[.]com/AkelPad.exe",
+            "hxxps://sss.qwadx[.]com/netexit.rar",
+            "hxxps://sss.qwadx[.]com/winload.exe",
+            "hxxps://sss.qwadx[.]com/winsrv.exe"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0001 (Accès Initial - Pièce Jointe de Spearphishing)",
+          "TA0002 (Exécution - Interprète de Commandes et de Scripts, API Native)",
+          "TA0003 (Persistance)",
+          "TA0005 (Évasion de Défense - Fichiers ou Informations Obfusqués, Mascarade)",
+          "TA0007 (Découverte - Découverte d'Informations Système, Découverte de Fichiers et de Répertoires)",
+          "TA0011 (Commande et Contrôle - Protocole de Couche Application, Protocole Standard de Couche Non-Application)",
+          "T1059 (Interprète de Commandes et de Scripts)",
+          "T1071.001 (Protocole de Couche Application : Protocoles Web)",
+          "T1566.001 (Phishing : Pièce Jointe de Spearphishing)",
+          "T1027 (Fichiers ou Informations Obfusqués)",
+          "T1105 (Transfert d'Outil Entrant)"
+        ],
+        "analyse": "Le groupe APT Tomiris fait preuve d'une sophistication accrue, tirant parti d'infrastructures C2 publiques pour camoufler le trafic malveillant. Leur approche multi-langues et leurs frameworks modulaires permettent des opérations flexibles contre des cibles gouvernementales et intergouvernementales de grande valeur. L'utilisation d'archives protégées par mot de passe avec des mots de passe dans le corps de l'e-mail est une technique d'évasion courante.",
+        "recommandations": "Renforcer la sécurité des e-mails pour détecter le spear-phishing et les archives malveillantes protégées par mot de passe. Mettre en œuvre une analyse comportementale et une inspection du trafic réseau pour identifier les communications C2 déguisées en trafic de services publics légitimes (Discord, Telegram). Renforcer les capacités de détection des points d'extrémité pour les shells inversés multi-langues et les frameworks de post-exploitation. Éduquer les utilisateurs sur les fichiers exécutables déguisés et les pièces jointes d'e-mails suspects.",
+        "tags": [
+          "apt",
+          "tomiris",
+          "havoc",
+          "adaptixc2",
+          "spear-phishing",
+          "c2",
+          "discord",
+          "telegram",
+          "reverse-shell",
+          "gouvernement",
+          "intergouvernemental",
+          "malware",
+          "python",
+          "go",
+          "rust",
+          "c++",
+          "evasion-de-defense",
+          "accès-initial",
+          "commande-et-controle"
+        ],
+        "sources": [
+          "https://securelist.com/tomiris-new-tools/118143/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "The Future of UK Counterterrorism: A Case for Integrated Violence Prevention",
+        "description": "Analyse du paysage antiterroriste britannique en évolution, passant de groupes terroristes organisés à des acteurs isolés motivés par des griefs personnels et des vulnérabilités, souvent amplifiés en ligne par le contenu généré par l'IA et les acteurs étatiques hostiles. La stratégie 'Prevent' nécessite une réforme, se concentrant sur les risques terroristes réels au sein d'un système intégré de prévention de la violence multi-agences pour traiter diverses formes de préjudice sans la stigmatisation d'une étiquette antiterroriste.",
+        "threat_actor": "Acteurs isolés, petits groupes, acteurs étatiques hostiles",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "La politique antiterroriste du Royaume-Uni est confrontée à des défis importants en raison de la nature changeante de la radicalisation, qui est de plus en plus alimentée par l'amplification en ligne des griefs et la propagande sophistiquée, y compris le contenu généré par l'IA. Une approche de prévention intégrée est essentielle pour aborder l'interaction complexe des facteurs menant à la violence, au-delà des définitions traditionnelles du terrorisme, et pour éviter la dérive de mission dans les efforts antiterroristes.",
+        "recommandations": "Réformer les stratégies antiterroristes pour s'adapter aux menaces évolutives, en se concentrant sur la prévention intégrée de la violence. Développer des cadres solides pour identifier et contrecarrer l'amplification des récits diviseurs et du contenu trompeur généré par l'IA en ligne. Investir dans les services locaux (éducation, santé mentale) pour aborder les vulnérabilités et les griefs sous-jacents. Favoriser la collaboration multi-agences pour une intervention précoce.",
+        "tags": [
+          "antiterrorisme",
+          "royaume-uni",
+          "prévention-de-la-violence",
+          "radicalisation",
+          "menaces-en-ligne",
+          "ia",
+          "acteurs-étatiques-hostiles",
+          "cohésion-sociale",
+          "politique",
+          "stratégie"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/future-uk-counterterrorism-case-integrated-violence-prevention"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "New Mirai variant ShadowV2 targets IoT devices during AWS disruption",
+        "description": "Le botnet ShadowV2, une variante de Mirai, a été observé exploitant des vulnérabilités connues dans les appareils IoT (DDWRT, D-Link, DigiEver, TBK, TP-Link) lors d'une panne d'AWS. Cela suggère un test pour de futures attaques DDoS. Le botnet utilise diverses méthodes d'inondation UDP, TCP et HTTP, contrôlées par un serveur C2, et cible divers secteurs, notamment la technologie, la vente au détail, la fabrication, le gouvernement et les télécommunications.",
+        "threat_actor": "ShadowV2 (variante de Mirai)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "81.88.18.108"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0008 (Impact - Déni de Service)",
+          "T1498 (DDoS)"
+        ],
+        "analyse": "L'émergence de ShadowV2 souligne la menace continue des botnets IoT et leur potentiel à exploiter des vulnérabilités connues pour des attaques DDoS à grande échelle. Le calendrier, lors d'une perturbation d'AWS, suggère des opérations opportunistes ou en phase de test, indiquant de futures campagnes plus répandues. Le large éventail de secteurs ciblés souligne le risque omniprésent pour les infrastructures interconnectées.",
+        "recommandations": "Maintenir des mises à jour de micrologiciel en temps opportun pour les appareils IoT. Mettre en œuvre des pratiques de sécurité robustes pour la segmentation du réseau et le contrôle d'accès. Surveiller en permanence les renseignements sur les menaces pour les nouvelles variantes de botnets et les vulnérabilités exploitées. Déployer des solutions d'atténuation des DDoS. Désactiver les informations d'identification par défaut et appliquer des mots de passe forts et uniques pour tous les appareils IoT.",
+        "tags": [
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "iot",
+          "ddos",
+          "exploitation-de-vulnérabilité",
+          "aws",
+          "réseau-et-télécommunications",
+          "fabrication",
+          "gouvernement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Critical Alert: Apache Kvrocks ‘RESET’ Command Flaw Grants Admin Privileges",
+        "description": "Apache Kvrocks, une base de données NoSQL, présente des vulnérabilités critiques. CVE-2025-59790 permet à des utilisateurs non privilégiés d'obtenir un contrôle administratif via la commande 'RESET', contournant les contrôles d'accès. CVE-2025-59792 permet à la commande 'MONITOR' d'exposer involontairement des identifiants en texte clair lors de l'authentification. Ces failles permettent la modification non autorisée des configurations, l'accès aux données sensibles et la perturbation du service.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1068 (Exploitation pour l'escalade de privilèges)",
+          "T1552 (Identifiants non sécurisés)",
+          "T1552.001 (Identifiants dans les fichiers)"
+        ],
+        "analyse": "Les vulnérabilités dans Apache Kvrocks posent un risque significatif pour l'intégrité et la confidentialité des données dans les déploiements de bases de données NoSQL. La facilité d'escalade de privilèges via la commande 'RESET' et l'exposition des identifiants en texte clair soulignent des déficiences fondamentales de contrôle d'accès et de codage sécurisé, rendant ces systèmes très susceptibles d'être compromis même par des attaquants peu privilégiés.",
+        "recommandations": "Corriger Apache Kvrocks à la version 2.13.1 ou supérieure immédiatement. Mettre en œuvre des contrôles d'accès stricts et le principe du moindre privilège pour les utilisateurs de la base de données. Surveiller les exécutions de commandes suspectes, en particulier les commandes 'RESET' et 'MONITOR', à partir de comptes non administratifs. Examiner les configurations de base de données pour s'assurer que les données sensibles ne sont pas stockées en texte clair.",
+        "tags": [
+          "vulnérabilité",
+          "apache-kvrocks",
+          "nosql",
+          "escalade-de-privilèges",
+          "exposition-d'identifiants",
+          "critique",
+          "base-de-données",
+          "contrôle-d'accès"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "CISA Flags Actively Exploited OpenPLC Flaw (CVE-2021-26829)",
+        "description": "La CISA a ajouté CVE-2021-26829, une vulnérabilité de script intersite (XSS) stockée dans le composant system_settings.shtm d'OpenPLC ScadaBR, à son catalogue des vulnérabilités connues exploitées. Cette faille permet aux attaquants d'injecter des scripts malveillants dans les interfaces administratives, conduisant au détournement de session administrateur, à la manipulation des processus industriels et au mouvement latéral dans les réseaux OT. La vulnérabilité est activement exploitée et publiquement démontrée.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Accès Initial)",
+          "T1190 (Exploiter une application exposée sur Internet)",
+          "T1203 (Exploitation pour l'exécution côté client)",
+          "T1059 (Interprète de Commandes et de Scripts)",
+          "TA0004 (Élévation de Privilèges - si le détournement de session administrateur mène à des privilèges plus élevés)"
+        ],
+        "analyse": "L'exploitation active de CVE-2021-26829 dans OpenPLC ScadaBR représente une menace grave pour les systèmes de contrôle industriels (ICS) et les infrastructures critiques. La nature d'un XSS stocké dans une interface administrative permet une compromission persistante et un contrôle potentiel sur les réseaux de technologie opérationnelle (OT), soulignant le besoin critique de patching immédiat et de pratiques de développement sécurisé dans les logiciels ICS/SCADA.",
+        "recommandations": "Appliquer immédiatement le patch OpenPLC ScadaBR pour corriger CVE-2021-26829. Mettre en œuvre des politiques de sécurité de contenu (CSP) strictes pour atténuer les risques XSS. Effectuer des audits de sécurité réguliers des systèmes SCADA. Former les administrateurs et les opérateurs à reconnaître et signaler les activités suspectes. Isoler les réseaux OT des réseaux IT pour limiter le rayon d'action des compromissions.",
+        "tags": [
+          "vulnérabilité",
+          "cisa",
+          "openplc",
+          "scada",
+          "ics",
+          "ot",
+          "xss",
+          "stocké-xss",
+          "exploité-activement",
+          "infrastructure-critique",
+          "escalade-de-privilèges",
+          "système-de-contrôle-industriel"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Zombie Protocol: How NTLM Flaws Are Haunting 2025",
+        "description": "Le protocole d'authentification NTLM reste une vulnérabilité de sécurité critique, avec de nouvelles failles (par exemple, CVE-2024-43451 exploitant le moteur MSHTML et CVE-2025-33073, une faille de réflexion de haute gravité) étant activement exploitées. Les attaquants utilisent des fichiers .url spécialement conçus pour déclencher des tentatives d'authentification NTLM ou des attaques de réflexion internes pour obtenir des privilèges de niveau SYSTEM, permettant le dumping d'identifiants et le mouvement latéral.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Accès Initial - Exécution par l'Utilisateur)",
+          "T1204 (Exécution par l'Utilisateur - Fichier Malveillant)",
+          "TA0004 (Élévation de Privilèges - Exploitation pour l'Élévation de Privilèges)",
+          "T1068 (Exploitation pour l'Élévation de Privilèges)",
+          "T1552 (Identifiants non sécurisés)",
+          "T1552.001 (Identifiants dans les fichiers - dump LSASS)",
+          "T1003.001 (Dump d'Identifiants OS : Mémoire LSASS)"
+        ],
+        "analyse": "L'exploitation continue des failles NTLM souligne le défi de la dépréciation des protocoles hérités intégrés dans les environnements d'entreprise. Ces vulnérabilités offrent des voies fiables aux attaquants pour réaliser des escalades de privilèges et le vol d'identifiants, même avec une simple interaction utilisateur, posant une menace persistante aux réseaux basés sur Windows.",
+        "recommandations": "Accélérer la migration de NTLM vers Kerberos lorsque cela est possible. Appliquer la signature SMB et la protection étendue pour l'authentification (EPA). Auditer les réseaux pour le trafic NTLM et les tentatives d'authentification suspectes. Éduquer les utilisateurs sur les risques d'ouvrir ou d'interagir avec des fichiers non fiables, même par des actions de base comme le clic droit. Mettre en œuvre une détection et une réponse aux points d'extrémité (EDR) pour détecter les tentatives de dumping d'identifiants.",
+        "tags": [
+          "ntlm",
+          "authentification",
+          "vulnérabilité",
+          "protocole-hérité",
+          "escalade-de-privilèges",
+          "vol-d'identifiants",
+          "windows",
+          "exploitation-active",
+          "kerberos"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Legacy Python Bootstrap Scripts Create Domain-Takeover Risk in Multiple PyPI Packages",
+        "description": "Des scripts Python de bootstrap hérités vulnérables (par exemple, `bootstrap.py`) dans plusieurs packages PyPI posent un risque pour la chaîne d'approvisionnement. Ces scripts récupèrent et exécutent des scripts d'installation depuis `python-distribute.org`, un domaine maintenant disponible à la vente. Un attaquant pourrait acquérir ce domaine pour servir du code malveillant, conduisant à la compromission du système et au vol de données lors de l'installation de packages ou de la configuration de l'environnement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "python-distribute[.]org"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0001 (Accès Initial)",
+          "T1584 (Compromettre la chaîne d'approvisionnement)",
+          "T1584.004 (Compromission de la chaîne d'approvisionnement : Compromission des outils de développement)",
+          "T1071.001 (Protocole de Couche Application : Protocoles Web)"
+        ],
+        "analyse": "Cette vulnérabilité latente de la chaîne d'approvisionnement dans des packages Python largement utilisés démontre les risques à long terme associés au code hérité non maintenu et à l'expiration des noms de domaine. Le potentiel de prise de contrôle d'un domaine permet une compromission à fort impact des environnements de développement et des applications en aval, affectant de nombreux utilisateurs à leur insu.",
+        "recommandations": "Les développeurs devraient auditer leurs projets pour les scripts `bootstrap.py` qui référencent `python-distribute.org` ou des domaines hérités similaires. Mettre à jour les pratiques de gestion des packages pour éviter les méthodes d'installation dépréciées. Mettre en œuvre des mesures de sécurité de la chaîne d'approvisionnement logicielle, y compris des vérifications d'intégrité pour les dépendances téléchargées et un contrôle strict de l'accès aux ressources externes.",
+        "tags": [
+          "chaîne-d'approvisionnement",
+          "pypi",
+          "python",
+          "vulnérabilité",
+          "prise-de-contrôle-de-domaine",
+          "code-hérité",
+          "gestion-de-packages",
+          "développement-logiciel",
+          "vol-de-données"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/legacy-python-bootstrap-scripts-create.html"
+        ],
+        "date": "2025-11-29"
+      }
+    ]
+  },
+  "EN": {
+    "Transversal Analysis": {
+      "analyse": "The analysis of the articles reveals a cyber threat landscape characterized by persistent critical vulnerabilities and increased sophistication of malicious actors. Flaws in session management (OrangeHRM, OpenObserve), RCE vulnerabilities (AIS-catcher, OrangeHRM), and privilege escalation issues (Apache Kvrocks, NTLM) continue to provide prime entry points for attackers. The software supply chain is also a prime target, as evidenced by domain takeover risks associated with obsolete Python packages and massive secret leaks via code formatting platforms or public repositories. Attackers' use of social engineering tactics, such as holiday-themed phishing campaigns, is coupled with the exploitation of major e-commerce vulnerabilities (Adobe Magento). APT groups, such as Tomiris, are refining their modus operandi by using disguised Command and Control (C2) infrastructures via public services (Discord, Telegram) and multi-language malware. IoT botnets (ShadowV2, a Mirai variant) remain a significant threat to connected devices, exploited for DDoS attacks. Finally, data breaches are frequent, resulting from both targeted cyberattacks (French Football Federation) and human error or lax configurations (exposure of secrets, email leaks). The impact of online disinformation, including AI-generated content, is also highlighted in the context of counter-radicalization. In conclusion, the general state of threats is marked by a diversification of attack vectors, rapid exploitation of persistent weaknesses, and constant adaptability of adversaries, requiring increased vigilance and integrated defense strategies.",
+      "date": "2025-11-29"
+    },
+    "Malicious Actors Summary": [
+      {
+        "name": "Tomiris APT",
+        "sector": "Foreign ministries, intergovernmental organizations, government entities",
+        "modop": "Spear-phishing campaigns with malicious password-protected archives containing executables, use of multi-language reverse shells (Go, Rust, C/C++/C#, Python), deployment of post-exploitation frameworks (Havoc, AdaptixC2), utilization of public services (Discord, Telegram) for C2 communication.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "spear-phishing",
+          "havoc",
+          "adaptixc2",
+          "c2",
+          "government",
+          "intergovernmental"
+        ],
+        "sources": [
+          "https://securelist.com/tomiris-new-tools/118143/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "name": "ShadowV2 (Mirai variant)",
+        "sector": "Technology, retail, hospitality, manufacturing, managed security services providers, government, telecommunication and carrier services, education, IoT devices (DDWRT, D-Link, DigiEver, TBK, TP-Link)",
+        "modop": "Exploiting known vulnerabilities in IoT devices to form a botnet, launching DDoS attacks (UDP, TCP, HTTP flood), communications via a C2 server.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "iot",
+          "ddos",
+          "vulnerability-exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "name": "Evil Twin WiFi Attacker",
+        "sector": "Travelers (airports, flights)",
+        "modop": "Setting up 'evil twin' WiFi networks to steal personal data (intimate images, videos, personal credentials).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "evil-twin",
+          "data-theft",
+          "fraud",
+          "wifi"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-behind-in-flight-evil-twin-wifi-attacks-gets-7-years-in-prison/"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Geopolitical News Summary": [
+      {
+        "sector": "International Relations",
+        "theme": "Gaza Conflict",
+        "description": "The Gaza conflict appears to be fading from media attention, despite an unimplemented ceasefire, ongoing Israeli blockade of humanitarian aid, and unresolved Hamas disarmament. The issue of Palestinian prisoners remains unresolved, ethnic cleansing continues in the West Bank, and Gaza's management is uncertain, portending a resurgence of violence and a threat to Middle Eastern stability.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "conflict",
+          "middle-east",
+          "ceasefire",
+          "humanitarian-aid"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-telle-une-guerre-oubliee/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Defense and National Security",
+        "theme": "UK Counterterrorism",
+        "description": "The UK's counter-terrorism strategy ('Prevent') must adapt to an evolving threat landscape, shifting from organized terror groups to lone actors driven by personal grievances and vulnerabilities, often amplified online by AI-generated content and hostile state actors. An integrated approach to violence prevention is needed to address a broader range of threats, without the stigma associated with the counter-terrorism label.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "counterterrorism",
+          "radicalization",
+          "online-threats",
+          "ai",
+          "hostile-state-actors"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/future-uk-counterterrorism-case-integrated-violence-prevention"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "International Relations",
+        "theme": "Syrian Transition and Oil Power",
+        "description": "Post-war Syria faces fragmented political recomposition and reconstruction challenges. The question of oil in Rojava (Northeast Syria) is crucial, reflecting power dynamics between Damascus, Syrian Kurds, and external powers, determining the future position of Kurds in a potentially re-centralized Syria.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syria",
+          "rojava",
+          "oil",
+          "political-recomposition",
+          "conflict"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-nord-est-syrien-a-lepreuve-de-la-transition-un-pouvoir-petrolier-sous-contrainte/"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Data Breaches Summary": [
+      {
+        "sector": "Education",
+        "victim": "Babu Banarasi Das University",
+        "description": "Data breach incident targeting Babu Banarasi Das University in India.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "india",
+          "university",
+          "data-leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115628865293203470"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Government",
+        "victim": "Crown Response Office (UK)",
+        "description": "Accidental exposure of the identities of over 30 Lake Alice torture survivors by a UK government agency, due to a manager's error (failure to use BCC field in an email).",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "human-error",
+          "privacy",
+          "email",
+          "uk"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/28/trickery-and-f-ery-agency-under-fire-over-senior-managers-serious-privacy-breach/?pk_campaign=feed&pk_kwd=trickery-and-f-ery-agency-under-fire-over-senior-managers-serious-privacy-breach"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Sports",
+        "victim": "French Football Federation (FFF)",
+        "description": "Data breach following a cyberattack using a compromised account to access administrative management software, resulting in the theft of member data (name, gender, birth details, nationality, postal address, email, phone number, license number).",
+        "tags": [
+          "violation",
+          "breach",
+          "sports",
+          "fff",
+          "france",
+          "cyberattack",
+          "compromised-account",
+          "personal-data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/french-football-federation-fff-discloses-data-breach-after-cyberattack/",
+          "https://securityaffairs.com/185160/data-breach/attackers-stole-member-data-from-french-soccer-federation.html"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Software Development",
+        "victim": "GitLab Users",
+        "description": "Over 17,000 secrets (credentials, private keys) exposed across 2,800+ unique domains via public GitLab repositories, due to misconfiguration or negligence.",
+        "tags": [
+          "violation",
+          "breach",
+          "software-development",
+          "gitlab",
+          "secrets",
+          "data-exposure",
+          "misconfiguration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/public-gitlab-repositories-exposed-more-than-17-000-secrets/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Software Development, Multi-sector (government, finance, healthcare, telecoms, CNI)",
+        "victim": "JSONFormatter and CodeBeautify Users",
+        "description": "Thousands of sensitive secrets (AD credentials, cloud keys, private keys, API tokens, AWS Secrets Manager export) unintentionally published by users on public code formatting platforms (JSONFormatter, CodeBeautify) via predictable, browsable URLs.",
+        "tags": [
+          "violation",
+          "breach",
+          "software-development",
+          "secrets",
+          "data-exposure",
+          "cloud",
+          "api",
+          "multi-sector"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185150/security/thousands-of-sensitive-secrets-published-on-jsonformatter-and-codebeautify.html"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Network & Telecommunications",
+        "victim": "Thailand National Telecom Public Company Limited",
+        "description": "High-confidence data breach targeting Thailand's national telecommunications company.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "thailand",
+          "data-leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115628390256162627"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Travel and Tourism",
+        "victim": "Travelers (victims of Evil Twin WiFi attacks)",
+        "description": "A man was sentenced for operating an 'evil twin' WiFi network in Australian airports and flights, stealing thousands of intimate images and videos, personal credentials, and fraudulent WiFi page records.",
+        "tags": [
+          "violation",
+          "breach",
+          "travel",
+          "evil-twin",
+          "data-theft",
+          "australia",
+          "credentials"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-behind-in-flight-evil-twin-wifi-attacks-gets-7-years-in-prison/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "sector": "Education",
+        "victim": "Center for Professional Development of Pedagogical Workers of Vinnytsia City Council",
+        "description": "Data breach targeting the Center for Professional Development of Pedagogical Workers of Vinnytsia City Council in Ukraine.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "ukraine",
+          "data-leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115629569056619464"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Vulnerabilities Summary": [
+      {
+        "cve_id": "CVE-2025-66216",
+        "cvss": 9.3,
+        "product": "AIS-catcher",
+        "description": "Heap Buffer Overflow in the AIS::Message class allowing approximately 1KB of arbitrary data to be written into a 128-byte buffer, leading to Denial of Service (DoS) and potentially Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ais-catcher",
+          "buffer-overflow",
+          "rce",
+          "dos",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66216"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66224",
+        "cvss": 9.0,
+        "product": "OrangeHRM",
+        "description": "Arbitrary Code Execution via Arbitrary File Write from Sendmail Parameter Injection. An input neutralization flaw allows user-controlled values to flow directly into the system’s sendmail command, enabling file writes on the server and potential RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "code-execution",
+          "rce",
+          "injection",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66224"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66217",
+        "cvss": 8.8,
+        "product": "AIS-catcher",
+        "description": "Integer Underflow in MQTT Packet Parsing leading to Heap Buffer Overflow. Sending a malformed MQTT packet with a manipulated Topic Length field can trigger immediate Denial of Service (DoS) and Remote Code Execution (RCE) when used as a library.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ais-catcher",
+          "integer-underflow",
+          "buffer-overflow",
+          "rce",
+          "dos",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66217"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66225",
+        "cvss": 8.7,
+        "product": "OrangeHRM",
+        "description": "Account Takeover through Unvalidated Username in Password Reset Workflow. An attacker can alter the username parameter in the final reset request to target a different user after obtaining a valid reset link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "account-takeover",
+          "authentication",
+          "privileges",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66225"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66289",
+        "cvss": 8.7,
+        "product": "OrangeHRM",
+        "description": "Persistent Session Access Due to Missing Invalidation After User Disable and Password Change. Active session cookies remain valid indefinitely, allowing a disabled user or an attacker to retain access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "orangehrm",
+          "session-management",
+          "authentication",
+          "access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66289"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66201",
+        "cvss": 8.6,
+        "product": "LibreChat",
+        "description": "Server-Side Request Forgery (SSRF) in Actions Capability. An authenticated user can pass specially crafted OpenAPI specs to access URLs only accessible to the LibreChat server (e.g., cloud metadata services).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "librechat",
+          "ssrf",
+          "access",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66201"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-66223",
+        "cvss": 8.4,
+        "product": "OpenObserve",
+        "description": "Invite Token Lifecycle Misconfiguration. Organization invitation tokens do not expire, remain valid after user removal, and allow multiple invitations, leading to broken access control and privilege escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openobserve",
+          "access",
+          "privileges",
+          "escalation",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66223"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-59790",
+        "cvss": "Critical",
+        "product": "Apache Kvrocks",
+        "description": "Improper Privilege Management flaw where the 'RESET' command can be exploited to grant administrative privileges to a non-privileged user, bypassing intended access controls.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache-kvrocks",
+          "privilege-escalation",
+          "access",
+          "critical",
+          "nosql"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-54236",
+        "cvss": "Critical",
+        "product": "Adobe Magento",
+        "description": "Critical flaw due to improper input validation allowing malicious payload injection. Leads to administrative access, persistent backdoors, or JavaScript-based web skimmers on checkout pages.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe-magento",
+          "e-commerce",
+          "injection",
+          "administrative-access",
+          "web-skimmer",
+          "critical"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-registered-18000-holiday-themed-domains/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2025-33073",
+        "cvss": "High",
+        "product": "NTLM Protocol",
+        "description": "High-severity NTLM reflection vulnerability allowing an internal attacker to trick a system into authenticating against itself, gaining SYSTEM-level privileges and enabling credential dumping.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ntlm",
+          "privilege-escalation",
+          "authentication",
+          "credentials-dumping",
+          "high"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-43451",
+        "cvss": "Critical",
+        "product": "NTLM Protocol (MSHTML engine)",
+        "description": "NTLM flaw exploiting the MSHTML engine, allowing malicious .url files to trigger an NTLM authentication attempt to an attacker-controlled server, even with simple user actions (selection, right-click, deletion).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ntlm",
+          "mshtml",
+          "authentication",
+          "easy-exploitation",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-10914",
+        "cvss": "High",
+        "product": "D-Link NAS",
+        "description": "Vulnerability exploited by the ShadowV2 (Mirai) botnet to remotely compromise D-Link NAS systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "remote-exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2024-10915",
+        "cvss": "High",
+        "product": "D-Link NAS",
+        "description": "Vulnerability exploited by the ShadowV2 (Mirai) botnet to remotely compromise D-Link NAS systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "remote-exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2022-37055",
+        "cvss": "High",
+        "product": "D-Link NAS",
+        "description": "Vulnerability exploited by the ShadowV2 (Mirai) botnet to remotely compromise D-Link NAS systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "remote-exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowV2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2021-26829",
+        "cvss": "Critical",
+        "product": "OpenPLC ScadaBR",
+        "description": "Actively exploited Stored XSS vulnerability in the system_settings.shtm component. Allows malicious script injection into administrative interfaces to hijack admin sessions, manipulate industrial processes, or pivot into OT networks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openplc",
+          "scada",
+          "ics",
+          "ot",
+          "xss",
+          "code-execution",
+          "privilege-escalation",
+          "critical",
+          "actively-exploited"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "cve_id": "CVE-2020-25506",
+        "cvss": "High",
+        "product": "D-Link NAS",
+        "description": "Vulnerability exploited by the ShadowV2 (Mirai) botnet to remotely compromise D-Link NAS systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d-link",
+          "nas",
+          "iot",
+          "botnet",
+          "remote-exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers Registered 18,000 Holiday-Themed Domains for Cybercrime Campaigns",
+        "description": "Threat actors registered over 18,000 holiday-themed domains (e.g., 'Christmas', 'Black Friday') to launch phishing and scam campaigns during the 2025 holiday season. These campaigns leverage automated tools and exploit critical e-commerce vulnerabilities like CVE-2025-54236 in Adobe Magento (improper input validation) to gain administrative access, install persistent backdoors, and deploy web skimmers on checkout pages.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access - Phishing)",
+          "T1566 (Phishing)",
+          "T1189 (Drive-by Compromise - web skimmers)",
+          "TA0004 (Privilege Escalation - admin access)",
+          "TA0003 (Persistence - backdoors)"
+        ],
+        "analyse": "The industrialization of cybercrime targeting seasonal e-commerce events represents a significant threat to consumers and businesses. The combination of social engineering (themed domains) and technical exploits (Magento vulnerability, web skimmers) demonstrates a multi-faceted approach to financial fraud and data theft.",
+        "recommandations": "Consumers should be highly vigilant against suspicious holiday-themed emails and websites. E-commerce businesses must ensure all software, especially platforms like Magento, are fully patched against known vulnerabilities (e.g., CVE-2025-54236). Implement strong input validation, regular security audits, and continuous monitoring for web skimmers and unauthorized access to administrative panels.",
+        "tags": [
+          "cybercrime",
+          "holiday-season",
+          "phishing",
+          "scams",
+          "e-commerce",
+          "adobe-magento",
+          "web-skimmer",
+          "data-theft",
+          "vulnerability-exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/hackers-registered-18000-holiday-themed-domains/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Tomiris wreaks Havoc: New tools and techniques of the APT group",
+        "description": "Analysis of Tomiris APT activities in 2025, revealing new tools and techniques. Initial infection via spear-phishing with malicious, password-protected archives containing executables. Post-exploitation frameworks include Havoc and AdaptixC2, leveraging public services like Discord and Telegram for C2. Multi-language reverse shells (Go, Rust, C/C++/C#, Python) are used for remote access, reconnaissance, and file grabbing.",
+        "threat_actor": "Tomiris",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "62.113.114.209",
+            "188.127.251.146",
+            "192.153.57.9",
+            "193.149.129.113",
+            "195.2.79.245",
+            "62.113.115.89",
+            "82.115.223.78",
+            "85.209.128.171",
+            "88.214.25.249",
+            "89.110.95.151",
+            "89.110.98.234"
+          ],
+          "URL": [
+            "hxxps://discord[.]com/api/webhooks/1370623818858762291/p1DC3l8XyGviRFAR50de6tKYP0CCr1hTAes9B9ljbd-J-dY7bddi31BCV90niZ3bxIMuh",
+            "hxxps://discord[.]com/api/webhooks/1388018607283376231/YYJe-lnt4HyvasKlhoOJECh9yjOtbllL_nalKBMUKUB3xsk7Mj74cU5IfBDYBYX-E78G",
+            "hxxps://discord[.]com/api/webhooks/1386588127791157298/FSOtFTIJaNRT01RVXk5fFsU_sjp_8E0k2QK3t5BUcAcMFR_SHMOEYyLhFUvkY3ndk8-wh",
+            "hxxps://discord[.]com/api/webhooks/1369277038321467503/KqfsoVzebWNNGqFXePMxqi0pta2445WZxYNsY9EsYv1u_iyXAfYL3GGG76bCKy3-a75",
+            "hxxps://discord[.]com/api/webhooks/1396726652565848135/OFds8Do2qH-C_V0ckaF1AJJAqQJuKq-YZVrO1t7cWuvAp7LNfqI7piZlyCcS1qvwpXTZ",
+            "hxxps://discordapp[.]com/api/webhooks/1392383639450423359/TmFw-WY-u3D3HihXqVOOinL73OKqXvi69IBNh_rr15STd3FtffSP2BjAH59ZviWKWJRX",
+            "hxxps://discordapp[.]com/api/webhooks/1363764458815623370/IMErckdJLreUbvxcUA8c8SCfhmnsnivtwYSf7nDJF-bWZcFcSE2VhXdlSgVbheSzhGYEh",
+            "hxxps://discordapp[.]com/api/webhooks/1355019191127904457/xCYi5fx_Y2-ddUE0CdHfiKmgrAC-Cp9oi-Qo3aFG318P5i-GNRfMZiNFOxFrQkZJNJsRh",
+            "hxxp://82.115.223[.]218/",
+            "hxxp://172.86.75[.]102/",
+            "hxxp://193.149.129[.]113/",
+            "hxxps://api.telegram[.]org/bot8044543455:AAG3Pt4fvf6tJj4Umz2TzJTtTZD7ZUArT8E/",
+            "hxxps://api.telegram[.]org/bot7864956192:AAEjExTWgNAMEmGBI2EsSs46AhO7Bw8STcY/",
+            "hxxps://api.telegram[.]org/bot8039791391:AAHcE2qYmeRZ5P29G6mFAylVJl8qH_ZVBh8/",
+            "hxxps://api.telegram[.]org/bot7157076145:AAG79qKudRCPu28blyitJZptX_4z_LlxOS0/",
+            "hxxps://api.telegram[.]org/bot7649829843:AAH_ogPjAfuv-oQ5_Y-s8YmlWR73Gbid5h0/",
+            "hxxp://188.127.251[.]146:8080/sbchost.rar",
+            "hxxp://188.127.251[.]146:8080/sxbchost.exe",
+            "hxxp://192.153.57[.]9/private/svchost.exe",
+            "hxxp://193.149.129[.]113/732.exe",
+            "hxxp://193.149.129[.]113/system.exe",
+            "hxxp://195.2.79[.]245/732.exe",
+            "hxxp://195.2.79[.]245/code.exe",
+            "hxxp://195.2.79[.]245/firefox.exe",
+            "hxxp://195.2.79[.]245/rever.exe",
+            "hxxp://195.2.79[.]245/service.exe",
+            "hxxp://195.2.79[.]245/winload.exe",
+            "hxxp://195.2.79[.]245/winload.rar",
+            "hxxp://195.2.79[.]245/winsrv.rar",
+            "hxxp://195.2.79[.]245/winupdate.exe",
+            "hxxp://62.113.115[.]89/offel.exe",
+            "hxxp://82.115.223[.]78/private/dwm.exe",
+            "hxxp://82.115.223[.]78/private/msview.exe",
+            "hxxp://82.115.223[.]78/private/spoolsvc.exe",
+            "hxxp://82.115.223[.]78/private/svchost.exe",
+            "hxxp://82.115.223[.]78/private/sysmgmt.exe",
+            "hxxp://85.209.128[.]171:8000/AkelPad.rar",
+            "hxxp://88.214.25[.]249:443/netexit.rar",
+            "hxxp://89.110.95[.]151/dwm.exe",
+            "hxxp://89.110.98[.]234/Rar.exe",
+            "hxxp://89.110.98[.]234/code.exe",
+            "hxxp://89.110.98[.]234/rever.rar",
+            "hxxp://89.110.98[.]234/winload.exe",
+            "hxxp://89.110.98[.]234/winload.rar",
+            "hxxp://89.110.98[.]234/winrm.exe",
+            "hxxps://docsino[.]ru/wp-content/private/alone.exe",
+            "hxxps://docsino[.]ru/wp-content/private/winupdate.exe",
+            "hxxps://sss.qwadx[.]com/12345.exe",
+            "hxxps://sss.qwadx[.]com/AkelPad.exe",
+            "hxxps://sss.qwadx[.]com/netexit.rar",
+            "hxxps://sss.qwadx[.]com/winload.exe",
+            "hxxps://sss.qwadx[.]com/winsrv.exe"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0001 (Initial Access - Spearphishing Attachment)",
+          "TA0002 (Execution - Command and Scripting Interpreter, Native API)",
+          "TA0003 (Persistence)",
+          "TA0005 (Defense Evasion - Obfuscated Files or Information, Masquerading)",
+          "TA0007 (Discovery - System Information Discovery, File and Directory Discovery)",
+          "TA0011 (Command and Control - Application Layer Protocol, Standard Non-Application Layer Protocol)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1105 (Ingress Tool Transfer)"
+        ],
+        "analyse": "The Tomiris APT group shows increased sophistication, leveraging public C2 infrastructure to blend malicious traffic. Their multi-language approach and modular frameworks enable flexible operations against high-value government and intergovernmental targets. The use of password-protected archives with passwords in the email body is a common evasion technique.",
+        "recommandations": "Enhance email security to detect spear-phishing and password-protected malicious archives. Implement behavioral analysis and network traffic inspection to identify C2 communications disguised as legitimate public service traffic (Discord, Telegram). Strengthen endpoint detection capabilities for multi-language reverse shells and post-exploitation frameworks. Educate users about disguised executable files and suspicious email attachments.",
+        "tags": [
+          "apt",
+          "tomiris",
+          "havok",
+          "adaptixc2",
+          "spear-phishing",
+          "c2",
+          "discord",
+          "telegram",
+          "reverse-shell",
+          "government",
+          "intergovernmental",
+          "malware",
+          "python",
+          "go",
+          "rust",
+          "c++",
+          "defense-evasion",
+          "initial-access",
+          "command-and-control"
+        ],
+        "sources": [
+          "https://securelist.com/tomiris-new-tools/118143/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "The Future of UK Counterterrorism: A Case for Integrated Violence Prevention",
+        "description": "Analysis of the evolving UK counter-terrorism landscape, moving from organized terror groups to lone actors driven by personal grievances and vulnerabilities, often amplified online by AI-generated content and hostile state actors. The \"Prevent\" strategy requires reform, focusing on genuine terrorism risk within an integrated, multi-agency violence prevention system to address diverse forms of harm without the stigma of a counter-terrorism label.",
+        "threat_actor": "Lone actors, small clusters, hostile state actors",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "The UK's counter-terrorism policy faces significant challenges due to the changing nature of radicalization, which is increasingly driven by online amplification of grievances and sophisticated propaganda, including AI-generated content. An integrated prevention approach is critical to address the complex interplay of factors leading to violence, beyond traditional terrorism definitions, and to prevent mission creep in counter-terrorism efforts.",
+        "recommandations": "Reform counter-terrorism strategies to adapt to evolving threats, focusing on integrated violence prevention. Develop robust frameworks to identify and counter the amplification of divisive narratives and AI-generated deceptive content online. Invest in local services (education, mental health) to address underlying vulnerabilities and grievances. Foster multi-agency collaboration for early intervention.",
+        "tags": [
+          "counterterrorism",
+          "uk",
+          "violence-prevention",
+          "radicalization",
+          "online-threats",
+          "ai",
+          "hostile-state-actors",
+          "social-cohesion",
+          "policy",
+          "strategy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/future-uk-counterterrorism-case-integrated-violence-prevention"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "New Mirai variant ShadowV2 targets IoT devices during AWS disruption",
+        "description": "The ShadowV2 botnet, a Mirai variant, was observed exploiting known vulnerabilities in IoT devices (DDWRT, D-Link, DigiEver, TBK, TP-Link) during an AWS outage. This suggests a test run for future DDoS attacks. The botnet uses various UDP, TCP, and HTTP flood methods, controlled by a C2 server, and targets diverse sectors including technology, retail, manufacturing, government, and telecommunications.",
+        "threat_actor": "ShadowV2 (Mirai variant)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "81.88.18.108"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0008 (Impact - Denial of Service)",
+          "T1498 (DDoS)"
+        ],
+        "analyse": "ShadowV2's emergence highlights the ongoing threat of IoT botnets and their potential to exploit known vulnerabilities for large-scale DDoS attacks. The timing during an AWS disruption suggests opportunistic or test-phase operations, indicating future, more widespread campaigns. The broad range of targeted sectors underscores the pervasive risk to interconnected infrastructure.",
+        "recommandations": "Maintain timely firmware updates for IoT devices. Implement robust security practices for network segmentation and access control. Continuously monitor threat intelligence for new botnet variants and exploited vulnerabilities. Deploy DDoS mitigation solutions. Disable default credentials and enforce strong, unique passwords for all IoT devices.",
+        "tags": [
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "iot",
+          "ddos",
+          "vulnerability-exploitation",
+          "aws",
+          "network-and-telecommunications",
+          "manufacturing",
+          "government"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185135/malware/new-mirai-variant-shadowv2-tests-iot-exploits-amid-aws-disruption.html",
+          "https://www.security.nl/posting/915061/D-Link+waarschuwt+voor+botnet+dat+kwetsbare+NAS-systemen+aanvalt?channel=rss"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Critical Alert: Apache Kvrocks ‘RESET’ Command Flaw Grants Admin Privileges",
+        "description": "Apache Kvrocks, a NoSQL database, has critical vulnerabilities. CVE-2025-59790 allows non-privileged users to gain administrative control via the 'RESET' command, bypassing access controls. CVE-2025-59792 allows the 'MONITOR' command to inadvertently expose plaintext credentials during authentication. These flaws enable unauthorized modification of configurations, sensitive data access, and service disruption.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1552 (Unsecured Credentials)",
+          "T1552.001 (Credentials In Files)"
+        ],
+        "analyse": "The vulnerabilities in Apache Kvrocks pose a significant risk to data integrity and confidentiality in NoSQL database deployments. The ease of privilege escalation via the 'RESET' command and the exposure of plaintext credentials highlight fundamental access control and secure coding deficiencies, making these systems highly susceptible to compromise by even low-privileged attackers.",
+        "recommandations": "Patch Apache Kvrocks to version 2.13.1 or higher immediately. Implement strict access controls and principle of least privilege for database users. Monitor for suspicious command executions, particularly the 'RESET' and 'MONITOR' commands, from non-administrative accounts. Review database configurations to ensure sensitive data is not stored in plaintext.",
+        "tags": [
+          "vulnerability",
+          "apache-kvrocks",
+          "nosql",
+          "privilege-escalation",
+          "credential-exposure",
+          "critical",
+          "database",
+          "access-control"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "CISA Flags Actively Exploited OpenPLC Flaw (CVE-2021-26829)",
+        "description": "CISA has added CVE-2021-26829, a stored cross-site scripting (XSS) vulnerability in OpenPLC ScadaBR's system_settings.shtm, to its Known Exploited Vulnerabilities Catalog. This flaw allows attackers to inject malicious scripts into administrative interfaces, leading to administrator session hijacking, manipulation of industrial processes, and lateral movement into OT networks. The vulnerability is actively exploited and publicly demonstrated.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1059 (Command and Scripting Interpreter)",
+          "TA0004 (Privilege Escalation - if admin session hijacking leads to higher privileges)"
+        ],
+        "analyse": "The active exploitation of CVE-2021-26829 in OpenPLC ScadaBR poses a severe threat to industrial control systems (ICS) and critical infrastructure. The nature of a stored XSS in an administrative interface allows for persistent compromise and potential control over operational technology (OT) networks, highlighting the critical need for immediate patching and secure development practices in ICS/SCADA software.",
+        "recommandations": "Immediately patch OpenPLC ScadaBR to remediate CVE-2021-26829. Implement strong content security policies (CSP) to mitigate XSS risks. Conduct regular security audits of SCADA systems. Train administrators and operators to recognize and report suspicious activity. Isolate OT networks from IT networks to limit the blast radius of compromises.",
+        "tags": [
+          "vulnerability",
+          "cisa",
+          "openplc",
+          "scada",
+          "ics",
+          "ot",
+          "xss",
+          "stored-xss",
+          "actively-exploited",
+          "critical-infrastructure",
+          "privilege-escalation",
+          "industrial-control-system"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Zombie Protocol: How NTLM Flaws Are Haunting 2025",
+        "description": "NTLM authentication protocol remains a critical security liability, with new vulnerabilities (e.g., CVE-2024-43451 exploiting MSHTML engine and CVE-2025-33073, a high-severity reflection flaw) being actively exploited. Attackers use crafted .url files to trigger NTLM authentication attempts or internal reflection attacks to gain SYSTEM-level privileges, enabling credential dumping and lateral movement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access - User Execution)",
+          "T1204 (User Execution - Malicious File)",
+          "TA0004 (Privilege Escalation - Exploitation for Privilege Escalation)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1552 (Unsecured Credentials)",
+          "T1552.001 (Credentials In Files - LSASS dump)",
+          "T1003.001 (OS Credential Dumping: LSASS Memory)"
+        ],
+        "analyse": "The continued exploitation of NTLM flaws underscores the challenge of deprecating legacy protocols embedded in enterprise environments. These vulnerabilities provide reliable pathways for attackers to achieve privilege escalation and credential theft, even with simple user interaction, posing a persistent threat to Windows-based networks.",
+        "recommandations": "Accelerate migration from NTLM to Kerberos where possible. Enforce SMB signing and Extended Protection for Authentication (EPA). Audit networks for NTLM traffic and suspicious authentication attempts. Educate users about the risks of opening or interacting with untrusted files, even with basic actions like right-clicking. Implement endpoint detection and response (EDR) to detect credential dumping attempts.",
+        "tags": [
+          "ntlm",
+          "authentication",
+          "vulnerability",
+          "legacy-protocol",
+          "privilege-escalation",
+          "credential-theft",
+          "windows",
+          "active-exploitation",
+          "kerberos"
+        ],
+        "sources": [
+          "https://securityonline.info/zombie-protocol-how-ntlm-flaws-like-cve-2024-43451-are-haunting-2025/"
+        ],
+        "date": "2025-11-29"
+      },
+      {
+        "title": "Legacy Python Bootstrap Scripts Create Domain-Takeover Risk in Multiple PyPI Packages",
+        "description": "Vulnerable legacy Python bootstrap scripts (e.g., `bootstrap.py`) in several PyPI packages pose a supply chain risk. These scripts fetch and execute installation scripts from `python-distribute.org`, a domain now available for sale. An attacker could acquire this domain to serve malicious code, leading to system compromise and data theft during package installation or environment setup.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "python-distribute[.]org"
+          ]
+        },
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1584 (Compromise Supply Chain)",
+          "T1584.004 (Supply Chain Compromise: Development Tool Compromise)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "This dormant supply chain vulnerability in widely used Python packages demonstrates the long-term risks associated with unmaintained legacy code and domain expiration. The potential for a domain takeover allows for a high-impact compromise of development environments and downstream applications, affecting numerous users unknowingly.",
+        "recommandations": "Developers should audit their projects for `bootstrap.py` scripts that reference `python-distribute.org` or similar legacy domains. Update package management practices to avoid deprecated installation methods. Implement software supply chain security measures, including integrity checks for downloaded dependencies and strict control over external resource access.",
+        "tags": [
+          "supply-chain",
+          "pypi",
+          "python",
+          "vulnerability",
+          "domain-takeover",
+          "legacy-code",
+          "package-management",
+          "software-development",
+          "data-theft"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/legacy-python-bootstrap-scripts-create.html"
+        ],
+        "date": "2025-11-29"
+      }
+    ]
+  }
+}
