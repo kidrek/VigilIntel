@@ -1,0 +1,827 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une persistance et une sophistication accrues des attaques. Le ransomware continue de cibler les grandes entreprises, comme en témoigne l'incident chez Asahi Group Holdings par le groupe Qilin, entraînant d'importantes violations de données personnelles. Une tendance notable est l'exploitation des chaînes d'approvisionnement logicielles par des acteurs étatiques, illustrée par la campagne 'Contagious Interview' liée à la Corée du Nord, ciblant les développeurs via des packages npm malveillants pour le cyberespionnage et le vol de cryptomonnaies. Ces attaques montrent une forte dépendance à l'ingénierie sociale et à l'exploitation de faiblesses dans le cycle de vie du développement logiciel. En parallèle, un volume élevé de vulnérabilités critiques est découvert et activement exploité. Les systèmes de contrôle industriel (ICS/SCADA) sont particulièrement vulnérables, comme le souligne l'alerte de la CISA concernant une faille XSS dans OpenPLC ScadaBR. De nombreuses vulnérabilités dans les systèmes de gestion des ressources humaines (OrangeHRM) et les plateformes d'observabilité (OpenObserve) concernent la gestion des sessions, la réinitialisation des mots de passe et les contrôles d'accès, mettant en évidence les défis persistants liés à l'authentification et à la gestion des privilèges. Enfin, des vulnérabilités d'exécution de code à distance (RCE) et de dépassement de tampon sont courantes dans divers produits, offrant aux attaquants des vecteurs puissants. En conclusion, l'état général des menaces est élevé, avec des acteurs sophistiqués ciblant des points faibles critiques, des chaînes d'approvisionnement et des infrastructures industrielles, tout en exploitant une gamme étendue de vulnérabilités pour compromettre l'intégrité des données et des systèmes.",
+      "date": "2025-11-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware group",
+        "secteur": "Éducation (Enseignement supérieur)",
+        "modop": "Attaque par ransomware et exfiltration de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "clop",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115633054792768179"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "nom": "Acteurs liés à la Corée du Nord (campagne Contagious Interview)",
+        "secteur": "Développement logiciel (développeurs crypto et Web3)",
+        "modop": "Ingénierie sociale via de fausses offres d'emploi LinkedIn et des projets de démonstration piégés. Distribution de packages npm malveillants (ex: `tailwind-magic`) pour déployer des infostealers (BeaverTail, OtterCookie) et des RAT (InvisibleFerret). Utilisation d'infrastructures réparties (GitHub, Vercel, serveurs C2) pour le vol de données (identifiants, portefeuilles crypto, frappes clavier, captures d'écran) et le contrôle à distance.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "north_korea",
+          "supply_chain_attack",
+          "social_engineering",
+          "malware",
+          "infostealer",
+          "rat",
+          "npm_packages",
+          "crypto",
+          "web3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "nom": "Qilin ransomware",
+        "secteur": "Fabrication (producteur de bière japonais)",
+        "modop": "Attaque par ransomware, exfiltration de 27GB de données, publication d'échantillons sur un site de fuite. Objectif: extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "qilin",
+          "extortion",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/japanese-beer-giant-asahi-says-data-breach-hit-15-million-people/",
+          "https://infosec.exchange/@offseq/115635719548334004",
+          "https://infosec.exchange/@soc_goulash/115634996063937287",
+          "https://infosec.exchange/@technadu/115633816311187903"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Cybersécurité, Économie (développement logiciel, crypto/Web3)",
+        "theme": "Cyberespionnage et financement étatique",
+        "description": "Des acteurs liés à la Corée du Nord mènent la campagne 'Contagious Interview' ciblant des développeurs logiciels, notamment dans les domaines de la cryptomonnaie et du Web3. Ils utilisent des attaques sophistiquées via la chaîne d'approvisionnement (packages npm malveillants) et l'ingénierie sociale pour dérober des informations sensibles. Cette activité reflète l'effort continu de la Corée du Nord pour contourner les sanctions et financer ses opérations étatiques par des moyens illicites cybernétiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "corée_du_nord",
+          "north_korea",
+          "cyberespionnage",
+          "cyber_espionage",
+          "financement_étatique",
+          "state_financing",
+          "crypto",
+          "web3",
+          "sanctions"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Fabrication (Boissons/Bières)",
+        "victime": "Asahi Group Holdings",
+        "description": "Violation de données suite à une attaque par ransomware Qilin en septembre, affectant jusqu'à 1,9 million d'individus (1,5 million de clients et près de 400 000 employés et leurs familles). Les données compromises incluent les noms complets, le sexe, les adresses physiques et e-mail, les numéros de téléphone et, pour les employés, les dates de naissance. Aucune information de carte de paiement n'a été exposée. La restauration des systèmes est toujours en cours.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "asahi",
+          "ransomware",
+          "qilin",
+          "données_personnelles",
+          "personal_data",
+          "japon",
+          "japan"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/japanese-beer-giant-asahi-says-data-breach-hit-15-million-people/",
+          "https://infosec.exchange/@offseq/115635719548334004",
+          "https://infosec.exchange/@soc_goulash/115634996063937287",
+          "https://infosec.exchange/@technadu/115633816311187903"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "secteur": "Éducation (Enseignement supérieur)",
+        "victime": "Dartmouth College",
+        "description": "Violation de données perpétrée par le groupe de ransomware Clop, ayant exfiltré des données personnelles de 1494 individus entre le 9 et le 12 août 2025. Des notifications ont été envoyées aux personnes affectées.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "dartmouth_college",
+          "ransomware",
+          "clop",
+          "données_personnelles",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115633054792768179"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "secteur": "Administration gouvernementale",
+        "victime": "Yemen Tax Authority",
+        "description": "Signalement d'une violation de données ciblant l'autorité fiscale du Yémen. La confiance dans cette information est faible.",
+        "tags": [
+          "violation",
+          "breach",
+          "government_administration",
+          "yemen",
+          "tax_authority",
+          "faible_confiance",
+          "low_confidence"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115635707173643494"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-13615",
+        "cvss": "9.8",
+        "product": "StreamTube Core plugin pour WordPress (<= 4.78)",
+        "description": "Vulnérabilité de changement de mot de passe d'utilisateur arbitraire non authentifié due à un accès contrôlé par l'utilisateur à des objets, permettant de contourner l'autorisation et de prendre le contrôle de comptes administrateur. Exploitable si les champs de mot de passe d'enregistrement sont activés.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "wordpress",
+          "streamtube_core",
+          "password_change",
+          "unauthenticated",
+          "privilege_escalation",
+          "account_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13615"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66216",
+        "cvss": "9.3",
+        "product": "AIS-catcher (antérieure à la version 0.64)",
+        "description": "Dépassement de tampon de la pile (heap buffer overflow) dans la classe AIS::Message, permettant d'écrire environ 1 Ko de données arbitraires dans un tampon de 128 octets, conduisant à un déni de service (DoS) et potentiellement à une exécution de code à distance (RCE).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "ais_catcher",
+          "buffer_overflow",
+          "rce",
+          "dos",
+          "memory_corruption",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66216"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66224",
+        "cvss": "9.0",
+        "product": "OrangeHRM (v5.0 à 5.7)",
+        "description": "Exécution de code via l'écriture arbitraire de fichiers due à une injection de paramètre Sendmail. Une faille de neutralisation des entrées permet d'injecter des valeurs contrôlées par l'utilisateur dans la commande sendmail, permettant d'écrire des fichiers sur le serveur et potentiellement d'atteindre l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "orangehrm",
+          "rce",
+          "arbitrary_file_write",
+          "sendmail_injection",
+          "command_injection",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66224"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66217",
+        "cvss": "8.8",
+        "product": "AIS-catcher (antérieure à la version 0.64)",
+        "description": "Débordement d'entier (integer underflow) dans la logique d'analyse des paquets MQTT, pouvant déclencher un dépassement de tampon de la pile (Heap Buffer Overflow) massif, menant à un déni de service (DoS) immédiat et potentiellement à une exécution de code à distance (RCE).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "ais_catcher",
+          "integer_underflow",
+          "heap_buffer_overflow",
+          "mqtt",
+          "rce",
+          "dos",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66217"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-59790",
+        "cvss": "N/A (Critique)",
+        "product": "Apache Kvrocks (v2.9.0 à v2.13.0)",
+        "description": "Mauvaise gestion des privilèges permettant à un utilisateur non privilégié d'obtenir des privilèges administratifs via la commande 'RESET'. La commande 'MONITOR' expose également des identifiants en texte clair, facilitant la prise de contrôle de compte.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "apache_kvrocks",
+          "privilege_escalation",
+          "improper_privilege_management",
+          "account_takeover",
+          "credential_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66289",
+        "cvss": "8.7",
+        "product": "OrangeHRM (v5.0 à 5.7)",
+        "description": "Accès persistant à la session en raison d'une invalidation manquante après la désactivation de l'utilisateur ou le changement de mot de passe. Les cookies de session restent valides indéfiniment, permettant un accès non autorisé.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "orangehrm",
+          "session_invalidation",
+          "access_control_bypass",
+          "persistent_session",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66289"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66225",
+        "cvss": "8.7",
+        "product": "OrangeHRM (v5.0 à 5.7)",
+        "description": "Prise de contrôle de compte via un nom d'utilisateur non validé dans le flux de réinitialisation de mot de passe. Un attaquant peut modifier le paramètre de nom d'utilisateur dans la requête de réinitialisation finale pour cibler un compte différent, y compris les comptes privilégiés.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "orangehrm",
+          "account_takeover",
+          "password_reset_bypass",
+          "unvalidated_input",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66225"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66223",
+        "cvss": "8.4",
+        "product": "OpenObserve (antérieure à la version 0.16.0)",
+        "description": "Mauvaise configuration du cycle de vie des jetons d'invitation. Les jetons ne expirent pas et restent valides même après le retrait de l'utilisateur de l'organisation, permettant un contrôle d'accès rompu et une escalade de privilèges.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "openobserve",
+          "access_control",
+          "privilege_escalation",
+          "token_misconfiguration",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66223"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA Warns of OpenPLC ScadaBR cross-site scripting vulnerability Exploited in Attacks",
+        "description": "L'agence CISA a ajouté la vulnérabilité Cross-Site Scripting (XSS) CVE-2021-26829 dans OpenPLC ScadaBR à son catalogue KEV (Known Exploited Vulnerabilities), confirmant son exploitation active dans des attaques ciblant les environnements de contrôle industriel (ICS/SCADA). Les attaquants peuvent injecter des scripts malveillants dans l'interface d'administration pour détourner des sessions, voler des identifiants ou modifier des configurations critiques, avec un impact potentiel sur l'OT.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1537 (Establish Persistence)",
+          "T1003 (OS Credential Dumping)",
+          "T1078 (Valid Accounts)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "Impact critique sur les systèmes de contrôle industriel (SCADA/OT), pouvant mener à la compromission d'infrastructures sensibles et à des perturbations opérationnelles. L'exploitation active d'une vulnérabilité pourtant ancienne souligne la persistance des risques dans les environnements OT et le défi de la gestion des correctifs, nécessitant une attention immédiate de la part des agences fédérales et des organisations gérant des infrastructures critiques.",
+        "recommandations": [
+          "Appliquer les correctifs disponibles pour CVE-2021-26829 immédiatement.",
+          "Mettre en œuvre des contrôles de sécurité renforcés pour les interfaces d'administration des systèmes SCADA/OT.",
+          "Sensibiliser les utilisateurs (administrateurs, opérateurs) aux risques d'attaques XSS et au signalement d'activités suspectes.",
+          "Segmenter les réseaux OT des réseaux IT afin de limiter la propagation en cas de compromission."
+        ],
+        "tags": [
+          "vulnerability_exploitation",
+          "xss",
+          "ics",
+          "scada",
+          "critical_infrastructure",
+          "cisa",
+          "kev",
+          "operational_technology",
+          "T1190",
+          "T1537",
+          "T1003",
+          "T1078",
+          "T1059"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-openplc-scadabr-vulnerability/",
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "title": "Contagious Interview campaign expands with 197 npm PPackages spreading new OtterCookie malware",
+        "description": "La campagne 'Contagious Interview', liée à des acteurs nord-coréens, s'est étendue avec 197 nouveaux packages npm malveillants, diffusant une nouvelle version du malware OtterCookie. Cette campagne cible les développeurs logiciels (en particulier dans le Web3 et la crypto) via l'ingénierie sociale (fausses offres d'emploi) et des projets de démonstration piégés. Le malware vole des identifiants, des portefeuilles, des frappes clavier et des captures d'écran, et établit une persistance via un shell distant.",
+        "threat_actor": "Acteurs liés à la Corée du Nord (campagne Contagious Interview)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tetrismic.vercel.app"
+          ],
+          "URL": [
+            "https://tetrismic[.]vercel[.]app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1588.002 (Obtain Capabilities: Tool)",
+          "T1566.001 (Phishing: Spearphishing Link/Attachment)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1189 (Drive-by Compromise - Supply Chain Compromise: Compromise Software Dependencies and Development Tools)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1573 (Encrypted Channel)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keystroke Logging)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Impact significatif sur la chaîne d'approvisionnement logicielle, en particulier pour les développeurs des secteurs sensibles (crypto/Web3). Le potentiel de vol de propriété intellectuelle et de fonds est élevé, avec des implications économiques et étatiques pour la Corée du Nord. La sophistication de l'infrastructure d'attaque (GitHub, Vercel, C2) et la rotation des charges utiles rendent la détection et la prévention complexes, nécessitant une vigilance constante et des pratiques de développement sécurisées.",
+        "recommandations": [
+          "Sensibiliser les développeurs aux techniques d'ingénierie sociale (fausses offres d'emploi, projets factices) et à la vérification des sources.",
+          "Mettre en place une vérification stricte de l'origine et de l'intégrité des packages npm avant leur intégration.",
+          "Surveiller les activités réseau pour détecter les communications C2 inattendues ou les exfiltrations de données.",
+          "Implémenter des solutions EDR/XDR pour détecter les comportements malveillants des scripts et processus sur les postes de développement.",
+          "Mettre en place l'authentification multifacteur (MFA) pour tous les comptes de développement et services critiques."
+        ],
+        "tags": [
+          "malware_campaign",
+          "supply_chain_attack",
+          "north_korea",
+          "apt",
+          "social_engineering",
+          "infostealer",
+          "rat",
+          "npm",
+          "web3",
+          "crypto",
+          "github",
+          "vercel",
+          "T1588.002",
+          "T1566.001",
+          "T1059",
+          "T1189",
+          "T1071.001",
+          "T1573",
+          "T1083",
+          "T1003",
+          "T1113",
+          "T1056.001",
+          "T1547.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by persistent and increasingly sophisticated attacks. Ransomware continues to target large corporations, as evidenced by the incident at Asahi Group Holdings by the Qilin group, leading to significant personal data breaches. A notable trend is the exploitation of software supply chains by state-sponsored actors, illustrated by the 'Contagious Interview' campaign linked to North Korea, targeting developers via malicious npm packages for cyber espionage and cryptocurrency theft. These attacks demonstrate a strong reliance on social engineering and the exploitation of weaknesses in the software development lifecycle. In parallel, a high volume of critical vulnerabilities are being discovered and actively exploited. Industrial Control Systems (ICS/SCADA) are particularly vulnerable, highlighted by CISA's alert regarding an XSS flaw in OpenPLC ScadaBR. Numerous vulnerabilities in Human Resources Management systems (OrangeHRM) and observability platforms (OpenObserve) concern session management, password resets, and access controls, underscoring persistent challenges related to authentication and privilege management. Finally, remote code execution (RCE) and buffer overflow vulnerabilities are common across various products, offering attackers powerful vectors. In conclusion, the overall threat level is high, with sophisticated actors targeting critical weak points, supply chains, and industrial infrastructures, while exploiting a wide range of vulnerabilities to compromise data and system integrity.",
+      "date": "2025-11-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware group",
+        "secteur": "Education (Higher Education)",
+        "modop": "Ransomware attack and data exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "clop",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115633054792768179"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "nom": "North Korea-linked actors (Contagious Interview campaign)",
+        "secteur": "Software development (Crypto and Web3 developers)",
+        "modop": "Social engineering via fake LinkedIn job offers and trojanized demo projects. Distribution of malicious npm packages (e.g., `tailwind-magic`) to deploy infostealers (BeaverTail, OtterCookie) and RATs (InvisibleFerret). Use of distributed infrastructure (GitHub, Vercel, C2 servers) for data theft (credentials, crypto wallets, keystrokes, screenshots) and remote control.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "north_korea",
+          "supply_chain_attack",
+          "social_engineering",
+          "malware",
+          "infostealer",
+          "rat",
+          "npm_packages",
+          "crypto",
+          "web3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "nom": "Qilin ransomware",
+        "secteur": "Manufacturing (Japanese beer producer)",
+        "modop": "Ransomware attack, 27GB of data exfiltration, publishing samples on a data leak site. Objective: extortion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "qilin",
+          "extortion",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/japanese-beer-giant-asahi-says-data-breach-hit-15-million-people/",
+          "https://infosec.exchange/@offseq/115635719548334004",
+          "https://infosec.exchange/@soc_goulash/115634996063937287",
+          "https://infosec.exchange/@technadu/115633816311187903"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Cybersecurity, Economy (Software development, Crypto/Web3)",
+        "theme": "Cyber espionage and state financing",
+        "description": "North Korea-linked actors are conducting the 'Contagious Interview' campaign targeting software developers, particularly in the cryptocurrency and Web3 fields. They use sophisticated supply chain attacks (malicious npm packages) and social engineering to steal sensitive information. This activity reflects North Korea's ongoing effort to circumvent sanctions and fund state operations through illicit cyber means.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "north_korea",
+          "cyber_espionage",
+          "state_financing",
+          "crypto",
+          "web3",
+          "sanctions"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Manufacturing (Beverages/Beer)",
+        "victime": "Asahi Group Holdings",
+        "description": "Data breach following a Qilin ransomware attack in September, affecting up to 1.9 million individuals (1.5 million customers and nearly 400,000 employees and their families). Compromised data includes full names, gender, physical and email addresses, phone numbers, and for employees, dates of birth. No payment card information was exposed. System restoration is still ongoing.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "asahi",
+          "ransomware",
+          "qilin",
+          "personal_data",
+          "japan"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/japanese-beer-giant-asahi-says-data-breach-hit-15-million-people/",
+          "https://infosec.exchange/@offseq/115635719548334004",
+          "https://infosec.exchange/@soc_goulash/115634996063937287",
+          "https://infosec.exchange/@technadu/115633816311187903"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "secteur": "Education (Higher Education)",
+        "victime": "Dartmouth College",
+        "description": "Data breach perpetrated by the Clop ransomware group, exfiltrating personal data of 1494 individuals between August 9-12, 2025. Breach notifications have been sent to affected individuals.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "dartmouth_college",
+          "ransomware",
+          "clop",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115633054792768179"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "secteur": "Government Administration",
+        "victime": "Yemen Tax Authority",
+        "description": "A data breach has been reported targeting the Yemen Tax Authority in the government administration sector. Confidence in this information is low.",
+        "tags": [
+          "violation",
+          "breach",
+          "government_administration",
+          "yemen",
+          "tax_authority",
+          "low_confidence"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115635707173643494"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-13615",
+        "cvss": "9.8",
+        "product": "StreamTube Core plugin for WordPress (<= 4.78)",
+        "description": "Unauthenticated Arbitrary User Password Change vulnerability due to user-controlled access to objects, allowing bypass of authorization and potential administrator account takeover. Exploitable if 'registration password fields' are enabled.",
+        "tags": [
+          "vulnerability",
+          "wordpress",
+          "streamtube_core",
+          "password_change",
+          "unauthenticated",
+          "privilege_escalation",
+          "account_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13615"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66216",
+        "cvss": "9.3",
+        "product": "AIS-catcher (prior to version 0.64)",
+        "description": "Heap Buffer Overflow in the AIS::Message class, allowing approximately 1KB of arbitrary data to be written into a 128-byte buffer, leading to Denial of Service (DoS) and potential Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerability",
+          "ais_catcher",
+          "buffer_overflow",
+          "rce",
+          "dos",
+          "memory_corruption",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66216"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66224",
+        "cvss": "9.0",
+        "product": "OrangeHRM (v5.0 to 5.7)",
+        "description": "Code Execution Through Arbitrary File Write from Sendmail Parameter Injection. An input-neutralization flaw allows user-controlled values to flow directly into the system’s sendmail command, enabling arbitrary file writing on the server and potential Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerability",
+          "orangehrm",
+          "rce",
+          "arbitrary_file_write",
+          "sendmail_injection",
+          "command_injection",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66224"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66217",
+        "cvss": "8.8",
+        "product": "AIS-catcher (prior to version 0.64)",
+        "description": "Integer Underflow in MQTT Packet Parsing leading to a massive Heap Buffer Overflow. This can trigger an immediate Denial of Service (DoS) and, when used as a library, severe Memory Corruption that can be leveraged for Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerability",
+          "ais_catcher",
+          "integer_underflow",
+          "heap_buffer_overflow",
+          "mqtt",
+          "rce",
+          "dos",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66217"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-59790",
+        "cvss": "N/A (Critical)",
+        "product": "Apache Kvrocks (v2.9.0 through v2.13.0)",
+        "description": "Improper Privilege Management vulnerability, where the 'RESET' command can be exploited by a non-privileged user to gain full administrative control over the database. Additionally, the 'MONITOR' command inadvertently reveals plaintext credentials.",
+        "tags": [
+          "vulnerability",
+          "apache_kvrocks",
+          "privilege_escalation",
+          "improper_privilege_management",
+          "account_takeover",
+          "credential_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-alert-apache-kvrocks-reset-command-flaw-grants-admin-privileges/"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66289",
+        "cvss": "8.7",
+        "product": "OrangeHRM (v5.0 to 5.7)",
+        "description": "Persistent Session Access Due to Missing Invalidation After User Disable and Password Change. Existing sessions remain valid indefinitely even after a user is disabled or a password is changed, allowing unauthorized access.",
+        "tags": [
+          "vulnerability",
+          "orangehrm",
+          "session_invalidation",
+          "access_control_bypass",
+          "persistent_session",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66289"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66225",
+        "cvss": "8.7",
+        "product": "OrangeHRM (v5.0 to 5.7)",
+        "description": "Account Takeover Through Unvalidated Username in Password Reset Workflow. The password reset process does not verify that the submitted username matches the initiated account, allowing an attacker to reset passwords for any chosen account, including privileged ones.",
+        "tags": [
+          "vulnerability",
+          "orangehrm",
+          "account_takeover",
+          "password_reset_bypass",
+          "unvalidated_input",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66225"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "cve_id": "CVE-2025-66223",
+        "cvss": "8.4",
+        "product": "OpenObserve (prior to version 0.16.0)",
+        "description": "Invite Token Lifecycle Misconfiguration. Organization invitation tokens do not expire and remain valid even after the invited user is removed, leading to broken access control and potential privilege escalation.",
+        "tags": [
+          "vulnerability",
+          "openobserve",
+          "access_control",
+          "privilege_escalation",
+          "token_misconfiguration",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66223"
+        ],
+        "date": "2025-11-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CISA Warns of OpenPLC ScadaBR cross-site scripting vulnerability Exploited in Attacks",
+        "description": "CISA has added the Cross-Site Scripting (XSS) vulnerability CVE-2021-26829 in OpenPLC ScadaBR to its Known Exploited Vulnerabilities (KEV) catalog, confirming its active exploitation in attacks targeting industrial control environments (ICS/SCADA). Attackers can inject malicious scripts into the administrative interface to hijack sessions, steal credentials, or modify critical configurations, with potential impact on OT.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1537 (Establish Persistence)",
+          "T1003 (OS Credential Dumping)",
+          "T1078 (Valid Accounts)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "Critical impact on Industrial Control Systems (SCADA/OT), potentially leading to compromise of sensitive infrastructure and operational disruptions. The active exploitation of an older vulnerability highlights the persistent risks in OT environments and the patching challenge, requiring immediate attention from federal agencies and critical infrastructure organizations.",
+        "recommandations": [
+          "Apply available patches for CVE-2021-26829 immediately.",
+          "Implement enhanced security controls for administrative interfaces of SCADA/OT systems.",
+          "Educate users (administrators, operators) on the risks of XSS attacks and reporting suspicious activities.",
+          "Segment OT networks from IT networks to limit propagation in case of compromise."
+        ],
+        "tags": [
+          "vulnerability_exploitation",
+          "xss",
+          "ics",
+          "scada",
+          "critical_infrastructure",
+          "cisa",
+          "kev",
+          "operational_technology",
+          "T1190",
+          "T1537",
+          "T1003",
+          "T1078",
+          "T1059"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-openplc-scadabr-vulnerability/",
+          "https://securityonline.info/cisa-flags-actively-exploited-openplc-flaw-cve-2021-26829/"
+        ],
+        "date": "2025-11-30"
+      },
+      {
+        "title": "Contagious Interview campaign expands with 197 npm PPackages spreading new OtterCookie malware",
+        "description": "The 'Contagious Interview' campaign, linked to North Korean actors, has expanded with 197 new malicious npm packages, spreading a new version of the OtterCookie malware. This campaign targets software developers (especially in Web3 and crypto) via social engineering (fake job offers) and trojanized demo projects. The malware steals credentials, wallets, keystrokes, and screenshots, and establishes persistence via a remote shell.",
+        "threat_actor": "North Korea-linked actors (Contagious Interview campaign)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tetrismic.vercel.app"
+          ],
+          "URL": [
+            "https://tetrismic[.]vercel[.]app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1588.002 (Obtain Capabilities: Tool)",
+          "T1566.001 (Phishing: Spearphishing Link/Attachment)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1189 (Drive-by Compromise - Supply Chain Compromise: Compromise Software Dependencies and Development Tools)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1573 (Encrypted Channel)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keystroke Logging)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Significant impact on the software supply chain, particularly for developers in sensitive sectors (crypto/Web3). The potential for intellectual property and fund theft is high, with economic and state implications for North Korea. The sophistication of the attack infrastructure (GitHub, Vercel, C2) and payload rotation make detection and prevention complex, requiring constant vigilance and secure development practices.",
+        "recommandations": [
+          "Educate developers on social engineering techniques (fake job offers, deceptive projects) and source verification.",
+          "Implement strict verification of the origin and integrity of npm packages before integration.",
+          "Monitor network activities to detect unexpected C2 communications or data exfiltrations.",
+          "Deploy EDR/XDR solutions to detect malicious script and process behavior on development workstations.",
+          "Implement multi-factor authentication (MFA) for all development accounts and critical services."
+        ],
+        "tags": [
+          "malware_campaign",
+          "supply_chain_attack",
+          "north_korea",
+          "apt",
+          "social_engineering",
+          "infostealer",
+          "rat",
+          "npm",
+          "web3",
+          "crypto",
+          "github",
+          "vercel",
+          "T1588.002",
+          "T1566.001",
+          "T1059",
+          "T1189",
+          "T1071.001",
+          "T1573",
+          "T1083",
+          "T1003",
+          "T1113",
+          "T1056.001",
+          "T1547.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-11-30"
+      }
+    ]
+  }
+}
