@@ -1,0 +1,820 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification des menaces cybernétiques, marquée par des attaques de la chaîne d'approvisionnement logicielle, des campagnes d'APT sophistiquées et une persistance des groupes de ransomware. Les acteurs liés à la Corée du Nord ciblent activement les développeurs dans les secteurs de la cryptographie et du Web3 via des packages npm malveillants, démontrant une focalisation sur la compromission initiale via la supply chain et l'ingénierie sociale. Parallèlement, les groupes de ransomware comme Nova RaaS continuent de perturber les secteurs critiques tels que la santé et l'éducation, exploitant la défaillance des configurations réseau et les vulnérabilités pour l'extorsion de données. Une tendance notable est la prolifération de vulnérabilités critiques (CVSS >= 8.0), incluant des exécutions de code à distance (RCE), des contournements d'authentification et des injections SQL, affectant des produits variés allant des plugins WordPress aux serveurs d'IA et aux frameworks RPC. Des violations de données de grande envergure touchent diverses entités, de fédérations sportives à des plateformes d'e-commerce et des entreprises de biotechnologie, soulignant la valeur des données personnelles et d'entreprise pour les attaquants, ainsi que la menace interne. L'état général des menaces est caractérisé par une sophistication croissante des tactiques des attaquants, une exploitation rapide des vulnérabilités critiques et une portée étendue, nécessitant une vigilance continue et des défenses multicouches.",
+      "date": "2025-12-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs liés à la Corée du Nord (Contagious Interview)",
+        "secteur": "Développeurs de logiciels (crypto, Web3)",
+        "modop": "Ingénierie sociale (fausses interviews d'embauche), packages npm piégés (OtterCookie, BeaverTail, InvisibleFerret RAT) pour le vol d'informations et l'accès à distance.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "north_korea",
+          "state_sponsored",
+          "social_engineering",
+          "supply_chain",
+          "npm_malware",
+          "infostealer",
+          "rat",
+          "crypto",
+          "web3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "nom": "Groupe Nova RaaS (anciennement RALord)",
+        "secteur": "Médical, Éducation",
+        "modop": "Ransomware-as-a-Service (RaaS) basé sur le code source de Babuk, chiffrement des données, extorsion pour le décrypteur et la suppression des données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "extortion",
+          "babuk_variant"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/?pk_campaign=feed&pk_kwd=breaking-dos-op-exposes-the-nova-raas-gang"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "nom": "TwoNet (groupe hacktiviste pro-russe)",
+        "secteur": "Systèmes industriels (ICS/SCADA), divers (DDoS, doxxing, RaaS)",
+        "modop": "Exploitation de credentials par défaut, reconnaissance, persistance, exploitation XSS (CVE-2021-26829) pour défiguration et altération des paramètres système, DDoS, doxxing, offres RaaS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russian",
+          "ics_scada",
+          "xss_exploit",
+          "ddos",
+          "doxxing",
+          "raas"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/cisa-adds-actively-exploited-xss-bug.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Transversal",
+        "theme": "Acteurs étatiques et hacktivistes",
+        "description": "Des groupes comme les acteurs liés à la Corée du Nord et les hacktivistes pro-russes (TwoNet) mènent des campagnes de cyber-espionnage et de perturbation, ciblant divers secteurs avec des motivations géopolitiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "state_sponsored",
+          "hacktivism",
+          "north_korea",
+          "russia"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html",
+          "https://thehackernews.com/2025/11/cisa-adds-actively-exploited-xss-bug.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Sports, Fédération",
+        "victime": "Fédération Française de Football",
+        "description": "Données de membres dérobées.",
+        "tags": [
+          "violation",
+          "breach",
+          "sports",
+          "federation",
+          "member_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185178/breaking-news/security-affairs-newsletter-round-552-by-pierluigi-paganini-international-edition.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "IT, Outils de développement",
+        "victime": "JSONFormatter",
+        "description": "Des milliers de secrets sensibles publiés.",
+        "tags": [
+          "violation",
+          "breach",
+          "it",
+          "development_tools",
+          "secrets_exposure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185178/breaking-news/security-affairs-newsletter-round-552-by-pierluigi-paganini-international-edition.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "Santé, Biotechnologie, Génétique",
+        "victime": "23andMe",
+        "description": "Données personnelles de 6,4 millions de personnes perdues suite à un piratage, entraînant un recours collectif.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "genetics",
+          "personal_data",
+          "class_action"
+        ],
+        "sources": [
+          "https://www.23andmedatasettlement.com/",
+          "https://mastodon.social/@ngate/115642210037098560",
+          "https://mastodon.social/@h4ckernews/115642139594447019"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Violation de données ayant exposé des informations de 33,7 millions de clients, menace interne suspectée (ancien employé). Données de paiement non divulguées, mais risques de phishing avertis. Enquête gouvernementale en cours.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "customer_data",
+          "insider_threat",
+          "phishing_risk"
+        ],
+        "sources": [
+          "https://www.reuters.com/sustainability/boards-policy-regulation/south-korean-e-commerce-firm-coupang-says-337-million-customer-accounts-breached-2025-11-29/",
+          "https://infosec.exchange/@DevaOnBreaches/115641770803989784",
+          "https://mastodon.social/@infomaxkorea/115641503082078541"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "Technologie, Éducation, Commerce de détail, Services financiers",
+        "victime": "OpenAI, Asahi, SitusAMC, Harvard University, Dartmouth College, Recent Links, Cox Enterprises, Iberia, DoorDash, Amazon, Walmart, CodeRED",
+        "description": "Diverses violations de données signalées affectant de multiples organisations dans divers secteurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "technology",
+          "education",
+          "retail",
+          "financial_services",
+          "customer_data",
+          "employee_data"
+        ],
+        "sources": [
+          "https://blog.xposedornot.com/weekly-databreaches-roundup-week-48-2025",
+          "https://infosec.exchange/@DevaOnBreaches/115642561402810678",
+          "https://youtu.be/xDLcZVjLdqI",
+          "https://soundcloud.com/nickaesp/b2025-11-30"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-13615",
+        "cvss": 9.8,
+        "product": "StreamTube Core (plugin WordPress)",
+        "description": "Modification arbitraire non authentifiée du mot de passe utilisateur (permet aux attaquants de modifier les mots de passe et de prendre le contrôle des comptes administrateur).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "plugin",
+          "authentication_bypass",
+          "account_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13615"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2024-21413",
+        "cvss": 9.8,
+        "product": "Microsoft Outlook",
+        "description": "Exécution de code à distance (RCE) 0-Click (faille MonikerLink permettant de contourner la Vue Protégée, d'exécuter du code ou de voler des identifiants).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "microsoft_outlook",
+          "0_click",
+          "monikerlink",
+          "critical"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/outlook-remote-code-execution-vulnerability-2/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-35028",
+        "cvss": 9.1,
+        "product": "HexStrike AI MCP Server",
+        "description": "Injection de commande (permet l'exécution de commandes arbitraires avec les privilèges root).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "ai_server",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-35028"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-59789",
+        "cvss": 9.0,
+        "product": "Apache bRPC",
+        "description": "Épuisement de la pile via une récursion illimitée dans l'analyse JSON (permet aux attaquants distants de planter les serveurs).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "denial_of_service",
+          "apache",
+          "brpc",
+          "json_parsing",
+          "stack_exhaustion",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-59789-critical-flaw-in-apache-brpc-framework-exposes-high-performance-systems-to-crash-risks/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-13757",
+        "cvss": 9.0,
+        "product": "Devolutions Server",
+        "description": "Injection SQL authentifiée (permet aux utilisateurs authentifiés d'exfiltrer ou de modifier des données critiques, y compris des mots de passe).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "authenticated",
+          "password_management",
+          "data_exfiltration",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-devolutions-server-flaw-cve-2025-13757-allows-authenticated-sql-injection-to-steal-all-passwords/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-58360",
+        "cvss": 8.5,
+        "product": "GeoServer",
+        "description": "XXE (XML External Entity) non authentifié pour le vol de fichiers et SSRF (permet aux attaquants non authentifiés d'exfiltrer des fichiers sensibles, d'effectuer des balayages de ports ou de provoquer un DoS).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xxe",
+          "file_theft",
+          "ssrf",
+          "unauthenticated",
+          "geospatial",
+          "high"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-geoserver-flaw-cve-2025-58360-allows-unauthenticated-xxe-for-file-theft-and-ssrf/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-64772",
+        "cvss": 8.4,
+        "product": "INZONE Hub",
+        "description": "Exécution de code via le chemin de recherche DLL (chargement insecure de bibliothèques de liens dynamiques, menant à l'exécution de code arbitraire).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dll_hijacking",
+          "code_execution",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64772"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "BREAKING: Dos-Op exposes the Nova RaaS gang",
+        "description": "Le groupe Nova RaaS (Ransomware-as-a-Service), anciennement connu sous le nom de RALord et basé sur le code source de Babuk, a été exposé par le groupe de recherche Dos-Op. Des erreurs de configuration de leur réseau ont révélé des adresses backend et des surfaces d'attaque supplémentaires. Nova cible les secteurs médical et de l'éducation, et a déjà violé des accords de non-divulgation de données après le paiement de rançons.",
+        "threat_actor": "Groupe Nova RaaS (anciennement RALord)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1486.003 (Data Encrypted for Impact: Disk Encryption)",
+          "T1565.001 (Data Destruction: Disk Wipe)",
+          "T1565.002 (Data Destruction: Disk Overwrite)",
+          "T1591 (Gather Victim Identity Information)"
+        ],
+        "analyse": "Impact significatif sur les secteurs critiques (médical, éducation) en raison du chiffrement des données et de l'extorsion. L'exposition par Dos-Op fournit des informations précieuses pour les forces de l'ordre et les victimes potentielles, perturbant potentiellement les opérations RaaS. Les pratiques contraires à l'éthique de Nova exacerbent l'impact sur les victimes.",
+        "recommandations": [
+          "Mettre en œuvre des stratégies de sauvegarde et de récupération robustes pour atténuer l'impact des rançongiciels.",
+          "Effectuer des audits de sécurité réguliers pour identifier et corriger les vulnérabilités.",
+          "Éduquer les employés sur les tactiques de phishing et d'ingénierie sociale souvent utilisées pour l'accès initial.",
+          "Mettre en œuvre la segmentation du réseau pour limiter les mouvements latéraux.",
+          "Élaborer un plan de réponse aux incidents spécifiquement pour les attaques par rançongiciel.",
+          "Surveiller les activités réseau inhabituelles indiquant le déploiement de rançongiciels."
+        ],
+        "tags": [
+          "ransomware",
+          "raas",
+          "nova_raas",
+          "babuk",
+          "extortion",
+          "data_breach",
+          "medical_sector",
+          "education_sector"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/?pk_campaign=feed&pk_kwd=breaking-dos-op-exposes-the-nova-raas-gang"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Contagious Interview campaign expands with 197 npm Ppackages spreading new OtterCookie malware",
+        "description": "Des acteurs liés à la Corée du Nord poursuivent la campagne 'Contagious Interview', déployant 197 nouveaux packages npm malveillants pour distribuer le malware OtterCookie. La campagne cible les développeurs de logiciels des secteurs crypto et Web3 via l'ingénierie sociale (fausses interviews d'emploi) et des projets piégés. Le malware fonctionne comme un voleur d'informations et un RAT, capable de récolter des identifiants, d'enregistrer les frappes, de capturer des captures d'écran et d'accéder à distance sur Windows, Linux et macOS. L'infrastructure utilise GitHub pour les leurres, Vercel pour la livraison de la charge utile et des serveurs C2 séparés.",
+        "threat_actor": "Acteurs liés à la Corée du Nord",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tetrismic[.]vercel[.]app"
+          ],
+          "URL": [
+            "https://github.com/stardev0914"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589.002 (Gather Victim Org Info: Job Boards)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1055 (Process Injection)",
+          "T1552 (Unsecured Credentials)",
+          "T1078 (Valid Accounts)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1083 (File and Directory Discovery)",
+          "T1547 (Boot or Logon Autostart Execution)"
+        ],
+        "analyse": "Impact élevé sur la chaîne d'approvisionnement du développement logiciel, en particulier les secteurs crypto/Web3. La portée géographique est mondiale, ciblant les développeurs sur les principales plateformes OS. L'impact stratégique inclut le vol de propriété intellectuelle, la fraude financière (portefeuilles crypto) et l'espionnage potentiel.",
+        "recommandations": [
+          "Mettre en œuvre des revues de code strictes pour les packages tiers.",
+          "Utiliser des outils de sécurité de la chaîne d'approvisionnement logicielle (par exemple, audit npm, vérification de l'intégrité des packages).",
+          "Éduquer les développeurs sur les tactiques d'ingénierie sociale et les offres d'emploi suspectes.",
+          "Surveiller les connexions réseau sortantes pour détecter les activités C2 inhabituelles.",
+          "Déployer des solutions EDR pour détecter les comportements de vol d'informations et de RAT.",
+          "Appliquer l'authentification multi-facteurs pour les plateformes de développement et les comptes sensibles."
+        ],
+        "tags": [
+          "npm",
+          "supply_chain",
+          "malware",
+          "infostealer",
+          "rat",
+          "social_engineering",
+          "apt",
+          "north_korea",
+          "crypto",
+          "web3",
+          "developer_targeting",
+          "ottercookie",
+          "beaver_tail",
+          "invisible_ferret"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification of cyber threats, marked by software supply chain attacks, sophisticated APT campaigns, and persistent ransomware groups. North Korea-linked actors are actively targeting developers in the crypto and Web3 sectors via malicious npm packages, demonstrating a focus on initial compromise through the supply chain and social engineering. Simultaneously, ransomware groups like Nova RaaS continue to disrupt critical sectors such as healthcare and education, exploiting network misconfigurations and vulnerabilities for data extortion. A notable trend is the proliferation of critical vulnerabilities (CVSS >= 8.0), including Remote Code Execution (RCE), authentication bypasses, and SQL injections, affecting various products ranging from WordPress plugins to AI servers and RPC frameworks. Large-scale data breaches are impacting diverse entities, from sports federations to e-commerce platforms and biotechnology companies, underscoring the value of personal and corporate data to attackers, as well as the insider threat. The overall threat landscape is characterized by increasing sophistication in attacker tactics, rapid exploitation of critical vulnerabilities, and an expanding reach, necessitating continuous vigilance and multi-layered defenses.",
+      "date": "2025-12-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "North Korea-linked actors (Contagious Interview)",
+        "secteur": "Software developers (crypto, Web3)",
+        "modop": "Social engineering (fake job interviews), trojanized npm packages (OtterCookie, BeaverTail, InvisibleFerret RAT) for infostealing and remote access.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "north_korea",
+          "state_sponsored",
+          "social_engineering",
+          "supply_chain",
+          "npm_malware",
+          "infostealer",
+          "rat",
+          "crypto",
+          "web3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "nom": "Nova RaaS gang (formerly RALord)",
+        "secteur": "Medical, Education",
+        "modop": "Ransomware-as-a-Service (RaaS) based on Babuk source code, data encryption, extortion for decryptor and data deletion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "extortion",
+          "babuk_variant"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/?pk_campaign=feed&pk_kwd=breaking-dos-op-exposes-the-nova-raas-gang"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "nom": "TwoNet (pro-Russian hacktivist group)",
+        "secteur": "Industrial systems (ICS/SCADA), various (DDoS, doxxing, RaaS)",
+        "modop": "Exploitation of default credentials, reconnaissance, persistence, XSS exploitation (CVE-2021-26829) for defacement and system settings alteration, DDoS, doxxing, RaaS offerings.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russian",
+          "ics_scada",
+          "xss_exploit",
+          "ddos",
+          "doxxing",
+          "raas"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/11/cisa-adds-actively-exploited-xss-bug.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Transversal",
+        "theme": "State-sponsored and hacktivist actors",
+        "description": "Groups such as North Korea-linked actors and pro-Russian hacktivists (TwoNet) are conducting cyber-espionage and disruption campaigns, targeting various sectors with geopolitical motivations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "state_sponsored",
+          "hacktivism",
+          "north_korea",
+          "russia"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html",
+          "https://thehackernews.com/2025/11/cisa-adds-actively-exploited-xss-bug.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Sports, Federation",
+        "victime": "French Soccer Federation",
+        "description": "Member data stolen.",
+        "tags": [
+          "violation",
+          "breach",
+          "sports",
+          "federation",
+          "member_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185178/breaking-news/security-affairs-newsletter-round-552-by-pierluigi-paganini-international-edition.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "IT, Development Tools",
+        "victime": "JSONFormatter",
+        "description": "Thousands of sensitive secrets published.",
+        "tags": [
+          "violation",
+          "breach",
+          "it",
+          "development_tools",
+          "secrets_exposure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185178/breaking-news/security-affairs-newsletter-round-552-by-pierluigi-paganini-international-edition.html"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "Healthcare, Biotechnology, Genetics",
+        "victime": "23andMe",
+        "description": "6.4 million people's personal data lost to hackers, leading to a class action lawsuit.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "genetics",
+          "personal_data",
+          "class_action"
+        ],
+        "sources": [
+          "https://www.23andmedatasettlement.com/",
+          "https://mastodon.social/@ngate/115642210037098560",
+          "https://mastodon.social/@h4ckernews/115642139594447019"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Data breach exposed information from 33.7 million customers, suspected insider threat (former employee). Payment data not leaked, but phishing risks warned. Government investigation underway.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "customer_data",
+          "insider_threat",
+          "phishing_risk"
+        ],
+        "sources": [
+          "https://www.reuters.com/sustainability/boards-policy-regulation/south-korean-e-commerce-firm-coupang-says-337-million-customer-accounts-breached-2025-11-29/",
+          "https://infosec.exchange/@DevaOnBreaches/115641770803989784",
+          "https://mastodon.social/@infomaxkorea/115641503082078541"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "secteur": "Technology, Education, Retail, Financial Services",
+        "victime": "OpenAI, Asahi, SitusAMC, Harvard University, Dartmouth College, Recent Links, Cox Enterprises, Iberia, DoorDash, Amazon, Walmart, CodeRED",
+        "description": "Various data breaches reported affecting multiple organizations across diverse sectors.",
+        "tags": [
+          "violation",
+          "breach",
+          "technology",
+          "education",
+          "retail",
+          "financial_services",
+          "customer_data",
+          "employee_data"
+        ],
+        "sources": [
+          "https://blog.xposedornot.com/weekly-databreaches-roundup-week-48-2025",
+          "https://infosec.exchange/@DevaOnBreaches/115642561402810678",
+          "https://youtu.be/xDLcZVjLdqI",
+          "https://soundcloud.com/nickaesp/b2025-11-30"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-13615",
+        "cvss": 9.8,
+        "product": "StreamTube Core (WordPress plugin)",
+        "description": "Unauthenticated Arbitrary User Password Change (allows attackers to change user passwords and take over admin accounts).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "plugin",
+          "authentication_bypass",
+          "account_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13615"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2024-21413",
+        "cvss": 9.8,
+        "product": "Microsoft Outlook",
+        "description": "0-Click Remote Code Execution (RCE) (MonikerLink flaw allowing bypass of Protected View, code execution, or credential theft).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "microsoft_outlook",
+          "0_click",
+          "monikerlink",
+          "critical"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/outlook-remote-code-execution-vulnerability-2/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-35028",
+        "cvss": 9.1,
+        "product": "HexStrike AI MCP Server",
+        "description": "Command Injection (allows execution of arbitrary commands with root privilege).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "ai_server",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-35028"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-59789",
+        "cvss": 9.0,
+        "product": "Apache bRPC",
+        "description": "Stack exhaustion via unbounded recursion in JSON parsing (allows remote attackers to crash servers).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "denial_of_service",
+          "apache",
+          "brpc",
+          "json_parsing",
+          "stack_exhaustion",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-59789-critical-flaw-in-apache-brpc-framework-exposes-high-performance-systems-to-crash-risks/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-13757",
+        "cvss": 9.0,
+        "product": "Devolutions Server",
+        "description": "Authenticated SQL Injection (allows authenticated users to exfiltrate or modify critical data, including passwords).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "authenticated",
+          "password_management",
+          "data_exfiltration",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-devolutions-server-flaw-cve-2025-13757-allows-authenticated-sql-injection-to-steal-all-passwords/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-58360",
+        "cvss": 8.5,
+        "product": "GeoServer",
+        "description": "Unauthenticated XXE (XML External Entity) for File Theft and SSRF (allows unauthenticated attackers to exfiltrate sensitive files, perform port scanning, or cause DoS).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xxe",
+          "file_theft",
+          "ssrf",
+          "unauthenticated",
+          "geospatial",
+          "high"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-geoserver-flaw-cve-2025-58360-allows-unauthenticated-xxe-for-file-theft-and-ssrf/"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "cve_id": "CVE-2025-64772",
+        "cvss": 8.4,
+        "product": "INZONE Hub",
+        "description": "DLL Search Path Code Execution (insecurely loading Dynamic Link Libraries, leading to arbitrary code execution).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dll_hijacking",
+          "code_execution",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64772"
+        ],
+        "date": "2025-12-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "BREAKING: Dos-Op exposes the Nova RaaS gang",
+        "description": "The Nova RaaS (Ransomware-as-a-Service) gang, formerly known as RALord and based on Babuk source code, has been exposed by the research group Dos-Op. Their network configuration errors revealed backend addresses and additional attack surfaces. Nova targets medical and education sectors, and has previously violated data disclosure agreements after ransom payments.",
+        "threat_actor": "Nova RaaS gang (formerly RALord)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1486.003 (Data Encrypted for Impact: Disk Encryption)",
+          "T1565.001 (Data Destruction: Disk Wipe)",
+          "T1565.002 (Data Destruction: Disk Overwrite)",
+          "T1591 (Gather Victim Identity Information)"
+        ],
+        "analyse": "Significant impact on critical sectors (medical, education) due to data encryption and extortion. The exposure by Dos-Op provides valuable intelligence for law enforcement and potential victims, potentially disrupting the RaaS operations. Nova's unethical practices exacerbate victim impact.",
+        "recommandations": [
+          "Implement robust backup and recovery strategies to mitigate ransomware impact.",
+          "Conduct regular security audits to identify and patch vulnerabilities.",
+          "Educate employees on phishing and social engineering tactics often used for initial access.",
+          "Implement network segmentation to limit lateral movement.",
+          "Develop an incident response plan specifically for ransomware attacks.",
+          "Monitor for unusual network activity indicating ransomware deployment."
+        ],
+        "tags": [
+          "ransomware",
+          "raas",
+          "nova_raas",
+          "babuk",
+          "extortion",
+          "data_breach",
+          "medical_sector",
+          "education_sector"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/?pk_campaign=feed&pk_kwd=breaking-dos-op-exposes-the-nova-raas-gang"
+        ],
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Contagious Interview campaign expands with 197 npm Ppackages spreading new OtterCookie malware",
+        "description": "North Korea-linked actors continue the 'Contagious Interview' campaign, deploying 197 new malicious npm packages to distribute the OtterCookie malware. The campaign targets software developers in crypto and Web3 sectors via social engineering (fake job interviews) and trojanized projects. Malware functions as an infostealer and RAT, capable of credential harvesting, keylogging, screenshot capture, and remote shell access across Windows, Linux, and macOS. The infrastructure utilizes GitHub for lures, Vercel for payload delivery, and separate C2 servers.",
+        "threat_actor": "North Korea-linked actors",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tetrismic[.]vercel[.]app"
+          ],
+          "URL": [
+            "https://github.com/stardev0914"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589.002 (Gather Victim Org Info: Job Boards)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1055 (Process Injection)",
+          "T1552 (Unsecured Credentials)",
+          "T1078 (Valid Accounts)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1083 (File and Directory Discovery)",
+          "T1547 (Boot or Logon Autostart Execution)"
+        ],
+        "analyse": "High impact on software development supply chain, especially crypto/Web3 sectors. Geographic scope is global, targeting developers across major OS platforms. Strategic impact includes intellectual property theft, financial fraud (crypto wallets), and potential espionage.",
+        "recommandations": [
+          "Implement strict code review for third-party packages.",
+          "Utilize software supply chain security tools (e.g., npm audit, package integrity checks).",
+          "Educate developers on social engineering tactics and suspicious job offers.",
+          "Monitor outbound network connections for unusual C2 activity.",
+          "Deploy EDR solutions to detect infostealer and RAT behaviors.",
+          "Enforce multi-factor authentication for development platforms and sensitive accounts."
+        ],
+        "tags": [
+          "npm",
+          "supply_chain",
+          "malware",
+          "infostealer",
+          "rat",
+          "social_engineering",
+          "apt",
+          "north_korea",
+          "crypto",
+          "web3",
+          "developer_targeting",
+          "ottercookie",
+          "beaver_tail",
+          "invisible_ferret"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185170/apt/contagious-interview-campaign-expands-with-197-npm-ppackages-spreading-new-ottercookie-malware.html"
+        ],
+        "date": "2025-12-01"
+      }
+    ]
+  }
+}
