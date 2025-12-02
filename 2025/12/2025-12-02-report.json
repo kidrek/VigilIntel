@@ -1,0 +1,1750 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel des menaces cyber est marqué par une diversification et une sophistication accrues. Les attaques contre la chaîne d'approvisionnement logicielle sont une tendance majeure, observée dans la compromission d'outils de développement (OpenAI Codex CLI, packages VS Code Glassworm) et d'applications mobiles populaires (SmartTube pour Android TV) via des clés de signature volées ou des extensions malveilluses (ShadyPanda). L'utilisation de l'Intelligence Artificielle par les attaquants se généralise, notamment pour créer des deepfakes et des faux profils afin d'infiltrer les entreprises via l'ingénierie sociale et la manipulation des processus de recrutement (menace des 'travailleurs IT Nord-Coréens'). Parallèlement, l'IA est exploitée pour des malwares mobiles avancés permettant la fraude sur l'appareil (Albiriox). De nombreuses vulnérabilités critiques (CVSS >= 8) ont été identifiées, incluant des injections de commande (MCP Watch), des suppressions de fichiers arbitraires (Cost Calculator Builder, Gin-vue-admin), des XSS stockées (Angular) et des contournements d'authentification (IBM Informix, Grav). Ces failles sont des cibles privilégiées pour l'exécution de code à distance ou la prise de contrôle de comptes. Les violations de données continuent d'impacter massivement divers secteurs, notamment la vente au détail (Coupang, 33,7 millions de clients), les services publics (France Travail, 1,6 million de jeunes), la santé (New Horizons Medical) et l'éducation (Illuminate Education). La cybercriminalité reste très active, avec des opérations de blanchiment d'argent par crypto-mixers (Cryptomixer) démantelées par les forces de l'ordre, et des attaques ciblées sur l'infrastructure critique (honeypot ICS/OT par TwoNet). Enfin, des incidents inattendus comme la vulnérabilité logicielle d'Airbus A320 exposée aux éruptions solaires rappellent la complexité des risques dans les systèmes critiques.",
+      "date": "2025-12-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Albiriox",
+        "secteur": "Banque mobile, fintech, portefeuilles crypto, plateformes de paiement et de trading",
+        "modop": "Malware-as-a-Service Android pour la fraude sur l'appareil (ODF), contrôle à distance via VNC, manipulation d'écran, attaques par superposition pour le vol de crédentiels, ciblage de plus de 400 applications financières.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "albiriox",
+          "malware",
+          "android_malware",
+          "maas",
+          "on_device_fraud",
+          "vnc",
+          "overlay_attack",
+          "credential_theft",
+          "mobile_banking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185194/malware/emerging-android-threat-albiriox-enables-full-on%e2%80%91device-fraud.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "DevMan (RaaS)",
+        "secteur": "Santé (New Horizons Medical)",
+        "modop": "Opération de ransomware-as-a-service, revendique l'exfiltration de données et le chiffrement de fichiers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "devman",
+          "ransomware",
+          "raas",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ransomware-blog-claims-new-horizons-medical-has-been-attacked/?pk_campaign=feed&pk_kwd=ransomware-blog-claims-new-horizons-medical-has-been-attacked"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "Glassworm",
+        "secteur": "Développement logiciel, chaîne d'approvisionnement (VS Code)",
+        "modop": "Implants malveillants basés sur Rust dans des extensions VS Code, techniques Unicode invisibles, ciblage large de frameworks et outils de développement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "glassworm",
+          "malware",
+          "supply_chain",
+          "rust",
+          "vs_code",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/glassworm-malware-returns-in-third-wave-of-malicious-vs-code-packages/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "ShadyPanda",
+        "secteur": "Utilisateurs internet, e-commerce (eBay, Booking.com, Amazon)",
+        "modop": "Extensions de navigateur malveillantes (Chrome, Edge), fraude à l'affiliation par injection de codes de suivi, porte dérobée pour exécution de code à distance via des mises à jour.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "shadypanda",
+          "malware",
+          "browser_extension",
+          "affiliate_fraud",
+          "remote_code_execution",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shadypanda-browser-extensions-amass-43m-installs-in-malicious-campaign/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "Travailleurs IT Nord-Coréens",
+        "secteur": "Technologie (Web3, développement logiciel, blockchain)",
+        "modop": "Usurpation d'identité pour infiltrer les processus de recrutement, utilisation de deepfakes et d'identités volées/fabriquées, ingénierie sociale. Objectifs : vol de données, fraude financière, cyber espionnage, revenus illicites pour le régime.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "north_korea",
+          "state_sponsored",
+          "insider_threat",
+          "social_engineering",
+          "deepfake",
+          "identity_theft",
+          "cyber_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/when-hackers-wear-suits-protecting-your-team-from-insider-cyber-threats/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "TwoNet (Groupe hacktiviste pro-russe)",
+        "secteur": "ICS/OT (systèmes de contrôle industriel/technologie opérationnelle)",
+        "modop": "Exploitation de vulnérabilités (ex: CVE-2021-26829 - XSS) et de credentials par défaut pour défigurer des pages HMI et désactiver des logs/alarmes sur des honeypots. Évolution vers DDoS, doxxing, RaaS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russian",
+          "ics_ot",
+          "xss",
+          "deface",
+          "default_credentials",
+          "denial_of_service",
+          "ransomware_as_a_service"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185185/security/u-s-cisa-adds-an-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "Zeppelin, SunCrypt, Mamba, Dharma, LockBit (Groupes de ransomware)",
+        "secteur": "Divers (blanchiment d'argent via Cryptomixer)",
+        "modop": "Utilisation de services de crypto-mixage (Cryptomixer) pour le blanchiment des rançons et autres fonds illicites.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "zeppelin",
+          "suncrypt",
+          "mamba",
+          "dharma",
+          "lockbit",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html",
+          "https://databreaches.net/2025/12/01/europol-and-partners-shut-down-cryptomixer/?pk_campaign=feed&pk_kwd=europol-and-partners-shut-down-cryptomixer"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Assurance",
+        "victime": "John P. Meehan Agency",
+        "description": "Accès non autorisé à un compte de messagerie d'un employé entre le 2 et le 8 juillet 2024, découvert en juillet 2024, mais notification aux clients en novembre 2025. 2 326 personnes affectées. Informations exposées : noms, numéros de sécurité sociale, permis de conduire, numéros de passeport, informations financières, informations de carte de paiement, dates de naissance et informations médicales.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "john_p_meehan_agency",
+          "employee_email",
+          "personally_identifiable_information",
+          "pii",
+          "healthcare_information"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/john-p-meehan-agency-was-hacked-in-july-2024-affected-customers-were-first-finding-out-in-november-2025/?pk_campaign=feed&pk_kwd=john-p-meehan-agency-was-hacked-in-july-2024-affected-customers-were-first-finding-out-in-november-2025"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Forums automobiles",
+        "victime": "Zilvia.net",
+        "description": "Fuite de données en novembre 2025 de 287 863 comptes. Informations exposées : adresses e-mail uniques, noms d'utilisateur, adresses IP et hachages de mots de passe MD5 salés.",
+        "tags": [
+          "violation",
+          "breach",
+          "forum",
+          "automotive",
+          "zilvia_net",
+          "email_addresses",
+          "usernames",
+          "password_hashes",
+          "ip_addresses"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Zilvia",
+          "https://mastodon.social/@RedPacketSecurity/115647737569544361"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Public Service, Emploi",
+        "victime": "France Travail / Union nationale des missions locales",
+        "description": "Piratage informatique ayant conduit à la divulgation potentielle des données de 1,6 million de jeunes suivis. Le compte d'un agent a été piraté, permettant l'accès et la consultation de dossiers contenant noms, prénoms, dates de naissance, numéros de sécurité sociale, identifiants France Travail, adresses e-mail et postales, et numéros de téléphone.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_service",
+          "employment",
+          "france_travail",
+          "missions_locales",
+          "youth_data",
+          "personally_identifiable_information",
+          "pii",
+          "account_compromise"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/01/france-travail-les-donnees-d-1-6-million-de-jeunes-suivies-par-les-missions-locales-sont-susceptibles-d-etre-divulguees-apres-une-cyberattaque_6655592_4408996.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Vente au détail, e-commerce",
+        "victime": "Coupang (Corée du Sud)",
+        "description": "Fuite de données affectant 33,7 millions de clients après qu'un ancien employé ait utilisé des jetons d'accès non révoqués. Informations personnelles compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "e_commerce",
+          "coupang",
+          "customer_data",
+          "insider_threat",
+          "unrevoked_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/retail-giant-coupang-suffers-data-breach-impacting-337-million-people/",
+          "https://databreaches.net/2025/12/01/data-breach-hits-south-koreas-amazon-potentially-affecting-65-of-countrys-population/?pk_campaign=feed&pk_kwd=data-breach-hits-south-koreas-amazon-potentially-affecting-65-of-countrys-population",
+          "https://mastodon.social/@infomaxkorea/115647479950144508",
+          "https://mastodon.social/@infomaxkorea/115647067086468114"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Éducation, Edtech",
+        "victime": "Illuminate Education, Inc.",
+        "description": "Manquements à la sécurité des données ayant conduit à une brèche majeure en 2021, exposant les données personnelles de plus de 10 millions d'étudiants. Un pirate a utilisé les identifiants d'un ancien employé pour accéder aux bases de données cloud. Retard de notification. La FTC a engagé des poursuites.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "edtech",
+          "illuminate_education",
+          "student_data",
+          "data_security_failure",
+          "insider_credentials",
+          "cloud_database"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ftc-takes-action-against-education-technology-provider-for-failing-to-secure-students-personal-data/?pk_campaign=feed&pk_kwd=ftc-takes-action-against-education-technology-provider-for-failing-to-secure-students-personal-data"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "New Horizons Medical",
+        "description": "Attaque de ransomware revendiquée par le groupe DevMan, alléguant l'acquisition de 90 000 enregistrements et 236 Go de données. L'incident n'est pas confirmé par l'entreprise. L'entreprise avait déjà subi une attaque par ransomware en février 2023.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "new_horizons_medical",
+          "ransomware",
+          "devman",
+          "data_exfiltration",
+          "protected_health_information",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ransomware-blog-claims-new-horizons-medical-has-been-attacked/?pk_campaign=feed&pk_kwd=ransomware-blog-claims-new-horizons-medical-has-been-attacked"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Technologie (IA), Services analytiques tiers",
+        "victime": "OpenAI (via Mixpanel)",
+        "description": "Brèche de données résultant d'un compromis chez le fournisseur d'analyse tiers Mixpanel, exposant des informations limitées de certains clients de l'API ChatGPT (noms, adresses e-mail, localisation approximative).",
+        "tags": [
+          "violation",
+          "breach",
+          "technology",
+          "ai",
+          "openai",
+          "mixpanel",
+          "third_party_breach",
+          "api_clients",
+          "email_addresses"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/1st-december-threat-intelligence-report/"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66401",
+        "cvss": 9.8,
+        "product": "MCP Watch",
+        "description": "Injection de commande critique dans la méthode `cloneRepo` de la classe `MCPScanner`, permettant l'exécution de commandes arbitraires à distance via une URL `githubUrl` non assainie.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66401",
+          "command_injection",
+          "rce",
+          "mcp_watch",
+          "github_url"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66401"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-12529",
+        "cvss": 8.8,
+        "product": "Cost Calculator Builder (plugin WordPress)",
+        "description": "Suppression de fichier arbitraire non authentifiée due à une validation insuffisante du chemin de fichier dans la fonction `deleteOrdersFiles()`, permettant l'injection de chemins arbitraires et potentiellement l'exécution de code à distance (ex: suppression de `wp-config.php`). Nécessite la version Pro.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_12529",
+          "arbitrary_file_deletion",
+          "rce",
+          "wordpress_plugin",
+          "cost_calculator_builder",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12529"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66410",
+        "cvss": 8.7,
+        "product": "Gin-vue-admin",
+        "description": "Vulnérabilité de suppression de fichier arbitraire. Un attaquant peut supprimer n'importe quel fichier sur le serveur en contrôlant le paramètre `FileMd5`, entraînant des dommages ou une indisponibilité des ressources du serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66410",
+          "arbitrary_file_deletion",
+          "gin_vue_admin",
+          "server_damage",
+          "resource_unavailability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66410"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66301",
+        "cvss": 8.6,
+        "product": "Grav",
+        "description": "Contrôle d'accès brisé permettant à un éditeur de modifier les actions de traitement de formulaire via le YAML Frontmatter d'une page (`data[_json][header][form]`), pouvant entraîner d'autres vulnérabilités.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66301",
+          "broken_access_control",
+          "grav",
+          "yaml_frontmatter",
+          "form_processing"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66301"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66300",
+        "cvss": 8.5,
+        "product": "Grav",
+        "description": "Lecture de fichier arbitraire via le formulaire 'Frontmatter' par un utilisateur avec des privilèges d'édition de page, permettant d'accéder aux fichiers de compte utilisateur de Grav (mots de passe hachés, secrets 2FA, jetons de réinitialisation de mot de passe) et potentiellement de compromettre des comptes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66300",
+          "arbitrary_file_read",
+          "grav",
+          "privilege_escalation",
+          "account_compromise",
+          "hashed_passwords"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66300"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66412",
+        "cvss": 8.5,
+        "product": "Angular Template Compiler",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée due à un schéma de sécurité incomplet du compilateur Angular, permettant de contourner la désinfection de sécurité intégrée et d'injecter des scripts malveillants via des attributs URL (ex: `javascript: URLs`).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66412",
+          "xss",
+          "stored_xss",
+          "angular",
+          "template_compiler",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66412"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2024-45675",
+        "cvss": 8.4,
+        "product": "IBM Informix Dynamic Server 14.10",
+        "description": "Contournement de l'authentification permettant à un utilisateur local de se connecter en tant qu'administrateur sans mot de passe.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2024_45675",
+          "authentication_bypass",
+          "privilege_escalation",
+          "ibm_informix",
+          "local_privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-45675"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Rapport sur la couverture des menaces : nouveaux rapports sur les logiciels malveillants et plus de 5 000 règles de détection",
+        "description": "ANY.RUN a déployé de nouvelles informations comportementales et élargi sa visibilité sur de multiples familles de menaces. Les analystes ont découvert une nouvelle vague de phishing ciblant des organisations italiennes via des pièces jointes PDF malveillantes.",
+        "threat_actor": "Non applicable (campagne de phishing générale)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.001: Phishing: Spearphishing Attachment",
+            "T1027: Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001: Phishing: Spearphishing Attachment",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Présente un aperçu des efforts de détection et de la surveillance des menaces, y compris l'identification de nouvelles campagnes de phishing. L'utilisation de PDF malveillants pour le phishing reste un vecteur d'attaque courant, mettant en évidence la nécessité d'une sensibilisation des utilisateurs et de défenses de passerelle de messagerie.",
+        "recommandations": [
+          "Mettre en œuvre des filtres anti-phishing avancés.",
+          "Sensibiliser les utilisateurs aux risques des pièces jointes malveillantes.",
+          "Utiliser des sandbox pour analyser les fichiers suspects."
+        ],
+        "tags": [
+          "threat_intelligence",
+          "malware",
+          "phishing",
+          "pdf_attachments",
+          "detection_rules",
+          "email_security"
+        ],
+        "sources": [
+          "/cybersecurity-blog/threat-coverage-digest-november-2025/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Le malware Glassworm est de retour dans une troisième vague de packages VS Code malveillants",
+        "description": "Campagne de malware ciblant les développeurs via les marketplaces OpenVSX et Microsoft Visual Studio pour VS Code. Utilise des implants Rust-based et des astuces Unicode invisibles pour insérer du code malveillant dans les extensions.",
+        "threat_actor": "Glassworm",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1574.002: Supply Chain Compromise: Developer Tools",
+            "T1059: Command and Scripting Interpreter",
+            "T1027: Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.002: Supply Chain Compromise: Developer Tools",
+          "T1059: Command and Scripting Interpreter",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Impacte la chaîne d'approvisionnement logicielle en ciblant les outils de développement populaires. Le risque est l'exécution de code malveillant dans les environnements de développement, potentiellement compromettant de nombreux projets et entreprises en aval.",
+        "recommandations": [
+          "Vérifier la provenance et l'intégrité des extensions VS Code.",
+          "Mettre en œuvre des scans de sécurité pour les dépendances et les packages.",
+          "Surveiller les environnements de développement pour des activités anormales."
+        ],
+        "tags": [
+          "malware",
+          "glassworm",
+          "supply_chain",
+          "vs_code",
+          "developer",
+          "rust",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/glassworm-malware-returns-in-third-wave-of-malicious-vs-code-packages/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Les extensions de navigateur ShadyPanda totalisent 4,3 millions d'installations dans une campagne malveillante",
+        "description": "Une opération malveillante de longue date, \"ShadyPanda\", a atteint plus de 4,3 millions d'installations via des extensions de navigateur Chrome et Edge, initialement légitimes, qui ont évolué en malwares. Elles se sont engagées dans la fraude à l'affiliation et ont intégré une porte dérobée pour l'exécution de code à distance.",
+        "threat_actor": "ShadyPanda",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "api.extensionplay[.]com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1189: Drive-by Compromise",
+            "T1136: Create Account",
+            "T1059: Command and Scripting Interpreter",
+            "T1546.001: Event Triggered Execution: .bash_profile and .bashrc"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189: Drive-by Compromise",
+          "T1136: Create Account",
+          "T1059: Command and Scripting Interpreter",
+          "T1546.001: Event Triggered Execution: .bash_profile and .bashrc"
+        ],
+        "analyse": "Campagne massive ciblant les utilisateurs de navigateurs, transformant des outils de productivité en vecteurs de fraude et d'RCE. Le risque est la compromission des données utilisateur, l'interception de sessions et la prise de contrôle à distance des navigateurs.",
+        "recommandations": [
+          "Désinstaller les extensions suspectes.",
+          "Utiliser des outils de sécurité qui surveillent le comportement des extensions.",
+          "Maintenir les navigateurs et les systèmes d'exploitation à jour."
+        ],
+        "tags": [
+          "malware",
+          "shadypanda",
+          "browser_extensions",
+          "affiliate_fraud",
+          "remote_code_execution",
+          "supply_chain",
+          "chrome",
+          "edge"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shadypanda-browser-extensions-amass-43m-installs-in-malicious-campaign/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "L'application YouTube SmartTube pour Android TV a été piratée pour pousser une mise à jour malveillante",
+        "description": "Le client YouTube open-source populaire SmartTube pour Android TV a été compromis après qu'un attaquant ait accédé aux clés de signature du développeur, entraînant le déploiement d'une mise à jour malveillante. Cette mise à jour incluait une bibliothèque native cachée (`libalphasdk.so`) qui collecte des informations sur l'appareil et communique avec un backend distant.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1574.001: Supply Chain Compromise: Software Update",
+            "T1059.006: Command and Scripting Interpreter: Python",
+            "T1552: Unsecured Credentials",
+            "T1560: Archive Collected Data"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.001: Supply Chain Compromise: Software Update",
+          "T1059.006: Command and Scripting Interpreter: Python",
+          "T1552: Unsecured Credentials",
+          "T1560: Archive Collected Data"
+        ],
+        "analyse": "Vulnérabilité de la chaîne d'approvisionnement logicielle via la compromission des clés de signature d'un développeur d'application populaire. Le risque est l'installation silencieuse de malwares sur des millions d'appareils Android TV, permettant la collecte de données et une potentielle exécution de commandes.",
+        "recommandations": [
+          "Désactiver les mises à jour automatiques des applications.",
+          "Vérifier l'intégrité des applications installées.",
+          "Les développeurs doivent renforcer la sécurité des clés de signature."
+        ],
+        "tags": [
+          "breach",
+          "supply_chain",
+          "android_tv",
+          "smarttube",
+          "malware",
+          "app_compromise",
+          "signing_keys"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/smarttube-youtube-app-for-android-tv-breached-to-push-malicious-update/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Quand les hackers portent des costumes : protéger votre équipe des cybermenaces internes",
+        "description": "Analyse des menaces internes où des attaquants se font passer pour des professionnels de l'informatique ou de la cybersécurité via des deepfakes, des faux CV et des identités volées pour infiltrer les organisations et obtenir un accès privilégié. Le but est le vol de données, la fraude ou l'espionnage. Les schémas de travailleurs IT nord-coréens sont cités.",
+        "threat_actor": "Travailleurs IT Nord-Coréens (mentionnés comme exemple de menace étatique)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566: Phishing",
+            "T1078: Valid Accounts",
+            "T1560: Archive Collected Data",
+            "T1589: Gather Victim Identity Information",
+            "T1598: Phishing for Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566: Phishing",
+          "T1078: Valid Accounts",
+          "T1560: Archive Collected Data",
+          "T1589: Gather Victim Identity Information",
+          "T1598: Phishing for Information"
+        ],
+        "analyse": "Met en évidence l'évolution des menaces internes et l'utilisation de l'IA (deepfakes) pour l'ingénierie sociale sophistiquée dans les processus de recrutement, en particulier pour les rôles à distance. Impact potentiel sur la propriété intellectuelle, les données sensibles et la réputation.",
+        "recommandations": [
+          "Renforcer les processus de vérification des employés (validation multi-facteurs de l'identité, vérifications d'antécédents approfondies).",
+          "Mettre en œuvre des contrôles d'accès progressifs et une surveillance des activités des utilisateurs.",
+          "Formation de sensibilisation à la sécurité régulière."
+        ],
+        "tags": [
+          "insider_threat",
+          "social_engineering",
+          "deepfake",
+          "hiring_process",
+          "data_theft",
+          "cyber_espionage",
+          "north_korea",
+          "ai_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/when-hackers-wear-suits-protecting-your-team-from-insider-cyber-threats/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "CVE-2025-61260 — OpenAI Codex CLI : Injection de commande via la configuration locale du projet",
+        "description": "Analyse d'une vulnérabilité d'injection de commande dans OpenAI Codex CLI (outil en ligne de commande pour workflows de développeurs). La CLI charge et exécute automatiquement des entrées de serveur MCP depuis une configuration locale (`.env`, `.codex/config.toml`), ce qui permet l'exécution de commandes arbitraires sur la machine d'un développeur qui clone et exécute `codex` sur un dépôt malveillant.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61260"
+          ],
+          "MITRE_ATT&CK": [
+            "T1574.002: Supply Chain Compromise: Developer Tools",
+            "T1059: Command and Scripting Interpreter",
+            "T1548.001: Abuse of an Elevated Process: Setuid and Setgid"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.002: Supply Chain Compromise: Developer Tools",
+          "T1059: Command and Scripting Interpreter",
+          "T1548.001: Abuse of an Elevated Process: Setuid and Setgid"
+        ],
+        "analyse": "Vulnérabilité critique de la chaîne d'approvisionnement des développeurs, transformant des fichiers de référentiel ordinaires en vecteur d'exécution de code à distance. Elle crée une porte dérobée furtive et reproductible, exploitable sans interaction utilisateur au-delà du flux de travail de développement standard.",
+        "recommandations": [
+          "Ne pas exécuter d'outils de développement dans des dépôts non fiables sans examen.",
+          "Implémenter des vérifications de provenance et des validations interactives pour l'exécution de code via la configuration locale.",
+          "Mettre à jour la CLI OpenAI Codex vers une version corrigée."
+        ],
+        "tags": [
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "openai_codex_cli",
+          "supply_chain",
+          "developer_workflow",
+          "ai_tool"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/openai-codex-cli-command-injection-vulnerability/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "L'Australien condamné à plus de 7 ans de prison pour des attaques Wi-Fi dans les aéroports et en vol",
+        "description": "Michael Clapsis a été condamné à 7 ans et 4 mois de prison pour avoir mené des attaques Wi-Fi \"evil twin\" dans les aéroports et sur les vols, volant des données sensibles et des images intimes. Il utilisait un Wi-Fi Pineapple pour intercepter les informations d'identification des victimes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1048: Exfiltration Over Alternative Protocol",
+            "T1071.001: Application Layer Protocol: Web Protocols",
+            "T1083: File and Directory Discovery",
+            "T1134: Access Token Manipulation",
+            "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+            "T1566: Phishing"
+          ]
+        },
+        "mitre_ttps": [
+          "T1048: Exfiltration Over Alternative Protocol",
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1083: File and Directory Discovery",
+          "T1134: Access Token Manipulation",
+          "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+          "T1566: Phishing"
+        ],
+        "analyse": "Incident de cybercriminalité combinant des attaques techniques (evil twin Wi-Fi) et l'exploitation de la confiance des utilisateurs dans des environnements publics. Impact direct sur la vie privée et les données financières des victimes. Met en lumière le risque des réseaux Wi-Fi non sécurisés.",
+        "recommandations": [
+          "Éviter d'utiliser les réseaux Wi-Fi publics non fiables.",
+          "Utiliser un VPN sur les réseaux publics.",
+          "Être vigilant face aux pages de connexion suspectes.",
+          "Utiliser des mots de passe uniques et forts."
+        ],
+        "tags": [
+          "cybercrime",
+          "evil_twin_wifi",
+          "wi_fi_pineapple",
+          "data_theft",
+          "credential_harvesting",
+          "physical_security",
+          "airports",
+          "in_flight"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185205/cyber-crime/australian-man-jailed-for-7-years-over-airport-and-in-flight-wi-fi-attacks.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "La menace Android émergente 'Albiriox' permet la fraude complète sur l'appareil",
+        "description": "'Albiriox' est un nouveau malware Android vendu sous forme de Malware-as-a-Service (MaaS) sur des forums russophones. Il offre des capacités avancées de fraude sur l'appareil (ODF), de manipulation d'écran via VNC et d'interaction en temps réel avec les appareils infectés, ciblant plus de 400 applications financières (banque, fintech, crypto).",
+        "threat_actor": "Albiriox (Maas)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1407: Accessibility Features",
+            "T1573: Encrypted Channel",
+            "T1059: Command and Scripting Interpreter",
+            "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+            "T1566.004: Phishing: Smishing"
+          ]
+        },
+        "mitre_ttps": [
+          "T1407: Accessibility Features",
+          "T1573: Encrypted Channel",
+          "T1059: Command and Scripting Interpreter",
+          "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+          "T1566.004: Phishing: Smishing"
+        ],
+        "analyse": "Émergence d'une menace mobile sophistiquée axée sur la fraude directe sur l'appareil, capable de contourner les mécanismes d'authentification et de détection. Le modèle MaaS facilite sa large diffusion parmi les cybercriminels, posant un risque significatif pour le secteur financier mobile.",
+        "recommandations": [
+          "Utiliser des solutions de sécurité mobile robustes.",
+          "Être vigilant face aux messages SMS suspects.",
+          "Ne télécharger des applications que depuis des sources officielles.",
+          "Surveiller les activités bancaires et financières."
+        ],
+        "tags": [
+          "malware",
+          "android_malware",
+          "maas",
+          "albiriox",
+          "on_device_fraud",
+          "vnc",
+          "mobile_banking",
+          "fintech",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185194/malware/emerging-android-threat-albiriox-enables-full-on%e2%80%91device-fraud.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Les forces de l'ordre ferment Cryptomixer lors d'une importante opération de répression de la cybercriminalité",
+        "description": "Europol et les autorités allemandes et suisses ont démantelé Cryptomixer, un service de mixage de cryptomonnaies utilisé pour blanchir plus de 1,3 milliard d'euros en Bitcoin. L'opération a entraîné la saisie de serveurs et de 25 millions d'euros en Bitcoin. Des groupes de ransomware comme Zeppelin et LockBit utilisaient ce service.",
+        "threat_actor": "Zeppelin, SunCrypt, Mamba, Dharma, LockBit (utilisateurs du service)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "cryptomixer.io"
+          ],
+          "MITRE_ATT&CK": [
+            "T1071.001: Application Layer Protocol: Web Protocols",
+            "T1567: Exfiltration Over Web Service",
+            "T1498: External Remote Services",
+            "T1041: Exfiltration Over C2 Channel"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1567: Exfiltration Over Web Service",
+          "T1498: External Remote Services",
+          "T1041: Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Succès majeur des forces de l'ordre contre le blanchiment d'argent cybercriminel, perturbant les infrastructures financières des groupes de ransomware et des marchés darknet. Souligne la collaboration internationale pour cibler l'écosystème de la cybercriminalité.",
+        "recommandations": [
+          "Renforcer la traçabilité des transactions crypto.",
+          "Collaborer avec les autorités pour signaler les activités suspectes."
+        ],
+        "tags": [
+          "cybercrime",
+          "money_laundering",
+          "cryptomixer",
+          "bitcoin",
+          "europol",
+          "law_enforcement",
+          "ransomware_groups"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html",
+          "https://databreaches.net/2025/12/01/europol-and-partners-shut-down-cryptomixer/?pk_campaign=feed&pk_kwd=europol-and-partners-shut-down-cryptomixer"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "La CISA américaine ajoute une faille OpenPLC ScadaBR à son catalogue des vulnérabilités exploitées connues",
+        "description": "La CISA a ajouté la faille OpenPLC ScadaBR (CVE-2021-26829, XSS, CVSS 5.4) à son catalogue KEV. Le groupe hacktiviste pro-russe TwoNet l'a utilisée pour attaquer un honeypot ICS/OT de Forescout en septembre 2025, défigurant la page de connexion HMI et désactivant les logs/alarmes après avoir accédé aux systèmes avec des identifiants par défaut.",
+        "threat_actor": "TwoNet",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-26829"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190: Exploit Public-Facing Application",
+            "T0806: XSS (Cross Site Scripting)",
+            "T0862: Improper Input Validation",
+            "T0813: Default Credentials"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190: Exploit Public-Facing Application",
+          "T0806: XSS (Cross Site Scripting)",
+          "T0862: Improper Input Validation",
+          "T0813: Default Credentials"
+        ],
+        "analyse": "Démonstration de l'exploitation de vulnérabilités même de faible score CVSS par des groupes hacktivistes pour cibler des systèmes industriels. Souligne l'importance de la gestion des correctifs, la modification des identifiants par défaut et la surveillance des systèmes ICS/OT, même pour des vulnérabilités plus anciennes.",
+        "recommandations": [
+          "Mettre à jour les systèmes et appliquer les correctifs CISA KEV.",
+          "Changer les identifiants par défaut.",
+          "Surveiller activement les systèmes ICS/OT pour détecter les activités suspectes."
+        ],
+        "tags": [
+          "vulnerability",
+          "exploitation",
+          "cisa_kev",
+          "openplc_scadabr",
+          "ics_ot",
+          "hacktivism",
+          "twonet",
+          "xss",
+          "default_credentials"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185185/security/u-s-cisa-adds-an-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Airbus achève le retrofit de l'A320 alors que les régulateurs surveillent le plus grand rappel d'urgence de l'histoire de l'entreprise",
+        "description": "Airbus est en phase finale d'un rappel mondial sans précédent de 6 000 avions A320 en raison d'une vulnérabilité logicielle liée à l'exposition à des éruptions solaires intenses, qui pourrait compromettre les données des fonctions de contrôle de vol. L'incident a entraîné des perturbations opérationnelles mondiales et des modifications logicielles/matérielles mandatées.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61884",
+            "CVE-2025-20333",
+            "CVE-2024-42509"
+          ],
+          "MITRE_ATT&CK": [
+            "T0848: Data Corruption",
+            "T0801: Firmware Compromise",
+            "T0885: Software Supply Chain Compromise"
+          ]
+        },
+        "mitre_ttps": [
+          "T0848: Data Corruption",
+          "T0801: Firmware Compromise",
+          "T0885: Software Supply Chain Compromise"
+        ],
+        "analyse": "Incident critique impactant la sécurité aérienne mondiale, révélant la vulnérabilité des systèmes embarqués aux facteurs environnementaux extrêmes (éruptions solaires) et soulignant l'importance de la résilience logicielle et matérielle dans les infrastructures critiques. Implique une révision de la chaîne d'approvisionnement pour les mises à jour logicielles dans des contextes à haute criticité.",
+        "recommandations": [
+          "Mettre en œuvre des procédures de gestion des vulnérabilités robustes pour les systèmes critiques.",
+          "Effectuer des audits de sécurité réguliers et des tests de résilience aux facteurs environnementaux.",
+          "Renforcer la sécurité de la chaîne d'approvisionnement logicielle."
+        ],
+        "tags": [
+          "aviation_security",
+          "software_vulnerability",
+          "airbus_a320",
+          "critical_infrastructure",
+          "supply_chain",
+          "solar_radiation",
+          "flight_controls"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/airbus-a320-software-recall-retrofit/"
+        ],
+        "date": "2025-12-02"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cyber threat landscape is marked by increasing diversification and sophistication. Supply chain attacks are a major trend, observed in the compromise of development tools (OpenAI Codex CLI, Glassworm VS Code packages) and popular mobile applications (SmartTube for Android TV) via stolen signing keys or malicious extensions (ShadyPanda). The use of Artificial Intelligence by attackers is becoming widespread, notably to create deepfakes and fake profiles to infiltrate organizations through social engineering and manipulation of recruitment processes (threat of 'North Korean IT workers'). In parallel, AI is leveraged for advanced mobile malware enabling on-device fraud (Albiriox). Numerous critical vulnerabilities (CVSS >= 8) have been identified, including command injections (MCP Watch), arbitrary file deletions (Cost Calculator Builder, Gin-vue-admin), stored XSS (Angular), and authentication bypasses (IBM Informix, Grav). These flaws are prime targets for remote code execution or account takeover. Data breaches continue to massively impact various sectors, including retail (Coupang, 33.7 million customers), public services (France Travail, 1.6 million young individuals), healthcare (New Horizons Medical), and education (Illuminate Education). Cybercrime remains highly active, with cryptocurrency mixer money laundering operations (Cryptomixer) dismantled by law enforcement, and targeted attacks on critical infrastructure (ICS/OT honeypot by TwoNet). Finally, unexpected incidents such as the Airbus A320 software vulnerability exposed to intense solar flares highlight the complexity of risks in critical systems.",
+      "date": "2025-12-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Albiriox",
+        "secteur": "Mobile banking, fintech, crypto wallets, payment and trading platforms",
+        "modop": "Android Malware-as-a-Service (MaaS) for On-Device Fraud (ODF), VNC-based remote control, screen manipulation, overlay attacks for credential theft, targets over 400 financial applications.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "albiriox",
+          "malware",
+          "android_malware",
+          "maas",
+          "on_device_fraud",
+          "vnc",
+          "overlay_attack",
+          "credential_theft",
+          "mobile_banking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185194/malware/emerging-android-threat-albiriox-enables-full-on%e2%80%91device-fraud.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "DevMan (RaaS)",
+        "secteur": "Healthcare (New Horizons Medical)",
+        "modop": "Ransomware-as-a-Service operation, claims data exfiltration and potential file encryption.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "devman",
+          "ransomware",
+          "raas",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ransomware-blog-claims-new-horizons-medical-has-been-attacked/?pk_campaign=feed&pk_kwd=ransomware-blog-claims-new-horizons-medical-has-been-attacked"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "Glassworm",
+        "secteur": "Software development, supply chain (VS Code)",
+        "modop": "Rust-based malicious implants in VS Code extensions, invisible Unicode tricks, broad targeting of development frameworks and tools.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "glassworm",
+          "malware",
+          "supply_chain",
+          "rust",
+          "vs_code",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/glassworm-malware-returns-in-third-wave-of-malicious-vs-code-packages/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "ShadyPanda",
+        "secteur": "Internet users, e-commerce (eBay, Booking.com, Amazon)",
+        "modop": "Malicious browser extensions (Chrome, Edge), affiliate fraud through tracking code injection, remote code execution backdoor via updates.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "shadypanda",
+          "malware",
+          "browser_extension",
+          "affiliate_fraud",
+          "remote_code_execution",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shadypanda-browser-extensions-amass-43m-installs-in-malicious-campaign/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "North Korean IT Workers",
+        "secteur": "Technology (Web3, software development, blockchain)",
+        "modop": "Identity impersonation to infiltrate hiring processes, use of deepfakes and stolen/fabricated IDs, social engineering. Objectives: data theft, financial fraud, cyber espionage, illicit revenue for the regime.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "north_korea",
+          "state_sponsored",
+          "insider_threat",
+          "social_engineering",
+          "deepfake",
+          "identity_theft",
+          "cyber_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/when-hackers-wear-suits-protecting-your-team-from-insider-cyber-threats/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "TwoNet (Pro-Russian Hacktivist Group)",
+        "secteur": "ICS/OT (Industrial Control Systems/Operational Technology)",
+        "modop": "Exploitation of vulnerabilities (e.g., CVE-2021-26829 - XSS) and default credentials to deface HMI pages and disable logs/alarms on honeypots. Evolved into DDoS, doxxing, RaaS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russian",
+          "ics_ot",
+          "xss",
+          "deface",
+          "default_credentials",
+          "denial_of_service",
+          "ransomware_as_a_service"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185185/security/u-s-cisa-adds-an-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "nom": "Zeppelin, SunCrypt, Mamba, Dharma, LockBit (Ransomware Groups)",
+        "secteur": "Various (money laundering via Cryptomixer)",
+        "modop": "Utilized cryptocurrency mixing services (Cryptomixer) for laundering ransoms and other illicit funds.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "zeppelin",
+          "suncrypt",
+          "mamba",
+          "dharma",
+          "lockbit",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html",
+          "https://databreaches.net/2025/12/01/europol-and-partners-shut-down-cryptomixer/?pk_campaign=feed&pk_kwd=europol-and-partners-shut-down-cryptomixer"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Insurance",
+        "victime": "John P. Meehan Agency",
+        "description": "Unauthorized access to an employee email account between July 2 and July 8, 2024, discovered in July 2024, but customers notified in November 2025. 2,326 individuals affected. Exposed information: names, Social Security numbers, driver's license or state identification numbers, passport numbers, financial account information, payment card information, dates of birth, and medical information.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "john_p_meehan_agency",
+          "employee_email",
+          "personally_identifiable_information",
+          "pii",
+          "healthcare_information"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/john-p-meehan-agency-was-hacked-in-july-2024-affected-customers-were-first-finding-out-in-november-2025/?pk_campaign=feed&pk_kwd=john-p-meehan-agency-was-hacked-in-july-2024-affected-customers-were-first-finding-out-in-november-2025"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Automotive forums",
+        "victime": "Zilvia.net",
+        "description": "Data leak in November 2025 from 287,863 accounts. Exposed information: unique email addresses, usernames, IP addresses, and salted MD5 password hashes.",
+        "tags": [
+          "violation",
+          "breach",
+          "forum",
+          "automotive",
+          "zilvia_net",
+          "email_addresses",
+          "usernames",
+          "password_hashes",
+          "ip_addresses"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Zilvia",
+          "https://mastodon.social/@RedPacketSecurity/115647737569544361"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Public Service, Employment",
+        "victime": "France Travail / Union nationale des missions locales",
+        "description": "Cyberattack potentially leading to the disclosure of data for 1.6 million young individuals. An agent's account was compromised, allowing access and consultation of files containing names, dates of birth, social security numbers, France Travail identifiers, email and postal addresses, and phone numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_service",
+          "employment",
+          "france_travail",
+          "missions_locales",
+          "youth_data",
+          "personally_identifiable_information",
+          "pii",
+          "account_compromise"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/01/france-travail-les-donnees-d-1-6-million-de-jeunes-suivies-par-les-missions-locales-sont-susceptibles-d-etre-divulguees-apres-une-cyberattaque_6655592_4408996.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Retail, e-commerce",
+        "victime": "Coupang (South Korea)",
+        "description": "Data leak affecting 33.7 million customers after a former employee used unrevoked access tokens. Personal information compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "e_commerce",
+          "coupang",
+          "customer_data",
+          "insider_threat",
+          "unrevoked_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/retail-giant-coupang-suffers-data-breach-impacting-337-million-people/",
+          "https://databreaches.net/2025/12/01/data-breach-hits-south-koreas-amazon-potentially-affecting-65-of-countrys-population/?pk_campaign=feed&pk_kwd=data-breach-hits-south-koreas-amazon-potentially-affecting-65-of-countrys-population",
+          "https://mastodon.social/@infomaxkorea/115647479950144508",
+          "https://mastodon.social/@infomaxkorea/115647067086468114"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Education, Edtech",
+        "victime": "Illuminate Education, Inc.",
+        "description": "Data security failures led to a major breach in 2021, exposing personal data of over 10 million students. A hacker used former employee credentials to access cloud databases. Delayed notification. FTC took enforcement action.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "edtech",
+          "illuminate_education",
+          "student_data",
+          "data_security_failure",
+          "insider_credentials",
+          "cloud_database"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ftc-takes-action-against-education-technology-provider-for-failing-to-secure-students-personal-data/?pk_campaign=feed&pk_kwd=ftc-takes-action-against-education-technology-provider-for-failing-to-secure-students-personal-data"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "New Horizons Medical",
+        "description": "Ransomware attack claimed by the DevMan group, alleging acquisition of 90,000 records and 236 GB of data. The incident is not confirmed by the company. The company had previously experienced a ransomware attack in February 2023.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "new_horizons_medical",
+          "ransomware",
+          "devman",
+          "data_exfiltration",
+          "protected_health_information",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/01/ransomware-blog-claims-new-horizons-medical-has-been-attacked/?pk_campaign=feed&pk_kwd=ransomware-blog-claims-new-horizons-medical-has-been-attacked"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "secteur": "Technology (AI), Third-Party Analytics Services",
+        "victime": "OpenAI (via Mixpanel)",
+        "description": "Data breach resulting from a compromise at third-party analytics provider Mixpanel, exposing limited information of some ChatGPT API clients (names, email addresses, approximate location).",
+        "tags": [
+          "violation",
+          "breach",
+          "technology",
+          "ai",
+          "openai",
+          "mixpanel",
+          "third_party_breach",
+          "api_clients",
+          "email_addresses"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/1st-december-threat-intelligence-report/"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66401",
+        "cvss": 9.8,
+        "product": "MCP Watch",
+        "description": "Critical Command Injection vulnerability in the `cloneRepo` method of the `MCPScanner` class, allowing remote arbitrary command execution via an unsanitized `githubUrl` argument.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66401",
+          "command_injection",
+          "rce",
+          "mcp_watch",
+          "github_url"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66401"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-12529",
+        "cvss": 8.8,
+        "product": "Cost Calculator Builder (WordPress plugin)",
+        "description": "Unauthenticated arbitrary file deletion due to insufficient file path validation in the `deleteOrdersFiles()` function, allowing arbitrary file path injection and potential remote code execution (e.g., deleting `wp-config.php`). Requires Pro version.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_12529",
+          "arbitrary_file_deletion",
+          "rce",
+          "wordpress_plugin",
+          "cost_calculator_builder",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12529"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66410",
+        "cvss": 8.7,
+        "product": "Gin-vue-admin",
+        "description": "Arbitrary file deletion vulnerability. An attacker can delete any file on the server by controlling the 'FileMd5' parameter, causing damage or unavailability of server resources.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66410",
+          "arbitrary_file_deletion",
+          "gin_vue_admin",
+          "server_damage",
+          "resource_unavailability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66410"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66301",
+        "cvss": 8.6,
+        "product": "Grav",
+        "description": "Broken Access Control allowing an editor to modify page YAML Frontmatter (`data[_json][header][form]`) to alter form processing actions, potentially leading to further vulnerabilities.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66301",
+          "broken_access_control",
+          "grav",
+          "yaml_frontmatter",
+          "form_processing"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66301"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66300",
+        "cvss": 8.5,
+        "product": "Grav",
+        "description": "Arbitrary file read vulnerability via \"Frontmatter\" form by a low-privilege user with page editing rights, allowing access to Grav user account files (hashed passwords, 2FA secrets, password reset tokens) and potential account compromise.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66300",
+          "arbitrary_file_read",
+          "grav",
+          "privilege_escalation",
+          "account_compromise",
+          "hashed_passwords"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66300"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2025-66412",
+        "cvss": 8.5,
+        "product": "Angular Template Compiler",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability due to an incomplete security schema in the Angular Template Compiler, allowing attackers to bypass built-in security sanitization and inject malicious scripts via URL-holding attributes (e.g., `javascript: URLs`).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2025_66412",
+          "xss",
+          "stored_xss",
+          "angular",
+          "template_compiler",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66412"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "cve_id": "CVE-2024-45675",
+        "cvss": 8.4,
+        "product": "IBM Informix Dynamic Server 14.10",
+        "description": "Authentication bypass allowing a local user to log in as an administrator without a password.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve_2024_45675",
+          "authentication_bypass",
+          "privilege_escalation",
+          "ibm_informix",
+          "local_privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-45675"
+        ],
+        "date": "2025-12-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Threat Coverage Digest: New Malware Reports and 5K+ Detection Rules",
+        "description": "ANY.RUN deployed new behavioral insights and broadened visibility across multiple threat families. Analysts uncovered a new phishing wave targeting Italian organizations through malicious PDF attachments.",
+        "threat_actor": "Non applicable (general phishing campaign)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.001: Phishing: Spearphishing Attachment",
+            "T1027: Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001: Phishing: Spearphishing Attachment",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Provides an overview of detection efforts and threat monitoring, including the identification of new phishing campaigns. The use of malicious PDFs for phishing remains a common attack vector, highlighting the need for user awareness and email gateway defenses.",
+        "recommandations": [
+          "Implement advanced anti-phishing filters.",
+          "Educate users about the risks of malicious attachments.",
+          "Use sandboxes to analyze suspicious files."
+        ],
+        "tags": [
+          "threat_intelligence",
+          "malware",
+          "phishing",
+          "pdf_attachments",
+          "detection_rules",
+          "email_security"
+        ],
+        "sources": [
+          "/cybersecurity-blog/threat-coverage-digest-november-2025/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Glassworm malware returns in third wave of malicious VS Code packages",
+        "description": "Malware campaign targeting developers via OpenVSX and Microsoft Visual Studio marketplaces for VS Code. Uses Rust-based implants and invisible Unicode tricks to inject malicious code into extensions.",
+        "threat_actor": "Glassworm",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1574.002: Supply Chain Compromise: Developer Tools",
+            "T1059: Command and Scripting Interpreter",
+            "T1027: Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.002: Supply Chain Compromise: Developer Tools",
+          "T1059: Command and Scripting Interpreter",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Impacts the software supply chain by targeting popular development tools. Risk includes malicious code execution in development environments, potentially compromising numerous downstream projects and organizations.",
+        "recommandations": [
+          "Verify the provenance and integrity of VS Code extensions.",
+          "Implement security scans for dependencies and packages.",
+          "Monitor development environments for anomalous activities."
+        ],
+        "tags": [
+          "malware",
+          "glassworm",
+          "supply_chain",
+          "vs_code",
+          "developer",
+          "rust",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/glassworm-malware-returns-in-third-wave-of-malicious-vs-code-packages/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "ShadyPanda browser extensions amass 4.3M installs in malicious campaign",
+        "description": "A long-running malware operation known as \"ShadyPanda\" has accumulated over 4.3 million installations of seemingly legitimate Chrome and Edge browser extensions that evolved into malware. They engaged in affiliate fraud and incorporated a remote code execution backdoor.",
+        "threat_actor": "ShadyPanda",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "api.extensionplay[.]com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1189: Drive-by Compromise",
+            "T1136: Create Account",
+            "T1059: Command and Scripting Interpreter",
+            "T1546.001: Event Triggered Execution: .bash_profile and .bashrc"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189: Drive-by Compromise",
+          "T1136: Create Account",
+          "T1059: Command and Scripting Interpreter",
+          "T1546.001: Event Triggered Execution: .bash_profile and .bashrc"
+        ],
+        "analyse": "Massive campaign targeting browser users, turning productivity tools into vectors for fraud and RCE. Risk involves compromising user data, session interception, and remote control of browsers.",
+        "recommandations": [
+          "Uninstall suspicious extensions.",
+          "Use security tools that monitor extension behavior.",
+          "Keep browsers and operating systems updated."
+        ],
+        "tags": [
+          "malware",
+          "shadypanda",
+          "browser_extensions",
+          "affiliate_fraud",
+          "remote_code_execution",
+          "supply_chain",
+          "chrome",
+          "edge"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shadypanda-browser-extensions-amass-43m-installs-in-malicious-campaign/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "SmartTube YouTube app for Android TV breached to push malicious update",
+        "description": "The popular open-source SmartTube YouTube client for Android TV was compromised after an attacker gained access to the developer's signing keys, leading to a malicious update being pushed to users. This update included a hidden native library (`libalphasdk.so`) that fingerprints the device and communicates with a remote backend.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1574.001: Supply Chain Compromise: Software Update",
+            "T1059.006: Command and Scripting Interpreter: Python",
+            "T1552: Unsecured Credentials",
+            "T1560: Archive Collected Data"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.001: Supply Chain Compromise: Software Update",
+          "T1059.006: Command and Scripting Interpreter: Python",
+          "T1552: Unsecured Credentials",
+          "T1560: Archive Collected Data"
+        ],
+        "analyse": "Software supply chain vulnerability via compromise of a popular app developer's signing keys. Risk is silent malware installation on millions of Android TV devices, enabling data collection and potential command execution.",
+        "recommandations": [
+          "Disable auto-updates for applications.",
+          "Verify the integrity of installed apps.",
+          "Developers must strengthen the security of signing keys."
+        ],
+        "tags": [
+          "breach",
+          "supply_chain",
+          "android_tv",
+          "smarttube",
+          "malware",
+          "app_compromise",
+          "signing_keys"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/smarttube-youtube-app-for-android-tv-breached-to-push-malicious-update/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "When Hackers Wear Suits: Protecting Your Team from Insider Cyber Threats",
+        "description": "Analysis of insider threats where attackers impersonate IT or cybersecurity professionals using deepfakes, fake resumes, and stolen identities to infiltrate organizations and gain privileged access. Goals include data theft, financial fraud, or espionage. North Korean IT worker schemes are cited as an example.",
+        "threat_actor": "North Korean IT Workers (mentioned as an example of state-sponsored threat)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566: Phishing",
+            "T1078: Valid Accounts",
+            "T1560: Archive Collected Data",
+            "T1589: Gather Victim Identity Information",
+            "T1598: Phishing for Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566: Phishing",
+          "T1078: Valid Accounts",
+          "T1560: Archive Collected Data",
+          "T1589: Gather Victim Identity Information",
+          "T1598: Phishing for Information"
+        ],
+        "analyse": "Highlights the evolution of insider threats and the use of AI (deepfakes) for sophisticated social engineering in hiring processes, especially for remote roles. Potential impact on intellectual property, sensitive data, and reputation.",
+        "recommandations": [
+          "Strengthen employee vetting processes (multi-factor identity validation, thorough background checks).",
+          "Implement gradual access controls and user activity monitoring.",
+          "Conduct regular security awareness training."
+        ],
+        "tags": [
+          "insider_threat",
+          "social_engineering",
+          "deepfake",
+          "hiring_process",
+          "data_theft",
+          "cyber_espionage",
+          "north_korea",
+          "ai_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/when-hackers-wear-suits-protecting-your-team-from-insider-cyber-threats/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "CVE-2025-61260 — OpenAI Codex CLI: Command Injection via Project-Local Configuration",
+        "description": "Analysis of a command injection vulnerability in OpenAI Codex CLI (a command-line tool for developer workflows). The CLI automatically loads and executes MCP server entries from project-local configuration (`.env`, `.codex/config.toml`), enabling arbitrary command execution on a developer's machine who clones and runs `codex` in a malicious repository.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61260"
+          ],
+          "MITRE_ATT&CK": [
+            "T1574.002: Supply Chain Compromise: Developer Tools",
+            "T1059: Command and Scripting Interpreter",
+            "T1548.001: Abuse of an Elevated Process: Setuid and Setgid"
+          ]
+        },
+        "mitre_ttps": [
+          "T1574.002: Supply Chain Compromise: Developer Tools",
+          "T1059: Command and Scripting Interpreter",
+          "T1548.001: Abuse of an Elevated Process: Setuid and Setgid"
+        ],
+        "analyse": "Critical developer supply chain vulnerability, turning ordinary repository files into an execution vector for remote code execution. It creates a stealthy, reproducible backdoor, exploitable without user interaction beyond standard development workflow.",
+        "recommandations": [
+          "Do not run development tools in untrusted repositories without review.",
+          "Implement provenance checks and interactive validations for code execution via local configuration.",
+          "Update OpenAI Codex CLI to a patched version."
+        ],
+        "tags": [
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "openai_codex_cli",
+          "supply_chain",
+          "developer_workflow",
+          "ai_tool"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/openai-codex-cli-command-injection-vulnerability/"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Australian man jailed for 7+ years over airport and in-flight Wi-Fi attacks",
+        "description": "Michael Clapsis was sentenced to 7 years and 4 months in prison for conducting \"evil twin\" Wi-Fi attacks at airports and on flights, stealing sensitive data and intimate images. He used a Wi-Fi Pineapple to harvest victims' credentials.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1048: Exfiltration Over Alternative Protocol",
+            "T1071.001: Application Layer Protocol: Web Protocols",
+            "T1083: File and Directory Discovery",
+            "T1134: Access Token Manipulation",
+            "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+            "T1566: Phishing"
+          ]
+        },
+        "mitre_ttps": [
+          "T1048: Exfiltration Over Alternative Protocol",
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1083: File and Directory Discovery",
+          "T1134: Access Token Manipulation",
+          "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+          "T1566: Phishing"
+        ],
+        "analyse": "Cybercrime incident combining technical attacks (evil twin Wi-Fi) with exploitation of user trust in public environments. Direct impact on victims' privacy and financial data. Highlights the risk of unsecured Wi-Fi networks.",
+        "recommandations": [
+          "Avoid using untrusted public Wi-Fi networks.",
+          "Use a VPN on public networks.",
+          "Be vigilant about suspicious login pages.",
+          "Use unique and strong passwords."
+        ],
+        "tags": [
+          "cybercrime",
+          "evil_twin_wifi",
+          "wi_fi_pineapple",
+          "data_theft",
+          "credential_harvesting",
+          "physical_security",
+          "airports",
+          "in_flight"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185205/cyber-crime/australian-man-jailed-for-7-years-over-airport-and-in-flight-wi-fi-attacks.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Emerging Android threat ‘Albiriox’ enables full On‑Device Fraud",
+        "description": "'Albiriox' is a new Android malware sold as Malware-as-a-Service (MaaS) on Russian-speaking cybercrime forums. It offers advanced On-Device Fraud (ODF) capabilities, VNC-based screen manipulation, and real-time interaction with infected devices, targeting over 400 financial apps (banking, fintech, crypto).",
+        "threat_actor": "Albiriox (Maas)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1407: Accessibility Features",
+            "T1573: Encrypted Channel",
+            "T1059: Command and Scripting Interpreter",
+            "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+            "T1566.004: Phishing: Smishing"
+          ]
+        },
+        "mitre_ttps": [
+          "T1407: Accessibility Features",
+          "T1573: Encrypted Channel",
+          "T1059: Command and Scripting Interpreter",
+          "T1552.001: Unsecured Credentials: Credential in Configuration Files",
+          "T1566.004: Phishing: Smishing"
+        ],
+        "analyse": "Emergence of a sophisticated mobile threat focused on direct on-device fraud, capable of bypassing authentication and detection mechanisms. The MaaS model facilitates its widespread adoption among cybercriminals, posing a significant risk to the mobile financial sector.",
+        "recommandations": [
+          "Use robust mobile security solutions.",
+          "Be vigilant against suspicious SMS messages.",
+          "Only download applications from official sources.",
+          "Monitor banking and financial activities."
+        ],
+        "tags": [
+          "malware",
+          "android_malware",
+          "maas",
+          "albiriox",
+          "on_device_fraud",
+          "vnc",
+          "mobile_banking",
+          "fintech",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185194/malware/emerging-android-threat-albiriox-enables-full-on%e2%80%91device-fraud.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Law enforcement shuts down Cryptomixer in major crypto crime takedown",
+        "description": "Europol and German/Swiss authorities dismantled Cryptomixer, a cryptocurrency mixing service used to launder over EUR 1.3 billion in Bitcoin. The operation resulted in the seizure of servers and EUR 25 million worth of Bitcoin. Ransomware groups like Zeppelin and LockBit used this service.",
+        "threat_actor": "Zeppelin, SunCrypt, Mamba, Dharma, LockBit (users of the service)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "cryptomixer.io"
+          ],
+          "MITRE_ATT&CK": [
+            "T1071.001: Application Layer Protocol: Web Protocols",
+            "T1567: Exfiltration Over Web Service",
+            "T1498: External Remote Services",
+            "T1041: Exfiltration Over C2 Channel"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1567: Exfiltration Over Web Service",
+          "T1498: External Remote Services",
+          "T1041: Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Major law enforcement success against cybercriminal money laundering, disrupting financial infrastructures for ransomware groups and darknet markets. Emphasizes international collaboration to target the cybercrime ecosystem.",
+        "recommandations": [
+          "Enhance traceability of crypto transactions.",
+          "Collaborate with authorities to report suspicious activities."
+        ],
+        "tags": [
+          "cybercrime",
+          "money_laundering",
+          "cryptomixer",
+          "bitcoin",
+          "europol",
+          "law_enforcement",
+          "ransomware_groups"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html",
+          "https://databreaches.net/2025/12/01/europol-and-partners-shut-down-cryptomixer/?pk_campaign=feed&pk_kwd=europol-and-partners-shut-down-cryptomixer"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "U.S. CISA adds an OpenPLC ScadaBR flaw to its Known Exploited Vulnerabilities catalog",
+        "description": "CISA added the OpenPLC ScadaBR flaw (CVE-2021-26829, XSS, CVSS 5.4) to its KEV catalog. The pro-Russian hacktivist group TwoNet used it to attack a Forescout ICS/OT honeypot in September 2025, defacing the HMI login page and disabling logs/alarms after gaining access with default credentials.",
+        "threat_actor": "TwoNet",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-26829"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190: Exploit Public-Facing Application",
+            "T0806: XSS (Cross Site Scripting)",
+            "T0862: Improper Input Validation",
+            "T0813: Default Credentials"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190: Exploit Public-Facing Application",
+          "T0806: XSS (Cross Site Scripting)",
+          "T0862: Improper Input Validation",
+            "T0813: Default Credentials"
+        ],
+        "analyse": "Demonstrates the exploitation of even low-CVSS vulnerabilities by hacktivist groups to target industrial systems. Highlights the importance of patch management, changing default credentials, and monitoring ICS/OT systems, even for older vulnerabilities.",
+        "recommandations": [
+          "Update systems and apply CISA KEV patches.",
+          "Change default credentials.",
+          "Actively monitor ICS/OT systems for suspicious activities."
+        ],
+        "tags": [
+          "vulnerability",
+          "exploitation",
+          "cisa_kev",
+          "openplc_scadabr",
+          "ics_ot",
+          "hacktivism",
+          "twonet",
+          "xss",
+          "default_credentials"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185185/security/u-s-cisa-adds-an-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-02"
+      },
+      {
+        "title": "Airbus Nears Completion of A320 Retrofit as Regulators Monitor Largest Emergency Recall in Company History",
+        "description": "Airbus is in the final phase of an unprecedented global recall of 6,000 A320 aircraft due to a software vulnerability linked to exposure to intense solar flares, which could compromise flight-control functions data. The incident led to global operational disruptions and mandated software/hardware modifications.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61884",
+            "CVE-2025-20333",
+            "CVE-2024-42509"
+          ],
+          "MITRE_ATT&CK": [
+            "T0848: Data Corruption",
+            "T0801: Firmware Compromise",
+            "T0885: Software Supply Chain Compromise"
+          ]
+        },
+        "mitre_ttps": [
+          "T0848: Data Corruption",
+          "T0801: Firmware Compromise",
+          "T0885: Software Supply Chain Compromise"
+        ],
+        "analyse": "Critical incident impacting global aviation security, revealing the vulnerability of embedded systems to extreme environmental factors (solar flares) and highlighting the importance of software and hardware resilience in critical infrastructure. Implies a supply chain review for software updates in high-criticality contexts.",
+        "recommandations": [
+          "Implement robust vulnerability management procedures for critical systems.",
+          "Conduct regular security audits and resilience testing to environmental factors.",
+          "Strengthen software supply chain security."
+        ],
+        "tags": [
+          "aviation_security",
+          "software_vulnerability",
+          "airbus_a320",
+          "critical_infrastructure",
+          "supply_chain",
+          "solar_radiation",
+          "flight_controls"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/airbus-a320-software-recall-retrofit/"
+        ],
+        "date": "2025-12-02"
+      }
+    ]
+  }
+}
