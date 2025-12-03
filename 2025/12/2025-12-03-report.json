@@ -1,20 +1,21 @@
 {
   "FR": {
     "Analyse transversale": {
-      "analyse": "L'analyse transversale des articles révèle une intensification et une diversification des menaces cyber, marquée par des tendances clés. Le modèle \"Cybercrime-as-a-Service\" (CaaS) est en pleine expansion, rendant les outils d'attaque sophistiqués accessibles même aux acteurs peu qualifiés, allant des kits de phishing hybrides (Salty2FA & Tycoon2FA) aux rançongiciels (Nova RaaS, Qilin, Everest). L'intelligence artificielle (IA) est de plus en plus exploitée par les attaquants, comme en témoigne son utilisation par le groupe Famous Chollima pour l'ingénierie sociale et les deepfakes, ou par le réseau CopyCop pour la désinformation à grande échelle. Parallèlement, le risque lié à la chaîne d'approvisionnement logicielle est souligné par des incidents comme l'attaque Shai-Hulud sur les packages NPM. De multiples vulnérabilités critiques sont découvertes et exploitées activement, notamment dans les systèmes Android, les infrastructures OT (Longwatch, Zenitel), les applications web (WordPress, Django) et les logiciels d'entreprise (Mirion Medical). Ces failles incluent des exécutions de code à distance (RCE), des élévations de privilèges et des contournements d'authentification. Les violations de données à grande échelle restent courantes, affectant des millions d'utilisateurs et d'étudiants (Coupang, Illuminate Education), souvent en raison de lacunes dans les contrôles d'accès et de pratiques de sécurité insuffisantes. Enfin, le cyberespace est un théâtre de plus en plus important pour les opérations géopolitiques, avec des acteurs étatiques comme la Corée du Nord et l'Iran (MuddyWater) menant des campagnes d'espionnage et de financement illicite, et la Russie utilisant la désinformation ciblée, ainsi que des incidents comme le spoofing GPS sur les aéroports indiens, soulignant la dimension stratégique des cybermenaces. En conclusion, l'état général des menaces est caractérisé par une professionnalisation croissante du cybercrime, une militarisation continue du cyberespace par les États, et une surface d'attaque élargie due à la complexité des systèmes et à l'intégration de nouvelles technologies comme l'IA, exigeant une vigilance et une résilience accrues.",
+      "analyse": "La veille cyber révèle une intensification des menaces et une sophistication accrue des modes opératoires des attaquants. On observe une prédominance des attaques visant les chaînes d'approvisionnement logicielles (supply chain attacks) comme en témoigne l'incident Shai-Hulud ciblant le registre NPM, exposant des milliers de secrets de développeurs. L'intelligence artificielle continue d'être une arme à double tranchant : elle est exploitée par les acteurs malveillants pour créer du contenu de désinformation à grande échelle (réseau CopyCop) et pour faciliter les campagnes de social engineering (groupe Lazarus/Famous Chollima), tout en représentant un champ d'innovation important pour l'infrastructure cloud. Les vulnérabilités critiques sont légion, avec une forte concentration sur les exécutions de code à distance (RCE) et les failles d'authentification/privilèges dans des produits largement répandus (WordPress, Android, VMware, Zenitel, Django, Chrome), soulignant l'importance d'une gestion des patchs réactive. Le 'cybercrime as a service' (CaaS) abaisse la barrière à l'entrée, rendant les outils sophistiqués accessibles même aux attaquants moins expérimentés, ce qui complexifie d'autant plus le paysage des menaces. Les violations de données restent fréquentes, affectant des millions de clients dans divers secteurs (e-commerce, éducation, notification d'urgence), souvent suite à des défaillances de sécurité fondamentales ou l'exploitation de failles d'accès. Enfin, les régulations gouvernementales (Inde sur les apps de messagerie) tentent de contenir la fraude, mais la lutte contre le blanchiment d'argent et les opérations d'influence étrangères demeure un défi majeur. La convergence entre la criminalité financière, l'espionnage étatique et les cyberattaques souligne la nature interconnectée et persistante des menaces actuelles.",
       "date": "2025-12-03"
     },
     "Synthèse des acteurs malveillants": [
       {
         "nom": "Salty2FA & Tycoon2FA Hybrid",
         "secteur": "Entreprises",
-        "modop": "Kits de phishing hybrides intégrant des traits de Salty2FA et Tycoon2FA, utilisant potentiellement l'IA pour des campagnes plus sophistiquées. Cible les informations d'identification et contourne l'authentification à deux facteurs.",
+        "modop": "Kits de phishing hybrides, combinant des traits de Salty2FA et Tycoon2FA, rendant l'attribution plus complexe et ciblant les mécanismes d'authentification à deux facteurs.",
         "tags": [
           "actor",
           "threat_actor",
           "phishing",
-          "hybrid_phishing_kit",
-          "ai_in_cybercrime"
+          "two-factor_authentication_bypass",
+          "salty2fa",
+          "tycoon2fa"
         ],
         "sources": [
           "/cybersecurity-blog/salty2fa-tycoon2fa-hybrid-phishing-2025/"
@@ -22,36 +23,19 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "Shai-Hulud",
-        "secteur": "Développement logiciel, Supply Chain",
-        "modop": "Attaques sur la chaîne d'approvisionnement NPM (Node Package Manager), infection de centaines de packages, vol de jetons d'accès et autres secrets (environ 400 000), publication de données volées sur GitHub. Utilise un payload auto-propageant et potentiellement destructeur.",
+        "nom": "Famous Chollima (WageMole / Lazarus Group)",
+        "secteur": "Entreprises occidentales (technologie, Fortune 500)",
+        "modop": "Opération de social engineering sophistiquée pour louer des identités d'ingénieurs qualifiés, utilisation d'IA (deepfakes, LLM) pour les entretiens et les candidatures, dans le but d'infiltrer des entreprises à des fins d'espionnage et de génération de revenus pour le régime nord-coréen.",
         "tags": [
           "actor",
           "threat_actor",
-          "supply_chain_attack",
-          "npm_malware",
-          "credential_theft",
-          "self_propagating"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "nom": "Famous Chollima (sous-groupe de Lazarus Group)",
-        "secteur": "Informatique, Technologie, Gouvernement (Cible indirecte)",
-        "modop": "Campagnes d'ingénierie sociale ciblant des ingénieurs pour louer leurs identités, utiliser des deepfakes et l'IA pour obtenir des postes dans des entreprises occidentales. Objectifs d'espionnage et de collecte de fonds pour le régime nord-coréen.",
-        "tags": [
-          "actor",
-          "threat_actor",
-          "apt",
-          "north_korea",
           "state_sponsored",
+          "north_korea",
           "social_engineering",
-          "ai_use",
+          "espionage",
+          "ai_abuse",
           "identity_theft",
-          "espionage"
+          "lazarus_group"
         ],
         "sources": [
           "https://www.bleepingcomputer.com/news/security/north-korea-lures-engineers-to-rent-identities-in-fake-it-worker-scheme/"
@@ -59,18 +43,41 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "MuddyWater (aka SeedWorm, TEMP.Zagros, Mango Sandstorm, TA450, Static Kitten)",
-        "secteur": "Ingénierie, Gouvernement local, Fabrication, Technologie, Transport, Services publics, Universités, Télécommunications, Défense, Pétrole et gaz",
-        "modop": "Déploiement du nouveau backdoor MuddyViper via un loader Fooder (déguisé en jeu Snake), vol d'informations système, identifiants, données de navigateur. Utilisation d'outils CE-Notes, LP-Notes stealers et tunnels inversés go-socks5. Campagnes discrètes par spearphishing, ciblant Israël et l'Égypte.",
+        "nom": "CopyCop Network",
+        "secteur": "Audiences mondiales (Amérique du Nord, Europe, Arménie, Moldavie, Afrique)",
+        "modop": "Réseau d'influence russe utilisant plus de 300 faux sites d'information et médias synthétiques générés par IA (LLM auto-hébergés) pour diffuser de la désinformation, éroder le soutien à l'Ukraine et exacerber la fragmentation politique.",
         "tags": [
           "actor",
           "threat_actor",
+          "state_sponsored",
+          "russia",
+          "disinformation",
+          "influence_operation",
+          "synthetic_media",
+          "ai_abuse",
+          "geopolitical_warfare",
+          "cognitive_warfare"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "nom": "MuddyWater (SeedWorm, TEMP.Zagros, Mango Sandstorm, TA450, Static Kitten)",
+        "secteur": "Organisations israéliennes, cible égyptienne",
+        "modop": "Campagnes ciblées déployant le nouveau backdoor MuddyViper, utilisant un loader Fooder et des outils personnalisés pour l'évasion des défenses et la persistance. Lié à l'Iran.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "iran",
           "apt",
-          "iran_linked",
-          "spearphishing",
+          "muddywater",
           "backdoor",
-          "credential_theft",
-          "data_exfiltration"
+          "malware",
+          "espionage",
+          "israel"
         ],
         "sources": [
           "https://securityaffairs.com/185244/apt/muddywater-strikes-israel-with-advanced-muddyviper-malware.html"
@@ -78,232 +85,161 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "CopyCop",
-        "secteur": "Politique, Médias, Gouvernement",
-        "modop": "Réseau d'influence utilisant plus de 300 faux sites web d'actualités et médias clonés, générant du contenu avec des LLM auto-hébergés pour la désinformation à grande échelle. Vise à éroder le soutien à l'Ukraine et à exacerber la fragmentation politique en Occident. Diffusion via Telegram, YouTube.",
+        "nom": "ToddyCat APT",
+        "secteur": "Entreprises (e-mail)",
+        "modop": "Attaques ciblant les e-mails d'entreprise, utilisant de nouvelles versions de TomBerBil, TCSectorCopy et XstReader, ainsi que des méthodes pour voler les jetons d'accès Outlook.",
         "tags": [
           "actor",
           "threat_actor",
-          "russia_linked",
-          "influence_operation",
-          "disinformation",
-          "ai_generated_content",
-          "synthetic_media",
-          "geopolitics"
+          "apt",
+          "espionage",
+          "email_compromise",
+          "malware",
+          "outlook_credential_theft",
+          "toddycat"
         ],
         "sources": [
-          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/",
+          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
         ],
         "date": "2025-12-03"
       },
       {
-        "nom": "Nova RaaS",
-        "secteur": "Indéfini (cible des entreprises)",
-        "modop": "Opérations de rançongiciel en tant que service (RaaS).",
+        "nom": "BlueNoroff APT",
+        "secteur": "Non spécifié (campagnes GhostCall et GhostHire)",
+        "modop": "Campagnes complexes utilisant plusieurs chaînes de malwares ciblant macOS, incluant des suites de vol de données, de faux clients Zoom et Microsoft Teams, et des images améliorées par ChatGPT.",
         "tags": [
           "actor",
           "threat_actor",
-          "ransomware",
-          "raas"
+          "apt",
+          "mac_os",
+          "malware",
+          "infostealer",
+          "social_engineering",
+          "ai_abuse",
+          "ghostcall",
+          "ghosthire",
+          "bluenoroff"
         ],
         "sources": [
-          "https://databreaches.net/2025/12/02/update-on-dos-ops-report-on-nova-raas/?pk_campaign=feed&pk_kwd=update-on-dos-ops-report-on-nova-raas"
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/",
+          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
         ],
         "date": "2025-12-03"
       },
       {
-        "nom": "Everest ransomware",
-        "secteur": "Technologie grand public",
-        "modop": "Opération de rançongiciel, revendiquant une violation de données.",
+        "nom": "Everest Ransomware",
+        "secteur": "Électronique grand public (ASUS)",
+        "modop": "Allégations de violation de données et de ransomware contre le géant de la technologie ASUS. Mode opératoire non détaillé mais typique du ransomware (chiffrement de données, exfiltration).",
         "tags": [
           "actor",
           "threat_actor",
           "ransomware",
-          "data_breach"
+          "data_breach",
+          "everest_ransomware",
+          "asus"
         ],
         "sources": [
           "https://mastodon.social/@David_Hollingworth/115653576378269638"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "nom": "Qilin ransomware",
-        "secteur": "Logistique",
-        "modop": "Opération de rançongiciel, revendiquant une violation de données et des perturbations opérationnelles.",
-        "tags": [
-          "actor",
-          "threat_actor",
-          "ransomware",
-          "data_breach"
-        ],
-        "sources": [
-          "https://mastodon.social/@David_Hollingworth/115652629134715927"
         ],
         "date": "2025-12-03"
       }
     ],
     "Synthèse de l'actualité géopolitique": [
       {
-        "secteur": "Aviation",
-        "theme": "Sécurité nationale, Interférence",
-        "description": "Des signaux de brouillage GPS ont été détectés dans plusieurs grands aéroports indiens (Delhi, Mumbai, Bengaluru) le mois dernier, affectant les procédures d'atterrissage basées sur le GPS. Le gouvernement indien a confirmé les incidents et l'organisation de surveillance sans fil (WMO) a été déployée pour identifier la source, soulevant des préoccupations concernant la sécurité aérienne et les interférences externes.",
+        "secteur": "Information, Cybersécurité, Politique",
+        "theme": "Guerre cognitive et économique",
+        "description": "Analyse de la 'défaite française' dans l'affaire Gemplus, vue comme un cas d'école de guerre économique et cognitive. L'article souligne la perte d'une technologie stratégique (carte à puce) au profit d'intérêts étrangers et l'incapacité de l'État français à protéger ses actifs industriels, en lien avec des accusations d'ingérence américaine.",
         "tags": [
           "geopolitique",
           "geopolitic",
-          "inde",
-          "gps_spoofing",
-          "aviation",
-          "securite_nationale",
-          "interference"
-        ],
-        "sources": [
-          "https://databreaches.net/2025/12/02/cyber-attack-on-indian-airports-govt-explains-the-scary-threat-that-disrupted-400-flights-last-month/?pk_campaign=feed&pk_kwd=cyber-attack-on-indian-airports-govt-explains-the-scary-threat-that-disrupted-400-flights-last-month"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Gouvernement, Technologie",
-        "theme": "Espionnage, Financement illicite, Ingénierie sociale",
-        "description": "Le groupe nord-coréen Famous Chollima (sous-groupe du Lazarus Group) cible des ingénieurs pour louer leurs identités, utilisant l'IA et les deepfakes pour infiltrer des entreprises occidentales. L'objectif est l'espionnage et la génération de revenus pour le régime nord-coréen, faisant peser tous les risques sur les ingénieurs compromis.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "coree_du_nord",
-          "espionnage",
-          "ingenierie_sociale",
-          "ai",
-          "deepfake",
-          "financement_illicite"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/north-korea-lures-engineers-to-rent-identities-in-fake-it-worker-scheme/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Médias, Politique, Gouvernement",
-        "theme": "Guerre de l'information, Désinformation, Influence étrangère",
-        "description": "Le réseau CopyCop, lié à la Russie, a déployé plus de 300 faux sites web d'actualités utilisant des modèles de langage (LLM) auto-hébergés pour générer et réécrire du contenu à grande échelle. L'opération vise à éroder le soutien à l'Ukraine et à approfondir la fragmentation politique dans les pays occidentaux, amplifiant les narratifs via les médias sociaux et menaçant l'intégrité de la chaîne d'approvisionnement de l'information mondiale.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "russie",
-          "guerre_information",
-          "desinformation",
-          "ia",
-          "influence_etrangere",
-          "ukraine",
-          "politique"
-        ],
-        "sources": [
-          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Défense, Politique étrangère",
-        "theme": "Conflit, Politique internationale, Sécurité européenne",
-        "description": "Un plan de paix proposé pour l'Ukraine est analysé comme potentiellement dangereux pour la sécurité de l'Europe et sa pertinence mondiale. L'article critique l'acquiescement européen aux positions américaines et avertit d'une possible résurgence de l'agression russe et d'une perte d'influence géopolitique pour l'Europe, soulignant la fragilité de la défense européenne.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "ukraine",
-          "russie",
-          "etats_unis",
-          "europe",
-          "conflit",
-          "securite_internationale"
-        ],
-        "sources": [
-          "https://www.rusi.org/explore-our-research/publications/commentary/trump-peace-plan-ukraine-will-consign-europe-peril-and-contempt"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Industrie, Gouvernement",
-        "theme": "Guerre économique, Guerre cognitive, Protection des technologies stratégiques",
-        "description": "L'affaire Gemplus est présentée comme une défaite française \"exemplaire\" en termes de guerre économique et cognitive, où une technologie stratégique (carte à puces) a été perdue au profit d'intérêts américains. L'article dénonce les défaillances des décideurs français dans la protection d'un actif industriel vital, avec des implications sur la souveraineté technologique et le rôle de la France dans l'économie mondiale.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "france",
-          "etats_unis",
           "guerre_economique",
           "guerre_cognitive",
-          "technologie_strategique",
-          "souverainete"
-        ],
-        "sources": [
-          "https://www.epge.fr/gemplus-une-defeaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive/?utm_source=rss&utm_medium=rss&utm_campaign=gemplus-une-defeaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Politique étrangère",
-        "theme": "Relations internationales, Diplomatie, Géopolitique asiatique",
-        "description": "Analyse des enjeux de la visite officielle du Président français Emmanuel Macron en Chine, du 3 au 5 décembre. L'article explore les implications de cette rencontre dans le contexte des relations bilatérales et de la géopolitique asiatique.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
+          "souverainete_technologique",
           "france",
-          "chine",
-          "diplomatie",
-          "relations_internationales",
-          "asie"
+          "etats_unis",
+          "gemplus",
+          "renseignement_economique"
         ],
         "sources": [
-          "https://www.iris-france.org/macron-en-chine-les-enjeux-dune-visite-les-mardis-de-liris/"
+          "https://www.epge.fr/gemplus-une-defaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive/?utm_source=rss&utm_medium=rss&utm_campaign=gemplus-une-defaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Défense, Politique étrangère",
-        "theme": "Relations internationales, Conflit, Défense nationale",
-        "description": "Regard historique et perspectives d'un archipel stratégique, explorant la singularité de Taïwan et son absence d'influence sur l'évolution politique du continent. L'article aborde le risque d'escalade et analyse l'aide financière accordée par les États-Unis à Taïwan dans le contexte des tensions géopolitiques régionales.",
+        "secteur": "Gouvernement, Télécommunications, Lutte contre la fraude",
+        "theme": "Régulation des applications de messagerie",
+        "description": "Le gouvernement indien mandate les applications de messagerie (WhatsApp, Telegram) de fonctionner uniquement avec des cartes SIM actives liées aux numéros de téléphone des utilisateurs et d'exiger une réauthentification toutes les six heures pour les sessions web. Cette mesure vise à enrayer la fraude cybernétique, le phishing et l'usurpation d'identité, en particulier ceux provenant de l'étranger, en liant chaque compte à une SIM vérifiée par KYC.",
         "tags": [
           "geopolitique",
           "geopolitic",
-          "taiwan",
-          "chine",
-          "etats_unis",
-          "conflit",
-          "defense",
-          "relations_internationales"
+          "regulation",
+          "telecommunications",
+          "inde",
+          "lutte_contre_fraude",
+          "sim_binding",
+          "kyc",
+          "cybercrime"
         ],
         "sources": [
-          "https://www.iris-france.org/taiwan-regard-historique-et-perspectives-dun-archipel-strategique/"
+          "https://securityaffairs.com/185265/laws-and-regulations/india-mandates-sim-linked-messaging-apps-to-fight-rising-fraud.html",
+          "https://securityonline.info/india-mandates-sim-binding-whatsapp-and-telegram-users-must-re-verify-every-6-hours/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Cybersécurité, Gouvernement, Industrie",
+        "theme": "Souveraineté cybernétique européenne",
+        "description": "L'article interroge sur la position de l'Europe dans le secteur de la cybersécurité, suggérant un complexe d'infériorité face aux États-Unis malgré des compétences compétitives. Il explore les raisons pour lesquelles les entreprises européennes sont dépassées par les géants américains, mettant en lumière les enjeux de souveraineté et de stratégie industrielle.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "souverainete_cyber",
+          "europe",
+          "etats_unis",
+          "industrie_cyber",
+          "competitivite"
+        ],
+        "sources": [
+          "https://www.france24.com/fr/%C3%A9missions/aux-avant-postes/20251202-cybers%C3%A9curit%C3%A9-l-europe-se-prive-t-elle-de-ses-propres-forces"
         ],
         "date": "2025-12-03"
       }
     ],
     "Synthèse des violations de données": [
       {
-        "secteur": "Collectibles, Commerce électronique",
-        "victime": "Beckett Collectibles",
-        "description": "Violation de données affectant 1 041 238 comptes, révélant des informations sur les utilisateurs.",
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Une violation de données de cinq mois a exposé les informations personnelles de près de 34 millions de clients sud-coréens. Les données compromises incluent noms, e-mails, numéros de téléphone, adresses de livraison et historiques de commandes. Aucune donnée sensible comme les informations de paiement ou d'identification n'a été affectée.",
         "tags": [
           "violation",
           "breach",
-          "beckett_collectibles",
-          "commerce_electronique",
-          "donnees_personnelles"
+          "e-commerce",
+          "coupang",
+          "south_korea",
+          "donnees_personnelles",
+          "exfiltration"
         ],
         "sources": [
-          "https://mastodon.social/@RedPacketSecurity/115653399016938797"
+          "https://securityaffairs.com/185232/data-breach/koreas-amazon-coupang-discloses-a-data-breach-impacting-34m-customers.html",
+          "https://mastodon.maobui.com/@vietnamnet_bot/115654629410687384",
+          "https://mastodon.social/@infomaxkorea/115654341570549731"
         ],
         "date": "2025-12-03"
       },
       {
         "secteur": "Éducation",
         "victime": "Illuminate Education",
-        "description": "Règlement de la FTC suite à un incident en 2021 qui a exposé les informations de 10 millions d'étudiants. Les défaillances de sécurité comprenaient le manque de contrôles d'accès, une surveillance et une correction des vulnérabilités faibles, et le stockage en texte clair.",
+        "description": "La FTC propose un accord avec Illuminate Education suite à un incident en 2021 qui a exposé les informations de 10 millions d'étudiants. L'entreprise est accusée de défaillances de sécurité multiples, y compris un manque de contrôles d'accès, une mauvaise détection/réponse, un stockage en texte clair et une négligence des alertes de vulnérabilités. L'accord exige la suppression des données inutiles et l'amélioration de la sécurité.",
         "tags": [
           "violation",
           "breach",
           "education",
           "illuminate_education",
           "donnees_etudiants",
-          "negligence_securite"
+          "mauvaise_securite",
+          "ftc",
+          "crentials_compromise"
         ],
         "sources": [
           "https://www.bleepingcomputer.com/news/security/ftc-settlement-requires-illuminate-to-delete-unnecessary-student-data/"
@@ -311,32 +247,95 @@
         "date": "2025-12-03"
       },
       {
-        "secteur": "Technologie grand public",
-        "victime": "ASUS",
-        "description": "Le groupe de rançongiciel Everest a revendiqué une violation de données affectant le géant de la technologie grand public ASUS.",
+        "secteur": "Développement logiciel, Supply Chain",
+        "victime": "Utilisateurs du registre NPM",
+        "description": "La deuxième attaque Shai-Hulud a exposé environ 400 000 secrets bruts après avoir infecté des centaines de packages dans le registre NPM et publié les données volées dans 30 000 dépôts GitHub. Plus de 60% des jetons NPM divulgués étaient encore valides.",
         "tags": [
           "violation",
           "breach",
-          "asus",
-          "technologie_grand_public",
-          "ransomware",
-          "everest"
+          "supply_chain",
+          "developpement_logiciel",
+          "npm",
+          "github",
+          "secrets",
+          "shai_hulud",
+          "malware",
+          "credential_theft"
         ],
         "sources": [
-          "https://mastodon.social/@David_Hollingworth/115653576378269638"
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Développement logiciel",
-        "victime": "CodeStepByStep",
-        "description": "Violation de données affectant 103 077 comptes, révélant des informations sur les utilisateurs.",
+        "secteur": "Vidéo surveillance, Résidentiel, Commercial",
+        "victime": "Propriétaires de caméras IP en Corée",
+        "description": "Quatre individus ont été arrêtés en Corée du Sud pour avoir piraté plus de 120 000 caméras IP (domiciles et installations commerciales) et vendu les enregistrements intimes volés sur un site adulte étranger. Des actions sont également menées contre les spectateurs et opérateurs du site.",
         "tags": [
           "violation",
           "breach",
+          "videosurveillance",
+          "cameras_ip",
+          "coree_du_sud",
+          "donnees_intimes",
+          "piratage",
+          "voyeurisme"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/korea-arrests-suspects-selling-intimate-videos-from-hacked-ip-cameras/",
+          "https://databreaches.net/2025/12/02/kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Services d'alerte d'urgence, Gouvernement local",
+        "victime": "Résidents du comté de Monroe (utilisateurs CodeRED)",
+        "description": "Incident de cybersécurité national impactant le réseau de notification de masse OnSolve CodeRED, exposant les noms, adresses, e-mails, numéros de téléphone et mots de passe des utilisateurs. OnSolve a mis fin au service CodeRED et migre vers une nouvelle plateforme. Les données ajoutées après le 31 mars 2025 ont été perdues.",
+        "tags": [
+          "violation",
+          "breach",
+          "services_urgence",
+          "onsolve_codered",
+          "monroe_county",
+          "donnees_residents",
+          "mots_de_passe",
+          "fuite_donnees"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/monroe-county-cyberattack-codered-data-breach/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Analyse de données, Développement",
+        "victime": "Clients de Mixpanel (données de développeurs)",
+        "description": "Mixpanel a subi une violation de données affectant certaines informations de développeurs, bien que les données personnelles sensibles soient restées en sécurité. L'incident met en évidence les risques liés à la centralisation des données de comportement des utilisateurs dans les plateformes d'analyse.",
+        "tags": [
+          "violation",
+          "breach",
+          "mixpanel",
+          "donnees_developpeurs",
+          "openai",
+          "plateforme_analytics",
+          "fuite_donnees"
+        ],
+        "sources": [
+          "https://mstdn.social/@techi_/115654522512659443",
+          "https://chaos.social/@kubikpixel/115654362831016045"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Éducation en ligne",
+        "victime": "CodeStepByStep",
+        "description": "103 077 comptes utilisateurs de la plateforme CodeStepByStep ont été compromis lors d'une violation de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "education_ligne",
           "codestepbystep",
-          "developpement_logiciel",
-          "donnees_personnelles"
+          "comptes_utilisateurs",
+          "fuite_donnees"
         ],
         "sources": [
           "https://mastodon.social/@RedPacketSecurity/115653399086353669"
@@ -344,271 +343,210 @@
         "date": "2025-12-03"
       },
       {
-        "secteur": "Commerce électronique",
-        "victime": "Coupang",
-        "description": "Le géant sud-coréen du commerce électronique Coupang a révélé une violation de données de cinq mois, exposant les informations personnelles de près de 34 millions de clients sud-coréens. Les données exposées incluaient noms, e-mails, numéros de téléphone, adresses de livraison et historiques de commandes.",
+        "secteur": "Collection et Commerce",
+        "victime": "Beckett Collectibles",
+        "description": "1 041 238 comptes utilisateurs de Beckett Collectibles ont été compromis lors d'une violation de données.",
         "tags": [
           "violation",
           "breach",
-          "commerce_electronique",
-          "coupang",
-          "coree_du_sud",
-          "donnees_clients",
-          "informations_personnelles"
+          "e-commerce",
+          "collection",
+          "beckett_collectibles",
+          "comptes_utilisateurs",
+          "fuite_donnees"
         ],
         "sources": [
-          "https://securityaffairs.com/185232/data-breach/koreas-amazon-coupang-discloses-a-data-breach-impacting-34m-customers.html"
+          "https://mastodon.social/@RedPacketSecurity/115653399016938797"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Télécommunications",
-        "victime": "KT Corp.",
-        "description": "KT Corp. étend son service de remplacement gratuit d'USIM suite à des incidents récents de micro-paiement non autorisés et de violations de données, affectant les abonnés y compris les utilisateurs de MVNO.",
+        "secteur": "Électronique grand public, Technologie",
+        "victime": "ASUS",
+        "description": "Le groupe de ransomware Everest revendique une violation de données contre le géant de la technologie ASUS. Les détails de la compromission et les données affectées ne sont pas encore rendus publics mais pourraient l'être par les attaquants.",
         "tags": [
           "violation",
           "breach",
-          "telecommunications",
-          "kt_corp",
-          "usim",
-          "micropaiement",
-          "donnees_clients"
-        ],
-        "sources": [
-          "https://mastodon.social/@infomaxkorea/115653358531741192"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Logistique",
-        "victime": "B-Dynamic Logistics",
-        "description": "B-Dynamic Logistics enquête activement sur les revendications du rançongiciel Qilin, qui pourraient avoir un impact significatif sur de nombreux clients étant donné la nature de l'entreprise en tant que fournisseur de logistique tiers.",
-        "tags": [
-          "violation",
-          "breach",
-          "logistique",
-          "b_dynamic_logistics",
+          "asus",
+          "electronique_grand_public",
           "ransomware",
-          "qilin"
+          "exfiltration",
+          "donnees_clients",
+          "everest_ransomware"
         ],
         "sources": [
-          "https://mastodon.social/@David_Hollingworth/115652629134715927"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Sécurité, Résidentiel, Commercial",
-        "victime": "Propriétaires de caméras IP",
-        "description": "Quatre individus arrêtés en Corée du Sud pour avoir piraté plus de 120 000 caméras IP (résidentielles et commerciales) et vendu les enregistrements vidéo volés à un site adulte étranger. Les suspects ont été très prolifiques, et des actions sont prises contre les spectateurs et les opérateurs du site.",
-        "tags": [
-          "violation",
-          "breach",
-          "coree_du_sud",
-          "camera_ip",
-          "vie_privee",
-          "exploitation_sexuelle",
-          "donnees_videos"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/korea-arrests-suspects-selling-intimate-videos-from-hacked-ip-cameras/",
-          "https://databreaches.net/2025/12/02/kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage/?pk_campaign=feed&pk_kwd=kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Développement logiciel, Technologie",
-        "victime": "Utilisateurs de packages NPM",
-        "description": "La deuxième attaque Shai-Hulud a exposé environ 400 000 secrets bruts après avoir infecté des centaines de packages dans le registre NPM et publié les données volées dans 30 000 dépôts GitHub. Plus de 60% des jetons NPM divulgués étaient encore valides.",
-        "tags": [
-          "violation",
-          "breach",
-          "npm",
-          "chaine_approvisionnement",
-          "secrets_developpeurs",
-          "github",
-          "malware",
-          "shai_hulud"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
+          "https://mastodon.social/@David_Hollingworth/115653576378269638"
         ],
         "date": "2025-12-03"
       }
     ],
     "Synthèse des vulnérabilités": [
       {
-        "cve_id": "CVE-2025-13542",
-        "cvss": 9.8,
-        "product": "DesignThemes LMS (plugin WordPress)",
-        "description": "Vulnérabilité d'escalade de privilèges non authentifiée due à la fonction 'dtlms_register_user_front_end' qui ne restreint pas les rôles d'utilisateur lors de l'enregistrement, permettant à des attaquants non authentifiés d'obtenir un accès administrateur.",
+        "cve_id": "CVE-2025-13486",
+        "cvss": "9.8",
+        "product": "WordPress plugin Advanced Custom Fields: Extended",
+        "description": "Exécution de code à distance (RCE) non authentifiée via la fonction prepare_form(), permettant d'injecter du code arbitraire et de prendre le contrôle du site. Affecte les versions 0.9.0.5 à 0.9.1.1.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "wordpress",
-          "plugin",
-          "escalade_privileges",
-          "non_authentifie",
-          "acces_administrateur",
-          "dtlms_register_user_front_end"
-        ],
-        "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-13542",
-          "https://securityonline.info/critical-elementor-plugin-flaw-cve-2025-8489-cvss-9-8-under-active-exploitation-allows-unauthenticated-admin-takeover/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-8489",
-        "cvss": 9.8,
-        "product": "King Addons for Elementor (plugin WordPress)",
-        "description": "Vulnérabilité critique d'escalade de privilèges non authentifiée permettant à des attaquants de spécifier leur rôle lors de l'enregistrement et d'obtenir un accès administrateur au site. Activement exploitée dans la nature.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "wordpress",
-          "plugin",
-          "elementor",
-          "escalade_privileges",
-          "non_authentifie",
-          "admin_takeover",
-          "exploitation_active"
-        ],
-        "sources": [
-          "https://securityonline.info/critical-elementor-plugin-flaw-cve-2025-8489-cvss-9-8-under-active-exploitation-allows-unauthenticated-admin-takeover/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-13658",
-        "cvss": 9.3,
-        "product": "Industrial Video & Control Longwatch devices",
-        "description": "Vulnérabilité d'exécution de code à distance (RCE) via des requêtes HTTP GET non authentifiées sur un endpoint exposé, due à l'absence de signature de code et de contrôles d'exécution. L'exploitation permet des privilèges de niveau SYSTEM.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "ot",
-          "surveillance_video",
           "rce",
-          "execution_code_distance",
-          "non_authentifie",
-          "privileges_system"
+          "wordpress",
+          "plugin",
+          "authentification",
+          "injection_code"
         ],
         "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-13658",
-          "https://securityonline.info/cisa-warns-critical-longwatch-rce-flaw-cve-2025-13658-cvss-9-8-allows-unauthenticated-system-takeover-of-ot-surveillance/"
+          "https://cvefeed.io/vuln/detail/CVE-2025-13486",
+          "https://securityonline.info/critical-acf-extended-flaw-cve-2025-13486-cvss-9-8-allows-unauthenticated-rce-on-100k-wordpress-sites/"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13510",
-        "cvss": 9.1,
-        "product": "Iskra iHUB et iHUB Lite",
-        "description": "Vulnérabilité critique due à un contrôle d'authentification manquant sur l'interface de gestion web, permettant à des utilisateurs non authentifiés d'accéder et de modifier les paramètres critiques de l'appareil.",
+        "cve_id": "CVE-2025-64130",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Exécution de code à distance (RCE) non authentifiée dans les interphones Zenitel TCIV-3+ (versions antérieures à 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "iskra_ihub",
-          "smart_metering",
-          "authentification_manquante",
-          "contournement_authentification",
-          "critique"
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "non_authentifie"
         ],
         "sources": [
-          "https://securityonline.info/cisa-warns-critical-iskra-ihub-flaw-cve-2025-13510-allows-unauthenticated-smart-metering-takeover/"
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-48572",
-        "cvss": 8.8,
-        "product": "Google Android Frameworks Base",
-        "description": "Vulnérabilité d'escalade de privilèges ('high-severity') dans le package de base des frameworks Android, permettant aux applications malveillantes de lancer des activités non autorisées en arrière-plan sans privilèges d'exécution supplémentaires. Activement exploitée.",
+        "cve_id": "CVE-2025-64127",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Exécution de code à distance (RCE) non authentifiée dans les interphones Zenitel TCIV-3+ (versions antérieures à 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "android",
-          "framework",
-          "escalade_privileges",
-          "zero_day",
-          "exploitation_active"
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "non_authentifie"
         ],
         "sources": [
-          "https://thecyberthrone.in/2025/12/03/android-framework-zero-days-hit-cisa-kev/"
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64126",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Exécution de code à distance (RCE) non authentifiée dans les interphones Zenitel TCIV-3+ (versions antérieures à 9.3.3.0).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "non_authentifie"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64129",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Exécution de code à distance (RCE) non authentifiée dans les interphones Zenitel TCIV-3+ (versions antérieures à 9.3.3.0).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "non_authentifie"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-13630",
-        "cvss": 8.8,
-        "product": "Google Chrome (Moteur JavaScript V8)",
-        "description": "Vulnérabilité de Type Confusion ('high-severity') dans le moteur JavaScript V8, permettant l'exécution de code arbitraire à distance en incitant l'utilisateur à visiter un site web spécialement conçu.",
+        "cvss": "9.8",
+        "product": "Google Chrome (Moteur V8 JavaScript)",
+        "description": "Vulnérabilité de Type Confusion dans le moteur V8 JavaScript, permettant à un attaquant distant d'exécuter du code arbitraire dans le sandbox du rendu en incitant l'utilisateur à visiter un site web malveillant.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "google_chrome",
-          "v8",
-          "type_confusion",
           "rce",
-          "execution_code_distance"
+          "google_chrome",
+          "v8_javascript",
+          "type_confusion",
+          "zero_day"
         ],
         "sources": [
-          "https://cybersecuritynews.com/chrome-143-released/",
-          "https://securityonline.info/chrome-143-stable-fixes-13-flaws-high-severity-v8-type-confusion-earns-11000-bounty/"
+          "https://cybersecuritynews.com/chrome-143-released/"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-13372",
-        "cvss": 8.8,
-        "product": "Django (framework web Python)",
-        "description": "Vulnérabilité d'injection SQL ('high-severity') dans FilteredRelation pour PostgreSQL, en utilisant des alias de colonne. Permet aux attaquants de compromettre l'intégrité de la base de données.",
+        "cvss": "9.0",
+        "product": "Django (framework web)",
+        "description": "Vulnérabilité d'injection SQL à haute gravité affectant les projets utilisant PostgreSQL, en raison de la façon dont la classe FilteredRelation gère les alias de colonne, permettant l'injection de code SQL malveillant.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "django",
           "sql_injection",
-          "postgresql",
-          "framework_web",
-          "integrite_donnees"
+          "django",
+          "web_framework",
+          "postgresql"
         ],
         "sources": [
-          "https://securityonline.info/django-flaw-cve-2025-13372-allows-sql-injection-in-postgresql-filteredrelation/"
+          "https://cybersecuritynews.com/multiple-django-vulnerabilities/"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-61940",
-        "cvss": 8.7,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 et versions antérieures",
-        "description": "Vulnérabilité d'utilisation d'authentification côté client, où le logiciel client restreint l'accès par mot de passe, mais la connexion à la base de données SQL Server sous-jacente utilise un compte utilisateur commun avec un accès complet, contournant ainsi les restrictions d'accès.",
+        "cve_id": "CVE-2025-12744",
+        "cvss": "8.8",
+        "product": "ABRT (daemon)",
+        "description": "Vulnérabilité de command-injection dans le démon ABRT, menant à une élévation de privilèges locale. Un utilisateur local non privilégié peut injecter des métacaractères shell dans une commande 'docker inspect', exécutant des commandes contrôlées par l'attaquant et obtenant les privilèges root.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "logiciel_medical",
-          "mirion_medical",
-          "authentification_client",
-          "sql_server",
-          "contournement_authentification"
+          "privilege_escalation",
+          "command_injection",
+          "abrt",
+          "docker",
+          "local_exploit"
         ],
         "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-61940"
+          "https://cvefeed.io/vuln/detail/CVE-2025-12744"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-62575",
-        "cvss": 8.7,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 et versions antérieures",
-        "description": "Les comptes utilisateurs SQL 'nmdbuser' et d'autres comptes créés par défaut ont le rôle 'sysadmin' dans la base de données Microsoft SQL Server, permettant une exécution de code à distance via l'utilisation de certaines procédures stockées intégrées.",
+        "cvss": "8.7",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "Le logiciel NMIS/BioDose V22.02 et versions antérieures utilise un compte utilisateur SQL 'nmdbuser' et d'autres comptes créés par défaut avec le rôle sysadmin, pouvant entraîner l'exécution de code à distance via des procédures stockées.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "logiciel_medical",
-          "mirion_medical",
-          "sql_server",
-          "sysadmin_role",
           "rce",
-          "execution_code_distance"
+          "authentification",
+          "privilege_escalation",
+          "mirion_medical",
+          "nmis_biodose",
+          "sql_server"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-62575"
@@ -616,18 +554,38 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-64298",
-        "cvss": 8.6,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 et versions antérieures",
-        "description": "Installations utilisant SQL Server Express intégré : les chemins des répertoires d'installation sont exposés via un partage Windows avec des permissions de répertoire non sécurisées, permettant l'accès à la base de données SQL Server et aux fichiers de configuration contenant des données sensibles.",
+        "cve_id": "CVE-2025-61940",
+        "cvss": "8.7",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "Le logiciel NMIS/BioDose V22.02 et versions antérieures repose sur une authentification côté client et un compte SQL Server commun, permettant à la connexion à la base de données un accès non restreint malgré les contrôles applicatifs. Une option a été ajoutée pour l'authentification Windows.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "logiciel_medical",
+          "authentification",
+          "privilege_escalation",
           "mirion_medical",
+          "nmis_biodose",
+          "client_side_auth"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-61940"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64298",
+        "cvss": "8.6",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "Les installations de NMIS/BioDose V22.02 et versions antérieures utilisant SQL Server Express sont exposées via des partages Windows avec des chemins d'accès aux répertoires par défaut non sécurisés, permettant l'accès à la base de données et aux fichiers de configuration sensibles.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "acces_donnees",
+          "fuite_donnees",
+          "mirion_medical",
+          "nmis_biodose",
           "sql_server_express",
-          "permissions_fichiers",
-          "exposition_donnees_sensibles"
+          "permission_insecure"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-64298"
@@ -635,18 +593,58 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-64778",
-        "cvss": 8.4,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 et versions antérieures",
-        "description": "Contient des exécutables binaires avec des mots de passe codés en dur en texte clair, permettant un accès non autorisé à l'application et à la base de données.",
+        "cve_id": "CVE-2025-48633",
+        "cvss": "8.5",
+        "product": "Google Android Framework",
+        "description": "Vulnérabilité activement exploitée dans Google Android, permettant une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "logiciel_medical",
+          "android",
+          "elevation_privileges",
+          "confidentialite_donnees",
+          "deni_service",
+          "exploitee"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185252/security/u-s-cisa-adds-android-framework-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185226/security/googles-latest-android-security-update-fixes-two-actively-exploited-flaws/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-48572",
+        "cvss": "8.5",
+        "product": "Google Android Framework",
+        "description": "Vulnérabilité activement exploitée dans Google Android, permettant une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "elevation_privileges",
+          "confidentialite_donnees",
+          "deni_service",
+          "exploitee"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185252/security/u-s-cisa-adds-android-framework-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185226/security/googles-latest-android-security-update-fixes-two-actively-exploited-flaws/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64778",
+        "cvss": "8.4",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "Le logiciel NMIS/BioDose V22.02 et versions antérieures contient des binaires exécutables avec des mots de passe codés en dur en texte clair, permettant un accès non autorisé à l'application et à la base de données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hardcoded_credentials",
+          "authentification",
           "mirion_medical",
-          "mots_de_passe_codes_en_dur",
-          "acces_non_autorise",
-          "authentification"
+          "nmis_biodose",
+          "acces_non_autorise"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-64778"
@@ -654,17 +652,55 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13631",
-        "cvss": 8.0,
-        "product": "Google Updater",
-        "description": "Vulnérabilité d'implémentation inappropriée ('high-severity') dans le service Google Updater. Les vulnérabilités des mécanismes de mise à jour peuvent être exploitées pour établir une persistance ou élever des privilèges.",
+        "cve_id": "CVE-2025-64128",
+        "cvss": "8.0",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) non authentifiée dans les interphones Zenitel TCIV-3+ (versions antérieures à 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
+          "vulnerability",
+          "xss",
+          "zenitel",
+          "intercom",
+          "iot",
+          "non_authentifie"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64642",
+        "cvss": "8.0",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "Les chemins d'installation par défaut du logiciel NMIS/BioDose V22.02 et versions antérieures ont des permissions de fichiers non sécurisées, permettant aux utilisateurs des stations clientes de modifier les exécutables et bibliothèques du programme.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "permission_insecure",
+          "modification_programme",
+          "mirion_medical",
+          "nmis_biodose",
+          "elevation_privileges"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64642"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-13631",
+        "cvss": "8.0",
+        "product": "Google Updater service",
+        "description": "Faille d'implémentation inappropriée dans le service Google Updater, pouvant potentiellement être exploitée pour établir la persistance ou élever les privilèges sur un système hôte.",
+        "tags": [
+          "vulnerabilite",
           "vulnerability",
           "google_updater",
-          "implementation_inappropriee",
-          "escalade_privileges",
-          "persistance"
+          "privilege_escalation",
+          "persistance",
+          "inappropriate_implementation"
         ],
         "sources": [
           "https://cybersecuritynews.com/chrome-143-released/"
@@ -673,15 +709,14 @@
       },
       {
         "cve_id": "CVE-2025-13632",
-        "cvss": 8.0,
+        "cvss": "8.0",
         "product": "Google Chrome (DevTools)",
-        "description": "Problème de haute gravité dans les DevTools de Chrome, détails spécifiques restreints pour éviter l'exploitation généralisée.",
+        "description": "Problème à haute gravité dans les DevTools de Google Chrome.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "devtools",
-          "haute_gravite"
+          "devtools"
         ],
         "sources": [
           "https://cybersecuritynews.com/chrome-143-released/"
@@ -690,15 +725,14 @@
       },
       {
         "cve_id": "CVE-2025-13633",
-        "cvss": 8.0,
+        "cvss": "8.0",
         "product": "Google Chrome (Digital Credentials)",
-        "description": "Vulnérabilité de type 'Use After Free' (UAF) ('high-severity') dans Digital Credentials, pouvant entraîner une corruption de mémoire.",
+        "description": "Erreur de corruption de mémoire 'Use After Free' (UAF) dans le composant Digital Credentials de Google Chrome.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "digital_credentials",
-          "use_after_free",
+          "uaf",
           "corruption_memoire"
         ],
         "sources": [
@@ -707,32 +741,15 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13720",
-        "cvss": 8.0,
-        "product": "Google Chrome (Composant Loader)",
-        "description": "Vulnérabilité de 'bad cast' ('high-severity') dans le composant Loader de Chrome.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "google_chrome",
-          "loader",
-          "bad_cast"
-        ],
-        "sources": [
-          "https://cybersecuritynews.com/chrome-143-released/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
         "cve_id": "CVE-2025-13721",
-        "cvss": 8.0,
-        "product": "Google Chrome (Moteur JavaScript V8)",
-        "description": "Vulnérabilité de condition de concurrence ('medium-severity', mais incluse car Chrome V8 et RCE sont des points chauds) dans le moteur JavaScript V8.",
+        "cvss": "8.0",
+        "product": "Google Chrome (V8 JavaScript engine)",
+        "description": "Condition de course de gravité moyenne dans le moteur V8 JavaScript de Google Chrome.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "v8",
+          "v8_javascript",
           "race_condition"
         ],
         "sources": [
@@ -741,317 +758,257 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-48633",
-        "cvss": 8.0,
-        "product": "Google Android Framework Layer",
-        "description": "Vulnérabilité de divulgation d'informations ('high-severity') permettant aux applications Android de divulguer des informations sensibles (états d'application, identifiants utilisateur, données système) sans droits élevés. Activement exploitée.",
+        "cve_id": "CVE-2025-13720",
+        "cvss": "8.0",
+        "product": "Google Chrome (Loader component)",
+        "description": "Erreur de 'bad cast' dans le composant Loader de Google Chrome.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "android",
-          "framework",
-          "divulgation_informations",
-          "zero_day",
-          "exploitation_active"
+          "google_chrome",
+          "loader_component",
+          "bad_cast"
         ],
         "sources": [
-          "https://thecyberthrone.in/2025/12/03/android-framework-zero-days-hit-cisa-kev/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-64642",
-        "cvss": 8.0,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 et versions antérieures",
-        "description": "Les chemins des répertoires d'installation ont par défaut des permissions de fichiers non sécurisées, ce qui peut permettre aux utilisateurs des postes clients de modifier les exécutables et les bibliothèques du programme dans certains scénarios de déploiement.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "logiciel_medical",
-          "mirion_medical",
-          "permissions_fichiers",
-          "modification_executables",
-          "elevation_privileges"
-        ],
-        "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-64642"
+          "https://cybersecuritynews.com/chrome-143-released/"
         ],
         "date": "2025-12-03"
       }
     ],
     "Articles": [
       {
-        "title": "Kaspersky Security Bulletin 2025. Statistiques sur les cybermenaces",
-        "description": "Le bulletin de sécurité de Kaspersky 2025 fournit des statistiques sur diverses cybermenaces entre novembre 2024 et octobre 2025, basées sur les données anonymisées des utilisateurs de Kaspersky Security Network (KSN). Le rapport détaille les analyses des attaques APT ToddyCat (ciblant les e-mails d'entreprise), la nouvelle version de TomBerBil, les outils TCSectorCopy et XstReader, ainsi que les méthodes de vol de jetons d'accès Outlook. Il inclut également des recherches approfondies sur les campagnes GhostCall et GhostHire du groupe APT BlueNoroff, ciblant macOS avec des suites de stealers et de faux clients Zoom/Microsoft Teams, et l'utilisation d'images améliorées par ChatGPT.",
-        "threat_actor": "ToddyCat APT, BlueNoroff APT",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1566 (Phishing), T1588 (Obtain Capabilities), T1078 (Valid Accounts), T1003 (OS Credential Dumping), T1041 (Exfiltration Over C2 Channel)",
-        "analyse": "Le rapport de Kaspersky met en lumière l'évolution constante des tactiques des APT, notamment l'utilisation de l'ingénierie sociale sophistiquée et des outils personnalisés (TomBerBil, TCSectorCopy, XstReader). L'intégration de l'IA (ChatGPT) dans les campagnes de désinformation ou de leurres montre une tendance à la sophistication des attaques. La focalisation sur le vol de jetons d'accès et les clients macOS indique une diversification des cibles et des méthodes, ciblant des plateformes souvent perçues comme plus sécurisées. L'impact est mondial, avec un ciblage d'informations corporatives et de données d'utilisateurs via des clients de communication populaires. La persistance des menaces APT et leur adaptation continue aux environnements de sécurité exigent une défense multicouche.",
+        "title": "Cybercrime Goes SaaS: Renting Tools, Access, and Infrastructure",
+        "description": "Cet article analyse la transformation du cybercrime vers un modèle 'as-a-service' (CaaS). Les kits de phishing, les bots OTP Telegram, les logs d'infostealers et même les RATs sont désormais loués comme des outils SaaS. Cette économie de 'crime-as-a-service' abaisse les barrières à l'entrée, offrant un accès à des capacités avancées à des attaquants moins qualifiés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'émergence et la professionnalisation du 'Crime-as-a-Service' démocratisent les outils d'attaque, rendant le paysage des menaces plus accessible et fragmenté. Cela accroît la fréquence des incidents et rend la détection et l'attribution plus complexes, car des groupes moins structurés peuvent déployer des techniques sophistiquées.",
         "recommandations": [
-          "Mettre en œuvre une sécurité multicouche intégrant l'IA pour la détection des menaces sophistiquées.",
-          "Renforcer la sensibilisation des utilisateurs à l'ingénierie sociale et aux attaques de phishing, notamment celles utilisant l'IA.",
-          "Surveiller activement les tentatives de vol de jetons d'accès et les activités suspectes sur les systèmes macOS.",
-          "Déployer des solutions EDR/XDR pour détecter les outils personnalisés et les chaînes de malware complexes.",
-          "Maintenir les systèmes et logiciels à jour pour corriger les vulnérabilités exploitées par les APT."
+          "Mettre en œuvre une sécurité multicouche intégrant la détection des menaces connues et inconnues.",
+          "Renforcer la sensibilisation des utilisateurs aux techniques de phishing, en particulier celles exploitant les OTP ou les infostealers.",
+          "Surveiller les logs et les activités réseau pour identifier les signes d'outils CaaS utilisés dans les infrastructures de l'organisation."
         ],
         "tags": [
-          "kaspersky",
-          "cyberthreats",
-          "apt",
-          "malware",
+          "cybercrime",
+          "saas",
           "phishing",
-          "macos",
-          "ai",
-          "threat_intelligence"
+          "infostealer",
+          "rat",
+          "economie_souterraine",
+          "menace_emergente"
         ],
         "sources": [
-          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
+          "https://www.bleepingcomputer.com/news/security/cybercrime-goes-saas-renting-tools-access-and-infrastructure/"
         ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T10:10:20-05:00"
       },
       {
-        "title": "Comment une intrusion bruyante de rançongiciel a exposé une emprise d'espionnage à long terme",
-        "description": "Une organisation a été compromise par deux groupes cybercriminels distincts : une intrusion bruyante de rançongiciel et une emprise d'espionnage furtive. L'intrusion du rançongiciel a fortuitement attiré l'attention sur la menace d'espionnage, qui aurait pu passer inaperçue pendant des mois. Les deux groupes ont exploité des vulnérabilités connues dans Microsoft SharePoint Server (CVE-2025-53770) et les solutions Ivanti (CVE-2024-21887, CVE-2025-4427, CVE-2025-4428, CVE-2023-38035) pour l'accès initial. L'incident souligne l'importance de la visibilité des menaces persistantes et de la corrélation des événements de sécurité.",
-        "threat_actor": "Ransomware group (Non mentionné), Espionage group (Non mentionné)",
+        "title": "Exploits and vulnerabilities in Q3 2025",
+        "description": "Ce rapport de Kaspersky présente des données statistiques sur les vulnérabilités publiées et les exploits recherchés au troisième trimestre 2025, ainsi que des informations sur l'utilisation des frameworks C2. Il met en évidence une augmentation du nombre de vulnérabilités, l'exploitation continue de failles WinRAR et l'utilisation de zero-days par des groupes APT, ainsi que la prédominance de Metasploit, Sliver et Mythic parmi les frameworks C2.",
+        "threat_actor": "ToddyCat APT, BlueNoroff APT",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [
-            "CVE-2025-53770",
-            "CVE-2024-21887",
-            "CVE-2025-4427",
-            "CVE-2025-4428",
-            "CVE-2023-38035"
+          "DOMAIN": [
+            "get-versions[.]sh",
+            "cve[.]org"
           ],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "CVE": [
+            "CVE-2025-53771",
+            "CVE-2025-53770",
+            "CVE-2025-6218",
+            "CVE-2021-22555",
+            "CVE-2025-49704",
+            "CVE-2023-38831",
+            "CVE-2021-34527",
+            "CVE-2022-0847",
+            "CVE-2025-6128",
+            "CVE-2017-11882",
+            "CVE-2025-8088",
+            "CVE-2017-0199",
+            "CVE-2019-13272",
+            "CVE-2025-41244",
+            "CVE-2018-0802",
+            "CVE-2025-49706",
+            "CVE-2020-1472"
+          ]
         },
-        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1078 (Valid Accounts), T1071 (Application Layer Protocol), T1083 (File and Directory Discovery), T1070 (Indicator Removal on Host)",
-        "analyse": "L'incident met en évidence la complexité des environnements de menace où différentes motivations (lucrativité vs. espionnage) peuvent se chevaucher ou se manifester simultanément. La capacité d'un événement bruyant à révéler une menace plus discrète mais persistante est une leçon critique pour le DFIR. L'utilisation de vulnérabilités connues, même si elles sont patchées, souligne l'importance d'une gestion proactive des vulnérabilités et d'un cycle de patch rapide. Les systèmes comme SharePoint et Ivanti, étant souvent des points d'entrée cruciaux pour les entreprises, sont des cibles de choix, ce qui leur confère un impact stratégique élevé sur les secteurs visés.",
+        "mitre_ttps": "TA0001 (Initial Access), TA0004 (Privilege Escalation), TA0003 (Persistence), T1078 (Valid Accounts), T1059 (Command and Scripting Interpreter)",
+        "analyse": "Le rapport met en lumière une croissance constante des vulnérabilités, avec une exploitation récurrente de failles connues comme celles de WinRAR, et une utilisation rapide de zero-days par des APT. L'accent est mis sur l'accès initial et l'exécution de code, souvent via des failles dans les systèmes d'exploitation ou SharePoint. La diversité des frameworks C2 utilisés indique une capacité d'adaptation et de persistance des acteurs malveillants, ciblant de plus en plus les systèmes Linux.",
         "recommandations": [
-          "Appliquer rapidement les correctifs pour les vulnérabilités connues, en particulier celles des logiciels exposés à Internet (SharePoint, Ivanti).",
-          "Mettre en œuvre des solutions de détection et de réponse étendues (XDR) pour une visibilité holistique des menaces, y compris les intrusions silencieuses et persistantes.",
-          "Développer des plans de réponse aux incidents qui tiennent compte de scénarios de compromission par plusieurs acteurs ayant des motivations différentes.",
-          "Renforcer la surveillance des anomalies comportementales pour détecter les menaces furtives qui pourraient ne pas déclencher d'alertes traditionnelles.",
-          "Effectuer des audits de sécurité réguliers et des tests d'intrusion pour identifier et corriger les faiblesses exploitables."
+          "Appliquer rapidement les correctifs de sécurité pour les systèmes d'exploitation (Windows, Linux) et les applications tierces, en particulier pour les vulnérabilités connues et les zero-days.",
+          "Auditer régulièrement les systèmes pour détecter les vulnérabilités et les configurations erronées.",
+          "Mettre en œuvre des solutions de gestion des systèmes pour automatiser l'application des correctifs et la surveillance des endpoints.",
+          "Surveiller l'activité réseau et les logs pour détecter les signes d'exploitation de vulnérabilités et d'utilisation de frameworks C2."
+        ],
+        "tags": [
+          "vulnerabilite",
+          "exploits",
+          "apt",
+          "c2_frameworks",
+          "winrar",
+          "sharepoint",
+          "linux_security",
+          "zero_day",
+          "metasploit",
+          "sliver",
+          "mythic",
+          "initial_access",
+          "privilege_escalation",
+          "persistence"
+        ],
+        "sources": [
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/"
+        ],
+        "date": "2025-12-03T10:00:59+00:00"
+      },
+      {
+        "title": "Law enforcement shuts down Cryptomixer in major crypto crime takedown",
+        "description": "Europol a annoncé la saisie de 29 millions de dollars en Bitcoin et la fermeture de Cryptomixer, un service de mixage de cryptomonnaies utilisé pour blanchir les produits de cybercrimes. Depuis sa création en 2016, Cryptomixer a blanchi plus de 1,3 milliard d'euros en Bitcoin, facilitant des activités illégales à grande échelle.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "cryptomixer[.]io"
+          ]
+        },
+        "mitre_ttps": "TA0007 (Resource Development), T1583 (Acquire Infrastructure), T1486 (Data Encrypted for Impact), T1078 (Valid Accounts)",
+        "analyse": "Le démantèlement de Cryptomixer représente un coup significatif contre l'infrastructure financière du cybercrime, entravant la capacité des acteurs malveillants à blanchir leurs fonds. Cela illustre la coopération internationale des forces de l'ordre pour cibler les services facilitant le crime organisé et les cyberattaques, augmentant les risques pour les cybercriminels.",
+        "recommandations": [
+          "Les organisations doivent surveiller les transactions de cryptomonnaies et utiliser des outils d'analyse de blockchain pour identifier les flux suspects.",
+          "Renforcer la collaboration avec les forces de l'ordre pour signaler les activités illégales liées aux cryptomonnaies.",
+          "Éduquer les équipes de sécurité financière sur les techniques de blanchiment d'argent utilisant les mixeurs de cryptomonnaies."
+        ],
+        "tags": [
+          "cybercrime",
+          "cryptomonnaie",
+          "blanchiment_argent",
+          "europol",
+          "takedown",
+          "cryptomixer",
+          "bitcoin"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html"
+        ],
+        "date": "2025-12-02T00:27:47+00:00"
+      },
+      {
+        "title": "How a noisy ransomware intrusion exposed a long-term espionage foothold",
+        "description": "Cet article rapporte un scénario cauchemardesque où une organisation a été compromise par deux groupes d'attaquants distincts. Une intrusion bruyante par ransomware a fortuitement mis en lumière une menace d'espionnage beaucoup plus discrète, qui aurait pu passer inaperçue pendant des mois. Cela souligne comment les attaques multiples peuvent révéler des compromissions latentes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-4428",
+            "CVE-2025-4427",
+            "CVE-2024-21887",
+            "CVE-2025-53770",
+            "CVE-2023-38035"
+          ]
+        },
+        "mitre_ttps": "TA0001 (Initial Access), TA0003 (Persistence), TA0007 (Discovery), TA0011 (Command and Control), TA0010 (Exfiltration)",
+        "analyse": "Cet incident met en évidence l'importance d'une détection et d'une réponse continues, même face à des menaces apparemment uniques. La superposition d'attaques bruyantes (ransomware) et furtives (espionnage) crée un défi complexe pour les équipes de sécurité, mais peut aussi paradoxalement servir de révélateur pour des menaces plus profondes. Les organisations doivent être préparées à des scénarios de compromission multiples et persistantes.",
+        "recommandations": [
+          "Mettre en œuvre des capacités de détection et de réponse étendues (XDR/MDR) pour identifier les activités suspectes, qu'elles soient bruyantes ou furtives.",
+          "Effectuer des chasses aux menaces proactives pour découvrir les compromissions persistantes et non détectées.",
+          "Segmenter les réseaux pour limiter les mouvements latéraux des attaquants et contenir les incidents.",
+          "Évaluer la résilience face à des scénarios de compromissions multiples et élaborer des plans de réponse en conséquence."
         ],
         "tags": [
           "ransomware",
           "espionnage",
-          "intrusion",
-          "vulnerabilities",
-          "sharepoint",
-          "ivanti",
-          "dfir",
-          "threat_hunting"
+          "compromission_multiple",
+          "detection_menaces",
+          "reponse_incident",
+          "foothold"
         ],
         "sources": [
-          "https://databreaches.net/2025/12/02/how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold/?pk_campaign=feed&pk_kwd=how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold"
+          "https://databreaches.net/2025/12/02/how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold/"
         ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T14:42:38+00:00"
       },
       {
-        "title": "Salty2FA & Tycoon2FA Hybrid: Une nouvelle menace de phishing pour les entreprises et Cybercrime Goes SaaS: Louer des outils, l'accès et l'infrastructure",
-        "description": "Ces articles décrivent l'évolution du cybercrime vers un modèle 'as-a-Service' (CaaS), abaissant la barrière à l'entrée pour les attaquants peu qualifiés. Salty2FA et Tycoon2FA représentent des kits de phishing hybrides, brouillant les pistes d'attribution et ciblant les entreprises pour le vol de 2FA. Le phénomène CaaS s'étend à la location de kits de phishing (PhaaS), de bots OTP Telegram, de logs d'infostealers et même de RATs (comme Atroposia RAT), ainsi qu'à la vente d'accès initial par des courtiers. L'IA, comme SpamGPT ou MatrixPDF, est utilisée pour automatiser et sophistiquer les campagnes de phishing et la création de leurres.",
-        "threat_actor": "Salty2FA, Tycoon2FA, SpamGPT, MatrixPDF, Atroposia RAT, Courtiers d'accès initial (IABs)",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1566 (Phishing), T1566.002 (Spearphishing Link), T1078 (Valid Accounts), T1114 (Email Collection), T1133 (External Remote Services), T1189 (Drive-by Compromise), T1212 (Exploitation for Credential Access), T1550 (Use Alternate Authentication Material)",
-        "analyse": "La \"CaaS\" démocratise l'accès aux outils et techniques sophistiqués, augmentant le volume et la complexité des attaques. Les entreprises sont confrontées à des campagnes de phishing plus convaincantes et adaptatives, exploitant l'authentification multifacteur par l'ingénierie sociale (bots OTP). L'impact géographique et stratégique est mondial, avec une menace accrue pour la sécurité des identifiants et l'accès initial aux réseaux. La capacité des attaquants à louer des ressources à faible coût rend les attaques persistantes et difficiles à attribuer, transformant le cybercrime en un véritable écosystème commercial.",
-        "recommandations": [
-          "Mettre en œuvre une authentification multifacteur (MFA) résistante au phishing (par exemple, FIDO2) et sensibiliser les utilisateurs aux techniques d'ingénierie sociale (y compris les appels OTP spoofés).",
-          "Déployer des plateformes de protection des e-mails (EPP) avec des capacités avancées de détection du phishing, y compris l'analyse comportementale et l'IA.",
-          "Surveiller les logs d'accès pour détecter les tentatives d'authentification suspectes et l'utilisation d'identifiants volés.",
-          "Utiliser des solutions de protection des navigateurs pour bloquer l'accès aux sites de phishing connus et inconnus.",
-          "Mettre en place des politiques de moindre privilège et de rotation régulière des identifiants pour limiter l'impact d'une compromission."
-        ],
-        "tags": [
-          "cybercrime_as_a_service",
-          "caas",
-          "phishing",
-          "2fa_bypass",
-          "threat_actors",
-          "ai_in_cybercrime",
-          "infostealer",
-          "rat"
-        ],
-        "sources": [
-          "/cybersecurity-blog/salty2fa-tycoon2fa-hybrid-phishing-2025/",
-          "https://www.bleepingcomputer.com/news/security/cybercrime-goes-saas-renting-tools-access-and-infrastructure/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "title": "L'exploit yETH à 9M$ : Comment 16 Wei sont devenus des jetons infinis",
-        "description": "Un exploit critique a ciblé le pool yETH de Yearn Finance sur Ethereum le 30 novembre 2025, entraînant le vol d'environ 9 millions de dollars. L'attaquant a exploité une faille de gestion comptable interne du protocole, mintant un nombre astronomique de jetons (235 septillions yETH) en déposant seulement 16 wei. La vulnérabilité provenait d'un défaut de réinitialisation des valeurs 'packed_vbs[]' mises en cache après que le pool ait été complètement vidé, ce qui a permis de mint des jetons basés sur des soldes fantômes accumulés plutôt que sur le dépôt réel.",
+        "title": "The $9M yETH Exploit: How 16 Wei Became Infinite Tokens",
+        "description": "Cet article de Check Point Research détaille un exploit critique sur le pool yETH de Yearn Finance sur Ethereum, entraînant le vol d'environ 9 millions de dollars. L'attaquant a exploité une faille de gestion des comptes internes, réussissant à créer un nombre astronomique de tokens yETH (235 septillions) avec un dépôt minimal de 16 wei, une des attaques les plus 'capital-efficientes' de l'histoire de la DeFi.",
         "threat_actor": "Non applicable",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "DOMAIN": [
+            "self[.]supply"
+          ]
         },
-        "mitre_ttps": "T1587.001 (Develop Malware - Cryptocurrency Miners), T1588.005 (Obtain Capabilities - Exploits)",
-        "analyse": "Cet incident est un cas d'école de la complexité de la sécurité dans les protocoles DeFi, où une petite erreur logique dans la gestion des états peut avoir des conséquences financières massives. L'exploit démontre l'importance d'une gestion explicite de toutes les transitions d'état, même après une vidange complète du pool. L'impact financier est considérable (9 millions de dollars), et l'impact stratégique est de saper la confiance dans les protocoles DeFi si ces vulnérabilités ne sont pas rigoureusement traitées.",
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cette attaque illustre les risques inhérents aux systèmes complexes de la finance décentralisée (DeFi), où une seule erreur de gestion d'état peut avoir des conséquences financières désastreuses. L'exploit a mis en évidence le danger des valeurs de cache non réinitialisées après un retrait complet de liquidités, permettant la génération de tokens 'fantômes'. Cela souligne la nécessité d'une ingénierie logicielle rigoureuse et d'audits de sécurité approfondis dans le secteur DeFi.",
         "recommandations": [
-          "Mettre en œuvre des audits de sécurité rigoureux pour les protocoles DeFi, avec une attention particulière à la gestion des états et aux réinitialisations après les opérations.",
-          "Déployer des systèmes de protection en temps réel qui comprennent la logique du protocole, au-delà de la simple détection basée sur les signatures.",
-          "Effectuer des tests complets, y compris des tests de stress et des simulations d'attaques sophistiquées, pour identifier les failles subtiles.",
-          "Adopter une approche de conception sécurisée par défaut, en supposant que si une erreur peut se produire, elle sera exploitée.",
-          "Encourager les programmes de bug bounty pour inciter les chercheurs à identifier les vulnérabilités avant les attaquants."
+          "Effectuer des audits de sécurité de code approfondis, en se concentrant sur les logiques de gestion d'état et les transitions critiques, en particulier pour les pools de liquidité et les mécanismes de minting de tokens.",
+          "Mettre en œuvre des tests de fuzzing et des vérifications formelles pour identifier les scénarios de coin de table et les conditions de race qui peuvent entraîner des comportements inattendus.",
+          "Déployer des protections d'exécution en temps réel qui comprennent la logique du protocole, au-delà de la détection basée sur les signatures."
         ],
         "tags": [
           "defi",
+          "blockchain",
           "ethereum",
           "exploit",
+          "yearn_finance",
+          "yeth_pool",
           "smart_contract",
-          "vulnerability",
-          "financial_loss",
-          "blockchain_security"
+          "vulnerabilite_logique",
+          "finance_decentralisee"
         ],
         "sources": [
           "https://research.checkpoint.com/2025/16-wei/"
         ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T13:42:36+00:00"
       },
       {
-        "title": "Le \"Playbook\" de défense des navigateurs: Arrêter les attaques qui commencent sur votre écran",
-        "description": "85% du travail quotidien s'effectue dans le navigateur, ce qui en fait une cible privilégiée pour les attaques. L'article de Unit 42 décrit que près de la moitié des incidents de réponse aux incidents en 2025 impliquaient des activités malveillantes lancées ou facilitées via les navigateurs des employés. Les tactiques courantes incluent le phishing, l'abus de redirections d'URL et les téléchargements de malwares. Les extensions de navigateur malveillantes sont un vecteur important. L'article souligne le manque de conscience des organisations concernant la surface d'attaque des navigateurs et propose des stratégies de sécurité pour renforcer la défense des navigateurs, y compris l'adoption de navigateurs sécurisés d'entreprise et l'extension du 'zero trust' au navigateur.",
-        "threat_actor": "Non mentionné",
+        "title": "The Browser Defense Playbook: Stopping the Attacks That Start on Your Screen",
+        "description": "Unit 42 de Palo Alto Networks détaille comment le navigateur est devenu une surface d'attaque majeure, avec 85% du travail quotidien s'y déroulant. L'article met en évidence les tactiques courantes (phishing, redirections d'URL abusives, téléchargements de malwares) et les risques liés aux extensions non sécurisées ou malveillantes, ainsi que l'usurpation de session. Il propose des contrôles de sécurité et des stratégies pour sécuriser les navigateurs d'entreprise.",
+        "threat_actor": "Non applicable",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "CVE": [
+            "CVE-2025-20362",
+            "CVE-2025-20333"
+          ]
         },
-        "mitre_ttps": "T1566 (Phishing), T1204.001 (User Execution - Malicious Link), T1204.002 (User Execution - Malicious File), T1189 (Drive-by Compromise), T1078 (Valid Accounts), T1550 (Use Alternate Authentication Material), T1547.001 (Boot or Logon Autostart Execution - Registry Run Keys / Startup Folder)",
-        "analyse": "Le navigateur est devenu une surface d'attaque critique et souvent sous-estimée. Les attaquants exploitent la confiance des utilisateurs dans les navigateurs et leurs extensions, ainsi que le manque de politiques de sécurité centralisées. L'impact est potentiellement généralisé, car la compromission du navigateur peut conduire au vol de sessions, à l'injection de scripts malveillants et à des téléchargements silencieux de malwares. Cela affecte tous les secteurs où les employés utilisent intensivement le navigateur pour le travail. L'évolution des tactiques rend la sensibilisation seule insuffisante, nécessitant des contrôles techniques robustes.",
+        "mitre_ttps": "TA0001 (Initial Access), T1566 (Phishing), T1204 (User Execution), T1189 (Drive-by Compromise), TA0008 (Lateral Movement), T1539 (Steal Web Session Cookie), T1059.007 (JavaScript/JScript)",
+        "analyse": "Avec la migration des applications vers le cloud et le navigateur, la sécurité de ce dernier est devenue critique. Les attaquants exploitent la confiance des utilisateurs dans les navigateurs et les extensions pour obtenir un accès initial, voler des sessions ou déployer des malwares. L'absence de politiques de sécurité centralisées pour les navigateurs et extensions constitue une lacune significative dans la défense de nombreuses organisations. Le risque est exacerbé par l'évolution constante des techniques d'attaque.",
         "recommandations": [
-          "Mettre en œuvre des navigateurs sécurisés d'entreprise avec des listes d'extensions autorisées strictes et des capacités de prévention des pertes de données (DLP) intégrées.",
-          "Appliquer les principes du 'zero trust' au navigateur, y compris l'authentification multifacteur (MFA) pour chaque application basée sur le navigateur et l'authentification renforcée pour les actions sensibles.",
-          "Mettre en place des outils de détection du comportement suspect (credential misuse, accès sensible depuis des appareils inconnus, malwares dans les fichiers téléchargés).",
-          "Utiliser le filtrage d'URL pour bloquer l'accès aux sites malveillants et compromis.",
-          "Éduquer les utilisateurs sur les dangers des extensions non sécurisées et les tactiques d'ingénierie sociale (y compris le 'drive-by download')."
+          "Mettre en œuvre une approche Zero Trust étendue au navigateur, incluant l'authentification multi-facteurs (MFA) pour chaque application web et le MFA renforcé pour les actions sensibles.",
+          "Établir un inventaire des extensions de navigateur autorisées et appliquer des listes blanches strictes.",
+          "Utiliser des navigateurs sécurisés de niveau entreprise qui intègrent des fonctions DLP, des permissions basées sur les rôles et une inspection du trafic en temps réel.",
+          "Former les utilisateurs aux menaces basées sur le navigateur, au-delà du simple 'ne pas cliquer sur des liens suspects', en insistant sur les attaques sans clic et le risque des extensions."
         ],
         "tags": [
-          "browser_security",
-          "defense_playbook",
+          "securite_navigateur",
+          "surface_attaque",
           "phishing",
           "malware",
-          "browser_extensions",
+          "extensions_navigateur",
           "zero_trust",
+          "usurpation_session",
           "dlp",
-          "incident_response"
+          "mfa"
         ],
         "sources": [
           "https://unit42.paloaltonetworks.com/browser-defense-playbook/"
         ],
-        "date": "2025-12-03"
-      },
-      {
-        "title": "Mise à jour du rapport de Dos-OP sur Nova RaaS",
-        "description": "Cette mise à jour fait suite aux plaintes et contestations du groupe Nova RaaS concernant un rapport initial de Dos-OP sur cbsecurity[.]net. L'article détaille les réponses de Dos-OP aux critiques de Nova, fournissant des preuves et des captures d'écran, y compris des réfutations concernant l'association de certaines adresses IP avec Nova. L'incident met en lumière la nature conflictuelle des rapports sur le cybercrime et les tentatives de désinformation des acteurs malveillants.",
-        "threat_actor": "Nova RaaS",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [
-            "cbsecurity.net"
-          ],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [
-            "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/"
-          ],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1587 (Develop Malware), T1071 (Application Layer Protocol)",
-        "analyse": "L'article illustre la difficulté de l'attribution et de la vérification des informations dans le domaine du cybercrime, où les acteurs peuvent activement tenter de discréditer les rapports d'analyse. La nature du rançongiciel en tant que service (RaaS) rend les opérations plus opaques et la traçabilité plus complexe. L'impact est principalement sur la crédibilité de l'information cyber et sur la capacité des entreprises et des autorités à identifier et à contrer efficacement les groupes de RaaS.",
-        "recommandations": [
-          "Mener des recherches approfondies et croiser les informations provenant de multiples sources lors de l'attribution d'activités cybercriminelles.",
-          "Documenter toutes les preuves (captures d'écran, IoCs, analyse technique) pour soutenir les rapports de menace.",
-          "Établir des relations de confiance avec des sources fiables dans la communauté de la cybersécurité.",
-          "Avertir les entreprises des méthodes de désinformation employées par les groupes de rançongiciels pour minimiser la réaction à la pression publique.",
-          "Renforcer les capacités d'analyse des menaces pour comprendre les motivations et les tactiques de contre-intelligence des acteurs malveillants."
-        ],
-        "tags": [
-          "ransomware",
-          "raas",
-          "threat_actor_report",
-          "attribution",
-          "disinformation",
-          "cybercrime"
-        ],
-        "sources": [
-          "https://databreaches.net/2025/12/02/update-on-dos-ops-report-on-nova-raas/?pk_campaign=feed&pk_kwd=update-on-dos-ops-report-on-nova-raas"
-        ],
-        "date": "2025-12-03"
+        "date": "2025-12-03T00:00:04+00:00"
       }
     ]
   },
   "EN": {
-    "Cross-cutting analysis": {
-      "analyse": "A cross-cutting analysis of the articles reveals an intensification and diversification of cyber threats, marked by key trends. The 'Cybercrime-as-a-Service' (CaaS) model is expanding rapidly, making sophisticated attack tools accessible even to low-skilled actors, ranging from hybrid phishing kits (Salty2FA & Tycoon2FA) to ransomware (Nova RaaS, Qilin, Everest). Artificial intelligence (AI) is increasingly exploited by attackers, as evidenced by its use by the Famous Chollima group for social engineering and deepfakes, or by the CopyCop network for large-scale disinformation. Simultaneously, the risk associated with the software supply chain is highlighted by incidents like the Shai-Hulud attack on NPM packages. Multiple critical vulnerabilities are discovered and actively exploited, notably in Android systems, OT infrastructures (Longwatch, Zenitel), web applications (WordPress, Django), and enterprise software (Mirion Medical). These flaws include remote code execution (RCE), privilege escalation, and authentication bypasses. Large-scale data breaches remain common, affecting millions of users and students (Coupang, Illuminate Education), often due to gaps in access controls and insufficient security practices. Finally, cyberspace is an increasingly important theater for geopolitical operations, with state actors like North Korea and Iran (MuddyWater) conducting espionage and illicit financing campaigns, and Russia using targeted disinformation, as well as incidents like GPS spoofing at Indian airports, underscoring the strategic dimension of cyber threats. In conclusion, the overall threat landscape is characterized by increasing professionalization of cybercrime, continuous militarization of cyberspace by states, and an expanded attack surface due to system complexity and the integration of new technologies like AI, requiring heightened vigilance and resilience.",
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape reveals an intensification of threats and increased sophistication in attacker's methods. We observe a predominance of software supply chain attacks, as evidenced by the Shai-Hulud incident targeting the NPM registry, exposing thousands of developer secrets. Artificial intelligence continues to be a double-edged sword: it is exploited by malicious actors for large-scale disinformation content (CopyCop network) and to facilitate social engineering campaigns (Lazarus Group/Famous Chollima), while also representing a significant innovation field for cloud infrastructure. Critical vulnerabilities are widespread, with a high concentration on Remote Code Execution (RCE) and authentication/privilege flaws in widely used products (WordPress, Android, VMware, Zenitel, Django, Chrome), highlighting the importance of proactive patch management. 'Cybercrime as a Service' (CaaS) lowers the barrier to entry, making sophisticated tools accessible even to less experienced attackers, further complicating the threat landscape. Data breaches remain frequent, affecting millions of customers across various sectors (e-commerce, education, emergency notification), often due to fundamental security failures or exploitation of access flaws. Finally, government regulations (India on messaging apps) attempt to curb fraud, but the fight against money laundering and foreign influence operations remains a major challenge. The convergence of financial crime, state-sponsored espionage, and cyberattacks underscores the interconnected and persistent nature of current threats.",
       "date": "2025-12-03"
     },
-    "Summary of malicious actors": [
+    "Synthèse des acteurs malveillants": [
       {
         "nom": "Salty2FA & Tycoon2FA Hybrid",
         "secteur": "Enterprises",
-        "modop": "Hybrid phishing kits integrating traits from Salty2FA and Tycoon2FA, potentially leveraging AI for more sophisticated campaigns. Targets credentials and bypasses two-factor authentication.",
+        "modop": "Hybrid phishing kits, combining traits from Salty2FA and Tycoon2FA, making attribution more complex and targeting two-factor authentication mechanisms.",
         "tags": [
           "actor",
           "threat_actor",
           "phishing",
-          "hybrid_phishing_kit",
-          "ai_in_cybercrime"
+          "two-factor_authentication_bypass",
+          "salty2fa",
+          "tycoon2fa"
         ],
         "sources": [
           "/cybersecurity-blog/salty2fa-tycoon2fa-hybrid-phishing-2025/"
@@ -1059,36 +1016,19 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "Shai-Hulud",
-        "secteur": "Software Development, Supply Chain",
-        "modop": "Attacks on the NPM (Node Package Manager) supply chain, infecting hundreds of packages, stealing access tokens and other secrets (approx. 400,000), publishing stolen data on GitHub. Uses a self-propagating and potentially destructive payload.",
+        "nom": "Famous Chollima (WageMole / Lazarus Group)",
+        "secteur": "Western companies (technology, Fortune 500)",
+        "modop": "Sophisticated social engineering operation to rent identities of skilled engineers, using AI (deepfakes, LLM) for interviews and applications, aiming to infiltrate companies for espionage and revenue generation for the North Korean regime.",
         "tags": [
           "actor",
           "threat_actor",
-          "supply_chain_attack",
-          "npm_malware",
-          "credential_theft",
-          "self_propagating"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "nom": "Famous Chollima (Lazarus Group subgroup)",
-        "secteur": "IT, Technology, Government (Indirect Target)",
-        "modop": "Social engineering campaigns targeting engineers to rent their identities, using AI and deepfakes to infiltrate Western companies. Objectives are espionage and illicit fundraising for the North Korean regime.",
-        "tags": [
-          "actor",
-          "threat_actor",
-          "apt",
-          "north_korea",
           "state_sponsored",
+          "north_korea",
           "social_engineering",
-          "ai_use",
+          "espionage",
+          "ai_abuse",
           "identity_theft",
-          "espionage"
+          "lazarus_group"
         ],
         "sources": [
           "https://www.bleepingcomputer.com/news/security/north-korea-lures-engineers-to-rent-identities-in-fake-it-worker-scheme/"
@@ -1096,18 +1036,41 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "MuddyWater (aka SeedWorm, TEMP.Zagros, Mango Sandstorm, TA450, Static Kitten)",
-        "secteur": "Engineering, Local Government, Manufacturing, Technology, Transportation, Utilities, Universities, Telecom, Defense, Oil and Natural Gas",
-        "modop": "Deployment of the new MuddyViper backdoor via a Fooder loader (disguised as a Snake game), stealing system info, credentials, browser data. Uses CE-Notes, LP-Notes stealers, and go-socks5 reverse tunnels. Low-profile spearphishing campaigns, targeting Israel and Egypt.",
+        "nom": "CopyCop Network",
+        "secteur": "Global audiences (North America, Europe, Armenia, Moldova, Africa)",
+        "modop": "Russian influence network using over 300 fake news websites and AI-generated synthetic media (self-hosted LLMs) to spread disinformation, erode support for Ukraine, and deepen political fragmentation.",
         "tags": [
           "actor",
           "threat_actor",
+          "state_sponsored",
+          "russia",
+          "disinformation",
+          "influence_operation",
+          "synthetic_media",
+          "ai_abuse",
+          "geopolitical_warfare",
+          "cognitive_warfare"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "nom": "MuddyWater (SeedWorm, TEMP.Zagros, Mango Sandstorm, TA450, Static Kitten)",
+        "secteur": "Israeli organizations, one confirmed Egyptian target",
+        "modop": "Targeted campaigns deploying the new MuddyViper backdoor, using a Fooder loader and custom tools for defense evasion and persistence. Linked to Iran.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "iran",
           "apt",
-          "iran_linked",
-          "spearphishing",
+          "muddywater",
           "backdoor",
-          "credential_theft",
-          "data_exfiltration"
+          "malware",
+          "espionage",
+          "israel"
         ],
         "sources": [
           "https://securityaffairs.com/185244/apt/muddywater-strikes-israel-with-advanced-muddyviper-malware.html"
@@ -1115,232 +1078,161 @@
         "date": "2025-12-03"
       },
       {
-        "nom": "CopyCop",
-        "secteur": "Politics, Media, Government",
-        "modop": "Influence network using over 300 inauthentic news websites and cloned media sites, generating content with self-hosted LLMs for large-scale disinformation. Aims to erode support for Ukraine and deepen political fragmentation in Western countries. Dissemination via Telegram, YouTube.",
+        "nom": "ToddyCat APT",
+        "secteur": "Corporate (email)",
+        "modop": "Attacks targeting corporate email, utilizing new versions of TomBerBil, TCSectorCopy, and XstReader tools, as well as methods to steal Outlook access tokens.",
         "tags": [
           "actor",
           "threat_actor",
-          "russia_linked",
-          "influence_operation",
-          "disinformation",
-          "ai_generated_content",
-          "synthetic_media",
-          "geopolitics"
+          "apt",
+          "espionage",
+          "email_compromise",
+          "malware",
+          "outlook_credential_theft",
+          "toddycat"
         ],
         "sources": [
-          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/",
+          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
         ],
         "date": "2025-12-03"
       },
       {
-        "nom": "Nova RaaS",
-        "secteur": "Undefined (targets businesses)",
-        "modop": "Ransomware-as-a-Service (RaaS) operations.",
+        "nom": "BlueNoroff APT",
+        "secteur": "Unspecified (GhostCall and GhostHire campaigns)",
+        "modop": "Complex campaigns using multiple malware chains targeting macOS, including a stealer suite, fake Zoom and Microsoft Teams clients, and ChatGPT-enhanced images.",
         "tags": [
           "actor",
           "threat_actor",
-          "ransomware",
-          "raas"
+          "apt",
+          "mac_os",
+          "malware",
+          "infostealer",
+          "social_engineering",
+          "ai_abuse",
+          "ghostcall",
+          "ghosthire",
+          "bluenoroff"
         ],
         "sources": [
-          "https://databreaches.net/2025/12/02/update-on-dos-ops-report-on-nova-raas/?pk_campaign=feed&pk_kwd=update-on-dos-ops-report-on-nova-raas"
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/",
+          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
         ],
         "date": "2025-12-03"
       },
       {
-        "nom": "Everest ransomware",
-        "secteur": "Consumer Technology",
-        "modop": "Ransomware operation, claiming a data breach.",
+        "nom": "Everest Ransomware",
+        "secteur": "Consumer electronics (ASUS)",
+        "modop": "Claims of data breach and ransomware attack against tech giant ASUS. Modus operandi not detailed but typical of ransomware (data encryption, exfiltration).",
         "tags": [
           "actor",
           "threat_actor",
           "ransomware",
-          "data_breach"
+          "data_breach",
+          "everest_ransomware",
+          "asus"
         ],
         "sources": [
           "https://mastodon.social/@David_Hollingworth/115653576378269638"
         ],
         "date": "2025-12-03"
-      },
-      {
-        "nom": "Qilin ransomware",
-        "secteur": "Logistics",
-        "modop": "Ransomware operation, claiming a data breach and operational disruption.",
-        "tags": [
-          "actor",
-          "threat_actor",
-          "ransomware",
-          "data_breach"
-        ],
-        "sources": [
-          "https://mastodon.social/@David_Hollingworth/115652629134715927"
-        ],
-        "date": "2025-12-03"
       }
     ],
-    "Summary of geopolitical news": [
+    "Synthèse de l'actualité géopolitique": [
       {
-        "secteur": "Aviation",
-        "theme": "National Security, Interference",
-        "description": "GPS spoofing signals were detected at several major Indian airports (Delhi, Mumbai, Bengaluru) last month, affecting GPS-based landing procedures. The Indian government confirmed the incidents, and the Wireless Monitoring Organisation (WMO) has been deployed to identify the source, raising concerns about aviation safety and external interference.",
+        "secteur": "Information, Cybersecurity, Politics",
+        "theme": "Cognitive and Economic Warfare",
+        "description": "Analysis of the 'French defeat' in the Gemplus affair, seen as a case study of economic and cognitive warfare. The article highlights the loss of a strategic technology (smart card) to foreign interests and the inability of the French state to protect its industrial assets, in connection with accusations of US interference.",
         "tags": [
           "geopolitique",
           "geopolitic",
-          "india",
-          "gps_spoofing",
-          "aviation",
-          "national_security",
-          "interference"
-        ],
-        "sources": [
-          "https://databreaches.net/2025/12/02/cyber-attack-on-indian-airports-govt-explains-the-scary-threat-that-disrupted-400-flights-last-month/?pk_campaign=feed&pk_kwd=cyber-attack-on-indian-airports-govt-explains-the-scary-threat-that-disrupted-400-flights-last-month"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Government, Technology",
-        "theme": "Espionage, Illicit Fundraising, Social Engineering",
-        "description": "North Korea's state-sponsored group Famous Chollima (a Lazarus Group subgroup) is targeting engineers to rent their identities, using AI and deepfakes to infiltrate Western companies. The objective is espionage and revenue generation for the North Korean regime, placing all risks on the compromised engineers.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "north_korea",
-          "espionage",
-          "social_engineering",
-          "ai",
-          "deepfake",
-          "illicit_fundraising"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/north-korea-lures-engineers-to-rent-identities-in-fake-it-worker-scheme/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Media, Politics, Government",
-        "theme": "Information Warfare, Disinformation, Foreign Influence",
-        "description": "Russia-linked CopyCop network deployed over 300 inauthentic news websites using self-hosted Large Language Models (LLMs) to generate and rewrite content at scale. The operation aims to erode support for Ukraine and deepen political fragmentation in Western countries, amplifying narratives via social media and threatening the integrity of the global information supply chain.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "russia",
-          "information_warfare",
-          "disinformation",
-          "ai",
-          "foreign_influence",
-          "ukraine",
-          "politics"
-        ],
-        "sources": [
-          "https://www.recordedfuture.com/blog/inside-the-copycop-playbook"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Defense, Foreign Policy",
-        "theme": "Conflict, International Politics, European Security",
-        "description": "A proposed peace plan for Ukraine is analyzed as potentially perilous for Europe's security and global standing. The article criticizes European appeasement of US positions and warns of potential future Russian aggression and a loss of geopolitical influence for Europe, highlighting the fragility of European defense.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "ukraine",
-          "russia",
-          "united_states",
-          "europe",
-          "conflict",
-          "international_security"
-        ],
-        "sources": [
-          "https://www.rusi.org/explore-our-research/publications/commentary/trump-peace-plan-ukraine-will-consign-europe-peril-and-contempt"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Industry, Government",
-        "theme": "Economic Warfare, Cognitive Warfare, Protection of Strategic Technologies",
-        "description": "The Gemplus case is presented as an 'exemplary' French defeat in terms of economic and cognitive warfare, where a strategic technology (smart cards) was lost to American interests. The article denounces failures of French decision-makers in protecting a vital industrial asset, with implications for technological sovereignty and France's role in the global economy.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
-          "france",
-          "united_states",
           "economic_warfare",
           "cognitive_warfare",
-          "strategic_technology",
-          "sovereignty"
-        ],
-        "sources": [
-          "https://www.epge.fr/gemplus-une-defeaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive/?utm_source=rss&utm_medium=rss&utm_campaign=gemplus-une-defeaite-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Foreign Policy",
-        "theme": "International Relations, Diplomacy, Asian Geopolitics",
-        "description": "Analysis of the stakes of French President Emmanuel Macron's official visit to China, from December 3 to 5. The article explores the implications of this meeting in the context of bilateral relations and Asian geopolitics.",
-        "tags": [
-          "geopolitique",
-          "geopolitic",
+          "technological_sovereignty",
           "france",
-          "china",
-          "diplomacy",
-          "international_relations",
-          "asia"
+          "united_states",
+          "gemplus",
+          "economic_intelligence"
         ],
         "sources": [
-          "https://www.iris-france.org/macron-en-chine-les-enjeux-dune-visite-les-mardis-de-liris/"
+          "https://www.epge.fr/gemplus-une-defeate-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive/?utm_source=rss&utm_medium=rss&utm_campaign=gemplus-une-defeate-francaise-exemplaire-en-termes-de-guerre-economique-mais-aussi-de-guerre-cognitive"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Defense, Foreign Policy",
-        "theme": "International Relations, Conflict, National Defense",
-        "description": "Historical perspective and outlook on a strategic archipelago, exploring Taiwan's uniqueness and its lack of influence on mainland China's political evolution. The article addresses the risk of escalation and analyzes US financial aid to Taiwan in the context of regional geopolitical tensions.",
+        "secteur": "Government, Telecommunications, Fraud Prevention",
+        "theme": "Messaging App Regulation",
+        "description": "The Indian government mandates messaging applications to operate only with active SIM cards linked to users' phone numbers and to require re-authentication every six hours for web sessions. This measure aims to curb cyber fraud, phishing, and identity theft, particularly from abroad, by linking each account to a KYC-verified SIM.",
         "tags": [
           "geopolitique",
           "geopolitic",
-          "taiwan",
-          "china",
-          "united_states",
-          "conflict",
-          "defense",
-          "international_relations"
+          "regulation",
+          "telecommunications",
+          "india",
+          "fraud_prevention",
+          "sim_binding",
+          "kyc",
+          "cybercrime"
         ],
         "sources": [
-          "https://www.iris-france.org/taiwan-regard-historique-et-perspectives-dun-archipel-strategique/"
+          "https://securityaffairs.com/185265/laws-and-regulations/india-mandates-sim-linked-messaging-apps-to-fight-rising-fraud.html",
+          "https://securityonline.info/india-mandates-sim-binding-whatsapp-and-telegram-users-must-re-verify-every-6-hours/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Cybersecurity, Government, Industry",
+        "theme": "European Cyber Sovereignty",
+        "description": "The article questions Europe's position in the cybersecurity sector, suggesting an inferiority complex towards the United States despite competitive capabilities. It explores why European companies are outperformed by American giants, highlighting sovereignty and industrial strategy issues.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyber_sovereignty",
+          "europe",
+          "united_states",
+          "cyber_industry",
+          "competitiveness"
+        ],
+        "sources": [
+          "https://www.france24.com/fr/%C3%A9missions/aux-avant-postes/20251202-cybers%C3%A9curit%C3%A9-l-europe-se-prive-t-elle-de-ses-propres-forces"
         ],
         "date": "2025-12-03"
       }
     ],
-    "Summary of data breaches": [
+    "Synthèse des violations de données": [
       {
-        "secteur": "Collectibles, E-commerce",
-        "victime": "Beckett Collectibles",
-        "description": "Data breach affecting 1,041,238 accounts, revealing user information.",
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "A five-month data breach exposed the personal information of nearly 34 million South Korean customers. Compromised data included names, emails, phone numbers, shipping addresses, and order histories. No sensitive data such as payment information or login credentials was affected.",
         "tags": [
           "violation",
           "breach",
-          "beckett_collectibles",
-          "e_commerce",
-          "personal_data"
+          "e-commerce",
+          "coupang",
+          "south_korea",
+          "personal_data",
+          "exfiltration"
         ],
         "sources": [
-          "https://mastodon.social/@RedPacketSecurity/115653399016938797"
+          "https://securityaffairs.com/185232/data-breach/koreas-amazon-coupang-discloses-a-data-breach-impacting-34m-customers.html",
+          "https://mastodon.maobui.com/@vietnamnet_bot/115654629410687384",
+          "https://mastodon.social/@infomaxkorea/115654341570549731"
         ],
         "date": "2025-12-03"
       },
       {
         "secteur": "Education",
         "victime": "Illuminate Education",
-        "description": "FTC settlement following a 2021 incident that exposed information of 10 million students. Security failures included lack of access controls, poor vulnerability monitoring and patching, and plain-text storage.",
+        "description": "The FTC proposes a settlement with Illuminate Education following a 2021 incident that exposed the information of 10 million students. The company is accused of multiple security failures, including lack of access controls, poor detection/response, plain-text storage, and neglect of vulnerability alerts. The agreement requires deleting unnecessary data and improving security.",
         "tags": [
           "violation",
           "breach",
           "education",
           "illuminate_education",
           "student_data",
-          "security_negligence"
+          "poor_security",
+          "ftc",
+          "credentials_compromise"
         ],
         "sources": [
           "https://www.bleepingcomputer.com/news/security/ftc-settlement-requires-illuminate-to-delete-unnecessary-student-data/"
@@ -1348,32 +1240,95 @@
         "date": "2025-12-03"
       },
       {
-        "secteur": "Consumer Technology",
-        "victime": "ASUS",
-        "description": "Everest ransomware group claimed a data breach affecting the consumer tech giant ASUS.",
+        "secteur": "Software Development, Supply Chain",
+        "victime": "NPM registry users",
+        "description": "The second Shai-Hulud attack exposed approximately 400,000 raw secrets after infecting hundreds of packages in the NPM registry and publishing stolen data in 30,000 GitHub repositories. Over 60% of the leaked NPM tokens were still valid.",
         "tags": [
           "violation",
           "breach",
-          "asus",
-          "consumer_technology",
-          "ransomware",
-          "everest"
+          "supply_chain",
+          "software_development",
+          "npm",
+          "github",
+          "secrets",
+          "shai_hulud",
+          "malware",
+          "credential_theft"
         ],
         "sources": [
-          "https://mastodon.social/@David_Hollingworth/115653576378269638"
+          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Software Development",
-        "victime": "CodeStepByStep",
-        "description": "Data breach affecting 103,077 accounts, revealing user information.",
+        "secteur": "Video surveillance, Residential, Commercial",
+        "victime": "IP camera owners in Korea",
+        "description": "Four individuals were arrested in South Korea for hacking over 120,000 IP cameras (homes and commercial facilities) and selling stolen intimate footage on a foreign adult site. Actions are also being taken against viewers and site operators.",
         "tags": [
           "violation",
           "breach",
+          "video_surveillance",
+          "ip_cameras",
+          "south_korea",
+          "intimate_data",
+          "hacking",
+          "voyeurism"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/korea-arrests-suspects-selling-intimate-videos-from-hacked-ip-cameras/",
+          "https://databreaches.net/2025/12/02/kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Emergency alert services, Local government",
+        "victime": "Monroe County residents (CodeRED users)",
+        "description": "A nationwide cybersecurity incident impacting the OnSolve CodeRED mass notification network exposed users' names, addresses, emails, phone numbers, and passwords. OnSolve discontinued the CodeRED service and is migrating to a new platform. Data added after March 31, 2025, was lost.",
+        "tags": [
+          "violation",
+          "breach",
+          "emergency_services",
+          "onsolve_codered",
+          "monroe_county",
+          "resident_data",
+          "passwords",
+          "data_leak"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/monroe-county-cyberattack-codered-data-breach/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Data Analytics, Development",
+        "victime": "Mixpanel clients (developer data)",
+        "description": "Mixpanel suffered a data breach affecting some developer information, although sensitive personal data remained safe. The incident highlights the risks associated with centralizing user behavior data in analytics platforms.",
+        "tags": [
+          "violation",
+          "breach",
+          "mixpanel",
+          "developer_data",
+          "openai",
+          "analytics_platform",
+          "data_leak"
+        ],
+        "sources": [
+          "https://mstdn.social/@techi_/115654522512659443",
+          "https://chaos.social/@kubikpixel/115654362831016045"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "secteur": "Online Education",
+        "victime": "CodeStepByStep",
+        "description": "103,077 user accounts from the CodeStepByStep platform were compromised in a data breach.",
+        "tags": [
+          "violation",
+          "breach",
+          "online_education",
           "codestepbystep",
-          "software_development",
-          "personal_data"
+          "user_accounts",
+          "data_leak"
         ],
         "sources": [
           "https://mastodon.social/@RedPacketSecurity/115653399086353669"
@@ -1381,271 +1336,210 @@
         "date": "2025-12-03"
       },
       {
-        "secteur": "E-commerce",
-        "victime": "Coupang",
-        "description": "South Korean e-commerce giant Coupang disclosed a five-month data breach, exposing personal information of nearly 34 million South Korean customers. Exposed data included names, emails, phone numbers, shipping addresses, and order histories.",
+        "secteur": "Collectibles and Commerce",
+        "victime": "Beckett Collectibles",
+        "description": "1,041,238 user accounts from Beckett Collectibles were compromised in a data breach.",
         "tags": [
           "violation",
           "breach",
-          "e_commerce",
-          "coupang",
-          "south_korea",
-          "customer_data",
-          "personal_information"
+          "e-commerce",
+          "collectibles",
+          "beckett_collectibles",
+          "user_accounts",
+          "data_leak"
         ],
         "sources": [
-          "https://securityaffairs.com/185232/data-breach/koreas-amazon-coupang-discloses-a-data-breach-impacting-34m-customers.html"
+          "https://mastodon.social/@RedPacketSecurity/115653399016938797"
         ],
         "date": "2025-12-03"
       },
       {
-        "secteur": "Telecommunications",
-        "victime": "KT Corp.",
-        "description": "KT Corp. expands its free USIM replacement service nationwide following recent unauthorized micro-payment and data breach incidents, affecting subscribers including MVNO users.",
+        "secteur": "Consumer Electronics, Technology",
+        "victime": "ASUS",
+        "description": "The Everest ransomware group claims a data breach against tech giant ASUS. Details of the compromise and affected data are not yet public but may be released by the attackers.",
         "tags": [
           "violation",
           "breach",
-          "telecommunications",
-          "kt_corp",
-          "usim",
-          "micropayment",
-          "customer_data"
-        ],
-        "sources": [
-          "https://mastodon.social/@infomaxkorea/115653358531741192"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Logistics",
-        "victime": "B-Dynamic Logistics",
-        "description": "B-Dynamic Logistics is actively investigating Qilin ransomware claims, which could have a significant impact on many clients given the company's nature as a third-party logistics provider.",
-        "tags": [
-          "violation",
-          "breach",
-          "logistics",
-          "b_dynamic_logistics",
+          "asus",
+          "consumer_electronics",
           "ransomware",
-          "qilin"
+          "exfiltration",
+          "customer_data",
+          "everest_ransomware"
         ],
         "sources": [
-          "https://mastodon.social/@David_Hollingworth/115652629134715927"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Security, Residential, Commercial",
-        "victime": "IP camera owners",
-        "description": "Four individuals arrested in South Korea for hacking over 120,000 IP cameras (residential and commercial) and selling the stolen video footage to an overseas adult site. The suspects were highly prolific, and actions are being taken against viewers and site operators.",
-        "tags": [
-          "violation",
-          "breach",
-          "south_korea",
-          "ip_camera",
-          "privacy",
-          "sexual_exploitation",
-          "video_data"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/korea-arrests-suspects-selling-intimate-videos-from-hacked-ip-cameras/",
-          "https://databreaches.net/2025/12/02/kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage/?pk_campaign=feed&pk_kwd=kr-hacking-scheme-targeted-120000-home-cameras-for-sexual-footage"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "secteur": "Software Development, Technology",
-        "victime": "NPM package users",
-        "description": "The second Shai-Hulud attack exposed around 400,000 raw secrets after infecting hundreds of packages in the NPM registry and publishing stolen data in 30,000 GitHub repositories. Over 60% of the leaked NPM tokens were still valid.",
-        "tags": [
-          "violation",
-          "breach",
-          "npm",
-          "supply_chain",
-          "developer_secrets",
-          "github",
-          "malware",
-          "shai_hulud"
-        ],
-        "sources": [
-          "https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/"
+          "https://mastodon.social/@David_Hollingworth/115653576378269638"
         ],
         "date": "2025-12-03"
       }
     ],
-    "Summary of vulnerabilities": [
+    "Synthèse des vulnérabilités": [
       {
-        "cve_id": "CVE-2025-13542",
-        "cvss": 9.8,
-        "product": "DesignThemes LMS (WordPress plugin)",
-        "description": "Unauthenticated Privilege Escalation vulnerability due to the 'dtlms_register_user_front_end' function not restricting user roles during registration, allowing unauthenticated attackers to gain administrator access.",
+        "cve_id": "CVE-2025-13486",
+        "cvss": "9.8",
+        "product": "WordPress plugin Advanced Custom Fields: Extended",
+        "description": "Unauthenticated Remote Code Execution (RCE) via the prepare_form() function, allowing arbitrary code injection and site takeover. Affects versions 0.9.0.5 through 0.9.1.1.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "wordpress",
-          "plugin",
-          "privilege_escalation",
-          "unauthenticated",
-          "admin_access",
-          "dtlms_register_user_front_end"
-        ],
-        "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-13542",
-          "https://securityonline.info/critical-elementor-plugin-flaw-cve-2025-8489-cvss-9-8-under-active-exploitation-allows-unauthenticated-admin-takeover/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-8489",
-        "cvss": 9.8,
-        "product": "King Addons for Elementor (WordPress plugin)",
-        "description": "Critical Unauthenticated Privilege Escalation vulnerability allowing attackers to specify their role during registration and gain administrator access to the site. Actively exploited in the wild.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "wordpress",
-          "plugin",
-          "elementor",
-          "privilege_escalation",
-          "unauthenticated",
-          "admin_takeover",
-          "active_exploitation"
-        ],
-        "sources": [
-          "https://securityonline.info/critical-elementor-plugin-flaw-cve-2025-8489-cvss-9-8-under-active-exploitation-allows-unauthenticated-admin-takeover/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-13658",
-        "cvss": 9.3,
-        "product": "Industrial Video & Control Longwatch devices",
-        "description": "Remote Code Execution (RCE) vulnerability via unauthenticated HTTP GET requests to an exposed endpoint, due to the absence of code signing and execution controls. Exploitation results in SYSTEM-level privileges.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "ot",
-          "video_surveillance",
           "rce",
-          "remote_code_execution",
-          "unauthenticated",
-          "system_privileges"
+          "wordpress",
+          "plugin",
+          "authentication",
+          "code_injection"
         ],
         "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-13658",
-          "https://securityonline.info/cisa-warns-critical-longwatch-rce-flaw-cve-2025-13658-cvss-9-8-allows-unauthenticated-system-takeover-of-ot-surveillance/"
+          "https://cvefeed.io/vuln/detail/CVE-2025-13486",
+          "https://securityonline.info/critical-acf-extended-flaw-cve-2025-13486-cvss-9-8-allows-unauthenticated-rce-on-100k-wordpress-sites/"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13510",
-        "cvss": 9.1,
-        "product": "Iskra iHUB and iHUB Lite",
-        "description": "Critical vulnerability due to a missing authentication check for the web management interface, allowing unauthenticated users to access and modify critical device settings.",
+        "cve_id": "CVE-2025-64130",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Unauthenticated Remote Code Execution (RCE) in Zenitel TCIV-3+ intercoms (versions prior to 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "iskra_ihub",
-          "smart_metering",
-          "missing_authentication",
-          "authentication_bypass",
-          "critical"
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "unauthenticated"
         ],
         "sources": [
-          "https://securityonline.info/cisa-warns-critical-iskra-ihub-flaw-cve-2025-13510-allows-unauthenticated-smart-metering-takeover/"
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-48572",
-        "cvss": 8.8,
-        "product": "Google Android Frameworks Base",
-        "description": "High-severity Privilege Escalation vulnerability in the Android Frameworks Base package, allowing malicious apps to launch unauthorized activities from the background without additional execution privileges. Actively exploited.",
+        "cve_id": "CVE-2025-64127",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Unauthenticated Remote Code Execution (RCE) in Zenitel TCIV-3+ intercoms (versions prior to 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "android",
-          "framework",
-          "privilege_escalation",
-          "zero_day",
-          "active_exploitation"
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "unauthenticated"
         ],
         "sources": [
-          "https://thecyberthrone.in/2025/12/03/android-framework-zero-days-hit-cisa-kev/"
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64126",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Unauthenticated Remote Code Execution (RCE) in Zenitel TCIV-3+ intercoms (versions prior to 9.3.3.0).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64129",
+        "cvss": "9.8",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Unauthenticated Remote Code Execution (RCE) in Zenitel TCIV-3+ intercoms (versions prior to 9.3.3.0).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zenitel",
+          "intercom",
+          "iot",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-13630",
-        "cvss": 8.8,
+        "cvss": "9.8",
         "product": "Google Chrome (V8 JavaScript engine)",
-        "description": "High-severity Type Confusion vulnerability in the V8 JavaScript engine, allowing remote attackers to execute arbitrary code by tricking the user into visiting a specially crafted website.",
+        "description": "Type Confusion vulnerability in the V8 JavaScript engine, potentially allowing a remote attacker to execute arbitrary code within the renderer sandbox by tricking the user into visiting a specially crafted website.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "google_chrome",
-          "v8",
-          "type_confusion",
           "rce",
-          "arbitrary_code_execution"
+          "google_chrome",
+          "v8_javascript",
+          "type_confusion",
+          "zero_day"
         ],
         "sources": [
-          "https://cybersecuritynews.com/chrome-143-released/",
-          "https://securityonline.info/chrome-143-stable-fixes-13-flaws-high-severity-v8-type-confusion-earns-11000-bounty/"
+          "https://cybersecuritynews.com/chrome-143-released/"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-13372",
-        "cvss": 8.8,
-        "product": "Django (Python web framework)",
-        "description": "High-severity SQL injection vulnerability in FilteredRelation for PostgreSQL, using suitably crafted dictionary in column aliases. Allows attackers to compromise database integrity.",
+        "cvss": "9.0",
+        "product": "Django (web framework)",
+        "description": "High-severity SQL injection vulnerability affecting projects using PostgreSQL, due to how the FilteredRelation class handles column aliases, allowing malicious SQL code injection.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "django",
           "sql_injection",
-          "postgresql",
+          "django",
           "web_framework",
-          "database_integrity"
+          "postgresql"
         ],
         "sources": [
-          "https://securityonline.info/django-flaw-cve-2025-13372-allows-sql-injection-in-postgresql-filteredrelation/"
+          "https://cybersecuritynews.com/multiple-django-vulnerabilities/"
         ],
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-61940",
-        "cvss": 8.7,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 and previous versions",
-        "description": "Client-side authentication vulnerability where client software restricts access by password, but the underlying SQL Server database connection always has full access via a common user account, bypassing restrictions.",
+        "cve_id": "CVE-2025-12744",
+        "cvss": "8.8",
+        "product": "ABRT (daemon)",
+        "description": "Command-injection flaw in the ABRT daemon’s handling of user-supplied mount information, leading to local privilege escalation. An unprivileged local user can craft a payload to inject shell metacharacters, executing attacker-controlled commands and gaining full root privileges.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "medical_software",
-          "mirion_medical",
-          "client_authentication",
-          "sql_server",
-          "authentication_bypass"
+          "privilege_escalation",
+          "command_injection",
+          "abrt",
+          "docker",
+          "local_exploit"
         ],
         "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-61940"
+          "https://cvefeed.io/vuln/detail/CVE-2025-12744"
         ],
         "date": "2025-12-03"
       },
       {
         "cve_id": "CVE-2025-62575",
-        "cvss": 8.7,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 and previous versions",
-        "description": "SQL user account 'nmdbuser' and other created accounts default to 'sysadmin' role in the Microsoft SQL Server database, leading to remote code execution through certain built-in stored procedures.",
+        "cvss": "8.7",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "NMIS/BioDose software V22.02 and previous versions rely on an 'nmdbuser' SQL user account and other created accounts with default sysadmin role, which can lead to remote code execution through stored procedures.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "medical_software",
-          "mirion_medical",
-          "sql_server",
-          "sysadmin_role",
           "rce",
-          "remote_code_execution"
+          "authentication",
+          "privilege_escalation",
+          "mirion_medical",
+          "nmis_biodose",
+          "sql_server"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-62575"
@@ -1653,18 +1547,38 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-64298",
-        "cvss": 8.6,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 and previous versions",
-        "description": "Installations using embedded Microsoft SQL Server Express are exposed in a Windows share with insecure directory permissions, allowing access to the SQL Server database and configuration files containing sensitive data.",
+        "cve_id": "CVE-2025-61940",
+        "cvss": "8.7",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "NMIS/BioDose V22.02 and previous versions rely on client-side authentication and a common SQL Server user account, allowing unrestricted database connection access despite application-level checks. A Windows authentication option has been introduced.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "medical_software",
+          "authentication",
+          "privilege_escalation",
           "mirion_medical",
+          "nmis_biodose",
+          "client_side_auth"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-61940"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64298",
+        "cvss": "8.6",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "NMIS/BioDose V22.02 and previous version installations using SQL Server Express expose insecure default directory paths in Windows shares, allowing access to the database and sensitive configuration files.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "data_access",
+          "data_leak",
+          "mirion_medical",
+          "nmis_biodose",
           "sql_server_express",
-          "file_permissions",
-          "sensitive_data_exposure"
+          "insecure_permission"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-64298"
@@ -1672,18 +1586,58 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-64778",
-        "cvss": 8.4,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 and previous versions",
-        "description": "Executable binaries contain plain text hard-coded passwords, allowing unauthorized access to both the application and database.",
+        "cve_id": "CVE-2025-48633",
+        "cvss": "8.5",
+        "product": "Google Android Framework",
+        "description": "Actively exploited vulnerability in Google Android, allowing privilege escalation, data confidentiality compromise, and denial of service.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "medical_software",
+          "android",
+          "privilege_escalation",
+          "data_confidentiality",
+          "denial_of_service",
+          "exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185252/security/u-s-cisa-adds-android-framework-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185226/security/googles-latest-android-security-update-fixes-two-actively-exploited-flaws/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-48572",
+        "cvss": "8.5",
+        "product": "Google Android Framework",
+        "description": "Actively exploited vulnerability in Google Android, allowing privilege escalation, data confidentiality compromise, and denial of service.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "privilege_escalation",
+          "data_confidentiality",
+          "denial_of_service",
+          "exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185252/security/u-s-cisa-adds-android-framework-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185226/security/googles-latest-android-security-update-fixes-two-actively-exploited-flaws/"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64778",
+        "cvss": "8.4",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "NMIS/BioDose software V22.02 and previous versions contain executable binaries with plain text hard-coded passwords, allowing unauthorized access to both the application and database.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hardcoded_credentials",
+          "authentication",
           "mirion_medical",
-          "hard_coded_passwords",
-          "unauthorized_access",
-          "authentication"
+          "nmis_biodose",
+          "unauthorized_access"
         ],
         "sources": [
           "https://cvefeed.io/vuln/detail/CVE-2025-64778"
@@ -1691,17 +1645,55 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13631",
-        "cvss": 8.0,
-        "product": "Google Updater service",
-        "description": "High-severity inappropriate implementation flaw in the Google Updater service. Vulnerabilities in update mechanisms can sometimes be leveraged to establish persistence or elevate privileges.",
+        "cve_id": "CVE-2025-64128",
+        "cvss": "8.0",
+        "product": "Zenitel TCIV-3+ intercoms",
+        "description": "Unauthenticated Cross-Site Scripting (XSS) vulnerability in Zenitel TCIV-3+ intercoms (versions prior to 9.3.3.0).",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
+          "vulnerability",
+          "xss",
+          "zenitel",
+          "intercom",
+          "iot",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-warns-of-zenitel-tciv-3-maximum-severity-flaws"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-64642",
+        "cvss": "8.0",
+        "product": "Mirion Medical EC2 Software NMIS BioDose",
+        "description": "NMIS/BioDose software V22.02 and previous versions' default installation directory paths have insecure file permissions, enabling client workstation users to modify program executables and libraries.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "insecure_permission",
+          "program_modification",
+          "mirion_medical",
+          "nmis_biodose",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64642"
+        ],
+        "date": "2025-12-03"
+      },
+      {
+        "cve_id": "CVE-2025-13631",
+        "cvss": "8.0",
+        "product": "Google Updater service",
+        "description": "Inappropriate implementation flaw in the Google Updater service, potentially exploitable to establish persistence or elevate privileges on a host system.",
+        "tags": [
+          "vulnerabilite",
           "vulnerability",
           "google_updater",
-          "inappropriate_implementation",
           "privilege_escalation",
-          "persistence"
+          "persistence",
+          "inappropriate_implementation"
         ],
         "sources": [
           "https://cybersecuritynews.com/chrome-143-released/"
@@ -1710,15 +1702,14 @@
       },
       {
         "cve_id": "CVE-2025-13632",
-        "cvss": 8.0,
+        "cvss": "8.0",
         "product": "Google Chrome (DevTools)",
-        "description": "High-severity issue in Chrome DevTools, specific details restricted to prevent widespread abuse.",
+        "description": "High-severity issue in Google Chrome's DevTools.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "devtools",
-          "high_severity"
+          "devtools"
         ],
         "sources": [
           "https://cybersecuritynews.com/chrome-143-released/"
@@ -1727,15 +1718,14 @@
       },
       {
         "cve_id": "CVE-2025-13633",
-        "cvss": 8.0,
+        "cvss": "8.0",
         "product": "Google Chrome (Digital Credentials)",
-        "description": "High-severity Use After Free (UAF) memory corruption bug in Digital Credentials.",
+        "description": "Use After Free (UAF) memory corruption bug in Google Chrome's Digital Credentials component.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "digital_credentials",
-          "use_after_free",
+          "uaf",
           "memory_corruption"
         ],
         "sources": [
@@ -1744,32 +1734,15 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-13720",
-        "cvss": 8.0,
-        "product": "Google Chrome (Loader component)",
-        "description": "High-severity 'bad cast' vulnerability in Chrome's Loader component.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "google_chrome",
-          "loader",
-          "bad_cast"
-        ],
-        "sources": [
-          "https://cybersecuritynews.com/chrome-143-released/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
         "cve_id": "CVE-2025-13721",
-        "cvss": 8.0,
+        "cvss": "8.0",
         "product": "Google Chrome (V8 JavaScript engine)",
-        "description": "Medium-severity (included due to V8 and RCE potential) race condition in the V8 JavaScript engine.",
+        "description": "Medium-severity race condition in Google Chrome's V8 JavaScript engine.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
           "google_chrome",
-          "v8",
+          "v8_javascript",
           "race_condition"
         ],
         "sources": [
@@ -1778,298 +1751,237 @@
         "date": "2025-12-03"
       },
       {
-        "cve_id": "CVE-2025-48633",
-        "cvss": 8.0,
-        "product": "Google Android Framework layer",
-        "description": "High-severity Information Disclosure vulnerability allowing Android apps to disclose sensitive information (app states, user credentials, system data) without elevated rights. Actively exploited.",
+        "cve_id": "CVE-2025-13720",
+        "cvss": "8.0",
+        "product": "Google Chrome (Loader component)",
+        "description": "Bad cast error in Google Chrome's Loader component.",
         "tags": [
-          "vulnerabilité",
+          "vulnerabilite",
           "vulnerability",
-          "android",
-          "framework",
-          "information_disclosure",
-          "zero_day",
-          "active_exploitation"
+          "google_chrome",
+          "loader_component",
+          "bad_cast"
         ],
         "sources": [
-          "https://thecyberthrone.in/2025/12/03/android-framework-zero-days-hit-cisa-kev/"
-        ],
-        "date": "2025-12-03"
-      },
-      {
-        "cve_id": "CVE-2025-64642",
-        "cvss": 8.0,
-        "product": "Mirion Medical EC2 Software NMIS/BioDose V22.02 and previous versions",
-        "description": "Installation directory paths by default have insecure file permissions, which in certain deployment scenarios can enable users on client workstations to modify program executables and libraries.",
-        "tags": [
-          "vulnerabilité",
-          "vulnerability",
-          "medical_software",
-          "mirion_medical",
-          "file_permissions",
-          "executable_modification",
-          "privilege_escalation"
-        ],
-        "sources": [
-          "https://cvefeed.io/vuln/detail/CVE-2025-64642"
+          "https://cybersecuritynews.com/chrome-143-released/"
         ],
         "date": "2025-12-03"
       }
     ],
     "Articles": [
       {
-        "title": "How a noisy ransomware intrusion exposed a long-term espionage foothold",
-        "description": "An organization was compromised by two separate cyber attack groups: a noisy ransomware intrusion and a stealthy espionage foothold. The ransomware intrusion coincidentally drew attention to the espionage threat, which might have otherwise lingered undetected for months. Both groups exploited publicly known vulnerabilities in Microsoft SharePoint Server (CVE-2025-53770) and Ivanti’s solutions (CVE-2024-21887, CVE-2025-4427, CVE-2025-4428, CVE-2023-38035) for initial access. The incident highlights the importance of visibility into persistent threats and correlating security events.",
-        "threat_actor": "Ransomware group (Not specified), Espionage group (Not specified)",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [
-            "CVE-2025-53770",
-            "CVE-2024-21887",
-            "CVE-2025-4427",
-            "CVE-2025-4428",
-            "CVE-2023-38035"
-          ],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1078 (Valid Accounts), T1071 (Application Layer Protocol), T1083 (File and Directory Discovery), T1070 (Indicator Removal on Host)",
-        "analyse": "The incident underscores the complexity of threat environments where different motivations (financially driven vs. espionage) can overlap or manifest simultaneously. The ability of a noisy event to uncover a more subtle yet persistent threat is a critical lesson for DFIR. The use of known, even patched, vulnerabilities emphasizes the importance of proactive vulnerability management and rapid patching cycles. Systems like SharePoint and Ivanti, often critical entry points for enterprises, are prime targets, giving them a high strategic impact on targeted sectors.",
+        "title": "Cybercrime Goes SaaS: Renting Tools, Access, and Infrastructure",
+        "description": "This article analyzes the transformation of cybercrime into a 'Software-as-a-Service' (CaaS) model. Phishing kits, Telegram OTP bots, infostealer logs, and even RATs are now rented like SaaS tools. This 'crime-as-a-service' economy lowers the barrier to entry, providing advanced capabilities to less skilled attackers.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The emergence and professionalization of 'Crime-as-a-Service' democratizes attack tools, making the threat landscape more accessible and fragmented. This increases incident frequency and complicates detection and attribution, as less organized groups can deploy sophisticated techniques.",
         "recommandations": [
-          "Promptly apply patches for known vulnerabilities, especially those in internet-facing software (SharePoint, Ivanti).",
-          "Implement Extended Detection and Response (XDR) solutions for holistic threat visibility, including silent and persistent intrusions.",
-          "Develop incident response plans that account for multi-actor compromise scenarios with different motivations.",
-          "Enhance monitoring for behavioral anomalies to detect stealthy threats that may not trigger traditional alerts.",
-          "Conduct regular security audits and penetration tests to identify and remediate exploitable weaknesses."
+          "Implement multi-layered security incorporating detection of known and unknown threats.",
+          "Strengthen user awareness of phishing techniques, especially those exploiting OTPs or infostealers.",
+          "Monitor logs and network activity to identify signs of CaaS tools used within the organization's infrastructure."
+        ],
+        "tags": [
+          "cybercrime",
+          "saas",
+          "phishing",
+          "infostealer",
+          "rat",
+          "underground_economy",
+          "emerging_threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cybercrime-goes-saas-renting-tools-access-and-infrastructure/"
+        ],
+        "date": "2025-12-02T10:10:20-05:00"
+      },
+      {
+        "title": "Exploits and vulnerabilities in Q3 2025",
+        "description": "This Kaspersky report provides statistical data on published vulnerabilities and researched exploits during the third quarter of 2025, as well as information on the use of C2 frameworks. It highlights an increase in the number of vulnerabilities, continuous exploitation of WinRAR flaws, and the use of zero-days by APT groups, alongside the dominance of Metasploit, Sliver, and Mythic among C2 frameworks.",
+        "threat_actor": "ToddyCat APT, BlueNoroff APT",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "get-versions[.]sh",
+            "cve[.]org"
+          ],
+          "CVE": [
+            "CVE-2025-53771",
+            "CVE-2025-53770",
+            "CVE-2025-6218",
+            "CVE-2021-22555",
+            "CVE-2025-49704",
+            "CVE-2023-38831",
+            "CVE-2021-34527",
+            "CVE-2022-0847",
+            "CVE-2025-6128",
+            "CVE-2017-11882",
+            "CVE-2025-8088",
+            "CVE-2017-0199",
+            "CVE-2019-13272",
+            "CVE-2025-41244",
+            "CVE-2018-0802",
+            "CVE-2025-49706",
+            "CVE-2020-1472"
+          ]
+        },
+        "mitre_ttps": "TA0001 (Initial Access), TA0004 (Privilege Escalation), TA0003 (Persistence), T1078 (Valid Accounts), T1059 (Command and Scripting Interpreter)",
+        "analyse": "The report highlights a constant growth in vulnerabilities, with recurring exploitation of known flaws such as WinRAR, and rapid use of zero-days by APTs. The focus is on initial access and code execution, often through operating system or SharePoint vulnerabilities. The diversity of C2 frameworks used indicates the adaptability and persistence of malicious actors, increasingly targeting Linux systems.",
+        "recommandations": [
+          "Promptly apply security patches for operating systems (Windows, Linux) and third-party applications, especially for known vulnerabilities and zero-days.",
+          "Regularly audit systems for vulnerabilities and misconfigurations.",
+          "Implement system management solutions to automate patch application and endpoint monitoring.",
+          "Monitor network activity and logs to detect signs of vulnerability exploitation and C2 framework usage."
+        ],
+        "tags": [
+          "vulnerability",
+          "exploits",
+          "apt",
+          "c2_frameworks",
+          "winrar",
+          "sharepoint",
+          "linux_security",
+          "zero_day",
+          "metasploit",
+          "sliver",
+          "mythic",
+          "initial_access",
+          "privilege_escalation",
+          "persistence"
+        ],
+        "sources": [
+          "https://securelist.com/vulnerabilities-and-exploits-in-q3-2025/118197/"
+        ],
+        "date": "2025-12-03T10:00:59+00:00"
+      },
+      {
+        "title": "How a noisy ransomware intrusion exposed a long-term espionage foothold",
+        "description": "This article reports a nightmare scenario where an organization was compromised by two distinct attacking groups. A noisy ransomware intrusion coincidentally exposed a much stealthier espionage threat that might otherwise have gone undetected for months. This highlights how multiple attacks can reveal latent compromises.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-4428",
+            "CVE-2025-4427",
+            "CVE-2024-21887",
+            "CVE-2025-53770",
+            "CVE-2023-38035"
+          ]
+        },
+        "mitre_ttps": "TA0001 (Initial Access), TA0003 (Persistence), TA0007 (Discovery), TA0011 (Command and Control), TA0010 (Exfiltration)",
+        "analyse": "This incident underscores the importance of continuous detection and response, even against seemingly singular threats. The overlap of noisy attacks (ransomware) and stealthy ones (espionage) creates a complex challenge for security teams, but can paradoxically serve to reveal deeper threats. Organizations must be prepared for scenarios of multiple and persistent compromises.",
+        "recommandations": [
+          "Implement extended detection and response capabilities (XDR/MDR) to identify suspicious activities, whether noisy or stealthy.",
+          "Conduct proactive threat hunting to uncover persistent, undetected compromises.",
+          "Segment networks to limit lateral movement of attackers and contain incidents.",
+          "Assess resilience against multiple compromise scenarios and develop appropriate response plans."
         ],
         "tags": [
           "ransomware",
           "espionage",
-          "intrusion",
-          "vulnerabilities",
-          "sharepoint",
-          "ivanti",
-          "dfir",
-          "threat_hunting"
+          "multiple_compromise",
+          "threat_detection",
+          "incident_response",
+          "foothold"
         ],
         "sources": [
-          "https://databreaches.net/2025/12/02/how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold/?pk_campaign=feed&pk_kwd=how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold"
+          "https://databreaches.net/2025/12/02/how-a-noisy-ransomware-intrusion-exposed-a-long-term-espionage-foothold/"
         ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T14:42:38+00:00"
       },
       {
-        "title": "Kaspersky Security Bulletin 2025. Statistics on cyberthreats",
-        "description": "Kaspersky's 2025 Security Bulletin provides statistics on various cyberthreats from November 2024 to October 2025, based on anonymized data from Kaspersky Security Network (KSN) users. The report details analyses of ToddyCat APT attacks (targeting corporate email), the new version of TomBerBil, the TCSectorCopy and XstReader tools, and methods for stealing Outlook access tokens. It also includes in-depth research into the BlueNoroff APT's GhostCall and GhostHire campaigns, targeting macOS with stealer suites and fake Zoom/Microsoft Teams clients, and the use of ChatGPT-enhanced images.",
-        "threat_actor": "ToddyCat APT, BlueNoroff APT",
+        "title": "Law enforcement shuts down Cryptomixer in major crypto crime takedown",
+        "description": "Europol announced the seizure of $29 million in Bitcoin and the shutdown of Cryptomixer, a crypto-mixing service used to launder cybercrime proceeds. Since its creation in 2016, Cryptomixer laundered over €1.3 billion in Bitcoin, facilitating large-scale illegal activities.",
+        "threat_actor": "Non applicable",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "DOMAIN": [
+            "cryptomixer[.]io"
+          ]
         },
-        "mitre_ttps": "T1566 (Phishing), T1588 (Obtain Capabilities), T1078 (Valid Accounts), T1003 (OS Credential Dumping), T1041 (Exfiltration Over C2 Channel)",
-        "analyse": "Kaspersky's report highlights the constant evolution of APT tactics, including sophisticated social engineering and custom tools (TomBerBil, TCSectorCopy, XstReader). The integration of AI (ChatGPT) in disinformation or lure campaigns shows a trend towards increased attack sophistication. The focus on stealing access tokens and macOS clients indicates a diversification of targets and methods, aiming at platforms often perceived as more secure. The persistence of APT threats and their continuous adaptation to security environments require a multi-layered defense.",
+        "mitre_ttps": "TA0007 (Resource Development), T1583 (Acquire Infrastructure), T1486 (Data Encrypted for Impact), T1078 (Valid Accounts)",
+        "analyse": "The takedown of Cryptomixer represents a significant blow against the financial infrastructure of cybercrime, hindering malicious actors' ability to launder funds. This illustrates international law enforcement cooperation in targeting services facilitating organized crime and cyberattacks, increasing risks for cybercriminals.",
         "recommandations": [
-          "Implement multi-layered security incorporating AI for sophisticated threat detection.",
-          "Strengthen user awareness of social engineering and phishing attacks, especially those leveraging AI.",
-          "Actively monitor for access token theft attempts and suspicious activity on macOS systems.",
-          "Deploy EDR/XDR solutions to detect custom tools and complex malware chains.",
-          "Keep systems and software updated to patch vulnerabilities exploited by APTs."
+          "Organizations should monitor cryptocurrency transactions and use blockchain analysis tools to identify suspicious flows.",
+          "Strengthen collaboration with law enforcement to report illegal cryptocurrency-related activities.",
+          "Educate financial security teams on money laundering techniques using crypto mixers."
         ],
         "tags": [
-          "kaspersky",
-          "cyberthreats",
-          "apt",
-          "malware",
-          "phishing",
-          "macos",
-          "ai",
-          "threat_intelligence"
+          "cybercrime",
+          "cryptocurrency",
+          "money_laundering",
+          "europol",
+          "takedown",
+          "cryptomixer",
+          "bitcoin"
         ],
         "sources": [
-          "https://securelist.com/kaspersky-security-bulletin-2025-statistics/118189/"
+          "https://securityaffairs.com/185217/cyber-crime/law-enforcement-shuts-down-cryptomixer-in-major-crypto-crime-takedown.html"
         ],
-        "date": "2025-12-03"
-      },
-      {
-        "title": "Salty2FA & Tycoon2FA Hybrid: A New Phishing Threat to Enterprises and Cybercrime Goes SaaS: Renting Tools, Access, and Infrastructure",
-        "description": "These articles describe the evolution of cybercrime towards an 'as-a-Service' (CaaS) model, lowering the barrier to entry for low-skilled attackers. Salty2FA and Tycoon2FA represent hybrid phishing kits, blurring attribution lines and targeting enterprises for 2FA credential theft. The CaaS phenomenon extends to renting phishing kits (PhaaS), Telegram OTP bots, infostealer logs, and even RATs (like Atroposia RAT), as well as the sale of initial access by brokers. AI, such as SpamGPT or MatrixPDF, is used to automate and sophisticate phishing campaigns and lure creation.",
-        "threat_actor": "Salty2FA, Tycoon2FA, SpamGPT, MatrixPDF, Atroposia RAT, Initial Access Brokers (IABs)",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1566 (Phishing), T1566.002 (Spearphishing Link), T1078 (Valid Accounts), T1114 (Email Collection), T1133 (External Remote Services), T1189 (Drive-by Compromise), T1212 (Exploitation for Credential Access), T1550 (Use Alternate Authentication Material)",
-        "analyse": "CaaS democratizes access to sophisticated tools and techniques, increasing the volume and complexity of attacks. Businesses face more convincing and adaptive phishing campaigns, exploiting multi-factor authentication through social engineering (OTP bots). The geographical and strategic impact is global, with an increased threat to credential security and initial network access. Attackers' ability to rent resources at low cost makes attacks persistent and difficult to attribute, transforming cybercrime into a full-fledged business ecosystem.",
-        "recommandations": [
-          "Implement phishing-resistant multi-factor authentication (MFA) (e.g., FIDO2) and educate users on social engineering techniques (including spoofed OTP calls).",
-          "Deploy email protection platforms (EPP) with advanced phishing detection capabilities, including behavioral analysis and AI.",
-          "Monitor access logs for suspicious authentication attempts and the use of stolen credentials.",
-          "Utilize browser protection solutions to block access to known and unknown phishing sites.",
-          "Establish least privilege policies and regular credential rotation to limit the impact of compromise."
-        ],
-        "tags": [
-          "cybercrime_as_a_service",
-          "caas",
-          "phishing",
-          "2fa_bypass",
-          "threat_actors",
-          "ai_in_cybercrime",
-          "infostealer",
-          "rat"
-        ],
-        "sources": [
-          "/cybersecurity-blog/salty2fa-tycoon2fa-hybrid-phishing-2025/",
-          "https://www.bleepingcomputer.com/news/security/cybercrime-goes-saas-renting-tools-access-and-infrastructure/"
-        ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T00:27:47+00:00"
       },
       {
         "title": "The $9M yETH Exploit: How 16 Wei Became Infinite Tokens",
-        "description": "A critical exploit targeted Yearn Finance's yETH pool on Ethereum on November 30, 2025, resulting in approximately $9 million being stolen. The attacker exploited a flaw in the protocol's internal accounting management, minting an astronomical number of tokens (235 septillion yETH) by depositing only 16 wei. The vulnerability stemmed from a failure to reset cached 'packed_vbs[]' values after the pool was completely emptied, allowing tokens to be minted based on accumulated phantom balances rather than the actual deposit.",
+        "description": "This Check Point Research article details a critical exploit targeting Yearn Finance's yETH pool on Ethereum, resulting in the theft of approximately $9 million. The attacker exploited an internal accounting flaw, successfully minting an astronomical number of yETH tokens (235 septillion) with a minimal deposit of 16 wei, one of the most 'capital-efficient' exploits in DeFi history.",
         "threat_actor": "Non applicable",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "DOMAIN": [
+            "self[.]supply"
+          ]
         },
-        "mitre_ttps": "T1587.001 (Develop Malware - Cryptocurrency Miners), T1588.005 (Obtain Capabilities - Exploits)",
-        "analyse": "This incident is a textbook case of security complexity in DeFi protocols, where a small logical error in state management can have massive financial consequences. The exploit demonstrates the importance of explicit handling of all state transitions, even after a full pool draining. The financial impact is significant ($9 million), and the strategic impact is undermining confidence in DeFi protocols if such vulnerabilities are not rigorously addressed.",
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This attack illustrates the inherent risks in complex Decentralized Finance (DeFi) systems, where a single state management error can have disastrous financial consequences. The exploit highlighted the danger of un-reset cached values after a full liquidity withdrawal, allowing for the generation of 'phantom' tokens. This underscores the need for rigorous software engineering and thorough security audits in the DeFi sector.",
         "recommandations": [
-          "Implement rigorous security audits for DeFi protocols, with particular attention to state management and resets after operations.",
-          "Deploy real-time protection systems that understand protocol logic, beyond simple signature-based detection.",
-          "Conduct comprehensive testing, including stress tests and sophisticated attack simulations, to identify subtle flaws.",
-          "Adopt a secure-by-design approach, assuming that if an error can occur, it will eventually be exploited.",
-          "Encourage bug bounty programs to incentivize researchers to identify vulnerabilities before attackers."
+          "Conduct in-depth code security audits, focusing on state management logic and critical transitions, especially for liquidity pools and token minting mechanisms.",
+          "Implement fuzzing tests and formal verifications to identify edge cases and race conditions that can lead to unexpected behavior.",
+          "Deploy real-time runtime protections that understand protocol logic, beyond signature-based detection."
         ],
         "tags": [
           "defi",
+          "blockchain",
           "ethereum",
           "exploit",
+          "yearn_finance",
+          "yeth_pool",
           "smart_contract",
-          "vulnerability",
-          "financial_loss",
-          "blockchain_security"
+          "logic_vulnerability",
+          "decentralized_finance"
         ],
         "sources": [
           "https://research.checkpoint.com/2025/16-wei/"
         ],
-        "date": "2025-12-03"
+        "date": "2025-12-02T13:42:36+00:00"
       },
       {
         "title": "The Browser Defense Playbook: Stopping the Attacks That Start on Your Screen",
-        "description": "85% of daily work occurs in the browser, making it a prime target for attacks. The Unit 42 article states that nearly half of incident response incidents in 2025 involved malicious activity launched or facilitated via employee browsers. Common tactics include phishing, URL redirect abuse, and malware downloads. Malicious browser extensions are a significant vector. The article highlights organizations' lack of awareness regarding the browser attack surface and proposes security strategies to strengthen browser defense, including adopting enterprise-grade secure browsers and extending zero trust to the browser.",
-        "threat_actor": "Non mentioned",
+        "description": "Palo Alto Networks' Unit 42 details how the browser has become a major attack surface, with 85% of daily work taking place there. The article highlights common tactics (phishing, abusive URL redirects, malware downloads) and risks associated with insecure or malicious extensions, as well as session hijacking. It proposes security controls and strategies to secure enterprise browsers.",
+        "threat_actor": "Non applicable",
         "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [],
-          "YARA_RULE": []
+          "CVE": [
+            "CVE-2025-20362",
+            "CVE-2025-20333"
+          ]
         },
-        "mitre_ttps": "T1566 (Phishing), T1204.001 (User Execution - Malicious Link), T1204.002 (User Execution - Malicious File), T1189 (Drive-by Compromise), T1078 (Valid Accounts), T1550 (Use Alternate Authentication Material), T1547.001 (Boot or Logon Autostart Execution - Registry Run Keys / Startup Folder)",
-        "analyse": "The browser has become a critical and often underestimated attack surface. Attackers exploit user trust in browsers and their extensions, as well as the lack of centralized security policies. The impact is potentially widespread, as browser compromise can lead to session theft, malicious script injection, and silent malware downloads. This affects all sectors where employees extensively use browsers for work. Evolving tactics mean awareness alone is insufficient, requiring robust technical controls.",
+        "mitre_ttps": "TA0001 (Initial Access), T1566 (Phishing), T1204 (User Execution), T1189 (Drive-by Compromise), TA0008 (Lateral Movement), T1539 (Steal Web Session Cookie), T1059.007 (JavaScript/JScript)",
+        "analyse": "With applications migrating to the cloud and browser, browser security has become critical. Attackers exploit user trust in browsers and extensions to gain initial access, steal sessions, or deploy malware. The lack of centralized security policies for browsers and extensions is a significant gap in many organizations' defenses. The risk is exacerbated by the constant evolution of attack techniques.",
         "recommandations": [
-          "Implement enterprise-grade secure browsers with strict allowed extension lists and integrated Data Loss Prevention (DLP) capabilities.",
-          "Apply zero trust principles to the browser, including multi-factor authentication (MFA) for every browser-based app and step-up MFA for sensitive user actions.",
-          "Deploy tools for detecting suspicious behavior (credential misuse, sensitive access from unknown devices, malware hidden in downloaded files).",
-          "Utilize URL filtering to block access to malicious and compromised websites.",
-          "Educate users on the dangers of insecure extensions and social engineering tactics (including drive-by downloads)."
+          "Implement a Zero Trust approach extended to the browser, including multi-factor authentication (MFA) for every web application and step-up MFA for sensitive user actions.",
+          "Establish an inventory of authorized browser extensions and enforce strict whitelists.",
+          "Utilize enterprise-grade secure browsers that integrate DLP functions, role-based permissions, and real-time traffic inspection.",
+          "Educate users about browser-based threats, beyond simply 'don't click suspicious links,' emphasizing clickless attacks and the risk of extensions."
         ],
         "tags": [
           "browser_security",
-          "defense_playbook",
+          "attack_surface",
           "phishing",
           "malware",
           "browser_extensions",
           "zero_trust",
+          "session_hijacking",
           "dlp",
-          "incident_response"
+          "mfa"
         ],
         "sources": [
           "https://unit42.paloaltonetworks.com/browser-defense-playbook/"
         ],
-        "date": "2025-12-03"
-      },
-      {
-        "title": "Update on Dos-OP’s report on Nova RaaS",
-        "description": "This update follows complaints and disputes from the Nova RaaS group regarding an initial report by Dos-OP on cbsecurity[.]net. The article details Dos-OP's responses to Nova's criticisms, providing evidence and screenshots, including rebuttals regarding the association of certain IP addresses with Nova. The incident highlights the confrontational nature of cybercrime reporting and the attempts by malicious actors to spread disinformation.",
-        "threat_actor": "Nova RaaS",
-        "indicator_of_compromise": {
-          "ASN": [],
-          "CVE": [],
-          "DOMAIN": [
-            "cbsecurity.net"
-          ],
-          "EMAIL": [],
-          "FILE_HASH_SHA1": [],
-          "FILE_HASH_SHA256": [],
-          "IPv4": [],
-          "IPv6": [],
-          "MITRE_ATT&CK": [],
-          "URL": [
-            "https://databreaches.net/2025/11/30/breaking-dos-op-exposes-the-nova-raas-gang/"
-          ],
-          "YARA_RULE": []
-        },
-        "mitre_ttps": "T1587 (Develop Malware), T1071 (Application Layer Protocol)",
-        "analyse": "The article illustrates the difficulty of attribution and information verification in the cybercrime domain, where actors may actively try to discredit analysis reports. The nature of Ransomware-as-a-Service (RaaS) makes operations more opaque and traceability more complex. The impact is primarily on the credibility of cyber intelligence and on the ability of businesses and authorities to effectively identify and counter RaaS groups.",
-        "recommandations": [
-          "Conduct thorough research and cross-reference information from multiple sources when attributing cybercriminal activities.",
-          "Document all evidence (screenshots, IoCs, technical analysis) to support threat reports.",
-          "Establish trusted relationships with reliable sources in the cybersecurity community.",
-          "Warn businesses about disinformation methods employed by ransomware groups to minimize reactions to public pressure.",
-          "Strengthen threat intelligence capabilities to understand the motivations and counter-intelligence tactics of malicious actors."
-        ],
-        "tags": [
-          "ransomware",
-          "raas",
-          "threat_actor_report",
-          "attribution",
-          "disinformation",
-          "cybercrime"
-        ],
-        "sources": [
-          "https://databreaches.net/2025/12/02/update-on-dos-ops-report-on-nova-raas/?pk_campaign=feed&pk_kwd=update-on-dos-ops-report-on-nova-raas"
-        ],
-        "date": "2025-12-03"
+        "date": "2025-12-03T00:00:04+00:00"
       }
     ]
   }
