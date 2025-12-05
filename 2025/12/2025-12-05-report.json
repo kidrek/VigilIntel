@@ -1,0 +1,1604 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une intensité croissante et une sophistication accrue, avec une convergence notable des risques technologiques et humains. Les vulnérabilités critiques, en particulier celles menant à l'exécution de code à distance (RCE) comme la faille 'React2Shell' (CVE-2025-55182), sont exploitées très rapidement après leur divulgation, souvent par des acteurs étatiques. La chaîne d'approvisionnement reste un vecteur d'attaque majeur, comme en témoignent les infiltrations du groupe Lazarus via des travailleurs informatiques et la compromission d'un fournisseur d'ASUS. L'utilisation de l'IA par les attaquants pour des campagnes de phishing et la découverte de vulnérabilités est une tendance émergente, tandis que les défenseurs commencent également à l'adopter pour améliorer la détection et la réponse. Les logiciels espions sophistiqués comme Predator exploitent des mécanismes de 'zero-click', ciblant les appareils mobiles via des publicités malveillantes. Parallèlement, le cybercrime financier persiste avec des campagnes de phishing SMS innovantes et des faux sites de e-commerce. Les attaques DDoS à grand volume sont également en hausse, soulignant la capacité des botnets comme AISURU à perturber des services essentiels. Enfin, des menaces internes et des violations de données massives continuent d'affecter divers secteurs, de la finance à l'éducation. En conclusion, l'état général des menaces est élevé, exigeant une vigilance constante, des mises à jour rapides, des contrôles d'accès rigoureux et une formation continue pour contrer les tactiques adaptatives des adversaires.",
+      "date": "2025-12-05"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "AISURU botnet",
+        "secteur": "Télécommunications, gaming, hébergement, finance, entreprises d'IA, mines/métaux, automobile",
+        "modop": "Attaques DDoS hyper-volumétriques, vendues comme services de botnet-for-hire.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "aisuru",
+          "ddos",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185299/security/cloudflare-mitigates-record-29-7-tbps-ddos-attack-by-the-aisuru-botnet/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "China-based phishing groups",
+        "secteur": "Consommateurs, e-commerce, finances, télécommunications",
+        "modop": "Campagnes de phishing SMS (smishing) avec leurres de points de récompense, remboursements d'impôts et faux sites e-commerce pour voler des informations de paiement et lier des cartes à des portefeuilles mobiles.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing_group",
+          "smishing",
+          "social_engineering",
+          "financial_crime",
+          "e_commerce"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/sms-phishers-pivot-to-points-taxes-fake-retailers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "China-nexus threat groups (Warp Panda, Earth Lamia, Jackpot Panda, Salt Typhoon affiliates)",
+        "secteur": "Gouvernement, infrastructures critiques, technologie, juridique, finances, e-commerce, SaaS",
+        "modop": "Déploiement de Brickstorm malware sur serveurs VMware vSphere, exploitation rapide de la vulnérabilité React2Shell (CVE-2025-55182).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "china_nexus",
+          "espionnage",
+          "malware",
+          "brickstorm",
+          "vmware",
+          "vulnerability_exploitation",
+          "react2shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-chinese-brickstorm-malware-attacks-on-vmware-servers/",
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://www.bleepingcomputer.com/news/security/critical-react2shell-flaw-in-react-nextjs-lets-hackers-run-javascript-code/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/china-nexus-hackers-exploiting-react2shell-flaw/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Éducation (University of Phoenix)",
+        "modop": "Exploitation d'une vulnérabilité zero-day dans Oracle E-Business pour le vol de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "clop",
+          "ransomware_group",
+          "data_breach",
+          "zero_day",
+          "oracle"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115663949967960597"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Everest gang",
+        "secteur": "Fournisseurs, technologie (ASUS, ArcSoft, Qualcomm)",
+        "modop": "Attaque par ransomware, fuite de données suite à la compromission d'un fournisseur.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "everest_gang",
+          "ransomware",
+          "data_breach",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185310/data-breach/asus-confirms-vendor-breach-as-everest-gang-leaks-data-claims-arcsoft-and-qualcomm/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "INC Ransom",
+        "secteur": "Commerce de détail, textile (Oxford, InStyle)",
+        "modop": "Attaques par ransomware.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "inc_ransom",
+          "ransomware",
+          "data_breach",
+          "retail"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115664151716644076"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Intellexa (Predator spyware)",
+        "secteur": "Ciblage spécifique (appareils mobiles)",
+        "modop": "Attaques 'zero-click' via publicités malveillantes ('Aladdin'), exploits de baseband (Exynos via 'Triton').",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "intellexa",
+          "predator_spyware",
+          "zero_click",
+          "mobile_security",
+          "targeted_attacks"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-uses-new-infection-vector-for-zero-click-attacks/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Lazarus Group",
+        "secteur": "Divers (visant les réseaux d'entreprise)",
+        "modop": "Infiltration de travailleurs IT pour l'accès initial, ciblant la chaîne d'approvisionnement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "lazarus_group",
+          "nation_state",
+          "espionnage",
+          "supply_chain",
+          "social_engineering"
+        ],
+        "sources": [
+          "/cybersecurity-blog/lazarus-group-it-workers-investigation/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Télécommunications, Cybersécurité, Médias sociaux",
+        "theme": "Blocage de plateformes de communication",
+        "description": "La Russie a bloqué l'accès à Apple FaceTime et Snapchat, affirmant qu'ils sont utilisés pour coordonner des attaques terroristes. Cette action s'inscrit dans une série de blocages de services de messagerie et de vidéoconférence étrangers (Viber, Signal, Discord, Microsoft Teams, Telegram, WhatsApp, WeChat) sous prétexte de législation anti-extrémisme et anti-terrorisme.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "facetime",
+          "snapchat",
+          "censure",
+          "surveillance",
+          "terrorisme"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russia-blocks-facetime-and-snapchat-over-use-in-terrorist-attacks/",
+          "https://securityonline.info/russia-imposes-network-level-blockade-on-apples-end-to-end-encrypted-facetime/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Défense, Infrastructure critique, Politique, Société",
+        "theme": "Stratégie hybride de la Russie contre l'Europe",
+        "description": "La Russie mène une campagne hybride contre l'Europe, utilisant des outils de zone grise (cyber, opérations d'information, coercition énergétique, sabotage, proxys criminels, subversion politique) pour dégrader les capacités adverses. Ces actions ciblent le leadership, les ressources essentielles (énergie, industrie), les infrastructures (réseaux électriques, GPS), les populations (guerre cognitive) et les forces armées (tests sub-seuil), démontrant un conflit continu plutôt qu'une phase de pré-guerre.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "europe",
+          "guerre_hybride",
+          "cyberattaque",
+          "desinformation",
+          "sabotage",
+          "infrastructure_critique",
+          "operation_influence"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/are-we-war-russia-how-wardens-rings-map-russias-hybrid-strategy"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Commerce maritime, Énergie, Diplomatie",
+        "theme": "Tensions en Mer Rouge et Canal de Suez",
+        "description": "La résolution 2801 du CSNU prolonge les sanctions contre le Yémen, visant à contenir les Houthis et à limiter leur capacité à menacer la sécurité maritime. Les attaques des Houthis ont un impact significatif sur le commerce mondial, réduisant le trafic par le Canal de Suez et augmentant le recours au Cap de Bonne-Espérance. La France et les États-Unis dénoncent une résolution insuffisante, y voyant un enjeu stratégique lié à l'Iran et à la sécurité de l'Indo-Pacifique. La Chine et la Russie s'abstiennent, cherchant à protéger leurs routes commerciales et leur influence diplomatique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "yemen",
+          "mer_rouge",
+          "canal_de_suez",
+          "houthis",
+          "commerce_international",
+          "conflit_regional",
+          "iran",
+          "etats_unis",
+          "france",
+          "chine",
+          "russie",
+          "resolution_onu"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2025/yemen-mer-rouge-et-canal-de-suez-une-crise-regionale-devenue-enjeu-global/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Technologie, Fabrication (via chaîne d'approvisionnement)",
+        "victime": "ASUS (via un fournisseur)",
+        "description": "ASUS a confirmé une violation de données chez un fournisseur, entraînant la fuite d'une partie du code source de la caméra des téléphones ASUS. Le groupe de ransomware Everest a revendiqué cette fuite, affirmant détenir également des données d'ArcSoft et de Qualcomm.",
+        "tags": [
+          "violation",
+          "breach",
+          "technologie",
+          "fabrication",
+          "asus",
+          "supply_chain",
+          "everest_gang",
+          "code_source",
+          "arcsoft",
+          "qualcomm"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185310/data-breach/asus-confirms-vendor-breach-as-everest-gang-leaks-data-claims-arcsoft-and-qualcomm/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (Corée du Sud)",
+        "description": "Violation massive de données impactant le secteur du e-commerce en Corée du Sud, entraînant des pertes opérationnelles et des coûts de sécurité accrus.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "coree_du_sud",
+          "donnees_client"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115664820813190745"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Commerce de détail, Textile",
+        "victime": "InStyle (Australie), Oxford (Australie)",
+        "description": "Attaques par ransomware du groupe INC Ransom, impactant le fournisseur textile InStyle et le détaillant Oxford en Australie.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_detail",
+          "textile",
+          "instyle",
+          "oxford",
+          "inc_ransom",
+          "ransomware",
+          "australie"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115664151716644076"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Commerce de détail (Bricolage)",
+        "victime": "Leroy Merlin France",
+        "description": "Cyberattaque ayant exposé les données de contact (noms, prénoms, numéros de téléphone, adresses électroniques et postales, informations de fidélité) de centaines de milliers de clients. Les données bancaires et les mots de passe ne sont pas concernés.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_detail",
+          "leroy_merlin",
+          "donnees_personnelles",
+          "cyberattaque",
+          "france"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/04/leroy-merlin-victime-d-une-cyberattaque-visant-les-donnees-de-centaines-de-milliers-de-clients_6655966_4408996.html",
+          "https://infosec.exchange/@DevaOnBreaches/115663955270979489"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Services financiers (Fintech, banques, coopératives de crédit)",
+        "victime": "Marquis Software Solutions",
+        "description": "Violation de données suite à une attaque par ransomware ciblant le pare-feu SonicWall, exposant les données personnelles et financières de plus de 780 000 individus (noms, adresses, numéros de sécurité sociale, numéros de carte) de plus de 74 banques et coopératives de crédit aux États-Unis.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "ransomware",
+          "donnees_personnelles",
+          "donnees_financieres",
+          "sonicwall",
+          "marquis_software_solutions",
+          "banque",
+          "credit_union"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185327/hacking/u-s-cisa-adds-new-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185320/data-breach/marquis-data-breach-impacted-more-than-780000-individuals.html",
+          "https://databreaches.net/2025/12/04/marquis-data-breach-impacts-over-74-us-banks-credit-unions/?pk_campaign=feed&pk_kwd=marquis-data-breach-impacts-over-74-us-banks-credit-unions",
+          "https://infosec.exchange/@DevaOnBreaches/115663946404921516"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "University of Phoenix",
+        "description": "Violation de données après l'exploitation d'une vulnérabilité zero-day dans Oracle E-Business par le groupe Clop, entraînant le vol de données sensibles d'étudiants, de personnel et de fournisseurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "university_of_phoenix",
+          "clop",
+          "oracle_e_business",
+          "zero_day",
+          "donnees_etudiants",
+          "donnees_personnel"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115663949967960597"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée dans le protocole 'Flight' des React Server Components, due à une désérialisation non sécurisée des charges utiles HTTP malveillantes. Connu sous le nom de 'React2Shell'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "react",
+          "nextjs",
+          "deserialisation_insecure",
+          "react_server_components",
+          "flight_protocol"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66478",
+        "cvss": "10.0",
+        "product": "Next.js (avec App Router)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée dans le protocole 'Flight' des React Server Components, affectant les applications Next.js utilisant l'App Router. Considérée comme un doublon de CVE-2025-55182.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "react",
+          "nextjs",
+          "deserialisation_insecure",
+          "react_server_components",
+          "flight_protocol"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": "10.0",
+        "product": "Apache Tika Core",
+        "description": "Vulnérabilité critique d'injection d'entité externe XML (XXE) permettant à un attaquant de compromettre les serveurs via le téléchargement d'un fichier PDF malveillant, entraînant la divulgation de données, le déni de service ou la falsification de requêtes côté serveur (SSRF).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "xxe",
+          "apache_tika",
+          "pdf",
+          "data_disclosure",
+          "dos",
+          "ssrf"
+        ],
+        "sources": [
+          "https://securityonline.info/the-pdf-trap-critical-vulnerability-cve-2025-66516-cvss-10-0-hits-apache-tika-core/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-33183",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T TorchSerializer",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) due à la désérialisation de données non fiables dans la classe TorchSerializer, permettant à un attaquant d'exécuter du code arbitraire avec les privilèges root sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "nvidia",
+          "isaac_gr00t",
+          "deserialisation_insecure",
+          "torchserializer"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1041/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66509",
+        "cvss": "8.9",
+        "product": "LaraDashboard",
+        "description": "Vulnérabilité RCE pré-authentification en un clic via la manipulation de l'en-tête Host et une chaîne d'installation de module, permettant de rediriger le jeton de réinitialisation de mot de passe de l'administrateur et d'exécuter du code PHP arbitraire.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_auth",
+          "laradashboard",
+          "host_header_injection",
+          "module_installation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66509"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13066",
+        "cvss": "8.8",
+        "product": "WordPress Demo Importer Plus <= 2.0.6",
+        "description": "Vulnérabilité de téléchargement de fichier arbitraire authentifiée (niveau auteur et supérieur) via un contournement de validation de type de fichier WXR, permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_upload",
+          "rce",
+          "wordpress",
+          "demo_importer_plus",
+          "file_type_validation_bypass",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13066"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2021-26828",
+        "cvss": "8.7",
+        "product": "OpenPLC ScadaBR",
+        "description": "Vulnérabilité de téléchargement de fichier sans restriction avec un type dangereux, ajoutée au catalogue CISA des vulnérabilités connues exploitées.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "file_upload",
+          "scada",
+          "ics",
+          "openplc",
+          "cisa_kev"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185327/hacking/u-s-cisa-adds-new-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13373",
+        "cvss": "8.7",
+        "product": "Advantech iView",
+        "description": "Vulnérabilité d'injection SQL via des requêtes SNMP v1 trap non correctement assainies, permettant l'injection de commandes SQL.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "advantech",
+          "iview",
+          "snmp"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13373"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-12196",
+        "cvss": "8.6",
+        "product": "WatchGuard Fireware OS",
+        "description": "Vulnérabilité d'écriture hors limites (Out-of-bounds Write) dans la CLI, permettant à un utilisateur privilégié authentifié d'exécuter du code arbitraire via une commande CLI spécialement conçue.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "out_of_bounds_write",
+          "rce",
+          "watchguard",
+          "fireware_os",
+          "cli",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12196"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13932",
+        "cvss": "8.3",
+        "product": "SolisCloud API",
+        "description": "Vulnérabilité de contrôle d'accès brisé (IDOR) dans l'API, permettant à tout utilisateur authentifié d'accéder aux données détaillées de n'importe quelle installation en modifiant le 'plant_id' dans la requête.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "broken_access_control",
+          "idor",
+          "soliscloud",
+          "api",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13932"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-1545",
+        "cvss": "8.2",
+        "product": "WatchGuard Fireware OS",
+        "description": "Vulnérabilité d'injection XPath dans le CGI Web, pouvant permettre à un attaquant distant non authentifié de récupérer des informations sensibles de la configuration du Firebox via une interface d'authentification ou de gestion exposée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "xpath_injection",
+          "watchguard",
+          "fireware_os",
+          "authentication_bypass",
+          "data_disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-1545"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66559",
+        "cvss": "8.0",
+        "product": "Taiko Alethia Pacaya",
+        "description": "Corruption de pointeur dans la vérification de la boîte de réception (inbox verification), pouvant corrompre le pointeur de la chaîne vérifiée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "corruption",
+          "taiko_alethia",
+          "ethereum",
+          "blockchain"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66559"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-48633",
+        "cvss": "Non spécifié (Haute)",
+        "product": "Android Framework",
+        "description": "Problème de divulgation d'informations dans le Framework Android, activement exploité et ajouté au catalogue KEV de CISA. Impacte la confidentialité des données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "information_disclosure",
+          "exploited_in_the_wild",
+          "cisa_kev",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-48633-and-cve-2025-48572-vulnerabilities/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-48572",
+        "cvss": "Non spécifié (Haute)",
+        "product": "Android Framework",
+        "description": "Vulnérabilité d'escalade de privilèges dans le Framework Android, activement exploitée et ajoutée au catalogue KEV de CISA. Impacte l'intégrité et la disponibilité du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "privilege_escalation",
+          "exploited_in_the_wild",
+          "cisa_kev",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-48633-and-cve-2025-48572-vulnerabilities/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Smile, You’re on Camera: A Live Stream from Inside Lazarus Group’s IT Workers Scheme",
+        "description": "Une enquête a révélé une opération d'infiltration du groupe Lazarus, où des agents se font passer pour des travailleurs informatiques à distance afin d'accéder aux réseaux d'entreprise. Cette méthode permet un accès initial discret et à long terme.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article met en lumière une méthode d'infiltration sophistiquée ciblant la chaîne d'approvisionnement, utilisée par un acteur étatique majeur pour l'espionnage et le sabotage à long terme. La menace est transversale à de nombreux secteurs.",
+        "recommandations": "Mettre en œuvre des vérifications approfondies des antécédents pour les travailleurs à distance, segmenter rigoureusement les réseaux et surveiller en continu les activités inhabituelles provenant de comptes de confiance.",
+        "tags": [
+          "actor",
+          "nation_state",
+          "espionnage",
+          "supply_chain",
+          "social_engineering",
+          "initial_access"
+        ],
+        "sources": [
+          "/cybersecurity-blog/lazarus-group-it-workers-investigation/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Hackers are exploiting ArrayOS AG VPN flaw to plant webshells",
+        "description": "Des acteurs malveillants exploitent une vulnérabilité d'injection de commandes dans les dispositifs VPN Array AG Series pour implanter des webshells et créer des utilisateurs non autorisés. Les attaques sont principalement observées en Asie, notamment au Japon.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'exploitation des vulnérabilités VPN reste un vecteur d'accès initial critique. Ces attaques soulignent le risque posé par les dispositifs peu surveillés en dehors de leurs régions d'utilisation principales et la nécessité de mises à jour immédiates.",
+        "recommandations": "Appliquer immédiatement les correctifs pour les dispositifs VPN Array AG Series, surveiller la création de comptes utilisateurs non autorisés et la présence de webshells, et renforcer l'authentification multi-facteurs pour l'accès VPN.",
+        "tags": [
+          "vulnerability_exploitation",
+          "command_injection",
+          "webshell",
+          "vpn",
+          "initial_access",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-are-exploiting-arrayos-ag-vpn-flaw-to-plant-webshells/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "CISA warns of Chinese \"BrickStorm\" malware attacks on VMware servers",
+        "description": "La CISA alerte sur l'utilisation du malware 'Brickstorm' par des hackers chinois pour compromettre les serveurs VMware vSphere, créer des machines virtuelles furtives, et voler des clichés de VM pour l'exfiltration de credentials. Les attaques impliquent le mouvement latéral à partir de serveurs web compromis.",
+        "threat_actor": "Chinese hackers (Warp Panda)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Ciblage étatique des infrastructures de virtualisation pour une persistance à long terme et un vol de données, utilisant des techniques d'évasion sophistiquées. Un risque élevé pour les infrastructures critiques et les organisations gouvernementales.",
+        "recommandations": "Scanner les réseaux pour détecter l'activité du backdoor Brickstorm, bloquer les fournisseurs DNS-over-HTTPS non autorisés et le trafic externe suspect, sécuriser les environnements VMware et renforcer les contrôles d'accès sur vCenter et Active Directory.",
+        "tags": [
+          "nation_state",
+          "espionage",
+          "malware",
+          "brickstorm",
+          "vmware",
+          "critical_infrastructure",
+          "persistence",
+          "defense_evasion",
+          "credential_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-chinese-brickstorm-malware-attacks-on-vmware-servers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Contractors with hacking records accused of wiping 96 govt databases",
+        "description": "Deux anciens contractuels fédéraux ont été inculpés pour avoir volé des informations sensibles et supprimé 96 bases de données gouvernementales après leur licenciement. Les actions comprenaient l'accès non autorisé aux systèmes, des commandes pour empêcher la modification des données et la tentative d'effacement des journaux.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Met en évidence les risques graves posés par les menaces internes, en particulier celles ayant des privilèges d'accès élevés à des données gouvernementales sensibles. Souligne l'importance de la gestion des accès et de la surveillance des activités.",
+        "recommandations": "Mettre en œuvre des procédures strictes de révocation des accès, une surveillance accrue de l'activité des utilisateurs privilégiés, des stratégies de sauvegarde et de récupération des données, et une préparation à la criminalistique numérique pour les enquêtes sur les menaces internes.",
+        "tags": [
+          "insider_threat",
+          "data_destruction",
+          "data_theft",
+          "government",
+          "privileged_access",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/contractors-with-hacking-records-accused-of-wiping-96-govt-databases/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Predator spyware uses new infection vector for zero-click attacks",
+        "description": "Le logiciel espion Predator d'Intellexa utilise un mécanisme d'infection 'zero-click' nommé 'Aladdin', compromettant des cibles spécifiques par la simple visualisation d'une publicité malveillante. D'autres vecteurs, tels que 'Triton', ciblent les exploits de bande de base Samsung Exynos.",
+        "threat_actor": "Intellexa (Predator spyware)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Illustre la sophistication croissante des logiciels espions commerciaux et des exploits 'zero-click', ciblant les appareils mobiles et utilisant les réseaux publicitaires pour la distribution. Représente une menace significative pour les cibles de grande valeur.",
+        "recommandations": "Activer les fonctions de protection avancée sur les appareils mobiles (mode de verrouillage iOS, protection avancée Android), maintenir le système d'exploitation et les applications à jour, et faire preuve de prudence face aux publicités inattendues.",
+        "tags": [
+          "spyware",
+          "zero_click",
+          "mobile_security",
+          "intellexa",
+          "predator",
+          "targeted_attacks",
+          "advanced_persistent_threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-uses-new-infection-vector-for-zero-click-attacks/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "SMS Phishers Pivot to Points, Taxes, Fake Retailers",
+        "description": "Des groupes de phishing basés en Chine lancent de nouvelles campagnes de phishing SMS avec des leurres de points de récompense, de remboursements d'impôts et utilisent des kits de phishing pour créer de faux sites de e-commerce. L'objectif est de voler les données de cartes de paiement et de les lier à des portefeuilles mobiles.",
+        "threat_actor": "China-based phishing groups",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Démontre l'évolution des tactiques des groupes de phishing motivés financièrement, s'adaptant aux périodes de fêtes et utilisant des méthodes sophistiquées pour contourner la sécurité traditionnelle et exploiter les systèmes de paiement mobile.",
+        "recommandations": "Sensibilisation des utilisateurs aux risques de smishing et de faux sites e-commerce, vérification directe des URL, surveillance étroite des relevés bancaires, mise en place de l'authentification multi-facteurs, signalement des messages suspects.",
+        "tags": [
+          "phishing",
+          "smishing",
+          "social_engineering",
+          "financial_crime",
+          "e_commerce",
+          "data_theft",
+          "mobile_wallets"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/sms-phishers-pivot-to-points-taxes-fake-retailers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "React2Shell: Critical Remote Code Execution Vulnerabilities in React Server Components and Next.js",
+        "description": "Plusieurs vulnérabilités critiques d'exécution de code à distance (RCE), CVE-2025-55182 et CVE-2025-66478 (CVSS 10.0), ont été découvertes dans le protocole 'Flight' de React Server Components, permettant une RCE non authentifiée via une désérialisation non sécurisée. Des groupes d'acteurs liés à la Chine ont rapidement commencé à les exploiter.",
+        "threat_actor": "China-nexus threat groups (Earth Lamia, Jackpot Panda, Salt Typhoon affiliates)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "183.6.80.214"
+          ]
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Une faille de la chaîne d'approvisionnement extrêmement grave touchant des frameworks de développement web très répandus, permettant une compromission rapide et fiable des serveurs. L'exploitation rapide par des acteurs étatiques souligne la criticité et l'urgence des correctifs.",
+        "recommandations": "Mettre à jour immédiatement vers les versions corrigées de React et Next.js, déployer des règles AWS WAF personnalisées comme mesure de protection temporaire, rechercher les 'fingerprints' React2Shell, et surveiller les apparitions inhabituelles de processus 'node child_process' ou de charges utiles spécifiques du protocole Flight.",
+        "tags": [
+          "vulnerability",
+          "remote_code_execution",
+          "rce",
+          "react",
+          "nextjs",
+          "supply_chain",
+          "deserialization",
+          "zero_day",
+          "nation_state",
+          "china_nexus"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://www.bleepingcomputer.com/news/security/critical-react2shell-flaw-in-react-nextjs-lets-hackers-run-javascript-code/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/china-nexus-hackers-exploiting-react2shell-flaw/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by increasing intensity and sophistication, with a notable convergence of technological and human risks. Critical vulnerabilities, particularly those leading to Remote Code Execution (RCE) like the 'React2Shell' flaw (CVE-2025-55182), are exploited very rapidly after disclosure, often by state-sponsored actors. The supply chain remains a major attack vector, as evidenced by Lazarus Group's infiltrations via IT workers and the compromise of an ASUS supplier. The use of AI by attackers for phishing campaigns and vulnerability discovery is an emerging trend, while defenders are also beginning to adopt it to enhance detection and response. Sophisticated spyware like Predator leverages 'zero-click' mechanisms, targeting mobile devices via malicious advertisements. Concurrently, financially motivated cybercrime persists with innovative SMS phishing campaigns and fake e-commerce sites. High-volume DDoS attacks are also on the rise, highlighting the capacity of botnets like AISURU to disrupt essential services. Finally, insider threats and massive data breaches continue to affect various sectors, from finance to education. In conclusion, the overall state of threats is elevated, requiring constant vigilance, rapid updates, stringent access controls, and continuous training to counter the adaptive tactics of adversaries.",
+      "date": "2025-12-05"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "AISURU botnet",
+        "secteur": "Telecommunications, gaming, hosting, finance, AI firms, mining/metals, automotive",
+        "modop": "Hyper-volumetric DDoS attacks, offered as botnet-for-hire services.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "aisuru",
+          "ddos",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185299/security/cloudflare-mitigates-record-29-7-tbps-ddos-attack-by-the-aisuru-botnet/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "China-based phishing groups",
+        "secteur": "Consumers, e-commerce, finance, telecommunications",
+        "modop": "SMS phishing (smishing) campaigns with lures of reward points, tax refunds, and fake e-commerce websites to steal payment information and link cards to mobile wallets.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing_group",
+          "smishing",
+          "social_engineering",
+          "financial_crime",
+          "e_commerce"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/sms-phishers-pivot-to-points-taxes-fake-retailers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "China-nexus threat groups (Warp Panda, Earth Lamia, Jackpot Panda, Salt Typhoon affiliates)",
+        "secteur": "Government, critical infrastructure, technology, legal, finance, e-commerce, SaaS",
+        "modop": "Deployment of Brickstorm malware on VMware vSphere servers, rapid exploitation of React2Shell vulnerability (CVE-2025-55182).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "china_nexus",
+          "espionage",
+          "malware",
+          "brickstorm",
+          "vmware",
+          "vulnerability_exploitation",
+          "react2shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-chinese-brickstorm-malware-attacks-on-vmware-servers/",
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://www.bleepingcomputer.com/news/security/critical-react2shell-flaw-in-react-nextjs-lets-hackers-run-javascript-code/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/china-nexus-hackers-exploiting-react2shell-flaw/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Education (University of Phoenix)",
+        "modop": "Exploitation of an Oracle E-Business zero-day vulnerability for data theft.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "clop",
+          "ransomware_group",
+          "data_breach",
+          "zero_day",
+          "oracle"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115663949967960597"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Everest gang",
+        "secteur": "Suppliers, technology (ASUS, ArcSoft, Qualcomm)",
+        "modop": "Ransomware attack, data leak following supplier compromise.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "everest_gang",
+          "ransomware",
+          "data_breach",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185310/data-breach/asus-confirms-vendor-breach-as-everest-gang-leaks-data-claims-arcsoft-and-qualcomm/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "INC Ransom",
+        "secteur": "Retail, Textile (Oxford, InStyle)",
+        "modop": "Ransomware attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "inc_ransom",
+          "ransomware",
+          "data_breach",
+          "retail"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115664151716644076"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Intellexa (Predator spyware)",
+        "secteur": "Specific targeting (mobile devices)",
+        "modop": "Zero-click attacks via malicious advertisements ('Aladdin'), baseband exploits (Exynos via 'Triton').",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "intellexa",
+          "predator_spyware",
+          "zero_click",
+          "mobile_security",
+          "targeted_attacks"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-uses-new-infection-vector-for-zero-click-attacks/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "nom": "Lazarus Group",
+        "secteur": "Various (targeting corporate networks)",
+        "modop": "IT worker infiltration for initial access, targeting the supply chain.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "lazarus_group",
+          "nation_state",
+          "espionage",
+          "supply_chain",
+          "social_engineering"
+        ],
+        "sources": [
+          "/cybersecurity-blog/lazarus-group-it-workers-investigation/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Telecommunications, Cybersecurity, Social Media",
+        "theme": "Blocking of Communication Platforms",
+        "description": "Russia has blocked access to Apple's FaceTime and Snapchat, claiming they are used to coordinate terrorist attacks. This action is part of a broader crackdown on foreign messaging and video conferencing services (Viber, Signal, Discord, Microsoft Teams, Telegram, WhatsApp, WeChat) under the guise of anti-extremism and anti-terrorism legislation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "facetime",
+          "snapchat",
+          "censorship",
+          "surveillance",
+          "terrorism"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russia-blocks-facetime-and-snapchat-over-use-in-terrorist-attacks/",
+          "https://securityonline.info/russia-imposes-network-level-blockade-on-apples-end-to-end-encrypted-facetime/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Defense, Critical Infrastructure, Politics, Society",
+        "theme": "Russia's Hybrid Strategy Against Europe",
+        "description": "Russia is conducting a hybrid campaign against Europe, using grey-zone tools (cyber, information operations, energy coercion, sabotage, criminal proxies, political subversion) to degrade adversary capabilities. These actions target leadership, organic essentials (energy, industry), infrastructure (power grids, GPS), populations (cognitive warfare), and fielded forces (sub-threshold testing), demonstrating a continuous conflict rather than a pre-war phase.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "europe",
+          "hybrid_warfare",
+          "cyberattack",
+          "disinformation",
+          "sabotage",
+          "critical_infrastructure",
+          "influence_operation"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/are-we-war-russia-how-wardens-rings-map-russias-hybrid-strategy"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Maritime Trade, Energy, Diplomacy",
+        "theme": "Red Sea and Suez Canal Tensions",
+        "description": "UNSC Resolution 2801 extends sanctions against Yemen, aiming to contain the Houthis and limit their ability to threaten maritime security. Houthi attacks significantly impact global trade, reducing Suez Canal traffic and increasing reliance on the Cape of Good Hope. France and the United States criticize the resolution as insufficient, seeing it as a strategic issue related to Iran and Indo-Pacific security. China and Russia abstain, seeking to protect their trade routes and diplomatic influence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "yemen",
+          "red_sea",
+          "suez_canal",
+          "houthis",
+          "international_trade",
+          "regional_conflict",
+          "iran",
+          "united_states",
+          "france",
+          "china",
+          "russia",
+          "un_resolution"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2025/yemen-mer-rouge-et-canal-de-suez-une-crise-regionale-devenue-enjeu-global/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Technology, Manufacturing (via supply chain)",
+        "victime": "ASUS (via a supplier)",
+        "description": "ASUS confirmed a data breach at a supplier, leading to the leak of some phone camera source code for ASUS phones. The Everest ransomware group claimed responsibility, asserting they also hold data from ArcSoft and Qualcomm.",
+        "tags": [
+          "violation",
+          "breach",
+          "technology",
+          "manufacturing",
+          "asus",
+          "supply_chain",
+          "everest_gang",
+          "source_code",
+          "arcsoft",
+          "qualcomm"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185310/data-breach/asus-confirms-vendor-breach-as-everest-gang-leaks-data-claims-arcsoft-and-qualcomm/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (South Korea)",
+        "description": "Massive data breach impacting the e-commerce sector in South Korea, leading to operational losses and increased security costs.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "south_korea",
+          "customer_data"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115664820813190745"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Retail, Textile",
+        "victime": "InStyle (Australia), Oxford (Australia)",
+        "description": "Ransomware attacks by the INC Ransom group, affecting textile supplier InStyle and retailer Oxford in Australia.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "textile",
+          "instyle",
+          "oxford",
+          "inc_ransom",
+          "ransomware",
+          "australia"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115664151716644076"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Retail (DIY)",
+        "victime": "Leroy Merlin France",
+        "description": "Cyberattack exposing contact details (names, phone numbers, email and postal addresses, loyalty information) of hundreds of thousands of customers. Banking details and account passwords were not affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "leroy_merlin",
+          "personal_data",
+          "cyberattack",
+          "france"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/04/leroy-merlin-victime-d-une-cyberattaque-visant-les-donnees-de-centaines-de-milliers-de-clients_6655966_4408996.html",
+          "https://infosec.exchange/@DevaOnBreaches/115663955270979489"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Financial Services (Fintech, banks, credit unions)",
+        "victime": "Marquis Software Solutions",
+        "description": "Data breach following a ransomware attack targeting the SonicWall firewall, exposing personal and financial data of over 780,000 individuals (names, addresses, SSNs, card numbers) from more than 74 US banks and credit unions.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "ransomware",
+          "personal_data",
+          "financial_data",
+          "sonicwall",
+          "marquis_software_solutions",
+          "bank",
+          "credit_union"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185327/hacking/u-s-cisa-adds-new-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185320/data-breach/marquis-data-breach-impacted-more-than-780000-individuals.html",
+          "https://databreaches.net/2025/12/04/marquis-data-breach-impacts-over-74-us-banks-credit-unions/?pk_campaign=feed&pk_kwd=marquis-data-breach-impacts-over-74-us-banks-credit-unions",
+          "https://infosec.exchange/@DevaOnBreaches/115663946404921516"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Phoenix",
+        "description": "Data breach after the Clop group exploited a zero-day vulnerability in Oracle E-Business, leading to the theft of sensitive data from students, staff, and suppliers.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "university_of_phoenix",
+          "clop",
+          "oracle_e_business",
+          "zero_day",
+          "student_data",
+          "staff_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115663949967960597"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability in React Server Components 'Flight' protocol, due to unsafe deserialization of maliciously crafted HTTP requests. Known as 'React2Shell'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "react",
+          "nextjs",
+          "insecure_deserialization",
+          "react_server_components",
+          "flight_protocol"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66478",
+        "cvss": "10.0",
+        "product": "Next.js (with App Router)",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability in React Server Components 'Flight' protocol, affecting Next.js applications using the App Router. Considered a duplicate of CVE-2025-55182.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "react",
+          "nextjs",
+          "insecure_deserialization",
+          "react_server_components",
+          "flight_protocol"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": "10.0",
+        "product": "Apache Tika Core",
+        "description": "Critical XML External Entity (XXE) injection vulnerability allowing an attacker to compromise servers via uploading a malicious PDF file, leading to data disclosure, denial of service, or Server-Side Request Forgery (SSRF).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "xxe",
+          "apache_tika",
+          "pdf",
+          "data_disclosure",
+          "dos",
+          "ssrf"
+        ],
+        "sources": [
+          "https://securityonline.info/the-pdf-trap-critical-vulnerability-cve-2025-66516-cvss-10-0-hits-apache-tika-core/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-33183",
+        "cvss": "9.8",
+        "product": "NVIDIA Isaac-GR00T TorchSerializer",
+        "description": "Remote Code Execution (RCE) vulnerability due to deserialization of untrusted data in the TorchSerializer class, allowing an attacker to execute arbitrary code with root privileges without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "nvidia",
+          "isaac_gr00t",
+          "insecure_deserialization",
+          "torchserializer"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1041/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66509",
+        "cvss": "8.9",
+        "product": "LaraDashboard",
+        "description": "One-click pre-authentication RCE vulnerability via Host header manipulation and module installation chain, allowing redirection of administrator's password reset token and arbitrary PHP code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_auth",
+          "laradashboard",
+          "host_header_injection",
+          "module_installation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66509"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13066",
+        "cvss": "8.8",
+        "product": "WordPress Demo Importer Plus <= 2.0.6",
+        "description": "Authenticated (Author+) arbitrary file upload vulnerability via WXR file type validation bypass, allowing remote code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_upload",
+          "rce",
+          "wordpress",
+          "demo_importer_plus",
+          "file_type_validation_bypass",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13066"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2021-26828",
+        "cvss": "8.7",
+        "product": "OpenPLC ScadaBR",
+        "description": "Unrestricted file upload of dangerous type vulnerability, added to CISA's Known Exploited Vulnerabilities catalog.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "file_upload",
+          "scada",
+          "ics",
+          "openplc",
+          "cisa_kev"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185327/hacking/u-s-cisa-adds-new-openplc-scadabr-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13373",
+        "cvss": "8.7",
+        "product": "Advantech iView",
+        "description": "SQL Injection vulnerability through improperly sanitized SNMP v1 trap requests, allowing SQL command injection.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "advantech",
+          "iview",
+          "snmp"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13373"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-12196",
+        "cvss": "8.6",
+        "product": "WatchGuard Fireware OS",
+        "description": "Authenticated Out-of-bounds Write vulnerability in the CLI, allowing a privileged authenticated user to execute arbitrary code via a specially crafted CLI command.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "out_of_bounds_write",
+          "rce",
+          "watchguard",
+          "fireware_os",
+          "cli",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12196"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-13932",
+        "cvss": "8.3",
+        "product": "SolisCloud API",
+        "description": "Broken Access Control (IDOR) vulnerability in the API, allowing any authenticated user to access detailed plant data by altering the 'plant_id' in the request.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "broken_access_control",
+          "idor",
+          "soliscloud",
+          "api",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13932"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-1545",
+        "cvss": "8.2",
+        "product": "WatchGuard Fireware OS",
+        "description": "XPath Injection vulnerability in the Web CGI, potentially allowing a remote unauthenticated attacker to retrieve sensitive configuration information from the Firebox via an exposed authentication or management web interface.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "xpath_injection",
+          "watchguard",
+          "fireware_os",
+          "authentication_bypass",
+          "data_disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-1545"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-66559",
+        "cvss": "8.0",
+        "product": "Taiko Alethia Pacaya",
+        "description": "Pointer corruption in the inbox verification process, which could corrupt the verified chain pointer.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "corruption",
+          "taiko_alethia",
+          "ethereum",
+          "blockchain"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66559"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-48633",
+        "cvss": "Not specified (High)",
+        "product": "Android Framework",
+        "description": "Information Disclosure issue in the Android Framework, actively exploited and added to CISA's KEV catalog. Impacts data confidentiality.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "information_disclosure",
+          "exploited_in_the_wild",
+          "cisa_kev",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-48633-and-cve-2025-48572-vulnerabilities/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "cve_id": "CVE-2025-48572",
+        "cvss": "Not specified (High)",
+        "product": "Android Framework",
+        "description": "Privilege Escalation vulnerability in the Android Framework, actively exploited and added to CISA's KEV catalog. Impacts system integrity and availability.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "android",
+          "privilege_escalation",
+          "exploited_in_the_wild",
+          "cisa_kev",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-48633-and-cve-2025-48572-vulnerabilities/"
+        ],
+        "date": "2025-12-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Smile, You’re on Camera: A Live Stream from Inside Lazarus Group’s IT Workers Scheme",
+        "description": "An investigation revealed an infiltration operation by the Lazarus Group, where operatives pose as remote IT workers to gain access to corporate networks. This method allows for discrete and long-term initial access.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This article highlights a sophisticated supply chain infiltration method used by a major nation-state actor for long-term espionage and sabotage. The threat is transversal across many sectors.",
+        "recommandations": "Implement thorough background checks for remote workers, rigorously segment networks, and continuously monitor for unusual activity from trusted accounts.",
+        "tags": [
+          "actor",
+          "nation_state",
+          "espionage",
+          "supply_chain",
+          "social_engineering",
+          "initial_access"
+        ],
+        "sources": [
+          "/cybersecurity-blog/lazarus-group-it-workers-investigation/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Hackers are exploiting ArrayOS AG VPN flaw to plant webshells",
+        "description": "Threat actors are exploiting a command injection vulnerability in Array AG Series VPN devices to deploy webshells and create unauthorized user accounts. Attacks are primarily observed in Asia, particularly Japan.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The exploitation of VPN vulnerabilities remains a critical initial access vector. These attacks underscore the risk posed by devices not widely monitored outside their primary regions of use and the need for immediate updates.",
+        "recommandations": "Immediately apply patches for Array AG Series VPN devices, monitor for unauthorized user account creation and webshell presence, and enforce multi-factor authentication for VPN access.",
+        "tags": [
+          "vulnerability_exploitation",
+          "command_injection",
+          "webshell",
+          "vpn",
+          "initial_access",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-are-exploiting-arrayos-ag-vpn-flaw-to-plant-webshells/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "CISA warns of Chinese \"BrickStorm\" malware attacks on VMware servers",
+        "description": "CISA warns of Chinese hackers using 'Brickstorm' malware to compromise VMware vSphere servers, create stealthy virtual machines, and steal VM snapshots for credential exfiltration. Attacks involve lateral movement from compromised web servers.",
+        "threat_actor": "Chinese hackers (Warp Panda)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "Nation-state targeting of virtualization infrastructure for long-term persistence and data theft, employing sophisticated evasion techniques. A high risk for critical infrastructure and government organizations.",
+        "recommandations": "Scan networks for Brickstorm backdoor activity, block unauthorized DNS-over-HTTPS providers and suspicious external traffic, secure VMware environments, and strengthen access controls on vCenter and Active Directory.",
+        "tags": [
+          "nation_state",
+          "espionage",
+          "malware",
+          "brickstorm",
+          "vmware",
+          "critical_infrastructure",
+          "persistence",
+          "defense_evasion",
+          "credential_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-chinese-brickstorm-malware-attacks-on-vmware-servers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Contractors with hacking records accused of wiping 96 govt databases",
+        "description": "Two former federal contractors have been charged with stealing sensitive information and deleting 96 government databases after their termination. Actions included unauthorized system access, commands to prevent data modification, and attempts to clear logs.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "Highlights the severe risks posed by insider threats, especially those with high-level access privileges to sensitive government data. Emphasizes the importance of access management and activity monitoring.",
+        "recommandations": "Implement strict access revocation procedures, enhanced monitoring of privileged user activity, data backup and recovery strategies, and digital forensics readiness for insider threat investigations.",
+        "tags": [
+          "insider_threat",
+          "data_destruction",
+          "data_theft",
+          "government",
+          "privileged_access",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/contractors-with-hacking-records-accused-of-wiping-96-govt-databases/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "Predator spyware uses new infection vector for zero-click attacks",
+        "description": "Intellexa's Predator spyware employs a 'zero-click' infection mechanism named 'Aladdin', compromising specific targets by merely viewing a malicious advertisement. Other vectors, such as 'Triton', target Samsung Exynos baseband exploits.",
+        "threat_actor": "Intellexa (Predator spyware)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "Illustrates the increasing sophistication of commercial spyware and 'zero-click' exploits, targeting mobile devices and leveraging advertising networks for distribution. Represents a significant threat to high-value targets.",
+        "recommandations": "Enable advanced protection features on mobile devices (iOS Lockdown Mode, Android Advanced Protection), keep OS and applications up-to-date, and exercise caution with unexpected advertisements.",
+        "tags": [
+          "spyware",
+          "zero_click",
+          "mobile_security",
+          "intellexa",
+          "predator",
+          "targeted_attacks",
+          "advanced_persistent_threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-uses-new-infection-vector-for-zero-click-attacks/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "SMS Phishers Pivot to Points, Taxes, Fake Retailers",
+        "description": "China-based phishing groups are launching new SMS phishing campaigns with lures like reward points and tax refunds, and using phishing kits to create fake e-commerce websites. The goal is to steal payment card data and link them to mobile wallets.",
+        "threat_actor": "China-based phishing groups",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "Demonstrates the evolving tactics of financially motivated phishing groups, adapting to holiday seasons and using sophisticated methods to bypass traditional security and exploit mobile payment systems.",
+        "recommandations": "User awareness training on smishing and fake e-commerce sites, direct URL verification, close monitoring of bank statements, implementation of multi-factor authentication, and reporting suspicious messages.",
+        "tags": [
+          "phishing",
+          "smishing",
+          "social_engineering",
+          "financial_crime",
+          "e_commerce",
+          "data_theft",
+          "mobile_wallets"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/sms-phishers-pivot-to-points-taxes-fake-retailers/"
+        ],
+        "date": "2025-12-05"
+      },
+      {
+        "title": "React2Shell: Critical Remote Code Execution Vulnerabilities in React Server Components and Next.js",
+        "description": "Several critical Remote Code Execution (RCE) vulnerabilities, CVE-2025-55182 and CVE-2025-66478 (CVSS 10.0), have been discovered in the 'Flight' protocol of React Server Components, allowing unauthenticated RCE via insecure deserialization. China-nexus threat groups rapidly began exploiting them.",
+        "threat_actor": "China-nexus threat groups (Earth Lamia, Jackpot Panda, Salt Typhoon affiliates)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "183.6.80.214"
+          ]
+        },
+        "mitre_ttps": "Not mentioned",
+        "analyse": "An extremely severe supply chain flaw impacting widely used web development frameworks, enabling rapid and reliable server compromise. The swift weaponization by state-sponsored actors underscores its criticality and the urgency of patching.",
+        "recommandations": "Immediately update to patched versions of React and Next.js, deploy custom AWS WAF rules as a temporary protection measure, scan for React2Shell fingerprints, and monitor for unusual 'node child_process' spawns or specific Flight protocol payloads.",
+        "tags": [
+          "vulnerability",
+          "remote_code_execution",
+          "rce",
+          "react",
+          "nextjs",
+          "supply_chain",
+          "deserialization",
+          "zero_day",
+          "nation_state",
+          "china_nexus"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-041/",
+          "https://www.bleepingcomputer.com/news/security/critical-react2shell-flaw-in-react-nextjs-lets-hackers-run-javascript-code/",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/",
+          "https://aws.amazon.com/security/security-bulletins/rss/aws-2025-030/",
+          "https://cybersecuritynews.com/china-nexus-hackers-exploiting-react2shell-flaw/",
+          "https://cybersecuritynews.com/poc-exploit-react-next-js/",
+          "https://securityonline.info/react2shell-storm-china-nexus-groups-weaponize-critical-react-flaw-hours-after-disclosure/",
+          "https://thecyberthrone.in/2025/12/05/react2shell-cve-2025-55182-shaking-react-and-next-js-ecosystems/"
+        ],
+        "date": "2025-12-05"
+      }
+    ]
+  }
+}
