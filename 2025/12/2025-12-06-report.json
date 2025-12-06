@@ -1,0 +1,1527 @@
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification des menaces cyber, marquée par une exploitation rapide et agressive des vulnérabilités critiques, souvent par des acteurs étatiques ou des groupes de ransomware. La vulnérabilité React2Shell (CVE-2025-55182), de sévérité maximale, est un exemple frappant : exploitée activement par des groupes liés à la Chine quelques heures après sa divulgation, elle souligne la pression croissante sur les équipes de défense pour patcher et atténuer les risques sans délai. Des vulnérabilités similaires d'exécution de code à distance (RCE) et d'injection de commandes sont également activement exploitées dans des produits comme les passerelles Array Networks AG et Langflow.\n\nLa chaîne d'approvisionnement (supply chain) demeure une cible privilégiée, comme en témoigne la campagne BRICKSTORM des acteurs parrainés par l'État chinois, qui compromet les infrastructures virtuelles via les identifiants de fournisseurs de services gérés (MSP), et l'attaque du fournisseur d'Asus par le groupe Everest, entraînant le vol de propriété intellectuelle. Ces attaques mettent en évidence la complexité de la sécurisation au-delà des périmètres directs des organisations.\n\nL'utilisation de l'intelligence artificielle (IA) par les attaquants commence à se concrétiser, avec l'arrestation d'un adolescent au Japon qui aurait utilisé un programme généré par l'IA pour orchestrer une cyberattaque. Parallèlement, l'émergence de nouveaux vecteurs d'attaque comme l'injection de prompt via l'échantillonnage du Model Context Protocol (MCP) dans les applications LLM montre que les risques liés à l'IA sont à double tranchant.\n\nLes violations de données restent une constante, affectant divers secteurs (santé, pharmaceutique, télécommunications), avec des acteurs comme Clop et Qilin qui continuent de cibler les organisations pour l'extorsion et le vol d'informations sensibles. Une analyse des brèches dans les cabinets d'avocats révèle un risque systémique sous-estimé, où la compromission d'un tiers peut avoir des répercussions stratégiques et financières majeures pour les clients.\n\nAu-delà des menaces techniques, le paysage réglementaire évolue, comme en témoigne l'amende de l'UE à X pour des violations de transparence, et la réflexion du Royaume-Uni sur l'adaptation de sa législation pour mieux protéger les chercheurs en sécurité.\n\nEn conclusion, l'état général des menaces est caractérisé par une exploitation rapide et opportuniste des failles critiques, une persistance des attaques sophistiquées ciblant la supply chain et les infrastructures virtualisées, et l'émergence de nouvelles menaces liées à l'IA. Les organisations doivent renforcer leurs stratégies de gestion des vulnérabilités, de sécurité de la supply chain, d'architecture résiliente et d'adaptation aux nouvelles technologies comme l'IA, tout en restant vigilantes face aux groupes motivés par l'État et le profit.",
+      "date": "2025-12-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware",
+        "secteur": "Santé, Éducation, Logistique, Média, Technologie",
+        "modop": "Exploitation de vulnérabilités zero-day (ex: Oracle E-business Suite CVE-2025-61882) pour vol de données et ransomware.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Clop",
+          "zero-day",
+          "data exfiltration",
+          "healthcare",
+          "education"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/barts-health-nhs-discloses-data-breach-after-oracle-zero-day-hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Qilin ransomware group",
+        "secteur": "Pharmaceutique, Automobile, Services gouvernementaux (juridique), Édition, Services pathologiques",
+        "modop": "Attaques par ransomware, exfiltration de données, utilisation de ransomware basé sur Rust (encryption-resistant payloads).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Qilin",
+          "data exfiltration",
+          "pharmaceutical",
+          "legal"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pharma-firm-inotiv-discloses-data-breach-after-ransomware-attack/",
+          "https://www.recordedfuture.com/blog/the-hidden-cascade/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Everest ransomware gang",
+        "secteur": "Fabrication (fournisseur Asus)",
+        "modop": "Ransomware, extorsion, vol de propriété intellectuelle (code source, modèles AI, firmware).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Everest",
+          "extortion",
+          "intellectual property theft",
+          "supply chain attack"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/05/asus_supplier_hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Earth Lamia",
+        "secteur": "Divers (cible des vulnérabilités critiques)",
+        "modop": "Exploitation rapide de vulnérabilités zero-day/critiques (ex: React2Shell CVE-2025-55182) peu après leur divulgation, balayage automatisé et affinement manuel des techniques d'exploitation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "vulnerability exploitation",
+          "zero-day",
+          "RCE",
+          "React2Shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Jackpot Panda",
+        "secteur": "Divers (cible des vulnérabilités critiques)",
+        "modop": "Exploitation rapide de vulnérabilités zero-day/critiques (ex: React2Shell CVE-2025-55182) peu après leur divulgation, balayage automatisé et affinement manuel des techniques d'exploitation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "vulnerability exploitation",
+          "zero-day",
+          "RCE",
+          "React2Shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Acteurs parrainés par l'État chinois (BRICKSTORM, APTUNC5221)",
+        "secteur": "Services gouvernementaux, Technologies de l'information, Fournisseurs de services gérés (MSP), Juridique, SaaS, BPOs",
+        "modop": "Utilisation de portes dérobées (BRICKSTORM Go-based backdoor) pour la persistance à long terme, exploitation des identifiants MSP, ciblage d'environnements virtualisés (VMware vCenter, ESXi) et Windows. Vol de snapshots de VM, création de VM malveillantes, vol d'identifiants Active Directory, exfiltration de clés cryptographiques ADFS. Canaux C2 chiffrés (HTTPS, WebSockets, DoH).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "state-sponsored",
+          "backdoor",
+          "persistence",
+          "credential theft",
+          "virtualization",
+          "MSP",
+          "supply chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/brickstorm-campaign-msp-credentials-compromise-virtual-infrastructures",
+          "https://securityaffairs.com/185346/intelligence/brickstorm-backdoor-exposed-cisa-warns-of-advanced-china-backed-intrusions/"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Technologie, Culture",
+        "theme": "Réglementation technologique, influence culturelle, aide militaire et économique",
+        "description": "L'UE a infligé une amende de 120 millions d'euros à X (anciennement Twitter) pour non-respect des obligations de transparence du DSA, notamment concernant le système de \"crochets bleus\" trompeur, la base de données publicitaire opaque et le blocage de l'accès des chercheurs aux données publiques. La décision met en évidence les risques de fraude et de manipulation.\nLe gouvernement britannique envisage de modifier sa loi sur l'abus informatique (Computer Misuse Act) vieille de trois décennies pour y inclure une \"défense statutaire\" pour les chercheurs en sécurité, afin de ne pas pénaliser les hackers éthiques participant aux bug bounties.\nLa participation d'Israël à l'Eurovision est devenue un enjeu géopolitique, soulevant des questions de \"deux poids, deux mesures\" par rapport à l'exclusion de la Russie en 2022, et mettant en lumière le rôle des événements culturels dans la diplomatie internationale.\nLe Royaume-Uni soutient l'Ukraine non seulement pour des raisons morales mais aussi pour des avantages économiques et militaires directs, tels que la relance de sa base industrielle de défense et la dégradation des capacités militaires russes sans pertes britanniques. Cela renforce la position du Royaume-Uni au sein de l'OTAN.",
+        "tags": [
+          "géopolitique",
+          "geopolitic",
+          "réglementation",
+          "DSA",
+          "X",
+          "transparence",
+          "cybersécurité",
+          "UK",
+          "législation",
+          "loi",
+          "éthique",
+          "recherche en sécurité",
+          "Israël",
+          "Ukraine",
+          "Russie",
+          "OTAN",
+          "défense",
+          "économie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eu-fines-x-140-million-over-deceptive-blue-checkmarks-transparency-violations/",
+          "https://databreaches.net/2025/12/05/uk-government-consider-computer-misuse-act-revision/?pk_campaign=feed&pk_kwd=uk-government-consider-computer-misuse-act-revision",
+          "https://www.iris-france.org/israel-a-leurovision-un-enjeu-geopolitique/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/britains-economic-and-military-dividend-supporting-ukraine"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Barts Health NHS Trust (Royaume-Uni), Barking, Havering, and Redbridge University Hospitals NHS Trust",
+        "description": "Les acteurs du ransomware Clop ont volé des fichiers d'une base de données Oracle E-business Suite en exploitant une vulnérabilité zero-day (CVE-2025-61882). Les données compromises incluent des fichiers comptables et des informations de patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "healthcare",
+          "ransomware",
+          "Clop",
+          "Oracle",
+          "zero-day",
+          "données personnelles"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/barts-health-nhs-discloses-data-breach-after-oracle-zero-day-hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Pharmaceutique",
+        "victime": "Inotiv (organisation de recherche contractuelle américaine)",
+        "description": "Les acteurs du ransomware Qilin ont accédé aux systèmes et volé des données personnelles (concernant 9 542 individus, employés actuels et anciens, ainsi que membres de leur famille) lors d'une attaque en août 2025. Plus de 162 000 fichiers (176 Go) auraient été exfiltrés.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutique",
+          "pharmaceutical",
+          "ransomware",
+          "Qilin",
+          "données personnelles",
+          "exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pharma-firm-inotiv-discloses-data-breach-after-ransomware-attack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Clients de Freedom Mobile via un compte sous-traitant",
+        "description": "Des pirates ont compromis un compte de sous-traitant, exposant des données clients incluant noms, adresses, dates de naissance, numéros de téléphone et numéros de compte.",
+        "tags": [
+          "violation",
+          "breach",
+          "télécommunications",
+          "telecommunications",
+          "sous-traitant",
+          "third-party",
+          "données clients"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115667355803989296"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Services Internet",
+        "victime": "Kaikatsu Frontier (Japon)",
+        "description": "Un adolescent de 17 ans est soupçonné d'avoir utilisé un programme généré par une IA pour mener une cyberattaque sur les serveurs de Kaikatsu Frontier, envoyant environ 7,24 millions de commandes, ce qui aurait pu entraîner la fuite d'informations personnelles de 7,3 millions de clients.",
+        "tags": [
+          "violation",
+          "breach",
+          "services internet",
+          "AI",
+          "cyberattaque",
+          "données personnelles",
+          "Japon"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/05/japan-issues-arrest-warrant-against-teen-suspected-of-cyberattack-using-ai/",
+          "https://infosec.exchange/@PogoWasRight/115669296140990111"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66570",
+        "cvss": "10.0",
+        "product": "cpp-httplib (antérieur à 0.27.0)",
+        "description": "Vulnérabilité de traitement des en-têtes HTTP non fiables, permettant à un attaquant d'influencer les métadonnées serveur-visibles, la journalisation et les décisions d'autorisation via le masquage d'en-têtes (header shadowing), conduisant à l'usurpation d'IP, l'empoisonnement des journaux et le contournement d'authentification.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "header spoofing",
+          "authorization bypass",
+          "cpp-httplib",
+          "HTTP"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66570"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-44005",
+        "cvss": "10.0",
+        "product": "Step CA (outil d'autorité de certification en ligne)",
+        "description": "Contournement d'autorisation dans les Provisioners ACME et SCEP, permettant à des attaquants non authentifiés d'émettre des certificats frauduleux ou d'accéder à des zones restreintes de l'infrastructure de l'autorité de certification.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "authorization bypass",
+          "certificate authority",
+          "Step CA",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-step-ca-flaw-cve-2025-44005-cvss-10-0-allows-unauthenticated-bypass-to-issue-fraudulent-certificates/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": "10.0",
+        "product": "Apache Tika (tika-core 1.13-3.2.1, tika-pdf-module 2.0.0-3.2.1, tika-parsers 1.13-1.28.5)",
+        "description": "Injection d'entités externes XML (XXE) via un fichier XFA malveillant intégré dans un PDF, permettant l'accès à des ressources internes sensibles.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "XXE",
+          "Apache Tika",
+          "injection",
+          "data confidentiality"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185363/security/maximum-severity-xxe-vulnerability-discovered-in-apache-tika.html"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components (RSC), Next.js (React versions 19.0, 19.1.0, 19.1.1, 19.2.0; Next.js 15.x/16.x avec App Router)",
+        "description": "Vulnérabilité de désérialisation non sécurisée dans le protocole 'Flight' de RSC, permettant l'exécution de code à distance (RCE) sans authentification via des requêtes HTTP malveillantes vers des points de terminaison de fonctions serveur. Activement exploitée par des acteurs liés à la Chine.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "RCE",
+          "React",
+          "Next.js",
+          "deserialization",
+          "server-side",
+          "zero-day",
+          "exploit"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66478",
+        "cvss": "10.0",
+        "product": "Next.js (versions 15.x/16.x avec App Router)",
+        "description": "Désérialisation non sécurisée dans le protocole 'Flight' de React Server Components, conduisant à une RCE non authentifiée (duplicata de CVE-2025-55182).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "RCE",
+          "Next.js",
+          "deserialization"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-34291",
+        "cvss": "9.4",
+        "product": "Langflow (versions jusqu'à 1.6.9)",
+        "description": "Vulnérabilité chaînée impliquant une configuration CORS trop permissive (allow_origins='*' avec allow_credentials=True) et un cookie de jeton de rafraîchissement SameSite=None, permettant la prise de contrôle de compte et l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "RCE",
+          "account takeover",
+          "CORS",
+          "token hijack",
+          "authentication bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34291"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14108",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (jusqu'à 1.1.0210050)",
+        "description": "Vulnérabilité d'injection de commandes dans la fonction `zfilev2_api.OpenSafe` via la manipulation de l'argument `safe_dir`, exploitable à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14108"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14107",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (jusqu'à 1.1.0210050)",
+        "description": "Vulnérabilité d'injection de commandes dans la fonction `zfilev2_api.SafeStatus` via la manipulation de l'argument `safe_dir`, exploitable à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14107"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14106",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (jusqu'à 1.1.0210050)",
+        "description": "Vulnérabilité d'injection de commandes dans la fonction `zfilev2_api.CloseSafe` via la manipulation de l'argument `safe_dir`, exploitable à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14106"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-13426",
+        "cvss": "8.7",
+        "product": "Google Apigee's JavaCallout policy (versions Hybrid_1.11.2+, Hybrid_1.12.4+, Hybrid_1.13.3+, Hybrid_1.14.1+, OPDK_5202+, OPDK_5300+ sont corrigées)",
+        "description": "Mauvaise isolation du bac à sable (Improper Sandboxing) dans la politique JavaCallout, permettant l'exécution de code à distance via l'injection d'un objet malveillant dans le MessageContext pour exécuter du code Java arbitraire et des commandes système.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "RCE",
+          "sandbox escape",
+          "Google Apigee",
+          "Java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13426"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66566",
+        "cvss": "8.2",
+        "product": "yawkat LZ4 Java (lz4-java 1.10.0 et antérieur)",
+        "description": "Nettoyage insuffisant du tampon de sortie dans les implémentations du décompresseur Java, conduisant à une fuite d'informations via une entrée compressée falsifiée si le tampon est réutilisé.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "information leak",
+          "buffer overflow",
+          "Java",
+          "LZ4"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66566"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Guide pratique pour une visibilité continue de la surface d'attaque afin de contrer la désuétude des données passives.",
+        "description": "L'article met en évidence les limites des données d'analyse passives pour la visibilité de la surface d'attaque dans les infrastructures cloud dynamiques. Il préconise une reconnaissance continue et automatisée pour maintenir une image précise et à jour des expositions, face à l'obsolescence rapide des données et l'émergence constante de nouvelles expositions (enregistrements DNS incorrects, certificats TLS expirés, instances de développement oubliées, composants éphémères).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Reconnaissance (T1595 - Active Scanning, T1589 - Gather Victim Identity Information, T1590 - Gather Victim Network Information)",
+        "analyse": "Essentiel pour les organisations modernisant leur infrastructure et accélérant les cycles de déploiement. Une visibilité continue est fondamentale pour l'hygiène de la surface d'attaque, la priorisation des risques et la réduction des incidents.",
+        "recommandations": [
+          "Implémenter des outils de reconnaissance automatisée et continue de la surface d'attaque.",
+          "Ne pas se fier uniquement aux données d'analyse passives, qui peuvent rapidement devenir obsolètes.",
+          "Intégrer la visibilité de la surface d'attaque dans les processus CI/CD pour détecter les expositions éphémères.",
+          "Sensibiliser les équipes de sécurité aux limites des données passives et à la nécessité d'une approche proactive."
+        ],
+        "tags": [
+          "visibilité de la surface d'attaque",
+          "ASM",
+          "reconnaissance",
+          "cloud security",
+          "gestion des vulnérabilités",
+          "hygiène cyber",
+          "veille"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/a-practical-guide-to-continuous-attack-surface-visibility/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Exploitation active de la vulnérabilité critique React2Shell (CVE-2025-55182) dans React Server Components par des groupes liés à la Chine.",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE) sans authentification, nommée React2Shell (CVE-2025-55182, CVSS 10.0), affectant React Server Components (RSC) et les frameworks dépendants comme Next.js, est exploitée activement par des groupes d'APT liés à la Chine (Earth Lamia, Jackpot Panda). La faille est due à une désérialisation non sécurisée dans le protocole 'Flight' de RSC, permettant l'exécution de code arbitraire via des requêtes HTTP malveillantes. Des PoC fonctionnels sont apparus rapidement après la divulgation. Cloudflare a connu une panne suite à la tentative d'implémentation de mesures d'atténuation d'urgence pour cette faille.",
+        "threat_actor": "Earth Lamia, Jackpot Panda, groupes APT liés à la Chine",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-66478"
+          ],
+          "IPv4": [
+            "183.6.80.214"
+          ]
+        },
+        "mitre_ttps": "Initial Access (T1566 - Phishing, T1190 - Exploit Public-Facing Application), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Defense Evasion (T1036 - Masquerading), Credential Access (T1552 - Unsecured Credentials), Discovery (T1083 - File and Directory Discovery)",
+        "analyse": "Impact sévère sur les applications web et les environnements cloud utilisant React et Next.js, avec un risque élevé d'exécution de code à distance et de compromission complète du système. Les acteurs étatiques ciblent les organisations exploitant ces technologies, démontrant une capacité rapide à industrialiser les exploits. La panne de Cloudflare souligne la criticité de l'atténuation.",
+        "recommandations": [
+          "Mettre à jour immédiatement React aux versions 19.0, 19.1.0, 19.1.1, 19.2.0 et Next.js aux versions 15.x, 16.x, 14.3.0-canary.77 et ultérieures.",
+          "Déployer des règles WAF (Web Application Firewall) pour bloquer les tentatives d'exploitation.",
+          "Surveiller les logs pour détecter les requêtes RSC anormales et les activités Node.js suspectes.",
+          "Mener des audits pour identifier les charges de travail exposant des points de terminaison de fonction de serveur RSC."
+        ],
+        "tags": [
+          "React",
+          "Next.js",
+          "RCE",
+          "désérialisation",
+          "vulnérabilité",
+          "exploitation",
+          "APT",
+          "Chine",
+          "Cloudflare",
+          "panne",
+          "Node.js",
+          "sécurité des applications",
+          "zero-day"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.bleepingcomputer.com/news/security/cloudflare-blames-todays-outage-on-emergency-react2shell-patch/",
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/05/react2shell_pocs_exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Automatisation des requêtes d'ajustement des règles de détection pour améliorer l'efficacité du SOC avec les cas Kibana.",
+        "description": "L'article présente une méthode pour automatiser les requêtes d'ajustement des règles de détection dans Elastic Security, en utilisant les fonctionnalités de Kibana Cases. L'objectif est de créer une boucle de rétroaction fluide entre les analystes SOC et les ingénieurs de détection, réduisant la fatigue d'alerte due aux faux positifs et améliorant la réactivité aux vrais positifs. Cela implique l'ajout de champs personnalisés aux cas Kibana et l'utilisation de webhooks pour déclencher des actions (comme la création de tickets dans un système externe).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Amélioration opérationnelle significative pour les SOC, permettant une gestion plus efficace des alertes et une optimisation continue de la posture de sécurité. La réduction du temps de résolution moyen (MTTR) et de la fatigue d'alerte sont des bénéfices clés.",
+        "recommandations": [
+          "Mettre en œuvre des champs personnalisés dans les cas Kibana pour collecter les retours des analystes.",
+          "Configurer des règles de détection pour identifier les besoins d'ajustement et déclencher des workflows automatisés (webhooks).",
+          "Intégrer les cas Kibana avec les systèmes de gestion de tickets pour une traçabilité et une collaboration améliorées.",
+          "Utiliser les champs personnalisés pour suivre des métriques de performance du SOC et identifier les zones d'amélioration."
+        ],
+        "tags": [
+          "SOC",
+          "détection",
+          "réponse aux incidents",
+          "Kibana",
+          "Elastic Security",
+          "automatisation",
+          "efficacité opérationnelle",
+          "gestion des alertes",
+          "SIEM"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/automating-detection-tuning-requests-with-kibana-cases"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Exploitation active de la vulnérabilité des passerelles Array Networks AG permettant l'injection de commandes et l'exécution de code à distance.",
+        "description": "Des acteurs de la menace exploitent activement une vulnérabilité non authentifiée d'injection de commandes dans les passerelles d'accès sécurisé Array Networks AG Series (versions 9.4.5.8 et antérieures), notamment via la fonctionnalité DesktopDirect. L'exploitation, observée depuis août 2025, permet l'exécution de code à distance, le mouvement latéral dans les réseaux internes, l'implantation de webshells et la persistance. Bien qu'aucun CVE n'ait été attribué à cette faille spécifique, un correctif (version 9.4.5.9+) a été publié en mai 2025.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "194.233.100.138"
+          ]
+        },
+        "mitre_ttps": "Initial Access (T1190 - Exploit Public-Facing Application), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution, T1505 - Server Software Component), Lateral Movement (T1021 - Remote Services)",
+        "analyse": "Impact critique sur les organisations utilisant ces passerelles pour l'accès à distance sécurisé, en particulier celles n'ayant pas appliqué les correctifs. La vulnérabilité est facile à exploiter et mène à une compromission système étendue.",
+        "recommandations": [
+          "Mettre à jour toutes les passerelles Array Networks AG vers la version 9.4.5.9 ou ultérieure.",
+          "Appliquer une segmentation réseau et des contrôles d'accès stricts.",
+          "Surveiller les requêtes HTTP anormales et les signes d'activité de webshell.",
+          "Rechercher des signes de compromission, notamment l'installation de webshells ou la création de nouveaux utilisateurs."
+        ],
+        "tags": [
+          "Array Networks",
+          "passerelle",
+          "VPN",
+          "injection de commandes",
+          "RCE",
+          "exploitation",
+          "webshell",
+          "persistance",
+          "accès à distance",
+          "vulnérabilité"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-array-networks-ag-gateway-vulnerability",
+          "https://securityaffairs.com/185358/uncategorized/jpcert-cc-reports-widespread-exploitation-of-array-networks-ag-gateway-vulnerability.html"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "La campagne BRICKSTORM utilise les identifiants des fournisseurs de services gérés (MSP) pour compromettre les infrastructures virtuelles VMware.",
+        "description": "Des acteurs de la menace parrainés par l'État chinois utilisent le backdoor BRICKSTORM (écrit en Go) pour compromettre les environnements VMware vCenter et ESXi, ainsi que les systèmes Windows, en exploitant les identifiants de fournisseurs de services gérés (MSP). Cette campagne, active depuis avril 2024, permet une persistance à long terme, la création de machines virtuelles malveillantes, le vol d'identifiants (via snapshots de VM et Active Directory), et l'exfiltration de clés cryptographiques ADFS. BRICKSTORM utilise des canaux de commande et contrôle chiffrés (HTTPS, WebSockets, DoH) et peut agir comme proxy SOCKS.",
+        "threat_actor": "Acteurs parrainés par l'État chinois, APTUNC5221",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1078 - Valid Accounts, T1190 - Exploit Public-Facing Application), Persistence (T1547 - Boot or Logon Autostart Execution, T1505 - Server Software Component), Privilege Escalation (T1068 - Exploitation for Privilege Escalation), Defense Evasion (T1036 - Masquerading, T1562 - Impair Defenses), Credential Access (T1003 - OS Credential Dumping, T1552 - Unsecured Credentials), Discovery (T1083 - File and Directory Discovery, T1018 - Remote System Discovery), Lateral Movement (T1021 - Remote Services, T1090 - Proxy), Collection (T1560 - Archive Collected Data, T1005 - Data from Local System), Command and Control (T1071 - Application Layer Protocol, T1573 - Encrypted Channel)",
+        "analyse": "Menace significative pour la chaîne d'approvisionnement via les MSP, avec un impact potentiel sur de multiples environnements clients. L'exploitation des plateformes de virtualisation centralisées confère aux attaquants un contrôle étendu, rendant la détection et la remédiation complexes. La persistance à long terme observée (plus d'un an) indique une menace avancée et furtive.",
+        "recommandations": [
+          "Renforcer la sécurité des identifiants MSP (MFA, rotation régulière).",
+          "Segmenter les réseaux et appliquer des contrôles d'accès stricts pour les environnements virtualisés (vCenter, ESXi).",
+          "Mettre en œuvre des outils de détection comportementale pour identifier l'utilisation anormale d'identifiants valides.",
+          "Surveiller les activités sur VMware vCenter et ESXi pour la création de VM non autorisées ou le vol de snapshots.",
+          "Analyser le trafic réseau pour détecter les communications C2 chiffrées suspectes."
+        ],
+        "tags": [
+          "BRICKSTORM",
+          "backdoor",
+          "APT",
+          "Chine",
+          "état-sponsorisé",
+          "MSP",
+          "VMware",
+          "vCenter",
+          "ESXi",
+          "virtualisation",
+          "vol d'identifiants",
+          "persistance",
+          "chaîne d'approvisionnement"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/brickstorm-campaign-msp-credentials-compromise-virtual-infrastructures",
+          "https://securityaffairs.com/185346/intelligence/brickstorm-backdoor-exposed-cisa-warns-of-advanced-china-backed-intrusions/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Un fournisseur d'Asus est victime d'une attaque par ransomware, entraînant la fuite présumée de 1 To de données, dont du code source de caméra pour téléphones.",
+        "description": "Le groupe de ransomware Everest a ciblé un fournisseur non identifié d'Asus, affirmant avoir volé 1 To de données, y compris du code source de caméra pour les téléphones Asus, des modèles d'IA, des micrologiciels et des outils internes OEM. Asus a confirmé la compromission de son fournisseur mais a insisté sur l'absence d'impact sur ses propres produits, systèmes internes ou la confidentialité des clients. Cet incident met en évidence les risques de la chaîne d'approvisionnement.",
+        "threat_actor": "Everest ransomware gang",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1195 - Supply Chain Compromise), Collection (T1005 - Data from Local System), Exfiltration (T1041 - Exfiltration Over C2 Channel), Impact (T1486 - Data Encrypted for Impact)",
+        "analyse": "Met en lumière la vulnérabilité des chaînes d'approvisionnement et l'importance de la sécurité des tiers. Le vol de propriété intellectuelle (code source, modèles d'IA) peut avoir des implications stratégiques et compétitives importantes pour Asus.",
+        "recommandations": [
+          "Renforcer la diligence raisonnable en matière de sécurité pour tous les fournisseurs tiers.",
+          "Mettre en œuvre des audits de sécurité réguliers chez les fournisseurs.",
+          "Segmenter les accès aux données sensibles entre les fournisseurs et les clients finaux.",
+          "Surveiller les activités des groupes de ransomware ciblant les chaînes d'approvisionnement."
+        ],
+        "tags": [
+          "Asus",
+          "fournisseur",
+          "chaîne d'approvisionnement",
+          "ransomware",
+          "Everest",
+          "vol de données",
+          "propriété intellectuelle",
+          "code source"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/05/asus_supplier_hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "L'architecture de sécurité : pourquoi la réversibilité est cruciale pour la résilience face à l'incertitude.",
+        "description": "L'article argue que les leaders de la sécurité opèrent dans un état d'incertitude chronique (budgets réduits, fusions-acquisitions, réglementations changeantes, évolution des fournisseurs). Il préconise une approche d'architecture de sécurité \"réversible\", où les décisions sont modulables, les fournisseurs interchangeables et la stratégie fluide, pour éviter le \"vendor lock-in\" et la \"gravité des données\", notamment pour les SIEM, l'identité et les règles de détection.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Souligne la nécessité d'une architecture de sécurité agile et flexible pour s'adapter aux changements constants du paysage des menaces et des affaires. Une mauvaise architecture peut entraîner des coûts astronomiques et des risques accrus.",
+        "recommandations": [
+          "Concevoir des architectures de sécurité avec une mentalité d'optionalité, où les décisions sont réversibles.",
+          "Éviter le \"vendor lock-in\" en maintenant le contrôle sur les couches fondamentales (données, identité, règles de détection).",
+          "Privilégier la consolidation \"portability-first\" plutôt que la consolidation monolithique.",
+          "Évaluer régulièrement la flexibilité de l'architecture pour pivoter rapidement en cas de nouvelles menaces ou contraintes."
+        ],
+        "tags": [
+          "architecture de sécurité",
+          "résilience",
+          "agilité",
+          "vendor lock-in",
+          "SIEM",
+          "identité",
+          "détection",
+          "stratégie cyber"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/why-architecture-needs-an-undo/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "L'âge moyen des cybercriminels : une étude remet en question l'image stéréotypée de l'adolescent.",
+        "description": "Une étude d'Orange Cyberdefense, le \"Security Navigator 2026\", révèle que la cybercriminalité est majoritairement le fait d'adultes expérimentés, souvent âgés de 30 à 40 ans, plutôt que d'adolescents. Cette conclusion est basée sur un ensemble de données de 418 affaires publiques, bien que l'étude reconnaisse des limitations dues à la sous-représentation des jeunes délinquants dans les dossiers publics et les poursuites pénales.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Remet en question les stéréotypes sur la cybercriminalité, suggérant une professionnalisation et une rationalisation des choix criminels chez des acteurs plus âgés. Important pour l'élaboration de stratégies de prévention et de lutte adaptées.",
+        "recommandations": [
+          "Revoir les stratégies de prévention de la cybercriminalité pour cibler un public plus large que les jeunes.",
+          "Développer des programmes de détection et d'intervention basés sur les motivations et les comportements des adultes engagés dans la cybercriminalité.",
+          "Continuer la recherche sur les motivations et les profils des cybercriminels en tenant compte des biais des données publiques."
+        ],
+        "tags": [
+          "cybercriminalité",
+          "recherche",
+          "profil des attaquants",
+          "démographie",
+          "sociologie de la cybercriminalité",
+          "Orange Cyberdefense"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/05/how-old-is-the-average-hacker-what-does-a-new-research-report-suggest/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Les brèches dans les cabinets d'avocats : un risque systémique pour les entreprises et la chaîne d'approvisionnement.",
+        "description": "Les cabinets d'avocats sont des cibles privilégiées pour les cyberattaques (20% des cabinets américains ciblés en un an), car ils détiennent des informations sensibles cruciales (M&A, stratégies de litige, données clients PII, secrets commerciaux) sur plusieurs décennies. Les groupes de ransomware comme RansomHub et Qilin les ciblent spécifiquement. L'article détaille comment ces brèches peuvent entraîner une \"cascade\" de risques pour les clients, notamment en termes de manipulation de marché et de compromission stratégique, exacerbée par l'érosion du privilège avocat-client dans les enquêtes de brèche.",
+        "threat_actor": "RansomHub, Qilin",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1566 - Phishing, T1190 - Exploit Public-Facing Application), Collection (T1005 - Data from Local System, T1074 - Data Staged), Exfiltration (T1041 - Exfiltration Over C2 Channel, T1048 - Exfiltration Over Alternative Protocol), Impact (T1486 - Data Encrypted for Impact)",
+        "analyse": "Les cabinets d'avocats représentent un point faible critique dans la chaîne d'approvisionnement des entreprises, avec une concentration de données à fort impact stratégique. L'impact dépasse la simple violation de données, pouvant influencer les marchés financiers et les résultats juridiques. Le manque de diligence des clients envers la sécurité de leurs cabinets d'avocats est un risque majeur.",
+        "recommandations": [
+          "Implémenter des cadres de gestion des risques tiers pour les cabinets d'avocats.",
+          "Exiger des cabinets d'avocats qu'ils remplissent des questionnaires de sécurité et fournissent des attestations.",
+          "Mettre en œuvre des politiques de rétention de données strictes et l'effacement régulier des informations non nécessaires.",
+          "Surveiller les indicateurs de compromission des fournisseurs, y compris les cabinets d'avocats, en temps réel."
+        ],
+        "tags": [
+          "cabinet d'avocats",
+          "breach",
+          "violation de données",
+          "risques tiers",
+          "chaîne d'approvisionnement",
+          "M&A",
+          "ransomware",
+          "RansomHub",
+          "Qilin",
+          "privilège avocat-client"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/the-hidden-cascade/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Nouveaux vecteurs d'attaque par injection de prompt à travers l'échantillonnage du protocole de contexte de modèle (MCP) dans les applications LLM.",
+        "description": "L'article analyse les implications de sécurité de la fonction d'échantillonnage (sampling) du Model Context Protocol (MCP) pour les applications LLM, notamment les copilotes de codage. Il démontre trois vecteurs d'attaque par injection de prompt : vol de jetons invisible, altération de session persistante et opérations de fichiers malveillantes. Le MCP permet aux serveurs de demander des complétions LLM aux clients, créant un modèle de confiance implicite exploitable si les serveurs sont malveillants ou compromis, avec des risques de consommation de ressources, d'altération du comportement de l'IA et de modification du système sans consentement explicite de l'utilisateur.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1566 - Phishing), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Impact (T1499 - Endpoint Denial of Service - resource exhaustion)",
+        "analyse": "Émergence de nouvelles menaces liées à l'intégration des LLM dans les applications, avec des risques significatifs pour la sécurité des données, la consommation de ressources et l'intégrité des systèmes. La complexité des interactions LLM/outils nécessite une vigilance accrue sur la conception des protocoles et les contrôles d'accès.",
+        "recommandations": [
+          "Implémenter des contrôles d'accès stricts basés sur les capacités pour limiter les requêtes des serveurs MCP.",
+          "Isoler le contexte pour empêcher l'accès à l'historique des conversations.",
+          "Appliquer des limites de taux pour plafonner la fréquence d'échantillonnage.",
+          "Renforcer la validation des entrées et des sorties des LLM.",
+          "Sensibiliser les développeurs aux risques d'injection de prompt et aux bonnes pratiques de sécurité des LLM."
+        ],
+        "tags": [
+          "IA",
+          "LLM",
+          "prompt injection",
+          "Model Context Protocol",
+          "MCP",
+          "vulnérabilité",
+          "sécurité des applications",
+          "vol de jetons",
+          "RCE",
+          "intelligence artificielle"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/"
+        ],
+        "date": "2025-12-06"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals an intensification of cyber threats, marked by rapid and aggressive exploitation of critical vulnerabilities, often by state-sponsored actors or ransomware groups. The maximum-severity React2Shell vulnerability (CVE-2025-55182) is a striking example: actively exploited by China-linked groups just hours after its disclosure, it underscores the increasing pressure on defense teams to patch and mitigate risks without delay. Similar remote code execution (RCE) and command injection vulnerabilities are also being actively exploited in products like Array Networks AG gateways and Langflow.\n\nThe supply chain remains a prime target, as evidenced by the BRICKSTORM campaign by China state-sponsored actors, which compromises virtual infrastructures via Managed Service Provider (MSP) credentials, and the attack on an Asus supplier by the Everest group, leading to intellectual property theft. These attacks highlight the complexity of securing beyond organizations' direct perimeters.\n\nThe use of Artificial Intelligence (AI) by attackers is beginning to materialize, with the arrest of a teenager in Japan who allegedly used an AI-generated program to orchestrate a cyberattack. Concurrently, the emergence of new attack vectors such as prompt injection through Model Context Protocol (MCP) sampling in LLM applications shows that AI-related risks are double-edged.\n\nData breaches remain constant, affecting various sectors (healthcare, pharmaceutical, telecommunications), with actors like Clop and Qilin continuing to target organizations for extortion and theft of sensitive information. An analysis of law firm breaches reveals an underestimated systemic risk, where a third-party compromise can have major strategic and financial repercussions for clients.\n\nBeyond technical threats, the regulatory landscape is evolving, exemplified by the EU's fine to X for transparency violations, and the UK's consideration of adapting its legislation to better protect security researchers.\n\nIn conclusion, the general state of threats is characterized by rapid and opportunistic exploitation of critical flaws, persistence of sophisticated attacks targeting the supply chain and virtualized infrastructures, and the emergence of new AI-related threats. Organizations must strengthen their vulnerability management, supply chain security, resilient architecture, and adaptation strategies for new technologies like AI, while remaining vigilant against state-sponsored and profit-motivated groups.",
+      "date": "2025-12-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Clop ransomware",
+        "secteur": "Healthcare, Education, Logistics, Media, Technology",
+        "modop": "Exploiting zero-day vulnerabilities (e.g., Oracle E-business Suite CVE-2025-61882) for data theft and ransomware attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Clop",
+          "zero-day",
+          "data exfiltration",
+          "healthcare",
+          "education"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/barts-health-nhs-discloses-data-breach-after-oracle-zero-day-hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Qilin ransomware group",
+        "secteur": "Pharmaceutical, Automotive, Government Services (Legal), Publishing, Pathology Services",
+        "modop": "Ransomware attacks, data exfiltration, using Rust-based ransomware (encryption-resistant payloads).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Qilin",
+          "data exfiltration",
+          "pharmaceutical",
+          "legal"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pharma-firm-inotiv-discloses-data-breach-after-ransomware-attack/",
+          "https://www.recordedfuture.com/blog/the-hidden-cascade/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Everest ransomware gang",
+        "secteur": "Manufacturing (Asus supplier)",
+        "modop": "Ransomware, extortion, intellectual property theft (source code, AI models, firmware).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "Everest",
+          "extortion",
+          "intellectual property theft",
+          "supply chain attack"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/05/asus_supplier_hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Earth Lamia",
+        "secteur": "Various (targets critical vulnerabilities)",
+        "modop": "Rapid exploitation of zero-day/critical vulnerabilities (e.g., React2Shell CVE-2025-55182) shortly after disclosure, automated scanning and manual refinement of exploitation techniques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "vulnerability exploitation",
+          "zero-day",
+          "RCE",
+          "React2Shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "Jackpot Panda",
+        "secteur": "Various (targets critical vulnerabilities)",
+        "modop": "Rapid exploitation of zero-day/critical vulnerabilities (e.g., React2Shell CVE-2025-55182) shortly after disclosure, automated scanning and manual refinement of exploitation techniques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "vulnerability exploitation",
+          "zero-day",
+          "RCE",
+          "React2Shell"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "nom": "China state-sponsored actors (BRICKSTORM, APTUNC5221)",
+        "secteur": "Government Services, Information Technology, Managed Service Providers (MSP), Legal, SaaS, BPOs",
+        "modop": "Use of backdoors (Go-based BRICKSTORM backdoor) for long-term persistence, exploitation of MSP credentials, targeting virtualized environments (VMware vCenter, ESXi) and Windows systems. Theft of VM snapshots, creation of rogue VMs, Active Directory credential theft, ADFS cryptographic key exfiltration. Encrypted C2 channels (HTTPS, WebSockets, DoH).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "state-sponsored",
+          "backdoor",
+          "persistence",
+          "credential theft",
+          "virtualization",
+          "MSP",
+          "supply chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/brickstorm-campaign-msp-credentials-compromise-virtual-infrastructures",
+          "https://securityaffairs.com/185346/intelligence/brickstorm-backdoor-exposed-cisa-warns-of-advanced-china-backed-intrusions/"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Technology, Culture",
+        "theme": "Technology regulation, cultural influence, military and economic aid",
+        "description": "The EU has fined X (formerly Twitter) €120 million for violating DSA transparency obligations, particularly regarding its misleading 'blue checkmark' system, opaque advertising database, and blocking researchers' access to public data. The decision highlights risks of fraud and manipulation.\nThe UK government is considering amending its three-decade-old Computer Misuse Act to include a 'statutory defense' for security researchers, aiming not to penalize ethical hackers participating in bug bounties.\nIsrael's participation in Eurovision has become a geopolitical issue, raising questions of 'double standards' compared to Russia's exclusion in 2022, and highlighting the role of cultural events in international diplomacy.\nThe UK supports Ukraine not only for moral reasons but also for direct economic and military benefits, such as boosting its defense industrial base and degrading Russian military capabilities without British casualties. This strengthens the UK's position within NATO.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "regulation",
+          "DSA",
+          "X",
+          "transparency",
+          "cybersecurity",
+          "UK",
+          "legislation",
+          "law",
+          "ethics",
+          "security research",
+          "Israel",
+          "Ukraine",
+          "Russia",
+          "NATO",
+          "defense",
+          "economy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eu-fines-x-140-million-over-deceptive-blue-checkmarks-transparency-violations/",
+          "https://databreaches.net/2025/12/05/uk-government-consider-computer-misuse-act-revision/?pk_campaign=feed&pk_kwd=uk-government-consider-computer-misuse-act-revision",
+          "https://www.iris-france.org/israel-a-leurovision-un-enjeu-geopolitique/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/britains-economic-and-military-dividend-supporting-ukraine"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Barts Health NHS Trust (UK), Barking, Havering, and Redbridge University Hospitals NHS Trust",
+        "description": "Clop ransomware actors stole files from an Oracle E-business Suite database by exploiting a zero-day vulnerability (CVE-2025-61882). Compromised data includes accounting files and patient information.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "Clop",
+          "Oracle",
+          "zero-day",
+          "personal data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/barts-health-nhs-discloses-data-breach-after-oracle-zero-day-hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Pharmaceutical",
+        "victime": "Inotiv (American contract research organization)",
+        "description": "Qilin ransomware actors gained unauthorized access to systems and stole personal information (concerning 9,542 individuals, current and former employees, and their family members) during an attack in August 2025. Over 162,000 files (176 GB) were allegedly exfiltrated.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "ransomware",
+          "Qilin",
+          "personal data",
+          "exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pharma-firm-inotiv-discloses-data-breach-after-ransomware-attack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Freedom Mobile customers via a subcontractor account",
+        "description": "Hackers breached a subcontractor account, exposing customer data including names, addresses, dates of birth, phone numbers, and account numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "subcontractor",
+          "third-party",
+          "customer data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115667355803989296"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "secteur": "Internet Services",
+        "victime": "Kaikatsu Frontier (Japan)",
+        "description": "A 17-year-old is suspected of using an AI-generated program to conduct a cyberattack on Kaikatsu Frontier's servers, sending approximately 7.24 million commands, which may have resulted in the leak of personal information of 7.3 million customers.",
+        "tags": [
+          "violation",
+          "breach",
+          "internet services",
+          "AI",
+          "cyberattack",
+          "personal data",
+          "Japan"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/05/japan-issues-arrest-warrant-against-teen-suspected-of-cyberattack-using-ai/",
+          "https://infosec.exchange/@PogoWasRight/115669296140990111"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66570",
+        "cvss": "10.0",
+        "product": "cpp-httplib (prior to 0.27.0)",
+        "description": "Untrusted HTTP header handling vulnerability, allowing an attacker to influence server-visible metadata, logging, and authorization decisions via header shadowing, leading to IP spoofing, log poisoning, and authorization bypass.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "header spoofing",
+          "authorization bypass",
+          "cpp-httplib",
+          "HTTP"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66570"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-44005",
+        "cvss": "10.0",
+        "product": "Step CA (online Certificate Authority tool)",
+        "description": "Authorization Bypass in ACME and SCEP Provisioners, allowing unauthenticated attackers to issue fraudulent certificates or access restricted areas of the CA infrastructure.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authorization bypass",
+          "certificate authority",
+          "Step CA",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-step-ca-flaw-cve-2025-44005-cvss-10-0-allows-unauthenticated-bypass-to-issue-fraudulent-certificates/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": "10.0",
+        "product": "Apache Tika (tika-core 1.13-3.2.1, tika-pdf-module 2.0.0-3.2.1, tika-parsers 1.13-1.28.5)",
+        "description": "XML External Entity (XXE) injection via a crafted XFA file inside a PDF, allowing access to sensitive internal resources.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "XXE",
+          "Apache Tika",
+          "injection",
+          "data confidentiality"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185363/security/maximum-severity-xxe-vulnerability-discovered-in-apache-tika.html"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components (RSC), Next.js (React versions 19.0, 19.1.0, 19.1.1, 19.2.0; Next.js 15.x/16.x with App Router)",
+        "description": "Insecure deserialization vulnerability in the RSC 'Flight' protocol, allowing unauthenticated remote code execution (RCE) via crafted HTTP requests to Server Function endpoints. Actively exploited by China-linked threat actors.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "React",
+          "Next.js",
+          "deserialization",
+          "server-side",
+          "zero-day",
+          "exploit"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66478",
+        "cvss": "10.0",
+        "product": "Next.js (versions 15.x/16.x with App Router)",
+        "description": "Insecure deserialization in React Server Components 'Flight' protocol, leading to unauthenticated RCE (duplicate of CVE-2025-55182).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "Next.js",
+          "deserialization"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-34291",
+        "cvss": "9.4",
+        "product": "Langflow (versions up to 1.6.9)",
+        "description": "Chained vulnerability involving an overly permissive CORS configuration (allow_origins='*' with allow_credentials=True) and a SameSite=None refresh token cookie, enabling account takeover and remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "account takeover",
+          "CORS",
+          "token hijack",
+          "authentication bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34291"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14108",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (up to 1.1.0210050)",
+        "description": "Command injection vulnerability in the `zfilev2_api.OpenSafe` function via manipulation of the `safe_dir` argument, remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14108"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14107",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (up to 1.1.0210050)",
+        "description": "Command injection vulnerability in the `zfilev2_api.SafeStatus` function via manipulation of the `safe_dir` argument, remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14107"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-14106",
+        "cvss": "9.0",
+        "product": "ZSPACE Q2C NAS (up to 1.1.0210050)",
+        "description": "Command injection vulnerability in the `zfilev2_api.CloseSafe` function via manipulation of the `safe_dir` argument, remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command injection",
+          "ZSPACE NAS",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14106"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-13426",
+        "cvss": "8.7",
+        "product": "Google Apigee's JavaCallout policy (patched versions Hybrid_1.11.2+, Hybrid_1.12.4+, Hybrid_1.13.3+, Hybrid_1.14.1+, OPDK_5202+, OPDK_5300+)",
+        "description": "Improper Sandboxing in the JavaCallout policy, allowing for remote code execution by injecting a malicious object into the MessageContext to execute arbitrary Java code and system commands.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "sandbox escape",
+          "Google Apigee",
+          "Java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13426"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "cve_id": "CVE-2025-66566",
+        "cvss": "8.2",
+        "product": "yawkat LZ4 Java (lz4-java 1.10.0 and earlier)",
+        "description": "Insufficient clearing of the output buffer in Java-based decompressor implementations, leading to an information leak via crafted compressed input if the buffer is reused.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information leak",
+          "buffer overflow",
+          "Java",
+          "LZ4"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66566"
+        ],
+        "date": "2025-12-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "A Practical Guide to Continuous Attack Surface Visibility",
+        "description": "This article highlights the limitations of passive scan data for attack surface visibility in dynamic cloud infrastructures. It advocates for continuous, automated reconnaissance to maintain an accurate and up-to-date picture of exposures, addressing the rapid aging of data and the constant emergence of new exposures (incorrect DNS records, expired TLS certificates, forgotten dev instances, ephemeral components).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Reconnaissance (T1595 - Active Scanning, T1589 - Gather Victim Identity Information, T1590 - Gather Victim Network Information)",
+        "analyse": "Essential for organizations modernizing their infrastructure and accelerating deployment cycles. Continuous visibility is fundamental for attack surface hygiene, risk prioritization, and incident reduction.",
+        "recommandations": [
+          "Implement automated and continuous attack surface reconnaissance tools.",
+          "Do not rely solely on passive scan data, which can quickly become stale.",
+          "Integrate attack surface visibility into CI/CD processes to detect ephemeral exposures.",
+          "Educate security teams on the limitations of passive data and the need for a proactive approach."
+        ],
+        "tags": [
+          "attack surface visibility",
+          "ASM",
+          "reconnaissance",
+          "cloud security",
+          "vulnerability management",
+          "cyber hygiene",
+          "intelligence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/a-practical-guide-to-continuous-attack-surface-visibility/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Active Exploitation of Critical React2Shell Vulnerability (CVE-2025-55182) in React Server Components by China-Linked Groups.",
+        "description": "A critical unauthenticated Remote Code Execution (RCE) vulnerability, dubbed React2Shell (CVE-2025-55182, CVSS 10.0), affecting React Server Components (RSC) and dependent frameworks like Next.js, is being actively exploited by China-linked APT groups (Earth Lamia, Jackpot Panda). The flaw stems from insecure deserialization in the RSC 'Flight' protocol, allowing arbitrary code execution via maliciously crafted HTTP requests. Functional PoCs emerged quickly after disclosure. Cloudflare experienced an outage following an attempt to implement emergency mitigations for this flaw.",
+        "threat_actor": "Earth Lamia, Jackpot Panda, China-linked APT groups",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-66478"
+          ],
+          "IPv4": [
+            "183.6.80.214"
+          ]
+        },
+        "mitre_ttps": "Initial Access (T1566 - Phishing, T1190 - Exploit Public-Facing Application), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Defense Evasion (T1036 - Masquerading), Credential Access (T1552 - Unsecured Credentials), Discovery (T1083 - File and Directory Discovery)",
+        "analyse": "Severe impact on web applications and cloud environments using React and Next.js, with a high risk of remote code execution and full system compromise. State-sponsored actors target organizations leveraging these technologies, demonstrating a rapid capability to industrialize exploits. Cloudflare's outage underscores the criticality of mitigation.",
+        "recommandations": [
+          "Immediately update React to versions 19.0, 19.1.0, 19.1.1, 19.2.0 and Next.js to versions 15.x, 16.x, 14.3.0-canary.77 and later.",
+          "Deploy WAF (Web Application Firewall) rules to block exploitation attempts.",
+          "Monitor logs for anomalous RSC requests and suspicious Node.js activity.",
+          "Conduct audits to identify workloads exposing RSC server function endpoints."
+        ],
+        "tags": [
+          "React",
+          "Next.js",
+          "RCE",
+          "deserialization",
+          "vulnerability",
+          "exploitation",
+          "APT",
+          "China",
+          "Cloudflare",
+          "outage",
+          "Node.js",
+          "application security",
+          "zero-day"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
+          "https://www.bleepingcomputer.com/news/security/cloudflare-blames-todays-outage-on-emergency-react2shell-patch/",
+          "https://www.bleepingcomputer.com/news/security/react2shell-critical-flaw-actively-exploited-in-china-linked-attacks/",
+          "https://socprime.com/blog/react2shell-vulnerability-exploitation/",
+          "https://www.sentinelone.com/blog/protecting-against-critical-react2shell-rce-exposure/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/05/react2shell_pocs_exploitation/",
+          "https://www.cybereason.com/blog/cve-2025-55182-rce-vulnerability"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Automating Detection Tuning Requests with Kibana Cases to Improve SOC Efficiency.",
+        "description": "The article presents a method to automate detection rule tuning requests in Elastic Security, using Kibana Cases features. The goal is to create a frictionless feedback loop between SOC analysts and detection engineers, reducing alert fatigue from false positives and improving responsiveness to true positives. This involves adding custom fields to Kibana cases and using webhooks to trigger actions (such as creating tickets in an external system).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Significant operational improvement for SOCs, enabling more efficient alert management and continuous optimization of security posture. Key benefits include reduced Mean Time To Resolution (MTTR) and alert fatigue.",
+        "recommandations": [
+          "Implement custom fields in Kibana cases to collect analyst feedback.",
+          "Configure detection rules to identify tuning needs and trigger automated workflows (webhooks).",
+          "Integrate Kibana cases with ticketing systems for improved traceability and collaboration.",
+          "Use custom fields to track SOC performance metrics and identify areas for improvement."
+        ],
+        "tags": [
+          "SOC",
+          "detection",
+          "incident response",
+          "Kibana",
+          "Elastic Security",
+          "automation",
+          "operational efficiency",
+          "alert management",
+          "SIEM"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/automating-detection-tuning-requests-with-kibana-cases"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Active Exploitation of Array Networks AG Gateway Vulnerability Allowing Command Injection and Remote Code Execution.",
+        "description": "Threat actors are actively exploiting an unauthenticated command injection vulnerability in Array Networks AG Series secure access gateways (versions 9.4.5.8 and earlier), particularly via the DesktopDirect feature. Exploitation, observed since August 2025, enables remote code execution, lateral movement into internal networks, webshell implantation, and persistence. Although no CVE has been assigned to this specific flaw, a patch (version 9.4.5.9+) was released in May 2025.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "194.233.100.138"
+          ]
+        },
+        "mitre_ttps": "Initial Access (T1190 - Exploit Public-Facing Application), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution, T1505 - Server Software Component), Lateral Movement (T1021 - Remote Services)",
+        "analyse": "Critical impact on organizations using these gateways for secure remote access, especially those that have not applied patches. The vulnerability is easy to exploit and leads to extensive system compromise.",
+        "recommandations": [
+          "Update all Array Networks AG gateways to version 9.4.5.9 or later.",
+          "Apply network segmentation and strict access controls.",
+          "Monitor for anomalous HTTP requests and signs of webshell activity.",
+          "Investigate for signs of compromise, including webshell installation or new user creation."
+        ],
+        "tags": [
+          "Array Networks",
+          "gateway",
+          "VPN",
+          "command injection",
+          "RCE",
+          "exploitation",
+          "webshell",
+          "persistence",
+          "remote access",
+          "vulnerability"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-array-networks-ag-gateway-vulnerability",
+          "https://securityaffairs.com/185358/uncategorized/jpcert-cc-reports-widespread-exploitation-of-array-networks-ag-gateway-vulnerability.html"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "BRICKSTORM Campaign Uses MSP Credentials to Compromise VMware Virtual Infrastructures.",
+        "description": "China state-sponsored threat actors are using the BRICKSTORM backdoor (written in Go) to compromise VMware vCenter and ESXi environments, as well as Windows systems, by exploiting Managed Service Provider (MSP) credentials. This campaign, active since April 2024, enables long-term persistence, rogue VM creation, credential theft (via VM snapshots and Active Directory), and ADFS cryptographic key exfiltration. BRICKSTORM uses encrypted command and control channels (HTTPS, WebSockets, DoH) and can act as a SOCKS proxy.",
+        "threat_actor": "China state-sponsored actors, APTUNC5221",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1078 - Valid Accounts, T1190 - Exploit Public-Facing Application), Persistence (T1547 - Boot or Logon Autostart Execution, T1505 - Server Software Component), Privilege Escalation (T1068 - Exploitation for Privilege Escalation), Defense Evasion (T1036 - Masquerading, T1562 - Impair Defenses), Credential Access (T1003 - OS Credential Dumping, T1552 - Unsecured Credentials), Discovery (T1083 - File and Directory Discovery, T1018 - Remote System Discovery), Lateral Movement (T1021 - Remote Services, T1090 - Proxy), Collection (T1560 - Archive Collected Data, T1005 - Data from Local System), Command and Control (T1071 - Application Layer Protocol, T1573 - Encrypted Channel)",
+        "analyse": "Significant threat to the supply chain via MSPs, with potential impact on multiple client environments. Exploitation of centralized virtualization platforms grants attackers extensive control, making detection and remediation complex. The observed long-term persistence (over one year) indicates an advanced and stealthy threat.",
+        "recommandations": [
+          "Strengthen MSP credential security (MFA, regular rotation).",
+          "Segment networks and apply strict access controls for virtualized environments (vCenter, ESXi).",
+          "Implement behavioral detection tools to identify anomalous use of valid credentials.",
+          "Monitor VMware vCenter and ESXi for unauthorized VM creation or snapshot theft.",
+          "Analyze network traffic for suspicious encrypted C2 communications."
+        ],
+        "tags": [
+          "BRICKSTORM",
+          "backdoor",
+          "APT",
+          "China",
+          "state-sponsored",
+          "MSP",
+          "VMware",
+          "vCenter",
+          "ESXi",
+          "virtualization",
+          "credential theft",
+          "persistence",
+          "supply chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/brickstorm-campaign-msp-credentials-compromise-virtual-infrastructures",
+          "https://securityaffairs.com/185346/intelligence/brickstorm-backdoor-exposed-cisa-warns-of-advanced-china-backed-intrusions/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Asus Supplier Hit by Ransomware Attack as Gang Flaunts Alleged 1 TB Haul.",
+        "description": "The Everest ransomware group targeted an unnamed Asus supplier, claiming to have stolen 1 TB of data, including camera source code for Asus phones, AI models, firmware, and OEM internal tools. Asus confirmed the supplier compromise but insisted there was no impact on its own products, internal systems, or customer privacy. This incident highlights supply chain risks.",
+        "threat_actor": "Everest ransomware gang",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1195 - Supply Chain Compromise), Collection (T1005 - Data from Local System), Exfiltration (T1041 - Exfiltration Over C2 Channel), Impact (T1486 - Data Encrypted for Impact)",
+        "analyse": "Highlights the vulnerability of supply chains and the importance of third-party security. The theft of intellectual property (source code, AI models) can have significant strategic and competitive implications for Asus.",
+        "recommandations": [
+          "Strengthen security due diligence for all third-party suppliers.",
+          "Implement regular security audits for suppliers.",
+          "Segment access to sensitive data between suppliers and end customers.",
+          "Monitor activities of ransomware groups targeting supply chains."
+        ],
+        "tags": [
+          "Asus",
+          "supplier",
+          "supply chain",
+          "ransomware",
+          "Everest",
+          "data theft",
+          "intellectual property",
+          "source code"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/05/asus_supplier_hack/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "Stop Betting on the “Future”: Why Your Architecture Needs an Undo Button.",
+        "description": "The article argues that security leaders operate in a state of chronic uncertainty (budget cuts, M&A activity, changing regulations, evolving vendors). It advocates for a \"reversible\" security architecture approach, where decisions are modular, vendors interchangeable, and strategy fluid, to avoid vendor lock-in and \"data gravity,\" particularly for SIEM, identity, and detection rules.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "Emphasizes the need for an agile and flexible security architecture to adapt to constant changes in the threat and business landscape. Poor architecture can lead to astronomical costs and increased risks.",
+        "recommandations": [
+          "Design security architectures with an optionality mindset, where decisions are reversible.",
+          "Avoid vendor lock-in by maintaining control over foundational layers (data, identity, detection rules).",
+          "Prioritize \"portability-first\" consolidation over monolithic consolidation.",
+          "Regularly assess architecture flexibility to pivot quickly in the event of new threats or constraints."
+        ],
+        "tags": [
+          "security architecture",
+          "resilience",
+          "agility",
+          "vendor lock-in",
+          "SIEM",
+          "identity",
+          "detection",
+          "cyber strategy"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/why-architecture-needs-an-undo/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "How Old Is the Average Hacker? A Research Report Suggests Experienced Adults.",
+        "description": "An Orange Cyberdefense study, the \"Security Navigator 2026\", reveals that cybercrime is primarily carried out by experienced adults, often aged 30 to 40, rather than teenagers. This conclusion is based on a dataset of 418 public cases, although the study acknowledges limitations due to the underrepresentation of young offenders in public records and criminal prosecutions.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "Challenges stereotypes about cybercrime, suggesting a professionalization and rationalization of criminal choices among older actors. Important for developing tailored prevention and response strategies.",
+        "recommandations": [
+          "Revisit cybercrime prevention strategies to target a broader audience than just youth.",
+          "Develop detection and intervention programs based on the motivations and behaviors of adults involved in cybercrime.",
+          "Continue research on cybercriminal motivations and profiles, considering biases in public data."
+        ],
+        "tags": [
+          "cybercrime",
+          "research",
+          "attacker profiles",
+          "demographics",
+          "sociology of cybercrime",
+          "Orange Cyberdefense"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/05/how-old-is-the-average-hacker-what-does-a-new-research-report-suggest/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "The Hidden Cascade: Why Law Firm Breaches Destroy More than Data.",
+        "description": "Law firms are prime targets for cyberattacks (20% of US firms targeted in a year) because they hold crucial sensitive information (M&A, litigation strategies, client PII, trade secrets) spanning decades. Ransomware groups like RansomHub and Qilin specifically target them. The article details how these breaches can lead to a \"cascade\" of risks for clients, including market manipulation and strategic compromise, exacerbated by the erosion of attorney-client privilege in breach investigations.",
+        "threat_actor": "RansomHub, Qilin",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1566 - Phishing, T1190 - Exploit Public-Facing Application), Collection (T1005 - Data from Local System, T1074 - Data Staged), Exfiltration (T1041 - Exfiltration Over C2 Channel, T1048 - Exfiltration Over Alternative Protocol), Impact (T1486 - Data Encrypted for Impact)",
+        "analyse": "Law firms represent a critical weak point in corporate supply chains, with a concentration of data with significant strategic impact. The impact extends beyond simple data breaches, potentially influencing financial markets and legal outcomes. Clients' lack of diligence regarding their law firms' security is a major risk.",
+        "recommandations": [
+          "Implement third-party risk management frameworks for law firms.",
+          "Require law firms to complete security questionnaires and provide attestations.",
+          "Implement strict data retention policies and regular deletion of unnecessary information.",
+          "Monitor indicators of compromise from suppliers, including law firms, in real-time."
+        ],
+        "tags": [
+          "law firm",
+          "breach",
+          "data breach",
+          "third-party risks",
+          "supply chain",
+          "M&A",
+          "ransomware",
+          "RansomHub",
+          "Qilin",
+          "attorney-client privilege"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/the-hidden-cascade/"
+        ],
+        "date": "2025-12-06"
+      },
+      {
+        "title": "New Prompt Injection Attack Vectors Through MCP Sampling in LLM Applications.",
+        "description": "The article analyzes the security implications of the Model Context Protocol (MCP) sampling feature for LLM applications, particularly coding copilots. It demonstrates three prompt injection attack vectors: invisible token theft, persistent session alteration, and malicious file operations. MCP allows servers to request LLM completions from clients, creating an implicit trust model exploitable if servers are malicious or compromised, with risks of resource consumption, AI behavior alteration, and system modification without explicit user consent.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Initial Access (T1566 - Phishing), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Impact (T1499 - Endpoint Denial of Service - resource exhaustion)",
+        "analyse": "Emergence of new threats related to LLM integration in applications, with significant risks to data security, resource consumption, and system integrity. The complexity of LLM/tool interactions requires increased vigilance on protocol design and access controls.",
+        "recommandations": [
+          "Implement strict capability-based access controls to limit MCP server requests.",
+          "Isolate context to prevent access to conversation history.",
+          "Apply rate limits to cap sampling frequency.",
+          "Strengthen validation of LLM inputs and outputs.",
+          "Educate developers on prompt injection risks and LLM security best practices."
+        ],
+        "tags": [
+          "AI",
+          "LLM",
+          "prompt injection",
+          "Model Context Protocol",
+          "MCP",
+          "vulnerability",
+          "application security",
+          "token theft",
+          "RCE",
+          "artificial intelligence"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/"
+        ],
+        "date": "2025-12-06"
+      }
+    ]
+  }
+}
