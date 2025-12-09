@@ -1,0 +1,1924 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle un paysage de menaces cyber hautement dynamique, caractérisé par une exploitation rapide et généralisée de vulnérabilités critiques et de jours zéro dans des logiciels essentiels. Des acteurs étatiques et des groupes de ransomware capitalisent sur ces failles pour obtenir un accès initial et mener des campagnes sophistiquées. L'écosystème du ransomware continue d'évoluer, avec l'adoption de services de \"packer-as-a-service\" (PaaS), tels que Shanya, pour masquer les \"EDR killers\", compliquant ainsi les capacités de détection et de réponse. Les attaques sur la chaîne d'approvisionnement restent un vecteur majeur, ciblant les outils de développement (extensions VSCode malveillantes) et les bibliothèques fondamentales (React Server Components, Ruby SAML). L'intelligence artificielle est un facteur double : elle est perçue comme un risque émergent (attaques par injection indirecte de prompt dans les agents IA, désinformation spirituelle) et comme une solution de défense (nouvelles couches de sécurité, plateformes d'émulation de menaces assistées par IA). Enfin, les tensions géopolitiques exacerbent la menace cyber, avec des groupes parrainés par des États exploitant des vulnérabilités critiques pour des objectifs stratégiques et l'IA devenant un instrument de guerre cognitive et d'influence. L'ingénierie sociale demeure une technique d'attaque très efficace, soulignant l'importance de la sensibilisation humaine comme dernière ligne de défense. \n\nEn conclusion, l'état général des menaces est élevé et en constante évolution. Les organisations sont confrontées à des défis complexes qui nécessitent une approche multicouche, allant de la correction rapide des vulnérabilités à l'implémentation de solutions de détection avancées, en passant par une gestion proactive des risques de la chaîne d'approvisionnement et une forte sensibilisation des employés. La capacité à anticiper et à s'adapter aux évolutions rapides des tactiques adverses, notamment celles tirant parti de l'IA, sera cruciale pour la résilience cyber.",
+      "date": "2025-12-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Akira",
+        "secteur": "Services financiers, fabrication, santé",
+        "modop": "Opérations de ransomware et d'extorsion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extorsion",
+          "services_financiers",
+          "fabrication",
+          "sante"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "ALPHV/BlackCat",
+        "secteur": "Services financiers, fabrication, santé",
+        "modop": "Opérations de ransomware et d'extorsion, avec la valeur d'extorsion la plus élevée.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extorsion",
+          "services_financiers",
+          "fabrication",
+          "sante"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Clop ransomware group (Cl0p)",
+        "secteur": "Santé (Barts Health NHS), Aviation (Envoy Air), Éducation (Harvard University, University of Pennsylvania, University of Phoenix, Dartmouth), Médias (Washington Post), Technologie (Logitech), Chaîne d'approvisionnement (Oracle E-Business Suite)",
+        "modop": "Exploitation de vulnérabilités zero-day (CVE-2025-61882) dans Oracle E-Business Suite pour le vol de données et leur fuite sur le dark web.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "zero_day",
+          "exfiltration_donnees",
+          "Oracle_EBS",
+          "attaque_chaine_approvisionnement",
+          "sante",
+          "education"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115686623856677635",
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html",
+          "https://www.forbes.com/sites/larsdaniel/2025/12/07/dartmouth-data-breach-exposes-40000-social-security-numbers-in-cl0ps-oracle-rampage/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Groupes liés à la Chine (Earth Lamia, Jackpot Panda, CL-STA-1015)",
+        "secteur": "Divers (applications web), Amérique latine, Moyen-Orient, Asie du Sud-Est, Asie de l'Est",
+        "modop": "Exploitation rapide de RCE pré-authentification (CVE-2025-55182) dans React Server Components, utilisation de réseaux d'anonymisation partagés, scanners automatisés, déploiement de webshells, droppers Linux (SNOWLIGHT, VShell) et serveurs Cobalt Strike. Axé sur la reconnaissance, le vol d'identifiants et la persistance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "Chine_APT",
+          "RCE",
+          "zero_day",
+          "exploit",
+          "webshell",
+          "backdoor",
+          "infostealer",
+          "reconnaissance",
+          "vol_identifiants",
+          "persistance"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Islamic State in Central Africa Province (ISCAP) / Ansar al-Sunna / EIM (Estado Islâmico de Moçambique)",
+        "secteur": "Énergie (projet GNL de TotalEnergies), Mines (Gemfields Group), Populations locales (Cabo Delgado, Mozambique)",
+        "modop": "Insurrection djihadiste, attaques contre des villes et postes de police (Mocímboa da Praia, Palma), guerre économique (ciblant les infrastructures logistiques et énergétiques), exploitation du ressentiment local, enlèvements, meurtres de civils.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "groupe_terroriste",
+          "islamiste",
+          "ISCAP",
+          "EIM",
+          "Mozambique",
+          "secteur_energie",
+          "secteur_mines",
+          "guerre_economique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Shanya",
+        "secteur": "Multiples, organisations utilisant des EDR",
+        "modop": "Fournit une plateforme de \"packer-as-a-service\" (PaaS) utilisée par les gangs de ransomware pour l'évasion des EDR, créant des charges utiles uniques avec chargement de modules non standard et chiffrement. Déploie des pilotes de noyau pour tuer les processus EDR.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "packer",
+          "EDR_evasion",
+          "DLL_side_loading",
+          "pilote_noyau"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gangs-turn-to-shanya-exe-packer-to-hide-edr-killers/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Relations internationales, diplomatie, économie, défense",
+        "theme": "Analyse du déclin de l'influence française dans ses relations avec la Chine, efforts de rééquilibrage économique et positionnement sur la question de Taïwan.",
+        "description": "La quatrième visite d'Emmanuel Macron en Chine a mis en évidence le recul de l'influence française, marquée par des revers diplomatiques et des gains économiques limités (agroalimentaire, cognac, tourisme). La France peine à maintenir son autonomie stratégique face à Taïwan tout en équilibrant sa relation avec Pékin, compte tenu des priorités chinoises envers l'Europe de l'Est et de son assertivité économique et militaire en Indo-Pacifique. Une crise majeure autour de Taïwan aurait des conséquences économiques mondiales catastrophiques, notamment pour les microprocesseurs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Chine",
+          "Taïwan",
+          "diplomatie",
+          "relations_economiques",
+          "influence_internationale",
+          "autonomie_strategique"
+        ],
+        "sources": [
+          "https://www.iris-france.org/emmanuel-macron-en-chine-quelles-marges-de-manoeuvre-la-france-possede-t-elle-face-au-geant-chinois/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Religion, technologie, géopolitique, culture",
+        "theme": "Les implications géopolitiques de l'IA dans les contextes religieux.",
+        "description": "L'intégration de l'IA dans les pratiques et systèmes de croyance religieux donne lieu à une \"géopolitique du code sacré\", où les États et institutions religieuses cherchent à contrôler la diffusion numérique du sens spirituel. Cela soulève des questions de pouvoir (soft/sharp power), de sécurité (guerre cognitive, désinformation spirituelle) et de souveraineté sur les architectures d'IA qui façonnent la croyance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "IA",
+          "religion",
+          "soft_power",
+          "sharp_power",
+          "guerre_cognitive",
+          "desinformation",
+          "souverainete",
+          "espace_numerique"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-geopolitique-du-code-sacre-ia-religieuses-soft-power-et-sharp-power-spirituel/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Sécurité, énergie, mines, socio-économique, contre-terrorisme",
+        "theme": "L'état du terrorisme islamiste au Cabo Delgado, Mozambique, ses liens avec l'ISCAP et ses impacts sur les grands projets énergétiques.",
+        "description": "La province de Cabo Delgado au Mozambique est un front majeur pour l'État Islamique (ISCAP/EIM), avec une insurrection djihadiste (Ansar al-Sunna/EIM) depuis 2017. Cette insurrection est alimentée par la pauvreté régionale et liée à l'exploitation des ressources gazières et rubis. Des attaques ont forcé TotalEnergies à suspendre son projet GNL. Malgré les contre-offensives des forces rwandaises et de la SADC, l'EIM maintient sa capacité opérationnelle, menant une \"guerre économique\" en ciblant les infrastructures énergétiques et minières, et exploitant le ressentiment local contre les entreprises étrangères. TotalEnergies fait face à une plainte pénale pour complicité présumée dans des crimes de guerre commis par des unités militaires mozambicaines protégeant son site.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Mozambique",
+          "Cabo_Delgado",
+          "terrorisme",
+          "etat_islamique",
+          "ISCAP",
+          "EIM",
+          "securite_energetique",
+          "contre_terrorisme",
+          "guerre_economique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Cybercriminalité, défense nationale",
+        "theme": "Action des forces de l'ordre contre les dommages aux systèmes informatiques et le vol de données lié à la défense nationale.",
+        "description": "La police polonaise a arrêté trois ressortissants ukrainiens soupçonnés d'avoir tenté de nuire aux systèmes informatiques et d'obtenir des données informatiques d'importance pour la défense nationale, en utilisant du matériel de piratage avancé.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Pologne",
+          "Ukraine",
+          "cybercriminalite",
+          "securite_nationale",
+          "application_loi"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/poland-arrests-ukrainians-utilizing-advanced-hacking-equipment/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Politique, sécurité nationale, criminalité, relations internationales",
+        "theme": "Le second tour de l'élection présidentielle chilienne est marqué par la sécurité publique, le crime organisé, le contrôle des frontières et la redéfinition de l'alignement international.",
+        "description": "La campagne du second tour de l'élection présidentielle chilienne est dominée par les préoccupations de sécurité nationale, notamment les taux de criminalité élevés, le crime organisé transnational, les frontières poreuses avec la Bolivie et le Pérou, et l'insurrection mapuche dans le sud. Les candidats proposent des approches différentes : la candidate de gauche Jannette Jara se concentre sur les efforts menés par la police, tandis que le candidat de droite José Antonio Kast prône des politiques plus dures, soutenues par l'armée, et une architecture de sécurité nationale. L'élection façonnera également l'alignement international du Chili, Jara favorisant le multilatéralisme et le maintien des liens avec la Chine, et Kast penchant vers la politique \"America First\" des États-Unis et un conservatisme favorable au marché.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Chili",
+          "securite_nationale",
+          "securite_publique",
+          "crime_organise",
+          "controle_frontieres",
+          "politique_etrangere",
+          "Amerique_du_Sud"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/national-security-marks-chiles-presidential-runoff"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Géopolitique, conflit, relations internationales, humanitaire",
+        "theme": "Un an après la chute de Bachar Al-Assad en Syrie, l'analyse porte sur la transition politique, la réintégration internationale, les défis économiques et la dynamique régionale des pouvoirs.",
+        "description": "Un an après l'effondrement du régime de Bachar Al-Assad, la Syrie fait face à d'énormes défis, notamment la reconstruction, la crise humanitaire et les divisions internes. La nouvelle direction, sous Ahmed Al-Charaa, a réalisé une réintégration internationale significative, obtenant des rencontres avec Macron, Trump et Poutine, et voyant une suspension progressive des sanctions occidentales. Cependant, les politiques internes montrent une hégémonie sunnite, des tensions persistantes avec les communautés kurdes, alaouites et druzes, et des frappes militaires israéliennes continues qui violent la souveraineté et déstabilisent le pays, malgré les efforts des États-Unis pour contenir l'Iran via la Syrie.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Syrie",
+          "Moyen_Orient",
+          "conflit",
+          "relations_internationales",
+          "reconstruction",
+          "sanctions",
+          "Israel",
+          "Turquie",
+          "politique_etrangere_americaine",
+          "confinement_Iran"
+        ],
+        "sources": [
+          "https://www.iris-france.org/syrie-an-1-elements-de-bilan/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Technologie, commerce international, sécurité nationale",
+        "theme": "La politique américaine d'exportation de technologie vers la Chine sous l'administration Trump.",
+        "description": "L'ancien président américain Trump a annoncé qu'il autoriserait Nvidia à reprendre les ventes d'accélérateurs H200 à la Chine et à d'autres pays, moyennant un paiement de 25 % aux États-Unis, annulant ainsi l'interdiction de l'administration Biden visant à empêcher la Chine de développer des systèmes militaires avancés.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Etats_Unis",
+          "Chine",
+          "Nvidia",
+          "exportations_technologiques",
+          "securite_nationale",
+          "politique_commerciale"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/09/trump_gpu_export_ban_reversal/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Relations internationales, politique, sécurité nationale",
+        "theme": "La stratégie de sécurité nationale \"America First\" de Trump, mettant l'accent sur la sécurité des frontières et critiquant l'hégémonie libérale.",
+        "description": "Les États-Unis, sous l'administration Trump, ont publié une nouvelle doctrine de sécurité nationale, rejetant l'hégémonie libérale et priorisant l'\"America First\", axée sur les menaces migratoires et la sécurité des frontières. La stratégie critique les administrations précédentes et marque la fin des alliances traditionnelles avec l'Europe, favorisant plutôt les mouvements d'extrême droite en Europe et soulignant l'ouverture commerciale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Etats_Unis",
+          "Trump",
+          "strategie_nationale",
+          "America_First",
+          "immigration",
+          "securite_frontaliere",
+          "alliances_europeennes"
+        ],
+        "sources": [
+          "https://www.iris-france.org/us-national-strategy-trump-claque-la-porte/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "E-commerce, vente au détail",
+        "victime": "Coupang Inc. (400 000 vendeurs et potentiellement plus d'utilisateurs)",
+        "description": "Coupang Inc. fait face à des recours collectifs aux États-Unis et en Corée du Sud suite à une violation majeure de données impactant 400 000 vendeurs, entraînant des préjudices financiers, opérationnels et réputationnels.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "vente_au_detail",
+          "recours_collectif",
+          "vol_donnees",
+          "impact_financier"
+        ],
+        "sources": [
+          "https://en.infomaxai.com/news/articleView.html?idxno=94501",
+          "https://en.infomaxai.com/news/articleView.html?idxno=94531",
+          "https://mastodon.social/@infomaxkorea/115686821272553795",
+          "https://mastodon.social/@infomaxkorea/115687430740509302"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Défense et espace",
+        "victime": "Secteur de la Défense et de l'Espace en Ukraine",
+        "description": "Une violation de données de confiance moyenne a ciblé le secteur de la Défense et de l'Espace en Ukraine.",
+        "tags": [
+          "violation",
+          "breach",
+          "defense",
+          "secteur_spatial",
+          "Ukraine",
+          "securite_nationale",
+          "vol_donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115686428855596861"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Gouvernement (local)",
+        "victime": "Ville de Leavenworth, Kansas",
+        "description": "Une cyberattaque le 19 novembre a perturbé les services municipaux, notamment les systèmes de facturation, de permis et de recrutement. Les services d'urgence n'ont pas été affectés. L'incident a ciblé le réseau interne.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "gouvernement_local",
+          "cyberattaque",
+          "interruption_service"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/08/leavenworth-kansas-cyberattack-disrupts-city-services/?pk_campaign=feed&pk_kwd=leavenworth-kansas-cyberattack-disrupts-city-services"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Vente au détail, Bricolage",
+        "victime": "Leroy Merlin (clients en France)",
+        "description": "Des informations personnelles de certains clients de Leroy Merlin en France ont été volées lors d'une violation de données. L'attaquant est actuellement inconnu. Des mesures ont été prises pour bloquer l'accès non autorisé.",
+        "tags": [
+          "violation",
+          "breach",
+          "vente_au_detail",
+          "bricolage",
+          "France",
+          "donnees_personnelles",
+          "vol_donnees"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115686252613673499",
+          "https://www.bleepingcomputer.com/news/security/french-diy-retail-giant-leroy-merlin-discloses-a-data-breach/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Santé, Aviation, Éducation, Médias, Technologie",
+        "victime": "Barts Health NHS, Envoy Air, Harvard University, Washington Post, Logitech, University of Pennsylvania, University of Phoenix, Dartmouth",
+        "description": "Le groupe de ransomware Clop a exploité la vulnérabilité zero-day CVE-2025-61882 dans Oracle E-Business Suite, volant des données sensibles. Pour Barts Health NHS, cela incluait les noms/adresses des patients, les détails des anciens employés endettés et les informations sur les fournisseurs. Pour Dartmouth, les données de plus de 40 000 personnes ont été exposées, y compris les numéros de sécurité sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "education",
+          "chaine_approvisionnement",
+          "ransomware",
+          "Clop",
+          "zero_day",
+          "Oracle_EBS",
+          "donnees_sensibles",
+          "donnees_financieres"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115686623856677635",
+          "https://research.checkpoint.com/2025/8th-december-threat-intelligence-report/",
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html",
+          "https://www.forbes.com/sites/larsdaniel/2025/12/07/dartmouth-data-breach-exposes-40000-social-security-numbers-in-cl0ps-oracle-rampage/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": 10.0,
+        "product": "Apache Tika (tika-core versions 1.13–3.2.1, tika-pdf-module versions 2.0.0–3.2.1, tika-parsers versions 1.13–1.28.5)",
+        "description": "Vulnérabilité d'injection d'entités externes XML (XXE) via des fichiers PDF malveillants (contenu XFA), pouvant entraîner la divulgation d'informations, la falsification de requêtes côté serveur (SSRF), un déni de service (DoS) ou l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Apache_Tika",
+          "XXE",
+          "RCE",
+          "divulgation_information",
+          "SSRF",
+          "DoS",
+          "exploit_PDF",
+          "chaine_approvisionnement"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/maximum-severity-xxe-vulnerability-in-apache-tika",
+          "https://socprime.com/blog/cve-2025-66516-vulnerability/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (versions 19.0.0, 19.1.0, 19.1.1, 19.2.0), packages associés (react-server-dom-parcel, react-server-dom-turbopack, react-server-dom-webpack), Next.js",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) de pré-authentification due à une désérialisation non sécurisée des requêtes HTTP vers les points de terminaison des fonctions serveur. Activement exploitée par des acteurs malveillants liés à la Chine.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "React_Server_Components",
+          "NextJS",
+          "RCE",
+          "deserialisation",
+          "exploitation_zero_day",
+          "Chine_APT",
+          "pre_authentification",
+          "CISA_KEV"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-warns-of-react2shell-vulnerability/",
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42880",
+        "cvss": 9.9,
+        "product": "SAP Solution Manager",
+        "description": "Vulnérabilité d'injection de code due à un manque d'assainissement des entrées, permettant à un attaquant authentifié de prendre le contrôle total du système via des modules de fonction distants, impactant la confidentialité, l'intégrité et la disponibilité.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_Solution_Manager",
+          "injection_code",
+          "RCE",
+          "attaquant_authentifie"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42880"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2022-37055",
+        "cvss": 9.8,
+        "product": "Routeurs D-Link Go-RT-AC750 (composants cgibin et hnap_main)",
+        "description": "Vulnérabilité critique de dépassement de tampon (Buffer Overflow) menant à l'exécution de code à distance, à la corruption de mémoire, à l'interception de données et au mouvement latéral. Affecte les appareils en fin de vie (EOL).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "D_Link",
+          "routeur",
+          "depassement_tampon",
+          "RCE",
+          "EOL",
+          "CISA_KEV"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-kev-alert-eol-d-link-and-array-networks-command-injection-under-active-attack/",
+          "https://thecyberthrone.in/2025/12/09/cisa-adds-array-networks-and-d-link-vulnerabilities-to-kev-catalog/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-66481",
+        "cvss": 9.6,
+        "product": "DeepChat (versions 0.5.1 et inférieures)",
+        "description": "Vulnérabilité de script inter-sites (XSS) permettant l'exécution de code à distance (RCE) via un contenu Mermaid mal assaini, contournant un filtre regex.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "DeepChat",
+          "XSS",
+          "RCE",
+          "contournement_assainissement_entree"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66481"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-65964",
+        "cvss": 9.4,
+        "product": "n8n (versions 0.123.1-1.119.1)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via les hooks de pré-validation personnalisés du nœud Git, permettant l'exécution de commandes arbitraires sur l'hôte n8n. Nécessite la capacité de créer ou modifier un workflow n8n.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "Git_hooks",
+          "automatisation_workflow"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65964"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-67504",
+        "cvss": 9.1,
+        "product": "WBCE CMS (versions 1.6.4 et inférieures)",
+        "description": "Génération de mot de passe cryptographiquement non sécurisée (utilisant rand() de PHP), conduisant à des mots de passe prévisibles/cassables par force brute et à un compromis potentiel de compte utilisateur ou à une élévation de privilèges.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "WBCE_CMS",
+          "generation_mot_de_passe_insecure",
+          "contournement_authentification",
+          "elevation_privileges"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67504"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42928",
+        "cvss": 9.1,
+        "product": "SAP jConnect - SDK for ASE",
+        "description": "Vulnérabilité de désérialisation permettant à un utilisateur hautement privilégié de lancer l'exécution de code à distance (RCE) via une entrée spécialement conçue, impactant la confidentialité, l'intégrité et la disponibilité.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_jConnect",
+          "deserialisation",
+          "RCE",
+          "privilege_eleve"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42928"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-66627",
+        "cvss": 8.4,
+        "product": "Wasmi (versions 0.41.0, 0.41.1, 0.42.0-0.47.1, 0.50.0-0.51.2, 1.0.0)",
+        "description": "Vulnérabilité d'utilisation après libération (UAF) dans l'implémentation de la mémoire linéaire, déclenchée par un module WebAssembly, pouvant entraîner une corruption de mémoire, une divulgation d'informations ou une exécution de code (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Wasmi",
+          "WebAssembly",
+          "UAF",
+          "corruption_memoire",
+          "divulgation_information",
+          "execution_code",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66627"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42878",
+        "cvss": 8.2,
+        "product": "SAP Web Dispatcher, Internet Communication Manager (ICM)",
+        "description": "Vulnérabilité d'exposition de données sensibles où les interfaces de test internes, si activées, peuvent être exploitées par des attaquants non authentifiés pour accéder aux diagnostics, envoyer des requêtes malveillantes ou perturber les services.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_Web_Dispatcher",
+          "SAP_ICM",
+          "exposition_donnees",
+          "acces_non_authentifie",
+          "diagnostics",
+          "interruption_service"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42878"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Ransomware gangs turn to Shanya EXE packer to hide EDR killers",
+        "description": "Des groupes de ransomware utilisent Shanya, une plateforme de \"packer-as-a-service\" (PaaS), pour contourner les solutions EDR. Cette plateforme génère des charges utiles uniques avec un chargement de module non standard et un chiffrement, souvent déployées via le chargement latéral de DLL avec des exécutables Windows légitimes. Elle dépose des pilotes de noyau pour neutraliser les processus EDR après les avoir comparés à une liste codée en dur.",
+        "threat_actor": "Ransomware gangs (général), Shanya (fournisseur PaaS)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Comptes Valides)",
+          "T1562.001 (Altération des défenses: Désactiver ou modifier le pare-feu système)",
+          "T1059 (Interpréteur de commande et de script)",
+          "T1547 (Exécution au démarrage ou à l'ouverture de session)",
+          "T1036.004 (Mascarade: Usurpation d'identité)",
+          "T1027 (Fichiers ou informations obfusqués)",
+          "T1070.004 (Suppression d'indicateurs: Suppression de fichiers)"
+        ],
+        "analyse": "Cela représente une évolution dangereuse des tactiques de ransomware, rendant la détection et la réponse plus difficiles pour les organisations qui dépendent des EDR traditionnels. L'utilisation de PaaS abaisse la barrière technique pour les attaquants et augmente l'unicité de leurs charges utiles. La propagation mondiale suggère une adoption généralisée.",
+        "recommandations": [
+          "Mettre en œuvre des solutions EDR avancées avec des capacités d'analyse comportementale",
+          "Renforcer la détection du chargement latéral de DLL et des installations de pilotes de noyau non autorisées",
+          "Auditer et surveiller régulièrement les processus et services système pour détecter les activités inhabituelles",
+          "Former les équipes de sécurité sur les techniques d'évasion EDR émergentes"
+        ],
+        "tags": [
+          "ransomware",
+          "EDR_evasion",
+          "packer",
+          "PaaS",
+          "DLL_side_loading",
+          "pilotes_noyau",
+          "cybercriminalite"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gangs-turn-to-shanya-exe-packer-to-hide-edr-killers/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "China-linked threat actors weaponized critical React Server Components RCE (CVE-2025-55182) hours after disclosure",
+        "description": "Plusieurs acteurs malveillants liés à la Chine, notamment Earth Lamia, Jackpot Panda et CL-STA-1015, ont rapidement exploité CVE-2025-55182 (React2Shell), une vulnérabilité RCE de pré-authentification dans React Server Components (versions 19.x) et Next.js, quelques heures après sa divulgation. Les attaquants ont utilisé des scanners automatisés et des exploits PoC raffinés pour obtenir un accès initial, exécuter du code arbitraire, déployer des droppers Linux (SNOWLIGHT, VShell), des webshells interactifs (fm.js) et potentiellement Cobalt Strike. Les activités post-exploitation observées incluent la reconnaissance (informations système, cartographie réseau) et le vol d'identifiants (mots de passe de bases de données, clés API).",
+        "threat_actor": "Earth Lamia, Jackpot Panda, CL-STA-1015 (liés au ministère de la Sécurité d'État de la RPC)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182"
+          ],
+          "IPv4": [
+            "183[.]6[.]80[.]214"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploiter une application exposée sur Internet)",
+          "T1059 (Interpréteur de commande et de script)",
+          "T1505.003 (Composant logiciel serveur: Web Shell)",
+          "T1071.001 (Protocole de couche application: Protocoles Web)",
+          "T1547 (Exécution au démarrage ou à l'ouverture de session)",
+          "T1083 (Découverte de fichiers et de répertoires)",
+          "T1018 (Découverte de système distant)",
+          "T1003 (Dump des identifiants du système d'exploitation)",
+          "T1074 (Données mises en scène)",
+          "T1020 (Exfiltration automatisée)"
+        ],
+        "analyse": "Cette militarisation rapide par des APT liées à des États souligne l'urgence extrême de corriger les vulnérabilités critiques, en particulier les failles RCE dans les frameworks de développement web largement adoptés. L'utilisation de grands réseaux d'anonymisation rend l'attribution difficile, et les actions post-exploitation complètes démontrent des capacités d'attaque sophistiquées et multi-étapes. L'accent mis sur la collecte de renseignements et la persistance indique des objectifs stratégiques.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour React Server Components et Next.js aux versions sécurisées",
+          "Surveiller les requêtes HTTP suspectes ciblant les points de terminaison des fonctions serveur",
+          "Mettre en œuvre des pare-feu d'applications web (WAF) pour détecter et bloquer les attaques de désérialisation",
+          "Déployer des EDR et une surveillance réseau pour détecter les signes d'activité post-exploitation (webshells, scripts inhabituels, communication C2)",
+          "Activer les alertes CISA KEV et prioriser la remédiation"
+        ],
+        "tags": [
+          "RCE",
+          "React_Server_Components",
+          "NextJS",
+          "exploitation_zero_day",
+          "Chine_APT",
+          "menace_parrainee_par_l_etat",
+          "webshell",
+          "backdoor",
+          "persistance",
+          "CISA_KEV",
+          "chaine_approvisionnement"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-warns-of-react2shell-vulnerability/",
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "FBI: Crooks manipulate online photos to fuel virtual kidnapping ransoms",
+        "description": "Des criminels utilisent des photos en ligne manipulées, souvent issues des réseaux sociaux, comme fausse \"preuve de vie\" dans des escroqueries d'enlèvement virtuel. Ils envoient des SMS aux victimes, affirmant avoir kidnappé un proche, exigeant une rançon immédiate avec des menaces de violence. Les fausses images présentent des incohérences, et les escrocs utilisent des messages chronométrés pour faire pression sur les victimes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "www[.]ic3[.]gov"
+          ]
+        },
+        "mitre_ttps": [
+          "T1598.003 (Hameçonnage: Lien de spearphishing)",
+          "T1566.001 (Hameçonnage: Pièce jointe de spearphishing)",
+          "T1566 (Hameçonnage)",
+          "T1078 (Comptes Valides)"
+        ],
+        "analyse": "Cela met en évidence la sophistication croissante des tactiques d'ingénierie sociale, exploitant les données personnelles accessibles au public et la manipulation numérique pour créer des escroqueries très convaincantes et émotionnellement déstabilisantes. Cela impacte directement les individus et peut entraîner des pertes financières.",
+        "recommandations": [
+          "Faire preuve de prudence lors du partage d'informations personnelles en ligne",
+          "Établir un mot de code privé pour la communication familiale d'urgence",
+          "Vérifier directement les allégations auprès des victimes présumées",
+          "Signaler les incidents suspects aux forces de l'ordre (par exemple, FBI IC3)"
+        ],
+        "tags": [
+          "ingenierie_sociale",
+          "kidnapping_virtuel",
+          "escroquerie_rancon",
+          "manipulation_numerique",
+          "usurpation_identite",
+          "cybercriminalite"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185456/cyber-crime/fbi-crooks-manipulate-online-photos-to-fuel-virtual-kidnapping-ransoms.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "La géopolitique du code sacré : IA religieuses, soft power et sharp power spirituel",
+        "description": "L'intégration de l'IA dans les contextes religieux transforme les systèmes de croyance et les dynamiques de pouvoir symbolique, donnant naissance à une \"géopolitique du code sacré\". Les États et les institutions religieuses se disputent le contrôle de la diffusion numérique du sens spirituel, impactant les domaines d'influence (soft/sharp power), de sécurité (guerre cognitive, désinformation spirituelle) et de souveraineté sur les architectures d'IA qui façonnent la croyance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article analyse les profondes implications sociétales et géopolitiques de la convergence de l'IA avec la religion. Il met en évidence l'émergence de nouvelles formes de contrôle étatique et institutionnel sur l'information et la croyance, pouvant conduire à des guerres cognitives et des campagnes de désinformation spirituelle. L'importance stratégique du contrôle des modèles d'IA pour l'influence culturelle et politique est une conclusion clé.",
+        "recommandations": [
+          "Encourager la recherche interdisciplinaire sur l'éthique de l'IA et les contextes religieux",
+          "Développer des cadres réglementaires pour l'utilisation de l'IA dans les domaines sociétaux sensibles",
+          "Promouvoir la littératie numérique critique pour lutter contre la désinformation spirituelle",
+          "Encourager le dialogue international sur la gouvernance de l'IA et son impact sur la souveraineté culturelle"
+        ],
+        "tags": [
+          "geopolitique",
+          "IA",
+          "religion",
+          "soft_power",
+          "sharp_power",
+          "guerre_cognitive",
+          "desinformation",
+          "souverainete_numerique",
+          "influence_culturelle"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-geopolitique-du-code-sacre-ia-religieuses-soft-power-et-sharp-power-spirituel/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Malicious VSCode extensions on Microsoft's registry drop infostealers",
+        "description": "Deux extensions malveillantes sur le Marketplace de Visual Studio Code de Microsoft infectent les machines des développeurs avec des logiciels malveillants de vol d'informations. Ces extensions, comme \"Bitcoin Black\", exécutent du code PowerShell à chaque action VSCode, déposant un outil de capture d'écran légitime et une DLL malveillante (chargée via détournement de DLL) pour déployer un infostealer (`runtime.exe`). Le logiciel malveillant collecte les processus en cours, le contenu du presse-papiers, les identifiants WiFi, les informations système, les captures d'écran, les programmes installés et les portefeuilles de crypto-monnaies.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "bat[.]sh"
+          ]
+        },
+        "mitre_ttps": [
+          "T1136 (Créer un compte)",
+          "T1547.001 (Exécution au démarrage ou à l'ouverture de session: Clés de Registre d'exécution / Dossier de démarrage)",
+          "T1059 (Interpréteur de commande et de script)",
+          "T1003 (Dump des identifiants du système d'exploitation)",
+          "T1056 (Capture d'entrée)",
+          "T1113 (Capture d'écran)",
+          "T1078 (Comptes Valides)"
+        ],
+        "analyse": "Cela représente une menace significative pour la chaîne d'approvisionnement ciblant les développeurs, compromettant les environnements de développement et pouvant potentiellement conduire à des violations organisationnelles plus larges. L'utilisation d'outils légitimes et le détournement de DLL rendent la détection difficile. Le vol d'identifiants et de portefeuilles de crypto-monnaies présente des risques financiers et de propriété intellectuelle directs.",
+        "recommandations": [
+          "Examiner attentivement les extensions VSCode avant l'installation",
+          "Mettre en œuvre des mesures strictes de liste blanche d'applications et de sécurité de la chaîne d'approvisionnement logicielle",
+          "Déployer un EDR (Endpoint Detection and Response) pour détecter les processus suspects et le détournement de DLL",
+          "Éduquer les développeurs sur les risques des extensions malveillantes et des permissions inhabituelles"
+        ],
+        "tags": [
+          "infostealer",
+          "attaque_chaine_approvisionnement",
+          "extensions_VSCode",
+          "ciblage_developpeur",
+          "detournement_DLL",
+          "vol_identifiants",
+          "vol_crypto_monnaie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-vscode-extensions-on-microsofts-registry-drop-infostealers/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "National Security Marks Chile’s Presidential Runoff",
+        "description": "La campagne du second tour de l'élection présidentielle chilienne est dominée par les préoccupations de sécurité nationale, y compris les taux de criminalité élevés, le crime organisé transnational, les frontières poreuses avec la Bolivie et le Pérou, et l'insurrection mapuche dans le sud. Les candidats Jannette Jara (gauche) et José Antonio Kast (droite) proposent des approches différentes : Jara met l'accent sur les efforts menés par la police, tandis que Kast prône des politiques plus dures, soutenues par l'armée, et une architecture de sécurité nationale. L'élection façonnera également l'alignement international du Chili, Jara favorisant le multilatéralisme et le maintien des liens avec la Chine, et Kast penchant vers la politique \"America First\" des États-Unis et un conservatisme favorable au marché.",
+        "threat_actor": "Groupes narco-criminels, groupes mapuches radicalisés",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article décrit les défis cruciaux en matière de sécurité nationale auxquels le Chili est confronté, reflétant des tendances plus larges en Amérique latine où les menaces de sécurité intérieure influencent fortement le discours politique et la politique étrangère. Le débat entre différents paradigmes de sécurité et alignements internationaux met en évidence les compromis complexes entre les libertés civiles, le développement économique et une défense robuste.",
+        "recommandations": [
+          "Mettre en œuvre des réformes complètes de la sécurité nationale, y compris l'intégration du système de renseignement et la modernisation militaire",
+          "Favoriser la coopération transfrontalière avec les pays voisins pour lutter contre la criminalité transnationale",
+          "Équilibrer les exigences de sécurité intérieure avec les investissements de défense à long terme",
+          "Examiner attentivement les alignements géopolitiques pour soutenir les intérêts nationaux"
+        ],
+        "tags": [
+          "securite_nationale",
+          "Chili",
+          "crime_organise",
+          "securite_frontaliere",
+          "insurrection_mapuche",
+          "politique_etrangere",
+          "Amerique_Latine",
+          "instabilite_politique"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/national-security-marks-chiles-presidential-runoff"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Oracle EBS zero-day used by Clop to breach Barts Health NHS",
+        "description": "Le groupe de ransomware Clop a exploité CVE-2025-61882, une vulnérabilité zero-day dans Oracle E-Business Suite, pour voler des données sensibles à plusieurs organisations mondiales, notamment Barts Health NHS, Envoy Air, Harvard University, Washington Post, Logitech, University of Pennsylvania, University of Phoenix et Dartmouth. Les données volées comprennent les noms et adresses des patients, les détails des anciens employés et les informations sur les fournisseurs, qui ont ensuite été divulguées sur leur site du dark web.",
+        "threat_actor": "Clop ransomware group",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61882"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploiter une application exposée sur Internet)",
+          "T1003 (Dump des identifiants du système d'exploitation)",
+          "T1537 (Transférer des données vers un compte cloud)",
+          "T1486 (Données chiffrées pour l'impact)"
+        ],
+        "analyse": "Cette campagne souligne le risque critique posé par les vulnérabilités zero-day dans les logiciels d'entreprise largement utilisés, servant de vecteur majeur pour l'exfiltration de données et les attaques par ransomware à travers divers secteurs (santé, éducation, aviation). L'exploitation rapide par Clop démontre leurs capacités avancées et l'impact sévère sur les organisations mondiales.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour Oracle E-Business Suite (CVE-2025-61882)",
+          "Mettre en œuvre des processus robustes de gestion des correctifs pour les applications d'entreprise critiques",
+          "Améliorer la surveillance réseau pour détecter les tentatives d'exfiltration de données inhabituelles",
+          "Effectuer régulièrement des évaluations de vulnérabilité et des tests d'intrusion, en particulier sur les applications exposées à Internet"
+        ],
+        "tags": [
+          "ransomware",
+          "Clop",
+          "zero_day",
+          "Oracle_EBS",
+          "violation_donnees",
+          "attaque_chaine_approvisionnement",
+          "sante",
+          "education",
+          "exfiltration_donnees"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Syrie, an 1 : éléments de bilan",
+        "description": "Un an après l'effondrement du régime de Bachar Al-Assad, la Syrie fait face à d'immenses défis, notamment la reconstruction, la crise humanitaire et les divisions internes. La nouvelle direction, sous Ahmed Al-Charaa, a réalisé une réintégration internationale significative, obtenant des rencontres avec Macron, Trump et Poutine, et voyant une suspension progressive des sanctions occidentales. Cependant, les politiques internes montrent une hégémonie sunnite, des tensions persistantes avec les communautés kurdes, alaouites et druzes, et des frappes militaires israéliennes continues qui violent la souveraineté et déstabilisent le pays, malgré les efforts des États-Unis pour contenir l'Iran via la Syrie.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cette analyse offre un aperçu complet de la Syrie post-Assad, soulignant l'interaction complexe entre les conflits ethniques/religieux internes et les pressions géopolitiques externes. La reconnaissance internationale rapide du nouveau régime est contrebalancée par des défis intérieurs profonds et une intervention militaire israélienne continue, compliquant la stabilité à long terme et les efforts de reconstruction. La région reste un point focal pour l'évolution des dynamiques de pouvoir mondiales.",
+        "recommandations": [
+          "Plaider en faveur d'une gouvernance inclusive et de la protection de toutes les communautés en Syrie",
+          "Encourager le soutien international à la reconstruction et à l'aide humanitaire",
+          "Condamner les violations de la souveraineté syrienne et du droit international (par exemple, les frappes israéliennes)",
+          "Soutenir les efforts diplomatiques pour stabiliser les relations régionales et résoudre les conflits par procuration"
+        ],
+        "tags": [
+          "geopolitique",
+          "Syrie",
+          "post_conflit",
+          "relations_internationales",
+          "crise_humanitaire",
+          "conflit_interne",
+          "frappes_israeliennes",
+          "politique_americaine",
+          "Moyen_Orient",
+          "Iran"
+        ],
+        "sources": [
+          "https://www.iris-france.org/syrie-an-1-elements-de-bilan/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "US National Strategy : Trump claque la porte",
+        "description": "Les États-Unis, sous l'administration Trump, ont publié une nouvelle doctrine de sécurité nationale, rejetant l'hégémonie libérale et priorisant l'\"America First\", axée sur les menaces migratoires et la sécurité des frontières. La stratégie critique les administrations précédentes et marque la fin des alliances traditionnelles avec l'Europe, favorisant plutôt les mouvements d'extrême droite en Europe et soulignant l'ouverture commerciale.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cela modifie le paysage géopolitique mondial, mettant l'accent sur une politique étrangère américaine plus isolationniste et protectionniste. Cela a des implications significatives pour les alliances internationales, les relations commerciales et la stabilité politique de l'Europe. L'accent mis sur l'\"America First\" redéfinit les priorités de sécurité et remet en question les normes internationales établies.",
+        "recommandations": [
+          "Les nations européennes devraient réévaluer leurs alliances de défense et de sécurité indépendamment des États-Unis",
+          "Diversifier les partenariats internationaux et les relations commerciales",
+          "Renforcer la cohésion interne pour contrer les influences nationalistes et protectionnistes",
+          "Anticiper les changements de la politique étrangère américaine et leur impact sur l'architecture de sécurité mondiale"
+        ],
+        "tags": [
+          "geopolitique",
+          "politique_etrangere_americaine",
+          "America_First",
+          "strategie_securite_nationale",
+          "isolationnisme",
+          "politique_commerciale",
+          "alliances_europeennes"
+        ],
+        "sources": [
+          "https://www.iris-france.org/us-national-strategy-trump-claque-la-porte/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "État de l’art du terrorisme islamiste au Cabo Delgado (Partie 1/2)",
+        "description": "La province de Cabo Delgado au Mozambique est un front majeur pour l'État Islamique en Afrique centrale (ISCAP), avec une insurrection djihadiste (Ansar al-Sunna/EIM) depuis 2017. Cette insurrection est alimentée par la pauvreté régionale et liée à l'exploitation des ressources gazières et rubis. Les attaques ont forcé TotalEnergies à suspendre son projet GNL. Malgré les contre-offensives des forces rwandaises et de la SADC, l'EIM maintient sa capacité opérationnelle, menant une \"guerre économique\" en ciblant les infrastructures énergétiques et minières, et exploitant le ressentiment local contre les entreprises étrangères. TotalEnergies fait face à une plainte pénale pour complicité présumée dans des crimes de guerre commis par des unités militaires mozambicaines protégeant son site.",
+        "threat_actor": "Islamic State in Central Africa Province (ISCAP), Ansar al-Sunna, EIM (Estado Islâmico de Moçambique)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article fournit une analyse détaillée d'une zone de conflit complexe où le terrorisme, l'exploitation économique et les problèmes de droits de l'homme se croisent. La capacité de l'ISCAP/EIM à maintenir son insurrection et à se tourner vers la guerre économique pose des risques importants pour la stabilité régionale, la sécurité énergétique et les investissements internationaux. Les défis juridiques contre TotalEnergies mettent en évidence les risques éthiques et de conformité pour les multinationales opérant dans les zones de conflit.",
+        "recommandations": [
+          "Renforcer les efforts régionaux de contre-terrorisme en mettant l'accent sur le développement socio-économique",
+          "Renforcer la diligence raisonnable et la conformité en matière de droits de l'homme pour les entreprises opérant dans des zones à haut risque",
+          "Améliorer le partage de renseignements sur le financement du terrorisme et le recrutement",
+          "Développer des stratégies complètes pour contrer les tactiques de guerre économique"
+        ],
+        "tags": [
+          "terrorisme",
+          "Etat_Islamique",
+          "ISCAP",
+          "Mozambique",
+          "Cabo_Delgado",
+          "securite_energetique",
+          "droits_humains",
+          "guerre_economique",
+          "contre_terrorisme",
+          "TotalEnergies"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals a highly dynamic cyber threat landscape, characterized by rapid and widespread exploitation of critical vulnerabilities and zero-days in essential software. State-sponsored actors and ransomware groups capitalize on these flaws to gain initial access and conduct sophisticated campaigns. The ransomware ecosystem continues to evolve, with the adoption of \"packer-as-a-service\" (PaaS) offerings, such as Shanya, to conceal \"EDR killers,\" thereby complicating detection and response capabilities. Supply chain attacks remain a major vector, targeting development tools (malicious VSCode extensions) and foundational libraries (React Server Components, Ruby SAML). Artificial intelligence plays an increasingly central role, both for defense (new security layers for AI-assisted browsing, AI-driven threat emulation platforms) and, potentially, for offense (creation of unique payloads, sophisticated social engineering). Finally, geopolitical tensions exacerbate the cyber threat, with state-linked groups exploiting critical vulnerabilities for strategic objectives and AI becoming an instrument of cognitive warfare and influence. Social engineering remains a highly effective attack technique, underscoring the importance of human awareness as a last line of defense. \n\nIn conclusion, the overall threat posture is high and rapidly evolving. Organizations face complex challenges requiring a multi-layered approach, ranging from prompt vulnerability patching to implementing advanced detection solutions, proactive supply chain risk management, and strong employee awareness. The ability to anticipate and adapt to rapid changes in adversary tactics, particularly those leveraging AI, will be crucial for cyber resilience.",
+      "date": "2025-12-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Akira",
+        "secteur": "Financial services, manufacturing, healthcare",
+        "modop": "Ransomware and extortion operations.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion",
+          "financial_services",
+          "manufacturing",
+          "healthcare"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "ALPHV/BlackCat",
+        "secteur": "Financial services, manufacturing, healthcare",
+        "modop": "Ransomware and extortion operations, with the highest extortion value.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion",
+          "financial_services",
+          "manufacturing",
+          "healthcare"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Clop ransomware group (Cl0p)",
+        "secteur": "Healthcare (Barts Health NHS), Aviation (Envoy Air), Education (Harvard University, University of Pennsylvania, University of Phoenix, Dartmouth), Media (Washington Post), Technology (Logitech), Supply Chain (Oracle E-Business Suite)",
+        "modop": "Exploiting zero-day vulnerabilities (CVE-2025-61882) in Oracle E-Business Suite for data theft and dark web leakage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "zero_day",
+          "data_exfiltration",
+          "Oracle_EBS",
+          "supply_chain_attack",
+          "healthcare",
+          "education"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115686623856677635",
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html",
+          "https://www.forbes.com/sites/larsdaniel/2025/12/07/dartmouth-data-breach-exposes-40000-social-security-numbers-in-cl0ps-oracle-rampage/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "China-linked groups (Earth Lamia, Jackpot Panda, CL-STA-1015)",
+        "secteur": "Various (web applications), LATAM, Middle East, Southeast Asia, East Asia",
+        "modop": "Rapid exploitation of pre-authentication RCE (CVE-2025-55182) in React Server Components, use of large shared anonymization networks, automated scanners, deployment of webshells, Linux droppers (SNOWLIGHT, VShell) and Cobalt Strike servers. Focused on reconnaissance, credential theft, and persistence.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "China_APT",
+          "RCE",
+          "zero_day",
+          "exploit",
+          "webshell",
+          "backdoor",
+          "infostealer",
+          "reconnaissance",
+          "credential_theft",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Islamic State in Central Africa Province (ISCAP) / Ansar al-Sunna / EIM (Estado Islâmico de Moçambique)",
+        "secteur": "Energy (TotalEnergies LNG project), Mining (Gemfields Group), Local populations (Cabo Delgado, Mozambique)",
+        "modop": "Jihadist insurrection, attacks on cities and police posts (Mocímboa da Praia, Palma), economic warfare (targeting logistics and energy infrastructure), exploiting local resentment, kidnapping, killing civilians.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "terrorist_group",
+          "islamist",
+          "ISCAP",
+          "EIM",
+          "Mozambique",
+          "energy_sector",
+          "mining_sector",
+          "economic_warfare"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "nom": "Shanya",
+        "secteur": "Multiple, organizations using EDR",
+        "modop": "Provides a \"packer-as-a-service\" (PaaS) platform used by ransomware gangs for EDR evasion, creating unique payloads with non-standard module loading and encryption. Drops kernel drivers to kill EDR processes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "packer",
+          "EDR_evasion",
+          "DLL_side_loading",
+          "kernel_driver"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gangs-turn-to-shanya-exe-packer-to-hide-edr-killers/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International Relations, Diplomacy, Economy, Defense",
+        "theme": "Analysis of France's declining influence in relations with China, economic rebalancing efforts, and positioning on the Taiwan question.",
+        "description": "Emmanuel Macron's fourth visit to China highlighted France's diminished influence, marked by diplomatic snubs and limited economic gains in agri-food, cognac, and tourism. France struggles to maintain strategic autonomy regarding Taiwan while balancing its relationship with Beijing, especially given China's priorities towards Eastern Europe and its economic and military assertiveness in the Indo-Pacific. A major crisis around Taiwan would have catastrophic global economic consequences, particularly for microprocessors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "China",
+          "Taiwan",
+          "diplomacy",
+          "economic_relations",
+          "international_influence",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/emmanuel-macron-en-chine-quelles-marges-de-manoeuvre-la-france-possede-t-elle-face-au-geant-chinois/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Religion, Technology, Geopolitics, Culture",
+        "theme": "The geopolitical implications of AI in religious contexts.",
+        "description": "The integration of AI into religious contexts is transforming belief systems and symbolic power dynamics, giving rise to a \"geopolitics of sacred code.\" States and religious institutions are vying for control over the digital dissemination of spiritual meaning, impacting areas of influence (soft/sharp power), security (cognitive warfare, spiritual disinformation), and sovereignty over AI architectures that shape belief.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "AI",
+          "religion",
+          "soft_power",
+          "sharp_power",
+          "cognitive_warfare",
+          "disinformation",
+          "sovereignty",
+          "digital_space"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-geopolitique-du-code-sacre-ia-religieuses-soft-power-et-sharp-power-spirituel/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Security, Energy, Mining, Socio-economic, Counter-terrorism",
+        "theme": "The state of Islamist terrorism in Cabo Delgado, Mozambique, its links to ISCAP, and impacts on major energy projects.",
+        "description": "The Cabo Delgado region in Mozambique is a major front for the Islamic State (ISCAP/EIM), with a jihadist insurgency since 2017 intertwined with energy, social, and migratory issues. Despite counter-offensives, the group maintains operational capacity, targeting energy (TotalEnergies) and mining (Gemfields) projects, exploiting local resentment, and conducting economic warfare.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Mozambique",
+          "Cabo_Delgado",
+          "terrorism",
+          "islamist_state",
+          "ISCAP",
+          "EIM",
+          "energy_security",
+          "counter_terrorism",
+          "economic_warfare"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Cybercrime, National Defense",
+        "theme": "Law enforcement action against IT system damage and data theft relevant to national defense.",
+        "description": "Polish police arrested three Ukrainian nationals suspected of attempting to damage IT systems and obtaining computer data of national defense importance using advanced hacking equipment.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Poland",
+          "Ukraine",
+          "cybercrime",
+          "national_security",
+          "law_enforcement"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/poland-arrests-ukrainians-utilizing-advanced-hacking-equipment/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Politics, National Security, Crime, International Relations",
+        "theme": "Chilean presidential runoff focuses on public security, organized crime, border control, and redefining international alignment.",
+        "description": "Chile's presidential runoff campaign is dominated by national security concerns, including high crime rates, transnational organized crime, porous borders with Bolivia and Peru, and Mapuche insurgency in the south. Candidates Jannette Jara (left-wing) and José Antonio Kast (right-wing) propose differing approaches: Jara emphasizes police-led efforts, while Kast advocates for tougher, military-supported policies and a national security architecture. The election will also shape Chile's international alignment, with Jara favoring multilateralism and maintaining ties with China, and Kast leaning towards \"America First\" US policy and market-friendly conservatism.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Chile",
+          "national_security",
+          "public_security",
+          "organized_crime",
+          "border_control",
+          "foreign_policy",
+          "South_America"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/national-security-marks-chiles-presidential-runoff"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Geopolitics, Conflict, International Relations, Humanitarian",
+        "theme": "One year after Bashar Al-Assad's fall in Syria, focusing on political transition, international reintegration, economic challenges, and regional power dynamics.",
+        "description": "A year after the fall of Bashar Al-Assad, Syria faces immense reconstruction challenges. The new leadership under Ahmed Al-Charaa has achieved rapid international reintegration but struggles with internal inclusivity, economic recovery (despite sanctions suspension), and complex relations with Israel (continued strikes, occupation) and Turkey. The US aims to contain Iran through Syria, complicating regional stability.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Syria",
+          "Middle_East",
+          "conflict",
+          "international_relations",
+          "reconstruction",
+          "sanctions",
+          "Israel",
+          "Turkey",
+          "US_foreign_policy",
+          "Iran_containment"
+        ],
+        "sources": [
+          "https://www.iris-france.org/syrie-an-1-elements-de-bilan/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Technology, International Trade, National Security",
+        "theme": "US tech export policy to China under Trump administration.",
+        "description": "Former US President Trump announced he would allow Nvidia to resume sales of H200 accelerators to China and other countries, provided a 25% payment to the US, overturning the Biden administration's ban aimed at preventing China from developing advanced military systems.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "China",
+          "Nvidia",
+          "technology_exports",
+          "national_security",
+          "trade_policy"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/09/trump_gpu_export_ban_reversal/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "International Relations, Politics, National Security",
+        "theme": "Trump's \"America First\" national security strategy, emphasizing border security and criticizing liberal hegemony.",
+        "description": "The US released a new strategic security doctrine under Trump, rejecting traditional alliances and emphasizing \"America First,\" immigration threats, and border security. It promotes far-right political ascendance in Europe and favors commercial openness.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "Trump",
+          "national_strategy",
+          "America_First",
+          "immigration",
+          "border_security",
+          "European_alliances"
+        ],
+        "sources": [
+          "https://www.iris-france.org/us-national-strategy-trump-claque-la-porte/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "E-commerce, Retail",
+        "victime": "Coupang Inc. (400,000 sellers and potentially more users)",
+        "description": "Coupang Inc. is facing class action lawsuits in the US and South Korea over a major data breach impacting 400,000 sellers, leading to financial, operational, and reputational damages.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "retail",
+          "class_action",
+          "data_theft",
+          "financial_impact"
+        ],
+        "sources": [
+          "https://en.infomaxai.com/news/articleView.html?idxno=94501",
+          "https://en.infomaxai.com/news/articleView.html?idxno=94531",
+          "https://mastodon.social/@infomaxkorea/115686821272553795",
+          "https://mastodon.social/@infomaxkorea/115687430740509302"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Defense & Space",
+        "victime": "Defense & Space sector in Ukraine",
+        "description": "A medium confidence data breach has targeted the Defense & Space sector in Ukraine.",
+        "tags": [
+          "violation",
+          "breach",
+          "defense",
+          "space_sector",
+          "Ukraine",
+          "national_security",
+          "data_theft"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115686428855596861"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Government (Local)",
+        "victime": "City of Leavenworth, Kansas",
+        "description": "A cyberattack on November 19 disrupted city services, including invoice, permitting, and hiring systems. Emergency services were unaffected. The incident targeted the internal network.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "local_government",
+          "cyberattack",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/08/leavenworth-kansas-cyberattack-disrupts-city-services/?pk_campaign=feed&pk_kwd=leavenworth-kansas-cyberattack-disrupts-city-services"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Retail, DIY",
+        "victime": "Leroy Merlin (customers in France)",
+        "description": "Personal information of some Leroy Merlin customers in France was stolen in a data breach. The attacker is currently unknown. Measures were taken to block unauthorized access.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "DIY",
+          "France",
+          "personal_data",
+          "data_theft"
+        ],
+        "sources": [
+          "https://mstdn.ca/@rfwaveio/115686252613673499",
+          "https://www.bleepingcomputer.com/news/security/french-diy-retail-giant-leroy-merlin-discloses-a-data-breach/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "secteur": "Healthcare, Aviation, Education, Media, Technology",
+        "victime": "Barts Health NHS, Envoy Air, Harvard University, Washington Post, Logitech, University of Pennsylvania, University of Phoenix, Dartmouth",
+        "description": "Clop ransomware group exploited zero-day CVE-2025-61882 in Oracle E-Business Suite, stealing sensitive data. For Barts Health NHS, this included patient names/addresses, ex-employee debt details, and supplier info. For Dartmouth, 40k+ people's data was exposed, including Social Security Numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "education",
+          "supply_chain",
+          "ransomware",
+          "Clop",
+          "zero_day",
+          "Oracle_EBS",
+          "sensitive_data",
+          "financial_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115686623856677635",
+          "https://research.checkpoint.com/2025/8th-december-threat-intelligence-report/",
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html",
+          "https://www.forbes.com/sites/larsdaniel/2025/12/07/dartmouth-data-breach-exposes-40000-social-security-numbers-in-cl0ps-oracle-rampage/"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66516",
+        "cvss": 10.0,
+        "product": "Apache Tika (tika-core versions 1.13–3.2.1, tika-pdf-module versions 2.0.0–3.2.1, tika-parsers versions 1.13–1.28.5)",
+        "description": "XML External Entity (XXE) injection flaw via malicious PDF files (XFA content), leading to information disclosure, Server-Side Request Forgery (SSRF), Denial of Service (DoS), or Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Apache_Tika",
+          "XXE",
+          "RCE",
+          "information_disclosure",
+          "SSRF",
+          "DoS",
+          "PDF_exploit",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/maximum-severity-xxe-vulnerability-in-apache-tika",
+          "https://socprime.com/blog/cve-2025-66516-vulnerability/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (versions 19.0.0, 19.1.0, 19.1.1, 19.2.0), related packages (react-server-dom-parcel, react-server-dom-turbopack, react-server-dom-webpack), Next.js",
+        "description": "Pre-authentication Remote Code Execution (RCE) vulnerability due to unsafe deserialization of HTTP requests to Server Function endpoints. Actively exploited by China-linked threat actors.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "React_Server_Components",
+          "NextJS",
+          "RCE",
+          "deserialization",
+          "zero_day_exploitation",
+          "China_APT",
+          "pre_authentication",
+          "CISA_KEV"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-warns-of-react2shell-vulnerability/",
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42880",
+        "cvss": 9.9,
+        "product": "SAP Solution Manager",
+        "description": "Code Injection vulnerability due to missing input sanitation, allowing authenticated attackers to gain full control of the system via remote-enabled function modules, impacting confidentiality, integrity, and availability.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_Solution_Manager",
+          "code_injection",
+          "RCE",
+          "authenticated_attacker"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42880"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2022-37055",
+        "cvss": 9.8,
+        "product": "D-Link Go-RT-AC750 routers (cgibin and hnap_main components)",
+        "description": "Critical Buffer Overflow vulnerability leading to remote code execution, memory corruption, data interception, and lateral movement. Affects End-of-Life (EOL) devices.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "D_Link",
+          "router",
+          "buffer_overflow",
+          "RCE",
+          "EOL",
+          "CISA_KEV"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-kev-alert-eol-d-link-and-array-networks-command-injection-under-active-attack/",
+          "https://thecyberthrone.in/2025/12/09/cisa-adds-array-networks-and-d-link-vulnerabilities-to-kev-catalog/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-66481",
+        "cvss": 9.6,
+        "product": "DeepChat (versions 0.5.1 and below)",
+        "description": "Cross-Site Scripting (XSS) vulnerability allowing Remote Code Execution (RCE) via improperly sanitized Mermaid content, bypassing a regex filter.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "DeepChat",
+          "XSS",
+          "RCE",
+          "input_sanitation_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66481"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-65964",
+        "cvss": 9.4,
+        "product": "n8n (versions 0.123.1-1.119.1)",
+        "description": "Remote Code Execution (RCE) vulnerability through Git Node custom pre-commit hooks, allowing arbitrary Git configuration values (core.hooksPath) to execute commands on the n8n host. Requires ability to create or modify an n8n workflow.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "Git_hooks",
+          "workflow_automation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65964"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-67504",
+        "cvss": 9.1,
+        "product": "WBCE CMS (versions 1.6.4 and below)",
+        "description": "Cryptographically insecure password generation (using PHP's rand()), leading to predictable/brute-forcible passwords and potential user account compromise or privilege escalation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "WBCE_CMS",
+          "insecure_password_generation",
+          "authentication_bypass",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67504"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42928",
+        "cvss": 9.1,
+        "product": "SAP jConnect - SDK for ASE",
+        "description": "Deserialization vulnerability allowing a high privileged user to launch Remote Code Execution (RCE) via specially crafted input, impacting confidentiality, integrity, and availability.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_jConnect",
+          "deserialization",
+          "RCE",
+          "high_privilege"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42928"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-66627",
+        "cvss": 8.4,
+        "product": "Wasmi (versions 0.41.0, 0.41.1, 0.42.0-0.47.1, 0.50.0-0.51.2, 1.0.0)",
+        "description": "Use After Free (UAF) vulnerability in linear memory implementation, triggered by WebAssembly module, potentially leading to memory corruption, information disclosure, or code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Wasmi",
+          "WebAssembly",
+          "UAF",
+          "memory_corruption",
+          "information_disclosure",
+          "code_execution",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66627"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "cve_id": "CVE-2025-42878",
+        "cvss": 8.2,
+        "product": "SAP Web Dispatcher, Internet Communication Manager (ICM)",
+        "description": "Sensitive Data Exposure vulnerability where internal testing interfaces, if enabled, can be exploited by unauthenticated attackers to access diagnostics, send crafted requests, or disrupt services.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SAP_Web_Dispatcher",
+          "SAP_ICM",
+          "data_exposure",
+          "unauthenticated_access",
+          "diagnostics",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-42878"
+        ],
+        "date": "2025-12-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Ransomware gangs turn to Shanya EXE packer to hide EDR killers",
+        "description": "Ransomware groups are using Shanya, a packer-as-a-service (PaaS) platform, to evade EDR solutions. This platform creates unique payloads with non-standard module loading and encryption, often delivered via DLL side-loading with legitimate Windows executables. It drops kernel drivers to kill EDR processes after comparing them against a hardcoded list.",
+        "threat_actor": "Ransomware gangs (general), Shanya (PaaS provider)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1036.004 (Masquerading: Impersonation)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1070.004 (Indicator Removal: File Deletion)"
+        ],
+        "analyse": "This signifies a dangerous evolution in ransomware tactics, making detection and response more challenging for organizations relying on traditional EDR. The use of PaaS lowers the technical barrier for attackers and increases the uniqueness of their payloads. The global spread suggests wide adoption.",
+        "recommandations": [
+          "Implement advanced EDR solutions with behavioral analysis capabilities",
+          "Enhance detection of DLL side-loading and unauthorized kernel driver installations",
+          "Regularly audit and monitor system processes and services for unusual activity",
+          "Train security teams on emerging EDR evasion techniques"
+        ],
+        "tags": [
+          "ransomware",
+          "EDR_evasion",
+          "packer",
+          "PaaS",
+          "DLL_side_loading",
+          "kernel_drivers",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gangs-turn-to-shanya-exe-packer-to-hide-edr-killers/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Malicious VSCode extensions on Microsoft's registry drop infostealers",
+        "description": "Two malicious extensions on Microsoft's Visual Studio Code Marketplace infect developer machines with information-stealing malware. These extensions, like \"Bitcoin Black,\" execute PowerShell code on every VSCode action, dropping a legitimate screenshot tool and a malicious DLL (loaded via DLL hijacking) to deploy an infostealer (`runtime.exe`). The malware collects running processes, clipboard content, WiFi credentials, system info, screenshots, installed programs, and crypto wallets.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "bat[.]sh"
+          ]
+        },
+        "mitre_ttps": [
+          "T1136 (Create Account)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1003 (OS Credential Dumping)",
+          "T1056 (Input Capture)",
+          "T1113 (Screen Capture)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "This represents a significant supply chain threat targeting developers, compromising development environments and potentially leading to wider organizational breaches. The use of legitimate tools and DLL hijacking makes detection difficult. The theft of credentials and crypto wallets poses direct financial and intellectual property risks.",
+        "recommandations": [
+          "Scrutinize VSCode extensions before installation",
+          "Implement strict application whitelisting and software supply chain security measures",
+          "Deploy Endpoint Detection and Response (EDR) to detect suspicious processes and DLL hijacking",
+          "Educate developers on risks of malicious extensions and unusual permissions"
+        ],
+        "tags": [
+          "infostealer",
+          "supply_chain_attack",
+          "VSCode_extensions",
+          "developer_targeting",
+          "DLL_hijacking",
+          "credential_theft",
+          "crypto_wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-vscode-extensions-on-microsofts-registry-drop-infostealers/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "FBI: Crooks manipulate online photos to fuel virtual kidnapping ransoms",
+        "description": "Criminals are using manipulated online photos, often from social media, as fake \"proof-of-life\" in virtual kidnapping scams. They text victims, claiming to have kidnapped a loved one, demanding immediate ransom with violence threats. The fake images show inconsistencies, and scammers use timed messages to pressure victims.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "www[.]ic3[.]gov"
+          ]
+        },
+        "mitre_ttps": [
+          "T1598.003 (Phishing: Spearphishing Link)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "This highlights the evolving sophistication of social engineering tactics, leveraging publicly available personal data and digital manipulation to create highly convincing and emotionally distressing scams. It directly impacts individuals and can lead to financial loss.",
+        "recommandations": [
+          "Exercise caution when sharing personal information online",
+          "Establish a private code word for emergency family communication",
+          "Verify claims directly with alleged victims",
+          "Report suspicious incidents to law enforcement (e.g., FBI IC3)"
+        ],
+        "tags": [
+          "social_engineering",
+          "virtual_kidnapping",
+          "ransom_scam",
+          "digital_manipulation",
+          "identity_theft",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185456/cyber-crime/fbi-crooks-manipulate-online-photos-to-fuel-virtual-kidnapping-ransoms.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "China-linked threat actors weaponized critical React Server Components RCE (CVE-2025-55182) hours after disclosure",
+        "description": "Multiple China-linked threat actors, including Earth Lamia, Jackpot Panda, and CL-STA-1015, rapidly exploited CVE-2025-55182 (React2Shell), a pre-authentication RCE in React Server Components (versions 19.x) and Next.js, within hours of its disclosure. Attackers used automated scanners and refined PoC exploits to gain initial access, execute arbitrary code, deploy Linux droppers (SNOWLIGHT, VShell), interactive webshells (fm.js), and potentially Cobalt Strike. Post-exploitation activities observed include reconnaissance (system info, network mapping), and credential theft (database passwords, API keys).",
+        "threat_actor": "Earth Lamia, Jackpot Panda, CL-STA-1015 (linked to PRC’s Ministry of State Security)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182"
+          ],
+          "IPv4": [
+            "183[.]6[.]80[.]214"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1505.003 (Server Software Component: Web Shell)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1083 (File and Directory Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1074 (Data Staged)",
+          "T1020 (Automated Exfiltration)"
+        ],
+        "analyse": "This rapid weaponization by state-nexus APTs highlights the extreme urgency of patching critical vulnerabilities, especially RCE flaws in widely adopted web development frameworks. The use of large anonymization networks makes attribution challenging, and the comprehensive post-exploitation actions demonstrate sophisticated, multi-stage attack capabilities. The focus on intelligence gathering and persistence indicates strategic objectives.",
+        "recommandations": [
+          "Immediately patch React Server Components and Next.js to secure versions",
+          "Monitor for suspicious HTTP requests targeting Server Function endpoints",
+          "Implement Web Application Firewalls (WAF) to detect and block deserialization attacks",
+          "Deploy EDR and network monitoring for signs of post-exploitation activity (webshells, unusual scripts, C2 communication)",
+          "Enable CISA KEV alerts and prioritize remediation"
+        ],
+        "tags": [
+          "RCE",
+          "React_Server_Components",
+          "NextJS",
+          "zero_day_exploitation",
+          "China_APT",
+          "state_sponsored_threat",
+          "webshell",
+          "backdoor",
+          "persistence",
+          "CISA_KEV",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-warns-of-react2shell-vulnerability/",
+          "https://securityaffairs.com/185427/security/u-s-cisa-adds-a-meta-react-server-components-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/185436/security/aws-china-linked-threat-actors-weaponized-react2shell-hours-after-disclosure.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Oracle EBS zero-day used by Clop to breach Barts Health NHS",
+        "description": "The Clop ransomware group exploited CVE-2025-61882, a zero-day vulnerability in Oracle E-Business Suite, to steal sensitive data from multiple organizations globally, including Barts Health NHS, Envoy Air, Harvard University, Washington Post, Logitech, University of Pennsylvania, University of Phoenix, and Dartmouth. The stolen data includes patient names and addresses, former employee details, and supplier information, which was subsequently leaked on their dark web site.",
+        "threat_actor": "Clop ransomware group",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-61882"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1003 (OS Credential Dumping)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1486 (Data Encrypted for Impact)"
+        ],
+        "analyse": "This campaign underscores the critical risk posed by zero-day vulnerabilities in widely used enterprise software, serving as a significant supply chain vector for data exfiltration and ransomware attacks across diverse sectors (healthcare, education, aviation). Clop's rapid exploitation demonstrates their advanced capabilities and the severe impact on organizations globally.",
+        "recommandations": [
+          "Immediately patch Oracle E-Business Suite (CVE-2025-61882)",
+          "Implement robust patch management processes for critical enterprise applications",
+          "Enhance network monitoring to detect unusual data exfiltration attempts",
+          "Conduct regular vulnerability assessments and penetration tests, especially on internet-facing applications"
+        ],
+        "tags": [
+          "ransomware",
+          "Clop",
+          "zero_day",
+          "Oracle_EBS",
+          "data_breach",
+          "supply_chain_attack",
+          "healthcare",
+          "education",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185447/data-breach/oracle-ebs-zero-day-used-by-clop-to-breach-barts-health-nhs.html"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "The Geopolitics of Sacred Code: Religious AI, Soft Power, and Spiritual Sharp Power",
+        "description": "The integration of AI into religious contexts is transforming belief systems and symbolic power dynamics, giving rise to a \"geopolitics of sacred code.\" States and religious institutions are vying for control over the digital dissemination of spiritual meaning, impacting areas of influence (soft/sharp power), security (cognitive warfare, spiritual disinformation), and sovereignty over AI architectures that shape belief.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This article delves into the profound societal and geopolitical implications of AI's convergence with religion. It highlights the emergence of new forms of state and institutional control over information and belief, potentially leading to cognitive warfare and spiritual disinformation campaigns. The strategic importance of controlling AI models for cultural and political influence is a key takeaway.",
+        "recommandations": [
+          "Foster interdisciplinary research on AI ethics and religious contexts",
+          "Develop regulatory frameworks for AI use in sensitive societal areas",
+          "Promote critical digital literacy to combat spiritual disinformation",
+          "Encourage international dialogue on AI governance and its impact on cultural sovereignty"
+        ],
+        "tags": [
+          "geopolitics",
+          "AI",
+          "religion",
+          "soft_power",
+          "sharp_power",
+          "cognitive_warfare",
+          "disinformation",
+          "digital_sovereignty",
+          "cultural_influence"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-geopolitique-du-code-sacre-ia-religieuses-soft-power-et-sharp-power-spirituel/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Emmanuel Macron in China: What Room for Maneuver Does France Have Facing the Chinese Giant?",
+        "description": "Emmanuel Macron's fourth visit to China underscored France's waning influence, facing diplomatic snubs and limited economic gains in agri-food, cognac, and tourism. France struggles to maintain strategic autonomy regarding Taiwan while balancing its relationship with Beijing, especially given China's priorities towards Eastern Europe and its economic and military assertiveness in the Indo-Pacific. A major crisis around Taiwan would have catastrophic global economic consequences, particularly for microprocessors.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This analysis reveals France's limited leverage in a complex geopolitical landscape, particularly against China's rising global power. It highlights the challenges of balancing economic interests with human rights and strategic positioning in critical regions like the Indo-Pacific. The potential for a Taiwan conflict to disrupt global supply chains, especially for microprocessors, is a major strategic concern.",
+        "recommandations": [
+          "Strengthen intra-European and extra-European coalitions (e.g., with Tokyo, Seoul) to collectively address economic imbalances and technology transfers with China",
+          "Maintain a clear stance on human rights and international law (e.g., freedom of navigation in the South China Sea)",
+          "Develop contingency plans for global supply chain disruptions due to geopolitical conflicts"
+        ],
+        "tags": [
+          "geopolitics",
+          "France",
+          "China",
+          "Taiwan",
+          "diplomacy",
+          "economic_influence",
+          "strategic_autonomy",
+          "Indo_Pacific",
+          "supply_chain_risk",
+          "human_rights"
+        ],
+        "sources": [
+          "https://www.iris-france.org/emmanuel-macron-en-chine-quelles-marges-de-manoeuvre-la-france-possede-t-elle-face-au-geant-chinois/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "Syria, Year 1: Assessment",
+        "description": "A year after Bashar Al-Assad's regime collapse, Syria faces immense challenges including reconstruction, humanitarian crisis, and internal divisions. The new leadership under Ahmed Al-Charaa has achieved significant international reintegration, securing meetings with Macron, Trump, and Putin, and seeing progressive suspension of Western sanctions. However, internal policies show a Sunni hegemony, persistent tensions with Kurdish, Alawite, and Druze communities, and ongoing Israeli military strikes that violate sovereignty and destabilize the country, despite US efforts to contain Iran through Syria.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This analysis provides a comprehensive overview of post-Assad Syria, highlighting the complex interplay of internal ethnic/religious conflicts and external geopolitical pressures. The rapid international recognition for the new regime is balanced by deep-seated domestic challenges and continuous Israeli military intervention, complicating long-term stability and reconstruction efforts. The region remains a focal point for shifting global power dynamics.",
+        "recommandations": [
+          "Advocate for inclusive governance and protection of all communities in Syria",
+          "Encourage international support for reconstruction and humanitarian aid",
+          "Condemn violations of Syrian sovereignty and international law (e.g., Israeli strikes)",
+          "Support diplomatic efforts to stabilize regional relations and address proxy conflicts"
+        ],
+        "tags": [
+          "geopolitics",
+          "Syria",
+          "post_conflict",
+          "international_relations",
+          "humanitarian_crisis",
+          "internal_conflict",
+          "Israeli_strikes",
+          "US_policy",
+          "Middle_East",
+          "Iran"
+        ],
+        "sources": [
+          "https://www.iris-france.org/syrie-an-1-elements-de-bilan/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "US National Strategy : Trump Slams the Door",
+        "description": "The United States under Trump has released a new national security doctrine, rejecting liberal hegemony and prioritizing \"America First,\" focusing on immigration threats and border security. The strategy criticizes previous administrations and signals an end to traditional alliances with Europe, instead favoring far-right movements in Europe and emphasizing commercial openness.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This shifts the global geopolitical landscape, emphasizing a more isolationist and protectionist US foreign policy. It has significant implications for international alliances, trade relations, and the political stability of Europe. The focus on \"America First\" redefines security priorities and challenges established international norms.",
+        "recommandations": [
+          "European nations should reassess their defense and security alliances independent of the US",
+          "Diversify international partnerships and trade relations",
+          "Strengthen internal cohesion to counter nationalist and protectionist influences",
+          "Anticipate shifts in US foreign policy and their impact on global security architecture"
+        ],
+        "tags": [
+          "geopolitics",
+          "US_foreign_policy",
+          "America_First",
+          "national_security_strategy",
+          "isolationism",
+          "trade_policy",
+          "European_alliances"
+        ],
+        "sources": [
+          "https://www.iris-france.org/us-national-strategy-trump-claque-la-porte/"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "National Security Marks Chile’s Presidential Runoff",
+        "description": "Chile's presidential runoff campaign is dominated by national security concerns, including high crime rates, transnational organized crime, porous borders with Bolivia and Peru, and Mapuche insurgency in the south. Candidates Jannette Jara (left-wing) and José Antonio Kast (right-wing) propose differing approaches: Jara emphasizes police-led efforts, while Kast advocates for tougher, military-supported policies and a national security architecture. The election will also shape Chile's international alignment, with Jara favoring multilateralism and maintaining ties with China, and Kast leaning towards \"America First\" US policy and market-friendly conservatism.",
+        "threat_actor": "Narco-criminal groups, Mapuche-radicalized groups",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This article outlines the critical national security challenges facing Chile, reflecting broader trends in Latin America where internal security threats heavily influence political discourse and foreign policy. The debate between different security paradigms and international alignments highlights the complex trade-offs between civil liberties, economic development, and robust defense.",
+        "recommandations": [
+          "Implement comprehensive national security reforms including intelligence system integration and military modernization",
+          "Foster cross-border cooperation with neighboring countries to combat transnational crime",
+          "Balance internal security demands with long-term defense investment",
+          "Carefully consider geopolitical alignments to support national interests"
+        ],
+        "tags": [
+          "national_security",
+          "Chile",
+          "organized_crime",
+          "border_security",
+          "Mapuche_insurgency",
+          "foreign_policy",
+          "Latin_America",
+          "political_instability"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/national-security-marks-chiles-presidential-runoff"
+        ],
+        "date": "2025-12-09"
+      },
+      {
+        "title": "State of Islamist Terrorism in Cabo Delgado (Part 1/2)",
+        "description": "The Cabo Delgado province in Mozambique is a major front for the Islamic State in Central Africa Province (ISCAP), with a jihadist insurgency (Ansar al-Sunna/EIM) since 2017. This insurgency is fueled by regional poverty and linked to the exploitation of gas and ruby resources. Attacks forced TotalEnergies to suspend its LNG project. Despite counter-offensives by Rwandan and SADC forces, the EIM maintains operational capacity, engaging in \"economic warfare\" by targeting energy and mining infrastructure, and exploiting local resentment against foreign companies. TotalEnergies faces a criminal complaint for alleged complicity in war crimes by Mozambican military units securing its site.",
+        "threat_actor": "Islamic State in Central Africa Province (ISCAP), Ansar al-Sunna, EIM (Estado Islâmico de Moçambique)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This article provides a detailed analysis of a complex conflict zone where terrorism, economic exploitation, and human rights issues intersect. The ability of ISCAP/EIM to sustain its insurgency and pivot to economic warfare poses significant risks to regional stability, energy security, and international investments. The legal challenges against TotalEnergies highlight the ethical and compliance risks for multinational corporations operating in conflict zones.",
+        "recommandations": [
+          "Enhance regional counter-terrorism efforts with a focus on socio-economic development",
+          "Strengthen due diligence and human rights compliance for companies operating in high-risk areas",
+          "Improve intelligence sharing on terrorist financing and recruitment",
+          "Develop comprehensive strategies to counter economic warfare tactics"
+        ],
+        "tags": [
+          "terrorism",
+          "Islamic_State",
+          "ISCAP",
+          "Mozambique",
+          "Cabo_Delgado",
+          "energy_security",
+          "human_rights",
+          "economic_warfare",
+          "counter_terrorism",
+          "TotalEnergies"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/etat-de-lart-du-terrorisme-islamiste-au-cabo-delgadp-partie-1-2/"
+        ],
+        "date": "2025-12-09"
+      }
+    ]
+  }
+}
