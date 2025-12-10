@@ -1,0 +1,2781 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le panorama des menaces cyber pour la période analysée révèle une intensification et une diversification des attaques, soulignant plusieurs tendances majeures. Les attaques de la chaîne d'approvisionnement restent une préoccupation majeure, comme en témoigne la campagne Shai-Hulud 2.0 ciblant les environnements cloud-native pour le vol de crédentiels et de secrets de configuration. L'exploitation rapide des vulnérabilités zero-day et divulguées publiquement est alarmante, avec des exemples comme la vulnérabilité du pilote Windows Cloud Files activement exploitée et les failles dans PowerShell et GitHub Copilot, démontrant la célérité des attaquants à capitaliser sur les nouvelles faiblesses. L'utilisation de techniques d'évasion sophistiquées, telles que le 'Bring Your Own Vulnerable Driver' (BYOVD) par le ransomware DeadLock pour désactiver les défenses EDR, et le déploiement de machines virtuelles personnalisées (QEMU) pour la persistance, indique une ingéniosité croissante des adversaires. Les botnets IoT, comme Broadside ciblant le secteur de la logistique maritime, évoluent pour inclure le vol de crédentiels et le mouvement latéral, menaçant directement les systèmes de technologie opérationnelle (OT) critiques. L'implication des acteurs étatiques est également notable, avec des APT liées à la Corée du Nord et à la Chine exploitant des vulnérabilités RCE critiques dans des frameworks web largement utilisés (React Server Components) pour l'espionnage et le vol de données. Le ransomware demeure une menace prévalente, atteignant des sommets en termes de paiements en 2023, avec des groupes comme Anubis employant des tactiques d'exfiltration de données et de dénonciation publique. L'intégration croissante de l'IA dans les outils de développement (GitHub Copilot) introduit de nouvelles surfaces d'attaque. Enfin, le contexte géopolitique continue d'influencer le paysage cyber, comme en témoignent les efforts russes de blanchiment d'argent via des cryptomonnaies pour l'ingérence électorale et le ciblage des organisations de défense. En conclusion, l'état général des menaces est caractérisé par une sophistication accrue, une rapidité d'exploitation et une surface d'attaque étendue, exigeant des stratégies de défense proactives et multicouches.",
+      "date": "2025-12-10"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs étatiques chinois / CL-STA-1015",
+        "secteur": "Divers (environnements VMware vCenter, entreprises, secteur technologique)",
+        "modop": "Campagne de malware BRICKSTORM (abus de crédentiels MSP valides, clonage de machines virtuelles, création de VMs malveillantes, extraction de clés sensibles d'ADFS). Exploitation de la vulnérabilité RCE des React Server Components (CVE-2025-55182), déploiement de chevaux de Troie SNOWLIGHT et VShell, utilisation de BPFDoor, Noodle RAT, backdoor Auto-color.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "china",
+          "apt",
+          "brickstorm",
+          "malware",
+          "vmware",
+          "adfs",
+          "rce",
+          "webshell",
+          "backdoor",
+          "snowlight",
+          "vshell",
+          "bpfdoor",
+          "noodle rat",
+          "auto-color"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-brickstorm-react-server-components-flaw-more",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "RPDC (Corée du Nord) / UNC5342 / Contagious Interview",
+        "secteur": "Secteur technologique (chercheurs d'emploi), environnements d'entreprise.",
+        "modop": "Se faisant passer pour des recruteurs afin d'installer des malwares (EtherRAT, technique EtherHiding exploitant la blockchain pour la livraison de charge utile/vol de crypto). Exploitation de la vulnérabilité RCE des React Server Components (CVE-2025-55182).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "north korea",
+          "dprk",
+          "apt",
+          "contagious interview",
+          "etherrat",
+          "etherhiding",
+          "malware",
+          "rce",
+          "cryptojacking"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Botnet Broadside (variante Mirai)",
+        "secteur": "Logistique maritime (compagnies maritimes, navires)",
+        "modop": "Exploitation de la vulnérabilité d'injection de commande CVE-2024-3721 dans les appareils TBK DVR. Protocole C2 personnalisé (TCP/1026, TCP/6969), en-tête Magic unique et module d'exclusivité 'Judge, Jury, and Executioner'. Utilise des sockets du noyau Netlink, polymorphisme de charge utile. Effectue des attaques DDoS basées sur UDP, vole /etc/passwd et /etc/shadow pour l'escalade de privilèges et le mouvement latéral.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "mirai",
+          "ddos",
+          "maritime",
+          "command injection",
+          "privilege escalation",
+          "lateral movement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185491/malware/broadside-botnet-hits-tbk-dvrs-raising-alarms-for-maritime-logistics.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Ransomware DeadLock",
+        "secteur": "Divers (non spécifié dans l'article, mais les ransomwares ciblent généralement de nombreux secteurs)",
+        "modop": "BYOVD (Bring Your Own Vulnerable Driver) chargeur (EDRGay.exe) exploitant la vulnérabilité du pilote Baidu Antivirus (CVE-2024-51324) pour désactiver l'EDR. Script PowerShell pour le contournement de l'UAC, la désactivation des services de sécurité, l'inhibition de la récupération du système (suppression des clichés instantanés). Activation RDP, installation d'AnyDesk, reconnaissance interne, mouvement latéral, modification des paramètres de Windows Defender. Utilise la messagerie Session pour la communication.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "deadlock",
+          "byovd",
+          "edr evasion",
+          "privilege escalation",
+          "data encryption",
+          "rdp",
+          "anydesk",
+          "internal recon"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Groupe de ransomware Anubis",
+        "secteur": "Gouvernement (Comté de Trumbull, Ohio)",
+        "modop": "Attaque par ransomware, exfiltration de données. Persistance dans le réseau pendant la réponse à l'incident, surveillance des audits de sécurité. A contacté la direction générale.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "anubis",
+          "data exfiltration",
+          "government"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/tell-the-truth-or-someone-will-tell-it-for-you-trumbull-county-ohio-edition/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Emennet Pasargad / Shahid Shushtari / Commandement Cyber-Électronique du Corps des Gardiens de la Révolution Islamique (IRGC-CEC) d'Iran",
+        "secteur": "Non spécifié, mais lié aux fonctions de sécurité nationale.",
+        "modop": "Activités de piratage. (Détails non fournis dans l'article, mais implique des opérations cyber parrainées par l'État)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "iran",
+          "apt",
+          "hacking",
+          "irgc-cec"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/us-posts-10-million-bounty-for-iranian-hackers/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Kremlin / Russie",
+        "secteur": "Processus politiques, démocraties (sécurité électorale au Royaume-Uni)",
+        "modop": "Ingérence électorale, blanchiment d'argent politique via cryptomonnaie, contournement de sanctions (stablecoin A7A5), financement de sabotage, minage de bitcoins dans des territoires parallèles, financement politique clandestin.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "russia",
+          "election interference",
+          "money laundering",
+          "cryptocurrency",
+          "hybrid warfare",
+          "sabotage"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uk-election-security-threatened-political-money-laundering-cryptocurrency"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Défense (implicite)",
+        "theme": "Application de la loi, sécurité nationale, cybercriminalité",
+        "description": "La police polonaise a arrêté trois ressortissants ukrainiens accusés d'avoir tenté de nuire aux systèmes informatiques et d'obtenir des données sensibles liées à la défense à l'aide d'équipements de piratage avancés (Flipper Zero, détecteurs d'espionnage, etc.). L'enquête est en cours pour fraude et cybercriminalité.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "poland",
+          "ukraine",
+          "cybercrime",
+          "national security",
+          "hacking tools",
+          "law enforcement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185480/cyber-crime/polish-police-arrest-3-ukrainians-for-possessing-advanced-hacking-tools.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Gouvernement, Défense (Département de la Défense des États-Unis)",
+        "theme": "Sécurité nationale, politique de cybersécurité, télécommunications",
+        "description": "Le projet de loi de défense américain (NDAA pour l'exercice 2026) impose de nouvelles exigences en matière de cybersécurité pour les contrats de télécommunications du DoD utilisés pour des fonctions de sécurité nationale sensibles, y compris le chiffrement, l'obscurcissement des identifiants d'appareils et la surveillance continue des téléphones mobiles des hauts fonctionnaires et des employés.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "dod",
+          "national security",
+          "cybersecurity policy",
+          "telecom",
+          "encryption",
+          "monitoring"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/defense-bill-would-require-new-cyber-requirements-for-some-dod-telecom-contracts/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Gouvernement, Sécurité Nationale",
+        "theme": "Cybercriminalité parrainée par l'État, sanctions internationales",
+        "description": "Le gouvernement américain offre une récompense allant jusqu'à 10 millions de dollars pour des informations sur les membres du groupe de piratage iranien Emennet Pasargad, également connu sous le nom de Shahid Shushtari, opérant sous le Commandement Cyber-Électronique du Corps des Gardiens de la Révolution Islamique (IRGC-CEC) d'Iran.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "iran",
+          "state-sponsored hacking",
+          "bounty",
+          "national security",
+          "irgc-cec"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/us-posts-10-million-bounty-for-iranian-hackers/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Relations Internationales, Politique",
+        "theme": "Politique étrangère américaine, unipolarité vs multilatéralisme, influence de Trump",
+        "description": "Analyse de l'impact de Donald Trump sur la diplomatie américaine et l'ordre mondial, soulignant un virage vers le nationalisme et l'unilatéralisme, remettant en question les accords multilatéraux et les alliances historiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "international relations",
+          "foreign policy",
+          "trump",
+          "nationalism",
+          "multilateralism"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-a-lheure-de-trump-quelle-influence-sur-lordre-mondial/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Relations Internationales, Politique",
+        "theme": "Tensions géopolitiques, crise démocratique, influence régionale (Chine, Inde)",
+        "description": "Analyse de la crise politique au Népal, de ses causes (désillusion démocratique, revendications identitaires) et des dynamiques géopolitiques avec les puissances voisines (la Chine privilégiant la stabilité, l'Inde potentiellement promouvant la monarchie hindoue et contenant la Chine).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "nepal",
+          "india",
+          "china",
+          "political crisis",
+          "democracy",
+          "regional stability"
+        ],
+        "sources": [
+          "https://www.iris-france.org/velleites-democratiques-et-realites-geopolitiques-quelle-sortie-de-crise-apres-la-revolte-gen-z-au-nepal/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Relations Internationales, Affaires Humanitaires",
+        "theme": "Crise humanitaire, conflit",
+        "description": "Discussion sur la situation humanitaire alarmante à Gaza, qui reste inchangée malgré un cessez-le-feu signé en octobre 2025 entre Israël et le Hamas.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "humanitarian crisis",
+          "conflict",
+          "israel",
+          "hamas"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-catastrophe-humanitaire-les-mardis-de-liris-2/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Relations Internationales, Politique",
+        "theme": "Doctrine géopolitique américaine, politique étrangère, relations USA-Europe, relations USA-Amérique Latine",
+        "description": "Analyse de la 'doctrine MAGA' exposée dans la Stratégie de sécurité nationale américaine, caractérisée par l''Amérique d'abord', un désengagement de certains théâtres, une focalisation sur la concurrence économique avec la Chine, et une position critique envers l'Europe et l'Amérique latine (migration, ressources).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "foreign policy",
+          "maga doctrine",
+          "international relations",
+          "europe",
+          "latin america",
+          "china",
+          "migration"
+        ],
+        "sources": [
+          "https://www.iris-france.org/apres-la-doctrine-monroe-le-temps-de-la-doctrine-maga/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Gouvernement, Politique, Cybersécurité",
+        "theme": "Ingérence électorale, influence étrangère, cryptomonnaie, blanchiment d'argent",
+        "description": "L'utilisation de cryptomonnaies augmente la 'surface d'attaque' pour l'ingérence électorale au Royaume-Uni, avec des préoccupations concernant le financement étranger illicite, en particulier de la Russie, par le biais du blanchiment d'argent politique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "election security",
+          "russia",
+          "cryptocurrency",
+          "money laundering",
+          "foreign interference"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uk-election-security-threatened-political-money-laundering-cryptocurrency"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gouvernement",
+        "victime": "Comté de Trumbull, Ohio (USA)",
+        "description": "Attaque par ransomware du groupe Anubis en novembre 2025, entraînant une compromission du système, une exfiltration de données (données d'employés, informations personnelles) et un chiffrement. Les fonctionnaires du comté ont initialement nié la compromission.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "ransomware",
+          "anubis",
+          "data exfiltration",
+          "usa",
+          "ohio"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/tell-the-truth-or-someone-will-tell-it-for-you-trumbull-county-ohio-edition/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (Corée du Sud)",
+        "description": "Violation majeure de données clients affectant près des deux tiers de la population sud-coréenne. Perquisition policière et audience gouvernementale prévues.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "coupang",
+          "south korea",
+          "customer data",
+          "personal data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/south-korea-police-raid-e-commerce-giant-coupang-over-data-leak/",
+          "https://mastodon.social/@infomaxkorea/115693545209469970"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Commerce de détail (fournitures pour animaux de compagnie)",
+        "victime": "Petco",
+        "description": "Une faille de sécurité a exposé les données personnelles des clients.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "petco",
+          "customer data",
+          "personal data"
+        ],
+        "sources": [
+          "https://mastodon.social/@RunRichRun/115693787257504478",
+          "https://mastodon.thenewoil.org/@thenewoil/115693033986207137"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Pharmaceutique / Santé",
+        "victime": "Inotiv",
+        "description": "Violation de données suite à une attaque par ransomware.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "healthcare",
+          "inotiv",
+          "ransomware"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115692798008567242"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Services financiers (courtier en ligne)",
+        "victime": "ThinkMarkets",
+        "description": "Allégation de violation de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial services",
+          "thinkmarkets",
+          "customer data"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115692746062020487"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Logiciel/Analyse",
+        "victime": "Mixpanel",
+        "description": "Incident de violation de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "software",
+          "analytics",
+          "mixpanel"
+        ],
+        "sources": [
+          "https://mastodon.social/@fikagoose/115692354290164860"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Gouvernement, Défense et Espace",
+        "victime": "United States Air Force",
+        "description": "Incident de violation de données à haute confiance ciblant l'armée de l'air des États-Unis.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "defense",
+          "us air force",
+          "military"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115692091206402399"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Services financiers, Fabrication, Santé (secteurs les plus touchés)",
+        "victime": "Diverses organisations (tendance générale)",
+        "description": "Les incidents et les paiements liés aux ransomwares ont atteint un niveau record en 2023, avec plus de 1,1 milliard de dollars versés pour 1 512 incidents. Le total des paiements signalés a dépassé 4,5 milliards de dollars en février 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "financial services",
+          "manufacturing",
+          "healthcare",
+          "statistics",
+          "trend"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/fincen-issues-financial-trend-analysis-on-ransomware/",
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": 9.1,
+        "product": "Fortinet FortiOS, FortiProxy, FortiSwitchManager",
+        "description": "Vulnérabilité critique de contournement d'authentification FortiCloud SSO via une signature cryptographique SAML mal vérifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "sso bypass",
+          "authentication",
+          "saml forgery",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-forticloud-sso-login-auth-bypass-flaws/",
+          "https://securityonline.info/critical-fortinet-flaw-risks-unauthenticated-admin-bypass-via-forticloud-sso-saml-forgery/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": 9.1,
+        "product": "Fortinet FortiWeb",
+        "description": "Vulnérabilité critique de contournement d'authentification FortiCloud SSO via une signature cryptographique SAML mal vérifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "sso bypass",
+          "authentication",
+          "saml forgery",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-forticloud-sso-login-auth-bypass-flaws/",
+          "https://securityonline.info/critical-fortinet-flaw-risks-unauthenticated-admin-bypass-via-forticloud-sso-saml-forgery/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-10573",
+        "cvss": 9.6,
+        "product": "Ivanti Endpoint Manager (EPM)",
+        "description": "Exécution de code à distance (RCE) via cross-site scripting (XSS) dans le service web principal d'EPM, permettant aux attaquants non authentifiés d'exécuter du JavaScript arbitraire et de détourner des sessions administrateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ivanti",
+          "epm",
+          "rce",
+          "xss",
+          "code execution",
+          "session hijack",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-critical-endpoint-manager-code-execution-flaw/",
+          "https://securityaffairs.com/185508/hacking/ivanti-warns-customers-of-new-epm-flaw-enabling-remote-code-execution.html",
+          "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (protocole Flight), Next.js",
+        "description": "Exécution de code à distance (RCE) en raison d'une désérialisation non sécurisée de requêtes HTTP malveillantes, permettant aux attaquants non authentifiés d'exécuter du code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "react",
+          "next.js",
+          "rce",
+          "deserialization",
+          "critical"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-9056",
+        "cvss": 10.0,
+        "product": "Apache AudioLink",
+        "description": "Service non protégé permettant à un attaquant local d'écraser des fichiers système via une invocation de service non autorisée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "audiolink",
+          "file overwrite",
+          "local privilege escalation",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9056"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-13613",
+        "cvss": 9.8,
+        "product": "Plugin Elated Membership pour WordPress",
+        "description": "Contournement d'authentification via la connexion sociale, permettant aux attaquants non authentifiés de se connecter en tant qu'administrateurs.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "authentication bypass",
+          "admin access",
+          "social login",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13613"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67506",
+        "cvss": 9.8,
+        "product": "PipesHub",
+        "description": "Traversée de chemin et téléversement arbitraire de fichiers non authentifié, permettant l'écrasement de fichiers à distance ou l'insertion de code malveillant.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pipeshub",
+          "path traversal",
+          "file upload",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67506"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67501",
+        "cvss": 9.4,
+        "product": "WeGIA",
+        "description": "Vulnérabilité d'injection SQL dans le point de terminaison /html/matPat/editar_categoria.php via le paramètre id_categoria.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wegia",
+          "sql injection",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67501"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-9571",
+        "cvss": 8.7,
+        "product": "Google Cloud Data Fusion",
+        "description": "Exécution de code à distance (RCE) via le téléversement d'artefacts malveillants, permettant un contrôle sur l'instance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google cloud",
+          "data fusion",
+          "rce",
+          "artifact upload",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9571"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-61813",
+        "cvss": 8.2,
+        "product": "Adobe ColdFusion",
+        "description": "Restriction incorrecte de référence d'entité externe XML (XXE) menant à la lecture arbitraire du système de fichiers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe",
+          "coldfusion",
+          "xxe",
+          "file system read",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-61813"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67507",
+        "cvss": 8.1,
+        "product": "Filament",
+        "description": "Défaut dans la gestion des codes de récupération d'authentification multi-facteurs basés sur l'application, permettant la réutilisation indéfinie du même code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "filament",
+          "mfa",
+          "authentication",
+          "recovery codes",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67507"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62458",
+        "cvss": 8.8,
+        "product": "Microsoft Windows (pilotes win32kfull, win32kbase)",
+        "description": "Écriture/Accès hors limites et confusion de type menant à une escalade de privilèges locale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "windows",
+          "privilege escalation",
+          "out-of-bounds",
+          "type confusion",
+          "high"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1049/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1048/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1047/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1046/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-64671",
+        "cvss": 8.4,
+        "product": "GitHub Copilot pour JetBrains IDEs",
+        "description": "Vulnérabilité d'injection de commande permettant de contourner les protections d'auto-approbation du terminal et d'exécuter du code non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "github copilot",
+          "jetbrains",
+          "command injection",
+          "rce",
+          "high",
+          "ai"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62554",
+        "cvss": 8.4,
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) exploitable via l'ingénierie sociale (document Office malveillant, volet d'aperçu).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft office",
+          "rce",
+          "social engineering",
+          "preview pane",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62557",
+        "cvss": 8.4,
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) exploitable via l'ingénierie sociale (document Office malveillant, volet d'aperçu).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft office",
+          "rce",
+          "social engineering",
+          "preview pane",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62562",
+        "cvss": null,
+        "product": "Microsoft Outlook",
+        "description": "Vulnérabilité d'exécution de code à distance (use-after-free) exploitable via un e-mail malveillant et une interaction de l'utilisateur (réponse).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft outlook",
+          "rce",
+          "use-after-free",
+          "social engineering",
+          "critical"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://blog.talosintelligence.com/microsoft-patch-tuesday-december-2025/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62221",
+        "cvss": 7.8,
+        "product": "Windows Cloud Files Mini Filter Driver (cldflt.sys)",
+        "description": "Vulnérabilité de type use-after-free conduisant à une escalade de privilèges (privilèges SYSTEM). Zero-day activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "windows",
+          "privilege escalation",
+          "use-after-free",
+          "zero-day",
+          "actively exploited",
+          "kernel",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://cybersecuritynews.com/windows-cloud-files-mini-filter-driver-0-day/",
+          "https://securityonline.info/cisa-kev-alert-winrar-zero-day-used-for-malware-injection-and-windows-uaf-rce-under-active-attack/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-54100",
+        "cvss": 7.8,
+        "product": "Windows PowerShell (Invoke-WebRequest cmdlet)",
+        "description": "Vulnérabilité d'exécution de code à distance (injection de commande) exploitable via un contenu web malveillant téléchargé à l'aide d'Invoke-WebRequest. Divulguée publiquement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "powershell",
+          "rce",
+          "command injection",
+          "publicly disclosed",
+          "high"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-windows-powershell-now-warns-when-running-invoke-webrequest-scripts/",
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Un adversaire déploie une VM QEMU personnalisée pour la persistance après un 'spam bombing' et de l'ingénierie sociale",
+        "description": "Analyse d'une tactique nouvelle d'un adversaire : le déploiement d'une machine virtuelle QEMU personnalisée pour la persistance dans un environnement compromis. L'attaque a commencé par une campagne de 'spam bombing' utilisée comme diversion, suivie d'ingénierie sociale via un appel de support technique. L'adversaire a ensuite utilisé un logiciel d'assistance à distance légitime (Quick Assist) pour obtenir un accès initial, introduire sa VM (exécutant Windows 7 SP1) et établir une persistance à l'aide de ScreenConnect et d'implants C2 Sliver (1HTTPS.EXE, 2MTLS.EXE). La reconnaissance au sein de la VM comprenait le balayage du réseau interne et des requêtes DNS (enregistrements SRV), tandis que des communications C2 externes ont été observées vers `marnyonline[.]com` et une adresse IP associée à Sliver. L'analyse forensique a également révélé la backdoor QDoor (SOCKS.EXE) et des mesures anti-forensiques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "marnyonline[.]com",
+            "reddit[.]com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "45[.]61[.]169[.]127",
+            "88[.]119[.]167[.]239"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.001:Phishing: Spearphishing Attachment",
+            "T1078.003:Valid Accounts: Local Accounts",
+            "T1219:Remote Access Tools",
+            "T1543.003:Create or Modify System Process: Windows Service",
+            "T1547.001:Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+            "T1218:Signed Binary Proxy Execution",
+            "T1018:Remote System Discovery",
+            "T1046:Network Service Scanning",
+            "T1071.001:Application Layer Protocol: Web Protocols",
+            "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+            "T1572:Protocol Tunneling",
+            "T1090.002:Proxy: SOCKS Proxy",
+            "T1070.004:Indicator Removal: File Deletion",
+            "T1059.003:Command and Scripting Interpreter: Windows Command Shell"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001:Phishing: Spearphishing Attachment",
+          "T1078.003:Valid Accounts: Local Accounts",
+          "T1219:Remote Access Tools",
+          "T1543.003:Create or Modify System Process: Windows Service",
+          "T1547.001:Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1218:Signed Binary Proxy Execution",
+          "T1018:Remote System Discovery",
+          "T1046:Network Service Scanning",
+          "T1071.001:Application Layer Protocol: Web Protocols",
+          "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+          "T1572:Protocol Tunneling",
+          "T1090.002:Proxy: SOCKS Proxy",
+          "T1070.004:Indicator Removal: File Deletion",
+          "T1059.003:Command and Scripting Interpreter: Windows Command Shell"
+        ],
+        "analyse": "Cet incident met en évidence un mélange sophistiqué d'ingénierie sociale, d'abus d'outils légitimes et de mécanismes de persistance novateurs. L'utilisation d'une machine virtuelle personnalisée offre un environnement isolé et contrôlé pour l'attaquant, rendant la détection et l'analyse forensique difficiles. L'approche multi-vectorielle du C2 et de la persistance (ScreenConnect, Sliver, QDoor) souligne l'importance de l'adversaire pour un accès résilient et une sécurité opérationnelle. Cela représente une évolution dans la méthodologie des adversaires en introduisant leur propre environnement d'exécution.",
+        "recommandations": [
+          "Mettre en œuvre une sécurité email robuste pour détecter et bloquer les campagnes de 'spam bombing' et de phishing sophistiquées.",
+          "Fournir une formation complète de sensibilisation à la sécurité aux employés sur les tactiques d'ingénierie sociale et l'utilisation sécurisée des outils d'assistance à distance.",
+          "Surveiller les activités d'exécution de programmes inhabituelles (par exemple, QEMU sur les systèmes utilisateurs) et les installations non autorisées de logiciels d'accès à distance.",
+          "Améliorer la visibilité du réseau pour détecter les balayages internes et les communications C2 inhabituelles (Sliver, ScreenConnect, QDoor).",
+          "Effectuer régulièrement des analyses forensiques sur les systèmes suspects pour identifier les VMs cachées, les mécanismes de persistance et les artefacts.",
+          "Mettre en œuvre une liste blanche d'applications et appliquer des contrôles de sécurité hôtes robustes.",
+          "Segmenter les réseaux pour limiter le mouvement latéral et les communications C2."
+        ],
+        "tags": [
+          "social engineering",
+          "spam bombing",
+          "remote assistance abuse",
+          "qemu",
+          "virtual machine",
+          "persistence",
+          "sliver c2",
+          "screenconnect",
+          "qdoor",
+          "reconnaissance",
+          "anti-forensics",
+          "T1566.001",
+          "T1078.003",
+          "T1219",
+          "T1543.003",
+          "T1547.001",
+          "T1218",
+          "T1018",
+          "T1046",
+          "T1071.001",
+          "T1573.002",
+          "T1572",
+          "T1090.002",
+          "T1070.004",
+          "T1059.003"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/email-bombing-virtual-machine/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Le botnet Broadside cible le secteur de la logistique maritime via la vulnérabilité des DVR TBK",
+        "description": "Les chercheurs de Cydome ont identifié 'Broadside', une nouvelle variante du botnet Mirai ciblant activement le secteur de la logistique maritime en exploitant la CVE-2024-3721, une vulnérabilité d'injection de commande dans les appareils TBK Vision DVR. Broadside utilise un protocole C2 personnalisé sur TCP/1026 (avec repli sur TCP/6969), un en-tête Magic unique et un module d'exclusivité. Il emploie des sockets du noyau Netlink pour une surveillance furtive et le polymorphisme de la charge utile pour échapper à la détection. Au-delà des capacités DDoS, Broadside vole les fichiers /etc/passwd et /etc/shadow, permettant l'escalade de privilèges et le mouvement latéral, posant des risques importants pour les compagnies maritimes en accédant potentiellement aux flux CCTV, en perturbant les communications satellitaires ou en obtenant des points d'appui vers les systèmes OT critiques.",
+        "threat_actor": "Botnet Broadside (variante Mirai)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-3721"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1210:Exploitation of Remote Services",
+            "T1190:Exploit Public-Facing Application",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1003.008:OS Credential Dumping: /etc/passwd and /etc/shadow",
+            "T1068:Exploitation for Privilege Escalation",
+            "T1078:Valid Accounts",
+            "T1498:Denial of Service: Distributed Denial of Service",
+            "T1040:Network Sniffing"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1210:Exploitation of Remote Services",
+          "T1190:Exploit Public-Facing Application",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1003.008:OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1068:Exploitation for Privilege Escalation",
+          "T1078:Valid Accounts",
+          "T1498:Denial of Service: Distributed Denial of Service",
+          "T1040:Network Sniffing"
+        ],
+        "analyse": "Le botnet Broadside met en évidence la menace persistante des botnets IoT et leur évolution pour inclure des capacités plus sophistiquées au-delà des simples attaques DDoS. Le ciblage de la logistique maritime via des appareils DVR est notable, démontrant un déplacement vers l'exploitation de dispositifs dans des infrastructures critiques pour le déni de service et un accès potentiellement plus profond aux environnements de technologie opérationnelle (OT). L'accent mis sur le vol de crédentiels pour l'escalade de privilèges et le mouvement latéral signifie un objectif plus stratégique que les variantes Mirai typiques.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs aux appareils TBK DVR pour CVE-2024-3721.",
+          "Mettre en œuvre une segmentation réseau forte entre les systèmes IT et OT sur les navires.",
+          "Surveiller régulièrement le trafic réseau pour des communications C2 inhabituelles (TCP/1026, TCP/6969) et des balayages non autorisés.",
+          "Changer les identifiants par défaut sur tous les appareils IoT/edge et utiliser des mots de passe forts et uniques.",
+          "Déployer des systèmes de détection/prévention d'intrusion (IDS/IPS) pour détecter les tentatives d'injection de commande et l'activité des botnets.",
+          "Mettre en œuvre la surveillance de l'intégrité des fichiers pour les fichiers système critiques comme /etc/passwd et /etc/shadow.",
+          "Effectuer des évaluations de vulnérabilité de tous les appareils exposés à Internet, en particulier dans les secteurs d'infrastructures critiques."
+        ],
+        "tags": [
+          "botnet",
+          "mirai",
+          "broadside",
+          "maritime logistics",
+          "iot",
+          "dvr",
+          "command injection",
+          "ddos",
+          "privilege escalation",
+          "lateral movement",
+          "ot security",
+          "critical infrastructure",
+          "T1210",
+          "T1190",
+          "T1059.004",
+          "T1003.008",
+          "T1068",
+          "T1078",
+          "T1498",
+          "T1040"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185491/malware/broadside-botnet-hits-tbk-dvrs-raising-alarms-for-maritime-logistics.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "La campagne de ransomware DeadLock utilise un chargeur BYOVD pour contourner l'EDR",
+        "description": "Analyse d'une campagne de ransomware DeadLock utilisant un chargeur BYOVD (Bring Your Own Vulnerable Driver) précédemment inconnu pour exploiter une vulnérabilité du pilote Baidu Antivirus (CVE-2024-51324). Cela permet aux acteurs de la menace de désactiver les défenses EDR, d'escalader les privilèges et d'exécuter un script PowerShell pour contourner l'UAC, désactiver les services de sécurité et inhiber la récupération du système en supprimant les clichés instantanés. La campagne implique également l'activation du RDP, l'installation d'AnyDesk pour la persistance, la conduite de reconnaissance interne, le mouvement latéral et la modification des paramètres de Windows Defender. La communication avec les victimes se fait via la messagerie Session.",
+        "threat_actor": "Ransomware DeadLock",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-51324"
+          ],
+          "DOMAIN": [
+            "snort[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1021:Remote Services",
+            "T1562:Impair Defenses",
+            "T1033:System Owner/User Discovery",
+            "T1569:System Services",
+            "T1112:Modify Registry",
+            "T1078:Valid Accounts",
+            "T1218:Signed Binary Proxy Execution",
+            "T1219:Remote Access Tools",
+            "T1490:Inhibit System Recovery",
+            "T1069:Permission Groups Discovery",
+            "T1046:Network Service Scanning",
+            "T1211:Exploitation for Defense Evasion",
+            "T1548:Abuse Elevation Control Mechanism",
+            "T1018:Remote System Discovery",
+            "T1059.001:Command and Scripting Interpreter: PowerShell",
+            "T1070.004:Indicator Removal: File Deletion",
+            "T1486:Data Encrypted for Impact"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1021:Remote Services",
+          "T1562:Impair Defenses",
+          "T1033:System Owner/User Discovery",
+          "T1569:System Services",
+          "T1112:Modify Registry",
+          "T1078:Valid Accounts",
+          "T1218:Signed Binary Proxy Execution",
+          "T1219:Remote Access Tools",
+          "T1490:Inhibit System Recovery",
+          "T1069:Permission Groups Discovery",
+          "T1046:Network Service Scanning",
+          "T1211:Exploitation for Defense Evasion",
+          "T1548:Abuse Elevation Control Mechanism",
+          "T1018:Remote System Discovery",
+          "T1059.001:Command and Scripting Interpreter: PowerShell",
+          "T1070.004:Indicator Removal: File Deletion",
+          "T1486:Data Encrypted for Impact"
+        ],
+        "analyse": "Cette campagne démontre une approche sophistiquée des attaques par ransomware, intégrant l'exploitation de pilotes pour l'évasion des défenses, des techniques d'escalade de privilèges et des activités post-compromission complètes. L'utilisation de chargeurs BYOVD met en évidence une tendance croissante des attaquants à contourner les solutions de sécurité modernes en exploitant des pilotes légitimes mais vulnérables. L'accent mis sur la perturbation de la récupération du système et l'établissement de points d'accès à distance résilients indique une stratégie de 'chasse aux gros gibiers'.",
+        "recommandations": [
+          "Appliquer les correctifs pour CVE-2024-51324 (pilote Baidu Antivirus).",
+          "Mettre en œuvre des solutions EDR robustes et surveiller le chargement anormal de pilotes ou la terminaison de processus.",
+          "Appliquer les principes du moindre privilège pour limiter l'impact de l'escalade de privilèges.",
+          "Sauvegarder régulièrement les données et tester les procédures de récupération.",
+          "Surveiller les installations et connexions RDP/AnyDesk non autorisées.",
+          "Mener des formations de sensibilisation à la sécurité pour prévenir l'accès initial via l'ingénierie sociale.",
+          "Utiliser la segmentation du réseau pour limiter le mouvement latéral."
+        ],
+        "tags": [
+          "ransomware",
+          "deadlock",
+          "byovd",
+          "edr evasion",
+          "privilege escalation",
+          "anti-forensics",
+          "persistence",
+          "internal reconnaissance",
+          "lateral movement",
+          "windows defender",
+          "session messenger",
+          "T1021",
+          "T1562",
+          "T1033",
+          "T1569",
+          "T1112",
+          "T1078",
+          "T1218",
+          "T1219",
+          "T1490",
+          "T1069",
+          "T1046",
+          "T1211",
+          "T1548",
+          "T1018",
+          "T1059.001",
+          "T1070.004",
+          "T1486"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Exploitation de la vulnérabilité RCE critique dans les React Server Components liée à une activité parrainée par l'État",
+        "description": "Analyse approfondie de l'exploitation de la CVE-2025-55182, une vulnérabilité RCE critique (CVSS 10.0) affectant les React Server Components (protocole Flight) et Next.js. Cette faille permet aux attaquants non authentifiés d'exécuter du code arbitraire via une désérialisation non sécurisée de requêtes HTTP malveillantes. Les activités post-exploitation observées incluent le balayage automatisé, la reconnaissance immédiate (empreinte OS/architecture, vérification du niveau de privilèges, cartographie des interfaces réseau), le téléchargement et l'exécution de scripts malveillants (sex.sh), l'installation de droppers Linux pour la persistance, l'établissement de reverse shells bash vers des serveurs Cobalt Strike et le déploiement de webshells interactifs (fm.js). L'activité recoupe les outils d'interview Contagious de la Corée du Nord (RPDC) (EtherRAT, EtherHiding) et un courtier d'accès initial (CL-STA-1015) lié à la Chine déployant des chevaux de Troie SNOWLIGHT et VShell, Noodle RAT, BPFDoor et des backdoors Auto-color.",
+        "threat_actor": "RPDC (Contagious Interview, UNC5342), lié à la Chine (CL-STA-1015, Red Menshen)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-66478"
+          ],
+          "DOMAIN": [
+            "github[.]com",
+            "nodejs[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "154.89.152[.]240"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1190:Exploit Public-Facing Application",
+            "T1595.002:Gather Victim Host Information: Vulnerability Scanning",
+            "T1033:System Owner/User Discovery",
+            "T1082:System Information Discovery",
+            "T1016:System Network Configuration Discovery",
+            "T1105:Ingress Tool Transfer",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1543.002:Create or Modify System Process: Systemd Service",
+            "T1071.001:Application Layer Protocol: Web Protocols",
+            "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+            "T1505.003:Server Software Component: Web Shell",
+            "T1083:File and Directory Discovery",
+            "T1552:Unsecured Credentials",
+            "T1041:Exfiltration Over C2 Channel",
+            "T1566.001:Phishing: Spearphishing Attachment"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190:Exploit Public-Facing Application",
+          "T1595.002:Gather Victim Host Information: Vulnerability Scanning",
+          "T1033:System Owner/User Discovery",
+          "T1082:System Information Discovery",
+          "T1016:System Network Configuration Discovery",
+          "T1105:Ingress Tool Transfer",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1543.002:Create or Modify System Process: Systemd Service",
+          "T1071.001:Application Layer Protocol: Web Protocols",
+          "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+          "T1505.003:Server Software Component: Web Shell",
+          "T1083:File and Directory Discovery",
+          "T1552:Unsecured Credentials",
+          "T1041:Exfiltration Over C2 Channel",
+          "T1566.001:Phishing: Spearphishing Attachment"
+        ],
+        "analyse": "Cet incident souligne l'impact critique des vulnérabilités RCE dans les frameworks de développement web largement utilisés comme React et Next.js, en particulier lorsqu'elles sont exploitées par des acteurs étatiques avancés. L'exploitation rapide et l'ensemble diversifié d'outils post-exploitation démontrent un niveau élevé de sophistication et d'adaptabilité, exploitant plusieurs backdoors et mécanismes de persistance. La convergence de l'activité liée à la RPDC et à la Chine sur cette seule vulnérabilité souligne son importance stratégique.",
+        "recommandations": [
+          "Patch immédiat de React (versions 19.0–19.2) et Next.js (versions 15.x–16.x) vers des versions corrigées.",
+          "Mettre en œuvre une validation d'entrée robuste et des pratiques de désérialisation sécurisées dans les applications web.",
+          "Surveiller le balayage automatisé et l'exécution de commandes inhabituelles sur les serveurs web.",
+          "Déployer des solutions EDR/XDR capables de détecter l'exécution de scripts malveillants, l'activité de droppers et les connexions de shells distants.",
+          "Mettre en œuvre la segmentation du réseau pour limiter le mouvement latéral en cas de compromission d'un serveur web.",
+          "Mener une chasse aux menaces pour les indicateurs associés aux acteurs de la menace liés à la RPDC et à la Chine."
+        ],
+        "tags": [
+          "rce",
+          "react",
+          "next.js",
+          "insecure deserialization",
+          "state-sponsored",
+          "dprk",
+          "china",
+          "apt",
+          "webshell",
+          "backdoor",
+          "persistence",
+          "malware",
+          "cobalt strike",
+          "etherrat",
+          "etherhiding",
+          "snowlight",
+          "vshell",
+          "noodle rat",
+          "bpfdoor",
+          "auto-color",
+          "supply chain",
+          "T1190",
+          "T1595.002",
+          "T1033",
+          "T1082",
+          "T1016",
+          "T1105",
+          "T1059.004",
+          "T1543.002",
+          "T1071.001",
+          "T1573.002",
+          "T1505.003",
+          "T1083",
+          "T1552",
+          "T1041",
+          "T1566.001"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-brickstorm-react-server-components-flaw-more",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Microsoft Patch Tuesday de décembre : correctifs pour les zero-days, les RCE critiques et les escalades de privilèges",
+        "description": "Le Patch Tuesday de Microsoft de décembre 2025 corrige 57 failles, dont trois vulnérabilités zero-day : une faille 'use-after-free' activement exploitée dans le pilote Windows Cloud Files Mini Filter (CVE-2025-62221) menant à une escalade de privilèges, et deux problèmes divulgués publiquement dans PowerShell (CVE-2025-54100, RCE via Invoke-WebRequest) et GitHub Copilot pour JetBrains (CVE-2025-64671, RCE par injection de commande). Des RCE critiques dans Microsoft Office (CVE-2025-62554, CVE-2025-62557) exploitables via le volet d'aperçu, et une RCE dans Microsoft Outlook (CVE-2025-62562) sont également corrigées. PowerShell avertit désormais lors de l'exécution de scripts Invoke-WebRequest pour atténuer les risques. D'autres bugs d'escalade de privilèges dans les pilotes Windows (par exemple, CVE-2025-62458) sont également corrigés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-62221",
+            "CVE-2025-54100",
+            "CVE-2025-64671",
+            "CVE-2025-62554",
+            "CVE-2025-62557",
+            "CVE-2025-62562",
+            "CVE-2025-62458"
+          ],
+          "DOMAIN": [
+            "support[.]microsoft[.]com",
+            "msrc[.]microsoft[.]com",
+            "snort[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1068:Exploitation for Privilege Escalation",
+            "T1059.001:Command and Scripting Interpreter: PowerShell",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1059.005:Command and Scripting Interpreter: Batch Script",
+            "T1204.001:User Execution: Malicious Link",
+            "T1204.002:User Execution: Malicious File",
+            "T1566.001:Phishing: Spearphishing Attachment",
+            "T1548.001:Abuse Elevation Control Mechanism: Setuid and Setgid",
+            "T1548.002:Abuse Elevation Control Mechanism: Bypass User Account Control"
+          ],
+          "URL": [
+            "hxxps[:]//support[.]microsoft[.]com/help/5072034",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/en-us",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/releaseNote/2025-Dec",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/vulnerability/CVE-2025-62458"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1068:Exploitation for Privilege Escalation",
+          "T1059.001:Command and Scripting Interpreter: PowerShell",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1059.005:Command and Scripting Interpreter: Batch Script",
+          "T1204.001:User Execution: Malicious Link",
+          "T1204.002:User Execution: Malicious File",
+          "T1566.001:Phishing: Spearphishing Attachment",
+          "T1548.001:Abuse Elevation Control Mechanism: Setuid and Setgid",
+          "T1548.002:Abuse Elevation Control Mechanism: Bypass User Account Control"
+        ],
+        "analyse": "Le Patch Tuesday de décembre de Microsoft souligne le défi continu posé par les exploits zero-day et les vulnérabilités divulguées publiquement. L'exploitation active de la vulnérabilité du pilote Windows Cloud Files met en évidence l'importance d'une correction rapide, même pour les failles avec des scores CVSS modérés, si elles sont exploitées dans la nature. Les RCE dans Office et Outlook démontrent la dépendance continue aux tactiques d'ingénierie sociale, tandis que les failles de PowerShell et GitHub Copilot indiquent des risques dans les outils de développement et d'automatisation informatique courants.",
+        "recommandations": [
+          "Prioriser l'application immédiate de toutes les mises à jour de sécurité Microsoft, en particulier celles qui traitent des vulnérabilités activement exploitées ou divulguées publiquement.",
+          "Renforcer la formation de sensibilisation des utilisateurs pour contrer les tactiques d'ingénierie sociale, notamment en ce qui concerne les documents Office et les pièces jointes d'e-mails malveillants.",
+          "Surveiller l'activité PowerShell suspecte et restreindre l'utilisation d'Invoke-WebRequest lorsque cela est possible, ou appliquer `-UseBasicParsing`.",
+          "Désactiver les fonctions d'auto-approbation dans les environnements de développement utilisant GitHub Copilot et appliquer une séparation stricte entre les entrées fiables et non fiables.",
+          "Mettre en œuvre des solutions de détection et de réponse aux points d'extrémité (EDR) pour surveiller les tentatives d'escalade de privilèges et l'exécution de commandes inhabituelles.",
+          "Appliquer les principes du moindre privilège à tous les systèmes."
+        ],
+        "tags": [
+          "microsoft",
+          "patch tuesday",
+          "zero-day",
+          "rce",
+          "privilege escalation",
+          "vulnerability",
+          "powershell",
+          "github copilot",
+          "microsoft office",
+          "outlook",
+          "social engineering",
+          "kernel",
+          "actively exploited",
+          "publicly disclosed",
+          "T1068",
+          "T1059.001",
+          "T1059.004",
+          "T1059.005",
+          "T1204.001",
+          "T1204.002",
+          "T1566.001",
+          "T1548.001",
+          "T1548.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-windows-powershell-now-warns-when-running-invoke-webrequest-scripts/",
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5071546-extended-security-update/",
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-december-2025-patch-tuesday-fixes-3-zero-days-57-flaws/",
+          "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5072033-and-kb5071417-cumulative-updates-released/",
+          "https://www.cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-december-9-2025_2025-113",
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://cybersecuritynews.com/windows-cloud-files-mini-filter-driver-0-day/",
+          "https://securityonline.info/cisa-kev-alert-winrar-zero-day-used-for-malware-injection-and-windows-uaf-rce-under-active-attack/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/",
+          "https://blog.talosintelligence.com/microsoft-patch-tuesday-december-2025/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1049/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1048/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1047/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1046/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Shai-Hulud 2.0 : Attaque de la chaîne d'approvisionnement dans l'écosystème cloud-native",
+        "description": "L'attaque Shai-Hulud 2.0 représente une compromission significative de l'écosystème cloud-native, où les attaquants ont modifié de manière malveillante des centaines de packages disponibles publiquement. Les cibles principales étaient les environnements de développement, les pipelines d'intégration continue/livraison continue (CI/CD) et les charges de travail connectées au cloud, dans le but de collecter des identifiants et des secrets de configuration. Il s'agit d'une attaque de la chaîne d'approvisionnement démontrant une modification sophistiquée de composants logiciels de confiance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "reddit[.]com",
+            "sha1hulud-scan[.]sh",
+            "www[.]aikido[.]dev",
+            "bun[.]sh"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [
+            "[:][:]"
+          ],
+          "MITRE_ATT&CK": [
+            "T1195.002:Supply Chain Compromise: Compromise Software Supply Chain",
+            "T1588.007:Obtain Capabilities: Develop Software",
+            "T1003:OS Credential Dumping",
+            "T1552:Unsecured Credentials"
+          ],
+          "URL": [
+            "hxxps[:]//bun[.]sh/install",
+            "hxxps[:]//www[.]aikido[.]dev/blog/shai-hulud-strikes-again-hitting-zapier-ensdomains"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002:Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1588.007:Obtain Capabilities: Develop Software",
+          "T1003:OS Credential Dumping",
+          "T1552:Unsecured Credentials"
+        ],
+        "analyse": "Cette attaque souligne la menace critique et évolutive des compromissions de la chaîne d'approvisionnement dans les environnements cloud-native. En ciblant les processus et l'infrastructure de développement, les attaquants obtiennent une position de levier élevée pour voler des données sensibles et potentiellement intégrer des backdoors dans des logiciels largement utilisés. L'accent mis sur les identifiants et les secrets de configuration indique un objectif d'accès à long terme et d'exploitation plus profonde.",
+        "recommandations": [
+          "Mettre en œuvre des mesures de sécurité rigoureuses pour les environnements de développement et les pipelines CI/CD, y compris des contrôles d'accès robustes et l'authentification multi-facteurs.",
+          "Auditer régulièrement les packages et dépendances tiers pour vérifier leur intégrité et les vulnérabilités connues.",
+          "Utiliser des outils de sécurité de la chaîne d'approvisionnement logicielle pour détecter les modifications non autorisées et les artefacts compromis.",
+          "Surveiller les charges de travail connectées au cloud pour toute activité inhabituelle, en particulier liée à l'accès aux identifiants.",
+          "Rotation fréquente des identifiants et des secrets, et utilisation de solutions de gestion sécurisée des secrets.",
+          "Appliquer le principe du moindre privilège pour tous les comptes de développement et de déploiement."
+        ],
+        "tags": [
+          "supply chain attack",
+          "cloud-native",
+          "ci/cd",
+          "developer environments",
+          "credentials theft",
+          "configuration secrets",
+          "software supply chain",
+          "T1195.002",
+          "T1588.007",
+          "T1003",
+          "T1552"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/"
+        ],
+        "date": "2025-12-10"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape for the analyzed period reveals an intensification and diversification of attacks, highlighting several major trends. Supply chain attacks remain a primary concern, as evidenced by the Shai-Hulud 2.0 campaign targeting cloud-native ecosystems for credential and configuration secret theft. The rapid exploitation of zero-day and publicly disclosed vulnerabilities is alarming, with examples like the actively exploited Windows Cloud Files driver vulnerability and flaws in PowerShell and GitHub Copilot, demonstrating attackers' speed in weaponizing new weaknesses. The use of sophisticated evasion techniques, such as 'Bring Your Own Vulnerable Driver' (BYOVD) by the DeadLock ransomware to disable EDR defenses, and the deployment of custom virtual machines (QEMU) for persistence, indicates growing adversary ingenuity. IoT botnets, like Broadside targeting the maritime logistics sector, are evolving to include credential theft and lateral movement capabilities, directly threatening critical operational technology (OT) systems. Nation-state actor involvement is also notable, with North Korean and China-linked APTs exploiting critical RCE vulnerabilities in widely used web frameworks (React Server Components) for espionage and data theft. Ransomware remains a prevalent threat, reaching payment record highs in 2023, with groups like Anubis employing data exfiltration and public shaming tactics. The increasing integration of AI into development tools (GitHub Copilot) introduces new attack surfaces, particularly with command injection flaws. Finally, the geopolitical context continues to influence the cyber landscape, as seen in Russian efforts of cryptocurrency-based money laundering for election interference and the targeting of defense organizations (US DoD, US Air Force). In conclusion, the general state of threats is characterized by increased sophistication, speed of exploitation, and an expanded attack surface, demanding proactive and multi-layered defense strategies.",
+      "date": "2025-12-10"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Chinese state-sponsored actors / CL-STA-1015",
+        "secteur": "Various (VMware vCenter environments, enterprises, technology sector)",
+        "modop": "BRICKSTORM malware campaign (abusing valid MSP credentials, cloning VMs, creating rogue VMs, extracting sensitive keys from ADFS). Exploiting React Server Components RCE vulnerability (CVE-2025-55182), deploying SNOWLIGHT and VShell Trojans, using BPFDoor, Noodle RAT, Auto-color backdoor.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "china",
+          "apt",
+          "brickstorm",
+          "malware",
+          "vmware",
+          "adfs",
+          "rce",
+          "webshell",
+          "backdoor",
+          "snowlight",
+          "vshell",
+          "bpfdoor",
+          "noodle rat",
+          "auto-color"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-brickstorm-react-server-components-flaw-more",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "DPRK (North Korean) / UNC5342 / Contagious Interview",
+        "secteur": "Technology industry (job seekers), enterprise environments.",
+        "modop": "Posing as recruiters to install malware (EtherRAT, EtherHiding technique leveraging blockchain for payload delivery/crypto theft). Exploiting React Server Components RCE vulnerability (CVE-2025-55182).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "north korea",
+          "dprk",
+          "apt",
+          "contagious interview",
+          "etherrat",
+          "etherhiding",
+          "malware",
+          "rce",
+          "cryptojacking"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Broadside Botnet (Mirai variant)",
+        "secteur": "Maritime logistics (shipping companies, vessels)",
+        "modop": "Exploiting command injection vulnerability CVE-2024-3721 in TBK DVR devices. Custom C2 protocol (TCP/1026, TCP/6969), unique Magic Header, and 'Judge, Jury, and Executioner' exclusivity module. Uses Netlink kernel sockets, payload polymorphism. Performs UDP-based DDoS attacks, steals /etc/passwd and /etc/shadow for privilege escalation and lateral movement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "mirai",
+          "ddos",
+          "maritime",
+          "command injection",
+          "privilege escalation",
+          "lateral movement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185491/malware/broadside-botnet-hits-tbk-dvrs-raising-alarms-for-maritime-logistics.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "DeadLock ransomware",
+        "secteur": "Various (unspecified in article, but ransomware typically targets many sectors)",
+        "modop": "BYOVD (Bring Your Own Vulnerable Driver) loader (EDRGay.exe) exploiting Baidu Antivirus driver vulnerability (CVE-2024-51324) to disable EDR. PowerShell script for UAC bypass, disabling security services, inhibiting system recovery (shadow copy deletion). RDP enablement, AnyDesk installation, internal reconnaissance, lateral movement, Windows Defender settings modification. Uses Session messenger for communication.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "deadlock",
+          "byovd",
+          "edr evasion",
+          "privilege escalation",
+          "data encryption",
+          "rdp",
+          "anydesk",
+          "internal recon"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Anubis ransomware group",
+        "secteur": "Government (Trumbull County, Ohio)",
+        "modop": "Ransomware attack, data exfiltration. Persistence in network during incident response, monitored security audits. Contacted upper management.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "anubis",
+          "data exfiltration",
+          "government"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/tell-the-truth-or-someone-will-tell-it-for-you-trumbull-county-ohio-edition/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Emennet Pasargad / Shahid Shushtari / Iran's Islamic Revolutionary Guard Corps Cyber-Electronic Command (IRGC-CEC)",
+        "secteur": "Unspecified, but linked to national security functions.",
+        "modop": "Hacking activities. (Details not provided in article, but implies state-sponsored cyber operations)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "iran",
+          "apt",
+          "hacking",
+          "irgc-cec"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/us-posts-10-million-bounty-for-iranian-hackers/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "nom": "Kremlin / Russia",
+        "secteur": "Political processes, democracies (UK election security)",
+        "modop": "Electoral interference, political money laundering via cryptocurrency, sanctions circumvention (A7A5 stablecoin), funding sabotage, bitcoin mining in shadow territories, covert political funding.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "russia",
+          "election interference",
+          "money laundering",
+          "cryptocurrency",
+          "hybrid warfare",
+          "sabotage"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uk-election-security-threatened-political-money-laundering-cryptocurrency"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Defense (implied)",
+        "theme": "Law enforcement, national security, cybercrime",
+        "description": "Polish police arrested three Ukrainian nationals for allegedly attempting to damage IT systems and obtain sensitive defense-related data using advanced hacking equipment (Flipper Zero, spy device detectors, etc.). Investigation is ongoing for fraud and computer crimes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "poland",
+          "ukraine",
+          "cybercrime",
+          "national security",
+          "hacking tools",
+          "law enforcement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185480/cyber-crime/polish-police-arrest-3-ukrainians-for-possessing-advanced-hacking-tools.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Government, Defense (U.S. Department of Defense)",
+        "theme": "National security, cybersecurity policy, telecommunications",
+        "description": "U.S. defense bill (NDAA for FY 2026) mandates new cybersecurity requirements for DoD telecom contracts used for sensitive national security functions, including encryption, obfuscation of device identifiers, and continuous monitoring for mobile phones of senior officials and employees.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "dod",
+          "national security",
+          "cybersecurity policy",
+          "telecom",
+          "encryption",
+          "monitoring"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/defense-bill-would-require-new-cyber-requirements-for-some-dod-telecom-contracts/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Government, National Security",
+        "theme": "State-sponsored cybercrime, international sanctions",
+        "description": "The U.S. government offers up to $10 million reward for information on members of the Iranian hacking group Emennet Pasargad, also known as Shahid Shushtari, operating under Iran’s Islamic Revolutionary Guard Corps Cyber-Electronic Command (IRGC-CEC).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "iran",
+          "state-sponsored hacking",
+          "bounty",
+          "national security",
+          "irgc-cec"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/us-posts-10-million-bounty-for-iranian-hackers/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "International Relations, Politics",
+        "theme": "US foreign policy, unipolarity vs multilateralism, Trump's influence",
+        "description": "Analysis of Donald Trump's impact on U.S. diplomacy and global order, highlighting a shift towards nationalism and unilateralism, challenging multilateral agreements and historical alliances.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "international relations",
+          "foreign policy",
+          "trump",
+          "nationalism",
+          "multilateralism"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-a-lheure-de-trump-quelle-influence-sur-lordre-mondial/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "International Relations, Politics",
+        "theme": "Geopolitical tensions, democratic crisis, regional influence (China, India)",
+        "description": "Analysis of Nepal's political crisis, its causes (democratic disillusionment, identity claims), and the geopolitical dynamics with neighboring powers (China prioritizing stability, India potentially promoting Hindu monarchy and containing China).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "nepal",
+          "india",
+          "china",
+          "political crisis",
+          "democracy",
+          "regional stability"
+        ],
+        "sources": [
+          "https://www.iris-france.org/velleites-democratiques-et-realites-geopolitiques-quelle-sortie-de-crise-apres-la-revolte-gen-z-au-nepal/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "International Relations, Humanitarian Affairs",
+        "theme": "Humanitarian crisis, conflict",
+        "description": "Discussion on the alarming humanitarian situation in Gaza, which remains unchanged despite a ceasefire signed in October 2025 between Israel and Hamas.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "humanitarian crisis",
+          "conflict",
+          "israel",
+          "hamas"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-catastrophe-humanitaire-les-mardis-de-liris-2/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "International Relations, Politics",
+        "theme": "US geopolitical doctrine, foreign policy, US-Europe relations, US-Latin America relations",
+        "description": "Analysis of the 'MAGA doctrine' outlined in the US National Security Strategy, characterized by 'America First,' disengagement from certain theaters, focus on economic competition with China, and a critical stance towards Europe and Latin America (migration, resources).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "foreign policy",
+          "maga doctrine",
+          "international relations",
+          "europe",
+          "latin america",
+          "china",
+          "migration"
+        ],
+        "sources": [
+          "https://www.iris-france.org/apres-la-doctrine-monroe-le-temps-de-la-doctrine-maga/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Government, Politics, Cybersecurity",
+        "theme": "Electoral interference, foreign influence, cryptocurrency, money laundering",
+        "description": "The use of cryptocurrency increases the 'attack surface' for electoral interference in the UK, with concerns about illicit foreign financing, especially from Russia, through political money laundering.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "election security",
+          "russia",
+          "cryptocurrency",
+          "money laundering",
+          "foreign interference"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/uk-election-security-threatened-political-money-laundering-cryptocurrency"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Government",
+        "victime": "Trumbull County, Ohio (USA)",
+        "description": "Ransomware attack by Anubis group in November 2025, leading to system compromise, data exfiltration (employee data, personal information), and encryption. County officials initially denied compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "ransomware",
+          "anubis",
+          "data exfiltration",
+          "usa",
+          "ohio"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/tell-the-truth-or-someone-will-tell-it-for-you-trumbull-county-ohio-edition/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (South Korea)",
+        "description": "Major customer data breach affecting almost two-thirds of South Korea's population. Police raid and government hearing scheduled.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "coupang",
+          "south korea",
+          "customer data",
+          "personal data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/south-korea-police-raid-e-commerce-giant-coupang-over-data-leak/",
+          "https://mastodon.social/@infomaxkorea/115693545209469970"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Retail (pet supplies)",
+        "victime": "Petco",
+        "description": "Security lapse exposed customers’ personal data.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "petco",
+          "customer data",
+          "personal data"
+        ],
+        "sources": [
+          "https://mastodon.social/@RunRichRun/115693787257504478",
+          "https://mastodon.thenewoil.org/@thenewoil/115693033986207137"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Pharmaceutical / Healthcare",
+        "victime": "Inotiv",
+        "description": "Data breach following a ransomware attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "healthcare",
+          "inotiv",
+          "ransomware"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115692798008567242"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Financial Services (online trading broker)",
+        "victime": "ThinkMarkets",
+        "description": "Alleged data breach.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial services",
+          "thinkmarkets",
+          "customer data"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/115692746062020487"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Software/Analytics",
+        "victime": "Mixpanel",
+        "description": "Data breach incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "software",
+          "analytics",
+          "mixpanel"
+        ],
+        "sources": [
+          "https://mastodon.social/@fikagoose/115692354290164860"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Government, Defense & Space",
+        "victime": "United States Air Force",
+        "description": "High-confidence data breach incident targeting the United States Air Force.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "defense",
+          "us air force",
+          "military"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115692091206402399"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "secteur": "Financial Services, Manufacturing, Healthcare (most affected sectors)",
+        "victime": "Various organizations (general trend)",
+        "description": "Ransomware incidents and payments reached an all-time high in 2023, with over $1.1 billion paid across 1,512 incidents. Total reported payments exceeded $4.5 billion by February 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "financial services",
+          "manufacturing",
+          "healthcare",
+          "statistics",
+          "trend"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/09/fincen-issues-financial-trend-analysis-on-ransomware/",
+          "https://securityaffairs.com/185465/cyber-crime/fincen-data-shows-4-5b-in-ransomware-payments-record-spike-in-2023.html"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": 9.1,
+        "product": "Fortinet FortiOS, FortiProxy, FortiSwitchManager",
+        "description": "Critical FortiCloud SSO authentication bypass vulnerability via improperly verified SAML cryptographic signature.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "sso bypass",
+          "authentication",
+          "saml forgery",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-forticloud-sso-login-auth-bypass-flaws/",
+          "https://securityonline.info/critical-fortinet-flaw-risks-unauthenticated-admin-bypass-via-forticloud-sso-saml-forgery/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": 9.1,
+        "product": "Fortinet FortiWeb",
+        "description": "Critical FortiCloud SSO authentication bypass vulnerability via improperly verified SAML cryptographic signature.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "sso bypass",
+          "authentication",
+          "saml forgery",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-forticloud-sso-login-auth-bypass-flaws/",
+          "https://securityonline.info/critical-fortinet-flaw-risks-unauthenticated-admin-bypass-via-forticloud-sso-saml-forgery/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-10573",
+        "cvss": 9.6,
+        "product": "Ivanti Endpoint Manager (EPM)",
+        "description": "Remote code execution (RCE) via cross-site scripting (XSS) in primary EPM web service, allowing unauthenticated attackers to execute arbitrary JavaScript and hijack admin sessions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ivanti",
+          "epm",
+          "rce",
+          "xss",
+          "code execution",
+          "session hijack",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-critical-endpoint-manager-code-execution-flaw/",
+          "https://securityaffairs.com/185508/hacking/ivanti-warns-customers-of-new-epm-flaw-enabling-remote-code-execution.html",
+          "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (Flight protocol), Next.js",
+        "description": "Remote code execution (RCE) due to insecure deserialization of malicious HTTP requests, allowing unauthenticated attackers to execute arbitrary code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "react",
+          "next.js",
+          "rce",
+          "deserialization",
+          "critical"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-9056",
+        "cvss": 10.0,
+        "product": "Apache AudioLink",
+        "description": "Unprotected service allows local attacker to overwrite system files via unauthorized service invocation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "audiolink",
+          "file overwrite",
+          "local privilege escalation",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9056"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-13613",
+        "cvss": 9.8,
+        "product": "Elated Membership plugin for WordPress",
+        "description": "Authentication bypass via social login, allowing unauthenticated attackers to log in as administrative users.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "authentication bypass",
+          "admin access",
+          "social login",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13613"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67506",
+        "cvss": 9.8,
+        "product": "PipesHub",
+        "description": "Path traversal and unauthenticated arbitrary file upload, allowing remote file overwrite or planting malicious code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pipeshub",
+          "path traversal",
+          "file upload",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67506"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67501",
+        "cvss": 9.4,
+        "product": "WeGIA",
+        "description": "SQL Injection vulnerability in the /html/matPat/editar_categoria.php endpoint via the id_categoria parameter.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wegia",
+          "sql injection",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67501"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-9571",
+        "cvss": 8.7,
+        "product": "Google Cloud Data Fusion",
+        "description": "Remote code execution (RCE) via malicious artifact upload, allowing control over the instance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google cloud",
+          "data fusion",
+          "rce",
+          "artifact upload",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-9571"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-61813",
+        "cvss": 8.2,
+        "product": "Adobe ColdFusion",
+        "description": "Improper Restriction of XML External Entity Reference (XXE) leading to arbitrary file system read.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe",
+          "coldfusion",
+          "xxe",
+          "file system read",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-61813"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-67507",
+        "cvss": 8.1,
+        "product": "Filament",
+        "description": "Flaw in handling app-based multi-factor authentication recovery codes, allowing indefinite reuse of the same code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "filament",
+          "mfa",
+          "authentication",
+          "recovery codes",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67507"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62458",
+        "cvss": 8.8,
+        "product": "Microsoft Windows (win32kfull, win32kbase drivers)",
+        "description": "Out-Of-Bounds Write/Access and Type Confusion Local Privilege Escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "windows",
+          "privilege escalation",
+          "out-of-bounds",
+          "type confusion",
+          "high"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1049/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1048/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1047/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1046/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-64671",
+        "cvss": 8.4,
+        "product": "GitHub Copilot for JetBrains IDEs",
+        "description": "Command injection vulnerability allowing bypass of terminal auto-approve safeguards and unauthorized code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "github copilot",
+          "jetbrains",
+          "command injection",
+          "rce",
+          "high",
+          "ai"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62554",
+        "cvss": 8.4,
+        "product": "Microsoft Office",
+        "description": "Remote Code Execution (RCE) vulnerability exploitable via social engineering (malicious Office document, Preview Pane).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft office",
+          "rce",
+          "social engineering",
+          "preview pane",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62557",
+        "cvss": 8.4,
+        "product": "Microsoft Office",
+        "description": "Remote Code Execution (RCE) vulnerability exploitable via social engineering (malicious Office document, Preview Pane).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft office",
+          "rce",
+          "social engineering",
+          "preview pane",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62562",
+        "cvss": null,
+        "product": "Microsoft Outlook",
+        "description": "Remote Code Execution vulnerability (use-after-free) exploitable via malicious email and user interaction (reply).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft outlook",
+          "rce",
+          "use-after-free",
+          "social engineering",
+          "critical"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://blog.talosintelligence.com/microsoft-patch-tuesday-december-2025/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-62221",
+        "cvss": 7.8,
+        "product": "Windows Cloud Files Mini Filter Driver (cldflt.sys)",
+        "description": "Use-after-free vulnerability leading to privilege escalation (SYSTEM privileges). Actively exploited zero-day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "windows",
+          "privilege escalation",
+          "use-after-free",
+          "zero-day",
+          "actively exploited",
+          "kernel",
+          "high"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://cybersecuritynews.com/windows-cloud-files-mini-filter-driver-0-day/",
+          "https://securityonline.info/cisa-kev-alert-winrar-zero-day-used-for-malware-injection-and-windows-uaf-rce-under-active-attack/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "cve_id": "CVE-2025-54100",
+        "cvss": 7.8,
+        "product": "Windows PowerShell (Invoke-WebRequest cmdlet)",
+        "description": "Remote Code Execution vulnerability (command injection) exploitable via malicious web content downloaded using Invoke-WebRequest. Publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "powershell",
+          "rce",
+          "command injection",
+          "publicly disclosed",
+          "high"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-windows-powershell-now-warns-when-running-invoke-webrequest-scripts/",
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/"
+        ],
+        "date": "2025-12-10"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Adversary Deploys Custom QEMU VM for Persistence Following Spam Bombing and Social Engineering",
+        "description": "An analysis of an adversary's novel tactic: deploying a custom QEMU virtual machine for persistence within a compromised environment. The attack began with a spam/email bombing campaign used as a distraction, followed by social engineering via a technical support call. The adversary then leveraged legitimate remote assistance software (Quick Assist) to gain initial access, introduce their VM (running Windows 7 SP1), and establish persistence using ScreenConnect and Sliver C2 implants (1HTTPS.EXE, 2MTLS.EXE). Reconnaissance within the VM included internal network scanning and DNS queries (SRV records), while external C2 communications were observed to `marnyonline[.]com` and an IP associated with Sliver. Forensic analysis also revealed the QDoor backdoor (SOCKS.EXE) and anti-forensic measures.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "marnyonline[.]com",
+            "reddit[.]com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "45[.]61[.]169[.]127",
+            "88[.]119[.]167[.]239"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.001:Phishing: Spearphishing Attachment",
+            "T1078.003:Valid Accounts: Local Accounts",
+            "T1219:Remote Access Tools",
+            "T1543.003:Create or Modify System Process: Windows Service",
+            "T1547.001:Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+            "T1218:Signed Binary Proxy Execution",
+            "T1018:Remote System Discovery",
+            "T1046:Network Service Scanning",
+            "T1071.001:Application Layer Protocol: Web Protocols",
+            "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+            "T1572:Protocol Tunneling",
+            "T1090.002:Proxy: SOCKS Proxy",
+            "T1070.004:Indicator Removal: File Deletion",
+            "T1059.003:Command and Scripting Interpreter: Windows Command Shell"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001:Phishing: Spearphishing Attachment",
+          "T1078.003:Valid Accounts: Local Accounts",
+          "T1219:Remote Access Tools",
+          "T1543.003:Create or Modify System Process: Windows Service",
+          "T1547.001:Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1218:Signed Binary Proxy Execution",
+          "T1018:Remote System Discovery",
+          "T1046:Network Service Scanning",
+          "T1071.001:Application Layer Protocol: Web Protocols",
+          "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+          "T1572:Protocol Tunneling",
+          "T1090.002:Proxy: SOCKS Proxy",
+          "T1070.004:Indicator Removal: File Deletion",
+          "T1059.003:Command and Scripting Interpreter: Windows Command Shell"
+        ],
+        "analyse": "This incident showcases a sophisticated blend of social engineering, abuse of legitimate tools, and novel persistence mechanisms. The use of a custom virtual machine provides an isolated and controlled environment for the attacker, making detection and forensic analysis challenging. The multi-pronged approach to C2 and persistence (ScreenConnect, Sliver, QDoor) highlights the adversary's focus on resilient access and operational security. This represents an evolution in adversary methodology by bringing their own execution environment.",
+        "recommandations": [
+          "Implement robust email security to detect and block spam bombing and sophisticated phishing.",
+          "Provide comprehensive security awareness training to employees on social engineering tactics and safe use of remote assistance tools.",
+          "Monitor for unusual executable activity (e.g., QEMU on user systems) and unauthorized remote access software installations.",
+          "Enhance network visibility to detect internal scanning and unusual C2 communications (Sliver, ScreenConnect, QDoor).",
+          "Regularly perform forensic analysis on suspicious systems to identify hidden VMs, persistence mechanisms, and artifacts.",
+          "Implement application whitelisting and enforce strong host-based security controls.",
+          "Segment networks to limit lateral movement and C2 communications."
+        ],
+        "tags": [
+          "social engineering",
+          "spam bombing",
+          "remote assistance abuse",
+          "qemu",
+          "virtual machine",
+          "persistence",
+          "sliver c2",
+          "screenconnect",
+          "qdoor",
+          "reconnaissance",
+          "anti-forensics",
+          "T1566.001",
+          "T1078.003",
+          "T1219",
+          "T1543.003",
+          "T1547.001",
+          "T1218",
+          "T1018",
+          "T1046",
+          "T1071.001",
+          "T1573.002",
+          "T1572",
+          "T1090.002",
+          "T1070.004",
+          "T1059.003"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/email-bombing-virtual-machine/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Broadside Botnet Targets Maritime Logistics Sector via TBK DVR Vulnerability",
+        "description": "Cydome researchers identified 'Broadside,' a new Mirai botnet variant actively targeting the maritime logistics sector by exploiting CVE-2024-3721, a command injection vulnerability in TBK Vision DVR devices. Broadside utilizes a custom C2 protocol over TCP/1026 (with fallback on TCP/6969), a unique Magic Header, and an exclusivity module. It employs Netlink kernel sockets for stealthy monitoring and payload polymorphism to evade detection. Beyond DDoS capabilities, Broadside steals /etc/passwd and /etc/shadow files, enabling privilege escalation and lateral movement, posing significant risks to shipping firms by potentially accessing CCTV feeds, disrupting satellite communications, or gaining footholds to critical OT systems.",
+        "threat_actor": "Broadside botnet (Mirai variant)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-3721"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1210:Exploitation of Remote Services",
+            "T1190:Exploit Public-Facing Application",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1003.008:OS Credential Dumping: /etc/passwd and /etc/shadow",
+            "T1068:Exploitation for Privilege Escalation",
+            "T1078:Valid Accounts",
+            "T1498:Denial of Service: Distributed Denial of Service",
+            "T1040:Network Sniffing"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1210:Exploitation of Remote Services",
+          "T1190:Exploit Public-Facing Application",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1003.008:OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1068:Exploitation for Privilege Escalation",
+          "T1078:Valid Accounts",
+          "T1498:Denial of Service: Distributed Denial of Service",
+          "T1040:Network Sniffing"
+        ],
+        "analyse": "The Broadside botnet highlights the persistent threat of IoT botnets and their evolution to include more sophisticated capabilities beyond simple DDoS. The targeting of maritime logistics via DVR devices is notable, demonstrating a shift towards exploiting devices in critical infrastructure for both denial-of-service and potential deeper access to operational technology (OT) environments. The focus on credential theft for privilege escalation and lateral movement signifies a more strategic objective than typical Mirai variants.",
+        "recommandations": [
+          "Immediately patch TBK DVR devices for CVE-2024-3721.",
+          "Implement strong network segmentation between IT and OT systems on vessels.",
+          "Regularly monitor network traffic for unusual C2 communications (TCP/1026, TCP/6969) and unauthorized scanning.",
+          "Change default credentials on all IoT/edge devices and use strong, unique passwords.",
+          "Deploy intrusion detection/prevention systems (IDS/IPS) to detect command injection attempts and botnet activity.",
+          "Implement file integrity monitoring for critical system files like /etc/passwd and /etc/shadow.",
+          "Conduct vulnerability assessments of all internet-facing devices, especially in critical infrastructure sectors."
+        ],
+        "tags": [
+          "botnet",
+          "mirai",
+          "broadside",
+          "maritime logistics",
+          "iot",
+          "dvr",
+          "command injection",
+          "ddos",
+          "privilege escalation",
+          "lateral movement",
+          "ot security",
+          "critical infrastructure",
+          "T1210",
+          "T1190",
+          "T1059.004",
+          "T1003.008",
+          "T1068",
+          "T1078",
+          "T1498",
+          "T1040"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185491/malware/broadside-botnet-hits-tbk-dvrs-raising-alarms-for-maritime-logistics.html"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "DeadLock Ransomware Campaign Leverages BYOVD Loader to Bypass EDR",
+        "description": "Analysis of a DeadLock ransomware campaign utilizing a previously unknown Bring Your Own Vulnerable Driver (BYOVD) loader to exploit a Baidu Antivirus driver vulnerability (CVE-2024-51324). This allows threat actors to disable EDR defenses, escalate privileges, and execute a PowerShell script for UAC bypass, disabling security services, and inhibiting system recovery by deleting shadow copies. The campaign also involves enabling RDP, installing AnyDesk for persistence, conducting internal reconnaissance, lateral movement, and modifying Windows Defender settings. Communication with victims occurs via Session messenger.",
+        "threat_actor": "DeadLock ransomware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-51324"
+          ],
+          "DOMAIN": [
+            "snort[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1021:Remote Services",
+            "T1562:Impair Defenses",
+            "T1033:System Owner/User Discovery",
+            "T1569:System Services",
+            "T1112:Modify Registry",
+            "T1078:Valid Accounts",
+            "T1218:Signed Binary Proxy Execution",
+            "T1219:Remote Access Tools",
+            "T1490:Inhibit System Recovery",
+            "T1069:Permission Groups Discovery",
+            "T1046:Network Service Scanning",
+            "T1211:Exploitation for Defense Evasion",
+            "T1548:Abuse Elevation Control Mechanism",
+            "T1018:Remote System Discovery",
+            "T1059.001:Command and Scripting Interpreter: PowerShell",
+            "T1070.004:Indicator Removal: File Deletion",
+            "T1486:Data Encrypted for Impact"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1021:Remote Services",
+          "T1562:Impair Defenses",
+          "T1033:System Owner/User Discovery",
+          "T1569:System Services",
+          "T1112:Modify Registry",
+          "T1078:Valid Accounts",
+          "T1218:Signed Binary Proxy Execution",
+          "T1219:Remote Access Tools",
+          "T1490:Inhibit System Recovery",
+          "T1069:Permission Groups Discovery",
+          "T1046:Network Service Scanning",
+          "T1211:Exploitation for Defense Evasion",
+          "T1548:Abuse Elevation Control Mechanism",
+          "T1018:Remote System Discovery",
+          "T1059.001:Command and Scripting Interpreter: PowerShell",
+          "T1070.004:Indicator Removal: File Deletion",
+          "T1486:Data Encrypted for Impact"
+        ],
+        "analyse": "This campaign demonstrates a sophisticated approach to ransomware attacks, integrating driver exploitation for defense evasion, privilege escalation techniques, and comprehensive post-compromise activities. The use of BYOVD loaders highlights an increasing trend of attackers bypassing modern security solutions by leveraging legitimate but vulnerable drivers. The focus on disrupting system recovery and establishing resilient remote access points to a 'big-game hunting' strategy.",
+        "recommandations": [
+          "Apply patches for CVE-2024-51324 (Baidu Antivirus driver).",
+          "Implement strong EDR solutions and monitor for abnormal driver loading or process termination.",
+          "Enforce least privilege principles to limit the impact of privilege escalation.",
+          "Regularly back up data and test recovery procedures.",
+          "Monitor for unauthorized RDP/AnyDesk installations and connections.",
+          "Conduct security awareness training to prevent initial access via social engineering.",
+          "Utilize network segmentation to limit lateral movement."
+        ],
+        "tags": [
+          "ransomware",
+          "deadlock",
+          "byovd",
+          "edr evasion",
+          "privilege escalation",
+          "anti-forensics",
+          "persistence",
+          "internal reconnaissance",
+          "lateral movement",
+          "windows defender",
+          "session messenger",
+          "T1021",
+          "T1562",
+          "T1033",
+          "T1569",
+          "T1112",
+          "T1078",
+          "T1218",
+          "T1219",
+          "T1490",
+          "T1069",
+          "T1046",
+          "T1211",
+          "T1548",
+          "T1018",
+          "T1059.001",
+          "T1070.004",
+          "T1486"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Exploitation of Critical RCE Vulnerability in React Server Components Linked to State-Sponsored Activity",
+        "description": "An in-depth analysis of the exploitation of CVE-2025-55182, a critical RCE vulnerability (CVSS 10.0) affecting React Server Components (Flight protocol) and Next.js. This flaw allows unauthenticated attackers to execute arbitrary code via insecure deserialization of malicious HTTP requests. Post-exploitation activities observed include automated scanning, immediate situational awareness (OS/architecture fingerprinting, privilege level check, network interface mapping), downloading and executing malicious scripts (sex.sh), installing Linux droppers for persistence, establishing bash reverse shells to Cobalt Strike servers, and deploying interactive webshells (fm.js). Activity overlaps with North Korean (DPRK) Contagious Interview tooling (EtherRAT, EtherHiding) and a China-linked Initial Access Broker (CL-STA-1015) deploying SNOWLIGHT and VShell Trojans, Noodle RAT, BPFDoor, and Auto-color backdoors.",
+        "threat_actor": "DPRK (Contagious Interview, UNC5342), China-linked (CL-STA-1015, Red Menshen)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-66478"
+          ],
+          "DOMAIN": [
+            "github[.]com",
+            "nodejs[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "154.89.152[.]240"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1190:Exploit Public-Facing Application",
+            "T1595.002:Gather Victim Host Information: Vulnerability Scanning",
+            "T1033:System Owner/User Discovery",
+            "T1082:System Information Discovery",
+            "T1016:System Network Configuration Discovery",
+            "T1105:Ingress Tool Transfer",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1543.002:Create or Modify System Process: Systemd Service",
+            "T1071.001:Application Layer Protocol: Web Protocols",
+            "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+            "T1505.003:Server Software Component: Web Shell",
+            "T1083:File and Directory Discovery",
+            "T1552:Unsecured Credentials",
+            "T1041:Exfiltration Over C2 Channel",
+            "T1566.001:Phishing: Spearphishing Attachment"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190:Exploit Public-Facing Application",
+          "T1595.002:Gather Victim Host Information: Vulnerability Scanning",
+          "T1033:System Owner/User Discovery",
+          "T1082:System Information Discovery",
+          "T1016:System Network Configuration Discovery",
+          "T1105:Ingress Tool Transfer",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1543.002:Create or Modify System Process: Systemd Service",
+          "T1071.001:Application Layer Protocol: Web Protocols",
+          "T1573.002:Encrypted Channel: Asymmetric Cryptography",
+          "T1505.003:Server Software Component: Web Shell",
+          "T1083:File and Directory Discovery",
+          "T1552:Unsecured Credentials",
+          "T1041:Exfiltration Over C2 Channel",
+          "T1566.001:Phishing: Spearphishing Attachment"
+        ],
+        "analyse": "This incident highlights the critical impact of RCE vulnerabilities in widely used web development frameworks like React and Next.js, especially when exploited by advanced state-sponsored actors. The rapid exploitation and diverse post-exploitation toolset demonstrate a high level of sophistication and adaptability, leveraging multiple backdoors and persistence mechanisms. The convergence of DPRK and China-linked activity on this single vulnerability underscores its strategic importance.",
+        "recommandations": [
+          "Immediately patch React (versions 19.0–19.2) and Next.js (versions 15.x–16.x) to fixed versions.",
+          "Implement robust input validation and secure deserialization practices in web applications.",
+          "Monitor for automated scanning and unusual command execution on web servers.",
+          "Deploy EDR/XDR solutions capable of detecting malicious script execution, dropper activity, and remote shell connections.",
+          "Implement network segmentation to limit lateral movement if a web server is compromised.",
+          "Conduct threat hunting for indicators associated with DPRK and China-linked threat actors."
+        ],
+        "tags": [
+          "rce",
+          "react",
+          "next.js",
+          "insecure deserialization",
+          "state-sponsored",
+          "dprk",
+          "china",
+          "apt",
+          "webshell",
+          "backdoor",
+          "persistence",
+          "malware",
+          "cobalt strike",
+          "etherrat",
+          "etherhiding",
+          "snowlight",
+          "vshell",
+          "noodle rat",
+          "bpfdoor",
+          "auto-color",
+          "supply chain",
+          "T1190",
+          "T1595.002",
+          "T1033",
+          "T1082",
+          "T1016",
+          "T1105",
+          "T1059.004",
+          "T1543.002",
+          "T1071.001",
+          "T1573.002",
+          "T1505.003",
+          "T1083",
+          "T1552",
+          "T1041",
+          "T1566.001"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-brickstorm-react-server-components-flaw-more",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Microsoft December Patch Tuesday Addresses Zero-Days, Critical RCEs, and Privilege Escalations",
+        "description": "Microsoft's December 2025 Patch Tuesday addresses 57 flaws, including three zero-day vulnerabilities: an actively exploited use-after-free in Windows Cloud Files Mini Filter Driver (CVE-2025-62221) leading to privilege escalation, and two publicly disclosed issues in PowerShell (CVE-2025-54100, RCE via Invoke-WebRequest) and GitHub Copilot for JetBrains (CVE-2025-64671, command injection RCE). Critical RCEs in Microsoft Office (CVE-2025-62554, CVE-2025-62557) exploitable via Preview Pane, and an RCE in Microsoft Outlook (CVE-2025-62562) are also patched. PowerShell now warns when running Invoke-WebRequest scripts to mitigate risks. Other privilege escalation bugs in Windows drivers (e.g., CVE-2025-62458) are also fixed.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-62221",
+            "CVE-2025-54100",
+            "CVE-2025-64671",
+            "CVE-2025-62554",
+            "CVE-2025-62557",
+            "CVE-2025-62562",
+            "CVE-2025-62458"
+          ],
+          "DOMAIN": [
+            "support[.]microsoft[.]com",
+            "msrc[.]microsoft[.]com",
+            "snort[.]org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1068:Exploitation for Privilege Escalation",
+            "T1059.001:Command and Scripting Interpreter: PowerShell",
+            "T1059.004:Command and Scripting Interpreter: Unix Shell",
+            "T1059.005:Command and Scripting Interpreter: Batch Script",
+            "T1204.001:User Execution: Malicious Link",
+            "T1204.002:User Execution: Malicious File",
+            "T1566.001:Phishing: Spearphishing Attachment",
+            "T1548.001:Abuse Elevation Control Mechanism: Setuid and Setgid",
+            "T1548.002:Abuse Elevation Control Mechanism: Bypass User Account Control"
+          ],
+          "URL": [
+            "hxxps[:]//support[.]microsoft[.]com/help/5072034",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/en-us",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/releaseNote/2025-Dec",
+            "hxxps[:]//msrc[.]microsoft[.]com/update-guide/vulnerability/CVE-2025-62458"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1068:Exploitation for Privilege Escalation",
+          "T1059.001:Command and Scripting Interpreter: PowerShell",
+          "T1059.004:Command and Scripting Interpreter: Unix Shell",
+          "T1059.005:Command and Scripting Interpreter: Batch Script",
+          "T1204.001:User Execution: Malicious Link",
+          "T1204.002:User Execution: Malicious File",
+          "T1566.001:Phishing: Spearphishing Attachment",
+          "T1548.001:Abuse Elevation Control Mechanism: Setuid and Setgid",
+          "T1548.002:Abuse Elevation Control Mechanism: Bypass User Account Control"
+        ],
+        "analyse": "Microsoft's December Patch Tuesday highlights the ongoing challenge of zero-day exploits and publicly disclosed vulnerabilities. The active exploitation of the Windows Cloud Files driver vulnerability underscores the importance of prompt patching, even for flaws with moderate CVSS scores, if they are leveraged in the wild. The RCEs in Office and Outlook demonstrate continued reliance on social engineering tactics, while the PowerShell and GitHub Copilot flaws indicate risks in common development and IT automation tools.",
+        "recommandations": [
+          "Prioritize immediate application of all Microsoft security updates, especially those addressing actively exploited or publicly disclosed vulnerabilities.",
+          "Reinforce user awareness training to counter social engineering tactics, particularly regarding malicious Office documents and email attachments.",
+          "Monitor for suspicious PowerShell activity and restrict the use of Invoke-WebRequest where possible, or enforce `-UseBasicParsing`.",
+          "Disable auto-approve features in developer environments using GitHub Copilot and enforce strict separation between trusted and untrusted inputs.",
+          "Implement endpoint detection and response (EDR) solutions to monitor for privilege escalation attempts and unusual command execution.",
+          "Apply least privilege principles across all systems."
+        ],
+        "tags": [
+          "microsoft",
+          "patch tuesday",
+          "zero-day",
+          "rce",
+          "privilege escalation",
+          "vulnerability",
+          "powershell",
+          "github copilot",
+          "microsoft office",
+          "outlook",
+          "social engineering",
+          "kernel",
+          "actively exploited",
+          "publicly disclosed",
+          "T1068",
+          "T1059.001",
+          "T1059.004",
+          "T1059.005",
+          "T1204.001",
+          "T1204.002",
+          "T1566.001",
+          "T1548.001",
+          "T1548.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-windows-powershell-now-warns-when-running-invoke-webrequest-scripts/",
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5071546-extended-security-update/",
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-december-2025-patch-tuesday-fixes-3-zero-days-57-flaws/",
+          "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5072033-and-kb5071417-cumulative-updates-released/",
+          "https://www.cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-december-9-2025_2025-113",
+          "https://fieldeffect.com/blog/december-2025-patch-tuesday-updates-from-microsoft",
+          "https://krebsonsecurity.com/2025/12/microsoft-patch-tuesday-december-2025-edition/",
+          "https://cybersecuritynews.com/windows-cloud-files-mini-filter-driver-0-day/",
+          "https://securityonline.info/cisa-kev-alert-winrar-zero-day-used-for-malware-injection-and-windows-uaf-rce-under-active-attack/",
+          "https://securityonline.info/microsoft-patches-three-zero-days-including-active-cloud-files-uaf-to-system-and-copilot-rce/",
+          "https://blog.talosintelligence.com/microsoft-patch-tuesday-december-2025/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1049/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1048/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1047/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1046/"
+        ],
+        "date": "2025-12-10"
+      },
+      {
+        "title": "Shai-Hulud 2.0: Supply Chain Attack on Cloud-Native Ecosystem",
+        "description": "The Shai-Hulud 2.0 attack represents a significant compromise of the cloud-native ecosystem, where attackers maliciously modified hundreds of publicly available packages. The primary targets were developer environments, continuous integration/continuous delivery (CI/CD) pipelines, and cloud-connected workloads, aiming to harvest credentials and configuration secrets. This is a supply chain attack demonstrating sophisticated modification of trusted software components.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "reddit[.]com",
+            "sha1hulud-scan[.]sh",
+            "www[.]aikido[.]dev",
+            "bun[.]sh"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [
+            "[:][:]"
+          ],
+          "MITRE_ATT&CK": [
+            "T1195.002:Supply Chain Compromise: Compromise Software Supply Chain",
+            "T1588.007:Obtain Capabilities: Develop Software",
+            "T1003:OS Credential Dumping",
+            "T1552:Unsecured Credentials"
+          ],
+          "URL": [
+            "hxxps[:]//bun[.]sh/install",
+            "hxxps[:]//www[.]aikido[.]dev/blog/shai-hulud-strikes-again-hitting-zapier-ensdomains"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002:Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1588.007:Obtain Capabilities: Develop Software",
+          "T1003:OS Credential Dumping",
+          "T1552:Unsecured Credentials"
+        ],
+        "analyse": "This attack underscores the critical and evolving threat of supply chain compromises within cloud-native environments. By targeting development processes and infrastructure, attackers gain a high-leverage position to steal sensitive data and potentially embed backdoors in widely used software. The focus on credentials and configuration secrets indicates a goal of long-term access and deeper exploitation.",
+        "recommandations": [
+          "Implement stringent security measures for developer environments and CI/CD pipelines, including strong access controls and multi-factor authentication.",
+          "Regularly audit third-party packages and dependencies for integrity and known vulnerabilities.",
+          "Employ software supply chain security tools to detect unauthorized modifications and compromised artifacts.",
+          "Monitor cloud-connected workloads for unusual activity, especially related to credential access.",
+          "Rotate credentials and secrets frequently, and use secure secrets management solutions.",
+          "Implement least privilege for all development and deployment accounts."
+        ],
+        "tags": [
+          "supply chain attack",
+          "cloud-native",
+          "ci/cd",
+          "developer environments",
+          "credentials theft",
+          "configuration secrets",
+          "software supply chain",
+          "T1195.002",
+          "T1588.007",
+          "T1003",
+          "T1552"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/"
+        ],
+        "date": "2025-12-10"
+      }
+    ]
+  }
+}
