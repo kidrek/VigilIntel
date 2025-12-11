@@ -1,0 +1,1953 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la cybersécurité en décembre 2025 est marqué par plusieurs tendances critiques. Le ransomware reste une menace dominante, avec de nouvelles familles comme 01flip et des groupes établis comme Akira et Qilin lançant des campagnes étendues, impactant des secteurs allant de la santé aux produits pharmaceutiques. Le rapport de Cyble met en évidence une augmentation significative de 50 % des attaques par ransomware, atteignant près de 6 000 incidents en 2025. L'exploitation rapide des vulnérabilités zero-day et critiques est une préoccupation majeure, comme l'illustre la CVE-2025-55182 (React4Shell) activement militarisée pour l'exécution de code à distance, le vol de credentials et le déploiement de botnets presque immédiatement après sa divulgation. Les produits Fortinet, Gladinet et IceWarp ont également connu des vulnérabilités de haute gravité menant à des contournements d'authentification et à l'exécution de code à distance. Les attaques sur la chaîne d'approvisionnement restent un vecteur clé, démontrées par le ver Shai-Hulud compromettant des packages npm pour voler des credentials, et plus de 10 000 images Docker Hub découvertes divulguant des clés d'authentification sensibles. Les attaquants exploitent de plus en plus l'IA et les grands modèles linguistiques (LLM), avec des campagnes utilisant des publicités Google et des guides ChatGPT/Grok malveillants pour distribuer des infostealers, et une faille zero-click (GeminiJack) dans Google Gemini Enterprise permettant l'exfiltration de données. Le phishing reste sophistiqué, avec des kits avancés comme Spiderman contournant le MFA et ciblant les institutions financières. Les tensions géopolitiques alimentent les activités hacktivistes, avec des groupes pro-russes CARR et NoName057(16) ciblant les infrastructures critiques, tandis que des acteurs APT liés à la Corée du Nord emploient de l'ingénierie sociale avancée et de nouveaux mécanismes de C2 (EtherRAT utilisant des smart contracts Ethereum).\n\nEn conclusion, l'état général des menaces cyber se caractérise par une sophistication et une rapidité d'exploitation croissantes, une ligne floue entre les activités des États-nations et la cybercriminalité, et une concentration persistante sur les infrastructures critiques et les secteurs riches en données. La convergence de vulnérabilités non corrigées, de facteurs humains (phishing) et de faiblesses de la chaîne d'approvisionnement crée un environnement très volatil où les défenseurs doivent adopter des stratégies de sécurité multicouches et proactives.",
+      "date": "2025-12-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Silver Fox APT",
+        "secteur": "Non spécifié, utilise ValleyRAT",
+        "modop": "Déploiement de backdoors modulaires (ValleyRAT), rootkits kernel-mode.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "backdoor",
+          "rootkit"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Agent Tesla",
+        "secteur": "Cible les utilisateurs grand public via torrents de films piratés.",
+        "modop": "Campagnes de malvertising/phishing, chaînes PowerShell pour installer un RAT.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "rat",
+          "trojan",
+          "powershell",
+          "malvertising"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-leonardo-dicaprio-movie-torrent-agent-tesla-powershell"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "AMOS infostealer campaign operators",
+        "secteur": "Utilisateurs macOS, notamment ceux de cryptomonnaies/Web3.",
+        "modop": "Abus de Google Search Ads, guides ChatGPT/Grok malveillants, diffusion de malwares pour voler des credentials, données de navigateurs, wallets crypto.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "macos",
+          "phishing",
+          "cryptocurrency",
+          "llm_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-ads-for-shared-chatgpt-grok-guides-push-macos-infostealer-malware/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "DroidLock operators",
+        "secteur": "Utilisateurs Android.",
+        "modop": "Ransomware bloquant l'écran, effacement de données, accès aux messages, journaux d'appels, contacts, données audio.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "android",
+          "mobile_malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-droidlock-malware-locks-android-devices-and-demands-a-ransom/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Spiderman phishing service operators",
+        "secteur": "Institutions financières européennes (banques, fintech), détenteurs de cryptomonnaies.",
+        "modop": "Kits de phishing sophistiqués, sites clonés pixel-par-pixel, vol de credentials, codes OTP, détails de cartes de crédit, seed phrases crypto.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "phishing",
+          "finance",
+          "cryptocurrency",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-spiderman-phishing-service-targets-dozens-of-european-banks/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Qilin gang",
+        "secteur": "Non spécifié, ciblant des entreprises mondiales, y compris l'industrie pharmaceutique (Inotiv).",
+        "modop": "Ransomware, exfiltration et fuite de données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115698546520028603",
+          "https://thecyberexpress.com/cyble-global-cybersecurity-report-2025/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CL-CRI-1036 (alias 01flip ransomware operators)",
+        "secteur": "Victimes en Asie-Pacifique (Philippines, Taiwan), ciblant les serveurs Zimbra.",
+        "modop": "Ransomware Rust multi-plateformes, exploitation de vulnérabilités anciennes (CVE-2019-11580), déploiement de Sliver pour mouvement latéral.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "rust_malware",
+          "multi-platform",
+          "sliver_framework"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Akira ransomware operators",
+        "secteur": "Divers, exploite VPNs et accès distants.",
+        "modop": "Ransomware, extorsion de fonds (estimé à 250 millions USD), chaines d'attaque raffinées, héritage de Conti.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "vpn_exploitation",
+          "data_extortion"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/akira-ransomware-fbi-tallies-250-million-in-payouts/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CARR (Cyber Army of Russia Reborn)",
+        "secteur": "Infrastructures critiques (eau, alimentation, énergie) aux US, Ukraine, alliés de l'OTAN.",
+        "modop": "Hacktivisme pro-russe, attaques DDoS, dégradations de sites web, intrusion dans systèmes de contrôle industriel (SCADA), guessing de mots de passe, dommages physiques. Soutenu par le GRU.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "ddos",
+          "ics",
+          "scada"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Gouvernements, institutions financières, infrastructures critiques (ferroviaire, ports).",
+        "modop": "Hacktivisme pro-russe, attaques DDoS via l'outil propriétaire DDoSia et recrutement de volontaires. Sanctionné par l'État russe.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "ddos",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "North Korea-linked actors (Contagious Interview campaign, UNC5342)",
+        "secteur": "Développeurs de logiciels (Windows, Linux, macOS) dans les domaines crypto et Web3.",
+        "modop": "Ingénierie sociale (fausse offre d'emploi, projets démo trojanisés), exploitation de CVE-2025-55182, déploiement de EtherRAT, BeaverTail, OtterCookie, InvisibleFerretRAT. Utilisation de smart contracts Ethereum pour C2.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "nation_state",
+          "apt",
+          "north_korea",
+          "social_engineering",
+          "infostealer",
+          "rat",
+          "cryptocurrency",
+          "zero_day_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185538/apt/new-etherrat-backdoor-surfaces-in-react2shell-attacks-tied-to-north-korea.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CL-STA-1015 (IAB, lié au MSS chinois)",
+        "secteur": "Non spécifié, concerne l'infrastructure cloud et la supply chain logicielle.",
+        "modop": "Broker d'accès initial, exécution de scripts shell malveillants, installation de SNOWLIGHT et VShell Trojans, BPFDoor.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "initial_access_broker",
+          "china_linked",
+          "trojan",
+          "espionage"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International, Diplomatie",
+        "theme": "Coopération trilatérale Russie-Inde-Chine",
+        "description": "Examen de la coopération émergente entre la Russie, l'Inde et la Chine, influencée par les sanctions et tarifs américains. Une formation de bloc formel est jugée peu probable à court terme en raison de divergences d'intérêts et des tensions sino-indiennes, mais une coopération accrue est attendue.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "inde",
+          "chine",
+          "etats_unis",
+          "diplomatie",
+          "commerce",
+          "sanctions"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/implications-of-russia-india-china-trilateral-cooperation"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Cyberdéfense, Sécurité Nationale",
+        "theme": "Accusations américaines contre des hacktivistes pro-russes",
+        "description": "Une citoyenne ukrainienne (Victoria Dubranova) est accusée aux États-Unis d'avoir aidé des groupes hacktivistes pro-russes (CARR, NoName057(16)) dans des cyberattaques mondiales contre des infrastructures critiques. Le DOJ a annoncé des actions contre ces groupes soutenus par l'État russe.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hacktivisme",
+          "russie",
+          "ukraine",
+          "etats_unis",
+          "cyberattaques",
+          "infrastructures_critiques",
+          "droit",
+          "justice"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Médias, Conflit",
+        "theme": "Transparence et désinformation dans le conflit ukrainien",
+        "description": "Analyse de l'utilisation des vidéos et des réseaux sociaux par l'Ukraine pour contrer la désinformation russe et affirmer sa position stratégique. La communication en ligne est un défi pour la transparence et un outil de résistance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "conflit",
+          "desinformation",
+          "guerre_informationnelle",
+          "reseaux_sociaux"
+        ],
+        "sources": [
+          "https://www.iris-france.org/videos-du-front-lukraine-au-defi-de-la-transparence/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Diplomatie, Politique Étrangère",
+        "theme": "Politique étrangère américaine et accord de paix (RDC-Rwanda)",
+        "description": "Critique de la politique étrangère américaine sous l'administration Trump, notamment concernant un accord de paix parrainé entre la RDC et le Rwanda. L'article souligne l'hypocrisie, les motivations économiques (minerais rares), et le manque d'engagement réel envers le continent africain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "rdc",
+          "rwanda",
+          "politique_etrangere",
+          "conflit_africain",
+          "ressources_naturelles",
+          "diplomatie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/une-petite-metaphore-parfaite/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Diverses entreprises",
+        "victime": "9 entreprises non nommées",
+        "description": "Un hacker de 19 ans arrêté en Espagne pour avoir volé et vendu environ 64 millions de dossiers de données personnelles (numéros d'identité, adresses, téléphones, emails, IBAN) provenant de neuf entreprises.",
+        "tags": [
+          "violation",
+          "breach",
+          "donnees_personnelles",
+          "vol_de_donnees",
+          "hacker",
+          "espagne"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/teen-who-allegedly-stole-millions-of-personal-data-records-arrested-in-spain/?pk_campaign=feed&pk_kwd=teen-who-allegedly-stole-millions-of-personal-data-records-arrested-in-spain",
+          "https://mastodon.maobui.com/@vietnamnet_bot/115698287938318303"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Santé (Irlande)",
+        "victime": "Health Service Executive (HSE)",
+        "description": "Le HSE confirme une deuxième attaque par ransomware en février (après celle de mai 2021) ciblant un prestataire tiers. Aucune preuve de vol de données patients lors de la seconde attaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "ransomware",
+          "irlande",
+          "prestataire_tiers"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/ie-hse-confirms-second-ransomware-attack-but-no-evidence-patient-data-was-stolen/?pk_campaign=feed&pk_kwd=ie-hse-confirms-second-ransomware-attack-but-no-evidence-patient-data-was-stolen"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Santé (États-Unis)",
+        "victime": "Change Healthcare (impactant de nombreux hôpitaux)",
+        "description": "Analyse de l'impact d'une cyberattaque par ransomware en 2024 qui a exposé les informations de santé de plus de 190 millions de personnes, perturbant les paiements aux hôpitaux et cliniques.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "ransomware",
+          "etats_unis",
+          "donnees_sante",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/examining-impact-of-federal-relief-program-after-major-healthcare-cyberattack-research-brief/?pk_campaign=feed&pk_kwd=examining-impact-of-federal-relief-program-after-major-healthcare-cyberattack-research-brief"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Commerce de détail (Corée du Sud)",
+        "victime": "Coupang",
+        "description": "Le PDG de Coupang a démissionné suite à une violation de données massive affectant près de 34 millions de personnes. Les informations volées incluent noms, adresses e-mail, numéros de téléphone, adresses de livraison et historiques de commandes.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_electronique",
+          "coree_du_sud",
+          "donnees_personnelles",
+          "fuite_de_donnees"
+        ],
+        "sources": [
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/12/10/ceo-of-south-korean-retail-giant-coupang-resigns-after-massive-data-breach/",
+          "https://mastodon.social/@joseph11lim/115697735252034859"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Industrie pharmaceutique",
+        "victime": "Inotiv",
+        "description": "Inotiv a divulgué une violation de données suite à une attaque par ransomware en août 2025 par le gang Qilin, qui a revendiqué la responsabilité et fait fuiter des échantillons de 176 Go de fichiers volés.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutique",
+          "ransomware",
+          "qilin_gang",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115698546520028603"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Multi-sectoriel (Global)",
+        "victime": "Plus de 6000 entreprises (globale)",
+        "description": "Le Cyble Global Cybersecurity Report 2025 rapporte une augmentation de 50% des attaques par ransomware (5967 incidents) et 6046 violations de données, faisant de 2025 une année record pour les menaces cyber.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "cybersecurite",
+          "rapport",
+          "tendances"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cyble-global-cybersecurity-report-2025/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (RSC)",
+        "description": "Vulnérabilité critique de désérialisation de données non fiables (React4Shell) permettant l'exécution de code à distance (RCE), lecture/écriture de fichiers et vol de credentials. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "deserialization",
+          "react_server_components",
+          "zero_day",
+          "exploitation_active"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://securityaffairs.com/185538/apt/new-etherrat-backdoor-surfaces-in-react2shell-attacks-tied-to-north-korea.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-13764",
+        "cvss": 9.8,
+        "product": "WP CarDealer plugin for WordPress (versions <= 1.2.16)",
+        "description": "Vulnérabilité d'élévation de privilèges non authentifiée permettant à un attaquant de s'enregistrer avec le rôle \"administrateur\" et d'obtenir un accès administrateur au site.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "wordpress",
+          "unauthenticated",
+          "admin_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13764"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-14500",
+        "cvss": 9.8,
+        "product": "IceWarp 14",
+        "description": "Vulnérabilité d'injection de commande X-File-Operation (RCE) permettant l'exécution de code arbitraire à distance sans authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "icewarp",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1072/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": 9.1,
+        "product": "FortiOS, FortiWeb, FortiProxy, FortiSwitchManager",
+        "description": "Contournement d'authentification SSO via des vérifications de signature SAML incorrectes, permettant un accès administrateur non authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentification_bypass",
+          "sso",
+          "saml",
+          "fortinet",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-sso-login-authentication-bypass",
+          "https://securityaffairs.com/185546/security/fortinet-fixed-two-critical-authentication-bypass-vulnerabilities.html"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": 9.1,
+        "product": "FortiOS, FortiWeb, FortiProxy, FortiSwitchManager",
+        "description": "Contournement d'authentification SSO via des vérifications de signature SAML incorrectes, permettant un accès administrateur non authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentification_bypass",
+          "sso",
+          "saml",
+          "fortinet",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-sso-login-authentication-bypass",
+          "https://securityaffairs.com/185546/security/fortinet-fixed-two-critical-authentication-bypass-vulnerabilities.html"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-14499",
+        "cvss": 8.8,
+        "product": "IceWarp",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) dans le paramètre gmaps permettant de contourner l'authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "authentication_bypass",
+          "icewarp"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1071/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-8405",
+        "cvss": 8.7,
+        "product": "GitLab CE/EE (versions 17.1 avant 18.4.6, 18.5 avant 18.5.4, et 18.6 avant 18.6.2)",
+        "description": "Vulnérabilité d'injection HTML permettant à un utilisateur authentifié d'effectuer des actions non autorisées via l'injection de HTML malveillant dans les affichages de flux de code de vulnérabilité.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "html_injection",
+          "gitlab",
+          "authenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-8405"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-12716",
+        "cvss": 8.7,
+        "product": "GitLab CE/EE (versions 18.4 avant 18.4.6, 18.5 avant 18.5.4, et 18.6 avant 18.6.2)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) permettant à un utilisateur authentifié d'effectuer des actions non autorisées en créant des pages wiki avec du contenu malveillant.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "gitlab",
+          "authenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12716"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-64701",
+        "cvss": 8.5,
+        "product": "QND Premium/Advance/Standard Ver.11.0.9i et antérieures",
+        "description": "Vulnérabilité d'élévation de privilèges permettant à un utilisateur connecté de gagner des privilèges administrateur, d'accéder/altérer des informations sensibles et d'exécuter des actions arbitraires.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "qnd",
+          "windows",
+          "sensitive_data"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64701"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-67738",
+        "cvss": 8.5,
+        "product": "Webmin (squid/cachemgr.cgi, versions avant 2.600)",
+        "description": "Vulnérabilité d'arguments non quotés permettant une exécution de code arbitraire si le module Squid de Webmin et Cache Manager sont disponibles et qu'une partie non fiable s'authentifie avec certaines permissions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "code_execution",
+          "webmin",
+          "squid",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67738"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-67719",
+        "cvss": 8.5,
+        "product": "Ibexa User Bundle (versions 5.0.0-beta1 à 5.0.3)",
+        "description": "Absence de validation du changement de mot de passe, permettant à un utilisateur connecté de modifier son mot de passe sans connaître l'ancien.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "password_change",
+          "authentication_bypass",
+          "ibexa",
+          "access_control"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67719"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-12029",
+        "cvss": 8.0,
+        "product": "GitLab CE/EE (versions 15.11 avant 18.4.6, 18.5 avant 18.5.4, et 18.6 avant 18.6.2)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) permettant à un utilisateur non authentifié d'effectuer des actions non autorisées via injection de scripts malveillants dans l'interface Swagger UI.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "gitlab",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12029"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Phishing Kit Attacks 101: Everything SOC Analysts Should Know",
+        "description": "Analyse des kits de phishing modernes, qui sont des plateformes d'attaque prêtes à l'emploi conçues pour voler des credentials, contourner l'authentification multifacteur (MFA) et détourner des sessions en direct.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1566.003 - Phishing: Spearphishing via Service",
+          "T1539 - Steal Web Session Cookie"
+        ],
+        "analyse": "L'utilisation croissante de kits de phishing sophistiqués rend la détection plus difficile pour les équipes SOC, augmentant le risque de prise de contrôle de compte en temps réel et d'accès non autorisé.",
+        "recommandations": "Mettre en œuvre des solutions de détection de phishing avancées, renforcer la sensibilisation des utilisateurs, utiliser l'authentification multifacteur (MFA) robuste, surveiller les alertes de sécurité pour les tentatives de prise de contrôle de compte.",
+        "tags": [
+          "phishing",
+          "phishing_kit",
+          "soc_analysis",
+          "credential_theft",
+          "mfa_bypass",
+          "session_hijacking"
+        ],
+        "sources": [
+          "/cybersecurity-blog/phishkit-attacks-101/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Fake Leonardo DiCaprio Movie Torrent Drops Agent Tesla Through Layered PowerShell Chain",
+        "description": "Une campagne malveillante utilise un faux torrent du film \"One Battle After Another\" de Leonardo DiCaprio pour distribuer le RAT Agent Tesla via une chaîne d'infection PowerShell complexe, visant à obtenir un accès à distance aux ordinateurs Windows pour voler des informations financières et personnelles.",
+        "threat_actor": "Agent Tesla",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "realtekdriverinstall[.]ps",
+            "io[.]directory",
+            "realtekupdatedriver[.]ps"
+          ],
+          "IPv6": [
+            "[:][:]C",
+            "[:][:]F",
+            "[:][:]"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1204.002 - User Execution: Malicious File",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1136.001 - Create Account: Local Account",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1090.001 - Proxy: Internal Proxy",
+          "T1573 - Encrypted Channel"
+        ],
+        "analyse": "Cette méthode d'infection exploite l'intérêt des utilisateurs pour le contenu de divertissement illicite, rendant les logiciels de sécurité traditionnels plus difficiles à détecter en raison de la complexité de la chaîne d'exécution en mémoire. L'impact est un accès total et le vol de données.",
+        "recommandations": "Sensibiliser les utilisateurs aux risques des téléchargements illégaux, utiliser des solutions de sécurité endpoint avec détection comportementale, surveiller l'activité PowerShell anormale, mettre en place des protections contre les malwares résidents en mémoire.",
+        "tags": [
+          "malware",
+          "agent_tesla",
+          "rat",
+          "powershell",
+          "torrent_malware",
+          "social_engineering",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-leonardo-dicaprio-movie-torrent-agent-tesla-powershell"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Google ads for shared ChatGPT, Grok guides push macOS infostealer malware",
+        "description": "Une nouvelle campagne distribue le malware AMOS infostealer pour macOS via des publicités Google Search malveillantes. Ces annonces dirigent les utilisateurs vers des conversations ChatGPT et Grok partagées contenant des instructions d'installation du malware, visant à voler des données de portefeuilles de cryptomonnaies, des données de navigateurs et des informations du Trousseau macOS.",
+        "threat_actor": "AMOS infostealer campaign operators",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            ".helper"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1555.001 - Credential Access: Keychain"
+        ],
+        "analyse": "Cette campagne illustre l'abus de services légitimes (publicités Google, plateformes LLM) pour la distribution de malwares, rendant la détection difficile pour les utilisateurs. Les utilisateurs de macOS et de cryptomonnaies sont particulièrement ciblés.",
+        "recommandations": "Vérifier la légitimité des sources avant de télécharger des logiciels, utiliser des bloqueurs de publicité, être vigilant face aux liens de recherche sponsorisés, sauvegarder régulièrement les données, utiliser des solutions EDR/anti-malware.",
+        "tags": [
+          "infostealer",
+          "macos",
+          "google_ads",
+          "chatgpt_abuse",
+          "grok_abuse",
+          "cryptocurrency_theft",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-ads-for-shared-chatgpt-grok-guides-push-macos-infostealer-malware/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "New DroidLock malware locks Android devices and demands a ransom",
+        "description": "Un nouveau malware Android nommé DroidLock est apparu, capable de verrouiller les écrans des appareils pour exiger une rançon, d'effacer des données, et d'accéder aux messages texte, journaux d'appels, contacts et données audio.",
+        "threat_actor": "DroidLock operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1559 - Interprocess Communication",
+          "T1486 - Data Encrypted for Impact",
+          "T1565 - Data Manipulation",
+          "T1123 - Audio Capture"
+        ],
+        "analyse": "Ce ransomware mobile représente une menace directe pour la confidentialité et l'intégrité des données personnelles des utilisateurs Android, avec un potentiel d'extorsion significatif.",
+        "recommandations": "Installer des applications uniquement depuis des sources fiables, maintenir le système d'exploitation et les applications à jour, utiliser une solution de sécurité mobile, sauvegarder régulièrement les données des appareils.",
+        "tags": [
+          "malware",
+          "android",
+          "ransomware",
+          "mobile_security",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-droidlock-malware-locks-android-devices-and-demands-a-ransom/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "New Spiderman phishing service targets dozens of European banks",
+        "description": "Un nouveau kit de phishing appelé Spiderman est utilisé pour cibler les clients de dizaines de banques européennes et les détenteurs de cryptomonnaies, en créant des sites parfaitement clonés qui usurpent l'identité de marques et d'organisations. Le kit est modulaire et peut intercepter des codes OTP et voler des informations de cartes de crédit.",
+        "threat_actor": "Spiderman phishing service operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1539 - Steal Web Session Cookie",
+          "T1003.001 - OS Credential Dumping: LSASS Memory"
+        ],
+        "analyse": "La sophistication de ce kit de phishing, avec sa capacité à créer des clones \"pixel-perfect\" et à s'adapter aux nouveaux flux d'e-banking, pose un défi majeur pour la sécurité des institutions financières et la protection des données des clients en Europe.",
+        "recommandations": "Toujours vérifier le domaine officiel avant d'entrer des credentials, être vigilant aux fenêtres de navigateur intégrées (\"browser-in-the-browser\"), renforcer l'authentification multifacteur, utiliser des passerelles de sécurité web et des filtres anti-phishing.",
+        "tags": [
+          "phishing",
+          "banking",
+          "cryptocurrency",
+          "europe",
+          "credential_theft",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-spiderman-phishing-service-targets-dozens-of-european-banks/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Over 10,000 Docker Hub images found leaking credentials, auth keys",
+        "description": "Plus de 10 000 images de conteneurs Docker Hub ont été découvertes fuyant des données sensibles, notamment des credentials actifs pour des systèmes de production, des bases de données CI/CD et des clés de modèles LLM.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tee[.]fail"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552.001 - Unsecured Credentials: Configuration Files",
+          "T1589.001 - Gather Victim Identity Information: Credentials"
+        ],
+        "analyse": "Cette fuite massive de secrets dans des images Docker expose les entreprises à des risques importants de compromission de systèmes de production et d'environnements de développement, soulignant un problème répandu de gestion des secrets dans les pipelines CI/CD et les pratiques DevOps.",
+        "recommandations": "Mettre en œuvre des scanners d'images conteneurs pour détecter les secrets exposés, utiliser des outils de gestion des secrets dédiés, appliquer le principe du moindre privilège, sensibiliser les développeurs aux bonnes pratiques de sécurité des conteneurs.",
+        "tags": [
+          "docker",
+          "container_security",
+          "credential_leak",
+          "devops",
+          "cloud_security",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-docker-hub-images-found-leaking-credentials-auth-keys/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Cracking ValleyRAT: From Builder Secrets to Kernel Rootkits",
+        "description": "Analyse approfondie du backdoor modulaire ValleyRAT (alias Winos ou Winos4.0), souvent associé à des acteurs chinois comme Silver Fox APT. L'étude révèle son système de plugins, son builder et un rootkit en mode noyau qui reste fonctionnel même sur Windows 11 mis à jour.",
+        "threat_actor": "Silver Fox APT (et autres acteurs chinois)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1573 - Encrypted Channel",
+          "T1059 - Command and Scripting Interpreter",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1546.003 - Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1548.002 - Bypass User Account Control: Bypass UAC",
+          "T1564.001 - Hide Artifacts: Hidden Files and Directories",
+          "T1574 - Hijack Execution Flow",
+          "T1014 - Kernel Modules and Extensions"
+        ],
+        "analyse": "ValleyRAT est un outil sophistiqué largement adopté par des groupes d'acteurs de la menace. La disponibilité publique de son builder et de parties de son code source suggère une prolifération accrue, rendant l'attribution plus complexe. Le rootkit en mode noyau représente une menace persistante et difficile à détecter.",
+        "recommandations": "Mettre en œuvre des solutions EDR/XDR avec détection comportementale avancée, surveiller l'activité des pilotes en mode noyau, appliquer les mises à jour de sécurité Windows, utiliser des listes de blocage de pilotes vulnérables, renforcer les contrôles d'accès et la segmentation réseau.",
+        "tags": [
+          "malware_analysis",
+          "backdoor",
+          "valleyrat",
+          "rootkit",
+          "kernel_mode",
+          "apt",
+          "chinese_threat_actors",
+          "windows_security"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "NANOREMOTE, cousin of FINALDRAFT",
+        "description": "Une analyse du backdoor NANOREMOTE, récemment découvert, partage des caractéristiques avec l'implant FINALDRAFT et utilise l'API Google Drive pour l'exfiltration de données et le déploiement de payloads. Il inclut un système de gestion des tâches et charge des fichiers PE en mémoire pour l'exécution discrète de commandes.",
+        "threat_actor": "Non spécifié (probablement les mêmes opérateurs que FINALDRAFT)",
+        "indicator_of_compromise": {
+          "YARA_RULE": [
+            "rule Windows_Trojan_NanoRemote_7974c813 {...}",
+            "rule Windows_Trojan_WMLoader_d2c7b963 {...}"
+          ],
+          "IPv4": [
+            "192[.]168[.]1[.]1"
+          ],
+          "FILE_HASH_SHA256": [
+            "999648bd814ea5b1e97918366c6bd0f82b88f5675da1d4133257b9e6f4121475",
+            "b26927ca4342a19e9314cf05ee9d9a4bddf7b848def2db941dd281d692eaa73c",
+            "57e0e560801687a8691c704f79da0c1dbdd0f7d5cc671a6ce07ec0040205d728",
+            "35593a51ecc14e68181b2de8f82dde8c18f27f16fcebedbbdac78371ff4f8d41",
+            "fff31726d253458f2c29233d37ee4caf43c5252f58df76c0dced71c4014d6902"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1059 - Command and Scripting Interpreter",
+          "T1105 - Ingress Tool Transfer",
+          "T1560 - Archive Collected Data",
+          "T1027 - Obfuscated Files or Information",
+          "T1573 - Encrypted Channel",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "L'utilisation de services cloud légitimes (Google Drive) pour le C2 et l'exfiltration rend la détection réseau difficile. La capacité de charger des PE en mémoire sans passer par le chargeur Windows standard permet d'échapper aux défenses traditionnelles, indiquant une sophistication tactique.",
+        "recommandations": "Mettre en place une surveillance approfondie du trafic réseau chiffré, déployer des solutions EDR/XDR pour détecter l'exécution de code en mémoire et l'activité anormale, renforcer la surveillance des interactions avec les API de services cloud légitimes, implémenter des règles YARA.",
+        "tags": [
+          "malware_analysis",
+          "backdoor",
+          "nanoremote",
+          "finaldraft",
+          "google_drive_abuse",
+          "data_exfiltration",
+          "in_memory_execution"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/nanoremote"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Bun and done: The second coming of the Shai-Hulud worm",
+        "description": "La campagne \"Sha1-Hulud: The Second Coming\" a compromis des centaines de packages npm pour voler des credentials (clés d'accès cloud, tokens GitHub/npm) en utilisant Bun, un runtime JavaScript. Les secrets volés sont exfiltrés vers des dépôts GitHub publics, avec une composante destructrice ciblant les répertoires personnels.",
+        "threat_actor": "Shai-Hulud worm operators",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "setup_bun.js",
+            "bun_environment.js"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1555.001 - Credential Access: Keychain",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1560 - Archive Collected Data"
+        ],
+        "analyse": "Cette attaque met en évidence la vulnérabilité de la supply chain logicielle (packages npm) et la persistance de l'exposition des credentials dans les dépôts publics. L'impact potentiel est une compromission d'identité et des intrusions dans les systèmes cloud et SaaS.",
+        "recommandations": "Épingler les versions des packages npm à des versions connues et fiables, réinitialiser les credentials compromis, réimager les systèmes affectés, appliquer les bonnes pratiques de sécurité npm (2FA, proxy npm local, \"cooldown check\"), surveiller l'exfiltration de données vers GitHub.",
+        "tags": [
+          "supply_chain_attack",
+          "npm",
+          "credential_theft",
+          "cloud_security",
+          "github",
+          "data_exfiltration",
+          "worm"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/shai-hulud-worm/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "01flip: Multi-Platform Ransomware Written in Rust",
+        "description": "Une nouvelle famille de ransomware multi-plateformes nommée 01flip, écrite en Rust, a été observée ciblant des victimes en Asie-Pacifique. Les attaquants exploitent des vulnérabilités plus anciennes (ex: CVE-2019-11580 dans Zimbra) pour un accès initial, puis déploient Sliver pour le mouvement latéral et le ransomware sur les machines Windows et Linux.",
+        "threat_actor": "CL-CRI-1036 (alias 01flip ransomware operators)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "proton[.]me"
+          ],
+          "CVE": [
+            "CVE-2019-11580"
+          ],
+          "IPv4": [
+            "127[.]0[.]0[.]7"
+          ],
+          "FILE_HASH_SHA256": [
+            "e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957",
+            "6aad1c36ab9c7c44350ebe3a17178b4fd93c2aa296e2af212ab28d711c0889a3",
+            "ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+          ],
+          "EMAIL": [
+            "01Flip@proton[.]me"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078 - Valid Accounts",
+          "T1569.002 - System Services: Service Execution",
+          "T1486 - Data Encrypted for Impact",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1573 - Encrypted Channel",
+          "T1560 - Archive Collected Data"
+        ],
+        "analyse": "Le développement de ransomwares dans des langages modernes comme Rust pose de nouveaux défis à la rétro-ingénierie et à la détection. L'exploitation de vulnérabilités connues mais non corrigées souligne l'importance de la gestion des patchs. La nature multi-plateformes d'01flip élargit la surface d'attaque.",
+        "recommandations": "Appliquer rapidement les correctifs de sécurité, notamment pour les vulnérabilités publiques, utiliser des solutions EDR/XDR capables d'analyser les binaires Rust et de détecter les mouvements latéraux (Sliver), segmenter les réseaux, mettre en place des sauvegardes régulières et isolées.",
+        "tags": [
+          "ransomware",
+          "multi_platform",
+          "rust_malware",
+          "zimbra",
+          "sliver_framework",
+          "vulnerability_exploitation",
+          "data_leak"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/"
+        ],
+        "date": "2025-12-11"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analysis": "The cybersecurity landscape in December 2025 is marked by several critical trends. Ransomware continues to be a dominant threat, with new families like 01flip and established groups like Akira and Qilin launching extensive campaigns, impacting sectors from healthcare to pharmaceuticals. Cyble's report highlights a significant 50% surge in ransomware attacks, reaching nearly 6,000 incidents in 2025. The rapid exploitation of zero-day and critical vulnerabilities is a pressing concern, exemplified by CVE-2025-55182 (React4Shell) being actively weaponized for remote code execution, credential theft, and botnet deployment almost immediately after disclosure. Fortinet, Gladinet, and IceWarp products have also seen high-severity vulnerabilities leading to authentication bypasses and remote code execution. Supply chain attacks remain a key vector, demonstrated by the Shai-Hulud worm compromising npm packages to steal credentials, and over 10,000 Docker Hub images found leaking sensitive authentication keys. Attackers are increasingly leveraging AI and Large Language Models (LLMs), with campaigns using Google Ads and malicious ChatGPT/Grok guides to distribute infostealers, and a zero-click flaw (GeminiJack) in Google Gemini Enterprise enabling data exfiltration. Phishing remains sophisticated, with advanced kits like Spiderman bypassing MFA and targeting financial institutions. Geopolitical tensions fuel hacktivist activities, with pro-Russia groups CARR and NoName057(16) targeting critical infrastructure, while North Korea-linked APT actors employ advanced social engineering and novel C2 mechanisms (EtherRAT using Ethereum smart contracts).\n\nIn conclusion, the general state of cyber threats is characterized by increasing sophistication and speed of exploitation, a blurred line between nation-state and cybercrime activities, and a persistent focus on critical infrastructure and data-rich sectors. The confluence of unpatched vulnerabilities, human factors (phishing), and supply chain weaknesses creates a highly volatile environment where defenders must adopt multi-layered, proactive security strategies.",
+      "date": "2025-12-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Silver Fox APT",
+        "secteur": "Not specified, uses ValleyRAT",
+        "modop": "Deployment of modular backdoors (ValleyRAT), kernel-mode rootkits.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "backdoor",
+          "rootkit"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Agent Tesla",
+        "secteur": "Targets general users via pirated movie torrents.",
+        "modop": "Malvertising/phishing campaigns, PowerShell chains to install a RAT.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "rat",
+          "trojan",
+          "powershell",
+          "malvertising"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-leonardo-dicaprio-movie-torrent-agent-tesla-powershell"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "AMOS infostealer campaign operators",
+        "secteur": "macOS users, especially cryptocurrency/Web3 enthusiasts.",
+        "modop": "Abuses Google Search Ads, malicious ChatGPT/Grok guides, distributes malware to steal credentials, browser data, macOS Keychain info, crypto wallets.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "macos",
+          "phishing",
+          "cryptocurrency",
+          "llm_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-ads-for-shared-chatgpt-grok-guides-push-macos-infostealer-malware/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "DroidLock operators",
+        "secteur": "Android users.",
+        "modop": "Screen-locking ransomware, data wiping, access to text messages, call logs, contacts, audio data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "android",
+          "mobile_malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-droidlock-malware-locks-android-devices-and-demands-a-ransom/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Spiderman phishing service operators",
+        "secteur": "European financial institutions (banks, fintech), cryptocurrency holders.",
+        "modop": "Sophisticated phishing kits, pixel-perfect cloned sites, theft of credentials, OTP codes, credit card details, crypto seed phrases.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "phishing",
+          "finance",
+          "cryptocurrency",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-spiderman-phishing-service-targets-dozens-of-european-banks/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Qilin gang",
+        "secteur": "Not specified, targets global companies, including the pharmaceutical industry (Inotiv).",
+        "modop": "Ransomware, data exfiltration and leaking.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115698546520028603",
+          "https://thecyberexpress.com/cyble-global-cybersecurity-report-2025/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CL-CRI-1036 (aka 01flip ransomware operators)",
+        "secteur": "Asia-Pacific victims (Philippines, Taiwan), targeting Zimbra servers.",
+        "modop": "Multi-platform Rust ransomware, exploitation of older vulnerabilities (CVE-2019-11580), deployment of Sliver for lateral movement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "rust_malware",
+          "multi-platform",
+          "sliver_framework"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "Akira ransomware operators",
+        "secteur": "Diverse, exploits VPNs and remote access.",
+        "modop": "Ransomware, extortion (estimated $250 million), refined attack chains, derived from Conti.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "vpn_exploitation",
+          "data_extortion"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/akira-ransomware-fbi-tallies-250-million-in-payouts/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CARR (Cyber Army of Russia Reborn)",
+        "secteur": "Critical infrastructure (water, food, energy) in the US, Ukraine, NATO allies.",
+        "modop": "Pro-Russia hacktivism, DDoS attacks, website defacements, industrial control system (SCADA) intrusion, password guessing, physical damage. Supported by GRU.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "ddos",
+          "ics",
+          "scada"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Governments, financial institutions, critical infrastructure (railways, ports).",
+        "modop": "Pro-Russia hacktivism, DDoS attacks using proprietary DDoSia tool, recruitment of volunteers. State-sanctioned.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "ddos",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "North Korea-linked actors (Contagious Interview campaign, UNC5342)",
+        "secteur": "Software developers (Windows, Linux, macOS) in crypto and Web3 fields.",
+        "modop": "Social engineering (fake job offers, trojanized demo projects), CVE-2025-55182 exploitation, deployment of EtherRAT, BeaverTail, OtterCookie, InvisibleFerretRAT. Uses Ethereum smart contracts for C2.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "nation_state",
+          "apt",
+          "north_korea",
+          "social_engineering",
+          "infostealer",
+          "rat",
+          "cryptocurrency",
+          "zero_day_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185538/apt/new-etherrat-backdoor-surfaces-in-react2shell-attacks-tied-to-north-korea.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "nom": "CL-STA-1015 (IAB, suspected ties to Chinese MSS)",
+        "secteur": "Not specified, related to cloud infrastructure and software supply chain.",
+        "modop": "Initial access broker, execution of malicious shell scripts, installation of SNOWLIGHT and VShell Trojans, BPFDoor.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "initial_access_broker",
+          "china_linked",
+          "trojan",
+          "espionage"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International, Diplomacy",
+        "theme": "Russia-India-China Trilateral Cooperation",
+        "description": "Examination of emerging cooperation among Russia, India, and China, influenced by US sanctions and tariffs. The formation of a formal bloc is deemed unlikely in the short term due to diverging interests and Sino-Indian tensions, but increased cooperation is expected.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "india",
+          "china",
+          "united_states",
+          "diplomacy",
+          "trade",
+          "sanctions"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/implications-of-russia-india-china-trilateral-cooperation"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Cyberdefense, National Security",
+        "theme": "US Charges Against Pro-Russia Hacktivists",
+        "description": "A Ukrainian citizen (Victoria Dubranova) is charged in the US for aiding pro-Russia hacktivist groups (CARR, NoName057(16)) in global cyberattacks against critical infrastructure. The DOJ announced actions against these Russian state-supported groups.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hacktivism",
+          "russia",
+          "ukraine",
+          "united_states",
+          "cyberattacks",
+          "critical_infrastructure",
+          "law",
+          "justice"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges.html",
+          "https://databreaches.net/2025/12/10/justice-department-announces-actions-to-combat-two-russian-state-sponsored-hacking-groups/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Media, Conflict",
+        "theme": "Ukraine's Transparency Challenge in Information Warfare",
+        "description": "Analysis of Ukraine's use of videos and social media to counter Russian disinformation and assert its strategic position in the conflict. Online communication serves as both a transparency challenge and a tool of resistance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "conflict",
+          "disinformation",
+          "information_warfare",
+          "social_media"
+        ],
+        "sources": [
+          "https://www.iris-france.org/videos-du-front-lukraine-au-defi-de-la-transparence/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Diplomacy, Foreign Policy",
+        "theme": "US Foreign Policy and Peace Accord (DRC-Rwanda)",
+        "description": "Critique of US foreign policy under the Trump administration, specifically regarding a sponsored peace agreement between the DRC and Rwanda. The article highlights hypocrisy, economic motivations (rare minerals), and a lack of genuine commitment to the African continent.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "drc",
+          "rwanda",
+          "foreign_policy",
+          "african_conflict",
+          "natural_resources",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/une-petite-metaphore-parfaite/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Various companies",
+        "victime": "9 unnamed companies",
+        "description": "A 19-year-old hacker arrested in Spain for allegedly stealing and selling approximately 64 million personal data records (identity numbers, addresses, phone numbers, emails, IBANs) from nine companies.",
+        "tags": [
+          "violation",
+          "breach",
+          "personal_data",
+          "data_theft",
+          "hacker",
+          "spain"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/teen-who-allegedly-stole-illions-of-personal-data-records-arrested-in-spain/?pk_campaign=feed&pk_kwd=teen-who-allegedly-stole-millions-of-personal-data-records-arrested-in-spain",
+          "https://mastodon.maobui.com/@vietnamnet_bot/115698287938318303"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Healthcare (Ireland)",
+        "victime": "Health Service Executive (HSE)",
+        "description": "The HSE confirmed a second ransomware attack in February (after one in May 2021) targeting a third-party processor. No evidence of patient data theft during the second attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "ireland",
+          "third_party_vendor"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/ie-hse-confirms-second-ransomware-attack-but-no-evidence-patient-data-was-stolen/?pk_campaign=feed&pk_kwd=ie-hse-confirms-second-ransomware-attack-but-no-evidence-patient-data-was-stolen"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Healthcare (United States)",
+        "victime": "Change Healthcare (impacting numerous hospitals)",
+        "description": "Analysis of the impact of a 2024 ransomware cyberattack that exposed health information of over 190 million people, disrupting payments to hospitals and clinics.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "united_states",
+          "health_data",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/10/examining-impact-of-federal-relief-program-after-major-healthcare-cyberattack-research-brief/?pk_campaign=feed&pk_kwd=examining-impact-of-federal-relief-program-after-major-healthcare-cyberattack-research-brief"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Retail (South Korea)",
+        "victime": "Coupang",
+        "description": "Coupang's CEO resigned following a massive data breach affecting nearly 34 million people. Stolen information includes names, email addresses, phone numbers, shipping addresses, and order histories.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "south_korea",
+          "personal_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://fed.brid.gy/r/https://techcrunch.com/2025/12/10/ceo-of-south-korean-retail-giant-coupang-resigns-after-massive-data-breach/",
+          "https://mastodon.social/@joseph11lim/115697735252034859"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Pharmaceutical industry",
+        "victime": "Inotiv",
+        "description": "Inotiv disclosed a data breach following an August 2025 ransomware attack by the Qilin gang, who claimed responsibility and leaked samples of 176GB of stolen files.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "ransomware",
+          "qilin_gang",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115698546520028603"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "secteur": "Multi-sector (Global)",
+        "victime": "Over 6000 companies (global)",
+        "description": "The Cyble Global Cybersecurity Report 2025 indicates a 50% increase in ransomware attacks (5967 incidents) and 6046 data breaches, making 2025 a record year for cyber threats.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "cybersecurity",
+          "report",
+          "trends"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cyble-global-cybersecurity-report-2025/"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (RSC)",
+        "description": "Critical Deserialization of Untrusted Data vulnerability (React4Shell) allowing Remote Code Execution (RCE), file read/write, and credential theft. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "deserialization",
+          "react_server_components",
+          "zero_day",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://securityaffairs.com/185538/apt/new-etherrat-backdoor-surfaces-in-react2shell-attacks-tied-to-north-korea.html",
+          "https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-13764",
+        "cvss": 9.8,
+        "product": "WP CarDealer plugin for WordPress (versions <= 1.2.16)",
+        "description": "Unauthenticated Privilege Escalation vulnerability allowing an attacker to register with the \"administrator\" role and gain administrator access to the site.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "wordpress",
+          "unauthenticated",
+          "admin_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13764"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-14500",
+        "cvss": 9.8,
+        "product": "IceWarp 14",
+        "description": "X-File-Operation Command Injection (RCE) vulnerability allowing unauthenticated remote arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "icewarp",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1072/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": 9.1,
+        "product": "FortiOS, FortiWeb, FortiProxy, FortiSwitchManager",
+        "description": "SSO authentication bypass via improper SAML signature checks, allowing unauthenticated administrator access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "sso",
+          "saml",
+          "fortinet",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-sso-login-authentication-bypass",
+          "https://securityaffairs.com/185546/security/fortinet-fixed-two-critical-authentication-bypass-vulnerabilities.html"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": 9.1,
+        "product": "FortiOS, FortiWeb, FortiProxy, FortiSwitchManager",
+        "description": "SSO authentication bypass via improper SAML signature checks, allowing unauthenticated administrator access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "sso",
+          "saml",
+          "fortinet",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-sso-login-authentication-bypass",
+          "https://securityaffairs.com/185546/security/fortinet-fixed-two-critical-authentication-bypass-vulnerabilities.html"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-14499",
+        "cvss": 8.8,
+        "product": "IceWarp",
+        "description": "Cross-Site Scripting (XSS) vulnerability in the gmaps parameter allowing authentication bypass.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "authentication_bypass",
+          "icewarp"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1071/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-8405",
+        "cvss": 8.7,
+        "product": "GitLab CE/EE (versions 17.1 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2)",
+        "description": "Improper HTML encoding/escaping vulnerability allowing an authenticated user to perform unauthorized actions via malicious HTML injection in vulnerability code flow displays.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "html_injection",
+          "gitlab",
+          "authenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-8405"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-12716",
+        "cvss": 8.7,
+        "product": "GitLab CE/EE (versions 18.4 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2)",
+        "description": "Cross-Site Scripting (XSS) vulnerability allowing an authenticated user to perform unauthorized actions by creating wiki pages with malicious content.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "gitlab",
+          "authenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12716"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-64701",
+        "cvss": 8.5,
+        "product": "QND Premium/Advance/Standard Ver.11.0.9i and prior",
+        "description": "Privilege escalation vulnerability allowing a logged-in user to gain administrator privileges, access/alter sensitive information, and perform arbitrary actions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "qnd",
+          "windows",
+          "sensitive_data"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64701"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-67738",
+        "cvss": 8.5,
+        "product": "Webmin (squid/cachemgr.cgi, versions before 2.600)",
+        "description": "Unquoted argument vulnerability allowing arbitrary code execution if Webmin's Squid module and Cache Manager are available and an untrusted party authenticates with certain permissions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "code_execution",
+          "webmin",
+          "squid",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67738"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-67719",
+        "cvss": 8.5,
+        "product": "Ibexa User Bundle (versions 5.0.0-beta1 through 5.0.3)",
+        "description": "Missing password change validation, allowing a logged-in user to change their password without knowing the old one.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "password_change",
+          "authentication_bypass",
+          "ibexa",
+          "access_control"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67719"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "cve_id": "CVE-2025-12029",
+        "cvss": 8.0,
+        "product": "GitLab CE/EE (versions 15.11 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2)",
+        "description": "Cross-Site Scripting (XSS) vulnerability allowing an unauthenticated user to perform unauthorized actions via malicious script injection into Swagger UI.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "gitlab",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12029"
+        ],
+        "date": "2025-12-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Phishing Kit Attacks 101: Everything SOC Analysts Should Know",
+        "description": "Analysis of modern phishing kits, which are ready-made attack platforms designed to steal credentials, bypass multi-factor authentication (MFA), and hijack live sessions in seconds.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1566.003 - Phishing: Spearphishing via Service",
+          "T1539 - Steal Web Session Cookie"
+        ],
+        "analyse": "The increasing use of sophisticated phishing kits makes detection more challenging for SOC teams, heightening the risk of real-time account takeover and unauthorized access.",
+        "recommandations": "Implement advanced phishing detection solutions, enhance user awareness training, utilize robust multi-factor authentication (MFA), monitor security alerts for account takeover attempts.",
+        "tags": [
+          "phishing",
+          "phishing_kit",
+          "soc_analysis",
+          "credential_theft",
+          "mfa_bypass",
+          "session_hijacking"
+        ],
+        "sources": [
+          "/cybersecurity-blog/phishkit-attacks-101/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Fake Leonardo DiCaprio Movie Torrent Drops Agent Tesla Through Layered PowerShell Chain",
+        "description": "A malicious campaign uses a fake \"One Battle After Another\" movie torrent to distribute the Agent Tesla RAT via a complex PowerShell infection chain, aiming to gain remote access to Windows computers to steal financial and personal information.",
+        "threat_actor": "Agent Tesla",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "realtekdriverinstall[.]ps",
+            "io[.]directory",
+            "realtekupdatedriver[.]ps"
+          ],
+          "IPv6": [
+            "[:][:]C",
+            "[:][:]F",
+            "[:][:]"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1204.002 - User Execution: Malicious File",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1136.001 - Create Account: Local Account",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1090.001 - Proxy: Internal Proxy",
+          "T1573 - Encrypted Channel"
+        ],
+        "analyse": "This infection method exploits user interest in illicit entertainment content, making traditional security software harder to detect due to the complex in-memory execution chain. The impact is full access and data theft.",
+        "recommandations": "Educate users about the risks of illegal downloads, use endpoint security solutions with behavioral detection, monitor for abnormal PowerShell activity, implement protections against memory-resident malware.",
+        "tags": [
+          "malware",
+          "agent_tesla",
+          "rat",
+          "powershell",
+          "torrent_malware",
+          "social_engineering",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/fake-leonardo-dicaprio-movie-torrent-agent-tesla-powershell"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Google ads for shared ChatGPT, Grok guides push macOS infostealer malware",
+        "description": "A new campaign distributes the AMOS infostealer malware for macOS via malicious Google Search ads. These ads direct users to shared ChatGPT and Grok conversations containing malware installation instructions, aiming to steal cryptocurrency wallet data, browser data, and macOS Keychain information.",
+        "threat_actor": "AMOS infostealer campaign operators",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            ".helper"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1555.001 - Credential Access: Keychain"
+        ],
+        "analyse": "This campaign illustrates the abuse of legitimate services (Google ads, LLM platforms) for malware distribution, making detection difficult for users. macOS and cryptocurrency users are particularly targeted.",
+        "recommandations": "Verify the legitimacy of sources before downloading software, use ad blockers, be wary of sponsored search links, regularly back up data, use EDR/anti-malware solutions.",
+        "tags": [
+          "infostealer",
+          "macos",
+          "google_ads",
+          "chatgpt_abuse",
+          "grok_abuse",
+          "cryptocurrency_theft",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-ads-for-shared-chatgpt-grok-guides-push-macos-infostealer-malware/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "New DroidLock malware locks Android devices and demands a ransom",
+        "description": "A new Android malware called DroidLock has emerged, capable of locking device screens for ransom payments, erasing data, and accessing text messages, call logs, contacts, and audio data.",
+        "threat_actor": "DroidLock operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1559 - Interprocess Communication",
+          "T1486 - Data Encrypted for Impact",
+          "T1565 - Data Manipulation",
+          "T1123 - Audio Capture"
+        ],
+        "analyse": "This mobile ransomware poses a direct threat to the privacy and data integrity of Android users, with significant extortion potential.",
+        "recommandations": "Install applications only from reliable sources, keep the operating system and applications updated, use a mobile security solution, regularly back up device data.",
+        "tags": [
+          "malware",
+          "android",
+          "ransomware",
+          "mobile_security",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-droidlock-malware-locks-android-devices-and-demands-a-ransom/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "New Spiderman phishing service targets dozens of European banks",
+        "description": "A new phishing kit named Spiderman is being used to target customers of dozens of European banks and cryptocurrency holders, creating pixel-perfect cloned sites impersonating brands and organizations. The modular kit can intercept OTP codes and steal credit card information.",
+        "threat_actor": "Spiderman phishing service operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1539 - Steal Web Session Cookie",
+          "T1003.001 - OS Credential Dumping: LSASS Memory"
+        ],
+        "analyse": "The sophistication of this phishing kit, with its ability to create \"pixel-perfect\" clones and adapt to new e-banking flows, poses a major challenge for the security of financial institutions and customer data protection in Europe.",
+        "recommandations": "Always verify the official domain before entering credentials, be wary of \"browser-in-the-browser\" windows, strengthen multi-factor authentication, use web security gateways and anti-phishing filters.",
+        "tags": [
+          "phishing",
+          "banking",
+          "cryptocurrency",
+          "europe",
+          "credential_theft",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-spiderman-phishing-service-targets-dozens-of-european-banks/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Over 10,000 Docker Hub images found leaking credentials, auth keys",
+        "description": "Over 10,000 Docker Hub container images were found to be leaking sensitive data, including live credentials to production systems, CI/CD databases, and LLM model keys.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "tee[.]fail"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552.001 - Unsecured Credentials: Configuration Files",
+          "T1589.001 - Gather Victim Identity Information: Credentials"
+        ],
+        "analyse": "This massive leak of secrets in Docker images exposes companies to significant risks of compromise of production systems and development environments, highlighting a widespread problem of secret management in CI/CD pipelines and DevOps practices.",
+        "recommandations": "Implement container image scanners to detect exposed secrets, use dedicated secret management tools, apply the principle of least privilege, educate developers on container security best practices.",
+        "tags": [
+          "docker",
+          "container_security",
+          "credential_leak",
+          "devops",
+          "cloud_security",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-docker-hub-images-found-leaking-credentials-auth-keys/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Cracking ValleyRAT: From Builder Secrets to Kernel Rootkits",
+        "description": "In-depth analysis of the modular ValleyRAT backdoor (also known as Winos or Winos4.0), often associated with Chinese actors like Silver Fox APT. The study reveals its plugin system, builder, and a kernel-mode rootkit that remains functional even on updated Windows 11 systems.",
+        "threat_actor": "Silver Fox APT (and other Chinese actors)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1573 - Encrypted Channel",
+          "T1059 - Command and Scripting Interpreter",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1546.003 - Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1548.002 - Bypass User Account Control: Bypass UAC",
+          "T1564.001 - Hide Artifacts: Hidden Files and Directories",
+          "T1574 - Hijack Execution Flow",
+          "T1014 - Kernel Modules and Extensions"
+        ],
+        "analyse": "ValleyRAT is a sophisticated tool widely adopted by threat actors. The public availability of its builder and parts of its source code suggests increased proliferation, making attribution more complex. The kernel-mode rootkit represents a persistent and difficult-to-detect threat.",
+        "recommandations": "Implement EDR/XDR solutions with advanced behavioral detection, monitor kernel-mode driver activity, apply Windows security updates, use vulnerable driver blocklists, strengthen access controls and network segmentation.",
+        "tags": [
+          "malware_analysis",
+          "backdoor",
+          "valleyrat",
+          "rootkit",
+          "kernel_mode",
+          "apt",
+          "chinese_threat_actors",
+          "windows_security"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/cracking-valleyRAT-from-builder-secrets-to-kernel-rootkits/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "NANOREMOTE, cousin of FINALDRAFT",
+        "description": "An analysis of the newly discovered NANOREMOTE backdoor, which shares characteristics with the FINALDRAFT implant and utilizes the Google Drive API for data exfiltration and payload deployment. It includes a task management system and loads PE files into memory for stealthy command execution.",
+        "threat_actor": "Non specified (likely the same operators as FINALDRAFT)",
+        "indicator_of_compromise": {
+          "YARA_RULE": [
+            "rule Windows_Trojan_NanoRemote_7974c813 {...}",
+            "rule Windows_Trojan_WMLoader_d2c7b963 {...}"
+          ],
+          "IPv4": [
+            "192[.]168[.]1[.]1"
+          ],
+          "FILE_HASH_SHA256": [
+            "999648bd814ea5b1e97918366c6bd0f82b88f5675da1d4133257b9e6f4121475",
+            "b26927ca4342a19e9314cf05ee9d9a4bddf7b848def2db941dd281d692eaa73c",
+            "57e0e560801687a8691c704f79da0c1dbdd0f7d5cc671a6ce07ec0040205d728",
+            "35593a51ecc14e68181b2de8f82dde8c18f27f16fcebedbbdac78371ff4f8d41",
+            "fff31726d253458f2c29233d37ee4caf43c5252f58df76c0dced71c4014d6902"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1059 - Command and Scripting Interpreter",
+          "T1105 - Ingress Tool Transfer",
+          "T1560 - Archive Collected Data",
+          "T1027 - Obfuscated Files or Information",
+          "T1573 - Encrypted Channel",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "The use of legitimate cloud services (Google Drive) for C2 and exfiltration makes network detection difficult. The ability to load PEs into memory without using the standard Windows loader allows evasion of traditional defenses, indicating tactical sophistication.",
+        "recommandations": "Implement deep monitoring of encrypted network traffic, deploy EDR/XDR solutions to detect in-memory code execution and abnormal activity, strengthen monitoring of interactions with legitimate cloud service APIs, implement YARA rules.",
+        "tags": [
+          "malware_analysis",
+          "backdoor",
+          "nanoremote",
+          "finaldraft",
+          "google_drive_abuse",
+          "data_exfiltration",
+          "in_memory_execution"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/nanoremote"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "Bun and done: The second coming of the Shai-Hulud worm",
+        "description": "The \"Sha1-Hulud: The Second Coming\" campaign compromised hundreds of npm packages to steal credentials (cloud access keys, GitHub/npm tokens) using Bun, a JavaScript runtime. Stolen secrets are exfiltrated to public GitHub repositories, with a destructive component targeting home directories.",
+        "threat_actor": "Shai-Hulud worm operators",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "setup_bun.js",
+            "bun_environment.js"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1555.001 - Credential Access: Keychain",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1560 - Archive Collected Data"
+        ],
+        "analyse": "This attack highlights the vulnerability of the software supply chain (npm packages) and the persistence of credential exposure in public repositories. The potential impact is identity compromise and intrusions into cloud and SaaS systems.",
+        "recommandations": "Pin npm package versions to known good versions, reset compromised credentials, reimage affected systems, apply npm security best practices (2FA, local npm proxy, \"cooldown check\"), monitor for data exfiltration to GitHub.",
+        "tags": [
+          "supply_chain_attack",
+          "npm",
+          "credential_theft",
+          "cloud_security",
+          "github",
+          "data_exfiltration",
+          "worm"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/shai-hulud-worm/"
+        ],
+        "date": "2025-12-11"
+      },
+      {
+        "title": "01flip: Multi-Platform Ransomware Written in Rust",
+        "description": "A new multi-platform ransomware family named 01flip, written in Rust, has been observed targeting victims in the Asia-Pacific region. Attackers exploit older vulnerabilities (e.g., CVE-2019-11580 in Zimbra) for initial access, then deploy Sliver for lateral movement and the ransomware on both Windows and Linux machines.",
+        "threat_actor": "CL-CRI-1036 (aka 01flip ransomware operators)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "proton[.]me"
+          ],
+          "CVE": [
+            "CVE-2019-11580"
+          ],
+          "IPv4": [
+            "127[.]0[.]0[.]7"
+          ],
+          "FILE_HASH_SHA256": [
+            "e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957",
+            "6aad1c36ab9c7c44350ebe3a17178b4fd93c2aa296e2af212ab28d711c0889a3",
+            "ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+          ],
+          "EMAIL": [
+            "01Flip@proton[.]me"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078 - Valid Accounts",
+          "T1569.002 - System Services: Service Execution",
+          "T1486 - Data Encrypted for Impact",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1573 - Encrypted Channel",
+          "T1560 - Archive Collected Data"
+        ],
+        "analyse": "Ransomware development in modern languages like Rust poses new challenges for reverse engineering and detection. The exploitation of known but unpatched vulnerabilities highlights the importance of patch management. The multi-platform nature of 01flip expands the attack surface.",
+        "recommandations": "Promptly apply security patches, especially for public vulnerabilities, use EDR/XDR solutions capable of analyzing Rust binaries and detecting lateral movements (Sliver), segment networks, implement regular and isolated backups.",
+        "tags": [
+          "ransomware",
+          "multi_platform",
+          "rust_malware",
+          "zimbra",
+          "sliver_framework",
+          "vulnerability_exploitation",
+          "data_leak"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/"
+        ],
+        "date": "2025-12-11"
+      }
+    ]
+  }
+}
