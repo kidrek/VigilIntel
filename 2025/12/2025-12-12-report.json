@@ -1,0 +1,2837 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille révèle une intensification des cyberattaques sophistiquées, touchant des infrastructures critiques et des entités gouvernementales, avec une recrudescence des campagnes d'espionnage et de la cybercriminalité financière. L'exploitation active de vulnérabilités zero-day, notamment dans des composants d'application web et des systèmes de gestion de code (React Server Components, Gogs, Gladinet CentreStack), ainsi que des plateformes largement utilisées (Windows, Google Chrome, plugins WordPress), demeure une menace majeure, souvent facilitée par la désérialisation de données non fiables, l'exécution de code à distance (RCE) et les failles d'élévation de privilèges. La supply chain logicielle est également une cible privilégiée, comme en témoignent les extensions VSCode malveillantes et les failles dans les mécanismes de mise à jour (Notepad++).\n\nL'émergence de l'IA est doublement notable : d'un côté, elle est proposée comme solution pour la détection des menaces (AI Sigma Rules) ; de l'autre, elle introduit de nouvelles surfaces d'attaque, avec des techniques d'injection de prompt indirectes (GeminiJack) et des risques liés à l'intégration de l'IA dans les navigateurs (Brave). Les acteurs malveillants continuent d'abuser de services légitimes et de plateformes cloud (Google Drive API, Discord, GitHub) pour leurs communications C2 et l'exfiltration de données, rendant la détection plus complexe.\n\nSur le plan géopolitique, l'actualité met en lumière des tensions persistantes, des opérations d'influence (groupes hacktivistes pro-russes), et des campagnes d'espionnage soutenues par des États (Ashen Lepus). Les discussions autour de l'autonomie stratégique européenne, le réarmement et la \"guerre hybride\" soulignent la complexité de l'environnement de la menace. Des violations de données significatives ont impacté divers secteurs, des gestionnaires de mots de passe (LastPass) aux services gouvernementaux locaux, souvent dues à des manquements aux mesures de sécurité de base ou à des erreurs de configuration.\n\nEn conclusion, l'état général des menaces est caractérisé par une sophistication croissante des attaques, une exploitation rapide des vulnérabilités critiques, et l'adaptation constante des TTPs des attaquants, y compris l'utilisation de nouvelles technologies comme l'IA. La nécessité d'une vigilance accrue, d'une posture de sécurité proactive et d'une meilleure gestion des vulnérabilités est plus que jamais critique pour la résilience cyber.",
+      "date": "2025-12-12"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Ashen Lepus (aka WIRTE)",
+        "secteur": "Entités diplomatiques et gouvernementales du Moyen-Orient",
+        "modop": "Campagnes d'espionnage avec la suite de malwares AshTag, utilisation de leur loader personnalisé, mise à jour de l'architecture C2 pour échapper à l'analyse et se fondre dans le trafic légitime, exfiltration de données via des services cloud (Google Drive API), ciblage de documents diplomatiques spécifiques. Utilisation de la technique DLL side-loading et de l'outil Rclone pour l'exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "espionnage",
+          "Middle_East",
+          "malware",
+          "AshTag",
+          "DLL_side_loading",
+          "C2",
+          "Rclone",
+          "APT"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "CL-CRI-1036 (alias 01flip)",
+        "secteur": "Infrastructures critiques de la région Asie-Pacifique (Philippines, Taïwan)",
+        "modop": "Attaques de ransomware avec le malware 01flip écrit en Rust (multi-plateformes Windows et Linux), exploitation manuelle de vulnérabilités plus anciennes (ex: CVE-2019-11580) pour un accès initial, déploiement du framework C2 open-source Sliver pour maintenir l'accès et le mouvement latéral.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "critical_infrastructure",
+          "APAC",
+          "Rust",
+          "Sliver_C2",
+          "exploitation",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://securityonline.info/new-01flip-ransomware-hits-apac-critical-infra-cross-platform-rust-weapon-uses-sliver-c2/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "Cyber Army of Russia Reborn (CARR) / Z-Pentest",
+        "secteur": "Infrastructures critiques (eau, nourriture, agriculture, énergie) aux États-Unis, Ukraine, alliés de l'OTAN",
+        "modop": "Attaques DDoS, défigurations de sites web, piratage de systèmes de contrôle industriel (ICS) et SCADA via des scans et des attaques par force brute (devinettes de mots de passe), exploitation de connexions VNC mal sécurisées. Lien avec le GRU russe et financement par ce dernier pour des services DDoS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_Russia",
+          "DDoS",
+          "critical_infrastructure",
+          "ICS",
+          "SCADA",
+          "VNC_exploitation",
+          "GRU"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Infrastructures critiques mondiales",
+        "modop": "Attaques DDoS et exploitation de connexions VNC mal sécurisées pour accéder à des dispositifs OT dans des infrastructures critiques, provoquant des impacts variés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_Russia",
+          "DDoS",
+          "critical_infrastructure",
+          "OT_exploitation",
+          "VNC_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "Palestine Action",
+        "secteur": "Contracteurs de défense, armées, entreprises de services financiers (assurances, banques), logistique, expédition, entités gouvernementales et publiques",
+        "modop": "Action directe militante, vandalisme (peinture rouge, instruments contondants), obstruction physique (chaînes humaines, objets), sabotage d'actifs à l'intérieur des installations. Utilisation de guides d'instruction pour les DVE (Domestic Violent Extremists). Stratégie à double voie après désignation comme organisation terroriste au Royaume-Uni: incitation à des opérations à l'étranger tout en évitant les actions majeures au RU.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "DVE",
+          "hacktivism",
+          "physical_threat",
+          "vandalism",
+          "sabotage",
+          "pro_Palestine",
+          "defence_contractors",
+          "financial_services"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/palestine-action-operations-and-global-network"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Défense, Europe, Otan",
+        "theme": "Coopération en matière d'armement et autonomie stratégique",
+        "description": "L'Espagne perçoit la coopération en matière d'armement au sein de l'UE comme un moyen de renforcer l'autonomie stratégique européenne, la compétitivité industrielle et l'interopérabilité. Malgré de bonnes performances en recherche (European Defence Fund), la traduction en grands programmes d'acquisition conjoints reste difficile en raison de la coordination industrielle fragmentée, d'une capacité de gestion limitée et de divergences réglementaires. Madrid cherche une coopération pragmatique mais ambitieuse, axée sur les capacités, le cycle de vie, la durabilité financière, avec des retours industriels équitables et un alignement entre les priorités de l'UE et de l'OTAN.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "OTAN",
+          "Espagne",
+          "coopération_armement",
+          "autonomie_stratégique",
+          "industrie_défense"
+        ],
+        "sources": [
+          "https://www.iris-france.org/which-type-of-armament-cooperation-do-we-want-need-the-case-of-spain/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Gouvernement, Défense, OTAN, Union Européenne",
+        "theme": "Stratégie américaine et impact sur l'OTAN/UE",
+        "description": "L'analyse de la pensée trumpienne sur l'OTAN et l'UE révèle une stratégie américaine visant à 'européaniser l'OTAN' tout en affaiblissant l'Union européenne. Cette approche encourage les Européens à renforcer leurs capacités de défense au sein de l'Alliance (sous supervision américaine) tout en dissuadant une intégration politique plus poussée via l'UE, en particulier dans le secteur de la défense. L'objectif serait de maintenir la dépendance européenne vis-à-vis des systèmes militaires américains.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "USA",
+          "OTAN",
+          "Union_Européenne",
+          "stratégie_défense",
+          "politique_étrangère",
+          "Trump"
+        ],
+        "sources": [
+          "https://www.iris-france.org/anatomie-de-la-pensee-trumpienne-sur-lotan-et-sur-lue/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Gouvernement, Défense, OTAN, Supply Chain",
+        "theme": "Scandale de corruption et chaînes d'approvisionnement militaires",
+        "description": "Elbit Systems, un contractant de défense israélien, a été discrètement suspendu par l'agence d'approvisionnement de l'OTAN (NSPA) en juillet, suite à des soupçons de fraude, de corruption et de manipulation de contrats stratégiques. Un consultant italien est sous mandat d'arrêt. Quinze programmes majeurs ont été gelés, impactant des livraisons de drones et munitions. Cette affaire ébranle la crédibilité de la NSPA, la confiance entre alliés, les politiques d'autonomie stratégique européenne et la sécurité des chaînes d'approvisionnement militaires, notamment dans un contexte de réarmement accéléré.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "OTAN",
+          "corruption",
+          "Elbit_Systems",
+          "défense",
+          "supply_chain",
+          "sécurité_nationale"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/elbit-systems-au-coeur-dun-scandale-de-corruption/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Gouvernement, Défense, Infrastructures Critiques, Royaume-Uni, Europe",
+        "theme": "Menaces hybrides et zone grise",
+        "description": "Le Royaume-Uni et l'Europe font face à une érosion de leur résilience via une campagne de sabotage, d'ingérence maligne et de provocation, souvent attribuée à la Russie et menée par procuration. Cette activité de 'zone grise' comprend des cyberattaques, des campagnes de désinformation et des provocations militaires, visant à saper les gouvernements et à sonder les faiblesses. La communauté du renseignement du Royaume-Uni doit s'adapter en investissant dans de nouvelles méthodes d'analyse pour tracer les réseaux d'influence opaques et comprendre l'interaction des pressions économiques, sociétales et technologiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "UK",
+          "Russie",
+          "menace_hybride",
+          "zone_grise",
+          "sabotage",
+          "cyberattaque",
+          "désinformation",
+          "renseignement",
+          "sécurité_nationale"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/maintaining-uks-intelligence-edge-grey-zone"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Gouvernement, Administration Publique, Allemagne",
+        "theme": "Souveraineté numérique et migration Open-Source",
+        "description": "L'État de Schleswig-Holstein en Allemagne progresse dans sa migration des produits Microsoft Office vers des solutions Open Source (Open-Xchange, Thunderbird). 80% des postes de travail ont été convertis, entraînant des économies financières et un gain en souveraineté numérique. Cette initiative s'inscrit dans une tendance européenne plus large vers des stratégies informatiques souveraines, avec de nombreuses administrations privilégiant les solutions Open Source dans leurs politiques d'approvisionnement.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Allemagne",
+          "Schleswig_Holstein",
+          "souveraineté_numérique",
+          "Open_Source",
+          "migration_IT",
+          "administration_publique"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2025/12/positive-stimmung-bei-der-open-source-migration-in-schleswig-holstein/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Gouvernement, Défense, Europe",
+        "theme": "Évolution des conflictualités et réarmement",
+        "description": "Le retour de la guerre en Europe et l'intensification des 'guerres' immatérielles (informationnelles, cognitives) conduisent à une nouvelle 'course aux armements' qualitative et quantitative. L'article analyse l'évolution des moyens et du langage de la guerre, la dégradation du système sécuritaire et la nécessité pour l'Europe de se préparer militairement et capacituellement face à des conflictualités de plus en plus complexes et entremêlées.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "guerre",
+          "réarmement",
+          "conflictualités",
+          "menace_hybride",
+          "sécurité_nationale"
+        ],
+        "sources": [
+          "https://www.iris-france.org/armements-et-arsenalisations-moyens-et-mots-de-la-guerre/"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gouvernement local",
+        "victime": "Village de Golf Manor (Ohio, USA)",
+        "description": "La municipalité de Golf Manor (Ohio) a été victime d'une cyberattaque par ransomware qui a chiffré et rendu inaccessibles ses systèmes informatiques. Les attaquants ont exigé une rançon, menaçant de publier des données volées en cas de non-paiement. Le conseil municipal a approuvé le paiement d'une rançon de 2 000 $ pour restaurer l'accès aux systèmes.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement_local",
+          "ransomware",
+          "extorsion_données",
+          "paiement_rançon"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/11/village-of-golf-manor-considering-paying-ransom-amid-cyberattack/?pk_campaign=feed&pk_kwd=village-of-golf-manor-considering-paying-ransom-amid-cyberattack"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Commerce de détail (duty-free), Aéroports",
+        "victime": "Dubai Duty Free (via son fournisseur IT touchworldtechnology)",
+        "description": "Un répertoire ouvert contenant 90 Go d'informations a été exposé, probablement en raison d'une erreur ou d'une mauvaise configuration chez un fournisseur de services informatiques de Dubai Duty Free. Les données exposées incluaient des passeports, des cartes d'identité, la configuration complète de bases de données MySQL (avec nom d'utilisateur et mot de passe), ainsi que les clés d'accès et secrètes d'un bucket DigitalOcean Spaces. L'exposition a duré plusieurs mois avant d'être découverte en septembre et corrigée le 13 septembre après notification.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_détail",
+          "aéroports",
+          "Dubaï",
+          "UAE",
+          "exposition_données",
+          "données_personnelles",
+          "informations_sensibles",
+          "misconfiguration",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115704256898733951"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Logiciel de gestion de mots de passe",
+        "victime": "LastPass",
+        "description": "Le Royaume-Uni a infligé une amende de 1,2 million de livres sterling à LastPass suite à une violation de données en 2022 ayant touché 1,6 million d'utilisateurs britanniques. L'attaque a permis de dérober des informations personnelles et des coffres-forts de mots de passe chiffrés. La faille est due à l'exploitation d'une vulnérabilité connue dans une application tierce installée sur un appareil personnel d'un employé senior, combinée à la réutilisation d'un mot de passe maître, menant au vol de clés d'accès AWS et de clés de déchiffrement.",
+        "tags": [
+          "violation",
+          "breach",
+          "LastPass",
+          "gestionnaire_mots_de_passe",
+          "données_personnelles",
+          "accès_non_autorisé",
+          "faute_employé",
+          "vulnérabilité_tierce",
+          "UK"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/uk-fines-lastpass-over-2022-data-breach-impacting-16-million-users/",
+          "https://mastodon.social/@nerowild/115703060571531412"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Animalerie, Services vétérinaires",
+        "victime": "Petco (via Vetco)",
+        "description": "Petco a fermé le site web Vetco après l'exposition d'informations personnelles de clients. Les détails exacts des données exposées et la nature de la faille ne sont pas spécifiés au-delà de l'exposition de données personnelles.",
+        "tags": [
+          "violation",
+          "breach",
+          "Petco",
+          "Vetco",
+          "données_personnelles",
+          "exposition_données",
+          "vie_privée"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115703650772084695",
+          "https://techcrunch.com/2025/12/10/petco-takes-down-vetco-website-after-exposing-customers-personal-information/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Immobilier",
+        "victime": "Better Homes (UAE)",
+        "description": "Une violation de données à haute confiance a ciblé Better Homes, une entreprise opérant dans le secteur de l'immobilier aux Émirats Arabes Unis. Les détails spécifiques sur la nature et l'étendue de la fuite d'informations ne sont pas divulgués.",
+        "tags": [
+          "violation",
+          "breach",
+          "immobilier",
+          "UAE",
+          "exposition_données"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115703417088619525"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-10451",
+        "cvss": 8.2,
+        "product": "H19Int15CallbackSmm",
+        "description": "Vulnérabilité de corruption de mémoire SMM, pouvant entraîner une exécution de code arbitraire en SMM (System Management Mode) et potentiellement une corruption de la mémoire SMRAM due à un tampon de sortie non contrôlé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SMM",
+          "memory_corruption",
+          "arbitrary_code_execution",
+          "firmware",
+          "UEFI"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10451"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12824",
+        "cvss": 8.8,
+        "product": "WordPress Player Leaderboard plugin <= 1.0.2",
+        "description": "Vulnérabilité d'inclusion de fichier local (LFI) via le shortcode 'player_leaderboard' en raison d'une valeur fournie par l'utilisateur non désinfectée dans l'attribut 'mode'. Permet aux attaquants authentifiés (niveau Contributeur+) d'inclure et d'exécuter des fichiers PHP arbitraires sur le serveur, pouvant mener à une exécution de code à distance (RCE) complète si combiné à des capacités d'upload de fichiers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "LFI",
+          "RCE_potential",
+          "authenticated_attack",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12824"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12963",
+        "cvss": 9.8,
+        "product": "WordPress LazyTasks – Project & Task Management plugin <= 1.2.29",
+        "description": "Vulnérabilité d'élévation de privilèges via une prise de contrôle de compte non authentifiée. Le plugin ne valide pas correctement l'identité de l'utilisateur via le point de terminaison REST API 'wp-json/lazytasks/api/v1/user/role/edit/', permettant aux attaquants non authentifiés de modifier les adresses e-mail d'utilisateurs arbitraires (y compris les administrateurs) pour réinitialiser les mots de passe et accéder aux comptes. Peut également être utilisé pour attribuer des rôles supplémentaires dans le plugin.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "privilege_escalation",
+          "account_takeover",
+          "unauthenticated",
+          "API_endpoint",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12963"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12968",
+        "cvss": 8.8,
+        "product": "WordPress Infility Global plugin <= 2.14.23",
+        "description": "Vulnérabilité de téléchargement de fichiers arbitraires due à l'absence de validation du type de fichier et de vérification des capacités. La fonction 'upload_file' valide uniquement le type MIME, facilement falsifiable, et la fonction 'import_data' manque de vérifications des capacités. Permet aux attaquants authentifiés (niveau Abonné+) de télécharger des fichiers arbitraires sur le serveur, rendant possible l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "arbitrary_file_upload",
+          "RCE_potential",
+          "authenticated_attack",
+          "file_type_validation_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12968"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-13334",
+        "cvss": 8.1,
+        "product": "WordPress Blaze Demo Importer plugin <= 1.0.13",
+        "description": "Vulnérabilité de réinitialisation de base de données et de suppression de fichiers non autorisées. La fonction 'blaze_demo_importer_install_demo' manque d'une vérification de capacité, permettant aux attaquants authentifiés (niveau Abonné+) de réinitialiser la base de données, de supprimer des widgets de barre latérale, des modifications de thème et le contenu du dossier d'uploads.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "authorization_bypass",
+          "data_deletion",
+          "database_reset",
+          "authenticated_attack"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13334"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14044",
+        "cvss": 8.1,
+        "product": "WordPress Visitor Logic Lite plugin <= 1.0.3",
+        "description": "Vulnérabilité d'injection d'objets PHP via la désérialisation d'entrée non fiable du cookie 'lpblocks'. La fonction 'lp_track()' passe directement des données de cookie non désinfectées à la fonction 'unserialize()'. Permet aux attaquants non authentifiés d'injecter un objet PHP, pouvant potentiellement mener à la suppression de fichiers arbitraires, la récupération de données sensibles ou l'exécution de code si une chaîne POP est présente via un autre plugin/thème.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "PHP_object_injection",
+          "deserialization",
+          "unauthenticated",
+          "code_execution_potential",
+          "data_exfiltration_potential"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14044"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14344",
+        "cvss": 9.8,
+        "product": "WordPress Multi Uploader for Gravity Forms plugin <= 1.1.7",
+        "description": "Vulnérabilité de suppression de fichier arbitraire due à une validation insuffisante du chemin de fichier dans la fonction 'plupload_ajax_delete_file'. Permet aux attaquants non authentifiés de supprimer des fichiers arbitraires sur le serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "arbitrary_file_deletion",
+          "unauthenticated",
+          "path_validation_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14344"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14401",
+        "cvss": 7.8,
+        "product": "PDFsam Enhanced",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via une lecture hors limites (Out-Of-Bounds Read) dans la gestion des objets App. Due à un manque de validation des données fournies par l'utilisateur, ce qui peut entraîner une lecture au-delà de la fin d'un tampon alloué. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "out_of_bounds_read",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1089/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14402",
+        "cvss": 7.0,
+        "product": "PDFsam Enhanced",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un avertissement d'interface utilisateur insuffisant lors du traitement de fichiers DOC. Permet l'exécution de scripts dangereux sans avertissement utilisateur. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "DOC_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1090/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14403",
+        "cvss": 7.8,
+        "product": "PDFsam Enhanced",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un avertissement d'interface utilisateur insuffisant lors de l'action de lancement (Launch). Permet l'exécution de scripts dangereux sans avertissement utilisateur. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "launch_action",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1091/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14404",
+        "cvss": 7.0,
+        "product": "PDFsam Enhanced",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un avertissement d'interface utilisateur insuffisant lors du traitement de fichiers XLS. Permet l'exécution de scripts dangereux sans avertissement utilisateur. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "XLS_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1092/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14414",
+        "cvss": 7.8,
+        "product": "Soda PDF Desktop",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un avertissement d'interface utilisateur insuffisant lors du traitement de fichiers Word. Permet l'exécution de scripts dangereux sans avertissement utilisateur. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Soda_PDF_Desktop",
+          "RCE",
+          "UI_warning_bypass",
+          "Word_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1087/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14415",
+        "cvss": 7.0,
+        "product": "Soda PDF Desktop",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via un avertissement d'interface utilisateur insuffisant lors de l'action de lancement (Launch). Permet l'exécution de scripts dangereux sans avertissement utilisateur. Nécessite une interaction utilisateur (visite de page/ouverture de fichier malveillant).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Soda_PDF_Desktop",
+          "RCE",
+          "UI_warning_bypass",
+          "launch_action",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1088/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (RSC)",
+        "description": "Vulnérabilité critique de désérialisation de données non fiables (CWE-502), connue sous le nom de React2Shell. Permet à un attaquant non authentifié d'exécuter des commandes arbitraires, de lire et d'écrire des fichiers avec les privilèges du processus serveur. Facile à exploiter et sous exploitation active.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React",
+          "React_Server_Components",
+          "RCE",
+          "deserialization",
+          "active_exploitation",
+          "zero_day",
+          "web_application"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://research.hisolutions.com/2025/12/weitere-news-im-dezember/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-58360",
+        "cvss": null,
+        "product": "OSGeo GeoServer",
+        "description": "Vulnérabilité d'entité externe XML (XXE) dans l'opération GetMap du service Web Map Service (WMS). Permet à un attaquant non authentifié de soumettre une requête WMS malveillante pour déréférencer des fichiers locaux ou des ressources distantes, conduisant à la divulgation de fichiers, à la falsification de requêtes côté serveur (SSRF) et potentiellement à des conditions de déni de service. Ajoutée au catalogue CISA KEV, confirmant l'exploitation active.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GeoServer",
+          "XXE",
+          "WMS",
+          "unauthenticated",
+          "data_exfiltration",
+          "SSRF",
+          "DoS_potential",
+          "CISA_KEV",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2025/12/12/geoserver-cve-2025-58360-added-to-cisa-kev/",
+          "https://securityonline.info/cisa-kev-alert-geoserver-xxe-flaw-under-active-attack-risks-data-theft-internal-network-scanning/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-62221",
+        "cvss": 7.8,
+        "product": "Windows Cloud Files Mini Filter Driver",
+        "description": "Vulnérabilité d'élévation de privilèges (EoP) de type use-after-free, activement exploitée. Permet à un attaquant local authentifié d'escalader ses privilèges vers SYSTEM et d'obtenir un contrôle total sur les systèmes Windows affectés sans interaction utilisateur. Impacterait les systèmes même sans OneDrive, Google Drive ou iCloud installés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Windows",
+          "EoP",
+          "use_after_free",
+          "active_exploitation",
+          "zero_day",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-62221-and-cve-2025-54100-vulnerabilities/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-54100",
+        "cvss": 7.8,
+        "product": "Windows PowerShell",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) qui permet à des attaquants non authentifiés d'exécuter du code arbitraire si un utilisateur exécute une commande PowerShell artisanale (par exemple via Invoke-WebRequest). Nécessite une interaction utilisateur, rendant l'ingénierie sociale la voie d'attaque la plus probable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Windows",
+          "PowerShell",
+          "RCE",
+          "user_interaction",
+          "social_engineering",
+          "code_execution"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-62221-and-cve-2025-54100-vulnerabilities/"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI Sigma Rules: Scale Threat Detection, Drive Down MTTR",
+        "description": "L'article présente les 'AI Sigma Rules' d'ANY.RUN, une nouvelle fonctionnalité de leur Sandbox Interactive conçue pour améliorer la détection des menaces et réduire le temps moyen de résolution (MTTR). Cette solution vise à aider les équipes SOC à mieux identifier les menaces réelles parmi des milliers d'alertes quotidiennes, en minimisant les faux positifs et en accélérant les enquêtes sur les activités malveillantes. Elle permet une mise à l'échelle de la détection et une investigation plus efficace en se concentrant sur les signaux à haute valeur.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'impact est positif sur le secteur de la cybersécurité et les équipes SOC. La fonctionnalité vise à optimiser les opérations de détection et de réponse en réduisant la charge de travail des analystes et en améliorant la précision de l'identification des menaces. Potentiel stratégique pour les entreprises cherchant à améliorer leur résilience cyber et à exploiter l'IA pour l'automatisation de la sécurité.",
+        "recommandations": [
+          "Évaluer et intégrer les technologies de détection basées sur l'IA pour améliorer l'efficacité des équipes SOC.",
+          "Utiliser des sandboxes interactives avec des capacités d'analyse avancées pour une investigation rapide des alertes.",
+          "Mettre en place des règles de détection (comme les Sigma Rules) adaptées aux menaces émergentes pour réduire les faux positifs et les temps de réponse."
+        ],
+        "tags": [
+          "AI",
+          "threat_detection",
+          "SOC",
+          "MTTR",
+          "cybersecurity",
+          "security_automation",
+          "interactive_sandbox"
+        ],
+        "sources": [
+          "/cybersecurity-blog/ai-sigma-rules/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Active exploitation of Gladinet CentreStack and Triofox vulnerability",
+        "description": "Des attaquants exploitent activement une nouvelle vulnérabilité non documentée dans l'implémentation cryptographique des produits Gladinet CentreStack et Triofox, qui fournissent un accès et un partage de fichiers sécurisés à distance. Cette faille, combinée à des vulnérabilités plus anciennes comme CVE-2025-11371 (accès non authentifié à des fichiers sensibles) et CVE-2025-30406 (inclusion de fichier local), permet aux attaquants de forger des tickets d'accès et d'atteindre l'exécution de code à distance (RCE). Le problème réside dans des clés AES et des vecteurs d'initialisation (IV) codés en dur, facilement récupérables, permettant de déchiffrer des tickets d'accès ou d'en créer de nouveaux pour usurper l'identité des utilisateurs. Au moins neuf organisations ont été ciblées.",
+        "threat_actor": "Non spécifié, mais groupes d'attaquants exploitant activement.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078 - Valid Accounts",
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter (PowerShell for RCE)",
+          "T1021.001 - Remote Services: Remote Desktop Protocol",
+          "T1003.003 - OS Credential Dumping: LSASS Memory",
+          "T1552.001 - Unsecured Credentials: Credential in Files"
+        ],
+        "analyse": "Impact sérieux sur les entreprises et les MSP utilisant Gladinet CentreStack et Triofox pour le partage de fichiers. La combinaison de vulnérabilités permet une compromission complète du serveur, menaçant la confidentialité des données et l'intégrité des systèmes. Le potentiel géographique est global, ciblant des organisations ayant exposé ces services sur Internet.",
+        "recommandations": [
+          "Mettre à jour Gladinet CentreStack et Triofox vers la version 16.12.10420.56791 ou supérieure sans délai.",
+          "Restreindre l'exposition externe des serveurs CentreStack et Triofox.",
+          "Mettre en œuvre la segmentation réseau pour isoler ces systèmes.",
+          "Surveiller les journaux pour l'exécution anormale de PowerShell à partir des processus IIS et la chaîne 'vghpI7EToZUDIZDdprSubL3mTZ2'.",
+          "Inspecter les fichiers de configuration pour s'assurer que les clés cryptographiques ne sont pas codées en dur ou facilement accessibles."
+        ],
+        "tags": [
+          "Gladinet",
+          "CentreStack",
+          "Triofox",
+          "cryptographic_flaw",
+          "RCE",
+          "active_exploitation",
+          "hardcoded_keys",
+          "CVE-2025-11371",
+          "CVE-2025-30406",
+          "unauthenticated_access",
+          "supply_chain",
+          "T1078",
+          "T1190"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-gladinet-centrestack-triofox-vulnerability",
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-gladinet-centrestack-cryptographic-flaw-in-rce-attacks/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Critical Gogs zero-day under attack, 700 servers hacked",
+        "description": "Des attaquants exploitent une vulnérabilité zero-day non corrigée dans Gogs, un service Git auto-hébergé, affectant environ 700 serveurs exposés à Internet. La faille est un problème de 'path traversal' dans l'API PutContents (similaire à CVE-2024-55947 mais contournant les protections existantes via des liens symboliques). Elle permet à tout utilisateur autorisé à créer des dépôts (souvent activé par défaut) de manipuler des fichiers sensibles en dehors du dépôt, notamment le fichier .git/config pour déclencher l'exécution de commandes arbitraires. Les attaquants ont déployé le malware basé sur Supershell, un framework C2 SSH inversé, et les systèmes compromis communiquent avec un serveur C2 (119.45.176[.]196).",
+        "threat_actor": "Acteur ou groupe utilisant des outils d'automatisation (non spécifié).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "119.45.176.196"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter",
+          "T1078 - Valid Accounts (if open registration)",
+          "T1555.001 - Credentials from Password Stores: Credential in Files (modification of .git/config)",
+          "T1573 - Encrypted Channel (Supershell C2 framework)"
+        ],
+        "analyse": "Impact critique sur les organisations utilisant Gogs, en particulier celles avec l'enregistrement ouvert et des serveurs exposés. La compromission permet un contrôle total des serveurs, exposant le code source et les référentiels Git. Le potentiel stratégique est élevé pour le vol de propriété intellectuelle, les attaques de la chaîne d'approvisionnement et l'établissement de persistance.",
+        "recommandations": [
+          "Désactiver l'enregistrement ouvert sur les instances Gogs.",
+          "Restreindre l'accès aux serveurs Gogs via VPN ou listes d'autorisation.",
+          "Vérifier les compromissions en examinant l'activité suspecte de l'API PutContents et les dépôts avec des noms de 8 caractères générés aléatoirement.",
+          "Mettre en œuvre une surveillance de l'intégrité des fichiers, en particulier pour les fichiers de configuration Git."
+        ],
+        "tags": [
+          "Gogs",
+          "zero_day",
+          "RCE",
+          "path_traversal",
+          "active_exploitation",
+          "Git_service",
+          "supply_chain",
+          "Supershell",
+          "C2",
+          "CVE-2024-55947",
+          "T1190",
+          "T1059"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185593/hacking/critical-gogs-zero-day-under-attack-700-servers-hacked.html"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "GeminiJack zero-click flaw in Gemini Enterprise allowed corporate data exfiltration",
+        "description": "Google a corrigé la faille 'GeminiJack' dans Gemini Enterprise (précédemment Vertex AI Search), une vulnérabilité zero-click permettant l'exfiltration de données d'entreprise via des e-mails, invitations ou documents spécialement conçus. Cette faille exploite l'injection de prompt indirecte dans les systèmes RAG (Retrieval-Augmented Generation) de l'IA. En intégrant des instructions cachées dans des documents partagés, un attaquant peut amener l'IA à récupérer des fichiers \"empoisonnés\", exécuter des instructions sur Gmail, Calendar et Docs, et envoyer les résultats à un serveur attaquant via une requête d'image masquée, sans interaction utilisateur ou détection par les outils de sécurité traditionnels.",
+        "threat_actor": "Non spécifié",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link (via crafted emails/invites)",
+          "T1199 - Trusted Relationship (abuse of AI access to Workspace data)",
+          "T1041 - Exfiltration Over C2 Channel (via disguised image requests)",
+          "T1567 - Exfiltration Over Web Service (potential for data exfiltration)"
+        ],
+        "analyse": "Impact critique sur la confidentialité des données des entreprises utilisant Gemini Enterprise. La vulnérabilité représente un changement fondamental dans le paysage de la sécurité, car elle exploite la confiance implicite dans les systèmes d'IA et leur accès aux données organisationnelles. Le risque est l'exfiltration silencieuse et automatique de grandes quantités de données sensibles (e-mails, calendriers, documents) sur de longues périodes.",
+        "recommandations": [
+          "Mettre en œuvre des audits réguliers des interactions des systèmes d'IA avec les données d'entreprise.",
+          "Sensibiliser les utilisateurs et les administrateurs aux risques des injections de prompt indirectes et aux nouvelles formes d'ingénierie sociale.",
+          "Renforcer la surveillance des requêtes HTTP sortantes des systèmes IA pour détecter des motifs d'exfiltration inhabituels.",
+          "Mettre à jour les systèmes Gemini Enterprise/Vertex AI Search dès que les correctifs sont disponibles."
+        ],
+        "tags": [
+          "GeminiJack",
+          "Google_Gemini_Enterprise",
+          "zero_click",
+          "AI_vulnerability",
+          "prompt_injection",
+          "data_exfiltration",
+          "corporate_data",
+          "RAG_systems",
+          "Workspace_apps",
+          "T1566.002",
+          "T1041"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185574/hacking/geminijack-zero-click-flaw-in-gemini-enterprise-allowed-corporate-data-exfiltration.html"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite",
+        "description": "Le groupe de menace affilié au Hamas, Ashen Lepus (alias WIRTE), mène une campagne d'espionnage persistante contre les entités gouvernementales et diplomatiques du Moyen-Orient, notamment l'Autorité palestinienne, l'Égypte, la Jordanie, Oman et le Maroc. La campagne utilise une nouvelle suite de malwares nommée AshTag, qui comprend un loader personnalisé et une architecture C2 mise à jour pour échapper à l'analyse et se fondre dans le trafic légitime. Le groupe a amélioré sa sécurité opérationnelle, utilisant des sous-domaines légitimes pour ses serveurs C2, des charges utiles chiffrées/intégrées dans des balises HTML et des contrôles géographiques/User-Agent pour éviter les sandboxes. L'objectif principal est le vol de documents diplomatiques spécifiques, exfiltrés via l'outil open-source Rclone.",
+        "threat_actor": "Ashen Lepus (aka WIRTE)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "api.healthylifefeed.com",
+            "api.softmatictech.com",
+            "auth.onlinefieldtech.com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment (via benign PDF decoy)",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1059 - Command and Scripting Interpreter (AshenOrchestrator)",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/HTTPS C2)",
+          "T1041 - Exfiltration Over C2 Channel (Google Drive API, Rclone)",
+          "T1020 - Automated Exfiltration (Rclone)",
+          "T1083 - File and Directory Discovery",
+          "T1573.001 - Encrypted Channel: Symmetric Cryptography (AES-CBC C2 encryption)",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1027 - Obfuscated Files or Information"
+        ],
+        "analyse": "Impact élevé sur la sécurité nationale et la diplomatie des pays du Moyen-Orient. La capacité d'Ashen Lepus à adapter ses TTPs et à améliorer sa sécurité opérationnelle représente une menace persistante et évolutive, rendant la détection difficile pour les défenses statiques. L'expansion de sa victimologie et de ses thèmes d'hameçonnage indique une portée opérationnelle accrue, ciblant des informations critiques liées aux conflits régionaux.",
+        "recommandations": [
+          "Mettre en œuvre une stratégie de défense en profondeur, incluant EDR/XDR, NDR et capacités de sandbox.",
+          "Sensibiliser les utilisateurs aux techniques d'hameçonnage et aux leurres géopolitiques.",
+          "Surveiller les connexions C2 vers des sous-domaines légitimes pour des anomalies.",
+          "Rechercher des IOCs liés à la suite AshTag et à l'utilisation de Rclone.",
+          "Appliquer des contrôles stricts sur l'exécution des DLL et des fichiers téléchargés.",
+          "Mettre à jour les systèmes de sécurité pour détecter les communications chiffrées et l'intégration de payloads dans le trafic web légitime."
+        ],
+        "tags": [
+          "Ashen_Lepus",
+          "WIRTE",
+          "Hamas",
+          "espionnage",
+          "malware",
+          "AshTag",
+          "Middle_East",
+          "diplomatic",
+          "government",
+          "C2_architecture",
+          "DLL_side_loading",
+          "Rclone",
+          "OpSec",
+          "T1566.001",
+          "T1574.002"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Hunting for Mythic in network traffic",
+        "description": "L'article analyse l'activité réseau du framework de post-exploitation Mythic C2, populaire parmi divers acteurs de la menace (Mythic Likho, GOFFEE). Il décrit les méthodes de communication agent-C2 via HTTP/S, WebSocket, TCP, SMB, DNS et MQTT, et l'utilisation de services légitimes comme Discord et GitHub comme médiateurs C2. L'analyse se concentre sur la détection du trafic Mythic en recherchant des chaînes UUID formatées Base64 encodées dans les données transmises, notamment pour les communications SMB et TCP, et en utilisant des règles Suricata. Des approches d'analyse comportementale sont également discutées pour les cas où le trafic est chiffré (HTTPS).",
+        "threat_actor": "Mythic Likho (Arcane Wolf), GOFFEE (Paper Werewolf), et autres acteurs utilisant le framework Mythic.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0011 - Command and Control",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/S, WebSocket)",
+          "T1071.004 - Application Layer Protocol: DNS",
+          "T1090.001 - Proxy: Internal Proxy (SMB pipes, TCP sockets)",
+          "T1573 - Encrypted Channel (AES256 for SMB, TLS for HTTPS)",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Impact sur la détection des activités post-exploitation dans les réseaux d'entreprise. Mythic étant un outil polyvalent, sa détection est cruciale à plusieurs étapes de la Unified Kill Chain et de nombreuses TTPs MITRE ATT&CK. La complexité réside dans l'utilisation de protocoles variés et l'abus de services légitimes, rendant les méthodes de détection classiques difficiles sans une analyse approfondie du trafic chiffré. Le potentiel est global, ciblant toute organisation susceptible d'être compromise par des acteurs utilisant Mythic.",
+        "recommandations": [
+          "Implémenter des solutions NDR (Network Detection and Response) avec des capacités d'analyse de trafic profondes.",
+          "Développer et déployer des règles de détection basées sur les signatures (ex: Suricata) pour identifier les motifs UUID spécifiques dans le trafic réseau des agents Mythic.",
+          "Mettre en place l'inspection TLS/SSL pour déchiffrer le trafic HTTPS et analyser les communications C2 basées sur des services légitimes (Discord, GitHub).",
+          "Utiliser l'analyse comportementale pour détecter les activités C2 Mythic dans le trafic chiffré ou lorsque les signatures sont inefficaces (ex: SMBv3 chiffré), tout en ajustant les seuils pour minimiser les faux positifs.",
+          "Surveiller les connexions anormales et les fréquences de requêtes atypiques vers des services légitimes (Discord, GitHub) depuis des segments réseau inattendus."
+        ],
+        "tags": [
+          "Mythic_C2",
+          "post_exploitation",
+          "network_traffic_analysis",
+          "threat_detection",
+          "NDR",
+          "Suricata",
+          "UUID",
+          "SMB",
+          "TCP",
+          "Discord_C2",
+          "GitHub_C2",
+          "TLS_inspection",
+          "TA0011",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://securelist.com/detecting-mythic-in-network-traffic/118291/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "It didn’t take long: CVE-2025-55182 is now under active exploitation",
+        "description": "La vulnérabilité critique CVE-2025-55182 (CVSS 10.0), surnommée React2Shell, affectant les composants de serveur React (RSC) est activement exploitée. La faille de désérialisation de données non fiables (CWE-502) permet aux attaquants d'exécuter des commandes, de lire et d'écrire des fichiers sur le serveur via une simple requête POST. Des tentatives d'exploitation ont été enregistrées rapidement après la publication des détails, avec une augmentation significative. Les attaquants déploient des malwares variés, allant des variantes Mirai/Gafgyt aux mineurs de crypto (XMRig) et au botnet RondoDox, qui suppriment les compétiteurs et neutralisent les modules de sécurité Linux. Certains attaquants ciblent également les informations d'identification Git et cloud pour des attaques de la chaîne d'approvisionnement logicielle.",
+        "threat_actor": "Diverses campagnes de malware, y compris Mirai/Gafgyt, RondoDox botnet, opérateurs de mineurs de crypto (XMRig).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-55182"
+          ],
+          "DOMAIN": [
+            "api.hellknight.xyz",
+            "gist.githubusercontent.com",
+            "gfxnick.emerald.usbx.me",
+            "meomeoli.mooo.com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [
+            "0450fe19cfb91660e9874c0ce7a121e03ba4d5e0cf0557f03ee5a97a2de56511622f904bb82c8118da2966a957526a2b791f123b3aaff1b92873bd4b7a969387c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441",
+            "622f904bb82c8118da2966a957526a2b791f123b3aaff1b92873bd4b7a969387c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441",
+            "c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441"
+          ],
+          "IPv4": [
+            "172.237.55.180",
+            "176.117.107.154",
+            "193.34.213.150",
+            "23.132.164.54",
+            "31.56.27.76",
+            "31.56.27.97",
+            "41.231.37.153",
+            "51.81.104.115",
+            "51.91.77.94",
+            "59.7.217.245",
+            "68.142.129.4",
+            "89.144.31.18"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "hxxp://172.237.55.180/b",
+            "hxxp://172.237.55.180/c",
+            "hxxp://176.117.107.154/bot",
+            "hxxp://193.34.213.150/nuts/bolts",
+            "hxxp://193.34.213.150/nuts/x86",
+            "hxxp://23.132.164.54/bot",
+            "hxxp://31.56.27.76/n2/x86",
+            "hxxp://31.56.27.97/scripts/4thepool_miner.sh",
+            "hxxp://41.231.37.153/rondo.aqu.sh",
+            "hxxp://41.231.37.153/rondo.arc700",
+            "hxxp://41.231.37.153/rondo.armeb",
+            "hxxp://41.231.37.153/rondo.armebhf",
+            "hxxp://41.231.37.153/rondo.armv4l",
+            "hxxp://41.231.37.153/rondo.armv5l",
+            "hxxp://41.231.37.153/rondo.armv6l",
+            "hxxp://41.231.37.153/rondo.armv7l",
+            "hxxp://41.231.37.153/rondo.i486",
+            "hxxp://41.231.37.153/rondo.i586",
+            "hxxp://41.231.37.153/rondo.i686",
+            "hxxp://41.231.37.153/rondo.m68k",
+            "hxxp://41.231.37.153/rondo.mips",
+            "hxxp://41.231.37.153/rondo.mipsel",
+            "hxxp://41.231.37.153/rondo.powerpc",
+            "hxxp://41.231.37.153/rondo.powerpc-440fp",
+            "hxxp://41.231.37.153/rondo.sh4",
+            "hxxp://41.231.37.153/rondo.sparc",
+            "hxxp://41.231.37.153/rondo.x86_64",
+            "hxxp://51.81.104.115/nuts/bolts",
+            "hxxp://51.81.104.115/nuts/x86",
+            "hxxp://51.91.77.94:13339/termite/51.91.77.94:13337",
+            "hxxp://59.7.217.245:7070/app2",
+            "hxxp://59.7.217.245:7070/c.sh",
+            "hxxp://68.142.129.4:8277/download/c.sh",
+            "hxxp://89.144.31.18/nuts/bolts",
+            "hxxp://89.144.31.18/nuts/x86",
+            "hxxps://api.hellknight.xyz/js",
+            "hxxps://gist.githubusercontent.com/demonic-agents/39e943f4de855e2aef12f34324cbf150/raw/e767e1cef1c35738689ba4df9c6f7f29a6afba1a/setup_c3pool_miner.sh"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059.003 - Command and Scripting Interpreter: Windows Command Shell",
+          "T1059.004 - Command and Scripting Interpreter: PowerShell",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1496 - Resource Hijacking (Crypto mining)",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools"
+        ],
+        "analyse": "Impact immédiat et généralisé sur les serveurs web utilisant React Server Components. La facilité d'exploitation et la disponibilité publique d'un PoC augmentent le risque d'attaques massives. Les conséquences incluent le minage de crypto-monnaie, la prise de contrôle de serveurs Linux, et le vol d'informations d'identification, pouvant mener à des attaques de la chaîne d'approvisionnement logicielle et la compromission d'infrastructures cloud. Le potentiel géographique est global en raison de l'utilisation répandue de React.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2025-55182 sur toutes les applications React Server Components.",
+          "Surveiller les journaux du serveur pour toute activité suspecte, y compris les requêtes POST inattendues et les exécutions de commandes inhabituelles.",
+          "Déployer des solutions de sécurité qui peuvent détecter les tentatives d'exploitation de la désérialisation de données non fiables.",
+          "Mettre en place une protection EDR/XDR pour détecter et bloquer le déploiement de malwares comme XMRig et RondoDox.",
+          "Renforcer la sécurité des identifiants Git et des environnements cloud pour prévenir les attaques de la chaîne d'approvisionnement."
+        ],
+        "tags": [
+          "CVE-2025-55182",
+          "React2Shell",
+          "React_Server_Components",
+          "RCE",
+          "active_exploitation",
+          "deserialization",
+          "web_application",
+          "crypto_miner",
+          "botnet",
+          "supply_chain_attack",
+          "T1190",
+          "T1496"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://research.hisolutions.com/2025/12/weitere-news-im-dezember/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Malicious VSCode Marketplace extensions hid trojan in fake PNG file",
+        "description": "Une campagne furtive a été découverte avec 19 extensions malveillantes sur le VSCode Marketplace, ciblant les développeurs. Ces extensions incluent un dossier 'node_modules' pré-packagé avec une dépendance modifiée ('path-is-absolute' ou '@actions/io') contenant une classe exécutant un dropper JavaScript obfusqué, caché dans un fichier 'lock'. Un autre fichier, 'banner.png', déguisé en PNG, contient deux binaires malveillants : un LoLBin (cmstp.exe) et un cheval de Troie Rust. L'exécution automatique se produit au démarrage de l'IDE VSCode. Microsoft a supprimé les extensions, mais les utilisateurs ayant installé ces extensions doivent scanner leurs systèmes.",
+        "threat_actor": "Non spécifié, mais acteur de la menace spécialisé dans les attaques de la chaîne d'approvisionnement logicielle.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment (malicious extensions)",
+          "T1574.001 - Hijack Execution Flow: DLL Side-Loading (modified dependencies)",
+          "T1059.007 - Command and Scripting Interpreter: JavaScript/JScript (obfuscated dropper)",
+          "T1218.003 - System Binary Proxy Execution: CMSTP (LoLBin)",
+          "T1027 - Obfuscated Files or Information",
+          "T1105 - Ingress Tool Transfer (trojan via fake PNG)"
+        ],
+        "analyse": "Impact critique sur la chaîne d'approvisionnement logicielle et les développeurs utilisant VSCode. La dissimulation de malwares dans des extensions et des dépendances légitimes représente une menace élevée pour l'intégrité du code et la sécurité des environnements de développement. Les conséquences peuvent inclure le vol de propriété intellectuelle, l'accès non autorisé aux systèmes et la compromission d'applications en production. Le potentiel géographique est global, ciblant l'écosystème des développeurs.",
+        "recommandations": [
+          "Inspecter les packages avant l'installation, en particulier lorsque l'éditeur n'est pas réputé.",
+          "Utiliser des outils d'analyse de la chaîne d'approvisionnement logicielle pour détecter les dépendances malveillantes.",
+          "Scanner régulièrement les systèmes pour détecter les signes de compromission après l'installation d'extensions non vérifiées.",
+          "Maintenir les systèmes et les IDE à jour avec les dernières versions de sécurité.",
+          "Mettre en œuvre des politiques de sécurité strictes pour le téléchargement et l'utilisation d'extensions d'IDE."
+        ],
+        "tags": [
+          "VSCode_Marketplace",
+          "malicious_extensions",
+          "supply_chain_attack",
+          "trojan",
+          "developers",
+          "malware",
+          "node_modules",
+          "LoLBin",
+          "Rust_trojan",
+          "obfuscation",
+          "T1566.001",
+          "T1574.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-vscode-marketplace-extensions-hid-trojan-in-fake-png-file/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "NANOREMOTE, cousin of FINALDRAFT",
+        "description": "Elastic Security Labs a découvert NANOREMOTE, un nouveau backdoor Windows doté de nombreuses fonctionnalités, partageant des caractéristiques avec FINALDRAFT et le malware décrit dans REF7707. Il utilise l'API Google Drive pour l'exfiltration de données et la mise en scène de charges utiles, ce qui rend la détection difficile. La chaîne d'attaque implique un loader (WMLOADER) qui déchiffre et exécute NANOREMOTE en mémoire. Ce backdoor 64-bit en C++ peut effectuer de la reconnaissance, exécuter des fichiers et commandes, et transférer des fichiers, en utilisant une communication C2 chiffrée (AES-CBC avec Zlib) vers une adresse IP codée en dur via HTTP POST (/api/client avec User-Agent NanoRemote/1.0). Il utilise des techniques d'évasion telles que le chargement manuel de PE en mémoire.",
+        "threat_actor": "Non spécifié, mais fortement lié à FINALDRAFT et REF7707, suggérant un groupe avec un codebase partagé.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0011 - Command and Control",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/S)",
+          "T1567.002 - Exfiltration Over Web Service: Cloud Storage (Google Drive API)",
+          "T1059 - Command and Scripting Interpreter",
+          "T1048 - Exfiltration Over Alternative Protocol",
+          "T1055 - Process Injection",
+          "T1027 - Obfuscated Files or Information (rolling XOR, AES-CBC encryption)",
+          "T1573.001 - Encrypted Channel: Symmetric Cryptography (AES-CBC)",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1082 - System Information Discovery"
+        ],
+        "analyse": "Impact critique sur la confidentialité et l'intégrité des systèmes compromis. La capacité de NANOREMOTE à utiliser des services cloud légitimes pour le C2 et l'exfiltration rend sa détection très difficile, car le trafic se fond dans l'activité réseau normale. L'utilisation de techniques d'évasion avancées comme le chargement manuel de PE permet de contourner les solutions EDR traditionnelles. Le potentiel stratégique est l'espionnage et le vol de données sensibles à grande échelle. Le malware semble généré à partir d'un builder, indiquant un acteur organisé.",
+        "recommandations": [
+          "Mettre en œuvre des solutions NDR pour analyser le trafic réseau à la recherche de schémas C2 spécifiques, même s'ils sont masqués dans le trafic légitime.",
+          "Surveiller l'utilisation anormale de l'API Google Drive par des processus non autorisés ou inhabituels.",
+          "Déployer des règles de détection (par ex., règle 'Connection to Commonly Abused Webservices') pour identifier les interactions avec les API de services cloud abusés.",
+          "Renforcer les contrôles d'exécution de code pour empêcher le chargement de PE en mémoire sans traçabilité.",
+          "Effectuer une chasse aux menaces proactive pour identifier les GUID uniques générés par le malware sur les machines victimes."
+        ],
+        "tags": [
+          "NANOREMOTE",
+          "FINALDRAFT",
+          "backdoor",
+          "malware",
+          "APT",
+          "espionnage",
+          "Google_Drive_API",
+          "C2",
+          "data_exfiltration",
+          "loader",
+          "PE_loading",
+          "stealth",
+          "T1567.002",
+          "TA0011"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/nanoremote"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "New ConsentFix attack hijacks Microsoft accounts via Azure CLI",
+        "description": "Une nouvelle variante de l'attaque ClickFix, nommée 'ConsentFix', abuse de l'application OAuth d'Azure CLI pour détourner des comptes Microsoft, sans nécessiter de mot de passe ou de contournement de l'authentification multifacteur (MFA). L'attaque implique de tromper les utilisateurs pour qu'ils complètent un flux d'authentification OAuth d'Azure CLI, puis de voler le code d'autorisation résultant pour obtenir un jeton d'accès Azure CLI complet. La campagne utilise un faux widget CAPTCHA Cloudflare Turnstile demandant une adresse e-mail professionnelle valide, filtrant les cibles. Une fois le code d'autorisation collé sur la page malveillante, l'attaquant obtient un accès complet au compte Microsoft.",
+        "threat_actor": "Non spécifié, mais acteur de la menace utilisant des techniques d'ingénierie sociale.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link (social engineering for OAuth flow)",
+          "T1534 - Internal Spearphishing",
+          "T1078.004 - Valid Accounts: Cloud Accounts (hijacking Microsoft accounts)",
+          "T1098.001 - Account Manipulation: Additional Email Address (bypassing MFA)",
+          "T1110 - Brute Force (indirectly, by exploiting misconfiguration/trust in OAuth)"
+        ],
+        "analyse": "Impact critique sur la sécurité des comptes Microsoft, en particulier pour les entreprises utilisant Azure CLI. L'attaque contourne la MFA et ne nécessite pas de mot de passe, ce qui en fait une menace très efficace. Le potentiel stratégique est le vol d'accès à des ressources cloud et à des données sensibles. La difficulté est que le trafic semble légitime (flux OAuth).",
+        "recommandations": [
+          "Rechercher une activité de connexion Azure CLI inhabituelle, comme des connexions provenant de nouvelles adresses IP.",
+          "Surveiller les portées Graph héritées, qui sont intentionnellement exploitées par les attaquants pour échapper à la détection.",
+          "Sensibiliser les utilisateurs aux attaques d'ingénierie sociale, en particulier celles qui impliquent des flux d'authentification complexes ou des requêtes d'informations inhabituelles.",
+          "Implémenter des politiques d'accès conditionnel et de 'Zero Trust' pour les applications cloud.",
+          "Auditer régulièrement les permissions des applications OAuth et les jetons d'accès."
+        ],
+        "tags": [
+          "ConsentFix",
+          "ClickFix",
+          "Azure_CLI",
+          "OAuth",
+          "Microsoft_accounts",
+          "account_hijack",
+          "MFA_bypass",
+          "social_engineering",
+          "phishing",
+          "Cloudflare_Turnstile",
+          "T1566.002",
+          "T1078.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-consentfix-attack-hijacks-microsoft-accounts-via-azure-cli/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Notepad++ fixes flaw that let attackers push malicious update files",
+        "description": "Notepad++ a publié la version 8.8.9 pour corriger une vulnérabilité dans son outil de mise à jour WinGUp, suite à des rapports d'utilisateurs indiquant que l'updater récupérait des exécutables malveillants au lieu de mises à jour légitimes. Ce problème, potentiellement une attaque de la chaîne d'approvisionnement ou un détournement de trafic réseau, permettait au fichier GUP.exe de générer un exécutable '%Temp%\\AutoUpdater.exe' inconnu, exécutant des commandes de collecte d'informations. Notepad++ et WinGUp ont été renforcés pour vérifier la signature et le certificat des installateurs téléchargés, interrompant la mise à jour en cas d'échec de la vérification. Des organisations en Asie de l'Est ont été ciblées de manière très spécifique.",
+        "threat_actor": "Acteur de la menace sophistiqué avec des ressources considérables (capable de détourner le trafic ISP).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "notepad-plus-plus.org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "https://notepad-plus-plus.org/update/getDownloadUrl.php?version="
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1195.003 - Supply Chain Compromise: Compromise Hardware Supply Chain (potential traffic hijacking at ISP level)",
+          "T1036.005 - Masquerading: Match Legitimate Name or Location (AutoUpdater.exe)",
+          "T1566.001 - Phishing: Spearphishing Attachment (malicious update)",
+          "T1082 - System Information Discovery (commands to collect device info)"
+        ],
+        "analyse": "Impact significatif sur la confiance dans les mises à jour logicielles et risque d'infection généralisée pour les utilisateurs de Notepad++. L'attaque met en évidence la vulnérabilité des mécanismes de mise à jour et la capacité des attaquants à compromettre la chaîne d'approvisionnement ou les infrastructures réseau. Le ciblage apparent en Asie de l'Est suggère des motivations d'espionnage ou d'avantage concurrentiel. Le risque était l'exécution de code arbitraire et la collecte d'informations sur les appareils des victimes.",
+        "recommandations": [
+          "Mettre à niveau Notepad++ vers la version 8.8.9 ou supérieure immédiatement.",
+          "S'assurer que tous les binaires et installateurs officiels sont signés avec un certificat valide et vérifier ces signatures.",
+          "Supprimer tout certificat racine personnalisé installé précédemment si l'utilisateur utilisait des versions antérieures à la v8.8.7.",
+          "Mettre en œuvre des mesures de sécurité de réseau pour détecter et prévenir le détournement de trafic de mise à jour (ex: DNSSEC, surveillance du trafic SSL/TLS).",
+          "Sensibiliser les utilisateurs à la vérification de l'authenticité des mises à jour logicielles."
+        ],
+        "tags": [
+          "Notepad++",
+          "WinGUp",
+          "update_mechanism",
+          "supply_chain_attack",
+          "malicious_update",
+          "traffic_hijacking",
+          "code_execution",
+          "certificate_validation",
+          "T1195.002",
+          "T1036.005"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-fixes-flaw-that-let-attackers-push-malicious-update-files/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "One newsletter to rule them all (DeadLock ransomware, Brickstorm malware)",
+        "description": "Cisco Talos a découvert de nouvelles TTPs liées au ransomware DeadLock, qui cible les machines Windows avec un algorithme de chiffrement personnalisé utilisant des clés cryptographiques basées sur le temps. L'acteur utilise la technique BYOVD (Bring Your Own Vulnerable Driver) avec un loader inconnu pour exploiter une vulnérabilité du pilote Baidu Antivirus (CVE-2024-51324), permettant de terminer les processus EDR. Le malware Brickstorm, 'furtif et résilient', est utilisé par des acteurs parrainés par la Chine pour obtenir une persistance à long terme dans les réseaux d'infrastructures critiques, ciblant les serveurs VMware.",
+        "threat_actor": "Acteur de la menace financière (DeadLock ransomware), Acteurs parrainés par la Chine (Brickstorm malware).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-51324"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [
+            "1f7e01a3355b52cbc92c908a61abf643",
+            "2915b3f8b703eb744fc54c81f4a9c67f",
+            "a1f4931992bf05e9bff4b173c15cab15",
+            "aac3165ece2959f39ff98334618d10d9",
+            "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+          ],
+          "FILE_HASH_SHA256": [
+            "d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a",
+            "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218",
+            "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+            "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59"
+          ],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "https://talosintelligence.com/talos_file_reputation?s=d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a",
+            "https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "https://talosintelligence.com/talos_file_reputation?s=1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218",
+            "https://talosintelligence.com/talos_file_reputation?s=96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+            "https://talosintelligence.com/talos_file_reputation?s=90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1486 - Data Encrypted for Impact (DeadLock Ransomware)",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools (EDR termination)",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1574.009 - Hijack Execution Flow: Dylib Hijacking (BYOVD)",
+          "T1090 - Proxy (Brickstorm for persistence)",
+          "T1078 - Valid Accounts (initial access for Brickstorm)"
+        ],
+        "analyse": "Impact élevé sur la résilience des entreprises et la sécurité des infrastructures critiques. Le ransomware DeadLock utilise des techniques d'évasion sophistiquées pour contourner les défenses EDR et compliquer la récupération. Brickstorm représente une menace persistante pour les environnements VMware, avec un potentiel d'espionnage à long terme et de perturbation des services vitaux. Le potentiel géographique est global pour DeadLock, et ciblé sur les infrastructures critiques pour Brickstorm, avec un intérêt particulier pour les réseaux d'infrastructures critiques.",
+        "recommandations": [
+          "Appliquer des correctifs pour toutes les vulnérabilités connues, y compris CVE-2024-51324 et les autres failles affectant VMware.",
+          "Renforcer les défenses EDR et les solutions de sécurité des terminaux pour détecter et prévenir les tentatives de désactivation.",
+          "Mettre en œuvre une segmentation réseau stricte pour protéger les serveurs VMware et les infrastructures critiques.",
+          "Déployer des règles Snort (SID 65576, 65575, 301358) et des détections ClamAV pour le ransomware DeadLock.",
+          "Surveiller les activités post-exploitation, en particulier celles visant à établir une persistance dans les réseaux critiques."
+        ],
+        "tags": [
+          "DeadLock_ransomware",
+          "BYOVD",
+          "Baidu_Antivirus",
+          "CVE-2024-51324",
+          "EDR_bypass",
+          "Brickstorm_malware",
+          "China_sponsored",
+          "VMware_servers",
+          "critical_infrastructure",
+          "persistence",
+          "T1486",
+          "T1562.001"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/one-newsletter-to-rule-them-all/"
+        ],
+        "date": "2025-12-12"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The intelligence overview reveals an intensification of sophisticated cyberattacks, impacting critical infrastructure and government entities, with a resurgence of espionage campaigns and financial cybercrime. Active exploitation of zero-day vulnerabilities, particularly in web application components and code management systems (React Server Components, Gogs, Gladinet CentreStack), as well as widely used platforms (Windows, Google Chrome, WordPress plugins), remains a major threat, often facilitated by deserialization of untrusted data, remote code execution (RCE), and privilege escalation flaws. The software supply chain is also a prime target, as evidenced by malicious VSCode extensions and flaws in update mechanisms (Notepad++).\n\nThe emergence of AI is doubly noteworthy: on one hand, it is proposed as a solution for threat detection (AI Sigma Rules); on the other, it introduces new attack surfaces, with indirect prompt injection techniques (GeminiJack) and risks associated with AI integration into browsers (Brave). Malicious actors continue to abuse legitimate services and cloud platforms (Google Drive API, Discord, GitHub) for their C2 communications and data exfiltration, making detection more complex.\n\nGeopolitically, the news highlights persistent tensions, influence operations (pro-Russia hacktivist groups), and state-sponsored espionage campaigns (Ashen Lepus). Discussions around European strategic autonomy, rearmament, and \"hybrid warfare\" underscore the complexity of the threat environment. Significant data breaches have impacted various sectors, from password managers (LastPass) to local government services, often due to failures in basic security measures or misconfigurations.\n\nIn conclusion, the overall state of threats is characterized by increasing attack sophistication, rapid exploitation of critical vulnerabilities, and the constant adaptation of attackers' TTPs, including the use of new technologies like AI. The need for heightened vigilance, a proactive security posture, and improved vulnerability management is more critical than ever for cyber resilience.",
+      "date": "2025-12-12"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Ashen Lepus (aka WIRTE)",
+        "secteur": "Middle Eastern diplomatic and governmental entities",
+        "modop": "Espionage campaigns with the AshTag malware suite, use of custom loader, updated C2 architecture to evade analysis and blend into legitimate traffic, data exfiltration via cloud services (Google Drive API), targeting specific diplomatic documents. Uses DLL side-loading technique and Rclone tool for exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "espionage",
+          "Middle_East",
+          "malware",
+          "AshTag",
+          "DLL_side_loading",
+          "C2",
+          "Rclone",
+          "APT"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "CL-CRI-1036 (aka 01flip)",
+        "secteur": "Critical infrastructure in the Asia-Pacific region (Philippines, Taiwan)",
+        "modop": "Ransomware attacks with the Rust-based 01flip malware (cross-platform Windows and Linux), manual exploitation of older vulnerabilities (e.g., CVE-2019-11580) for initial access, deployment of the open-source Sliver C2 framework for maintaining access and lateral movement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "critical_infrastructure",
+          "APAC",
+          "Rust",
+          "Sliver_C2",
+          "exploitation",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://securityonline.info/new-01flip-ransomware-hits-apac-critical-infra-cross-platform-rust-weapon-uses-sliver-c2/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "Cyber Army of Russia Reborn (CARR) / Z-Pentest",
+        "secteur": "Critical infrastructure (water, food, agriculture, energy) in the US, Ukraine, NATO allies",
+        "modop": "DDoS attacks, website defacements, hacking industrial control systems (ICS) and SCADA via scans and brute-force attacks (password guessing), exploitation of poorly secured VNC connections. Linked to Russian GRU and funded by them for DDoS services.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_Russia",
+          "DDoS",
+          "critical_infrastructure",
+          "ICS",
+          "SCADA",
+          "VNC_exploitation",
+          "GRU"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Global critical infrastructure",
+        "modop": "DDoS attacks and exploitation of poorly secured VNC connections to access OT devices in critical infrastructure, causing various impacts.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_Russia",
+          "DDoS",
+          "critical_infrastructure",
+          "OT_exploitation",
+          "VNC_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185552/hacktivism/pro-russia-hacktivist-support-ukrainian-faces-us-charges/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "nom": "Palestine Action",
+        "secteur": "Defense contractors, militaries, financial services companies (insurance, banks), logistics, shipping, government and public entities",
+        "modop": "Militant direct action, vandalism (red paint, blunt instruments), physical obstruction (human chains, objects), sabotage of assets inside facilities. Uses instructional guides for Domestic Violent Extremists (DVEs). Dual-track strategy after UK terrorist designation: incitement to overseas operations while refraining from major actions in the UK.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "DVE",
+          "hacktivism",
+          "physical_threat",
+          "vandalism",
+          "sabotage",
+          "pro_Palestine",
+          "defence_contractors",
+          "financial_services"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/palestine-action-operations-and-global-network"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Defense, Europe, NATO",
+        "theme": "Armament cooperation and strategic autonomy",
+        "description": "Spain perceives armament cooperation within the EU as a means to strengthen European strategic autonomy, industrial competitiveness, and interoperability. Despite strong research performance (European Defence Fund), translating these successes into major joint procurement programs remains challenging due to fragmented industrial coordination, limited managerial capacity, and regulatory divergences. Madrid seeks pragmatic but ambitious cooperation, capability-led, lifecycle-oriented, and financially sustainable, with fair industrial returns and alignment between EU and NATO priorities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "NATO",
+          "Spain",
+          "armament_cooperation",
+          "strategic_autonomy",
+          "defense_industry"
+        ],
+        "sources": [
+          "https://www.iris-france.org/which-type-of-armament-cooperation-do-we-want-need-the-case-of-spain/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Government, Defense, NATO, European Union",
+        "theme": "US strategy and impact on NATO/EU",
+        "description": "The analysis of Trump's thinking on NATO and the EU reveals a US strategy aimed at 'Europeanizing NATO' while weakening the European Union. This approach encourages Europeans to strengthen their defense capabilities within the Alliance (under US supervision) while deterring deeper political integration via the EU, particularly in the defense sector. The objective would be to maintain European dependence on US military systems.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "USA",
+          "NATO",
+          "European_Union",
+          "defense_strategy",
+          "foreign_policy",
+          "Trump"
+        ],
+        "sources": [
+          "https://www.iris-france.org/anatomie-de-la-pensee-trumpienne-sur-lotan-et-sur-lue/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Government, Defense, NATO, Supply Chain",
+        "theme": "Corruption scandal and military supply chains",
+        "description": "Elbit Systems, an Israeli defense contractor, was quietly suspended by NATO's procurement agency (NSPA) in July, following suspicions of fraud, corruption, and manipulation of strategic contracts. An Italian consultant is subject to a European arrest warrant. Fifteen major programs were frozen, impacting drone and ammunition deliveries. This affair undermines NSPA's credibility, trust among allies, European strategic autonomy policies, and military supply chain security, particularly in a context of accelerated rearmament.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "NATO",
+          "corruption",
+          "Elbit_Systems",
+          "defense",
+          "supply_chain",
+          "national_security"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/elbit-systems-au-coeur-dun-scandale-de-corruption/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Government, Defense, Critical Infrastructure, United Kingdom, Europe",
+        "theme": "Hybrid threats and gray zone warfare",
+        "description": "The UK and Europe face an erosion of their resilience through a sustained campaign of sabotage, malign interference, and provocation, often attributed to Russia and conducted through proxies. This 'gray zone' activity includes cyberattacks, disinformation campaigns, and military provocations, aimed at discrediting governments and probing for weaknesses. The UK intelligence community must adapt by investing in new analytical methods to trace opaque influence networks and understand the interplay of economic, societal, and technological pressures.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "UK",
+          "Russia",
+          "hybrid_threat",
+          "gray_zone",
+          "sabotage",
+          "cyberattack",
+          "disinformation",
+          "intelligence",
+          "national_security"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/maintaining-uks-intelligence-edge-grey-zone"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Government, Public Administration, Germany",
+        "theme": "Digital sovereignty and Open Source migration",
+        "description": "The state of Schleswig-Holstein in Germany is progressing with its migration from Microsoft Office products to Open Source solutions (Open-Xchange, Thunderbird). 80% of workstations have been converted, leading to financial savings and a gain in digital sovereignty. This initiative is part of a broader European trend towards sovereign IT strategies, with many administrations favoring Open Source solutions in their procurement policies.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Germany",
+          "Schleswig_Holstein",
+          "digital_sovereignty",
+          "Open_Source",
+          "IT_migration",
+          "public_administration"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2025/12/positive-stimmung-bei-der-open-source-migration-in-schleswig-holstein/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Government, Defense, Europe",
+        "theme": "Evolution of conflicts and rearmament",
+        "description": "The return of war in Europe and the intensification of 'immaterial wars' (informational, cognitive) are leading to a new qualitative and quantitative 'arms race'. The article analyzes the evolution of the means and language of war, the degradation of the security system, and Europe's need for military and capability preparation in the face of increasingly complex and intertwined conflicts.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "war",
+          "rearmament",
+          "conflicts",
+          "hybrid_threat",
+          "national_security"
+        ],
+        "sources": [
+          "https://www.iris-france.org/armements-et-arsenalisations-moyens-et-mots-de-la-guerre/"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Local Government",
+        "victime": "Village of Golf Manor (Ohio, USA)",
+        "description": "The Village of Golf Manor (Ohio) was hit by a ransomware cyberattack that encrypted and made its computer systems inaccessible. Attackers demanded a ransom, threatening to publish stolen data if not paid. The village council approved a $2,000 ransom payment to restore system access.",
+        "tags": [
+          "violation",
+          "breach",
+          "local_government",
+          "ransomware",
+          "data_extortion",
+          "ransom_payment"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/11/village-of-golf-manor-considering-paying-ransom-amid-cyberattack/?pk_campaign=feed&pk_kwd=village-of-golf-manor-considering-paying-ransom-amid-cyberattack"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Retail (duty-free), Airports",
+        "victime": "Dubai Duty Free (via its IT service provider touchworldtechnology)",
+        "description": "An open directory containing 90GB of information was exposed, likely due to an error or misconfiguration by an IT service provider for Dubai Duty Free. Exposed data included passports, ID cards, full MySQL database configurations (with username and password), as well as access and secret keys for a DigitalOcean Spaces bucket. The exposure lasted several months before being discovered in September and remediated on September 13 after notification.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "airports",
+          "Dubai",
+          "UAE",
+          "data_exposure",
+          "personal_data",
+          "sensitive_information",
+          "misconfiguration",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115704256898733951"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Password Management Software",
+        "victime": "LastPass",
+        "description": "The UK fined LastPass £1.2 million following a 2022 data breach impacting 1.6 million UK users. The attack involved the theft of personal information and encrypted password vaults. The flaw was due to the exploitation of a known vulnerability in a third-party streaming application installed on a senior employee's personal device, combined with master password reuse, leading to the theft of AWS access keys and decryption keys.",
+        "tags": [
+          "violation",
+          "breach",
+          "LastPass",
+          "password_manager",
+          "personal_data",
+          "unauthorized_access",
+          "employee_error",
+          "third_party_vulnerability",
+          "UK"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/uk-fines-lastpass-over-2022-data-breach-impacting-1-6-million-users/",
+          "https://mastodon.social/@nerowild/115703060571531412"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Pet Store, Veterinary Services",
+        "victime": "Petco (via Vetco)",
+        "description": "Petco took down the Vetco website after exposing customers' personal information. The exact details of the exposed data and the nature of the flaw are not specified beyond the exposure of personal information.",
+        "tags": [
+          "violation",
+          "breach",
+          "Petco",
+          "Vetco",
+          "personal_information",
+          "data_exposure",
+          "privacy"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115703650772084695",
+          "https://techcrunch.com/2025/12/10/petco-takes-down-vetco-website-after-exposing-customers-personal-information/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "secteur": "Real Estate",
+        "victime": "Better Homes (UAE)",
+        "description": "A high-confidence data breach has targeted Better Homes, a company operating in the real estate sector in the United Arab Emirates. Specific details on the nature and extent of the information leak are not disclosed.",
+        "tags": [
+          "violation",
+          "breach",
+          "real_estate",
+          "UAE",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115703417088619525"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-10451",
+        "cvss": 8.2,
+        "product": "H19Int15CallbackSmm",
+        "description": "SMM memory corruption vulnerability, potentially leading to arbitrary code execution in System Management Mode (SMM) and SMRAM memory corruption due to an unchecked output buffer.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SMM",
+          "memory_corruption",
+          "arbitrary_code_execution",
+          "firmware",
+          "UEFI"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10451"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12824",
+        "cvss": 8.8,
+        "product": "WordPress Player Leaderboard plugin <= 1.0.2",
+        "description": "Local File Inclusion (LFI) vulnerability via the 'player_leaderboard' shortcode due to an unsanitized user-supplied value from the shortcode's 'mode' attribute. Allows authenticated attackers (Contributor+ level access) to include and execute arbitrary PHP files on the server, potentially leading to full Remote Code Execution (RCE) if combined with file upload capabilities.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "LFI",
+          "RCE_potential",
+          "authenticated_attack",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12824"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12963",
+        "cvss": 9.8,
+        "product": "WordPress LazyTasks – Project & Task Management plugin <= 1.2.29",
+        "description": "Privilege escalation vulnerability via unauthenticated account takeover. The plugin does not properly validate user identity via the 'wp-json/lazytasks/api/v1/user/role/edit/' REST API endpoint, allowing unauthenticated attackers to change arbitrary user email addresses (including administrators) to reset passwords and gain account access. Also allows granting users additional roles within the plugin.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "privilege_escalation",
+          "account_takeover",
+          "unauthenticated",
+          "API_endpoint",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12963"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-12968",
+        "cvss": 8.8,
+        "product": "WordPress Infility Global plugin <= 2.14.23",
+        "description": "Arbitrary file upload vulnerability due to missing file type validation and capability checks. The 'upload_file' function only validates MIME type, which can be easily spoofed, and the 'import_data' function lacks capability checks. Allows authenticated attackers (Subscriber+ level access) to upload arbitrary files to the affected site's server, potentially leading to Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "arbitrary_file_upload",
+          "RCE_potential",
+          "authenticated_attack",
+          "file_type_validation_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12968"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-13334",
+        "cvss": 8.1,
+        "product": "WordPress Blaze Demo Importer plugin <= 1.0.13",
+        "description": "Unauthorized database reset and file deletion vulnerability due to a missing capability check on the 'blaze_demo_importer_install_demo' function. Allows authenticated attackers (Subscriber+ level access) to reset the database, delete sidebar widgets, theme modifications, and content of the uploads folder.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "authorization_bypass",
+          "data_deletion",
+          "database_reset",
+          "authenticated_attack"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13334"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14044",
+        "cvss": 8.1,
+        "product": "WordPress Visitor Logic Lite plugin <= 1.0.3",
+        "description": "PHP Object Injection vulnerability in all versions up to, and including, 1.0.3 via deserialization of untrusted input from the 'lpblocks' cookie. The 'lp_track()' function passes unsanitized cookie data directly to the 'unserialize()' function. Allows unauthenticated attackers to inject a PHP Object, potentially leading to arbitrary file deletion, sensitive data retrieval, or code execution if a POP chain is present via another plugin/theme.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "PHP_object_injection",
+          "deserialization",
+          "unauthenticated",
+          "code_execution_potential",
+          "data_exfiltration_potential"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14044"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14344",
+        "cvss": 9.8,
+        "product": "WordPress Multi Uploader for Gravity Forms plugin <= 1.1.7",
+        "description": "Arbitrary file deletion vulnerability due to insufficient file path validation in the 'plupload_ajax_delete_file' function. Allows unauthenticated attackers to delete arbitrary files on the server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "arbitrary_file_deletion",
+          "unauthenticated",
+          "path_validation_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14344"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14401",
+        "cvss": 7.8,
+        "product": "PDFsam Enhanced",
+        "description": "Remote Code Execution (RCE) vulnerability via an Out-Of-Bounds Read in the handling of App objects. Results from a lack of proper validation of user-supplied data, leading to a read past the end of an allocated buffer. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "out_of_bounds_read",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1089/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14402",
+        "cvss": 7.0,
+        "product": "PDFsam Enhanced",
+        "description": "Remote Code Execution (RCE) vulnerability via insufficient UI warning when processing DOC files. Allows the execution of dangerous scripts without user warning. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "DOC_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1090/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14403",
+        "cvss": 7.8,
+        "product": "PDFsam Enhanced",
+        "description": "Remote Code Execution (RCE) vulnerability via insufficient UI warning for the Launch action. Allows the execution of dangerous scripts without user warning. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "launch_action",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1091/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14404",
+        "cvss": 7.0,
+        "product": "PDFsam Enhanced",
+        "description": "Remote Code Execution (RCE) vulnerability via insufficient UI warning when processing XLS files. Allows the execution of dangerous scripts without user warning. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "PDFsam_Enhanced",
+          "RCE",
+          "UI_warning_bypass",
+          "XLS_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1092/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14414",
+        "cvss": 7.8,
+        "product": "Soda PDF Desktop",
+        "description": "Remote Code Execution (RCE) vulnerability via insufficient UI warning when processing Word files. Allows the execution of dangerous scripts without user warning. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Soda_PDF_Desktop",
+          "RCE",
+          "UI_warning_bypass",
+          "Word_file",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1087/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-14415",
+        "cvss": 7.0,
+        "product": "Soda PDF Desktop",
+        "description": "Remote Code Execution (RCE) vulnerability via insufficient UI warning for the Launch action. Allows the execution of dangerous scripts without user warning. User interaction required (visiting a malicious page or opening a malicious file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Soda_PDF_Desktop",
+          "RCE",
+          "UI_warning_bypass",
+          "launch_action",
+          "user_interaction",
+          "code_execution"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1088/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (RSC)",
+        "description": "Critical deserialization of untrusted data vulnerability (CWE-502), known as React2Shell. Allows an unauthenticated attacker to execute arbitrary commands, read, and write files on the server with server process privileges. Easy to exploit and under active exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React",
+          "React_Server_Components",
+          "RCE",
+          "deserialization",
+          "active_exploitation",
+          "zero_day",
+          "web_application"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://research.hisolutions.com/2025/12/weitere-news-im-dezember/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-58360",
+        "cvss": null,
+        "product": "OSGeo GeoServer",
+        "description": "XML External Entity (XXE) vulnerability in the Web Map Service (WMS) GetMap operation. Allows an unauthenticated attacker to submit a crafted WMS request to dereference local files or remote resources, leading to file disclosure, Server-Side Request Forgery (SSRF), and potentially denial-of-service conditions. Added to the CISA Known Exploited Vulnerabilities (KEV) catalog, confirming in-the-wild exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GeoServer",
+          "XXE",
+          "WMS",
+          "unauthenticated",
+          "data_exfiltration",
+          "SSRF",
+          "DoS_potential",
+          "CISA_KEV",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2025/12/12/geoserver-cve-2025-58360-added-to-cisa-kev/",
+          "https://securityonline.info/cisa-kev-alert-geoserver-xxe-flaw-under-active-attack-risks-data-theft-internal-network-scanning/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-62221",
+        "cvss": 7.8,
+        "product": "Windows Cloud Files Mini Filter Driver",
+        "description": "Actively exploited use-after-free Elevation of Privilege (EoP) vulnerability. Allows an authenticated local attacker to escalate privileges to SYSTEM and gain full control of affected Windows systems without user interaction. Impacts systems even without OneDrive, Google Drive, or iCloud installed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Windows",
+          "EoP",
+          "use_after_free",
+          "active_exploitation",
+          "zero_day",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-62221-and-cve-2025-54100-vulnerabilities/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "cve_id": "CVE-2025-54100",
+        "cvss": 7.8,
+        "product": "Windows PowerShell",
+        "description": "Remote Code Execution (RCE) vulnerability that allows unauthenticated attackers to run arbitrary code if a user executes a crafted PowerShell command (e.g., via Invoke-WebRequest). Requires user interaction, making social engineering the most probable attack path.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Windows",
+          "PowerShell",
+          "RCE",
+          "user_interaction",
+          "social_engineering",
+          "code_execution"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-62221-and-cve-2025-54100-vulnerabilities/"
+        ],
+        "date": "2025-12-12"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI Sigma Rules: Scale Threat Detection, Drive Down MTTR",
+        "description": "The article introduces ANY.RUN's 'AI Sigma Rules,' a new feature in their Interactive Sandbox designed to enhance threat detection and reduce Mean Time To Respond (MTTR). This solution aims to help SOC teams better identify true threats among thousands of daily alerts, minimizing false positives and accelerating investigations into malicious activities. It enables scalable detection and more efficient investigation by focusing on high-value signals.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The impact is positive on the cybersecurity sector and SOC teams. The feature aims to optimize detection and response operations by reducing analyst workload and improving the accuracy of threat identification. Strategic potential for companies seeking to improve their cyber resilience and leverage AI for security automation.",
+        "recommandations": [
+          "Evaluate and integrate AI-driven detection technologies to improve SOC team efficiency.",
+          "Utilize interactive sandboxes with advanced analysis capabilities for rapid alert investigation.",
+          "Implement detection rules (such as Sigma Rules) adapted to emerging threats to reduce false positives and response times."
+        ],
+        "tags": [
+          "AI",
+          "threat_detection",
+          "SOC",
+          "MTTR",
+          "cybersecurity",
+          "security_automation",
+          "interactive_sandbox"
+        ],
+        "sources": [
+          "/cybersecurity-blog/ai-sigma-rules/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Active exploitation of Gladinet CentreStack and Triofox vulnerability",
+        "description": "Attackers are actively exploiting a new, undocumented vulnerability in the cryptographic implementation of Gladinet CentreStack and Triofox products, which provide secure remote file access and sharing. This flaw, combined with older vulnerabilities like CVE-2025-11371 (unauthenticated access to sensitive files) and CVE-2025-30406 (local file inclusion), allows attackers to forge access tickets and achieve Remote Code Execution (RCE). The issue stems from hardcoded AES keys and Initialization Vectors (IVs) that are easily recoverable, enabling decryption of access tickets or creation of new ones to impersonate users. At least nine organizations have been targeted.",
+        "threat_actor": "Unspecified, but groups of attackers actively exploiting.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078 - Valid Accounts",
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter (PowerShell for RCE)",
+          "T1021.001 - Remote Services: Remote Desktop Protocol",
+          "T1003.003 - OS Credential Dumping: LSASS Memory",
+          "T1552.001 - Unsecured Credentials: Credential in Files"
+        ],
+        "analyse": "Serious impact on businesses and MSPs using Gladinet CentreStack and Triofox for file sharing. The combination of vulnerabilities allows for full server compromise, threatening data confidentiality and system integrity. The geographical potential is global, targeting organizations with these services exposed on the Internet.",
+        "recommandations": [
+          "Update Gladinet CentreStack and Triofox to version 16.12.10420.56791 or higher without delay.",
+          "Restrict external exposure of CentreStack and Triofox servers.",
+          "Implement network segmentation to isolate these systems.",
+          "Monitor logs for anomalous PowerShell execution from IIS processes and the string 'vghpI7EToZUDIZDdprSubL3mTZ2'.",
+          "Inspect configuration files to ensure cryptographic keys are not hardcoded or easily accessible."
+        ],
+        "tags": [
+          "Gladinet",
+          "CentreStack",
+          "Triofox",
+          "cryptographic_flaw",
+          "RCE",
+          "active_exploitation",
+          "hardcoded_keys",
+          "CVE-2025-11371",
+          "CVE-2025-30406",
+          "unauthenticated_access",
+          "supply_chain",
+          "T1078",
+          "T1190"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-gladinet-centrestack-triofox-vulnerability",
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-gladinet-centrestack-cryptographic-flaw-in-rce-attacks/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Critical Gogs zero-day under attack, 700 servers hacked",
+        "description": "Attackers exploited an unpatched zero-day vulnerability in Gogs, a self-hosted Git service, affecting around 700 Internet-facing servers. The flaw is a path-traversal issue in the PutContents API (similar to CVE-2024-55947 but bypassing existing protections via symbolic links). It allows any user authorized to create repositories (often enabled by default) to manipulate sensitive files outside the repository, including the .git/config file to trigger arbitrary command execution. Attackers deployed malware built with Supershell, an open-source reverse SSH C2 framework, and compromised systems communicated with a C2 server (119.45.176[.]196).",
+        "threat_actor": "Actor or group using automation tools (unspecified).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "119.45.176.196"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter",
+          "T1078 - Valid Accounts (if open registration)",
+          "T1555.001 - Credentials from Password Stores: Credential in Files (modification of .git/config)",
+          "T1573 - Encrypted Channel (Supershell C2 framework)"
+        ],
+        "analyse": "Critical impact on organizations using Gogs, especially those with open registration and exposed servers. Compromise allows full control of servers, exposing source code and Git repositories. The strategic potential is high for intellectual property theft, supply chain attacks, and establishing persistence. Global geographical potential.",
+        "recommandations": [
+          "Disable open registration on Gogs instances.",
+          "Restrict server access via VPN or allow lists.",
+          "Check for compromise by reviewing suspicious PutContents API activity and repositories with random 8-character names.",
+          "Implement file integrity monitoring, especially for Git configuration files."
+        ],
+        "tags": [
+          "Gogs",
+          "zero_day",
+          "RCE",
+          "path_traversal",
+          "active_exploitation",
+          "Git_service",
+          "supply_chain",
+          "Supershell",
+          "C2",
+          "CVE-2024-55947",
+          "T1190",
+          "T1059"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185593/hacking/critical-gogs-zero-day-under-attack-700-servers-hacked.html"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "GeminiJack zero-click flaw in Gemini Enterprise allowed corporate data exfiltration",
+        "description": "Google fixed the 'GeminiJack' flaw in Gemini Enterprise (previously Vertex AI Search), a zero-click vulnerability allowing corporate data exfiltration via crafted emails, invites, or documents. This flaw exploits indirect prompt injection in the AI's Retrieval-Augmented Generation (RAG) systems. By embedding hidden instructions in shared documents, an attacker can trick the AI into retrieving 'poisoned' files, executing instructions across Gmail, Calendar, and Docs, and sending results to an attacker's server via a disguised image request, without user interaction or detection by traditional security tools.",
+        "threat_actor": "Unspecified",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link (via crafted emails/invites)",
+          "T1199 - Trusted Relationship (abuse of AI access to Workspace data)",
+          "T1041 - Exfiltration Over C2 Channel (via disguised image requests)",
+          "T1567 - Exfiltration Over Web Service (potential for data exfiltration)"
+        ],
+        "analyse": "Critical impact on the confidentiality of corporate data using Gemini Enterprise. The vulnerability represents a fundamental shift in the security landscape, as it exploits implicit trust in AI systems and their access to organizational data. The risk is silent and automatic exfiltration of large amounts of sensitive data (emails, calendars, documents) over long periods.",
+        "recommandations": [
+          "Implement regular audits of AI system interactions with corporate data.",
+          "Educate users and administrators about the risks of indirect prompt injections and new forms of social engineering.",
+          "Enhance monitoring of outbound HTTP requests from AI systems to detect unusual exfiltration patterns.",
+          "Update Gemini Enterprise/Vertex AI Search systems as soon as patches are available."
+        ],
+        "tags": [
+          "GeminiJack",
+          "Google_Gemini_Enterprise",
+          "zero_click",
+          "AI_vulnerability",
+          "prompt_injection",
+          "data_exfiltration",
+          "corporate_data",
+          "RAG_systems",
+          "Workspace_apps",
+          "T1566.002",
+          "T1041"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185574/hacking/geminijack-zero-click-flaw-in-gemini-enterprise-allowed-corporate-data-exfiltration.html"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite",
+        "description": "The Hamas-affiliated threat group, Ashen Lepus (aka WIRTE), is conducting a persistent espionage campaign against Middle Eastern governmental and diplomatic entities, including the Palestinian Authority, Egypt, Jordan, Oman, and Morocco. The campaign uses a new malware suite named AshTag, which includes a custom loader and an updated C2 architecture to evade analysis and blend into legitimate traffic. The group has enhanced its operational security, using legitimate subdomains for its C2 servers, encrypted/embedded payloads within HTML tags, and geolocation/User-Agent checks to avoid sandboxes. The primary objective is the theft of specific diplomatic documents, exfiltrated via the open-source Rclone tool.",
+        "threat_actor": "Ashen Lepus (aka WIRTE)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "api.healthylifefeed.com",
+            "api.softmatictech.com",
+            "auth.onlinefieldtech.com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphfishing Attachment (via benign PDF decoy)",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1059 - Command and Scripting Interpreter (AshenOrchestrator)",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/HTTPS C2)",
+          "T1041 - Exfiltration Over C2 Channel (Google Drive API, Rclone)",
+          "T1020 - Automated Exfiltration (Rclone)",
+          "T1083 - File and Directory Discovery",
+          "T1573.001 - Encrypted Channel: Symmetric Cryptography (AES-CBC C2 encryption)",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1027 - Obfuscated Files or Information"
+        ],
+        "analyse": "High impact on national security and diplomacy in Middle Eastern countries. Ashen Lepus's ability to adapt its TTPs and enhance operational security represents a persistent and evolving threat, making detection difficult for static defenses. The expansion of its victimology and phishing themes indicates an increased operational scope, targeting critical information related to regional conflicts.",
+        "recommandations": [
+          "Implement a defense-in-depth strategy, including EDR/XDR, NDR, and sandbox capabilities.",
+          "Educate users about phishing techniques and geopolitical lures.",
+          "Monitor C2 connections to legitimate subdomains for anomalies.",
+          "Hunt for IOCs related to the AshTag suite and Rclone usage.",
+          "Apply strict controls on DLL execution and downloaded files.",
+          "Update security systems to detect encrypted communications and payload embedding in legitimate web traffic."
+        ],
+        "tags": [
+          "Ashen_Lepus",
+          "WIRTE",
+          "Hamas",
+          "espionage",
+          "malware",
+          "AshTag",
+          "Middle_East",
+          "diplomatic",
+          "government",
+          "C2_architecture",
+          "DLL_side_loading",
+          "Rclone",
+          "OpSec",
+          "T1566.001",
+          "T1574.002"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Hunting for Mythic in network traffic",
+        "description": "The article analyzes the network activity of the Mythic C2 post-exploitation framework, popular among various threat actors (Mythic Likho, GOFFEE). It describes agent-to-C2 communication methods via HTTP/S, WebSocket, TCP, SMB, DNS, and MQTT, and the use of legitimate services like Discord and GitHub as C2 mediators. The analysis focuses on detecting Mythic traffic by searching for Base64-encoded UUID strings in transmitted data, particularly for SMB and TCP communications, and using Suricata rules. Behavioral analysis approaches are also discussed for cases where traffic is encrypted (HTTPS).",
+        "threat_actor": "Mythic Likho (Arcane Wolf), GOFFEE (Paper Werewolf), and other actors using the Mythic framework.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0011 - Command and Control",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/S, WebSocket)",
+          "T1071.004 - Application Layer Protocol: DNS",
+          "T1090.001 - Proxy: Internal Proxy (SMB pipes, TCP sockets)",
+          "T1573 - Encrypted Channel (AES256 for SMB, TLS for HTTPS)",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Impact on the detection of post-exploitation activities in enterprise networks. Mythic being a versatile tool, its detection is crucial at several stages of the Unified Kill Chain and many MITRE ATT&CK TTPs. The complexity lies in the use of varied protocols and the abuse of legitimate services, making traditional detection methods difficult without deep analysis of encrypted traffic. The potential is global, targeting any organization likely to be compromised by actors using Mythic.",
+        "recommandations": [
+          "Implement NDR (Network Detection and Response) solutions with deep traffic analysis capabilities.",
+          "Develop and deploy signature-based detection rules (e.g., Suricata) to identify specific UUID patterns in Mythic agent network traffic.",
+          "Set up TLS/SSL inspection to decrypt HTTPS traffic and analyze C2 communications based on legitimate services (Discord, GitHub).",
+          "Use behavioral analysis to detect Mythic C2 activities in encrypted traffic or when signatures are ineffective (e.g., encrypted SMBv3), while adjusting thresholds to minimize false positives.",
+          "Monitor for abnormal connections and atypical request frequencies to legitimate services (Discord, GitHub) from unexpected network segments."
+        ],
+        "tags": [
+          "Mythic_C2",
+          "post_exploitation",
+          "network_traffic_analysis",
+          "threat_detection",
+          "NDR",
+          "Suricata",
+          "UUID",
+          "SMB",
+          "TCP",
+          "Discord_C2",
+          "GitHub_C2",
+          "TLS_inspection",
+          "TA0011",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://securelist.com/detecting-mythic-in-network-traffic/118291/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "It didn’t take long: CVE-2025-55182 is now under active exploitation",
+        "description": "The critical vulnerability CVE-2025-55182 (CVSS 10.0), dubbed React2Shell, affecting React Server Components (RSC) is under active exploitation. The deserialization of untrusted data flaw (CWE-502) allows unauthenticated attackers to execute arbitrary commands, read, and write files on the server via a simple POST request. Exploitation attempts were recorded rapidly after details were published, with a significant increase. Attackers are deploying various malware, ranging from Mirai/Gafgyt variants to crypto miners (XMRig) and the RondoDox botnet, which eliminate competitors and neutralize Linux security modules. Some attackers also target Git and cloud credentials for software supply chain attacks.",
+        "threat_actor": "Various malware campaigns, including Mirai/Gafgyt, RondoDox botnet, crypto miner operators (XMRig).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-55182"
+          ],
+          "DOMAIN": [
+            "api.hellknight.xyz",
+            "gist.githubusercontent.com",
+            "gfxnick.emerald.usbx.me",
+            "meomeoli.mooo.com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [
+            "1f7e01a3355b52cbc92c908a61abf643",
+            "2915b3f8b703eb744fc54c81f4a9c67f",
+            "a1f4931992bf05e9bff4b173c15cab15",
+            "aac3165ece2959f39ff98334618d10d9",
+            "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+          ],
+          "FILE_HASH_SHA256": [
+            "0450fe19cfb91660e9874c0ce7a121e03ba4d5e0cf0557f03ee5a97a2de56511622f904bb82c8118da2966a957526a2b791f123b3aaff1b92873bd4b7a969387c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441",
+            "622f904bb82c8118da2966a957526a2b791f123b3aaff1b92873bd4b7a969387c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441",
+            "c6381ebf8f0349b8d47c5e623bbcef6be82057e481a2d07b177d9d94463a7441"
+          ],
+          "IPv4": [
+            "172.237.55.180",
+            "176.117.107.154",
+            "193.34.213.150",
+            "23.132.164.54",
+            "31.56.27.76",
+            "31.56.27.97",
+            "41.231.37.153",
+            "51.81.104.115",
+            "51.91.77.94",
+            "59.7.217.245",
+            "68.142.129.4",
+            "89.144.31.18"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "hxxp://172.237.55.180/b",
+            "hxxp://172.237.55.180/c",
+            "hxxp://176.117.107.154/bot",
+            "hxxp://193.34.213.150/nuts/bolts",
+            "hxxp://193.34.213.150/nuts/x86",
+            "hxxp://23.132.164.54/bot",
+            "hxxp://31.56.27.76/n2/x86",
+            "hxxp://31.56.27.97/scripts/4thepool_miner.sh",
+            "hxxp://41.231.37.153/rondo.aqu.sh",
+            "hxxp://41.231.37.153/rondo.arc700",
+            "hxxp://41.231.37.153/rondo.armeb",
+            "hxxp://41.231.37.153/rondo.armebhf",
+            "hxxp://41.231.37.153/rondo.armv4l",
+            "hxxp://41.231.37.153/rondo.armv5l",
+            "hxxp://41.231.37.153/rondo.armv6l",
+            "hxxp://41.231.37.153/rondo.armv7l",
+            "hxxp://41.231.37.153/rondo.i486",
+            "hxxp://41.231.37.153/rondo.i586",
+            "hxxp://41.231.37.153/rondo.i686",
+            "hxxp://41.231.37.153/rondo.m68k",
+            "hxxp://41.231.37.153/rondo.mips",
+            "hxxp://41.231.37.153/rondo.mipsel",
+            "hxxp://41.231.37.153/rondo.powerpc",
+            "hxxp://41.231.37.153/rondo.powerpc-440fp",
+            "hxxp://41.231.37.153/rondo.sh4",
+            "hxxp://41.231.37.153/rondo.sparc",
+            "hxxp://41.231.37.153/rondo.x86_64",
+            "hxxp://51.81.104.115/nuts/bolts",
+            "hxxp://51.81.104.115/nuts/x86",
+            "hxxp://51.91.77.94:13339/termite/51.91.77.94:13337",
+            "hxxp://59.7.217.245:7070/app2",
+            "hxxp://59.7.217.245:7070/c.sh",
+            "hxxp://68.142.129.4:8277/download/c.sh",
+            "hxxp://89.144.31.18/nuts/bolts",
+            "hxxp://89.144.31.18/nuts/x86",
+            "hxxps://api.hellknight.xyz/js",
+            "hxxps://gist.githubusercontent.com/demonic-agents/39e943f4de855e2aef12f34324cbf150/raw/e767e1cef1c35738689ba4df9c6f7f29a6afba1a/setup_c3pool_miner.sh"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059.003 - Command and Scripting Interpreter: Windows Command Shell",
+          "T1059.004 - Command and Scripting Interpreter: PowerShell",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1496 - Resource Hijacking (Crypto mining)",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools"
+        ],
+        "analyse": "Immediate and widespread impact on web servers using React Server Components. The ease of exploitation and public availability of a PoC increase the risk of massive attacks. Consequences include cryptocurrency mining, Linux server takeover, and credential theft, potentially leading to software supply chain attacks and cloud infrastructure compromise. The geographical potential is global due to widespread React usage.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2025-55182 on all React Server Components applications.",
+          "Monitor server logs for any suspicious activity, including unexpected POST requests and unusual command executions.",
+          "Deploy security solutions that can detect deserialization of untrusted data exploitation attempts.",
+          "Implement EDR/XDR protection to detect and block malware deployment like XMRig and RondoDox.",
+          "Strengthen security for Git credentials and cloud environments to prevent supply chain attacks."
+        ],
+        "tags": [
+          "CVE-2025-55182",
+          "React2Shell",
+          "React_Server_Components",
+          "RCE",
+          "active_exploitation",
+          "deserialization",
+          "web_application",
+          "crypto_miner",
+          "botnet",
+          "supply_chain_attack",
+          "T1190",
+          "T1496"
+        ],
+        "sources": [
+          "https://securelist.com/cve-2025-55182-exploitation/118331/",
+          "https://research.hisolutions.com/2025/12/weitere-news-im-dezember/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Malicious VSCode Marketplace extensions hid trojan in fake PNG file",
+        "description": "A stealthy campaign was discovered with 19 malicious extensions on the VSCode Marketplace, targeting developers. These extensions come pre-packaged with a 'node_modules' folder containing a modified dependency ('path-is-absolute' or '@actions/io') with an additional class executing an obfuscated JavaScript dropper, hidden in a 'lock' file. Another file, 'banner.png', posing as a PNG, hosts two malicious binaries: a LoLBin (cmstp.exe) and a Rust-based trojan. Automatic execution occurs when the VSCode IDE starts. Microsoft removed the extensions, but users who installed them should scan their systems.",
+        "threat_actor": "Unspecified, but a threat actor specialized in software supply chain attacks.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment (malicious extensions)",
+          "T1574.001 - Hijack Execution Flow: DLL Side-Loading (modified dependencies)",
+          "T1059.007 - Command and Scripting Interpreter: JavaScript/JScript (obfuscated dropper)",
+          "T1218.003 - System Binary Proxy Execution: CMSTP (LoLBin)",
+          "T1027 - Obfuscated Files or Information",
+          "T1105 - Ingress Tool Transfer (trojan via fake PNG)"
+        ],
+        "analyse": "Critical impact on the software supply chain and developers using VSCode. The concealment of malware in legitimate extensions and dependencies poses a high threat to code integrity and development environment security. Consequences can include intellectual property theft, unauthorized system access, and compromise of production applications. The geographical potential is global, targeting the developer ecosystem.",
+        "recommandations": [
+          "Inspect packages before installation, especially when the publisher is not reputable.",
+          "Use software supply chain analysis tools to detect malicious dependencies.",
+          "Regularly scan systems for signs of compromise after installing unverified extensions.",
+          "Keep systems and IDEs updated with the latest security versions.",
+          "Implement strict security policies for downloading and using IDE extensions."
+        ],
+        "tags": [
+          "VSCode_Marketplace",
+          "malicious_extensions",
+          "supply_chain_attack",
+          "trojan",
+          "developers",
+          "malware",
+          "node_modules",
+          "LoLBin",
+          "Rust_trojan",
+          "obfuscation",
+          "T1566.001",
+          "T1574.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-vscode-marketplace-extensions-hid-trojan-in-fake-png-file/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "NANOREMOTE, cousin of FINALDRAFT",
+        "description": "Elastic Security Labs discovered NANOREMOTE, a new full-featured Windows backdoor, sharing characteristics with FINALDRAFT and malware described in REF7707. It uses the Google Drive API for data exfiltration and payload staging, making detection difficult. The attack chain involves a loader (WMLOADER) that decrypts and executes NANOREMOTE in memory. This 64-bit C++ backdoor can perform reconnaissance, execute files and commands, and transfer files, using encrypted C2 communication (AES-CBC with Zlib) to a hardcoded IP address via HTTP POST (/api/client with User-Agent NanoRemote/1.0). It employs evasion techniques such as manual PE loading in memory.",
+        "threat_actor": "Unspecified, but strongly linked to FINALDRAFT and REF7707, suggesting a group with a shared codebase.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0011 - Command and Control",
+          "T1071.001 - Application Layer Protocol: Web Protocols (HTTP/S)",
+          "T1567.002 - Exfiltration Over Web Service: Cloud Storage (Google Drive API)",
+          "T1059 - Command and Scripting Interpreter",
+          "T1048 - Exfiltration Over Alternative Protocol",
+          "T1055 - Process Injection",
+          "T1027 - Obfuscated Files or Information (rolling XOR, AES-CBC encryption)",
+          "T1573.001 - Encrypted Channel: Symmetric Cryptography (AES-CBC)",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1082 - System Information Discovery"
+        ],
+        "analyse": "Critical impact on the confidentiality and integrity of compromised systems. NANOREMOTE's ability to use legitimate cloud services for C2 and exfiltration makes its detection very difficult, as traffic blends into normal network activity. The use of advanced evasion techniques like manual PE loading bypasses traditional EDR solutions. The strategic potential is espionage and large-scale sensitive data theft. The malware appears to be generated from a builder, indicating an organized actor.",
+        "recommandations": [
+          "Implement NDR solutions to analyze network traffic for specific C2 patterns, even if masked within legitimate traffic.",
+          "Monitor abnormal Google Drive API usage by unauthorized or unusual processes.",
+          "Deploy detection rules (e.g., 'Connection to Commonly Abused Webservices' rule) to identify interactions with abused cloud service APIs.",
+          "Strengthen code execution controls to prevent untraceable in-memory PE loading.",
+          "Perform proactive threat hunting to identify unique GUIDs generated by the malware on victim machines."
+        ],
+        "tags": [
+          "NANOREMOTE",
+          "FINALDRAFT",
+          "backdoor",
+          "malware",
+          "APT",
+          "espionage",
+          "Google_Drive_API",
+          "C2",
+          "data_exfiltration",
+          "loader",
+          "PE_loading",
+          "stealth",
+          "T1567.002",
+          "TA0011"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/nanoremote"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "New ConsentFix attack hijacks Microsoft accounts via Azure CLI",
+        "description": "A new variation of the ClickFix attack, dubbed 'ConsentFix,' abuses the Azure CLI OAuth app to hijack Microsoft accounts, without needing a password or bypassing multi-factor authentication (MFA). The attack involves tricking users into completing an Azure CLI OAuth authentication flow, then stealing the resulting authorization code to obtain a full Azure CLI access token. The campaign uses a fake Cloudflare Turnstile CAPTCHA widget requesting a valid business email address, filtering targets. Once the authorization code is pasted onto the malicious page, the attacker gains full access to the Microsoft account.",
+        "threat_actor": "Unspecified, but a threat actor using social engineering techniques.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link (social engineering for OAuth flow)",
+          "T1534 - Internal Spearphishing",
+          "T1078.004 - Valid Accounts: Cloud Accounts (hijacking Microsoft accounts)",
+          "T1098.001 - Account Manipulation: Additional Email Address (bypassing MFA)",
+          "T1110 - Brute Force (indirectly, by exploiting misconfiguration/trust in OAuth)"
+        ],
+        "analyse": "Critical impact on Microsoft account security, particularly for businesses using Azure CLI. The attack bypasses MFA and does not require a password, making it highly effective. The strategic potential is the theft of access to cloud resources and sensitive data. The difficulty is that the traffic appears legitimate (OAuth flow).",
+        "recommandations": [
+          "Look for unusual Azure CLI login activity, such as logins from new IP addresses.",
+          "Monitor for legacy Graph scopes, which attackers intentionally leverage to evade detection.",
+          "Educate users about social engineering attacks, especially those involving complex authentication flows or unusual information requests.",
+          "Implement conditional access policies and Zero Trust for cloud applications.",
+          "Regularly audit OAuth app permissions and access tokens."
+        ],
+        "tags": [
+          "ConsentFix",
+          "ClickFix",
+          "Azure_CLI",
+          "OAuth",
+          "Microsoft_accounts",
+          "account_hijack",
+          "MFA_bypass",
+          "social_engineering",
+          "phishing",
+          "Cloudflare_Turnstile",
+          "T1566.002",
+          "T1078.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-consentfix-attack-hijacks-microsoft-accounts-via-azure-cli/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Notepad++ fixes flaw that let attackers push malicious update files",
+        "description": "Notepad++ released version 8.8.9 to fix a vulnerability in its WinGUp update tool, following user reports that the updater retrieved malicious executables instead of legitimate update packages. This issue, potentially a supply chain attack or network traffic hijacking, allowed the GUP.exe file to spawn an unknown '%Temp%\\AutoUpdater.exe' executable, running commands to collect device information. Notepad++ and WinGUp have been hardened to verify the signature and certificate of downloaded installers, aborting the update if verification fails. Organizations in East Asia were reportedly targeted very specifically.",
+        "threat_actor": "Sophisticated threat actor with significant resources (capable of hijacking ISP traffic).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "notepad-plus-plus.org"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "https://notepad-plus-plus.org/update/getDownloadUrl.php?version="
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1195.003 - Supply Chain Compromise: Compromise Hardware Supply Chain (potential traffic hijacking at ISP level)",
+          "T1036.005 - Masquerading: Match Legitimate Name or Location (AutoUpdater.exe)",
+          "T1566.001 - Phishing: Spearphishing Attachment (malicious update)",
+          "T1082 - System Information Discovery (commands to collect device info)"
+        ],
+        "analyse": "Significant impact on trust in software updates and risk of widespread infection for Notepad++ users. The attack highlights the vulnerability of update mechanisms and attackers' ability to compromise the supply chain or network infrastructures. The apparent targeting in East Asia suggests espionage or competitive advantage motives. The risk was arbitrary code execution and information collection on victims' devices.",
+        "recommandations": [
+          "Upgrade Notepad++ to version 8.8.9 or higher immediately.",
+          "Ensure all official binaries and installers are signed with a valid certificate and verify these signatures.",
+          "Remove any custom root certificates previously installed if using versions older than v8.8.7.",
+          "Implement network security measures to detect and prevent update traffic hijacking (e.g., DNSSEC, SSL/TLS traffic monitoring).",
+          "Educate users on verifying the authenticity of software updates."
+        ],
+        "tags": [
+          "Notepad++",
+          "WinGUp",
+          "update_mechanism",
+          "supply_chain_attack",
+          "malicious_update",
+          "traffic_hijacking",
+          "code_execution",
+          "certificate_validation",
+          "T1195.002",
+          "T1036.005"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-fixes-flaw-that-let-attackers-push-malicious-update-files/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "One newsletter to rule them all (DeadLock ransomware, Brickstorm malware)",
+        "description": "Cisco Talos uncovered new TTPs related to DeadLock ransomware, which targets Windows machines with a custom encryption algorithm using time-based cryptographic keys. The actor uses the Bring Your Own Vulnerable Driver (BYOVD) technique with an unknown loader to exploit a Baidu Antivirus driver vulnerability (CVE-2024-51324), enabling EDR process termination. The 'stealthy and resilient' Brickstorm malware is used by China-sponsored actors to achieve long-term persistence in critical infrastructure networks, targeting VMware servers.",
+        "threat_actor": "Financially motivated threat actor (DeadLock ransomware), China-sponsored actors (Brickstorm malware).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-51324"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [
+            "1f7e01a3355b52cbc92c908a61abf643",
+            "2915b3f8b703eb744fc54c81f4a9c67f",
+            "a1f4931992bf05e9bff4b173c15cab15",
+            "aac3165ece2959f39ff98334618d10d9",
+            "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+          ],
+          "FILE_HASH_SHA256": [
+            "d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a",
+            "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218",
+            "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+            "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59"
+          ],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "https://talosintelligence.com/talos_file_reputation?s=d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a",
+            "https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "https://talosintelligence.com/talos_file_reputation?s=1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218",
+            "https://talosintelligence.com/talos_file_reputation?s=96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+            "https://talosintelligence.com/talos_file_reputation?s=90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1486 - Data Encrypted for Impact (DeadLock Ransomware)",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools (EDR termination)",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1574.009 - Hijack Execution Flow: Dylib Hijacking (BYOVD)",
+          "T1090 - Proxy (Brickstorm for persistence)",
+          "T1078 - Valid Accounts (initial access for Brickstorm)"
+        ],
+        "analyse": "High impact on enterprise resilience and critical infrastructure security. DeadLock ransomware uses sophisticated evasion techniques to bypass EDR defenses and complicate recovery. Brickstorm poses a persistent threat to VMware environments, with potential for long-term espionage and disruption of vital services. The geographical potential is global for DeadLock, and targeted at critical infrastructure for Brickstorm, with a particular interest in critical infrastructure networks.",
+        "recommandations": [
+          "Apply patches for all known vulnerabilities, including CVE-2024-51324 and other flaws affecting VMware.",
+          "Strengthen EDR defenses and endpoint security solutions to detect and prevent disabling attempts.",
+          "Implement strict network segmentation to protect VMware servers and critical infrastructure.",
+          "Deploy Snort rules (SIDs 65576, 65575, 301358) and ClamAV detections for DeadLock ransomware.",
+          "Monitor post-exploitation activities, especially those aimed at establishing persistence in critical networks."
+        ],
+        "tags": [
+          "DeadLock_ransomware",
+          "BYOVD",
+          "Baidu_Antivirus",
+          "CVE-2024-51324",
+          "EDR_bypass",
+          "Brickstorm_malware",
+          "China_sponsored",
+          "VMware_servers",
+          "critical_infrastructure",
+          "persistence",
+          "T1486",
+          "T1562.001"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/one-newsletter-to-rule-them-all/"
+        ],
+        "date": "2025-12-12"
+      },
+      {
+        "title": "Palestine Action: Operations and Global Network",
+        "description": "The Palestine Action group has intensified its operations globally following its designation as a terrorist organization in the UK in July 2025. This dual-track strategy involves inciting Domestic Violent Extremists (DVEs) outside the UK to increase attacks, while abstaining from major operations within the UK to contest the designation legally. The group's global network uses tactics like vandalism (red paint, blunt instruments), physical obstruction (human chains), and sabotage (damaging assets inside facilities) against defense contractors, militaries, financial services, logistics, and shipping companies perceived to support Israel. The most notable incident was the £7 million damage to RAF Brize Norton aircraft in June 2025.",
+        "threat_actor": "Palestine Action (including franchises like Palestina Libera, affiliates like Death to Toll, offshoots like Unity of Fields, and partners like Shut the System).",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1499 - Endpoint Denial of Service (obstruction)",
+          "T1485 - Data Destruction (sabotage)",
+          "T1560 - Archive Collected Data",
+          "T1078 - Valid Accounts (if breaching facilities)",
+          "T1566.002 - Phishing: Spearphishing Link (propaganda/incitement)"
+        ],
+        "analyse": "Significant physical threat to private and public sector facilities in Western Europe, North America, and Australia, particularly those in defense, finance, and logistics. The group's decentralized structure and reliance on DVEs make it adaptable. The increase in operational tempo due to geopolitical events (Israel-Hamas conflict) and the UK designation elevates the risk. The financial impact can be substantial (e.g., millions in damages to RAF aircraft).",
+        "recommandations": [
+          "Enhance physical security measures to deny internal access to facilities, as most costly attacks occurred post-breach.",
+          "Implement layered security, including external surveillance, access controls, and rapid response protocols for physical intrusions.",
+          "Conduct regular risk assessments for facilities that are potential targets due to perceived links to Israel or defense industries.",
+          "Monitor intelligence for DVE activity and specific TTPs promoted by Palestine Action or its affiliates.",
+          "Develop and test incident response plans for both physical and cyber attacks, considering the dual nature of these threats."
+        ],
+        "tags": [
+          "Palestine_Action",
+          "DVE",
+          "terrorism",
+          "physical_threat",
+          "vandalism",
+          "sabotage",
+          "pro_Palestine",
+          "RAF_Brize_Norton",
+          "defense_contractors",
+          "financial_sector",
+          "geopolitics",
+          "T1499",
+          "T1485"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/palestine-action-operations-and-global-network"
+        ],
+        "date": "2025-12-12"
+      }
+    ]
+  }
+}
