@@ -1,0 +1,1241 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber révèle une intensification des menaces, notamment via l'ingénierie sociale sophistiquée et l'exploitation de vulnérabilités critiques dans des logiciels largement utilisés. La menace de la supply chain et l'abus de l'IA par les attaquants sont des tendances préoccupantes. Des acteurs malveillants continuent de cibler les infrastructures critiques, exploitant des failles dans les systèmes de gestion de bases de données (PostgreSQL), les plateformes d'hébergement web (Plesk) et les frameworks d'IA (NVIDIA Merlin). Des campagnes de phishing abusent de services légitimes (PayPal) pour dérober des informations, et des fuites massives de données professionnelles alimentent ces attaques par des techniques d'ingénierie sociale basées sur l'IA. Les vulnérabilités d'exécution de code à distance (RCE) et d'escalade de privilèges (LPE) restent prédominantes, soulignant la nécessité d'une gestion rigoureuse des correctifs et d'une vigilance accrue sur la sécurité des configurations système, comme le souligne le guide de la CISA sur UEFI Secure Boot. L'état général des menaces est élevé, avec une convergence des techniques d'attaques ciblant les individus et les organisations, et une dépendance croissante envers des méthodes sophistiquées comme les contournements de correctifs et l'abus de fonctionnalités légitimes.",
+      "date": "2025-12-15"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "SHADOW-VOID-042 (possiblement Void Rabisu / ROMCOM / Storm-0978)",
+        "secteur": "Infrastructures critiques (défense, énergie, chimie), organisations de cybersécurité",
+        "modop": "Campagnes de spear-phishing sophistiquées se faisant passer pour Trend Micro, utilisation de faux avis de sécurité ou de plaintes de harcèlement, déploiement d'exploits JavaScript (y compris CVE-2018-6065 et potentiellement des 0-days plus récents), approche multi-étapes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spear_phishing",
+          "critical_infrastructure_targeting",
+          "impersonation",
+          "exploit_deployment",
+          "espionage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/shadow-void-042-impersonates-trend-micro-in-phishing-campaign-to-breach-critical-infrastructure/"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Divers (professionnels, e-commerce)",
+        "victime": "4.3 milliards d'enregistrements professionnels",
+        "description": "Une base de données MongoDB non sécurisée de 16 To a exposé 4.3 milliards d'enregistrements professionnels, principalement des données de type LinkedIn, comprenant noms, e-mails, téléphones, rôles professionnels, historique d'emploi, éducation, lieux et comptes sociaux. Cette fuite massive permet des attaques d'ingénierie sociale à grande échelle, y compris des fraudes au PDG et des attaques basées sur l'IA.",
+        "tags": [
+          "violation",
+          "breach",
+          "professional_data",
+          "linkedin_data",
+          "pii",
+          "unsecured_database",
+          "social_engineering",
+          "ai_driven_attacks"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185661/data-breach/experts-found-an-unsecured-16tb-database-containing-4-3b-professional-records/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Commerce de détail (fournitures de bureau)",
+        "victime": "Askul (Japon)",
+        "description": "Le détaillant japonais de fournitures de bureau Askul a subi une cyberattaque par ransomware en octobre, entraînant la fuite d'environ 740 000 ensembles de données concernant ses clients individuels, clients professionnels et employés. Cela inclut 590 000 données de clients professionnels et 130 000 de son service e-commerce Lohaco.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "e-commerce",
+          "ransomware",
+          "customer_data",
+          "employee_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/14/askul-says-740000-sets-of-data-breached-in-cyberattack/?pk_campaign=feed&pk_kwd=askul-says-740000-sets-of-data-breached-in-cyberattack"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Harbour Town Doctors (Australie)",
+        "description": "Des données de patients provenant de Harbour Town Doctors sont mises en vente pour environ 132 000 dollars suite à une prétendue violation de données. Les données médicales sont une cible prisée des cybercriminels en raison de leur sensibilité et de leur potentiel d'exploitation.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "ransomware",
+          "data_for_sale"
+        ],
+        "sources": [
+          "https://www.cyberdaily.au/security/13007-exclusive-harbour-town-doctors-suffers-alleged-patient-data-breach"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Unikcolors Media Institute (Kenya)",
+        "description": "Une violation de données a été signalée à l'Unikcolors Media Institute au Kenya, une institution éducative. La confiance dans cette information est jugée faible.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "educational_institution",
+          "cyber_threat"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115719930979932055"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (Corée du Sud)",
+        "description": "Une violation de données chez Coupang, la pire jamais enregistrée en Corée du Sud, a compromis des informations pour les deux tiers du pays. Les données incluent les noms, numéros de téléphone, adresses e-mail et adresses de livraison des clients. Les identifiants de connexion, numéros de carte de crédit et détails de paiement n'ont pas été affectés.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "customer_data",
+          "personally_identifiable_information",
+          "south_korea"
+        ],
+        "sources": [
+          "https://yro.slashdot.org/story/25/12/12/2054200/the-data-breach-that-hit-two-thirds-of-a-country?utm_source=rss1.0mainlinkanon&utm_medium=feed"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14665",
+        "cvss": 10.0,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans la fonction /goform/DhcpListClient du gestionnaire de requêtes HTTP, exploitable à distance et menant à l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "WH450",
+          "stack_based_buffer_overflow",
+          "RCE",
+          "HTTP_request_handler"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14665"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14659",
+        "cvss": 9.0,
+        "product": "D-Link DIR-860LB1 et DIR-868LB1 203b01/203b03",
+        "description": "Injection de commande dans le démon DHCP via la manipulation de l'argument Hostname, exploitable à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "DIR-860LB1",
+          "DIR-868LB1",
+          "command_injection",
+          "DHCP_daemon",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14659"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14656",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Débordement de tampon dans la fonction httpd du fichier /goform/openSchedWifi, par manipulation des arguments schedStartTime/schedEndTime, permettant une attaque à distance et une exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14656"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14655",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Débordement de tampon basé sur la pile dans la fonction formSetRebootTimer du fichier /goform/SetSysAutoRebbotCfg, par manipulation de l'argument rebootTime, permettant une attaque à distance et une exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "stack_based_buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14655"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14654",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Débordement de tampon basé sur la pile dans la fonction formSetPPTPUserList du fichier /goform/setPptpUserList, par manipulation de l'argument list, permettant une exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "stack_based_buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14654"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-13780",
+        "cvss": 9.1,
+        "product": "pgAdmin versions jusqu'à 9.10",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) permettant une prise de contrôle du serveur via la restauration d'une base de données malveillante, en contournant un correctif existant via le marqueur d'ordre d'octets UTF-8 (BOM).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pgAdmin",
+          "PostgreSQL",
+          "RCE",
+          "deserialization",
+          "database_restore"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-rce-cve-2025-13780-flaw-bypasses-fix-allowing-server-takeover-via-malicious-database-restore/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-33214",
+        "cvss": 8.8,
+        "product": "NVIDIA NVTabular",
+        "description": "Vulnérabilité de désérialisation non sécurisée dans le composant Workflow, pouvant mener à l'exécution de code, un déni de service, la divulgation d'informations ou la falsification de données dans les pipelines d'IA.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "Merlin",
+          "NVTabular",
+          "unsafe_deserialization",
+          "RCE",
+          "AI_pipeline"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-33213",
+        "cvss": 8.8,
+        "product": "NVIDIA Transformers4Rec",
+        "description": "Vulnérabilité de désérialisation dans le composant Trainer, pouvant mener à l'exécution de code, un déni de service, la divulgation d'informations ou la falsification de données dans les pipelines d'IA.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "Merlin",
+          "Transformers4Rec",
+          "unsafe_deserialization",
+          "RCE",
+          "AI_pipeline"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-66430",
+        "cvss": 9.1,
+        "product": "Plesk",
+        "description": "Vulnérabilité critique d'injection de données dans la configuration Apache via la fonctionnalité de répertoires protégés par mot de passe, permettant l'exécution de commandes en tant qu'utilisateur root (escalade de privilèges locale).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Plesk",
+          "web_hosting",
+          "apache_configuration",
+          "LPE",
+          "root_access"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-plesk-flaw-cve-2025-66430-risks-full-server-takeover-via-lpe-and-apache-config-injection/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-67900",
+        "cvss": 8.1,
+        "product": "NXLog Agent avant 6.11",
+        "description": "L'agent NXLog peut charger un fichier spécifié par la variable d'environnement OPENSSL_CONF, ce qui peut entraîner l'exécution de code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NXLog",
+          "OpenSSL",
+          "configuration_file_load",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67900"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Beware: PayPal subscriptions abused to send fake purchase emails",
+        "description": "Une arnaque par e-mail utilise la fonctionnalité d'abonnement de PayPal pour envoyer des e-mails légitimes contenant de fausses notifications d'achat. Les escrocs intègrent des informations frauduleuses (montants élevés, numéros de téléphone pour annuler) dans le champ de l'URL du service client de PayPal, en utilisant des caractères Unicode pour échapper aux filtres anti-spam. Les e-mails sont envoyés via des listes de diffusion Google Workspace ciblant les victimes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "receipt3@bbcpaglomoonlight.studio"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1598.003 - Phishing for Information: Spearphishing Link",
+          "T1078.004 - Valid Accounts: Cloud Accounts (Google Workspace abuse)"
+        ],
+        "analyse": "L'impact est principalement sur les utilisateurs individuels de PayPal, avec un risque de fraude financière et de perte de données personnelles. La tactique d'abuser d'un service légitime (PayPal) et d'outils comme Google Workspace rend la détection difficile et augmente la crédibilité des messages pour les victimes. Le ciblage des personnes âgées est mis en évidence en raison de leur vulnérabilité accrue aux manipulations. Potentiel géographique mondial.",
+        "recommandations": [
+          "Ne pas cliquer sur les liens ni appeler les numéros de téléphone dans les e-mails inattendus. Accéder directement au site web ou à l'application officielle du service concerné.",
+          "Utiliser un navigateur avec bloqueur de publicités/escroqueries pour rechercher des numéros de téléphone d'entreprise.",
+          "Se méfier des avertissements informatiques incluant un numéro de téléphone.",
+          "Ne pas répondre aux appels de numéros inconnus et laisser un message vocal. Ne pas parler aux escrocs pour éviter l'enregistrement de la voix."
+        ],
+        "tags": [
+          "phishing",
+          "scam",
+          "paypal",
+          "social_engineering",
+          "email_fraud",
+          "spam_evasion",
+          "google_workspace_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/beware-paypal-subscriptions-abused-to-send-fake-purchase-emails/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "CISA Releases Guidance for Managing UEFI Secure Boot on Enterprise Devices",
+        "description": "La CISA et la NSA ont publié un guide pour les entreprises sur la vérification et la gestion des configurations UEFI Secure Boot afin de contrer les menaces de bootkit. Le document aborde les vulnérabilités comme PKFail, BlackLotus (CVE-2023-24932) et BootHole qui contournent les protections au démarrage. Il souligne l'importance des audits réguliers au-delà de la simple dépendance au TPM ou à BitLocker, pour mitiger les risques de la chaîne d'approvisionnement et les malwares persistants au niveau du firmware.",
+        "threat_actor": "Non mentionné",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2023-24932"
+          ]
+        },
+        "mitre_ttps": [
+          "T1542.001 - Boot or Logon Autostart Execution: UEFI Bootkit",
+          "T1542.003 - Boot or Logon Autostart Execution: GRUB Bootkit",
+          "T1553.002 - Subvert Trust Control: Code Signing",
+          "T1553.004 - Subvert Trust Control: Bootkit"
+        ],
+        "analyse": "Cette guidance a un impact stratégique pour toutes les entreprises utilisant des systèmes UEFI, en particulier celles soucieuses de la sécurité de la chaîne d'approvisionnement. Les bootkits représentent une menace persistante et difficile à détecter, pouvant accorder un contrôle total et furtif du système. La recommandation vise à renforcer la posture de sécurité au niveau du firmware, un point critique souvent négligé.",
+        "recommandations": [
+          "Vérifier et gérer activement les configurations UEFI Secure Boot.",
+          "Auditer régulièrement les variables UEFI (PK, KEK, DB, DBX) pour détecter des certificats de test non fiables ou des modes permissifs.",
+          "Utiliser des outils comme Get-SecureBootUEFI ou efi-readvar et les outils GitHub de la NSA pour l'analyse des certificats et des hachages."
+        ],
+        "tags": [
+          "UEFI",
+          "secure_boot",
+          "bootkit",
+          "firmware_security",
+          "supply_chain_security",
+          "CISA_guidance",
+          "PKFail",
+          "BlackLotus",
+          "BootHole",
+          "enterprise_security"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-guidance-uefi-secure-boot/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Apache StreamPark Flaw Risks Data Decryption & Token Forgery via Hard-Coded Key and AES ECB Mode",
+        "description": "Apache StreamPark, un framework de développement d'applications de streaming, est affecté par des failles de sécurité critiques (CVE-2025-54947, CVE-2025-54981). Ces vulnérabilités résultent de l'utilisation d'une clé de chiffrement statique et codée en dur (CVE-2025-54947) et de l'emploi du mode AES-ECB avec un générateur de nombres aléatoires faible (CVE-2025-54981). Ces faiblesses cryptographiques permettent aux attaquants de déchiffrer des données sensibles et de forger des jetons d'authentification (comme les jetons JWT).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54947",
+            "CVE-2025-54981"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552 - Unsecured Credentials",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1059 - Command and Scripting Interpreter (implied by potential token forgery leading to unauthorized access)"
+        ],
+        "analyse": "L'impact est élevé pour les environnements cloud et les applications de streaming utilisant Apache StreamPark (versions 2.0.0 à 2.1.7). Les attaquants pourraient obtenir un accès non autorisé, manipuler des données ou compromettre l'intégrité des systèmes. La faiblesse cryptographique est fondamentale et affecte la confidentialité et l'intégrité des données ainsi que l'authentification. Le risque est particulièrement pertinent pour les plateformes de calcul en temps réel.",
+        "recommandations": [
+          "Mettre à jour Apache StreamPark vers une version corrigée (supérieure à 2.1.7).",
+          "Remplacer les clés de chiffrement codées en dur par des clés générées de manière unique et robuste pour chaque installation.",
+          "Cesser d'utiliser le mode AES-ECB et privilégier des modes de chiffrement plus sécurisés comme AES-GCM.",
+          "Utiliser des générateurs de nombres aléatoires cryptographiquement forts."
+        ],
+        "tags": [
+          "apache",
+          "streampark",
+          "cryptography",
+          "hard_coded_key",
+          "AES_ECB",
+          "token_forgery",
+          "data_decryption",
+          "authentication_bypass",
+          "weak_encryption",
+          "cloud_native",
+          "streaming_applications"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-streampark-flaw-risks-data-decryption-token-forgery-via-hard-coded-key-and-aes-ecb-mode/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Critical pgAdmin RCE (CVE-2025-13780) Flaw Bypasses Fix, Allowing Server Takeover Via Malicious Database Restore",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE), CVE-2025-13780 (CVSS 9.1), a été découverte dans pgAdmin (versions jusqu'à 9.10), l'outil de gestion PostgreSQL. Cette faille permet aux attaquants de prendre le contrôle du serveur hôte en exploitant une restauration de base de données malveillante. Elle contourne un correctif précédent en tirant parti de la façon dont pgAdmin traite l'encodage des fichiers, spécifiquement l'utilisation du marqueur d'ordre d'octets UTF-8 (BOM) pour aveugler le filtre de commandes dangereuses.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-13780"
+          ]
+        },
+        "mitre_ttps": [
+          "T1203 - Exploitation for Client Execution",
+          "T1210 - Exploitation of Remote Services",
+          "T1505.003 - Server Software Component: Web Shell (potential via RCE)",
+          "T1059 - Command and Scripting Interpreter"
+        ],
+        "analyse": "Cette vulnérabilité présente un risque catastrophique pour l'intégrité des bases de données et la sécurité des serveurs hébergeant pgAdmin, en particulier en mode serveur. Une exploitation réussie peut conduire à une exécution de code arbitraire avec des privilèges élevés, permettant la prise de contrôle totale du système. L'impact est significatif pour les entreprises et les développeurs utilisant PostgreSQL et pgAdmin pour la gestion de leurs données critiques.",
+        "recommandations": [
+          "Mettre à jour pgAdmin immédiatement vers la version 9.11 ou supérieure dès sa disponibilité, ou appliquer les correctifs fournis par le fournisseur.",
+          "S'assurer que les fichiers de restauration de base de données proviennent de sources fiables et sont scannés pour détecter des contenus malveillants."
+        ],
+        "tags": [
+          "pgAdmin",
+          "PostgreSQL",
+          "RCE",
+          "vulnerability",
+          "server_takeover",
+          "database_security",
+          "bypass",
+          "UTF-8_BOM",
+          "command_injection"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-rce-cve-2025-13780-flaw-bypasses-fix-allowing-server-takeover-via-malicious-database-restore/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Critical Plesk Flaw (CVE-2025-66430) Risks Full Server Takeover via LPE and Apache Config Injection",
+        "description": "Une vulnérabilité critique (CVE-2025-66430, CVSS 9.1) a été découverte dans Plesk, une plateforme d'hébergement web. Cette faille permet à un utilisateur Plesk d'injecter des données arbitraires dans la configuration d'Apache via la fonction de répertoires protégés par mot de passe. Cela peut entraîner une exécution de commandes en tant qu'utilisateur root, permettant une escalade de privilèges locale (LPE) et une prise de contrôle complète du serveur.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-66430"
+          ]
+        },
+        "mitre_ttps": [
+          "T1059 - Command and Scripting Interpreter",
+          "T1548 - Abuse Elevation Control Mechanism",
+          "T1548.001 - Abuse Elevation Control Mechanism: Bypass User Account Control",
+          "T1546.006 - Event Triggered Execution: LC_MESSAGES Local Privilege Escalation",
+          "T1068 - Exploitation for Privilege Escalation"
+        ],
+        "analyse": "L'impact est sévère pour les environnements d'hébergement partagé, car tout utilisateur Plesk disposant de la fonctionnalité des répertoires protégés par mot de passe peut obtenir un accès root au serveur, compromettant l'ensemble du système et tous les sites hébergés. Cela représente une menace majeure pour la confidentialité, l'intégrité et la disponibilité des données et services.",
+        "recommandations": [
+          "Appliquer immédiatement les mises à jour de sécurité de Plesk dès qu'elles sont disponibles.",
+          "Restreindre l'accès à la fonctionnalité 'Password-Protected Directories' aux utilisateurs de confiance uniquement, si possible."
+        ],
+        "tags": [
+          "plesk",
+          "vulnerability",
+          "web_hosting",
+          "LPE",
+          "Apache_configuration_injection",
+          "server_takeover",
+          "root_access",
+          "shared_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-plesk-flaw-cve-2025-66430-risks-full-server-takeover-via-lpe-and-apache-config-injection/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "NVIDIA Merlin Flaws Risk AI Pipeline RCE via Unsafe Deserialization in NVTabular & Transformers4Rec",
+        "description": "NVIDIA a corrigé des vulnérabilités de haute gravité (CVSS 8.8) dans son framework Merlin, affectant NVTabular (CVE-2025-33214) et Transformers4Rec (CVE-2025-33213). Ces failles de désérialisation non sécurisée peuvent permettre aux attaquants d'exécuter du code malveillant, de causer des dénis de service, de divulguer des informations ou de falsifier des données au sein des pipelines de recommandation basés sur l'IA, sur les systèmes Linux.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-33214",
+            "CVE-2025-33213"
+          ]
+        },
+        "mitre_ttps": [
+          "T1213 - Exploitation for Credential Access",
+          "T1505.001 - Server Software Component: Web Shell (potential via RCE)",
+          "T1059 - Command and Scripting Interpreter",
+          "T1499 - Endpoint Denial of Service"
+        ],
+        "analyse": "Ces vulnérabilités posent un risque majeur pour les entreprises et les chercheurs qui utilisent le framework NVIDIA Merlin pour le traitement de vastes ensembles de données et les systèmes de recommandation basés sur l'IA. Une exploitation réussie pourrait compromettre l'intégrité des données d'apprentissage, la fiabilité des modèles d'IA et la sécurité des systèmes sous-jacents, affectant potentiellement la supply chain des pipelines d'IA.",
+        "recommandations": [
+          "Appliquer les mises à jour de sécurité fournies par NVIDIA pour le framework Merlin.",
+          "Vérifier les installations Linux par rapport aux hachages de commit spécifiés par NVIDIA.",
+          "Mettre en œuvre des pratiques de désérialisation sécurisées et valider toutes les entrées utilisateur pour prévenir les attaques."
+        ],
+        "tags": [
+          "NVIDIA",
+          "Merlin",
+          "AI_framework",
+          "NVTabular",
+          "Transformers4Rec",
+          "unsafe_deserialization",
+          "RCE",
+          "data_tampering",
+          "denial_of_service",
+          "information_disclosure",
+          "linux_systems"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "SHADOW-VOID-042 Impersonates Trend Micro in Phishing Campaign to Breach Critical Infrastructure",
+        "description": "Le groupe SHADOW-VOID-042 a mené une campagne de spear-phishing sophistiquée, se faisant passer pour Trend Micro, pour cibler des organisations d'infrastructures critiques (défense, énergie, chimie) et même Trend Micro elle-même. La campagne utilise des e-mails d'avis de sécurité urgents ou des plaintes de harcèlement pour inciter les victimes à cliquer sur des liens malveillants, redirigeant vers de faux sites web. Des exploits JavaScript, y compris une ancienne vulnérabilité Chrome (CVE-2018-6065), sont déployés. Le groupe est potentiellement lié à Void Rabisu (ROMCOM ou Storm-0978).",
+        "threat_actor": "SHADOW-VOID-042 (possiblement Void Rabisu / ROMCOM / Storm-0978)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2018-6065"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1598.003 - Phishing for Information: Spearphishing Link",
+          "T1078 - Valid Accounts",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1105 - Ingress Tool Transfer",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task"
+        ],
+        "analyse": "La campagne représente une menace élevée pour les infrastructures critiques en raison de la sophistication de l'ingénierie sociale et de l'impersonation d'une entreprise de cybersécurité de confiance. L'approche multi-étapes et le ciblage adapté augmentent les chances de succès. La potentielle affiliation à des groupes étatiques (Void Rabisu/Russie) suggère des objectifs d'espionnage et de sabotage. L'utilisation d'exploits, même anciens, démontre une opportunité pour les attaquants. L'impact géographique est international.",
+        "recommandations": [
+          "Renforcer la sensibilisation des employés aux techniques de spear-phishing, en particulier aux e-mails d'avis de sécurité et aux plaintes HR.",
+          "Vérifier l'authenticité des communications de sécurité directement via les canaux officiels des fournisseurs.",
+          "Mettre en place des mesures de sécurité pour la navigation web (blocage d'exploits connus, gestion des correctifs des navigateurs).",
+          "Déployer des solutions de détection des menaces avancées sur les endpoints et le réseau."
+        ],
+        "tags": [
+          "SHADOW_VOID_042",
+          "Void_Rabisu",
+          "ROMCOM",
+          "Storm_0978",
+          "spear_phishing",
+          "critical_infrastructure",
+          "impersonation",
+          "Trend_Micro",
+          "exploit",
+          "CVE_2018_6065",
+          "espionage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/shadow-void-042-impersonates-trend-micro-in-phishing-campaign-to-breach-critical-infrastructure/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Unpatched Windows RasMan Flaw Allows Unprivileged Crash, Enabling Local System Privilege Escalation Exploit",
+        "description": "Une nouvelle vulnérabilité non corrigée a été découverte dans le service Windows Remote Access Connection Manager (RasMan), permettant à un utilisateur non privilégié de faire planter le service sur demande. Cette capacité à crasher RasMan est cruciale pour exploiter une faille d'escalade de privilèges précédemment corrigée (CVE-2025-59230). En faisant planter RasMan, un attaquant peut enregistrer un endpoint RPC malveillant avant que le service légitime ne redémarre, trompant ainsi d'autres services privilégiés pour se connecter à un processus malveillant et obtenir une exécution de code arbitraire en tant que Système Local.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-59230"
+          ]
+        },
+        "mitre_ttps": [
+          "T1068 - Exploitation for Privilege Escalation",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1574.008 - Hijack Execution Flow: DLL Side-Loading"
+        ],
+        "analyse": "Cette chaîne d'exploitation représente une menace sérieuse pour les systèmes Windows, car elle permet une escalade de privilèges de Local System à partir d'un utilisateur non administrateur. Bien que la faille initiale (CVE-2025-59230) soit corrigée, la découverte d'une méthode pour contourner cette correction via un crash de service non privilégié met en évidence la complexité de sécuriser les systèmes d'exploitation. L'impact est potentiellement élevé pour la compromission des postes de travail et serveurs Windows. Une micro-correction a été publiée par 0patch en attendant un correctif officiel de Microsoft.",
+        "recommandations": [
+          "Appliquer le micro-correctif de 0patch immédiatement pour les versions Windows non supportées ou en attente d'un correctif officiel.",
+          "Assurer la mise à jour rapide des systèmes Windows dès que Microsoft publie un correctif officiel.",
+          "Mettre en place une surveillance de l'activité des services critiques et des enregistrements RPC."
+        ],
+        "tags": [
+          "windows",
+          "rasman",
+          "privilege_escalation",
+          "LPE",
+          "unprivileged_crash",
+          "RPC_endpoint_hijacking",
+          "0patch",
+          "exploit_chain"
+        ],
+        "sources": [
+          "https://securityonline.info/unpatched-windows-rasman-flaw-allows-unprivileged-crash-enabling-local-system-privilege-escalation-exploit/"
+        ],
+        "date": "2025-12-15"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape shows an intensification of threats, particularly through sophisticated social engineering and the exploitation of critical vulnerabilities in widely used software. Supply chain threats and the abuse of AI by attackers are growing concerns. Malicious actors continue to target critical infrastructure, exploiting flaws in database management systems (PostgreSQL), web hosting platforms (Plesk), and AI frameworks (NVIDIA Merlin). Phishing campaigns abuse legitimate services (PayPal) to steal information, and massive leaks of professional data fuel these attacks with AI-driven social engineering techniques. Remote Code Execution (RCE) and Local Privilege Escalation (LPE) vulnerabilities remain prevalent, highlighting the need for rigorous patch management and increased vigilance over system configuration security, as emphasized by CISA's guidance on UEFI Secure Boot. The overall threat level is high, with a convergence of attack techniques targeting individuals and organizations, and a growing reliance on sophisticated methods such as patch bypasses and the abuse of legitimate functionalities.",
+      "date": "2025-12-15"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "SHADOW-VOID-042 (possibly Void Rabisu / ROMCOM / Storm-0978)",
+        "secteur": "Critical infrastructure (defense, energy, chemical), cybersecurity organizations",
+        "modop": "Sophisticated spear-phishing campaigns impersonating Trend Micro, using fake security advisories or harassment complaints, deployment of JavaScript exploits (including CVE-2018-6065 and potentially newer 0-days), multi-stage approach.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spear_phishing",
+          "critical_infrastructure_targeting",
+          "impersonation",
+          "exploit_deployment",
+          "espionage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/shadow-void-042-impersonates-trend-micro-in-phishing-campaign-to-breach-critical-infrastructure/"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Various (professionals, e-commerce)",
+        "victime": "4.3 billion professional records",
+        "description": "An unsecured 16TB MongoDB database exposed 4.3 billion professional records, mainly LinkedIn-style data, including names, emails, phone numbers, job roles, employment history, education, locations, and social accounts. This massive leak enables large-scale social engineering attacks, including CEO fraud and AI-driven attacks.",
+        "tags": [
+          "violation",
+          "breach",
+          "professional_data",
+          "linkedin_data",
+          "pii",
+          "unsecured_database",
+          "social_engineering",
+          "ai_driven_attacks"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185661/data-breach/experts-found-an-unsecured-16tb-database-containing-4-3b-professional-records/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Retail (office supplies)",
+        "victime": "Askul (Japan)",
+        "description": "Japanese office supplies retailer Askul suffered a ransomware cyberattack in October, leading to the leakage of approximately 740,000 data sets concerning its individual customers, corporate clients, and employees. This includes 590,000 corporate customer data sets and 130,000 from its Lohaco e-commerce service.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "e-commerce",
+          "ransomware",
+          "customer_data",
+          "employee_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/14/askul-says-740000-sets-of-data-breached-in-cyberattack/?pk_campaign=feed&pk_kwd=askul-says-740000-sets-of-data-breached-in-cyberattack"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Harbour Town Doctors (Australia)",
+        "description": "Patient data from Harbour Town Doctors is reportedly for sale for approximately $132,000 following an alleged data breach. Medical data is a prized target for cybercriminals due to its sensitivity and potential for further criminal exploitation.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "ransomware",
+          "data_for_sale"
+        ],
+        "sources": [
+          "https://www.cyberdaily.au/security/13007-exclusive-harbour-town-doctors-suffers-alleged-patient-data-breach"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Unikcolors Media Institute (Kenya)",
+        "description": "A data breach has been reported at Unikcolors Media Institute in Kenya, an educational institution. Confidence in this information is noted as low.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "educational_institution",
+          "cyber_threat"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115719930979932055"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang (South Korea)",
+        "description": "A data breach at Coupang, described as South Korea's worst-ever, compromised information for two-thirds of the country. Compromised data includes customer names, phone numbers, email addresses, and shipping addresses. Login credentials, credit card numbers, and payment details were not affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "customer_data",
+          "personally_identifiable_information",
+          "south_korea"
+        ],
+        "sources": [
+          "https://yro.slashdot.org/story/25/12/12/2054200/the-data-breach-that-hit-two-thirds-of-a-country?utm_source=rss1.0mainlinkanon&utm_medium=feed"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14665",
+        "cvss": 10.0,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in the /goform/DhcpListClient function of the HTTP Request Handler, remotely exploitable leading to code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "WH450",
+          "stack_based_buffer_overflow",
+          "RCE",
+          "HTTP_request_handler"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14665"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14659",
+        "cvss": 9.0,
+        "product": "D-Link DIR-860LB1 and DIR-868LB1 203b01/203b03",
+        "description": "Command injection in the DHCP Daemon through manipulation of the Hostname argument, remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "DIR-860LB1",
+          "DIR-868LB1",
+          "command_injection",
+          "DHCP_daemon",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14659"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14656",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Buffer overflow in the httpd function of the /goform/openSchedWifi file, through manipulation of schedStartTime/schedEndTime arguments, allowing remote attack and code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14656"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14655",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Stack-based buffer overflow in the formSetRebootTimer function of the /goform/SetSysAutoRebbotCfg file, through manipulation of the rebootTime argument, allowing remote attack and code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "stack_based_buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14655"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-14654",
+        "cvss": 9.0,
+        "product": "Tenda AC20 16.03.08.12",
+        "description": "Stack-based buffer overflow in the formSetPPTPUserList function of the /goform/setPptpUserList file, through manipulation of the list argument, allowing remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Tenda",
+          "AC20",
+          "stack_based_buffer_overflow",
+          "httpd",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14654"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-13780",
+        "cvss": 9.1,
+        "product": "pgAdmin versions up to 9.10",
+        "description": "Critical Remote Code Execution (RCE) vulnerability allowing server takeover via malicious database restore, bypassing an existing fix through UTF-8 Byte Order Mark (BOM).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pgAdmin",
+          "PostgreSQL",
+          "RCE",
+          "deserialization",
+          "database_restore"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-rce-cve-2025-13780-flaw-bypasses-fix-allowing-server-takeover-via-malicious-database-restore/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-33214",
+        "cvss": 8.8,
+        "product": "NVIDIA NVTabular",
+        "description": "Unsafe deserialization vulnerability in the Workflow component, potentially leading to code execution, denial of service, information disclosure, or data tampering in AI pipelines.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "Merlin",
+          "NVTabular",
+          "unsafe_deserialization",
+          "RCE",
+          "AI_pipeline"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-33213",
+        "cvss": 8.8,
+        "product": "NVIDIA Transformers4Rec",
+        "description": "Unsafe deserialization vulnerability in the Trainer component, potentially leading to code execution, denial of service, information disclosure, or data tampering in AI pipelines.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NVIDIA",
+          "Merlin",
+          "Transformers4Rec",
+          "unsafe_deserialization",
+          "RCE",
+          "AI_pipeline"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-66430",
+        "cvss": 9.1,
+        "product": "Plesk",
+        "description": "Critical data injection vulnerability in Apache configuration via Password-Protected Directories feature, allowing root command execution (Local Privilege Escalation).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Plesk",
+          "web_hosting",
+          "apache_configuration",
+          "LPE",
+          "root_access"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-plesk-flaw-cve-2025-66430-risks-full-server-takeover-via-lpe-and-apache-config-injection/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "cve_id": "CVE-2025-67900",
+        "cvss": 8.1,
+        "product": "NXLog Agent before 6.11",
+        "description": "NXLog Agent can load a file specified by the OPENSSL_CONF environment variable, potentially leading to arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "NXLog",
+          "OpenSSL",
+          "configuration_file_load",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67900"
+        ],
+        "date": "2025-12-15"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Beware: PayPal subscriptions abused to send fake purchase emails",
+        "description": "An email scam is abusing PayPal's 'Subscriptions' billing feature to send legitimate PayPal emails containing fake purchase notifications embedded in the Customer Service URL field. Scammers include fraudulent information (high amounts, phone numbers to cancel) using Unicode characters to evade spam filters. Emails are forwarded via Google Workspace mailing lists to target victims.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "receipt3@bbcpaglomoonlight.studio"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1598.003 - Phishing for Information: Spearphishing Link",
+          "T1078.004 - Valid Accounts: Cloud Accounts (Google Workspace abuse)"
+        ],
+        "analyse": "The primary impact is on individual PayPal users, with a risk of financial fraud and personal data loss. The tactic of abusing a legitimate service (PayPal) and tools like Google Workspace makes detection difficult and enhances the credibility of messages for victims. Targeting older individuals is highlighted due to their increased vulnerability to manipulation. Global geographic potential.",
+        "recommandations": [
+          "Do not click on links or call phone numbers in unexpected emails. Go directly to the official website or app of the service concerned.",
+          "Use a browser with an ad/scam blocker to search for company phone numbers.",
+          "Be wary of computer warnings that include a phone number.",
+          "Never answer calls from unknown callers; let them leave a voicemail. Avoid speaking with scammers to prevent voice recording."
+        ],
+        "tags": [
+          "phishing",
+          "scam",
+          "paypal",
+          "social_engineering",
+          "email_fraud",
+          "spam_evasion",
+          "google_workspace_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/beware-paypal-subscriptions-abused-to-send-fake-purchase-emails/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "CISA Releases Guidance for Managing UEFI Secure Boot on Enterprise Devices",
+        "description": "CISA and NSA have issued new guidance for enterprises on verifying and managing UEFI Secure Boot configurations to counter bootkit threats. The document addresses vulnerabilities like PKFail, BlackLotus (CVE-2023-24932), and BootHole that bypass boot-time protections. It emphasizes the importance of regular audits beyond mere reliance on TPM or BitLocker to mitigate supply chain risks and persistent firmware malware.",
+        "threat_actor": "Non mentionné",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2023-24932"
+          ]
+        },
+        "mitre_ttps": [
+          "T1542.001 - Boot or Logon Autostart Execution: UEFI Bootkit",
+          "T1542.003 - Boot or Logon Autostart Execution: GRUB Bootkit",
+          "T1553.002 - Subvert Trust Control: Code Signing",
+          "T1553.004 - Subvert Trust Control: Bootkit"
+        ],
+        "analyse": "This guidance has a strategic impact on all enterprises using UEFI systems, especially those concerned with supply chain security. Bootkits represent a persistent and hard-to-detect threat, capable of granting full, stealthy system control. The recommendation aims to strengthen firmware-level security, a critical and often overlooked area.",
+        "recommandations": [
+          "Actively verify and manage UEFI Secure Boot configurations.",
+          "Regularly audit UEFI variables (PK, KEK, DB, DBX) to detect untrusted test certificates or permissive modes.",
+          "Use tools like Get-SecureBootUEFI or efi-readvar and NSA's GitHub tools for certificate and hash analysis."
+        ],
+        "tags": [
+          "UEFI",
+          "secure_boot",
+          "bootkit",
+          "firmware_security",
+          "supply_chain_security",
+          "CISA_guidance",
+          "PKFail",
+          "BlackLotus",
+          "BootHole",
+          "enterprise_security"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cisa-guidance-uefi-secure-boot/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Apache StreamPark Flaw Risks Data Decryption & Token Forgery via Hard-Coded Key and AES ECB Mode",
+        "description": "Apache StreamPark, a streaming application development framework, is affected by critical security flaws (CVE-2025-54947, CVE-2025-54981). These vulnerabilities result from using a static, hard-coded encryption key (CVE-2025-54947) and the AES-ECB mode with a weak random number generator (CVE-2025-54981). These cryptographic weaknesses allow attackers to decrypt sensitive data and forge authentication tokens (such as JWT tokens).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54947",
+            "CVE-2025-54981"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552 - Unsecured Credentials",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1059 - Command and Scripting Interpreter (implied by potential token forgery leading to unauthorized access)"
+        ],
+        "analyse": "The impact is high for cloud environments and streaming applications using Apache StreamPark (versions 2.0.0 through 2.1.7). Attackers could gain unauthorized access, manipulate data, or compromise system integrity. The cryptographic weakness is fundamental and affects data confidentiality, integrity, and authentication. The risk is particularly relevant for real-time computing platforms.",
+        "recommandations": [
+          "Update Apache StreamPark to a patched version (above 2.1.7).",
+          "Replace hard-coded encryption keys with unique, robustly generated keys for each installation.",
+          "Cease using AES-ECB mode and prefer more secure encryption modes like AES-GCM.",
+          "Use cryptographically strong random number generators."
+        ],
+        "tags": [
+          "apache",
+          "streampark",
+          "cryptography",
+          "hard_coded_key",
+          "AES_ECB",
+          "token_forgery",
+          "data_decryption",
+          "authentication_bypass",
+          "weak_encryption",
+          "cloud_native",
+          "streaming_applications"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-streampark-flaw-risks-data-decryption-token-forgery-via-hard-coded-key-and-aes-ecb-mode/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Critical pgAdmin RCE (CVE-2025-13780) Flaw Bypasses Fix, Allowing Server Takeover Via Malicious Database Restore",
+        "description": "A critical Remote Code Execution (RCE) vulnerability, CVE-2025-13780 (CVSS 9.1), was discovered in pgAdmin (versions up to 9.10), the PostgreSQL management tool. This flaw allows attackers to take over the host server by exploiting a malicious database restore. It bypasses a previous fix by leveraging how pgAdmin processes file encoding, specifically using the UTF-8 Byte Order Mark (BOM) to blind the dangerous command filter.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-13780"
+          ]
+        },
+        "mitre_ttps": [
+          "T1203 - Exploitation for Client Execution",
+          "T1210 - Exploitation of Remote Services",
+          "T1505.003 - Server Software Component: Web Shell (potential via RCE)",
+          "T1059 - Command and Scripting Interpreter"
+        ],
+        "analyse": "This vulnerability poses a catastrophic risk to database integrity and the security of servers hosting pgAdmin, particularly in server mode. Successful exploitation can lead to arbitrary code execution with high privileges, allowing full system takeover. The impact is significant for businesses and developers using PostgreSQL and pgAdmin for managing their critical data.",
+        "recommandations": [
+          "Immediately update pgAdmin to version 9.11 or higher as soon as it's available, or apply vendor-supplied mitigations.",
+          "Ensure that database restore files originate from trusted sources and are scanned for malicious content."
+        ],
+        "tags": [
+          "pgAdmin",
+          "PostgreSQL",
+          "RCE",
+          "vulnerability",
+          "server_takeover",
+          "database_security",
+          "bypass",
+          "UTF-8_BOM",
+          "command_injection"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-pgadmin-rce-cve-2025-13780-flaw-bypasses-fix-allowing-server-takeover-via-malicious-database-restore/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Critical Plesk Flaw (CVE-2025-66430) Risks Full Server Takeover via LPE and Apache Config Injection",
+        "description": "A critical vulnerability (CVE-2025-66430, CVSS 9.1) has been discovered in Plesk, a web hosting platform. This flaw allows a Plesk user to inject arbitrary data into the Apache configuration via the Password-Protected Directories feature. This can lead to command execution as the root user, enabling Local Privilege Escalation (LPE) and full server takeover.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-66430"
+          ]
+        },
+        "mitre_ttps": [
+          "T1059 - Command and Scripting Interpreter",
+          "T1548 - Abuse Elevation Control Mechanism",
+          "T1548.001 - Abuse Elevation Control Mechanism: Bypass User Account Control",
+          "T1546.006 - Event Triggered Execution: LC_MESSAGES Local Privilege Escalation",
+          "T1068 - Exploitation for Privilege Escalation"
+        ],
+        "analyse": "The impact is severe for shared hosting environments, as any Plesk user with access to the Password-Protected Directories feature can gain root-level access on the server, compromising the entire system and all hosted sites. This represents a major threat to the confidentiality, integrity, and availability of data and services.",
+        "recommandations": [
+          "Immediately apply Plesk security updates as soon as they are available.",
+          "Restrict access to the 'Password-Protected Directories' feature to trusted users only, if possible."
+        ],
+        "tags": [
+          "plesk",
+          "vulnerability",
+          "web_hosting",
+          "LPE",
+          "Apache_configuration_injection",
+          "server_takeover",
+          "root_access",
+          "shared_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-plesk-flaw-cve-2025-66430-risks-full-server-takeover-via-lpe-and-apache-config-injection/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "NVIDIA Merlin Flaws Risk AI Pipeline RCE via Unsafe Deserialization in NVTabular & Transformers4Rec",
+        "description": "NVIDIA has patched high-severity vulnerabilities (CVSS 8.8) in its Merlin framework, affecting NVTabular (CVE-2025-33214) and Transformers4Rec (CVE-2025-33213). These unsafe deserialization flaws can allow attackers to execute malicious code, cause denial of service, disclose information, or tamper with data within AI recommendation pipelines on Linux systems.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-33214",
+            "CVE-2025-33213"
+          ]
+        },
+        "mitre_ttps": [
+          "T1213 - Exploitation for Credential Access",
+          "T1505.001 - Server Software Component: Web Shell (potential via RCE)",
+          "T1059 - Command and Scripting Interpreter",
+          "T1499 - Endpoint Denial of Service"
+        ],
+        "analyse": "These vulnerabilities pose a major risk to businesses and researchers using the NVIDIA Merlin framework for processing large datasets and AI-based recommendation systems. Successful exploitation could compromise the integrity of training data, the reliability of AI models, and the security of underlying systems, potentially affecting the AI pipeline supply chain.",
+        "recommandations": [
+          "Apply security updates provided by NVIDIA for the Merlin framework.",
+          "Verify Linux installations against the commit hashes specified by NVIDIA.",
+          "Implement secure deserialization practices and validate all user inputs to prevent attacks."
+        ],
+        "tags": [
+          "NVIDIA",
+          "Merlin",
+          "AI_framework",
+          "NVTabular",
+          "Transformers4Rec",
+          "unsafe_deserialization",
+          "RCE",
+          "data_tampering",
+          "denial_of_service",
+          "information_disclosure",
+          "linux_systems"
+        ],
+        "sources": [
+          "https://securityonline.info/nvidia-merlin-flaws-risk-ai-pipeline-rce-via-unsafe-deserialization-in-nvtabular-transformers4rec/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "SHADOW-VOID-042 Impersonates Trend Micro in Phishing Campaign to Breach Critical Infrastructure",
+        "description": "The SHADOW-VOID-042 group conducted a sophisticated spear-phishing campaign impersonating Trend Micro to target critical infrastructure organizations (defense, energy, chemical) and Trend Micro itself. The campaign uses urgent security advisory emails or harassment complaints to trick victims into clicking malicious links, redirecting them to fake websites. JavaScript exploits, including an old Chrome vulnerability (CVE-2018-6065), are deployed. The group is potentially linked to Void Rabisu (ROMCOM or Storm-0978).",
+        "threat_actor": "SHADOW-VOID-042 (possibly Void Rabisu / ROMCOM / Storm-0978)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2018-6065"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1598.003 - Phishing for Information: Spearphishing Link",
+          "T1078 - Valid Accounts",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1105 - Ingress Tool Transfer",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task"
+        ],
+        "analyse": "The campaign poses a high threat to critical infrastructure due to the sophistication of social engineering and impersonation of a trusted cybersecurity company. The multi-stage approach and tailored targeting increase the chances of success. Potential affiliation with state-sponsored groups (Void Rabisu/Russia) suggests espionage and sabotage objectives. The use of exploits, even older ones, demonstrates opportunistic attacker behavior. The geographic impact is international.",
+        "recommandations": [
+          "Strengthen employee awareness of spear-phishing techniques, especially security advisory and HR complaint emails.",
+          "Verify the authenticity of security communications directly through official vendor channels.",
+          "Implement web browsing security measures (blocking known exploits, browser patch management).",
+          "Deploy advanced threat detection solutions on endpoints and network."
+        ],
+        "tags": [
+          "SHADOW_VOID_042",
+          "Void_Rabisu",
+          "ROMCOM",
+          "Storm_0978",
+          "spear_phishing",
+          "critical_infrastructure",
+          "impersonation",
+          "Trend_Micro",
+          "exploit",
+          "CVE_2018_6065",
+          "espionage",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/shadow-void-042-impersonates-trend-micro-in-phishing-campaign-to-breach-critical-infrastructure/"
+        ],
+        "date": "2025-12-15"
+      },
+      {
+        "title": "Unpatched Windows RasMan Flaw Allows Unprivileged Crash, Enabling Local System Privilege Escalation Exploit",
+        "description": "A new unpatched vulnerability has been discovered in the Windows Remote Access Connection Manager (RasMan) service, allowing an unprivileged user to crash the service on demand. This ability to crash RasMan is crucial for exploiting a previously patched privilege escalation flaw (CVE-2025-59230). By crashing RasMan, an attacker can register a malicious RPC endpoint before the legitimate service restarts, tricking other privileged services into connecting to a malicious process and achieving arbitrary code execution as Local System.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-59230"
+          ]
+        },
+        "mitre_ttps": [
+          "T1068 - Exploitation for Privilege Escalation",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+          "T1574.008 - Hijack Execution Flow: DLL Side-Loading"
+        ],
+        "analyse": "This exploit chain poses a serious threat to Windows systems, as it enables Local System privilege escalation from an unprivileged user. While the original flaw (CVE-2025-59230) is patched, the discovery of a method to bypass this fix via an unprivileged service crash highlights the complexity of securing operating systems. The impact is potentially high for compromising Windows workstations and servers. A micropatch has been released by 0patch while awaiting an official Microsoft fix.",
+        "recommandations": [
+          "Apply 0patch's micropatch immediately for unsupported Windows versions or those awaiting an official fix.",
+          "Ensure prompt updating of Windows systems once Microsoft releases an official patch.",
+          "Implement monitoring of critical service activity and RPC registrations."
+        ],
+        "tags": [
+          "windows",
+          "rasman",
+          "privilege_escalation",
+          "LPE",
+          "unprivileged_crash",
+          "RPC_endpoint_hijacking",
+          "0patch",
+          "exploit_chain"
+        ],
+        "sources": [
+          "https://securityonline.info/unpatched-windows-rasman-flaw-allows-unprivileged-crash-enabling-local-system-privilege-escalation-exploit/"
+        ],
+        "date": "2025-12-15"
+      }
+    ]
+  }
+}
