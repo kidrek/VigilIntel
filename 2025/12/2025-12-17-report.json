@@ -1,0 +1,2639 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber de cette période révèle une intensification des menaces persistantes avancées (APT) par des acteurs étatiques, notamment russes (APT44/GRU) et alignés avec la RPC (Ink Dragon), qui ciblent les infrastructures critiques et les entités gouvernementales. Une évolution tactique majeure est observée chez APT44, délaissant l'exploitation de vulnérabilités N-day au profit des dispositifs de périphérie mal configurés pour la récolte de justificatifs d'identité. L'exploitation active de vulnérabilités zero-day et critiques (WebKit, Fortinet, FreePBX) demeure une menace élevée, avec des délais d'exploitation très courts après la publication des correctifs. L'écosystème du cybercrime se professionnalise avec l'émergence de Malware-as-a-Service (MaaS) comme Cellik, permettant l'intégration de logiciels malveillants dans des applications légitimes. Des campagnes d'ingénierie sociale sophistiquées comme GhostPairing exploitent la confiance des utilisateurs et les fonctionnalités des applications de messagerie. Les hyperviseurs sont également devenus une cible privilégiée des groupes de ransomware en raison de leur impact multiplicateur. De plus, la surface d'attaque est étendue par l'abus de domaines 'parkés' et la prolifération des identités non-humaines liées à l'IA, nécessitant une réévaluation des stratégies de gestion des identités. Enfin, les fuites de données issues de fournisseurs tiers, ainsi que la surveillance illégale par des fabricants de télévisions, soulignent les risques persistants liés à la chaîne d'approvisionnement et à la protection de la vie privée. La menace est généralisée et en constante évolution, exigeant une vigilance accrue, une gestion proactive des vulnérabilités, un renforcement de l'hygiène cyber, et une approche par couches de la sécurité.",
+      "date": "2025-12-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT44 (Sandworm, Seashell Blizzard, Curly COMrades)",
+        "secteur": "Infrastructures critiques occidentales (énergie, télécommunications, services de sécurité gérés), clients de l'infrastructure cloud",
+        "modop": "Initialement exploitation de vulnérabilités (WatchGuard, Confluence, Veeam) de 2021 à 2024. Transition vers le ciblage de dispositifs de périphérie réseau mal configurés (routeurs, passerelles VPN, appliances de gestion réseau) pour l'accès initial, la récolte de justificatifs d'identité, les attaques par rejeu, le mouvement latéral vers les environnements cloud, et l'interception passive de trafic réseau.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT44",
+          "Sandworm",
+          "GRU",
+          "État-nation",
+          "Espionnage",
+          "Infrastructure_critique",
+          "Dispositifs_de_périphérie",
+          "Récolte_de_justificatifs",
+          "Cloud_Infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-disrupts-russian-gru-hackers-attacking-edge-network-devices/",
+          "https://fieldeffect.com/blog/apt44-shifts-tactics-exploits-edge-devices-critical-infra",
+          "https://cybersecuritynews.com/russian-hackers-attacking-network-edge-devices/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "APT28",
+        "secteur": "Organismes ministériels français, gouvernements locaux, DTIB, aérospatiale, recherche, think-tanks, entités financières",
+        "modop": "Campagne de piratage ciblant des entités françaises depuis 2021, compromission de serveurs de messagerie.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT28",
+          "Russie",
+          "État-nation",
+          "Espionnage",
+          "Gouvernement",
+          "Compromission_messagerie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "Cellik (Malware-as-a-Service)",
+        "secteur": "Utilisateurs Android via des applications du Google Play Store",
+        "modop": "Offert sur des forums cybercriminels, permet d'intégrer le malware dans n'importe quelle application du Google Play Store. Capacités incluent capture et diffusion d'écran en temps réel, interception de notifications, navigation dans le système de fichiers, exfiltration de fichiers, effacement de données, et communication C2 chiffrée. Prétend contourner Play Protect.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Cellik",
+          "MaaS",
+          "Android",
+          "Malware",
+          "Espionnage",
+          "Exfiltration_données",
+          "Contournement_sécurité"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cellik-android-malware-builds-malicious-versions-from-google-play-apps/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "GhostPoster",
+        "secteur": "Utilisateurs d'extensions Firefox",
+        "modop": "Campagne cachant du code JavaScript malveillant dans le logo d'image d'extensions Firefox. Le script agit comme un chargeur qui récupère la charge utile principale d'un serveur distant, avec une récupération intentionnellement sporadique (une fois sur dix tentatives) pour éviter la détection. Surveille l'activité du navigateur et installe une porte dérobée.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "GhostPoster",
+          "Malware",
+          "Extension_navigateur",
+          "Stéganographie",
+          "Porte_dérobée",
+          "Surveillance"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ghostposter-attacks-hide-malicious-javascript-in-firefox-addon-logos/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "Ink Dragon (CL-STA-0049, Earth Alux, REF7707)",
+        "secteur": "Gouvernement, télécommunications, infrastructures du secteur public (Asie du Sud-Est, Amérique du Sud, Europe)",
+        "modop": "Cluster d'espionnage aligné avec la RPC. Accès initial via la désérialisation ViewState ASP.NET (clés machine divulguées) ou l'exploitation de la vulnérabilité ToolShell SharePoint (CVE-2025-49706, CVE-2025-53771, CVE-2025-49704, CVE-2025-53770). Déploie un module d'écoute IIS ShadowPad pour créer un réseau de relais distribué, récolte des identifiants IIS, utilise un proxy RDP pour le mouvement latéral et l'élévation de privilèges (dominance de domaine). Utilise la porte dérobée FinalDraft (C2 via Microsoft Graph API, brouillons d'e-mails), LalsDumper (extraction LSASS), et 032Loader (chargeur basé sur le sideloading). Déploiement d'un pilote rootkit en mode noyau (wingtb.sys) pour la persistance et la dissimulation.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Ink_Dragon",
+          "PRC",
+          "État-nation",
+          "Espionnage",
+          "Gouvernement",
+          "Télécommunications",
+          "Infrastructure_publique",
+          "ShadowPad",
+          "FinalDraft",
+          "Réseau_de_relais",
+          "Désérialisation",
+          "Élévation_de_privilèges",
+          "Mouvement_latéral",
+          "Rootkit"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Plateformes d'analyse de données (Mixpanel), industries diverses (logiciels, cloud)",
+        "modop": "Extorsion suite au vol de données d'utilisateurs Premium de Pornhub via une violation de Mixpanel. A revendiqué le vol de 94 Go de données, y compris l'historique de recherche, de visionnage et de téléchargement, des e-mails, des lieux, des métadonnées vidéo et des horodatages. Impliqué dans d'autres violations majeures et le lancement d'une plateforme ransomware-as-a-service (ShinySpid3r).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ShinyHunters",
+          "Cybercriminalité",
+          "Extorsion",
+          "Violation_données",
+          "Mixpanel",
+          "Ransomware_as_a_Service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pornhub-targeted-in-extortion-attempt-following-mixpanel-breach-exposing-user-activity/",
+          "https://gbhackers.com/pornhub-suffers-data-breach-in-attack-claimed-by-shinyhunters/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Énergie, gouvernement",
+        "theme": "Attaque cybernétique étatique",
+        "description": "Des pirates informatiques liés au GRU russe (APT44/Sandworm) ciblent les infrastructures critiques occidentales, notamment les services publics d'électricité, les fournisseurs d'énergie et les télécommunications, en exploitant des dispositifs de périphérie réseau mal configurés pour la récolte de justificatifs d'identité et le maintien d'un accès persistant. Cette campagne a évolué depuis 2021, délaissant l'exploitation de vulnérabilités connues pour se concentrer sur les configurations erronées, démontrant un changement stratégique vers des cibles plus faciles.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russie",
+          "GRU",
+          "APT44",
+          "Infrastructure_critique",
+          "Espionnage_étatique",
+          "Cyberattaque"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-disrupts-russian-gru-hackers-attacking-edge-network-devices/",
+          "https://fieldeffect.com/blog/apt44-shifts-tactics-exploits-edge-devices-critical-infra",
+          "https://cybersecuritynews.com/russian-hackers-attacking-network-edge-devices/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Gouvernement, administration publique",
+        "theme": "Cyberattaque étatique",
+        "description": "Le ministre de l'Intérieur français a confirmé qu'une cyberattaque avait compromis les serveurs de messagerie du ministère. L'attaque, détectée entre le 11 et le 12 décembre, est attribuée au groupe APT28, lié à la Russie, dans le cadre d'une campagne de piratage plus large ciblant des entités françaises depuis 2021.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Gouvernement",
+          "APT28",
+          "Cyberattaque",
+          "Serveurs_messagerie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Mondial, Économie, Politique Européenne",
+        "theme": "Évolution du marché automobile, dépendances stratégiques",
+        "description": "La Commission européenne envisage de lever l'interdiction de vente de véhicules thermiques neufs d'ici 2035, une décision initialement justifiée par des enjeux écologiques. Ce revirement potentiel, influencé par un changement d'équilibre politique et des difficultés économiques (notamment en Allemagne), met en lumière les dépendances stratégiques (terres rares, technologie chinoise) et l'instabilité des politiques européennes, entravant les investissements à long terme et la confiance industrielle.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Union_Européenne",
+          "Marché_automobile",
+          "Dépendance_technologique",
+          "Écologie",
+          "Politique_économique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/vente-vehicules-thermi/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Mondial, Relations Internationales",
+        "theme": "Fragilité du droit international, conflit israélo-palestinien",
+        "description": "Analyse de la position de l'Allemagne face au conflit israélo-palestinien et à ses relations avec Israël. L'article aborde également la question de l'applicabilité et du respect du droit international, en particulier concernant les crimes commis à Gaza, et la lutte contre l'impunité, soulignant un consensus d'expertise internationale sur des faits constitutifs de génocide et le rôle limité des institutions juridiques face aux États influents.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Droit_international",
+          "Conflit_Gaza",
+          "Impunité",
+          "Allemagne",
+          "Israël",
+          "Palestine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lallemagne-face-a-israel-les-mardis-de-liris/",
+          "https://www.iris-france.org/le-droit-international-est-il-mort-a-gaza-4-questions-a-jerome-heurtaux/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Mondial, Politique Européenne",
+        "theme": "Sécurité et défense européenne, minilatéralisme",
+        "description": "L'Europe connaît une 'révolution minilatérale' en matière de défense et de sécurité, marquée par une prolifération de formats ad hoc (E3, E5, Coalition of the Willing) en réponse aux menaces croissantes de la Russie et à l'incertitude de l'engagement américain. Cette approche vise à renforcer le leadership européen et à diversifier les partenariats, bien qu'elle comporte des risques de fragmentation et de retour à une politique des grandes puissances, nécessitant une coordination stratégique accrue.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "Sécurité",
+          "Défense",
+          "Minilatéralisme",
+          "OTAN",
+          "Union_Européenne",
+          "Russie",
+          "États_Unis"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/europes-minilateral-moment"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Pétrole et Gaz, Gouvernement",
+        "theme": "Cyberattaque, tensions géopolitiques",
+        "description": "La compagnie pétrolière nationale du Venezuela, Petróleos de Venezuela (PDVSA), a subi une cyberattaque qui a perturbé ses opérations d'exportation et ses systèmes administratifs. Cet incident intervient dans un contexte de tensions croissantes entre le Venezuela et les États-Unis, la compagnie accusant des intérêts étrangers d'orchestrer l'attaque pour déstabiliser le pays et s'emparer de son pétrole.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Venezuela",
+          "PDVSA",
+          "Cyberattaque",
+          "Ransomware",
+          "Énergie",
+          "Tensions_géopolitiques"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-venezuelan-oil-giant-pdvsas-operations/",
+          "https://securityaffairs.com/185755/security/a-cyber-attack-hit-petroleos-de-venezuela-pdvsa-disrupting-export-operations.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Technologie, Publicité, Éthique",
+        "theme": "Pratiques commerciales et fraudes en ligne liées à des acteurs étatiques",
+        "description": "Meta a toléré un volume important d'annonces frauduleuses, de jeux d'argent illégaux et de produits interdits provenant d'annonceurs chinois, générant plus de 3 milliards de dollars de revenus. Des documents internes révèlent que Meta était consciente de ces pratiques mais a privilégié la croissance des revenus, utilisant un mécanisme de 'liste blanche' pour les clients majeurs chinois qui contournait les politiques de modération, soulevant de sérieuses questions éthiques et de responsabilité sociale pour le géant technologique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Meta",
+          "Chine",
+          "Fraude_en_ligne",
+          "Publicité_malveillante",
+          "Éthique_entreprise",
+          "Régulation"
+        ],
+        "sources": [
+          "https://securityonline.info/profit-over-safety-meta-earns-3b-from-chinese-scam-ads-executives-tolerated-fraud-for-revenue-growth/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Société, Politique intérieure",
+        "theme": "Nationalisme chez les jeunes turcs",
+        "description": "Analyse de la nouvelle vague de nationalisme qui anime la jeunesse turque, dans un contexte d'intensification de l'autoritarisme. Ce phénomène pourrait redessiner les équilibres politiques du pays. Le courant nationaliste, historiquement porté par le MHP, est de plus en plus intégré par l'AKP, consolidant une synthèse idéologique turco-islamique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Turquie",
+          "Nationalisme",
+          "Politique_intérieure",
+          "Autoritarisme",
+          "Jeunesse"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-nouvelle-vague-de-nationalisme-chez-les-jeunes-turcs/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Électronique grand public",
+        "victime": "Logitech",
+        "description": "Une violation de données à faible confiance a été signalée, ciblant Logitech en Suisse. Aucune information supplémentaire n'est disponible sur la nature exacte de la compromission ou des données affectées.",
+        "tags": [
+          "violation",
+          "breach",
+          "Logitech",
+          "Suisse",
+          "Électronique_grand_public",
+          "Données_personnelles"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115730783625768315"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Gouvernement, administration publique",
+        "victime": "Ministère de l'Intérieur français",
+        "description": "Une cyberattaque a compromis les serveurs de messagerie du ministère de l'Intérieur français. Le niveau de compromission n'est pas jugé sérieux, mais l'incident a conduit au renforcement des procédures d'accès et à une enquête. L'attaque est attribuée au groupe APT28, lié à la Russie.",
+        "tags": [
+          "violation",
+          "breach",
+          "Gouvernement",
+          "France",
+          "Ministère_Intérieur",
+          "APT28",
+          "Serveurs_messagerie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Plateforme d'analyse, Divertissement pour adultes",
+        "victime": "Utilisateurs de Pornhub Premium (via Mixpanel)",
+        "description": "Le groupe ShinyHunters a revendiqué l'extorsion de Pornhub après avoir volé l'historique de recherche et de visionnage des utilisateurs Premium de Pornhub via une violation de données chez Mixpanel, un fournisseur d'analyse tiers. Les données volées incluent des adresses e-mail, des lieux, des métadonnées vidéo et des horodatages. Pornhub a confirmé que les mots de passe, informations de paiement et identifiants financiers n'ont pas été compromis.",
+        "tags": [
+          "violation",
+          "breach",
+          "Pornhub",
+          "Mixpanel",
+          "ShinyHunters",
+          "Données_personnelles",
+          "Extorsion",
+          "Chaîne_approvisionnement",
+          "Vie_privée"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pornhub-targeted-in-extortion-attempt-following-mixpanel-breach-exposing-user-activity/",
+          "https://gbhackers.com/pornhub-suffers-data-breach-in-attack-claimed-by-shinyhunters/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Pétrole et Gaz",
+        "victime": "Petróleos de Venezuela (PDVSA)",
+        "description": "Une cyberattaque, soupçonnée d'être un ransomware, a perturbé les opérations d'exportation et les systèmes administratifs de la compagnie pétrolière nationale du Venezuela, PDVSA. Les opérations clés de production n'auraient pas été affectées. L'incident est survenu dans un contexte de tensions politiques entre le Venezuela et les États-Unis.",
+        "tags": [
+          "violation",
+          "breach",
+          "PDVSA",
+          "Venezuela",
+          "Énergie",
+          "Ransomware",
+          "Déni_de_service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-venezuelan-oil-giant-pdvsas-operations/",
+          "https://securityaffairs.com/185755/security/a-cyber-attack-hit-petroleos-de-venezuela-pdvsa-disrupting-export-operations.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Plateforme de streaming musical",
+        "victime": "SoundCloud",
+        "description": "SoundCloud a confirmé une violation de données affectant environ 20% de sa base d'utilisateurs. Des acteurs non autorisés ont accédé à des informations limitées de comptes utilisateurs via un tableau de bord de service auxiliaire compromis. Les mots de passe et les informations financières n'ont pas été exposés.",
+        "tags": [
+          "violation",
+          "breach",
+          "SoundCloud",
+          "Streaming_musical",
+          "Données_personnelles",
+          "Tableau_de_bord_compromis"
+        ],
+        "sources": [
+          "https://gbhackers.com/soundcloud-confirms-data-breach/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Fabricants de télévisions (électronique grand public)",
+        "victime": "Utilisateurs de télévisions intelligentes (Sony, Samsung, LG, Hisense, TCL)",
+        "description": "Le procureur général du Texas a intenté des poursuites contre cinq grands fabricants de télévisions (Sony, Samsung, LG, Hisense, TCL Technology Group Corporation), les accusant de collecter illégalement les données de leurs utilisateurs en enregistrant secrètement ce qu'ils regardent via la technologie ACR (Automated Content Recognition). Ces données seraient vendues à des fins de ciblage publicitaire, avec des préoccupations accrues concernant l'accès du gouvernement chinois aux données des consommateurs américains via Hisense et TCL.",
+        "tags": [
+          "violation",
+          "breach",
+          "Vie_privée",
+          "ACR",
+          "Surveillance",
+          "Collecte_illégale_données",
+          "Fabricants_télévisions",
+          "Texas",
+          "Données_consommateurs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/texas-sues-tv-makers-for-spying-on-users-selling-data-without-consent/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "Victory Securities",
+        "description": "Victory Securities, une entreprise du secteur des services financiers en Chine, a subi une violation de données. Le niveau de confiance dans cette information est moyen, sans détails supplémentaires sur l'étendue ou la nature des données compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "Victory_Securities",
+          "Chine",
+          "Services_financiers",
+          "Données_financières"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115731728317190468"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14700",
+        "cvss": "9.9",
+        "product": "Crafty Controller",
+        "description": "Vulnérabilité d'injection de template côté serveur (SSTI) dans le composant Webhook Template, permettant l'exécution de code à distance par un attaquant authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Crafty_Controller",
+          "SSTI",
+          "RCE",
+          "Injection_de_code",
+          "Authentifié"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14700"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68270",
+        "cvss": "9.9",
+        "product": "Open edX Platform",
+        "description": "Élévation de privilèges où les utilisateurs ayant le rôle CourseLimitedStaff peuvent accéder et modifier des cours dans le studio s'ils sont attribués au niveau de l'organisation plutôt qu'au niveau du cours, ou lister des cours même s'ils ne sont pas censés avoir d'accès au studio.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Open_edX_Platform",
+          "Élévation_de_privilèges",
+          "Contrôle_d_accès",
+          "Rôle_utilisateur"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68270"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-66039",
+        "cvss": "9.3",
+        "product": "FreePBX",
+        "description": "Vulnérabilité critique de contournement d'authentification dans le panneau de contrôle de l'administrateur lorsque l'authentification de type 'webserver' est utilisée, permettant une prise de contrôle complète du système PBX par l'envoi d'une requête HTTP spécialement conçue.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "FreePBX",
+          "Contournement_authentification",
+          "PBX_Takeover",
+          "Accès_non_autorisé"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-freepbx-flaw-cve-2025-66039-risks-pbx-takeover-via-authentication-bypass-in-webserver-auth-mode/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": "9.1",
+        "product": "FortiOS, FortiProxy, FortiSwitchManager",
+        "description": "Vulnérabilité de contournement d'authentification FortiCloud SSO due à une vérification inappropriée des signatures cryptographiques dans les messages SAML. Permet à un attaquant non authentifié de se connecter avec une assertion SAML malveillante si FortiCloud SSO est activé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiOS",
+          "FortiProxy",
+          "FortiSwitchManager",
+          "Contournement_authentification",
+          "SAML",
+          "SSO",
+          "Exploitation_active"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-newly-patched-fortinet-auth-bypass-flaws/",
+          "https://securityaffairs.com/185748/security/hackers-are-exploiting-critical-fortinet-flaws-days-after-patch-release/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": "9.1",
+        "product": "FortiWeb",
+        "description": "Vulnérabilité de contournement d'authentification FortiCloud SSO due à une vérification inappropriée des signatures cryptographiques dans les messages SAML. Permet un accès administratif non authentifié via un SSO falsifié si FortiCloud SSO est activé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiWeb",
+          "Contournement_authentification",
+          "SAML",
+          "SSO",
+          "Exploitation_active"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-newly-patched-fortinet-auth-bypass-flaws/",
+          "https://securityaffairs.com/185748/security/hackers-are-exploiting-critical-fortinet-flaws-days-after-patch-release/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-34288",
+        "cvss": "8.6",
+        "product": "Nagios XI",
+        "description": "Élévation de privilèges locaux due à une interaction dangereuse entre les permissions sudo et les permissions de fichiers d'application. Un script de maintenance accessible par l'utilisateur peut être exécuté en tant que root via sudo et inclut un fichier d'application inscriptible par un utilisateur moins privilégié, permettant l'exécution de code arbitraire en tant que root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Nagios_XI",
+          "Élévation_de_privilèges",
+          "Local_privilege_escalation",
+          "Exécution_de_code_arbitraire",
+          "Sudo"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34288"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68274",
+        "cvss": "8.7",
+        "product": "SIPGO library",
+        "description": "Vulnérabilité de déréférencement de pointeur nul dans la fonction `NewResponseFromRequest` de la bibliothèque SIPGO, affectant toutes les opérations SIP normales. Permet à un attaquant distant de faire planter une application SIP en envoyant une requête SIP mal formée sans en-tête 'To', entraînant un déni de service à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SIPGO_library",
+          "Déni_de_service",
+          "Nil_pointer_dereference",
+          "SIP_application",
+          "Remote"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68274"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-53949",
+        "cvss": "8.8",
+        "product": "Fortinet FortiSandbox",
+        "description": "Vulnérabilité d'injection de commande dans les points d'extrémité `name`, `upload_vdi_file` et `admindel_confirm`. Permet à un attaquant authentifié d'exécuter du code arbitraire en tant que root en raison d'une validation insuffisante des chaînes fournies par l'utilisateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiSandbox",
+          "Injection_de_commande",
+          "RCE",
+          "Authenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1097/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1096/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1095/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-53524",
+        "cvss": "8.4",
+        "product": "Fuji Electric Monitouch V-SFT-6",
+        "description": "Vulnérabilité d'écriture hors limites lors du traitement d'un fichier de projet spécialement conçu, pouvant permettre à un attaquant d'exécuter du code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fuji_Electric",
+          "Monitouch_V-SFT-6",
+          "Écriture_hors_limites",
+          "RCE",
+          "Code_arbitraire"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-53524"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68154",
+        "cvss": "8.1",
+        "product": "systeminformation (node.js library)",
+        "description": "Vulnérabilité d'injection de commande OS dans la fonction `fsSize()` sur les systèmes Windows. Le paramètre `drive` facultatif est directement concaténé dans une commande PowerShell sans assainissement, permettant l'exécution de commandes arbitraires si une entrée contrôlée par l'utilisateur atteint cette fonction.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "systeminformation",
+          "Node.js",
+          "Command_injection",
+          "Windows",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68154"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64447",
+        "cvss": "8.1",
+        "product": "Fortinet FortiWeb",
+        "description": "Vulnérabilité de contournement d'authentification due à une vérification inappropriée de la signature cryptographique dans la méthode `ApacheCookie_parse`. Permet à un attaquant distant de contourner l'authentification sans aucune authentification préalable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiWeb",
+          "Contournement_authentification",
+          "Signature_cryptographique",
+          "Non_authentifié"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1094/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68150",
+        "cvss": "8.3",
+        "product": "Parse Server",
+        "description": "Vulnérabilité Server-Side Request Forgery (SSRF) dans l'adaptateur d'authentification Instagram. Permet aux clients de spécifier une URL API personnalisée via le paramètre `apiURL` dans `authData`, entraînant des attaques SSRF et potentiellement un contournement d'authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Parse_Server",
+          "SSRF",
+          "Instagram_OAuth",
+          "Contournement_authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68150"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14174",
+        "cvss": "8.8",
+        "product": "Apple WebKit",
+        "description": "Vulnérabilité zero-day de corruption de mémoire activement exploitée dans des attaques ciblées, pouvant entraîner une exécution de code arbitraire. Affecte tous les appareils Apple capables de rendre du contenu web, y compris Safari et les navigateurs sur iOS et iPadOS.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apple",
+          "WebKit",
+          "Zero-day",
+          "Corruption_mémoire",
+          "RCE",
+          "Exploitation_ciblée"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-14174-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-43529",
+        "cvss": "Non fournie",
+        "product": "Apple WebKit",
+        "description": "Vulnérabilité use-after-free activement exploitée dans des attaques ciblées, pouvant permettre une exécution de code arbitraire. Affecte tous les appareils Apple capables de rendre du contenu web.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apple",
+          "WebKit",
+          "Zero-day",
+          "Use_After_Free",
+          "RCE",
+          "Exploitation_ciblée"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-14174-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14765",
+        "cvss": "Non fournie",
+        "product": "Google Chrome (WebGPU)",
+        "description": "Vulnérabilité de type Use-After-Free dans WebGPU, l'API graphique de nouvelle génération pour le web. Potentiellement exploitable pour l'exécution de code arbitraire ou le plantage d'applications.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "WebGPU",
+          "Use_After_Free",
+          "Corruption_mémoire",
+          "RCE"
+        ],
+        "sources": [
+          "https://securityonline.info/google-chrome-emergency-update-high-severity-memory-corruption-flaws-fixed-in-webgpu-and-v8/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14766",
+        "cvss": "Non fournie",
+        "product": "Google Chrome (V8)",
+        "description": "Vulnérabilité de corruption de mémoire (lecture et écriture hors limites) dans le moteur JavaScript et WebAssembly V8. Peut être utilisée pour s'échapper du sandbox du rendu ou divulguer des informations sensibles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "V8",
+          "Corruption_mémoire",
+          "Lecture_écriture_hors_limites",
+          "Sandbox_escape",
+          "Divulgation_information"
+        ],
+        "sources": [
+          "https://securityonline.info/google-chrome-emergency-update-high-severity-memory-corruption-flaws-fixed-in-webgpu-and-v8/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64669",
+        "cvss": "7.8",
+        "product": "Microsoft Windows Admin Center (WAC)",
+        "description": "Vulnérabilité d'élévation de privilèges locaux (LPE) due à un répertoire `C:\\ProgramData\\WindowsAdminCenter` inscriptible par les utilisateurs standards. Permet le détournement de DLL contre le processus `WindowsAdminCenterUpdater.exe` via une faille de type Time-of-Check Time-of-Use (TOCTOU), conduisant à un accès SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Microsoft",
+          "Windows_Admin_Center",
+          "Élévation_de_privilèges",
+          "LPE",
+          "DLL_Hijacking",
+          "TOCTOU",
+          "Accès_SYSTEM"
+        ],
+        "sources": [
+          "https://securityonline.info/windows-admin-center-flaw-cve-2025-64669-how-a-simple-folder-permission-opened-the-door-to-system-access/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "Non fournie",
+        "product": "React Server Components, Next.js environments",
+        "description": "Vulnérabilité critique 'React2Shell' (RCE) due à une validation insuffisante des entrées lors du traitement des charges utiles par le serveur, permettant aux attaquants d'injecter des structures malveillantes qui sont acceptées comme valides, entraînant l'exécution de code à distance. Des campagnes de logiciels malveillants exploitant cette faille ont été identifiées.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React_Server_Components",
+          "Next.js",
+          "RCE",
+          "Injection_de_code",
+          "Validation_entrées"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-details-mitigations-against-react2shell-rce-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "Non fournie",
+        "product": "React Server Components, Next.js environments",
+        "description": "Cette vulnérabilité est liée à la faille 'React2Shell' (CVE-2025-55182) dans React Server Components et les environnements Next.js, permettant une exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React_Server_Components",
+          "Next.js",
+          "RCE",
+          "Injection_de_code",
+          "Validation_entrées"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-details-mitigations-against-react2shell-rce-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Le malware Android Cellik construit des versions malveillantes à partir d'applications Google Play",
+        "description": "Cellik est un nouveau service de Malware-as-a-Service (MaaS) offrant des capacités robustes, incluant la possibilité d'intégrer le malware dans n'importe quelle application disponible sur le Google Play Store. Il permet la capture et la diffusion d'écran en temps réel, l'interception de notifications, la navigation et l'exfiltration de fichiers, l'effacement de données et la communication chiffrée avec le serveur de commande et de contrôle. Ce mode d'infection prétend aider à contourner la protection Play Protect, augmentant ainsi la durée pendant laquelle les infections peuvent passer inaperçues.",
+        "threat_actor": "Cellik (Malware-as-a-Service)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1059.006 (Command and Scripting Interpreter: PowerShell)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1123 (Audio Capture)",
+          "T1125 (Video Capture)"
+        ],
+        "analyse": "La capacité de Cellik à s'intégrer dans des applications légitimes du Google Play Store représente une menace significative pour la sécurité mobile, ciblant une large base d'utilisateurs Android. L'impact est potentiellement mondial, affectant la confidentialité des données et la sécurité des appareils personnels et professionnels. La revendication de contourner Play Protect pourrait éroder la confiance dans les mécanismes de sécurité des magasins d'applications officiels.",
+        "recommandations": [
+          "Éviter le chargement latéral d'APKs provenant de sites non fiables.",
+          "S'assurer que Play Protect est actif sur les appareils Android.",
+          "Examiner attentivement les autorisations demandées par les applications.",
+          "Surveiller toute activité inhabituelle sur l'appareil.",
+          "Utiliser des solutions de sécurité mobile réputées.",
+          "Mettre à jour régulièrement le système d'exploitation et les applications."
+        ],
+        "tags": [
+          "malware",
+          "android",
+          "maas",
+          "google_play",
+          "exfiltration",
+          "surveillance",
+          "t1059.006",
+          "t1560.001",
+          "t1071.001",
+          "t1041",
+          "t1115",
+          "t1113",
+          "t1056.001",
+          "t1123",
+          "t1125"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cellik-android-malware-builds-malicious-versions-from-google-play-apps/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Exploitation d'Anno 1404",
+        "description": "Une recherche technique approfondie a révélé plusieurs vulnérabilités dans le jeu de stratégie Anno 1404 : Venise (v2.01.5010), qui, combinées, permettent l'exécution de code arbitraire en mode multijoueur. Les vulnérabilités comprennent une faille de 'path traversal' lors du transfert de fichiers de sauvegarde, permettant le dépôt de fichiers avec les droits de l'application n'importe où sur le système. Cela est suivi d'un détournement de DLL (DLL hijacking) pour obtenir l'exécution de code arbitraire lors du redémarrage du jeu, en tirant parti d'un gestionnaire de heap Windows 10 et du format propriétaire Granny 3D (.gr2).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1068 (Exploitation for Privilege Escalation)"
+        ],
+        "analyse": "Cette analyse met en évidence les risques de sécurité même dans les logiciels plus anciens et les environnements de jeu, soulignant que des vulnérabilités de bas niveau peuvent conduire à une compromission système. L'absence de mitigations modernes comme l'ASLR ou le DEP dans les composants clés du jeu augmente la facilité d'exploitation. L'impact est limité aux utilisateurs du jeu, mais démontre la persistance des risques techniques dans les bases de code établies.",
+        "recommandations": [
+          "Appliquer les correctifs si disponibles, bien que pour les logiciels plus anciens, cela puisse être difficile.",
+          "Restreindre les permissions des applications de jeu pour limiter les dommages potentiels.",
+          "Éviter les modes multijoueur en réseau local avec des sources non fiables.",
+          "Effectuer des analyses de sécurité sur les applications existantes pour identifier et atténuer les vulnérabilités.",
+          "Implémenter des contrôles de sécurité avancés au niveau du système d'exploitation si possible."
+        ],
+        "tags": [
+          "vulnerabilité",
+          "exploitation",
+          "jeu_vidéo",
+          "anno_1404",
+          "path_traversal",
+          "dll_hijacking",
+          "rce",
+          "reverse_engineering",
+          "t1574.001",
+          "t1036.003",
+          "t1059",
+          "t1068"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/exploiting-anno-1404.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Attaques GhostPoster cachant du JavaScript malveillant dans les logos d'addons Firefox",
+        "description": "Une nouvelle campagne, nommée 'GhostPoster', cache du code JavaScript dans le logo d'image d'extensions Firefox malveillantes, comptant plus de 50 000 téléchargements. Ce script sert de chargeur pour récupérer la charge utile principale d'un serveur distant, avec une récupération intentionnellement peu fréquente pour la détection. La campagne surveille l'activité du navigateur et installe une porte dérobée, en utilisant des techniques de stéganographie pour dissimuler le code malveillant dans les fichiers PNG.",
+        "threat_actor": "GhostPoster",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript)",
+          "T1574.006 (Hijack Execution Flow: DLL Search Order Hijacking)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1189 (Drive-by Compromise)",
+          "T1115 (Clipboard Data)",
+          "T1056.001 (Input Capture: Keylogging)"
+        ],
+        "analyse": "La campagne GhostPoster est une menace sérieuse pour les utilisateurs de Firefox, exploitant la confiance dans les extensions de navigateur et des techniques de dissimulation sophistiquées comme la stéganographie. L'impact peut inclure la surveillance de l'activité en ligne, le vol de données et l'installation de portes dérobées, compromettant la confidentialité et la sécurité des utilisateurs. Le mode opératoire vise à prolonger la persistance et à échapper à la détection.",
+        "recommandations": [
+          "Télécharger les extensions uniquement depuis des sources fiables et vérifier les éditeurs.",
+          "Être vigilant face aux extensions demandant des permissions excessives.",
+          "Utiliser des solutions de sécurité qui surveillent l'activité des navigateurs et les scripts exécutés.",
+          "Mettre à jour régulièrement Firefox et ses extensions.",
+          "Envisager des outils d'analyse de stéganographie si l'on suspecte une infection."
+        ],
+        "tags": [
+          "malware",
+          "firefox",
+          "extension_navigateur",
+          "stéganographie",
+          "javascript",
+          "porte_dérobée",
+          "surveillance",
+          "t1566.001",
+          "t1204.002",
+          "t1059.007",
+          "t1574.006",
+          "t1071.001",
+          "t1189",
+          "t1115",
+          "t1056.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ghostposter-attacks-hide-malicious-javascript-in-firefox-addon-logos/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "GhostPairing : une nouvelle attaque détourne WhatsApp via des appareils liés, trompant les utilisateurs avec un faux code QR Facebook",
+        "description": "Une nouvelle campagne cybercriminelle, nommée 'GhostPairing', exploite la fonctionnalité 'appareils liés' de WhatsApp par une manipulation astucieuse de la confiance des utilisateurs. L'attaque commence généralement par un message d'un contact compromis, incitant la victime à cliquer sur un lien générant un faux code QR Facebook. En scannant ce code, la victime associe involontairement un appareil attaquant à son compte WhatsApp, donnant à l'attaquant un contrôle total et persistant sur le compte, lui permettant de lire les conversations, d'envoyer des messages et de propager l'attaque.",
+        "threat_actor": "Non mentionné",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1136.001 (Create Account: Local Account)"
+        ],
+        "analyse": "L'attaque GhostPairing représente une menace significative en exploitant la confiance des utilisateurs et la commodité des fonctionnalités multi-appareils, plutôt que des exploits techniques. Sa simplicité et son caractère linguistique neutre la rendent potentiellement virale et capable de se propager mondialement. L'impact est une prise de contrôle totale du compte utilisateur, compromettant gravement la vie privée et permettant la diffusion de la désinformation ou de malwares.",
+        "recommandations": [
+          "Vérifier toujours l'authenticité des messages et des liens, même de contacts connus.",
+          "Ne jamais scanner de codes QR provenant de sources inattendues ou suspectes.",
+          "Revoir régulièrement les 'appareils liés' sur les applications de messagerie et supprimer tout appareil inconnu.",
+          "Sensibiliser les utilisateurs aux techniques d'ingénierie sociale.",
+          "Activer l'authentification à deux facteurs pour les comptes de messagerie et les services en ligne."
+        ],
+        "tags": [
+          "ingénierie_sociale",
+          "whatsapp",
+          "ghostpairing",
+          "hameçonnage",
+          "qr_code",
+          "prise_de_contrôle_compte",
+          "vie_privée",
+          "t1566.001",
+          "t1204.001",
+          "t1078.003",
+          "t1021.001",
+          "t1136.001"
+        ],
+        "sources": [
+          "https://securityonline.info/ghostpairing-new-attack-hijacks-whatsapp-via-linked-devices-tricking-users-with-fake-facebook-qr-code/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Mode Dieu Activé : comment nous avons attaqué le modem d'une unité centrale de véhicule",
+        "description": "Des chercheurs de Kaspersky ont démontré comment ils ont obtenu l'accès à l'unité centrale d'un véhicule en exploitant une vulnérabilité unique dans son modem Unisoc UIS7862A. La vulnérabilité est un débordement de tampon basé sur la pile (CVE-2024-39432) dans l'implémentation du protocole RLC 3G, permettant l'exécution de code à distance (RCE) aux premiers stades de la connexion. Après avoir compromis le modem, ils ont utilisé une vulnérabilité matérielle DMA cachée pour le mouvement latéral et ont obtenu les privilèges SYSTEM sur le processeur d'application Android de l'unité principale, soulevant des préoccupations pour la sécurité routière et la confidentialité des données.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-39432"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1202 (Indirect Command Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "Cette recherche souligne la vulnérabilité croissante des systèmes embarqués, en particulier dans les véhicules connectés. L'exploitation réussie d'une vulnérabilité de bas niveau dans le modem pour obtenir un contrôle complet du système d'infodivertissement représente un risque direct pour la sécurité physique des véhicules et la vie privée des passagers. L'identification d'une vulnérabilité matérielle pour le mouvement latéral ajoute une couche de sophistication à l'attaque.",
+        "recommandations": [
+          "Renforcer les audits de sécurité sur les SoC embarqués, en particulier pour les modems.",
+          "Appliquer des patchs de sécurité stricts et rapides pour les systèmes automobiles.",
+          "Mettre en œuvre une segmentation réseau rigoureuse entre les composants critiques (modem, AP) du véhicule.",
+          "Surveiller les activités anormales au niveau du système d'exploitation et du matériel.",
+          "Les fabricants doivent améliorer la visibilité et la sécurité des interactions entre les processeurs au niveau microarchitectural."
+        ],
+        "tags": [
+          "modem",
+          "voiture_connectée",
+          "unisoc",
+          "rce",
+          "débordement_tampon",
+          "dma",
+          "privilèges_système",
+          "sécurité_automobile",
+          "confidentialité",
+          "t1202",
+          "t1547.001",
+          "t1068",
+          "t1059",
+          "t1543.003",
+          "t1090.003"
+        ],
+        "sources": [
+          "https://securelist.com/attacking-car-modem/118463/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Inside Ink Dragon : Révélation du réseau de relais et du fonctionnement interne d'une opération offensive furtive",
+        "description": "Check Point Research a découvert Ink Dragon, un cluster d'espionnage aligné avec la RPC, ciblant les gouvernements, les télécommunications et les infrastructures du secteur public. Ce groupe déploie le module d'écoute IIS ShadowPad sur des victimes compromises pour créer un réseau de relais distribué, lui permettant de router le trafic et de masquer les communications C2. L'opération implique un accès initial via la désérialisation ViewState ASP.NET ou la vulnérabilité ToolShell SharePoint, l'élévation de privilèges, le mouvement latéral agressif menant à la dominance de domaine, et l'utilisation de portes dérobées comme FinalDraft (C2 via Microsoft Graph API) et des outils comme LalsDumper pour l'extraction LSASS et 032Loader.",
+        "threat_actor": "Ink Dragon (CL-STA-0049, Earth Alux, REF7707)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-49706",
+            "CVE-2025-53771",
+            "CVE-2025-49704",
+            "CVE-2025-53770"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1021.002 (Remote Services: SMB/Windows Admin Shares)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1003.001 (OS Credential Dumping: LSASS Memory)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1546.008 (Event Triggered Execution: Image File Execution Options Injection)",
+          "T1548.002 (Bypass User Account Control: Event Viewer Bypass)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "Ink Dragon représente une menace d'espionnage étatique hautement sophistiquée et persistante. L'utilisation d'un réseau de relais distribué à travers des victimes compromises est une technique innovante pour assurer la résilience du C2 et l'opérabilité furtive. Le groupe déploie une gamme modulaire d'outils et de TTPs, démontrant une capacité d'ingénierie logicielle solide et des playbooks opérationnels disciplinés. L'impact est l'espionnage à long terme et la compromission de la souveraineté des réseaux gouvernementaux et industriels.",
+        "recommandations": [
+          "Mettre en œuvre des patchs rapides pour les vulnérabilités de désérialisation ASP.NET et SharePoint.",
+          "Durcir les configurations IIS/SharePoint et surveiller les activités anormales.",
+          "Appliquer le principe du moindre privilège et segmenter les réseaux de manière rigoureuse.",
+          "Déployer des solutions de détection et de réponse aux endpoints (EDR) capables de détecter le sideloading de DLL et les comportements de rootkit.",
+          "Mettre en place une authentification forte pour les comptes administratifs et surveiller les tentatives de récolte de justificatifs d'identité.",
+          "Mettre en œuvre une surveillance des communications réseau pour détecter les trafics de relais et C2 anormaux.",
+          "Utiliser des règles YARA pour détecter les artefacts connus de ShadowPad et FinalDraft."
+        ],
+        "tags": [
+          "ink_dragon",
+          "apt",
+          "espionnage",
+          "prc",
+          "shadowpad",
+          "finaldraft",
+          "réseau_de_relais",
+          "gouvernement",
+          "t1190",
+          "t1078.003",
+          "t1547.001",
+          "t1059.003",
+          "t1021.001",
+          "t1021.002",
+          "t1560.001",
+          "t1003.001",
+          "t1036.003",
+          "t1090.003",
+          "t1071.001",
+          "t1071.004",
+          "t1543.003",
+          "t1053.005",
+          "t1546.008",
+          "t1548.002",
+          "t1098"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Chasseurs de Malware KPop : les démantèlements de 2025",
+        "description": "L'année 2025 a été marquée par des opérations de démantèlement réussies contre des écosystèmes de logiciels malveillants par une coalition mondiale d'organismes d'application de la loi et de la sécurité privée. Des groupes comme BlackSuit (ransomware ciblant la santé, l'éducation et les services publics) et Lumma Stealer (Malware-as-a-Service, désactivant des dizaines d'adversaires dépendants) ont été démantelés. Ces opérations chirurgicales ont affaibli les groupes de menaces et ont offert un répit critique, démontrant une coordination internationale accrue dans la lutte contre la cybercriminalité.",
+        "threat_actor": "BlackSuit, Lumma Stealer",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1059 (Command and Scripting Interpreter)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "Le succès des démantèlements en 2025 met en évidence l'efficacité de la collaboration internationale public-privé pour perturber les opérations cybercriminelles à grande échelle. Bien que ces victoires soient importantes, elles soulignent également la nature persistante et évolutive de la menace, nécessitant une vigilance continue. L'impact est une perturbation temporaire ou permanente des opérations des acteurs malveillants, mais les équipes de sécurité doivent rester proactives pour contrer les nouvelles menaces et les réémergences.",
+        "recommandations": [
+          "Continuer à investir dans la collaboration internationale et le partage de renseignements sur les menaces.",
+          "Renforcer les capacités de détection et de réponse aux logiciels malveillants et aux ransomwares.",
+          "Mettre en œuvre des sauvegardes robustes et des plans de reprise après sinistre.",
+          "Éduquer les utilisateurs sur les menaces de phishing et d'ingénierie sociale.",
+          "Déployer des solutions de sécurité multicouches pour protéger les endpoints et le réseau."
+        ],
+        "tags": [
+          "malware",
+          "ransomware",
+          "lumma_stealer",
+          "blacksuit",
+          "démantèlement",
+          "cybercriminalité",
+          "coordination_internationale",
+          "t1059",
+          "t1486",
+          "t1041",
+          "t1071.001",
+          "t1560"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/kpop-malware-hunters/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "La plupart des domaines 'parkés' servent désormais du contenu malveillant",
+        "description": "Une étude d'Infoblox révèle que plus de 90% des domaines 'parkés' (expirés ou fautes de frappe de noms de domaine populaires) redirigent désormais les visiteurs vers des sites de scams, de malwares ou de scarewares. Les attaquants utilisent la géolocalisation IP, le 'device fingerprinting' et les cookies pour déterminer la redirection. Des exemples de typosquatting, comme 'scotaibank[.]com' et 'gmai[.]com', sont utilisés pour des escroqueries par e-mail professionnel et des infections par chevaux de Troie. Le comportement malveillant est souvent conditionnel à l'adresse IP résidentielle du visiteur.",
+        "threat_actor": "Non mentionné (cybercriminels généralistes)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "scotaibank[.]com",
+            "gmai[.]com",
+            "torresdns[.]com",
+            "domaincntrol[.]com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1591 (Gather Victim Network Information)",
+          "T1589 (Gather Victim Identity Information)"
+        ],
+        "analyse": "L'augmentation massive du contenu malveillant sur les domaines 'parkés' représente une augmentation significative du risque pour la navigation directe, même pour les utilisateurs vigilants. Cette tendance démontre une sophistication accrue des acteurs malveillants pour cibler les utilisateurs via des erreurs courantes ou des domaines expirés. L'impact est large, allant des escroqueries financières aux infections par logiciels malveillants, affectant la sécurité des informations personnelles et professionnelles.",
+        "recommandations": [
+          "Utiliser des gestionnaires de mots de passe pour naviguer vers les sites connus, qui stockent l'URL correcte.",
+          "Utiliser des signets pour les sites fréquemment visités plutôt que de taper les adresses manuellement.",
+          "Être extrêmement vigilant lors de la saisie d'adresses de site web, en vérifiant les fautes de frappe.",
+          "Déployer des serveurs DNS de filtrage (comme AdGuard DNS ou Next DNS) pour bloquer les domaines malveillants connus.",
+          "Utiliser un VPN pour masquer l'adresse IP résidentielle, ce qui peut potentiellement altérer le comportement des redirections malveillantes.",
+          "Sensibiliser les utilisateurs aux dangers du typosquatting et des domaines 'parkés'."
+        ],
+        "tags": [
+          "typosquatting",
+          "domaines_parkés",
+          "malware",
+          "scams",
+          "phishing",
+          "redirection_malveillante",
+          "cybercriminalité",
+          "t1566.002",
+          "t1566.001",
+          "t1204.001",
+          "t1059",
+          "t1071.001",
+          "t1591",
+          "t1589"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/most-parked-domains-now-serving-malicious-content/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Le risque caché de la virtualisation : pourquoi les hyperviseurs sont un aimant à ransomware",
+        "description": "Les groupes de ransomware ciblent de plus en plus les hyperviseurs pour maximiser l'impact, permettant à une seule compromission de chiffrer des dizaines de machines virtuelles simultanément. Les données d'incidents de 2025 révèlent une forte augmentation du ransomware ciblant les hyperviseurs, passant de 3% à 25% des cas au second semestre. Les attaquants exploitent les lacunes de visibilité et les protections limitées au niveau de l'hyperviseur, utilisant souvent des justificatifs administratifs ou des vulnérabilités connues (comme CVE-2024-37085 pour ESXi) pour déployer des charges utiles de ransomware qui contournent les contrôles du système d'exploitation invité.",
+        "threat_actor": "Groupes de ransomware (Non spécifié)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-37085"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1562.001 (Impair Defenses: Disable or Modify Tools)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1136.001 (Create Account: Local Account)",
+          "T1078.002 (Valid Accounts: Domain Accounts)"
+        ],
+        "analyse": "La virtualisation, bien qu'offrant des avantages opérationnels, introduit un point de défaillance unique et à fort impact lorsque l'hyperviseur est ciblé. L'augmentation des attaques par ransomware contre les hyperviseurs souligne la nécessité de repenser les stratégies de sécurité pour ces couches d'infrastructure fondamentales. L'impact peut être catastrophique pour les organisations, entraînant la perte de données à grande échelle et des interruptions d'activités importantes.",
+        "recommandations": [
+          "Appliquer régulièrement les correctifs de sécurité aux hyperviseurs (par exemple, ESXi) et aux systèmes sous-jacents.",
+          "Mettre en œuvre des contrôles d'accès stricts et le principe du moindre privilège pour les comptes administratifs de l'hyperviseur, en évitant les comptes de domaine si possible.",
+          "Déployer une détection spécifique à l'hyperviseur, au-delà des outils EDR traditionnels qui peuvent avoir des 'angles morts'.",
+          "Surveiller les actions inhabituelles au niveau de l'hyperviseur (modifications de configuration, activation SSH, création de comptes admin).",
+          "Mettre en place des stratégies de sauvegarde et de récupération robustes et testées, spécifiques aux environnements virtualisés.",
+          "Séparer physiquement ou logiquement les réseaux de gestion des hyperviseurs.",
+          "Mettre à jour les plans de réponse aux incidents (IRP) et les plans de reprise après sinistre (DRP) pour inclure des scénarios de compromission d'hyperviseurs."
+        ],
+        "tags": [
+          "ransomware",
+          "hyperviseur",
+          "virtualisation",
+          "esxi",
+          "élévation_privilèges",
+          "chiffrement_données",
+          "t1486",
+          "t1078",
+          "t1068",
+          "t1562.001",
+          "t1053.005",
+          "t1136.001",
+          "t1078.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-hidden-risk-in-virtualization-why-hypervisors-are-a-ransomware-magnet/"
+        ],
+        "date": "2025-12-17"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber intelligence from this period reveals an intensification of Advanced Persistent Threats (APTs) by state-sponsored actors, notably Russian (APT44/GRU) and PRC-aligned (Ink Dragon), targeting critical infrastructure and government entities. A major tactical evolution is observed with APT44, shifting from N-day vulnerability exploitation to targeting misconfigured edge devices for credential harvesting. The active exploitation of zero-day and critical vulnerabilities (WebKit, Fortinet, FreePBX) remains a high threat, with very short exploitation windows after patch releases. The cybercrime ecosystem is professionalizing with the emergence of Malware-as-a-Service (MaaS) like Cellik, enabling malware integration into legitimate applications. Sophisticated social engineering campaigns like GhostPairing exploit user trust and messaging app features. Hypervisors have also become a prime target for ransomware groups due to their multiplying impact. Furthermore, the attack surface is broadened by the abuse of parked domains and the proliferation of non-human AI identities, necessitating a reassessment of identity management strategies. Finally, data breaches originating from third-party providers, as well as illegal surveillance by TV manufacturers, highlight persistent supply chain risks and privacy protection concerns. The threat landscape is widespread and constantly evolving, demanding heightened vigilance, proactive vulnerability management, strengthened cyber hygiene, and a layered security approach.",
+      "date": "2025-12-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT44 (Sandworm, Seashell Blizzard, Curly COMrades)",
+        "secteur": "Western critical infrastructure (energy, telecommunications, managed security providers), cloud infrastructure customers",
+        "modop": "Initially exploiting vulnerabilities (WatchGuard, Confluence, Veeam) from 2021 to 2024. Transitioned to targeting misconfigured network edge devices (routers, VPN gateways, network management appliances) for initial access, credential harvesting, replay attacks, lateral movement into cloud environments, and passive network traffic interception.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT44",
+          "Sandworm",
+          "GRU",
+          "Nation-state",
+          "Espionage",
+          "Critical_Infrastructure",
+          "Edge_Devices",
+          "Credential_Harvesting",
+          "Cloud_Infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-disrupts-russian-gru-hackers-attacking-edge-network-devices/",
+          "https://fieldeffect.com/blog/apt44-shifts-tactics-exploits-edge-devices-critical-infra",
+          "https://cybersecuritynews.com/russian-hackers-attacking-network-edge-devices/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "APT28",
+        "secteur": "French ministerial bodies, local governments, DTIB, aerospace, research, think-tanks, financial entities",
+        "modop": "Hacking campaign targeting French entities since 2021, compromising email servers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT28",
+          "Russia",
+          "Nation-state",
+          "Espionage",
+          "Government",
+          "Email_Compromise"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "Cellik (Malware-as-a-Service)",
+        "secteur": "Android users via Google Play Store apps",
+        "modop": "Advertised on cybercrime forums, offering the ability to embed malware into any app available on the Google Play Store. Capabilities include real-time screen capture and streaming, notification interception, filesystem browsing, file exfiltration, data wiping, and encrypted command-and-control communication. Claims to bypass Play Protect.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Cellik",
+          "MaaS",
+          "Android",
+          "Malware",
+          "Espionage",
+          "Data_Exfiltration",
+          "Security_Bypass"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cellik-android-malware-builds-malicious-versions-from-google-play-apps/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "GhostPoster",
+        "secteur": "Firefox extension users",
+        "modop": "Campaign hiding malicious JavaScript code in the image logo of malicious Firefox extensions, with over 50,000 downloads. The script acts as a loader to fetch the main payload from a remote server, with intentional sporadic retrieval (once in ten attempts) for stealth. Monitors browser activity and plants a backdoor.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "GhostPoster",
+          "Malware",
+          "Browser_Extension",
+          "Steganography",
+          "Backdoor",
+          "Surveillance"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ghostposter-attacks-hide-malicious-javascript-in-firefox-addon-logos/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "Ink Dragon (CL-STA-0049, Earth Alux, REF7707)",
+        "secteur": "Government, telecom, public-sector infrastructure (Southeast Asia, South America, Europe)",
+        "modop": "PRC-aligned espionage cluster. Initial access via ASP.NET ViewState deserialization (publicly disclosed machine keys) or ToolShell SharePoint vulnerability (CVE-2025-49706, CVE-2025-53771, CVE-2025-49704, CVE-2025-53770). Deploys a ShadowPad IIS Listener Module to create a distributed relay network, harvests IIS credentials, uses RDP proxy for lateral movement and privilege escalation (domain dominance). Utilizes FinalDraft backdoor (C2 via Microsoft Graph API, email drafts), LalsDumper (LSASS extraction), and 032Loader (sideloading-based loader). Deploys a kernel-mode rootkit driver (wingtb.sys) for persistence and concealment.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Ink_Dragon",
+          "PRC",
+          "Nation-state",
+          "Espionage",
+          "Government",
+          "Telecommunications",
+          "Public_Infrastructure",
+          "ShadowPad",
+          "FinalDraft",
+          "Relay_Network",
+          "Deserialization",
+          "Privilege_Escalation",
+          "Lateral_Movement",
+          "Rootkit"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Data analytics platforms (Mixpanel), various industries (software, cloud)",
+        "modop": "Extortion following the theft of Pornhub Premium user data via a Mixpanel data breach, a third-party analytics provider. Claimed to have stolen 94GB of data, including historical search, watch, and download activity, emails, locations, video metadata, and timestamps. Implicated in other major breaches and the launch of a ransomware-as-a-service platform (ShinySpid3r).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ShinyHunters",
+          "Cybercrime",
+          "Extortion",
+          "Data_Breach",
+          "Mixpanel",
+          "Ransomware_as_a_Service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pornhub-targeted-in-extortion-attempt-following-mixpanel-breach-exposing-user-activity/",
+          "https://gbhackers.com/pornhub-suffers-data-breach-in-attack-claimed-by-shinyhunters/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Energy, Government",
+        "theme": "State-sponsored cyberattack",
+        "description": "Russian GRU hackers (APT44/Sandworm) are targeting Western critical infrastructure, including electric utilities, energy providers, and telecommunications companies, by exploiting misconfigured network edge devices for credential harvesting and persistent access. This campaign has evolved since 2021, shifting away from known vulnerability exploitation to focus on misconfigurations, demonstrating a strategic move towards easier targets.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russia",
+          "GRU",
+          "APT44",
+          "Critical_Infrastructure",
+          "State_Espionage",
+          "Cyberattack"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-disrupts-russian-gru-hackers-attacking-edge-network-devices/",
+          "https://fieldeffect.com/blog/apt44-shifts-tactics-exploits-edge-devices-critical-infra",
+          "https://cybersecuritynews.com/russian-hackers-attacking-network-edge-devices/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Government, Public Administration",
+        "theme": "State-sponsored cyberattack",
+        "description": "The French Interior Minister confirmed that a cyberattack breached the Ministry of Interior's email servers. The compromise level is not deemed serious, but the incident led to tightened access procedures and an investigation. The attack is attributed to the Russia-linked APT28 group, as part of a broader hacking campaign targeting French entities since 2021.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Government",
+          "APT28",
+          "Cyberattack",
+          "Email_Servers"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Global, Economy, European Politics",
+        "theme": "Automotive market evolution, strategic dependencies",
+        "description": "The European Commission is considering lifting the ban on selling new internal combustion engine vehicles by 2035, a measure initially justified by ecological concerns. This potential reversal, influenced by a shifting political balance and economic difficulties (especially in Germany), highlights strategic dependencies (rare earths, Chinese technology) and the instability of European policies, hindering long-term investments and industrial confidence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "European_Union",
+          "Automotive_Market",
+          "Technological_Dependency",
+          "Ecology",
+          "Economic_Policy"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2025/vente-vehicules-thermi/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Global, International Relations",
+        "theme": "Fragility of international law, Israeli-Palestinian conflict",
+        "description": "Analysis of Germany's stance on the Israeli-Palestinian conflict and its relations with Israel. The article also addresses the applicability and respect for international law, particularly regarding crimes committed in Gaza, and the fight against impunity, highlighting an international expert consensus on facts constituting genocide and the limited role of legal institutions in the face of influential states.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "International_Law",
+          "Gaza_Conflict",
+          "Impunity",
+          "Germany",
+          "Israel",
+          "Palestine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lallemagne-face-a-israel-les-mardis-de-liris/",
+          "https://www.iris-france.org/le-droit-international-est-il-mort-a-gaza-4-questions-a-jerome-heurtaux/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Global, European Politics",
+        "theme": "European security and defense, minilateralism",
+        "description": "Europe is experiencing a 'minilateral revolution' in defense and security, marked by a proliferation of ad hoc formats (E3, E5, Coalition of the Willing) in response to growing threats from Russia and uncertainty in US commitment. This approach aims to strengthen European leadership and diversify partnerships, although it carries risks of fragmentation and a return to great-power politics, requiring increased strategic coordination.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "Security",
+          "Defense",
+          "Minilateralism",
+          "NATO",
+          "European_Union",
+          "Russia",
+          "United_States"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/europes-minilateral-moment"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Oil and Gas, Government",
+        "theme": "Cyberattack, geopolitical tensions",
+        "description": "Venezuela's state-owned oil company, Petróleos de Venezuela (PDVSA), was hit by a cyberattack that disrupted its export operations and administrative systems. This incident occurs amid rising tensions between Venezuela and the United States, with the company accusing foreign interests of orchestrating the attack to destabilize the country and seize its oil.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Venezuela",
+          "PDVSA",
+          "Cyberattack",
+          "Ransomware",
+          "Energy",
+          "Geopolitical_Tensions"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-venezuelan-oil-giant-pdvsas-operations/",
+          "https://securityaffairs.com/185755/security/a-cyber-attack-hit-petroleos-de-venezuela-pdvsa-disrupting-export-operations.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Technology, Advertising, Ethics",
+        "theme": "Business practices and online fraud linked to state actors",
+        "description": "Meta tolerated a significant volume of scam, illegal gambling, and prohibited-product ads from Chinese advertisers, generating over $3 billion in revenue. Internal documents reveal Meta was aware of these practices but prioritized revenue growth, using a 'whitelisting' mechanism for major Chinese clients that bypassed moderation policies, raising serious ethical and social responsibility questions for the tech giant.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Meta",
+          "China",
+          "Online_Fraud",
+          "Malicious_Advertising",
+          "Corporate_Ethics",
+          "Regulation"
+        ],
+        "sources": [
+          "https://securityonline.info/profit-over-safety-meta-earns-3b-from-chinese-scam-ads-executives-tolerated-fraud-for-revenue-growth/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Society, Domestic Politics",
+        "theme": "Nationalism among Turkish youth",
+        "description": "Analysis of the new wave of nationalism animating Turkish youth, in a context of intensifying authoritarianism. This phenomenon could reshape the country's political balances. The nationalist current, historically championed by the MHP, is increasingly integrated by the AKP, solidifying a Turkish-Islamic ideological synthesis.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Turkey",
+          "Nationalism",
+          "Domestic_Politics",
+          "Authoritarianism",
+          "Youth"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-nouvelle-vague-de-nationalisme-chez-les-jeunes-turcs/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Consumer Electronics",
+        "victime": "Logitech",
+        "description": "A low-confidence data breach has been reported, targeting Logitech in Switzerland. No additional information is available regarding the exact nature of the compromise or affected data.",
+        "tags": [
+          "violation",
+          "breach",
+          "Logitech",
+          "Switzerland",
+          "Consumer_Electronics",
+          "Personal_Data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115730783625768315"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Government, Public Administration",
+        "victime": "French Ministry of Interior",
+        "description": "A cyberattack compromised the French Ministry of Interior's email servers. The level of compromise is not deemed serious, but the incident led to tightened access procedures and an investigation. The attack is attributed to the Russia-linked APT28 group.",
+        "tags": [
+          "violation",
+          "breach",
+          "Government",
+          "France",
+          "Ministry_of_Interior",
+          "APT28",
+          "Email_Servers"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185725/hacking/french-interior-minister-says-hackers-breached-its-email-servers/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Analytics Platform, Adult Entertainment",
+        "victime": "Pornhub Premium users (via Mixpanel)",
+        "description": "The ShinyHunters group claimed extortion of Pornhub after stealing Pornhub Premium users' search and viewing history via a data breach at Mixpanel, a third-party analytics provider. Stolen data includes emails, locations, video metadata, and timestamps. Pornhub confirmed that passwords, payment information, and financial credentials were not compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "Pornhub",
+          "Mixpanel",
+          "ShinyHunters",
+          "Personal_Data",
+          "Extortion",
+          "Supply_Chain",
+          "Privacy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/pornhub-targeted-in-extortion-attempt-following-mixpanel-breach-exposing-user-activity/",
+          "https://gbhackers.com/pornhub-suffers-data-breach-in-attack-claimed-by-shinyhunters/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Oil and Gas",
+        "victime": "Petróleos de Venezuela (PDVSA)",
+        "description": "A cyberattack, suspected to be ransomware, disrupted export operations and administrative systems of Venezuela's state-owned oil company, PDVSA. Key production operations were reportedly unaffected. The incident occurred amid political tensions between Venezuela and the United States.",
+        "tags": [
+          "violation",
+          "breach",
+          "PDVSA",
+          "Venezuela",
+          "Energy",
+          "Ransomware",
+          "Denial_of_Service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-venezuelan-oil-giant-pdvsas-operations/",
+          "https://securityaffairs.com/185755/security/a-cyber-attack-hit-petroleos-de-venezuela-pdvsa-disrupting-export-operations.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Music Streaming Platform",
+        "victime": "SoundCloud",
+        "description": "SoundCloud confirmed a data breach affecting approximately 20% of its user base. Unauthorized actors gained access to limited user account information through a compromised ancillary service dashboard. Passwords and financial information were not exposed.",
+        "tags": [
+          "violation",
+          "breach",
+          "SoundCloud",
+          "Music_Streaming",
+          "Personal_Data",
+          "Compromised_Dashboard"
+        ],
+        "sources": [
+          "https://gbhackers.com/soundcloud-confirms-data-breach/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "TV Manufacturers (Consumer Electronics)",
+        "victime": "Smart TV users (Sony, Samsung, LG, Hisense, TCL)",
+        "description": "The Texas Attorney General sued five major TV manufacturers (Sony, Samsung, LG, Hisense, and TCL Technology Group Corporation), accusing them of illegally collecting user data by secretly recording what they watch using Automated Content Recognition (ACR) technology. This data is allegedly sold for ad targeting, with increased concerns regarding Chinese government access to U.S. consumer data via Hisense and TCL.",
+        "tags": [
+          "violation",
+          "breach",
+          "Privacy",
+          "ACR",
+          "Surveillance",
+          "Illegal_Data_Collection",
+          "TV_Manufacturers",
+          "Texas",
+          "Consumer_Data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/texas-sues-tv-makers-for-spying-on-users-selling-data-without-consent/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "Victory Securities",
+        "description": "Victory Securities, a financial services company in China, experienced a data breach. The confidence level for this information is medium, with no additional details available on the scope or nature of the compromised data.",
+        "tags": [
+          "violation",
+          "breach",
+          "Victory_Securities",
+          "China",
+          "Financial_Services",
+          "Financial_Data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115731728317190468"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14700",
+        "cvss": "9.9",
+        "product": "Crafty Controller",
+        "description": "Server-Side Template Injection (SSTI) vulnerability in the Webhook Template component, allowing authenticated remote attackers to perform remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Crafty_Controller",
+          "SSTI",
+          "RCE",
+          "Code_Injection",
+          "Authenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14700"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68270",
+        "cvss": "9.9",
+        "product": "Open edX Platform",
+        "description": "Privilege escalation where CourseLimitedStaffRole users can access and edit courses in the studio if granted the role at an organization level rather than a course level, or list courses even when not intended to have studio access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Open_edX_Platform",
+          "Privilege_Escalation",
+          "Access_Control",
+          "User_Role"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68270"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-66039",
+        "cvss": "9.3",
+        "product": "FreePBX",
+        "description": "Critical authentication bypass vulnerability in the Administrator Control Panel when 'webserver' authentication type is used, allowing full PBX system takeover by sending a specially crafted HTTP request.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "FreePBX",
+          "Authentication_Bypass",
+          "PBX_Takeover",
+          "Unauthorized_Access"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-freepbx-flaw-cve-2025-66039-risks-pbx-takeover-via-authentication-bypass-in-webserver-auth-mode/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": "9.1",
+        "product": "FortiOS, FortiProxy, FortiSwitchManager",
+        "description": "FortiCloud SSO authentication bypass vulnerability due to improper verification of cryptographic signatures in SAML messages. Allows an unauthenticated attacker to log in with a maliciously crafted SAML assertion if FortiCloud SSO is enabled.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiOS",
+          "FortiProxy",
+          "FortiSwitchManager",
+          "Authentication_Bypass",
+          "SAML",
+          "SSO",
+          "Active_Exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-newly-patched-fortinet-auth-bypass-flaws/",
+          "https://securityaffairs.com/185748/security/hackers-are-exploiting-critical-fortinet-flaws-days-after-patch-release/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-59719",
+        "cvss": "9.1",
+        "product": "FortiWeb",
+        "description": "FortiCloud SSO authentication bypass vulnerability due to improper verification of cryptographic signatures in SAML messages. Allows unauthenticated administrative access via forged SSO if FortiCloud SSO is enabled.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiWeb",
+          "Authentication_Bypass",
+          "SAML",
+          "SSO",
+          "Active_Exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-newly-patched-fortinet-auth-bypass-flaws/",
+          "https://securityaffairs.com/185748/security/hackers-are-exploiting-critical-fortinet-flaws-days-after-patch-release/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-34288",
+        "cvss": "8.6",
+        "product": "Nagios XI",
+        "description": "Local privilege escalation due to an unsafe interaction between sudo permissions and application file permissions. A user-accessible maintenance script can be executed as root via sudo and includes an application file writable by a lower-privileged user, allowing arbitrary code execution as root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Nagios_XI",
+          "Privilege_Escalation",
+          "Local_privilege_escalation",
+          "Arbitrary_Code_Execution",
+          "Sudo"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34288"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68274",
+        "cvss": "8.7",
+        "product": "SIPGO library",
+        "description": "Nil pointer dereference vulnerability in the SIPGO library's `NewResponseFromRequest` function, affecting all normal SIP operations. Allows remote attackers to crash any SIP application by sending a single malformed SIP request without a 'To' header, leading to remote denial of service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SIPGO_library",
+          "Denial_of_Service",
+          "Nil_Pointer_Dereference",
+          "SIP_Application",
+          "Remote"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68274"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-53949",
+        "cvss": "8.8",
+        "product": "Fortinet FortiSandbox",
+        "description": "Command injection vulnerability in the `name`, `upload_vdi_file`, and `admindel_confirm` endpoints. Allows an authenticated attacker to execute arbitrary code as root due to insufficient validation of user-supplied strings.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiSandbox",
+          "Command_Injection",
+          "RCE",
+          "Authenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1097/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1096/",
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1095/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-53524",
+        "cvss": "8.4",
+        "product": "Fuji Electric Monitouch V-SFT-6",
+        "description": "Out-of-bounds write vulnerability while processing a specially crafted project file, which may allow an attacker to execute arbitrary code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fuji_Electric",
+          "Monitouch_V-SFT-6",
+          "Out_of_Bounds_Write",
+          "RCE",
+          "Arbitrary_Code"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-53524"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68154",
+        "cvss": "8.1",
+        "product": "systeminformation (node.js library)",
+        "description": "OS command injection vulnerability in the `fsSize()` function on Windows systems. The optional `drive` parameter is directly concatenated into a PowerShell command without sanitization, allowing arbitrary command execution when user-controlled input reaches this function.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "systeminformation",
+          "Node.js",
+          "Command_Injection",
+          "Windows",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68154"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64447",
+        "cvss": "8.1",
+        "product": "Fortinet FortiWeb",
+        "description": "Authentication bypass vulnerability due to improper verification of cryptographic signatures in the `ApacheCookie_parse` method. Allows a remote attacker to bypass authentication without prior authentication.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiWeb",
+          "Authentication_Bypass",
+          "Cryptographic_Signature",
+          "Unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1094/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-68150",
+        "cvss": "8.3",
+        "product": "Parse Server",
+        "description": "Server-Side Request Forgery (SSRF) vulnerability in the Instagram OAuth adapter. Allows clients to specify a custom API URL via the `apiURL` parameter in `authData`, leading to SSRF attacks and potentially authentication bypass.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Parse_Server",
+          "SSRF",
+          "Instagram_OAuth",
+          "Authentication_Bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68150"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14174",
+        "cvss": "8.8",
+        "product": "Apple WebKit",
+        "description": "Memory corruption zero-day vulnerability actively exploited in targeted attacks, potentially leading to arbitrary code execution. Affects all Apple devices capable of rendering web content, including Safari and browsers on iOS and iPadOS.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apple",
+          "WebKit",
+          "Zero-day",
+          "Memory_Corruption",
+          "RCE",
+          "Targeted_Exploitation"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-14174-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-43529",
+        "cvss": "Not provided",
+        "product": "Apple WebKit",
+        "description": "Use-after-free vulnerability actively exploited in targeted attacks, potentially allowing arbitrary code execution. Affects all Apple devices capable of rendering web content.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Apple",
+          "WebKit",
+          "Zero-day",
+          "Use_After_Free",
+          "RCE",
+          "Targeted_Exploitation"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-14174-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14765",
+        "cvss": "Not provided",
+        "product": "Google Chrome (WebGPU)",
+        "description": "Use-After-Free vulnerability in WebGPU, the next-generation graphics API for the web. Potentially exploitable for arbitrary code execution or application crashes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "WebGPU",
+          "Use_After_Free",
+          "Memory_Corruption",
+          "RCE"
+        ],
+        "sources": [
+          "https://securityonline.info/google-chrome-emergency-update-high-severity-memory-corruption-flaws-fixed-in-webgpu-and-v8/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-14766",
+        "cvss": "Not provided",
+        "product": "Google Chrome (V8)",
+        "description": "Memory corruption vulnerability (out-of-bounds read and write) in the V8 JavaScript and WebAssembly engine. Can be used to escape the renderer sandbox or leak sensitive information.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "V8",
+          "Memory_Corruption",
+          "Out_of_Bounds_Read_Write",
+          "Sandbox_Escape",
+          "Information_Disclosure"
+        ],
+        "sources": [
+          "https://securityonline.info/google-chrome-emergency-update-high-severity-memory-corruption-flaws-fixed-in-webgpu-and-v8/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64669",
+        "cvss": "7.8",
+        "product": "Microsoft Windows Admin Center (WAC)",
+        "description": "Local Privilege Escalation (LPE) vulnerability due to a writable `C:\\ProgramData\\WindowsAdminCenter` directory by standard users. Allows DLL Hijacking against the `WindowsAdminCenterUpdater.exe` process via a Time-of-Check Time-of-Use (TOCTOU) flaw, leading to SYSTEM access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Microsoft",
+          "Windows_Admin_Center",
+          "Privilege_Escalation",
+          "LPE",
+          "DLL_Hijacking",
+          "TOCTOU",
+          "SYSTEM_Access"
+        ],
+        "sources": [
+          "https://securityonline.info/windows-admin-center-flaw-cve-2025-64669-how-a-simple-folder-permission-opened-the-door-to-system-access/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "Not provided",
+        "product": "React Server Components, Next.js environments",
+        "description": "Critical 'React2Shell' RCE vulnerability due to insufficient input validation when the server processes incoming payloads, allowing attackers to inject malicious structures that are accepted as valid, leading to remote code execution. Malware campaigns exploiting this flaw have been identified.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React_Server_Components",
+          "Next.js",
+          "RCE",
+          "Code_Injection",
+          "Input_Validation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-details-mitigations-against-react2shell-rce-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "Not provided",
+        "product": "React Server Components, Next.js environments",
+        "description": "This vulnerability is related to the 'React2Shell' flaw (CVE-2025-55182) in React Server Components and Next.js environments, allowing remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "React_Server_Components",
+          "Next.js",
+          "RCE",
+          "Code_Injection",
+          "Input_Validation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-details-mitigations-against-react2shell-rce-vulnerability/"
+        ],
+        "date": "2025-12-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Cellik Android malware builds malicious versions from Google Play apps",
+        "description": "Cellik is a new Malware-as-a-Service (MaaS) offering robust capabilities, including the option to embed it in any app available on the Google Play Store. It enables real-time screen capture and streaming, notification interception, filesystem browsing, file exfiltration, data wiping, and encrypted command-and-control communication. This infection method claims to help bypass Play Protect, increasing the time infections can go unnoticed.",
+        "threat_actor": "Cellik (Malware-as-a-Service)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1059.006 (Command and Scripting Interpreter: PowerShell)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1123 (Audio Capture)",
+          "T1125 (Video Capture)"
+        ],
+        "analyse": "Cellik's ability to embed itself into legitimate Google Play Store apps poses a significant threat to mobile security, targeting a broad Android user base. The impact is potentially global, affecting data privacy and the security of personal and business devices. The claim to bypass Play Protect could erode trust in official app store security mechanisms.",
+        "recommandations": [
+          "Avoid sideloading APKs from dubious sites.",
+          "Ensure Play Protect is active on Android devices.",
+          "Carefully review app permissions.",
+          "Monitor for unusual activity on the device.",
+          "Use reputable mobile security solutions.",
+          "Regularly update the operating system and applications."
+        ],
+        "tags": [
+          "malware",
+          "android",
+          "maas",
+          "google_play",
+          "exfiltration",
+          "surveillance",
+          "t1059.006",
+          "t1560.001",
+          "t1071.001",
+          "t1041",
+          "t1115",
+          "t1113",
+          "t1056.001",
+          "t1123",
+          "t1125"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cellik-android-malware-builds-malicious-versions-from-google-play-apps/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Exploiting Anno 1404",
+        "description": "In-depth technical research uncovered multiple vulnerabilities in the strategy game Anno 1404: Venice (v2.01.5010), which, when combined, allow arbitrary code execution in multiplayer mode. The vulnerabilities include a path traversal flaw during saved game file transfer, enabling arbitrary file drops with application privileges anywhere on the system. This is followed by DLL hijacking to achieve arbitrary code execution upon game restart, leveraging a Windows 10 heap manager and the proprietary Granny 3D (.gr2) format.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1068 (Exploitation for Privilege Escalation)"
+        ],
+        "analyse": "This analysis highlights security risks even in older software and gaming environments, underscoring that low-level vulnerabilities can lead to system compromise. The absence of modern mitigations like ASLR or DEP in key game components increases the ease of exploitation. The impact is limited to game users but demonstrates the persistence of technical risks in established codebases.",
+        "recommandations": [
+          "Apply patches if available, though for older software this might be challenging.",
+          "Restrict game application permissions to limit potential damage.",
+          "Avoid local network multiplayer modes with untrusted sources.",
+          "Conduct security assessments on existing applications to identify and mitigate vulnerabilities.",
+          "Implement advanced OS-level security controls where possible."
+        ],
+        "tags": [
+          "vulnerability",
+          "exploitation",
+          "video_game",
+          "anno_1404",
+          "path_traversal",
+          "dll_hijacking",
+          "rce",
+          "reverse_engineering",
+          "t1574.001",
+          "t1036.003",
+          "t1059",
+          "t1068"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/exploiting-anno-1404.html"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "GhostPoster attacks hide malicious JavaScript in Firefox addon logos",
+        "description": "A new campaign, dubbed 'GhostPoster,' is hiding JavaScript code in the image logo of malicious Firefox extensions, with over 50,000 downloads. This script acts as a loader to fetch the main payload from a remote server, with intentionally infrequent retrieval for detection avoidance. The campaign monitors browser activity and plants a backdoor, using steganography techniques to conceal malicious code within PNG files.",
+        "threat_actor": "GhostPoster",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript)",
+          "T1574.006 (Hijack Execution Flow: DLL Search Order Hijacking)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1189 (Drive-by Compromise)",
+          "T1115 (Clipboard Data)",
+          "T1056.001 (Input Capture: Keylogging)"
+        ],
+        "analyse": "The GhostPoster campaign is a serious threat to Firefox users, exploiting trust in browser extensions and sophisticated concealment techniques like steganography. Impact can include monitoring online activity, data theft, and backdoor installation, compromising user privacy and security. The modus operandi aims to prolong persistence and evade detection.",
+        "recommandations": [
+          "Only download extensions from trusted sources and verify publishers.",
+          "Be cautious of extensions requesting excessive permissions.",
+          "Use security solutions that monitor browser activity and executed scripts.",
+          "Regularly update Firefox and its extensions.",
+          "Consider steganography analysis tools if an infection is suspected."
+        ],
+        "tags": [
+          "malware",
+          "firefox",
+          "browser_extension",
+          "steganography",
+          "javascript",
+          "backdoor",
+          "surveillance",
+          "t1566.001",
+          "t1204.002",
+          "t1059.007",
+          "t1574.006",
+          "t1071.001",
+          "t1189",
+          "t1115",
+          "t1056.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ghostposter-attacks-hide-malicious-javascript-in-firefox-addon-logos/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "GhostPairing: New Attack Hijacks WhatsApp via Linked Devices, Tricking Users with Fake Facebook QR Code",
+        "description": "A deceptive new cyberattack campaign, dubbed 'GhostPairing,' leverages WhatsApp's 'linked devices' feature through clever manipulation of user trust. The attack typically begins with a message from a compromised contact, enticing the victim to click a link that generates a legitimate-looking fake Facebook QR code. By scanning this code, the victim unwittingly links an attacker's device to their WhatsApp account, granting the attacker full, persistent control over the account, enabling them to read conversations, send messages, and spread the attack.",
+        "threat_actor": "Not mentioned",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1136.001 (Create Account: Local Account)"
+        ],
+        "analyse": "The GhostPairing attack represents a significant threat by exploiting user trust and the convenience of multi-device features, rather than technical exploits. Its simplicity and language-agnostic nature make it potentially viral and capable of global spread. The impact is full control over the user account, severely compromising privacy and enabling the dissemination of misinformation or malware.",
+        "recommandations": [
+          "Always verify the authenticity of messages and links, even from known contacts.",
+          "Never scan QR codes from unexpected or suspicious sources.",
+          "Regularly review 'linked devices' on messaging apps and remove any unrecognized devices.",
+          "Educate users on social engineering techniques.",
+          "Enable two-factor authentication for messaging accounts and online services."
+        ],
+        "tags": [
+          "social_engineering",
+          "whatsapp",
+          "ghostpairing",
+          "phishing",
+          "qr_code",
+          "account_takeover",
+          "privacy",
+          "t1566.001",
+          "t1204.001",
+          "t1078.003",
+          "t1021.001",
+          "t1136.001"
+        ],
+        "sources": [
+          "https://securityonline.info/ghostpairing-new-attack-hijacks-whatsapp-via-linked-devices-tricking-users-with-fake-facebook-qr-code/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "God Mode On: how we attacked a vehicle’s head unit modem",
+        "description": "Kaspersky researchers demonstrated how they gained access to a vehicle's head unit by exploiting a unique vulnerability in its Unisoc UIS7862A SoC modem. The vulnerability is a stack-based buffer overflow (CVE-2024-39432) in the 3G RLC protocol implementation, allowing remote code execution (RCE) at early connection stages. After compromising the modem, they used a hidden hardware DMA vulnerability for lateral movement and achieved SYSTEM privileges on the head unit's Android AP, raising concerns for road safety and data confidentiality.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-39432"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1202 (Indirect Command Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "This research highlights the increasing vulnerability of embedded systems, particularly in connected vehicles. Successful exploitation of a low-level modem vulnerability to gain full control of the infotainment system poses a direct risk to vehicle physical safety and passenger privacy. The identification of a hardware vulnerability for lateral movement adds a layer of sophistication to the attack.",
+        "recommandations": [
+          "Enhance security audits on embedded SoCs, especially for modems.",
+          "Apply strict and timely security patches to automotive systems.",
+          "Implement rigorous network segmentation between critical vehicle components (modem, AP).",
+          "Monitor for abnormal activity at both OS and hardware levels.",
+          "Manufacturers must improve visibility and security of inter-processor interactions at the microarchitectural level."
+        ],
+        "tags": [
+          "modem",
+          "connected_car",
+          "unisoc",
+          "rce",
+          "buffer_overflow",
+          "dma",
+          "system_privileges",
+          "automotive_security",
+          "confidentiality",
+          "t1202",
+          "t1547.001",
+          "t1068",
+          "t1059",
+          "t1543.003",
+          "t1090.003"
+        ],
+        "sources": [
+          "https://securelist.com/attacking-car-modem/118463/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Inside Ink Dragon: Revealing the Relay Network and Inner Workings of a Stealthy Offensive Operation",
+        "description": "Check Point Research uncovered Ink Dragon, a PRC-aligned espionage cluster, targeting government, telecom, and public-sector infrastructure. This group deploys the ShadowPad IIS Listener Module on compromised victims to create a distributed relay network, enabling it to route traffic and obfuscate C2 communications. The operation involves initial access via ASP.NET ViewState deserialization or the ToolShell SharePoint vulnerability, privilege escalation, aggressive lateral movement leading to domain dominance, and the use of backdoors like FinalDraft (C2 via Microsoft Graph API) and tools like LalsDumper for LSASS extraction and 032Loader.",
+        "threat_actor": "Ink Dragon (CL-STA-0049, Earth Alux, REF7707)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-49706",
+            "CVE-2025-53771",
+            "CVE-2025-49704",
+            "CVE-2025-53770"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078.003 (Valid Accounts: Cloud Accounts)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1021.002 (Remote Services: SMB/Windows Admin Shares)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1003.001 (OS Credential Dumping: LSASS Memory)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1546.008 (Event Triggered Execution: Image File Execution Options Injection)",
+          "T1548.002 (Bypass User Account Control: Event Viewer Bypass)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "Ink Dragon represents a highly sophisticated and persistent state-sponsored espionage threat. The use of a distributed relay network through compromised victims is an innovative technique to ensure C2 resilience and stealthy operability. The group deploys a modular range of tools and TTPs, demonstrating strong software engineering capabilities and disciplined operational playbooks. The impact is long-term espionage and compromise of governmental and industrial network sovereignty.",
+        "recommandations": [
+          "Implement timely patching for ASP.NET deserialization and SharePoint vulnerabilities.",
+          "Harden IIS/SharePoint configurations and monitor for abnormal activity.",
+          "Apply the principle of least privilege and rigorously segment networks.",
+          "Deploy Endpoint Detection and Response (EDR) solutions capable of detecting DLL sideloading and rootkit behaviors.",
+          "Establish strong authentication for administrative accounts and monitor for credential harvesting attempts.",
+          "Implement network communication monitoring to detect abnormal relay and C2 traffic.",
+          "Use YARA rules to detect known ShadowPad and FinalDraft artifacts."
+        ],
+        "tags": [
+          "ink_dragon",
+          "apt",
+          "espionage",
+          "prc",
+          "shadowpad",
+          "finaldraft",
+          "relay_network",
+          "government",
+          "t1190",
+          "t1078.003",
+          "t1547.001",
+          "t1059.003",
+          "t1021.001",
+          "t1021.002",
+          "t1560.001",
+          "t1003.001",
+          "t1036.003",
+          "t1090.003",
+          "t1071.001",
+          "t1071.004",
+          "t1543.003",
+          "t1053.005",
+          "t1546.008",
+          "t1548.002",
+          "t1098"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "KPop Malware Hunters: 2025’s takedowns",
+        "description": "2025 saw successful takedown operations against malware ecosystems by a global coalition of law enforcement and private security firms. Groups like BlackSuit (ransomware targeting healthcare, education, and public services) and Lumma Stealer (Malware-as-a-Service, disabling dozens of dependent adversaries) were disrupted. These surgical operations weakened threat groups and provided critical breathing room, demonstrating increased international coordination in fighting cybercrime.",
+        "threat_actor": "BlackSuit, Lumma Stealer",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1059 (Command and Scripting Interpreter)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "The success of takedowns in 2025 highlights the effectiveness of international public-private collaboration in disrupting large-scale cybercriminal operations. While these victories are significant, they also underscore the persistent and evolving nature of the threat, requiring continuous vigilance. The impact is a temporary or permanent disruption of malicious actor operations, but security teams must remain proactive in countering new threats and resurgences.",
+        "recommandations": [
+          "Continue to invest in international collaboration and threat intelligence sharing.",
+          "Strengthen detection and response capabilities for malware and ransomware.",
+          "Implement robust backups and disaster recovery plans.",
+          "Educate users on phishing and social engineering threats.",
+          "Deploy multi-layered security solutions to protect endpoints and the network."
+        ],
+        "tags": [
+          "malware",
+          "ransomware",
+          "lumma_stealer",
+          "blacksuit",
+          "takedown",
+          "cybercrime",
+          "international_coordination",
+          "t1059",
+          "t1486",
+          "t1041",
+          "t1071.001",
+          "t1560"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/kpop-malware-hunters/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "Most Parked Domains Now Serving Malicious Content",
+        "description": "An Infoblox study reveals that over 90% of 'parked' domains (expired or common misspellings of popular domain names) now redirect visitors to scams, malware, or scareware sites. Attackers use IP geolocation, device fingerprinting, and cookies to determine the redirection. Typosquatting examples like 'scotaibank[.]com' and 'gmai[.]com' are used for business email compromise scams and Trojan malware infections. The malicious behavior is often conditional on the visitor's residential IP address.",
+        "threat_actor": "Not mentioned (general cybercriminals)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "scotaibank[.]com",
+            "gmai[.]com",
+            "torresdns[.]com",
+            "domaincntrol[.]com"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1591 (Gather Victim Network Information)",
+          "T1589 (Gather Victim Identity Information)"
+        ],
+        "analyse": "The massive increase in malicious content on parked domains represents a significant rise in risk for direct navigation, even for vigilant users. This trend demonstrates increasing sophistication by malicious actors to target users via common errors or expired domains. The impact is broad, ranging from financial scams to malware infections, affecting the security of personal and professional information.",
+        "recommandations": [
+          "Use password managers to navigate to known sites, as they store the correct URL.",
+          "Use bookmarks for frequently visited sites instead of typing addresses manually.",
+          "Be extremely cautious when typing website addresses, double-checking for typos.",
+          "Deploy filtering DNS servers (like AdGuard DNS or Next DNS) to block known malicious domains.",
+          "Use a VPN to mask residential IP addresses, which can potentially alter the behavior of malicious redirects.",
+          "Educate users about the dangers of typosquatting and parked domains."
+        ],
+        "tags": [
+          "typosquatting",
+          "parked_domains",
+          "malware",
+          "scams",
+          "phishing",
+          "malicious_redirection",
+          "cybercrime",
+          "t1566.002",
+          "t1566.001",
+          "t1204.001",
+          "t1059",
+          "t1071.001",
+          "t1591",
+          "t1589"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2025/12/most-parked-domains-now-serving-malicious-content/"
+        ],
+        "date": "2025-12-17"
+      },
+      {
+        "title": "The Hidden Risk in Virtualization: Why Hypervisors are a Ransomware Magnet",
+        "description": "Ransomware groups are increasingly targeting hypervisors to maximize impact, allowing a single breach to encrypt dozens of virtual machines simultaneously. Incident data from 2025 shows a sharp increase in hypervisor-targeting ransomware, rising from 3% to 25% of cases in the second half of the year. Attackers exploit visibility gaps and limited protections at the hypervisor layer, often using administrative credentials or known vulnerabilities (like CVE-2024-37085 for ESXi) to deploy ransomware payloads that bypass guest-OS controls.",
+        "threat_actor": "Ransomware groups (Unspecified)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2024-37085"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1562.001 (Impair Defenses: Disable or Modify Tools)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1136.001 (Create Account: Local Account)",
+          "T1078.002 (Valid Accounts: Domain Accounts)"
+        ],
+        "analyse": "Virtualization, while offering operational benefits, introduces a single, high-impact point of failure when the hypervisor is targeted. The rise of ransomware attacks against hypervisors underscores the need to rethink security strategies for these foundational infrastructure layers. The impact can be catastrophic for organizations, leading to widespread data loss and significant business disruption.",
+        "recommandations": [
+          "Regularly apply security patches to hypervisors (e.g., ESXi) and underlying systems.",
+          "Implement strict access controls and the principle of least privilege for hypervisor administrative accounts, avoiding domain-joined accounts where possible.",
+          "Deploy hypervisor-specific detection, beyond traditional EDR tools that may have blind spots.",
+          "Monitor for unusual actions at the hypervisor level (config changes, SSH enablement, admin account creation).",
+          "Establish and regularly test robust backup and recovery strategies specific to virtualized environments.",
+          "Physically or logically segment hypervisor management networks.",
+          "Update Incident Response Plans (IRPs) and Disaster Recovery Plans (DRPs) to include hypervisor compromise scenarios."
+        ],
+        "tags": [
+          "ransomware",
+          "hypervisor",
+          "virtualization",
+          "esxi",
+          "privilege_escalation",
+          "data_encryption",
+          "t1486",
+          "t1078",
+          "t1068",
+          "t1562.001",
+          "t1053.005",
+          "t1136.001",
+          "t1078.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-hidden-risk-in-virtualization-why-hypervisors-are-a-ransomware-magnet/"
+        ],
+        "date": "2025-12-17"
+      }
+    ]
+  }
+}
