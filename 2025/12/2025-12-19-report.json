@@ -1,0 +1,2071 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification et une diversification des menaces cyber en cette fin d'année 2025. Les tendances clés incluent l'exploitation agressive de vulnérabilités zero-day, notamment dans des infrastructures critiques (Cisco, WatchGuard, SonicWall), avec une prévalence alarmante de scores CVSS critiques. Les acteurs malveillants, notamment les APT liées à des États (comme UAT-9686, groupe lié à la Chine, ou les groupes russes Z-Pentest et NoName057(16)) et les groupes de ransomware (Clop, RansomHouse/Jolly Scorpius), continuent d'innover leurs modes opératoires. L'utilisation de l'IA par les attaquants (DIG AI pour la génération de contenu illicite, IA pour le spear-phishing) représente une menace émergente majeure, rendant les défenses traditionnelles moins efficaces et accélérant la course aux armements cyber. Les attaques par compromission des chaînes d'approvisionnement (ASUS Live Update), le vol d'identifiants et le détournement de fonctionnalités légitimes (WhatsApp GhostPairing, usage d'outils RMM comme ScreenConnect) sont des vecteurs d'attaque courants. Les violations de données restent fréquentes, touchant des secteurs variés de l'éducation à l'e-commerce et aux finances, souvent facilitées par des contrôles d'accès faibles (absence de MFA). La situation géopolitique mondiale fragmentée (gouvernance climatique, tensions en Ukraine, relations US-Israël, économie de guerre russe) se reflète directement dans le paysage cyber, avec des cyberattaques étatiques utilisées comme outils de guerre hybride et d'interférence. En conclusion, l'état général des menaces est caractérisé par une persistance de l'exploitation de vulnérabilités connues non corrigées et l'émergence rapide de nouvelles techniques sophistiquées, poussant les organisations à adopter des stratégies de défense proactives, centrées sur la détection comportementale, la gestion des identités et l'intelligence des menaces opérationnelle.",
+      "date": "2025-12-19"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-9686",
+        "secteur": "Organisations utilisant les produits de sécurité email et web Cisco",
+        "modop": "Exploitation de vulnérabilités zero-day critiques (CVE-2025-20393) dans Cisco AsyncOS pour l'exécution de code à distance avec privilèges root, déploiement de backdoors persistantes (AquaShell), d'outils de tunneling (ReverseSSH/AquaTunnel, Chisel) et d'utilitaires de nettoyage de journaux (AquaPurge).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "China-linked",
+          "zero-day exploitation",
+          "RCE",
+          "backdoor",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1120/",
+          "https://cert.europa.eu/publications/security-advisories/2025-042/",
+          "https://www.cisecurity.org/advisory/a-vulnerability-in-cisco-asyncos-could-allow-for-remote-code-execution_2025-117",
+          "https://fieldeffect.com/blog/unpatched-cisco-asyncos-vulnerability-actively-exploited",
+          "https://socprime.com/blog/cve-2025-20393-vulnerability-exploitation/",
+          "https://www.bleepingcomputer.com/news/security/new-password-spraying-attacks-target-cisco-pan-vpn-gateways/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Clop ransomware gang (Cl0p)",
+        "secteur": "Entreprises utilisant les serveurs de fichiers Gladinet CentreStack, ainsi que des plateformes de transfert de fichiers sécurisées",
+        "modop": "Campagnes d'extorsion et de vol de données ciblant des serveurs de fichiers Gladinet CentreStack exposés à Internet, exploitant une vulnérabilité inconnue (zero-day ou N-day). Historique de ciblage de produits de transfert de fichiers sécurisés (Accellion FTA, GoAnywhere MFT, Cleo, MOVEit Transfer).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data theft",
+          "extortion",
+          "zero-day exploitation",
+          "supply chain attack"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-gladinet-centrestack-servers-for-extortion/",
+          "https://securityonline.info/clop-ransomware-targets-gladinet-centrestack-in-data-theft-attacks/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "RansomHouse (Jolly Scorpius)",
+        "secteur": "E-commerce (Askul), santé, finance, transport, gouvernement",
+        "modop": "Utilisation du malware 'Mario' avec un moteur de chiffrement dual-key sophistiqué et un traitement des fichiers par blocs dynamiques pour déjouer les sauvegardes et la récupération. Modèle de double extorsion (vol de données sensibles et chiffrement des systèmes). Exploitation de crédentiels d'administrateur partenaires compromis (sans MFA) comme point d'entrée.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data theft",
+          "double extortion",
+          "encryption",
+          "malware",
+          "credential theft"
+        ],
+        "sources": [
+          "https://securityonline.info/marios-deadly-upgrade-ransomhouse-unveils-dual-key-encryption-to-defeat-backups-and-recovery/",
+          "https://infosec.exchange/@DevaOnBreaches/115743529704011555"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Gouvernement (élections municipales et régionales), infrastructure critique (usine de traitement des eaux) au Danemark",
+        "modop": "Cyberattaques attribuées à l'État russe, utilisées comme instruments de guerre hybride pour créer de l'insécurité et punir les soutiens à l'Ukraine. Détails spécifiques des TTP non fournis, mais impact sur la disponibilité.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "Russia-linked",
+          "hybrid warfare",
+          "DDoS",
+          "critical infrastructure",
+          "election interference"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Partis politiques, municipalités, institutions publiques, entreprises de défense au Danemark",
+        "modop": "Cyberattaques revendiquées par des hackeurs prorusses, attribuées à l'État russe comme instruments de guerre hybride. Rendu inaccessibles les sites web par des attaques par déni de service distribué (DDoS).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "Russia-linked",
+          "hybrid warfare",
+          "DDoS",
+          "political targeting"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "Non spécifié, utilisateurs finaux ciblant des applications NodeJS malveillantes",
+        "modop": "Applications NodeJS malveillantes se faisant passer pour des outils d'IA ou des utilitaires, effectuant de la reconnaissance et exécutant des commandes arbitraires en mémoire.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "reconnaissance",
+          "command execution",
+          "NodeJS"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Sha1-Hulud",
+        "secteur": "Développeurs/entreprises utilisant des packages npm et GitHub Actions",
+        "modop": "Campagne de vers 'npm package worm' (Sha1-Hulud: The Second Coming) dérobant des identifiants et se propageant via GitHub Actions runners, avec publication de crédentiels encodés sur GitHub.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "worm",
+          "supply chain attack",
+          "credential theft",
+          "GitHub Actions",
+          "npm"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "MacSync Stealer",
+        "secteur": "Utilisateurs macOS, avec un ciblage spécifique des utilisateurs de Ledger Live et Trezor Suite",
+        "modop": "Infostealer macOS conçu pour accéder à des informations sensibles (identifiants, données de cartes de paiement, détails du trousseau, portefeuilles de cryptomonnaies) via AppleScript. Utilise des techniques de phishing pour les utilisateurs de Ledger Live et Trezor Suite en téléchargeant des versions malveilluses des applications.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "macOS",
+          "credential theft",
+          "cryptocurrency",
+          "phishing"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Opérateurs d'E-Note (Mykhalio Petrovich Chudnovets)",
+        "secteur": "Cybersécurité (plateformes d'échange de cryptomonnaies)",
+        "modop": "Utilisation de la plateforme d'échange de cryptomonnaies E-Note pour le blanchiment de plus de 70 millions de dollars de fonds illicites provenant d'attaques de ransomware et de détournements de comptes. Utilisation de réseaux de mules monétaires et d'applications mobiles dédiées pour une confidentialité accrue et pour échapper à la détection des forces de l'ordre.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "money laundering",
+          "ransomware payment",
+          "cryptocurrency",
+          "cybercriminal infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-seizes-e-note-crypto-exchange-for-laundering-ransomware-payments/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "DIG AI users",
+        "secteur": "Marché noir du darknet (piratage, contenu illégal, CSAM)",
+        "modop": "Utilisation d'un assistant IA non censuré hébergé sur le réseau Tor pour générer des informations (fabrication d'engins explosifs) et créer du contenu illégal hyperréaliste, y compris du CSAM (contenu pédopornographique généré par IA).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "AI abuse",
+          "darknet",
+          "CSAM",
+          "illicit content generation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185842/cyber-crime/dig-ai-uncensored-darknet-ai-assistant-at-the-service-of-criminals-and-terrorists.html"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Secteur maritime, infrastructure critique (ferries)",
+        "theme": "Interférence étrangère, cyberespionnage",
+        "description": "Arrestation d'un membre d'équipage letton en France, soupçonné d'avoir installé un malware sur un ferry italien (Fantastic) pour permettre le contrôle à distance du navire. Les autorités françaises (DGSI) enquêtent sur des soupçons d'ingérence étrangère.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Latvia",
+          "Italy",
+          "foreign interference",
+          "critical infrastructure",
+          "cyberespionage",
+          "malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/france-arrests-latvian-for-installing-malware-on-italian-ferry/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Défense nationale, élections, infrastructure critique (eau), services publics",
+        "theme": "Guerre hybride, cyberattaques étatiques",
+        "description": "Le Danemark attribue deux cyberattaques majeures (élections municipales et régionales de novembre 2025, usine de traitement des eaux fin 2024) à des groupes liés à l'État russe (Z-Pentest et NoName057(16)). Ces attaques visent à créer de l'insécurité et à punir les pays soutenant l'Ukraine, soulignant une situation de 'guerre hybride'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Denmark",
+          "Russia",
+          "hybrid warfare",
+          "state-sponsored cyberattacks",
+          "election interference",
+          "critical infrastructure",
+          "DDoS"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Secteur financier, cybersécurité, application de la loi",
+        "theme": "Blanchiment d'argent, démantèlement d'infrastructures criminelles",
+        "description": "Les forces de l'ordre américaines, en collaboration avec des partenaires finlandais et allemands, ont saisi les serveurs et les domaines de la plateforme d'échange de cryptomonnaies E-Note, accusée d'avoir blanchi plus de 70 millions de dollars de paiements de rançons et de fonds illicites provenant de détournements de comptes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "Finland",
+          "Germany",
+          "law enforcement",
+          "money laundering",
+          "ransomware",
+          "cybercrime infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-seizes-e-note-crypto-exchange-for-laundering-ransomware-payments/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Gouvernance mondiale, environnement, ressources",
+        "theme": "Gouvernance climatique, instrumentalisation politique, fragmentation internationale",
+        "description": "Analyse de la fragmentation de la gouvernance climatique et de l'instrumentalisation politique des enjeux environnementaux et des ressources communes. Les défis globaux comme le changement climatique et la gestion des matières premières fracturent le paysage international, avec un retour du recours à la force et à l'appropriation, remettant en cause les cadres de gouvernance existants.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "climate governance",
+          "environment",
+          "natural resources",
+          "international relations",
+          "political tensions"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gouvernance-du-climat-une-geopolitique-fragmentee-pour-des-defis-globaux/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Union Européenne, économie, défense, politique étrangère",
+        "theme": "Crise économique, autonomie stratégique, relations transatlantiques",
+        "description": "Analyse des incertitudes politiques et stratégiques de l'Allemagne sous Friedrich Merz, notamment les difficultés économiques, le rôle accru en Europe face à la France affaiblie, et une relation transatlantique ambiguë avec les États-Unis. La politique allemande envers Israël, fondée sur une 'raison d'État' historique, montre des inflexions avec des suspensions temporaires de livraisons d'armes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Germany",
+          "EU",
+          "USA",
+          "Israel",
+          "foreign policy",
+          "economy",
+          "defense",
+          "political leadership"
+        ],
+        "sources": [
+          "https://www.iris-france.org/allemagne-quelles-orientations-politiques-et-strategiques-sous-friedrich-merz/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Sécurité nationale, infrastructures numériques (systèmes eVisa)",
+        "theme": "Sécurité des données, protection de la vie privée, infrastructure gouvernementale",
+        "description": "Une enquête révèle des protections de sécurité élémentaires insuffisantes dans le système de visa électronique (eVisa) de la Somalie, permettant l'accès à des données de passeport et des informations personnelles sensibles des demandeurs de visa à l'échelle mondiale. Cela pose un risque élevé de vol d'identité et de compromission des données pour les citoyens.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Somalia",
+          "Somaliland",
+          "eVisa system",
+          "data security",
+          "privacy",
+          "identity theft",
+          "government infrastructure"
+        ],
+        "sources": [
+          "https://mastodon.social/@Saxafi/115743348753560883",
+          "https://saxafimedia.com/somalia-electronic-visa-security-data-risk/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Relations internationales, défense, sécurité",
+        "theme": "Prolifération nucléaire, dissuasion, stabilité mondiale",
+        "description": "Analyse de la notion de 'nouvel âge nucléaire', soulignant que de nombreuses caractéristiques de l'ère nucléaire (prolifération, risques d'escalade, rôle des États souverains) persistent. L'article critique l'accent excessif mis sur le 'nouveau' et insiste sur la nécessité de se concentrer sur les problèmes non résolus et les dangers de longue date pour la survie mondiale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "nuclear age",
+          "nuclear proliferation",
+          "international security",
+          "deterrence",
+          "cold war"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/new-nuclear-age-not-new"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Économie, politique interne, relations internationales",
+        "theme": "Économie de guerre, expropriation d'actifs, contrôle politique",
+        "description": "Description de la pratique croissante de 'reiderstvo' (raids d'entreprise ou saisies d'actifs par l'État) en Russie, qui s'est accélérée depuis l'invasion de l'Ukraine. Les entreprises occidentales et nationales jugées déloyales sont ciblées, avec des actifs redistribués aux loyalistes du Kremlin. Ce mécanisme bureaucratique renforce le contrôle politique et le complexe militaro-industriel, créant une 'classe d'affaires de temps de guerre' dépendante de la loyauté politique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russia",
+          "wartime economy",
+          "state seizure",
+          "expropriation",
+          "political control",
+          "corporate raiding"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/raiding-russias-wartime-economy"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Union Européenne, économie, politique",
+        "theme": "Risques de fragmentation de l'UE, résilience économique, défis culturels",
+        "description": "Analyse des risques d'éclatement de l'Union Européenne face aux chocs financiers, au décrochage productif et éducatif, et aux conséquences de la guerre russo-ukrainienne. L'article met en évidence les dérives bureaucratiques, la crise des compétences et la dépendance technologique vis-à-vis des États-Unis, appelant à une stratégie de résilience productive et intellectuelle pour anticiper un éventuel bouleversement du système de coopération européen.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "EU",
+          "economic crisis",
+          "political instability",
+          "transatlantic relations",
+          "resilience",
+          "education"
+        ],
+        "sources": [
+          "https://www.iris-france.org/risque-declatement-de-lue-et-resilience-productive/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Relations internationales, diplomatie, conflits armés",
+        "theme": "Conflit israélo-palestinien, politique étrangère des États-Unis",
+        "description": "Analyse des ambiguïtés régionales et internationales qui alimentent l'impasse israélo-palestinienne, avec une discussion sur les limites de la solution à deux États et l'évolution de la position américaine face à Israël. Malgré les accords de cessez-le-feu et la reconnaissance de la Palestine par certains États, la situation sur le terrain reste inchangée, et les États-Unis adoptent un positionnement contradictoire en l'absence de sanctions contre Israël.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "Israel",
+          "Palestine",
+          "Middle East conflict",
+          "diplomacy",
+          "international relations",
+          "two-state solution"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-face-a-israel-avec-robert-malley/"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "E-commerce",
+        "victime": "Askul (Japon)",
+        "description": "L'entreprise japonaise d'e-commerce Askul a confirmé un vol de données de ~740 000 dossiers clients suite à une attaque de ransomware par le groupe RansomHouse. L'incident, facilité par des identifiants d'administrateur partenaires compromis (sans MFA), a entraîné des pannes de système, des sauvegardes effacées et des perturbations d'expédition continues depuis octobre.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "Askul",
+          "RansomHouse",
+          "ransomware",
+          "data theft",
+          "MFA bypass"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115743529704011555",
+          "https://www.bleepingcomputer.com/news/security/askul-confirms-theft-of-740k-customer-records-in-ransomhouse-attack/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "Bank Mandiri (Indonésie)",
+        "description": "Forte confiance dans l'existence d'une violation de données ciblant Bank Mandiri dans le secteur financier indonésien. Aucun détail supplémentaire n'est spécifié sur la nature de la violation ou les données compromises à ce stade.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial sector",
+          "Bank Mandiri",
+          "Indonesia",
+          "cyberthreat"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115742816655171453"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Inspection de véhicules",
+        "victime": "AUTOSUR (France)",
+        "description": "En mars 2025, la société française d'inspection de véhicules AUTOSUR a subi une violation de données exposant plus de 10 millions de dossiers clients, dont 487 226 adresses e-mail uniques. Les données compromises comprenaient les noms, numéros de téléphone, adresses physiques et détails des véhicules (marque, modèle, VIN, plaque d'immatriculation).",
+        "tags": [
+          "violation",
+          "breach",
+          "vehicle inspection",
+          "AUTOSUR",
+          "France",
+          "customer data",
+          "personal information",
+          "vehicle details"
+        ],
+        "sources": [
+          "https://mastodon.social/@RedPacketSecurity/115743997261471779",
+          "https://haveibeenpwned.com/Breach/AUTOSUR"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Université de Sydney (Australie)",
+        "description": "Des pirates ont accédé à un répertoire de code en ligne de l'Université de Sydney et ont volé des fichiers contenant des informations personnelles sur le personnel et les étudiants. La violation était limitée à un seul système, rapidement sécurisé. Un service de soutien aux victimes a été mis en place.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "University of Sydney",
+          "Australia",
+          "personal data",
+          "staff data",
+          "student data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-sydney-suffers-data-breach-exposing-student-and-staff-info/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Communautés en ligne (forum de botting)",
+        "victime": "The Botting Network",
+        "description": "En août 2012, le forum 'The Botting Network' a subi une violation de données exposant 96 320 enregistrements d'utilisateurs. Les données divulguées comprenaient des adresses e-mail, des noms d'utilisateur, des dates de naissance et des hachages de mots de passe salés (MD5).",
+        "tags": [
+          "violation",
+          "breach",
+          "online community",
+          "The Botting Network",
+          "user data",
+          "passwords",
+          "MD5 hashes"
+        ],
+        "sources": [
+          "https://mastodon.social/@RedPacketSecurity/115743997262649600",
+          "https://haveibeenpwned.com/Breach/TheBottingNetwork"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": 10.0,
+        "product": "Cisco Secure Email Gateway et Cisco Secure Email and Web Manager (AsyncOS)",
+        "description": "Exécution de code arbitraire à distance (RCE) avec privilèges root en raison d'une vulnérabilité zero-day activement exploitée. Affecte les appliances lorsque la fonction 'Spam Quarantine' est activée et exposée à Internet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "AsyncOS",
+          "RCE",
+          "root privileges",
+          "zero-day",
+          "active exploitation",
+          "email security"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1120/",
+          "https://cert.europa.eu/publications/security-advisories/2025-042/",
+          "https://www.cisecurity.org/advisory/a-vulnerability-in-cisco-asyncos-could-allow-for-remote-code-execution_2025-117",
+          "https://fieldeffect.com/blog/unpatched-cisco-asyncos-vulnerability-actively-exploited",
+          "https://socprime.com/blog/cve-2025-20393-vulnerability-exploitation/",
+          "https://www.bleepingcomputer.com/news/security/new-password-spraying-attacks-target-cisco-pan-vpn-gateways/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "Hewlett Packard Enterprise (HPE) OneView Software",
+        "description": "Exécution de code arbitraire à distance (RCE) sans authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "HPE",
+          "OneView",
+          "RCE",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185853/security/hewlett-packard-enterprise-hpe-fixed-maximum-severity-oneview-flaw.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-23006",
+        "cvss": 9.8,
+        "product": "SonicWall SMA1000 Appliance",
+        "description": "Exécution de code arbitraire à distance (RCE) non authentifiée avec privilèges root. Exploitée en combinaison avec CVE-2025-40602.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SMA1000",
+          "RCE",
+          "unauthenticated",
+          "zero-day",
+          "chained exploitation"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1121/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-37093",
+        "cvss": 9.8,
+        "product": "Hewlett Packard Enterprise (HPE) StoreOnce Software",
+        "description": "Vulnérabilité de contournement de l'authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "HPE",
+          "StoreOnce",
+          "authentication bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185853/security/hewlett-packard-enterprise-hpe-fixed-maximum-severity-oneview-flaw.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS (iked process)",
+        "description": "Vulnérabilité de 'Out-of-bounds Write' pouvant permettre à un attaquant distant non authentifié d'exécuter du code arbitraire et de prendre le contrôle des firewalls. Affecte les VPN Mobile User et Branch Office avec IKEv2, même après suppression de la configuration dans certains scénarios. Activement exploitée comme zero-day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WatchGuard",
+          "Fireware OS",
+          "RCE",
+          "out-of-bounds write",
+          "zero-day",
+          "active exploitation",
+          "VPN",
+          "firewall"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14733",
+          "https://securityonline.info/watchguard-under-siege-critical-cvss-9-3-zero-day-exploited-in-the-wild-to-hijack-corporate-firewalls/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-68398",
+        "cvss": 9.1,
+        "product": "Weblate",
+        "description": "Vulnérabilité de 'Git config file overwrite' pouvant mener à l'exécution de code arbitraire à distance. Présente dans les versions antérieures à 5.15.1.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Weblate",
+          "RCE",
+          "git configuration",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68398"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-52692",
+        "cvss": 8.8,
+        "product": "Non spécifié (affecte les fonctions d'administration)",
+        "description": "Vulnérabilité de contournement d'authentification permettant à un attaquant avec accès au réseau local d'accéder à certaines fonctions d'administration sans identifiants de connexion via une URL spécialement conçue.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication bypass",
+          "local network access",
+          "admin functions"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-52692"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-13941",
+        "cvss": 8.8,
+        "product": "Foxit PDF Reader/Editor Update Service",
+        "description": "Vulnérabilité d'escalade de privilèges locale (LPE) due à des permissions incorrectes des fichiers lors de l'installation de plugins. Permet à un attaquant local avec de faibles privilèges d'exécuter du code arbitraire avec les privilèges SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Foxit",
+          "PDF Reader",
+          "Privilege Escalation",
+          "LPE",
+          "RCE",
+          "SYSTEM privileges"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13941"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14269",
+        "cvss": 8.8,
+        "product": "Headlamp (UI web pour Kubernetes)",
+        "description": "Vulnérabilité dans Headlamp permettant à des utilisateurs non authentifiés de prendre le contrôle des opérations Helm d'un cluster Kubernetes en abusant de la gestion des sessions qui met en cache les informations d'identification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Kubernetes",
+          "Headlamp",
+          "Helm",
+          "unauthenticated access",
+          "cluster hijack",
+          "session management"
+        ],
+        "sources": [
+          "https://securityonline.info/kubernetes-alert-headlamp-flaw-cve-2025-14269-lets-unauthenticated-users-hijack-helm-clusters/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-59374",
+        "cvss": "Critical",
+        "product": "ASUS Live Update",
+        "description": "Vulnérabilité de compromission de la chaîne d'approvisionnement (campagne ShadowHammer) où des versions de Live Update ont été distribuées avec du code malveillant intégré, permettant des actions non intentionnelles sur des appareils ciblés par des adresses MAC spécifiques. Ajoutée au catalogue KEV de la CISA.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ASUS",
+          "Live Update",
+          "supply chain attack",
+          "ShadowHammer",
+          "malicious code distribution"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-67843",
+        "cvss": 8.3,
+        "product": "Mintlify Platform (MDX Rendering Engine)",
+        "description": "Vulnérabilité d'injection de template côté serveur (SSTI) permettant l'exécution de code arbitraire à distance via des expressions JSX en ligne dans un fichier MDX.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mintlify Platform",
+          "SSTI",
+          "RCE",
+          "MDX"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67843"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-64675",
+        "cvss": 8.3,
+        "product": "Azure Cosmos DB",
+        "description": "Vulnérabilité de spoofing via Cross-Site Scripting (XSS) due à une neutralisation incorrecte des entrées lors de la génération de pages web, permettant à un attaquant non autorisé d'effectuer du spoofing sur un réseau.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Azure",
+          "Cosmos DB",
+          "XSS",
+          "spoofing",
+          "web vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64675"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-11774",
+        "cvss": 8.2,
+        "product": "Mitsubishi Electric GENESIS64, ICONICS Suite, Mobile HMI, MC Works64 (fonction 'keypad')",
+        "description": "Vulnérabilité d'injection de commande OS (OS Command Injection) permettant à un attaquant local d'exécuter des fichiers exécutables arbitraires en manipulant le fichier de configuration de la fonction 'keypad'. Peut entraîner la divulgation, la falsification, la suppression ou la destruction d'informations, ou un déni de service (DoS).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mitsubishi Electric",
+          "ICS/SCADA",
+          "OS Command Injection",
+          "RCE",
+          "local attacker",
+          "DoS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-11774"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-40602",
+        "cvss": "Not Specified, Chained with 9.8 RCE",
+        "product": "SonicWall SMA1000 Appliance",
+        "description": "Vulnérabilité d'escalade de privilèges locale due à une autorisation insuffisante dans la console de gestion (AMC). Exploitée comme zero-day en combinaison avec CVE-2025-23006 pour atteindre une exécution de code à distance non authentifiée avec privilèges root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SMA1000",
+          "Privilege Escalation",
+          "zero-day",
+          "chained exploitation",
+          "access control"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1121/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14558",
+        "cvss": "High-severity",
+        "product": "FreeBSD (Pile réseau)",
+        "description": "Exécution de code arbitraire via l'envoi de paquets IPv6 malveillants, due à un manque d'assainissement des entrées dans les programmes rtsol et rtsold. Un attaquant sur le même segment réseau peut exécuter des commandes shell avec des privilèges système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "FreeBSD",
+          "network stack",
+          "RCE",
+          "IPv6",
+          "input validation",
+          "local network"
+        ],
+        "sources": [
+          "https://securityonline.info/freebsd-network-alert-malicious-ipv6-packets-can-trigger-remote-code-execution-via-resolvconf-cve-2025-14558/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-68461",
+        "cvss": "High-severity",
+        "product": "Roundcube Webmail",
+        "description": "Vulnérabilités de Cross-Site Scripting (XSS) via des images SVG et de contournement du désinfecteur CSS, permettant l'exécution de scripts malveillants, le vol de cookies de session, le détournement de comptes ou la redirection vers des sites de phishing via des e-mails malveillux.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Roundcube",
+          "Webmail",
+          "XSS",
+          "SVG",
+          "CSS sanitizer bypass",
+          "session hijacking",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityonline.info/roundcube-alert-high-severity-svg-xss-and-css-sanitizer-flaws-threaten-webmail-privacy/"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Analyse de fin d'année et perspectives sur les menaces cyber en 2025",
+        "description": "Synthèse des rapports annuels et trimestriels sur le paysage des menaces cyber. Les attaquants montrent une sophistication croissante, abandonnant les payloads évidents au profit de l'abus d'outils légitimes et de l'intégration dans les chaînes d'identité. L'IA est de plus en plus utilisée pour automatiser et personnaliser les attaques (phishing, deepfakes, génération dynamique de commandes). Le ransomware évolue vers le vol de crédentiels, l'accès à long terme et l'exfiltration de données stratégiques. Les menaces internes se complexifient avec la manipulation d'initiés. Les recommandations soulignent l'importance de la détection comportementale, des contrôles d'identité robustes et d'une surveillance continue des appareils périphériques et des connexions SaaS. L'intelligence des menaces opérationnalisée est cruciale pour prioriser la correction des vulnérabilités non pas par date de publication mais par probabilité d'exploitation.",
+        "threat_actor": "Acteurs de la menace divers, y compris APT et groupes de ransomware",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1070)",
+          "Credential Access (T1539)",
+          "Initial Access (T1566)",
+          "Execution (T1059)",
+          "Persistence (T1078)",
+          "Exfiltration (T1041)"
+        ],
+        "analyse": "L'évolution des TTPs des attaquants vers la discrétion et l'abus de fonctionnalités légitimes rend la détection plus difficile et nécessite une approche de sécurité plus adaptative, axée sur le comportement plutôt que sur les signatures. L'adoption de l'IA par les attaquants amplifie la menace, nécessitant des défenses basées sur l'IA. La priorité doit être donnée à la sécurité des identités et à la gestion proactive des vulnérabilités.",
+        "recommandations": [
+          "Mettre en œuvre des solutions de détection comportementale avancées.",
+          "Renforcer les contrôles d'identité et d'accès, y compris la MFA résistante au phishing.",
+          "Surveiller en continu les appareils périphériques et les applications SaaS.",
+          "Prioriser la correction des vulnérabilités en fonction de leur probabilité d'exploitation active plutôt que de leur date de publication.",
+          "Investir dans l'intelligence des menaces opérationnalisée pour affiner la stratégie de défense.",
+          "Former les employés à la reconnaissance des techniques de social engineering, y compris celles basées sur l'IA (deepfakes, vishing)."
+        ],
+        "tags": [
+          "cybersecurity trends",
+          "threat landscape",
+          "ransomware",
+          "AI in cyberattacks",
+          "credential theft",
+          "supply chain",
+          "behavioral detection",
+          "threat intelligence",
+          "MITRE ATT&CK",
+          "T1070",
+          "T1539",
+          "T1566",
+          "T1059",
+          "T1078",
+          "T1041"
+        ],
+        "sources": [
+          "/cybersecurity-blog/annual-report-2025/",
+          "https://blog.talosintelligence.com/adios-2025-you-wont-be-missed/",
+          "https://www.guidepointsecurity.com/blog/beyond-the-perimeter-how-threat-actors-will-adapt/",
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Campagne GhostPairing abuse le couplage d'appareils WhatsApp pour détourner des comptes",
+        "description": "Une campagne nommée GhostPairing exploite la fonctionnalité de couplage d'appareils de WhatsApp pour détourner des comptes sans nécessiter le vol de mot de passe ou l'échange de carte SIM. Les attaquants utilisent des leurres plausibles envoyés via des comptes compromis pour inciter les victimes à valider un lien vers un faux 'Facebook viewer'. En suivant des étapes apparemment inoffensives, les utilisateurs accordent involontairement un accès complet à leur compte WhatsApp Web, permettant aux attaquants de lire les discussions, recevoir des messages, télécharger des médias et se faire passer pour les victimes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (T1566 - Phishing: Spearphishing Link)",
+          "Defense Evasion (T1036 - Masquerading: Impersonation)",
+          "Collection (T1005 - Data from Local System, T1056 - Input Capture)",
+          "Exfiltration (T1041 - Exfiltration Over C2 Channel)",
+          "Impact (T1498 - Inhibit System Recovery)",
+          "Persistence (T1078 - Valid Accounts)",
+          "Resource Development (T1583 - Create Accounts)"
+        ],
+        "analyse": "Cette campagne démontre l'efficacité de l'ingénierie sociale et de l'abus de fonctionnalités légitimes des plateformes pour contourner les mécanismes de sécurité traditionnels. L'accès persistant et discret via le couplage d'appareils rend la détection difficile pour les victimes et permet des actions de fraude, d'usurpation d'identité ou d'extorsion subséquentes.",
+        "recommandations": [
+          "Vérifier et supprimer régulièrement les appareils liés inconnus dans les paramètres WhatsApp.",
+          "Traiter toute demande de codes QR ou numériques provenant de sites web tiers comme suspecte.",
+          "Activer la vérification en deux étapes sur WhatsApp.",
+          "Sensibiliser les utilisateurs à cette technique et aux risques liés aux communications non sollicitées.",
+          "Les plateformes devraient envisager des avertissements plus clairs pour le couplage d'appareils, une meilleure contextualisation des demandes de jumelage et une révocation plus rapide des sessions liées après abus."
+        ],
+        "tags": [
+          "WhatsApp",
+          "GhostPairing",
+          "social engineering",
+          "account hijacking",
+          "device linking",
+          "phishing",
+          "MFA bypass",
+          "T1566",
+          "T1036",
+          "T1005",
+          "T1056",
+          "T1041",
+          "T1498",
+          "T1078",
+          "T1583"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185814/hacking/ghostpairing-campaign-abuses-whatsapp-device-linking-to-hijack-accounts/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Le groupe de ransomware Clop cible les serveurs Gladinet CentreStack pour le vol de données",
+        "description": "Le groupe de ransomware Clop (également connu sous le nom de Cl0p) cible les serveurs de fichiers Gladinet CentreStack exposés à Internet dans une nouvelle campagne d'extorsion par vol de données. Bien que la vulnérabilité exploitée soit actuellement inconnue (potentiellement zero-day ou N-day), cette campagne s'inscrit dans l'historique de Clop de cibler des produits de transfert de fichiers sécurisés, tels qu'Accellion FTA, GoAnywhere MFT, Cleo et MOVEit Transfer, qui ont précédemment affecté des milliers d'organisations dans le monde.",
+        "threat_actor": "Clop ransomware gang (Cl0p)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (T1190 - Exploit Public-Facing Application)",
+          "Exfiltration (T1041 - Exfiltration Over C2 Channel)",
+          "Impact (T1486 - Data Encrypted for Impact - bien que l'extorsion soit axée sur le vol de données plutôt que sur le chiffrement dans ce cas)"
+        ],
+        "analyse": "Cette campagne souligne la menace persistante que représentent les groupes de ransomware pour la chaîne d'approvisionnement logicielle, en ciblant des applications largement utilisées pour des fonctions critiques de partage de fichiers. L'utilisation d'une vulnérabilité potentiellement non corrigée ou d'une vulnérabilité N-day non patchée par les victimes met en évidence l'importance d'une gestion proactive des vulnérabilités et d'une surveillance des systèmes exposés.",
+        "recommandations": [
+          "Assurer que tous les serveurs Gladinet CentreStack sont mis à jour avec les derniers correctifs de sécurité.",
+          "Restreindre l'exposition de Gladinet CentreStack à Internet autant que possible.",
+          "Mettre en œuvre une surveillance robuste des logs et du trafic réseau pour détecter des activités anormales.",
+          "Renforcer l'authentification et l'accès pour toutes les interfaces d'administration.",
+          "Mettre en place des sauvegardes régulières et vérifiées des données critiques, stockées hors ligne et hors site.",
+          "Développer et tester un plan de réponse aux incidents pour le vol de données et les attaques par extorsion."
+        ],
+        "tags": [
+          "ransomware",
+          "Clop",
+          "Gladinet CentreStack",
+          "data theft",
+          "extortion",
+          "zero-day",
+          "supply chain attack",
+          "file transfer",
+          "MITRE ATT&CK",
+          "T1190",
+          "T1041",
+          "T1486"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-gladinet-centrestack-servers-for-extortion/",
+          "https://securityonline.info/clop-ransomware-targets-gladinet-centrestack-in-data-theft-attacks/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Attaques de pulvérisation de mots de passe ciblent les passerelles VPN Cisco et PAN",
+        "description": "Une campagne automatisée mène des attaques basées sur les identifiants, notamment la pulvérisation de mots de passe, ciblant plusieurs plateformes VPN, y compris Palo Alto Networks GlobalProtect et Cisco SSL VPN. L'acteur de la menace réutilise des combinaisons courantes de noms d'utilisateur et de mots de passe, principalement à partir d'un agent utilisateur Firefox peu commun pour l'activité de connexion automatisée, suggérant un scriptage pour identifier les portails GlobalProtect exposés ou faiblement protégés. Bien que n'étant pas une exploitation de vulnérabilité directe, cette activité de sondage met en lumière la faiblesse de la protection par identifiants.",
+        "threat_actor": "Acteur de menace non identifié",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Credential Access (T1110 - Brute Force: Password Spraying)",
+          "Discovery (T1046 - Network Service Scanning)"
+        ],
+        "analyse": "Ces attaques, bien que ne tirant pas parti de vulnérabilités zero-day, exploitent les faibles politiques de mots de passe et le manque d'authentification multifacteur (MFA) sur des passerelles VPN critiques. Elles représentent un risque significatif d'accès initial non autorisé et soulignent l'importance de pratiques robustes de gestion des identités et d'accès.",
+        "recommandations": [
+          "Mettre en œuvre une authentification multifacteur (MFA) sur toutes les passerelles VPN.",
+          "Appliquer des politiques de mots de passe complexes et uniques pour les comptes d'accès VPN.",
+          "Surveiller les tentatives de connexion suspectes ou automatisées sur les journaux des passerelles VPN.",
+          "Bloquer les adresses IP malveillantes connues effectuant des sondages d'identifiants.",
+          "Auditer régulièrement les appliances réseau et les configurations d'accès pour identifier et corriger les faiblesses."
+        ],
+        "tags": [
+          "password spraying",
+          "VPN",
+          "Cisco",
+          "Palo Alto Networks",
+          "GlobalProtect",
+          "SSL VPN",
+          "credential theft",
+          "T1110",
+          "T1046"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-password-spraying-attacks-target-cisco-pan-vpn-gateways/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Google enquête sur une anomalie de code malveillant dans l'infrastructure des résultats de recherche",
+        "description": "Google a confirmé enquêter sur une anomalie de sécurité après la découverte de code malveillant intégré dans son infrastructure de résultats de recherche. Ce code serait conçu pour exploiter les sandboxes des navigateurs. L'incident indique une possible compromission de l'intégrité de l'infrastructure de recherche, avec un impact potentiel sur les utilisateurs navigant sur les résultats de recherche.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1055 - Process Injection)",
+          "Execution (T1203 - Exploit for Client Execution)",
+          "Impact (T1485 - Data Destruction - potentiel pour exfiltration ou manipulation)"
+        ],
+        "analyse": "La présence de code malveillant dans une infrastructure aussi critique que celle des résultats de recherche de Google est une menace majeure de chaîne d'approvisionnement et d'accès initial, capable d'affecter un grand nombre d'utilisateurs. L'objectif d'exploiter les sandboxes de navigateurs suggère une attaque sophistiquée cherchant à contourner les mécanismes de sécurité intégrés.",
+        "recommandations": [
+          "Google doit effectuer une analyse forensique approfondie pour identifier la source, l'étendue et l'impact de l'injection de code.",
+          "Les utilisateurs devraient s'assurer que leurs navigateurs sont à jour et utiliser des extensions de sécurité si possible.",
+          "Les entreprises devraient surveiller le trafic web sortant pour détecter les connexions inhabituelles initiées par des navigateurs."
+        ],
+        "tags": [
+          "Google",
+          "malicious code",
+          "search infrastructure",
+          "browser sandbox exploitation",
+          "supply chain compromise",
+          "T1055",
+          "T1203",
+          "T1485"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115742385035649843",
+          "https://cyber.netsecops.io/articles/google-investigates-malicious-code-anomaly-in-search-results-infrastructure/?utm_source=mastodon&utm_medium=social&utm_campaign=twitter_auto"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Attaque au démarrage précoce : une faille UEFI dans les cartes mères ASRock, ASUS et MSI permet de contourner la sécurité de l'OS via PCIe",
+        "description": "Une vulnérabilité fondamentale (par exemple, CVE-2025-14304 pour ASRock, CVSS 7.0) a été exposée dans la manière dont les ordinateurs modernes sécurisent le processus de démarrage (UEFI). Elle permet à des attaquants physiques non authentifiés de contourner les défenses du système d'exploitation en exploitant le DMA (Accès Direct à la Mémoire) via PCIe avant même le chargement du noyau de l'OS. La faille réside dans la non-initialisation correcte de l'IOMMU (Input-Output Memory Management Unit) pendant la phase de démarrage précoce, exposant la mémoire système et permettant l'injection de code ou l'extraction de secrets à un niveau indétectable par les logiciels antivirus ou les contrôles de sécurité du système d'exploitation.",
+        "threat_actor": "Attaquants avec accès physique",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1562 - Impair Defenses: Disable or Modify System Firewall, T1562.001 - Impair Defenses: Disable or Modify Tools)",
+          "Boot or Logon Autostart Execution (T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "Firmware (T1542.001 - Firmware: UEFI Firmware)"
+        ],
+        "analyse": "Cette vulnérabilité met en évidence une lacune critique dans la sécurité au niveau du firmware, permettant des attaques 'early-boot' qui compromettent le système avant même que les protections logicielles ne soient actives. L'impact est sévère pour les environnements où l'accès physique n'est pas strictement contrôlé, car elle permet une compromission profonde et persistante, indétectable par les mesures de sécurité habituelles de l'OS.",
+        "recommandations": [
+          "Surveiller régulièrement les mises à jour du firmware UEFI de tous les fournisseurs (ASRock, ASUS, GIGABYTE, MSI, etc.) et les appliquer dès que possible.",
+          "Dans les environnements à haute sécurité, prioriser la correction rapide des systèmes affectés pour réduire l'exposition aux attaques DMA pré-boot.",
+          "Mettre en œuvre des contrôles d'accès physique stricts pour tous les systèmes critiques.",
+          "Utiliser des technologies de sécurité matérielles supportant le 'Secure Boot' et la virtualisation basée sur la sécurité (VBS) pour renforcer la chaîne de confiance au démarrage."
+        ],
+        "tags": [
+          "UEFI",
+          "firmware",
+          "early-boot attack",
+          "DMA",
+          "PCIe",
+          "ASRock",
+          "ASUS",
+          "MSI",
+          "physical access",
+          "bypass OS security",
+          "T1562",
+          "T1547",
+          "T1542"
+        ],
+        "sources": [
+          "https://securityonline.info/early-boot-attack-uefi-flaw-in-asrock-asus-msi-boards-lets-hackers-bypass-os-security-via-pcie/"
+        ],
+        "date": "2025-12-19"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification and diversification of cyber threats at the end of 2025. Key trends include the aggressive exploitation of zero-day vulnerabilities, particularly in critical infrastructures (Cisco, WatchGuard, SonicWall), with an alarming prevalence of critical CVSS scores. Malicious actors, including state-linked APTs (such as China-linked UAT-9686, or Russian groups Z-Pentest and NoName057(16)) and ransomware groups (Clop, RansomHouse/Jolly Scorpius), continue to innovate their modus operandi. The use of AI by attackers (DIG AI for illicit content generation, AI for spear-phishing) represents a major emerging threat, making traditional defenses less effective and accelerating the cyber arms race. Supply chain attacks (ASUS Live Update compromise), credential theft, and the abuse of legitimate features (WhatsApp GhostPairing, use of RMM tools like ScreenConnect) are common attack vectors. Data breaches remain frequent, affecting various sectors from education to e-commerce and finance, often facilitated by weak access controls (lack of MFA). The fragmented global geopolitical situation (climate governance, tensions in Ukraine, US-Israel relations, Russian wartime economy) is directly reflected in the cyber landscape, with state-sponsored cyberattacks used as tools of hybrid warfare and interference. In conclusion, the general state of threats is characterized by persistent exploitation of known unpatched vulnerabilities and the rapid emergence of sophisticated new techniques, pushing organizations to adopt proactive defense strategies focused on behavioral detection, identity management, and operational threat intelligence.",
+      "date": "2025-12-19"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-9686",
+        "secteur": "Organizations using Cisco email and web security products",
+        "modop": "Exploitation of critical zero-day vulnerabilities (CVE-2025-20393) in Cisco AsyncOS for root-level remote code execution, deployment of persistent backdoors (AquaShell), tunneling tools (ReverseSSH/AquaTunnel, Chisel), and log-cleaning utilities (AquaPurge).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "China-linked",
+          "zero-day exploitation",
+          "RCE",
+          "backdoor",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1120/",
+          "https://cert.europa.eu/publications/security-advisories/2025-042/",
+          "https://www.cisecurity.org/advisory/a-vulnerability-in-cisco-asyncos-could-allow-for-remote-code-execution_2025-117",
+          "https://fieldeffect.com/blog/unpatched-cisco-asyncos-vulnerability-actively-exploited",
+          "https://socprime.com/blog/cve-2025-20393-vulnerability-exploitation/",
+          "https://www.bleepingcomputer.com/news/security/new-password-spraying-attacks-target-cisco-pan-vpn-gateways/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Clop ransomware gang (Cl0p)",
+        "secteur": "Businesses using Gladinet CentreStack file servers, as well as secure file transfer platforms",
+        "modop": "Data theft and extortion campaigns targeting internet-exposed Gladinet CentreStack file servers, exploiting an unknown vulnerability (zero-day or N-day). History of targeting secure file transfer products (Accellion FTA, GoAnywhere MFT, Cleo, MOVEit Transfer).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data theft",
+          "extortion",
+          "zero-day exploitation",
+          "supply chain attack"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-gladinet-centrestack-servers-for-extortion/",
+          "https://securityonline.info/clop-ransomware-targets-gladinet-centrestack-in-data-theft-attacks/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "RansomHouse (Jolly Scorpius)",
+        "secteur": "E-commerce (Askul), healthcare, finance, transportation, government",
+        "modop": "Utilizing the 'Mario' malware with a sophisticated dual-key encryption engine and dynamic chunked file processing to defeat backups and recovery. Double extortion model (sensitive data theft and system encryption). Exploitation of compromised partner admin credentials (lacking MFA) as an entry point.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data theft",
+          "double extortion",
+          "encryption",
+          "malware",
+          "credential theft"
+        ],
+        "sources": [
+          "https://securityonline.info/marios-deadly-upgrade-ransomhouse-unveils-dual-key-encryption-to-defeat-backups-and-recovery/",
+          "https://infosec.exchange/@DevaOnBreaches/115743529704011555"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Government (municipal and regional elections), critical infrastructure (water treatment plant) in Denmark",
+        "modop": "Cyberattacks attributed to the Russian state, used as instruments of hybrid warfare to create insecurity and punish supporters of Ukraine. Specific TTP details not provided, but impact on availability.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "Russia-linked",
+          "hybrid warfare",
+          "DDoS",
+          "critical infrastructure",
+          "election interference"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Political parties, municipalities, public institutions, defense companies in Denmark",
+        "modop": "Cyberattacks claimed by pro-Russian hackers, attributed to the Russian state as instruments of hybrid warfare. Rendered websites inaccessible via distributed denial-of-service (DDoS) attacks.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "Russia-linked",
+          "hybrid warfare",
+          "DDoS",
+          "political targeting"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "JustAskJacky",
+        "secteur": "Unspecified, end-users targeted by malicious NodeJS applications",
+        "modop": "Malicious NodeJS applications posing as AI or utility tools, performing reconnaissance and executing arbitrary commands in memory.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "reconnaissance",
+          "command execution",
+          "NodeJS"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "Sha1-Hulud",
+        "secteur": "Developers/companies using npm packages and GitHub Actions",
+        "modop": "An npm package worm campaign (Sha1-Hulud: The Second Coming) stealing credentials and spreading via GitHub Actions runners, with encoded credentials posted to GitHub.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "worm",
+          "supply chain attack",
+          "credential theft",
+          "GitHub Actions",
+          "npm"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "MacSync Stealer",
+        "secteur": "macOS users, with specific targeting of Ledger Live and Trezor Suite users",
+        "modop": "macOS infostealer designed to access sensitive information (credentials, payment card data, keychain details, cryptocurrency wallets) via AppleScript. Uses phishing techniques for Ledger Live and Trezor Suite users by downloading malicious versions of the applications.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "macOS",
+          "credential theft",
+          "cryptocurrency",
+          "phishing"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "E-Note operators (Mykhalio Petrovich Chudnovets)",
+        "secteur": "Cybersecurity (cryptocurrency exchange platforms)",
+        "modop": "Using the E-Note cryptocurrency exchange platform to launder over $70 million in illicit proceeds from ransomware attacks and account takeovers. Employing money mule networks and dedicated mobile apps for increased privacy and to evade law enforcement tracking.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "money laundering",
+          "ransomware payment",
+          "cryptocurrency",
+          "cybercriminal infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-seizes-e-note-crypto-exchange-for-laundering-ransomware-payments/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "nom": "DIG AI users",
+        "secteur": "Darknet black market (piracy, illegal content, CSAM)",
+        "modop": "Utilizing an uncensored AI assistant hosted on the Tor network to generate tips (e.g., explosive device manufacturing) and create hyper-realistic illegal content, including AI-generated CSAM (child sexual abuse material).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "AI abuse",
+          "darknet",
+          "CSAM",
+          "illicit content generation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185842/cyber-crime/dig-ai-uncensored-darknet-ai-assistant-at-the-service-of-criminals-and-terrorists.html"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Maritime sector, critical infrastructure (ferries)",
+        "theme": "Foreign interference, cyber espionage",
+        "description": "A Latvian crew member was arrested in France, suspected of installing malware on an Italian ferry (Fantastic) to enable remote control of the vessel. French authorities (DGSI) are investigating suspicions of foreign interference.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Latvia",
+          "Italy",
+          "foreign interference",
+          "critical infrastructure",
+          "cyberespionage",
+          "malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/france-arrests-latvian-for-installing-malware-on-italian-ferry/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "National defense, elections, critical infrastructure (water), public services",
+        "theme": "Hybrid warfare, state-sponsored cyberattacks",
+        "description": "Denmark attributes two major cyberattacks (municipal and regional elections in November 2025, water treatment plant in late 2024) to Russian-linked groups (Z-Pentest and NoName057(16)). These attacks aim to create insecurity and punish countries supporting Ukraine, highlighting a situation of 'hybrid warfare'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Denmark",
+          "Russia",
+          "hybrid warfare",
+          "state-sponsored cyberattacks",
+          "election interference",
+          "critical infrastructure",
+          "DDoS"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2025/12/18/le-danemark-attribue-deux-cyberattaques-a-des-groupes-lies-a-la-russie_6658573_3210.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Financial sector, cybersecurity, law enforcement",
+        "theme": "Money laundering, dismantling criminal infrastructure",
+        "description": "U.S. law enforcement, in collaboration with Finnish and German partners, seized the servers and domains of the E-Note cryptocurrency exchange, accused of laundering over $70 million in illicit funds from ransomware payments and account takeovers.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "Finland",
+          "Germany",
+          "law enforcement",
+          "money laundering",
+          "ransomware",
+          "cybercrime infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-seizes-e-note-crypto-exchange-for-laundering-ransomware-payments/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Global governance, environment, resources",
+        "theme": "Climate governance, political instrumentalization, international fragmentation",
+        "description": "Analysis of the fragmentation of climate governance and the political instrumentalization of environmental issues and common resources. Global challenges such as climate change and raw material management are fracturing the international landscape, with a return to the use of force and appropriation, questioning existing governance frameworks.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "climate governance",
+          "environment",
+          "natural resources",
+          "international relations",
+          "political tensions"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gouvernance-du-climat-une-geopolitique-fragmentee-pour-des-defis-globaux/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "European Union, economy, defense, foreign policy",
+        "theme": "Economic crisis, strategic autonomy, transatlantic relations",
+        "description": "Analysis of Germany's political and strategic uncertainties under Friedrich Merz, including economic difficulties, an increased role in Europe amidst a weakened France, and an ambiguous transatlantic relationship with the United States. Germany's policy towards Israel, based on a historical 'reason of state', shows inflections with temporary suspensions of arms deliveries.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Germany",
+          "EU",
+          "USA",
+          "Israel",
+          "foreign policy",
+          "economy",
+          "defense",
+          "political leadership"
+        ],
+        "sources": [
+          "https://www.iris-france.org/allemagne-quelles-orientations-politiques-et-strategiques-sous-friedrich-merz/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "National security, digital infrastructure (eVisa systems)",
+        "theme": "Data security, privacy protection, government infrastructure",
+        "description": "An investigation reveals insufficient basic security protections in Somalia's electronic visa (eVisa) system, allowing access to sensitive passport and personal data of visa applicants worldwide. This poses a high risk of identity theft and data compromise for citizens.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Somalia",
+          "Somaliland",
+          "eVisa system",
+          "data security",
+          "privacy",
+          "identity theft",
+          "government infrastructure"
+        ],
+        "sources": [
+          "https://mastodon.social/@Saxafi/115743348753560883",
+          "https://saxafimedia.com/somalia-electronic-visa-security-data-risk/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "International relations, defense, security",
+        "theme": "Nuclear proliferation, deterrence, global stability",
+        "description": "Analysis of the concept of a 'new nuclear age,' highlighting that many characteristics of the nuclear era (proliferation, escalation risks, role of sovereign states) persist. The article criticizes the excessive focus on the 'new' and insists on the need to concentrate on unresolved problems and long-standing dangers to global survival.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "nuclear age",
+          "nuclear proliferation",
+          "international security",
+          "deterrence",
+          "cold war"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/new-nuclear-age-not-new"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Economy, internal politics, international relations",
+        "theme": "Wartime economy, asset expropriation, political control",
+        "description": "Description of the growing practice of 'reiderstvo' (corporate raiding or state seizure of assets) in Russia, which has accelerated since the invasion of Ukraine. Western and domestic firms deemed disloyal are targeted, with assets redistributed to Kremlin loyalists. This bureaucratic mechanism strengthens political control and the military-industrial complex, creating a 'wartime business class' dependent on political loyalty.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russia",
+          "wartime economy",
+          "state seizure",
+          "expropriation",
+          "political control",
+          "corporate raiding"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/raiding-russias-wartime-economy"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "European Union, economy, politics",
+        "theme": "EU fragmentation risks, economic resilience, cultural challenges",
+        "description": "Analysis of the risks of the European Union's disintegration in the face of financial shocks, productive and educational decline, and the consequences of the Russia-Ukraine war. The article highlights bureaucratic drifts, the skills crisis, and technological dependence on the United States, calling for a strategy of productive and intellectual resilience to anticipate a possible upheaval of the European cooperation system.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "EU",
+          "economic crisis",
+          "political instability",
+          "transatlantic relations",
+          "resilience",
+          "education"
+        ],
+        "sources": [
+          "https://www.iris-france.org/risque-declatement-de-lue-et-resilience-productive/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "International relations, diplomacy, armed conflicts",
+        "theme": "Israeli-Palestinian conflict, U.S. foreign policy",
+        "description": "Analysis of regional and international ambiguities fueling the Israeli-Palestinian stalemate, with a discussion on the limitations of the two-state solution and the evolution of the U.S. position towards Israel. Despite ceasefire agreements and the recognition of Palestine by some states, the situation on the ground remains unchanged, and the U.S. adopts a contradictory stance in the absence of sanctions against Israel.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "US",
+          "Israel",
+          "Palestine",
+          "Middle East conflict",
+          "diplomacy",
+          "international relations",
+          "two-state solution"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-face-a-israel-avec-robert-malley/"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "E-commerce",
+        "victime": "Askul (Japan)",
+        "description": "Japanese e-commerce company Askul confirmed a data theft of ~740,000 customer records following a ransomware attack by the RansomHouse group. The incident, facilitated by compromised partner admin credentials (lacking MFA), resulted in system outages, wiped backups, and ongoing shipment disruptions since October.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "Askul",
+          "RansomHouse",
+          "ransomware",
+          "data theft",
+          "MFA bypass"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115743529704011555",
+          "https://www.bleepingcomputer.com/news/security/askul-confirms-theft-of-740k-customer-records-in-ransomhouse-attack/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "Bank Mandiri (Indonesia)",
+        "description": "High confidence of a data breach targeting Bank Mandiri in Indonesia's financial sector. No further details are specified on the nature of the breach or compromised data at this stage.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial sector",
+          "Bank Mandiri",
+          "Indonesia",
+          "cyberthreat"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115742816655171453"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Vehicle Inspection",
+        "victime": "AUTOSUR (France)",
+        "description": "In March 2025, French vehicle inspection company AUTOSUR suffered a data breach exposing over 10M customer records, though only 487,226 unique email addresses were present. Compromised data included names, phone numbers, physical addresses, and vehicle details (make, model, VIN, registration plate).",
+        "tags": [
+          "violation",
+          "breach",
+          "vehicle inspection",
+          "AUTOSUR",
+          "France",
+          "customer data",
+          "personal information",
+          "vehicle details"
+        ],
+        "sources": [
+          "https://mastodon.social/@RedPacketSecurity/115743997261471779",
+          "https://haveibeenpwned.com/Breach/AUTOSUR"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Sydney (Australia)",
+        "description": "Hackers gained access to an online coding repository belonging to the University of Sydney and stole files with personal information of staff and students. The breach was limited to a single system, which was promptly secured. A dedicated cyber-incident support service has been established for affected individuals.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "University of Sydney",
+          "Australia",
+          "personal data",
+          "staff data",
+          "student data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-sydney-suffers-data-breach-exposing-student-and-staff-info/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "secteur": "Online Communities (botting forum)",
+        "victime": "The Botting Network",
+        "description": "In August 2012, 'The Botting Network' forum suffered a data breach exposing 96,320 user records. Leaked data included email addresses, usernames, dates of birth, and salted MD5 password hashes.",
+        "tags": [
+          "violation",
+          "breach",
+          "online community",
+          "The Botting Network",
+          "user data",
+          "passwords",
+          "MD5 hashes"
+        ],
+        "sources": [
+          "https://mastodon.social/@RedPacketSecurity/115743997262649600",
+          "https://haveibeenpwned.com/Breach/TheBottingNetwork"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": 10.0,
+        "product": "Cisco Secure Email Gateway and Cisco Secure Email and Web Manager (AsyncOS)",
+        "description": "Remote Code Execution (RCE) with root privileges due to an actively exploited zero-day vulnerability. Affects appliances when the 'Spam Quarantine' feature is enabled and exposed to the internet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "AsyncOS",
+          "RCE",
+          "root privileges",
+          "zero-day",
+          "active exploitation",
+          "email security"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1120/",
+          "https://cert.europa.eu/publications/security-advisories/2025-042/",
+          "https://www.cisecurity.org/advisory/a-vulnerability-in-cisco-asyncos-could-allow-for-remote-code-execution_2025-117",
+          "https://fieldeffect.com/blog/unpatched-cisco-asyncos-vulnerability-actively-exploited",
+          "https://socprime.com/blog/cve-2025-20393-vulnerability-exploitation/",
+          "https://www.bleepingcomputer.com/news/security/new-password-spraying-attacks-target-cisco-pan-vpn-gateways/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "Hewlett Packard Enterprise (HPE) OneView Software",
+        "description": "Remote Code Execution (RCE) without authentication.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "HPE",
+          "OneView",
+          "RCE",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185853/security/hewlett-packard-enterprise-hpe-fixed-maximum-severity-oneview-flaw.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-23006",
+        "cvss": 9.8,
+        "product": "SonicWall SMA1000 Appliance",
+        "description": "Unauthenticated Remote Code Execution (RCE) with root privileges. Exploited in conjunction with CVE-2025-40602.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SMA1000",
+          "RCE",
+          "unauthenticated",
+          "zero-day",
+          "chained exploitation"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1121/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-37093",
+        "cvss": 9.8,
+        "product": "Hewlett Packard Enterprise (HPE) StoreOnce Software",
+        "description": "Authentication Bypass vulnerability.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "HPE",
+          "StoreOnce",
+          "authentication bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185853/security/hewlett-packard-enterprise-hpe-fixed-maximum-severity-oneview-flaw.html"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS (iked process)",
+        "description": "Out-of-bounds Write vulnerability that may allow a remote unauthenticated attacker to execute arbitrary code and seize control of firewalls. Affects Mobile User VPN and Branch Office VPN using IKEv2, even after configuration deletion in some scenarios. Actively exploited as a zero-day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WatchGuard",
+          "Fireware OS",
+          "RCE",
+          "out-of-bounds write",
+          "zero-day",
+          "active exploitation",
+          "VPN",
+          "firewall"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14733",
+          "https://securityonline.info/watchguard-under-siege-critical-cvss-9-3-zero-day-exploited-in-the-wild-to-hijack-corporate-firewalls/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-68398",
+        "cvss": 9.1,
+        "product": "Weblate",
+        "description": "Git config file overwrite vulnerability leading to remote code execution. Present in versions prior to 5.15.1.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Weblate",
+          "RCE",
+          "git configuration",
+          "remote code execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68398"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-52692",
+        "cvss": 8.8,
+        "product": "Unspecified (affects administration functions)",
+        "description": "Authentication bypass vulnerability allowing a local network attacker to send a specially crafted URL to access certain administration functions without login credentials.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication bypass",
+          "local network access",
+          "admin functions"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-52692"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-13941",
+        "cvss": 8.8,
+        "product": "Foxit PDF Reader/Editor Update Service",
+        "description": "Local Privilege Escalation (LPE) vulnerability due to incorrect file system permissions assigned to resources during plugin installation. Allows a local attacker with low privileges to execute arbitrary code with SYSTEM privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Foxit",
+          "PDF Reader",
+          "Privilege Escalation",
+          "LPE",
+          "RCE",
+          "SYSTEM privileges"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13941"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14269",
+        "cvss": 8.8,
+        "product": "Headlamp (Kubernetes web UI)",
+        "description": "Vulnerability in Headlamp allowing unauthenticated users to hijack Helm cluster operations by abusing session management that caches credentials.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Kubernetes",
+          "Headlamp",
+          "Helm",
+          "unauthenticated access",
+          "cluster hijack",
+          "session management"
+        ],
+        "sources": [
+          "https://securityonline.info/kubernetes-alert-headlamp-flaw-cve-2025-14269-lets-unauthenticated-users-hijack-helm-clusters/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-59374",
+        "cvss": "Critical",
+        "product": "ASUS Live Update",
+        "description": "Supply chain compromise vulnerability (ShadowHammer campaign) where Live Update versions were distributed with embedded malicious code, enabling unintended actions on devices targeted by specific MAC addresses. Added to CISA's KEV catalog.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ASUS",
+          "Live Update",
+          "supply chain attack",
+          "ShadowHammer",
+          "malicious code distribution"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-67843",
+        "cvss": 8.3,
+        "product": "Mintlify Platform (MDX Rendering Engine)",
+        "description": "Server-Side Template Injection (SSTI) vulnerability allowing remote arbitrary code execution via inline JSX expressions in an MDX file.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mintlify Platform",
+          "SSTI",
+          "RCE",
+          "MDX"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67843"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-64675",
+        "cvss": 8.3,
+        "product": "Azure Cosmos DB",
+        "description": "Spoofing vulnerability via Cross-Site Scripting (XSS) due to improper neutralization of input during web page generation, allowing an unauthorized attacker to perform spoofing over a network.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Azure",
+          "Cosmos DB",
+          "XSS",
+          "spoofing",
+          "web vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64675"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-11774",
+        "cvss": 8.2,
+        "product": "Mitsubishi Electric GENESIS64, ICONICS Suite, Mobile HMI, MC Works64 ('keypad' function)",
+        "description": "OS Command Injection vulnerability allowing a local attacker to execute arbitrary executable files by tampering with the configuration file for the 'keypad' function. Can lead to information disclosure, tampering, deletion, destruction, or Denial-of-Service (DoS).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Mitsubishi Electric",
+          "ICS/SCADA",
+          "OS Command Injection",
+          "RCE",
+          "local attacker",
+          "DoS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-11774"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-40602",
+        "cvss": "Not Specified, Chained with 9.8 RCE",
+        "product": "SonicWall SMA1000 Appliance",
+        "description": "Local Privilege Escalation vulnerability due to insufficient authorization in the Appliance Management Console (AMC). Exploited as a zero-day in combination with CVE-2025-23006 to achieve unauthenticated remote code execution with root privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SonicWall",
+          "SMA1000",
+          "Privilege Escalation",
+          "zero-day",
+          "chained exploitation",
+          "access control"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-1121/",
+          "https://securityaffairs.com/185830/security/u-s-cisa-adds-cisco-sonicwall-and-asus-flaws-to-its-known-exploited-vulnerabilities-catalog/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-14558",
+        "cvss": "High-severity",
+        "product": "FreeBSD (Networking Stack)",
+        "description": "Remote Code Execution via malicious IPv6 router advertisement packets, due to lack of input sanitization in rtsol and rtsold programs. An attacker on the same network segment can execute shell commands with system privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "FreeBSD",
+          "network stack",
+          "RCE",
+          "IPv6",
+          "input validation",
+          "local network"
+        ],
+        "sources": [
+          "https://securityonline.info/freebsd-network-alert-malicious-ipv6-packets-can-trigger-remote-code-execution-via-resolvconf-cve-2025-14558/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "cve_id": "CVE-2025-68461",
+        "cvss": "High-severity",
+        "product": "Roundcube Webmail",
+        "description": "Cross-Site Scripting (XSS) vulnerabilities via SVG images and CSS sanitizer bypass, allowing the execution of malicious scripts, theft of session cookies, account hijacking, or redirection to phishing sites through malicious emails.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Roundcube",
+          "Webmail",
+          "XSS",
+          "SVG",
+          "CSS sanitizer bypass",
+          "session hijacking",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityonline.info/roundcube-alert-high-severity-svg-xss-and-css-sanitizer-flaws-threaten-webmail-privacy/"
+        ],
+        "date": "2025-12-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Early-Boot Attack: UEFI Flaw in ASRock, ASUS, & MSI Boards Lets Hackers Bypass OS Security via PCIe",
+        "description": "A fundamental vulnerability (e.g., CVE-2025-14304 for ASRock, CVSS 7.0) has been exposed in how modern computers secure the boot process (UEFI). It allows unauthenticated physical attackers to bypass operating system defenses by exploiting DMA (Direct Memory Access) via PCIe before the OS kernel even loads. The flaw lies in the improper initialization of the IOMMU (Input-Output Memory Management Unit) during the early-boot phase, exposing system memory and enabling code injection or secret extraction at a level undetectable by antivirus software or OS-level security controls.",
+        "threat_actor": "Attackers with physical access",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1562 - Impair Defenses: Disable or Modify System Firewall, T1562.001 - Impair Defenses: Disable or Modify Tools)",
+          "Boot or Logon Autostart Execution (T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "Firmware (T1542.001 - Firmware: UEFI Firmware)"
+        ],
+        "analyse": "This vulnerability highlights a critical gap in firmware-level security, enabling 'early-boot' attacks that compromise the system before software protections are active. The impact is severe for environments where physical access is not strictly controlled, as it allows for deep and persistent compromise, undetectable by typical OS security measures.",
+        "recommandations": [
+          "Regularly monitor UEFI firmware updates from all vendors (ASRock, ASUS, GIGABYTE, MSI, etc.) and apply them as soon as possible.",
+          "In high-security environments, prioritize prompt patching of affected systems to reduce exposure to pre-boot DMA attacks.",
+          "Implement strict physical access controls for all critical systems.",
+          "Utilize hardware security technologies supporting 'Secure Boot' and virtualization-based security (VBS) to strengthen the boot trust chain."
+        ],
+        "tags": [
+          "UEFI",
+          "firmware",
+          "early-boot attack",
+          "DMA",
+          "PCIe",
+          "ASRock",
+          "ASUS",
+          "MSI",
+          "physical access",
+          "bypass OS security",
+          "T1562",
+          "T1547",
+          "T1542"
+        ],
+        "sources": [
+          "https://securityonline.info/early-boot-attack-uefi-flaw-in-asrock-asus-msi-boards-lets-hackers-bypass-os-security-via-pcie/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "CVE-2025-20393 Exploitation: A Maximum-Severity Zero-Day Vulnerability in Cisco AsyncOS Software Abused in Attacks by the China-Backed APT UAT-9686",
+        "description": "A critical zero-day vulnerability (CVE-2025-20393, CVSS 10.0) in Cisco AsyncOS Software, affecting Secure Email Gateway (SEG) and Secure Email and Web Manager (SEWM) appliances, is being actively exploited by a China-linked APT group, UAT-9686 (with overlaps to APT41, UNC5174). The flaw enables unauthenticated remote code execution with root privileges when the Spam Quarantine feature is internet-exposed. Attackers deploy persistent Python-based backdoors (AquaShell), tunneling tools (ReverseSSH/AquaTunnel, Chisel), and a log-cleaning utility (AquaPurge). No patch is available yet; Cisco recommends restricting internet exposure of the Spam Quarantine service, monitoring for IoCs, and rebuilding compromised appliances.",
+        "threat_actor": "UAT-9686 (China-linked APT group)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (T1190 - Exploit Public-Facing Application)",
+          "Execution (T1059 - Command and Scripting Interpreter, T1203 - Exploit for Client Execution)",
+          "Persistence (T1543.003 - Create or Modify System Process: Windows Service, T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "Command and Control (T1090 - Proxy, T1071 - Application Layer Protocol)",
+          "Defense Evasion (T1070.004 - Indicator Removal on Host: File Deletion/Log Clearing)"
+        ],
+        "analyse": "The active exploitation of a maximum-severity zero-day by a sophisticated state-backed APT group highlights the critical risks to organizations using vulnerable Cisco email security products. The lack of an immediate patch and the deployment of persistent backdoors pose a significant challenge for defenders, emphasizing the need for robust network segmentation, continuous monitoring, and incident response capabilities.",
+        "recommandations": [
+          "Restrict internet exposure of the Cisco Secure Email Gateway and Secure Email and Web Manager appliances, particularly the Spam Quarantine service.",
+          "Implement strong network segmentation to isolate these critical systems.",
+          "Continuously monitor web logs and system activity for indicators of compromise (IoCs), including suspicious command execution, backdoor presence (AquaShell), and tunneling tool usage.",
+          "In cases of confirmed compromise, rebuild the appliance as per Cisco's recommendation.",
+          "Enforce strong authentication mechanisms (SAML, LDAP) and replace default administrator credentials."
+        ],
+        "tags": [
+          "Cisco",
+          "AsyncOS",
+          "CVE-2025-20393",
+          "zero-day",
+          "RCE",
+          "APT",
+          "UAT-9686",
+          "China-linked",
+          "backdoor",
+          "persistence",
+          "email security",
+          "critical infrastructure",
+          "T1190",
+          "T1059",
+          "T1203",
+          "T1543",
+          "T1547",
+          "T1090",
+          "T1071",
+          "T1070"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories/2025-042/",
+          "https://www.cisecurity.org/advisory/a-vulnerability-in-cisco-asyncos-could-allow-for-remote-code-execution_2025-117",
+          "https://fieldeffect.com/blog/unpatched-cisco-asyncos-vulnerability-actively-exploited",
+          "https://socprime.com/blog/cve-2025-20393-vulnerability-exploitation/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Cybersecurity Year in Review and Threat Insights for 2025",
+        "description": "A comprehensive review of the 2025 cybersecurity landscape highlights escalating threats and evolving attacker tactics. Key trends include the increasing sophistication of threat actors, moving away from obvious malware payloads to abusing legitimate tools (LOLBAS) and embedding into identity chains. AI is being extensively used to scale operations, enabling more convincing phishing campaigns, deepfakes, and dynamic command generation. Ransomware operations are shifting focus from immediate encryption to credential theft, achieving long-term access, and strategic data exfiltration. The insider threat landscape is becoming blurred with manipulated insiders through advanced social engineering. Effective defense strategies emphasize behavioral detection, identity-centric security controls, continuous monitoring of edge devices and SaaS connections, and operationalized threat intelligence to prioritize patching based on exploitation likelihood rather than publication date.",
+        "threat_actor": "Diverse threat actors, including APTs, ransomware groups, cybercriminals",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1070 - Indicator Removal on Host)",
+          "Credential Access (T1539 - Steal Web Session Cookie, T1078 - Valid Accounts)",
+          "Initial Access (T1566 - Phishing)",
+          "Execution (T1059 - Command and Scripting Interpreter)",
+          "Persistence (T1078 - Valid Accounts)",
+          "Exfiltration (T1041 - Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "The cyber threat landscape in 2025 indicates a significant acceleration in attacker innovation, making traditional, perimeter-focused security models insufficient. The fusion of AI into offensive operations demands equally advanced defensive AI and a shift towards proactive, adaptive security. Organizations must focus on understanding their exposure, prioritizing risks, and building resilient security programs that can detect and respond to nuanced, stealthy attacks.",
+        "recommandations": [
+          "Implement advanced behavioral detection solutions that can identify anomalies beyond signature-based detection.",
+          "Strengthen identity and access management with phishing-resistant MFA and continuous monitoring of privileged accounts.",
+          "Ensure continuous monitoring of network-edge devices and SaaS connections to detect lateral movement and unauthorized access.",
+          "Prioritize vulnerability patching based on real-world exploitation likelihood and potential impact.",
+          "Integrate and operationalize threat intelligence to gain predictive insights into attacker behavior.",
+          "Invest in employee training to counter advanced social engineering tactics, including AI-driven deepfakes and vishing."
+        ],
+        "tags": [
+          "cybersecurity trends",
+          "threat landscape",
+          "AI in cyberattacks",
+          "ransomware",
+          "credential theft",
+          "supply chain",
+          "LOLBAS",
+          "behavioral detection",
+          "threat intelligence",
+          "MITRE ATT&CK",
+          "T1070",
+          "T1539",
+          "T1078",
+          "T1566",
+          "T1059",
+          "T1041"
+        ],
+        "sources": [
+          "/cybersecurity-blog/annual-report-2025/",
+          "https://blog.talosintelligence.com/adios-2025-you-wont-be-missed/",
+          "https://www.guidepointsecurity.com/blog/beyond-the-perimeter-how-threat-actors-will-adapt/",
+          "https://redcanary.com/blog/threat-intelligence/intelligence-insights-december-2025/"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Google Investigates Malicious Code Anomaly in Search Result Infrastructure",
+        "description": "Google has confirmed it is investigating a security anomaly after malicious code was found embedded in its search result infrastructure. The code is believed to be designed to exploit browser sandboxes. This incident suggests a potential compromise of the search infrastructure's integrity, with possible impact on users navigating search results.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (T1055 - Process Injection)",
+          "Execution (T1203 - Exploit for Client Execution)",
+          "Impact (T1485 - Data Destruction - potential for exfiltration or manipulation)"
+        ],
+        "analyse": "The presence of malicious code within an infrastructure as critical as Google's search results poses a significant supply chain and initial access threat, capable of affecting a vast number of users. The goal of exploiting browser sandboxes indicates a sophisticated attack attempting to bypass built-in security mechanisms.",
+        "recommandations": [
+          "Google must conduct a thorough forensic analysis to identify the source, scope, and impact of the code injection.",
+          "Users should ensure their browsers are up-to-date and use security extensions where possible.",
+          "Organizations should monitor outbound web traffic to detect unusual connections initiated by browsers."
+        ],
+        "tags": [
+          "Google",
+          "malicious code",
+          "search infrastructure",
+          "browser sandbox exploitation",
+          "supply chain compromise",
+          "T1055",
+          "T1203",
+          "T1485"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115742385035649843",
+          "https://cyber.netsecops.io/articles/google-investigates-malicious-code-anomaly-in-search-results-infrastructure/?utm_source=mastodon&utm_medium=social&utm_campaign=twitter_auto"
+        ],
+        "date": "2025-12-19"
+      },
+      {
+        "title": "Mario’s Deadly Upgrade: RansomHouse Unveils Dual-Key Encryption to Defeat Backups and Recovery",
+        "description": "The RansomHouse operation, associated with the cybercriminal group Jolly Scorpius, has significantly upgraded its encryption engine in the 'Mario' malware. It now features a sophisticated dual-key encryption system and dynamic chunked file processing, making static analysis and reverse engineering more challenging. This new approach aims to defeat traditional backup and recovery methods, strengthening the ransomware's capability against decryption tools. RansomHouse employs a 'double extortion' model, stealing sensitive data while encrypting systems, and has targeted sectors including healthcare, finance, transportation, and government.",
+        "threat_actor": "RansomHouse (Jolly Scorpius)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Impact (T1486 - Data Encrypted for Impact)",
+          "Exfiltration (T1041 - Exfiltration Over C2 Channel)",
+          "Defense Evasion (T1070 - Indicator Removal on Host)",
+          "Persistence (T1547 - Boot or Logon Autostart Execution)"
+        ],
+        "analyse": "This evolution in ransomware tactics demonstrates a continuous refinement of cybercriminal tradecraft, making ransomware attacks more resilient and recovery efforts more complex. The dual-key encryption strategy, mimicking legitimate security protocols, adds a significant layer of difficulty for victims and defenders. This trend suggests that ransomware groups are increasingly focused on maximizing leverage and impact beyond simple data encryption.",
+        "recommandations": [
+          "Implement robust, isolated, and tested backup and recovery strategies, ensuring backups are stored offline and off-site.",
+          "Strengthen incident response plans to account for advanced encryption and data exfiltration techniques.",
+          "Continuously update and patch systems to mitigate known vulnerabilities that ransomware groups often exploit for initial access.",
+          "Deploy advanced endpoint detection and response (EDR) solutions to detect sophisticated malware behaviors.",
+          "Provide employee training on recognizing phishing and social engineering tactics often used for initial compromise."
+        ],
+        "tags": [
+          "RansomHouse",
+          "Jolly Scorpius",
+          "ransomware",
+          "encryption",
+          "dual-key",
+          "data theft",
+          "double extortion",
+          "malware",
+          "Mario",
+          "T1486",
+          "T1041",
+          "T1070",
+          "T1547"
+        ],
+        "sources": [
+          "https://securityonline.info/marios-deadly-upgrade-ransomhouse-unveils-dual-key-encryption-to-defeat-backups-and-recovery/"
+        ],
+        "date": "2025-12-19"
+      }
+    ]
+  }
+}
