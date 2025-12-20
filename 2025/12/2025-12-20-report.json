@@ -1,0 +1,1704 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber de cette période met en lumière une intensification des activités malveillantes, marquée par une diversité des vecteurs d'attaque et des motivations. On observe une prédominance des attaques étatiques, notamment russes et chinoises, ciblant les infrastructures critiques et les secteurs stratégiques occidentaux, soulignant l'utilisation croissante du cyberespace comme terrain de guerre hybride. Les groupes de ransomware comme CLOP continuent d'exploiter activement les vulnérabilités de la chaîne d'approvisionnement (ex: Gladinet CentreStack, Oracle EBS) et des équipements réseau (Fortinet, WatchGuard Firebox), entraînant des violations de données significatives pour diverses organisations, y compris dans le secteur de la santé. L'ingénierie sociale et les techniques de phishing sophistiquées, y compris le phishing OAuth contournant le MFA, restent des méthodes d'accès initial privilégiées, parfois facilitées par des plateformes de 'phishing-as-a-service'. Les vulnérabilités critiques de type RCE et les failles d'authentification sont activement recherchées et exploitées, en particulier celles affectant les équipements de périphérie et les firmwares UEFI. L'intégration de l'IA est également un thème récurrent, tant pour les attaquants (création de contenus malveillants) que pour les défenseurs (amélioration de la détection et de la réponse). En conclusion, l'état général des menaces est élevé, caractérisé par une exploitation rapide des vulnérabilités nouvellement découvertes et une persistance des groupes APT et cybercriminels, nécessitant une vigilance constante et une adoption proactive des mesures de sécurité.",
+      "date": "2025-12-20"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "CLOP",
+        "secteur": "Divers (serveurs de fichiers, santé, éducation, logistique)",
+        "modop": "Campagnes d'extorsion à grande échelle ciblant les serveurs de fichiers (Gladinet CentreStack), exploitation de zero-days (Oracle EBS), vol de données sensibles, puis publication sur des sites de fuite de données pour forcer le paiement. Utilise des courtiers en accès initial, l'automatisation, des techniques d'évasion et de mouvement latéral.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extorsion",
+          "zero_day",
+          "data_theft",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185875/cyber-crime/clop-targets-gladinet-centrestack-servers-in-large-scale-extortion-campaign.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Cloud Atlas",
+        "secteur": "Télécommunications, construction, entités gouvernementales, usines (Russie, Biélorussie)",
+        "modop": "APT. Infections via e-mails de phishing avec des documents malveillants exploitant CVE-2018-0802 (Microsoft Office Equation Editor). Déploiement de multiples backdoors (VBShower, PowerShower, VBCloud, CloudAtlas) utilisant des services cloud pour le C2. Collecte d'informations système, exfiltration de fichiers, vol de cookies et de crédentiels de navigateurs, utilisation de techniques de DLL hijacking.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "phishing",
+          "malware",
+          "backdoor",
+          "data_exfiltration",
+          "credential_theft",
+          "dll_hijacking",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://securelist.com/cloud-atlas-h1-2025-campaign/118517/",
+          "https://cybersecuritynews.com/cloud-atlas-hacker-group/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Infrastructure critique (Danemark)",
+        "modop": "Attaques DDoS massives. Lié à l'État russe, utilisé dans des campagnes de guerre hybride pour créer de l'insécurité et punir les pays soutenant l'Ukraine. Ciblait les sites web danois avant les élections.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russia",
+          "ddos",
+          "critical_infrastructure_targeting",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Raccoon0365",
+        "secteur": "Services cloud (Microsoft 365)",
+        "modop": "Phishing-as-a-service ciblant les comptes Microsoft 365. Utilisation de kits de phishing vendus pour de la cryptomonnaie et hébergement de pages de phishing sur Cloudflare via des comptes compromis. Facilite le phishing OAuth contournant le MFA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "phishing_as_a_service",
+          "oauth_phishing",
+          "mfa_bypass",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nigeria-arrests-dev-of-microsoft-365-raccoon0365-phishing-platform/",
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "TA2723",
+        "secteur": "Services cloud (Microsoft 365)",
+        "modop": "Acteur cybercriminel financièrement motivé. Utilise des attaques de phishing exploitant le mécanisme d'autorisation du code de périphérique OAuth pour compromettre les comptes Microsoft 365 sans voler les identifiants ou contourner l'authentification multifacteur (MFA).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "oauth_phishing",
+          "mfa_bypass",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "UAT-9686",
+        "secteur": "Télécommunications (passerelles Cisco Secure Email Gateway et Secure Email and Web Manager)",
+        "modop": "APT liée à la Chine. Exploitation d'une zero-day critique (CVE-2025-20393) pour exécuter des commandes avec des privilèges root et installer un mécanisme de persistance personnalisé (AquaShell). Utilise des outils de tunneling (AquaTunnel, Chisel) et de suppression de logs (AquaPurge) pour maintenir un accès furtif et à long terme.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china_linked",
+          "zero_day_exploit",
+          "remote_code_execution",
+          "persistence",
+          "backdoor",
+          "tunneling",
+          "log_deletion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Volt Typhoon",
+        "secteur": "Gouvernement (Défense néerlandaise)",
+        "modop": "Groupe de piratage chinois connu pour l'exploitation de failles SSL VPN FortiOS (CVE-2023-27997 et CVE-2022-42475) pour implanter des RAT personnalisés (Coathanger) sur des réseaux militaires. Mentionné comme exemple d'activités antérieures.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china_linked",
+          "vpn_exploitation",
+          "rat",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Infrastructure critique (services d'eau du Danemark)",
+        "modop": "Attaque cybernétique destructrice. Lié à l'État russe, utilisé dans des campagnes de guerre hybride pour créer de l'insécurité et punir les pays soutenant l'Ukraine. A ciblé une usine de traitement des eaux danoise.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "pro_russia",
+          "destructive_attack",
+          "critical_infrastructure_targeting",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Infrastructures critiques, Secteur public",
+        "theme": "Guerre hybride, Attaques étatiques",
+        "description": "Le Danemark a accusé la Russie d'avoir orchestré une cyberattaque destructrice contre une entreprise de services d'eau en 2024 et des attaques DDoS contre des sites web danois avant les élections de novembre 2025. Ces actions sont attribuées aux groupes pro-russes Z-Pentest et NoName057(16), considérés comme des instruments de la guerre hybride russe visant à créer de l'insécurité et à sanctionner les pays soutenant l'Ukraine.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "danemark",
+          "guerre_hybride",
+          "infrastructures_critiques",
+          "ddos",
+          "attaque_destructive",
+          "elections",
+          "z_pentest",
+          "noname057(16)"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://databreaches.net/2025/12/19/denmark-says-russia-was-behind-two-destructive-and-disruptive-cyber-attacks/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services de santé",
+        "victime": "DXS International (fournisseur de logiciels NHS)",
+        "description": "DXS International, fournisseur de logiciels pour le service de santé britannique (NHS), a signalé une cyberattaque le 14 décembre 2025. Un groupe de ransomware a revendiqué l'attaque et le vol de 300 Go de données, affectant potentiellement les dossiers médicaux de millions de patients via les logiciels utilisés par environ 2 000 généralistes.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "healthcare",
+          "ransomware",
+          "vol_de_donnees",
+          "supply_chain",
+          "royaume_uni",
+          "nhs"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/uk-national-heallth-service-software-supplier-dxs-hit-by-cyber-attack/",
+          "https://infosec.exchange/@DevaOnBreaches/115749013728619122",
+          "https://mastodon.thenewoil.org/@thenewoil/115748713465923723"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Finance, Cryptomonnaies",
+        "victime": "Illusory Systems, Inc. (Nomad)",
+        "description": "La Federal Trade Commission (FTC) a intenté une action contre Illusory Systems, Inc. (Nomad, une plateforme de 'cross-chain bridge') pour avoir échoué à implémenter des mesures de sécurité adéquates, résultant en une brèche majeure où des hackers ont volé 186 millions de dollars. Nomad avait introduit un nouveau code de smart contract avec une vulnérabilité, exploitée par des acteurs malveillants, entraînant la perte de plus de 100 millions de dollars pour les utilisateurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "cryptomonnaie",
+          "nomad",
+          "smart_contract",
+          "ftc",
+          "vulnerabilite",
+          "perte_financiere"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/ftc-issues-proposed-order-against-illusory-systems-over-allegations-of-lax-security/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Administration publique locale, Santé",
+        "victime": "Mitchell County, Caroline du Nord",
+        "description": "Une attaque de ransomware a ciblé le comté de Mitchell, en Caroline du Nord, entraînant des pannes de téléphone et d'e-mail pendant plusieurs jours. Des informations de santé protégées (PHI) ont été compromises par un accès non autorisé.",
+        "tags": [
+          "violation",
+          "breach",
+          "administration_publique",
+          "sante",
+          "ransomware",
+          "donnees_personnelles",
+          "phi",
+          "etats_unis",
+          "caroline_du_nord"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DysruptionHub/115748629481629051"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Administration publique (Ministère des sports, de la jeunesse et de la vie associative)",
+        "victime": "Bénéficiaires du Pass’Sport en France",
+        "description": "Le Ministère des sports, de la jeunesse et de la vie associative a été victime d'une cyberattaque entraînant l'exfiltration de données non sensibles concernant 3,5 millions de foyers bénéficiaires du Pass’Sport. Les données volées incluent des noms, prénoms et adresses e-mail, mais pas de données bancaires ni de mots de passe.",
+        "tags": [
+          "violation",
+          "breach",
+          "administration_publique",
+          "france",
+          "exfiltration_de_donnees",
+          "donnees_personnelles",
+          "pass_sport"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/sport/article/2025/12/19/le-ministere-des-sports-de-la-jeunesse-et-de-la-vie-associative-victime-d-une-cyberattaque_6658700_3242.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Divers (Non spécifié)",
+        "victime": "pt usaha garda arta (Indonésie)",
+        "description": "Une violation de données a été identifiée avec une confiance élevée ciblant l'entreprise pt usaha garda arta en Indonésie, dans le secteur 'Miscellaneous/Other'.",
+        "tags": [
+          "violation",
+          "breach",
+          "divers",
+          "indonesie",
+          "vol_de_donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115748480165763043"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Services de psychothérapie",
+        "victime": "Vastaamo (Finlande)",
+        "description": "Le PDG de Vastaamo, Ville Tapio, a été acquitté des accusations de protection des données, mais l'affaire fait référence à l'une des violations de données les plus graves en Finlande, impliquant l'accès non autorisé et la publication d'informations sensibles de dizaines de milliers de patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "psychotherapie",
+          "finlande",
+          "donnees_sensibles",
+          "donnees_patients",
+          "gdpr"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/court-clears-former-vastaamo-ceo-ville-tapio-of-data-protection-charges/"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2023-53954",
+        "cvss": "8.5",
+        "product": "ActFax 10.10",
+        "description": "Vulnérabilité d'escalade de privilèges via des chemins de service non entre parenthèses, permettant à un attaquant local d'injecter un exécutable malveillant pour obtenir un accès système élevé.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "unquoted_path",
+          "actfax"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53954"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53956",
+        "cvss": "8.8",
+        "product": "Flatnux 2021-03.25",
+        "description": "Vulnérabilité de téléversement de fichiers authentifié permettant aux utilisateurs administratifs de téléverser des fichiers PHP arbitraires et d'exécuter du code à distance sur le serveur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "authenticated_file_upload",
+          "flatnux"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53956"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53957",
+        "cvss": "9.8",
+        "product": "Kimai 1.30.10",
+        "description": "Vulnérabilité SameSite Cookie permettant le vol de session utilisateur via l'exécution d'un script PHP malveillant qui capture les informations de session.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_hijacking",
+          "samesite_cookie",
+          "kimai",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53957"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53958",
+        "cvss": "8.6",
+        "product": "LDAP Tool Box Self Service Password 1.5.2",
+        "description": "Vulnérabilité de réinitialisation de mot de passe permettant la manipulation des en-têtes HTTP Host pour générer des jetons de réinitialisation envoyés à un serveur contrôlé, menant à une prise de contrôle de compte.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "account_takeover",
+          "password_reset",
+          "ldap",
+          "http_host_header",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53958"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53959",
+        "cvss": "9.8",
+        "product": "FileZilla Client 3.63.1",
+        "description": "Vulnérabilité de DLL hijacking permettant l'exécution de code arbitraire en plaçant une DLL TextShaping.dll malveillante dans le répertoire de l'application.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "dll_hijacking",
+          "filezilla"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53959"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-14300",
+        "cvss": "8.7",
+        "product": "Tapo C200 V3",
+        "description": "Vulnérabilité d'accès non authentifié à l'API connectAP, permettant à un attaquant sur le même réseau local de modifier la configuration Wi-Fi de l'appareil, entraînant une perte de connectivité et un déni de service (DoS).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "unauthenticated_access",
+          "denial_of_service",
+          "tapo",
+          "wi_fi",
+          "iot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14300"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": "9.3",
+        "product": "WatchGuard Firebox (Fireware OS)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) dans le composant VPN IKEv2, permettant à des attaquants non authentifiés d'obtenir un accès shell et un contrôle total de l'appliance. Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "vpn",
+          "watchguard",
+          "firewall",
+          "ikev2",
+          "active_exploitation",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-critical-firebox-rce-flaw",
+          "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/19/watchguard_firebox/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "9.8",
+        "product": "Cisco Secure Email Gateway et Secure Email and Web Manager",
+        "description": "Zero-day critique permettant l'exécution de commandes arbitraires avec des privilèges root et l'installation de mécanismes de persistance. Activement exploitée par l'APT UAT-9686 liée à la Chine.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_day",
+          "remote_code_execution",
+          "cisco",
+          "email_gateway",
+          "apt",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": "8.2",
+        "product": "FortiOS, FortiProxy, FortiSwitchManager (Fortinet)",
+        "description": "Vulnérabilité de contournement d'authentification critique dans les endpoints SSO de FortiCloud, permettant à des attaquants non authentifiés d'obtenir un accès admin-level via un message SAML malveillant.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "sso",
+          "fortinet",
+          "forticloud",
+          "saml",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": "9.9",
+        "product": "n8n",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) dans le système d'évaluation des expressions de flux de travail. Permet à un attaquant authentifié d'exécuter du code arbitraire avec les privilèges du processus n8n.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "expression_injection",
+          "n8n",
+          "workflow_automation",
+          "authenticated_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68613"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Cloud Atlas activity in the first half of 2025: what changed / Cloud Atlas Hacker Group Exploiting Office Vulnerabilities to Execute Malicious Code",
+        "description": "Le groupe APT Cloud Atlas (connu depuis 2014) a mené une campagne sophistiquée ciblant l'Europe de l'Est et l'Asie Centrale au premier semestre 2025. Les infections démarrent via des e-mails de phishing contenant des documents DOC(X) malveillants exploitant la vulnérabilité CVE-2018-0802 (Microsoft Office Equation Editor). L'attaque déploie une chaîne d'infection complexe utilisant des fichiers HTA pour installer plusieurs backdoors (VBShower, PowerShower, VBCloud, CloudAtlas). Ces backdoors utilisent des services cloud pour la communication C2 et sont conçues pour la collecte d'informations système, l'exfiltration de fichiers, et le vol de crédentiels de navigateurs. Des techniques de DLL hijacking avec VLC Media Player sont également observées. Les cibles identifiées incluent les télécommunications, la construction, les entités gouvernementales et les usines en Russie et Biélorussie.",
+        "threat_actor": "Cloud Atlas",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2018-0802"],
+          "DOMAIN": [
+            "billet-ru.net",
+            "mskreg.net",
+            "flashsupport.org",
+            "solid-logit.com",
+            "cityru-travel.org",
+            "transferpolicy.org",
+            "information-model.net",
+            "securemodem.com",
+            "roskomnadz.com",
+            "processmanagerpro.net",
+            "luxoftinfo.com",
+            "marketru.net",
+            "rzhd.org",
+            "gimnazija.org",
+            "technoguides.org",
+            "multipackage.net",
+            "rostvgroup.com",
+            "russiatimes.info",
+            "updatechecker.org",
+            "rosatomgroup.com",
+            "telehraf.com",
+            "statusupport.org",
+            "perfectfinder.net"
+          ],
+          "FILE_HASH_SHA1": [
+            "0D309C25A835BAF3B0C392AC87504D9E",
+            "D34AAEB811787B52EC45122EC10AEB08",
+            "HTA4F7C5088BCDF388C49F9CAAD2CCCDCC5",
+            "24BFDFFA096D3938AB6E626E418572B1",
+            "5C93AF19EF930352A251B5E1B2AC2519",
+            "0E13FA3F06607B1392A3C3CAA8092C98",
+            "BC80C582D21AC9E98CBCA2F0637D8993",
+            "EBD6DA3B4D452BD146500EBC6FC49AAE",
+            "12F1F060DF0C1916E6D5D154AF925426",
+            "E8C21CA9A5B721F5B0AB7C87294A2D72",
+            "2D03F1646971FB7921E31B647586D3FB",
+            "7A85873661B50EA914E12F0523527CFA",
+            "F31CE101CBE25ACDE328A8C326B9444A",
+            "E2F3E5BF7EFBA58A9C371E2064DFD0BB",
+            "67156D9D0784245AF0CAE297FC458AAC",
+            "116E5132E30273DA7108F23A622646FE",
+            "1C7387D957C5381E11D1E6EDC0F3F353",
+            "E9F60941A7CED1A91643AF9D8B92A36D",
+            "718B9E688AF49C2E1984CF6472B23805",
+            "A913EF515F5DC8224FCFFA33027EB0DD",
+            "F56DAD18A308B64247D0C3360DDB1727",
+            "62170C67523C8F5009E3658F5858E8BF",
+            "BAA59BB050A12DBDF981193D88079232",
+            "097D18D92C2167D2F4E94F04C5A12D33",
+            "B0100C43BD9B024C6367B38ABDF5C0D2",
+            "7727AAE4A0840C7DC037634BED6A6D74"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1059 - Command and Scripting Interpreter",
+          "T1218.005 - System Binary Proxy Execution: Mshta",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1003 - OS Credential Dumping",
+          "T1574.001 - DLL Side-Loading",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1560 - Archive Collected Data",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1083 - File and Directory Discovery",
+          "T1012 - Query Registry",
+          "T1057 - Process Discovery"
+        ],
+        "analyse": "La campagne de Cloud Atlas démontre une persistance et une sophistication accrues, utilisant des vulnérabilités connues mais toujours efficaces (CVE-2018-0802) comme point d'entrée. La diversification de leur arsenal de backdoors et l'utilisation de services cloud pour le C2 augmentent leur furtivité et leur résilience. Les secteurs ciblés en Europe de l'Est et en Asie Centrale, y compris les entités gouvernementales et les infrastructures, suggèrent des objectifs d'espionnage et de perturbation. L'intégration de techniques avancées comme le DLL hijacking et le vol de crédentiels souligne une stratégie d'accès profond et de persistance sur les systèmes compromis.",
+        "recommandations": [
+          "Appliquer les correctifs de sécurité pour les vulnérabilités logicielles, en particulier pour Microsoft Office (CVE-2018-0802).",
+          "Mettre en œuvre une solution de détection et réponse aux e-mails pour filtrer les e-mails de phishing malveillants.",
+          "Renforcer la sensibilisation des utilisateurs aux risques de phishing et aux documents malveillants.",
+          "Surveiller l'activité réseau pour détecter les communications vers des services cloud C2 inhabituels.",
+          "Déployer des solutions EDR/XDR pour détecter les comportements de backdoors, les tentatives d'exfiltration et le DLL hijacking.",
+          "Mettre en œuvre des mesures de protection contre le vol de crédentiels et l'authentification multifacteur (MFA) pour tous les comptes.",
+          "Restreindre l'exécution de scripts HTA et VBS non signés dans l'environnement."
+        ],
+        "tags": [
+          "apt",
+          "phishing",
+          "backdoor",
+          "exfiltration",
+          "microsoft_office",
+          "cve",
+          "europe_est",
+          "asie_centrale",
+          "gouvernement",
+          "telecommunications",
+          "dll_hijacking",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cloud-atlas-hacker-group/",
+          "https://securelist.com/cloud-atlas-h1-2025-campaign/118517/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "CLOP targets Gladinet CentreStack servers in large-scale extortion campaign",
+        "description": "Le groupe de ransomware Clop cible activement les serveurs de fichiers Gladinet CentreStack exposés sur Internet dans une nouvelle campagne d'extorsion à grande échelle. L'attaque vise à voler des données sensibles d'organisations mondiales en exploitant une vulnérabilité inconnue (n-day ou zero-day), ou les failles CVE-2025-11371 et CVE-2025-30406. Clop est connu pour cibler des serveurs de transfert de fichiers via des zero-days et publier les données volées sur ses sites de fuite pour faire pression sur les victimes.",
+        "threat_actor": "CLOP",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-11371", "CVE-2025-30406", "CVE-2025-61882"],
+          "MITRE_ATT&CK": ["T1133 - External Remote Services", "T1190 - Exploit Public-Facing Application", "T1486 - Data Encrypted for Impact", "T1531 - Account Access Removal", "T1595 - Active Scanning", "T1078 - Valid Accounts"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1595.002 - Vulnerability Scanning",
+          "T1078 - Valid Accounts (via RCE/Auth bypass)",
+          "T1560 - Archive Collected Data",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1486 - Data Encrypted for Impact (Ransomware)",
+          "T1531 - Account Access Removal (Extortion)"
+        ],
+        "analyse": "Cette campagne confirme la stratégie de CLOP de cibler des plateformes de transfert de fichiers largement utilisées pour des attaques d'extorsion, en s'appuyant sur l'exploitation de vulnérabilités critiques, y compris des zero-days. L'impact est potentiellement global, touchant divers secteurs par le vol de données sensibles et la pression exercée pour le paiement de rançons. La capacité de CLOP à rapidement industrialiser l'exploitation de nouvelles failles représente une menace significative pour la chaîne d'approvisionnement logicielle.",
+        "recommandations": [
+          "Identifier et sécuriser tous les serveurs Gladinet CentreStack exposés sur Internet.",
+          "Appliquer immédiatement tous les correctifs de sécurité disponibles pour Gladinet CentreStack et Triofox, y compris les correctifs pour CVE-2025-11371 et CVE-2025-30406.",
+          "Renforcer l'authentification et l'autorisation pour l'accès aux interfaces d'administration.",
+          "Mettre en œuvre une segmentation réseau pour limiter l'accès aux serveurs de fichiers critiques.",
+          "Surveiller les logs pour détecter les activités suspectes, en particulier les tentatives d'accès non autorisé et les transferts de fichiers volumineux.",
+          "Établir un plan de réponse aux incidents pour les attaques de ransomware et d'extorsion de données."
+        ],
+        "tags": [
+          "ransomware",
+          "clop",
+          "extorsion",
+          "gladinet_centrestack",
+          "zero_day",
+          "vol_de_donnees",
+          "serveur_de_fichiers",
+          "supply_chain",
+          "cve"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185875/cyber-crime/clop-targets-gladinet-centrestack-servers-in-large-scale-extortion-campaign.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "China-linked APT UAT-9686 is targeting Cisco Secure Email Gateway and Secure Email and Web Manager",
+        "description": "Cisco a révélé une zero-day critique (CVE-2025-20393) affectant ses Secure Email Gateway (ESA) et Secure Email and Web Manager (SMA), activement exploitée par le groupe APT UAT-9686 lié à la Chine. Cette campagne, observée depuis fin novembre 2025, cible des appliances avec certains ports ouverts sur Internet. Les attaquants exécutent des commandes avec des privilèges root, déploient un mécanisme de persistance Python personnalisé nommé 'AquaShell', et utilisent des outils comme 'AquaTunnel' (reverse SSH), 'Chisel' (tunneling HTTP) et 'AquaPurge' (suppression de logs) pour maintenir un accès furtif et à long terme et pivoter dans les réseaux internes.",
+        "threat_actor": "UAT-9686",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-20393"],
+          "FILE_HASH_SHA256": ["AquaShell", "AquaTunnel", "Chisel", "AquaPurge"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059.006 - Command and Scripting Interpreter: PowerShell",
+          "T1078 - Valid Accounts",
+          "T1546.004 - Event Triggered Execution: .bash_profile and .profile",
+          "T1572 - Protocol Tunneling",
+          "T1070.004 - Indicator Removal: File Deletion",
+          "T1090.002 - Proxy: SOCKS Proxy"
+        ],
+        "analyse": "L'exploitation d'une zero-day critique sur des équipements Cisco de sécurité des e-mails par un APT lié à la Chine met en évidence la valeur stratégique de ces dispositifs pour l'accès aux réseaux internes. La sophistication des outils utilisés, y compris les backdoors personnalisées et les capacités de tunneling, indique des objectifs d'espionnage et de persistance à long terme, probablement pour la collecte d'informations sensibles. L'attention portée à la suppression des traces (AquaPurge) souligne une volonté de rester indétecté.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2025-20393 sur les Cisco Secure Email Gateway et Secure Email and Web Manager.",
+          "Mettre en œuvre une segmentation réseau stricte pour limiter l'exposition des interfaces de gestion à Internet.",
+          "Surveiller les activités sur les appliances Cisco ESA/SMA pour détecter l'exécution de commandes inhabituelles ou le déploiement de scripts Python non autorisés.",
+          "Rechercher les indicateurs de compromission liés à AquaShell, AquaTunnel, Chisel et AquaPurge.",
+          "Analyser les logs de sécurité pour détecter toute suppression de logs ou activité de tunneling suspecte.",
+          "Renforcer les politiques de sécurité des e-mails et la détection des menaces avancées."
+        ],
+        "tags": [
+          "apt",
+          "china_linked",
+          "cisco",
+          "zero_day",
+          "remote_code_execution",
+          "persistance",
+          "backdoor",
+          "tunneling",
+          "log_deletion",
+          "espionnage",
+          "cve"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "Microsoft 365 accounts targeted in wave of OAuth phishing attacks / Nigeria arrests dev of Microsoft 365 'Raccoon0365' phishing platform",
+        "description": "Plusieurs acteurs malveillants, y compris des cybercriminels financièrement motivés (TA2723) et des acteurs étatiques, compromettent des comptes Microsoft 365 via des attaques de phishing exploitant le mécanisme d'autorisation du code de périphérique OAuth. Cette méthode permet d'obtenir l'accès aux comptes sans voler les identifiants ni contourner le MFA, en incitant les victimes à saisir un code sur une page de connexion Microsoft légitime. Ces attaques ont augmenté de manière significative depuis septembre 2025. En parallèle, les autorités nigérianes ont arrêté des individus liés à la plateforme de phishing-as-a-service 'Raccoon0365', utilisée pour des cyberattaques ciblées sur Microsoft 365, vendant des kits de phishing et hébergeant des pages malveillantes sur Cloudflare.",
+        "threat_actor": "TA2723, Raccoon0365, State-aligned threat actors",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1078.004 - Valid Accounts: Cloud Accounts",
+          "T1114.002 - Email Collection: Mailbox Delegation",
+          "T1550.003 - Bypass Process or Network Defenses: Exploitation for Client Execution",
+          "T1534 - Group Policy Modification (Implied by account takeover)"
+        ],
+        "analyse": "La recrudescence des attaques de phishing OAuth contre les comptes Microsoft 365 démontre une adaptation des attaquants pour contourner les défenses traditionnelles comme le MFA. L'utilisation d'une plateforme de 'phishing-as-a-service' comme Raccoon0365, avec ses arrestations subséquentes, souligne la professionnalisation de l'écosystème cybercriminel. L'implication d'acteurs étatiques indique que cette technique est également exploitée pour l'espionnage. L'impact est l'accès non autorisé à des données sensibles dans le cloud et la compromission de la productivité.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques de phishing par code de périphérique OAuth, en insistant sur la vérification des demandes d'autorisation d'applications.",
+          "Mettre en œuvre des politiques de sécurité robustes pour les applications tierces accédant aux services Microsoft 365.",
+          "Utiliser des solutions d'identité et d'accès qui peuvent détecter et bloquer les tentatives d'autorisation d'applications malveillantes.",
+          "Surveiller les logs d'activité Azure AD pour détecter les autorisations d'applications inhabituelles ou suspectes.",
+          "Mettre en place une authentification multifacteur (MFA) résistante au phishing pour tous les comptes, si possible via des clés de sécurité matérielles (FIDO2).",
+          "Évaluer et révoquer régulièrement les permissions d'applications OAuth non utilisées ou suspectes."
+        ],
+        "tags": [
+          "microsoft_365",
+          "phishing",
+          "oauth",
+          "mfa_bypass",
+          "cybercrime",
+          "threat_actor",
+          "state_sponsored",
+          "cloud_security"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nigeria-arrests-dev-of-microsoft-365-raccoon0365-phishing-platform/",
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "New UEFI flaw enables pre-boot attacks on motherboards from Gigabyte, MSI, ASUS, ASRock / ASRock, ASUS, GIGABYTE, MSI Boards vulnerable to pre-boot memory attacks / New UEFI flaw enables pre-boot attacks on motherboards from Gigabyte, MSI, ASUS, ASRock",
+        "description": "Une nouvelle vulnérabilité dans l'implémentation du firmware UEFI de certaines cartes mères ASUS, Gigabyte, MSI et ASRock expose les systèmes à des attaques d'accès direct à la mémoire (DMA) avant le démarrage. La faille fait en sorte que le firmware UEFI indique que la protection DMA est activée même si l'IOMMU (Input-Output Memory Management Unit) n'a pas été correctement initialisée pendant le démarrage précoce. Cela laisse le système exposé à des dispositifs PCIe malveillux pouvant lire ou modifier la RAM avant le chargement des protections du système d'exploitation. L'attaque nécessite un accès physique à l'appareil.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-11901", "CVE-2025-14304", "CVE-2025-14303"]
+        },
+        "mitre_ttps": [
+          "T1542.001 - Pre-OS Boot: UEFI Bootkit",
+          "T1053 - Scheduled Task/Job (Implied by early boot control)",
+          "T1014 - System Firmware",
+          "T1573 - Encrypted Channel (Potential for post-exploit)"
+        ],
+        "analyse": "Cette vulnérabilité de firmware UEFI représente un risque de sécurité fondamental car elle permet des attaques au niveau le plus bas du système, avant même le chargement du système d'exploitation. La capacité de contourner les protections IOMMU par accès physique peut permettre à un attaquant d'obtenir un contrôle total du système, de compromettre l'intégrité du processus de démarrage et d'accéder à des données sensibles en mémoire. Bien qu'elle nécessite un accès physique, cette faille est particulièrement préoccupante pour les environnements où un tel accès ne peut être entièrement contrôlé.",
+        "recommandations": [
+          "Appliquer les mises à jour du firmware UEFI fournies par les fabricants (ASUS, Gigabyte, MSI, ASRock) dès qu'elles sont disponibles.",
+          "Renforcer les contrôles d'accès physique aux équipements informatiques, en particulier ceux contenant des données sensibles ou des systèmes critiques.",
+          "Implémenter une surveillance des activités de démarrage et des modifications du firmware.",
+          "Considérer l'activation de Secure Boot et d'autres fonctionnalités de sécurité du firmware (TPM) si non déjà fait."
+        ],
+        "tags": [
+          "uefi",
+          "firmware",
+          "dma_attack",
+          "iommu",
+          "pre_boot",
+          "acces_physique",
+          "vulnerabilite",
+          "carte_mere",
+          "asus",
+          "gigabyte",
+          "msi",
+          "asrock",
+          "kernel_mode_rootkit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-uefi-flaw-enables-pre-boot-attacks-on-motherboards-from-gigabyte-msi-asus-asrock/",
+          "https://securityaffairs.com/185867/security/asrock-asus-gigabyte-msi-boards-vulnerable-to-pre-boot-memory-attacks/",
+          "https://www.bleepingcomputer.com/news/security/new-uefi-flaw-enables-pre-boot-attacks-on-motherboards-from-gigabyte-msi-asus-asrock/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "Over 25,000 FortiCloud SSO devices exposed to remote attacks / 25,000+ FortiCloud SSO-Enabled Devices Exposed to Remote Attacks",
+        "description": "Plus de 25 000 appareils Fortinet avec FortiCloud SSO activé sont exposés en ligne, en pleine période d'attaques ciblant des vulnérabilités critiques de contournement d'authentification (CVE-2025-59718 et CVE-2025-59719). Ces failles permettent à des attaquants non authentifiés d'obtenir un accès admin-level à l'interface de gestion web via des messages SAML malveillants, leur donnant la possibilité de télécharger des fichiers de configuration système contenant des informations sensibles (mots de passe hachés, services exposés, schémas réseau). La CISA a ajouté CVE-2025-59718 à son catalogue des vulnérabilités activement exploitées.",
+        "threat_actor": "Non applicable (attaquants divers)",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-59718", "CVE-2025-59719", "CVE-2025-58034", "CVE-2025-64446", "CVE-2023-27997", "CVE-2022-42475"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078.004 - Valid Accounts: Cloud Accounts",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1560 - Archive Collected Data",
+          "T1003 - OS Credential Dumping"
+        ],
+        "analyse": "La large exposition des appareils Fortinet avec FortiCloud SSO activé crée une surface d'attaque étendue, rendant des milliers d'organisations vulnérables aux attaques à distance. L'exploitation active de ces failles critiques de contournement d'authentification peut conduire à la compromission complète des pare-feu, permettant aux attaquants d'accéder à des informations réseau sensibles et de pivoter vers d'autres systèmes. L'inclusion de ces CVEs dans le catalogue KEV de la CISA souligne l'urgence de corriger ces vulnérabilités, d'autant plus que des groupes comme Volt Typhoon ont déjà ciblé des produits Fortinet par le passé.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs de sécurité fournis par Fortinet pour CVE-2025-59718 et CVE-2025-59719 (FortiOS, FortiProxy, FortiSwitchManager, FortiWeb).",
+          "Auditer les configurations FortiCloud SSO pour s'assurer qu'elles ne sont pas exposées inutilement ou désactiver la fonctionnalité si elle n'est pas essentielle.",
+          "Mettre en œuvre une authentification forte (MFA) pour toutes les interfaces d'administration.",
+          "Segmenter les réseaux pour isoler les interfaces de gestion des appareils Fortinet.",
+          "Surveiller les logs d'accès à l'interface de gestion pour détecter les tentatives d'accès non autorisées.",
+          "Changer les mots de passe hachés si une compromission est suspectée et utiliser des mots de passe forts et uniques."
+        ],
+        "tags": [
+          "fortinet",
+          "forticloud",
+          "sso",
+          "vulnerabilite",
+          "authentication_bypass",
+          "exploitation_active",
+          "firewall",
+          "reseau",
+          "cve",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "WatchGuard reports active exploitation of critical Firebox RCE flaw / CVE-2025-14733: Critical WatchGuard Firebox RCE Actively Exploited / WatchGuard sounds alarm as critical Firebox flaw comes under active attack",
+        "description": "WatchGuard a émis une alerte concernant l'exploitation active d'une vulnérabilité critique d'exécution de code à distance (RCE) dans son Fireware OS (CVE-2025-14733), affectant les appliances de pare-feu Firebox. La faille réside dans le composant VPN IKEv2 et permet à des attaquants non authentifiés d'obtenir un accès shell, de voler des identifiants VPN et d'intercepter le trafic VPN. La vulnérabilité est considérée comme facile à exploiter et a été ajoutée au catalogue CISA KEV des vulnérabilités activement exploitées. Des attaques antérieures sur les appareils WatchGuard par des groupes comme Sandworm (GRU russe) ont déjà été signalées.",
+        "threat_actor": "Non applicable (exploitation opportuniste et active par des attaquants divers, possiblement étatiques)",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-14733", "CVE-2025-9242", "CVE-2025-32978", "CVE-2022-26318"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078 - Valid Accounts",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1059 - Command and Scripting Interpreter",
+          "T1572 - Protocol Tunneling",
+          "T1573 - Encrypted Channel"
+        ],
+        "analyse": "L'exploitation active d'une RCE critique sur les pare-feu Firebox de WatchGuard représente une menace immédiate et sévère. Ces appareils étant positionnés en périphérie des réseaux, leur compromission offre un point d'entrée idéal pour l'accès latéral, la persistance et l'exfiltration de données. Le fait que la vulnérabilité soit dans le composant VPN IKEv2 est particulièrement alarmant, car il peut mener au vol de crédentiels VPN et à l'interception du trafic, affectant la confidentialité et l'intégrité des communications. Les organisations doivent considérer ces failles comme une priorité absolue en raison de leur facilité d'exploitation et de l'impact potentiel sur l'ensemble du réseau.",
+        "recommandations": [
+          "Installer immédiatement les versions patchées du Fireware OS de WatchGuard pour CVE-2025-14733 et toutes les autres CVEs mentionnées.",
+          "Auditer toutes les appliances Firebox pour les configurations IKEv2 dynamic gateway résiduelles et désactiver IKEv2 si non utilisé.",
+          "Faire pivoter tous les secrets stockés localement, y compris les identifiants VPN, si une compromission est suspectée.",
+          "Surveiller les activités VPN anormales et examiner les logs pour les indicateurs de compromission publiés par WatchGuard.",
+          "Mettre en place une segmentation réseau et des contrôles d'accès stricts aux interfaces de gestion des pare-feu.",
+          "Appliquer une approche de défense en profondeur, en considérant les pare-feu comme des cibles de grande valeur nécessitant une surveillance continue."
+        ],
+        "tags": [
+          "watchguard",
+          "firebox",
+          "rce",
+          "vpn",
+          "ikev2",
+          "exploitation_active",
+          "firewall",
+          "cve",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-critical-firebox-rce-flaw",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/19/watchguard_firebox/",
+          "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/"
+        ],
+        "date": "2025-12-20"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "Cyber intelligence during this period highlights an intensification of malicious activities, marked by a diversity of attack vectors and motivations. We observe a predominance of state-sponsored attacks, notably Russian and Chinese, targeting critical infrastructure and strategic Western sectors, underscoring the increasing use of cyberspace as a hybrid warfare domain. Ransomware groups like CLOP continue to actively exploit supply chain vulnerabilities (e.g., Gladinet CentreStack, Oracle EBS) and network equipment (Fortinet, WatchGuard Firebox), leading to significant data breaches for various organizations, including those in the healthcare sector. Social engineering and sophisticated phishing techniques, including MFA-bypassing OAuth phishing, remain favored initial access methods, sometimes facilitated by 'phishing-as-a-service' platforms. Critical RCE vulnerabilities and authentication bypass flaws are actively sought and exploited, particularly those affecting edge devices and UEFI firmware. AI integration is also a recurring theme, both for attackers (malicious content creation) and defenders (improved detection and response). In conclusion, the overall threat landscape is high, characterized by rapid exploitation of newly discovered vulnerabilities and persistence of APT and cybercriminal groups, necessitating constant vigilance and proactive adoption of security measures.",
+      "date": "2025-12-20"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "CLOP",
+        "secteur": "Diverse (file servers, healthcare, education, logistics)",
+        "modop": "Large-scale extortion campaigns targeting Internet-facing Gladinet CentreStack file servers, exploitation of zero-days (Oracle EBS), theft of sensitive data, followed by publication on data leak sites to pressure victims into paying. Utilizes initial-access brokers, automation, evasion techniques, and lateral movement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "zero_day",
+          "data_theft",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185875/cyber-crime/clop-targets-gladinet-centrestack-servers-in-large-scale-extortion-campaign.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Cloud Atlas",
+        "secteur": "Telecommunications, construction, government entities, plants (Russia, Belarus)",
+        "modop": "APT. Infections via phishing emails with malicious DOC(X) attachments exploiting CVE-2018-0802 (Microsoft Office Equation Editor vulnerability). Deployment of multiple backdoors (VBShower, PowerShower, VBCloud, CloudAtlas) using cloud services for C2. Collects system information, exfiltrates files, steals browser cookies and credentials, uses DLL hijacking techniques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "phishing",
+          "malware",
+          "backdoor",
+          "data_exfiltration",
+          "credential_theft",
+          "dll_hijacking",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://securelist.com/cloud-atlas-h1-2025-campaign/118517/",
+          "https://cybersecuritynews.com/cloud-atlas-hacker-group/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Critical infrastructure (Denmark)",
+        "modop": "Massive DDoS attacks. Linked to the Russian state, used in hybrid warfare campaigns to create insecurity and punish countries supporting Ukraine. Targeted Danish websites before elections.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "pro_russia",
+          "ddos",
+          "critical_infrastructure_targeting",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Raccoon0365",
+        "secteur": "Cloud services (Microsoft 365)",
+        "modop": "Phishing-as-a-service targeting Microsoft 365 accounts. Uses phishing kits sold for cryptocurrency and hosts phishing pages on Cloudflare via compromised credentials. Facilitates OAuth phishing bypassing MFA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "phishing_as_a_service",
+          "oauth_phishing",
+          "mfa_bypass",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nigeria-arrests-dev-of-microsoft-365-raccoon0365-phishing-platform/",
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "TA2723",
+        "secteur": "Cloud services (Microsoft 365)",
+        "modop": "Financially motivated cybercriminal actor. Uses phishing attacks exploiting the OAuth device code authorization mechanism to compromise Microsoft 365 accounts without stealing credentials or bypassing multi-factor authentication (MFA).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "oauth_phishing",
+          "mfa_bypass",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "UAT-9686",
+        "secteur": "Telecommunications (Cisco Secure Email Gateway and Secure Email and Web Manager)",
+        "modop": "China-linked APT. Exploitation of a critical zero-day (CVE-2025-20393) to execute root-level commands and deploy a custom persistence mechanism ('AquaShell'). Uses tunneling tools (AquaTunnel, Chisel) and log deletion utilities (AquaPurge) to maintain stealthy, long-term access.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china_linked",
+          "zero_day_exploit",
+          "remote_code_execution",
+          "persistence",
+          "backdoor",
+          "tunneling",
+          "log_deletion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Volt Typhoon",
+        "secteur": "Government (Dutch Ministry of Defense)",
+        "modop": "Chinese hacking group known for exploiting FortiOS SSL VPN flaws (CVE-2023-27997 and CVE-2022-42475) to backdoor military networks using custom Coathanger remote access trojan (RAT) malware. Mentioned as an example of past activities.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china_linked",
+          "vpn_exploitation",
+          "rat",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Critical infrastructure (Denmark's water utilities)",
+        "modop": "Destructive cyberattack. Linked to the Russian state, used in hybrid warfare campaigns to create insecurity and punish countries supporting Ukraine. Targeted a Danish water utility.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "pro_russia",
+          "destructive_attack",
+          "critical_infrastructure_targeting",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Critical Infrastructure, Public Sector",
+        "theme": "Hybrid Warfare, State-Sponsored Attacks",
+        "description": "Denmark accused Russia of orchestrating a destructive cyberattack against a water utility in 2024 and DDoS attacks against Danish websites before the November 2025 elections. These actions are attributed to pro-Russian groups Z-Pentest and NoName057(16), considered instruments of Russia's hybrid warfare aimed at creating insecurity and punishing countries supporting Ukraine.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "denmark",
+          "hybrid_warfare",
+          "critical_infrastructure",
+          "ddos",
+          "destructive_attack",
+          "elections",
+          "z_pentest",
+          "noname057(16)"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/",
+          "https://databreaches.net/2025/12/19/denmark-says-russia-was-behind-two-destructive-and-disruptive-cyber-attacks/",
+          "https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare Services",
+        "victime": "DXS International (NHS software supplier)",
+        "description": "DXS International, a software provider for the UK's National Health Service (NHS), reported a cyberattack on December 14, 2025. A ransomware group claimed responsibility and stole 300GB of data, potentially affecting patient records through software used by approximately 2,000 GPs.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "data_theft",
+          "supply_chain",
+          "united_kingdom",
+          "nhs"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/uk-national-heallth-service-software-supplier-dxs-hit-by-cyber-attack/",
+          "https://infosec.exchange/@DevaOnBreaches/115749013728619122",
+          "https://mastodon.thenewoil.org/@thenewoil/115748713465923723"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Finance, Cryptocurrency",
+        "victime": "Illusory Systems, Inc. (Nomad)",
+        "description": "The Federal Trade Commission (FTC) took action against Illusory Systems, Inc. (Nomad, a cross-chain bridge platform) for failing to implement adequate data security measures, leading to a major security breach where hackers stole $186 million. Nomad had introduced new smart contract code with a vulnerability, exploited by threat actors, resulting in over $100 million lost by users.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "cryptocurrency",
+          "nomad",
+          "smart_contract",
+          "ftc",
+          "vulnerability",
+          "financial_loss"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/ftc-issues-proposed-order-against-illusory-systems-over-allegations-of-lax-security/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Local Government, Healthcare",
+        "victime": "Mitchell County, North Carolina",
+        "description": "A ransomware attack targeted Mitchell County, North Carolina, leading to days of phone and email outages. Protected Health Information (PHI) was compromised due to unauthorized access.",
+        "tags": [
+          "violation",
+          "breach",
+          "local_government",
+          "healthcare",
+          "ransomware",
+          "personal_data",
+          "phi",
+          "united_states",
+          "north_carolina"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DysruptionHub/115748629481629051"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Public Administration (Ministry of Sports, Youth and Community Life)",
+        "victime": "Pass’Sport beneficiaries in France",
+        "description": "The French Ministry of Sports, Youth and Community Life suffered a cyberattack leading to the exfiltration of non-sensitive data concerning 3.5 million households benefiting from the Pass’Sport scheme. Stolen data included names, first names, and email addresses, but no banking details or passwords.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_administration",
+          "france",
+          "data_exfiltration",
+          "personal_data",
+          "pass_sport"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/sport/article/2025/12/19/le-ministere-des-sports-de-la-jeunesse-et-de-la-vie-associative-victime-d-une-cyberattaque_6658700_3242.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Miscellaneous (Unspecified)",
+        "victime": "pt usaha garda arta (Indonesia)",
+        "description": "A high-confidence data breach was identified targeting the company pt usaha garda arta in Indonesia, within the 'Miscellaneous/Other' sector.",
+        "tags": [
+          "violation",
+          "breach",
+          "miscellaneous",
+          "indonesia",
+          "data_theft"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115748480165763043"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "secteur": "Psychotherapy Services",
+        "victime": "Vastaamo (Finland)",
+        "description": "Vastaamo's former CEO, Ville Tapio, was cleared of data protection charges, but the case refers to one of Finland's most severe data breaches, involving unauthorized access and publication of sensitive information from tens of thousands of patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "psychotherapy",
+          "finland",
+          "sensitive_data",
+          "patient_data",
+          "gdpr"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/19/court-clears-former-vastaamo-ceo-ville-tapio-of-data-protection-charges/"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2023-53954",
+        "cvss": "8.5",
+        "product": "ActFax 10.10",
+        "description": "Privilege escalation vulnerability via unquoted service paths, allowing a local attacker to inject a malicious executable to gain elevated system access.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "unquoted_path",
+          "actfax"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53954"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53956",
+        "cvss": "8.8",
+        "product": "Flatnux 2021-03.25",
+        "description": "Authenticated file upload vulnerability allowing administrative users to upload arbitrary PHP files and execute remote code on the server.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "authenticated_file_upload",
+          "flatnux"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53956"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53957",
+        "cvss": "9.8",
+        "product": "Kimai 1.30.10",
+        "description": "SameSite Cookie vulnerability allowing user session theft via execution of a crafted PHP script that captures session information.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_hijacking",
+          "samesite_cookie",
+          "kimai",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53957"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53958",
+        "cvss": "8.6",
+        "product": "LDAP Tool Box Self Service Password 1.5.2",
+        "description": "Password reset vulnerability allowing HTTP Host header manipulation to generate reset tokens sent to a controlled server, leading to potential account takeover.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "account_takeover",
+          "password_reset",
+          "ldap",
+          "http_host_header",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53958"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2023-53959",
+        "cvss": "9.8",
+        "product": "FileZilla Client 3.63.1",
+        "description": "DLL hijacking vulnerability allowing arbitrary code execution by placing a crafted TextShaping.dll in the application directory.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "dll_hijacking",
+          "filezilla"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53959"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-14300",
+        "cvss": "8.7",
+        "product": "Tapo C200 V3",
+        "description": "Unauthenticated access vulnerability to the connectAP API endpoint, allowing an attacker on the same local network segment to modify the device’s Wi-Fi configuration, resulting in loss of connectivity and denial-of-service (DoS).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "unauthenticated_access",
+          "denial_of_service",
+          "tapo",
+          "wi_fi",
+          "iot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14300"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": "9.3",
+        "product": "WatchGuard Firebox (Fireware OS)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability in the IKEv2 VPN component, allowing unauthenticated attackers to gain shell access and full control of the appliance. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "vpn",
+          "watchguard",
+          "firewall",
+          "ikev2",
+          "active_exploitation",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-critical-firebox-rce-flaw",
+          "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/19/watchguard_firebox/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "9.8",
+        "product": "Cisco Secure Email Gateway and Secure Email and Web Manager",
+        "description": "Critical zero-day allowing arbitrary command execution with root privileges and installation of persistence mechanisms. Actively exploited by the China-linked APT UAT-9686.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "zero_day",
+          "remote_code_execution",
+          "cisco",
+          "email_gateway",
+          "apt",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-59718",
+        "cvss": "8.2",
+        "product": "FortiOS, FortiProxy, FortiSwitchManager (Fortinet)",
+        "description": "Critical authentication bypass vulnerability in FortiCloud SSO endpoints, allowing unauthenticated attackers to gain admin-level access via a maliciously crafted SAML message.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "sso",
+          "fortinet",
+          "forticloud",
+          "saml",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": "9.9",
+        "product": "n8n",
+        "description": "Critical Remote Code Execution (RCE) vulnerability in the workflow expression evaluation system. Allows an authenticated attacker to execute arbitrary code with the privileges of the n8n process.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "remote_code_execution",
+          "expression_injection",
+          "n8n",
+          "workflow_automation",
+          "authenticated_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68613"
+        ],
+        "date": "2025-12-20"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Cloud Atlas activity in the first half of 2025: what changed / Cloud Atlas Hacker Group Exploiting Office Vulnerabilities to Execute Malicious Code",
+        "description": "The Cloud Atlas APT group (known since 2014) conducted a sophisticated campaign targeting Eastern Europe and Central Asia in the first half of 2025. Infections start via phishing emails containing malicious DOC(X) documents exploiting CVE-2018-0802 (Microsoft Office Equation Editor vulnerability). The attack deploys a complex infection chain using HTA files to install multiple backdoors (VBShower, PowerShower, VBCloud, CloudAtlas). These backdoors use cloud services for C2 communication and are designed for system information collection, file exfiltration, and browser credential theft. DLL hijacking techniques involving VLC Media Player are also observed. Identified targets include telecommunications, construction, government entities, and plants in Russia and Belarus.",
+        "threat_actor": "Cloud Atlas",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2018-0802"],
+          "DOMAIN": [
+            "billet-ru.net",
+            "mskreg.net",
+            "flashsupport.org",
+            "solid-logit.com",
+            "cityru-travel.org",
+            "transferpolicy.org",
+            "information-model.net",
+            "securemodem.com",
+            "roskomnadz.com",
+            "processmanagerpro.net",
+            "luxoftinfo.com",
+            "marketru.net",
+            "rzhd.org",
+            "gimnazija.org",
+            "technoguides.org",
+            "multipackage.net",
+            "rostvgroup.com",
+            "russiatimes.info",
+            "updatechecker.org",
+            "rosatomgroup.com",
+            "telehraf.com",
+            "statusupport.org",
+            "perfectfinder.net"
+          ],
+          "FILE_HASH_SHA1": [
+            "0D309C25A835BAF3B0C392AC87504D9E",
+            "D34AAEB811787B52EC45122EC10AEB08",
+            "HTA4F7C5088BCDF388C49F9CAAD2CCCDCC5",
+            "24BFDFFA096D3938AB6E626E418572B1",
+            "5C93AF19EF930352A251B5E1B2AC2519",
+            "0E13FA3F06607B1392A3C3CAA8092C98",
+            "BC80C582D21AC9E98CBCA2F0637D8993",
+            "EBD6DA3B4D452BD146500EBC6FC49AAE",
+            "12F1F060DF0C1916E6D5D154AF925426",
+            "E8C21CA9A5B721F5B0AB7C87294A2D72",
+            "2D03F1646971FB7921E31B647586D3FB",
+            "7A85873661B50EA914E12F0523527CFA",
+            "F31CE101CBE25ACDE328A8C326B9444A",
+            "E2F3E5BF7EFBA58A9C371E2064DFD0BB",
+            "67156D9D0784245AF0CAE297FC458AAC",
+            "116E5132E30273DA7108F23A622646FE",
+            "1C7387D957C5381E11D1E6EDC0F3F353",
+            "E9F60941A7CED1A91643AF9D8B92A36D",
+            "718B9E688AF49C2E1984CF6472B23805",
+            "A913EF515F5DC8224FCFFA33027EB0DD",
+            "F56DAD18A308B64247D0C3360DDB1727",
+            "62170C67523C8F5009E3658F5858E8BF",
+            "BAA59BB050A12DBDF981193D88079232",
+            "097D18D92C2167D2F4E94F04C5A12D33",
+            "B0100C43BD9B024C6367B38ABDF5C0D2",
+            "7727AAE4A0840C7DC037634BED6A6D74"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1059 - Command and Scripting Interpreter",
+          "T1218.005 - System Binary Proxy Execution: Mshta",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1003 - OS Credential Dumping",
+          "T1574.001 - DLL Side-Loading",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1560 - Archive Collected Data",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1083 - File and Directory Discovery",
+          "T1012 - Query Registry",
+          "T1057 - Process Discovery"
+        ],
+        "analyse": "The Cloud Atlas campaign demonstrates increased persistence and sophistication, utilizing known but still effective vulnerabilities (CVE-2018-0802) as an entry point. The diversification of their backdoor arsenal and the use of cloud services for C2 enhance their stealth and resilience. The targeted sectors in Eastern Europe and Central Asia, including government entities and infrastructure, suggest espionage and disruption objectives. The integration of advanced techniques like DLL hijacking and credential theft underscores a strategy of deep access and persistence on compromised systems.",
+        "recommandations": [
+          "Apply security patches for software vulnerabilities, especially for Microsoft Office (CVE-2018-0802).",
+          "Implement an email detection and response solution to filter malicious phishing emails.",
+          "Strengthen user awareness of phishing risks and malicious documents.",
+          "Monitor network activity to detect communications to unusual cloud C2 services.",
+          "Deploy EDR/XDR solutions to detect backdoor behaviors, exfiltration attempts, and DLL hijacking.",
+          "Implement credential protection measures and multi-factor authentication (MFA) for all accounts.",
+          "Restrict the execution of unsigned HTA and VBS scripts in the environment."
+        ],
+        "tags": [
+          "apt",
+          "phishing",
+          "backdoor",
+          "exfiltration",
+          "microsoft_office",
+          "cve",
+          "eastern_europe",
+          "central_asia",
+          "government",
+          "telecommunications",
+          "dll_hijacking",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/cloud-atlas-hacker-group/",
+          "https://securelist.com/cloud-atlas-h1-2025-campaign/118517/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "CLOP targets Gladinet CentreStack servers in large-scale extortion campaign",
+        "description": "The Clop ransomware group is actively targeting Internet-facing Gladinet CentreStack file servers in a new large-scale extortion campaign. The attack aims to steal sensitive data from organizations worldwide by exploiting an unknown (n-day or zero-day) vulnerability, or existing flaws CVE-2025-11371 and CVE-2025-30406. Clop is known for targeting file transfer servers via zero-days and publishing stolen data on its leak sites to pressure victims into paying.",
+        "threat_actor": "CLOP",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-11371", "CVE-2025-30406", "CVE-2025-61882"],
+          "MITRE_ATT&CK": ["T1133 - External Remote Services", "T1190 - Exploit Public-Facing Application", "T1486 - Data Encrypted for Impact", "T1531 - Account Access Removal", "T1595 - Active Scanning", "T1078 - Valid Accounts"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1595.002 - Vulnerability Scanning",
+          "T1078 - Valid Accounts (via RCE/Auth bypass)",
+          "T1560 - Archive Collected Data",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1486 - Data Encrypted for Impact (Ransomware)",
+          "T1531 - Account Access Removal (Extortion)"
+        ],
+        "analyse": "This campaign confirms CLOP's strategy of targeting widely used file transfer platforms for extortion attacks, relying on the exploitation of critical vulnerabilities, including zero-days. The impact is potentially global, affecting various sectors through the theft of sensitive data and pressure exerted for ransom payments. CLOP's ability to rapidly industrialize the exploitation of new flaws represents a significant threat to the software supply chain.",
+        "recommandations": [
+          "Identify and secure all Gladinet CentreStack servers exposed to the Internet.",
+          "Immediately apply all available security patches for Gladinet CentreStack and Triofox, including patches for CVE-2025-11371 and CVE-2025-30406.",
+          "Strengthen authentication and authorization for access to administrative interfaces.",
+          "Implement network segmentation to limit access to critical file servers.",
+          "Monitor logs for suspicious activity, especially unauthorized access attempts and large file transfers.",
+          "Establish an incident response plan for ransomware and data extortion attacks."
+        ],
+        "tags": [
+          "ransomware",
+          "clop",
+          "extortion",
+          "gladinet_centrestack",
+          "zero_day",
+          "data_theft",
+          "file_server",
+          "supply_chain",
+          "cve"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185875/cyber-crime/clop-targets-gladinet-centrestack-servers-in-large-scale-extortion-campaign.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "China-linked APT UAT-9686 is targeting Cisco Secure Email Gateway and Secure Email and Web Manager",
+        "description": "Cisco disclosed a critical zero-day (CVE-2025-20393) affecting its Secure Email Gateway (ESA) and Secure Email and Web Manager (SMA), actively exploited by the China-linked APT group UAT-9686. This campaign, observed since late November 2025, targets appliances with certain ports open to the Internet. Attackers execute root-level commands, deploy a custom Python-based persistence mechanism named 'AquaShell', and use tools like 'AquaTunnel' (reverse SSH), 'Chisel' (HTTP tunneling) and 'AquaPurge' (log deletion) to maintain stealthy, long-term access and pivot into internal networks.",
+        "threat_actor": "UAT-9686",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-20393"],
+          "FILE_HASH_SHA256": ["AquaShell", "AquaTunnel", "Chisel", "AquaPurge"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1059.006 - Command and Scripting Interpreter: PowerShell",
+          "T1078 - Valid Accounts",
+          "T1546.004 - Event Triggered Execution: .bash_profile and .profile",
+          "T1572 - Protocol Tunneling",
+          "T1070.004 - Indicator Removal: File Deletion",
+          "T1090.002 - Proxy: SOCKS Proxy"
+        ],
+        "analyse": "The exploitation of a critical zero-day on Cisco email security appliances by a China-linked APT highlights the strategic value of these devices for gaining access to internal networks. The sophistication of the tools used, including custom backdoors and tunneling capabilities, indicates espionage and long-term persistence objectives, likely for sensitive information collection. The focus on erasing traces (AquaPurge) underscores a desire to remain undetected.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2025-20393 on Cisco Secure Email Gateway and Secure Email and Web Manager.",
+          "Implement strict network segmentation to limit the exposure of management interfaces to the Internet.",
+          "Monitor activity on Cisco ESA/SMA appliances to detect unusual command execution or unauthorized Python script deployments.",
+          "Scan for indicators of compromise related to AquaShell, AquaTunnel, Chisel, and AquaPurge.",
+          "Analyze security logs for any log deletion or suspicious tunneling activity.",
+          "Strengthen email security policies and advanced threat detection."
+        ],
+        "tags": [
+          "apt",
+          "china_linked",
+          "cisco",
+          "zero_day",
+          "remote_code_execution",
+          "persistence",
+          "backdoor",
+          "tunneling",
+          "log_deletion",
+          "espionage",
+          "cve"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185861/apt/china-linked-apt-uat-9686-is-targeting-cisco-secure-email-gateway-and-secure-email-and-web-manager.html"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "Microsoft 365 accounts targeted in wave of OAuth phishing attacks / Nigeria arrests dev of Microsoft 365 'Raccoon0365' phishing platform",
+        "description": "Multiple threat actors, including financially motivated cybercriminals (TA2723) and state-aligned actors, are compromising Microsoft 365 accounts via phishing attacks exploiting the OAuth device code authorization mechanism. This method grants access to accounts without stealing credentials or bypassing MFA, by tricking victims into entering a code on a legitimate Microsoft login page. These attacks have significantly increased since September 2025. Concurrently, Nigerian authorities arrested individuals linked to the 'Raccoon0365' phishing-as-a-service platform, used for targeted Microsoft 365 cyberattacks, selling phishing kits, and hosting malicious pages on Cloudflare.",
+        "threat_actor": "TA2723, Raccoon0365, State-aligned threat actors",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1078.004 - Valid Accounts: Cloud Accounts",
+          "T1114.002 - Email Collection: Mailbox Delegation",
+          "T1550.003 - Bypass Process or Network Defenses: Exploitation for Client Execution",
+          "T1534 - Group Policy Modification (Implied by account takeover)"
+        ],
+        "analyse": "The resurgence of OAuth phishing attacks against Microsoft 365 accounts demonstrates attackers' adaptation to bypass traditional defenses like MFA. The use of a 'phishing-as-a-service' platform like Raccoon0365, with subsequent arrests, underscores the professionalization of the cybercriminal ecosystem. The involvement of state-aligned actors indicates this technique is also exploited for espionage. The impact is unauthorized access to sensitive cloud data and compromised productivity.",
+        "recommandations": [
+          "Educate users about the risks of OAuth device code phishing, emphasizing the verification of application authorization requests.",
+          "Implement robust security policies for third-party applications accessing Microsoft 365 services.",
+          "Use identity and access solutions that can detect and block malicious application authorization attempts.",
+          "Monitor Azure AD activity logs for unusual or suspicious application authorizations.",
+          "Implement phishing-resistant multi-factor authentication (MFA) for all accounts, if possible via hardware security keys (FIDO2).",
+          "Regularly review and revoke unused or suspicious OAuth application permissions."
+        ],
+        "tags": [
+          "microsoft_365",
+          "phishing",
+          "oauth",
+          "mfa_bypass",
+          "cybercrime",
+          "threat_actor",
+          "state_sponsored",
+          "cloud_security"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nigeria-arrests-dev-of-microsoft-365-raccoon0365-phishing-platform/",
+          "https://www.bleepingcomputer.com/news/security/microsoft-365-accounts-targeted-in-wave-of-oauth-phishing-attacks/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "New UEFI flaw enables pre-boot attacks on motherboards from Gigabyte, MSI, ASUS, ASRock / ASRock, ASUS, GIGABYTE, MSI Boards vulnerable to pre-boot memory attacks / New UEFI flaw enables pre-boot attacks on motherboards from Gigabyte, MSI, ASUS, ASRock",
+        "description": "A new vulnerability in the UEFI firmware implementation of some ASUS, Gigabyte, MSI, and ASRock motherboards exposes systems to direct memory access (DMA) attacks before boot. The flaw causes the UEFI firmware to report that DMA protection is enabled even if the IOMMU (Input-Output Memory Management Unit) has not been correctly initialized during early boot. This leaves the system exposed to malicious PCIe devices capable of reading or modifying RAM before operating system protections load. The attack requires physical access to the device.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-11901", "CVE-2025-14304", "CVE-2025-14303"]
+        },
+        "mitre_ttps": [
+          "T1542.001 - Pre-OS Boot: UEFI Bootkit",
+          "T1053 - Scheduled Task/Job (Implied by early boot control)",
+          "T1014 - System Firmware",
+          "T1573 - Encrypted Channel (Potential for post-exploit)"
+        ],
+        "analyse": "This UEFI firmware vulnerability represents a fundamental security risk because it allows attacks at the lowest level of the system, even before the operating system loads. The ability to bypass IOMMU protections via physical access can allow an attacker to gain full system control, compromise the integrity of the boot process, and access sensitive data in memory. Although it requires physical access, this flaw is particularly concerning for environments where such access cannot be fully controlled.",
+        "recommandations": [
+          "Apply UEFI firmware updates provided by manufacturers (ASUS, Gigabyte, MSI, ASRock) as soon as they are available.",
+          "Strengthen physical access controls to IT equipment, especially those containing sensitive data or critical systems.",
+          "Implement monitoring of boot activities and firmware modifications.",
+          "Consider enabling Secure Boot and other firmware security features (TPM) if not already done."
+        ],
+        "tags": [
+          "uefi",
+          "firmware",
+          "dma_attack",
+          "iommu",
+          "pre_boot",
+          "physical_access",
+          "vulnerability",
+          "motherboard",
+          "asus",
+          "gigabyte",
+          "msi",
+          "asrock",
+          "kernel_mode_rootkit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-uefi-flaw-enables-pre-boot-attacks-on-motherboards-from-gigabyte-msi-asus-asrock/",
+          "https://securityaffairs.com/185867/security/asrock-asus-gigabyte-msi-boards-vulnerable-to-pre-boot-memory-attacks/",
+          "https://www.bleepingcomputer.com/news/security/new-uefi-flaw-enables-pre-boot-attacks-on-motherboards-from-gigabyte-msi-asus-asrock/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "Over 25,000 FortiCloud SSO devices exposed to remote attacks / 25,000+ FortiCloud SSO-Enabled Devices Exposed to Remote Attacks",
+        "description": "Over 25,000 Fortinet devices with FortiCloud SSO enabled are exposed online amidst ongoing attacks targeting critical authentication bypass vulnerabilities (CVE-2025-59718 and CVE-2025-59719). These flaws allow unauthenticated attackers to gain admin-level access to the web management interface via maliciously crafted SAML messages, enabling them to download system configuration files containing sensitive information (hashed passwords, exposed services, network layouts). CISA has added CVE-2025-59718 to its Known Exploited Vulnerabilities (KEV) catalog.",
+        "threat_actor": "Non applicable (various attackers)",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-59718", "CVE-2025-59719", "CVE-2025-58034", "CVE-2025-64446", "CVE-2023-27997", "CVE-2022-42475"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078.004 - Valid Accounts: Cloud Accounts",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1560 - Archive Collected Data",
+          "T1003 - OS Credential Dumping"
+        ],
+        "analyse": "The widespread exposure of Fortinet devices with FortiCloud SSO enabled creates an extensive attack surface, making thousands of organizations vulnerable to remote attacks. Active exploitation of these critical authentication bypass flaws can lead to complete compromise of firewalls, allowing attackers to access sensitive network information and pivot to other systems. The inclusion of these CVEs in CISA's KEV catalog highlights the urgency of patching these vulnerabilities, especially since groups like Volt Typhoon have previously targeted Fortinet products.",
+        "recommandations": [
+          "Immediately apply security patches provided by Fortinet for CVE-2025-59718 and CVE-2025-59719 (FortiOS, FortiProxy, FortiSwitchManager, FortiWeb).",
+          "Audit FortiCloud SSO configurations to ensure they are not unnecessarily exposed or disable the feature if not essential.",
+          "Implement strong authentication (MFA) for all administrative interfaces.",
+          "Segment networks to isolate management interfaces of Fortinet devices.",
+          "Monitor access logs for the management interface to detect unauthorized access attempts.",
+          "Change hashed passwords if compromise is suspected and use strong, unique passwords."
+        ],
+        "tags": [
+          "fortinet",
+          "forticloud",
+          "sso",
+          "vulnerability",
+          "authentication_bypass",
+          "active_exploitation",
+          "firewall",
+          "network",
+          "cve",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-25-000-forticloud-sso-devices-exposed-to-remote-attacks/",
+          "https://cybersecuritynews.com/forticloud-sso-enabled-devices-exposed/"
+        ],
+        "date": "2025-12-20"
+      },
+      {
+        "title": "WatchGuard reports active exploitation of critical Firebox RCE flaw / CVE-2025-14733: Critical WatchGuard Firebox RCE Actively Exploited / WatchGuard sounds alarm as critical Firebox flaw comes under active attack",
+        "description": "WatchGuard issued an alert regarding the active exploitation of a critical Remote Code Execution (RCE) vulnerability in its Fireware OS (CVE-2025-14733), affecting Firebox firewall appliances. The flaw resides in the IKEv2 VPN component and allows unauthenticated attackers to gain shell access, steal VPN credentials, and intercept VPN traffic. The vulnerability is considered easy to exploit and has been added to the CISA KEV catalog of actively exploited vulnerabilities. Past attacks on WatchGuard devices by groups like Sandworm (Russian GRU) have been reported.",
+        "threat_actor": "Non applicable (opportunistic and active exploitation by various attackers, potentially state-sponsored)",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-14733", "CVE-2025-9242", "CVE-2025-32978", "CVE-2022-26318"]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1078 - Valid Accounts",
+          "T1552.001 - Unsecured Credentials: Credentials in Files",
+          "T1059 - Command and Scripting Interpreter",
+          "T1572 - Protocol Tunneling",
+          "T1573 - Encrypted Channel"
+        ],
+        "analyse": "Active exploitation of a critical RCE on WatchGuard Firebox firewalls poses an immediate and severe threat. As these devices are positioned at the network perimeter, their compromise offers an ideal entry point for lateral movement, persistence, and data exfiltration. The fact that the vulnerability is in the IKEv2 VPN component is particularly alarming, as it can lead to VPN credential theft and traffic interception, affecting communication confidentiality and integrity. Organizations must prioritize these flaws due to their ease of exploitation and potential impact on the entire network.",
+        "recommandations": [
+          "Immediately install patched versions of WatchGuard's Fireware OS for CVE-2025-14733 and all other mentioned CVEs.",
+          "Audit all Firebox appliances for residual IKEv2 dynamic gateway configurations and disable IKEv2 if not used.",
+          "Rotate all locally stored secrets, including VPN credentials, if compromise is suspected.",
+          "Monitor for anomalous VPN activity and review logs for indicators of compromise published by WatchGuard.",
+          "Implement network segmentation and strict access controls for firewall management interfaces.",
+          "Apply a defense-in-depth approach, treating firewalls as high-value targets requiring continuous monitoring."
+        ],
+        "tags": [
+          "watchguard",
+          "firebox",
+          "rce",
+          "vpn",
+          "ikev2",
+          "active_exploitation",
+          "firewall",
+          "cve",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/active-exploitation-critical-firebox-rce-flaw",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/19/watchguard_firebox/",
+          "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/"
+        ],
+        "date": "2025-12-20"
+      }
+    ]
+  }
+}
