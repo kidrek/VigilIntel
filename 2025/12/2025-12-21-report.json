@@ -1,0 +1,387 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle un paysage des menaces cyber caractérisé par une sophistication croissante des attaques et une diversification des motivations. Les opérations de rançongiciel, à l'image de RansomHouse avec ses techniques d'encryption multi-couches, continuent d'évoluer, augmentant la difficulté de déchiffrement et d'analyse statique. Parallèlement, les groupes cybercriminels transnationales, comme Tren de Aragua, s'illustrent par des fraudes à grande échelle (jackpotting d'ATM) et des liens avec des activités terroristes, soulignant l'imbrication du crime organisé et de la cybercriminalité. L'actualité géopolitique est fortement marquée par les campagnes de guerre hybride menées par des groupes pro-russes (Z-Pentest, NoName057(16)) ciblant les infrastructures critiques occidentales, notamment les services d'eau et d'énergie, ainsi que les processus électoraux par des attaques destructrices et des DDoS. Cette approche vise à semer l'insécurité et à punir les pays soutenant l'Ukraine. Les campagnes de malware sophistiquées continuent de cibler les utilisateurs de Windows, exploitant des vulnérabilités connues (comme CVE-2017-11882) via des fichiers SVG et des documents Office piégés, et employant des techniques d'évasion avancées (stéganographie, bypass UAC). Enfin, une série de vulnérabilités critiques (CVSS >= 8), notamment des exécutions de code à distance non authentifiées (HPE OneView, WatchGuard Fireware OS) et des escalades de privilèges, sont activement exploitées ou présentent un risque élevé, rendant les équipements périphériques et les applications web des cibles privilégiées. La combinaison de ces facteurs met en évidence une menace persistante et adaptable, nécessitant une vigilance constante et des défenses robustes.",
+      "date": "2025-12-21"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Artem Aleksandrovych Stryzhak (Opérations Nefilim Ransomware-as-a-Service)",
+        "secteur": "Divers (ciblant des entreprises à revenus élevés aux États-Unis, au Canada, en Australie)",
+        "modop": "Déploiement du rançongiciel Nefilim, génération de fichiers exécutables et de notes de rançon uniques par victime, exfiltration de données et menaces de publication sur des sites 'Corporate Leaks' en cas de non-paiement.",
+        "tags": ["actor", "threat_actor", "ransomware", "raas", "extortion", "data_exfiltration"],
+        "sources": ["https://databreaches.net/2025/12/20/ukrainian-national-pleads-guilty-to-conspiracy-to-use-nefilim-ransomware-to-attack-companies-in-the-united-states-and-other-countries/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Gouvernement (élections), Infrastructures critiques",
+        "modop": "Attaques par déni de service distribué (DDoS), campagnes de hacktivisme pro-russe ciblant des sites web gouvernementaux et électoraux.",
+        "tags": ["actor", "threat_actor", "hacktivist", "pro_russia", "ddos", "elections", "hybrid_warfare"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Olusegun Samson Adejorin",
+        "secteur": "Organisations caritatives (services d'investissement)",
+        "modop": "Fraude par virement bancaire, usurpation d'identité aggravée, accès non autorisé à des comptes de messagerie d'employés, utilisation de noms de domaine falsifiés pour induire des transactions financières frauduleuses.",
+        "tags": ["actor", "threat_actor", "wire_fraud", "identity_theft", "email_compromise", "impersonation"],
+        "sources": ["https://databreaches.net/2025/12/20/nigerian-national-convicted-by-federal-jury-of-wire-fraud-aggravated-identity-theft-and-unauthorized-access-to-protected-computer/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "RansomHouse",
+        "secteur": "Divers (opérations RaaS ciblant divers secteurs)",
+        "modop": "Opérations Ransomware-as-a-Service (RaaS) avec encryption multi-couches avancée, utilisation de l'outil MrAgent pour verrouiller les hyperviseurs VMware ESXi. Axé sur l'efficacité et l'évasion.",
+        "tags": ["actor", "threat_actor", "ransomware", "raas", "encryption", "evasion"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ransomhouse-updates-encryption-with-multi-layered-data-processing/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Tren de Aragua",
+        "secteur": "Financier (ATM, banques, coopératives de crédit)",
+        "modop": "Fraude par jackpotting d'ATM à l'aide du malware Ploutus, accès physique aux distributeurs, blanchiment d'argent et soutien à des activités criminelles et terroristes.",
+        "tags": ["actor", "threat_actor", "cybercrime", "jackpotting", "ploutus", "money_laundering", "terrorism_support"],
+        "sources": ["https://securityaffairs.com/185908/cyber-crime/atm-jackpotting-ring-busted-54-indicted-by-doj.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Zahid Hasan",
+        "secteur": "Cybercriminalité (facilitateur de fraude d'identité)",
+        "modop": "Opération de places de marché en ligne (TechTreek, EGiftCardStoreBD, idtempl.com) vendant des modèles numériques de faux documents d'identité (passeports, cartes de sécurité sociale, permis de conduire) utilisés pour créer des comptes frauduleux.",
+        "tags": ["actor", "threat_actor", "identity_fraud", "dark_web", "fraudulent_documents"],
+        "sources": ["https://databreaches.net/2025/12/20/man-charged-with-operating-online-marketplaces-selling-fraudulent-montana-drivers-licenses-and-other-identity-documents-used-by-cybercriminals/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Infrastructures critiques (services d'eau, énergie)",
+        "modop": "Attaques cyber destructrices, exploitation de connexions VNC mal sécurisées pour accéder aux dispositifs OT. Agit dans le cadre de la guerre hybride pro-russe.",
+        "tags": ["actor", "threat_actor", "nation_state", "pro_russia", "critical_infrastructure", "ot_systems", "destructive_attack", "hybrid_warfare"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Financier, Sécurité Nationale",
+        "theme": "Cybercriminalité transnationale et liens avec le terrorisme",
+        "description": "Le Département de la Justice des États-Unis a inculpé 54 personnes pour une vaste fraude par jackpotting d'ATM qui a volé des millions de dollars, reliant les crimes au groupe cybercriminel Tren de Aragua. Les fonds volés auraient servi à financer des activités criminelles et terroristes, soulignant la menace des réseaux criminels transnationaux pour la sécurité nationale.",
+        "tags": ["geopolitique", "geopolitic", "etats_unis", "venezuela", "crime_organise", "terrorisme", "tren_de_aragua", "jackpotting_atm", "blanchiment_argent"],
+        "sources": ["https://securityaffairs.com/185908/cyber-crime/atm-jackpotting-ring-busted-54-indicted-by-doj.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "secteur": "Infrastructures critiques (eau, énergie), Gouvernement (élections)",
+        "theme": "Guerre hybride et cyberattaques étatiques",
+        "description": "Le Danemark a attribué à la Russie des cyberattaques destructrices contre une entreprise de services d'eau en 2024, menées par le groupe pro-russe Z-Pentest. Des attaques DDoS contre des sites web danois avant les élections de 2025 ont été attribuées au groupe pro-russe NoName057(16). Ces actions sont considérées comme faisant partie d'une campagne de guerre hybride russe visant à créer de l'insécurité et à sanctionner les pays soutenant l'Ukraine. Des liens sont établis avec les conseils du GRU et des attaques contre des systèmes d'eau américains par CARR.",
+        "tags": ["geopolitique", "geopolitic", "russie", "danemark", "guerre_hybride", "cyberattaque_etatique", "infrastructures_critiques", "elections", "ddos", "z_pentest", "noname057(16)", "carr"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Organisations caritatives",
+        "victime": "Victim 1 (Maryland), Victim 2 (New York)",
+        "description": "Accès non autorisé aux comptes de messagerie d'employés et usurpation d'identité, entraînant une fraude par virement bancaire de plus de 7,5 millions de dollars de fonds.",
+        "tags": ["violation", "breach", "organisation_caritative", "fraude", "usurpation_identité", "compromission_email"],
+        "sources": ["https://databreaches.net/2025/12/20/nigerian-national-convicted-by-federal-jury-of-wire-fraud-aggravated-identity-theft-and-unauthorized-access-to-protected-computer/"],
+        "date": "2025-12-21"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "University of Sydney",
+        "description": "Violation de données affectant plus de 27 000 membres du personnel, étudiants et affiliés, avec le vol d'informations personnelles.",
+        "tags": ["violation", "breach", "education", "université", "données_personnelles", "sydney"],
+        "sources": ["https://infosec.exchange/@DevaOnBreaches/115755274551803145", "https://mastodon.thenewoil.org/@thenewoil/115750128916617677"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée via un point de terminaison API caché (/rest/id-pools/executeCommand), permettant à un attaquant de prendre le contrôle des systèmes de gestion d'infrastructure critiques.",
+        "tags": ["vulnérabilité", "vulnerability", "rce", "unauthenticated", "privilege_escalation", "api", "hpe", "oneview", "critical"],
+        "sources": ["https://securityonline.info/poc-available-unauthenticated-hpe-oneview-rce-cvss-10-0-exploits-hidden-id-pools-api/"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-13619",
+        "cvss": 9.8,
+        "product": "Flex Store Users plugin for WordPress",
+        "description": "Vulnérabilité d'escalade de privilèges non authentifiée due à la non-restriction des rôles d'utilisateur lors de l'enregistrement, permettant à des attaquants d'obtenir un accès administrateur.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "unauthenticated", "wordpress", "plugin", "flex_store_users", "critical"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13619"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-13329",
+        "cvss": 9.8,
+        "product": "File Uploader for WooCommerce plugin for WordPress",
+        "description": "Vulnérabilité de téléversement de fichiers arbitraires non authentifiée due à une validation manquante du type de fichier dans un point de terminaison REST API, pouvant entraîner une exécution de code à distance.",
+        "tags": ["vulnérabilité", "vulnerability", "file_upload", "unauthenticated", "rce", "wordpress", "woocommerce", "plugin", "critical"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13329"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS",
+        "description": "Vulnérabilité critique d'écriture hors limites (Out-of-bounds Write) dans le processus iked, permettant une exécution de code arbitraire à distance et non authentifiée via les services VPN IKEv2. Activement exploitée.",
+        "tags": ["vulnérabilité", "vulnerability", "rce", "unauthenticated", "watchguard", "fireware_os", "vpn", "ikev2", "out_of_bounds_write", "actively_exploited", "critical"],
+        "sources": ["https://securityaffairs.com/185896/hacking/u-s-cisa-adds-a-flaw-in-watchguard-fireware-os-to-its-known-exploited-vulnerabilities-catalog.html", "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-14300",
+        "cvss": 8.7,
+        "product": "Tapo C200 V3",
+        "description": "Accès non authentifié au point de terminaison API connectAP, permettant la modification de la configuration Wi-Fi du dispositif, entraînant une perte de connectivité et un déni de service (DoS).",
+        "tags": ["vulnérabilité", "vulnerability", "unauthenticated_access", "api", "denial_of_service", "dos", "tapo_c200", "high"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-14300"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-34290",
+        "cvss": 8.5,
+        "product": "Versa SASE Client for Windows",
+        "description": "Vulnérabilité d'escalade de privilèges locale dans la fonctionnalité d'exportation des logs d'audit, permettant la suppression de répertoires arbitraires avec des privilèges SYSTEM, pouvant conduire à l'exécution de code en tant que NT AUTHORITY\\SYSTEM.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "local", "windows", "versa_sase_client", "arbitrary_deletion", "high"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-34290"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "RansomHouse upgrades encryption with multi-layered data processing",
+        "description": "L'opération RansomHouse Ransomware-as-a-Service (RaaS) a amélioré son chiffreur, passant d'une technique linéaire simple à une méthode multi-couches plus complexe. Cette mise à niveau offre une encryption plus forte, des vitesses plus rapides et une meilleure fiabilité sur les environnements cibles modernes, rendant le déchiffrement plus difficile et l'analyse statique et la rétro-ingénierie plus ardues.",
+        "threat_actor": "RansomHouse",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1486 (Data Encrypted for Impact)", "T1027 (Obfuscated Files or Information)"],
+        "analyse": "L'évolution de l'encryption de RansomHouse signale une trajectoire préoccupante dans le développement des rançongiciels, augmentant l'efficacité des acteurs de la menace lors des négociations. Bien que RansomHouse reste un acteur de niveau intermédiaire en termes de volume d'attaques, son développement continu d'outils avancés indique une stratégie calculée axée sur l'efficience et l'évasion plutôt que sur l'échelle.",
+        "recommandations": [
+          "Renforcer les défenses contre les rançongiciels, y compris la sauvegarde régulière et la segmentation du réseau.",
+          "Mettre en œuvre des capacités d'analyse comportementale et de détection d'anomalies pour identifier les activités d'encryption suspectes.",
+          "Préparer des plans de réponse aux incidents incluant des stratégies de récupération post-encryption."
+        ],
+        "tags": ["ransomware", "raas", "encryption", "malware_development", "cybercrime", "unit42", "efficency", "evasion", "mitre_att&ck"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ransomhouse-upgrades-encryption-with-multi-layered-data-processing/"],
+        "date": "2025-12-21"
+      },
+      {
+        "title": "Hackers Weaponize SVG Files and Office Documents to Target Windows Users",
+        "description": "Une campagne d'email sophistiquée utilise des fichiers SVG et des documents Microsoft Office piégés pour distribuer des chargeurs de malware, des chevaux de Troie d'accès à distance (RAT) et des voleurs d'informations. Les attaquants exploitent une vulnérabilité critique (CVE-2017-11882) dans l'éditeur d'équations d'Office et utilisent des techniques d'évasion comme des scripts PowerShell obfusqués, l'intégration stéganographique d'assemblages .NET dans des images, et un contournement du contrôle de compte utilisateur (UAC) pour exfiltrer des données sensibles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "Aucun IoC spécifique n'est fourni",
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1204.002 (User Execution: Malicious File)", "T1190 (Exploit Public-Facing Application)", "T1027 (Obfuscated Files or Information)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1027.003 (Obfuscated Files or Information: Steganography)", "T1548.002 (Event Triggered Execution: Bypass User Account Control)", "T1041 (Exfiltration Over C2 Channel)"],
+        "analyse": "La campagne cible principalement le secteur manufacturier, mettant en évidence la persistance des menaces basées sur l'ingénierie sociale et l'exploitation de vulnérabilités logicielles. L'utilisation de stéganographie et de contournements UAC démontre une sophistication accrue des attaquants pour échapper à la détection et obtenir des privilèges élevés sur les systèmes Windows.",
+        "recommandations": [
+          "Mettre en œuvre un filtrage d'email renforcé pour bloquer les pièces jointes suspectes.",
+          "Désactiver les composants d'éditeur d'équations Office hérités pour prévenir l'exploitation de CVE-2017-11882.",
+          "Examiner minutieusement les pièces jointes d'images pour détecter les contenus malveillants cachés (stéganographie).",
+          "Surveiller les activités PowerShell suspectes sur les endpoints.",
+          "Appliquer les mises à jour de sécurité régulièrement."
+        ],
+        "tags": ["campagne_malveillante", "malware", "phishing", "rce", "info_stealer", "uac_bypass", "steganography", "manufacturing", "windows", "svg", "office_documents", "mitre_att&ck"],
+        "sources": ["https://cybersecuritynews.com/hackers-weaponize-svg-files-and-office-documents/"],
+        "date": "2025-12-21"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals a cybersecurity threat landscape characterized by increasing attack sophistication and diversified motivations. Ransomware operations, exemplified by RansomHouse with its multi-layered encryption techniques, continue to evolve, increasing the difficulty of decryption and static analysis. Concurrently, transnational cybercrime groups, such as Tren de Aragua, distinguish themselves through large-scale fraud (ATM jackpotting) and links to terrorist activities, highlighting the intertwining of organized crime and cybercrime. The geopolitical landscape is strongly marked by hybrid warfare campaigns conducted by pro-Russian groups (Z-Pentest, NoName057(16)) targeting Western critical infrastructure, including water and energy services, as well as electoral processes through destructive attacks and DDoS. This approach aims to sow insecurity and punish countries supporting Ukraine. Sophisticated malware campaigns continue to target Windows users, exploiting known vulnerabilities (like CVE-2017-11882) via weaponized SVG files and Office documents, and employing advanced evasion techniques (steganography, UAC bypass). Finally, a series of critical vulnerabilities (CVSS >= 8), notably unauthenticated remote code execution (HPE OneView, WatchGuard Fireware OS) and privilege escalations, are actively exploited or pose a high risk, making perimeter devices and web applications prime targets. The combination of these factors highlights a persistent and adaptable threat, requiring constant vigilance and robust defenses.",
+      "date": "2025-12-21"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Artem Aleksandrovych Stryzhak (Nefilim Ransomware-as-a-Service operations)",
+        "secteur": "Various (targeting high-revenue companies in the United States, Canada, Australia)",
+        "modop": "Deployment of Nefilim ransomware, generation of unique executable files and ransom notes per victim, data exfiltration, and threats to publish stolen data on 'Corporate Leaks' sites if ransom is not paid.",
+        "tags": ["actor", "threat_actor", "ransomware", "raas", "extortion", "data_exfiltration"],
+        "sources": ["https://databreaches.net/2025/12/20/ukrainian-national-pleads-guilty-to-conspiracy-to-use-nefilim-ransomware-to-attack-companies-in-the-united-states-and-other-countries/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Government (elections), Critical Infrastructure",
+        "modop": "Distributed Denial of Service (DDoS) attacks, pro-Russian hacktivism campaigns targeting government and electoral websites.",
+        "tags": ["actor", "threat_actor", "hacktivist", "pro_russia", "ddos", "elections", "hybrid_warfare"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Olusegun Samson Adejorin",
+        "secteur": "Charitable Organizations (investment services)",
+        "modop": "Wire fraud, aggravated identity theft, unauthorized access to employee email accounts, use of spoofed domain names to induce fraudulent financial transactions.",
+        "tags": ["actor", "threat_actor", "wire_fraud", "identity_theft", "email_compromise", "impersonation"],
+        "sources": ["https://databreaches.net/2025/12/20/nigerian-national-convicted-by-federal-jury-of-wire-fraud-aggravated-identity-theft-and-unauthorized-access-to-protected-computer/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "RansomHouse",
+        "secteur": "Various (RaaS operations targeting diverse sectors)",
+        "modop": "Ransomware-as-a-Service (RaaS) operations with advanced multi-layered encryption, using the MrAgent tool to lock multiple VMware ESXi hypervisors. Focused on efficiency and evasion.",
+        "tags": ["actor", "threat_actor", "ransomware", "raas", "encryption", "evasion"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ransomhouse-upgrades-encryption-with-multi-layered-data-processing/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Tren de Aragua",
+        "secteur": "Financial (ATMs, banks, credit unions)",
+        "modop": "ATM jackpotting fraud using Ploutus malware, physical access to ATMs, money laundering, and support for criminal and terrorist activities.",
+        "tags": ["actor", "threat_actor", "cybercrime", "jackpotting", "ploutus", "money_laundering", "terrorism_support"],
+        "sources": ["https://securityaffairs.com/185908/cyber-crime/atm-jackpotting-ring-busted-54-indicted-by-doj.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Zahid Hasan",
+        "secteur": "Cybercrime (identity fraud facilitator)",
+        "modop": "Operating online marketplaces (TechTreek, EGiftCardStoreBD, idtempl.com) selling digital templates of fake identity documents (passports, social security cards, driver's licenses) used to create fraudulent accounts.",
+        "tags": ["actor", "threat_actor", "identity_fraud", "dark_web", "fraudulent_documents"],
+        "sources": ["https://databreaches.net/2025/12/20/man-charged-with-operating-online-marketplaces-selling-fraudulent-montana-drivers-licenses-and-other-identity-documents-used-by-cybercriminals/"],
+        "date": "2025-12-21"
+      },
+      {
+        "nom": "Z-Pentest",
+        "secteur": "Critical Infrastructure (water utilities, energy)",
+        "modop": "Destructive cyberattacks, exploiting poorly secured VNC connections to access OT devices. Operates as part of pro-Russian hybrid warfare.",
+        "tags": ["actor", "threat_actor", "nation_state", "pro_russia", "critical_infrastructure", "ot_systems", "destructive_attack", "hybrid_warfare"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Financial, National Security",
+        "theme": "Transnational Cybercrime and Links to Terrorism",
+        "description": "The U.S. Department of Justice indicted 54 individuals for a multi-million-dollar ATM jackpotting fraud scheme, linking the crimes to the cybercrime group Tren de Aragua. Stolen funds were allegedly used to support criminal and terrorist activities, highlighting the threat of transnational criminal networks to national security.",
+        "tags": ["geopolitique", "geopolitic", "united_states", "venezuela", "organized_crime", "terrorism", "tren_de_aragua", "atm_jackpotting", "money_laundering"],
+        "sources": ["https://securityaffairs.com/185908/cyber-crime/atm-jackpotting-ring-busted-54-indicted-by-doj.html"],
+        "date": "2025-12-21"
+      },
+      {
+        "secteur": "Critical Infrastructure (water, energy), Government (elections)",
+        "theme": "Hybrid Warfare and State-Sponsored Cyberattacks",
+        "description": "Denmark attributed destructive cyberattacks against a water utility in 2024 to the pro-Russian group Z-Pentest. DDoS attacks against Danish websites prior to the 2025 elections were attributed to the pro-Russian group NoName057(16). These actions are considered part of a Russian hybrid warfare campaign aimed at creating insecurity and punishing countries supporting Ukraine. Links are established with GRU guidance and attacks on U.S. water systems by CARR.",
+        "tags": ["geopolitique", "geopolitic", "russia", "denmark", "hybrid_warfare", "state_sponsored_cyberattack", "critical_infrastructure", "elections", "ddos", "z_pentest", "noname057(16)", "carr"],
+        "sources": ["https://securityaffairs.com/185885/hacking/russia-was-behind-a-destructive-cyber-attack-on-a-water-utility-in-2024-denmark-says.html"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Charitable Organizations",
+        "victime": "Victim 1 (Maryland), Victim 2 (New York)",
+        "description": "Unauthorized access to employee email accounts and impersonation, leading to over $7.5 million in wire fraud.",
+        "tags": ["violation", "breach", "charitable_organization", "fraud", "identity_theft", "email_compromise"],
+        "sources": ["https://databreaches.net/2025/12/20/nigerian-national-convicted-by-federal-jury-of-wire-fraud-aggravated-identity-theft-and-unauthorized-access-to-protected-computer/"],
+        "date": "2025-12-21"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Sydney",
+        "description": "Data breach affecting over 27,000 staff, students, and affiliates, resulting in the theft of personal information.",
+        "tags": ["violation", "breach", "education", "university", "personal_data", "sydney"],
+        "sources": ["https://infosec.exchange/@DevaOnBreaches/115755274551803145", "https://mastodon.thenewoil.org/@thenewoil/115750128916617677"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability via a hidden API endpoint (/rest/id-pools/executeCommand), allowing an attacker to take control of critical infrastructure management systems.",
+        "tags": ["vulnerabilité", "vulnerability", "rce", "unauthenticated", "privilege_escalation", "api", "hpe", "oneview", "critical"],
+        "sources": ["https://securityonline.info/poc-available-unauthenticated-hpe-oneview-rce-cvss-10-0-exploits-hidden-id-pools-api/"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-13619",
+        "cvss": 9.8,
+        "product": "Flex Store Users plugin for WordPress",
+        "description": "Unauthenticated Privilege Escalation vulnerability due to unrestricted user role registration, allowing attackers to gain administrator access.",
+        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "unauthenticated", "wordpress", "plugin", "flex_store_users", "critical"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13619"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-13329",
+        "cvss": 9.8,
+        "product": "File Uploader for WooCommerce plugin for WordPress",
+        "description": "Unauthenticated Arbitrary File Upload vulnerability due to missing file type validation in a REST API endpoint, potentially leading to remote code execution.",
+        "tags": ["vulnerabilité", "vulnerability", "file_upload", "unauthenticated", "rce", "wordpress", "woocommerce", "plugin", "critical"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13329"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS",
+        "description": "Critical Out-of-bounds Write vulnerability in the iked process, allowing remote unauthenticated arbitrary code execution via IKEv2 VPN services. Actively exploited.",
+        "tags": ["vulnerabilité", "vulnerability", "rce", "unauthenticated", "watchguard", "fireware_os", "vpn", "ikev2", "out_of_bounds_write", "actively_exploited", "critical"],
+        "sources": ["https://securityaffairs.com/185896/hacking/u-s-cisa-adds-a-flaw-in-watchguard-fireware-os-to-its-known-exploited-vulnerabilities-catalog.html", "https://thecyberthrone.in/2025/12/20/cve-2025-14733-critical-watchguard-firebox-rce-actively-exploited/"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-14300",
+        "cvss": 8.7,
+        "product": "Tapo C200 V3",
+        "description": "Unauthenticated access to the connectAP API endpoint, allowing modification of the device's Wi-Fi configuration, resulting in loss of connectivity and Denial of Service (DoS).",
+        "tags": ["vulnerabilité", "vulnerability", "unauthenticated_access", "api", "denial_of_service", "dos", "tapo_c200", "high"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-14300"],
+        "date": "2025-12-21"
+      },
+      {
+        "cve_id": "CVE-2025-34290",
+        "cvss": 8.5,
+        "product": "Versa SASE Client for Windows",
+        "description": "Local Privilege Escalation vulnerability in the audit log export functionality, allowing arbitrary directory deletion with SYSTEM privileges, potentially leading to code execution as NT AUTHORITY\\SYSTEM.",
+        "tags": ["vulnerabilité", "vulnerability", "privilege_escalation", "local", "windows", "versa_sase_client", "arbitrary_deletion", "high"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-34290"],
+        "date": "2025-12-21"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "RansomHouse upgrades encryption with multi-layered data processing",
+        "description": "The RansomHouse Ransomware-as-a-Service (RaaS) operation has upgraded its encryptor, moving from a simple linear technique to a more complex, multi-layered method. This upgrade offers stronger encryption, faster speeds, and improved reliability on modern target environments, making decryption more difficult and static analysis and reverse engineering harder.",
+        "threat_actor": "RansomHouse",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1486 (Data Encrypted for Impact)", "T1027 (Obfuscated Files or Information)"],
+        "analyse": "RansomHouse's encryption upgrade signals a concerning trajectory in ransomware development, increasing threat actors' leverage during negotiations. While RansomHouse remains a mid-tier RaaS operation in terms of attack volume, its continued development of advanced tooling suggests a calculated strategy focused on efficiency and evasion rather than scale.",
+        "recommandations": [
+          "Strengthen ransomware defenses, including regular backups and network segmentation.",
+          "Implement behavioral analysis and anomaly detection capabilities to identify suspicious encryption activities.",
+          "Prepare incident response plans that include post-encryption recovery strategies."
+        ],
+        "tags": ["ransomware", "raas", "encryption", "malware_development", "cybercrime", "unit42", "efficency", "evasion", "mitre_att&ck"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ransomhouse-upgrades-encryption-with-multi-layered-data-processing/"],
+        "date": "2025-12-21"
+      },
+      {
+        "title": "Hackers Weaponize SVG Files and Office Documents to Target Windows Users",
+        "description": "A sophisticated email campaign leverages weaponized SVG files and Microsoft Office documents to deliver commodity loaders, Remote Access Trojans (RATs), and information stealers. Attackers exploit a critical vulnerability (CVE-2017-11882) in Office's Equation Editor and employ evasion techniques like heavily obfuscated PowerShell scripts, steganographically embedded .NET assemblies in images, and a User Account Control (UAC) bypass to exfiltrate sensitive data.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": "No specific IoC is provided",
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1204.002 (User Execution: Malicious File)", "T1190 (Exploit Public-Facing Application)", "T1027 (Obfuscated Files or Information)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1027.003 (Obfuscated Files or Information: Steganography)", "T1548.002 (Event Triggered Execution: Bypass User Account Control)", "T1041 (Exfiltration Over C2 Channel)"],
+        "analyse": "The campaign primarily targets the manufacturing sector, highlighting the persistence of social engineering-based threats and software vulnerability exploitation. The use of steganography and UAC bypasses demonstrates increased attacker sophistication to evade detection and gain elevated privileges on Windows systems.",
+        "recommandations": [
+          "Implement enhanced email filtering to block suspicious attachments.",
+          "Disable legacy Office equation editor components to prevent CVE-2017-11882 exploitation.",
+          "Thoroughly scrutinize image attachments for hidden malicious content (steganography).",
+          "Monitor for suspicious PowerShell activity on endpoints.",
+          "Apply security updates regularly."
+        ],
+        "tags": ["malicious_campaign", "malware", "phishing", "rce", "info_stealer", "uac_bypass", "steganography", "manufacturing", "windows", "svg", "office_documents", "mitre_att&ck"],
+        "sources": ["https://cybersecuritynews.com/hackers-weaponize-svg-files-and-office-documents/"],
+        "date": "2025-12-21"
+      }
+    ]
+  }
+}
