@@ -1,0 +1,1871 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une intensification et une diversification des attaques. On observe une prévalence continue des ransomwares, ciblant aussi bien les infrastructures critiques (autorité de l'eau roumaine) que le secteur de l'éducation (Université de Phoenix), souvent via l'exploitation de vulnérabilités zero-day (Clop et Oracle EBS). Les attaques de la chaîne d'approvisionnement restent une menace majeure, comme en témoigne la compromission de Nissan via Red Hat ou la distribution de paquets npm malveillants. L'ingénierie sociale et les malwares d'infostealers persistent, ciblant des systèmes spécifiques (MacSync sur macOS) ou des applications populaires (WhatsApp). Les acteurs étatiques (Infy iranien, Paper Werewolf visant la Russie) continuent leurs activités d'espionnage, innovant dans leurs TTPs, y compris l'utilisation de leurres générés par IA et des techniques d'évasion sophistiquées. Les vulnérabilités critiques sont toujours des points d'entrée privilégiés, avec un nombre important de failles d'exécution de code à distance, de contournement d'authentification et d'escalade de privilèges signalées. Le contexte géopolitique, notamment les tensions entre les États-Unis et la Chine autour des semi-conducteurs et de l'IA, ainsi que les implications de la guerre en Ukraine, influence directement les motivations et les cibles des attaques. En conclusion, la menace est omniprésente, exigeant une vigilance accrue sur la sécurité de la chaîne d'approvisionnement, la gestion des vulnérabilités et la sensibilisation aux techniques d'ingénierie sociale, tout en tenant compte des dynamiques géopolitiques complexes.",
+      "date": "2025-12-23"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Technologies de l'information (IT), Automobile",
+        "modop": "Accès non autorisé aux serveurs de données, vol de centaines de gigaoctets de données sensibles depuis des référentiels GitLab privés, dans le cadre d'une attaque de la chaîne d'approvisionnement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "data_theft",
+          "unauthorized_access",
+          "gitlab"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nissan-says-thousands-of-customers-exposed-in-red-hat-breach/",
+          "https://fed.brid.gy/r/https://nerds.xyz/2025/12/nissan-red-hat-customer-data-breach-linux/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Mentalpositive",
+        "secteur": "Utilisateurs macOS (ciblage généralisé)",
+        "modop": "Distribution du stealer MacSync via des applications Swift signées et notariées, évasion de Gatekeeper, vol de justificatifs (trousseau iCloud, navigateurs), données de portefeuilles de cryptomonnaies et fichiers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "info_stealer",
+          "macos_malware",
+          "gatekeeper_bypass",
+          "credential_theft",
+          "cryptocurrency_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-macsync-malware-dropper-evades-macos-gatekeeper-checks/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Éducation (universités américaines), divers (organisations exploitant Oracle EBS)",
+        "modop": "Exploitation de vulnérabilités zero-day (CVE-2025-61882 dans Oracle E-Business Suite) pour l'exfiltration de données sensibles et l'extorsion, suivi potentiellement d'un chiffrement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "zero_day_exploit",
+          "extortion",
+          "education",
+          "oracle_ebs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-35-million-individuals/",
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-35-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Z-Pentest, Sector16, NoName, CARR (Cyber Army of Russia Reborn)",
+        "secteur": "Infrastructures critiques (mondial, pro-Russie)",
+        "modop": "Activités hacktivistes pro-russes ciblant les organisations d'infrastructures critiques à l'échelle mondiale.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://securityaffairs.com/186010/cyber-crime/romanian-waters-confirms-cyberattack-critical-water-operations-unaffected.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Nefilim ransomware",
+        "secteur": "Entreprises à revenus élevés (États-Unis, Canada, Australie)",
+        "modop": "Chiffrement de réseaux, exfiltration de données pour l'extorsion, utilisation d'exécutables de ransomware personnalisés et de notes de rançon spécifiques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "extortion",
+          "targeted_attack",
+          "encryption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186003/cyber-crime/ukrainian-hacker-pleads-guilty-to-nefilim-ransomware-attacks-in-u-s.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Infy (Prince of Persia)",
+        "secteur": "Dissidents iraniens, société civile, journalistes, diplomates (Europe, Irak, Turquie, Inde, Canada)",
+        "modop": "Groupe APT lié à l'Iran, utilise les malwares Foudre et Tonnerre (avec de nouvelles variantes et DGA), serveurs C2 changeants fréquemment, et des bots Telegram pour le contrôle et l'exfiltration de données. Diffusion via des fichiers Excel malveillants.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "iran_linked",
+          "espionage",
+          "malware",
+          "foudre",
+          "tonnerre",
+          "c2_communication",
+          "telegram",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185987/security/infy-returns-iran-linked-hacking-group-shows-renewed-activity.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Paper Werewolf (GOFFEE)",
+        "secteur": "Industries de haute technologie et de défense russes",
+        "modop": "Campagne d'espionnage cyber 'EchoGather' utilisant des add-ins Excel malveillants (fichiers XLL) pour livrer la backdoor EchoGather. Utilisation de leurres générés par IA et exploitation de vulnérabilités (CVE-2025-8088 dans WinRAR). Délai d'exécution pour l'évasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyber_espionage",
+          "APT",
+          "russia_targeted",
+          "malware",
+          "echogather",
+          "xll_files",
+          "ai_decoys",
+          "winrar_exploit",
+          "evasion"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Lynx ransomware gang",
+        "secteur": "Énergie (Electrica Group), Logistique (Terminal portuaire au Paraguay)",
+        "modop": "Attaques par ransomware conduisant à des violations de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_breach",
+          "energy",
+          "logistics"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://infosec.exchange/@chum1ng0/115765056002349745"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technologie, Économie, Relations internationales",
+        "theme": "L'IA et la géopolitique",
+        "description": "NVIDIA domine l'infrastructure de l'IA avec des résultats records, mais cette hégémonie révèle des fragilités : dépendance aux data centers, tensions sino-américaines sur les puces (part de marché de NVIDIA en Chine passée de 95% à zéro, autorisation d'exportation des puces H200 sous commission), risque de bulle économique de l'IA, limites énergétiques et hydriques pour les data centers, et la stratégie chinoise du volume et de l'open source (modèles comme Kimi IA, DeepSeek) qui concurrence l'approche occidentale. La dépendance de NVIDIA à TSMC à Taïwan représente un talon d'Achille géopolitique, pouvant influencer la politique étrangère américaine face à un regain de tensions anticipé autour de Taïwan à l'horizon 2027.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "AI",
+          "NVIDIA",
+          "supply_chain",
+          "semiconductors",
+          "Taiwan",
+          "China",
+          "USA",
+          "economy",
+          "energy",
+          "open_source",
+          "technological_sovereignty",
+          "trade_war"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2025/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Sécurité internationale, Défense, Politique étrangère",
+        "theme": "Recompositions de la sécurité européenne post-conflit ukrainien",
+        "description": "La guerre en Ukraine a redéfini les équilibres géopolitiques européens, ravivant les logiques de blocs et entraînant un réarmement. L'OTAN a retrouvé une position centrale, tandis que l'UE cherche à renforcer son rôle en sécurité et défense. Le conflit pose des questions fondamentales sur la souveraineté, les frontières et les rapports de puissance, avec des discussions sur une éventuelle partition de l'Ukraine et l'avenir des relations UE-Ukraine-Russie, ainsi que l'évolution de l'économie de guerre russe face aux sanctions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Ukraine",
+          "Russia",
+          "Europe",
+          "NATO",
+          "EU",
+          "security",
+          "defense",
+          "conflict",
+          "international_relations",
+          "economic_sanctions"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lukraine-et-lavenir-de-la-securite-europeenne-quelles-recompositions-geopolitiques/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Politique, Relations internationales, Économie mondiale",
+        "theme": "Bilan géopolitique 2025 et l'impact du retour de Donald Trump",
+        "description": "L'année 2025 a été marquée par le retour de Donald Trump à la Maison Blanche, entraînant une remise en question de l'ordre international post-Seconde Guerre mondiale et de l'alliance transatlantique. Cela a créé un fossé entre le 'Sud global' et l'Occident. Vladimir Poutine, Benyamin Netanyahou et Xi Jinping voient des opportunités dans ce changement. Des puissances intermédiaires comme l'Inde, la Turquie et l'Arabie saoudite diversifient leurs partenariats. Des conflits persistent en Afrique, tandis que l'ASEAN maintient son dynamisme économique malgré les tensions régionales.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Trump",
+          "international_order",
+          "USA",
+          "Europe",
+          "global_south",
+          "Russia",
+          "China",
+          "middle_east",
+          "africa",
+          "asia",
+          "bilateral_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/bilan-geopolitique-2025/"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Automobile",
+        "victime": "Nissan Motor Co. Ltd.",
+        "description": "Des milliers de clients de Nissan ont été exposés suite à une violation de données chez Red Hat, l'un de ses sous-traitants. La compromission a touché un environnement Red Hat utilisé pour développer des systèmes de gestion client. Le groupe Crimson Collective a revendiqué le vol de données chez Red Hat, notamment depuis des dépôts GitLab privés. Les informations compromises incluent des noms, adresses, numéros de téléphone et adresses e-mail partielles de clients au Japon. Aucune preuve d'utilisation abusive des données n'a été détectée à ce jour.",
+        "tags": [
+          "violation",
+          "breach",
+          "nissan",
+          "red_hat",
+          "automobile",
+          "supply_chain",
+          "customer_data",
+          "pii",
+          "crimson_collective"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nissan-says-thousands-of-customers-exposed-in-red-hat-breach/",
+          "https://fed.brid.gy/r/https://nerds.xyz/2025/12/nissan-red-hat-customer-data-breach-linux/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "University of Phoenix (UoPX)",
+        "description": "Le groupe de ransomware Clop a volé les données de près de 3,5 millions d'étudiants, de personnel et de fournisseurs de l'Université de Phoenix. Les attaquants ont exploité une vulnérabilité zero-day (CVE-2025-61882) dans l'application financière Oracle E-Business Suite (EBS). Les informations compromises comprennent des noms, coordonnées, dates de naissance, numéros de sécurité sociale et informations bancaires. D'autres universités américaines, telles que Harvard et l'Université de Pennsylvanie, ont également été ciblées dans des campagnes similaires via Oracle EBS.",
+        "tags": [
+          "violation",
+          "breach",
+          "university_of_phoenix",
+          "education",
+          "clop_ransomware",
+          "oracle_ebs",
+          "zero_day",
+          "pii",
+          "financial_data",
+          "ransomware",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-35-million-individuals/",
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-35-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Commerce électronique",
+        "victime": "Coupang",
+        "description": "Coupang a divulgué une violation de données affectant 33,7 millions de clients, résultant d'un abus interne d'informations d'identification légitimes, resté indétecté pendant près de cinq mois. Les données exposées incluent des historiques de transactions, adresses de livraison et méthodes de paiement qui n'étaient pas soumises à une obligation de chiffrement selon la loi coréenne, soulignant l'importance de la protection des données au-delà des exigences légales minimales.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e_commerce",
+          "insider_threat",
+          "credential_abuse",
+          "customer_data",
+          "data_protection",
+          "pii",
+          "unencrypted_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/coupang-breach-affecting-337-million-users-raises-data-protection-questions/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "University of Sydney",
+        "description": "Des pirates ont accédé à une bibliothèque de code en ligne de l'Université de Sydney et ont volé les données personnelles d'environ 27 500 personnes, incluant des membres du personnel actuels et anciens, des affiliés, des étudiants et des anciens élèves. Les informations compromises proviennent d'un fichier de données historique d'un système retiré et incluent des noms, dates de naissance, numéros de téléphone, adresses résidentielles et informations d'emploi de 2018. Aucune preuve d'utilisation ou de publication des données n'a été trouvée à ce jour.",
+        "tags": [
+          "violation",
+          "breach",
+          "university_of_sydney",
+          "education",
+          "code_library",
+          "pii",
+          "employee_data",
+          "student_data",
+          "alumni_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185947/breaking-news/university-of-sydney-discloses-a-data-breach-impacting-27000-people.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Divertissement (Adulte)",
+        "victime": "PornHub (via Mixpanel)",
+        "description": "Une violation de données a exposé plus de 200 millions d'enregistrements d'utilisateurs Premium de PornHub, y compris des adresses e-mail et des historiques de recherche et de visionnage. La violation est liée à un fournisseur d'analyse tiers, Mixpanel.",
+        "tags": [
+          "violation",
+          "breach",
+          "pornhub",
+          "entertainment",
+          "mixpanel",
+          "user_data",
+          "email_addresses",
+          "browsing_history",
+          "third_party"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/22nd-december-threat-intelligence-report/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Logistique portuaire",
+        "victime": "Terminal portuaire au Paraguay",
+        "description": "Un terminal portuaire au Paraguay a été victime d'une attaque par ransomware menée par le gang Lynx, entraînant une violation de données et des perturbations opérationnelles.",
+        "tags": [
+          "violation",
+          "breach",
+          "paraguay",
+          "port_terminal",
+          "logistics",
+          "ransomware",
+          "lynx_ransomware",
+          "cyberattack"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115765056002349745"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Gouvernement (USA)",
+        "victime": "Illinois Department of Employment Security",
+        "description": "Une violation de données a été détectée, ciblant le secteur gouvernemental américain, spécifiquement le Département de la sécurité de l'emploi de l'Illinois.",
+        "tags": [
+          "violation",
+          "breach",
+          "usa",
+          "government",
+          "illinois",
+          "employment_security",
+          "cyberthreats",
+          "public_sector"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115764758102248248"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-65856",
+        "cvss": 9.8,
+        "product": "Xiongmai XM530 IP Camera",
+        "description": "Vulnérabilité de contournement d'authentification dans les caméras IP Xiongmai XM530 (Firmware V5.00.R02.000807D8.10010.346624.S.ONVIF 21.06). L'implémentation ONVIF ne parvient pas à appliquer l'authentification sur 31 points d'extrémité critiques, permettant aux attaquants distants non authentifiés d'accéder aux informations sensibles de l'appareil et aux flux vidéo en direct.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "ip_camera",
+          "xiongmai",
+          "onvif",
+          "remote_access",
+          "data_exposure",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65856"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP snmptrapd daemon",
+        "description": "Une bibliothèque SNMP (net-snmp) contient une vulnérabilité où un paquet spécialement conçu vers un démon snmptrapd peut provoquer un dépassement de tampon et l'arrêt du démon. Affecte les versions antérieures à 5.9.5 et 5.10.pre2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "denial_of_service",
+          "net_snmp",
+          "snmp",
+          "daemon",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68615"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2023-53980",
+        "cvss": 9.8,
+        "product": "ProjectSend r1605",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) dans ProjectSend r1605. Permet aux attaquants de télécharger des fichiers malveillants en manipulant les extensions de fichier via le point d'accès upload.process.php, exécutant ainsi des commandes arbitraires sur le serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "projectsend",
+          "file_upload_vulnerability",
+          "extension_manipulation",
+          "arbitrary_command_execution",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53980"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 9.8,
+        "product": "MongoDB Server",
+        "description": "Une faille critique non authentifiée dans MongoDB Server (v3.6 à 8.2) permet aux attaquants de siphonner des données sensibles de la mémoire du serveur via une implémentation vulnérable de la bibliothèque zlib. Ceci peut se faire sans authentification, exposant potentiellement des requêtes récentes ou des identifiants mis en cache.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information_disclosure",
+          "memory_leak",
+          "mongodb",
+          "zlib",
+          "unauthenticated",
+          "data_exfiltration",
+          "critical_severity",
+          "database"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-unauthenticated-mongodb-flaw-leaks-sensitive-data-via-zlib-compression/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-52692",
+        "cvss": 9.8,
+        "product": "Linksys E9450-SG router",
+        "description": "Vulnérabilité zero-day dans le routeur Linksys E9450-SG. Des erreurs de logique permettent aux attaquants sur le réseau local de contourner les écrans de connexion, d'activer le serveur Telnet caché du routeur et d'exécuter des commandes avec les privilèges les plus élevés sans mot de passe.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "authentication_bypass",
+          "linksys",
+          "router",
+          "telnet_access",
+          "local_network",
+          "remote_command_execution",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/zero-day-alert-linksys-auth-bypass-lets-hackers-hijack-routers-without-passwords/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-61882",
+        "cvss": 9.8,
+        "product": "Oracle E-Business Suite (EBS)",
+        "description": "Vulnérabilité zero-day exploitée par le groupe de ransomware Clop. Cette faille a permis de voler des données sensibles de nombreuses plateformes Oracle EBS, notamment celles d'universités américaines, menant à des exfiltrations massives de données personnelles et financières.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "oracle_ebs",
+          "clop_ransomware",
+          "data_exfiltration",
+          "financial_application",
+          "critical_severity",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2023-53981",
+        "cvss": 8.8,
+        "product": "PhotoShow 3.0",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) dans PhotoShow 3.0. Permet aux administrateurs authentifiés d'injecter des commandes malveillantes via la configuration du chemin exiftran, en exploitant les paramètres ffmpeg pour exécuter un reverse shell via un processus de téléchargement vidéo.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "photoshow",
+          "path_injection",
+          "authenticated_attacker",
+          "command_injection",
+          "reverse_shell",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53981"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-34458",
+        "cvss": 8.7,
+        "product": "wb2osz/direwolf (Dire Wolf)",
+        "description": "Vulnérabilité d'assertion atteignable dans wb2osz/direwolf (versions <= 1.8) dans la fonction de décodage APRS MIC-E. Le traitement d'une trame AX.25 spécialement conçue avec un champ de commentaire vide ou tronqué déclenche une assertion non gérée, entraînant l'arrêt du processus (DoS) par un attaquant distant non authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "denial_of_service",
+          "direwolf",
+          "aprs_mic_e_decoder",
+          "ax_25_frame",
+          "remote_unauthenticated",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34458"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-34457",
+        "cvss": 8.7,
+        "product": "wb2osz/direwolf (Dire Wolf)",
+        "description": "Vulnérabilité de dépassement de tampon basé sur la pile dans wb2osz/direwolf (versions <= 1.8) dans la fonction kiss_rec_byte(). Le traitement de trames KISS spécialement conçues, atteignant la longueur maximale, entraîne une écriture hors limites et une corruption de la mémoire ou des plantages (DoS) par des attaquants distants non authentifiés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_based_buffer_overflow",
+          "denial_of_service",
+          "direwolf",
+          "kiss_frames",
+          "remote_unauthenticated",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34457"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-13008",
+        "cvss": 8.6,
+        "product": "M-Files Web interface",
+        "description": "Vulnérabilité de divulgation de jeton de session dans l'interface web de M-Files. Un attaquant authentifié (initié) peut capturer les jetons de session actifs d'autres utilisateurs, obtenant ainsi leurs privilèges pour accéder à des données sensibles. La faille se produit lors de la copie de coffres-forts de documents si les données de cache temporaires ne sont pas correctement purgées.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "session_token_disclosure",
+          "m_files",
+          "authentication",
+          "insider_threat",
+          "privilege_escalation",
+          "data_access",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/identity-theft-in-m-files-high-severity-flaw-lets-insiders-hijack-user-accounts-and-access-sensitive-data/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-68476",
+        "cvss": 8.2,
+        "product": "KEDA",
+        "description": "Vulnérabilité de lecture de fichier arbitraire dans KEDA (versions antérieures à 2.17.3 et 2.18.3). Affecte les ressources KEDA utilisant TriggerAuthentication pour la configuration de l'authentification HashiCorp Vault. Une validation de chemin insuffisante permet à un attaquant de lire des fichiers arbitraires du système de fichiers du nœud via le Service Account Token.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_read",
+          "keda",
+          "kubernetes",
+          "hashicorp_vault",
+          "path_validation",
+          "data_exfiltration",
+          "authentication",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68476"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-38352",
+        "cvss": 8.8,
+        "product": "Linux kernel’s POSIX CPU timer implementation",
+        "description": "Vulnérabilité de condition de course (Use-After-Free) affectant l'implémentation des timers CPU POSIX du noyau Linux. Permet aux attaquants locaux d'escalader leurs privilèges au niveau du noyau. Un exploit PoC a été publié et des attaques ciblées sont en cours.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "use_after_free",
+          "race_condition",
+          "linux_kernel",
+          "privilege_escalation",
+          "local_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/use-after-free-vulnerability-linux-kernel/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-29970",
+        "cvss": 8.8,
+        "product": "Microsoft Brokering File System (BFS) driver",
+        "description": "Vulnérabilité de Use-After-Free dans le pilote Brokering File System (BFS) de Microsoft. Permet aux attaquants locaux d'escalader leurs privilèges sur les systèmes Windows. Des correctifs ont été publiés en janvier 2025.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "use_after_free",
+          "privilege_escalation",
+          "microsoft_windows",
+          "bfs_driver",
+          "local_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-brokering-file-system-vulnerability/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-8088",
+        "cvss": 8.8,
+        "product": "WinRAR",
+        "description": "Vulnérabilité dans WinRAR exploitée par le groupe d'espionnage Paper Werewolf (GOFFEE). La faille est utilisée dans la campagne 'EchoGather' et implique les Alternate Data Streams (ADS) pour livrer des charges utiles malveillantes. Bien que les détails techniques précis ne soient pas fournis, son exploitation par un groupe d'APT indique un impact significatif.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "winrar",
+          "exploitation",
+          "cyber_espionage",
+          "paper_werewolf",
+          "file_format_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI-Generated Decoys & XLL Stealth: Inside the New “EchoGather” Cyber Espionage Campaign",
+        "description": "Une campagne d'espionnage cyber 'EchoGather' attribuée au groupe Paper Werewolf (alias GOFFEE) a été découverte, ciblant les industries russes de haute technologie et de défense. Le groupe déploie des add-ins Excel malveillants (fichiers XLL) pour installer une nouvelle backdoor appelée EchoGather. Les leurres, présentés comme des documents officiels, sont générés par IA et contiennent des erreurs. La campagne exploite une vulnérabilité WinRAR (CVE-2025-8088) et utilise un délai d'exécution pour éviter la détection comportementale, collectant des informations système et permettant l'exécution de commandes à distance.",
+        "threat_actor": "Paper Werewolf (GOFFEE)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ruzeda[.]com"
+          ],
+          "CVE": [
+            "CVE-2025-8088"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195.001 (Supply Chain Compromise: Compromise Software)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1082 (System Information Discovery)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1574 (Hijack Execution Flow)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Cette campagne illustre l'évolution des techniques d'espionnage, avec l'intégration de l'IA pour la création de leurres, bien qu'imparfaits, et l'adoption de méthodes de livraison plus furtives comme les fichiers XLL pour contourner les défenses traditionnelles. Le ciblage des secteurs russes de haute technologie et de défense souligne les motivations géopolitiques. L'exploitation d'une vulnérabilité WinRAR renforce l'idée d'une recherche constante de failles largement utilisées. L'impact potentiel est l'exfiltration de propriété intellectuelle et d'informations sensibles liées à la défense.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques d'ouvertures de documents provenant de sources inconnues, même s'ils semblent officiels.",
+          "Mettre en œuvre une détection avancée des menaces au niveau des endpoints, capable d'analyser le comportement des fichiers XLL et les processus d'exécution différée.",
+          "Appliquer les correctifs de sécurité pour les logiciels vulnérables, notamment WinRAR (CVE-2025-8088).",
+          "Renforcer la surveillance de la chaîne d'approvisionnement logicielle pour détecter les paquets malveillants et les comportements anormaux.",
+          "Utiliser des solutions de sécurité qui intègrent l'analyse des TTPs pour détecter les techniques d'évasion sophistiquées.",
+          "Surveiller les communications avec les serveurs de C2 et les exfiltrations de données anormales."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "APT",
+          "malware",
+          "xll",
+          "ai",
+          "evasion",
+          "supply_chain",
+          "winrar_exploit",
+          "russia",
+          "high_tech",
+          "defense",
+          "phishing",
+          "backdoor",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Infy Returns: Iran-linked hacking group shows renewed activity",
+        "description": "Le groupe APT iranien Infy, également connu sous le nom de Prince of Persia, a montré une activité renouvelée après près de cinq ans de silence. Il cible les dissidents iraniens, la société civile, les journalistes et les diplomates. Le groupe a adapté ses outils et infrastructures, utilisant de nouvelles variantes des malwares Foudre et Tonnerre (avec des algorithmes DGA), et intégrant des bots Telegram pour le commandement et contrôle (C2) et l'exfiltration de données. Foudre v34 se propage via des fichiers Excel malveillants. L'infrastructure C2 est complexe et changeante pour masquer les opérations.",
+        "threat_actor": "Infy (Prince of Persia)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1074 (Data Staged)",
+          "T1082 (System Information Discovery)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1090.002 (Proxy: SOCKS Proxy)"
+        ],
+        "analyse": "La réémergence d'Infy souligne la persistance des menaces parrainées par l'État et leur capacité à s'adapter et à innover. L'utilisation de Telegram pour le C2 et l'exfiltration est une tendance notable pour les APT cherchant à utiliser des plateformes légitimes. Le ciblage de dissidents et de journalistes confirme les motivations d'espionnage et de surveillance du groupe. La complexité de l'infrastructure C2 et les techniques d'évasion rendent la détection et l'attribution difficiles. L'impact est la surveillance et la compromission de cibles à haute valeur stratégique.",
+        "recommandations": [
+          "Renforcer la sensibilisation à la sécurité pour les cibles à haut risque (journalistes, activistes) concernant les attaques par hameçonnage et les documents malveillants.",
+          "Mettre en œuvre des solutions de détection avancée des menaces qui surveillent les communications C2 anormales, y compris via des applications de messagerie légitimes comme Telegram.",
+          "Utiliser des outils d'analyse de fichiers pour identifier les macros malveillantes et les DGA dans les documents Office.",
+          "Effectuer une surveillance continue des infrastructures réseau pour détecter les changements de C2 et les indicateurs de compromission liés à Infy.",
+          "Renforcer la segmentation du réseau et l'application du principe du moindre privilège pour limiter la portée d'une compromission."
+        ],
+        "tags": [
+          "APT",
+          "iran",
+          "espionage",
+          "malware",
+          "foudre",
+          "tonnerre",
+          "telegram",
+          "c2",
+          "dga",
+          "phishing",
+          "nation_state",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185987/security/infy-returns-iran-linked-hacking-group-shows-renewed-activity.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Malicious npm package steals WhatsApp accounts and messages",
+        "description": "Un paquet malveillant nommé `lotusbail` dans le registre npm se faisant passer pour une bibliothèque API WhatsApp Web légitime a été découvert. Ce paquet vole les jetons d'authentification et les clés de session WhatsApp, intercepte et enregistre tous les messages, et exfiltre les listes de contacts, les fichiers multimédias et les documents. Il permet un accès persistant au compte même après sa suppression manuelle, jusqu'à ce que l'utilisateur délie manuellement l'appareil depuis les paramètres WhatsApp.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "NPM": [
+            "lotusbail"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1020 (Automated Exfiltration)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1574 (Hijack Execution Flow)",
+          "T1114.001 (Email Collection: Local Email Collection)"
+        ],
+        "analyse": "Cette attaque de la chaîne d'approvisionnement logicielle via npm est préoccupante, car elle exploite la confiance des développeurs envers les bibliothèques tierces. L'impact est direct sur la confidentialité et l'intégrité des communications WhatsApp des victimes, avec un risque élevé de vol d'identité et d'accès non autorisé aux informations personnelles. La persistance de l'accès même après la suppression du paquet souligne la sophistication de l'attaque et la nécessité d'une intervention manuelle de l'utilisateur.",
+        "recommandations": [
+          "Auditer régulièrement les dépendances des projets et vérifier la légitimité des paquets npm avant leur utilisation.",
+          "Surveiller le comportement d'exécution des nouvelles dépendances pour détecter des connexions sortantes inattendues ou des activités d'authentification suspectes.",
+          "Implémenter une sécurité de la chaîne d'approvisionnement logicielle pour valider l'intégrité des paquets.",
+          "Sensibiliser les utilisateurs aux risques des autorisations accordées aux applications tierces et à la nécessité de vérifier et révoquer régulièrement les appareils liés dans les paramètres de WhatsApp."
+        ],
+        "tags": [
+          "supply_chain",
+          "npm",
+          "malware",
+          "whatsapp",
+          "info_stealer",
+          "authentication_tokens",
+          "session_hijacking",
+          "privacy_breach",
+          "third_party_risk",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-npm-package-steals-whatsapp-accounts-and-messages/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "New MacSync malware dropper evades macOS Gatekeeper checks",
+        "description": "Une nouvelle variante du stealer d'informations MacSync ciblant macOS est distribuée via une application Swift signée et notariée, contournant les contrôles Gatekeeper. Cette méthode de distribution représente une évolution significative, n'exigeant plus d'interaction directe avec le terminal. Le malware utilise des mécanismes d'évasion tels que le gonflement de la taille du fichier DMG, l'effacement des scripts d'exécution et des vérifications de connectivité Internet pour éviter les environnements sandbox. MacSync, attribué à l'acteur 'Mentalpositive', vole les identifiants du trousseau iCloud, les mots de passe des navigateurs web, les métadonnées système, les données des portefeuilles de cryptomonnaies et les fichiers du système de fichiers.",
+        "threat_actor": "Mentalpositive",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "zkcall[.]net"
+          ],
+          "FILE_HASH_SHA256": [],
+          "DEVELOPER_TEAM_ID": [
+            "GNJLS3UYZ4"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)",
+          "T1555 (Credentials from Password Stores)",
+          "T1083 (File and Directory Discovery)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1588.002 (Obtain Capabilities: Tool)"
+        ],
+        "analyse": "L'évolution de MacSync vers des applications signées et notariées pour contourner Gatekeeper démontre une sophistication accrue des acteurs de menaces ciblant macOS. Cela met en évidence la nécessité d'aller au-delà des contrôles de sécurité initiaux et de se concentrer sur la détection comportementale post-exécution. Le vol d'identifiants et de données de cryptomonnaies représente un impact financier direct pour les victimes. La persistance de tels stealers souligne la rentabilité du marché des malwares macOS.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs macOS à la prudence lors du téléchargement et de l'exécution d'applications, même si elles semblent signées ou notariées, surtout si elles proviennent de sources non officielles.",
+          "Implémenter une solution EDR (Endpoint Detection and Response) capable de détecter les activités malveillantes après l'exécution initiale, y compris les tentatives d'évasion de sandbox et les communications C2.",
+          "Surveiller les connexions réseau et les accès aux fichiers sensibles pour détecter les exfiltrations de données.",
+          "Mettre en œuvre des politiques de moindre privilège pour les applications et les utilisateurs.",
+          "Encourager l'utilisation de gestionnaires de mots de passe robustes et de l'authentification multifacteur pour les services sensibles."
+        ],
+        "tags": [
+          "malware",
+          "macos",
+          "info_stealer",
+          "macsync",
+          "gatekeeper_bypass",
+          "evasion",
+          "credentials_theft",
+          "cryptocurrency",
+          "mentalpositive",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-macsync-malware-dropper-evades-macos-gatekeeper-checks/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Services en ligne de La Poste et BPCE inaccessibles suite à une cyberattaque par déni de service",
+        "description": "Le groupe La Poste (services postaux, bancaires) a été victime d'une attaque par déni de service (DDoS) qui a rendu ses services en ligne inaccessibles (La Poste, Colissimo, La Banque Postale, L'Identité Numérique) pendant une grande partie du 22 décembre, perturbant la distribution des colis et des courriers. Bien que les opérations bancaires aient été partiellement maintenues (paiements par carte avec authentification SMS, retraits aux distributeurs), l'incident a eu lieu durant la période critique des fêtes de fin d'année. Le groupe BPCE (Banque populaire-Caisse d’épargne) a également subi un dysfonctionnement temporaire le même jour.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Endpoint Denial of Service)",
+          "T1498 (Network Denial of Service)"
+        ],
+        "analyse": "L'attaque DDoS contre La Poste et BPCE met en lumière la vulnérabilité des services publics et financiers aux perturbations de service, en particulier pendant les périodes de forte activité. L'impact se traduit par des désagréments majeurs pour les clients et des pertes économiques potentielles. Bien que les données clients n'aient pas été affectées, la cessation des services en ligne peut miner la confiance. La capacité à maintenir une partie des opérations bancaires via des canaux alternatifs a atténué l'impact.",
+        "recommandations": [
+          "Renforcer les capacités de mitigation des attaques DDoS (solutions anti-DDoS, architecture résiliente).",
+          "Mettre en place des plans de continuité d'activité et de reprise après sinistre robustes pour les services critiques.",
+          "Diversifier les canaux de service pour les opérations essentielles afin de minimiser l'impact en cas de défaillance d'un canal.",
+          "Mener des tests de résilience réguliers pour identifier les faiblesses et améliorer la réponse aux incidents."
+        ],
+        "tags": [
+          "ddos",
+          "cyberattack",
+          "la_poste",
+          "bpce",
+          "banking",
+          "postal_services",
+          "france",
+          "service_disruption",
+          "critical_infrastructure",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/22/les-services-en-ligne-de-la-poste-inaccessibles-a-la-suite-d-une-attaque-informatique_6659116_4408996.html",
+          "https://www.lemonde.fr/economie/article/2025/12/22/coup-dur-pour-la-poste-bloquee-juste-avant-noel-par-une-cyberattaque_6659156_3234.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "L'autorité roumaine de gestion de l'eau touchée par une attaque par ransomware",
+        "description": "L'Administrația Națională Apele Române (Autorité Nationale des Eaux de Roumanie) a été victime d'une attaque par ransomware, affectant environ 1 000 systèmes informatiques dans son siège national et 10 de ses 11 bureaux régionaux. Les systèmes impactés incluent les serveurs SIG, les bases de données, les services de messagerie et web, les postes de travail Windows et les serveurs DNS. Les systèmes de technologie opérationnelle (OT) contrôlant l'infrastructure hydraulique n'ont pas été affectés. Les attaquants ont utilisé BitLocker de Windows pour chiffrer les fichiers et ont laissé une note de rançon. Des groupes hacktivistes pro-russes avaient été avertis précédemment par le CISA comme ciblant les infrastructures critiques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1489 (Service Stop)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1529 (System Shutdown/Reboot)"
+        ],
+        "analyse": "Cet incident souligne la vulnérabilité persistante des infrastructures critiques aux attaques par ransomware, même lorsque les systèmes OT sont isolés des systèmes IT compromis. L'utilisation de fonctionnalités système comme BitLocker pour le chiffrement rend la détection plus complexe. L'impact est significatif sur les opérations administratives et de support, nécessitant une réponse d'urgence. Le contexte des avertissements du CISA concernant les hacktivistes pro-russes sur les infrastructures critiques suggère une motivation potentiellement géopolitique, bien qu'aucune attribution directe n'ait été faite.",
+        "recommandations": [
+          "Renforcer la segmentation réseau entre les environnements IT et OT, et entre les différentes entités régionales.",
+          "Mettre en œuvre des sauvegardes régulières et hors ligne des données critiques pour permettre une récupération rapide après un incident ransomware.",
+          "Surveiller activement les activités suspectes sur les systèmes IT, y compris l'utilisation anormale d'outils d'administration légitimes (comme BitLocker).",
+          "Déployer des solutions de détection et de réponse aux endpoints (EDR) sur toutes les stations de travail et serveurs.",
+          "Améliorer la formation à la cybersécurité pour les employés, en particulier ceux travaillant dans des environnements critiques."
+        ],
+        "tags": [
+          "ransomware",
+          "critical_infrastructure",
+          "water_authority",
+          "romania",
+          "bitlocker",
+          "it_ot_separation",
+          "hacktivism",
+          "state_sponsored_threats",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://securityaffairs.com/186010/cyber-crime/romanian-waters-confirms-cyberattack-critical-water-operations-unaffected.html"
+        ],
+        "date": "2025-12-23"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is marked by an intensification and diversification of attacks. We observe a continued prevalence of ransomware, targeting both critical infrastructure (Romanian water authority) and the education sector (University of Phoenix), often via the exploitation of zero-day vulnerabilities (Clop and Oracle EBS). Supply chain attacks remain a major threat, as evidenced by Nissan's compromise via Red Hat or the distribution of malicious npm packages. Social engineering and infostealer malware persist, targeting specific systems (MacSync on macOS) or popular applications (WhatsApp). State-sponsored actors (Iranian Infy, Paper Werewolf targeting Russia) continue their espionage activities, innovating in their TTPs, including the use of AI-generated decoys and sophisticated evasion techniques. Critical vulnerabilities remain privileged entry points, with a significant number of remote code execution, authentication bypass, and privilege escalation flaws reported. The geopolitical context, notably tensions between the United States and China over semiconductors and AI, as well as the implications of the war in Ukraine, directly influences the motivations and targets of attacks. In conclusion, the threat is omnipresent, requiring increased vigilance on supply chain security, vulnerability management, and awareness of social engineering techniques, while taking into account complex geopolitical dynamics.",
+      "date": "2025-12-23"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Information Technology (IT), Automotive",
+        "modop": "Unauthorized access to data servers, theft of hundreds of gigabytes of sensitive data from private GitLab repositories, as part of a supply chain attack.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "data_theft",
+          "unauthorized_access",
+          "gitlab"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nissan-says-thousands-of-customers-exposed-in-red-hat-breach/",
+          "https://fed.brid.gy/r/https://nerds.xyz/2025/12/nissan-red-hat-customer-data-breach-linux/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Mentalpositive",
+        "secteur": "macOS users (general targeting)",
+        "modop": "Distribution of MacSync stealer via code-signed and notarized Swift applications, Gatekeeper evasion, theft of credentials (iCloud keychain, browsers), cryptocurrency wallet data, and files.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "info_stealer",
+          "macos_malware",
+          "gatekeeper_bypass",
+          "credential_theft",
+          "cryptocurrency_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-macsync-malware-dropper-evades-macos-gatekeeper-checks/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Education (US universities), various (organizations using Oracle EBS)",
+        "modop": "Exploitation of zero-day vulnerabilities (CVE-2025-61882 in Oracle E-Business Suite) for sensitive data exfiltration and extortion, potentially followed by encryption.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "zero_day_exploit",
+          "extortion",
+          "education",
+          "oracle_ebs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/",
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Z-Pentest, Sector16, NoName, CARR (Cyber Army of Russia Reborn)",
+        "secteur": "Critical Infrastructure (global, pro-Russia)",
+        "modop": "Pro-Russia hacktivist activities targeting critical infrastructure organizations worldwide.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_russia",
+          "critical_infrastructure",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://securityaffairs.com/186010/cyber-crime/romanian-waters-confirms-cyberattack-critical-water-operations-unaffected.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Nefilim ransomware",
+        "secteur": "High-revenue companies (US, Canada, Australia)",
+        "modop": "Network encryption, data exfiltration for extortion, use of customized ransomware executables and tailored ransom notes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "extortion",
+          "targeted_attack",
+          "encryption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186003/cyber-crime/ukrainian-hacker-pleads-guilty-to-nefilim-ransomware-attacks-in-u-s.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Infy (Prince of Persia)",
+        "secteur": "Iranian dissidents, civil society, journalists, diplomats (Europe, Iraq, Turkey, India, Canada)",
+        "modop": "Iran-linked APT group, uses Foudre and Tonnerre malware (with new variants and DGA), frequently changing C2 servers, and Telegram bots for command and control (C2) and data exfiltration. Spreads via malicious Excel files.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "iran_linked",
+          "espionage",
+          "malware",
+          "foudre",
+          "tonnerre",
+          "c2_communication",
+          "telegram",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185987/security/infy-returns-iran-linked-hacking-group-shows-renewed-activity.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Paper Werewolf (GOFFEE)",
+        "secteur": "Russian high-tech and defense industries",
+        "modop": "Cyber espionage campaign 'EchoGather' deploying malicious Excel add-ins (XLL files) to deliver the EchoGather backdoor. Uses AI-generated decoys and exploits vulnerabilities (CVE-2025-8088 in WinRAR). Employs execution delay for evasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyber_espionage",
+          "APT",
+          "russia_targeted",
+          "malware",
+          "echogather",
+          "xll_files",
+          "ai_decoys",
+          "winrar_exploit",
+          "evasion"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "nom": "Lynx ransomware gang",
+        "secteur": "Energy (Electrica Group), Logistics (Port Terminal in Paraguay)",
+        "modop": "Ransomware attacks leading to data breaches.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_breach",
+          "energy",
+          "logistics"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://infosec.exchange/@chum1ng0/115765056002349745"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technology, Economy, International Relations",
+        "theme": "AI and Geopolitics",
+        "description": "NVIDIA dominates AI infrastructure with record results, but this hegemony reveals fragilities: dependence on data centers, US-China tensions over chips (NVIDIA's market share in China dropped from 95% to zero, H200 chip export authorized with a commission), risk of an AI economic bubble, energy and water limits for data centers, and China's volume and open-source strategy (models like Kimi AI, DeepSeek) competing with the Western approach. NVIDIA's reliance on TSMC in Taiwan represents a geopolitical Achilles' heel, potentially influencing US foreign policy in anticipation of renewed tensions around Taiwan by 2027.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "AI",
+          "NVIDIA",
+          "supply_chain",
+          "semiconductors",
+          "Taiwan",
+          "China",
+          "USA",
+          "economy",
+          "energy",
+          "open_source",
+          "technological_sovereignty",
+          "trade_war"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2025/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "International Security, Defense, Foreign Policy",
+        "theme": "Reshaping European Security Post-Ukrainian Conflict",
+        "description": "The war in Ukraine has redefined European geopolitical balances, reviving bloc mentalities and leading to rearmament. NATO has regained a central position, while the EU seeks to strengthen its role in security and defense. The conflict raises fundamental questions about sovereignty, borders, and power dynamics, with discussions about a potential partition of Ukraine and the future of EU-Ukraine-Russia relations, as well as the evolution of the Russian war economy in the face of sanctions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Ukraine",
+          "Russia",
+          "Europe",
+          "NATO",
+          "EU",
+          "security",
+          "defense",
+          "conflict",
+          "international_relations",
+          "economic_sanctions"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lukraine-et-lavenir-de-la-securite-europeenne-quelles-recompositions-geopolitiques/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Politics, International Relations, Global Economy",
+        "theme": "Geopolitical Review 2025 and the Impact of Donald Trump's Return",
+        "description": "The year 2025 was marked by Donald Trump's return to the White House, leading to a questioning of the post-WWII international order and the transatlantic alliance. This created a divide between the 'Global South' and the West. Vladimir Putin, Benjamin Netanyahu, and Xi Jinping see opportunities in this shift. Intermediate powers like India, Turkey, and Saudi Arabia are diversifying their partnerships. Conflicts persist in Africa, while ASEAN maintains its economic dynamism despite regional tensions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Trump",
+          "international_order",
+          "USA",
+          "Europe",
+          "global_south",
+          "Russia",
+          "China",
+          "middle_east",
+          "africa",
+          "asia",
+          "bilateral_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/bilan-geopolitique-2025/"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Automotive",
+        "victime": "Nissan Motor Co. Ltd.",
+        "description": "Thousands of Nissan customers were exposed following a data breach at Red Hat, one of its subcontractors. The compromise affected a Red Hat environment used to develop customer management systems. The Crimson Collective group claimed responsibility for the Red Hat breach, including data theft from private GitLab repositories. Compromised information includes names, addresses, phone numbers, and partial email addresses of customers in Japan. No evidence of misuse of the data has been detected to date.",
+        "tags": [
+          "violation",
+          "breach",
+          "nissan",
+          "red_hat",
+          "automotive",
+          "supply_chain",
+          "customer_data",
+          "pii",
+          "crimson_collective"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nissan-says-thousands-of-customers-exposed-in-red-hat-breach/",
+          "https://fed.brid.gy/r/https://nerds.xyz/2025/12/nissan-red-hat-customer-data-breach-linux/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Phoenix (UoPX)",
+        "description": "The Clop ransomware gang stole data from nearly 3.5 million University of Phoenix students, staff, and suppliers. Attackers exploited a zero-day vulnerability (CVE-2025-61882) in the Oracle E-Business Suite (EBS) financial application. Compromised information includes names, contact details, dates of birth, social security numbers, and bank account details. Other US universities, such as Harvard and the University of Pennsylvania, were also targeted in similar campaigns via Oracle EBS.",
+        "tags": [
+          "violation",
+          "breach",
+          "university_of_phoenix",
+          "education",
+          "clop_ransomware",
+          "oracle_ebs",
+          "zero_day",
+          "pii",
+          "financial_data",
+          "ransomware",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/",
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Coupang disclosed a data breach affecting 33.7 million customers, resulting from insider abuse of legitimate credentials, which went undetected for nearly five months. Exposed data included transaction histories, delivery addresses, and payment methods that were not subject to mandatory encryption under Korean law, highlighting the importance of data protection beyond minimum legal requirements.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e_commerce",
+          "insider_threat",
+          "credential_abuse",
+          "customer_data",
+          "data_protection",
+          "pii",
+          "unencrypted_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/coupang-breach-affecting-337-million-users-raises-data-protection-questions/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Sydney",
+        "description": "Hackers accessed an online code library of the University of Sydney and stole personal data of approximately 27,500 people, including current and former staff, affiliates, students, and alumni. Compromised information came from a historical data file of a retired system and includes names, dates of birth, phone numbers, home addresses, and job information from 2018. No evidence of data misuse or publication has been found to date.",
+        "tags": [
+          "violation",
+          "breach",
+          "university_of_sydney",
+          "education",
+          "code_library",
+          "pii",
+          "employee_data",
+          "student_data",
+          "alumni_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185947/breaking-news/university-of-sydney-discloses-a-data-breach-impacting-27000-people.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Entertainment (Adult)",
+        "victime": "PornHub (via Mixpanel)",
+        "description": "A data breach exposed over 200 million records of PornHub Premium users, including email addresses and search/watch history. The breach is linked to a third-party analytics provider, Mixpanel.",
+        "tags": [
+          "violation",
+          "breach",
+          "pornhub",
+          "entertainment",
+          "mixpanel",
+          "user_data",
+          "email_addresses",
+          "browsing_history",
+          "third_party"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/22nd-december-threat-intelligence-report/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Port Logistics",
+        "victime": "Port terminal in Paraguay",
+        "description": "A port terminal in Paraguay was hit by a ransomware attack carried out by the Lynx gang, leading to a data breach and operational disruptions.",
+        "tags": [
+          "violation",
+          "breach",
+          "paraguay",
+          "port_terminal",
+          "logistics",
+          "ransomware",
+          "lynx_ransomware",
+          "cyberattack"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115765056002349745"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "secteur": "Government (USA)",
+        "victime": "Illinois Department of Employment Security",
+        "description": "A data breach was detected targeting the US government sector, specifically the Illinois Department of Employment Security.",
+        "tags": [
+          "violation",
+          "breach",
+          "usa",
+          "government",
+          "illinois",
+          "employment_security",
+          "cyberthreats",
+          "public_sector"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115764758102248248"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-65856",
+        "cvss": 9.8,
+        "product": "Xiongmai XM530 IP Camera",
+        "description": "Authentication bypass vulnerability in Xiongmai XM530 IP cameras (Firmware V5.00.R02.000807D8.10010.346624.S.ONVIF 21.06). The ONVIF implementation fails to enforce authentication on 31 critical endpoints, enabling unauthenticated remote attackers to access sensitive device information and live video streams.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "ip_camera",
+          "xiongmai",
+          "onvif",
+          "remote_access",
+          "data_exposure",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65856"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP snmptrapd daemon",
+        "description": "An SNMP library (net-snmp) contains a vulnerability where a specially crafted packet to an snmptrapd daemon can cause a buffer overflow and crash the daemon. Affects versions prior to 5.9.5 and 5.10.pre2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "denial_of_service",
+          "net_snmp",
+          "snmp",
+          "daemon",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68615"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2023-53980",
+        "cvss": 9.8,
+        "product": "ProjectSend r1605",
+        "description": "Remote Code Execution (RCE) vulnerability in ProjectSend r1605. Allows attackers to upload malicious files by manipulating file extensions via the upload.process.php endpoint, thus executing arbitrary commands on the server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "projectsend",
+          "file_upload_vulnerability",
+          "extension_manipulation",
+          "arbitrary_command_execution",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53980"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 9.8,
+        "product": "MongoDB Server",
+        "description": "A critical unauthenticated flaw in MongoDB Server (v3.6 to 8.2) allows attackers to siphon sensitive data from server memory via a vulnerable zlib library implementation. This can be achieved without authentication, potentially exposing recent queries or cached credentials.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information_disclosure",
+          "memory_leak",
+          "mongodb",
+          "zlib",
+          "unauthenticated",
+          "data_exfiltration",
+          "critical_severity",
+          "database"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-unauthenticated-mongodb-flaw-leaks-sensitive-data-via-zlib-compression/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-52692",
+        "cvss": 9.8,
+        "product": "Linksys E9450-SG router",
+        "description": "Zero-day vulnerability in the Linksys E9450-SG router. Logic errors allow attackers on the local network to bypass login screens, enable the router’s hidden Telnet server, and execute commands with the highest privileges without a password.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "authentication_bypass",
+          "linksys",
+          "router",
+          "telnet_access",
+          "local_network",
+          "remote_command_execution",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/zero-day-alert-linksys-auth-bypass-lets-hackers-hijack-routers-without-passwords/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-61882",
+        "cvss": 9.8,
+        "product": "Oracle E-Business Suite (EBS)",
+        "description": "Zero-day vulnerability exploited by the Clop ransomware group. This flaw allowed the theft of sensitive data from numerous Oracle EBS platforms, including those of US universities, leading to massive exfiltration of personal and financial data.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "oracle_ebs",
+          "clop_ransomware",
+          "data_exfiltration",
+          "financial_application",
+          "critical_severity",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/university-of-phoenix-data-breach-impacts-nearly-3-5-million-individuals/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2023-53981",
+        "cvss": 8.8,
+        "product": "PhotoShow 3.0",
+        "description": "Remote Code Execution (RCE) vulnerability in PhotoShow 3.0. Allows authenticated administrators to inject malicious commands via the exiftran path configuration, exploiting ffmpeg settings to execute a reverse shell through a crafted video upload process.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "photoshow",
+          "path_injection",
+          "authenticated_attacker",
+          "command_injection",
+          "reverse_shell",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2023-53981"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-34458",
+        "cvss": 8.7,
+        "product": "wb2osz/direwolf (Dire Wolf)",
+        "description": "Reachable assertion vulnerability in wb2osz/direwolf (versions <= 1.8) in the APRS MIC-E decoder function. Processing a specially crafted AX.25 frame with an empty or truncated comment field triggers an unhandled assertion, leading to process termination (DoS) by a remote unauthenticated attacker.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "denial_of_service",
+          "direwolf",
+          "aprs_mic_e_decoder",
+          "ax_25_frame",
+          "remote_unauthenticated",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34458"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-34457",
+        "cvss": 8.7,
+        "product": "wb2osz/direwolf (Dire Wolf)",
+        "description": "Stack-based buffer overflow vulnerability in wb2osz/direwolf (versions <= 1.8) in the kiss_rec_byte() function. Processing crafted KISS frames reaching the maximum length causes an out-of-bounds write and memory corruption or crashes (DoS) by remote unauthenticated attackers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_based_buffer_overflow",
+          "denial_of_service",
+          "direwolf",
+          "kiss_frames",
+          "remote_unauthenticated",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34457"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-13008",
+        "cvss": 8.6,
+        "product": "M-Files Web interface",
+        "description": "Session Token Disclosure vulnerability in the M-Files Web interface. An authenticated attacker (insider) can capture active session tokens of other users, gaining their privileges to access sensitive data. The flaw occurs during document vault copying if temporary cache data is not properly scrubbed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "session_token_disclosure",
+          "m_files",
+          "authentication",
+          "insider_threat",
+          "privilege_escalation",
+          "data_access",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/identity-theft-in-m-files-high-severity-flaw-lets-insiders-hijack-user-accounts-and-access-sensitive-data/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-68476",
+        "cvss": 8.2,
+        "product": "KEDA",
+        "description": "Arbitrary File Read vulnerability in KEDA (versions prior to 2.17.3 and 2.18.3). Affects KEDA resources using TriggerAuthentication for HashiCorp Vault authentication configuration. Insufficient path validation allows an attacker to read arbitrary files from the node's filesystem via the Service Account Token.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "arbitrary_file_read",
+          "keda",
+          "kubernetes",
+          "hashicorp_vault",
+          "path_validation",
+          "data_exfiltration",
+          "authentication",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68476"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-38352",
+        "cvss": 8.8,
+        "product": "Linux kernel’s POSIX CPU timer implementation",
+        "description": "Race condition (Use-After-Free) vulnerability affecting the Linux kernel’s POSIX CPU timer implementation. Allows local attackers to escalate privileges to kernel level. A PoC exploit has been publicly released and targeted attacks are ongoing.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "use_after_free",
+          "race_condition",
+          "linux_kernel",
+          "privilege_escalation",
+          "local_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/use-after-free-vulnerability-linux-kernel/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-29970",
+        "cvss": 8.8,
+        "product": "Microsoft Brokering File System (BFS) driver",
+        "description": "Use-After-Free vulnerability in Microsoft's Brokering File System (BFS) driver. Allows local attackers to escalate privileges on Windows systems. Patches were released in January 2025.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "use_after_free",
+          "privilege_escalation",
+          "microsoft_windows",
+          "bfs_driver",
+          "local_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/microsoft-brokering-file-system-vulnerability/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "cve_id": "CVE-2025-8088",
+        "cvss": 8.8,
+        "product": "WinRAR",
+        "description": "Vulnerability in WinRAR exploited by the Paper Werewolf (GOFFEE) espionage group. The flaw is used in the 'EchoGather' campaign and involves Alternate Data Streams (ADS) to deliver malicious payloads. Although specific technical details are not provided, its exploitation by an APT group indicates a significant impact.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "winrar",
+          "exploitation",
+          "cyber_espionage",
+          "paper_werewolf",
+          "file_format_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI-Generated Decoys & XLL Stealth: Inside the New “EchoGather” Cyber Espionage Campaign",
+        "description": "A 'EchoGather' cyber espionage campaign attributed to the Paper Werewolf group (aka GOFFEE) has been discovered, targeting Russian high-tech and defense industries. The group deploys malicious Excel add-ins (XLL files) to install a new backdoor called EchoGather. The decoys, presented as official documents, are AI-generated and contain errors. The campaign exploits a WinRAR vulnerability (CVE-2025-8088) and uses an execution delay for behavioral detection evasion, collecting system information and allowing remote command execution.",
+        "threat_actor": "Paper Werewolf (GOFFEE)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "ruzeda[.]com"
+          ],
+          "CVE": [
+            "CVE-2025-8088"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195.001 (Supply Chain Compromise: Compromise Software)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1082 (System Information Discovery)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1574 (Hijack Execution Flow)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "This campaign illustrates the evolving nature of espionage techniques, with the integration of AI for decoy creation, albeit imperfect, and the adoption of stealthier delivery methods like XLL files to bypass traditional defenses. The targeting of Russian high-tech and defense sectors underscores geopolitical motivations. The exploitation of a WinRAR vulnerability reinforces the idea of a continuous search for widely used flaws. The potential impact is the exfiltration of intellectual property and sensitive defense-related information.",
+        "recommandations": [
+          "Educate users about the risks of opening documents from unknown sources, even if they appear official.",
+          "Implement advanced endpoint threat detection capable of analyzing XLL file behavior and delayed execution processes.",
+          "Apply security patches for vulnerable software, especially WinRAR (CVE-2025-8088).",
+          "Strengthen software supply chain monitoring to detect malicious packages and abnormal behaviors.",
+          "Utilize security solutions that integrate TTP analysis to detect sophisticated evasion techniques.",
+          "Monitor for C2 communications and anomalous data exfiltration."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "APT",
+          "malware",
+          "xll",
+          "ai",
+          "evasion",
+          "supply_chain",
+          "winrar_exploit",
+          "russia",
+          "high_tech",
+          "defense",
+          "phishing",
+          "backdoor",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-generated-decoys-xll-stealth-inside-the-new-echogather-cyber-espionage-campaign/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Infy Returns: Iran-linked hacking group shows renewed activity",
+        "description": "The Iranian APT group Infy, also known as Prince of Persia, has shown renewed activity after nearly five years of silence. It targets Iranian dissidents, civil society, journalists, and diplomats. The group has adapted its tools and infrastructure, using new variants of Foudre and Tonnerre malware (with DGA algorithms), and integrating Telegram bots for command and control (C2) and data exfiltration. Foudre v34 spreads via malicious Excel files. The C2 infrastructure is complex and frequently changing to conceal operations.",
+        "threat_actor": "Infy (Prince of Persia)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1074 (Data Staged)",
+          "T1082 (System Information Discovery)",
+          "T1036.003 (Masquerading: Rename System Utilities)",
+          "T1090.002 (Proxy: SOCKS Proxy)"
+        ],
+        "analyse": "Infy's re-emergence highlights the persistence of state-sponsored threats and their ability to adapt and innovate. The use of Telegram for C2 and exfiltration is a notable trend for APTs seeking to leverage legitimate platforms. The targeting of dissidents and journalists confirms the group's espionage and surveillance motivations. The complexity of the C2 infrastructure and evasion techniques make detection and attribution challenging. The impact is the surveillance and compromise of high-value strategic targets.",
+        "recommandations": [
+          "Strengthen security awareness for high-risk targets (journalists, activists) regarding phishing attacks and malicious documents.",
+          "Implement advanced threat detection solutions that monitor for anomalous C2 communications, including via legitimate messaging apps like Telegram.",
+          "Utilize file analysis tools to identify malicious macros and DGAs in Office documents.",
+          "Conduct continuous monitoring of network infrastructures to detect C2 changes and indicators of compromise related to Infy.",
+          "Enhance network segmentation and enforce the principle of least privilege to limit the scope of a compromise."
+        ],
+        "tags": [
+          "APT",
+          "iran",
+          "espionage",
+          "malware",
+          "foudre",
+          "tonnerre",
+          "telegram",
+          "c2",
+          "dga",
+          "phishing",
+          "nation_state",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityaffairs.com/185987/security/infy-returns-iran-linked-hacking-group-shows-renewed-activity.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Malicious npm package steals WhatsApp accounts and messages",
+        "description": "A malicious package named `lotusbail` in the npm registry, masquerading as a legitimate WhatsApp Web API library, has been discovered. This package steals WhatsApp authentication tokens and session keys, intercepts and records all messages, and exfiltrates contact lists, media files, and documents. It allows persistent account access even after manual deletion, until the user manually unlinks the device from WhatsApp settings.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "NPM": [
+            "lotusbail"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1020 (Automated Exfiltration)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1574 (Hijack Execution Flow)",
+          "T1114.001 (Email Collection: Local Email Collection)"
+        ],
+        "analyse": "This software supply chain attack via npm is concerning as it exploits developers' trust in third-party libraries. The impact directly affects the confidentiality and integrity of victims' WhatsApp communications, with a high risk of identity theft and unauthorized access to personal information. The persistence of access even after package removal highlights the attack's sophistication and the need for manual user intervention.",
+        "recommandations": [
+          "Regularly audit project dependencies and verify the legitimacy of npm packages before use.",
+          "Monitor the runtime behavior of new dependencies to detect unexpected outbound connections or suspicious authentication activities.",
+          "Implement software supply chain security to validate package integrity.",
+          "Educate users about the risks of permissions granted to third-party applications and the need to regularly check and revoke linked devices in WhatsApp settings."
+        ],
+        "tags": [
+          "supply_chain",
+          "npm",
+          "malware",
+          "whatsapp",
+          "info_stealer",
+          "authentication_tokens",
+          "session_hijacking",
+          "privacy_breach",
+          "third_party_risk",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-npm-package-steals-whatsapp-accounts-and-messages/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "New MacSync malware dropper evades macOS Gatekeeper checks",
+        "description": "A new variant of the MacSync information stealer targeting macOS is delivered via a digitally signed, notarized Swift application, bypassing Gatekeeper checks. This distribution method represents a significant evolution, no longer requiring direct terminal interaction. The malware employs evasion mechanisms such as inflating the DMG file size, wiping execution scripts, and performing internet connectivity checks to evade sandboxed environments. MacSync, attributed to actor 'Mentalpositive', steals iCloud keychain credentials, web browser passwords, system metadata, cryptocurrency wallet data, and files from the filesystem.",
+        "threat_actor": "Mentalpositive",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "zkcall[.]net"
+          ],
+          "FILE_HASH_SHA256": [],
+          "DEVELOPER_TEAM_ID": [
+            "GNJLS3UYZ4"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)",
+          "T1555 (Credentials from Password Stores)",
+          "T1083 (File and Directory Discovery)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1588.002 (Obtain Capabilities: Tool)"
+        ],
+        "analyse": "MacSync's evolution to signed and notarized applications to bypass Gatekeeper demonstrates increased sophistication by threat actors targeting macOS. This highlights the need to move beyond initial security controls and focus on post-execution behavioral detection. The theft of credentials and cryptocurrency data represents a direct financial impact for victims. The persistence of such stealers underscores the profitability of the macOS malware market.",
+        "recommandations": [
+          "Educate macOS users to exercise caution when downloading and running applications, even if they appear signed or notarized, especially if from unofficial sources.",
+          "Implement an EDR (Endpoint Detection and Response) solution capable of detecting malicious activities after initial execution, including sandbox evasion attempts and C2 communications.",
+          "Monitor network connections and sensitive file access to detect data exfiltration.",
+          "Implement least privilege policies for applications and users.",
+          "Encourage the use of strong password managers and multi-factor authentication for sensitive services."
+        ],
+        "tags": [
+          "malware",
+          "macos",
+          "info_stealer",
+          "macsync",
+          "gatekeeper_bypass",
+          "evasion",
+          "credentials_theft",
+          "cryptocurrency",
+          "mentalpositive",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-macsync-malware-dropper-evades-macos-gatekeeper-checks/"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "La Poste and BPCE online services inaccessible following denial-of-service cyberattack",
+        "description": "The La Poste group (postal and banking services) was subjected to a denial-of-service (DDoS) attack that rendered its online services (La Poste, Colissimo, La Banque Postale, L'Identité Numérique) inaccessible for much of December 22, disrupting parcel and mail distribution. Although banking operations were partially maintained (card payments with SMS authentication, ATM withdrawals), the incident occurred during the critical year-end holiday period. The BPCE group (Banque populaire-Caisse d’épargne) also experienced a temporary malfunction on the same day.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Endpoint Denial of Service)",
+          "T1498 (Network Denial of Service)"
+        ],
+        "analyse": "The DDoS attack against La Poste and BPCE highlights the vulnerability of public and financial services to service disruptions, especially during peak activity periods. The impact translates into major inconvenience for customers and potential economic losses. Although customer data was not affected, the cessation of online services can erode trust. The ability to maintain some banking operations through alternative channels mitigated the impact.",
+        "recommandations": [
+          "Strengthen DDoS attack mitigation capabilities (anti-DDoS solutions, resilient architecture).",
+          "Implement robust business continuity and disaster recovery plans for critical services.",
+          "Diversify service channels for essential operations to minimize impact in case of a single channel failure.",
+          "Conduct regular resilience tests to identify weaknesses and improve incident response."
+        ],
+        "tags": [
+          "ddos",
+          "cyberattack",
+          "la_poste",
+          "bpce",
+          "banking",
+          "postal_services",
+          "france",
+          "service_disruption",
+          "critical_infrastructure",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2025/12/22/les-services-en-ligne-de-la-poste-inaccessibles-a-la-suite-d-une-attaque-informatique_6659116_4408996.html",
+          "https://www.lemonde.fr/economie/article/2025/12/22/coup-dur-pour-la-poste-bloquee-juste-avant-noel-par-une-cyberattaque_6659156_3234.html"
+        ],
+        "date": "2025-12-23"
+      },
+      {
+        "title": "Romanian water management authority hit by ransomware attack",
+        "description": "The Administrația Națională Apele Române (Romanian National Water Authority) was hit by a ransomware attack, affecting approximately 1,000 IT systems at its national headquarters and 10 of its 11 regional offices. Impacted systems include GIS servers, databases, email and web services, Windows workstations, and DNS servers. Operational Technology (OT) systems controlling water infrastructure were unaffected. Attackers used Windows BitLocker for file encryption and left a ransom note. Pro-Russia hacktivist groups had been previously warned by CISA as targeting critical infrastructure.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1078 (Valid Accounts)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1489 (Service Stop)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1529 (System Shutdown/Reboot)"
+        ],
+        "analyse": "This incident highlights the persistent vulnerability of critical infrastructure to ransomware attacks, even when OT systems are isolated from compromised IT systems. The use of native system features like BitLocker for encryption complicates detection. The impact is significant on administrative and support operations, requiring an emergency response. The context of CISA warnings regarding pro-Russia hacktivists targeting critical infrastructure suggests a potentially geopolitical motivation, although no direct attribution has been made.",
+        "recommandations": [
+          "Strengthen network segmentation between IT and OT environments, and between different regional entities.",
+          "Implement regular and offline backups of critical data to enable rapid recovery after a ransomware incident.",
+          "Actively monitor for suspicious activities on IT systems, including abnormal use of legitimate administration tools (like BitLocker).",
+          "Deploy Endpoint Detection and Response (EDR) solutions on all workstations and servers.",
+          "Improve cybersecurity training for employees, particularly those working in critical environments."
+        ],
+        "tags": [
+          "ransomware",
+          "critical_infrastructure",
+          "water_authority",
+          "romania",
+          "bitlocker",
+          "it_ot_separation",
+          "hacktivism",
+          "state_sponsored_threats",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/",
+          "https://securityaffairs.com/186010/cyber-crime/romanian-waters-confirms-cyberattack-critical-water-operations-unaffected.html"
+        ],
+        "date": "2025-12-23"
+      }
+    ]
+  }
+}
