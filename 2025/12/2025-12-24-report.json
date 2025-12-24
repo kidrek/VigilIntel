@@ -1,0 +1,1365 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel de la menace cyber est marqué par une intensification des attaques sophistiquées ciblant divers secteurs, allant des infrastructures critiques aux plateformes d'automatisation et aux utilisateurs finaux. Les tendances clés observées incluent l'exploitation généralisée des vulnérabilités connues, souvent avec des scores CVSS très élevés, permettant des exécutions de code à distance (RCE) non authentifiées ou authentifiées. Les attaques de la supply chain et les compromissions via des accès tiers restent des vecteurs d'entrée majeurs, comme en témoignent les incidents impliquant Red Hat/Nissan et les analyses sur la gestion des identités et des accès. Les acteurs malveillants, qu'ils soient des groupes cybercriminels opportunistes (opérateurs WebRAT) ou des entités liées à des États (NoName057(16)), adaptent leurs tactiques, y compris le ciblage de nouveaux profils comme les chercheurs en cybersécurité, et l'utilisation de méthodes automatisées pour des campagnes à grande échelle (PCPcat). L'utilisation de l'IA est également un point de discussion, notamment avec les vulnérabilités affectant les frameworks LLM comme LangChain, et les exigences réglementaires croissantes autour de l'IA fiable. Les infostealers et les extensions malveillantes continuent de menacer la confidentialité des données. Les violations de données sont fréquentes, touchant les secteurs de l'éducation et de la finance, entraînant la fuite d'informations personnelles, de santé et financières. En conclusion, l'état général des menaces est élevé, exigeant une vigilance continue, des mises à jour rapides, une gestion rigoureuse des accès et des efforts proactifs pour identifier et atténuer les risques systémiques.",
+      "date": "2025-12-24"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "WebRAT Operators",
+        "secteur": "Professionnels/étudiants en cybersécurité, gamers, utilisateurs de logiciels piratés, utilisateurs généraux",
+        "modop": "Distribution via de faux exploits PoC GitHub pour des vulnérabilités connues. Utilisation de logiciels piratés et de triches de jeux. Vol d'identifiants (Steam, Discord, Telegram), de données de portefeuilles de cryptomonnaies, et fonctions d'espionnage (webcam, captures d'écran, enregistrement de frappes).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "social_engineering",
+          "fake_exploit",
+          "github",
+          "webrat",
+          "credential_theft",
+          "cryptocurrency_theft",
+          "spyware"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/webrat-malware-spread-via-fake-vulnerability-exploits-on-github/, https://securelist.com/webrat-distributed-via-github/118555/, https://securityonline.info/webrat-trap-hackers-lure-junior-security-researchers-with-fake-github-exploits/, https://www.helpnetsecurity.com/2025/12/23/fake-poc-exploits-webrat-malware/",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "PCPcat Group (PCP)",
+        "secteur": "Infrastructure cloud, applications web modernes (Next.js, React)",
+        "modop": "Campagne cyber-espionnage automatisée, exploitation de vulnérabilités RCE (CVE-2025-29927, CVE-2025-66478) via manipulation de charge utile JSON et pollution de prototype. Installation de backdoors persistantes (GOST, FRP) pour la collecte de données (identifiants cloud, clés SSH, fichiers .env).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cyber_espionage",
+          "automated_campaign",
+          "rce",
+          "data_harvesting",
+          "nextjs",
+          "react",
+          "cloud_security",
+          "botnet"
+        ],
+        "sources": "https://securityonline.info/operation-pcpcat-60000-next-js-servers-hijacked-in-just-48-hours/",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Services postaux, bancaires, services publics (France), Ukraine, ses alliés",
+        "modop": "Attaques par déni de service distribué (DDoS).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "pro_russia",
+          "ddos",
+          "critical_infrastructure",
+          "disruption"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cyberattack-knocks-offline-frances-postal-banking-services/, https://www.lemonde.fr/pixels/article/2025/12/23/cyberattaque-contre-la-poste-la-dgsi-et-l-unite-nationale-cyber-saisies_6659268_4408996.html, https://www.lemonde.fr/economie/article/2025/12/23/la-cyberattaque-visant-la-poste-a-baisse-en-intensite-mais-se-poursuit-juste-avant-noel_6659200_3234.html",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "Clop ransomware group",
+        "secteur": "Éducation (Université de Phoenix)",
+        "modop": "Violation de données par l'exploitation d'une faille logicielle, ransomware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_breach",
+          "software_exploit"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/115772091914580225",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Services postaux, bancaires, services publics",
+        "theme": "Cyberattaque DDoS",
+        "description": "Les services en ligne de La Poste et de La Banque Postale en France ont été mis hors ligne suite à une cyberattaque par déni de service distribué (DDoS). Le groupe pro-russe NoName057(16) a revendiqué l'attaque, bien que la preuve de responsabilité soit encore en cours d'évaluation. L'incident a perturbé les services bancaires numériques et le suivi des colis, mais aucune donnée sensible n'a été volée. Une enquête a été ouverte par l'unité nationale cyber et la DGSI. L'attaque s'est produite juste avant la période de Noël, la période la plus chargée pour La Poste.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "poste",
+          "banque",
+          "ddos",
+          "noname057",
+          "pro_russie",
+          "critical_infrastructure",
+          "cyber_disruption"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cyberattack-knocks-offline-frances-postal-banking-services/, https://www.lemonde.fr/pixels/article/2025/12/23/cyberattaque-contre-la-poste-la-dgsi-et-l-unite-nationale-cyber-saisies_6659268_4408996.html, https://www.lemonde.fr/economie/article/2025/12/23/la-cyberattaque-visant-la-poste-a-baisse-en-intensite-mais-se-poursuit-juste-avant-noel_6659200_3234.html",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Éducation",
+        "victime": "Baker University",
+        "description": "Une violation de données en décembre 2024 a exposé les informations personnelles, de santé et financières de plus de 53 000 individus affiliés à l'université. Les données compromises incluent le nom, la date de naissance, le numéro de permis de conduire, les informations de compte financier, d'assurance maladie, médicales, de passeport, le numéro de sécurité sociale, le numéro d'identification d'étudiant et le numéro d'identification fiscale. L'université offre des services de surveillance de crédit.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "personal_data",
+          "financial_data",
+          "health_data"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/baker-university-data-breach-impacts-over-53-000-individuals/, https://databreaches.net/2025/12/23/baker-university-discloses-december-2024-breach/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Services Financiers",
+        "victime": "19 victimes (individus et entreprises) aux États-Unis",
+        "description": "Le département de la Justice américain a annoncé la saisie d'un domaine et d'une base de données utilisés dans le cadre d'une fraude de prise de contrôle de comptes bancaires. Les criminels utilisaient de fausses publicités de moteurs de recherche pour rediriger les victimes vers de faux sites bancaires, dérobant ainsi leurs identifiants. Des pertes estimées à 28 millions de dollars et des pertes réelles d'environ 14,6 millions de dollars ont été identifiées. La base de données contenait des milliers d'identifiants de connexion volés.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "banking",
+          "account_takeover",
+          "credential_theft",
+          "phishing",
+          "stolen_data"
+        ],
+        "sources": "https://databreaches.net/2025/12/23/justice-department-announces-seizure-of-stolen-password-database-used-in-bank-account-takeover-fraud/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Éducation, Gouvernement",
+        "victime": "Étudiants, individus dont les informations étaient dans les systèmes de LOSFA",
+        "description": "L'Office d'aide financière aux étudiants de Louisiane (LOSFA) a signalé un incident de sécurité des données où une partie non autorisée a accédé ou supprimé certains fichiers de ses systèmes en octobre. Une lettre datée du 5 décembre a averti les étudiants. L'incident était lié à une cyberattaque rapportée précédemment le 17 novembre.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "government",
+          "student_data",
+          "personal_data"
+        ],
+        "sources": "https://databreaches.net/2025/12/23/losfa-sends-out-letter-to-students-warning-of-data-security-incident-involving-information/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Automobile (concessionnaire), Consulting (Red Hat)",
+        "victime": "21 000 clients de Nissan Fukuoka Sales Co., Ltd.",
+        "description": "Une attaque contre une instance GitLab auto-gérée par Red Hat Consulting, utilisée par Nissan, a conduit à l'exposition des données de 21 000 clients de Nissan Fukuoka Sales. Les données compromises incluent les noms, adresses, numéros de téléphone, adresses e-mail partielles et informations relatives aux ventes. L'incident a été découvert en septembre.",
+        "tags": [
+          "violation",
+          "breach",
+          "automobile",
+          "supply_chain",
+          "gitlab",
+          "customer_data",
+          "personal_data"
+        ],
+        "sources": "https://securityaffairs.com/186048/data-breach/red-hat-gitlab-breach-exposes-data-of-21000-nissan-customers.html",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Russie (Non spécifié)",
+        "victime": "Non spécifié",
+        "description": "Rapport d'une tentative de violation de données en Russie. Détails sur le secteur ciblé et la victime inconnus.",
+        "tags": [
+          "violation",
+          "breach",
+          "russia",
+          "unknown_victim",
+          "threat_intel"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115771600597559181",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Maroc (Non spécifié)",
+        "victime": "Non spécifié",
+        "description": "Rapport d'une violation de données en cours visant le Maroc. Détails sur le secteur ciblé et la victime inconnus.",
+        "tags": [
+          "violation",
+          "breach",
+          "morocco",
+          "unknown_victim",
+          "threat_intel"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115770891996285463",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Éducation (Enseignement supérieur privé)",
+        "victime": "Près de 3,5 millions d'étudiants, personnel et fournisseurs de l'University of Phoenix",
+        "description": "Une cyberattaque liée au groupe ransomware Clop a exposé des données personnelles et financières de près de 3,5 millions d'individus. Le groupe a exploité une faille logicielle.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "ransomware",
+          "clop",
+          "personal_data",
+          "financial_data"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/115772091914580225",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView (versions 5.20 à 10.20)",
+        "description": "Exécution de code à distance (RCE) non authentifiée via un point d'API REST non authentifié, permettant un accès privilégié aux opérations de gestion d'infrastructure. Score CVSS 10.0.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "hpe",
+          "oneview",
+          "infrastructure_management",
+          "critical_vulnerability"
+        ],
+        "sources": "https://fieldeffect.com/blog/critical-rce-in-hpe-oneview-exposes-infrastructure-control-plane/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68667",
+        "cvss": 9.9,
+        "product": "continuwuity (Matrix homeserver, antérieur à la version 0.5.0)",
+        "description": "Injection de commande/validation d'entrée incorrecte permettant une RCE non authentifiée. Un attaquant peut forcer le serveur à signer cryptographiquement des événements d'adhésion arbitraires en exploitant un manque de validation de l'origine de la requête de signature. Score CVSS 9.9.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "improper_input_validation",
+          "matrix_homeserver"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68667",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": 9.9,
+        "product": "n8n workflow automation platform (versions 0.211.0 jusqu'à, mais non incluses, 1.120.4, 1.121.1 et 1.122.0)",
+        "description": "Exécution de code à distance (RCE) critique dans le système d'évaluation des expressions de workflow. Un utilisateur authentifié avec accès à l'édition de workflow peut exécuter du code arbitraire avec les privilèges du processus n8n. Score CVSS 9.9.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "workflow_automation",
+          "n8n",
+          "critical_vulnerability"
+        ],
+        "sources": "https://fieldeffect.com/blog/critical-flaw-in-n8n-exposes-workflow-automation-environments, https://securityaffairs.com/186036/hacking/critical-n8n-flaw-could-enable-arbitrary-code-execution.html, https://cybersecuritynews.com/n8n-automation-platform-vulnerability/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP (service snmptrapd)",
+        "description": "Débordement de tampon basé sur la pile dans le service SnmpTrapd, permettant une exécution de code à distance sans authentification. Déclenché par un paquet spécialement conçu, peut entraîner un déni de service et potentiellement une RCE. Score CVSS 9.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "buffer_overflow",
+          "net_snmp",
+          "snmptrapd",
+          "critical_vulnerability"
+        ],
+        "sources": "https://securityonline.info/critical-network-collapse-9-8-severity-net-snmp-buffer-overflow-threatens-global-monitoring-systems/, http://www.zerodayinitiative.com/advisories/ZDI-25-1181/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68669",
+        "cvss": 9.6,
+        "product": "5ire (assistant IA de bureau multiplateforme, versions 0.15.2 et antérieures)",
+        "description": "Exécution de code à distance (RCE) due à l'initialisation du plugin `markdown-it-mermaid` avec `securityLevel: 'loose'`, permettant le rendu de balises HTML dans les nœuds de diagramme Mermaid. Score CVSS 9.6.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "ai_assistant",
+          "markdown",
+          "html_injection",
+          "code_execution"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68669",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-66213",
+        "cvss": 9.4,
+        "product": "Coolify (outil de gestion de serveurs/applications/bases de données open-source et auto-hébergé, antérieur à la version 4.0.0-beta.451)",
+        "description": "Injection de commande authentifiée (RCE) dans la fonctionnalité `File Storage Directory Mount Path`. Des utilisateurs avec des permissions de gestion d'application/service peuvent exécuter des commandes arbitraires en tant que root. Score CVSS 9.4.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "command_injection",
+          "coolify",
+          "server_management"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-66213",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-66212",
+        "cvss": 9.4,
+        "product": "Coolify (outil de gestion de serveurs/applications/bases de données open-source et auto-hébergé, antérieur à la version 4.0.0-beta.451)",
+        "description": "Injection de commande authentifiée (RCE) dans la gestion du `Dynamic Proxy Configuration Filename`. Des utilisateurs avec des permissions de gestion d'application/service peuvent exécuter des commandes arbitraires en tant que root. Score CVSS 9.4.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "command_injection",
+          "coolify",
+          "proxy_configuration"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-66212",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS (Firebox firewalls, versions 2025.1.4, 12.11.6, 12.5.15 (T15/T35), et 12.3.1_Update4 (FIPS) résolues)",
+        "description": "Écriture hors limites dans le processus `iked`, permettant aux attaquants distants non authentifiés d'exécuter du code arbitraire. Activement exploitée. Score CVSS 9.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "watchguard",
+          "firewall",
+          "ikev2",
+          "out_of_bounds_write",
+          "actively_exploited"
+        ],
+        "sources": "https://socprime.com/blog/cve-2025-14733-vulnerability/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain (framework pour applications LLM, antérieur aux versions 0.3.81 et 1.2.5)",
+        "description": "Injection de désérialisation dans les fonctions `dumps()` et `dumpd()`. Des données contrôlées par l'utilisateur avec des clés 'lc' peuvent être traitées comme des objets LangChain légitimes lors de la désérialisation. Score CVSS 9.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "serialization_injection",
+          "langchain",
+          "llm",
+          "ai_security",
+          "secret_extraction"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68664",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68696",
+        "cvss": 8.8,
+        "product": "httparty (outil API, versions 0.23.2 et antérieures)",
+        "description": "Vulnérabilité SSRF (Server-Side Request Forgery) pouvant entraîner la fuite de clés API et permettre à des tiers d'envoyer des requêtes à des serveurs internes. Score CVSS 8.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ssrf",
+          "api_key_leakage",
+          "httparty",
+          "api_security"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68696",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2023-52163",
+        "cvss": 8.8,
+        "product": "Digiever DS-2105 Pro (enregistreur vidéo réseau, firmware 3.1.0.71-11)",
+        "description": "Injection de commande dans le script CGI `time_tzsetup.cgi`, permettant l'exécution de commandes arbitraires. Concerne des produits en fin de vie (EoL) sans patch officiel. Score CVSS 8.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "nvr",
+          "digiever",
+          "eol_product",
+          "cisa_kev"
+        ],
+        "sources": "https://securityaffairs.com/186021/security/u-s-cisa-adds-a-flaw-in-digiever-ds-2105-pro-to-its-known-exploited-vulnerabilities-catalog.html",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 8.6,
+        "product": "LangChain JS (@langchain/core versions 0.3.80 et 1.1.8, langchain versions 0.3.37 et 1.2.3)",
+        "description": "Injection de désérialisation dans la méthode `toJSON()` de LangChain JS. Le problème existe car la méthode n'échappait pas les objets avec des clés 'lc' lors de la sérialisation. Score CVSS 8.6.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "serialization_injection",
+          "langchain",
+          "llm",
+          "ai_security",
+          "secret_extraction"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68665",
+        "date": "2025-12-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Malicious extensions in Chrome Web store steal user credentials",
+        "description": "Deux extensions Chrome, 'Phantom Shuttle', se faisant passer pour des plugins de service proxy, détournent activement le trafic des utilisateurs et volent des données sensibles. Actives depuis 2017, elles acheminent tout le trafic web via des proxys contrôlés par les attaquants et peuvent intercepter les défis d'authentification HTTP pour capturer les identifiants, les détails de cartes, les mots de passe, les informations personnelles, voler les cookies de session et extraire les jetons API, en particulier pour plus de 170 domaines à forte valeur comme les plateformes de développeurs, les consoles de services cloud et les sites de médias sociaux.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1189.001",
+          "T1566.001",
+          "T1555",
+          "T1071.001"
+        ],
+        "analyse": "Cet incident met en lumière la menace persistante des extensions de navigateur malveillantes qui exploitent la confiance des utilisateurs dans les marketplaces officielles. La capacité à effectuer des attaques de l'homme du milieu via la redirection de trafic et à cibler des domaines à forte valeur indique une opération sophistiquée de vol d'identifiants et de données, avec un potentiel d'impact large.",
+        "recommandations": [
+          "Vérifier régulièrement les extensions de navigateur installées.",
+          "Installer uniquement des extensions de développeurs fiables.",
+          "Implémenter l'authentification multifacteur (MFA) sur tous les comptes critiques.",
+          "Surveiller le trafic réseau pour détecter toute utilisation inhabituelle de proxy.",
+          "Utiliser des politiques de sécurité de navigateur d'entreprise pour restreindre les installations d'extensions."
+        ],
+        "tags": [
+          "malicious_extension",
+          "browser_security",
+          "supply_chain",
+          "credential_theft",
+          "data_theft",
+          "man_in_the_middle",
+          "proxy_hijacking",
+          "chrome_web_store",
+          "T1189_001",
+          "T1566_001",
+          "T1555",
+          "T1071_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-extensions-in-chrome-web-store-steal-user-credentials/"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Operation PCPcat: 60,000 Next.js Servers Hijacked in Just 48 Hours",
+        "description": "La campagne 'PCPcat' est une opération de cyber-espionnage hautement automatisée exploitant des vulnérabilités (CVE-2025-29927, CVE-2025-66478) dans les frameworks Next.js et React. Elle a compromis près de 60 000 serveurs en moins de 48 heures. L'objectif est la collecte massive de données (identifiants cloud, clés SSH, variables d'environnement). Les attaquants utilisent la manipulation de charges utiles JSON et la pollution de prototype pour l'exécution de code à distance, puis installent des backdoors persistantes (GOST, FRP) pour établir des nœuds de botnet.",
+        "threat_actor": "PCPcat Group (PCP)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "67.217.57.240"
+          ],
+          "CVE": [
+            "CVE-2025-29927",
+            "CVE-2025-66478"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190",
+          "T1210",
+          "T1059",
+          "T1573",
+          "T1560.001",
+          "T1083",
+          "T1003",
+          "T1078",
+          "T1105",
+          "T1568.002",
+          "T1090"
+        ],
+        "analyse": "Cette campagne illustre la vitesse et l'échelle que peuvent atteindre les attaques automatisées ciblant des frameworks web populaires. L'accent mis sur les identifiants cloud et les clés SSH représente une menace critique pour l'infrastructure cloud, permettant un pivotement profond dans le réseau et un accès persistant. L'infrastructure C2 des attaquants était elle-même non sécurisée, ce qui a permis de recueillir des renseignements.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs aux applications Next.js et React contre CVE-2025-29927 et CVE-2025-66478.",
+          "Bloquer les adresses IP C2 identifiées.",
+          "Renouveler les identifiants cloud, les clés SSH et les variables d'environnement sensibles.",
+          "Mettre en œuvre une surveillance robuste pour les tentatives d'exécution de code à distance et les connexions sortantes suspectes depuis les serveurs web."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "automated_attack",
+          "nextjs",
+          "react",
+          "rce",
+          "data_harvesting",
+          "cloud_credentials",
+          "ssh_keys",
+          "botnet",
+          "T1190",
+          "T1210",
+          "T1059",
+          "T1573",
+          "T1560_001",
+          "T1083",
+          "T1003",
+          "T1078",
+          "T1105",
+          "T1568_002",
+          "T1090"
+        ],
+        "sources": [
+          "https://securityonline.info/operation-pcpcat-60000-next-js-servers-hijacked-in-just-48-hours/"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Why Third-Party Access Remains the Weak Link in Supply Chain Security",
+        "description": "Cet article analyse pourquoi l'accès des tiers est une faiblesse majeure dans la sécurité de la supply chain, avec 62 % des incidents d'intrusion système impliquant cette dernière. Les problèmes clés incluent un accès prolongé aux systèmes partenaires, des méthodes d'authentification faibles, des exceptions ignorées dans le contrôle d'accès et la révocation tardive des comptes inactifs. Ces pratiques augmentent la surface d'attaque, facilitant l'acquisition par les acteurs malveillants d'identités volées (combinaisons email/mot de passe, cookies de session) vendues sur les marchés noirs. Les réglementations comme la DORA de l'UE et les directives OCC/SEC américaines renforcent la surveillance de la résilience des tiers.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1195",
+          "T1078",
+          "T1531",
+          "T1078.004",
+          "T1552",
+          "T1566"
+        ],
+        "analyse": "L'analyse souligne que les brèches proviennent souvent de tiers de confiance en raison de pratiques laxistes en matière de gestion des identités et des accès (IAM). Les motivations financières des attaquants pour obtenir un accès persistant via des comptes tiers compromis sont élevées. La pression réglementaire indique une reconnaissance croissante de ce risque systémique.",
+        "recommandations": [
+          "Étendres les principes de zéro confiance aux tiers.",
+          "Mettre en œuvre une gestion du cycle de vie des identités de bout en bout avec révocation automatisée des accès.",
+          "Renforcer les méthodes d'authentification au-delà de simples réinitialisations de mot de passe.",
+          "Évaluer en permanence la confiance des utilisateurs, des sessions et des appareils avec des signaux de risque.",
+          "Effectuer des examens réguliers des accès des fournisseurs.",
+          "Segmenter les réseaux de gestion et restreindre l'exposition réseau."
+        ],
+        "tags": [
+          "supply_chain_security",
+          "third_party_risk",
+          "access_management",
+          "identity_and_access_management",
+          "iam",
+          "zero_trust",
+          "data_breach",
+          "T1195",
+          "T1078",
+          "T1531",
+          "T1078_004",
+          "T1552",
+          "T1566"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186026/security/why-third-party-access-remains-the-weak-link-in-supply-chain-security.html"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Livewire : exécution de commandes à distance via unmarshaling",
+        "description": "Analyse technique détaillée d'une vulnérabilité critique d'exécution de code à distance (RCE) dans Livewire, un framework Laravel populaire. La vulnérabilité découle d'une désérialisation (unmarshaling) non sécurisée au sein du mécanisme d'hydratation de Livewire. Les attaquants peuvent forger des charges utiles malveillantes pour manipuler ce processus, conduisant à l'exécution de code arbitraire. Alors qu'une variante nécessite la connaissance de l'APP_KEY, une autre faille critique (CVE-2025-54068, patchée dans la version 3.6.4+) permettait la RCE sans APP_KEY en injectant des 'synthesizers' via le mécanisme 'updates'. L'article détaille les chaînes de gadgets, les méthodes magiques PHP et les abus de typage faible.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54068"
+          ]
+        },
+        "mitre_ttps": [
+          "T1210",
+          "T1203",
+          "T1059.004",
+          "T1059.006",
+          "T1547.001",
+          "T1490",
+          "T1562.001"
+        ],
+        "analyse": "Cette analyse approfondie montre comment les frameworks complexes s'appuyant sur la sérialisation/désérialisation et le typage flexible peuvent introduire de graves vulnérabilités. L'existence d'une variante nécessitant l'APP_KEY qui reste non patchée, combinée aux fuites courantes d'APP_KEY, indique un risque persistant. La construction détaillée de la chaîne de gadgets fournit des informations précieuses pour les défenseurs et les attaquants sur les techniques d'exploitation RCE sophistiquées dans les applications PHP.",
+        "recommandations": [
+          "Mettre à jour Livewire vers la version 3.6.4+ immédiatement pour atténuer CVE-2025-54068.",
+          "Adopter un typage strict et une validation rigoureuse des données utilisateur dans les pratiques de développement.",
+          "Gérer et protéger de manière sécurisée les APP_KEY des applications; éviter les clés par défaut ou exposées.",
+          "Auditer régulièrement le code pour détecter les modèles de désérialisation non sécurisés.",
+          "Implémenter des pare-feu d'applications web (WAF) pour détecter et bloquer les charges utiles malveillantes."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "livewire",
+          "laravel",
+          "php",
+          "deserialization",
+          "unmarshaling",
+          "gadget_chain",
+          "type_juggling",
+          "app_key",
+          "web_application_security",
+          "T1210",
+          "T1203",
+          "T1059_004",
+          "T1059_006",
+          "T1547_001",
+          "T1490",
+          "T1562_001"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/livewire-execution-de-commandes-a-distance-via-unmarshaling.html"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "WebRAT malware spread via fake vulnerability exploits on GitHub",
+        "description": "Une nouvelle campagne distribue le malware WebRAT via de faux dépôts GitHub se faisant passer pour des exploits de preuve de concept (PoC) pour des vulnérabilités récemment divulguées (par exemple, CVE-2025-10294, CVE-2025-59295, CVE-2025-59230). Ciblant initialement les gamers et les utilisateurs de logiciels piratés, les opérateurs de WebRAT ont étendu leurs cibles aux professionnels et étudiants inexpérimentés en cybersécurité. Le malware est une backdoor capable de voler des identifiants (Steam, Discord, Telegram), des données de portefeuilles de cryptomonnaies, et d'effectuer des fonctions d'espionnage (webcam, captures d'écran, enregistrement de frappes). Les faux exploits sont livrés dans des fichiers ZIP protégés par mot de passe contenant un dropper ('rasmanesc.exe'), un fichier batch et un fichier DLL corrompu servant de leurre. Les dépôts GitHub malveillants ont été supprimés, mais de nouvelles tentatives sont possibles.",
+        "threat_actor": "WebRAT operators",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://github[.]com/RedFoxNxploits/CVE-2025-10294-Pochttps://github[.]com/FixingPhantom/CVE-2025-10294",
+            "https://github[.]com/h4xnz/CVE-2025-10294-POC",
+            "https://github[.]com/usjnx72726w/CVE-2025-59295/tree/main",
+            "https://github[.]com/stalker110119/CVE-2025-59230/tree/main",
+            "https://github[.]com/moegameka/CVE-2025-59230",
+            "https://github[.]com/DebugFrag/CVE-2025-12596-Exploit",
+            "https://github[.]com/themaxlpalfaboy/CVE-2025-54897-LAB",
+            "https://github[.]com/DExplo1ted/CVE-2025-54106-POC",
+            "https://github[.]com/h4xnz/CVE-2025-55234-POC",
+            "https://github[.]com/Hazelooks/CVE-2025-11499-Exploit",
+            "https://github[.]com/usjnx72726w/CVE-2025-11499-LAB",
+            "https://github[.]com/modhopmarrow1973/CVE-2025-11833-LAB",
+            "https://github[.]com/rootreapers/CVE-2025-11499",
+            "https://github[.]com/lagerhaker539/CVE-2025-12595-POC"
+          ],
+          "FILE_NAME": [
+            "rasmanesc.exe"
+          ]
+        },
+        "mitre_ttps": [
+          "T1598.003",
+          "T1588.002",
+          "T1566.001",
+          "T1204.002",
+          "T1071.001",
+          "T1555",
+          "T1113",
+          "T1123",
+          "T1056.001"
+        ],
+        "analyse": "Ces campagnes exploitent la confiance associée à GitHub et l'urgence autour des nouvelles vulnérabilités pour distribuer des infostealers. Le changement de cible vers les professionnels de l'infosec souligne l'adaptation des attaquants et le danger d'exécuter des exploits PoC non vérifiés dans des environnements de production ou sensibles. L'impact inclut le vol de données (identifiants, crypto) et le contrôle potentiel du système.",
+        "recommandations": [
+          "Analyser les exploits dans des environnements isolés (machines virtuelles, sandboxes).",
+          "Vérifier les sources des exploits PoC.",
+          "Mettre en œuvre une détection et une réponse robustes sur les endpoints.",
+          "Éduquer les utilisateurs, en particulier les étudiants et les jeunes professionnels, sur les tactiques d'ingénierie sociale et les pratiques sûres pour la manipulation de fichiers potentiellement malveillants."
+        ],
+        "tags": [
+          "malware",
+          "webrat",
+          "infostealer",
+          "github",
+          "fake_exploit",
+          "social_engineering",
+          "credential_theft",
+          "cryptocurrency_theft",
+          "spyware",
+          "T1598_003",
+          "T1588_002",
+          "T1566_001",
+          "T1204_002",
+          "T1071_001",
+          "T1555",
+          "T1113",
+          "T1123",
+          "T1056_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/webrat-malware-spread-via-fake-vulnerability-exploits-on-github/",
+          "https://securelist.com/webrat-distributed-via-github/118555/",
+          "https://securityonline.info/webrat-trap-hackers-lure-junior-security-researchers-with-fake-github-exploits/",
+          "https://www.helpnetsecurity.com/2025/12/23/fake-poc-exploits-webrat-malware/"
+        ],
+        "date": "2025-12-24"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cyber threat landscape is characterized by an intensification of sophisticated attacks targeting diverse sectors, ranging from critical infrastructure to automation platforms and end-users. Key trends include the widespread exploitation of known vulnerabilities, often with very high CVSS scores, enabling unauthenticated or authenticated remote code execution (RCE). Supply chain attacks and compromises via third-party access remain major entry vectors, as evidenced by incidents involving Red Hat/Nissan and analyses of identity and access management. Malicious actors, whether opportunistic cybercriminal groups (WebRAT operators) or state-affiliated entities (NoName057(16)), are adapting their tactics, including targeting new profiles like cybersecurity researchers, and using automated methods for large-scale campaigns (PCPcat). The role of AI is also a point of discussion, particularly with vulnerabilities affecting LLM frameworks like LangChain, and growing regulatory requirements around trustworthy AI. Infostealers and malicious extensions continue to threaten data confidentiality. Data breaches are frequent, affecting the education and finance sectors, leading to the leakage of personal, health, and financial information. In conclusion, the overall threat level is high, demanding continuous vigilance, rapid patching, rigorous access management, and proactive efforts to identify and mitigate systemic risks.",
+      "date": "2025-12-24"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "WebRAT Operators",
+        "secteur": "Information security professionals/students, gamers, users of pirated software, general users",
+        "modop": "Distribution via fake GitHub PoC exploits for known vulnerabilities. Uses pirated software and game cheats. Steals credentials (Steam, Discord, Telegram), cryptocurrency wallet data, and performs spyware functions (webcam, screenshots, keylogging).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "social_engineering",
+          "fake_exploit",
+          "github",
+          "webrat",
+          "credential_theft",
+          "cryptocurrency_theft",
+          "spyware"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/webrat-malware-spread-via-fake-vulnerability-exploits-on-github/, https://securelist.com/webrat-distributed-via-github/118555/, https://securityonline.info/webrat-trap-hackers-lure-junior-security-researchers-with-fake-github-exploits/, https://www.helpnetsecurity.com/2025/12/23/fake-poc-exploits-webrat-malware/",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "PCPcat Group (PCP)",
+        "secteur": "Cloud infrastructure, modern web applications (Next.js, React)",
+        "modop": "Automated cyber-espionage campaign, exploiting RCE vulnerabilities (CVE-2025-29927, CVE-2025-66478) via JSON payload manipulation and prototype pollution. Installs persistent backdoors (GOST, FRP) for data harvesting (cloud credentials, SSH keys, .env files).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cyber_espionage",
+          "automated_campaign",
+          "rce",
+          "data_harvesting",
+          "nextjs",
+          "react",
+          "cloud_security",
+          "botnet"
+        ],
+        "sources": "https://securityonline.info/operation-pcpcat-60000-next-js-servers-hijacked-in-just-48-hours/",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Postal services, banking, public services (France), Ukraine, its allies",
+        "modop": "Distributed Denial of Service (DDoS) attacks.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "pro_russia",
+          "ddos",
+          "critical_infrastructure",
+          "disruption"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cyberattack-knocks-offline-frances-postal-banking-services/, https://www.lemonde.fr/pixels/article/2025/12/23/cyberattaque-contre-la-poste-la-dgsi-et-l-unite-nationale-cyber-saisies_6659268_4408996.html, https://www.lemonde.fr/economie/article/2025/12/23/la-cyberattaque-visant-la-poste-a-baisse-en-intensite-mais-se-poursuit-juste-avant-noel_6659200_3234.html",
+        "date": "2025-12-24"
+      },
+      {
+        "nom": "Clop ransomware group",
+        "secteur": "Education (University of Phoenix)",
+        "modop": "Data breach through exploitation of a software flaw, ransomware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_breach",
+          "software_exploit"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/115772091914580225",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Postal Services, Banking, Public Services",
+        "theme": "DDoS Cyberattack",
+        "description": "Online services for La Poste and La Banque Postale in France were knocked offline following a Distributed Denial of Service (DDoS) cyberattack. The pro-Russian group NoName057(16) claimed responsibility for the attack, although proof of responsibility is still under assessment. The incident disrupted digital banking services and parcel tracking, but no sensitive data was stolen. An investigation was opened by the national cyber unit and the DGSI. The attack occurred just before the Christmas holiday season, the busiest period for La Poste.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "poste",
+          "bank",
+          "ddos",
+          "noname057",
+          "pro_russia",
+          "critical_infrastructure",
+          "cyber_disruption"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cyberattack-knocks-offline-frances-postal-banking-services/, https://www.lemonde.fr/pixels/article/2025/12/23/cyberattaque-contre-la-poste-la-dgsi-et-l-unite-nationale-cyber-saisies_6659268_4408996.html, https://www.lemonde.fr/economie/article/2025/12/23/la-cyberattaque-visant-la-poste-a-baisse-en-intensite-mais-se-poursuit-juste-avant-noel_6659200_3234.html",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Education",
+        "victime": "Baker University",
+        "description": "A data breach in December 2024 exposed personal, health, and financial information of over 53,000 individuals affiliated with the university. Compromised data included name, date of birth, driver's license number, financial account information, health insurance information, medical information, passport information, Social Security number, student identification number, and tax identification number. The university is offering credit monitoring services.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "personal_data",
+          "financial_data",
+          "health_data"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/baker-university-data-breach-impacts-over-53-000-individuals/, https://databreaches.net/2025/12/23/baker-university-discloses-december-2024-breach/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "19 victims (individuals and companies) across the United States",
+        "description": "The U.S. Department of Justice announced the seizure of a web domain and database used in a bank account takeover fraud scheme. Criminals used fraudulent search engine ads to redirect victims to fake banking websites, stealing their login credentials. Estimated losses were $28 million, with actual losses around $14.6 million. The database contained thousands of stolen login credentials.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "banking",
+          "account_takeover",
+          "credential_theft",
+          "phishing",
+          "stolen_data"
+        ],
+        "sources": "https://databreaches.net/2025/12/23/justice-department-announces-seizure-of-stolen-password-database-used-in-bank-account-takeover-fraud/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Education, Government",
+        "victime": "Students, individuals whose information was in LOSFA systems",
+        "description": "The Louisiana Office of Student Financial Assistance (LOSFA) reported a data security incident where an unauthorized party accessed or removed certain files from its systems in October. A letter dated December 5 warned students. The incident was related to a cyberattack reported earlier on November 17.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "government",
+          "student_data",
+          "personal_data"
+        ],
+        "sources": "https://databreaches.net/2025/12/23/losfa-sends-out-letter-to-students-warning-of-data-security-incident-involving-information/",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Automotive (dealership), Consulting (Red Hat)",
+        "victime": "21,000 customers of Nissan Fukuoka Sales Co., Ltd.",
+        "description": "An attack on a self-managed GitLab instance used by Red Hat Consulting, contracted by Nissan, led to the exposure of data for 21,000 Nissan Fukuoka Sales customers. Compromised data included names, addresses, phone numbers, partial email addresses, and sales-related information. The incident was discovered in September.",
+        "tags": [
+          "violation",
+          "breach",
+          "automobile",
+          "supply_chain",
+          "gitlab",
+          "customer_data",
+          "personal_data"
+        ],
+        "sources": "https://securityaffairs.com/186048/data-breach/red-hat-gitlab-breach-exposes-data-of-21000-nissan-customers.html",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Russia (Unspecified)",
+        "victime": "Unspecified",
+        "description": "Report of a data breach attempt in Russia. Details on target sector and victim unknown.",
+        "tags": [
+          "violation",
+          "breach",
+          "russia",
+          "unknown_victim",
+          "threat_intel"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115771600597559181",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Morocco (Unspecified)",
+        "victime": "Unspecified",
+        "description": "Report of an ongoing data breach targeting Morocco. Details on target sector and victim unknown.",
+        "tags": [
+          "violation",
+          "breach",
+          "morocco",
+          "unknown_victim",
+          "threat_intel"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115770891996285463",
+        "date": "2025-12-24"
+      },
+      {
+        "secteur": "Education (Private Higher Education)",
+        "victime": "Nearly 3.5 million students, staff, and suppliers of the University of Phoenix",
+        "description": "A cyberattack linked to the Clop ransomware group exposed personal and financial data of nearly 3.5 million individuals. The group exploited a software flaw.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "ransomware",
+          "clop",
+          "personal_data",
+          "financial_data"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/115772091914580225",
+        "date": "2025-12-24"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView (versions 5.20 through 10.20)",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability via an unauthenticated REST API endpoint, allowing privileged access to infrastructure management operations. CVSS score 10.0.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "hpe",
+          "oneview",
+          "infrastructure_management",
+          "critical_vulnerability"
+        ],
+        "sources": "https://fieldeffect.com/blog/critical-rce-in-hpe-oneview-exposes-infrastructure-control-plane/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68667",
+        "cvss": 9.9,
+        "product": "continuwuity (Matrix homeserver, prior to version 0.5.0)",
+        "description": "Command injection/Improper Input Validation vulnerability allowing unauthenticated RCE context. A remote, unauthenticated attacker can force the target server to cryptographically sign arbitrary membership events by exploiting a failure to validate the origin of a signing request. CVSS score 9.9.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "improper_input_validation",
+          "matrix_homeserver"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68667",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": 9.9,
+        "product": "n8n workflow automation platform (versions 0.211.0 up to but not including 1.120.4, 1.121.1, and 1.122.0)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability in the workflow expression evaluation system. An authenticated user with workflow-editing access can execute arbitrary code with the privileges of the n8n process. CVSS score 9.9.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "workflow_automation",
+          "n8n",
+          "critical_vulnerability"
+        ],
+        "sources": "https://fieldeffect.com/blog/critical-flaw-in-n8n-exposes-workflow-automation-environments, https://securityaffairs.com/186036/hacking/critical-n8n-flaw-could-enable-arbitrary-code-execution.html, https://cybersecuritynews.com/n8n-automation-platform-vulnerability/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP (snmptrapd service)",
+        "description": "Stack-based buffer overflow in the SnmpTrapd service, allowing unauthenticated remote code execution. Triggered by a specially crafted packet, potentially leading to Denial of Service and RCE. CVSS score 9.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "buffer_overflow",
+          "net_snmp",
+          "snmptrapd",
+          "critical_vulnerability"
+        ],
+        "sources": "https://securityonline.info/critical-network-collapse-9-8-severity-net-snmp-buffer-overflow-threatens-global-monitoring-systems/, http://www.zerodayinitiative.com/advisories/ZDI-25-1181/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68669",
+        "cvss": 9.6,
+        "product": "5ire (cross-platform desktop AI assistant, versions 0.15.2 and prior)",
+        "description": "Remote Code Execution (RCE) vulnerability in `useMarkdown.ts` due to `markdown-it-mermaid` plugin initialization with `securityLevel: 'loose'`, allowing HTML tag rendering in Mermaid diagram nodes. CVSS score 9.6.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "ai_assistant",
+          "markdown",
+          "html_injection",
+          "code_execution"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68669",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-66213",
+        "cvss": 9.4,
+        "product": "Coolify (open-source server/app/DB management tool, prior to version 4.0.0-beta.451)",
+        "description": "Authenticated command injection (RCE) vulnerability in the `File Storage Directory Mount Path` functionality, allowing users with application/service management permissions to execute arbitrary commands as root. CVSS score 9.4.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "command_injection",
+          "coolify",
+          "server_management"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-66213",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-66212",
+        "cvss": 9.4,
+        "product": "Coolify (open-source server/app/DB management tool, prior to version 4.0.0-beta.451)",
+        "description": "Authenticated command injection (RCE) vulnerability in the `Dynamic Proxy Configuration Filename` handling, allowing users with application/service management permissions to execute arbitrary commands as root. CVSS score 9.4.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "authenticated_rce",
+          "command_injection",
+          "coolify",
+          "proxy_configuration"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-66212",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-14733",
+        "cvss": 9.3,
+        "product": "WatchGuard Fireware OS (Firebox firewalls, resolved in versions 2025.1.4, 12.11.6, 12.5.15 (T15/T35), and 12.3.1_Update4 (FIPS))",
+        "description": "Out-of-bounds write vulnerability in the `iked` process, allowing unauthenticated remote attackers to execute arbitrary code with low attack complexity and no user interaction. Actively exploited. CVSS score 9.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated_rce",
+          "watchguard",
+          "firewall",
+          "ikev2",
+          "out_of_bounds_write",
+          "actively_exploited"
+        ],
+        "sources": "https://socprime.com/blog/cve-2025-14733-vulnerability/",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain (framework for LLM-powered applications, prior to versions 0.3.81 and 1.2.5)",
+        "description": "Serialization injection vulnerability in LangChain's `dumps()` and `dumpd()` functions. User-controlled data with 'lc' keys can be treated as legitimate LangChain objects during deserialization. CVSS score 9.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "serialization_injection",
+          "langchain",
+          "llm",
+          "ai_security",
+          "secret_extraction"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68664",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68696",
+        "cvss": 8.8,
+        "product": "httparty (API tool, versions 0.23.2 and prior)",
+        "description": "SSRF (Server-Side Request Forgery) vulnerability that can lead to API key leakage and allow third parties to issue requests to internal servers. CVSS score 8.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ssrf",
+          "api_key_leakage",
+          "httparty",
+          "api_security"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68696",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2023-52163",
+        "cvss": 8.8,
+        "product": "Digiever DS-2105 Pro (network video recorder, firmware version 3.1.0.71-11)",
+        "description": "Command injection vulnerability in the `time_tzsetup.cgi` CGI script, allowing arbitrary command execution via specially crafted HTTP requests. Affects End-of-Life (EoL) products without official patches. CVSS score 8.8.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "nvr",
+          "digiever",
+          "eol_product",
+          "cisa_kev"
+        ],
+        "sources": "https://securityaffairs.com/186021/security/u-s-cisa-adds-a-flaw-in-digiever-ds-2105-pro-to-its-known-exploited-vulnerabilities-catalog.html",
+        "date": "2025-12-24"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 8.6,
+        "product": "LangChain JS (@langchain/core versions 0.3.80 and 1.1.8, langchain versions 0.3.37 and 1.2.3)",
+        "description": "Serialization injection vulnerability in LangChain JS's `toJSON()` method. The method did not escape objects with 'lc' keys when serializing free-form data, allowing user-controlled data to be treated as legitimate LangChain objects. CVSS score 8.6.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "serialization_injection",
+          "langchain",
+          "llm",
+          "ai_security",
+          "secret_extraction"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68665",
+        "date": "2025-12-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Malicious extensions in Chrome Web store steal user credentials",
+        "description": "Two Chrome extensions, 'Phantom Shuttle,' posing as proxy service plugins, are actively hijacking user traffic and stealing sensitive data. Active since 2017, they route all user web traffic through attacker-controlled proxies using hardcoded credentials. The extensions intercept HTTP authentication challenges and can capture credentials, card details, passwords, personal info, steal session cookies, and extract API tokens from requests, especially for over 170 high-value domains including developer platforms, cloud service consoles, and social media sites.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1189.001",
+          "T1566.001",
+          "T1555",
+          "T1071.001"
+        ],
+        "analyse": "This incident highlights the persistent threat of malicious browser extensions, leveraging the trust users place in official marketplaces and common utilities (proxy services). The ability to perform man-in-the-middle attacks via traffic redirection and target high-value domains indicates a sophisticated credential and data theft operation with broad impact potential.",
+        "recommandations": [
+          "Regularly audit installed browser extensions.",
+          "Only install extensions from trusted developers and with strong reviews.",
+          "Implement multi-factor authentication (MFA) on all critical accounts.",
+          "Monitor network traffic for unusual proxy usage.",
+          "Use enterprise-level browser security policies to restrict extension installations."
+        ],
+        "tags": [
+          "malicious_extension",
+          "browser_security",
+          "supply_chain",
+          "credential_theft",
+          "data_theft",
+          "man_in_the_middle",
+          "proxy_hijacking",
+          "chrome_web_store",
+          "T1189_001",
+          "T1566_001",
+          "T1555",
+          "T1071_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-extensions-in-chrome-web-store-steal-user-credentials/"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Operation PCPcat: 60,000 Next.js Servers Hijacked in Just 48 Hours",
+        "description": "The 'PCPcat' campaign is a highly automated cyber-espionage operation exploiting vulnerabilities (CVE-2025-29927, CVE-2025-66478) in Next.js and React frameworks. It achieved a high infection rate, compromising nearly 60,000 servers in less than 48 hours. The objective is massive data harvesting, specifically cloud credentials, SSH keys, and environment variables. The attackers use JSON payload manipulation and prototype pollution for RCE, followed by installing persistent backdoors (GOST, FRP) to establish botnet nodes.",
+        "threat_actor": "PCPcat Group (PCP)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "67.217.57.240"
+          ],
+          "CVE": [
+            "CVE-2025-29927",
+            "CVE-2025-66478"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190",
+          "T1210",
+          "T1059",
+          "T1573",
+          "T1560.001",
+          "T1083",
+          "T1003",
+          "T1078",
+          "T1105",
+          "T1568.002",
+          "T1090"
+        ],
+        "analyse": "This campaign illustrates the speed and scale achievable by automated attacks targeting popular web frameworks. The focus on cloud credentials and SSH keys represents a critical threat to cloud infrastructure, enabling deep network pivoting and persistent access. The attackers' own C2 infrastructure was insecure, which allowed for intelligence gathering.",
+        "recommandations": [
+          "Immediately patch Next.js and React applications against CVE-2025-29927 and CVE-2025-66478.",
+          "Block identified C2 IP addresses.",
+          "Rotate cloud credentials, SSH keys, and sensitive environment variables.",
+          "Implement robust monitoring for RCE attempts and suspicious outbound connections from web servers."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "automated_attack",
+          "nextjs",
+          "react",
+          "rce",
+          "data_harvesting",
+          "cloud_credentials",
+          "ssh_keys",
+          "botnet",
+          "T1190",
+          "T1210",
+          "T1059",
+          "T1573",
+          "T1560_001",
+          "T1083",
+          "T1003",
+          "T1078",
+          "T1105",
+          "T1568_002",
+          "T1090"
+        ],
+        "sources": [
+          "https://securityonline.info/operation-pcpcat-60000-next-js-servers-hijacked-in-just-48-hours/"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Why Third-Party Access Remains the Weak Link in Supply Chain Security",
+        "description": "This article analyzes why third-party access is a major weakness in supply chain security, with 62% of system intrusion incidents involving the supply chain. Key issues include: prolonged access to partner systems after need, weak authentication methods, ignored exceptions in access control, and delayed revocation of inactive accounts. These practices expand the attack surface, making it easier for threat actors to acquire stolen identities (email/password combos, session cookies, fullz) sold on darknet markets. Regulations like EU DORA and U.S. OCC/SEC guidelines are increasing scrutiny on third-party resilience.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1195",
+          "T1078",
+          "T1531",
+          "T1078.004",
+          "T1552",
+          "T1566"
+        ],
+        "analyse": "The analysis emphasizes that breaches often originate from trusted third parties due to lax Identity and Access Management (IAM) practices. The financial incentives for attackers to acquire persistent access via compromised third-party accounts are high. Regulatory pressure indicates a growing recognition of this systemic risk.",
+        "recommandations": [
+          "Extend zero-trust principles to third parties.",
+          "Implement end-to-end identity lifecycle management with automated access revocation.",
+          "Strengthen authentication methods beyond simple password resets.",
+          "Continuously evaluate user, session, and device trust with risk signals.",
+          "Conduct regular access reviews for vendors.",
+          "Segment management networks and restrict network exposure."
+        ],
+        "tags": [
+          "supply_chain_security",
+          "third_party_risk",
+          "access_management",
+          "identity_and_access_management",
+          "iam",
+          "zero_trust",
+          "data_breach",
+          "T1195",
+          "T1078",
+          "T1531",
+          "T1078_004",
+          "T1552",
+          "T1566"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186026/security/why-third-party-access-remains-the-weak-link-in-supply-chain-security.html"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "Livewire : exécution de commandes à distance via unmarshaling",
+        "description": "This article provides a detailed technical analysis of a critical Remote Code Execution (RCE) vulnerability in Livewire, a popular Laravel framework. The vulnerability stems from unsafe deserialization (unmarshaling) within Livewire's hydration mechanism. Attackers can forge malicious payloads to manipulate this process, leading to arbitrary code execution. While one variant requires knowing the application's APP_KEY, another critical flaw (CVE-2025-54068, since patched in 3.6.4+) allowed RCE without APP_KEY by injecting 'synthesizers' via the 'updates' mechanism. The analysis details gadget chains, PHP magic methods, and type juggling abuses.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54068"
+          ]
+        },
+        "mitre_ttps": [
+          "T1210",
+          "T1203",
+          "T1059.004",
+          "T1059.006",
+          "T1547.001",
+          "T1490",
+          "T1562.001"
+        ],
+        "analyse": "This deep dive highlights how complex frameworks relying on serialization/deserialization and flexible typing can introduce severe vulnerabilities. The existence of a variant requiring the APP_KEY that remains unpatched, coupled with common APP_KEY leakages, indicates a persistent risk. The detailed gadget chain construction provides valuable insights for both defenders and attackers into sophisticated RCE exploitation techniques in PHP applications.",
+        "recommandations": [
+          "Update Livewire to version 3.6.4+ immediately to mitigate CVE-2025-54068.",
+          "Adopt strict typing and rigorous user data validation in development practices.",
+          "Securely manage and protect application APP_KEYs; avoid default or exposed keys.",
+          "Regularly audit code for unsafe deserialization patterns.",
+          "Implement Web Application Firewalls (WAF) to detect and block malicious payloads."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "livewire",
+          "laravel",
+          "php",
+          "deserialization",
+          "unmarshaling",
+          "gadget_chain",
+          "type_juggling",
+          "app_key",
+          "web_application_security",
+          "T1210",
+          "T1203",
+          "T1059_004",
+          "T1059_006",
+          "T1547_001",
+          "T1490",
+          "T1562_001"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/livewire-execution-de-commandes-a-distance-via-unmarshaling.html"
+        ],
+        "date": "2025-12-24"
+      },
+      {
+        "title": "WebRAT malware spread via fake vulnerability exploits on GitHub",
+        "description": "A new campaign is distributing WebRAT malware through fake GitHub repositories posing as proof-of-concept (PoC) exploits for recently disclosed vulnerabilities (e.g., CVE-2025-10294, CVE-2025-59295, CVE-2025-59230). Initially targeting gamers and users of pirated software, WebRAT operators have expanded their targets to include inexperienced cybersecurity professionals and students. The malware is a backdoor capable of stealing credentials (Steam, Discord, Telegram), cryptocurrency wallet data, and performing spyware functions (webcam, screenshots, keylogging). Fake exploits are delivered in password-protected ZIP files containing a dropper ('rasmanesc.exe'), a batch file, and a corrupted decoy DLL. Malicious GitHub repositories have been removed, but new lures are possible.",
+        "threat_actor": "WebRAT operators",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://github[.]com/RedFoxNxploits/CVE-2025-10294-Pochttps://github[.]com/FixingPhantom/CVE-2025-10294",
+            "https://github[.]com/h4xnz/CVE-2025-10294-POC",
+            "https://github[.]com/usjnx72726w/CVE-2025-59295/tree/main",
+            "https://github[.]com/stalker110119/CVE-2025-59230/tree/main",
+            "https://github[.]com/moegameka/CVE-2025-59230",
+            "https://github[.]com/DebugFrag/CVE-2025-12596-Exploit",
+            "https://github[.]com/themaxlpalfaboy/CVE-2025-54897-LAB",
+            "https://github[.]com/DExplo1ted/CVE-2025-54106-POC",
+            "https://github[.]com/h4xnz/CVE-2025-55234-POC",
+            "https://github[.]com/Hazelooks/CVE-2025-11499-Exploit",
+            "https://github[.]com/usjnx72726w/CVE-2025-11499-LAB",
+            "https://github[.]com/modhopmarrow1973/CVE-2025-11833-LAB",
+            "https://github[.]com/rootreapers/CVE-2025-11499",
+            "https://github[.]com/lagerhaker539/CVE-2025-12595-POC"
+          ],
+          "FILE_NAME": [
+            "rasmanesc.exe"
+          ]
+        },
+        "mitre_ttps": [
+          "T1598.003",
+          "T1588.002",
+          "T1566.001",
+          "T1204.002",
+          "T1071.001",
+          "T1555",
+          "T1113",
+          "T1123",
+          "T1056.001"
+        ],
+        "analyse": "These campaigns exploit the trust associated with GitHub and the urgency around new vulnerabilities to distribute infostealers. The shift in targeting towards infosec professionals highlights attackers' adaptation and the danger of running unverified PoC exploits in production or sensitive environments. Impact includes data theft (credentials, crypto) and potential system control.",
+        "recommandations": [
+          "Analyze exploits in isolated environments (VMs, sandboxes).",
+          "Verify sources of PoC exploits.",
+          "Implement robust endpoint detection and response.",
+          "Educate users, especially students and junior professionals, on social engineering tactics and safe practices for handling potentially malicious files."
+        ],
+        "tags": [
+          "malware",
+          "webrat",
+          "infostealer",
+          "github",
+          "fake_exploit",
+          "social_engineering",
+          "credential_theft",
+          "cryptocurrency_theft",
+          "spyware",
+          "T1598_003",
+          "T1588_002",
+          "T1566_001",
+          "T1204_002",
+          "T1071_001",
+          "T1555",
+          "T1113",
+          "T1123",
+          "T1056_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/webrat-malware-spread-via-fake-vulnerability-exploits-on-github/",
+          "https://securelist.com/webrat-distributed-via-github/118555/",
+          "https://securityonline.info/webrat-trap-hackers-lure-junior-security-researchers-with-fake-github-exploits/",
+          "https://www.helpnetsecurity.com/2025/12/23/fake-poc-exploits-webrat-malware/"
+        ],
+        "date": "2025-12-24"
+      }
+    ]
+  }
+}
