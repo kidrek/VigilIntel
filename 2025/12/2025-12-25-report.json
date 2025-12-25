@@ -1,0 +1,1409 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber révèle une intensification des menaces persistantes et émergentes, marquées par l'exploitation de vulnérabilités critiques et des campagnes d'espionnage sophistiquées. L'utilisation de techniques de typosquatting et de DNS poisoning démontre une diversification des vecteurs d'attaque pour la distribution de malwares, tandis que les vulnérabilités RCE et d'élévation de privilèges dans des produits largement répandus comme MongoDB, TeamViewer DEX, LangChain et Zimbra continuent de présenter des risques élevés. Le secteur bancaire et la santé restent des cibles privilégiées pour le vol de données et les rançongiciels, soulignant la nécessité d'une vigilance constante. L'IA générative introduit de nouvelles menaces avec les attaques par injection de prompt, forçant les développeurs à renforcer les modèles. Sur le plan géopolitique, des interdictions de drones et des amendes réglementaires soulignent les tensions liées à la sécurité nationale et à la concurrence. En conclusion, l'état général des menaces est élevé, exigeant une approche proactive en matière de patch management, de renforcement des défenses anti-phishing, et d'adaptation aux risques liés aux technologies émergentes comme l'IA.",
+      "date": "2025-12-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Evasive Panda (Bronze Highland, Daggerfly, StormBamboo)",
+        "secteur": "Diverses industries (incluant streaming vidéo, utilitaires)",
+        "modop": "Attaques de type Adversary-in-the-Middle (AitM), empoisonnement DNS, DLL sideloading, injection de processus, utilisation de chargeurs personnalisés et de chiffrement hybride (DPAPI, RC5) pour déployer le malware MgBot.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Evasive Panda",
+          "APT",
+          "AitM",
+          "DNS poisoning",
+          "MgBot",
+          "DLL sideloading",
+          "process injection"
+        ],
+        "sources": "https://securelist.com/evasive-panda-apt/118576/",
+        "date": "2025-12-25"
+      },
+      {
+        "nom": "Fly (Flyded, Alex Aske)",
+        "secteur": "Cybercriminalité (marché souterrain de données volées)",
+        "modop": "Opération du marché noir 'Russian Market' vendant des identités numériques volées, des cookies de navigateur et des identifiants RDP. Implication dans la conception de stealers et l'utilisation de méthodes sophistiquées de blanchiment d'argent via des cryptomonnaies.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Fly",
+          "Flyded",
+          "Russian Market",
+          "cybercrime",
+          "stealer",
+          "data theft",
+          "dark web"
+        ],
+        "sources": "https://securityonline.info/the-ghost-in-the-market-unmasking-fly-the-secret-architect-of-the-infamous-russian-market/",
+        "date": "2025-12-25"
+      },
+      {
+        "nom": "Operation PCPcat",
+        "secteur": "Infrastructure Web, E-commerce, Cloud",
+        "modop": "Campagne d'espionnage cybernétique à grande échelle ciblant les serveurs React et Next.js. Exploitation de vulnérabilités RCE via la pollution de prototypes JavaScript, déploiement de chargeurs malveillants et d'outils proxy (GOST, Fast Reverse Proxy) pour la persistance, exfiltration de centaines de milliers d'identifiants.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Operation PCPcat",
+          "espionnage cybernétique",
+          "RCE",
+          "pollution de prototypes",
+          "vol d'identifiants",
+          "persistance",
+          "cloud"
+        ],
+        "sources": "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Technologie, Sécurité nationale",
+        "theme": "Réglementation des drones étrangers",
+        "description": "La Commission fédérale des communications (FCC) des États-Unis a interdit les drones et les composants critiques fabriqués dans des pays étrangers, invoquant des préoccupations de sécurité nationale. Cette mesure vise à protéger l'espace aérien américain et à réduire la dépendance vis-à-vis des drones fabriqués à l'étranger avant des événements majeurs comme la Coupe du Monde 2026 et les Jeux Olympiques 2028. Elle bloque notamment les drones fabriqués en Chine, tels que DJI et Autel, du marché américain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "drones",
+          "FCC",
+          "sécurité nationale",
+          "USA",
+          "réglementation"
+        ],
+        "sources": "https://securityaffairs.com/186084/laws-and-regulations/u-s-federal-communications-commission-fcc-bans-foreign-made-drones-over-national-security-concerns.html",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Technologie, Réglementation",
+        "theme": "Réglementation antitrust",
+        "description": "L'autorité antitrust italienne a infligé une amende de 98,6 millions d'euros à Apple, estimant que sa fonction 'App Tracking Transparency' (ATT) limitait la concurrence sur l'App Store. La décision critique le processus de double consentement imposé aux développeurs tiers, qu'elle juge disproportionné et restrictif pour la concurrence, tandis que les propres applications d'Apple bénéficient d'une permission en une seule étape.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Apple",
+          "ATT",
+          "Italie",
+          "antitrust",
+          "réglementation",
+          "concurrence"
+        ],
+        "sources": "https://securityaffairs.com/186070/laws-and-regulations/italian-regulator-rules-apples-att-feature-limits-competition.html",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce électronique, Finance",
+        "victime": "Coupang",
+        "description": "Le bureau présidentiel sud-coréen a tenu une réunion d'urgence pour aborder la violation de données de Coupang, signalant une position gouvernementale ferme et d'éventuelles sanctions économiques contre le géant du commerce électronique.",
+        "tags": [
+          "violation",
+          "breach",
+          "Coupang",
+          "Corée du Sud",
+          "e-commerce",
+          "sanctions économiques"
+        ],
+        "sources": "https://mastodon.social/@infomaxkorea/115777772210397493",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Gouvernement (allocations familiales)",
+        "victime": "Caisse d’allocations familiales (CAF)",
+        "description": "Le groupe USDT a revendiqué une violation de données affectant la Caisse d’allocations familiales en France.",
+        "tags": [
+          "violation",
+          "breach",
+          "CAF",
+          "France",
+          "gouvernement",
+          "données personnelles"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115776792556210026",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Laboratoire médical Gemotest",
+        "description": "En avril 2022, la société pharmaceutique russe Gemotest a subi une violation de données qui a exposé 31 millions de patients. Les données contenaient 6,3 millions d'adresses e-mail uniques ainsi que des noms, adresses physiques, dates de naissance, numéros de passeport et d'assurance. Gemotest a ensuite été condamné à une amende pour cette violation.",
+        "tags": [
+          "violation",
+          "breach",
+          "Gemotest",
+          "Russie",
+          "santé",
+          "données patients",
+          "données personnelles"
+        ],
+        "sources": "https://haveibeenpwned.com/Breach/Gemotest",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Services financiers, Bancaire",
+        "victime": "Citoyens et entreprises américains",
+        "description": "Le gouvernement américain a saisi le domaine 'web3adspanels.org' et la base de données associée, utilisés par des cybercriminels pour héberger des identifiants bancaires volés lors d'attaques de prise de contrôle de compte. Au moins 19 victimes ont été identifiées, avec des pertes tentatives d'environ 28 millions de dollars et des pertes réelles d'environ 14,6 millions de dollars.",
+        "tags": [
+          "violation",
+          "breach",
+          "banque",
+          "finances",
+          "USA",
+          "vol d'identifiants",
+          "prise de contrôle de compte",
+          "web3adspanels.org"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/fbi-seizes-domain-storing-bank-credentials-stolen-from-us-victims/, https://securityaffairs.com/186094/cyber-crime/fbi-seized-web3adspanels-org-hosting-stolen-logins.html",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Singing River Health System",
+        "description": "Singing River Health System a temporairement interrompu l'accès aux dossiers médicaux des patients suite à un incident cybernétique potentiel détecté à un stade précoce. Les systèmes ont été pro-activement arrêtés, y compris l'accès à internet, en raison d'une menace potentielle. Bien qu'une violation de données ne soit pas confirmée, les services MyChart ont été temporairement inaccessibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "Singing River Health System",
+          "interruption de service",
+          "cyber incident"
+        ],
+        "sources": "https://databreaches.net/2025/12/24/singing-river-health-system-temporarily-shut-down-access-to-patient-medical-records/",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Infrastructure Web, E-commerce, Cloud",
+        "victime": "59 000 serveurs React et Next.js",
+        "description": "L'opération PCPcat, une opération d'espionnage cybernétique à grande échelle, a compromis plus de 59 000 serveurs basés sur les frameworks React (Next.js inclus) en 48 heures, entraînant le vol de centaines de milliers d'identifiants. Les attaquants exploitent des vulnérabilités RCE pour un déploiement à grande échelle et installent des outils proxy pour la persistance. Les données compromises peuvent donner accès à des composants d'infrastructure plus larges (comptes AWS, environnements Docker, réseaux internes).",
+        "tags": [
+          "violation",
+          "breach",
+          "React",
+          "Next.js",
+          "serveurs",
+          "espionnage cybernétique",
+          "vol d'identifiants",
+          "Operation PCPcat",
+          "RCE"
+        ],
+        "sources": "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-8769",
+        "cvss": 9.8,
+        "product": "MegaSys Computer Technologies Telenium Online Web Application",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) due à une validation d'entrée incorrecte dans un script Perl appelé pour charger la page de connexion. Un attaquant peut injecter du code Perl arbitraire via une requête HTTP malveillante.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "Telenium",
+          "Perl",
+          "injection de code",
+          "validation d'entrée"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-8769",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25249",
+        "cvss": 9.8,
+        "product": "devolo dLAN 500 AV Wireless+ 3.1.0-1",
+        "description": "Vulnérabilité de contournement d'authentification permettant aux attaquants d'activer des services cachés via le script CGI htmlmgr. Les attaquants peuvent activer Telnet et les services de shell distant, redémarrer l'appareil et obtenir un accès root sans mot de passe en manipulant les paramètres de configuration du système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement d'authentification",
+          "RCE",
+          "devolo",
+          "htmlmgr",
+          "accès root"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25249",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain",
+        "description": "Vulnérabilité critique ('lc' Leak) dans le framework open-source LangChain, permettant aux attaquants d'extraire des variables d'environnement sensibles ou de déclencher des actions système non intentionnelles via une injection de prompt malveillante et une mauvaise gestion de la sérialisation des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "LangChain",
+          "LLM",
+          "prompt injection",
+          "fuite de données",
+          "sérialisation"
+        ],
+        "sources": "https://securityonline.info/the-lc-leak-critical-9-3-severity-langchain-flaw-turns-prompt-injections-into-secret-theft/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68916",
+        "cvss": 9.1,
+        "product": "Riello UPS NetMan 208 Application",
+        "description": "Vulnérabilité d'inclusion de fichier à distance (Remote File Inclusion) permettant un contournement de répertoire (directory traversal) via 'cgi-bin/certsupload.cgi /../' pour le téléchargement de fichiers avec exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RFI",
+          "RCE",
+          "Riello UPS",
+          "directory traversal",
+          "file upload"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68916",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68920",
+        "cvss": 8.9,
+        "product": "C-Kermit",
+        "description": "Permet à un système Kermit distant d'écraser des fichiers sur le système local ou de récupérer des fichiers arbitraires du système local.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "C-Kermit",
+          "écrasement de fichier",
+          "récupération de fichier",
+          "accès à distance"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68920",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-44016",
+        "cvss": 8.8,
+        "product": "TeamViewer DEX (anciennement 1E) Client (versions antérieures à 25.11 sur Windows)",
+        "description": "Vulnérabilité de sévérité élevée dans le Content Distribution Service, permettant l'exécution de code arbitraire à distance via une validation d'entrée incorrecte. Un acteur malveillant sur le réseau local peut tromper le service pour valider un fichier malveillant comme fiable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "TeamViewer DEX",
+          "1E",
+          "validation d'entrée",
+          "Content Distribution Service"
+        ],
+        "sources": "https://securityonline.info/high-severity-flaws-in-teamviewer-dex-allow-attackers-to-hijack-nomad-services/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server (versions 3.6, 4.0, 4.2, 4.4, 5.0, 6.0, 7.0, 8.0, 8.2)",
+        "description": "Vulnérabilité de sévérité élevée permettant à des acteurs non authentifiés d'extraire des fragments de mémoire non initialisés sans authentification. La faille réside dans la gestion incorrecte des champs de longueur des en-têtes de protocole compressés Zlib, pouvant révéler des informations sensibles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MongoDB",
+          "fuite de mémoire",
+          "non authentifié",
+          "Zlib"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/mongodb-warns-admins-to-patch-severe-rce-flaw-immediately/, https://fieldeffect.com/blog/mongodb-vulnerability-exposes-server-memory-to-unauthenticated-attacks/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25257",
+        "cvss": 8.7,
+        "product": "LogicalDOC Enterprise 7.7.4",
+        "description": "Multiples vulnérabilités d'exécution de commandes système authentifiées, permettant aux attaquants de manipuler les chemins binaires lors de la modification des paramètres système (ex: antivirus.command, ocr.Tesseract.path) pour exécuter des commandes arbitraires avec des privilèges élevés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "exécution de commande",
+          "authentifié",
+          "LogicalDOC",
+          "manipulation de chemin",
+          "élévation de privilèges"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25257",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25255",
+        "cvss": 8.7,
+        "product": "VideoFlow Digital Video Protection DVP 2.10",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) authentifiée permettant aux attaquants d'exécuter des commandes système avec les privilèges root via un mécanisme de falsification de requête intersites (CSRF) pour obtenir un accès système non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authentifié",
+          "VideoFlow",
+          "CSRF",
+          "accès root"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25255",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25248",
+        "cvss": 8.7,
+        "product": "Beward N100 M2.1.6.04C014",
+        "description": "Vulnérabilité non authentifiée permettant aux attaquants distants d'accéder aux flux vidéo RTSP en direct sans identifiants. Les attaquants peuvent directement récupérer le flux RTSP de la caméra en exploitant le manque d'authentification dans le mécanisme d'accès vidéo.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "non authentifié",
+          "flux vidéo",
+          "RTSP",
+          "Beward",
+          "accès non autorisé"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25248",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68645",
+        "cvss": null,
+        "product": "Zimbra Collaboration Suite (ZCS)",
+        "description": "Vulnérabilité d'inclusion de fichier local (LFI) de sévérité élevée dans l'interface Webmail Classic, permettant à des attaquants non authentifiés de lire des fichiers internes du serveur, exposant potentiellement des données sensibles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "LFI",
+          "Zimbra",
+          "non authentifié",
+          "fuite de données",
+          "Webmail Classic"
+        ],
+        "sources": "https://securityonline.info/zimbra-under-siege-high-severity-lfi-vulnerability-exposes-internal-files-to-unauthenticated-attackers/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-64994, CVE-2025-64995",
+        "cvss": null,
+        "product": "TeamViewer DEX Platform",
+        "description": "Vulnérabilités d'élévation de privilèges exploitant des chemins de recherche non contrôlés, permettant aux attaquants locaux avec un accès en écriture à des répertoires spécifiques de détourner des processus et d'exécuter du code en tant que SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "élévation de privilèges",
+          "TeamViewer DEX",
+          "exécution de code",
+          "SYSTEM",
+          "accès local"
+        ],
+        "sources": "https://securityonline.info/high-severity-flaws-in-teamviewer-dex-allow-attackers-to-hijack-nomad-services/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Fake MAS Windows activation domain used to spread PowerShell malware",
+        "description": "Un domaine de typosquatting imitant l'outil Microsoft Activation Scripts (MAS) a été utilisé pour distribuer des scripts PowerShell malveillants, infectant les systèmes Windows avec le 'Cosmali Loader'. Les attaquants ont mis en place un domaine 'get.activate[.]win' qui ressemble au domaine légitime. L'impact est l'infection de systèmes Windows et la distribution de malwares.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "get.activate[.]win"
+          ]
+        },
+        "mitre_ttps": [
+          "T1583.004 - Establish Accounts: Malicious Infrastructure",
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1204.002 - User Execution: Malicious File"
+        ],
+        "analyse": "La méthode de typosquatting est une technique d'ingénierie sociale efficace qui exploite la confiance des utilisateurs dans des outils couramment utilisés. La distribution de PowerShell malware via cette méthode indique une tentative d'exécution de code discrète. L'impact est mondial sur les utilisateurs de Windows cherchant à activer leurs produits Microsoft, avec un potentiel d'infection de masse. Le ciblage d'un outil lié à la 'piraterie' expose un groupe d'utilisateurs potentiellement moins vigilants aux pratiques de sécurité.",
+        "recommandations": [
+          "Vérifier scrupuleusement les URL avant de télécharger ou d'exécuter des scripts.",
+          "Éviter d'exécuter du code distant sans une compréhension complète de sa fonction.",
+          "Toujours tester les scripts dans un environnement isolé (sandbox) avant leur déploiement.",
+          "Utiliser des solutions de sécurité qui intègrent la détection des malwares PowerShell et la protection contre le typosquatting.",
+          "Sensibiliser les utilisateurs aux risques liés aux domaines frauduleux et à l'ingénierie sociale."
+        ],
+        "tags": [
+          "malware",
+          "typosquatting",
+          "PowerShell",
+          "Cosmali Loader",
+          "Windows",
+          "ingénierie sociale",
+          "MAS",
+          "distribution de malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-mas-windows-activation-domain-used-to-spread-powershell-malware/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "Volatility Plugins — Plugin window.modscan, ,window.modules Let’s Talk About it",
+        "description": "Analyse technique approfondie des rootkits basés sur les drivers Windows. L'article explique comment les drivers malveillants opèrent en mode kernel, interceptent les appels système et masquent leur présence, et comment les outils comme Volatility peuvent être utilisés pour les détecter en analysant les différentes vues de Windows sur les drivers chargés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1546.003 - Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1014 - System Owner/User Discovery",
+          "T1070.004 - Indicator Removal: File Deletion"
+        ],
+        "analyse": "Cet article fournit une analyse fondamentale des techniques d'évasion et de persistance utilisées par les rootkits et les malwares basés sur les pilotes. L'impact est critique pour les opérations de réponse aux incidents (DFIR) et la compréhension des menaces avancées sur les systèmes Windows. La capacité des malwares à opérer en mode kernel confère un contrôle quasi total, rendant leur détection et leur éradication particulièrement difficiles. L'analyse met en évidence l'importance des outils d'analyse forensique comme Volatility.",
+        "recommandations": [
+          "Implémenter une stratégie de détection avancée des rootkits et des pilotes malveillants.",
+          "Utiliser des outils d'analyse forensique de la mémoire comme Volatility pour identifier les drivers cachés et les hooks de noyau.",
+          "Renforcer la sécurité du noyau (kernel hardening) et appliquer les meilleures pratiques de gestion des pilotes signés.",
+          "Mettre en place une surveillance continue de l'intégrité du système et des modifications de drivers.",
+          "Mener des entraînements réguliers sur la réponse aux incidents impliquant des menaces persistantes de bas niveau."
+        ],
+        "tags": [
+          "rootkit",
+          "malware",
+          "driver",
+          "Windows",
+          "analyse forensique",
+          "Volatility",
+          "évasion",
+          "persistance",
+          "mode kernel"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/volatility-plugins-plugin-window-modscan-window-modules-let-s-talk-about-it"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "Evasive Panda APT poisons DNS requests to deliver MgBot",
+        "description": "Le groupe APT Evasive Panda (également connu sous le nom de Bronze Highland, Daggerfly, et StormBamboo) a mené des campagnes ciblées en utilisant des attaques Adversary-in-the-Middle (AitM) et l'empoisonnement DNS. Ils ont déployé le malware MgBot via des chargeurs sophistiqués, souvent déguisés en mises à jour logicielles légitimes (ex: SohuVA, iQIYI Video), et ont utilisé un chiffrement hybride pour échapper à la détection. Les cibles principales étaient en Turquie, Chine et Inde.",
+        "threat_actor": "Evasive Panda (Bronze Highland, Daggerfly, StormBamboo)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "60.28.124.21",
+            "123.139.57.103",
+            "140.205.220.98",
+            "112.80.248.27",
+            "116.213.178.11",
+            "60.29.226.181",
+            "58.68.255.45",
+            "61.135.185.29",
+            "103.27.110.232",
+            "117.121.133.33",
+            "139.84.170.230",
+            "103.96.130.107",
+            "158.247.214.28",
+            "106.126.3.78",
+            "106.126.3.56"
+          ],
+          "DOMAIN": [
+            "p2p.hd.sohu.com[.]cn",
+            "dictionary[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552 - Unsecured Credentials",
+          "T1070 - Indicator Removal",
+          "T1059 - Command and Scripting Interpreter",
+          "T1027 - Obfuscated Files or Information",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1105 - Ingress Tool Transfer",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1036.005 - Masquerading: Match Legitimate Name or Location",
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1559.001 - Interprocess Communication: Component Object Model",
+          "T1012 - Query Registry",
+          "T1083 - File and Directory Discovery",
+          "T1078 - Valid Accounts",
+          "T1040 - Network Sniffing"
+        ],
+        "analyse": "Evasive Panda démontre une sophistication et une persistance remarquables, utilisant des techniques avancées d'évasion pour ses campagnes d'espionnage. L'emploi de l'empoisonnement DNS et des attaques AitM pour détourner le trafic de mises à jour logicielles légitimes est une tactique à fort impact, difficile à détecter. Le ciblage de diverses industries en Asie (Turquie, Chine, Inde) indique un intérêt stratégique pour l'acquisition d'informations. La nature de l'implant MgBot et les techniques d'injection en mémoire soulignent un objectif de persistance à long terme et de discrétion.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance DNS robuste pour détecter les réponses anormales ou les redirections non autorisées.",
+          "Utiliser des contrôles d'intégrité des applications pour vérifier les signatures de fichiers et prévenir les DLL sideloading.",
+          "Renforcer l'authentification et les contrôles d'accès pour les serveurs et les systèmes critiques.",
+          "Déployer des solutions de détection et réponse EDR/XDR avec des capacités d'analyse de la mémoire et de détection des injections de processus.",
+          "Sensibiliser les utilisateurs aux risques des mises à jour logicielles falsifiées et aux techniques d'ingénierie sociale.",
+          "Isoler les environnements critiques pour limiter la propagation latérale en cas de compromission."
+        ],
+        "tags": [
+          "Evasive Panda",
+          "APT",
+          "espionnage",
+          "MgBot",
+          "DNS poisoning",
+          "AitM",
+          "DLL sideloading",
+          "chiffrement hybride",
+          "persistance",
+          "Asie"
+        ],
+        "sources": [
+          "https://securelist.com/evasive-panda-apt/118576/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "La Poste outage after a cyber attack disrupts digital banking and online services",
+        "description": "La Poste, le service postal national français, a été victime d'un incident cybernétique majeur, une attaque par déni de service distribué (DDoS), rendant ses services en ligne (banque numérique, site web principal, application mobile, Digiposte) temporairement inaccessibles. L'incident n'aurait pas eu d'impact sur les données des clients, mais a perturbé la livraison des colis et du courrier. L'enquête est en cours, et aucune revendication de responsabilité immédiate n'a été faite. Des groupes comme APT28 sont mentionnés comme ayant ciblé des entités françaises par le passé, mais sans lien direct avec cet incident.",
+        "threat_actor": "Non applicable (DDoS)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 - Endpoint Denial of Service"
+        ],
+        "analyse": "Cet incident de DDoS sur une infrastructure nationale critique comme La Poste en France souligne la vulnérabilité des services essentiels aux attaques de déni de service. L'impact géographique est national, affectant des millions d'utilisateurs et de services, y compris la banque numérique. Stratégiquement, cela met en évidence la nécessité pour les infrastructures nationales de renforcer leurs défenses anti-DDoS et leur résilience opérationnelle face aux cyberattaques, qu'elles soient d'origine criminelle ou étatique. Le fait que des acteurs étatiques comme APT28 aient ciblé des entités françaises par le passé ajoute un contexte de menace élevé pour de tels services.",
+        "recommandations": [
+          "Mettre en œuvre des solutions avancées de mitigation DDoS pour les services critiques.",
+          "Développer des plans de continuité des activités robustes pour les services en ligne et les systèmes d'information.",
+          "Renforcer les procédures d'authentification et d'accès aux systèmes internes.",
+          "Collaborer avec les autorités nationales de cybersécurité pour le renseignement sur les menaces et la réponse aux incidents.",
+          "Réaliser des tests réguliers de résilience et des exercices de simulation d'attaques."
+        ],
+        "tags": [
+          "La Poste",
+          "DDoS",
+          "France",
+          "services numériques",
+          "banque numérique",
+          "interruption de service",
+          "infrastructure critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186064/security/la-poste-outage-after-a-cyber-attack.html"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "ChatGPT Atlas Under Guard: OpenAI Fortifies Browser Agent Against “Prompt Injection” Attacks",
+        "description": "OpenAI a déployé une mise à jour de sécurité critique pour son agent ChatGPT Atlas en mode 'Agent', renforçant le système contre les attaques par 'injection de prompt'. Ces attaques exploitent la logique de l'IA plutôt que les vulnérabilités de code traditionnelles, permettant à un attaquant d'intégrer des commandes malveillantes invisibles sur des sites web pour exfiltrer des données ou effectuer des actions non autorisées. La mise à jour inclut un modèle entraîné de manière contradictoire et des mesures de protection renforcées.",
+        "threat_actor": "Non applicable (concept de vulnérabilité, pas un acteur)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1071.001 - Application Layer Protocol: Web Protocols"
+        ],
+        "analyse": "Cet article met en lumière une menace émergente et stratégique liée à l'adoption croissante des agents IA. Les attaques par injection de prompt représentent un changement de paradigme dans la sécurité des IA, passant de la protection contre les vulnérabilités logicielles à la protection contre la manipulation de la logique de l'IA. L'impact potentiel est vaste, car les agents IA qui naviguent sur le web pour le compte des utilisateurs pourraient devenir des vecteurs d'exfiltration de données ou d'actions malveillantes sans le consentement de l'utilisateur. La fortification d'OpenAI montre la reconnaissance de ces risques et la nécessité d'une sécurité dédiée à l'IA.",
+        "recommandations": [
+          "Développer des modèles d'IA avec des capacités d'entraînement contradictoires (adversarial training) pour améliorer la résilience aux injections de prompt.",
+          "Implémenter des mécanismes de validation et de désinfection des entrées (input sanitization) pour les données traitées par les agents IA.",
+          "Mettre en place des mécanismes de contrôle des autorisations granulaires pour les actions que les agents IA peuvent effectuer.",
+          "Auditer régulièrement les interactions des agents IA avec les sources externes et les données sensibles.",
+          "Sensibiliser les développeurs et les utilisateurs aux risques d'injection de prompt et aux bonnes pratiques de sécurité des IA."
+        ],
+        "tags": [
+          "IA",
+          "ChatGPT",
+          "OpenAI",
+          "prompt injection",
+          "sécurité AI",
+          "agent AI",
+          "exfiltration de données",
+          "menace émergente"
+        ],
+        "sources": [
+          "https://securityonline.info/chatgpt-atlas-under-guard-openai-fortifies-browser-agent-against-prompt-injection-attacks/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "The Ghost in the Market: Unmasking “Fly,” the Secret Architect of the Infamous Russian Market",
+        "description": "Un rapport d'enquête a percé le voile d'anonymat autour du marché cybercriminel 'Russian Market', reliant son infrastructure à un acteur de la menace persistante connu sous le nom de 'Fly' (également 'Flyded', 'Alex Aske'). Opérationnel depuis 2014, ce marché vend des identités numériques volées, des cookies de navigateur et des identifiants RDP. L'enquête a utilisé des enregistrements Whois historiques, des traces de cryptomonnaies et des artefacts forensiques pour établir ces liens, révélant l'utilisation d'un prototype de stealer et des méthodes sophistiquées de blanchiment d'argent.",
+        "threat_actor": "Fly (Flyded, Alex Aske)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "flyded[.]com",
+            "russianmarket[.]gs"
+          ],
+          "EMAIL": [
+            "TimeToHardWork[@]outlook.com",
+            "Verybigman[@]yahoo.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1583.001 - Establish Accounts: Domains",
+          "T1583.003 - Establish Accounts: Persona",
+          "T1583.006 - Establish Accounts: Web Services",
+          "T1078 - Valid Accounts",
+          "T1114.001 - Email Collection: Mailbox",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1003.005 - OS Credential Dumping: Cached Domain Credentials",
+          "T1021.001 - Remote Services: Remote Desktop Protocol",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "Le 'Russian Market' est un pilier de la cybercriminalité souterraine, sa longévité et sa résilience sont remarquables et soulignent la difficulté de lutter contre le cybercrime organisé. Le démasquage partiel de 'Fly' est une victoire pour le renseignement sur les menaces, fournissant des informations cruciales sur les opérateurs de ces marchés. L'impact stratégique est global, car ces marchés facilitent un large éventail d'attaques en fournissant les outils et les données nécessaires aux cybercriminels, ce qui contribue à une augmentation générale des risques de fraude et de compromission.",
+        "recommandations": [
+          "Surveiller activement les marchés clandestins pour la présence d'identifiants et de données volées.",
+          "Utiliser l'authentification multifacteur (MFA) pour tous les comptes en ligne, en particulier les comptes bancaires et de services critiques.",
+          "Mettre en œuvre des solutions de protection des navigateurs pour prévenir le vol de cookies et d'identifiants.",
+          "Éduquer les utilisateurs sur les risques liés au partage d'informations d'identification et les tactiques d'ingénierie sociale.",
+          "Renforcer les défenses contre les malwares de type 'stealer' et les outils d'accès à distance non autorisés.",
+          "Collaborer avec les forces de l'ordre internationales pour perturber l'infrastructure des marchés cybercriminels."
+        ],
+        "tags": [
+          "Russian Market",
+          "Fly",
+          "Flyded",
+          "cybercriminalité",
+          "marché noir",
+          "données volées",
+          "identités numériques",
+          "cookies",
+          "RDP",
+          "blanchiment d'argent"
+        ],
+        "sources": [
+          "https://securityonline.info/the-ghost-in-the-market-unmasking-fly-the-secret-architect-of-the-infamous-russian-market/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "59,000 Servers Breached: Operation PCPcat Targets React and Next.js at Internet Scale",
+        "description": "L'opération PCPcat, une campagne d'espionnage cybernétique à grande échelle, a compromis plus de 59 000 serveurs basés sur les frameworks React (incluant Next.js) en 48 heures, résultant en le vol de centaines de milliers d'identifiants. Les attaquants exploitent des vulnérabilités RCE (CVE-2025-29927, CVE-2025-66478) via la pollution de prototypes JavaScript, installent des outils proxy (GOST, Fast Reverse Proxy) pour la persistance et opèrent depuis un serveur C2 centralisé à Singapour. L'impact comprend le vol d'identifiants et un accès potentiel à des infrastructures cloud (AWS, Docker).",
+        "threat_actor": "Operation PCPcat",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "67.217.57.240"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1212 - Exploitation for Credential Access",
+          "T1059.007 - Command and Scripting Interpreter: JavaScript/JScript",
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1090 - Proxy",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1003.002 - OS Credential Dumping: Security Account Manager"
+        ],
+        "analyse": "L'opération PCPcat représente une menace significative pour l'infrastructure web moderne, ciblant des technologies largement adoptées comme React et Next.js. L'échelle de la compromission (59 000 serveurs en 48 heures) et le taux de réussite élevé (64,6 %) soulignent l'efficacité des méthodes d'exploitation et d'automatisation des attaquants. L'impact est global, avec un potentiel d'escalade vers des infrastructures cloud et des réseaux d'entreprise via les identifiants volés. La persistance à long terme via des outils proxy et l'auto-expansion de la campagne en font une menace persistante et évolutive.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2025-29927 et CVE-2025-66478 et autres vulnérabilités pertinentes sur les déploiements React et Next.js.",
+          "Auditer les fichiers .env et les configurations pour toute exposition d'informations sensibles.",
+          "Procéder à la rotation des identifiants (credentials) exposés ou potentiellement compromis, en particulier pour les comptes AWS et Docker.",
+          "Mettre en place une surveillance du trafic sortant vers les serveurs C2 connus et des signatures YARA pour détecter le stealer PCPcat.",
+          "Utiliser des pare-feu d'applications web (WAF) pour atténuer les attaques par pollution de prototypes JavaScript et autres injections.",
+          "Implémenter des politiques de sécurité strictes pour les environnements de développement et de production, y compris la segmentation réseau et le principe du moindre privilège."
+        ],
+        "tags": [
+          "Operation PCPcat",
+          "espionnage cybernétique",
+          "React",
+          "Next.js",
+          "RCE",
+          "pollution de prototypes",
+          "vol d'identifiants",
+          "cloud",
+          "persistance",
+          "campagne malveillante"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/"
+        ],
+        "date": "2025-12-25"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "Cyber intelligence reveals an intensification of persistent and emerging threats, marked by the exploitation of critical vulnerabilities and sophisticated espionage campaigns. The use of typosquatting and DNS poisoning techniques demonstrates a diversification of attack vectors for malware distribution, while RCE and privilege escalation vulnerabilities in widely used products such as MongoDB, TeamViewer DEX, LangChain, and Zimbra continue to pose high risks. The banking and healthcare sectors remain prime targets for data theft and ransomware, highlighting the need for constant vigilance. Generative AI introduces new threats with prompt injection attacks, forcing developers to strengthen models. On the geopolitical front, drone bans and regulatory fines underscore tensions related to national security and competition. In conclusion, the overall threat landscape is high, demanding a proactive approach to patch management, strengthening anti-phishing defenses, and adapting to risks associated with emerging technologies like AI.",
+      "date": "2025-12-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Evasive Panda (Bronze Highland, Daggerfly, StormBamboo)",
+        "secteur": "Various industries (including video streaming, utilities)",
+        "modop": "Adversary-in-the-Middle (AitM) attacks, DNS poisoning, DLL sideloading, process injection, using custom loaders and hybrid encryption (DPAPI, RC5) to deploy MgBot malware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Evasive Panda",
+          "APT",
+          "AitM",
+          "DNS poisoning",
+          "MgBot",
+          "DLL sideloading",
+          "process injection"
+        ],
+        "sources": "https://securelist.com/evasive-panda-apt/118576/",
+        "date": "2025-12-25"
+      },
+      {
+        "nom": "Fly (Flyded, Alex Aske)",
+        "secteur": "Cybercrime (underground market for stolen data)",
+        "modop": "Operating the 'Russian Market' dark web marketplace selling stolen digital identities, browser cookies, and RDP credentials. Involved in designing stealers and using sophisticated cryptocurrency money laundering methods.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Fly",
+          "Flyded",
+          "Russian Market",
+          "cybercrime",
+          "stealer",
+          "data theft",
+          "dark web"
+        ],
+        "sources": "https://securityonline.info/the-ghost-in-the-market-unmasking-fly-the-secret-architect-of-the-infamous-russian-market/",
+        "date": "2025-12-25"
+      },
+      {
+        "nom": "Operation PCPcat",
+        "secteur": "Web Infrastructure, E-commerce, Cloud",
+        "modop": "Large-scale cyber espionage campaign targeting React and Next.js servers. Exploiting RCE vulnerabilities via JavaScript prototype pollution, deploying malicious loaders and proxy tools (GOST, Fast Reverse Proxy) for persistence, and exfiltrating hundreds of thousands of credentials.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Operation PCPcat",
+          "cyber espionage",
+          "RCE",
+          "prototype pollution",
+          "credential theft",
+          "persistence",
+          "cloud"
+        ],
+        "sources": "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Technology, National Security",
+        "theme": "Regulation of Foreign Drones",
+        "description": "The U.S. Federal Communications Commission (FCC) banned drones and critical components manufactured in foreign countries, citing national security concerns. This measure aims to protect U.S. airspace and reduce reliance on foreign-made drones ahead of major events like the 2026 World Cup and 2028 Olympics. It specifically blocks China-made drones, such as DJI and Autel, from the U.S. market.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "drones",
+          "FCC",
+          "national security",
+          "USA",
+          "regulation"
+        ],
+        "sources": "https://securityaffairs.com/186084/laws-and-regulations/u-s-federal-communications-commission-fcc-bans-foreign-made-drones-over-national-security-concerns.html",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Technology, Regulation",
+        "theme": "Antitrust Regulation",
+        "description": "The Italian antitrust authority fined Apple €98.6 million, ruling that its 'App Tracking Transparency' (ATT) feature limited competition in the App Store. The decision criticized the double consent process imposed on third-party developers, deeming it disproportionate and restrictive for competition, while Apple's own apps benefit from a single-tap permission.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Apple",
+          "ATT",
+          "Italy",
+          "antitrust",
+          "regulation",
+          "competition"
+        ],
+        "sources": "https://securityaffairs.com/186070/laws-and-regulations/italian-regulator-rules-apples-att-feature-limits-competition.html",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "E-commerce, Finance",
+        "victime": "Coupang",
+        "description": "The South Korean Presidential Office convened an emergency interagency meeting to address Coupang’s data breach, signaling a tough government stance and potential economic sanctions against the e-commerce giant.",
+        "tags": [
+          "violation",
+          "breach",
+          "Coupang",
+          "South Korea",
+          "e-commerce",
+          "economic sanctions"
+        ],
+        "sources": "https://mastodon.social/@infomaxkorea/115777772210397493",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Government (family benefits)",
+        "victime": "Caisse d’allocations familiales (CAF)",
+        "description": "USDT group claims a data breach affecting the 'Caisse d’allocations familiales' (CAF) in France.",
+        "tags": [
+          "violation",
+          "breach",
+          "CAF",
+          "France",
+          "government",
+          "personal data"
+        ],
+        "sources": "https://infosec.exchange/@darkwebsonar/115776792556210026",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Gemotest Medical Laboratory",
+        "description": "In April 2022, Russian pharmaceutical company Gemotest suffered a data breach that exposed 31 million patients. The data contained 6.3 million unique email addresses along with names, physical addresses, dates of birth, passport, and insurance numbers. Gemotest was later fined for the breach.",
+        "tags": [
+          "violation",
+          "breach",
+          "Gemotest",
+          "Russia",
+          "healthcare",
+          "patient data",
+          "personal data"
+        ],
+        "sources": "https://haveibeenpwned.com/Breach/Gemotest",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Financial Services, Banking",
+        "victime": "U.S. citizens and companies",
+        "description": "The U.S. government seized the 'web3adspanels.org' domain and its associated database, used by cybercriminals to host bank login credentials stolen in account takeover attacks. At least 19 victims have been identified, with attempted losses of approximately $28 million and actual losses of approximately $14.6 million.",
+        "tags": [
+          "violation",
+          "breach",
+          "banking",
+          "finance",
+          "USA",
+          "credential theft",
+          "account takeover",
+          "web3adspanels.org"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/fbi-seizes-domain-storing-bank-credentials-stolen-from-us-victims/, https://securityaffairs.com/186094/cyber-crime/fbi-seized-web3adspanels-org-hosting-stolen-logins.html",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Singing River Health System",
+        "description": "Singing River Health System temporarily shut down access to patient medical records following a potential cyber incident detected in its early stages. Systems, including internet access, were proactively shut down due to a potential threat. Although a data breach is not confirmed, MyChart services were temporarily inaccessible.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "Singing River Health System",
+          "service disruption",
+          "cyber incident"
+        ],
+        "sources": "https://databreaches.net/2025/12/24/singing-river-health-system-temporarily-shut-down-access-to-patient-medical-records/",
+        "date": "2025-12-25"
+      },
+      {
+        "secteur": "Web Infrastructure, E-commerce, Cloud",
+        "victime": "59,000 React and Next.js servers",
+        "description": "Operation PCPcat, a large-scale cyber espionage operation, compromised over 59,000 servers built on React frameworks (including Next.js) in 48 hours, resulting in the theft of hundreds of thousands of credentials. Attackers exploit RCE vulnerabilities to scale deployments and install proxy tools for persistence. Compromised data can lead to broader infrastructure access (AWS accounts, Docker environments, internal networks).",
+        "tags": [
+          "violation",
+          "breach",
+          "React",
+          "Next.js",
+          "servers",
+          "cyber espionage",
+          "credential theft",
+          "Operation PCPcat",
+          "RCE"
+        ],
+        "sources": "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-8769",
+        "cvss": 9.8,
+        "product": "MegaSys Computer Technologies Telenium Online Web Application",
+        "description": "Remote Code Execution (RCE) vulnerability due to improper input validation in a Perl script called to load the login page. An attacker can inject arbitrary Perl code through a crafted HTTP request.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "Telenium",
+          "Perl",
+          "code injection",
+          "input validation"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-8769",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25249",
+        "cvss": 9.8,
+        "product": "devolo dLAN 500 AV Wireless+ 3.1.0-1",
+        "description": "Authentication bypass vulnerability allowing attackers to enable hidden services through the htmlmgr CGI script. Attackers can enable Telnet and remote shell services, reboot the device, and gain root access without a password by manipulating system configuration parameters.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication bypass",
+          "RCE",
+          "devolo",
+          "htmlmgr",
+          "root access"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25249",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain",
+        "description": "Critical vulnerability ('lc' Leak) in the open-source LangChain framework, allowing attackers to extract sensitive environment variables or trigger unintended system actions via malicious prompt injection and improper data serialization handling.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "LangChain",
+          "LLM",
+          "prompt injection",
+          "data leakage",
+          "serialization"
+        ],
+        "sources": "https://securityonline.info/the-lc-leak-critical-9-3-severity-langchain-flaw-turns-prompt-injections-into-secret-theft/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68916",
+        "cvss": 9.1,
+        "product": "Riello UPS NetMan 208 Application",
+        "description": "Remote File Inclusion (RFI) vulnerability allowing directory traversal via 'cgi-bin/certsupload.cgi /../' for file upload with resultant remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RFI",
+          "RCE",
+          "Riello UPS",
+          "directory traversal",
+          "file upload"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68916",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68920",
+        "cvss": 8.9,
+        "product": "C-Kermit",
+        "description": "Allows a remote Kermit system to overwrite files on the local system or retrieve arbitrary files from the local system.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "C-Kermit",
+          "file overwrite",
+          "file retrieval",
+          "remote access"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2025-68920",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-44016",
+        "cvss": 8.8,
+        "product": "TeamViewer DEX (formerly 1E) Client (versions prior to 25.11 on Windows)",
+        "description": "High-severity vulnerability in the Content Distribution Service, allowing arbitrary remote code execution via improper input validation. A malicious actor on the local network can trick the service into validating a malicious file as trusted.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "TeamViewer DEX",
+          "1E",
+          "input validation",
+          "Content Distribution Service"
+        ],
+        "sources": "https://securityonline.info/high-severity-flaws-in-teamviewer-dex-allow-attackers-to-hijack-nomad-services/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server (versions 3.6, 4.0, 4.2, 4.4, 5.0, 6.0, 7.0, 8.0, 8.2)",
+        "description": "High-severity vulnerability allowing unauthenticated actors to extract uninitialized heap memory fragments without authentication. The flaw lies in improper handling of length fields in Zlib-compressed protocol headers, potentially revealing sensitive information.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MongoDB",
+          "memory leak",
+          "unauthenticated",
+          "Zlib"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/mongodb-warns-admins-to-patch-severe-rce-flaw-immediately/, https://fieldeffect.com/blog/mongodb-vulnerability-exposes-server-memory-to-unauthenticated-attacks/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25257",
+        "cvss": 8.7,
+        "product": "LogicalDOC Enterprise 7.7.4",
+        "description": "Multiple authenticated OS command execution vulnerabilities, allowing attackers to manipulate binary paths when changing system settings (e.g., antivirus.command, ocr.Tesseract.path) to execute arbitrary commands with elevated privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command execution",
+          "authenticated",
+          "LogicalDOC",
+          "path manipulation",
+          "privilege escalation"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25257",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25255",
+        "cvss": 8.7,
+        "product": "VideoFlow Digital Video Protection DVP 2.10",
+        "description": "Authenticated Remote Code Execution (RCE) vulnerability allowing attackers to execute system commands with root privileges via a Cross-Site Request Forgery (CSRF) mechanism to gain unauthorized system access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authenticated",
+          "VideoFlow",
+          "CSRF",
+          "root access"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25255",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2019-25248",
+        "cvss": 8.7,
+        "product": "Beward N100 M2.1.6.04C014",
+        "description": "Unauthenticated vulnerability allowing remote attackers to access live RTSP video streams without credentials. Attackers can directly retrieve the camera's RTSP stream by exploiting the lack of authentication in the video access mechanism.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "unauthenticated",
+          "video stream",
+          "RTSP",
+          "Beward",
+          "unauthorized access"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2019-25248",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-68645",
+        "cvss": null,
+        "product": "Zimbra Collaboration Suite (ZCS)",
+        "description": "High-severity Local File Inclusion (LFI) vulnerability in the Webmail Classic interface, allowing unauthenticated attackers to read internal server files, potentially exposing sensitive data.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "LFI",
+          "Zimbra",
+          "unauthenticated",
+          "data leakage",
+          "Webmail Classic"
+        ],
+        "sources": "https://securityonline.info/zimbra-under-siege-high-severity-lfi-vulnerability-exposes-internal-files-to-unauthenticated-attackers/",
+        "date": "2025-12-25"
+      },
+      {
+        "cve_id": "CVE-2025-64994, CVE-2025-64995",
+        "cvss": null,
+        "product": "TeamViewer DEX Platform",
+        "description": "Privilege Escalation vulnerabilities exploiting uncontrolled search paths, allowing local attackers with write access to specific directories to hijack processes and execute code as SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege escalation",
+          "TeamViewer DEX",
+          "code execution",
+          "SYSTEM",
+          "local access"
+        ],
+        "sources": "https://securityonline.info/high-severity-flaws-in-teamviewer-dex-allow-attackers-to-hijack-nomad-services/",
+        "date": "2025-12-25"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Fake MAS Windows activation domain used to spread PowerShell malware",
+        "description": "A typosquatted domain impersonating the Microsoft Activation Scripts (MAS) tool was used to distribute malicious PowerShell scripts, infecting Windows systems with the 'Cosmali Loader'. Attackers set up 'get.activate[.]win' which closely resembles the legitimate domain. The impact is Windows system infection and malware distribution.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "get.activate[.]win"
+          ]
+        },
+        "mitre_ttps": [
+          "T1583.004 - Establish Accounts: Malicious Infrastructure",
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1204.002 - User Execution: Malicious File"
+        ],
+        "analyse": "Typosquatting is an effective social engineering technique that exploits user trust in commonly used tools. Distributing PowerShell malware via this method indicates an attempt at stealthy code execution. The impact is global on Windows users seeking to activate Microsoft products, with potential for mass infection. Targeting a tool related to 'piracy' exposes a user group potentially less vigilant about security practices.",
+        "recommandations": [
+          "Thoroughly verify URLs before downloading or executing scripts.",
+          "Avoid executing remote code without a complete understanding of its function.",
+          "Always test scripts in an isolated environment (sandbox) before deployment.",
+          "Use security solutions that include PowerShell malware detection and typosquatting protection.",
+          "Educate users about the risks of fraudulent domains and social engineering."
+        ],
+        "tags": [
+          "malware",
+          "typosquatting",
+          "PowerShell",
+          "Cosmali Loader",
+          "Windows",
+          "social engineering",
+          "MAS",
+          "malware distribution"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-mas-windows-activation-domain-used-to-spread-powershell-malware/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "Volatility Plugins — Plugin window.modscan, ,window.modules Let’s Talk About it",
+        "description": "In-depth technical analysis of Windows driver-based rootkits. The article explains how malicious drivers operate in kernel mode, hook system calls, and hide their presence, and how tools like Volatility can be used to detect them by analyzing Windows' different views of loaded drivers.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1546.003 - Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1014 - System Owner/User Discovery",
+          "T1070.004 - Indicator Removal: File Deletion"
+        ],
+        "analyse": "This article provides a fundamental analysis of evasion and persistence techniques used by rootkits and driver-based malware. The impact is critical for incident response (DFIR) operations and understanding advanced threats on Windows systems. The ability of malware to operate in kernel mode grants near-total control, making their detection and eradication particularly challenging. The analysis highlights the importance of forensic tools like Volatility.",
+        "recommandations": [
+          "Implement an advanced detection strategy for rootkits and malicious drivers.",
+          "Use memory forensic tools like Volatility to identify hidden drivers and kernel hooks.",
+          "Strengthen kernel hardening and apply best practices for signed driver management.",
+          "Establish continuous system integrity monitoring and driver modification surveillance.",
+          "Conduct regular training on incident response involving persistent low-level threats."
+        ],
+        "tags": [
+          "rootkit",
+          "malware",
+          "driver",
+          "Windows",
+          "forensic analysis",
+          "Volatility",
+          "evasion",
+          "persistence",
+          "kernel mode"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/volatility-plugins-plugin-window-modscan-window-modules-let-s-talk-about-it"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "Evasive Panda APT poisons DNS requests to deliver MgBot",
+        "description": "The Evasive Panda APT group (also known as Bronze Highland, Daggerfly, and StormBamboo) conducted targeted campaigns using Adversary-in-the-Middle (AitM) attacks and DNS poisoning. They deployed MgBot malware via sophisticated loaders, often disguised as legitimate software updates (e.g., SohuVA, iQIYI Video), and used hybrid encryption to evade detection. Primary targets were in Turkey, China, and India.",
+        "threat_actor": "Evasive Panda (Bronze Highland, Daggerfly, StormBamboo)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "60.28.124.21",
+            "123.139.57.103",
+            "140.205.220.98",
+            "112.80.248.27",
+            "116.213.178.11",
+            "60.29.226.181",
+            "58.68.255.45",
+            "61.135.185.29",
+            "103.27.110.232",
+            "117.121.133.33",
+            "139.84.170.230",
+            "103.96.130.107",
+            "158.247.214.28",
+            "106.126.3.78",
+            "106.126.3.56"
+          ],
+          "DOMAIN": [
+            "p2p.hd.sohu.com[.]cn",
+            "dictionary[.]com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552 - Unsecured Credentials",
+          "T1070 - Indicator Removal",
+          "T1059 - Command and Scripting Interpreter",
+          "T1027 - Obfuscated Files or Information",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1105 - Ingress Tool Transfer",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1036.005 - Masquerading: Match Legitimate Name or Location",
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1559.001 - Interprocess Communication: Component Object Model",
+          "T1012 - Query Registry",
+          "T1083 - File and Directory Discovery",
+          "T1078 - Valid Accounts",
+          "T1040 - Network Sniffing"
+        ],
+        "analyse": "Evasive Panda demonstrates remarkable sophistication and persistence, using advanced evasion techniques for its espionage campaigns. The use of DNS poisoning and AitM attacks to hijack legitimate software update traffic is a high-impact tactic, difficult to detect. Targeting various industries in Asia (Turkey, China, India) indicates a strategic interest in information acquisition. The nature of the MgBot implant and in-memory injection techniques highlight a goal of long-term persistence and stealth.",
+        "recommandations": [
+          "Implement robust DNS monitoring to detect anomalous responses or unauthorized redirects.",
+          "Use application integrity controls to verify file signatures and prevent DLL sideloading.",
+          "Strengthen authentication and access controls for critical servers and systems.",
+          "Deploy EDR/XDR detection and response solutions with memory analysis capabilities and process injection detection.",
+          "Educate users about the risks of spoofed software updates and social engineering techniques.",
+          "Isolate critical environments to limit lateral movement in case of compromise."
+        ],
+        "tags": [
+          "Evasive Panda",
+          "APT",
+          "espionage",
+          "MgBot",
+          "DNS poisoning",
+          "AitM",
+          "DLL sideloading",
+          "hybrid encryption",
+          "persistence",
+          "Asia"
+        ],
+        "sources": [
+          "https://securelist.com/evasive-panda-apt/118576/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "La Poste outage after a cyber attack disrupts digital banking and online services",
+        "description": "La Poste, the French national postal service, suffered a major cyber incident, a Distributed Denial of Service (DDoS) attack, rendering its online services (digital banking, main website, mobile app, Digiposte) temporarily inaccessible. The incident reportedly had no impact on customer data but disrupted package and mail delivery. The investigation is ongoing, and no immediate claim of responsibility has been made. Groups like APT28 are mentioned as having targeted French entities in the past, but without a direct link to this specific incident.",
+        "threat_actor": "Non applicable (DDoS)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 - Endpoint Denial of Service"
+        ],
+        "analyse": "This DDoS incident on a critical national infrastructure like La Poste in France highlights the vulnerability of essential services to denial-of-service attacks. The geographical impact is national, affecting millions of users and services, including digital banking. Strategically, this emphasizes the need for national infrastructures to strengthen their anti-DDoS defenses and operational resilience against cyberattacks, whether criminal or state-sponsored. The fact that state actors like APT28 have targeted French entities in the past adds a high-threat context for such services.",
+        "recommandations": [
+          "Implement advanced DDoS mitigation solutions for critical services.",
+          "Develop robust business continuity plans for online services and information systems.",
+          "Strengthen authentication and access procedures for internal systems.",
+          "Collaborate with national cybersecurity authorities for threat intelligence and incident response.",
+          "Conduct regular resilience testing and attack simulation exercises."
+        ],
+        "tags": [
+          "La Poste",
+          "DDoS",
+          "France",
+          "digital services",
+          "digital banking",
+          "service disruption",
+          "critical infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186064/security/la-poste-outage-after-a-cyber-attack.html"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "ChatGPT Atlas Under Guard: OpenAI Fortifies Browser Agent Against “Prompt Injection” Attacks",
+        "description": "OpenAI deployed a critical security update for its ChatGPT Atlas agent in 'Agent mode,' reinforcing the system against 'prompt injection' attacks. These attacks exploit AI logic rather than traditional code vulnerabilities, allowing an attacker to embed invisible malicious commands on websites to exfiltrate data or perform unauthorized actions. The update includes an adversarially trained model and strengthened safeguards.",
+        "threat_actor": "Non applicable (vulnerability concept, not an actor)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1071.001 - Application Layer Protocol: Web Protocols"
+        ],
+        "analyse": "This article highlights an emerging and strategic threat related to the increasing adoption of AI agents. Prompt injection attacks represent a paradigm shift in AI security, moving from protecting against software vulnerabilities to protecting against manipulation of AI logic. The potential impact is vast, as AI agents browsing the web on behalf of users could become vectors for data exfiltration or malicious actions without user consent. OpenAI's fortification shows recognition of these risks and the need for dedicated AI security.",
+        "recommandations": [
+          "Develop AI models with adversarial training capabilities to improve resilience to prompt injections.",
+          "Implement input sanitization and validation mechanisms for data processed by AI agents.",
+          "Establish granular permission control mechanisms for actions AI agents can perform.",
+          "Regularly audit AI agent interactions with external sources and sensitive data.",
+          "Educate developers and users about prompt injection risks and AI security best practices."
+        ],
+        "tags": [
+          "AI",
+          "ChatGPT",
+          "OpenAI",
+          "prompt injection",
+          "AI security",
+          "AI agent",
+          "data exfiltration",
+          "emerging threat"
+        ],
+        "sources": [
+          "https://securityonline.info/chatgpt-atlas-under-guard-openai-fortifies-browser-agent-against-prompt-injection-attacks/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "The Ghost in the Market: Unmasking “Fly,” the Secret Architect of the Infamous Russian Market",
+        "description": "An investigative report unveiled the anonymity surrounding the 'Russian Market' cybercrime marketplace, linking its infrastructure to a persistent threat actor known as 'Fly' (also 'Flyded', 'Alex Aske'). Operational since 2014, this market sells stolen digital identities, browser cookies, and RDP credentials. The investigation used historical Whois records, cryptocurrency trails, and forensic artifacts to establish these links, revealing the use of a stealer prototype and sophisticated money laundering methods.",
+        "threat_actor": "Fly (Flyded, Alex Aske)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "flyded[.]com",
+            "russianmarket[.]gs"
+          ],
+          "EMAIL": [
+            "TimeToHardWork[@]outlook.com",
+            "Verybigman[@]yahoo.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1583.001 - Establish Accounts: Domains",
+          "T1583.003 - Establish Accounts: Persona",
+          "T1583.006 - Establish Accounts: Web Services",
+          "T1078 - Valid Accounts",
+          "T1114.001 - Email Collection: Mailbox",
+          "T1555.003 - Credential Access: Credentials from Web Browsers",
+          "T1003.005 - OS Credential Dumping: Cached Domain Credentials",
+          "T1021.001 - Remote Services: Remote Desktop Protocol",
+          "T1041 - Exfiltration Over C2 Channel"
+        ],
+        "analyse": "The 'Russian Market' is a pillar of the underground cybercrime world; its longevity and resilience are remarkable and highlight the difficulty of combating organized cybercrime. The partial unmasking of 'Fly' is a victory for threat intelligence, providing crucial information about the operators of these markets. The strategic impact is global, as these markets facilitate a wide range of attacks by providing the necessary tools and data to cybercriminals, contributing to a general increase in fraud and compromise risks.",
+        "recommandations": [
+          "Actively monitor underground markets for the presence of stolen credentials and data.",
+          "Use multi-factor authentication (MFA) for all online accounts, especially banking and critical service accounts.",
+          "Implement browser protection solutions to prevent the theft of cookies and credentials.",
+          "Educate users on the risks associated with sharing credentials and social engineering tactics.",
+          "Strengthen defenses against 'stealer' malware and unauthorized remote access tools.",
+          "Collaborate with international law enforcement to disrupt cybercrime market infrastructure."
+        ],
+        "tags": [
+          "Russian Market",
+          "Fly",
+          "Flyded",
+          "cybercrime",
+          "black market",
+          "stolen data",
+          "digital identities",
+          "cookies",
+          "RDP",
+          "money laundering"
+        ],
+        "sources": [
+          "https://securityonline.info/the-ghost-in-the-market-unmasking-fly-the-secret-architect-of-the-infamous-russian-market/"
+        ],
+        "date": "2025-12-25"
+      },
+      {
+        "title": "59,000 Servers Breached: Operation PCPcat Targets React and Next.js at Internet Scale",
+        "description": "Operation PCPcat, a large-scale cyber espionage campaign, compromised over 59,000 servers built on React frameworks (including Next.js) in 48 hours, resulting in the theft of hundreds of thousands of credentials. Attackers exploit RCE vulnerabilities (CVE-2025-29927, CVE-2025-66478) via JavaScript prototype pollution, install proxy tools (GOST, Fast Reverse Proxy) for persistence, and operate from a centralized C2 server in Singapore. The impact includes credential theft and potential access to cloud infrastructures (AWS, Docker).",
+        "threat_actor": "Operation PCPcat",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "67.217.57.240"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1212 - Exploitation for Credential Access",
+          "T1059.007 - Command and Scripting Interpreter: JavaScript/JScript",
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1090 - Proxy",
+          "T1543.003 - Create or Modify System Process: Windows Service",
+          "T1003.002 - OS Credential Dumping: Security Account Manager"
+        ],
+        "analyse": "Operation PCPcat represents a significant threat to modern web infrastructure, targeting widely adopted technologies like React and Next.js. The scale of the compromise (59,000 servers in 48 hours) and the high success rate (64.6%) underscore the attackers' efficient exploitation and automation methods. The impact is global, with the potential for escalation to cloud infrastructures and enterprise networks via stolen credentials. Long-term persistence through proxy tools and the campaign's self-expanding nature make it a persistent and evolving threat.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2025-29927 and CVE-2025-66478 and other relevant vulnerabilities on React and Next.js deployments.",
+          "Audit .env files and configurations for any exposure of sensitive information.",
+          "Rotate credentials, especially for AWS and Docker accounts, that are exposed or potentially compromised.",
+          "Implement outbound traffic monitoring to known C2 servers and YARA signatures to detect the PCPcat stealer.",
+          "Use web application firewalls (WAFs) to mitigate JavaScript prototype pollution and other injection attacks.",
+          "Implement strict security policies for development and production environments, including network segmentation and the principle of least privilege."
+        ],
+        "tags": [
+          "Operation PCPcat",
+          "cyber espionage",
+          "React",
+          "Next.js",
+          "RCE",
+          "prototype pollution",
+          "credential theft",
+          "cloud",
+          "persistence",
+          "malicious campaign"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/pcpcat-react-servers-nextjs-breach/"
+        ],
+        "date": "2025-12-25"
+      }
+    ]
+  }
+}
