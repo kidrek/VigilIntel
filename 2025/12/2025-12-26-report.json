@@ -1,0 +1,1779 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber est marqué par une exploitation continue et sophistiquée des vulnérabilités existantes et nouvelles. L'utilisation croissante de l'intelligence artificielle est une tendance majeure, avec des vulnérabilités critiques découvertes dans des systèmes d'IA (Langchain, chatbots Eurostar et Docker), permettant l'exfiltration de secrets et l'exécution de code à distance. Parallèlement, les acteurs de la menace exploitent l'IA pour intensifier leurs campagnes de désinformation (CopyCop) et même générer des exploits (Anthropic). La résurgence et l'exploitation active de vulnérabilités anciennes mais critiques (Fortinet FortiOS SSL VPN, Microsoft Office) soulignent l'importance d'une gestion proactive des correctifs et d'une authentification multifacteur robuste. Le secteur des systèmes de contrôle industriel (ICS) reste une cible de choix, confronté à un éventail de menaces allant des scripts malveillants aux ransomwares. Les opérations d'influence géopolitique sont également en hausse, utilisant des attaques par déni de service (NoName057(16)) et des campagnes de désinformation sophistiquées. Les violations de données passées continuent d'avoir des répercussions à long terme, comme en témoignent les vols de cryptomonnaies résultant de la fuite LastPass 2022. Le phishing, souvent combiné à l'ingénierie sociale et à l'abus d'outils légitimes, demeure le vecteur d'infection privilégié pour délivrer des malwares variés. La conclusion est qu'une approche de défense en profondeur, intégrant une gestion des vulnérabilités rigoureuse, une sensibilisation accrue aux menaces d'ingénierie sociale et une surveillance des systèmes d'IA, est impérative face à une menace de plus en plus adaptable et omniprésente.",
+      "date": "2025-12-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Services postaux nationaux (La Poste, France), alliés de l'Ukraine",
+        "modop": "Attaques par déni de service (DDoS)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "pro-russian",
+          "ddos",
+          "geopolitical_motivation"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "COBALT MIRAGE (groupe APT lié à l'Iran, alias APT35, Charming Kitten, PHOSPHOROUS, TunnelVision)",
+        "secteur": "Non spécifié, ciblant les serveurs Fortinet FortiOS",
+        "modop": "Exploitation de la vulnérabilité CVE-2020-12812 (contournement 2FA FortiOS SSL VPN)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "iran",
+          "2fa_bypass",
+          "vpn_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "Cybercriminels russes",
+        "secteur": "Utilisateurs de gestionnaires de mots de passe (LastPass)",
+        "modop": "Exploitation de sauvegardes de coffres LastPass cryptées pour siphonner des actifs de cryptomonnaies après craquage des mots de passe faibles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "russia",
+          "cryptocurrency_theft",
+          "data_breach_followup"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "NyashTeam",
+        "secteur": "Individus (professionnels et étudiants en cybersécurité inexpérimentés)",
+        "modop": "Distribution de faux exploits PoC pour des vulnérabilités, entraînant l'installation de WebRAT (backdoor, vol de données de portefeuilles crypto, Telegram, Discord, Steam, fonctions d'espionnage). Vend également DCRat.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "malware_distribution",
+          "webrat",
+          "drat",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "UNG0801 / Opération IconCat (Asie de l'Ouest)",
+        "secteur": "Technologies de l'information (IT), Fournisseurs de services gérés (MSP), ressources humaines, entreprises de développement logiciel en Israël.",
+        "modop": "Campagnes de phishing utilisant des leurres en hébreu, usurpation d'icônes d'antivirus (SentinelOne, Check Point), délivrance d'implants basés sur Python (PYTRIC) et Rust (RUSTRICT) pour le vol de données et l'effacement de systèmes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "phishing",
+          "malware_distribution",
+          "data_exfiltration",
+          "system_wipe"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "AlphaGhoul",
+        "secteur": "Non spécifié, promoteur d'outils pour cybercriminels",
+        "modop": "Promotion de l'outil NtKiller pour la terminaison furtive de solutions antivirus/sécurité (Microsoft Defender, ESET, Kaspersky, Bitdefender, Trend Micro).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "tool_developer",
+          "antivirus_bypass"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "ScarCruft (Corée du Nord)",
+        "secteur": "Divertissement (TV), intelligence",
+        "modop": "Campagne 'Artemis' de spear-phishing se faisant passer pour des scénaristes pour des arrangements de casting/interview, utilisation de fichiers HWP malveillants, sideloading de DLL pour délivrer RokRAT (C2 via Yandex Cloud).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "north_korea",
+          "spear_phishing",
+          "dll_sideloading",
+          "rokrat",
+          "intelligence_gathering"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "CopyCop (Opération d'influence russe Storm-1516)",
+        "secteur": "Médias, opinion publique",
+        "modop": "Utilisation d'outils d'IA (LLMs auto-hébergés) pour créer plus de 300 faux sites web (journaux locaux, partis politiques, organisations de vérification des faits) afin de diffuser de la désinformation et de soutenir les objectifs géopolitiques russes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "russia",
+          "disinformation",
+          "ai_exploitation",
+          "geopolitical_influence"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "SHADOW-VOID-042 (possible lien avec RomCom/Void Rabisu)",
+        "secteur": "Défense, énergie, chimie, cybersécurité (y compris Trend Micro et une filiale), et secteurs des TIC.",
+        "modop": "Campagne de spear-phishing avec leurres basés sur Trend Micro, faux messages de mise à jour, redirection vers des pages d'atterrissage falsifiées (Cloudflare, TDMSec), exploitation de CVE-2018-6065 (Google Chrome), délivrance de shellcode et de malwares de deuxième étape non spécifiés.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spear_phishing",
+          "social_engineering",
+          "vulnerability_exploitation",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Services postaux nationaux",
+        "theme": "Attaque par déni de service à motivation géopolitique",
+        "description": "Le groupe pro-russe NoName057(16) a revendiqué une cyberattaque par déni de service (DDoS) contre les services en ligne de La Poste en France, perturbant le suivi des colis pendant les fêtes de fin d'année. Bien que la situation soit largement rétablie, l'incident souligne la vulnérabilité des infrastructures nationales face aux acteurs étatiques ou pro-étatiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "russie",
+          "ddos",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Médias, opinion publique",
+        "theme": "Désinformation à l'échelle mondiale amplifiée par l'IA",
+        "description": "L'opération d'influence russe CopyCop (Storm-1516) utilise l'intelligence artificielle, notamment des LLMs auto-hébergés, pour générer et diffuser à grande échelle de la désinformation via plus de 300 faux sites web se faisant passer pour des organes d'information locaux, des partis politiques ou des vérificateurs de faits. L'objectif est de promouvoir les objectifs géopolitiques de la Russie et d'éroder le soutien occidental à l'Ukraine, ciblant l'Amérique du Nord, l'Europe et l'Afrique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "désinformation",
+          "ia",
+          "guerre_informationnelle",
+          "influence_etatique"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Divertissement (TV), intelligence",
+        "theme": "Espionnage et collecte d'informations",
+        "description": "Le groupe de menaces nord-coréen ScarCruft mène la campagne 'Artemis' en se faisant passer pour des écrivains de programmes télévisés coréens pour contacter des cibles en vue d'arrangements de casting ou d'interview. Ils distribuent des fichiers HWP malveillants pour déployer RokRAT via sideloading de DLL, utilisant Yandex Cloud pour le C2, dans le but d'espionnage et de collecte d'informations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "corée_du_nord",
+          "espionnage",
+          "apt",
+          "spear_phishing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gestionnaire de mots de passe, services financiers (cryptomonnaies)",
+        "victime": "Utilisateurs de LastPass",
+        "description": "La violation de données de LastPass de 2022 continue de servir de carburant à des vols de cryptomonnaies jusqu'à fin 2025. Des attaquants russes craquent des mots de passe maîtres faibles pour vider les coffres cryptés, avec plus de 35 millions de dollars d'actifs numériques siphonnés.",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "cryptocurrency_theft",
+          "russian_cybercriminals",
+          "credential_stuffing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Médias, édition (WIRED)",
+        "victime": "Condé Nast, 33 millions de comptes utilisateurs",
+        "description": "Un 'chapeau noir' a contacté DataBreaches.net pour signaler de graves vulnérabilités chez Condé Nast permettant l'accès et la modification de profils de compte, ainsi que la modification de mots de passe. Bien que l'entreprise ait finalement corrigé les vulnérabilités, le cybercriminel a affirmé avoir exfiltré 33 millions de comptes et a depuis divulgué des données sur des forums.",
+        "tags": [
+          "violation",
+          "breach",
+          "conde_nast",
+          "data_exfiltration",
+          "vulnerability_disclosure_mishandling"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition/?pk_campaign=feed&pk_kwd=conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Administration publique locale",
+        "victime": "Comté de Bernalillo (via Accela)",
+        "description": "Le Comté de Bernalillo avertit d'une potentielle violation de données chez Accela, une plateforme cloud tierce qui traite les permis et enregistrements commerciaux du comté. Aucune violation n'est confirmée, mais les résidents sont conseillés de se méfier des tentatives d'hameçonnage.",
+        "tags": [
+          "violation",
+          "breach",
+          "bernallilo_county",
+          "accela",
+          "third_party_compromise",
+          "government",
+          "phishing_risk"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/115780096506450652"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Transport aérien",
+        "victime": "10 000 employés et personnel partenaire d'Asiana Airlines",
+        "description": "Asiana Airlines a divulgué une violation de données affectant environ 10 000 employés et personnel partenaire. L'entreprise a confirmé qu'aucune information client n'a été compromise et a rapidement mis en œuvre des mesures de sécurité.",
+        "tags": [
+          "violation",
+          "breach",
+          "asiana_airlines",
+          "employee_data",
+          "air_transport"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115779659581048523"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Public général (via fuite de documents officiels)",
+        "victime": "Individus consultant les documents non-expurgés ou téléchargeant des versions non officielles",
+        "description": "Des documents des fichiers Epstein, publiés par le ministère de la Justice, ont été \"non-expurgés\" via une méthode simple de suppression de couches PDF. Il existe un risque élevé de distribution de malwares associés aux archives non officielles de ces documents, certains fichiers antérieurs ayant déjà été trouvés \"lacés de malwares\".",
+        "tags": [
+          "violation",
+          "breach",
+          "epstein_files",
+          "malware_distribution",
+          "pdf_vulnerability",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/hackers-unredact-epstein-files-what-you-need-to-know/?pk_campaign=feed&pk_kwd=hackers-unredact-epstein-files-what-you-need-to-know"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-68937",
+        "cvss": 9.5,
+        "product": "Forgejo (avant 13.0.2, 11 LTS avant 11.0.7)",
+        "description": "Vulnérabilité de Forgejo permettant l'écriture de fichiers non intentionnels et potentiellement l'accès au shell du serveur, en raison d'une mauvaise gestion des destinations de symlinks hors dépôt pour les dépôts de modèles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "server_shell_access",
+          "symlink",
+          "forgejo",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68937"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain core library (avant 0.3.81 et 1.2.5)",
+        "description": "Vulnérabilité critique permettant l'exfiltration de variables d'environnement sensibles et l'exécution potentielle de code via des failles de désérialisation influencées par les sorties des LLM ou les injections de prompt.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "langchain",
+          "ai_system",
+          "cwe-502"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 9.3,
+        "product": "LangChainJS",
+        "description": "Une vulnérabilité critique parallèle à CVE-2025-68664 affectant LangChainJS, soulignant les risques dans les systèmes d'IA agentiques. Implique probablement des failles de désérialisation similaires menant à l'exfiltration de secrets ou à l'exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "langchainjs",
+          "ai_system"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15092",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (jusqu'à 1.7.7-171114)",
+        "description": "Débordement de tampon (buffer overflow) dans la fonction strcpy du fichier /goform/ConfigExceptMSN via l'argument 'remark', menant à une exploitation à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15092"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15091",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (jusqu'à 1.7.7-171114)",
+        "description": "Débordement de tampon (buffer overflow) dans la fonction strcpy du fichier /goform/formPictureUrl via l'argument 'importpictureurl', permettant une exploitation à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15091"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15090",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (jusqu'à 1.7.7-171114)",
+        "description": "Débordement de tampon (buffer overflow) dans la fonction strcpy du fichier /goform/formConfigNoticeConfig via l'argument 'timestart', permettant une exploitation à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15090"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15089",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (jusqu'à 1.7.7-171114)",
+        "description": "Débordement de tampon (buffer overflow) dans la fonction strcpy du fichier /goform/APSecurity via l'argument 'wepkey1', rendant l'attaque possible à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15089"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB (implémentation zlib)",
+        "description": "Vulnérabilité de haute gravité permettant à un attaquant distant non authentifié d'exécuter du code arbitraire (RCE) en exploitant l'implémentation zlib du serveur pour renvoyer de la mémoire de tas non initialisée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "mongodb",
+          "unauthenticated",
+          "remote_code_execution",
+          "heap_memory"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186107/security/high-severity-mongodb-flaw-cve-2025-14847-could-lead-to-server-takeover.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-59683",
+        "cvss": 8.2,
+        "product": "Pexip Infinity (15.0 à 38.0 avant 38.1)",
+        "description": "Contrôle d'accès incorrect (Improper Access Control) dans le service Secure Scheduler for Exchange (avec Office 365 Legacy Exchange Tokens), permettant à un attaquant distant de lire des données potentiellement sensibles et de provoquer un déni de service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "improper_access_control",
+          "denial_of_service",
+          "sensitive_data_exposure",
+          "pexip",
+          "office_365"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59683"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-54068",
+        "cvss": null,
+        "product": "Livewire (avant 3.6.4+) pour les applications Laravel",
+        "description": "Faille critique exposant les applications Laravel à l'exécution de code à distance (RCE) furtive en exploitant le mécanisme d'hydratation de Livewire, la manipulation de type et le comportement unserialize() de PHP. Un `APP_KEY` divulgué rend les applications sans défense.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "laravel",
+          "livewire",
+          "deserialization",
+          "php_unserialize",
+          "stealthy_rce"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaw-in-livewire-exposes-laravel-apps-to-stealthy-rce-poc-releases/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": null,
+        "product": "Suite logicielle Net-SNMP",
+        "description": "Vulnérabilité critique de débordement de tampon permettant au démon de se bloquer et autorisant l'exploitation à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "denial_of_service",
+          "remote_code_execution",
+          "net_snmp"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/net-snmp-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2023-52163",
+        "cvss": null,
+        "product": "Digiever DS-2105 Pro NVRs",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) post-authentification, activement exploitée pour déployer les botnets Mirai et ShadowV2. Listée dans le catalogue KEV de la CISA.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "post_authentication",
+          "digiever",
+          "nvr",
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115782217431238798"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": 5.2,
+        "product": "Fortinet FortiOS SSL VPN",
+        "description": "Faille d'authentification incorrecte permettant de contourner l'authentification à deux facteurs (2FA) en modifiant la casse du nom d'utilisateur, particulièrement lorsque la 2FA est activée localement et configurée pour une méthode d'authentification distante (ex: LDAP). Activement exploitée par divers acteurs, y compris des groupes APT.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "2fa_bypass",
+          "fortinet",
+          "fortios",
+          "ssl_vpn",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html",
+          "https://thehackernews.com/2025/12/fortinet-warns-of-active-exploitation.html",
+          "https://infosec.exchange/@soc_goulash/115782217431238798"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2017-11882",
+        "cvss": null,
+        "product": "Microsoft Office Equation Editor",
+        "description": "Ancienne vulnérabilité dans l'éditeur d'équations de Microsoft Office, toujours exploitée dans des campagnes d'hameçonnage à grande échelle pour livrer divers logiciels espions aux ordinateurs des victimes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "microsoft_office",
+          "equation_editor",
+          "phishing",
+          "spyware",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securelist.com/industrial-threat-report-q3-2025/118602/",
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2018-6065",
+        "cvss": null,
+        "product": "Google Chrome",
+        "description": "Faille de sécurité dans Google Chrome, exploitée par des acteurs de la menace (SHADOW-VOID-042) dans des campagnes de spear-phishing pour délivrer des malwares de deuxième étape.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google_chrome",
+          "browser_exploitation",
+          "phishing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Condé Nast gets hacked, and DataBreaches gets “played” — Christmas lump of coal edition",
+        "description": "DataBreaches.net a été contacté par un cybercriminel ('Lovely') affirmant avoir trouvé de graves vulnérabilités dans les systèmes de Condé Nast, exposant potentiellement plus de 33 millions de comptes utilisateurs et permettant des modifications de mots de passe. Malgré les assurances de divulgation responsable, l'acteur a ensuite affirmé avoir exfiltré les données et a commencé à les divulguer sur des forums, ayant menti sur ses intentions pour faire pression sur l'entreprise.",
+        "threat_actor": "Lovely (cybercriminel)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Ingénierie sociale/hameçonnage - pour la manipulation de la divulgation)",
+          "T1190 (Exploitation d'application exposée à Internet - exploitation implicite de vulnérabilités)",
+          "T1537 (Transfert de données vers un compte cloud - exfiltration vers des forums)",
+          "T1078 (Comptes valides - modifications potentielles de mots de passe)"
+        ],
+        "analyse": "Cet incident met en lumière les risques associés à la gestion des divulgations de vulnérabilités, en particulier face à des acteurs potentiellement malveillants. Le grand nombre d'utilisateurs potentiellement affectés souligne l'impact grave des violations de données sur la confidentialité et la confiance des utilisateurs, aggravé par la fuite publique d'informations.",
+        "recommandations": [
+          "Mettre en œuvre des programmes robustes de divulgation de vulnérabilités avec des canaux de communication clairs.",
+          "Vérifier rigoureusement les affirmations des reporters externes.",
+          "Mener des audits de sécurité et des tests d'intrusion réguliers pour identifier et corriger les vulnérabilités de manière proactive.",
+          "Surveiller les forums clandestins pour les mentions de données d'entreprise."
+        ],
+        "tags": [
+          "data_breach",
+          "vulnerability_disclosure",
+          "social_engineering",
+          "data_exfiltration",
+          "cybercrime",
+          "conde_nast"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition/?pk_campaign=feed&pk_kwd=conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Hackers Unredact Epstein Files — What You Need To Know",
+        "description": "Des documents Epstein du Département de la Justice, récemment publiés et fortement expurgés, ont été facilement dé-expurgés par des pirates informatiques utilisant des techniques connues de suppression de couches PDF. Cela a conduit à la prolifération d'archives non officielles, créant un risque élevé de distribution de malwares via des versions malveillantes de ces documents non-expurgés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1584 (Compromission d'infrastructure - capacités générales des acteurs de la menace)",
+          "T1566.001 (Phishing avec pièce jointe - si le malware est livré par e-mail)",
+          "T1204.002 (Fichier malveillant - pour les malwares dans les documents)",
+          "T1078 (Comptes valides - pas directement, mais pour l'accès public)"
+        ],
+        "analyse": "L'incident révèle une lacune critique dans les processus d'expurgation des documents sensibles, rendant les informations confidentielles facilement accessibles. Plus important encore, il met en évidence une opportunité majeure d'ingénierie sociale pour les acteurs de la menace de distribuer des malwares à un public très intéressé, tirant parti de la curiosité et de l'intérêt public à des fins malveillantes.",
+        "recommandations": [
+          "Utiliser des outils d'expurgation robustes qui suppriment définitivement les informations sensibles, et non pas seulement les obscurcir.",
+          "Mettre en œuvre une sécurité robuste des e-mails et des terminaux pour détecter et bloquer les pièces jointes malveillantes.",
+          "Éduquer les utilisateurs sur les risques liés au téléchargement de fichiers provenant de sources non vérifiées, en particulier ceux tirant parti de sujets d'intérêt élevé."
+        ],
+        "tags": [
+          "data_unredaction",
+          "pdf_security",
+          "malware_distribution",
+          "social_engineering",
+          "public_interest"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/hackers-unredact-epstein-files-what-you-need-to-know/?pk_campaign=feed&pk_kwd=hackers-unredact-epstein-files-what-you-need-to-know"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Pen testers accused of ‘blackmail’ after reporting Eurostar chatbot flaws",
+        "description": "Des chercheurs de Pen Test Partners ont découvert quatre failles dans le chatbot public d'Eurostar basé sur l'IA, notamment l'injection de prompt, l'injection de contenu HTML et la fuite de prompts système. Pendant le processus de divulgation responsable, le chef de la sécurité d'Eurostar aurait accusé l'équipe de tests d'intrusion de 'chantage', soulignant les défis de la communication en matière de piratage éthique.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Hameçonnage - l'injection de prompt peut être considérée comme une forme)",
+          "T1059 (Interpréteur de commande et de script - injection HTML)",
+          "T1552 (Informations d'identification non sécurisées / Exposition d'informations - fuite de prompts système)"
+        ],
+        "analyse": "Cet incident démontre des vulnérabilités critiques dans les chatbots basés sur l'IA, en particulier concernant l'injection de prompt et l'exposition de données. Il met également en lumière la relation tendue entre les chercheurs en sécurité et les organisations lors de la divulgation de vulnérabilités, soulignant la nécessité de meilleurs protocoles de communication et d'une meilleure compréhension des pratiques de piratage éthique.",
+        "recommandations": [
+          "Mettre en œuvre une validation et une assainissement robustes des entrées pour toutes les interactions de chatbot.",
+          "Auditer régulièrement les sorties des LLM pour les informations sensibles.",
+          "Établir des politiques de divulgation de vulnérabilités claires et respectueuses et s'assurer que les équipes de sécurité sont formées à la gestion des communications avec les chercheurs."
+        ],
+        "tags": [
+          "ai_chatbot",
+          "vulnerability",
+          "prompt_injection",
+          "html_injection",
+          "data_leakage",
+          "responsible_disclosure"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/pen-testers-accused-of-blackmail-after-reporting-eurostar-chatbot-flaws/?pk_campaign=feed&pk_kwd=pen-testers-accused-of-blackmail-after-reporting-eurostar-chatbot-flaws"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Cyberattaque contre La Poste : le suivi de colis a repris, seuls quelques dysfonctionnements marginaux subsistent",
+        "description": "La Poste a été victime d'une cyberattaque par déni de service (DDoS) revendiquée par le groupe pro-russe NoName057(16), perturbant ses services en ligne et le suivi des colis pendant la période intense des fêtes de fin d'année. Aucune donnée sensible n'a été volée, et la situation est presque revenue à la normale.",
+        "threat_actor": "NoName057(16)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Déni de service sur un terminal)",
+          "T1499.001 (Déni de service d'application - spécifiquement, les services web)"
+        ],
+        "analyse": "L'attaque illustre la capacité des groupes pro-étatiques à cibler les infrastructures civiles pour perturber les services et créer de la désorganisation, en particulier pendant des périodes critiques. L'impact a été principalement opérationnel plutôt que lié à la fuite de données, mais a démontré la vulnérabilité aux attaques DDoS.",
+        "recommandations": [
+          "Mettre en place des protections robustes contre les attaques DDoS.",
+          "Renforcer la résilience des infrastructures critiques pour assurer la continuité des services pendant les périodes de pointe et face aux cyberattaques.",
+          "Surveiller activement les groupes de menaces géopolitiques pertinents."
+        ],
+        "tags": [
+          "cyberattack",
+          "ddos",
+          "la_poste",
+          "noname057(16)",
+          "geopolitical_motivation",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Threat landscape for industrial automation systems in Q3 2025",
+        "description": "Un rapport sur le paysage des menaces pour les systèmes de contrôle industriel (ICS) au troisième trimestre 2025, soulignant des augmentations de scripts malveillants et de pages de phishing. Les catégories de malwares comme les logiciels espions, les ransomwares et les mineurs ont également augmenté. L'Asie de l'Est et l'Amérique du Sud ont enregistré des augmentations notables en raison de scripts malveillants dans les infrastructures OT et de campagnes de phishing à grande échelle exploitant d'anciennes vulnérabilités (CVE-2017-11882) pour livrer des logiciels espions. Les secteurs de la biométrie, de l'ingénierie et de la fabrication ont été particulièrement ciblés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Accès initial - Hameçonnage, services distants externes, supports amovibles)",
+          "TA0002 (Exécution - Scripts malveillants)",
+          "TA0003 (Persistance)",
+          "TA0004 (Élévation de privilèges)",
+          "TA0005 (Évasion des défenses)",
+          "TA0006 (Accès aux informations d'identification)",
+          "TA0007 (Découverte)",
+          "TA0008 (Mouvement latéral)",
+          "TA0009 (Collecte)",
+          "TA0010 (Exfiltration)",
+          "TA0011 (Commandement et contrôle)",
+          "TA0012 (Impact - Données chiffrées pour impact, détournement de ressources)",
+          "Exploitation de CVE-2017-11882"
+        ],
+        "analyse": "Le rapport indique une menace persistante et évolutive pour les ICS, les attaquants utilisant des vecteurs courants comme le courrier électronique et les supports amovibles, parallèlement à des attaques sophistiquées en plusieurs étapes. L'exploitation continue de vulnérabilités connues, même anciennes, met en évidence des lacunes dans la gestion des correctifs dans les environnements de technologie opérationnelle. Les variations régionales de la distribution des menaces suggèrent des campagnes adaptées.",
+        "recommandations": [
+          "Mettre en œuvre une formation de sensibilisation à la sécurité robuste, en particulier pour le phishing.",
+          "Assurer l'application rapide des correctifs pour les vulnérabilités connues, y compris les plus anciennes.",
+          "Renforcer la segmentation du réseau entre l'IT et l'OT.",
+          "Déployer une protection avancée des terminaux sur les ordinateurs ICS.",
+          "Surveiller les scripts malveillants et les activités liées aux clients torrent."
+        ],
+        "tags": [
+          "ics_security",
+          "ot_security",
+          "threat_report",
+          "phishing",
+          "malware",
+          "ransomware",
+          "spyware",
+          "vulnerability_exploitation",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securelist.com/industrial-threat-report-q3-2025/118602/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Critical Langchain Vulnerability Let attackers Exfiltrate Sensitive Secrets from AI systems",
+        "description": "Une vulnérabilité critique (CVE-2025-68664, CVSS 9.3) dans la bibliothèque centrale de LangChain permet aux attaquants d'exfiltrer des variables d'environnement sensibles et potentiellement d'exécuter du code via des failles de désérialisation (CWE-502) influencées par les sorties des LLM ou les injections de prompt. Une faille parallèle (CVE-2025-68665) a affecté LangChainJS. Des correctifs sont disponibles dans les versions langchain-core 0.3.81 et 1.2.5.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploitation d'application exposée à Internet - exploitation générale de vulnérabilités)",
+          "T1598 (Hameçonnage - l'injection de prompt peut être une forme)",
+          "T1059 (Interpréteur de commande et de script - pour l'exécution de code)",
+          "T1552 (Informations d'identification non sécurisées - exfiltration de secrets)"
+        ],
+        "analyse": "Cette vulnérabilité représente un risque significatif pour les systèmes d'IA utilisant LangChain, pouvant compromettre les données sensibles et permettre un contrôle total du système. Les implications s'étendent à toute application tirant parti des LLM où les sorties peuvent influencer les processus de désérialisation internes, mettant en évidence une surface d'attaque critique dans les architectures d'IA modernes.",
+        "recommandations": [
+          "Mettre à niveau langchain-core immédiatement vers les versions corrigées (0.3.81/1.2.5).",
+          "Vérifier les dépendances comme langchain-community.",
+          "Traiter les sorties des LLM comme non fiables.",
+          "Auditer la désérialisation dans les workflows de streaming/journalisation.",
+          "Désactiver la résolution des secrets, sauf si les entrées sont strictement vérifiées."
+        ],
+        "tags": [
+          "ai_vulnerability",
+          "langchain",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "prompt_injection",
+          "cwe-502"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Critical Flaw in Livewire Exposes Laravel Apps to Stealthy RCE, PoC Releases",
+        "description": "Une vulnérabilité critique (CVE-2025-54068) et une faille de conception persistante dans Livewire, un framework Laravel, permettent l'exécution de code à distance (RCE) sur plus de 130 000 applications. La faille exploite le mécanisme d''hydratation' de Livewire et le comportement unserialize() de PHP, permettant aux attaquants de manipuler les paramètres des composants. Même avec un correctif, un `APP_KEY` divulgué rend les applications sans défense. Un outil PoC, Livepyre, a été publié.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploitation d'application exposée à Internet)",
+          "T1059 (Interpréteur de commande et de script - unserialize de PHP menant à RCE)",
+          "T1537 (Transfert de données vers un compte cloud - si exfiltration, non directement mentionné)",
+          "T1552 (Informations d'identification non sécurisées - fuite de l'APP_KEY)"
+        ],
+        "analyse": "Cette vulnérabilité représente une menace grave pour les applications Laravel utilisant Livewire, permettant une RCE furtive. La faille de conception inhérente signifie que même les systèmes corrigés restent vulnérables si l'`APP_KEY` est compromise, rendant la gestion sécurisée des clés primordiale. La publication publique d'un outil PoC augmente la probabilité d'une exploitation généralisée.",
+        "recommandations": [
+          "Mettre à niveau Livewire vers les versions 3.6.4+ immédiatement.",
+          "Appliquer un typage fort sur tous les paramètres des composants.",
+          "Mettre en œuvre des contrôles d'accès stricts pour l'`APP_KEY` et s'assurer qu'elle n'est pas divulguée.",
+          "Auditer les applications pour les chaînes de gadgets potentielles exploitables via la désérialisation."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "laravel",
+          "livewire",
+          "deserialization",
+          "php_unserialize",
+          "poc",
+          "application_security"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaw-in-livewire-exposes-laravel-apps-to-stealthy-rce-poc-releases/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Fortinet FortiOS SSL VPN 2FA Bypass Vulnerability Actively Exploited (CVE-2020-12812)",
+        "description": "Une vulnérabilité d'authentification incorrecte (CVE-2020-12812, CVSS 5.2) vieille de cinq ans dans Fortinet FortiOS SSL VPN est activement exploitée. Cette faille permet aux attaquants de contourner l'authentification à deux facteurs (2FA) en modifiant la casse d'un nom d'utilisateur, en particulier lorsque la 2FA est activée localement et configurée pour une méthode d'authentification distante comme LDAP. Le groupe APT iranien COBALT MIRAGE a été lié à des exploitations passées.",
+        "threat_actor": "COBALT MIRAGE (groupe APT lié à l'Iran), acteurs de la menace non spécifiés.",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Comptes valides - en particulier T1078.004, Comptes cloud, mais ici comptes généraux)",
+          "T1110 (Attaque par force brute - pas directement, mais le contournement d'authentification correspond à l'esprit de l'obtention d'un accès initial)",
+          "T1556 (Faux certificat X.509 - pas directement, mais lié à l'authentification)"
+        ],
+        "analyse": "L'exploitation active de cette vulnérabilité de gravité moyenne souligne l'importance critique des mécanismes d'authentification sécurisés et de l'application rapide des correctifs, même pour les failles plus anciennes. Le contournement de la 2FA abaisse considérablement la barre pour les attaquants souhaitant obtenir un accès non autorisé aux VPN, ce qui représente un risque grave pour les périmètres réseau et les ressources d'entreprise, en particulier de la part d'acteurs étatiques.",
+        "recommandations": [
+          "Appliquer immédiatement les mesures d'atténuation recommandées par Fortinet (correctif pour FortiOS 6.0.10, 6.2.4, 6.4.1 ou version ultérieure).",
+          "Exécuter les commandes CLI pour désactiver la sensibilité à la casse des noms d'utilisateur pour les comptes locaux.",
+          "Supprimer les groupes LDAP secondaires inutiles.",
+          "Réinitialiser toutes les informations d'identification si des preuves de contournement non autorisé de la 2FA sont trouvées."
+        ],
+        "tags": [
+          "vulnerability",
+          "authentication_bypass",
+          "2fa_bypass",
+          "fortinet",
+          "fortios",
+          "ssl_vpn",
+          "active_exploitation",
+          "apt",
+          "iran"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html",
+          "https://thehackernews.com/2025/12/fortinet-warns-of-active-exploitation.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "LastPass 2022 Breach Led to Years-Long Cryptocurrency Thefts",
+        "description": "Les sauvegardes chiffrées des coffres de la violation de LastPass de 2022 sont toujours activement exploitées, les attaquants crackant des mots de passe maîtres faibles pour voler des actifs de cryptomonnaies aussi récemment que fin 2025. TRM Labs signale plus de 35 millions de dollars d'actifs numériques siphonés, avec des preuves pointant vers l'implication de cybercriminels russes via des infrastructures associées et des échanges à haut risque.",
+        "threat_actor": "Cybercriminels russes",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1552.001 (Identifiants dans les fichiers - sauvegardes de coffres chiffrées)",
+          "T1110.001 (Devinette de mots de passe - pour le craquage de mots de passe maîtres)",
+          "T1071.001 (Protocoles Web - pour l'accès aux échanges)",
+          "T1567.002 (Exfiltration via service Web - vers les échanges)"
+        ],
+        "analyse": "Ceci met en évidence les conséquences à long terme des violations de données significatives, en particulier celles impliquant des identifiants sensibles. L'exploitation continue souligne l'échec des utilisateurs à adopter des mots de passe maîtres forts et uniques et à faire pivoter rapidement les identifiants après une violation, offrant une surface d'attaque persistante aux cybercriminels sophistiqués.",
+        "recommandations": [
+          "Insister sur l'utilisation de mots de passe maîtres forts et uniques pour tous les gestionnaires de mots de passe.",
+          "Exiger une rotation immédiate des identifiants pour tous les comptes affectés après toute violation de données.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) partout où cela est possible.",
+          "Surveiller les transactions de cryptomonnaies pour détecter toute activité suspecte."
+        ],
+        "tags": [
+          "data_breach",
+          "lastpass",
+          "cryptocurrency_theft",
+          "russian_cybercriminals",
+          "password_cracking",
+          "long_term_impact"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by continuous and sophisticated exploitation of both existing and new vulnerabilities. The increasing use of artificial intelligence is a major trend, with critical vulnerabilities discovered in AI systems (Langchain, Eurostar and Docker chatbots), enabling secret exfiltration and remote code execution. Concurrently, threat actors leverage AI to scale disinformation campaigns (CopyCop) and even generate exploits (Anthropic). The resurgence and active exploitation of older but critical vulnerabilities (Fortinet FortiOS SSL VPN, Microsoft Office) highlight the importance of proactive patch management and robust multi-factor authentication. The industrial control systems (ICS) sector remains a prime target, facing a range of threats from malicious scripts to ransomware. Geopolitical influence operations are also on the rise, utilizing denial-of-service attacks (NoName057(16)) and sophisticated disinformation campaigns. Past data breaches continue to have long-term repercussions, as evidenced by cryptocurrency thefts resulting from the 2022 LastPass leak. Phishing, often combined with social engineering and the abuse of legitimate tools, remains the preferred infection vector for delivering various malware. The conclusion is that a defense-in-depth approach, integrating rigorous vulnerability management, increased awareness of social engineering threats, and monitoring of AI systems, is imperative in the face of an increasingly adaptable and pervasive threat.",
+      "date": "2025-12-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "NoName057(16)",
+        "secteur": "National postal services (La Poste, France), allies of Ukraine",
+        "modop": "Denial-of-service (DDoS) attacks",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "pro-russian",
+          "ddos",
+          "geopolitical_motivation"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "COBALT MIRAGE (Iran-linked APT group, aka APT35, Charming Kitten, PHOSPHOROUS, TunnelVision)",
+        "secteur": "Unspecified, targeting Fortinet FortiOS servers",
+        "modop": "Exploitation of CVE-2020-12812 vulnerability (FortiOS SSL VPN 2FA bypass)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "iran",
+          "2fa_bypass",
+          "vpn_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "Russian cybercriminals",
+        "secteur": "Password manager users (LastPass)",
+        "modop": "Exploiting encrypted LastPass vault backups to siphon cryptocurrency assets after cracking weak master passwords.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "russia",
+          "cryptocurrency_theft",
+          "data_breach_followup"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "NyashTeam",
+        "secteur": "Individuals (inexperienced cybersecurity professionals and students)",
+        "modop": "Distribution of fake PoC exploits for vulnerabilities, leading to WebRAT installation (backdoor, crypto wallet, Telegram, Discord, Steam data theft, espionage functions). Also sells DCRat.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "malware_distribution",
+          "webrat",
+          "drat",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "UNG0801 / Operation IconCat (Western Asia)",
+        "secteur": "Information Technology (IT), Managed Service Providers (MSPs), human resources, software development companies in Israel.",
+        "modop": "Phishing campaigns using Hebrew lures, antivirus icon spoofing (SentinelOne, Check Point), delivering Python-based (PYTRIC) and Rust-based (RUSTRICT) implants for data theft and system wiping.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "phishing",
+          "malware_distribution",
+          "data_exfiltration",
+          "system_wipe"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "AlphaGhoul",
+        "secteur": "Unspecified, promoter of tools for cybercriminals",
+        "modop": "Promotes NtKiller tool for stealthily terminating antivirus/security solutions (Microsoft Defender, ESET, Kaspersky, Bitdefender, Trend Micro).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "tool_developer",
+          "antivirus_bypass"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "ScarCruft (North Korea)",
+        "secteur": "Entertainment (TV), intelligence",
+        "modop": "'Artemis' spear-phishing campaign posing as Korean TV writers for casting/interview arrangements, using malicious HWP files, DLL sideloading to deliver RokRAT (C2 via Yandex Cloud).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "north_korea",
+          "spear_phishing",
+          "dll_sideloading",
+          "rokrat",
+          "intelligence_gathering"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "CopyCop (Russian influence operation Storm-1516)",
+        "secteur": "Media, public opinion",
+        "modop": "Uses AI tools (self-hosted LLMs) to create over 300 fake websites (local news outlets, political parties, fact-checking organizations) to spread disinformation and support Russian geopolitical goals.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "russia",
+          "disinformation",
+          "ai_exploitation",
+          "geopolitical_influence"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "nom": "SHADOW-VOID-042 (possible link to RomCom/Void Rabisu)",
+        "secteur": "Defense, energy, chemical, cybersecurity (including Trend Micro and a subsidiary), and ICT sectors.",
+        "modop": "Spear-phishing campaign with Trend Micro-themed lures, fake update messages, redirecting to fake landing pages (Cloudflare, TDMSec), exploiting CVE-2018-6065 (Google Chrome), delivering shellcode and unspecified second-stage malware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spear_phishing",
+          "social_engineering",
+          "vulnerability_exploitation",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "National postal services",
+        "theme": "Geopolitically motivated denial-of-service attack",
+        "description": "The pro-Russian group NoName057(16) claimed a denial-of-service (DDoS) cyberattack against La Poste's online services in France, disrupting parcel tracking during the busy holiday season. Although the situation is largely restored, the incident highlights the vulnerability of national infrastructures to state-backed or pro-state actors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "russia",
+          "ddos",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Media, public opinion",
+        "theme": "Global disinformation operation amplified by AI",
+        "description": "The Russian influence operation CopyCop (Storm-1516) is using artificial intelligence, including self-hosted LLMs, to generate and widely disseminate disinformation via over 300 fake websites posing as local news outlets, political parties, or fact-checking organizations. The objective is to advance Russia's geopolitical goals and erode Western support for Ukraine, targeting North America, Europe, and Africa.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "disinformation",
+          "ai",
+          "information_warfare",
+          "state_influence"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Entertainment (TV), intelligence",
+        "theme": "Espionage and intelligence gathering",
+        "description": "The North Korean threat group ScarCruft is conducting the 'Artemis' campaign by impersonating Korean TV program writers to contact targets for casting or interview arrangements. They distribute malicious HWP files to deploy RokRAT via DLL sideloading, using Yandex Cloud for C2, with the aim of espionage and intelligence collection.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "north_korea",
+          "espionage",
+          "apt",
+          "spear_phishing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Password manager, financial services (cryptocurrency)",
+        "victime": "LastPass users",
+        "description": "The 2022 LastPass data breach continues to fuel cryptocurrency thefts into late 2025. Russian attackers are cracking weak master passwords to drain encrypted vaults, with over $35 million in digital assets siphoned.",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "cryptocurrency_theft",
+          "russian_cybercriminals",
+          "credential_stuffing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Media, publishing (WIRED)",
+        "victime": "Condé Nast, 33 million user accounts",
+        "description": "A 'blackhat' contacted DataBreaches.net to report severe vulnerabilities in Condé Nast's systems, potentially exposing over 33 million user accounts and enabling password changes. Although the company eventually patched the vulnerabilities, the cybercriminal claimed to have exfiltrated 33 million accounts and has since leaked data on forums.",
+        "tags": [
+          "violation",
+          "breach",
+          "conde_nast",
+          "data_exfiltration",
+          "vulnerability_disclosure_mishandling"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition/?pk_campaign=feed&pk_kwd=conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Local government",
+        "victime": "Bernalillo County (via Accela)",
+        "description": "Bernalillo County warns of a potential data breach at Accela, a third-party cloud-based platform that processes county permits and business registrations. No breach is confirmed, but residents are advised to be wary of potential scam attempts.",
+        "tags": [
+          "violation",
+          "breach",
+          "bernallilo_county",
+          "accela",
+          "third_party_compromise",
+          "government",
+          "phishing_risk"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/115780096506450652"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "Air transport",
+        "victime": "10,000 Asiana Airlines employees and partner staff",
+        "description": "Asiana Airlines disclosed a data breach affecting approximately 10,000 employees and partner staff. The company confirmed that no customer information was compromised and swiftly implemented security measures.",
+        "tags": [
+          "violation",
+          "breach",
+          "asiana_airlines",
+          "employee_data",
+          "air_transport"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115779659581048523"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "secteur": "General public (via official document leak)",
+        "victime": "Individuals viewing unredacted documents or downloading unofficial versions",
+        "description": "Epstein files documents, released by the Department of Justice, were 'unredacted' using a simple PDF layer removal method. There is a high risk of malware distribution associated with unofficial archives of these documents, with some earlier files already found to be 'laced with malware'.",
+        "tags": [
+          "violation",
+          "breach",
+          "epstein_files",
+          "malware_distribution",
+          "pdf_vulnerability",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/hackers-unredact-epstein-files-what-you-need-to-know/?pk_campaign=feed&pk_kwd=hackers-unredact-epstein-files-what-you-need-to-know"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-68937",
+        "cvss": 9.5,
+        "product": "Forgejo (before 13.0.2, 11 LTS before 11.0.7)",
+        "description": "Forgejo vulnerability allowing attackers to write to unintended files and possibly obtain server shell access due to mishandling of out-of-repository symlink destinations for template repositories.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "server_shell_access",
+          "symlink",
+          "forgejo",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68937"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain core library (before 0.3.81 and 1.2.5)",
+        "description": "Critical vulnerability allowing exfiltration of sensitive environment variables and potential code execution through deserialization flaws influenced by LLM outputs or prompt injections.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "langchain",
+          "ai_system",
+          "cwe-502"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 9.3,
+        "product": "LangChainJS",
+        "description": "A parallel critical vulnerability to CVE-2025-68664 affecting LangChainJS, underscoring risks in agentic AI plumbing. Likely involves similar deserialization flaws leading to secrets exfiltration or RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "langchainjs",
+          "ai_system"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15092",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (up to 1.7.7-171114)",
+        "description": "Buffer overflow in strcpy function of /goform/ConfigExceptMSN via 'remark' argument, leading to remote exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15092"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15091",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (up to 1.7.7-171114)",
+        "description": "Buffer overflow in strcpy function of /goform/formPictureUrl via 'importpictureurl' argument, allowing remote exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15091"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15090",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (up to 1.7.7-171114)",
+        "description": "Buffer overflow in strcpy function of /goform/formConfigNoticeConfig via 'timestart' argument, allowing remote exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15090"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-15089",
+        "cvss": 9.0,
+        "product": "UTT 进取 512W (up to 1.7.7-171114)",
+        "description": "Buffer overflow in strcpy function of /goform/APSecurity via 'wepkey1' argument, allowing remote exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "remote_code_execution",
+          "utt",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15089"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB (zlib implementation)",
+        "description": "High-severity vulnerability allowing unauthenticated remote attackers to execute arbitrary code (RCE) by exploiting the server's zlib implementation to return uninitialized heap memory.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "mongodb",
+          "unauthenticated",
+          "remote_code_execution",
+          "heap_memory"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186107/security/high-severity-mongodb-flaw-cve-2025-14847-could-lead-to-server-takeover.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-59683",
+        "cvss": 8.2,
+        "product": "Pexip Infinity (15.0 through 38.0 before 38.1)",
+        "description": "Improper Access Control in Secure Scheduler for Exchange service (with Office 365 Legacy Exchange Tokens), allowing remote attackers to read sensitive data and cause Denial of Service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "improper_access_control",
+          "denial_of_service",
+          "sensitive_data_exposure",
+          "pexip",
+          "office_365"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-59683"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-54068",
+        "cvss": null,
+        "product": "Livewire (before 3.6.4+) for Laravel applications",
+        "description": "Critical flaw exposing Laravel apps to stealthy Remote Code Execution (RCE) by exploiting Livewire’s hydration mechanism, type juggling, and PHP’s unserialize() behavior. A leaked `APP_KEY` makes applications defenseless.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "laravel",
+          "livewire",
+          "deserialization",
+          "php_unserialize",
+          "stealthy_rce"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaw-in-livewire-exposes-laravel-apps-to-stealthy-rce-poc-releases/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": null,
+        "product": "Net-SNMP software suite",
+        "description": "Critical buffer overflow vulnerability enabling the daemon to crash and allowing remote exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "denial_of_service",
+          "remote_code_execution",
+          "net_snmp"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/net-snmp-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2023-52163",
+        "cvss": null,
+        "product": "Digiever DS-2105 Pro NVRs",
+        "description": "Post-authentication Remote Code Execution (RCE) flaw, actively exploited to deploy Mirai and ShadowV2 botnets. Listed in CISA's KEV catalog.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "post_authentication",
+          "digiever",
+          "nvr",
+          "botnet",
+          "mirai",
+          "shadowv2",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115782217431238798"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": 5.2,
+        "product": "Fortinet FortiOS SSL VPN",
+        "description": "Improper authentication flaw allowing users to bypass two-factor authentication (2FA) by changing the case of their username, particularly when 2FA is enabled in \"user local\" settings and authentication is set to a remote method (e.g., LDAP). Actively exploited by various actors, including APT groups.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "2fa_bypass",
+          "fortinet",
+          "fortios",
+          "ssl_vpn",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html",
+          "https://thehackernews.com/2025/12/fortinet-warns-of-active-exploitation.html",
+          "https://infosec.exchange/@soc_goulash/115782217431238798"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2017-11882",
+        "cvss": null,
+        "product": "Microsoft Office Equation Editor",
+        "description": "Old vulnerability in Microsoft Office Equation Editor, still exploited in large-scale phishing campaigns to deliver various spyware to victims' computers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "microsoft_office",
+          "equation_editor",
+          "phishing",
+          "spyware",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://securelist.com/industrial-threat-report-q3-2025/118602/",
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "cve_id": "CVE-2018-6065",
+        "cvss": null,
+        "product": "Google Chrome",
+        "description": "Security flaw in Google Chrome, exploited by threat actors (SHADOW-VOID-042) in spear-phishing campaigns to deliver second-stage malware.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google_chrome",
+          "browser_exploitation",
+          "phishing"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/threatsday-bulletin-stealth-loaders-ai.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Condé Nast gets hacked, and DataBreaches gets “played” — Christmas lump of coal edition",
+        "description": "DataBreaches.net was contacted by a cybercriminal ('Lovely') claiming to have found severe vulnerabilities in Condé Nast's systems, potentially exposing over 33 million user accounts and enabling password changes. Despite assurances of responsible disclosure, the actor later claimed to have exfiltrated the data and started leaking it on forums, having lied about their intentions to pressure the company.",
+        "threat_actor": "Lovely (cybercriminal)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Phishing/Social Engineering - for disclosure manipulation)",
+          "T1190 (Exploit Public-Facing Application - implied vulnerability exploitation)",
+          "T1537 (Transfer Data to Cloud Account - exfiltration to forums)",
+          "T1078 (Valid Accounts - potential password changes)"
+        ],
+        "analyse": "This incident highlights the risks associated with managing vulnerability disclosures, especially when dealing with actors who may have malicious intent. The large number of potentially affected users underscores the severe impact of data breaches on user privacy and trust, further exacerbated by the public leakage of information.",
+        "recommandations": [
+          "Implement robust vulnerability disclosure programs with clear communication channels.",
+          "Diligently verify claims from external reporters.",
+          "Conduct regular security audits and penetration testing to identify and remediate vulnerabilities proactively.",
+          "Monitor underground forums for mentions of corporate data."
+        ],
+        "tags": [
+          "data_breach",
+          "vulnerability_disclosure",
+          "social_engineering",
+          "data_exfiltration",
+          "cybercrime",
+          "conde_nast"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition/?pk_campaign=feed&pk_kwd=conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Hackers Unredact Epstein Files — What You Need To Know",
+        "description": "Recently released, heavily redacted Department of Justice Epstein files were easily unredacted by hackers using known PDF layer removal techniques. This has led to the proliferation of unofficial archives, creating a high risk of malware distribution via malicious versions of these unredacted documents.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1584 (Compromise Infrastructure - general threat actor capabilities)",
+          "T1566.001 (Spearphishing Attachment - if malware delivered via email)",
+          "T1204.002 (Malicious File - for malware in documents)",
+          "T1078 (Valid Accounts - not directly, but for public access)"
+        ],
+        "analyse": "The incident reveals a critical oversight in sensitive document redaction processes, making confidential information easily accessible. More importantly, it highlights a prime social engineering opportunity for threat actors to distribute malware to a highly interested public, leveraging curiosity and public interest for malicious gain.",
+        "recommandations": [
+          "Use robust redaction tools that permanently remove sensitive information, not just obscure it.",
+          "Implement strong email and endpoint security to detect and block malicious attachments.",
+          "Educate users about the risks of downloading files from unverified sources, especially those leveraging high-interest topics."
+        ],
+        "tags": [
+          "data_unredaction",
+          "pdf_security",
+          "malware_distribution",
+          "social_engineering",
+          "public_interest"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/hackers-unredact-epstein-files-what-you-need-to-know/?pk_campaign=feed&pk_kwd=hackers-unredact-epstein-files-what-you-need-to-know"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Pen testers accused of ‘blackmail’ after reporting Eurostar chatbot flaws",
+        "description": "Researchers from Pen Test Partners discovered four flaws in Eurostar's public AI chatbot, including prompt injection, HTML content injection, and system prompt leakage. During the responsible disclosure process, Eurostar's head of security allegedly accused the pen-testing team of 'blackmail,' highlighting challenges in ethical hacking communication.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Phishing - prompt injection could be considered a form)",
+          "T1059 (Command and Scripting Interpreter - HTML injection)",
+          "T1552 (Unsecured Credentials / Information Exposure - system prompt leakage)"
+        ],
+        "analyse": "This incident demonstrates critical security vulnerabilities in AI-driven chatbots, specifically concerning prompt injection and data exposure. It also highlights the fraught relationship between security researchers and organizations during vulnerability disclosure, stressing the need for better communication protocols and an understanding of ethical hacking practices.",
+        "recommandations": [
+          "Implement robust input validation and sanitization for all chatbot interactions.",
+          "Regularly audit LLM outputs for sensitive information.",
+          "Establish clear and respectful vulnerability disclosure policies and ensure security teams are trained on handling researcher communications."
+        ],
+        "tags": [
+          "ai_chatbot",
+          "vulnerability",
+          "prompt_injection",
+          "html_injection",
+          "data_leakage",
+          "responsible_disclosure"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/25/pen-testers-accused-of-blackmail-after-reporting-eurostar-chatbot-flaws/?pk_campaign=feed&pk_kwd=pen-testers-accused-of-blackmail-after-reporting-eurostar-chatbot-flaws"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Cyberattaque contre La Poste : le suivi de colis a repris, seuls quelques dysfonctionnements marginaux subsistent",
+        "description": "La Poste was subjected to a denial-of-service (DDoS) cyberattack claimed by the pro-Russian group NoName057(16), disrupting its online services and parcel tracking during the intense holiday season. No sensitive data was stolen, and the situation has largely returned to normal.",
+        "threat_actor": "NoName057(16)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Endpoint Denial of Service)",
+          "T1499.001 (Application Denial of Service - specifically, web services)"
+        ],
+        "analyse": "The attack illustrates the capacity of pro-state groups to target civilian infrastructures to disrupt services and create disorganization, particularly during critical periods. The impact was primarily operational rather than related to data leakage, but demonstrated vulnerability to DDoS attacks.",
+        "recommandations": [
+          "Implement robust protections against DDoS attacks.",
+          "Strengthen the resilience of critical infrastructures to ensure service continuity during peak periods and in the face of cyberattacks.",
+          "Actively monitor relevant geopolitical threat groups."
+        ],
+        "tags": [
+          "cyberattack",
+          "ddos",
+          "la_poste",
+          "noname057(16)",
+          "geopolitical_motivation",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2025/12/25/cyberattaque-contre-la-poste-le-suivi-de-colis-a-repris-seuls-quelques-dysfonctionnements-marginaux-subsistent_6659429_3234.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Threat landscape for industrial automation systems in Q3 2025",
+        "description": "A report on the Q3 2025 threat landscape for Industrial Control Systems (ICS), highlighting increases in malicious scripts and phishing pages. Malware categories like spyware, ransomware, and miners also increased. East Asia and South America saw notable increases due to malicious scripts in OT infrastructure and large-scale phishing campaigns exploiting old vulnerabilities (CVE-2017-11882) to deliver spyware. The biometrics, engineering, and manufacturing sectors were particularly targeted.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access - Phishing, External Remote Services, Removable Media)",
+          "TA0002 (Execution - Malicious Scripts)",
+          "TA0003 (Persistence)",
+          "TA0004 (Privilege Escalation)",
+          "TA0005 (Defense Evasion)",
+          "TA0006 (Credential Access)",
+          "TA0007 (Discovery)",
+          "TA0008 (Lateral Movement)",
+          "TA0009 (Collection)",
+          "TA0010 (Exfiltration)",
+          "TA0011 (Command and Control)",
+          "TA0012 (Impact - Data Encrypted for Impact, Resource Hijacking)",
+          "Exploitation of CVE-2017-11882"
+        ],
+        "analyse": "The report indicates a persistent and evolving threat to ICS, with attackers leveraging common vectors like email and removable media, alongside sophisticated multi-step attacks. The continued exploitation of known vulnerabilities, even older ones, highlights gaps in patch management within operational technology environments. Regional variations in threat distribution suggest tailored campaigns.",
+        "recommandations": [
+          "Implement robust security awareness training, especially for phishing.",
+          "Ensure timely patching of known vulnerabilities, including older ones.",
+          "Strengthen network segmentation between IT and OT.",
+          "Deploy advanced endpoint protection on ICS computers.",
+          "Monitor for malicious scripts and activities related to torrent clients."
+        ],
+        "tags": [
+          "ics_security",
+          "ot_security",
+          "threat_report",
+          "phishing",
+          "malware",
+          "ransomware",
+          "spyware",
+          "vulnerability_exploitation",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securelist.com/industrial-threat-report-q3-2025/118602/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Critical Langchain Vulnerability Let attackers Exfiltrate Sensitive Secrets from AI systems",
+        "description": "A critical vulnerability (CVE-2025-68664, CVSS 9.3) in LangChain’s core library allows attackers to exfiltrate sensitive environment variables and potentially execute code via deserialization flaws (CWE-502) influenced by LLM outputs or prompt injections. A parallel flaw (CVE-2025-68665) affected LangChainJS. Patches are available in langchain-core versions 0.3.81 and 1.2.5.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application - general vulnerability exploitation)",
+          "T1598 (Phishing - prompt injection could be a form of this)",
+          "T1059 (Command and Scripting Interpreter - for code execution)",
+          "T1552 (Unsecured Credentials - exfiltration of secrets)"
+        ],
+        "analyse": "This vulnerability presents a significant risk to AI systems using LangChain, potentially compromising sensitive data and allowing full system control. The implications extend to any application leveraging LLMs where outputs can influence internal deserialization processes, highlighting a critical attack surface in modern AI architectures.",
+        "recommandations": [
+          "Upgrade langchain-core immediately to patched versions (0.3.81/1.2.5).",
+          "Verify dependencies like langchain-community.",
+          "Treat LLM outputs as untrusted.",
+          "Audit deserialization in streaming/logging workflows.",
+          "Disable secret resolution unless inputs are strictly verified."
+        ],
+        "tags": [
+          "ai_vulnerability",
+          "langchain",
+          "rce",
+          "secrets_exfiltration",
+          "deserialization",
+          "prompt_injection",
+          "cwe-502"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Critical Flaw in Livewire Exposes Laravel Apps to Stealthy RCE, PoC Releases",
+        "description": "A critical vulnerability (CVE-2025-54068) and a persistent design flaw in Livewire, a Laravel framework, enable remote code execution (RCE) on over 130,000 applications. The flaw exploits Livewire’s 'hydration' mechanism and PHP’s unserialize() behavior, allowing attackers to manipulate component parameters. Even with a patch, a leaked `APP_KEY` makes applications defenseless. A PoC tool, Livepyre, has been released.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059 (Command and Scripting Interpreter - PHP unserialize leading to RCE)",
+          "T1537 (Transfer Data to Cloud Account - if exfiltration occurred, not directly mentioned)",
+          "T1552 (Unsecured Credentials - APP_KEY leakage)"
+        ],
+        "analyse": "This vulnerability presents a severe threat to Laravel applications using Livewire, enabling stealthy RCE. The inherent design flaw means that even patched systems remain vulnerable if the `APP_KEY` is compromised, making secure key management paramount. The public release of a PoC tool increases the likelihood of widespread exploitation.",
+        "recommandations": [
+          "Upgrade Livewire to versions 3.6.4+ immediately.",
+          "Enforce strong typing on all component parameters.",
+          "Implement strict access controls for `APP_KEY` and ensure it is not leaked.",
+          "Audit applications for potential gadget chains exploitable via deserialization."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "laravel",
+          "livewire",
+          "deserialization",
+          "php_unserialize",
+          "poc",
+          "application_security"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaw-in-livewire-exposes-laravel-apps-to-stealthy-rce-poc-releases/"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "Fortinet FortiOS SSL VPN 2FA Bypass Vulnerability Actively Exploited (CVE-2020-12812)",
+        "description": "A five-year-old improper authentication vulnerability (CVE-2020-12812, CVSS 5.2) in Fortinet FortiOS SSL VPN is being actively exploited in the wild. This flaw allows attackers to bypass two-factor authentication (2FA) by changing the case of a username, particularly when 2FA is enabled locally and set to a remote authentication method like LDAP. Iranian APT group COBALT MIRAGE has been linked to past exploitation.",
+        "threat_actor": "COBALT MIRAGE (Iran-linked APT group), unspecified threat actors.",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts - particularly T1078.004, Cloud Accounts, but here general accounts)",
+          "T1110 (Brute Force - not directly, but authentication bypass fits the spirit of gaining initial access)",
+          "T1556 (Forge X.509 Certificate - not directly, but related to authentication)"
+        ],
+        "analyse": "The active exploitation of this medium-severity vulnerability underscores the critical importance of secure authentication mechanisms and timely patching, even for older flaws. The 2FA bypass significantly lowers the bar for attackers to gain unauthorized access to VPNs, posing a severe risk to network perimeters and corporate resources, especially from state-sponsored actors.",
+        "recommandations": [
+          "Immediately apply Fortinet's recommended mitigations (patch to FortiOS 6.0.10, 6.2.4, 6.4.1 or later).",
+          "Run CLI commands to disable username-sensitivity for local accounts.",
+          "Remove unnecessary secondary LDAP groups.",
+          "Reset all credentials if evidence of unauthorized 2FA bypass is found."
+        ],
+        "tags": [
+          "vulnerability",
+          "authentication_bypass",
+          "2fa_bypass",
+          "fortinet",
+          "fortios",
+          "ssl_vpn",
+          "active_exploitation",
+          "apt",
+          "iran"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186117/security/five-year-old-fortinet-fortios-ssl-vpn-flaw-actively-exploited.html",
+          "https://thehackernews.com/2025/12/fortinet-warns-of-active-exploitation.html"
+        ],
+        "date": "2025-12-26"
+      },
+      {
+        "title": "LastPass 2022 Breach Led to Years-Long Cryptocurrency Thefts",
+        "description": "Encrypted vault backups from the 2022 LastPass breach are still being actively exploited, with attackers cracking weak master passwords to steal cryptocurrency assets as recently as late 2025. TRM Labs reports over $35 million in digital assets siphoned, with evidence pointing to Russian cybercriminal involvement through associated infrastructure and high-risk exchanges.",
+        "threat_actor": "Russian cybercriminals",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1552.001 (Credentials in Files - encrypted vault backups)",
+          "T1110.001 (Password Guessing - for cracking master passwords)",
+          "T1071.001 (Web Protocols - for accessing exchanges)",
+          "T1567.002 (Exfiltration Over Web Service - to exchanges)"
+        ],
+        "analyse": "This highlights the long-term consequences of significant data breaches, particularly those involving sensitive credentials. The continued exploitation underscores the failure of users to adopt strong, unique master passwords and promptly rotate credentials post-breach, providing a persistent attack surface for sophisticated cybercriminals.",
+        "recommandations": [
+          "Emphasize strong, unique master passwords for all password managers.",
+          "Mandate immediate credential rotation for all affected accounts following any data breach.",
+          "Implement multi-factor authentication (MFA) everywhere possible.",
+          "Monitor cryptocurrency transactions for suspicious activity."
+        ],
+        "tags": [
+          "data_breach",
+          "lastpass",
+          "cryptocurrency_theft",
+          "russian_cybercriminals",
+          "password_cracking",
+          "long_term_impact"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/lastpass-2022-breach-led-to-years-long-cryptocurrency-thefts.html"
+        ],
+        "date": "2025-12-26"
+      }
+    ]
+  }
+}
