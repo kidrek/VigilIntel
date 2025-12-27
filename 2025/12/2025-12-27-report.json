@@ -1,0 +1,1281 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage cybernétique en 2025 caractérisé par la sophistication croissante des attaques et la diversification des vecteurs. Les vulnérabilités 'zero-day' continuent d'être un facteur décisif, exploitées rapidement et souvent en chaîne pour cibler des plateformes à haute valeur (navigateurs, OS, hyperviseurs) et les infrastructures critiques, dépassant la capacité des cycles de patch traditionnels. L'IA, bien que source d'innovation, est de plus en plus weaponisée par les attaquants, comme en témoignent les publicités malveillantes générées par IA et l'automatisation des opérations de ransomware. Les attaques sur la chaîne d'approvisionnement, illustrées par le hack de l'extension Trust Wallet et le typosquatting d'outils d'activation, représentent un risque persistant. Le hacktivisme pro-russe, tel que celui mené par Noname057(16) contre La Poste, souligne la persistance des motivations géopolitiques dans le cyberespace. Les violations de données restent un enjeu majeur, avec des incidents affectant des millions de clients dans des secteurs variés. Des vulnérabilités critiques avec des scores CVSS élevés (RCE, contournement d'authentification, injection SQL) sont régulièrement découvertes dans des produits largement utilisés, nécessitant une vigilance constante. En conclusion, l'état général des menaces est marqué par l'adaptabilité des adversaires, l'industrialisation du cybercrime et l'intensification des activités d'espionnage étatique, exigeant une approche de sécurité plus résiliente, axée sur la détection comportementale et la réduction de la surface d'attaque.",
+      "date": "2025-12-27"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Noname057(16)",
+        "secteur": "Services postaux, bancaires, infrastructure critique, gouvernement (France, Ukraine, OTAN)",
+        "modop": "Attaques par déni de service distribué (DDoS), diffusion de propagande, exploitation d'infrastructures compromises (botnets), ciblage de pays supportant l'Ukraine.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivisme",
+          "pro-russe",
+          "DDoS",
+          "géopolitique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.lemonde.fr/economie/article/2025/12/26/cyberattaque-contre-la-poste-tous-les-services-sont-disponibles-affirme-l-operateur_6659502_3234.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Everest ransomware group",
+        "secteur": "Automobile",
+        "modop": "Attaques par ransomware, exfiltration de données (plus de 1 To revendiqué), menaces de publication si les demandes ne sont pas satisfaites.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "exfiltration_donnees"
+        ],
+        "sources": [
+          "https://mstdn.social/@Hackread/115788235961046349"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Divertissement/Contenu adulte",
+        "modop": "Violation de données, vol d'informations personnelles (utilisateurs premium).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "violation_donnees",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://noc.social/@freezenet/115787831844474908"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Anna’s Archive",
+        "secteur": "Plateformes de streaming musical, bibliothèques numériques",
+        "modop": "Extraction massive de données (scraping illégal de millions de chansons), publication non autorisée d'informations et de métadonnées.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "scraping",
+          "violation_copyright",
+          "archivage_illicite"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186136/data-breach/spotify-cracks-down-on-unlawful-scraping-of-86-million-songs.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "CARR",
+        "secteur": "Infrastructures critiques (eau, alimentation, agriculture, énergie) aux États-Unis",
+        "modop": "Exploitation de connexions VNC mal sécurisées pour accéder aux dispositifs OT, attaques physiques (déversements, fuites, dommages).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivisme",
+          "OT",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "UNK_SmudgedSerpent (lié à l'Iran)",
+        "secteur": "Divers (cibles de grande valeur)",
+        "modop": "Phishing, fausses plateformes, outils de développement compromis pour l'espionnage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "iranien",
+          "phishing",
+          "chain_approvisionnement"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "TA415 (lié à la Chine)",
+        "secteur": "Divers (experts en politique, réseaux d'entreprise)",
+        "modop": "Phishing, fausses plateformes, outils de développement compromis pour l'espionnage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "chinois",
+          "phishing",
+          "chain_approvisionnement"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Hackers liés à la RPDC (Corée du Nord)",
+        "secteur": "Cryptomonnaies, travailleurs à distance (espionnage)",
+        "modop": "Vols de cryptomonnaies (plus de 2 milliards de dollars), campagnes d'espionnage (Opération Contagious Interview), fausses offres d'emploi, leurres de talents IA/crypto.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "corée_du_nord",
+          "cryptojacking",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Crimson Sandstorm (lié à l'Iran)",
+        "secteur": "Militaire, géopolitique",
+        "modop": "Cyber-reconnaissance pour soutenir des frappes de missiles.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "iranien",
+          "reconnaissance_cyber"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "CyberVolk",
+        "secteur": "Divers (opérations de ransomware)",
+        "modop": "Ransomware alimenté par l'IA (VolkLocker) avec automatisation de la négociation, du phishing et des attaques multilingues, orchestration via Telegram.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "IA",
+          "automatisation"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Services postaux et bancaires français",
+        "theme": "Hacktivisme pro-russe",
+        "description": "Le groupe hacktiviste pro-russe Noname057(16) a revendiqué une cyberattaque par déni de service distribué (DDoS) contre les services de La Poste, perturbant la banque numérique et les services en ligne pour des millions de clients. L'incident a temporairement rendu inaccessibles le site web principal, l'application mobile, le service d'identité numérique et la plateforme de stockage de documents Digiposte. Une enquête a été ouverte par le parquet de Paris.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Russie",
+          "hacktivisme",
+          "DDoS",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.lemonde.fr/economie/article/2025/12/26/cyberattaque-contre-la-poste-tous-les-services-sont-disponibles-affirme-l-operateur_6659502_3234.html"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers/Cryptomonnaies",
+        "victime": "Trust Wallet",
+        "description": "Un incident de sécurité affectant l'extension Chrome de Trust Wallet (version 2.68) a entraîné le vol d'environ 7 millions de dollars en cryptomonnaies. L'attaque de la chaîne d'approvisionnement a exploité un code malveillant qui exfiltrait les phrases mnémoniques et autres données sensibles des portefeuilles vers un serveur contrôlé par les attaquants. Une campagne de phishing parallèle a été lancée pour inciter les utilisateurs à divulguer leurs phrases de récupération.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptomonnaie",
+          "chaine_approvisionnement",
+          "phishing",
+          "vol_donnees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-confirms-extension-hack-led-to-7-million-crypto-theft/",
+          "https://securityaffairs.com/186163/cyber-crime/trust-wallet-warns-users-to-update-chrome-extension-after-7m-security-loss.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Assurances",
+        "victime": "Aflac",
+        "description": "Une violation de données en juin a exposé les informations personnelles de plus de 22 millions de clients, employés et agents d'Aflac. Les données compromises incluent les noms, coordonnées, informations de réclamation et de santé, numéros de sécurité sociale et autres données personnelles. L'incident a été contenu rapidement, sans implication de ransomware.",
+        "tags": [
+          "violation",
+          "breach",
+          "assurances",
+          "donnees_personnelles",
+          "donnees_sante",
+          "fuite_donnees"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186144/data-breach/aflac-confirms-june-data-breach-affecting-over-22-million-customers.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Streaming musical",
+        "victime": "Spotify",
+        "description": "Spotify a désactivé des comptes d'utilisateurs après que le groupe 'Anna’s Archive' ait illégalement extrait et publié les données de 86 millions de chansons de la plateforme. Le groupe a revendiqué la création d'une 'archive de préservation' de la musique. Spotify a confirmé avoir identifié et agi contre les comptes impliqués dans cette activité de scraping.",
+        "tags": [
+          "violation",
+          "breach",
+          "streaming",
+          "donnees_musicales",
+          "scraping",
+          "violation_copyright"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186136/data-breach/spotify-cracks-down-on-unlawful-scraping-of-86-million-songs.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Commerce électronique",
+        "victime": "Coupang",
+        "description": "Une enquête interne menée par Coupang a révélé qu'environ 3 000 comptes d'utilisateurs ont été affectés par une violation de données. Aucune fuite vers une tierce partie n'a été détectée. Les détails spécifiques des données compromises ne sont pas précisés.",
+        "tags": [
+          "violation",
+          "breach",
+          "ecommerce",
+          "comptes_utilisateurs",
+          "fuite_donnees"
+        ],
+        "sources": [
+          "https://en.infomaxai.com/news/articleView.html?idxno=97342"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Automobile",
+        "victime": "Chrysler",
+        "description": "Le groupe de ransomware Everest a revendiqué le vol de plus de 1 To de données de Chrysler, incluant des informations Salesforce et des rappels de véhicules. Le groupe menace de publier davantage de données si ses exigences ne sont pas satisfaites.",
+        "tags": [
+          "violation",
+          "breach",
+          "automobile",
+          "ransomware",
+          "exfiltration_donnees",
+          "Salesforce"
+        ],
+        "sources": [
+          "https://hackread.com/everest-ransomware-group-chrysler-data-breach/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Divertissement/Contenu adulte",
+        "victime": "Pornhub",
+        "description": "Pornhub a subi une violation de données par le groupe ShinyHunters, exposant les habitudes de navigation et les informations personnelles des utilisateurs premium du site.",
+        "tags": [
+          "violation",
+          "breach",
+          "divertissement",
+          "donnees_personnelles",
+          "habitudes_navigation",
+          "ShinyHunters"
+        ],
+        "sources": [
+          "https://www.freezenet.ca/pornhub-suffers-data-breach-browsing-habits-of-premium-users-exposed/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Transport aérien",
+        "victime": "Utair",
+        "description": "Une violation de données chez la compagnie aérienne russe Utair, datant de 2019 et révélée en août 2020, a compromis plus de 400 000 adresses e-mail uniques, ainsi que des informations personnelles étendues, notamment les noms, adresses physiques, dates de naissance, numéros de passeport et détails du programme de fidélité.",
+        "tags": [
+          "violation",
+          "breach",
+          "aerien",
+          "donnees_personnelles",
+          "passeport",
+          "programme_fidelite"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Utair"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66203",
+        "cvss": 9.9,
+        "product": "StreamVault (SpiritApplication)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) authentifiée via l'injection de configuration 'ytdlpargs'. Le point de terminaison '/admin/api/saveConfig' ne valide pas suffisamment les arguments yt-dlp, permettant l'exécution de commandes arbitraires.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "injection_configuration",
+          "authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66203"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68668",
+        "cvss": 9.9,
+        "product": "n8n (Python Code Node)",
+        "description": "Vulnérabilité de contournement de sandbox (sandbox bypass) permettant l'exécution de commandes arbitraires dans le nœud de code Python basé sur Pyodide. Un utilisateur authentifié peut exécuter des commandes sur le système hôte avec les privilèges du processus n8n.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "sandbox_bypass",
+          "arbitrary_command_execution",
+          "authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68668"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2024-44065",
+        "cvss": 9.8,
+        "product": "Cloudlog",
+        "description": "Vulnérabilité d'injection SQL aveugle (Time-based blind SQL Injection) au niveau du point de terminaison '/index.php/logbookadvanced/search' dans le paramètre 'qsoresults'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SQL_Injection",
+          "blind_SQLi",
+          "base_de_donnees"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-44065"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Vulnérabilité de contournement des mécanismes d'authentification permettant à un attaquant distant d'obtenir un accès non autorisé à l'application.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "contournement_authentification",
+          "acces_non_autorise",
+          "API"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13915"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP (snmptrapd daemon)",
+        "description": "Vulnérabilité critique de débordement de tampon (buffer overflow) dans le démon 'snmptrapd' de Net-SNMP. L'envoi d'un paquet spécialement conçu peut provoquer un crash du service (déni de service) et potentiellement une exécution de code arbitraire à distance sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "RCE_potentiel",
+          "deni_de_service",
+          "SNMP",
+          "surveillance_reseau"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cve-2025-68615-critical-net-snmp-snmptrapd/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68952",
+        "cvss": 9.3,
+        "product": "Eigent",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) en 1 clic. Un attaquant peut exécuter du code arbitraire sur la machine ou le serveur de la victime via une interaction spécifique.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "un_clic",
+          "execution_code_arbitraire"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68952"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-13158",
+        "cvss": 9.3,
+        "product": "apidoc-core",
+        "description": "Vulnérabilité de pollution de prototype (prototype pollution) dans les versions 0.2.0 et ultérieures, permettant à des attaquants distants de modifier les prototypes d'objets JavaScript via des structures de données mal formées, pouvant entraîner un déni de service ou un comportement inattendu.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "prototype_pollution",
+          "deni_de_service",
+          "javascript"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13158"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain Core",
+        "description": "Vulnérabilité d'injection de sérialisation permettant à un attaquant de voler des secrets sensibles (variables d'environnement) et d'influencer les réponses des modèles de langage (LLM) par injection de prompt.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "injection_serialisation",
+          "LLM",
+          "IA",
+          "exfiltration_secrets",
+          "prompt_injection"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/critical-langchain-core-vulnerability.html",
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-67729",
+        "cvss": 8.8,
+        "product": "LMDeploy",
+        "description": "Vulnérabilité d'exécution de code arbitraire via une désérialisation non sécurisée dans 'torch.load()'. Le chargement de fichiers de modèles .bin ou .pt malveillants peut entraîner l'exécution de code arbitraire sur la machine de la victime.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "deserialisation_insecure",
+          "LLM",
+          "IA",
+          "model_loading"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67729"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 8.6,
+        "product": "LangChain.js",
+        "description": "Vulnérabilité d'injection de sérialisation similaire à CVE-2025-68664, résultant de la non-échappement appropriée des objets avec des clés 'lc', permettant l'extraction de secrets et l'injection de prompt.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "injection_serialisation",
+          "LLM",
+          "IA",
+          "exfiltration_secrets",
+          "prompt_injection",
+          "javascript"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/critical-langchain-core-vulnerability.html",
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "The “D” is for Danger: How a Tiny Typo in MAS Activation Hijacks Your PC",
+        "description": "Une campagne malveillante exploite une erreur de frappe courante dans la commande PowerShell d'activation du logiciel MAS. Au lieu d'activer le système, les utilisateurs exécutent par inadvertance un script contrefait qui installe discrètement des logiciels malveillants, exploitant les privilèges administrateur pour le contrôle à distance et le déploiement de composants malveillants.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mscfg[.]cfd",
+            "hov[.]kievholod[.]kiev[.]ua"
+          ],
+          "FILE_HASH_SHA256": [
+            "aa3a9ed1e3b21845a6a0dfd5cef12661becbdb738e2a78adecbb2421785795c9",
+            "58ed7f9d65b10b2501e5d080217ae79cd0d88ae0d784896ceac67abda03ab3ed"
+          ],
+          "URL": [
+            "t[.]me/gal17d"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "Cette attaque illustre un risque significatif pour les utilisateurs non avertis, reposant sur l'ingénierie sociale et la négligence. L'impact potentiel est élevé, pouvant conduire à un contrôle total du système compromis. La capacité de l'attaquant à détourner un outil légitime pour une activation frauduleuse tout en déployant des logiciels malveillants est une tactique efficace pour contourner les défenses traditionnelles.",
+        "recommandations": [
+          "Vérifier scrupuleusement les commandes PowerShell avant exécution, en particulier celles nécessitant des privilèges administrateur.",
+          "Toujours copier les commandes directement depuis les sites officiels plutôt que de les taper manuellement.",
+          "Mettre en œuvre des politiques de moindre privilège et de surveillance des scripts PowerShell.",
+          "Sensibiliser les utilisateurs aux risques de typosquatting et de scripts malveillants.",
+          "Utiliser des solutions EDR/XDR pour détecter les exécutions de scripts PowerShell anormaux et le déploiement de malwares inconnus."
+        ],
+        "tags": [
+          "campagne_malveillante",
+          "typosquatting",
+          "ingénierie_sociale",
+          "malware",
+          "powershell",
+          "T1566",
+          "T1059",
+          "T1071"
+        ],
+        "sources": [
+          "https://securityonline.info/the-d-is-for-danger-how-a-tiny-typo-in-mas-activation-hijacks-your-pc/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "The Best, the Worst and the Ugliest in Cybersecurity | 2025 Edition",
+        "description": "Bilan de l'année 2025 en cybersécurité, mettant en lumière les succès des forces de l'ordre contre le cybercrime organisé, l'essor des menaces financées par des États-nations (Corée du Nord, Iran, Chine) et les attaques alimentées par l'IA et les vulnérabilités 'zero-day'. Les développeurs et les écosystèmes open-source sont devenus des cibles privilégiées. L'article détaille les impacts financiers et opérationnels graves, et souligne l'importance de la collaboration internationale face à un paysage de menaces de plus en plus interconnecté.",
+        "threat_actor": "DPRK-linked hackers, UNK_SmudgedSerpent (Iranian-linked), TA415 (China-linked), Crimson Sandstorm (Iranian-backed), CyberVolk",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "Ce rapport annuel souligne une intensification des efforts des forces de l'ordre, mais aussi une sophistication et une industrialisation croissantes du cybercrime et de l'espionnage étatique. L'IA transforme le potentiel offensif, tandis que les 'zero-days' restent des outils opérationnels décisifs. L'impact est global, touchant tous les secteurs, avec une convergence croissante entre la cybercriminalité et les tensions géopolitiques. La fragilité de la chaîne d'approvisionnement logicielle et les risques liés à l'identité sont des vecteurs d'attaque majeurs.",
+        "recommandations": [
+          "Renforcer la collaboration internationale pour démanteler les infrastructures cybercriminelles.",
+          "Mettre en œuvre des mesures de sécurité 'Zero Trust' et des systèmes de détection des menaces basés sur l'IA.",
+          "Prioriser la réduction de la surface d'attaque et la minimisation des privilèges.",
+          "Auditer et sécuriser la chaîne d'approvisionnement logicielle, en particulier les écosystèmes open-source.",
+          "Développer des stratégies de sécurité axées sur la résilience face aux exploitations 'zero-day' et aux attaques avancées."
+        ],
+        "tags": [
+          "bilan_annuel",
+          "cybercrime",
+          "espionnage_étatique",
+          "IA",
+          "zero_day",
+          "chain_approvisionnement",
+          "géopolitique"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "When Silence Broke Security: Zero-Days in 2025",
+        "description": "Le rapport met en évidence l'omniprésence des vulnérabilités 'zero-day' en 2025, qui sont devenues un facteur majeur du paysage des menaces. Les attaquants ont privilégié les exploits 'zero-day' ciblés contre des plateformes critiques (navigateurs, OS, virtualisation, périphériques d'entreprise), enchaînant souvent plusieurs 'zero-days' pour contourner les contrôles de sécurité. La rapidité d'exploitation après découverte est passée de jours à des heures, plaçant les défenseurs dans une posture réactive constante.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "L'année 2025 a marqué un point d'inflexion où les 'zero-days' ne sont plus des exploits exceptionnels mais des outils opérationnels courants pour les ransomwares, l'espionnage et l'accès initial. L'impact est amplifié par le ciblage de technologies largement déployées. Le rapport conclut que le patch seul n'est plus suffisant et que la résilience, la détection comportementale et la réduction de la surface d'attaque sont cruciales.",
+        "recommandations": [
+          "Assumer la violation et concevoir des stratégies de sécurité qui résistent à l'exploitation des 'zero-days'.",
+          "Mettre en œuvre la détection comportementale et les analyses inter-vues pour identifier les anomalies.",
+          "Réduire la surface d'attaque par des configurations sécurisées et la suppression des fonctionnalités inutiles.",
+          "Minimiser les privilèges d'accès pour limiter l'impact en cas de compromission.",
+          "Accélérer les cycles de réponse aux incidents et de confinement des menaces."
+        ],
+        "tags": [
+          "zero_day",
+          "exploitation",
+          "tendances_menaces",
+          "vulnérabilités",
+          "APT",
+          "ransomware",
+          "espionnage"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2025/12/26/when-silence-broke-security-zero-days-in-2025/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "Volatility Plugins — Plugin windows.drivermodule, windows.svcdiff Let’s Talk About it",
+        "description": "Cet article technique présente le plugin 'windows.drivermodule' de Volatility 3, conçu pour détecter les rootkits Windows modernes. Il effectue une analyse multi-vues des pilotes du noyau, à l'instar de 'psxview' pour les processus et 'svcdiff' pour les services. Ce plugin est particulièrement efficace contre les rootkits qui tentent de se cacher en manipulant les listes chaînées et les API Windows standard, en scannant la mémoire pour les structures de pilotes et en confrontant différentes vues du système.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "L'article est une analyse technique approfondie d'un outil DFIR essentiel. Il souligne l'évolution des techniques de rootkit et la nécessité d'outils d'analyse mémoire avancés capables de dépasser les vues système 'normales'. L'impact est principalement pour les professionnels de la sécurité (DFIR) qui doivent détecter des menaces furtives au niveau du noyau, améliorant ainsi les capacités d'investigation numérique.",
+        "recommandations": [
+          "Intégrer le plugin 'windows.drivermodule' de Volatility 3 dans les processus d'analyse forensique pour la détection de rootkits.",
+          "Former les analystes DFIR aux techniques d'analyse multi-vues pour identifier les dissimulations de rootkits.",
+          "Mettre à jour régulièrement les outils d'analyse mémoire pour contrer les nouvelles méthodes d'évasion des logiciels malveillants."
+        ],
+        "tags": [
+          "DFIR",
+          "forensique",
+          "analyse_mémoire",
+          "rootkit",
+          "volatility",
+          "détection_malware",
+          "analyse_technique"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/volatility-plugins-plugin-windows-drivermodule-windows-svcdiff-let-s-talk-about-it"
+        ],
+        "date": "2025-12-27"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals a cyber landscape in 2025 characterized by increasing attack sophistication and diversified vectors. 'Zero-day' vulnerabilities continue to be a decisive factor, exploited rapidly and often chained together to target high-value platforms (browsers, OS, hypervisors) and critical infrastructures, outpacing the capacity of traditional patching cycles. AI, while a source of innovation, is increasingly weaponized by attackers, as evidenced by AI-generated malicious ads and the automation of ransomware operations. Supply chain attacks, illustrated by the Trust Wallet extension hack and typosquatting of activation tools, represent a persistent risk. Pro-Russian hacktivism, such as that conducted by Noname057(16) against La Poste, highlights the persistence of geopolitical motivations in cyberspace. Data breaches remain a major issue, with incidents affecting millions of customers across various sectors. Critical vulnerabilities with high CVSS scores (RCE, authentication bypass, SQL injection) are regularly discovered in widely used products, requiring constant vigilance. In conclusion, the general state of threats is marked by the adaptability of adversaries, the industrialization of cybercrime, and the intensification of state-sponsored espionage activities, demanding a more resilient security approach focused on behavioral detection and attack surface reduction.",
+      "date": "2025-12-27"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Noname057(16)",
+        "secteur": "Postal and banking services, critical infrastructure, government (France, Ukraine, NATO)",
+        "modop": "Distributed Denial of Service (DDoS) attacks, propaganda dissemination, exploitation of compromised infrastructure (botnets), targeting countries supporting Ukraine.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro-russian",
+          "DDoS",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.lemonde.fr/economie/article/2025/12/26/cyberattaque-contre-la-poste-tous-les-services-sont-disponibles-affirme-l-operateur_6659502_3234.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Everest ransomware group",
+        "secteur": "Automotive",
+        "modop": "Ransomware attacks, data exfiltration (claiming over 1 TB stolen), threats to release more data if demands are not met.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://mstdn.social/@Hackread/115788235961046349"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Entertainment/Adult Content",
+        "modop": "Data breach, theft of personal information (premium users).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://noc.social/@freezenet/115787831844474908"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Anna’s Archive",
+        "secteur": "Music Streaming Platforms, Digital Content",
+        "modop": "Massive data extraction (illegal scraping of millions of songs), unauthorized publishing of information and metadata.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "scraping",
+          "copyright_infringement",
+          "illicit_archiving"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186136/data-breach/spotify-cracks-down-on-unlawful-scraping-of-86-million-songs.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "CARR",
+        "secteur": "Critical Infrastructure (water, food, agriculture, energy) in the US",
+        "modop": "Exploiting poorly secured VNC connections to access OT devices, physical attacks (spills, leaks, damage).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "OT",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "UNK_SmudgedSerpent (Iranian-linked)",
+        "secteur": "Various (high-value targets)",
+        "modop": "Phishing, fake platforms, compromised developer tooling for espionage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionage",
+          "iranian",
+          "phishing",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "TA415 (China-linked)",
+        "secteur": "Various (policy experts, enterprise networks)",
+        "modop": "Phishing, fake platforms, compromised developer tooling for espionage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "chinese",
+          "phishing",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "DPRK-linked hackers (North Korea)",
+        "secteur": "Cryptocurrency, remote workers (espionage)",
+        "modop": "Cryptocurrency heists (over $2B stolen), espionage campaigns (Operation Contagious Interview), fake job schemes, AI/crypto talent lures.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionage",
+          "north_korea",
+          "crypto_theft",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "Crimson Sandstorm (Iranian-backed)",
+        "secteur": "Military, geopolitical",
+        "modop": "Cyber reconnaissance to support missile strikes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionage",
+          "iranian",
+          "cyber_reconnaissance"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "nom": "CyberVolk",
+        "secteur": "Various (ransomware operations)",
+        "modop": "AI-driven ransomware (VolkLocker) with automated negotiation, phishing, and multilingual attacks, orchestrated via Telegram.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "AI",
+          "automation"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the_worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "French postal and banking services",
+        "theme": "Pro-Russian Hacktivism",
+        "description": "The pro-Russian hacktivist group Noname057(16) claimed responsibility for a Distributed Denial of Service (DDoS) cyberattack against La Poste's services, disrupting digital banking and online services for millions of customers. The incident temporarily rendered the main website, mobile app, digital identity service, and Digiposte document storage platform inaccessible. An investigation has been launched by the Paris public prosecutor's office.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Russia",
+          "hacktivism",
+          "DDoS",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186157/hacktivism/pro-russian-group-noname057-claims-cyberattack-on-la-poste-services.html",
+          "https://www.lemonde.fr/economie/article/2025/12/26/cyberattaque-contre-la-poste-tous-les-services-sont-disponibles-affirme-l-operateur_6659502_3234.html"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services/Cryptocurrency",
+        "victime": "Trust Wallet",
+        "description": "A security incident affecting the Trust Wallet Chrome extension (version 2.68) led to the theft of approximately $7 million in cryptocurrency. The supply chain attack exploited malicious code that exfiltrated mnemonic phrases and other sensitive wallet data to an attacker-controlled server. A parallel phishing campaign was launched to trick users into disclosing their recovery phrases.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "supply_chain",
+          "phishing",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-confirms-extension-hack-led-to-7-million-crypto-theft/",
+          "https://securityaffairs.com/186163/cyber-crime/trust-wallet-warns-users-to-update-chrome-extension-after-7m-security-loss.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Insurance",
+        "victime": "Aflac",
+        "description": "A data breach in June exposed the personal information of over 22 million Aflac customers, employees, and agents. Compromised data included names, contact details, claims and health information, Social Security numbers, and other personal data. The incident was contained quickly, with no ransomware involvement.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "personal_data",
+          "health_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186144/data-breach/aflac-confirms-june-data-breach-affecting-over-22-million-customers.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Music Streaming",
+        "victime": "Spotify",
+        "description": "Spotify disabled user accounts after the group 'Anna’s Archive' illegally scraped and published data on 86 million songs from the platform. The group claimed to be creating a music 'preservation archive.' Spotify confirmed it identified and took action against accounts involved in this scraping activity.",
+        "tags": [
+          "violation",
+          "breach",
+          "streaming",
+          "music_data",
+          "scraping",
+          "copyright_infringement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186136/data-breach/spotify-cracks-down-on-unlawful-scraping-of-86-million-songs.html"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "An internal probe by Coupang found that approximately 3,000 user accounts were affected in a data breach. No third-party leak was detected. Specific details of the compromised data are not specified.",
+        "tags": [
+          "violation",
+          "breach",
+          "ecommerce",
+          "user_accounts",
+          "data_leak"
+        ],
+        "sources": [
+          "https://en.infomaxai.com/news/articleView.html?idxno=97342"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Automotive",
+        "victime": "Chrysler",
+        "description": "The Everest ransomware group claimed to have stolen over 1 TB of Chrysler data, including Salesforce information and recall data. The group threatens to release more data if their demands are not met.",
+        "tags": [
+          "violation",
+          "breach",
+          "automotive",
+          "ransomware",
+          "data_exfiltration",
+          "Salesforce"
+        ],
+        "sources": [
+          "https://hackread.com/everest-ransomware-group-chrysler-data-breach/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Entertainment/Adult Content",
+        "victime": "Pornhub",
+        "description": "Pornhub suffered a data breach by the ShinyHunters group, exposing the browsing habits and personal information of premium users of the site.",
+        "tags": [
+          "violation",
+          "breach",
+          "entertainment",
+          "personal_information",
+          "browsing_habits",
+          "ShinyHunters"
+        ],
+        "sources": [
+          "https://www.freezenet.ca/pornhub-suffers-data-breach-browsing-habits-of-premium-users-exposed/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "secteur": "Air Transport",
+        "victime": "Utair",
+        "description": "A data breach at Russian airline Utair, dating back to 2019 and disclosed in August 2020, compromised over 400,000 unique email addresses, along with extensive personal information including names, physical addresses, dates of birth, passport numbers, and loyalty program details.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "personal_data",
+          "passport",
+          "loyalty_program"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Utair"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-66203",
+        "cvss": 9.9,
+        "product": "StreamVault (SpiritApplication)",
+        "description": "Authenticated Remote Code Execution (RCE) vulnerability via 'ytdlpargs' configuration injection. The '/admin/api/saveConfig' endpoint lacks sufficient validation for yt-dlp arguments, allowing arbitrary command execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "configuration_injection",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66203"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68668",
+        "cvss": 9.9,
+        "product": "n8n (Python Code Node)",
+        "description": "Sandbox bypass vulnerability allowing arbitrary command execution in the Pyodide-based Python Code Node. An authenticated user can exploit this to execute commands on the host system with n8n process privileges.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "sandbox_bypass",
+          "arbitrary_command_execution",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68668"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2024-44065",
+        "cvss": 9.8,
+        "product": "Cloudlog",
+        "description": "Time-based blind SQL Injection vulnerability at the '/index.php/logbookadvanced/search' endpoint in the 'qsoresults' parameter.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "SQL_Injection",
+          "blind_SQLi",
+          "database"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-44065"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Authentication bypass vulnerability allowing a remote attacker to gain unauthorized access to the application by circumventing authentication mechanisms.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "unauthorized_access",
+          "API"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13915"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68615",
+        "cvss": 9.8,
+        "product": "Net-SNMP (snmptrapd daemon)",
+        "description": "Critical buffer overflow vulnerability in the Net-SNMP 'snmptrapd' daemon. A specially crafted packet can cause the service to crash (Denial of Service) and potentially lead to remote code execution without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "potential_RCE",
+          "denial_of_service",
+          "SNMP",
+          "network_monitoring"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cve-2025-68615-critical-net-snmp-snmptrapd/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68952",
+        "cvss": 9.3,
+        "product": "Eigent",
+        "description": "1-click Remote Code Execution (RCE) vulnerability. An attacker can execute arbitrary code on the victim's machine or server through a specific single interaction.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "one_click",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68952"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-13158",
+        "cvss": 9.3,
+        "product": "apidoc-core",
+        "description": "Prototype pollution vulnerability in versions 0.2.0 and later, allowing remote attackers to modify JavaScript object prototypes via malformed data structures, potentially leading to denial of service or unintended behavior.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "prototype_pollution",
+          "denial_of_service",
+          "javascript"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13158"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain Core",
+        "description": "Serialization injection vulnerability allowing an attacker to steal sensitive secrets (environment variables) and influence Large Language Model (LLM) responses through prompt injection.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "serialization_injection",
+          "LLM",
+          "AI",
+          "secrets_exfiltration",
+          "prompt_injection"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/critical-langchain-core-vulnerability.html",
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-67729",
+        "cvss": 8.8,
+        "product": "LMDeploy",
+        "description": "Arbitrary Code Execution vulnerability via insecure deserialization in 'torch.load()'. Loading malicious .bin or .pt model files can lead to arbitrary code execution on the victim's machine.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "insecure_deserialization",
+          "LLM",
+          "AI",
+          "model_loading"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67729"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "cve_id": "CVE-2025-68665",
+        "cvss": 8.6,
+        "product": "LangChain.js",
+        "description": "Serialization injection vulnerability similar to CVE-2025-68664, stemming from improper escaping of objects with 'lc' keys, enabling secret extraction and prompt injection.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "serialization_injection",
+          "LLM",
+          "AI",
+          "secrets_exfiltration",
+          "prompt_injection",
+          "javascript"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/critical-langchain-core-vulnerability.html",
+          "https://cybersecuritynews.com/langchain-vulnerability/"
+        ],
+        "date": "2025-12-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "The “D” is for Danger: How a Tiny Typo in MAS Activation Hijacks Your PC",
+        "description": "A malicious campaign exploits a common typing error in the MAS software activation PowerShell command. Instead of activating the system, users inadvertently execute a counterfeit script that silently installs malware, leveraging administrator privileges for remote control and deployment of malicious components.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mscfg[.]cfd",
+            "hov[.]kievholod[.]kiev[.]ua"
+          ],
+          "FILE_HASH_SHA256": [
+            "aa3a9ed1e3b21845a6a0dfd5cef12661becbdb738e2a78adecbb2421785795c9",
+            "58ed7f9d65b10b2501e5d080217ae79cd0d88ae0d784896ceac67abda03ab3ed"
+          ],
+          "URL": [
+            "t[.]me/gal17d"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "This attack demonstrates a significant risk for unaware users, relying on social engineering and oversight. The potential impact is high, possibly leading to full control of the compromised system. The attacker's ability to hijack a legitimate tool for fraudulent activation while deploying malware is an effective tactic to bypass traditional defenses.",
+        "recommandations": [
+          "Scrupulously verify PowerShell commands before execution, especially those requiring administrator privileges.",
+          "Always copy commands directly from official websites rather than typing them manually.",
+          "Implement least privilege policies and PowerShell script monitoring.",
+          "Educate users about typosquatting risks and malicious scripts.",
+          "Utilize EDR/XDR solutions to detect abnormal PowerShell script executions and unknown malware deployment."
+        ],
+        "tags": [
+          "malicious_campaign",
+          "typosquatting",
+          "social_engineering",
+          "malware",
+          "powershell",
+          "T1566",
+          "T1059",
+          "T1071"
+        ],
+        "sources": [
+          "https://securityonline.info/the-d-is-for-danger-how-a-tiny-typo-in-mas-activation-hijacks-your-pc/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "The Best, the Worst and the Ugliest in Cybersecurity | 2025 Edition",
+        "description": "A year-end review of cybersecurity in 2025, highlighting law enforcement successes against organized cybercrime, the rise of nation-state-sponsored threats (North Korea, Iran, China), and attacks fueled by AI and zero-day vulnerabilities. Developer and open-source ecosystems became prime targets. The article details severe financial and operational impacts and emphasizes the importance of international collaboration in an increasingly interconnected threat landscape.",
+        "threat_actor": "DPRK-linked hackers, UNK_SmudgedSerpent (Iranian-linked), TA415 (China-linked), Crimson Sandstorm (Iranian-backed), CyberVolk",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Not mentioned"
+        ],
+        "analyse": "This annual report underscores intensified law enforcement efforts, but also increasing sophistication and industrialization of cybercrime and state espionage. AI is transforming offensive potential, while zero-days remain decisive operational tools. The impact is global, affecting all sectors, with a growing convergence between cybercrime and geopolitical tensions. Software supply chain fragility and identity-based risks are major attack vectors.",
+        "recommandations": [
+          "Strengthen international collaboration to dismantle cybercriminal infrastructures.",
+          "Implement Zero Trust security measures and AI-powered threat detection systems.",
+          "Prioritize attack surface reduction and privilege minimization.",
+          "Audit and secure the software supply chain, especially open-source ecosystems.",
+          "Develop security strategies focused on resilience against zero-day exploits and advanced attacks."
+        ],
+        "tags": [
+          "annual_review",
+          "cybercrime",
+          "state_espionage",
+          "AI",
+          "zero_day",
+          "supply_chain",
+          "geopolitical"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2025-edition/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "When Silence Broke Security: Zero-Days in 2025",
+        "description": "The report highlights the pervasive nature of 'zero-day' vulnerabilities in 2025, which became a major driver of the threat landscape. Attackers prioritized targeted 'zero-day' exploits against critical platforms (browsers, OS, virtualization, enterprise edge devices), often chaining multiple 'zero-days' to bypass security controls. The speed of exploitation after discovery accelerated from days to hours, keeping defenders in a constant reactive posture.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Not mentioned"
+        ],
+        "analyse": "2025 marked an inflection point where 'zero-days' were no longer exceptional exploits but common operational tools for ransomware, espionage, and initial access. The impact is amplified by targeting widely deployed technologies. The report concludes that patching alone is no longer sufficient and that resilience, behavioral detection, and attack surface reduction are crucial.",
+        "recommandations": [
+          "Assume breach and design security strategies that withstand 'zero-day' exploitation.",
+          "Implement behavioral detection and cross-view analysis to identify anomalies.",
+          "Reduce the attack surface through secure configurations and removal of unnecessary features.",
+          "Minimize access privileges to limit impact in case of compromise.",
+          "Accelerate incident response and threat containment cycles."
+        ],
+        "tags": [
+          "zero_day",
+          "exploitation",
+          "threat_trends",
+          "vulnerabilities",
+          "APT",
+          "ransomware",
+          "espionage"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2025/12/26/when-silence-broke-security-zero-days-in-2025/"
+        ],
+        "date": "2025-12-27"
+      },
+      {
+        "title": "Volatility Plugins — Plugin windows.drivermodule, windows.svcdiff Let’s Talk About it",
+        "description": "This technical article introduces the 'windows.drivermodule' plugin for Volatility 3, designed to detect modern Windows rootkits. It performs cross-view analysis for kernel drivers, similar to 'psxview' for processes and 'svcdiff' for services. This plugin is particularly effective against rootkits that attempt to hide by manipulating linked lists and standard Windows APIs, by scanning memory for driver structures and comparing different system views.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Not mentioned"
+        ],
+        "analyse": "The article is an in-depth technical analysis of an essential DFIR tool. It highlights the evolution of rootkit techniques and the need for advanced memory analysis tools capable of going beyond 'normal' system views. The impact is primarily for security professionals (DFIR) who need to detect stealthy kernel-level threats, thereby improving digital investigation capabilities.",
+        "recommandations": [
+          "Integrate Volatility 3's 'windows.drivermodule' plugin into forensic analysis processes for rootkit detection.",
+          "Train DFIR analysts in cross-view analysis techniques to identify rootkit obfuscation.",
+          "Regularly update memory analysis tools to counter new malware evasion methods."
+        ],
+        "tags": [
+          "DFIR",
+          "forensics",
+          "memory_analysis",
+          "rootkit",
+          "volatility",
+          "malware_detection",
+          "technical_analysis"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/volatility-plugins-plugin-windows-drivermodule-windows-svcdiff-let-s-talk-about-it"
+        ],
+        "date": "2025-12-27"
+      }
+    ]
+  }
+}
