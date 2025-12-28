@@ -1,0 +1,609 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber reste très actif, marqué par des vulnérabilités critiques, des attaques complexes sur la chaîne d'approvisionnement et des violations de données persistantes. L'écosystème de l'IA et des LLM (Large Language Models) est devenu une nouvelle cible, comme en témoigne la vulnérabilité LangChain (CVE-2025-68664) permettant l'injection de prompts et potentiellement l'exécution de code à distance. L'exploration par OpenAI de \"contenu sponsorisé\" dans ChatGPT soulève également des questions sur la commercialisation de l'IA et le risque de manipulation de l'information.\nLes attaques sur la chaîne d'approvisionnement continuent de représenter une menace majeure, illustrée par le package NPM malveillant 'Lotusbail' qui a compromis des comptes WhatsApp en mimant des bibliothèques légitimes et en utilisant des techniques anti-analyse sophistiquées. Plusieurs vulnérabilités critiques d'exécution de code à distance (RCE) ont été identifiées dans des produits tels que Xspeeder SXZOS (CVE-2025-54322), Eigent (CVE-2025-68952) et StreamVault (CVE-2025-66203), ainsi qu'une faille de fuite de mémoire non authentifiée dans MongoDB (CVE-2025-14847, \"MongoBleed\"), pour laquelle des exploits PoC sont disponibles, augmentant le risque d'exploitation immédiate. \nLes violations de données restent courantes, affectant divers secteurs comme la santé (OrthopedicsNY) et les médias (WIRED/Condé Nast), souvent en raison de l'exploitation de références d'identification compromises ou de protections insuffisantes. Enfin, l'incident Ubisoft (rapporté via des sources non officielles) met en lumière des tactiques d'acteurs de la menace diversifiées, incluant l'exploitation de services spécifiques et de vulnérabilités généralistes (MongoBleed) par des groupes aux motivations variées, allant de la perturbation au vol de code source et à l'extorsion. L'état général des menaces est donc caractérisé par une combinaison de vecteurs d'attaque éprouvés et de l'émergence de nouvelles surfaces d'attaque liées aux technologies innovantes, exigeant une vigilance et une adaptation constantes.",
+      "date": "2025-12-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteur non nommé (Lotusbail)",
+        "secteur": "Applications grand public (utilisateurs WhatsApp), développement logiciel (écosystème NPM)",
+        "modop": "Attaque de la chaîne d'approvisionnement via un package NPM malveillant ('Lotusbail') qui se fait passer pour une bibliothèque légitime. Vol de credentials, exfiltration de données, utilisation de techniques anti-débogage et détournement du processus d'appairage d'appareils WhatsApp pour un accès persistant.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "supply_chain_attack",
+          "npm_malware",
+          "credential_theft",
+          "data_exfiltration",
+          "anti_analysis"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186174/malware/npm-package-with-56000-downloads-compromises-whatsapp-accounts.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "PREMIER GROUPE (Incident Ubisoft)",
+        "secteur": "Jeux vidéo (Ubisoft, Rainbow 6 Siege)",
+        "modop": "Exploitation d'un service de Rainbow 6 Siege permettant de bannir des joueurs, de modifier l'inventaire et d'offrir de la monnaie de jeu. L'intention semble être la perturbation ou le divertissement malveillant ('pour les mèmes').",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "gaming_disruption",
+          "service_exploitation",
+          "unauthorized_access",
+          "non_financial_motive"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "DEUXIÈME GROUPE (Incident Ubisoft)",
+        "secteur": "Jeux vidéo (Ubisoft)",
+        "modop": "Exploitation d'une instance MongoDB d'Ubisoft via MongoBleed (CVE-2025-14847) pour pivoter vers un dépôt Git interne et exfiltrer une grande partie du code source interne (SDKs, services multijoueurs).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "source_code_theft",
+          "mongodb_exploitation",
+          "vulnerability_exploitation",
+          "data_exfiltration",
+          "git_access"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "TROISIÈME GROUPE (Incident Ubisoft)",
+        "secteur": "Jeux vidéo (Ubisoft)",
+        "modop": "Revendique avoir compromis Ubisoft et exfiltré des données utilisateur via MongoBleed, tentant une extorsion. La validité de ces affirmations est incertaine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "user_data_theft",
+          "mongodb_exploitation",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Orthopedics NY LLP",
+        "description": "Des cyberattaquants ont obtenu un accès à distance via des identifiants de connexion compromis en 2023, téléchargeant des fichiers non chiffrés de patients et d'employés, incluant des numéros de sécurité sociale, de permis de conduire et de passeport pour environ 110 000 individus, affectant plus de 650 000 dossiers patient/employé. L'entité a été condamnée à une amende de 500 000 $ pour protection insuffisante.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "pii",
+          "compromised_credentials",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/27/orthopedicsny-fined-500k-by-nys-for-patient-data-breach/?pk_campaign=feed&pk_kwd=orthopedicsny-fined-500k-by-nys-for-patient-data-breach"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "secteur": "Média/Édition",
+        "victime": "Utilisateurs du magazine WIRED (prétendument de Condé Nast)",
+        "description": "Plus de 2,3 millions de dossiers d'utilisateurs ont été publiés en ligne en décembre 2025, les données les plus récentes remontant à septembre précédent. Les informations exposées comprennent les adresses e-mail, les noms d'affichage, et pour un petit nombre d'utilisateurs, le nom complet, le numéro de téléphone, la date de naissance, le genre et la localisation géographique ou l'adresse physique complète.",
+        "tags": [
+          "violation",
+          "breach",
+          "media",
+          "user_data",
+          "pii",
+          "email_addresses",
+          "personal_information"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/WIRED",
+          "https://mastodon.social/@RedPacketSecurity/115794957206793839",
+          "https://infosec.exchange/@XposedOrNot/115794898653196084"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "secteur": "Jeux vidéo",
+        "victime": "Ubisoft",
+        "description": "Un \"TROISIÈME GROUPE\" prétend avoir exfiltré des données utilisateur en exploitant une instance MongoDB via MongoBleed et tente une extorsion. La validité de cette affirmation n'est pas vérifiée.",
+        "tags": [
+          "violation",
+          "breach",
+          "gaming",
+          "user_data",
+          "extortion",
+          "mongodb_exploitation"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain Core (package Python langchain-core)",
+        "description": "Vulnérabilité critique d'injection de sérialisation (\"LangGrinch\") dans les fonctions `dumps()` et `dumpd()`, permettant l'injection de prompts, la fuite de secrets, l'instanciation d'objets arbitraires et une potentielle exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "langchain",
+          "prompt_injection",
+          "rce",
+          "data_exposure",
+          "serialization_injection",
+          "python"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186185/hacking/langchain-core-vulnerability-allows-prompt-injection-and-data-exposure.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-14180",
+        "cvss": 8.2,
+        "product": "PHP (versions 8.1.* avant 8.1.34, 8.2.* avant 8.2.30, 8.3.* avant 8.3.29, 8.4.* avant 8.4.16, 8.5.* avant 8.5.1 avec pilote PDO PostgreSQL et PDO::ATTR_EMULATE_PREPARES activé)",
+        "description": "Déréférencement de pointeur NULL dans `pdo_parse_params()` dû à une séquence de caractères invalide dans les paramètres d'une instruction préparée, entraînant des crashs (faute de segmentation) et affectant la disponibilité du serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "php",
+          "pdo",
+          "postgresql",
+          "null_pointer_dereference",
+          "dos",
+          "availability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14180"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-54322",
+        "cvss": 10.0,
+        "product": "Xspeeder SXZOS jusqu'au 2025-12-26",
+        "description": "Exécution de code à distance (RCE) en tant que root via du code Python encodé en base64 dans le paramètre `chkid` vers `vLogin.py`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xspeeder",
+          "sxzos",
+          "rce",
+          "python_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-54322"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-68952",
+        "cvss": 9.3,
+        "product": "Eigent version 0.0.60",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) en 1 clic permettant l'exécution de code arbitraire. Patchée dans la version 0.0.61.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "eigent",
+          "rce",
+          "one_click_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68952"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-66203",
+        "cvss": 9.9,
+        "product": "StreamVault (SpiritApplication) avant la version 251126",
+        "description": "Exécution de code à distance (RCE) authentifiée via injection de configuration `ytdlpargs` dans le point de terminaison `/admin/api/saveConfig` en raison d'une validation insuffisante.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "streamvault",
+          "rce",
+          "configuration_injection",
+          "authenticated_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66203"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server (versions antérieures à 8.2.3, 8.0.17, 7.0.28 et branches plus anciennes)",
+        "description": "Vulnérabilité de fuite de mémoire à distance non authentifiée (\"MongoBleed\") dans la gestion de la décompression zlib, permettant aux attaquants de lire la mémoire de tas non initialisée (par exemple, identifiants, jetons de session, informations d'état interne). Un exploit PoC est disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mongodb",
+          "mongobleed",
+          "memory_leak",
+          "unauthenticated",
+          "data_exposure",
+          "zlib"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/mongobleed-poc-exploit-mongodb/",
+          "https://www.security.nl/posting/918874/NCSC+verwacht+op+korte+termijn+misbruik+van+MongoDB-kwetsbaarheid?channel=rss",
+          "https://thecyberthrone.in/2025/12/27/cve-2025-14847-affecting-mongodb/",
+          "https://thehackernews.com/2025/12/new-mongodb-flaw-lets-unauthenticated.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-44016",
+        "cvss": 8.8,
+        "product": "Service de distribution de contenu du client TeamViewer DEX (NomadBranch.exe) versions Windows antérieures à 25.11",
+        "description": "Vulnérabilité permettant de contourner les vérifications d'intégrité des fichiers, ce qui autorise l'exécution de code arbitraire dans le contexte de NomadBranch. Nécessite un accès au réseau adjacent.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "teamviewer",
+          "dex",
+          "rce",
+          "file_integrity_bypass",
+          "adjacent_network"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/teamviewer-dex-vulnerabilities/"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Un package NPM avec 56 000 téléchargements compromet des comptes WhatsApp",
+        "description": "Un package NPM malveillant, 'Lotusbail' (un fork de 'Baileys'), avec plus de 56 000 téléchargements, a volé des identifiants, des messages, des contacts et des médias WhatsApp pendant six mois. Il fonctionne comme une API WhatsApp pleinement fonctionnelle, ce qui rend sa détection difficile, en wrappant le client WebSocket légitime pour intercepter les données. Le malware chiffre les données volées avec une RSA personnalisée, utilise 27 pièges anti-débogage et détourne le processus d'appairage des appareils WhatsApp pour obtenir un accès persistant au compte. Il s'agit d'une attaque sophistiquée sur la chaîne d'approvisionnement qui échappe aux analyses statiques traditionnelles et aux systèmes de réputation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1027 (Obfuscation de fichiers ou d'informations)",
+          "T1555 (Accès aux identifiants)",
+          "T1041 (Exfiltration sur canal C2)"
+        ],
+        "analyse": "Cette attaque met en évidence la sophistication croissante des attaques sur la chaîne d'approvisionnement ciblant les écosystèmes open source comme NPM. L'utilisation de techniques anti-analyse et l'imitation de bibliothèques légitimes permettent au malware de persister sans être détecté, impactant une large base d'utilisateurs de WhatsApp. L'accès persistant aux comptes WhatsApp présente un risque significatif pour la confidentialité et la sécurité des individus, et potentiellement pour les organisations si WhatsApp est utilisé pour les communications professionnelles. L'incident souligne la nécessité d'une analyse comportementale des packages lors de l'exécution pour détecter de telles menaces cachées.",
+        "recommandations": "Mettre en œuvre une analyse comportementale en temps réel pour les packages tiers dans les environnements de développement et de production. Examiner et valider tous les packages NPM, en particulier les forks ou ceux moins connus, avant l'intégration. Surveiller le trafic réseau pour détecter toute encryption inhabituelle (RSA personnalisée) ou des schémas d'exfiltration des données des applications. Assurer des mises à jour rapides des correctifs de sécurité et maintenir une veille sur les nouveaux vecteurs d'attaque de la chaîne d'approvisionnement. Les utilisateurs du package 'Lotusbail' affecté doivent mettre à jour immédiatement vers une alternative légitime et vérifier leur compte WhatsApp pour tout accès non autorisé.",
+        "tags": [
+          "supply_chain",
+          "npm",
+          "whatsapp",
+          "malware",
+          "credential_theft",
+          "data_exfiltration",
+          "anti_analysis",
+          "opensource_security",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186174/malware/npm-package-with-56000-downloads-compromises-whatsapp-accounts.html"
+        ],
+        "date": "2025-12-28"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape remains highly active, marked by critical vulnerabilities, complex supply chain attacks, and persistent data breaches. The AI and LLM (Large Language Model) ecosystem has become a new target, as evidenced by the LangChain vulnerability (CVE-2025-68664) allowing prompt injection and potential remote code execution. OpenAI's exploration of \"sponsored content\" in ChatGPT also raises questions about AI commercialization and the risk of information manipulation.\nSupply chain attacks continue to pose a major threat, illustrated by the malicious NPM package 'Lotusbail' which compromised WhatsApp accounts by mimicking legitimate libraries and using sophisticated anti-analysis techniques. Several critical Remote Code Execution (RCE) vulnerabilities have been identified in products such as Xspeeder SXZOS (CVE-2025-54322), Eigent (CVE-2025-68952), and StreamVault (CVE-2025-66203), as well as an unauthenticated memory leak flaw in MongoDB (CVE-2025-14847, \"MongoBleed\"), for which PoC exploits are available, increasing the risk of immediate exploitation.\nData breaches remain common, affecting various sectors like healthcare (OrthopedicsNY) and media (WIRED/Condé Nast), often due to compromised login credentials or inadequate protection. Finally, the Ubisoft incident (reported via unofficial sources) highlights diversified threat actor tactics, including the exploitation of service-specific flaws and general vulnerabilities (MongoBleed) by groups with varied motivations, ranging from disruption to source code theft and extortion. The overall state of threats is thus characterized by a combination of proven attack vectors and the emergence of new attack surfaces related to innovative technologies, demanding constant vigilance and adaptation.",
+      "date": "2025-12-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Unnamed Threat Actor (Lotusbail)",
+        "secteur": "Consumer applications (WhatsApp users), software development (NPM ecosystem)",
+        "modop": "Supply chain attack via a malicious NPM package ('Lotusbail') impersonating a legitimate library. Stealing credentials, exfiltrating data, using anti-debugging techniques, and hijacking WhatsApp device pairing for persistent access.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "supply_chain_attack",
+          "npm_malware",
+          "credential_theft",
+          "data_exfiltration",
+          "anti_analysis"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186174/malware/npm-package-with-56000-downloads-compromises-whatsapp-accounts.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "FIRST GROUP (Ubisoft Incident)",
+        "secteur": "Gaming (Ubisoft, Rainbow 6 Siege)",
+        "modop": "Exploited a Rainbow 6 Siege service to ban players, modify inventory, and gift in-game currency. Intent appears to be disruption or malicious fun ('for the memes').",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "gaming_disruption",
+          "service_exploitation",
+          "unauthorized_access",
+          "non_financial_motive"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "SECOND GROUP (Ubisoft Incident)",
+        "secteur": "Gaming (Ubisoft)",
+        "modop": "Exploited Ubisoft's MongoDB instance using MongoBleed (CVE-2025-14847) to pivot to an internal Git repository and exfiltrate large portions of internal source code (SDKs, multiplayer services).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "source_code_theft",
+          "mongodb_exploitation",
+          "vulnerability_exploitation",
+          "data_exfiltration",
+          "git_access"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "nom": "THIRD GROUP (Ubisoft Incident)",
+        "secteur": "Gaming (Ubisoft)",
+        "modop": "Claims to have compromised Ubisoft and exfiltrated user data via MongoBleed, attempting extortion. The validity of these claims is unverified.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "user_data_theft",
+          "mongodb_exploitation",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Orthopedics NY LLP",
+        "description": "Cyberattackers gained remote access via compromised login credentials in 2023, downloading unencrypted patient and employee data (SSN, driver's license, passport numbers) for approximately 110,000 individuals, impacting over 650,000 patient/employee records. The entity was fined $500K for inadequate protection.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "pii",
+          "compromised_credentials",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/27/orthopedicsny-fined-500k-by-nys-for-patient-data-breach/?pk_campaign=feed&pk_kwd=orthopedicsny-fined-500k-by-nys-for-patient-data-breach"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "secteur": "Media/Publishing",
+        "victime": "WIRED magazine users (allegedly from Condé Nast)",
+        "description": "Over 2.3 million user records were published online in December 2025, with the most recent data dating back to the previous September. Exposed information includes email addresses, display names, and for a small number of users, full name, phone number, date of birth, gender, and geographic location or full physical address.",
+        "tags": [
+          "violation",
+          "breach",
+          "media",
+          "user_data",
+          "pii",
+          "email_addresses",
+          "personal_information"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/WIRED",
+          "https://mastodon.social/@RedPacketSecurity/115794957206793839",
+          "https://infosec.exchange/@XposedOrNot/115794898653196084"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "secteur": "Gaming",
+        "victime": "Ubisoft",
+        "description": "A \"THIRD GROUP\" claims to have exfiltrated user data by exploiting a MongoDB instance via MongoBleed and is attempting extortion. The validity of this claim is unverified.",
+        "tags": [
+          "violation",
+          "breach",
+          "gaming",
+          "user_data",
+          "extortion",
+          "mongodb_exploitation"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/7825"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-68664",
+        "cvss": 9.3,
+        "product": "LangChain Core (langchain-core Python package)",
+        "description": "Critical serialization injection vulnerability (\"LangGrinch\") in `dumps()` and `dumpd()` functions, allowing prompt injection, secret leakage, arbitrary object instantiation, and potential remote code execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "langchain",
+          "prompt_injection",
+          "rce",
+          "data_exposure",
+          "serialization_injection",
+          "python"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186185/hacking/langchain-core-vulnerability-allows-prompt-injection-and-data-exposure.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-14180",
+        "cvss": 8.2,
+        "product": "PHP (versions 8.1.* before 8.1.34, 8.2.* before 8.2.30, 8.3.* before 8.3.29, 8.4.* before 8.4.16, 8.5.* before 8.5.1 with PDO PostgreSQL driver and PDO::ATTR_EMULATE_PREPARES enabled)",
+        "description": "NULL Pointer Dereference in `pdo_parse_params()` due to an invalid character sequence in a prepared statement parameter, leading to crashes (segmentation fault) and affecting server availability.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "php",
+          "pdo",
+          "postgresql",
+          "null_pointer_dereference",
+          "dos",
+          "availability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14180"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-54322",
+        "cvss": 10.0,
+        "product": "Xspeeder SXZOS through 2025-12-26",
+        "description": "Root Remote Code Execution (RCE) via base64-encoded Python code in the `chkid` parameter to `vLogin.py`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xspeeder",
+          "sxzos",
+          "rce",
+          "python_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-54322"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-68952",
+        "cvss": 9.3,
+        "product": "Eigent version 0.0.60",
+        "description": "1-click Remote Code Execution (RCE) vulnerability allowing arbitrary code execution. Patched in version 0.0.61.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "eigent",
+          "rce",
+          "one_click_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68952"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-66203",
+        "cvss": 9.9,
+        "product": "StreamVault (SpiritApplication) prior to version 251126",
+        "description": "Authenticated Remote Code Execution (RCE) via `ytdlpargs` configuration injection in the `/admin/api/saveConfig` endpoint due to insufficient validation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "streamvault",
+          "rce",
+          "configuration_injection",
+          "authenticated_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66203"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server (versions before 8.2.3, 8.0.17, 7.0.28, and older branches)",
+        "description": "Unauthenticated remote memory leak vulnerability (\"MongoBleed\") in zlib decompression handling, allowing attackers to read uninitialized heap memory (e.g., credentials, session tokens, internal state information). A PoC exploit is available.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mongodb",
+          "mongobleed",
+          "memory_leak",
+          "unauthenticated",
+          "data_exposure",
+          "zlib"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/mongobleed-poc-exploit-mongodb/",
+          "https://www.security.nl/posting/918874/NCSC+verwacht+op+korte+termijn+misbruik+van+MongoDB-kwetsbaarheid?channel=rss",
+          "https://thecyberthrone.in/2025/12/27/cve-2025-14847-affecting-mongodb/",
+          "https://thehackernews.com/2025/12/new-mongodb-flaw-lets-unauthenticated.html"
+        ],
+        "date": "2025-12-28"
+      },
+      {
+        "cve_id": "CVE-2025-44016",
+        "cvss": 8.8,
+        "product": "TeamViewer DEX Client’s Content Distribution Service (NomadBranch.exe) Windows versions before 25.11",
+        "description": "Vulnerability allowing bypass of file integrity checks, enabling arbitrary code execution within the NomadBranch context. Requires adjacent network access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "teamviewer",
+          "dex",
+          "rce",
+          "file_integrity_bypass",
+          "adjacent_network"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/teamviewer-dex-vulnerabilities/"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "NPM package with 56,000 downloads compromises WhatsApp accounts",
+        "description": "A malicious NPM package, 'Lotusbail' (a fork of 'Baileys'), with over 56,000 downloads, has been stealing WhatsApp credentials, messages, contacts, and media for six months. It operates as a fully functional WhatsApp API, making it difficult to detect, by wrapping the legitimate WebSocket client to intercept data. The malware encrypts stolen data with custom RSA, uses 27 anti-debugging traps, and hijacks WhatsApp’s device pairing process to gain persistent account access. This represents a sophisticated supply chain attack that evades traditional static analysis and reputation systems.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1027 (Obfuscated Files or Information)",
+          "T1555 (Credential Access)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "This attack highlights the increasing sophistication of supply chain attacks targeting open-source ecosystems like NPM. The use of anti-analysis techniques and mimicking legitimate libraries allows the malware to persist undetected, impacting a wide user base of WhatsApp. The persistent access to WhatsApp accounts poses a significant privacy and security risk for individuals and potentially for organizations if WhatsApp is used for business communications. The incident underscores the need for behavioral analysis of packages at runtime to detect such hidden threats.",
+        "recommandations": "Implement runtime behavioral analysis for third-party packages in development and production environments. Review and vet all NPM packages, especially forks or less-known ones, before integration. Monitor network traffic for unusual encryption (custom RSA) or exfiltration patterns from applications. Ensure prompt updates to security patches and maintain awareness of new supply chain attack vectors. Users of the affected 'Lotusbail' package should update immediately to a legitimate alternative and review their WhatsApp account for unauthorized access.",
+        "tags": [
+          "supply_chain",
+          "npm",
+          "whatsapp",
+          "malware",
+          "credential_theft",
+          "data_exfiltration",
+          "anti_analysis",
+          "opensource_security",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186174/malware/npm-package-with-56000-downloads-compromises-whatsapp-accounts.html"
+        ],
+        "date": "2025-12-28"
+      }
+    ]
+  }
+}
