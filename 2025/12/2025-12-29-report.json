@@ -1,0 +1,1385 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel de la menace cyber se caractérise par une complexité et une diversification croissantes des vecteurs d'attaque. On observe une exploitation active de vulnérabilités critiques comme MongoBleed (CVE-2025-14847) dans des bases de données largement utilisées, ainsi que la découverte de zero-days à haut risque (CVE-2025-54322 avec un CVSS de 10.0) dans des équipements réseau cruciaux, avec une note notable sur l'émergence des agents d'IA dans la chasse aux failles. La chaîne d'approvisionnement reste une cible privilégiée, comme en témoigne l'attaque sophistiquée \"Prefix Swap\" sur Maven Central, soulignant la nécessité d'une vigilance accrue sur l'intégrité des composants logiciels. Parallèlement, des incidents liés à la chaîne d'approvisionnement matérielle, comme la pénurie de puces mémoire, illustrent les impacts géopolitiques indirects sur la sécurité technologique. Les menaces persistantes incluent les fuites de données massives (Condé Nast, LastPass), les menaces internes (Coinbase) et l'espionnage d'État (Ukraine). Une nouvelle surface d'attaque est identifiée dans les objets connectés grand public, comme les vulnérabilités dans les écouteurs Bluetooth permettant le \"Headphone Jacking\". La persistance du déchiffrement des sauvegardes LastPass souligne le risque à long terme des violations passées. La conclusion générale est celle d'un environnement de menaces où l'innovation des attaquants rencontre des faiblesses fondamentales (authentification, gestion des vulnérabilités) et des défis systémiques (chaînes d'approvisionnement, fragmentation des mises à jour).",
+      "date": "2025-12-29"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteur unique (basé au Japon)",
+        "secteur": "Large éventail de technologies (Adobe ColdFusion, etc.)",
+        "modop": "Campagne massive et coordonnée de courtier en accès initial (\"initial access broker\") utilisant des tactiques de \"spray and pray\" pour exploiter des centaines de CVEs et récolter des identifiants et des webshells.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "initial_access_broker",
+          "vulnerability_exploitation",
+          "japan",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/holiday-coldfusion-attacks-reveal-massive-2-5-million-request-onslaught/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Contractant interne (Coinbase)",
+        "secteur": "Cryptomonnaie / Finance",
+        "modop": "Accès illicite à des informations client après avoir été soudoyé par des hackers, entraînant une violation de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "insider_threat",
+          "bribery",
+          "data_breach",
+          "finance",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/coinbase-discloses-arrest-of-former-customer-agent-over-data-breach-report/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Lithuanian Cryptocurrency Thief (non nommé)",
+        "secteur": "Finance / Cryptomonnaie",
+        "modop": "Utilisation de logiciels malveillants sophistiqués pour rediriger les transactions de cryptomonnaies de destinataires légitimes vers ses propres portefeuilles.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cryptocurrency_theft",
+          "malware",
+          "financial_crime",
+          "lithuanian"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/hacker-who-stole-millions-in-seconds-finally-caught/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Lovely",
+        "secteur": "Médias / Édition",
+        "modop": "Violation de données, fuite de bases de données, menaces d'exposition de données supplémentaires, allégations d'ignorance des vulnérabilités par les entreprises ciblées.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "data_leak",
+          "extorsion_numerique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense / Sécurité nationale",
+        "theme": "Espionnage d'État et fuite de données militaires",
+        "description": "Une adolescente ukrainienne de 16 ans a été condamnée pour avoir transmis des données sur des installations militaires à un officier de renseignement russe en échange d'argent, mettant en lumière l'espionnage et l'information de guerre.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "espionnage",
+          "donnees_militaires",
+          "securite_nationale",
+          "conflit"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/ukrainian-teen-sentenced-for-sharing-military-data-with-russian-spy/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Technologie / Fabrication de semi-conducteurs",
+        "theme": "Guerre des puces et pénurie mondiale de puces mémoire",
+        "description": "Les tensions géopolitiques et économiques exacerbent la pénurie mondiale de puces mémoire (en particulier HBM pour l'IA), entraînant des négociations difficiles, des licenciements de cadres chez Google et des augmentations de prix potentielles de 230% pour Apple, impactant la chaîne d'approvisionnement technologique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "guerre_puces",
+          "penurie_puces",
+          "hbm",
+          "ia",
+          "chain_approvisionnement",
+          "economie",
+          "technologie"
+        ],
+        "sources": [
+          "https://securityonline.info/the-70-chip-war-why-google-is-firing-execs-and-apple-is-bracing-for-a-230-price-surge/"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Transport aérien",
+        "victime": "Asiana Airlines",
+        "description": "Violation de données ayant exposé les informations personnelles d'environ 10 000 employés d'Asiana Airlines. Les données clients n'ont pas été affectées.",
+        "tags": [
+          "violation",
+          "breach",
+          "asiana_airlines",
+          "informations_personnelles",
+          "employes",
+          "transport_aerien",
+          "coree_du_sud"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115799910128801800"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Santé / Assurance maladie",
+        "victime": "Membres de CareOregon et Health Share Oregon",
+        "description": "Des informations sur les membres de CareOregon et Health Share Oregon ont été consultées sans autorisation. Une enquête policière est en cours, avec des préoccupations concernant d'éventuelles fausses demandes d'assurance. Aucun numéro de sécurité sociale ni information financière n'a été exposé.",
+        "tags": [
+          "violation",
+          "breach",
+          "careoregon",
+          "health_share_oregon",
+          "sante",
+          "assurance_maladie",
+          "informations_personnelles",
+          "fraude"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/health-share-of-oregon-and-careoregon-notify-members-of-data-breach/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Cryptomonnaie / Finance",
+        "victime": "Coinbase",
+        "description": "Un ancien contractant du service client de Coinbase a été arrêté en Inde pour avoir été soudoyé par des hackers afin d'accéder aux informations clients, conduisant à une violation de données par menace interne.",
+        "tags": [
+          "violation",
+          "breach",
+          "coinbase",
+          "cryptomonnaie",
+          "finance",
+          "menace_interne",
+          "soudoyer",
+          "acces_non_autorise"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/coinbase-discloses-arrest-of-former-customer-agent-over-data-breach-report/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang Inc.",
+        "description": "Violation de données ayant affecté 33,7 millions d'utilisateurs. L'entreprise va indemniser les utilisateurs concernés avec des bons d'achat, pour un montant total de 1,29 milliard de dollars.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e_commerce",
+          "utilisateurs",
+          "compensation",
+          "coree_du_sud"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115800559019984381"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Gestionnaire de mots de passe / Cybersécurité",
+        "victime": "LastPass",
+        "description": "Les sauvegardes chiffrées des coffres-forts LastPass volées lors de la violation de 2022 continuent d'être déchiffrées en raison de mots de passe maîtres faibles, entraînant des vols continus de cryptomonnaies jusqu'en 2025 (plus de 28 millions de dollars tracés et blanchis).",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "crypto",
+          "mots_de_passe",
+          "vol_de_donnees",
+          "blanchiment_argent",
+          "persistance"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186191/digital-id/stolen-lastpass-backups-enable-crypto-theft-through-2025.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Santé / Dentaire",
+        "victime": "Patients d'un ancien dentiste (Memphis)",
+        "description": "Des milliers de dossiers médicaux (informations d'identification personnelle, radiographies, informations de facturation, numéros de sécurité sociale) ont été découverts dans une unité de stockage mise aux enchères en raison de loyers impayés, exposant des données sensibles des patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "dossiers_medicaux",
+          "donnees_sensibles",
+          "exposition_donnees",
+          "memphis",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/thousands-of-medical-records-found-in-auctioned-storage-unit/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Médias / Édition",
+        "victime": "Condé Nast (WIRED)",
+        "description": "Le hacker \"Lovely\" a revendiqué la violation de Condé Nast, divulguant une base de données présumée de WIRED contenant plus de 2,3 millions d'enregistrements d'abonnés et menaçant de publier jusqu'à 40 millions d'enregistrements supplémentaires provenant d'autres propriétés de Condé Nast.",
+        "tags": [
+          "violation",
+          "breach",
+          "conde_nast",
+          "wired",
+          "lovely",
+          "fuite_de_donnees",
+          "medias",
+          "abonnes",
+          "pii"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Jeux vidéo",
+        "victime": "Ubisoft (Rainbow Six Siege)",
+        "description": "Violation des systèmes internes d'Ubisoft pour Rainbow Six Siege, permettant aux hackers de manipuler les flux de modération en jeu, de bannir/débannir des joueurs et d'attribuer des milliards de crédits en jeu. Un lien possible avec la vulnérabilité MongoBleed (CVE-2025-14847) est suggéré.",
+        "tags": [
+          "violation",
+          "breach",
+          "ubisoft",
+          "rainbow_six_siege",
+          "jeux_video",
+          "systemes_internes",
+          "manipulation",
+          "mongo_bleed_potentiel"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/massive-rainbow-six-siege-breach-gives-players-billions-of-credits/"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-54322",
+        "cvss": 10.0,
+        "product": "Xspeeder SD-WAN (firmware SXZOS)",
+        "description": "Exécution de code à distance (RCE) pré-authentification via la manipulation d'en-têtes HTTP spécifiques. Vulnérabilité zero-day découverte par des agents d'IA.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zero_day",
+          "xspeeder",
+          "sd_wan",
+          "pre_authentification",
+          "cvss_10",
+          "ia"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-54322-cvss-10-ai-agents-uncover-critical-zero-day-in-global-networking-gear/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 9.8,
+        "product": "MongoDB",
+        "description": "Fuite de mémoire à distance non authentifiée (MongoBleed) via une mauvaise gestion de la compression zlib, permettant d'extraire des secrets et des identifiants. Activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mongobleed",
+          "mongodb",
+          "memory_leak",
+          "unauthenticated",
+          "exploitation_active",
+          "fuite_secrets",
+          "base_de_donnees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploited-mongobleed-flaw-leaks-mongodb-secrets-87k-servers-exposed/",
+          "https://securityonline.info/poc-released-mongobleed-exploit-allows-unauthenticated-attackers-to-drain-mongodb-memory/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15065",
+        "cvss": 8.6,
+        "product": "Kings Information & Network Co. KESS Enterprise",
+        "description": "Exposition d'informations sensibles à un acteur non autorisé, absence de chiffrement des données sensibles et fichiers/répertoires accessibles aux parties externes, pouvant mener à l'élévation de privilèges.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kess_enterprise",
+          "exposition_donnees",
+          "privilege_escalation",
+          "sensitive_data",
+          "missing_encryption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15065"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15067",
+        "cvss": 8.5,
+        "product": "Innorix WP",
+        "description": "Téléchargement sans restriction de fichiers de type dangereux, permettant le téléversement d'un shell web sur un serveur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "innorix_wp",
+          "file_upload",
+          "web_shell",
+          "rce_potential"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15067"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15160",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans /goform/PPTPServer via la manipulation de l'argument 'ip1', exploitable à distance et avec exploit public.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15160"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15161",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans /goform/PPTPUserSetting via la manipulation de l'argument 'delno', exploitable à distance et avec exploit public.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15161"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15162",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans /goform/RouteStatic via la manipulation de l'argument 'page', exploitable à distance et avec exploit public.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15162"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15163",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans /goform/SafeEmailFilter via la manipulation de l'argument 'page', exploitable à distance et avec exploit public.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15163"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15164",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Débordement de tampon basé sur la pile dans /goform/SafeMacFilter via la manipulation de l'argument 'page', exploitable à distance et avec exploit public.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15164"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Exploitation active de la faille MongoBleed (CVE-2025-14847) dans MongoDB",
+        "description": "Une vulnérabilité critique, surnommée MongoBleed (CVE-2025-14847), affectant plusieurs versions de MongoDB, est activement exploitée. La faille permet à des attaquants non authentifiés de fuir des secrets (identifiants, clés API, PII) de la mémoire des serveurs exposés. Plus de 80 000 serveurs sont potentiellement vulnérables et un exploit public est disponible.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "L'impact est significatif sur les environnements cloud et les bases de données exposées. La capacité d'exploiter la faille sans authentification représente un risque élevé d'accès initial et de vol de données sensibles. La disponibilité d'un PoC public augmente la probabilité d'exploitation généralisée.",
+        "recommandations": "Prioriser l'application des correctifs fournis par MongoDB. Si la mise à jour n'est pas possible immédiatement, désactiver la compression zlib sur le serveur MongoDB. Utiliser des outils de détection comme MongoBleed Detector pour identifier les exploitations potentielles.",
+        "tags": [
+          "mongodb",
+          "mongobleed",
+          "cve-2025-14847",
+          "vulnerabilite",
+          "exploitation",
+          "fuite_de_donnees",
+          "unauthenticated",
+          "memory_leak",
+          "base_de_donnees",
+          "cloud",
+          "t1190",
+          "t1003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploited-mongobleed-flaw-leaks-mongodb-secrets-87k-servers-exposed/",
+          "https://securityonline.info/poc-released-mongobleed-exploit-allows-unauthenticated-attackers-to-drain-mongodb-memory/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Fuite de données massive chez Condé Nast (WIRED) par le hacker \"Lovely\"",
+        "description": "Le hacker \"Lovely\" a revendiqué la violation de Condé Nast, divulguant une base de données présumée de WIRED contenant plus de 2,3 millions d'enregistrements d'abonnés (adresses e-mail, noms, adresses physiques, numéros de téléphone, dates de naissance) et menaçant de publier jusqu'à 40 millions d'enregistrements supplémentaires provenant d'autres propriétés de Condé Nast (The New Yorker, Vogue, etc.).",
+        "threat_actor": "Lovely",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "L'impact est élevé sur la confidentialité des données des abonnés de marques médiatiques majeures. La crédibilité de l'acteur est renforcée par l'authentification des données par des chercheurs. Cela présente un risque significatif de phishing et d'usurpation d'identité pour les victimes.",
+        "recommandations": "Les utilisateurs concernés doivent changer leurs mots de passe uniques, être vigilants face aux tentatives de phishing et surveiller leurs informations personnelles. Les organisations doivent prioriser la gestion des vulnérabilités et la réponse rapide aux signalements de sécurité.",
+        "tags": [
+          "conde_nast",
+          "wired",
+          "lovely",
+          "data_breach",
+          "violation_de_donnees",
+          "fuite_de_donnees",
+          "piratage",
+          "medias",
+          "edition",
+          "pii",
+          "t1589",
+          "t1598",
+          "t1537"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Poursuite du vol de cryptomonnaies via les sauvegardes LastPass de 2022",
+        "description": "Des sauvegardes de coffres-forts LastPass chiffrées, volées lors de la violation de 2022, continuent d'être déchiffrées en raison de mots de passe maîtres faibles, permettant des vols de cryptomonnaies jusqu'en 2025. Plus de 28 millions de dollars en crypto ont été tracés et blanchis via des plateformes d'échange russes.",
+        "threat_actor": "Acteurs criminels (potentiellement russes)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1003 (OS Credential Dumping)",
+          "T1078 (Valid Accounts)",
+          "T1071 (Application Layer Protocol)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "Cet incident souligne le risque à long terme des violations de données, surtout lorsque des informations chiffrées peuvent être déchiffrées post-breach. L'utilisation d'infrastructures cybercriminelles russes met en évidence une chaîne de monétisation organisée et résiliente.",
+        "recommandations": "Les utilisateurs doivent renforcer la complexité de leurs mots de passe maîtres et activer l'authentification multifacteur. Il est également recommandé de surveiller activement les comptes liés aux cryptomonnaies et de considérer des mesures de sécurité supplémentaires (ex: cold storage).",
+        "tags": [
+          "lastpass",
+          "crypto",
+          "vol_de_crypto",
+          "data_breach",
+          "violation_de_donnees",
+          "mots_de_passe",
+          "threat_actor",
+          "cybercrime",
+          "blanchiment_argent",
+          "t1003",
+          "t1078",
+          "t1071",
+          "t1041",
+          "t1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186191/digital-id/stolen-lastpass-backups-enable-crypto-theft-through-2025.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Attaque sophistiquée de la chaîne d'approvisionnement \"Prefix Swap\" sur Maven Central",
+        "description": "Une attaque de la chaîne d'approvisionnement a infiltré Maven Central (écosystème Java) via un package malveillant (`org.fasterxml.jackson.core/jackson-databind`) imitant la bibliothèque légitime Jackson JSON. L'attaque utilise un \"prefix swap\" (`.com` pour `.org`) pour tromper les développeurs et déployer une charge utile multi-étapes sophistiquée avec un serveur de commande et contrôle (C2) chiffré et des techniques d'obfuscation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "fasterxml.org"
+          ]
+        },
+        "mitre_ttps": [
+          "T1588.001 (Obtain Capabilities: Malware)",
+          "T1598.003 (Phishing for Information: Supply Chain Compromise)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1071 (Application Layer Protocol)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "Cette attaque très sophistiquée met en évidence les faiblesses dans la sécurité des registres de packages et la subtilité des tactiques d'ingénierie sociale ciblées sur les développeurs. Elle représente une menace significative pour l'intégrité de la chaîne d'approvisionnement logicielle en exploitant des conventions de nommage familières.",
+        "recommandations": "Maven Central doit implémenter une détection de similarité de préfixe. Les développeurs doivent vérifier attentivement les packages et leurs namespaces avant l'intégration. Utiliser des outils d'analyse de dépendances et de SBOM (Software Bill of Materials).",
+        "tags": [
+          "supply_chain",
+          "chaine_approvisionnement",
+          "maven_central",
+          "java",
+          "package_malveillant",
+          "jackson",
+          "prefix_swap",
+          "contrefacon",
+          "developpeur",
+          "c2",
+          "obfuscation",
+          "t1588.001",
+          "t1598.003",
+          "t1547",
+          "t1071",
+          "t1027"
+        ],
+        "sources": [
+          "https://securityonline.info/prefix-swap-panic-sophisticated-jackson-imposter-infiltrates-maven-central/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Campagne d'accès initial massive ciblant Adobe ColdFusion et 47+ piles technologiques",
+        "description": "Une campagne cybernétique à grande échelle, initialement détectée pendant les fêtes de fin d'année 2025, cible activement les serveurs Adobe ColdFusion et plus de 47 piles technologiques différentes via 2,5 millions de requêtes visant 767 vulnérabilités (CVEs) distinctes. L'opération est attribuée à un acteur unique opérant depuis une infrastructure basée au Japon (CTG Server Limited).",
+        "threat_actor": "Acteur unique (opérant depuis l'infrastructure basée au Japon de CTG Server Limited)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "134.122.136.119",
+            "134.122.136.96"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1595 (Active Scanning)",
+          "T1078 (Valid Accounts)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "Cette campagne \"spray and pray\" indique une approche de courtier en accès initial visant à compromettre le plus grand nombre de systèmes possible pour une revente ultérieure. Le ciblage large et l'automatisation soulignent la sophistication de l'acteur et le potentiel de menaces secondaires.",
+        "recommandations": "Mettre à jour et patcher toutes les applications, en particulier Adobe ColdFusion. Implémenter une segmentation réseau et des contrôles d'accès pour limiter la surface d'attaque. Surveiller les logs pour des tentatives d'exploitation de CVEs connues et le trafic suspect en provenance des IPs identifiées.",
+        "tags": [
+          "cold_fusion",
+          "adobe",
+          "campagne_attaque",
+          "initial_access_broker",
+          "iab",
+          "exploitation_vulnerabilite",
+          "multi_cve",
+          "t1190",
+          "t1595",
+          "t1078",
+          "t1505.003",
+          "japon"
+        ],
+        "sources": [
+          "https://securityonline.info/holiday-coldfusion-attacks-reveal-massive-2-5-million-request-onslaught/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Des agents IA découvrent une vulnérabilité critique Zero-Day (CVSS 10) dans les équipements réseau Xspeeder",
+        "description": "Des agents d'IA autonomes de pwn.ai ont découvert une vulnérabilité critique et non patchée (CVE-2025-54322, CVSS 10.0) dans les équipements réseau SD-WAN du fournisseur chinois Xspeeder. Cette faille, de type exécution de code à distance (RCE) avant authentification, réside dans le firmware SXZOS et est exploitable via la manipulation d'en-têtes HTTP spécifiques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071.001 (Web Protocols - HTTP Headers)",
+          "T1068 (Exploitation for Privilege Escalation)"
+        ],
+        "analyse": "La découverte par IA marque une évolution significative dans la recherche de vulnérabilités. Le fait qu'il s'agisse d'une vulnérabilité zero-day avec un score CVSS maximal dans des équipements largement déployés dans des environnements industriels et d'entreprise présente un risque mondial majeur avant la disponibilité d'un correctif.",
+        "recommandations": "Les organisations utilisant des appliances Xspeeder SD-WAN doivent les isoler d'Internet jusqu'à ce qu'un correctif soit disponible. Surveiller activement les tentatives d'exploitation liées aux en-têtes HTTP spécifiques (User-Agent SXZ/2.3, X-SXZ-R).",
+        "tags": [
+          "cve-2025-54322",
+          "vulnerabilite",
+          "zero_day",
+          "rce",
+          "xspeeder",
+          "sd_wan",
+          "networking_gear",
+          "intelligence_artificielle",
+          "ai",
+          "pwn.ai",
+          "exploitation",
+          "t1190",
+          "t1071.001",
+          "t1068"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-54322-cvss-10-ai-agents-uncover-critical-zero-day-in-global-networking-gear/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Vulnérabilités critiques dans les écouteurs Bluetooth permettant le \"Headphone Jacking\"",
+        "description": "Un rapport révèle des vulnérabilités critiques dans les puces Bluetooth d'Airoha, utilisées par de grandes marques d'écouteurs (Sony, JBL, Marshall, Jabra). Un protocole de diagnostic non authentifié (RACE) est exposé, permettant à un attaquant à portée Bluetooth d'espionner les conversations, de lire/écrire la mémoire et de détourner le microphone, pouvant potentiellement aboutir au piratage du smartphone connecté (\"Headphone Jacking\").",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1213 (Hardware Additions)",
+          "T1071 (Application Layer Protocol - Bluetooth)",
+          "T1588 (Obtain Capabilities - Proprietary Protocol Access)"
+        ],
+        "analyse": "Cette découverte met en lumière une surface d'attaque inattendue et largement répandue dans les appareils IoT grand public. La chaîne d'exploitation de l'écouteur vers le smartphone représente un risque sérieux pour la vie privée et la sécurité mobile, difficile à patcher en raison de la fragmentation du marché Bluetooth.",
+        "recommandations": "Les utilisateurs doivent être conscients des risques liés à leurs appareils Bluetooth et s'assurer que les firmwares sont à jour si des correctifs sont disponibles. Les fabricants doivent prioriser la sécurisation des protocoles de diagnostic et l'implémentation de mécanismes d'authentification robustes.",
+        "tags": [
+          "bluetooth",
+          "ecouteurs",
+          "iot",
+          "vulnerabilite",
+          "airoha",
+          "headphone_jacking",
+          "vie_privee",
+          "interception",
+          "piratage_mobile",
+          "t1213",
+          "t1071",
+          "t1588"
+        ],
+        "sources": [
+          "https://securityonline.info/headphone-jacking-critical-flaws-in-popular-earbuds-let-hackers-hijack-your-phone/"
+        ],
+        "date": "2025-12-29"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cyber threat landscape is characterized by increasing complexity and diversification of attack vectors. We observe active exploitation of critical vulnerabilities like MongoBleed (CVE-2025-14847) in widely used databases, as well as the discovery of high-risk zero-days (CVE-2025-54322 with a CVSS of 10.0) in crucial networking equipment, with a notable mention of the emergence of AI agents in vulnerability hunting. The supply chain remains a prime target, as evidenced by the sophisticated \"Prefix Swap\" attack on Maven Central, highlighting the need for increased vigilance on software component integrity. Concurrently, incidents related to the hardware supply chain, such as the memory chip shortage, illustrate indirect geopolitical impacts on technological security. Persistent threats include massive data leaks (Condé Nast, LastPass), insider threats (Coinbase), and state-sponsored espionage (Ukraine). A new attack surface is identified in consumer IoT devices, such as vulnerabilities in Bluetooth earbuds enabling \"Headphone Jacking\". The continued decryption of LastPass backups underscores the long-term risk of past breaches. The overall conclusion is one of a threat environment where attacker innovation meets fundamental weaknesses (authentication, vulnerability management) and systemic challenges (supply chains, patch fragmentation).",
+      "date": "2025-12-29"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Insider Contractor (Coinbase)",
+        "secteur": "Cryptocurrency / Finance",
+        "modop": "Illicit access to customer information after being bribed by hackers, leading to a data breach.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "insider_threat",
+          "bribery",
+          "data_breach",
+          "finance",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/coinbase-discloses-arrest-of-former-customer-agent-over-data-breach-report/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Lithuanian Cryptocurrency Thief (Unnamed)",
+        "secteur": "Finance / Cryptocurrency",
+        "modop": "Using sophisticated malware to redirect cryptocurrency transactions from legitimate recipients to their own wallets.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cryptocurrency_theft",
+          "malware",
+          "financial_crime",
+          "lithuanian"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/hacker-who-stole-millions-in-seconds-finally-caught/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Lovely",
+        "secteur": "Media / Publishing",
+        "modop": "Data breach, database leakage, threats to expose additional data, allegations of targeted companies ignoring vulnerabilities.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "data_leak",
+          "digital_extortion"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "nom": "Single Threat Actor (Japan-based)",
+        "secteur": "Wide range of technologies (Adobe ColdFusion, etc.)",
+        "modop": "Massive and coordinated initial access broker campaign using \"spray and pray\" tactics to exploit hundreds of distinct CVEs and harvest credentials and webshells.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "initial_access_broker",
+          "vulnerability_exploitation",
+          "japan",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityonline.info/holiday-coldfusion-attacks-reveal-massive-2-5-million-request-onslaught/"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense / National Security",
+        "theme": "State-sponsored espionage and military data leak",
+        "description": "A 16-year-old Ukrainian girl was sentenced for transmitting data about military facilities to a Russian intelligence officer in exchange for money, highlighting espionage and information warfare.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "espionage",
+          "military_data",
+          "national_security",
+          "conflict"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/ukrainian-teen-sentenced-for-sharing-military-data-with-russian-spy/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Technology / Semiconductor Manufacturing",
+        "theme": "Chip war and global memory chip shortage",
+        "description": "Geopolitical and economic tensions exacerbate the global shortage of memory chips (especially HBM for AI), leading to difficult negotiations, executive dismissals at Google, and potential price increases of 230% for Apple, impacting the technology supply chain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chip_war",
+          "chip_shortage",
+          "hbm",
+          "ai",
+          "supply_chain",
+          "economy",
+          "technology"
+        ],
+        "sources": [
+          "https://securityonline.info/the-70-chip-war-why-google-is-firing-execs-and-apple-is-bracing-for-a-230-price-surge/"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Air Transport",
+        "victime": "Asiana Airlines",
+        "description": "Data breach that exposed personal information of approximately 10,000 Asiana Airlines employees. Customer data was not affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "asiana_airlines",
+          "personal_information",
+          "employees",
+          "air_transport",
+          "south_korea"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115799910128801800"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Healthcare / Health Insurance",
+        "victime": "Members of CareOregon and Health Share Oregon",
+        "description": "Information on members of CareOregon and Health Share Oregon was viewed without authorization. A police investigation is underway, with concerns about potential fake insurance claims. No Social Security numbers or financial information were exposed.",
+        "tags": [
+          "violation",
+          "breach",
+          "careoregon",
+          "health_share_oregon",
+          "healthcare",
+          "health_insurance",
+          "personal_information",
+          "fraud"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/health-share-of-oregon-and-careoregon-notify-members-of-data-breach/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Cryptocurrency / Finance",
+        "victime": "Coinbase",
+        "description": "A former Coinbase customer service contractor was arrested in India for being bribed by hackers to access customer information, leading to an insider threat data breach.",
+        "tags": [
+          "violation",
+          "breach",
+          "coinbase",
+          "cryptocurrency",
+          "finance",
+          "insider_threat",
+          "bribery",
+          "unauthorized_access"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/coinbase-discloses-arrest-of-former-customer-agent-over-data-breach-report/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang Inc.",
+        "description": "Data breach affecting 33.7 million users. The company will compensate affected users with purchase vouchers, totaling $1.29 billion.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e_commerce",
+          "users",
+          "compensation",
+          "south_korea"
+        ],
+        "sources": [
+          "https://mastodon.social/@infomaxkorea/115800559019984381"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Password Manager / Cybersecurity",
+        "victime": "LastPass",
+        "description": "Encrypted LastPass vault backups stolen in the 2022 breach continue to be cracked due to weak master passwords, leading to ongoing cryptocurrency theft through 2025 (over $28 million traced and laundered).",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "crypto",
+          "passwords",
+          "data_theft",
+          "money_laundering",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186191/digital-id/stolen-lastpass-backups-enable-crypto-theft-through-2025.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Healthcare / Dental",
+        "victime": "Patients of a former dentist (Memphis)",
+        "description": "Thousands of medical records (Personally Identifiable Information, X-rays, billing information, Social Security numbers) were discovered in an auctioned storage unit due to unpaid rent, exposing sensitive patient data.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "medical_records",
+          "sensitive_data",
+          "data_exposure",
+          "memphis",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/28/thousands-of-medical-records-found-in-auctioned-storage-unit/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Media / Publishing",
+        "victime": "Condé Nast (WIRED)",
+        "description": "The hacker \"Lovely\" claimed responsibility for breaching Condé Nast, leaking an alleged WIRED database with over 2.3 million subscriber records and threatening to release up to 40 million more records from other Condé Nast properties.",
+        "tags": [
+          "violation",
+          "breach",
+          "conde_nast",
+          "wired",
+          "lovely",
+          "data_leak",
+          "media",
+          "subscribers",
+          "pii"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "secteur": "Video Gaming",
+        "victime": "Ubisoft (Rainbow Six Siege)",
+        "description": "Breach of Ubisoft's internal systems for Rainbow Six Siege, allowing hackers to manipulate in-game moderation feeds, ban/unban players, and grant billions of in-game credits. A possible link to the MongoBleed vulnerability (CVE-2025-14847) is suggested.",
+        "tags": [
+          "violation",
+          "breach",
+          "ubisoft",
+          "rainbow_six_siege",
+          "video_gaming",
+          "internal_systems",
+          "manipulation",
+          "mongo_bleed_potential"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/massive-rainbow-six-siege-breach-gives-players-billions-of-credits/"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-54322",
+        "cvss": 10.0,
+        "product": "Xspeeder SD-WAN (SXZOS firmware)",
+        "description": "Pre-authentication Remote Code Execution (RCE) via manipulation of specific HTTP headers. Zero-day vulnerability discovered by AI agents.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "zero_day",
+          "xspeeder",
+          "sd_wan",
+          "pre_authentication",
+          "cvss_10",
+          "ai"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-54322-cvss-10-ai-agents-uncover-critical-zero-day-in-global-networking-gear/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 9.8,
+        "product": "MongoDB",
+        "description": "Unauthenticated remote memory leak (MongoBleed) due to improper zlib compression handling, allowing extraction of secrets and credentials. Actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mongobleed",
+          "mongodb",
+          "memory_leak",
+          "unauthenticated",
+          "active_exploitation",
+          "secrets_leak",
+          "database"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploited-mongobleed-flaw-leaks-mongodb-secrets-87k-servers-exposed/",
+          "https://securityonline.info/poc-released-mongobleed-exploit-allows-unauthenticated-attackers-to-drain-mongodb-memory/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15065",
+        "cvss": 8.6,
+        "product": "Kings Information & Network Co. KESS Enterprise",
+        "description": "Exposure of sensitive information to an unauthorized actor, missing encryption of sensitive data, and files/directories accessible to external parties, potentially leading to privilege escalation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kess_enterprise",
+          "data_exposure",
+          "privilege_escalation",
+          "sensitive_data",
+          "missing_encryption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15065"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15067",
+        "cvss": 8.5,
+        "product": "Innorix WP",
+        "description": "Unrestricted upload of files with dangerous types, allowing the upload of a web shell to a server.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "innorix_wp",
+          "file_upload",
+          "web_shell",
+          "rce_potential"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15067"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15160",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in /goform/PPTPServer via manipulation of the 'ip1' argument, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15160"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15161",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in /goform/PPTPUserSetting via manipulation of the 'delno' argument, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15161"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15162",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in /goform/RouteStatic via manipulation of the 'page' argument, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15162"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15163",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in /goform/SafeEmailFilter via manipulation of the 'page' argument, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15163"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "cve_id": "CVE-2025-15164",
+        "cvss": 8.3,
+        "product": "Tenda WH450 1.0.0.18",
+        "description": "Stack-based buffer overflow in /goform/SafeMacFilter via manipulation of the 'page' argument, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda_wh450",
+          "buffer_overflow",
+          "rce_potential",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15164"
+        ],
+        "date": "2025-12-29"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Exploited MongoBleed flaw leaks MongoDB secrets, 87K servers exposed",
+        "description": "A severe vulnerability, dubbed MongoBleed (CVE-2025-14847), affecting multiple MongoDB versions, is being actively exploited. The flaw allows unauthenticated attackers to leak secrets (credentials, API keys, PII) from the memory of exposed servers. Over 80,000 servers are potentially vulnerable, and a public exploit is available.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "The impact is significant on cloud environments and exposed databases. The ability to exploit the flaw without authentication represents a high risk for initial access and sensitive data theft. The availability of a public PoC increases the likelihood of widespread exploitation.",
+        "recommandations": "Prioritize applying patches provided by MongoDB. If an immediate update is not possible, disable zlib compression on the MongoDB server. Use detection tools like MongoBleed Detector to identify potential exploitation.",
+        "tags": [
+          "mongodb",
+          "mongobleed",
+          "cve-2025-14847",
+          "vulnerability",
+          "exploitation",
+          "data_leak",
+          "unauthenticated",
+          "memory_leak",
+          "database",
+          "cloud",
+          "t1190",
+          "t1003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploited-mongobleed-flaw-leaks-mongodb-secrets-87k-servers-exposed/",
+          "https://securityonline.info/poc-released-mongobleed-exploit-allows-unauthenticated-attackers-to-drain-mongodb-memory/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Hacker claims to leak WIRED database with 2.3 million records (Condé Nast)",
+        "description": "The hacker \"Lovely\" claimed responsibility for breaching Condé Nast, leaking an alleged WIRED database with over 2.3 million subscriber records (email addresses, names, physical addresses, phone numbers, birth dates) and threatening to release up to 40 million more records from other Condé Nast properties (The New Yorker, Vogue, etc.).",
+        "threat_actor": "Lovely",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "The impact is high on the data privacy of subscribers to major media brands. The actor's credibility is reinforced by researchers' authentication of the data. This presents a significant risk of phishing and identity theft for victims.",
+        "recommandations": "Affected users should change their unique passwords, be vigilant against phishing attempts, and monitor their personal information. Organizations must prioritize vulnerability management and prompt response to security reports.",
+        "tags": [
+          "conde_nast",
+          "wired",
+          "lovely",
+          "data_breach",
+          "data_leak",
+          "hacking",
+          "media",
+          "publishing",
+          "pii",
+          "t1589",
+          "t1598",
+          "t1537"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/",
+          "https://securityaffairs.com/186224/data-breach/conde-nast-faces-major-data-breach-2-3m-wired-records-leaked-40m-more-at-risk.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Stolen LastPass backups enable crypto theft through 2025",
+        "description": "Encrypted LastPass vault backups, stolen during the 2022 breach, continue to be cracked due to weak master passwords, enabling ongoing cryptocurrency theft through 2025. Over $28 million in crypto has been traced and laundered through Russian exchange platforms.",
+        "threat_actor": "Criminal actors (potentially Russian)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1003 (OS Credential Dumping)",
+          "T1078 (Valid Accounts)",
+          "T1071 (Application Layer Protocol)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "This incident highlights the long-term risk of data breaches, especially when encrypted information can be decrypted post-breach. The use of Russian cybercrime infrastructure points to an organized and resilient monetization chain.",
+        "recommandations": "Users should strengthen the complexity of their master passwords and enable multi-factor authentication. It is also recommended to actively monitor cryptocurrency-related accounts and consider additional security measures (e.g., cold storage).",
+        "tags": [
+          "lastpass",
+          "crypto",
+          "crypto_theft",
+          "data_breach",
+          "vulnerability",
+          "passwords",
+          "threat_actor",
+          "cybercrime",
+          "money_laundering",
+          "t1003",
+          "t1078",
+          "t1071",
+          "t1041",
+          "t1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186191/digital-id/stolen-lastpass-backups-enable-crypto-theft-through-2025.html"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Critical Flaws in Popular Earbuds Let Hackers Hijack Your Phone (\"Headphone Jacking\")",
+        "description": "A report reveals critical vulnerabilities in Airoha Bluetooth SoCs, used by major earbud brands (Sony, JBL, Marshall, Jabra). An unauthenticated diagnostic protocol (RACE) is exposed, allowing an attacker within Bluetooth range to eavesdrop on conversations, read/write memory, hijack microphones, and potentially hack the connected smartphone (\"Headphone Jacking\").",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1213 (Hardware Additions)",
+          "T1071 (Application Layer Protocol - Bluetooth)",
+          "T1588 (Obtain Capabilities - Proprietary Protocol Access)"
+        ],
+        "analyse": "This discovery highlights an unexpected and widespread attack surface in consumer IoT devices. The attack chain from earbuds to smartphones represents a serious risk to privacy and mobile security, which is challenging to patch due to Bluetooth market fragmentation.",
+        "recommandations": "Users should be aware of the risks associated with their Bluetooth devices and ensure firmware is updated if patches are available. Manufacturers must prioritize securing diagnostic protocols and implementing robust authentication mechanisms.",
+        "tags": [
+          "bluetooth",
+          "earbuds",
+          "iot",
+          "vulnerability",
+          "airoha",
+          "headphone_jacking",
+          "privacy",
+          "eavesdropping",
+          "mobile_hacking",
+          "t1213",
+          "t1071",
+          "t1588"
+        ],
+        "sources": [
+          "https://securityonline.info/headphone-jacking-critical-flaws-in-popular-earbuds-let-hackers-hijack-your-phone/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "CVE-2025-54322 (CVSS 10): AI Agents Uncover Critical Zero-Day in Global Networking Gear",
+        "description": "Autonomous AI agents from pwn.ai have discovered a critical, unpatched vulnerability (CVE-2025-54322, CVSS 10.0) in SD-WAN networking gear from the Chinese vendor Xspeeder. This pre-authentication Remote Code Execution (RCE) flaw resides in the SXZOS firmware and is exploitable via manipulation of specific HTTP headers.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071.001 (Web Protocols - HTTP Headers)",
+          "T1068 (Exploitation for Privilege Escalation)"
+        ],
+        "analyse": "AI-driven discovery marks a significant evolution in vulnerability research. A maximum CVSS zero-day in widely deployed industrial and enterprise networking equipment presents a major global risk before a patch is available.",
+        "recommandations": "Organizations using Xspeeder SD-WAN appliances should isolate them from the public internet until a patch is released. Actively monitor for exploitation attempts related to specific HTTP headers (User-Agent SXZ/2.3, X-SXZ-R).",
+        "tags": [
+          "cve-2025-54322",
+          "vulnerability",
+          "zero_day",
+          "rce",
+          "xspeeder",
+          "sd_wan",
+          "networking_gear",
+          "artificial_intelligence",
+          "ai",
+          "pwn.ai",
+          "exploitation",
+          "t1190",
+          "t1071.001",
+          "t1068"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-54322-cvss-10-ai-agents-uncover-critical-zero-day-in-global-networking-gear/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "Holiday ColdFusion Attacks Reveal Massive 2.5 Million Request Onslaught",
+        "description": "A large-scale cyber campaign, initially detected during the 2025 holiday season, is actively targeting Adobe ColdFusion servers and over 47 different technology stacks via 2.5 million requests aimed at 767 distinct vulnerabilities (CVEs). The operation is attributed to a single threat actor operating from Japan-based infrastructure (CTG Server Limited).",
+        "threat_actor": "Single Threat Actor (operating from CTG Server Limited's Japan-based infrastructure)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "134.122.136.119",
+            "134.122.136.96"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1595 (Active Scanning)",
+          "T1078 (Valid Accounts)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "This \"spray and pray\" campaign indicates an initial access broker approach aiming to compromise as many systems as possible for subsequent resale. The broad targeting and automation highlight the actor's sophistication and the potential for secondary threats.",
+        "recommandations": "Update and patch all applications, especially Adobe ColdFusion. Implement network segmentation and access controls to limit the attack surface. Monitor logs for exploitation attempts of known CVEs and suspicious traffic originating from the identified IPs.",
+        "tags": [
+          "cold_fusion",
+          "adobe",
+          "attack_campaign",
+          "initial_access_broker",
+          "iab",
+          "vulnerability_exploitation",
+          "multi_cve",
+          "t1190",
+          "t1595",
+          "t1078",
+          "t1505.003",
+          "japan"
+        ],
+        "sources": [
+          "https://securityonline.info/holiday-coldfusion-attacks-reveal-massive-2-5-million-request-onslaught/"
+        ],
+        "date": "2025-12-29"
+      },
+      {
+        "title": "“Prefix Swap” Panic: Sophisticated “Jackson” Imposter Infiltrates Maven Central",
+        "description": "A supply chain attack has infiltrated Maven Central (Java ecosystem) via a malicious package (`org.fasterxml.jackson.core/jackson-databind`) impersonating the legitimate Jackson JSON library. The attack uses a \"prefix swap\" (`.com` to `.org`) to trick developers and deploy a sophisticated multi-stage payload with encrypted command-and-control (C2) and obfuscation techniques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "fasterxml.org"
+          ]
+        },
+        "mitre_ttps": [
+          "T1588.001 (Obtain Capabilities: Malware)",
+          "T1598.003 (Phishing for Information: Supply Chain Compromise)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1071 (Application Layer Protocol)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "This highly sophisticated attack highlights weaknesses in package registry security and the subtlety of social engineering tactics targeting developers. It represents a significant threat to the integrity of the software supply chain by exploiting familiar naming conventions.",
+        "recommandations": "Maven Central must implement prefix similarity detection. Developers should carefully verify packages and their namespaces before integration. Utilize dependency analysis and SBOM (Software Bill of Materials) tools.",
+        "tags": [
+          "supply_chain",
+          "maven_central",
+          "java",
+          "malicious_package",
+          "jackson",
+          "prefix_swap",
+          "impersonation",
+          "developer",
+          "c2",
+          "obfuscation",
+          "t1588.001",
+          "t1598.003",
+          "t1547",
+          "t1071",
+          "t1027"
+        ],
+        "sources": [
+          "https://securityonline.info/prefix-swap-panic-sophisticated-jackson-imposter-infiltrates-maven-central/"
+        ],
+        "date": "2025-12-29"
+      }
+    ]
+  }
+}
