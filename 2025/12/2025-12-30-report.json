@@ -1,0 +1,2025 @@
+
+{
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape at the end of 2025 is characterized by a sophisticated and diverse array of attacks, with a notable increase in the use of advanced techniques and targeting of critical sectors. State-sponsored APT groups, particularly those linked to China, are evolving their TTPs, incorporating kernel-mode rootkits and DNS poisoning for stealthy cyberespionage campaigns. Ransomware remains a pervasive threat, impacting critical infrastructure like energy providers and disrupting major services, often leveraging compromised credentials and publicly exposed services. The supply chain continues to be a significant vulnerability, as evidenced by data breaches originating from third-party vendors and customer service outsourcing firms, affecting large organizations and their clients. A key emerging trend is the exploitation of AI systems, with OWASP highlighting vulnerabilities in autonomous AI agents, including goal hijacking and malicious MCP servers, indicating a new frontier for attackers to weaponize AI hallucinations and leverage AI in sophisticated phishing infrastructures. Actively exploited vulnerabilities, such as MongoBleed in MongoDB, demonstrate the immediate danger posed by unpatched systems, allowing unauthenticated data exfiltration. Authentication bypass flaws and remote code execution vulnerabilities in widely used software and plugins present critical risks, with zero-day exploits being observed. The growing volume of new CVEs underscores the constant need for robust vulnerability management and proactive defense strategies. The overall state of threats points to a need for organizations to not only focus on traditional security controls but also to rapidly adapt to AI-specific risks, enhance supply chain security, and maintain rigorous patching and incident response capabilities to counter increasingly stealthy and financially motivated adversaries.",
+      "date": "2025-12-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "secteur": "Government organizations, NGOs, think tanks",
+        "modop": "Uses kernel-mode rootkits to deliver and hide ToneShell backdoor, mini-filter drivers to block file operations, protects service-related registry keys, denies handle access to protected processes, employs fake TLS headers for C2 communication. Leverages previously compromised machines for deployment.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyberespionage",
+          "rootkit",
+          "backdoor",
+          "kernel-mode",
+          "China"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Lithuanian National (KMSAuto Clipper malware operator)",
+        "secteur": "General users (cryptocurrency holders)",
+        "modop": "Distributed clipboard-stealing 'clipper' malware disguised as the KMSAuto tool for illegally activating Windows and Office software. Malware swaps cryptocurrency addresses in the clipboard with attacker-controlled ones.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "malware",
+          "clipper",
+          "cryptocurrency_theft",
+          "social_engineering",
+          "illegal_software"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-arrested-for-kmsauto-malware-campaign-with-28-million-downloads/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Gentlemen ransomware",
+        "secteur": "Energy, Critical Infrastructure",
+        "modop": "Utilizes compromised credentials and targets Internet-exposed services for initial access. Encrypts documents with .7mtzhh extension and deploys README-GENTLEMEN.txt ransom notes. Uses Windows BitLocker for encryption.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_encryption",
+          "critical_infrastructure_attack",
+          "energy_sector"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/",
+          "https://securityaffairs.com/186290/cyber-crime/romanias-oltenia-energy-complex-suffers-major-ransomware-attack/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Clop ransomware gang",
+        "secteur": "Aviation, various organizations (supply chain through Oracle EBS)",
+        "modop": "Exploits critical Oracle EBS zero-day (CVE-2025-61882) for initial access, stealing sensitive data and encrypting networks. Publishes stolen files on data-leak sites to pressure victims into paying. Uses sophisticated evasion and lateral-movement techniques.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "supply_chain_attack",
+          "zero_day_exploit",
+          "aviation_sector"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186275/data-breach/korean-air-discloses-data-breach-after-the-hack-of-its-catering-and-duty-free-supplier/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Evasive Panda (aka Daggerfly, Bronze Highland, StormBamboo)",
+        "secteur": "Government organizations, Telecommunications",
+        "modop": "China-linked APT group. Carries out adversary-in-the-middle attacks using DNS poisoning to deliver the MgBot backdoor. Employs stealthy loaders, encrypted malware components, DLL sideloading, and API call hiding (hashing). Uses XOR and LZMA for evasion. Relies on fake software updates for initial infection.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyberespionage",
+          "DNS_poisoning",
+          "backdoor",
+          "DLL_sideloading",
+          "adversary_in_the_middle",
+          "China"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Lovely group",
+        "secteur": "Media, Publishing",
+        "modop": "Claimed to have leaked subscriber data from Wired magazine (and Conde Nast) after an unheeded extortion attempt. Attack bears hallmarks of infostealer malware like RedLine and Racoon.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_exfiltration",
+          "extortion",
+          "infostealer",
+          "media_sector"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Single threat actor (Japan-based infrastructure)",
+        "secteur": "Various (targeting Adobe ColdFusion servers, luxury brands for phishing)",
+        "modop": "Coordinated exploitation campaign generating over 2.5 million malicious requests. Exploited WDDX deserialization to trigger JNDI/LDAP injection. Used ProjectDiscovery Interactsh for callback verification. Infrastructure previously associated with phishing luxury brands.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "exploitation_campaign",
+          "JNDI_injection",
+          "LDAP_injection",
+          "phishing",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/coldfusion-servers-under-attack/"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, International Relations",
+        "theme": "State-sponsored Cyberespionage",
+        "description": "China-linked APT groups, such as Mustang Panda (HoneyMyte) and Evasive Panda, continue to conduct sophisticated cyberespionage campaigns. Mustang Panda uses kernel-mode rootkits and the ToneShell backdoor to target government organizations in Asia (Myanmar, Thailand), evolving its TTPs for stealth. Evasive Panda employs DNS poisoning to deliver the MgBot backdoor in targeted attacks against Türkiye, China, and India, demonstrating persistence and advanced evasion techniques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "China",
+          "APT",
+          "cyberespionage",
+          "government_targets",
+          "Asia",
+          "Turkey",
+          "India",
+          "Myanmar",
+          "Thailand"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/",
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Retail (E-commerce)",
+        "victime": "Coupang",
+        "description": "South Korean retail giant Coupang suffered a data breach impacting 33.7 million customers. The incident was attributed to a former employee who stole a security key, accessing customer records including names, email addresses, physical addresses, and order information. The company announced $1.17 billion in compensation through purchase vouchers.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "e_commerce",
+          "insider_threat",
+          "personal_data",
+          "South_Korea"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/coupang-to-split-117-billion-among-337-million-data-breach-victims/",
+          "https://databreaches.net/2025/12/29/south-korean-retail-giant-coupang-to-compensate-1-1-billion-to-affected-users-over-data-breach/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance (Cryptocurrency)",
+        "victime": "Trust Wallet",
+        "description": "Trust Wallet's browser extension (v2.68.0) was compromised, leading to approximately $7 million being drained from 2,596 cryptocurrency wallets. Attackers likely used a leaked Chrome Web Store API key to publish a malicious extension, exfiltrating sensitive wallet data. The incident was followed by phishing campaigns targeting victims for 'reimbursements'.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft",
+          "supply_chain",
+          "extension_compromise",
+          "phishing",
+          "finance_sector"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-says-7-million-crypto-theft-attack-drained-2-596-wallets/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Energy, Critical Infrastructure",
+        "victime": "Oltenia Energy Complex",
+        "description": "Romania's largest coal-based energy producer, Oltenia Energy Complex, was hit by a Gentlemen ransomware attack. The incident encrypted documents and rendered several IT applications (ERP systems, email, website) temporarily unavailable. Company activity was partially affected, though the national energy system remained operational. Windows BitLocker was used for encryption.",
+        "tags": [
+          "violation",
+          "breach",
+          "energy_sector",
+          "critical_infrastructure",
+          "ransomware",
+          "data_encryption",
+          "Romania"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/",
+          "https://securityaffairs.com/186290/cyber-crime/romanias-oltenia-energy-complex-suffers-major-ransomware-attack/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Aviation (Supply Chain)",
+        "victime": "Korean Air (via KC&D)",
+        "description": "Korean Air experienced a data breach affecting approximately 30,000 employees. The incident originated from a hack of its in-flight catering and duty-free supplier, KC&D. Employee names and bank account numbers from KC&D's ERP system were compromised. The Clop ransomware gang claimed responsibility.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "supply_chain_attack",
+          "employee_data",
+          "ransomware",
+          "personal_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186275/data-breach/korean-air-discloses-data-breach-after-the-hack-of-its-catering-and-duty-free-supplier/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Gaming",
+        "victime": "Ubisoft (Rainbow Six Siege)",
+        "description": "Ubisoft's Rainbow Six Siege game servers were shut down following a major security flaw exploitation related to the MongoBleed vulnerability (CVE-2025-14847) in MongoDB. Attackers gained backdoor access, manipulated in-game elements (ban ticker, cosmetics), and granted large amounts of in-game currency to players.",
+        "tags": [
+          "violation",
+          "breach",
+          "gaming",
+          "vulnerability_exploitation",
+          "MongoDB",
+          "data_manipulation",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://hackread.com/mongodb-exploit-ubisoft-rainbow-six-siege-players/",
+          "https://infosec.exchange/@AAKL/115804494584605346",
+          "https://infosec.exchange/@AAKL/115804467240938479"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance, Legal",
+        "victime": "Goldman Sachs Clients (via Fried Frank law firm)",
+        "description": "Goldman Sachs warned clients that their data, related to alternative investment funds, may have been exposed due to a cybersecurity incident at its external law firm, Fried Frank Harris Shriver & Jacobson LLP. The firm indicated data was 'unlikely to be distributed or used improperly,' suggesting a potential ransom payment.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance_sector",
+          "legal_sector",
+          "client_data",
+          "supply_chain",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/29/goldman-sachs-says-some-clients-data-may-have-been-exposed-in-law-firm-data-breach/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance (Cryptocurrency)",
+        "victime": "Coinbase Customers (via TaskUs)",
+        "description": "A former Coinbase customer service agent was arrested for allegedly helping hackers steal sensitive customer information, affecting around 69,500 customers. The breach, traced to outsourcing firm TaskUs, exposed names, dates of birth, last four digits of SSNs, physical addresses, phone numbers, email addresses, and some KYC documents.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "finance_sector",
+          "insider_threat",
+          "personal_data",
+          "KYC_documents",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Media, Publishing",
+        "victime": "Wired Magazine / Conde Nast Subscribers",
+        "description": "A group named 'Lovely' claimed to have published subscriber email and home addresses from Wired magazine, alleging an unheeded extortion attempt against parent company Conde Nast. The leaked data includes 2.3 million emails, 285,000 subscriber names, 108,000 home addresses, 32,000 phone numbers, user IDs, display names, and IP addresses, showing hallmarks of infostealer malware.",
+        "tags": [
+          "violation",
+          "breach",
+          "media_sector",
+          "publishing",
+          "subscriber_data",
+          "personal_data",
+          "infostealer",
+          "extortion"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Financial Services (Banks)",
+        "victime": "Artisans' Bank, VeraBank (via Marquis Software)",
+        "description": "Artisans' Bank and VeraBank notified thousands of customers about a data breach originating from their third-party vendor, Marquis Software, which occurred in August. Artisans' Bank reported 32,344 individuals had names and Social Security numbers leaked. VeraBank confirmed 37,318 affected individuals. The initial attack on Marquis Software exploited a vulnerability in its SonicWall firewall.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "banking",
+          "supply_chain_attack",
+          "personal_data",
+          "SSN_leak",
+          "ransomware"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Public Sector (Water Management)",
+        "victime": "Romanian Waters (Administrația Națională Apele Române)",
+        "description": "The Romanian national water management authority was hit by a ransomware attack that encrypted nearly 1,000 computer systems across its national and regional offices. The attack affected geographic information systems (GIS) servers, databases, email, and web services, impacting 10 of its 11 regional offices.",
+        "tags": [
+          "violation",
+          "breach",
+          "public_sector",
+          "critical_infrastructure",
+          "water_management",
+          "ransomware",
+          "system_encryption",
+          "Romania"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/29th-december-threat-intelligence-report/",
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Software/IT Services",
+        "victime": "Nexpublica France",
+        "description": "France’s data protection regulator, CNIL, fined Nexpublica France €1.7 million ($2 million) for inadequate cybersecurity practices that resulted in a data breach in November 2022. The company was aware of its security deficiencies but failed to address them proactively, violating GDPR.",
+        "tags": [
+          "violation",
+          "breach",
+          "software_IT_services",
+          "GDPR_violation",
+          "data_protection_fine",
+          "inadequate_security",
+          "regulatory_action"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-15194",
+        "cvss": 10.0,
+        "product": "D-Link DIR-600",
+        "description": "Stack-based buffer overflow in hedwig.cgi (HTTP Header Handler) when manipulating the 'Cookie' argument. Allows remote attackers to execute arbitrary code. Affects D-Link DIR-600 up to 2.15WWb02. Publicly available exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "buffer_overflow",
+          "D_Link",
+          "remote_exploit",
+          "network_device"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15194"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": 10.0,
+        "product": "SmarterMail",
+        "description": "Critical flaw in file upload handling allows unauthenticated attackers to upload arbitrary files to any location on the mail server, potentially enabling remote code execution. Impacts popular enterprise alternative to Microsoft Exchange.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "arbitrary_file_upload",
+          "unauthenticated_attack",
+          "email_server",
+          "SmarterMail"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-52691-cvss-10-critical-smartermail-flaw-opens-servers-to-unauthenticated-attacks/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68562",
+        "cvss": 9.9,
+        "product": "WordPress MapSVG plugin",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability (Web Shell upload). Affects MapSVG plugin up to 8.7.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "arbitrary_file_upload",
+          "web_shell",
+          "WordPress",
+          "plugin_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68562"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68897",
+        "cvss": 9.9,
+        "product": "WordPress IF AS Shortcode plugin",
+        "description": "Improper Control of Generation of Code ('Code Injection') allows Remote Code Execution (RCE). Affects IF AS Shortcode plugin up to 1.2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "code_injection",
+          "WordPress",
+          "plugin_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68897"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Authentication bypass using an alternate path or channel. Allows remote attackers to bypass authentication mechanisms and gain unauthorized access. Affects IBM API Connect (versions 10.0.8.x and 10.0.11 and earlier).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "access_control",
+          "IBM",
+          "API_security"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-13915-critical-9-8-flaw-in-ibm-api-connect-lets-attackers-bypass-login/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68860",
+        "cvss": 9.8,
+        "product": "WordPress Mobile builder plugin",
+        "description": "Broken Authentication vulnerability (Authentication Abuse). Affects Mobile builder plugin up to 1.4.2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "WordPress",
+          "plugin_vulnerability",
+          "broken_authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68860"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15061",
+        "cvss": 9.8,
+        "product": "Framelink Figma MCP Server",
+        "description": "Command Injection Remote Code Execution vulnerability in fetchWithRetry method. Lack of proper validation of user-supplied string before executing a system call. Authentication not required.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "command_injection",
+          "unauthenticated_attack",
+          "server_vulnerability"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1197/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB",
+        "description": "MongoBleed flaw in zlib message decompression, enabled by default. Allows unauthenticated attackers to leak uninitialized heap memory from MongoDB servers at the network level, potentially exposing sensitive data like user details, passwords, and API keys. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data_leak",
+          "unauthenticated_access",
+          "MongoDB",
+          "active_exploitation",
+          "heap_memory"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186241/hacking/mongobleed-flaw-actively-exploited-in-attacks-in-the-wild/",
+          "https://hackread.com/mongodb-exploit-ubisoft-rainbow-six-siege-players/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15284",
+        "cvss": 8.7,
+        "product": "qs (parse modules)",
+        "description": "Improper Input Validation vulnerability where the arrayLimit option in qs does not enforce limits for bracket notation (a[]=1&a;[]=2), allowing attackers to cause denial-of-service via memory exhaustion.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "DoS",
+          "memory_exhaustion",
+          "input_validation",
+          "web_application_security"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15284"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15269",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Use-After-Free Remote Code Execution vulnerability within the parsing of SFD files. Requires user interaction (opening malicious file/page). Classified as 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "use_after_free",
+          "FontForge",
+          "0_day_vulnerability",
+          "user_interaction"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1195/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15270",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Improper Validation of Array Index Remote Code Execution vulnerability within the parsing of SFD files. Allows write past the end of an allocated array. Requires user interaction (opening malicious file/page). Classified as 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "array_index_validation",
+          "FontForge",
+          "0_day_vulnerability",
+          "user_interaction"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1194/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15271",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Improper Validation of Array Index Remote Code Execution vulnerability within the parsing of SFD files. Allows write past the end of an allocated array. Requires user interaction (opening malicious file/page). Classified as 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "array_index_validation",
+          "FontForge",
+          "0_day_vulnerability",
+          "user_interaction"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1193/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15272",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Heap-based Buffer Overflow Remote Code Execution vulnerability within the parsing of SFD files. Lack of proper validation of user-supplied data length. Requires user interaction (opening malicious file/page). Classified as 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "heap_buffer_overflow",
+          "FontForge",
+          "0_day_vulnerability",
+          "user_interaction"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1192/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-69201",
+        "cvss": 8.1,
+        "product": "Tugtainer",
+        "description": "Remote Code Execution (RCE) in Agent Command Execution Api due to injection of arbitrary arguments in `POST api/command/run`. Affects Tugtainer versions prior to 1.15.1.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "command_injection",
+          "container_orchestration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69201"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20700",
+        "cvss": "Not Specified (Critical)",
+        "product": "Bluetooth Headphones (Airoha SoCs)",
+        "description": "Missing authentication for GATT services over Bluetooth Low Energy. Attackers can connect to vulnerable headphones without pairing, gaining silent access to the RACE protocol, potentially leading to eavesdropping, data theft, or smartphone hijacking.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "Bluetooth",
+          "IoT",
+          "eavesdropping",
+          "data_theft",
+          "device_hijacking"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20701",
+        "cvss": "Not Specified (Critical)",
+        "product": "Bluetooth Headphones (Airoha SoCs)",
+        "description": "Missing authentication for Bluetooth Classic connections. Allows unauthenticated access to establish two-way audio connections, enabling eavesdropping via the device’s microphone. Attackers can retrieve device info, read/write RAM, extract sensitive data, and hijack connected smartphones.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "Bluetooth",
+          "IoT",
+          "eavesdropping",
+          "data_theft",
+          "device_hijacking"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20702",
+        "cvss": "Not Specified (Critical)",
+        "product": "Bluetooth Headphones (Airoha SoCs)",
+        "description": "This CVE encompasses a chain of vulnerabilities in Airoha Bluetooth SoCs, allowing attackers to leverage missing authentications (CVE-2025-20700, CVE-2025-20701) to dump flash memory, extract phone numbers/contacts, trigger voice assistants, hijack calls, and eavesdrop on connected smartphones. Impacts Sony, Bose, JBL, Marshall, Jabra devices.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "Bluetooth",
+          "IoT",
+          "eavesdropping",
+          "data_theft",
+          "device_hijacking",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": "Not Specified (Critical)",
+        "product": "Fortinet FortiOS",
+        "description": "Critical vulnerability from July 2020 allowing bypass of two-factor authentication (2FA) on vulnerable FortiGate firewalls. Attackers can log in without a second factor by changing the case of a username when 2FA is enabled in 'user local' settings and linked to a remote authentication method like LDAP. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "2FA_bypass",
+          "Fortinet",
+          "FortiOS",
+          "firewall_vulnerability",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2.5 Million+ Malicious Request From Hackers Attacking Adobe ColdFusion Servers",
+        "description": "A coordinated exploitation campaign involved over 2.5 million malicious requests targeting Adobe ColdFusion servers and other platforms. The primary attack vector exploited WDDX deserialization to trigger JNDI/LDAP injection. The operation was attributed to a single threat actor operating from Japan-based infrastructure, which was also associated with phishing infrastructure targeting luxury brands.",
+        "threat_actor": "Single threat actor from Japan-based infrastructure",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "oast.pro",
+            "oast.site",
+            "oast.me"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190 - Exploit Public-Facing Application"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application (WDDX deserialization, JNDI/LDAP injection)"
+        ],
+        "analyse": "This attack highlights the persistence of adversaries in exploiting both legacy and new vulnerabilities across a wide range of technology platforms. The use of 'out-of-band' testing platforms for callback verification demonstrates sophisticated operational security by the attacker. The association of the infrastructure with prior phishing campaigns suggests a versatile and persistent threat actor. The impact extends across various sectors using Adobe ColdFusion, indicating potential for widespread compromise.",
+        "recommandations": [
+          "Immediately block identified IP addresses and ASNs associated with the attack.",
+          "Implement signatures for published JA4+ fingerprints.",
+          "Prioritize patching Adobe ColdFusion and Java-based infrastructure.",
+          "Regularly review and secure third-party vendor infrastructure."
+        ],
+        "tags": [
+          "exploitation",
+          "vulnerability",
+          "ColdFusion",
+          "JNDI_injection",
+          "LDAP_injection",
+          "threat_campaign",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/coldfusion-servers-under-attack/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Chinese State-Sponsored Cyberespionage: Kernel-Mode Rootkit used to hide ToneShell Malware Activity",
+        "description": "Chinese state-linked APT group Mustang Panda (aka HoneyMyte, Bronze President) is deploying a new variant of the ToneShell backdoor using a kernel-mode rootkit. This driver, signed with a stolen certificate, injects and protects the backdoor, denying handle access to processes, safeguarding registry keys, and blocking its own deletion. The new ToneShell uses a 4-byte host ID and fake TLS 1.3 headers for stealthy C2 communication. Attacks have been observed since February 2025, primarily targeting government organizations in Myanmar, Thailand, and other Asian countries.",
+        "threat_actor": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [
+            "36f121046192b7cac3e4bec491e8f1b5",
+            "fe091e41ba6450bcf6a61a2023fe6c83"
+          ],
+          "FILE_HASH_SHA256": [
+            "abe44ad128f765c14d895ee1c8bad777"
+          ],
+          "DOMAIN": [
+            "avocadomechanism.com",
+            "potherbreference.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1014 - Rootkit",
+            "T1059 - Command and Scripting Interpreter",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols",
+            "T1112 - Modify Registry",
+            "T1055 - Process Injection",
+            "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+            "T1562.002 - Impair Defenses: Disable or Modify Tools"
+          ]
+        },
+        "mitre_ttps": [
+          "T1014 - Rootkit (kernel-mode driver for stealth and persistence)",
+          "T1055 - Process Injection (injects ToneShell into system processes)",
+          "T1112 - Modify Registry (protects registry keys)",
+          "T1071.001 - Standard Application Layer Protocol: Web Protocols (fake TLS for C2)",
+          "T1562.001 - Impair Defenses: Disable or Modify System Firewall (modifies WdFilter altitude)",
+          "T1562.002 - Impair Defenses: Disable or Modify Tools (blocks file operations on itself)"
+        ],
+        "analyse": "This campaign signifies a notable advancement in operational stealth and resilience for Chinese state-sponsored cyberespionage groups. The use of kernel-mode drivers provides deep system access and strong evasion capabilities against user-mode security tools, making detection and removal challenging. Targeting government organizations in Southeast and East Asia suggests continued geopolitical intelligence gathering efforts. The campaign demonstrates a sustained investment in sophisticated TTPs to achieve long-term persistence.",
+        "recommandations": [
+          "Implement advanced endpoint detection and response (EDR) solutions capable of kernel-mode monitoring.",
+          "Conduct regular memory forensics using tools like MemProcFS to detect injected shellcode and hidden processes.",
+          "Strengthen authentication and access controls to prevent initial compromise.",
+          "Monitor network traffic for anomalies, including unusual TLS patterns.",
+          "Ensure systems are configured to prevent unsigned driver loading or verify certificate legitimacy robustly."
+        ],
+        "tags": [
+          "cyberespionage",
+          "APT",
+          "rootkit",
+          "toneshell",
+          "honeymyte",
+          "mustang_panda",
+          "kernel_mode",
+          "china",
+          "government_targets",
+          "malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Evasive Panda Cyberespionage Campaign Uses DNS Poisoning to Install MgBot Backdoor",
+        "description": "The China-linked APT group Evasive Panda is conducting a targeted cyberespionage campaign using DNS poisoning to deliver the MgBot backdoor. Initial infection relies on fake software updates, redirecting update requests to attacker-controlled servers. The group uses adversary-in-the-middle attacks, stealthy multi-stage loaders, encrypted malware components, DLL sideloading into legitimate processes, and API call hiding. Victims have been identified in Türkiye, China, and India, with some systems compromised for over a year.",
+        "threat_actor": "Evasive Panda (aka Daggerfly, Bronze Highland, StormBamboo)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "p2p.hd.sohu.com.cn",
+            "dictionary.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1552.001 - Unsecured Credentials: Credential in Files",
+            "T1036 - Masquerading",
+            "T1105 - Ingress Tool Transfer",
+            "T1059 - Command and Scripting Interpreter",
+            "T1027 - Obfuscated Files or Information",
+            "T1573.001 - Encrypted Channel: Symmetric Cryptography",
+            "T1055 - Process Injection",
+            "T1574.001 - Hijack Execution Flow: DLL Side-Loading",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552.001 - Unsecured Credentials: Credential in Files (via CryptUnprotectData)",
+          "T1036 - Masquerading (fake software updates, malicious DLLs disguised as legitimate)",
+          "T1105 - Ingress Tool Transfer (downloads next stage payloads)",
+          "T1059 - Command and Scripting Interpreter (executes shellcode)",
+          "T1027 - Obfuscated Files or Information (XOR, LZMA, runtime decryption, API call hashing)",
+          "T1573.001 - Encrypted Channel: Symmetric Cryptography (DPAPI and RC5)",
+          "T1055 - Process Injection (injects MgBot into legitimate processes)",
+          "T1574.001 - Hijack Execution Flow: DLL Side-Loading (uses evteng.exe to load libpython2.4.dll)",
+          "T1071.001 - Standard Application Layer Protocol: Web Protocols (HTTP headers to choose payload)",
+          "T1557.001 - Adversary-in-the-Middle: DNS Poisoning"
+        ],
+        "analyse": "Evasive Panda continues to demonstrate advanced and adaptive cyberespionage capabilities. The extensive use of DNS poisoning combined with sophisticated obfuscation and multi-stage delivery methods makes detection incredibly difficult. The long-term persistence observed (over a year in some cases) highlights the group's significant resources and dedication to maintaining access, posing a substantial national security threat to targeted countries. The evolution of their loaders suggests ongoing refinement of their toolset.",
+        "recommandations": [
+          "Implement DNS security best practices, including DNSSEC and monitoring for DNS anomalies.",
+          "Deploy network intrusion detection systems (NIDS) to identify adversary-in-the-middle attacks.",
+          "Enhance endpoint security solutions with behavioral analysis to detect stealthy process injection and DLL sideloading.",
+          "Regularly audit and monitor for unauthorized software installations and updates.",
+          "Train users to be vigilant against suspicious software updates and apply strong application whitelisting."
+        ],
+        "tags": [
+          "cyberespionage",
+          "APT",
+          "evasive_panda",
+          "dns_poisoning",
+          "mgbot",
+          "backdoor",
+          "china",
+          "dll_sideloading",
+          "stealth",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Moving Forward with Memory Analysis: From Volatility to MemProcFS Part 1",
+        "description": "This article discusses the evolution of memory analysis techniques, specifically comparing Volatility with MemProcFS. MemProcFS is highlighted as an interactive memory forensics framework that exposes memory artifacts through a virtual file system. It dynamically performs symbol table lookups and provides valuable forensic data, including detections for injected code in DLLs (PE_NOLINK). The article emphasizes the importance of memory forensics for uncovering threats that execute entirely in memory.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1055 - Process Injection",
+            "T1014 - Rootkit"
+          ]
+        },
+        "mitre_ttps": [
+          "T1055 - Process Injection (detection of injected code)",
+          "T1014 - Rootkit (detection of hidden activity)"
+        ],
+        "analyse": "The continuous development of memory forensics tools like MemProcFS is crucial for modern threat detection. As sophisticated malware and APTs increasingly rely on in-memory execution and rootkit techniques to evade traditional file-based and signature-based security, the ability to analyze memory artifacts interactively and efficiently becomes paramount. This shift allows defenders to uncover complex intrusions that would otherwise remain hidden, reinforcing the need for advanced DFIR capabilities.",
+        "recommandations": [
+          "Integrate memory forensics tools like MemProcFS into incident response playbooks.",
+          "Ensure forensic workstations have active internet connectivity for symbol table lookups.",
+          "Train security analysts in advanced memory analysis techniques to identify injected code and process anomalies.",
+          "Combine memory analysis with other forensic techniques for a holistic view of system compromise."
+        ],
+        "tags": [
+          "memory_analysis",
+          "forensics",
+          "DFIR",
+          "volatility",
+          "memprocfs",
+          "threat_detection",
+          "in_memory_threats"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-1"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "npm Spear-Phishing Campaign Leverages 27 Malicious Packages for Credential Theft",
+        "description": "A sustained and targeted spear-phishing campaign is utilizing 27 malicious npm packages across six aliases to establish a resilient phishing infrastructure. Instead of requiring package installation, attackers host client-side HTML and JavaScript lures on npm and package CDNs, impersonating document-sharing portals and Microsoft sign-in pages. The campaign primarily targets sales and commercial personnel in critical infrastructure-adjacent organizations within the U.S. and Allied nations, employing anti-analysis techniques like bot filtering and honeypot fields.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.002 - Phishing: Spearphishing Link",
+            "T1059.007 - Command and Scripting Interpreter: JavaScript",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols",
+            "T1583.003 - Acquire Infrastructure: Virtual Private Server",
+            "T1587.001 - Develop Capabilities: Malware",
+            "T1027 - Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing: Spearphishing Link (malicious npm packages hosting phishing lures)",
+          "T1059.007 - Command and Scripting Interpreter: JavaScript (client-side lures)",
+          "T1071.001 - Standard Application Layer Protocol: Web Protocols (hosting on package CDNs)",
+          "T1583.003 - Acquire Infrastructure: Virtual Private Server (npm packages for hosting)",
+          "T1587.001 - Develop Capabilities: Malware (phishing infrastructure)",
+          "T1027 - Obfuscated Files or Information (anti-analysis techniques)"
+        ],
+        "analyse": "This campaign represents an evolution in phishing techniques, leveraging legitimate package management systems (npm) as a resilient and trusted infrastructure for hosting malicious content. The focus on critical infrastructure-adjacent organizations, coupled with sophisticated anti-analysis measures, indicates a highly targeted and persistent threat. The ability to bypass traditional email security through hosted lures on CDNs poses a significant challenge for detection and highlights the need for broader security awareness and content analysis.",
+        "recommandations": [
+          "Implement robust email security solutions with advanced phishing detection capabilities.",
+          "Educate users, especially sales and commercial personnel, about sophisticated spear-phishing tactics.",
+          "Deploy web content filtering and threat intelligence feeds to block access to known malicious domains and CDNs.",
+          "Monitor for unusual activity related to npm package usage and content served from package CDNs.",
+          "Utilize multi-factor authentication (MFA) to mitigate credential theft even if users fall victim to phishing."
+        ],
+        "tags": [
+          "phishing",
+          "npm",
+          "supply_chain",
+          "credential_theft",
+          "critical_infrastructure",
+          "spear_phishing",
+          "javascript",
+          "threat_campaign"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687",
+          "https://thehackernews.com/2025/12/27-malicious-npm-packages-used-as.html"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "The Real-World Attacks Behind OWASP Agentic AI Top 10",
+        "description": "This analysis breaks down real-world attacks targeting autonomous AI systems, as highlighted by OWASP's new Agentic AI Top 10. Incidents include goal hijacking, malicious MCP servers, and weaponizing AI hallucinations (slopsquatting) through npm packages. Attackers are exploiting AI agents' broad access and implicit trust by embedding malicious instructions in content or tricking LLMs into recommending malicious packages. Examples include malware communicating with security tools and destructive AI coding assistants.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1648 - LLM Prompt Injection",
+            "T1651 - Model Poisoning",
+            "T1649 - AI Supply Chain Attack",
+            "T1059 - Command and Scripting Interpreter",
+            "T1546.012 - Event Triggered Execution: LLM Hallucination"
+          ]
+        },
+        "mitre_ttps": [
+          "T1648 - LLM Prompt Injection (goal hijacking, manipulating agent objectives)",
+          "T1651 - Model Poisoning (weaponizing AI hallucinations/slopsquatting)",
+          "T1649 - AI Supply Chain Attack (malicious npm packages)",
+          "T1059 - Command and Scripting Interpreter (AI agents executing destructive commands)",
+          "T1546.012 - Event Triggered Execution: LLM Hallucination (slopsquatting)"
+        ],
+        "analyse": "The rapid adoption of Agentic AI systems introduces entirely new attack surfaces and risks that traditional security frameworks are ill-equipped to handle. Attackers are already demonstrating innovative methods to abuse the autonomy, trust, and decision-making capabilities of AI agents. The focus on manipulating AI objectives, exploiting model behaviors, and compromising AI supply chains (e.g., npm packages) highlights a critical need for AI-specific security measures. The impact ranges from data exfiltration to destructive actions and demonstrates that AI is becoming both a target and a tool for adversaries.",
+        "recommandations": [
+          "Implement prompt validation and input sanitization for AI agents.",
+          "Conduct AI-specific risk assessments and threat modeling.",
+          "Enforce strict access controls and least privilege principles for AI systems.",
+          "Monitor agent runtime behavior for anomalous actions and decision-making.",
+          "Secure the AI supply chain, including vetting external models and packages.",
+          "Develop new technical capabilities for model integrity verification and AI-specific detection.",
+          "Raise awareness among developers and security teams about Agentic AI vulnerabilities."
+        ],
+        "tags": [
+          "AI_security",
+          "agentic_ai",
+          "OWASP_AI_Top_10",
+          "prompt_injection",
+          "model_poisoning",
+          "supply_chain_attack",
+          "ai_hallucinations",
+          "npm",
+          "security_frameworks"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-real-world-attacks-behind-owasp-agentic-ai-top-10/",
+          "https://thehackernews.com/2025/12/traditional-security-frameworks-leave.html"
+        ],
+        "date": "2025-12-30"
+      }
+    ]
+  },
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber fin 2025 est caractérisé par un éventail d'attaques sophistiquées et diverses, avec une augmentation notable de l'utilisation de techniques avancées et le ciblage de secteurs critiques. Les groupes APT parrainés par des États, en particulier ceux liés à la Chine, font évoluer leurs TTP, intégrant des rootkits en mode noyau et l'empoisonnement DNS pour des campagnes de cyberespionnage furtives. Le ransomware reste une menace omniprésente, impactant les infrastructures critiques comme les fournisseurs d'énergie et perturbant les services majeurs, souvent en exploitant des identifiants compromis et des services exposés publiquement. La chaîne d'approvisionnement continue d'être une vulnérabilité significative, comme en témoignent les violations de données provenant de fournisseurs tiers et de sociétés d'externalisation de services clients, affectant de grandes organisations et leurs clients. Une tendance émergente clé est l'exploitation des systèmes d'IA, l'OWASP soulignant les vulnérabilités des agents IA autonomes, y compris le détournement d'objectifs et les serveurs MCP malveillants, indiquant une nouvelle frontière pour les attaquants afin d'armer les hallucinations de l'IA et de tirer parti de l'IA dans des infrastructures de phishing sophistiquées. Les vulnérabilités activement exploitées, telles que MongoBleed dans MongoDB, démontrent le danger immédiat posé par les systèmes non patchés, permettant l'exfiltration de données non authentifiée. Les failles de contournement d'authentification et les vulnérabilités d'exécution de code à distance dans les logiciels et plugins largement utilisés présentent des risques critiques, avec l'observation d'exploits zero-day. Le volume croissant de nouvelles CVE souligne le besoin constant d'une gestion robuste des vulnérabilités et de stratégies de défense proactives pour contrer des adversaires de plus en plus furtifs et motivés financièrement.",
+      "date": "2025-12-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Mustang Panda (alias HoneyMyte, Bronze President)",
+        "secteur": "Organisations gouvernementales, ONG, think tanks",
+        "modop": "Utilise des rootkits en mode noyau pour livrer et masquer la backdoor ToneShell, des pilotes mini-filtres pour bloquer les opérations de fichiers, protège les clés de registre liées aux services, refuse l'accès aux handles des processus protégés, utilise de fausses en-têtes TLS pour la communication C2. S'appuie sur des machines précédemment compromises pour le déploiement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyberespionnage",
+          "rootkit",
+          "backdoor",
+          "kernel-mode",
+          "Chine"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Citoyen Lituanien (opérateur de malware Clipper KMSAuto)",
+        "secteur": "Utilisateurs généraux (détenteurs de crypto-monnaies)",
+        "modop": "Distribue un malware 'clipper' qui vole le presse-papiers, déguisé en outil KMSAuto pour activer illégalement les logiciels Windows et Office. Le malware échange les adresses de crypto-monnaies dans le presse-papiers avec celles contrôlées par l'attaquant.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercriminalité",
+          "malware",
+          "clipper",
+          "vol_cryptomonnaie",
+          "ingénierie_sociale",
+          "logiciel_illégal"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hacker-arrested-for-kmsauto-malware-campaign-with-28-million-downloads/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Gentlemen ransomware",
+        "secteur": "Énergie, Infrastructure Critique",
+        "modop": "Utilise des identifiants compromis et cible des services exposés sur Internet pour l'accès initial. Chiffre les documents avec l'extension .7mtzhh et déploie des notes de rançon README-GENTLEMEN.txt. Utilise Windows BitLocker pour le chiffrement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "chiffrement_données",
+          "attaque_infrastructure_critique",
+          "secteur_énergie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/",
+          "https://securityaffairs.com/186290/cyber-crime/romanias-oltenia-energy-complex-suffers-major-ransomware-attack/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Groupe ransomware Clop",
+        "secteur": "Aviation, diverses organisations (chaîne d'approvisionnement via Oracle EBS)",
+        "modop": "Exploite la vulnérabilité zero-day critique d'Oracle EBS (CVE-2025-61882) pour l'accès initial, volant des données sensibles et chiffrant les réseaux. Publie les fichiers volés sur des sites de fuite de données pour faire pression sur les victimes afin qu'elles paient. Utilise des techniques sophistiquées d'évasion et de mouvement latéral.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "exfiltration_données",
+          "attaque_chaîne_approvisionnement",
+          "exploit_zero_day",
+          "secteur_aviation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186275/data-breach/korean-air-discloses-data-breach-after-the-hack-of-its-catering-and-duty-free-supplier/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Evasive Panda (alias Daggerfly, Bronze Highland, StormBamboo)",
+        "secteur": "Organisations gouvernementales, Télécommunications",
+        "modop": "Groupe APT lié à la Chine. Mène des attaques de type 'adversaire au milieu' (adversary-in-the-middle) en utilisant l'empoisonnement DNS pour livrer la backdoor MgBot. Emploie des chargeurs furtifs, des composants de malware chiffrés, du DLL sideloading et la dissimulation d'appels API (hashing). Utilise XOR et LZMA pour l'évasion. Repose sur de fausses mises à jour logicielles pour l'infection initiale.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyberespionnage",
+          "empoisonnement_DNS",
+          "backdoor",
+          "DLL_sideloading",
+          "adversaire_au_milieu",
+          "Chine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Groupe Lovely",
+        "secteur": "Médias, Édition",
+        "modop": "A revendiqué la fuite de données d'abonnés du magazine Wired (et Conde Nast) après une tentative d'extorsion ignorée. L'attaque présente les caractéristiques de malwares de type infostealer comme RedLine et Racoon.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "exfiltration_données",
+          "extorsion",
+          "infostealer",
+          "secteur_médias"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "nom": "Acteur de la menace unique (infrastructure basée au Japon)",
+        "secteur": "Divers (ciblant les serveurs Adobe ColdFusion, marques de luxe pour le phishing)",
+        "modop": "Campagne d'exploitation coordonnée générant plus de 2,5 millions de requêtes malveillantes. A exploité la désérialisation WDDX pour déclencher une injection JNDI/LDAP. A utilisé ProjectDiscovery Interactsh pour la vérification des rappels. L'infrastructure a été précédemment associée à des campagnes de phishing ciblant des marques de luxe.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "campagne_exploitation",
+          "injection_JNDI",
+          "injection_LDAP",
+          "phishing",
+          "exploitation_vulnérabilité"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/coldfusion-servers-under-attack/"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Relations Internationales",
+        "theme": "Cyberespionnage parrainé par l'État",
+        "description": "Les groupes APT liés à la Chine, tels que Mustang Panda (HoneyMyte) et Evasive Panda, continuent de mener des campagnes de cyberespionnage sophistiquées. Mustang Panda utilise des rootkits en mode noyau et la backdoor ToneShell pour cibler les organisations gouvernementales en Asie (Myanmar, Thaïlande), faisant évoluer ses TTP pour la furtivité. Evasive Panda emploie l'empoisonnement DNS pour livrer la backdoor MgBot lors d'attaques ciblées contre la Turquie, la Chine et l'Inde, démontrant persistance et techniques d'évasion avancées.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Chine",
+          "APT",
+          "cyberespionnage",
+          "cibles_gouvernementales",
+          "Asie",
+          "Turquie",
+          "Inde",
+          "Myanmar",
+          "Thaïlande"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/",
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce de détail (E-commerce)",
+        "victime": "Coupang",
+        "description": "Le géant sud-coréen du commerce de détail Coupang a subi une violation de données impactant 33,7 millions de clients. L'incident a été attribué à un ancien employé qui a volé une clé de sécurité, accédant aux dossiers des clients, y compris les noms, adresses e-mail, adresses physiques et informations de commande. L'entreprise a annoncé 1,17 milliard de dollars de compensation sous forme de bons d'achat.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_détail",
+          "e_commerce",
+          "menace_interne",
+          "données_personnelles",
+          "Corée_du_Sud"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/coupang-to-split-117-billion-among-337-million-data-breach-victims/",
+          "https://databreaches.net/2025/12/29/south-korean-retail-giant-coupang-to-compensate-1-1-billion-to-affected-users-over-data-breach/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance (Crypto-monnaie)",
+        "victime": "Trust Wallet",
+        "description": "L'extension de navigateur de Trust Wallet (v2.68.0) a été compromise, entraînant le drainage d'environ 7 millions de dollars de 2 596 portefeuilles de crypto-monnaies. Les attaquants ont probablement utilisé une clé API de Chrome Web Store divulguée pour publier une extension malveillante, exfiltrant des données sensibles des portefeuilles. L'incident a été suivi de campagnes de phishing ciblant les victimes pour des 'remboursements'.",
+        "tags": [
+          "violation",
+          "breach",
+          "crypto_monnaie",
+          "vol_portefeuille",
+          "chaîne_approvisionnement",
+          "compromission_extension",
+          "phishing",
+          "secteur_finance"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-says-7-million-crypto-theft-attack-drained-2-596-wallets/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Énergie, Infrastructure Critique",
+        "victime": "Complexe Énergétique Oltenia",
+        "description": "Le plus grand producteur d'énergie à base de charbon de Roumanie, le Complexe Énergétique Oltenia, a été frappé par une attaque de ransomware Gentlemen. L'incident a chiffré des documents et rendu plusieurs applications informatiques (systèmes ERP, e-mail, site web) temporairement indisponibles. L'activité de l'entreprise a été partiellement affectée, bien que le système énergétique national soit resté opérationnel. Windows BitLocker a été utilisé pour le chiffrement.",
+        "tags": [
+          "violation",
+          "breach",
+          "secteur_énergie",
+          "infrastructure_critique",
+          "ransomware",
+          "chiffrement_données",
+          "Roumanie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/",
+          "https://securityaffairs.com/186290/cyber-crime/romanias-oltenia-energy-complex-suffers-major-ransomware-attack/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Aviation (Chaîne d'approvisionnement)",
+        "victime": "Korean Air (via KC&D)",
+        "description": "Korean Air a subi une violation de données affectant environ 30 000 employés. L'incident a eu pour origine un piratage de son fournisseur de services de restauration et de duty-free en vol, KC&D. Les noms et numéros de compte bancaire des employés du système ERP de KC&D ont été compromis. Le groupe ransomware Clop a revendiqué la responsabilité.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "attaque_chaîne_approvisionnement",
+          "données_employés",
+          "ransomware",
+          "données_personnelles"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186275/data-breach/korean-air-discloses-data-breach-after-the-hack-of-its-catering-and-duty-free-supplier/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Jeux vidéo",
+        "victime": "Ubisoft (Rainbow Six Siege)",
+        "description": "Les serveurs du jeu Rainbow Six Siege d'Ubisoft ont été fermés suite à l'exploitation d'une faille de sécurité majeure liée à la vulnérabilité MongoBleed (CVE-2025-14847) dans MongoDB. Des attaquants ont obtenu un accès backdoor, manipulé des éléments en jeu (bandeau d'interdiction, cosmétiques) et accordé de grandes quantités de monnaie virtuelle aux joueurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "jeux_vidéo",
+          "exploitation_vulnérabilité",
+          "MongoDB",
+          "manipulation_données",
+          "interruption_service"
+        ],
+        "sources": [
+          "https://hackread.com/mongodb-exploit-ubisoft-rainbow-six-siege-players/",
+          "https://infosec.exchange/@AAKL/115804494584605346",
+          "https://infosec.exchange/@AAKL/115804467240938479"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance, Juridique",
+        "victime": "Clients de Goldman Sachs (via le cabinet d'avocats Fried Frank)",
+        "description": "Goldman Sachs a averti ses clients que leurs données, liées à des fonds d'investissement alternatifs, auraient pu être exposées suite à un incident de cybersécurité chez son cabinet d'avocats externe, Fried Frank Harris Shriver & Jacobson LLP. Le cabinet a indiqué que les données étaient 'improbables d'être distribuées ou utilisées de manière inappropriée', suggérant un éventuel paiement de rançon.",
+        "tags": [
+          "violation",
+          "breach",
+          "secteur_finance",
+          "secteur_juridique",
+          "données_clients",
+          "chaîne_approvisionnement",
+          "exposition_données"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/29/goldman-sachs-says-some-clients-data-may-have-been-exposed-in-law-firm-data-breach/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Finance (Crypto-monnaie)",
+        "victime": "Clients de Coinbase (via TaskUs)",
+        "description": "Un ancien agent du service client de Coinbase a été arrêté pour avoir prétendument aidé des hackers à voler des informations sensibles sur les clients, affectant environ 69 500 clients. La violation, attribuée à la société d'externalisation TaskUs, a exposé des noms, dates de naissance, les quatre derniers chiffres des SSN, adresses physiques, numéros de téléphone, adresses e-mail, et certains documents KYC.",
+        "tags": [
+          "violation",
+          "breach",
+          "crypto_monnaie",
+          "secteur_finance",
+          "menace_interne",
+          "données_personnelles",
+          "documents_KYC",
+          "chaîne_approvisionnement"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Médias, Édition",
+        "victime": "Abonnés de Wired Magazine / Conde Nast",
+        "description": "Un groupe nommé 'Lovely' a affirmé avoir publié les adresses e-mail et physiques d'abonnés du magazine Wired, alléguant une tentative d'extorsion ignorée contre la société mère Conde Nast. Les données divulguées comprennent 2,3 millions d'e-mails, 285 000 noms d'abonnés, 108 000 adresses physiques, 32 000 numéros de téléphone, des identifiants d'utilisateur, des noms d'affichage et des adresses IP, présentant les caractéristiques de malwares infostealer.",
+        "tags": [
+          "violation",
+          "breach",
+          "secteur_médias",
+          "édition",
+          "données_abonnés",
+          "données_personnelles",
+          "infostealer",
+          "extorsion"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Services Financiers (Banques)",
+        "victime": "Artisans' Bank, VeraBank (via Marquis Software)",
+        "description": "Artisans' Bank et VeraBank ont informé des milliers de clients d'une violation de données provenant de leur fournisseur tiers, Marquis Software, survenue en août. Artisans' Bank a signalé que 32 344 personnes avaient des noms et numéros de sécurité sociale divulgués. VeraBank a confirmé 37 318 personnes affectées. L'attaque initiale contre Marquis Software a exploité une vulnérabilité dans son pare-feu SonicWall.",
+        "tags": [
+          "violation",
+          "breach",
+          "services_financiers",
+          "banque",
+          "attaque_chaîne_approvisionnement",
+          "données_personnelles",
+          "fuite_SSN",
+          "ransomware"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Secteur Public (Gestion de l'Eau)",
+        "victime": "Romanian Waters (Administrația Națională Apele Române)",
+        "description": "L'autorité nationale roumaine de gestion de l'eau a été touchée par une attaque de ransomware qui a chiffré près de 1 000 systèmes informatiques dans ses bureaux nationaux et régionaux. L'attaque a affecté les serveurs de systèmes d'information géographique (SIG), les bases de données, les services de messagerie et web, impactant 10 de ses 11 bureaux régionaux.",
+        "tags": [
+          "violation",
+          "breach",
+          "secteur_public",
+          "infrastructure_critique",
+          "gestion_eau",
+          "ransomware",
+          "chiffrement_système",
+          "Roumanie"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2025/29th-december-threat-intelligence-report/",
+          "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "secteur": "Logiciels/Services Informatiques",
+        "victime": "Nexpublica France",
+        "description": "La CNIL, l'autorité française de protection des données, a infligé une amende de 1,7 million d'euros (2 millions de dollars) à Nexpublica France pour des pratiques de cybersécurité inadéquates ayant entraîné une violation de données en novembre 2022. L'entreprise était consciente de ses lacunes en matière de sécurité mais n'y a pas remédié de manière proactive, enfreignant ainsi le RGPD.",
+        "tags": [
+          "violation",
+          "breach",
+          "logiciels_services_IT",
+          "violation_RGPD",
+          "amende_protection_données",
+          "sécurité_inadéquate",
+          "action_réglementaire"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-15194",
+        "cvss": 10.0,
+        "product": "D-Link DIR-600",
+        "description": "Débordement de tampon basé sur la pile dans hedwig.cgi (HTTP Header Handler) lors de la manipulation de l'argument 'Cookie'. Permet aux attaquants distants d'exécuter du code arbitraire. Affecte les D-Link DIR-600 jusqu'à la version 2.15WWb02. Exploit publiquement disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "débordement_tampon",
+          "D_Link",
+          "exploit_distant",
+          "appareil_réseau"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15194"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": 10.0,
+        "product": "SmarterMail",
+        "description": "Faille critique dans la gestion du téléversement de fichiers permettant à des attaquants non authentifiés de téléverser des fichiers arbitraires à n'importe quel emplacement sur le serveur de messagerie, permettant potentiellement l'exécution de code à distance. Affecte une alternative populaire d'entreprise à Microsoft Exchange.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "téléversement_fichier_arbitraire",
+          "attaque_non_authentifiée",
+          "serveur_email",
+          "SmarterMail"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-52691-cvss-10-critical-smartermail-flaw-opens-servers-to-unauthenticated-attacks/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68562",
+        "cvss": 9.9,
+        "product": "Plugin WordPress MapSVG",
+        "description": "Vulnérabilité de téléversement de fichier de type dangereux non restreint (téléversement de Web Shell). Affecte le plugin MapSVG jusqu'à la version 8.7.3.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "téléversement_fichier_arbitraire",
+          "web_shell",
+          "WordPress",
+          "vulnérabilité_plugin"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68562"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68897",
+        "cvss": 9.9,
+        "product": "Plugin WordPress IF AS Shortcode",
+        "description": "Contrôle inapproprié de la génération de code ('Code Injection') permettant l'exécution de code à distance (RCE). Affecte le plugin IF AS Shortcode jusqu'à la version 1.2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "injection_code",
+          "WordPress",
+          "vulnérabilité_plugin"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68897"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Contournement d'authentification via un chemin ou canal alternatif. Permet aux attaquants distants de contourner les mécanismes d'authentification et d'obtenir un accès non autorisé. Affecte IBM API Connect (versions 10.0.8.x et 10.0.11 et antérieures).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "contrôle_accès",
+          "IBM",
+          "sécurité_API"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-13915-critical-9-8-flaw-in-ibm-api-connect-lets-attackers-bypass-login/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-68860",
+        "cvss": 9.8,
+        "product": "Plugin WordPress Mobile builder",
+        "description": "Vulnérabilité d'authentification cassée (abus d'authentification). Affecte le plugin Mobile builder jusqu'à la version 1.4.2.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "WordPress",
+          "vulnérabilité_plugin",
+          "authentification_cassée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68860"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15061",
+        "cvss": 9.8,
+        "product": "Framelink Figma MCP Server",
+        "description": "Vulnérabilité d'exécution de code à distance par injection de commande dans la méthode fetchWithRetry. Manque de validation appropriée d'une chaîne fournie par l'utilisateur avant l'exécution d'un appel système. Authentification non requise.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "injection_commande",
+          "attaque_non_authentifiée",
+          "vulnérabilité_serveur"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1197/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB",
+        "description": "Falle MongoBleed dans la décompression de messages zlib, activée par défaut. Permet à des attaquants non authentifiés de fuir la mémoire du tas non initialisée des serveurs MongoDB au niveau du réseau, exposant potentiellement des données sensibles comme les détails d'utilisateur, les mots de passe et les clés API. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fuite_données",
+          "accès_non_authentifié",
+          "MongoDB",
+          "exploitation_active",
+          "mémoire_tas"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186241/hacking/mongobleed-flaw-actively-exploited-in-attacks-in-the-wild/",
+          "https://hackread.com/mongodb-exploit-ubisoft-rainbow-six-siege-players/",
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15284",
+        "cvss": 8.7,
+        "product": "qs (modules d'analyse)",
+        "description": "Vulnérabilité de validation d'entrée inappropriée où l'option arrayLimit dans qs n'applique pas les limites pour la notation entre crochets (a[]=1&a;[]=2), permettant aux attaquants de provoquer un déni de service par épuisement de la mémoire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "DoS",
+          "épuisement_mémoire",
+          "validation_entrée",
+          "sécurité_application_web"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15284"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15269",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Vulnérabilité d'exécution de code à distance après libération de mémoire (Use-After-Free) lors de l'analyse des fichiers SFD. Nécessite une interaction de l'utilisateur (ouverture d'un fichier/page malveillant). Classée comme 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "use_after_free",
+          "FontForge",
+          "vulnérabilité_0_day",
+          "interaction_utilisateur"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1195/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15270",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Vulnérabilité d'exécution de code à distance par validation inappropriée de l'index de tableau lors de l'analyse des fichiers SFD. Permet une écriture au-delà de la fin d'un tableau alloué. Nécessite une interaction de l'utilisateur (ouverture d'un fichier/page malveillant). Classée comme 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "validation_index_tableau",
+          "FontForge",
+          "vulnérabilité_0_day",
+          "interaction_utilisateur"
+        ],
+        "date": "2025-12-30",
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1194/"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-15271",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Vulnérabilité d'exécution de code à distance par validation inappropriée de l'index de tableau lors de l'analyse des fichiers SFD. Permet une écriture au-delà de la fin d'un tableau alloué. Nécessite une interaction de l'utilisateur (ouverture d'un fichier/page malveillant). Classée comme 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "validation_index_tableau",
+          "FontForge",
+          "vulnérabilité_0_day",
+          "interaction_utilisateur"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1193/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-15272",
+        "cvss": 8.8,
+        "product": "FontForge",
+        "description": "Vulnérabilité d'exécution de code à distance par débordement de tampon basé sur le tas lors de l'analyse des fichiers SFD. Manque de validation appropriée de la longueur des données fournies par l'utilisateur. Nécessite une interaction de l'utilisateur (ouverture d'un fichier/page malveillant). Classée comme 0-Day.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "débordement_tampon_tas",
+          "FontForge",
+          "vulnérabilité_0_day",
+          "interaction_utilisateur"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-25-1192/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-69201",
+        "cvss": 8.1,
+        "product": "Tugtainer",
+        "description": "Exécution de code à distance (RCE) dans l'API d'exécution de commande de l'agent en raison de l'injection d'arguments arbitraires dans `POST api/command/run`. Affecte les versions de Tugtainer antérieures à 1.15.1.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "injection_commande",
+          "orchestration_conteneurs"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69201"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20700",
+        "cvss": "Non spécifié (Critique)",
+        "product": "Casques Bluetooth (SoCs Airoha)",
+        "description": "Authentification manquante pour les services GATT via Bluetooth Low Energy. Les attaquants peuvent se connecter à des casques vulnérables sans appariement, obtenant un accès silencieux au protocole RACE, pouvant entraîner l'écoute clandestine, le vol de données ou le piratage de smartphones.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "Bluetooth",
+          "IoT",
+          "écoute_clandestine",
+          "vol_données",
+          "piratage_appareil"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20701",
+        "cvss": "Non spécifié (Critique)",
+        "product": "Casques Bluetooth (SoCs Airoha)",
+        "description": "Authentification manquante pour les connexions Bluetooth Classic. Permet un accès non authentifié pour établir des connexions audio bidirectionnelles, permettant l'écoute clandestine via le microphone de l'appareil. Les attaquants peuvent récupérer des informations sur l'appareil, lire/écrire la RAM, extraire des données sensibles et pirater des smartphones connectés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "Bluetooth",
+          "IoT",
+          "écoute_clandestine",
+          "vol_données",
+          "piratage_appareil"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2025-20702",
+        "cvss": "Non spécifié (Critique)",
+        "product": "Casques Bluetooth (SoCs Airoha)",
+        "description": "Cette CVE englobe une chaîne de vulnérabilités dans les SoCs Bluetooth Airoha, permettant aux attaquants d'exploiter les authentifications manquantes (CVE-2025-20700, CVE-2025-20701) pour vider la mémoire flash, extraire les numéros de téléphone/contacts, déclencher des assistants vocaux, détourner des appels et écouter clandestinement des smartphones connectés. Affecte les appareils Sony, Bose, JBL, Marshall, Jabra.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "Bluetooth",
+          "IoT",
+          "écoute_clandestine",
+          "vol_données",
+          "piratage_appareil",
+          "chaîne_approvisionnement"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/bluetooth-headphones-vulnerabilities/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": "Non spécifié (Critique)",
+        "product": "Fortinet FortiOS",
+        "description": "Vulnérabilité critique de juillet 2020 permettant le contournement de l'authentification à deux facteurs (2FA) sur les pare-feu FortiGate vulnérables. Les attaquants peuvent se connecter sans deuxième facteur en modifiant la casse d'un nom d'utilisateur lorsque la 2FA est activée dans les paramètres 'user local' et liée à une méthode d'authentification distante comme LDAP. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "contournement_authentification",
+          "contournement_2FA",
+          "Fortinet",
+          "FortiOS",
+          "vulnérabilité_pare-feu",
+          "exploitation_active"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687"
+        ],
+        "date": "2025-12-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2.5 Millions+ Requêtes Malveillantes d'Attaquants Contre les Serveurs Adobe ColdFusion",
+        "description": "Une campagne d'exploitation coordonnée a impliqué plus de 2,5 millions de requêtes malveillantes ciblant les serveurs Adobe ColdFusion et d'autres plateformes. Le vecteur d'attaque principal a exploité la désérialisation WDDX pour déclencher une injection JNDI/LDAP. L'opération a été attribuée à un acteur de la menace unique opérant depuis une infrastructure basée au Japon, qui était également associée à une infrastructure de phishing ciblant des marques de luxe.",
+        "threat_actor": "Acteur de la menace unique depuis une infrastructure basée au Japon",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "oast.pro",
+            "oast.site",
+            "oast.me"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190 - Exploit Public-Facing Application"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploitation d'application exposée (désérialisation WDDX, injection JNDI/LDAP)"
+        ],
+        "analyse": "Cette attaque souligne la persistance des adversaires dans l'exploitation des vulnérabilités, qu'elles soient anciennes ou nouvelles, sur un large éventail de plateformes technologiques. L'utilisation de plateformes de test 'hors bande' pour la vérification des rappels démontre une sécurité opérationnelle sophistiquée de la part de l'attaquant. L'association de l'infrastructure à des campagnes de phishing antérieures suggère un acteur de la menace polyvalent et persistant. L'impact s'étend à divers secteurs utilisant Adobe ColdFusion, indiquant un potentiel de compromission généralisé.",
+        "recommandations": [
+          "Bloquer immédiatement les adresses IP et les ASN identifiés associés à l'attaque.",
+          "Implémenter des signatures pour les empreintes JA4+ publiées.",
+          "Prioriser le patch des infrastructures Adobe ColdFusion et basées sur Java.",
+          "Examiner et sécuriser régulièrement l'infrastructure des fournisseurs tiers."
+        ],
+        "tags": [
+          "exploitation",
+          "vulnérabilité",
+          "ColdFusion",
+          "injection_JNDI",
+          "injection_LDAP",
+          "campagne_menace",
+          "cybercriminalité"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/coldfusion-servers-under-attack/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Cyberespionnage parrainé par l'État chinois : un rootkit en mode noyau utilisé pour masquer l'activité du malware ToneShell",
+        "description": "Le groupe APT Mustang Panda (alias HoneyMyte, Bronze President), lié à l'État chinois, déploie une nouvelle variante de la backdoor ToneShell en utilisant un rootkit en mode noyau. Ce pilote, signé avec un certificat volé, injecte et protège la backdoor, refusant l'accès aux handles des processus, protégeant les clés de registre et bloquant sa propre suppression. Le nouveau ToneShell utilise un ID d'hôte de 4 octets et de fausses en-têtes TLS 1.3 pour une communication C2 furtive. Des attaques ont été observées depuis février 2025, ciblant principalement des organisations gouvernementales au Myanmar, en Thaïlande et dans d'autres pays asiatiques.",
+        "threat_actor": "Mustang Panda (alias HoneyMyte, Bronze President)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [
+            "36f121046192b7cac3e4bec491e8f1b5",
+            "fe091e41ba6450bcf6a61a2023fe6c83"
+          ],
+          "FILE_HASH_SHA256": [
+            "abe44ad128f765c14d895ee1c8bad777"
+          ],
+          "DOMAIN": [
+            "avocadomechanism.com",
+            "potherbreference.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1014 - Rootkit",
+            "T1059 - Command and Scripting Interpreter",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols",
+            "T1112 - Modify Registry",
+            "T1055 - Process Injection",
+            "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+            "T1562.002 - Impair Defenses: Disable or Modify Tools"
+          ]
+        },
+        "mitre_ttps": [
+          "T1014 - Rootkit (pilote en mode noyau pour la furtivité et la persistance)",
+          "T1055 - Injection de processus (injecte ToneShell dans les processus système)",
+          "T1112 - Modification du registre (protège les clés de registre)",
+          "T1071.001 - Protocole de couche d'application standard : protocoles Web (faux TLS pour C2)",
+          "T1562.001 - Altérer les défenses : désactiver ou modifier le pare-feu système (modifie l'altitude de WdFilter)",
+          "T1562.002 - Altérer les défenses : désactiver ou modifier les outils (bloque les opérations de fichiers sur lui-même)"
+        ],
+        "analyse": "Cette campagne marque une avancée notable en matière de furtivité et de résilience opérationnelle pour les groupes de cyberespionnage parrainés par l'État chinois. L'utilisation de pilotes en mode noyau offre un accès profond au système et de fortes capacités d'évasion contre les outils de sécurité en mode utilisateur, rendant la détection et la suppression difficiles. Le ciblage des organisations gouvernementales en Asie du Sud-Est et de l'Est suggère des efforts continus de collecte de renseignements géopolitiques. La campagne démontre un investissement soutenu dans des TTP sophistiquées pour atteindre une persistance à long terme.",
+        "recommandations": [
+          "Mettre en œuvre des solutions avancées de détection et de réponse aux points d'extrémité (EDR) capables de surveiller le mode noyau.",
+          "Effectuer régulièrement des analyses forensiques de la mémoire à l'aide d'outils comme MemProcFS pour détecter le code injecté et les processus cachés.",
+          "Renforcer les contrôles d'authentification et d'accès pour prévenir les compromissions initiales.",
+          "Surveiller le trafic réseau pour détecter les anomalies, y compris les modèles TLS inhabituels.",
+          "S'assurer que les systèmes sont configurés pour empêcher le chargement de pilotes non signés ou vérifier rigoureusement la légitimité des certificats."
+        ],
+        "tags": [
+          "cyberespionnage",
+          "APT",
+          "rootkit",
+          "toneshell",
+          "honeymyte",
+          "mustang_panda",
+          "mode_noyau",
+          "chine",
+          "cibles_gouvernementales",
+          "malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-state-hackers-use-rootkit-to-hide-toneshell-malware-activity/",
+          "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Campagne de cyberespionnage Evasive Panda utilisant l'empoisonnement DNS pour installer la backdoor MgBot",
+        "description": "Le groupe APT Evasive Panda, lié à la Chine, mène une campagne de cyberespionnage ciblée utilisant l'empoisonnement DNS pour livrer la backdoor MgBot. L'infection initiale repose sur de fausses mises à jour logicielles, redirigeant les requêtes de mise à jour vers des serveurs contrôlés par l'attaquant. Le groupe utilise des attaques de type 'adversaire au milieu', des chargeurs multi-étapes furtifs, des composants de malware chiffrés, le 'DLL sideloading' dans des processus légitimes et la dissimulation d'appels API. Des victimes ont été identifiées en Turquie, en Chine et en Inde, avec certains systèmes compromis pendant plus d'un an.",
+        "threat_actor": "Evasive Panda (alias Daggerfly, Bronze Highland, StormBamboo)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "p2p.hd.sohu.com.cn",
+            "dictionary.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1552.001 - Unsecured Credentials: Credential in Files",
+            "T1036 - Masquerading",
+            "T1105 - Ingress Tool Transfer",
+            "T1059 - Command and Scripting Interpreter",
+            "T1027 - Obfuscated Files or Information",
+            "T1573.001 - Encrypted Channel: Symmetric Cryptography",
+            "T1055 - Process Injection",
+            "T1574.001 - Hijack Execution Flow: DLL Side-Loading",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols"
+          ]
+        },
+        "mitre_ttps": [
+          "T1552.001 - Identifiants non sécurisés : identifiants dans les fichiers (via CryptUnprotectData)",
+          "T1036 - Mascarade (fausses mises à jour logicielles, DLL malveillantes déguisées en légitimes)",
+          "T1105 - Transfert d'outils d'entrée (télécharge les charges utiles de l'étape suivante)",
+          "T1059 - Interpréteur de commandes et de scripts (exécute le shellcode)",
+          "T1027 - Fichiers ou informations obfusqués (XOR, LZMA, déchiffrement à l'exécution, hachage des appels API)",
+          "T1573.001 - Canal chiffré : cryptographie symétrique (DPAPI et RC5)",
+          "T1055 - Injection de processus (injecte MgBot dans des processus légitimes)",
+          "T1574.001 - Détournement du flux d'exécution : chargement latéral de DLL (utilise evteng.exe pour charger libpython2.4.dll)",
+          "T1071.001 - Protocole de couche d'application standard : protocoles Web (en-têtes HTTP pour choisir la charge utile)",
+          "T1557.001 - Adversaire au milieu : empoisonnement DNS"
+        ],
+        "analyse": "Evasive Panda continue de démontrer des capacités de cyberespionnage avancées et adaptatives. L'utilisation étendue de l'empoisonnement DNS combinée à des méthodes d'obfuscation sophistiquées et de livraison multi-étapes rend la détection incroyablement difficile. La persistance à long terme observée (plus d'un an dans certains cas) souligne les ressources importantes du groupe et son dévouement à maintenir l'accès, posant une menace substantielle à la sécurité nationale des pays ciblés. L'évolution de leurs chargeurs suggère un raffinement continu de leur arsenal d'outils.",
+        "recommandations": [
+          "Mettre en œuvre les meilleures pratiques de sécurité DNS, y compris DNSSEC et la surveillance des anomalies DNS.",
+          "Déployer des systèmes de détection d'intrusion réseau (NIDS) pour identifier les attaques de type 'adversaire au milieu'.",
+          "Renforcer les solutions de sécurité des points d'extrémité avec une analyse comportementale pour détecter l'injection de processus furtive et le chargement latéral de DLL.",
+          "Auditer et surveiller régulièrement les installations et mises à jour logicielles non autorisées.",
+          "Former les utilisateurs à la vigilance face aux mises à jour logicielles suspectes et appliquer une liste blanche d'applications robuste."
+        ],
+        "tags": [
+          "cyberespionnage",
+          "APT",
+          "evasive_panda",
+          "empoisonnement_dns",
+          "mgbot",
+          "backdoor",
+          "chine",
+          "dll_sideloading",
+          "furtivité",
+          "géopolitique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186213/apt/evasive-panda-cyberespionage-campaign-uses-dns-poisoning-to-install-mgbot-backdoor/"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Progresser avec l'analyse de la mémoire : de Volatility à MemProcFS Partie 1",
+        "description": "Cet article traite de l'évolution des techniques d'analyse de la mémoire, comparant spécifiquement Volatility à MemProcFS. MemProcFS est mis en avant comme un cadre interactif de forensic mémoire qui expose les artefacts mémoire via un système de fichiers virtuel. Il effectue dynamiquement des recherches de tables de symboles et fournit des données forensiques précieuses, y compris des détections de code injecté dans les DLL (PE_NOLINK). L'article souligne l'importance de la forensic mémoire pour découvrir les menaces qui s'exécutent entièrement en mémoire.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1055 - Process Injection",
+            "T1014 - Rootkit"
+          ]
+        },
+        "mitre_ttps": [
+          "T1055 - Injection de processus (détection de code injecté)",
+          "T1014 - Rootkit (détection d'activité cachée)"
+        ],
+        "analyse": "Le développement continu d'outils de forensic mémoire comme MemProcFS est crucial pour la détection des menaces modernes. Alors que les malwares sophistiqués et les APT s'appuient de plus en plus sur l'exécution en mémoire et les techniques de rootkit pour échapper aux sécurités traditionnelles basées sur les fichiers et les signatures, la capacité à analyser les artefacts mémoire de manière interactive et efficace devient primordiale. Ce changement permet aux défenseurs de découvrir des intrusions complexes qui resteraient autrement cachées, renforçant le besoin de capacités DFIR avancées.",
+        "recommandations": [
+          "Intégrer les outils de forensic mémoire comme MemProcFS dans les plans de réponse aux incidents.",
+          "S'assurer que les stations de travail forensiques ont une connectivité Internet active pour les recherches de tables de symboles.",
+          "Former les analystes de sécurité aux techniques avancées d'analyse de la mémoire pour identifier le code injecté et les anomalies de processus.",
+          "Combiner l'analyse de la mémoire avec d'autres techniques forensiques pour une vision holistique de la compromission du système."
+        ],
+        "tags": [
+          "analyse_mémoire",
+          "forensique",
+          "DFIR",
+          "volatility",
+          "memprocfs",
+          "détection_menace",
+          "menaces_en_mémoire"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-1"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Une campagne de spear-phishing npm exploite 27 paquets malveillants pour le vol d'identifiants",
+        "description": "Une campagne de spear-phishing soutenue et ciblée utilise 27 paquets npm malveillants à travers six alias pour établir une infrastructure de phishing résiliente. Au lieu de nécessiter l'installation de paquets, les attaquants hébergent des leurres HTML et JavaScript côté client sur npm et des CDN de paquets, usurpant l'identité de portails de partage de documents et de pages de connexion Microsoft. La campagne cible principalement le personnel commercial et de vente d'organisations adjacentes aux infrastructures critiques aux États-Unis et dans les nations alliées, employant des techniques anti-analyse comme le filtrage des bots et les champs honeypot.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.002 - Phishing: Spearphishing Link",
+            "T1059.007 - Command and Scripting Interpreter: JavaScript",
+            "T1071.001 - Standard Application Layer Protocol: Web Protocols",
+            "T1583.003 - Acquire Infrastructure: Virtual Private Server",
+            "T1587.001 - Develop Capabilities: Malware",
+            "T1027 - Obfuscated Files or Information"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 - Phishing : Lien de spear-phishing (paquets npm malveillants hébergeant des leurres de phishing)",
+          "T1059.007 - Interpréteur de commandes et de scripts : JavaScript (leurres côté client)",
+          "T1071.001 - Protocole de couche d'application standard : protocoles Web (hébergement sur des CDN de paquets)",
+          "T1583.003 - Acquérir l'infrastructure : serveur privé virtuel (paquets npm pour l'hébergement)",
+          "T1587.001 - Développer des capacités : malware (infrastructure de phishing)",
+          "T1027 - Fichiers ou informations obfusqués (techniques anti-analyse)"
+        ],
+        "analyse": "Cette campagne représente une évolution des techniques de phishing, tirant parti des systèmes légitimes de gestion de paquets (npm) comme une infrastructure résiliente et fiable pour héberger du contenu malveillant. L'accent mis sur les organisations adjacentes aux infrastructures critiques, associé à des mesures anti-analyse sophistiquées, indique une menace très ciblée et persistante. La capacité à contourner la sécurité traditionnelle des e-mails grâce à des leurres hébergés sur des CDN pose un défi important pour la détection et souligne le besoin d'une sensibilisation à la sécurité plus large et d'une analyse de contenu.",
+        "recommandations": [
+          "Mettre en œuvre des solutions de sécurité de messagerie robustes avec des capacités avancées de détection de phishing.",
+          "Éduquer les utilisateurs, en particulier le personnel commercial et de vente, sur les tactiques de spear-phishing sophistiquées.",
+          "Déployer un filtrage du contenu Web et des flux de renseignement sur les menaces pour bloquer l'accès aux domaines et CDN malveillants connus.",
+          "Surveiller les activités inhabituelles liées à l'utilisation des paquets npm et du contenu servi à partir des CDN de paquets.",
+          "Utiliser l'authentification multi-facteurs (MFA) pour atténuer le vol d'identifiants même si les utilisateurs sont victimes de phishing."
+        ],
+        "tags": [
+          "phishing",
+          "npm",
+          "chaîne_approvisionnement",
+          "vol_identifiants",
+          "infrastructure_critique",
+          "spear_phishing",
+          "javascript",
+          "campagne_menace"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/115804870335980687",
+          "https://thehackernews.com/2025/12/27-malicious-npm-packages-used-as.html"
+        ],
+        "date": "2025-12-30"
+      },
+      {
+        "title": "Les attaques réelles derrière le Top 10 de l'IA Agentique de l'OWASP",
+        "description": "Cette analyse décompose les attaques réelles ciblant les systèmes d'IA autonomes, comme le souligne le nouveau Top 10 de l'IA Agentique de l'OWASP. Les incidents incluent le détournement d'objectifs, les serveurs MCP malveillants et l'armement des hallucinations de l'IA (slopsquatting) via des paquets npm. Les attaquants exploitent le large accès et la confiance implicite des agents IA en intégrant des instructions malveillantes dans le contenu ou en incitant les LLM à recommander des paquets malveillants. Les exemples incluent des malwares communiquant avec des outils de sécurité et des assistants de codage IA destructeurs.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1648 - LLM Prompt Injection",
+            "T1651 - Model Poisoning",
+            "T1649 - AI Supply Chain Attack",
+            "T1059 - Command and Scripting Interpreter",
+            "T1546.012 - Event Triggered Execution: LLM Hallucination"
+          ]
+        },
+        "mitre_ttps": [
+          "T1648 - Injection de prompt LLM (détournement d'objectifs, manipulation des objectifs de l'agent)",
+          "T1651 - Empoisonnement de modèle (armement des hallucinations de l'IA/slopsquatting)",
+          "T1649 - Attaque de la chaîne d'approvisionnement de l'IA (paquets npm malveillants)",
+          "T1059 - Interpréteur de commandes et de scripts (agents IA exécutant des commandes destructrices)",
+          "T1546.012 - Exécution déclenchée par événement : hallucination LLM (slopsquatting)"
+        ],
+        "analyse": "L'adoption rapide des systèmes d'IA agentique introduit des surfaces d'attaque et des risques entièrement nouveaux que les cadres de sécurité traditionnels sont mal équipés pour gérer. Les attaquants démontrent déjà des méthodes innovantes pour abuser de l'autonomie, de la confiance et des capacités de prise de décision des agents IA. L'accent mis sur la manipulation des objectifs de l'IA, l'exploitation des comportements des modèles et la compromission des chaînes d'approvisionnement de l'IA (par exemple, les paquets npm) souligne un besoin critique de mesures de sécurité spécifiques à l'IA. L'impact va de l'exfiltration de données aux actions destructrices et démontre que l'IA devient à la fois une cible et un outil pour les adversaires.",
+        "recommandations": [
+          "Mettre en œuvre la validation des prompts et la désinfection des entrées pour les agents IA.",
+          "Mener des évaluations des risques spécifiques à l'IA et une modélisation des menaces.",
+          "Appliquer des contrôles d'accès stricts et les principes du moindre privilège pour les systèmes IA.",
+          "Surveiller le comportement d'exécution des agents pour détecter les actions et les prises de décision anormales.",
+          "Sécuriser la chaîne d'approvisionnement de l'IA, y compris l'examen des modèles et paquets externes.",
+          "Développer de nouvelles capacités techniques pour la vérification de l'intégrité des modèles et la détection spécifique à l'IA.",
+          "Sensibiliser les développeurs et les équipes de sécurité aux vulnérabilités de l'IA agentique."
+        ],
+        "tags": [
+          "sécurité_IA",
+          "ia_agentique",
+          "OWASP_AI_Top_10",
+          "prompt_injection",
+          "empoisonnement_modèle",
+          "attaque_chaîne_approvisionnement",
+          "hallucinations_ia",
+          "npm",
+          "cadres_sécurité"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-real-world-attacks-behind-owasp-agentic-ai-top-10/",
+          "https://thehackernews.com/2025/12/traditional-security-frameworks-leave.html"
+        ],
+        "date": "2025-12-30"
+      }
+    ]
+  }
+}
