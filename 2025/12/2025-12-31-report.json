@@ -1,0 +1,1455 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber reste complexe et dynamique, marqué par une intensification des activités étatiques et criminelles. Les vulnérabilités critiques, en particulier celles affectant les bases de données (comme MongoBleed) et les systèmes d'automatisation (Ksenia Security, Anevia, Akuvox), sont rapidement exploitées, mettant en lumière l'importance d'une gestion proactive des correctifs. L'ingénierie sociale continue d'être une méthode d'attaque prévalente et sophistiquée, comme en témoignent les campagnes ErrTraffic et Zoom Stealer, ainsi que l'utilisation de logiciels piratés comme vecteurs de malwares. L'émergence de groupes APT comme Mustang Panda, utilisant des rootkits en mode noyau, souligne une sophistication croissante des tactiques d'évasion. Un aspect particulièrement préoccupant est la menace interne, illustrée par l'incident chez CrowdStrike et l'implication d'anciens experts en cybersécurité dans des attaques de ransomware BlackCat, rappelant que la confiance et les contrôles d'accès sont aussi critiques que les défenses techniques. Par ailleurs, l'interconnexion entre la géopolitique et le cyber est de plus en plus flagrante, avec des stratégies nationales (Stratégie Trump) intégrant le renseignement économique et des opérations (IP ukrainiennes volées) ayant des répercussions directes sur la souveraineté numérique et l'attribution des attaques. En conclusion, les organisations doivent adopter une approche de sécurité multicouche, axée sur la détection précoce, la réponse rapide, la gestion rigoureuse des vulnérabilités, la sensibilisation des employés et une gouvernance robuste pour contrer un éventail de menaces de plus en plus diversifié et évolué.",
+      "date": "2025-12-31"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ErrTraffic developers",
+        "secteur": "Divers (utilisateurs finaux)",
+        "modop": "Service cybercriminel automatisant les attaques ClickFix via de faux \"bugs visuels\" sur des sites web compromis pour inciter les utilisateurs à télécharger des charges utiles malveillantes ou à suivre des instructions dangereuses, ciblant en fonction de la géolocalisation et de l'OS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "social_engineering",
+          "clickfix",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-errtraffic-service-enables-clickfix-attacks-via-fake-browser-glitches/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "DarkSpectre (aka GhostPoster, ShadyPanda)",
+        "secteur": "Corporate, réunions en ligne",
+        "modop": "Campagne \"Zoom Stealer\" utilisant 18 extensions de navigateur malveillantes (Chrome, Firefox, Edge) pour collecter et exfiltrer en temps réel des informations liées aux réunions en ligne (URLs, IDs, sujets, descriptions, mots de passe) sur 28 plateformes de vidéoconférence.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "browser_extension",
+          "data_exfiltration",
+          "corporate_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/zoom-stealer-browser-extensions-harvest-corporate-meeting-intelligence/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "BlackCat (ALPHV) affiliates",
+        "secteur": "Pharmaceutique, ingénierie, fabrication de dispositifs médicaux, drones, cabinets médicaux (États-Unis)",
+        "modop": "Attaques par ransomware, chiffrement de serveurs et extorsion, avec des demandes de rançon allant de 300 000 $ à 10 millions $. Deux anciens experts en cybersécurité ont plaidé coupable d'y avoir participé.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "extortion",
+          "insider_threat",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-cybersecurity-experts-plead-guilty-to-blackcat-alphv-ransomware-attacks/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Mustang Panda (aka Hive0154, HoneyMyte, Camaro Dragon, RedDelta, Bronze President)",
+        "secteur": "Entités gouvernementales (Asie du Sud-Est et de l'Est, Myanmar, Thaïlande)",
+        "modop": "Utilisation d'un pilote rootkit en mode noyau signé avec un certificat volé pour charger du shellcode et déployer la backdoor ToneShell. Cette méthode protège les composants malveillants, injecte la backdoor dans les processus système et désactive les défenses comme Microsoft Defender.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "rootkit",
+          "kernel_mode",
+          "backdoor",
+          "evasion",
+          "government_target"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186318/security/mustang-panda-deploys-toneshell-via-signed-kernel-mode-rootkit-driver.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Individu Lituanien (KMSAuto suspect)",
+        "secteur": "Grand public (utilisateurs de Windows et Office)",
+        "modop": "Distribution de malwares basés sur KMSAuto, un outil de piratage, pour installer un \"clipper malware\". Ce malware surveillait le presse-papiers pour remplacer les adresses de portefeuilles de cryptomonnaies par des adresses contrôlées par l'attaquant, volant environ 1,7 milliard de wons.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "malware",
+          "clipper_malware",
+          "cryptocurrency_theft",
+          "pirated_software"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186308/malware/lithuanian-suspect-arrested-over-kmsauto-malware-that-infected-2-8m-systems.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Scattered Lapsus Hunters (alliance de Scattered Spider, LAPSUS$, ShinyHunters)",
+        "secteur": "Grandes entreprises, fournisseurs tiers (ex: CrowdStrike)",
+        "modop": "Recrutement/soudoyer d'employés internes pour obtenir et divulguer des informations confidentielles ou des accès. A offert 25 000 $ pour un accès à CrowdStrike.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "insider_threat",
+          "data_leak",
+          "extortion",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/crowdstrike-sanctionne-un-initie-apres-business-pirate/"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Commerce, Renseignement, Cybersécurité, Technologie, Supply Chain, Énergie, Minéraux, Télécoms",
+        "theme": "Stratégie de sécurité nationale et souveraineté économique",
+        "description": "La nouvelle stratégie de sécurité nationale de l'administration Trump charge les agences de renseignement américaines de surveiller les chaînes d'approvisionnement mondiales et les avancées technologiques afin de réduire la dépendance économique vis-à-vis d'adversaires étrangers. Elle promeut une cybersurveillance accrue avec une attribution et une réponse en temps réel, s'appuyant sur les partenaires privés. L'hémisphère occidental est désigné comme un réservoir de ressources stratégiques pour des investissements sécurisés, notamment dans l'énergie, les minéraux critiques et les réseaux de cybercommunications.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "economie",
+          "renseignement",
+          "supply_chain",
+          "cybersecurite",
+          "strategie_nationale"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-strategie-trump-met-le-renseignement-au-service-du-commerce/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "secteur": "Télécommunications, Cybersécurité, Gouvernement, Renseignement",
+        "theme": "Utilisation malveillante d'adresses IP volées dans le cadre d'un conflit territorial",
+        "description": "Des opérateurs télécoms dans les territoires ukrainiens occupés auraient été contraints de céder leurs identifiants, permettant la captation d'adresses IP ukrainiennes aujourd'hui exploitées par la Russie. Ces IPs sont réenregistrées via RIPE NCC par des entités russes, malgré les alertes et les sanctions, et sont utilisées pour le camouflage d'attaques, la désinformation et la manipulation, compliquant l'attribution et posant un risque significatif pour la cybersécurité européenne.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "cyberconflit",
+          "attribution",
+          "reseaux",
+          "ip_theft",
+          "desinformation",
+          "sanctions"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/les-adresses-ip-ukrainiennes-volees-angle-mort-europeen/"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Spatial, Recherche, Gouvernemental",
+        "victime": "European Space Agency (ESA)",
+        "description": "Des serveurs externes au réseau corporate de l'ESA ont été compromis, contenant des informations \"non classifiées\" sur des activités d'ingénierie collaborative. Les attaquants affirment avoir volé plus de 200GB de données incluant du code source, des pipelines CI/CD, des tokens API, des documents confidentiels, et des identifiants hardcodés.",
+        "tags": [
+          "violation",
+          "breach",
+          "esa",
+          "gouvernemental",
+          "secteur_spatial",
+          "fuite_de_donnees",
+          "code_source",
+          "api_tokens"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/european-space-agency-confirms-breach-of-external-servers/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "secteur": "E-commerce, Logistique",
+        "victime": "Coupang",
+        "description": "Violation de données affectant 33,7 millions de clients en Corée du Sud. Un accès non autorisé a eu lieu sur des serveurs externes. Les données exposées incluent des noms, e-mails, numéros de téléphone, adresses de livraison et historiques de commandes. Aucune donnée de paiement ou identifiants de connexion sensibles n'a été compromise. Coupang prévoit un plan de compensation de 1,17 milliard de dollars.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e-commerce",
+          "coree_du_sud",
+          "donnees_personnelles",
+          "fuite_de_donnees"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186331/security/coupang-announces-1-17b-compensation-plan-for-33-7m-data-breach-victims.html"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterTools SmarterMail",
+        "description": "Vulnérabilité critique permettant à un attaquant non authentifié de télécharger des fichiers arbitraires vers n'importe quel emplacement sur le serveur de messagerie, pouvant mener à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "upload_arbitrary_files",
+          "non_authentifie",
+          "email_server",
+          "smartermail",
+          "critique"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/csa-issues-alert-on-critical.html",
+          "https://cybersecuritynews.com/smartermail-vulnerability/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15114",
+        "cvss": "9.8",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Faille de sécurité critique exposant le code PIN du système d'alarme dans le fichier XML 'basisInfo' après authentification, permettant aux attaquants de le récupérer pour contourner les mesures de sécurité et désactiver le système d'alarme.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pin_exposure",
+          "authentication_bypass",
+          "home_automation",
+          "critique",
+          "controle_acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15114"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2024-58338",
+        "cvss": "9.8",
+        "product": "Anevia Flamingo XL 3.2.9",
+        "description": "Vulnérabilité de shell restreint permettant aux attaquants distants de s'échapper de l'environnement sandbox via la commande traceroute, d'injecter des commandes shell et d'obtenir un accès root complet à l'appareil (jailbreak à distance).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "RCE",
+          "shell_escape",
+          "root_access",
+          "jailbreak",
+          "reseau",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-58338"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15111",
+        "cvss": "9.3",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Vulnérabilité de \"default credentials\" permettant à des attaquants non autorisés d'obtenir un accès administratif et un contrôle total du système domotique.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "default_credentials",
+          "acces_administratif",
+          "home_automation",
+          "critique",
+          "authentification",
+          "controle_acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15111"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2024-58337",
+        "cvss": "8.7",
+        "product": "Akuvox Smart Intercom S539",
+        "description": "Vulnérabilité de contrôle d'accès inapproprié permettant aux utilisateurs avec des privilèges 'User' de modifier les paramètres d'accès API et les configurations, menant à une escalade de privilèges et à un accès administratif non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "improper_access_control",
+          "privilege_escalation",
+          "api_access",
+          "intercom",
+          "elevé",
+          "controle_acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-58337"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "8.7",
+        "product": "MongoDB Server",
+        "description": "Vulnérabilité \"MongoBleed\" dans le traitement des paquets réseau par la bibliothèque zlib, permettant à des attaquants non authentifiés de voler à distance des identifiants, des clés API et d'autres données sensibles (PII, tokens de session) depuis la mémoire non initialisée. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data_leak",
+          "remote_data_theft",
+          "authentication",
+          "api_keys",
+          "pii",
+          "zlib",
+          "memory_leak",
+          "active_exploitation",
+          "mongodb",
+          "server",
+          "elevé"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-orders-federal-agencies-to-patch-mongobleed-flaw-actively-exploited-in-attacks/",
+          "https://securityaffairs.com/186297/hacking/u-s-cisa-adds-a-flaw-in-mongodb-server-to-its-known-exploited-vulnerabilities-catalog/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/30/mongodb_vuln_exploited_cve_2025_14847/",
+          "https://databreaches.net/2025/12/30/us-australia-say-mongobleed-bug-being-exploited/?pk_campaign=feed&pk_kwd=us-australia-say-mongobleed-bug-being-exploited",
+          "https://cybersecuritynews.com/cisa-mongodb-server-vulnerability/",
+          "https://cybersecuritynews.com/70000-mongodb-servers-vulnerable/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15371",
+        "cvss": "8.5",
+        "product": "Tenda i24, 4G03 Pro, 4G05, 4G08, G0-8G-PoE, Nova MW5G et TEG5328F (jusqu'à 65.10.15.6)",
+        "description": "Vulnérabilité de \"hard-coded credentials\" dans le composant Shadow File, exploitable localement. L'exploit a été divulgué publiquement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hard_coded_credentials",
+          "local_exploit",
+          "reseau",
+          "elevé",
+          "authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15371"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15113",
+        "cvss": "8.5",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Vulnérabilité de point de terminaison non protégé permettant à des attaquants authentifiés de télécharger des images binaires de système de fichiers MPFS. Peut être exploitée pour écraser la mémoire flash du programme et potentiellement exécuter du code arbitraire (RCE) sur le serveur web du système domotique.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "RCE",
+          "file_upload",
+          "authentifie",
+          "home_automation",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15113"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15112",
+        "cvss": "8.0",
+        "product": "Ksenia Security Lares 4.0 version 1.6",
+        "description": "Vulnérabilité de redirection d'URL dans le script 'cmdOk.xml', permettant la manipulation du paramètre GET 'redirectPage'. Des liens malveillants peuvent rediriger des utilisateurs authentifiés vers des sites arbitraires.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "url_redirection",
+          "open_redirect",
+          "social_engineering",
+          "authentifie",
+          "home_automation",
+          "elevé"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15112"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Integrating a Malware Sandbox into SOAR Workflows: Steps, Benefits, and Impact",
+        "description": "Cet article technique explore l'intégration d'un sandbox d'analyse de malwares dans les plateformes SOAR. Il détaille comment cette synergie améliore la capacité d'une équipe de sécurité à déterminer précisément la nature des alertes, complétant l'automatisation du SOAR par une intelligence de menace critique et une analyse dynamique des fichiers ou liens suspects.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'intégration d'un sandbox dans les workflows SOAR améliore considérablement l'efficacité et la précision des opérations de sécurité. Elle réduit le temps d'analyse manuel, renforce les capacités de détection et de réponse aux menaces dans divers secteurs en fournissant une analyse dynamique automatisée, et permet une meilleure priorisation des incidents. L'impact est transversal, touchant tous les secteurs utilisant des plateformes SOAR pour la gestion des incidents.",
+        "recommandations": [
+          "Intégrer des sandboxes pour l'analyse automatisée des fichiers et liens suspects.",
+          "Exploiter les résultats du sandbox pour enrichir les alertes et déclencher des playbooks SOAR spécifiques.",
+          "Assurer un flux de données transparent entre le sandbox et la plateforme SOAR.",
+          "Former les équipes de sécurité à l'interprétation des rapports d'analyse de malwares."
+        ],
+        "tags": [
+          "SOAR",
+          "sandbox",
+          "analyse_malware",
+          "reponse_incident",
+          "automatisation",
+          "threat_intelligence",
+          "operations_securite"
+        ],
+        "sources": [
+          "/cybersecurity-blog/integrating-sandbox-into-soar-workflows/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "New ErrTraffic service enables ClickFix attacks via fake browser glitches",
+        "description": "Le nouveau service cybercriminel ErrTraffic permet aux acteurs de la menace d'automatiser les attaques ClickFix en générant de faux \"bugs visuels\" sur des sites web compromis. Cette technique d'ingénierie sociale vise à inciter les utilisateurs à télécharger des charges utiles malveillantes ou à suivre des instructions dangereuses, en se basant sur la géolocalisation et l'OS des victimes.",
+        "threat_actor": "ErrTraffic developers",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566",
+          "T1204.002",
+          "T1071.001",
+          "T1588.001",
+          "T1059"
+        ],
+        "analyse": "ErrTraffic représente une évolution des techniques d'ingénierie sociale, rendant les attaques ClickFix plus accessibles et automatisées pour les cybercriminels. La personnalisation des attaques en fonction de la géolocalisation et de l'OS augmente leur efficacité et la difficulté de détection pour les utilisateurs. L'exclusion des pays de la CEI des cibles suggère l'origine géographique des développeurs du service. L'impact est global sur les utilisateurs web.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux techniques d'ingénierie sociale avancées et aux fausses alertes techniques sur les sites web.",
+          "Promouvoir la prudence face aux demandes de téléchargement de logiciels ou de suivi d'instructions inattendues.",
+          "Utiliser des protections de navigation web et des bloqueurs de publicités pour réduire l'exposition aux scripts malveillants.",
+          "Maintenir les navigateurs et les systèmes d'exploitation à jour."
+        ],
+        "tags": [
+          "social_engineering",
+          "clickfix",
+          "errtraffic",
+          "cybercrime",
+          "malware",
+          "browser_glitches",
+          "payload_delivery",
+          "geolocation_targeting",
+          "os_fingerprinting",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-errtraffic-service-enables-clickfix-attacks-via-fake-browser-glitches/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "US cybersecurity experts plead guilty to BlackCat (ALPHV) ransomware attacks",
+        "description": "Deux anciens employés d'entreprises de réponse aux incidents de cybersécurité, Ryan Clifford Goldberg et Kevin Tyler Martin, ont plaidé coupable d'avoir participé à des attaques de ransomware BlackCat (ALPHV) contre des entreprises américaines entre mai et novembre 2023. Ils ont utilisé leur expertise pour compromettre des réseaux, chiffrer des serveurs et exiger des rançons.",
+        "threat_actor": "BlackCat (ALPHV) affiliates",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1486",
+          "T1078",
+          "T1560",
+          "TA0040",
+          "TA0001"
+        ],
+        "analyse": "Cet incident met en lumière le grave problème de la menace interne et de l'utilisation abusive de compétences en cybersécurité par d'anciens experts pour des activités criminelles. L'implication de ces individus dans des attaques BlackCat (ALPHV) a eu un impact destructeur sur des secteurs variés aux États-Unis, soulignant la nécessité de contrôles d'accès stricts et de surveillances comportementales même pour les professionnels de la sécurité. Le potentiel géographique est national (États-Unis) mais les groupes de ransomware sont globaux.",
+        "recommandations": [
+          "Mettre en œuvre des processus de vérification des antécédents et des contrôles d'accès rigoureux pour les employés ayant des privilèges élevés.",
+          "Renforcer les politiques de sécurité post-emploi et les clauses de non-divulgation.",
+          "Surveiller les activités des comptes privilégiés pour détecter les comportements anormaux.",
+          "Appliquer une stratégie de défense en profondeur contre les ransomwares, incluant des sauvegardes robustes, une segmentation réseau et des solutions EDR/XDR."
+        ],
+        "tags": [
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "cybercrime",
+          "insider_threat",
+          "extortion",
+          "us_companies",
+          "law_enforcement",
+          "medical_sector",
+          "manufacturing_sector",
+          "incident_response"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-cybersecurity-experts-plead-guilty-to-blackcat-alphv-ransomware-attacks/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Zoom Stealer browser extensions harvest corporate meeting intelligence",
+        "description": "Une campagne nommée \"Zoom Stealer\", attribuée au groupe APT DarkSpectre (lié à la Chine), affecte 2,2 millions d'utilisateurs via 18 extensions de navigateur malveillantes. Ces extensions collectent des données de réunions en ligne (URLs, IDs, sujets, descriptions, mots de passe intégrés) sur 28 plateformes de vidéoconférence (Zoom, Microsoft Teams, Google Meet, Cisco WebEx) et les exfiltrent en temps réel via des connexions WebSocket.",
+        "threat_actor": "DarkSpectre (China-linked, aka GhostPoster, ShadyPanda)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1176",
+          "T1560",
+          "T1567.002",
+          "T1555.003"
+        ],
+        "analyse": "La campagne Zoom Stealer illustre l'exploitation croissante des extensions de navigateur comme vecteur d'espionnage corporatif. L'attribution à un groupe APT lié à la Chine et l'ampleur de la compromission (2,2 millions d'utilisateurs sur de multiples plateformes) révèlent une opération sophistiquée ciblant la propriété intellectuelle et l'intelligence d'affaires. La base de données de renseignements de réunions peut alimenter des opérations d'usurpation d'identité à grande échelle. L'impact est mondial pour les entreprises utilisant ces plateformes.",
+        "recommandations": [
+          "Auditer et limiter strictement l'utilisation des extensions de navigateur en milieu professionnel.",
+          "Privilégier les navigateurs sécurisés et les configurations de sécurité renforcées.",
+          "Sensibiliser les utilisateurs aux dangers des extensions malveillantes et aux risques d'ingénierie sociale.",
+          "Surveiller le trafic réseau pour détecter l'exfiltration de données via des protocoles inhabituels ou des destinations suspectes, notamment les connexions WebSocket vers des serveurs comme Alibaba Cloud."
+        ],
+        "tags": [
+          "APT",
+          "darkspectre",
+          "chine",
+          "extension_navigateur",
+          "zoom",
+          "microsoft_teams",
+          "google_meet",
+          "cisco_webex",
+          "espionnage_entreprise",
+          "exfiltration_donnees",
+          "corporate_intelligence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/zoom-stealer-browser-extensions-harvest-corporate-meeting-intelligence/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "CrowdStrike sanctionne un « initié » après business pirate",
+        "description": "CrowdStrike a licencié un employé pour avoir divulgué des informations internes à un groupe criminel connu sous le nom de Scattered Lapsus Hunters (une alliance de Scattered Spider, LAPSUS$ et ShinyHunters). L'incident implique la prise de captures d'écran de tableaux de bord internes et souligne le risque persistant de la menace interne et de l'incitation financière à la compromission.",
+        "threat_actor": "Scattered Lapsus Hunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1589.002",
+          "T1078.003",
+          "T1567",
+          "T1552.001",
+          "T1192"
+        ],
+        "analyse": "Cet incident démontre la vulnérabilité des grandes entreprises aux menaces internes et l'efficacité du recrutement d'initiés par les groupes cybercriminels pour contourner les défenses techniques coûteuses. Il met en lumière l'importance de la détection comportementale interne et de la gestion des accès pour protéger la confiance et la sécurité des données d'entreprise. L'impact potentiel est significatif pour la réputation et la sécurité des clients de CrowdStrike, bien que l'entreprise affirme que ses systèmes n'ont pas été compromis.",
+        "recommandations": [
+          "Renforcer la détection comportementale interne et les systèmes de surveillance des activités des employés.",
+          "Mettre en place une gouvernance stricte des accès, notamment pour les informations sensibles et les outils d'entreprise.",
+          "Sensibiliser les employés aux tentatives d'incitation ou de recrutement par des groupes cybercriminels.",
+          "Établir des politiques claires concernant l'utilisation des dispositifs personnels et le partage d'informations, même par captures d'écran."
+        ],
+        "tags": [
+          "insider_threat",
+          "data_leak",
+          "corporate_espionage",
+          "cybercrime",
+          "ransomware_group",
+          "LAPSUS$",
+          "scattered_spider",
+          "shinyhunters",
+          "human_element",
+          "security_governance",
+          "crowdstrike"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/crowdstrike-sanctionne-un-initie-apres-business-pirate/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Lithuanian suspect arrested over KMSAuto malware that infected 2.8M systems",
+        "description": "Un ressortissant lituanien a été arrêté et extradé vers la Corée du Sud pour avoir distribué un malware basé sur l'outil de piratage KMSAuto. Ce \"clipper malware\" a infecté environ 2,8 millions de systèmes Windows et Office, surveillant le presse-papiers pour remplacer les adresses de portefeuilles de cryptomonnaies et voler environ 1,7 milliard de wons (environ 1,27 million de dollars).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1115",
+          "T1566",
+          "T1204.002",
+          "T1059.003"
+        ],
+        "analyse": "L'arrestation de ce suspect souligne le risque persistant et massif lié à l'utilisation de logiciels piratés et d'outils d'activation non légitimes comme vecteurs d'infection. La technique du \"clipper malware\" est une menace discrète mais efficace pour le vol de cryptomonnaies, ayant un impact financier significatif sur des millions de victimes à travers le monde. L'opération transnationale d'application de la loi démontre la coopération internationale nécessaire pour combattre ce type de cybercrime.",
+        "recommandations": [
+          "Éviter absolument le téléchargement et l'utilisation de logiciels provenant de sources non fiables ou piratées.",
+          "Vérifier toujours l'adresse de destination lors des transactions de cryptomonnaies, manuellement si possible, ou via des outils de vérification fiables.",
+          "Utiliser des logiciels de sécurité et des antivirus réputés, et les maintenir à jour.",
+          "Sensibiliser les utilisateurs aux dangers des malwares de type \"clipper\" et à la prudence lors de la copie-colle."
+        ],
+        "tags": [
+          "malware",
+          "clipper_malware",
+          "kmsauto",
+          "cryptocurrency_theft",
+          "social_engineering",
+          "piracy",
+          "windows",
+          "office",
+          "law_enforcement",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186308/malware/lithuanian-suspect-arrested-over-kmsauto-malware-that-infected-2-8m-systems.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Mustang Panda deploys ToneShell via signed kernel-mode rootkit driver",
+        "description": "Le groupe APT lié à la Chine, Mustang Panda (également connu sous les noms de Hive0154, HoneyMyte, Camaro Dragon, RedDelta ou Bronze President), a été observé utilisant un pilote rootkit en mode noyau signé avec un certificat volé ou divulgué pour charger du shellcode et déployer sa backdoor ToneShell. Cette méthode sophistiquée permet d'éviter la détection par les solutions de sécurité en mode utilisateur, de protéger les composants malveillants et d'injecter la backdoor dans les processus système.",
+        "threat_actor": "Mustang Panda (Hive0154, HoneyMyte, Camaro Dragon, RedDelta, Bronze President)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1543.003",
+          "T1055",
+          "T1027",
+          "T1562.001",
+          "T1041",
+          "T1573.002",
+          "T1564.001"
+        ],
+        "analyse": "Cette campagne illustre une sophistication croissante des groupes APT parrainés par l'État, avec l'utilisation de techniques d'évasion avancées au niveau du noyau pour maintenir la persistance et l'indétectabilité. La ciblage des entités gouvernementales en Asie du Sud-Est et de l'Est souligne des motivations stratégiques et d'espionnage, cherchant à obtenir un accès persistant et discret aux informations sensibles. L'impact est majeur sur la sécurité nationale des pays ciblés.",
+        "recommandations": [
+          "Renforcer les défenses au niveau du noyau et surveiller activement l'installation de nouveaux pilotes, en particulier ceux avec des certificats d'éditeur inhabituels.",
+          "Implémenter des solutions EDR/XDR avancées capables de détecter les activités en mode noyau et les techniques d'injection de processus.",
+          "Effectuer des analyses forensiques de la mémoire pour détecter les shellcodes résidant en mémoire et les backdoors.",
+          "Mettre à jour régulièrement les listes de révocation de certificats et bloquer les certificats volés ou divulgués."
+        ],
+        "tags": [
+          "APT",
+          "mustang_panda",
+          "chine",
+          "rootkit",
+          "kernel_mode",
+          "toneshell",
+          "backdoor",
+          "ttps",
+          "evasion",
+          "cible_gouvernementale",
+          "espionnage",
+          "cybersecurite",
+          "endpoint_security"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186318/security/mustang-panda-deploys-toneshell-via-signed-kernel-mode-rootkit-driver.html"
+        ],
+        "date": "2025-12-31"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape remains complex and dynamic, marked by an intensification of state-sponsored and criminal activities. Critical vulnerabilities, particularly those affecting databases (like MongoBleed) and automation systems (Ksenia Security, Anevia, Akuvox), are rapidly exploited, highlighting the importance of proactive patch management. Social engineering continues to be a prevalent and sophisticated attack method, as evidenced by the ErrTraffic and Zoom Stealer campaigns, as well as the use of pirated software as malware vectors. The emergence of APT groups like Mustang Panda, utilizing kernel-mode rootkits, points to increasing sophistication in evasion tactics. A particularly concerning aspect is the insider threat, illustrated by the CrowdStrike incident and the involvement of former cybersecurity experts in BlackCat ransomware attacks, reminding us that trust and access controls are as critical as technical defenses. Furthermore, the interconnection between geopolitics and cyber is increasingly apparent, with national strategies (Trump Strategy) integrating economic intelligence and operations (stolen Ukrainian IPs) having direct repercussions on digital sovereignty and attack attribution. In conclusion, organizations must adopt a multi-layered security approach, focused on early detection, rapid response, rigorous vulnerability management, employee awareness, and robust governance to counter an increasingly diverse and evolved array of threats.",
+      "date": "2025-12-31"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ErrTraffic developers",
+        "secteur": "Various (end-users)",
+        "modop": "Cybercrime service automating ClickFix attacks via fake 'visual glitches' on compromised websites to lure users into downloading malicious payloads or following dangerous instructions, targeting based on geolocation and OS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "social_engineering",
+          "clickfix",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-errtraffic-service-enables-clickfix-attacks-via-fake-browser-glitches/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "DarkSpectre (aka GhostPoster, ShadyPanda)",
+        "secteur": "Corporate, online meetings",
+        "modop": "\"Zoom Stealer\" campaign using 18 malicious browser extensions (Chrome, Firefox, Edge) to collect and exfiltrate in real-time online meeting-related information (URLs, IDs, topics, descriptions, embedded passwords) from 28 video-conferencing platforms.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "browser_extension",
+          "data_exfiltration",
+          "corporate_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/zoom-stealer-browser-extensions-harvest-corporate-meeting-intelligence/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "BlackCat (ALPHV) affiliates",
+        "secteur": "Pharmaceutical, engineering, medical device manufacturing, drone manufacturing, doctor's offices (US)",
+        "modop": "Ransomware attacks, encrypting servers and extortion, with ransom demands ranging from $300,000 to $10 million. Two former cybersecurity experts pleaded guilty to participating in these attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "extortion",
+          "insider_threat",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-cybersecurity-experts-plead-guilty-to-blackcat-alphv-ransomware-attacks/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Mustang Panda (aka Hive0154, HoneyMyte, Camaro Dragon, RedDelta, Bronze President)",
+        "secteur": "Government entities (Southeast and East Asia, Myanmar, Thailand)",
+        "modop": "Using a signed kernel-mode rootkit driver with a stolen certificate to load shellcode and deploy the ToneShell backdoor. This method protects malicious components, injects the backdoor into system processes, and disables defenses like Microsoft Defender.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "China-linked",
+          "rootkit",
+          "kernel_mode",
+          "backdoor",
+          "evasion",
+          "government_target"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186318/security/mustang-panda-deploys-toneshell-via-signed-kernel-mode-rootkit-driver.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Lithuanian Individual (KMSAuto suspect)",
+        "secteur": "General public (Windows and Office users)",
+        "modop": "Distributing KMSAuto-based malware, a piracy tool, to install 'clipper malware'. This malware monitored the clipboard to replace cryptocurrency wallet addresses with attacker-controlled ones, stealing approximately 1.7 billion won.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "malware",
+          "clipper_malware",
+          "cryptocurrency_theft",
+          "pirated_software"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186308/malware/lithuanian-suspect-arrested-over-kmsauto-malware-that-infected-2-8m-systems.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "nom": "Scattered Lapsus Hunters (alliance of Scattered Spider, LAPSUS$, ShinyHunters)",
+        "secteur": "Large enterprises, third-party vendors (e.g., CrowdStrike)",
+        "modop": "Recruiting/bribing internal employees to obtain and leak confidential information or access. Offered $25,000 for access to CrowdStrike.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "insider_threat",
+          "data_leak",
+          "extortion",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/crowdstrike-sanctionne-un-initie-apres-business-pirate/"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Commerce, Intelligence, Cybersecurity, Technology, Supply Chain, Energy, Minerals, Telecoms",
+        "theme": "National Security Strategy and Economic Sovereignty",
+        "description": "The new Trump administration national security strategy tasks US intelligence agencies with monitoring global supply chains and technological advancements to reduce economic dependence on foreign adversaries. It promotes enhanced real-time cyber surveillance with attribution and response, relying on private partners. The Western Hemisphere is designated as a source of strategic resources for secure investments, particularly in energy, critical minerals, and cyber communication networks.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "economy",
+          "intelligence",
+          "supply_chain",
+          "cybersecurity",
+          "national_strategy"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-strategie-trump-met-le-renseignement-au-service-du-commerce/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "secteur": "Telecommunications, Cybersecurity, Government, Intelligence",
+        "theme": "Malicious use of stolen IP addresses in territorial conflict",
+        "description": "Telecom operators in occupied Ukrainian territories were allegedly forced to yield their credentials, leading to the capture of Ukrainian IP addresses now exploited by Moscow. These IPs are re-registered via RIPE NCC by Russian entities, despite alerts and sanctions, and are used for attack camouflage, disinformation, and manipulation, complicating attribution and posing a significant risk to European cybersecurity.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "cyberconflict",
+          "attribution",
+          "networks",
+          "ip_theft",
+          "disinformation",
+          "sanctions"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/les-adresses-ip-ukrainiennes-volees-angle-mort-europeen/"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Space, Research, Governmental",
+        "victime": "European Space Agency (ESA)",
+        "description": "External servers outside ESA's corporate network were breached, containing \"unclassified\" information on collaborative engineering activities. Attackers claim to have stolen over 200GB of data including source code, CI/CD pipelines, API tokens, confidential documents, and hardcoded credentials.",
+        "tags": [
+          "violation",
+          "breach",
+          "esa",
+          "governmental",
+          "space_sector",
+          "data_leak",
+          "source_code",
+          "api_tokens"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/european-space-agency-confirms-breach-of-external-servers/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "secteur": "E-commerce, Logistics",
+        "victime": "Coupang",
+        "description": "Data breach affecting 33.7 million customers in South Korea. Unauthorized access occurred on external servers. Exposed data includes names, emails, phone numbers, shipping addresses, and order histories. No sensitive payment data or login credentials were compromised. Coupang plans a $1.17 billion compensation plan.",
+        "tags": [
+          "violation",
+          "breach",
+          "coupang",
+          "e-commerce",
+          "south_korea",
+          "personal_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186331/security/coupang-announces-1-17b-compensation-plan-for-33-7m-data-breach-victims.html"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterTools SmarterMail",
+        "description": "Critical vulnerability allowing an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially leading to Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "upload_arbitrary_files",
+          "unauthenticated",
+          "email_server",
+          "smartermail",
+          "critical"
+        ],
+        "sources": [
+          "https://thehackernews.com/2025/12/csa-issues-alert-on-critical.html",
+          "https://cybersecuritynews.com/smartermail-vulnerability/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15114",
+        "cvss": "9.8",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Critical security flaw exposing the alarm system PIN in the 'basisInfo' XML file after authentication, allowing attackers to retrieve it to bypass security measures and disable the alarm system.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "pin_exposure",
+          "authentication_bypass",
+          "home_automation",
+          "critical",
+          "access_control"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15114"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2024-58338",
+        "cvss": "9.8",
+        "product": "Anevia Flamingo XL 3.2.9",
+        "description": "Restricted shell vulnerability allowing remote attackers to escape the sandboxed environment through the traceroute command, inject shell commands, and gain full root access to the device (remote root jailbreak).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "RCE",
+          "shell_escape",
+          "root_access",
+          "jailbreak",
+          "network_device",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-58338"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15111",
+        "cvss": "9.3",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Default credentials vulnerability allowing unauthorized attackers to gain administrative access and full control of the home automation system.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "default_credentials",
+          "administrative_access",
+          "home_automation",
+          "critical",
+          "authentication",
+          "access_control"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15111"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2024-58337",
+        "cvss": "8.7",
+        "product": "Akuvox Smart Intercom S539",
+        "description": "Improper access control vulnerability allowing users with 'User' privileges to modify API access settings and configurations, leading to privilege escalation and unauthorized administrative access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "improper_access_control",
+          "privilege_escalation",
+          "api_access",
+          "smart_intercom",
+          "high",
+          "access_control"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2024-58337"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "8.7",
+        "product": "MongoDB Server",
+        "description": "\"MongoBleed\" vulnerability in how MongoDB Server processes network packets using the zlib library, allowing unauthenticated attackers to remotely steal credentials, API keys, and other sensitive data (PII, session tokens) from uninitialized heap memory. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data_leak",
+          "remote_data_theft",
+          "authentication",
+          "api_keys",
+          "pii",
+          "zlib",
+          "memory_leak",
+          "active_exploitation",
+          "mongodb",
+          "server",
+          "high"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-orders-federal-agencies-to-patch-mongobleed-flaw-actively-exploited-in-attacks/",
+          "https://securityaffairs.com/186297/hacking/u-s-cisa-adds-a-flaw-in-mongodb-server-to-its-known-exploited-vulnerabilities-catalog/",
+          "https://go.theregister.com/feed/www.theregister.com/2025/12/30/mongodb_vuln_exploited_cve_2025_14847/",
+          "https://databreaches.net/2025/12/30/us-australia-say-mongobleed-bug-being-exploited/?pk_campaign=feed&pk_kwd=us-australia-say-mongobleed-bug-being-exploited",
+          "https://cybersecuritynews.com/cisa-mongodb-server-vulnerability/",
+          "https://cybersecuritynews.com/70000-mongodb-servers-vulnerable/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15371",
+        "cvss": "8.5",
+        "product": "Tenda i24, 4G03 Pro, 4G05, 4G08, G0-8G-PoE, Nova MW5G, and TEG5328F (up to 65.10.15.6)",
+        "description": "Hard-coded credentials vulnerability in the Shadow File component, exploitable locally. The exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hard_coded_credentials",
+          "local_exploit",
+          "network_router",
+          "high",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15371"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15113",
+        "cvss": "8.5",
+        "product": "Ksenia Security Lares 4.0 Home Automation version 1.6",
+        "description": "Unprotected endpoint vulnerability allowing authenticated attackers to upload MPFS File System binary images. Can be exploited to overwrite flash program memory and potentially execute arbitrary code (RCE) on the home automation system's web server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "remote_code_execution",
+          "RCE",
+          "file_upload",
+          "authenticated_exploit",
+          "home_automation",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15113"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "cve_id": "CVE-2025-15112",
+        "cvss": "8.0",
+        "product": "Ksenia Security Lares 4.0 version 1.6",
+        "description": "URL redirection vulnerability in the 'cmdOk.xml' script, allowing manipulation of the 'redirectPage' GET parameter. Malicious links can redirect authenticated users to arbitrary websites.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "url_redirection",
+          "open_redirect",
+          "social_engineering",
+          "authenticated_exploit",
+          "home_automation",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15112"
+        ],
+        "date": "2025-12-31"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Integrating a Malware Sandbox into SOAR Workflows: Steps, Benefits, and Impact",
+        "description": "This technical article explores the integration of a malware sandbox into SOAR platforms. It details how this synergy enhances a security team's ability to accurately determine the meaning of alerts, complementing SOAR's automation with critical threat intelligence and dynamic analysis of suspicious files or links.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Integrating a sandbox into SOAR workflows significantly improves the efficiency and accuracy of security operations. It reduces manual analysis time, enhances threat detection and response capabilities across various sectors by providing automated dynamic analysis, and allows for better incident prioritization. The impact is cross-sectoral, affecting all organizations using SOAR platforms for incident management.",
+        "recommandations": [
+          "Integrate sandboxes for automated analysis of suspicious files and links.",
+          "Leverage sandbox outputs to enrich alerts and trigger specific SOAR playbooks.",
+          "Ensure seamless data flow between the sandbox and the SOAR platform.",
+          "Train security teams on interpreting malware analysis reports."
+        ],
+        "tags": [
+          "SOAR",
+          "sandbox",
+          "malware_analysis",
+          "incident_response",
+          "automation",
+          "threat_intelligence",
+          "security_operations"
+        ],
+        "sources": [
+          "/cybersecurity-blog/integrating-sandbox-into-soar-workflows/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "New ErrTraffic service enables ClickFix attacks via fake browser glitches",
+        "description": "The new cybercrime tool ErrTraffic allows threat actors to automate ClickFix attacks by generating 'fake glitches' on compromised websites. This social engineering technique lures users into downloading malicious payloads or following dangerous instructions, tailored based on victim geolocation and OS.",
+        "threat_actor": "ErrTraffic developers",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566",
+          "T1204.002",
+          "T1071.001",
+          "T1588.001",
+          "T1059"
+        ],
+        "analyse": "ErrTraffic represents an evolution in social engineering techniques, making ClickFix attacks more accessible and automated for cybercriminals. The customization of attacks based on geolocation and OS increases their effectiveness and makes them harder for users to detect. The exclusion of CIS countries from targets suggests the geographical origin of the service developers. The impact is global on web users.",
+        "recommandations": [
+          "Educate users about advanced social engineering techniques and fake technical alerts on websites.",
+          "Promote caution against unexpected software download requests or instructions to follow.",
+          "Use web browsing protections and ad blockers to reduce exposure to malicious scripts.",
+          "Keep browsers and operating systems updated."
+        ],
+        "tags": [
+          "social_engineering",
+          "clickfix",
+          "errtraffic",
+          "cybercrime",
+          "malware",
+          "browser_glitches",
+          "payload_delivery",
+          "geolocation_targeting",
+          "os_fingerprinting",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-errtraffic-service-enables-clickfix-attacks-via-fake-browser-glitches/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "US cybersecurity experts plead guilty to BlackCat (ALPHV) ransomware attacks",
+        "description": "Two former employees of cybersecurity incident response companies, Ryan Clifford Goldberg and Kevin Tyler Martin, pleaded guilty to participating in BlackCat (ALPHV) ransomware attacks against US companies between May and November 2023. They leveraged their expertise to breach networks, encrypt servers, and demand ransoms.",
+        "threat_actor": "BlackCat (ALPHV) affiliates",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1486",
+          "T1078",
+          "T1560",
+          "TA0040",
+          "TA0001"
+        ],
+        "analyse": "This incident highlights the serious issue of insider threat and the misuse of cybersecurity expertise by former professionals for criminal activities. The involvement of these individuals in BlackCat (ALPHV) attacks had a destructive impact on various sectors across the United States, underscoring the necessity for stringent access controls and behavioral monitoring even for security professionals. The geographical potential is national (US) but ransomware groups operate globally.",
+        "recommandations": [
+          "Implement thorough background checks and stringent access controls for employees with high privileges.",
+          "Strengthen post-employment security policies and non-disclosure agreements.",
+          "Monitor privileged account activities for anomalous behavior.",
+          "Apply a defense-in-depth strategy against ransomware, including robust backups, network segmentation, and EDR/XDR solutions."
+        ],
+        "tags": [
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "cybercrime",
+          "insider_threat",
+          "extortion",
+          "us_companies",
+          "law_enforcement",
+          "medical_sector",
+          "manufacturing_sector",
+          "incident_response"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-cybersecurity-experts-plead-guilty-to-blackcat-alphv-ransomware-attacks/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Zoom Stealer browser extensions harvest corporate meeting intelligence",
+        "description": "A campaign dubbed \"Zoom Stealer\", attributed to the China-linked APT group DarkSpectre, affects 2.2 million users via 18 malicious browser extensions. These extensions collect online meeting data (URLs, IDs, topics, descriptions, embedded passwords) from 28 video-conferencing platforms (Zoom, Microsoft Teams, Google Meet, Cisco WebEx) and exfiltrate it in real-time via WebSocket connections.",
+        "threat_actor": "DarkSpectre (China-linked, aka GhostPoster, ShadyPanda)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1176",
+          "T1560",
+          "T1567.002",
+          "T1555.003"
+        ],
+        "analyse": "The Zoom Stealer campaign illustrates the increasing exploitation of browser extensions as a vector for corporate espionage. The attribution to a China-linked APT group and the scale of compromise (2.2 million users across multiple platforms) reveal a sophisticated operation targeting intellectual property and business intelligence. The database of meeting intelligence can fuel large-scale impersonation operations. The impact is global for companies using these platforms.",
+        "recommandations": [
+          "Strictly audit and limit the use of browser extensions in corporate environments.",
+          "Prioritize secure browsers and enhanced security configurations.",
+          "Educate users about the dangers of malicious extensions and social engineering risks.",
+          "Monitor network traffic to detect data exfiltration via unusual protocols or suspicious destinations, particularly WebSocket connections to servers like Alibaba Cloud."
+        ],
+        "tags": [
+          "APT",
+          "darkspectre",
+          "china",
+          "browser_extension",
+          "zoom",
+          "microsoft_teams",
+          "google_meet",
+          "cisco_webex",
+          "corporate_espionage",
+          "data_exfiltration",
+          "corporate_intelligence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/zoom-stealer-browser-extensions-harvest-corporate-meeting-intelligence/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "CrowdStrike sanctionne un « initié » après business pirate",
+        "description": "CrowdStrike has fired an employee for leaking internal information to a criminal group known as Scattered Lapsus Hunters (an alliance of Scattered Spider, LAPSUS$, and ShinyHunters). The incident involved screenshots of internal dashboards and highlights the persistent risk of insider threat and financial inducement for compromise.",
+        "threat_actor": "Scattered Lapsus Hunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1589.002",
+          "T1078.003",
+          "T1567",
+          "T1552.001",
+          "T1192"
+        ],
+        "analyse": "This incident demonstrates the vulnerability of large enterprises to insider threats and the effectiveness of recruiting insiders by cybercriminal groups to bypass costly technical defenses. It highlights the importance of internal behavioral detection and access management to protect corporate data trust and security. The potential impact is significant for CrowdStrike's reputation and client security, although the company states its systems were not compromised.",
+        "recommandations": [
+          "Strengthen internal behavioral detection and employee activity monitoring systems.",
+          "Implement strict access governance, especially for sensitive information and enterprise tools.",
+          "Educate employees about attempts at inducement or recruitment by cybercriminal groups.",
+          "Establish clear policies regarding the use of personal devices and information sharing, even via screenshots."
+        ],
+        "tags": [
+          "insider_threat",
+          "data_leak",
+          "corporate_espionage",
+          "cybercrime",
+          "ransomware_group",
+          "LAPSUS$",
+          "scattered_spider",
+          "shinyhunters",
+          "human_element",
+          "security_governance",
+          "crowdstrike"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/crowdstrike-sanctionne-un-initie-apres-business-pirate/"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Lithuanian suspect arrested over KMSAuto malware that infected 2.8M systems",
+        "description": "A Lithuanian national was arrested and extradited to South Korea for allegedly spreading KMSAuto-based malware, a piracy tool. This 'clipper malware' infected approximately 2.8 million Windows and Office systems, monitoring the clipboard to replace cryptocurrency wallet addresses, stealing about 1.7 billion won (approximately $1.27 million).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1115",
+          "T1566",
+          "T1204.002",
+          "T1059.003"
+        ],
+        "analyse": "The arrest of this suspect underscores the persistent and widespread risk associated with using pirated software and illegitimate activation tools as infection vectors. The 'clipper malware' technique is a stealthy yet effective threat for cryptocurrency theft, having a significant financial impact on millions of victims globally. The transnational law enforcement operation demonstrates the international cooperation needed to combat this type of cybercrime.",
+        "recommandations": [
+          "Strictly avoid downloading and using software from untrusted or pirated sources.",
+          "Always verify the destination address during cryptocurrency transactions, manually if possible, or using reliable verification tools.",
+          "Use reputable security software and antiviruses, and keep them updated.",
+          "Educate users about the dangers of 'clipper' malware and caution when copying and pasting."
+        ],
+        "tags": [
+          "malware",
+          "clipper_malware",
+          "kmsauto",
+          "cryptocurrency_theft",
+          "social_engineering",
+          "piracy",
+          "windows",
+          "office",
+          "law_enforcement",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186308/malware/lithuanian-suspect-arrested-over-kmsauto-malware-that-infected-2-8m-systems.html"
+        ],
+        "date": "2025-12-31"
+      },
+      {
+        "title": "Mustang Panda deploys ToneShell via signed kernel-mode rootkit driver",
+        "description": "The China-linked APT group Mustang Panda (also known as Hive0154, HoneyMyte, Camaro Dragon, RedDelta, or Bronze President) was observed using a signed kernel-mode rootkit driver with a stolen or leaked certificate to load shellcode and deploy its ToneShell backdoor. This sophisticated method helps evade detection by user-mode security solutions, protects malicious components, and injects the backdoor into system processes.",
+        "threat_actor": "Mustang Panda (Hive0154, HoneyMyte, Camaro Dragon, RedDelta, Bronze President)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1543.003",
+          "T1055",
+          "T1027",
+          "T1562.001",
+          "T1041",
+          "T1573.002",
+          "T1564.001"
+        ],
+        "analyse": "This campaign illustrates the increasing sophistication of state-sponsored APT groups, utilizing advanced kernel-level evasion techniques to maintain persistence and undetectability. The targeting of government entities in Southeast and East Asia underscores strategic and espionage motivations, seeking to gain persistent and covert access to sensitive information. The impact is significant for the national security of the targeted countries.",
+        "recommandations": [
+          "Strengthen kernel-level defenses and actively monitor the installation of new drivers, especially those with unusual publisher certificates.",
+          "Implement advanced EDR/XDR solutions capable of detecting kernel-mode activities and process injection techniques.",
+          "Conduct memory forensics analyses to detect memory-resident shellcode and backdoors.",
+          "Regularly update certificate revocation lists and block stolen or leaked certificates."
+        ],
+        "tags": [
+          "APT",
+          "mustang_panda",
+          "china",
+          "rootkit",
+          "kernel_mode",
+          "toneshell",
+          "backdoor",
+          "ttps",
+          "evasion",
+          "government_target",
+          "espionage",
+          "cybersecurity",
+          "endpoint_security"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186318/security/mustang-panda-deploys-toneshell-via-signed-kernel-mode-rootkit-driver.html"
+        ],
+        "date": "2025-12-31"
+      }
+    ]
+  }
+}
