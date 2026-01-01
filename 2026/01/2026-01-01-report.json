@@ -1,0 +1,1191 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber reste complexe et évolutif. Les vulnérabilités à haute criticité sont omniprésentes, allant de l'exécution de code à distance non authentifiée (SmarterMail, RAGFlow, Titra) aux contournements d'authentification (IBM API Connect, RAGFlow) et aux injections SQL (plugins WordPress). Des problèmes fondamentaux de sécurité, comme le manque d'hygiène de base et les correctifs tardifs (Nexpubica), continuent d'être des vecteurs d'attaque majeurs. La vulnérabilité MongoBleed souligne les risques pour les bases de données critiques et son impact géographique étendu. Les violations de données sont fréquentes, touchant des informations personnelles sensibles dans des secteurs comme la santé (OrthopedicsNY, ManageMyHealth, Nexpubica) et l'aviation (Korean Air), souvent via des failles dans la chaîne d'approvisionnement ou chez des tiers (KC&D; pour Korean Air). Les acteurs malveillants établis, tels que les groupes de ransomware ALPHV (BlackCat) et les gangs d'extorsion comme Cl0p, persistent, tandis que des botnets comme RondoDox exploitent activement les vulnérabilités N-day. L'actualité géopolitique montre une intensification de la modernisation militaire, notamment en Chine, avec des implications pour la sécurité nationale et les infrastructures critiques, ainsi qu'une compétition technologique accrue (Nvidia/TSMC). La régulation et les amendes (CNIL, Justice Dept.) soulignent la pression croissante sur les organisations pour qu'elles renforcent leur posture de sécurité et de conformité. L'intégration d'IA et d'appareils IoT introduit de nouvelles surfaces d'attaque, exigeant des mesures de sécurité proactives pour prévenir des incidents ayant des conséquences physiques (fauteuils roulants WHILL).",
+      "date": "2026-01-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "Infrastructure Web, Hébergement",
+        "modop": "Exploitation de vulnérabilités RCE (React2Shell, XWiki) pour déployer des cryptomineurs et des variantes de Mirai.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "cryptomining",
+          "mirai",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/rondodox-botnet-exploits-react2shell-flaw-to-breach-nextjs-servers/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "888",
+        "secteur": "Aérospatial, Recherche Scientifique, Gouvernement",
+        "modop": "Vol de 200 Go de données (code source, jetons API, identifiants) depuis des serveurs externes de collaboration scientifique.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "source_code_theft",
+          "credentials_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186370/security/esa-disclosed-a-data-breach-hackers-breached-external-servers.html",
+          "https://infosec.exchange/@DevaOnBreaches/115816852829790258",
+          "https://beyondmachines.net/event_details/european-space-agency-reports-breach-of-external-engineering-servers-q-6-9-z-0/gD2P6Ple2L"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "Cl0p gang",
+        "secteur": "Aviation, Services Aériens, Logiciels ERP",
+        "modop": "Exploitation de vulnérabilités (CVE-2025-61882 dans Oracle E-Business Suite) pour voler des dossiers d'employés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_group",
+          "extortion",
+          "data_exfiltration",
+          "erp_exploitation",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://hackread.com/30000-korean-air-employee-cl0p-leaks-data/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "ALPHV (BlackCat) ransomware",
+        "secteur": "Santé, Divers (multiples victimes aux États-Unis)",
+        "modop": "Déploiement de ransomware, chiffrement de systèmes, fuite de données en cas de non-paiement de la rançon. Conspiration d'anciens professionnels de la cybersécurité (Ryan Goldberg, Kevin Martin).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_encryption",
+          "data_leak",
+          "insider_threat",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/two-cybersecurity-professionals-plead-guilty-to-targeting-multiple-u-s-victims-using-alphv-blackcat-ransomware/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Événements Publics, Politique Technologique",
+        "theme": "Réglementation des dispositifs technologiques",
+        "description": "La ville de New York a interdit les dispositifs Flipper Zero et Raspberry Pi lors de l'investiture du maire 2026, citant des préoccupations concernant leur utilisation potentielle pour la cybercriminalité et d'autres activités malveillantes, comme le vol de voitures ou les violations de réseaux. Cette interdiction spécifique souligne une tendance croissante à la réglementation de technologies à double usage pour la sécurité publique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "politique_technologique",
+          "sécurité_publique",
+          "réglementation",
+          "flipper_zero",
+          "raspberry_pi",
+          "nyc"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nyc-mayoral-inauguration-bans-flipper-zero-raspberry-pi-devices/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Défense, Sécurité Nationale, Géopolitique",
+        "theme": "Puissance Militaire et Stratégie Régionale (Indo-Pacifique)",
+        "description": "La modernisation militaire chinoise, en particulier l'Armée Populaire de Libération (APL), est en train de remodeler la dynamique de dissuasion régionale jusqu'en 2031. Elle renforce ses capacités de frappe de précision à longue portée, d'ISR spatial (renseignement, surveillance, reconnaissance), de guerre électronique avancée, et de pression navale soutenue dans l'Indo-Pacifique, notamment autour de Taïwan et en mer de Chine méridionale. Cela vise à réduire le temps d'alerte des alliés et à augmenter l'influence coercitive de la Chine, augmentant le risque d'escalade rapide lors de crises.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "défense",
+          "chine",
+          "apl",
+          "indo_pacifique",
+          "taiwan",
+          "guerre_electronique",
+          "isr",
+          "dissuasion_militaire"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/chinese-military-modernization-outlook/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Défense, Sécurité Nationale, Géopolitique Maritime",
+        "theme": "Infrastructure Militaire Stratégique",
+        "description": "Analyse de la base navale de Longpo (Yulin, Hainan, Chine) identifiée comme une installation navale multi-mission à haute réactivité, soutenant les opérations de sous-marins et de surface de la PLAN en mer de Chine méridionale. Elle intègre des installations souterraines renforcées et est optimisée pour la survie, la dissimulation et le déploiement rapide, ce qui en fait un atout naval stratégique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "plan",
+          "base_navale",
+          "mer_de_chine",
+          "infrastructure_militaire"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/target-systems-analysis-longpo-naval-base-greater-yulin-hainan-china/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Défense, Sécurité Nationale, Géopolitique Maritime",
+        "theme": "Infrastructure Aérienne Expéditionnaire",
+        "description": "Analyse de l'aérodrome de Subi Reef (Îles Spratly, Mer de Chine méridionale), servant de hub d'opérations aériennes expéditionnaire pour les avions de la RPC. L'analyse met en évidence les vulnérabilités clés telles que la configuration à une seule piste, le stockage et la distribution centralisés de carburant, et les nœuds primaires de C2/ATC. La dégradation de ces nœuds réduirait la génération de sorties et la connaissance de la situation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "îles_spratly",
+          "mer_de_chine",
+          "aérodrome",
+          "infrastructure_militaire"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/target-systems-analysis-subi-reef-airfield-spratly-islands-south-china-sea/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Technologie, Semiconductor, Géopolitique Économique",
+        "theme": "Contrôles à l'Exportation et Rivalité Technologique",
+        "description": "La Chine cherche à obtenir plus de 2 millions de GPU Nvidia H200 auprès de TSMC après la levée des interdictions de vente, malgré les contrôles à l'exportation américains. Cela met en évidence la forte demande de puces IA en Chine et la compétition technologique continue entre les États-Unis et la Chine, affectant la chaîne d'approvisionnement des semi-conducteurs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "technologie",
+          "ia",
+          "gpu",
+          "semiconducteur",
+          "chine",
+          "états_unis",
+          "contrôles_exportation",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/31/china_nvidia_h200/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Cryptomonnaie, DeFi, Propriété Intellectuelle",
+        "victime": "Unleash Protocol",
+        "description": "Perte d'environ 3,9 millions de dollars en cryptomonnaies suite à un détournement de la gouvernance multisig et une mise à niveau non autorisée du contrat, permettant des retraits d'actifs. Le service Tornado Cash a été utilisé pour blanchir les fonds.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptomonnaie",
+          "defi",
+          "multisig_hijack",
+          "smart_contract_exploit",
+          "tornado_cash",
+          "blanchiment_argent"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-drain-39m-from-unleash-protocol-after-multisig-hijack/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Divertissement, Média Numérique, Services Enfants",
+        "victime": "Disney",
+        "description": "Disney a accepté de payer une amende civile de 10 millions de dollars pour avoir enfreint la Children's Online Privacy Protection Act (COPPA) en étiquetant incorrectement des vidéos comme 'non conçues pour les enfants' sur YouTube, permettant ainsi la collecte de données personnelles pour la publicité ciblée auprès d'enfants de moins de 13 ans.",
+        "tags": [
+          "violation",
+          "breach",
+          "confidentialité_données",
+          "coppa",
+          "vie_privée_enfants",
+          "publicité_ciblée",
+          "youtube",
+          "amende"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/disney-will-pay-10m-to-settle-claims-of-childrens-privacy-violations-on-youtube/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Aérospatial, Gouvernement, Recherche Scientifique",
+        "victime": "European Space Agency (ESA)",
+        "description": "Violation de données confirmée par l'ESA après qu'un hacker ('888') ait proposé de vendre 200 Go de données volées provenant de serveurs scientifiques externes non classifiés, incluant du code source, des jetons API, des fichiers de configuration, des identifiants et des documents confidentiels. Les serveurs soutenaient des activités de collaboration scientifique.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "aérospatial",
+          "fuite_données",
+          "code_source",
+          "identifiants",
+          "acteur_menace"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186370/security/esa-disclosed-a-data-breach-hackers-breached-external-servers.html",
+          "https://infosec.exchange/@DevaOnBreaches/115816852829790258",
+          "https://beyondmachines.net/event_details/european-space-agency-reports-breach-of-external-engineering-servers-q-6-9-z-0/gD2P6Ple2L"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Aviation, Services Aériens, Logiciels ERP",
+        "victime": "Korean Air (via KC&D; Service)",
+        "description": "Les données de 30 000 employés actuels et anciens de Korean Air (noms, numéros de compte bancaire) ont été volées depuis le serveur ERP de KC&D; Service. Le groupe Cl0p a revendiqué l'attaque, exploitant potentiellement une vulnérabilité (CVE-2025-61882) dans Oracle E-Business Suite.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "fuite_données",
+          "employés",
+          "erp",
+          "cl0p",
+          "chaine_approvisionnement"
+        ],
+        "sources": [
+          "https://hackread.com/30000-korean-air-employee-cl0p-leaks-data/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "OrthopedicsNY, LLP",
+        "description": "OrthopedicsNY a été condamné à une amende de 500 000 dollars pour ne pas avoir protégé les informations des patients, entraînant l'exposition de 656 000 dossiers de patients et d'employés, dont des numéros de sécurité sociale, de permis de conduire ou de passeport pour environ 110 000 personnes. Les attaquants ont accédé au réseau à distance via des identifiants compromis.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "fuite_données",
+          "données_personnelles",
+          "données_santé",
+          "identifiants_compromis",
+          "amende"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/attorney-general-james-secures-500000-from-capital-region-health-care-provider-for-failing-to-protect-patients-information/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Édition de Logiciels, Action Sociale, Santé",
+        "victime": "Nexpubica (logiciel PCRM)",
+        "description": "La CNIL a sanctionné NEXPUBLICA FRANCE d'une amende de 1,7 million d'euros pour des mesures de sécurité insuffisantes autour de son logiciel PCRM, utilisé dans l'action sociale (notamment par les MDPH). Des vulnérabilités connues via des audits n'ont été corrigées qu'après des violations, exposant des données sensibles, y compris celles révélant un handicap.",
+        "tags": [
+          "violation",
+          "breach",
+          "logiciel",
+          "action_sociale",
+          "données_sensibles",
+          "handicap",
+          "cnil",
+          "amende",
+          "vulnérabilité_connue",
+          "correctifs_tardifs"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-cnil-sanctionne-nexpubica-pour-le-logiciel-pcrm/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterMail",
+        "description": "Exécution de code à distance (RCE) non authentifiée via l'upload de fichiers arbitraires.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "file_upload",
+          "smartermail",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186353/security/singapore-csa-warns-of-maximun-severity-smartermail-rce-flaw.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": "9.8",
+        "product": "IBM API Connect",
+        "description": "Contournement d'authentification à distance permettant un accès non autorisé à l'application. Classée sous CWE-305 (Authentication Bypass by Primary Weakness).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "remote_access",
+          "ibm",
+          "api_connect",
+          "critical",
+          "cwe-305"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/ibm-api-connect-vulnerability/",
+          "https://www.bleepingcomputer.com/news/security/ibm-warns-of-critical-api-connect-auth-bypass-vulnerability/",
+          "https://thehackernews.com/2025/12/ibm-warns-of-critical-api-connect-bug.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-69288",
+        "cvss": "9.1",
+        "product": "Titra",
+        "description": "Exécution de code à distance (RCE) authentifiée via la modification de 'timeEntryRule' dans la base de données sans assainissement d'entrée.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "authenticated",
+          "time_tracking_software",
+          "code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69288"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-69286",
+        "cvss": "8.9",
+        "product": "RAGFlow",
+        "description": "Contournement d'authentification dû à la génération prévisible de jetons, permettant la dérivation de clés API et le contrôle total du compte de l'utilisateur.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "token_generation",
+          "api_key",
+          "account_takeover",
+          "ragflow",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69286"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2015-10145",
+        "cvss": "8.7",
+        "product": "Gargoyle router management utility",
+        "description": "Exécution de commandes du système d'exploitation authentifiée dans '/utility/run_commands.sh' en raison d'une validation d'entrée incorrecte.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "os_command_execution",
+          "authenticated",
+          "gargoyle",
+          "router",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2015-10145"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-68700",
+        "cvss": "8.6",
+        "product": "RAGFlow",
+        "description": "Exécution de code à distance (RCE) par un utilisateur authentifié à faibles privilèges via le composant Canvas CodeExec du frontend, contournant l'isolation de la sandbox.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "authenticated",
+          "low_privilege",
+          "sandbox_bypass",
+          "ragflow",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68700"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "8.6",
+        "product": "MongoDB Server",
+        "description": "MongoBleed : Vulnérabilité critique permettant une fuite de mémoire à distance à partir de serveurs MongoDB non patchés utilisant la compression zlib, sans authentification.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "memory_leak",
+          "unauthenticated",
+          "mongodb",
+          "critical",
+          "database"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186338/hacking/mongobleed-cve-2025-14847-the-us-china-and-the-eu-are-among-the-top-exploited-geos.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-30628",
+        "cvss": "8.5",
+        "product": "WordPress Amazon Affiliates Addon for WPBakery Page Builder",
+        "description": "Vulnérabilité d'injection SQL.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "sql_injection",
+          "wordpress",
+          "plugin",
+          "amazon_affiliates",
+          "wpbakery",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-30628"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-28949",
+        "cvss": "8.5",
+        "product": "WordPress Mediabay - WordPress Media Library Folders",
+        "description": "Vulnérabilité d'injection SQL aveugle.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "blind_sql_injection",
+          "wordpress",
+          "plugin",
+          "mediabay",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-28949"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-34468",
+        "cvss": "8.2",
+        "product": "libcoap",
+        "description": "Débordement de tampon basé sur la pile dans la résolution d'adresse, pouvant entraîner un déni de service (DoS) ou une exécution de code à distance (RCE) potentielle si la logique de proxy est activée.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "dos",
+          "rce",
+          "libcoap",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34468"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "RondoDox botnet exploits React2Shell flaw to breach Next.js servers",
+        "description": "Le botnet RondoDox exploite activement la vulnérabilité critique React2Shell (CVE-2025-55182) ainsi que des failles n-day (ex: CVE-2025-24893 dans XWiki) pour infecter des serveurs Next.js vulnérables avec des charges utiles incluant des cryptomineurs (/nuts/poop), des chargeurs de botnet (/nuts/bolts) et des variantes de Mirai (/nuts/x86).",
+        "threat_actor": "RondoDox botnet",
+        "indicator_of_compromise": {
+          "URL": [
+            "/nuts/poop",
+            "/nuts/bolts",
+            "/nuts/x86"
+          ]
+        },
+        "mitre_ttps": "TA0001 (Initial Access), T1190 (Exploit Public-Facing Application), TA0002 (Execution), T1059.006 (Command and Scripting Interpreter: PowerShell), T1496 (Resource Hijacking: Cryptojacking), TA0003 (Persistence), TA0004 (Privilege Escalation)",
+        "analyse": "L'exploitation de vulnérabilités N-day largement documentées par RondoDox montre une stratégie d'opportunisme et de ciblage à grande échelle. L'impact est la compromission de serveurs web, l'utilisation abusive de ressources pour le cryptominage et l'intégration des systèmes infectés dans un botnet pour de futures attaques, ce qui affecte l'intégrité et la disponibilité des services hébergés. La présence de variantes de Mirai indique une possible orientation vers les appareils IoT et les attaques DDoS.",
+        "recommandations": [
+          "Auditer et patcher immédiatement les serveurs Next.js contre les vulnérabilités connues, notamment React2Shell (CVE-2025-55182) et CVE-2025-24893.",
+          "Isoler les dispositifs IoT dans des VLAN dédiés.",
+          "Surveiller l'exécution de processus suspects et le trafic réseau pour détecter les activités de cryptominage et de botnet."
+        ],
+        "tags": [
+          "botnet",
+          "rce",
+          "exploit",
+          "n_day_vulnerability",
+          "cryptomining",
+          "mirai",
+          "nextjs",
+          "server_compromise",
+          "mitre_initial_access",
+          "mitre_execution",
+          "mitre_resource_hijacking"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/rondodox-botnet-exploits-react2shell-flaw-to-breach-nextjs-servers/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "title": "Moving Forward with Memory Analysis: From Volatility to MemProcFS : Part 2",
+        "description": "Cet article technique détaille les avancées de MemProcFS, notamment l'intégration native de la détection par signatures YARA pour une analyse approfondie de la mémoire. Il met en évidence la capacité de l'outil à détecter des variantes de malwares furtifs et son utilité en criminalistique numérique pour réduire le temps d'investigation lors d'incidents réels, en comparant avec une image de référence saine.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'article souligne l'importance des outils de criminalistique mémoire avancés pour la détection de malwares sophistiqués, en particulier ceux qui résistent aux solutions antivirus traditionnelles. Il met en lumière l'efficacité des signatures YARA combinées à l'inspection mémoire pour une analyse rapide et ciblée, ce qui est crucial pour les équipes DFIR (Digital Forensics and Incident Response) et les chercheurs en sécurité. L'impact est l'amélioration de la capacité de détection et de réponse aux menaces persistantes et furtives.",
+        "recommandations": [
+          "Utiliser des outils de criminalistique mémoire comme MemProcFS avec des règles YARA actualisées pour la détection avancée de malwares.",
+          "Établir des images de référence saines des systèmes d'exploitation pour faciliter l'analyse et la réduction des faux positifs.",
+          "Intégrer l'analyse mémoire dans les processus d'investigation pour identifier les malwares furtifs."
+        ],
+        "tags": [
+          "analyse_technique",
+          "criminalistique_mémoire",
+          "yara",
+          "malware_detection",
+          "memprocfs",
+          "dfir",
+          "threat_hunting"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-2"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "title": "Two Cybersecurity Professionals Plead Guilty to Targeting Multiple U.S. Victims Using ALPHV BlackCat Ransomware",
+        "description": "Deux anciens professionnels de la cybersécurité, Ryan Goldberg et Kevin Martin, ont plaidé coupables de complot en vue d'extorquer des victimes américaines en utilisant le ransomware ALPHV (BlackCat). Ils ont déployé le ransomware entre avril et décembre 2023, ciblant notamment des cabinets médicaux, et ont partagé 20% des rançons avec les administrateurs d'ALPHV. En cas de non-paiement, ils ont chiffré les systèmes et divulgué des données.",
+        "threat_actor": "ALPHV (BlackCat) ransomware (en collusion avec Ryan Goldberg et Kevin Martin)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "TA0040 (Impact), T1486 (Data Encrypted for Impact), TA0002 (Execution), T1059 (Command and Scripting Interpreter), TA0010 (Exfiltration), T1041 (Exfiltration Over C2 Channel), TA0009 (Collection), T1537 (Transfer Data to Cloud Account)",
+        "analyse": "Cet incident met en lumière la menace d'acteurs internes ou de professionnels de la sécurité qui abusent de leur connaissance et de leur accès pour faciliter des attaques de ransomware. La collusion avec des groupes établis comme ALPHV (BlackCat) amplifie la portée et l'efficacité de ces campagnes. L'impact est direct sur les victimes, entraînant des interruptions d'activité, des pertes financières et des fuites de données sensibles. Cela souligne la nécessité de contrôles de confiance zéro et de surveillance interne rigoureux, même pour les rôles de confiance.",
+        "recommandations": [
+          "Mettre en œuvre des contrôles d'accès stricts et le principe du moindre privilège pour tous les employés, y compris les professionnels de la cybersécurité.",
+          "Renforcer la surveillance des activités des utilisateurs privilégiés et des consultants tiers.",
+          "Sensibiliser le personnel aux risques liés aux menaces internes et aux collusions avec des groupes cybercriminels.",
+          "Appliquer des politiques de segmentation réseau et de sauvegarde robuste pour limiter l'impact des attaques de ransomware."
+        ],
+        "tags": [
+          "ransomware",
+          "alphv",
+          "blackcat",
+          "extortion",
+          "cybercrime",
+          "insider_threat",
+          "data_encryption",
+          "data_leak",
+          "healthcare_target",
+          "mitre_impact",
+          "mitre_execution",
+          "mitre_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/two-cybersecurity-professionals-plead-guilty-to-targeting-multiple-u-s-victims-using-alphv-blackcat-ransomware/"
+        ],
+        "date": "2026-01-01"
+      }
+    ]
+  },
+  "EN": {
+    "Cross-cutting Analysis": {
+      "analysis": "The cyber threat landscape remains complex and evolving. High-criticality vulnerabilities are pervasive, ranging from unauthenticated remote code execution (SmarterMail, RAGFlow, Titra) to authentication bypasses (IBM API Connect, RAGFlow) and SQL injections (WordPress plugins). Fundamental security issues, such as a lack of basic hygiene and delayed patches (Nexpubica), continue to be major attack vectors. The MongoBleed vulnerability highlights risks to critical databases and its widespread geographical impact. Data breaches are frequent, affecting sensitive personal information in sectors like healthcare (OrthopedicsNY, ManageMyHealth, Nexpubica) and aviation (Korean Air), often through supply chain failures or third-party vulnerabilities (KC&D; for Korean Air). Established malicious actors, such as ransomware groups ALPHV (BlackCat) and extortion gangs like Cl0p, persist, while botnets like RondoDox actively exploit N-day vulnerabilities. Geopolitical news reveals an intensification of military modernization, particularly in China, with implications for national security and critical infrastructure, as well as increased technological competition (Nvidia/TSMC). Regulation and fines (CNIL, Justice Dept.) underscore growing pressure on organizations to strengthen their security and compliance posture. The integration of AI and IoT devices introduces new attack surfaces, demanding proactive security measures to prevent incidents with physical consequences (WHILL power chairs).",
+      "date": "2026-01-01"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "Web Infrastructure, Hosting",
+        "modop": "Exploitation of RCE vulnerabilities (React2Shell, XWiki) to deploy cryptominers and Mirai variants.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "cryptomining",
+          "mirai",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/rondodox-botnet-exploits-react2shell-flaw-to-breach-nextjs-servers/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "888",
+        "secteur": "Aerospace, Scientific Research, Government",
+        "modop": "Theft of 200GB of data (source code, API tokens, credentials) from external scientific collaboration servers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "source_code_theft",
+          "credentials_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186370/security/esa-disclosed-a-data-breach-hackers-breached-external-servers.html",
+          "https://infosec.exchange/@DevaOnBreaches/115816852829790258",
+          "https://beyondmachines.net/event_details/european-space-agency-reports-breach-of-external-engineering-servers-q-6-9-z-0/gD2P6Ple2L"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "Cl0p gang",
+        "secteur": "Aviation, Airline Services, ERP Software",
+        "modop": "Exploiting vulnerabilities (CVE-2025-61882 in Oracle E-Business Suite) to steal employee records.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_group",
+          "extortion",
+          "data_exfiltration",
+          "erp_exploitation",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://hackread.com/30000-korean-air-employee-cl0p-leaks-data/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "nom": "ALPHV (BlackCat) ransomware",
+        "secteur": "Healthcare, Various (multiple U.S. victims)",
+        "modop": "Ransomware deployment, system encryption, data leakage for non-payment. Conspiracy of former cybersecurity professionals (Ryan Goldberg, Kevin Martin).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "data_encryption",
+          "data_leak",
+          "insider_threat",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/two-cybersecurity-professionals-plead-guilty-to-targeting-multiple-u-s-victims-using-alphv-blackcat-ransomware/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Geopolitical News Summary": [
+      {
+        "secteur": "Government, Public Events, Technology Policy",
+        "theme": "Regulation of Technology Devices",
+        "description": "New York City banned Flipper Zero and Raspberry Pi devices at the 2026 mayoral inauguration, citing concerns about their potential use in cybercrime and other malicious activities, such as car theft or network breaches. This specific prohibition highlights a growing trend in regulating dual-use technologies for public safety.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "tech_policy",
+          "public_safety",
+          "regulation",
+          "flipper_zero",
+          "raspberry_pi",
+          "nyc"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nyc-mayoral-inauguration-bans-flipper-zero-raspberry-pi-devices/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Defense, National Security, Geopolitics",
+        "theme": "Military Power and Regional Strategy (Indo-Pacific)",
+        "description": "Chinese military modernization, particularly the People's Liberation Army (PLA), is reshaping regional deterrence dynamics through 2031. It strengthens long-range precision strike capabilities, expanded space-based ISR (intelligence, surveillance, reconnaissance), advanced electronic warfare, and sustained naval pressure in the Indo-Pacific, especially around Taiwan and in the South China Sea. This aims to reduce allied warning time and increase China's coercive leverage, elevating the risk of rapid escalation during crises.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "defense",
+          "china",
+          "pla",
+          "indo_pacific",
+          "taiwan",
+          "electronic_warfare",
+          "isr",
+          "military_deterrence"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/chinese-military-modernization-outlook/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Defense, National Security, Maritime Geopolitics",
+        "theme": "Strategic Military Infrastructure",
+        "description": "Analysis of Longpo Naval Base (Yulin, Hainan, China) identified as a high-readiness, multi-mission naval installation supporting both submarine and surface fleet operations for the PLAN in the South China Sea. It integrates hardened underground facilities and is optimized for survivability, concealment, and rapid deployment, making it a strategically significant naval asset.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "plan",
+          "naval_base",
+          "south_china_sea",
+          "military_infrastructure"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/target-systems-analysis-longpo-naval-base-greater-yulin-hainan-china/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Defense, National Security, Maritime Geopolitics",
+        "theme": "Expeditionary Air Infrastructure",
+        "description": "Analysis of Subi Reef Airfield (Spratly Islands, South China Sea), functioning as an expeditionary air operations hub supporting PRC aircraft generation, sustainment, and local C2. The analysis highlights key vulnerabilities such as the single runway configuration, centralized fuel storage and distribution, and primary C2/ATC nodes. Degrading these nodes would reduce sortie generation and situational awareness.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "spratly_islands",
+          "south_china_sea",
+          "airfield",
+          "military_infrastructure"
+        ],
+        "sources": [
+          "https://sploited.blog/2025/12/31/target-systems-analysis-subi-reef-airfield-spratly-islands-south-china-sea/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Technology, Semiconductor, Economic Geopolitics",
+        "theme": "Export Controls and Tech Rivalry",
+        "description": "China is seeking over 2 million Nvidia H200 GPUs from TSMC after sales bans were lifted, despite US export controls. This highlights the high demand for AI chips in China and the ongoing technological competition between the US and China, impacting the semiconductor supply chain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "technology",
+          "ai",
+          "gpu",
+          "semiconductor",
+          "china",
+          "usa",
+          "export_controls",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2025/12/31/china_nvidia_h200/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Data Breach Summary": [
+      {
+        "secteur": "Cryptocurrency, DeFi, Intellectual Property",
+        "victime": "Unleash Protocol",
+        "description": "Loss of approximately $3.9 million in cryptocurrency following a multisig governance hijack and unauthorized contract upgrade, enabling asset withdrawals. The Tornado Cash service was used for laundering funds.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "defi",
+          "multisig_hijack",
+          "smart_contract_exploit",
+          "tornado_cash",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-drain-39m-from-unleash-protocol-after-multisig-hijack/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Entertainment, Digital Media, Children's Services",
+        "victime": "Disney",
+        "description": "Disney agreed to pay a $10 million civil penalty to settle claims it violated the Children's Online Privacy Protection Act (COPPA) by mislabeling videos as 'not made for kids' on YouTube, allowing the collection of personal data for targeted advertising from children under 13.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_privacy",
+          "coppa",
+          "childrens_privacy",
+          "targeted_advertising",
+          "youtube",
+          "fine"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/disney-will-pay-10m-to-settle-claims-of-childrens-privacy-violations-on-youtube/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Aerospace, Government, Scientific Research",
+        "victime": "European Space Agency (ESA)",
+        "description": "Data breach confirmed by ESA after a hacker ('888') offered to sell 200GB of stolen data from external unclassified science servers, including source code, API tokens, configuration files, credentials, and confidential documents. The servers supported scientific collaboration activities.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "aerospace",
+          "data_leak",
+          "source_code",
+          "credentials",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186370/security/esa-disclosed-a-data-breach-hackers-breached-external-servers.html",
+          "https://infosec.exchange/@DevaOnBreaches/115816852829790258",
+          "https://beyondmachines.net/event_details/european-space-agency-reports-breach-of-external-engineering-servers-q-6-9-z-0/gD2P6Ple2L"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Aviation, Airline Services, ERP Software",
+        "victime": "Korean Air (via KC&D; Service)",
+        "description": "30,000 current and former Korean Air employee records (names, bank account numbers) were stolen from KC&D; Service's ERP server. The Cl0p group claimed responsibility, potentially exploiting a vulnerability (CVE-2025-61882) in Oracle E-Business Suite.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "data_leak",
+          "employees",
+          "erp",
+          "cl0p",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://hackread.com/30000-korean-air-employee-cl0p-leaks-data/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "OrthopedicsNY, LLP",
+        "description": "OrthopedicsNY was fined $500,000 for failing to protect patient information, leading to the exposure of 656,000 patient and employee records, including social security numbers, driver's license numbers, or passport numbers for approximately 110,000 individuals. Attackers gained remote access to the network via compromised login credentials.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "data_leak",
+          "personal_data",
+          "health_data",
+          "compromised_credentials",
+          "fine"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/attorney-general-james-secures-500000-from-capital-region-health-care-provider-for-failing-to-protect-patients-information/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "secteur": "Software Development, Social Services, Healthcare",
+        "victime": "Nexpubica (PCRM software)",
+        "description": "CNIL fined NEXPUBLICA FRANCE €1.7 million for insufficient security measures around its PCRM software, used in social services (especially by MDPH). Known vulnerabilities identified through audits were only patched after breaches occurred, exposing sensitive data, including information revealing disabilities.",
+        "tags": [
+          "violation",
+          "breach",
+          "software",
+          "social_services",
+          "sensitive_data",
+          "disability",
+          "cnil",
+          "fine",
+          "known_vulnerability",
+          "delayed_patches"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-cnil-sanctionne-nexpubica-pour-le-logiciel-pcrm/"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Vulnerabilities Summary": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterMail",
+        "description": "Unauthenticated remote code execution (RCE) via arbitrary file upload.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "file_upload",
+          "smartermail",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186353/security/singapore-csa-warns-of-maximun-severity-smartermail-rce-flaw.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": "9.8",
+        "product": "IBM API Connect",
+        "description": "Remote authentication bypass allowing unauthorized access to the application. Classified under CWE-305 (Authentication Bypass by Primary Weakness).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "remote_access",
+          "ibm",
+          "api_connect",
+          "critical",
+          "cwe-305"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/ibm-api-connect-vulnerability/",
+          "https://www.bleepingcomputer.com/news/security/ibm-warns-of-critical-api-connect-auth-bypass-vulnerability/",
+          "https://thehackernews.com/2025/12/ibm-warns-of-critical-api-connect-bug.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-69288",
+        "cvss": "9.1",
+        "product": "Titra",
+        "description": "Authenticated remote code execution (RCE) via 'timeEntryRule' modification in the database without input sanitization.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "authenticated",
+          "time_tracking_software",
+          "code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69288"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-69286",
+        "cvss": "8.9",
+        "product": "RAGFlow",
+        "description": "Authentication bypass due to predictable token generation, allowing API key derivation and full control over the user's account.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "token_generation",
+          "api_key",
+          "account_takeover",
+          "ragflow",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-69286"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2015-10145",
+        "cvss": "8.7",
+        "product": "Gargoyle router management utility",
+        "description": "Authenticated OS command execution in '/utility/run_commands.sh' due to improper input validation.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "os_command_execution",
+          "authenticated",
+          "gargoyle",
+          "router",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2015-10145"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-68700",
+        "cvss": "8.6",
+        "product": "RAGFlow",
+        "description": "Low-privileged authenticated remote code execution (RCE) via the frontend Canvas CodeExec component, bypassing sandbox isolation.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "authenticated",
+          "low_privilege",
+          "sandbox_bypass",
+          "ragflow",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68700"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "8.6",
+        "product": "MongoDB Server",
+        "description": "MongoBleed: Critical vulnerability allowing remote memory leakage from unpatched MongoDB servers using zlib compression, without authentication.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "memory_leak",
+          "unauthenticated",
+          "mongodb",
+          "critical",
+          "database"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186338/hacking/mongobleed-cve-2025-14847-the-us-china-and-the-eu-are-among-the-top-exploited-geos.html"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-30628",
+        "cvss": "8.5",
+        "product": "WordPress Amazon Affiliates Addon for WPBakery Page Builder",
+        "description": "SQL Injection vulnerability.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "sql_injection",
+          "wordpress",
+          "plugin",
+          "amazon_affiliates",
+          "wpbakery",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-30628"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-28949",
+        "cvss": "8.5",
+        "product": "WordPress Mediabay - WordPress Media Library Folders",
+        "description": "Blind SQL Injection vulnerability.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "blind_sql_injection",
+          "wordpress",
+          "plugin",
+          "mediabay",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-28949"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "cve_id": "CVE-2025-34468",
+        "cvss": "8.2",
+        "product": "libcoap",
+        "description": "Stack-based buffer overflow in address resolution, potentially leading to denial of service (DoS) or remote code execution (RCE) if proxy logic is enabled.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "dos",
+          "rce",
+          "libcoap",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-34468"
+        ],
+        "date": "2026-01-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "RondoDox botnet exploits React2Shell flaw to breach Next.js servers",
+        "description": "The RondoDox botnet is actively exploiting the critical React2Shell vulnerability (CVE-2025-55182) and N-day flaws (e.g., CVE-2025-24893 in XWiki) to infect vulnerable Next.js servers with payloads including cryptominers (/nuts/poop), botnet loaders (/nuts/bolts), and Mirai variants (/nuts/x86).",
+        "threat_actor": "RondoDox botnet",
+        "indicator_of_compromise": {
+          "URL": [
+            "/nuts/poop",
+            "/nuts/bolts",
+            "/nuts/x86"
+          ]
+        },
+        "mitre_ttps": "TA0001 (Initial Access), T1190 (Exploit Public-Facing Application), TA0002 (Execution), T1059.006 (Command and Scripting Interpreter: PowerShell), T1496 (Resource Hijacking: Cryptojacking), TA0003 (Persistence), TA0004 (Privilege Escalation)",
+        "analyse": "RondoDox's exploitation of widely documented N-day vulnerabilities demonstrates an opportunistic and large-scale targeting strategy. The impact involves the compromise of web servers, abuse of resources for cryptomining, and integration of infected systems into a botnet for future attacks, affecting the integrity and availability of hosted services. The presence of Mirai variants indicates a potential focus on IoT devices and DDoS attacks.",
+        "recommandations": [
+          "Immediately audit and patch Next.js servers against known vulnerabilities, including React2Shell (CVE-2025-55182) and CVE-2025-24893.",
+          "Isolate IoT devices into dedicated virtual LANs.",
+          "Monitor for suspicious process execution and network traffic to detect cryptomining and botnet activity."
+        ],
+        "tags": [
+          "botnet",
+          "rce",
+          "exploit",
+          "n_day_vulnerability",
+          "cryptomining",
+          "mirai",
+          "nextjs",
+          "server_compromise",
+          "mitre_initial_access",
+          "mitre_execution",
+          "mitre_resource_hijacking"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/rondodox-botnet-exploits-react2shell-flaw-to-breach-nextjs-servers/"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "title": "Moving Forward with Memory Analysis: From Volatility to MemProcFS : Part 2",
+        "description": "This technical article details advancements in MemProcFS, particularly the native integration of YARA signature scanning for deep memory inspection. It highlights the tool's ability to detect stealthy malware variants and its utility in digital forensics for reducing investigation time during real incidents by comparing against a known-good baseline image.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "The article emphasizes the importance of advanced memory forensics tools for detecting sophisticated malware, especially those that evade traditional antivirus solutions. It highlights the effectiveness of YARA signatures combined with deep memory inspection for rapid and targeted analysis, which is crucial for DFIR (Digital Forensics and Incident Response) teams and security researchers. The impact is improved detection and response capabilities against persistent and stealthy threats.",
+        "recommandations": [
+          "Utilize memory forensics tools like MemProcFS with updated YARA rules for advanced malware detection.",
+          "Establish known-good baseline images of operating systems to facilitate analysis and reduce false positives.",
+          "Integrate memory analysis into investigation processes to identify stealthy malware."
+        ],
+        "tags": [
+          "technical_analysis",
+          "memory_forensics",
+          "yara",
+          "malware_detection",
+          "memprocfs",
+          "dfir",
+          "threat_hunting"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-2"
+        ],
+        "date": "2026-01-01"
+      },
+      {
+        "title": "Two Cybersecurity Professionals Plead Guilty to Targeting Multiple U.S. Victims Using ALPHV BlackCat Ransomware",
+        "description": "Two former cybersecurity professionals, Ryan Goldberg and Kevin Martin, pleaded guilty to conspiring to extort U.S. victims using ALPHV (BlackCat) ransomware. They deployed the ransomware between April and December 2023, targeting healthcare providers among others, and shared 20% of ransoms with ALPHV administrators. In cases of non-payment, they encrypted systems and leaked data.",
+        "threat_actor": "ALPHV (BlackCat) ransomware (in collusion with Ryan Goldberg and Kevin Martin)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "TA0040 (Impact), T1486 (Data Encrypted for Impact), TA0002 (Execution), T1059 (Command and Scripting Interpreter), TA0010 (Exfiltration), T1041 (Exfiltration Over C2 Channel), TA0009 (Collection), T1537 (Transfer Data to Cloud Account)",
+        "analyse": "This incident highlights the threat of insider actors or security professionals abusing their knowledge and access to facilitate ransomware attacks. Collusion with established groups like ALPHV (BlackCat) amplifies the reach and effectiveness of such campaigns. The impact is direct on victims, leading to business disruption, financial losses, and sensitive data leaks. This underscores the need for robust zero-trust controls and internal monitoring, even for trusted roles.",
+        "recommandations": [
+          "Implement strict access controls and the principle of least privilege for all employees, including cybersecurity professionals.",
+          "Strengthen monitoring of privileged user activities and third-party consultants.",
+          "Educate staff on the risks of insider threats and collusion with cybercriminal groups.",
+          "Apply network segmentation and robust backup policies to limit the impact of ransomware attacks."
+        ],
+        "tags": [
+          "ransomware",
+          "alphv",
+          "blackcat",
+          "extortion",
+          "cybercrime",
+          "insider_threat",
+          "data_encryption",
+          "data_leak",
+          "healthcare_target",
+          "mitre_impact",
+          "mitre_execution",
+          "mitre_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2025/12/31/two-cybersecurity-professionals-plead-guilty-to-targeting-multiple-u-s-victims-using-alphv-blackcat-ransomware/"
+        ],
+        "date": "2026-01-01"
+      }
+    ]
+  }
+}
