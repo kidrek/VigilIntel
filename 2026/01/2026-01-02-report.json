@@ -1,0 +1,2277 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'année 2025 a été marquée par une intensification et une sophistication croissantes des cybermenaces, avec des tendances clés se poursuivant et de nouvelles émergences. Les attaques ciblant la supply chain restent une préoccupation majeure, comme en témoignent les incidents affectant Trust Wallet et les multiples entreprises via des services tiers. L'exploitation de vulnérabilités zero-day, notamment dans des produits Oracle et Microsoft SharePoint, continue de permettre des brèches de grande ampleur par des groupes étatiques et des gangs de ransomware. L'utilisation de l'IA par les attaquants se concrétise, non seulement pour accélérer l'exploitation de vulnérabilités (ex: HexStrike) mais aussi via de nouvelles classes de vulnérabilités comme les attaques par injection de prompt sur les modèles d'IA. La persistance des techniques d'ingénierie sociale (ClickFix, deepfakes, faux entretiens techniques, escroqueries au support technique) démontre que le facteur humain reste un maillon faible. Les menaces internes, qu'elles soient intentionnelles ou dues à une mauvaise gestion des accès, ont eu un impact financier considérable. Les acteurs étatiques, notamment la Corée du Nord, continuent de perfectionner leurs méthodes d'infiltration et de vol de cryptomonnaies, tandis que les botnets (RondoDox, Aisuru) sont utilisés pour des cryptomining, des DDoS et l'exploitation d'IoT. L'écosystème du développement logiciel est de plus en plus ciblé par des campagnes malveillantes (extensions VSCode, packages PyPI/npm). En conclusion, le paysage des menaces cyber est dynamique et persistant, avec une convergence des techniques d'exploitation technique et psychologique. Les organisations doivent adopter une approche proactive, axée sur la gestion continue des vulnérabilités, le renforcement de la supply chain logicielle et la sensibilisation aux techniques d'ingénierie sociale, ainsi qu'une attention particulière aux nouvelles surfaces d'attaque liées à l'IA et au cloud.",
+      "date": "2026-01-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT36",
+        "secteur": "Divers (utilisateurs Linux)",
+        "modop": "Campagnes de phishing ciblant spécifiquement les utilisateurs Linux pour installer des infostealers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "phishing",
+          "infostealer",
+          "linux"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Aisuru botnet",
+        "secteur": "Cloud (Azure, Cloudflare)",
+        "modop": "Attaques DDoS massives, avec des pics à 15 Tbps et 29.7 Tbps, ciblant des infrastructures cloud.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "DDoS",
+          "cloud_attack"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Chinese threat actors",
+        "secteur": "Entreprises (Microsoft SharePoint)",
+        "modop": "Exploitation de vulnérabilités zero-day (ex: ToolShell) dans Microsoft SharePoint pour déployer des webshells et voler des données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "zero_day",
+          "webshell",
+          "data_theft",
+          "sharepoint"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Chronus leaks",
+        "secteur": "Secteurs variés (villages magiques au Mexique)",
+        "modop": "Fuites de bases de données obtenues par des moyens non spécifiés.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "extortion",
+          "database"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821147694654502"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Entreprises (Oracle E-Business Suite)",
+        "modop": "Exploitation de vulnérabilités zero-day non patchées (CVE-2025-61882) pour violer des serveurs et voler des données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "zero_day",
+          "data_theft",
+          "oracle"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ErrTraffic (par LenAI)",
+        "secteur": "Multi-secteur (utilisateurs Windows, macOS, Linux, Android)",
+        "modop": "Outil automatisant les attaques ClickFix en générant de faux problèmes sur des sites web compromis pour pousser les utilisateurs à exécuter des commandes malveillantes, installant des infostealers ou des trojans bancaires Android.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "social_engineering",
+          "infostealer",
+          "banking_trojan",
+          "clickfix"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Glassworm campaign",
+        "secteur": "Développeurs macOS (cryptomonnaie, Web3, startups)",
+        "modop": "Distribution de logiciels malveillants via des extensions VSCode/OpenVSX piégées, visant à voler les informations d'identification GitHub, npm, OpenVSX, les données de portefeuilles de cryptomonnaies, et permettant l'accès à distance (VNC, proxy SOCKS). Utilise AppleScript pour la persistance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "supply_chain",
+          "cryptocurrency_theft",
+          "infostealer",
+          "macos",
+          "developer_tools"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-malware-wave-targets-macs-with-trojanized-crypto-wallets/",
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ILDefenseLeaks",
+        "secteur": "Pharmaceutique (Teva Pharmaceuticals en Israël)",
+        "modop": "Revendications de brèche et d'exfiltration de données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "pharmaceutical",
+          "healthcare"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821619409760929"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "LANDFALL spyware campaign",
+        "secteur": "Utilisateurs Samsung Galaxy (versions Android 13-16)",
+        "modop": "Utilisation de vulnérabilités zero-day (CVE-2025-21042) dans la bibliothèque de traitement d'images pour installer un logiciel espion à deux étapes, permettant la surveillance complète (enregistrement micro, localisation, photos, contacts, journaux d'appels).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spyware",
+          "zero_day",
+          "mobile_attack",
+          "surveillance"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Lazarus hacking group (Corée du Nord)",
+        "secteur": "Cryptomonnaie (échanges et portefeuilles crypto)",
+        "modop": "Vols de cryptomonnaies à grande échelle (ex: 1,5 milliard $ chez Bybit) via la compromission de machines de développeurs, l'utilisation de fausses identités, des intermédiaires, et des emplois légitimes pour infiltrer les entreprises occidentales. Recrutement d'ingénieurs sous fausse identité, deepfake Zoom.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "cryptocurrency_theft",
+          "social_engineering",
+          "supply_chain",
+          "espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Magecart campaign",
+        "secteur": "E-commerce (processus de paiement et de création de compte)",
+        "modop": "Campagne globale détournant les flux de paiement et de création de compte en utilisant de faux formulaires de paiement, des iframes de phishing et des techniques de skimming silencieux. Vise à voler les informations d'identification et personnelles, y compris les données de cartes de crédit.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "web_skimming",
+          "e-commerce",
+          "phishing",
+          "data_theft",
+          "payment_fraud"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "NoName057(16) (groupe hacktiviste pro-Kremlin)",
+        "secteur": "Services postaux et bancaires (La Poste et La Banque Postale en France)",
+        "modop": "Attaques par déni de service distribué (DDoS) pour rendre inaccessibles les services en ligne, en réponse à des tensions géopolitiques.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "DDoS",
+          "geopolitique",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/01/la-poste-visee-par-une-nouvelle-cyberattaque-plusieurs-services-en-ligne-inaccessibles_6660237_3234.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "OceanLotus group",
+        "secteur": "Plateformes d'innovation nationales chinoises (Xinchuang) et systèmes Windows",
+        "modop": "Campagnes de phishing utilisant des leurres (fichiers de bureau, PDF, JAR) pour télécharger des charges utiles. Exploitation de vulnérabilités (ex: CVE-2023-52076 dans Atril) pour déployer des chevaux de Troie ELF et des backdoors passives sur les appareils IoT.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "phishing",
+          "malware",
+          "RCE",
+          "iot_attack",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "Appareils IoT et serveurs web (Next.js)",
+        "modop": "Exploitation de vulnérabilités critiques (ex: React2Shell CVE-2025-55182) pour infecter des systèmes avec des cryptominers, des chargeurs de botnet et des variantes de Mirai. Utilise des bibliothèques personnalisées et imite le trafic de jeux/VPN pour éviter la détection.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "cryptojacking",
+          "malware",
+          "iot_attack",
+          "web_application",
+          "RCE"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Scattered Spider / Lapsus$ / ShinyHunters",
+        "secteur": "Multi-secteur (technologie, aviation, cybersécurité, assurance, commerce de détail, luxe, finance)",
+        "modop": "Attaques d'ingénierie sociale (ex: se faisant passer pour des employés, trompant les services d'assistance), attaques de ransomware, exfiltration de données, menaces internes (initiés alimentant des informations aux hackers). Exploitation de comptes compromis et de services tiers pour accéder aux données clients.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "social_engineering",
+          "ransomware",
+          "insider_threat",
+          "data_breach",
+          "extortion",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Multi-secteur (technologie, aviation, cybersécurité, assurance, commerce de détail, luxe)",
+        "modop": "Groupe d'extorsion. Fuite de PoC d'exploits zero-day (ex: CVE-2025-61884 Oracle). Principales attaques liées à l'accès aux données clients Salesforce via des comptes compromis, jetons OAuth et services tiers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "zero_day",
+          "data_breach",
+          "cloud_attack",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Réglementation et Cybersécurité",
+        "theme": "Règlementation sur la cybersécurité",
+        "description": "La Federal Communications Commission (FCC) des États-Unis a annulé des propositions de règles de cybersécurité pour les opérateurs, malgré les risques persistants d'attaques étatiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "regulation",
+          "cybersecurity_policy",
+          "us_government"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Industrie Technologique et Gouvernementale Chinoise",
+        "theme": "Initiative Xinchuang et cyber-espionnage",
+        "description": "Le groupe OceanLotus cible l'initiative chinoise Xinchuang, visant à la souveraineté technologique en remplaçant les logiciels étrangers par des alternatives domestiques. Cette campagne de cyber-espionnage montre les tensions autour de l'indépendance technologique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "technological_sovereignty",
+          "cyber_espionage",
+          "apt",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Poste et Services Bancaires (France)",
+        "theme": "Attaque DDoS et hacktivisme pro-Kremlin",
+        "description": "Le site de La Poste et de La Banque Postale a été paralysé par une nouvelle cyberattaque DDoS, revendiquée par le groupe hacktiviste pro-Kremlin NoName057(16). Cette attaque fait suite à une précédente durant la période de Noël et s'inscrit dans un contexte de tensions géopolitiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "ddos",
+          "hacktivism",
+          "russia",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/01/la-poste-visee-par-une-nouvelle-cyberattaque-plusieurs-services-en-ligne-inaccessibles_6660237_3234.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Secteur Militaire et Gouvernemental (États-Unis)",
+        "theme": "Infiltration par des acteurs nord-coréens",
+        "description": "Les acteurs nord-coréens intensifient l'utilisation de fausses identités, d'intermédiaires et d'emplois légitimes pour accéder à des entreprises occidentales, y compris des réseaux militaires comme la Garde nationale américaine, afin de voler des données et des informations d'identification.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "north_korea",
+          "state_sponsored",
+          "espionage",
+          "military_networks",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers",
+        "victime": "FinWise Bank (clients American First Finance)",
+        "description": "Brèche liée à une menace interne affectant environ 689 000 clients d'American First Finance.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "insider_threat",
+          "pii"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Soins de santé",
+        "victime": "First Rehabilitation Resources",
+        "description": "Violation du système de messagerie en août 2025, exposant des données personnelles et de santé sensibles, y compris les numéros de sécurité sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "email_breach",
+          "pii",
+          "phi",
+          "social_security_numbers"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/115820677881144700"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Commerce de détail",
+        "victime": "Marks & Spencer (M&S)",
+        "description": "Attaque par ransomware et violation de données suite à une ingénierie sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "ransomware",
+          "social_engineering",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Multi-secteur (clients Salesforce)",
+        "victime": "Clients de Salesforce",
+        "description": "Accès répété aux données clients de Salesforce via des comptes compromis, des jetons OAuth et des services tiers, principalement lié au groupe d'extorsion ShinyHunters.",
+        "tags": [
+          "violation",
+          "breach",
+          "cloud_services",
+          "customer_data",
+          "account_compromise",
+          "oauth_tokens",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Pharmaceutique",
+        "victime": "Teva Pharmaceuticals (Israël)",
+        "description": "Le groupe ILDefenseLeaks revendique une brèche et l'exfiltration de données de Teva Pharmaceuticals en Israël.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "healthcare",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821619409760929"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Brèche massive affectant au moins 33 millions d'utilisateurs, attribuée à un ancien employé qui avait conservé l'accès au système.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "insider_threat",
+          "personal_information",
+          "account_compromise"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://mastodon.social/@infomaxkorea/115822303797756724"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Gouvernement (villages magiques au Mexique)",
+        "victime": "Villages magiques au Mexique",
+        "description": "Le groupe Chronus leaks revendique un dump de base de données affectant les 'villages magiques' au Mexique.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "database_dump",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821147694654502"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "Trust Wallet",
+        "description": "Seconde attaque Shai-Hulud sur la chaîne d'approvisionnement, entraînant le vol d'environ 8,5 millions de dollars en cryptomonnaie via l'extension Chrome compromise (v2.68).",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "supply_chain",
+          "wallet_theft",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186398/hacking/trust-wallet-confirms-second-shai-hulud-supply-chain-attack-8-5m-in-crypto-stolen.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "Bybit",
+        "description": "Vol de 1,5 milliard de dollars en cryptomonnaie en février 2025, lié au groupe de hackers Lazarus de Corée du Nord, via la compromission d'une machine de développeur.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "lazarus_group",
+          "state_sponsored",
+          "supply_chain",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "Phemex",
+        "description": "Vol de 85 millions de dollars en cryptomonnaie.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "Cetus Protocol",
+        "description": "Vol de 223 millions de dollars en cryptomonnaie.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "BigONE",
+        "description": "Brèche de 27 millions de dollars en cryptomonnaie.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptomonnaie",
+        "victime": "Trust Wallet (incident général)",
+        "description": "Attaque de 7 millions de dollars impactant des milliers d'utilisateurs de Trust Wallet.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Services IT et Conseil",
+        "victime": "Cognizant",
+        "description": "Attaque d'ingénierie sociale par des hackers associés à Scattered Spider, ayant trompé un service d'assistance pour obtenir un accès et entraînant une plainte de 380 millions de dollars.",
+        "tags": [
+          "violation",
+          "breach",
+          "it_services",
+          "social_engineering",
+          "ransomware",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Commerce de détail",
+        "victime": "Co-op",
+        "description": "Vol de données suite à un incident de ransomware ayant abusé du personnel de support.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "ransomware",
+          "social_engineering",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Finance",
+        "victime": "Banque Centrale du Brésil",
+        "description": "Détournement de 140 millions de dollars suite à la vente de ses identifiants par un employé de banque.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "insider_threat",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Blockchain / DeFi",
+        "victime": "Unleash Protocol",
+        "description": "Retrait et transfert non autorisés de 3,9 millions de dollars de fonds d'utilisateurs via une mise à niveau de contrat intelligent compromise après que l'attaquant ait obtenu le contrôle administratif via la gouvernance multisig.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "defi",
+          "smart_contract",
+          "governance_exploit",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components / Next.js",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) pré-authentification due à une désérialisation non sécurisée des données dans les endpoints de Server Function, permettant l'injection de prototype et l'exécution de commandes arbitrares.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "react_server_components",
+          "nextjs",
+          "prototype_pollution",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html",
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-35027",
+        "cvss": "10.0",
+        "product": "FortiWeb",
+        "description": "Vulnérabilité combinant une traversée de chemin relative et un contournement d'authentification via un chemin alternatif, permettant à des attaquants non authentifiés de créer des comptes administratifs et d'obtenir le contrôle total des appareils affectés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authentication_bypass",
+          "privilege_escalation",
+          "fortiweb",
+          "path_traversal"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-21042",
+        "cvss": "10.0",
+        "product": "Samsung libimagecodec.quram.so",
+        "description": "Vulnérabilité d'écriture hors limites critique dans la bibliothèque de traitement d'images, affectant des millions d'appareils Samsung Galaxy, utilisée par la campagne de logiciel espion LANDFALL pour l'exécution de code à distance et une surveillance complète.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "out_of_bounds_write",
+          "samsung",
+          "android",
+          "spyware",
+          "mobile"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-3248",
+        "cvss": "10.0",
+        "product": "Langflow",
+        "description": "Faille critique dans la logique de validation de code du point de terminaison non authentifié /api/v1/validate/code, permettant à des attaquants distants d'exécuter du code arbitraire sans authentification ni autorisation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "langflow",
+          "AI_orchestration",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-68926",
+        "cvss": "9.8",
+        "product": "RustFS",
+        "description": "Vulnérabilité critique de créance codée en dur (token statique) exposant les clusters de stockage, permettant à tout attaquant avec accès réseau d'authentifier et d'exécuter des opérations privilégiées (destruction de données, manipulation de politiques).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "hardcoded_credentials",
+          "rustfs",
+          "storage_system",
+          "data_manipulation"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-68926-critical-hardcoded-credential-flaw-exposes-rustfs-storage-clusters/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "9.8",
+        "product": "Ghost Robotics",
+        "description": "Vulnérabilité combinant des failles de conception permettant l'exécution de commandes au niveau root sur des robots via l'interface Bluetooth Low Energy (BLE), créant des risques pour les systèmes physiques et les infrastructures critiques.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "robotics",
+          "iot",
+          "bluetooth_low_energy",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-10164",
+        "cvss": "9.8",
+        "product": "Docker Desktop",
+        "description": "Vulnérabilité permettant aux conteneurs Linux exécutés localement d'accéder à l'API du moteur Docker sans authentification, menant à une escalade de privilèges de l'utilisateur local vers root et potentiellement l'exécution de commandes arbitraires avec des privilèges de moteur complets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "docker",
+          "containerization",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "9.8",
+        "product": "SmarterMail",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) via un téléchargement de fichier arbitraire non authentifié, permettant aux attaquants de déposer des webshells et de transformer l'infrastructure de messagerie en nœuds de commande et de contrôle.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "arbitrary_file_upload",
+          "smartermail",
+          "unauthenticated",
+          "webshell",
+          "email_server"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/01/cve-2025-52691-critical-unauthenticated-rce-in-smartermail/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-66398",
+        "cvss": "9.6",
+        "product": "Signal K Server",
+        "description": "Vulnérabilité de pollution d'état non authentifiée permettant à un attaquant de détourner la fonctionnalité de 'Restauration' de l'administrateur pour écraser des fichiers de configuration critiques du serveur, menant à une prise de contrôle de compte et à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authentication_bypass",
+          "account_takeover",
+          "signal_k_server",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66398"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-68620",
+        "cvss": "9.1",
+        "product": "Signal K Server",
+        "description": "Vulnérabilité de vol de jetons JWT via une énumération de requêtes WebSocket non authentifiée et un sondage non authentifié du statut des requêtes d'accès, permettant un contournement complet de l'authentification et le vol de jetons JWT.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "jwt_theft",
+          "signal_k_server",
+          "unauthenticated",
+          "websocket"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68620"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "Non spécifié",
+        "product": "MongoDB",
+        "description": "Fuite de mémoire (MongoBleed) résultant d'une gestion incorrecte des paramètres de longueur dans les messages du protocole filaire MongoDB compressés par zlib, entraînant la fuite de mémoire de tas non initialisée contenant des secrets de grande valeur (informations d'identification, clés API, jetons AWS).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "memory_leak",
+          "data_exfiltration",
+          "mongodb",
+          "database",
+          "unauthenticated",
+          "secrets_disclosure"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "New GlassWorm malware wave targets Macs with trojanized crypto wallets",
+        "description": "La quatrième vague de la campagne 'GlassWorm' cible les développeurs macOS avec des extensions VSCode/OpenVSX malveillantes qui délivrent des versions piégées d'applications de portefeuilles de cryptomonnaies. L'objectif est de voler les informations d'identification GitHub, npm, OpenVSX, ainsi que les données de portefeuilles de cryptomonnaies. Le malware utilise des charges utiles chiffrées AES-256-CBC, AppleScript pour la persistance et un mécanisme C2 basé sur la blockchain Solana.",
+        "threat_actor": "Glassworm campaign",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002",
+          "T1003",
+          "T1041",
+          "T1053.001",
+          "T1090.002",
+          "T1574.008"
+        ],
+        "analyse": "L'attaque cible spécifiquement l'écosystème de développement macOS, en particulier les utilisateurs de cryptomonnaies et Web3, ce qui souligne une tendance à cibler des communautés de niche avec des profils financiers élevés. L'utilisation d'extensions de développement légitimes comme vecteur d'infection est une tactique de supply chain efficace. Le ciblage des informations d'identification de développement (GitHub, npm) a un potentiel de propagation plus large en cas de compromission des projets.",
+        "recommandations": [
+          "Supprimer immédiatement les extensions VSCode/OpenVSX suspectes ('studio-velte-distributor.pro-svelte-extension', 'cudra-production.vsce-prettier-pro', 'Puccin-development.full-access-catppuccin-pro-extension').",
+          "Réinitialiser les mots de passe des comptes GitHub, révoquer les jetons NPM et vérifier le système pour d'autres signes d'infection.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour tous les comptes de développeurs et de cryptomonnaies.",
+          "Surveiller les activités inhabituelles liées aux portefeuilles de cryptomonnaies et aux comptes de développeurs."
+        ],
+        "tags": [
+          "malware",
+          "supply_chain",
+          "cryptocurrency",
+          "macos",
+          "developer_tools",
+          "infostealer",
+          "trojan"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-malware-wave-targets-macs-with-trojanized-crypto-wallets/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "RondoDox Botnet Exploits Critical React2Shell Flaw to Hijack IoT Devices and Web Servers",
+        "description": "Le botnet RondoDox exploite la vulnérabilité critique React2Shell (CVE-2025-55182) dans React Server Components et Next.js pour cibler les appareils IoT et les serveurs web vulnérables. La campagne, active depuis neuf mois, déploie des charges utiles telles que des cryptominers, des chargeurs de botnet et des variantes de Mirai. Il utilise des tactiques d'évasion comme l'imitation du trafic de jeux/VPN et des méthodes de persistance via cron jobs.",
+        "threat_actor": "RondoDox botnet",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190",
+          "T1203",
+          "T1496",
+          "T1059",
+          "T1090",
+          "T1569.002",
+          "T1574",
+          "T1053.005"
+        ],
+        "analyse": "L'exploitation de vulnérabilités critiques dans des frameworks web populaires (Next.js) et des appareils IoT démontre une stratégie d'élargissement de la surface d'attaque. La présence massive d'instances vulnérables (plus de 90 000) indique un risque de propagation élevé, avec des impacts potentiels sur les ressources des entreprises via le cryptomining et la formation de vastes réseaux botnet pour d'autres attaques.",
+        "recommandations": [
+          "Mettre à jour immédiatement Next.js vers une version patchée.",
+          "Segmenter tous les appareils IoT dans des VLANs dédiés.",
+          "Déployer des pare-feu d'applications web (WAF) pour protéger les serveurs web.",
+          "Surveiller l'exécution de processus suspects et bloquer l'infrastructure C2 connue.",
+          "Appliquer les correctifs pour CVE-2025-55182 et les CVEs précédemment exploitées par RondoDox (CVE-2023-1389, CVE-2025-24893)."
+        ],
+        "tags": [
+          "botnet",
+          "RCE",
+          "iot_attack",
+          "web_application",
+          "cryptojacking",
+          "mirai",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "The biggest cybersecurity and cyberattack stories of 2025",
+        "description": "L'année 2025 a été marquée par des cyberattaques majeures, des violations de données et des exploits zero-day. Les tendances incluent l'adoption généralisée des attaques ClickFix, le ciblage des entreprises occidentales par des acteurs nord-coréens via de fausses identités, des attaques contre la supply chain logicielle (extensions VSCode, PyPI), l'émergence des vulnérabilités par injection de prompt sur l'IA, et l'impact significatif des menaces internes. Des groupes comme Clop, ShinyHunters et Scattered Spider ont été particulièrement actifs.",
+        "threat_actor": "Clop, Lazarus hacking group, ShinyHunters, Aisuru botnet, APT36, Scattered Spider, Chinese threat actors, Glassworm campaign",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1195.002",
+          "T1078",
+          "T1566.004",
+          "T1190",
+          "T1020",
+          "T1498",
+          "T1003",
+          "T1496",
+          "T1078.003",
+          "T1505.003",
+          "T1588.001",
+          "T1070.006",
+          "T1562"
+        ],
+        "analyse": "Cet article fournit une vue d'ensemble précieuse des menaces et tendances qui ont dominé l'année 2025. Il met en évidence la complexité croissante des attaques, la convergence de l'ingénierie sociale et des exploits techniques, et l'importance des menaces internes et de la supply chain. L'émergence des vulnérabilités liées à l'IA représente une nouvelle surface d'attaque stratégique pour les années à venir.",
+        "recommandations": [
+          "Renforcer les mesures de sécurité de la supply chain logicielle, notamment pour les dépendances de développement et les extensions.",
+          "Mettre en œuvre des programmes de sensibilisation et de formation contre l'ingénierie sociale (ClickFix, deepfakes, etc.).",
+          "Établir des contrôles d'accès robustes et une surveillance des menaces internes.",
+          "Prioriser la gestion des vulnérabilités zero-day et des patchs, en particulier pour les infrastructures critiques.",
+          "Développer des stratégies pour sécuriser les systèmes d'IA contre les attaques par injection de prompt."
+        ],
+        "tags": [
+          "cyberattack_trends",
+          "data_breach",
+          "zero_day",
+          "supply_chain",
+          "AI_vulnerabilities",
+          "social_engineering",
+          "insider_threat",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "ThreatsDay Bulletin: GhostAd Drain, macOS Attacks, Proxy Botnets, Cloud Exploits, and 12+ Stories",
+        "description": "Ce bulletin de veille de début d'année 2026 met en lumière la persistance et l'évolution rapide des menaces cyber. Il couvre des sujets tels que l'infection de millions de systèmes par des malwares de vol de presse-papiers déguisés en outils d'activation logicielle, une campagne d'exploitation coordonnée ciblant les serveurs Adobe ColdFusion, des malwares préinstallés sur des tablettes Android, le développement d'outils d'automatisation d'attaques (ErrTraffic) et de réseaux proxy (IPCola), des campagnes de Magecart, l'exploitation de failles d'IAM AWS, ainsi que les stratégies d'infiltration des acteurs nord-coréens et l'activité des hacktivistes proxy. Il aborde également les efforts pour contrer les jailbreaks d'IA et les campagnes d'adware Android.",
+        "threat_actor": "Glassworm campaign, OceanLotus group, ErrTraffic (by LenAI), Magecart campaign, Lazarus hacking group",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "chatgptjailbreak.tech",
+            "ipcola.com"
+          ],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001",
+          "T1027",
+          "T1190",
+          "T1059",
+          "T1003",
+          "T1547.001",
+          "T1041",
+          "T1602",
+          "T1195.002",
+          "T1053.001",
+          "T1090.002",
+          "T1070",
+          "T1562",
+          "T1098.002",
+          "T1078.004",
+          "T1498",
+          "T1071.001",
+          "T1203",
+          "T1496"
+        ],
+        "analyse": "Ce bulletin dresse un tableau des menaces en constante évolution, soulignant une adaptabilité rapide des attaquants à de nouvelles plateformes (macOS, Android, AI, cloud) et l'industrialisation de certaines attaques (ErrTraffic). Les stratégies géopolitiques via des hacktivistes proxy et l'espionnage par des acteurs étatiques (OceanLotus, Corée du Nord) persistent. Les vulnérabilités liées à l'IA et les failles de configuration du cloud (AWS IAM) sont des points d'attention cruciaux.",
+        "recommandations": [
+          "Mettre en œuvre des solutions anti-malware et de protection des terminaux robustes pour détecter les menaces cachées (ex: clipboard-stealers, adwares persistants).",
+          "Surveiller activement les serveurs ColdFusion et les systèmes similaires pour les tentatives d'exploitation de vulnérabilités N-day.",
+          "Renforcer la sécurité du cloud en gérant les clés d'accès IAM à court terme et en utilisant des rôles plutôt que des identifiants permanents.",
+          "Mener des audits réguliers sur les applications et extensions de développement pour détecter les logiciels malveillants de supply chain.",
+          "Être vigilant face aux offres de services de proxy (comme IPCola) qui pourraient exploiter des appareils à l'insu de leurs propriétaires."
+        ],
+        "tags": [
+          "malware",
+          "phishing",
+          "exploitation",
+          "adware",
+          "cloud_security",
+          "AI_security",
+          "supply_chain",
+          "botnet",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "Trust Wallet confirms second Shai-Hulud supply-chain attack, $8.5M in crypto stolen",
+        "description": "Trust Wallet a confirmé une deuxième attaque sur la chaîne d'approvisionnement, nommée Shai-Hulud, qui a probablement compromis son extension Chrome, conduisant au vol d'environ 8,5 millions de dollars en actifs cryptographiques. L'attaque a été facilitée par une clé API Chrome Web Store divulguée et l'accès au code source de l'extension suite à un incident précédent, permettant aux attaquants de publier une version malveillante (v2.68) exfiltrant les données sensibles du portefeuille vers un domaine contrôlé par l'attaquant ('metrics-trustwallet.com').",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "metrics-trustwallet.com",
+            "api.metrics-trustwallet.com"
+          ],
+          "IPv4": [
+            "138.124.70.40"
+          ],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002",
+          "T1078",
+          "T1588.003",
+          "T1583.001",
+          "T1003",
+          "T1041"
+        ],
+        "analyse": "Cette attaque souligne les risques persistants des compromissions de supply chain, en particulier pour les applications critiques comme les portefeuilles de cryptomonnaies. La réutilisation d'une clé API divulguée démontre l'importance d'une rotation rigoureuse des secrets et d'une surveillance continue de l'intégrité du code source et des processus de publication. L'utilisation d'un hébergement 'bulletproof' par l'attaquant indique une infrastructure résiliente à la censure.",
+        "recommandations": [
+          "Les utilisateurs de Trust Wallet version 2.68 (du 24 au 26 déc. 2025) doivent immédiatement transférer leurs fonds vers un portefeuille sécurisé et mettre à jour vers la version 2.69 ou supérieure.",
+          "Mettre en œuvre des processus de révocation et de rotation automatiques des clés API et des secrets de développement.",
+          "Renforcer les contrôles de sécurité et les audits sur les processus de publication des extensions de navigateur.",
+          "Mettre en place une surveillance avancée pour détecter l'exfiltration de données sensibles et le trafic vers des domaines suspects.",
+          "Utiliser l'authentification multifacteur pour tous les accès aux services de développement et de publication."
+        ],
+        "tags": [
+          "supply_chain",
+          "cryptocurrency_theft",
+          "data_breach",
+          "chrome_extension",
+          "api_key_compromise",
+          "wallet_drainer"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186398/hacking/trust-wallet-confirms-second-shai-hulud-supply-chain-attack-8-5m-in-crypto-stolen.html"
+        ],
+        "date": "2026-01-02"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "2025 was marked by an increasing intensification and sophistication of cyber threats, with key trends continuing and new ones emerging. Supply chain attacks remain a major concern, as evidenced by incidents affecting Trust Wallet and multiple companies via third-party services. The exploitation of zero-day vulnerabilities, notably in Oracle products and Microsoft SharePoint, continues to enable large-scale breaches by state-sponsored groups and ransomware gangs. The use of AI by attackers is materializing, not only to accelerate vulnerability exploitation (e.g., HexStrike) but also through new classes of vulnerabilities like prompt injection attacks on AI models. The persistence of social engineering techniques (ClickFix, deepfakes, fake technical interviews, help desk scams) demonstrates that the human factor remains a weak link. Insider threats, whether intentional or due to poor access management, have had significant financial impact. State actors, particularly North Korea, continue to refine their infiltration and cryptocurrency theft methods, while botnets (RondoDox, Aisuru) are used for cryptomining, DDoS, and IoT exploitation. The software development ecosystem is increasingly targeted by malicious campaigns (VSCode extensions, PyPI/npm packages, compromised developer machines). In conclusion, the cyber threat landscape is dynamic and persistent, with a convergence of technical and psychological exploitation techniques. Organizations must adopt a proactive approach, focusing on continuous vulnerability management, strengthening the software supply chain, and raising awareness of social engineering techniques, as well as paying close attention to new attack surfaces related to AI and the cloud.",
+      "date": "2026-01-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT36",
+        "secteur": "Various (Linux users)",
+        "modop": "Phishing campaigns specifically targeting Linux users to install infostealers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "phishing",
+          "infostealer",
+          "linux"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Aisuru botnet",
+        "secteur": "Cloud (Azure, Cloudflare)",
+        "modop": "Massive DDoS attacks, peaking at 15 Tbps and 29.7 Tbps, targeting cloud infrastructures.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "DDoS",
+          "cloud_attack"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Chinese threat actors",
+        "secteur": "Enterprises (Microsoft SharePoint)",
+        "modop": "Exploitation of zero-day vulnerabilities (e.g., ToolShell) in Microsoft SharePoint to deploy webshells and steal data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "zero_day",
+          "webshell",
+          "data_theft",
+          "sharepoint"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Chronus leaks",
+        "secteur": "Various sectors (magical villages in Mexico)",
+        "modop": "Claims of database dumps obtained through unspecified means.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "extortion",
+          "database"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821147694654502"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Clop",
+        "secteur": "Enterprises (Oracle E-Business Suite)",
+        "modop": "Exploitation of unpatched zero-day vulnerabilities (CVE-2025-61882) to breach servers and steal data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "zero_day",
+          "data_theft",
+          "oracle"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ErrTraffic (by LenAI)",
+        "secteur": "Cross-platform (Windows, macOS, Linux, Android users)",
+        "modop": "Tool automating ClickFix attacks by generating fake glitches on compromised websites to trick users into running malicious commands, installing infostealers or Android banking trojans.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "social_engineering",
+          "infostealer",
+          "banking_trojan",
+          "clickfix"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Glassworm campaign",
+        "secteur": "macOS developers (cryptocurrency, Web3, startups)",
+        "modop": "Distribution of malware via trojanized VSCode/OpenVSX extensions, aiming to steal GitHub, npm, OpenVSX credentials, cryptocurrency wallet data, and enable remote access (VNC, SOCKS proxy). Uses AppleScript for persistence.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "supply_chain",
+          "cryptocurrency_theft",
+          "infostealer",
+          "macos",
+          "developer_tools"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-malware-wave-targets-macs-with-trojanized-crypto-wallets/",
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ILDefenseLeaks",
+        "secteur": "Pharmaceuticals (Teva Pharmaceuticals in Israel)",
+        "modop": "Claims of breach and data exfiltration.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "pharmaceutical",
+          "healthcare"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821619409760929"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "LANDFALL spyware campaign",
+        "secteur": "Samsung Galaxy users (Android versions 13-16)",
+        "modop": "Leveraging zero-day vulnerabilities (CVE-2025-21042) in image processing library to install a two-stage spyware, enabling comprehensive surveillance (mic recording, location tracking, photos, contacts, call logs).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "spyware",
+          "zero_day",
+          "mobile_attack",
+          "surveillance"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Lazarus hacking group (North Korea)",
+        "secteur": "Cryptocurrency (crypto exchanges and wallets)",
+        "modop": "Large-scale cryptocurrency thefts (e.g., $1.5 billion from Bybit) via compromised developer machines, use of fake identities, intermediaries, and legitimate employment to infiltrate Western companies. Recruiting engineers under false identities, deepfake Zoom calls.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "cryptocurrency_theft",
+          "social_engineering",
+          "supply_chain",
+          "espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Magecart campaign",
+        "secteur": "E-commerce (checkout and account creation flows)",
+        "modop": "Global campaign hijacking payment and account creation flows using fake payment forms, phishing iframes, and silent skimming techniques. Aims to steal credentials and personal information, including credit card data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "web_skimming",
+          "e-commerce",
+          "phishing",
+          "data_theft",
+          "payment_fraud"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "NoName057(16) (pro-Kremlin hacktivist group)",
+        "secteur": "Postal and Banking Services (La Poste and La Banque Postale in France)",
+        "modop": "Distributed Denial of Service (DDoS) attacks to make online services inaccessible, in response to geopolitical tensions.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "DDoS",
+          "geopolitic",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/01/la-poste-visee-par-une-nouvelle-cyberattaque-plusieurs-services-en-ligne-inaccessibles_6660237_3234.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "OceanLotus group",
+        "secteur": "Chinese domestic innovation platforms (Xinchuang) and Windows systems",
+        "modop": "Phishing campaigns using lures (desktop files, PDFs, JARs) to download next-stage payloads. Exploitation of vulnerabilities (e.g., CVE-2023-52076 in Atril) to deploy ELF Trojans and passive backdoors on IoT devices.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "phishing",
+          "malware",
+          "RCE",
+          "iot_attack",
+          "geopolitic"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "IoT devices and web servers (Next.js)",
+        "modop": "Exploitation of critical vulnerabilities (e.g., React2Shell CVE-2025-55182) to infect systems with cryptominers, botnet loaders, and Mirai variants. Uses custom libraries and mimics gaming/VPN traffic to evade detection.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "cryptojacking",
+          "malware",
+          "iot_attack",
+          "web_application",
+          "RCE"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "Scattered Spider / Lapsus$ / ShinyHunters",
+        "secteur": "Multi-sector (technology, aviation, cybersecurity, insurance, retail, luxury, finance)",
+        "modop": "Social engineering attacks (e.g., posing as employees, tricking help desks), ransomware attacks, data exfiltration, insider threats (insiders feeding information to hackers). Exploitation of compromised accounts and third-party services to access customer data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "social_engineering",
+          "ransomware",
+          "insider_threat",
+          "data_breach",
+          "extortion",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Multi-sector (technology, aviation, cybersecurity, insurance, retail, luxury)",
+        "modop": "Extortion group. Leaking PoC for zero-day exploits (e.g., CVE-2025-61884 Oracle). Main attacks linked to accessing Salesforce customer data via compromised accounts, OAuth tokens, and third-party services.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "zero_day",
+          "data_breach",
+          "cloud_attack",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Regulatory and Cybersecurity",
+        "theme": "Cybersecurity Regulation",
+        "description": "The U.S. Federal Communications Commission (FCC) rolled back proposed cybersecurity rules for carriers, despite persistent state-hacking risks.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "regulation",
+          "cybersecurity_policy",
+          "us_government"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Chinese Tech and Government Industry",
+        "theme": "Xinchuang Initiative and Cyber Espionage",
+        "description": "The OceanLotus group targets China's Xinchuang initiative, aiming for technological self-reliance by replacing foreign software with domestic alternatives. This cyber espionage campaign highlights tensions around technological independence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "technological_sovereignty",
+          "cyber_espionage",
+          "apt",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Postal and Banking Services (France)",
+        "theme": "DDoS Attack and Pro-Kremlin Hacktivism",
+        "description": "The websites of La Poste and La Banque Postale were paralyzed by a new DDoS cyberattack, claimed by the pro-Kremlin hacktivist group NoName057(16). This attack follows a previous one during the Christmas period and occurs within a context of geopolitical tensions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "ddos",
+          "hacktivism",
+          "russia",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/01/la-poste-visee-par-une-nouvelle-cyberattaque-plusieurs-services-en-ligne-inaccessibles_6660237_3234.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Military and Government Sector (United States)",
+        "theme": "Infiltration by North Korean Actors",
+        "description": "North Korean actors are increasingly using fake identities, intermediaries, and legitimate employment to gain access to Western companies, including military networks like the U.S. National Guard, to steal data and credentials.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "north_korea",
+          "state_sponsored",
+          "espionage",
+          "military_networks",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services",
+        "victime": "FinWise Bank (American First Finance customers)",
+        "description": "Insider-related breach affecting approximately 689,000 American First Finance customers.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "insider_threat",
+          "pii"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "First Rehabilitation Resources",
+        "description": "Email system breach in August 2025, exposing sensitive personal and health data, including Social Security numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "email_breach",
+          "pii",
+          "phi",
+          "social_security_numbers"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/115820677881144700"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Retail",
+        "victime": "Marks & Spencer (M&S)",
+        "description": "Ransomware attack and data breach following social engineering.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "ransomware",
+          "social_engineering",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Multi-sector (Salesforce customers)",
+        "victime": "Salesforce Customers",
+        "description": "Repeated access to Salesforce customer data via compromised accounts, OAuth tokens, and third-party services, primarily linked to the ShinyHunters extortion group.",
+        "tags": [
+          "violation",
+          "breach",
+          "cloud_services",
+          "customer_data",
+          "account_compromise",
+          "oauth_tokens",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Pharmaceuticals",
+        "victime": "Teva Pharmaceuticals (Israel)",
+        "description": "ILDefenseLeaks group claims a breach and data exfiltration from Teva Pharmaceuticals in Israel.",
+        "tags": [
+          "violation",
+          "breach",
+          "pharmaceutical",
+          "healthcare",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821619409760929"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Massive breach affecting at least 33 million users, traced to an ex-employee who retained system access after leaving the company.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "insider_threat",
+          "personal_information",
+          "account_compromise"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://mastodon.social/@infomaxkorea/115822303797756724"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Government (magical villages in Mexico)",
+        "victime": "Magical Villages in Mexico",
+        "description": "Chronus leaks group claims a database dump affecting 'magical villages' in Mexico.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "database_dump",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115821147694654502"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "Trust Wallet",
+        "description": "Second Shai-Hulud supply-chain attack likely compromised its Chrome extension, leading to the theft of approximately $8.5 million in crypto assets.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "supply_chain",
+          "wallet_theft",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186398/hacking/trust-wallet-confirms-second-shai-hulud-supply-chain-attack-8-5m-in-crypto-stolen.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "Bybit",
+        "description": "$1.5 billion crypto theft in February 2025, linked to North Korea's Lazarus hacking group, conducted via a compromised developer machine.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "lazarus_group",
+          "state_sponsored",
+          "supply_chain",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/",
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "Phemex",
+        "description": "$85 million crypto theft.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "Cetus Protocol",
+        "description": "$223 million crypto heist.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "BigONE",
+        "description": "$27 million crypto breach.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Cryptocurrency",
+        "victime": "Trust Wallet (general incident)",
+        "description": "$7 million attack impacting thousands of Trust Wallet users.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "IT Services and Consulting",
+        "victime": "Cognizant",
+        "description": "Social engineering attack by hackers associated with Scattered Spider, tricking a help desk into granting access, leading to a $380 million lawsuit.",
+        "tags": [
+          "violation",
+          "breach",
+          "it_services",
+          "social_engineering",
+          "ransomware",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Retail",
+        "victime": "Co-op",
+        "description": "Data theft following a ransomware incident that abused support personnel.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "ransomware",
+          "social_engineering",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Finance",
+        "victime": "Brazil’s Central Bank",
+        "description": "$140 million bank heist, facilitated by a bank employee selling their credentials.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "insider_threat",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "secteur": "Blockchain / DeFi",
+        "victime": "Unleash Protocol",
+        "description": "Unauthorized withdrawal and transfer of $3.9 million in user funds via a compromised smart contract upgrade after an attacker gained administrative control through multisig governance.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "defi",
+          "smart_contract",
+          "governance_exploit",
+          "wallet_theft"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components / Next.js",
+        "description": "Pre-authentication remote code execution (RCE) vulnerability due to unsafe deserialization of data in Server Function endpoints, allowing prototype injection and arbitrary command execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "react_server_components",
+          "nextjs",
+          "prototype_pollution",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html",
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-35027",
+        "cvss": "10.0",
+        "product": "FortiWeb",
+        "description": "Vulnerability combining relative path traversal and authentication bypass via alternate path, allowing unauthenticated attackers to create administrative accounts and gain full control over affected devices.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authentication_bypass",
+          "privilege_escalation",
+          "fortiweb",
+          "path_traversal"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-21042",
+        "cvss": "10.0",
+        "product": "Samsung libimagecodec.quram.so",
+        "description": "Critical out-of-bounds write vulnerability in the image processing library, affecting millions of older Samsung Galaxy devices, used by the LANDFALL spyware campaign for remote code execution and comprehensive surveillance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "out_of_bounds_write",
+          "samsung",
+          "android",
+          "spyware",
+          "mobile"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-3248",
+        "cvss": "10.0",
+        "product": "Langflow",
+        "description": "Critical flaw in the unsafe code validation logic of the unauthenticated /api/v1/validate/code endpoint, enabling remote attackers to execute arbitrary code without any authentication or authorization checks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "langflow",
+          "AI_orchestration",
+          "unauthenticated",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-68926",
+        "cvss": "9.8",
+        "product": "RustFS",
+        "description": "Critical hardcoded credential flaw (static token) exposing storage clusters, allowing any attacker with network access to authenticate and execute privileged operations (data destruction, policy manipulation).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "hardcoded_credentials",
+          "rustfs",
+          "storage_system",
+          "data_manipulation"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-68926-critical-hardcoded-credential-flaw-exposes-rustfs-storage-clusters/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-64446",
+        "cvss": "9.8",
+        "product": "Ghost Robotics",
+        "description": "Vulnerability combining design flaws allowing root-level command execution on affected robots via the Bluetooth Low Energy (BLE) interface, creating risks for physical systems and critical infrastructure applications.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "robotics",
+          "iot",
+          "bluetooth_low_energy",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-10164",
+        "cvss": "9.8",
+        "product": "Docker Desktop",
+        "description": "Vulnerability allowing locally running Linux containers to access the Docker Engine API without authentication, leading to privilege escalation from local user to root and potentially arbitrary command execution with full engine privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "docker",
+          "containerization",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "9.8",
+        "product": "SmarterMail",
+        "description": "Critical remote code execution (RCE) vulnerability via unauthenticated arbitrary file upload, allowing attackers to drop webshells and turn mail infrastructure into command-and-control nodes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "arbitrary_file_upload",
+          "smartermail",
+          "unauthenticated",
+          "webshell",
+          "email_server"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/01/cve-2025-52691-critical-unauthenticated-rce-in-smartermail/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-66398",
+        "cvss": "9.6",
+        "product": "Signal K Server",
+        "description": "Unauthenticated state pollution vulnerability allowing an attacker to hijack the administrator's 'Restore' functionality to overwrite critical server configuration files, leading to account takeover and remote code execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authentication_bypass",
+          "account_takeover",
+          "signal_k_server",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66398"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-68620",
+        "cvss": "9.1",
+        "product": "Signal K Server",
+        "description": "JWT Token Theft vulnerability via unauthenticated WebSocket request enumeration and unauthenticated polling of access request status, enabling complete authentication bypass and JWT token theft.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "jwt_theft",
+          "signal_k_server",
+          "unauthenticated",
+          "websocket"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68620"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": "Not Specified",
+        "product": "MongoDB",
+        "description": "Memory leak (MongoBleed) resulting from improper handling of length parameters in zlib-compressed MongoDB wire protocol messages, causing the server to return uninitialized heap memory containing high-value secrets (credentials, API keys, AWS tokens).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "memory_leak",
+          "data_exfiltration",
+          "mongodb",
+          "database",
+          "unauthenticated",
+          "secrets_disclosure"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/10-high-risk-vulnerabilities-of-2025/"
+        ],
+        "date": "2026-01-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "New GlassWorm malware wave targets Macs with trojanized crypto wallets",
+        "description": "The fourth wave of the 'GlassWorm' campaign targets macOS developers with malicious VSCode/OpenVSX extensions that deliver trojanized versions of crypto wallet applications. The objective is to steal GitHub, npm, OpenVSX credentials, as well as cryptocurrency wallet data. The malware uses AES-256-CBC encrypted payloads, AppleScript for persistence, and a Solana blockchain-based C2 mechanism.",
+        "threat_actor": "Glassworm campaign",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002",
+          "T1003",
+          "T1041",
+          "T1053.001",
+          "T1090.002",
+          "T1574.008"
+        ],
+        "analyse": "The attack specifically targets the macOS development ecosystem, particularly cryptocurrency and Web3 users, highlighting a trend towards targeting niche communities with high financial profiles. The use of legitimate development extensions as an infection vector is an effective supply chain tactic. The targeting of developer credentials (GitHub, npm) has broader potential for propagation if projects are compromised.",
+        "recommandations": [
+          "Immediately remove suspicious VSCode/OpenVSX extensions ('studio-velte-distributor.pro-svelte-extension', 'cudra-production.vsce-prettier-pro', 'Puccin-development.full-access-catppuccin-pro-extension').",
+          "Reset GitHub account passwords, revoke NPM tokens, and check the system for other signs of infection.",
+          "Implement multi-factor authentication (MFA) for all developer and cryptocurrency accounts.",
+          "Monitor for unusual activity related to cryptocurrency wallets and developer accounts."
+        ],
+        "tags": [
+          "malware",
+          "supply_chain",
+          "cryptocurrency",
+          "macos",
+          "developer_tools",
+          "infostealer",
+          "trojan"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-malware-wave-targets-macs-with-trojanized-crypto-wallets/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "RondoDox Botnet Exploits Critical React2Shell Flaw to Hijack IoT Devices and Web Servers",
+        "description": "The RondoDox botnet exploits the critical React2Shell flaw (CVE-2025-55182) in React Server Components and Next.js to target vulnerable IoT devices and web servers. The campaign, active for nine months, deploys payloads such as cryptominers, botnet loaders, and Mirai variants. It uses evasion tactics like mimicking gaming/VPN traffic and persistence methods via cron jobs.",
+        "threat_actor": "RondoDox botnet",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190",
+          "T1203",
+          "T1496",
+          "T1059",
+          "T1090",
+          "T1569.002",
+          "T1574",
+          "T1053.005"
+        ],
+        "analyse": "The exploitation of critical vulnerabilities in popular web frameworks (Next.js) and IoT devices demonstrates a strategy of broadening the attack surface. The massive presence of vulnerable instances (over 90,000) indicates a high risk of propagation, with potential impacts on business resources through cryptomining and the formation of large botnet networks for further attacks.",
+        "recommandations": [
+          "Immediately update Next.js to a patched version.",
+          "Segment all IoT devices into dedicated VLANs.",
+          "Deploy Web Application Firewalls (WAFs) to protect web servers.",
+          "Monitor for suspicious process execution and block known C2 infrastructure.",
+          "Apply patches for CVE-2025-55182 and previously exploited CVEs by RondoDox (CVE-2023-1389, CVE-2025-24893)."
+        ],
+        "tags": [
+          "botnet",
+          "RCE",
+          "iot_attack",
+          "web_application",
+          "cryptojacking",
+          "mirai",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186386/uncategorized/react2shell-under-attack-rondodox-botnet-spreads-miners-and-malware.html",
+          "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "The biggest cybersecurity and cyberattack stories of 2025",
+        "description": "2025 was marked by major cyberattacks, data breaches, and zero-day exploits. Trends included the widespread adoption of ClickFix attacks, North Korean actors targeting Western companies via fake identities, attacks on the software supply chain (VSCode extensions, PyPI), the emergence of AI prompt injection vulnerabilities, and significant impact from insider threats. Groups like Clop, ShinyHunters, and Scattered Spider were particularly active.",
+        "threat_actor": "Clop, Lazarus hacking group, ShinyHunters, Aisuru botnet, APT36, Scattered Spider, Chinese threat actors, Glassworm campaign",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1195.002",
+          "T1078",
+          "T1566.004",
+          "T1190",
+          "T1020",
+          "T1498",
+          "T1003",
+          "T1496",
+          "T1078.003",
+          "T1505.003",
+          "T1588.001",
+          "T1070.006",
+          "T1562"
+        ],
+        "analyse": "This article provides a valuable overview of the threats and trends that dominated 2025. It highlights the increasing complexity of attacks, the convergence of social engineering and technical exploits, and the importance of insider threats and the supply chain. The emergence of AI-related vulnerabilities represents a new strategic attack surface for years to come.",
+        "recommandations": [
+          "Strengthen software supply chain security measures, especially for development dependencies and extensions.",
+          "Implement awareness and training programs against social engineering (ClickFix, deepfakes, etc.).",
+          "Establish robust access controls and insider threat monitoring.",
+          "Prioritize zero-day vulnerability management and patching, especially for critical infrastructure.",
+          "Develop strategies to secure AI systems against prompt injection attacks."
+        ],
+        "tags": [
+          "cyberattack_trends",
+          "data_breach",
+          "zero_day",
+          "supply_chain",
+          "AI_vulnerabilities",
+          "social_engineering",
+          "insider_threat",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-biggest-cybersecurity-and-cyberattack-stories-of-2025/"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "ThreatsDay Bulletin: GhostAd Drain, macOS Attacks, Proxy Botnets, Cloud Exploits, and 12+ Stories",
+        "description": "This early 2026 threat intelligence bulletin highlights the persistence and rapid evolution of cyber threats. It covers topics such as millions of systems infected by clipboard-stealing malware disguised as software activation tools, a coordinated exploitation campaign targeting Adobe ColdFusion servers, pre-installed malware on Android tablets, the development of attack automation tools (ErrTraffic) and proxy networks (IPCola), Magecart campaigns, exploitation of AWS IAM flaws, and infiltration strategies by North Korean actors and proxy hacktivist activity. It also addresses efforts to counter AI jailbreaks and Android adware campaigns.",
+        "threat_actor": "Glassworm campaign, OceanLotus group, ErrTraffic (by LenAI), Magecart campaign, Lazarus hacking group",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "chatgptjailbreak.tech",
+            "ipcola.com"
+          ],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "IPv4": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001",
+          "T1027",
+          "T1190",
+          "T1059",
+          "T1003",
+          "T1547.001",
+          "T1041",
+          "T1602",
+          "T1195.002",
+          "T1053.001",
+          "T1090.002",
+          "T1070",
+          "T1562",
+          "T1098.002",
+          "T1078.004",
+          "T1498",
+          "T1071.001",
+          "T1203",
+          "T1496"
+        ],
+        "analyse": "This bulletin paints a picture of constantly evolving threats, emphasizing attackers' rapid adaptability to new platforms (macOS, Android, AI, cloud) and the industrialization of certain attacks (ErrTraffic). Geopolitical strategies via proxy hacktivists and state-sponsored espionage (OceanLotus, North Korea) persist. AI-related vulnerabilities and cloud configuration flaws (AWS IAM) are crucial points of attention.",
+        "recommandations": [
+          "Implement robust anti-malware and endpoint protection solutions to detect hidden threats (e.g., clipboard-stealers, persistent adwares).",
+          "Actively monitor ColdFusion servers and similar systems for N-day vulnerability exploitation attempts.",
+          "Strengthen cloud security by managing short-term IAM access keys and using roles instead of permanent credentials.",
+          "Conduct regular audits of development applications and extensions to detect supply chain malware.",
+          "Be vigilant about proxy service offerings (like IPCola) that could exploit devices without their owners' knowledge."
+        ],
+        "tags": [
+          "malware",
+          "phishing",
+          "exploitation",
+          "adware",
+          "cloud_security",
+          "AI_security",
+          "supply_chain",
+          "botnet",
+          "geopolitic"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/threatsday-bulletin-ghostad-drain-macos.html"
+        ],
+        "date": "2026-01-02"
+      },
+      {
+        "title": "Trust Wallet confirms second Shai-Hulud supply-chain attack, $8.5M in crypto stolen",
+        "description": "Trust Wallet confirmed a second supply-chain attack, dubbed Shai-Hulud, which likely compromised its Chrome extension, leading to the theft of approximately $8.5 million in crypto assets. The attack was facilitated by a leaked Chrome Web Store API key and access to the extension's source code following a previous incident, allowing attackers to publish a malicious version (v2.68) exfiltrating sensitive wallet data to an attacker-controlled domain ('metrics-trustwallet.com').",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "metrics-trustwallet.com",
+            "api.metrics-trustwallet.com"
+          ],
+          "IPv4": [
+            "138.124.70.40"
+          ],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "ASN": [],
+          "CVE": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv6": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.002",
+          "T1078",
+          "T1588.003",
+          "T1583.001",
+          "T1003",
+          "T1041"
+        ],
+        "analyse": "This attack highlights the persistent risks of supply chain compromises, especially for critical applications like cryptocurrency wallets. The reuse of a leaked API key demonstrates the importance of rigorous secret rotation and continuous monitoring of source code integrity and release processes. The attacker's use of 'bulletproof' hosting indicates resilient censorship-resistant infrastructure.",
+        "recommandations": [
+          "Users of Trust Wallet version 2.68 (Dec 24–26, 2025) should immediately move their funds to a secure wallet and update to version 2.69 or higher.",
+          "Implement automatic revocation and rotation processes for API keys and development secrets.",
+          "Strengthen security controls and audits over browser extension publishing processes.",
+          "Establish advanced monitoring to detect sensitive data exfiltration and traffic to suspicious domains.",
+          "Use multi-factor authentication for all access to development and publishing services."
+        ],
+        "tags": [
+          "supply_chain",
+          "cryptocurrency_theft",
+          "data_breach",
+          "chrome_extension",
+          "api_key_compromise",
+          "wallet_drainer"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186398/hacking/trust-wallet-confirms-second-shai-hulud-supply-chain-attack-8-5m-in-crypto-stolen.html"
+        ],
+        "date": "2026-01-02"
+      }
+    ]
+  }
+}
