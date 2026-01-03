@@ -1,0 +1,1650 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber révèle une menace multiforme et en constante évolution. Le ransomware et les violations de données demeurent des vecteurs d'attaque prédominants, impactant gravement les secteurs de la santé, de l'assurance et des services financiers, avec des acteurs tels que Qilin, LockBit, CL0P et Scattered Spider qui continuent leurs opérations lucratives. Un nombre alarmant de vulnérabilités connues, certaines datant de plusieurs années (comme CVE-2020-12812 pour Fortinet), restent largement non corrigées et sont activement exploitées, soulignant un problème persistant dans la gestion des correctifs. Les attaquants montrent une sophistication croissante en abusant de services cloud légitimes (ex: Google Cloud Application Integration) pour mener des campagnes de phishing plus crédibles et en utilisant des techniques d'obfuscation avancées (ex: Pyarmor pour VVS Stealer). Les attaques sur la chaîne d'approvisionnement logicielle (ex: Shai-Hulud sur les packages NPM, CL0P sur Oracle E-Business Suite) et la prolifération de botnets (ex: Kimwolf) exploitant des vulnérabilités dans les appareils IoT et les réseaux résidentiels étendent considérablement la surface d'attaque. Parallèlement, la menace interne, comme illustré par l'affaire BlackCat/ALPHV impliquant des professionnels de la cybersécurité, met en évidence les risques liés aux accès privilégiés. Le facteur humain reste un maillon faible, l'email étant la principale porte d'entrée pour de nombreuses attaques en raison de la complaisance des employés et du manque d'automatisation des réponses. Enfin, le paysage géopolitique se complexifie avec des actions déstabilisatrices (ex: Émirats arabes unis) et des préoccupations croissantes concernant la désinformation alimentée par l'IA sur les plateformes sociales, exigeant une vigilance accrue sur la régulation et la gouvernance de ces technologies. La convergence de ces tendances indique un environnement de menace qui exige une approche proactive, multicouche et une adaptation rapide des défenses.",
+      "date": "2026-01-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Qilin group",
+        "secteur": "Santé",
+        "modop": "Attaques de ransomware ciblant des organisations pour l'extorsion de données et de fonds.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extorsion",
+          "santé"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186439/data-breach/covenant-health-data-breach-after-ransomware-attack-impacted-over-478000-people.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Attackers (LastPass/Crypto thefts)",
+        "secteur": "Services Financiers (cryptomonnaie)",
+        "modop": "Déchiffrement progressif de coffres-forts chiffrés volés lors de la violation de LastPass en 2022, extraction de clés privées et phrases de récupération de portefeuilles de cryptomonnaies, et blanchiment des fonds via des échanges russes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "vol_cryptomonnaie",
+          "blanchiment_argent",
+          "lastpass_breach",
+          "vol_cles_privees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cryptocurrency-theft-attacks-traced-to-2022-lastpass-breach/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "BlackCat/Alphv (affiliates Ryan Goldberg, Kevin Martin)",
+        "secteur": "Santé, Pharmaceutique, Technologie, Ingénierie, Fabrication (Drones)",
+        "modop": "Déploiement du ransomware BlackCat/ALPHV contre des entreprises américaines, extorsion de rançons (environ 1,2 M$ en Bitcoin), partage des profits et blanchiment de fonds. Opérationnalisé par des professionnels de la cybersécurité agissant comme menaces internes ou affiliés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "insider_threat",
+          "extorsion",
+          "blanchiment_argent"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186446/cyber-crime/two-u-s-cybersecurity-professionals-plead-guilty-in-blackcat-alphv-ransomware-case.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Kimwolf Botnet operators",
+        "secteur": "Large (consommateurs, IoT, réseaux résidentiels)",
+        "modop": "Exploitation de vulnérabilités dans les services de proxy résidentiels (notamment IPIDEA) et du mode Android Debug Bridge (ADB) activé par défaut sur les boîtiers Android TV et cadres photo numériques. Propagation massive pour former un botnet utilisé pour la fraude publicitaire, les tentatives de prise de contrôle de comptes, le scraping de contenu et les attaques DDoS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "kimwolf",
+          "proxy_residentiel",
+          "iot",
+          "adb",
+          "fraude_publicitaire",
+          "ddos"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Shai-Hulud",
+        "secteur": "Développeurs, Cryptomonnaie",
+        "modop": "Compromission de plus de 800 packages npm via une charge utile auto-propagatrice pour voler des secrets de développeurs et des clés API. Lié au vol de cryptomonnaies via des extensions de navigateur malveillantes (ex: Trust Wallet).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "npm_packages",
+          "vol_secrets_dev",
+          "api_keys",
+          "crypto_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-links-85-million-crypto-theft-to-shai-hulud-npm-attack/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "VVS Stealer",
+        "secteur": "Utilisateurs Discord",
+        "modop": "Infostealer basé sur Python, utilisant Pyarmor pour l'obfuscation. Cible les utilisateurs Discord pour exfiltrer les identifiants et les jetons Discord ainsi que les données du navigateur. Achève la persistance par installation automatique au démarrage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "discord",
+          "pyarmor",
+          "obfuscation",
+          "evasion",
+          "vol_identifiants",
+          "persistance"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/vvs-stealer/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Scattered Spider",
+        "secteur": "Assurance",
+        "modop": "Utilisation de l'ingénierie sociale, notamment l'usurpation d'identité d'employés IT, pour obtenir un accès initial et exfiltrer des volumes massifs de données sensibles. Pas de déploiement de rançongiciel, mais vol de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "social_engineering",
+          "impersonation",
+          "vol_donnees",
+          "assurance"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/aflac-227-millions-de-personnes-touchees-apres-la-fuite-de-juin/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "CL0P ransomware group",
+        "secteur": "Multiples (e.g., éducation, transport aérien)",
+        "modop": "Ciblage et exploitation de vulnérabilités logicielles tierces, notamment dans les systèmes Oracle E-Business Suite, pour compromettre des millions de dossiers d'employés et personnels.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "cl0p",
+          "supply_chain_attack",
+          "oracle"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Volt Typhoon",
+        "secteur": "Gouvernement (Défense)",
+        "modop": "Exploitation de vulnérabilités FortiOS (CVE-2023-27997 et CVE-2022-42475) pour backdoor des réseaux militaires avec le cheval de Troie Coathanger, dans le cadre d'opérations d'espionnage soutenues par l'État chinois.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "state_sponsored",
+          "volt_typhoon",
+          "fortios",
+          "rat",
+          "defense",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-fortinet-firewalls-exposed-to-ongoing-2fa-bypass-attacks/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Géopolitique",
+        "theme": "Conflits d'intérêts et expansion d'influence",
+        "description": "Les Émirats arabes unis poursuivent une politique d'expansion d'influence, notamment au Soudan (soutien aux Forces de Soutien Rapide, FSR, impliquées dans des massacres au Darfour pour des intérêts aurifères) et au Yémen (soutien aux milices sécessionnistes du Conseil de Transition du Sud, CTS). Ils ont également facilité la reconnaissance du Somaliland par Israël, créant des tensions avec l'Arabie Saoudite, la Turquie et l'Égypte, qui voient ces actions comme une déstabilisation régionale et une atteinte à l'intégrité territoriale de la Somalie. Ces actions soulignent une stratégie de domination économique et militaire, se heurtant aux intérêts des puissances régionales.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "emirats_arabes_unis",
+          "soudan",
+          "yemen",
+          "somaliland",
+          "israel",
+          "arabie_saoudite",
+          "turquie",
+          "egypte",
+          "conflit",
+          "influence_economique",
+          "militaire"
+        ],
+        "sources": [
+          "https://www.iris-france.org/ou-sarreteront-les-actions-destabilisatrices-des-emirats-arabes-unis/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Gouvernement, Industries Critiques",
+        "theme": "Réglementation cybernationale et contrôle",
+        "description": "La Chine a mis à jour sa loi sur la cybersécurité (en vigueur le 1er janvier 2026), imposant des délais de signalement plus stricts et une plus grande responsabilité aux opérateurs d'infrastructures critiques. Cela reflète une tendance mondiale vers un contrôle accru des données et des incidents cyber.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "cybersécurité",
+          "loi",
+          "reglementation",
+          "infrastructures_critiques",
+          "controle_donnees"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Politique, Médias Sociaux",
+        "theme": "Désinformation par IA et impact démocratique",
+        "description": "La Pologne a demandé à la Commission européenne d'enquêter sur TikTok concernant une campagne générée par l'IA promouvant le \"Polexit\" (sortie de la Pologne de l'UE). Ceci met en lumière les risques de la désinformation alimentée par l'IA sur les plateformes sociales et les défis pour la démocratie, en particulier chez les jeunes utilisateurs, en rapport avec les obligations du Digital Services Act.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "pologne",
+          "tiktok",
+          "ia",
+          "desinformation",
+          "digital_services_act",
+          "democratie",
+          "europe"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Covenant Health (US)",
+        "description": "Violation de données suite à une attaque de ransomware par le groupe Qilin en mai 2025, affectant près de 478 000 patients. Données exposées incluent noms, adresses, dates de naissance, numéros de dossier médical, numéros de sécurité sociale, informations d'assurance maladie et détails de traitement.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "healthcare",
+          "ransomware",
+          "qilin_group",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/covenant-health-says-may-data-breach-impacted-nearly-478-000-patients/",
+          "https://securityaffairs.com/186439/data-breach/covenant-health-data-breach-after-ransomware-attack-impacted-over-478000-people.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Logiciel (gestionnaire de mots de passe) / Services Financiers (cryptomonnaie)",
+        "victime": "Utilisateurs LastPass",
+        "description": "Vague continue de vols de cryptomonnaies, d'un montant estimé à plus de 28 millions de dollars, tracés jusqu'à la violation de LastPass de 2022. Les attaquants ont progressivement déchiffré les coffres-forts volés contenant des clés privées de portefeuilles et des phrases de récupération, puis blanchi l'argent via des échanges russes.",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "cryptomonnaie",
+          "vol_donnees",
+          "vol_actifs",
+          "blanchiment",
+          "russie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cryptocurrency-theft-attacks-traced-to-2022-lastpass-breach/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "ManageMyHealth (Nouvelle-Zélande)",
+        "description": "Violation de données affectant au moins 108 000 utilisateurs du portail d'informations patient ManageMyHealth, exposant potentiellement des dossiers médicaux.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "healthcare",
+          "nouvelle_zelande",
+          "patient_records"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/nz-managemyhealth-data-breach-more-than-108k-users-potentially-affected/?pk_campaign=feed&pk_kwd=nz-managemyhealth-data-breach-more-than-108k-users-potentially-affected",
+          "https://mastodon.nz/@Kay/115828204959159714"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Consulting Radiologists Ltd. (US)",
+        "description": "Violation de données en février 2024, exposant des informations \"hautement confidentielles\" de 512 000 personnes. L'incident a été revendiqué par LockBit. Un règlement de plus de 2 millions de dollars a été convenu pour les clients affectés.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "healthcare",
+          "lockbit",
+          "ransomware",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/healthcare-firm-handing-2000000-to-customers-after-data-breach-exposes-highly-confidential-information-of-512000-people/?pk_campaign=feed&pk_kwd=healthcare-firm-handing-2000000-to-customers-after-data-breach-exposes-highly-confidential-information-of-512000-people"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Spatial / Gouvernemental",
+        "victime": "European Space Agency",
+        "description": "Confirmation d'une violation de serveurs externes à son réseau d'entreprise, contenant des informations \"non classifiées\" sur des activités d'ingénierie collaborative.",
+        "tags": [
+          "violation",
+          "breach",
+          "espace",
+          "government",
+          "ingenierie",
+          "esa"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/european-space-agency-confirms-breach-of-external-servers/?pk_campaign=feed&pk_kwd=european-space-agency-confirms-breach-of-external-servers"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Grenoble École de Management (France)",
+        "description": "Données personnelles exposées en lien avec les activités de l'école.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "france",
+          "pii"
+        ],
+        "sources": [
+          "https://nanao.cybtex.fr/@minus/115828095748339290"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Assurance",
+        "victime": "Aflac (US)",
+        "description": "Cyberattaque en juin 2025, attribuée à Scattered Spider, ayant entraîné le vol d'informations personnelles (demandes d'indemnisation, données de santé, numéros de sécurité sociale) concernant environ 22,7 millions de personnes. L'entreprise a proposé deux ans de services de protection d'identité aux victimes.",
+        "tags": [
+          "violation",
+          "breach",
+          "assurance",
+          "finance",
+          "pii",
+          "phi",
+          "scattered_spider"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/aflac-227-millions-de-personnes-touchees-apres-la-fuite-de-juin/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Multiples (e.g., éducation, transport aérien)",
+        "victime": "Utilisateurs Oracle E-Business Suite",
+        "description": "Le groupe de ransomware CL0P a continué de cibler les systèmes Oracle E-Business Suite globalement, compromettant des millions de dossiers d'employés et personnels via des vulnérabilités logicielles tierces, soulignant les risques des dépendances fournisseurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "cl0p",
+          "ransomware",
+          "supply_chain",
+          "oracle",
+          "e_business_suite"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Publicité / Données personnelles",
+        "victime": "Nexpublica France",
+        "description": "Amende de 1,7 million d'euros imposée par la CNIL à Nexpublica France pour ne pas avoir sécurisé des données personnelles sensibles dans son système PCRM, suite à une violation en 2022 exposant des informations sur des handicaps et autres détails personnels.",
+        "tags": [
+          "violation",
+          "breach",
+          "données_personnelles",
+          "gdpr",
+          "cnil",
+          "sanction"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64121",
+        "cvss": 10.0,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Vulnérabilité d'Authentification Bypass Using an Alternate Path or Channel affectant le Multi-Stack Controller (MSC) de Nuvation Energy (versions 2.3.8 avant 2.5.1), permettant un contournement complet de l'authentification.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "authentication_bypass",
+          "criticité_critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64121"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": 9.8,
+        "product": "FortiGate SSL VPN (Fortinet FortiOS)",
+        "description": "Vulnérabilité de contournement de l'authentification à deux facteurs (2FA bypass) dans FortiGate SSL VPN (FortiOS versions 6.4.0, 6.2.0-6.2.3, 6.0.9 et antérieures), permettant aux attaquants de se connecter en modifiant la casse du nom d'utilisateur. Activement exploitée depuis 5 ans.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "fortigate",
+          "ssl_vpn",
+          "2fa_bypass",
+          "authentification_faille",
+          "active_exploitation",
+          "ldap"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-fortinet-firewalls-exposed-to-ongoing-2fa-bypass-attacks/",
+          "https://cybersecuritynews.com/fortinet-firewalls-exposed/",
+          "https://cvefeed.io/news/91439/thumbnail.jpg",
+          "https://cvefeed.io/news/91437/thumbnail.jpg"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Vulnérabilité critique de contournement d'authentification dans IBM API Connect permettant un accès à distance non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ibm",
+          "api_connect",
+          "authentication_bypass",
+          "remote_access",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186417/security/ibm-warns-of-critical-api-connect-bug-enabling-remote-access.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64125",
+        "cvss": 9.4,
+        "product": "Nuvation Energy nCloud VPN Service",
+        "description": "Vulnérabilité dans Nuvation Energy nCloud VPN Service permettant le Network Boundary Bridging.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "ncloud_vpn",
+          "network_boundary_bridging",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64125"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64123",
+        "cvss": 9.4,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Vulnérabilité d'Unintended Proxy or Intermediary dans Nuvation Energy Multi-Stack Controller (MSC) (jusqu'à la version 2.5.1 incluse) permettant le Network Boundary Bridging.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "proxy_service",
+          "network_boundary_bridging",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64123"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64120",
+        "cvss": 9.4,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Vulnérabilité d'Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') dans Nuvation Energy Multi-Stack Controller (MSC) (versions 2.3.8 avant 2.5.1).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "os_command_injection",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64120"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64119",
+        "cvss": 9.3,
+        "product": "Nuvation Battery Management System",
+        "description": "Vulnérabilité dans Nuvation Battery Management System (jusqu'à la version 2.3.9) permettant un contournement de l'authentification côté client.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_battery_management_system",
+          "authentication_bypass",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64119"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2026-21448",
+        "cvss": 8.9,
+        "product": "Bagisto (Laravel eCommerce platform)",
+        "description": "Vulnérabilité d'injection de template côté serveur (SSTI) dans Bagisto (versions antérieures à 2.3.10). Un utilisateur peu privilégié peut injecter une valeur dans l'étape 'add address' lors de la commande d'un produit, pouvant mener à une exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bagisto",
+          "ecommerce",
+          "laravel",
+          "ssti",
+          "rce",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21448"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64124",
+        "cvss": 8.7,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Vulnérabilité d'OS Command Injection dans Nuvation Energy Multi-Stack Controller (MSC) (versions avant 2.5.1).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "os_command_injection",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64124"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server",
+        "description": "Vulnérabilité \"Mongobleed\" (Pre-authentication memory disclosure) affectant les serveurs MongoDB (versions 4.4 à 8.2, avec les versions EOL 3.6, 4.0, 4.2 restant vulnérables). Permet aux attaquants non authentifiés de voler des données sensibles de la mémoire du serveur. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mongodb",
+          "mongobleed",
+          "memory_disclosure",
+          "pre_authentication",
+          "active_exploitation",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/mongobleed-vulnerability-2/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-68461",
+        "cvss": null,
+        "product": "Roundcube Webmail",
+        "description": "Vulnérabilité de cross-site scripting (XSS) dans Roundcube Webmail permettant à un attaquant de prendre le contrôle d'un compte de messagerie à distance en envoyant un e-mail avec un fichier SVG spécialement conçu. Impact critique malgré l'absence de score CVSS.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "roundcube",
+          "webmail",
+          "xss",
+          "account_takeover",
+          "criticité_élevée"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/919517/Roundcube+Webmail+XSS-lek+laat+aanvaller+e-mailaccounts+overnemen?channel=rss"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Moving Forward with Memory Analysis: From Volatility to MemProcFS : Part 3",
+        "description": "Troisième partie d'une série technique sur l'analyse de la mémoire Windows utilisant MemProcFS. L'article détaille comment le système d'exploitation Windows met en cache un grand nombre de fichiers en mémoire, incluant les ruches de registre, les fichiers Prefetch, les $MFT, les fichiers mappés en mémoire (exécutables, DLLs) et les fichiers utilisateur récemment accédés. Il explique comment tous ces éléments mis en cache sont suivis en mémoire.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article offre une analyse technique approfondie des mécanismes de mise en cache de la mémoire sous Windows, essentielle pour les professionnels de la criminalistique numérique (DFIR). La compréhension de ces artefacts peut aider à détecter des activités malveillantes qui tentent de manipuler ou de cacher leur présence en mémoire. Les informations sont cruciales pour l'investigation post-incident et le développement d'outils d'analyse de mémoire plus sophistiqués.",
+        "recommandations": "Les professionnels du DFIR devraient intégrer MemProcFS dans leurs outils d'analyse pour une visibilité accrue sur les artefacts cachés en mémoire. Développer des signatures pour détecter les altérations inattendues dans les zones de mémoire cachée.",
+        "tags": [
+          "analyse_memoire",
+          "memory_analysis",
+          "dfir",
+          "forensic",
+          "windows",
+          "memprocfs",
+          "artefact_systeme",
+          "cache_memory",
+          "technique"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-3"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Email, première brèche pour les entreprises en 2025",
+        "description": "Un rapport de Barracuda révèle que 78% des organisations ont subi une violation liée à l'email en 2025. Les attaques clés incluent le phishing, le spear phishing, la compromission de messagerie professionnelle (BEC) et le piratage de compte. Le rapport met en évidence les coûts élevés des violations (moyenne de 217 068 $) et le lien fort entre l'email et les attaques de ransomware. La complaisance des employés et le manque d'automatisation sont des freins majeurs à une réponse rapide.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.001 (Spearphishing Attachment), T1566.002 (Spearphishing Link), T1078 (Valid Accounts), T1192 (Credential Phishing), T1071.001 (Web Protocols)",
+        "analyse": "L'email demeure le vecteur d'attaque initial le plus répandu, soulignant un problème persistant dans la posture de sécurité des organisations, notamment la dépendance à la sensibilisation des utilisateurs et l'efficacité des solutions de protection. Les PME sont proportionnellement plus touchées par les coûts de remédiation. L'impact va au-delà des coûts directs, affectant la réputation et la productivité.",
+        "recommandations": "Renforcer la formation continue des employés sur la reconnaissance du phishing et le signalement des emails suspects. Implémenter une authentification multifacteur (MFA) étendue et des protocoles d'authentification d'email (SPF, DKIM, DMARC). Automatiser la détection et la réponse aux incidents liés à l'email.",
+        "tags": [
+          "email",
+          "phishing",
+          "spear_phishing",
+          "bec",
+          "compromission_messagerie",
+          "ransomware",
+          "violation_donnees",
+          "sensibilisation",
+          "pme",
+          "automatisation",
+          "t1566",
+          "t1078",
+          "t1192",
+          "t1071_001"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/email-premiere-breche-pour-les-entreprises-en-2025/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "The Kimwolf Botnet is Stalking Your Local Network",
+        "description": "Le botnet Kimwolf a infecté plus de 2 millions d'appareils, principalement des boîtiers Android TV et des cadres photo numériques, en exploitant une vulnérabilité dans les services de proxy résidentiels (notamment IPIDEA) et en tirant parti du mode Android Debug Bridge (ADB) activé par défaut sur ces appareils. Kimwolf est utilisé pour la fraude publicitaire, les tentatives de prise de contrôle de comptes, le scraping de contenu et les attaques DDoS.",
+        "threat_actor": "Kimwolf Botnet operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "14emeliaterracewestroxburyma02132[.]su"
+          ]
+        },
+        "mitre_ttps": "T1071.001 (Web Protocols), T1059 (Command and Scripting Interpreter), T1562.001 (Impair Defenses - Disable or Modify System Firewall), T1090 (Proxy), T1498 (DDoS)",
+        "analyse": "La menace Kimwolf met en lumière la fragilité des appareils IoT grand public et des services de proxy résidentiels, transformant les réseaux domestiques en points d'entrée pour des activités cybercriminelles à grande échelle. L'exploitation du mode ADB par défaut est une vulnérabilité de chaîne d'approvisionnement majeure. L'impact géographique est mondial, avec des concentrations en Asie du Sud-Est et en Amérique du Sud.",
+        "recommandations": "Débrancher les boîtiers Android TV ou cadres photo numériques non fiables. Utiliser un réseau Wi-Fi invité pour les visiteurs. Isoler les appareils IoT dans des VLANs distincts. Vérifier les paramètres DNS du routeur et s'assurer que l'ADB est désactivé sur les appareils connectés. Surveiller le trafic réseau pour détecter les activités de proxy non autorisées.",
+        "tags": [
+          "botnet",
+          "kimwolf",
+          "android_tv",
+          "iot",
+          "proxy_residentiel",
+          "ipidea",
+          "adb",
+          "ddos",
+          "fraude_publicitaire",
+          "supply_chain",
+          "reseau_domestique",
+          "t1071_001",
+          "t1059",
+          "t1562_001",
+          "t1090",
+          "t1498"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Phishing campaign abuses Google Cloud Application to impersonate legitimate Google emails",
+        "description": "Une campagne de phishing utilise la fonctionnalité légitime \"Send Email\" de Google Cloud Application Integration pour envoyer des emails d'hameçonnage depuis des domaines appartenant à Google, contournant ainsi les défenses basées sur la réputation de l'expéditeur. Les attaquants utilisent une chaîne de redirection à plusieurs étapes via des services cloud de confiance pour des vérifications CAPTCHA factices, menant finalement à une fausse page de connexion Microsoft pour voler des identifiants. Les secteurs ciblés sont la fabrication, l'industrie, la technologie/SaaS et la finance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://storage.cloud.google.com",
+            "https://googleusercontent.com"
+          ]
+        },
+        "mitre_ttps": "T1566.002 (Phishing - Spearphishing Link), T1059.007 (Command and Scripting Interpreter: JavaScript), T1583.006 (Acquire Infrastructure: Web Services), T1189 (Drive-by Compromise)",
+        "analyse": "Cette campagne illustre une tendance croissante où les attaquants abusent de services cloud légitimes pour améliorer la crédibilité de leurs attaques et contourner les protections traditionnelles. La sophistication de la chaîne de redirection et l'usurpation de marque Google/Microsoft rend la détection difficile pour les utilisateurs finaux et les systèmes de sécurité. L'impact est global avec une forte concentration aux États-Unis.",
+        "recommandations": "Sensibiliser les utilisateurs aux tactiques de phishing avancées, y compris celles qui utilisent des domaines de confiance. Mettre en œuvre des solutions de sécurité email avancées avec analyse comportementale et de liens profonds. Renforcer l'authentification multifacteur (MFA) pour tous les comptes. Surveiller les journaux des services cloud pour des activités inhabituelles.",
+        "tags": [
+          "phishing",
+          "google_cloud",
+          "cloud_security",
+          "email_security",
+          "brand_impersonation",
+          "credential_harvesting",
+          "t1566_002",
+          "t1059_007",
+          "t1583_006",
+          "t1189"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186425/cyber-crime/phishing-campaign-abuses-google-cloud-application-to-impersonate-legitimate-google-emails.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Two U.S. cybersecurity professionals plead guilty in BlackCat/Alphv ransomware case",
+        "description": "Deux professionnels de la cybersécurité américains, Ryan Goldberg et Kevin Martin, ont plaidé coupable pour leur rôle dans des attaques de ransomware BlackCat/ALPHV entre avril et décembre 2023. Ils ont déployé le ransomware contre cinq entreprises américaines (dispositifs médicaux, pharmaceutique, cabinet médical, ingénierie, fabricant de drones) et extorqué environ 1,2 million de dollars en Bitcoin d'une victime, blanchissant les fonds par la suite. Cet incident met en lumière la menace interne et l'opération du modèle Ransomware-as-a-Service (RaaS).",
+        "threat_actor": "BlackCat/Alphv (affiliates Ryan Goldberg, Kevin Martin)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1486 (Data Encrypted for Impact), T1567 (Exfiltration Over Web Service), T1078 (Valid Accounts), T1078.001 (Valid Accounts: Domain Accounts), T1078.003 (Valid Accounts: Local Accounts)",
+        "analyse": "Ce cas est un exemple frappant de menace interne et de l'exploitation des compétences en cybersécurité à des fins criminelles. Il révèle les risques liés à l'accès privilégié et la collaboration entre des acteurs internes et des groupes de ransomware. L'impact financier est significatif pour les victimes, et la confiance dans l'industrie de la cybersécurité est ébranlée.",
+        "recommandations": "Renforcer les contrôles d'accès et les principes du moindre privilège, même pour le personnel de sécurité. Mettre en place une surveillance rigoureuse des activités des administrateurs et des professionnels ayant des accès privilégiés. Développer des processus robustes pour la détection des activités de blanchiment d'argent impliquant des cryptomonnaies.",
+        "tags": [
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "menace_interne",
+          "insider_threat",
+          "extorsion",
+          "blanchiment_argent",
+          "cybercriminalite",
+          "t1486",
+          "t1567",
+          "t1078"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186446/cyber-crime/two-u-s-cybersecurity-professionals-plead-guilty-in-blackcat-alphv-ransomware-case.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Trust Wallet links $8.5 million crypto theft to Shai-Hulud NPM attack",
+        "description": "Trust Wallet attribue le vol d'environ 8,5 millions de dollars en cryptomonnaies de plus de 2 500 portefeuilles à une attaque \"à l'échelle de l'industrie\" baptisée Shai-Hulud sur les packages NPM. Des attaquants ont ajouté un fichier JavaScript malveillant à l'extension Chrome de Trust Wallet, dérobant des données de portefeuille sensibles et exécutant des transactions non autorisées après avoir exposé des secrets de développeur GitHub et la clé API du Chrome Web Store.",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "metrics-trustwallet.com",
+            "api.metrics-trustwallet.com"
+          ]
+        },
+        "mitre_ttps": "T1195 (Supply Chain Compromise), T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain), T1059.007 (Command and Scripting Interpreter: JavaScript), T1552 (Unsecured Credentials), T1078 (Valid Accounts), T1560 (Archive Collected Data)",
+        "analyse": "Cette attaque met en évidence la vulnérabilité des chaînes d'approvisionnement logicielles (NPM packages) et des extensions de navigateur comme vecteurs de compromission. Le vol de secrets de développeurs GitHub permet aux attaquants d'injecter du code malveillant dans des versions logicielles légitimes, rendant la détection extrêmement difficile. L'impact est financier direct et significatif pour les utilisateurs de cryptomonnaies.",
+        "recommandations": "Surveiller les dépendances logicielles (NPM) et utiliser des outils de sécurité de la chaîne d'approvisionnement. Mettre en œuvre des pratiques de sécurité robustes pour les développeurs, y compris la protection des secrets GitHub et des clés API. Auditer régulièrement les extensions de navigateur. Sensibiliser les utilisateurs aux risques des extensions compromises et des mises à jour inattendues.",
+        "tags": [
+          "crypto_theft",
+          "trust_wallet",
+          "shai_hulud",
+          "npm_attack",
+          "supply_chain",
+          "malicious_extension",
+          "github_secrets",
+          "api_key_compromise",
+          "t1195",
+          "t1195_002",
+          "t1059_007",
+          "t1552",
+          "t1078",
+          "t1560"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-links-85-million-crypto-theft-to-shai-hulud-npm-attack/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "VVS Discord Stealer Using Pyarmor for Obfuscation and Detection Evasion",
+        "description": "Analyse technique du VVS Stealer, un infostealer basé sur Python ciblant les utilisateurs de Discord. Il utilise Pyarmor pour obfuscation et évasion de détection, exfiltre les identifiants et les jetons Discord, et les données du navigateur. Le malware s'installe automatiquement au démarrage pour la persistance, affiche de faux messages d'erreur et capture des captures d'écran.",
+        "threat_actor": "VVS Stealer (operators)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1059.006 (Command and Scripting Interpreter: Python), T1027 (Obfuscated Files or Information), T1056.001 (Input Capture: Keylogging), T1056.002 (Input Capture: Screen Capture), T1078 (Valid Accounts), T1552 (Unsecured Credentials), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "VVS Stealer illustre la sophistication croissante des malwares basés sur Python et l'utilisation de techniques d'obfuscation avancées (Pyarmor) pour échapper à la détection. La cible des plateformes de communication populaires comme Discord et l'exfiltration d'identifiants représentent une menace directe pour les données personnelles et les comptes en ligne. La persistance et la furtivité augmentent le temps de détection.",
+        "recommandations": "Mettre en œuvre des solutions de détection de malware basées sur le comportement pour contrer l'obfuscation. Former les utilisateurs aux risques liés aux logiciels non officiels et aux liens malveillants. Utiliser l'authentification multifacteur (MFA) pour les comptes Discord et autres services sensibles. Surveiller les répertoires de démarrage et les processus en cours pour des activités suspectes.",
+        "tags": [
+          "infostealer",
+          "vvs_stealer",
+          "discord",
+          "python",
+          "pyarmor",
+          "obfuscation",
+          "evasion",
+          "vol_identifiants",
+          "persistance",
+          "t1059_006",
+          "t1027",
+          "t1056_001",
+          "t1056_002",
+          "t1078",
+          "t1552",
+          "t1547_001"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/vvs-stealer/"
+        ],
+        "date": "2026-01-03"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "Cyber intelligence reveals a multifaceted and constantly evolving threat landscape. Ransomware and data breaches remain predominant attack vectors, severely impacting healthcare, insurance, and financial services sectors, with actors like Qilin, LockBit, CL0P, and Scattered Spider continuing their lucrative operations. An alarming number of known vulnerabilities, some years old (e.g., CVE-2020-12812 for Fortinet), remain largely unpatched and are actively exploited, highlighting a persistent issue in patch management. Attackers demonstrate increasing sophistication by abusing legitimate cloud services (e.g., Google Cloud Application Integration) to conduct more credible phishing campaigns and by using advanced obfuscation techniques (e.g., Pyarmor for VVS Stealer). Software supply chain attacks (e.g., Shai-Hulud on NPM packages, CL0P on Oracle E-Business Suite) and the proliferation of botnets (e.g., Kimwolf) exploiting vulnerabilities in IoT devices and residential networks significantly expand the attack surface. In parallel, the insider threat, as illustrated by the BlackCat/ALPHV case involving cybersecurity professionals, underscores the risks associated with privileged access. The human factor remains a weak link, with email being the primary entry point for many attacks due to employee complacency and lack of automated response. Finally, the geopolitical landscape is becoming more complex with destabilizing actions (e.g., United Arab Emirates) and growing concerns about AI-powered disinformation on social platforms, demanding increased vigilance on the regulation and governance of these technologies. The convergence of these trends indicates a threat environment that requires a proactive, multi-layered approach and rapid adaptation of defenses.",
+      "date": "2026-01-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Qilin group",
+        "secteur": "Healthcare",
+        "modop": "Ransomware attacks targeting organizations for data exfiltration and financial extortion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "extortion",
+          "healthcare"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186439/data-breach/covenant-health-data-breach-after-ransomware-attack-impacted-over-478000-people.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Attackers (LastPass/Crypto thefts)",
+        "secteur": "Financial Services (cryptocurrency)",
+        "modop": "Gradual decryption of encrypted vaults stolen during the 2022 LastPass breach, extraction of cryptocurrency wallet private keys and seed phrases, and laundering funds through Russian exchanges.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cryptocurrency_theft",
+          "money_laundering",
+          "lastpass_breach",
+          "private_key_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cryptocurrency-theft-attacks-traced-to-2022-lastpass-breach/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "BlackCat/Alphv (affiliates Ryan Goldberg, Kevin Martin)",
+        "secteur": "Healthcare, Pharmaceutical, Technology, Engineering, Manufacturing (Drones)",
+        "modop": "Deployment of BlackCat/ALPHV ransomware against U.S. companies (April-December 2023), extortion of ransoms (approx. $1.2M in Bitcoin), profit sharing, and fund laundering. Operated by cybersecurity professionals acting as insider threats or affiliates.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "insider_threat",
+          "extortion",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186446/cyber-crime/two-u-s-cybersecurity-professionals-plead-guilty-in-blackcat-alphv-ransomware-case.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Kimwolf Botnet operators",
+        "secteur": "Broad (consumers, IoT, residential networks)",
+        "modop": "Exploiting vulnerabilities in residential proxy services (notably IPIDEA) and Android Debug Bridge (ADB) mode enabled by default on Android TV boxes and digital photo frames. Mass propagation to form a botnet used for ad fraud, account takeover attempts, content scraping, and DDoS attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "kimwolf",
+          "residential_proxy",
+          "iot",
+          "adb",
+          "ad_fraud",
+          "ddos"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Shai-Hulud",
+        "secteur": "Developers, Cryptocurrency",
+        "modop": "Compromising over 800 npm packages via a self-propagating payload to steal developer secrets and API keys. Linked to cryptocurrency theft through malicious browser extensions (e.g., Trust Wallet).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "supply_chain_attack",
+          "npm_packages",
+          "developer_secrets_theft",
+          "api_keys",
+          "crypto_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-links-85-million-crypto-theft-to-shai-hulud-npm-attack/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "VVS Stealer",
+        "secteur": "Discord Users",
+        "modop": "Python-based infostealer, using Pyarmor for obfuscation. Targets Discord users to exfiltrate Discord credentials and tokens as well as browser data. Achieves persistence through automatic startup installation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "discord",
+          "pyarmor",
+          "obfuscation",
+          "evasion",
+          "credential_theft",
+          "persistence"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/vvs-stealer/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Scattered Spider",
+        "secteur": "Insurance",
+        "modop": "Using social engineering, particularly impersonation of IT employees, to gain initial access and exfiltrate massive volumes of sensitive data. No ransomware deployment, but data theft.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "social_engineering",
+          "impersonation",
+          "data_theft",
+          "insurance"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/aflac-227-millions-de-personnes-touchees-apres-la-fuite-de-juin/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "CL0P ransomware group",
+        "secteur": "Multiple (e.g., education, air transport)",
+        "modop": "Targeting and exploiting third-party software vulnerabilities, particularly in Oracle E-Business Suite systems, to compromise millions of employee and personal records.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "cl0p",
+          "supply_chain_attack",
+          "oracle"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "nom": "Volt Typhoon",
+        "secteur": "Government (Defense)",
+        "modop": "Exploitation of FortiOS vulnerabilities (CVE-2023-27997 and CVE-2022-42475) to backdoor military networks with Coathanger RAT, as part of Chinese state-sponsored espionage operations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "state_sponsored",
+          "volt_typhoon",
+          "fortios",
+          "rat",
+          "defense",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-fortinet-firewalls-exposed-to-ongoing-2fa-bypass-attacks/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Geopolitics",
+        "theme": "Conflicts of interest and expanding influence",
+        "description": "The United Arab Emirates pursues a policy of expanding influence, notably in Sudan (support for the Rapid Support Forces, RSF, involved in massacres in Darfur for gold interests) and Yemen (support for the Southern Transitional Council, STC, secessionist militias). They also facilitated Somaliland's recognition by Israel, creating tensions with Saudi Arabia, Turkey, and Egypt, who view these actions as regional destabilization and an infringement on Somalia's territorial integrity. These actions highlight a strategy of economic and military dominance, clashing with the interests of regional powers.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_arab_emirates",
+          "sudan",
+          "yemen",
+          "somaliland",
+          "israel",
+          "saudi_arabia",
+          "turkey",
+          "egypt",
+          "conflict",
+          "economic_influence",
+          "military"
+        ],
+        "sources": [
+          "https://www.iris-france.org/ou-sarreteront-les-actions-destabilisatrices-des-emirats-arabes-unis/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Government, Critical Infrastructure",
+        "theme": "Cybernational regulation and control",
+        "description": "China has updated its cybersecurity law (effective January 1, 2026), imposing stricter reporting deadlines and greater accountability on critical infrastructure operators. This reflects a global trend towards increased data control and cyber incident management.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "cybersecurity",
+          "law",
+          "regulation",
+          "critical_infrastructure",
+          "data_control"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Politics, Social Media",
+        "theme": "AI disinformation and democratic impact",
+        "description": "Poland has asked the European Commission to investigate TikTok regarding an AI-generated campaign promoting \"Polexit\" (Poland's exit from the EU). This highlights the risks of AI-powered disinformation on social platforms and the challenges for democracy, particularly among younger users, in relation to Digital Services Act obligations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "poland",
+          "tiktok",
+          "ai",
+          "disinformation",
+          "digital_services_act",
+          "democracy",
+          "europe"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Covenant Health (US)",
+        "description": "Data breach following a ransomware attack by the Qilin group in May 2025, affecting nearly 478,000 patients. Exposed data includes names, addresses, dates of birth, medical record numbers, Social Security numbers, health insurance information, and treatment details.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "qilin_group",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/covenant-health-says-may-data-breach-impacted-nearly-478-000-patients/",
+          "https://securityaffairs.com/186439/data-breach/covenant-health-data-breach-after-ransomware-attack-impacted-over-478000-people.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Software (password manager) / Financial Services (cryptocurrency)",
+        "victime": "LastPass Users",
+        "description": "Ongoing wave of cryptocurrency thefts, estimated at over $28 million, traced back to the 2022 LastPass breach. Attackers gradually decrypted stolen encrypted vaults containing crypto wallet private keys and seed phrases, then laundered money through Russian exchanges.",
+        "tags": [
+          "violation",
+          "breach",
+          "lastpass",
+          "cryptocurrency",
+          "data_theft",
+          "asset_theft",
+          "money_laundering",
+          "russia"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cryptocurrency-theft-attacks-traced-to-2022-lastpass-breach/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "ManageMyHealth (New Zealand)",
+        "description": "Data breach affecting at least 108,000 users of the ManageMyHealth patient information portal, potentially exposing medical records.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "new_zealand",
+          "patient_records"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/nz-managemyhealth-data-breach-more-than-108k-users-potentially-affected/?pk_campaign=feed&pk_kwd=nz-managemyhealth-data-breach-more-than-108k-users-potentially-affected",
+          "https://mastodon.nz/@Kay/115828204959159714"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Consulting Radiologists Ltd. (US)",
+        "description": "Data breach in February 2024, exposing \"highly confidential\" information of 512,000 individuals. The incident was claimed by LockBit. A settlement of over $2 million was agreed upon for affected customers.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "lockbit",
+          "ransomware",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/healthcare-firm-handing-2000000-to-customers-after-data-breach-exposes-highly-confidential-information-of-512000-people/?pk_campaign=feed&pk_kwd=healthcare-firm-handing-2000000-to-customers-after-data-breach-exposes-highly-confidential-information-of-512000-people"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Space / Government",
+        "victime": "European Space Agency",
+        "description": "Confirmation of a breach of external servers outside its corporate network, containing \"unclassified\" information on collaborative engineering activities.",
+        "tags": [
+          "violation",
+          "breach",
+          "space",
+          "government",
+          "engineering",
+          "esa"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/02/european-space-agency-confirms-breach-of-external-servers/?pk_campaign=feed&pk_kwd=european-space-agency-confirms-breach-of-external-servers"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Grenoble École de Management (France)",
+        "description": "Personal data exposed related to the school's activities.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "france",
+          "pii"
+        ],
+        "sources": [
+          "https://nanao.cybtex.fr/@minus/115828095748339290"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Insurance",
+        "victime": "Aflac (US)",
+        "description": "Cyberattack in June 2025, attributed to Scattered Spider, resulting in the theft of personal information (insurance claims, health data, SSN) concerning approximately 22.7 million individuals. The company offered two years of identity protection services to victims.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "finance",
+          "pii",
+          "phi",
+          "scattered_spider"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/aflac-227-millions-de-personnes-touchees-apres-la-fuite-de-juin/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Multiple (e.g., education, air transport)",
+        "victime": "Oracle E-Business Suite Users",
+        "description": "The CL0P ransomware group continued to target Oracle E-Business Suite systems globally, compromising millions of employee and personal records via third-party software vulnerabilities, highlighting risks from vendor dependencies.",
+        "tags": [
+          "violation",
+          "breach",
+          "cl0p",
+          "ransomware",
+          "supply_chain",
+          "oracle",
+          "e_business_suite"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "secteur": "Advertising / Personal Data",
+        "victime": "Nexpublica France",
+        "description": "Fine of €1.7 million imposed by CNIL on Nexpublica France for failing to secure sensitive personal data in its PCRM system, following a 2022 breach exposing information on disabilities and other personal details.",
+        "tags": [
+          "violation",
+          "breach",
+          "personal_data",
+          "gdpr",
+          "cnil",
+          "sanction"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64121",
+        "cvss": 10.0,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability affecting Nuvation Energy Multi-Stack Controller (MSC) (versions 2.3.8 before 2.5.1), allowing complete authentication bypass.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "authentication_bypass",
+          "critical_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64121"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2020-12812",
+        "cvss": 9.8,
+        "product": "FortiGate SSL VPN (Fortinet FortiOS)",
+        "description": "Two-factor authentication (2FA) bypass vulnerability in FortiGate SSL VPN (FortiOS versions 6.4.0, 6.2.0-6.2.3, 6.0.9 and earlier), allowing attackers to log in by changing the case of a username. Actively exploited for 5 years.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "fortinet",
+          "fortigate",
+          "ssl_vpn",
+          "2fa_bypass",
+          "authentication_flaw",
+          "active_exploitation",
+          "ldap"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/over-10-000-fortinet-firewalls-exposed-to-ongoing-2fa-bypass-attacks/",
+          "https://cybersecuritynews.com/fortinet-firewalls-exposed/",
+          "https://cvefeed.io/news/91439/thumbnail.jpg",
+          "https://cvefeed.io/news/91437/thumbnail.jpg"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-13915",
+        "cvss": 9.8,
+        "product": "IBM API Connect",
+        "description": "Critical authentication bypass vulnerability in IBM API Connect enabling unauthorized remote access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ibm",
+          "api_connect",
+          "authentication_bypass",
+          "remote_access",
+          "high_severity"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186417/security/ibm-warns-of-critical-api-connect-bug-enabling-remote-access.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64125",
+        "cvss": 9.4,
+        "product": "Nuvation Energy nCloud VPN Service",
+        "description": "Vulnerability in Nuvation Energy nCloud VPN Service allowing Network Boundary Bridging.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "ncloud_vpn",
+          "network_boundary_bridging",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64125"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64123",
+        "cvss": 9.4,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Unintended Proxy or Intermediary vulnerability in Nuvation Energy Multi-Stack Controller (MSC) (through and including release 2.5.1) allowing Network Boundary Bridging.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "proxy_service",
+          "network_boundary_bridging",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64123"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64120",
+        "cvss": 9.4,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Nuvation Energy Multi-Stack Controller (MSC) (versions 2.3.8 before 2.5.1).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "os_command_injection",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64120"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64119",
+        "cvss": 9.3,
+        "product": "Nuvation Battery Management System",
+        "description": "Vulnerability in Nuvation Battery Management System (through 2.3.9) allowing Client-side Authentication Bypass.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_battery_management_system",
+          "authentication_bypass",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64119"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2026-21448",
+        "cvss": 8.9,
+        "product": "Bagisto (Laravel eCommerce platform)",
+        "description": "Server-Side Template Injection (SSTI) vulnerability in Bagisto (versions prior to 2.3.10). A low-privileged user can inject a value in the 'add address' step when ordering a product, potentially leading to Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bagisto",
+          "ecommerce",
+          "laravel",
+          "ssti",
+          "rce",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21448"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-64124",
+        "cvss": 8.7,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "OS Command Injection vulnerability in Nuvation Energy Multi-Stack Controller (MSC) (versions before 2.5.1).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "nuvation_energy",
+          "multi_stack_controller",
+          "os_command_injection",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64124"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-14847",
+        "cvss": 8.7,
+        "product": "MongoDB Server",
+        "description": "\"Mongobleed\" (Pre-authentication memory disclosure) vulnerability affecting MongoDB Server (versions 4.4 through 8.2, with EOL versions 3.6, 4.0, 4.2 remaining vulnerable). Allows unauthenticated attackers to steal sensitive data directly from server memory. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mongodb",
+          "mongobleed",
+          "memory_disclosure",
+          "pre_authentication",
+          "active_exploitation",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/mongobleed-vulnerability-2/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-jan-2026/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "cve_id": "CVE-2025-68461",
+        "cvss": null,
+        "product": "Roundcube Webmail",
+        "description": "Cross-site scripting (XSS) vulnerability in Roundcube Webmail allowing an attacker to remotely take over an email account by sending a specially crafted SVG file via email. Critical impact despite no CVSS score provided.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "roundcube",
+          "webmail",
+          "xss",
+          "account_takeover",
+          "high_severity"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/919517/Roundcube+Webmail+XSS-lek+laat+aanvaller+e-mailaccounts+overnemen?channel=rss"
+        ],
+        "date": "2026-01-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Moving Forward with Memory Analysis: From Volatility to MemProcFS : Part 3",
+        "description": "Part three of a technical series on Windows memory analysis using MemProcFS. The article details how the Windows operating system caches a large number of files in memory, including registry hives, Prefetch files, $MFT, memory-mapped files (executables, DLLs), and recently accessed user files. It explains how all these cached items are tracked in memory.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This article provides an in-depth technical analysis of Windows memory caching mechanisms, essential for Digital Forensics and Incident Response (DFIR) professionals. Understanding these artifacts can help detect malicious activities that attempt to manipulate or hide their presence in memory. The information is crucial for post-incident investigation and the development of more sophisticated memory analysis tools.",
+        "recommandations": "DFIR professionals should integrate MemProcFS into their analysis toolkits for increased visibility into cached memory artifacts. Develop signatures to detect unexpected alterations in cached memory areas.",
+        "tags": [
+          "memory_analysis",
+          "dfir",
+          "forensic",
+          "windows",
+          "memprocfs",
+          "system_artifact",
+          "cache_memory",
+          "technical"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/moving-forward-with-memory-analysis-from-volatility-to-memprocfs-part-3"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Email, première brèche pour les entreprises en 2025",
+        "description": "A Barracuda report reveals that 78% of organizations experienced an email-related breach in 2025. Key attacks include phishing, spear phishing, Business Email Compromise (BEC), and account takeover. The report highlights the high costs of breaches (average $217,068) and the strong link between email and ransomware attacks. Employee complacency and lack of automation are major hindrances to rapid response.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566 (Phishing), T1566.001 (Spearphishing Attachment), T1566.002 (Spearphishing Link), T1078 (Valid Accounts), T1192 (Credential Phishing), T1071.001 (Web Protocols)",
+        "analyse": "Email remains the most prevalent initial attack vector, highlighting a persistent problem in organizations' security posture, particularly reliance on user awareness and the effectiveness of protection solutions. SMEs are proportionally more affected by remediation costs. The impact extends beyond direct costs, affecting reputation and productivity.",
+        "recommandations": "Strengthen continuous employee training on phishing recognition and suspicious email reporting. Implement extended multi-factor authentication (MFA) and email authentication protocols (SPF, DKIM, DMARC). Automate email-related incident detection and response.",
+        "tags": [
+          "email",
+          "phishing",
+          "spear_phishing",
+          "bec",
+          "email_compromise",
+          "ransomware",
+          "data_breach",
+          "awareness",
+          "sme",
+          "automation",
+          "t1566",
+          "t1078",
+          "t1192",
+          "t1071_001"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/aflac-227-millions-de-personnes-touchees-apres-la-fuite-de-juin/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "The Kimwolf Botnet is Stalking Your Local Network",
+        "description": "The Kimwolf botnet has infected over 2 million devices, primarily Android TV boxes and digital photo frames, by exploiting a vulnerability in residential proxy services (notably IPIDEA) and leveraging Android Debug Bridge (ADB) mode enabled by default on these devices. Kimwolf is used for ad fraud, account takeover attempts, content scraping, and DDoS attacks.",
+        "threat_actor": "Kimwolf Botnet operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "14emeliaterracewestroxburyma02132[.]su"
+          ]
+        },
+        "mitre_ttps": "T1071.001 (Web Protocols), T1059 (Command and Scripting Interpreter), T1562.001 (Impair Defenses - Disable or Modify System Firewall), T1090 (Proxy), T1498 (DDoS)",
+        "analyse": "The Kimwolf threat highlights the fragility of consumer IoT devices and residential proxy services, turning home networks into entry points for large-scale cybercriminal activities. The exploitation of default ADB mode is a major supply chain vulnerability. The geographical impact is global, with concentrations in Southeast Asia and South America.",
+        "recommandations": "Unplug unreliable Android TV boxes or digital photo frames. Use a guest Wi-Fi network for visitors. Isolate IoT devices in separate VLANs. Check router DNS settings and ensure ADB is disabled on connected devices. Monitor network traffic for unauthorized proxy activities.",
+        "tags": [
+          "botnet",
+          "kimwolf",
+          "android_tv",
+          "iot",
+          "residential_proxy",
+          "ipidea",
+          "adb",
+          "ddos",
+          "ad_fraud",
+          "supply_chain",
+          "home_network",
+          "t1071_001",
+          "t1059",
+          "t1562_001",
+          "t1090",
+          "t1498"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Phishing campaign abuses Google Cloud Application to impersonate legitimate Google emails",
+        "description": "A phishing campaign uses the legitimate \"Send Email\" feature of Google Cloud Application Integration to send phishing emails from Google-owned domains, bypassing sender reputation-based defenses. Attackers use a multi-stage redirection chain via trusted cloud services for fake CAPTCHA checks, ultimately leading to a counterfeit Microsoft login page to steal credentials. Targeted sectors include manufacturing, industrial, tech/SaaS, and finance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://storage.cloud.google.com",
+            "https://googleusercontent.com"
+          ]
+        },
+        "mitre_ttps": "T1566.002 (Phishing - Spearphishing Link), T1059.007 (Command and Scripting Interpreter: JavaScript), T1583.006 (Acquire Infrastructure: Web Services), T1189 (Drive-by Compromise)",
+        "analyse": "This campaign illustrates a growing trend where attackers abuse legitimate cloud services to enhance the credibility of their attacks and bypass traditional protections. The sophistication of the redirection chain and Google/Microsoft brand impersonation makes detection difficult for end-users and security systems. The impact is global with a strong concentration in the United States.",
+        "recommandations": "Educate users about advanced phishing tactics, including those using trusted domains. Implement advanced email security solutions with behavioral and deep link analysis. Strengthen multi-factor authentication (MFA) for all accounts. Monitor cloud service logs for unusual activity.",
+        "tags": [
+          "phishing",
+          "google_cloud",
+          "cloud_security",
+          "email_security",
+          "brand_impersonation",
+          "credential_harvesting",
+          "t1566_002",
+          "t1059_007",
+          "t1583_006",
+          "t1189"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186425/cyber-crime/phishing-campaign-abuses-google-cloud-application-to-impersonate-legitimate-google-emails.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Two U.S. cybersecurity professionals plead guilty in BlackCat/Alphv ransomware case",
+        "description": "Two U.S. cybersecurity professionals, Ryan Goldberg and Kevin Martin, pleaded guilty to their roles in BlackCat/ALPHV ransomware attacks between April and December 2023. They deployed the ransomware against five U.S. companies (medical device, pharmaceutical, doctor's office, engineering, drone manufacturer) and extorted approximately $1.2 million in Bitcoin from one victim, subsequently laundering the funds. This incident highlights the insider threat and the operation of the Ransomware-as-a-Service (RaaS) model.",
+        "threat_actor": "BlackCat/Alphv (affiliates Ryan Goldberg, Kevin Martin)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1486 (Data Encrypted for Impact), T1567 (Exfiltration Over Web Service), T1078 (Valid Accounts), T1078.001 (Valid Accounts: Domain Accounts), T1078.003 (Valid Accounts: Local Accounts)",
+        "analyse": "This case is a striking example of insider threat and the exploitation of cybersecurity skills for criminal purposes. It reveals the risks associated with privileged access and collaboration between internal actors and ransomware groups. The financial impact is significant for victims, and trust in the cybersecurity industry is eroded.",
+        "recommandations": "Strengthen access controls and the principle of least privilege, even for security personnel. Implement rigorous monitoring of activities by administrators and professionals with privileged access. Develop robust processes for detecting money laundering activities involving cryptocurrencies.",
+        "tags": [
+          "ransomware",
+          "blackcat",
+          "alphv",
+          "insider_threat",
+          "extortion",
+          "money_laundering",
+          "cybercrime",
+          "t1486",
+          "t1567",
+          "t1078"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186446/cyber-crime/two-u-s-cybersecurity-professionals-plead-guilty-in-blackcat-alphv-ransomware-case.html"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "Trust Wallet links $8.5 million crypto theft to Shai-Hulud NPM attack",
+        "description": "Trust Wallet attributes the theft of approximately $8.5 million in cryptocurrency from over 2,500 wallets to an \"industry-wide\" Shai-Hulud attack on NPM packages. Attackers added a malicious JavaScript file to Trust Wallet's Chrome extension, stealing sensitive wallet data and executing unauthorized transactions after exposing GitHub developer secrets and the Chrome Web Store API key.",
+        "threat_actor": "Shai-Hulud",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "metrics-trustwallet.com",
+            "api.metrics-trustwallet.com"
+          ]
+        },
+        "mitre_ttps": "T1195 (Supply Chain Compromise), T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain), T1059.007 (Command and Scripting Interpreter: JavaScript), T1552 (Unsecured Credentials), T1078 (Valid Accounts), T1560 (Archive Collected Data)",
+        "analyse": "This attack highlights the vulnerability of software supply chains (NPM packages) and browser extensions as compromise vectors. The theft of GitHub developer secrets allows attackers to inject malicious code into legitimate software versions, making detection extremely difficult. The impact is direct and significant financial loss for cryptocurrency users.",
+        "recommandations": "Monitor software dependencies (NPM) and use supply chain security tools. Implement robust security practices for developers, including protecting GitHub secrets and API keys. Regularly audit browser extensions. Educate users about the risks of compromised extensions and unexpected updates.",
+        "tags": [
+          "crypto_theft",
+          "trust_wallet",
+          "shai_hulud",
+          "npm_attack",
+          "supply_chain",
+          "malicious_extension",
+          "github_secrets",
+          "api_key_compromise",
+          "t1195",
+          "t1195_002",
+          "t1059_007",
+          "t1552",
+          "t1078",
+          "t1560"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/trust-wallet-links-85-million-crypto-theft-to-shai-hulud-npm-attack/"
+        ],
+        "date": "2026-01-03"
+      },
+      {
+        "title": "VVS Discord Stealer Using Pyarmor for Obfuscation and Detection Evasion",
+        "description": "Technical analysis of VVS Stealer, a Python-based infostealer targeting Discord users. It employs Pyarmor for obfuscation and detection evasion, exfiltrates Discord credentials and tokens, and browser data. The malware automatically installs itself on startup for persistence, displays fake error messages, and captures screenshots.",
+        "threat_actor": "VVS Stealer (operators)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1059.006 (Command and Scripting Interpreter: Python), T1027 (Obfuscated Files or Information), T1056.001 (Input Capture: Keylogging), T1056.002 (Input Capture: Screen Capture), T1078 (Valid Accounts), T1552 (Unsecured Credentials), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "VVS Stealer illustrates the increasing sophistication of Python-based malware and the use of advanced obfuscation techniques (Pyarmor) to evade detection. Targeting popular communication platforms like Discord and exfiltrating credentials poses a direct threat to personal data and online accounts. Persistence and stealth increase detection time.",
+        "recommandations": "Implement behavioral-based malware detection solutions to counter obfuscation. Educate users about the risks of unofficial software and malicious links. Use multi-factor authentication (MFA) for Discord accounts and other sensitive services. Monitor startup directories and running processes for suspicious activity.",
+        "tags": [
+          "infostealer",
+          "vvs_stealer",
+          "discord",
+          "python",
+          "pyarmor",
+          "obfuscation",
+          "evasion",
+          "credential_theft",
+          "persistence",
+          "t1059_006",
+          "t1027",
+          "t1056_001",
+          "t1056_002",
+          "t1078",
+          "t1552",
+          "t1547_001"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/vvs-stealer/"
+        ],
+        "date": "2026-01-03"
+      }
+    ]
+  }
+}
