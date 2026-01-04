@@ -1,0 +1,931 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille met en lumière une intensification et une diversification des menaces cyber. L'utilisation de l'IA par les attaquants est une tendance émergente préoccupante, comme en témoignent les \"deepfakes\" sexuels générés par Grok sur X, qui soulèvent des questions éthiques et légales. Les vulnérabilités critiques continuent d'être un vecteur d'attaque majeur, avec des campagnes d'exploitation à grande échelle ciblant des logiciels comme Adobe ColdFusion et des failles d'exécution de code à distance (RCE) de score CVSS 10.0, tel que React2Shell utilisé par le botnet RondoDox. Les infrastructures critiques, notamment le secteur de l'eau en Roumanie, sont des cibles pour les rançongiciels, avec des modes opératoires sophistiqués comme le détournement de BitLocker. Des acteurs malveillants tels que ShinyHunters/SLH restent actifs, utilisant des tactiques de social engineering, bien qu'ils puissent parfois être déjoués par des \"honeypots\". Les violations de données personnelles restent un fléau, touchant des millions d'enregistrements et alimentant des fraudes, menant à des réponses réglementaires fortes, comme l'imposition de la reconnaissance faciale pour l'achat de cartes SIM en Corée du Sud, suite à des fuites massives. La sécurité des infrastructures de surveillance (caméras de plaques d'immatriculation) est également en question, avec des bases de données exposées.",
+      "date": "2026-01-04"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters / Scattered Lapsus$ Hunters (SLH)",
+        "secteur": "Cybersécurité (ciblé Resecurity)",
+        "modop": "Social engineering, tentative d'exfiltration de données, revendication de piratage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "scattered_lapsus_hunters",
+          "social_engineering",
+          "data_exfiltration",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-claim-resecurity-hack-firm-says-it-was-a-honeypot/",
+          "https://databreaches.net/2026/01/03/shinyhunters-claims-to-have-compromised-resecurity-but-it-looks-like-they-fell-for-a-honeypot/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "RondoDox Botnet",
+        "secteur": "Large éventail (appareils connectés, caméras intelligentes, serveurs web)",
+        "modop": "Exploitation de vulnérabilités (React2Shell/CVE-2025-55182), injection SQL, scan de masse, déploiement de malwares (Mirai variant, cryptominers), maintien de persistance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "rondodox",
+          "botnet",
+          "exploit",
+          "react2shell",
+          "mirai",
+          "cryptomining",
+          "unpatched_devices"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "Acteur unique non identifié (opérant depuis une infrastructure basée au Japon)",
+        "secteur": "Non spécifié, ciblant des serveurs Adobe ColdFusion (potentiellement toute entreprise utilisant ce produit)",
+        "modop": "Campagne coordonnée d'exploitation de plus de 10 CVEs Adobe ColdFusion (2023-2024), reconnaissance, tentatives de LFI et RCE, utilisation de ProjectDiscovery Interactsh.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "coldfusion_exploiter",
+          "vulnerability_exploitation",
+          "reconnaissance",
+          "RCE",
+          "LFI"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186450/uncategorized/thousands-of-coldfusion-exploit-attempts-spotted-during-christmas-holiday.html"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "Groupe de rançongiciel (Roumanie)",
+        "secteur": "Infrastructures critiques (autorité nationale de l'eau en Roumanie)",
+        "modop": "Utilisation de BitLocker pour chiffrer les systèmes, demande de rançon, ciblage de systèmes IT (serveurs applicatifs, bases de données, postes Windows, serveurs de messagerie/web, DNS).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "critical_infrastructure",
+          "bitlocker",
+          "encryption",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/rancongiciel-en-roumanie-1-000-systemes-deau-chiffres/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Réglementation numérique, Droit, Cybersécurité, Technologie (IA)",
+        "theme": "Utilisation malveillante de l'IA, deepfakes sexuels non consensuels, régulation des plateformes (X/Grok), cybercriminalité.",
+        "description": "Les autorités françaises ont ouvert une enquête suite à des signalements de centaines de femmes et d'adolescentes dont des images ont été \"dénudées\" via des deepfakes générés par Grok, l'IA intégrée à X. Cet incident met en lumière les risques éthiques et légaux liés à l'IA générative et la responsabilité des plateformes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "ai",
+          "deepfake",
+          "grok",
+          "x",
+          "cybercrime",
+          "regulation",
+          "ethics",
+          "non_consensual_imagery"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186460/ai/french-authorities-investigate-ai-undressing-deepfakes-on-x.html"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Télécommunications, Gouvernement, Cybersécurité, Vie privée",
+        "theme": "Vérification d'identité, fraude (voice phishing), fuites de données, réglementation, biométrie.",
+        "description": "Pour lutter contre le \"voice phishing\" et la fraude à l'identité suite à des fuites massives de données en 2025 (Coupang et SK Telecom), le gouvernement sud-coréen impose désormais la reconnaissance faciale pour l'achat de cartes SIM via l'application PASS. Cette mesure vise à sécuriser la chaîne d'attribution des identités.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "south_korea",
+          "telecommunications",
+          "facial_recognition",
+          "sim_card",
+          "fraud",
+          "voice_phishing",
+          "data_breach",
+          "biometrics",
+          "regulation"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Éducation/Technologie (plateforme d'apprentissage)",
+        "victime": "CodeStepByStep",
+        "description": "Violation de données en novembre 2025, exposant initialement 17 000 dossiers utilisateurs, puis un total de 103 000 dossiers publiés en ligne, incluant noms, noms d'utilisateur et adresses e-mail.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "codestepbystep",
+          "personal_data",
+          "emails",
+          "usernames"
+        ],
+        "sources": [
+          "https://infosec.exchange/@XposedOrNot/115833945731756121"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Commerce en ligne",
+        "victime": "Coupang",
+        "description": "Fuite majeure en 2025 exposant plus de 30 millions d'enregistrements. A entraîné le remplacement du directeur général.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "coupang",
+          "south_korea",
+          "personal_data",
+          "mass_leak"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Réseau social local",
+        "victime": "Neighbourly",
+        "description": "Informations privées d'utilisateurs mises en vente sur le dark web suite à une violation. La société affirme que la violation a été rapidement contenue.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_network",
+          "neighbourly",
+          "darkweb",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastodon.nz/@bananabob/115833387442310478"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "SK Telecom",
+        "description": "Attaque subie en 2025, entraînant le vol d'informations concernant 23 millions d'abonnés, y compris la divulgation d'identifiants d'infrastructure \"en clair\" et un serveur accessible depuis Internet.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "sk_telecom",
+          "south_korea",
+          "personal_data",
+          "credentials_exposure"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Gouvernement, Transport, Sécurité publique",
+        "victime": "Ministère de l'Intérieur ouzbek (via un système de lecture de plaques d'immatriculation de Maxvision)",
+        "description": "Une base de données d'un système national de reconnaissance de plaques d'immatriculation a été trouvée exposée en ligne sans contrôle d'accès, donnant potentiellement accès à des millions d'images 4K, des coordonnées de caméras, et des informations sur les infractions et déplacements des véhicules et occupants.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "surveillance",
+          "uzbekistan",
+          "license_plate_recognition",
+          "data_exposure",
+          "privacy"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/cameras-de-videosurveillance-une-base-de-plaques-dimmatriculation-ouverte-a-tous/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "Next.js",
+        "description": "Vulnérabilité critique appelée React2Shell dans Next.js permettant l'exécution de code à distance (RCE), utilisée par le botnet RondoDox.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-55182",
+          "react2shell",
+          "next.js",
+          "rce",
+          "critical",
+          "botnet"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/",
+          "https://mastodon.social/@securityland/115833970944605116"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "cve_id": "CVE-2025-64124",
+        "cvss": 8.7,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Vulnérabilité d'injection de commande OS (\"OS Command Injection\") dans le Multi-Stack Controller (MSC) de Nuvation Energy.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-64124",
+          "nuvation_energy",
+          "os_command_injection",
+          "rce",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64124"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "cve_id": "CVE-2025-64125",
+        "cvss": 9.4,
+        "product": "Nuvation Energy nCloud VPN Service",
+        "description": "Vulnérabilité de \"Network Boundary Bridging\" dans le service VPN Nuvation Energy nCloud.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-64125",
+          "nuvation_energy",
+          "vpn",
+          "network_boundary_bridging",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64125"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Caméras de vidéosurveillance : une base de plaques d’immatriculation ouverte à tous",
+        "description": "Une base de données nationale ouzbèke de reconnaissance de plaques d'immatriculation, liée au ministère de l'Intérieur, a été découverte exposée en ligne sans authentification. Cela a permis l'accès à une interface web, des coordonnées de caméras et des millions de photos et vidéos en 4K, ainsi que des informations sur les infractions. Le système, fourni par l'entreprise chinoise Maxvision, soulève des questions sur la sécurité des infrastructures de surveillance à grande échelle.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "Cette exposition majeure révèle les risques inhérents aux infrastructures de surveillance connectées et mal sécurisées. La fuite de données de plaques d'immatriculation et d'images 4K peut avoir des implications graves pour la vie privée et la sécurité des citoyens, permettant le traçage de mouvements et l'identification des personnes. L'absence de réponse des autorités souligne un manque de gestion des incidents et de communication transparente, tandis que la portée internationale des solutions Maxvision suggère un risque de reproduction de failles dans d'autres pays.",
+        "recommandations": [
+          "Mettre en place des contrôles d'accès stricts et une authentification forte pour toutes les bases de données et interfaces d'administration.",
+          "Effectuer des audits de sécurité réguliers sur les infrastructures de surveillance connectées.",
+          "Mettre en œuvre des politiques de gestion des vulnérabilités et de réponse aux incidents.",
+          "Sensibiliser le personnel à la protection des données et aux bonnes pratiques de configuration sécurisée."
+        ],
+        "tags": [
+          "data_exposure",
+          "surveillance",
+          "license_plate_recognition",
+          "privacy",
+          "uzbekistan",
+          "government_system",
+          "maxvision"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/cameras-de-videosurveillance-une-base-de-plaques-dimmatriculation-ouverte-a-tous/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Rançongiciel en Roumanie, 1 000 systèmes d’eau chiffrés",
+        "description": "Une attaque par rançongiciel a compromis près de 1 000 systèmes IT de l'Administrația Națională Apele Române, l'autorité nationale de l'eau en Roumanie, en décembre 2025. Dix des onze administrations régionales ont été touchées, avec des serveurs applicatifs, de bases de données, postes Windows et serveurs de messagerie/web chiffrés via BitLocker. Les technologies opérationnelles (OT) n'ont pas été affectées, assurant la continuité des fonctions essentielles par des moyens manuels.",
+        "threat_actor": "Non spécifié",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 - Data Encrypted for Impact",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+          "T1059 - Command and Scripting Interpreter",
+          "T1083 - File and Directory Discovery"
+        ],
+        "analyse": "L'incident met en évidence la vulnérabilité des infrastructures critiques aux attaques par rançongiciel, même avec des outils natifs comme BitLocker. Le fait que l'OT soit restée isolée de l'IT est un point positif de résilience, mais l'ampleur du chiffrement des systèmes IT souligne l'impact potentiel sur la gestion administrative et la coordination. La non-intégration de cette infrastructure au système national de protection des infrastructures critiques révèle des lacunes en matière de sécurité préventive et de partage de renseignements.",
+        "recommandations": [
+          "Implémenter une segmentation réseau stricte entre les environnements IT et OT.",
+          "Renforcer les mesures de protection contre les rançongiciels, y compris les solutions EDR/XDR et les sauvegardes robustes et isolées.",
+          "Auditer et durcir la configuration des outils natifs (ex: BitLocker) pour prévenir leur détournement à des fins malveillantes.",
+          "Intégrer les infrastructures critiques aux systèmes nationaux de cyber-protection et de partage de renseignements."
+        ],
+        "tags": [
+          "ransomware",
+          "critical_infrastructure",
+          "water_authority",
+          "romania",
+          "bitlocker",
+          "it_ot_segmentation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/rancongiciel-en-roumanie-1-000-systemes-deau-chiffres/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Le botnet RondoDox utilise React2Shell pour pirater des milliers d'appareils non patchés",
+        "description": "Le botnet RondoDox exploite la vulnérabilité critique React2Shell (CVE-2025-55182, CVSS 10.0) dans Next.js pour compromettre des milliers d'appareils non patchés, y compris des caméras intelligentes et des serveurs web. La campagne a débuté en 2025 avec des scans de vulnérabilités et s'est intensifiée avec le déploiement de variantes du malware Mirai et de cryptominers, visant à construire une armée de machines contrôlées.",
+        "threat_actor": "RondoDox Botnet",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-4664"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1595.002 - Active Scanning: Vulnerability Scanning",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1036.003 - Masquerading: Rename System Utilities",
+          "T1496 - Resource Hijacking (Cryptomining)",
+          "T1078 - Valid Accounts",
+          "T1569 - System Services"
+        ],
+        "analyse": "Cette campagne souligne la menace persistante des botnets et l'importance cruciale de la gestion des correctifs. L'exploitation d'une vulnérabilité avec un score CVSS de 10.0 et l'intégration de techniques avancées (Mirai, outils de suppression de concurrence) démontrent la sophistication de RondoDox. La prolifération de dispositifs IoT non sécurisés offre une surface d'attaque étendue, permettant aux acteurs malveillants de construire de vastes réseaux pour des activités illicites comme le cryptomining et les attaques DDoS.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs de sécurité pour Next.js (CVE-2025-55182) et tous les logiciels exposés.",
+          "Segmenter les réseaux IoT et domestiques pour isoler les appareils connectés.",
+          "Surveiller le trafic réseau pour détecter les activités suspectes (cryptomining, communications C2).",
+          "Effectuer des audits de sécurité réguliers sur les appareils connectés et les infrastructures web."
+        ],
+        "tags": [
+          "botnet",
+          "rondodox",
+          "react2shell",
+          "next.js",
+          "rce",
+          "iot_hijacking",
+          "mirai",
+          "cryptomining",
+          "unpatched_devices"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "ShinyHunters revendique le piratage de Resecurity, l'entreprise dément et parle de \"honeypot\"",
+        "description": "Le groupe de hackers \"Scattered Lapsus$ Hunters\" (SLH), associé à ShinyHunters, a affirmé avoir piraté Resecurity et volé des données internes. Resecurity a réfuté ces allégations, déclarant que les attaquants n'ont accédé qu'à un \"honeypot\" délibérément déployé pour surveiller leurs activités, contenant des informations synthétiques. L'attaque est présentée comme une riposte à des tentatives d'ingénierie sociale de Resecurity.",
+        "threat_actor": "ShinyHunters / Scattered Lapsus$ Hunters (SLH)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589.002 - Gather Victim Identity Information: Employee Names",
+          "T1059 - Command and Scripting Interpreter",
+          "T1071.001 - Application Layer Protocol: Web Protocols (exfiltration via API)",
+          "T1598.003 - Phishing for Information: Spearphishing Link (social engineering attempt by Resecurity on SLH)",
+          "T1608 - Stage Capabilities",
+          "T1589 - Gather Victim Host Information"
+        ],
+        "analyse": "L'incident met en lumière la guerre psychologique et les tactiques d'ingénierie sociale entre les acteurs de la menace et les entreprises de cybersécurité. L'utilisation stratégique d'un \"honeypot\" par Resecurity démontre une défense proactive pour recueillir des renseignements sur les adversaires sans compromettre les systèmes réels, transformant une tentative de violation en une opportunité de collecte d'informations. L'impact réel sur Resecurity est jugé nul, tandis que l'acteur malveillant a potentiellement gaspillé des ressources sur de fausses données.",
+        "recommandations": [
+          "Déployer des honeypots et des environnements de leurre pour observer les acteurs de la menace et collecter des renseignements.",
+          "Mettre en œuvre des mesures de défense en profondeur pour protéger les infrastructures de production.",
+          "Sensibiliser les employés aux techniques d'ingénierie sociale.",
+          "Coordonner avec les forces de l'ordre pour le partage de renseignements sur les infrastructures des attaquants."
+        ],
+        "tags": [
+          "cybersecurity_firm",
+          "honeypot",
+          "shinyhunters",
+          "scattered_lapsus_hunters",
+          "social_engineering",
+          "data_exfiltration_attempt",
+          "threat_intelligence",
+          "deception"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-claim-resecurity-hack-firm-says-it-was-a-honeypot/",
+          "https://databreaches.net/2026/01/03/shinyhunters-claims-to-have-compromised-resecurity-but-it-looks-like-they-fell-for-a-honeypot/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Thousands of ColdFusion exploit attempts spotted during Christmas holiday",
+        "description": "GreyNoise a observé des milliers de tentatives d'attaques ciblant une douzaine de vulnérabilités Adobe ColdFusion durant les vacances de Noël 2025. Une campagne coordonnée, principalement menée par un acteur unique depuis une infrastructure basée au Japon, a exploité plus de 10 CVEs ColdFusion de 2023-2024, avec des tentatives de reconnaissance, LFI et RCE. Le timing suggère une exploitation délibérée de la surveillance réduite.",
+        "threat_actor": "Acteur unique non identifié (opérant depuis CTG Server Limited, AS152194)",
+        "indicator_of_compromise": {
+          "ASN": [
+            "AS152194"
+          ],
+          "IPv4": [
+            "134.122.136.119",
+            "134.122.136.96"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002 - Active Scanning: Vulnerability Scanning",
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter",
+          "T1210 - Exploitation for Client Execution"
+        ],
+        "analyse": "La campagne démontre la persistance des acteurs malveillants à exploiter des vulnérabilités connues, même plus anciennes, en particulier pendant les périodes de vacances où la surveillance est potentiellement plus faible. Le ciblage de multiples CVEs et de technologies variées indique une approche opportuniste et automatisée visant un large éventail de serveurs vulnérables pour maximiser les chances d'accès. L'infrastructure d'hébergement (CTG Server Limited) est également pointée du doigt pour son rôle de support à des activités malveillantes.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs de sécurité pour toutes les vulnérabilités Adobe ColdFusion.",
+          "Renforcer la surveillance et la réponse aux incidents pendant les périodes de vacances.",
+          "Utiliser des systèmes de détection d'intrusion (IDS/IPS) et des pare-feu d'applications web (WAF) pour bloquer les tentatives d'exploitation.",
+          "Mener des analyses régulières de vulnérabilités sur les applications et serveurs exposés."
+        ],
+        "tags": [
+          "coldfusion",
+          "vulnerability_exploitation",
+          "mass_scanning",
+          "rce",
+          "lfi",
+          "christmas_holiday_attacks",
+          "japan_based_infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186450/uncategorized/thousands-of-coldfusion-exploit-attempts-spotted-during-christmas-holiday.html"
+        ],
+        "date": "2026-01-04"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The threat intelligence highlights an intensification and diversification of cyber threats. The malicious use of AI is a concerning emerging trend, as evidenced by AI-generated sexual deepfakes on X using Grok, raising ethical and legal questions. Critical vulnerabilities continue to be a major attack vector, with large-scale exploitation campaigns targeting software like Adobe ColdFusion and remote code execution (RCE) flaws with CVSS scores of 10.0, such as React2Shell exploited by the RondoDox botnet. Critical infrastructures, notably the water sector in Romania, are targets for ransomware, with sophisticated modus operandi like the misuse of BitLocker. Malicious actors such as ShinyHunters/SLH remain active, employing social engineering tactics, although they can sometimes be thwarted by honeypots. Personal data breaches continue to be a scourge, affecting millions of records and fueling fraud, leading to strong regulatory responses, such as the imposition of facial recognition for SIM card purchases in South Korea, following massive leaks. The security of surveillance infrastructures (license plate cameras) is also in question, with exposed databases.",
+      "date": "2026-01-04"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters / Scattered Lapsus$ Hunters (SLH)",
+        "secteur": "Cybersecurity (targeted Resecurity)",
+        "modop": "Social engineering, attempted data exfiltration, hacking claims.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "scattered_lapsus_hunters",
+          "social_engineering",
+          "data_exfiltration",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-claim-resecurity-hack-firm-says-it-was-a-honeypot/",
+          "https://databreaches.net/2026/01/03/shinyhunters-claims-to-have-compromised-resecurity-but-it-looks-like-they-fell-for-a-honeypot/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "RondoDox Botnet",
+        "secteur": "Wide range (smart devices, smart cameras, web servers)",
+        "modop": "Vulnerability exploitation (React2Shell/CVE-2025-55182), SQL injection, mass scanning, malware deployment (Mirai variant, cryptominers), persistence maintenance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "rondodox",
+          "botnet",
+          "exploit",
+          "react2shell",
+          "mirai",
+          "cryptomining",
+          "unpatched_devices"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "Unidentified Single Threat Actor (operating from Japan-based infrastructure)",
+        "secteur": "Not specified, targeting Adobe ColdFusion servers (potentially any organization using this product)",
+        "modop": "Coordinated exploitation campaign targeting 10+ Adobe ColdFusion CVEs (2023-2024), reconnaissance, LFI and RCE attempts, use of ProjectDiscovery Interactsh.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "coldfusion_exploiter",
+          "vulnerability_exploitation",
+          "reconnaissance",
+          "RCE",
+          "LFI"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186450/uncategorized/thousands-of-coldfusion-exploit-attempts-spotted-during-christmas-holiday.html"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "nom": "Ransomware group (Romania)",
+        "secteur": "Critical infrastructure (Romanian National Water Authority)",
+        "modop": "Use of BitLocker to encrypt systems, ransom demand, targeting IT systems (application servers, databases, Windows workstations, mail/web servers, DNS).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "critical_infrastructure",
+          "bitlocker",
+          "encryption",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/rancongiciel-en-roumanie-1-000-systemes-deau-chiffres/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Digital Regulation, Law, Cybersecurity, Technology (AI)",
+        "theme": "Malicious use of AI, non-consensual sexual deepfakes, platform regulation (X/Grok), cybercrime.",
+        "description": "French authorities have launched an investigation following reports from hundreds of women and teenagers whose images were \"undressed\" via deepfakes generated by Grok, the AI integrated into X. This incident highlights the ethical and legal risks associated with generative AI and the responsibility of platforms.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "ai",
+          "deepfake",
+          "grok",
+          "x",
+          "cybercrime",
+          "regulation",
+          "ethics",
+          "non_consensual_imagery"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186460/ai/french-authorities-investigate-ai-undressing-deepfakes-on-x.html"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Telecommunications, Government, Cybersecurity, Privacy",
+        "theme": "Identity verification, fraud (voice phishing), data leaks, regulation, biometrics.",
+        "description": "To combat \"voice phishing\" and identity fraud following massive data breaches in 2025 (Coupang and SK Telecom), the South Korean government now mandates facial recognition for SIM card purchases via the PASS application. This measure aims to secure the identity attribution chain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "south_korea",
+          "telecommunications",
+          "facial_recognition",
+          "sim_card",
+          "fraud",
+          "voice_phishing",
+          "data_breach",
+          "biometrics",
+          "regulation"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Education/Technology (learning platform)",
+        "victime": "CodeStepByStep",
+        "description": "Data breach in November 2025, initially exposing 17,000 user records, followed by an additional dataset released the next month, increasing total exposure to 103,000 records, including names, usernames, and email addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "codestepbystep",
+          "personal_data",
+          "emails",
+          "usernames"
+        ],
+        "sources": [
+          "https://infosec.exchange/@XposedOrNot/115833945731756121"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Major leak in 2025 exposing over 30 million records. Led to the replacement of the CEO.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "coupang",
+          "south_korea",
+          "personal_data",
+          "mass_leak"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Local social network",
+        "victime": "Neighbourly",
+        "description": "Users' private information offered for sale on the dark web after a breach. The company stated the breach was quickly contained.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_network",
+          "neighbourly",
+          "darkweb",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastodon.nz/@bananabob/115833387442310478"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "SK Telecom",
+        "description": "Attack suffered in 2025, leading to the theft of information concerning 23 million subscribers, including the disclosure of \"cleartext\" infrastructure credentials and an internet-accessible server.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "sk_telecom",
+          "south_korea",
+          "personal_data",
+          "credentials_exposure"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/la-coree-du-sud-impose-la-reconnaissance-faciale-pour-les-sim/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "secteur": "Government, Transportation, Public Security",
+        "victime": "Uzbek Ministry of Interior (via a Maxvision license plate recognition system)",
+        "description": "A database of a national license plate recognition system was found exposed online without access controls, potentially providing access to millions of 4K images, camera coordinates, and information on vehicle and occupant violations and movements.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "surveillance",
+          "uzbekistan",
+          "license_plate_recognition",
+          "data_exposure",
+          "privacy"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/cameras-de-videosurveillance-une-base-de-plaques-dimmatriculation-ouverte-a-tous/"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "Next.js",
+        "description": "Critical vulnerability called React2Shell in Next.js allowing remote code execution (RCE), exploited by the RondoDox botnet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-55182",
+          "react2shell",
+          "next.js",
+          "rce",
+          "critical",
+          "botnet"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/",
+          "https://mastodon.social/@securityland/115833970944605116"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "cve_id": "CVE-2025-64124",
+        "cvss": 8.7,
+        "product": "Nuvation Energy Multi-Stack Controller (MSC)",
+        "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Nuvation Energy Multi-Stack Controller (MSC).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-64124",
+          "nuvation_energy",
+          "os_command_injection",
+          "rce",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64124"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "cve_id": "CVE-2025-64125",
+        "cvss": 9.4,
+        "product": "Nuvation Energy nCloud VPN Service",
+        "description": "Network Boundary Bridging vulnerability in Nuvation Energy nCloud VPN Service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-64125",
+          "nuvation_energy",
+          "vpn",
+          "network_boundary_bridging",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-64125"
+        ],
+        "date": "2026-01-04"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers claim to hack Resecurity, firm says it was a honeypot",
+        "description": "The hacking group \"Scattered Lapsus$ Hunters\" (SLH), associated with ShinyHunters, claimed to have breached Resecurity's systems and stolen internal data. Resecurity disputed these claims, stating that attackers only accessed a deliberately deployed honeypot containing synthetic information used to monitor their activity. The attack is presented as retaliation for alleged social engineering attempts by Resecurity.",
+        "threat_actor": "ShinyHunters / Scattered Lapsus$ Hunters (SLH)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589.002 - Gather Victim Identity Information: Employee Names",
+          "T1059 - Command and Scripting Interpreter",
+          "T1071.001 - Application Layer Protocol: Web Protocols (exfiltration via API)",
+          "T1598.003 - Phishing for Information: Spearphishing Link (social engineering attempt by Resecurity on SLH)",
+          "T1608 - Stage Capabilities",
+          "T1589 - Gather Victim Host Information"
+        ],
+        "analyse": "The incident highlights the psychological warfare and social engineering tactics between threat actors and cybersecurity firms. Resecurity's strategic use of a honeypot demonstrates a proactive defense to gather intelligence on adversaries without compromising real systems, turning an attempted breach into an intelligence collection opportunity. The actual impact on Resecurity is deemed null, while the malicious actor potentially wasted resources on fake data.",
+        "recommandations": [
+          "Deploy honeypots and deception environments to observe threat actors and collect intelligence.",
+          "Implement defense-in-depth measures to protect production infrastructures.",
+          "Educate employees on social engineering techniques.",
+          "Coordinate with law enforcement for sharing intelligence on attacker infrastructures."
+        ],
+        "tags": [
+          "cybersecurity_firm",
+          "honeypot",
+          "shinyhunters",
+          "scattered_lapsus_hunters",
+          "social_engineering",
+          "data_exfiltration_attempt",
+          "threat_intelligence",
+          "deception"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-claim-resecurity-hack-firm-says-it-was-a-honeypot/",
+          "https://databreaches.net/2026/01/03/shinyhunters-claims-to-have-compromised-resecurity-but-it-looks-like-they-fell-for-a-honeypot/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "RondoDox Botnet is Using React2Shell to Hijack Thousands of Unpatched Devices",
+        "description": "The RondoDox botnet is exploiting the critical React2Shell vulnerability (CVE-2025-55182, CVSS 10.0) in Next.js to compromise thousands of unpatched devices, including smart cameras and web servers. The campaign began in 2025 with vulnerability scans and escalated with the deployment of Mirai malware variants and cryptominers, aiming to build an army of controlled machines.",
+        "threat_actor": "RondoDox Botnet",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182",
+            "CVE-2025-4664"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 - Exploit Public-Facing Application",
+          "T1595.002 - Active Scanning: Vulnerability Scanning",
+          "T1059.006 - Command and Scripting Interpreter: Python",
+          "T1036.003 - Masquerading: Rename System Utilities",
+          "T1496 - Resource Hijacking (Cryptomining)",
+          "T1078 - Valid Accounts",
+          "T1569 - System Services"
+        ],
+        "analyse": "This campaign underscores the persistent threat of botnets and the critical importance of patch management. The exploitation of a vulnerability with a CVSS score of 10.0 and the integration of advanced techniques (Mirai, competitor removal tools) demonstrate RondoDox's sophistication. The proliferation of unsecured IoT devices provides an extensive attack surface, allowing malicious actors to build vast networks for illicit activities like cryptomining and DDoS attacks.",
+        "recommandations": [
+          "Immediately apply security patches for Next.js (CVE-2025-55182) and all exposed software.",
+          "Segment IoT and home networks to isolate connected devices.",
+          "Monitor network traffic to detect suspicious activities (cryptomining, C2 communications).",
+          "Conduct regular security audits on connected devices and web infrastructures."
+        ],
+        "tags": [
+          "botnet",
+          "rondodox",
+          "react2shell",
+          "next.js",
+          "rce",
+          "iot_hijacking",
+          "mirai",
+          "cryptomining",
+          "unpatched_devices"
+        ],
+        "sources": [
+          "https://hackread.com/rondodox-botnet-react2shell-hijack-unpatched-devices/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Ransomware in Romania, 1,000 water systems encrypted",
+        "description": "A ransomware attack compromised nearly 1,000 IT systems of Administrația Națională Apele Române, Romania's national water authority, in December 2025. Ten of eleven regional administrations were affected, with application servers, databases, Windows workstations, and mail/web servers encrypted via BitLocker. Operational Technologies (OT) were not affected, ensuring continuity of essential functions through manual means.",
+        "threat_actor": "Not specified",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 - Data Encrypted for Impact",
+          "T1070.004 - Indicator Removal on Host: File Deletion",
+          "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+          "T1059 - Command and Scripting Interpreter",
+          "T1083 - File and Directory Discovery"
+        ],
+        "analyse": "The incident highlights the vulnerability of critical infrastructures to ransomware attacks, even when using native tools like BitLocker. The fact that OT remained isolated from IT is a positive point of resilience, but the extent of IT system encryption underscores the potential impact on administrative management and coordination. The non-integration of this infrastructure into the national critical infrastructure protection system reveals shortcomings in preventive security and intelligence sharing.",
+        "recommandations": [
+          "Implement strict network segmentation between IT and OT environments.",
+          "Strengthen ransomware protection measures, including EDR/XDR solutions and robust, isolated backups.",
+          "Audit and harden the configuration of native tools (e.g., BitLocker) to prevent their misuse for malicious purposes.",
+          "Integrate critical infrastructures into national cyber protection and intelligence sharing systems."
+        ],
+        "tags": [
+          "ransomware",
+          "critical_infrastructure",
+          "water_authority",
+          "romania",
+          "bitlocker",
+          "it_ot_segmentation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/rancongiciel-en-roumanie-1-000-systemes-deau-chiffres/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Surveillance cameras: a license plate database open to all",
+        "description": "An Uzbek national license plate recognition database, linked to the Ministry of Interior, was discovered exposed online without authentication. This allowed access to a web interface, camera coordinates, and millions of 4K photos and videos, as well as information on violations. The system, provided by the Chinese company Maxvision, raises questions about the security of large-scale surveillance infrastructures.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "This major exposure reveals the inherent risks of connected and poorly secured surveillance infrastructures. The leak of license plate data and 4K images can have serious implications for citizen privacy and security, allowing movement tracking and personal identification. The lack of response from authorities highlights a failure in incident management and transparent communication, while the international reach of Maxvision solutions suggests a risk of similar vulnerabilities recurring in other countries.",
+        "recommandations": [
+          "Implement strict access controls and strong authentication for all databases and administration interfaces.",
+          "Conduct regular security audits on connected surveillance infrastructures.",
+          "Implement vulnerability management and incident response policies.",
+          "Train staff on data protection and secure configuration best practices."
+        ],
+        "tags": [
+          "data_exposure",
+          "surveillance",
+          "license_plate_recognition",
+          "privacy",
+          "uzbekistan",
+          "government_system",
+          "maxvision"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/cameras-de-videosurveillance-une-base-de-plaques-dimmatriculation-ouverte-a-tous/"
+        ],
+        "date": "2026-01-04"
+      },
+      {
+        "title": "Thousands of ColdFusion exploit attempts spotted during Christmas holiday",
+        "description": "GreyNoise observed thousands of attack attempts targeting about a dozen Adobe ColdFusion vulnerabilities during the Christmas 2025 holiday. A coordinated campaign, primarily led by a single actor from Japan-based infrastructure, exploited over 10 ColdFusion CVEs from 2023-2024, including reconnaissance, LFI, and RCE attempts. The timing suggests deliberate exploitation of reduced monitoring.",
+        "threat_actor": "Unidentified Single Threat Actor (operating from CTG Server Limited, AS152194)",
+        "indicator_of_compromise": {
+          "ASN": [
+            "AS152194"
+          ],
+          "IPv4": [
+            "134.122.136.119",
+            "134.122.136.96"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002 - Active Scanning: Vulnerability Scanning",
+          "T1190 - Exploit Public-Facing Application",
+          "T1059 - Command and Scripting Interpreter",
+          "T1210 - Exploitation for Client Execution"
+        ],
+        "analyse": "The campaign demonstrates the persistence of malicious actors in exploiting known, even older, vulnerabilities, especially during holiday periods when monitoring is potentially weaker. The targeting of multiple CVEs and various technologies indicates an opportunistic and automated approach aimed at a wide range of vulnerable servers to maximize access chances. The hosting infrastructure (CTG Server Limited) is also highlighted for its role in supporting malicious activities.",
+        "recommandations": [
+          "Immediately apply security patches for all Adobe ColdFusion vulnerabilities.",
+          "Enhance monitoring and incident response during holiday periods.",
+          "Use intrusion detection/prevention systems (IDS/IPS) and web application firewalls (WAF) to block exploitation attempts.",
+          "Conduct regular vulnerability scans on exposed applications and servers."
+        ],
+        "tags": [
+          "coldfusion",
+          "vulnerability_exploitation",
+          "mass_scanning",
+          "rce",
+          "lfi",
+          "christmas_holiday_attacks",
+          "japan_based_infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186450/uncategorized/thousands-of-coldfusion-exploit-attempts-spotted-during-christmas-holiday.html"
+        ],
+        "date": "2026-01-04"
+      }
+    ]
+  }
+}
