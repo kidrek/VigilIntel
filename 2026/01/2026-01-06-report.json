@@ -1,0 +1,2031 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber pour cette période est caractérisé par une intensification et une sophistication croissantes des attaques, exploitant une large gamme de vecteurs. L'intelligence artificielle (IA) est au cœur de cette évolution, les attaquants l'utilisant pour améliorer la personnalisation et l'échelle de leurs campagnes de phishing et de social engineering (ex: ClickFix, VVS Stealer) et pour automatiser des attaques plus rapides et plus furtives. En réponse, l'IA est également de plus en plus employée par les défenseurs pour la détection et la réponse. Cependant, l'adoption croissante de l'IA agentique introduit de nouveaux défis en matière de gestion des identités et des accès, nécessitant une réévaluation des contrôles de sécurité traditionnels.\n\nLa menace de la supply chain reste prégnante, avec des incidents affectant des sous-traitants (OFII) ou des fournisseurs tiers (Global-e impactant Ledger, Marquis Software impactant des banques américaines, extensions VSCode non vérifiées). Cela met en évidence la nécessité d'une vigilance accrue sur les tiers et les outils de développement. Les acteurs étatiques (ex: UAC-0184 visant l'Ukraine) continuent d'opérer des campagnes d'espionnage, ciblant des informations sensibles.\n\nLes vulnérabilités critiques sont un vecteur constant d'exploitation, avec de nombreux CVE de sévérité élevée (SmarterMail, D-Link, Adobe ColdFusion, Apache SIS, Kyuubi, macOS TCC bypass) permettant l'exécution de code à distance, la fuite de données ou la prise de contrôle de systèmes. Le rapport CISA sur les vulnérabilités exploitées en 2025 confirme cette tendance, avec une augmentation notable des failles activement exploitées, y compris de très anciennes. Les ransomwares (TridentLocker ciblant Sedgwick, attaque contre Leduc County) et les infostealers (Zestix, VVS Stealer) demeurent des menaces majeures, cherchant à exfiltrer des données pour l'extorsion ou la vente.\n\nEnfin, les botnets mobiles comme Kimwolf, exploitant des réseaux de proxys résidentiels, démontrent la capacité des acteurs malveillants à compromettre des millions d'appareils, souvent via des pratiques de sécurité faibles ou des appareils pré-infectés. La géopolitique, bien que distincte, influe sur le cyberespace, avec des tensions internationales qui peuvent exacerber les risques de cyberattaques étatiques.\n\nEn conclusion, l'état général des menaces est marqué par une adaptation rapide des attaquants aux nouvelles technologies comme l'IA, une persistance des vecteurs traditionnels (phishing, vulnérabilités non patchées), et une complexité croissante due à l'interconnexion des systèmes et des dépendances à des tiers. La nécessité d'une approche de défense multicouche, incluant la gestion des identités, la sécurité de la supply chain, la gestion proactive des vulnérabilités et la sensibilisation des utilisateurs, est plus critique que jamais.",
+      "date": "2026-01-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Zestix",
+        "secteur": "Multi-secteurs (aviation, défense, santé, services publics, transport, télécommunications, juridique, immobilier, gouvernement)",
+        "modop": "Vol de données d'entreprise via des sites de partage de fichiers cloud (ShareFile, Nextcloud, OwnCloud). Accès initial probable par des identifiants volés par des infostealers (RedLine, Lumma, Vidar) déployés via des campagnes de malvertising ou des attaques ClickFix. Exploitation de l'absence de MFA.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_theft",
+          "cloud_breach",
+          "infostealer",
+          "credentials_stuffing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-file-sharing-sites-targeted-for-corporate-data-theft-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Fournisseurs de services Internet (Brightspeed), Logiciels d'entreprise (Red Hat), Services Cloud (AWS)",
+        "modop": "Extorsion et vol de données. Accès à des instances GitLab (Red Hat) et environnements cloud AWS via des identifiants exposés et création de comptes IAM malveillants pour escalade de privilèges. Cible les informations clients, PII, historiques de paiement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "data_theft",
+          "cloud_security",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-broadband-provider-brightspeed-investigates-breach-claims/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "UAC-0184 (aka Hive0156)",
+        "secteur": "Gouvernement ukrainien, militaire",
+        "modop": "APT lié à la Russie, utilisant des messages Viber pour livrer des fichiers ZIP malveillants. Exploitation de thèmes sensibles (dossiers militaires, refus d'indemnisation). Le processus d'infection implique des scripts PowerShell, le side-loading de CFlux.exe, l'installation de HijackLoader et Remcos RAT pour l'espionnage et la collecte de renseignements.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "russia",
+          "espionage",
+          "military_targeting",
+          "government_targeting",
+          "social_engineering",
+          "malware_delivery",
+          "remcos_rat",
+          "hijackloader"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186571/apt/russia-linked-apt-uac-0184-uses-viber-to-spy-on-ukrainian-military-in-2025.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "Kimwolf botnet",
+        "secteur": "Appareils Android (boîtiers TV, Smart TVs), réseaux de proxys résidentiels",
+        "modop": "Infection de plus de 2 millions d'appareils Android en exploitant les services ADB exposés via des réseaux de proxys résidentiels. Utilise la bibliothèque wolfSSL, DNS over TLS, signatures numériques à courbe elliptique, EtherHiding pour résister aux takedowns via des domaines blockchain. Fonctions principales : proxy de trafic, attaques DDoS. Monétisation via des services de monétisation de bande passante et la vente d'IP résidentielles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "android",
+          "ddos",
+          "proxy_network",
+          "adb_exploitation",
+          "iot_security"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186559/malware/kimwolf-botnet-leverages-residential-proxies-to-hijack-2m-android-devices.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "VVS Stealer",
+        "secteur": "Utilisateurs de Discord, navigateurs web",
+        "modop": "Logiciel malveillant basé sur Python qui vole les identifiants et tokens Discord, les identifiants de navigateurs, les cookies, l'historique de navigation et les données d'auto-remplissage. Persistance via l'installation au démarrage, furtivité via de faux messages d'erreur. Exfiltration des données compressées via des requêtes HTTP POST vers des webhooks. Injecte du JavaScript pour détourner les sessions Discord actives.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "discord_theft",
+          "credential_harvesting",
+          "python_malware",
+          "session_hijacking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186542/malware/vvs-stealer-a-new-python-malware-steals-discord-credentials.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "TridentLocker",
+        "secteur": "Gestion des sinistres et services de risques (Sedgwick), Fabrication, Gouvernement, IT, Services professionnels",
+        "modop": "Ransomware-as-a-service (RaaS) utilisant des tactiques de double extorsion : chiffrement des systèmes et menace de divulgation des données exfiltrées. Cible principalement l'Amérique du Nord et l'Europe, ainsi que la Chine et le Royaume-Uni.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "double_extortion",
+          "raas",
+          "data_encryption",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186525/data-breach/sedgwick-discloses-data-breach-after-tridentlocker-ransomware-attack/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Industrie militaire",
+        "theme": "Acquisition de systèmes de veille aérienne par la France",
+        "description": "La France a commandé deux avions de veille aérienne GlobalEye au suédois Saab, avec deux options supplémentaires, dans le cadre du remplacement de sa flotte vieillissante de Boeing E-3F Sentry. Ce contrat positionne Saab comme un favori pour le futur marché de remplacement des AWACS de l'OTAN, suite à l'abandon par les États-Unis de leur programme E-7A Wedgetail en raison de surcoûts et de vulnérabilités, ce qui a conduit l'OTAN à annuler son intention initiale d'acquérir des E-7.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "defense",
+          "saab",
+          "globaleye",
+          "otan",
+          "france",
+          "aerospace",
+          "military_procurement"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/france-achat-avion-veille-saab/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Relations Internationales, Énergie (Pétrole), Défense",
+        "theme": "Intervention militaire américaine au Venezuela et redéfinition de l'ordre international",
+        "description": "Les États-Unis ont mené une attaque militaire au Venezuela pour enlever le président Nicolas Maduro et son épouse, afin de les juger à New York. Cette action, perçue comme une violation du droit international, s'inscrit dans la volonté de l'administration Trump de remodeler l'ordre international et d'accéder aux vastes ressources pétrolières du Venezuela. La communauté internationale est divisée sur la légitimité de cette intervention, qui marque une nouvelle ère de bilatéralisme et de 'loi du plus fort' dans les affaires mondiales.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "venezuela",
+          "etats_unis",
+          "trump_administration",
+          "intervention_militaire",
+          "droit_international",
+          "petrole",
+          "monroe_doctrine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/venezuela-trump-la-force-pour-loi/",
+          "https://www.iris-france.org/maduro-etait-un-dictateur-les-etats-unis-sont-devenus-un-etat-voyou/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/us-commits-venezuelas-transition-can-it-succeed"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Défense, Énergie, Industrie",
+        "theme": "Transformation énergétique dans la défense européenne",
+        "description": "L'Europe doit accélérer sa transition énergétique dans le secteur de la défense pour réduire sa dépendance aux combustibles fossiles importés et aux matières premières critiques. L'UE est invitée à utiliser son pouvoir réglementaire pour aligner les dépenses de défense sur les objectifs de transformation durable, intégrant l'innovation propre dans la politique de défense. L'objectif est de renforcer l'autonomie stratégique et le leadership technologique de l'Europe dans un environnement géopolitique volatile.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "defense",
+          "transition_energetique",
+          "securite_energetique",
+          "autonomie_strategique",
+          "innovation"
+        ],
+        "sources": [
+          "https://www.iris-france.org/soft-power-meets-hard-security-leveraging-europes-regulatory-strength-for-energy-transformation-in-defence/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers (banques)",
+        "victime": "Artisans’ Bank et VeraBank (via Marquis Software)",
+        "description": "Des données clients des banques américaines Artisans’ Bank et VeraBank ont été exposées suite à une attaque par ransomware en août contre leur fournisseur, Marquis Software. La vulnérabilité exploitée était liée à SonicWall.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "banking",
+          "ransomware",
+          "supply_chain_attack",
+          "customer_data",
+          "sonicwall"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/5th-january-threat-intelligence-report/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Télécommunications (fournisseur de services Internet)",
+        "victime": "Brightspeed (États-Unis)",
+        "description": "Brightspeed, un grand fournisseur de services de fibre optique aux États-Unis, enquête sur des allégations de violation de sécurité et de vol de données faites par le groupe d'extorsion Crimson Collective. Les données prétendument volées incluent des PII de clients, des informations de compte, des détails de paiement et des informations de carte de paiement.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "broadband",
+          "brightspeed",
+          "crimson_collective",
+          "data_theft",
+          "pii",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-broadband-provider-brightspeed-investigates-breach-claims/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Gouvernement local",
+        "victime": "Leduc County (Canada)",
+        "description": "Leduc County au Canada a été la cible d'une cyberattaque par ransomware le jour de Noël, qui a désactivé certains de ses systèmes informatiques.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "canada",
+          "leduc_county",
+          "ransomware",
+          "it_systems"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/ca-leduc-county-target-of-christmas-day-cybersecurity-attack/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Cryptomonnaie, Services de paiement tiers",
+        "victime": "Clients Ledger (via Global-e)",
+        "description": "Ledger, fabricant de portefeuilles matériels de cryptomonnaie, a informé certains de ses clients que leurs données personnelles (noms, informations de contact) avaient été exposées suite à une violation des systèmes de Global-e, un processeur de paiement tiers. Aucune information sensible comme les phrases de récupération ou les clés privées des portefeuilles crypto n'a été compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "ledger",
+          "global_e",
+          "payment_processor",
+          "customer_data",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ledger-customers-impacted-by-third-party-global-e-data-breach/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "ManageMyHealth (Nouvelle-Zélande)",
+        "description": "Une entité de santé néo-zélandaise a obtenu une injonction de la Haute Cour pour interdire le partage de données volées à ManageMyHealth, un portail patient. Entre 108 000 et 126 000 utilisateurs, sur un total de 1,8 million, pourraient être concernés. Les données incluent potentiellement des dossiers médicaux, des demandes de renouvellement d'ordonnances et des prises de rendez-vous.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "new_zealand",
+          "managemyhealth",
+          "patient_data",
+          "medical_records",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/nz-high-court-grants-injunction-over-managemyhealth-cyber-breach/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Services VPN",
+        "victime": "NordVPN (développement Salesforce)",
+        "description": "NordVPN a démenti les allégations de violation de ses serveurs de développement Salesforce internes, affirmant que les cybercriminels avaient obtenu des 'données fictives' d'un compte d'essai sur une plateforme de test automatisé tierce. Un acteur de la menace avait affirmé avoir volé plus de 10 bases de données contenant des clés API Salesforce et des jetons Jira via une attaque par force brute.",
+        "tags": [
+          "violation",
+          "breach",
+          "vpn_service",
+          "nordvpn",
+          "salesforce",
+          "development_server",
+          "false_alarm",
+          "brute_force"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nordvpn-denies-breach-claims-says-attackers-have-dummy-data/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Gouvernement (immigration)",
+        "victime": "Office français de l’immigration et de l’intégration (OFII)",
+        "description": "Des extraits de données personnelles de ressortissants étrangers en France ont été publiés par un hackeur, revendiquant une attaque contre l'OFII. L'OFII confirme un vol de données, mais attribue l'incident à une intrusion chez un sous-traitant. Les informations comprennent nom, prénom, date d'entrée, motif de séjour, adresse e-mail et numéro de téléphone, concernant potentiellement des millions de lignes de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "france",
+          "ofii",
+          "immigration_data",
+          "personal_data",
+          "subcontractor_breach",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/05/l-office-francais-de-l-immigration-et-de-l-integration-victime-d-une-fuite-de-donnees_6660632_4408996.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Gestion des sinistres et services de risques",
+        "victime": "Sedgwick (unité contractant fédéral)",
+        "description": "Sedgwick a confirmé un incident de cybersécurité affectant son unité contractant fédéral, Sedgwick Government Solutions, suite à une attaque du groupe de ransomware TridentLocker, qui a affirmé avoir volé 3,4 Go de données. L'entreprise a activé ses protocoles de réponse aux incidents, notifié les forces de l'ordre et les clients concernés, tout en précisant que le reste de ses opérations n'a pas été impacté.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "risk_management",
+          "sedgwick",
+          "tridentlocker",
+          "ransomware",
+          "data_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186525/data-breach/sedgwick-discloses-data-breach-after-tridentlocker-ransomware-attack/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2002-0367",
+        "cvss": 7.2,
+        "product": "Microsoft Windows NT/2000 (smss.exe)",
+        "description": "Vulnérabilité d'escalade de privilèges dans le sous-système de débogage smss.exe, connue pour être exploitée par des groupes de ransomware. Permet à un attaquant local d'obtenir des privilèges système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "windows",
+          "privilege_escalation",
+          "smss.exe",
+          "ransomware_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-known-exploited-vulnerabilities-kev-2025/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-12793",
+        "cvss": 8.5,
+        "product": "AsusSoftwareManagerAgent",
+        "description": "Vulnérabilité de chargement de DLL non contrôlé. Un attaquant local peut influencer l'application pour charger une DLL depuis un emplacement contrôlé, menant potentiellement à l'exécution de code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "asus",
+          "dll_hijacking",
+          "arbitrary_code_execution",
+          "local_privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12793"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-20795",
+        "cvss": 8.0,
+        "product": "MediaTek chipsets (KeyInstall component)",
+        "description": "Écriture hors limites (Out-of-bounds Write) dans le composant KeyInstall des chipsets mobiles et IoT de MediaTek. Potentiellement, un attaquant peut écraser la mémoire dans un sous-système de sécurité critique, menant à des plantages ou à l'exécution de code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mediatek",
+          "chipset",
+          "out_of_bounds_write",
+          "arbitrary_code_execution",
+          "iot_security",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://securityonline.info/mediatek-kicks-off-2026-with-major-security-overhaul-for-mobile-chipsets/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-43530",
+        "cvss": 8.0,
+        "product": "Apple macOS (TCC framework)",
+        "description": "Contournement du cadre de Transparence, Consentement et Contrôle (TCC) de macOS. Une faille sophistiquée dans les outils d'accessibilité (ScreenReader.framework) permet d'exécuter des commandes malveillantes sans l'invite de l'utilisateur, automatisant la machine via AppleScript et permettant un contrôle total.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "macos",
+          "apple",
+          "tcc_bypass",
+          "privacy_bypass",
+          "arbitrary_code_execution",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/new-tcc-bypass-cve-2025-43530-exposes-macos-to-unchecked-automation/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": 9.8,
+        "product": "SmarterMail",
+        "description": "Vulnérabilité de sévérité maximale permettant à des attaquants non authentifiés de télécharger et d'exécuter des fichiers malveillants, conduisant à une prise de contrôle complète du serveur, au vol d'identifiants et à un mouvement latéral.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "smartermail",
+          "remote_code_execution",
+          "unauthenticated_access",
+          "server_takeover",
+          "file_upload"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/maximum-severity-flaw-enables-smartermail-server-takeover"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-5777",
+        "cvss": 9.8,
+        "product": "Citrix (CitrixBleed 2)",
+        "description": "Vulnérabilité critique ('CitrixBleed 2') connue pour être activement exploitée par des groupes de ransomware comme CL0P. Permet la divulgation d'informations sensibles et l'accès non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "citrix",
+          "citrixbleed",
+          "data_leakage",
+          "unauthorized_access",
+          "ransomware_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-known-exploited-vulnerabilities-kev-2025/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-61808",
+        "cvss": 9.8,
+        "product": "Adobe ColdFusion",
+        "description": "Faille logique permettant à des administrateurs authentifiés de transformer une fonctionnalité de maintenance en un vecteur de compromission totale du serveur. Exploite la gestion des chemins réseau (UNC) pour déployer du code malveillant via l'outil 'Package & Deploy', contournant les contrôles de sécurité.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe",
+          "coldfusion",
+          "remote_code_execution",
+          "authenticated_exploitation",
+          "server_compromise",
+          "logic_flaw"
+        ],
+        "sources": [
+          "https://securityonline.info/attacking-from-within-how-adobe-coldfusion-admins-can-weaponize-remote-shares/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-65110",
+        "cvss": 8.1,
+        "product": "Vega (vega-selections library)",
+        "description": "Vulnérabilité Cross-Site Scripting (XSS) via l'abus de la fonction `vlSelectionTuples` dans les applications Vega. Permet l'exécution de code JavaScript arbitraire (DOM XSS) après interaction de l'utilisateur avec une spécification Vega malveillante, compromettant la confidentialité et l'intégrité.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vega",
+          "xss",
+          "dom_xss",
+          "javascript_execution",
+          "data_manipulation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65110"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-66518",
+        "cvss": 8.8,
+        "product": "Apache Kyuubi",
+        "description": "Faille de sévérité élevée permettant un accès non autorisé au système de fichiers local du serveur, rendant inefficaces les listes blanches de répertoires. Causée par une normalisation de chemin inadéquate.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "kyuubi",
+          "local_file_access",
+          "path_traversal",
+          "unauthorized_access",
+          "data_leakage"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-66518-high-severity-flaw-in-apache-kyuubi-exposes-local-server-files/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-67732",
+        "cvss": 8.4,
+        "product": "Dify",
+        "description": "Exposition des clés API en texte clair via le point de configuration du fournisseur de modèle. Permet aux utilisateurs non-administrateurs de visualiser et réutiliser la clé API, conduisant à un accès non autorisé à des services tiers et à la consommation de quotas.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dify",
+          "api_key_exposure",
+          "unauthorized_access",
+          "authentication_bypass",
+          "llm_platform"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67732"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68280",
+        "cvss": 8.0,
+        "product": "Apache Spatial Information System (SIS)",
+        "description": "Vulnérabilité d'entité externe XML (XXE) permettant à des acteurs malveillants de lire des fichiers locaux sensibles du serveur en exploitant un traitement XML non sécurisé. Affecte plusieurs services d'analyse de données géospatiales.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "sis",
+          "xxe",
+          "local_file_inclusion",
+          "information_disclosure",
+          "server_files"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-sis-patch-blocks-xml-attack-that-leaks-server-files/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68428",
+        "cvss": 9.2,
+        "product": "jsPDF (node.js builds)",
+        "description": "Vulnérabilité d'inclusion de fichier local/traversée de chemin (Local File Inclusion/Path Traversal) via le premier argument de la méthode loadFile. Permet à un utilisateur de récupérer le contenu de fichiers arbitraires sur le système local.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "jspdf",
+          "node.js",
+          "local_file_inclusion",
+          "path_traversal",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68428"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68455",
+        "cvss": 8.6,
+        "product": "Craft CMS",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) authentifiée via un comportement malveillant attaché. Nécessite un accès administrateur au panneau de contrôle de Craft pour être exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "craft_cms",
+          "remote_code_execution",
+          "authenticated_rce",
+          "cms_security"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68455"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-69227",
+        "cvss": 8.0,
+        "product": "aiohttp",
+        "description": "Vulnérabilité de déni de service (DoS) de sévérité élevée. Si les assertions Python sont ignorées (optimisation -O), une boucle infinie peut se produire, bloquant les ressources du serveur indéfiniment avec un message POST spécialement conçu.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aiohttp",
+          "denial_of_service",
+          "infinite_loop",
+          "python_security"
+        ],
+        "sources": [
+          "https://securityonline.info/aiohttp-patches-seven-vulnerabilities-including-high-severity-dos-risks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-69228",
+        "cvss": 8.0,
+        "product": "aiohttp",
+        "description": "Vulnérabilité de déni de service (DoS) de sévérité élevée. Permet à un attaquant de provoquer une épuisement de la mémoire du serveur en créant une requête utilisant la méthode Request.post(), entraînant un gel du serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aiohttp",
+          "denial_of_service",
+          "memory_exhaustion",
+          "http_server"
+        ],
+        "sources": [
+          "https://securityonline.info/aiohttp-patches-seven-vulnerabilities-including-high-severity-dos-risks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2026-0625",
+        "cvss": 9.3,
+        "product": "D-Link DSL gateway devices",
+        "description": "Vulnérabilité d'injection de commande dans le point d'extrémité dnscfg.cgi, due à une mauvaise assainissement des paramètres de configuration DNS. Un attaquant distant non authentifié peut injecter et exécuter des commandes shell arbitraires, entraînant une exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dlink",
+          "command_injection",
+          "remote_code_execution",
+          "unauthenticated_access",
+          "dns_configuration",
+          "router_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0625"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2026-21675",
+        "cvss": 9.8,
+        "product": "iccDEV (CIccCmm class)",
+        "description": "Vulnérabilité 'Use After Free' dans la classe CIccCmm via la suppression inappropriée d'un objet gestionnaire d'indices dans la fonction CIccXform::Create().",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "iccdev",
+          "use_after_free",
+          "memory_corruption",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21675"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Agentic AI Is an Identity Problem and CISOs Will Be Accountable for the Outcome & What Are the Main AI-Assisted Cyber-Attacks and Scams?",
+        "description": "Ces articles explorent l'impact croissant de l'intelligence artificielle (IA) sur la cybersécurité, à la fois pour les attaquants et les défenseurs. L'IA agentique est présentée comme une nouvelle classe d'identité posant des défis majeurs pour les CISOs en matière de gestion des accès, du cycle de vie et des risques, car les agents IA opèrent à l'échelle des machines mais avec l'intention humaine. Les menaces assistées par l'IA ne sont pas de nouveaux types d'attaques, mais des tactiques existantes (phishing, fraude, malware) exécutées plus rapidement, à plus grande échelle et avec une personnalisation accrue. Les défenseurs doivent s'adapter en renforçant la vérification de l'identité, en limitant les approbations à personne unique et en se concentrant sur les contrôles qui protègent les paiements, les comptes et les données sensibles. La nécessité d'une gestion du cycle de vie pour les agents IA, similaire à celle des identités humaines, est soulignée comme cruciale pour atténuer les risques de failles de sécurité et de conformité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'IA transforme le paysage des menaces en augmentant la vitesse et la personnalisation des attaques. Les entreprises doivent reconnaître l'IA agentique comme une nouvelle identité à gérer, avec des implications directes sur la stratégie de sécurité des CISOs. Les risques sont transversaux, affectant tous les secteurs, et nécessitent une réévaluation des cadres IAM/PAM. La capacité à automatiser les attaques peut submerger les défenses traditionnelles, exigeant une réponse agile et des capacités de détection basées sur l'IA pour les défenseurs. L'impact est stratégique, car une mauvaise gestion de l'IA pourrait entraîner des incidents majeurs, un recul de l'innovation et des sanctions.",
+        "recommandations": [
+          "Renforcer les processus de vérification d'identité et limiter les approbations par personne unique.",
+          "Augmenter la visibilité sur les points de communication et d'accès clés.",
+          "Appliquer une discipline de gestion du cycle de vie aux agents IA (propriété claire, but explicite, accès aligné sur les fonctions, visibilité continue, révocation automatique).",
+          "Mettre en œuvre des garde-fous au moment de la création des agents IA pour éviter les privilèges larges par défaut.",
+          "Améliorer les capacités de détection des comportements anormaux (UEBA/analyses comportementales) plutôt que de se fier uniquement aux signatures.",
+          "Sensibiliser les utilisateurs à la méfiance vis-à-vis des messages urgents ou émotionnels et aux techniques de deepfake.",
+          "Renforcer l'authentification, l'autorisation et les restrictions d'exécution.",
+          "Mettre en place des protocoles de réponse rapide et de confinement en cas de compromission assistée par l'IA.",
+          "Investir dans des plateformes d'intelligence de détection AI-native pour une détection et une simulation à grande échelle."
+        ],
+        "tags": [
+          "ai",
+          "artificial_intelligence",
+          "identity_management",
+          "ciso_accountability",
+          "cyber_attacks",
+          "scams",
+          "phishing",
+          "social_engineering",
+          "automation",
+          "threat_landscape",
+          "iam",
+          "pam",
+          "security_strategy",
+          "risk_management"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/agentic-ai-is-an-identity-problem-and-cisos-will-be-accountable-for-the-outcome/",
+          "https://socprime.com/blog/siem-edr/what-are-the-main-ai-assisted-cyber-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Cloud file-sharing sites targeted for corporate data theft attacks",
+        "description": "Un acteur de la menace nommé Zestix propose à la vente des données d'entreprise volées à des dizaines de sociétés. Ces données proviennent probablement de violations de leurs instances ShareFile, Nextcloud et OwnCloud. L'accès initial aurait été obtenu via des identifiants collectés par des infostealers (RedLine, Lumma, Vidar) déployés sur les appareils des employés par des campagnes de malvertising ou des attaques ClickFix. Zestix se connecte aux services de partage de fichiers en utilisant des identifiants valides lorsque l'authentification multi-facteurs (MFA) n'est pas active. Les données volées incluent des manuels de maintenance d'avions, des données de flotte, des bases de données clients, des dossiers de santé, des schémas de transport en commun, des cartes LiDAR de services publics, des configurations de réseaux FAI, des données de projets satellitaires, du code source ERP, des contrats gouvernementaux et des documents juridiques.",
+        "threat_actor": "Zestix",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1078 (Valid Accounts), T1133 (External Remote Services), T1539 (Steal Web Session Cookie), T1056.001 (Input Capture: Keylogging) - for infostealers, T1566.002 (Phishing: Spearphishing Link) - for malvertising/ClickFix.",
+        "analyse": "Cette campagne de vol de données met en évidence la vulnérabilité des systèmes de partage de fichiers cloud et la persistance des menaces d'infostealers. Les secteurs ciblés sont très variés (aviation, défense, santé, gouvernement, etc.), soulignant un impact géographique et stratégique potentiel large. La réutilisation d'anciens identifiants et l'absence de MFA sont des facteurs clés d'exploitation, indiquant des lacunes fondamentales dans l'hygiène de sécurité des entreprises. La fuite de données sensibles comme les manuels de défense ou les configurations réseau peut avoir des conséquences stratégiques importantes pour les organisations victimes.",
+        "recommandations": [
+          "Mettre en œuvre et faire respecter l'authentification multi-facteurs (MFA) sur tous les services cloud, en particulier les plateformes de partage de fichiers.",
+          "Effectuer une rotation régulière des identifiants et invalider les sessions actives après de longues périodes d'inactivité ou de suspicion.",
+          "Utiliser des solutions de protection des terminaux (EDR) pour détecter et bloquer les infostealers.",
+          "Mener des campagnes de sensibilisation aux risques de malvertising, de phishing et d'attaques ClickFix pour les employés.",
+          "Surveiller les logs d'accès aux services cloud pour détecter les connexions inhabituelles ou les tentatives d'accès non autorisées.",
+          "Auditer les pratiques de sécurité des plateformes cloud utilisées et s'assurer qu'elles respectent les meilleures pratiques de sécurité.",
+          "Implémenter une segmentation réseau pour limiter les mouvements latéraux en cas de compromission d'un appareil."
+        ],
+        "tags": [
+          "corporate_data_theft",
+          "cloud_security",
+          "file_sharing",
+          "infostealer",
+          "redline",
+          "lumma",
+          "vidar",
+          "malvertising",
+          "clickfix",
+          "mfa_bypass",
+          "data_exfiltration",
+          "supply_chain",
+          "ttpt1078",
+          "ttpt1133",
+          "ttpt1539",
+          "ttpt1056001",
+          "ttpt1566002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-file-sharing-sites-targeted-for-corporate-data-theft-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "ClickFix attack uses fake Windows BSOD screens to push malware",
+        "description": "Une nouvelle campagne de social engineering, nommée 'PHALT#BLYX', cible le secteur de l'hôtellerie en Europe. Les attaquants envoient des e-mails de phishing se faisant passer pour Booking.com (annulation de réservation avec un montant significatif), menant à des pages 'ClickFix' qui affichent de faux écrans bleus de la mort (BSOD) de Windows. Ces pages incitent les utilisateurs à copier-coller et exécuter manuellement une commande PowerShell. La commande télécharge un projet .NET malveillant, le compile avec MSBuild.exe, ajoute des exclusions à Windows Defender, élève les privilèges via l'UAC, télécharge un chargeur primaire et établit une persistance via un fichier .url dans le dossier de démarrage.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1059.001 (Command and Scripting Interpreter: PowerShell), T1218.013 (System Binary Proxy Execution: MSBuild), T1548.002 (Bypass User Account Control), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "Cette campagne sophistiquée démontre l'évolution des techniques d'ingénierie sociale, utilisant des leurres crédibles et des interfaces utilisateur trompeuses (faux BSOD) pour manipuler les victimes. Le ciblage du secteur de l'hôtellerie, souvent sous pression, maximise les chances de succès. L'utilisation d'outils légitimes (PowerShell, MSBuild.exe) pour la compilation et l'exécution du malware rend la détection plus difficile par les solutions antivirus traditionnelles. L'impact est potentiellement lourd pour les entreprises hôtelières, allant de l'accès initial au réseau à l'établissement d'une persistance et à l'élévation des privilèges, pouvant conduire à des violations de données ou des compromissions plus profondes.",
+        "recommandations": [
+          "Sensibiliser les employés, en particulier ceux du secteur de l'hôtellerie, aux techniques de phishing, de social engineering et aux risques liés à l'exécution de commandes non vérifiées.",
+          "Mettre en place des solutions d'analyse comportementale des e-mails pour détecter les messages de phishing sophistiqués.",
+          "Restreindre l'exécution de scripts PowerShell et l'utilisation de MSBuild.exe par des utilisateurs non autorisés.",
+          "Renforcer les contrôles UAC et surveiller les tentatives d'élévation de privilèges.",
+          "Utiliser des solutions EDR (Endpoint Detection and Response) pour détecter les activités malveilluses même si des outils légitimes sont utilisés.",
+          "Mettre en place des politiques de sécurité qui interdisent le copier-coller de commandes depuis des pages web non fiables."
+        ],
+        "tags": [
+          "clickfix",
+          "social_engineering",
+          "phishing",
+          "malware",
+          "hospitality_sector",
+          "windows_bsod",
+          "powershell",
+          "msbuild",
+          "uac_bypass",
+          "persistence",
+          "ttpt1566001",
+          "ttpt1566002",
+          "ttpt1059001",
+          "ttpt1218013",
+          "ttpt1548002",
+          "ttpt1547001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clickfix-attack-uses-fake-windows-bsod-screens-to-push-malware/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Kimwolf botnet leverages residential proxies to hijack 2M+ Android devices",
+        "description": "Le botnet Kimwolf, lié au botnet Aisuru, a infecté plus de 2 millions d'appareils Android, principalement des boîtiers TV et des Smart TVs. Il se propage en exploitant les services ADB exposés via des réseaux de proxys résidentiels, dont beaucoup sont loués via IPIDEA (basé en Chine). De nombreux appareils sont vendus pré-infectés avec des logiciels modifiés qui les transforment en bots Kimwolf dès leur connexion à Internet. Le botnet utilise des techniques furtives comme DNS sur TLS et EtherHiding (domaines blockchain) et ses fonctions principales sont le proxy de trafic et les attaques DDoS. Une concentration élevée d'infections est observée au Vietnam, au Brésil, en Inde et en Arabie Saoudite, générant environ 12 millions d'adresses IP uniques par semaine. Le botnet est également monétisé via des services de monétisation de bande passante.",
+        "threat_actor": "Kimwolf botnet operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "14emeliaterracewestroxburyma02132.su",
+            "xd.resi.toon"
+          ]
+        },
+        "mitre_ttps": "T1090 (Proxy), T1498 (Denial of Service), T1568.001 (Dynamic DNS), T1572 (Protocol Tunneling), T1583.003 (Acquire Infrastructure: Virtual Private Server)",
+        "analyse": "Le botnet Kimwolf représente une menace significative en raison de son échelle massive et de ses techniques d'évasion sophistiquées. L'exploitation des réseaux de proxys résidentiels et la distribution d'appareils pré-infectés mettent en lumière des vulnérabilités systémiques dans la chaîne d'approvisionnement des appareils IoT et la sécurité des services VPN/proxy. L'impact géographique est mondial, avec une concentration dans plusieurs pays clés. Les conséquences incluent l'utilisation des appareils compromis pour des activités malveillantes (DDoS, proxying) et la monétisation illégale de la bande passante, avec des implications pour la vie privée et la sécurité des utilisateurs finaux, ainsi que pour la réputation des FAI et des fournisseurs de proxy.",
+        "recommandations": [
+          "Les fournisseurs de proxys doivent bloquer les ports à risque et vérifier les origines du trafic.",
+          "Les utilisateurs d'appareils Android (en particulier les boîtiers TV) doivent vérifier leurs paramètres de sécurité, mettre à jour le firmware et envisager une réinitialisation ou la destruction des appareils infectés.",
+          "Les organisations doivent bloquer l'infrastructure de C2 connue de Kimwolf et surveiller le trafic pour détecter les signes d'infection.",
+          "Renforcer les mesures de sécurité dans la chaîne d'approvisionnement des appareils IoT pour éviter les infections pré-embarquées.",
+          "Améliorer la détection des activités de botnet via l'analyse du trafic réseau et le renseignement sur les menaces (threat intelligence)."
+        ],
+        "tags": [
+          "botnet",
+          "android",
+          "iot",
+          "residential_proxy",
+          "adb_exploit",
+          "ddos",
+          "malware",
+          "supply_chain_security",
+          "dns_over_tls",
+          "etherhiding",
+          "ttpt1090",
+          "ttpt1498",
+          "ttpt1568001",
+          "ttpt1572",
+          "ttpt1583003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186559/malware/kimwolf-botnet-leverages-residential-proxies-to-hijack-2m-android-devices.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Russia-linked APT UAC-0184 uses Viber to spy on Ukrainian military in 2025",
+        "description": "L'APT UAC-0184 (Hive0156), lié à la Russie, cible les entités militaires et gouvernementales ukrainiennes. Le mode opératoire implique l'envoi de messages Viber contenant des fichiers ZIP malveillants, en exploitant des thèmes sensibles (modification des dossiers du personnel militaire, refus d'indemnisation). Le processus d'infection multi-étapes utilise un script PowerShell pour télécharger d'autres fichiers malveillants, puis charge secrètement des malwares via un programme légitime (CFlux.exe) en side-loading. Les charges finales incluent HijackLoader et le Remcos RAT, déployés pour la collecte de renseignements.",
+        "threat_actor": "UAC-0184 (aka Hive0156)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment) - via Viber, T1059.001 (Command and Scripting Interpreter: PowerShell), T1218.007 (Signed Binary Proxy Execution: Msiexec) - CFlux.exe side-loading, T1055 (Process Injection), T1574.002 (Hijack Execution Flow: DLL Side-Loading), T1071.001 (Application Layer Protocol: Web Protocols) - C2, T1027 (Obfuscated Files or Information)",
+        "analyse": "Cette campagne APT souligne la persistance de l'espionnage cybernétique par des acteurs étatiques dans le contexte du conflit ukrainien. L'utilisation de plateformes de messagerie populaires comme Viber pour la distribution de malwares démontre l'adaptation des attaquants aux habitudes de communication des cibles. La sophistication de la chaîne d'infection, incluant le side-loading de DLL et des techniques d'évasion, vise à contourner la détection. L'impact est stratégique, car la collecte de renseignements militaires et gouvernementaux peut influencer le cours du conflit et la sécurité nationale de l'Ukraine. L'exploitation de thèmes sensibles pour l'ingénierie sociale est particulièrement efficace dans ce contexte.",
+        "recommandations": [
+          "Renforcer la sensibilisation à la sécurité des utilisateurs, en particulier le personnel militaire et gouvernemental, concernant les messages inattendus ou suspects sur les plateformes de messagerie.",
+          "Mettre en œuvre des politiques strictes de sécurité des terminaux et des réseaux pour détecter et bloquer les téléchargements de fichiers malveillants et l'exécution de scripts non autorisés.",
+          "Déployer des solutions EDR avec des capacités d'analyse comportementale pour identifier le side-loading de DLL et l'injection de processus.",
+          "Mettre à jour régulièrement les systèmes et les applications pour corriger les vulnérabilités exploitées.",
+          "Utiliser des contrôles d'accès basés sur les rôles (RBAC) et des principes de moindre privilège.",
+          "Renforcer le chiffrement des communications et des données sensibles."
+        ],
+        "tags": [
+          "apt",
+          "russia",
+          "ukraine",
+          "espionage",
+          "viber",
+          "phishing",
+          "malware_delivery",
+          "powershell",
+          "dll_side_loading",
+          "hijackloader",
+          "remcos_rat",
+          "government_targeting",
+          "military_targeting",
+          "ttpt1566001",
+          "ttpt1059001",
+          "ttpt1218007",
+          "ttpt1055",
+          "ttpt1574002",
+          "ttpt1071001",
+          "ttpt1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186571/apt/russia-linked-apt-uac-0184-uses-viber-to-spy-on-ukrainian-military-in-2025.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "The cybercriminal behind the 2016 Bitfinex hack has been released from prison early thanks to Trump’s 2018 First Step Act",
+        "description": "Ilya Lichtenstein, condamné pour son rôle dans le hack de Bitfinex en 2016, a été libéré de prison de manière anticipée grâce au 'First Step Act' de Trump. Lichtenstein et son épouse, Heather Morgan, ont été arrêtés en 2022 pour avoir blanchi environ 4,5 milliards de dollars en cryptomonnaie volée. Les forces de l'ordre ont récupéré plus de 3,6 milliards de dollars. Lichtenstein avait utilisé des outils de hacking avancés pour pénétrer le réseau de Bitfinex et autoriser frauduleusement des transactions de 119 754 bitcoins. Le couple a utilisé de fausses identités, des logiciels pour automatiser les transactions, converti des fonds volés en pièces d'or et d'autres crypto-actifs, et utilisé des services de mixage comme ChipMixer.",
+        "threat_actor": "Ilya Lichtenstein (and Heather Morgan)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1589 (Establish Accounts), T1098 (Account Manipulation), T1078 (Valid Accounts) - for breaching Bitfinex, T1041 (Exfiltration Over C2 Channel) - for cryptocurrency transfer, T1070.004 (Indicator Removal on Host: File Deletion) - for covering tracks.",
+        "analyse": "Cet article met en lumière l'aspect juridique et les conséquences des cybercrimes à grande échelle, notamment dans le domaine des cryptomonnaies. La libération anticipée d'un acteur majeur d'un hack de plusieurs milliards de dollars soulève des questions sur la justice et la récupération des fonds. L'affaire illustre la sophistication des techniques de blanchiment d'argent utilisées par les cybercriminels pour cacher l'origine des fonds volés. L'impact est historique pour la communauté crypto et met en évidence la nécessité d'une coopération internationale pour lutter contre la cybercriminalité et le blanchiment d'argent.",
+        "recommandations": [
+          "Renforcer la sécurité des plateformes de cryptomonnaies par des audits réguliers et des mesures de protection avancées.",
+          "Mettre en œuvre des systèmes de détection et de prévention des fraudes pour identifier les transactions suspectes.",
+          "Améliorer les processus de Know Your Customer (KYC) et Anti-Money Laundering (AML) pour prévenir le blanchiment d'argent via les cryptomonnaies.",
+          "Collaborer avec les forces de l'ordre pour enquêter sur les incidents de cybercrime et récupérer les actifs volés.",
+          "Sensibiliser les utilisateurs aux risques liés à l'utilisation de plateformes non réglementées ou de services de mixage."
+        ],
+        "tags": [
+          "cryptocurrency",
+          "bitfinex_hack",
+          "cybercrime",
+          "money_laundering",
+          "ilya_lichtenstein",
+          "heather_morgan",
+          "law_enforcement",
+          "justice",
+          "first_step_act",
+          "ttpt1589",
+          "ttpt1098",
+          "ttpt1078",
+          "ttpt1041",
+          "ttpt1070004"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186551/cyber-crime/the-cybercriminal-behind-2016-bitfinex-hack-released.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Threat actors insisted that Resecurity’s honeypot was real data. We found no evidence that it was.",
+        "description": "Des acteurs de la menace du groupe ScatteredLapsus$Hunters (SLH) ont affirmé avoir piraté Resecurity et volé des données sensibles, y compris des chats internes, des données d'employés et des listes de clients. Resecurity a démenti ces allégations, expliquant avoir détecté les tentatives d'intrusion et mis en place un honeypot avec des données synthétiques et un faux compte d'employé. Les SLH ont interagi avec le honeypot, effectuant plus de 188 000 requêtes pour récupérer des données synthétiques, tout en étant convaincus qu'il s'agissait de données réelles. Cette opération de déception a permis à Resecurity de documenter l'activité des attaquants et de collaborer avec les autorités.",
+        "threat_actor": "ScatteredLapsus$Hunters (SLH)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "idp.resecurity.com",
+            "omantel.com",
+            "se.com.sa"
+          ]
+        },
+        "mitre_ttps": "T1589.001 (Establish Accounts: Email Accounts) - for setting up honeypot, T1598 (Phishing for Information) - for initial probing, T1078.004 (Valid Accounts: Cloud Accounts) - for access attempts, T1592 (Gather Victim Host Information) - for data dumping, T1083 (File and Directory Discovery)",
+        "analyse": "Cet article met en évidence l'utilisation de techniques de cyber-déception et de honeypots comme outils proactifs de renseignement sur les menaces. Il illustre la difficulté pour les acteurs de la menace de distinguer les données réelles des données synthétiques, même lorsqu'ils sont convaincus d'une compromission. L'impact stratégique est double : d'une part, cela permet aux entreprises de piéger et d'analyser les modes opératoires des attaquants sans subir de dommages réels ; d'autre part, cela soulève des questions sur la fiabilité des revendications de breach souvent faites par les groupes de cybercriminels. C'est une méthode efficace pour collecter des IoA (Indicators of Attack) et renforcer les défenses.",
+        "recommandations": [
+          "Envisager l'implémentation de honeypots et de techniques de cyber-déception pour attirer et analyser les acteurs de la menace.",
+          "Mettre en place une surveillance rigoureuse des services exposés et des applications publiques pour détecter les tentatives de reconnaissance et d'intrusion.",
+          "Utiliser des données synthétiques pour les environnements de test et les pièges afin de protéger les informations réelles.",
+          "Collaborer étroitement avec les forces de l'ordre et les FAI pour partager des informations sur les activités malveillantes et faciliter les enquêtes.",
+          "Développer des capacités internes de DFIR (Digital Forensics and Incident Response) pour documenter et analyser les tentatives d'attaque."
+        ],
+        "tags": [
+          "cyber_deception",
+          "honeypot",
+          "threat_intelligence",
+          "scatteredlapsushunters",
+          "resecurity",
+          "false_breach_claim",
+          "dfir",
+          "indicators_of_attack",
+          "ttpt1589001",
+          "ttpt1598",
+          "ttpt1078004",
+          "ttpt1592",
+          "ttpt1083"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/threat-actors-insisted-that-resecuritys-honeypot-was-real-data-we-found-no-evidence-that-it-was/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "VSCode IDE forks expose users to \"recommended extension\" attacks",
+        "description": "Des solutions d'environnement de développement intégré (IDE) populaires basées sur l'IA, dérivées de Microsoft VSCode (comme Cursor, Windsurf, Google Antigravity, Trae), recommandent des extensions non existantes dans le registre OpenVSX. Cela permet à des acteurs de la menace de revendiquer ces noms d'espace et de télécharger des extensions malveillantes. Le problème se manifeste sous forme de recommandations basées sur les fichiers (ex: `azure-pipelines.yaml`) ou sur les logiciels installés (ex: PostgreSQL). Google et Cursor ont corrigé la vulnérabilité suite à la remontée des chercheurs, mais Windsurf n'a pas encore réagi. Des mesures ont été coordonnées avec Eclipse Foundation, l'opérateur d'OpenVSX, pour renforcer les protections au niveau du registre.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment) - for malicious extensions, T1559.002 (Interprocess Communication: Component Object Model), T1072 (Software Deployment Tools) - for IDE extensions, T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+        "analyse": "Cette vulnérabilité représente un risque de supply chain important pour les développeurs utilisant des IDE basés sur VSCode et des extensions via OpenVSX. La facilité avec laquelle un acteur de la menace peut prendre le contrôle d'un nom d'extension recommandé non existant pour distribuer du code malveillant a un impact stratégique sur la sécurité du développement logiciel et la confiance dans les écosystèmes d'IDE. Les secteurs utilisant ces outils (potentiellement tous ceux qui développent des logiciels) sont exposés à des compromissions de leur chaîne de développement. La lenteur de la réponse de certains éditeurs exacerbe le risque.",
+        "recommandations": [
+          "Auditer les extensions recommandées dans les IDE et vérifier leur légitimité avant installation.",
+          "Mettre à jour les IDE et les extensions vers les versions patchées dès que possible.",
+          "Utiliser uniquement les registres d'extensions officiels ou fiables.",
+          "Renforcer les processus de vérification et de validation des extensions dans les plateformes de développement.",
+          "Mettre en place des scanners de code et des outils d'analyse de la supply chain pour détecter les composants malveillants."
+        ],
+        "tags": [
+          "vscode",
+          "ide",
+          "ai_powered_tools",
+          "extension_attacks",
+          "supply_chain_attack",
+          "openvsx",
+          "malicious_extensions",
+          "developer_tools",
+          "software_security",
+          "ttpt1566001",
+          "ttpt1559002",
+          "ttpt1072",
+          "ttpt1195002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/vscode-ide-forks-expose-users-to-recommended-extension-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "VVS Stealer, a new python malware steals Discord credentials",
+        "description": "VVS Stealer est un nouveau malware basé sur Python, vendu sur Telegram depuis au moins avril 2025. Il est conçu pour voler des données Discord (identifiants, tokens, informations de compte, facturation, statut MFA, IP) et les identifiants, cookies, historique et données d'auto-remplissage des navigateurs basés sur Chromium et Firefox. Le malware maintient sa persistance via l'installation au démarrage et utilise des messages d'erreur factices pour opérer discrètement. Les données sont exfiltrées après compression (fichier _vault.zip) via des requêtes HTTP POST vers des webhooks prédéfinis. Il injecte également du JavaScript obfusqué dans le client Discord pour détourner les sessions actives et surveiller les actions de l'utilisateur. Le malware utilise PyInstaller pour le packaging et Pyarmor pour l'obfuscation.",
+        "threat_actor": "VVS Stealer operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1560 (Archive Collected Data) - for _vault.zip, T1559 (Command and Scripting Interpreter: PowerShell), T1552 (Unsecured Credentials), T1071.001 (Application Layer Protocol: Web Protocols) - for webhook exfiltration, T1056.001 (Input Capture: Keylogging) - implied for credentials, T1074 (Data Staged), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "VVS Stealer illustre la menace croissante des infostealers sophistiqués ciblant les plateformes de communication populaires et les données de navigation. L'utilisation de Python et d'outils d'obfuscation rend sa détection et son analyse plus difficiles. L'impact est important pour les utilisateurs de Discord, avec des risques de piratage de compte, d'usurpation d'identité et d'accès non autorisé à des informations personnelles et financières. La capacité à détourner des sessions actives et à surveiller les utilisateurs représente une menace persistante pour la confidentialité et l'intégrité des données personnelles. La vente du malware sur Telegram indique un modèle de Malware-as-a-Service (MaaS) rendant cette menace accessible à un public plus large d'acteurs malveillants.",
+        "recommandations": [
+          "Utiliser des mots de passe robustes et uniques, ainsi que l'authentification multi-facteurs (MFA) sur tous les comptes en ligne, en particulier Discord et les services de navigation.",
+          "Scanner régulièrement les systèmes avec des solutions antivirus/EDR à jour pour détecter les logiciels malveillants basés sur Python et les infostealers.",
+          "Être vigilant face aux e-mails et messages suspects, car ils peuvent être des vecteurs d'infection.",
+          "Surveiller les connexions et activités inhabituelles sur les comptes Discord et les navigateurs.",
+          "Restreindre l'exécution de scripts non signés ou provenant de sources inconnues.",
+          "Mettre en œuvre des politiques de sécurité pour les applications de messagerie et de navigation."
+        ],
+        "tags": [
+          "vvs_stealer",
+          "python_malware",
+          "infostealer",
+          "discord_credentials",
+          "browser_data",
+          "session_hijacking",
+          "telegram_sales",
+          "maas",
+          "obfuscation",
+          "pyarmor",
+          "webhook_exfiltration",
+          "ttpt1560",
+          "ttpt1559",
+          "ttpt1552",
+          "ttpt1071001",
+          "ttpt1056001",
+          "ttpt1074",
+          "ttpt1547001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186542/malware/vvs-stealer-a-new-python-malware-steals-discord-credentials.html"
+        ],
+        "date": "2026-01-06"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape for this period is characterized by an increasing intensity and sophistication of attacks, exploiting a wide range of vectors. Artificial intelligence (AI) is at the heart of this evolution, with attackers using it to enhance the personalization and scale of their phishing and social engineering campaigns (e.g., ClickFix, VVS Stealer) and to automate faster, more stealthy attacks. In response, AI is also increasingly employed by defenders for detection and response. However, the growing adoption of agentic AI introduces new challenges in identity and access management, requiring a reevaluation of traditional security controls.\n\nThe supply chain threat remains prominent, with incidents affecting subcontractors (OFII) or third-party providers (Global-e impacting Ledger, Marquis Software impacting US banks, unverified VSCode extensions). This highlights the need for increased vigilance over third parties and development tools. State-sponsored actors (e.g., UAC-0184 targeting Ukraine) continue to conduct espionage campaigns, targeting sensitive information.\n\nCritical vulnerabilities are a constant vector of exploitation, with numerous high-severity CVEs (SmarterMail, D-Link, Adobe ColdFusion, Apache SIS, Kyuubi, macOS TCC bypass) allowing remote code execution, data leakage, or system takeover. The CISA report on exploited vulnerabilities in 2025 confirms this trend, with a notable increase in actively exploited flaws, including very old ones. Ransomware (TridentLocker targeting Sedgwick, attack on Leduc County) and info-stealers (Zestix, VVS Stealer) remain major threats, aiming to exfiltrate data for extortion or sale.\n\nFinally, mobile botnets like Kimwolf, exploiting residential proxy networks, demonstrate the ability of malicious actors to compromise millions of devices, often through weak security practices or pre-infected devices. Geopolitics, while distinct, influences cyberspace, with international tensions potentially exacerbating the risks of state-sponsored cyberattacks.\n\nIn conclusion, the general state of threats is marked by the rapid adaptation of attackers to new technologies like AI, a persistence of traditional vectors (phishing, unpatched vulnerabilities), and increasing complexity due to interconnected systems and third-party dependencies. The need for a multi-layered defense approach, including identity management, supply chain security, proactive vulnerability management, and user awareness, is more critical than ever.",
+      "date": "2026-01-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Zestix",
+        "secteur": "Multi-sector (aviation, defense, healthcare, utilities, mass transit, telecommunications, legal, real estate, government)",
+        "modop": "Corporate data theft via cloud file-sharing sites (ShareFile, Nextcloud, OwnCloud). Initial access likely through credentials stolen by info-stealing malware (RedLine, Lumma, Vidar) deployed via malvertising campaigns or ClickFix attacks. Exploitation of inactive MFA.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_theft",
+          "cloud_breach",
+          "infostealer",
+          "credentials_stuffing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-file-sharing-sites-targeted-for-corporate-data-theft-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Internet Service Providers (Brightspeed), Enterprise Software (Red Hat), Cloud Services (AWS)",
+        "modop": "Extortion and data theft. Access to GitLab instances (Red Hat) and AWS cloud environments via exposed credentials and creation of rogue IAM accounts for privilege escalation. Targets customer information, PII, payment history.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "data_theft",
+          "cloud_security",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-broadband-provider-brightspeed-investigates-breach-claims/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "UAC-0184 (aka Hive0156)",
+        "secteur": "Ukrainian government, military",
+        "modop": "Russia-linked APT, using Viber messages to deliver malicious ZIP files. Exploitation of sensitive themes (military personnel records, denial of compensation). The infection process involves PowerShell scripts, CFlux.exe side-loading, installation of HijackLoader and Remcos RAT for espionage and intelligence gathering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "russia",
+          "espionage",
+          "military_targeting",
+          "government_targeting",
+          "social_engineering",
+          "malware_delivery",
+          "remcos_rat",
+          "hijackloader"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186571/apt/russia-linked-apt-uac-0184-uses-viber-to-spy-on-ukrainian-military-in-2025.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "Kimwolf botnet",
+        "secteur": "Android devices (TV boxes, Smart TVs), residential proxy networks",
+        "modop": "Infection of over 2 million Android devices by exploiting exposed ADB services via residential proxy networks. Uses wolfSSL library, DNS over TLS, elliptic curve digital signatures, EtherHiding to resist takedowns via blockchain domains. Primary functions: traffic proxying, DDoS attacks. Monetization through bandwidth monetization services and sale of residential IPs.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "android",
+          "ddos",
+          "proxy_network",
+          "adb_exploitation",
+          "iot_security"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186559/malware/kimwolf-botnet-leverages-residential-proxies-to-hijack-2m-android-devices.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "VVS Stealer",
+        "secteur": "Discord users, web browsers",
+        "modop": "Python-based malware that steals Discord credentials and tokens, browser credentials, cookies, browsing history, and autofill data. Maintains persistence via startup installation, operates stealthily via fake error messages. Exfiltrates compressed data via HTTP POST requests to webhooks. Injects obfuscated JavaScript to hijack active Discord sessions.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "discord_theft",
+          "credential_harvesting",
+          "python_malware",
+          "session_hijacking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186542/malware/vvs-stealer-a-new-python-malware-steals-discord-credentials.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "nom": "TridentLocker",
+        "secteur": "Claims management and risk services (Sedgwick), Manufacturing, Government, IT, Professional services",
+        "modop": "Ransomware-as-a-service (RaaS) using double extortion tactics: system encryption and threat of exfiltrated data disclosure. Primarily targets North America and Europe, as well as China and the UK.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "double_extortion",
+          "raas",
+          "data_encryption",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186525/data-breach/sedgwick-discloses-data-breach-after-tridentlocker-ransomware-attack/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Military Industry",
+        "theme": "France's acquisition of airborne early warning aircraft",
+        "description": "France has ordered two GlobalEye airborne early warning aircraft from Swedish company Saab, with two additional options, as part of replacing its aging fleet of Boeing E-3F Sentry. This contract positions Saab as a favorite for the future NATO AWACS replacement market, following the US abandonment of its E-7A Wedgetail program due to cost overruns and vulnerabilities, which led NATO to cancel its initial intention to acquire E-7s.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "defense",
+          "saab",
+          "globaleye",
+          "nato",
+          "france",
+          "aerospace",
+          "military_procurement"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/france-achat-avion-veille-saab/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "International Relations, Energy (Oil), Defense",
+        "theme": "US military intervention in Venezuela and reshaping the international order",
+        "description": "The United States conducted a military strike in Venezuela to remove President Nicolas Maduro and his wife, to be tried in New York. This action, perceived as a violation of international law, is part of the Trump administration's desire to reshape the international order and access Venezuela's vast oil resources. The international community is divided on the legitimacy of this intervention, which marks a new era of bilateralism and 'might makes right' in global affairs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "venezuela",
+          "united_states",
+          "trump_administration",
+          "military_intervention",
+          "international_law",
+          "oil",
+          "monroe_doctrine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/venezuela-trump-la-force-pour-loi/",
+          "https://www.iris-france.org/maduro-etait-un-dictateur-les-etats-unis-sont-devenus-un-etat-voyou/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/us-commits-venezuelas-transition-can-it-succeed"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Defense, Energy, Industry",
+        "theme": "Europe's energy transformation in defense",
+        "description": "Europe needs to accelerate its energy transition in the defense sector to reduce its reliance on imported fossil fuels and critical raw materials. The EU is urged to leverage its regulatory power to align defense spending with sustainable transformation objectives, integrating clean innovation into defense policy. The goal is to strengthen Europe's strategic autonomy and technological leadership in a volatile geopolitical environment.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "defense",
+          "energy_transition",
+          "energy_security",
+          "strategic_autonomy",
+          "innovation"
+        ],
+        "sources": [
+          "https://www.iris-france.org/soft-power-meets-hard-security-leveraging-europes-regulatory-strength-for-energy-transformation-in-defence/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services (banks)",
+        "victime": "Artisans’ Bank and VeraBank (via Marquis Software)",
+        "description": "Customer data of US banks Artisans’ Bank and VeraBank was exposed following an August ransomware attack on their vendor, Marquis Software. The exploited vulnerability was linked to SonicWall.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "banking",
+          "ransomware",
+          "supply_chain_attack",
+          "customer_data",
+          "sonicwall"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/5th-january-threat-intelligence-report/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Telecommunications (Internet Service Provider)",
+        "victime": "Brightspeed (United States)",
+        "description": "Brightspeed, a major fiber broadband provider in the United States, is investigating claims of a security breach and data theft made by the Crimson Collective extortion group. Allegedly stolen data includes customer PII, account information, payment details, and payment card information.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "broadband",
+          "brightspeed",
+          "crimson_collective",
+          "data_theft",
+          "pii",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-broadband-provider-brightspeed-investigates-breach-claims/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Local Government",
+        "victime": "Leduc County (Canada)",
+        "description": "Leduc County in Canada was the target of a Christmas Day ransomware attack, which disabled some of its information technology (IT) systems.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "canada",
+          "leduc_county",
+          "ransomware",
+          "it_systems"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/ca-leduc-county-target-of-christmas-day-cybersecurity-attack/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Cryptocurrency, Third-Party Payment Services",
+        "victime": "Ledger Customers (via Global-e)",
+        "description": "Ledger, a self-custodial hardware wallet maker, informed some customers that their personal data (names, contact information) had been exposed after hackers breached the systems of Global-e, a third-party payment processor. No sensitive information such as crypto wallet seed phrases, blockchain balance, or digital asset secrets were compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "ledger",
+          "global_e",
+          "payment_processor",
+          "customer_data",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ledger-customers-impacted-by-third-party-global-e-data-breach/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "ManageMyHealth (New Zealand)",
+        "description": "A New Zealand health-related entity obtained a High Court injunction prohibiting the sharing of data stolen from ManageMyHealth, a patient portal. Between 108,000 and 126,000 users, out of a total of 1.8 million, could be affected. Data potentially includes medical records, prescription refill requests, and appointment bookings.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "new_zealand",
+          "managemyhealth",
+          "patient_data",
+          "medical_records",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/nz-high-court-grants-injunction-over-managemyhealth-cyber-breach/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "VPN Services",
+        "victime": "NordVPN (Salesforce development)",
+        "description": "NordVPN denied allegations of a breach of its internal Salesforce development servers, stating that cybercriminals obtained 'dummy data' from a trial account on a third-party automated testing platform. A threat actor had claimed to steal over 10 databases containing Salesforce API keys and Jira tokens via a brute-force attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "vpn_service",
+          "nordvpn",
+          "salesforce",
+          "development_server",
+          "false_alarm",
+          "brute_force"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nordvpn-denies-breach-claims-says-attackers-have-dummy-data/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Government (immigration)",
+        "victime": "Office français de l’immigration et de l’intégration (OFII)",
+        "description": "Excerpts of personal data belonging to foreign nationals in France were published by a hacker, claiming an attack against the OFII (French Office for Immigration and Integration). The OFII confirmed a data theft but attributed the incident to an intrusion at a subcontractor. Information includes name, surname, entry date, reason for stay, email address, and phone number, potentially affecting millions of data entries.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "france",
+          "ofii",
+          "immigration_data",
+          "personal_data",
+          "subcontractor_breach",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/05/l-office-francais-de-l-immigration-et-de-l-integration-victime-d-une-fuite-de-donnees_6660632_4408996.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "secteur": "Claims Management and Risk Services",
+        "victime": "Sedgwick (federal contractor unit)",
+        "description": "Sedgwick confirmed a cybersecurity incident affecting its federal contractor subsidiary, Sedgwick Government Solutions, following an attack by the TridentLocker ransomware group, which claimed to have stolen 3.4GB of data. The company activated its incident response protocols, notified law enforcement and affected customers, clarifying that the rest of its operations were not impacted.",
+        "tags": [
+          "violation",
+          "breach",
+          "insurance",
+          "risk_management",
+          "sedgwick",
+          "tridentlocker",
+          "ransomware",
+          "data_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186525/data-breach/sedgwick-discloses-data-breach-after-tridentlocker-ransomware-attack/"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2002-0367",
+        "cvss": 7.2,
+        "product": "Microsoft Windows NT/2000 (smss.exe)",
+        "description": "Privilege escalation vulnerability in the smss.exe debugging subsystem, known to be exploited by ransomware groups. Allows a local attacker to obtain system privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "windows",
+          "privilege_escalation",
+          "smss.exe",
+          "ransomware_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-known-exploited-vulnerabilities-kev-2025/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-12793",
+        "cvss": 8.5,
+        "product": "AsusSoftwareManagerAgent",
+        "description": "Uncontrolled DLL loading path vulnerability. A local attacker can influence the application to load a DLL from an attacker-controlled location, potentially resulting in arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "asus",
+          "dll_hijacking",
+          "arbitrary_code_execution",
+          "local_privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12793"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-20795",
+        "cvss": 8.0,
+        "product": "MediaTek chipsets (KeyInstall component)",
+        "description": "High-severity Out-of-bounds Write in the KeyInstall component of MediaTek's mobile and IoT chipsets. Potentially allows an attacker to overwrite memory in a critical security subsystem, leading to crashes or arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "mediatek",
+          "chipset",
+          "out_of_bounds_write",
+          "arbitrary_code_execution",
+          "iot_security",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://securityonline.info/mediatek-kicks-off-2026-with-major-security-overhaul-for-mobile-chipsets/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-43530",
+        "cvss": 8.0,
+        "product": "Apple macOS (TCC framework)",
+        "description": "macOS Transparency, Consent, and Control (TCC) framework bypass. A sophisticated flaw in accessibility tools (ScreenReader.framework) allows executing malicious commands without user prompts, automating the machine via AppleScript, and enabling full control.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "macos",
+          "apple",
+          "tcc_bypass",
+          "privacy_bypass",
+          "arbitrary_code_execution",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/new-tcc-bypass-cve-2025-43530-exposes-macos-to-unchecked-automation/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": 9.8,
+        "product": "SmarterMail",
+        "description": "Maximum-severity vulnerability allowing unauthenticated attackers to upload and execute malicious files, leading to full server takeover, credential theft, and lateral movement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "smartermail",
+          "remote_code_execution",
+          "unauthenticated_access",
+          "server_takeover",
+          "file_upload"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/maximum-severity-flaw-enables-smartermail-server-takeover"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-5777",
+        "cvss": 9.8,
+        "product": "Citrix (CitrixBleed 2)",
+        "description": "Critical vulnerability ('CitrixBleed 2') known to be actively exploited by ransomware groups like CL0P. Allows sensitive information disclosure and unauthorized access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "citrix",
+          "citrixbleed",
+          "data_leakage",
+          "unauthorized_access",
+          "ransomware_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-known-exploited-vulnerabilities-kev-2025/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-61808",
+        "cvss": 9.8,
+        "product": "Adobe ColdFusion",
+        "description": "Logic flaw enabling authenticated administrators to turn a standard maintenance feature into a weapon for total server compromise. Exploits network paths (UNC paths) to deploy malicious code via the 'Package & Deploy' tool, bypassing security controls.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adobe",
+          "coldfusion",
+          "remote_code_execution",
+          "authenticated_exploitation",
+          "server_compromise",
+          "logic_flaw"
+        ],
+        "sources": [
+          "https://securityonline.info/attacking-from-within-how-adobe-coldfusion-admins-can-weaponize-remote-shares/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-65110",
+        "cvss": 8.1,
+        "product": "Vega (vega-selections library)",
+        "description": "Cross-Site Scripting (XSS) vulnerability via `vlSelectionTuples` function abuse in Vega applications. Allows arbitrary JavaScript code execution (DOM XSS) after user interaction with a malicious Vega specification, compromising confidentiality and integrity.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vega",
+          "xss",
+          "dom_xss",
+          "javascript_execution",
+          "data_manipulation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65110"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-66518",
+        "cvss": 8.8,
+        "product": "Apache Kyuubi",
+        "description": "High-severity flaw allowing unauthorized access to the server's local file system, rendering directory allow-lists ineffective. Caused by improper path normalization.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "kyuubi",
+          "local_file_access",
+          "path_traversal",
+          "unauthorized_access",
+          "data_leakage"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-66518-high-severity-flaw-in-apache-kyuubi-exposes-local-server-files/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-67732",
+        "cvss": 8.4,
+        "product": "Dify",
+        "description": "Plaintext API Key Exposure via the Model Provider Configuration Endpoint. Allows non-administrator users to view and reuse the API key, leading to unauthorized access to third-party services and consumption of quotas.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dify",
+          "api_key_exposure",
+          "unauthorized_access",
+          "authentication_bypass",
+          "llm_platform"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-67732"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68280",
+        "cvss": 8.0,
+        "product": "Apache Spatial Information System (SIS)",
+        "description": "XML External Entity (XXE) vulnerability allowing malicious actors to read sensitive local server files by exploiting insecure XML processing. Affects several geospatial data parsing services.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apache",
+          "sis",
+          "xxe",
+          "local_file_inclusion",
+          "information_disclosure",
+          "server_files"
+        ],
+        "sources": [
+          "https://securityonline.info/apache-sis-patch-blocks-xml-attack-that-leaks-server-files/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68428",
+        "cvss": 9.2,
+        "product": "jsPDF (node.js builds)",
+        "description": "Local File Inclusion/Path Traversal vulnerability via the first argument of the loadFile method. Allows a user to retrieve the contents of arbitrary files on the local file system.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "jspdf",
+          "node.js",
+          "local_file_inclusion",
+          "path_traversal",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68428"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-68455",
+        "cvss": 8.6,
+        "product": "Craft CMS",
+        "description": "Authenticated Remote Code Execution (RCE) vulnerability via malicious attached Behavior. Requires administrator access to the Craft Control Panel for exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "craft_cms",
+          "remote_code_execution",
+          "authenticated_rce",
+          "cms_security"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68455"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-69227",
+        "cvss": 8.0,
+        "product": "aiohttp",
+        "description": "High-severity Denial of Service (DoS) vulnerability. If Python assert statements are bypassed (-O optimization), an infinite loop can occur, locking up server resources indefinitely with a specially crafted POST message.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aiohttp",
+          "denial_of_service",
+          "infinite_loop",
+          "python_security"
+        ],
+        "sources": [
+          "https://securityonline.info/aiohttp-patches-seven-vulnerabilities-including-high-severity-dos-risks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2025-69228",
+        "cvss": 8.0,
+        "product": "aiohttp",
+        "description": "High-severity Denial of Service (DoS) vulnerability. Allows an attacker to cause server memory exhaustion by crafting a request using the Request.post() method, leading to server freeze.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aiohttp",
+          "denial_of_service",
+          "memory_exhaustion",
+          "http_server"
+        ],
+        "sources": [
+          "https://securityonline.info/aiohttp-patches-seven-vulnerabilities-including-high-severity-dos-risks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2026-0625",
+        "cvss": 9.3,
+        "product": "D-Link DSL gateway devices",
+        "description": "Command injection vulnerability in the dnscfg.cgi endpoint, due to improper sanitization of DNS configuration parameters. An unauthenticated remote attacker can inject and execute arbitrary shell commands, resulting in remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "dlink",
+          "command_injection",
+          "remote_code_execution",
+          "unauthenticated_access",
+          "dns_configuration",
+          "router_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0625"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "cve_id": "CVE-2026-21675",
+        "cvss": 9.8,
+        "product": "iccDEV (CIccCmm class)",
+        "description": "Use After Free vulnerability in the CIccCmm class via improper hint manager object deletion in the CIccXform::Create() function.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "iccdev",
+          "use_after_free",
+          "memory_corruption",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21675"
+        ],
+        "date": "2026-01-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Agentic AI Is an Identity Problem and CISOs Will Be Accountable for the Outcome & What Are the Main AI-Assisted Cyber-Attacks and Scams?",
+        "description": "These articles explore the growing impact of Artificial Intelligence (AI) on cybersecurity, for both attackers and defenders. Agentic AI is presented as a new class of identity posing significant challenges for CISOs in terms of access management, lifecycle, and risk, as AI agents operate at machine scale but with human-like intent. AI-assisted threats are not new attack types, but existing tactics (phishing, fraud, malware) executed faster, at greater scale, and with increased personalization. Defenders must adapt by strengthening identity verification, limiting single-person approvals, and focusing on controls protecting payments, accounts, and sensitive data. The need for lifecycle management for AI agents, similar to human identities, is highlighted as crucial to mitigate security and compliance risks.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "AI is transforming the threat landscape by increasing the speed and personalization of attacks. Companies must recognize agentic AI as a new identity to manage, with direct implications for CISO security strategies. Risks are cross-cutting, affecting all sectors, and require a reevaluation of traditional IAM/PAM frameworks. The ability to automate attacks can overwhelm traditional defenses, demanding agile responses and AI-driven detection capabilities for defenders. The impact is strategic, as poor AI management could lead to major incidents, innovation setbacks, and penalties.",
+        "recommandations": [
+          "Strengthen identity verification processes and limit single-person approvals.",
+          "Increase visibility across key communication and access points.",
+          "Apply lifecycle management discipline to AI agents (clear ownership, explicit purpose, function-aligned access, continuous visibility, automatic revocation).",
+          "Implement guardrails at AI agent creation to prevent broad privileges by default.",
+          "Improve anomalous behavior detection capabilities (UEBA/behavioral analytics) rather than relying solely on signatures.",
+          "Educate users on distrusting urgent or emotionally charged messages and deepfake techniques.",
+          "Strengthen authentication, authorization, and execution restrictions.",
+          "Establish rapid response and containment protocols for AI-assisted compromises.",
+          "Invest in AI-native detection intelligence platforms for large-scale detection and simulation."
+        ],
+        "tags": [
+          "ai",
+          "artificial_intelligence",
+          "identity_management",
+          "ciso_accountability",
+          "cyber_attacks",
+          "scams",
+          "phishing",
+          "social_engineering",
+          "automation",
+          "threat_landscape",
+          "iam",
+          "pam",
+          "security_strategy",
+          "risk_management"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/agentic-ai-is-an-identity-problem-and-cisos-will-be-accountable-for-the-outcome/",
+          "https://socprime.com/blog/siem-edr/what-are-the-main-ai-assisted-cyber-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Cloud file-sharing sites targeted for corporate data theft attacks",
+        "description": "A threat actor known as Zestix is offering corporate data stolen from dozens of companies for sale. This data likely originated from breaches of their ShareFile, Nextcloud, and OwnCloud instances. Initial access may have been gained through credentials collected by info-stealing malware (RedLine, Lumma, Vidar) deployed on employee devices via malvertising campaigns or ClickFix attacks. Zestix logs into file-sharing services using valid usernames and passwords where multi-factor authentication (MFA) is not active. Stolen data includes aircraft maintenance manuals, fleet data, customer databases, health records, mass-transit schematics, utility LiDAR maps, ISP network configs, satellite project data, ERP source code, government contracts, and legal documents.",
+        "threat_actor": "Zestix",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1078 (Valid Accounts), T1133 (External Remote Services), T1539 (Steal Web Session Cookie), T1056.001 (Input Capture: Keylogging) - for infostealers, T1566.002 (Phishing: Spearphishing Link) - for malvertising/ClickFix.",
+        "analyse": "This data theft campaign highlights the vulnerability of cloud file-sharing systems and the persistence of info-stealer threats. The targeted sectors are highly diverse (aviation, defense, healthcare, government, etc.), indicating a broad potential geographical and strategic impact. The reuse of old credentials and the absence of MFA are key exploitation factors, pointing to fundamental gaps in corporate security hygiene. The leakage of sensitive data such as defense manuals or network configurations can have significant strategic consequences for victim organizations.",
+        "recommandations": [
+          "Implement and enforce multi-factor authentication (MFA) on all cloud services, especially file-sharing platforms.",
+          "Conduct regular credential rotation and invalidate active sessions after long periods of inactivity or suspicion.",
+          "Utilize endpoint protection solutions (EDR) to detect and block info-stealers.",
+          "Run awareness campaigns on the risks of malvertising, phishing, and ClickFix attacks for employees.",
+          "Monitor cloud service access logs to detect unusual connections or unauthorized access attempts.",
+          "Audit security practices of cloud platforms used and ensure they comply with security best practices.",
+          "Implement network segmentation to limit lateral movement in case of device compromise."
+        ],
+        "tags": [
+          "corporate_data_theft",
+          "cloud_security",
+          "file_sharing",
+          "infostealer",
+          "redline",
+          "lumma",
+          "vidar",
+          "malvertising",
+          "clickfix",
+          "mfa_bypass",
+          "data_exfiltration",
+          "supply_chain",
+          "ttpt1078",
+          "ttpt1133",
+          "ttpt1539",
+          "ttpt1056001",
+          "ttpt1566002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-file-sharing-sites-targeted-for-corporate-data-theft-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "ClickFix attack uses fake Windows BSOD screens to push malware",
+        "description": "A new social engineering campaign, dubbed 'PHALT#BLYX', is targeting the hospitality sector in Europe. Attackers send phishing emails impersonating Booking.com (significant reservation cancellation) leading to 'ClickFix' pages that display fake Windows Blue Screen of Death (BSOD) screens. These pages trick users into manually compiling and executing malware on their systems by copy-pasting a PowerShell command. The command downloads a malicious .NET project, compiles it with MSBuild.exe, adds Windows Defender exclusions, escalates privileges via UAC, downloads a primary loader, and establishes persistence via a .url file in the Startup folder.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1059.001 (Command and Scripting Interpreter: PowerShell), T1218.013 (System Binary Proxy Execution: MSBuild), T1548.002 (Bypass User Account Control), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "This sophisticated campaign demonstrates the evolution of social engineering techniques, using credible lures and deceptive user interfaces (fake BSODs) to manipulate victims. Targeting the hospitality sector, often under pressure, maximizes the chances of success. The use of legitimate tools (PowerShell, MSBuild.exe) for malware compilation and execution makes detection more difficult by traditional antivirus solutions. The potential impact on hospitality businesses is severe, ranging from initial network access to persistence establishment and privilege escalation, potentially leading to data breaches or deeper compromises.",
+        "recommandations": [
+          "Educate employees, especially those in the hospitality sector, about phishing, social engineering techniques, and the risks of executing unverified commands.",
+          "Implement email behavioral analysis solutions to detect sophisticated phishing messages.",
+          "Restrict PowerShell script execution and MSBuild.exe usage by unauthorized users.",
+          "Strengthen UAC controls and monitor for privilege escalation attempts.",
+          "Use Endpoint Detection and Response (EDR) solutions to detect malicious activities even when legitimate tools are used.",
+          "Implement security policies that prohibit copying and pasting commands from untrusted web pages."
+        ],
+        "tags": [
+          "clickfix",
+          "social_engineering",
+          "phishing",
+          "malware",
+          "hospitality_sector",
+          "windows_bsod",
+          "powershell",
+          "msbuild",
+          "uac_bypass",
+          "persistence",
+          "ttpt1566001",
+          "ttpt1566002",
+          "ttpt1059001",
+          "ttpt1218013",
+          "ttpt1548002",
+          "ttpt1547001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clickfix-attack-uses-fake-windows-bsod-screens-to-push-malware/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Kimwolf botnet leverages residential proxies to hijack 2M+ Android devices",
+        "description": "The Kimwolf botnet, linked to the Aisuru botnet, has infected over 2 million Android devices, primarily TV boxes and Smart TVs. It spreads by exploiting exposed ADB services via residential proxy networks, many of which are rented through China-based IPIDEA. Many devices are sold pre-infected with modified software that turns them into Kimwolf bots upon connecting to the internet. The botnet uses stealthy techniques like DNS over TLS and EtherHiding (blockchain domains) and its main functions are traffic proxying and DDoS attacks. A high concentration of infections is observed in Vietnam, Brazil, India, and Saudi Arabia, generating approximately 12 million unique IP addresses per week. The botnet is also monetized through bandwidth monetization services.",
+        "threat_actor": "Kimwolf botnet operators",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "14emeliaterracewestroxburyma02132.su",
+            "xd.resi.toon"
+          ]
+        },
+        "mitre_ttps": "T1090 (Proxy), T1498 (Denial of Service), T1568.001 (Dynamic DNS), T1572 (Protocol Tunneling), T1583.003 (Acquire Infrastructure: Virtual Private Server)",
+        "analyse": "The Kimwolf botnet represents a significant threat due to its massive scale and sophisticated evasion techniques. The exploitation of residential proxy networks and the distribution of pre-infected devices highlight systemic vulnerabilities in the IoT device supply chain and the security of VPN/proxy services. The geographical impact is global, with concentrations in several key countries. Consequences include the use of compromised devices for malicious activities (DDoS, proxying) and illegal monetization of bandwidth, with implications for end-user privacy and security, as well as the reputation of ISPs and proxy providers.",
+        "recommandations": [
+          "Proxy providers must block risky ports and verify traffic origins.",
+          "Android device users (especially TV boxes) should check their security settings, update firmware, and consider factory resetting or destroying infected devices.",
+          "Organizations should block known Kimwolf C2 infrastructure and monitor traffic for signs of infection.",
+          "Strengthen security measures in the IoT device supply chain to prevent pre-embedded infections.",
+          "Improve botnet activity detection through network traffic analysis and threat intelligence."
+        ],
+        "tags": [
+          "botnet",
+          "android",
+          "iot",
+          "residential_proxy",
+          "adb_exploit",
+          "ddos",
+          "malware",
+          "supply_chain_security",
+          "dns_over_tls",
+          "etherhiding",
+          "ttpt1090",
+          "ttpt1498",
+          "ttpt1568001",
+          "ttpt1572",
+          "ttpt1583003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186559/malware/kimwolf-botnet-leverages-residential-proxies-to-hijack-2m-android-devices.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Russia-linked APT UAC-0184 uses Viber to spy on Ukrainian military in 2025",
+        "description": "The Russia-linked APT UAC-0184 (Hive0156) is targeting Ukrainian military and government entities. The modus operandi involves sending Viber messages containing malicious ZIP files, exploiting sensitive themes (modification of military personnel records, denial of compensation). The multi-stage infection process uses a PowerShell script to download further malicious files, then secretly loads malware via a legitimate program (CFlux.exe) using side-loading. Final payloads include HijackLoader and the Remcos RAT, deployed for intelligence gathering.",
+        "threat_actor": "UAC-0184 (aka Hive0156)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment) - via Viber, T1059.001 (Command and Scripting Interpreter: PowerShell), T1218.007 (Signed Binary Proxy Execution: Msiexec) - CFlux.exe side-loading, T1055 (Process Injection), T1574.002 (Hijack Execution Flow: DLL Side-Loading), T1071.001 (Application Layer Protocol: Web Protocols) - C2, T1027 (Obfuscated Files or Information)",
+        "analyse": "This APT campaign underscores the persistence of cyber espionage by state-sponsored actors in the context of the Ukrainian conflict. The use of popular messaging platforms like Viber for malware distribution demonstrates attackers' adaptation to target communication habits. The sophistication of the infection chain, including DLL side-loading and evasion techniques, aims to bypass detection. The impact is strategic, as the collection of military and government intelligence can influence the course of the conflict and Ukraine's national security. The exploitation of sensitive themes for social engineering is particularly effective in this context.",
+        "recommandations": [
+          "Enhance security awareness for users, especially military and government personnel, regarding unexpected or suspicious messages on messaging platforms.",
+          "Implement strict endpoint and network security policies to detect and block malicious file downloads and unauthorized script execution.",
+          "Deploy EDR solutions with behavioral analysis capabilities to identify DLL side-loading and process injection.",
+          "Regularly update systems and applications to patch exploited vulnerabilities.",
+          "Use role-based access controls (RBAC) and least privilege principles.",
+          "Strengthen encryption of sensitive communications and data."
+        ],
+        "tags": [
+          "apt",
+          "russia",
+          "ukraine",
+          "espionage",
+          "viber",
+          "phishing",
+          "malware_delivery",
+          "powershell",
+          "dll_side_loading",
+          "hijackloader",
+          "remcos_rat",
+          "government_targeting",
+          "military_targeting",
+          "ttpt1566001",
+          "ttpt1059001",
+          "ttpt1218007",
+          "ttpt1055",
+          "ttpt1574002",
+          "ttpt1071001",
+          "ttpt1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186571/apt/russia-linked-apt-uac-0184-uses-viber-to-spy-on-ukrainian-military-in-2025.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "The cybercriminal behind the 2016 Bitfinex hack has been released from prison early thanks to Trump’s 2018 First Step Act",
+        "description": "Ilya Lichtenstein, convicted for his role in the 2016 Bitfinex hack, has been released from prison early thanks to Trump's 'First Step Act'. Lichtenstein and his wife, Heather Morgan, were arrested in 2022 for laundering approximately $4.5 billion in stolen cryptocurrency. Law enforcement recovered over $3.6 billion. Lichtenstein had used advanced hacking tools to breach Bitfinex's network and fraudulently authorize 119,754 bitcoin transactions. The couple used fake identities, software to automate transactions, converted stolen funds into gold coins and other crypto assets, and utilized mixing services like ChipMixer.",
+        "threat_actor": "Ilya Lichtenstein (and Heather Morgan)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1589 (Establish Accounts), T1098 (Account Manipulation), T1078 (Valid Accounts) - for breaching Bitfinex, T1041 (Exfiltration Over C2 Channel) - for cryptocurrency transfer, T1070.004 (Indicator Removal on Host: File Deletion) - for covering tracks.",
+        "analyse": "This article highlights the legal aspect and consequences of large-scale cybercrimes, particularly in the cryptocurrency domain. The early release of a major actor in a multi-billion dollar hack raises questions about justice and fund recovery. The case illustrates the sophistication of money laundering techniques used by cybercriminals to conceal the origin of stolen funds. The impact is historical for the crypto community and emphasizes the need for international cooperation to combat cybercrime and money laundering.",
+        "recommandations": [
+          "Strengthen cryptocurrency platform security through regular audits and advanced protection measures.",
+          "Implement fraud detection and prevention systems to identify suspicious transactions.",
+          "Improve Know Your Customer (KYC) and Anti-Money Laundering (AML) processes to prevent money laundering via cryptocurrencies.",
+          "Collaborate with law enforcement to investigate cybercrime incidents and recover stolen assets.",
+          "Educate users about the risks associated with using unregulated platforms or mixing services."
+        ],
+        "tags": [
+          "cryptocurrency",
+          "bitfinex_hack",
+          "cybercrime",
+          "money_laundering",
+          "ilya_lichtenstein",
+          "heather_morgan",
+          "law_enforcement",
+          "justice",
+          "first_step_act",
+          "ttpt1589",
+          "ttpt1098",
+          "ttpt1078",
+          "ttpt1041",
+          "ttpt1070004"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186551/cyber-crime/the-cybercriminal-behind-2016-bitfinex-hack-released.html"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "Threat actors insisted that Resecurity’s honeypot was real data. We found no evidence that it was.",
+        "description": "Threat actors from the ScatteredLapsus$Hunters (SLH) group claimed to have hacked Resecurity and stolen sensitive data, including internal chats, employee data, and client lists. Resecurity denied these allegations, explaining that they detected intrusion attempts and set up a honeypot with synthetic data and a fake employee account. SLH interacted with the honeypot, making over 188,000 requests to retrieve synthetic data, while convinced it was real data. This deception operation allowed Resecurity to document attacker activity and collaborate with authorities.",
+        "threat_actor": "ScatteredLapsus$Hunters (SLH)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "idp.resecurity.com",
+            "omantel.com",
+            "se.com.sa"
+          ]
+        },
+        "mitre_ttps": "T1589.001 (Establish Accounts: Email Accounts) - for setting up honeypot, T1598 (Phishing for Information) - for initial probing, T1078.004 (Valid Accounts: Cloud Accounts) - for access attempts, T1592 (Gather Victim Host Information) - for data dumping, T1083 (File and Directory Discovery)",
+        "analyse": "This article highlights the use of cyber deception techniques and honeypots as proactive threat intelligence tools. It illustrates the difficulty for threat actors to distinguish real from synthetic data, even when convinced of a compromise. The strategic impact is twofold: on one hand, it allows companies to trap and analyze attacker TTPs without suffering real damage; on the other hand, it raises questions about the reliability of breach claims often made by cybercriminal groups. This is an effective method for collecting IoAs (Indicators of Attack) and strengthening defenses.",
+        "recommandations": [
+          "Consider implementing honeypots and cyber deception techniques to lure and analyze threat actors.",
+          "Establish rigorous monitoring of exposed services and public applications to detect reconnaissance and intrusion attempts.",
+          "Use synthetic data for test environments and traps to protect real information.",
+          "Collaborate closely with law enforcement and ISPs to share information on malicious activities and facilitate investigations.",
+          "Develop internal DFIR (Digital Forensics and Incident Response) capabilities to document and analyze attack attempts."
+        ],
+        "tags": [
+          "cyber_deception",
+          "honeypot",
+          "threat_intelligence",
+          "scatteredlapsushunters",
+          "resecurity",
+          "false_breach_claim",
+          "dfir",
+          "indicators_of_attack",
+          "ttpt1589001",
+          "ttpt1598",
+          "ttpt1078004",
+          "ttpt1592",
+          "ttpt1083"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/05/threat-actors-insisted-that-resecuritys-honeypot-was-real-data-we-found-no-evidence-that-it-was/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "VSCode IDE forks expose users to \"recommended extension\" attacks",
+        "description": "Popular AI-powered integrated development environment (IDE) solutions, forked from Microsoft VSCode (such as Cursor, Windsurf, Google Antigravity, Trae), recommend extensions that are non-existent in the OpenVSX registry. This allows threat actors to claim the namespace and upload malicious extensions. The issue manifests as file-based recommendations (e.g., `azure-pipelines.yaml`) or software-based recommendations (e.g., PostgreSQL detected). Google and Cursor fixed the vulnerability after researchers reported it, but Windsurf has not yet responded. Measures have been coordinated with the Eclipse Foundation, OpenVSX's operator, to strengthen registry-level safeguards.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment) - for malicious extensions, T1559.002 (Interprocess Communication: Component Object Model), T1072 (Software Deployment Tools) - for IDE extensions, T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+        "analyse": "This vulnerability represents a significant supply chain risk for developers using VSCode-based IDEs and extensions via OpenVSX. The ease with which a threat actor can take control of a non-existent recommended extension name to distribute malicious code has a strategic impact on software development security and trust in IDE ecosystems. Sectors using these tools (potentially all software development) are exposed to compromises of their development chain. The slow response of some vendors exacerbates the risk.",
+        "recommandations": [
+          "Audit recommended extensions in IDEs and verify their legitimacy before installation.",
+          "Update IDEs and extensions to patched versions as soon as possible.",
+          "Only use official or trusted extension registries.",
+          "Strengthen verification and validation processes for extensions in development platforms.",
+          "Implement code scanners and supply chain analysis tools to detect malicious components."
+        ],
+        "tags": [
+          "vscode",
+          "ide",
+          "ai_powered_tools",
+          "extension_attacks",
+          "supply_chain_attack",
+          "openvsx",
+          "malicious_extensions",
+          "developer_tools",
+          "software_security",
+          "ttpt1566001",
+          "ttpt1559002",
+          "ttpt1072",
+          "ttpt1195002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/vscode-ide-forks-expose-users-to-recommended-extension-attacks/"
+        ],
+        "date": "2026-01-06"
+      },
+      {
+        "title": "VVS Stealer, a new python malware steals Discord credentials",
+        "description": "VVS Stealer is a new Python-based malware, sold on Telegram since at least April 2025. It is designed to steal Discord data (credentials, tokens, account information, billing, MFA status, IP) and browser credentials, cookies, history, and autofill data from Chromium- and Firefox-based browsers. The malware maintains persistence via startup installation and uses fake error messages to operate discreetly. Data is exfiltrated after compression (_vault.zip file) via HTTP POST requests to predefined webhooks. It also injects obfuscated JavaScript into the Discord client to hijack active sessions and monitor user actions. The malware uses PyInstaller for packaging and Pyarmor for obfuscation.",
+        "threat_actor": "VVS Stealer operators",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1560 (Archive Collected Data) - for _vault.zip, T1559 (Command and Scripting Interpreter: PowerShell), T1552 (Unsecured Credentials), T1071.001 (Application Layer Protocol: Web Protocols) - for webhook exfiltration, T1056.001 (Input Capture: Keylogging) - implied for credentials, T1074 (Data Staged), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "VVS Stealer illustrates the growing threat of sophisticated info-stealers targeting popular communication platforms and browser data. The use of Python and obfuscation tools makes its detection and analysis more challenging. The impact is significant for Discord users, with risks of account hijacking, identity theft, and unauthorized access to personal and financial information. The ability to hijack active sessions and monitor users represents a persistent threat to personal data confidentiality and integrity. The sale of the malware on Telegram indicates a Malware-as-a-Service (MaaS) model, making this threat accessible to a wider audience of malicious actors.",
+        "recommandations": [
+          "Use strong and unique passwords, along with multi-factor authentication (MFA) on all online accounts, especially Discord and browsing services.",
+          "Regularly scan systems with up-to-date antivirus/EDR solutions to detect Python-based malware and info-stealers.",
+          "Be vigilant about suspicious emails and messages, as they can be infection vectors.",
+          "Monitor unusual connections and activities on Discord accounts and browsers.",
+          "Restrict the execution of unsigned scripts or those from unknown sources.",
+          "Implement security policies for messaging and browsing applications."
+        ],
+        "tags": [
+          "vvs_stealer",
+          "python_malware",
+          "infostealer",
+          "discord_credentials",
+          "browser_data",
+          "session_hijacking",
+          "telegram_sales",
+          "maas",
+          "obfuscation",
+          "pyarmor",
+          "webhook_exfiltration",
+          "ttpt1560",
+          "ttpt1559",
+          "ttpt1552",
+          "ttpt1071001",
+          "ttpt1056001",
+          "ttpt1074",
+          "ttpt1547001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186542/malware/vvs-stealer-a-new-python-malware-steals-discord-credentials.html"
+        ],
+        "date": "2026-01-06"
+      }
+    ]
+  }
+}
