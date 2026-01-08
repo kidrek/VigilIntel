@@ -1,0 +1,1481 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber de cette période révèle un paysage de menaces complexe et en constante évolution, marqué par une prévalence de vulnérabilités critiques, une sophistication accrue des tactiques d'ingénierie sociale et une exploitation notable des faiblesses inhérentes aux configurations de systèmes. Les vulnérabilités avec des scores CVSS élevés sont omniprésentes, touchant des plateformes d'automatisation (n8n), des routeurs (D-Link, Trendnet), des systèmes de gestion (Kanboard), des bibliothèques (jsPDF, wolfSSL) et des outils de sauvegarde (Veeam). Les failles d'exécution de code à distance (RCE) et de contournement d'authentification sont particulièrement alarmantes, soulignant une surface d'attaque vaste et des enjeux de sécurisation des accès et de la gestion des configurations. L'IA, bien que non directement utilisée comme un vecteur d'attaque principal, joue un rôle indirect dans la propagation des vulnérabilités ; des acteurs tels que GoBruteforcer exploitent des exemples de configurations de serveurs générés par l'IA contenant des mots de passe faibles par défaut, exposant ainsi la chaîne d'approvisionnement logicielle et les déploiements DevOps. Les campagnes de phishing et d'ingénierie sociale continuent de s'affiner. Des groupes comme BlueDelta (lié au GRU) et PHALT#BLYX déploient des leurres contextualisés et des infrastructures d'attaque jetables pour cibler spécifiquement les identifiants et distribuer des malwares tels que DCRat. Le phishing par usurpation d'identité interne, tirant parti des routages e-mail mal configurés, reste une menace persistante et difficile à détecter. Les motivations varient de l'espionnage étatique (BlueDelta) au crime cyber (GoBruteforcer, PHALT#BLYX), avec des objectifs allant de la collecte de renseignements au vol de fonds cryptographiques. En conclusion, l'état général des menaces cyber est critique. Il est impératif d'adopter une approche de défense multicouche, de renforcer la gestion des vulnérabilités, l'hygiène des identifiants, la sensibilisation des utilisateurs et la sécurisation des configurations par défaut, tout en restant vigilant face à l'impact émergent de l'IA sur la surface d'attaque.",
+      "date": "2026-01-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "BlueDelta (APT28, Fancy Bear, Forest Blizzard)",
+        "secteur": "Gouvernement, énergie, recherche nucléaire, think tanks européens, défense, intégrateurs IT en Europe et Eurasie (Turquie, Macédoine du Nord, Ouzbékistan).",
+        "modop": "Campagnes de vol d'identifiants par spearphishing. Impersonnification de services légitimes (OWA, Google, Sophos VPN) via des pages de phishing hébergées sur des services gratuits (Webhook.site, InfinityFree, Byet Internet Services, ngrok). Utilisation de leurres PDF légitimes pour l'ingénierie sociale avancée. Collecte d'identifiants et d'informations via des chaînes de redirection et des éléments de formulaires HTML spécifiques. Lié au GRU, avec des objectifs d'espionnage géopolitique.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT28",
+          "Fancy_Bear",
+          "Forest_Blizzard",
+          "GRU",
+          "state_sponsored",
+          "credential_harvesting",
+          "spearphishing",
+          "phishing",
+          "geopolitical_espionage",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/gru-linked-bluedelta-e\nvolves-credential-harvesting"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "GoBruteforcer",
+        "secteur": "Projets de cryptomonnaie et blockchain, serveurs Linux (MySQL, PostgreSQL, FTP, phpMyAdmin).",
+        "modop": "Botnet exploitant des attaques par bruteforce avec des mots de passe faibles et des configurations par défaut, souvent influencées par des exemples de configuration de serveurs générés par IA. Déploiement de bots IRC et de modules de bruteforce pour scanner des plages IP publiques. Utilisation de web shells et de modules spécifiques pour le scan et le drainage de wallets crypto (TRON, Binance Smart Chain). Maintien de la persistance via le masquage de processus.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "bruteforce",
+          "credential_stuffing",
+          "web_shells",
+          "crypto_theft",
+          "linux_servers",
+          "AI_abuse",
+          "supply_chain_weakness"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-gobruteforcer-attack-wave-targets-crypto-blockchain-projects/",
+          "https://research.checkpoint.com/2026/inside-gobruteforcer-ai-generated-server-defaults-weak-passwords-and-crypto-focused-campaigns/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "PHALT#BLYX",
+        "secteur": "Secteur hôtelier européen (hôtels).",
+        "modop": "Chaîne d'infection multi-étapes initiée par des leurres d'e-mails frauduleux Booking.com (annulation de réservation) redirigeant vers des pages d'erreur BSoD falsifiées. Incite les victimes à appliquer des 'correctifs' qui installent le trojan d'accès à distance DCRat. Utilise des commandes PowerShell malveillantes, MSBuild.exe et un chargeur .NET (staxs.exe) pour le déploiement. Emploie le 'process hollowing' pour la furtivité et la persistance. Des artefacts en russe suggèrent une origine russophone.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "PHALT#BLYX",
+          "DCRat",
+          "RAT",
+          "social_engineering",
+          "phishing",
+          "hospitality",
+          "powershell",
+          "msbuild",
+          "process_hollowing",
+          "remote_access",
+          "malware_campaign",
+          "russian_speaking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186606/cyber-crime/fake-booking-com-lures-and-bsod-scams-spread-dcrat-in-european-hospitality-sector.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "Tycoon2FA (plateformes PhaaS)",
+        "secteur": "Multiples industries (opportuniste), ciblant potentiellement les organisations avec un routage e-mail complexe et des protections anti-usurpation faibles.",
+        "modop": "Plateformes Phishing-as-a-Service (PhaaS) utilisées pour envoyer des e-mails de phishing semblant provenir de l'intérieur de l'organisation. Exploitation de routages e-mail mal configurés, de politiques DMARC/SPF/DKIM faibles et de connecteurs de messagerie tiers. Utilisation de liens de redirection légitimes (ex: Google Maps) vers de fausses pages CAPTCHA menant à des pages de phishing conçues pour voler des identifiants et contourner la MFA. Impliqué dans des escroqueries BEC avec de fausses factures et des demandes de paiement urgentes.",
+        "tags": [
+          "actor",
+          "PhaaS",
+          "phishing",
+          "spoofing",
+          "email_fraud",
+          "credential_theft",
+          "MFA_bypass",
+          "BEC",
+          "business_email_compromise",
+          "misconfiguration_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186638/hacking/misconfigured-email-routing-enables-internal-spoofed-phishing.html"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Humanitaire, Géopolitique",
+        "theme": "Instrumentalisation politique et militaire de l'aide humanitaire, violation du droit international",
+        "description": "La Gaza Humanitarian Foundation (GHF), initialement créée pour supplanter les ONG et le système onusien, a été fermée après avoir été utilisée à des fins politiques et militaires, facilitant potentiellement des crimes de guerre et la violation du droit international. La situation humanitaire à Gaza reste critique, l'aide fournie étant insuffisante même après l'élargissement à d'autres acteurs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Gaza",
+          "humanitaire",
+          "droit_international",
+          "conflit",
+          "instrumentalisation",
+          "crimes_de_guerre"
+        ],
+        "sources": [
+          "https://www.iris-france.org/do-harm-cas-de-la-fondation-humanitaire-pour-gaza/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Relations internationales, Énergie, Commerce",
+        "theme": "Rivalités régionales, corridors commerciaux stratégiques, influence internationale",
+        "description": "L'échec des négociations de trêve entre l'Afghanistan et le Pakistan a directement impacté les échanges commerciaux bilatéraux. L'Afghanistan, avec l'appui de l'Inde, se tourne désormais vers l'Iran et le port de Chabahar pour désenclaver son commerce et réduire sa dépendance au Pakistan. Ce corridor vise à contrer l'influence chinoise (port de Gwadar, CPEC) et à affirmer l'Inde comme un acteur commercial clé dans la région, dans un contexte de tensions et de repositionnements stratégiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Afghanistan",
+          "Pakistan",
+          "Iran",
+          "Inde",
+          "Chine",
+          "commerce_international",
+          "port_Chabahar",
+          "rivalités_régionales",
+          "BRI",
+          "CPEC"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/desenclaver-afghanistan-via-le-port-de-chabahar/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Agriculture, Économie, Environnement",
+        "theme": "Dépendance stratégique, compétitivité agricole, souveraineté alimentaire, politiques climatiques",
+        "description": "L'Europe est fortement dépendante des importations d'engrais (azote, phosphore, potassium) dont les ressources minières sont concentrées dans quelques pays (Chine, Russie, Maroc, Canada, Bélarus). Le mécanisme d'ajustement carbone aux frontières (MACF) de l'UE, bien qu'écologique, risque d'augmenter le coût des intrants pour les agriculteurs européens sans compensation, menaçant la compétitivité agricole et la souveraineté alimentaire de l'UE dans un contexte géopolitique instable et asymétrique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "agriculture",
+          "engrais",
+          "dépendance_économique",
+          "MACF",
+          "souveraineté_alimentaire",
+          "environnement",
+          "chaîne_approvisionnement"
+        ],
+        "sources": [
+          "https://www.iris-france.org/geopolitique-des-engrais-la-dependance-de-leurope-agricole/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Diplomatie, Économie, Relations internationales",
+        "theme": "Médiation internationale, reconstruction post-conflit, influence économique, soft power",
+        "description": "La France cherche à renforcer son influence au Moyen-Orient en accueillant les négociations Israël-Syrie à Paris. Elle s'engage dans la reconstruction économique syrienne (impliquant Total et Veolia) et soutient la levée progressive des sanctions, créant ainsi une dépendance structurelle de Damas. Cette stratégie vise à reconquérir l'influence perdue et à positionner la France comme une puissance démocratique légitimante dans la région post-Assad, en misant sur des leviers économiques et une légitimité multilatérale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Moyen_Orient",
+          "diplomatie",
+          "Syrie",
+          "Israël",
+          "reconstruction_économique",
+          "soft_power",
+          "influence_régionale"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/non-classe/2026/la-diplomatie-francaise-se-replace-au-moyen-orient/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Relations internationales, Énergie, Cyberdéfense",
+        "theme": "Intervention militaire unilatérale, contrôle des ressources stratégiques, usage de la cyber-guerre, droit international",
+        "description": "Les États-Unis ont mené une opération militaire au Venezuela, aboutissant à l'enlèvement du président Nicolás Maduro, officiellement pour lutter contre le narco-terrorisme, mais avec des objectifs sous-jacents de contrôle des réserves pétrolières. Cette action, perçue comme une violation du droit international, souligne une escalade des tensions et interroge sur la stratégie américaine dans l'hémisphère ouest (le 'Trump Corollary' à la doctrine Monroe), avec des implications potentielles pour la sécurité européenne et l'OTAN, notamment via l'usage d'opérations cyber et la réaffectation de ressources militaires.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Venezuela",
+          "Etats_Unis",
+          "intervention_militaire",
+          "Maduro",
+          "pétrole",
+          "cyber_guerre",
+          "droit_international",
+          "OTAN",
+          "Amérique_Latine",
+          "Trump_Corrollary"
+        ],
+        "sources": [
+          "https://www.iris-france.org/venezuela-scenario-davenir-avec-christophe-ventura/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/wider-implications-us-action-venezuela-rusi-experts-react"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Cryptomonnaie, portefeuilles physiques, e-commerce",
+        "victime": "Clients de Ledger via Global-e (processeur de paiement tiers)",
+        "description": "Une violation de données a exposé les informations personnelles des clients de Ledger (noms, coordonnées) depuis le système cloud de Global-e, un processeur de paiement tiers. Les données ont été compromises suite à un accès non autorisé.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "finance",
+          "e-commerce",
+          "personal_data",
+          "third_party_breach",
+          "Global-e",
+          "Ledger"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/07/crypto-wallet-firm-ledger-faces-customer-data-breach-through-payment-processor-global-e/?pk_campaign=feed&pk_kwd=crypto-wallet-firm-ledger-faces-customer-data-breach-through-payment-processor-global-e"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Commerce de détail, stations-service, magasins de proximité (Handi Plus, Handi Stop)",
+        "victime": "Gulshan Management Services, Inc. (clients/employés)",
+        "description": "Gulshan Management Services, Inc. a confirmé une violation de données affectant plus de 377 000 personnes. Les informations exposées incluent les numéros de sécurité sociale (SSN), les identifiants et les données financières.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "personal_data",
+          "SSN",
+          "financial_data",
+          "identity_theft",
+          "Gulshan_Management_Services"
+        ],
+        "sources": [
+          "https://hackread.com/data-breach-us-gas-stations-company/"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2019-25291",
+        "cvss": 9.3,
+        "product": "INIM Electronics Smartliving SmartLAN/G/SI",
+        "description": "Présence de d'identifiants codés en dur dans l'image de distribution Linux (versions <=6.x), permettant à un attaquant de se connecter et d'obtenir un accès non autorisé au système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "INIM_Electronics",
+          "SmartLAN",
+          "hardcoded_credentials",
+          "unauthorized_access",
+          "IoT",
+          "accès"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25291"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-15346",
+        "cvss": 9.3,
+        "product": "wolfSSL Python package (wolfssl-py)",
+        "description": "Défaut d'application complète des exigences de certificat client dans le mode CERT_REQUIRED (versions jusqu'à 5.8.2 incluses), permettant aux attaquants de contourner l'authentification mutuelle TLS (mTLS) en omettant un certificat client.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wolfSSL",
+          "python",
+          "authentication_bypass",
+          "mTLS",
+          "certificate_validation",
+          "authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15346"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-15471",
+        "cvss": 9.8,
+        "product": "Trendnet TEW-713RE Wi-Fi extender",
+        "description": "Injection de commandes critique pré-authentification dans le gestionnaire formFSrvX, permettant à des attaquants distants de prendre le contrôle total de l'appareil avec une seule requête HTTP.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Trendnet",
+          "Wi-Fi_extender",
+          "RCE",
+          "command_injection",
+          "pre_authentication",
+          "IoT",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://securityonline.info/one-request-to-rule-them-all-critical-trendnet-flaw-cve-2025-15471-allows-total-takeover/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-59470",
+        "cvss": 9.0,
+        "product": "Veeam Backup & Replication",
+        "description": "Vulnérabilité permettant une exécution de code à distance (RCE) en tant qu'utilisateur postgres via une valeur d'intervalle ou d'ordre malveillante, exploitable par un opérateur de sauvegarde ou de bande.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Veeam",
+          "RCE",
+          "backup",
+          "operator_privileges",
+          "code_execution",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186630/security/veeam-resolves-cvss-9-0-rce-flaw-and-other-security-issues.html",
+          "https://www.security.nl/posting/920059/Kritieke+kwetsbaarheid+gedicht+in+Veeam+Backup+%26+Replication?channel=rss"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-60262",
+        "cvss": 9.8,
+        "product": "Contrôleurs et points d'accès sans fil H3C",
+        "description": "Erreur de configuration critique dans le service vsftpd (activation de chown_uploads sans chown_username), permettant aux téléchargements de fichiers anonymes d'être détenus par root et conduisant à une élévation de privilèges et un contrôle de niveau root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "H3C",
+          "wireless_controller",
+          "access_point",
+          "privilege_escalation",
+          "misconfiguration",
+          "vsftpd",
+          "root_access",
+          "accès"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-60262-critical-misconfiguration-in-h3c-wireless-gear-hands-control-to-hackers/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-68428",
+        "cvss": 9.2,
+        "product": "Bibliothèque jsPDF",
+        "description": "Vulnérabilité d'inclusion de fichier local et de traversée de chemin permettant le vol de données sensibles du système de fichiers local via des PDF générés (versions antérieures à 4.0).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "jsPDF",
+          "local_file_inclusion",
+          "path_traversal",
+          "data_theft",
+          "accès"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-jspdf-flaw-lets-hackers-steal-secrets-via-generated-pdfs/",
+          "https://cvefeed.io/vuln/detail/CVE-2025-68428"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-0625",
+        "cvss": 9.3,
+        "product": "Routeurs DSL D-Link hérités (DSL-2740R, DSL-2640B, DSL-2780B, DSL-526B)",
+        "description": "Injection de commandes OS critique dans le point de terminaison dnscfg.cgi due à une mauvaise assainissement des entrées, permettant à des attaquants distants non authentifiés d'exécuter des commandes shell arbitraires (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "RCE",
+          "command_injection",
+          "router",
+          "firmware",
+          "exploitation_active",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186616/hacking/hackers-actively-exploit-critical-rce-flaw-in-legacy-d-link-dsl-routers.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 10.0,
+        "product": "Plateforme d'automatisation des workflows n8n",
+        "description": "Vulnérabilité permettant une exécution de code à distance (RCE) non authentifiée et une compromission totale du système en raison d'une confusion de type de contenu dans la gestion des webhooks, entraînant un accès arbitraire aux fichiers (versions antérieures à 1.121.0).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "unauthenticated",
+          "file_access",
+          "critical",
+          "webhook_handling",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/max-severity-ni8mare-flaw-lets-hackers-hijack-n8n-servers/",
+          "https://fieldeffect.com/blog/maximum-severity-ni8mare-flaw-exposes-n8n-to-full-system-compromise",
+          "https://securityaffairs.com/186648/security/ni8mare-flaw-gives-unauthenticated-control-of-n8n-instances.html",
+          "https://cvefeed.io/vuln/detail/CVE-2026-21858"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21869",
+        "cvss": 8.8,
+        "product": "llama.cpp",
+        "description": "Écriture hors limites de la mémoire dans llama-server due à un paramètre n_discard négatif provenant de l'entrée JSON, pouvant entraîner un crash ou une exécution de code à distance (RCE) (commits 55d4206c8 et antérieurs).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "llama.cpp",
+          "LLM",
+          "out_of_bounds_write",
+          "RCE",
+          "memory_corruption",
+          "AI_component",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21869"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21875",
+        "cvss": 9.8,
+        "product": "ClipBucket v5",
+        "description": "Injection SQL aveugle via la section d'ajout de commentaires dans un canal, spécifiquement via le paramètre obj_id dans une requête POST vers /actions/ajax.php (versions 5.5.2-#187 et antérieures).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ClipBucket",
+          "SQL_injection",
+          "blind_SQLi",
+          "web_application",
+          "accès"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21875"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21877",
+        "cvss": 9.9,
+        "product": "Plateforme d'automatisation des workflows n8n",
+        "description": "Exécution de code à distance (RCE) authentifiée via une écriture de fichier arbitraire, pouvant entraîner une compromission totale du système pour les instances auto-hébergées et cloud (versions 0.121.2 et antérieures).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "authenticated",
+          "file_write",
+          "system_compromise",
+          "workflow_automation",
+          "exécution_de_code"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21877",
+          "https://www.security.nl/posting/920054/n8n+waarschuwt+voor+kritieke+kwetsbaarheid+met+remote+code+execution?channel=rss"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21881",
+        "cvss": 9.1,
+        "product": "Kanboard",
+        "description": "Contournement d'authentification critique lorsque REVERSE_PROXY_AUTH est activé, permettant aux attaquants d'usurper l'identité de n'importe quel utilisateur, y compris les administrateurs, en envoyant un en-tête HTTP falsifié (versions 1.2.48 et antérieures).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Kanboard",
+          "authentication_bypass",
+          "reverse_proxy",
+          "impersonation",
+          "privilege_escalation",
+          "authentification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21881"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Nouvelle vague d'attaques GoBruteforcer ciblant les projets crypto et blockchain",
+        "description": "Une nouvelle campagne du botnet GoBruteforcer cible les bases de données de projets de cryptomonnaie et blockchain sur des serveurs exposés. L'infection initiale provient souvent de serveurs FTP ou de bases de données MySQL/PostgreSQL/phpMyAdmin mal configurés, utilisant des mots de passe faibles par défaut, parfois influencés par des exemples générés par IA. Le malware déploie des bots IRC et des modules de bruteforce, scannant des plages IP publiques pour voler des identifiants, créer des portes dérobées et étendre le botnet. Des outils spécifiques de scan de wallets TRON et Binance Smart Chain ont été observés.",
+        "threat_actor": "GoBruteforcer",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "de7994277a81cf48f575f7245ec782c82452bb928a55c7fae11c2702cc308b8b"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059.004 (Command and Scripting Interpreter: PowerShell)",
+          "T1505.003 (Server Software Component: Web Shell)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1090.001 (Proxy: Internal Proxy)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1036.003 (Process Hiding: Rename System Utilities)"
+        ],
+        "analyse": "La campagne exploite les configurations de serveurs par défaut et les mots de passe faibles, souvent facilitées par des extraits de code générés par l'IA. Elle impacte les projets blockchain et crypto, soulignant la vulnérabilité des systèmes mal gérés et des pratiques DevOps insuffisamment sécurisées. Le risque est la perte de données sensibles, le vol de fonds crypto et l'expansion du botnet. La réutilisation de modèles d'IA pour des configurations serveur standardise les vulnérabilités.",
+        "recommandations": [
+          "Appliquer des politiques de mots de passe forts.",
+          "Éviter les configurations par défaut.",
+          "Mettre à jour les piles logicielles (ex: XAMPP).",
+          "Sensibiliser aux risques des snippets de code générés par IA.",
+          "Surveiller les services exposés (FTP, MySQL, phpMyAdmin).",
+          "Isoler les environnements de développement et de production."
+        ],
+        "tags": [
+          "malware",
+          "botnet",
+          "bruteforce",
+          "cryptocurrency",
+          "blockchain",
+          "AI_security",
+          "weak_credentials",
+          "XAMPP",
+          "web_shell",
+          "T1078",
+          "T1190",
+          "T1059.004",
+          "T1505.003",
+          "T1070.004",
+          "T1090.001",
+          "T1562.001",
+          "T1036.003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-gobruteforcer-attack-wave-targets-crypto-blockchain-projects/",
+          "https://research.checkpoint.com/2026/inside-gobruteforcer-ai-generated-server-defaults-weak-passwords-and-crypto-focused-campaigns/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Analyse technique de Microsoft Copilot et techniques d'évasion malware par callbacks",
+        "description": "Deux articles de recherche technique se concentrent sur l'ingénierie inverse de Microsoft Copilot et l'utilisation de 'stupid callbacks' pour l'évasion de malwares. Le premier fournit des notes rapides sur le fonctionnement interne de Copilot, tandis que le second explore des concepts de preuves de concept pour l'évasion de détection, en exploitant des fonctions de rappel peu orthodoxes pour masquer l'activité malveillante.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1548 (Abuse Elevation Control Mechanisms)",
+          "T1055 (Process Injection)",
+          "T1036 (Masquerading)",
+          "T1070 (Indicator Removal on Host)"
+        ],
+        "analyse": "Ces recherches contribuent à la compréhension des mécanismes de défense et d'évasion dans le contexte des systèmes modernes comme Microsoft Copilot et les techniques de détection. L'analyse des callbacks met en lumière des méthodes potentielles pour les acteurs de la menace afin de masquer leur présence et d'éviter les solutions de sécurité, impactant potentiellement l'efficacité des outils de détection et la résilience des systèmes. L'objectif stratégique est d'améliorer la sécurité en anticipant les techniques d'attaques.",
+        "recommandations": [
+          "Renforcer l'analyse comportementale et l'instrumentation au niveau du noyau pour détecter les abus de fonctions de rappel.",
+          "Développer des signatures pour les schémas de callbacks inhabituels.",
+          "Réaliser une surveillance approfondie de l'exécution des processus et des interactions avec les systèmes d'IA.",
+          "Mettre à jour les systèmes de détection pour contrer les nouvelles techniques d'évasion."
+        ],
+        "tags": [
+          "reverse_engineering",
+          "malware_evasion",
+          "callbacks",
+          "AI_security",
+          "Microsoft_Copilot",
+          "DFIR",
+          "T1548",
+          "T1055",
+          "T1036",
+          "T1070"
+        ],
+        "sources": [
+          "https://malwaresourcecode.com/home/my-projects/proof-of-concepts/stupid-callbacks-for-malware-evasion",
+          "https://malwaresourcecode.com/home/my-projects/write-ups/some-quick-notes-on-microsoft-copilot"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Le groupe BlueDelta lié au GRU fait évoluer ses campagnes de vol d'identifiants",
+        "description": "Le groupe de menace parrainé par l'État russe, BlueDelta (APT28), a mené des campagnes de vol d'identifiants sophistiquées entre février et septembre 2025, ciblant des organisations gouvernementales, énergétiques et de recherche en Europe et en Eurasie. Ils ont utilisé des pages de phishing imitant des services légitimes (OWA, Google, Sophos VPN) hébergées sur des services gratuits (Webhook.site, InfinityFree, ngrok) et des leurres PDF pour collecter des identifiants et des informations.",
+        "threat_actor": "BlueDelta (APT28, Fancy Bear, Forest Blizzard, GRU-linked)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "account-security-googie.my-board.org",
+            "account-security-googie.rf.gd",
+            "account-settings-shsvchx.wuaze.com",
+            "config-settings.kesug.com",
+            "eccoclimate.org",
+            "ngrok-free.app",
+            "shorturl.at",
+            "webhook.site"
+          ],
+          "IPv4": [
+            "185.27.134.125"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059 (Command and Scripting Interpreter - JavaScript for beacons)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1584 (Compromise Infrastructure)",
+          "T1583 (Develop Capabilities: Web Services)",
+          "T1102 (Web Service)"
+        ],
+        "analyse": "BlueDelta continue d'utiliser des services gratuits et jetables pour ses infrastructures d'attaque, réduisant les coûts opérationnels et rendant l'attribution plus difficile. L'adaptation des thèmes et du contenu (ex: turc) pour cibler des audiences spécifiques démontre une ingénierie sociale raffinée. L'objectif est de collecter des identifiants et des renseignements pour soutenir les objectifs de renseignement russes, avec un impact stratégique sur la sécurité nationale et énergétique des pays ciblés.",
+        "recommandations": [
+          "Renforcer la sensibilisation au phishing, en particulier aux leurres d'authentification et aux documents PDF inattendus.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) forte.",
+          "Surveiller les tentatives de connexion suspectes.",
+          "Bloquer les domaines de phishing connus et les services d'hébergement/tunneling abusifs.",
+          "Configurer des politiques DMARC/SPF/DKIM strictes."
+        ],
+        "tags": [
+          "APT",
+          "state_sponsored",
+          "phishing",
+          "credential_harvesting",
+          "GRU",
+          "BlueDelta",
+          "T1566.002",
+          "T1059",
+          "T1071.001",
+          "T1584",
+          "T1583",
+          "T1102"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/gru-linked-bluedelta-evolves-credential-harvesting"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Campagne PHALT#BLYX : leurres Booking.com et arnaques BSoD pour distribuer DCRat dans le secteur hôtelier européen",
+        "description": "Une campagne d'attaques, PHALT#BLYX, cible les hôtels européens avec des e-mails frauduleux de Booking.com annulant des réservations, redirigeant les victimes vers des pages d'erreur BSoD falsifiées. Ces pages incitent à appliquer des 'correctifs' qui installent le trojan d'accès à distance DCRat, permettant un contrôle total des systèmes infectés. La campagne utilise des techniques d'ingénierie sociale et des méthodes 'living off the land' (PowerShell, MSBuild, process hollowing).",
+        "threat_actor": "PHALT#BLYX",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "low-house.com",
+            "oncameraworkout.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell - via MSBuild)",
+          "T1047 (Windows Management Instrumentation - implied by MSBuild)",
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1547.001 (Persistence: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Cette campagne illustre une sophistication croissante des attaques de malware 'commodity', combinant l'ingénierie sociale sous haute pression avec des techniques avancées 'living off the land' pour échapper à la détection et maintenir une persistance à long terme. Le secteur hôtelier est une cible lucrative en raison de la nature des transactions et des données clients. L'impact inclut le contrôle total des systèmes compromis, le vol de données et l'utilisation de ces systèmes pour d'autres activités malveillantes.",
+        "recommandations": [
+          "Former le personnel aux risques de phishing et d'ingénierie sociale, en particulier les e-mails liés aux réservations ou aux services.",
+          "Utiliser des solutions de sécurité des points de terminaison robustes avec détection comportementale.",
+          "Restreindre l'exécution de PowerShell et MSBuild.exe pour les utilisateurs non privilégiés.",
+          "Mettre en œuvre l'authentification multifacteur.",
+          "Surveiller les activités inhabituelles sur les systèmes."
+        ],
+        "tags": [
+          "malware",
+          "RAT",
+          "DCRat",
+          "phishing",
+          "social_engineering",
+          "hospitality",
+          "LoL",
+          "PowerShell",
+          "MSBuild",
+          "process_hollowing",
+          "T1566.001",
+          "T1204.002",
+          "T1059.001",
+          "T1059.003",
+          "T1047",
+          "T1055.012",
+          "T1547.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186606/cyber-crime/fake-booking-com-lures-and-bsod-scams-spread-dcrat-in-european-hospitality-sector.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Le routage e-mail mal configuré permet le phishing par usurpation interne",
+        "description": "Des acteurs de la menace exploitent des configurations complexes de routage e-mail et des protections anti-usurpation d'identité faibles pour envoyer des e-mails de phishing qui semblent provenir de l'intérieur d'une organisation. Ces attaques, souvent facilitées par des plateformes Phishing-as-a-Service (PhaaS) comme Tycoon2FA, utilisent des leurres variés (boîtes vocales, documents partagés, RH, réinitialisations de mot de passe) pour voler des identifiants et contourner la MFA, et sont également impliquées dans des escroqueries BEC.",
+        "threat_actor": "PhaaS platforms (e.g., Tycoon2FA)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment - for BEC scams with invoices)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts - target for theft)",
+          "T1621 (Multi-Factor Authentication Request Generation - for MFA bypass)",
+          "T1534 (Private Keys - implied by MFA bypass)"
+        ],
+        "analyse": "L'exploitation des faiblesses dans les configurations DNS (DMARC, SPF, DKIM) et le routage des connecteurs de messagerie permet à des attaques sophistiquées d'usurper l'identité interne de l'organisation, augmentant ainsi les chances de succès. L'impact est significatif, incluant le vol d'identifiants, le contournement de la MFA et des pertes financières directes via des escroqueries BEC, surtout pour les organisations ayant des enregistrements MX ne pointant pas directement vers Office 365.",
+        "recommandations": [
+          "Implémenter des politiques DMARC reject et SPF hard-fail strictes.",
+          "Configurer correctement tous les connecteurs de messagerie tiers.",
+          "S'assurer que les enregistrements MX pointent directement vers Office 365 si applicable.",
+          "Renforcer la sensibilisation des utilisateurs au phishing et aux escroqueries BEC, même pour les e-mails semblant internes.",
+          "Utiliser des solutions de sécurité e-mail avancées."
+        ],
+        "tags": [
+          "phishing",
+          "email_spoofing",
+          "PhaaS",
+          "Tycoon2FA",
+          "BEC",
+          "MFA_bypass",
+          "DMARC",
+          "SPF",
+          "email_security",
+          "T1566.001",
+          "T1566.002",
+          "T1078",
+          "T1621"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186638/hacking/misconfigured-email-routing-enables-internal-spoofed-phishing.html"
+        ],
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber intelligence from this period reveals a complex and constantly evolving threat landscape, marked by a prevalence of critical vulnerabilities, increased sophistication in social engineering tactics, and a notable exploitation of inherent weaknesses in system configurations. High CVSS score vulnerabilities are widespread, affecting automation platforms (n8n), routers (D-Link, Trendnet), management systems (Kanboard), libraries (jsPDF, wolfSSL), and backup tools (Veeam). Remote Code Execution (RCE) and authentication bypass flaws are particularly alarming, highlighting a vast attack surface and challenges in securing access and configuration management. AI, although not directly used as a primary attack vector, plays an indirect role in propagating vulnerabilities; actors like GoBruteforcer exploit AI-generated server configuration examples containing weak default passwords, thereby exposing the software supply chain and DevOps deployments. Phishing and social engineering campaigns continue to be refined. Groups like BlueDelta (GRU-linked) and PHALT#BLYX deploy contextual lures and disposable attack infrastructures to specifically target credentials and distribute malware such as DCRat. Internal spoofed phishing, leveraging misconfigured email routing, also remains a persistent and hard-to-detect threat. Motivations range from state-sponsored espionage (BlueDelta) to cybercrime (GoBruteforcer, PHALT#BLYX), with objectives ranging from intelligence collection to cryptocurrency theft. In conclusion, the overall state of cyber threats is critical. It is imperative to adopt a multi-layered defense approach, strengthen vulnerability management, credential hygiene, user awareness, and the secure configuration of default systems, while remaining vigilant to the emerging impact of AI on the attack surface.",
+      "date": "2026-01-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "BlueDelta (APT28, Fancy Bear, Forest Blizzard)",
+        "secteur": "Government, energy, nuclear research, European think tanks, defense cooperation, IT integrators in Europe and Eurasia (Turkey, North Macedonia, Uzbekistan).",
+        "modop": "State-sponsored credential-harvesting campaigns using spearphishing. Impersonates legitimate webmail (OWA, Google) and VPN services (Sophos) via phishing pages hosted on free services (Webhook.site, InfinityFree, Byet Internet Services, ngrok). Uses legitimate PDF lure documents for advanced social engineering. Collects credentials and information through redirection chains and specific HTML form elements. GRU-linked, with geopolitical espionage objectives.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT28",
+          "Fancy_Bear",
+          "Forest_Blizzard",
+          "GRU",
+          "state_sponsored",
+          "credential_harvesting",
+          "spearphishing",
+          "phishing",
+          "geopolitical_espionage",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/gru-linked-bluedelta-evolves-credential-harvesting"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "GoBruteforcer",
+        "secteur": "Cryptocurrency and blockchain projects, general Linux servers (MySQL, PostgreSQL, FTP, phpMyAdmin).",
+        "modop": "Botnet exploiting brute-force attacks with weak and default credentials, often influenced by AI-generated server configuration examples. Deploys IRC bots and brute-forcing modules to scan public IP ranges. Uses web shells and specific modules for crypto wallet scanning and draining (TRON, Binance Smart Chain). Maintains persistence via process masking.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "bruteforce",
+          "credential_stuffing",
+          "web_shells",
+          "crypto_theft",
+          "linux_servers",
+          "AI_abuse",
+          "supply_chain_weakness"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-gobruteforcer-attack-wave-targets-crypto-blockchain-projects/",
+          "https://research.checkpoint.com/2026/inside-gobruteforcer-ai-generated-server-defaults-weak-passwords-and-crypto-focused-campaigns/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "PHALT#BLYX",
+        "secteur": "European hospitality sector (hotels).",
+        "modop": "Multi-stage infection chain initiated by fake Booking.com reservation cancellation emails, redirecting victims to bogus BSoD error pages. Prompts victims to apply 'fixes' that install the DCRat remote access trojan, enabling full control of infected systems. Uses malicious PowerShell commands, MSBuild.exe, and a .NET loader (staxs.exe) for deployment. Employs process hollowing for stealth and persistence. Russian-language artifacts suggest Russian-speaking origin.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "PHALT#BLYX",
+          "DCRat",
+          "RAT",
+          "social_engineering",
+          "phishing",
+          "hospitality",
+          "powershell",
+          "msbuild",
+          "process_hollowing",
+          "remote_access",
+          "malware_campaign",
+          "russian_speaking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186606/cyber-crime/fake-booking-com-lures-and-bsod-scams-spread-dcrat-in-european-hospitality-sector.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "nom": "Tycoon2FA (PhaaS platforms)",
+        "secteur": "Multiple industries (opportunistic), potentially targeting organizations with complex email routing and weak spoofing protections.",
+        "modop": "Phishing-as-a-Service (PhaaS) platforms used to send phishing emails appearing internal to an organization. Exploits misconfigured email routing, weak DMARC/SPF/DKIM policies, and third-party mail connectors. Uses legitimate-looking redirect links (e.g., Google Maps) to fake CAPTCHA pages leading to phishing sites designed to steal credentials and bypass MFA. Also involved in BEC scams with fake invoices and urgent payment requests.",
+        "tags": [
+          "actor",
+          "PhaaS",
+          "phishing",
+          "spoofing",
+          "email_fraud",
+          "credential_theft",
+          "MFA_bypass",
+          "BEC",
+          "business_email_compromise",
+          "misconfiguration_exploitation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186638/hacking/misconfigured-email-routing-enables-internal-spoofed-phishing.html"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Humanitarian, Geopolitics",
+        "theme": "Political and military instrumentalization of humanitarian aid, violation of international law",
+        "description": "The Gaza Humanitarian Foundation (GHF), initially established to supersede NGOs and the UN system, was shut down after being used for political and military purposes, potentially facilitating war crimes and violations of international law. The humanitarian situation in Gaza remains critical, with insufficient aid even after expansion to other actors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Gaza",
+          "humanitarian",
+          "international_law",
+          "conflict",
+          "instrumentalization",
+          "war_crimes"
+        ],
+        "sources": [
+          "https://www.iris-france.org/do-harm-cas-de-la-fondation-humanitaire-pour-gaza/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "International Relations, Energy, Trade",
+        "theme": "Regional rivalries, strategic trade corridors, international influence",
+        "description": "The failure of truce negotiations between Afghanistan and Pakistan directly impacted bilateral trade. Afghanistan, with India's support, is now turning to Iran and the Chabahar port to unblock its trade and reduce dependence on Pakistan. This corridor also aims to counter Chinese influence (Gwadar port, CPEC) and assert India as a key commercial player in the region, amid tensions and strategic realignments.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Afghanistan",
+          "Pakistan",
+          "Iran",
+          "India",
+          "China",
+          "international_trade",
+          "Chabahar_port",
+          "regional_rivalries",
+          "BRI",
+          "CPEC"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/desenclaver-afghanistan-via-le-port-de-chabahar/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Agriculture, Economy, Environment",
+        "theme": "Strategic dependence, agricultural competitiveness, food sovereignty, climate policies",
+        "description": "Europe is highly dependent on fertilizer imports (nitrogen, phosphorus, potassium), whose mineral resources are concentrated in a few countries (China, Russia, Morocco, Canada, Belarus). The EU's Carbon Border Adjustment Mechanism (CBAM), although ecological, risks increasing input costs for European farmers without compensation, threatening the EU's agricultural competitiveness and food sovereignty in an unstable and asymmetric geopolitical context.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "agriculture",
+          "fertilizers",
+          "economic_dependence",
+          "CBAM",
+          "food_sovereignty",
+          "environment",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.iris-france.org/geopolitique-des-engrais-la-dependance-de-leurope-agricole/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Diplomacy, Economy, International Relations",
+        "theme": "International mediation, post-conflict reconstruction, economic influence, soft power",
+        "description": "France seeks to strengthen its influence in the Middle East by hosting Israel-Syria negotiations in Paris. It commits to Syria's economic reconstruction (involving Total and Veolia) and supports the gradual lifting of sanctions, thereby creating a structural dependence for Damascus. This strategy aims to regain lost influence and position France as a legitimizing democratic power in the post-Assad region, relying on economic levers and multilateral legitimacy.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "France",
+          "Middle_East",
+          "diplomacy",
+          "Syria",
+          "Israel",
+          "economic_reconstruction",
+          "soft_power",
+          "regional_influence"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/non-classe/2026/la-diplomatie-francaise-se-replace-au-moyen-orient/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "International Relations, Energy, Cyberdefense",
+        "theme": "Unilateral military intervention, control of strategic resources, use of cyber warfare, international law",
+        "description": "The United States conducted a military operation in Venezuela, resulting in the abduction of President Nicolás Maduro, officially to combat narco-terrorism, but with underlying objectives of controlling oil reserves. This action, seen as a violation of international law, highlights an escalation of tensions and raises questions about the US strategy in the Western Hemisphere (the 'Trump Corollary' to the Monroe Doctrine), with potential implications for European security and NATO, particularly through the use of cyber operations and reallocation of military resources.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Venezuela",
+          "United_States",
+          "military_intervention",
+          "Maduro",
+          "oil",
+          "cyber_warfare",
+          "international_law",
+          "NATO",
+          "Latin_America",
+          "Trump_Corrollary"
+        ],
+        "sources": [
+          "https://www.iris-france.org/venezuela-scenario-davenir-avec-christophe-ventura/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/wider-implications-us-action-venezuela-rusi-experts-react"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Cryptocurrency, hardware wallets, e-commerce",
+        "victime": "Ledger customers via Global-e (third-party payment processor)",
+        "description": "A data breach exposed personal information of Ledger customers (names, contact details) from Global-e's cloud system, a third-party payment processor. Data was compromised due to unauthorized access.",
+        "tags": [
+          "violation",
+          "breach",
+          "cryptocurrency",
+          "finance",
+          "e-commerce",
+          "personal_data",
+          "third_party_breach",
+          "Global-e",
+          "Ledger"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/07/crypto-wallet-firm-ledger-faces-customer-data-breach-through-payment-processor-global-e/?pk_campaign=feed&pk_kwd=crypto-wallet-firm-ledger-faces-customer-data-breach-through-payment-processor-global-e"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "secteur": "Retail, gas stations, convenience stores (Handi Plus, Handi Stop)",
+        "victime": "Gulshan Management Services, Inc. (customers/employees)",
+        "description": "Gulshan Management Services, Inc. confirmed a data breach affecting over 377,000 individuals. Exposed information includes Social Security Numbers (SSNs), IDs, and financial data.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "personal_data",
+          "SSN",
+          "financial_data",
+          "identity_theft",
+          "Gulshan_Management_Services"
+        ],
+        "sources": [
+          "https://hackread.com/data-breach-us-gas-stations-company/"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2019-25291",
+        "cvss": 9.3,
+        "product": "INIM Electronics Smartliving SmartLAN/G/SI",
+        "description": "Hard-coded credentials in the Linux distribution image (versions <=6.x), allowing an attacker to log in and gain unauthorized system access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "INIM_Electronics",
+          "SmartLAN",
+          "hardcoded_credentials",
+          "unauthorized_access",
+          "IoT",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25291"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-15346",
+        "cvss": 9.3,
+        "product": "wolfSSL Python package (wolfssl-py)",
+        "description": "Failure to fully enforce client certificate requirements in CERT_REQUIRED mode (versions up to and including 5.8.2), allowing attackers to bypass mutual TLS (mTLS) authentication by omitting a client certificate.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wolfSSL",
+          "python",
+          "authentication_bypass",
+          "mTLS",
+          "certificate_validation",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15346"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-15471",
+        "cvss": 9.8,
+        "product": "Trendnet TEW-713RE Wi-Fi extender",
+        "description": "Critical pre-authentication command injection vulnerability in the formFSrvX handler, allowing remote attackers to seize full control of the device with a single HTTP request.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Trendnet",
+          "Wi-Fi_extender",
+          "RCE",
+          "command_injection",
+          "pre_authentication",
+          "IoT",
+          "code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/one-request-to-rule-them-all-critical-trendnet-flaw-cve-2025-15471-allows-total-takeover/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-59470",
+        "cvss": 9.0,
+        "product": "Veeam Backup & Replication",
+        "description": "Vulnerability allowing Remote Code Execution (RCE) as the postgres user via a malicious interval or order value, exploitable by a Backup or Tape Operator.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Veeam",
+          "RCE",
+          "backup",
+          "operator_privileges",
+          "code_execution",
+          "code_execution"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186630/security/veeam-resolves-cvss-9-0-rce-flaw-and-other-security-issues.html",
+          "https://www.security.nl/posting/920059/Kritieke+kwetsbaarheid+gedicht+in+Veeam+Backup+%26+Replication?channel=rss"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-60262",
+        "cvss": 9.8,
+        "product": "H3C wireless controllers and access points",
+        "description": "Critical misconfiguration in the vsftpd service (enabling chown_uploads without chown_username), allowing anonymous file uploads to be owned by root, leading to privilege escalation and root-level control.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "H3C",
+          "wireless_controller",
+          "access_point",
+          "privilege_escalation",
+          "misconfiguration",
+          "vsftpd",
+          "root_access",
+          "access"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2025-60262-critical-misconfiguration-in-h3c-wireless-gear-hands-control-to-hackers/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2025-68428",
+        "cvss": 9.2,
+        "product": "jsPDF library",
+        "description": "Local file inclusion and path traversal vulnerability allowing sensitive data theft from the local filesystem via generated PDFs (versions before 4.0).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "jsPDF",
+          "local_file_inclusion",
+          "path_traversal",
+          "data_theft",
+          "access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-jspdf-flaw-lets-hackers-steal-secrets-via-generated-pdfs/",
+          "https://cvefeed.io/vuln/detail/CVE-2025-68428"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-0625",
+        "cvss": 9.3,
+        "product": "Legacy D-Link DSL routers (DSL-2740R, DSL-2640B, DSL-2780B, DSL-526B)",
+        "description": "Critical OS Command Injection in the dnscfg.cgi endpoint due to improper input sanitization, allowing unauthenticated remote attackers to execute arbitrary shell commands (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D-Link",
+          "RCE",
+          "command_injection",
+          "router",
+          "firmware",
+          "active_exploitation",
+          "code_execution"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186616/hacking/hackers-actively-exploit-critical-rce-flaw-in-legacy-d-link-dsl-routers.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 10.0,
+        "product": "n8n workflow automation platform",
+        "description": "Vulnerability allowing unauthenticated Remote Code Execution (RCE) and full system compromise due to content-type confusion in webhook handling, leading to arbitrary file access (versions before 1.121.0).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "unauthenticated",
+          "file_access",
+          "critical",
+          "webhook_handling",
+          "code_execution"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/max-severity-ni8mare-flaw-lets-hackers-hijack-n8n-servers/",
+          "https://fieldeffect.com/blog/maximum-severity-ni8mare-flaw-exposes-n8n-to-full-system-compromise",
+          "https://securityaffairs.com/186648/security/ni8mare-flaw-gives-unauthenticated-control-of-n8n-instances.html",
+          "https://cvefeed.io/vuln/detail/CVE-2026-21858"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21869",
+        "cvss": 8.8,
+        "product": "llama.cpp",
+        "description": "Out-of-bounds memory write in llama-server due to a negative n_discard parameter from JSON input, potentially leading to a crash or Remote Code Execution (RCE) (commits 55d4206c8 and prior).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "llama.cpp",
+          "LLM",
+          "out_of_bounds_write",
+          "RCE",
+          "memory_corruption",
+          "AI_component",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21869"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21875",
+        "cvss": 9.8,
+        "product": "ClipBucket v5",
+        "description": "Blind SQL Injection via the add comment section within a channel, specifically through the obj_id parameter in a POST request to /actions/ajax.php (versions 5.5.2-#187 and below).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ClipBucket",
+          "SQL_injection",
+          "blind_SQLi",
+          "web_application",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21875"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21877",
+        "cvss": 9.9,
+        "product": "n8n workflow automation platform",
+        "description": "Authenticated Remote Code Execution (RCE) via arbitrary file write, potentially leading to full system compromise for self-hosted and cloud instances (versions 0.121.2 and below).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "authenticated",
+          "file_write",
+          "system_compromise",
+          "workflow_automation",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21877",
+          "https://www.security.nl/posting/920054/n8n+waarschuwt+voor+kritieke+kwetsbaarheid+met+remote+code+execution?channel=rss"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "cve_id": "CVE-2026-21881",
+        "cvss": 9.1,
+        "product": "Kanboard",
+        "description": "Critical authentication bypass when REVERSE_PROXY_AUTH is enabled, allowing attackers to impersonate any user, including administrators, by sending a spoofed HTTP header (versions 1.2.48 and below).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Kanboard",
+          "authentication_bypass",
+          "reverse_proxy",
+          "impersonation",
+          "privilege_escalation",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21881"
+        ],
+        "date": "2026-01-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "New GoBruteforcer Attack Wave Targets Crypto, Blockchain Projects",
+        "description": "A new campaign of the GoBruteforcer botnet targets cryptocurrency and blockchain project databases on exposed servers. Initial compromise often occurs through misconfigured FTP servers or MySQL/PostgreSQL/phpMyAdmin databases using weak default passwords, sometimes influenced by AI-generated examples. The malware deploys IRC bots and brute-forcing modules, scanning public IP ranges to steal credentials, create backdoors, and expand the botnet. Specific TRON and Binance Smart Chain wallet scanning tools have been observed.",
+        "threat_actor": "GoBruteforcer",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "de7994277a81cf48f575f7245ec782c82452bb928a55c7fae11c2702cc308b8b"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059.004 (Command and Scripting Interpreter: PowerShell)",
+          "T1505.003 (Server Software Component: Web Shell)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1090.001 (Proxy: Internal Proxy)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1036.003 (Process Hiding: Rename System Utilities)"
+        ],
+        "analyse": "The campaign exploits default server configurations and weak passwords, often facilitated by AI-generated code snippets. It impacts blockchain and crypto projects, highlighting the vulnerability of poorly managed systems and insecure DevOps practices. The risk involves sensitive data loss, crypto fund theft, and botnet expansion. The reuse of AI models for standard server configurations standardizes vulnerabilities.",
+        "recommandations": [
+          "Enforce strong password policies.",
+          "Avoid default configurations.",
+          "Update software stacks (e.g., XAMPP).",
+          "Raise awareness of risks from AI-generated code snippets.",
+          "Monitor exposed services (FTP, MySQL, phpMyAdmin).",
+          "Isolate development and production environments."
+        ],
+        "tags": [
+          "malware",
+          "botnet",
+          "bruteforce",
+          "cryptocurrency",
+          "blockchain",
+          "AI_security",
+          "weak_credentials",
+          "XAMPP",
+          "web_shell",
+          "T1078",
+          "T1190",
+          "T1059.004",
+          "T1505.003",
+          "T1070.004",
+          "T1090.001",
+          "T1562.001",
+          "T1036.003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-gobruteforcer-attack-wave-targets-crypto-blockchain-projects/",
+          "https://research.checkpoint.com/2026/inside-gobruteforcer-ai-generated-server-defaults-weak-passwords-and-crypto-focused-campaigns/"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Technical Analysis of Microsoft Copilot and Malware Evasion via Callbacks",
+        "description": "Two technical research articles focus on the reverse engineering of Microsoft Copilot and the use of 'stupid callbacks' for malware evasion. The first provides quick notes on Copilot's internal workings, while the second explores proof-of-concept concepts for detection evasion by exploiting unorthodox callback functions to mask malicious activity.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1548 (Abuse Elevation Control Mechanisms)",
+          "T1055 (Process Injection)",
+          "T1036 (Masquerading)",
+          "T1070 (Indicator Removal on Host)"
+        ],
+        "analyse": "This research contributes to understanding defense and evasion mechanisms in the context of modern systems like Microsoft Copilot and detection techniques. The analysis of callbacks highlights potential methods for threat actors to conceal their presence and evade security solutions, potentially impacting the effectiveness of detection tools and system resilience. The strategic objective is to enhance security by anticipating attack techniques.",
+        "recommandations": [
+          "Strengthen behavioral analysis and kernel-level instrumentation to detect abuse of callback functions.",
+          "Develop signatures for unusual callback patterns.",
+          "Conduct in-depth monitoring of process execution and interactions with AI systems.",
+          "Update detection systems to counter new evasion techniques."
+        ],
+        "tags": [
+          "reverse_engineering",
+          "malware_evasion",
+          "callbacks",
+          "AI_security",
+          "Microsoft_Copilot",
+          "DFIR",
+          "T1548",
+          "T1055",
+          "T1036",
+          "T1070"
+        ],
+        "sources": [
+          "https://malwaresourcecode.com/home/my-projects/proof-of-concepts/stupid-callbacks-for-malware-evasion",
+          "https://malwaresourcecode.com/home/my-projects/write-ups/some-quick-notes-on-microsoft-copilot"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "GRU-Linked BlueDelta Evolves Credential Harvesting Campaigns",
+        "description": "The Russian state-sponsored threat group BlueDelta (APT28) conducted sophisticated credential-harvesting campaigns between February and September 2025, targeting government, energy, and research organizations across Europe and Eurasia. They used phishing pages impersonating legitimate services (OWA, Google, Sophos VPN) hosted on free services (Webhook.site, InfinityFree, ngrok) and legitimate PDF lure documents to collect credentials and information.",
+        "threat_actor": "BlueDelta (APT28, Fancy Bear, Forest Blizzard, GRU-linked)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "account-security-googie.my-board.org",
+            "account-security-googie.rf.gd",
+            "account-settings-shsvchx.wuaze.com",
+            "config-settings.kesug.com",
+            "eccoclimate.org",
+            "ngrok-free.app",
+            "shorturl.at",
+            "webhook.site"
+          ],
+          "IPv4": [
+            "185.27.134.125"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059 (Command and Scripting Interpreter - JavaScript for beacons)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1584 (Compromise Infrastructure)",
+          "T1583 (Develop Capabilities: Web Services)",
+          "T1102 (Web Service)"
+        ],
+        "analyse": "BlueDelta continues to leverage free and disposable services for its attack infrastructure, reducing operational costs and complicating attribution. The adaptation of themes and content (e.g., Turkish language) to target specific audiences demonstrates refined social engineering. The objective is to collect credentials and intelligence to support Russian intelligence objectives, with a strategic impact on the national and energy security of targeted countries.",
+        "recommandations": [
+          "Strengthen phishing awareness, especially for authentication lures and unexpected PDF documents.",
+          "Implement strong multi-factor authentication (MFA).",
+          "Monitor for suspicious login attempts.",
+          "Block known phishing domains and abusive hosting/tunneling services.",
+          "Configure strict DMARC/SPF/DKIM policies."
+        ],
+        "tags": [
+          "APT",
+          "state_sponsored",
+          "phishing",
+          "credential_harvesting",
+          "GRU",
+          "BlueDelta",
+          "T1566.002",
+          "T1059",
+          "T1071.001",
+          "T1584",
+          "T1583",
+          "T1102"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/gru-linked-bluedelta-evolves-credential-harvesting"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "PHALT#BLYX Campaign: Fake Booking.com Lures and BSoD Scams Spread DCRat in European Hospitality Sector",
+        "description": "An attack campaign, PHALT#BLYX, targets European hotels with fake Booking.com reservation cancellation emails, redirecting victims to bogus BSoD error pages. These pages prompt users to apply 'fixes' that install the DCRat remote access trojan, enabling full remote control of infected systems. The campaign leverages social engineering and 'living off the land' techniques (PowerShell, MSBuild, process hollowing).",
+        "threat_actor": "PHALT#BLYX",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "low-house.com",
+            "oncameraworkout.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell - via MSBuild)",
+          "T1047 (Windows Management Instrumentation - implied by MSBuild)",
+          "T1055.012 (Process Injection: Process Hollowing)",
+          "T1547.001 (Persistence: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "This campaign illustrates a growing sophistication in 'commodity' malware attacks, combining high-pressure social engineering with advanced 'living off the land' techniques to evade detection and maintain long-term persistence. The hospitality sector is a lucrative target due to the nature of its transactions and customer data. The impact includes full control of compromised systems, data theft, and the use of these systems for further malicious activities.",
+        "recommandations": [
+          "Train staff on phishing and social engineering risks, especially emails related to bookings or services.",
+          "Utilize robust endpoint security solutions with behavioral detection.",
+          "Restrict PowerShell and MSBuild.exe execution for unprivileged users.",
+          "Implement multi-factor authentication.",
+          "Monitor for unusual activity on systems."
+        ],
+        "tags": [
+          "malware",
+          "RAT",
+          "DCRat",
+          "phishing",
+          "social_engineering",
+          "hospitality",
+          "LoL",
+          "PowerShell",
+          "MSBuild",
+          "process_hollowing",
+          "T1566.001",
+          "T1204.002",
+          "T1059.001",
+          "T1059.003",
+          "T1047",
+          "T1055.012",
+          "T1547.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186606/cyber-crime/fake-booking-com-lures-and-bsod-scams-spread-dcrat-in-european-hospitality-sector.html"
+        ],
+        "date": "2026-01-08"
+      },
+      {
+        "title": "Misconfigured Email Routing Enables Internal-Spoofed Phishing",
+        "description": "Threat actors exploit complex email routing configurations and weak spoofing protections to send phishing emails that appear to originate from within an organization. These attacks, often facilitated by Phishing-as-a-Service (PhaaS) platforms like Tycoon2FA, use various lures (voicemails, shared documents, HR, password resets) to steal credentials and bypass MFA, and are also involved in BEC scams.",
+        "threat_actor": "PhaaS platforms (e.g., Tycoon2FA)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment - for BEC scams with invoices)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts - target for theft)",
+          "T1621 (Multi-Factor Authentication Request Generation - for MFA bypass)",
+          "T1534 (Private Keys - implied by MFA bypass)"
+        ],
+        "analyse": "Exploiting weaknesses in DNS configurations (DMARC, SPF, DKIM) and email connector routing allows sophisticated attacks to spoof internal organizational identity, increasing success rates. The impact is significant, including credential theft, MFA bypass, and direct financial losses via BEC scams, especially for organizations with MX records not pointing directly to Office 365.",
+        "recommandations": [
+          "Implement strict DMARC reject and SPF hard-fail policies.",
+          "Properly configure all third-party mail connectors.",
+          "Ensure MX records point directly to Office 365 if applicable.",
+          "Enhance user awareness of phishing and BEC scams, even for emails appearing internal.",
+          "Use advanced email security solutions."
+        ],
+        "tags": [
+          "phishing",
+          "email_spoofing",
+          "PhaaS",
+          "Tycoon2FA",
+          "BEC",
+          "MFA_bypass",
+          "DMARC",
+          "SPF",
+          "email_security",
+          "T1566.001",
+          "T1566.002",
+          "T1078",
+          "T1621"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186638/hacking/misconfigured-email-routing-enables-internal-spoofed-phishing.html"
+        ],
+        "date": "2026-01-08"
+      }
+    ]
+  }
+}
