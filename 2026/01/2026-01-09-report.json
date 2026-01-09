@@ -1,0 +1,1709 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la cybersécurité reste très dynamique, marqué par une sophistication accrue des acteurs étatiques et cybercriminels, une exploitation rapide des vulnérabilités connues et de type 'zero-day', et une intégration croissante des nouvelles technologies, notamment l'IA, dans les méthodes d'attaque et de défense. Les tendances clés incluent une intensification des cyberattaques menées par des acteurs étatiques (Chine, Corée du Nord) ciblant les infrastructures critiques et les organisations gouvernementales, souvent via des techniques de phishing sophistiquées (comme le quishing par QR codes) pour contourner l'authentification multifacteur (MFA). L'exploitation des vulnérabilités critiques, y compris les exécutions de code à distance (RCE) dans des produits largement utilisés (Veeam, n8n, JimuReport, HPE OneView) et des routeurs (KAYSUS), ainsi que l'exploitation de zero-days VMware ESXi longtemps avant leur divulgation, souligne la persistance des menaces avancées. La prolifération de botnets, tels que Kimwolf et Aisuru, ciblant les appareils IoT pour des attaques DDoS et des services de proxy résidentiel, illustre l'élargissement de la surface d'attaque. De plus, l'utilisation croissante de l'IA dans le développement de code introduit de nouveaux risques, notamment la génération de code vulnérable et les fuites de données par des prompts malveillants, ce qui nécessite de nouvelles approches en matière de sécurité logicielle. En conclusion, la situation générale des menaces est caractérisée par une pression constante sur la chaîne d'approvisionnement, une évolution rapide des tactiques d'ingénierie sociale et la nécessité impérative de patcher rapidement les vulnérabilités critiques pour renforcer la résilience organisationnelle.",
+      "date": "2026-01-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-7290",
+        "secteur": "Télécommunications (Asie du Sud, Europe du Sud-Est), Infrastructures critiques.",
+        "modop": "Utilisation de malwares Linux (RushDrop, DriveSwitch, SilentRaid, Bulbature), exploits 1-day pour appareils edge, force brute SSH, reconnaissance étendue, établissement d'infrastructure ORB (Operational Relay Box) pour d'autres acteurs liés à la Chine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "chine",
+          "telecommunications",
+          "infrastructures_critiques",
+          "linux_malware",
+          "edge_device_exploit",
+          "ssh_brute_force",
+          "initial_access_broker"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-china-linked-hackers-breach-telcos-using-edge-device-exploits/",
+          "https://blog.talosintelligence.com/uat-7290/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Kimsuky (APT43)",
+        "secteur": "Organisations américaines liées à la politique, la recherche et l'analyse de la Corée du Nord (ONG, think tanks, universités, cabinets de conseil stratégique, entités gouvernementales).",
+        "modop": "Campagnes de spear-phishing utilisant des QR codes (quishing) pour rediriger les victimes vers des sites malveillants (questionnaires, faux login), vol de jetons de session pour contourner la MFA, exploitation de vulnérabilités connues, attaques sur la chaîne d'approvisionnement, tactiques ClickFix. Cible les appareils mobiles non gérés.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "coree_du_nord",
+          "spear_phishing",
+          "quishing",
+          "MFA_bypass",
+          "session_token_theft",
+          "gouvernement",
+          "recherche"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-warns-about-kimsuky-hackers-using-qr-codes-to-phish-us-orgs/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Kimwolf (Botnet) / Aisuru (Botnet)",
+        "secteur": "Consommateurs (boîtiers de streaming Android TV non officiels).",
+        "modop": "Compromission massive d'appareils, participation à des attaques DDoS, services de proxy résidentiel (fraude publicitaire, tentatives de prise de contrôle de compte, scraping de contenu). Utilise l'infrastructure ENS (Ethereum Name Service) pour la résilience du C2.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "DDoS",
+          "proxy_service",
+          "android_TV_boxes",
+          "IoT",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "BlackTech, Flax Typhoon, Mustang Panda, APT41, UNC3886",
+        "secteur": "Infrastructures critiques de Taïwan (énergie, santé, communications, gouvernement, technologie, chaînes d'approvisionnement des semi-conducteurs et de la défense).",
+        "modop": "Exploitation de vulnérabilités logicielles/matérielles, attaques DDoS, ingénierie sociale, attaques sur la chaîne d'approvisionnement, sondage des systèmes ICS, déploiement de malwares, ransomware, vol de données médicales, compromission de fournisseurs de services télécoms et sous-traitants. Opérations corrélées aux actions politiques et militaires.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "chine",
+          "taiwan",
+          "infrastructures_critiques",
+          "espionnage",
+          "DDoS",
+          "ransomware",
+          "supply_chain_attack",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Digit_4",
+        "secteur": "Gouvernement (Thaïlande)",
+        "modop": "Exfiltration de données (méthodes non spécifiées).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "exfiltration",
+          "gouvernement"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115861252110886786"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Cybersécurité, Énergie, Santé, Communications, Gouvernement, Technologie, Semi-conducteurs, Défense",
+        "theme": "Escalade des cyberattaques étatiques",
+        "description": "Les groupes cybernétiques liés à la Chine ont intensifié leurs attaques contre les infrastructures critiques de Taïwan en 2025, avec une augmentation décuplée des incidents dans le secteur de l'énergie et une augmentation de 6% des incidents totaux. Les tactiques incluent l'exploitation de vulnérabilités, les attaques DDoS, l'ingénierie sociale et les attaques sur la chaîne d'approvisionnement. Ces actions sont corrélées aux mouvements politiques et militaires de la Chine.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "taiwan",
+          "cyberattaques",
+          "infrastructures_critiques",
+          "APT",
+          "espionnage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Diplomatie, Relations Internationales",
+        "theme": "Orientations de la diplomatie française",
+        "description": "Le président Emmanuel Macron a présenté les axes majeurs de la diplomatie française pour l'année à venir, axés sur la paix, la défense et la démocratie, dans un contexte de crise du multilatéralisme, de l'attitude des États-Unis et de l'affaiblissement de l'Europe.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "diplomatie",
+          "relations_internationales",
+          "europe"
+        ],
+        "sources": [
+          "https://www.iris-france.org/macron-et-les-ambassadeurs-volontarisme-realites/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Sport, Diplomatie, Économie, Politique",
+        "theme": "Enjeux géopolitiques de la Coupe d'Afrique des Nations 2025",
+        "description": "L'organisation de la CAN 2025 au Maroc est analysée comme un instrument de \"sport power\" pour le royaume, visant à affirmer son leadership en Afrique, renforcer son image et stimuler son économie, en vue de la co-organisation de la Coupe du Monde 2030. L'article aborde également les risques économiques et les controverses liées au sponsoring.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "maroc",
+          "afrique",
+          "sport_power",
+          "diplomatie",
+          "economie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/coupe-dafrique-des-nations-2025-enjeux-geopolitiques-sport-power-et-ambitions-du-maroc/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Sécurité, Politique, Relations Internationales",
+        "theme": "Relations Israël-Liban et désarmement du Hezbollah",
+        "description": "L'article explore trois scénarios futurs pour le Liban face à la problématique du désarmement du Hezbollah exigé par Israël, suite aux affrontements de 2024 et à un cessez-le-feu tendu. Il met en lumière la domination militaire israélienne et l'influence critique de l'engagement américain dans la résolution du conflit.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "liban",
+          "hezbollah",
+          "conflit",
+          "securite",
+          "proche_orient"
+        ],
+        "sources": [
+          "https://www.iris-france.org/israel-nouvel-hegemon-au-liban/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Défense, Industrie de l'armement, Politique",
+        "theme": "Coopération en matière d'armement de l'Italie",
+        "description": "L'approche traditionnelle de l'Italie en matière de coopération pour l'armement, privilégiant l'approvisionnement coopératif, évolue vers une plus grande souveraineté opérationnelle et technologique, un rôle égal pour les entreprises italiennes, la croissance industrielle nationale et un positionnement favorable à l'exportation, influencée par des facteurs externes et internes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "italie",
+          "defense",
+          "armement",
+          "cooperation_europeenne",
+          "souverainete"
+        ],
+        "sources": [
+          "https://www.iris-france.org/which-type-of-armament-cooperation-do-we-want-need-the-case-of-italy/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Agriculture, Sécurité Nationale",
+        "theme": "Rôle de l'agriculture dans la sécurité nationale du Royaume-Uni",
+        "description": "Le Royaume-Uni considère l'agriculture comme un secteur critique pour la sécurité nationale, notamment face aux menaces géopolitiques (guerre en Ukraine, risque de guerre avec la Russie d'ici 2030) et aux impacts climatiques. L'article plaide pour une augmentation de la production nationale et une mobilisation des compétences du secteur agricole pour la défense intérieure.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "royaume_uni",
+          "securite_nationale",
+          "agriculture",
+          "resilience",
+          "defense"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/farming-critical-uk-national-security"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Maritime, Environnement, Politique Internationale",
+        "theme": "Menace environnementale des flottes fantômes sous sanctions",
+        "description": "Les sanctions internationales contre les flottes fantômes de pétroliers obsolètes et non assurés créent un risque environnemental croissant en empêchant leur démolition. L'article propose des mécanismes de licences et de paiement contrôlé pour permettre un démantèlement sûr, sans compromettre l'efficacité des sanctions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "environnement",
+          "sanctions",
+          "flotte_fantome",
+          "securite_maritime",
+          "petroliers"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/sanctions-scrapyard-confronting-growing-environmental-threat"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gouvernement",
+        "victime": "Equal Employment Opportunity Commission (EEOC), États-Unis",
+        "description": "Un incident de sécurité interne a eu lieu, impliquant l'accès non autorisé de PII par des employés d'un sous-traitant (Opexus) dans le système Public Portal de l'agence. L'incident a été découvert vers le 18 décembre 2025, mais l'accès non autorisé s'est produit début 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "etats_unis",
+          "PII",
+          "acces_non_autorise",
+          "opexus",
+          "sous_traitant"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/08/eeoc-experienced-security-incident-involving-an-opexus-employees-unauthorized-access-email-says/?pk_campaign=feed&pk_kwd=eeoc-experienced-security-incident-involving-an-opexus-employees-unauthorized-access-email-says"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Santé / Soins aux personnes âgées",
+        "victime": "Methodist Homes of Alabama and Northwest Florida, États-Unis",
+        "description": "Deuxième violation de données en sept mois. Un compte de messagerie d'employé a été compromis entre le 8 et le 21 mai 2025, exposant des informations personnelles identifiables (noms, numéros de sécurité sociale, dates de naissance, numéros Medicare, informations de traitement médical) pour les résidents et patients, ainsi que d'autres PII sensibles pour des non-résidents.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "etats_unis",
+          "PII",
+          "email_compromis",
+          "donnees_medicales",
+          "fraude"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/08/methodist-homes-of-alabama-and-northwest-florida-is-notifying-residents-and-employees-of-its-second-data-breach-in-seven-months/?pk_campaign=feed&pk_kwd=methodist-homes-of-alabama-and-northwest-florida-is-notifying-residents-and-employees-of-its-second-data-breach-in-seven-months"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Royal Irrigation Department, Thaïlande",
+        "description": "Le groupe \"Digit_4\" revendique une violation de données et l'exfiltration de données du Département Royal de l'Irrigation de Thaïlande. Les détails spécifiques de la méthode et du type de données ne sont pas fournis au-delà de l'exfiltration.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "thailande",
+          "exfiltration",
+          "digit_4"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115861252110886786"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Office français de l’immigration et de l’intégration (OFII), France",
+        "description": "Enquête ouverte suite à la revendication d'un internaute sur BreachForums de la mise en vente de 2,1 millions de lignes de données de l'OFII, le 1er janvier 2026. La cyberattaque aurait utilisé l'accès d'un opérateur interne à l'OFII.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "france",
+          "OFII",
+          "donnees_personnelles",
+          "vente_donnees",
+          "breachforums"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/societe/article/2026/01/08/la-justice-ouvre-une-enquete-apres-la-revendication-d-une-fuite-de-millions-de-donnees-de-l-office-de-l-immigration-et-de-l-integration_6661043_3224.html"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView Software",
+        "description": "Vulnérabilité de sévérité maximale permettant l'exécution de code à distance (RCE) par un utilisateur distant non authentifié.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "HPE",
+          "OneView",
+          "RCE",
+          "unauthentified"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186672/security/u-s-cisa-adds-hpe-oneview-and-microsoft-office-powerpoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-21877",
+        "cvss": 10.0,
+        "product": "n8n (versions 0.123.0 à 1.121.3)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) authentifiée via une condition d'écriture de fichier arbitraire due à une validation d'entrée incorrecte, permettant le contrôle total du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "authenticated_RCE",
+          "arbitrary_file_write",
+          "system_takeover"
+        ],
+        "sources": [
+          "https://hackread.com/n8n-users-patch-full-system-takeover-vulnerability/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-66913",
+        "cvss": 9.8,
+        "product": "JimuReport (jusqu'à la version 2.1.3)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via des URLs H2 JDBC contrôlées par l'utilisateur, permettant l'exécution arbitraire de code Java.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "JimuReport",
+          "RCE",
+          "JDBC",
+          "Java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66913"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-12543",
+        "cvss": 9.6,
+        "product": "Undertow (serveur web Java), WildFly, JBoss EAP",
+        "description": "Vulnérabilité critique dans le traitement de l'en-tête HTTP Host, permettant l'empoisonnement de cache, la reconnaissance interne et le détournement de session.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "java",
+          "web_server",
+          "undertow",
+          "cache_poisoning",
+          "session_hijacking",
+          "reconnaissance_interne",
+          "RCE_implicite"
+        ],
+        "sources": [
+          "https://securityonline.info/the-9-6-crack-in-javas-foundation-critical-undertow-flaw-cve-2025-12543/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-66916",
+        "cvss": 9.4,
+        "product": "RuoYi-Vue-Plus (versions 5.5.1 et antérieures)",
+        "description": "Vulnérabilité de manipulation de fichiers (lecture/écriture arbitraire) dans le composant snailjob via des expressions QLExpress non filtrées.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RuoYi_Vue_Plus",
+          "file_manipulation",
+          "QLExpress"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66916"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68717",
+        "cvss": 9.4,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Contournement d'authentification lors de la validation de session, permettant des requêtes non authentifiées pour récupérer des données de configuration sensibles ou exécuter des actions privilégiées.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "routeur",
+          "KAYSUS",
+          "authentication_bypass",
+          "session_hijacking",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68717"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68719",
+        "cvss": 8.8,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Divulgation de la sauvegarde de configuration par requête directe à un endpoint, permettant la récupération de crédentiels et une compromission complète de l'appareil.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "routeur",
+          "KAYSUS",
+          "config_disclosure",
+          "credential_recovery",
+          "data_leak"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68719"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-22256",
+        "cvss": 8.8,
+        "product": "Salvo (Rust web backend framework, versions antérieures à 0.88.1)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) réfléchie dans la fonction list_html due à une mauvaise assainissement du chemin d'accès courant dans la vue HTML.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "salvo",
+          "web_framework",
+          "XSS",
+          "reflected_XSS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22256"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-22257",
+        "cvss": 8.8,
+        "product": "Salvo (Rust web backend framework, versions antérieures à 0.88.1)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée dans la fonction list_html en téléchargeant des fichiers avec des noms malveillants, sans assainissement des noms.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "salvo",
+          "web_framework",
+          "XSS",
+          "stored_XSS",
+          "file_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22257"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68716",
+        "cvss": 8.4,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Accès SSH root par défaut sans mot de passe sur l'interface LAN, permettant l'exécution arbitraire de commandes avec des privilèges complets.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "routeur",
+          "KAYSUS",
+          "SSH",
+          "root_access",
+          "no_password",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68716"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Guloader Malware: Campagne de faux rapports de performance",
+        "description": "Une campagne de phishing distribue le malware Guloader, qui installe Remcos RAT, via des e-mails déguisés en rapports d'évaluation des performances des employés. Les attaquants exploitent l'anxiété liée aux licenciements et utilisent des fichiers exécutables (.exe) déguisés en PDF dans des archives RAR pour infecter les systèmes. Le malware télécharge ensuite son shellcode depuis Google Drive pour installer Remcos RAT, permettant la surveillance du système, le keylogging, la capture d'écran et le vol de mots de passe.",
+        "threat_actor": "Non applicable (cybercriminels, pas un groupe nommé)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Screen Capture)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "Cible les utilisateurs d'entreprise avec des leurres psychologiques sophistiqués. L'utilisation de Google Drive pour le téléchargement de shellcode aide à contourner les filtres de sécurité. L'impact potentiel inclut la surveillance complète du système infecté et le vol de données sensibles.",
+        "recommandations": [
+          "Être extrêmement prudent lors de l'ouverture d'e-mails provenant de sources inconnues.",
+          "Vérifier les extensions de fichiers et se méfier des fichiers exécutables (.exe) déguisés en documents innocents.",
+          "Modifier régulièrement les mots de passe et renforcer les défenses contre l'abus de plateformes légitimes pour le Command & Control (C2)."
+        ],
+        "tags": [
+          "malware",
+          "guloader",
+          "remcos_rat",
+          "phishing",
+          "social_engineering",
+          "entreprise",
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://asec.ahnlab.com/en/91825/",
+          "https://securityonline.info/guloader-malware-rides-wave-of-fake-performance-reports/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Le FBI alerte sur l'utilisation de codes QR par les hackers Kimsuky pour le phishing d'organisations américaines",
+        "description": "Le groupe de hackers nord-coréen Kimsuky (APT43) utilise des QR codes malveillants dans des campagnes de spear-phishing (quishing) pour cibler des organisations américaines. Ces campagnes permettent de rediriger les victimes vers des sites frauduleux, de voler des jetons de session pour contourner l'authentification multifacteur (MFA) et d'exploiter des vulnérabilités connues via des appareils mobiles non gérés.",
+        "threat_actor": "Kimsuky (APT43, North Korean state-sponsored)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.004 (Phishing: Spearphishing Link)",
+          "T1566.002 (Phishing: Spearphishing Link - QR code redirection)",
+          "T1550.002 (Bypass Multi-Factor Authentication: On-Device Credential Acquisition/Manipulation)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "Démontre une évolution des techniques de phishing pour contourner les mesures de sécurité traditionnelles et la MFA, en tirant parti de l'utilisation des appareils mobiles. L'impact potentiel est la compromission d'identités cloud et l'accès non autorisé à des informations sensibles pour des organisations ciblées.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques du quishing, notamment la vérification des URL après avoir scanné un QR code.",
+          "Renforcer les solutions de sécurité des e-mails pour détecter les QR codes malveillants.",
+          "Mettre en œuvre une MFA robuste et surveiller l'activité sur les identités cloud pour détecter le vol de jetons de session."
+        ],
+        "tags": [
+          "APT",
+          "coree_du_nord",
+          "kimsuky",
+          "phishing",
+          "quishing",
+          "MFA_bypass",
+          "gouvernement",
+          "think_tanks",
+          "session_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-warns-about-kimsuky-hackers-using-qr-codes-to-phish-us-orgs/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Des hackers sinophones ont exploité des zero-days VMware ESXi bien avant leur divulgation",
+        "description": "Des acteurs de la menace sinophones ont exploité un kit d'exploit VMware ESXi via un appareil SonicWall VPN compromis, ciblant trois vulnérabilités zero-day (CVE-2025-22226, CVE-2025-22225, CVE-2025-22224) plus d'un an avant leur divulgation publique en mars 2025. L'attaque visait à s'échapper des machines virtuelles vers l'hyperviseur ESXi, en utilisant des informations d'identification d'administrateur de domaine compromises pour le mouvement latéral et l'exfiltration de données, et en déployant une backdoor VSOCK-based pour la persistance.",
+        "threat_actor": "Acteurs de la menace sinophones",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-22226",
+            "CVE-2025-22225",
+            "CVE-2025-22224"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1021.001 (Remote Services: RDP)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1574.002 (Hijack Execution Flow: DLL Side-Loading)"
+        ],
+        "analyse": "Révèle une sophistication technique élevée et un accès probable à des informations zero-day longtemps avant leur publication. L'exploitation de VPN pour l'accès initial et la capacité d'échapper à la VM soulignent un risque majeur pour les environnements virtualisés, avec un potentiel d'impact stratégique sur la chaîne d'approvisionnement et la confidentialité des données.",
+        "recommandations": [
+          "Appliquer les dernières mises à jour de sécurité ESXi et des appareils VPN SonicWall.",
+          "Auditer les appareils SonicWall VPN pour détecter les compromissions et les vulnérabilités non corrigées.",
+          "Utiliser les règles YARA et Sigma (si disponibles) pour la détection précoce d'activités suspectes.",
+          "Surveiller les mouvements latéraux et les activités de collecte de données au sein du réseau, en particulier dans les environnements virtualisés."
+        ],
+        "tags": [
+          "zero_day",
+          "vmware_esxi",
+          "chinois",
+          "APT",
+          "exploit",
+          "VM_escape",
+          "sonicwall_vpn",
+          "privilege_escalation",
+          "data_exfiltration",
+          "hypervisor_compromise",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/vmware-esxi-zero-days-likely-exploited-a-year-before-disclosure/",
+          "https://securityaffairs.com/186709/hacking/chinese-speaking-hackers-exploited-esxi-zero-days-long-before-disclosure.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Proactive Threat Hunting avec Elastic Security",
+        "description": "Article sur la chasse aux menaces proactive (hypothesis-driven threat hunting) utilisant Elastic Security. Il explique comment unifier la télémétrie de sécurité et les capacités analytiques pour poser des questions complexes, corréler les signaux et valider rapidement les hypothèses, en exploitant des fonctionnalités basées sur l'IA (AI Assistant pour générer des requêtes ES|QL et l'Attack Discovery) afin de détecter des comportements anormaux comme l'utilisation de LOLBins.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1218 (System Binary Proxy Execution: Living Off the Land Binaries)"
+        ],
+        "analyse": "Présente une approche pour passer de la réaction à la proactivité dans la détection des menaces. L'intégration de l'IA vise à accélérer les investigations et à réduire les barrières techniques, améliorant ainsi la capacité des équipes de sécurité à anticiper et contenir les attaques. Cet outil permet une analyse à grande échelle des données de sécurité.",
+        "recommandations": [
+          "Utiliser des plateformes de sécurité unifiées pour une visibilité complète.",
+          "Exploiter l'IA pour générer des hypothèses et des requêtes de chasse aux menaces pertinentes.",
+          "Automatiser la création de règles de détection basées sur les TTP identifiés.",
+          "Utiliser les fonctionnalités d'Attack Discovery pour le triage efficace des alertes."
+        ],
+        "tags": [
+          "threat_hunting",
+          "elastic_security",
+          "IA",
+          "AI_assistant",
+          "ESQL_queries",
+          "LOLBins",
+          "detection",
+          "mitigation",
+          "security_operations"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/proactive-threat-hunting-with-elastic-security"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Qui a bénéficié des botnets Aisuru et Kimwolf?",
+        "description": "Analyse des botnets Kimwolf et Aisuru qui ont infecté plus de deux millions d'appareils, principalement des boîtiers de streaming Android TV non officiels. Ces botnets sont utilisés pour des attaques DDoS massives et des services de proxy résidentiel, générant de la fraude publicitaire, des tentatives de prise de contrôle de comptes et du scraping de contenu. L'article identifie des acteurs et des infrastructures associées, y compris l'utilisation d'ENS (Ethereum Name Service) pour la résilience du C2.",
+        "threat_actor": "Kimwolf (opérateurs de botnet), Aisuru (opérateurs de botnet)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "93.95.112.59"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1589.001 (Gather Victim Identity Information: Credentials)",
+          "T1049 (System Network Connections Discovery)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "Révèle un écosystème cybercriminel organisé bénéficiant de l'exploitation d'appareils IoT peu sécurisés pour des activités illicites. L'utilisation d'ENS pour la résilience du C2 rend la neutralisation des botnets plus difficile, soulignant un risque persistant pour les utilisateurs d'appareils non officiels et la nécessité d'une vigilance accrue sur la sécurité des appareils connectés.",
+        "recommandations": [
+          "Déconnecter les boîtiers Android TV non officiels ou non sécurisés du réseau.",
+          "Être conscient des risques liés aux services de proxy résidentiels et des malwares pouvant les installer à l'insu des utilisateurs.",
+          "Surveiller le trafic réseau pour détecter les activités inhabituelles associées aux botnets."
+        ],
+        "tags": [
+          "botnet",
+          "kimwolf",
+          "aisuru",
+          "android_tv",
+          "IoT",
+          "DDoS",
+          "residential_proxy",
+          "cybercrime",
+          "ENS_C2",
+          "account_takeover"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Plongez dans le lac : le stockage de données pour la victoire (Architecture des Security Data Lakes)",
+        "description": "Cet article explique l'architecture des lacs de données de sécurité (Security Data Lakes) comme une alternative rentable au stockage de données SIEM. Il détaille comment les données de journaux sont stockées dans un format columnar (Parquet) et gérées via des tables Iceberg avec des catalogues (Apache Hive, AWS Glue Data Catalog), puis interrogées via Apache Spark. Les cas d'utilisation incluent l'investigation, la rétention à long terme et l'intégration avec l'IA/ML.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "Offre une solution pour la gestion des volumes massifs de données de sécurité à moindre coût, permettant des analyses historiques approfondies et le support des initiatives d'IA/ML. Cet article contribue à la résilience des opérations de sécurité en fournissant une base de données flexible et évolutive pour la veille et la réponse aux incidents, particulièrement utile pour les environnements cloud.",
+        "recommandations": [
+          "Envisager l'implémentation de lacs de données de sécurité pour un stockage rentable des journaux et des données de télémétrie.",
+          "Intégrer des outils d'analyse (comme Apache Spark) et de visualisation pour exploiter efficacement les données.",
+          "Utiliser les lacs de données pour répondre aux exigences de rétention à long terme et pour alimenter les projets d'IA/ML en matière de sécurité."
+        ],
+        "tags": [
+          "security_data_lake",
+          "SIEM",
+          "data_storage",
+          "cloud_security",
+          "big_data",
+          "AI_ML",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/security-data-lake-architecture/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Le trojan bancaire Astaroth se propage au Brésil via un ver WhatsApp",
+        "description": "La campagne \"Boto Cor-de-Rosa\" utilise un ver WhatsApp pour propager le trojan bancaire Astaroth au Brésil. Le malware cible les victimes en leur envoyant automatiquement des messages malveillants via leurs contacts WhatsApp, récolte les informations de connexion bancaires et installe le RAT Remcos. Cette nouvelle version du malware utilise un script VBScript obfusqué et un composant Python pour sa propagation et son fonctionnement.",
+        "threat_actor": "Non applicable (campagne de malware, pas un groupe d'acteurs nommé)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.005 (Command and Scripting Interpreter: Visual Basic)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1560 (Archive Collected Data)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Screen Capture)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "Impact élevé sur le secteur financier brésilien, démontrant une sophistication croissante des malwares bancaires par l'intégration de mécanismes de propagation par ver et l'ingénierie sociale localisée pour maximiser le taux d'infection. Le recours à plusieurs langages de programmation (Delphi, VBScript, Python) montre une modularité accrue.",
+        "recommandations": [
+          "Être vigilant face aux fichiers non sollicités via les plateformes de messagerie, même s'ils proviennent de contacts connus.",
+          "Déployer des défenses multicouches pour surveiller les vecteurs d'attaque traditionnels et les techniques d'ingénierie sociale émergentes.",
+          "Utiliser des solutions de sécurité des terminaux pour détecter les RAT et les activités de vol de crédentiels."
+        ],
+        "tags": [
+          "malware",
+          "trojan",
+          "astaroth",
+          "remcos_rat",
+          "whatsapp_worm",
+          "phishing",
+          "bresil",
+          "financial_fraud",
+          "credential_theft",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186685/malware/astaroth-banking-trojan-spreads-in-brazil-via-whatsapp-worm.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Des groupes liés à la Chine intensifient leurs attaques contre les infrastructures critiques de Taïwan, alerte le NSB",
+        "description": "Le Bureau de la Sécurité Nationale (NSB) de Taïwan a rapporté une intensification des cyberattaques menées par des groupes liés à la Chine, notamment BlackTech, Flax Typhoon, Mustang Panda, APT41 et UNC3886, ciblant les infrastructures critiques de Taïwan (énergie, santé, communications, gouvernement, technologie, défense). Les attaques incluent l'exploitation de vulnérabilités, les DDoS, l'ingénierie sociale, les attaques sur la chaîne d'approvisionnement et le déploiement de ransomwares. Cette escalade est corrélée aux actions politiques et militaires de la Chine.",
+        "threat_actor": "BlackTech, Flax Typhoon, Mustang Panda, APT41, UNC3886 (liés à la Chine)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1499 (Endpoint Denial of Service)",
+          "T1566 (Phishing)",
+          "T1195 (Supply Chain Compromise)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "Ces attaques représentent une menace géopolitique et stratégique majeure pour Taïwan, avec des répercussions sur la sécurité nationale et l'économie. La corrélation entre les cyberattaques et les actions politiques/militaires de la Chine met en évidence une stratégie de pression intégrée, affectant des secteurs vitaux. L'ampleur des groupes impliqués souligne une campagne coordonnée.",
+        "recommandations": [
+          "Renforcer les défenses contre l'exploitation des vulnérabilités connues et zero-day.",
+          "Mettre en œuvre une meilleure sensibilisation à l'ingénierie sociale et des formations régulières.",
+          "Sécuriser la chaîne d'approvisionnement contre les compromissions.",
+          "Renforcer la coopération internationale en cybersécurité et la vigilance du public pour signaler les activités suspectes."
+        ],
+        "tags": [
+          "APT",
+          "chine",
+          "taiwan",
+          "infrastructures_critiques",
+          "espionnage",
+          "DDoS",
+          "ransomware",
+          "supply_chain_attack",
+          "geopolitique",
+          "gouvernement",
+          "sante",
+          "energie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "UAT-7290: De nouveaux hackers liés à la Chine ciblent les télécommunications avec des exploits d'appareils edge",
+        "description": "UAT-7290, un acteur de la menace sophistiqué lié à la Chine, cible les fournisseurs de télécommunications en Asie du Sud et en Europe du Sud-Est. Le groupe utilise des malwares basés sur Linux (RushDrop, DriveSwitch, SilentRaid, Bulbature) et des exploits de 1-day pour les dispositifs réseau edge, souvent après une reconnaissance approfondie et l'exploitation de la force brute SSH, pour l'espionnage et l'établissement d'infrastructures de relais (ORB) pour d'autres acteurs chinois. Le groupe montre des chevauchements avec des APTs connues comme APT10 (RedLeaves) et Red Foxtrot (PLA Unit 69010).",
+        "threat_actor": "UAT-7290 (APT lié à la Chine)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+            "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+            "ecd31e50ff35f41fbacf4b3c39901d5a2c9d4ae64b0c0385d661b1fd8b00481f",
+            "1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts: SSH Brute Force)",
+          "T1588.006 (Obtain Capabilities: Malware - Linux)",
+          "T1592 (Gather Victim Host Information)",
+          "T1071 (Application Layer Protocol)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "L'acteur présente une menace avancée pour les infrastructures critiques en raison de sa sophistication, de son utilisation d'exploits de 1-day et de sa capacité à établir des points d'accès persistants. Son rôle de courtier d'accès initial pour d'autres groupes chinois accentue le risque systémique pour les secteurs des télécommunications et des infrastructures critiques à l'échelle régionale et mondiale.",
+        "recommandations": [
+          "Appliquer les dernières signatures ClamAV et Snort pour détecter et bloquer les malwares de UAT-7290.",
+          "Auditer les appareils edge exposés à Internet (en particulier les VPN) pour les vulnérabilités non corrigées et les informations d'identification faibles.",
+          "Prioriser les correctifs et le durcissement des systèmes.",
+          "Préparer des plans de réponse aux incidents robustes pour faire face aux menaces persistantes avancées (APT)."
+        ],
+        "tags": [
+          "APT",
+          "chine",
+          "UAT_7290",
+          "telecommunications",
+          "critical_infrastructure",
+          "espionnage",
+          "linux_malware",
+          "edge_device_exploit",
+          "SSH_brute_force",
+          "initial_access_broker"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-china-linked-hackers-breach-telcos-using-edge-device-exploits/",
+          "https://blog.talosintelligence.com/uat-7290/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Sécuriser les outils de codage \"Vibe Coding\" : augmenter la productivité sans augmenter les risques",
+        "description": "L'article de Unit 42 met en évidence les risques de sécurité de l'IA dans le développement de logiciels (\"vibe coding\"), notamment la génération de code vulnérable et les fuites de données via des prompts malveillants. Il propose le cadre SHIELD pour intégrer des contrôles de sécurité essentiels dans le processus de développement assisté par l'IA, car de nombreuses organisations ne procèdent pas à des évaluations formelles des risques ni à une surveillance adéquate.",
+        "threat_actor": "Non applicable (risques liés à l'outil, pas un acteur direct)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1588.007 (Obtain Capabilities: Vulnerabilities)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "Souligne un nouveau vecteur de risque significatif lié à l'adoption rapide de l'IA dans le développement, en particulier avec les \"citizen developers\". Le manque d'évaluation formelle des risques et de surveillance des outils de \"vibe coding\" peut conduire à des vulnérabilités massives et des incidents de sécurité, ayant un impact sur l'intégrité logicielle et la confidentialité des données.",
+        "recommandations": [
+          "Mettre en œuvre le cadre SHIELD pour la gouvernance de la sécurité dans le développement assisté par l'IA.",
+          "Effectuer des évaluations formelles des risques des outils de \"vibe coding\" et des pratiques d'IA.",
+          "Surveiller les entrées, les sorties et les résultats de sécurité des agents d'IA générant du code.",
+          "Fournir une formation à la sécurité des applications aux développeurs, y compris aux \"citizen developers\"."
+        ],
+        "tags": [
+          "AI_security",
+          "vibe_coding",
+          "code_vulnerability",
+          "data_exfiltration",
+          "SDLC",
+          "application_security",
+          "risk_management",
+          "SHIELD_framework"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/"
+        ],
+        "date": "2026-01-09"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cybersecurity landscape remains highly dynamic, characterized by increasing sophistication from state-sponsored and cybercriminal actors, rapid exploitation of known and zero-day vulnerabilities, and a growing integration of new technologies, particularly AI, into both attack and defense methodologies. Key trends include the intensification of cyberattacks by state-backed actors (China, North Korea) targeting critical infrastructure and government organizations, often through sophisticated phishing techniques (such as QR code quishing) to bypass multi-factor authentication (MFA). The exploitation of critical vulnerabilities, including remote code execution (RCE) in widely used products (Veeam, n8n, JimuReport, HPE OneView) and routers (KAYSUS), as well as the exploitation of VMware ESXi zero-days long before their disclosure, underscores the persistence of advanced threats. The proliferation of botnets, such as Kimwolf and Aisuru, targeting IoT devices for DDoS attacks and residential proxy services, illustrates the expanding attack surface. Furthermore, the increasing use of AI in code development introduces new risks, including the generation of vulnerable code and data leaks through malicious prompts, which necessitates new approaches to software security. In conclusion, the overall threat posture is characterized by constant pressure on the supply chain, rapid evolution of social engineering tactics, and the imperative need for prompt patching of critical vulnerabilities to enhance organizational resilience.",
+      "date": "2026-01-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-7290",
+        "secteur": "Telecommunications (South Asia, Southeastern Europe), Critical Infrastructure.",
+        "modop": "Uses Linux-based malware (RushDrop, DriveSwitch, SilentRaid, Bulbature), 1-day exploits for edge devices, SSH brute force, extensive reconnaissance, establishes Operational Relay Box (ORB) infrastructure for other China-linked actors.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "china",
+          "telecommunications",
+          "critical_infrastructure",
+          "linux_malware",
+          "edge_device_exploit",
+          "ssh_brute_force",
+          "initial_access_broker"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-china-linked-hackers-breach-telcos-using-edge-device-exploit/",
+          "https://blog.talosintelligence.com/uat-7290/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Kimsuky (APT43)",
+        "secteur": "U.S. organizations involved in North Korea-related policy, research, and analysis (NGOs, think tanks, academic institutions, strategic advisory firms, government entities).",
+        "modop": "Spearphishing campaigns using malicious QR codes (quishing) to redirect victims to malicious sites (questionnaires, fake login pages), session token theft to bypass MFA, exploitation of known vulnerabilities, supply-chain attacks, ClickFix tactics. Targets unmanaged mobile devices.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "north_korea",
+          "spear_phishing",
+          "quishing",
+          "MFA_bypass",
+          "session_token_theft",
+          "government",
+          "research"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-warns-about-kimsuky-hackers-using-qr-codes-to-phish-us-orgs/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Kimwolf (Botnet) / Aisuru (Botnet)",
+        "secteur": "Consumers (unofficial Android TV streaming boxes).",
+        "modop": "Mass compromise of devices, participation in DDoS attacks, residential proxy services (ad fraud, account takeover attempts, content scraping). Uses ENS (Ethereum Name Service) infrastructure for C2 resilience.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "DDoS",
+          "proxy_service",
+          "android_TV_boxes",
+          "IoT",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "BlackTech, Flax Typhoon, Mustang Panda, APT41, UNC3886",
+        "secteur": "Taiwan's Critical Infrastructure (energy, healthcare, communications, government, technology, semiconductor, defense supply chains).",
+        "modop": "Exploits software/hardware vulnerabilities, DDoS attacks, social engineering, supply-chain attacks, probing ICS, deploying malware, ransomware against hospitals, stealing medical data, compromising telecom service providers and subcontractors. Operations correlated with political and military actions.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "china",
+          "taiwan",
+          "critical_infrastructure",
+          "espionage",
+          "DDoS",
+          "ransomware",
+          "supply_chain_attack",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "nom": "Digit_4",
+        "secteur": "Government (Thailand)",
+        "modop": "Data exfiltration (methods unspecified).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hacktivism",
+          "exfiltration",
+          "government"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115861252110886786"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Cybersecurity, Energy, Healthcare, Communications, Government, Technology, Semiconductors, Defense",
+        "theme": "Escalation of State-Sponsored Cyberattacks",
+        "description": "China-linked cyber groups intensified their attacks against Taiwan's critical infrastructure in 2025, with a tenfold increase in energy sector incidents and a 6% rise in total incidents. Tactics include vulnerability exploitation, DDoS attacks, social engineering, and supply-chain attacks. These actions are correlated with China's political and military movements.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "taiwan",
+          "cyberattacks",
+          "critical_infrastructure",
+          "APT",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Diplomacy, International Relations",
+        "theme": "French Diplomacy Orientations",
+        "description": "President Emmanuel Macron outlined key directions for French diplomacy for the coming year, focusing on peace, defense, and democracy, amidst a crisis of multilateralism, the stance of the United States, and the weakening of Europe.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "diplomacy",
+          "international_relations",
+          "europe"
+        ],
+        "sources": [
+          "https://www.iris-france.org/macron-et-les-ambassadeurs-volontarisme-realites/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Sport, Diplomacy, Economy, Politics",
+        "theme": "Geopolitical stakes of the 2025 Africa Cup of Nations",
+        "description": "The organization of the 2025 Africa Cup of Nations (CAN) in Morocco is analyzed as an instrument of \"sport power\" for the kingdom, aiming to assert its leadership in Africa, enhance its image, and stimulate its economy, with an eye on co-hosting the 2030 World Cup. The article also discusses economic risks and sponsorship controversies.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "morocco",
+          "africa",
+          "sport_power",
+          "diplomacy",
+          "economy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/coupe-dafrique-des-nations-2025-enjeux-geopolitiques-sport-power-et-ambitions-du-maroc/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Security, Politics, International Relations",
+        "theme": "Israel-Lebanon relations and Hezbollah disarmament",
+        "description": "The article explores three future scenarios for Lebanon regarding the Hezbollah disarmament issue demanded by Israel, following the 2024 clashes and a tense ceasefire. It highlights Israeli military dominance and the critical influence of U.S. engagement in resolving the conflict.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "lebanon",
+          "hezbollah",
+          "conflict",
+          "security",
+          "middle_east"
+        ],
+        "sources": [
+          "https://www.iris-france.org/israel-nouvel-hegemon-au-liban/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Defense, Armaments Industry, Politics",
+        "theme": "Italy's Armament Cooperation Approach",
+        "description": "Italy's traditional approach to armament cooperation, which favored cooperative procurement, is shifting towards greater operational and technological sovereignty, an equal role for Italian companies, national industrial growth, and favorable export positioning, influenced by external and internal factors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "italy",
+          "defense",
+          "armaments",
+          "european_cooperation",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.iris-france.org/which-type-of-armament-cooperation-do-we-want-need-the-case-of-italy/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Agriculture, National Security",
+        "theme": "Role of Agriculture in UK National Security",
+        "description": "The UK considers agriculture a critical sector for national security, particularly in the face of geopolitical threats (Ukraine war, risk of war with Russia by 2030) and climate impacts. The article advocates for increased domestic production and mobilization of the agricultural sector's skills for homeland defense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "national_security",
+          "agriculture",
+          "resilience",
+          "defense"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/farming-critical-uk-national-security"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Maritime, Environment, International Politics",
+        "theme": "Environmental Threat of Sanctioned Shadow Fleets",
+        "description": "International sanctions against old and uninsured shadow fleets of oil tankers are creating a growing environmental risk by preventing their scrapping. The article proposes licensing and controlled payment mechanisms to allow safe dismantling without compromising sanction effectiveness.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "environment",
+          "sanctions",
+          "shadow_fleet",
+          "maritime_security",
+          "oil_tankers"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/sanctions-scrapyard-confronting-growing-environmental-threat"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Government",
+        "victime": "Equal Employment Opportunity Commission (EEOC), USA",
+        "description": "An internal security incident occurred, involving unauthorized access of PII by a contractor's (Opexus) employees within the agency's Public Portal system. The incident was discovered around December 18, 2025, but unauthorized access happened in early 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "usa",
+          "PII",
+          "unauthorized_access",
+          "opexus",
+          "contractor"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/08/eeoc-experienced-security-incident-involving-an-opexus-employees-unauthorized-access-email-says/?pk_campaign=feed&pk_kwd=eeoc-experienced-security-incident-involving-an-opexus-employees-unauthorized-access-email-says"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Healthcare / Senior Care",
+        "victime": "Methodist Homes of Alabama and Northwest Florida, USA",
+        "description": "Second data breach in seven months. A compromised employee email account was accessed between May 8 and May 21, 2025, exposing Personally Identifiable Information (PII) (names, SSN, DOB, Medicare numbers, medical treatment/condition information) for residents and patients, and other sensitive PII for non-residents.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "usa",
+          "PII",
+          "email_compromise",
+          "medical_data",
+          "fraud"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/08/methodist-homes-of-alabama-and-northwest-florida-is-notifying-residents-and-employees-of-its-second-data-breach-in-seven-months/?pk_campaign=feed&pk_kwd=methodist-homes-of-alabama-and-northwest-florida-is-notifying-residents-and-employees-of-its-second-data-breach-in-seven-months"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Royal Irrigation Department, Thailand",
+        "description": "The \"Digit_4\" group claimed a data breach and exfiltration of data from Thailand's Royal Irrigation Department. Specific details of the method and data type are not provided beyond exfiltration.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "thailand",
+          "exfiltration",
+          "digit_4"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115861252110886786"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Office français de l’immigration et de l’intégration (OFII), France",
+        "description": "An investigation has been opened following a claim on BreachForums by a hacker to sell 2.1 million lines of data from the OFII on January 1, 2026. The cyberattack allegedly used an internal operator's access to OFII data.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "france",
+          "OFII",
+          "personal_data",
+          "data_sale",
+          "breachforums"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/societe/article/2026/01/08/la-justice-ouvre-une-enquete-apres-la-revendication-d-une-fuite-de-millions-de-donnees-de-l-office-de-l-immigration-et-de-l-integration_6661043_3224.html"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView Software",
+        "description": "Maximum severity vulnerability allowing unauthenticated remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "HPE",
+          "OneView",
+          "RCE",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186672/security/u-s-cisa-adds-hpe-oneview-and-microsoft-office-powerpoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-21877",
+        "cvss": 10.0,
+        "product": "n8n (versions 0.123.0 to 1.121.3)",
+        "description": "Critical authenticated remote code execution (RCE) vulnerability via an arbitrary file write condition due to improper input validation, leading to full system takeover.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "RCE",
+          "authenticated_RCE",
+          "arbitrary_file_write",
+          "system_takeover"
+        ],
+        "sources": [
+          "https://hackread.com/n8n-users-patch-full-system-takeover-vulnerability/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-66913",
+        "cvss": 9.8,
+        "product": "JimuReport (up to version 2.1.3)",
+        "description": "Remote Code Execution (RCE) vulnerability via user-controlled H2 JDBC URLs, allowing arbitrary Java code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "JimuReport",
+          "RCE",
+          "JDBC",
+          "Java"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66913"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-12543",
+        "cvss": 9.6,
+        "product": "Undertow (Java web server), WildFly, JBoss EAP",
+        "description": "Critical vulnerability in HTTP Host header processing, allowing cache poisoning, internal reconnaissance, and session hijacking.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "java",
+          "web_server",
+          "undertow",
+          "cache_poisoning",
+          "session_hijacking",
+          "internal_reconnaissance",
+          "RCE_implicit"
+        ],
+        "sources": [
+          "https://securityonline.info/the-9-6-crack-in-javas-foundation-critical-undertow-flaw-cve-2025-12543/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-66916",
+        "cvss": 9.4,
+        "product": "RuoYi-Vue-Plus (versions 5.5.1 and earlier)",
+        "description": "File manipulation vulnerability (arbitrary read/write) in the snailjob component via unfiltered QLExpress expressions.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RuoYi_Vue_Plus",
+          "file_manipulation",
+          "QLExpress"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-66916"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68717",
+        "cvss": 9.4,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Authentication bypass during session validation, allowing unauthenticated requests to retrieve sensitive configuration data or execute privileged actions.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "router",
+          "KAYSUS",
+          "authentication_bypass",
+          "session_hijacking",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68717"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68719",
+        "cvss": 8.8,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Configuration backup disclosure vulnerability via direct query to an endpoint, enabling credential recovery and full device compromise.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "router",
+          "KAYSUS",
+          "config_disclosure",
+          "credential_recovery",
+          "data_leak"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68719"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-22256",
+        "cvss": 8.8,
+        "product": "Salvo (Rust web backend framework, versions prior to 0.88.1)",
+        "description": "Reflected Cross-Site Scripting (XSS) vulnerability in the list_html function due to improper sanitization of the current path in the HTML view.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "salvo",
+          "web_framework",
+          "XSS",
+          "reflected_XSS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22256"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2026-22257",
+        "cvss": 8.8,
+        "product": "Salvo (Rust web backend framework, versions prior to 0.88.1)",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability in the list_html function by uploading files with malicious names, without proper sanitization.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "salvo",
+          "web_framework",
+          "XSS",
+          "stored_XSS",
+          "file_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22257"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "cve_id": "CVE-2025-68716",
+        "cvss": 8.4,
+        "product": "KAYSUS KS-WR3600 routers (firmware 1.0.5.9.1)",
+        "description": "Default SSH root access without password on the LAN interface, allowing trivial arbitrary command execution with full privileges.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "router",
+          "KAYSUS",
+          "SSH",
+          "root_access",
+          "no_password",
+          "RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-68716"
+        ],
+        "date": "2026-01-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Guloader Malware: Fake Performance Reports Campaign",
+        "description": "A phishing campaign distributes Guloader malware, which installs Remcos RAT, through emails disguised as employee performance reports. Attackers exploit anxiety related to layoffs and use executable files (.exe) disguised as PDFs within RAR archives to infect systems. The malware then downloads its shellcode from Google Drive to install Remcos RAT, enabling system monitoring, keylogging, screen capture, and password theft.",
+        "threat_actor": "Non applicable (cybercriminals, no named group)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Screen Capture)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "Targets corporate users with sophisticated psychological lures. The use of Google Drive for shellcode download helps bypass security filters. Potential impact includes full system monitoring and sensitive data theft.",
+        "recommandations": [
+          "Exercise extreme caution when opening emails from unknown sources.",
+          "Verify file extensions and be wary of executable files (.exe) disguised as innocent documents.",
+          "Regularly change passwords and strengthen defenses against the abuse of legitimate platforms for Command & Control (C2)."
+        ],
+        "tags": [
+          "malware",
+          "guloader",
+          "remcos_rat",
+          "phishing",
+          "social_engineering",
+          "enterprise",
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://asec.ahnlab.com/en/91825/",
+          "https://securityonline.info/guloader-malware-rides-wave-of-fake-performance-reports/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "FBI warns about Kimsuky hackers using QR codes to phish U.S. orgs",
+        "description": "The North Korean state-sponsored hacking group Kimsuky (APT43) is using malicious QR codes in spearphishing campaigns (quishing) to target U.S. organizations. These campaigns redirect victims to fraudulent sites, steal session tokens to bypass multi-factor authentication (MFA), and exploit known vulnerabilities via unmanaged mobile devices.",
+        "threat_actor": "Kimsuky (APT43, North Korean state-sponsored)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.004 (Phishing: Spearphishing Link)",
+          "T1566.002 (Phishing: Spearphishing Link - QR code redirection)",
+          "T1550.002 (Bypass Multi-Factor Authentication: On-Device Credential Acquisition/Manipulation)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "Demonstrates an evolution of phishing techniques to bypass traditional security measures and MFA, leveraging the use of mobile devices. The potential impact is the compromise of cloud identities and unauthorized access to sensitive information for targeted organizations.",
+        "recommandations": [
+          "Educate users on the risks of quishing, especially verifying URLs after scanning a QR code.",
+          "Strengthen email security solutions to detect malicious QR codes.",
+          "Implement robust MFA and monitor cloud identity activity for session token theft."
+        ],
+        "tags": [
+          "APT",
+          "north_korea",
+          "kimsuky",
+          "phishing",
+          "quishing",
+          "MFA_bypass",
+          "government",
+          "think_tanks",
+          "session_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fbi-warns-about-kimsuky-hackers-using-qr-codes-to-phish-us-orgs/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Chinese-speaking hackers exploited ESXi zero-days long before disclosure",
+        "description": "Chinese-speaking threat actors exploited a VMware ESXi exploit toolkit via a compromised SonicWall VPN appliance, targeting three zero-day vulnerabilities (CVE-2025-22226, CVE-2025-22225, CVE-2025-22224) over a year before their public disclosure in March 2025. The attack aimed to escape virtual machines to the ESXi hypervisor, using compromised domain administrator credentials for lateral movement and data exfiltration, and deploying a VSOCK-based backdoor for persistence.",
+        "threat_actor": "Chinese-speaking threat actors",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-22226",
+            "CVE-2025-22225",
+            "CVE-2025-22224"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1021.001 (Remote Services: RDP)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1543.003 (Create or Modify System Process: Windows Service)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1574.002 (Hijack Execution Flow: DLL Side-Loading)"
+        ],
+        "analyse": "Reveals high technical sophistication and probable access to zero-day information long before its public release. The exploitation of VPNs for initial access and the ability to escape VMs highlight a major risk for virtualized environments, with strategic impact potential on the supply chain and data confidentiality.",
+        "recommandations": [
+          "Apply the latest ESXi security updates and patches for SonicWall VPN devices.",
+          "Audit SonicWall VPN devices for compromise and unpatched vulnerabilities.",
+          "Utilize YARA and Sigma rules (if available) for early detection of suspicious activities.",
+          "Monitor lateral movement and data collection activities within the network, especially in virtualized environments."
+        ],
+        "tags": [
+          "zero_day",
+          "vmware_esxi",
+          "chinese",
+          "APT",
+          "exploit",
+          "VM_escape",
+          "sonicwall_vpn",
+          "privilege_escalation",
+          "data_exfiltration",
+          "hypervisor_compromise",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/vmware-esxi-zero-days-likely-exploited-a-year-before-disclosure/",
+          "https://securityaffairs.com/186709/hacking/chinese-speaking-hackers-exploited-esxi-zero-days-long-before-disclosure.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Proactive Threat Hunting with Elastic Security",
+        "description": "An article on proactive, hypothesis-driven threat hunting using Elastic Security. It explains how to unify security telemetry and analytical capabilities to ask complex questions, correlate signals, and quickly validate hypotheses, leveraging AI-powered features (AI Assistant for ES|QL queries and Attack Discovery) to detect abnormal behaviors such as the use of LOLBins.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1218 (System Binary Proxy Execution: Living Off the Land Binaries)"
+        ],
+        "analyse": "Presents an approach to move from reactive to proactive threat detection. AI integration aims to accelerate investigations and reduce technical barriers, thereby improving security teams' ability to anticipate and contain attacks. This tool allows for large-scale analysis of security data.",
+        "recommandations": [
+          "Utilize unified security platforms for comprehensive visibility.",
+          "Leverage AI to generate relevant threat hunting hypotheses and queries.",
+          "Automate the creation of detection rules based on identified TTPs.",
+          "Use Attack Discovery features for efficient alert triage."
+        ],
+        "tags": [
+          "threat_hunting",
+          "elastic_security",
+          "AI",
+          "AI_assistant",
+          "ESQL_queries",
+          "LOLBins",
+          "detection",
+          "mitigation",
+          "security_operations"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/proactive-threat-hunting-with-elastic-security"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Who Benefited from the Aisuru and Kimwolf Botnets?",
+        "description": "Analysis of the Kimwolf and Aisuru botnets which infected over two million devices, mainly unofficial Android TV streaming boxes. These botnets are used for massive DDoS attacks and residential proxy services, generating ad fraud, account takeover attempts, and content scraping. The article identifies associated actors and infrastructures, including the use of ENS (Ethereum Name Service) for C2 resilience.",
+        "threat_actor": "Kimwolf (botnet operators), Aisuru (botnet operators)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "93.95.112.59"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1589.001 (Gather Victim Identity Information: Credentials)",
+          "T1049 (System Network Connections Discovery)",
+          "T1090.003 (Proxy: Multi-hop Proxy)"
+        ],
+        "analyse": "Reveals an organized cybercriminal ecosystem benefiting from the exploitation of insecure IoT devices for illicit activities. The use of ENS for C2 resilience makes botnet neutralization more difficult, highlighting a persistent risk for users of unofficial devices and the need for increased vigilance regarding connected device security.",
+        "recommandations": [
+          "Disconnect unofficial or unsecured Android TV boxes from the network.",
+          "Be aware of the risks associated with residential proxy services and malware that may install them without user knowledge.",
+          "Monitor network traffic to detect unusual activities associated with botnets."
+        ],
+        "tags": [
+          "botnet",
+          "kimwolf",
+          "aisuru",
+          "android_tv",
+          "IoT",
+          "DDoS",
+          "residential_proxy",
+          "cybercrime",
+          "ENS_C2",
+          "account_takeover"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Go jump in a lake: Data storage for the win (Security Data Lake Architecture)",
+        "description": "This article explains the architecture of Security Data Lakes as a cost-effective alternative to SIEM data storage. It details how log data is stored in a columnar format (Parquet) and managed via Iceberg tables with catalogs (Apache Hive, AWS Glue Data Catalog), then queried via Apache Spark. Use cases include investigation, long-term retention, and integration with AI/ML.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Not mentioned"
+        ],
+        "analyse": "Offers a solution for managing massive volumes of security data at lower cost, enabling in-depth historical analysis and supporting AI/ML initiatives. This article contributes to the resilience of security operations by providing a flexible and scalable data foundation for intelligence and incident response, particularly useful for cloud environments.",
+        "recommandations": [
+          "Consider implementing security data lakes for cost-effective storage of logs and telemetry data.",
+          "Integrate analytics tools (like Apache Spark) and visualization for effective data utilization.",
+          "Use data lakes to meet long-term retention requirements and to power AI/ML security projects."
+        ],
+        "tags": [
+          "security_data_lake",
+          "SIEM",
+          "data_storage",
+          "cloud_security",
+          "big_data",
+          "AI_ML",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/security-operations/security-data-lake-architecture/"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Astaroth banking Trojan spreads in Brazil via WhatsApp worm",
+        "description": "The \"Boto Cor-de-Rosa\" campaign utilizes a WhatsApp worm to spread the Astaroth banking trojan in Brazil. The malware targets victims by automatically sending malicious messages through their WhatsApp contacts, collects banking credentials, and installs the Remcos RAT. This new version of the malware uses an obfuscated VBScript and a Python component for its propagation and operation.",
+        "threat_actor": "Non applicable (malware campaign, no named actor group)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.005 (Command and Scripting Interpreter: Visual Basic)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1560 (Archive Collected Data)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Screen Capture)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "High impact on the Brazilian financial sector, demonstrating increasing sophistication of banking malware through the integration of worm-like propagation mechanisms and localized social engineering to maximize infection rates. The use of multiple programming languages (Delphi, VBScript, Python) shows increased modularity.",
+        "recommandations": [
+          "Be vigilant about unsolicited files via messaging platforms, even if they appear to come from known contacts.",
+          "Deploy multi-layered defenses to monitor both traditional attack vectors and emerging social engineering techniques.",
+          "Utilize endpoint security solutions to detect RATs and credential theft activities."
+        ],
+        "tags": [
+          "malware",
+          "trojan",
+          "astaroth",
+          "remcos_rat",
+          "whatsapp_worm",
+          "phishing",
+          "brazil",
+          "financial_fraud",
+          "credential_theft",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186685/malware/astaroth-banking-trojan-spreads-in-brazil-via-whatsapp-worm.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "China-linked groups intensify attacks on Taiwan’s critical infrastructure, NSB warns",
+        "description": "Taiwan's National Security Bureau (NSB) reported an intensification of cyberattacks by China-linked groups, including BlackTech, Flax Typhoon, Mustang Panda, APT41, and UNC3886, targeting Taiwan's critical infrastructure (energy, healthcare, communications, government, technology, defense). Attacks include vulnerability exploitation, DDoS, social engineering, supply chain attacks, and ransomware deployment. This escalation is correlated with China's political and military actions.",
+        "threat_actor": "BlackTech, Flax Typhoon, Mustang Panda, APT41, UNC3886 (China-linked)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1499 (Endpoint Denial of Service)",
+          "T1566 (Phishing)",
+          "T1195 (Supply Chain Compromise)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "These attacks represent a major geopolitical and strategic threat to Taiwan, with repercussions on national security and the economy. The correlation between cyberattacks and China's political/military actions highlights an integrated pressure strategy, affecting vital sectors. The scale of the groups involved underscores a coordinated campaign.",
+        "recommandations": [
+          "Strengthen defenses against known and zero-day vulnerability exploitation.",
+          "Implement improved social engineering awareness and regular training.",
+          "Secure the supply chain against compromises.",
+          "Enhance international cybersecurity cooperation and public vigilance to report suspicious activities."
+        ],
+        "tags": [
+          "APT",
+          "china",
+          "taiwan",
+          "critical_infrastructure",
+          "espionage",
+          "DDoS",
+          "ransomware",
+          "supply_chain_attack",
+          "geopolitics",
+          "government",
+          "healthcare",
+          "energy"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186658/intelligence/china-linked-groups-intensify-attacks-on-taiwans-critical-infrastructure-nsb-warns.html"
+        ],
+        "date": "2026-01-09"
+      },
+      {
+        "title": "Securing Vibe Coding Tools: Scaling Productivity Without Scaling Risk",
+        "description": "Unit 42's article highlights the security risks of AI in software development (\"vibe coding\"), including the generation of vulnerable code and data leaks via malicious prompts. It proposes the SHIELD framework to integrate essential security controls into the AI-assisted development process, as many organizations do not conduct formal risk assessments or adequate monitoring.",
+        "threat_actor": "Non applicable (tool-related risks, not a direct actor)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1588.007 (Obtain Capabilities: Vulnerabilities)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "Underlines a significant new risk vector related to the rapid adoption of AI in development, particularly with \"citizen developers.\" The lack of formal risk assessment and monitoring of \"vibe coding\" tools can lead to massive vulnerabilities and security incidents, impacting software integrity and data confidentiality.",
+        "recommandations": [
+          "Implement the SHIELD framework for security governance in AI-assisted development.",
+          "Conduct formal risk assessments of \"vibe coding\" tools and AI practices.",
+          "Monitor inputs, outputs, and security outcomes of AI agents generating code.",
+          "Provide application security training to developers, including \"citizen developers.\""
+        ],
+        "tags": [
+          "AI_security",
+          "vibe_coding",
+          "code_vulnerability",
+          "data_exfiltration",
+          "SDLC",
+          "application_security",
+          "risk_management",
+          "SHIELD_framework"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/"
+        ],
+        "date": "2026-01-09"
+      }
+    ]
+  }
+}
