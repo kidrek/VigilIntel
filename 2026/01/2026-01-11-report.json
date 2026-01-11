@@ -1,0 +1,1089 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle un paysage de menaces cyber diversifié et en constante évolution. Les fuites de données massives restent une préoccupation majeure, affectant à la fois les plateformes grand public (Instagram) et les forums de cybercriminels (BreachForums), ainsi que le secteur public (Illinois Department of Human Services) en raison de mauvaises configurations. Les acteurs malveillants continuent d'affiner leurs méthodes, notamment les groupes APT comme Kimsuky, qui exploitent des techniques d'évasion sophistiquées comme le 'quishing' (phishing par code QR) pour le vol d'identifiants et le contournement de l'authentification multifacteur. Le cybercrime organisé, illustré par le groupe Black Axe, poursuit ses activités frauduleuses (BEC, MITM) à l'échelle internationale, entraînant des opérations de répression coordonnées. Plusieurs vulnérabilités critiques (CVSS >= 8.0) ont été découvertes et certaines activement exploitées (HPE OneView, n8n), soulignant l'importance d'une gestion proactive des patchs, en particulier pour les systèmes d'infrastructure et les outils d'automatisation. Le thème de l'espionnage économique, tant étatique que privé, souligne la bataille continue pour la propriété intellectuelle et la souveraineté économique, avec des cadres juridiques qui peinent parfois à suivre le rythme des méthodes d'acquisition illicites. Enfin, l'interaction entre cybercriminalité et géopolitique est mise en lumière par des incidents tels que l'échange de prisonniers impliquant un suspect de rançongiciel, démontrant l'impact concret des activités cyber sur les relations internationales. En conclusion, l'état général des menaces est caractérisé par une persistance des attaques sophistiquées, une intensification des fuites de données et une nécessité croissante de coopération internationale et d'adaptation des cadres légaux face à un adversaire agile.",
+      "date": "2026-01-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Black Axe",
+        "secteur": "Divers (fraude financière, entreprises)",
+        "modop": "Fraude Man-in-the-Middle (MITM), compromission de courriels d'affaires (BEC) pour détourner des paiements.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "BEC",
+          "MITM",
+          "financial_fraud",
+          "Nigeria"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "Kimsuky (aka ARCHIPELAGO, Black Banshee, Thallium, Velvet Chollima, APT43)",
+        "secteur": "Gouvernements, groupes de réflexion, institutions universitaires (U.S. et étrangères)",
+        "modop": "Campagnes de spear-phishing avec codes QR malveillants ('quishing') pour le vol d'identifiants (Microsoft 365, Okta, portails VPN), contournement de l'MFA via vol de jetons de session, exploitation de vulnérabilités RDP (BlueKeep - CVE-2019-0708) et Microsoft Office Equation Editor (CVE-2017-11882), déploiement de keyloggers (KimaLogger, RandomQuery).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "Kimsuky",
+          "North_Korea",
+          "cyberespionage",
+          "quishing",
+          "spear_phishing",
+          "credential_harvesting",
+          "MFA_bypass",
+          "RDP_exploit",
+          "keylogger"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186755/intelligence/north-korea-linked-apt-kimsuky-behind-quishing-attacks-fbi-warns/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Utilisateurs de forums de hacking, entreprises affectées par le vol de données Salesforce",
+        "modop": "Extorsion de données, fuites de bases de données, détournement de forums (précédent BreachForums).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "extortion",
+          "data_breach",
+          "ShinyHunters"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-database-leaked-exposing-324-000-accounts/",
+          "https://mstdn.social/@Hackread/115872128016015884"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "Groupe de rançongiciels non nommé (associé à Conti)",
+        "secteur": "Diverses organisations (environ 900 victimes mondiales)",
+        "modop": "Attaques par rançongiciels, négociation avec les victimes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "negotiation",
+          "Conti"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Forces de l'ordre, Cybercriminalité, Coopération internationale",
+        "theme": "Répression internationale de la cybercriminalité organisée",
+        "description": "Les autorités espagnoles ont arrêté 34 individus liés au groupe cybercriminel nigérian Black Axe, impliqué dans la fraude en ligne (BEC, MITM) à travers l'Europe. Cette opération met en évidence l'efficacité de la coopération internationale dans la lutte contre le crime organisé transfrontalier.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "law_enforcement",
+          "cybercrime",
+          "Black_Axe",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Relations internationales, Justice, Cybercriminalité",
+        "theme": "Échange de prisonniers et implications cybercriminelles",
+        "description": "Un échange de prisonniers entre la Russie et la France a permis la libération de Daniil Kasatkin, un joueur de basketball accusé de liens avec un groupe de rançongiciels (possiblement Conti), en échange d'un chercheur français. Cet événement illustre les défis diplomatiques liés à la poursuite des cybercriminels transnationaux.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "prisoner_swap",
+          "Russia",
+          "France",
+          "cybercrime",
+          "ransomware",
+          "international_justice"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Recherche & Développement, Énergie, Cadre juridique",
+        "theme": "Espionnage économique et lacunes juridiques en France",
+        "description": "L'analyse juridique de l'espionnage économique en France est mise en lumière par l'affaire Yuesheng Wang (accusé d'espionnage pour la Chine contre Hydro-Québec). La législation française peine à qualifier pénalement l'espionnage économique de manière directe, s'appuyant sur des infractions indirectes, malgré la loi de 2018 sur le secret des affaires. Ce vide juridique pose des défis pour la protection des actifs immatériels stratégiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "economic_espionage",
+          "France",
+          "Canada",
+          "China",
+          "legal_framework",
+          "intellectual_property",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/lespionnage-economique-quelle-qualification/"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Cybercriminalité, Communauté de hacking",
+        "victime": "BreachForums (utilisateurs)",
+        "description": "La base de données du forum de hacking BreachForums a été divulguée, exposant entre 323 988 et 324 449 comptes utilisateurs. Les informations incluent les noms d'affichage, les dates d'enregistrement et les adresses IP. L'incident est attribué à une fuite plus ancienne de 2025, temporairement exposée lors d'une restauration.",
+        "tags": [
+          "violation",
+          "breach",
+          "hacking_forum",
+          "user_data",
+          "IP_addresses",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-database-leaked-exposing-324-000-accounts/",
+          "https://haveibeenpwned.com/Breach/BreachForums2025",
+          "https://mastodon.social/@RedPacketSecurity/115874231274851564",
+          "https://infosec.exchange/@DevaOnBreaches/115873635878396246",
+          "https://mstdn.social/@Hackread/115872128016015884"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Médias sociaux, Utilisateurs Internet",
+        "victime": "Utilisateurs d'Instagram",
+        "description": "Une fuite de données massive a exposé les informations personnelles de 17,5 millions d'utilisateurs d'Instagram, incluant noms d'utilisateur, adresses physiques, numéros de téléphone et adresses e-mail. Cette fuite proviendrait d'une combinaison de scraping d'API et de données issues de bases de données externes.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "Instagram",
+          "user_data",
+          "PII",
+          "API_scraping",
+          "doxxing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186765/data-breach/a-massive-breach-exposed-data-of-17-5m-instagram-users.html",
+          "https://masto.nyc/@falsemirror/115873035694632829",
+          "https://t.me/vxunderground/7955"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Gouvernement, Santé, Services sociaux",
+        "victime": "Département des services sociaux de l'Illinois (IDHS) / Résidents de l'Illinois",
+        "description": "Des paramètres de confidentialité mal configurés sur un site web de cartographie de l'IDHS ont exposé les données personnelles et de santé de près de 700 000 résidents, y compris des noms, adresses, numéros de dossier et données démographiques.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "public_sector",
+          "healthcare",
+          "PII",
+          "misconfiguration",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186745/data-breach/illinois-department-of-human-services-idhs-suffered-a-data-breach-that-impacted-700k-individuals.html"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Voyages, Tourisme",
+        "victime": "Interrail (clients)",
+        "description": "Un incident de sécurité des données non spécifié a affecté Interrail, entraînant une fuite de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "travel",
+          "customer_data"
+        ],
+        "sources": [
+          "https://chaos.social/@ex/115872512683002952",
+          "https://www.interrail.eu/en/about-us/press-room/interrail-news/data-security-incident"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Relive Physiotherapy & Sports Injury Clinic (Royaume-Uni)",
+        "description": "Le groupe CyberOprationCulture a revendiqué une violation de données ciblant la clinique de physiothérapie et de blessures sportives Relive au Royaume-Uni.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "UK"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115871884389375094"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-65091",
+        "cvss": 10.0,
+        "product": "XWiki Full Calendar Macro (versions antérieures à 2.4.5)",
+        "description": "Vulnérabilité critique d'injection SQL exploitable par les utilisateurs invités, permettant l'accès aux informations de la base de données ou des attaques par déni de service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SQL_injection",
+          "information_disclosure",
+          "DoS",
+          "web_application",
+          "guest_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65091"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView (versions 5.20 à 10.20)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) non authentifiée via un point de terminaison API REST non sécurisé, permettant à un attaquant d'exécuter du code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "unauthenticated",
+          "API_exploit",
+          "data_center_management",
+          "HPE_OneView",
+          "CISA_KEV",
+          "zero_day"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/11/hpe-oneview-rce-cve-2025-37164-added-to-cisa-kev/",
+          "https://hackread.com/cisa-emergency-patching-exploit-hpe-oneview-flaw/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 10.0,
+        "product": "n8n (versions vulnérables entre fin 2025 et début 2026, corrigée en v2.0.9.0+)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée ('Ni8mare') due à une confusion de type de contenu dans la gestion des fichiers webhook, permettant la lecture de fichiers arbitraires, la falsification de sessions d'administrateur et l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "unauthenticated",
+          "workflow_automation",
+          "content_type_confusion",
+          "arbitrary_file_read",
+          "n8n"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/10/critical-ni8mare-rce-and-expression-injection-vulnerability/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22688",
+        "cvss": 9.9,
+        "product": "WeKnora (versions antérieures à 0.2.5)",
+        "description": "Vulnérabilité d'injection de commande permettant aux utilisateurs authentifiés d'injecter des commandes dans les paramètres stdio du MCP, entraînant l'exécution de sous-processus sur le serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "RCE",
+          "LLM_framework",
+          "authenticated_exploit",
+          "WeKnora"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22688"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": 9.9,
+        "product": "n8n (versions vulnérables entre fin 2025 et début 2026, corrigée en v2.0.9.0+)",
+        "description": "Vulnérabilité d'injection d'expressions permettant aux utilisateurs authentifiés d'injecter des expressions malveillantes dans les workflows, contournant le sandboxing pour une exécution de code à distance côté serveur (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authenticated",
+          "workflow_automation",
+          "expression_injection",
+          "n8n"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/10/critical-ni8mare-rce-and-expression-injection-vulnerability/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22685",
+        "cvss": 8.8,
+        "product": "DevToys (versions 2.0.0.0 à antérieures à 2.0.9.0)",
+        "description": "Vulnérabilité de 'path traversal' ('Zip Slip') dans le mécanisme d'installation des extensions DevToys, permettant d'écraser des fichiers arbitraires et potentiellement de mener à l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "RCE_potential",
+          "arbitrary_file_overwrite",
+          "desktop_application",
+          "DevToys"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22685"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22698",
+        "cvss": 8.7,
+        "product": "RustCrypto: Elliptic Curves (implémentation SM2-PKE dans les versions 0.14.0-pre.0 et 0.14.0-rc.0)",
+        "description": "Vulnérabilité critique où le nonce éphémère 'k' est généré avec une entropie fortement réduite (32 bits au lieu de 256), réduisant la sécurité du chiffrement à un niveau trivial de 16 bits et permettant la récupération du nonce et le déchiffrement des textes chiffrés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cryptography",
+          "nonce_bias",
+          "information_disclosure",
+          "data_decryption",
+          "RustCrypto"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22698"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22687",
+        "cvss": 8.1,
+        "product": "WeKnora (versions antérieures à 0.2.5)",
+        "description": "Vulnérabilité d'injection SQL dans le service Agent de WeKnora (outil de requête de base de données), permettant d'échapper aux restrictions de requête pour obtenir des informations sensibles via des techniques de contournement basées sur les prompts.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SQL_injection",
+          "information_disclosure",
+          "LLM_framework",
+          "WeKnora"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22687"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22704",
+        "cvss": 8.0,
+        "product": "HAX CMS (versions 11.0.6 à antérieures à 25.0.0)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stocké pouvant mener à une prise de contrôle de compte.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "XSS",
+          "account_takeover",
+          "web_application",
+          "HAX_CMS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22704"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Arrestations de 34 suspects liés au groupe cybercriminel Black Axe en Espagne",
+        "description": "Une opération policière internationale en Espagne a conduit à l'arrestation de 34 individus soupçonnés d'appartenir à un réseau cybercriminel lié au groupe nigérian Black Axe. Ce groupe est spécialisé dans la fraude Man-in-the-Middle (MITM) et les attaques de Business Email Compromise (BEC), interceptant et modifiant des communications légitimes pour détourner des paiements. Les suspects sont accusés de fraude aggravée, appartenance à une organisation criminelle, blanchiment d'argent, falsification de documents et entrave à la justice.",
+        "threat_actor": "Black Axe",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1192 (Man-in-the-Middle)"
+        ],
+        "analyse": "Le démantèlement de cette cellule Black Axe, considérée comme l'un des syndicats cybercriminels les plus dangereux avec environ 30 000 membres, a un impact significatif sur la lutte contre la fraude financière en Europe. L'opération met en évidence l'efficacité des collaborations internationales pour perturber les réseaux criminels transfrontaliers, mais aussi l'ampleur et la persistance de la menace du BEC et du MITM ciblant les entreprises.",
+        "recommandations": [
+          "Mettre en place des procédures de vérification strictes pour les modifications de coordonnées bancaires ou les demandes de paiement urgentes.",
+          "Utiliser l'authentification multifacteur (MFA) pour les comptes de messagerie professionnels.",
+          "Former les employés à identifier les tentatives de phishing et de BEC, et à se méfier des communications non sollicitées ou suspectes.",
+          "Maintenir les systèmes de sécurité des e-mails (passerelles de sécurité, filtres anti-spam) à jour."
+        ],
+        "tags": [
+          "cybercriminalité",
+          "fraude_financière",
+          "BEC",
+          "MITM",
+          "Black_Axe",
+          "forces_de_l_ordre",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "Un joueur de basketball accusé de liens avec un groupe de rançongiciels libéré lors d'un échange de prisonniers entre la Russie et la France",
+        "description": "Daniil Kasatkin, 26 ans, joueur de basketball russe accusé d'avoir servi de négociateur pour un groupe de rançongiciels (possiblement le groupe Conti, responsable d'attaques contre environ 900 organisations entre 2020 et 2022), a été libéré lors d'un échange de prisonniers entre la Russie et la France. Il était détenu en France suite à un mandat d'arrêt américain et faisait face à des accusations de complot en vue de commettre une fraude informatique.",
+        "threat_actor": "Groupe de rançongiciels non nommé (possiblement Conti)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1565 (Ransomware)"
+        ],
+        "analyse": "Cet incident illustre la complexité croissante des enjeux géopolitiques liés à la cybercriminalité. L'échange d'un individu accusé de cybercrimes contre un ressortissant détenu pour des accusations différentes met en lumière les tensions et les mécanismes de négociation entre États. Il souligne également les défis de l'extradition et de la poursuite des cybercriminels transnationaux, dont les activités ont des répercussions bien au-delà des frontières numériques, affectant potentiellement la diplomatie internationale.",
+        "recommandations": [
+          "Renforcer les accords d'extradition et la coopération judiciaire internationale pour les crimes cybernétiques.",
+          "Développer des cadres juridiques et politiques pour gérer les cas de cybercriminels ayant des liens étatiques ou étant utilisés comme leviers diplomatiques."
+        ],
+        "tags": [
+          "rançongiciel",
+          "cybercriminalité",
+          "échange_de_prisonniers",
+          "Russie",
+          "France",
+          "justice_internationale",
+          "Conti"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "L'espionnage économique : quelle qualification pénale en droit français ?",
+        "description": "Cet article analyse les limites du droit français actuel en matière de qualification et de sanction de l'espionnage économique, suite à l'affaire Yuesheng Wang (accusé d'espionnage pour la Chine contre Hydro-Québec au Canada). Avant la loi de 2018 sur le secret des affaires, le droit français manquait d'outils spécifiques, se contentant d'espionnage d'État ou personnel. La loi de 2018 a introduit une protection civile du secret des affaires, mais ne crée pas d'infraction pénale directe pour l'espionnage économique, qui est réprimé indirectement via d'autres délits (vol, abus de confiance, corruption).",
+        "threat_actor": "Acteurs étatiques (Chine), agences d'intelligence économique, individus malveillants",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1114 (Email Collection)",
+          "T1583 (Acquire Infrastructure)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "L'analyse met en évidence un vide juridique persistant en France concernant la criminalisation directe de l'espionnage économique. Ce vide limite l'efficacité des poursuites pénales et la protection des actifs immatériels et de la souveraineté économique nationale. L'affaire Yuesheng Wang souligne l'importance stratégique de la protection de l'innovation (technologies de batteries) contre l'ingérence étrangère, et l'urgence d'adapter les législations pour faire face à cette menace évolutive.",
+        "recommandations": [
+          "Proposer une réforme législative pour créer une infraction pénale spécifique à l'espionnage économique en France.",
+          "Renforcer les mesures internes de protection du secret des affaires dans les entreprises, notamment la sensibilisation du personnel, la sécurité de l'information et des clauses contractuelles solides.",
+          "Améliorer la collaboration entre les entreprises, les services de renseignement et les autorités judiciaires pour mieux détecter et poursuivre les cas d'espionnage économique."
+        ],
+        "tags": [
+          "espionnage_économique",
+          "intelligence_économique",
+          "droit_français",
+          "protection_propriété_intellectuelle",
+          "Chine",
+          "Canada",
+          "cadre_juridique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/lespionnage-economique-quelle-qualification/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "Le groupe APT Kimsuky, lié à la Corée du Nord, utilise des attaques de 'quishing', avertit le FBI",
+        "description": "Le FBI a émis une alerte concernant le groupe APT Kimsuky, lié à la Corée du Nord, qui cible les gouvernements, les groupes de réflexion et les institutions universitaires avec des campagnes de spear-phishing utilisant des codes QR malveillants, une technique appelée 'quishing'. Ces attaques délivrent des codes QR comme pièces jointes ou images intégrées pour contourner les inspections d'URL, redirigeant les victimes vers des pages de phishing imitant Microsoft 365, Okta ou des portails VPN pour voler les identifiants et les jetons de session, et contourner l'authentification multifacteur. Kimsuky utilise également des vulnérabilités RDP (CVE-2019-0708) et Microsoft Office Equation Editor (CVE-2017-11882) pour l'accès initial et déploie des keyloggers.",
+        "threat_actor": "Kimsuky (aka ARCHIPELAGO, Black Banshee, Thallium, Velvet Chollima, APT43)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Phishing for Information)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1056.003 (Input Capture: Credential Phishing)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1133 (External Remote Services)",
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Kerberos Tickets)",
+          "CVE-2019-0708 (BlueKeep - RDP Exploitation)",
+          "CVE-2017-11882 (Microsoft Office Equation Editor Exploitation)"
+        ],
+        "analyse": "Cette campagne d'espionnage cyber sophistiquée démontre l'adaptation des APT aux défenses de sécurité modernes, notamment en contournant les inspections d'URL et la MFA. La cible de gouvernements et d'institutions académiques indique une motivation pour l'acquisition d'informations sensibles et la propriété intellectuelle. L'utilisation d'appareils mobiles non gérés comme point d'entrée initial est une préoccupation majeure, car elle échappe aux contrôles de sécurité réseau traditionnels, posant un risque significatif pour la sécurité nationale et l'intégrité des informations stratégiques.",
+        "recommandations": [
+          "Former le personnel à la détection des attaques de 'quishing' et à la vérification systématique des sources des codes QR, même dans des communications apparemment légitimes.",
+          "Implémenter une authentification multifacteur (MFA) résistante au phishing (ex: basée sur des clés de sécurité matérielles ou des applications d'authentification) plutôt que SMS.",
+          "Renforcer la sécurité des appareils mobiles utilisés pour le travail (EDR mobile, politiques de gestion des appareils).",
+          "Mettre en œuvre le principe du moindre privilège et maintenir les systèmes à jour avec les derniers correctifs de sécurité.",
+          "Surveiller les activités liées aux codes QR et les tentatives de vol d'identifiants."
+        ],
+        "tags": [
+          "APT",
+          "Kimsuky",
+          "Corée_du_Nord",
+          "espionnage_cyber",
+          "quishing",
+          "spear_phishing",
+          "vol_d_identifiants",
+          "MFA_bypass",
+          "cyberespionage",
+          "North_Korea",
+          "credential_harvesting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186755/intelligence/north-korea-linked-apt-kimsuky-behind-quishing-attacks-fbi-warns.html"
+        ],
+        "date": "2026-01-11"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals a diverse and constantly evolving cyber threat landscape. Massive data breaches remain a major concern, affecting both consumer platforms (Instagram) and cybercriminal forums (BreachForums), as well as the public sector (Illinois Department of Human Services) due to misconfigurations. Malicious actors continue to refine their methods, particularly APT groups like Kimsuky, who exploit sophisticated evasion techniques such as 'quishing' (QR code phishing) for credential theft and multi-factor authentication bypass. Organized cybercrime, exemplified by the Black Axe group, continues its fraudulent activities (BEC, MITM) on an international scale, leading to coordinated law enforcement operations. Several critical vulnerabilities (CVSS >= 8.0) have been discovered and some actively exploited (HPE OneView, n8n), highlighting the importance of proactive patch management, especially for infrastructure systems and automation tools. The theme of economic espionage, both state-sponsored and private, underscores the ongoing battle for intellectual property and economic sovereignty, with legal frameworks sometimes struggling to keep pace with illicit acquisition methods. Finally, the interaction between cybercrime and geopolitics is highlighted by incidents such as the prisoner swap involving a ransomware suspect, demonstrating the concrete impact of cyber activities on international relations. In conclusion, the general state of threats is characterized by persistent sophisticated attacks, an intensification of data leaks, and a growing need for international cooperation and adaptation of legal frameworks in the face of an agile adversary.",
+      "date": "2026-01-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Black Axe",
+        "secteur": "Various (financial fraud, businesses)",
+        "modop": "Man-in-the-Middle (MITM) fraud, Business Email Compromise (BEC) to divert payments.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "BEC",
+          "MITM",
+          "financial_fraud",
+          "Nigeria"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "Kimsuky (aka ARCHIPELAGO, Black Banshee, Thallium, Velvet Chollima, APT43)",
+        "secteur": "Governments, think tanks, academic institutions (U.S. and foreign)",
+        "modop": "Spear-phishing campaigns with malicious QR codes ('quishing') for credential theft (Microsoft 365, Okta, VPN portals), MFA bypass via session token theft, exploitation of RDP vulnerabilities (BlueKeep - CVE-2019-0708) and Microsoft Office Equation Editor (CVE-2017-11882), deployment of keyloggers (KimaLogger, RandomQuery).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "Kimsuky",
+          "North_Korea",
+          "cyberespionage",
+          "quishing",
+          "spear_phishing",
+          "credential_harvesting",
+          "MFA_bypass",
+          "RDP_exploit",
+          "keylogger"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186755/intelligence/north-korea-linked-apt-kimsuky-behind-quishing-attacks-fbi-warns/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Hacking forum users, companies affected by Salesforce data theft",
+        "modop": "Data extortion, database leaks, forum hijacking (previous BreachForums).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "extortion",
+          "data_breach",
+          "ShinyHunters"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-database-leaked-exposing-324-000-accounts/",
+          "https://mstdn.social/@Hackread/115872128016015884"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "nom": "Unnamed ransomware gang (associated with Conti)",
+        "secteur": "Various organizations (approx. 900 global victims)",
+        "modop": "Ransomware attacks, negotiation with victims.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "negotiation",
+          "Conti"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Law Enforcement, Cybercrime, International Cooperation",
+        "theme": "International crackdown on organized cybercrime",
+        "description": "Spanish authorities arrested 34 individuals linked to the Nigerian Black Axe cybercrime group, involved in online fraud (BEC, MITM) across Europe. This operation highlights the effectiveness of international cooperation in combating cross-border organized crime.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "law_enforcement",
+          "cybercrime",
+          "Black_Axe",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "International Relations, Justice, Cybercrime",
+        "theme": "Prisoner swap and cybercrime implications",
+        "description": "A prisoner exchange between Russia and France resulted in the release of Daniil Kasatkin, a basketball player accused of ties to a ransomware group (possibly Conti), in exchange for a French researcher. This event illustrates the diplomatic challenges associated with prosecuting transnational cybercriminals.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "prisoner_swap",
+          "Russia",
+          "France",
+          "cybercrime",
+          "ransomware",
+          "international_justice"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Research & Development, Energy, Legal Framework",
+        "theme": "Economic espionage and legal shortcomings in France",
+        "description": "The legal analysis of economic espionage in France is highlighted by the Yuesheng Wang case (accused of espionage for China against Hydro-Québec). French legislation struggles to directly criminalize economic espionage, relying on indirect offenses, despite the 2018 law on trade secrets. This legal gap poses challenges for the protection of strategic intangible assets.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "economic_espionage",
+          "France",
+          "Canada",
+          "China",
+          "legal_framework",
+          "intellectual_property",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/lespionnage-economique-quelle-qualification/"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Cybercrime, Hacking Community",
+        "victime": "BreachForums (users)",
+        "description": "The database of the BreachForums hacking forum was leaked, exposing between 323,988 and 324,449 user accounts. Information includes display names, registration dates, and IP addresses. The incident is attributed to an older leak from 2025, temporarily exposed during a restoration.",
+        "tags": [
+          "violation",
+          "breach",
+          "hacking_forum",
+          "user_data",
+          "IP_addresses",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-database-leaked-exposing-324-000-accounts/",
+          "https://haveibeenpwned.com/Breach/BreachForums2025",
+          "https://mastodon.social/@RedPacketSecurity/115874231274851564",
+          "https://infosec.exchange/@DevaOnBreaches/115873635878396246",
+          "https://mstdn.social/@Hackread/115872128016015884"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Social Media, Internet Users",
+        "victime": "Instagram users",
+        "description": "A massive data breach exposed the personal information of 17.5 million Instagram users, including usernames, physical addresses, phone numbers, and email addresses. This leak is believed to originate from a combination of API scraping and data from external databases.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "Instagram",
+          "user_data",
+          "PII",
+          "API_scraping",
+          "doxxing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186765/data-breach/a-massive-breach-exposed-data-of-17-5m-instagram-users.html",
+          "https://masto.nyc/@falsemirror/115873035694632829",
+          "https://t.me/vxunderground/7955"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Government, Health, Social Services",
+        "victime": "Illinois Department of Human Services (IDHS) / Illinois residents",
+        "description": "Misconfigured privacy settings on an IDHS mapping website exposed personal and health data of nearly 700,000 residents, including names, addresses, case numbers, and demographic information.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "public_sector",
+          "healthcare",
+          "PII",
+          "misconfiguration",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186745/data-breach/illinois-department-of-human-services-idhs-suffered-a-data-breach-that-impacted-700k-individuals.html"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Travel, Tourism",
+        "victime": "Interrail (customers)",
+        "description": "An unspecified data security incident affected Interrail, resulting in a data leak.",
+        "tags": [
+          "violation",
+          "breach",
+          "travel",
+          "customer_data"
+        ],
+        "sources": [
+          "https://chaos.social/@ex/115872512683002952",
+          "https://www.interrail.eu/en/about-us/press-room/interrail-news/data-security-incident"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Relive Physiotherapy & Sports Injury Clinic (UK)",
+        "description": "The CyberOprationCulture group claimed a data breach targeting the Relive Physiotherapy & Sports Injury Clinic in the UK.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "UK"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115871884389375094"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-65091",
+        "cvss": 10.0,
+        "product": "XWiki Full Calendar Macro (versions prior to 2.4.5)",
+        "description": "Critical SQL injection vulnerability exploitable by guest users, allowing database information access or Denial-of-Service attacks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SQL_injection",
+          "information_disclosure",
+          "DoS",
+          "web_application",
+          "guest_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65091"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": 10.0,
+        "product": "HPE OneView (versions 5.20 through 10.20)",
+        "description": "Critical unauthenticated Remote Code Execution (RCE) vulnerability via an unsecured REST API endpoint, allowing an attacker to execute arbitrary code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "unauthenticated",
+          "API_exploit",
+          "data_center_management",
+          "HPE_OneView",
+          "CISA_KEV",
+          "zero_day"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/11/hpe-oneview-rce-cve-2025-37164-added-to-cisa-kev/",
+          "https://hackread.com/cisa-emergency-patching-exploit-hpe-oneview-flaw/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 10.0,
+        "product": "n8n (vulnerable versions between late 2025 and early 2026, fixed in v2.0.9.0+)",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability ('Ni8mare') due to content-type confusion in Form webhook file handling, allowing arbitrary file read, admin session forging, and code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "unauthenticated",
+          "workflow_automation",
+          "content_type_confusion",
+          "arbitrary_file_read",
+          "n8n"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/10/critical-ni8mare-rce-and-expression-injection-vulnerability/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22688",
+        "cvss": 9.9,
+        "product": "WeKnora (versions prior to 0.2.5)",
+        "description": "Command injection vulnerability allowing authenticated users to inject commands into MCP stdio settings, leading to server subprocess execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "RCE",
+          "LLM_framework",
+          "authenticated_exploit",
+          "WeKnora"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22688"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2025-68613",
+        "cvss": 9.9,
+        "product": "n8n (vulnerable versions between late 2025 and early 2026, fixed in v2.0.9.0+)",
+        "description": "Expression injection vulnerability allowing authenticated users to inject malicious expressions into workflows, bypassing sandboxing for server-side Remote Code Execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "authenticated",
+          "workflow_automation",
+          "expression_injection",
+          "n8n"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/10/critical-ni8mare-rce-and-expression-injection-vulnerability/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22685",
+        "cvss": 8.8,
+        "product": "DevToys (versions 2.0.0.0 to prior to 2.0.9.0)",
+        "description": "Path traversal ('Zip Slip') vulnerability in the DevToys extension installation mechanism, allowing arbitrary file overwrites and potentially leading to code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "RCE_potential",
+          "arbitrary_file_overwrite",
+          "desktop_application",
+          "DevToys"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22685"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22698",
+        "cvss": 8.7,
+        "product": "RustCrypto: Elliptic Curves (SM2-PKE implementation in versions 0.14.0-pre.0 and 0.14.0-rc.0)",
+        "description": "Critical vulnerability where the ephemeral nonce 'k' is generated with severely reduced entropy (32 bits instead of 256), reducing encryption security to a trivial 16-bit level and allowing nonce recovery and ciphertext decryption.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cryptography",
+          "nonce_bias",
+          "information_disclosure",
+          "data_decryption",
+          "RustCrypto"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22698"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22687",
+        "cvss": 8.1,
+        "product": "WeKnora (versions prior to 0.2.5)",
+        "description": "SQL injection vulnerability in WeKnora's Agent service (database query tool), allowing prompt-based bypass techniques to obtain sensitive information by evading query restrictions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SQL_injection",
+          "information_disclosure",
+          "LLM_framework",
+          "WeKnora"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22687"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "cve_id": "CVE-2026-22704",
+        "cvss": 8.0,
+        "product": "HAX CMS (versions 11.0.6 to prior to 25.0.0)",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability that could lead to account takeover.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "XSS",
+          "account_takeover",
+          "web_application",
+          "HAX_CMS"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22704"
+        ],
+        "date": "2026-01-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Basketball player arrested for alleged ransomware ties freed in Russia-France prisoner swap",
+        "description": "Daniil Kasatkin, 26, a Russian basketball player accused of serving as a negotiator for an unnamed ransomware gang (possibly the Conti group, responsible for attacks against approximately 900 organizations between 2020 and 2022), was released in a prisoner exchange between Russia and France. He was detained in France under a U.S. arrest warrant and faced charges of conspiracy to commit computer fraud.",
+        "threat_actor": "Unnamed ransomware gang (possibly Conti)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1565 (Ransomware)"
+        ],
+        "analyse": "This incident illustrates the increasing complexity of geopolitical issues related to cybercrime. The exchange of an individual accused of cybercrimes for a national held on different charges highlights the tensions and negotiation mechanisms between states. It also underscores the challenges of extradition and prosecution of transnational cybercriminals, whose activities have repercussions far beyond digital borders, potentially affecting international diplomacy.",
+        "recommandations": [
+          "Strengthen extradition agreements and international judicial cooperation for cybercrimes.",
+          "Develop legal and policy frameworks to manage cases of cybercriminals with state ties or used as diplomatic leverage."
+        ],
+        "tags": [
+          "ransomware",
+          "cybercrime",
+          "prisoner_swap",
+          "Russia",
+          "France",
+          "international_justice",
+          "Conti"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/10/basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap/?pk_campaign=feed&pk_kwd=basketball-player-arrested-for-alleged-ransomware-ties-freed-in-russia-france-prisoner-swap"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "Economic Espionage: What legal qualification in French law?",
+        "description": "This article analyzes the limitations of current French law regarding the qualification and sanction of economic espionage, following the Yuesheng Wang case (accused of espionage for China against Hydro-Québec in Canada). Before the 2018 law on trade secrets, French law lacked specific tools, dealing only with state or personal espionage. The 2018 law introduced civil protection for trade secrets but does not create a direct criminal offense for economic espionage, which is indirectly punished via other offenses (theft, breach of trust, corruption).",
+        "threat_actor": "State-sponsored actors (China), economic intelligence agencies, malicious individuals",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1114 (Email Collection)",
+          "T1583 (Acquire Infrastructure)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "The analysis highlights a persistent legal gap in France regarding the direct criminalization of economic espionage. This gap limits the effectiveness of criminal prosecutions and the protection of intangible assets and national economic sovereignty. The Yuesheng Wang case underscores the strategic importance of protecting innovation (battery technologies) against foreign interference, and the urgency of adapting legislation to address this evolving threat.",
+        "recommandations": [
+          "Propose legislative reform to create a specific criminal offense for economic espionage in France.",
+          "Strengthen internal measures for protecting trade secrets within companies, including staff awareness, information security, and robust contractual clauses.",
+          "Improve collaboration between businesses, intelligence services, and judicial authorities to better detect and prosecute cases of economic espionage."
+        ],
+        "tags": [
+          "economic_espionage",
+          "economic_intelligence",
+          "French_law",
+          "intellectual_property_protection",
+          "China",
+          "Canada",
+          "legal_framework"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/lespionnage-economique-quelle-qualification/"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "North Korea–linked APT Kimsuky behind quishing attacks, FBI warns",
+        "description": "The FBI has issued an alert regarding the North Korea–linked APT group Kimsuky, which is targeting governments, think tanks, and academic institutions with spear-phishing campaigns using malicious QR codes, a technique called 'quishing'. These attacks deliver QR codes as email attachments or embedded graphics to evade URL inspections, redirecting victims to phishing pages impersonating Microsoft 365, Okta, or VPN portals to steal credentials and session tokens, bypassing multi-factor authentication. Kimsuky also leverages RDP vulnerabilities (CVE-2019-0708) and Microsoft Office Equation Editor (CVE-2017-11882) for initial access and deploys keyloggers.",
+        "threat_actor": "Kimsuky (aka ARCHIPELAGO, Black Banshee, Thallium, Velvet Chollima, APT43)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1598 (Phishing for Information)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1056.003 (Input Capture: Credential Phishing)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1133 (External Remote Services)",
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Kerberos Tickets)",
+          "CVE-2019-0708 (BlueKeep - RDP Exploitation)",
+          "CVE-2017-11882 (Microsoft Office Equation Editor Exploitation)"
+        ],
+        "analyse": "This sophisticated cyber espionage campaign demonstrates APTs' adaptation to modern security defenses, particularly by bypassing URL inspections and MFA. The targeting of governments and academic institutions indicates a motivation for acquiring sensitive information and intellectual property. The use of unmanaged mobile devices as an initial entry point is a major concern, as it evades traditional network security controls, posing a significant risk to national security and the integrity of strategic information.",
+        "recommandations": [
+          "Train staff to detect 'quishing' attacks and systematically verify the sources of QR codes, even in seemingly legitimate communications.",
+          "Implement phishing-resistant multi-factor authentication (MFA) (e.g., hardware security keys or authenticator apps) instead of SMS-based MFA.",
+          "Strengthen the security of mobile devices used for work (mobile EDR, device management policies).",
+          "Implement the principle of least privilege and keep systems updated with the latest security patches.",
+          "Monitor QR code-related activities and credential theft attempts."
+        ],
+        "tags": [
+          "APT",
+          "Kimsuky",
+          "North_Korea",
+          "cyberespionage",
+          "quishing",
+          "spear_phishing",
+          "credential_harvesting",
+          "MFA_bypass",
+          "cyberespionage",
+          "North_Korea",
+          "credential_harvesting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186755/intelligence/north-korea-linked-apt-kimsuky-behind-quishing-attacks-fbi-warns.html"
+        ],
+        "date": "2026-01-11"
+      },
+      {
+        "title": "Spain arrests 34 suspects linked to Black Axe cyber crime",
+        "description": "An international police operation in Spain led to the arrest of 34 individuals suspected of belonging to a cybercrime network linked to the Nigerian Black Axe group. This group specializes in Man-in-the-Middle (MITM) fraud and Business Email Compromise (BEC) attacks, intercepting and modifying legitimate communications to divert payments. Suspects face charges of aggravated continuous fraud, membership in a criminal organization, money laundering, document forgery, and obstruction of justice.",
+        "threat_actor": "Black Axe",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1192 (Man-in-the-Middle)"
+        ],
+        "analyse": "The dismantling of this Black Axe cell, considered one of the most dangerous cybercrime syndicates with approximately 30,000 members, has a significant impact on the fight against financial fraud in Europe. The operation highlights the effectiveness of international collaborations in disrupting cross-border criminal networks, but also the scale and persistence of the BEC and MITM threat targeting businesses.",
+        "recommandations": [
+          "Implement strict verification procedures for changes in bank details or urgent payment requests.",
+          "Use multi-factor authentication (MFA) for corporate email accounts.",
+          "Train employees to identify phishing and BEC attempts, and to be wary of unsolicited or suspicious communications.",
+          "Keep email security systems (security gateways, anti-spam filters) up-to-date."
+        ],
+        "tags": [
+          "cybercrime",
+          "financial_fraud",
+          "BEC",
+          "MITM",
+          "Black_Axe",
+          "law_enforcement",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spain-arrests-34-suspects-linked-to-black-axe-cyber-crime/"
+        ],
+        "date": "2026-01-11"
+      }
+    ]
+  }
+}
