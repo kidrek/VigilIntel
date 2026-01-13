@@ -1,0 +1,913 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une intensification des activités des acteurs étatiques et criminels. Les attaques par hameçonnage visant à dérober des identifiants restent une méthode d'accès initiale privilégiée, comme le démontrent les campagnes d'APT28 ciblant des secteurs critiques en Europe et en Asie centrale, ainsi que l'utilisation croissante de techniques sophistiquées comme le 'Browser-in-the-Browser' pour contourner les protections d'authentification. Les vulnérabilités logicielles, en particulier les exécutions de code à distance (RCE), les injections SQL et les escalades de privilèges, continuent d'être activement exploitées, notamment dans les infrastructures IoT, les systèmes ERP (SAP) et les plateformes de développement (Gogs, n8n), avec des scores CVSS critiques. La supply chain et les dépendances vis-à-vis de tiers sont également des points faibles récurrents, comme l'illustrent les failles de configuration dans Salesforce Aura et l'intégration de l'IA de Google dans les produits Apple. L'IA elle-même devient une cible de reconnaissance, avec des campagnes visant les grands modèles de langage (LLM). Les violations de données sont généralisées, touchant les secteurs de la santé, du commerce de détail, des réseaux sociaux et du gouvernement, souvent accompagnées de tentatives d'extorsion et de fuites de données sensibles. Enfin, le cyberespace est de plus en plus influencé par les dynamiques géopolitiques, avec des opérations d'espionnage et de perturbation s'alignant sur des objectifs stratégiques plus larges, remettant en question les normes internationales. L'état général des menaces est élevé, nécessitant une vigilance constante, des stratégies de défense en profondeur et une capacité d'adaptation rapide aux nouvelles tactiques des adversaires.",
+      "date": "2026-01-13"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAC-0190",
+        "secteur": "Défense (Forces de Défense Ukrainiennes)",
+        "modop": "Cyberattaques ciblées, usurpation d'identité de fonds caritatifs, utilisation du logiciel malveillant PLUGGYAPE.",
+        "tags": ["actor", "threat_actor", "nation-state", "espionnage", "malware", "PLUGGYAPE", "Ukraine"],
+        "sources": ["https://cert.gov.ua/article/6286942"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "APT28 (Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "secteur": "Énergie, Nucléaire, Politique (Turquie, Europe, Macédoine du Nord, Ouzbékistan)",
+        "modop": "Campagnes de vol d'identifiants via des fausses pages de connexion (Outlook, Google, Sophos VPN), utilisation de services d'hébergement gratuits et de tunneling (Webhook.site, InfinityFree, Byet Internet Services, ngrok), leurres PDF.",
+        "tags": ["actor", "threat_actor", "nation-state", "Russia", "espionnage", "credential_harvesting", "phishing", "APT"],
+        "sources": ["https://securityaffairs.com/186801/apt/credential-harvesting-attacks-by-apt28-hit-turkish-european-and-central-asian-organizations.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "MuddyWater",
+        "secteur": "Organisations ciblées",
+        "modop": "Hameçonnage ciblé (spearphishing) avec des documents Word contenant des macros malveillantes, déploiement d'implants basés sur Rust (RustyWater), activité en ligne de commande, balises réseau, persistance via le registre.",
+        "tags": ["actor", "threat_actor", "nation-state", "Iran", "espionnage", "malware", "RustyWater", "spearphishing", "macro"],
+        "sources": ["https://fieldeffect.com/blog/muddywater-rust-based-operations"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "Réseau criminel Black Axe",
+        "secteur": "Trafic de drogue, Fraude (Ports de Rotterdam et Anvers)",
+        "modop": "Recrutement de 'money mules' pour faciliter la fraude financière, piratage de systèmes portuaires pour faciliter le trafic de drogue.",
+        "tags": ["actor", "threat_actor", "organized_crime", "fraud", "drug_trafficking", "port_security", "Nigeria"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-gets-seven-years-for-breaching-rotterdam-and-antwerp-ports/", "https://securityaffairs.com/186819/security/europol-and-spanish-police-arrest-34-in-crackdown-on-black-axe-criminal-network.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "CrazyHunter",
+        "secteur": "Santé (Taïwan)",
+        "modop": "Attaques par ransomware avec des tactiques d'intrusion avancées.",
+        "tags": ["actor", "threat_actor", "ransomware", "healthcare", "Taiwan"],
+        "sources": ["https://databreaches.net/2026/01/12/crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed/?pk_campaign=feed&pk_kwd=crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "TEAM MR PLAX",
+        "secteur": "Gouvernement (Indonésie)",
+        "modop": "Violation de données et fuite de données.",
+        "tags": ["actor", "threat_actor", "data_breach", "government", "Indonesia", "data_leak"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115883430230157149"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Énergie / Géopolitique",
+        "theme": "Intervention militaire américaine et contrôle pétrolier au Venezuela",
+        "description": "Opération militaire américaine au Venezuela ayant conduit au renversement du président Nicolás Maduro et au contrôle des exportations de pétrole. L'opération est justifiée par la lutte anti-narcotrafic et des menaces à la sécurité nationale, mais est principalement motivée par une stratégie énergétique visant à réduire les prix du pétrole et à accroître le pouvoir américain sur le marché mondial, tout en exerçant une pression sur des adversaires comme Cuba, la Chine, l'Iran et le Hezbollah. L'impact sur les marchés pétroliers mondiaux est resté limité en raison d'une offre abondante. D'autres nations comme la Chine et l'UE réagissent avec prudence.",
+        "tags": ["geopolitique", "geopolitic", "USA", "Venezuela", "pétrole", "énergie", "intervention_militaire", "sanctions", "Chine", "Iran", "Cuba"],
+        "sources": ["https://www.iris-france.org/petrole-venezuelien-les-enjeux-de-loperation-trump/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Gouvernement / Géopolitique",
+        "theme": "Stratégie de Sécurité Nationale des États-Unis (NSS2025)",
+        "description": "La publication par la Maison-Blanche du document NSS2025 (5 décembre 2025) révèle une nouvelle vision du monde et du rôle des États-Unis, en particulier concernant l'Europe. Ce document, expression d'une 'doctrine MAGA', représente une révolution idéologique et politique par rapport à la stratégie précédente (NSS2022 de l'administration Biden), marquant une rupture profonde dans l'environnement international.",
+        "tags": ["geopolitique", "geopolitic", "USA", "stratégie_nationale", "sécurité", "doctrine_MAGA"],
+        "sources": ["https://www.iris-france.org/la-strategie-2025-de-securite-nationale-une-autre-vision-du-monde/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Finance / Économie / Géopolitique",
+        "theme": "Stratégie d'ouverture financière de la Chine (QFII 2025)",
+        "description": "Les réformes du régime QFII (Qualified Foreign Institutional Investor) de la Chine (octobre 2025) visent à simplifier l'accès des investisseurs institutionnels étrangers au marché chinois. Cependant, elles s'inscrivent dans une stratégie d'ouverture tactique et non stratégique, avec un contrôle renforcé sur les sorties de capitaux et des restrictions dans certains secteurs. L'objectif est de financer l'autosuffisance technologique, promouvoir le yuan, réduire la dépendance aux capitaux occidentaux et maintenir un contrôle absolu sur le système financier, dans un contexte de découplage sino-américain et de 'lawfare' (loi anti-sanctions).",
+        "tags": ["geopolitique", "geopolitic", "Chine", "finance", "économie", "investissement", "QFII", "lawfare", "découplage_sino-américain"],
+        "sources": ["https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/qfii-2025-la-chine-poursuit-elle-vraiment-son-ouverture-financiere/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Gouvernement / Société",
+        "theme": "Contestations populaires et répression en Iran",
+        "description": "Des centaines de milliers de personnes manifestent en Iran depuis le 28 décembre 2025 contre le régime, en raison de problèmes économiques et de restrictions des libertés. Ce mouvement est le plus massif depuis 1979 et est sévèrement réprimé (centaines de morts, coupure d'Internet). L'opposition reste fragmentée, sans figure consensuelle. Des questions sont soulevées quant à un éventuel effondrement du régime ou une intervention étrangère, ainsi qu'aux doubles standards géopolitiques dans le soutien aux contestations.",
+        "tags": ["geopolitique", "geopolitic", "Iran", "contestations", "répression", "droits_humains", "Internet_cutoff"],
+        "sources": ["https://www.iris-france.org/iran-la-contestation-samplifie-la-repression-aussi/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Maritime / Droit International / Géopolitique",
+        "theme": "Interdiction par les États-Unis d'un pétrolier battant pavillon russe en haute mer",
+        "description": "Les garde-côtes américains ont arraisonné et saisi le pétrolier 'Bella 1 / Marinera' (initialement apatride, puis réenregistré russe) dans l'Atlantique Nord. Cette action est considérée comme une rupture du précédent établi par la Convention des Nations Unies sur le droit de la mer (UNCLOS) concernant les interdictions en haute mer. Les États-Unis et le Royaume-Uni affirment que le navire était apatride malgré son enregistrement russe, tandis que la Russie a protesté. L'incident intensifie l'application des sanctions américaines contre la Russie, le Venezuela et l'Iran, et soulève des questions sur le droit maritime international et l''ordre international fondé sur des règles', avec le potentiel de 'chaos juridique' et de représailles.",
+        "tags": ["geopolitique", "geopolitic", "USA", "Russie", "Venezuela", "Iran", "droit_international", "sanctions", "trafic_maritime"],
+        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/us-boarding-russian-flagged-oil-tanker-breaks-precedent-high-stakes-high-seas"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Gouvernement / Technologie / Sécurité Nationale",
+        "theme": "Externalisation des compétences technologiques de l'État américain",
+        "description": "Annonce de la création de la 'Force technologique américaine' par l'OPM suite à des coupes drastiques de personnel IT fédéral (début 2025). Le programme prévoit le recrutement de 'chercheurs' pour deux ans, encadrés par des cadres du secteur privé (Anduril, Palantir, OpenAI, Google, Microsoft, xAI). Cela soulève des préoccupations en matière de gouvernance, d'audit, de souveraineté numérique et de conflits d'intérêts, transformant potentiellement l'État en un vivier de talents pour les géants de la technologie et augmentant la dépendance.",
+        "tags": ["geopolitique", "geopolitic", "USA", "technologie", "gouvernement", "sécurité_nationale", "externalisation", "IA"],
+        "sources": ["https://www.datasecuritybreach.fr/force-technologique-americaine-letat-recrute-ses-remplacants/"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Transport / Ports",
+        "victime": "Ports de Rotterdam et Anvers",
+        "description": "Un ressortissant néerlandais a été condamné à sept ans de prison pour avoir piraté les systèmes informatiques des ports de Rotterdam et Anvers, permettant à un réseau criminel de faciliter le trafic de drogue. Il s'agissait d'accéder aux systèmes portuaires pour importer des drogues inaperçues. L'enquête a impliqué l'interception de communications sur le service de chat chiffré Sky ECC.",
+        "tags": ["violation", "breach", "transport", "ports", "piratage", "trafic_de_drogue", "extorsion", "SkyECC"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-gets-seven-years-for-breaching-rotterdam-and-antwerp-ports/", "https://databreaches.net/2026/01/12/dutch-court-sentences-hacker-who-used-port-systems-to-smuggle-cocaine-to-7-years/?pk_campaign=feed&pk_kwd=dutch-court-sentences-hacker-who-used-port-systems-to-smuggle-cocaine-to-7-years"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Santé / Éducation",
+        "victime": "University of Hawaii Cancer Center",
+        "description": "Le Cancer Center de l'Université d'Hawaii a été victime d'une attaque par ransomware en août 2025. Des données de participants à des études, y compris des numéros de sécurité sociale datant des années 1990, ont été volées. L'université a engagé les acteurs de la menace pour obtenir un outil de déchiffrement et la destruction sécurisée des informations volées, et a mis en place des mesures de sécurité renforcées.",
+        "tags": ["violation", "breach", "santé", "éducation", "ransomware", "vol_de_données", "SSN", "Hawaii"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/university-of-hawaii-cancer-center-hit-by-ransomware-attack/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Commerce de détail",
+        "victime": "Target Corporation",
+        "description": "Des pirates informatiques affirment vendre le code source interne de Target Corporation et ont publié un échantillon. Le serveur Git de développement du détaillant a été mis hors ligne après que BleepingComputer ait alerté Target. L'ensemble des données prétendues volées représente environ 860 Go.",
+        "tags": ["violation", "breach", "commerce_de_détail", "vol_de_code_source", "propriété_intellectuelle", "Target"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/targets-dev-server-offline-after-hackers-claim-to-steal-source-code/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Réseaux sociaux",
+        "victime": "Instagram / Utilisateurs",
+        "description": "Meta a corrigé une faille de réinitialisation de mot de passe sur Instagram qui permettait à des tiers d'envoyer des e-mails de réinitialisation. Cependant, Meta a nié toute violation directe de ses systèmes, malgré des allégations de fuite de données (environ 18 millions d'utilisateurs avec adresses physiques et identifiants Instagram) vendues sur des forums cybercriminels, potentiellement compilées à partir d'autres sources.",
+        "tags": ["violation", "breach", "réseaux_sociaux", "Instagram", "faille_de_sécurité", "fuite_de_données", "données_personnelles", "phishing"],
+        "sources": ["https://securityaffairs.com/186829/security/meta-fixes-instagram-password-reset-flaw-denies-data-breach.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Santé / Chirurgie esthétique",
+        "victime": "Cliniques de chirurgie esthétique et leurs patients (e.g., Manhattan plastic surgeon, Gary Motykie, Hankins & Sohn, Jaime Schwartz)",
+        "description": "Plusieurs cliniques de chirurgie esthétique ont été victimes de cyberattaques, entraînant la publication en ligne d'images dénudées et de numéros de sécurité sociale de patients, avec des tentatives d'extorsion directes par les attaquants. Les mêmes acteurs de la menace sont impliqués dans ces attaques répétées.",
+        "tags": ["violation", "breach", "santé", "chirurgie_esthétique", "données_médicales", "images_personnelles", "extorsion", "données_sensibles", "SSN"],
+        "sources": ["https://databreaches.net/2026/01/12/another-plastic-surgery-practice-fell-prey-to-a-cyberattack-with-extortion-attempt/?pk_campaign=feed&pk_kwd=another-plastic-surgery-practice-fell-prey-to-a-cyberattack-with-extortion-attempt"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Canopy Health (Nouvelle-Zélande), Manage My Health (Nouvelle-Zélande)",
+        "description": "Canopy Health, un important fournisseur privé de diagnostic et de traitement du cancer du sein en Nouvelle-Zélande, a révélé une cyberattaque en juillet 2025 ayant entraîné un accès non autorisé temporaire à ses systèmes administratifs et une exposition potentielle de données. Une injonction a été obtenue pour empêcher l'utilisation ou la publication des informations. Par ailleurs, Manage My Health, le plus grand portail patient de Nouvelle-Zélande, a également subi une cyberattaque en décembre 2025, exposant potentiellement les données de près de 110 000 utilisateurs.",
+        "tags": ["violation", "breach", "santé", "Nouvelle-Zélande", "accès_non_autorisé", "données_médicales", "portail_patient"],
+        "sources": ["https://databreaches.net/2026/01/12/second-nz-health-provider-canopy-health-reveals-cyberattack/?pk_campaign=feed&pk_kwd=second-nz-health-provider-canopy-health-reveals-cyberattack", "https://research.checkpoint.com/2026/12th-january-threat-intelligence-report/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Six organisations de santé à Taïwan",
+        "description": "Le ransomware CrazyHunter a intensifié ses opérations avec des tactiques d'intrusion avancées, ciblant notamment six organisations de soins de santé à Taïwan. Les détails spécifiques de la violation ne sont pas fournis, mais il s'agit d'attaques par ransomware.",
+        "tags": ["violation", "breach", "santé", "Taiwan", "ransomware", "intrusion_avancée"],
+        "sources": ["https://databreaches.net/2026/01/12/crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed/?pk_campaign=feed&pk_kwd=crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Ministère de la Loi et des Droits de l'Homme d'Indonésie",
+        "description": "Le groupe TEAM MR PLAX a revendiqué une violation de données contre le Ministère indonésien de la Loi et des Droits de l'Homme, avec des données signalées comme ayant été divulguées.",
+        "tags": ["violation", "breach", "gouvernement", "Indonésie", "fuite_de_données"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115883430230157149"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52694",
+        "cvss": 10.0,
+        "product": "Advantech IoT product line",
+        "description": "Injection SQL critique (SQL Injection) exposant les appareils IoT.",
+        "tags": ["vulnérabilité", "vulnerability", "SQL_Injection", "RCE", "IoT", "Advantech"],
+        "sources": ["https://securityonline.info/cve-2025-52694-cvss-10-critical-advantech-sql-injection-exposes-iot-devices/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-69425",
+        "cvss": 10.0,
+        "product": "Ruckus vRIoT IoT Controller",
+        "description": "Secrets codés en dur (Hardcoded Secrets) menant à l'exécution de code à distance (RCE) avec privilèges root.",
+        "tags": ["vulnérabilité", "vulnerability", "Hardcoded_Secrets", "RCE", "privilege_escalation", "IoT", "Ruckus"],
+        "sources": ["https://securityonline.info/double-critical-hardcoded-secrets-expose-ruckus-iot-controllers-to-root-rce/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-69426",
+        "cvss": 10.0,
+        "product": "Ruckus vRIoT IoT Controller",
+        "description": "Secrets codés en dur (Hardcoded Secrets) menant à l'exécution de code à distance (RCE) avec privilèges root.",
+        "tags": ["vulnérabilité", "vulnerability", "Hardcoded_Secrets", "RCE", "privilege_escalation", "IoT", "Ruckus"],
+        "sources": ["https://securityonline.info/double-critical-hardcoded-secrets-expose-ruckus-iot-controllers-to-root-rce/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0501",
+        "cvss": 9.9,
+        "product": "SAP S/4HANA Private Cloud and On-Premise (Financials – General Ledger)",
+        "description": "Vulnérabilité d'injection SQL due à une validation d'entrée insuffisante, permettant à un utilisateur authentifié de lire, modifier et supprimer des données de base de données.",
+        "tags": ["vulnérabilité", "vulnerability", "SQL_Injection", "data_manipulation", "SAP", "ERP", "Financials"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0501"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2023-38408",
+        "cvss": 9.8,
+        "product": "Moxa industrial ethernet switches (OpenSSH)",
+        "description": "Exécution de code à distance (RCE) via OpenSSH en raison d'un chemin de recherche non fiable.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "OpenSSH", "OT_network", "Moxa", "industrial_control_systems"],
+        "sources": ["https://securityonline.info/critical-alert-moxa-switches-exposed-to-openssh-remote-code-execution-cvss-9-8/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 9.8,
+        "product": "n8n (workflow automation platform)",
+        "description": "Vulnérabilité de confusion de type de contenu ('content-type confusion') permettant une exécution de code à distance (RCE) non authentifiée, la fuite de secrets, la falsification de cookies de session et l'injection de fichiers sensibles.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentication_bypass", "data_exposure", "n8n", "automation_platform", "AI_development"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/max-severity-ni8mare-flaw-impacts-nearly-60-000-n8n-instances/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0500",
+        "cvss": 9.6,
+        "product": "SAP Wily Introscope Enterprise Manager (WorkStation)",
+        "description": "Exécution de code à distance (RCE) via un composant tiers vulnérable et un fichier JNLP malveillant, permettant l'exécution de commandes OS sur la machine de la victime.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "third-party_component", "JNLP", "OS_command_execution", "SAP"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0500"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0498",
+        "cvss": 9.1,
+        "product": "SAP S/4HANA (Private Cloud and On-Premise)",
+        "description": "Vulnérabilité d'injection de code (Code Injection) dans un module de fonction exposé via RFC, permettant à un attaquant avec privilèges d'administrateur d'injecter du code ABAP/des commandes OS et de contourner les contrôles d'autorisation.",
+        "tags": ["vulnérabilité", "vulnerability", "Code_Injection", "RCE", "privilege_escalation", "SAP", "ERP", "ABAP", "RFC"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0498"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0492",
+        "cvss": 8.8,
+        "product": "SAP HANA database",
+        "description": "Vulnérabilité d'escalade de privilèges (Privilege Escalation) permettant à un attaquant authentifié de changer d'utilisateur et potentiellement d'obtenir un accès administratif.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "authentication_bypass", "SAP", "database"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0492"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-8110",
+        "cvss": 8.7,
+        "product": "Gogs (Go Git Service)",
+        "description": "Exécution de code à distance (RCE) via une vulnérabilité de 'path traversal' contournant un correctif précédent, permettant aux attaquants authentifiés de modifier des fichiers en dehors du répertoire via des liens symboliques.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "path_traversal", "symlink_bypass", "Git_service", "Gogs"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-gogs-rce-flaw-exploited-in-zero-day-attacks/", "https://securityaffairs.com/186837/hacking/u-s-cisa-adds-a-flaw-in-gogs-to-its-known-exploited-vulnerabilities-catalog.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0507",
+        "cvss": 8.4,
+        "product": "SAP Application Server for ABAP and SAP NetWeaver RFCSDK",
+        "description": "Injection de commandes OS (OS Command Injection) permettant à un attaquant authentifié avec accès administratif et réseau adjacent de téléverser du contenu malveillant et d'exécuter des commandes OS arbitraires.",
+        "tags": ["vulnérabilité", "vulnerability", "OS_Command_Injection", "RCE", "SAP", "ABAP", "RFCSDK"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0507"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0511",
+        "cvss": 8.1,
+        "product": "SAP Fiori App (Intercompany Balance Reconciliation)",
+        "description": "Élévation de privilèges (Privilege Escalation) due à l'absence de vérifications d'autorisation nécessaires pour un utilisateur authentifié.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "authentication_bypass", "SAP", "Fiori_App"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0511"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0506",
+        "cvss": 8.1,
+        "product": "SAP NetWeaver Application Server ABAP and ABAP Platform",
+        "description": "Absence de vérification d'autorisation (Missing Authorization Check) permettant à un attaquant authentifié d'abuser d'une fonction RFC pour exécuter des routines de formulaire (FORMs) et manipuler des données.",
+        "tags": ["vulnérabilité", "vulnerability", "missing_authorization", "data_manipulation", "SAP", "ABAP", "RFC"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0506"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "'Bad actor' hijacks Apex Legends characters in live matches",
+        "description": "Des acteurs malveillants ont perturbé des matchs en direct du jeu Apex Legends, prenant le contrôle des personnages des joueurs, les déconnectant et modifiant leurs pseudonymes. L'éditeur Respawn a confirmé l'incident de sécurité, indiquant qu'il ne s'agissait pas d'un exploit ou d'une infection par un logiciel malveillant, mais a suggéré que cela était lié à des triches ou à un acteur ayant obtenu des privilèges administratifs sur le système de débogage du serveur.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1078: Valid Accounts (Likely compromised administrative access)"],
+        "analyse": "Cet incident, bien que ciblant un jeu vidéo, souligne les risques liés à la sécurité des serveurs et aux privilèges administratifs élevés, même dans des environnements non critiques. L'acteur malveillant a pu manipuler des éléments clés du jeu en direct, démontrant un accès significatif. L'impact se situe principalement au niveau de l'expérience utilisateur et de la réputation du jeu, mais met en évidence la nécessité de contrôles d'accès stricts et d'une surveillance continue des systèmes à privilèges élevés, quelle que soit leur nature.",
+        "recommandations": [
+          "Renforcer les contrôles d'accès et la gestion des privilèges sur les serveurs de jeu et les systèmes de débogage.",
+          "Mettre en place une surveillance robuste pour détecter les activités anormales ou les accès non autorisés aux systèmes d'administration.",
+          "Limiter l'exposition des systèmes de débogage et d'administration aux réseaux publics.",
+          "Revoir les configurations de sécurité pour prévenir l'utilisation abusive des outils d'administration ou des fonctionnalités de triche."
+        ],
+        "tags": ["gaming", "cheating", "server_security", "access_control", "incident_response", "Apex_Legends"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/bad-actor-hijacks-apex-legends-characters-in-live-matches/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Facebook login thieves now using browser-in-browser trick",
+        "description": "Des pirates informatiques ont de plus en plus recours à la méthode 'Browser-in-the-Browser' (BitB) au cours des six derniers mois pour inciter les utilisateurs à fournir leurs identifiants de compte Facebook. Les chercheurs de Trellix ont observé des campagnes de phishing ciblant Facebook, usurpant l'identité de cabinets d'avocats ou de notifications de sécurité Meta. Les pages de phishing sont souvent hébergées sur des plateformes cloud légitimes comme Netlify et Vercel et utilisent des raccourcisseurs d'URL pour contourner les filtres de sécurité. L'objectif est de voler les comptes Facebook pour propager des arnaques, collecter des données personnelles ou commettre des fraudes d'identité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566.002: Phishing (Spearphishing Link)", "T1078: Valid Accounts (Credential Theft)"],
+        "analyse": "Cette technique de 'Browser-in-Browser' représente une escalade majeure dans les campagnes de phishing, rendant le vol d'identifiants visuellement difficile à détecter. L'abus d'infrastructures de confiance comme les services d'hébergement cloud légitimes et les raccourcisseurs d'URL permet de contourner les défenses de sécurité traditionnelles. L'impact est significatif pour les utilisateurs de Facebook (plus de trois milliards), avec des risques de fraude d'identité, de propagation d'arnaques et de compromission de données personnelles. Cela souligne l'évolution constante des tactiques de phishing et la nécessité pour les utilisateurs et les organisations de rester informés des nouvelles méthodes d'attaque.",
+        "recommandations": [
+          "Former les utilisateurs à reconnaître les techniques de phishing sophistiquées comme BitB.",
+          "Toujours naviguer directement vers les URL officielles pour la connexion ou la vérification de sécurité, plutôt que de suivre les liens intégrés.",
+          "Vérifier si les fenêtres pop-up de connexion peuvent être déplacées en dehors de la fenêtre du navigateur (les iframes ne peuvent pas l'être).",
+          "Activer l'authentification à deux facteurs (2FA) sur tous les comptes en ligne pour une couche de sécurité supplémentaire."
+        ],
+        "tags": ["phishing", "credential_theft", "Browser_in_Browser", "BitB", "social_media", "Facebook", "scam", "identity_fraud", "cloud_hosting_abuse"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/facebook-login-thieves-now-using-browser-in-browser-trick/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "« Неблагонадійний фонд » : cyberattaques ciblées UAC-0190 contre les forces de défense ukrainiennes à l'aide de PLUGGYAPE",
+        "description": "Entre octobre et décembre 2025, l'équipe CERT-UA, en collaboration avec l'équipe de réponse aux cyberincidents des forces armées ukrainiennes, a enquêté sur une série de cyberattaques ciblées contre des membres des forces de défense ukrainiennes. Ces attaques étaient menées sous le couvert d'activités de fonds caritatifs et utilisaient le logiciel malveillant PLUGGYAPE.",
+        "threat_actor": "UAC-0190",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566: Phishing (Impersonation)", "T1071: Application Layer Protocol (Command and Control)", "T1560: Archive Collected Data"],
+        "analyse": "Ces cyberattaques ciblées contre les forces de défense ukrainiennes par l'UAC-0190 soulignent la persistance des menaces parrainées par l'État dans le contexte du conflit. L'utilisation de leurres de fonds caritatifs est une tactique d'ingénierie sociale visant à exploiter la confiance et à contourner les défenses. La capacité à identifier et à analyser le malware PLUGGYAPE est cruciale pour comprendre le mode opératoire de l'acteur et renforcer les défenses contre de futures attaques. L'impact est stratégique, visant à compromettre les systèmes des forces armées.",
+        "recommandations": [
+          "Renforcer la sensibilisation des utilisateurs aux tentatives d'hameçonnage, en particulier celles exploitant des thèmes caritatifs.",
+          "Mettre en œuvre des solutions de détection de logiciels malveillants et d'analyse comportementale pour identifier PLUGGYAPE et des implants similaires.",
+          "Renforcer les mesures de sécurité des systèmes des forces armées et des organisations de défense.",
+          "Partager les renseignements sur les menaces avec les partenaires pour une défense collective."
+        ],
+        "tags": ["APT", "Ukraine", "défense", "espionnage", "phishing", "malware", "PLUGGYAPE"],
+        "sources": ["https://cert.gov.ua/article/6286942"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "AuraInspector: Auditing Salesforce Aura for Data Exposure",
+        "description": "Mandiant a publié AuraInspector, un outil open-source conçu pour aider à identifier et auditer les erreurs de configuration des contrôles d'accès dans le framework Salesforce Aura. Ces erreurs peuvent entraîner l'accès non autorisé à des données sensibles. L'article détaille les mécanismes de récupération de données via Aura, y compris les méthodes pour contourner la limite de 2 000 enregistrements, l'utilisation de l'API GraphQL pour un accès complet aux enregistrements et les méthodes pour identifier les URL d'accueil ou de listes d'enregistrements exposées. Des recommandations sont fournies pour la remédiation, notamment l'audit des permissions des utilisateurs invités, la sécurisation des données privées pour les utilisateurs authentifiés et la désactivation de l'auto-enregistrement si non nécessaire.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": ["*.vf.force.com", "*.my.salesforce-sites.com", "*.my.salesforce.com"],
+          "URL": ["/aura"]
+        },
+        "mitre_ttps": ["T1078: Valid Accounts (Misuse of account permissions)", "T1526: Cloud Service Dashboard", "T1078.004: Cloud Accounts (Misconfigured access controls)"],
+        "analyse": "L'article met en lumière des risques significatifs de fuite de données et d'accès non autorisé dans les applications Salesforce Experience Cloud en raison de configurations de sécurité laxistes. L'impact potentiel est élevé pour les entreprises utilisant Salesforce, notamment celles qui traitent des informations sensibles (cartes de crédit, documents d'identité, données de santé). La publication d'un outil open-source comme AuraInspector peut accroître la sensibilisation mais aussi potentiellement la surface d'attaque si les administrateurs ne corrigent pas rapidement les vulnérabilités identifiées. La capacité à contourner les limites de récupération d'enregistrements via GraphQL est une découverte notable qui amplifie la gravité des erreurs de configuration.",
+        "recommandations": [
+          "Auditer régulièrement les permissions des utilisateurs invités et appliquer le principe du moindre privilège.",
+          "Examiner les règles de partage et les paramètres par défaut de l'organisation pour les utilisateurs authentifiés.",
+          "Désactiver la fonction d'auto-enregistrement si elle n'est pas requise.",
+          "Implémenter les meilleures pratiques de sécurité de Salesforce, y compris l'utilisation de l'outil 'Security Health Check'.",
+          "Mettre en place une surveillance pour détecter les requêtes POST à l'endpoint /aura et les activités suspectes."
+        ],
+        "tags": ["misconfiguration", "data_exposure", "Salesforce", "Aura_framework", "GraphQL", "access_control", "cloud_security", "tool_release"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/auditing-salesforce-aura-data-exposure/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "MuddyWater étend ses opérations basées sur Rust et expose des artefacts de construction",
+        "description": "Le groupe de menace MuddyWater déploie un nouvel implant basé sur Rust, nommé RustyWater, via des documents Word contenant des macros. L'objectif est d'établir la persistance et l'accès de commande et contrôle (C2) dans les organisations ciblées. Bien que le logiciel malveillant évolue, l'attaque repose sur des comportements cohérents tels que l'exécution de macros, l'activité en ligne de commande à partir de répertoires inscriptibles et les balises réseau. Une analyse séparée a révélé des artefacts de développement étendus intégrés dans le binaire de Rust, offrant un aperçu du flux de travail de développement du groupe.",
+        "threat_actor": "MuddyWater",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566.001: Spearphishing Attachment", "T1059.001: Command and Scripting Interpreter (PowerShell)", "T1133: External Remote Services (Command and Control)", "T1547.001: Registry Run Keys / Startup Folder (Persistence)", "T1071.001: Application Layer Protocol (HTTP/HTTPS)"],
+        "analyse": "La modernisation de la pile de développement de MuddyWater avec Rust offre des avantages opérationnels, comme une détection plus faible et une flexibilité multiplateforme. Cependant, la persistance de l'utilisation de documents macro-activés pour l'accès initial et des comportements post-exploitation prévisibles (exécution en ligne de commande, persistance dans le registre, C2 réseau) crée des signaux comportementaux détectables. Les artefacts de construction exposés fournissent des informations précieuses sur les processus du groupe et peuvent aider les défenseurs à regrouper les activités. L'impact potentiel est l'établissement d'une persistance à long terme et le vol de données dans les organisations ciblées.",
+        "recommandations": [
+          "Renforcer les restrictions de macros sur les endpoints et limiter l'exécution à partir de répertoires inscriptibles (par exemple, ProgramData).",
+          "Déployer une surveillance comportementale capable de détecter la reconstruction de charges utiles, les chaînes d'exécution en ligne de commande et la persistance basée sur le registre.",
+          "Améliorer le filtrage des e-mails et l'analyse des pièces jointes pour réduire l'exposition aux documents malveillants.",
+          "Mener des formations de sensibilisation des utilisateurs pour identifier les documents suspects et les invites de macros inattendues."
+        ],
+        "tags": ["APT", "malware", "Rust", "RustyWater", "spearphishing", "macro", "persistence", "command_and_control", "threat_actor_TTPs"],
+        "sources": ["https://fieldeffect.com/blog/muddywater-rust-based-operations"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Voyage au cœur de Wikipédia, l’outil d’influence le plus controversé du monde",
+        "description": "Un ouvrage récent, 'La Face cachée de Wikipédia', explore le fonctionnement interne, les rouages opérationnels et les hiérarchies informelles de Wikipédia. Il met en lumière son rôle prépondérant en tant que source d'information fiable et sa capacité à influencer l'opinion publique, étant la source tertiaire la plus puissante du monde et servant de base de données aux IA génératives. L'ouvrage révèle les tentatives d'acteurs (entreprises, personnalités politiques, ONG) d'influencer les narratifs sur la plateforme via des comptes uniques ou infiltrés, et comment la communauté des 'Wikipédiens' (patrouilleurs, administrateurs) traque et sanctionne ces 'infiltrations'. Il aborde également l'endogamie idéologique du noyau dur de contributeurs et la nécessité d'une approche rigoureuse et planifiée pour toute action d'influence sur la plateforme.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1599: Impersonation (Fake accounts/personas)", "T1071.004: Web Protocols (Abuse of content platforms)", "T1098: Account Manipulation (Modifying information)"],
+        "analyse": "Cet article fournit une analyse approfondie des mécanismes d'influence et de la guerre de l'information sur Wikipédia. Il souligne l'importance stratégique de la plateforme pour la réputation et la diffusion de narratifs, compte tenu de son influence écrasante et de son rôle en tant que source pour les IA génératives. La difficulté d'opérer des campagnes d'influence sur Wikipédia sans être détecté est mise en évidence par la vigilance de la communauté et les 'chasseurs' d'infiltrations. L'impact potentiel d'une manipulation réussie serait une altération de la perception publique et une désinformation à grande échelle. Il est crucial pour les professionnels de comprendre la structure et les règles de la plateforme pour toute stratégie d'influence légitime.",
+        "recommandations": [
+          "Pour toute stratégie d'influence, adopter une approche rigoureuse, planifiée et conforme aux règles de Wikipédia.",
+          "Éviter les tentatives d'infiltration ou de manipulation évidente, qui seront rapidement détectées et sanctionnées.",
+          "Comprendre l'écosystème des contributeurs et les consensus communautaires pour des interactions efficaces et légitimes.",
+          "Privilégier les contributions transparentes et sourcées pour établir la crédibilité."
+        ],
+        "tags": ["influence_operation", "information_warfare", "Wikipedia", "disinformation", "reputation_management", "social_engineering"],
+        "sources": ["https://www.portail-ie.fr/univers/2026/voyage-au-coeur-de-wikipedia-loutil-dinfluence-le-plus-controverse-du-monde/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Credential-harvesting attacks by APT28 hit Turkish, European, and Central Asian organizations",
+        "description": "Russia-linked cyberespionage group APT28 (aka Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, and STRONTIUM) conducted credential-harvesting campaigns between February and September 2025. Targets included Turkish energy and nuclear agency staff, European think tank personnel, and organizations in North Macedonia and Uzbekistan. APT28 used fake login pages mimicking Outlook, Google, and Sophos VPN, leveraging free hosting and tunneling services (Webhook.site, InfinityFree, Byet Internet Services, ngrok) and legitimate PDF lures to increase authenticity and bypass email security controls. Victims were redirected to real sites after credential theft to avoid detection.",
+        "threat_actor": "APT28 (Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "indicator_of_compromise": {
+          "DOMAIN": ["webhook.site", "infinityfreeapp.com", "byet.net", "ngrok.io"]
+        },
+        "mitre_ttps": ["T1566.002: Phishing (Spearphishing Link)", "T1566.001: Phishing (Spearphishing Attachment)", "T1078: Valid Accounts (Credential Theft)", "T1583.001: Cloud Infrastructure (Free Hosting)"],
+        "analyse": "This campaign highlights APT28's persistent focus on credential harvesting for intelligence purposes, using low-cost and disposable infrastructure to minimize detection. The targeting of energy, nuclear, and policy sectors aligns with Russian intelligence priorities, indicating a strategic impact. The use of regionally tailored lures and legitimate PDF documents demonstrates sophisticated social engineering. Organizations in these sectors, particularly in Turkey, Europe, North Macedonia, and Uzbekistan, face significant risks of espionage and account compromise.",
+        "recommandations": [
+          "Implement robust email security solutions capable of detecting advanced phishing and spoofed login pages.",
+          "Educate users about the dangers of credential harvesting and the 'Browser-in-Browser' technique.",
+          "Enforce multi-factor authentication (MFA) across all accounts, especially for critical systems.",
+          "Monitor for suspicious login attempts and anomalous network traffic (e.g., connections to free hosting/tunneling services).",
+          "Regularly update and patch VPN clients and associated authentication systems."
+        ],
+        "tags": ["APT", "nation-state", "Russia", "espionage", "credential_harvesting", "phishing", "critical_infrastructure", "energy", "nuclear", "government"],
+        "sources": ["https://securityaffairs.com/186801/apt/credential-harvesting-attacks-by-apt28-hit-turkish-european-and-central-asian-organizations.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Europol and Spanish Police arrest 34 in crackdown on Black Axe criminal network",
+        "description": "Europol and Spanish police, in cooperation with Bavarian authorities, arrested 34 suspected members of the international criminal organization 'Black Axe' in Spain, mainly in Seville. This highly structured and hierarchical group, of Nigerian origin with a global presence, is estimated to have caused over €5.93 million in fraud losses. The operation resulted in freezing bank accounts and seizing cash. The network recruited vulnerable 'money mules', primarily Spanish nationals, to facilitate its criminal activities. Black Axe is also involved in using computer hacking of port systems for drug trafficking.",
+        "threat_actor": "Black Axe criminal network",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1587: Develop Capabilities (Recruitment of money mules)", "T1583: Acquire Infrastructure (Establishing global presence)", "T1078: Valid Accounts (Abuse of legitimate accounts for financial fraud)"],
+        "analyse": "This operation demonstrates the global reach and sophistication of organized criminal networks like Black Axe, which integrate cyber methods (port hacking) with more traditional techniques (recruiting money mules). The geographical impact is extensive, with a presence in Europe and Nigerian origins. Financial losses are substantial. The arrest of key members and disruption of their activities are significant for combating organized crime, highlighting the importance of international law enforcement cooperation. The group's ability to adapt and exploit human and technological vulnerabilities remains a concern.",
+        "recommandations": [
+          "Increase awareness about 'money mule' scams and recruitment tactics used by criminal networks.",
+          "Enhance security of port and logistics systems to prevent intrusions facilitating illegal trafficking.",
+          "Implement stricter fraud detection and anti-money laundering measures in the financial sector.",
+          "Promote international cooperation among law enforcement agencies to dismantle transnational criminal networks."
+        ],
+        "tags": ["organized_crime", "law_enforcement", "arrests", "fraud", "money_laundering", "cybercrime", "Black_Axe", "Europol"],
+        "sources": ["https://securityaffairs.com/186819/security/europol-and-spanish-police-arrest-34-in-crackdown-on-black-axe-criminal-network.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Attaquants ciblant les grands modèles de langage (LLM) dans une vaste campagne de reconnaissance",
+        "description": "Des acteurs de la menace mènent une campagne de reconnaissance généralisée ciblant les grands modèles de langage (LLM), y compris les formats OpenAI-compatible et Google Gemini API. Ils recherchent des serveurs proxy mal configurés qui pourraient fuir l'accès à des API commerciales. Cette campagne a généré plus de 80 000 requêtes d'énumération en 11 jours et a également ciblé des vulnérabilités SSRF (Server-Side Request Forgery). La recherche indique des outils d'automatisation partagés, potentiellement Nuclei, et des adresses IP sources réparties dans 27 pays, suggérant une infrastructure basée sur des VPS plutôt qu'un botnet.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-55182", "CVE-2023-1389"]
+        },
+        "mitre_ttps": ["T1595.002: Active Scanning (Vulnerability Scanning)", "T1592: Gather Victim Host Information", "T1595: Active Reconnaissance", "T1190: Exploit Public-Facing Application (SSRF)"],
+        "analyse": "Cette campagne représente la première étape potentielle d'attaques cybernétiques contre les modèles d'IA exposés. La nature généralisée de la reconnaissance et le ciblage des misconfigurations de proxy et des vulnérabilités SSRF indiquent une recherche active de points d'entrée. L'exploitation passée de CVEs par les IPs sources et l'utilisation d'outils d'automatisation soulignent la sophistication et la persistance des attaquants. L'impact potentiel inclut la fuite d'informations sensibles via les API commerciales et des compromissions de serveurs via SSRF, mettant en évidence un nouveau front de risque pour les entreprises qui déploient des solutions basées sur les LLM.",
+        "recommandations": [
+          "Auditer et sécuriser les serveurs proxy qui interagissent avec les API de LLM pour prévenir les fuites d'accès.",
+          "Détecter les vulnérabilités SSRF dans les applications et infrastructures utilisant des LLM et appliquer les correctifs nécessaires.",
+          "Mettre en place une surveillance des requêtes à des points d'accès multiples de modèles LLM pour détecter les schémas d'énumération rapide.",
+          "Bloquer les adresses IP ayant un historique d'exploitation de CVEs connus ou des empreintes d'outils d'automatisation malveillants (e.g., Nuclei)."
+        ],
+        "tags": ["AI_security", "LLM", "reconnaissance", "misconfiguration", "SSRF", "proxy_servers", "API_security", "vulnerability_scanning"],
+        "sources": ["https://thecyberexpress.com/attackers-targeting-llms-widespread-campaign/"],
+        "date": "2026-01-13"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by intensifying activities from state-sponsored and criminal actors. Phishing attacks aimed at credential theft remain a preferred initial access method, as demonstrated by APT28 campaigns targeting critical sectors in Europe and Central Asia, and the increasing use of sophisticated techniques like 'Browser-in-the-Browser' to bypass authentication protections. Software vulnerabilities, especially Remote Code Execution (RCE), SQL Injection, and Privilege Escalation, continue to be actively exploited, particularly in IoT infrastructure, ERP systems (SAP), and development platforms (Gogs, n8n), with critical CVSS scores. Supply chain and third-party dependencies are also recurring weaknesses, as illustrated by misconfigurations in Salesforce Aura and the integration of Google's AI into Apple products. AI itself is becoming a target for reconnaissance, with campaigns targeting Large Language Models (LLMs). Data breaches are widespread, affecting healthcare, retail, social media, and government sectors, often accompanied by extortion attempts and leaks of sensitive data. Finally, cyberspace is increasingly influenced by geopolitical dynamics, with espionage and disruption operations aligning with broader strategic objectives, challenging international norms. The overall state of threats is high, requiring constant vigilance, in-depth defense strategies, and rapid adaptation to new adversary tactics.",
+      "date": "2026-01-13"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAC-0190",
+        "secteur": "Defense (Ukrainian Defense Forces)",
+        "modop": "Targeted cyberattacks, impersonating charity funds, using PLUGGYAPE malware.",
+        "tags": ["actor", "threat_actor", "nation-state", "espionage", "malware", "PLUGGYAPE", "Ukraine"],
+        "sources": ["https://cert.gov.ua/article/6286942"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "APT28 (Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "secteur": "Energy, Nuclear, Policy (Turkey, Europe, North Macedonia, Uzbekistan)",
+        "modop": "Credential-harvesting campaigns using fake login pages (Outlook, Google, Sophos VPN), leveraging free hosting/tunneling services (Webhook.site, InfinityFree, Byet Internet Services, ngrok), PDF lures.",
+        "tags": ["actor", "threat_actor", "nation-state", "Russia", "espionage", "credential_harvesting", "phishing", "APT"],
+        "sources": ["https://securityaffairs.com/186801/apt/credential-harvesting-attacks-by-apt28-hit-turkish-european-and-central-asian-organizations.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "MuddyWater",
+        "secteur": "Targeted organizations",
+        "modop": "Spearphishing with macro-enabled Word documents, deploying Rust-based implant RustyWater, command-line activity, network beacons, registry persistence.",
+        "tags": ["actor", "threat_actor", "nation-state", "Iran", "espionage", "malware", "RustyWater", "spearphishing", "macro"],
+        "sources": ["https://fieldeffect.com/blog/muddywater-rust-based-operations"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "Black Axe criminal network",
+        "secteur": "Drug Trafficking, Fraud (Ports of Rotterdam and Antwerp)",
+        "modop": "Recruiting vulnerable money mules to facilitate financial fraud, hacking port systems to facilitate drug trafficking.",
+        "tags": ["actor", "threat_actor", "organized_crime", "fraud", "drug_trafficking", "port_security", "Nigeria"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-gets-seven-years-for-breaching-rotterdam-and-antwerp-ports/", "https://securityaffairs.com/186819/security/europol-and-spanish-police-arrest-34-in-crackdown-on-black-axe-criminal-network.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "CrazyHunter",
+        "secteur": "Healthcare (Taiwan)",
+        "modop": "Ransomware attacks with advanced intrusion tactics.",
+        "tags": ["actor", "threat_actor", "ransomware", "healthcare", "Taiwan"],
+        "sources": ["https://databreaches.net/2026/01/12/crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed/?pk_campaign=feed&pk_kwd=crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed"],
+        "date": "2026-01-13"
+      },
+      {
+        "nom": "TEAM MR PLAX",
+        "secteur": "Government (Indonesia)",
+        "modop": "Data breach and data leak.",
+        "tags": ["actor", "threat_actor", "data_breach", "government", "Indonesia", "data_leak"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115883430230157149"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Energy / Geopolitics",
+        "theme": "US Military Intervention and Oil Control in Venezuela",
+        "description": "A US military operation in Venezuela led to the removal of President Nicolás Maduro and control over Venezuelan oil exports. Officially justified by anti-drug trafficking and national security threats, the operation is primarily driven by an energy strategy aiming to lower oil prices and increase US power over the global market, while pressuring adversaries like Cuba, China, Iran, and Hezbollah. The impact on global oil markets has been limited due to abundant supply. Other nations like China and the EU are reacting cautiously.",
+        "tags": ["geopolitique", "geopolitic", "USA", "Venezuela", "oil", "energy", "military_intervention", "sanctions", "China", "Iran", "Cuba"],
+        "sources": ["https://www.iris-france.org/petrole-venezuelien-les-enjeux-de-loperation-trump/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Government / Geopolitics",
+        "theme": "United States National Security Strategy (NSS2025)",
+        "description": "The White House's publication of the NSS2025 document (December 5, 2025) reveals a new vision of the world and the US role, particularly concerning Europe. This document, expressing a 'MAGA doctrine', represents an ideological and political revolution compared to the previous strategy (NSS2022 from the Biden administration), marking a profound shift in the international environment.",
+        "tags": ["geopolitique", "geopolitic", "USA", "national_strategy", "security", "MAGA_doctrine"],
+        "sources": ["https://www.iris-france.org/la-strategie-2025-de-securite-nationale-une-autre-vision-du-monde/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Finance / Economy / Geopolitics",
+        "theme": "China's Financial Opening Strategy (QFII 2025)",
+        "description": "China's 'Qualified Foreign Institutional Investor' (QFII) reforms (October 2025) aim to simplify foreign institutional investors' access to its market (e.g., 'Green Channel' for sovereign/pension funds, shortened procedures, ETF options for hedging). However, capital outflows are tightly controlled, and some sectors remain closed or restricted. The strategy is tactical, not strategic liberalization, aiming to fund technological self-sufficiency, promote CNY, reduce dependence on Western capital, and maintain absolute control over the financial system, amidst US-China decoupling and 'lawfare' (anti-sanctions law).",
+        "tags": ["geopolitique", "geopolitic", "China", "finance", "economy", "investment", "QFII", "lawfare", "US-China_decoupling"],
+        "sources": ["https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/qfii-2025-la-chine-poursuit-elle-vraiment-son-ouverture-financiere/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Government / Society",
+        "theme": "Popular Protests and Repression in Iran",
+        "description": "Hundreds of thousands of people have been protesting in Iran since December 28, 2025, against the regime due to economic problems and restrictions on freedoms. This movement is the most massive since 1979 and is met with severe repression (hundreds dead, internet cutoff). The opposition remains fragmented, without a consensual figure. Questions are raised about a potential regime collapse or foreign intervention, as well as geopolitical double standards in supporting/ignoring protests.",
+        "tags": ["geopolitique", "geopolitic", "Iran", "protests", "repression", "human_rights", "Internet_cutoff"],
+        "sources": ["https://www.iris-france.org/iran-la-contestation-samplifie-la-repression-aussi/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Maritime / International Law / Geopolitics",
+        "theme": "US Boarding of Russian-Flagged Oil Tanker on High Seas",
+        "description": "The US Coast Guard boarded and seized the oil tanker 'Bella 1 / Marinera' (initially stateless, then re-registered Russian) in the North Atlantic. This action is seen as breaking precedent set by the UN Convention on the Law of the Sea (UNCLOS) regarding interdictions on the high seas. The US and UK claim the vessel was stateless despite Russian registration, while Russia protested. The incident escalates US sanctions enforcement against Russia, Venezuela, and Iran, and raises questions about international maritime law and the 'rules-based international order', with the potential for 'legal chaos' and retaliatory actions.",
+        "tags": ["geopolitique", "geopolitic", "USA", "Russia", "Venezuela", "Iran", "international_law", "sanctions", "maritime_traffic"],
+        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/us-boarding-russian-flagged-oil-tanker-breaks-precedent-high-stakes-high-seas"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Government / Technology / National Security",
+        "theme": "US Government Outsourcing Federal Tech Talent",
+        "description": "Announcement of the 'American Technology Force' by the OPM following drastic federal IT staff cuts (early 2025 under Elon Musk's DOGE). The program involves recruiting 'researchers' for two-year terms, mentored by private sector executives (Anduril, Palantir, OpenAI, Google, Microsoft, xAI). This raises concerns about governance, auditability, digital sovereignty, and conflicts of interest, potentially turning the state into a talent pipeline for tech giants and increasing dependence.",
+        "tags": ["geopolitique", "geopolitic", "USA", "technology", "government", "national_security", "outsourcing", "AI"],
+        "sources": ["https://www.datasecuritybreach.fr/force-technologique-americaine-letat-recrute-ses-remplacants/"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Transportation / Ports",
+        "victime": "Ports of Rotterdam and Antwerp",
+        "description": "A Dutch national was sentenced to seven years in prison for hacking into the computer systems of the ports of Rotterdam and Antwerp, enabling a criminal network to facilitate drug trafficking. The purpose was to gain access to port systems to import drugs undetected. The investigation involved intercepting communications on the encrypted chat service Sky ECC.",
+        "tags": ["violation", "breach", "transportation", "ports", "hacking", "drug_trafficking", "extortion", "SkyECC"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-gets-seven-years-for-breaching-rotterdam-and-antwerp-ports/", "https://databreaches.net/2026/01/12/dutch-court-sentences-hacker-who-used-port-systems-to-smuggle-cocaine-to-7-years/?pk_campaign=feed&pk_kwd=dutch-court-sentences-hacker-who-used-port-systems-to-smuggle-cocaine-to-7-years"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Healthcare / Education",
+        "victime": "University of Hawaii Cancer Center",
+        "description": "The University of Hawaii Cancer Center was hit by a ransomware attack in August 2025. Data of study participants, including Social Security numbers from 1990s files, were stolen. The university engaged the threat actors to obtain a decryption tool and secure destruction of the stolen information, and implemented enhanced security measures.",
+        "tags": ["violation", "breach", "healthcare", "education", "ransomware", "data_theft", "SSN", "Hawaii"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/university-of-hawaii-cancer-center-hit-by-ransomware-attack/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Retail",
+        "victime": "Target Corporation",
+        "description": "Hackers claim to be selling Target Corporation's internal source code and published a sample. The retailer's developer Git server was taken offline after BleepingComputer alerted Target. The alleged stolen dataset is approximately 860 GB.",
+        "tags": ["violation", "breach", "retail", "source_code_theft", "intellectual_property", "Target"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/targets-dev-server-offline-after-hackers-claim-to-steal-source-code/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Social Media",
+        "victime": "Instagram / Users",
+        "description": "Meta fixed an Instagram password reset flaw that allowed third parties to send reset emails. However, Meta denied any direct breach of its systems, despite allegations of leaked user data (approx. 18 million users with physical addresses and Instagram IDs) being sold on cybercrime forums, potentially compiled from other sources.",
+        "tags": ["violation", "breach", "social_media", "Instagram", "security_flaw", "data_leak", "personal_data", "phishing"],
+        "sources": ["https://securityaffairs.com/186829/security/meta-fixes-instagram-password-reset-flaw-denies-data-breach.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Healthcare / Plastic Surgery",
+        "victime": "Plastic surgery practices and their patients (e.g., Manhattan plastic surgeon, Gary Motykie, Hankins & Sohn, Jaime Schwartz)",
+        "description": "Multiple plastic surgery practices were victims of cyberattacks, resulting in the online publication of nude images and Social Security numbers of patients, with direct extortion attempts by the attackers. The same threat actors are involved in these repeated attacks.",
+        "tags": ["violation", "breach", "healthcare", "plastic_surgery", "medical_data", "personal_images", "extortion", "sensitive_data", "SSN"],
+        "sources": ["https://databreaches.net/2026/01/12/another-plastic-surgery-practice-fell-prey-to-a-cyberattack-with-extortion-attempt/?pk_campaign=feed&pk_kwd=another-plastic-surgery-practice-fell-prey-to-a-cyberattack-with-extortion-attempt"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Canopy Health (New Zealand), Manage My Health (New Zealand)",
+        "description": "Canopy Health, a leading private provider of breast cancer diagnosis and treatment in New Zealand, disclosed a cyberattack in July 2025 that led to temporary unauthorized access to its administration systems and potential data exposure. An injunction was obtained to prevent the use or publication of information. Separately, Manage My Health, New Zealand's largest patient portal, also suffered a cyberattack in December 2025, potentially exposing data of nearly 110,000 users.",
+        "tags": ["violation", "breach", "healthcare", "New_Zealand", "unauthorized_access", "medical_data", "patient_portal"],
+        "sources": ["https://databreaches.net/2026/01/12/second-nz-health-provider-canopy-health-reveals-cyberattack/?pk_campaign=feed&pk_kwd=second-nz-health-provider-canopy-health-reveals-cyberattack", "https://research.checkpoint.com/2026/12th-january-threat-intelligence-report/"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Six healthcare organizations in Taiwan",
+        "description": "CrazyHunter ransomware has escalated its operations with advanced intrusion tactics, specifically targeting six healthcare organizations in Taiwan. Specific breach details are not provided, but it pertains to ransomware attacks.",
+        "tags": ["violation", "breach", "healthcare", "Taiwan", "ransomware", "advanced_intrusion"],
+        "sources": ["https://databreaches.net/2026/01/12/crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed/?pk_campaign=feed&pk_kwd=crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed"],
+        "date": "2026-01-13"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Indonesia's Ministry of Law and Human Rights",
+        "description": "TEAM MR PLAX claimed a data breach against Indonesia's Ministry of Law and Human Rights, with data reportedly leaked.",
+        "tags": ["violation", "breach", "government", "Indonesia", "data_leak"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115883430230157149"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52694",
+        "cvss": 10.0,
+        "product": "Advantech IoT product line",
+        "description": "Critical SQL Injection vulnerability exposing IoT devices.",
+        "tags": ["vulnérabilité", "vulnerability", "SQL_Injection", "RCE", "IoT", "Advantech"],
+        "sources": ["https://securityonline.info/cve-2025-52694-cvss-10-critical-advantech-sql-injection-exposes-iot-devices/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-69425",
+        "cvss": 10.0,
+        "product": "Ruckus vRIoT IoT Controller",
+        "description": "Hardcoded Secrets leading to Root Remote Code Execution (RCE).",
+        "tags": ["vulnérabilité", "vulnerability", "Hardcoded_Secrets", "RCE", "privilege_escalation", "IoT", "Ruckus"],
+        "sources": ["https://securityonline.info/double-critical-hardcoded-secrets-expose-ruckus-iot-controllers-to-root-rce/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-69426",
+        "cvss": 10.0,
+        "product": "Ruckus vRIoT IoT Controller",
+        "description": "Hardcoded Secrets leading to Root Remote Code Execution (RCE).",
+        "tags": ["vulnérabilité", "vulnerability", "Hardcoded_Secrets", "RCE", "privilege_escalation", "IoT", "Ruckus"],
+        "sources": ["https://securityonline.info/double-critical-hardcoded-secrets-expose-ruckus-iot-controllers-to-root-rce/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0501",
+        "cvss": 9.9,
+        "product": "SAP S/4HANA Private Cloud and On-Premise (Financials – General Ledger)",
+        "description": "SQL Injection vulnerability due to insufficient input validation, allowing an authenticated user to read, modify, and delete backend database data.",
+        "tags": ["vulnérabilité", "vulnerability", "SQL_Injection", "data_manipulation", "SAP", "ERP", "Financials"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0501"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2023-38408",
+        "cvss": 9.8,
+        "product": "Moxa industrial ethernet switches (OpenSSH)",
+        "description": "Remote Code Execution (RCE) via OpenSSH due to an unreliable search path.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "OpenSSH", "OT_network", "Moxa", "industrial_control_systems"],
+        "sources": ["https://securityonline.info/critical-alert-moxa-switches-exposed-to-openssh-remote-code-execution-cvss-9-8/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss": 9.8,
+        "product": "n8n (workflow automation platform)",
+        "description": "Content-type confusion vulnerability ('Ni8mare') allowing unauthenticated Remote Code Execution (RCE), secret exposure, session cookie forging, and sensitive file injection.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentication_bypass", "data_exposure", "n8n", "automation_platform", "AI_development"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/max-severity-ni8mare-flaw-impacts-nearly-60-000-n8n-instances/"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0500",
+        "cvss": 9.6,
+        "product": "SAP Wily Introscope Enterprise Manager (WorkStation)",
+        "description": "Remote Code Execution (RCE) via a vulnerable third-party component and a malicious JNLP file, allowing OS command execution on the victim's machine.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "third-party_component", "JNLP", "OS_command_execution", "SAP"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0500"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0498",
+        "cvss": 9.1,
+        "product": "SAP S/4HANA (Private Cloud and On-Premise)",
+        "description": "Code Injection vulnerability in a function module exposed via RFC, allowing an attacker with admin privileges to inject arbitrary ABAP code/OS commands and bypass authorization checks.",
+        "tags": ["vulnérabilité", "vulnerability", "Code_Injection", "RCE", "privilege_escalation", "SAP", "ERP", "ABAP", "RFC"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0498"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0492",
+        "cvss": 8.8,
+        "product": "SAP HANA database",
+        "description": "Privilege Escalation vulnerability allowing an attacker with valid credentials of any user to switch to another user and potentially gain administrative access.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "authentication_bypass", "SAP", "database"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0492"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2025-8110",
+        "cvss": 8.7,
+        "product": "Gogs (Go Git Service)",
+        "description": "Remote Code Execution (RCE) via a path traversal vulnerability bypassing a previous fix, allowing authenticated attackers to overwrite files outside the repository via symbolic links.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "path_traversal", "symlink_bypass", "Git_service", "Gogs"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-gogs-rce-flaw-exploited-in-zero-day-attacks/", "https://securityaffairs.com/186837/hacking/u-s-cisa-adds-a-flaw-in-gogs-to-its-known-exploited-vulnerabilities-catalog.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0507",
+        "cvss": 8.4,
+        "product": "SAP Application Server for ABAP and SAP NetWeaver RFCSDK",
+        "description": "OS Command Injection vulnerability allowing an authenticated attacker with administrative access and adjacent network access to upload crafted content and execute arbitrary OS commands.",
+        "tags": ["vulnérabilité", "vulnerability", "OS_Command_Injection", "RCE", "SAP", "ABAP", "RFCSDK"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0507"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0511",
+        "cvss": 8.1,
+        "product": "SAP Fiori App (Intercompany Balance Reconciliation)",
+        "description": "Privilege Escalation due to missing necessary authorization checks for an authenticated user.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "authentication_bypass", "SAP", "Fiori_App"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0511"],
+        "date": "2026-01-13"
+      },
+      {
+        "cve_id": "CVE-2026-0506",
+        "cvss": 8.1,
+        "product": "SAP NetWeaver Application Server ABAP and ABAP Platform",
+        "description": "Missing Authorization Check vulnerability allowing an authenticated attacker to misuse an RFC function to execute form routines and manipulate data.",
+        "tags": ["vulnérabilité", "vulnerability", "missing_authorization", "data_manipulation", "SAP", "ABAP", "RFC"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0506"],
+        "date": "2026-01-13"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "'Bad actor' hijacks Apex Legends characters in live matches",
+        "description": "Threat actors disrupted live matches of the game Apex Legends, taking control of players' characters, disconnecting them, and changing their nicknames. Publisher Respawn confirmed the security incident, stating it was not caused by an exploit or malware infection, but hinted it was related to cheats or an actor gaining administrative privileges on the server's debugging system.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1078: Valid Accounts (Likely compromised administrative access)"],
+        "analyse": "This incident, though targeting a video game, highlights the risks associated with server security and elevated administrative privileges, even in non-critical environments. The malicious actor was able to manipulate key in-game elements live, demonstrating significant access. The impact is primarily on user experience and game reputation, but it underscores the need for stringent access controls and continuous monitoring of high-privilege systems, regardless of their nature.",
+        "recommandations": [
+          "Strengthen access controls and privilege management on game servers and debugging systems.",
+          "Implement robust monitoring to detect anomalous activities or unauthorized access to administration systems.",
+          "Limit exposure of debugging and administration systems to public networks.",
+          "Review security configurations to prevent the misuse of administration tools or cheating functionalities."
+        ],
+        "tags": ["gaming", "cheating", "server_security", "access_control", "incident_response", "Apex_Legends"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/bad-actor-hijacks-apex-legends-characters-in-live-matches/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Facebook Login Thieves Now Using Browser-in-Browser Trick",
+        "description": "Hackers have increasingly relied on the 'Browser-in-the-Browser' (BitB) method over the past six months to trick users into providing Facebook account credentials. Trellix researchers observed phishing campaigns targeting Facebook, impersonating law firms or Meta security notifications. Phishing pages are often hosted on legitimate cloud platforms like Netlify and Vercel and use URL shorteners to bypass security filters. The goal is to steal Facebook accounts to spread scams, harvest personal data, or commit identity fraud.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566.002: Phishing (Spearphishing Link)", "T1078: Valid Accounts (Credential Theft)"],
+        "analyse": "This 'Browser-in-Browser' technique represents a major escalation in phishing campaigns, making credential theft visually almost impossible to detect. The abuse of trusted infrastructure like legitimate cloud hosting services and URL shorteners allows bypassing traditional security defenses. The impact is significant for Facebook users (over three billion), with risks of identity fraud, scam propagation, and personal data compromise. This highlights the constant evolution of phishing tactics and the need for users and organizations to stay informed about new attack methods.",
+        "recommandations": [
+          "Educate users to recognize sophisticated phishing techniques like BitB.",
+          "Always navigate directly to official URLs for login or security verification, rather than following embedded links.",
+          "Check if login pop-up windows can be moved outside the main browser window (iframes cannot).",
+          "Enable two-factor authentication (2FA) on all online accounts for an extra layer of security."
+        ],
+        "tags": ["phishing", "credential_theft", "Browser_in_Browser", "BitB", "social_media", "Facebook", "scam", "identity_fraud", "cloud_hosting_abuse"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/facebook-login-thieves-now-using-browser-in-browser-trick/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "\"Неблагонадійний фонд\": UAC-0190 targeted cyberattacks against Ukrainian Defense Forces using PLUGGYAPE",
+        "description": "Between October and December 2025, CERT-UA, in cooperation with the Cyber Incident Response Team of the Ukrainian Armed Forces, investigated a series of targeted cyberattacks against members of the Ukrainian Defense Forces. These attacks were conducted under the guise of charitable fund activities and utilized the PLUGGYAPE malware.",
+        "threat_actor": "UAC-0190",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566: Phishing (Impersonation)", "T1071: Application Layer Protocol (Command and Control)", "T1560: Archive Collected Data"],
+        "analyse": "These targeted cyberattacks against Ukrainian defense forces by UAC-0190 underscore the persistence of state-sponsored threats in the context of the conflict. The use of charitable fund lures is a social engineering tactic designed to exploit trust and bypass defenses. The ability to identify and analyze PLUGGYAPE malware is crucial for understanding the actor's modus operandi and strengthening defenses against future attacks. The impact is strategic, aiming to compromise armed forces systems.",
+        "recommandations": [
+          "Enhance user awareness of phishing attempts, especially those exploiting charitable themes.",
+          "Implement malware detection and behavioral analysis solutions to identify PLUGGYAPE and similar implants.",
+          "Strengthen security measures for armed forces systems and defense organizations.",
+          "Share threat intelligence with partners for collective defense."
+        ],
+        "tags": ["APT", "Ukraine", "defense", "espionage", "phishing", "malware", "PLUGGYAPE"],
+        "sources": ["https://cert.gov.ua/article/6286942"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "AuraInspector: Auditing Salesforce Aura for Data Exposure",
+        "description": "Mandiant released AuraInspector, an open-source tool designed to help identify and audit access control misconfigurations within the Salesforce Aura framework. These misconfigurations can lead to unauthorized access to sensitive data. The article details mechanisms for data retrieval via Aura, including methods to bypass the 2,000-record limit, the use of the GraphQL API for comprehensive record access, and techniques to identify exposed home or record list URLs. Recommendations are provided for remediation, including auditing guest user permissions, securing private data for authenticated users, and disabling self-registration if not required.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": ["*.vf.force.com", "*.my.salesforce-sites.com", "*.my.salesforce.com"],
+          "URL": ["/aura"]
+        },
+        "mitre_ttps": ["T1078: Valid Accounts (Misuse of account permissions)", "T1526: Cloud Service Dashboard", "T1078.004: Cloud Accounts (Misconfigured access controls)"],
+        "analyse": "The article highlights significant risks of data leakage and unauthorized access in Salesforce Experience Cloud applications due to lax security configurations. The potential impact is high for businesses using Salesforce, especially those handling sensitive information (credit card numbers, identity documents, health data). The release of an open-source tool like AuraInspector can increase awareness but also potentially the attack surface if administrators do not promptly fix identified vulnerabilities. The ability to bypass record retrieval limits via GraphQL is a notable discovery that amplifies the severity of misconfigurations.",
+        "recommandations": [
+          "Regularly audit guest user permissions and apply the principle of least privilege.",
+          "Review sharing rules and organization-wide defaults for authenticated users.",
+          "Disable the self-registration feature if it is not required.",
+          "Implement Salesforce security best practices, including using their 'Security Health Check' tool.",
+          "Set up monitoring to detect POST requests to the /aura endpoint and suspicious activities."
+        ],
+        "tags": ["misconfiguration", "data_exposure", "Salesforce", "Aura_framework", "GraphQL", "access_control", "cloud_security", "tool_release"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/auditing-salesforce-aura-data-exposure/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "MuddyWater Expands Rust-Based Operations and Exposes Build Artefacts",
+        "description": "The MuddyWater threat group is deploying a new Rust-based implant, named RustyWater, via macro-enabled Word documents. The objective is to establish persistence and command-and-control (C2) access in targeted organizations. While the malware is evolving, the attack relies on consistent behaviors such as macro execution, command-line activity from writable directories, and network beacons. A separate analysis revealed extensive development artifacts embedded in the Rust binary, offering insight into the group's development workflow.",
+        "threat_actor": "MuddyWater",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1566.001: Spearphishing Attachment", "T1059.001: Command and Scripting Interpreter (PowerShell)", "T1133: External Remote Services (Command and Control)", "T1547.001: Registry Run Keys / Startup Folder (Persistence)", "T1071.001: Application Layer Protocol (HTTP/HTTPS)"],
+        "analyse": "MuddyWater's modernization of its development stack with Rust offers operational advantages, such as lower detection rates and cross-platform flexibility. However, the group's continued reliance on macro-enabled documents for initial access and predictable post-exploitation behaviors (command-line execution, registry persistence, network C2) creates detectable behavioral signals. The exposed build artifacts provide valuable insights into the group's processes and can aid defenders in clustering activities. The potential impact is the establishment of long-term persistence and data theft within targeted organizations.",
+        "recommandations": [
+          "Strengthen macro restrictions across endpoints and limit execution from writable directories (e.g., ProgramData).",
+          "Deploy behavioral monitoring capable of detecting payload reconstruction, command-line execution chains, and registry-based persistence.",
+          "Enhance email filtering and attachment scanning to reduce exposure to malicious documents.",
+          "Conduct user awareness training focused on identifying suspicious documents and unexpected macro prompts."
+        ],
+        "tags": ["APT", "malware", "Rust", "RustyWater", "spearphishing", "macro", "persistence", "command_and_control", "threat_actor_TTPs"],
+        "sources": ["https://fieldeffect.com/blog/muddywater-rust-based-operations"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Journey to the Heart of Wikipedia, the World's Most Controversial Influence Tool",
+        "description": "A recent work, 'The Hidden Face of Wikipedia,' explores the internal workings, operational mechanisms, and informal hierarchies of Wikipedia. It highlights its paramount role as a reliable source of information and its ability to influence public opinion, being the most powerful tertiary source in the world and serving as a database for generative AI. The book reveals attempts by actors (companies, political figures, NGOs) to influence narratives on the platform via single-use or infiltrated accounts, and how the 'Wikipedian' community (patrollers, administrators) tracks and sanctions these 'infiltrations.' It also addresses the ideological endogamy of the core contributors and the need for a rigorous and planned approach for any influence action on the platform.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1599: Impersonation (Fake accounts/personas)", "T1071.004: Web Protocols (Abuse of content platforms)", "T1098: Account Manipulation (Modifying information)"],
+        "analyse": "This article provides an in-depth analysis of influence mechanisms and information warfare on Wikipedia. It underscores the strategic importance of the platform for reputation and narrative dissemination, given its overwhelming influence and its role as a source for generative AI. The difficulty of conducting influence campaigns on Wikipedia without detection is highlighted by the community's vigilance and 'infiltration hunters.' The potential impact of successful manipulation would be an alteration of public perception and widespread disinformation. It is crucial for professionals to understand the platform's structure and rules for any legitimate influence strategy.",
+        "recommandations": [
+          "For any influence strategy, adopt a rigorous, planned approach that complies with Wikipedia's rules.",
+          "Avoid attempts at infiltration or obvious manipulation, which will be quickly detected and sanctioned.",
+          "Understand the contributor ecosystem and community consensuses for effective and legitimate interactions.",
+          "Prioritize transparent and sourced contributions to establish credibility."
+        ],
+        "tags": ["influence_operation", "information_warfare", "Wikipedia", "disinformation", "reputation_management", "social_engineering"],
+        "sources": ["https://www.portail-ie.fr/univers/2026/voyage-au-coeur-de-wikipedia-loutil-dinfluence-le-plus-controverse-du-monde/"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Credential-harvesting attacks by APT28 hit Turkish, European, and Central Asian organizations",
+        "description": "Russia-linked cyberespionage group APT28 (aka Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, and STRONTIUM) conducted credential-harvesting campaigns between February and September 2025. Targets included Turkish energy and nuclear agency staff, European think tank personnel, and organizations in North Macedonia and Uzbekistan. APT28 used fake login pages mimicking Outlook, Google, and Sophos VPN, leveraging free hosting and tunneling services (Webhook.site, InfinityFree, Byet Internet Services, ngrok) and legitimate PDF lures to increase authenticity and bypass email security controls. Victims were redirected to real sites after credential theft to avoid detection.",
+        "threat_actor": "APT28 (Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "indicator_of_compromise": {
+          "DOMAIN": ["webhook.site", "infinityfreeapp.com", "byet.net", "ngrok.io"]
+        },
+        "mitre_ttps": ["T1566.002: Phishing (Spearphishing Link)", "T1566.001: Phishing (Spearphishing Attachment)", "T1078: Valid Accounts (Credential Theft)", "T1583.001: Cloud Infrastructure (Free Hosting)"],
+        "analyse": "This campaign highlights APT28's persistent focus on credential harvesting for intelligence purposes, using low-cost and disposable infrastructure to minimize detection. The targeting of energy, nuclear, and policy sectors aligns with Russian intelligence priorities, indicating a strategic impact. The use of regionally tailored lures and legitimate PDF documents demonstrates sophisticated social engineering. Organizations in these sectors, particularly in Turkey, Europe, North Macedonia, and Uzbekistan, face significant risks of espionage and account compromise.",
+        "recommandations": [
+          "Implement robust email security solutions capable of detecting advanced phishing and spoofed login pages.",
+          "Educate users about the dangers of credential harvesting and the 'Browser-in-Browser' technique.",
+          "Enforce multi-factor authentication (MFA) across all accounts, especially for critical systems.",
+          "Monitor for suspicious login attempts and anomalous network traffic (e.g., connections to free hosting/tunneling services).",
+          "Regularly update and patch VPN clients and associated authentication systems."
+        ],
+        "tags": ["APT", "nation-state", "Russia", "espionage", "credential_harvesting", "phishing", "critical_infrastructure", "energy", "nuclear", "government"],
+        "sources": ["https://securityaffairs.com/186801/apt/credential-harvesting-attacks-by-apt28-hit-turkish-european-and-central-asian-organizations.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Europol and Spanish Police arrest 34 in crackdown on Black Axe criminal network",
+        "description": "Europol and Spanish police, in cooperation with Bavarian authorities, arrested 34 suspected members of the international criminal organization 'Black Axe' in Spain, mainly in Seville. This highly structured and hierarchical group, of Nigerian origin with a global presence, is estimated to have caused over €5.93 million in fraud losses. The operation resulted in freezing bank accounts and seizing cash. The network recruited vulnerable 'money mules', primarily Spanish nationals, to facilitate its criminal activities. Black Axe is also involved in using computer hacking of port systems for drug trafficking.",
+        "threat_actor": "Black Axe criminal network",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["T1587: Develop Capabilities (Recruitment of money mules)", "T1583: Acquire Infrastructure (Establishing global presence)", "T1078: Valid Accounts (Abuse of legitimate accounts for financial fraud)"],
+        "analyse": "This operation demonstrates the global reach and sophistication of organized criminal networks like Black Axe, which integrate cyber methods (port hacking) with more traditional techniques (recruiting money mules). The geographical impact is extensive, with a presence in Europe and Nigerian origins. Financial losses are substantial. The arrest of key members and disruption of their activities are significant for combating organized crime, highlighting the importance of international law enforcement cooperation. The group's ability to adapt and exploit human and technological vulnerabilities remains a concern.",
+        "recommandations": [
+          "Increase awareness about 'money mule' scams and recruitment tactics used by criminal networks.",
+          "Enhance security of port and logistics systems to prevent intrusions facilitating illegal trafficking.",
+          "Implement stricter fraud detection and anti-money laundering measures in the financial sector.",
+          "Promote international cooperation among law enforcement agencies to dismantle transnational criminal networks."
+        ],
+        "tags": ["organized_crime", "law_enforcement", "arrests", "fraud", "money_laundering", "cybercrime", "Black_Axe", "Europol"],
+        "sources": ["https://securityaffairs.com/186819/security/europol-and-spanish-police-arrest-34-in-crackdown-on-black-axe-criminal-network.html"],
+        "date": "2026-01-13"
+      },
+      {
+        "title": "Attackers Targeting LLMs in Widespread Campaign",
+        "description": "Threat actors are conducting a widespread reconnaissance campaign targeting Large Language Models (LLMs), including OpenAI-compatible and Google Gemini API formats. They are scanning for misconfigured proxy servers that could leak access to commercial APIs. This campaign generated over 80,000 enumeration requests in 11 days and also targeted Server-Side Request Forgery (SSRF) vulnerabilities. Research indicates shared automation tooling, potentially Nuclei, and source IPs spread across 27 countries, suggesting VPS-based infrastructure rather than a botnet.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-55182", "CVE-2023-1389"]
+        },
+        "mitre_ttps": ["T1595.002: Active Scanning (Vulnerability Scanning)", "T1592: Gather Victim Host Information", "T1595: Active Reconnaissance", "T1190: Exploit Public-Facing Application (SSRF)"],
+        "analyse": "This campaign represents the potential first step in cyberattacks on exposed AI models. The widespread nature of the reconnaissance and the targeting of proxy misconfigurations and SSRF vulnerabilities indicate an active search for entry points. Past exploitation of CVEs by source IPs and the use of automation tools underscore the attackers' sophistication and persistence. Potential impacts include sensitive information leakage via commercial APIs and server compromises via SSRF, highlighting a new risk front for organizations deploying LLM-based solutions.",
+        "recommandations": [
+          "Audit and secure proxy servers interacting with LLM APIs to prevent access leaks.",
+          "Identify and patch SSRF vulnerabilities in applications and infrastructure using LLMs.",
+          "Implement monitoring for rapid-fire requests hitting multiple LLM model endpoints to detect enumeration patterns.",
+          "Block IP addresses with a history of exploiting known CVEs or exhibiting fingerprints of malicious automation tools (e.g., Nuclei)."
+        ],
+        "tags": ["AI_security", "LLM", "reconnaissance", "misconfiguration", "SSRF", "proxy_servers", "API_security", "vulnerability_scanning"],
+        "sources": ["https://thecyberexpress.com/attackers-targeting-llms-widespread-campaign/"],
+        "date": "2026-01-13"
+      }
+    ]
+  }
+}
