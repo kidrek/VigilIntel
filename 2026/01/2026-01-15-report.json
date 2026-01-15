@@ -1,0 +1,2310 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification et une diversification des menaces cyber, soulignant plusieurs tendances clés. Premièrement, le ransomware reste une menace prégnante, avec de nouveaux acteurs émergents tels que Sicarii, et une évolution tactique vers des attaques sans chiffrement, axées sur l'exfiltration de données pour l'extorsion, exploitant des vulnérabilités zero-day et la supply chain. L'utilisation d'outils légitimes et 'living-off-the-land' (comme PowerShell, PsExec) est de plus en plus courante pour minimiser la détection. Deuxièmement, les acteurs étatiques continuent de cibler des entités stratégiques, comme les forces de défense ukrainiennes, via des campagnes d'espionnage sophistiquées utilisant des backdoors (PLUGGYAPE) et l'ingénierie sociale avancée. Troisièmement, l'infrastructure cybercriminelle est de plus en plus accessible, avec des services comme RedVDS qui facilitent le phishing de masse, les compromissions de messagerie (BEC) et les prises de contrôle de comptes pour une multitude de cybercriminels. Enfin, un grand nombre de vulnérabilités critiques sont découvertes et exploitées activement, notamment dans des solutions de sécurité (FortiSIEM, FortiFone), des applications de gestion d'identité (ADSelfService Plus, Cal.com) et des composants Windows, nécessitant des correctifs urgents. L'IA est également mentionnée comme un outil potentiel dans les mains des attaquants et un enjeu géopolitique majeur. La chaîne d'approvisionnement des composants électroniques est au cœur de rivalités technologiques, avec des implications pour la souveraineté numérique. En conclusion, le paysage des menaces est caractérisé par une sophistication croissante, une capacité d'adaptation rapide des attaquants et une interconnexion étroite entre le cybercrime financier et les opérations étatiques, nécessitant une posture de défense multicouche et proactive, en particulier face aux menaces d'ingénierie sociale et d'exploitation de vulnérabilités connues ou zero-day.",
+      "date": "2026-01-15"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Sicarii Ransomware",
+        "secteur": "Non spécifié, cible des organisations",
+        "modop": "Ransomware-as-a-Service (RaaS) avec branding israélien/juif (potentielle fausse bannière). Utilise des techniques anti-VM, l'exfiltration de données (ZIP vers file.io), la reconnaissance réseau (scan RDP, exploitation de CVE-2025-64446 sur Fortinet), la désactivation d'AV/VPN, le chiffrement de fichiers (.sicarii extension) et des composants destructeurs (script destruct.bat, corruption de bootloader, effacement de disque).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_exfiltration",
+          "anti_vm",
+          "network_reconnaissance",
+          "os_command_injection",
+          "disk_wiping",
+          "false_flag"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/sicarii-ransomware-truth-vs-myth/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Void Blizzard (aka Laundry Bear, UAC-0190)",
+        "secteur": "Forces de défense ukrainiennes, entités gouvernementales",
+        "modop": "Campagnes de cyberespionnage alignées sur la Russie. Utilise l'ingénierie sociale via des messageries instantanées (Signal, WhatsApp) pour inciter les victimes à télécharger des 'documents' malveillux depuis de faux sites web caritatifs. Déploie le backdoor PLUGGYAPE (basé sur Python, compilé via PyInstaller) qui utilise MQTT pour la communication C2, intègre des contrôles anti-analyse/anti-virtualisation, et assure la persistance via la clé de registre Run.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "nation_state",
+          "russia",
+          "ukraine",
+          "cyber_espionage",
+          "social_engineering",
+          "phishing",
+          "backdoor",
+          "pluggyape",
+          "anti_analysis",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Storm-2470",
+        "secteur": "Divers (juridique, construction, fabrication, immobilier, santé, éducation, infrastructures bancaires)",
+        "modop": "Développe et opère RedVDS, un fournisseur de serveurs dédiés virtuels (VDS) criminel. Facilite le Business Email Compromise (BEC), le phishing de masse, la prise de contrôle de comptes et la fraude financière. Utilise une seule image clonée de Windows pour créer des hôtes RDP, des noms d'hôte anormaux (WIN-BUNS25TD77J), et accepte les paiements en cryptomonnaies pour l'anonymat. Les clients déploient des outils comme les mass mailers, kits de phishing, outils de reconaissance, et utilisent des domaines homoglyphes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "infrastructure",
+          "redvds",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "mass_phishing",
+          "homoglyph_domains"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Storm-0259, Storm-2227, Storm-1575, Storm-1747",
+        "secteur": "Divers (juridique, construction, fabrication, immobilier, santé, éducation, infrastructures bancaires)",
+        "modop": "Acteurs cybercriminels qui exploitent l'infrastructure RedVDS pour des activités telles que le Business Email Compromise (BEC), le phishing de masse et la fraude financière. Ils utilisent des outils et des méthodes avancées, y compris des domaines homoglyphes et des campagnes de phishing ciblant la messagerie interne pour manipuler les transactions financières.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "redvds",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "mass_phishing"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "AsyncRAT",
+        "secteur": "Industrie manufacturière allemande",
+        "modop": "Campagnes de phishing ciblées utilisant le cheval de Troie d'accès à distance (RAT) AsyncRAT pour compromettre les entreprises manufacturières. Le modus operandi précis n'est pas détaillé au-delà de l'utilisation du phishing comme vecteur initial.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "rat",
+          "phishing",
+          "manufacturing"
+        ],
+        "sources": [
+          "/cybersecurity-blog/german-manufacture-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Black Basta",
+        "secteur": "Non spécifié, a ciblé les systèmes FortiSIEM",
+        "modop": "Groupe de ransomware connu pour son intérêt à exploiter les vulnérabilités FortiSIEM (comme CVE-2023-34992 et CVE-2024-23108) pour l'accès initial et la progression des attaques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploit-code-public-for-critical-fortisiem-command-injection-flaw/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Snakefly (aka Cl0p)",
+        "secteur": "Entreprises utilisant des logiciels d'entreprise (ex: Oracle E-Business Suites, Salesforce)",
+        "modop": "Groupe cybercriminel pionnier des campagnes d'extorsion sans chiffrement, se basant uniquement sur le vol de données. Exploite des vulnérabilités zero-day dans les logiciels d'entreprise (ex: CVE-2025-61882 dans Oracle EBS) pour l'exfiltration de données à grande échelle et l'extorsion par la menace de fuites. A également ciblé des instances Salesforce.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "data_exfiltration",
+          "extortion",
+          "zero_day",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Grandes entreprises, notamment celles utilisant Salesforce",
+        "modop": "A mené une série d'attaques ciblant les instances Salesforce de plusieurs grandes entreprises, impliquant probablement l'exfiltration de données et l'extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "data_exfiltration",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Akira, Qilin, Inc, Safepay, DragonForce",
+        "secteur": "Divers (opérations de ransomware)",
+        "modop": "Groupes de ransomware-as-a-Service (RaaS) ayant rapidement étendu leurs opérations en 2025, profitant du départ d'acteurs majeurs comme LockBit et RansomHub. Utilisation de tactiques 'living off the land' et de logiciels à double usage (PowerShell, PsExec, NetScan, Rclone, outils d'accès à distance/RMM).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "living_off_the_land",
+          "dual_use_software"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "APT29 (liens supposés)",
+        "secteur": "Comptes Microsoft",
+        "modop": "Lié à l'attaque ConsentFix, une technique de phishing OAuth qui abuse les flux d'autorisation basés sur le navigateur pour détourner des comptes Microsoft, y compris en contournant l'authentification multifacteur (MFA). Utilise l'ingénierie sociale de type ClickFix et l'injection de charges utiles malveillantes sur des sites web compromis. Cible les applications Microsoft de première partie pré-consenties.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "russia",
+          "oauth_phishing",
+          "social_engineering",
+          "mfa_bypass",
+          "account_hijacking",
+          "consentfix"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/consentfix-debrief-insights-from-the-new-oauth-phishing-attack/"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technologie, industrie des semi-conducteurs",
+        "theme": "Rivalité technologique et chaîne d'approvisionnement",
+        "description": "Le contrôle de l'industrie des composants électroniques, notamment les microprocesseurs, est au cœur de la rivalité technologique entre la Chine et les États-Unis. La Chine domine la production de terres rares (70% mondial) mais accuse un retard technologique. Les États-Unis, bien que leaders historiques, dépendent des pays asiatiques pour l'approvisionnement en terres rares et la production de composants. Les menaces chinoises de limitation des exportations de terres rares ont influencé les décisions américaines concernant les droits de douane, illustrant un équilibre fragile.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "etats_unis",
+          "technologie",
+          "chaine_approvisionnement",
+          "microprocesseurs",
+          "terres_rares",
+          "guerre_commerciale"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-composants-electroniques-au-coeur-de-la-rivalite-technologique-entre-la-chine-et-les-etats-unis/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Défense, gouvernement",
+        "theme": "Cyberespionnage étatique",
+        "description": "Le CERT-UA a signalé de nouvelles cyberattaques ciblant les forces de défense ukrainiennes, attribuées avec une confiance moyenne au groupe russe Void Blizzard (UAC-0190). Ces attaques déploient le malware PLUGGYAPE via de faux sites web caritatifs et des techniques d'ingénierie sociale, soulignant la persistance des conflits cybernétiques dans le contexte géopolitique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "cyberespionnage",
+          "conflit_cybernetique",
+          "forces_de_defense",
+          "void_blizzard",
+          "pluggyape"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Droit, politique internationale",
+        "theme": "Extraterritorialité du droit américain et ingérence politique",
+        "description": "Les États-Unis ont appliqué la loi Magnitsky au juge brésilien Alexandre de Moraes, l'accusant de censure et de violation de la liberté d'expression. Cette décision est interprétée comme une utilisation politique du droit américain pour déstabiliser des procédures judiciaires et protéger des alliés politiques (Jair Bolsonaro), marquant une accentuation de l'interventionnisme américain par le droit à des fins géopolitiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "bresil",
+          "loi_magnitsky",
+          "extraterritorialite",
+          "politique_internationale",
+          "ingérence",
+          "droits_de_l_homme"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/application-de-la-loi-magnitsky-a-lencontre-dun-juge-de-la-cour-supreme-bresilienne-une-nouvelle-utilisation-du-droit-americain/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Énergie, économie, technologie",
+        "theme": "Dépendance énergétique et souveraineté",
+        "description": "La France et l'Europe font face à une dépendance énergétique persistante, notamment vis-à-vis des États-Unis pour le gaz naturel liquéfié après avoir réduit celle envers la Russie. La question des minerais et métaux critiques, essentiels à la transition énergétique et à l'IA, pose également un enjeu stratégique majeur, compte tenu des capacités d'extraction limitées en Europe et des contraintes réglementaires. Cela met en lumière la nécessité de repenser la stratégie énergétique pour concilier principes, souveraineté et réalisme.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "europe",
+          "energie",
+          "dependance_energetique",
+          "minerais_critiques",
+          "intelligence_artificielle",
+          "souverainete"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-france-face-au-defi-energetique-avec-anne-lauvergeon/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Défense, intelligence, politique étrangère",
+        "theme": "Opérations cybernétiques américaines et ambiguïté",
+        "description": "L'opération américaine 'Absolute Resolve' au Venezuela pour capturer Nicolás Maduro a potentiellement impliqué des capacités cyber pour provoquer une panne d'électricité. L'article souligne l'ambiguïté délibérée concernant le rôle exact du cyber, mais aussi l'importance de l'infrastructure vénézuélienne déjà fragilisée. Ces opérations s'inscrivent dans une campagne plus large de pression économique et politique, soulignant l'utilisation du cyber comme un outil de soutien aux objectifs géopolitiques, mais dont la communication reste controversée.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "venezuela",
+          "cyber_operations",
+          "infrastructure",
+          "energie",
+          "strategie_militaire"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/layered-ambiguity-us-cyber-capabilities-raid-extract-maduro-venezuela"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Télécommunications",
+        "victime": "Free Mobile et Free",
+        "description": "L'autorité française de protection des données (CNIL) a infligé des amendes cumulées de 42 millions d'euros à Free Mobile (27 M€) et Free (15 M€) pour des protections inadéquates des données clients. Un piratage en octobre 2024 a compromis les données de 24,6 millions de contrats, incluant des informations sensibles comme les IBANs.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "free_mobile",
+          "free",
+          "donnees_personnelles",
+          "iban",
+          "gdpr",
+          "france",
+          "c_nil"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/france-fines-free-mobile-42-million-over-2024-data-breach-incident/",
+          "https://www.lemonde.fr/pixels/article/2026/01/14/negligence-et-manquements-particulierement-graves-pourquoi-free-ecope-d-une-amende-record-de-42-millions-d-euros_6662183_4408996.html"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Département de l'Éducation de Victoria, Australie",
+        "description": "Une base de données contenant les informations personnelles et les adresses e-mail d'étudiants actuels et anciens a été accédée par des attaquants. Les données compromises incluent les noms, noms des écoles, niveaux scolaires, adresses e-mail scolaires et mots de passe chiffrés. Des réinitialisations de mots de passe préventives ont été effectuées.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "australia",
+          "etudiants",
+          "donnees_personnelles",
+          "mots_de_passe"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/victorian-department-of-education-says-hackers-stole-students-data/",
+          "https://mastodon.thenewoil.org/@thenewoil/115896405589631321"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Voyage et tourisme",
+        "victime": "Eurail (Interrail)",
+        "description": "Eurail a confirmé qu'une partie de sa base de données clients a été accédée sans autorisation. Les informations potentiellement volées comprennent les données de commande et de réservation, les détails d'identité et de contact, les dates de naissance, et les informations de passeport (numéro, pays d'émission, date d'expiration). L'incident a été signalé à l'autorité de protection des données conformément au GDPR.",
+        "tags": [
+          "violation",
+          "breach",
+          "voyage",
+          "tourisme",
+          "eurail",
+          "interrail",
+          "donnees_personnelles",
+          "passeport",
+          "coordonnees_bancaires",
+          "gdpr"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/eurail-passengers-taken-for-a-ride-as-data-breach-spills-passports-bank-details/",
+          "https://infosec.exchange/@DevaOnBreaches/115896311075436420"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Commerce électronique",
+        "victime": "Kyowon Group (Corée du Sud)",
+        "description": "Le conglomérat sud-coréen Kyowon a confirmé un vol de données suite à une attaque par ransomware qui a perturbé ses opérations. Les informations clients pourraient avoir été exposées. L'entreprise collabore avec l'Agence coréenne de l'Internet et de la Sécurité (KISA) pour enquêter sur l'étendue de la fuite.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "conglomerat",
+          "coree_du_sud",
+          "kyowon",
+          "ransomware",
+          "vol_de_donnees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/south-korean-giant-kyowon-confirms-data-theft-in-ransomware-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Commerce électronique",
+        "victime": "Coupang",
+        "description": "L'autorité coréenne de protection des données a demandé au géant de l'e-commerce Coupang d'arrêter de publier ses propres conclusions non vérifiées concernant une violation de données ayant compromis les informations personnelles de millions d'utilisateurs, car cela pourrait induire en erreur les utilisateurs et compromettre l'enquête officielle en cours.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coree_du_sud",
+          "coupang",
+          "donnees_personnelles",
+          "fuite_de_donnees",
+          "protection_des_donnees"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/data-protection-agency-tells-coupang-to-stop-publishing-unconfirmed-information-about-data-breach/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Gouvernement (Sécurité intérieure)",
+        "victime": "Département de la Sécurité intérieure (Border Patrol et ICE)",
+        "description": "Des informations sensibles concernant environ 4 500 employés de l'ICE et de la Border Patrol, dont près de 2 000 agents de première ligne, auraient été divulguées par un lanceur d'alerte du Département de la Sécurité intérieure suite à un incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "securite_interieure",
+          "etats_unis",
+          "ice",
+          "border_patrol",
+          "donnees_employes",
+          "lanceur_alerte"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/13/personal-details-of-thousands-of-border-patrol-and-ice-agents-allegedly-leaked-in-huge-data-breach/?pk_campaign=feed&pk_kwd=personal-details-of-thousands-of-border-patrol-and-ice-agents-allegedly-leaked-in-huge-data-breach"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Services Cloud / MSP",
+        "victime": "Pax8",
+        "description": "La marketplace cloud Pax8 a accidentellement exposé des données concernant 1 800 de ses partenaires MSP (Managed Service Providers). La nature exacte des données n'est pas précisée.",
+        "tags": [
+          "violation",
+          "breach",
+          "cloud",
+          "msp",
+          "pax8",
+          "donnees_partenaires"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115896641257480668"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Monroe University",
+        "description": "L'Université Monroe a signalé qu'une cyberattaque survenue en décembre 2024 a exposé les données personnelles, financières et de santé de plus de 320 000 personnes.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "monroe_university",
+          "donnees_personnelles",
+          "donnees_financieres",
+          "donnees_de_sante"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896334531426871"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Messagerie instantanée",
+        "victime": "Max Messenger",
+        "description": "Max Messenger fait l'objet d'un examen minutieux suite à des allégations de violation de données majeure qui pourrait exposer les données de millions d'utilisateurs, y compris les identités, les jetons d'authentification et les métadonnées de communication.",
+        "tags": [
+          "violation",
+          "breach",
+          "messagerie",
+          "max_messenger",
+          "donnees_utilisateurs",
+          "identites",
+          "jetons_authentification",
+          "metadonnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896328079508003"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Central Maine Healthcare",
+        "description": "Central Maine Healthcare a signalé qu'une violation de données en 2025 a exposé des données sensibles de plus de 145 000 patients et employés. Les attaquants ont eu accès aux systèmes pendant plus de 2 mois, accédant à des informations de santé et des numéros de sécurité sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "central_maine_healthcare",
+          "patients",
+          "employes",
+          "donnees_de_sante",
+          "ssn"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896319858097338"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22240",
+        "cvss": "10.0",
+        "product": "BLUVOYIX",
+        "description": "Vulnérabilité de stockage de mots de passe en clair et exposition via des API non authentifiées. Permet à un attaquant distant non authentifié de récupérer les mots de passe de tous les utilisateurs et de compromettre la plateforme.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "bluvoyix",
+          "mots_de_passe_en_clair",
+          "api_non_authentifiee",
+          "acces_non_autorise",
+          "compromission_de_compte"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22240"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23478",
+        "cvss": "10.0",
+        "product": "Cal.com",
+        "description": "Vulnérabilité critique dans la gestion des sessions (NextAuth JWT callback) permettant un contournement de l'authentification à deux facteurs (2FA). Un attaquant peut usurper une session utilisateur via un simple appel API en modifiant l'email dans le jeton JWT.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "cal_com",
+          "authentification_bypass",
+          "2fa_bypass",
+          "session_hijacking",
+          "jwt"
+        ],
+        "sources": [
+          "https://securityonline.info/one-api-call-to-hijack-critical-cal-com-flaw-cve-2026-23478-cvss-10-bypasses-2fa/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-70968",
+        "cvss": "9.8",
+        "product": "FreeImage",
+        "description": "Vulnérabilité de type 'Use After Free' dans PluginTARGA.cpp;loadRLE().",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freeimage",
+          "use_after_free",
+          "memory_corruption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-70968"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "9.4",
+        "product": "FortiSIEM",
+        "description": "Vulnérabilité d'injection de commande du système d'exploitation ('OS Command Injection') dans la fonction phMonitor. Un attaquant non authentifié peut exécuter du code ou des commandes non autorisées via des requêtes TCP.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortisiem",
+          "os_command_injection",
+          "rce",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-fixes-fortisiem-fortifone",
+          "https://securityaffairs.com/186902/security/fortinet-fixed-two-critical-flaws-in-fortifone-and-fortisiem.html",
+          "https://www.bleepingcomputer.com/news/security/exploit-code-public-for-critical-fortisiem-command-injection-flaw/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-47855",
+        "cvss": "9.3",
+        "product": "FortiFone Web Portal",
+        "description": "Exposition d'informations sensibles à un acteur non autorisé dans la page du portail web. Un attaquant non authentifié peut obtenir la configuration de l'appareil via des requêtes HTTP/HTTPS.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortifone",
+          "information_disclosure",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-fixes-fortisiem-fortifone",
+          "https://securityaffairs.com/186902/security/fortinet-fixed-two-critical-flaws-in-fortifone-and-fortisiem.html"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-11250",
+        "cvss": "9.1",
+        "product": "ADSelfService Plus (ManageEngine)",
+        "description": "Vulnérabilité de haute gravité dans la solution de gestion des mots de passe en libre-service et de connexion unique. L'exploitation pourrait entraîner un accès non autorisé ou une compromission du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "adselfservice_plus",
+          "manageengine",
+          "authentification",
+          "acces_non_autorise",
+          "system_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/zoho-patches-critical-9-1-flaw-in-adselfservice-plus/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23492",
+        "cvss": "8.8",
+        "product": "Pimcore",
+        "description": "Injection SQL aveugle dans l'API de recherche d'administration ('Admin Search Find API') due à un correctif incomplet pour CVE-2023-30848. Un attaquant authentifié peut divulguer des informations de la base de données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "pimcore",
+          "sql_injection",
+          "information_disclosure",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23492"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-22787",
+        "cvss": "8.7",
+        "product": "html2pdf.js",
+        "description": "Vulnérabilité de script intersite (XSS) lorsque la source est du texte non assaini, permettant l'exécution de scripts malveillants sur le navigateur client, risquant la confidentialité, l'intégrité et la disponibilité des données de la page.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "html2pdf_js",
+          "xss",
+          "client_side_exploit",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22787"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23512",
+        "cvss": "8.6",
+        "product": "SumatraPDF",
+        "description": "Vulnérabilité 'Untrusted Search Path' permettant l'exécution de code arbitraire via un fichier notepad.exe malveillant dans le répertoire d'installation de l'application.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sumatrapdf",
+          "untrusted_search_path",
+          "rce",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23512"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0861",
+        "cvss": "8.4",
+        "product": "GNU C Library",
+        "description": "Débordement d'entier ('Integer Overflow') dans les fonctions memalign, posix_memalign, aligned_alloc, valloc, pvalloc (versions 2.30 à 2.42), pouvant entraîner une corruption de la pile (heap corruption).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "gnu_c_library",
+          "integer_overflow",
+          "heap_corruption",
+          "memory_corruption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0861"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-65397",
+        "cvss": "8.4",
+        "product": "Blurams Flare Camera",
+        "description": "Mécanisme d'authentification insecure dans le script de démarrage safe_exec.sh. Permet à un attaquant avec accès physique d'exécuter des commandes arbitraires avec les privilèges root si le fichier /opt/images/public_key.der est absent, via un fichier auth.ini malveillant sur carte SD.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "blurams_flare_camera",
+          "authentification_insecure",
+          "privileges_escalation",
+          "code_execution",
+          "physical_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65397"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-13444",
+        "cvss": "8.4",
+        "product": "LoadMaster & MOVEit Web Application Firewalls (WAF)",
+        "description": "Vulnérabilité d'injection de commande ('Command Injection') dans l'interface utilisateur (UI) et l'API, permettant à des attaquants distants d'exécuter du code malveillant via des requêtes spécialement conçues.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "loadmaster",
+          "moveit_waf",
+          "command_injection",
+          "rce",
+          "remote_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/command-injection-alert-high-severity-flaws-hit-loadmaster-moveit-waf/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-13447",
+        "cvss": "8.4",
+        "product": "LoadMaster & MOVEit Web Application Firewalls (WAF)",
+        "description": "Vulnérabilité d'injection de commande ('Command Injection') dans l'interface utilisateur (UI) et l'API, permettant à des attaquants distants d'exécuter du code malveillant via des requêtes spécialement conçues.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "loadmaster",
+          "moveit_waf",
+          "command_injection",
+          "rce",
+          "remote_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/command-injection-alert-high-severity-flaws-hit-loadmaster-moveit-waf/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20952",
+        "cvss": "Critical",
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) pouvant être déclenchée simplement en visualisant un message piégé dans le volet de prévisualisation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "rce",
+          "remote_code_execution",
+          "preview_pane_exploit"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20953",
+        "cvss": "Critical",
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) pouvant être déclenchée simplement en visualisant un message piégé dans le volet de prévisualisation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "rce",
+          "remote_code_execution",
+          "preview_pane_exploit"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0891",
+        "cvss": "Exploited",
+        "product": "Mozilla Firefox",
+        "description": "Vulnérabilité activement exploitée dans Mozilla Firefox. Peut entraîner une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mozilla_firefox",
+          "actively_exploited",
+          "rce",
+          "deni_de_service",
+          "confidentialite_des_donnees"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0038/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0892",
+        "cvss": "Exploited",
+        "product": "Mozilla Firefox",
+        "description": "Vulnérabilité activement exploitée dans Mozilla Firefox. Peut entraîner une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mozilla_firefox",
+          "actively_exploited",
+          "rce",
+          "deni_de_service",
+          "confidentialite_des_donnees"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0038/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20805",
+        "cvss": "5.5",
+        "product": "Microsoft Windows Desktop Window Manager (DWM)",
+        "description": "Vulnérabilité de divulgation d'informations dans le DWM, activement exploitée pour contourner l'ASLR et faciliter d'autres attaques d'exécution de code. Permet la divulgation locale d'adresses de section d'un port ALPC distant.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_windows",
+          "desktop_window_manager",
+          "info_disclosure",
+          "actively_exploited",
+          "aslr_bypass",
+          "privileges_escalation"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://securityaffairs.com/186898/security/u-s-cisa-adds-a-flaw-in-microsoft-windows-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/186888/hacking/microsoft-patch-tuesday-security-updates-for-january-2026-fixed-actively-exploited-zero-day.html"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ConsentFix debrief: Insights from the new OAuth phishing attack",
+        "description": "Cet article analyse la technique de phishing OAuth 'ConsentFix' qui exploite les flux d'autorisation basés sur le navigateur pour détourner des comptes Microsoft, y compris en contournant l'authentification multifacteur (MFA). L'attaque combine l'ingénierie sociale de type ClickFix avec le phishing OAuth. Elle cible les applications Microsoft de première partie et a des liens supposés avec l'APT29. L'impact est un contournement des contrôles d'identité et un accès persistant aux comptes.",
+        "threat_actor": "APT29 (liens supposés)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1621 (Multi-Factor Authentication Request Generation)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "Cette technique d'attaque est particulièrement insidieuse car elle contourne des contrôles de sécurité fondamentaux comme la MFA en manipulant les flux d'autorisation légitimes. Elle vise des comptes Microsoft et peut affecter un large éventail d'organisations. L'implication potentielle d'un acteur étatique comme l'APT29 suggère des objectifs d'espionnage à long terme. La nature 'browser-native' de l'attaque rend les outils de sécurité traditionnels moins efficaces, nécessitant une surveillance du navigateur en tant que surface de détection.",
+        "recommandations": [
+          "Mettre en œuvre des contrôles de détection des menaces basés sur le comportement du navigateur.",
+          "Surveiller les journaux pour les ID d'application Microsoft spécifiques (00000002-0000-0000-c000-000000000000 pour Azure Active Directory et 26a4ae64-5862-427f-a9b0-044e62572a4f pour Microsoft Intune Checkin).",
+          "Renforcer les informations d'identification et les identités cloud, utiliser des solutions sans mot de passe comme les passkeys et implémenter la MFA de manière robuste.",
+          "Sensibiliser les utilisateurs aux techniques d'ingénierie sociale et de phishing OAuth.",
+          "Mettre en place une surveillance proactive des vulnérabilités dans les applications utilisées par les employés (logins fantômes, lacunes MFA, mots de passe vulnérables)."
+        ],
+        "tags": [
+          "oauth_phishing",
+          "social_engineering",
+          "mfa_bypass",
+          "microsoft_accounts",
+          "identity_security",
+          "apt29",
+          "browser_security"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/consentfix-debrief-insights-from-the-new-oauth-phishing-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "German Manufacturing Under Phishing Attacks: Tracking a Stealthy AsyncRAT Campaign",
+        "description": "L'industrie manufacturière allemande est ciblée par une campagne de phishing furtive déployant le cheval de Troie d'accès à distance (RAT) AsyncRAT. Les entreprises manufacturières sont visées en raison de leur criticité opérationnelle, de leur distribution géographique et de la complexité de leurs environnements IT et OT.",
+        "threat_actor": "AsyncRAT",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)"
+        ],
+        "analyse": "Les fabricants sont des cibles attrayantes en raison de la nature critique de leurs opérations. Une compromission peut entraîner des perturbations significatives de la production et de la chaîne d'approvisionnement. La nature 'furtive' de la campagne AsyncRAT suggère des techniques d'évasion sophistiquées, augmentant la difficulté de détection. L'impact géographique est l'Allemagne, mais le secteur manufacturier est une cible mondiale.",
+        "recommandations": [
+          "Renforcer la sensibilisation des employés aux attaques de phishing.",
+          "Mettre en œuvre des solutions de détection et de réponse avancées pour identifier les RAT.",
+          "Segmenter les réseaux IT et OT pour limiter la propagation des menaces.",
+          "Surveiller les communications et les accès non autorisés, en particulier aux systèmes critiques."
+        ],
+        "tags": [
+          "phishing",
+          "asyncrat",
+          "manufacturing",
+          "germany",
+          "threat_campaign",
+          "remote_access_trojan"
+        ],
+        "sources": [
+          "/cybersecurity-blog/german-manufacture-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Inside RedVDS: How a single virtual desktop provider fueled worldwide cybercriminal operations",
+        "description": "Microsoft a démantelé RedVDS, un fournisseur de serveurs dédiés virtuels (VDS) qui a alimenté des opérations cybercriminelles mondiales. RedVDS était utilisé par des acteurs comme Storm-2470 (l'opérateur) et Storm-0259, -2227, -1575, -1747 pour des campagnes de Business Email Compromise (BEC), phishing de masse, prise de contrôle de comptes et fraude financière. L'infrastructure de RedVDS utilisait des images Windows clonées avec des identifiants techniques uniques facilitant la détection.",
+        "threat_actor": "Storm-2470, Storm-0259, Storm-2227, Storm-1575, Storm-1747",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "redvds.com",
+            "redvds.pro",
+            "vdspanel.space"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1090.002 (Proxy: SOCKS Proxy)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1083 (File and Directory Discovery)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1567.002 (Exfiltration Over Web Service: Automated Exfiltration)",
+          "T1552 (Unsecured Credentials)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "RedVDS a abaissé la barrière à l'entrée pour les cybercriminels en offrant une infrastructure bon marché, permissive et anonyme. Son utilisation à grande échelle a facilité des milliers d'attaques, causant des dizaines de millions de dollars de pertes. L'approche de clonage des machines virtuelles, bien que rentable pour les attaquants, a également fourni un 'empreinte digitale' unique pour la détection. La perturbation de cette infrastructure est un coup significatif contre le cybercrime organisé.",
+        "recommandations": [
+          "Renforcer les identifiants et les identités cloud, utiliser des solutions sans mot de passe et implémenter la MFA.",
+          "Mettre en œuvre des formations de sensibilisation à l'ingénierie sociale et aux tactiques de phishing pour les employés.",
+          "Sécuriser les services de messagerie et activer des protections contre l'usurpation d'identité.",
+          "Utiliser des plateformes de paiement sécurisées et renforcer les contrôles autour des processus financiers pour atténuer les risques de BEC.",
+          "Surveiller les journaux pour des noms d'hôte anormaux (ex: WIN-BUNS25TD77J) et d'autres indicateurs de l'activité RedVDS."
+        ],
+        "tags": [
+          "redvds",
+          "cybercrime",
+          "infrastructure",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "microsoft",
+          "disruption"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Ransomware: Tactical Evolution Fuels Extortion Epidemic",
+        "description": "Un nouveau livre blanc de Broadcom révèle une augmentation record des attaques d'extorsion en 2025, avec une évolution tactique significative. Le nombre total d'attaques de ransomware a atteint 4 737, mais les attaques axées uniquement sur le vol de données (sans chiffrement) ont augmenté de 23% pour atteindre 6 182. De nouveaux acteurs comme Akira et Qilin ont gagné en importance après la disparition de LockBit et RansomHub. Les attaquants exploitent des vulnérabilités zero-day, la chaîne d'approvisionnement logicielle et utilisent des outils légitimes ('living off the land') comme PowerShell et PsExec, ainsi que des logiciels à double usage pour minimiser la détection.",
+        "threat_actor": "Akira, Qilin, Inc, Safepay, DragonForce, Snakefly (aka Cl0p), ShinyHunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-61882"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1021.002 (Remote Services: SMB/Windows Admin Shares)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1566 (Phishing)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1083 (File and Directory Discovery)",
+          "T1574 (Hijack Execution Flow)"
+        ],
+        "analyse": "Le paysage du ransomware est en constante mutation, avec un passage marqué vers l'extorsion basée sur le vol de données, ce qui complexifie la défense. L'utilisation généralisée des techniques 'living off the land' et des logiciels à double usage rend la détection plus difficile car ces activités se fondent dans le trafic réseau légitime. L'exploitation de vulnérabilités zero-day et les attaques sur la chaîne d'approvisionnement augmentent le risque pour même les organisations bien défendues, soulignant la nécessité d'une sécurité robuste non seulement de son propre réseau mais aussi de la supply chain.",
+        "recommandations": [
+          "Mettre à jour régulièrement les logiciels et appliquer les correctifs, en particulier pour les vulnérabilités zero-day.",
+          "Renforcer la sécurité de la chaîne d'approvisionnement logicielle.",
+          "Implémenter une surveillance comportementale pour détecter les activités 'living off the land' (ex: utilisation anormale de PowerShell ou PsExec).",
+          "Utiliser des solutions de détection et de réponse aux points de terminaison (EDR) et de détection et réponse gérées (MDR).",
+          "Sensibiliser les employés aux tactiques de phishing et d'ingénierie sociale.",
+          "Mettre en place une segmentation réseau et des sauvegardes robustes et isolées."
+        ],
+        "tags": [
+          "ransomware",
+          "extorsion",
+          "data_theft",
+          "zero_day",
+          "supply_chain_attack",
+          "living_off_the_land",
+          "dual_use_software",
+          "threat_landscape"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "UAC-0190 Attack Detection: Fake Charity Lures Used to Deploy the PLUGGYAPE Backdoor Against the Ukrainian Armed Forces",
+        "description": "Le CERT-UA a révélé une campagne de cyberespionnage ciblée contre les forces armées ukrainiennes, menée par l'acteur aligné sur la Russie, Void Blizzard (UAC-0190). L'attaque utilise l'ingénierie sociale via de faux sites web caritatifs pour distribuer le backdoor PLUGGYAPE. Les variantes du malware ont évolué pour inclure le protocole MQTT pour le C2 et des contrôles anti-analyse/anti-virtualisation.",
+        "threat_actor": "Void Blizzard (aka Laundry Bear, UAC-0190)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.002 (Application Layer Protocol: File Transfer Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1573 (Encrypted Channel)",
+          "T1090.001 (Proxy: Internal Proxy)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1036 (Masquerading)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "La campagne montre une adaptation constante des TTPs des acteurs étatiques, avec une utilisation sophistiquée de l'ingénierie sociale et des malwares évolués pour cibler des entités critiques. La personnalisation des attaques et l'utilisation de la langue ukrainienne augmentent leur efficacité. L'intégration de contrôles anti-analyse indique une volonté d'éviter la détection par les outils de sécurité classiques. L'impact est l'espionnage et la compromission des systèmes de défense.",
+        "recommandations": [
+          "Renforcer la sensibilisation des utilisateurs aux risques de l'ingénierie sociale, en particulier concernant les liens caritatifs ou les pièces jointes non sollicitées.",
+          "Mettre en œuvre des solutions de sécurité des messageries pour détecter et bloquer les emails/messages malveillants.",
+          "Déployer des EDR et des SIEM pour détecter les activités suspectes post-compromission, y compris l'exécution de Python packagé et les communications C2 anormales (MQTT).",
+          "Maintenir les systèmes et logiciels à jour pour atténuer les vulnérabilités exploitables.",
+          "Utiliser des règles de détection (ex: Sigma) basées sur les TTPs de UAC-0190 et les indicateurs du malware PLUGGYAPE."
+        ],
+        "tags": [
+          "cyberespionnage",
+          "ukraine",
+          "russie",
+          "void_blizzard",
+          "uac_0190",
+          "pluggyape",
+          "social_engineering",
+          "backdoor",
+          "anti_analysis",
+          "mqtt",
+          "cert_ua",
+          "defense"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Sicarii Ransomware: Truth vs Myth",
+        "description": "Check Point Research analyse Sicarii, une nouvelle opération de Ransomware-as-a-Service (RaaS) apparue fin 2025. Le groupe se distingue par un branding israélien/juif explicite (potentiellement une fausse bannière) et prétend des motivations idéologiques tout en étant axé sur le profit. Sicarii utilise des techniques anti-VM, exfiltre des données de grande valeur (archives ZIP via file.io), effectue une reconnaissance réseau (scan RDP, exploitation de CVE-2025-64446 sur Fortinet), désactive les produits AV/VPN, chiffre les fichiers avec l'extension '.sicarii' et déploie un script destructeur pour entraver la récupération du système.",
+        "threat_actor": "Sicarii Ransomware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-64446"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1560 (Archive Collected Data)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1018 (Remote System Discovery)",
+          "T1046 (Network Service Scanning)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Sicarii présente une capacité de ransomware crédible mais son comportement (branding idéologique explicite, incohérences linguistiques, faible maturité opérationnelle) suggère une opération de 'fausse bannière' ou une phase d'expérimentation plutôt qu'un RaaS mature et purement financier. Son ciblage et ses revendications sont probablement des tactiques de désinformation. L'exploitation de vulnérabilités connues (comme Fortinet) souligne l'importance d'une gestion proactive des correctifs. L'impact est financier et opérationnel pour les victimes, avec une difficulté accrue de récupération due aux composants destructeurs.",
+        "recommandations": [
+          "Mettre en œuvre des solutions de sécurité des points de terminaison (EPP/EDR) avec des capacités anti-VM et de détection comportementale pour identifier les activités de ransomware.",
+          "Surveiller le trafic réseau pour la reconnaissance (scans RDP) et l'exfiltration de données vers des services de partage de fichiers publics (file.io).",
+          "Appliquer rapidement les correctifs de sécurité, en particulier pour les vulnérabilités critiques et celles connues pour être exploitées par des groupes de ransomware (ex: CVE-2025-64446 sur Fortinet).",
+          "Maintenir des sauvegardes régulières et isolées des données critiques.",
+          "Mettre en place une surveillance de l'intégrité des fichiers et du registre pour détecter les modifications par les ransomwares."
+        ],
+        "tags": [
+          "sicarii",
+          "ransomware",
+          "raas",
+          "false_flag",
+          "data_exfiltration",
+          "network_reconnaissance",
+          "vulnerability_exploitation",
+          "disk_wiping"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/sicarii-ransomware-truth-vs-myth/"
+        ],
+        "date": "2026-01-15"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification and diversification of cyber threats, highlighting several key trends. Firstly, ransomware remains a pervasive threat, with new actors emerging like Sicarii, and a tactical evolution towards encryptionless attacks, focused on data exfiltration for extortion, exploiting zero-day vulnerabilities and the supply chain. The use of legitimate and 'living-off-the-land' tools (like PowerShell, PsExec) is increasingly common to minimize detection. Secondly, nation-state actors continue to target strategic entities, such as Ukrainian defense forces, through sophisticated espionage campaigns using backdoors (PLUGGYAPE) and advanced social engineering. Thirdly, cybercriminal infrastructure is becoming more accessible, with services like RedVDS facilitating mass phishing, Business Email Compromise (BEC), and account takeovers for a multitude of cybercriminals. Finally, a large number of critical vulnerabilities are discovered and actively exploited, particularly in security solutions (FortiSIEM, FortiFone), identity management applications (ADSelfService Plus, Cal.com), and Windows components, requiring urgent patching. AI is also mentioned as a potential tool in the hands of attackers and a major geopolitical issue. The electronic component supply chain is at the heart of technological rivalries, with implications for digital sovereignty. In conclusion, the threat landscape is characterized by increasing sophistication, rapid adaptation by attackers, and a close interconnection between financial cybercrime and state-sponsored operations, necessitating a multi-layered and proactive defense posture, especially against social engineering threats and the exploitation of known or zero-day vulnerabilities.",
+      "date": "2026-01-15"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Sicarii Ransomware",
+        "secteur": "Unspecified, targets organizations",
+        "modop": "Ransomware-as-a-Service (RaaS) with explicit Israeli/Jewish branding (potential false flag). Uses anti-VM techniques, high-value data exfiltration (ZIP archives to file.io), network reconnaissance (RDP scans, exploitation of CVE-2025-64446 on Fortinet), AV/VPN disabling, file encryption (.sicarii extension), and destructive components (destruct.bat script, bootloader corruption, disk wiping).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_exfiltration",
+          "anti_vm",
+          "network_reconnaissance",
+          "os_command_injection",
+          "disk_wiping",
+          "false_flag"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/sicarii-ransomware-truth-vs-myth/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Void Blizzard (aka Laundry Bear, UAC-0190)",
+        "secteur": "Ukrainian defense forces, government entities",
+        "modop": "Russia-aligned cyber-espionage campaigns. Uses social engineering via instant messaging apps (Signal, WhatsApp) to trick victims into downloading malicious 'documents' from fake charity websites. Deploys the PLUGGYAPE backdoor (Python-based, PyInstaller compiled) which uses MQTT for C2 communication, includes anti-analysis/anti-virtualization checks, and establishes persistence via the Run registry key.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "nation_state",
+          "russia",
+          "ukraine",
+          "cyber_espionage",
+          "social_engineering",
+          "phishing",
+          "backdoor",
+          "pluggyape",
+          "anti_analysis",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Storm-2470",
+        "secteur": "Diverse (legal, construction, manufacturing, real estate, healthcare, education, banking infrastructure)",
+        "modop": "Develops and operates RedVDS, a criminal virtual dedicated server (VDS) provider. Facilitates Business Email Compromise (BEC), mass phishing, account takeover, and financial fraud. Uses a single cloned Windows image to provision RDP hosts, anomalous hostnames (WIN-BUNS25TD77J), and accepts cryptocurrency payments for anonymity. Customers deploy tools like mass mailers, phishing kits, reconnaissance tools, and utilize homoglyph domains.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "infrastructure",
+          "redvds",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "mass_phishing",
+          "homoglyph_domains"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Storm-0259, Storm-2227, Storm-1575, Storm-1747",
+        "secteur": "Diverse (legal, construction, manufacturing, real estate, healthcare, education, banking infrastructure)",
+        "modop": "Cybercriminal actors who leverage the RedVDS infrastructure for activities such as Business Email Compromise (BEC), mass phishing, and financial fraud. They employ advanced tools and methods, including homoglyph domains and internal-spoofing phishing campaigns to manipulate financial transactions.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "redvds",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "mass_phishing"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "AsyncRAT",
+        "secteur": "German manufacturing industry",
+        "modop": "Targeted phishing campaigns deploying the AsyncRAT Remote Access Trojan (RAT) to compromise manufacturing companies. The precise modus operandi beyond phishing as the initial vector is not detailed.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "rat",
+          "phishing",
+          "manufacturing"
+        ],
+        "sources": [
+          "/cybersecurity-blog/german-manufacture-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Black Basta",
+        "secteur": "Unspecified, has targeted FortiSIEM systems",
+        "modop": "Ransomware group known for its interest in exploiting FortiSIEM vulnerabilities (such as CVE-2023-34992 and CVE-2024-23108) for initial access and progression of attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/exploit-code-public-for-critical-fortisiem-command-injection-flaw/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Snakefly (aka Cl0p)",
+        "secteur": "Enterprises using business software (e.g., Oracle E-Business Suites, Salesforce)",
+        "modop": "Cybercrime group that pioneered encryptionless extortion campaigns, relying solely on data theft. Exploits zero-day vulnerabilities in enterprise software (e.g., CVE-2025-61882 in Oracle EBS) for large-scale data exfiltration and extortion via threat of leaks. Has also targeted Salesforce instances.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "data_exfiltration",
+          "extortion",
+          "zero_day",
+          "supply_chain_attack"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Major corporations, especially those using Salesforce",
+        "modop": "Conducted a series of attacks targeting Salesforce instances of multiple major corporations, likely involving data exfiltration and extortion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "data_exfiltration",
+          "extortion"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "Akira, Qilin, Inc, Safepay, DragonForce",
+        "secteur": "Diverse (Ransomware operations)",
+        "modop": "Ransomware-as-a-Service (RaaS) groups that rapidly expanded their operations in 2025, taking advantage of the disruption of major players like LockBit and RansomHub. Utilize 'living off the land' tactics and dual-use software (PowerShell, PsExec, NetScan, Rclone, remote access/RMM tools).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "living_off_the_land",
+          "dual_use_software"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "nom": "APT29 (suspected linkage)",
+        "secteur": "Microsoft accounts",
+        "modop": "Linked to the ConsentFix attack, an OAuth phishing technique abusing browser-based authorization flows to hijack Microsoft accounts, including bypassing Multi-Factor Authentication (MFA). Uses ClickFix-style social engineering and injects malicious payloads into compromised websites. Targets first-party Microsoft apps that are pre-consented.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "russia",
+          "oauth_phishing",
+          "social_engineering",
+          "mfa_bypass",
+          "account_hijacking",
+          "consentfix"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/consentfix-debrief-insights-from-the-new-oauth-phishing-attack/"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technology, semiconductor industry",
+        "theme": "Technological rivalry and supply chain",
+        "description": "Control over the electronic component industry, especially microprocessors, is central to the intensifying technological rivalry between China and the United States. China dominates rare earth production (70% globally) but lags technologically. The U.S., despite being a historical leader, depends on Asian countries for rare earth supplies and component production. Chinese threats to limit rare earth exports have influenced U.S. tariff decisions, illustrating a fragile balance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "united_states",
+          "technology",
+          "supply_chain",
+          "microprocessors",
+          "rare_earths",
+          "trade_war"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-composants-electroniques-au-coeur-de-la-rivalite-technologique-entre-la-chine-et-les-etats-unis/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Defense, government",
+        "theme": "State-sponsored cyberespionage",
+        "description": "CERT-UA reported new cyberattacks targeting Ukraine's defense forces, attributed with medium confidence to the Russian-linked group Void Blizzard (UAC-0190). These attacks deploy PLUGGYAPE malware via fake charity websites and social engineering techniques, highlighting the persistence of cyber conflicts in the geopolitical context.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "cyberespionage",
+          "cyber_conflict",
+          "defense_forces",
+          "void_blizzard",
+          "pluggyape"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Law, international politics",
+        "theme": "Extraterritoriality of US law and political interference",
+        "description": "The United States applied the Magnitsky Act against Brazilian judge Alexandre de Moraes, accusing him of censorship and violating freedom of expression. This decision is interpreted as a political use of US law to destabilize judicial proceedings and protect political allies (Jair Bolsonaro), marking an accentuation of US interventionism through law for geopolitical ends.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "brazil",
+          "magnitsky_act",
+          "extraterritoriality",
+          "international_politics",
+          "interference",
+          "human_rights"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/application-de-la-loi-magnitsky-a-lencontre-dun-juge-de-la-cour-supreme-bresilienne-une-nouvelle-utilisation-du-droit-americain/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Energy, economy, technology",
+        "theme": "Energy dependency and sovereignty",
+        "description": "France and Europe face persistent energy dependency, particularly on the United States for liquefied natural gas after reducing reliance on Russia. The issue of critical minerals and metals, essential for energy transition and AI development, also poses a major strategic challenge given Europe's limited extraction capacities and regulatory constraints. This highlights the need to rethink energy strategy to reconcile principles, sovereignty, and realism.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "europe",
+          "energy",
+          "energy_dependency",
+          "critical_minerals",
+          "artificial_intelligence",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-france-face-au-defi-energetique-avec-anne-lauvergeon/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Defense, intelligence, foreign policy",
+        "theme": "US cyber operations and ambiguity",
+        "description": "The US 'Operation Absolute Resolve' in Venezuela to capture Nicolás Maduro potentially involved cyber capabilities to cause a power blackout. The article highlights the deliberate ambiguity regarding the exact role of cyber, but also the importance of Venezuela's already fragile infrastructure. These operations are part of a broader campaign of economic and political pressure, emphasizing the use of cyber as a supporting tool for geopolitical objectives, but its communication remains controversial.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "venezuela",
+          "cyber_operations",
+          "infrastructure",
+          "energy",
+          "military_strategy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/layered-ambiguity-us-cyber-capabilities-raid-extract-maduro-venezuela"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Telecommunications",
+        "victime": "Free Mobile and Free",
+        "description": "The French data protection authority (CNIL) imposed cumulative fines of €42 million on Free Mobile (€27M) and Free (€15M) for inadequate customer data protection. A hack in October 2024 compromised data from 24.6 million contracts, including sensitive information like IBANs.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "free_mobile",
+          "free",
+          "personal_data",
+          "iban",
+          "gdpr",
+          "france",
+          "c_nil"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/france-fines-free-mobile-42-million-over-2024-data-breach-incident/",
+          "https://www.lemonde.fr/pixels/article/2026/01/14/negligence-et-manquements-particulierement-graves-pourquoi-free-ecope-d-une-amende-record-de-42-millions-d-euros_6662183_4408996.html"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Victorian Department of Education, Australia",
+        "description": "A database containing personal information and email addresses of current and former students was accessed by attackers. Compromised data includes student names, school names, year levels, school-issued email addresses, and encrypted passwords. Precautionary password resets were performed.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "australia",
+          "students",
+          "personal_data",
+          "passwords"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/victorian-department-of-education-says-hackers-stole-students-data/",
+          "https://mastodon.thenewoil.org/@thenewoil/115896405589631321"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Travel and tourism",
+        "victime": "Eurail (Interrail)",
+        "description": "Eurail confirmed unauthorized access to part of its customer database. Potentially stolen information includes order and reservation details, identity and contact details, dates of birth, and passport information (number, country of issuance, expiry date). The incident was reported to the data protection authority in compliance with GDPR.",
+        "tags": [
+          "violation",
+          "breach",
+          "travel",
+          "tourism",
+          "eurail",
+          "interrail",
+          "personal_data",
+          "passport",
+          "bank_details",
+          "gdpr"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/eurail-passengers-taken-for-a-ride-as-data-breach-spills-passports-bank-details/",
+          "https://infosec.exchange/@DevaOnBreaches/115896311075436420"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Kyowon Group (South Korea)",
+        "description": "South Korean conglomerate Kyowon confirmed data theft following a ransomware attack that disrupted its operations. Customer information may have been exposed. The company is collaborating with Korea's Internet & Security Agency (KISA) to investigate the extent of the leak.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "conglomerate",
+          "south_korea",
+          "kyowon",
+          "ransomware",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/south-korean-giant-kyowon-confirms-data-theft-in-ransomware-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "The Korean data protection authority instructed e-commerce giant Coupang to stop publishing its own unconfirmed findings regarding a data breach that compromised millions of users' personal information, as this could mislead users and undermine the ongoing official investigation.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "south_korea",
+          "coupang",
+          "personal_data",
+          "data_leak",
+          "data_protection"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/14/data-protection-agency-tells-coupang-to-stop-publishing-unconfirmed-information-about-data-breach/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Government (Homeland Security)",
+        "victime": "Department of Homeland Security (Border Patrol and ICE)",
+        "description": "Sensitive details of approximately 4,500 ICE and Border Patrol employees, including nearly 2,000 frontline agents, were allegedly leaked by a Department of Homeland Security whistleblower following an incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "homeland_security",
+          "united_states",
+          "ice",
+          "border_patrol",
+          "employee_data",
+          "whistleblower"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/13/personal-details-of-thousands-of-border-patrol-and-ice-agents-allegedly-leaked-in-huge-data-breach/?pk_campaign=feed&pk_kwd=personal-details-of-thousands-of-border-patrol-and-ice-agents-allegedly-leaked-in-huge-data-breach"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Cloud Services / MSP",
+        "victime": "Pax8",
+        "description": "Cloud marketplace Pax8 accidentally exposed data pertaining to 1,800 of its Managed Service Provider (MSP) partners. The exact nature of the data is not specified.",
+        "tags": [
+          "violation",
+          "breach",
+          "cloud",
+          "msp",
+          "pax8",
+          "partner_data"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/115896641257480668"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Monroe University",
+        "description": "Monroe University reported that a cyberattack in December 2024 exposed the personal, financial, and health data of over 320,000 people.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "monroe_university",
+          "personal_data",
+          "financial_data",
+          "health_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896334531426871"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Instant messaging",
+        "victime": "Max Messenger",
+        "description": "Max Messenger is under scrutiny following claims of a major data breach that could expose data of millions of users, including identities, authentication tokens, and communication metadata.",
+        "tags": [
+          "violation",
+          "breach",
+          "messaging",
+          "max_messenger",
+          "user_data",
+          "identities",
+          "authentication_tokens",
+          "metadata"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896328079508003"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Central Maine Healthcare",
+        "description": "Central Maine Healthcare reported that a 2025 data breach exposed sensitive data of over 145,000 patients and employees. Attackers were inside systems for over 2 months, accessing health information and SSNs.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "central_maine_healthcare",
+          "patients",
+          "employees",
+          "health_information",
+          "ssn"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115896319858097338"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22240",
+        "cvss": "10.0",
+        "product": "BLUVOYIX",
+        "description": "Plaintext Passwords Vulnerability and exposure via unauthenticated APIs. Allows an unauthenticated remote attacker to retrieve plaintext passwords of all users and compromise the platform.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "bluvoyix",
+          "plaintext_passwords",
+          "unauthenticated_api",
+          "unauthorized_access",
+          "account_compromise"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22240"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23478",
+        "cvss": "10.0",
+        "product": "Cal.com",
+        "description": "Critical vulnerability in session management (NextAuth JWT callback) allowing a 2FA bypass. An attacker can hijack a user session via a single API call by modifying the email in the JWT token.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "cal_com",
+          "authentication_bypass",
+          "2fa_bypass",
+          "session_hijacking",
+          "jwt"
+        ],
+        "sources": [
+          "https://securityonline.info/one-api-call-to-hijack-critical-cal-com-flaw-cve-2026-23478-cvss-10-bypasses-2fa/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-70968",
+        "cvss": "9.8",
+        "product": "FreeImage",
+        "description": "Use After Free vulnerability in PluginTARGA.cpp;loadRLE().",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freeimage",
+          "use_after_free",
+          "memory_corruption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-70968"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "9.4",
+        "product": "FortiSIEM",
+        "description": "OS Command Injection vulnerability in the phMonitor function. An unauthenticated attacker can execute unauthorized code or commands via crafted TCP requests.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortisiem",
+          "os_command_injection",
+          "rce",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-fixes-fortisiem-fortifone",
+          "https://securityaffairs.com/186902/security/fortinet-fixed-two-critical-flaws-in-fortifone-and-fortisiem.html",
+          "https://www.bleepingcomputer.com/news/security/exploit-code-public-for-critical-fortisiem-command-injection-flaw/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-47855",
+        "cvss": "9.3",
+        "product": "FortiFone Web Portal",
+        "description": "Exposure of sensitive information to an unauthorized actor on the web portal page. An unauthenticated attacker can obtain device configuration via crafted HTTP/HTTPS requests.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortifone",
+          "information_disclosure",
+          "unauthenticated_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/fortinet-fixes-fortisiem-fortifone",
+          "https://securityaffairs.com/186902/security/fortinet-fixed-two-critical-flaws-in-fortifone-and-fortisiem.html"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-11250",
+        "cvss": "9.1",
+        "product": "ADSelfService Plus (ManageEngine)",
+        "description": "High-severity vulnerability in the self-service password management and single sign-on solution. Exploitation could lead to unauthorized access or system compromise.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "adselfservice_plus",
+          "manageengine",
+          "authentication",
+          "unauthorized_access",
+          "system_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/zoho-patches-critical-9-1-flaw-in-adselfservice-plus/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23492",
+        "cvss": "8.8",
+        "product": "Pimcore",
+        "description": "Blind SQL Injection in the Admin Search Find API due to an incomplete fix for CVE-2023-30848. An authenticated attacker can disclose database information.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "pimcore",
+          "sql_injection",
+          "information_disclosure",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23492"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-22787",
+        "cvss": "8.7",
+        "product": "html2pdf.js",
+        "description": "Cross-site scripting (XSS) vulnerability when given unsanitized text source, allowing malicious scripts to run on the client browser, risking confidentiality, integrity, and availability of page data.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "html2pdf_js",
+          "xss",
+          "client_side_exploit",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22787"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-23512",
+        "cvss": "8.6",
+        "product": "SumatraPDF",
+        "description": "Untrusted Search Path vulnerability allowing arbitrary code execution via a malicious notepad.exe placed in the application's installation directory.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sumatrapdf",
+          "untrusted_search_path",
+          "rce",
+          "arbitrary_code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23512"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0861",
+        "cvss": "8.4",
+        "product": "GNU C Library",
+        "description": "Integer overflow in memalign suite of functions (versions 2.30 to 2.42), potentially leading to heap corruption.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "gnu_c_library",
+          "integer_overflow",
+          "heap_corruption",
+          "memory_corruption"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0861"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-65397",
+        "cvss": "8.4",
+        "product": "Blurams Flare Camera",
+        "description": "Insecure authentication mechanism in safe_exec.sh startup script. Allows an attacker with physical access to execute arbitrary commands with root privileges if /opt/images/public_key.der is absent, via a crafted auth.ini file on the SD card.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "blurams_flare_camera",
+          "insecure_authentication",
+          "privileges_escalation",
+          "code_execution",
+          "physical_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-65397"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-13444",
+        "cvss": "8.4",
+        "product": "LoadMaster & MOVEit Web Application Firewalls (WAF)",
+        "description": "Command Injection vulnerability in the User Interface (UI) and Application Programming Interface (API), allowing remote attackers to execute malicious code via specially crafted requests.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "loadmaster",
+          "moveit_waf",
+          "command_injection",
+          "rce",
+          "remote_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/command-injection-alert-high-severity-flaws-hit-loadmaster-moveit-waf/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2025-13447",
+        "cvss": "8.4",
+        "product": "LoadMaster & MOVEit Web Application Firewalls (WAF)",
+        "description": "Command Injection vulnerability in the User Interface (UI) and Application Programming Interface (API), allowing remote attackers to execute malicious code via specially crafted requests.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "loadmaster",
+          "moveit_waf",
+          "command_injection",
+          "rce",
+          "remote_code_execution"
+        ],
+        "sources": [
+          "https://securityonline.info/command-injection-alert-high-severity-flaws-hit-loadmaster-moveit-waf/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20952",
+        "cvss": "Critical",
+        "product": "Microsoft Office",
+        "description": "Remote Code Execution (RCE) vulnerability that can be triggered simply by viewing a booby-trapped message in the Preview Pane.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "rce",
+          "remote_code_execution",
+          "preview_pane_exploit"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20953",
+        "cvss": "Critical",
+        "product": "Microsoft Office",
+        "description": "Remote Code Execution (RCE) vulnerability that can be triggered simply by viewing a booby-trapped message in the Preview Pane.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "rce",
+          "remote_code_execution",
+          "preview_pane_exploit"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0891",
+        "cvss": "Exploited",
+        "product": "Mozilla Firefox",
+        "description": "Actively exploited vulnerability in Mozilla Firefox. Can lead to remote arbitrary code execution, remote denial of service, and data confidentiality compromise.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mozilla_firefox",
+          "actively_exploited",
+          "rce",
+          "denial_of_service",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0038/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-0892",
+        "cvss": "Exploited",
+        "product": "Mozilla Firefox",
+        "description": "Actively exploited vulnerability in Mozilla Firefox. Can lead to remote arbitrary code execution, remote denial of service, and data confidentiality compromise.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "mozilla_firefox",
+          "actively_exploited",
+          "rce",
+          "denial_of_service",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0038/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "cve_id": "CVE-2026-20805",
+        "cvss": "5.5",
+        "product": "Microsoft Windows Desktop Window Manager (DWM)",
+        "description": "Information disclosure vulnerability in DWM, actively exploited to bypass ASLR and facilitate other code execution attacks. Allows local disclosure of a section address from a remote ALPC port.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_windows",
+          "desktop_window_manager",
+          "info_disclosure",
+          "actively_exploited",
+          "aslr_bypass",
+          "privileges_escalation"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/",
+          "https://securityaffairs.com/186898/security/u-s-cisa-adds-a-flaw-in-microsoft-windows-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/186888/hacking/microsoft-patch-tuesday-security-updates-for-january-2026-fixed-actively-exploited-zero-day.html"
+        ],
+        "date": "2026-01-15"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ConsentFix debrief: Insights from the new OAuth phishing attack",
+        "description": "This article analyzes the 'ConsentFix' OAuth phishing technique that exploits browser-based authorization flows to hijack Microsoft accounts, including bypassing Multi-Factor Authentication (MFA). The attack combines ClickFix-style social engineering with OAuth phishing. It targets first-party Microsoft apps and has suspected links to APT29. The impact is an identity control bypass and persistent account access.",
+        "threat_actor": "APT29 (suspected linkage)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1621 (Multi-Factor Authentication Request Generation)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "This attack technique is particularly insidious because it bypasses fundamental security controls like MFA by manipulating legitimate authorization flows. It targets Microsoft accounts and can affect a wide range of organizations. The potential involvement of a nation-state actor like APT29 suggests long-term espionage objectives. The 'browser-native' nature of the attack makes traditional security tools less effective, requiring browser monitoring as a detection surface.",
+        "recommandations": [
+          "Implement browser-based behavioral threat detection controls.",
+          "Monitor logs for specific Microsoft Application IDs (00000002-0000-0000-c000-000000000000 for Azure Active Directory and 26a4ae64-5862-427f-a9b0-044e62572a4f for Microsoft Intune Checkin).",
+          "Strengthen credentials and cloud identities, use passwordless solutions like passkeys, and robustly implement MFA.",
+          "Educate users on social engineering and OAuth phishing techniques.",
+          "Implement proactive vulnerability scanning for apps used by employees (ghost logins, MFA gaps, vulnerable passwords)."
+        ],
+        "tags": [
+          "oauth_phishing",
+          "social_engineering",
+          "mfa_bypass",
+          "microsoft_accounts",
+          "identity_security",
+          "apt29",
+          "browser_security"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/consentfix-debrief-insights-from-the-new-oauth-phishing-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "German Manufacturing Under Phishing Attacks: Tracking a Stealthy AsyncRAT Campaign",
+        "description": "The German manufacturing industry is targeted by a stealthy phishing campaign deploying the AsyncRAT Remote Access Trojan (RAT). Manufacturing companies are targeted due to their operational criticality, geographical distribution, and the complexity of their IT and OT environments.",
+        "threat_actor": "AsyncRAT",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)"
+        ],
+        "analyse": "Manufacturers are attractive targets due to the critical nature of their operations. A compromise can lead to significant disruptions in production and the supply chain. The 'stealthy' nature of the AsyncRAT campaign suggests sophisticated evasion techniques, increasing detection difficulty. The geographical impact is Germany, but the manufacturing sector is a global target.",
+        "recommandations": [
+          "Strengthen employee awareness of phishing attacks.",
+          "Implement advanced detection and response solutions to identify RATs.",
+          "Segment IT and OT networks to limit threat propagation.",
+          "Monitor communications and unauthorized access, especially to critical systems."
+        ],
+        "tags": [
+          "phishing",
+          "asyncrat",
+          "manufacturing",
+          "germany",
+          "threat_campaign",
+          "remote_access_trojan"
+        ],
+        "sources": [
+          "/cybersecurity-blog/german-manufacture-attack/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Inside RedVDS: How a single virtual desktop provider fueled worldwide cybercriminal operations",
+        "description": "Microsoft has disrupted RedVDS, a virtual dedicated server (VDS) provider that fueled global cybercriminal operations. RedVDS was used by actors like Storm-2470 (the operator) and Storm-0259, -2227, -1575, -1747 for Business Email Compromise (BEC), mass phishing, account takeover, and financial fraud campaigns. RedVDS infrastructure used cloned Windows images with unique technical fingerprints facilitating detection.",
+        "threat_actor": "Storm-2470, Storm-0259, Storm-2227, Storm-1575, Storm-1747",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "redvds.com",
+            "redvds.pro",
+            "vdspanel.space"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1090.002 (Proxy: SOCKS Proxy)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1083 (File and Directory Discovery)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1567.002 (Exfiltration Over Web Service: Automated Exfiltration)",
+          "T1552 (Unsecured Credentials)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "RedVDS lowered the barrier to entry for cybercriminals by offering cheap, permissive, and anonymous infrastructure. Its large-scale use facilitated thousands of attacks, causing tens of millions of dollars in losses. The VM cloning approach, while cost-effective for attackers, also provided a unique 'fingerprint' for detection. Disrupting this infrastructure is a significant blow against organized cybercrime.",
+        "recommandations": [
+          "Strengthen credentials and cloud identities, use passwordless solutions, and implement MFA.",
+          "Implement social engineering and phishing awareness training for employees.",
+          "Secure email services and enable spoof protection.",
+          "Use secure payment platforms and tighten controls around financial processes to mitigate BEC risks.",
+          "Monitor logs for anomalous hostnames (e.g., WIN-BUNS25TD77J) and other indicators of RedVDS activity."
+        ],
+        "tags": [
+          "redvds",
+          "cybercrime",
+          "infrastructure",
+          "bec",
+          "phishing",
+          "account_takeover",
+          "financial_fraud",
+          "microsoft",
+          "disruption"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Ransomware: Tactical Evolution Fuels Extortion Epidemic",
+        "description": "A new whitepaper from Broadcom reveals a record increase in extortion attacks in 2025, with significant tactical evolution. Total ransomware attacks reached 4,737, but attacks focused solely on data theft (encryptionless) increased by 23% to 6,182. New actors like Akira and Qilin gained prominence after the demise of LockBit and RansomHub. Attackers exploit zero-day vulnerabilities, the software supply chain, and use legitimate tools ('living off the land') like PowerShell and PsExec, as well as dual-use software to minimize detection.",
+        "threat_actor": "Akira, Qilin, Inc, Safepay, DragonForce, Snakefly (aka Cl0p), ShinyHunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-61882"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1021.002 (Remote Services: SMB/Windows Admin Shares)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1567 (Exfiltration Over Web Service)",
+          "T1566 (Phishing)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1083 (File and Directory Discovery)",
+          "T1574 (Hijack Execution Flow)"
+        ],
+        "analyse": "The ransomware landscape is constantly shifting, with a marked shift towards data theft-based extortion, complicating defense. The widespread use of 'living off the land' techniques and dual-use software makes detection more difficult as these activities blend with legitimate network traffic. The exploitation of zero-day vulnerabilities and supply chain attacks increases risk for even well-defended organizations, highlighting the need for robust security not only of one's own network but also of the supply chain.",
+        "recommandations": [
+          "Regularly update software and apply patches, especially for zero-day vulnerabilities.",
+          "Strengthen software supply chain security.",
+          "Implement behavioral monitoring to detect 'living off the land' activities (e.g., abnormal use of PowerShell or PsExec).",
+          "Utilize Endpoint Detection and Response (EDR) and Managed Detection and Response (MDR) solutions.",
+          "Educate employees on phishing and social engineering tactics.",
+          "Implement network segmentation and robust, isolated backups."
+        ],
+        "tags": [
+          "ransomware",
+          "extortion",
+          "data_theft",
+          "zero_day",
+          "supply_chain_attack",
+          "living_off_the_land",
+          "dual_use_software",
+          "threat_landscape"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/ransomware-extortion-epidemic"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "UAC-0190 Attack Detection: Fake Charity Lures Used to Deploy the PLUGGYAPE Backdoor Against the Ukrainian Armed Forces",
+        "description": "CERT-UA disclosed a targeted cyber-espionage campaign against the Ukrainian Armed Forces, carried out by the Russia-aligned actor Void Blizzard (UAC-0190). The attack uses social engineering via fake charity websites to distribute the PLUGGYAPE backdoor. Malware variants have evolved to include MQTT protocol for C2 and anti-analysis/anti-virtualization checks.",
+        "threat_actor": "Void Blizzard (aka Laundry Bear, UAC-0190)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.002 (Application Layer Protocol: File Transfer Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1573 (Encrypted Channel)",
+          "T1090.001 (Proxy: Internal Proxy)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1036 (Masquerading)",
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "The campaign demonstrates continuous adaptation of TTPs by nation-state actors, with sophisticated use of social engineering and evolving malware to target critical entities. Attack personalization and use of the Ukrainian language increase effectiveness. The integration of anti-analysis checks indicates an intent to evade detection by conventional security tools. The impact is espionage and compromise of defense systems.",
+        "recommandations": [
+          "Strengthen user awareness of social engineering risks, particularly concerning charity-themed links or unsolicited attachments.",
+          "Implement email/messaging security solutions to detect and block malicious communications.",
+          "Deploy EDR and SIEM to detect suspicious post-compromise activities, including packaged Python execution and anomalous C2 communications (MQTT).",
+          "Keep systems and software updated to mitigate exploitable vulnerabilities.",
+          "Use detection rules (e.g., Sigma) based on UAC-0190 TTPs and PLUGGYAPE malware indicators."
+        ],
+        "tags": [
+          "cyberespionage",
+          "ukraine",
+          "russia",
+          "void_blizzard",
+          "uac_0190",
+          "pluggyape",
+          "social_engineering",
+          "backdoor",
+          "anti_analysis",
+          "mqtt",
+          "cert_ua",
+          "defense"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186910/intelligence/cert-ua-reports-pluggyape-cyberattacks-on-defense-forces.html",
+          "https://socprime.com/blog/uac-0190-attacks-detection/"
+        ],
+        "date": "2026-01-15"
+      },
+      {
+        "title": "Sicarii Ransomware: Truth vs Myth",
+        "description": "Check Point Research analyzes Sicarii, a new Ransomware-as-a-Service (RaaS) operation that emerged in late 2025. The group distinguishes itself with explicit Israeli/Jewish branding (potentially a false flag) and claims ideological motivations while being profit-driven. Sicarii uses anti-VM techniques, exfiltrates high-value data (ZIP archives via file.io), performs network reconnaissance (RDP scans, exploitation of CVE-2025-64446 on Fortinet), disables AV/VPN products, encrypts files with a '.sicarii' extension, and deploys a destructive script to hinder system recovery.",
+        "threat_actor": "Sicarii Ransomware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-64446"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1497 (Virtualization/Sandbox Evasion)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1560 (Archive Collected Data)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1018 (Remote System Discovery)",
+          "T1046 (Network Service Scanning)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Sicarii presents credible ransomware capability, but its behavior (explicit ideological branding, linguistic inconsistencies, low operational maturity) suggests a 'false flag' operation or an experimental phase rather than a mature, purely financially motivated RaaS. Its targeting and claims are likely disinformation tactics. The exploitation of known vulnerabilities (like Fortinet) underscores the importance of proactive patch management. The impact is financial and operational for victims, with increased difficulty in recovery due to destructive components.",
+        "recommandations": [
+          "Implement Endpoint Protection Platform (EPP/EDR) solutions with anti-VM and behavioral detection capabilities to identify ransomware activities.",
+          "Monitor network traffic for reconnaissance (RDP scans) and data exfiltration to public file-sharing services (file.io).",
+          "Promptly apply security patches, especially for critical vulnerabilities and those known to be exploited by ransomware groups (e.g., CVE-2025-64446 on Fortinet).",
+          "Maintain regular and isolated backups of critical data.",
+          "Implement file and registry integrity monitoring to detect ransomware modifications."
+        ],
+        "tags": [
+          "sicarii",
+          "ransomware",
+          "raas",
+          "false_flag",
+          "data_exfiltration",
+          "network_reconnaissance",
+          "vulnerability_exploitation",
+          "disk_wiping"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/sicarii-ransomware-truth-vs-myth/"
+        ],
+        "date": "2026-01-15"
+      }
+    ]
+  }
+}
