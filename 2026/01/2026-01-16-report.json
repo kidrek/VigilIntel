@@ -1,0 +1,2482 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage de la menace cyber caractérisé par une complexité et une interconnexion croissantes entre les vecteurs d'attaque et les motivations des acteurs. Les tensions géopolitiques continuent d'alimenter les cyberattaques étatiques et les opérations d'espionnage, comme l'illustre l'implication de contracteurs chinois dans la reconnaissance et le ciblage d'infrastructures critiques. La \"balkanisation\" d'Internet et les tentatives d'annexion de territoires montrent une résurgence des dynamiques de puissance, souvent avec une composante cyber.\nLes acteurs malveillants, qu'ils soient étatiques ou criminels, continuent d'innover leurs modes opératoires. Le malware Gootloader utilise des techniques d'évasion sophistiquées (archives ZIP malformées), tandis que les botnets comme AISURU/Kimwolf intègrent l'IA pour diverses activités malveillantes, du DDoS au phishing. L'usage de l'IA par les attaquants est une tendance émergente majeure, allant de la génération de variantes de malwares à des agents autonomes capables de mener des campagnes d'espionnage complètes.\nLes vulnérabilités restent un point d'entrée critique, avec de multiples failles de haute gravité (buffer overflows, injection de commandes OS, XSS) impactant des produits largement utilisés (Canon Printers, FortiSIEM, WordPress plugins) et activement exploitées, y compris des zero-days dans des systèmes comme Windows Desktop Window Manager et Cisco AsyncOS. Les problèmes liés à l'authentification et à la gestion des identités, comme l'exploitation de Net-NTLMv1 ou les failles dans les jetons d'identité Azure, demeurent des cibles privilégiées pour l'escalade de privilèges et la compromission à l'échelle du locataire.\nLes violations de données sont omniprésentes, touchant divers secteurs (services de livraison, santé, éducation, télécommunications) et exposant des millions de dossiers clients et d'informations sensibles. Les menaces internes et les campagnes de ransomware avec exfiltration de données continuent de causer des impacts financiers et réputationnels importants.\nConclusion: L'état général des menaces est marqué par une persistance des tactiques éprouvées (phishing, exploitation de vulnérabilités connues) mais aussi par une sophistication croissante, notamment par l'intégration de l'IA. La convergence des menaces cybercriminelles et étatiques, ainsi que l'impact des tensions géopolitiques sur le cyberespace, nécessitent une approche de défense multicouche, proactive et adaptable, mettant l'accent sur la résilience, la détection précoce, et la collaboration internationale. La supply chain, les identités, et les infrastructures critiques demeurent les cibles prioritaires.",
+      "date": "2026-01-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Gootloader",
+        "secteur": "Non applicable (accès initial généraliste)",
+        "modop": "Utilisation d'archives ZIP malformées (jusqu'à 1 000 parties) pour l'évasion de détection. Persistance via fichiers LNK dans le dossier de démarrage. Activation JScript via Windows Script Host.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "gootloader",
+          "zip_archive",
+          "evasion",
+          "jscript",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/gootloader-now-uses-1-000-part-zip-archives-for- stealthy-delivery/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services de livraison de nourriture (Grubhub), potentiellement autres entreprises utilisant Salesforce/Zendesk",
+        "modop": "Accès aux systèmes, vol de données (Salesforce, Zendesk), demandes d'extorsion (Bitcoin) pour éviter la divulgation de données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "data_breach",
+          "extortion",
+          "ransomware",
+          "salesforce",
+          "zendesk"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grubhub-confirms-hackers-stole-data-in-recent-security-breach/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "Knownsec (contracteur chinois)",
+        "secteur": "Gouvernement, infrastructures critiques, télécommunications, réseaux étrangers",
+        "modop": "Soutien à l'espionnage cyber étatique chinois par la reconnaissance systématique, le balayage à grande échelle, la corrélation de données d'identité. Développement d'outils de balayage internet, identification de vulnérabilités, bases de données de fuites et d'identités.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "knownsec",
+          "china",
+          "state_sponsored",
+          "cyber_espionage",
+          "reconnaissance",
+          "critical_infrastructure",
+          "telecommunications"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "AISURU / Kimwolf botnet",
+        "secteur": "Généraliste (CPEs compromis, boîtiers TV Android)",
+        "modop": "Attaques DDoS (UDP, TCP, GRE floods), abus de proxy, bourrage d'identifiants, web scraping par IA, spamming, phishing. Utilise des fonctions multi-usage et chiffre les données sensibles avec Stack XOR. Utilise DNS over TLS pour masquer la communication. Les opérateurs redessinent le code pour l'évasion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "aisuru",
+          "kimwolf",
+          "ddos",
+          "proxy_abuse",
+          "credential_stuffing",
+          "ai_scraping",
+          "spam",
+          "phishing",
+          "turbomirai"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186918/cyber-crime/lumen-disrupts-aisuru-and-kimwolf-botnet-by-blocking-over-550-c2-servers.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "UAT-8837",
+        "secteur": "Infrastructures critiques en Amérique du Nord",
+        "modop": "APT lié à la Chine. Accès initial via l'exploitation de vulnérabilités (n-day et zero-day, ex: CVE-2025-53690 dans SiteCore) ou l'utilisation d'identifiants compromis. Déploiement d'outils open source (Earthworm, SharpHound, DWAgent, Certipy) pour la collecte d'informations sensibles (identifiants, configurations de sécurité, AD), création de tunnels inverses, exfiltration de DLLs (potentiel de supply chain compromise), reconnaissance AD. Adapte rapidement ses outils.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "critical_infrastructure",
+          "north_america",
+          "vulnerability_exploitation",
+          "stolen_credentials",
+          "reconnaissance",
+          "earthworm",
+          "sharphound",
+          "dwagent",
+          "certipy",
+          "supply_chain",
+          "mitre_t1078",
+          "mitre_t1059",
+          "mitre_t1083",
+          "mitre_t1003"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8837/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "Perun Svaroga",
+        "secteur": "Diffusion radio et télévision (Ukraine)",
+        "modop": "Revendication de fuite de données et divulgation de documentation technique de radiodiffusion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "perun_svaroga",
+          "data_breach",
+          "government",
+          "ukraine",
+          "hacktivist"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900889497442025"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "BROTHERHOOD CAPUNG INDONESIA",
+        "secteur": "Éducation (Inde, Prabharani Institute of Education)",
+        "modop": "Exfiltration de données institutionnelles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "brotherhood_capung_indonesia",
+          "data_exfiltration",
+          "education",
+          "india"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900418092117033"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Gouvernement, Infrastructures Critiques",
+        "theme": "Cyber espionnage étatique et rôle des contracteurs",
+        "description": "Une fuite de documents de Knownsec, un contracteur chinois en cybersécurité, révèle son implication dans l'espionnage cyber étatique. Knownsec aurait développé des outils pour la reconnaissance systématique, le balayage de l'internet, l'identification de vulnérabilités et la corrélation de données d'identité pour le ciblage d'infrastructures critiques, de télécommunications et de gouvernements étrangers.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "cyber_espionage",
+          "knownsec",
+          "state_sponsored",
+          "critical_infrastructure",
+          "telecommunications",
+          "reconnaissance",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Gouvernement, Industrie de la cybersécurité",
+        "theme": "Restrictions logicielles dues aux préoccupations de sécurité nationale",
+        "description": "La Chine a ordonné à ses entreprises nationales de cesser d'utiliser des logiciels de cybersécurité provenant d'entreprises américaines et israéliennes (incluant VMware, Palo Alto Networks, Fortinet, Mandiant, CrowdStrike, SentinelOne, McAfee, Recorded Future, Claroty, Rapid7, Wiz, Check Point, CyberArk, Orca Security, Cato Networks, Imperva). Cette décision est motivée par des préoccupations de sécurité nationale, craignant que la technologie occidentale ne soit utilisée à des fins d'espionnage, dans un contexte de tensions technologiques et diplomatiques accrues.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "usa",
+          "israel",
+          "cybersecurity_policy",
+          "national_security",
+          "tech_tensions",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186920/intelligence/china-bans-u-s-and-israeli-cybersecurity-software-over-security-concerns.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Défense, Relations Internationales",
+        "theme": "Coopération nucléaire franco-britannique",
+        "description": "En juillet 2025, la France et le Royaume-Uni ont signé un accord de coopération nucléaire inédit, créant un groupe de pilotage pour orienter la coopération doctrinale et technologique. Cet accord vise à renforcer la crédibilité de la dissuasion européenne et la visibilité internationale des deux pays, sans fusion des arsenaux ou des chaînes de commandement, en réponse à la dégradation du climat stratégique mondial et à la montée des arsenaux chinois.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "united_kingdom",
+          "nuclear_cooperation",
+          "defense",
+          "deterrence",
+          "european_security",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/accord-de-cooperation-nucleaire-entre-paris-et-londres-fusion-des-forces-ou-alliance-de-souverainetes/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Défense, Industrie",
+        "theme": "Difficultés de la construction de la Base Industrielle et Technologique de Défense (BITD) européenne",
+        "description": "L'article met en évidence la compétition persistante entre partenaires européens dans l'industrie de la défense, malgré les discours sur la souveraineté. Un partenariat franco-belge (programme CaMo) dans le domaine terrestre est un succès, mais des tensions apparaissent dans le secteur aéronautique (choix belge du F-35 américain au détriment du Rafale) et dans la filière des munitions de petit calibre où la France risque de devenir dépendante de l'industriel belge FN Browning.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "france",
+          "belgium",
+          "defense_industry",
+          "bitd",
+          "industrial_competition",
+          "arms_industry",
+          "nato"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/la-difficile-construction-de-la-bitd-europeenne-la-competition-franco-belge-naissante/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Relations Internationales, Défense",
+        "theme": "Stratégie française en Arctique",
+        "description": "La France a mis à jour sa stratégie polaire en décembre 2025, reconnaissant l'importance géopolitique croissante des régions arctique et antarctique. Ces zones, autrefois axées sur la science et l'environnement, sont désormais des théâtres d'intérêts stratégiques et de rapports de force internationaux.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "arctic",
+          "polar_strategy",
+          "national_security",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/arctique-quelle-strategie-francaise/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Relations Internationales, Politique étrangère",
+        "theme": "Tentative d'annexion du Groenland par les États-Unis",
+        "description": "Le président Trump a exprimé son intention d'annexer le Groenland pour des raisons de sécurité nationale. Le Danemark et le Groenland ont envoyé des représentants à Washington pour s'y opposer, soulignant les risques pour l'OTAN et la souveraineté. Des alliés européens, le Canada et l'Australie ont apportent leur soutien à la souveraineté danoise.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "greenland",
+          "denmark",
+          "trump",
+          "annexation",
+          "national_security",
+          "nato",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.iris-france.org/pourquoi-trump-veut-vraiment-le-groenland/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/not-sale-kingdom-denmark-stands-its-ground"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Relations Internationales, Défense",
+        "theme": "Leçons de la guerre Russie-Ukraine et impact sur l'ordre international",
+        "description": "Quatre ans après le début de l'invasion, la guerre en Ukraine révèle que le conflit est un test de volonté et que l'Ukraine n'est pas en train de perdre, malgré les récits dominants. Le rapport critique l'incapacité des politiciens occidentaux à s'engager pleinement pour une victoire ukrainienne et la fragilité des alliances occidentales, exacerbée par des acteurs comme Donald Trump, qui semblent prêts à compromettre l'ordre international.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "ukraine",
+          "international_order",
+          "conflict",
+          "western_response",
+          "nato",
+          "china",
+          "proxy_war"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/four-years-ten-lessons-russias-war-ukraine"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Gouvernement, Infrastructures Critiques",
+        "theme": "Opération militaire avec soutien cyber contre le Venezuela",
+        "description": "En janvier 2026, une opération militaire a mené à l'enlèvement du président du Venezuela. Le Cyber Command des États-Unis est intervenu pour \"créer un chemin\", et le président américain a suggéré que les lumières de Caracas ont été coupées grâce à une \"certaine expertise\" américaine, impliquant des cyberattaques contre les infrastructures critiques et les systèmes de défense étrangers.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "venezuela",
+          "cyber_warfare",
+          "critical_infrastructure",
+          "state_sponsored",
+          "military_operation"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/2026-cyber-threatscape-predictions/"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services de livraison de nourriture",
+        "victime": "Grubhub",
+        "description": "Grubhub a confirmé une violation de données suite à l'accès non autorisé à ses systèmes par des hackers (ShinyHunters), entraînant des demandes d'extorsion. Les acteurs menacent de divulguer des données Salesforce (volées en février 2025) et des données Zendesk (volées plus récemment).",
+        "tags": [
+          "violation",
+          "breach",
+          "grubhub",
+          "food_delivery",
+          "shinyhunters",
+          "ransomware",
+          "extortion",
+          "salesforce",
+          "zendesk",
+          "personal_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grubhub-confirms-hackers-stole-data-in-recent-security-breach/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Éducation, Publication, Médias, Technologie",
+        "victime": "Kyowon Group (conglomérat sud-coréen)",
+        "description": "Le conglomérat sud-coréen Kyowon a été victime d'une attaque par ransomware en janvier, perturbant ses opérations et entraînant l'exfiltration potentielle de données clients (jusqu'à 9,6 millions de comptes). L'attaquant a exploité un port externe exposé pour infiltrer le réseau et se propager.",
+        "tags": [
+          "violation",
+          "breach",
+          "kyowon",
+          "south_korea",
+          "conglomerate",
+          "education",
+          "publishing",
+          "media",
+          "technology",
+          "ransomware",
+          "data_exfiltration",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186964/data-breach/a-ransomware-attack-disrupted-operations-at-south-korean-conglomerate-kyowon.html",
+          "https://infosec.exchange/@DevaOnBreaches/115901976147579796"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Central Maine Healthcare",
+        "description": "Une cyberattaque a exposé les données personnelles, médicales et d'assurance d'environ 145 000 patients. L'accès non autorisé aux systèmes informatiques a eu lieu entre mars et juin 2025. Les données incluaient noms, dates de naissance, détails de traitement, noms des prestataires, informations d'assurance et, pour certains, numéros de sécurité sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "central_maine_healthcare",
+          "patient_data",
+          "medical_data",
+          "insurance_data",
+          "pii",
+          "hipaa"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186959/uncategorized/central-maine-healthcare-data-breach-impacted-over-145000-patients.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Gouvernement (application de la loi), Activisme",
+        "victime": "Agents de l'Immigration and Customs Enforcement (ICE) et Border Patrol",
+        "description": "Un site web (\"ICE List\") dédié à la fuite d'informations personnelles d'agents ICE et Border Patrol a été mis hors ligne suite à une attaque DDoS. Le fondateur du site soupçonne une origine russe pour l'attaque. Des milliers d'informations personnelles avaient été divulguées.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "law_enforcement",
+          "ice",
+          "border_patrol",
+          "personal_data",
+          "doxing",
+          "ddos",
+          "russia",
+          "activism"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/15/website-that-leaked-thousands-of-ice-agents-personal-information-is-down-after-ddos-attack/?pk_campaign=feed&pk_kwd=website-that-leaked-thousands-of-ice-agents-personal-information-is-down-after-ddos-attack"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "JPMorgan (ex-conseiller)",
+        "description": "JPMorgan a accusé un ancien conseiller d'avoir volé des secrets commerciaux et des informations confidentielles (environ 175 profils clients) en accédant de manière suspecte aux systèmes avant sa démission, dans le but de démarcher des clients pour sa nouvelle entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "jpmorgan",
+          "trade_secrets",
+          "confidential_information",
+          "insider_threat",
+          "client_data",
+          "data_theft"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/15/jpmorgan-claims-ex-advisor-in-fla-stole-trade-secrets-to-poach-clients-for-lpl/?pk_campaign=feed&pk_kwd=jpmorgan-claims-ex-advisor-in-fla-stole-trade-secrets-to-poach-clients-for-lpl"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Diffusion radio et télévision",
+        "victime": "Concern for Radio Broadcasting, Radio Communications and Television (Ukraine)",
+        "description": "Le groupe Perun Svaroga revendique une fuite de données et la divulgation de documentation technique de radiodiffusion couvrant la période 2016-2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "ukraine",
+          "broadcasting",
+          "data_exfiltration",
+          "technical_documentation",
+          "perun_svaroga"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900889497442025"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Prabharani Institute of Education (Inde)",
+        "description": "Le groupe BROTHERHOOD CAPUNG INDONESIA revendique l'exfiltration de données institutionnelles de l'institut.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "india",
+          "institutional_data",
+          "data_exfiltration",
+          "brotherhood_capung_indonesia"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900418092117033"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "FREE (France)",
+        "description": "La CNIL a sanctionné l'opérateur Free pour une fuite massive de données, impactant 24 millions d'abonnés, soulevant des questions sur la sécurité des informations clients.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "france",
+          "free",
+          "cnil",
+          "customer_data",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/115900361626188850"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Réseaux sociaux",
+        "victime": "Utilisateurs Instagram",
+        "description": "Des millions de profils Instagram ont été exposés sur le darkweb, rendant les données utilisables pour le phishing et l'usurpation d'identité. ZATAZ avait alerté dès 2024.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "instagram",
+          "darkweb",
+          "phishing",
+          "identity_theft",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/115900189894366997"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14237",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow dans le traitement d'analyse des polices XPS, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14237"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14236",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow dans le traitement des balises d'attribut du carnet d'adresses, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "address_book",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14236"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14235",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow dans le traitement des données fpgm des polices XPS, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "font",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14235"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14234",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow dans le traitement des listes CPCA, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "cpca",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14234"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14233",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Libération invalide de mémoire non initialisée dans le traitement de suppression de fichiers CPCA, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "invalid_free",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "cpca",
+          "memory_access",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14233"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14232",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow dans le traitement XML des fichiers XPS, permettant à un attaquant sur le segment réseau de provoquer un déni de service ou d'exécuter du code arbitraire à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "xml",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14232"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-23550",
+        "cvss": 10.0,
+        "product": "WordPress Modular DS Plugin (versions <= 2.5.1)",
+        "description": "Vulnérabilité d'élévation de privilèges non authentifiée, activement exploitée, permettant de contourner l'authentification à distance et d'accéder aux sites WordPress vulnérables avec des privilèges d'administrateur. La faille est due à une combinaison de plusieurs choix de conception, y compris la correspondance d'itinéraire basée sur l'URL, un mode de 'requête directe' permissif, une authentification basée uniquement sur l'état de la connexion du site et un flux de connexion qui revient automatiquement à un compte administrateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "authentication_bypass",
+          "wordpress",
+          "plugin",
+          "admin_access",
+          "cve_2026_23550",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/critical-wordpress-modular-ds-plugin.html",
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-modular-ds-wordpress-plugin-flaw-for-admin-access/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": null,
+        "product": "Fortinet FortiSIEM",
+        "description": "Vulnérabilité critique d'injection de commande OS, activement exploitée, permettant à un attaquant non authentifié d'écrire des fichiers arbitraires en tant qu'utilisateur admin via des requêtes TCP artisanales vers le port 7900.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "os_command_injection",
+          "rce",
+          "fortinet",
+          "fortisiem",
+          "unauthenticated",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/fortinet-fortisiem-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-20965",
+        "cvss": null,
+        "product": "Windows Admin Center’s Azure Single Sign-On implementation (Azure Extension v0.70.00 et versions antérieures)",
+        "description": "Vulnérabilité de jeton d'identité de haute gravité, due à une validation de jeton inappropriée, exposant les machines virtuelles Azure et les systèmes connectés Arc à un accès non autorisé à l'échelle du locataire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "identity_token",
+          "authentication",
+          "azure",
+          "windows_admin_center",
+          "sso",
+          "tenant_compromise",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/azure-identity-token-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-36911",
+        "cvss": null,
+        "product": "Google Fast Pair protocol (accessoires audio Bluetooth de Google, Jabra, JBL, Logitech, Marshall, Nothing, OnePlus, Sony, Soundcore, et Xiaomi)",
+        "description": "Vulnérabilité critique nommée \"WhisperPair\" permettant aux attaquants de détourner des accessoires audio Bluetooth, de suivre les utilisateurs et d'écouter leurs conversations en forçant l'appairage sans consentement utilisateur, due à une implémentation incorrecte du protocole Fast Pair.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bluetooth",
+          "fast_pair",
+          "audio_accessories",
+          "tracking",
+          "eavesdropping",
+          "authentication_bypass",
+          "critical",
+          "whisperpair"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-flaw-lets-hackers-track-eavesdrop-via-bluetooth-audio-devices/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-1011",
+        "cvss": 8.2,
+        "product": "Altium Support Center (AddComment endpoint)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée due à un manque de désinfection des entrées côté serveur, permettant l'exécution de JavaScript arbitraire dans le navigateur de la victime.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "stored_xss",
+          "input_sanitization",
+          "altium",
+          "support_center",
+          "code_execution",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1011"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": null,
+        "product": "Cisco AsyncOS (appliances Secure Email Gateway (SEG) et Secure Email and Web Manager (SEWM))",
+        "description": "Vulnérabilité de gravité maximale, activement exploitée, permettant l'exécution de commandes arbitraires avec des privilèges root sur le système d'exploitation sous-jacent d'un appareil affecté.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "root_privileges",
+          "cisco",
+          "asyncos",
+          "seg",
+          "sewm",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/15/cisco_fixes_cve_2025_20393/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-20805",
+        "cvss": null,
+        "product": "Microsoft Windows Desktop Window Manager (DWM)",
+        "description": "Vulnérabilité de divulgation d'informations de gravité importante, exploitée activement, permettant à un attaquant localement authentifié d'accéder à des informations sensibles en abusant de la manière dont DWM gère les données système. La CISA a ajouté cette vulnérabilité à son catalogue KEV.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information_disclosure",
+          "windows",
+          "desktop_window_manager",
+          "dwm",
+          "zero_day",
+          "active_exploitation",
+          "cisa_kev"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2026-20805-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2025 Shattered Records: Key Takeaways From the GRIT 2026 Ransomware & Cyber Threat Report",
+        "description": "Le rapport GRIT 2026 révèle une année record pour les attaques par ransomware en 2025, avec une augmentation de 58% du nombre de victimes. Il observe l'adaptation des groupes de ransomware et l'adoption croissante de l'IA/LLM par les acteurs de la menace, bien que son utilisation reste rudimentaire pour les moins matures.",
+        "threat_actor": "Qilin, Akira (mentionnés comme des groupes intermédiaires ayant remplacé LockBit et Alphv)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "Le paysage du ransomware reste dynamique et en croissance, avec une adaptabilité constante des groupes. L'adoption de l'IA par les attaquants est une tendance émergente qui pourrait transformer les opérations futures, bien que son impact soit encore limité pour les acteurs moins sophistiqués.",
+        "recommandations": "Renforcer les programmes de renseignement sur les menaces et les cadres de réponse aux incidents, optimiser les outils SOC pour une meilleure visibilité et un temps de remédiation réduit, et mettre en place une gestion proactive des vulnérabilités et des tests de pénétration.",
+        "tags": [
+          "ransomware",
+          "threat_report",
+          "cybercrime",
+          "ai_in_cybercrime",
+          "llm",
+          "threat_actor",
+          "qilin",
+          "akira",
+          "data_exfiltration",
+          "industry_trends",
+          "mitre_t1486",
+          "mitre_t1560"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/2025-shattered-records-key-takeaways-from-the-grit-2026-ransomware-cyber-threat-report/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "2026 Threatscape report",
+        "description": "Le rapport prédit l'intensification de la \"balkanisation\" d'Internet, l'industrialisation à grande échelle des compromissions de supply chain via l'infiltration basée sur l'identité, l'émergence de malwares \"agents autonomes\" exploitant l'IA, et l'utilisation croissante de l'IA pour la désinformation. Il anticipe aussi des incidents cinétiques résultant de l'exploitation de l'IA dans les secteurs industriels.",
+        "threat_actor": "GTG-1002 (acteur étatique chinois), PROMPTFLUX, PROMPTSTEAL (nouvelles familles de malwares IA), RomCom (évolution vers l'espionnage), Pravda (réseau de désinformation basé à Moscou), CharmingKitten (lié aux Gardiens de la révolution iraniens, mentionné comme exemple de divulgation d'Opération).",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1189 (Drive-by Compromise)",
+          "T1560 (Archive Collected Data)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1078 (Valid Accounts)",
+          "T1098 (Account Manipulation)",
+          "T1071 (Application Layer Protocol)",
+          "T1087 (Account Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1057 (Process Discovery)"
+        ],
+        "analyse": "Le paysage des menaces pour 2026 est marqué par l'impact croissant des tensions géopolitiques, l'utilisation sophistiquée de l'IA par les attaquants pour des campagnes plus autonomes et évasives, et la vulnérabilité persistante des chaînes d'approvisionnement logicielles et SaaS. La désinformation via l'IA représente une menace stratégique pour l'intégrité de l'information.",
+        "recommandations": "Renforcer la résilience contre la fragmentation d'Internet, sécuriser la supply chain par une vigilance accrue sur les bibliothèques logicielles et les intégrations SaaS-to-SaaS, développer des capacités de détection et de réponse aux malwares basés sur l'IA, et mettre en œuvre des stratégies \"assume leak\" pour la protection des données.",
+        "tags": [
+          "threatscape",
+          "predictions",
+          "geopolitics",
+          "internet_balkanization",
+          "supply_chain_attack",
+          "ai_in_cybercrime",
+          "autonomous_agents",
+          "disinformation",
+          "prompt_poisoning",
+          "critical_infrastructure",
+          "kinetic_effects",
+          "state_sponsored",
+          "cyber_espionage",
+          "romcom",
+          "gt_g1002",
+          "promptflux",
+          "promptsteal",
+          "mitre_t1566",
+          "mitre_t1189",
+          "mitre_t1560",
+          "mitre_t1539",
+          "mitre_t1078",
+          "mitre_t1098",
+          "mitre_t1071",
+          "mitre_t1087",
+          "mitre_t1003",
+          "mitre_t1059",
+          "mitre_t1057"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/2026-cyber-threatscape-predictions/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Accord de coopération nucléaire entre Paris et Londres : fusion des forces ou alliance de souverainetés ?",
+        "description": "En juillet 2025, la France et le Royaume-Uni ont signé un accord de coordination nucléaire, établissant un groupe de pilotage pour la coopération doctrinale et technologique. Cet accord vise à renforcer la dissuasion européenne et la stature internationale des deux puissances moyennes, sans fusion de leurs forces armées, en réponse à la détérioration du climat stratégique mondial et à la montée des arsenaux.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Cet accord, davantage politique que militaire, souligne l'importance pour les puissances européennes de réaffirmer leur autonomie stratégique et leur crédibilité face aux menaces mondiales. Il reflète une volonté de cohésion sans pour autant sacrifier la souveraineté nationale, en particulier face à la Russie.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "france",
+          "united_kingdom",
+          "nuclear_cooperation",
+          "defense",
+          "deterrence",
+          "european_security",
+          "international_relations",
+          "nato"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/accord-de-cooperation-nucleaire-entre-paris-et-londres-fusion-des-forces-ou-alliance-de-souverainetes/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Arctique : quelle stratégie française ?",
+        "description": "La France a mis à jour sa stratégie polaire en décembre 2025, reconnaissant l'importance géopolitique croissante des régions arctique et antarctique. Ces zones, autrefois axées sur la science et l'environnement, sont désormais des théâtres d'intérêts stratégiques et de rapports de force internationaux.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "L'Arctique représente un enjeu stratégique majeur, avec des implications pour la sécurité nationale et les ressources naturelles. La nouvelle stratégie française reflète une adaptation à cette réalité géopolitique, soulignant la nécessité d'une présence et d'une influence accrues dans ces régions.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "france",
+          "arctic",
+          "polar_strategy",
+          "national_security",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/arctique-quelle-strategie-francaise/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Closing the Door on Net-NTLMv1: Releasing Rainbow Tables to Accelerate Protocol Deprecation",
+        "description": "Mandiant a publié un vaste ensemble de tables arc-en-ciel pour le protocole Net-NTLMv1 afin de souligner l'urgence de sa dépréciation. Malgré son insécurité connue depuis plus de deux décennies, ce protocole est encore utilisé et permet le vol trivial d'identifiants et l'escalade de privilèges via des attaques de coercition d'authentification (ex: PetitPotam, DFSCoerce).",
+        "threat_actor": "Non applicable (analyse de vulnérabilité)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1558.003 (Steal or Compromise Credential: NTLM Hashes)",
+          "T1003.006 (OS Credential Dumping: DCSync)",
+          "T1550.002 (Use Alternate Authentication Material: Pass the Hash)"
+        ],
+        "analyse": "La persistance de l'utilisation du protocole Net-NTLMv1, malgré sa vulnérabilité, expose les organisations à des risques élevés de compromission d'Active Directory. La publication de ces tables arc-en-ciel abaisse la barrière technique pour les attaquants, rendant l'exploitation plus accessible.",
+        "recommandations": "Désactiver immédiatement l'utilisation de Net-NTLMv1 via les politiques de groupe ou locales (configurer le niveau d'authentification LAN Manager sur \"Envoyer la réponse NTLMv2 uniquement\"). Surveiller les journaux d'événements (ID 4624) pour détecter l'utilisation de NTLMv1/LM.",
+        "tags": [
+          "vulnerability",
+          "authentication",
+          "net_ntlmv1",
+          "credential_theft",
+          "privilege_escalation",
+          "active_directory",
+          "dcsync",
+          "rainbow_tables",
+          "mitigation",
+          "protocol_deprecation",
+          "mitre_t1558_003",
+          "mitre_t1003_006",
+          "mitre_t1550_002"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Flipping one bit leaves AMD CPUs open to VM vuln",
+        "description": "Une vulnérabilité critique nommée \"StackWarp\" a été découverte dans les CPUs AMD, affectant l'environnement de virtualisation sécurisée (AMD SEV-SNP). Elle permet à un attaquant interne malveillant de récupérer des clés privées cryptographiques, de contourner l'authentification OpenSSH et d'escalader les privilèges dans les machines virtuelles, en manipulant le pointeur de pile via un bit de contrôle non documenté.",
+        "threat_actor": "Malicious insider (attaquant interne)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1548.001 (Abuse Elevation Control: Bypass User Account Control)",
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "Cette découverte met en question l'intégrité de l'isolation des machines virtuelles sur les plateformes AMD, même avec des fonctionnalités de sécurité avancées comme SEV-SNP. La vulnérabilité souligne que la virtualisation sécurisée est complexe et que les attaques sur micro-architecture restent une menace persistante, en particulier avec SMT activé.",
+        "recommandations": "Surveiller l'activité des \"insiders\" dans les environnements virtualisés. Évaluer les configurations SMT (Simultaneous Multithreading) dans les environnements AMD SEV-SNP. Appliquer les correctifs du fournisseur dès qu'ils sont disponibles.",
+        "tags": [
+          "vulnerability",
+          "amd_cpu",
+          "stackwarp",
+          "virtualization",
+          "vm_isolation",
+          "sev_snp",
+          "privilege_escalation",
+          "credential_theft",
+          "malicious_insider",
+          "microarchitecture_attack",
+          "mitre_t1078",
+          "mitre_t1078_003",
+          "mitre_t1548_001",
+          "mitre_t1003",
+          "mitre_t1059"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/15/stackwarp_bug_amd_cpus/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Four Years On – Ten Lessons from Russia’s War in Ukraine",
+        "description": "Après quatre ans, la guerre en Ukraine révèle que le conflit est un test de volonté et que l'Ukraine n'est pas en train de perdre, malgré les récits dominants. Le rapport critique l'incapacité des politiciens occidentaux à s'engager pleinement pour une victoire ukrainienne et la fragilité des alliances occidentales, exacerbée par des acteurs comme Donald Trump, qui semblent prêts à compromettre l'ordre international.",
+        "threat_actor": "Non applicable (analyse de conflit)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "L'analyse met en évidence les lacunes de la stratégie occidentale face à la Russie, la résilience de l'Ukraine et la nécessité d'une approche cohérente et déterminée pour maintenir l'ordre international fondé sur des règles. Les divisions internes et les visions politiques divergentes en Occident menacent de redéfinir les relations internationales vers une approche plus réaliste et moins libérale.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "russia",
+          "ukraine",
+          "war",
+          "international_order",
+          "western_response",
+          "nato",
+          "conflict_analysis",
+          "geopolitical_lessons"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/four-years-ten-lessons-russias-war-ukraine"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Gootloader now uses 1,000-part ZIP archives for stealthy delivery",
+        "description": "Le malware Gootloader utilise des archives ZIP malformées (jusqu'à 1 000 parties) pour échapper à la détection et obtenir un accès initial. Une fois exécuté via JScript, il établit une persistance via des fichiers LNK dans le dossier de démarrage.",
+        "threat_actor": "Gootloader",
+        "indicator_of_compromise": {
+          "YARA_RULE": [
+            "expel_gootloader_zip_archives"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.005 (Command and Scripting Interpreter: Visual Basic Script)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Le Gootloader continue d'évoluer ses techniques d'évasion, en ciblant les mécanismes de détection des archives. Cela souligne l'importance des outils d'analyse comportementale et des règles de détection basées sur les anomalies structurelles pour contrer les menaces d'accès initial.",
+        "recommandations": "Utiliser des règles YARA pour identifier les archives ZIP malformées. Renforcer la détection comportementale des scripts s'exécutant via Windows Script Host. Sensibiliser les utilisateurs aux pièces jointes suspectes.",
+        "tags": [
+          "malware",
+          "gootloader",
+          "zip_archive",
+          "evasion",
+          "initial_access",
+          "jscript",
+          "persistence",
+          "threat_actor",
+          "mitre_t1566_001",
+          "mitre_t1059_005",
+          "mitre_t1547_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/gootloader-now-uses-1-000-part-zip-archives-for-stealthy-delivery/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Knownsec leak uncovers China’s contractor-led cyber espionage",
+        "description": "Des documents internes de l'entreprise chinoise de cybersécurité Knownsec, récemment divulgués, révèlent son soutien à des opérations d'espionnage cyber étatique. Knownsec a développé des outils pour la reconnaissance systématique, le balayage de l'internet, l'identification de vulnérabilités et la corrélation de données d'identité, ciblant les infrastructures critiques, les télécommunications et les gouvernements étrangers.",
+        "threat_actor": "Knownsec (contracteur chinois lié à l'État)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1595.001 (Active Scanning: Scanning IP Blocks)",
+          "T1592 (Gather Victim Org Information)",
+          "T1590 (Gather Victim Network Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "Le rôle des contracteurs privés dans l'espionnage étatique renforce la capacité opérationnelle des acteurs alignés sur les États. La reconnaissance continue et à grande échelle, combinée à l'exploitation de vastes ensembles de données de fuites, réduit la fenêtre de défense et augmente les risques pour toute organisation avec une infrastructure exposée ou des contrôles d'identité faibles.",
+        "recommandations": "Renforcer la sécurité des identités par l'authentification multifacteur, éliminer les services externes non nécessaires, segmenter les interfaces de gestion. Améliorer les capacités de détection du balayage et de la reconnaissance, appliquer rapidement les correctifs pour les vulnérabilités à haut risque, et contrôler strictement les comptes à privilèges.",
+        "tags": [
+          "cyber_espionage",
+          "china",
+          "knownsec",
+          "state_sponsored",
+          "reconnaissance",
+          "critical_infrastructure",
+          "telecommunications",
+          "government",
+          "supply_chain",
+          "vulnerability_identification",
+          "data_correlation",
+          "mitre_t1595_001",
+          "mitre_t1592",
+          "mitre_t1590",
+          "mitre_t1598"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "La difficile construction de la BITD européenne : la compétition franco-belge naissante",
+        "description": "L'article examine les défis de la construction d'une Base Industrielle et Technologique de Défense (BITD) européenne, en se concentrant sur les tensions entre la France et la Belgique. Alors que la coopération terrestre (programme CaMo) est un succès, des divergences apparaissent dans l'aéronautique (choix belge du F-35) et la filière des munitions de petit calibre, où la France risque une dépendance croissante envers l'industrie belge.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "La fragmentation et la compétition au sein de l'industrie de la défense européenne sapent les efforts d'autonomie stratégique. La dépendance envers des fournisseurs étrangers, même européens, pour des capacités critiques comme les munitions de petit calibre, représente un risque pour la souveraineté nationale et la résilience en cas de conflit.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "europe",
+          "france",
+          "belgium",
+          "defense_industry",
+          "bitd",
+          "industrial_competition",
+          "arms_industry",
+          "national_sovereignty",
+          "supply_chain",
+          "nato"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/la-difficile-construction-de-la-bitd-europeenne-la-competition-franco-belge-naissante/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Lumen disrupts AISURU and Kimwolf botnet by blocking over 550 C2 servers",
+        "description": "Black Lotus Labs de Lumen a perturbé les botnets AISURU et Kimwolf en bloquant plus de 550 serveurs de commande et contrôle (C2). Ces botnets de type TurboMirai sont utilisés pour des attaques DDoS, l'abus de proxy, le bourrage d'identifiants, le web scraping par IA, le spam et le phishing. Kimwolf cible principalement les boîtiers TV Android et s'est rapidement développé.",
+        "threat_actor": "AISURU, Kimwolf",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "194.46.59.169"
+          ],
+          "DOMAIN": [
+            "proxy-sdk.14emeliaterracewestroxburyma02132.su",
+            "client.14emeliaterracewestroxburyma02132.su"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1498 (Denial of Service: Distributed Denial of Service)",
+          "T1583.001 (Acquire Infrastructure: Domains)",
+          "T1133 (External Remote Services)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "La perturbation de ces botnets met en évidence l'efficacité des efforts collaboratifs entre les entreprises de cybersécurité pour démanteler les infrastructures de cybercrime. La capacité de ces botnets à intégrer l'IA pour des activités malveillantes et à s'adapter rapidement aux mesures de défense pose un défi continu.",
+        "recommandations": "Surveiller le trafic réseau pour détecter les communications C2 anormales (notamment DNS over TLS), mettre en œuvre des mesures anti-DDoS robustes, et protéger les appareils IoT et Android contre les compromissions. Collaborer avec les fournisseurs de services pour bloquer les serveurs C2 connus.",
+        "tags": [
+          "botnet",
+          "aisuru",
+          "kimwolf",
+          "ddos",
+          "proxy_abuse",
+          "cybercrime",
+          "threat_actor",
+          "c2_disruption",
+          "turbomirai",
+          "android_malware",
+          "ai_in_cybercrime",
+          "mitre_t1071_001",
+          "mitre_t1071_004",
+          "mitre_t1498",
+          "mitre_t1583_001",
+          "mitre_t1133",
+          "mitre_t1090_003",
+          "mitre_t1003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186918/cyber-crime/lumen-disrupts-aisuru-and-kimwolf-botnet-by-blocking-over-550-c2-servers.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Not for Sale – the Kingdom of Denmark Stands its Ground",
+        "description": "Le Danemark et le Groenland ont réussi à s'opposer aux intentions du président Trump d'acquérir le Groenland, soulignant l'importance de la souveraineté et de l'unité. Une diplomatie habile, le soutien d'alliés internationaux (Europe, Canada, Australie) et le désaccord bipartisan aux États-Unis ont aidé à contrecarrer cette initiative, affirmant que l'avenir du Groenland est une décision des Groenlandais et des Danois.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Cette situation illustre la complexité des relations internationales et la résilience des petits États face aux pressions des grandes puissances. Elle met en lumière l'importance de la diplomatie, de la solidarité internationale et du respect de la souveraineté nationale dans la gestion des tensions géopolitiques.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "denmark",
+          "greenland",
+          "usa",
+          "trump",
+          "annexation",
+          "sovereignty",
+          "international_relations",
+          "nato",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/not-sale-kingdom-denmark-stands-its-ground"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Pourquoi Trump veut vraiment le Groenland ?",
+        "description": "L'article explore les motivations derrière l'intention déclarée du président Trump d'annexer le Groenland pour des raisons de sécurité nationale. Cette démarche, perçue comme une attaque contre un allié (Danemark), met en lumière les tensions géopolitiques autour des ressources stratégiques et de l'influence dans l'Arctique, avec des implications pour l'OTAN.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "La proposition d'annexion du Groenland par les États-Unis révèle des enjeux géopolitiques profonds liés à la sécurité, aux ressources et à l'équilibre des alliances. Cette situation pourrait déstabiliser les relations internationales et remettre en question le fonctionnement d'organisations comme l'OTAN.",
+        "recommandations": "Non applicables (article de politique/géopolitique)",
+        "tags": [
+          "geopolitics",
+          "usa",
+          "greenland",
+          "denmark",
+          "trump",
+          "annexation",
+          "national_security",
+          "nato",
+          "international_relations",
+          "arctic"
+        ],
+        "sources": [
+          "https://www.iris-france.org/pourquoi-trump-veut-vraiment-le-groenland/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "UAT-8837 targets critical infrastructure sectors in North America",
+        "description": "UAT-8837, un acteur de menace persistante avancée (APT) lié à la Chine, cible activement les organisations d'infrastructures critiques en Amérique du Nord. Il exploite des vulnérabilités (y compris des zero-days comme CVE-2025-53690) ou des identifiants compromis, et utilise des outils open source (Earthworm, SharpHound, DWAgent, Certipy) pour la reconnaissance, l'exfiltration de données sensibles, et la persistance.",
+        "threat_actor": "UAT-8837",
+        "indicator_of_compromise": {
+          "SHA256": [
+            "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+            "a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91",
+            "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "41f14d86bcaf8e949160ee2731802523e0c76fea87adf00ee7fe9567c3cec610",
+            "47ecaab5cd6b26fe18d9759a9392bce81ba379817c53a3a468fe9060a076f8ca"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1572 (Protocol Tunneling)",
+          "T1003 (OS Credential Dumping)",
+          "T1083 (File and Directory Discovery)",
+          "T1057 (Process Discovery)",
+          "T1046 (Network Service Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1087.002 (Account Discovery: Domain Account)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "Cet APT représente une menace significative pour la stabilité des infrastructures critiques en Amérique du Nord, avec une capacité avérée à exploiter des vulnérabilités de jour zéro et à s'adapter rapidement pour éviter la détection. L'exfiltration de DLLs de produits victimes soulève des préoccupations de compromission de la chaîne d'approvisionnement.",
+        "recommandations": "Maintenir les systèmes à jour avec les derniers correctifs, surveiller les outils et comportements décrits dans le rapport, utiliser des règles de détection actualisées, chasser proactivement les IoCs et les activités d'utilisateur/compte inhabituelles, et appliquer une gestion robuste des identifiants et des privilèges.",
+        "tags": [
+          "apt",
+          "china",
+          "critical_infrastructure",
+          "north_america",
+          "threat_actor",
+          "zero_day",
+          "vulnerability_exploitation",
+          "earthworm",
+          "sharphound",
+          "dwagent",
+          "certipy",
+          "supply_chain",
+          "reconnaissance",
+          "mitre_t1078",
+          "mitre_t1190",
+          "mitre_t1059_003",
+          "mitre_t1572",
+          "mitre_t1003",
+          "mitre_t1083",
+          "mitre_t1057",
+          "mitre_t1046",
+          "mitre_t1018",
+          "mitre_t1087_002",
+          "mitre_t1486",
+          "mitre_t1041"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8837/"
+        ],
+        "date": "2026-01-16"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals a cybersecurity threat landscape characterized by increasing complexity and interconnectedness between attack vectors and actor motivations. Geopolitical tensions continue to fuel state-sponsored cyberattacks and espionage operations, as illustrated by the involvement of Chinese contractors in reconnaissance and targeting of critical infrastructure. The \"balkanization\" of the Internet and attempts to annex territories show a resurgence of power dynamics, often with a cyber component.\nMalicious actors, whether state-sponsored or criminal, continue to innovate their modus operandi. Gootloader malware employs sophisticated evasion techniques (malformed ZIP archives), while botnets like AISURU/Kimwolf integrate AI for various malicious activities, from DDoS to phishing. The use of AI by attackers is a major emerging trend, ranging from generating malware variants to autonomous agents capable of conducting full espionage campaigns.\nVulnerabilities remain a critical entry point, with multiple high-severity flaws (buffer overflows, OS command injection, XSS) impacting widely used products (Canon Printers, FortiSIEM, WordPress plugins) and actively exploited, including zero-days in systems like Windows Desktop Window Manager and Cisco AsyncOS. Issues related to authentication and identity management, such as the exploitation of Net-NTLMv1 or flaws in Azure identity tokens, remain prime targets for privilege escalation and tenant-wide compromise.\nData breaches are pervasive, affecting various sectors (food delivery, healthcare, education, telecommunications) and exposing millions of customer records and sensitive information. Insider threats and ransomware campaigns with data exfiltration continue to cause significant financial and reputational impacts.\nConclusion: The overall state of threats is marked by the persistence of proven tactics (phishing, exploitation of known vulnerabilities) but also by increasing sophistication, particularly through the integration of AI. The convergence of cybercriminal and state-sponsored threats, as well as the impact of geopolitical tensions on cyberspace, necessitates a multi-layered, proactive, and adaptable defense approach, emphasizing resilience, early detection, and international collaboration. The supply chain, identities, and critical infrastructure remain priority targets.",
+      "date": "2026-01-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Gootloader",
+        "secteur": "Not applicable (general initial access)",
+        "modop": "Uses malformed ZIP archives (up to 1,000 parts) for detection evasion. Establishes persistence via LNK files in the Startup folder. JScript activation via Windows Script Host.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "gootloader",
+          "zip_archive",
+          "evasion",
+          "jscript",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/gootloader-now-uses-1-000-part-zip-archives-for-stealthy-delivery/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Food delivery services (Grubhub), potentially other companies using Salesforce/Zendesk",
+        "modop": "System access, data theft (Salesforce, Zendesk), extortion demands (Bitcoin) to prevent data release.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "data_breach",
+          "extortion",
+          "ransomware",
+          "salesforce",
+          "zendesk"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grubhub-confirms-hackers-stole-data-in-recent-security-breach/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "Knownsec (Chinese contractor)",
+        "secteur": "Government, critical infrastructure, telecommunications, foreign networks",
+        "modop": "Supports Chinese state-aligned cyber espionage through systematic reconnaissance, large-scale scanning, and identity data correlation. Developed tools for internet-wide scanning, vulnerability identification, and databases of breach and identity information.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "knownsec",
+          "china",
+          "state_sponsored",
+          "cyber_espionage",
+          "reconnaissance",
+          "critical_infrastructure",
+          "telecommunications"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "AISURU / Kimwolf botnet",
+        "secteur": "General (compromised CPEs, Android TV boxes)",
+        "modop": "DDoS attacks (UDP, TCP, GRE floods), proxy abuse, credential stuffing, AI-driven web scraping, spamming, phishing. Uses multi-use functions and encrypts sensitive data with Stack XOR. Uses DNS over TLS for communication stealth. Operators redesign code for evasion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "aisuru",
+          "kimwolf",
+          "ddos",
+          "proxy_abuse",
+          "credential_stuffing",
+          "ai_scraping",
+          "spam",
+          "phishing",
+          "turbomirai"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186918/cyber-crime/lumen-disrupts-aisuru-and-kimwolf-botnet-by-blocking-over-550-c2-servers.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "UAT-8837",
+        "secteur": "Critical infrastructure in North America",
+        "modop": "China-nexus APT. Initial access via vulnerability exploitation (n-day and zero-day, e.g., CVE-2025-53690 in SiteCore) or compromised credentials. Deploys open-source tools (Earthworm, SharpHound, DWAgent, Certipy) for sensitive information collection (credentials, security configurations, AD), reverse tunnel creation, DLL exfiltration (potential supply chain compromise), AD reconnaissance. Rapidly adapts tools.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "critical_infrastructure",
+          "north_america",
+          "vulnerability_exploitation",
+          "stolen_credentials",
+          "reconnaissance",
+          "earthworm",
+          "sharphound",
+          "dwagent",
+          "certipy",
+          "supply_chain",
+          "mitre_t1078",
+          "mitre_t1059",
+          "mitre_t1083",
+          "mitre_t1003"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8837/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "Perun Svaroga",
+        "secteur": "Radio and television broadcasting (Ukraine)",
+        "modop": "Claims data breach and disclosure of technical broadcasting documentation.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "perun_svaroga",
+          "data_breach",
+          "government",
+          "ukraine",
+          "hacktivist"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900889497442025"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "nom": "BROTHERHOOD CAPUNG INDONESIA",
+        "secteur": "Education (India, Prabharani Institute of Education)",
+        "modop": "Exfiltration of institutional data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "brotherhood_capung_indonesia",
+          "data_exfiltration",
+          "education",
+          "india"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900418092117033"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Government, Critical Infrastructure",
+        "theme": "State-sponsored cyber espionage and the role of contractors",
+        "description": "Leaked documents from Chinese cybersecurity contractor Knownsec reveal its involvement in state-aligned cyber espionage. Knownsec allegedly developed tools for systematic reconnaissance, internet-wide scanning, vulnerability identification, and identity data correlation to target foreign networks, including critical infrastructure, telecommunications, and government environments.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "cyber_espionage",
+          "knownsec",
+          "state_sponsored",
+          "critical_infrastructure",
+          "telecommunications",
+          "reconnaissance",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Government, Cybersecurity Industry",
+        "theme": "Software restrictions due to national security concerns",
+        "description": "China has ordered its domestic companies to stop using cybersecurity software from U.S. and Israeli firms (including VMware, Palo Alto Networks, Fortinet, Mandiant, CrowdStrike, SentinelOne, McAfee, Recorded Future, Claroty, Rapid7, Wiz, Check Point, CyberArk, Orca Security, Cato Networks, Imperva). This decision is driven by national security concerns, fearing Western technology could be used for espionage, amidst rising tech and diplomatic tensions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "usa",
+          "israel",
+          "cybersecurity_policy",
+          "national_security",
+          "tech_tensions",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186920/intelligence/china-bans-u-s-and-israeli-cybersecurity-software-over-security-concerns.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Defense, International Relations",
+        "theme": "Franco-British nuclear cooperation",
+        "description": "In July 2025, France and the UK signed an unprecedented nuclear cooperation agreement, establishing a steering group to guide doctrinal and technological cooperation. This agreement aims to strengthen European deterrence and the international standing of both countries, without merging arsenals or command chains, in response to the deteriorating global strategic climate and rising arsenals.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "united_kingdom",
+          "nuclear_cooperation",
+          "defense",
+          "deterrence",
+          "european_security",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/accord-de-cooperation-nucleaire-entre-paris-et-londres-fusion-des-forces-ou-alliance-de-souverainetes/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Defense, Industry",
+        "theme": "Challenges in building the European Defense Industrial and Technological Base (EDTIB)",
+        "description": "The article highlights persistent competition among European partners in the defense industry, despite calls for sovereignty. While Franco-Belgian cooperation (CaMo program) in the land sector is a success, divergences are appearing in the aerospace sector (Belgium's choice of the F-35 over the Rafale) and in the small-caliber ammunition sector, where France risks increasing dependence on the Belgian manufacturer FN Browning.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "europe",
+          "france",
+          "belgium",
+          "defense_industry",
+          "bitd",
+          "industrial_competition",
+          "arms_industry",
+          "nato"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/la-difficile-construction-de-la-bitd-europeenne-la-competition-franco-belge-naissante/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "International Relations, Defense",
+        "theme": "French Arctic strategy",
+        "description": "France updated its polar strategy in December 2025, acknowledging the growing geopolitical importance of the Arctic and Antarctic regions. These areas, once focused on science and environment, are now theaters of affirmed strategic interests and international power struggles.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "france",
+          "arctic",
+          "polar_strategy",
+          "national_security",
+          "international_relations"
+        ],
+        "sources": [
+          "https://www.iris-france.org/arctique-quelle-strategie-francaise/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "International Relations, Foreign Policy",
+        "theme": "US attempt to annex Greenland",
+        "description": "President Trump expressed his intention to annex Greenland for national security reasons. Denmark and Greenland sent representatives to Washington to oppose it, highlighting risks to NATO and sovereignty. European allies, Canada, and Australia supported Danish sovereignty.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "greenland",
+          "denmark",
+          "trump",
+          "annexation",
+          "national_security",
+          "nato",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.iris-france.org/pourquoi-trump-veut-vraiment-le-groenland/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/not-sale-kingdom-denmark-stands-its-ground"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "International Relations, Defense",
+        "theme": "Lessons from the Russia-Ukraine war and impact on international order",
+        "description": "Four years into the invasion, the war in Ukraine reveals that the conflict is a test of will and that Ukraine is not losing, despite prevailing narratives. The report criticizes Western politicians' inability to fully commit to a Ukrainian victory and the fragility of Western alliances, exacerbated by actors like Donald Trump, who seem willing to compromise the international order.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "ukraine",
+          "international_order",
+          "conflict",
+          "western_response",
+          "nato",
+          "china",
+          "proxy_war"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/four-years-ten-lessons-russias-war-ukraine"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Government, Critical Infrastructure",
+        "theme": "Military operation with cyber support against Venezuela",
+        "description": "In January 2026, a military operation led to the abduction of Venezuela's president. The U.S. Cyber Command intervened to \"create a pathway,\" and the U.S. president suggested that Caracas' lights were largely turned off due to U.S. \"expertise,\" implying cyberattacks against critical infrastructure and foreign defense systems.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "usa",
+          "venezuela",
+          "cyber_warfare",
+          "critical_infrastructure",
+          "state_sponsored",
+          "military_operation"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/2026-cyber-threatscape-predictions/"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Food delivery services",
+        "victime": "Grubhub",
+        "description": "Grubhub confirmed a data breach after hackers (ShinyHunters) gained unauthorized access to its systems, leading to extortion demands. The threat actors are threatening to release older Salesforce data (stolen February 2025) and newer Zendesk data (stolen in the recent breach).",
+        "tags": [
+          "violation",
+          "breach",
+          "grubhub",
+          "food_delivery",
+          "shinyhunters",
+          "ransomware",
+          "extortion",
+          "salesforce",
+          "zendesk",
+          "personal_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/grubhub-confirms-hackers-stole-data-in-recent-security-breach/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Education, Publishing, Media, Technology",
+        "victime": "Kyowon Group (South Korean conglomerate)",
+        "description": "The South Korean conglomerate Kyowon was hit by a ransomware attack in January, disrupting operations and potentially leading to the exfiltration of customer data (up to 9.6 million accounts). The attacker exploited an exposed external port to infiltrate the network and spread laterally.",
+        "tags": [
+          "violation",
+          "breach",
+          "kyowon",
+          "south_korea",
+          "conglomerate",
+          "education",
+          "publishing",
+          "media",
+          "technology",
+          "ransomware",
+          "data_exfiltration",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186964/data-breach/a-ransomware-attack-disrupted-operations-at-south-korean-conglomerate-kyowon.html",
+          "https://infosec.exchange/@DevaOnBreaches/115901976147579796"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Central Maine Healthcare",
+        "description": "A cyberattack exposed the personal, medical, and insurance data of approximately 145,000 patients. Unauthorized access to IT systems occurred between March and June 2025. Data included names, birth dates, treatment details, provider names, insurance information, and in some cases, Social Security numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "central_maine_healthcare",
+          "patient_data",
+          "medical_data",
+          "insurance_data",
+          "pii",
+          "hipaa"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186959/uncategorized/central-maine-healthcare-data-breach-impacted-over-145000-patients.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Government (law enforcement), Activism",
+        "victime": "Immigration and Customs Enforcement (ICE) officers and Border Patrol agents",
+        "description": "A website (\"ICE List\") dedicated to leaking personal information of ICE and Border Patrol agents was taken down after a DDoS attack. The site's founder suspects a Russian origin for the attack. Thousands of personal details had been disclosed.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "law_enforcement",
+          "ice",
+          "border_patrol",
+          "personal_data",
+          "doxing",
+          "ddos",
+          "russia",
+          "activism"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/15/website-that-leaked-thousands-of-ice-agents-personal-information-is-down-after-ddos-attack/?pk_campaign=feed&pk_kwd=website-that-leaked-thousands-of-ice-agents-personal-information-is-down-after-ddos-attack"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Financial services",
+        "victime": "JPMorgan (ex-advisor)",
+        "description": "JPMorgan accused a former advisor of stealing trade secrets and confidential information (approximately 175 client profiles) by suspiciously accessing systems before his resignation, with the intent to solicit clients for his new firm.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "jpmorgan",
+          "trade_secrets",
+          "confidential_information",
+          "insider_threat",
+          "client_data",
+          "data_theft"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/15/jpmorgan-claims-ex-advisor-in-fla-stole-trade-secrets-to-poach-clients-for-lpl/?pk_campaign=feed&pk_kwd=jpmorgan-claims-ex-advisor-in-fla-stole-trade-secrets-to-poach-clients-for-lpl"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Radio and television broadcasting",
+        "victime": "Concern for Radio Broadcasting, Radio Communications and Television (Ukraine)",
+        "description": "The Perun Svaroga group claims a data breach and the disclosure of technical broadcasting documentation covering the period 2016-2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "ukraine",
+          "broadcasting",
+          "data_exfiltration",
+          "technical_documentation",
+          "perun_svaroga"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900889497442025"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Prabharani Institute of Education (India)",
+        "description": "The BROTHERHOOD CAPUNG INDONESIA group claims exfiltration of institutional data from the institute.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "india",
+          "institutional_data",
+          "data_exfiltration",
+          "brotherhood_capung_indonesia"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115900418092117033"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "FREE (France)",
+        "description": "The CNIL sanctioned the French operator Free for a massive data leak, affecting 24 million subscribers, raising questions about the security of customer information.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "france",
+          "free",
+          "cnil",
+          "customer_data",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/115900361626188850"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "secteur": "Social Media",
+        "victime": "Instagram users",
+        "description": "Millions of Instagram profiles were exposed on the dark web, making the data usable for phishing and identity theft. ZATAZ had warned about this as early as 2024.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "instagram",
+          "darkweb",
+          "phishing",
+          "identity_theft",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/115900189894366997"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14237",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow in XPS font parse processing, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14237"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14236",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow in Address Book attribute tag processing, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "address_book",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14236"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14235",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow in XPS font fpgm data processing, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "font",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14235"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14234",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow in CPCA list processing, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "cpca",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14234"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14233",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Invalid free in CPCA file deletion processing on Small Office Multifunction Printers and Laser Printers, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "invalid_free",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "cpca",
+          "memory_access",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14233"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-14232",
+        "cvss": 9.8,
+        "product": "Canon Small Office Multifunction Printers and Laser Printers (Satera LBP670C Series, Satera MF750C Series, Color imageCLASS LBP630C, Color imageCLASS MF650C Series, imageCLASS LBP230 Series, imageCLASS X LBP1238 II, imageCLASS MF450 Series, imageCLASS X MF1238 II, imageCLASS X MF1643i II, imageCLASS X MF1643iF II, i-SENSYS LBP630C Series, i-SENSYS MF650C Series, i-SENSYS LBP230 Series, 1238P II, 1238Pr II, i-SENSYS MF450 Series, i-SENSYS MF550 Series, 1238i II, 1238iF II, imageRUNNER 1643i II, imageRUNNER 1643iF II firmware v06.02 and earlier)",
+        "description": "Buffer overflow in XML processing of XPS file, which may allow an attacker on the network segment to trigger the affected product being unresponsive or to execute arbitrary code remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "denial_of_service",
+          "canon",
+          "printers",
+          "xps",
+          "xml",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-14232"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-23550",
+        "cvss": 10.0,
+        "product": "WordPress Modular DS Plugin (versions <= 2.5.1)",
+        "description": "An actively exploited unauthenticated privilege escalation vulnerability, allowing an attacker to remotely bypass authentication and gain admin-level privileges on vulnerable WordPress sites. The flaw results from a combination of design choices, including URL-based route matching, a permissive 'direct request' mode, authentication based solely on site connection status, and a login flow that automatically defaults to an administrator account.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "authentication_bypass",
+          "wordpress",
+          "plugin",
+          "admin_access",
+          "cve_2026_23550",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/critical-wordpress-modular-ds-plugin.html",
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-modular-ds-wordpress-plugin-flaw-for-admin-access/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": null,
+        "product": "Fortinet FortiSIEM",
+        "description": "Critical OS command injection vulnerability, actively exploited, allowing an unauthenticated attacker to write arbitrary files as the admin user via crafted TCP requests to port 7900.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "os_command_injection",
+          "rce",
+          "fortinet",
+          "fortisiem",
+          "unauthenticated",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/fortinet-fortisiem-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-20965",
+        "cvss": null,
+        "product": "Windows Admin Center’s Azure Single Sign-On implementation (Azure Extension v0.70.00 and below)",
+        "description": "High-severity identity token vulnerability, caused by improper token validation, exposing Azure virtual machines and Arc-connected systems to unauthorized tenant-wide access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "identity_token",
+          "authentication",
+          "azure",
+          "windows_admin_center",
+          "sso",
+          "tenant_compromise",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/azure-identity-token-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-36911",
+        "cvss": null,
+        "product": "Google Fast Pair protocol (Bluetooth audio accessories from Google, Jabra, JBL, Logitech, Marshall, Nothing, OnePlus, Sony, Soundcore, and Xiaomi)",
+        "description": "Critical vulnerability named \"WhisperPair\" allowing attackers to hijack Bluetooth audio accessories, track users, and eavesdrop on conversations by forcibly pairing without user consent, due to improper Fast Pair protocol implementation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bluetooth",
+          "fast_pair",
+          "audio_accessories",
+          "tracking",
+          "eavesdropping",
+          "authentication_bypass",
+          "critical",
+          "whisperpair"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-flaw-lets-hackers-track-eavesdrop-via-bluetooth-audio-devices/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-1011",
+        "cvss": 8.2,
+        "product": "Altium Support Center (AddComment endpoint)",
+        "description": "A stored Cross-Site Scripting (XSS) vulnerability exists due to missing server-side input sanitization, allowing arbitrary JavaScript execution in the victim's browser context.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "stored_xss",
+          "input_sanitization",
+          "altium",
+          "support_center",
+          "code_execution",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1011"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": null,
+        "product": "Cisco AsyncOS (Secure Email Gateway (SEG) and Secure Email and Web Manager (SEWM) appliances)",
+        "description": "Maximum-severity vulnerability, actively exploited, allowing arbitrary command execution with root privileges on the underlying operating system of an affected appliance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "root_privileges",
+          "cisco",
+          "asyncos",
+          "seg",
+          "sewm",
+          "critical",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/15/cisco_fixes_cve_2025_20393/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "cve_id": "CVE-2026-20805",
+        "cvss": null,
+        "product": "Microsoft Windows Desktop Window Manager (DWM)",
+        "description": "Important-severity information disclosure vulnerability, actively exploited, allowing a locally authenticated attacker to access sensitive information by abusing how DWM handles system data. CISA has added this vulnerability to its KEV catalog.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information_disclosure",
+          "windows",
+          "desktop_window_manager",
+          "dwm",
+          "zero_day",
+          "active_exploitation",
+          "cisa_kev"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2026-20805-vulnerability/"
+        ],
+        "date": "2026-01-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2025 Shattered Records: Key Takeaways From the GRIT 2026 Ransomware & Cyber Threat Report",
+        "description": "The GRIT 2026 report reveals a record-breaking year for ransomware attacks in 2025, with a 58% year-over-year increase in victims. It notes the adaptation of ransomware groups and the growing adoption of AI/LLMs by threat actors, though its usage remains rudimentary for less mature actors.",
+        "threat_actor": "Qilin, Akira (mentioned as mid-tier groups that stepped in to fill spots left by LockBit and Alphv)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "The ransomware landscape remains dynamic and growing, with constant adaptability from threat groups. The adoption of AI by attackers is a major emerging trend that could transform future operations, though its impact is still limited for less sophisticated actors.",
+        "recommandations": "Strengthen threat intelligence programs and incident response frameworks, optimize SOC tools for greater visibility and reduced remediation time, and implement proactive vulnerability management and penetration testing.",
+        "tags": [
+          "ransomware",
+          "threat_report",
+          "cybercrime",
+          "ai_in_cybercrime",
+          "llm",
+          "threat_actor",
+          "qilin",
+          "akira",
+          "data_exfiltration",
+          "industry_trends",
+          "mitre_t1486",
+          "mitre_t1560"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/2025-shattered-records-key-takeaways-from-the-grit-2026-ransomware-cyber-threat-report/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "2026 Threatscape report",
+        "description": "The report predicts intensifying \"balkanization\" of the Internet, large-scale industrialization of supply chain compromises via identity-based infiltration, the emergence of \"autonomous agent\" malware leveraging AI, and increasing use of AI for disinformation. It also anticipates kinetic incidents resulting from AI exploitation in industrial sectors.",
+        "threat_actor": "GTG-1002 (Chinese state-sponsored actor), PROMPTFLUX, PROMPTSTEAL (new AI malware families), RomCom (evolving towards espionage), Pravda (Moscow-based disinformation network), CharmingKitten (linked to Iranian IRGC, mentioned as an example of operation disclosure).",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1189 (Drive-by Compromise)",
+          "T1560 (Archive Collected Data)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1078 (Valid Accounts)",
+          "T1098 (Account Manipulation)",
+          "T1071 (Application Layer Protocol)",
+          "T1087 (Account Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1057 (Process Discovery)"
+        ],
+        "analyse": "The threat landscape for 2026 is marked by the growing impact of geopolitical tensions, sophisticated use of AI by attackers for more autonomous and evasive campaigns, and the persistent vulnerability of software and SaaS supply chains. AI-driven disinformation poses a strategic threat to information integrity.",
+        "recommandations": "Strengthen resilience against internet fragmentation, secure the supply chain with increased vigilance over software libraries and SaaS-to-SaaS integrations, develop detection and response capabilities for AI-based malware, and implement \"assume leak\" strategies for data protection.",
+        "tags": [
+          "threatscape",
+          "predictions",
+          "geopolitics",
+          "internet_balkanization",
+          "supply_chain_attack",
+          "ai_in_cybercrime",
+          "autonomous_agents",
+          "disinformation",
+          "prompt_poisoning",
+          "critical_infrastructure",
+          "kinetic_effects",
+          "state_sponsored",
+          "cyber_espionage",
+          "romcom",
+          "gt_g1002",
+          "promptflux",
+          "promptsteal",
+          "mitre_t1566",
+          "mitre_t1189",
+          "mitre_t1560",
+          "mitre_t1539",
+          "mitre_t1078",
+          "mitre_t1098",
+          "mitre_t1071",
+          "mitre_t1087",
+          "mitre_t1003",
+          "mitre_t1059",
+          "mitre_t1057"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/2026-cyber-threatscape-predictions/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Closing the Door on Net-NTLMv1: Releasing Rainbow Tables to Accelerate Protocol Deprecation",
+        "description": "Mandiant has publicly released a comprehensive dataset of Net-NTLMv1 rainbow tables to underscore the urgency of migrating away from this outdated protocol. Despite being known as insecure for over two decades, Net-NTLMv1 is still in use and enables trivial credential theft and privilege escalation via authentication coercion attacks (e.g., PetitPotam, DFSCoerce).",
+        "threat_actor": "Non applicable (vulnerability analysis)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1558.003 (Steal or Compromise Credential: NTLM Hashes)",
+          "T1003.006 (OS Credential Dumping: DCSync)",
+          "T1550.002 (Use Alternate Authentication Material: Pass the Hash)"
+        ],
+        "analyse": "The continued use of the Net-NTLMv1 protocol, despite its known vulnerabilities, exposes organizations to high risks of Active Directory compromise. The release of these rainbow tables lowers the technical barrier for attackers, making exploitation more accessible.",
+        "recommandations": "Immediately disable the use of Net-NTLMv1 via Group Policy or local computer policies (set LAN Manager authentication level to \"Send NTLMv2 response only\"). Monitor Event Logs (ID 4624) for Net-NTLMv1/LM usage.",
+        "tags": [
+          "vulnerability",
+          "authentication",
+          "net_ntlmv1",
+          "credential_theft",
+          "privilege_escalation",
+          "active_directory",
+          "dcsync",
+          "rainbow_tables",
+          "mitigation",
+          "protocol_deprecation",
+          "mitre_t1558_003",
+          "mitre_t1003_006",
+          "mitre_t1550_002"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Flipping one bit leaves AMD CPUs open to VM vuln",
+        "description": "A critical vulnerability dubbed \"StackWarp\" has been discovered in AMD CPUs, affecting the secure virtualization environment (AMD SEV-SNP). It allows a malicious insider to recover cryptographic private keys, bypass OpenSSH password authentication, and escalate privileges within virtual machines by manipulating the stack pointer via an undocumented control bit.",
+        "threat_actor": "Malicious insider",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1548.001 (Abuse Elevation Control: Bypass User Account Control)",
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "This discovery challenges the integrity of virtual machine isolation on AMD platforms, even with advanced security features like SEV-SNP. The vulnerability highlights that secure virtualization is complex and microarchitecture attacks remain a persistent threat, especially with SMT enabled.",
+        "recommandations": "Monitor for insider activity in virtualized environments. Evaluate Simultaneous Multithreading (SMT) configurations in AMD SEV-SNP environments. Apply vendor patches as soon as they become available.",
+        "tags": [
+          "vulnerability",
+          "amd_cpu",
+          "stackwarp",
+          "virtualization",
+          "vm_isolation",
+          "sev_snp",
+          "privilege_escalation",
+          "credential_theft",
+          "malicious_insider",
+          "microarchitecture_attack",
+          "mitre_t1078",
+          "mitre_t1078_003",
+          "mitre_t1548_001",
+          "mitre_t1003",
+          "mitre_t1059"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/15/stackwarp_bug_amd_cpus/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Four Years On – Ten Lessons from Russia’s War in Ukraine",
+        "description": "Four years on, the war in Ukraine reveals the conflict as a test of will and that Ukraine is not losing, despite prevailing narratives. The report criticizes Western politicians' inability to fully commit to a Ukrainian victory and the fragility of Western alliances, exacerbated by actors like Donald Trump, who seem willing to compromise the international order.",
+        "threat_actor": "Non applicable (conflict analysis)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "The analysis highlights shortcomings in Western strategy against Russia, Ukraine's resilience, and the necessity of a coherent and determined approach to maintain the rules-based international order. Internal divisions and divergent political views in the West threaten to redefine international relations towards a more realist and less liberal approach.",
+        "recommandations": "Not applicable (geopolitical/policy article)",
+        "tags": [
+          "geopolitics",
+          "russia",
+          "ukraine",
+          "war",
+          "international_order",
+          "western_response",
+          "nato",
+          "conflict_analysis",
+          "geopolitical_lessons"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/four-years-ten-lessons-russias-war-ukraine"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Gootloader now uses 1,000-part ZIP archives for stealthy delivery",
+        "description": "The Gootloader malware is now using malformed ZIP archives, consisting of up to 1,000 parts, to evade detection and achieve initial access. Once executed via JScript, it establishes persistence through LNK files in the Startup folder.",
+        "threat_actor": "Gootloader",
+        "indicator_of_compromise": {
+          "YARA_RULE": [
+            "expel_gootloader_zip_archives"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.005 (Command and Scripting Interpreter: Visual Basic Script)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Gootloader continues to evolve its evasion techniques, targeting archive detection mechanisms. This highlights the importance of behavioral analysis tools and detection rules based on structural anomalies to counter initial access threats.",
+        "recommandations": "Utilize YARA rules to identify malformed ZIP archives. Strengthen behavioral detection of scripts running via Windows Script Host. Educate users about suspicious attachments.",
+        "tags": [
+          "malware",
+          "gootloader",
+          "zip_archive",
+          "evasion",
+          "initial_access",
+          "jscript",
+          "persistence",
+          "threat_actor",
+          "mitre_t1566_001",
+          "mitre_t1059_005",
+          "mitre_t1547_001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/gootloader-now-uses-1-000-part-zip-archives-for-stealthy-delivery/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Knownsec leak uncovers China’s contractor-led cyber espionage",
+        "description": "Newly leaked internal documents from Chinese cybersecurity contractor Knownsec reveal its support for state-aligned cyber espionage operations. Knownsec developed tools for systematic reconnaissance, internet-wide scanning, vulnerability identification, and identity data correlation, targeting foreign critical infrastructure, telecommunications, and government environments.",
+        "threat_actor": "Knownsec (Chinese state-linked contractor)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1595.001 (Active Scanning: Scanning IP Blocks)",
+          "T1592 (Gather Victim Org Information)",
+          "T1590 (Gather Victim Network Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "The role of private contractors in state-sponsored espionage enhances the operational capacity of state-aligned actors. Continuous, large-scale reconnaissance, combined with leveraging vast breach datasets, narrows the defense window and increases risk for any organization with exposed infrastructure or weak identity controls.",
+        "recommandations": "Strengthen identity security with multi-factor authentication, eliminate unnecessary external services, and segment management interfaces. Improve detection capabilities for scanning and enumeration, rapidly patch high-risk vulnerabilities, and strictly control privileged accounts.",
+        "tags": [
+          "cyber_espionage",
+          "china",
+          "knownsec",
+          "state_sponsored",
+          "reconnaissance",
+          "critical_infrastructure",
+          "telecommunications",
+          "government",
+          "supply_chain",
+          "vulnerability_identification",
+          "data_correlation",
+          "mitre_t1595_001",
+          "mitre_t1592",
+          "mitre_t1590",
+          "mitre_t1598"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/knownsec-leak"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "La difficile construction de la BITD européenne : la compétition franco-belge naissante",
+        "description": "The article examines the challenges of building a European Defense Industrial and Technological Base (EDTIB), focusing on tensions between France and Belgium. While land cooperation (CaMo program) is a success, divergences are emerging in aeronautics (Belgian choice of the F-35) and the small-caliber ammunition sector, where France risks increasing dependence on the Belgian industry.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Fragmentation and competition within the European defense industry undermine strategic autonomy efforts. Dependence on foreign suppliers, even European ones, for critical capabilities like small-caliber ammunition, poses a risk to national sovereignty and resilience in the event of conflict.",
+        "recommandations": "Not applicable (geopolitical/policy article)",
+        "tags": [
+          "geopolitics",
+          "europe",
+          "france",
+          "belgium",
+          "defense_industry",
+          "bitd",
+          "industrial_competition",
+          "arms_industry",
+          "national_sovereignty",
+          "supply_chain",
+          "nato"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/la-difficile-construction-de-la-bitd-europeenne-la-competition-franco-belge-naissante/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Lumen disrupts AISURU and Kimwolf botnet by blocking over 550 C2 servers",
+        "description": "Lumen's Black Lotus Labs disrupted the AISURU and Kimwolf botnets by blocking over 550 command-and-control (C2) servers. These TurboMirai-type botnets are used for DDoS attacks, proxy abuse, credential stuffing, AI-driven web scraping, spam, and phishing. Kimwolf primarily targets Android TV boxes and grew rapidly.",
+        "threat_actor": "AISURU, Kimwolf",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "194.46.59.169"
+          ],
+          "DOMAIN": [
+            "proxy-sdk.14emeliaterracewestroxburyma02132.su",
+            "client.14emeliaterracewestroxburyma02132.su"
+          ]
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1498 (Denial of Service: Distributed Denial of Service)",
+          "T1583.001 (Acquire Infrastructure: Domains)",
+          "T1133 (External Remote Services)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1003 (OS Credential Dumping)"
+        ],
+        "analyse": "The disruption of these botnets highlights the effectiveness of collaborative efforts among cybersecurity companies to dismantle cybercrime infrastructure. The ability of these botnets to integrate AI for malicious activities and rapidly adapt to defense measures poses a continuous challenge.",
+        "recommandations": "Monitor network traffic for abnormal C2 communications (especially DNS over TLS), implement robust anti-DDoS measures, and protect IoT and Android devices from compromise. Collaborate with service providers to block known C2 servers.",
+        "tags": [
+          "botnet",
+          "aisuru",
+          "kimwolf",
+          "ddos",
+          "proxy_abuse",
+          "cybercrime",
+          "threat_actor",
+          "c2_disruption",
+          "turbomirai",
+          "android_malware",
+          "ai_in_cybercrime",
+          "mitre_t1071_001",
+          "mitre_t1071_004",
+          "mitre_t1498",
+          "mitre_t1583_001",
+          "mitre_t1133",
+          "mitre_t1090_003",
+          "mitre_t1003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186918/cyber-crime/lumen-disrupts-aisuru-and-kimwolf-botnet-by-blocking-over-550-c2-servers.html"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Not for Sale – the Kingdom of Denmark Stands its Ground",
+        "description": "Denmark and Greenland successfully resisted President Trump's intentions to acquire Greenland, emphasizing the importance of sovereignty and unity. Skillful diplomacy, support from international allies (Europe, Canada, Australia), and bipartisan disagreement in the U.S. helped thwart this initiative, asserting that Greenland's future is a decision for the Greenlandic people and Danes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "This situation illustrates the complexity of international relations and the resilience of small states in the face of pressure from major powers. It highlights the importance of diplomacy, international solidarity, and respect for national sovereignty in managing geopolitical tensions.",
+        "recommandations": "Not applicable (geopolitical/policy article)",
+        "tags": [
+          "geopolitics",
+          "denmark",
+          "greenland",
+          "usa",
+          "trump",
+          "annexation",
+          "sovereignty",
+          "international_relations",
+          "nato",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/not-sale-kingdom-denmark-stands-its-ground"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "Pourquoi Trump veut vraiment le Groenland ?",
+        "description": "The article explores the motivations behind President Trump's stated intention to annex Greenland for national security reasons. This move, seen as an attack on an ally (Denmark), highlights geopolitical tensions around strategic resources and influence in the Arctic, with implications for NATO.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "The proposed annexation of Greenland by the United States reveals deep geopolitical stakes related to security, resources, and the balance of alliances. This situation could destabilize international relations and challenge the functioning of organizations like NATO.",
+        "recommandations": "Not applicable (geopolitical/policy article)",
+        "tags": [
+          "geopolitics",
+          "usa",
+          "greenland",
+          "denmark",
+          "trump",
+          "annexation",
+          "national_security",
+          "nato",
+          "international_relations",
+          "arctic"
+        ],
+        "sources": [
+          "https://www.iris-france.org/pourquoi-trump-veut-vraiment-le-groenland/"
+        ],
+        "date": "2026-01-16"
+      },
+      {
+        "title": "UAT-8837 targets critical infrastructure sectors in North America",
+        "description": "UAT-8837, a China-nexus Advanced Persistent Threat (APT) actor, is actively targeting critical infrastructure organizations in North America. They exploit vulnerabilities (including zero-days like CVE-2025-53690) or compromised credentials, and use open-source tools (Earthworm, SharpHound, DWAgent, Certipy) for reconnaissance, sensitive data exfiltration, and persistence.",
+        "threat_actor": "UAT-8837",
+        "indicator_of_compromise": {
+          "SHA256": [
+            "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+            "a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91",
+            "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+            "41f14d86bcaf8e949160ee2731802523e0c76fea87adf00ee7fe9567c3cec610",
+            "47ecaab5cd6b26fe18d9759a9392bce81ba379817c53a3a468fe9060a076f8ca"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1572 (Protocol Tunneling)",
+          "T1003 (OS Credential Dumping)",
+          "T1083 (File and Directory Discovery)",
+          "T1057 (Process Discovery)",
+          "T1046 (Network Service Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1087.002 (Account Discovery: Domain Account)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "This APT poses a significant threat to the stability of critical infrastructure in North America, with a proven ability to exploit zero-day vulnerabilities and adapt quickly to evade detection. The exfiltration of DLLs from victim products raises concerns about supply chain compromise.",
+        "recommandations": "Keep systems updated with the latest patches, monitor for the tools and behaviors outlined in the report, use up-to-date detection rules, proactively hunt for IoCs and unusual user/account activity, and apply robust credential and privilege management.",
+        "tags": [
+          "apt",
+          "china",
+          "critical_infrastructure",
+          "north_america",
+          "threat_actor",
+          "zero_day",
+          "vulnerability_exploitation",
+          "earthworm",
+          "sharphound",
+          "dwagent",
+          "certipy",
+          "supply_chain",
+          "reconnaissance",
+          "mitre_t1078",
+          "mitre_t1190",
+          "mitre_t1059_003",
+          "mitre_t1572",
+          "mitre_t1003",
+          "mitre_t1083",
+          "mitre_t1057",
+          "mitre_t1046",
+          "mitre_t1018",
+          "mitre_t1087_002",
+          "mitre_t1486",
+          "mitre_t1041"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8837/"
+        ],
+        "date": "2026-01-16"
+      }
+    ]
+  }
+}
