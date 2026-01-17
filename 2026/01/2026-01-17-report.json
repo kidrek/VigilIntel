@@ -1,0 +1,1718 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille de ce jour met en lumière plusieurs tendances clés et menaces émergentes dans le paysage de la cybersécurité. Premièrement, l'exploitation de vulnérabilités, y compris des zero-days et des failles critiques (CVSS >= 8), reste un vecteur d'attaque prédominant pour les acteurs étatiques (APT) et les botnets. Des groupes comme UAT-8837 et UAT-9686 (liés à la Chine), ainsi que le botnet RondoDox, ciblent activement les infrastructures critiques et les systèmes exposés, notamment via des vulnérabilités dans les produits Cisco, Fortinet, HPE, et des plugins WordPress. La rapidité avec laquelle les vulnérabilités divulguées sont militarisées et exploitées souligne la nécessité d'une gestion des vulnérabilités axée sur la menace (TVM).\n\nDeuxièmement, les menaces liées à la supply chain et aux dépendances logicielles continuent de poser des risques significatifs, comme l'illustrent les vulnérabilités de Gradle et node-tar, qui pourraient permettre l'injection d'artefacts malveillants ou l'écrasement de fichiers. Ces failles mettent en évidence la complexité croissante des écosystèmes logiciels et la difficulté d'assurer une sécurité de bout en bout.\n\nTroisièmement, le facteur humain et les techniques d'ingénierie sociale demeurent des méthodes d'accès initial très efficaces pour les attaquants, comme le montre l'incident des 'Payroll Pirates' qui a manipulé les services d'assistance pour réinitialiser les mots de passe et ré-enregistrer des dispositifs MFA. La campagne ClickFix et le piratage du panneau de contrôle StealC par XSS (cross-site scripting) confirment également la persistance de ces tactiques.\n\nEn outre, le rapport signale une augmentation des incidents de violation de données affectant divers secteurs, allant des organismes de réglementation financière aux entreprises de livraison de nourriture, en passant par les entités gouvernementales, avec des vols massifs de données personnelles et financières. Les acteurs malveillants, y compris les groupes de rançongiciels comme Black Basta et les courtiers d'accès, continuent d'évoluer, avec des figures clés identifiées et recherchées par les forces de l'ordre.\n\nEnfin, l'impact de la cybersécurité s'étend au-delà des aspects techniques, touchant la géopolitique, la souveraineté numérique (Espace Européen des Données de Santé) et même la résilience des infrastructures nationales critiques face à la 'mass criticality' (dépendance vis-à-vis de quelques fournisseurs numériques). L'intégration de l'IA est également un thème récurrent, avec des préoccupations concernant son utilisation par les attaquants et son influence sur les systèmes de surveillance.\n\nEn conclusion, l'état général des menaces est caractérisé par une intensification et une diversification des attaques, une exploitation rapide des vulnérabilités, une dépendance continue à l'ingénierie sociale, et une pression accrue sur la résilience des infrastructures numériques. Une approche holistique, axée sur la renseignement sur les menaces, la gestion proactive des vulnérabilités et la sensibilisation humaine, est impérative.",
+      "date": "2026-01-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-8837",
+        "secteur": "Infrastructures critiques, Systèmes exposés sur Internet",
+        "modop": "Exploitation de vulnérabilités zero-day et connues pour l'accès initial, utilisation d'outils open source et Living-Off-The-Land pour la persistance et l'exfiltration de données, espionnage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionnage",
+          "zero_day",
+          "critical_infrastructure",
+          "living_off_the_land",
+          "China",
+          "initial_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-sitecore-zero-day-for-initial-access/",
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "UAT-9686",
+        "secteur": "Produits de sécurité de messagerie (Cisco Secure Email Gateway, Email and Web Manager)",
+        "modop": "Exploitation de vulnérabilités zero-day (ex: CVE-2025-20393) pour l'exécution de commandes avec privilèges root, déploiement de backdoors (AquaShell), outils de tunneling (AquaTunnel, Chisel) et d'effacement de logs (AquaPurge) pour la persistance et l'accès.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "zero_day",
+          "backdoor",
+          "tunneling",
+          "post_exploitation",
+          "China",
+          "RCE"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems",
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "StealC",
+        "secteur": "Non spécifié, concerne les victimes d'info-stealer",
+        "modop": "Infostealer, collecte d'informations sur les systèmes compromis. Le panel de contrôle des opérateurs a été piraté via une faille XSS.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "info_stealer",
+          "malware_as_a_service",
+          "XSS"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/stealc-hackers-hacked-as-researchers-hijack-malware-control-panels/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Black Basta (Oleg Evgenievich Nefedov aka Devman)",
+        "secteur": "Organisations mondiales (600 incidents), y compris la défense, l'automobile, la santé, le gouvernement",
+        "modop": "Ransomware-as-a-Service (RaaS), vol de données, extorsion. Né des cendres de Conti, recrute des membres, gère les rançons, décide des cibles. Utilisation de hachage crackers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "RaaS",
+          "data_theft",
+          "extortion",
+          "cybercrime_group",
+          "conti"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/black-basta-boss-makes-it-onto-interpols-red-notice-list/",
+          "https://databreaches.net/2026/01/16/former-conti-member-now-known-as-devman-added-to-interpols-wanted-list-updatedformer-conti-member-tramp-now-known-as-devman-added-to-interpols-wanted-list/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "Gouvernement, services financiers, fabricants industriels",
+        "modop": "Exploitation à grande échelle et automatisée de vulnérabilités connues (ex: CVE-2025-37164 dans HPE OneView) sur divers appareils (routeurs, DVR, serveurs web) pour des attaques DDoS, cryptominage et livraison de payloads secondaires.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "DDoS",
+          "cryptomining",
+          "vulnerability_exploitation",
+          "mass_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/16/rondodox_botnet_hpe_oneview/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Feras Albashiti (aka r1z)",
+        "secteur": "Multiples entreprises (au moins 50)",
+        "modop": "Courtier d'accès (Initial Access Broker), vend un accès non autorisé à des réseaux informatiques sur des forums cybercriminels.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "access_broker",
+          "initial_access",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/16/jordanian-man-admits-selling-unauthorized-access-to-computer-networks-of-50-companies/?pk_campaign=feed&pk_kwd=jordanian-man-admits-selling-unauthorized-access-to-computer-networks-of-50-companies"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Secteur de la livraison de nourriture (Grubhub)",
+        "modop": "Accès aux systèmes internes, vol de données (Zendesk, Salesforce), extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_theft",
+          "extortion",
+          "cybercrime_group"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115907581778663538"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Hanto",
+        "secteur": "Gouvernement et Défense (Italie)",
+        "modop": "Violation de données, fuite d'informations de contact (emails, adresses physiques, liens sociaux).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "government",
+          "defense"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115906552403146376"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "HawkSec",
+        "secteur": "Énergie (TotalEnergies)",
+        "modop": "Violation de données, vol de bases de données massives (184 millions d'enregistrements clients incluant des détails bancaires), fuite d'échantillons en ligne.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "data_theft",
+          "extortion",
+          "energy_sector"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115906359887180438"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Industrie de l'armement",
+        "theme": "Coopération européenne et concurrence sur le marché de la défense français",
+        "description": "Le président Macron annonce son intention d'ouvrir le marché français de l'armement à la concurrence européenne, tout en augmentant les budgets de défense. Cette décision marque un changement de paradigme, privilégiant les solutions européennes plus rapides ou efficaces, et remettant en question la politique de 'chasse gardée' pour les industriels français. L'objectif est de développer, produire et acheter européen pour réduire les dépendances non-européennes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "defense_europe",
+          "france",
+          "cooperation",
+          "defense_industry",
+          "souverainete"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/emmanuel-macron-ouvre-la-voie-a-la-concurrence-sur-le-marche-de-defense-francais/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Santé, Technologie, Gouvernance",
+        "theme": "Espace Européen des Données de Santé (EEDS) et souveraineté numérique",
+        "description": "L'Union Européenne promeut l'EEDS pour structurer la circulation des données de santé entre États membres, favorisant la recherche, l'innovation et la qualité des soins. Ce projet vise à renforcer la souveraineté européenne face aux géants numériques mondiaux, malgré la fragmentation actuelle des systèmes nationaux et la complexité des standards. L'objectif est d'harmoniser les règles d'accès, les pratiques et les technologies pour une exploitation sécurisée des données de santé.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "sante",
+          "europe",
+          "souverainete_numerique",
+          "donnees_sante",
+          "ia",
+          "gouvernance"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/la-bataille-strategique-dun-systeme-de-sante-europeen-interconnecte-partie-1-2/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Gouvernement, Relations internationales",
+        "theme": "Région Arctique, Groenland et compétition géopolitique",
+        "description": "Le Groenland est présenté comme un miroir des enjeux mondiaux, avec un glissement des préoccupations climatiques vers une géopolitique des rapports de force. L'intérêt des États-Unis pour le contrôle du Groenland, face aux ambitions de la Chine et de la Russie dans l'Arctique, met en lumière la compétition pour les ressources (eau douce, terres rares, minéraux) et les routes navigables. Cela interroge la position de l'Europe et la nature des alliances internationales.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "arctique",
+          "groenland",
+          "ressources",
+          "etats_unis",
+          "chine",
+          "russie",
+          "souverainete"
+        ],
+        "sources": [
+          "https://www.iris-france.org/groenland-miroir-du-monde/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Gouvernement, Politique, Économie",
+        "theme": "Érosion de la démocratie et impact économique à Hong Kong",
+        "description": "Les élections législatives de Hong Kong de décembre 2025 marquent une nouvelle étape dans l'érosion du principe 'Un pays, deux systèmes', avec une faible participation et l'élimination de toute opposition formelle. La Chine vise une homogénéisation politique qui, malgré une brève inquiétude des investisseurs en 2019, a vu les Investissements Directs à l'Étranger (IDE) rebondir à des niveaux historiques en 2024. Cette situation rend la réunification pacifique avec Taïwan plus irréalisable.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hong_kong",
+          "chine",
+          "democratie",
+          "economie",
+          "investissements_etrangers",
+          "taiwan"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/recul-de-la-democratie-hausse-des-ide-a-hong-kong/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Sécurité nationale, Infrastructures, Gouvernance",
+        "theme": "Mass criticality : redéfinir les infrastructures critiques",
+        "description": "L'article propose de repenser la définition des infrastructures critiques au Royaume-Uni pour inclure des composants numériques 'ordinaires' qui sont devenus de facto critiques en raison de leur interdépendance et concentration. Des incidents comme les pannes de Cloudflare ou les attaques sur des fournisseurs logiciels (Marquis, CrowdStrike) illustrent comment une seule défaillance peut avoir un impact systémique. Cela exige une cartographie des dépendances numériques, une diversification technologique et des exercices de résilience intersectoriels.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "infrastructures_critiques",
+          "resilience",
+          "supply_chain",
+          "dependances_numeriques",
+          "royaume_uni"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/mass-criticality-rethinking-critical-infrastructure-uk"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Justice, Sécurité, Organisations criminelles",
+        "theme": "Convergences criminelles et défi pour la coopération internationale",
+        "description": "Les évaluations actuelles de la criminalité organisée révèlent une porosité croissante entre différents types de trafics et une expansion des partenariats criminels. Il en résulte un écosystème polycriminel adaptable aux opportunités, tirant parti de la diversification et de la connectivité des trafics, posant un défi majeur à la coopération internationale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "criminalite_organisee",
+          "cooperation_internationale",
+          "cybercriminalite",
+          "trafics_illicites"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-convergences-criminelles-un-defi-pour-la-cooperation/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Droits de l'Homme, Médias, Conflits armés",
+        "theme": "Conflit à Gaza : crise humanitaire et triomphe du silence coupable",
+        "description": "L'article décrit la situation humanitaire catastrophique à Gaza, les violences continues et les traumatismes psychiques pour la population palestinienne. Il dénonce l'incapacité de discuter de cette tragédie en France sans être accusé de division, la marginalisation de ceux qui mettent en lumière la réalité, et la promotion de récits niant le génocide. Cette situation est qualifiée de 'triomphe du silence coupable'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "palestine",
+          "conflit",
+          "crise_humanitaire",
+          "medias",
+          "censure"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-triomphe-du-silence-coupable-proche-orient-comment-en-est-on-arrive-la-1-5/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Culture, Sport, Défense",
+        "theme": "Service militaire obligatoire et soft power sud-coréen",
+        "description": "Le service militaire obligatoire en Corée du Sud, malgré des décennies de débat, continue d'affecter les carrières des athlètes et artistes de renommée mondiale (ex: Korean Zombie, BTS), compromettant leur contribution au soft power national. Le système actuel des exemptions est jugé trop restrictif, entraînant des interruptions de carrière et une perte de compétences, avec des ramifications économiques et culturelles significatives.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "coree_du_sud",
+          "soft_power",
+          "service_militaire",
+          "culture",
+          "sport"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/dimmed-stars-south-koreas-draft-weakens-its-soft-power"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers, Réglementation",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "Une violation de données a affecté environ 750 000 personnes. L'incident, détecté en août 2025, a conduit au vol d'un ensemble limité de données d'investigation et d'investisseurs, y compris des données personnelles et financières sensibles (revenus, identifiants, coordonnées, numéros de compte, relevés). Aucune preuve d'utilisation abusive ou d'exposition sur le dark web n'a été trouvée.",
+        "tags": [
+          "violation",
+          "breach",
+          "financier",
+          "regulation",
+          "donnees_personnelles",
+          "donnees_financieres",
+          "canada"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186993/data-breach/data-breach-at-canadas-investment-watchdog-canadian-investment-regulatory-organization-impacts-750000-people.html"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Livraison de nourriture, Technologie",
+        "victime": "Grubhub",
+        "description": "Grubhub confirme une violation de données suite à l'accès de hackers à des systèmes internes. Le groupe ShinyHunters est soupçonné d'être à l'origine de l'attaque, ayant prétendument volé des données Zendesk et d'anciennes données Salesforce, et tentant d'extorquer l'entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "data_theft",
+          "extorsion",
+          "shinyhunters"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115907581778663538"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "victime": "Organisation gouvernementale et de Défense italienne",
+        "description": "Le groupe Hanto revendique une violation de données ciblant une organisation gouvernementale et de défense italienne. Plus de 30 000 contacts email, adresses physiques et liens vers des profils Facebook et LinkedIn auraient été divulgués.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "defense",
+          "italie",
+          "donnees_personnelles",
+          "hanto"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115906552403146376"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Énergie",
+        "victime": "TotalEnergies",
+        "description": "Le groupe de hackers 'HawkSec' revendique une violation massive des systèmes de TotalEnergies, affirmant avoir volé une base de données de 184 millions d'enregistrements clients, y compris des détails bancaires. Des échantillons de données sont divulgués en ligne.",
+        "tags": [
+          "violation",
+          "breach",
+          "energie",
+          "donnees_personnelles",
+          "donnees_bancaires",
+          "hawksec",
+          "extorsion"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115906359887180438"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "SFR",
+        "description": "SFR a subi une cyberattaque ayant entraîné le siphonage de données personnelles de clients, notamment nom, prénom, adresse électronique, adresse postale, référence client et numéro de téléphone. L'attaque a compromis un 'outil informatique' lié à la gestion du raccordement des clients au réseau Internet fixe. Les données bancaires n'auraient pas été compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "donnees_personnelles",
+          "france",
+          "infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/16/les-operateurs-telecoms-cibles-privilegiees-des-cyberattaques-peinent-a-trouver-la-parade_6662493_3234.html"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Free",
+        "description": "Free a été victime d'une cyberattaque le 21 octobre 2024, entraînant le vol de données de 19,2 millions de clients, y compris plus de 5 millions de numéros d'identifiant bancaire (IBAN). La CNIL a infligé une amende de 42 millions d'euros à Free pour non-déploiement de mesures de sécurité élémentaires.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "donnees_personnelles",
+          "donnees_bancaires",
+          "france",
+          "cnil_sanction"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/16/les-operateurs-telecoms-cibles-privilegiees-des-cyberattaques-peinent-a-trouver-la-parade_6662493_3234.html"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "10.0",
+        "product": "Cisco AsyncOS Software for Cisco Secure Email Gateway and Cisco Secure Email and Web Manager",
+        "description": "Vulnérabilité critique permettant l'exécution de commandes arbitraires avec des privilèges root via des requêtes HTTP malveillantes sur la fonction Spam Quarantine. Activement exploitée comme zero-day par l'APT UAT-9686.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "zero_day",
+          "cisco",
+          "asyncos",
+          "email_security",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": "10.0",
+        "product": "HPE OneView",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) de sévérité maximale, activement exploitée par le botnet RondoDox pour des attaques automatisées à grande échelle.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "HPE",
+          "oneview",
+          "botnet",
+          "critical",
+          "mass_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/16/rondodox_botnet_hpe_oneview/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23800",
+        "cvss": "10.0",
+        "product": "Modular DS WordPress plugin (versions 2.5.2 et inférieures)",
+        "description": "Vulnérabilité d'élévation de privilèges activement exploitée, permettant à un attaquant non authentifié de prendre le contrôle administratif du site via une combinaison de sélection de route directe, contournement d'authentification et auto-connexion en tant qu'administrateur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "wordpress",
+          "plugin",
+          "admin_takeover",
+          "critical",
+          "authentication_bypass",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186976/security/actively-exploited-critical-flaw-in-modular-ds-wordpress-plugin-enables-admin-takeover.html",
+          "https://cvefeed.io/vuln/detail/CVE-2026-23800"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23744",
+        "cvss": "9.8",
+        "product": "MCPJam inspector (versions 1.4.2 et antérieures)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) permettant à un attaquant d'envoyer une requête HTTP forgée pour déclencher l'installation d'un serveur MCP, menant à une RCE à distance, car le produit écoute par défaut sur 0.0.0.0.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "http_endpoint_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23744"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "9.4",
+        "product": "Fortinet FortiSIEM",
+        "description": "Vulnérabilité critique permettant à un attaquant non authentifié d'exécuter du code ou des commandes arbitraires via des requêtes TCP spécialement conçues. Activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "fortinet",
+          "fortisiem",
+          "critical",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/921138/%27Aanvallers+maken+actief+misbruik+van+kritiek+lek+in+Fortinet+FortiSIEM%27?channel=rss",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23742",
+        "cvss": "8.8",
+        "product": "Skipper (versions 0.23.0 et antérieures)",
+        "description": "Vulnérabilité d'exécution de code arbitraire via des filtres Lua si des utilisateurs non fiables peuvent en créer (défaut de configuration -lua-sources=inline). Peut permettre la lecture du système de fichiers et l'accès aux secrets de Skipper.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_code_execution",
+          "information_disclosure",
+          "configuration_error",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23742"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-22865",
+        "cvss": "8.6",
+        "product": "Gradle (versions antérieures à 9.3.0)",
+        "description": "Les exceptions lors de la résolution des dépendances ne désactivent pas les dépôts défaillants, permettant à Gradle de passer à d'autres dépôts et potentiellement de servir des artefacts malveillants si un attaquant contrôle un dépôt secondaire. Risque pour la chaîne d'approvisionnement.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "supply_chain",
+          "dependency_confusion",
+          "code_tampering",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22865"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-22816",
+        "cvss": "8.6",
+        "product": "Gradle (versions antérieures à 9.3.0)",
+        "description": "Les exceptions lors de la résolution des dépendances ne désactivent pas les dépôts, et un nom d'hôte non résolvable permet à Gradle de continuer à chercher des dépendances ailleurs. Un attaquant peut enregistrer un service sous le nom d'hôte et servir des artefacts malveillants. Risque pour la chaîne d'approvisionnement.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "supply_chain",
+          "dependency_hijacking",
+          "code_tampering",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22816"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23745",
+        "cvss": "8.2",
+        "product": "node-tar (versions 7.5.2 et inférieures)",
+        "description": "Vulnérabilité de falsification de chemin par manque de désinfection du 'linkpath' des entrées Link et SymbolicLink lorsque preservePaths est faux, permettant une écriture de fichier arbitraire via des hardlinks et un empoisonnement de symlinks.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_overwrite",
+          "symlink_poisoning",
+          "path_traversal",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23745"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-20960",
+        "cvss": "8.0",
+        "product": "Microsoft Power Apps",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) due à une autorisation incorrecte, permettant à un attaquant autorisé d'exécuter du code sur le réseau.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "microsoft",
+          "power_apps",
+          "improper_authorization",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-20960"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Acteurs malveillants liés à la Chine ciblent les systèmes exposés sur Internet en Amérique du Nord avec des zero-days",
+        "description": "Des acteurs étatiques liés à la Chine, notamment UAT-8837 et UAT-9686, intensifient leurs opérations d'accès initial en ciblant les infrastructures critiques en Amérique du Nord. Ils exploitent des vulnérabilités zero-day, comme la désérialisation Sitecore ViewState (CVE-2025-53690) et une faille critique dans Cisco AsyncOS (CVE-2025-20393), pour obtenir un accès root, déployer des backdoors (AquaShell) et utiliser des outils de tunneling (AquaTunnel, Chisel). Leurs objectifs incluent l'espionnage et la collecte de renseignements, en utilisant des outils open source et des techniques Living-Off-The-Land.",
+        "threat_actor": "UAT-8837, UAT-9686",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-53690",
+            "CVE-2025-20393"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access (Exploit Public-Facing Application)",
+          "TA0003: Persistence (Backdoor, Account Manipulation)",
+          "TA0004: Privilege Escalation (Exploit for Privilege Escalation)",
+          "TA0008: Lateral Movement (Remote Services)",
+          "TA0011: Command and Control (Proxy, Multi-Stage Channels)",
+          "TA0009: Collection (Data from Network Shared Drive)",
+          "T1190: Exploit Public-Facing Application",
+          "T1078: Valid Accounts",
+          "T1505.003: Server Software Component: Web Shell",
+          "T1021.001: Remote Services: Remote Desktop Protocol",
+          "T1572: Protocol Tunneling",
+          "T1059: Command and Scripting Interpreter",
+          "T1070.004: Indicator Removal: File Deletion"
+        ],
+        "analyse": "Ces campagnes représentent une menace significative pour les infrastructures critiques en Amérique du Nord, avec des objectifs d'espionnage et de perturbation future. L'exploitation de zero-days et l'utilisation de TTPs furtives (Living-Off-The-Land, outils de tunneling) compliquent la détection et la réponse. La focalisation sur les systèmes exposés sur Internet crée un risque accru pour les fournisseurs de services gérés (MSP) qui pourraient servir de point d'entrée pour des attaques en cascade sur de multiples clients.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour les vulnérabilités connues, notamment CVE-2025-20393 et CVE-2026-23800.",
+          "Mettre en œuvre une gestion des vulnérabilités axée sur les menaces (TVM) pour prioriser les correctifs en fonction du risque réel et de l'exploitation active.",
+          "Renforcer l'authentification et les contrôles d'accès pour les systèmes exposés sur Internet.",
+          "Surveiller les activités anomales sur le réseau, y compris les tentatives de déploiement de backdoors et l'utilisation d'outils de tunneling.",
+          "Auditer régulièrement les configurations de sécurité et les politiques d'accès pour prévenir les contournements et les élévations de privilèges.",
+          "Sensibiliser les équipes de sécurité et les administrateurs aux TTPs des APTs liés à la Chine et aux indicateurs d'exploitation des zero-days."
+        ],
+        "tags": [
+          "apt",
+          "chine",
+          "zero_day",
+          "rce",
+          "infrastructures_critiques",
+          "espionnage",
+          "vulnérabilité",
+          "threat_actor",
+          "initial_access",
+          "persistence",
+          "exfiltration",
+          "living_off_the_land"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-sitecore-zero-day-for-initial-access/",
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems",
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Ingénierie sociale : les 'Payroll Pirates' détournent les salaires en manipulant les services d'assistance",
+        "description": "Une attaque d'ingénierie sociale a permis à un acteur malveillant de modifier les détails de dépôt direct de salaires. L'attaquant a usurpé l'identité d'employés et manipulé plusieurs services d'assistance (paie, IT, RH) pour contourner l'authentification par défi/réponse, réinitialiser des mots de passe et ré-enregistrer des dispositifs d'authentification multifacteur (MFA). Une fois authentifié, l'acteur a compromis plusieurs comptes et détourné des salaires vers ses propres comptes bancaires, en s'appuyant sur des informations disponibles publiquement via les plateformes sociales.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001: Initial Access (Phishing, Vishing, Social Engineering)",
+          "TA0003: Persistence (Account Manipulation)",
+          "TA0006: Credential Access (Social Engineering, Multi-Factor Authentication Bypass)",
+          "T1566: Phishing",
+          "T1534: Internal Spearphishing",
+          "T1078: Valid Accounts",
+          "T1556: Domain Accounts",
+          "T1110.003: Brute Force: Password Spraying",
+          "T1621: Multi-Factor Authentication Request Generation"
+        ],
+        "analyse": "Cet incident souligne l'efficacité persistante des attaques d'ingénierie sociale, même face aux contrôles techniques comme le MFA. La dépendance aux processus humains des services d'assistance représente une vulnérabilité majeure si ces interactions ne sont pas rigoureusement encadrées. L'impact a été limité à des détournements de salaires, mais la méthode pourrait être utilisée pour un accès réseau plus large et l'exfiltration de données sensibles. La reconnaissance via les plateformes sociales facilite ces attaques.",
+        "recommandations": [
+          "Renforcer les protocoles d'authentification pour les services d'assistance, en particulier pour les réinitialisations de mot de passe et l'enregistrement de MFA.",
+          "Mettre en œuvre une gouvernance d'identité stricte et une gestion des accès à privilèges (PAM) pour les comptes de service.",
+          "Sensibiliser le personnel aux techniques d'ingénierie sociale, y compris l'usurpation d'identité et la manipulation des services d'assistance.",
+          "Surveiller les modifications inhabituelles des détails de dépôt direct ou d'autres informations financières sensibles.",
+          "Effectuer des exercices de simulation d'ingénierie sociale pour tester la résilience des équipes."
+        ],
+        "tags": [
+          "social_engineering",
+          "ingénierie_sociale",
+          "fraude",
+          "usurpation_d_identite",
+          "mfa_bypass",
+          "payroll_fraud",
+          "human_factor",
+          "initial_access",
+          "credential_access"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Le panel de contrôle du malware StealC piraté via une faille XSS",
+        "description": "Des chercheurs en sécurité ont exploité une vulnérabilité de Cross-Site Scripting (XSS) dans le panel de contrôle web utilisé par les opérateurs du malware info-stealer StealC. Cette faille a permis d'observer des sessions actives, de collecter des renseignements sur le matériel des attaquants (système Apple M3, paramètres de langue anglais/russe, fuseau horaire Europe de l'Est, accès via l'Ukraine) et potentiellement de détourner des sessions. L'objectif était de perturber les opérations de StealC, dont le nombre d'opérateurs a augmenté.",
+        "threat_actor": "StealC (opérateurs)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0009: Collection (Input Capture)",
+          "TA0011: Command and Control (Web Protocols)",
+          "T1190: Exploit Public-Facing Application (XSS)",
+          "T1059.004: Command and Scripting Interpreter: JavaScript"
+        ],
+        "analyse": "Cet incident est un exemple rare de 'hacking des hackers', où les faiblesses dans l'infrastructure des cybercriminels sont exploitées pour collecter du renseignement et perturber leurs opérations. La découverte de l'XSS dans un panel de commande MaaS (Malware-as-a-Service) met en évidence que même les outils des attaquants peuvent être vulnérables. L'information collectée sur les opérateurs (localisation géographique, configuration système) est précieuse pour les enquêtes et l'attribution. Cela peut entraîner une réévaluation de l'utilisation de ce malware sur le marché cybercriminel.",
+        "recommandations": [
+          "Pour les opérateurs du panel StealC: Patch immediat de la vulnérabilité XSS.",
+          "Pour la défense: Utiliser des outils d'analyse de code pour détecter des failles similaires dans les applications web, en particulier celles exposées sur Internet.",
+          "Intégrer le renseignement sur les TTPs des cybercriminels pour anticiper leurs mouvements et les vulnérabilités de leurs propres infrastructures."
+        ],
+        "tags": [
+          "malware",
+          "info_stealer",
+          "stealc",
+          "xss",
+          "cybercrime",
+          "threat_intelligence",
+          "disruption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/stealc-hackers-hacked-as-researchers-hijack-malware-control-panels/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Gestion des menaces et des vulnérabilités (TVM) en 2026 : une approche basée sur le renseignement",
+        "description": "Les équipes de sécurité sont submergées par le volume croissant de vulnérabilités (CVE) et la rapidité de leur exploitation. La gestion traditionnelle des vulnérabilités, basée uniquement sur le score CVSS, est inefficace. Une nouvelle approche, la gestion des menaces et des vulnérabilités (TVM) – ou Threat-Informed Vulnerability Management – est proposée. Elle se concentre sur la priorisation des remédiations en fonction de l'exploitabilité, de l'importance des actifs et de l'intérêt des acteurs de la menace, en s'appuyant sur le renseignement en temps réel (dark web, marchés d'exploits, télémétrie de malwares). L'article met en avant les cinq piliers d'un TVM efficace : visibilité complète de la surface d'attaque, gestion continue des surfaces d'attaque externes, renseignement externe sur les menaces, gestion des vulnérabilités basée sur le risque et remédiation continue.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'article met en évidence une transformation nécessaire dans la gestion des vulnérabilités, passant d'une approche réactive et volumineuse à une approche proactive et axée sur le risque. Le concept de 'weaponized vulnerabilities' (vulnérabilités militarisées) illustre la rapidité avec laquelle les failles sont exploitées, soulignant l'urgence de l'intelligence contextuelle. Le 'silo problem' entre les équipes de sécurité, IT et CTI est un obstacle majeur à une vision unifiée du risque. L'adoption du TVM permettrait de réduire la fatigue d'alerte, d'optimiser les ressources et de renforcer la posture de sécurité globale en se concentrant sur les menaces réelles.",
+        "recommandations": [
+          "Mettre en œuvre une plateforme TVM intégrant le renseignement sur les menaces en temps réel.",
+          "Développer une visibilité complète et continue de la surface d'attaque interne et externe.",
+          "Prioriser les remédiations en utilisant un score de risque dynamique qui intègre l'exploitabilité, l'impact sur les actifs et l'intérêt des acteurs de la menace.",
+          "Améliorer la collaboration entre les équipes de sécurité, IT et CTI en établissant des processus et des langages de risque communs.",
+          "Se concentrer sur les 1% de vulnérabilités les plus critiques qui sont activement exploitées plutôt que sur le volume total des CVE."
+        ],
+        "tags": [
+          "vulnerability_management",
+          "threat_intelligence",
+          "risk_management",
+          "cve",
+          "cvss",
+          "alert_fatigue",
+          "attack_surface_management",
+          "security_operations",
+          "proactive_defense"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/threat-and-vulnerability-management"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Augmentation des attaques de type 'ClickFix' et risques de social engineering",
+        "description": "Une vague d'attaques de 'ClickFix' est observée, où les attaquants manipulent les utilisateurs pour qu'ils installent eux-mêmes des logiciels malveillants. Ces attaques se déguisent souvent en mises à jour de sécurité urgentes ou en activités nécessaires. Elles contournent les protections techniques en ciblant la 'composante humaine', soulignant que les approches purement techniques de la sécurité sont insuffisantes. La méthode est peu complexe mais très efficace.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001: Initial Access (Phishing)",
+          "TA0004: Privilege Escalation (Bypass User Account Control)",
+          "T1566.001: Phishing: Spearphishing Attachment",
+          "T1204.002: User Execution: Malicious File"
+        ],
+        "analyse": "Les attaques ClickFix démontrent la persistance et l'efficacité de l'ingénierie sociale comme vecteur d'infection. Elles tirent parti de la confiance des utilisateurs et de leur manque de vigilance face à des scénarios d'urgence. Le succès de ces attaques met en évidence une lacune dans la formation à la sécurité et la nécessité de renforcer la résilience humaine, plutôt que de se fier uniquement aux défenses techniques. La créativité des attaquants dans ce domaine exige une adaptation continue des programmes de sensibilisation.",
+        "recommandations": [
+          "Former régulièrement le personnel à la reconnaissance des tentatives d'ingénierie sociale et à la vérification des sources avant toute action.",
+          "Mettre en place des simulations d'attaques de phishing et de ClickFix pour renforcer la vigilance des utilisateurs.",
+          "Implémenter des contrôles techniques pour bloquer le téléchargement ou l'exécution de logiciels non autorisés.",
+          "Établir des procédures claires pour la gestion des mises à jour logicielles et des alertes de sécurité pour éviter la confusion."
+        ],
+        "tags": [
+          "social_engineering",
+          "malware",
+          "user_execution",
+          "phishing",
+          "sensibilisation",
+          "human_factor",
+          "initial_access"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/01/weitere-news-im-januar/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Analyse des faiblesses des signatures GPG et vulnérabilités dans les TEE Android",
+        "description": "Le Chaos Communication Congress a mis en évidence des faiblesses dans les signatures GPG, notamment via les séquences d'échappement ANSI classiques, confirmant les problèmes d'utilisabilité de l'écosystème GPG. Parallèlement, des chercheurs ont démontré l'exécution de code dans le Trusted Execution Environment (TEE) des appareils Android de Xiaomi, un élément crucial de la sécurité des appareils mobiles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0004: Privilege Escalation (Exploit for Privilege Escalation)",
+          "TA0005: Defense Evasion (Obfuscated Files or Information)",
+          "T1213: Exploitation for Defense Evasion",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "Les révélations sur GPG soulignent que même les outils de sécurité établis peuvent souffrir de failles liées à la complexité d'utilisation, potentiellement exploitables via des techniques 'classiques'. La démonstration de RCE dans les TEE Android est particulièrement préoccupante, car les TEE sont censés être des environnements hautement sécurisés, brique fondamentale de la sécurité des appareils modernes. La compromission de tels mécanismes peut avoir des répercussions profondes sur la confidentialité et l'intégrité des données des utilisateurs, affectant directement la confiance dans la sécurité matérielle des appareils mobiles. Des alternatives à GPG, telles que SSH ou age pour les signatures, sont suggérées.",
+        "recommandations": [
+          "Évaluer et mettre à jour les implémentations GPG pour atténuer les vulnérabilités connues.",
+          "Envisager des alternatives à GPG pour les signatures numériques, telles que SSH ou age, si elles offrent une meilleure utilisabilité et sécurité.",
+          "Les fabricants de dispositifs mobiles doivent renforcer la sécurité de leurs implémentations TEE et corriger les vulnérabilités identifiées.",
+          "Les utilisateurs d'Android devraient maintenir leurs appareils à jour avec les derniers correctifs de sécurité fournis par les fabricants."
+        ],
+        "tags": [
+          "gpg",
+          "signatures_numeriques",
+          "android_tee",
+          "vulnerabilite",
+          "code_execution",
+          "mobile_security",
+          "privacy",
+          "trust"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/01/to-sign-or-not-to-sign/"
+        ],
+        "date": "2026-01-17"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "Today's intelligence highlights several key trends and emerging threats in the cybersecurity landscape. Firstly, vulnerability exploitation, including zero-days and critical flaws (CVSS >= 8), remains a predominant attack vector for state-sponsored actors (APTs) and botnets. Groups like UAT-8837 and UAT-9686 (linked to China), as well as the RondoDox botnet, are actively targeting critical infrastructure and internet-facing systems, notably through vulnerabilities in Cisco, Fortinet, HPE products, and WordPress plugins. The speed with which disclosed vulnerabilities are weaponized and exploited underscores the necessity of threat-informed vulnerability management (TVM).\n\nSecondly, supply chain threats and software dependencies continue to pose significant risks, as illustrated by vulnerabilities in Gradle and node-tar, which could allow the injection of malicious artifacts or file overwrites. These flaws highlight the increasing complexity of software ecosystems and the difficulty of ensuring end-to-end security.\n\nThirdly, human factors and social engineering techniques remain highly effective initial access methods for attackers, as shown by the 'Payroll Pirates' incident, where help desks were manipulated to reset passwords and re-enroll MFA devices. The ClickFix campaign and the hacking of the StealC control panel via XSS also confirm the persistence of these tactics.\n\nFurthermore, the report notes an increase in data breach incidents affecting various sectors, from financial regulatory bodies to food delivery companies and government entities, with massive thefts of personal and financial data. Malicious actors, including ransomware groups like Black Basta and access brokers, continue to evolve, with key figures identified and sought by law enforcement.\n\nFinally, the impact of cybersecurity extends beyond technical aspects, touching upon geopolitics, digital sovereignty (European Health Data Space), and even the resilience of critical national infrastructure in the face of 'mass criticality' (dependence on a few digital providers). The integration of AI is also a recurring theme, with concerns regarding its use by attackers and its influence on surveillance systems.\n\nIn conclusion, the general state of threats is characterized by intensifying and diversifying attacks, rapid exploitation of vulnerabilities, continued reliance on social engineering, and increased pressure on digital infrastructure resilience. A holistic approach, focusing on threat intelligence, proactive vulnerability management, and human awareness, is imperative.",
+      "date": "2026-01-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-8837",
+        "secteur": "Critical Infrastructure, Internet-Facing Systems",
+        "modop": "Exploiting zero-day and known vulnerabilities for initial access, utilizing open-source and Living-Off-The-Land tools for persistence and data exfiltration, espionage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "espionage",
+          "zero_day",
+          "critical_infrastructure",
+          "living_off_the_land",
+          "China",
+          "initial_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-sitecore-zero-day-for-initial-access/",
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "UAT-9686",
+        "secteur": "Email Security Products (Cisco Secure Email Gateway, Email and Web Manager)",
+        "modop": "Exploiting zero-day vulnerabilities (e.g., CVE-2025-20393) for root-level command execution, deploying backdoors (AquaShell), tunneling tools (AquaTunnel, Chisel), and log-clearing (AquaPurge) for persistence and access.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "APT",
+          "zero_day",
+          "backdoor",
+          "tunneling",
+          "post_exploitation",
+          "China",
+          "RCE"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems",
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "StealC",
+        "secteur": "Not specified, concerns info-stealer victims",
+        "modop": "Info-stealer, collecting information from compromised systems. Operator control panel was hacked via an XSS flaw.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "info_stealer",
+          "malware_as_a_service",
+          "XSS"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/stealc-hackers-hacked-as-researchers-hijack-malware-control-panels/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Black Basta (Oleg Evgenievich Nefedov aka Devman)",
+        "secteur": "Global organizations (600 incidents), including defense, automotive, healthcare, government",
+        "modop": "Ransomware-as-a-Service (RaaS), data theft, extortion. Arose from Conti's ashes, recruits members, manages ransoms, determines targets. Uses hash crackers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "RaaS",
+          "data_theft",
+          "extortion",
+          "cybercrime_group",
+          "conti"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/black-basta-boss-makes-it-onto-interpols-red-notice-list/",
+          "https://databreaches.net/2026/01/16/former-conti-member-now-known-as-devman-added-to-interpols-wanted-list-updatedformer-conti-member-tramp-now-known-as-devman-added-to-interpols-wanted-list/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "RondoDox botnet",
+        "secteur": "Government, financial services, industrial manufacturers",
+        "modop": "Large-scale, automated exploitation of publicly known vulnerabilities (e.g., CVE-2025-37164 in HPE OneView) across various devices (routers, DVRs, web servers) for DDoS attacks, cryptomining, and secondary payload delivery.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "DDoS",
+          "cryptomining",
+          "vulnerability_exploitation",
+          "mass_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/16/rondodox_botnet_hpe_oneview/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Feras Albashiti (aka r1z)",
+        "secteur": "Multiple companies (at least 50)",
+        "modop": "Initial Access Broker, selling unauthorized access to computer networks on cybercriminal forums.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "access_broker",
+          "initial_access",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/16/jordanian-man-admits-selling-unauthorized-access-to-computer-networks-of-50-companies/?pk_campaign=feed&pk_kwd=jordanian-man-admits-selling-unauthorized-access-to-computer-networks-of-50-companies"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Food delivery sector (Grubhub)",
+        "modop": "Internal system access, data theft (Zendesk, Salesforce), extortion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_theft",
+          "extortion",
+          "cybercrime_group"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115907581778663538"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "Hanto",
+        "secteur": "Italian Government & Defense organization",
+        "modop": "Data breach, leaking contact information (emails, physical addresses, social media links).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "government",
+          "defense"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115906552403146376"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "nom": "HawkSec",
+        "secteur": "Energy (TotalEnergies)",
+        "modop": "Data breach, stealing massive databases (184 million customer records including bank details), leaking samples online.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "data_theft",
+          "extortion",
+          "energy_sector"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115906359887180438"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Arms Industry",
+        "theme": "European cooperation and competition in the French defense market",
+        "description": "President Macron announces his intention to open the French arms market to European competition, while increasing defense budgets. This decision marks a paradigm shift, favoring faster or more effective European solutions, and challenging the traditional 'reserved market' policy for French manufacturers. The objective is to develop, produce, and buy European to reduce non-European dependencies.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "european_defense",
+          "france",
+          "cooperation",
+          "defense_industry",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/emmanuel-macron-ouvre-la-voie-a-la-concurrence-sur-le-marche-de-defense-francais/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Health, Technology, Governance",
+        "theme": "European Health Data Space (EHDS) and digital sovereignty",
+        "description": "The European Union is promoting the EHDS to structure the circulation of health data among member states, fostering research, innovation, and quality of care. This project aims to strengthen European sovereignty against global digital giants, despite the current fragmentation of national systems and technical standards. The goal is to harmonize access rules, practices, and technologies for secure health data exploitation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "health",
+          "europe",
+          "digital_sovereignty",
+          "health_data",
+          "ai",
+          "governance"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/la-bataille-strategique-dun-systeme-de-sante-europeen-interconnecte-partie-1-2/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Government, International Relations",
+        "theme": "Arctic region, Greenland and geopolitical competition",
+        "description": "Greenland is presented as a mirror of global issues, with a shift from climate concerns to a geopolitics of power struggles. US interest in controlling Greenland, facing China's and Russia's ambitions in the Arctic, highlights the competition for resources (freshwater, rare earths, minerals) and shipping routes. This questions Europe's position and the nature of international alliances.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "arctic",
+          "greenland",
+          "resources",
+          "united_states",
+          "china",
+          "russia",
+          "sovereignty"
+        ],
+        "sources": [
+          "https://www.iris-france.org/groenland-miroir-du-monde/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Government, Politics, Economy",
+        "theme": "Erosion of democracy and economic impact in Hong Kong",
+        "description": "Hong Kong's December 2025 legislative elections mark a new stage in the erosion of the 'One country, two systems' principle, with low turnout and the elimination of all formal opposition. China aims for political homogenization which, despite initial investor concern in 2019, saw Foreign Direct Investments (FDI) rebound to historical levels in 2024. This situation makes peaceful reunification with Taiwan more unrealistic.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hong_kong",
+          "china",
+          "democracy",
+          "economy",
+          "foreign_investments",
+          "taiwan"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/recul-de-la-democratie-hausse-des-ide-a-hong-kong/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "National Security, Infrastructure, Governance",
+        "theme": "Mass criticality: rethinking critical infrastructure",
+        "description": "The article proposes rethinking the definition of critical infrastructure in the UK to include 'ordinary' digital components that have become de facto critical due to their interdependence and concentration. Incidents like Cloudflare outages or attacks on software suppliers (Marquis, CrowdStrike) illustrate how a single failure can have a systemic impact. This requires mapping digital dependencies, technological diversification, and cross-sector resilience exercises.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "critical_infrastructure",
+          "resilience",
+          "supply_chain",
+          "digital_dependencies",
+          "united_kingdom"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/mass-criticality-rethinking-critical-infrastructure-uk"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Justice, Security, Criminal Organizations",
+        "theme": "Criminal convergences: a challenge for cooperation",
+        "description": "Current assessments of organized crime reveal increasing porosity between different types of trafficking and an expansion of criminal partnerships. This results in a poly-criminal ecosystem adaptable to opportunities, leveraging the diversification and connectivity of illicit trades, posing a major challenge to international cooperation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "organized_crime",
+          "international_cooperation",
+          "cybercrime",
+          "illicit_trafficking"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-convergences-criminelles-un-defi-pour-la-cooperation/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Human Rights, Media, Armed Conflicts",
+        "theme": "Gaza conflict: humanitarian crisis and triumph of guilty silence",
+        "description": "The article describes the catastrophic humanitarian situation in Gaza, ongoing violence, and psychological trauma for the Palestinian population. It denounces the inability to discuss this tragedy in France without being accused of divisiveness, the marginalization of those highlighting the reality, and the promotion of narratives denying genocide. This situation is described as 'the triumph of guilty silence'.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "gaza",
+          "palestine",
+          "conflict",
+          "humanitarian_crisis",
+          "media",
+          "censorship"
+        ],
+        "sources": [
+          "https://www.iris-france.org/gaza-triomphe-du-silence-coupable-proche-orient-comment-en-est-on-arrive-la-1-5/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Culture, Sports, Defense",
+        "theme": "South Korea's mandatory military draft weakens its soft power",
+        "description": "South Korea's mandatory military service, despite decades of debate, continues to affect the careers of world-renowned athletes and artists (e.g., Korean Zombie, BTS), compromising their contribution to national soft power. The current exemption system is deemed too restrictive, leading to career interruptions and loss of skills, with significant economic and cultural ramifications.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "south_korea",
+          "soft_power",
+          "military_service",
+          "culture",
+          "sports"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/dimmed-stars-south-koreas-draft-weakens-its-soft-power"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services, Regulation",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "A data breach affected approximately 750,000 people. The incident, detected in August 2025, led to the theft of a limited set of investigative and investor data, including sensitive personal and financial information (income, IDs, contact details, account numbers, statements). No evidence of misuse or dark web exposure has been found.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial",
+          "regulation",
+          "personal_data",
+          "financial_data",
+          "canada"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186993/data-breach/data-breach-at-canadas-investment-watchdog-canadian-investment-regulatory-organization-impacts-750000-people.html"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Food Delivery, Technology",
+        "victime": "Grubhub",
+        "description": "Grubhub confirms a data breach following hackers accessing internal systems. The ShinyHunters group is suspected of being behind the attack, allegedly stealing Zendesk data and older Salesforce data, and attempting to extort the company.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "data_theft",
+          "extortion",
+          "shinyhunters"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/115907581778663538"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Government, Defense",
+        "victime": "Italian Government & Defense organization",
+        "description": "The Hanto group claims a data breach targeting an Italian government and defense organization. Over 30,000 email contacts, physical addresses, and links to Facebook and LinkedIn profiles were reportedly leaked.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "defense",
+          "italy",
+          "personal_data",
+          "hanto"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115906552403146376"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Energy",
+        "victime": "TotalEnergies",
+        "description": "Hacker group 'HawkSec' claims a massive breach of TotalEnergies' systems, asserting to have stolen a database of 184 million customer records, including bank details. Data samples are being leaked online.",
+        "tags": [
+          "violation",
+          "breach",
+          "energy",
+          "personal_data",
+          "bank_details",
+          "hawksec",
+          "extortion"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115906359887180438"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "SFR",
+        "description": "SFR suffered a cyberattack resulting in the exfiltration of customer personal data, including name, surname, email address, postal address, customer reference, and phone number. The attack compromised an 'IT tool' related to fixed internet connection management. Banking data was reportedly not compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "personal_data",
+          "france",
+          "infrastructure"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/16/les-operateurs-telecoms-cibles-privilegiees-des-cyberattaques-peinent-a-trouver-la-parade_6662493_3234.html"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Free",
+        "description": "Free was a victim of a cyberattack on October 21, 2024, leading to the theft of data from 19.2 million customers, including over 5 million bank identification numbers (IBANs). The CNIL imposed a 42 million euro fine on Free for failing to deploy basic security measures.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "personal_data",
+          "bank_details",
+          "france",
+          "cnil_sanction"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/economie/article/2026/01/16/les-operateurs-telecoms-cibles-privilegiees-des-cyberattaques-peinent-a-trouver-la-parade_6662493_3234.html"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "10.0",
+        "product": "Cisco AsyncOS Software for Cisco Secure Email Gateway and Cisco Secure Email and Web Manager",
+        "description": "Critical vulnerability allowing arbitrary command execution with root privileges via malicious HTTP requests on the Spam Quarantine feature. Actively exploited as a zero-day by APT UAT-9686.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "zero_day",
+          "cisco",
+          "asyncos",
+          "email_security",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2025-37164",
+        "cvss": "10.0",
+        "product": "HPE OneView",
+        "description": "Maximum severity Remote Code Execution (RCE) vulnerability, actively exploited by the RondoDox botnet for large-scale automated attacks.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "HPE",
+          "oneview",
+          "botnet",
+          "critical",
+          "mass_exploitation"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/16/rondodox_botnet_hpe_oneview/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23800",
+        "cvss": "10.0",
+        "product": "Modular DS WordPress plugin (versions 2.5.2 and below)",
+        "description": "Actively exploited Privilege Escalation vulnerability, allowing an unauthenticated attacker to gain administrative control of the site via a combination of direct route selection, authentication bypass, and auto-login as admin.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "wordpress",
+          "plugin",
+          "admin_takeover",
+          "critical",
+          "authentication_bypass",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186976/security/actively-exploited-critical-flaw-in-modular-ds-wordpress-plugin-enables-admin-takeover.html",
+          "https://cvefeed.io/vuln/detail/CVE-2026-23800"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23744",
+        "cvss": "9.8",
+        "product": "MCPJam inspector (versions 1.4.2 and earlier)",
+        "description": "Remote Code Execution (RCE) vulnerability allowing an attacker to send a crafted HTTP request to trigger the installation of an MCP server, leading to remote RCE, as the product by default listens on 0.0.0.0.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "http_endpoint_exposure",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23744"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "9.4",
+        "product": "Fortinet FortiSIEM",
+        "description": "Critical vulnerability allowing an unauthenticated attacker to execute arbitrary code or commands via specially crafted TCP requests. Actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "fortinet",
+          "fortisiem",
+          "critical",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/921138/%27Aanvallers+maken+actief+misbruik+van+kritiek+lek+in+Fortinet+FortiSIEM%27?channel=rss",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23742",
+        "cvss": "8.8",
+        "product": "Skipper (versions 0.23.0 and earlier)",
+        "description": "Arbitrary code execution vulnerability via Lua filters if untrusted users can create them (default configuration -lua-sources=inline). Can lead to filesystem reading and Skipper secrets exposure.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_code_execution",
+          "information_disclosure",
+          "configuration_error",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23742"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-22865",
+        "cvss": "8.6",
+        "product": "Gradle (versions prior to 9.3.0)",
+        "description": "Exceptions during dependency resolution do not disable failing repositories, allowing Gradle to fall back to other repositories and potentially serving malicious artifacts if an attacker controls a secondary repository. Supply chain risk.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "supply_chain",
+          "dependency_confusion",
+          "code_tampering",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22865"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-22816",
+        "cvss": "8.6",
+        "product": "Gradle (versions prior to 9.3.0)",
+        "description": "Exceptions during dependency resolution do not disable repositories, and an unresolvable hostname allows Gradle to continue searching for dependencies elsewhere. An attacker can register a service under the hostname and serve malicious artifacts. Supply chain risk.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "supply_chain",
+          "dependency_hijacking",
+          "code_tampering",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22816"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-23745",
+        "cvss": "8.2",
+        "product": "node-tar (versions 7.5.2 and below)",
+        "description": "Path traversal vulnerability due to insufficient sanitization of 'linkpath' for Link and SymbolicLink entries when preservePaths is false, allowing arbitrary file overwrite via hardlinks and symlink poisoning.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "arbitrary_file_overwrite",
+          "symlink_poisoning",
+          "path_traversal",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23745"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "cve_id": "CVE-2026-20960",
+        "cvss": "8.0",
+        "product": "Microsoft Power Apps",
+        "description": "Remote Code Execution (RCE) vulnerability due to improper authorization, allowing an authorized attacker to execute code over a network.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "RCE",
+          "microsoft",
+          "power_apps",
+          "improper_authorization",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-20960"
+        ],
+        "date": "2026-01-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "China-linked malicious actors target internet-facing systems in North America with zero-days",
+        "description": "State-sponsored actors linked to China, specifically UAT-8837 and UAT-9686, are intensifying initial access operations by targeting critical infrastructure in North America. They exploit zero-day vulnerabilities, such as Sitecore ViewState deserialization (CVE-2025-53690) and a critical flaw in Cisco AsyncOS (CVE-2025-20393), to gain root access, deploy backdoors (AquaShell), and use tunneling tools (AquaTunnel, Chisel). Their objectives include espionage and intelligence gathering, using open-source tools and Living-Off-The-Land techniques.",
+        "threat_actor": "UAT-8837, UAT-9686",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-53690",
+            "CVE-2025-20393"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access (Exploit Public-Facing Application)",
+          "TA0003: Persistence (Backdoor, Account Manipulation)",
+          "TA0004: Privilege Escalation (Exploit for Privilege Escalation)",
+          "TA0008: Lateral Movement (Remote Services)",
+          "TA0011: Command and Control (Proxy, Multi-Stage Channels)",
+          "TA0009: Collection (Data from Network Shared Drive)",
+          "T1190: Exploit Public-Facing Application",
+          "T1078: Valid Accounts",
+          "T1505.003: Server Software Component: Web Shell",
+          "T1021.001: Remote Services: Remote Desktop Protocol",
+          "T1572: Protocol Tunneling",
+          "T1059: Command and Scripting Interpreter",
+          "T1070.004: Indicator Removal: File Deletion"
+        ],
+        "analyse": "These campaigns represent a significant threat to critical infrastructure in North America, with objectives of espionage and future disruption. The exploitation of zero-days and the use of stealthy TTPs (Living-Off-The-Land, tunneling tools) complicate detection and response. The focus on internet-facing systems creates an increased risk for Managed Service Providers (MSPs) who could serve as an entry point for cascading attacks on multiple clients.",
+        "recommandations": [
+          "Immediately apply patches for known vulnerabilities, especially CVE-2025-20393 and CVE-2026-23800.",
+          "Implement threat-informed vulnerability management (TVM) to prioritize patches based on actual risk and active exploitation.",
+          "Strengthen authentication and access controls for internet-facing systems.",
+          "Monitor for anomalous network activities, including backdoor deployment attempts and the use of tunneling tools.",
+          "Regularly audit security configurations and access policies to prevent bypasses and privilege escalations.",
+          "Educate security teams and administrators on the TTPs of China-linked APTs and indicators of zero-day exploitation."
+        ],
+        "tags": [
+          "apt",
+          "china",
+          "zero_day",
+          "rce",
+          "critical_infrastructure",
+          "espionage",
+          "vulnerability",
+          "threat_actor",
+          "initial_access",
+          "persistence",
+          "exfiltration",
+          "living_off_the_land"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-sitecore-zero-day-for-initial-access/",
+          "https://fieldeffect.com/blog/china-nexus-threat-actors-internet-facing-systems",
+          "https://securityaffairs.com/186985/apt/china-linked-apt-uat-9686-abused-now-patched-maximum-severity-asyncos-bug.html",
+          "https://www.helpnetsecurity.com/2026/01/16/cisco-fixes-asyncos-vulnerability-exploited-in-zero-day-attacks-cve-2025-20393/",
+          "https://thecyberthrone.in/2026/01/16/cisco-finaly-patches-critical-asyncos-zero-day-cve-2025-20393/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Social Engineering: 'Payroll Pirates' divert salaries by manipulating help desks",
+        "description": "A social engineering attack allowed a malicious actor to modify direct deposit payroll details. The attacker impersonated employees and manipulated multiple help desks (payroll, IT, HR) to bypass challenge/response authentication, reset passwords, and re-enroll multi-factor authentication (MFA) devices. Once authenticated, the actor compromised several accounts and diverted paychecks to their own bank accounts, leveraging publicly available information from social platforms.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001: Initial Access (Phishing, Vishing, Social Engineering)",
+          "TA0003: Persistence (Account Manipulation)",
+          "TA0006: Credential Access (Social Engineering, Multi-Factor Authentication Bypass)",
+          "T1566: Phishing",
+          "T1534: Internal Spearphishing",
+          "T1078: Valid Accounts",
+          "T1556: Domain Accounts",
+          "T1110.003: Brute Force: Password Spraying",
+          "T1621: Multi-Factor Authentication Request Generation"
+        ],
+        "analyse": "This incident highlights the persistent effectiveness of social engineering attacks, even against technical controls like MFA. Reliance on human processes in help desks represents a major vulnerability if these interactions are not rigorously governed. The impact was limited to payroll diversions, but the method could be used for broader network access and sensitive data exfiltration. Reconnaissance via social platforms facilitates such attacks.",
+        "recommandations": [
+          "Strengthen authentication protocols for help desk services, especially for password resets and MFA enrollment.",
+          "Implement strict identity governance and Privileged Access Management (PAM) for service accounts.",
+          "Educate staff on social engineering techniques, including impersonation and help desk manipulation.",
+          "Monitor for unusual modifications to direct deposit details or other sensitive financial information.",
+          "Conduct social engineering simulation exercises to test team resilience."
+        ],
+        "tags": [
+          "social_engineering",
+          "fraud",
+          "impersonation",
+          "mfa_bypass",
+          "payroll_fraud",
+          "human_factor",
+          "initial_access",
+          "credential_access"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "StealC malware control panel hacked via XSS flaw by researchers",
+        "description": "Security researchers exploited a Cross-Site Scripting (XSS) vulnerability in the web-based control panel used by operators of the StealC info-stealing malware. This flaw allowed observing active sessions, gathering intelligence on attackers' hardware (Apple M3 system, English/Russian language settings, Eastern European time zone, accessing via Ukraine), and potentially hijacking sessions. The goal was to disrupt StealC's operations, as the number of operators had recently spiked.",
+        "threat_actor": "StealC (operators)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0009: Collection (Input Capture)",
+          "TA0011: Command and Control (Web Protocols)",
+          "T1190: Exploit Public-Facing Application (XSS)",
+          "T1059.004: Command and Scripting Interpreter: JavaScript"
+        ],
+        "analyse": "This incident is a rare example of 'hacking the hackers,' where weaknesses in cybercriminals' infrastructure are exploited to gather intelligence and disrupt their operations. The discovery of XSS in a MaaS (Malware-as-a-Service) control panel highlights that even attacker tools can be vulnerable. The information collected on operators (geographic location, system configuration) is valuable for investigations and attribution. This may lead to a re-evaluation of the use of this malware in the cybercriminal market.",
+        "recommandations": [
+          "For StealC panel operators: Immediate patching of the XSS vulnerability.",
+          "For defenders: Use code analysis tools to detect similar flaws in web applications, especially those exposed to the internet.",
+          "Integrate intelligence on cybercriminal TTPs to anticipate their moves and vulnerabilities in their own infrastructures."
+        ],
+        "tags": [
+          "malware",
+          "info_stealer",
+          "stealc",
+          "xss",
+          "cybercrime",
+          "threat_intelligence",
+          "disruption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/stealc-hackers-hacked-as-researchers-hijack-malware-control-panels/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Threat and Vulnerability Management (TVM) in 2026: An intelligence-driven approach",
+        "description": "Security teams are overwhelmed by the increasing volume of vulnerabilities (CVEs) and the speed of their exploitation. Traditional vulnerability management, solely based on CVSS scores, is ineffective. A new approach, Threat and Vulnerability Management (TVM) – or Threat-Informed Vulnerability Management – is proposed. It focuses on prioritizing remediations based on exploitability, asset importance, and threat actor interest, leveraging real-time intelligence (dark web, exploit marketplaces, malware telemetry). The article highlights the five pillars of effective TVM: full attack surface visibility, continuous external attack surface management, external threat intelligence, risk-based vulnerability management, and continuous remediation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "The article emphasizes a necessary transformation in vulnerability management, moving from a reactive, volume-based approach to a proactive, risk-focused one. The concept of 'weaponized vulnerabilities' illustrates the speed at which flaws are exploited, highlighting the urgency of contextual intelligence. The 'silo problem' between security, IT, and CTI teams is a major obstacle to a unified view of risk. Adopting TVM would reduce alert fatigue, optimize resources, and strengthen overall security posture by focusing on real threats.",
+        "recommandations": [
+          "Implement a TVM platform integrating real-time threat intelligence.",
+          "Develop comprehensive and continuous visibility of internal and external attack surfaces.",
+          "Prioritize remediations using a dynamic risk score that incorporates exploitability, asset impact, and threat actor interest.",
+          "Improve collaboration between security, IT, and CTI teams by establishing common processes and risk languages.",
+          "Focus on the top 1% of critical vulnerabilities that are actively exploited rather than the total volume of CVEs."
+        ],
+        "tags": [
+          "vulnerability_management",
+          "threat_intelligence",
+          "risk_management",
+          "cve",
+          "cvss",
+          "alert_fatigue",
+          "attack_surface_management",
+          "security_operations",
+          "proactive_defense"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/threat-and-vulnerability-management"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Increase in 'ClickFix' attacks and social engineering risks",
+        "description": "A wave of 'ClickFix' attacks is observed, where attackers manipulate users into self-installing malware. These attacks often masquerade as urgent security updates or necessary activities. They bypass technical protections by targeting the 'human component,' emphasizing that purely technical security approaches are insufficient. The method is low-complexity but highly effective.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001: Initial Access (Phishing)",
+          "TA0004: Privilege Escalation (Bypass User Account Control)",
+          "T1566.001: Phishing: Spearphishing Attachment",
+          "T1204.002: User Execution: Malicious File"
+        ],
+        "analyse": "'ClickFix' attacks demonstrate the persistence and effectiveness of social engineering as an infection vector. They capitalize on user trust and lack of vigilance in urgent scenarios. The success of these attacks highlights a gap in security training and the need to strengthen human resilience, rather than relying solely on technical defenses. The attackers' creativity in this area demands continuous adaptation of awareness programs.",
+        "recommandations": [
+          "Regularly train personnel to recognize social engineering attempts and verify sources before taking any action.",
+          "Implement phishing and 'ClickFix' attack simulations to enhance user vigilance.",
+          "Implement technical controls to block the download or execution of unauthorized software.",
+          "Establish clear procedures for software update management and security alerts to avoid confusion."
+        ],
+        "tags": [
+          "social_engineering",
+          "malware",
+          "user_execution",
+          "phishing",
+          "awareness",
+          "human_factor",
+          "initial_access"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/01/weitere-news-im-januar/"
+        ],
+        "date": "2026-01-17"
+      },
+      {
+        "title": "Analysis of GPG signature weaknesses and vulnerabilities in Android TEEs",
+        "description": "The Chaos Communication Congress highlighted weaknesses in GPG signatures, notably via classic ANSI escape sequences, confirming usability issues within the GPG ecosystem. Concurrently, researchers demonstrated code execution in the Trusted Execution Environment (TEE) of Xiaomi Android devices, a crucial component of mobile device security.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0004: Privilege Escalation (Exploit for Privilege Escalation)",
+          "TA0005: Defense Evasion (Obfuscated Files or Information)",
+          "T1213: Exploitation for Defense Evasion",
+          "T1027: Obfuscated Files or Information"
+        ],
+        "analyse": "The revelations about GPG underscore that even established security tools can suffer from flaws related to complexity of use, potentially exploitable via 'classic' techniques. The demonstration of RCE in Android TEEs is particularly concerning, as TEEs are intended to be highly secure environments, a fundamental building block of modern device security. Compromising such mechanisms can have profound repercussions on user data confidentiality and integrity, directly affecting trust in mobile device hardware security. Alternatives to GPG, such as SSH or age for signatures, are suggested.",
+        "recommandations": [
+          "Evaluate and update GPG implementations to mitigate known vulnerabilities.",
+          "Consider alternatives to GPG for digital signatures, such as SSH or age, if they offer better usability and security.",
+          "Mobile device manufacturers must strengthen the security of their TEE implementations and patch identified vulnerabilities.",
+          "Android users should keep their devices updated with the latest security patches provided by manufacturers."
+        ],
+        "tags": [
+          "gpg",
+          "digital_signatures",
+          "android_tee",
+          "vulnerability",
+          "code_execution",
+          "mobile_security",
+          "privacy",
+          "trust"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/01/to-sign-or-not-to-sign/"
+        ],
+        "date": "2026-01-17"
+      }
+    ]
+  }
+}
