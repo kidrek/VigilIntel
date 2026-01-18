@@ -1,0 +1,911 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une diversification et une sophistication croissantes des menaces cyber. L'ingénierie sociale reste un vecteur d'attaque prédominant, exploitée par des \"Payroll Pirates\" pour la redirection de paies et le contournement de l'authentification multifactorielle, soulignant la persistance de la 'faille humaine'. Les extensions de navigateur malveillantes, qu'il s'agisse de celles ciblant les plateformes RH/ERP pour le vol de crédentiels ou de la campagne 'GhostPoster' pour la fraude publicitaire, continuent d'infecter un grand nombre d'utilisateurs, exploitant la confiance dans les outils de productivité. Les menaces liées à la chaîne d'approvisionnement sont également mises en évidence par l'incident 'CodeBreach' affectant les pipelines CI/CD d'AWS, illustrant comment une vulnérabilité apparemment mineure peut avoir un impact systémique majeur. Les acteurs étatiques sont très actifs, comme le démontre le groupe UAT-8837, lié à la Chine, ciblant les infrastructures critiques nord-américaines avec des zero-days et des outils post-compromission sophistiqués, ainsi que l'utilisation de cyberattaques à des fins géopolitiques par des nations. La cybercriminalité de type ransomware, incarnée par Black Basta, continue de causer des perturbations massives et fait l'objet d'opérations de répression internationales. Parallèlement, les violations de données personnelles sensibles, notamment dans le secteur de la santé et des services gouvernementaux, persistent, avec des conséquences à long terme pour les victimes. L'intelligence artificielle est mentionnée dans le contexte de la détection des arnaques par Google Chrome, mais son utilisation par les attaquants, bien que non explicitement détaillée dans ces articles, est une tendance émergente qui complexifiera la détection. Enfin, des vulnérabilités critiques avec des scores CVSS très élevés continuent d'être découvertes dans des plugins populaires, offrant des points d'entrée faciles pour les attaquants. L'état général des menaces est marqué par une résilience des vecteurs traditionnels (ingénierie sociale, vulnérabilités logicielles) et une intensification des campagnes sophistiquées (APT, ransomwares) et géopolitiques, avec un accent croissant sur la chaîne d'approvisionnement et les infrastructures critiques.",
+      "date": "2026-01-18"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Black Basta",
+        "secteur": "Entreprises diverses, infrastructures critiques (Amérique du Nord, Europe, Australie), hôpitaux, institutions publiques, autorités gouvernementales",
+        "modop": "Ransomware-as-a-Service (RaaS), intrusion réseau, vol de données, déploiement de rançongiciels, craquage de hachages pour l'accès aux réseaux",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "extortion",
+          "hash_cracking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187008/cyber-crime/ukraine-germany-operation-targets-black-basta-russian-leader-wanted.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "nom": "UAT-8837",
+        "secteur": "Infrastructures critiques nord-américaines",
+        "modop": "APT lié à la Chine, accès initial via exploits ou informations d'identification volées, utilisation d'outils open-source (Earthworm, Sharphound, DWAgent, Certipy) pour le vol de crédentiels, la cartographie AD, la persistance, la désactivation de RestrictedAdmin pour RDP, l'exfiltration de DLL liées aux produits. Utilisation d'exploits zero-day (CVE-2025-53690).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china-linked",
+          "critical_infrastructure",
+          "zero_day",
+          "supply_chain",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186999/breaking-news/china-linked-apt-uat-8837-targets-north-american-critical-infrastructure.html"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Application de la loi",
+        "theme": "Répression de la cybercriminalité internationale",
+        "description": "Opération conjointe entre les polices ukrainienne et allemande visant le groupe de rançongiciels Black Basta. Deux suspects ukrainiens ont été identifiés pour le craquage de hachages et un mandat d'arrêt international a été émis pour le leader russe présumé du groupe, Oleg Nefedov, accusé d'avoir formé une organisation criminelle, d'extorsion à grande échelle et de cybercriminalité.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cybercriminalite",
+          "ransomware",
+          "repression",
+          "international",
+          "black_basta",
+          "ukraine",
+          "allemagne",
+          "russie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187008/cyber-crime/ukraine-germany-operation-targets-black-basta-russian-leader-wanted.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Infrastructures critiques, Gouvernement",
+        "theme": "Cyberguerre et capacités offensives étatiques",
+        "description": "Une cyberattaque menée par les États-Unis a provoqué une panne d'électricité généralisée dans la capitale du Venezuela, démontrant la capacité du Pentagone à désactiver et réactiver les réseaux. Cette opération, survenue le 3 janvier, a mis en évidence l'efficacité des cyberarmes américaines contre des pays dotés de défenses cybernétiques moins sophistiquées. Des interférences avec les radars de défense aérienne ont également été signalées.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberguerre",
+          "etats_unis",
+          "venezuela",
+          "infrastructure_critique",
+          "blackout",
+          "defense_aerienne"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/17/us-cyberattack-blacks-out-venezuela-leads-to-maduros-capture-in-2026/?pk_campaign=feed&pk_kwd=us-cyberattack-blacks-out-venezuela-leads-to-maduros-capture-in-2026"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Vastaamo (entreprise finlandaise de psychothérapie)",
+        "description": "Vol de dossiers de psychothérapie de 33 000 individus par Aleksanteri Tomminpoika Kivimäki (alias \"Julius Kivimäki\" ou \"Zeekill\"). Les données incluaient les noms complets, numéros de sécurité sociale, adresses, numéros de téléphone et des retranscriptions détaillées des conversations thérapeutiques. L'attaquant a extorqué les victimes en menaçant de publier leurs informations. L'impact psychologique et émotionnel sur les victimes est considérable et durable.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "donnees_sensibles",
+          "extorsion",
+          "confidentialite",
+          "finlande",
+          "psychotherapie"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/17/a-faceless-hacker-stole-my-therapy-notes-now-my-deepest-secrets-are-online-forever/?pk_campaign=feed&pk_kwd=a-faceless-hacker-stole-my-therapy-notes-now-my-deepest-secrets-are-online-forever"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Finance",
+        "victime": "Grande banque américaine (via son magasin de produits pour employés)",
+        "description": "Un enregistreur de frappe (keylogger) a été implanté sur le magasin de produits de marque destiné aux employés d'une des trois plus grandes banques américaines. Le malware a été actif pendant environ 18 heures, collectant les identifiants de connexion, les numéros de carte de paiement et les informations personnelles de plus de 200 000 employés. L'attaque a utilisé un chargeur sophistiqué en deux étapes pour contourner la détection.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "keylogger",
+          "credentials",
+          "donnees_personnelles",
+          "banque",
+          "etats_unis"
+        ],
+        "sources": [
+          "https://securityonline.info/keylogger-found-harvesting-credentials-on-top-us-banks-employee-store/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "victime": "Organisation gouvernementale et de défense australienne",
+        "description": "Le groupe USDT revendique une violation de données ayant entraîné la fuite de 438 522 dossiers personnels de citoyens australiens. Les données compromises incluent les noms, le genre, les adresses e-mail, les dates de naissance, les numéros de téléphone et les adresses postales.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "defense",
+          "donnees_personnelles",
+          "australie",
+          "usdt"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115911980323469785"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Gouvernement, Application de la loi",
+        "victime": "Police d'État italienne",
+        "description": "Le groupe 'worldweknew7' revendique une violation de données ciblant la Police d'État italienne. Cette violation inclut plusieurs comptes appartenant à diverses agences d'application de la loi.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "police",
+          "application_loi",
+          "italie"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115911506988266008"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-10484",
+        "cvss": "9.8",
+        "product": "Registration & Login with Mobile Phone Number for WooCommerce (plugin WordPress)",
+        "description": "Vulnérabilité de contournement d'authentification (Authentication Bypass) due à une vérification insuffisante de l'identité de l'utilisateur avant l'authentification via la fonction fma_lwp_set_session_php_fun(). Permet à des attaquants non authentifiés de s'authentifier comme n'importe quel utilisateur, y compris les administrateurs, sans mot de passe valide.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "woocommerce",
+          "wordpress",
+          "plugin",
+          "critical",
+          "acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10484"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "cve_id": "CVE-2025-15403",
+        "cvss": "9.8",
+        "product": "RegistrationMagic (plugin WordPress)",
+        "description": "Vulnérabilité d'escalade de privilèges (Privilege Escalation) via la fonction 'add_menu' accessible via l'action AJAX 'rm_user_exists'. Permet des mises à jour arbitraires du paramètre 'admin_order', ce qui permet à des attaquants non authentifiés d'injecter un 'slug' vide dans le paramètre d'ordre, de manipuler la logique de génération de menu du plugin et d'ajouter la capacité 'manage_options' pour le rôle ciblé. Nécessite au moins un utilisateur abonné pour une escalade de privilèges ultérieure.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "registrationmagic",
+          "wordpress",
+          "plugin",
+          "critical",
+          "acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15403"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Credential-stealing Chrome extensions target enterprise HR platforms",
+        "description": "Des extensions Chrome malveillantes, se faisant passer pour des outils de productivité ou de sécurité, ont été découvertes sur le Chrome Web Store. Elles ciblaient les plateformes RH et ERP d'entreprise (Workday, NetSuite, SAP SuccessFactors) pour voler des informations d'identification d'authentification ou bloquer les pages d'administration utilisées pour la réponse aux incidents de sécurité. La campagne utilise l'exfiltration de cookies vers des serveurs distants, la manipulation du DOM pour masquer les pages de sécurité, et l'injection bidirectionnelle de cookies pour le détournement de session, permettant une prise de contrôle immédiate des comptes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1552.001 (Credentials from Web Browsers)",
+          "T1059.001 (Command and Scripting Interpreter: JavaScript)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1550 (Use Alternate Authentication Material)",
+          "T1562 (Impair Defenses - DOM manipulation)"
+        ],
+        "analyse": "L'impact est significatif pour les entreprises, car le vol de crédentiels et le détournement de session peuvent mener à la compromission complète des comptes RH/ERP, exposant des données sensibles des employés, permettant des fraudes financières (comme des changements de paie) et perturbant les opérations commerciales. La capacité à bloquer les pages d'administration retarde la détection et la réponse aux incidents, augmentant la fenêtre d'opportunité pour les attaquants. Le potentiel géographique est global, ciblant des plateformes d'entreprise couramment utilisées.",
+        "recommandations": [
+          "Sensibiliser les employés aux risques des extensions de navigateur non vérifiées.",
+          "Mettre en place des politiques strictes concernant l'installation d'extensions non approuvées.",
+          "Utiliser des solutions de gestion des accès et des identités (IAM) robustes avec MFA obligatoire pour les plateformes RH/ERP.",
+          "Surveiller les logs d'authentification et d'activité sur les plateformes RH/ERP pour détecter des comportements anormaux (connexions depuis des localisations inhabituelles, changements de paramètres de paiement)."
+        ],
+        "tags": [
+          "extensions_chrome",
+          "vol_credentials",
+          "rh",
+          "erp",
+          "detournement_session",
+          "fraude",
+          "cookies",
+          "dom_manipulation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/credential-stealing-chrome-extensions-target-enterprise-hr-platforms/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "Malicious GhostPoster browser extensions found with 840,000 installs",
+        "description": "Dix-sept extensions de navigateur malveillantes, liées à la campagne 'GhostPoster', ont été découvertes sur les magasins Chrome, Firefox et Edge, accumulant 840 000 installations. Ces extensions dissimulent du code JavaScript malveillant dans leurs images de logo, qui surveille l'activité de navigation, détourne les liens d'affiliation sur les plateformes de commerce électronique majeures, et injecte des iframes invisibles pour la fraude publicitaire et la fraude au clic. Le code utilise une exécution en plusieurs étapes avec un décodage Base64 pour échapper à la détection statique et comportementale.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1074.001 (Data Staged: Local Data Staging - hidden code)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1059.001 (Command and Scripting Interpreter: JavaScript)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1071.001 (Application Layer Protocol: Web Protocols - C2 communication)",
+          "T1574 (Hijack Execution Flow - affiliate links)"
+        ],
+        "analyse": "L'impact est principalement financier pour les victimes indirectes (plateformes d'e-commerce, annonceurs) en raison de la fraude publicitaire et au clic, ainsi que pour les utilisateurs dont l'activité de navigation est surveillée. La grande quantité d'installations démontre l'efficacité de la distribution via les magasins d'extensions légitimes, exposant un vaste public. L'utilisation de techniques d'obfuscation et d'exécution en plusieurs étapes rend la détection plus difficile et indique une sophistication croissante des menaces basées sur les navigateurs.",
+        "recommandations": [
+          "Auditer régulièrement les extensions installées dans les navigateurs, en supprimant celles qui ne sont pas essentielles ou provenant de sources non fiables.",
+          "Mettre en œuvre des solutions de sécurité des points de terminaison capables de détecter les comportements anormaux des navigateurs et des extensions.",
+          "Sensibiliser les utilisateurs à la vérification des autorisations demandées par les extensions et à la méfiance envers les outils 'gratuits' aux fonctionnalités trop belles pour être vraies.",
+          "Utiliser des navigateurs avec des politiques de sécurité strictes pour les extensions et des capacités de sandboxing renforcées."
+        ],
+        "tags": [
+          "extensions_navigateur",
+          "malware",
+          "ghostposter",
+          "fraude_publicitaire",
+          "fraude_clic",
+          "surveillance",
+          "javascript",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ghostposter-browser-extensions-found-with-840-000-installs/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "China-linked APT UAT-8837 targets North American critical infrastructure",
+        "description": "Cisco Talos a rapporté que le groupe de menace UAT-8837, probablement lié à la Chine, a ciblé des infrastructures critiques en Amérique du Nord depuis l'année dernière. Le groupe utilise des exploits (y compris un zero-day CVE-2025-53690) ou des informations d'identification volées pour l'accès initial, puis déploie des outils open-source comme Earthworm, Sharphound, DWAgent et Certipy pour voler des crédentiels, cartographier les environnements Active Directory, maintenir l'accès et mener des attaques manuelles. Ils désactivent également RestrictedAdmin pour RDP et exfiltrent des DLL de produits, soulevant des risques de 'trojanisation' et d'attaques de la chaîne d'approvisionnement.",
+        "threat_actor": "UAT-8837",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-53690"
+          ],
+          "MITRE_ATT&CK": [],
+          "ASN": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1003 (OS Credential Dumping)",
+          "T1087 (Account Discovery)",
+          "T1069 (Permission Groups Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "L'impact est potentiellement catastrophique pour les infrastructures critiques nord-américaines, y compris les secteurs de l'énergie, de l'eau, de la communication et d'autres services essentiels. L'utilisation de zero-days et l'exfiltration de DLL de produits augmentent le risque de futures attaques sophistiquées par la chaîne d'approvisionnement ou d'ingénierie inversée de systèmes critiques. La persistance de cette APT chinoise indique un objectif stratégique de renseignement ou de préparation à des attaques perturbatrices, ce qui en fait une menace majeure pour la sécurité nationale et économique.",
+        "recommandations": [
+          "Mettre en œuvre une stratégie de défense en profondeur, incluant la segmentation du réseau, la détection des intrusions et la surveillance continue des activités.",
+          "Appliquer des correctifs de sécurité rapidement, en priorisant les vulnérabilités exploitables et connues des APT.",
+          "Renforcer la gestion des identités et des accès, notamment par la mise en œuvre de la MFA et le principe du moindre privilège.",
+          "Surveiller les logs pour détecter l'utilisation d'outils post-compromission (Earthworm, Sharphound, DWAgent, Certipy) et les tentatives de désactivation des mécanismes de sécurité.",
+          "Mener des chasses aux menaces régulières pour identifier les activités persistantes et les compromissions silencieuses."
+        ],
+        "tags": [
+          "apt",
+          "china-linked",
+          "infrastructure_critique",
+          "amerique_du_nord",
+          "zero_day",
+          "vol_credentials",
+          "chaine_approvisionnement",
+          "espionnage",
+          "cyberattaque",
+          "persistance"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186999/breaking-news/china-linked-apt-uat-8837-targets-north-american-critical-infrastructure.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "Anatomy of an Attack: The Payroll Pirates and the Power of Social Engineering",
+        "description": "Unit 42 a analysé une attaque de piratage de paie déclenchée par l'ingénierie sociale. Les attaquants ont impersonné des employés pour manipuler les services d'assistance (paie, IT, RH), contourner l'authentification défi/réponse, réinitialiser des mots de passe et ré-inscrire des périphériques MFA. Cela leur a permis d'accéder aux systèmes de paie, de compromettre plusieurs comptes d'employés et de modifier les détails de dépôt direct pour rediriger les salaires vers des comptes contrôlés par les attaquants. L'incident a également révélé, sans lien direct, la présence persistante du ransomware WannaCry dans un environnement OT hérité de l'organisation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1598 (Phishing for Information)",
+          "T1078 (Valid Accounts)",
+          "T1078.004 (Cloud Accounts)",
+          "T1098.003 (Account Manipulation: Additional Cloud Credentials)",
+          "T1136 (Create Account)",
+          "T1562 (Impair Defenses - bypassing challenge/response)"
+        ],
+        "analyse": "Cet incident met en lumière la vulnérabilité persistante des processus humains et des services d'assistance aux tactiques d'ingénierie sociale, même en présence de contrôles techniques. L'impact direct est financier, avec la redirection de paies, et des perturbations opérationnelles. La découverte fortuite de WannaCry dans l'environnement OT souligne également l'importance d'une approche holistique de la sécurité et des investigations, révélant des problèmes systémiques profonds au-delà de l'incident initial. L'utilisation de plateformes sociales pour la reconnaissance facilite ces attaques.",
+        "recommandations": [
+          "Renforcer les protocoles des services d'assistance, y compris des méthodes d'authentification plus robustes et la vérification des identités au-delà des informations publiques.",
+          "Mettre en œuvre des procédures strictes pour les réinitialisations de mot de passe et les ré-inscriptions MFA, nécessitant des vérifications multi-canaux.",
+          "Sensibiliser régulièrement les employés aux techniques d'ingénierie sociale et aux menaces d'usurpation d'identité.",
+          "Mettre en place une gouvernance stricte des identités et des accès, notamment pour les comptes de service.",
+          "Effectuer des audits de sécurité réguliers et des chasses aux menaces proactives pour identifier les compromissions non détectées, en particulier dans les environnements OT/hérités."
+        ],
+        "tags": [
+          "ingénierie_sociale",
+          "piratage_paie",
+          "fraude_financiere",
+          "usurpation_identite",
+          "mfa_bypass",
+          "help_desk",
+          "rh",
+          "it",
+          "ot",
+          "wannacry"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "CodeBreach: Missing Regex Anchors Exposed AWS Console to Takeover",
+        "description": "Une vulnérabilité nommée 'CodeBreach' a été découverte dans la chaîne d'approvisionnement de la console AWS, due à une mauvaise configuration mineure dans une expression régulière (regex) qui n'utilisait pas d'ancres de début et de fin. Cela a permis de contourner le filtre ACTOR_ID dans les pipelines CI/CD de CodeBuild d'AWS, menant à la compromission des identifiants GitHub du projet aws-sdk-js-v3. Les attaquants auraient pu injecter du code malveillant dans le SDK, affectant potentiellement 66% des environnements cloud utilisant le JavaScript SDK, y compris la console AWS elle-même.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-23550",
+            "CVE-2025-54576"
+          ],
+          "MITRE_ATT&CK": [],
+          "ASN": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.001 (Compromise Software Supply Chain)",
+          "T1199 (Trusted Relationship)",
+          "T1003 (OS Credential Dumping)",
+          "T1588.001 (Obtain Capabilities: Vulnerabilities)"
+        ],
+        "analyse": "Cette vulnérabilité de la chaîne d'approvisionnement représente un risque de compromission à grande échelle, capable d'affecter potentiellement des millions d'environnements cloud, y compris les services critiques d'AWS. L'incident souligne l'importance d'une validation rigoureuse des configurations de sécurité, même pour des détails apparemment mineurs comme les ancres regex. L'impact potentiel sur l'intégrité de l'AWS SDK et de la console AWS est stratégique, car une compromission pourrait miner la confiance dans les fondations du cloud computing.",
+        "recommandations": [
+          "Réviser et renforcer les pratiques de sécurité des pipelines CI/CD, en insistant sur la validation stricte des entrées et des expressions régulières.",
+          "Mettre en œuvre le principe du moindre privilège pour les comptes de construction et les accès aux dépôts de code.",
+          "Surveiller activement les environnements de construction pour détecter toute activité anormale ou tentative d'exfiltration de crédentiels.",
+          "Utiliser des outils d'analyse statique et dynamique du code pour identifier les vulnérabilités, y compris celles liées aux dépendances de la chaîne d'approvisionnement.",
+          "S'abonner aux alertes de sécurité des fournisseurs de cloud et appliquer les correctifs ou recommandations rapidement."
+        ],
+        "tags": [
+          "chaine_approvisionnement",
+          "aws",
+          "codebuild",
+          "ci_cd",
+          "regex",
+          "vulnerabilite",
+          "cloud",
+          "github",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/codebreach-missing-regex-anchors-exposed-aws-console-to-takeover/"
+        ],
+        "date": "2026-01-18"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals increasing diversification and sophistication of cyber threats. Social engineering remains a prevalent attack vector, exploited by \"Payroll Pirates\" for payroll redirection and MFA bypass, highlighting the persistence of the 'human element' vulnerability. Malicious browser extensions, whether those targeting HR/ERP platforms for credential theft or the 'GhostPoster' campaign for ad fraud, continue to infect a large number of users, leveraging trust in productivity tools. Supply chain threats are also highlighted by the 'CodeBreach' incident affecting AWS CI/CD pipelines, illustrating how a seemingly minor vulnerability can have a major systemic impact. State-sponsored actors are highly active, as demonstrated by the China-linked UAT-8837 group targeting North American critical infrastructure with zero-days and sophisticated post-compromise tools, as well as the use of cyberattacks for geopolitical purposes by nations. Ransomware cybercrime, embodied by Black Basta, continues to cause massive disruptions and is the subject of international law enforcement operations. Meanwhile, breaches of sensitive personal data, particularly in healthcare and government services, persist, with long-term consequences for victims. Artificial intelligence is mentioned in the context of Google Chrome's scam detection feature, but its use by attackers, though not explicitly detailed in these articles, is an emerging trend that will complicate detection. Finally, critical vulnerabilities with very high CVSS scores continue to be discovered in popular plugins, offering easy entry points for attackers. The overall threat landscape is characterized by the resilience of traditional vectors (social engineering, software vulnerabilities) and an intensification of sophisticated campaigns (APTs, ransomware) and geopolitical cyber warfare, with a growing focus on the supply chain and critical infrastructure.",
+      "date": "2026-01-18"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Black Basta",
+        "secteur": "Various businesses, critical infrastructure (North America, Europe, Australia), hospitals, public institutions, government authorities",
+        "modop": "Ransomware-as-a-Service (RaaS), network intrusion, data theft, ransomware deployment, hash cracking for network access",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "extortion",
+          "hash_cracking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187008/cyber-crime/ukraine-germany-operation-targets-black-basta-russian-leader-wanted.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "nom": "UAT-8837",
+        "secteur": "North American critical infrastructure",
+        "modop": "China-linked APT, initial access via exploits or stolen credentials, use of open-source tools (Earthworm, Sharphound, DWAgent, Certipy) for credential theft, AD mapping, persistence, disabling RestrictedAdmin for RDP, exfiltration of product-related DLLs. Use of zero-day exploits (CVE-2025-53690).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china-linked",
+          "critical_infrastructure",
+          "zero_day",
+          "supply_chain",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186999/breaking-news/china-linked-apt-uat-8837-targets-north-american-critical-infrastructure.html"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Law Enforcement",
+        "theme": "International Cybercrime Suppression",
+        "description": "A joint operation between Ukrainian and German police targeted the Black Basta ransomware group. Two Ukrainian suspects were identified for hash cracking, and an international arrest warrant was issued for the group's alleged Russian leader, Oleg Nefedov, accused of forming a criminal organization, large-scale extortion, and cybercrime.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cybercrime",
+          "ransomware",
+          "law_enforcement",
+          "international",
+          "black_basta",
+          "ukraine",
+          "germany",
+          "russia"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187008/cyber-crime/ukraine-germany-operation-targets-black-basta-russian-leader-wanted.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Critical Infrastructure, Government",
+        "theme": "Cyber warfare and state offensive capabilities",
+        "description": "A US cyberattack blacked out Venezuela's capital, demonstrating the Pentagon's ability to not only turn off but also restore power. The January 3 operation showcased the effectiveness of US cyber weapons against countries with less sophisticated cyber defenses. Interference with air defense radar was also reported.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyber_warfare",
+          "united_states",
+          "venezuela",
+          "critical_infrastructure",
+          "blackout",
+          "air_defense"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/17/us-cyberattack-blacks-out-venezuela-leads-to-maduros-capture-in-2026/?pk_campaign=feed&pk_kwd=us-cyberattack-blacks-out-venezuela-leads-to-maduros-capture-in-2026"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Health",
+        "victime": "Vastaamo (Finnish psychotherapy company)",
+        "description": "Theft of psychotherapy records of 33,000 individuals by Aleksanteri Tomminpoika Kivimäki (aka \"Julius Kivimäki\" or \"Zeekill\"). Data included full names, social security numbers, addresses, phone numbers, and detailed transcripts of therapy conversations. The attacker extorted victims by threatening to publish their information. The psychological and emotional impact on victims is significant and long-lasting.",
+        "tags": [
+          "violation",
+          "breach",
+          "health",
+          "sensitive_data",
+          "extortion",
+          "privacy",
+          "finland",
+          "psychotherapy"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/17/a-faceless-hacker-stole-my-therapy-notes-now-my-deepest-secrets-are-online-forever/?pk_campaign=feed&pk_kwd=a-faceless-hacker-stole-my-therapy-notes-now-my-deepest-secrets-are-online-forever"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Finance",
+        "victime": "Top US bank (via its employee merchandise store)",
+        "description": "An active keylogger was planted on the employee merchandise store of a “top 3 US bank”. The malware was active for approximately 18 hours, collecting login credentials, payment card numbers, and personal information of over 200,000 employees. The attack used a sophisticated two-stage loader to evade detection.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "keylogger",
+          "credentials",
+          "personal_data",
+          "bank",
+          "united_states"
+        ],
+        "sources": [
+          "https://securityonline.info/keylogger-found-harvesting-credentials-on-top-us-banks-employee-store/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Government, Defense",
+        "victime": "Australia's Government & Defense organization",
+        "description": "The USDT group claims a data breach resulting in the leak of 438,522 records of Australian national personal data. Compromised data included names, gender, emails, dates of birth, phone numbers, and addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "defense",
+          "personal_data",
+          "australia",
+          "usdt"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115911980323469785"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "secteur": "Government, Law Enforcement",
+        "victime": "Italy's State Police",
+        "description": "The 'worldweknew7' group claims a data breach targeting Italy's State Police. This breach includes multiple accounts belonging to various law enforcement agencies.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "police",
+          "law_enforcement",
+          "italy"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115911506988266008"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-10484",
+        "cvss": "9.8",
+        "product": "Registration & Login with Mobile Phone Number for WooCommerce (WordPress plugin)",
+        "description": "Authentication Bypass vulnerability due to insufficient user identity verification before authentication via the fma_lwp_set_session_php_fun() function. Allows unauthenticated attackers to authenticate as any user, including administrators, without a valid password.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "woocommerce",
+          "wordpress",
+          "plugin",
+          "critical",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-10484"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "cve_id": "CVE-2025-15403",
+        "cvss": "9.8",
+        "product": "RegistrationMagic (WordPress plugin)",
+        "description": "Privilege Escalation vulnerability via the 'add_menu' function, accessible via the 'rm_user_exists' AJAX action. Allows arbitrary updates to the 'admin_order' setting, enabling unauthenticated attackers to inject an empty slug into the order parameter, manipulate the plugin's menu generation logic, and add 'manage_options' capability for the targeted role. Requires at least a subscriber user for further privilege escalation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "registrationmagic",
+          "wordpress",
+          "plugin",
+          "critical",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15403"
+        ],
+        "date": "2026-01-18"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Credential-stealing Chrome extensions target enterprise HR platforms",
+        "description": "Malicious Chrome extensions, masquerading as productivity and security tools, were discovered on the Chrome Web Store. They targeted enterprise HR and ERP platforms (Workday, NetSuite, SAP SuccessFactors) to steal authentication credentials or block administration pages used for security incident response. The campaign leverages cookie exfiltration to remote servers, DOM manipulation to hide security pages, and bidirectional cookie injection for session hijacking, enabling immediate account takeover.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1552.001 (Credentials from Web Browsers)",
+          "T1059.001 (Command and Scripting Interpreter: JavaScript)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1550 (Use Alternate Authentication Material)",
+          "T1562 (Impair Defenses - DOM manipulation)"
+        ],
+        "analyse": "The impact is significant for enterprises, as credential theft and session hijacking can lead to full compromise of HR/ERP accounts, exposing sensitive employee data, enabling financial fraud (such as payroll changes), and disrupting business operations. The ability to block administration pages delays detection and incident response, increasing the attackers' window of opportunity. The geographical potential is global, targeting commonly used enterprise platforms.",
+        "recommandations": [
+          "Educate employees on the risks of unverified browser extensions.",
+          "Implement strict policies regarding the installation of unauthorized extensions.",
+          "Deploy robust Identity and Access Management (IAM) solutions with mandatory MFA for HR/ERP platforms.",
+          "Monitor authentication and activity logs on HR/ERP platforms to detect anomalous behaviors (logins from unusual locations, payment setting changes)."
+        ],
+        "tags": [
+          "chrome_extensions",
+          "credential_theft",
+          "hr",
+          "erp",
+          "session_hijacking",
+          "fraud",
+          "cookies",
+          "dom_manipulation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/credential-stealing-chrome-extensions-target-enterprise-hr-platforms/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "Malicious GhostPoster browser extensions found with 840,000 installs",
+        "description": "Seventeen malicious browser extensions, linked to the 'GhostPoster' campaign, were discovered in the Chrome, Firefox, and Edge stores, accumulating 840,000 installations. These extensions conceal malicious JavaScript code in their logo images, which monitors browser activity, hijacks affiliate links on major e-commerce platforms, and injects invisible iframes for ad fraud and click fraud. The code uses a staged execution flow with Base64 decoding to evade static and behavioral detection.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1074.001 (Data Staged: Local Data Staging - hidden code)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1059.001 (Command and Scripting Interpreter: JavaScript)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1071.001 (Application Layer Protocol: Web Protocols - C2 communication)",
+          "T1574 (Hijack Execution Flow - affiliate links)"
+        ],
+        "analyse": "The impact is primarily financial for indirect victims (e-commerce platforms, advertisers) due to ad and click fraud, as well as for users whose browsing activity is monitored. The large number of installations demonstrates the effectiveness of distribution through legitimate extension stores, exposing a vast audience. The use of obfuscation techniques and staged execution makes detection more difficult and indicates a growing sophistication of browser-based threats.",
+        "recommandations": [
+          "Regularly audit installed browser extensions, removing any that are non-essential or from untrusted sources.",
+          "Implement endpoint security solutions capable of detecting anomalous browser and extension behaviors.",
+          "Educate users on verifying permissions requested by extensions and distrusting 'free' tools with overly attractive features.",
+          "Use browsers with strict security policies for extensions and enhanced sandboxing capabilities."
+        ],
+        "tags": [
+          "browser_extensions",
+          "malware",
+          "ghostposter",
+          "ad_fraud",
+          "click_fraud",
+          "surveillance",
+          "javascript",
+          "obfuscation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ghostposter-browser-extensions-found-with-840-000-installs/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "China-linked APT UAT-8837 targets North American critical infrastructure",
+        "description": "Cisco Talos reported that the threat group UAT-8837, likely linked to China, has targeted critical infrastructure in North America since last year. The group uses exploits (including a zero-day CVE-2025-53690) or stolen credentials for initial access, then deploys open-source tools like Earthworm, Sharphound, DWAgent, and Certipy to steal credentials, map Active Directory environments, maintain access, and conduct hands-on-keyboard attacks. They also disable RestrictedAdmin for RDP and exfiltrate product-related DLLs, raising risks of trojanization and future supply-chain attacks.",
+        "threat_actor": "UAT-8837",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-53690"
+          ],
+          "MITRE_ATT&CK": [],
+          "ASN": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1003 (OS Credential Dumping)",
+          "T1087 (Account Discovery)",
+          "T1069 (Permission Groups Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "The impact is potentially catastrophic for North American critical infrastructure, including energy, water, communication, and other essential services. The use of zero-days and exfiltration of product DLLs increases the risk of future sophisticated supply chain attacks or reverse engineering of critical systems. The persistence of this Chinese APT indicates a strategic intelligence gathering objective or preparation for disruptive attacks, making it a major threat to national and economic security.",
+        "recommandations": [
+          "Implement a defense-in-depth strategy, including network segmentation, intrusion detection, and continuous monitoring of activities.",
+          "Apply security patches promptly, prioritizing exploitable and APT-known vulnerabilities.",
+          "Strengthen identity and access management, including MFA implementation and the principle of least privilege.",
+          "Monitor logs to detect the use of post-compromise tools (Earthworm, Sharphound, DWAgent, Certipy) and attempts to disable security mechanisms.",
+          "Conduct regular threat hunting to identify persistent activities and silent compromises."
+        ],
+        "tags": [
+          "apt",
+          "china-linked",
+          "critical_infrastructure",
+          "north_america",
+          "zero_day",
+          "credential_theft",
+          "supply_chain",
+          "espionage",
+          "cyberattack",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/186999/breaking-news/china-linked-apt-uat-8837-targets-north-american-critical-infrastructure.html"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "Anatomy of an Attack: The Payroll Pirates and the Power of Social Engineering",
+        "description": "Unit 42 analyzed a payroll hacking attack fueled by social engineering. Attackers impersonated employees to manipulate help desks (payroll, IT, HR), bypass challenge/response authentication, reset passwords, and re-enroll MFA devices. This granted them access to payroll systems, compromised multiple employee accounts, and allowed modification of direct-deposit details to redirect paychecks to attacker-controlled accounts. The incident also, unrelatedly, revealed a persistent WannaCry ransomware presence in the organization's legacy OT environment.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1598 (Phishing for Information)",
+          "T1078 (Valid Accounts)",
+          "T1078.004 (Cloud Accounts)",
+          "T1098.003 (Account Manipulation: Additional Cloud Credentials)",
+          "T1136 (Create Account)",
+          "T1562 (Impair Defenses - bypassing challenge/response)"
+        ],
+        "analyse": "This incident highlights the persistent vulnerability of human processes and help desks to social engineering tactics, even in the presence of technical controls. The direct impact is financial, with payroll redirection, and operational disruptions. The serendipitous discovery of WannaCry in the OT environment also underscores the importance of a holistic security approach and investigations, revealing deeper systemic issues beyond the initial incident. The use of social platforms for reconnaissance facilitates such attacks.",
+        "recommandations": [
+          "Strengthen help desk protocols, including more robust authentication methods and identity verification beyond publicly available information.",
+          "Implement strict procedures for password resets and MFA re-enrollments, requiring multi-channel verifications.",
+          "Regularly educate employees on social engineering techniques and impersonation threats.",
+          "Establish rigorous identity and access governance, especially for service accounts.",
+          "Conduct regular security audits and proactive threat hunting to identify undetected compromises, particularly in OT/legacy environments."
+        ],
+        "tags": [
+          "social_engineering",
+          "payroll_hacking",
+          "financial_fraud",
+          "identity_impersonation",
+          "mfa_bypass",
+          "help_desk",
+          "hr",
+          "it",
+          "ot",
+          "wannacry"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/"
+        ],
+        "date": "2026-01-18"
+      },
+      {
+        "title": "CodeBreach: Missing Regex Anchors Exposed AWS Console to Takeover",
+        "description": "A vulnerability named 'CodeBreach' was discovered in the AWS Console supply chain, stemming from a minor misconfiguration in a regular expression (regex) that lacked start and end anchors. This allowed bypassing the ACTOR_ID filter in AWS CodeBuild CI/CD pipelines, leading to the compromise of GitHub credentials for the aws-sdk-js-v3 project. Attackers could have injected malicious code into the SDK, potentially affecting 66% of cloud environments using the JavaScript SDK, including the AWS Console itself.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-23550",
+            "CVE-2025-54576"
+          ],
+          "MITRE_ATT&CK": [],
+          "ASN": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1195.001 (Compromise Software Supply Chain)",
+          "T1199 (Trusted Relationship)",
+          "T1003 (OS Credential Dumping)",
+          "T1588.001 (Obtain Capabilities: Vulnerabilities)"
+        ],
+        "analyse": "This supply chain vulnerability represents a risk of large-scale compromise, potentially affecting millions of cloud environments, including critical AWS services. The incident underscores the importance of rigorous validation of security configurations, even for seemingly minor details like regex anchors. The potential impact on the integrity of the AWS SDK and the AWS Console is strategic, as a compromise could undermine trust in the foundations of cloud computing.",
+        "recommandations": [
+          "Review and strengthen CI/CD pipeline security practices, emphasizing strict input validation and regular expression handling.",
+          "Implement the principle of least privilege for build accounts and code repository access.",
+          "Actively monitor build environments for abnormal activity or attempts to exfiltrate credentials.",
+          "Utilize static and dynamic code analysis tools to identify vulnerabilities, including those related to supply chain dependencies.",
+          "Subscribe to cloud provider security alerts and apply patches or recommendations promptly."
+        ],
+        "tags": [
+          "supply_chain",
+          "aws",
+          "codebuild",
+          "ci_cd",
+          "regex",
+          "vulnerability",
+          "cloud",
+          "github",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/codebreach-missing-regex-anchors-exposed-aws-console-to-takeover/"
+        ],
+        "date": "2026-01-18"
+      }
+    ]
+  }
+}
