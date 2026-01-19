@@ -1,0 +1,401 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification des menaces cyber, marquée par la sophistication croissante des modes opératoires et l'élargissement des cibles. Les vulnérabilités critiques avec des scores CVSS élevés, notamment les failles d'exécution de code à distance (RCE) et les problèmes d'authentification, restent une préoccupation majeure, comme en témoignent les problèmes détectés dans Deno, ConnectWise PSA, n8n et glibc. Une tendance notable est l'exploitation de la chaîne d'approvisionnement, illustrée par l'attaque contre le département de police d'Anchorage via un fournisseur de services tiers et l'impact de GootLoader comme vecteur d'accès initial pour divers acteurs de rançongiciels. L'utilisation de l'intelligence artificielle par les attaquants pour des cyber-escroqueries est également en hausse, affectant particulièrement les petites entreprises. Le contexte géopolitique continue d'alimenter le hacktivisme et les campagnes de phishing ciblées, visant des personnalités ou des infrastructures étatiques comme la télévision iranienne. Les violations de données sont fréquentes, touchant aussi bien des organismes de régulation financière que des ministères sportifs, soulignant la valeur des données personnelles pour les attaquants. En conclusion, l'état général des menaces est élevé, exigeant une vigilance accrue, une gestion proactive des vulnérabilités, un renforcement de la sécurité de la chaîne d'approvisionnement, et une sensibilisation continue aux tactiques d'ingénierie sociale et aux menaces émergentes basées sur l'IA.",
+      "date": "2026-01-19"
+    },
+    "Synthèse des acteurs malveillants": [],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Média, Gouvernement",
+        "theme": "Hacktivisme, Désinformation/Propagande",
+        "description": "Des activistes ont piraté le satellite Badr de l'Iran, diffusant brièvement des messages anti-régime et des appels à la protestation de Reza Pahlavi sur les chaînes de télévision d'État, dans un contexte de coupures d'internet.",
+        "tags": ["géopolitique", "geopolitic", "iran", "hacktivisme", "media", "piratage_satellite", "anti_régime", "propagande"],
+        "sources": ["https://securityaffairs.com/187055/hacktivism/hacktivists-hijacked-iran-state-tv-to-broadcast-anti-regime-messages-and-reza-pahlavis-protest-appeal.html"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Finance, Régulation financière",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "Une violation de données chez CIRO a exposé les informations d'environ 750 000 investisseurs canadiens, incluant diverses données personnelles.",
+        "tags": ["violation", "breach", "secteur_financier", "canada", "données_personnelles"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ciro-data-breach-last-year-exposed-info-on-750-000-canadian-investors/"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Voyage, Transport",
+        "victime": "Eurail, Interrail",
+        "description": "Une violation de données chez la société néerlandaise vendant des passes de train Eurail (Interrail) a compromis les informations personnelles et sensibles d'un nombre indéterminé de voyageurs.",
+        "tags": ["violation", "breach", "voyage", "transport", "données_sensibles", "eurail", "interrail"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Gouvernement, Forces de l'ordre",
+        "victime": "Anchorage Police Department (via Whitebox Technologies)",
+        "description": "Le département de police d'Anchorage a mis ses serveurs hors ligne suite à une cyberattaque contre son fournisseur de services de migration de données, Whitebox Technologies.",
+        "tags": ["violation", "breach", "gouvernement", "forces_de_l_ordre", "chaîne_d_approvisionnement", "cyberattaque", "alaska"],
+        "sources": ["https://databreaches.net/2026/01/18/anchorage-police-department-takes-servers-offline-after-cyberattack-on-service-provider/?pk_campaign=feed&pk_kwd=anchorage-police-department-takes-servers-offline-after-cyberattack-on-service-provider"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Gouvernement, Énergie nucléaire",
+        "victime": "Japan’s Nuclear Regulation Authority (NRA)",
+        "description": "Un employé du régulateur nucléaire japonais a perdu un smartphone professionnel contenant des informations de contact hautement sensibles lors d'un voyage personnel en Chine.",
+        "tags": ["violation", "breach", "perte_de_données", "appareil_mobile", "gouvernement", "énergie_nucléaire", "japon", "chine", "données_sensibles"],
+        "sources": ["https://databreaches.net/2026/01/18/japanese-nuclear-regulator-employee-loses-phone-containing-sensitive-info-in-china/?pk_campaign=feed&pk_kwd=japanese-nuclear-regulator-employee-loses-phone-containing-sensitive-info-in-china"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Gouvernement (Ministère des Sports), Social",
+        "victime": "Programme Pass'Sport de la France",
+        "description": "Des données du programme français Pass'Sport ont été publiées sur un forum de piratage, affectant 6,5 millions d'adresses e-mail et 3,5 millions de foyers, incluant noms, numéros de téléphone, sexes et adresses physiques.",
+        "tags": ["violation", "breach", "gouvernement", "sports", "données_personnelles", "france", "forum_piratage"],
+        "sources": ["https://haveibeenpwned.com/Breach/PassSport"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22863",
+        "cvss": 9.2,
+        "product": "Deno JavaScript et TypeScript runtime (couche de compatibilité node:crypto)",
+        "description": "Vulnérabilité critique où l'implémentation node:crypto de Deno ne parvient pas à finaliser correctement les chiffrements, laissant la porte ouverte à des encryptions infinies, ce qui peut mener à des tentatives de force brute pour découvrir les secrets du serveur.",
+        "tags": ["vulnérabilité", "vulnerability", "deno", "javascript", "typescript", "crypto", "exposition_secrets", "fuite_informations", "force_brute", "critique"],
+        "sources": ["https://securityonline.info/critical-deno-flaws-risk-secrets-cve-2026-22863-execution-cve-2026-22864/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0695",
+        "cvss": 8.7,
+        "product": "ConnectWise Professional Services Automation (PSA)",
+        "description": "Faille XSS (Cross-Site Scripting) de gravité élevée permettant aux attaquants d'injecter des scripts dans les 'notes d'entrée de temps' pour exécuter du code malveillant lors de leur consultation. Peut être enchaînée avec CVE-2026-0696 (Sensitive Cookie Without 'HttpOnly' Flag) pour le vol de session.",
+        "tags": ["vulnérabilité", "vulnerability", "connectwise", "psa", "xss", "cross_site_scripting", "vol_session", "application_web", "validation_entrée"],
+        "sources": ["https://securityonline.info/cve-2026-0695-high-severity-xss-flaw-patched-in-connectwise-psa-2026-1/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0863",
+        "cvss": 8.5,
+        "product": "n8n Python task runner",
+        "description": "Vulnérabilité d'évasion de sandbox permettant à un utilisateur authentifié avec des permissions de base de contourner les restrictions et d'exécuter du code Python arbitraire, pouvant conduire à une prise de contrôle complète de l'instance n8n en mode 'Internal'.",
+        "tags": ["vulnérabilité", "vulnerability", "n8n", "évasion_sandbox", "rce", "exécution_code", "python", "contournement_authentification"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0863"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0861",
+        "cvss": 8.4,
+        "product": "GNU C Library (glibc)",
+        "description": "Vulnérabilité d'entier overflow de gravité élevée dans les fonctions d'alignement de mémoire (memalign, posix_memalign, aligned_alloc), pouvant entraîner une corruption de tas ou des crashs.",
+        "tags": ["vulnérabilité", "vulnerability", "glibc", "linux", "entier_overflow", "corruption_tas", "corruption_mémoire", "haute_gravité"],
+        "sources": ["https://securityonline.info/decades-old-flaw-new-heap-corruption-critical-glibc-bugs-revealed/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-14894",
+        "cvss": 7.5,
+        "product": "Livewire Filemanager (cadre PHP Laravel)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée due à une validation de type de fichier inappropriée lors du téléchargement, permettant aux attaquants de télécharger et d'exécuter des scripts PHP malveillants sur des applications web Laravel. Aucun correctif officiel disponible.",
+        "tags": ["vulnérabilité", "vulnerability", "rce", "non_authentifié", "téléchargement_fichiers", "laravel", "php", "application_web", "exécution_code"],
+        "sources": ["https://securityonline.info/unpatched-rce-livewire-filemanager-upload-flaw-cve-2025-14894-exposes-laravel-apps/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "Non spécifié dans l'article",
+        "product": "Fortinet FortiSIEM",
+        "description": "Vulnérabilité critique permettant à des attaquants distants non authentifiés d'exécuter du code ou des commandes non autorisées via des requêtes TCP spécialement conçues. Un PoC a été rendu public.",
+        "tags": ["vulnérabilité", "vulnerability", "fortisiem", "fortinet", "rce", "non_authentifié", "exécution_code_à_distance", "poc"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "Non spécifié dans l'article",
+        "product": "Cisco Email Security Gateway, Secure Email et Web Manager (AsyncOS)",
+        "description": "Vulnérabilité dans AsyncOS exploitée comme une faille zero-day par des attaquants chinois présumés depuis fin novembre 2025. Cisco a publié des mises à jour de sécurité.",
+        "tags": ["vulnérabilité", "vulnerability", "cisco", "asyncos", "zero_day", "exploitée", "apt_chinois", "sécurité_email"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-22864",
+        "cvss": "Non spécifié dans l'article",
+        "product": "Deno JavaScript et TypeScript runtime (API Deno.Command sur Windows)",
+        "description": "Faille d'exécution de code arbitraire sur Windows, contournant les protections de l'API Deno.Command lors de l'exécution de fichiers batch via injection d'arguments.",
+        "tags": ["vulnérabilité", "vulnerability", "deno", "javascript", "typescript", "rce", "exécution_code", "windows", "injection_arguments", "injection_shell"],
+        "sources": ["https://securityonline.info/critical-deno-flaws-risk-secrets-cve-2026-22863-execution-cve-2026-22864/"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "NetFlow: Something I Seriously Underestimated (Until I Didn’t)",
+        "description": "Discussion sur les avantages de NetFlow par rapport à la capture de paquets (PCAP) complète pour la surveillance réseau et l'analyse forensique numérique (DFIR), en particulier concernant l'évolutivité, les coûts et la valeur réduite du PCAP pour le trafic chiffré. Souligne l'utilité de NetFlow dans les scénarios SOC/DFIR réels.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Impact sur les centres d'opérations de sécurité (SOC) et les équipes d'investigation numérique et de réponse aux incidents (DFIR) en améliorant la visibilité du réseau et en réduisant les coûts de stockage, en particulier avec la généralisation du trafic chiffré.",
+        "recommandations": [
+          "Réévaluer la priorité de l'implémentation et de l'analyse de NetFlow dans les stratégies de sécurité réseau.",
+          "Considérer NetFlow pour une surveillance réseau évolutive et rentable, surtout là où le PCAP complet est impraticable ou moins efficace en raison du chiffrement."
+        ],
+        "tags": ["netflow", "pcap", "surveillance_réseau", "dfir", "soc", "trafic_chiffré", "sécurité_réseau", "réponse_incident"],
+        "sources": ["https://www.cyberengage.org/post/netflow-something-i-seriously-underestimated-until-i-didn-t"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "4 in 5 small businesses had cyberscams last year, almost half were AI powered",
+        "description": "Une enquête révèle que 80% des petites entreprises ont été victimes de cyber-escroqueries ou de violations au cours de la dernière année, près de la moitié de ces incidents impliquant l'IA. De nombreuses entreprises répercutent ces pertes sur les clients par des augmentations de prix. Les petites entreprises sont fréquemment ciblées, souvent plusieurs fois par an.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Cet article met en lumière le paysage des menaces omniprésent et croissant pour les petites entreprises, en particulier avec l'augmentation des attaques basées sur l'IA. L'impact économique est significatif, les coûts étant transférés aux consommateurs. Les petites entreprises sous-estiment souvent leur risque, ce qui les rend vulnérables.",
+        "recommandations": [
+          "Accroître la sensibilisation et la formation à la cybersécurité pour les petites entreprises.",
+          "Mettre en œuvre des mesures de sécurité robustes adaptées aux besoins des PME.",
+          "Reconnaître le rôle croissant de l'IA dans les cyberattaques et adapter les défenses en conséquence."
+        ],
+        "tags": ["petite_entreprise", "cybercriminalité", "cyberescroqueries", "attaques_par_ia", "violation_données", "impact_économique", "sensibilisation_sécurité"],
+        "sources": ["https://databreaches.net/2026/01/18/4-in-5-small-businesses-had-cyberscams-last-year-almost-half-were-ai-powered/?pk_campaign=feed&pk_kwd=4-in-5-small-businesses-had-cyberscams-last-year-almost-half-were-ai-powered"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "How a hacking campaign targeted high-profile Gmail and WhatsApp users across the Middle East",
+        "description": "Campagne de phishing ciblée utilisant des messages WhatsApp et des liens suspects, visant des utilisateurs de Gmail et WhatsApp de haut niveau impliqués dans des activités liées à l'Iran, dans un contexte de manifestations anti-gouvernementales et de coupures d'internet en Iran.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["Initial Access (T1566.001 - Phishing: Spearphishing Link)", "Collection (T1539 - Steal Web Session Cookie)", "Collection (T1114 - Email Collection)"],
+        "analyse": "Cette campagne démontre l'utilisation de tactiques d'ingénierie sociale et de phishing dans un contexte géostratégique pour cibler des individus influents ou impliqués dans des questions politiques spécifiques. Le chevauchement avec les coupures d'internet suggère des tentatives au niveau de l'État de contrôler l'information et de réprimer la dissidence.",
+        "recommandations": [
+          "Mettre l'accent sur la formation des utilisateurs à l'identification des tentatives de phishing, en particulier celles via les applications de messagerie.",
+          "Encourager l'authentification multi-facteurs pour les comptes à haut profil.",
+          "Sensibiliser aux ciblages accrus pendant les périodes de tension géopolitique."
+        ],
+        "tags": ["phishing", "whatsapp", "gmail", "moyen_orient", "iran", "activisme", "soutien_étatique", "ingénierie_sociale", "attaque_ciblée", "géopolitique"],
+        "sources": ["https://databreaches.net/2026/01/18/how-a-hacking-campaign-targeted-high-profile-gmail-and-whatsapp-users-across-the-middle-east/?pk_campaign=feed&pk_kwd=how-a-hacking-campaign-targeted-high-profile-gmail-and-whatsapp-users-across-the-middle-east"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "GootLoader uses malformed ZIP files to bypass security controls",
+        "description": "Le malware GootLoader utilise des fichiers ZIP malformés, composés de centaines d'archives concaténées, pour contourner la détection par les outils de sécurité tout en restant exécutable sur les systèmes Windows. Ce malware fonctionne sur un modèle d'accès en tant que service, utilisé par divers groupes de rançongiciels et de chevaux de Troie pour l'accès initial.",
+        "threat_actor": "GootLoader (vecteur d'accès initial pour SunCrypt, REvil, Kronos, Cobalt Strike)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["Initial Access (T1566.001 - Phishing: Spearphishing Attachment)", "Initial Access (T1566.002 - Phishing: Spearphishing Link)", "Defense Evasion (T1027 - Obfuscated Files or Information)", "Defense Evasion (T1036.005 - Masquerading: Match Legitimate Name or Location)", "Defense Evasion (T1070.004 - File Deletion)", "Persistence (T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"],
+        "analyse": "Impact significatif sur les organisations, car GootLoader sert de vecteur d'accès initial pour des rançongiciels et des chevaux de Troie puissants. La technique des ZIP malformés contourne de nombreux contrôles de sécurité traditionnels basés sur les signatures de fichiers, ce qui oblige à recourir à la détection comportementale.",
+        "recommandations": [
+          "Empêcher l'exécution des fichiers JavaScript par défaut.",
+          "Restreindre ou bloquer wscript et cscript si non essentiels.",
+          "Utiliser les objets de stratégie de groupe (GPO) pour ouvrir les fichiers .js dans le Bloc-notes.",
+          "Concentrer la détection sur les comportements ZIP inhabituels, l'exécution de scripts à partir de dossiers temporaires, la création de raccourcis de démarrage et les chaînes de processus suspectes (par exemple, cscript lançant PowerShell)."
+        ],
+        "tags": ["gootloader", "malware", "rançongiciel", "évasion_défense", "accès_initial", "zip_malformé", "fileless", "jscript", "powershell", "contournement_sécurité", "détection_comportementale", "suncrypt", "revil", "kronos", "cobalt_strike"],
+        "sources": ["https://securityaffairs.com/187037/cyber-crime/gootloader-uses-malformed-zip-files-to-bypass-security-controls.html"],
+        "date": "2026-01-19"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals an intensification of cyber threats, marked by the increasing sophistication of attack methods and the broadening of targets. Critical vulnerabilities with high CVSS scores, particularly Remote Code Execution (RCE) flaws and authentication issues, remain a major concern, as evidenced by problems detected in Deno, ConnectWise PSA, n8n, and glibc. A notable trend is the exploitation of the supply chain, illustrated by the attack against the Anchorage police department via a third-party service provider and the impact of GootLoader as an initial access vector for various ransomware actors. The use of artificial intelligence by attackers for cyber scams is also on the rise, particularly affecting small businesses. The geopolitical context continues to fuel hacktivism and targeted phishing campaigns, targeting individuals or state infrastructures such as Iranian television. Data breaches are frequent, affecting financial regulatory bodies as well as sports ministries, highlighting the value of personal data for attackers. In conclusion, the overall threat level is high, requiring increased vigilance, proactive vulnerability management, strengthening of supply chain security, and continuous awareness of social engineering tactics and emerging AI-based threats.",
+      "date": "2026-01-19"
+    },
+    "Synthèse des acteurs malveillants": [],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Media, Government",
+        "theme": "Hacktivism, Disinformation/Propaganda",
+        "description": "Activists hijacked Iran's Badr satellite, briefly broadcasting anti-regime messages and calls for protest from Reza Pahlavi on state TV channels, amidst internet shutdowns.",
+        "tags": ["geopolitique", "geopolitic", "iran", "hacktivism", "media", "satellite_hack", "anti_regime", "propaganda"],
+        "sources": ["https://securityaffairs.com/187055/hacktivism/hacktivists-hijacked-iran-state-tv-to-broadcast-anti-regime-messages-and-reza-pahlavis-protest-appeal.html"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Finance, Financial Regulation",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "A data breach at CIRO exposed information on approximately 750,000 Canadian investors, including various personal data.",
+        "tags": ["violation", "breach", "financial_sector", "canada", "personal_data"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/ciro-data-breach-last-year-exposed-info-on-750-000-canadian-investors/"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Travel, Transport",
+        "victime": "Eurail, Interrail",
+        "description": "A data breach at the Netherlands-based company selling Eurail (Interrail) train passes resulted in the compromise of personal and sensitive information belonging to an unknown number of travelers.",
+        "tags": ["violation", "breach", "travel", "transport", "sensitive_data", "eurail", "interrail"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Government, Law Enforcement",
+        "victime": "Anchorage Police Department (via Whitebox Technologies)",
+        "description": "The Anchorage Police Department took its servers offline following a cyberattack on its data migration service provider, Whitebox Technologies.",
+        "tags": ["violation", "breach", "government", "law_enforcement", "supply_chain", "cyberattack", "alaska"],
+        "sources": ["https://databreaches.net/2026/01/18/anchorage-police-department-takes-servers-offline-after-cyberattack-on-service-provider/?pk_campaign=feed&pk_kwd=anchorage-police-department-takes-servers-offline-after-cyberattack-on-service-provider"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Government, Nuclear Energy",
+        "victime": "Japan’s Nuclear Regulation Authority (NRA)",
+        "description": "An employee of Japan's nuclear regulator lost a work-issued smartphone containing highly sensitive contact information during a personal trip to China.",
+        "tags": ["violation", "breach", "data_loss", "mobile_device", "government", "nuclear_energy", "japan", "china", "sensitive_data"],
+        "sources": ["https://databreaches.net/2026/01/18/japanese-nuclear-regulator-employee-loses-phone-containing-sensitive-info-in-china/?pk_campaign=feed&pk_kwd=japanese-nuclear-regulator-employee-loses-phone-containing-sensitive-info-in-china"],
+        "date": "2026-01-19"
+      },
+      {
+        "secteur": "Government (Ministry of Sports), Social",
+        "victime": "France's Pass'Sport program",
+        "description": "Data from France's Pass'Sport program was posted to a hacking forum, affecting 6.5 million email addresses and 3.5 million households, including names, phone numbers, genders, and physical addresses.",
+        "tags": ["violation", "breach", "government", "sports", "personal_data", "france", "hacking_forum"],
+        "sources": ["https://haveibeenpwned.com/Breach/PassSport"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22863",
+        "cvss": 9.2,
+        "product": "Deno JavaScript and TypeScript runtime (node:crypto compatibility layer)",
+        "description": "Critical vulnerability where Deno's node:crypto implementation fails to properly finalize ciphers, leaving them open for infinite encryptions, which can lead to brute-forcing attempts to discover server secrets.",
+        "tags": ["vulnerabilité", "vulnerability", "deno", "javascript", "typescript", "crypto", "secrets_exposure", "information_leak", "brute_force", "critical"],
+        "sources": ["https://securityonline.info/critical-deno-flaws-risk-secrets-cve-2026-22863-execution-cve-2026-22864/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0695",
+        "cvss": 8.7,
+        "product": "ConnectWise Professional Services Automation (PSA)",
+        "description": "High-severity Cross-Site Scripting (XSS) flaw allowing attackers to inject scripts into 'Time Entry notes' to execute malicious code when viewed. Can be chained with CVE-2026-0696 (Sensitive Cookie Without 'HttpOnly' Flag) for session hijacking.",
+        "tags": ["vulnerabilité", "vulnerability", "connectwise", "psa", "xss", "cross_site_scripting", "session_hijacking", "web_application", "input_validation"],
+        "sources": ["https://securityonline.info/cve-2026-0695-high-severity-xss-flaw-patched-in-connectwise-psa-2026-1/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0863",
+        "cvss": 8.5,
+        "product": "n8n Python task runner",
+        "description": "Sandbox escape vulnerability allowing an authenticated user with basic permissions to bypass restrictions and execute arbitrary Python code, potentially leading to full n8n instance takeover in 'Internal' execution mode.",
+        "tags": ["vulnerabilité", "vulnerability", "n8n", "sandbox_escape", "rce", "code_execution", "python", "authentication_bypass"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-0863"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-0861",
+        "cvss": 8.4,
+        "product": "GNU C Library (glibc)",
+        "description": "High-severity integer overflow vulnerability in memory alignment functions (memalign, posix_memalign, aligned_alloc), potentially leading to heap corruption or crashes.",
+        "tags": ["vulnerabilité", "vulnerability", "glibc", "linux", "integer_overflow", "heap_corruption", "memory_corruption", "high_severity"],
+        "sources": ["https://securityonline.info/decades-old-flaw-new-heap-corruption-critical-glibc-bugs-revealed/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-14894",
+        "cvss": 7.5,
+        "product": "Livewire Filemanager (Laravel PHP framework)",
+        "description": "Unauthenticated Remote Code Execution (RCE) flaw due to improper file type validation during upload, allowing attackers to upload and execute malicious PHP scripts on Laravel web applications. No official patch available.",
+        "tags": ["vulnerabilité", "vulnerability", "rce", "unauthenticated", "file_upload", "laravel", "php", "web_application", "code_execution"],
+        "sources": ["https://securityonline.info/unpatched-rce-livewire-filemanager-upload-flaw-cve-2025-14894-exposes-laravel-apps/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": "Not specified in the article",
+        "product": "Fortinet FortiSIEM",
+        "description": "Critical vulnerability allowing unauthenticated, remote attackers to execute unauthorized code or commands via specially crafted TCP requests. A PoC exploit has been publicly released.",
+        "tags": ["vulnerabilité", "vulnerability", "fortisiem", "fortinet", "rce", "unauthenticated", "remote_code_execution", "poc"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2025-20393",
+        "cvss": "Not specified in the article",
+        "product": "Cisco Email Security Gateway, Secure Email and Web Manager (AsyncOS)",
+        "description": "Vulnerability in AsyncOS exploited as a zero-day by suspected Chinese attackers since late November 2025. Cisco has shipped security updates.",
+        "tags": ["vulnerabilité", "vulnerability", "cisco", "asyncos", "zero_day", "exploited", "chinese_apt", "email_security"],
+        "sources": ["https://www.helpnetsecurity.com/2026/01/18/week-in-review-poc-for-fortisiem-flaw-released-rakuten-viber-ciso-cto-on-messaging-risks/"],
+        "date": "2026-01-19"
+      },
+      {
+        "cve_id": "CVE-2026-22864",
+        "cvss": "Not specified in the article",
+        "product": "Deno JavaScript and TypeScript runtime (Deno.Command API on Windows)",
+        "description": "Arbitrary Code Execution flaw on Windows by bypassing safeguards in the Deno.Command API when executing batch files via argument injection.",
+        "tags": ["vulnerabilité", "vulnerability", "deno", "javascript", "typescript", "rce", "code_execution", "windows", "argument_injection", "shell_injection"],
+        "sources": ["https://securityonline.info/critical-deno-flaws-risk-secrets-cve-2026-22863-execution-cve-2026-22864/"],
+        "date": "2026-01-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "NetFlow: Something I Seriously Underestimated (Until I Didn’t)",
+        "description": "Discussion on the advantages of NetFlow over full PCAP for network monitoring and digital forensics and incident response (DFIR), especially concerning scalability, cost, and the reduced value of PCAP for encrypted traffic. Highlights NetFlow's utility in real-world SOC/DFIR scenarios.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "Impact for security operations centers (SOC) and digital forensics and incident response (DFIR) teams in improving network visibility and reducing storage costs, especially with widespread encrypted traffic.",
+        "recommandations": [
+          "Re-evaluate the priority of NetFlow implementation and analysis in network security strategies.",
+          "Consider NetFlow for scalable and cost-effective network monitoring, especially where full PCAP is impractical or less effective due to encryption."
+        ],
+        "tags": ["netflow", "pcap", "network_monitoring", "dfir", "soc", "encrypted_traffic", "network_security", "incident_response"],
+        "sources": ["https://www.cyberengage.org/post/netflow-something-i-seriously-underestimated-until-i-didn-t"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "4 in 5 small businesses had cyberscams last year, almost half were AI powered",
+        "description": "A survey reveals that 80% of small businesses experienced cyberscams or breaches in the past year, with nearly half of these incidents involving AI. Many businesses pass these losses onto customers through price increases. Small businesses are frequently targeted, often multiple times a year.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [],
+        "analyse": "This article highlights the pervasive and increasing threat landscape for small businesses, especially with the rise of AI-powered attacks. The economic impact is significant, with costs being transferred to consumers. Small businesses often underestimate their risk, making them vulnerable.",
+        "recommandations": [
+          "Increase cybersecurity awareness and training for small businesses.",
+          "Implement robust security measures tailored to SMB needs.",
+          "Recognize the growing role of AI in cyberattacks and adapt defenses accordingly."
+        ],
+        "tags": ["small_business", "cybercrime", "cyberscams", "ai_powered_attacks", "data_breach", "economic_impact", "security_awareness"],
+        "sources": ["https://databreaches.net/2026/01/18/4-in-5-small-businesses-had-cyberscams-last-year-almost-half-were-ai-powered/?pk_campaign=feed&pk_kwd=4-in-5-small-businesses-had-cyberscams-last-year-almost-half-were-ai-powered"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "How a hacking campaign targeted high-profile Gmail and WhatsApp users across the Middle East",
+        "description": "Targeted phishing campaign using WhatsApp messages and suspicious links, aimed at high-profile Gmail and WhatsApp users involved in Iran-related activities, amidst ongoing anti-government protests and internet shutdowns in Iran.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["Initial Access (T1566.001 - Phishing: Spearphishing Link)", "Collection (T1539 - Steal Web Session Cookie)", "Collection (T1114 - Email Collection)"],
+        "analyse": "This campaign demonstrates the use of social engineering and phishing tactics in a geostrategic context to target individuals with influence or involvement in specific political issues. The overlap with internet shutdowns suggests state-level attempts to control information and suppress dissent.",
+        "recommandations": [
+          "Emphasize user training on identifying phishing attempts, especially those via messaging apps.",
+          "Encourage multi-factor authentication for high-profile accounts.",
+          "Raise awareness about increased targeting during periods of geopolitical tension."
+        ],
+        "tags": ["phishing", "whatsapp", "gmail", "middle_east", "iran", "activism", "state_sponsored", "social_engineering", "targeted_attack", "geopolitical"],
+        "sources": ["https://databreaches.net/2026/01/18/how-a-hacking-campaign-targeted-high-profile-gmail-and-whatsapp-users-across-the-middle-east/?pk_campaign=feed&pk_kwd=how-a-hacking-campaign-targeted-high-profile-gmail-and-whatsapp-users-across-the-middle-east"],
+        "date": "2026-01-19"
+      },
+      {
+        "title": "GootLoader uses malformed ZIP files to bypass security controls",
+        "description": "GootLoader malware leverages malformed ZIP files, crafted from hundreds of concatenated archives, to evade detection by security tools while remaining executable on Windows systems. This malware operates on an access-as-a-service model, used by various ransomware and trojan groups for initial access.",
+        "threat_actor": "GootLoader (initial access vector for SunCrypt, REvil, Kronos, Cobalt Strike)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": ["Initial Access (T1566.001 - Phishing: Spearphishing Attachment)", "Initial Access (T1566.002 - Phishing: Spearphishing Link)", "Defense Evasion (T1027 - Obfuscated Files or Information)", "Defense Evasion (T1036.005 - Masquerading: Match Legitimate Name or Location)", "Defense Evasion (T1070.004 - File Deletion)", "Persistence (T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"],
+        "analyse": "Significant impact on organizations as GootLoader serves as an initial access vector for potent ransomware and trojans. The technique of using malformed ZIPs bypasses many traditional file-signature based security controls, forcing reliance on behavioral detection.",
+        "recommandations": [
+          "Prevent JavaScript files from running by default.",
+          "Restrict or block wscript and cscript if not essential.",
+          "Use Group Policy Objects (GPO) to open .js files in Notepad.",
+          "Focus detection on unusual ZIP behavior, script execution from temporary folders, startup shortcut creation, and suspicious process chains (e.g., cscript launching PowerShell)."
+        ],
+        "tags": ["gootloader", "malware", "ransomware", "defense_evasion", "initial_access", "zip_malformed", "fileless", "jscript", "powershell", "security_controls_bypass", "behavioral_detection", "suncrypt", "revil", "kronos", "cobalt_strike"],
+        "sources": ["https://securityaffairs.com/187037/cyber-crime/gootloader-uses-malformed-zip-files-to-bypass-security-controls.html"],
+        "date": "2026-01-19"
+      }
+    ]
+  }
+}
