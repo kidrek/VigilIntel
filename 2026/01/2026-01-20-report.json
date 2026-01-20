@@ -1,0 +1,791 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber de cette période révèle une intensification et une diversification des menaces, avec une emphase notable sur l'exploitation de vulnérabilités critiques et des campagnes de rançongiciels sophistiquées. L'ingénierie sociale, notamment le phishing et l'usurpation d'identité, reste un vecteur d'attaque privilégié pour l'accès initial, conduisant à des violations de données massives touchant des millions d'individus dans divers secteurs (finance, télécommunications, services publics, applications mobiles). Les acteurs malveillants, qu'ils soient des groupes hacktivistes russes (NoName057(16)), des courtiers en accès initiaux (Feras Khalil Ahmad Albashiti), ou des opérateurs de malwares (YouTubeTA, Gootloader allié à Vanilla Tempest), affinent leurs techniques, utilisant des malwares furtifs (PDFSider, SolyxImmortal) et des méthodes d'évasion innovantes (archives ZIP malformées). L'écosystème cybercriminel continue de se professionnaliser avec des modèles \"Malware-as-a-Service\". Les vulnérabilités critiques (CVSS >= 8) sont omniprésentes, incluant des exécutions de code à distance (RCE), des contournements d'authentification et des injections, affectant des logiciels industriels (AVEVA), des bibliothèques de développement (node-tar, Orval) et des applications (MyTube, Arcane). L'intelligence artificielle, tout en étant un outil d'innovation, introduit de nouvelles surfaces d'attaque, comme en témoigne la faille d'injection de prompt dans Google Gemini. Sur le plan géopolitique, les tensions persistent, avec des opérations d'influence et des attaques DDoS, et une préoccupation croissante pour la souveraineté numérique, notamment dans le domaine de la santé et de la défense européenne. En conclusion, le paysage des menaces est caractérisé par une persistance des techniques éprouvées (phishing, rançongiciel) couplée à l'émergence de nouvelles menaces liées à l'IA et une complexité accrue des opérations des acteurs malveillants, exigeant une vigilance constante et des défenses multicouches.",
+      "date": "2026-01-20"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Fournisseurs d'accès Internet (FAI)",
+        "modop": "Violation de données par exfiltration d'informations clients, vente des données et menaces de coupure d'accès internet.",
+        "tags": ["actor", "theat_actor", "data_breach", "telecommunications", "data_exfiltration"],
+        "sources": ["https://fed.brid.gy/r/https://cordcuttersnews.com/a-broadband-internet-provider-had-a-data-breach-impacting-over-1-million-customers/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Feras Khalil Ahmad Albashiti (\"r1z\")",
+        "secteur": "Multiples (au moins 50 réseaux d'entreprises)",
+        "modop": "Courtier en accès initial (IAB), vend l'accès aux réseaux informatiques d'entreprises à d'autres acteurs malveillants (ex: affiliés de rançongiciels). Utilise des identifiants compromis.",
+        "tags": ["actor", "theat_actor", "initial_access_broker", "iab", "credential_theft", "corporate_networks"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/jordanian-pleads-guilty-to-selling-access-to-50-corporate-networks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Nicholas Moore (@ihackedthegovernment)",
+        "secteur": "Gouvernement (Justice, Services sociaux, Santé)",
+        "modop": "Accès illégal aux systèmes (Supreme Court, AmeriCorps, VA) via identifiants volés. Exfiltration et fuite de données personnelles et sensibles sur Instagram.",
+        "tags": ["actor", "theat_actor", "insider_threat", "data_breach", "government", "credential_theft", "social_media_leak"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-admits-to-leaking-stolen-supreme-court-data-on-instagram/", "https://securityaffairs.com/187048/security/hacker-pleads-guilty-to-hacking-supreme-court-americorps-and-va-systems/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Infrastructures critiques, collectivités locales",
+        "modop": "Attaques par déni de service distribué (DDoS) à motivation idéologique, utilisant le projet DDoSia. Ciblage des États membres de l'OTAN et pays s'opposant aux ambitions géopolitiques russes.",
+        "tags": ["actor", "theat_actor", "hacktivism", "russia", "ddos", "critical_infrastructure", "government"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/uk-govt-warns-about-ongoing-russian-hacktivist-group-attacks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Qilin ransomware actors (utilisant PDFSider)",
+        "secteur": "Finance (Fortune 100)",
+        "modop": "Ingénierie sociale (usurpation support technique), spearphishing (archive ZIP avec DLL malveillante pour DLL Side-Loading), déploiement du backdoor PDFSider pour accès furtif et exécution de commandes à distance.",
+        "tags": ["actor", "theat_actor", "ransomware", "pdfsider", "finance", "dll_side_loading", "spearphishing", "apt"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-pdfsider-windows-malware-deployed-on-fortune-100-firms-network/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Vanilla Tempest (allied with Gootloader)",
+        "secteur": "Inconnu (initial access broker, rançongiciel)",
+        "modop": "Collaborateur de Gootloader, utilisant le rançongiciel Rhysida. Gootloader fournit l'accès initial via des archives ZIP malformées et l'exécution de charges utiles JavaScript/PowerShell.",
+        "tags": ["actor", "theat_actor", "ransomware", "rhysida", "gootloader", "initial_access", "malware"],
+        "sources": ["https://securityonline.info/malformed-dangerous-gootloader-returns-with-new-ransomware-ties/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "YouTubeTA",
+        "secteur": "Utilisateurs de YouTube, promotion de logiciels piratés, créateurs de contenu.",
+        "modop": "Opérateur du logiciel malveillant StealC (infostealer as-a-Service). Campagnes via comptes YouTube détournés promouvant des logiciels \"craqués\" (Adobe). Vise le vol de comptes de créateurs YouTube et de milliers d'identifiants.",
+        "tags": ["actor", "theat_actor", "infostealer", "steal_c", "youtube", "social_engineering", "malware_as_a_service", "credential_theft"],
+        "sources": ["https://securityaffairs.com/187075/malware/stealc-malware-control-panel-flaw-leaks-details-on-active-attacker.html"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Défense, Infrastructures critiques, Santé, Diplomatie",
+        "theme": "Tensions géopolitiques, Cyberguerre, Souveraineté numérique et de défense, Opérations d'influence.",
+        "description": "Le gouvernement britannique met en garde contre les attaques continues des groupes hacktivistes russes alignés (NoName057(16)) ciblant les infrastructures critiques et les organisations gouvernementales locales par des attaques DDoS. L'Iran est engagé dans une guerre hybride, combinant suppression interne (stratégie d'isolation numérique, \"Internet de la Caserne\") et opérations d'influence transnationales via des cyberopérations offensives. L'Europe est confrontée à des défis de souveraineté, notamment face aux menaces du président Trump de s'emparer du Groenland et à la nécessité pour l'UE d'affirmer ses propres intérêts. La coopération européenne en matière de défense (PESCO) est jugée largement inefficace, ce qui pousse l'Espagne à développer de manière autonome son char du futur (projet PAMOV) en raison des retards des initiatives européennes. Enfin, la création d'un Espace européen des données de santé (EEDS) met en lumière la bataille stratégique pour le contrôle des données de santé, avec des risques de cyberattaques massives et une dépendance technologique vis-à-vis des géants américains et chinois, soulignant la fragilité de la souveraineté numérique européenne. Les tensions en Iran autour des protestations et la répression étatique sont également analysées, avec des implications pour l'intervention extérieure et la survie du régime.",
+        "tags": ["geopolitique", "geopolitic", "uk", "russia", "iran", "europe", "us", "souverainete_numerique", "defense", "sante", "cyberconflit", "ddos", "influence_operations", "ia"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/uk-govt-warns-about-ongoing-russian-hacktivist-group-attacks/", "https://sploited.blog/2026/01/19/iranian-hybrid-warfare-internal-suppression-and-transnational-influence-operations/", "https://www.iris-france.org/radiographie-ou-autopsie-de-la-cooperation-structuree-permanente-et-lecons-pour-la-cooperation-capacitaire-europeenne/", "https://www.iris-france.org/ue-trump-la-soumission-nest-plus-possible/", "https://www.portail-ie.fr/non-classe/2026/lespagne-reflechit-a-son-char-du-futur-avec-le-lancement-du-projet-de-recherche-pamov/", "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/la-bataille-strategique-d-un-systeme-de-sante-europeen-interconnecte-2-2/", "https://www.rusi.org/explore-our-research/publications/commentary/iran-tipping-point-protest-military-escalation-and-regime-survival/", "https://www.rusi.org/explore-our-research/publications/commentary/how-does-it-end-iranian-regime/"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Fournisseur d'accès Internet (FAI)",
+        "victime": "Brightspeed",
+        "description": "Un groupe de hackers, Crimson Collective, a compromis et mis en vente les données de plus d'un million de clients, incluant noms, e-mails, adresses physiques, numéros de téléphone et informations financières. Des menaces de coupure d'accès internet ont été émises.",
+        "tags": ["violation", "breach", "telecommunications", "isp", "customers_data", "financial_data", "data_exfiltration", "crimson_collective"],
+        "sources": ["https://fed.brid.gy/r/https://cordcuttersnews.com/a-broadband-internet-provider-had-a-data-breach-impacting-over-1-million-customers/"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "Un incident de cybersécurité en août 2025, confirmé en janvier 2026, a exposé les données sensibles d'environ 750 000 investisseurs canadiens suite à une attaque par phishing. Les données compromises incluent les dates de naissance, numéros de téléphone, revenus annuels, numéros d'assurance sociale, numéros d'identification gouvernementaux, numéros de compte d'investissement et relevés de compte.",
+        "tags": ["violation", "breach", "finance", "investissement", "canadian_investors", "phishing", "pii", "social_engineering"],
+        "sources": ["https://fieldeffect.com/blog/phishing-campaign-ciro-breach", "https://infosec.exchange/@DevaOnBreaches/115924426305622452"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Gouvernement (Justice, Services sociaux, Santé)",
+        "victime": "Cour Suprême des États-Unis, AmeriCorps, Département des Anciens Combattants (VA)",
+        "description": "Nicholas Moore a plaidé coupable d'avoir piraté le système de dépôt électronique de la Cour Suprême, des comptes AmeriCorps et le portail My HealtheVet du VA. Il a accédé à des informations personnelles identifiables (PII) et des données de santé privées, les publiant sur Instagram.",
+        "tags": ["violation", "breach", "government", "justice", "health", "pii", "health_data", "credential_theft", "data_leak"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-admits-to-leaking-stolen-supreme-court-data-on-instagram/", "https://securityaffairs.com/187048/security/hacker-pleads-guilty-to-hacking-supreme-court-americorps-and-va-systems/"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Distribution technologique, Chaîne d'approvisionnement",
+        "victime": "Ingram Micro",
+        "description": "Une attaque par rançongiciel en juillet 2025 a conduit à l'exposition des données personnelles d'environ 42 000 personnes. Les fichiers volés contenaient des informations telles que le nom, les coordonnées, la date de naissance, les numéros d'identification émis par le gouvernement (y compris les numéros de sécurité sociale) et des informations liées à l'emploi.",
+        "tags": ["violation", "breach", "technologie", "supply_chain", "ransomware", "pii", "ssn"],
+        "sources": ["https://securityaffairs.com/187083/data-breach/ransomware-attack-on-ingram-micro-impacts-42000-individuals.html", "https://infosec.exchange/@DevaOnBreaches/115924417518325404"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Divertissement (service de streaming musical)",
+        "victime": "Raaga (service indien de streaming musical)",
+        "description": "En décembre 2025, des données prétendument volées du service Raaga ont été mises en vente. Elles contenaient 10 millions d'adresses e-mail uniques, noms, sexes, âges (parfois dates de naissance complètes), codes postaux et mots de passe stockés sous forme de hachages MD5 non salés.",
+        "tags": ["violation", "breach", "music_streaming", "entertainment", "pii", "passwords", "md5_hashes", "data_sale"],
+        "sources": ["https://haveibeenpwned.com/Breach/Raaga"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Administration publique (Services de sécurité sociale)",
+        "victime": "Urssaf (organisme de recouvrement des cotisations de sécurité sociale en France)",
+        "description": "Accès frauduleux à une API de la Déclaration Préalable à l'Embauche via un compte partenaire compromis. 12 millions de salariés potentiellement concernés. Données exposées : noms, prénoms, dates de naissance, SIRET de l'employeur et dates d'embauche. Aucun numéro de sécurité sociale, coordonnées bancaires ou de contact n'a été exposé. Risque d'hameçonnage élevé.",
+        "tags": ["violation", "breach", "government", "public_administration", "france", "pii", "compromised_account", "phishing_risk"],
+        "sources": ["https://www.lemonde.fr/pixels/article/2026/01/19/acces-frauduleux-aux-donnees-de-l-urssaf-12-millions-de-salaries-potentiellement-concernes_6663256_4408996.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Applications mobiles (IA, Éducation, Divertissement, Réseaux sociaux)",
+        "victime": "Utilisateurs de 198 applications iOS basées sur l'IA (notamment \"Chat & Ask AI by Codeway\" et \"YPT - Study Group\")",
+        "description": "Plus de 20 millions d'utilisateurs d'applications iOS d'IA ont vu leurs informations personnelles identifiables (PII) et conversations privées exposées. Pour \"Chat & Ask AI by Codeway\", 18M utilisateurs (nom, email, date de création, messages envoyés/reçus, contenu, chats vocaux - plus de 400M messages). Pour \"YPT - Study Group\", 2M utilisateurs (jetons IA, ID utilisateur, clé utilisateur, chats).",
+        "tags": ["violation", "breach", "mobile_apps", "ia", "pii", "private_conversations", "data_leak"],
+        "sources": ["https://t.me/vxunderground/8016", "https://t.me/vxunderground/8018"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-61937",
+        "cvss": 10.0,
+        "product": "AVEVA Process Optimization (anciennement ROMeo) 2024.1 et versions antérieures",
+        "description": "Exécution de code à distance (RCE) critique dans l'API de l'application, permettant à un attaquant non authentifié de prendre le contrôle complet du serveur d'application du modèle avec les privilèges du système d'exploitation.",
+        "tags": ["vulnerabilité", "vulnerability", "rce", "aveva", "industrial_software", "unauthenticated_access", "critical"],
+        "sources": ["https://securityonline.info/industrial-alert-critical-rce-in-aveva-software-rated-cvss-10/"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23837",
+        "cvss": 9.8,
+        "product": "MyTube (version 1.7.65 et antérieures)",
+        "description": "Vulnérabilité de contournement d'authentification dans `roleBasedAuthMiddleware`, permettant à des utilisateurs non authentifiés d'accéder et de modifier les paramètres de l'application (`/api/settings`), de changer les mots de passe et d'accéder à d'autres routes protégées.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "mytube", "web_application", "critical_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23837"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": 9.4,
+        "product": "Fortinet FortiSIEM (composant phMonitor)",
+        "description": "Vulnérabilité d'injection d'arguments non authentifiée menant à une écriture de fichier arbitraire, permettant une exécution de code à distance en tant qu'utilisateur admin, suivie d'une élévation de privilèges vers l'accès root et la compromission complète de l'appliance.",
+        "tags": ["vulnerabilité", "vulnerability", "fortinet", "fortisiem", "rce", "unauthenticated", "privilege_escalation"],
+        "sources": ["https://thehackernews.com/2026/01/weekly-recap-fortinet-exploits-redline.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23947",
+        "cvss": 8.9,
+        "product": "Orval (versions 7.10.0 à 8.0.2)",
+        "description": "Vulnérabilité d'exécution de code arbitraire via injection de code non nettoyée dans le champ `x-enumDescriptions` lors de la génération d'énumérations dans les clients générés.",
+        "tags": ["vulnerabilité", "vulnerability", "code_injection", "orval", "code_generation", "arbitrary_code_execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23947"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23950",
+        "cvss": 8.8,
+        "product": "node-tar (versions jusqu'à 7.5.3)",
+        "description": "Condition de course (Symlink Poisoning) dans le système `path-reservations` sur les systèmes de fichiers insensibles à la casse (macOS APFS/HFS+), permettant une écriture de fichier arbitraire.",
+        "tags": ["vulnerabilité", "vulnerability", "race_condition", "node_tar", "macos", "arbitrary_file_overwrite", "symlink_poisoning"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23950"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2025-55068",
+        "cvss": 8.8,
+        "product": "Dover ProGauge MagLink LX4 automatic fuel-tank gauge consoles",
+        "description": "Vulnérabilité liée à la manipulation du temps (problème de l'an 2038), pouvant entraîner un déni de service et bloquer l'accès au panneau de gestion web de l'appareil.",
+        "tags": ["vulnerabilité", "vulnerability", "year_2038_problem", "dos", "dover_progage", "industrial_control_systems"],
+        "sources": ["https://www.kaspersky.co.uk/blog/mitigating-y2k38-vulnerability-in-organization/29969/"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23949",
+        "cvss": 8.6,
+        "product": "jaraco.context (versions 5.2.0 à 6.1.0)",
+        "description": "Vulnérabilité de traversal de chemin (Zip Slip) dans la fonction `jaraco.context.tarball()`, permettant d'extraire des fichiers en dehors du répertoire d'extraction prévu lors du traitement d'archives tar malveillantes.",
+        "tags": ["vulnerabilité", "vulnerability", "path_traversal", "zip_slip", "jaraco_context", "arbitrary_file_extraction"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23949"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-22219",
+        "cvss": 8.3,
+        "product": "Chainlit (versions antérieures à 2.9.4)",
+        "description": "Vulnérabilité de Server-Side Request Forgery (SSRF) dans le flux de mise à jour `/project/element`, permettant à un client authentifié d'effectuer des requêtes HTTP arbitraires depuis le serveur Chainlit vers des services réseau internes ou des endpoints de métadonnées cloud.",
+        "tags": ["vulnerabilité", "vulnerability", "ssrf", "chainlit", "web_application", "internal_network_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-22219"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23876",
+        "cvss": 8.1,
+        "product": "ImageMagick (versions antérieures à 7.1.2-13 et 6.9.13-38)",
+        "description": "Débordement de tampon de tas (heap buffer overflow) dans le décodeur d'images XBM, permettant à un attaquant d'écrire des données contrôlées au-delà du tampon alloué lors du traitement d'un fichier image malveillant.",
+        "tags": ["vulnerabilité", "vulnerability", "heap_buffer_overflow", "imagemagick", "image_processing", "arbitrary_write"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23876"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23944",
+        "cvss": 8.0,
+        "product": "Arcane (versions antérieures à 1.13.2)",
+        "description": "Accès proxy non authentifié aux agents d'environnements distants, permettant l'accès et la manipulation des ressources d'environnements distants (ex: liste de conteneurs, streaming de logs) sans authentification.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "arcane", "docker", "remote_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23944"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Fake ad blocker extension crashes the browser for ClickFix attacks",
+        "description": "Une campagne de malvertising utilise une fausse extension de bloqueur de publicités Chrome et Edge, NexShield, qui provoque délibérément le plantage du navigateur pour des attaques ClickFix. Cela mène à de fausses alertes de sécurité incitant les utilisateurs à exécuter des commandes malveilluses. Dans les environnements d'entreprise, ModeloRAT est déployé pour la reconnaissance système et l'exécution de commandes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1083 (File and Directory Discovery)", "T1057 (Process Discovery)"],
+        "analyse": "Cette attaque ciblée sur les utilisateurs de navigateurs grand public et les entreprises via une extension malveillante démontre une sophistication dans l'ingénierie sociale et l'évasion des détections. L'impact potentiel sur les environnements d'entreprise est significatif avec le déploiement de ModeloRAT, permettant une compromission profonde.",
+        "recommandations": "Comprendre l'effet de toute commande externe exécutée sur le système. Installer des extensions de navigateur uniquement à partir de sources fiables.",
+        "tags": ["ad_blocker", "malvertising", "nexshield", "clickfix", "modelorat", "browser_crash", "social_engineering", "malware", "windows", "chrome", "edge"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fake-ad-blocker-extension-crashes-the-browser-for-clickfix-attacks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Jordanian pleads guilty to selling access to 50 corporate networks",
+        "description": "Feras Khalil Ahmad Albashiti, un courtier en accès initial (IAB) connu sous l'alias \"r1z\", a plaidé coupable d'avoir vendu l'accès aux réseaux informatiques d'au moins 50 entreprises. Les IABs sont des intermédiaires cruciaux qui fournissent des identifiants et des accès à d'autres acteurs de la menace pour le vol de données, le déploiement de rançongiciels ou l'espionnage.",
+        "threat_actor": "Feras Khalil Ahmad Albashiti (\"r1z\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1078 (Valid Accounts)", "T1133 (External Remote Services)", "T1589 (Establish Accounts)"],
+        "analyse": "Ce cas illustre le rôle critique des courtiers en accès initial dans l'écosystème cybercriminel. Leurs activités abaissent la barrière d'entrée pour d'autres groupes, augmentant la fréquence et l'impact des attaques par rançongiciel et d'espionnage. L'impact géographique est potentiellement mondial, avec des cibles variées.",
+        "recommandations": "Mettre en œuvre l'authentification multifacteur (MFA) pour tous les accès distants. Surveiller l'activité des comptes privilégiés. Mener des audits de sécurité réguliers pour identifier et corriger les vulnérabilités qui pourraient être exploitées par les IAB.",
+        "tags": ["initial_access_broker", "iab", "r1z", "feras_bashiti", "network_access_sale", "cybercrime", "credential_theft", "ransomware_enablement"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/jordanian-pleads-guilty-to-selling-access-to-50-corporate-networks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "New PDFSider Windows malware deployed on Fortune 100 firm's network",
+        "description": "Des attaquants de rançongiciels ciblant une entreprise Fortune 100 du secteur financier ont utilisé une nouvelle souche de malware, PDFSider, un backdoor furtif, pour livrer des charges utiles malveillantes. L'attaque a exploité l'ingénierie sociale (usurpation de support technique) et des e-mails de spearphishing contenant une archive ZIP avec un exécutable légitime et une DLL malveillante (`cryptbase.dll`), permettant un chargement latéral de DLL.",
+        "threat_actor": "Qilin ransomware actors, multiple ransomware actors (using PDFSider); tradecraft closer to espionage.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1574.001 (DLL Search Order Hijacking)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1105 (Ingress Tool Transfer)", "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)"],
+        "analyse": "Le déploiement de PDFSider, un backdoor sophistiqué avec des caractéristiques d'APT, sur le réseau d'une entreprise Fortune 100 dans la finance, souligne la persistance des menaces avancées et l'utilisation de tactiques furtives. La technique de chargement latéral de DLL permet de contourner les systèmes EDR, et la nature \"espionnage\" du malware suggère des objectifs à long terme au-delà du simple rançongiciel.",
+        "recommandations": "Mettre en œuvre une sécurité renforcée des e-mails pour détecter les spearphishing. Renforcer la gestion des applications et le contrôle des chargements de DLL. Surveiller l'activité réseau pour les communications C2 chiffrées. Sensibiliser les employés à l'ingénierie sociale, y compris les tentatives d'usurpation de support technique.",
+        "tags": ["pdfsider", "malware", "ransomware", "qilin", "finance", "fortune_100", "spearphishing", "dll_side_loading", "backdoor", "apt_tradecraft"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-pdfsider-windows-malware-deployed-on-fortune-100-firms-network/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Discord Spy: SolyxImmortal Malware Uses Webhooks for Stealthy Theft",
+        "description": "Un nouveau malware Python, SolyxImmortal, est distribué via des canaux souterrains, agissant comme un outil de surveillance \"monolithique\" axé sur la persistance. Il utilise des webhooks Discord codés en dur pour son infrastructure de commande et contrôle (C2), exfiltrant des données sensibles, des journaux, des captures d'écran, et fournissant des alertes en temps réel à un opérateur d'Europe de l'Est.",
+        "threat_actor": "Unnamed (opérateur d'Europe de l'Est, potentiellement turc, \"mid-tier actors\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1560.001 (Archive Collected Data: Archive via Utility)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1552.001 (Credentials from Password Stores)", "T1113 (Screen Capture)", "T1056.001 (Input Capture: Keylogging)"],
+        "analyse": "SolyxImmortal représente une tendance croissante d'outils de surveillance accessibles, abaissant la barrière d'entrée pour les cybercriminels. Son utilisation de plateformes légitimes comme Discord pour le C2 rend la détection difficile, permettant le vol persistant de données. L'impact est un risque crédible pour les individus et les petites organisations.",
+        "recommandations": "Surveiller les activités réseau inhabituelles, en particulier les communications avec des plateformes non professionnelles utilisées pour le C2. Mettre en œuvre des solutions EDR capables de détecter les comportements malveillux en espace utilisateur. Sensibiliser les utilisateurs aux risques des téléchargements provenant de sources non fiables.",
+        "tags": ["solyximmortal", "malware", "infostealer", "python", "discord", "c2", "data_exfiltration", "keylogging", "screen_capture", "stealth"],
+        "sources": ["https://securityonline.info/discord-spy-solyximmortal-malware-uses-webhooks-for-stealthy-theft/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Malformed & Dangerous: Gootloader Returns with New Ransomware Ties",
+        "description": "Le malware Gootloader a refait surface après une interruption, formant une nouvelle alliance avec les opérateurs de rançongiciels, notamment Vanilla Tempest (utilisant Rhysida). Il utilise une technique astucieuse de livraison via une archive ZIP malformée pour échapper à la détection, et exploite les noms courts NTFS (8.3) pour exécuter sa charge utile JavaScript via le Windows Script Host.",
+        "threat_actor": "Gootloader, Vanilla Tempest (using Rhysida ransomware)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)", "T1027 (Obfuscated Files or Information)"],
+        "analyse": "La réapparition de Gootloader avec de nouvelles tactiques d'évasion et une affiliation au rançongiciel Rhysida signale une menace évolutive pour l'accès initial et le déploiement rapide de rançongiciels. La méthode d'évasion par archives malformées et l'utilisation de fonctionnalités Windows héritées peuvent être difficiles à détecter pour les outils automatisés.",
+        "recommandations": "Renforcer les défenses de la messagerie pour bloquer les archives ZIP malformées. Surveiller l'exécution de CScript et PowerShell, en particulier les chaînes d'exécution inattendues. Sensibiliser les utilisateurs aux risques des pièces jointes suspectes et des téléchargements de logiciels \"craqués\".",
+        "tags": ["gootloader", "malware", "ransomware", "rhysida", "vanilla_tempest", "initial_access", "evasion", "zip_archive", "windows_script_host", "powershell"],
+        "sources": ["https://securityonline.info/malformed-dangerous-gootloader-returns-with-new-ransomware-ties/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "StealC malware control panel flaw leaks details on active attacker",
+        "description": "Des chercheurs ont découvert une vulnérabilité XSS dans le panneau de contrôle du malware StealC, exposant des détails clés sur un opérateur (\"YouTubeTA\") de cet infostealer. L'exploitation a permis aux enquêteurs de surveiller les campagnes de l'acteur et de récupérer des cookies de session, révélant qu'il s'agit probablement d'un individu unique d'Europe de l'Est (possiblement Ukraine) se concentrant sur le vol de comptes de créateurs YouTube via la distribution de logiciels piratés.",
+        "threat_actor": "YouTubeTA (opérateur de StealC)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.002 (Phishing: Spearphishing Link)", "T1552.001 (Credentials from Password Stores)", "T1539 (Data from Cloud Storage)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1204.002 (User Execution: Malicious File)"],
+        "analyse": "Cette fuite offre un aperçu rare des opérations d'un infostealer en tant que service (MaaS). Elle souligne que même les infrastructures des cybercriminels peuvent être vulnérables et que des acteurs individuels peuvent mener des campagnes dangereusement réussies, affectant des milliers de victimes et des centaines de milliers d'identifiants volés.",
+        "recommandations": "Mettre en œuvre une sécurité d'identité robuste. Filtrer et valider toutes les entrées utilisateur pour prévenir les vulnérabilités XSS. Surveiller les plateformes de médias sociaux pour la distribution de malwares via des comptes compromis.",
+        "tags": ["steal_c", "malware", "infostealer", "youtube", "xss", "control_panel", "threat_actor_monitoring", "maas", "credential_theft"],
+        "sources": ["https://securityaffairs.com/187075/malware/stealc-malware-control-panel-flaw-leaks-details-on-active-attacker.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Google Gemini Prompt Injection Flaw Exposed Private Calendar Data via Malicious Invites",
+        "description": "Une faille d'injection de prompt indirecte dans Google Gemini a permis de contourner les contrôles d'autorisation et d'utiliser Google Calendar pour l'exfiltration de données privées. Un acteur malveillant pouvait cacher une charge utile malveillante dans la description d'une invitation de calendrier, que Gemini traitait lorsqu'un utilisateur posait une question innocente, menant à la création d'un événement résumant les réunions privées et visible par l'attaquant.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.002 (Phishing: Spearphishing Link)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1530 (Data from Cloud Storage Object)", "T1020 (Automated Exfiltration)"],
+        "analyse": "Cette vulnérabilité met en évidence les nouveaux risques de sécurité introduits par les fonctionnalités d'IA natives, où la manipulation du langage peut devenir un vecteur d'attaque. L'impact est la violation de la confidentialité des données personnelles et professionnelles stockées dans les services cloud.",
+        "recommandations": "Évaluer constamment les grands modèles linguistiques (LLM) pour la sécurité. Tester la résistance aux jailbreaks et à la manipulation. Auditer les comptes de service et les identités associés aux charges de travail IA. Assurer des contrôles adéquats pour prévenir l'injection de code non autorisée.",
+        "tags": ["google_gemini", "prompt_injection", "ia", "artificial_intelligence", "google_calendar", "data_exfiltration", "cloud_security", "authorization_bypass", "social_engineering"],
+        "sources": ["https://thehackernews.com/2026/01/google-gemini-prompt-injection-flaw.html"],
+        "date": "2026-01-20"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "Cyber intelligence for this period reveals an intensification and diversification of threats, with a notable emphasis on the exploitation of critical vulnerabilities and sophisticated ransomware campaigns. Social engineering, particularly phishing and impersonation, remains a favored initial access vector, leading to massive data breaches affecting millions of individuals across various sectors (finance, telecommunications, public services, mobile applications). Malicious actors, whether Russian hacktivist groups (NoName057(16)), initial access brokers (Feras Khalil Ahmad Albashiti), or malware operators (YouTubeTA, Gootloader allied with Vanilla Tempest), are refining their techniques, employing stealthy malware (PDFSider, SolyxImmortal) and innovative evasion methods (malformed ZIP archives). The cybercrime ecosystem continues to professionalize with \"Malware-as-a-Service\" models. Critical vulnerabilities (CVSS >= 8) are pervasive, including remote code execution (RCE), authentication bypasses, and injections, affecting industrial software (AVEVA), development libraries (node-tar, Orval), and applications (MyTube, Arcane). Artificial intelligence, while an innovation tool, introduces new attack surfaces, as evidenced by the prompt injection flaw in Google Gemini. On the geopolitical front, tensions persist with influence operations and DDoS attacks, alongside a growing concern for digital sovereignty, particularly in European healthcare and defense. In conclusion, the threat landscape is characterized by the persistence of proven techniques (phishing, ransomware) coupled with the emergence of new AI-related threats and increased complexity in malicious actor operations, demanding constant vigilance and multi-layered defenses.",
+      "date": "2026-01-20"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Internet Service Providers (ISPs)",
+        "modop": "Data breach by exfiltrating customer information, selling the data, and threatening internet access termination.",
+        "tags": ["actor", "theat_actor", "data_breach", "telecommunications", "data_exfiltration"],
+        "sources": ["https://fed.brid.gy/r/https://cordcuttersnews.com/a-broadband-internet-provider-had-a-data-breach-impacting-over-1-million-customers/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Feras Khalil Ahmad Albashiti (\"r1z\")",
+        "secteur": "Multiple (at least 50 corporate networks)",
+        "modop": "Initial Access Broker (IAB), selling access to corporate computer networks to other threat actors (e.g., ransomware affiliates). Uses compromised credentials.",
+        "tags": ["actor", "theat_actor", "initial_access_broker", "iab", "credential_theft", "corporate_networks"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/jordanian-pleads-guilty-to-selling-access-to-50-corporate-networks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Nicholas Moore (@ihackedthegovernment)",
+        "secteur": "Government (Justice, Social Services, Health)",
+        "modop": "Illegal access to systems (Supreme Court, AmeriCorps, VA) via stolen credentials. Exfiltration and leaking of personal and sensitive data on Instagram.",
+        "tags": ["actor", "theat_actor", "insider_threat", "data_breach", "government", "credential_theft", "social_media_leak"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-admits-to-leaking-stolen-supreme-court-data-on-instagram/", "https://securityaffairs.com/187048/security/hacker-pleads-guilty-to-hacking-supreme-court-americorps-and-va-systems/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "NoName057(16)",
+        "secteur": "Critical Infrastructure, Local Government",
+        "modop": "Ideologically motivated Distributed Denial-of-Service (DDoS) attacks, utilizing the DDoSia project. Targeting NATO member states and countries opposing Russian geopolitical ambitions.",
+        "tags": ["actor", "theat_actor", "hacktivism", "russia", "ddos", "critical_infrastructure", "government"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/uk-govt-warns-about-ongoing-russian-hacktivist-group-attacks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Qilin ransomware actors (using PDFSider)",
+        "secteur": "Finance (Fortune 100)",
+        "modop": "Social engineering (impersonating tech support), spearphishing (ZIP archive with legitimate executable and malicious DLL for DLL Side-Loading), deployment of PDFSider backdoor for stealthy access and remote command execution.",
+        "tags": ["actor", "theat_actor", "ransomware", "pdfsider", "finance", "dll_side_loading", "spearphishing", "apt"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-pdfsider-windows-malware-deployed-on-fortune-100-firms-network/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "Vanilla Tempest (allied with Gootloader)",
+        "secteur": "Unknown (initial access broker, ransomware)",
+        "modop": "Collaborator of Gootloader, leveraging Rhysida ransomware. Gootloader provides initial access via malformed ZIP archives and execution of JavaScript/PowerShell payloads.",
+        "tags": ["actor", "theat_actor", "ransomware", "rhysida", "gootloader", "initial_access", "malware"],
+        "sources": ["https://securityonline.info/malformed-dangerous-gootloader-returns-with-new-ransomware-ties/"],
+        "date": "2026-01-20"
+      },
+      {
+        "nom": "YouTubeTA",
+        "secteur": "YouTube users, cracked software promotion, content creators.",
+        "modop": "Operator of the StealC malware (Malware-as-a-Service infostealer). Campaigns via hijacked YouTube accounts promoting \"cracked\" software (Adobe). Aims to steal YouTube creator accounts and thousands of credentials.",
+        "tags": ["actor", "theat_actor", "infostealer", "steal_c", "youtube", "social_engineering", "malware_as_a_service", "credential_theft"],
+        "sources": ["https://securityaffairs.com/187075/malware/stealc-malware-control-panel-flaw-leaks-details-on-active-attacker.html"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Defense, Critical Infrastructure, Healthcare, Diplomacy",
+        "theme": "Geopolitical Tensions, Cyber Warfare, Digital and Defense Sovereignty, Influence Operations.",
+        "description": "The UK government warns of ongoing attacks from Russian-aligned hacktivist groups (NoName057(16)) targeting critical infrastructure and local government organizations with DDoS attacks. Iran is engaged in hybrid warfare, combining internal suppression (digital isolation strategy, \"Barracks Internet\") and transnational influence operations through offensive cyber operations. Europe faces sovereignty challenges, particularly regarding President Trump's threats to seize Greenland and the EU's need to assert its own interests. European defense cooperation (PESCO) is deemed largely ineffective, prompting Spain to autonomously develop its future tank (PAMOV project) due to delays in European initiatives. Finally, the creation of a European Health Data Space (EHDS) highlights the strategic battle for control over health data, with risks of massive cyberattacks and technological dependence on US and Chinese giants, underscoring the fragility of European digital sovereignty. Tensions in Iran over protests and state repression are also analyzed, with implications for external intervention and regime survival.",
+        "tags": ["geopolitique", "geopolitic", "uk", "russia", "iran", "europe", "us", "digital_sovereignty", "defense", "healthcare", "cyberconflict", "ddos", "influence_operations", "ai"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/uk-govt-warns-about-ongoing-russian-hacktivist-group-attacks/", "https://sploited.blog/2026/01/19/iranian-hybrid-warfare-internal-suppression-and-transnational-influence-operations/", "https://www.iris-france.org/radiographie-ou-autopsie-de-la-cooperation-structuree-permanente-et-lecons-pour-la-cooperation-capacitaire-europeenne/", "https://www.iris-france.org/ue-trump-la-soumission-nest-plus-possible/", "https://www.portail-ie.fr/non-classe/2026/lespagne-reflechit-a-son-char-du-futur-avec-le-lancement-du-projet-de-recherche-pamov/", "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/la-bataille-strategique-d-un-systeme-de-sante-europeen-interconnecte-2-2/", "https://www.rusi.org/explore-our-research/publications/commentary/iran-tipping-point-protest-military-escalation-and-regime-survival/", "https://www.rusi.org/explore-our-research/publications/commentary/how-does-it-end-iranian-regime/"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Internet Service Provider (ISP)",
+        "victime": "Brightspeed",
+        "description": "A hacker group, Crimson Collective, compromised and offered for sale data of over 1 million customers, including names, emails, physical addresses, phone numbers, and financial information. Threats to cut internet access were also made.",
+        "tags": ["violation", "breach", "telecommunications", "isp", "customers_data", "financial_data", "data_exfiltration", "crimson_collective"],
+        "sources": ["https://fed.brid.gy/r/https://cordcuttersnews.com/a-broadband-internet-provider-had-a-data-breach-impacting-over-1-million-customers/"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "Canadian Investment Regulatory Organization (CIRO)",
+        "description": "A cybersecurity incident in August 2025, confirmed in January 2026, exposed sensitive data of approximately 750,000 Canadian investors following a phishing attack. Compromised data includes dates of birth, phone numbers, annual income, Social Insurance Numbers (SINs), government-issued identification numbers, investment account numbers, and account statements.",
+        "tags": ["violation", "breach", "finance", "investment", "canadian_investors", "phishing", "pii", "social_engineering"],
+        "sources": ["https://fieldeffect.com/blog/phishing-campaign-ciro-breach", "https://infosec.exchange/@DevaOnBreaches/115924426305622452"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Government (Justice, Social Services, Health)",
+        "victime": "U.S. Supreme Court, AmeriCorps, Department of Veterans Affairs (VA)",
+        "description": "Nicholas Moore pleaded guilty to hacking the Supreme Court's electronic filing system, AmeriCorps accounts, and the VA's My HealtheVet portal. He accessed Personally Identifiable Information (PII) and private health data, which he subsequently leaked on Instagram.",
+        "tags": ["violation", "breach", "government", "justice", "health", "pii", "health_data", "credential_theft", "data_leak"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/hacker-admits-to-leaking-stolen-supreme-court-data-on-instagram/", "https://securityaffairs.com/187048/security/hacker-pleads-guilty-to-hacking-supreme-court-americorps-and-va-systems/"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Technology Distribution, Supply Chain",
+        "victime": "Ingram Micro",
+        "description": "A ransomware attack in July 2025 led to the exposure of personal data for about 42,000 individuals. Stolen files contained information such as name, contact information, date of birth, government-issued identification numbers (including Social Security Numbers), and employment-related details.",
+        "tags": ["violation", "breach", "technology", "supply_chain", "ransomware", "pii", "ssn"],
+        "sources": ["https://securityaffairs.com/187083/data-breach/ransomware-attack-on-ingram-micro-impacts-42000-individuals.html", "https://infosec.exchange/@DevaOnBreaches/115924417518325404"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Entertainment (music streaming service)",
+        "victime": "Raaga (Indian streaming music service)",
+        "description": "In December 2025, data allegedly stolen from the Raaga service was posted for sale. It contained 10 million unique email addresses, names, genders, ages (in some cases, full date of birth), postcodes, and passwords stored as unsalted MD5 hashes.",
+        "tags": ["violation", "breach", "music_streaming", "entertainment", "pii", "passwords", "md5_hashes", "data_sale"],
+        "sources": ["https://haveibeenpwned.com/Breach/Raaga"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Public Administration (Social Security Services)",
+        "victime": "Urssaf (French social security contributions collection agency)",
+        "description": "Fraudulent access to an API containing employer declaration data via a compromised partner account. 12 million employees potentially affected. Exposed data: names, first names, dates of birth, employer SIRET, and hiring dates. No social security numbers, bank details, or contact information were exposed. High phishing risk.",
+        "tags": ["violation", "breach", "government", "public_administration", "france", "pii", "compromised_account", "phishing_risk"],
+        "sources": ["https://www.lemonde.fr/pixels/article/2026/01/19/acces-frauduleux-aux-donnees-de-l-urssaf-12-millions-de-salaries-potentiellement-concernes_6663256_4408996.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "secteur": "Mobile Applications (AI, Education, Entertainment, Social Networking)",
+        "victime": "Users of 198 iOS AI-based apps (notably \"Chat & Ask AI by Codeway\" and \"YPT - Study Group\")",
+        "description": "Over 20 million users of iOS AI applications had their Personally Identifiable Information (PII) and private conversations exposed. For \"Chat & Ask AI by Codeway\", 18M users (name, email, creation date, sent/received messages, content, voice chats - over 400M messages). For \"YPT - Study Group\", 2M users (AI tokens, user ID, user key, chats).",
+        "tags": ["violation", "breach", "mobile_apps", "ai", "pii", "private_conversations", "data_leak"],
+        "sources": ["https://t.me/vxunderground/8016", "https://t.me/vxunderground/8018"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-61937",
+        "cvss": 10.0,
+        "product": "AVEVA Process Optimization (formerly ROMeo) 2024.1 and prior versions",
+        "description": "Critical Remote Code Execution (RCE) in the application's API, allowing an unauthenticated attacker to achieve full control of the Model Application Server with OS System privileges.",
+        "tags": ["vulnerabilité", "vulnerability", "rce", "aveva", "industrial_software", "unauthenticated_access", "critical"],
+        "sources": ["https://securityonline.info/industrial-alert-critical-rce-in-aveva-software-rated-cvss-10/"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23837",
+        "cvss": 9.8,
+        "product": "MyTube (version 1.7.65 and earlier)",
+        "description": "Authorization bypass vulnerability in `roleBasedAuthMiddleware`, allowing unauthenticated users to access and modify application settings (`/api/settings`), change passwords, and access other protected routes.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "mytube", "web_application", "critical_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23837"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2025-64155",
+        "cvss": 9.4,
+        "product": "Fortinet FortiSIEM (phMonitor component)",
+        "description": "Unauthenticated argument injection vulnerability leading to arbitrary file write, allowing remote code execution as an admin user, followed by privilege escalation to root access and full appliance compromise.",
+        "tags": ["vulnerabilité", "vulnerability", "fortinet", "fortisiem", "rce", "unauthenticated", "privilege_escalation"],
+        "sources": ["https://thehackernews.com/2026/01/weekly-recap-fortinet-exploits-redline.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23947",
+        "cvss": 8.9,
+        "product": "Orval (versions 7.10.0 to 8.0.2)",
+        "description": "Arbitrary code execution vulnerability via unsanitized code injection in the `x-enumDescriptions` field during enum generation in generated clients.",
+        "tags": ["vulnerabilité", "vulnerability", "code_injection", "orval", "code_generation", "arbitrary_code_execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23947"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23950",
+        "cvss": 8.8,
+        "product": "node-tar (versions up to 7.5.3)",
+        "description": "Race condition (Symlink Poisoning) in the `path-reservations` system on case-insensitive filesystems (macOS APFS/HFS+), allowing arbitrary file overwrite.",
+        "tags": ["vulnerabilité", "vulnerability", "race_condition", "node_tar", "macos", "arbitrary_file_overwrite", "symlink_poisoning"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23950"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2025-55068",
+        "cvss": 8.8,
+        "product": "Dover ProGauge MagLink LX4 automatic fuel-tank gauge consoles",
+        "description": "Vulnerability related to time manipulation (Year 2038 problem), which can cause a denial of service and block access to the device's web management panel.",
+        "tags": ["vulnerabilité", "vulnerability", "year_2038_problem", "dos", "dover_progage", "industrial_control_systems"],
+        "sources": ["https://www.kaspersky.co.uk/blog/mitigating-y2k38-vulnerability-in-organization/29969/"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23949",
+        "cvss": 8.6,
+        "product": "jaraco.context (versions 5.2.0 to 6.1.0)",
+        "description": "Path traversal vulnerability (Zip Slip) in the `jaraco.context.tarball()` function, allowing files to be extracted outside the intended extraction directory when processing malicious tar archives.",
+        "tags": ["vulnerabilité", "vulnerability", "path_traversal", "zip_slip", "jaraco_context", "arbitrary_file_extraction"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23949"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-22219",
+        "cvss": 8.3,
+        "product": "Chainlit (versions prior to 2.9.4)",
+        "description": "Server-Side Request Forgery (SSRF) vulnerability in the `/project/element` update flow, allowing an authenticated client to make arbitrary HTTP requests from the Chainlit server to internal network services or cloud metadata endpoints.",
+        "tags": ["vulnerabilité", "vulnerability", "ssrf", "chainlit", "web_application", "internal_network_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-22219"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23876",
+        "cvss": 8.1,
+        "product": "ImageMagick (versions prior to 7.1.2-13 and 6.9.13-38)",
+        "description": "Heap buffer overflow in the XBM image decoder, allowing an attacker to write controlled data past the allocated heap buffer when processing a maliciously crafted image file.",
+        "tags": ["vulnerabilité", "vulnerability", "heap_buffer_overflow", "imagemagick", "image_processing", "arbitrary_write"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23876"],
+        "date": "2026-01-20"
+      },
+      {
+        "cve_id": "CVE-2026-23944",
+        "cvss": 8.0,
+        "product": "Arcane (versions prior to 1.13.2)",
+        "description": "Unauthenticated proxy access to remote environment agents, allowing access and manipulation of remote environment resources (e.g., container listings, log streaming) without authentication.",
+        "tags": ["vulnerabilité", "vulnerability", "authentication_bypass", "arcane", "docker", "remote_access"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-23944"],
+        "date": "2026-01-20"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Fake ad blocker extension crashes the browser for ClickFix attacks",
+        "description": "A malvertising campaign uses a fake Chrome and Edge ad-blocking extension, NexShield, which intentionally crashes the browser for ClickFix attacks. This leads to fake security warnings prompting users to execute malicious commands. In corporate environments, ModeloRAT is deployed for system reconnaissance and command execution.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1083 (File and Directory Discovery)", "T1057 (Process Discovery)"],
+        "analyse": "This attack, targeting general browser users and corporations via a malicious extension, demonstrates sophistication in social engineering and evasion techniques. The potential impact on corporate environments is significant with ModeloRAT deployment, enabling deep compromise.",
+        "recommandations": "Understand the effect of any external command executed on the system. Install browser extensions only from trusted sources.",
+        "tags": ["ad_blocker", "malvertising", "nexshield", "clickfix", "modelorat", "browser_crash", "social_engineering", "malware", "windows", "chrome", "edge"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fake-ad-blocker-extension-crashes-the-browser-for-clickfix-attacks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Jordanian pleads guilty to selling access to 50 corporate networks",
+        "description": "Feras Khalil Ahmad Albashiti, an Initial Access Broker (IAB) known as \"r1z\", pleaded guilty to selling access to the computer networks of at least 50 companies. IABs are crucial intermediaries who provide credentials and access to other threat actors for data theft, ransomware deployment, or espionage.",
+        "threat_actor": "Feras Khalil Ahmad Albashiti (\"r1z\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1078 (Valid Accounts)", "T1133 (External Remote Services)", "T1589 (Establish Accounts)"],
+        "analyse": "This case illustrates the critical role of Initial Access Brokers in the cybercrime ecosystem. Their activities lower the barrier to entry for other groups, increasing the frequency and impact of ransomware and espionage attacks. The geographical impact is potentially global, with varied targets.",
+        "recommandations": "Implement multi-factor authentication (MFA) for all remote accesses. Monitor privileged account activity. Conduct regular security audits to identify and fix vulnerabilities that could be exploited by IABs.",
+        "tags": ["initial_access_broker", "iab", "r1z", "feras_bashiti", "network_access_sale", "cybercrime", "credential_theft", "ransomware_enablement"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/jordanian-pleads-guilty-to-selling-access-to-50-corporate-networks/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "New PDFSider Windows malware deployed on Fortune 100 firm's network",
+        "description": "Ransomware attackers targeting a Fortune 100 finance company utilized a new malware strain, PDFSider, a stealthy backdoor, to deliver malicious payloads. The attack leveraged social engineering (tech support impersonation) and spearphishing emails containing a ZIP archive with a legitimate executable and a malicious DLL (`cryptbase.dll`), enabling DLL side-loading.",
+        "threat_actor": "Qilin ransomware actors, multiple ransomware actors (using PDFSider); tradecraft closer to espionage.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1574.001 (DLL Search Order Hijacking)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1105 (Ingress Tool Transfer)", "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)"],
+        "analyse": "The deployment of PDFSider, a sophisticated backdoor with APT characteristics, on a Fortune 100 finance company's network highlights the persistence of advanced threats and the use of stealthy tactics. The DLL side-loading technique bypasses EDR systems, and the \"espionage\" nature of the malware suggests long-term objectives beyond mere ransomware.",
+        "recommandations": "Implement enhanced email security to detect spearphishing. Strengthen application management and DLL loading controls. Monitor network activity for encrypted C2 communications. Educate employees on social engineering, including tech support impersonation attempts.",
+        "tags": ["pdfsider", "malware", "ransomware", "qilin", "finance", "fortune_100", "spearphishing", "dll_side_loading", "backdoor", "apt_tradecraft"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-pdfsider-windows-malware-deployed-on-fortune-100-firms-network/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Discord Spy: SolyxImmortal Malware Uses Webhooks for Stealthy Theft",
+        "description": "A newly identified Python-based malware, SolyxImmortal, is circulating in underground channels, acting as a \"monolithic\" surveillance tool focused on persistence. It leverages hardcoded Discord webhooks for its Command & Control (C2) infrastructure, exfiltrating sensitive data, logs, screenshots, and providing real-time alerts to an operator from Eastern Europe.",
+        "threat_actor": "Unnamed (Eastern European operator, potentially Turkish, \"mid-tier actors\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1560.001 (Archive Collected Data: Archive via Utility)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1552.001 (Credentials from Password Stores)", "T1113 (Screen Capture)", "T1056.001 (Input Capture: Keylogging)"],
+        "analyse": "SolyxImmortal represents a growing trend of accessible surveillance tools, lowering the entry barrier for cybercriminals. Its use of legitimate platforms like Discord for C2 makes detection challenging, enabling persistent data theft. The impact is a credible risk for individuals and small organizations.",
+        "recommandations": "Monitor for unusual network activities, especially communications with non-professional platforms used for C2. Implement EDR solutions capable of detecting user-space malicious behavior. Educate users about the risks of downloads from untrusted sources.",
+        "tags": ["solyximmortal", "malware", "infostealer", "python", "discord", "c2", "data_exfiltration", "keylogging", "screen_capture", "stealth"],
+        "sources": ["https://securityonline.info/discord-spy-solyximmortal-malware-uses-webhooks-for-stealthy-theft/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Malformed & Dangerous: Gootloader Returns with New Ransomware Ties",
+        "description": "The Gootloader malware has resurfaced after a hiatus, forming a new alliance with ransomware operators, specifically Vanilla Tempest (leveraging Rhysida). It uses a clever delivery technique via a malformed ZIP archive to evade detection and exploits NTFS short names (8.3) to execute its JavaScript payload via Windows Script Host.",
+        "threat_actor": "Gootloader, Vanilla Tempest (using Rhysida ransomware)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 (Phishing: Spearphishing Attachment)", "T1059.001 (Command and Scripting Interpreter: PowerShell)", "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)", "T1027 (Obfuscated Files or Information)"],
+        "analyse": "Gootloader's reappearance with new evasion tactics and affiliation with Rhysida ransomware signals an evolving threat for initial access and rapid ransomware deployment. The evasion method using malformed archives and legacy Windows features can be challenging for automated tools to detect.",
+        "recommandations": "Strengthen email defenses to block malformed ZIP archives. Monitor CScript and PowerShell execution, especially unexpected execution chains. Educate users on the risks of suspicious attachments and \"cracked\" software downloads.",
+        "tags": ["gootloader", "malware", "ransomware", "rhysida", "vanilla_tempest", "initial_access", "evasion", "zip_archive", "windows_script_host", "powershell"],
+        "sources": ["https://securityonline.info/malformed-dangerous-gootloader-returns-with-new-ransomware-ties/"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "StealC malware control panel flaw leaks details on active attacker",
+        "description": "Researchers discovered an XSS vulnerability in the StealC malware's control panel, exposing key details about an operator (\"YouTubeTA\") of this infostealer. Exploitation allowed investigators to monitor the actor's campaigns and retrieve session cookies, revealing it's likely a single individual from Eastern Europe (possibly Ukraine) focusing on stealing YouTube creator accounts via distributing cracked software.",
+        "threat_actor": "YouTubeTA (StealC operator)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.002 (Phishing: Spearphishing Link)", "T1552.001 (Credentials from Password Stores)", "T1539 (Data from Cloud Storage)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1204.002 (User Execution: Malicious File)"],
+        "analyse": "This leak provides a rare glimpse into the operations of a Malware-as-a-Service (MaaS) infostealer. It highlights that even cybercriminal infrastructure can be vulnerable and that individual actors can conduct dangerously successful campaigns, affecting thousands of victims and hundreds of thousands of stolen credentials.",
+        "recommandations": "Implement robust identity security. Filter and validate all user inputs to prevent XSS vulnerabilities. Monitor social media platforms for malware distribution via compromised accounts.",
+        "tags": ["steal_c", "malware", "infostealer", "youtube", "xss", "control_panel", "threat_actor_monitoring", "maas", "credential_theft"],
+        "sources": ["https://securityaffairs.com/187075/malware/stealc-malware-control-panel-flaw-leaks-details-on-active-attacker.html"],
+        "date": "2026-01-20"
+      },
+      {
+        "title": "Google Gemini Prompt Injection Flaw Exposed Private Calendar Data via Malicious Invites",
+        "description": "An indirect prompt injection flaw in Google Gemini bypassed authorization controls and used Google Calendar for private data exfiltration. A threat actor could hide a malicious payload in a calendar invite description, which Gemini would process when a user asked an innocent question, leading to the creation of an event summarizing private meetings, visible to the attacker.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.002 (Phishing: Spearphishing Link)", "T1071.001 (Application Layer Protocol: Web Protocols)", "T1530 (Data from Cloud Storage Object)", "T1020 (Automated Exfiltration)"],
+        "analyse": "This vulnerability highlights new security risks introduced by native AI functionalities, where language manipulation can become an attack vector. The impact is the violation of privacy for personal and professional data stored in cloud services.",
+        "recommandations": "Continuously evaluate Large Language Models (LLMs) for security. Test for jailbreak and manipulation resistance. Audit service accounts and identities associated with AI workloads. Ensure adequate controls to prevent unauthorized code injection.",
+        "tags": ["google_gemini", "prompt_injection", "ai", "artificial_intelligence", "google_calendar", "data_exfiltration", "cloud_security", "authorization_bypass", "social_engineering"],
+        "sources": ["https://thehackernews.com/2026/01/google-gemini-prompt-injection-flaw.html"],
+        "date": "2026-01-20"
+      }
+    ]
+  }
+}
