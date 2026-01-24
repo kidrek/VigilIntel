@@ -1,0 +1,2068 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une prévalence continue des menaces sophistiquées et opportunistes, avec une accentuation notable sur la compromission des identités et des chaînes d'approvisionnement logicielles. Les acteurs malveillants, des groupes d'extorsion comme ShinyHunters aux cybercriminels financiers et groupes soutenus par des États, continuent d'exploiter des vulnérabilités existantes ou nouvellement découvertes pour obtenir des accès non autorisés et exfiltrer des données. \n\nLes menaces clés observées incluent :\n*   **Attaques sur les identités et l'authentification unique (SSO)** : Des campagnes de 'vishing' sophistiquées contournent l'authentification multifacteur pour accéder aux plateformes SaaS, comme observé avec ShinyHunters ciblant Okta, Microsoft et Google. Parallèlement, des failles critiques dans les implémentations SSO de produits largement utilisés (ex: Fortinet SAML SSO) sont activement exploitées, permettant des compromissions même sur des systèmes à jour.\n*   **Vulnérabilités critiques et leur exploitation persistante** : Des failles très sévères, parfois anciennes de plus d'une décennie (ex: CVE-2026-24061 dans telnetd de GNU InetUtils) ou récemment patchées (ex: CVE-2024-37079 dans VMware vCenter Server), sont activement ciblées. La CISA met régulièrement à jour son catalogue de vulnérabilités activement exploitées, soulignant l'importance vitale des mises à jour rapides et de la gestion des correctifs.\n*   **Risques liés à la chaîne d'approvisionnement logicielle et à l'IA** : Les extensions malveillantes sur les marketplaces de développement (ex: VSCode) et les vulnérabilités introduites par le code généré par l'IA (comme démontré par les recherches sur les honeypots et les rôles IAM) montrent comment l'intégration de nouvelles technologies et la dépendance aux composants tiers créent de nouvelles surfaces d'attaque. De même, les compromissions de packages de développement (ex: eslint-config-prettier) sont un vecteur d'attaques de la supply chain.\n*   **Ransomware et fuites de données massives** : Des groupes comme Everest continuent d'exfiltrer et de publier des millions de dossiers clients à des fins d'extorsion, tandis que d'autres (comme INC) peuvent échouer dans leur 'opsec', offrant des opportunités de récupération. Les fuites de données concernent un large éventail de secteurs, du commerce de détail aux services gouvernementaux.\n*   **Menaces internes et attaques ciblées** : La découverte d'une backdoor dans un plugin WordPress par un ancien employé souligne les risques internes, tandis que les incidents impliquant des groupes cyber russes ciblant des entités gouvernementales (police néerlandaise) ou des fuites de données d'ambassades (Albanie) illustrent la persistance des menaces étatiques. \n\nEn conclusion, l'état général des menaces est caractérisé par une intensification des tactiques de contournement des mécanismes d'authentification, une exploitation opportuniste de vulnérabilités connues et zero-day, et l'émergence de vecteurs d'attaque liés aux technologies émergentes comme l'IA et les chaînes d'approvisionnement logicielles. La collaboration entre les agences gouvernementales, les chercheurs en sécurité et les fournisseurs est cruciale pour une défense efficace.",
+      "date": "2026-01-24"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Technologies (fournisseurs SSO, plateformes SaaS), Commerce électronique (Salesforce), Services financiers (Betterment), Médias (SoundCloud), Base de données d'entreprises (Crunchbase)",
+        "modop": "Attaques de phishing vocal ('vishing') sophistiquées ciblant les comptes d'authentification unique (SSO) pour voler des identifiants et des codes MFA en temps réel. Vol de données d'entreprise à des fins d'extorsion et publication des données sur des sites de fuite du dark web en cas de non-paiement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "social_engineering",
+          "data_theft",
+          "extortion",
+          "sso_bypass",
+          "phishing",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "MaliciousCorgi",
+        "secteur": "Logiciels de développement (VSCode Marketplace), Développeurs",
+        "modop": "Distribution d'extensions malveillantes pour Visual Studio Code (présentées comme des assistants de codage basés sur l'IA) qui surveillent les fichiers ouverts et exfiltrent leur contenu intégral, ainsi que des informations de profilage d'utilisateur, vers des serveurs basés en Chine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "supply_chain_attack",
+          "malware",
+          "data_exfiltration",
+          "ai_tooling",
+          "vscode_extensions",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ai-extensions-on-vscode-marketplace-steal-developer-data/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Ressortissants vénézuéliens / Tren de Aragua (implicite)",
+        "secteur": "Services financiers (banques, ATMs)",
+        "modop": "Attaques de 'jackpotting' d'ATM par installation de variantes du malware Ploutus via un accès physique aux machines ou le remplacement de disques durs, forçant des retraits d'argent non autorisés et effaçant les preuves. Conspiration liée au gang Tren de Aragua.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "financial_fraud",
+          "malware",
+          "ploutus",
+          "atm_jackpotting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-to-deport-venezuelans-who-emptied-bank-atms-using-malware/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Everest ransomware group",
+        "secteur": "Commerce de détail (vêtements de sport), Entreprises",
+        "modop": "Attaque par ransomware impliquant l'exfiltration de grands volumes de données (343 Go) suivie d'une demande de rançon. En cas de non-paiement, les données volées (y compris des dossiers clients) sont publiées sur des forums de piratage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "extortion",
+          "data_breach"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187229/data-breach/investigation-underway-after-72m-under-armour-records-surface-online.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Groupe cyber russe",
+        "secteur": "Gouvernement (police néerlandaise)",
+        "modop": "Exploitation de vulnérabilités connues pour accéder aux systèmes via le compte email d'un employé, conduisant au vol d'une grande quantité de données de contact. La police avait été avertie des failles de sécurité.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "data_theft",
+          "phishing",
+          "known_vulnerability_exploitation",
+          "government_target"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "INC ransomware gang",
+        "secteur": "Organisations diverses (12 organisations américaines)",
+        "modop": "Attaques par ransomware avec exfiltration de données. Une erreur d'opsec a permis la récupération des données volées par des chercheurs et a exposé l'infrastructure des attaquants.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "opsec_failure"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/?pk_campaign=feed&pk_kwd=inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "HaxChipper",
+        "secteur": "Gouvernement et Défense (Ambassade d'Albanie en Grèce)",
+        "modop": "Revendication de violation de données et fuite d'environ 1 Go de fichiers de l'ambassade d'Albanie en Grèce.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach",
+          "government_target",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "0xy0um0m",
+        "secteur": "Éducation (test-ig aux USA)",
+        "modop": "Revendication d'exfiltration de 1,1 million d'enregistrements d'utilisateurs, y compris les données de compte et les adresses email associées.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_exfiltration",
+          "education_sector",
+          "data_breach"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115945954196191300"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Technologies",
+        "theme": "Confiance numérique, Vie privée, Collaboration gouvernement-entreprise",
+        "description": "Microsoft a fourni au FBI des clés de récupération BitLocker pour déverrouiller des données chiffrées sur des ordinateurs portables dans le cadre d'un mandat de perquisition. Cet incident soulève des préoccupations majeures concernant la confidentialité des données des utilisateurs et la capacité des fournisseurs de services à accéder à ces données sur demande des autorités, potentiellement érodant la confiance dans le chiffrement et les services cloud.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "confiance_numerique",
+          "vie_privee",
+          "surveillance",
+          "cryptographie",
+          "mandat_judiciaire",
+          "microsoft",
+          "fbi",
+          "donnees_chiffrees"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/microsoft-gave-fbi-keys-to-unlock-encrypted-data-exposing-major-privacy-concern/?pk_campaign=feed&pk_kwd=microsoft-gave-fbi-keys-to-unlock-encrypted-data-exposing-major-privacy-concern"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Gouvernement, Défense, Maintien de l'ordre",
+        "theme": "Espionnage, Cyberattaques étatiques, Protection des infrastructures critiques",
+        "description": "Des incidents distincts mettent en lumière la persistance des cybermenaces étatiques. Le groupe HaxChipper a revendiqué une violation de données et une fuite d'environ 1 Go de fichiers de l'Ambassade d'Albanie en Grèce, ciblant le gouvernement et la défense. Parallèlement, un groupe cyber russe a volé une grande quantité de données de la police néerlandaise en septembre 2024 en exploitant des vulnérabilités connues via un compte email d'employé. Ces événements soulignent la vulnérabilité des infrastructures gouvernementales et la nécessité de renforcer la cybersécurité face aux acteurs étatiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "espionnage",
+          "cyberattaque_etatique",
+          "gouvernement",
+          "defense",
+          "albanie",
+          "russie",
+          "pays_bas",
+          "fuite_de_donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216",
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Relations internationales, Défense",
+        "theme": "Influence régionale, Sécurité militaire et policière, Diplomatie",
+        "description": "Sous l'impulsion du président Xi Jinping, la Chine affirme sa posture sécuritaire dans la région du Mékong, qu'elle considère comme son sanctuaire stratégique. Cette stratégie se manifeste par l'utilisation d'instruments militaires et policiers, ainsi que des initiatives bilatérales et multilatérales. Des exemples incluent la participation de la Birmanie au sommet de l'OCS et la rénovation de la base de Ream au Cambodge grâce à un financement chinois. Cette démarche vise à renforcer l'influence chinoise et à stabiliser son voisinage.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "mekong",
+          "securite_regionale",
+          "influence",
+          "birmanie",
+          "cambodge",
+          "diplomatie",
+          "strategie_securitaire"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-posture-securitaire-de-la-chine-dans-le-mekong/"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce de détail (articles de sport)",
+        "victime": "Under Armour (clients et employés)",
+        "description": "Le groupe ransomware Everest a revendiqué une violation de données et a publié 72 millions de dossiers clients d'Under Armour sur un forum de piratage. Les données volées incluent des adresses email, noms, dates de naissance, genres, localisations géographiques et informations d'achat. L'incident initial remonte à novembre 2025, avec 343 Go de données exfiltrées. Under Armour mène une enquête mais nie l'ampleur des données sensibles compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce_de_detail",
+          "under_armour",
+          "ransomware",
+          "exfiltration_de_donnees",
+          "donnees_personnelles",
+          "extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187229/data-breach/investigation-underway-after-72m-under-armour-records-surface-online.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Technologies (fournisseurs SSO, plateformes SaaS), Services financiers, Médias, Base de données d'entreprises",
+        "victime": "Clients d'Okta, Microsoft, Google SSO; Crunchbase, SoundCloud, Betterment, et potentiellement d'autres",
+        "description": "Le groupe ShinyHunters a revendiqué des attaques de 'vishing' ciblant les comptes d'authentification unique (SSO) pour Okta, Microsoft et Google. Ces attaques ont permis d'accéder à des plateformes SaaS d'entreprise et de voler des données à des fins d'extorsion. Des données de Crunchbase, SoundCloud et Betterment ont été divulguées sur le dark web après leur refus de payer la rançon.",
+        "tags": [
+          "violation",
+          "breach",
+          "sso",
+          "phishing_vocal",
+          "extorsion",
+          "data_theft",
+          "crunchbase",
+          "soundcloud",
+          "betterment",
+          "okta",
+          "microsoft",
+          "google"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Divertissement en ligne, Réseaux sociaux, Finance (cryptomonnaies)",
+        "victime": "Utilisateurs de Roblox, TikTok, Netflix, Disney+, divers portefeuilles crypto",
+        "description": "149 millions de logins et d'informations d'identification (incluant des adresses email et des données financières) ont été découverts exposés en ligne dans une base de données non sécurisée, provenant de diverses plateformes et portefeuilles de cryptomonnaies.",
+        "tags": [
+          "violation",
+          "breach",
+          "donnees_sensibles",
+          "logins",
+          "fuite_de_donnees",
+          "roblox",
+          "tiktok",
+          "netflix",
+          "disney+",
+          "crypto_wallets"
+        ],
+        "sources": [
+          "https://mstdn.social/@Hackread/115946689330485005"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Commerce de détail (électronique)",
+        "victime": "PcComponentes (utilisateurs)",
+        "description": "Le détaillant espagnol PcComponentes a été la cible d'une attaque massive par 'credential stuffing', entraînant des prises de contrôle de comptes. L'entreprise a nié qu'il s'agissait d'une violation de données et a forcé la réinitialisation des mots de passe, rendant l'authentification à deux facteurs (2FA) obligatoire pour tous les utilisateurs.",
+        "tags": [
+          "violation",
+          "breach",
+          "credential_stuffing",
+          "prise_de_controle_de_compte",
+          "pccomponentes",
+          "commerce_de_detail",
+          "authentification"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115946191153480459"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "victime": "Ambassade de la République d'Albanie en Grèce",
+        "description": "Le groupe HaxChipper a revendiqué une violation de données et la fuite d'environ 2 800 fichiers, totalisant près de 1 Go, provenant de l'Ambassade de la République d'Albanie en Grèce, ciblant le gouvernement et la défense.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "defense",
+          "albanie",
+          "fuite_de_donnees",
+          "haxchipper"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Gouvernement, Maintien de l'ordre",
+        "victime": "Police néerlandaise",
+        "description": "Un groupe cyber russe a volé une grande quantité de données de la police néerlandaise en septembre 2024. L'accès a été obtenu en exploitant des vulnérabilités connues et en compromettant le compte email d'un employé. La police avait précédemment été avertie des failles de sécurité.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "police",
+          "pays_bas",
+          "groupe_cyber_russe",
+          "vol_de_donnees",
+          "exploitation_de_vulnerabilite"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "test-ig (USA)",
+        "description": "Le groupe 0xy0um0m a revendiqué l'exfiltration d'environ 1,1 million d'enregistrements d'utilisateurs de 'test-ig' aux USA, incluant des données de compte et des adresses email associées.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "usa",
+          "exfiltration_de_donnees",
+          "donnees_utilisateurs",
+          "0xy0um0m"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115945954196191300"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd",
+        "description": "Vulnérabilité critique de contournement d'authentification à distance (remote authentication bypass) permettant un accès root via la manipulation de la variable d'environnement USER. Affecte les versions 1.9.3 à 2.7 et est activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24061",
+          "authentification_bypass",
+          "root_access",
+          "telnetd",
+          "privilege_escalation",
+          "rce",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/",
+          "https://securityaffairs.com/187255/security/11-year-old-critical-telnetd-flaw-found-in-gnu-inetutils-cve-2026-24061.html",
+          "https://socprime.com/blog/cve-2026-24061-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Vulnérabilité d'écriture hors limites (out-of-bounds write) / débordement de tas (heap-overflow) dans l'implémentation du protocole DCERPC. Un attaquant avec accès réseau peut envoyer un paquet spécialement conçu pour potentiellement exécuter du code à distance (RCE). Cette vulnérabilité, corrigée en 2024, est activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2024-37079",
+          "rce",
+          "vmware",
+          "vcenter_server",
+          "heap_overflow",
+          "out_of_bounds_write",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/23/critical_vmware_vcenter_server_bug/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24399",
+        "cvss": 9.3,
+        "product": "ChatterMate (AI chatbot agent framework)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée dans les versions 1.0.8 et antérieures. Le chatbot accepte et exécute des charges utiles HTML/JavaScript malveillantes via l'entrée du chat, permettant l'accès à des données sensibles côté client (tokens localStorage, cookies).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24399",
+          "xss",
+          "chatbot",
+          "client_side_injection",
+          "data_theft",
+          "ai_chatbot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24399"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24307",
+        "cvss": 9.3,
+        "product": "Microsoft M365 Copilot",
+        "description": "Vulnérabilité critique de divulgation d'informations (information disclosure) due à une mauvaise gestion des entrées utilisateur par le chatbot IA, permettant à un attaquant non autorisé de voler des informations. Microsoft a déployé des correctifs.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24307",
+          "information_disclosure",
+          "ai_chatbot",
+          "microsoft_copilot",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/921902/Kritieke+lekken+in+Microsoft+Copilot+konden+aanvaller+informatie+laten+stelen?channel=rss"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-70985",
+        "cvss": 9.1,
+        "product": "RuoYi v4.8.2",
+        "description": "Vulnérabilité de contrôle d'accès incorrect dans la fonction de mise à jour permettant à des attaquants non autorisés de modifier arbitrairement des données en dehors de leur portée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-70985",
+          "access_control_bypass",
+          "data_modification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-70985"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-34026",
+        "cvss": 9.2,
+        "product": "Versa Concerto SD-WAN orchestration platform",
+        "description": "Vulnérabilité critique de contournement d'authentification (authentication bypass) causée par une mauvaise configuration du proxy inverse Traefik. Permet l'accès aux points d'administration, y compris les dumps de mémoire et les logs de trace. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-34026",
+          "authentication_bypass",
+          "sd_wan",
+          "traefik",
+          "misconfiguration",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24412",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans la fonction CIccTagXmlSegmentedCurve::ToXml(). L'exploitation peut permettre un déni de service (DoS), la manipulation de données, le contournement de la logique applicative et l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24412",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24412"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24406",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans la fonction CIccTagNamedColor2::SetSize(). L'exploitation peut permettre un déni de service (DoS), la manipulation de données, le contournement de la logique applicative et l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24406",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24406"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24405",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans la fonction CIccMpeCalculator::Read(). L'exploitation peut permettre un déni de service (DoS), la manipulation de données, le contournement de la logique applicative et l'exécution de code.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24405",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24405"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-68645",
+        "cvss": 8.8,
+        "product": "Zimbra Collaboration Suite 10.0 and 10.1 (Webmail Classic UI)",
+        "description": "Vulnérabilité d'inclusion de fichier local (Local File Inclusion - LFI) due à une mauvaise gestion des paramètres utilisateur dans le servlet RestFilter. Un attaquant non authentifié peut inclure des fichiers arbitraires du répertoire WebRoot, exposant potentiellement des informations sensibles. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-68645",
+          "lfi",
+          "zimbra",
+          "unauthenticated_access",
+          "data_exposure",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24139",
+        "cvss": 8.7,
+        "product": "MyTube (self-hosted downloader and player)",
+        "description": "Vulnérabilité de contournement d'autorisation (authorization bypass) dans les versions 1.7.78 et antérieures. Permet aux utilisateurs invités de télécharger la base de données complète de l'application en raison d'une validation insuffisante des permissions, exposant des données sensibles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24139",
+          "authorization_bypass",
+          "data_exposure",
+          "database_export",
+          "guest_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24139"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24136",
+        "cvss": 8.7,
+        "product": "Saleor (e-commerce platform)",
+        "description": "Vulnérabilité d'Insecure Direct Object Reference (IDOR) dans l'API GraphQL, affectant les versions 3.2.0 à 3.20.109, 3.21.0-a.0 à 3.21.44 et 3.22.0-a.0 à 3.22.28. Permet à des acteurs non authentifiés d'extraire des informations personnelles identifiables (PII) en texte clair, notamment des commandes antérieures à la version 3.2.0.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24136",
+          "idor",
+          "graphql_api",
+          "pii_exfiltration",
+          "unauthenticated_access",
+          "e-commerce"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24136"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-54313",
+        "cvss": 8.8,
+        "product": "eslint-config-prettier package (supply-chain compromise)",
+        "description": "Code malveillant intégré dans les versions 8.10.1, 9.1.1, 10.1.6 et 10.1.7, exécutant le malware node-gyp.dll sur les systèmes Windows pendant l'installation, potentiellement pour l'exécution de code arbitraire. Résulte d'une attaque de chaîne d'approvisionnement ciblant les mainteneurs de packages via des campagnes de phishing. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-54313",
+          "supply_chain_attack",
+          "malware",
+          "rce",
+          "phishing",
+          "active_exploitation",
+          "eslint"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/",
+          "https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-0920",
+        "cvss": 9.8,
+        "product": "LA-Studio Element Kit for Elementor (WordPress plugin)",
+        "description": "Vulnérabilité critique de backdoor introduite délibérément par un ancien employé dans toutes les versions jusqu'à 1.5.6.3 inclus. Permet la création non autorisée de comptes administrateur via le paramètre lakit_bkrole, accordant un accès administratif complet aux sites WordPress.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-0920",
+          "backdoor",
+          "wordpress_plugin",
+          "admin_access",
+          "privilege_escalation",
+          "insider_threat",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/20000-wordpress-sites-affected-by-backdoor-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-1386",
+        "cvss": 8.8,
+        "product": "Firecracker jailer",
+        "description": "Vulnérabilité permettant à un utilisateur d'écraser des fichiers arbitraires dans le système de fichiers de l'hôte dans certaines circonstances via un lien symbolique. Affecte les versions v1.13.1 et antérieures, et 1.14.0. Les services AWS qui utilisent Firecracker ne sont pas impactés en raison de restrictions d'accès appropriées.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-1386",
+          "arbitrary_file_overwrite",
+          "symlink",
+          "firecracker_jailer",
+          "host_compromise",
+          "privilege_escalation",
+          "virtualization"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-003-aws/"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "20,000 WordPress Sites Affected by Backdoor Vulnerability Allowing Malicious Admin User Creation",
+        "description": "Une vulnérabilité critique de backdoor (CVE-2026-0920) a été découverte dans le plugin WordPress 'LA-Studio Element Kit for Elementor', utilisé par plus de 20 000 sites. Un ancien employé a délibérément inséré cette fonctionnalité obfuscquée permettant la création non autorisée de comptes administrateur via le paramètre `lakit_bkrole`, accordant un accès administratif complet aux sites ciblés pour uploader des fichiers malveillants, modifier du contenu, ou rediriger les visiteurs. La faille a été corrigée dans la version 1.6.0.",
+        "threat_actor": "Ancien employé (développeur interne)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-0920"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1199 (Trusted Relationship)",
+          "T1078.003 (Valid Accounts: Local Account)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "Cette vulnérabilité met en évidence la menace interne (insider threat) et les risques liés à la chaîne d'approvisionnement logicielle, même via des contributeurs de confiance. L'impact est important pour les sites WordPress, avec la possibilité d'une compromission complète et de la diffusion de contenu malveillant. La détection tardive due à l'obfuscation est également un point notable.",
+        "recommandations": [
+          "Mettre à jour le plugin 'LA-Studio Element Kit for Elementor' vers la version 1.6.0 ou supérieure.",
+          "Auditer régulièrement les plugins tiers pour détecter toute modification inattendue ou code malveillant.",
+          "Renforcer les contrôles d'accès et les revues de code pour les développeurs internes et externes."
+        ],
+        "tags": [
+          "wordpress",
+          "backdoor",
+          "plugin_vulnerability",
+          "admin_access",
+          "insider_threat",
+          "supply_chain",
+          "privilege_escalation",
+          "cve-2026-0920",
+          "mitre_t1199",
+          "mitre_t1078.003",
+          "mitre_t1505.003"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/20000-wordpress-sites-affected-by-backdoor-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "INC ransomware opsec fail allowed data recovery for 12 US orgs",
+        "description": "Une défaillance dans la sécurité opérationnelle (opsec) du groupe ransomware INC a permis à des chercheurs de récupérer des données volées auprès de douze organisations américaines. Un examen forensique approfondi a révélé des outils non utilisés dans l'attaque investiguée, mais a exposé des infrastructures d'attaquants qui stockaient des données exfiltrées de plusieurs victimes.",
+        "threat_actor": "INC ransomware gang",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1074 (Data Exfiltration Staging)",
+          "T1560 (Archive Collected Data)",
+          "T1486 (Data Encrypted for Impact)"
+        ],
+        "analyse": "Cette situation met en évidence l'importance critique de la sécurité opérationnelle pour les acteurs malveillants eux-mêmes. Les erreurs d'opsec peuvent offrir des opportunités de récupération de données pour les victimes et des informations précieuses sur les infrastructures des attaquants, potentiellement pour démanteler leurs opérations.",
+        "recommandations": [
+          "Mener des examens forensiques approfondis après incident pour identifier les défaillances d'opsec et les informations exposées.",
+          "Renforcer les pratiques de sécurité opérationnelle pour éviter toute exposition involontaire d'informations ou d'infrastructures pour les opérations défensives."
+        ],
+        "tags": [
+          "ransomware",
+          "opsec_failure",
+          "data_recovery",
+          "threat_actor_infrastructure",
+          "forensics",
+          "data_exfiltration",
+          "mitre_t1074",
+          "mitre_t1560",
+          "mitre_t1486"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/?pk_campaign=feed&pk_kwd=inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "Update: Fortinet Confirms New SAML SSO Issue Under Active Exploitation",
+        "description": "Fortinet a confirmé une vulnérabilité non divulguée dans son implémentation SAML SSO, permettant aux attaquants de s'authentifier sur des systèmes FortiOS entièrement patchés, y compris via FortiCloud SSO. Les attaquants peuvent modifier les politiques de pare-feu, les paramètres SSL VPN et les contrôles d'accès administratifs sans déployer de logiciels malveillants. L'activité malveillante, observée depuis le 15 janvier 2026 par Arctic Wolf, inclut la création de comptes génériques pour la persistance, l'activation de l'accès VPN et l'exfiltration des configurations de pare-feu, rappelant des campagnes de décembre 2025.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1136 (Create Account)",
+          "T1098 (Account Manipulation)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "L'exploitation d'une faille SAML SSO non patchée sur des systèmes Fortinet à jour représente un risque significatif pour la posture de sécurité des organisations utilisant ces produits. La capacité des attaquants à contourner l'authentification et à manipuler les configurations critiques sans déployer de malware rend les détections traditionnelles plus difficiles. L'impact est potentiellement global pour tous les produits Fortinet agissant comme fournisseurs de services SAML.",
+        "recommandations": [
+          "Désactiver FortiCloud SSO si possible.",
+          "Restreindre l'accès administratif.",
+          "Auditer tous les comptes administrateurs.",
+          "Examiner les logs pour les IoCs publiés.",
+          "Surveiller les activités SSO inhabituelles et appliquer les correctifs dès qu'ils sont disponibles."
+        ],
+        "tags": [
+          "sso_bypass",
+          "fortinet",
+          "zeroday",
+          "active_exploitation",
+          "firewall_manipulation",
+          "configuration_theft",
+          "authentication_bypass",
+          "supply_chain_security",
+          "mitre_t1078",
+          "mitre_t1136",
+          "mitre_t1098",
+          "mitre_t1560"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-fortinet-confirms-new-saml-sso-vulnerability-under-active-exploitation",
+          "https://securityaffairs.com/187250/security/fortinet-warns-of-active-forticloud-sso-bypass-affecting-updated-devices.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "Hackers exploit critical telnetd auth bypass flaw to get root & 11-Year-Old critical telnetd flaw found in GNU InetUtils (CVE-2026-24061)",
+        "description": "Une vulnérabilité critique (CVE-2026-24061, CVSS 9.8) dans le serveur telnetd de GNU InetUtils, présente depuis 11 ans, est activement exploitée. Cette faille de contournement d'authentification à distance permet à un attaquant d'obtenir un accès root en manipulant la variable d'environnement `USER`. Les attaques observées sont majoritairement automatisées, avec des tentatives de reconnaissance, de persistance via clés SSH et de déploiement de malwares Python en phase post-exploitation. Sa persistance dans le secteur industriel augmente le risque.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-24061"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1552 (Unsecured Credentials)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1592 (Gather Victim Host Information)"
+        ],
+        "analyse": "L'exploitation d'une vulnérabilité aussi ancienne et critique dans un service telnetd, souvent présent dans les systèmes hérités, représente un risque élevé, particulièrement pour le secteur industriel. Un accès root non authentifié permet un contrôle total des systèmes, ouvrant la voie à des compromissions profondes, même si les tentatives de persistance observées n'ont pas toujours abouti.",
+        "recommandations": [
+          "Appliquer les correctifs (version 2.8 de GNU InetUtils).",
+          "Désactiver le service telnetd si non nécessaire.",
+          "Bloquer le port TCP 23 sur les pare-feu.",
+          "Configurer un outil de login personnalisé qui empêche l'utilisation de l'option '-f'."
+        ],
+        "tags": [
+          "critical_vulnerability",
+          "telnetd",
+          "authentication_bypass",
+          "root_access",
+          "legacy_systems",
+          "active_exploitation",
+          "privilege_escalation",
+          "rce",
+          "industrial_sector",
+          "mitre_t1078",
+          "mitre_t1068",
+          "cve-2026-24061"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/",
+          "https://securityaffairs.com/187255/security/11-year-old-critical-telnetd-flaw-found-in-gnu-inetutils-cve-2026-24061.html",
+          "https://socprime.com/blog/cve-2026-24061-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "La posture sécuritaire de la Chine dans le Mékong",
+        "description": "La Chine, sous l'impulsion du président Xi Jinping, cherche à affermir sa position dans la sécurisation de la région du Mékong, qu'elle conçoit comme son sanctuaire stratégique. Cette note analyse la conception chinoise élargie de la sécurité, qui intègre des instruments militaires et policiers, ainsi que des modes d'action bilatéraux et multilatéraux. Elle met en lumière l'impact de certaines initiatives chinoises et la dynamique de la dépendance des 'petits États' comme la Birmanie et le Cambodge face à leur puissant voisin.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [],
+        "analyse": "Cet article fournit une analyse géopolitique essentielle pour comprendre les dynamiques régionales de sécurité et l'influence croissante de la Chine. Il met en évidence une approche de sécurité globale qui dépasse le cadre militaire traditionnel, impactant potentiellement les relations internationales et la stabilité régionale. Les stratégies d'influence chinoises, qu'elles soient militaires, policières ou économiques, sont cruciales à surveiller pour anticiper les tensions géopolitiques.",
+        "recommandations": [
+          "Surveiller l'évolution des politiques de sécurité et d'influence chinoises dans la région du Mékong.",
+          "Analyser les implications de ces stratégies sur la sécurité régionale et les intérêts des autres acteurs internationaux."
+        ],
+        "tags": [
+          "geopolitique",
+          "chine",
+          "mekong",
+          "securite_regionale",
+          "influence_etatique",
+          "birmanie",
+          "cambodge",
+          "strategie_defensive"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-posture-securitaire-de-la-chine-dans-le-mekong/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "Malicious AI extensions on VSCode Marketplace steal developer data & What an AI-Written Honeypot Taught Us About Trusting Machines",
+        "description": "Deux extensions VSCode malveillantes, se présentant comme des assistants de codage basés sur l'IA et installées 1,5 million de fois, exfiltrent des données de développeurs vers des serveurs chinois. Ces extensions, partie de la campagne 'MaliciousCorgi', surveillent les fichiers ouverts en temps réel et collectent le contenu intégral, ainsi que les profils utilisateur via des SDKs. Parallèlement, la recherche montre que le code généré par l'IA peut introduire des failles de sécurité subtiles (par exemple, dans un honeypot ou des rôles AWS IAM), soulignant le danger de la confiance excessive envers les outils d'IA et les limitations des analyses statiques traditionnelles.",
+        "threat_actor": "MaliciousCorgi",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1552 (Unsecured Credentials)",
+          "T1020 (Automated Exfiltration)",
+          "T1059.006 (Command and Scripting Interpreter: Python)"
+        ],
+        "analyse": "L'intégration croissante de l'IA dans les outils de développement introduce de nouvelles surfaces d'attaque et des vecteurs de compromission sophistiqués, comme les extensions malveillantes qui exfiltrent des données. De plus, la confiance excessive dans le code généré par l'IA peut mener à l'introduction involontaire de vulnérabilités, posant des défis importants pour l'assurance qualité et la sécurité du code, même pour les développeurs expérimentés. L'impact est élevé sur la chaîne d'approvisionnement logicielle et la confidentialité des données des développeurs.",
+        "recommandations": [
+          "Examiner attentivement les extensions de marketplace et leur code.",
+          "Ne pas faire une confiance aveugle au code généré par l'IA.",
+          "Renforcer les processus de revue de code et les capacités de détection CI/CD.",
+          "Sensibiliser les développeurs aux risques liés à l'IA."
+        ],
+        "tags": [
+          "ai_security",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "malicious_extensions",
+          "vscode",
+          "developer_security",
+          "ai_generated_code",
+          "trust_issues",
+          "malware",
+          "mitre_t1552",
+          "mitre_t1020"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ai-extensions-on-vscode-marketplace-steal-developer-data/",
+          "https://www.bleepingcomputer.com/news/security/what-an-ai-written-honeypot-taught-us-about-trusting-machines/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "On the clock: Escaping VMware Workstation at Pwn2Own Berlin 2025",
+        "description": "Lors du Pwn2Own Berlin 2025, des chercheurs ont réussi à s'échapper de VMware Workstation en exploitant un débordement de tas (Heap-Overflow) dans l'implémentation du contrôleur PVSCSI. Ils ont contourné les mesures d'atténuation du LFH (Low Fragmentation Heap) de Windows 11 en utilisant une combinaison de techniques complexes, notamment un canal auxiliaire de randomisation LFH, une mise en forme minutieuse du tas et l'abus de comportements spécifiques de la fonction vulnérable pour créer des primitives de lecture/écriture arbitraires et d'exécution de code. L'exploit a fonctionné au premier essai.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Cette recherche démontre la complexité de l'exploitation de vulnérabilités dans des environnements virtualisés modernes avec des protections de système d'exploitation avancées. Le succès à Pwn2Own souligne que même les systèmes les plus robustes peuvent être contournés par des techniques sophistiquées, et met en lumière l'importance d'une sécurité en profondeur et de la recherche continue de vulnérabilités. L'impact est une preuve de concept pour les évasions de VM.",
+        "recommandations": [
+          "Maintenir les produits VMware à jour avec les derniers correctifs.",
+          "Implémenter une segmentation réseau stricte pour les hyperviseurs et les VMs.",
+          "Limiter les privilèges.",
+          "Surveiller les comportements anormaux dans les environnements virtualisés."
+        ],
+        "tags": [
+          "vm_escape",
+          "vmware",
+          "heap_overflow",
+          "pwn2own",
+          "exploit_development",
+          "privilege_escalation",
+          "code_execution",
+          "windows_11_mitigations",
+          "pvscsi",
+          "virtualization_security",
+          "mitre_t1068",
+          "mitre_t1203"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/on-the-clock-escaping-vmware-workstation-at-pwn2own-berlin-2025.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "ShinyHunters claim to be behind SSO-account data theft attacks",
+        "description": "Le groupe d'extorsion ShinyHunters revendique être derrière une vague d'attaques de 'vishing' (phishing vocal) ciblant les comptes d'authentification unique (SSO) de Okta, Microsoft et Google. Les attaquants se font passer pour le support informatique et incitent les employés à saisir leurs identifiants et codes MFA sur des sites de phishing, accédant ainsi aux plateformes SaaS des entreprises pour voler des données à des fins d'extorsion. Le groupe a confirmé être à l'origine de ces attaques, Salesforce restant leur cible principale, et a divulgué des données présumées de Crunchbase, SoundCloud et Betterment après que ces entreprises aient refusé de payer.",
+        "threat_actor": "ShinyHunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.004 (Phishing: Vishing)",
+          "T1078 (Valid Accounts)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "Les attaques de vishing de ShinyHunters représentent une menace sophistiquée de social engineering qui contourne l'authentification multifacteur en temps réel. La cible des services SSO et des plateformes SaaS critiques comme Salesforce indique une motivation financière élevée et la recherche de données sensibles pour l'extorsion. L'impact est une violation de données massives et des interruptions d'activité pour les victimes.",
+        "recommandations": [
+          "Sensibiliser les employés aux attaques de vishing et au social engineering.",
+          "Renforcer la politique MFA avec des méthodes résistantes au phishing (ex: FIDO2/WebAuthn).",
+          "Implémenter des systèmes de détection des anomalies de connexion SSO.",
+          "Surveiller les tentatives de connexion suspectes."
+        ],
+        "tags": [
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "sso_bypass",
+          "mfa_bypass",
+          "data_theft",
+          "extortion",
+          "social_engineering",
+          "corporate_saas",
+          "mitre_t1566.004",
+          "mitre_t1078"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "US to deport Venezuelans who emptied bank ATMs using malware",
+        "description": "Des ressortissants vénézuéliens ont été condamnés et seront déportés après avoir vidé des centaines de milliers de dollars de distributeurs automatiques de billets (ATM) aux États-Unis via une escroquerie de 'jackpotting' d'ATM. Ils installaient des variantes du malware Ploutus sur des modèles d'ATM plus anciens pour forcer des retraits non autorisés et effacer les preuves. Le gang Tren de Aragua a été mentionné dans des enquêtes connexes au Nebraska.",
+        "threat_actor": "Ressortissants vénézuéliens, associés au gang Tren de Aragua (implicite)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1562 (Impair Defenses)",
+          "T1083 (File and Directory Discovery)",
+          "T1021 (Remote Services)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "L'utilisation du jackpotting d'ATM avec le malware Ploutus met en évidence la persistance des menaces physiques et logicielles combinées contre les infrastructures financières. Les attaquants ciblent des modèles d'ATM plus anciens, suggérant une vulnérabilité accrue due à des systèmes obsolètes ou mal mis à jour. L'impact est financier pour les banques et de confiance pour les utilisateurs.",
+        "recommandations": [
+          "Mettre à jour et renforcer la sécurité physique et logique des ATMs, en particulier les modèles plus anciens.",
+          "Implémenter des solutions de détection de malware spécifiques aux ATMs et des mesures de surveillance des transactions pour identifier les activités de jackpotting."
+        ],
+        "tags": [
+          "atm_jackpotting",
+          "ploutus_malware",
+          "financial_fraud",
+          "cybercrime",
+          "venezuelan_nationals",
+          "tren_de_aragua",
+          "legacy_systems",
+          "mitre_t1562",
+          "mitre_t1021"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-to-deport-venezuelans-who-emptied-bank-atms-using-malware/"
+        ],
+        "date": "2026-01-24"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals a continued prevalence of sophisticated and opportunistic threats, with a notable emphasis on identity compromise and software supply chains. Malicious actors, ranging from extortion groups like ShinyHunters to financial cybercriminals and state-backed groups, continue to exploit existing or newly discovered vulnerabilities to gain unauthorized access and exfiltrate data.\n\nKey threats observed include:\n*   **Attacks on Identities and Single Sign-On (SSO)**: Sophisticated 'vishing' campaigns bypass multi-factor authentication to access SaaS platforms, as observed with ShinyHunters targeting Okta, Microsoft, and Google. Simultaneously, critical flaws in SSO implementations of widely used products (e.g., Fortinet SAML SSO) are actively exploited, allowing compromises even on up-to-date systems.\n*   **Critical Vulnerabilities and Their Persistent Exploitation**: Highly severe flaws, sometimes over a decade old (e.g., CVE-2026-24061 in GNU InetUtils telnetd) or recently patched (e.g., CVE-2024-37079 in VMware vCenter Server), are actively targeted. CISA regularly updates its catalog of actively exploited vulnerabilities, underscoring the vital importance of rapid updates and patch management.\n*   **Software Supply Chain and AI-related Risks**: Malicious extensions on developer marketplaces (e.g., VSCode) and vulnerabilities introduced by AI-generated code (as demonstrated by research on honeypots and IAM roles) show how the integration of new technologies and reliance on third-party components create new attack surfaces. Similarly, compromises of development packages (e.g., eslint-config-prettier) are a vector for supply chain attacks.\n*   **Ransomware and Massive Data Leaks**: Groups like Everest continue to exfiltrate and publish millions of customer records for extortion purposes, while others (like INC) may fail in their 'opsec', offering recovery opportunities. Data leaks affect a wide range of sectors, from retail to government services.\n*   **Insider Threats and Targeted Attacks**: The discovery of a backdoor in a WordPress plugin by a former employee highlights internal risks, while incidents involving Russian cyber groups targeting government entities (Dutch police) or embassy data leaks (Albania) illustrate the persistence of state-backed threats.\n\nIn conclusion, the overall state of cyber threats is characterized by an intensification of tactics to bypass authentication mechanisms, opportunistic exploitation of known and zero-day vulnerabilities, and the emergence of attack vectors related to new technologies such as AI and software supply chains. Collaboration among government agencies, security researchers, and vendors is crucial for effective defense.",
+      "date": "2026-01-24"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Technology (SSO providers, SaaS platforms), E-commerce (Salesforce), Financial Services (Betterment), Media (SoundCloud), Business database (Crunchbase)",
+        "modop": "Sophisticated voice phishing ('vishing') attacks targeting Single Sign-On (SSO) accounts to steal credentials and MFA codes in real-time. Theft of corporate data for extortion purposes and publishing data on dark web leak sites if ransom is not paid.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "social_engineering",
+          "data_theft",
+          "extortion",
+          "sso_bypass",
+          "phishing",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "MaliciousCorgi",
+        "secteur": "Development Software (VSCode Marketplace), Developers",
+        "modop": "Distribution of malicious Visual Studio Code extensions (advertised as AI-based coding assistants) that monitor opened files and exfiltrate their entire content, along with user profiling information, to China-based servers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "supply_chain_attack",
+          "malware",
+          "data_exfiltration",
+          "ai_tooling",
+          "vscode_extensions",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ai-extensions-on-vscode-marketplace-steal-developer-data/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Venezuelan nationals / Tren de Aragua (implied)",
+        "secteur": "Financial Services (banks, ATMs)",
+        "modop": "ATM 'jackpotting' attacks by installing Ploutus malware variants on older ATM models via physical access or hard drive replacement, forcing unauthorized cash withdrawals and deleting evidence. Conspiracy linked to the Tren de Aragua gang.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "financial_fraud",
+          "malware",
+          "ploutus",
+          "atm_jackpotting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-to-deport-venezuelans-who-emptied-bank-atms-using-malware/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Everest ransomware group",
+        "secteur": "Retail (sportswear), Enterprises",
+        "modop": "Ransomware attack involving the exfiltration of large volumes of data (343GB) followed by a ransom demand. If ransom is not paid, stolen data (including customer records) is published on hacking forums.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "extortion",
+          "data_breach"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187229/data-breach/investigation-underway-after-72m-under-armour-records-surface-online.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "Russian cyber group",
+        "secteur": "Government (Dutch police)",
+        "modop": "Exploiting known vulnerabilities to gain access to systems via an employee's email account, leading to the theft of a large amount of contact data. Police had been warned about the security flaws.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state_sponsored",
+          "data_theft",
+          "phishing",
+          "known_vulnerability_exploitation",
+          "government_target"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "INC ransomware gang",
+        "secteur": "Various organizations (12 US organizations)",
+        "modop": "Ransomware attacks with data exfiltration. An opsec failure allowed researchers to recover stolen data and exposed attacker infrastructure.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "opsec_failure"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/?pk_campaign=feed&pk_kwd=inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "HaxChipper",
+        "secteur": "Government and Defense (Embassy of Albania in Greece)",
+        "modop": "Claiming data breach and leaking approximately 1GB of files from the Embassy of Albania in Greece.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach",
+          "government_target",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "nom": "0xy0um0m",
+        "secteur": "Education (test-ig in USA)",
+        "modop": "Claiming exfiltration of approximately 1.1 million user records, including account data and associated email addresses.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_exfiltration",
+          "education_sector",
+          "data_breach"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115945954196191300"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Technology",
+        "theme": "Digital Trust, Privacy, Government-Corporate Collaboration",
+        "description": "Microsoft provided the FBI with BitLocker recovery keys to unlock encrypted data on laptops under a search warrant. This incident raises major concerns about user data privacy and the ability of service providers to access user data upon government request, potentially eroding trust in encryption and cloud services.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "digital_trust",
+          "privacy",
+          "surveillance",
+          "cryptography",
+          "search_warrant",
+          "microsoft",
+          "fbi",
+          "encrypted_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/microsoft-gave-fbi-keys-to-unlock-encrypted-data-exposing-major-privacy-concern/?pk_campaign=feed&pk_kwd=microsoft-gave-fbi-keys-to-unlock-encrypted-data-exposing-major-privacy-concern"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Government, Defense, Law Enforcement",
+        "theme": "Espionage, State-Sponsored Cyberattacks, Critical Infrastructure Protection",
+        "description": "Separate incidents highlight the persistence of state-backed cyber threats. The HaxChipper group claimed a data breach and leaked approximately 1GB of files from the Embassy of Albania in Greece, targeting government and defense. Concurrently, a Russian cyber group stole a large amount of Dutch police data in September 2024 by exploiting known vulnerabilities via an employee's email account. These events underscore the vulnerability of government infrastructure and the need for enhanced cybersecurity against state actors.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "espionage",
+          "state_sponsored_attack",
+          "government",
+          "defense",
+          "albania",
+          "russia",
+          "netherlands",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216",
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "International Relations, Defense",
+        "theme": "Regional Influence, Military and Police Security, Diplomacy",
+        "description": "Under President Xi Jinping's leadership, China is asserting its security posture in the Mekong region, which it views as a strategic sanctuary. This strategy involves the use of military and police instruments, as well as bilateral and multilateral initiatives. Examples include Myanmar's participation in the SCO summit and the renovation of Cambodia's Ream base with Chinese funding. This approach aims to strengthen China's influence and stabilize its neighborhood.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "mekong",
+          "regional_security",
+          "influence",
+          "myanmar",
+          "cambodia",
+          "diplomacy",
+          "security_strategy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-posture-securitaire-de-la-chine-dans-le-mekong/"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Retail (sportswear)",
+        "victime": "Under Armour (customers and employees)",
+        "description": "The Everest ransomware group claimed a data breach and published 72 million Under Armour customer records on a hacking forum. Stolen data includes email addresses, names, dates of birth, genders, geographical locations, and purchase information. The initial incident dates back to November 2025, with 343GB of data exfiltrated. Under Armour is investigating but denies the scale of sensitive data compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "under_armour",
+          "ransomware",
+          "data_exfiltration",
+          "personal_data",
+          "extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187229/data-breach/investigation-underway-after-72m-under-armour-records-surface-online.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Technology (SSO providers, SaaS platforms), Financial Services, Media, Business database",
+        "victime": "Customers of Okta, Microsoft, Google SSO; Crunchbase, SoundCloud, Betterment, and potentially others",
+        "description": "The ShinyHunters group claimed 'vishing' attacks targeting Single Sign-On (SSO) accounts for Okta, Microsoft, and Google. These attacks allowed access to corporate SaaS platforms and data theft for extortion. Data from Crunchbase, SoundCloud, and Betterment was leaked on the dark web after they refused to pay the ransom.",
+        "tags": [
+          "violation",
+          "breach",
+          "sso",
+          "voice_phishing",
+          "extortion",
+          "data_theft",
+          "crunchbase",
+          "soundcloud",
+          "betterment",
+          "okta",
+          "microsoft",
+          "google"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Online Entertainment, Social Media, Finance (cryptocurrency)",
+        "victime": "Users of Roblox, TikTok, Netflix, Disney+, various crypto wallets",
+        "description": "149 million logins and credentials (including emails and financial data) were found exposed online in an unsecured database, originating from various platforms and cryptocurrency wallets.",
+        "tags": [
+          "violation",
+          "breach",
+          "sensitive_data",
+          "logins",
+          "data_leak",
+          "roblox",
+          "tiktok",
+          "netflix",
+          "disney+",
+          "crypto_wallets"
+        ],
+        "sources": [
+          "https://mstdn.social/@Hackread/115946689330485005"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Retail (electronics)",
+        "victime": "PcComponentes (users)",
+        "description": "Spanish retailer PcComponentes was targeted by a massive 'credential stuffing' attack, leading to account takeovers. The company denied it was a data breach and enforced password resets, making two-factor authentication (2FA) mandatory for all users.",
+        "tags": [
+          "violation",
+          "breach",
+          "credential_stuffing",
+          "account_takeover",
+          "pccomponentes",
+          "retail",
+          "authentication"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115946191153480459"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Government, Defense",
+        "victime": "Embassy of the Republic of Albania in Greece",
+        "description": "The HaxChipper group claimed a data breach and leaked approximately 2,800 files, totaling nearly 1 GB, from the Embassy of the Republic of Albania in Greece, targeting government and defense.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "defense",
+          "albania",
+          "data_leak",
+          "haxchipper"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115946190352209216"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Government, Law Enforcement",
+        "victime": "Dutch police",
+        "description": "A Russian cyber group stole a large amount of Dutch police data in September 2024. Access was gained by exploiting known vulnerabilities and compromising an employee's email account. The police had previously been warned about the security flaws.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "police",
+          "netherlands",
+          "russian_cyber_group",
+          "data_theft",
+          "vulnerability_exploitation"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data/?pk_campaign=feed&pk_kwd=nl-police-warned-about-security-hole-used-by-russian-hackers-in-major-theft-of-police-data"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "secteur": "Education",
+        "victime": "test-ig (USA)",
+        "description": "The 0xy0um0m group claimed exfiltration of approximately 1.1 million user records from 'test-ig' in the USA, including account data and associated email addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "usa",
+          "data_exfiltration",
+          "user_data",
+          "0xy0um0m"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115945954196191300"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd",
+        "description": "Critical remote authentication bypass vulnerability allowing root access via manipulation of the USER environment variable. Affects versions 1.9.3 through 2.7 and is actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24061",
+          "authentication_bypass",
+          "root_access",
+          "telnetd",
+          "privilege_escalation",
+          "rce",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/",
+          "https://securityaffairs.com/187255/security/11-year-old-critical-telnetd-flaw-found-in-gnu-inetutils-cve-2026-24061.html",
+          "https://socprime.com/blog/cve-2026-24061-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Out-of-bounds write / heap-overflow vulnerability in the DCERPC protocol implementation. A network-accessible attacker can send a specially crafted packet potentially leading to remote code execution (RCE). This vulnerability, patched in 2024, is actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2024-37079",
+          "rce",
+          "vmware",
+          "vcenter_server",
+          "heap_overflow",
+          "out_of_bounds_write",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/23/critical_vmware_vcenter_server_bug/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24399",
+        "cvss": 9.3,
+        "product": "ChatterMate (AI chatbot agent framework)",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability in versions 1.0.8 and below. The chatbot accepts and executes malicious HTML/JavaScript payloads as chat input, leading to client-side data access (localStorage tokens, cookies).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24399",
+          "xss",
+          "chatbot",
+          "client_side_injection",
+          "data_theft",
+          "ai_chatbot"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24399"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24307",
+        "cvss": 9.3,
+        "product": "Microsoft M365 Copilot",
+        "description": "Critical information disclosure vulnerability due to improper handling of user input by the AI chatbot, potentially allowing an unauthorized attacker to steal information. Microsoft has deployed patches.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24307",
+          "information_disclosure",
+          "ai_chatbot",
+          "microsoft_copilot",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.security.nl/posting/921902/Kritieke+lekken+in+Microsoft+Copilot+konden+aanvaller+informatie+laten+stelen?channel=rss"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-70985",
+        "cvss": 9.1,
+        "product": "RuoYi v4.8.2",
+        "description": "Incorrect access control in the update function allows unauthorized attackers to arbitrarily modify data outside of their scope.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-70985",
+          "access_control_bypass",
+          "data_modification"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-70985"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-34026",
+        "cvss": 9.2,
+        "product": "Versa Concerto SD-WAN orchestration platform",
+        "description": "Critical authentication bypass vulnerability caused by a Traefik reverse proxy misconfiguration. Allows access to administrative endpoints, including heap dumps and trace logs. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-34026",
+          "authentication_bypass",
+          "sd_wan",
+          "traefik",
+          "misconfiguration",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24412",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Heap Buffer Overflow vulnerability in the CIccTagXmlSegmentedCurve::ToXml() function. Exploitation can lead to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24412",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24412"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24406",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Heap Buffer Overflow vulnerability in CIccTagNamedColor2::SetSize() function. Exploitation can lead to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24406",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24406"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24405",
+        "cvss": 8.8,
+        "product": "iccDEV (libraries and tools for ICC color management profiles)",
+        "description": "Heap Buffer Overflow vulnerability in CIccMpeCalculator::Read() function. Exploitation can lead to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24405",
+          "heap_buffer_overflow",
+          "rce",
+          "dos",
+          "data_manipulation",
+          "iccdev"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24405"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-68645",
+        "cvss": 8.8,
+        "product": "Zimbra Collaboration Suite 10.0 and 10.1 (Webmail Classic UI)",
+        "description": "Local File Inclusion (LFI) vulnerability due to improper handling of user-supplied parameters in the RestFilter servlet. An unauthenticated attacker can include arbitrary files from the WebRoot directory, potentially exposing sensitive information. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-68645",
+          "lfi",
+          "zimbra",
+          "unauthenticated_access",
+          "data_exposure",
+          "active_exploitation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24139",
+        "cvss": 8.7,
+        "product": "MyTube (self-hosted downloader and player)",
+        "description": "Authorization bypass vulnerability in versions 1.7.78 and below. Allows guest users to download the complete application database due to insufficient permission validation, exposing sensitive data.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24139",
+          "authorization_bypass",
+          "data_exposure",
+          "database_export",
+          "guest_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24139"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-24136",
+        "cvss": 8.7,
+        "product": "Saleor (e-commerce platform)",
+        "description": "Insecure Direct Object Reference (IDOR) vulnerability in the GraphQL API, affecting versions 3.2.0 through 3.20.109, 3.21.0-a.0 through 3.21.44, and 3.22.0-a.0 through 3.22.28. Allows unauthenticated actors to extract sensitive Personal Identifiable Information (PII) in plain text, including orders created before version 3.2.0.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-24136",
+          "idor",
+          "graphql_api",
+          "pii_exfiltration",
+          "unauthenticated_access",
+          "e-commerce"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24136"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2025-54313",
+        "cvss": 8.8,
+        "product": "eslint-config-prettier package (supply-chain compromise)",
+        "description": "Embedded malicious code in versions 8.10.1, 9.1.1, 10.1.6, and 10.1.7, executing the node-gyp.dll malware on Windows systems during installation, potentially for arbitrary code execution. Results from a supply chain attack targeting package maintainers via phishing campaigns. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2025-54313",
+          "supply_chain_attack",
+          "malware",
+          "rce",
+          "phishing",
+          "active_exploitation",
+          "eslint"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/",
+          "https://securityaffairs.com/187241/security/u-s-cisa-adds-prettier-eslint-config-prettier-vite-vitejs-versa-concerto-sd-wan-orchestration-platform-and-synacor-zimbra-collaboration-suite-flaws-to-its-known-exploited-vulnerabilities-catal.html",
+          "https://thecyberexpress.com/cisa-adds-enterprise-software-flaws-to-kev/",
+          "https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-0920",
+        "cvss": 9.8,
+        "product": "LA-Studio Element Kit for Elementor (WordPress plugin)",
+        "description": "Critical backdoor vulnerability deliberately introduced by a former employee in all versions up to and including 1.5.6.3. Allows unauthorized creation of administrator accounts via the lakit_bkrole parameter, granting full administrative access to WordPress sites.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-0920",
+          "backdoor",
+          "wordpress_plugin",
+          "admin_access",
+          "privilege_escalation",
+          "insider_threat",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/20000-wordpress-sites-affected-by-backdoor-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "cve_id": "CVE-2026-1386",
+        "cvss": 8.8,
+        "product": "Firecracker jailer",
+        "description": "Vulnerability that under certain circumstances can allow a user to overwrite arbitrary files in the host filesystem via a symlink issue. Affects versions v1.13.1 and earlier, and 1.14.0. AWS services using Firecracker are not impacted due to appropriate access restrictions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "cve-2026-1386",
+          "arbitrary_file_overwrite",
+          "symlink",
+          "firecracker_jailer",
+          "host_compromise",
+          "privilege_escalation",
+          "virtualization"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-003-aws/"
+        ],
+        "date": "2026-01-24"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "20,000 WordPress Sites Affected by Backdoor Vulnerability Allowing Malicious Admin User Creation",
+        "description": "A critical backdoor vulnerability (CVE-2026-0920) has been discovered in the WordPress plugin 'LA-Studio Element Kit for Elementor', used by over 20,000 sites. A former employee deliberately inserted this obfuscated functionality, allowing unauthorized administrator account creation via the `lakit_bkrole` parameter. This grants full administrative access to targeted sites, enabling attackers to upload malicious files, modify content, or redirect visitors. The flaw has been patched in version 1.6.0.",
+        "threat_actor": "Former employee (internal developer)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-0920"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1199 (Trusted Relationship)",
+          "T1078.003 (Valid Accounts: Local Account)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "This vulnerability highlights the insider threat and the risks associated with the software supply chain, even through trusted contributors. The impact is significant for WordPress sites, with the possibility of complete compromise and the spread of malicious content. The delayed detection due to obfuscation is also a notable point.",
+        "recommandations": [
+          "Update the 'LA-Studio Element Kit for Elementor' plugin to version 1.6.0 or higher.",
+          "Regularly audit third-party plugins for unexpected modifications or malicious code.",
+          "Strengthen access controls and code reviews for internal and external developers."
+        ],
+        "tags": [
+          "wordpress",
+          "backdoor",
+          "plugin_vulnerability",
+          "admin_access",
+          "insider_threat",
+          "supply_chain",
+          "privilege_escalation",
+          "cve-2026-0920",
+          "mitre_t1199",
+          "mitre_t1078.003",
+          "mitre_t1505.003"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/20000-wordpress-sites-affected-by-backdoor-vulnerability/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "INC ransomware opsec fail allowed data recovery for 12 US orgs",
+        "description": "An operational security (opsec) failure by the INC ransomware gang allowed researchers to recover data stolen from a dozen U.S. organizations. A deep forensic examination of the artifacts left behind uncovered tooling not used in the investigated attack, but exposed attacker infrastructure that stored data exfiltrated from multiple victims.",
+        "threat_actor": "INC ransomware gang",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1074 (Data Exfiltration Staging)",
+          "T1560 (Archive Collected Data)",
+          "T1486 (Data Encrypted for Impact)"
+        ],
+        "analyse": "This situation highlights the critical importance of operational security for malicious actors themselves. Opsec failures can provide opportunities for data recovery for victims and valuable intelligence on attacker infrastructure, potentially leading to the disruption of their operations.",
+        "recommandations": [
+          "Conduct thorough forensic examinations after incidents to identify opsec failures and exposed information.",
+          "Strengthen operational security practices to prevent unintentional exposure of information or infrastructure for defensive operations."
+        ],
+        "tags": [
+          "ransomware",
+          "opsec_failure",
+          "data_recovery",
+          "threat_actor_infrastructure",
+          "forensics",
+          "data_exfiltration",
+          "mitre_t1074",
+          "mitre_t1560",
+          "mitre_t1486"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/23/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/?pk_campaign=feed&pk_kwd=inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "La posture sécuritaire de la Chine dans le Mékong",
+        "description": "China, under President Xi Jinping's leadership, seeks to strengthen its security position in the Mekong region, which it considers its strategic sanctuary. This article analyzes China's broad security concept, integrating military and police instruments, as well as bilateral and multilateral approaches. It highlights the impact of certain Chinese initiatives and the dynamics of dependency for 'small states' like Myanmar and Cambodia facing their powerful neighbor.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [],
+        "analyse": "This article provides essential geopolitical analysis for understanding regional security dynamics and China's growing influence. It highlights a comprehensive security approach that extends beyond traditional military frameworks, potentially impacting international relations and regional stability. Chinese influence strategies, whether military, police, or economic, are crucial to monitor for anticipating geopolitical tensions.",
+        "recommandations": [
+          "Monitor the evolution of Chinese security and influence policies in the Mekong region.",
+          "Analyze the implications of these strategies on regional security and the interests of other international actors."
+        ],
+        "tags": [
+          "geopolitique",
+          "china",
+          "mekong",
+          "regional_security",
+          "state_influence",
+          "myanmar",
+          "cambodia",
+          "defense_strategy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-posture-securitaire-de-la-chine-dans-le-mekong/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "Malicious AI extensions on VSCode Marketplace steal developer data & What an AI-Written Honeypot Taught Us About Trusting Machines",
+        "description": "Two malicious VSCode extensions, posing as AI-based coding assistants and installed 1.5 million times, exfiltrate developer data to China-based servers. These extensions, part of the 'MaliciousCorgi' campaign, monitor opened files in real-time and collect their entire content, as well as user profiles via SDKs. Concurrently, research shows that AI-generated code can introduce subtle security flaws (e.g., in a honeypot or AWS IAM roles), highlighting the danger of over-trusting AI tools and the limitations of traditional static analysis.",
+        "threat_actor": "MaliciousCorgi",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1552 (Unsecured Credentials)",
+          "T1020 (Automated Exfiltration)",
+          "T1059.006 (Command and Scripting Interpreter: Python)"
+        ],
+        "analyse": "The increasing integration of AI into development tools introduces new attack surfaces and sophisticated compromise vectors, such as malicious extensions that exfiltrate data. Furthermore, over-reliance on AI-generated code can lead to the unintentional introduction of vulnerabilities, posing significant challenges for code quality assurance and security, even for experienced developers. The impact is high on the software supply chain and developer data confidentiality.",
+        "recommandations": [
+          "Carefully review marketplace extensions and their code.",
+          "Avoid blind trust in AI-generated code.",
+          "Strengthen code review processes and CI/CD detection capabilities.",
+          "Educate developers about AI-related risks."
+        ],
+        "tags": [
+          "ai_security",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "malicious_extensions",
+          "vscode",
+          "developer_security",
+          "ai_generated_code",
+          "trust_issues",
+          "malware",
+          "mitre_t1552",
+          "mitre_t1020"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-ai-extensions-on-vscode-marketplace-steal-developer-data/",
+          "https://www.bleepingcomputer.com/news/security/what-an-ai-written-honeypot-taught-us-about-trusting-machines/"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "On the clock: Escaping VMware Workstation at Pwn2Own Berlin 2025",
+        "description": "At Pwn2Own Berlin 2025, researchers successfully escaped VMware Workstation by exploiting a Heap-Overflow vulnerability in its PVSCSI controller implementation. They bypassed Windows 11 Low Fragmentation Heap (LFH) mitigations using a complex interplay of techniques, including an LFH randomization side-channel, careful heap layout shaping, and abusing subtle vulnerable function behaviors to create arbitrary Read/Write and Code Execution primitives. The exploit worked on the first attempt.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1068 (Exploitation for Privilege Escalation)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "This research demonstrates the complexity of exploiting vulnerabilities in modern virtualized environments with advanced operating system protections. Success at Pwn2Own highlights that even the most robust systems can be circumvented by sophisticated techniques, and underscores the importance of defense-in-depth and continuous vulnerability research. The impact is a proof-of-concept for VM escapes.",
+        "recommandations": [
+          "Keep VMware products updated with the latest patches.",
+          "Implement strict network segmentation for hypervisors and VMs.",
+          "Limit privileges.",
+          "Monitor for abnormal behavior in virtualized environments."
+        ],
+        "tags": [
+          "vm_escape",
+          "vmware",
+          "heap_overflow",
+          "pwn2own",
+          "exploit_development",
+          "privilege_escalation",
+          "code_execution",
+          "windows_11_mitigations",
+          "pvscsi",
+          "virtualization_security",
+          "mitre_t1068",
+          "mitre_t1203"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/on-the-clock-escaping-vmware-workstation-at-pwn2own-berlin-2025.html"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "ShinyHunters claim to be behind SSO-account data theft attacks",
+        "description": "The ShinyHunters extortion group claims to be behind a wave of ongoing voice phishing (vishing) attacks targeting Single Sign-On (SSO) accounts at Okta, Microsoft, and Google. Threat actors impersonate IT support and trick employees into entering credentials and MFA codes on phishing sites, enabling them to breach corporate SaaS platforms and steal company data for extortion. The group confirmed their involvement, with Salesforce remaining their primary interest, and leaked alleged data from Crunchbase, SoundCloud, and Betterment after these companies refused extortion demands.",
+        "threat_actor": "ShinyHunters",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1566.004 (Phishing: Vishing)",
+          "T1078 (Valid Accounts)",
+          "T1539 (Steal Web Session Cookie)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1560 (Archive Collected Data)",
+          "T1567 (Exfiltration Over Web Service)"
+        ],
+        "analyse": "ShinyHunters' vishing attacks represent a sophisticated social engineering threat that bypasses multi-factor authentication in real-time. Targeting critical SSO services and SaaS platforms like Salesforce indicates high financial motivation and the pursuit of sensitive data for extortion. The impact includes massive data breaches and business disruptions for victims.",
+        "recommandations": [
+          "Educate employees about vishing attacks and social engineering.",
+          "Strengthen MFA policies with phishing-resistant methods (e.g., FIDO2/WebAuthn).",
+          "Implement systems for detecting SSO login anomalies.",
+          "Monitor for suspicious login attempts."
+        ],
+        "tags": [
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "sso_bypass",
+          "mfa_bypass",
+          "data_theft",
+          "extortion",
+          "social_engineering",
+          "corporate_saas",
+          "mitre_t1566.004",
+          "mitre_t1078"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/",
+          "https://databreaches.net/2026/01/23/shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign/?pk_campaign=feed&pk_kwd=shinyhunters-group-opens-new-dark-web-leak-site-claims-responsibility-for-okta-vishing-campaign"
+        ],
+        "date": "2026-01-24"
+      },
+      {
+        "title": "US to deport Venezuelans who emptied bank ATMs using malware",
+        "description": "Two Venezuelan nationals have been convicted and will be deported after stealing hundreds of thousands of dollars from U.S. bank ATMs in an ATM jackpotting scheme. They installed Ploutus malware variants on older ATM models to force unauthorized cash withdrawals and delete evidence. The Tren de Aragua gang was mentioned in related investigations in Nebraska.",
+        "threat_actor": "Venezuelan nationals, associated with Tren de Aragua gang (implied)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1562 (Impair Defenses)",
+          "T1083 (File and Directory Discovery)",
+          "T1021 (Remote Services)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "The use of ATM jackpotting with Ploutus malware highlights the persistence of combined physical and software threats against financial infrastructures. Attackers target older ATM models, suggesting increased vulnerability due to outdated or poorly updated systems. The impact is financial for banks and trust-related for users.",
+        "recommandations": [
+          "Update and strengthen both physical and logical security of ATMs, especially older models.",
+          "Implement ATM-specific malware detection solutions and transaction monitoring measures to identify jackpotting activities."
+        ],
+        "tags": [
+          "atm_jackpotting",
+          "ploutus_malware",
+          "financial_fraud",
+          "cybercrime",
+          "venezuelan_nationals",
+          "tren_de_aragua",
+          "legacy_systems",
+          "mitre_t1562",
+          "mitre_t1021"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-to-deport-venezuelans-who-emptied-bank-atms-using-malware/"
+        ],
+        "date": "2026-01-24"
+      }
+    ]
+  }
+}
