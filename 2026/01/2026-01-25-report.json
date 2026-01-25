@@ -1,0 +1,419 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une sophistication croissante et une diversité d'attaques. Les acteurs étatiques comme Sandworm et Konni continuent de cibler les infrastructures critiques (énergie polonaise) et les secteurs stratégiques (blockchain), utilisant des malwares destructeurs (DynoWiper) et des techniques d'espionnage sophistiquées, y compris l'intégration de l'intelligence artificielle pour la génération de malwares. Parallèlement, les groupes de ransomware, comme ceux potentiellement liés à INC/Medusa, adoptent des tactiques de plus en plus évasives, telles que le 'Bring Your Own Vulnerable Driver' (BYOVD) pour désactiver les défenses, et l'exfiltration de données avant le chiffrement pour augmenter la pression d'extorsion. Les violations de données restent une menace omniprésente, affectant une multitude de secteurs allant de la santé (Call-On-Doc) au gouvernement (Portail National Saoudien, FNC en France) et aux plateformes financières (Waltio), souvent par des acteurs comme ShinyHunters qui exploitent des techniques de vishing et d'extorsion. Une tendance notable est l'abus de l'IA par les acteurs malveillants pour créer de fausses publicités et des escroqueries, comme observé avec l'application Sora. Enfin, un grand nombre de vulnérabilités critiques (CVSS >= 8), notamment des exécutions de code à distance (RCE) et des contournements d'authentification dans des produits clés comme VMware vCenter, GNU InetUtils telnetd, WordPress et des plateformes e-commerce, sont activement exploitées, soulignant l'importance vitale des mises à jour et d'une gestion proactive des correctifs. L'état général des menaces est celui d'une vigilance constante requise face à des adversaires adaptatifs et de plus en plus équipés de technologies avancées.",
+      "date": "2026-01-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Sandworm (UAC-0113, APT44, Seashell Blizzard)",
+        "secteur": "Énergie",
+        "modop": "Attaques destructives (wiper DynoWiper) ciblant les systèmes énergétiques, parrainé par l'État russe. L'attaque a visé deux centrales de chaleur et d'électricité et un système de gestion des énergies renouvelables.",
+        "tags": ["actor", "theat_actor", "nation-state", "Russia", "energy", "critical-infrastructure", "wiper", "DynoWiper"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Konni (Opal Sleet, TA406)",
+        "secteur": "Blockchain",
+        "modop": "Utilisation de malwares générés par IA et de documents de leurre (DOCX) pour cibler les ingénieurs et développeurs de la blockchain. L'objectif est de compromettre les environnements de développement pour obtenir l'accès à des actifs sensibles tels que les infrastructures, les identifiants d'API, les portefeuilles et les cryptomonnaies.",
+        "tags": ["actor", "theat_actor", "North-Korea", "blockchain", "AI", "PowerShell", "malware", "espionage", "APT37", "Kimsuky"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/konni-hackers-target-blockchain-engineers-with-ai-built-malware/"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "INC (Warble) / Medusa (liens possibles)",
+        "secteur": "Restauration (franchises alimentaires)",
+        "modop": "Déploiement du ransomware Osiris, utilisant la technique BYOVD (Bring Your Own Vulnerable Driver) via le pilote POORTRY pour désactiver les outils de sécurité (KillAV). L'attaque a impliqué l'exfiltration de données (Rclone) vers le cloud Wasabi, l'utilisation de Mimikatz (kaz.exe) et d'outils dual-use tels que Netscan, Netexec, MeshAgent, ainsi qu'une version modifiée de RustDesk RMM.",
+        "tags": ["actor", "theat_actor", "ransomware", "BYOVD", "data-exfiltration", "Osiris", "INC", "Warble", "Medusa", "KillAV", "Mimikatz", "RustDesk"],
+        "sources": ["https://securityaffairs.com/187279/security/osiris-ransomware-emerges-leveraging-byovd-technique-to-kill-security-tools.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services SaaS (Okta, Microsoft, Google), Cryptomonnaie (plateformes fiscales)",
+        "modop": "Attaques de phishing vocal (vishing) ciblant les comptes d'authentification unique (SSO) et les MFA. Les attaquants se font passer pour le support informatique pour inciter les employés à saisir leurs identifiants sur des sites de phishing. Le but est de compromettre les plateformes SaaS d'entreprise et de voler des données pour extorsion. Le groupe a également menacé Waltio de divulguer des données fiscales.",
+        "tags": ["actor", "theat_actor", "extortion", "vishing", "SSO", "MFA-bypass", "data-theft", "ransomware"],
+        "sources": ["https://databreaches.net/2026/01/24/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/?pk_campaign=feed&pk_kwd=shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks", "https://databreaches.net/2026/01/24/frances-waltio-faces-ransom-threat-from-notorious-hacker-collective/?pk_campaign=feed&pk_kwd=frances-waltio-faces-ransom-threat-from-notorious-hacker-collective"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Buscador",
+        "secteur": "Gouvernement",
+        "modop": "Revendication d'une violation de données sur le Portail National Saoudien, avec la fuite d'identifiants de connexion.",
+        "tags": ["actor", "theat_actor", "data-breach", "government", "credentials"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951851471318977"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Perun Svaroga",
+        "secteur": "Énergie (services d'eau)",
+        "modop": "Revendication d'une violation de données sur Koryukivkavodokanal en Ukraine, exposant des dossiers citoyens et des listes d'employés.",
+        "tags": ["actor", "theat_actor", "data-breach", "energy", "citizen-records", "employee-lists"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951615446286778"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Énergie",
+        "theme": "Cyberattaque parrainée par l'État",
+        "description": "Le groupe de hackers russe Sandworm a été lié à une cyberattaque ratée sur le réseau électrique polonais en décembre 2025, où il a tenté de déployer un nouveau logiciel d'effacement de données, DynoWiper, ciblant des centrales de chaleur et d'électricité et des systèmes de contrôle d'énergies renouvelables.",
+        "tags": ["geopolitique", "geopolitic", "Russia", "Poland", "energy", "critical-infrastructure", "Sandworm", "wiper", "cyberattack"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Relations Internationales, Sport",
+        "theme": "Boycott et influence politique",
+        "description": "Un débat a émergé concernant un éventuel boycott de la Coupe du Monde de Football 2026, organisée au Mexique, au Canada et aux États-Unis, en raison des prises de position de l'administration Trump. L'article analyse le réalisme d'un tel boycott et le rôle de la FIFA face aux pressions politiques.",
+        "tags": ["geopolitique", "geopolitic", "World-Cup-2026", "FIFA", "USA", "Mexico", "Canada", "boycott", "international-relations", "Trump-administration"],
+        "sources": ["https://www.iris-france.org/boycotter-la-coupe-du-monde-2026/"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Call-On-Doc, Inc.",
+        "description": "Violation présumée de données affectant plus d'un million de patients du fournisseur de télésanté Call-On-Doc. Les données compromises incluent des informations personnelles et médicales sensibles (nom, adresse, téléphone, email, catégorie médicale y compris les IST, condition médicale, services/prescriptions, montant payé). L'acteur de la menace affirme qu'aucune encryption n'était en place, que l'incident n'a pas été détecté, et a tenté d'extorquer l'entreprise.",
+        "tags": ["violation", "breach", "healthcare", "telehealth", "PHI", "PII", "patient-data", "extortion", "Call-On-Doc"],
+        "sources": ["https://databreaches.net/2026/01/24/call-on-doc-allegedly-had-a-breach-affecting-more-than-1-million-patients-theyve-yet-to-comment/?pk_campaign=feed&pk_kwd=call-on-doc-allegedly-had-a-breach-affecting-more-than-1-million-patients-theyve-yet-to-comment"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Cryptomonnaie, Finance",
+        "victime": "Waltio",
+        "description": "La plateforme française de fiscalité crypto Waltio fait face à une menace de rançon de la part du groupe ShinyHunters, qui affirme détenir les données personnelles de près de 50 000 utilisateurs et menace de divulguer les rapports fiscaux de 2024 si une rançon n'est pas payée.",
+        "tags": ["violation", "breach", "cryptocurrency", "finance", "tax-platform", "Waltio", "ShinyHunters", "extortion", "PII"],
+        "sources": ["https://databreaches.net/2026/01/24/frances-waltio-faces-ransom-threat-from-notorious-hacker-collective/?pk_campaign=feed&pk_kwd=frances-waltio-faces-ransom-threat-from-notorious-hacker-collective"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Saudi National Portal",
+        "description": "Le groupe Buscador revendique une violation de données sur le Portail National Saoudien, qui a abouti à la fuite d'identifiants de connexion.",
+        "tags": ["violation", "breach", "government", "Saudi-Arabia", "login-credentials", "Buscador"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951851471318977"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Énergie (services d'eau)",
+        "victime": "Koryukivkavodokanal",
+        "description": "Le groupe Perun Svaroga revendique une violation de données sur Koryukivkavodokanal en Ukraine, exposant des dossiers citoyens et des listes d'employés.",
+        "tags": ["violation", "breach", "energy", "water-utility", "Ukraine", "citizen-records", "employee-lists", "Perun-Svaroga"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951615446286778"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Association, Services Publics (Chasse)",
+        "victime": "Fédération Nationale des Chasseurs (France)",
+        "description": "Un incident de sécurité a impacté l'espace adhérents du guichet unique des validations des permis de chasser, entraînant le piratage des données d'un million de chasseurs français.",
+        "tags": ["violation", "breach", "France", "FNC", "hunting", "association", "PII"],
+        "sources": ["https://nanao.cybtex.fr/@minus/115951437866351088", "https://www.01net.com/actualites/donnees-million-chasseurs-francais-piratees.html", "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/la-federation-nationale-des-chasseurs-porte-plainte-apres-une-cyberattaque-visant-les-donnees-des-detenteurs-d-un-permis-de-chasser_7762568.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Sport, Services Publics",
+        "victime": "Fédération Française de Volley, Fédération Nationale des Sapeurs-Pompiers de France, Fédération Française de Golf, Fédération Française d'Escrime",
+        "description": "Plusieurs fédérations françaises (volley, sapeurs-pompiers, golf, escrime) ont été victimes de diffusions continues de données violées.",
+        "tags": ["violation", "breach", "France", "sports", "public-service", "PII"],
+        "sources": ["https://nanao.cybtex.fr/@minus/115951437373816320", "https://bonjourlafuite.eu.org"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Multiples vulnérabilités de débordement de tas (heap-overflow) dans l'implémentation du protocole DCERPC, pouvant conduire à l'exécution de code à distance (RCE) via l'envoi de paquets réseau spécialement conçus. Activement exploitée et ajoutée au catalogue CISA KEV.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2024-37079", "VMware", "vCenter", "RCE", "heap-overflow", "DCERPC", "CISA-KEV", "exploited"],
+        "sources": ["https://securityaffairs.com/187267/security/u-s-cisa-adds-a-flaw-in-broadcom-vmware-vcenter-server-to-its-known-exploited-vulnerabilities-catalog.html", "https://cybersecuritynews.com/vmware-vcenter-rce-vulnerability/", "https://thehackernews.com/2026/01/cisa-adds-actively-exploited-vmware.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd versions 1.9.3–2.7",
+        "description": "Contournement d'authentification critique dans le démon telnetd, permettant aux attaquants non authentifiés d'obtenir un accès root. L'exploitation se fait via une variable d'environnement USER non assainie passée à /usr/bin/login, permettant un accès root immédiat. Activement exploitée avec des preuves de tentatives de persistance (injection de clés SSH, déploiement de malwares).",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24061", "GNU-InetUtils", "telnetd", "authentication-bypass", "root-access", "RCE", "command-injection", "exploited"],
+        "sources": ["https://securityaffairs.com/187255/security/11-year-old-critical-telnetd-flaw-found-in-gnu-inetutils-cve-2026-24061.html", "https://cybersecuritynews.com/telnetd-vulnerability-exploited/"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2025-13374",
+        "cvss": 9.8,
+        "product": "Kalrav AI Agent plugin for WordPress, versions <= 2.3.3",
+        "description": "Vulnérabilité de téléchargement de fichiers arbitraires via l'action AJAX kalrav_upload_file due à l'absence de validation du type de fichier. Permet l'exécution de code à distance par des attaquants non authentifiés.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2025-13374", "Kalrav-AI-Agent", "WordPress", "arbitrary-file-upload", "RCE", "unauthenticated"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13374"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24399",
+        "cvss": 9.3,
+        "product": "ChatterMate (AI chatbot agent framework), versions 1.0.8 and below",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée. Le chatbot accepte et exécute des charges utiles HTML/JavaScript malveillantes via l'entrée du chat, permettant l'accès à des données client sensibles (tokens localStorage, cookies) et une injection côté client.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24399", "ChatterMate", "XSS", "chatbot", "client-side-injection"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24399"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24412",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans la fonction CIccTagXmlSegmentedCurve::ToXml(). L'entrée contrôlée par l'utilisateur est incorporée de manière non sécurisée dans les données de profil ICC, pouvant entraîner un déni de service (DoS), la manipulation de données, le contournement de la logique d'application et l'exécution de code.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24412", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24412"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24406",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans CIccTagNamedColor2::SetSize(). L'entrée contrôlée par l'utilisateur est incorporée de manière non sécurisée dans les données de profil ICC, pouvant entraîner un déni de service (DoS), la manipulation de données, le contournement de la logique d'application et l'exécution de code.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24406", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24406"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24405",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Débordement de tampon de tas (Heap Buffer Overflow) dans CIccMpeCalculator::Read(). L'entrée contrôlée par l'utilisateur est incorporée de manière non sécurisée dans les données de profil ICC, pouvant entraîner un déni de service (DoS), la manipulation de données, le contournement de la logique d'application et l'exécution de code.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24405", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24405"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24139",
+        "cvss": 8.7,
+        "product": "MyTube versions 1.7.78 and below",
+        "description": "Contournement d'autorisation (Authorization bypass) permettant aux utilisateurs invités de télécharger la base de données complète de l'application. La validation des permissions est insuffisante sur le point d'accès d'exportation de la base de données, permettant un accès non autorisé à des données sensibles.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24139", "MyTube", "authorization-bypass", "database-export", "IDOR"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24139"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24136",
+        "cvss": 8.7,
+        "product": "Saleor e-commerce platform (versions 3.2.0-3.20.109, 3.21.0-a.0-3.21.44, 3.22.0-a.0-3.22.28)",
+        "description": "Vulnérabilité de Référence d'Objet Directe Insecure (IDOR) dans l'API GraphQL, permettant à des acteurs non authentifiés d'extraire des informations personnelles identifiables (PII) sensibles en texte clair à partir des commandes, notamment celles créées avant Saleor 3.2.0.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24136", "Saleor", "e-commerce", "IDOR", "GraphQL-API", "PII", "data-exfiltration"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24136"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Articles": []
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by increasing sophistication and diversity of attacks. State-sponsored actors like Sandworm and Konni continue to target critical infrastructure (Polish energy grid) and strategic sectors (blockchain), employing destructive malware (DynoWiper) and sophisticated espionage techniques, including the integration of artificial intelligence for malware generation. Simultaneously, ransomware groups, such as those potentially linked to INC/Medusa, are adopting increasingly evasive tactics, such as 'Bring Your Own Vulnerable Driver' (BYOVD) to disable defenses, and data exfiltration prior to encryption to increase extortion pressure. Data breaches remain an omnipresent threat, affecting a multitude of sectors ranging from healthcare (Call-On-Doc) to government (Saudi National Portal, FNC in France) and financial platforms (Waltio), often by actors like ShinyHunters who exploit vishing and extortion techniques. A notable trend is the abuse of AI by malicious actors to create fake advertisements and scams, as observed with the Sora application. Finally, a large number of critical vulnerabilities (CVSS >= 8), particularly Remote Code Execution (RCE) and authentication bypasses in key products like VMware vCenter, GNU InetUtils telnetd, WordPress, and e-commerce platforms, are actively exploited, underscoring the vital importance of timely updates and proactive patch management. The overall state of threats demands constant vigilance against adaptive adversaries increasingly equipped with advanced technologies.",
+      "date": "2026-01-25"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Sandworm (UAC-0113, APT44, Seashell Blizzard)",
+        "secteur": "Energy",
+        "modop": "Destructive attacks (DynoWiper malware) targeting energy systems, state-sponsored by Russia. The attack targeted two combined heat and power plants and a management system for renewable energy sources.",
+        "tags": ["actor", "theat_actor", "nation-state", "Russia", "energy", "critical-infrastructure", "wiper", "DynoWiper"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Konni (Opal Sleet, TA406)",
+        "secteur": "Blockchain",
+        "modop": "Using AI-generated malware and lure documents (DOCX) to target blockchain engineers and developers. The goal is to compromise development environments to gain access to sensitive assets such as infrastructure, API credentials, wallet access, and cryptocurrency holdings.",
+        "tags": ["actor", "theat_actor", "North-Korea", "blockchain", "AI", "PowerShell", "malware", "espionage", "APT37", "Kimsuky"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/konni-hackers-target-blockchain-developers-with-ai-built-malware/"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "INC (Warble) / Medusa (possible links)",
+        "secteur": "Food Service (franchises)",
+        "modop": "Deployment of Osiris ransomware, utilizing the BYOVD (Bring Your Own Vulnerable Driver) technique via the POORTRY driver to disable security tools (KillAV). The attack involved data exfiltration (Rclone) to Wasabi cloud storage, use of Mimikatz (kaz.exe), and dual-use tools such as Netscan, Netexec, MeshAgent, as well as a modified version of RustDesk RMM.",
+        "tags": ["actor", "theat_actor", "ransomware", "BYOVD", "data-exfiltration", "Osiris", "INC", "Warble", "Medusa", "KillAV", "Mimikatz", "RustDesk"],
+        "sources": ["https://securityaffairs.com/187279/security/osiris-ransomware-emerges-leveraging-byovd-technique-to-kill-security-tools.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "SaaS Services (Okta, Microsoft, Google), Cryptocurrency (tax platforms)",
+        "modop": "Voice phishing (vishing) attacks targeting Single Sign-On (SSO) accounts and MFA. Attackers impersonate IT support to trick employees into entering their credentials on phishing sites. The aim is to breach corporate SaaS platforms and steal company data for extortion. The group also threatened Waltio with leaking tax data.",
+        "tags": ["actor", "theat_actor", "extortion", "vishing", "SSO", "MFA-bypass", "data-theft", "ransomware"],
+        "sources": ["https://databreaches.net/2026/01/24/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/?pk_campaign=feed&pk_kwd=shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks", "https://databreaches.net/2026/01/24/frances-waltio-faces-ransom-threat-from-notorious-hacker-collective/?pk_campaign=feed&pk_kwd=frances-waltio-faces-ransom-threat-from-notorious-hacker-collective"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Buscador",
+        "secteur": "Government",
+        "modop": "Claimed data breach on Saudi Arabia's Saudi National Portal, resulting in the leakage of login credentials.",
+        "tags": ["actor", "theat_actor", "data-breach", "government", "credentials"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951851471318977"],
+        "date": "2026-01-25"
+      },
+      {
+        "nom": "Perun Svaroga",
+        "secteur": "Energy (water services)",
+        "modop": "Claimed data breach exposing citizen records and employee lists on Ukraine's Koryukivkavodokanal.",
+        "tags": ["actor", "theat_actor", "data-breach", "energy", "citizen-records", "employee-lists"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951615446286778"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Energy",
+        "theme": "State-Sponsored Cyberattack",
+        "description": "The Russian state-sponsored hacking group Sandworm has been linked to a failed cyberattack on Poland's power grid in late December 2025, attempting to deploy a new destructive data-wiping malware dubbed DynoWiper, targeting two combined heat and power plants as well as a management system used to control electricity generated from renewable sources.",
+        "tags": ["geopolitique", "geopolitic", "Russia", "Poland", "energy", "critical-infrastructure", "Sandworm", "wiper", "cyberattack"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "International Relations, Sports",
+        "theme": "Boycott and Political Influence",
+        "description": "A debate has emerged regarding a potential boycott of the 2026 FIFA World Cup, hosted by Mexico, Canada, and the United States, due to positions taken by the Trump administration. The article analyzes the realism of such a boycott and the role of FIFA in the face of political pressures.",
+        "tags": ["geopolitique", "geopolitic", "World-Cup-2026", "FIFA", "USA", "Mexico", "Canada", "boycott", "international-relations", "Trump-administration"],
+        "sources": ["https://www.iris-france.org/boycotter-la-coupe-du-monde-2026/"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Call-On-Doc, Inc.",
+        "description": "Alleged data breach affecting over one million patients of the telehealth provider Call-On-Doc. Compromised data includes sensitive personal and medical information (Patient Code, Transaction Number, Patient Name, Address, City, State, Zip, Country, Phone, Email, Medical Category including STDs, Medical Condition, Services/Prescriptions, Paid Amount). The threat actor claims no encryption was in place, the incident went undetected, and attempted to extort the company.",
+        "tags": ["violation", "breach", "healthcare", "telehealth", "PHI", "PII", "patient-data", "extortion", "Call-On-Doc"],
+        "sources": ["https://databreaches.net/2026/01/24/call-on-doc-allegedly-had-a-breach-affecting-more-than-1-million-patients-theyve-yet-to-comment/?pk_campaign=feed&pk_kwd=call-on-doc-allegedly-had-a-breach-affecting-more-than-1-million-patients-theyve-yet-to-comment"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Cryptocurrency, Finance",
+        "victime": "Waltio",
+        "description": "The French crypto tax platform Waltio faces a ransom threat from the ShinyHunters group, which claims to possess personal data of nearly 50,000 users and threatens to leak 2024 tax reports if a ransom is not paid.",
+        "tags": ["violation", "breach", "cryptocurrency", "finance", "tax-platform", "Waltio", "ShinyHunters", "extortion", "PII"],
+        "sources": ["https://databreaches.net/2026/01/24/frances-waltio-faces-ransom-threat-from-notorious-hacker-collective/?pk_campaign=feed&pk_kwd=frances-waltio-faces-ransom-threat-from-notorious-hacker-collective"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Saudi National Portal",
+        "description": "The Buscador group claims a data breach on Saudi Arabia's Saudi National Portal, resulting in the leakage of login credentials.",
+        "tags": ["violation", "breach", "government", "Saudi-Arabia", "login-credentials", "Buscador"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951851471318977"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Energy (water services)",
+        "victime": "Koryukivkavodokanal",
+        "description": "The Perun Svaroga group claims a data breach on Koryukivkavodokanal in Ukraine, exposing citizen records and employee lists.",
+        "tags": ["violation", "breach", "energy", "water-utility", "Ukraine", "citizen-records", "employee-lists", "Perun-Svaroga"],
+        "sources": ["https://infosec.exchange/@darkwebsonar/115951615446286778"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Association, Public Services (Hunting)",
+        "victime": "Fédération Nationale des Chasseurs (France)",
+        "description": "A security incident affected the member area for hunting permit validations of the French National Hunters Federation, leading to the hacking of data belonging to one million French hunters.",
+        "tags": ["violation", "breach", "France", "FNC", "hunting", "association", "PII"],
+        "sources": ["https://nanao.cybtex.fr/@minus/115951437866351088", "https://www.01net.com/actualites/donnees-million-chasseurs-francais-piratees.html", "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/la-federation-nationale-des-chasseurs-porte-plainte-apres-une-cyberattaque-visant-les-donnees-des-detenteurs-d-un-permis-de-chasser_7762568.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "secteur": "Sports, Public Services",
+        "victime": "Fédération Française de Volley, Fédération Nationale des Sapeurs-Pompiers de France, Fédération Française de Golf, Fédération Française d'Escrime",
+        "description": "Several French federations (volleyball, firefighters, golf, fencing) have been victims of continuous leaked data distributions.",
+        "tags": ["violation", "breach", "France", "sports", "public-service", "PII"],
+        "sources": ["https://nanao.cybtex.fr/@minus/115951437373816320", "https://bonjourlafuite.eu.org"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Multiple heap-overflow vulnerabilities in the implementation of the DCERPC protocol, potentially leading to Remote Code Execution (RCE) via specially crafted network packets. Actively exploited and added to the CISA KEV catalog.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2024-37079", "VMware", "vCenter", "RCE", "heap-overflow", "DCERPC", "CISA-KEV", "exploited"],
+        "sources": ["https://securityaffairs.com/187267/security/u-s-cisa-adds-a-flaw-in-broadcom-vmware-vcenter-server-to-its-known-exploited-vulnerabilities-catalog.html", "https://cybersecuritynews.com/vmware-vcenter-rce-vulnerability/", "https://thehackernews.com/2026/01/cisa-adds-actively-exploited-vmware.html"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd versions 1.9.3–2.7",
+        "description": "Critical authentication bypass vulnerability in the telnetd daemon, allowing unauthenticated attackers to gain root access. Exploitation occurs via an unsanitized USER environment variable passed to /usr/bin/login, enabling immediate root access. Actively exploited with evidence of persistence attempts (SSH key injection, malware deployment).",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24061", "GNU-InetUtils", "telnetd", "authentication-bypass", "root-access", "RCE", "command-injection", "exploited"],
+        "sources": ["https://securityaffairs.com/187255/security/11-year-old-critical-telnetd-flaw-found-in-gnu-inetutils-cve-2026-24061.html", "https://cybersecuritynews.com/telnetd-vulnerability-exploited/"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2025-13374",
+        "cvss": 9.8,
+        "product": "Kalrav AI Agent plugin for WordPress, versions <= 2.3.3",
+        "description": "Arbitrary file upload vulnerability via the kalrav_upload_file AJAX action due to missing file type validation. Allows unauthenticated attackers to achieve remote code execution.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2025-13374", "Kalrav-AI-Agent", "WordPress", "arbitrary-file-upload", "RCE", "unauthenticated"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2025-13374"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24399",
+        "cvss": 9.3,
+        "product": "ChatterMate (AI chatbot agent framework), versions 1.0.8 and below",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability. The chatbot accepts and executes malicious HTML/JavaScript payloads via chat input, allowing access to sensitive client-side data (localStorage tokens, cookies) and client-side injection.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24399", "ChatterMate", "XSS", "chatbot", "client-side-injection"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24399"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24412",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Heap Buffer Overflow vulnerability in the CIccTagXmlSegmentedCurve::ToXml() function. User-controllable input is unsafely incorporated into ICC profile data, potentially leading to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24412", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24412"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24406",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Heap Buffer Overflow vulnerability in CIccTagNamedColor2::SetSize(). User-controllable input is unsafely incorporated into ICC profile data, potentially leading to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24406", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24406"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24405",
+        "cvss": 8.8,
+        "product": "iccDEV versions 2.3.1.1 and below",
+        "description": "Heap Buffer Overflow vulnerability in CIccMpeCalculator::Read(). User-controllable input is unsafely incorporated into ICC profile data, potentially leading to Denial of Service (DoS), data manipulation, application logic bypass, and Code Execution.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24405", "iccDEV", "heap-buffer-overflow", "DoS", "code-execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24405"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24139",
+        "cvss": 8.7,
+        "product": "MyTube versions 1.7.78 and below",
+        "description": "Authorization bypass vulnerability allowing guest users to download the complete application database. Insufficient permission validation on the database export endpoint enables unauthorized access to sensitive data.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24139", "MyTube", "authorization-bypass", "database-export", "IDOR"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24139"],
+        "date": "2026-01-25"
+      },
+      {
+        "cve_id": "CVE-2026-24136",
+        "cvss": 8.7,
+        "product": "Saleor e-commerce platform (versions 3.2.0-3.20.109, 3.21.0-a.0-3.21.44, 3.22.0-a.0-3.22.28)",
+        "description": "Insecure Direct Object Reference (IDOR) vulnerability in the GraphQL API, allowing unauthenticated actors to extract sensitive Personally Identifiable Information (PII) in plain text from orders, particularly those created before Saleor 3.2.0.",
+        "tags": ["vulnerabilité", "vulnerability", "CVE-2026-24136", "Saleor", "e-commerce", "IDOR", "GraphQL-API", "PII", "data-exfiltration"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-24136"],
+        "date": "2026-01-25"
+      }
+    ],
+    "Articles": []
+  }
+}
