@@ -1,0 +1,501 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber reste très dynamique, caractérisé par des attaques de plus en plus sophistiquées et souvent augmentées par l'IA. La prolifération des outils d'IA est un facteur double : elle permet aux attaquants de créer des campagnes de phishing plus convaincantes et à volume élevé, mais incite également les défenseurs à intégrer l'IA dans leurs solutions de sécurité pour la détection et la prévention. Les violations de données et les tentatives d'extorsion, comme celles menées par WorldLeaks et le groupe Ransomware Everest, sont omniprésentes, mettant en évidence la motivation financière continue des cybercriminels et le rôle des erreurs de configuration dans ces incidents. Les vulnérabilités critiques, en particulier celles permettant l'exécution de code à distance (RCE) ou le contournement d'authentification, sont activement exploitées, soulignant l'importance d'une gestion rapide des patchs et la persistance du danger même pour des failles plus anciennes. Le paysage des acteurs malveillants évolue, avec des groupes de ransomware diversifiant leurs tactiques vers l'exfiltration pure de données, et des groupes hacktivistes (pro-russes) ciblant des secteurs critiques pour des raisons géopolitiques. Les risques liés à la chaîne d'approvisionnement et aux tiers, y compris les extensions de navigateur malveillantes et les applications Linux détournées, restent des vecteurs d'attaque majeurs. Enfin, les menaces centrées sur l'utilisateur, comme le phishing et le vishing sophistiqués, couplées à des fuites massives d'identifiants, continuent de faire du facteur humain une cible principale. En conclusion, les organisations doivent faire face à un défi multifacette nécessitant une vigilance continue, des stratégies de patching robustes, une sensibilisation accrue des utilisateurs et des défenses proactives pour contrer des menaces en constante évolution.",
+      "date": "2026-01-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "WorldLeaks",
+        "secteur": "Multiples (ciblant des entreprises de divers secteurs, ex: commerce de détail)",
+        "modop": "Vol de données et extorsion, menaçant de divulguer publiquement les informations si le paiement est refusé. Le groupe a abandonné le chiffrement de fichiers et s'est concentré sur l'exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "extortion",
+          "data_theft",
+          "ransomware_rebrand"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html",
+          "https://mastodon.social/@netsecio/115958933004070834"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "Everest Ransomware Group",
+        "secteur": "Multiples (ex: commerce de détail, ciblant Under Armour)",
+        "modop": "Exfiltration de données, tentative d'extorsion, divulgation de données après échec de l'extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_leak",
+          "extortion"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958933365190987"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "RansomHub",
+        "secteur": "Fabrication (ciblant Luxshare Precision Industry), multiples (Ransomware-as-a-Service)",
+        "modop": "Affiliés de Ransomware-as-a-Service (RaaS), vol et chiffrement de données sensibles.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_encryption",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "Groupes hacktivistes pro-russes",
+        "secteur": "Organisations britanniques, Infrastructures critiques (mondial)",
+        "modop": "Opérations cyber (nature non spécifiée, mais typiquement DDoS, défaçage, propagande, éventuelles fuites de données).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "geopolitical",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "maul1337",
+        "secteur": "Éducation (Lal Bahadur Shastri College of Pharmacy, Inde)",
+        "modop": "Défaçage de site web, fuite de base de données (environ 1 800 enregistrements).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "defacement",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115957277777654711"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Organisations britanniques, Infrastructures critiques",
+        "theme": "Guerre cyber, hacktivisme, relations internationales",
+        "description": "Des opérations cybernétiques continues menées par des groupes hacktivistes alignés sur la Russie ciblent des organisations au Royaume-Uni et à l'étranger, y compris des secteurs d'infrastructures critiques. Cela fait suite aux avis émis en décembre 2025.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "russia",
+          "hacktivism",
+          "critical_infrastructure",
+          "cyber_operations"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce de détail (Chaussures et vêtements)",
+        "victime": "Nike",
+        "description": "Nike enquête sur une potentielle violation de données après que le groupe cybercriminel WorldLeaks a affirmé avoir accédé et volé des données de ses systèmes. WorldLeaks est connu pour le vol de données et l'extorsion.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "nike",
+          "worldleaks",
+          "data_theft",
+          "extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html",
+          "https://mastodon.social/@netsecio/115958933004070834"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Institut Diagnóstico Urológico (IDU), Chili",
+        "description": "23 Go d'informations patient, incluant des données personnelles et des résultats d'examens (par exemple, des analyses d'urine), ont été exposées sur un serveur non sécurisé. Environ 15 000 fichiers PDF étaient accessibles. Le problème a été signalé en novembre, et le serveur a été fermé au 13 janvier 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "idu",
+          "chile",
+          "patient_data",
+          "misconfiguration",
+          "unsecured_server"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115958967328185991",
+          "https://www.security-chu.com/2026/01/Instituto-Diagnostico-Urologico-Expuso-informacion-de-pacientes.html"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Vêtements et accessoires (Commerce de détail)",
+        "victime": "Clients Under Armour",
+        "description": "Le groupe ransomware Everest a divulgué 343 Go de données, prétendument volées à Under Armour, contenant des informations personnelles identifiables (PII) de millions de clients suite à une tentative d'extorsion échouée.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "under_armour",
+          "everest_ransomware",
+          "customer_data",
+          "pii",
+          "data_leak"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958933365190987"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Fabrication d'électronique (partenaire Apple)",
+        "victime": "Luxshare Precision Industry",
+        "description": "Des affiliés du groupe Ransomware-as-a-Service RansomHub auraient piraté Luxshare Precision Industry, volant et chiffrant des données sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "luxshare",
+          "ransomhub",
+          "data_theft",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Lal Bahadur Shastri College of Pharmacy, Inde",
+        "description": "Un acteur nommé maul1337 a revendiqué une violation de données, a défacé le site web du collège et a divulgué une base de données contenant environ 1 800 enregistrements.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "india",
+          "maul1337",
+          "website_defacement",
+          "database_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115957277777654711"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Multiples (services en ligne: Gmail, Facebook, Banque, Gouvernement)",
+        "victime": "Utilisateurs de divers services en ligne",
+        "description": "Une fuite de données massive a exposé 149 millions d'identifiants provenant de comptes Gmail, Facebook, bancaires et gouvernementaux. La base de données de 96 Go a été trouvée non protégée en ligne et est probablement attribuée à des malwares de type infostealer.",
+        "tags": [
+          "violation",
+          "breach",
+          "multi_sector",
+          "credentials",
+          "gmail",
+          "facebook",
+          "banking",
+          "government",
+          "infostealer",
+          "data_leak",
+          "unprotected_database"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958932916988375"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE), activement exploitée. Un acteur malveillant ayant un accès réseau peut la déclencher en envoyant un paquet réseau spécialement conçu.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "vmware",
+          "vcenter",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-alert-critical-vmware-vcenter-rce-cvss-9-8-now-exploited-in-the-wild/"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Articles": []
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape remains highly dynamic, characterized by increasingly sophisticated attacks often augmented by AI. The proliferation of AI tools is a double-edged sword: it empowers attackers to craft more convincing and high-volume phishing campaigns, while also pushing defenders to integrate AI into their security solutions for detection and prevention. Data breaches and extortion attempts, such as those carried out by WorldLeaks and the Everest Ransomware group, are pervasive, highlighting the ongoing financial motivations of cybercriminals and the role of misconfigurations in these incidents. Critical vulnerabilities, particularly those allowing Remote Code Execution (RCE) or authentication bypass, are actively exploited, underscoring the importance of timely patch management and the persistence of danger even for older flaws. The threat actor landscape is evolving, with ransomware groups diversifying tactics towards pure data exfiltration, and hacktivist groups (pro-Russian) targeting critical sectors for geopolitical reasons. Supply chain and third-party risks, including malicious browser extensions and hijacked Linux apps, remain significant attack vectors. Finally, user-centric threats, such as sophisticated phishing and vishing, coupled with massive credential leaks, continue to make the human factor a primary target. In conclusion, organizations face a multifaceted challenge requiring continuous vigilance, robust patching strategies, enhanced user awareness, and proactive defense strategies to counter evolving threats.",
+      "date": "2026-01-26"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "WorldLeaks",
+        "secteur": "Multiple (targeting companies across sectors, e.g., retail)",
+        "modop": "Data theft and extortion, threatening public leaks if payment is refused. The group rebranded from Hunters International and shifted entirely to data exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "extortion",
+          "data_theft",
+          "ransomware_rebrand"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html",
+          "https://mastodon.social/@netsecio/115958933004070834"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "Everest Ransomware Group",
+        "secteur": "Multiple (e.g., retail, targeting Under Armour)",
+        "modop": "Data exfiltration, attempted extortion, leaking data after failed attempts.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_leak",
+          "extortion"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958933365190987"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "RansomHub",
+        "secteur": "Manufacturing (targeting Luxshare Precision Industry), multiple (Ransomware-as-a-Service)",
+        "modop": "Ransomware-as-a-Service (RaaS) affiliates, stealing and encrypting sensitive data.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_encryption",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "Pro-Russian hacktivist groups",
+        "secteur": "UK organizations, Critical Infrastructure (worldwide)",
+        "modop": "Cyber operations (unspecified nature, but typically DDoS, defacement, propaganda, potential data leaks).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "geopolitical",
+          "state_sponsored"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "nom": "maul1337",
+        "secteur": "Education (Lal Bahadur Shastri College of Pharmacy, India)",
+        "modop": "Website defacement, database leakage (approximately 1,800 records).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "defacement",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115957277777654711"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "UK organizations, Critical Infrastructure",
+        "theme": "Cyber warfare, hacktivism, international relations",
+        "description": "Ongoing cyber operations by Russian-aligned hacktivist groups are targeting organizations in the UK and abroad, including critical infrastructure sectors. This continues previous advisories from December 2025.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "russia",
+          "hacktivism",
+          "critical_infrastructure",
+          "cyber_operations"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Retail (Footwear and apparel)",
+        "victime": "Nike",
+        "description": "Nike is investigating a potential data breach after the WorldLeaks cybercrime group claimed to have accessed and stolen data from the company’s systems. WorldLeaks is known for data theft and extortion.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "nike",
+          "worldleaks",
+          "data_theft",
+          "extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html",
+          "https://mastodon.social/@netsecio/115958933004070834"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Urological Diagnostic Institute (IDU), Chile",
+        "description": "23GB of patient information, including personal data and exam results (e.g., urinalysis), were exposed on an unsecured server. Approximately 15,000 PDF files were accessible. The issue was reported in November, and the server was closed by January 13, 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "idu",
+          "chile",
+          "patient_data",
+          "misconfiguration",
+          "unsecured_server"
+        ],
+        "sources": [
+          "https://infosec.exchange/@chum1ng0/115958967328185991",
+          "https://www.security-chu.com/2026/01/Instituto-Diagnostico-Urologico-Expuso-informacion-de-pacientes.html"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Apparel and accessories (Retail)",
+        "victime": "Under Armour customers",
+        "description": "The Everest ransomware group leaked 343GB of data, allegedly stolen from Under Armour, containing Personally Identifiable Information (PII) of millions of customers following a failed extortion attempt.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "under_armour",
+          "everest_ransomware",
+          "customer_data",
+          "pii",
+          "data_leak"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958933365190987"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Electronics Manufacturing (Apple partner)",
+        "victime": "Luxshare Precision Industry",
+        "description": "Affiliates of the RansomHub ransomware-as-a-service outfit allegedly breached Luxshare Precision Industry, stealing and encrypting sensitive data.",
+        "tags": [
+          "violation",
+          "breach",
+          "manufacturing",
+          "luxshare",
+          "ransomhub",
+          "data_theft",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Lal Bahadur Shastri College of Pharmacy, India",
+        "description": "An actor named maul1337 claimed a data breach, defaced the college website, and leaked a database containing approximately 1,800 records.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "india",
+          "maul1337",
+          "website_defacement",
+          "database_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115957277777654711"
+        ],
+        "date": "2026-01-26"
+      },
+      {
+        "secteur": "Multiple (online services: Gmail, Facebook, Banking, Government)",
+        "victime": "Users of various online services",
+        "description": "A massive data leak exposed 149 million credentials from Gmail, Facebook, banking, and government accounts. The 96GB database was found unprotected online and is likely attributed to infostealer malware.",
+        "tags": [
+          "violation",
+          "breach",
+          "multi_sector",
+          "credentials",
+          "gmail",
+          "facebook",
+          "banking",
+          "government",
+          "infostealer",
+          "data_leak",
+          "unprotected_database"
+        ],
+        "sources": [
+          "https://mastodon.social/@netsecio/115958932916988375"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": 9.8,
+        "product": "Broadcom VMware vCenter Server",
+        "description": "Critical Remote Code Execution (RCE) vulnerability, actively exploited in the wild. A malicious actor with network access can trigger it by sending a specially crafted network packet.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "vmware",
+          "vcenter",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-alert-critical-vmware-vcenter-rce-cvss-9-8-now-exploited-in-the-wild/"
+        ],
+        "date": "2026-01-26"
+      }
+    ],
+    "Articles": []
+  }
+}
