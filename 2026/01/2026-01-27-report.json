@@ -1,0 +1,1533 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est de plus en plus sophistiqué, caractérisé par l'ingéniosité des attaquants qui exploitent les faiblesses humaines et techniques, l'évolution rapide des TTPs (notamment l'usage de l'IA), et une forte dimension géopolitique où les États et les acteurs non étatiques utilisent le cyber comme un outil d'influence et de déstabilisation. Les menaces émergentes incluent l'utilisation de l'IA par les attaquants (KONNI pour le développement de malwares, Grok pour la génération d'images illégales), les attaques sur la chaîne d'approvisionnement logicielle (extensions malveillantes VS Code, bibliothèques NPM frauduleuses, \"repo squatting\" sur GitHub), l'exploitation de vulnérabilités zero-day (Microsoft Office) et la prolifération de services de malware-as-a-service (MaaS comme Stanley et Amatera). La persistance de vulnérabilités critiques non corrigées (Telnet) expose de nombreux systèmes. Des groupes parrainés par des États (Sandworm, KONNI) continuent de cibler des infrastructures critiques (énergie) et des secteurs stratégiques (développeurs, blockchain), tout en développant de nouvelles TTPs. Des acteurs criminels organisés (ShinyHunters, groupes de botnets comme Kimwolf/Badbox) sont actifs dans les violations de données et la fraude. L'interconnexion entre la cybercriminalité et les enjeux géopolitiques est forte, comme en témoigne l'implantation du Hezbollah au Venezuela avec le soutien de l'Iran, impliquant des activités de narcotrafic et de blanchiment d'argent, ainsi que des campagnes d'influence russes en Afrique via les jeux vidéo. Une série de vulnérabilités critiques (RCE, contournements d'authentification, fuites de clés API) affectent divers produits, soulignant le besoin constant de patching et de bonnes pratiques de sécurité (Okta). En conclusion, la vigilance, la résilience et une posture de sécurité proactive sont essentielles face à un environnement de menaces en constante mutation.",
+      "date": "2026-01-27"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Badbox 2.0",
+        "secteur": "Appareils IoT (Android TV boxes)",
+        "modop": "Botnet préinstallé sur des appareils, fraude publicitaire, infection via applications malveillantes sur marketplaces non officielles, backdoors.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "badbox_2.0",
+          "botnet",
+          "iot_devices",
+          "android_tv_boxes",
+          "advertising_fraud",
+          "preinstalled_malware"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "FulcrumSec",
+        "secteur": "Santé (Lena Health, Houston Methodist Hospital)",
+        "modop": "Exfiltration de données de santé (PHI) depuis un bucket S3 non chiffré et public, fuite de données, coordination d'actions en justice contre la victime.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "fulcrumsec",
+          "data_breach",
+          "healthcare",
+          "phi_leak",
+          "s3_bucket_misconfiguration"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/26/125824/?pk_campaign=feed&pk_kwd=125824"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "G_Wagon",
+        "secteur": "Développeurs, Utilisateurs de bibliothèques NPM",
+        "modop": "Infostealer distribué via un faux package NPM, exfiltration d'identifiants de navigateur, portefeuilles de cryptomonnaies, identifiants cloud, jetons Discord, injection de DLL dans les processus de navigateur.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "g_wagon",
+          "infostealer",
+          "npm_package",
+          "supply_chain_attack",
+          "cloud_credentials",
+          "crypto_wallet_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/g_wagon-malware-hides-in-fake-npm-ui-library-to-steal-cloud-keys/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Hezbollah (Unité 910)",
+        "secteur": "Gouvernement (Venezuela), Trafic de drogues, Trafic d'or, Activités paramilitaires, Renseignement",
+        "modop": "Intégration dans l'appareil d'État, utilisation de faux passeports, création de réseaux logistiques pour drogue/armes/argent, exploitation de zones franches, opérations clandestines, recrutement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hezbollah",
+          "unit_910",
+          "iran_backed",
+          "narco_terrorism",
+          "gold_trafficking",
+          "state_sponsored_crime",
+          "venezuela"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-1-3-anatomie-dune-implantation-strategique/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-2-3-les-architectes-dune-implantation-durable/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-3-3-un-systeme-menace-mais-resilient/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/drugs-trafficking-venezuela-ocean-away-capture-maduro"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Kimwolf",
+        "secteur": "Appareils IoT (Android TV boxes)",
+        "modop": "Botnet, méthodes invasives de propagation via services proxy résidentiels, exploitation de vulnérabilités d'appareils IoT sans sécurité ni authentification.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "kimwolf",
+          "botnet",
+          "iot_devices",
+          "android_tv_boxes",
+          "proxy_abuse"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "KONNI (aka Kimsuky, Earth Imp, TA406, Thallium, Vedalia, Velvet Chollima)",
+        "secteur": "Développeurs de logiciels (blockchain, crypto), Secteur de l'ingénierie",
+        "modop": "Campagnes de phishing ciblées (spear-phishing), utilisation de faux documents de projet, déploiement de backdoors PowerShell assistées par l'IA, techniques anti-analyse et d'évasion, contournement UAC et Defender, installation de logiciels RMM.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "konni",
+          "kimsuky",
+          "apt",
+          "north_korea",
+          "spear_phishing",
+          "powershell_backdoor",
+          "ai_assisted_malware",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187317/apt/north-korea-linked-konni-uses-ai-to-build-stealthy-malware-tooling.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "MaliciousCorgi",
+        "secteur": "Développeurs (utilisateurs de VS Code)",
+        "modop": "Extensions VS Code malveillantes se faisant passer pour des assistants IA, exfiltration de code source et de fichiers ouverts vers des serveurs en Chine, surveillance en temps réel, fingerprinting d'appareils.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "maliciouscorgi",
+          "vs_code_extension",
+          "supply_chain_attack",
+          "source_code_theft",
+          "ai_themed_malware"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "RansomHub",
+        "secteur": "Fabrication d'électronique (Luxshare)",
+        "modop": "Ransomware, vol de données (modèles 3D CAD, cartes de circuits imprimées, informations d'entreprise).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomhub",
+          "ransomware",
+          "data_exfiltration",
+          "electronics_manufacturing",
+          "extortion"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/26th-january-threat-intelligence-report/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Sandworm (aka BlackEnergy, UAC-0082, Iron Viking, Voodoo Bear, TeleBots)",
+        "secteur": "Énergie (Pologne), Infrastructures critiques",
+        "modop": "Utilisation du malware destructeur DynoWiper, attaques ciblées d'APT.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "sandworm",
+          "blackenergy",
+          "apt",
+          "russia",
+          "critical_infrastructure",
+          "energy_sector",
+          "wiper_malware",
+          "dynowiper"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187309/breaking-news/russia-linked-sandworm-apt-implicated-in-major-cyber-attack-on-polands-power-grid.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Technologie, Plateformes de données (Crunchbase)",
+        "modop": "Vol de données, exfiltration de millions de dossiers personnels, tentative d'extorsion, fuite de données sur des forums clandestins.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "data_theft",
+          "extortion",
+          "data_leak",
+          "cybercrime",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187340/data-breach/shinyhunters-claims-2-million-crunchbase-records-company-confirms-breach.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Stanley (Malware-as-a-Service)",
+        "secteur": "Utilisateurs de navigateurs web (Chrome, Edge, Brave)",
+        "modop": "Offre de création et publication d'extensions Chrome malveillantes qui passent les revues de Google, attaques de phishing par iframe plein écran, auto-installation silencieuse, notifications push malveillantes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "maas",
+          "stanley",
+          "phishing",
+          "chrome_extension",
+          "browser_hijacking",
+          "malware_as_a_service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Gouvernement, Infrastructures critiques, Commerce illicite",
+        "theme": "Pénétration du Hezbollah au Venezuela et soutien de l'Iran",
+        "description": "L'opération américaine \"Absolute Resolve\" ayant conduit à la capture de Nicolás Maduro a mis en lumière l'étendue de l'implantation du Hezbollah au Venezuela, considérée comme une menace directe pour la sécurité des États-Unis. Le Hezbollah, avec le soutien de l'Iran, a établi une plateforme opérationnelle en Amérique latine, utilisant le Venezuela pour le trafic de drogue (\"cocaïne noire\"), le trafic d'or (via l'Arco Minero del Orinoco), le blanchiment d'argent, la production de faux documents (passeports), le recrutement terroriste et la coopération militaire/de renseignement. Des personnalités vénézuéliennes d'origine syro-libanaise ont facilité cette intégration profonde au sein de l'appareil d'État, notamment l'Unité 910 du Hezbollah.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hezbollah",
+          "iran",
+          "venezuela",
+          "narcotrafic",
+          "gold_trafficking",
+          "state_sponsored_terrorism",
+          "intelligence_cooperation",
+          "usa",
+          "absolute_resolve"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-1-3-anatomie-dune-implantation-strategique/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-2-3-les-architectes-dune-implantation-durable/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-3-3-un-systeme-menace-mais-resilient/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/drugs-trafficking-venezuela-ocean-away-capture-maduro"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Politique étrangère, Culture, Médias, Jeunesse",
+        "theme": "Campagne d'influence russe en Afrique via les jeux vidéo et les influenceurs",
+        "description": "La Russie intensifie sa stratégie de \"soft power\" en Afrique en utilisant les jeux vidéo (ex: \"African Dawn\") et les influenceurs numériques pour diffuser un récit pro-russe et anti-occidental. Cette approche vise à remodeler les perceptions culturelles et à établir une loyauté symbolique durable parmi les jeunes générations africaines, en contournant les canaux diplomatiques traditionnels par une \"diplomatie émotionnelle\".",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "africa",
+          "influence_campaign",
+          "soft_power",
+          "video_games",
+          "propaganda",
+          "cultural_warfare"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/jeux-videos-russes-en-afrique-de-la-diplomatie-culturelle-a-la-guerre-cognitive/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Technologie, Réglementation, Intelligence Artificielle, Médias sociaux",
+        "theme": "Enquête de l'UE sur X (Grok AI) pour la génération d'images sexuellement explicites",
+        "description": "La Commission européenne a ouvert une enquête formelle contre X (anciennement Twitter) concernant son outil d'intelligence artificielle Grok, suite à son utilisation pour générer des images sexuellement explicites, y compris du matériel pédopornographique. L'enquête vise à déterminer si X a correctement évalué les risques et respecte ses obligations en vertu du Digital Services Act (DSA) de l'UE.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "eu",
+          "x_corp",
+          "grok_ai",
+          "ai_misuse",
+          "content_moderation",
+          "dsa",
+          "child_sexual_abuse_material",
+          "deepfake"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/artificial-intelligence/eu-launches-investigation-into-x-over-grok-generated-sexual-images/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers, Technologie",
+        "victime": "Crunchbase",
+        "description": "Le groupe cybercriminel ShinyHunters a revendiqué le vol de plus de 2 millions de dossiers personnels de Crunchbase. La société a confirmé une violation de données suite à l'exfiltration de documents de son réseau d'entreprise, mais a assuré que les opérations n'ont pas été interrompues.",
+        "tags": [
+          "violation",
+          "breach",
+          "crunchbase",
+          "shinyhunters",
+          "data_theft",
+          "personal_data",
+          "financial_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187340/data-breach/shinyhunters-claims-2-million-crunchbase-records-company-confirms-breach.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Lena Health (client principal: Houston Methodist Hospital)",
+        "description": "Le groupe FulcrumSec a divulgué des informations de santé personnelles (PHI) de 2 134 patients et 19 542 enregistrements audio de conversations de patients, ainsi que 68 documents de décharge hospitalière. Ces données ont été exposées via un export de base de données non chiffré dans un bucket S3 public, à cause d'une mauvaise configuration.",
+        "tags": [
+          "violation",
+          "breach",
+          "lena_health",
+          "houston_methodist_hospital",
+          "healthcare",
+          "phi_leak",
+          "s3_bucket",
+          "misconfiguration",
+          "patient_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/26/125824/?pk_campaign=feed&pk_kwd=125824"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Médias sociaux, Musique en ligne",
+        "victime": "SoundCloud",
+        "description": "Une activité non autorisée a été détectée sur la plateforme SoundCloud, permettant à un attaquant de lier des données de profil publiques à des adresses email pour environ 20% des utilisateurs. Les données exposées incluent 30 millions d'adresses email uniques, noms d'utilisateur, avatars, comptes d'abonnés/abonnements et, dans certains cas, le pays de l'utilisateur.",
+        "tags": [
+          "violation",
+          "breach",
+          "soundcloud",
+          "email_addresses",
+          "usernames",
+          "social_media",
+          "personal_data",
+          "extortion"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/SoundCloud"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24479",
+        "cvss": 9.3,
+        "product": "HUSTOJ",
+        "description": "Vulnérabilité d'écriture de fichier arbitraire (Zip Slip) dans les modules d'importation de problèmes (problem_import_qduoj.php, problem_import_hoj.php) qui ne nettoient pas correctement les noms de fichiers dans les archives ZIP. Permet l'exécution de code à distance (RCE) via des chemins de traversée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hustoj",
+          "rce",
+          "zip_slip",
+          "arbitrary_file_write",
+          "path_traversal",
+          "web_application"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24479"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd",
+        "description": "Vulnérabilité critique de contournement d'authentification permettant à un attaquant de se connecter en tant que \"root\" sans authentification via une manipulation de la variable d'environnement USER. Affecte de nombreux appareils IoT et systèmes anciens.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "gnu_inetutils",
+          "telnetd",
+          "authentication_bypass",
+          "root_access",
+          "iot_security",
+          "legacy_systems"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24480",
+        "cvss": 8.7,
+        "product": "QGIS",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) et de prise de contrôle de dépôt via GitHub Actions en raison d'un workflow \"pre-commit checks\" utilisant le déclencheur `pull_request_target` et exécutant du code non fiable d'une pull request externe dans un contexte privilégié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "qgis",
+          "rce",
+          "github_actions",
+          "supply_chain",
+          "repository_takeover",
+          "privileged_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24480"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24477",
+        "cvss": 8.7,
+        "product": "AnythingLLM",
+        "description": "Fuite de clé API Qdrant via le endpoint `/api/setup-complete` vers des utilisateurs non authentifiés, permettant un accès complet en lecture/écriture à la base de données vectorielle Qdrant et une fuite indirecte de documents confidentiels.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "anythingllm",
+          "api_key_leak",
+          "unauthenticated_access",
+          "qdrant",
+          "data_leakage",
+          "llm_security"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24477"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24486",
+        "cvss": 8.6,
+        "product": "Python-Multipart",
+        "description": "Vulnérabilité de traversée de chemin (Path Traversal) permettant l'écriture de fichiers téléchargés à des emplacements arbitraires sur le système de fichiers, si les options de configuration non par défaut `UPLOAD_DIR` et `UPLOAD_KEEP_FILENAME=True` sont utilisées.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "python_multipart",
+          "path_traversal",
+          "arbitrary_file_write",
+          "file_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24486"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-1448",
+        "cvss": 8.3,
+        "product": "D-Link DIR-615",
+        "description": "Vulnérabilité d'injection de commande du système d'exploitation (OS Command Injection) dans le fichier `/wiz_policy_3_machine.php` de l'interface d'administration web via la manipulation de l'argument `ipaddr`. Exploitable à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "dir_615",
+          "os_command_injection",
+          "remote_exploitation",
+          "web_management_interface",
+          "router"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1448"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24470",
+        "cvss": 8.1,
+        "product": "Skipper Ingress Controller",
+        "description": "Permet un accès non autorisé aux services internes via ExternalName lorsque Skipper est utilisé comme contrôleur Ingress, si les utilisateurs ont la permission de créer un Ingress et un Service de type ExternalName.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "skipper",
+          "ingress_controller",
+          "kubernetes",
+          "externalname",
+          "unauthorized_access",
+          "internal_services"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24470"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-0994",
+        "cvss": 8.0,
+        "product": "Google Protocol Buffers (implémentation Python)",
+        "description": "Vulnérabilité de déni de service (DoS) dans la fonction `google.protobuf.json_format.ParseDict()` qui ne respecte pas correctement la limite `max_recursion_depth` pour les messages `Any`, permettant une récursion illimitée et un crash du service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google_protobuf",
+          "python",
+          "dos",
+          "recursion_limit_bypass",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-dos-flaw-hits-google-protocol-buffers-cve-2026-0994/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": 7.8,
+        "product": "Microsoft Office (2016, 2019, LTSC 2021, LTSC 2024, Microsoft 365 Apps for Enterprise)",
+        "description": "Vulnérabilité de contournement de fonctionnalité de sécurité (Security Feature Bypass) activement exploitée dans Microsoft Office. Elle permet à un attaquant de contourner des fonctionnalités de sécurité localement en convainquant un utilisateur d'ouvrir un fichier Office malveillant.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft_office",
+          "zero_day",
+          "actively_exploited",
+          "security_feature_bypass",
+          "office_applications"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/",
+          "https://securityaffairs.com/187349/hacking/emergency-microsoft-update-fixes-in-the-wild-office-zero-day.html",
+          "https://thecyberexpress.com/microsoft-emergency-fix-for-office-zero-day/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Campagnes d'infostealers Amatera et opération du botnet Badbox 2.0",
+        "description": "Une nouvelle campagne malveillante, baptisée ClickFix, utilise des méthodes mixtes incluant de faux CAPTCHA et des scripts App-V signés de Microsoft pour déployer l'infostealer Amatera. L'attaque contourne les sandboxes, utilise la stéganographie pour cacher des payloads dans des images PNG et déploie Amatera, qui collecte des données de navigateur et des identifiants. Parallèlement, le botnet Badbox 2.0, basé en Chine, infecte plus de 2 millions d'appareils Android TV boxes via des logiciels malveillants préinstallés ou des applications non officielles, principalement pour la fraude publicitaire. Le groupe Kimwolf aurait compromis le panneau de contrôle de Badbox 2.0, montrant une interconnexion des opérations de botnets.",
+        "threat_actor": "Opérateurs ClickFix (utilisant Amatera infostealer), Kimwolf, Badbox 2.0 operators.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "asmeisvip[.]net",
+            "moyix[.]com",
+            "astrolink[.]cn",
+            "vmud[.]net",
+            "guilincloud[.]cn"
+          ],
+          "FILE_HASH_SHA256": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1027.003 (Obfuscated Files or Information: Steganography)",
+          "T1055 (Process Injection)",
+          "T1003 (OS Credential Dumping)",
+          "T1555 (Credentials from Password Stores)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1204.002 (User Execution: Malicious File)"
+        ],
+        "analyse": "Ces campagnes illustrent la sophistication croissante des tactiques d'évasion (anti-sandbox, stéganographie) et la persistance des menaces de botnets sur les appareils IoT. L'interconnexion entre différents groupes malveillants (Kimwolf et Badbox) montre une dynamique complexe du cybercrime. L'impact est le vol d'informations sensibles et la transformation d'appareils grand public en infrastructures de fraude.",
+        "recommandations": [
+          "Restreindre l'accès à la boîte de dialogue Exécuter de Windows via GPO.",
+          "Supprimer les composants App-V inutilisés.",
+          "Activer la journalisation PowerShell.",
+          "Surveiller les connexions sortantes pour les incohérences HTTP Host/TLS SNI.",
+          "Mettre en œuvre une sécurité robuste pour les appareils IoT.",
+          "Éviter d'installer des applications provenant de marketplaces non officielles."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "amatera",
+          "clickfix",
+          "botnet",
+          "badbox_2.0",
+          "kimwolf",
+          "android_tv_boxes",
+          "iot_security",
+          "steganography",
+          "powershell",
+          "advertising_fraud"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-clickfix-attacks-abuse-windows-app-v-scripts-to-push-malware/",
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Campagnes d'extensions de navigateur malveillantes et service de phishing \"Stanley\"",
+        "description": "Une nouvelle offre de malware-as-a-service (MaaS) nommée 'Stanley' permet la publication d'extensions Chrome malveillantes sur le Chrome Web Store, contournant le processus de révision de Google. Ces extensions peuvent masquer des pages web avec des iframes de phishing, s'auto-installer silencieusement sur Chrome, Edge et Brave, et envoyer des notifications push. Parallèlement, une analyse des extensions Chrome révèle des dangers cachés, notamment des extensions accordant des permissions de presse-papiers à des domaines externes non fiables (permettant la lecture/écriture de données sensibles), exfiltrant des cookies pour du détournement de session, utilisant des algorithmes de génération de domaines (DGA) pour la résilience C2, et détournant des recherches.",
+        "threat_actor": "Stanley (MaaS operator), Acteurs inconnus derrière les extensions malveillantes.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "codon[.]vn",
+            "hm.baidu[.]com",
+            "dpswebsafe[.]com",
+            "entiretrack[.]com"
+          ],
+          "URL": [
+            "http://www.dpswebsafe[.]com/rd/?q={searchTerms}",
+            "http://www.dpswebsafe[.]com/rd/?q={searchTerms}&type;=list",
+            "http://trk.entiretrack[.]com/trackerwcfsrv/tracker.svc/trackUpdate/?q="
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1189 (Drive-by Compromise)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1090.002 (Proxy: External Proxy)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "Ces campagnes ciblent les utilisateurs finaux via des vecteurs couramment utilisés (navigateurs, extensions), soulignant la persistance des menaces de phishing et l'ingéniosité des attaquants pour contourner les contrôles de sécurité des plateformes logicielles. L'utilisation de MaaS abaisse la barrière à l'entrée pour les cybercriminels, augmentant la portée potentielle des attaques. L'impact est une perte de données sensibles (identifiants, données financières) et un risque accru de compromission des systèmes des utilisateurs.",
+        "recommandations": [
+          "Désinstaller immédiatement les extensions suspectes.",
+          "Utiliser des solutions de sécurité (ex: Symantec Endpoint Security).",
+          "Ne pas installer d'extensions non essentielles.",
+          "Vérifier la réputation des développeurs et les avis.",
+          "Utiliser l'authentification multifacteur (MFA).",
+          "Surveiller le trafic réseau pour des exfiltrations anormales.",
+          "Restreindre l'accès au presse-papiers pour les applications non fiables."
+        ],
+        "tags": [
+          "browser_extensions",
+          "phishing",
+          "malware_as_a_service",
+          "maas",
+          "chrome",
+          "edge",
+          "brave",
+          "data_theft",
+          "session_hijacking",
+          "dga",
+          "c2",
+          "supply_chain_attack",
+          "clipboard_access",
+          "cookie_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/",
+          "https://www.security.com/threat-intelligence/chrome-extensions-are-you-getting-more-you-bargained"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Campagnes APT avancées et ransomware ciblant l'énergie et les développeurs",
+        "description": "Le groupe APT Sandworm, lié à la Russie, est impliqué dans une cyberattaque majeure contre le réseau électrique polonais en décembre 2025, utilisant le malware destructeur DynoWiper. Parallèlement, le groupe KONNI, lié à la Corée du Nord, mène une campagne de phishing ciblée contre les développeurs de logiciels et ingénieurs (notamment blockchain/crypto) en APAC, en utilisant de faux documents de projet et un backdoor PowerShell dont le code montre des signes de génération par IA. En outre, le groupe RansomHub a revendiqué une cyberattaque contre Luxshare, un fabricant d'électronique majeur, affirmant avoir volé des modèles 3D CAD, des cartes de circuits imprimées et d'autres données d'entreprise. Une campagne de phishing et BEC multi-étapes a également ciblé le secteur de l'énergie, abusant des liens SharePoint et des règles de boîte de réception pour voler des identifiants et mener des attaques AiTM et de compromission de messagerie professionnelle.",
+        "threat_actor": "Sandworm, KONNI, RansomHub, Acteurs inconnus derrière la campagne de phishing/BEC.",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1588.002 (Obtain Capabilities: Tool)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1055 (Process Injection)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1078 (Valid Accounts)",
+          "T1114.002 (Email Collection: Inbox Rule)",
+          "T1133 (External Remote Services)",
+          "T1546.003 (Event Triggered Execution: Windows Management Instrumentation Event Subscription)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1529 (System Shutdown/Reboot)"
+        ],
+        "analyse": "Ces incidents soulignent l'activité intense des APT étatiques dans l'espionnage et la déstabilisation (énergie, développeurs), ainsi que la menace persistante des groupes de ransomware ciblant des entreprises industrielles. L'utilisation de l'IA pour générer du code malveillant marque une évolution dans les capacités des attaquants. Les campagnes de phishing sophistiquées, combinées à des techniques AiTM, restent un vecteur d'attaque très efficace, menaçant la sécurité de la supply chain et des communications.",
+        "recommandations": [
+          "Mettre en œuvre des mesures de défense contre le phishing (formations, filtres email avancés).",
+          "Renforcer l'authentification multifacteur (MFA) et les politiques d'accès conditionnel.",
+          "Surveiller et auditer régulièrement les règles de boîte de réception des utilisateurs.",
+          "Révoquer les sessions actives après une compromission.",
+          "Mettre à jour les systèmes et appliquer les correctifs de sécurité.",
+          "Isoler les réseaux industriels (OT) des réseaux d'entreprise (IT).",
+          "Renforcer la sécurité de la chaîne d'approvisionnement logicielle."
+        ],
+        "tags": [
+          "apt",
+          "state_sponsored",
+          "ransomware",
+          "phishing",
+          "bec",
+          "ait_m",
+          "energy_sector",
+          "critical_infrastructure",
+          "software_developers",
+          "ai_malware",
+          "supply_chain_security",
+          "poland",
+          "north_korea",
+          "russia",
+          "luxshare",
+          "checkpoint_research"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/26th-january-threat-intelligence-report/",
+          "https://securityaffairs.com/187332/cyber-crime/energy-sector-targeted-in-multi-stage-phishing-and-bec-campaign-using-sharepoint.html",
+          "https://securityaffairs.com/187317/apt/north-korea-linked-konni-uses-ai-to-build-stealthy-malware-tooling.html",
+          "https://securityaffairs.com/187309/breaking-news/russia-linked-sandworm-apt-implicated-in-major-cyber-attack-on-polands-power-grid.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Attaques sur la chaîne d'approvisionnement logicielle ciblant les développeurs et les dépôts",
+        "description": "Des extensions malveillantes pour VS Code, se faisant passer pour des assistants IA, ont été découvertes exfiltrant du code source et des fichiers ouverts vers des serveurs en Chine, avec 1,5 million d'installations. Parallèlement, une campagne de \"repo squatting\" exploite une faille dans GitHub pour distribuer des logiciels malveillants semblant provenir de dépôts officiels (ex: GitHub Desktop avec le malware HijackLoader). De plus, le malware \"G_Wagon\" est distribué via de faux packages NPM (\"ansi-universal-ui\"), dérobant les identifiants de navigateur, les portefeuilles de cryptomonnaies, les identifiants cloud et les jetons Discord, avec des techniques sophistiquées d'injection de DLL et d'exfiltration de données chunkées.",
+        "threat_actor": "MaliciousCorgi, Acteurs derrière le \"repo squatting\" (utilisant HijackLoader), G_Wagon operators.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "aihao123[.]cn"
+          ],
+          "FILE_HASH_SHA256": []
+        },
+        "mitre_ttps": [
+          "T1548.002 (Bypass User Account Control)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195 (Supply Chain Compromise)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1119 (Shared Webroot)",
+          "T1055 (Process Injection)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1003.001 (OS Credential Dumping: LSASS Memory)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1555 (Credentials from Password Stores)"
+        ],
+        "analyse": "Ces incidents mettent en évidence la vulnérabilité croissante de la chaîne d'approvisionnement logicielle et des environnements de développement, avec des attaquants exploitant la confiance dans les outils et les plateformes. L'impact est sévère pour les entreprises et les développeurs, allant du vol de propriété intellectuelle et de données sensibles au détournement de comptes et à la compromission des systèmes cloud. L'utilisation d'IA comme appât montre une sophistication des techniques d'ingénierie sociale.",
+        "recommandations": [
+          "Vérifier scrupuleusement l'authenticité des extensions et packages avant installation.",
+          "Utiliser des solutions de gestion de la posture de sécurité SaaS (SSPM).",
+          "Restreindre les permissions des extensions.",
+          "Mettre en œuvre des pratiques de développement sécurisé.",
+          "Surveiller les exfiltrations de données anormales et les activités des processus.",
+          "Utiliser des jetons d'accès granulaires et l'authentification multifacteur (2FA) pour les dépôts."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "developer_security",
+          "vs_code",
+          "npm",
+          "github",
+          "repo_squatting",
+          "malware",
+          "infostealer",
+          "source_code_theft",
+          "cloud_security",
+          "ai_themed_malware",
+          "process_injection",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityonline.info/g_wagon-malware-hides-in-fake-npm-ui-library-to-steal-cloud-keys/",
+          "https://securityonline.info/repo-squatting-how-hackers-are-using-githubs-own-features-to-hijack-official-repos/",
+          "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html"
+        ],
+        "date": "2026-01-27"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is increasingly sophisticated, characterized by the ingenuity of attackers who exploit human and technical weaknesses, the rapid evolution of TTPs (including the use of AI), and a strong geopolitical dimension where states and non-state actors use cyber as a tool for influence and destabilization. Emerging threats include the use of AI by attackers (KONNI for malware development, Grok for generating illegal images), software supply chain attacks (malicious VS Code extensions, fraudulent NPM libraries, \"repo squatting\" on GitHub), exploitation of zero-day vulnerabilities (Microsoft Office), and the proliferation of malware-as-a-service (MaaS like Stanley and Amatera). The persistence of unpatched critical vulnerabilities (Telnet) exposes many systems. State-sponsored groups (Sandworm, KONNI) continue to target critical infrastructure (energy) and strategic sectors (developers, blockchain), while developing new TTPs. Organized cybercriminal actors (ShinyHunters, botnet groups like Kimwolf/Badbox) are active in data breaches and fraud. The interconnection between cybercrime and geopolitical issues is strong, as evidenced by Hezbollah's presence in Venezuela with Iranian support, involving drug trafficking and money laundering activities, as well as Russian influence campaigns in Africa through video games. A series of critical vulnerabilities (RCE, authentication bypasses, API key leaks) affect various products, highlighting the constant need for patching and good security practices (Okta). In conclusion, vigilance, resilience, and a proactive security posture are essential in a constantly evolving threat environment.",
+      "date": "2026-01-27"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Badbox 2.0",
+        "secteur": "IoT Devices (Android TV boxes)",
+        "modop": "Botnet pre-installed on devices, advertising fraud, infection via malicious applications on unofficial marketplaces, backdoors.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "badbox_2.0",
+          "botnet",
+          "iot_devices",
+          "android_tv_boxes",
+          "advertising_fraud",
+          "preinstalled_malware"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "FulcrumSec",
+        "secteur": "Healthcare (Lena Health, Houston Methodist Hospital)",
+        "modop": "Exfiltration of personal health information (PHI) from an unencrypted and public S3 bucket, data leak, coordination of legal actions against the victim.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "fulcrumsec",
+          "data_breach",
+          "healthcare",
+          "phi_leak",
+          "s3_bucket_misconfiguration"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/26/125824/?pk_campaign=feed&pk_kwd=125824"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "G_Wagon",
+        "secteur": "Developers, NPM library users",
+        "modop": "Infostealer distributed via fake NPM package, exfiltration of browser credentials, cryptocurrency wallets, cloud credentials, Discord tokens, DLL injection into browser processes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "g_wagon",
+          "infostealer",
+          "npm_package",
+          "supply_chain_attack",
+          "cloud_credentials",
+          "crypto_wallet_theft"
+        ],
+        "sources": [
+          "https://securityonline.info/g_wagon-malware-hides-in-fake-npm-ui-library-to-steal-cloud-keys/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Hezbollah (Unit 910)",
+        "secteur": "Government (Venezuela), Drug Trafficking, Gold Trafficking, Paramilitary Activities, Intelligence",
+        "modop": "Integration into state apparatus, use of fake passports, creation of logistics networks for drugs/weapons/money, exploitation of free zones, clandestine operations, recruitment.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "hezbollah",
+          "unit_910",
+          "iran_backed",
+          "narco_terrorism",
+          "gold_trafficking",
+          "state_sponsored_crime",
+          "venezuela"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-1-3-anatomie-dune-implantation-strategique/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-2-3-les-architectes-dune-implantation-durable/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-3-3-un-systeme-menace-mais-resilient/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/drugs-trafficking-venezuela-ocean-away-capture-maduro"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Kimwolf",
+        "secteur": "IoT Devices (Android TV boxes)",
+        "modop": "Botnet, invasive propagation methods via residential proxy services, exploitation of vulnerabilities in IoT devices lacking security or authentication.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "kimwolf",
+          "botnet",
+          "iot_devices",
+          "android_tv_boxes",
+          "proxy_abuse"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "KONNI (aka Kimsuky, Earth Imp, TA406, Thallium, Vedalia, Velvet Chollima)",
+        "secteur": "Software Developers (blockchain, crypto), Engineering Sector",
+        "modop": "Targeted phishing campaigns (spear-phishing), use of fake project documents, deployment of AI-assisted PowerShell backdoors, anti-analysis and evasion techniques, UAC and Defender bypass, RMM software installation.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "konni",
+          "kimsuky",
+          "apt",
+          "north_korea",
+          "spear_phishing",
+          "powershell_backdoor",
+          "ai_assisted_malware",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187317/apt/north-korea-linked-konni-uses-ai-to-build-stealthy-malware-tooling.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "MaliciousCorgi",
+        "secteur": "Developers (VS Code users)",
+        "modop": "Malicious VS Code extensions posing as AI assistants, exfiltration of source code and open files to China-based servers, real-time monitoring, device fingerprinting.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "maliciouscorgi",
+          "vs_code_extension",
+          "supply_chain_attack",
+          "source_code_theft",
+          "ai_themed_malware"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "RansomHub",
+        "secteur": "Electronics Manufacturing (Luxshare)",
+        "modop": "Ransomware, data theft (3D CAD models, circuit board designs, corporate information).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomhub",
+          "ransomware",
+          "data_exfiltration",
+          "electronics_manufacturing",
+          "extortion"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/26th-january-threat-intelligence-report/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Sandworm (aka BlackEnergy, UAC-0082, Iron Viking, Voodoo Bear, TeleBots)",
+        "secteur": "Energy (Poland), Critical Infrastructure",
+        "modop": "Use of DynoWiper destructive malware, targeted APT attacks.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "sandworm",
+          "blackenergy",
+          "apt",
+          "russia",
+          "critical_infrastructure",
+          "energy_sector",
+          "wiper_malware",
+          "dynowiper"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187309/breaking-news/russia-linked-sandworm-apt-implicated-in-major-cyber-attack-on-polands-power-grid.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Technology, Data Platforms (Crunchbase)",
+        "modop": "Data theft, exfiltration of millions of personal records, attempted extortion, data leakage on underground forums.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "data_theft",
+          "extortion",
+          "data_leak",
+          "cybercrime",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187340/data-breach/shinyhunters-claims-2-million-crunchbase-records-company-confirms-breach.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "nom": "Stanley (Malware-as-a-Service)",
+        "secteur": "Web browser users (Chrome, Edge, Brave)",
+        "modop": "Offering creation and publication of malicious Chrome extensions that pass Google's reviews, phishing attacks via full-screen iframes, silent auto-installation, malicious push notifications.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "maas",
+          "stanley",
+          "phishing",
+          "chrome_extension",
+          "browser_hijacking",
+          "malware_as_a_service"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Government, Critical Infrastructure, Illicit Trade",
+        "theme": "Hezbollah's penetration in Venezuela and Iran's support",
+        "description": "The US \"Absolute Resolve\" operation, which led to the capture of Nicolás Maduro, highlighted the extent of Hezbollah's presence in Venezuela, considered a direct threat to US national security. Hezbollah, with Iranian support, has established an operational platform in Latin America, using Venezuela for drug trafficking (\"black cocaine\"), gold trafficking (via the Arco Minero del Orinoco), money laundering, production of fraudulent documents (passports), terrorist recruitment, and military/intelligence cooperation. Venezuelan figures of Syrian-Lebanese origin facilitated this deep integration within the state apparatus, notably Hezbollah's Unit 910.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "hezbollah",
+          "iran",
+          "venezuela",
+          "narco_trafficking",
+          "gold_trafficking",
+          "state_sponsored_terrorism",
+          "intelligence_cooperation",
+          "usa",
+          "absolute_resolve"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-1-3-anatomie-dune-implantation-strategique/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-2-3-les-architectes-dune-implantation-durable/",
+          "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-3-3-un-systeme-menace-mais-resilient/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/drugs-trafficking-venezuela-ocean-away-capture-maduro"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Foreign Policy, Culture, Media, Youth",
+        "theme": "Russian influence campaign in Africa via video games and influencers",
+        "description": "Russia is intensifying its \"soft power\" strategy in Africa by using video games (e.g., \"African Dawn\") and digital influencers to disseminate a pro-Russian and anti-Western narrative. This approach aims to reshape cultural perceptions and establish lasting symbolic loyalty among African youth, bypassing traditional diplomatic channels through \"emotional diplomacy.\"",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "africa",
+          "influence_campaign",
+          "soft_power",
+          "video_games",
+          "propaganda",
+          "cultural_warfare"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/jeux-videos-russes-en-afrique-de-la-diplomatie-culturelle-a-la-guerre-cognitive/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Technology, Regulation, Artificial Intelligence, Social Media",
+        "theme": "EU investigation into X (Grok AI) for generating sexually explicit images",
+        "description": "The European Commission has launched formal proceedings against X (formerly Twitter) regarding its Grok artificial intelligence tool, following its use to generate sexually explicit images, including child sexual abuse material. The investigation aims to determine whether X adequately assessed risks and complies with its obligations under the EU Digital Services Act (DSA).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "eu",
+          "x_corp",
+          "grok_ai",
+          "ai_misuse",
+          "content_moderation",
+          "dsa",
+          "child_sexual_abuse_material",
+          "deepfake"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/artificial-intelligence/eu-launches-investigation-into-x-over-grok-generated-sexual-images/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services, Technology",
+        "victime": "Crunchbase",
+        "description": "The cybercriminal group ShinyHunters claimed responsibility for stealing over 2 million personal records from Crunchbase. The company confirmed a data breach following the exfiltration of documents from its corporate network but stated that operations were not disrupted.",
+        "tags": [
+          "violation",
+          "breach",
+          "crunchbase",
+          "shinyhunters",
+          "data_theft",
+          "personal_data",
+          "financial_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187340/data-breach/shinyhunters-claims-2-million-crunchbase-records-company-confirms-breach.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Lena Health (primary client: Houston Methodist Hospital)",
+        "description": "The FulcrumSec group disclosed Personal Health Information (PHI) for 2,134 patients and 19,542 audio recordings of patient conversations, as well as 68 hospital discharge documents. This data was exposed through an unencrypted database export in a public S3 bucket due to misconfiguration.",
+        "tags": [
+          "violation",
+          "breach",
+          "lena_health",
+          "houston_methodist_hospital",
+          "healthcare",
+          "phi_leak",
+          "s3_bucket",
+          "misconfiguration",
+          "patient_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/26/125824/?pk_campaign=feed&pk_kwd=125824"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "secteur": "Social Media, Online Music",
+        "victime": "SoundCloud",
+        "description": "Unauthorized activity was detected on the SoundCloud platform, allowing an attacker to map publicly available profile data to email addresses for approximately 20% of its users. The exposed data included 30 million unique email addresses, usernames, avatars, follower and following counts, and in some cases, the user's country.",
+        "tags": [
+          "violation",
+          "breach",
+          "soundcloud",
+          "email_addresses",
+          "usernames",
+          "social_media",
+          "personal_data",
+          "extortion"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/SoundCloud"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24479",
+        "cvss": 9.3,
+        "product": "HUSTOJ",
+        "description": "Arbitrary File Write (Zip Slip) vulnerability in problem import modules (problem_import_qduoj.php, problem_import_hoj.php) that fail to properly sanitize filenames within uploaded ZIP archives. Allows remote code execution (RCE) via path traversal.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hustoj",
+          "rce",
+          "zip_slip",
+          "arbitrary_file_write",
+          "path_traversal",
+          "web_application"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24479"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": 9.8,
+        "product": "GNU InetUtils telnetd",
+        "description": "Critical authentication bypass vulnerability allowing an attacker to log in as \"root\" without authentication by manipulating the USER environment variable. Affects many IoT devices and legacy systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "gnu_inetutils",
+          "telnetd",
+          "authentication_bypass",
+          "root_access",
+          "iot_security",
+          "legacy_systems"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24480",
+        "cvss": 8.7,
+        "product": "QGIS",
+        "description": "Remote Code Execution (RCE) and repository takeover vulnerability via GitHub Actions due to a \"pre-commit checks\" workflow using the `pull_request_target` trigger and executing untrusted pull request code in a privileged context.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "qgis",
+          "rce",
+          "github_actions",
+          "supply_chain",
+          "repository_takeover",
+          "privileged_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24480"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24477",
+        "cvss": 8.7,
+        "product": "AnythingLLM",
+        "description": "Qdrant API key leak via the `/api/setup-complete` endpoint to unauthenticated users, granting full read/write access to the Qdrant vector database instance and indirect leakage of confidential documents.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "anythingllm",
+          "api_key_leak",
+          "unauthenticated_access",
+          "qdrant",
+          "data_leakage",
+          "llm_security"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24477"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24486",
+        "cvss": 8.6,
+        "product": "Python-Multipart",
+        "description": "Path Traversal vulnerability allowing uploaded files to be written to arbitrary locations on the filesystem if non-default configuration options `UPLOAD_DIR` and `UPLOAD_KEEP_FILENAME=True` are used.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "python_multipart",
+          "path_traversal",
+          "arbitrary_file_write",
+          "file_upload"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24486"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-1448",
+        "cvss": 8.3,
+        "product": "D-Link DIR-615",
+        "description": "OS Command Injection vulnerability in the `/wiz_policy_3_machine.php` file of the web management interface through manipulation of the `ipaddr` argument. Remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "dir_615",
+          "os_command_injection",
+          "remote_exploitation",
+          "web_management_interface",
+          "router"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1448"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-24470",
+        "cvss": 8.1,
+        "product": "Skipper Ingress Controller",
+        "description": "Allows unauthorized access to internal services via ExternalName when Skipper is used as an Ingress controller, if users have permissions to create an Ingress and a Service of type ExternalName.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "skipper",
+          "ingress_controller",
+          "kubernetes",
+          "externalname",
+          "unauthorized_access",
+          "internal_services"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24470"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-0994",
+        "cvss": 8.0,
+        "product": "Google Protocol Buffers (Python implementation)",
+        "description": "Denial-of-Service (DoS) vulnerability in the `google.protobuf.json_format.ParseDict()` function that improperly enforces the `max_recursion_depth` limit for `Any` messages, allowing unbounded recursion and service crashes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "google_protobuf",
+          "python",
+          "dos",
+          "recursion_limit_bypass",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://securityonline.info/high-severity-dos-flaw-hits-google-protocol-buffers-cve-2026-0994/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": 7.8,
+        "product": "Microsoft Office (2016, 2019, LTSC 2021, LTSC 2024, Microsoft 365 Apps for Enterprise)",
+        "description": "Actively exploited Security Feature Bypass vulnerability in Microsoft Office. It allows an attacker to bypass security features locally by tricking a user into opening a malicious Office file.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft_office",
+          "zero_day",
+          "actively_exploited",
+          "security_feature_bypass",
+          "office_applications"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/",
+          "https://securityaffairs.com/187349/hacking/emergency-microsoft-update-fixes-in-the-wild-office-zero-day.html",
+          "https://thecyberexpress.com/microsoft-emergency-fix-for-office-zero-day/"
+        ],
+        "date": "2026-01-27"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Amatera Infostealer Campaigns and Badbox 2.0 Botnet Operation",
+        "description": "A new malicious campaign, dubbed ClickFix, uses mixed methods including fake CAPTCHAs and signed Microsoft App-V scripts to deploy the Amatera infostealer. The attack bypasses sandboxes, uses steganography to hide payloads in PNG images, and deploys Amatera, which collects browser data and credentials. Concurrently, the China-based Badbox 2.0 botnet infects over 2 million Android TV boxes via pre-installed malware or unofficial applications, primarily for advertising fraud. The Kimwolf group reportedly compromised the Badbox 2.0 control panel, indicating an interconnectedness of botnet operations.",
+        "threat_actor": "ClickFix operators (using Amatera infostealer), Kimwolf, Badbox 2.0 operators.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "asmeisvip[.]net",
+            "moyix[.]com",
+            "astrolink[.]cn",
+            "vmud[.]net",
+            "guilincloud[.]cn"
+          ],
+          "FILE_HASH_SHA256": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1027.003 (Obfuscated Files or Information: Steganography)",
+          "T1055 (Process Injection)",
+          "T1003 (OS Credential Dumping)",
+          "T1555 (Credentials from Password Stores)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1204.002 (User Execution: Malicious File)"
+        ],
+        "analyse": "These campaigns illustrate the increasing sophistication of evasion tactics (anti-sandbox, steganography) and the persistence of botnet threats on IoT devices. The interconnectedness between different malicious groups (Kimwolf and Badbox) shows a complex dynamic in cybercrime. The impact is the theft of sensitive information and the transformation of consumer devices into fraud infrastructure.",
+        "recommandations": [
+          "Restrict access to the Windows Run dialog via Group Policy.",
+          "Remove unused App-V components.",
+          "Enable PowerShell logging.",
+          "Monitor outbound connections for HTTP Host/TLS SNI inconsistencies.",
+          "Implement robust security for IoT devices.",
+          "Avoid installing applications from unofficial marketplaces."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "amatera",
+          "clickfix",
+          "botnet",
+          "badbox_2.0",
+          "kimwolf",
+          "android_tv_boxes",
+          "iot_security",
+          "steganography",
+          "powershell",
+          "advertising_fraud"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-clickfix-attacks-abuse-windows-app-v-scripts-to-push-malware/",
+          "https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Malicious Browser Extension Campaigns and \"Stanley\" Phishing Service",
+        "description": "A new malware-as-a-service (MaaS) offering called 'Stanley' allows the publication of malicious Chrome extensions on the Chrome Web Store, bypassing Google's review process. These extensions can overlay webpages with phishing iframes, silently auto-install on Chrome, Edge, and Brave, and send push notifications. Concurrently, an analysis of Chrome extensions reveals hidden dangers, including extensions granting clipboard permissions to untrusted external domains (allowing sensitive data read/write), exfiltrating cookies for session hijacking, using domain generation algorithms (DGAs) for C2 resilience, and hijacking searches.",
+        "threat_actor": "Stanley (MaaS operator), Unknown actors behind malicious extensions.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "codon[.]vn",
+            "hm.baidu[.]com",
+            "dpswebsafe[.]com",
+            "entiretrack[.]com"
+          ],
+          "URL": [
+            "http://www.dpswebsafe[.]com/rd/?q={searchTerms}",
+            "http://www.dpswebsafe[.]com/rd/?q={searchTerms}&type;=list",
+            "http://trk.entiretrack[.]com/trackerwcfsrv/tracker.svc/trackUpdate/?q="
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1189 (Drive-by Compromise)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1113 (Screen Capture)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1090.002 (Proxy: External Proxy)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "These campaigns target end-users through commonly used vectors (browsers, extensions), highlighting the persistence of phishing threats and the attackers' ingenuity in bypassing software platform security controls. The use of MaaS lowers the barrier to entry for cybercriminals, increasing the potential reach of attacks. The impact is the loss of sensitive data (credentials, financial information) and an increased risk of user system compromise.",
+        "recommandations": [
+          "Immediately uninstall suspicious extensions.",
+          "Use security solutions (e.g., Symantec Endpoint Security).",
+          "Do not install non-essential extensions.",
+          "Verify developer reputation and reviews.",
+          "Use multi-factor authentication (MFA).",
+          "Monitor network traffic for abnormal exfiltrations.",
+          "Restrict clipboard access for untrusted applications."
+        ],
+        "tags": [
+          "browser_extensions",
+          "phishing",
+          "malware_as_a_service",
+          "maas",
+          "chrome",
+          "edge",
+          "brave",
+          "data_theft",
+          "session_hijacking",
+          "dga",
+          "c2",
+          "supply_chain_attack",
+          "clipboard_access",
+          "cookie_exfiltration"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/",
+          "https://www.security.com/threat-intelligence/chrome-extensions-are-you-getting-more-you-bargained"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Advanced APT Campaigns and Ransomware Targeting Energy and Developers",
+        "description": "The Russia-linked Sandworm APT group is implicated in a major cyberattack on Poland's power grid in December 2025, utilizing the destructive DynoWiper malware. Concurrently, the North Korea-linked KONNI group is conducting a targeted phishing campaign against software developers and engineers (especially blockchain/crypto) in APAC, using fake project documents and an AI-generated PowerShell backdoor. Furthermore, the RansomHub group claimed a cyberattack against Luxshare, a major electronics manufacturer, asserting to have stolen 3D CAD models, circuit board designs, and other corporate data. A multi-stage phishing and BEC campaign also targeted the energy sector, abusing SharePoint links and inbox rules to steal credentials and conduct AiTM attacks and business email compromise.",
+        "threat_actor": "Sandworm, KONNI, RansomHub, Unknown actors behind the phishing/BEC campaign.",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [],
+          "URL": []
+        },
+        "mitre_ttps": [
+          "T1588.002 (Obtain Capabilities: Tool)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1055 (Process Injection)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1078 (Valid Accounts)",
+          "T1114.002 (Email Collection: Inbox Rule)",
+          "T1133 (External Remote Services)",
+          "T1546.003 (Event Triggered Execution: Windows Management Instrumentation Event Subscription)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1529 (System Shutdown/Reboot)"
+        ],
+        "analyse": "These incidents highlight the intense activity of state-sponsored APTs in espionage and destabilization (energy, developers), as well as the persistent threat of ransomware groups targeting industrial companies. The use of AI to generate malicious code marks an evolution in attacker capabilities. Sophisticated phishing campaigns, combined with AiTM techniques, remain a highly effective attack vector, threatening supply chain and communication security.",
+        "recommandations": [
+          "Implement phishing defense measures (training, advanced email filters).",
+          "Strengthen multi-factor authentication (MFA) and conditional access policies.",
+          "Regularly monitor and audit user inbox rules.",
+          "Revoke active sessions after compromise.",
+          "Update systems and apply security patches.",
+          "Isolate industrial (OT) networks from enterprise (IT) networks.",
+          "Enhance software supply chain security."
+        ],
+        "tags": [
+          "apt",
+          "state_sponsored",
+          "ransomware",
+          "phishing",
+          "bec",
+          "ait_m",
+          "energy_sector",
+          "critical_infrastructure",
+          "software_developers",
+          "ai_malware",
+          "supply_chain_security",
+          "poland",
+          "north_korea",
+          "russia",
+          "luxshare",
+          "checkpoint_research"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/26th-january-threat-intelligence-report/",
+          "https://securityaffairs.com/187332/cyber-crime/energy-sector-targeted-in-multi-stage-phishing-and-bec-campaign-using-sharepoint.html",
+          "https://securityaffairs.com/187317/apt/north-korea-linked-konni-uses-ai-to-build-stealthy-malware-tooling.html",
+          "https://securityaffairs.com/187309/breaking-news/russia-linked-sandworm-apt-implicated-in-major-cyber-attack-on-polands-power-grid.html"
+        ],
+        "date": "2026-01-27"
+      },
+      {
+        "title": "Software Supply Chain Attacks Targeting Developers and Repositories",
+        "description": "Malicious VS Code extensions, posing as AI assistants, were discovered exfiltrating source code and open files to China-based servers, with 1.5 million installs. Concurrently, a \"repo squatting\" campaign exploits a GitHub flaw to distribute malware appearing to come from official repositories (e.g., GitHub Desktop with HijackLoader malware). Additionally, \"G_Wagon\" malware is distributed via fake NPM packages (\"ansi-universal-ui\"), stealing browser credentials, cryptocurrency wallets, cloud credentials, and Discord tokens, using sophisticated DLL injection and chunked data exfiltration techniques.",
+        "threat_actor": "MaliciousCorgi, Actors behind \"repo squatting\" (using HijackLoader), G_Wagon operators.",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "aihao123[.]cn"
+          ],
+          "FILE_HASH_SHA256": []
+        },
+        "mitre_ttps": [
+          "T1548.002 (Bypass User Account Control)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1195 (Supply Chain Compromise)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1119 (Shared Webroot)",
+          "T1055 (Process Injection)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1003.001 (OS Credential Dumping: LSASS Memory)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1555 (Credentials from Password Stores)"
+        ],
+        "analyse": "These incidents highlight the growing vulnerability of the software supply chain and development environments, with attackers exploiting trust in tools and platforms. The impact is severe for companies and developers, ranging from intellectual property and sensitive data theft to account hijacking and cloud system compromise. The use of AI as a lure demonstrates increasing sophistication in social engineering techniques.",
+        "recommandations": [
+          "Thoroughly verify the authenticity of extensions and packages before installation.",
+          "Use SaaS Security Posture Management (SSPM) solutions.",
+          "Restrict extension permissions.",
+          "Implement secure development practices.",
+          "Monitor for abnormal data exfiltration and process activities.",
+          "Use granular access tokens and multi-factor authentication (2FA) for repositories."
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "developer_security",
+          "vs_code",
+          "npm",
+          "github",
+          "repo_squatting",
+          "malware",
+          "infostealer",
+          "source_code_theft",
+          "cloud_security",
+          "ai_themed_malware",
+          "process_injection",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://securityonline.info/g_wagon-malware-hides-in-fake-npm-ui-library-to-steal-cloud-keys/",
+          "https://securityonline.info/repo-squatting-how-hackers-are-using-githubs-own-features-to-hijack-official-repos/",
+          "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html"
+        ],
+        "date": "2026-01-27"
+      }
+    ]
+  }
+}
