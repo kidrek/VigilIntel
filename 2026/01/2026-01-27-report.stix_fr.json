@@ -1,0 +1,959 @@
+{
+  "type": "bundle",
+  "id": "bundle--ff3a2ba2-5325-470b-abd6-0e82b3980ec6",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T07:08:28.704562Z",
+      "modified": "2026-01-27T07:08:28.704562Z",
+      "name": "VigilIntel",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--12dd3bc4-5056-478f-b30e-ff409e5293a8",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Sandworm (Russia / Unit 74455 GRU)",
+      "labels": [
+        "APT",
+        "State-Sponsored",
+        "Russia",
+        "Wiper",
+        "Critical Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187309/breaking-news/russia-linked-sandworm-apt-implicated-in-major-cyber-attack-on-polands-power-grid.html"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--9ad7051a-049d-4c6b-966a-2b02ccda2859",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "(FR) Note : Sandworm (Russia / Unit 74455 GRU)",
+      "content": "Sector: Infrastructure Critique, Secteur Énergétique, Cible Géopolitique\n\nModus operandi:\nA déployé DynoWiper, un malware destructeur (Win32/KillFiles.NMO), lors d'une tentative de cyberattaque contre le réseau électrique polonais en décembre 2025. Les TTP présentent un chevauchement important avec les activités précédentes de Sandworm, indiquant une utilisation continue de malwares destructeurs ciblant les services critiques dans les pays alignés sur l'Occident.",
+      "object_refs": [
+        "threat-actor--12dd3bc4-5056-478f-b30e-ff409e5293a8"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--3cd30957-fec6-45f4-a765-1aa1c1db2cb4",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "KONNI (North Korea / Kimsuky)",
+      "labels": [
+        "APT",
+        "State-Sponsored",
+        "North Korea",
+        "AI-Generated Malware",
+        "Spear Phishing"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187317/apt/north-korea-linked-konni-uses-ai-to-build-stealthy-malware-tooling.html"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--b105fd86-f543-44f4-9311-a8b8b7585e6f",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "(FR) Note : KONNI (North Korea / Kimsuky)",
+      "content": "Sector: Développeurs de Logiciels, Blockchain, Cryptomonnaie, Région APAC\n\nModus operandi:\nMène des campagnes de spear-phishing ciblant les développeurs de logiciels avec de fausses documentations de projets liées à la blockchain/crypto. La campagne utilise un backdoor PowerShell généré par IA, caractérisé par une documentation verbeuse, une conception modulaire, des vérifications anti-analyse, un contournement de l'UAC et une évasion de Defender. La chaîne d'infection utilise un ZIP hébergé sur Discord contenant un fichier LNK et un leurre PDF, menant à l'exécution d'un chargeur PowerShell obfusqué. Le groupe déploie également des logiciels RMM (client SimpleHelp) pour la persistance et l'accès à distance.",
+      "object_refs": [
+        "threat-actor--3cd30957-fec6-45f4-a765-1aa1c1db2cb4"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--0ac23c75-561a-4c24-9f22-7e2d95b4fb70",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Hezbollah / Iran Qods Force",
+      "labels": [
+        "State-Sponsored",
+        "Terrorism",
+        "Organized Crime",
+        "Narcoterrorism",
+        "Geopolitical"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-1-3-anatomie-dune-implantation-strategique/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-2-3-les-architectes-dune-implantation-durable/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.portail-ie.fr/univers/2026/le-hezbollah-au-venezuela-partie-3-3-un-systeme-menace-mais-resilient/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--f5b20800-649d-4b66-b202-5da229f197b3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "(FR) Note : Hezbollah / Iran Qods Force",
+      "content": "Sector: Géopolitique, Systèmes Financiers, Trafic de Drogue, Logistique Militaire\n\nModus operandi:\nUtilise le Venezuela comme plateforme opérationnelle critique. La stratégie repose sur une intégration profonde dans les institutions étatiques vénézuéliennes (facilitateurs comme Tareck El Aissami et Ghazi Nasr al-Din) pour la fraude aux passeports, la couverture diplomatique et la logistique. Le financement est assuré par des activités illicites dans l'Arco Minero del Orinoco (commerce d'or illégal) et des méthodes sophistiquées de trafic de drogue ('cocaïne noire'). L'Unité 910 maintient des réseaux logistiques compartimentés s'étendant à travers l'Amérique latine et s'appuie sur le transfert de technologie militaire iranienne (drones Mohajer-6, bateaux Peykaap III). Le système est conçu pour survivre à un changement de régime.",
+      "object_refs": [
+        "threat-actor--0ac23c75-561a-4c24-9f22-7e2d95b4fb70"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--c32b8595-0e56-4eac-9a62-157c79fd796f",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CVE-2026-22709",
+      "description": "Une vulnérabilité critique d'évasion de sandbox dans vm2 permet à un attaquant de contourner l'environnement de sandbox et d'exécuter du code arbitraire sur la machine hôte. La faille réside dans la manière dont la sandbox gère les Promises JavaScript, en particulier la non-sanitarisation des fonctions de rappel de l'objet Promise global.\n\nCVSS: 9.8\n\nAffected product: vm2 (Node.js Sandbox Library)",
+      "labels": [
+        "vulnerability",
+        "Sandbox Escape",
+        "RCE",
+        "Node.js",
+        "Critical"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-22709"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/cvss-9-8-sandbox-escape-critical-vm2-flaw-exposes-millions-of-apps/"
+        }
+      ],
+      "x_cvss_base_score": "9.8",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--32fc135b-a12b-4560-9d5c-8a791c4a4732",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CVE-2026-21509",
+      "description": "Une vulnérabilité zero-day activement exploitée (contournement de fonction de sécurité) affectant plusieurs versions de Microsoft Office. Un attaquant doit envoyer un fichier Office malveillant et convaincre l'utilisateur de l'ouvrir pour contourner localement les fonctions de sécurité. Microsoft a publié des mises à jour d'urgence côté service pour Office 2021 et les versions ultérieures.\n\nCVSS: High\n\nAffected product: Microsoft Office (2016 to Microsoft 365 Apps)",
+      "labels": [
+        "vulnerability",
+        "Zero-Day",
+        "Actively Exploited",
+        "Microsoft Office",
+        "Security Bypass"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-21509"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187349/hacking/emergency-microsoft-update-fixes-in-the-wild-office-zero-day.html"
+        }
+      ],
+      "x_cvss_base_score": "High",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--64d4c8b4-6e28-4cb1-9f8c-fb2379cf4a78",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CVE-2026-24061",
+      "description": "Une vulnérabilité critique de contournement d'authentification dans telnetd permettant un accès distant non authentifié, affectant principalement les appareils IoT/hérités exposant Telnet. L'exploitation repose sur la fabrication de la variable d'environnement USER avec la chaîne \"-f root\" pendant l'initialisation de la session, permettant un accès shell root sans identifiants. Près de 800 000 serveurs Telnet sont exposés et les attaques sont en cours.\n\nCVSS: Critical\n\nAffected product: GNU InetUtils telnetd Server",
+      "labels": [
+        "vulnerability",
+        "Authentication Bypass",
+        "Telnet",
+        "IoT",
+        "Active Exploitation"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24061"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/"
+        }
+      ],
+      "x_cvss_base_score": "Critical",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--0ebbdf35-bec6-49e0-bec8-1fcf38733228",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CVE-2026-24479",
+      "description": "Vulnérabilité critique de Path Traversal (Zip Slip) dans les modules d'importation de problèmes, permettant à un attaquant d'écrire des fichiers dans des emplacements arbitraires du système de fichiers, conduisant à l'Exécution de Code à Distance (RCE) via le téléchargement d'une archive ZIP malveillante.\n\nCVSS: 9.3\n\nAffected product: HUSTOJ (Online Judge)",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "Path Traversal",
+        "Critical",
+        "Web Application"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24479"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-24479"
+        }
+      ],
+      "x_cvss_base_score": "9.3",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--dcc95b90-715b-4e2f-b4ea-5d408dfef3bb",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CVE-2026-24477",
+      "description": "Vulnérabilité de fuite de clé de haute gravité, où la clé API Qdrant peut être exposée en texte clair aux utilisateurs non authentifiés via le point de terminaison `/api/setup-complete`. Cela permet un accès complet en lecture/écriture à la base de connaissances centrale utilisée pour la Génération Augmentée par Récupération (RAG), risquant la fuite indirecte de documents confidentiels.\n\nCVSS: 8.7\n\nAffected product: AnythingLLM",
+      "labels": [
+        "vulnerability",
+        "AI",
+        "LLM",
+        "Data Leak",
+        "RAG"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24477"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-24477"
+        }
+      ],
+      "x_cvss_base_score": "8.7",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--eefb0449-4b60-49f7-96c8-279ca2a679b2",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Luxshare",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--038ba88e-fc5f-44de-b2a5-3c3cfa5f25f3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Breach: Luxshare",
+      "description": "Le groupe de ransomware RansomHub a revendiqué une cyberattaque, affirmant avoir volé des données propriétaires critiques, y compris des modèles CAO 3D et des schémas de cartes de circuits appartenant à Luxshare et à ses principaux clients.\n\nSector: Fabrication d'Électronique (fournisseur Apple, Nvidia, LG, Tesla)",
+      "labels": [
+        "Ransomware",
+        "Data Exfiltration",
+        "Manufacturing",
+        "Supply Chain"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://research.checkpoint.com/2026/26th-january-threat-intelligence-report/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e8d1f6df-d839-488b-8945-f6a8b926c3a0",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Crunchbase",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--efcda75f-bf68-4aae-892e-eb06da6f3f47",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Breach: Crunchbase",
+      "description": "Crunchbase a confirmé une violation de données après que le groupe cybercriminel ShinyHunters ait affirmé avoir volé plus de 2 millions de dossiers personnels et les avoir divulgués en ligne suite à une tentative d'extorsion ratée. La société a déclaré que l'incident était maîtrisé et que les opérations n'avaient pas été perturbées.\n\nSector: Renseignement Commercial/Données",
+      "labels": [
+        "Data Breach",
+        "Exfiltration",
+        "Cybercrime",
+        "Extortion"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187340/data-breach/shinyhunters-claims-2-million-crunchbase-records-company-confirms-breach.html"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a89171d0-85dc-42ab-be70-f152530b6bce",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Lena Health (Houston Methodist Hospital Clients)",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--618c1f65-334c-46f4-9794-1cdfef072565",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Breach: Lena Health (Houston Methodist Hospital Clients)",
+      "description": "L'acteur de la menace FulcrumSec a exposé les informations de santé personnelles (PHI) de 2 134 patients et 19 542 enregistrements/transcriptions audio de conversations médicales très sensibles avec un système d'« assistant numérique » IA. Les données étaient stockées dans une exportation de base de données non chiffrée sur un compartiment S3 public, exposant les données privées de patients âgés vulnérables.\n\nSector: Santé/Services d'IA",
+      "labels": [
+        "PHI",
+        "Healthcare",
+        "Data Leak",
+        "Misconfiguration",
+        "Cloud Security"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://databreaches.net/2026/01/26/125824/?pk_campaign=feed&pk_kwd=125824"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--d1e37e77-db5b-4064-a7c6-e7bc6bd028f7",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (FR)",
+      "content": "Sector: Gouvernement, Militaire, Aérospatial\n\nTheme: Lacunes dans la Capacité Européenne de Renseignement Géospatial (GEOINT)\n\nL'analyse souligne que les capacités européennes de Renseignement, Surveillance et Reconnaissance (ISR) spatiales restent fragmentées entre les actifs nationaux, de l'UE et de l'OTAN, manquant d'une architecture cohérente. Ce défi de gouvernance empêche l'efficacité opérationnelle et l'autonomie stratégique, une faiblesse critique renforcée par les conflits de haute intensité et les menaces hybrides. L'atteinte de l'autonomie nécessite des décisions de gouvernance fermes menant à une approche fédérative centrée sur l'UE.\n\nTags: GEOINT, EU, Strategic Autonomy, ISR\n\nSources:\n- https://www.iris-france.org/building-a-european-geospatial-intelligence-capability-mapping-initiatives-identifying-gaps-and-outlining-strategic-options/",
+      "object_refs": [
+        "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--1d07fffe-75fa-498d-b584-92642bb73513",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (FR)",
+      "content": "Sector: Guerre de l'Information, Médias, Défense\n\nTheme: Stratégie de Guerre Cognitive de la Russie utilisant les Jeux Vidéo en Afrique\n\nLa Russie exploite le 'militainment' (divertissement militaire) via des jeux vidéo comme 'African Dawn' (un mod de Hearts of Iron IV) comme outil de soft power et d'influence en Afrique. Cette stratégie vise à ancrer des narratifs pro-russes et anti-occidentaux auprès de la jeunesse africaine en utilisant des acteurs non étatiques (streamers, anciens affiliés de Wagner) pour contourner la résistance institutionnelle et créer une loyauté cognitive émotionnelle et durable. L'objectif est de redéfinir la libération nationale comme une alliance avec Moscou.\n\nTags: Russia, Influence Operation, Africa, Cognitive Warfare, Soft Power\n\nSources:\n- https://www.portail-ie.fr/univers/2026/jeux-videos-russes-en-afrique-de-la-diplomatie-culturelle-a-la-guerre-cognitive/",
+      "object_refs": [
+        "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Amatera MaaS Operators",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/new-clickfix-attacks-abuse-windows-app-v-scripts-to-push-malware/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--61030df6-2daa-4f12-82f0-8b51ff290b98",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1566.001 (SPEARPHISHING ATTACHMENT/LINK)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001 (SPEARPHISHING ATTACHMENT/LINK)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3266ed47-4be6-4056-b435-5ec96310f1e4",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1059.001 (POWERSHELL)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001 (POWERSHELL)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--91b9544f-f8bd-448f-9f0d-d5ee7de6cde9",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1027.003 (STEGANOGRAPHY)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.003 (STEGANOGRAPHY)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e424ac72-43dc-4be1-9d47-1c27470a1f9d",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1055 (PROCESS INJECTION)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055 (PROCESS INJECTION)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7ef9276c-259a-403f-9712-9cf13ff95aaf",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1204.002 (USER EXECUTION)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002 (USER EXECUTION)"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Nouvelles Attaques ClickFix Distribuants l'Infostealer Amatera via des Scripts App-V et la Stéganographie",
+      "description": "Une nouvelle campagne malveillante, nommée ClickFix, est utilisée pour déployer l'infostealer Amatera (un Malware-as-a-Service, basé sur ACR infostealer). La chaîne d'attaque est très évasive, commençant par un faux CAPTCHA pour inciter à l'exécution manuelle d'une commande via la boîte de dialogue Exécuter de Windows. Elle utilise des scripts Microsoft App-V signés et PowerShell pour masquer les charges utiles. Les étapes ultérieures récupèrent des charges utiles PowerShell chiffrées intégrées dans des images PNG hébergées sur des CDN publics via la stéganographie LSB pour une exécution entièrement en mémoire.\n\nAnalysis:\nCette campagne démontre des techniques anti-sandbox avancées (vérification de l'exécution manuelle et du contenu du presse-papiers) et un masquage sophistiqué des charges utiles via la stéganographie, rendant la détection difficile pour les outils de sécurité traditionnels. L'abus de composants Windows légitimes (App-V, WMI) est une technique clé pour l'évasion des défenses.\n\nRecommendations:\n- Restreindre l'accès à la boîte de dialogue Exécuter de Windows via une GPO et supprimer les composants App-V lorsqu'ils ne sont pas nécessaires.\n- Activer la journalisation avancée de PowerShell et surveiller les connexions sortantes pour détecter les incohérences entre l'en-tête Host HTTP/TLS SNI et l'IP de destination.",
+      "published": "2026-01-27T00:00:00Z",
+      "object_refs": [
+        "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+        "attack-pattern--61030df6-2daa-4f12-82f0-8b51ff290b98",
+        "attack-pattern--3266ed47-4be6-4056-b435-5ec96310f1e4",
+        "attack-pattern--91b9544f-f8bd-448f-9f0d-d5ee7de6cde9",
+        "attack-pattern--e424ac72-43dc-4be1-9d47-1c27470a1f9d",
+        "attack-pattern--7ef9276c-259a-403f-9712-9cf13ff95aaf"
+      ],
+      "labels": [
+        "Infostealer",
+        "MaaS",
+        "TTPs",
+        "Steganography",
+        "Defense Evasion"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Stanley MaaS Operators",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8a9e0d91-d857-481c-8b81-a0bc4885b7e3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1566.002 (SPEARPHISHING LINK)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002 (SPEARPHISHING LINK)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--aaec7c8b-5202-47be-b79c-9fba064bb24d",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1574.008 (BROWSER EXTENSIONS)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1574.008 (BROWSER EXTENSIONS)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7201cd71-a309-470a-aa2f-4c60d45ddbb3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1588.002 (TOOL/MALWARE)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1588.002 (TOOL/MALWARE)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d307152e-6cd4-4d5c-9ab0-5ca9ce9fe370",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "ATT&CK T1598.003 (STOLEN CONTENT)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003 (STOLEN CONTENT)"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "Nouveau Service MaaS 'Stanley' Garantit des Extensions Malveillantes sur le Chrome Web Store",
+      "description": "Stanley est une nouvelle offre de Malware-as-a-Service (MaaS) proposant des extensions Chrome malveillantes conçues pour contourner le processus de validation de Google et être publiées sur le Chrome Web Store. Ces extensions permettent des attaques de phishing faciles en interceptant la navigation et en recouvrant les pages web d'iframes contenant du contenu de phishing choisi par l'attaquant. Stanley garantit une auto-installation silencieuse sur les navigateurs Chrome, Edge et Brave.\n\nAnalysis:\nL'existence de Stanley souligne une défaillance critique dans le processus de validation du Chrome Web Store, permettant la distribution de modules complémentaires de navigateur d'apparence fiable mais hautement malveillants. L'utilisation d'iframes plein écran est une technique efficace et peu coûteuse pour le vol d'identifiants et le phishing à grande échelle.\n\nRecommendations:\n- Installer uniquement les extensions de navigateur essentielles, vérifier méticuleusement les avis des utilisateurs et confirmer la fiabilité de l'éditeur.\n- Utiliser des politiques de sécurité de navigateur au niveau de l'entreprise pour restreindre ou bloquer les extensions non approuvées.",
+      "published": "2026-01-27T00:00:00Z",
+      "object_refs": [
+        "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+        "attack-pattern--8a9e0d91-d857-481c-8b81-a0bc4885b7e3",
+        "attack-pattern--aaec7c8b-5202-47be-b79c-9fba064bb24d",
+        "attack-pattern--7201cd71-a309-470a-aa2f-4c60d45ddbb3",
+        "attack-pattern--d307152e-6cd4-4d5c-9ab0-5ca9ce9fe370"
+      ],
+      "labels": [
+        "MaaS",
+        "Phishing",
+        "Browser Extensions",
+        "Supply Chain Risk"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--bc637cbf-0d25-45c2-a284-aa6da5f80299",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "abstract": "Strategic analysis (FR)",
+      "content": "Le paysage des cybermenaces cette semaine est dominé par des opérations étatiques très sophistiquées et par l'émergence rapide de plateformes de cybercriminalité innovantes. Le groupe APT russe Sandworm a ciblé le secteur énergétique polonais avec un wiper destructeur (DynoWiper), soulignant que les infrastructures critiques sont des cibles primordiales dans les conflits géopolitiques. Simultanément, le groupe nord-coréen KONNI a démontré l'intégration pratique de l'IA/LLM pour générer des backdoors PowerShell furtives et modulaires, marquant une évolution dans les outils et les tactiques des APT. Sur le front de la cybercriminalité, de nouvelles offres de Malware-as-a-Service (MaaS), telles que 'Stanley' pour les extensions de navigateur de phishing et l'infostealer 'Amatera' distribué via de nouvelles méthodes ClickFix (exploitant des scripts App-V signés et la stéganographie), indiquent des chaînes d'attaque de plus en plus complexes et évasives. Des vulnérabilités de sécurité critiques incluent une évasion de sandbox CVSS 9.8 dans la populaire bibliothèque vm2 et l'exploitation active d'une vulnérabilité zero-day dans Microsoft Office (CVE-2026-21509), soulignant le risque persistant dans les logiciels omniprésents. L'analyse géopolitique a également révélé l'infrastructure profonde et résiliente établie par l'Iran et le Hezbollah au Venezuela, servant de plaque tournante opérationnelle et financière mondiale soutenue par la corruption étatique et le trafic illicite d'or et de drogue.",
+      "object_refs": [
+        "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a"
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--70ee1ea5-8d96-4fd3-afaa-dda8cb599cfa",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "name": "CTI Report (FR) - 2026-01-27",
+      "description": "Aggregated CTI report for language FR",
+      "published": "2026-01-27T00:00:00Z",
+      "object_refs": [
+        "threat-actor--12dd3bc4-5056-478f-b30e-ff409e5293a8",
+        "note--9ad7051a-049d-4c6b-966a-2b02ccda2859",
+        "threat-actor--3cd30957-fec6-45f4-a765-1aa1c1db2cb4",
+        "note--b105fd86-f543-44f4-9311-a8b8b7585e6f",
+        "threat-actor--0ac23c75-561a-4c24-9f22-7e2d95b4fb70",
+        "note--f5b20800-649d-4b66-b202-5da229f197b3",
+        "vulnerability--c32b8595-0e56-4eac-9a62-157c79fd796f",
+        "vulnerability--32fc135b-a12b-4560-9d5c-8a791c4a4732",
+        "vulnerability--64d4c8b4-6e28-4cb1-9f8c-fb2379cf4a78",
+        "vulnerability--0ebbdf35-bec6-49e0-bec8-1fcf38733228",
+        "vulnerability--dcc95b90-715b-4e2f-b4ea-5d408dfef3bb",
+        "incident--038ba88e-fc5f-44de-b2a5-3c3cfa5f25f3",
+        "identity--eefb0449-4b60-49f7-96c8-279ca2a679b2",
+        "incident--efcda75f-bf68-4aae-892e-eb06da6f3f47",
+        "identity--e8d1f6df-d839-488b-8945-f6a8b926c3a0",
+        "incident--618c1f65-334c-46f4-9794-1cdfef072565",
+        "identity--a89171d0-85dc-42ab-be70-f152530b6bce",
+        "note--d1e37e77-db5b-4064-a7c6-e7bc6bd028f7",
+        "note--1d07fffe-75fa-498d-b584-92642bb73513",
+        "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+        "report--a12af712-605a-457f-bfd1-97066834246f",
+        "note--bc637cbf-0d25-45c2-a284-aa6da5f80299"
+      ],
+      "labels": [
+        "cti-report",
+        "lang:fr"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c842240-15d7-4e6e-84ac-7f036100e7d7",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--12dd3bc4-5056-478f-b30e-ff409e5293a8",
+      "target_ref": "note--9ad7051a-049d-4c6b-966a-2b02ccda2859"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b985f8c3-7caf-4d7c-9c66-6fc5f8212eff",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--3cd30957-fec6-45f4-a765-1aa1c1db2cb4",
+      "target_ref": "note--b105fd86-f543-44f4-9311-a8b8b7585e6f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--feb8b333-eeee-471c-8de0-83b8c442b0ed",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--0ac23c75-561a-4c24-9f22-7e2d95b4fb70",
+      "target_ref": "note--f5b20800-649d-4b66-b202-5da229f197b3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ee8acac-8920-426e-aeb1-539cd33b2bca",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--038ba88e-fc5f-44de-b2a5-3c3cfa5f25f3",
+      "target_ref": "identity--eefb0449-4b60-49f7-96c8-279ca2a679b2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f51beb0d-a596-44e8-83a3-7d988dfbfa80",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--efcda75f-bf68-4aae-892e-eb06da6f3f47",
+      "target_ref": "identity--e8d1f6df-d839-488b-8945-f6a8b926c3a0"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b359060f-2aa0-4182-ac09-4ca050b2b5b3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--618c1f65-334c-46f4-9794-1cdfef072565",
+      "target_ref": "identity--a89171d0-85dc-42ab-be70-f152530b6bce"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b4d251ea-2d5d-4373-a5bf-9f2c38715494",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a3eafd55-35df-4a20-a2e6-6f079d28c48e",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "attack-pattern--61030df6-2daa-4f12-82f0-8b51ff290b98"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--aa643623-c3c9-4a76-8e0e-ac472d99fb1d",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "attack-pattern--3266ed47-4be6-4056-b435-5ec96310f1e4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--980df35a-de80-4332-85a0-99d6802bf74d",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "attack-pattern--91b9544f-f8bd-448f-9f0d-d5ee7de6cde9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd47ee32-1a63-40a8-9ba4-61fda9a713c2",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "attack-pattern--e424ac72-43dc-4be1-9d47-1c27470a1f9d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d87ac004-eaf6-4fbc-80f0-6babff59ff4b",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da749996-fc8c-4700-bdb1-fe23de3c91d9",
+      "target_ref": "attack-pattern--7ef9276c-259a-403f-9712-9cf13ff95aaf"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--48290d77-5a9b-40fd-b1e7-a299f9384900",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "target_ref": "attack-pattern--61030df6-2daa-4f12-82f0-8b51ff290b98"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6650bda8-69e8-400a-ae0d-97c648b00a4d",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "target_ref": "attack-pattern--3266ed47-4be6-4056-b435-5ec96310f1e4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--de30328a-bdf0-4e17-a8eb-4e9b35a7eba5",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "target_ref": "attack-pattern--91b9544f-f8bd-448f-9f0d-d5ee7de6cde9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--61078b3d-26b2-4a38-a61e-2f38c0c41167",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "target_ref": "attack-pattern--e424ac72-43dc-4be1-9d47-1c27470a1f9d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ed88440-0015-4c80-9c35-edde0f640215",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1f3afffd-fee3-4322-a11b-04697ab4c3d0",
+      "target_ref": "attack-pattern--7ef9276c-259a-403f-9712-9cf13ff95aaf"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2c05367d-73cb-49e8-be51-3e1d1025858f",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "target_ref": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--de9fc9fd-63f4-4596-8311-3fee41ff10fe",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "target_ref": "attack-pattern--8a9e0d91-d857-481c-8b81-a0bc4885b7e3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3995661a-3393-4420-a308-08e9c91892a3",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "target_ref": "attack-pattern--aaec7c8b-5202-47be-b79c-9fba064bb24d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7a5ce951-7e9b-4593-b840-f870f2439539",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "target_ref": "attack-pattern--7201cd71-a309-470a-aa2f-4c60d45ddbb3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--53481397-9bac-4689-b619-c96f35f9fa1c",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--a12af712-605a-457f-bfd1-97066834246f",
+      "target_ref": "attack-pattern--d307152e-6cd4-4d5c-9ab0-5ca9ce9fe370"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--558d7141-89ca-4a56-b81d-6973f32c504b",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+      "target_ref": "attack-pattern--8a9e0d91-d857-481c-8b81-a0bc4885b7e3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7eecd3a5-52e7-48ac-aa74-81b27ac6f4aa",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+      "target_ref": "attack-pattern--aaec7c8b-5202-47be-b79c-9fba064bb24d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--02da2eb4-6bc7-4f4e-acfe-c6a55c7aad99",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+      "target_ref": "attack-pattern--7201cd71-a309-470a-aa2f-4c60d45ddbb3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--03297db8-4c33-48ca-a5b3-b1390a3327a5",
+      "created_by_ref": "identity--2c6c00c6-a09a-48b2-9cb1-bbbd039a270a",
+      "created": "2026-01-27T00:00:00.000Z",
+      "modified": "2026-01-27T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1e444dab-1dd7-4bb0-814c-e18fd4d84449",
+      "target_ref": "attack-pattern--d307152e-6cd4-4d5c-9ab0-5ca9ce9fe370"
+    }
+  ]
+}

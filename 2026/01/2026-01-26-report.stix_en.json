@@ -1,0 +1,882 @@
+{
+  "type": "bundle",
+  "id": "bundle--5eedb347-cddb-46ee-a41f-13f94fdaabba",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T07:59:04.475377Z",
+      "modified": "2026-01-26T07:59:04.475377Z",
+      "name": "VigilIntel",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--216269ec-e870-4f0c-8b9f-81b673e11211",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Osiris Ransomware",
+      "labels": [
+        "Ransomware",
+        "BYOVD",
+        "LOTE",
+        "RaaS"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/osiris-rises-new-ransomware-targets-southeast-asian-food-giant-with-advanced-tactics/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187290/breaking-news/security-affairs-newsletter-round-560-by-pierluigi-paganini-international-edition.html"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--6fd8d8a4-2654-4a78-9c31-3ed25f0a60fc",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "(EN) Note : Osiris Ransomware",
+      "content": "Sector: Food Service, potentially broader industries in Southeast Asia.\n\nModus operandi:\nNew sophisticated Ransomware-as-a-Service (RaaS) family. Uses 'Living Off The Land' (LOTE) tools and leverages the Poortry malicious driver (BYOVD technique) to disable security software at the kernel level before initiating encryption. Shares tradecraft with Inc and Medusa ransomware groups.",
+      "object_refs": [
+        "threat-actor--216269ec-e870-4f0c-8b9f-81b673e11211"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--2f15d115-41af-4b03-8faf-520d450f775f",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "WorldLeaks",
+      "labels": [
+        "Data Extortion",
+        "Cybercrime",
+        "Ransomware Rebrand"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://mastodon.social/@netsecio/115958933004070834"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--f197b17f-3532-4828-aeff-9a0c8ab5093b",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "(EN) Note : WorldLeaks",
+      "content": "Sector: Retail, Apparel, Global Enterprise\n\nModus operandi:\nExtortion-focused cybercrime group that re-emerged in 2025 after rebranding from the Hunters International ransomware gang. Focuses entirely on data theft and threatening public leaks to pressure victims into paying, abandoning file encryption.",
+      "object_refs": [
+        "threat-actor--2f15d115-41af-4b03-8faf-520d450f775f"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--19e69bcc-2792-474a-b022-5b57525117a3",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "RansomHub",
+      "labels": [
+        "Ransomware",
+        "RaaS",
+        "Extortion",
+        "Manufacturing"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--eef00d1f-fee0-44d8-9c5e-60a8d1790375",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "(EN) Note : RansomHub",
+      "content": "Sector: Electronics Manufacturing\n\nModus operandi:\nRansomware-as-a-Service (RaaS) affiliate group known for data theft and extortion. Claimed a breach against a major Apple partner, Luxshare Precision Industry, involving the theft and encryption of sensitive data.",
+      "object_refs": [
+        "threat-actor--19e69bcc-2792-474a-b022-5b57525117a3"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--050ee389-7c2e-42b4-b385-c4e802c6e653",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "CVE-2026-23988",
+      "description": "Vulnérabilité de gravité élevée exploitant une condition de concurrence TOCTOU ('Time-of-Check Time-of-Use') dans Rufus, un utilitaire de création de clés USB amorçables. Permet à un utilisateur local peu privilégié de détourner l'application pendant son exécution (alors qu'elle fonctionne avec des droits d'administrateur) en remplaçant un script légitime dans le répertoire temporaire (%TEMP%), entraînant une exécution de code arbitraire et une élévation de privilèges.\n\nCVSS: 7.8 (High)\n\nAffected product: Rufus Utility",
+      "labels": [
+        "vulnerability",
+        "LPE",
+        "TOCTOU",
+        "Utility"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-23988"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/booting-up-malware-critical-flaw-in-rufus-grants-admin-access-cve-2026-23988/"
+        }
+      ],
+      "x_cvss_base_score": "7.8 (High)",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--4c9f572a-2b7e-48e5-b276-a546a17d5faf",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "N/A (PYTHON PLY RCE)",
+      "description": "Vulnérabilité critique d'exécution de code à distance (RCE) découverte dans la bibliothèque d'analyse Python PLY, dont la maintenance a été abandonnée. La faille implique une fonctionnalité non documentée permettant au paramètre 'picklefile' de forcer une désérialisation non sécurisée via `pickle.load()`. Un attaquant contrôlant le fichier d'entrée peut exécuter des commandes système arbitraires pendant l'initialisation de l'analyseur. Aucun correctif officiel ne sera publié en raison de l'abandon du projet.\n\nCVSS: 9.8 (Critical)\n\nAffected product: PLY (Python Lex-Yacc) Library",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "Deserialization",
+        "Supply Chain",
+        "Python"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "N/A (PYTHON PLY RCE)"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/ghost-in-the-code-critical-rce-found-in-abandoned-python-ply-library-cvss-9-8/"
+        }
+      ],
+      "x_cvss_base_score": "9.8 (Critical)",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--44dcd99a-b757-4562-b5eb-4d1a8648f3f1",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "CVE-2025-67968",
+      "description": "Faille de sécurité critique dans le plugin RealHomes CRM, utilisé par plus de 30 000 sites WordPress. La vulnérabilité permet à tout utilisateur ayant le rôle 'Abonné' (ou supérieur) de télécharger des fichiers, conduisant à l'injection de code arbitraire et à une prise de contrôle totale potentielle du site, en raison de l'absence de vérification des permissions lors de l'action de téléchargement AJAX.\n\nCVSS: 9.9 (Critical)\n\nAffected product: RealHomes CRM plugin (WordPress)",
+      "labels": [
+        "vulnerability",
+        "WordPress",
+        "RCE",
+        "File Upload"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-67968"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/cve-2025-67968-cvss-9-9-critical-flaw-in-real-estate-theme-exposes-30000-sites-to-takeover/"
+        }
+      ],
+      "x_cvss_base_score": "9.9 (Critical)",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--6fa15343-0e5e-453f-b086-7b146ee985e0",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "CVE-2026-1420",
+      "description": "Dépassement de tampon dans la fonction /goform/WifiExtraSet du routeur Tenda AC23, causé par la manipulation de l'argument 'wpapsk_crypto'. L'exploitation à distance est possible, et un exploit public (PoC) a été publié.\n\nCVSS: 9.0 (High)\n\nAffected product: Tenda AC23 16.03.07.52 Router",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "IoT",
+        "Buffer Overflow"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-1420"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-1420"
+        }
+      ],
+      "x_cvss_base_score": "9.0 (High)",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--988fb6de-a433-46a1-aa88-34c6986a989e",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "CVE-2026-24656",
+      "description": "Faille de désérialisation de données non fiables dans le collecteur de socket de journal Decanter (port 4560), qui écoute sans authentification. Cette vulnérabilité permet à un attaquant distant non authentifié d'envoyer des données non fiables, entraînant une condition de déni de service (DoS) en faisant planter le service. L'impact est limité aux systèmes où ce composant a été explicitement installé.\n\nCVSS: N/A\n\nAffected product: Apache Karaf Decanter",
+      "labels": [
+        "vulnerability",
+        "DoS",
+        "Deserialization",
+        "Apache"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24656"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/cve-2026-24656-deserialization-flaw-in-apache-karaf-exposes-systems-to-dos/"
+        }
+      ],
+      "x_cvss_base_score": "N/A",
+      "x_cvss_version": "3.1"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--72fb7b47-6cd7-46ab-bd8e-55fde4986b31",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "name": "Nike",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--fad2b30f-3767-4843-9ce4-e142f6be34a5",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "name": "Breach: Nike",
+      "description": "Nike is investigating a potential cyber incident after the WorldLeaks extortion group claimed to have accessed and stolen data from the company's systems. The scope and impact of the alleged breach are under investigation.\n\nSector: Retail, Apparel",
+      "labels": [
+        "Data Theft",
+        "Extortion",
+        "Retail"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://mastodon.social/@netsecio/115958933004070834"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--7fdaeefb-d62c-47d1-a152-d466e6e97aa7",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "name": "Luxshare Precision Industry (Apple Partner)",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--d256db56-b6a9-43c1-83e3-61aa65f85fb0",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "name": "Breach: Luxshare Precision Industry (Apple Partner)",
+      "description": "The RansomHub ransomware group claimed to have breached the Chinese electronics manufacturer and Apple partner, Luxshare, and subsequently leaked a substantial amount of stolen and encrypted sensitive corporate data.\n\nSector: Electronics Manufacturing",
+      "labels": [
+        "Ransomware",
+        "Data Leak",
+        "Supply Chain"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--8e2c4c2c-f1a5-4cce-ba1c-27970f89277b",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Urological Diagnostic Institute (IDU), Chile",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--f93a5fca-5b23-40f5-bf5d-2b47aff76eed",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Breach: Urological Diagnostic Institute (IDU), Chile",
+      "description": "The Chilean Urological Diagnostic Institute (IDU) exposed 23GB of patient information (approx. 15,000 PDF files) on an unsecured server. The exposed data included sensitive PII and medical examination results (urinalysis, RUT, names, ages). The vulnerability was reported in November 2025 and closed in January 2026.\n\nSector: Healthcare (Diagnostics)",
+      "labels": [
+        "Healthcare",
+        "Misconfiguration",
+        "PII",
+        "Chile"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://infosec.exchange/@chum1ng0/115958967328185991"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--c366b611-2351-4c50-92bc-9704d92fcf18",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Under Armour",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--2b9314d1-e0f9-4b82-8bf8-dc6f16990efd",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Breach: Under Armour",
+      "description": "The Everest ransomware group leaked 343GB of customer data allegedly stolen from Under Armour, following an unsuccessful extortion attempt. The data dump contains PII of millions of customers, confirming an earlier breach claim.\n\nSector: Retail, Apparel",
+      "labels": [
+        "Ransomware",
+        "Data Leak",
+        "PII",
+        "Retail"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://mastodon.social/@netsecio/115958933365190987"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187303/data-breach/nike-is-investigating-a-possible-data-breach-after-worldleaks-claims.html"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--d674d20f-7a24-4a58-8b2a-aa4d26bb5a93",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Government, Critical Infrastructure (UK)\n\nTheme: Persistent Pro-Russian Hacktivism\n\nThe UK National Cyber Security Centre (NCSC) reported ongoing cyber operations by Russian-aligned hacktivist groups targeting UK organizations and critical infrastructure sectors. These operations typically focus on disruption and DDoS activities, maintaining a state of low-level, continuous cyber conflict.\n\nTags: Russia, Hacktivism, DDoS, UK\n\nSources:\n- https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/",
+      "object_refs": [
+        "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--527ca444-5c40-4ffa-8064-1b2294358e59",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Technology, Consumer Electronics, AI/Metaverse\n\nTheme: Intellectual Property Litigation Impacting Technology Rollout\n\nSolos Technology initiated a patent infringement lawsuit against Meta (Ray-Ban Meta smart glasses) and EssilorLuxottica, alleging misappropriation of patented smart eyewear technologies. Solos seeks billions in damages and a permanent injunction that could halt the sales of Meta's popular hardware, posing a significant risk to Reality Labs' strategic shift towards lightweight AI eyewear.\n\nTags: Patent Infringement, Metaverse, Smart Wearables, Litigation\n\nSources:\n- https://securityonline.info/the-multi-billion-dollar-suit-solos-technology-aims-to-halt-ray-ban-meta-sales/",
+      "object_refs": [
+        "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Osiris Ransomware Group",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/osiris-rises-new-ransomware-targets-southeast-asian-food-giant-with-advanced-tactics/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7bd0ef79-4d73-4b19-a86d-8a5132af2c68",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1562.001 - DISABLE OR MODIFY TOOLS",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001 - DISABLE OR MODIFY TOOLS"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d344df0d-5bd8-4673-800e-a5976b1012b6",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1543.003 - CREATE OR MODIFY SYSTEM PROCESS: WINDOWS SERVICE",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1543.003 - CREATE OR MODIFY SYSTEM PROCESS: WINDOWS SERVICE"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9afd309f-52d0-4b4b-930e-7d656d895248",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1053 - SCHEDULED TASK/JOB (LOTE)",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053 - SCHEDULED TASK/JOB (LOTE)"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--43ffa591-c3f2-472c-b5ef-6cc0f96a32eb",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1070.004 - FILE DELETION",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004 - FILE DELETION"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Osiris Ransomware uses BYOVD (Poortry) for kernel-level security evasion",
+      "description": "The newly identified Osiris ransomware utilizes a sophisticated attack chain involving the Poortry malicious driver. This driver, previously associated with the Medusa gang, is deployed via the Bring Your Own Vulnerable Driver (BYOVD) technique. Its purpose is to masquerade as a legitimate antivirus component to disable Endpoint Detection and Response (EDR) and other security software from the kernel level, ensuring uninterrupted operation before encryption.\n\nAnalysis:\nThe use of BYOVD reflects a rising trend among elite ransomware groups aiming to defeat modern security stacks that rely heavily on kernel-level monitoring. This tactic significantly increases the complexity of defense and requires security teams to maintain strict control over which signed drivers are permitted to run on corporate endpoints.\n\nRecommendations:\n- Implement and strictly enforce Microsoft's recommended driver block list policies (or vendor equivalents) to prevent known malicious or vulnerable drivers (like Poortry) from loading.\n- Monitor and audit kernel-level activities and anomalous process termination events, especially database services (SQL, Oracle) and productivity applications (Excel, Word) which are often targeted before encryption.",
+      "published": "2026-01-26T00:00:00Z",
+      "object_refs": [
+        "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+        "attack-pattern--7bd0ef79-4d73-4b19-a86d-8a5132af2c68",
+        "attack-pattern--d344df0d-5bd8-4673-800e-a5976b1012b6",
+        "attack-pattern--9afd309f-52d0-4b4b-930e-7d656d895248",
+        "attack-pattern--43ffa591-c3f2-472c-b5ef-6cc0f96a32eb"
+      ],
+      "labels": [
+        "Ransomware",
+        "Evasion",
+        "BYOVD",
+        "Critical Threat"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--613e4de0-546f-40d7-bc04-8bd156db16a9",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Unknown, likely multiple financially motivated groups",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.helpnetsecurity.com/2026/01/25/week-in-review-fully-patched-fortigate-firewalls-are-getting-compromised-attackers-probe-cisco-rce-flaw/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1171f528-b403-4222-b3b9-91571fafb06f",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1190 - EXPLOIT PUBLIC-FACING APPLICATION",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190 - EXPLOIT PUBLIC-FACING APPLICATION"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--60a43db4-b354-4c65-b282-a3f7f2841d13",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "ATT&CK T1562.007 - DISABLE OR MODIFY TOOLS: NETWORK BOUNDARY DEFENSE",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.007 - DISABLE OR MODIFY TOOLS: NETWORK BOUNDARY DEFENSE"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--583546d7-f5eb-4619-8e80-55e1d3107721",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "Active Exploitation of FortiGate and Cisco Critical Vulnerabilities",
+      "description": "Attackers are actively probing and attempting to exploit a critical Remote Code Execution (RCE) vulnerability in Cisco's unified communications products (CVE-2026-20045). Concurrently, incidents persist where fully patched FortiGate firewalls are compromised, suggesting that the authentication bypass flaw (CVE-2025-59718) may either be more persistent or that threat actors are leveraging related, unfixed vectors.\n\nAnalysis:\nThe rapid targeting of high-impact vulnerabilities in edge devices (firewalls, communications platforms) confirms that perimeter security appliances remain a preferred initial access vector for sophisticated groups. The continued reports regarding FortiGate suggest that organizations should verify patch efficacy through deep configuration audits and behavioral monitoring, rather than relying solely on version numbers.\n\nRecommendations:\n- Immediately apply the patches for Cisco's unified communications solutions (CVE-2026-20045) and ensure rigorous verification of successful deployment.\n- For FortiGate users, conduct configuration reviews and integrity checks beyond standard patching to confirm that the CVE-2025-59718 vulnerability has not left lingering backdoors or persistent access methods.",
+      "published": "2026-01-26T00:00:00Z",
+      "object_refs": [
+        "threat-actor--613e4de0-546f-40d7-bc04-8bd156db16a9",
+        "attack-pattern--1171f528-b403-4222-b3b9-91571fafb06f",
+        "attack-pattern--60a43db4-b354-4c65-b282-a3f7f2841d13"
+      ],
+      "labels": [
+        "Vulnerability Exploitation",
+        "Edge Device",
+        "Cisco",
+        "FortiGate"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--3bf2f7ab-d9df-4868-8d43-ed53278ef301",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "abstract": "Strategic analysis (EN)",
+      "content": "The threat landscape is defined by the emergence of highly sophisticated ransomware variants, notably 'Osiris,' which employs advanced tactics such as Bring Your Own Vulnerable Driver (BYOVD) for kernel-level security evasion. Data extortion remains a primary focus for cybercrime groups like WorldLeaks and RansomHub, confirming the ongoing shift away from pure encryption. Furthermore, the discovery of critical flaws in widely deployed tools (Rufus utility, Python PLY library) highlights systemic risks posed by supply chain dependencies and inadequate security checks (TOCTOU, unsafe deserialization). Organizations must prioritize defense against privilege escalation vectors and ensure immediate patching of critical vulnerabilities in common utilities and infrastructure components (Cisco, FortiGate).",
+      "object_refs": [
+        "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9"
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c4fc0f48-59de-47ae-91c2-2f1050644b5e",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "name": "CTI Report (EN) - 2026-01-26",
+      "description": "Aggregated CTI report for language EN",
+      "published": "2026-01-26T00:00:00Z",
+      "object_refs": [
+        "threat-actor--216269ec-e870-4f0c-8b9f-81b673e11211",
+        "note--6fd8d8a4-2654-4a78-9c31-3ed25f0a60fc",
+        "threat-actor--2f15d115-41af-4b03-8faf-520d450f775f",
+        "note--f197b17f-3532-4828-aeff-9a0c8ab5093b",
+        "threat-actor--19e69bcc-2792-474a-b022-5b57525117a3",
+        "note--eef00d1f-fee0-44d8-9c5e-60a8d1790375",
+        "vulnerability--050ee389-7c2e-42b4-b385-c4e802c6e653",
+        "vulnerability--4c9f572a-2b7e-48e5-b276-a546a17d5faf",
+        "vulnerability--44dcd99a-b757-4562-b5eb-4d1a8648f3f1",
+        "vulnerability--6fa15343-0e5e-453f-b086-7b146ee985e0",
+        "vulnerability--988fb6de-a433-46a1-aa88-34c6986a989e",
+        "incident--fad2b30f-3767-4843-9ce4-e142f6be34a5",
+        "identity--72fb7b47-6cd7-46ab-bd8e-55fde4986b31",
+        "incident--d256db56-b6a9-43c1-83e3-61aa65f85fb0",
+        "identity--7fdaeefb-d62c-47d1-a152-d466e6e97aa7",
+        "incident--f93a5fca-5b23-40f5-bf5d-2b47aff76eed",
+        "identity--8e2c4c2c-f1a5-4cce-ba1c-27970f89277b",
+        "incident--2b9314d1-e0f9-4b82-8bf8-dc6f16990efd",
+        "identity--c366b611-2351-4c50-92bc-9704d92fcf18",
+        "note--d674d20f-7a24-4a58-8b2a-aa4d26bb5a93",
+        "note--527ca444-5c40-4ffa-8064-1b2294358e59",
+        "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+        "report--583546d7-f5eb-4619-8e80-55e1d3107721",
+        "note--3bf2f7ab-d9df-4868-8d43-ed53278ef301"
+      ],
+      "labels": [
+        "cti-report",
+        "lang:en"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--62e5f97a-fcc6-42bc-9f1b-92d1bf82a616",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--216269ec-e870-4f0c-8b9f-81b673e11211",
+      "target_ref": "note--6fd8d8a4-2654-4a78-9c31-3ed25f0a60fc"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--644104dd-7a89-4432-aab8-58c244c54ff2",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--2f15d115-41af-4b03-8faf-520d450f775f",
+      "target_ref": "note--f197b17f-3532-4828-aeff-9a0c8ab5093b"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bbe71af1-b1b5-4c83-a793-83d03b51e013",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--19e69bcc-2792-474a-b022-5b57525117a3",
+      "target_ref": "note--eef00d1f-fee0-44d8-9c5e-60a8d1790375"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8d8110b4-160e-4c22-ac71-fbcbeb687f58",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--fad2b30f-3767-4843-9ce4-e142f6be34a5",
+      "target_ref": "identity--72fb7b47-6cd7-46ab-bd8e-55fde4986b31"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c5507b43-5ca2-4257-add2-69245e4dcb2e",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-25T00:00:00.000Z",
+      "modified": "2026-01-25T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--d256db56-b6a9-43c1-83e3-61aa65f85fb0",
+      "target_ref": "identity--7fdaeefb-d62c-47d1-a152-d466e6e97aa7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--46d2fd5b-bccc-4681-ad91-f0e274e41136",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--f93a5fca-5b23-40f5-bf5d-2b47aff76eed",
+      "target_ref": "identity--8e2c4c2c-f1a5-4cce-ba1c-27970f89277b"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c8e1968e-a19c-43a7-b619-4057ec21c18a",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--2b9314d1-e0f9-4b82-8bf8-dc6f16990efd",
+      "target_ref": "identity--c366b611-2351-4c50-92bc-9704d92fcf18"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--157183d0-fe4f-4796-8511-5e07d78b6f42",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "target_ref": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--582dc8af-2f6a-4c4c-bafd-08a65d7bbcdb",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "target_ref": "attack-pattern--7bd0ef79-4d73-4b19-a86d-8a5132af2c68"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7746b013-057e-4281-bdfd-772dd2c664a1",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "target_ref": "attack-pattern--d344df0d-5bd8-4673-800e-a5976b1012b6"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--83690b65-8aa3-479e-b3c4-02ab8fd60465",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "target_ref": "attack-pattern--9afd309f-52d0-4b4b-930e-7d656d895248"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ae63a1ea-92bf-405f-833d-c943a774db00",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--c96752d3-f7df-4dbf-b715-b542fea861c0",
+      "target_ref": "attack-pattern--43ffa591-c3f2-472c-b5ef-6cc0f96a32eb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--94c2291e-7b02-4896-a8f9-1e0b3e660d39",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+      "target_ref": "attack-pattern--7bd0ef79-4d73-4b19-a86d-8a5132af2c68"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8ce46192-b140-45e1-be89-0db4019dc558",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+      "target_ref": "attack-pattern--d344df0d-5bd8-4673-800e-a5976b1012b6"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fb874e26-5566-4568-aa5a-53e06a0081d8",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+      "target_ref": "attack-pattern--9afd309f-52d0-4b4b-930e-7d656d895248"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7937d8c7-4d7b-4a2a-ac6e-6d46d2dcab55",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--05ad7fa5-d179-48a0-bd35-587424e09130",
+      "target_ref": "attack-pattern--43ffa591-c3f2-472c-b5ef-6cc0f96a32eb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c7360129-4694-4a20-ac53-e1f485475edb",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--583546d7-f5eb-4619-8e80-55e1d3107721",
+      "target_ref": "threat-actor--613e4de0-546f-40d7-bc04-8bd156db16a9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adcc2e90-ab89-4f38-9f01-d6566a4fd3c3",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--583546d7-f5eb-4619-8e80-55e1d3107721",
+      "target_ref": "attack-pattern--1171f528-b403-4222-b3b9-91571fafb06f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ffe64c38-ad7d-4d9c-8a86-682620a54603",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--583546d7-f5eb-4619-8e80-55e1d3107721",
+      "target_ref": "attack-pattern--60a43db4-b354-4c65-b282-a3f7f2841d13"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e397def-de0d-4522-a627-3967b9d5de3f",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--613e4de0-546f-40d7-bc04-8bd156db16a9",
+      "target_ref": "attack-pattern--1171f528-b403-4222-b3b9-91571fafb06f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3c1f83bd-86e9-4390-ab92-30da6631390c",
+      "created_by_ref": "identity--7e2aeea3-d119-47d2-a49a-23d62d9871f9",
+      "created": "2026-01-26T00:00:00.000Z",
+      "modified": "2026-01-26T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--613e4de0-546f-40d7-bc04-8bd156db16a9",
+      "target_ref": "attack-pattern--60a43db4-b354-4c65-b282-a3f7f2841d13"
+    }
+  ]
+}
