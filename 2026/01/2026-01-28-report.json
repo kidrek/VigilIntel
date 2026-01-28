@@ -1,0 +1,2887 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber au début de l'année 2026 est caractérisé par une intensification et une sophistication des attaques, exploitant un mélange de vulnérabilités connues (N-day) et de zero-days. Une tendance majeure est l'exploitation rapide et opportuniste de ces failles par un large éventail d'acteurs, allant des groupes parrainés par des États à des cybercriminels financièrement motivés. Des vulnérabilités critiques dans des logiciels largement utilisés tels que Microsoft Office, WinRAR, Fortinet FortiCloud SSO, vm2 Node.js, SmarterMail, D-Link et Dokploy sont activement exploitées pour obtenir un accès initial, contourner les authentifications, élever les privilèges ou exécuter du code à distance.\n\nLes attaques de la chaîne d'approvisionnement restent une préoccupation majeure, comme l'illustre la compromission du package `eslint-config-prettier`. Les acteurs géopolitiques (groupes russes, chinois, Mustang Panda) continuent de mener des campagnes d'espionnage, utilisant des leurres sophistiqués et des backdoors avancées (CoolClient, ToneShell) pour la collecte de données et la surveillance ciblée d'entités gouvernementales, militaires et technologiques. Parallèlement, le cybercrime financier persiste, avec des groupes comme Tren de Aragua ciblant les distributeurs automatiques de billets avec des malwares de 'jackpotting' et d'autres groupes utilisant des RATs (Amnesia RAT, XWorm, AsyncRAT) et des infostealers pour le vol de données d'identification et l'extorsion.\n\nL'intelligence artificielle (IA) présente un double enjeu : si elle promet des avancées en matière de sécurité, elle soulève également des préoccupations grandissantes. D'une part, l'exploitation de l'IA par les attaquants pour créer des outils malveillants plus efficaces est une menace émergente. D'autre part, la sécurité des agents IA eux-mêmes (comme Moltbot) et les risques liés à la prolifération d'applications basées sur l'IA (par exemple, les applications de 'nudification' et l'utilisation des données publicitaires par les agences gouvernementales) posent de nouveaux défis éthiques et de confidentialité. Les menaces mobiles sur Android sont également en hausse, avec des applications frauduleuses et des techniques de 'NFC skimming' pour le vol financier.\n\nSur le plan géopolitique, les tensions autour de l'Arctique, la dépendance vis-à-vis de Taïwan pour la production de puces IA, la compétition technologique entre les États-Unis et la Chine, et les implications de l'IA sur les économies mondiales, continuent d'influencer les stratégies de défense et d'attaque cybernétique. L'état général des menaces est donc celui d'une escalade, où la réactivité face aux vulnérabilités, la résilience face aux campagnes ciblées et l'anticipation des risques liés aux nouvelles technologies sont plus que jamais cruciales.",
+      "date": "2026-01-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "secteur": "Gouvernement (Myanmar, Mongolie, Malaisie, Russie, Pakistan, Thaïlande)",
+        "modop": "Déploiement du backdoor CoolClient via DLL sideloading et logiciels légitimes (Sangfor). Vol d'informations via des infostealers de navigateur, surveillance du presse-papiers, sniffing des identifiants de proxy HTTP, exfiltration de documents via Google Drive et Pixeldrain. Utilise également le backdoor ToneShell et des scripts de vol de données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionnage",
+          "APT",
+          "infostealer",
+          "backdoor",
+          "DLL_sideloading",
+          "data_exfiltration",
+          "clipboard_monitoring"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-mustang-panda-hackers-deploy-infostealers-via-coolclient-backdoor/",
+          "https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Tren de Aragua (TdA) gang",
+        "secteur": "Institutions financières (banques et coopératives de crédit)",
+        "modop": "Attaques de 'jackpotting' de distributeurs automatiques de billets (DAB) à l'aide du malware Ploutus. Installation de malware via le remplacement de disques durs ou l'utilisation de clés USB, puis suppression des preuves. Forte composante d'ingénierie sociale.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "crime_organise",
+          "malware",
+          "ATM_jackpotting",
+          "Ploutus",
+          "bank_fraud",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-charges-31-more-suspects-linked-to-atm-malware-attacks/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "World Leaks ransomware gang (rebrand de Hunters International)",
+        "secteur": "Sportswear (Nike), Gouvernement (U.S. Marshals Service), Technologie (Tata Technologies, Hoya, Dell), Automobile (AutoCanada), Défense (Austal USA)",
+        "modop": "Vol de données et extorsion. Exfiltration de grands volumes de fichiers (ex: 1.4 TB de Nike) suivie d'une fuite des données et de tentatives d'extorsion. Transition de l'encryption de fichiers vers l'extorsion pure.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware_gang",
+          "extortion",
+          "data_theft",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/",
+          "https://infosec.exchange/@DevaOnBreaches/115970121117292022",
+          "https://mastodon.social/@nerowild/115969278848309285"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "EXADOS",
+        "secteur": "Gouvernement (Office of Search and Rescue Commission de Thaïlande)",
+        "modop": "Exfiltration de données d'organisations ciblées.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_exfiltration",
+          "ransomware_gang"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115968839175013374"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "UNC4895 (CIGAR, RomCom)",
+        "secteur": "Militaire et gouvernement ukrainien",
+        "modop": "Campagnes de spearphishing avec des leurres géopolitiques très ciblés. Déploiement du malware NESTPACKER.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "spearphishing",
+          "malware",
+          "NESTPACKER"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "APT44 (FROZENBARENTS)",
+        "secteur": "Militaire et gouvernement ukrainien",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 pour déposer un fichier leurre ukrainien et un fichier LNK malveillant pour des téléchargements ultérieurs.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "persistence"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "TEMP.Armageddon (CARPATHIAN)",
+        "secteur": "Gouvernement ukrainien",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 pour déposer des fichiers HTA dans le dossier de démarrage (Startup folder) pour un téléchargement de deuxième étape. Utilise des archives RAR contenant un fichier HTML avec un téléchargeur initial.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "persistence",
+          "downloader"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Turla (SUMMIT)",
+        "secteur": "Activités militaires et opérations de drones ukrainiens",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 pour livrer le malware STOCKSTAY. Utilise des leurres liés aux activités militaires.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "malware",
+          "STOCKSTAY"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Acteur basé en RPC",
+        "secteur": "Non spécifié, probablement espionnage",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 pour livrer le malware POISONIVY via un fichier BAT déposé dans le dossier de démarrage (Startup folder), qui télécharge ensuite un dropper.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionnage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "malware",
+          "POISONIVY",
+          "persistence"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Acteurs financièrement motivés (divers groupes)",
+        "secteur": "Indonésie (non spécifié), Hôtellerie et voyages (LATAM), Utilisateurs bancaires brésiliens",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 pour distribuer des outils d'accès à distance (XWorm, AsyncRAT), des backdoors contrôlés par Telegram, et des extensions bancaires malveillantes pour Chrome. Utilisation de documents leurres et d'e-mails de phishing.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "RAT",
+          "infostealer",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Opérateurs Amnesia RAT",
+        "secteur": "Utilisateurs russes (individus et entreprises)",
+        "modop": "Campagnes de phishing multi-étapes utilisant de faux documents commerciaux comme leurres. Déploiement d'Amnesia RAT et de ransomware. Désactivation de Microsoft Defender (Defendnot), utilisation de GitHub et Dropbox pour héberger les payloads. Vol de données d'identification de navigateur, sessions Telegram, portefeuilles crypto, données Discord/Steam, phrases de récupération. Capacités de capture d'écran, audio, exécution de commandes à distance et exfiltration de données.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "phishing",
+          "malware",
+          "RAT",
+          "ransomware",
+          "data_theft",
+          "Defendnot"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187367/malware/amnesia-rat-deployed-in-multi-stage-phishing-attacks-against-russian-users.html"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Énergie, Technologies, Géostratégie",
+        "theme": "Concurrence pour l'Arctique et le Groenland",
+        "description": "Les États-Unis réaffirment leurs intérêts stratégiques dans l'Arctique et le Groenland, une zone vitale face à la présence militaire croissante de la Russie et aux ambitions de la Chine. Cette région est cruciale pour la défense antimissile américaine, les routes maritimes et les ressources (minérales, pétrolières, halieutiques, centres d'IA). L'OTAN est appelée à renforcer son engagement, et les discussions sur l'autonomie du Groenland sont influencées par ces enjeux de puissance. La National Defense Strategy 2026 souligne l'importance d'empêcher les adversaires des États-Unis d'exercer une influence indue sur le Groenland.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "arctique",
+          "groenland",
+          "etats_unis",
+          "russie",
+          "chine",
+          "OTAN",
+          "defense",
+          "ressources",
+          "strategie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/groenland-etats-unis-vers-un-mariage-de-raison/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Économie, Technologie (IA, Semi-conducteurs)",
+        "theme": "Fragilités de la 'bulle IA' et dépendances géopolitiques",
+        "description": "L'euphorie autour de l'IA masque des vulnérabilités structurelles, notamment la dépendance de géants comme NVIDIA vis-à-vis d'un seul segment (data center IA) et du marché chinois (exclu), ainsi que des contraintes énergétiques croissantes. L'article analyse la fragilité d'acteurs comme OpenAI, dont les coûts dépassent les revenus. La concurrence de Google (TPU) et les tensions internes (Elon Musk) menacent ces valorisations. Cinq scénarios sont envisagés, dont un éclatement rapide, une croissance par diversification (robotique, quantique), un décrochage en chaîne lié à OpenAI, une récession par accaparement des ressources hors-IA, ou une bulle prolongée par croissance externe. La dépendance mondiale vis-à-vis de Taïwan pour les puces IA est un risque stratégique majeur.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ia",
+          "intelligence_artificielle",
+          "economie",
+          "nvidia",
+          "openai",
+          "semi_conducteurs",
+          "taiwan",
+          "chine",
+          "energie",
+          "bulles_speculatives"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde-porte-par-lia-apparaissent-2/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Gouvernement, Diplomatie, Relations Internationales",
+        "theme": "Diplomatie chinoise des 'loups-guerriers' et pressions internes",
+        "description": "Le retour de la diplomatie chinoise des 'loups-guerriers' est analysé comme un reflet des pressions politiques internes en Chine, plutôt que des seuls défis externes. Des purges au sein de l'armée et des enjeux de légitimité pour le président Xi Jinping expliquent cette rhétorique agressive. La Chine cherche à projeter une image de force tout en gérant des ressources limitées, notamment face aux déclarations japonaises sur Taïwan. Cette approche vise à canaliser le nationalisme populaire et à envoyer des signaux de force à la fois aux audiences domestiques et à la direction du Parti, même si elle révèle des contraintes internes dans le processus décisionnel de la politique étrangère chinoise.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "diplomatie",
+          "xi_jinping",
+          "loups_guerriers",
+          "taiwan",
+          "japon",
+          "politique_interne"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/what-are-chinas-new-wolf-warriors-really-fighting"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Gouvernement (US Immigration and Customs Enforcement - ICE), Technologie (Ad Tech, Données de localisation), Vie privée",
+        "theme": "Surveillance gouvernementale via les données de l'ad tech",
+        "description": "L'agence américaine Immigration and Customs Enforcement (ICE) a émis une demande d'informations (RFI) aux courtiers en données et ad tech pour comprendre l'étendue des informations identifiables disponibles, notamment les données de localisation, qu'elle pourrait utiliser pour ses enquêtes. Cette démarche soulève des préoccupations croissantes en matière de confidentialité, de contournement des protections du quatrième amendement (nécessitant normalement un mandat) par l'achat de données, et l'inefficacité des réglementations actuelles de l'ad tech à protéger les citoyens contre la surveillance gouvernementale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "surveillance",
+          "vie_privée",
+          "gouvernement",
+          "etats_unis",
+          "ice",
+          "ad_tech",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/27/ice_data_advertising_tech_firms/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Gouvernement, Relations Internationales, ONU",
+        "theme": "Conseil de la Paix de Donald Trump",
+        "description": "Analyse du 'Conseil de la Paix' lancé par Donald Trump à Davos le 22 janvier 2026, et de sa potentielle concurrence avec l'ONU. La discussion porte sur les chances de succès de cette initiative et la manière dont les différents États se positionnent à son égard, dans un contexte de critiques de l'ordre international existant.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "donald_trump",
+          "conseil_paix",
+          "onu",
+          "relations_internationales",
+          "diplomatie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/board-of-peace-le-machin-de-trump-les-mardis-de-liris/"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Sportswear, Commerce de détail",
+        "victime": "Nike",
+        "description": "Nike enquête sur un 'incident potentiel de cybersécurité' après que le groupe de ransomware World Leaks (rebrand de Hunters International) ait revendiqué le vol de 1.4 TB de fichiers. Les données ont été brièvement publiées sur le site du groupe avant d'être retirées, suggérant des négociations ou un paiement de rançon.",
+        "tags": [
+          "violation",
+          "breach",
+          "nike",
+          "world_leaks",
+          "hunters_international",
+          "extorsion",
+          "fuite_donnees",
+          "ransomware",
+          "commerce_detail"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/",
+          "https://infosec.exchange/@DevaOnBreaches/115970121117292022",
+          "https://mastodon.social/@nerowild/115969278848309285"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Consulting, Gouvernement (IRS)",
+        "victime": "Booz Allen Hamilton",
+        "description": "Le département du Trésor américain a annulé des contrats de 21 millions de dollars avec Booz Allen Hamilton, citant une fuite de données survenue il y a des années. Un ancien employé avait divulgué les déclarations de revenus de personnalités, y compris l'ancien président Donald Trump, alors qu'il était sous contrat avec l'IRS. L'entreprise est blâmée pour ne pas avoir mis en œuvre des mesures de protection adéquates des données sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "booz_allen_hamilton",
+          "gouvernement",
+          "irs",
+          "fuite_donnees",
+          "donnees_fiscales",
+          "incident_interne",
+          "consulting"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/27/treasury-cancels-21-million-in-booz-allen-contracts-blaming-a-breach-that-happened-years-ago/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Musique, Plateforme de streaming",
+        "victime": "SoundCloud",
+        "description": "En décembre 2025, SoundCloud a découvert une activité non autorisée sur sa plateforme, permettant à un attaquant de corréler des données de profil public avec les adresses e-mail d'environ 20% de ses utilisateurs (30 millions d'adresses uniques). Les données impactées incluent noms, noms d'utilisateur, avatars, comptes de followers et de suivis, et parfois le pays. Les attaquants ont ensuite tenté d'extorquer SoundCloud avant de publier publiquement les données.",
+        "tags": [
+          "violation",
+          "breach",
+          "soundcloud",
+          "plateforme_musique",
+          "donnees_personnelles",
+          "adresses_email",
+          "extorsion",
+          "fuite_donnees"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/SoundCloud"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Office of Search and Rescue Commission de Thaïlande",
+        "description": "Le groupe EXADOS a revendiqué l'exfiltration de données de l'Office of Search and Rescue Commission de Thaïlande.",
+        "tags": [
+          "violation",
+          "breach",
+          "thailande",
+          "gouvernement",
+          "exados",
+          "exfiltration_donnees"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115968839175013374"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterMail",
+        "description": "Exécution de code à distance non authentifiée via l'upload arbitraire de fichiers. La vulnérabilité permet à un attaquant non authentifié de télécharger des fichiers arbitraires à n'importe quel emplacement sur le serveur de messagerie, ce qui peut entraîner l'exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "RCE",
+          "upload_arbitraire",
+          "critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24841",
+        "cvss": "9.9",
+        "product": "Dokploy (versions antérieures à 0.26.6)",
+        "description": "Injection de commande dans le point de terminaison WebSocket `/docker-container-terminal` permettant l'exécution de code à distance authentifiée. Les paramètres `containerId` et `activeWay` ne sont pas correctement assainis.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dokploy",
+          "RCE",
+          "injection_commande",
+          "websocket",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24841"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": "9.8",
+        "product": "GNU InetUtils telnetd (versions 1.9.3 à 2.7)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) permettant d'obtenir un accès root. Due à une validation incorrecte de l'entrée utilisateur dans l'interface de gestion web, un attaquant non authentifié peut envoyer des requêtes HTTP malveillantes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GNU_InetUtils",
+          "telnetd",
+          "RCE",
+          "acces_root",
+          "critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24838",
+        "cvss": "9.1",
+        "product": "DotNetNuke.Core (versions antérieures à 9.13.10 et 10.2.0)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée via le titre des modules. Le titre des modules supporte le 'richtext', ce qui permet l'exécution de scripts dans certains scénarios.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "DotNetNuke",
+          "DNN",
+          "XSS",
+          "execution_code",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24838"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-14756",
+        "cvss": "8.5",
+        "product": "TP-Link Archer MR600 (firmware v5)",
+        "description": "Injection de commande dans le composant d'interface d'administration, permettant à des attaquants authentifiés d'exécuter des commandes système avec une longueur de caractère limitée via la console développeur du navigateur. Peut entraîner une interruption de service ou une compromission totale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "TP_Link",
+          "Archer_MR600",
+          "injection_commande",
+          "RCE",
+          "acces_authentifié",
+          "routeur"
+        ],
+        "sources": [
+          "https://securityonline.info/router-takeover-high-severity-command-injection-flaw-hits-tp-link-archer-mr600/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-1506",
+        "cvss": "8.3",
+        "product": "D-Link DIR-615 4.10",
+        "description": "Injection de commande OS via la manipulation de l'argument 'mac' dans le fichier `/adv_mac_filter.php` du composant MAC Filter Configuration. L'attaque est possible à distance et l'exploit a été divulgué publiquement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D_Link",
+          "DIR_615",
+          "injection_commande",
+          "RCE",
+          "acces_distance",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1506"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-1505",
+        "cvss": "8.3",
+        "product": "D-Link DIR-615 4.10",
+        "description": "Injection de commande OS dans le fichier `/set_temp_nodes.php` du composant URL Filter. L'attaque peut être exécutée à distance et l'exploit est public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D_Link",
+          "DIR_615",
+          "injection_commande",
+          "RCE",
+          "acces_distance",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1505"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24842",
+        "cvss": "8.2",
+        "product": "node-tar (versions antérieures à 7.5.7)",
+        "description": "Vulnérabilité de path traversal par hardlink permettant la création/écrasement arbitraire de fichiers. La vérification de sécurité utilise une sémantique de résolution de chemin différente de la logique de création de hardlink, permettant de contourner les protections.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "node_tar",
+          "path_traversal",
+          "creation_fichier",
+          "ecrasement_fichier",
+          "hardlink"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24842"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24840",
+        "cvss": "8.0",
+        "product": "Dokploy (versions antérieures à 0.26.6)",
+        "description": "Identifiants codés en dur dans le script d'installation, ce qui peut entraîner un accès non autorisé à la base de données. Presque toutes les installations de Dokploy utilisent les mêmes identifiants de base de données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dokploy",
+          "credentials_hardcodes",
+          "acces_base_donnees",
+          "installation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24840"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24785",
+        "cvss": "8.0",
+        "product": "Clatter (versions antérieures à 2.2.0)",
+        "description": "Violation de la règle de validité PSK (Pre-Shared Key) dans l'implémentation Rust du protocole Noise. Peut affaiblir les garanties de sécurité et permettre une réutilisation catastrophique des clés en raison d'une absence de randomisation appropriée par l'éphéméralité choisie par l'attaquant. Affecte les modèles de handshake post-quantiques `*_psk0`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Clatter",
+          "Rust",
+          "protocole_noise",
+          "PSK",
+          "reutilisation_cles",
+          "cryptographie"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24785"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24858",
+        "cvss": "Non spécifié, classé critique",
+        "product": "Fortinet FortiCloud SSO (FortiOS, FortiManager, FortiAnalyzer)",
+        "description": "Vulnérabilité de contournement d'authentification (zero-day) activement exploitée. Permet à un attaquant d'abuser du SSO FortiCloud pour obtenir un accès administratif aux appareils FortiOS, FortiManager et FortiAnalyzer enregistrés par d'autres clients. Fortinet a bloqué les connexions SSO des firmwares vulnérables en attendant un correctif.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiCloud",
+          "SSO",
+          "contournement_authentification",
+          "zero_day",
+          "exploitee_activement",
+          "acces_administratif"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/",
+          "https://www.helpnetsecurity.com/2026/01/28/fortinet-forticloud-sso-zero-day-vulnerability-cve-2026-24858/",
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-8088",
+        "cvss": "Non spécifié, classé haute sévérité",
+        "product": "WinRAR (versions antérieures à 7.13)",
+        "description": "Vulnérabilité de path traversal exploitée via les Alternate Data Streams (ADS) pour écrire des fichiers malveillants à des emplacements arbitraires (par ex. dossier de démarrage de Windows pour la persistance). Acteurs étatiques et cybercriminels l'exploitent activement pour l'accès initial et le déploiement de diverses charges utiles.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WinRAR",
+          "path_traversal",
+          "ADS",
+          "execution_code",
+          "persistence",
+          "exploitee_activement",
+          "acces_initial"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/",
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-22709",
+        "cvss": "Non spécifié, classé critique",
+        "product": "vm2 Node.js sandbox library (versions 3.10.0)",
+        "description": "Vulnérabilité d'évasion de sandbox permettant l'exécution de code arbitraire sur le système hôte. Causée par un défaut de gestion des 'Promises' par vm2, ce qui permet de contourner la sanitisation des rappels.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vm2",
+          "nodejs",
+          "sandbox_escape",
+          "RCE",
+          "critique",
+          "execution_code"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/",
+          "https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "Non spécifié, classé critique",
+        "product": "SmarterMail (versions antérieures au build 9511)",
+        "description": "Vulnérabilité de contournement d'authentification dans l'API de réinitialisation de mot de passe. Permet à un attaquant non authentifié de réinitialiser les comptes administrateurs en fournissant un nom d'utilisateur cible et un nouveau mot de passe, entraînant une compromission administrative totale. Exploitation active observée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "contournement_authentification",
+          "acces_administratif",
+          "exploitee_activement",
+          "api_reset_password",
+          "critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187394/hacking/shadowserver-finds-6000-likely-vulnerable-smartermail-servers-exposed-online.html",
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": "7.8",
+        "product": "Microsoft Office et Microsoft 365",
+        "description": "Vulnérabilité de contournement de fonction de sécurité (zero-day) activement exploitée. Permet aux attaquants de contourner les protections OLE (Object Linking and Embedding), entraînant l'exécution de code malveillant lorsqu'un utilisateur ouvre un document Office spécialement conçu. Dépend de l'interaction de l'utilisateur (phishing, ingénierie sociale).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Microsoft_Office",
+          "Microsoft_365",
+          "OLE",
+          "contournement_securite",
+          "zero_day",
+          "exploitee_activement",
+          "execution_code",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0089/",
+          "https://fieldeffect.com/blog/microsoft-oob-patch-actively-exploited-office-zero-day",
+          "https://socprime.com/blog/latest-threats/cve-2026-21509-vulnerability/",
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-20045",
+        "cvss": "Non spécifié, classé critique",
+        "product": "Multiples produits Cisco Unified Communications",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) due à une validation incorrecte de l'entrée utilisateur dans l'interface de gestion web. Un acteur distant non authentifié peut exécuter des commandes arbitraires. Activement exploitée avant la divulgation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "Unified_Communications",
+          "RCE",
+          "execution_code",
+          "exploitee_activement",
+          "critique"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": "Non spécifié, classé critique",
+        "product": "VMware vCenter Server",
+        "description": "Débordement de tas (heap overflow) dans l'implémentation DCE/RPC permettant l'exécution de code à distance non authentifiée via des paquets réseau spécialement conçus.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "VMware",
+          "vCenter_Server",
+          "RCE",
+          "heap_overflow",
+          "non_authentifié",
+          "critique"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-31125",
+        "cvss": "Non spécifié, classé haute sévérité",
+        "product": "Vite build tool ecosystem",
+        "description": "Vulnérabilité de contrôle d'accès incorrecte permettant l'exposition de fichiers non autorisés lorsque le serveur de développement est directement accessible via un réseau. Peut entraîner la divulgation de fichiers sensibles (données d'application, chemins internes, configurations).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Vite",
+          "acces_control_incorrect",
+          "exposition_fichiers",
+          "divulgation_information",
+          "chaine_approvisionnement"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-54313",
+        "cvss": "Non spécifié, classé haute sévérité",
+        "product": "eslint-config-prettier (versions 8.10.1, 9.1.1, 10.1.6, 10.1.7)",
+        "description": "Compromission de la chaîne d'approvisionnement où les versions affectées contiennent du code malveillant intégré. L'installation de ces versions déclenche l'exécution d'un script `install.js` qui lance un payload `node-gyp.dll` malveillant sur les systèmes Windows.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "eslint_config_prettier",
+          "chaine_approvisionnement",
+          "malware",
+          "execution_code",
+          "windows"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2018-14634",
+        "cvss": "Non spécifié, classé critique",
+        "product": "Linux Kernel (Red Hat, CentOS, Debian)",
+        "description": "Débordement d'entier (integer overflow), également appelé Mutagen Astronomy, dans la fonction `create_elf_tables()`. Permet une élévation de privilèges locale via un buffer overflow. Activement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Linux_Kernel",
+          "privilege_escalation",
+          "integer_overflow",
+          "Mutagen_Astronomy",
+          "exploitee_activement",
+          "critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "MariaDB",
+        "description": "Vulnérabilité permettant un déni de service à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MariaDB",
+          "deni_service",
+          "RDoS"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0088/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "Citrix XenServer",
+        "description": "Multiples vulnérabilités permettant un déni de service à distance et une atteinte à la confidentialité des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Citrix",
+          "XenServer",
+          "deni_service",
+          "confidentialite_donnees"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0090/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "Xen",
+        "description": "Multiples vulnérabilités permettant une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Xen",
+          "elevation_privileges",
+          "deni_service",
+          "confidentialite_donnees"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0091/"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Amnesia RAT déployé dans des attaques de phishing multi-étapes contre des utilisateurs russes",
+        "description": "Une campagne de phishing multi-étapes cible les utilisateurs en Russie avec des documents commerciaux falsifiés comme leurres, déployant le RAT Amnesia et des ransomwares. Le malware utilise PowerShell et des scripts VBScript pour une exécution furtive, désactive Microsoft Defender et exfiltre une large gamme d'informations sensibles (identifiants de navigateur, sessions Telegram, portefeuilles crypto) vers des services cloud légitimes comme GitHub et Dropbox. Le ransomware Hakuna Matata chiffre les fichiers et bloque le bureau de la victime pour maximiser l'extorsion financière.",
+        "threat_actor": "Opérateurs Amnesia RAT",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1113 (Screen Capture)",
+          "T1123 (Audio Capture)",
+          "T1021 (Remote Services)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)",
+          "T1499 (Defacement)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1562.001 (Impair Defenses: Disable or Modify Tools)",
+          "T1036.003 (Masquerading: Rename System Utilities)"
+        ],
+        "analyse": "Cette campagne illustre une approche d'attaque sophistiquée et modulaire, s'appuyant fortement sur l'ingénierie sociale et l'abus de services légitimes pour la distribution et l'exfiltration. La désactivation des défenses (Microsoft Defender) et l'utilisation de ransomwares ciblent l'interruption des opérations et la pression financière. L'impact est principalement financier et lié à la vie privée des utilisateurs russes, mais le niveau de compromission du système est élevé, ce qui permet la surveillance à long terme et le vol de données précieuses. Le recours à GitHub et Dropbox rend la détection plus difficile en masquant le trafic malveillant dans l'activité réseau normale.",
+        "recommandations": [
+          "Sensibilisation des utilisateurs aux risques de phishing et de documents falsifiés.",
+          "Mise en place de solutions EDR/XDR pour détecter les activités post-exploitation (PowerShell, scripts VBScript inhabituels).",
+          "Surveillance du trafic réseau pour identifier les connexions suspectes vers GitHub/Dropbox pour des fichiers exécutables.",
+          "Renforcement des politiques d'authentification et de gestion des accès pour les services sensibles.",
+          "Sauvegardes régulières et tests de récupération pour contrer les effets du ransomware."
+        ],
+        "tags": [
+          "phishing",
+          "malware",
+          "RAT",
+          "ransomware",
+          "exfiltration_donnees",
+          "ingénierie_sociale",
+          "cloud_abuse",
+          "T1566.001",
+          "T1059.001",
+          "T1105",
+          "T1071.001",
+          "T1547.001",
+          "T1083",
+          "T1003",
+          "T1555.003",
+          "T1056.001",
+          "T1113",
+          "T1123",
+          "T1021",
+          "T1041",
+          "T1486",
+          "T1490",
+          "T1499",
+          "T1560.001",
+          "T1562.001",
+          "T1036.003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187367/malware/amnesia-rat-deployed-in-multi-stage-phishing-attacks-against-russian-users.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Clawdbot devient Moltbot : des problèmes de sécurité persistent pour l'agent IA",
+        "description": "L'agent IA \"Moltbot\" (anciennement Clawdbot), conçu pour gérer les tâches administratives des utilisateurs, présente des problèmes de sécurité persistants. Des instances de Moltbot ont été exposées sur Internet en raison de mauvaises configurations, ce qui pourrait entraîner la fuite de secrets, d'identifiants de comptes, de clés API et de codebases entiers. Les experts soulignent que la facilité d'installation de ces outils masque la complexité de leur sécurisation, exigeant des compétences spécialisées pour éviter les vulnérabilités liées à l'exposition au réseau et aux compromissions de la chaîne d'approvisionnement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1562.007 (Impair Defenses: Disable or Modify Cloud / Container Security)",
+          "T1078 (Valid Accounts)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)"
+        ],
+        "analyse": "L'émergence d'agents IA comme Moltbot introduit de nouvelles surfaces d'attaque significatives. La commodité de ces outils encourage une adoption rapide, mais la complexité de leur configuration sécurisée laisse de nombreuses instances vulnérables. L'impact potentiel est la compromission massive de données personnelles et professionnelles, y compris les identifiants d'accès à des services sensibles, transformant ces agents en cibles de choix pour la cybercriminalité. Cela remet en question les modèles de sécurité existants qui reposent sur l'isolation des processus et la limitation des accès, car les agents IA exigent un accès étendu aux ressources des utilisateurs pour fonctionner.",
+        "recommandations": [
+          "Évaluer les risques de sécurité avant de déployer des agents IA, en particulier ceux qui nécessitent des accès étendus.",
+          "Assurer une configuration sécurisée et une gestion des accès rigoureuse pour toutes les instances d'agents IA.",
+          "Mettre en œuvre le principe du moindre privilège pour les agents IA et les comptes associés.",
+          "Surveiller activement les instances d'agents IA pour détecter les mauvaises configurations et les expositions au réseau.",
+          "Utiliser des solutions de sécurité (EDR, antivirus) capables de détecter les logiciels malveillants ciblant les secrets stockés par les agents IA."
+        ],
+        "tags": [
+          "ia",
+          "agent_ia",
+          "moltbot",
+          "clawdbot",
+          "securite_ia",
+          "misconfiguration",
+          "fuite_donnees",
+          "T1562.007",
+          "T1078",
+          "T1552.001"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/27/clawdbot_moltbot_security_concerns/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Des failles dans Dormakaba permettent l'accès aux portes d'organisations majeures",
+        "description": "Plus de 20 vulnérabilités critiques ont été découvertes dans les systèmes de contrôle d'accès physiques Dormakaba basés sur exos 9300. Ces failles permettent à un attaquant, avec un accès préalable au réseau interne ou une exposition directe sur Internet de certains gestionnaires d'accès, d'ouvrir des portes arbitrairement, de reconfigurer des contrôleurs sans authentification, de voler des PIN d'accès et de lancer d'autres attaques. Ces systèmes sont utilisés par de grandes organisations européennes, y compris dans des environnements à haute sécurité (entreprises énergétiques, logistique, aéroports).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "La découverte de vulnérabilités dans des systèmes de contrôle d'accès physique comme Dormakaba représente une menace significative pour la sécurité physique et logique des organisations. La possibilité d'ouvrir des portes à distance, de voler des identifiants et de reconfigurer des systèmes d'accès met en évidence un risque d'intrusion physique non autorisé, de sabotage et d'espionnage. L'exposition directe de certains gestionnaires d'accès sur Internet, concentrés dans certains pays, amplifie le risque en permettant des exploitations à distance sans authentification préalable au réseau interne.",
+        "recommandations": [
+          "Appliquer immédiatement tous les correctifs et directives de durcissement fournis par Dormakaba.",
+          "Restreindre l'accès administratif aux interfaces des systèmes de contrôle d'accès aux réseaux administratifs de confiance uniquement.",
+          "Mettre en œuvre une segmentation réseau stricte pour isoler les systèmes de contrôle d'accès des réseaux généraux et d'Internet.",
+          "Surveiller les journaux d'accès pour détecter toute activité suspecte ou tentative de reconfiguration non autorisée.",
+          "Réaliser des audits de sécurité réguliers sur les systèmes de contrôle d'accès physiques et logiques."
+        ],
+        "tags": [
+          "dormakaba",
+          "controle_acces",
+          "vulnérabilité",
+          "RCE",
+          "acces_distance",
+          "securite_physique",
+          "critique",
+          "T1078",
+          "T1190",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187354/hacking/dormakaba-flaws-allow-to-access-major-organizations-doors.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Applications frauduleuses, attaques de 'NFC skimming' et autres menaces Android en 2026",
+        "description": "L'année 2025 a vu une augmentation record des attaques sur les appareils Android, une tendance qui se poursuit en 2026. Les menaces incluent la prolifération d'applications malveillantes (APKs) distribuées via messageries, spam de moteurs de recherche et faux magasins d'applications, souvent sous des prétextes liés à l'IA ou aux contournements de restrictions. Les attaques de 'NFC skimming' (direct ou inversé) sont utilisées pour voler des données de cartes bancaires et de l'argent. Le malware Triada est préinstallé sur des appareils Android de marques obscures ou contrefaites, permettant le vol d'informations, l'interception de SMS et l'utilisation du téléphone comme proxy.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1472 (Compromise Mobile Device)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1003.003 (OS Credential Dumping: Browser Saved Credentials)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1584.004 (Compromise Infrastructure: IoT)",
+          "T1566.003 (Phishing: Spearphishing via Service)"
+        ],
+        "analyse": "Le rapport de Kaspersky met en lumière la diversité et l'ingéniosité des menaces ciblant l'écosystème Android. L'ingénierie sociale reste un vecteur d'attaque très efficace, exploitant la curiosité ou le désir des utilisateurs à contourner les restrictions. Le 'NFC skimming' représente une évolution directe du vol financier vers le mobile, capitalisant sur la popularité des paiements sans contact. La découverte de malwares préinstallés (Triada) sur des appareils neufs souligne un risque croissant dans la chaîne d'approvisionnement matérielle, transformant des appareils en 'implants' d'espionnage et de vol dès leur acquisition. L'impact est global et touche les données personnelles, financières et la vie privée.",
+        "recommandations": [
+          "Télécharger des applications uniquement depuis des magasins officiels (Google Play) et vérifier les avis et permissions.",
+          "Utiliser des solutions de sécurité mobile (antivirus) de bonne réputation.",
+          "Être vigilant face aux liens et messages non sollicités, même de contacts connus.",
+          "Désactiver le NFC lorsque non utilisé et ne pas partager d'informations bancaires via des applications inconnues.",
+          "Acheter des appareils mobiles auprès de revendeurs de confiance et vérifier leur intégrité."
+        ],
+        "tags": [
+          "android",
+          "malware",
+          "phishing",
+          "nfc_skimming",
+          "triada",
+          "fake_apps",
+          "chain_approvisionnement",
+          "mobile_security",
+          "T1566.002",
+          "T1472",
+          "T1036.005",
+          "T1090.003",
+          "T1003.003",
+          "T1555.003",
+          "T1552.001",
+          "T1584.004",
+          "T1566.003"
+        ],
+        "sources": [
+          "https://www.kaspersky.co.uk/blog/growing-2026-android-threats-and-protection/29992/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Fortinet bloque la vulnérabilité zero-day FortiCloud SSO exploitée activement",
+        "description": "Fortinet a confirmé et atténué une vulnérabilité zero-day critique (CVE-2026-24858) de contournement d'authentification FortiCloud Single Sign-On (SSO), activement exploitée. Cette faille permettait aux attaquants d'obtenir un accès administratif aux appareils FortiOS, FortiManager et FortiAnalyzer enregistrés par d'autres clients, même sur des firmwares à jour. Fortinet a bloqué les connexions SSO des appareils vulnérables côté serveur, en attendant les correctifs clients. Les attaques incluaient la création de nouveaux comptes administrateurs locaux et l'exfiltration de configurations de pare-feu.",
+        "threat_actor": "Non spécifié, probablement acteurs étatiques ou cybercriminels avancés",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-24858",
+            "CVE-2025-59718"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1078.001 (Valid Accounts: Default Accounts)",
+          "T1078 (Valid Accounts)",
+          "T1003.006 (OS Credential Dumping: LSASS Memory)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "L'exploitation d'une vulnérabilité zero-day dans un composant SSO critique de Fortinet met en évidence la nature évolutive des attaques ciblant l'infrastructure de sécurité elle-même. La capacité à obtenir un accès administratif à des pare-feu et des plateformes de gestion (FortiOS, FortiManager, FortiAnalyzer) est d'un impact stratégique élevé, permettant le contrôle total du réseau, la persistance et l'exfiltration de données sensibles. Le fait que les appareils étaient à jour indique une menace sophistiquée, capable de trouver des failles avant que les fournisseurs ne les corrigent. La réponse rapide de Fortinet côté serveur a permis de limiter l'exploitation.",
+        "recommandations": [
+          "Mettre à jour immédiatement les firmwares FortiOS, FortiManager et FortiAnalyzer dès que les correctifs sont disponibles.",
+          "Restreindre l'accès administratif aux appareils périphériques et interfaces de gestion à des adresses IP de confiance uniquement via des politiques locales.",
+          "Vérifier les journaux pour la création de comptes administrateurs suspects ou l'exfiltration de configurations.",
+          "Appliquer des politiques de 'zero trust' pour la gestion des accès administratifs.",
+          "Activer l'authentification multifacteur pour tous les accès, y compris FortiCloud SSO."
+        ],
+        "tags": [
+          "fortinet",
+          "forticloud",
+          "sso",
+          "zero_day",
+          "exploitee_activement",
+          "contournement_authentification",
+          "acces_administratif",
+          "exfiltration_configuration",
+          "T1078.004",
+          "T1078.001",
+          "T1078",
+          "T1003.006",
+          "T1537"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/",
+          "https://www.helpnetsecurity.com/2026/01/28/fortinet-forticloud-sso-zero-day-vulnerability-cve-2026-24858/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Microsoft publie un correctif d'urgence pour une faille Office activement exploitée (CVE-2026-21509)",
+        "description": "Microsoft a publié un correctif d'urgence (hors bande) pour CVE-2026-21509, une vulnérabilité de contournement de fonction de sécurité dans Microsoft Office et Microsoft 365, activement exploitée. La faille permet aux attaquants de contourner les protections OLE (Object Linking and Embedding), entraînant l'exécution de code malveillant lorsqu'un utilisateur ouvre un document Office spécialement conçu. L'exploitation repose sur l'interaction de l'utilisateur (phishing, ingénierie sociale). La CISA a ajouté cette vulnérabilité à son catalogue KEV.",
+        "threat_actor": "Non spécifié, probablement acteurs étatiques ou cybercriminels avancés",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-21509"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1218.010 (System Binary Proxy Execution: Mshta)"
+        ],
+        "analyse": "L'exploitation active d'une vulnérabilité zero-day dans Microsoft Office, une suite logicielle omniprésente, représente un risque majeur pour toutes les organisations. La dépendance à l'interaction de l'utilisateur via le phishing rend cette menace particulièrement insidieuse. Les attaquants peuvent ainsi contourner des mécanismes de sécurité fondamentaux pour obtenir l'exécution de code, ouvrant la voie à des compromissions plus larges, à l'installation de malwares ou au vol de données. L'inclusion rapide dans le catalogue KEV de la CISA souligne l'urgence de l'application des correctifs.",
+        "recommandations": [
+          "Appliquer immédiatement le correctif d'urgence de Microsoft pour CVE-2026-21509.",
+          "Renforcer la sensibilisation des utilisateurs aux attaques de phishing et à l'ouverture de documents non sollicités.",
+          "Mettre en œuvre des solutions de détection et réponse aux endpoints (EDR) pour surveiller et bloquer les comportements malveillants, même si l'exploit initial réussit.",
+          "Restreindre l'utilisation des fonctionnalités OLE lorsque cela est opérationnellement faisable.",
+          "Activer des mécanismes de validation et de sandboxing renforcés pour les documents Office provenant de sources non fiables."
+        ],
+        "tags": [
+          "microsoft_office",
+          "microsoft_365",
+          "zero_day",
+          "exploitee_activement",
+          "contournement_securite",
+          "OLE",
+          "phishing",
+          "execution_code",
+          "T1566.001",
+          "T1204.002",
+          "T1218.010"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/microsoft-oob-patch-actively-exploited-office-zero-day",
+          "https://socprime.com/blog/latest-threats/cve-2026-21509-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Les hackers chinois Mustang Panda déploient des infostealers via le backdoor CoolClient",
+        "description": "Le groupe d'espionnage chinois Mustang Panda (également connu sous les noms de HoneyMyte et Bronze President) a mis à jour son backdoor CoolClient, ajoutant des capacités de vol de données de navigateur et de surveillance du presse-papiers. Le malware cible des entités gouvernementales en Myanmar, Mongolie, Malaisie, Russie et Pakistan, étant déployé via des logiciels légitimes (Sangfor) et des techniques de DLL sideloading. Il collecte des informations système et utilisateur, effectue du keylogging, du tunneling TCP, du reverse-proxying et exfiltre des données via des services publics comme Google Drive ou Pixeldrain en utilisant des tokens API codés en dur. Trois variantes d'infostealers ciblant les navigateurs Chromium-based ont été identifiées.",
+        "threat_actor": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "113.23.212.15"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "http://113.23.212[.]15/pub/"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1574.002 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1087 (Account Discovery)",
+          "T1082 (System Information Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1016 (System Network Configuration Discovery)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Clipboard Data)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1135 (Network Share Discovery)",
+          "T1083 (File and Directory Discovery)",
+          "T1548.002 (Abuse Elevation Control Mechanism: Bypass User Account Control)"
+        ],
+        "analyse": "Mustang Panda continue d'être un acteur d'espionnage sophistiqué, adaptant constamment son arsenal d'outils. L'évolution de CoolClient, avec l'ajout de capacités d'infostealing de navigateur et de surveillance du presse-papiers, démontre une focalisation accrue sur la collecte de données sensibles des utilisateurs. L'utilisation de DLL sideloading et de logiciels légitimes pour l'infection initiale rend la détection plus complexe. L'exfiltration via des services cloud populaires et des tokens API codés en dur est une technique pour échapper aux détections traditionnelles. L'impact est l'espionnage à long terme et le vol de données stratégiques auprès d'entités gouvernementales.",
+        "recommandations": [
+          "Mettre en œuvre des contrôles stricts sur l'exécution des DLL et des logiciels tiers, en privilégiant la liste blanche d'applications (application whitelisting).",
+          "Surveiller l'activité réseau pour détecter les connexions inhabituelles vers des services cloud légitimes (Google Drive, Pixeldrain) potentiellement utilisées pour l'exfiltration.",
+          "Renforcer la protection des endpoints avec des solutions EDR capables de détecter les comportements anormaux des processus et les modifications du registre/services Windows.",
+          "Sensibiliser les utilisateurs aux risques de l'ingénierie sociale et des fichiers malveillants, même s'ils proviennent de logiciels apparemment légitimes.",
+          "Mettre en œuvre des solutions anti-infostealers et des stratégies de gestion des identifiants robustes (gestionnaires de mots de passe, MFA)."
+        ],
+        "tags": [
+          "mustang_panda",
+          "honeymyte",
+          "bronze_president",
+          "espionnage",
+          "APT",
+          "coolclient",
+          "infostealer",
+          "DLL_sideloading",
+          "data_exfiltration",
+          "persistence",
+          "T1566.001",
+          "T1574.002",
+          "T1547.001",
+          "T1087",
+          "T1082",
+          "T1033",
+          "T1016",
+          "T1056.001",
+          "T1056.002",
+          "T1552.001",
+          "T1021.001",
+          "T1059",
+          "T1105",
+          "T1560.001",
+          "T1041",
+          "T1135",
+          "T1083",
+          "T1548.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-mustang-panda-hackers-deploy-infostealers-via-coolclient-backdoor/",
+          "https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Les États-Unis inculpent 31 suspects supplémentaires liés aux attaques de malware sur les distributeurs automatiques de billets",
+        "description": "Un grand jury fédéral du Nebraska a inculpé 31 personnes supplémentaires pour leur implication dans une opération de 'jackpotting' de distributeurs automatiques de billets (DAB), orchestrée par des membres du gang vénézuélien Tren de Aragua (TdA). Les suspects auraient déployé le malware Ploutus sur les DAB après avoir ouvert les boîtiers et remplacé les disques durs ou connecté des clés USB. Le malware permettait de vider les machines et de supprimer les preuves pour masquer les attaques, qui ont ciblé des banques et coopératives de crédit à l'échelle nationale. Le TdA, désormais désigné comme organisation terroriste étrangère par le Trésor américain, est passé d'un gang de prison à une organisation criminelle transnationale.",
+        "threat_actor": "Tren de Aragua (TdA) gang",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1078 (Valid Accounts)",
+          "T1496 (Resource Hijacking)",
+          "T1029 (Scheduled Transfer)",
+          "T1562.004 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "Cette affaire met en lumière la menace grandissante des organisations criminelles transnationales (TCO) qui emploient des méthodes sophistiquées, y compris des malwares personnalisés, pour le vol financier à grande échelle. Le 'jackpotting' de DAB représente une attaque directe contre l'infrastructure bancaire physique. L'escalade du Tren de Aragua, d'un gang de prison à une entité terroriste étrangère, souligne la convergence croissante entre la cybercriminalité et les menaces à la sécurité nationale. L'impact est financier pour les institutions ciblées et potentiellement une source de financement pour des activités terroristes.",
+        "recommandations": [
+          "Renforcer la sécurité physique des distributeurs automatiques de billets pour prévenir l'accès physique non autorisé.",
+          "Mettre à jour les logiciels des DAB et appliquer des contrôles d'intégrité pour détecter toute modification non autorisée.",
+          "Déployer des solutions de sécurité qui peuvent détecter les malwares de 'jackpotting' et les activités suspectes sur les systèmes des DAB.",
+          "Mettre en place une surveillance en temps réel des transactions et des alertes pour les retraits inhabituels.",
+          "Collaborer avec les forces de l'ordre pour partager les indicateurs de compromission et les informations sur les acteurs de la menace."
+        ],
+        "tags": [
+          "tren_de_aragua",
+          "jackpotting",
+          "atm",
+          "ploutus",
+          "crime_organise",
+          "malware",
+          "fraude_bancaire",
+          "organisations_criminelles_transnationales",
+          "T1547.001",
+          "T1078",
+          "T1496",
+          "T1029",
+          "T1562.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-charges-31-more-suspects-linked-to-atm-malware-attacks/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "La faille de path traversal de WinRAR toujours exploitée par de nombreux hackers",
+        "description": "La vulnérabilité de haute sévérité CVE-2025-8088 dans WinRAR est activement et largement exploitée par une multitude d'acteurs, y compris des groupes d'espionnage étatiques (russes comme UNC4895, APT44, TEMP.Armageddon, Turla, et chinois) et des cybercriminels financièrement motivés. Cette faille de path traversal, exploitant les Alternate Data Streams (ADS), permet d'écrire des fichiers malveillants dans des emplacements arbitraires (souvent le dossier de démarrage de Windows pour la persistance). Les attaquants utilisent cette méthode pour un accès initial et pour livrer divers payloads tels que des RATs, des infostealers et des extensions bancaires malveillantes. L'exploit est devenu une marchandise clé sur le marché souterrain des exploits.",
+        "threat_actor": "UNC4895 (CIGAR, RomCom), APT44 (FROZENBARENTS), TEMP.Armageddon (CARPATHIAN), Turla (SUMMIT), Acteur basé en RPC, Acteurs financièrement motivés",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [
+            "272c86c6db95f1ef8b83f672b65e64df16494cae261e1aba1aeb1e59dcb68524",
+            "33580073680016f23bf474e6e62c61bf6a776e561385bfb06788a4713114ba9d",
+            "498961237cf1c48f1e7764829818c5ba0af24a234c2f29c4420fb80276aec676",
+            "4f4567abe9ff520797b04b04255bbbe07ecdddb594559d436ac53314ec62c1b3",
+            "53f1b841d323c211c715b8f80d0efb9529440caae921a60340de027052946dd9",
+            "55b3dc57929d8eacfdadc71d92483eabe4874bf3d0189f861b145705a0f0a8fe",
+            "68d9020aa9b509a6d018d6d9f4c77e7604a588b2848e05da6a4d9f82d725f91b",
+            "6d3586aa6603f1c1c79d7bd7e0b5c5f0cc8e8a84577c35d21b0f462656c2e1f9",
+            "ae93d9327a91e90bf7744c6ce0eb4affb3acb62a5d1b2dafd645cba9af28d795",
+            "b90ef1d21523eeffbca17181ccccf269bca3840786fcbf5c73218c6e1d6a51a9",
+            "c7726c166e1947fdbf808a50b75ca7400d56fa6fef2a76cefe314848db22c76c",
+            "e836873479ff558cfb885097e8783356aad1f2d30b69d825b3a71cb7a57cf930",
+            "ffc6c3805bbaef2c4003763fd5fac0ebcccf99a1656f10cf7677f6c2a5d16dbd",
+            "958921ea0995482fb04ea4a50bbdb654f272ab991046a43c1fdbd22da302d544",
+            "defe25e400d4925d8a2bb4b1181044d06a8bf61688fd9c9ea59f1e0bb7bc21d8",
+            "edc1f7528ca93ec432daca820f47e08d218b79cceca1ee764966f8f90d6a58bd",
+            "29f89486bb820d40c9bee8bf70ee8664ea270b16e486af4a53ab703996943256",
+            "2c40e7cf613bf2806ff6e9bc396058fe4f85926493979189dbdbc7d615b7cb14",
+            "3b85d0261ab2531aba9e2992eb85273be0e26fe61e4592862d8f45d6807ceee4",
+            "54305c7b95d8105601461bb18de87f1f679d833f15e38a9ee7895a0c8605c0d0",
+            "5dee69127d501142413fb93fd2af8c8a378682c140c52b48990a5c41f2ce3616",
+            "867a05d67dd184d544d5513f4f07959a7c2b558197c99cb8139ea797ad9fbece",
+            "91e61fd77460393a89a8af657d09df6a815465f6ce22f1db8277d58342b32249",
+            "b2b62703a1ef7d9d3376c6b3609cd901cbccdcca80fba940ce8ed3f4e54cdbe6",
+            "cf35ce47b35f1405969f40633fcf35132ca3ccb3fdfded8cc270fc2223049b80",
+            "d981a16b9da1615514a02f5ebb38416a009f5621c0b718214d5b105c9f552389",
+            "ddd67dda5d58c7480152c9f6e8043c3ea7de2e593beedf86b867b83f005bf0cc",
+            "ea0869fa9d5e23bdd16cddfefbbf9c67744598f379be306ff652f910db1ba162",
+            "ef0e1bb2d389ab8b5f15d2f83cf978662e18e31dbe875f39db563e8a019af577",
+            "f3e5667d02f95c001c717dfc5a0e100d2b701be4ec35a3e6875dc276431a7497",
+            "f6761b5341a33188a7a1ca7a904d5866e07b8ddbde9adebdbce4306923cfc60a",
+            "fc2a6138786fae4e33dc343aea2b1a7cd6411187307ea2c82cd96b45f6d1f2a0",
+            "a97f460bfa612f1d406823620d0d25e381f9b980a0497e2775269917a7150f04",
+            "d418f878fa02729b38b5384bcb3216872a968f5d0c9c77609d8c5aacedb07546",
+            "ba86b6e0199b8907427364246f049efd67dc4eda0b5078f4bc7607253634cf24",
+            "cf8ebfd98da3025dc09d0b3bbeef874d8f9c4d4ba4937719f0a9a3aa04c81beb",
+            "5b64786ed92545eeac013be9456e1ff03d95073910742e45ff6b88a86e91901b",
+            "8a7ee2a8e6b3476319a3a0d5846805fd25fa388c7f2215668bc134202ea093fa",
+            "3b47df790abb4eb3ac570b50bf96bb1943d4b46851430ebf3fc36f645061491b",
+            "bb4856a66bf7e0de18522e35798c0a8734179c1aab21ed2ad6821aaa99e1cb4c",
+            "aea13e5871b683a19a05015ff0369b412b985d47eb67a3af93f44400a026b4b0",
+            "ed5b920dad5dcd3f9e55828f82a27211a212839c8942531c288535b92df7f453",
+            "a54bcafd9d4ece87fa314d508a68f47b0ec3351c0a270aa2ed3a0e275b9db03c",
+            "b53069a380a9dd3dc1c758888d0e50dd43935f16df0f7124c77569375a9f44f5"
+          ],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)"
+        ],
+        "analyse": "La persistance de l'exploitation de CVE-2025-8088 dans WinRAR, malgré la disponibilité d'un correctif, souligne la difficulté pour les organisations d'appliquer les mises à jour en temps voulu. L'utilisation de cette faille par des acteurs aussi divers que des groupes étatiques et des cybercriminels démontre son efficacité comme vecteur d'accès initial. L'impact est global et se manifeste par de l'espionnage, le vol de données et des gains financiers. La commoditisation des exploits est une tendance préoccupante qui abaisse la barrière à l'entrée pour les attaquants, permettant à des acteurs moins sophistiqués de mener des attaques avancées.",
+        "recommandations": [
+          "Mettre à jour WinRAR vers la version 7.13 ou ultérieure immédiatement.",
+          "Renforcer la sensibilisation des utilisateurs aux dangers d'ouvrir des archives RAR provenant de sources non fiables, même si elles contiennent des documents d'apparence légitime.",
+          "Mettre en œuvre des solutions EDR/XDR pour détecter les tentatives d'écriture de fichiers dans les dossiers de démarrage ou d'autres emplacements sensibles.",
+          "Utiliser des solutions de passerelle de messagerie et de navigation web qui bloquent les fichiers RAR suspects et les téléchargements malveillants.",
+          "Surveiller les indicateurs de compromission (IoC) partagés par les agences de renseignement et les chercheurs en sécurité."
+        ],
+        "tags": [
+          "winrar",
+          "path_traversal",
+          "exploitee_activement",
+          "zero_day",
+          "acces_initial",
+          "persistence",
+          "APT",
+          "cybercrime",
+          "T1566.001",
+          "T1204.002",
+          "T1547.001",
+          "T1036.005",
+          "T1059",
+          "T1105",
+          "T1555.003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape in early 2026 is characterized by an intensification and sophistication of attacks, leveraging a mix of known vulnerabilities (N-day) and zero-days. A major trend is the rapid and opportunistic exploitation of these flaws by a wide range of actors, from state-sponsored groups to financially motivated cybercriminals. Critical vulnerabilities in widely used software such as Microsoft Office, WinRAR, Fortinet FortiCloud SSO, vm2 Node.js, SmarterMail, D-Link, and Dokploy are actively exploited to gain initial access, bypass authentication, elevate privileges, or execute remote code.\n\nSupply chain attacks remain a major concern, as illustrated by the compromise of the `eslint-config-prettier` package. Geopolitical actors (Russian, Chinese groups, Mustang Panda) continue to conduct espionage campaigns, using sophisticated lures and advanced backdoors (CoolClient, ToneShell) for data collection and targeted surveillance of government, military, and technological entities. Meanwhile, financial cybercrime persists, with groups like Tren de Aragua targeting ATMs with 'jackpotting' malware and other groups using RATs (Amnesia RAT, XWorm, AsyncRAT) and infostealers for credential theft and extortion.\n\nArtificial Intelligence (AI) presents a dual challenge: while it promises advances in security, it also raises growing concerns. On one hand, the exploitation of AI by attackers to create more effective malicious tools is an emerging threat. On the other hand, the security of AI agents themselves (like Moltbot) and the risks associated with the proliferation of AI-based applications (e.g., 'nudify' apps and the use of ad tech data by government agencies) pose new ethical and privacy challenges. Mobile threats on Android are also on the rise, with fake apps and 'NFC skimming' techniques for financial theft.\n\nGeopolitically, tensions around the Arctic, dependence on Taiwan for AI chip production, technological competition between the United States and China, and the implications of AI on global economies continue to influence cyber defense and attack strategies. The overall state of threats is therefore one of escalation, where responsiveness to vulnerabilities, resilience to targeted campaigns, and anticipation of risks related to new technologies are more crucial than ever.",
+      "date": "2026-01-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "secteur": "Government (Myanmar, Mongolia, Malaysia, Russia, Pakistan, Thailand)",
+        "modop": "Deployment of CoolClient backdoor via DLL sideloading and legitimate software (Sangfor). Information theft via browser infostealers, clipboard monitoring, HTTP proxy credential sniffing, document exfiltration via Google Drive and Pixeldrain using hardcoded API tokens. Also uses ToneShell backdoor and data theft scripts.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionage",
+          "APT",
+          "infostealer",
+          "backdoor",
+          "DLL_sideloading",
+          "data_exfiltration",
+          "clipboard_monitoring"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-mustang-panda-hackers-deploy-infostealers-via-coolclient-backdoor/",
+          "https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Tren de Aragua (TdA) gang",
+        "secteur": "Financial Institutions (banks and credit unions)",
+        "modop": "ATM 'jackpotting' attacks using Ploutus malware. Malware installation by replacing hard drives or connecting USB drives, then deleting evidence. Strong social engineering component.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "organized_crime",
+          "malware",
+          "ATM_jackpotting",
+          "Ploutus",
+          "bank_fraud",
+          "money_laundering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-charges-31-more-suspects-linked-to-atm-malware-attacks/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "World Leaks ransomware gang (Hunters International rebrand)",
+        "secteur": "Sportswear (Nike), Government (U.S. Marshals Service), Technology (Tata Technologies, Hoya, Dell), Automotive (AutoCanada), Defense (Austal USA)",
+        "modop": "Data theft and extortion. Exfiltration of large volumes of files (e.g., 1.4 TB from Nike) followed by data leaks and extortion attempts. Shift from file encryption to pure data theft and extortion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware_gang",
+          "extortion",
+          "data_theft",
+          "data_leak"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/",
+          "https://infosec.exchange/@DevaOnBreaches/115970121117292022",
+          "https://mastodon.social/@nerowild/115969278848309285"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "EXADOS",
+        "secteur": "Government (Thailand's Office of Search and Rescue Commission)",
+        "modop": "Data exfiltration from targeted organizations.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_exfiltration",
+          "ransomware_gang"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115968839175013374"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "UNC4895 (CIGAR, RomCom)",
+        "secteur": "Ukrainian military and government",
+        "modop": "Spearphishing campaigns with highly targeted geopolitical lures. Deployment of NESTPACKER malware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "spearphishing",
+          "malware",
+          "NESTPACKER"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "APT44 (FROZENBARENTS)",
+        "secteur": "Ukrainian military and government",
+        "modop": "Exploitation of WinRAR CVE-2025-8088 vulnerability to drop a Ukrainian decoy file and a malicious LNK file for further downloads.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "persistence"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "TEMP.Armageddon (CARPATHIAN)",
+        "secteur": "Ukrainian government",
+        "modop": "Exploitation of WinRAR CVE-2025-8088 vulnerability to drop HTA files into the Startup folder for a second-stage download. Uses RAR archives containing an HTML file with an initial downloader.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "persistence",
+          "downloader"
+        ],
+        "date": "2026-01-28",
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ]
+      },
+      {
+        "nom": "Turla (SUMMIT)",
+        "secteur": "Ukrainian military activities and drone operations",
+        "modop": "Exploitation of WinRAR CVE-2025-8088 vulnerability to deliver STOCKSTAY malware. Uses lures related to military activities.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "malware",
+          "STOCKSTAY"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "PRC-based actor",
+        "secteur": "Unspecified, likely espionage",
+        "modop": "Exploitation of WinRAR CVE-2025-8088 vulnerability to deliver POISONIVY malware via a BAT file dropped into the Startup folder, which then downloads a dropper.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionage",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "malware",
+          "POISONIVY",
+          "persistence"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Financially motivated actors (various groups)",
+        "secteur": "Indonesia (unspecified), Hospitality and travel (LATAM), Brazilian banking users",
+        "modop": "Exploitation of WinRAR CVE-2025-8088 vulnerability to distribute remote access tools (XWorm, AsyncRAT), Telegram bot-controlled backdoors, and malicious Chrome banking extensions. Uses lure documents and phishing emails.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "vulnerability_exploitation",
+          "WinRAR",
+          "RAT",
+          "infostealer",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "nom": "Amnesia RAT operators",
+        "secteur": "Russian users (individuals and businesses)",
+        "modop": "Multi-stage phishing campaigns using fake business documents as lures. Deployment of Amnesia RAT and ransomware. Disables Microsoft Defender (Defendnot), abuses GitHub and Dropbox to host payloads. Steals browser credentials, Telegram sessions, crypto wallets, Discord/Steam data, seed phrases. Capabilities include screenshots, audio capture, remote commands, and data exfiltration.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "phishing",
+          "malware",
+          "RAT",
+          "ransomware",
+          "data_theft",
+          "Defendnot"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187367/malware/amnesia-rat-deployed-in-multi-stage-phishing-attacks-against-russian-users.html"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Energy, Technology, Geostrategy",
+        "theme": "Competition for the Arctic and Greenland",
+        "description": "The United States is reaffirming its strategic interests in the Arctic and Greenland, a vital area in the face of Russia's increasing military presence and China's ambitions. This region is crucial for U.S. missile defense, maritime routes, and resources (minerals, oil, AI data centers). NATO is urged to increase its commitment, and discussions on Greenland's autonomy are influenced by these power stakes. The 2026 National Defense Strategy highlights the importance of preventing U.S. adversaries from exerting undue influence over Greenland.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "arctic",
+          "greenland",
+          "united_states",
+          "russia",
+          "china",
+          "nato",
+          "defense",
+          "resources",
+          "strategy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/groenland-etats-unis-vers-un-mariage-de-raison/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Economy, Technology (AI, Semiconductors)",
+        "theme": "Fragilities of the 'AI Bubble' and Geopolitical Dependencies",
+        "description": "The euphoria surrounding AI hides structural vulnerabilities, notably the dependence of giants like NVIDIA on a single segment (AI data centers) and the Chinese market (excluded), as well as increasing energy constraints. The article analyzes the fragility of actors like OpenAI, whose costs exceed revenues. Competition from Google (TPUs) and internal tensions (Elon Musk) threaten these valuations. Five scenarios are envisioned, including a rapid burst, growth through diversification (robotics, quantum), a chain reaction breakdown linked to OpenAI, a recession by monopolization of non-AI resources, or a prolonged bubble through external growth. Global dependence on Taiwan for AI chips is a major strategic risk.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ai",
+          "artificial_intelligence",
+          "economy",
+          "nvidia",
+          "openai",
+          "semiconductors",
+          "taiwan",
+          "china",
+          "energy",
+          "speculative_bubbles"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde-porte-par-lia-apparaissent-2/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Government, Diplomacy, International Relations",
+        "theme": "China's 'Wolf Warrior' Diplomacy and Internal Pressures",
+        "description": "The return of China's 'wolf warrior' diplomacy is analyzed as a reflection of internal political pressures in China, rather than solely external challenges. Purges within the military and legitimacy issues for President Xi Jinping explain this aggressive rhetoric. China seeks to project an image of strength while managing limited resources, particularly in the face of Japanese statements on Taiwan. This approach aims to channel popular nationalism and send signals of strength to both domestic audiences and the Party leadership, even if it reveals internal constraints in China's foreign policy decision-making process.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "diplomacy",
+          "xi_jinping",
+          "wolf_warrior",
+          "taiwan",
+          "japan",
+          "internal_politics"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/what-are-chinas-new-wolf-warriors-really-fighting"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Government (US Immigration and Customs Enforcement - ICE), Technology (Ad Tech, Location Data), Privacy",
+        "theme": "Government Surveillance via Ad Tech Data",
+        "description": "The U.S. Immigration and Customs Enforcement (ICE) issued a Request for Information (RFI) to data and ad tech brokers to understand the extent of identifiable information available, particularly location data, it could use for its investigations. This initiative raises growing concerns about privacy, circumvention of Fourth Amendment protections (typically requiring a warrant) through data purchase, and the inadequacy of current ad tech regulations to protect citizens from government surveillance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "surveillance",
+          "privacy",
+          "government",
+          "united_states",
+          "ice",
+          "ad_tech",
+          "personal_data"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/27/ice_data_advertising_tech_firms/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Government, International Relations, UN",
+        "theme": "Donald Trump's 'Board of Peace'",
+        "description": "Analysis of the 'Board of Peace' launched by Donald Trump in Davos on January 22, 2026, and its potential competition with the UN. The discussion focuses on the chances of success for this initiative and how different states are positioning themselves in relation to it, in a context of criticism of the existing international order.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "donald_trump",
+          "peace_board",
+          "un",
+          "international_relations",
+          "diplomacy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/board-of-peace-le-machin-de-trump-les-mardis-de-liris/"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Sportswear, Retail",
+        "victime": "Nike",
+        "description": "Nike is investigating a 'potential cybersecurity incident' after the World Leaks ransomware group (a rebrand of Hunters International) claimed to have stolen 1.4 TB of files. The data was briefly posted on the group's website before being removed, suggesting negotiations or a ransom payment.",
+        "tags": [
+          "violation",
+          "breach",
+          "nike",
+          "world_leaks",
+          "hunters_international",
+          "extortion",
+          "data_leak",
+          "ransomware",
+          "retail"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/",
+          "https://infosec.exchange/@DevaOnBreaches/115970121117292022",
+          "https://mastodon.social/@nerowild/115969278848309285"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Consulting, Government (IRS)",
+        "victime": "Booz Allen Hamilton",
+        "description": "The U.S. Treasury Department canceled $21 million in contracts with Booz Allen Hamilton, citing a data leak that occurred years ago. A former employee had disclosed tax returns of prominent individuals, including former President Donald Trump, while contracting for the IRS. The company is blamed for failing to implement adequate safeguards to protect sensitive data.",
+        "tags": [
+          "violation",
+          "breach",
+          "booz_allen_hamilton",
+          "government",
+          "irs",
+          "data_leak",
+          "tax_data",
+          "insider_incident",
+          "consulting"
+        ],
+        "date": "2026-01-28",
+        "sources": [
+          "https://databreaches.net/2026/01/27/treasury-cancels-21-million-in-booz-allen-contracts-blaming-a-breach-that-happened-years-ago/"
+        ]
+      },
+      {
+        "secteur": "Music, Streaming platform",
+        "victime": "SoundCloud",
+        "description": "In December 2025, SoundCloud discovered unauthorized activity on its platform, allowing an attacker to map publicly available SoundCloud profile data to email addresses for approximately 20% of its users (30 million unique addresses). Impacted data included names, usernames, avatars, follower and following counts, and in some cases, country. Attackers then attempted to extort SoundCloud before publicly releasing the data.",
+        "tags": [
+          "violation",
+          "breach",
+          "soundcloud",
+          "music_platform",
+          "personal_data",
+          "email_addresses",
+          "extortion",
+          "data_leak"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/SoundCloud"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Thailand's Office of Search and Rescue Commission",
+        "description": "The EXADOS group claimed exfiltration of data from Thailand's Office of Search and Rescue Commission.",
+        "tags": [
+          "violation",
+          "breach",
+          "thailand",
+          "government",
+          "exados",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115968839175013374"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "10.0",
+        "product": "SmarterMail",
+        "description": "Unauthenticated remote code execution via arbitrary file upload. The vulnerability allows an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially leading to remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "RCE",
+          "arbitrary_upload",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24841",
+        "cvss": "9.9",
+        "product": "Dokploy (versions prior to 0.26.6)",
+        "description": "Command injection vulnerability in the WebSocket endpoint `/docker-container-terminal` allowing authenticated remote code execution. The `containerId` and `activeWay` parameters are not properly sanitized.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dokploy",
+          "RCE",
+          "command_injection",
+          "websocket",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24841"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24061",
+        "cvss": "9.8",
+        "product": "GNU InetUtils telnetd (versions 1.9.3 to 2.7)",
+        "description": "Critical remote code execution (RCE) vulnerability allowing root access. Due to improper validation of user-supplied input in the web-based management interface, an unauthenticated remote attacker can execute arbitrary commands.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "GNU_InetUtils",
+          "telnetd",
+          "RCE",
+          "root_access",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24838",
+        "cvss": "9.1",
+        "product": "DotNetNuke.Core (versions prior to 9.13.10 and 10.2.0)",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability via the Module Title. The module title supports richtext, allowing script execution in certain scenarios.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "DotNetNuke",
+          "DNN",
+          "XSS",
+          "code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24838"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-14756",
+        "cvss": "8.5",
+        "product": "TP-Link Archer MR600 (firmware v5)",
+        "description": "Command injection vulnerability in the admin interface component, allowing authenticated attackers to execute system commands with limited character length via crafted input in the browser developer console. Can lead to service disruption or full compromise.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "TP_Link",
+          "Archer_MR600",
+          "command_injection",
+          "RCE",
+          "authenticated_access",
+          "router"
+        ],
+        "sources": [
+          "https://securityonline.info/router-takeover-high-severity-command-injection-flaw-hits-tp-link-archer-mr600/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-1506",
+        "cvss": "8.3",
+        "product": "D-Link DIR-615 4.10",
+        "description": "OS command injection via manipulation of the 'mac' argument in the `/adv_mac_filter.php` file of the MAC Filter Configuration component. Remote attack is possible and the exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D_Link",
+          "DIR_615",
+          "command_injection",
+          "RCE",
+          "remote_access",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1506"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-1505",
+        "cvss": "8.3",
+        "product": "D-Link DIR-615 4.10",
+        "description": "OS command injection in the `/set_temp_nodes.php` file of the URL Filter component. Remote attack is possible and the exploit has been made public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "D_Link",
+          "DIR_615",
+          "command_injection",
+          "RCE",
+          "remote_access",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1505"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24842",
+        "cvss": "8.2",
+        "product": "node-tar (versions prior to 7.5.7)",
+        "description": "Hardlink path traversal vulnerability allowing arbitrary file creation/overwrite. The security check for hardlink entries uses different path resolution semantics than the actual hardlink creation logic, bypassing path traversal protections.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "node_tar",
+          "path_traversal",
+          "file_creation",
+          "file_overwrite",
+          "hardlink"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24842"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24840",
+        "cvss": "8.0",
+        "product": "Dokploy (versions prior to 0.26.6)",
+        "description": "Hardcoded credentials in the installation script, which could result in unauthorized database access. Nearly all Dokploy installations use the same database credentials.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dokploy",
+          "hardcoded_credentials",
+          "database_access",
+          "installation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24840"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24785",
+        "cvss": "8.0",
+        "product": "Clatter (versions prior to 2.2.0)",
+        "description": "PSK Validity Rule Violation issue in the pure Rust implementation of the Noise protocol framework. Can weaken security guarantees and potentially allow catastrophic key reuse due to lack of proper randomization by self-chosen ephemeral randomness. Affects `*_psk0` post-quantum handshake patterns.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Clatter",
+          "Rust",
+          "noise_protocol",
+          "PSK",
+          "key_reuse",
+          "cryptography"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24785"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-24858",
+        "cvss": "Not specified, classified as critical",
+        "product": "Fortinet FortiCloud SSO (FortiOS, FortiManager, FortiAnalyzer)",
+        "description": "Actively exploited critical authentication bypass (zero-day) vulnerability. Allows an attacker to abuse FortiCloud SSO to gain administrative access to FortiOS, FortiManager, and FortiAnalyzer devices registered to other customers. Fortinet has blocked SSO connections from vulnerable firmware versions while a patch is being prepared.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Fortinet",
+          "FortiCloud",
+          "SSO",
+          "authentication_bypass",
+          "zero_day",
+          "actively_exploited",
+          "administrative_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/",
+          "https://www.helpnetsecurity.com/2026/01/28/fortinet-forticloud-sso-zero-day-vulnerability-cve-2026-24858/",
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-8088",
+        "cvss": "Not specified, classified as high severity",
+        "product": "WinRAR (versions prior to 7.13)",
+        "description": "Path traversal vulnerability exploited via Alternate Data Streams (ADS) to write malicious files to arbitrary locations (e.g., Windows Startup folder for persistence). State-backed actors and cybercriminals are actively exploiting it for initial access and various payload delivery.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WinRAR",
+          "path_traversal",
+          "ADS",
+          "code_execution",
+          "persistence",
+          "actively_exploited",
+          "initial_access"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/",
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-22709",
+        "cvss": "Not specified, classified as critical",
+        "product": "vm2 Node.js sandbox library (versions 3.10.0)",
+        "description": "Sandbox escape vulnerability allowing arbitrary code execution on the underlying host system. Caused by vm2's failure to properly sandbox 'Promises', bypassing callback sanitization.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vm2",
+          "nodejs",
+          "sandbox_escape",
+          "RCE",
+          "critical",
+          "code_execution"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/",
+          "https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "Not specified, classified as critical",
+        "product": "SmarterMail (versions prior to build 9511)",
+        "description": "Authentication bypass vulnerability in the password reset API. Allows an unauthenticated attacker to reset system administrator accounts by supplying a target username and new password, leading to full administrative compromise. Active exploitation attempts observed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "authentication_bypass",
+          "administrative_access",
+          "actively_exploited",
+          "password_reset_api",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187394/hacking/shadowserver-finds-6000-likely-vulnerable-smartermail-servers-exposed-online.html",
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": "7.8",
+        "product": "Microsoft Office and Microsoft 365",
+        "description": "Actively exploited security feature bypass (zero-day) vulnerability. Allows attackers to bypass Object Linking and Embedding (OLE) protections, enabling malicious code execution when a user opens a crafted Office document. Relies on user interaction (phishing, social engineering).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Microsoft_Office",
+          "Microsoft_365",
+          "OLE",
+          "security_bypass",
+          "zero_day",
+          "actively_exploited",
+          "code_execution",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0089/",
+          "https://fieldeffect.com/blog/microsoft-oob-patch-actively-exploited-office-zero-day",
+          "https://socprime.com/blog/latest-threats/cve-2026-21509-vulnerability/",
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2026-20045",
+        "cvss": "Not specified, classified as critical",
+        "product": "Multiple Cisco Unified Communications products",
+        "description": "Critical remote code execution (RCE) vulnerability due to improper validation of user-supplied input in the web-based management interface. An unauthenticated remote threat actor can execute arbitrary commands. Actively exploited prior to disclosure.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "Unified_Communications",
+          "RCE",
+          "code_execution",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2024-37079",
+        "cvss": "Not specified, classified as critical",
+        "product": "VMware vCenter Server",
+        "description": "Heap overflow in the Distributed Computing Environment / Remote Procedure Calls (DCE/RPC) implementation, enabling unauthenticated remote code execution through specially crafted network packets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "VMware",
+          "vCenter_Server",
+          "RCE",
+          "heap_overflow",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-31125",
+        "cvss": "Not specified, classified as high severity",
+        "product": "Vite build tool ecosystem",
+        "description": "Improper access control flaw enabling exposure of non-allowed files when a server is directly reachable over a network. Can lead to disclosure of sensitive files (application data, internal paths, configurations).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Vite",
+          "improper_access_control",
+          "file_exposure",
+          "information_disclosure",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2025-54313",
+        "cvss": "Not specified, classified as high severity",
+        "product": "eslint-config-prettier (versions 8.10.1, 9.1.1, 10.1.6, and 10.1.7)",
+        "description": "Supply chain compromise where affected versions contain embedded malicious code. Installing these versions triggers execution of an `install.js` script that launches a malicious `node-gyp.dll` payload on Windows systems.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "eslint_config_prettier",
+          "supply_chain",
+          "malware",
+          "code_execution",
+          "windows"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/cisa-adds-six-new-flaws-kev"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "CVE-2018-14634",
+        "cvss": "Not specified, classified as critical",
+        "product": "Linux Kernel (Red Hat, CentOS, Debian)",
+        "description": "Integer overflow vulnerability, also known as Mutagen Astronomy, in the `create_elf_tables()` function. Allows local privilege escalation via a buffer overflow. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Linux_Kernel",
+          "privilege_escalation",
+          "integer_overflow",
+          "Mutagen_Astronomy",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "MariaDB",
+        "description": "Vulnerability allowing a remote denial of service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MariaDB",
+          "denial_of_service",
+          "RDoS"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0088/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "Citrix XenServer",
+        "description": "Multiple vulnerabilities allowing remote denial of service and data confidentiality breach.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Citrix",
+          "XenServer",
+          "denial_of_service",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0090/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "cve_id": "Non spécifié",
+        "cvss": "Non spécifié",
+        "product": "Xen",
+        "description": "Multiple vulnerabilities allowing privilege escalation, remote denial of service, and data confidentiality breach.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Xen",
+          "privilege_escalation",
+          "denial_of_service",
+          "data_confidentiality"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0091/"
+        ],
+        "date": "2026-01-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Amnesia RAT deployed in multi-stage phishing attacks against Russian users",
+        "description": "A multi-stage phishing campaign targets users in Russia with fake business documents as lures, deploying Amnesia RAT and ransomware. The malware uses PowerShell and VBScript for stealthy execution, disables Microsoft Defender, and exfiltrates a wide range of sensitive information (browser credentials, Telegram sessions, crypto wallets) to legitimate cloud services like GitHub and Dropbox. The Hakuna Matata ransomware encrypts files and blocks the victim's desktop to maximize financial extortion.",
+        "threat_actor": "Amnesia RAT operators",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1083 (File and Directory Discovery)",
+          "T1003 (OS Credential Dumping)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1113 (Screen Capture)",
+          "T1123 (Audio Capture)",
+          "T1021 (Remote Services)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)",
+          "T1499 (Defacement)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1562.001 (Impair Defenses: Disable or Modify Tools)",
+          "T1036.003 (Masquerading: Rename System Utilities)"
+        ],
+        "analyse": "This campaign illustrates a sophisticated and modular attack approach, heavily relying on social engineering and abuse of legitimate services for distribution and exfiltration. Disabling defenses (Microsoft Defender) and using ransomware target operational disruption and financial pressure. The impact is primarily financial and related to the privacy of Russian users, but the level of system compromise is high, allowing for long-term surveillance and theft of valuable data. The use of GitHub and Dropbox makes detection more difficult by blending malicious traffic with normal network activity.",
+        "recommandations": [
+          "Educate users on phishing risks and fake business documents.",
+          "Implement EDR/XDR solutions to detect post-exploitation activities (PowerShell, unusual VBScript activity).",
+          "Monitor network traffic to identify suspicious connections to GitHub/Dropbox for executable files.",
+          "Strengthen authentication and access management policies for sensitive services.",
+          "Regular backups and disaster recovery testing to counter ransomware effects."
+        ],
+        "tags": [
+          "phishing",
+          "malware",
+          "RAT",
+          "ransomware",
+          "data_exfiltration",
+          "social_engineering",
+          "cloud_abuse",
+          "T1566.001",
+          "T1059.001",
+          "T1105",
+          "T1071.001",
+          "T1547.001",
+          "T1083",
+          "T1003",
+          "T1555.003",
+          "T1056.001",
+          "T1113",
+          "T1123",
+          "T1021",
+          "T1041",
+          "T1486",
+          "T1490",
+          "T1499",
+          "T1560.001",
+          "T1562.001",
+          "T1036.003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187367/malware/amnesia-rat-deployed-in-multi-stage-phishing-attacks-against-russian-users.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Clawdbot sheds skin to become Moltbot, can't slough off security issues",
+        "description": "The AI agent \"Moltbot\" (formerly Clawdbot), designed to manage user administrative tasks, still faces persistent security issues. Moltbot instances have been exposed to the internet due to misconfigurations, potentially leading to the leak of secrets, account credentials, API keys, and entire codebases. Experts emphasize that the ease of installing these tools conceals the complexity of securing them, requiring specialized skills to avoid vulnerabilities related to network exposure and supply chain compromises.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1562.007 (Impair Defenses: Disable or Modify Cloud / Container Security)",
+          "T1078 (Valid Accounts)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)"
+        ],
+        "analyse": "The emergence of AI agents like Moltbot introduces significant new attack surfaces. The convenience of these tools encourages rapid adoption, but the complexity of their secure configuration leaves many instances vulnerable. The potential impact is the massive compromise of personal and professional data, including access credentials to sensitive services, making these agents prime targets for cybercrime. This challenges existing security models based on process isolation and access limitations, as AI agents require extensive access to user resources to function.",
+        "recommandations": [
+          "Assess security risks before deploying AI agents, especially those requiring extensive access.",
+          "Ensure secure configuration and rigorous access management for all AI agent instances.",
+          "Implement the principle of least privilege for AI agents and associated accounts.",
+          "Actively monitor AI agent instances for misconfigurations and network exposures.",
+          "Use security solutions (EDR, antivirus) capable of detecting malware targeting secrets stored by AI agents."
+        ],
+        "tags": [
+          "ai",
+          "ai_agent",
+          "moltbot",
+          "clawdbot",
+          "ai_security",
+          "misconfiguration",
+          "data_leak",
+          "T1562.007",
+          "T1078",
+          "T1552.001"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/27/clawdbot_moltbot_security_concerns/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Dormakaba flaws allow to access major organizations’ doors",
+        "description": "Over 20 critical vulnerabilities were discovered in Dormakaba physical access control systems based on exos 9300. These flaws allow an attacker, with prior internal network access or direct internet exposure of some access managers, to arbitrarily open doors, reconfigure controllers without authentication, steal access PINs, and launch further attacks. These systems are used by large European organizations, including in high-security environments (energy companies, logistics, airports).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "The discovery of vulnerabilities in physical access control systems like Dormakaba represents a significant threat to the physical and logical security of organizations. The ability to remotely open doors, steal credentials, and reconfigure access systems highlights a risk of unauthorized physical intrusion, sabotage, and espionage. The direct exposure of some access managers to the internet, clustered in certain countries, amplifies the risk by allowing remote exploitation without prior internal network authentication.",
+        "recommandations": [
+          "Immediately apply all patches and hardening guidelines provided by Dormakaba.",
+          "Restrict administrative access to access control system interfaces to trusted administrative networks only.",
+          "Implement strict network segmentation to isolate access control systems from general networks and the internet.",
+          "Monitor access logs to detect any suspicious activity or unauthorized reconfiguration attempts.",
+          "Conduct regular security audits on physical and logical access control systems."
+        ],
+        "tags": [
+          "dormakaba",
+          "access_control",
+          "vulnerability",
+          "RCE",
+          "remote_access",
+          "physical_security",
+          "critical",
+          "T1078",
+          "T1190",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187354/hacking/dormakaba-flaws-allow-to-access-major-organizations-doors.html"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Fake apps, NFC skimming attacks, and other Android issues in 2026",
+        "description": "The year 2025 saw a record increase in attacks on Android devices, a trend continuing into 2026. Threats include the proliferation of malicious applications (APKs) distributed via messaging apps, search engine spam, and fake app stores, often under pretexts related to AI or bypassing restrictions. NFC skimming attacks (direct or reverse) are used to steal bank card data and money. Triada malware is pre-installed on Android devices from obscure or counterfeit brands, enabling information theft, SMS interception, and using the phone as a proxy.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1472 (Compromise Mobile Device)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1090.003 (Proxy: Multi-hop Proxy)",
+          "T1003.003 (OS Credential Dumping: Browser Saved Credentials)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1584.004 (Compromise Infrastructure: IoT)",
+          "T1566.003 (Phishing: Spearphishing via Service)"
+        ],
+        "analyse": "Kaspersky's report highlights the diversity and ingenuity of threats targeting the Android ecosystem. Social engineering remains a highly effective attack vector, exploiting users' curiosity or desire to bypass restrictions. NFC skimming represents a direct evolution of financial theft towards mobile, capitalizing on the popularity of contactless payments. The discovery of pre-installed malware (Triada) on new devices underscores a growing risk in the hardware supply chain, turning devices into espionage and theft 'implants' from the moment of acquisition. The impact is global and affects personal, financial data, and privacy.",
+        "recommandations": [
+          "Download applications only from official stores (Google Play) and check reviews and permissions.",
+          "Use reputable mobile security solutions (antivirus).",
+          "Be vigilant against unsolicited links and messages, even from known contacts.",
+          "Disable NFC when not in use and do not share banking information via unknown applications.",
+          "Purchase mobile devices from trusted resellers and verify their integrity."
+        ],
+        "tags": [
+          "android",
+          "malware",
+          "phishing",
+          "nfc_skimming",
+          "triada",
+          "fake_apps",
+          "supply_chain",
+          "mobile_security",
+          "T1566.002",
+          "T1472",
+          "T1036.005",
+          "T1090.003",
+          "T1003.003",
+          "T1555.003",
+          "T1552.001",
+          "T1584.004",
+          "T1566.003"
+        ],
+        "sources": [
+          "https://www.kaspersky.co.uk/blog/growing-2026-android-threats-and-protection/29992/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Fortinet blocks exploited FortiCloud SSO zero day until patch is ready",
+        "description": "Fortinet has confirmed and mitigated a critical actively exploited FortiCloud Single Sign-On (SSO) authentication bypass zero-day vulnerability (CVE-2026-24858). This flaw allowed attackers to gain administrative access to FortiOS, FortiManager, and FortiAnalyzer devices registered to other customers, even on fully patched firmware. Fortinet blocked SSO connections from vulnerable firmware versions server-side, pending client-side patches. Attacks included creating new local administrator accounts and exfiltrating firewall configurations.",
+        "threat_actor": "Unspecified, likely state-sponsored or advanced cybercriminals",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-24858",
+            "CVE-2025-59718"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1078.001 (Valid Accounts: Default Accounts)",
+          "T1078 (Valid Accounts)",
+          "T1003.006 (OS Credential Dumping: LSASS Memory)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "The exploitation of a zero-day vulnerability in a critical Fortinet SSO component highlights the evolving nature of attacks targeting security infrastructure itself. The ability to gain administrative access to firewalls and management platforms (FortiOS, FortiManager, FortiAnalyzer) has a high strategic impact, allowing full network control, persistence, and exfiltration of sensitive data. The fact that devices were up-to-date indicates a sophisticated threat capable of finding flaws before vendors patch them. Fortinet's rapid server-side response helped limit exploitation.",
+        "recommandations": [
+          "Immediately update FortiOS, FortiManager, and FortiAnalyzer firmwares as soon as patches are available.",
+          "Restrict administrative access to edge network devices and management interfaces to trusted IP addresses only via local policies.",
+          "Check logs for suspicious administrator account creation or configuration exfiltration.",
+          "Implement zero-trust policies for administrative access management.",
+          "Enable multi-factor authentication for all access, including FortiCloud SSO."
+        ],
+        "tags": [
+          "fortinet",
+          "forticloud",
+          "sso",
+          "zero_day",
+          "actively_exploited",
+          "authentication_bypass",
+          "administrative_access",
+          "configuration_exfiltration",
+          "T1078.004",
+          "T1078.001",
+          "T1078",
+          "T1003.006",
+          "T1537"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/",
+          "https://www.helpnetsecurity.com/2026/01/28/fortinet-forticloud-sso-zero-day-vulnerability-cve-2026-24858/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Microsoft releases emergency patch for exploited Office flaw (CVE-2026-21509)",
+        "description": "Microsoft issued an out-of-band emergency patch for CVE-2026-21509, an actively exploited security feature bypass vulnerability affecting Microsoft Office and Microsoft 365. The flaw allows attackers to bypass Object Linking and Embedding (OLE) protections, leading to malicious code execution when a user opens a specially crafted Office document. Exploitation relies on user interaction (phishing, social engineering). CISA has added this vulnerability to its KEV catalog.",
+        "threat_actor": "Unspecified, likely state-sponsored or advanced cybercriminals",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-21509"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1218.010 (System Binary Proxy Execution: Mshta)"
+        ],
+        "analyse": "The active exploitation of a zero-day vulnerability in Microsoft Office, a ubiquitous software suite, poses a major risk to all organizations. The reliance on user interaction via phishing makes this threat particularly insidious. Attackers can bypass fundamental security mechanisms to achieve code execution, paving the way for broader compromises, malware installation, or data theft. The rapid inclusion in CISA's KEV catalog underscores the urgency of applying patches.",
+        "recommandations": [
+          "Immediately apply Microsoft's emergency patch for CVE-2026-21509.",
+          "Strengthen user awareness against phishing attacks and opening unsolicited documents.",
+          "Implement Endpoint Detection and Response (EDR) solutions to monitor and block malicious behavior, even if the initial exploit is successful.",
+          "Restrict the use of OLE functionalities where operationally feasible.",
+          "Enable enhanced validation and sandboxing mechanisms for Office documents from untrusted sources."
+        ],
+        "tags": [
+          "microsoft_office",
+          "microsoft_365",
+          "zero_day",
+          "actively_exploited",
+          "security_bypass",
+          "OLE",
+          "phishing",
+          "code_execution",
+          "T1566.001",
+          "T1204.002",
+          "T1218.010"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/microsoft-oob-patch-actively-exploited-office-zero-day",
+          "https://socprime.com/blog/latest-threats/cve-2026-21509-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "Chinese Mustang Panda hackers deploy infostealers via CoolClient backdoor",
+        "description": "The Chinese espionage group Mustang Panda (also known as HoneyMyte and Bronze President) has updated its CoolClient backdoor, adding browser data theft and clipboard monitoring capabilities. The malware targets government entities in Myanmar, Mongolia, Malaysia, Russia, and Pakistan, deployed via legitimate software (Sangfor) and DLL sideloading techniques. It collects system and user information, performs keylogging, TCP tunneling, reverse-proxying, and exfiltrates data via public services like Google Drive or Pixeldrain using hardcoded API tokens. Three variants of Chromium-based browser infostealers have been identified.",
+        "threat_actor": "Mustang Panda (aka HoneyMyte, Bronze President)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "113.23.212.15"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [
+            "http://113.23.212[.]15/pub/"
+          ],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1574.002 (Hijack Execution Flow: DLL Side-Loading)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1087 (Account Discovery)",
+          "T1082 (System Information Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1016 (System Network Configuration Discovery)",
+          "T1056.001 (Input Capture: Keylogging)",
+          "T1056.002 (Input Capture: Clipboard Data)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1021.001 (Remote Services: Remote Desktop Protocol)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1135 (Network Share Discovery)",
+          "T1083 (File and Directory Discovery)",
+          "T1548.002 (Abuse Elevation Control Mechanism: Bypass User Account Control)"
+        ],
+        "analyse": "Mustang Panda continues to be a sophisticated espionage actor, constantly adapting its toolset. The evolution of CoolClient, with added browser infostealing and clipboard monitoring capabilities, demonstrates an increased focus on collecting sensitive user data. The use of DLL sideloading and legitimate software for initial infection makes detection more complex. Exfiltration via popular cloud services and hardcoded API tokens is a technique to evade traditional detections. The impact is long-term espionage and strategic data theft from government entities.",
+        "recommandations": [
+          "Implement strict controls on DLL execution and third-party software, prioritizing application whitelisting.",
+          "Monitor network activity to detect unusual connections to legitimate cloud services (Google Drive, Pixeldrain) potentially used for exfiltration.",
+          "Enhance endpoint protection with EDR solutions capable of detecting abnormal process behaviors and Windows registry/service modifications.",
+          "Educate users about social engineering risks and malicious files, even if they appear to come from legitimate software.",
+          "Implement anti-infostealer solutions and robust credential management strategies (password managers, MFA)."
+        ],
+        "tags": [
+          "mustang_panda",
+          "honeymyte",
+          "bronze_president",
+          "espionage",
+          "APT",
+          "coolclient",
+          "infostealer",
+          "DLL_sideloading",
+          "data_exfiltration",
+          "persistence",
+          "T1566.001",
+          "T1574.002",
+          "T1547.001",
+          "T1087",
+          "T1082",
+          "T1033",
+          "T1016",
+          "T1056.001",
+          "T1056.002",
+          "T1552.001",
+          "T1021.001",
+          "T1059",
+          "T1105",
+          "T1560.001",
+          "T1041",
+          "T1135",
+          "T1083",
+          "T1548.002"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-mustang-panda-hackers-deploy-infostealers-via-coolclient-backdoor/",
+          "https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "US charges 31 more suspects linked to ATM malware attacks",
+        "description": "A Nebraska federal grand jury charged 31 additional defendants for their involvement in an ATM jackpotting operation allegedly orchestrated by members of the Venezuelan Tren de Aragua (TdA) gang. Suspects reportedly deployed Ploutus malware on ATMs after opening machine housings and replacing hard drives or connecting USB drives. The malware allowed them to empty machines and delete evidence to conceal attacks, which targeted banks and credit unions nationwide. The TdA, now designated by the U.S. Treasury as a Foreign Terrorist Organization, has grown from a prison gang to a transnational criminal organization.",
+        "threat_actor": "Tren de Aragua (TdA) gang",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1078 (Valid Accounts)",
+          "T1496 (Resource Hijacking)",
+          "T1029 (Scheduled Transfer)",
+          "T1562.004 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "This case highlights the growing threat from transnational criminal organizations (TCOs) employing sophisticated methods, including custom malware, for large-scale financial theft. ATM jackpotting represents a direct attack against physical banking infrastructure. The escalation of Tren de Aragua from a prison gang to a foreign terrorist organization underscores the increasing convergence between cybercrime and national security threats. The impact is financial for targeted institutions and potentially a funding source for terrorist activities.",
+        "recommandations": [
+          "Strengthen physical security of ATMs to prevent unauthorized physical access.",
+          "Update ATM software and implement integrity controls to detect any unauthorized modifications.",
+          "Deploy security solutions that can detect jackpotting malware and suspicious activity on ATM systems.",
+          "Implement real-time transaction monitoring and alerts for unusual withdrawals.",
+          "Collaborate with law enforcement to share indicators of compromise and threat actor information."
+        ],
+        "tags": [
+          "tren_de_aragua",
+          "jackpotting",
+          "atm",
+          "ploutus",
+          "organized_crime",
+          "malware",
+          "bank_fraud",
+          "transnational_criminal_organizations",
+          "T1547.001",
+          "T1078",
+          "T1496",
+          "T1029",
+          "T1562.004"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-charges-31-more-suspects-linked-to-atm-malware-attacks/"
+        ],
+        "date": "2026-01-28"
+      },
+      {
+        "title": "WinRAR path traversal flaw still exploited by numerous hackers",
+        "description": "The high-severity CVE-2025-8088 vulnerability in WinRAR is actively and widely exploited by a multitude of actors, including state-sponsored espionage groups (Russian like UNC4895, APT44, TEMP.Armageddon, Turla, and Chinese) and financially motivated cybercriminals. This path traversal flaw, leveraging Alternate Data Streams (ADS), allows writing malicious files to arbitrary locations (often the Windows Startup folder for persistence). Attackers use this method for initial access and to deliver various payloads such as RATs, infostealers, and malicious banking extensions. The exploit has become a key commodity on the underground exploit market.",
+        "threat_actor": "UNC4895 (CIGAR, RomCom), APT44 (FROZENBARENTS), TEMP.Armageddon (CARPATHIAN), Turla (SUMMIT), PRC-based actor, Financially motivated actors",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [
+            "272c86c6db95f1ef8b83f672b65e64df16494cae261e1aba1aeb1e59dcb68524",
+            "33580073680016f23bf474e6e62c61bf6a776e561385bfb06788a4713114ba9d",
+            "498961237cf1c48f1e7764829818c5ba0af24a234c2f29c4420fb80276aec676",
+            "4f4567abe9ff520797b04b04255bbbe07ecdddb594559d436ac53314ec62c1b3",
+            "53f1b841d323c211c715b8f80d0efb9529440caae921a60340de027052946dd9",
+            "55b3dc57929d8eacfdadc71d92483eabe4874bf3d0189f861b145705a0f0a8fe",
+            "68d9020aa9b509a6d018d6d9f4c77e7604a588b2848e05da6a4d9f82d725f91b",
+            "6d3586aa6603f1c1c79d7bd7e0b5c5f0cc8e8a84577c35d21b0f462656c2e1f9",
+            "ae93d9327a91e90bf7744c6ce0eb4affb3acb62a5d1b2dafd645cba9af28d795",
+            "b90ef1d21523eeffbca17181ccccf269bca3840786fcbf5c732188a4713114ba9d",
+            "c7726c166e1947fdbf808a50b75ca7400d56fa6fef2a76cefe314848db22c76c",
+            "e836873479ff558cfb885097e8783356aad1f2d30b69d825b3a71cb7a57cf930",
+            "ffc6c3805bbaef2c4003763fd5fac0ebcccf99a1656f10cf7677f6c2a5d16dbd",
+            "958921ea0995482fb04ea4a50bbdb654f272ab991046a43c1fdbd22da302d544",
+            "defe25e400d4925d8a2bb4b1181044d06a8bf61688fd9c9ea59f1e0bb7bc21d8",
+            "edc1f7528ca93ec432daca820f47e08d218b79cceca1ee764966f8f90d6a58bd",
+            "29f89486bb820d40c9bee8bf70ee8664ea270b16e486af4a53ab703996943256",
+            "2c40e7cf613bf2806ff6e9bc396058fe4f85926493979189dbdbc7d615b7cb14",
+            "3b85d0261ab2531aba9e2992eb85273be0e26fe61e4592862d8f45d6807ceee4",
+            "54305c7b95d8105601461bb18de87f1f679d833f15e38a9ee7895a0c8605c0d0",
+            "5dee69127d501142413fb93fd2af8c8a378682c140c52b48990a5c41f2ce3616",
+            "867a05d67dd184d544d5513f4f07959a7c2b558197c99cb8139ea797ad9fbece",
+            "91e61fd77460393a89a8af657d09df6a815465f6ce22f1db8277d58342b32249",
+            "b2b62703a1ef7d9d3376c6b3609cd901cbccdcca80fba940ce8ed3f4e54cdbe6",
+            "cf35ce47b35f1405969f40633fcf35132ca3ccb3fdfded8cc270fc2223049b80",
+            "d981a16b9da1615514a02f5ebb38416a009f5621c0b718214d5b105c9f552389",
+            "ddd67dda5d58c7480152c9f6e8043c3ea7de2e593beedf86b867b83f005bf0cc",
+            "ea0869fa9d5e23bdd16cddfefbbf9c67744598f379be306ff652f910db1ba162",
+            "ef0e1bb2d389ab8b5f15d2f83cf978662e18e31dbe875f39db563e8a019af577",
+            "f3e5667d02f95c001c717dfc5a0e100d2b701be4ec35a3e6875dc276431a7497",
+            "f6761b5341a33188a7a1ca7a904d5866e07b8ddbde9adebdbce4306923cfc60a",
+            "fc2a6138786fae4e33dc343aea2b1a7cd6411187307ea2c82cd96b45f6d1f2a0",
+            "a97f460bfa612f1d406823620d0d25e381f9b980a0497e2775269917a7150f04",
+            "d418f878fa02729b38b5384bcb3216872a968f5d0c9c77609d8c5aacedb07546",
+            "ba86b6e0199b8907427364246f049efd67dc4eda0b5078f4bc7607253634cf24",
+            "cf8ebfd98da3025dc09d0b3bbeef874d8f9c4d4ba4937719f0a9a3aa04c81beb",
+            "5b64786ed92545eeac013be9456e1ff03d95073910742e45ff6b88a86e91901b",
+            "8a7ee2a8e6b3476319a3a0d5846805fd25fa388c7f2215668bc134202ea093fa",
+            "3b47df790abb4eb3ac570b50bf96bb1943d4b46851430ebf3fc36f645061491b",
+            "bb4856a66bf7e0de18522e35798c0a8734179c1aab21ed2ad6821aaa99e1cb4c",
+            "aea13e5871b683a19a05015ff0369b412b985d47eb67a3af93f44400a026b4b0",
+            "ed5b920dad5dcd3f9e55828f82a27211a212839c8942531c288535b92df7f453",
+            "a54bcafd9d4ece87fa314d508a68f47b0ec3351c0a270aa2ed3a0e275b9db03c",
+            "b53069a380a9dd3dc1c758888d0e50dd43935f16df0f7124c77569375a9f44f5"
+          ],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1036.005 (Masquerading: Match Legitimate Name or Location)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1555.003 (Credential Access: Credentials from Web Browsers)"
+        ],
+        "analyse": "The persistence of CVE-2025-8088 exploitation in WinRAR, despite a patch being available, highlights the difficulty for organizations to apply timely updates. The use of this flaw by actors as diverse as state groups and cybercriminals demonstrates its effectiveness as an initial access vector. The impact is global and manifests as espionage, data theft, and financial gain. The commoditization of exploits is a worrying trend that lowers the barrier to entry for attackers, enabling less sophisticated actors to carry out advanced attacks.",
+        "recommandations": [
+          "Update WinRAR to version 7.13 or later immediately.",
+          "Strengthen user awareness of the dangers of opening RAR archives from untrusted sources, even if they contain seemingly legitimate documents.",
+          "Implement EDR/XDR solutions to detect attempts to write files to startup folders or other sensitive locations.",
+          "Use email and web gateway solutions that block suspicious RAR files and malicious downloads.",
+          "Monitor Indicators of Compromise (IoCs) shared by intelligence agencies and security researchers."
+        ],
+        "tags": [
+          "winrar",
+          "path_traversal",
+          "actively_exploited",
+          "zero_day",
+          "initial_access",
+          "persistence",
+          "APT",
+          "cybercrime",
+          "T1566.001",
+          "T1204.002",
+          "T1547.001",
+          "T1036.005",
+          "T1059",
+          "T1105",
+          "T1555.003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        ],
+        "date": "2026-01-28"
+      }
+    ]
+  }
+}
