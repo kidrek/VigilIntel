@@ -1,30 +1,30 @@
 {
   "type": "bundle",
-  "id": "bundle--d1794768-ab95-46b7-8407-49673e1e9f04",
+  "id": "bundle--3e1decb4-3a17-4f75-aae5-6327d8103801",
   "objects": [
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-28T13:45:31.082581Z",
-      "modified": "2026-01-28T13:45:31.082581Z",
+      "id": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T14:03:03.162319Z",
+      "modified": "2026-01-28T14:03:03.162319Z",
       "name": "VigilIntel",
       "identity_class": "organization"
     },
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--6e0dc0c6-663a-4939-9d44-5c2002e271b0",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Mustang Panda (Bronze President, HoneyMyte)",
+      "id": "threat-actor--2b3c821b-23e2-4987-ab9f-8e3593b1b19d",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Mustang Panda (aka HoneyMyte / Bronze President)",
       "labels": [
         "APT",
         "China",
         "Espionage",
-        "Infostealer",
-        "Backdoor"
+        "Data Stealer",
+        "CoolClient"
       ],
       "external_references": [
         {
@@ -40,13 +40,13 @@
     {
       "type": "campaign",
       "spec_version": "2.1",
-      "id": "campaign--715e424f-01e5-41bb-b0dd-f93dad4750ed",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Updated CoolClient Infostealer Deployment",
-      "description": "The Chinese espionage group updated its CoolClient backdoor to a new variant. This updated malware family includes new capabilities designed to steal browser login data and monitor the clipboard, indicating a focus on data exfiltration in recent campaigns.",
-      "first_seen": "2026-01-27T00:00:00Z",
+      "id": "campaign--64f66eb8-017a-425c-ac75-840e1d0515eb",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CoolClient Evolution",
+      "description": "The Chinese espionage group is utilizing an updated version of its CoolClient backdoor. The new variant incorporates improved capabilities for stealing authentication data from browsers and monitoring the victim's clipboard content, indicating an effort to refine data exfiltration tactics.",
+      "first_seen": "2026-01-28T00:00:00Z",
       "external_references": [
         {
           "source_name": "source",
@@ -61,15 +61,15 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--4fc3ec1f-dd02-43b0-afff-45003d3a642a",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "abstract": "(EN) Mustang Panda (Bronze President, HoneyMyte)",
-      "content": "Sector: Government, Technology, Various (Espionage)\n\nModus operandi:\nUse of updated CoolClient backdoor, deployment of multiple browser data stealers, potential use of custom scripts and targeted espionage.",
+      "id": "note--45807481-3f29-48fe-aa4c-ca74de54a1fa",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "(EN) Mustang Panda (aka HoneyMyte / Bronze President)",
+      "content": "Sector: Government, Technology, Private Sector (Espionage targets)\n\nModus operandi:\nDeployment of updated CoolClient backdoor, utilization of multiple browser data stealers and scripts for persistent data harvesting.",
       "object_refs": [
-        "threat-actor--6e0dc0c6-663a-4939-9d44-5c2002e271b0",
-        "campaign--715e424f-01e5-41bb-b0dd-f93dad4750ed"
+        "threat-actor--2b3c821b-23e2-4987-ab9f-8e3593b1b19d",
+        "campaign--64f66eb8-017a-425c-ac75-840e1d0515eb"
       ],
       "external_references": [
         {
@@ -85,81 +85,112 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--fcded3d8-079a-41c4-9039-1463765cfddc",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Russia-Nexus APTs (UNC4895, APT44, TEMP.Armageddon, Turla)",
+      "id": "threat-actor--5c45422f-fc6f-450b-827e-74a8766a3e7a",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Multiple Actors (Russia-Nexus, China-Nexus, Cybercrime)",
       "labels": [
-        "APT",
-        "Russia",
-        "Espionage",
         "N-Day Exploitation",
-        "Ukraine"
+        "Initial Access",
+        "APT",
+        "Cybercrime",
+        "Persistence",
+        "Russia-Nexus",
+        "China-Nexus"
       ],
       "external_references": [
         {
           "source_name": "source",
           "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
         }
       ]
     },
     {
       "type": "campaign",
       "spec_version": "2.1",
-      "id": "campaign--f314559f-4cf9-4d20-a171-963da10bd1ba",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Widespread Exploitation of WinRAR CVE-2025-8088",
-      "description": "Multiple Russian state-backed groups are actively exploiting the WinRAR path traversal vulnerability (CVE-2025-8088) to gain initial access and establish persistence, primarily targeting Ukrainian military and government entities using highly tailored geopolitical lures. Payloads include NESTPACKER (Snipbot) and STOCKSTAY malware suites.",
-      "first_seen": "2026-01-27T00:00:00Z",
+      "id": "campaign--69cc93c3-89b7-4ed4-85a9-d2f9c9a77385",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Widespread WinRAR CVE-2025-8088 Exploitation",
+      "description": "A wide range of actors, including state-sponsored groups (UNC4895, APT44, TEMP.Armageddon, Turla) and financially motivated groups, are actively and opportunistically exploiting the critical WinRAR flaw (CVE-2025-8088) to gain initial access and deploy various payloads, including RATs (AsyncRAT, XWorm) and infostealers.",
+      "first_seen": "2026-01-28T00:00:00Z",
       "external_references": [
         {
           "source_name": "source",
           "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
         }
       ]
     },
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--25130ae2-de6c-443d-af27-aaa10cbcb73b",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "abstract": "(EN) Russia-Nexus APTs (UNC4895, APT44, TEMP.Armageddon, Turla)",
-      "content": "Sector: Government, Military, Technology (Ukraine Focus)\n\nModus operandi:\nSpearphishing, exploitation of CVE-2025-8088 via crafted RAR archives containing malicious LNK files leveraging Alternate Data Streams (ADS), leading to persistence in the Windows Startup folder.",
+      "id": "note--d60d0225-5688-4209-92aa-d16350afaf5f",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "(EN) Multiple Actors (Russia-Nexus, China-Nexus, Cybercrime)",
+      "content": "Sector: Government (Ukraine), Military, Technology, Hospitality, Finance, General Public\n\nModus operandi:\nSpearphishing leveraging geopolitical or commercial lures. Exploitation of path traversal via malicious RAR archives combined with Alternate Data Streams (ADS) to drop LNK or HTA files into the Windows Startup folder for persistence and subsequent execution of second-stage malware (e.g., NESTPACKER/Snipbot, POISONIVY, STOCKSTAY).",
       "object_refs": [
-        "threat-actor--fcded3d8-079a-41c4-9039-1463765cfddc",
-        "campaign--f314559f-4cf9-4d20-a171-963da10bd1ba"
+        "threat-actor--5c45422f-fc6f-450b-827e-74a8766a3e7a",
+        "campaign--69cc93c3-89b7-4ed4-85a9-d2f9c9a77385"
       ],
       "external_references": [
         {
           "source_name": "source",
           "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
         }
       ]
     },
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--9db52619-8148-410e-9414-f5b6a9092742",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "vulnerability--922055ed-176d-4393-bbf7-619f626a36e9",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "name": "CVE-2026-21509",
-      "description": "Critical security feature bypass vulnerability (zero-day) actively exploited in the wild. The flaw allows attackers to bypass Object Linking and Embedding (OLE) protections, enabling remote code execution when a user opens a specially crafted Office document.\n\nAffected product: Microsoft Office / Microsoft 365",
+      "description": "Critical security feature bypass vulnerability actively exploited in the wild (Zero-Day). The flaw allows attackers to bypass Object Linking and Embedding (OLE) protections, enabling malicious code execution when a user opens a specially crafted Office document. Microsoft issued an emergency patch (Out-of-Band). CISA added it to the KEV catalog.\n\nAffected product: Microsoft Office / Microsoft 365",
       "labels": [
         "vulnerability",
-        "zero-day",
-        "active-exploitation",
-        "RCE"
+        "Zero-Day",
+        "Actively Exploited",
+        "RCE Potential",
+        "KEV"
       ],
       "external_references": [
         {
           "source_name": "cve",
           "external_id": "CVE-2026-21509"
+        },
+        {
+          "source_name": "EUVD",
+          "external_id": "N/A"
         },
         {
           "source_name": "source",
@@ -171,29 +202,33 @@
         },
         {
           "source_name": "source",
-          "url": "https://socprime.com/blog/latest-threats/cve-2026-21509-vulnerability/"
+          "url": "https://fieldeffect.com/blog/microsoft-oob-patch-actively-exploited-office-zero-day"
         }
       ]
     },
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--07a4f7a3-e92e-4db7-865c-cfa92b59cf08",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "vulnerability--e2dac509-f7a0-4eb9-8d26-782875b63793",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "name": "CVE-2026-24858",
-      "description": "Critical authentication bypass vulnerability (zero-day) actively exploited in the wild. Fortinet confirmed mitigating the attacks by blocking FortiCloud SSO connections from devices running vulnerable firmware versions.\n\nAffected product: Fortinet FortiCloud SSO, FortiOS",
+      "description": "Critical authentication bypass vulnerability in FortiCloud Single Sign-On (SSO) feature. This zero-day vulnerability is confirmed as actively exploited in the wild. Fortinet mitigated the threat by blocking connections from vulnerable firmware versions while preparing a patch.\n\nAffected product: Fortinet FortiCloud SSO",
       "labels": [
         "vulnerability",
-        "zero-day",
-        "active-exploitation",
-        "authentication-bypass"
+        "Zero-Day",
+        "Actively Exploited",
+        "Authentication Bypass"
       ],
       "external_references": [
         {
           "source_name": "cve",
           "external_id": "CVE-2026-24858"
+        },
+        {
+          "source_name": "EUVD",
+          "external_id": "N/A"
         },
         {
           "source_name": "source",
@@ -208,49 +243,17 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--60fb0b67-db73-4e59-9bb1-8a40ea24b389",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "vulnerability--b5d2e42a-0820-4399-9524-6950a4386861",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
-      "name": "CVE-2025-40553",
-      "description": "Critical deserialization of untrusted data vulnerability leading to unauthenticated Remote Code Execution (RCE). This flaw allows an attacker to run commands on the host machine without authentication.\n\nAffected product: SolarWinds Web Help Desk",
-      "labels": [
-        "vulnerability",
-        "RCE",
-        "unauthenticated",
-        "critical"
-      ],
-      "external_references": [
-        {
-          "source_name": "cve",
-          "external_id": "CVE-2025-40553"
-        },
-        {
-          "source_name": "source",
-          "url": "https://cvefeed.io/vuln/detail/CVE-2025-40553"
-        },
-        {
-          "source_name": "source",
-          "url": "https://securityonline.info/solarwinds-web-help-desk-hit-with-multiple-rce-and-auth-bypass-vulnerabilities/"
-        }
-      ],
-      "x_opencti_base_score": 9.8,
-      "x_opencti_base_severity": "critical"
-    },
-    {
-      "type": "vulnerability",
-      "spec_version": "2.1",
-      "id": "vulnerability--093d0f90-ccad-4bd9-a074-2825c79f67c6",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
       "name": "CVE-2025-8088",
-      "description": "High-severity path traversal vulnerability actively and widely exploited by both state-sponsored and financially motivated actors since July 2025. The flaw allows malicious files to be written to arbitrary locations, typically the Windows Startup folder for persistence, via Alternate Data Streams (ADS).\n\nAffected product: RARLAB WinRAR",
+      "description": "High-severity path traversal vulnerability actively exploited by diverse threat actors (APTs and cybercriminals) since July 2025. The flaw allows attackers to craft malicious RAR archives that, when opened, drop files into arbitrary locations, commonly targeting the Windows Startup folder for persistence.\n\nAffected product: RARLAB WinRAR",
       "labels": [
         "vulnerability",
-        "active-exploitation",
-        "path-traversal",
-        "N-Day"
+        "N-Day Exploitation",
+        "KEV",
+        "Path Traversal"
       ],
       "external_references": [
         {
@@ -258,45 +261,171 @@
           "external_id": "CVE-2025-8088"
         },
         {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+          "source_name": "EUVD",
+          "external_id": "N/A"
         },
         {
           "source_name": "source",
-          "url": "https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html"
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
         }
       ]
     },
     {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--c5e56696-8d14-405d-98b4-77f9c05b9bec",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2025-55182",
+      "description": "Critical vulnerability (React2Shell) actively exploited to compromise systems worldwide. Exploitation leads to Remote Code Execution (RCE) and is used primarily to deploy crypto miners and botnets.\n\nAffected product: React Server Components ('React2Shell')",
+      "labels": [
+        "vulnerability",
+        "Actively Exploited",
+        "RCE",
+        "Botnet"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-55182"
+        },
+        {
+          "source_name": "EUVD",
+          "external_id": "N/A"
+        },
+        {
+          "source_name": "source",
+          "url": "https://thecyberexpress.com/cve-2025-55182-react2shell-active-exploitation/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--e5fb193c-1b8f-43e9-aa82-c4edf0662143",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2026-23760",
+      "description": "Critical authentication bypass flaw for which Shadowserver reported over 6,000 potentially vulnerable servers exposed online. CISA added this vulnerability to its KEV catalog.\n\nAffected product: SmarterTools SmarterMail",
+      "labels": [
+        "vulnerability",
+        "Authentication Bypass",
+        "KEV"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-23760"
+        },
+        {
+          "source_name": "EUVD",
+          "external_id": "N/A"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187394/hacking/shadowserver-finds-6000-likely-vulnerable-smartermail-servers-exposed-online/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187375/security/u-s-cisa-adds-microsoft-office-gnu-inetutils-smartertools-smartermail-and-linux-kernel-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--bf32ddf1-d554-4f3c-a753-171d7c904a34",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2026-1056",
+      "description": "Critical arbitrary file deletion vulnerability in the Snow Monkey Forms plugin for WordPress (<= 12.0.3) due to insufficient file path validation. Exploitation is possible by unauthenticated attackers and can easily lead to Remote Code Execution (RCE) by deleting critical files (e.g., wp-config.php).\n\nAffected product: Snow Monkey Forms Plugin (WordPress)",
+      "labels": [
+        "vulnerability",
+        "RCE Potential",
+        "Path Traversal",
+        "WordPress"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-1056"
+        },
+        {
+          "source_name": "EUVD",
+          "external_id": "N/A"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-1056"
+        }
+      ],
+      "x_opencti_base_score": 9.8,
+      "x_opencti_base_severity": "critical"
+    },
+    {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--411160e6-02ee-4571-84dd-36a8f7861938",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "identity--b06cf990-3dbf-4f41-aa44-769768331bd7",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "SoundCloud",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--09710d6c-6fd7-4340-bb45-f172fcb74f83",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Breach: SoundCloud",
+      "description": "A significant data breach exposed personal details of approximately 29.8 million users (about 20% of its user base). The compromised data, resulting from unauthorized activity discovered in December 2025, included email addresses, names, usernames, and demographic information. The attackers reportedly attempted extortion before publicly releasing the data.\n\nSector: Media, Music Streaming",
+      "labels": [
+        "Data Leak",
+        "Extortion",
+        "User Data"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://gbhackers.com/soundcloud-data-breach/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://haveibeenpwned.com/Breach/SoundCloud"
+        }
+      ],
+      "incident_type": "data-leak"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e60e8006-ae07-496b-b39b-bc545d5eff64",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "name": "Nike",
       "identity_class": "organization"
     },
     {
       "type": "incident",
       "spec_version": "2.1",
-      "id": "incident--86415b9a-0309-4306-b37d-62b5d3bcfd76",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "incident--fb422fda-a032-44ea-b770-5707a21e8199",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "name": "Breach: Nike",
-      "description": "Nike is investigating a potential cybersecurity incident after the WorldLeaks ransomware group claimed responsibility for stealing 1.4 TB of corporate data and leaking the files on its darknet site. The company confirmed the incident is under investigation.\n\nSector: Retail, Sportswear",
+      "description": "Nike is investigating a potential cybersecurity incident after the WorldLeaks ransomware group claimed responsibility for stealing over 1.4 TB of corporate data. The threat actor announced the breach and threatened to release the stolen information publicly.\n\nSector: Retail, Sportswear",
       "labels": [
         "Ransomware",
-        "Data Leak",
         "Extortion",
         "WorldLeaks"
       ],
       "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/"
-        },
         {
           "source_name": "source",
           "url": "https://gbhackers.com/nike-investigates-data-breach/"
@@ -307,36 +436,31 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--3bf1f9c6-6edc-434a-8ed6-41725cbfd0c2",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "SoundCloud",
+      "id": "identity--ff3221f6-121c-440e-bdb7-e52e6e0ce54f",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Booz Allen Hamilton (US Treasury Contracts)",
       "identity_class": "organization"
     },
     {
       "type": "incident",
       "spec_version": "2.1",
-      "id": "incident--eab889d2-f1ba-45e4-b586-d07ca952d981",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Breach: SoundCloud",
-      "description": "A data breach was disclosed affecting approximately 29.8 million users (20% of the user base). The attackers linked publicly available profile data to email addresses. Exposed data includes email addresses, usernames, names, avatars, follower counts, and country information. Attackers subsequently attempted extortion.\n\nSector: Media, Music Streaming",
+      "id": "incident--24a97285-6b90-4af7-bbab-0b2ad353d1cb",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Breach: Booz Allen Hamilton (US Treasury Contracts)",
+      "description": "The U.S. Treasury Department canceled $21 million in federal contracts with Booz Allen Hamilton following a policy review related to a years-old insider leak (Charles Littlejohn) of confidential government data, highlighting the severe long-term financial and contractual consequences of internal breaches, even when the breach occurred previously.\n\nSector: Government Services, Consulting",
       "labels": [
-        "Data Breach",
-        "Extortion",
-        "Personal Data",
-        "Streaming Platform"
+        "Insider Threat",
+        "Data Leak",
+        "Policy Impact"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://haveibeenpwned.com/Breach/SoundCloud"
-        },
-        {
-          "source_name": "source",
-          "url": "https://gbhackers.com/soundcloud-data-breach/"
+          "url": "https://databreaches.net/2026/01/27/treasury-cancels-21-million-in-booz-allen-contracts-blaming-a-breach-that-happened-years-ago/"
         }
       ],
       "incident_type": "data-leak"
@@ -344,33 +468,14 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--7ec3a7df-cd6b-4451-b61c-527531e2e7a4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "note--501bac20-290b-4e3a-ae75-0bd5cb4d7764",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "abstract": "Geopolitical analysis (EN)",
-      "content": "Sector: Technology, Economics, Geopolitics\n\nTheme: Fragility of the AI Economic Bubble and Geopolitical Dependencies\n\nThe rapid valuation increase of AI-related companies (e.g., NVIDIA, highly dependent on GPU chips and data centers) is offset by structural vulnerabilities. These include significant exposure to geopolitical tensions (Taiwan/China supply chain risk), energy limitations crucial for future growth, and competitive pressures (e.g., Google's TPUs). These factors are creating a risk of economic correction and could encourage investors to shift assets toward more fundamentally stable growth areas, particularly in the Asia-Pacific region (India/China).\n\nTags: AI, Geopolitics, Economy, NVIDIA, Supply Chain",
+      "content": "Sector: Geopolitics, Defense, Technology\n\nTheme: Strategic competition in the Arctic and the future of Greenland\n\nThe strategic importance of Greenland and the Arctic is increasing due to heightened geopolitical tensions between the US/NATO and the Sino-Russian axis. The US seeks to secure military control (anti-missile defense, GIUK gap surveillance) and future resource access (minerals, data centers) in the region. NATO, spurred by previous US pressure, is urged to significantly increase its defense commitment in the Arctic, making the region a critical domain for future global confrontation.\n\nTags: Arctic, NATO, Russia, China, Geostrategy",
       "object_refs": [
-        "identity--63ddae63-fde3-4994-b333-81f198236d90"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde-porte-par-lia-apparaissent-2/"
-        }
-      ]
-    },
-    {
-      "type": "note",
-      "spec_version": "2.1",
-      "id": "note--5d96ea20-8966-4282-af22-f7584bc23bcb",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "abstract": "Geopolitical analysis (EN)",
-      "content": "Sector: Defense, Military, International Relations\n\nTheme: Escalating Strategic Competition in the Arctic (Greenland)\n\nThe Arctic is re-emerging as a vital strategic area due to its importance as the shortest aerial route between Russia and the US. The US and NATO are intensifying efforts to strengthen their military presence and anti-missile defense in Greenland to counter increasing Russian military power and Chinese economic/strategic interest (Polar Silk Road project). This pressure aims to solidify the defense of the GIUK gap (Greenland-Iceland-UK) and potentially influence Greenland's path toward independence.\n\nTags: Arctic, NATO, Russia, China, Defense, Geopolitics",
-      "object_refs": [
-        "identity--63ddae63-fde3-4994-b333-81f198236d90"
+        "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4"
       ],
       "external_references": [
         {
@@ -380,372 +485,277 @@
       ]
     },
     {
-      "type": "threat-actor",
+      "type": "note",
       "spec_version": "2.1",
-      "id": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "UNC4895 (RomCom), APT44 (FROZENBARENTS), TEMP.Armageddon, Turla (SUMMIT), Financial Crime Groups",
-      "labels": [
-        "threat-actor"
+      "id": "note--63d21dea-a755-4bc0-9821-cf95c194627a",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Technology, Finance, Sovereignty\n\nTheme: Geopolitical and economic fragility of the global AI boom\n\nAn analysis suggests that the high valuation of major AI actors (e.g., NVIDIA, OpenAI) is based on fragile foundations, including lack of diversification, high energy demands, and dependency on critical supply chains (Taiwan). This AI growth diverts essential resources (talent, infrastructure) from other sectors, potentially leading to a broader economic recession outside the AI sphere. The analysis also highlights the competitive consolidation in quantum computing, illustrated by the potential Swiss acquisition of the French deeptech Quobly, underscoring the battle for technological sovereignty in critical domains.\n\nTags: AI, Quantum Computing, Economic Risk, Supply Chain, Sovereignty",
+      "object_refs": [
+        "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
+          "url": "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/sous-leuphorie-nvidia-les-lignes-de-faille-dun-monde-porte-par-lia-apparaissent-2/"
         },
         {
           "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--3ca2e43e-5ecd-4aac-92c2-acd0b625a0f4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "272c86c6db95f1ef8b83f672b65e64df16494cae261e1aba1aeb1e59dcb68524",
-      "description": "HASH_SHA256: 272c86c6db95f1ef8b83f672b65e64df16494cae261e1aba1aeb1e59dcb68524",
-      "pattern": "[file:hashes.'SHA-256' = '272c86c6db95f1ef8b83f672b65e64df16494cae261e1aba1aeb1e59dcb68524']",
-      "pattern_type": "stix",
-      "pattern_version": "2.1",
-      "valid_from": "2026-01-27T00:00:00Z",
-      "labels": [
-        "malicious-activity",
-        "Commodity Exploitation",
-        "Initial Access",
-        "WinRAR",
-        "Espionage",
-        "Ransomware"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--ab7619a1-4796-4f56-a171-906223bda7ea",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "defe25e400d4925d8a2bb4b1181044d06a8bf61688fd9c9ea59f1e0bb7bc21d8",
-      "description": "HASH_SHA256: defe25e400d4925d8a2bb4b1181044d06a8bf61688fd9c9ea59f1e0bb7bc21d8",
-      "pattern": "[file:hashes.'SHA-256' = 'defe25e400d4925d8a2bb4b1181044d06a8bf61688fd9c9ea59f1e0bb7bc21d8']",
-      "pattern_type": "stix",
-      "pattern_version": "2.1",
-      "valid_from": "2026-01-27T00:00:00Z",
-      "labels": [
-        "malicious-activity",
-        "Commodity Exploitation",
-        "Initial Access",
-        "WinRAR",
-        "Espionage",
-        "Ransomware"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--e9a4cb76-40cf-4b9d-8d3b-01fca669ceae",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "edc1f7528ca93ec432daca820f47e08d218b79cceca1ee764966f8f90d6a58bd",
-      "description": "HASH_SHA256: edc1f7528ca93ec432daca820f47e08d218b79cceca1ee764966f8f90d6a58bd",
-      "pattern": "[file:hashes.'SHA-256' = 'edc1f7528ca93ec432daca820f47e08d218b79cceca1ee764966f8f90d6a58bd']",
-      "pattern_type": "stix",
-      "pattern_version": "2.1",
-      "valid_from": "2026-01-27T00:00:00Z",
-      "labels": [
-        "malicious-activity",
-        "Commodity Exploitation",
-        "Initial Access",
-        "WinRAR",
-        "Espionage",
-        "Ransomware"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--55af418a-5325-4a9e-a4e4-f36f5750ecce",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "b53069a380a9dd3dc1c758888d0e50dd43935f16df0f7124c77569375a9f44f5",
-      "description": "HASH_SHA256: b53069a380a9dd3dc1c758888d0e50dd43935f16df0f7124c77569375a9f44f5",
-      "pattern": "[file:hashes.'SHA-256' = 'b53069a380a9dd3dc1c758888d0e50dd43935f16df0f7124c77569375a9f44f5']",
-      "pattern_type": "stix",
-      "pattern_version": "2.1",
-      "valid_from": "2026-01-27T00:00:00Z",
-      "labels": [
-        "malicious-activity",
-        "Commodity Exploitation",
-        "Initial Access",
-        "WinRAR",
-        "Espionage",
-        "Ransomware"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "tool",
-      "spec_version": "2.1",
-      "id": "tool--13f9b007-f7f6-4e0b-bd7f-f04c90f88ac1",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "NESTPACKER (Snipbot)",
-      "description": "Tool: NESTPACKER (Snipbot)",
-      "labels": [
-        "tool"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "tool",
-      "spec_version": "2.1",
-      "id": "tool--772b83f2-9c2b-45ee-96ac-d6e52098a8d4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "STOCKSTAY",
-      "description": "Tool: STOCKSTAY",
-      "labels": [
-        "tool"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "tool",
-      "spec_version": "2.1",
-      "id": "tool--03100aec-054f-4fff-849f-afbeb774a4d2",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "POISONIVY",
-      "description": "Tool: POISONIVY",
-      "labels": [
-        "tool"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "tool",
-      "spec_version": "2.1",
-      "id": "tool--a2ba0de0-cc37-4549-a38c-b233e7a0e354",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "XWorm",
-      "description": "Tool: XWorm",
-      "labels": [
-        "tool"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "tool",
-      "spec_version": "2.1",
-      "id": "tool--976f0b2f-df21-4c1e-b7d7-4ab6bc922bef",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "AsyncRAT",
-      "description": "Tool: AsyncRAT",
-      "labels": [
-        "tool"
-      ],
-      "external_references": [
-        {
-          "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--40884543-3f64-4299-911c-ccc468202735",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "ATT&CK T1204",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1204"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "ATT&CK TA0001",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "TA0001"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--9011482e-cd80-4362-ae65-80c8914c3ea4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "ATT&CK T1574.001",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1574.001"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--b65fd481-197e-4ce6-8f28-e48210af91ca",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "ATT&CK T1547.001",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1547.001"
+          "url": "https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/quantique-quobly-la-pepite-grenobloise-qui-attise-lappetit-du-suisse-sealsq/"
         }
       ]
     },
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
-      "name": "PureRAT",
+      "name": "Malware Developers, Red Teams",
       "labels": [
         "threat-actor"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://www.security.com/threat-intelligence/ai-purerat-phishing"
+          "url": "https://t.me/vxunderground/8071"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1db6b379-77d6-4fa9-bc17-2020914dee04",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "hxxps[:]//telegram[.]org/js/telegram-widget[.]js?22",
+      "description": "URL: hxxps[:]//telegram[.]org/js/telegram-widget[.]js?22",
+      "pattern": "[url:value = 'hxxps[:]//telegram[.]org/js/telegram-widget[.]js?22']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Evasion",
+        "C2",
+        "Malware Development",
+        "Kernel Interface"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://t.me/vxunderground/8071"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4e4c8b92-8dc4-4fe0-a7f8-317f3b9f569c",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "telegram[.]org",
+      "description": "DOMAIN: telegram[.]org",
+      "pattern": "[domain-name:value = 'telegram[.]org']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Evasion",
+        "C2",
+        "Malware Development",
+        "Kernel Interface"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://t.me/vxunderground/8071"
         }
       ]
     },
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--d4408264-3f16-43f4-8f69-1eef8d2353e4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "tool--0387aa90-ffe7-455b-9ccf-337ef8c15768",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
-      "name": "PureRAT",
-      "description": "Tool: PureRAT",
+      "name": "Custom C2 Malware",
+      "description": "Tool: Custom C2 Malware",
       "labels": [
         "tool"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://www.security.com/threat-intelligence/ai-purerat-phishing"
+          "url": "https://t.me/vxunderground/8071"
         }
       ]
     },
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1a60e851-3cc5-4914-b144-acae521a8a84",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "attack-pattern--3ceb23e9-375f-405e-8313-e314ec2ae89f",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1071.001",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--eee55ecc-579f-4464-95a4-0e3bd48f47d7",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1560",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1560"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a24ad9dc-e43d-43de-8a33-e28054297109",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1053",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Unknown Financially Motivated Group",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-exposed-llm-endpoints-in-bizarre-bazaar-operation/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9cb3283e-159b-4833-a965-b49c4825b5d9",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "silver[.]inc",
+      "description": "DOMAIN: silver[.]inc",
+      "pattern": "[domain-name:value = 'silver[.]inc']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "AI",
+        "LLM",
+        "Cloud Security",
+        "Initial Access"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-exposed-llm-endpoints-in-bizarre-bazaar-operation/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a7bb0ade-f1fe-40bd-838c-0e5c632520a5",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1580",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1580"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--12735540-32d5-471b-8b96-f85bd821b4b5",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1190",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Financially Motivated Actors (BEC/Phishing)",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "/cybersecurity-blog/enterprise-email-thread-phishing/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5dd291bc-638b-4dde-b34d-65ebd5939f24",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1566.002",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--652c9a45-b01e-451d-a318-a9e60fe67a34",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "name": "ATT&CK T1566.001",
@@ -757,122 +767,157 @@
       ]
     },
     {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f9cb74ed-108d-46df-a212-59debaa7f311",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1534",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        }
+      ]
+    },
+    {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--7007e25f-706a-4e41-ac9d-9c0df014a023",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "note--1fd3016f-470c-4ac5-af99-0864135c3915",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "abstract": "Strategic analysis (EN)",
-      "content": "The threat landscape is characterized by the widespread commoditization of N-day exploits, exemplified by the critical WinRAR vulnerability (CVE-2025-8088), which is actively exploited by a wide spectrum of actors, from Russian and Chinese state-backed groups to financial criminals. This enduring use of already-patched flaws highlights a major defensive gap in prompt patching. Simultaneously, new zero-days affecting high-profile enterprise software, notably Microsoft Office (CVE-2026-21509) and Fortinet FortiCloud (CVE-2026-24858), demand immediate attention and reinforce the necessity for robust detection and mitigation capabilities against initial access vectors. Geopolitically, the focus is shifting towards the systemic dependencies inherent in cutting-edge technologies like AI (NVIDIA, Taiwan/China dependencies) and the intensifying strategic competition in vital regions such as the Arctic (Greenland), driven by military and economic interests from Russia and China.",
+      "content": "The cyber threat landscape remains characterized by aggressive exploitation of critical vulnerabilities, highlighting the failure of organizations to apply patches promptly (N-day exploitation). Google Threat Intelligence confirmed that numerous threat actors—ranging from Russia- and China-nexus APT groups (UNC4895, Turla, APT44) to financially motivated cybercriminals—are widely exploiting the WinRAR path traversal flaw (CVE-2025-8088) for initial access. Furthermore, two new zero-days affecting widely deployed enterprise software were confirmed as actively exploited this week: a critical SSO authentication bypass in Fortinet FortiCloud (CVE-2026-24858) and a security feature bypass in Microsoft Office (CVE-2026-21509).\n\nTechnically, threats are evolving with new sophisticated TTPs, including the adoption of custom C2 communication methods that bypass standard API monitoring, and the emergence of campaigns specifically targeting Large Language Model (LLM) infrastructure endpoints. The commoditization of zero-day exploits by suppliers like \"zeroplayer\" continues to fuel both espionage and cybercrime operations. \n\nOn the geopolitical front, strategic focus is centered on high-technology competition (Quantum computing and AI market stability) and the increasing militarization of the Arctic, specifically Greenland, driven by US/NATO strategy against the Sino-Russian axis.",
       "object_refs": [
-        "identity--63ddae63-fde3-4994-b333-81f198236d90"
+        "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4"
       ]
     },
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "name": "Widespread and Commoditized Exploitation of WinRAR Vulnerability CVE-2025-8088",
-      "description": "Google Threat Intelligence (GTI) identified widespread, active exploitation of CVE-2025-8088 (WinRAR path traversal) for initial access and payload delivery. Actors include Russian APTs (UNC4895, APT44, TEMP.Armageddon, Turla), China-nexus groups, and multiple financial crime groups. The primary exploitation method involves leveraging Alternate Data Streams (ADS) and directory traversal to drop malicious LNK or HTA files into the Windows Startup folder for persistence.\n\nAnalysis:\nThe continuous exploitation of this n-day vulnerability, months after the release of WinRAR 7.13, underscores the vulnerability's effectiveness as a commodity initial access vector. Its adoption by diverse threat actors highlights the instant commoditization of reliable exploits available in the underground ecosystem (e.g., via suppliers like 'zeroplayer'), effectively lowering the barrier for entry for various cyber operations.\n\nRecommendations:\n- Immediately patch WinRAR to version 7.13 or later.\n- Implement strong logging and EDR rules to detect file writes or creation in critical persistence locations (e.g., Windows Startup folders) triggered by archive decompression tools (WinRAR, 7zip, etc.).",
-      "published": "2026-01-27T00:00:00Z",
+      "id": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Advanced Malware C2 Evasion via Direct Kernel Interface (AFD/SSPI)",
+      "description": "A new technique allows malware payloads to perform network communication (including HTTPS) by directly communicating with the Windows kernel's Ancillary Function Driver (AFD) using IO control codes, coupled with Microsoft Security Support Provider Interface (SSPI) for secure connections. This method bypasses standard high-level network APIs (WININET, WINHTTP, Winsocks) and their associated telemetry or security hooks, significantly complicating detection by endpoint security solutions.\n\nAnalysis:\nThis method represents a significant advancement in offensive tradecraft, moving away from easily monitored userland APIs into less-monitored kernel interfaces. Defenders must focus on detecting abnormal behavior, such as unauthorized IOCTL calls to AFD or unusual SSPI usage patterns, rather than relying solely on API hooking.\n\nRecommendations:\n- Implement strong monitoring for IOCTL calls directed at networking drivers (e.g., AFD) and analyze unusual sequences of system calls related to network establishment.\n- Use deep packet inspection (DPI) to identify anomalies in HTTPS traffic originating from processes known to avoid standard Windows networking stacks.",
+      "published": "2026-01-28T00:00:00Z",
       "object_refs": [
-        "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-        "indicator--3ca2e43e-5ecd-4aac-92c2-acd0b625a0f4",
-        "indicator--ab7619a1-4796-4f56-a171-906223bda7ea",
-        "indicator--e9a4cb76-40cf-4b9d-8d3b-01fca669ceae",
-        "indicator--55af418a-5325-4a9e-a4e4-f36f5750ecce",
-        "tool--13f9b007-f7f6-4e0b-bd7f-f04c90f88ac1",
-        "tool--772b83f2-9c2b-45ee-96ac-d6e52098a8d4",
-        "tool--03100aec-054f-4fff-849f-afbeb774a4d2",
-        "tool--a2ba0de0-cc37-4549-a38c-b233e7a0e354",
-        "tool--976f0b2f-df21-4c1e-b7d7-4ab6bc922bef",
-        "attack-pattern--40884543-3f64-4299-911c-ccc468202735",
-        "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289",
-        "attack-pattern--9011482e-cd80-4362-ae65-80c8914c3ea4",
-        "attack-pattern--b65fd481-197e-4ce6-8f28-e48210af91ca",
-        "vulnerability--093d0f90-ccad-4bd9-a074-2825c79f67c6"
+        "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+        "indicator--1db6b379-77d6-4fa9-bc17-2020914dee04",
+        "indicator--4e4c8b92-8dc4-4fe0-a7f8-317f3b9f569c",
+        "tool--0387aa90-ffe7-455b-9ccf-337ef8c15768",
+        "attack-pattern--3ceb23e9-375f-405e-8313-e314ec2ae89f",
+        "attack-pattern--eee55ecc-579f-4464-95a4-0e3bd48f47d7",
+        "attack-pattern--a24ad9dc-e43d-43de-8a33-e28054297109"
       ],
       "labels": [
-        "Commodity Exploitation",
-        "Initial Access",
-        "WinRAR",
-        "Espionage",
-        "Ransomware"
+        "Evasion",
+        "C2",
+        "Malware Development",
+        "Kernel Interface"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/exploiting-critical-winrar-vulnerability/"
-        },
-        {
-          "source_name": "source",
-          "url": "https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/"
+          "url": "https://t.me/vxunderground/8071"
         }
       ]
     },
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
-      "name": "Integration of AI for Script Generation by PureRAT Cybercrime Actor",
-      "description": "The Vietnam-based cybercrime actor PureRAT is reportedly using Artificial Intelligence tools to write scripts employed in phishing campaigns. This trend confirms the growing adoption of generative AI by financially motivated groups to streamline the development of malicious toolsets.\n\nAnalysis:\nThe use of AI for tactical script development indicates a reduction in technical expertise required for cybercriminals, potentially leading to an increase in the volume, complexity, and rapid iteration of commodity malware and phishing attacks.\n\nRecommendations:\n- Enhance security awareness training to educate employees about evolving AI-generated social engineering and phishing tactics.\n- Deploy advanced email security solutions capable of detecting novel or rapidly generated phishing content that may bypass traditional reputation checks.",
+      "name": "Bizarre Bazaar: Attack Campaign Targeting Exposed Large Language Model (LLM) Endpoints",
+      "description": "A malicious campaign, dubbed 'Bizarre Bazaar', is actively targeting exposed LLM service endpoints. The objective is to commercialize unauthorized access to AI infrastructure, presumably for cryptocurrency mining, illicit resource consumption, or data theft, establishing a new vector against AI/ML systems.\n\nAnalysis:\nThe increasing focus on LLM endpoints reflects the value of underlying high-performance computing resources required for AI operations. This campaign signals the beginning of specialized exploitation targeting AI/ML cloud and enterprise infrastructure.\n\nRecommendations:\n- Review all LLM/AI service endpoint configurations to ensure they are not publicly exposed without strict access controls and zero-trust mechanisms.\n- Monitor resource consumption (CPU/GPU cycles, network bandwidth) on AI infrastructure for unexplained spikes indicative of unauthorized use (e.g., crypto mining).",
       "published": "2026-01-28T00:00:00Z",
       "object_refs": [
-        "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47",
-        "tool--d4408264-3f16-43f4-8f69-1eef8d2353e4",
-        "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289",
-        "attack-pattern--1a60e851-3cc5-4914-b144-acae521a8a84"
+        "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c",
+        "indicator--9cb3283e-159b-4833-a965-b49c4825b5d9",
+        "attack-pattern--a7bb0ade-f1fe-40bd-838c-0e5c632520a5",
+        "attack-pattern--12735540-32d5-471b-8b96-f85bd821b4b5"
       ],
       "labels": [
         "AI",
-        "Cybercrime",
-        "Phishing",
-        "Malware"
+        "LLM",
+        "Cloud Security",
+        "Initial Access"
       ],
       "external_references": [
         {
           "source_name": "source",
-          "url": "https://www.security.com/threat-intelligence/ai-purerat-phishing"
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-exposed-llm-endpoints-in-bizarre-bazaar-operation/"
         }
       ]
     },
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--0c4e94a9-e92f-4640-a959-a5d4f8ae08e1",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "New Phishing Trend: Email Thread Hijacking in Enterprise Environments",
+      "description": "Attackers are bypassing standard email filters and user suspicion by inserting malicious messages directly into existing, legitimate enterprise email threads. This method, achieved typically through account takeover or supply chain compromise, leverages the inherent trust associated with internal or known partner communications to deliver phishing documents or malicious links, often targeting high-level discussions (e.g., executive document approvals).\n\nAnalysis:\nThis technique significantly increases the success rate of social engineering attacks, as the messages possess perfect contextual relevance and authenticity. It mandates a shift in security awareness training to focus on document verification and unusual requests within seemingly trusted communication flows.\n\nRecommendations:\n- Implement advanced detection capabilities that analyze email content and headers within existing threads for behavioral anomalies, not just known malicious links or attachments.\n- Enhance user training to treat all unexpected file attachments or links, even within legitimate threads, with suspicion, emphasizing out-of-band verification for critical requests.",
+      "published": "2026-01-28T00:00:00Z",
+      "object_refs": [
+        "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834",
+        "attack-pattern--5dd291bc-638b-4dde-b34d-65ebd5939f24",
+        "attack-pattern--652c9a45-b01e-451d-a318-a9e60fe67a34",
+        "attack-pattern--f9cb74ed-108d-46df-a212-59debaa7f311"
+      ],
+      "labels": [
+        "Phishing",
+        "Social Engineering",
+        "Email Security"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "/cybersecurity-blog/enterprise-email-thread-phishing/"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--34001de2-9fa2-45e0-aefd-11127525c932",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "name": "CTI Report (EN) - 2026-01-28",
       "description": "Aggregated CTI report for language EN",
       "published": "2026-01-28T00:00:00Z",
       "object_refs": [
-        "threat-actor--6e0dc0c6-663a-4939-9d44-5c2002e271b0",
-        "campaign--715e424f-01e5-41bb-b0dd-f93dad4750ed",
-        "note--4fc3ec1f-dd02-43b0-afff-45003d3a642a",
-        "threat-actor--fcded3d8-079a-41c4-9039-1463765cfddc",
-        "campaign--f314559f-4cf9-4d20-a171-963da10bd1ba",
-        "note--25130ae2-de6c-443d-af27-aaa10cbcb73b",
-        "vulnerability--9db52619-8148-410e-9414-f5b6a9092742",
-        "vulnerability--07a4f7a3-e92e-4db7-865c-cfa92b59cf08",
-        "vulnerability--60fb0b67-db73-4e59-9bb1-8a40ea24b389",
-        "vulnerability--093d0f90-ccad-4bd9-a074-2825c79f67c6",
-        "incident--86415b9a-0309-4306-b37d-62b5d3bcfd76",
-        "identity--411160e6-02ee-4571-84dd-36a8f7861938",
-        "incident--eab889d2-f1ba-45e4-b586-d07ca952d981",
-        "identity--3bf1f9c6-6edc-434a-8ed6-41725cbfd0c2",
-        "note--7ec3a7df-cd6b-4451-b61c-527531e2e7a4",
-        "note--5d96ea20-8966-4282-af22-f7584bc23bcb",
-        "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-        "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-        "note--7007e25f-706a-4e41-ac9d-9c0df014a023"
+        "threat-actor--2b3c821b-23e2-4987-ab9f-8e3593b1b19d",
+        "campaign--64f66eb8-017a-425c-ac75-840e1d0515eb",
+        "note--45807481-3f29-48fe-aa4c-ca74de54a1fa",
+        "threat-actor--5c45422f-fc6f-450b-827e-74a8766a3e7a",
+        "campaign--69cc93c3-89b7-4ed4-85a9-d2f9c9a77385",
+        "note--d60d0225-5688-4209-92aa-d16350afaf5f",
+        "vulnerability--922055ed-176d-4393-bbf7-619f626a36e9",
+        "vulnerability--e2dac509-f7a0-4eb9-8d26-782875b63793",
+        "vulnerability--b5d2e42a-0820-4399-9524-6950a4386861",
+        "vulnerability--c5e56696-8d14-405d-98b4-77f9c05b9bec",
+        "vulnerability--e5fb193c-1b8f-43e9-aa82-c4edf0662143",
+        "vulnerability--bf32ddf1-d554-4f3c-a753-171d7c904a34",
+        "incident--09710d6c-6fd7-4340-bb45-f172fcb74f83",
+        "identity--b06cf990-3dbf-4f41-aa44-769768331bd7",
+        "incident--fb422fda-a032-44ea-b770-5707a21e8199",
+        "identity--e60e8006-ae07-496b-b39b-bc545d5eff64",
+        "incident--24a97285-6b90-4af7-bbab-0b2ad353d1cb",
+        "identity--ff3221f6-121c-440e-bdb7-e52e6e0ce54f",
+        "note--501bac20-290b-4e3a-ae75-0bd5cb4d7764",
+        "note--63d21dea-a755-4bc0-9821-cf95c194627a",
+        "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+        "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+        "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+        "note--1fd3016f-470c-4ac5-af99-0864135c3915"
       ],
       "labels": [
         "cti-report",
@@ -882,475 +927,398 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--3e699b63-4423-45ee-8fd3-0f5cee8bc95d",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--9f56fb91-6c25-4907-8d80-22a382207509",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "campaign--715e424f-01e5-41bb-b0dd-f93dad4750ed",
-      "target_ref": "threat-actor--6e0dc0c6-663a-4939-9d44-5c2002e271b0"
+      "source_ref": "campaign--64f66eb8-017a-425c-ac75-840e1d0515eb",
+      "target_ref": "threat-actor--2b3c821b-23e2-4987-ab9f-8e3593b1b19d"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--6c884e8a-848f-47e8-8919-35df5570d9cc",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--b483905c-f260-48cd-8a4b-1cad0e519871",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "threat-actor--6e0dc0c6-663a-4939-9d44-5c2002e271b0",
-      "target_ref": "note--4fc3ec1f-dd02-43b0-afff-45003d3a642a"
+      "source_ref": "threat-actor--2b3c821b-23e2-4987-ab9f-8e3593b1b19d",
+      "target_ref": "note--45807481-3f29-48fe-aa4c-ca74de54a1fa"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--95c8685a-df55-4143-b9c0-144792c48a1a",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--29d56f4f-dd55-4779-89e7-9f7a87239fd8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "campaign--715e424f-01e5-41bb-b0dd-f93dad4750ed",
-      "target_ref": "note--4fc3ec1f-dd02-43b0-afff-45003d3a642a"
+      "source_ref": "campaign--64f66eb8-017a-425c-ac75-840e1d0515eb",
+      "target_ref": "note--45807481-3f29-48fe-aa4c-ca74de54a1fa"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--a576b72c-053c-47eb-9105-de78f24a8515",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--b6e3a5ec-e4b3-42e0-98f9-32b788a616f6",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "campaign--f314559f-4cf9-4d20-a171-963da10bd1ba",
-      "target_ref": "threat-actor--fcded3d8-079a-41c4-9039-1463765cfddc"
+      "source_ref": "campaign--69cc93c3-89b7-4ed4-85a9-d2f9c9a77385",
+      "target_ref": "threat-actor--5c45422f-fc6f-450b-827e-74a8766a3e7a"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--79d40551-8438-479a-9714-2a3631cd535e",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--8d9b5f09-9730-40c9-93dc-e283659cd9fe",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "threat-actor--fcded3d8-079a-41c4-9039-1463765cfddc",
-      "target_ref": "note--25130ae2-de6c-443d-af27-aaa10cbcb73b"
+      "source_ref": "threat-actor--5c45422f-fc6f-450b-827e-74a8766a3e7a",
+      "target_ref": "note--d60d0225-5688-4209-92aa-d16350afaf5f"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--48caf4aa-4d99-48ca-8d78-b0c6360ee686",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--142943ef-95cc-4201-88ad-298483ef891b",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "campaign--f314559f-4cf9-4d20-a171-963da10bd1ba",
-      "target_ref": "note--25130ae2-de6c-443d-af27-aaa10cbcb73b"
+      "source_ref": "campaign--69cc93c3-89b7-4ed4-85a9-d2f9c9a77385",
+      "target_ref": "note--d60d0225-5688-4209-92aa-d16350afaf5f"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--752a43cc-01fb-4b86-a7be-b3b9a9bdd14c",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--03a32399-053b-4438-a29a-4197182b96f5",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "incident--86415b9a-0309-4306-b37d-62b5d3bcfd76",
-      "target_ref": "identity--411160e6-02ee-4571-84dd-36a8f7861938"
+      "source_ref": "incident--09710d6c-6fd7-4340-bb45-f172fcb74f83",
+      "target_ref": "identity--b06cf990-3dbf-4f41-aa44-769768331bd7"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--00952d6b-7523-422b-bcf7-4cf1fe877083",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--df84fbab-c7a5-4859-936c-f1da89404822",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "incident--eab889d2-f1ba-45e4-b586-d07ca952d981",
-      "target_ref": "identity--3bf1f9c6-6edc-434a-8ed6-41725cbfd0c2"
+      "source_ref": "incident--fb422fda-a032-44ea-b770-5707a21e8199",
+      "target_ref": "identity--e60e8006-ae07-496b-b39b-bc545d5eff64"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--cf78352b-895f-41d0-a577-a9b79911401e",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--edc76032-8129-4ccd-a6ea-31f4b950d42c",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--24a97285-6b90-4af7-bbab-0b2ad353d1cb",
+      "target_ref": "identity--ff3221f6-121c-440e-bdb7-e52e6e0ce54f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--36a76d24-adac-46b2-981b-9412f2a06ce9",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "tool--13f9b007-f7f6-4e0b-bd7f-f04c90f88ac1"
+      "source_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+      "target_ref": "tool--0387aa90-ffe7-455b-9ccf-337ef8c15768"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--562fd073-82af-4f5c-9ba7-5b7c23dc8650",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "tool--772b83f2-9c2b-45ee-96ac-d6e52098a8d4"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--62a9aca1-1f57-43df-8c1e-d6fbffeef1ac",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "tool--03100aec-054f-4fff-849f-afbeb774a4d2"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--aff62fb2-d65e-4ad2-8b4b-d1c13006ce48",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "tool--a2ba0de0-cc37-4549-a38c-b233e7a0e354"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--5fd7b429-808d-49c3-95db-dd5b659eaa94",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "tool--976f0b2f-df21-4c1e-b7d7-4ab6bc922bef"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--82327178-a9cc-429e-a679-667921b25a46",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--331a9361-974f-4aab-8605-2d6590dec095",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--1b01cbd3-bccd-4d5c-8a49-fd7dbcdd3590",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--a1e5503c-680e-4ff1-a5b3-c6507df7ffd0",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "indicator--3ca2e43e-5ecd-4aac-92c2-acd0b625a0f4"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "indicator--1db6b379-77d6-4fa9-bc17-2020914dee04"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--cb724c61-dca8-4939-9e8b-9c22cc8ff36f",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--2d09a021-828d-4032-8055-1374c9bc77d7",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "indicator--ab7619a1-4796-4f56-a171-906223bda7ea"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "indicator--4e4c8b92-8dc4-4fe0-a7f8-317f3b9f569c"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--f03ba0ef-83d4-4700-869e-092e71882f5d",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--dbf10cf3-2bab-4846-ab25-e5f31214b14a",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "indicator--e9a4cb76-40cf-4b9d-8d3b-01fca669ceae"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "tool--0387aa90-ffe7-455b-9ccf-337ef8c15768"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--a151fe9e-70ed-4f13-bab0-0b88936efdb4",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--d2838534-ff01-403a-a3e9-7ba3e98eef30",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "indicator--55af418a-5325-4a9e-a4e4-f36f5750ecce"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "attack-pattern--3ceb23e9-375f-405e-8313-e314ec2ae89f"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--df40693d-728a-45d6-869e-2cc56c164d47",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--747b3a80-580f-4809-8e37-31492374c412",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "tool--13f9b007-f7f6-4e0b-bd7f-f04c90f88ac1"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "attack-pattern--eee55ecc-579f-4464-95a4-0e3bd48f47d7"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--1c2face2-a14c-409a-9e82-33296dcbca4a",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--3825b57d-afdd-4c91-baf5-b77592107720",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "tool--772b83f2-9c2b-45ee-96ac-d6e52098a8d4"
+      "source_ref": "report--48a7a8ec-8d93-422b-8ecd-d26992fabc96",
+      "target_ref": "attack-pattern--a24ad9dc-e43d-43de-8a33-e28054297109"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--121adf38-605a-4aa9-aaa4-1c1ca38ec712",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "tool--03100aec-054f-4fff-849f-afbeb774a4d2"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--3ecab8a7-c190-4bb2-97b3-abe956c12722",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "tool--a2ba0de0-cc37-4549-a38c-b233e7a0e354"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--ae5e6530-743f-4a74-80b2-cf55c9d3ce7d",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "tool--976f0b2f-df21-4c1e-b7d7-4ab6bc922bef"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--936a8d9b-163d-400e-ade6-9687bffbd879",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "attack-pattern--40884543-3f64-4299-911c-ccc468202735"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--b5b0f828-1880-4216-b8f6-87f79f402a1b",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--3a399239-246d-4256-b789-739a747d5f5d",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "attack-pattern--9011482e-cd80-4362-ae65-80c8914c3ea4"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--d0cef0e0-e086-4bb9-97b6-f129fe701b2e",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "attack-pattern--b65fd481-197e-4ce6-8f28-e48210af91ca"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--5af57569-8357-437f-93d6-235d0b47f647",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "related-to",
-      "source_ref": "report--8ec6a532-5fa1-415e-be2b-a0becc161605",
-      "target_ref": "vulnerability--093d0f90-ccad-4bd9-a074-2825c79f67c6"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--fad6bcd1-4bde-4add-b050-75b20121de0b",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--90ea6976-e9db-4dca-81de-cbdbeff785ad",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "indicates",
-      "source_ref": "indicator--3ca2e43e-5ecd-4aac-92c2-acd0b625a0f4",
-      "target_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26"
+      "source_ref": "indicator--1db6b379-77d6-4fa9-bc17-2020914dee04",
+      "target_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--8038d447-c085-4c2e-a7ba-1d7feecf787e",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--13d7d5b4-0184-4129-aa5f-45e0f8cdf43f",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "indicates",
-      "source_ref": "indicator--ab7619a1-4796-4f56-a171-906223bda7ea",
-      "target_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26"
+      "source_ref": "indicator--4e4c8b92-8dc4-4fe0-a7f8-317f3b9f569c",
+      "target_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--30f436f8-26e9-4f68-adaf-fe989d66de41",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
+      "id": "relationship--4c1d0a19-b6f5-48c7-804d-e4c78e19dd25",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+      "target_ref": "attack-pattern--3ceb23e9-375f-405e-8313-e314ec2ae89f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2d644e45-0951-4e26-be6a-f7b59b2d3103",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+      "target_ref": "attack-pattern--eee55ecc-579f-4464-95a4-0e3bd48f47d7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--83f7a0b1-20c5-4e49-b45a-3fe0557378f8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cf1c95ce-d766-497c-ab8b-fbc7a17b7274",
+      "target_ref": "attack-pattern--a24ad9dc-e43d-43de-8a33-e28054297109"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--750c4f6c-ff38-43b7-836d-5aa389f486ce",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+      "target_ref": "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--59a07850-263b-4d72-b3d9-c7bc3e23a976",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+      "target_ref": "indicator--9cb3283e-159b-4833-a965-b49c4825b5d9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f213c5d7-4f39-4de0-a23f-3d4202f50d6e",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+      "target_ref": "attack-pattern--a7bb0ade-f1fe-40bd-838c-0e5c632520a5"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--119ee77e-fafe-4368-a4e6-551ed3eb698a",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--da51b3da-43c7-4283-b2db-9173ae341cf8",
+      "target_ref": "attack-pattern--12735540-32d5-471b-8b96-f85bd821b4b5"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2c8440b7-83a5-4cd3-af08-6a9c85dd15d8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "indicates",
-      "source_ref": "indicator--e9a4cb76-40cf-4b9d-8d3b-01fca669ceae",
-      "target_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26"
+      "source_ref": "indicator--9cb3283e-159b-4833-a965-b49c4825b5d9",
+      "target_ref": "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--77df9fbb-6f41-427e-b16b-0c2c544303e8",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "indicates",
-      "source_ref": "indicator--55af418a-5325-4a9e-a4e4-f36f5750ecce",
-      "target_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--4fad5ea0-19ec-49e8-ba0c-1349dd339d46",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "attack-pattern--40884543-3f64-4299-911c-ccc468202735"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--aabbe2bf-6170-4c3f-a8e0-70ac78ba1d82",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--d51b109b-f108-463c-8bef-9e0552a97122",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "attack-pattern--9011482e-cd80-4362-ae65-80c8914c3ea4"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--a6ea5fe5-bb9e-46b8-8c82-2658cd325ead",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
-      "created": "2026-01-27T00:00:00.000Z",
-      "modified": "2026-01-27T00:00:00.000Z",
-      "relationship_type": "uses",
-      "source_ref": "threat-actor--f895e729-996d-4818-a216-e2c759d7be26",
-      "target_ref": "attack-pattern--b65fd481-197e-4ce6-8f28-e48210af91ca"
-    },
-    {
-      "type": "relationship",
-      "spec_version": "2.1",
-      "id": "relationship--91effe99-7fd7-4db3-a78b-33fe8055c9b1",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--d5ec371f-5837-4349-85ec-8addc3c1463f",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47",
-      "target_ref": "tool--d4408264-3f16-43f4-8f69-1eef8d2353e4"
+      "source_ref": "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c",
+      "target_ref": "attack-pattern--a7bb0ade-f1fe-40bd-838c-0e5c632520a5"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--6ee08a82-beab-4be9-884d-5949bfd2575f",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--dbd93298-e509-4c08-a74a-24237b0a9873",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1849e172-7ab1-4365-9c78-c2c0ce01255c",
+      "target_ref": "attack-pattern--12735540-32d5-471b-8b96-f85bd821b4b5"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--615bff75-5333-4f34-b04c-6a95621c073a",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-      "target_ref": "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47"
+      "source_ref": "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+      "target_ref": "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--9a5e5620-2800-462f-8ca6-6e8e19516acc",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--92f8294d-edd5-4d3e-9640-e6028b753ff8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-      "target_ref": "tool--d4408264-3f16-43f4-8f69-1eef8d2353e4"
+      "source_ref": "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+      "target_ref": "attack-pattern--5dd291bc-638b-4dde-b34d-65ebd5939f24"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--1da14c65-16d9-4484-92c9-13897ade9140",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--fe9036d0-abd0-44c3-98e4-04326b76a0c0",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-      "target_ref": "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289"
+      "source_ref": "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+      "target_ref": "attack-pattern--652c9a45-b01e-451d-a318-a9e60fe67a34"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--774e160d-c1bf-4769-8ddc-4741d6fbe55c",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--00b4ebbb-9b1c-443b-8221-4714cad0a1a8",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--88e47a1c-6d28-4a42-a0b2-1a53815c18a4",
-      "target_ref": "attack-pattern--1a60e851-3cc5-4914-b144-acae521a8a84"
+      "source_ref": "report--1f4569e5-b267-4756-aef2-ecbb290625df",
+      "target_ref": "attack-pattern--f9cb74ed-108d-46df-a212-59debaa7f311"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--02d4a4b6-57ca-4c39-b6f4-8077aa87ba6e",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--52c3c63b-b03c-4fc4-a6c0-9d5b07895845",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47",
-      "target_ref": "attack-pattern--580887e3-92dc-4a79-a664-e4b890f8c289"
+      "source_ref": "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834",
+      "target_ref": "attack-pattern--5dd291bc-638b-4dde-b34d-65ebd5939f24"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--a89408dc-4ba3-4296-beaa-22421c8d7489",
-      "created_by_ref": "identity--63ddae63-fde3-4994-b333-81f198236d90",
+      "id": "relationship--bbe7d8b9-40e6-400e-a3c1-c3450808a94c",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
       "created": "2026-01-28T00:00:00.000Z",
       "modified": "2026-01-28T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7ad79017-0f47-4dc1-a7ee-3abef7b12a47",
-      "target_ref": "attack-pattern--1a60e851-3cc5-4914-b144-acae521a8a84"
+      "source_ref": "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834",
+      "target_ref": "attack-pattern--652c9a45-b01e-451d-a318-a9e60fe67a34"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ca6febde-1fdc-420d-977f-0984973ab7b7",
+      "created_by_ref": "identity--88a30153-b305-45b2-98d6-14b07b8bf4e4",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d9357033-41ab-4dd9-acfd-a75818b64834",
+      "target_ref": "attack-pattern--f9cb74ed-108d-46df-a212-59debaa7f311"
     }
   ]
 }
