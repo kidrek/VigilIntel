@@ -1,0 +1,1755 @@
+{
+  "type": "bundle",
+  "id": "bundle--5fe4ba9d-27b4-4f5f-aa3e-94c5e951f635",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-29T06:00:10.335652Z",
+      "modified": "2026-01-29T06:00:10.335652Z",
+      "name": "VigilIntel",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--a40aed28-a25b-476f-ad68-1f638b88a230",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "IPIDEA Operators",
+      "labels": [
+        "Residential Proxy",
+        "Obfuscation",
+        "APT Support",
+        "Cybercrime",
+        "Botnet",
+        "Supply Chain"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "spec_version": "2.1",
+      "id": "campaign--c2c14aa7-845f-46d8-af5d-9e6a37e956fa",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Global Residential Proxy Network Disruption",
+      "description": "Google, alongside partners, executed a major disruption against IPIDEA, one of the world's largest residential proxy networks. The network covertly enrolled millions of consumer devices as exit nodes using trojanized applications and embedded SDKs (PacketSDK, HexSDK, etc.). This infrastructure was sold to a wide array of sophisticated threat actors, including state-sponsored groups (from China, DPRK, Iran, and Russia) for espionage, obfuscation, and deploying password spray attacks against victim SaaS and on-premises infrastructure.",
+      "first_seen": "2026-01-28T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--56e43d89-f096-4195-b6af-732933ed98ea",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "(EN) IPIDEA Operators",
+      "content": "Sector: Multiple (Espionage, Cybercrime, Initial Access)\n\nModus operandi:\nUse of residential proxy infrastructure for source IP obfuscation (T1090.002), leveraging trojanized SDKs (T1552) hidden within popular applications for device enrollment, often without user consent.",
+      "object_refs": [
+        "threat-actor--a40aed28-a25b-476f-ad68-1f638b88a230",
+        "campaign--c2c14aa7-845f-46d8-af5d-9e6a37e956fa"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--e56f6fd2-2367-4118-a3fd-bf49716716f0",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "TA584",
+      "labels": [
+        "Initial Access Broker",
+        "Ransomware Precursor",
+        "Tsundere Bot",
+        "XWorm RAT"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "spec_version": "2.1",
+      "id": "campaign--5f778a69-9971-4a4b-b675-699f15799a10",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Initial Access Brokerage for Ransomware",
+      "description": "Prolific Initial Access Broker (IAB) TA584 has shifted tactics to utilize Tsundere Bot in conjunction with the XWorm Remote Access Trojan (RAT). This toolset is employed to gain initial foothold and establish persistent network access, which is subsequently sold to ransomware groups for lucrative follow-on attacks.",
+      "first_seen": "2026-01-28T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--289bdac2-a151-438d-8851-18ee43e53c7c",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "(EN) TA584",
+      "content": "Sector: Initial Access Brokerage, Ransomware\n\nModus operandi:\nDeployment of Tsundere Bot and XWorm RAT for network reconnaissance, persistence establishment, and data exfiltration preparatory to ransomware deployment.",
+      "object_refs": [
+        "threat-actor--e56f6fd2-2367-4118-a3fd-bf49716716f0",
+        "campaign--5f778a69-9971-4a4b-b675-699f15799a10"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--fdbd0a48-a681-43dc-894f-85f1700b7375",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2026-24858",
+      "description": "Critical authentication bypass vulnerability affecting Fortinet products using Single Sign-On (SSO). This vulnerability is confirmed by Fortinet and CISA to be actively exploited in the wild (zero-day).\n\nAffected product: Fortinet FortiOS, FortiManager, FortiAnalyzer",
+      "labels": [
+        "vulnerability",
+        "zero-day",
+        "Active Exploitation",
+        "Auth Bypass"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24858"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0097/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187435/security/u-s-cisa-adds-a-flaw-in-multiple-fortinet-products-to-its-known-exploited-vulnerabilities-catalog-2.html"
+        }
+      ],
+      "x_opencti_base_score": 9.4,
+      "x_opencti_base_severity": "critical"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--8fb6e20f-b966-4d04-be16-33afc9dcf5de",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-29T00:00:00.000Z",
+      "modified": "2026-01-29T00:00:00.000Z",
+      "name": "CVE-2026-23830",
+      "description": "Critical maximum-severity sandbox escape flaw allowing total compromise and Remote Code Execution (RCE) in environments designed to safely execute untrusted JavaScript code.\n\nAffected product: SandboxJS",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "Sandbox Escape",
+        "Critical"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-23830"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/cve-2026-23830-critical-sandboxjs-flaw-cvss-10-allows-total-sandbox-escape/"
+        }
+      ],
+      "x_opencti_base_score": 10.0,
+      "x_opencti_base_severity": "critical"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--e06aba69-d4c9-4291-a41b-9288a4531645",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-29T00:00:00.000Z",
+      "modified": "2026-01-29T00:00:00.000Z",
+      "name": "CVE-2026-24765",
+      "description": "High-severity vulnerability in the PHP testing framework PHPUnit that enables Remote Code Execution (RCE), exposing CI/CD pipelines to potential compromise during the testing process.\n\nAffected product: PHPUnit",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "CI/CD",
+        "Development"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24765"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityonline.info/cve-2026-24765-phpunit-vulnerability-exposes-ci-cd-pipelines-to-rce/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--6b23f487-2665-4ec7-983d-6d2e2be92fd3",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2026-20026",
+      "description": "Critical unauthenticated Remote Code Execution vulnerability (Use-After-Free) in Cisco Snort’s dcerpc inspection component, allowing remote attackers to execute arbitrary code.\n\nAffected product: Cisco Snort",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "Unauthenticated",
+        "Network Security"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-20026"
+        },
+        {
+          "source_name": "source",
+          "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-046/"
+        }
+      ],
+      "x_opencti_base_score": 9.8,
+      "x_opencti_base_severity": "critical"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--4b8bb5dc-d345-41a8-af84-339fc5037c19",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "CVE-2025-57795",
+      "description": "Critical vulnerability allowing unauthenticated remote file download in Explorance Blue versions prior to 8.14.13. This flaw can be leveraged to achieve Remote Code Execution (RCE) in default configurations.\n\nAffected product: Explorance Blue",
+      "labels": [
+        "vulnerability",
+        "RCE",
+        "Unauthenticated",
+        "File Download"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-57795"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2025-57795"
+        }
+      ],
+      "x_opencti_base_score": 9.9,
+      "x_opencti_base_severity": "critical"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--5b8fdd1a-2229-41bc-948d-9267b9a7c6eb",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "MicroWorld Technologies (eScan Antivirus)",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--29db34ba-0c8e-4594-be69-29d025c05735",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Breach: MicroWorld Technologies (eScan Antivirus)",
+      "description": "MicroWorld Technologies confirmed a supply chain attack involving the breach of one of its update servers. The compromised server was used to distribute a malicious, unauthorized software update to a limited number of eScan antivirus customers, presenting a critical risk as the security mechanism itself was compromised.\n\nSector: Software, Cybersecurity",
+      "labels": [
+        "Supply Chain Attack",
+        "Malicious Update",
+        "Software Compromise"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/escan-confirms-update-server-breached-to-push-malicious-update/"
+        }
+      ],
+      "incident_type": "data-leak"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--3b0b5241-b75a-4654-85c0-fd35ff1e2ff8",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Houston Methodist Patients (via Lena Health)",
+      "identity_class": "organization"
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--60bfce9d-4c18-413c-a624-a3601d0f41fe",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Breach: Houston Methodist Patients (via Lena Health)",
+      "description": "The AI 'digital helper' software, Lena Health (provided by Serviceaide), experienced a data breach stemming from an unsecured database. This incident led to the exposure of Protected Health Information (PHI) belonging to Houston Methodist patients, underscoring the security challenges and third-party risks associated with AI adoption in the healthcare sector.\n\nSector: Healthcare, AI Software",
+      "labels": [
+        "Data Breach",
+        "Healthcare",
+        "PHI",
+        "AI Risk"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://databreaches.net/2026/01/28/ai-digital-helper-lena-health-breach-exposed-some-houston-methodist-patients-medical-info/"
+        }
+      ],
+      "incident_type": "data-leak"
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--d13c753c-51c3-46c0-8543-1aab30ba8c35",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Law Enforcement, Cybercrime\n\nTheme: Disruption of Major Russian Cybercrime Forum RAMP\n\nU.S. law enforcement, including the FBI, successfully seized the RAMP (Russian Anonymous Marketplace) cybercrime forum. RAMP was one of the primary Russian-language platforms used by ransomware gangs, Initial Access Brokers, and developers to advertise and facilitate their operations, marking a significant victory in the international effort against organized cybercrime.\n\nTags: Law Enforcement, Ransomware, Dark Web, International Cooperation",
+      "object_refs": [
+        "identity--bc138d8c-4710-4f72-8dd2-39584e94906d"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-seizes-ramp-cybercrime-forum-used-by-ransomware-gangs/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://databreaches.net/2026/01/28/russian-ransomware-forum-seized-by-u-s-law-enforcement/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--e7383ee2-49cb-4e11-8baf-933531e09278",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Critical Infrastructure, Energy\n\nTheme: Coordinated Cyberattack on Polish Energy Grid\n\nA coordinated cyberattack targeted approximately 30 Distributed Energy Resource (DER) sites across Poland, including combined heat and power (CHP) facilities and systems controlling wind and solar assets. The scope and coordination suggest a sophisticated adversary targeting operational technology (OT) within Poland’s critical energy infrastructure.\n\nTags: Critical Infrastructure, OT, Energy, Poland",
+      "object_refs": [
+        "identity--bc138d8c-4710-4f72-8dd2-39584e94906d"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--5cd18750-2606-4593-adaa-15bb426a5d6d",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Geopolitics, Defense, Economy\n\nTheme: Israel's Expanding Regional Influence in the Middle East\n\nAnalysis highlights a major restructuring of power dynamics in the Middle East, driven by Israel's strategic expansion post-2023. This expansion involves establishing security agreements (Greece, Cyprus) and aligning forces to strategically encircle rivals like Iran (via Azerbaijan, Kurdistan) and Turkey. This dynamic sets the stage for potential long-term regional stability or, conversely, a new 'Cold War' phase, heavily contingent on U.S. engagement.\n\nTags: Middle East, Regional Power, Geopolitical Tensions, Israel, Iran",
+      "object_refs": [
+        "identity--bc138d8c-4710-4f72-8dd2-39584e94906d"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.iris-france.org/la-montee-en-puissance-disrael-et-les-enjeux-quelle-pose-au-moyen-orient/"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "IPIDEA operators, APT groups (China, DPRK, Iran, Russia), Cybercrime",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5c92f243-c167-46c2-8bc2-08a3b6d54ae8",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "packetsdk[.]xyz",
+      "description": "DOMAIN: packetsdk[.]xyz",
+      "pattern": "[domain-name:value = 'packetsdk[.]xyz']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dd8f9d19-1f45-453f-b722-174393bf0b60",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "earnsdk[.]io",
+      "description": "DOMAIN: earnsdk[.]io",
+      "pattern": "[domain-name:value = 'earnsdk[.]io']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--000e6418-75af-4346-9ac4-14dcec7159cd",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "hexsdk[.]com",
+      "description": "DOMAIN: hexsdk[.]com",
+      "pattern": "[domain-name:value = 'hexsdk[.]com']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--20e2add2-3304-4026-9543-6d78dc9135bc",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "castarsdk[.]com",
+      "description": "DOMAIN: castarsdk[.]com",
+      "pattern": "[domain-name:value = 'castarsdk[.]com']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2ab78049-0391-4b65-b8b0-b1e3da939b0c",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "360proxy[.]com",
+      "description": "DOMAIN: 360proxy[.]com",
+      "pattern": "[domain-name:value = '360proxy[.]com']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--15dbcf2f-e6dc-4442-a962-240169e9aa1e",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "lunaproxy[.]com",
+      "description": "DOMAIN: lunaproxy[.]com",
+      "pattern": "[domain-name:value = 'lunaproxy[.]com']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6eaab6b7-ce25-4880-af3b-b705c2e13402",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "bdrv7wlbszfotkqf[.]uk",
+      "description": "DOMAIN: bdrv7wlbszfotkqf[.]uk",
+      "pattern": "[domain-name:value = 'bdrv7wlbszfotkqf[.]uk']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8fdd06a-5c80-4bc6-af06-9e49e36ee765",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "v46wd6uramzkmeeo[.]in",
+      "description": "DOMAIN: v46wd6uramzkmeeo[.]in",
+      "pattern": "[domain-name:value = 'v46wd6uramzkmeeo[.]in']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f2bad22e-ecc3-4081-8891-5f3945ee7f89",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "aef34f14456358db91840c416e55acc7d10185ff2beb362ea24697d7cdad321f",
+      "description": "HASH_SHA256: aef34f14456358db91840c416e55acc7d10185ff2beb362ea24697d7cdad321f",
+      "pattern": "[file:hashes.'SHA-256' = 'aef34f14456358db91840c416e55acc7d10185ff2beb362ea24697d7cdad321f']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b3e11f89-12f6-4afb-9865-9bfc0fdf9957",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "b0726bdd53083968870d0b147b72dad422d6d04f27cd52a7891d038ee83aef5b",
+      "description": "HASH_SHA256: b0726bdd53083968870d0b147b72dad422d6d04f27cd52a7891d038ee83aef5b",
+      "pattern": "[file:hashes.'SHA-256' = 'b0726bdd53083968870d0b147b72dad422d6d04f27cd52a7891d038ee83aef5b']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--31203364-a242-4bd1-b41d-2aeba8734f35",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Packet SDK",
+      "description": "Tool: Packet SDK",
+      "labels": [
+        "tool"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--3e0c048f-e6b0-4dca-85c9-d6b9b9b1a813",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Hex SDK",
+      "description": "Tool: Hex SDK",
+      "labels": [
+        "tool"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--cc304feb-5a21-46f3-9c30-79fa42e37781",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Earn SDK",
+      "description": "Tool: Earn SDK",
+      "labels": [
+        "tool"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--65c6afa6-ae9f-41c4-a99b-318dde7d7e33",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Castar SDK",
+      "description": "Tool: Castar SDK",
+      "labels": [
+        "tool"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2fbab123-a398-44c0-bc6e-9343f9f69a6f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Radish VPN Client",
+      "description": "Tool: Radish VPN Client",
+      "labels": [
+        "tool"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ef6db34a-1422-4193-a597-93847ec0d856",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1090.002",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--645642e0-c68b-4464-9d24-90d3532c9900",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1583.003",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--37fc2788-8955-476b-a285-2e7027ce02c1",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1071.001",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Unspecified (Exploited in the Wild)",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187426/security/fortinet-patches-actively-exploited-fortios-sso-auth-bypass-cve-2026-24858.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://socprime.com/blog/cve-2026-24858-vulnerability/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--276551fb-0389-4f86-b6b1-b521237b8798",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "hxxps[:]//www[.]fortiguard[.]com/psirt/FG-IR-26-060",
+      "description": "URL: hxxps[:]//www[.]fortiguard[.]com/psirt/FG-IR-26-060",
+      "pattern": "[url:value = 'hxxps[:]//www[.]fortiguard[.]com/psirt/FG-IR-26-060']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-28T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "zero-day",
+        "Fortinet",
+        "Authentication Bypass",
+        "Active Exploitation"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187426/security/fortinet-patches-actively-exploited-fortios-sso-auth-bypass-cve-2026-24858.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://socprime.com/blog/cve-2026-24858-vulnerability/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--67ee5d2d-369a-45f9-8b7d-a03b04de5edf",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1190",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2cd39fed-d32e-4538-8e76-75e5cea954ce",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1078",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--69fe319e-151b-4cd4-9555-34586a95281a",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Unspecified (Phishing/Cybercrime)",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "/cybersecurity-blog/enterprise-email-thread-phishing/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--196cd642-c461-4db6-aff9-5cd8beb20df2",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1566",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--34ff8663-1a19-410b-b6dd-b99aadbbe037",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "ATT&CK T1534",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1534"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--0577db8d-bffd-4bba-bce9-56431d97fea6",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-29T00:00:00.000Z",
+      "modified": "2026-01-29T00:00:00.000Z",
+      "abstract": "Strategic analysis (EN)",
+      "content": "The strategic environment is marked by intense international counter-cybercrime operations and the persistent threat of actively exploited zero-day vulnerabilities. Google led a significant disruption against IPIDEA, one of the world's largest residential proxy networks, widely utilized by sophisticated APT groups (China, DPRK, Iran, Russia) and cybercrime syndicates for obfuscation and initial access. This success was mirrored by U.S. law enforcement seizing the notorious Russian ransomware forum, RAMP, signaling increased global pressure on criminal infrastructure. Simultaneously, the urgency of defensive actions was highlighted by the confirmed active exploitation of a critical Fortinet FortiOS SSO bypass vulnerability (CVE-2026-24858). Furthermore, the discovery of numerous critical sandbox escape flaws in popular development and automation tools (e.g., PyTorch, PHPUnit, Grist, vm2, n8n) indicates a growing, high-impact risk targeting modern software supply chains and CI/CD environments.",
+      "object_refs": [
+        "identity--bc138d8c-4710-4f72-8dd2-39584e94906d"
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Disruption of Residential Proxy Network IPIDEA and Associated APT Activity",
+      "description": "The IPIDEA network, a massive residential proxy service, has been disrupted. It was observed being heavily leveraged by over 550 distinct threat groups, including espionage actors (APTs from China, DPRK, Iran, Russia) to perform password spray attacks, access victim SaaS environments, and hide command-and-control infrastructure. The network was built using deceptive monetization SDKs embedded in consumer applications.\n\nAnalysis:\nThis disruption is a significant blow to the global infrastructure supporting espionage and cybercrime by removing a major means of obfuscation. Organizations should check network telemetry for connections to the listed Tier One C2 domains to identify compromised devices within their environments, particularly devices potentially running 'monetization' applications.\n\nRecommendations:\n- Implement network filtering to block communication with the Tier One C2 domains identified in the IPIDEA infrastructure.\n- Educate employees on the risks of installing third-party applications or 'monetization SDKs' that offer payment for sharing unused bandwidth.",
+      "published": "2026-01-28T00:00:00Z",
+      "object_refs": [
+        "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+        "indicator--5c92f243-c167-46c2-8bc2-08a3b6d54ae8",
+        "indicator--dd8f9d19-1f45-453f-b722-174393bf0b60",
+        "indicator--000e6418-75af-4346-9ac4-14dcec7159cd",
+        "indicator--20e2add2-3304-4026-9543-6d78dc9135bc",
+        "indicator--2ab78049-0391-4b65-b8b0-b1e3da939b0c",
+        "indicator--15dbcf2f-e6dc-4442-a962-240169e9aa1e",
+        "indicator--6eaab6b7-ce25-4880-af3b-b705c2e13402",
+        "indicator--f8fdd06a-5c80-4bc6-af06-9e49e36ee765",
+        "indicator--f2bad22e-ecc3-4081-8891-5f3945ee7f89",
+        "indicator--b3e11f89-12f6-4afb-9865-9bfc0fdf9957",
+        "tool--31203364-a242-4bd1-b41d-2aeba8734f35",
+        "tool--3e0c048f-e6b0-4dca-85c9-d6b9b9b1a813",
+        "tool--cc304feb-5a21-46f3-9c30-79fa42e37781",
+        "tool--65c6afa6-ae9f-41c4-a99b-318dde7d7e33",
+        "tool--2fbab123-a398-44c0-bc6e-9343f9f69a6f",
+        "attack-pattern--ef6db34a-1422-4193-a597-93847ec0d856",
+        "attack-pattern--645642e0-c68b-4464-9d24-90d3532c9900",
+        "attack-pattern--37fc2788-8955-476b-a285-2e7027ce02c1"
+      ],
+      "labels": [
+        "Residential Proxy",
+        "Disruption",
+        "Espionage",
+        "Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network/"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Zero-Day Exploitation of Fortinet FortiOS SSO Bypass",
+      "description": "Threat actors are actively exploiting CVE-2026-24858, a critical authentication bypass flaw (CVSS 9.4) impacting the Single Sign-On functionality in Fortinet products (FortiOS, FortiManager, FortiAnalyzer). This flaw allows unauthorized access to systems without valid credentials.\n\nAnalysis:\nThe classification of CVE-2026-24858 as actively exploited and its inclusion in the CISA KEV catalog necessitates immediate patching for all affected Fortinet installations. This represents a highly attractive target for initial access brokers and APTs due to its high impact and ease of exploitation via SSO mechanisms.\n\nRecommendations:\n- Apply patches provided by Fortinet immediately for FortiOS, FortiManager, and FortiAnalyzer to mitigate CVE-2026-24858.\n- Review logs for unauthorized attempts to bypass SSO authentication or unexpected user sessions originating from external IPs.",
+      "published": "2026-01-28T00:00:00Z",
+      "object_refs": [
+        "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103",
+        "indicator--276551fb-0389-4f86-b6b1-b521237b8798",
+        "attack-pattern--67ee5d2d-369a-45f9-8b7d-a03b04de5edf",
+        "attack-pattern--2cd39fed-d32e-4538-8e76-75e5cea954ce",
+        "vulnerability--fdbd0a48-a681-43dc-894f-85f1700b7375"
+      ],
+      "labels": [
+        "zero-day",
+        "Fortinet",
+        "Authentication Bypass",
+        "Active Exploitation"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187426/security/fortinet-patches-actively-exploited-fortios-sso-auth-bypass-cve-2026-24858.html"
+        },
+        {
+          "source_name": "source",
+          "url": "https://socprime.com/blog/cve-2026-24858-vulnerability/"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--683e9429-6d01-4b4e-aef5-b08b5e1a36f7",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "name": "Phishing Attacks Utilizing Hijacked Enterprise Email Threads",
+      "description": "A new, highly sophisticated phishing technique involves threat actors inserting malicious messages into ongoing, legitimate executive email threads (thread hijacking). This approach leverages implicit trust to deliver phishing content or malware, making the message appear fully authentic and difficult to detect via conventional security measures.\n\nAnalysis:\nThis technique bypasses security mechanisms that rely on sender reputation. It requires heightened user vigilance regarding contextual anomalies (e.g., unexpected attachment type, unusual urgency) even within seemingly trusted conversations.\n\nRecommendations:\n- Implement behavioral analysis tools capable of detecting unexpected message formats or links within established internal communication threads.\n- Reinforce user training to scrutinize embedded links or unexpected requests for credentials, even when the email appears to originate from a known colleague within a trusted thread.",
+      "published": "2026-01-28T00:00:00Z",
+      "object_refs": [
+        "threat-actor--69fe319e-151b-4cd4-9555-34586a95281a",
+        "attack-pattern--196cd642-c461-4db6-aff9-5cd8beb20df2",
+        "attack-pattern--34ff8663-1a19-410b-b6dd-b99aadbbe037"
+      ],
+      "labels": [
+        "Phishing",
+        "Social Engineering",
+        "Business Email Compromise (BEC)"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "/cybersecurity-blog/enterprise-email-thread-phishing/"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--d81763b3-8360-404b-a218-a1f4294260cf",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-29T00:00:00.000Z",
+      "modified": "2026-01-29T00:00:00.000Z",
+      "name": "CTI Report (EN) - 2026-01-29",
+      "description": "Aggregated CTI report for language EN",
+      "published": "2026-01-29T00:00:00Z",
+      "object_refs": [
+        "threat-actor--a40aed28-a25b-476f-ad68-1f638b88a230",
+        "campaign--c2c14aa7-845f-46d8-af5d-9e6a37e956fa",
+        "note--56e43d89-f096-4195-b6af-732933ed98ea",
+        "threat-actor--e56f6fd2-2367-4118-a3fd-bf49716716f0",
+        "campaign--5f778a69-9971-4a4b-b675-699f15799a10",
+        "note--289bdac2-a151-438d-8851-18ee43e53c7c",
+        "vulnerability--fdbd0a48-a681-43dc-894f-85f1700b7375",
+        "vulnerability--8fb6e20f-b966-4d04-be16-33afc9dcf5de",
+        "vulnerability--e06aba69-d4c9-4291-a41b-9288a4531645",
+        "vulnerability--6b23f487-2665-4ec7-983d-6d2e2be92fd3",
+        "vulnerability--4b8bb5dc-d345-41a8-af84-339fc5037c19",
+        "incident--29db34ba-0c8e-4594-be69-29d025c05735",
+        "identity--5b8fdd1a-2229-41bc-948d-9267b9a7c6eb",
+        "incident--60bfce9d-4c18-413c-a624-a3601d0f41fe",
+        "identity--3b0b5241-b75a-4654-85c0-fd35ff1e2ff8",
+        "note--d13c753c-51c3-46c0-8543-1aab30ba8c35",
+        "note--e7383ee2-49cb-4e11-8baf-933531e09278",
+        "note--5cd18750-2606-4593-adaa-15bb426a5d6d",
+        "report--f85474c1-de44-411b-8124-f41ac126778b",
+        "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+        "report--683e9429-6d01-4b4e-aef5-b08b5e1a36f7",
+        "note--0577db8d-bffd-4bba-bce9-56431d97fea6"
+      ],
+      "labels": [
+        "cti-report",
+        "lang:en"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f92a20da-9a66-47b5-a15a-69fce615a207",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--c2c14aa7-845f-46d8-af5d-9e6a37e956fa",
+      "target_ref": "threat-actor--a40aed28-a25b-476f-ad68-1f638b88a230"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9fa06040-8963-4f01-9086-fa03802fcc80",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--a40aed28-a25b-476f-ad68-1f638b88a230",
+      "target_ref": "note--56e43d89-f096-4195-b6af-732933ed98ea"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--67a2ff3c-402c-4801-880c-78e09363b726",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--c2c14aa7-845f-46d8-af5d-9e6a37e956fa",
+      "target_ref": "note--56e43d89-f096-4195-b6af-732933ed98ea"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2978c34c-09ef-4a47-b22b-c290c1203d93",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--5f778a69-9971-4a4b-b675-699f15799a10",
+      "target_ref": "threat-actor--e56f6fd2-2367-4118-a3fd-bf49716716f0"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fbf8f9e4-8c06-4ba3-8682-897a71f8b3f9",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--e56f6fd2-2367-4118-a3fd-bf49716716f0",
+      "target_ref": "note--289bdac2-a151-438d-8851-18ee43e53c7c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c9642029-f053-43d9-a914-99616c72c8bb",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--5f778a69-9971-4a4b-b675-699f15799a10",
+      "target_ref": "note--289bdac2-a151-438d-8851-18ee43e53c7c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--41af5228-55c6-4bbb-b403-f8d98242acd4",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--29db34ba-0c8e-4594-be69-29d025c05735",
+      "target_ref": "identity--5b8fdd1a-2229-41bc-948d-9267b9a7c6eb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bca0e0ea-8dce-46bd-886b-6592b1ca2755",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--60bfce9d-4c18-413c-a624-a3601d0f41fe",
+      "target_ref": "identity--3b0b5241-b75a-4654-85c0-fd35ff1e2ff8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--76ed51e7-a3ab-4af3-80de-180bb8a64296",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "tool--31203364-a242-4bd1-b41d-2aeba8734f35"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79fdb009-7349-48b1-96e4-67ea2430168e",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "tool--3e0c048f-e6b0-4dca-85c9-d6b9b9b1a813"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f1073f06-7621-44c4-bdb4-02fd086e5523",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "tool--cc304feb-5a21-46f3-9c30-79fa42e37781"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b39c1dc1-cd10-46f7-8ce6-65d52d0a0298",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "tool--65c6afa6-ae9f-41c4-a99b-318dde7d7e33"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8f29bf23-231b-4378-bad8-f3e93e72145d",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "tool--2fbab123-a398-44c0-bc6e-9343f9f69a6f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5f9cf1c0-f260-4b99-b3a7-fe7cda3402cf",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--829be955-8ce1-48b0-a79d-3da92bd9b0f6",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--5c92f243-c167-46c2-8bc2-08a3b6d54ae8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--76bfe911-60cd-436a-b088-ebda31c6aff4",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--dd8f9d19-1f45-453f-b722-174393bf0b60"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a6b79d66-21ef-4cd2-a343-0346de26ac7e",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--000e6418-75af-4346-9ac4-14dcec7159cd"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e0e464be-b8fc-4fba-b6be-22ed43a4f702",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--20e2add2-3304-4026-9543-6d78dc9135bc"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a7f28f29-2815-4338-b25b-2e75ce208124",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--2ab78049-0391-4b65-b8b0-b1e3da939b0c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c5e7b2ad-542a-46a8-b1b6-24082bbf2a0c",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--15dbcf2f-e6dc-4442-a962-240169e9aa1e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a685b526-1b99-418d-a0ef-8eedb01f8c9f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--6eaab6b7-ce25-4880-af3b-b705c2e13402"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d69e3f13-e063-4abe-9c48-866dc331e896",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--f8fdd06a-5c80-4bc6-af06-9e49e36ee765"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd6391f2-c4bd-4d1e-a1aa-1ee79f8fe85c",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--f2bad22e-ecc3-4081-8891-5f3945ee7f89"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--90d36307-ec5b-4891-9d16-37e1bb5126b4",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "indicator--b3e11f89-12f6-4afb-9865-9bfc0fdf9957"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2f342345-547e-44a2-8784-7ac6085eb832",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "tool--31203364-a242-4bd1-b41d-2aeba8734f35"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d0f2245a-c5bc-4e6e-821b-4cb61f70627a",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "tool--3e0c048f-e6b0-4dca-85c9-d6b9b9b1a813"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0a586034-afdf-46ac-9bd2-f02a181a2e64",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "tool--cc304feb-5a21-46f3-9c30-79fa42e37781"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6b2423b8-e7c9-43c8-90eb-e0dcd5659cbd",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "tool--65c6afa6-ae9f-41c4-a99b-318dde7d7e33"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1a66a675-dd58-45f0-9c47-682423ff41b8",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "tool--2fbab123-a398-44c0-bc6e-9343f9f69a6f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7cd2dadf-a1c2-4650-b0fa-571a46ed5c55",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "attack-pattern--ef6db34a-1422-4193-a597-93847ec0d856"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b5a170c7-7629-45d1-8f3e-35c330ab817c",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "attack-pattern--645642e0-c68b-4464-9d24-90d3532c9900"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cd92644c-33ce-446d-8899-664d2b23cded",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--f85474c1-de44-411b-8124-f41ac126778b",
+      "target_ref": "attack-pattern--37fc2788-8955-476b-a285-2e7027ce02c1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2a4cac33-68f9-409e-a08e-9c1fdc388065",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--5c92f243-c167-46c2-8bc2-08a3b6d54ae8",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--43d150c6-c114-4b47-9c2a-6ccc888fd30f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--dd8f9d19-1f45-453f-b722-174393bf0b60",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0488339b-8f13-4c43-8ee2-93428466ac2b",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--000e6418-75af-4346-9ac4-14dcec7159cd",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c8c3e02e-f7d1-46be-b89a-83725d6aefc2",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--20e2add2-3304-4026-9543-6d78dc9135bc",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a9bbdbf-2b68-47ab-87a3-cc21b6f6a9e2",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2ab78049-0391-4b65-b8b0-b1e3da939b0c",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6fd35a3d-2e7e-4559-b8b0-5496af84b0bc",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--15dbcf2f-e6dc-4442-a962-240169e9aa1e",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b978d7be-29e4-4bc6-87bf-7373f393b131",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6eaab6b7-ce25-4880-af3b-b705c2e13402",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--62dd61cc-41be-453c-9375-3b076c09389e",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f8fdd06a-5c80-4bc6-af06-9e49e36ee765",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--af2c829b-0128-4f2b-8ba2-6582a6fb5310",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f2bad22e-ecc3-4081-8891-5f3945ee7f89",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5736ea0d-6f26-448d-a96f-e182fbf7568f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b3e11f89-12f6-4afb-9865-9bfc0fdf9957",
+      "target_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ee74906d-c792-4cc8-bf22-9e16dbc848b8",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "attack-pattern--ef6db34a-1422-4193-a597-93847ec0d856"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2bce67b4-9870-41ea-8743-55ec74b83a3f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "attack-pattern--645642e0-c68b-4464-9d24-90d3532c9900"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e3970d4e-66c2-4679-8e5d-e4f19e07c880",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--50315c6c-6fb9-476e-ba8b-fa34cadc4288",
+      "target_ref": "attack-pattern--37fc2788-8955-476b-a285-2e7027ce02c1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ebd5a166-a1a2-4176-bf35-ecb533759af7",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "target_ref": "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--869ef8a2-7fc1-40c7-887b-88985cd24b58",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "target_ref": "indicator--276551fb-0389-4f86-b6b1-b521237b8798"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d37a152-c5ef-47ad-8819-bbf3709889e6",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "target_ref": "attack-pattern--67ee5d2d-369a-45f9-8b7d-a03b04de5edf"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f3b78197-970b-43b7-a653-4e9fbd789d94",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "target_ref": "attack-pattern--2cd39fed-d32e-4538-8e76-75e5cea954ce"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2d5cfd7a-fc94-4cdc-b6c6-37125c653ee5",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--03f6d9c4-4693-44a4-bf7a-77fbbdc4d269",
+      "target_ref": "vulnerability--fdbd0a48-a681-43dc-894f-85f1700b7375"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f98a53f1-0d6b-4cee-ad7f-c2b461014691",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--276551fb-0389-4f86-b6b1-b521237b8798",
+      "target_ref": "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8f89535c-9a24-44d7-ae08-acc71c7293f9",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103",
+      "target_ref": "attack-pattern--67ee5d2d-369a-45f9-8b7d-a03b04de5edf"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9057ecc2-78a2-4d2f-a163-eefa4f8ce2db",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51c9cf3b-3496-4d50-ae82-2aeeb0416103",
+      "target_ref": "attack-pattern--2cd39fed-d32e-4538-8e76-75e5cea954ce"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--683d2487-dcf8-4f71-8557-bdcc396d37f4",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--683e9429-6d01-4b4e-aef5-b08b5e1a36f7",
+      "target_ref": "threat-actor--69fe319e-151b-4cd4-9555-34586a95281a"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b61feb81-2eeb-46b6-b402-53a5fa7ba3f2",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--683e9429-6d01-4b4e-aef5-b08b5e1a36f7",
+      "target_ref": "attack-pattern--196cd642-c461-4db6-aff9-5cd8beb20df2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5f32287a-d703-4c6f-bd75-245f0c3011f8",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "report--683e9429-6d01-4b4e-aef5-b08b5e1a36f7",
+      "target_ref": "attack-pattern--34ff8663-1a19-410b-b6dd-b99aadbbe037"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e6162361-223d-48d4-9c0a-fac1fd86e507",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--69fe319e-151b-4cd4-9555-34586a95281a",
+      "target_ref": "attack-pattern--196cd642-c461-4db6-aff9-5cd8beb20df2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cbff704e-7ece-45de-9d47-e4771d5be99f",
+      "created_by_ref": "identity--bc138d8c-4710-4f72-8dd2-39584e94906d",
+      "created": "2026-01-28T00:00:00.000Z",
+      "modified": "2026-01-28T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--69fe319e-151b-4cd4-9555-34586a95281a",
+      "target_ref": "attack-pattern--34ff8663-1a19-410b-b6dd-b99aadbbe037"
+    }
+  ]
+}
