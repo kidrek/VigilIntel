@@ -1,0 +1,2159 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est complexe et en constante évolution, marqué par l'exploitation généralisée de vulnérabilités N-day et zero-day, les attaques sur la chaîne d'approvisionnement, et l'utilisation croissante de l'intelligence artificielle par les acteurs malveillants. Les attaquants déploient des techniques d'ingénierie sociale sophistiquées pour voler des identifiants et compromettre des systèmes, comme observé dans les campagnes ciblant les utilisateurs Android via Hugging Face, ou les incidents impliquant France Travail et Match Group. Des groupes étatiques comme RedKitten et Sandworm continuent de mener des campagnes d'espionnage et de perturbation, souvent en réponse à des tensions géopolitiques, et exploitent des outils comme WinRAR et des plateformes légitimes pour leurs opérations. La disruption des réseaux de proxys résidentiels comme IPIDEA par les forces de l'ordre souligne l'effort continu pour démanteler l'infrastructure du cybercrime. Parallèlement, les violations de données restent une menace majeure, entraînant des amendes réglementaires importantes et soulignant l'importance cruciale de contrôles de sécurité fondamentaux (MFA, analyse des risques) et d'une réponse rapide. L'état général des menaces est élevé, avec une convergence des TTPs entre les acteurs étatiques et les cybercriminels, accentuant la nécessité d'une vigilance continue et d'une cybersécurité proactive.",
+      "date": "2026-01-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "RedKitten",
+        "secteur": "Organisations non-gouvernementales, individus",
+        "modop": "Campagne accélérée par l'IA ciblant les intérêts iraniens, utilisant des leurres 'choc' (faux tableurs Excel sur les abus des droits humains), des macros VBA, l'injection AppDomainManager, la stéganographie LSB, GitHub comme Dead Drop Resolver, Google Drive pour l'hébergement de modules, et Telegram pour le C2. TTPs similaires à Yellow Liderc (IMPERIAL KITTEN, TA456).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "iran",
+          "etat_nation",
+          "espionnage",
+          "ia_malveillante",
+          "steganographie",
+          "social_engineering",
+          "telegram"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/redkitten-ai-accelerated-campaign-targeting-iranian-protests/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "IPIDEA",
+        "secteur": "Divers (facilitateur de cybercriminalité et d'espionnage)",
+        "modop": "Opérateur de réseaux de proxys résidentiels alimentés par des applications/logiciels troyanisés (SDKs Packet, Castar, Hex, Earn), permettant la prise de contrôle de comptes, la création de faux comptes, le vol d'informations d'identification, l'exfiltration de données, le 'password spraying' et l'obscurcissement d'infrastructure pour plus de 550 groupes de menace (Chine, Iran, Russie, Corée du Nord). Disloqué par Google et ses partenaires.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "proxy",
+          "cybercriminalite",
+          "espionnage",
+          "malware_as_a_service",
+          "reseaux_residentiels"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/",
+          "https://securityaffairs.com/187463/security/google-targets-ipidea-in-crackdown-on-global-residential-proxy-networks/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services de rencontre en ligne (Match Group), Secteur financier",
+        "modop": "Campagne de vishing (hameçonnage vocal) ciblant les comptes SSO (Okta, Microsoft, Google) pour obtenir un accès et exfiltrer des données d'instances d'analyse marketing et de stockage cloud.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "vishing",
+          "social_engineering",
+          "breach",
+          "sso",
+          "finances"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Sandworm (Razing Ursa, APT44, Iridium)",
+        "secteur": "Énergie, Jeux Olympiques, Infrastructure IT",
+        "modop": "Groupe lié au gouvernement russe, connu pour des attaques perturbatrices (malware Olympic Destroyer), des tactiques de faux-drapeau et des logiciels wiper (ciblant le réseau électrique polonais). Vise à perturber les infrastructures IT et les événements internationaux.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russie",
+          "etat_nation",
+          "disruption",
+          "fausse_banniere",
+          "wiper",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/",
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Fighting Ursa (APT28, Fancy Bear, Strontium)",
+        "secteur": "Organisations sportives (WADA)",
+        "modop": "Attribué au GRU russe, connu pour des fuites de données visant à discréditer les organismes de réglementation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russie",
+          "etat_nation",
+          "fuite_donnees",
+          "influence"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Storm-1679, Storm-1099",
+        "secteur": "Organisations sportives (CIO), Grand public",
+        "modop": "Acteurs liés à la Russie, utilisent la désinformation générée par l'IA (faux documentaires Netflix, vidéos trompeuses) pour dissuader la participation à des événements (ex: Jeux de Paris 2024) et diffamer des organisations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russie",
+          "etat_nation",
+          "desinformation",
+          "ia_malveillante",
+          "influence_operation"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Konni (Opal Sleet, TA406)",
+        "secteur": "Blockchain, ingénieurs",
+        "modop": "Groupe nord-coréen utilisant un malware PowerShell généré par l'IA pour cibler les développeurs et ingénieurs du secteur de la blockchain.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "coree_du_nord",
+          "etat_nation",
+          "ia_malveillante",
+          "ingenierie_sociale",
+          "malware",
+          "blockchain"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "UAT-8099 (WEBJACK)",
+        "secteur": "Serveurs IIS, organisations en Asie (Thaïlande, Vietnam)",
+        "modop": "APT liée à la Chine, exploitant les serveurs IIS pour la fraude SEO via des variantes du malware BadIIS. Utilise des web shells, des VPN, des outils légitimes, des scripts PowerShell et VBScript, des comptes utilisateurs cachés ('admin$', 'mysql$') et l'obfuscation XOR pour la persistance et l'évasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "chine",
+          "apt",
+          "seo_fraud",
+          "web_shell",
+          "persistence",
+          "iis_servers"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8099-new-persistence-mechanisms-and-regional-focus/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Qilin ransomware",
+        "secteur": "Divers",
+        "modop": "Ransomware dominant au T4 2025, souvent déployé après l'exploitation de failles d'applications exposées sur Internet ou via des campagnes d'hameçonnage. Utilise des outils RMM (ScreenConnect, SoftPerfect Network Scanner, rclone) pour la persistance, la reconnaissance et l'exfiltration de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "exploitation_applications",
+          "phishing",
+          "rmm_tools",
+          "exfiltration"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/",
+          "https://blog.talosintelligence.com/ir-trends-q4-2025/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Ming criminal family group",
+        "secteur": "Cybercriminalité organisée (escroqueries en ligne)",
+        "modop": "Groupe criminel organisé en Birmanie impliqué dans des centres d'arnaques en ligne ciblant des étrangers, responsable d'homicides, de blessures et de fraudes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "birmanie",
+          "chine",
+          "criminalite_organisee",
+          "escroquerie_en_ligne"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/01/29/en-chine-onze-personnes-accusees-d-etre-membres-de-groupes-criminels-impliques-dans-des-arnaques-en-ligne-ont-ete-executees_6664560_3210.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "RAMP (Russian Anonymous Marketplace)",
+        "secteur": "Facilitateur de cybercriminalité (ransomware)",
+        "modop": "Forum russophone utilisé par les opérateurs de ransomware (comme REvil et DarkSide), les courtiers, les développeurs et les affiliés pour faciliter les activités de ransomware. Saisi par les forces de l'ordre américaines.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_ecosystem",
+          "cybercrime_forum",
+          "russie"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/28/russian-ransomware-forum-seized-by-u-s-law-enforcement/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Amatera Stealer",
+        "secteur": "Divers (vol de données d'identification)",
+        "modop": "Malware de vol d'informations, non open source, partagant des similitudes de code avec d'autres projets pour des fonctionnalités HTTPS et d'évasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware",
+          "vol_credentials"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/8081"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Jeux Olympiques, Infrastructure IT",
+        "theme": "Menace cyber russe contre les Jeux Olympiques d'hiver de 2026",
+        "description": "Les acteurs cyber alignés sur l'État russe (Fighting Ursa, Razing Ursa, Storm-1679, Storm-1099) représentent une menace cybernétique significative pour les Jeux d'hiver de Milano Cortina 2026. Cette menace est motivée par l'exclusion politique de la Russie des Jeux Olympiques, interprétée comme une attaque contre sa légitimité étatique. Les tactiques anticipées incluent des fuites de données (comme la violation du WADA), des malwares perturbateurs (comme Olympic Destroyer), des opérations sous faux drapeau et de la désinformation générée par l'IA pour influencer l'infrastructure informatique, les événements et la perception publique. L'objectif principal est passé de l'espionnage à la perturbation, nécessitant une priorisation de la résilience.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "jeux_olympiques",
+          "cybermenace",
+          "disruption",
+          "desinformation",
+          "etat_nation"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/",
+          "https://blog.talosintelligence.com/im-locked-in/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Maritime, Énergie, Infrastructure critique",
+        "theme": "Les 'sanctions cinétiques' de l'Ukraine contre la flotte fantôme russe",
+        "description": "L'Ukraine a intensifié ses attaques de drones contre les pétroliers de la 'flotte fantôme' russe en mer Noire et en Méditerranée, dans le but de perturber les revenus d'exportation de pétrole de la Russie et le financement de son effort de guerre. Ces 'sanctions cinétiques' ont entraîné une augmentation des primes d'assurance et une réduction des exportations. Bien que l'accent soit mis sur les attaques physiques, l'historique des activités cyber russes contre les infrastructures critiques ukrainiennes (par exemple, le réseau électrique) souligne la dimension cyber plus large du conflit.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russie",
+          "conflit",
+          "sanctions",
+          "cyber_guerre",
+          "infrastructure_critique",
+          "energie"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/ukraines-kinetic-sanctions-change-game"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services de rencontre en ligne",
+        "victime": "Match Group (Hinge, Tinder, OkCupid, Match.com)",
+        "description": "Le groupe ShinyHunters a volé 1,7 Go de fichiers compressés, soit environ 10 millions de dossiers d'utilisateurs (Hinge, Match, OkCupid) et des documents internes, par le biais d'une campagne de vishing ciblant les comptes SSO. Aucune information d'identification de connexion, information financière ou communication privée n'a été confirmée comme ayant été accédée.",
+        "tags": [
+          "violation",
+          "breach",
+          "match_group",
+          "shinyhunters",
+          "vishing",
+          "sso_compromise",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Services financiers, Bancaire",
+        "victime": "Marquis Software Solutions, banques et coopératives de crédit américaines",
+        "description": "Une attaque par rançongiciel en août 2025 a impacté les systèmes de Marquis et des dizaines d'institutions financières. L'attaque est attribuée à une faille de sécurité chez SonicWall (service de sauvegarde cloud), ayant permis aux attaquants de récupérer des données de configuration de pare-feu et de contourner les protections.",
+        "tags": [
+          "violation",
+          "breach",
+          "marquis_software",
+          "ransomware",
+          "chaine_approvisionnement",
+          "sonicwall",
+          "secteur_financier"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/marquis-blames-ransomware-breach-on-sonicwall-cloud-backup-hack/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Comstar, LLC (service de facturation d'ambulances), 70 entités couvertes par la HIPAA, 585 621 patients",
+        "description": "Attaque par rançongiciel en mars 2022 ayant chiffré les serveurs réseau et exposé des informations de santé protégées (PHI) de plus de 585 000 patients. L'enquête a révélé l'absence d'une analyse des risques adéquate, des contrôles de sécurité insuffisants et la rétention de données non segmentées pour d'anciens clients. Condamné à une amende de 515 000 $.",
+        "tags": [
+          "violation",
+          "breach",
+          "comstar",
+          "ransomware",
+          "sante",
+          "ephi",
+          "reglementation_hipaa",
+          "non_conformite"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/youre-not-paranoid-lawyers-are-coming-to-get-you/?pk_campaign=feed&pk_kwd=youre-not-paranoid-lawyers-are-coming-to-get-you"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Emploi, Administration publique",
+        "victime": "France Travail (anciennement Pôle emploi), 36,8 millions d'utilisateurs",
+        "description": "Fuite massive de données personnelles en mars 2024 suite à des techniques d'ingénierie sociale ayant permis d'usurper des comptes de conseillers Cap Emploi. Les données volées incluent noms, prénoms, numéros de Sécurité sociale, identifiants France Travail, adresses email/postales et numéros de téléphone. Condamné à une amende de 5 millions d'euros par la CNIL pour manque de mesures de sécurité robustes.",
+        "tags": [
+          "violation",
+          "breach",
+          "france_travail",
+          "administration_publique",
+          "social_engineering",
+          "donnees_personnelles",
+          "cnil_amende",
+          "authentification_faible"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/29/france-travail-condamne-a-une-amende-de-5-millions-d-euros-apres-un-vol-massif-de-donnees_6664602_4408996.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Cryptomonnaies, Services fiscaux",
+        "victime": "Waltio (gestionnaire de données fiscales de cryptoactifs), 120 000 utilisateurs",
+        "description": "Vols de données utilisateurs et de fonds de trésorerie suite à des failles de sécurité. Données volées incluent adresses e-mails et documents issus des rapports fiscaux 2024. Aucune donnée bancaire ou d'identité détaillée n'a été compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "waltio",
+          "cryptomonnaie",
+          "donnees_fiscales",
+          "vol_fonds",
+          "sophisticated_attack"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/29/cryptomonnaies-vols-et-failles-a-repetition-chez-waltio-gestionnaire-de-donnees-fiscales-de-detenteurs-francais_6664646_4408996.html"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22039",
+        "cvss": "10.0",
+        "product": "Kyverno (moteur de politiques Kubernetes)",
+        "description": "Vulnérabilité critique d'élévation de privilèges permettant à tout utilisateur disposant de droits de création de politiques de devenir administrateur de cluster en contournant les limites d'isolation d'espace de noms.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kyverno",
+          "kubernetes",
+          "privilege_escalation",
+          "rce"
+        ],
+        "sources": [
+          "https://securityonline.info/cluster-admin-for-all-critical-kyverno-flaw-cvss-10-shatters-isolation/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'injection de code permettant à des attaquants non authentifiés d'exécuter du code à distance. Activement exploitée en zero-day.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "code_injection",
+          "rce",
+          "zero_day",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-two-epmm-flaws-exploited-in-zero-day-attacks/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-1281"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'injection de code permettant à des attaquants non authentifiés d'exécuter du code à distance. Activement exploitée en zero-day.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "code_injection",
+          "rce",
+          "zero_day",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-two-epmm-flaws-exploited-in-zero-day-attacks/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-1340"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "Non spécifié (CVSS 9.8 implicite)",
+        "cvss": "9.8",
+        "product": "Fortinet FortiCloud SSO (FortiAnalyzer, FortiManager, FortiOS, FortiProxy)",
+        "description": "Vulnérabilité critique de contournement d'authentification SSO, exploitée pour l'accès initial, l'élévation de privilèges et la persistance en tirant parti d'un compte FortiCloud compromis.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortinet",
+          "forticloud",
+          "sso",
+          "authentication_bypass",
+          "exploited"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/forticloud-sso-authentication-bypass/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40551",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Vulnérabilité de désérialisation de données non fiables permettant une exécution de code arbitraire à distance sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "deserialization",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40552",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Vulnérabilité de contournement d'authentification permettant à un attaquant distant de contourner les contrôles d'accès.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "authentication_bypass",
+          "access_control"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40553",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Vulnérabilité de désérialisation de données non fiables permettant une exécution de code arbitraire à distance sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "deserialization",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40554",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Vulnérabilité de contournement d'authentification permettant à un attaquant distant d'invoquer des actions internes spécifiques sans autorisation appropriée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "authentication_bypass",
+          "authorization_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25047",
+        "cvss": "9.4",
+        "product": "deephas npm package v1.0.7",
+        "description": "Vulnérabilité de pollution de prototype permettant à un attaquant de modifier le comportement des objets globaux.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "npm",
+          "deephas",
+          "prototype_pollution",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25047"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-22806",
+        "cvss": "9.1",
+        "product": "vCluster Platform (versions antérieures à 4.6.0, 4.5.4, 4.4.2, 4.3.10)",
+        "description": "Les clés d'accès créées avec une portée limitée peuvent être contournées pour accéder à des ressources en dehors de cette portée. L'utilisateur ne peut cependant pas accéder à des ressources au-delà de ce qui est accessible au propriétaire de la clé d'accès.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "vcluster",
+          "kubernetes",
+          "access_keys",
+          "privilege_escalation",
+          "access_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22806"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1637",
+        "cvss": "9.0",
+        "product": "Tenda AC21 16.03.08.16",
+        "description": "Débordement de tampon basé sur la pile dans la fonction AdvSetMacMtuWan, permettant une exécution de code à distance. Un exploit public est disponible.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda",
+          "buffer_overflow",
+          "rce",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1637"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-21962",
+        "cvss": "Maximum Severity (implied 9.0+)",
+        "product": "Oracle HTTP Server et Oracle WebLogic Server Proxy Plugin",
+        "description": "Vulnérabilité permettant de contourner les contrôles d'accès des proxys via la manipulation de chemins et d'en-têtes, menant potentiellement à une exécution de code à distance et à une compromission complète des instances de serveur WebLogic backend. Activement sondée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "oracle",
+          "weblogic",
+          "path_traversal",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/poc-maximum-severity-oracle-proxy"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25117",
+        "cvss": "8.3",
+        "product": "pwn.college DOJO",
+        "description": "Manque de 'sandboxing' sur les routes `/workspace/*` permettant aux auteurs de défis d'injecter du JavaScript arbitraire, conduisant à une évasion de sandbox et à l'exécution de JavaScript arbitraire sur l'origine du dojo.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "pwn_college_dojo",
+          "sandbox_escape",
+          "javascript_execution",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25117"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25063",
+        "cvss": "8.3",
+        "product": "gradle-completion (support Bash jusqu'à 9.3.0)",
+        "description": "Vulnérabilité d'injection de commande Bash permettant l'exécution de code arbitraire lorsqu'un utilisateur déclenche la complétion par tabulation Bash dans un projet contenant un fichier de build Gradle malveillant.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "gradle",
+          "bash",
+          "command_injection",
+          "rce"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25063"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-15467",
+        "cvss": "High Severity (RCE)",
+        "product": "OpenSSL (structures CMS AuthEnvelopedData)",
+        "description": "Débordement de tampon basé sur la pile lors de l'analyse des structures CMS AuthEnvelopedData utilisant des chiffrements AEAD avec des paramètres IV malveillants, pouvant entraîner un déni de service et, dans certaines circonstances, une exécution de code à distance avant l'authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openssl",
+          "buffer_overflow",
+          "rce",
+          "dos",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-15467-vulnerability/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33217",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "Pilote d'affichage GPU NVIDIA (Windows)",
+        "description": "Vulnérabilité 'Use After Free' dans la couche utilisateur du pilote d'affichage GPU, pouvant conduire à l'exécution de code, l'élévation de privilèges, la falsification de données, le déni de service et la divulgation d'informations.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "gpu",
+          "use_after_free",
+          "rce",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33218",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "Pilote d'affichage GPU NVIDIA (couche mode noyau)",
+        "description": "Vulnérabilité de débordement d'entier dans la couche mode noyau du pilote d'affichage GPU, pouvant entraîner l'exécution de code, l'élévation de privilèges ou la falsification de données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "gpu",
+          "integer_overflow",
+          "rce",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33220",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "NVIDIA Virtual GPU (vGPU) Manager",
+        "description": "Vulnérabilité 'Use After Free' permettant une évasion 'guest-to-host', où un attaquant compromettant une machine virtuelle peut potentiellement impacter le serveur hôte, menant à l'exécution de code, l'élévation de privilèges, la falsification de données, le déni de service ou la divulgation d'informations.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "vgpu",
+          "guest_to_host_escape",
+          "rce",
+          "privilege_escalation",
+          "cloud_security"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Campagne de cheval de Troie Android utilisant Hugging Face pour la livraison de charge utile RAT",
+        "description": "Des chercheurs ont découvert une campagne de cheval de Troie d'accès à distance (RAT) Android combinant l'ingénierie sociale (publicités scareware pour l'application 'TrustBastion'), l'utilisation de la plateforme Hugging Face comme site d'hébergement pour des milliers de variantes de charges utiles malveillantes, et une utilisation intensive des services d'accessibilité Android pour compromettre les appareils. Le malware effectue de la surveillance d'activité, des captures d'écran, l'exfiltration de données, et l'affichage de fausses interfaces de connexion pour voler des identifiants financiers (Alipay, WeChat) et les codes de verrouillage d'écran. Il maintient une communication persistante avec le serveur C2 (154.198.48.57, trustbastion[.]com).",
+        "threat_actor": "Non applicable (campagne de malware, pas de groupe nommé)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "trustbastion[.]com"
+          ],
+          "IPv4": [
+            "154.198.48.57"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1134.001 - Access Token Manipulation: Token Impersonation/Theft",
+            "T1055.001 - Process Injection: Dynamic-link Library Injection",
+            "T1113 - Screen Capture",
+            "T1071.001 - Application Layer Protocol: Web Protocols"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1134.001 - Access Token Manipulation: Token Impersonation/Theft",
+          "T1055.001 - Process Injection: Dynamic-link Library Injection",
+          "T1113 - Screen Capture",
+          "T1071.001 - Application Layer Protocol: Web Protocols"
+        ],
+        "analyse": "Cette campagne illustre une tendance préoccupante où des plateformes légitimes et de confiance (comme Hugging Face) sont détournées par des acteurs malveillants pour héberger et distribuer des malwares. La combinaison d'ingénierie sociale, de techniques d'évasion (polymorphisme, faux noms d'applications) et l'abus de fonctionnalités système (services d'accessibilité) ciblent les appareils Android, soulignant la vulnérabilité des utilisateurs et la nécessité d'une vigilance accrue sur les applications téléchargées.",
+        "recommandations": [
+          "Éviter de télécharger des applications provenant de sources non officielles ou via des publicités suspectes.",
+          "Vérifier attentivement les permissions demandées par les applications avant l'installation.",
+          "Utiliser une solution de sécurité mobile robuste capable d'analyser le comportement des applications plutôt que de se fier uniquement aux signatures.",
+          "Désactiver ou limiter l'utilisation des services d'accessibilité pour les applications non fiables.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour les services financiers et les comptes importants."
+        ],
+        "tags": [
+          "android",
+          "malware",
+          "rat",
+          "hugging_face",
+          "social_engineering",
+          "data_theft",
+          "financial_fraud",
+          "access_services",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/android-trojan-campaign-hugging-face-hosting-rat-payload",
+          "https://www.bleepingcomputer.com/news/security/hugging-face-abused-to-spread-thousands-of-android-malware-variants/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Google perturbe les réseaux de proxys résidentiels IPIDEA alimentés par des malwares",
+        "description": "Google Threat Intelligence Group (GTIG) et ses partenaires ont perturbé le réseau de proxys résidentiels IPIDEA, l'un des plus grands au monde, utilisé par plus de 550 groupes de menaces (Chine, Iran, Russie, Corée du Nord) pour diverses activités malveillantes, notamment la prise de contrôle de comptes, la création de faux comptes, le vol d'informations d'identification, l'exfiltration de données et les attaques par force brute. IPIDEA enrôlait des millions d'appareils via plus de 600 applications Android et 3 000 binaires Windows troyanisés intégrant des SDKs de proxy (Packet, Castar, Hex, Earn). L'action a inclus la suppression de domaines et le partage de renseignements, dégradant significativement les opérations d'IPIDEA.",
+        "threat_actor": "IPIDEA (opérateur de réseau proxy), BadBox2.0, Aisuru, Kimwolf (botnets), plus de 550 groupes de menaces",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "360proxy.com",
+            "lunaproxy.com",
+            "pias5.com",
+            "radishvpn.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001 - Phishing: Spearphishing Attachment",
+            "T1566.002 - Phishing: Spearphishing Link",
+            "T1090.002 - Proxy: External Proxy",
+            "T1552 - Unsecured Credentials",
+            "T1078.001 - Valid Accounts: Default Accounts",
+            "T1110.003 - Brute Force: Password Spraying",
+            "T1071.001 - Application Layer Protocol: Web Protocols",
+            "T1102 - Web Service"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1090.002 - Proxy: External Proxy",
+          "T1552 - Unsecured Credentials",
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1110.003 - Brute Force: Password Spraying",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1102 - Web Service"
+        ],
+        "analyse": "La perturbation d'IPIDEA met en lumière la menace grandissante des réseaux de proxys résidentiels, qui permettent aux acteurs malveillants d'anonymiser leur trafic et d'échapper à la détection, et l'importance de la collaboration industrie-gouvernement. Ces réseaux sont un vecteur clé pour la cybercriminalité et l'espionnage, soulignant la nécessité pour les utilisateurs d'être vigilants quant aux applications 'gratuites' qui pourraient transformer leurs appareils en nœuds proxy.",
+        "recommandations": [
+          "Éviter les applications 'gratuites' ou 'de partage de bande passante' non certifiées.",
+          "Renforcer les mesures de sécurité des comptes (MFA) et des réseaux.",
+          "Surveiller les anomalies de trafic réseau et d'authentification.",
+          "Mettre en œuvre Google Play Protect et d'autres protections d'écosystème.",
+          "Les plateformes mobiles, les FAI et les autres plateformes technologiques doivent partager les renseignements et mettre en œuvre les meilleures pratiques pour identifier les réseaux de proxys illicites."
+        ],
+        "tags": [
+          "ipidea",
+          "proxy_reseau",
+          "malware",
+          "disruption",
+          "cybercriminalite",
+          "espionnage",
+          "applications_troyanisees",
+          "google"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/",
+          "https://securityaffairs.com/187463/security/google-targets-ipidea-in-crackdown-on-global-residential-proxy-networks/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "RedKitten : campagne accélérée par l'IA ciblant les manifestations iraniennes",
+        "description": "Une campagne récemment identifiée, RedKitten, ciblant les intérêts iraniens (ONG et individus documentant les abus des droits humains liés aux 'Dey 1404 Protests'), utilise des outils d'IA pour développer rapidement un malware modulaire. Le malware, délivré via des tableurs Excel piégés, utilise GitHub comme 'Dead Drop Resolver', Google Drive pour l'hébergement de modules, et Telegram pour le Commandement et Contrôle. Il intègre de la stéganographie LSB pour la configuration et des techniques d'injection AppDomainManager pour la persistance.",
+        "threat_actor": "RedKitten (aligné avec les intérêts de l'État iranien, similarités avec Yellow Liderc/IMPERIAL KITTEN/TA456)",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "johnpeterson202024@proton.me"
+          ],
+          "URL": [
+            "https://github.com/johnpeterson1304"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+            "T1053.005 - Scheduled Task/Job: Scheduled Task",
+            "T1027.003 - Obfuscated Files or Information: Steganography",
+            "T1102.002 - Web Service: Bidirectional Command and Control"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1027.003 - Obfuscated Files or Information: Steganography",
+          "T1102.002 - Web Service: Bidirectional Command and Control"
+        ],
+        "analyse": "Cette campagne met en évidence l'utilisation de l'IA pour accélérer le développement de malwares et la création de leurres basés sur l'actualité géopolitique (crise humanitaire). L'utilisation d'infrastructures commodifiées (GitHub, Google Drive, Telegram) rend le suivi plus difficile, tout en exposant des métadonnées utiles sur les attaquants. Cela indique une sophistication croissante des acteurs étatiques et une convergence des TTPs.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux leurres liés aux crises humanitaires et aux documents piégés (macros Excel).",
+          "Mettre en œuvre une détection comportementale avancée pour identifier les injections AppDomainManager et les activités de C2 inhabituelles.",
+          "Surveiller les communications via des plateformes légitimes utilisées à des fins malveillantes (Telegram, GitHub, Google Drive).",
+          "Renforcer les politiques de sécurité des postes de travail pour empêcher l'exécution de macros non signées et de scripts arbitraires."
+        ],
+        "tags": [
+          "redkitten",
+          "iran",
+          "etat_nation",
+          "ia",
+          "malware",
+          "espionnage",
+          "social_engineering",
+          "steganographie",
+          "github",
+          "google_drive",
+          "telegram"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/redkitten-ai-accelerated-campaign-targeting-iranian-protests/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Attaque sur la chaîne d'approvisionnement de l'antivirus eScan : détection et remédiation des mises à jour malveillantes",
+        "description": "Une attaque sur la chaîne d'approvisionnement a affecté l'antivirus eScan de MicroWorld Technologies. Un fichier malveillant, 'Reload.exe', a été distribué via le serveur de mise à jour d'eScan, empêchant les futures mises à jour antivirus en modifiant le fichier HOSTS, assurant ainsi la persistance via des tâches planifiées ('CorelDefrag') et téléchargeant des charges utiles supplémentaires. Le fichier était distribué avec une fausse signature numérique invalide, résultant d'un accès non autorisé à l'infrastructure.",
+        "threat_actor": "Non nommé",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+            "T1033 - System Owner/User Discovery",
+            "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+            "T1053.005 - Scheduled Task/Job: Scheduled Task"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1033 - System Owner/User Discovery",
+          "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task"
+        ],
+        "analyse": "Cette attaque souligne la vulnérabilité critique des chaînes d'approvisionnement logicielles, en particulier pour les produits de sécurité censés protéger les systèmes. La modification du fichier HOSTS et la création de tâches planifiées sont des techniques classiques mais efficaces pour maintenir la persistance et bloquer les remédiations. L'incident met en évidence l'importance de la surveillance des infrastructures de mise à jour et la vérification des signatures numériques.",
+        "recommandations": [
+          "Examiner les tâches planifiées pour détecter les traces de malwares.",
+          "Vérifier le fichier `%WinDir%\\System32\\drivers\\etc\\hosts` pour les domaines eScan bloqués.",
+          "Vérifier les logs de mise à jour eScan pour des anomalies au 20 janvier.",
+          "Appliquer les utilitaires de suppression de malware et de restauration fournis par le fournisseur.",
+          "Mettre en œuvre une vérification rigoureuse de l'intégrité des mises à jour logicielles."
+        ],
+        "tags": [
+          "escan",
+          "chaine_approvisionnement",
+          "antivirus",
+          "malware",
+          "persistence",
+          "hosts_file",
+          "logiciels_malveillants"
+        ],
+        "sources": [
+          "https://securelist.com/escan-supply-chain-attack/118688/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Les acteurs étatiques et criminels exploitent la faille WinRAR dans les attaques",
+        "description": "Le groupe Google Threat Intelligence (GTIG) a identifié une exploitation active et généralisée de la vulnérabilité critique CVE-2025-8088 dans WinRAR par de multiples acteurs, y compris des APTs liés à la Russie et à la Chine, ainsi que des groupes à motivation financière. Cette faille, un problème de 'directory traversal' corrigé dans la version 7.13, est exploitée via des attaques de phishing pour délivrer divers malwares (RomCom, NESTPACKER, STOCKSTAY, POISONIVY, RATs/stealers génériques). Elle permet l'exécution de code arbitraire en plaçant des exécutables dans les dossiers de démarrage de Windows.",
+        "threat_actor": "Acteurs étatiques (liés à la Russie et la Chine), groupes à motivation financière, 'zeroplayer' (vendeur d'exploits)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1203 - Exploitation for Client Execution",
+            "T1210 - Exploitation of Remote Services",
+            "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1203 - Exploitation for Client Execution",
+          "T1210 - Exploitation of Remote Services",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+        ],
+        "analyse": "L'exploitation rapide et opportuniste de cette vulnérabilité N-day par un large éventail d'acteurs, après la disponibilité d'un patch, souligne la persistance du danger des failles non corrigées dans des logiciels largement utilisés. La commercialisation d'exploits ('zeroplayer') facilite l'adoption par des groupes moins sophistiqués, estompant la distinction entre les opérations étatiques et les campagnes criminelles.",
+        "recommandations": [
+          "Mettre à jour WinRAR vers la version 7.13 ou supérieure immédiatement.",
+          "Mettre en œuvre des solutions anti-phishing et des contrôles de sécurité des e-mails robustes.",
+          "Former les utilisateurs à reconnaître les tentatives de phishing et les pièces jointes malveillantes.",
+          "Surveiller les activités inhabituelles dans les dossiers de démarrage de Windows."
+        ],
+        "tags": [
+          "winrar",
+          "vulnerabilite_n_day",
+          "exploitation",
+          "phishing",
+          "rce",
+          "etat_nation",
+          "cybercriminalite",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187451/security/nation-state-and-criminal-actors-leverage-winrar-flaw-in-attacks.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Dissection d'UAT-8099 : nouveaux mécanismes de persistance et ciblage régional",
+        "description": "Cisco Talos a observé une nouvelle campagne de UAT-8099, un APT lié à la Chine, ciblant les serveurs IIS en Asie (Inde, Pakistan, Thaïlande, Vietnam, Japon), avec une concentration distincte en Thaïlande et au Vietnam. Ce groupe utilise des web shells, des VPN, des outils légitimes de red team, des scripts PowerShell et VBScript pour le téléchargement de 'GotoHTTP', et déploie des variantes du malware 'BadIIS' pour la fraude SEO. Il a évolué pour utiliser des comptes utilisateurs cachés ('admin$', 'mysql$') et l'obfuscation XOR pour maintenir la persistance et échapper à la détection.",
+        "threat_actor": "UAT-8099 (WEBJACK, APT lié à la Chine)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1505.003 - Server Software Component: Web Shell",
+            "T1136.001 - Create Account: Local Account",
+            "T1059.001 - Command and Scripting Interpreter: PowerShell",
+            "T1059.005 - Command and Scripting Interpreter: Visual Basic",
+            "T1027.002 - Obfuscated Files or Information: Software Packing",
+            "T1082 - System Information Discovery",
+            "T1041 - Exfiltration Over C2 Channel",
+            "T1583.001 - Establish Accounts: Malware-as-a-Service",
+            "T1588.002 - Acquire Infrastructure: Compromise Accounts"
+          ]
+        },
+        "mitre_ttps": [
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1136.001 - Create Account: Local Account",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1059.005 - Command and Scripting Interpreter: Visual Basic",
+          "T1027.002 - Obfuscated Files or Information: Software Packing",
+          "T1082 - System Information Discovery",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1583.001 - Establish Accounts: Malware-as-a-Service",
+          "T1588.002 - Acquire Infrastructure: Compromise Accounts"
+        ],
+        "analyse": "Cette analyse révèle la sophistication croissante des APTs et leur capacité à s'adapter aux mesures de détection. Le ciblage régional et l'utilisation de techniques d'évasion avancées (comptes cachés, outils légitimes, obfuscation) rendent cette menace particulièrement insidieuse. La fraude SEO démontre une motivation financière en plus de l'espionnage traditionnel, ce qui est une tendance courante chez les APTs.",
+        "recommandations": [
+          "Surveiller activement les serveurs IIS pour les web shells et les activités inhabituelles.",
+          "Mettre en œuvre une détection des créations de comptes non autorisées, en particulier des comptes cachés (se terminant par '$').",
+          "Utiliser des outils de sécurité qui peuvent détecter les outils légitimes abusés (LoLbins) et les scripts malveillants (PowerShell, VBScript).",
+          "Renforcer les mesures de sécurité pour les applications publiques exposées et les serveurs critiques.",
+          "Segmenter les réseaux pour limiter les mouvements latéraux en cas de compromission initiale."
+        ],
+        "tags": [
+          "uat_8099",
+          "apt",
+          "chine",
+          "iis",
+          "seo_fraud",
+          "malware",
+          "persistance",
+          "web_shell",
+          "targeted_attack"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8099-new-persistence-mechanisms-and-regional-focus/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Un ancien ingénieur de Google coupable d'avoir volé la technologie de l'IA pour une entreprise chinoise",
+        "description": "Linwei Ding, un ancien ingénieur de Google, également connu sous le nom de Leon Ding, a été reconnu coupable de 14 chefs d'espionnage économique et de vol de secrets commerciaux. Il a volé des centaines de documents (1 255 documents, 14 000 pages) sur la technologie des puces d'IA de Google et les a transférés vers un compte cloud personnel afin de créer sa propre startup en Chine. Cet incident souligne la menace persistante des initiés et l'importance de la protection de la propriété intellectuelle.",
+        "threat_actor": "Linwei Ding (Leon Ding)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1078.001 - Valid Accounts: Default Accounts",
+            "T1537 - Transfer Data to Cloud Account",
+            "T1001.003 - Data Obfuscation: Protocol Impersonation",
+            "T1083 - File and Directory Discovery"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1537 - Transfer Data to Cloud Account",
+          "T1001.003 - Data Obfuscation: Protocol Impersonation",
+          "T1083 - File and Directory Discovery"
+        ],
+        "analyse": "Cet incident met en évidence la menace interne persistante et les risques associés au vol de propriété intellectuelle, en particulier dans des domaines de haute valeur comme la technologie de l'IA. La facilité avec laquelle les données ont été exfiltrées vers un compte cloud personnel souligne des lacunes potentielles dans les contrôles d'accès et les systèmes de surveillance des données sortantes.",
+        "recommandations": [
+          "Renforcer les contrôles d'accès aux informations sensibles et à la propriété intellectuelle (PI).",
+          "Mettre en œuvre des solutions de prévention de la perte de données (DLP) pour détecter et bloquer les exfiltrations.",
+          "Surveiller les activités des employés, en particulier les transferts de données vers des comptes personnels ou des services cloud non autorisés.",
+          "Mener des enquêtes approfondies sur les employés sur le départ ou ayant des accès privilégiés.",
+          "Établir des politiques claires concernant l'utilisation des ressources de l'entreprise et la manipulation des données sensibles."
+        ],
+        "tags": [
+          "google",
+          "theft",
+          "ai_technology",
+          "insider_threat",
+          "economic_espionage",
+          "propriete_intellectuelle",
+          "chine"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/ex-google-engineer-guilty-of-stealing-ai-tech-for-chinese-firm/?pk_campaign=feed&pk_kwd=ex-google-engineer-guilty-of-stealing-ai-tech-for-chinese-firm"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Pas un jeu d'enfants : des mods Roblox à la compromission de votre entreprise",
+        "description": "Des mods de jeux apparemment inoffensifs pour Roblox cachent des malwares 'infostealers' qui volent silencieusement les identités. L'infection d'un PC personnel via un mod malveillant peut entraîner la compromission de l'entreprise en récoltant les mots de passe de navigateur enregistrés, les cookies de session et les jetons d'authentification (Gmail, Discord, Steam, Microsoft, VPN d'entreprise, Okta, Slack, GitHub).",
+        "threat_actor": "Non nommé (malware infostealer)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1555.003 - Credential Access: Password Store: Browser Saved Passwords",
+            "T1539 - Steal Web Session Cookie"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1555.003 - Credential Access: Password Store: Browser Saved Passwords",
+          "T1539 - Steal Web Session Cookie"
+        ],
+        "analyse": "Cet article met en évidence la nature poreuse de la frontière entre les activités personnelles et professionnelles sur les appareils personnels, et la manière dont les menaces de consommation peuvent se transformer en risques d'entreprise. Les infostealers distribués via des logiciels piratés ou des mods de jeux sont un vecteur d'attaque efficace pour l'acquisition d'informations d'identification, menant à des accès non autorisés aux ressources d'entreprise.",
+        "recommandations": [
+          "Sensibiliser les employés aux risques liés au téléchargement de logiciels non fiables sur des appareils personnels utilisés pour le travail à distance ou accédant à des ressources d'entreprise.",
+          "Mettre en œuvre une MFA robuste pour toutes les applications d'entreprise.",
+          "Utiliser des solutions EDR/XDR pour détecter les infostealers et les activités de vol d'informations d'identification.",
+          "Isoler les environnements professionnels des usages personnels (par exemple, via des machines virtuelles ou des politiques d'accès strictes)."
+        ],
+        "tags": [
+          "roblox",
+          "infostealer",
+          "malware",
+          "threat_home_to_corp",
+          "credential_theft",
+          "social_engineering",
+          "gaming"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/not-a-kids-game-from-roblox-mod-to-compromising-your-company/"
+        ],
+        "date": "2026-01-30"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is complex and constantly evolving, marked by the widespread exploitation of N-day and zero-day vulnerabilities, supply chain attacks, and the increasing use of artificial intelligence by malicious actors. Attackers deploy sophisticated social engineering techniques to steal credentials and compromise systems, as observed in campaigns targeting Android users via Hugging Face, or incidents involving France Travail and Match Group. Nation-state groups like RedKitten and Sandworm continue to conduct espionage and disruption campaigns, often in response to geopolitical tensions, and exploit tools like WinRAR and legitimate platforms for their operations. The disruption of residential proxy networks like IPIDEA by law enforcement highlights the ongoing effort to dismantle cybercrime infrastructure. Concurrently, data breaches remain a major threat, leading to significant regulatory fines and underscoring the critical importance of fundamental security controls (MFA, risk analysis) and rapid response. The overall state of threats is high, with a convergence of TTPs between nation-state actors and cybercriminals, emphasizing the need for continuous vigilance and proactive cybersecurity.",
+      "date": "2026-01-30"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "RedKitten",
+        "secteur": "Non-governmental organizations, individuals",
+        "modop": "AI-accelerated campaign targeting Iranian interests, using 'shock' lures (fake Excel spreadsheets on human rights abuses), VBA macros, AppDomainManager injection, LSB steganography, GitHub as Dead Drop Resolver, Google Drive for module hosting, and Telegram for C2. TTPs similar to Yellow Liderc (IMPERIAL KITTEN, TA456).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "iran",
+          "nation_state",
+          "espionage",
+          "malicious_ai",
+          "steganography",
+          "social_engineering",
+          "telegram"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/redkitten-ai-accelerated-campaign-targeting-iranian-protests/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "IPIDEA",
+        "secteur": "Various (cybercrime and espionage facilitator)",
+        "modop": "Operator of residential proxy networks powered by trojanized applications/software (Packet, Castar, Hex, Earn SDKs), enabling account takeovers, fake account creation, credential theft, data exfiltration, password spraying, and infrastructure obfuscation for over 550 threat groups (China, Iran, Russia, North Korea). Disrupted by Google and partners.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "proxy",
+          "cybercrime",
+          "espionage",
+          "malware_as_a_service",
+          "residential_networks"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/",
+          "https://securityaffairs.com/187463/security/google-targets-ipidea-in-crackdown-on-global-residential-proxy-networks/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Online dating services (Match Group), Financial sector",
+        "modop": "Vishing (voice phishing) campaign targeting SSO (Okta, Microsoft, Google) accounts to gain access and exfiltrate data from marketing analytics and cloud storage instances.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "vishing",
+          "social_engineering",
+          "breach",
+          "sso",
+          "finance"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Sandworm (Razing Ursa, APT44, Iridium)",
+        "secteur": "Energy, Olympic Games, IT Infrastructure",
+        "modop": "Russian government-linked group, known for disruptive attacks (Olympic Destroyer malware), false-flag tactics, and wiper malware (targeting Polish energy grid). Aims to disrupt IT infrastructure and international events.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russia",
+          "nation_state",
+          "disruption",
+          "false_flag",
+          "wiper",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/",
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Fighting Ursa (APT28, Fancy Bear, Strontium)",
+        "secteur": "Sports organizations (WADA)",
+        "modop": "Attributed to Russian GRU, known for data leaks aimed at discrediting regulatory bodies.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russia",
+          "nation_state",
+          "data_leak",
+          "influence"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Storm-1679, Storm-1099",
+        "secteur": "Sports organizations (IOC), General public",
+        "modop": "Russian-linked actors, use AI-generated disinformation (fake Netflix documentaries, deceptive videos) to deter participation in events (e.g., Paris 2024 Games) and defame organizations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "russia",
+          "nation_state",
+          "disinformation",
+          "malicious_ai",
+          "influence_operation"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Konni (Opal Sleet, TA406)",
+        "secteur": "Blockchain, Engineers",
+        "modop": "North Korean group using AI-generated PowerShell malware to target developers and engineers in the blockchain sector.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "north_korea",
+          "nation_state",
+          "malicious_ai",
+          "social_engineering",
+          "malware",
+          "blockchain"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "UAT-8099 (WEBJACK)",
+        "secteur": "IIS Servers, Organizations in Asia (Thailand, Vietnam)",
+        "modop": "China-nexus APT, exploiting IIS servers for SEO fraud using BadIIS malware variants. Uses web shells, VPNs, legitimate red team tools, PowerShell and VBScript, hidden user accounts ('admin$', 'mysql$'), and XOR obfuscation for persistence and evasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "china",
+          "apt",
+          "seo_fraud",
+          "web_shell",
+          "persistence",
+          "iis_servers"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8099-new-persistence-mechanisms-and-regional-focus/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Qilin ransomware",
+        "secteur": "Various",
+        "modop": "Dominant ransomware group in Q4 2025, often deployed after exploitation of public-facing application vulnerabilities or via phishing campaigns. Utilizes RMM tools (ScreenConnect, SoftPerfect Network Scanner, rclone) for persistence, reconnaissance, and data exfiltration.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "application_exploitation",
+          "phishing",
+          "rmm_tools",
+          "exfiltration"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/im-locked-in/",
+          "https://blog.talosintelligence.com/ir-trends-q4-2025/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Ming criminal family group",
+        "secteur": "Organized cybercrime (online scams)",
+        "modop": "Organized criminal group in Myanmar involved in online scam centers targeting foreigners, responsible for homicide, injury, and fraud.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "myanmar",
+          "china",
+          "organized_crime",
+          "online_scams"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/01/29/en-chine-onze-personnes-accusees-d-etre-membres-de-groupes-criminels-impliques-dans-des-arnaques-en-ligne-ont-ete-executees_6664560_3210.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "RAMP (Russian Anonymous Marketplace)",
+        "secteur": "Cybercrime facilitator (ransomware)",
+        "modop": "Russian-language forum used by ransomware operators (such as REvil and DarkSide), brokers, developers, and affiliates to facilitate ransomware activities. Seized by U.S. law enforcement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_ecosystem",
+          "cybercrime_forum",
+          "russia"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/28/russian-ransomware-forum-seized-by-u-s-law-enforcement/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "nom": "Amatera Stealer",
+        "secteur": "Various (credential theft)",
+        "modop": "Information-stealing malware, not open-source, sharing code similarities with other projects for HTTPS functionality and evasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://t.me/vxunderground/8081"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Olympic Games, IT Infrastructure",
+        "theme": "Russian Cyber Threat to 2026 Winter Olympics",
+        "description": "Russian state-aligned cyber actors (Fighting Ursa, Razing Ursa, Storm-1679, Storm-1099) pose a significant cyber threat to the Milano Cortina 2026 Winter Games. This threat is driven by Russia's political exclusion from the Olympics, which is perceived as an attack on its state legitimacy. Anticipated tactics include data leaks (like the WADA breach), disruptive malware (like Olympic Destroyer), false-flag operations, and AI-generated disinformation to impact IT infrastructure, events, and public perception. The primary objective has shifted from espionage to disruption, necessitating a prioritization of resilience.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "olympic_games",
+          "cyber_threat",
+          "disruption",
+          "disinformation",
+          "nation_state"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-olympics/",
+          "https://blog.talosintelligence.com/im-locked-in/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Maritime, Energy, Critical Infrastructure",
+        "theme": "Ukraine’s ‘Kinetic Sanctions’ Change the Game",
+        "description": "Ukraine has intensified its drone attacks on Russian 'shadow fleet' tankers in the Black Sea and Mediterranean, aiming to disrupt Russia's oil export revenues and war funding. These 'kinetic sanctions' by the SBU have led to increased insurance rates and reduced exports. While the focus is on physical attacks, the history of Russian cyber activities against Ukrainian critical infrastructure (e.g., power grid) underscores the broader cyber dimension of the conflict.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ukraine",
+          "russia",
+          "conflict",
+          "sanctions",
+          "cyber_warfare",
+          "critical_infrastructure",
+          "energy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/ukraines-kinetic-sanctions-change-game"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Online Dating Services",
+        "victime": "Match Group (Hinge, Tinder, OkCupid, Match.com)",
+        "description": "The ShinyHunters group stole 1.7 GB of compressed files, including approximately 10 million user records (Hinge, Match, OkCupid) and internal documents, through a vishing campaign targeting SSO accounts. No login credentials, financial information, or private communications were confirmed to have been accessed.",
+        "tags": [
+          "violation",
+          "breach",
+          "match_group",
+          "shinyhunters",
+          "vishing",
+          "sso_compromise",
+          "personal_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Financial Services, Banking",
+        "victime": "Marquis Software Solutions, dozens of U.S. banks and credit unions",
+        "description": "A ransomware attack in August 2025 impacted Marquis's systems and dozens of financial institutions. The attack is attributed to a security breach at SonicWall (cloud backup service), which allowed attackers to retrieve firewall configuration data and bypass protections.",
+        "tags": [
+          "violation",
+          "breach",
+          "marquis_software",
+          "ransomware",
+          "supply_chain",
+          "sonicwall",
+          "financial_sector"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/marquis-blames-ransomware-breach-on-sonicwall-cloud-backup-hack/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Comstar, LLC (ambulance billing service), 70 HIPAA covered entities, 585,621 patients",
+        "description": "A ransomware attack in March 2022 encrypted network servers and exposed Protected Health Information (PHI) of over 585,000 patients across 70 HIPAA covered entities. Investigation revealed a lack of adequate risk analysis, insufficient security controls, and retention of unsegmented data for former clients. Resulted in a $515,000 settlement fine.",
+        "tags": [
+          "violation",
+          "breach",
+          "comstar",
+          "ransomware",
+          "healthcare",
+          "ephi",
+          "hipaa_compliance",
+          "non_compliance"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/youre-not-paranoid-lawyers-are-coming-to-get-you/?pk_campaign=feed&pk_kwd=youre-not-paranoid-lawyers-are-coming-to-get-you"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Employment, Public Administration",
+        "victime": "France Travail (formerly Pôle emploi), 36.8 million users",
+        "description": "Massive personal data leak in March 2024 following social engineering techniques that allowed the usurpation of Cap Emploi advisor accounts. Stolen data included first names, last names, social security numbers, France Travail IDs, email/postal addresses, and phone numbers. Fined €5 million by the CNIL for a lack of robust security measures.",
+        "tags": [
+          "violation",
+          "breach",
+          "france_travail",
+          "public_administration",
+          "social_engineering",
+          "personal_data",
+          "cnil_fine",
+          "weak_authentication"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/29/france-travail-condamne-a-une-amende-de-5-millions-d-euros-apres-un-vol-massif-de-donnees_6664602_4408996.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "secteur": "Cryptocurrency, Tax Services",
+        "victime": "Waltio (crypto tax data manager), 120,000 users",
+        "description": "Theft of user data and treasury funds due to multiple security flaws. Stolen data included email addresses and figures/documents from 2024 tax reports. No banking or detailed identity information was compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "waltio",
+          "cryptocurrency",
+          "tax_data",
+          "fund_theft",
+          "sophisticated_attack"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/pixels/article/2026/01/29/cryptomonnaies-vols-et-failles-a-repetition-chez-waltio-gestionnaire-de-donnees-fiscales-de-detenteurs-francais_6664646_4408996.html"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22039",
+        "cvss": "10.0",
+        "product": "Kyverno (Kubernetes-native policy engine)",
+        "description": "Critical privilege escalation vulnerability allowing any user with policy creation rights to become a cluster admin by bypassing namespace isolation boundaries.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kyverno",
+          "kubernetes",
+          "privilege_escalation",
+          "rce"
+        ],
+        "sources": [
+          "https://securityonline.info/cluster-admin-for-all-critical-kyverno-flaw-cvss-10-shatters-isolation/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Code injection vulnerability allowing unauthenticated attackers to achieve remote code execution. Actively exploited zero-day.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "code_injection",
+          "rce",
+          "zero_day",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-two-epmm-flaws-exploited-in-zero-day-attacks/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-1281"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Code injection vulnerability allowing unauthenticated attackers to achieve remote code execution. Actively exploited zero-day.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "code_injection",
+          "rce",
+          "zero_day",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-two-epmm-flaws-exploited-in-zero-day-attacks/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-1340"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "Not specified (CVSS 9.8 implied)",
+        "cvss": "9.8",
+        "product": "Fortinet FortiCloud SSO (FortiAnalyzer, FortiManager, FortiOS, FortiProxy)",
+        "description": "Critical authentication bypass vulnerability, exploited for initial access, privilege escalation, and persistence by leveraging a compromised FortiCloud account.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "fortinet",
+          "forticloud",
+          "sso",
+          "authentication_bypass",
+          "exploited"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/forticloud-sso-authentication-bypass/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40551",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Deserialization of untrusted data vulnerability allowing unauthenticated remote code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "deserialization",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40552",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Authentication bypass vulnerability allowing a remote attacker to circumvent access controls.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "authentication_bypass",
+          "access_control"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40553",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Deserialization of untrusted data vulnerability allowing unauthenticated remote code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "deserialization",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-40554",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Authentication bypass vulnerability allowing a remote attacker to invoke specific internal actions without proper authorization.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "solarwinds",
+          "web_help_desk",
+          "authentication_bypass",
+          "authorization_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187470/security/solarwinds-addressed-four-critical-web-help-desk-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25047",
+        "cvss": "9.4",
+        "product": "deephas npm package v1.0.7",
+        "description": "Prototype pollution vulnerability allowing an attacker to modify global object behavior.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "npm",
+          "deephas",
+          "prototype_pollution",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25047"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-22806",
+        "cvss": "9.1",
+        "product": "vCluster Platform (prior to versions 4.6.0, 4.5.4, 4.4.2, 4.3.10)",
+        "description": "Access keys created with a limited scope can be bypassed to access resources outside of it. However, the user still cannot access resources beyond what is accessible to the owner of the access key.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "vcluster",
+          "kubernetes",
+          "access_keys",
+          "privilege_escalation",
+          "access_bypass"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-22806"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-1637",
+        "cvss": "9.0",
+        "product": "Tenda AC21 16.03.08.16",
+        "description": "Stack-based buffer overflow in the AdvSetMacMtuWan function, leading to remote code execution. A public exploit is available.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tenda",
+          "buffer_overflow",
+          "rce",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1637"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-21962",
+        "cvss": "Maximum Severity (implied 9.0+)",
+        "product": "Oracle HTTP Server and Oracle WebLogic Server Proxy Plugin",
+        "description": "Vulnerability allowing proxy access controls bypass via path traversal and header manipulation, potentially leading to remote code execution and full compromise of backend WebLogic Server instances. Actively probed in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "oracle",
+          "weblogic",
+          "path_traversal",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/poc-maximum-severity-oracle-proxy"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25117",
+        "cvss": "8.3",
+        "product": "pwn.college DOJO",
+        "description": "Missing sandboxing on `/workspace/*` routes allows challenge authors to inject arbitrary JavaScript, leading to sandbox escape and arbitrary JavaScript execution on the dojo's origin.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "pwn_college_dojo",
+          "sandbox_escape",
+          "javascript_execution",
+          "code_execution"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25117"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2026-25063",
+        "cvss": "8.3",
+        "product": "gradle-completion (Bash support up to 9.3.0)",
+        "description": "Bash command injection vulnerability allowing arbitrary code execution when a user triggers Bash tab completion in a project containing a malicious Gradle build file.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "gradle",
+          "bash",
+          "command_injection",
+          "rce"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25063"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-15467",
+        "cvss": "High Severity (RCE)",
+        "product": "OpenSSL (CMS AuthEnvelopedData structures)",
+        "description": "High-severity stack buffer overflow during the parsing of CMS AuthEnvelopedData structures using AEAD ciphers with maliciously crafted IV parameters, potentially leading to denial of service and, under specific circumstances, remote code execution before authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openssl",
+          "buffer_overflow",
+          "rce",
+          "dos",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://socprime.com/blog/cve-2025-15467-vulnerability/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33217",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "NVIDIA GPU Display Driver (Windows)",
+        "description": "Use After Free vulnerability in the user-mode layer of the GPU Display Driver, which could lead to code execution, escalation of privileges, data tampering, denial of service, and information disclosure.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "gpu",
+          "use_after_free",
+          "rce",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33218",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "NVIDIA GPU Display Driver (kernel mode layer)",
+        "description": "Integer Overflow vulnerability in the kernel mode layer of the GPU Display Driver, which could lead to code execution, privilege escalation, or data tampering.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "gpu",
+          "integer_overflow",
+          "rce",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "cve_id": "CVE-2025-33220",
+        "cvss": "High Severity (RCE/PE)",
+        "product": "NVIDIA Virtual GPU (vGPU) Manager",
+        "description": "Use After Free vulnerability enabling a 'guest-to-host' escape, where an attacker compromising a virtual machine could potentially impact the host server, leading to code execution, privilege escalation, data tampering, denial of service, or information disclosure.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nvidia",
+          "vgpu",
+          "guest_to_host_escape",
+          "rce",
+          "privilege_escalation",
+          "cloud_security"
+        ],
+        "sources": [
+          "https://securityonline.info/guest-to-host-escape-nvidia-patches-critical-vgpu-driver-flaws/"
+        ],
+        "date": "2026-01-30"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Android Trojan Campaign Uses Hugging Face Hosting for RAT Payload Delivery",
+        "description": "Researchers discovered an Android Remote Access Trojan (RAT) campaign combining social engineering (scareware ads for 'TrustBastion' app), the use of the Hugging Face platform as a staging site for thousands of malicious payload variants, and extensive use of Android Accessibility Services to compromise devices. The malware performs activity monitoring, screen recording, data exfiltration, and displays fake login interfaces to steal financial credentials (Alipay, WeChat) and lock screen codes. It maintains persistent communication with the C2 server (154.198.48.57, trustbastion[.]com).",
+        "threat_actor": "Not applicable (malware campaign, no named group)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "trustbastion[.]com"
+          ],
+          "IPv4": [
+            "154.198.48.57"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1134.001 - Access Token Manipulation: Token Impersonation/Theft",
+            "T1055.001 - Process Injection: Dynamic-link Library Injection",
+            "T1113 - Screen Capture",
+            "T1071.001 - Application Layer Protocol: Web Protocols"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1134.001 - Access Token Manipulation: Token Impersonation/Theft",
+          "T1055.001 - Process Injection: Dynamic-link Library Injection",
+          "T1113 - Screen Capture",
+          "T1071.001 - Application Layer Protocol: Web Protocols"
+        ],
+        "analyse": "This campaign illustrates a concerning trend where legitimate and trusted platforms (like Hugging Face) are hijacked by malicious actors to host and distribute malware. The combination of social engineering, evasion techniques (polymorphism, fake app names), and abuse of system functionalities (accessibility services) targets Android devices, highlighting user vulnerability and the need for increased vigilance regarding downloaded applications.",
+        "recommandations": [
+          "Avoid downloading apps from unofficial sources or suspicious advertisements.",
+          "Carefully review app permissions before installation.",
+          "Use a robust mobile security solution capable of behavioral app analysis rather than relying solely on signatures.",
+          "Disable or limit the use of accessibility services for untrusted applications.",
+          "Implement multi-factor authentication (MFA) for financial services and important accounts."
+        ],
+        "tags": [
+          "android",
+          "malware",
+          "rat",
+          "hugging_face",
+          "social_engineering",
+          "data_theft",
+          "financial_fraud",
+          "access_services",
+          "mobile_security"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/android-trojan-campaign-hugging-face-hosting-rat-payload",
+          "https://www.bleepingcomputer.com/news/security/hugging-face-abused-to-spread-thousands-of-android-malware-variants/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Google Disrupts IPIDEA Residential Proxy Networks Fueled by Malware",
+        "description": "Google Threat Intelligence Group (GTIG) and partners disrupted the IPIDEA residential proxy network, one of the world's largest, used by over 550 threat groups (China, Iran, Russia, North Korea) for various malicious activities including account takeovers, fake account creation, credential theft, data exfiltration, password spraying, and infrastructure obfuscation. IPIDEA enrolled millions of devices via over 600 trojanized Android apps and 3,000 trojanized Windows binaries embedding proxy SDKs (Packet, Castar, Hex, Earn). The action included domain takedowns and intelligence sharing, significantly degrading IPIDEA's operations.",
+        "threat_actor": "IPIDEA (proxy network operator), BadBox2.0, Aisuru, Kimwolf (botnets), over 550 threat groups",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "360proxy.com",
+            "lunaproxy.com",
+            "pias5.com",
+            "radishvpn.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001 - Phishing: Spearphishing Attachment",
+            "T1566.002 - Phishing: Spearphishing Link",
+            "T1090.002 - Proxy: External Proxy",
+            "T1552 - Unsecured Credentials",
+            "T1078.001 - Valid Accounts: Default Accounts",
+            "T1110.003 - Brute Force: Password Spraying",
+            "T1071.001 - Application Layer Protocol: Web Protocols",
+            "T1102 - Web Service"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Attachment",
+          "T1566.002 - Phishing: Spearphishing Link",
+          "T1090.002 - Proxy: External Proxy",
+          "T1552 - Unsecured Credentials",
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1110.003 - Brute Force: Password Spraying",
+          "T1071.001 - Application Layer Protocol: Web Protocols",
+          "T1102 - Web Service"
+        ],
+        "analyse": "IPIDEA's disruption highlights the growing threat of residential proxy networks, which enable malicious actors to anonymize their traffic and evade detection, and the importance of industry-government collaboration. These networks are a key vector for cybercrime and espionage, underscoring the need for users to be vigilant about 'free' apps that might turn their devices into proxy nodes.",
+        "recommandations": [
+          "Avoid uncertified 'free' or 'bandwidth-sharing' applications.",
+          "Strengthen account security measures (MFA) and network security.",
+          "Monitor for network traffic and authentication anomalies.",
+          "Implement Google Play Protect and other ecosystem protections.",
+          "Mobile platforms, ISPs, and other tech platforms should continue sharing intelligence and implementing best practices to identify illicit proxy networks and limit their harms."
+        ],
+        "tags": [
+          "ipidea",
+          "proxy_network",
+          "malware",
+          "disruption",
+          "cybercrime",
+          "espionage",
+          "trojanized_apps",
+          "google"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/",
+          "https://securityaffairs.com/187463/security/google-targets-ipidea-in-crackdown-on-global-residential-proxy-networks/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Not a Kids Game: From Roblox Mod to Compromising Your Company",
+        "description": "Seemingly harmless game mods for Roblox conceal infostealer malware that silently steals identities. Infection of a home PC via a malicious mod can lead to corporate compromise by harvesting saved browser passwords, session cookies, and authentication tokens (Gmail, Discord, Steam, Microsoft, corporate VPN, Okta, Slack, GitHub).",
+        "threat_actor": "Not named (infostealer malware)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1555.003 - Credential Access: Password Store: Browser Saved Passwords",
+            "T1539 - Steal Web Session Cookie"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1555.003 - Credential Access: Password Store: Browser Saved Passwords",
+          "T1539 - Steal Web Session Cookie"
+        ],
+        "analyse": "This article highlights the porous boundary between personal and professional activities on personal devices, and how consumer-grade threats can escalate into enterprise risks. Infostealers distributed via cracked software or game mods are an effective attack vector for credential harvesting, leading to unauthorized access to corporate resources.",
+        "recommandations": [
+          "Educate employees on the risks of downloading untrusted software on personal devices used for remote work or accessing corporate resources.",
+          "Implement robust MFA for all enterprise applications.",
+          "Utilize EDR/XDR solutions to detect infostealers and credential theft activities.",
+          "Isolate professional environments from personal use (e.g., via virtual machines or strict access policies)."
+        ],
+        "tags": [
+          "roblox",
+          "infostealer",
+          "malware",
+          "threat_home_to_corp",
+          "credential_theft",
+          "social_engineering",
+          "gaming"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/not-a-kids-game-from-roblox-mod-to-compromising-your-company/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Ex-Google Engineer Guilty of Stealing AI Tech for Chinese Firm",
+        "description": "Linwei Ding, a former Google engineer also known as Leon Ding, has been found guilty of 14 counts of economic espionage and trade secrets theft. He stole hundreds of documents (1,255 docs, 14,000 pages) on Google's AI chip technology and transferred them to a personal cloud account to build his own startup in China. This incident underscores the persistent insider threat and the importance of intellectual property protection.",
+        "threat_actor": "Linwei Ding (Leon Ding)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1078.001 - Valid Accounts: Default Accounts",
+            "T1537 - Transfer Data to Cloud Account",
+            "T1001.003 - Data Obfuscation: Protocol Impersonation",
+            "T1083 - File and Directory Discovery"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1537 - Transfer Data to Cloud Account",
+          "T1001.003 - Data Obfuscation: Protocol Impersonation",
+          "T1083 - File and Directory Discovery"
+        ],
+        "analyse": "This incident highlights the persistent insider threat and the risks associated with intellectual property theft, particularly in high-value areas like AI technology. The ease with which data was exfiltrated to a personal cloud account points to potential gaps in access controls and outbound data monitoring systems.",
+        "recommandations": [
+          "Strengthen access controls to sensitive information and intellectual property (IP).",
+          "Implement Data Loss Prevention (DLP) solutions to detect and block exfiltration attempts.",
+          "Monitor employee activities, especially data transfers to personal accounts or unauthorized cloud services.",
+          "Conduct thorough investigations of departing employees or those with privileged access.",
+          "Establish clear policies regarding the use of company resources and handling of sensitive data."
+        ],
+        "tags": [
+          "google",
+          "theft",
+          "ai_technology",
+          "insider_threat",
+          "economic_espionage",
+          "intellectual_property",
+          "china"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/ex-google-engineer-guilty-of-stealing-ai-tech-for-chinese-firm/?pk_campaign=feed&pk_kwd=ex-google-engineer-guilty-of-stealing-ai-tech-for-chinese-firm"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "RedKitten: AI-accelerated campaign targeting Iranian protests",
+        "description": "A newly identified campaign, RedKitten, targeting Iranian interests (NGOs and individuals documenting human rights abuses related to the 'Dey 1404 Protests'), uses AI tools to rapidly develop modular malware. The malware, delivered via malicious Excel spreadsheets, leverages GitHub as a Dead Drop Resolver, Google Drive for module hosting, and Telegram for Command and Control. It incorporates LSB steganography for configuration and AppDomainManager injection techniques for persistence.",
+        "threat_actor": "RedKitten (aligned with Iranian state interests, similarities to Yellow Liderc/IMPERIAL KITTEN/TA456)",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "johnpeterson202024@proton.me"
+          ],
+          "URL": [
+            "https://github.com/johnpeterson1304"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+            "T1053.005 - Scheduled Task/Job: Scheduled Task",
+            "T1027.003 - Obfuscated Files or Information: Steganography",
+            "T1102.002 - Web Service: Bidirectional Command and Control"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1574.002 - Hijack Execution Flow: DLL Side-Loading",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task",
+          "T1027.003 - Obfuscated Files or Information: Steganography",
+          "T1102.002 - Web Service: Bidirectional Command and Control"
+        ],
+        "analyse": "This campaign highlights the use of AI to accelerate malware development and create lures based on geopolitical events (humanitarian crises). The reliance on commoditized infrastructure (GitHub, Google Drive, Telegram) makes tracking more challenging, while also exposing useful metadata about the attackers. This indicates increasing sophistication among state-aligned actors and a convergence of TTPs.",
+        "recommandations": [
+          "Educate users on lures related to humanitarian crises and malicious documents (Excel macros).",
+          "Implement advanced behavioral detection to identify AppDomainManager injections and unusual C2 activities.",
+          "Monitor communications through legitimate platforms used for malicious purposes (Telegram, GitHub, Google Drive).",
+          "Strengthen endpoint security policies to prevent the execution of unsigned macros and arbitrary scripts."
+        ],
+        "tags": [
+          "redkitten",
+          "iran",
+          "nation_state",
+          "ai",
+          "malware",
+          "espionage",
+          "social_engineering",
+          "steganography",
+          "github",
+          "google_drive",
+          "telegram"
+        ],
+        "sources": [
+          "https://harfanglab.io/insidethelab/redkitten-ai-accelerated-campaign-targeting-iranian-protests/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Supply chain attack on eScan antivirus: detecting and remediating malicious updates",
+        "description": "A supply chain attack affected MicroWorld Technologies' eScan antivirus. A malicious file, 'Reload.exe', was distributed via the eScan update server, preventing future antivirus updates by modifying the HOSTS file, ensuring persistence via scheduled tasks ('CorelDefrag'), and downloading additional payloads. The file was distributed with a fake invalid digital signature, resulting from unauthorized infrastructure access.",
+        "threat_actor": "Not named",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+            "T1033 - System Owner/User Discovery",
+            "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+            "T1053.005 - Scheduled Task/Job: Scheduled Task"
+          ]
+        },
+        "mitre_ttps": [
+          "T1195.002 - Supply Chain Compromise: Compromise Software Supply Chain",
+          "T1033 - System Owner/User Discovery",
+          "T1562.001 - Impair Defenses: Disable or Modify System Firewall",
+          "T1053.005 - Scheduled Task/Job: Scheduled Task"
+        ],
+        "analyse": "This attack underscores the critical vulnerability of software supply chains, particularly for security products intended to protect systems. HOSTS file modification and scheduled task creation are classic but effective techniques for maintaining persistence and blocking remediations. The incident highlights the importance of monitoring update infrastructures and verifying digital signatures.",
+        "recommandations": [
+          "Review scheduled tasks for malware traces.",
+          "Check `%WinDir%\\System32\\drivers\\etc\\hosts` file for blocked eScan domains.",
+          "Review eScan update logs for anomalies on January 20.",
+          "Apply malware removal and restoration utilities provided by the vendor.",
+          "Implement rigorous integrity verification of software updates."
+        ],
+        "tags": [
+          "escan",
+          "supply_chain",
+          "antivirus",
+          "malware",
+          "persistence",
+          "hosts_file",
+          "malicious_software"
+        ],
+        "sources": [
+          "https://securelist.com/escan-supply-chain-attack/118688/"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Nation-state and criminal actors leverage WinRAR flaw in attacks",
+        "description": "Google Threat Intelligence Group (GTIG) identified widespread, active exploitation of critical vulnerability CVE-2025-8088 in WinRAR by multiple actors, including Russian and Chinese-linked APTs, as well as financially motivated groups. This flaw, a directory traversal issue fixed in version 7.13, is exploited via phishing attacks to deliver various malware (RomCom, NESTPACKER, STOCKSTAY, POISONIVY, commodity RATs/stealers). It allows arbitrary code execution by placing executables in Windows Startup folders.",
+        "threat_actor": "Nation-state actors (Russia and China-linked), financially motivated groups, 'zeroplayer' (exploit seller)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566 - Phishing",
+            "T1203 - Exploitation for Client Execution",
+            "T1210 - Exploitation of Remote Services",
+            "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 - Phishing",
+          "T1203 - Exploitation for Client Execution",
+          "T1210 - Exploitation of Remote Services",
+          "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+        ],
+        "analyse": "The rapid and opportunistic exploitation of this N-day vulnerability by a wide range of actors, even after a patch was available, underscores the persistent danger of unpatched flaws in widely used software. The commoditization of exploits ('zeroplayer') facilitates adoption by less sophisticated groups, blurring the lines between nation-state operations and criminal campaigns.",
+        "recommandations": [
+          "Update WinRAR to version 7.13 or higher immediately.",
+          "Implement robust anti-phishing solutions and email security controls.",
+          "Train users to recognize phishing attempts and malicious attachments.",
+          "Monitor for unusual activity in Windows Startup folders."
+        ],
+        "tags": [
+          "winrar",
+          "n_day_vulnerability",
+          "exploitation",
+          "phishing",
+          "rce",
+          "nation_state",
+          "cybercrime",
+          "malware_delivery"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187451/security/nation-state-and-criminal-actors-leverage-winrar-flaw-in-attacks.html"
+        ],
+        "date": "2026-01-30"
+      },
+      {
+        "title": "Dissecting UAT-8099: New persistence mechanisms and regional focus",
+        "description": "Cisco Talos observed new activity from UAT-8099, a China-nexus APT, targeting IIS servers across Asia (India, Pakistan, Thailand, Vietnam, Japan), with a distinct concentration in Thailand and Vietnam. This group uses web shells, VPNs, legitimate red team utilities, PowerShell and VBScript for 'GotoHTTP' download, and deploys variants of 'BadIIS' malware for SEO fraud. It has evolved to use hidden user accounts ('admin$', 'mysql$') and XOR obfuscation to maintain persistence and evade detection.",
+        "threat_actor": "UAT-8099 (WEBJACK, China-nexus APT)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1505.003 - Server Software Component: Web Shell",
+            "T1136.001 - Create Account: Local Account",
+            "T1059.001 - Command and Scripting Interpreter: PowerShell",
+            "T1059.005 - Command and Scripting Interpreter: Visual Basic",
+            "T1027.002 - Obfuscated Files or Information: Software Packing",
+            "T1082 - System Information Discovery",
+            "T1041 - Exfiltration Over C2 Channel",
+            "T1583.001 - Establish Accounts: Malware-as-a-Service",
+            "T1588.002 - Acquire Infrastructure: Compromise Accounts"
+          ]
+        },
+        "mitre_ttps": [
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1136.001 - Create Account: Local Account",
+          "T1059.001 - Command and Scripting Interpreter: PowerShell",
+          "T1059.005 - Command and Scripting Interpreter: Visual Basic",
+          "T1027.002 - Obfuscated Files or Information: Software Packing",
+          "T1082 - System Information Discovery",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1583.001 - Establish Accounts: Malware-as-a-Service",
+          "T1588.002 - Acquire Infrastructure: Compromise Accounts"
+        ],
+        "analyse": "This analysis reveals the increasing sophistication of APTs and their ability to adapt to detection measures. Regional targeting and the use of advanced evasion techniques (hidden accounts, legitimate tools, obfuscation) make this threat particularly insidious. SEO fraud demonstrates a financial motivation in addition to traditional espionage, a common trend among APTs.",
+        "recommandations": [
+          "Actively monitor IIS servers for web shells and unusual activity.",
+          "Implement detection for unauthorized account creation, especially hidden accounts (ending with '$').",
+          "Use security tools that can detect abused legitimate tools (LoLbins) and malicious scripts (PowerShell, VBScript).",
+          "Strengthen security measures for exposed public applications and critical servers.",
+          "Segment networks to limit lateral movement in case of initial compromise."
+        ],
+        "tags": [
+          "uat_8099",
+          "apt",
+          "china",
+          "iis",
+          "seo_fraud",
+          "malware",
+          "persistence",
+          "web_shell",
+          "targeted_attack"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/uat-8099-new-persistence-mechanisms-and-regional-focus/"
+        ],
+        "date": "2026-01-30"
+      }
+    ]
+  }
+}
