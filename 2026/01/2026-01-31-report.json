@@ -1,0 +1,1931 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est actuellement marqué par une recrudescence des vulnérabilités critiques, en particulier les 'zero-day' exploitées activement, comme celles affectant Ivanti EPMM et SmarterMail. Ces failles d'exécution de code à distance représentent un risque immédiat pour les organisations. Parallèlement, l'ingénierie sociale, notamment le vishing et le phishing, demeure un vecteur d'attaque prépondérant, permettant le contournement des protections d'authentification multi-facteurs (MFA) et l'accès initial à des environnements cloud et SaaS, comme l'illustrent les campagnes de ShinyHunters et Storm-1811. Les plateformes cloud sont des cibles privilégiées, les attaquants abusant de leurs fonctionnalités natives pour l'exfiltration de données après avoir obtenu un accès valide. L'espionnage économique et le vol de propriété intellectuelle, notamment dans le domaine de l'IA, sont également en augmentation, avec des cas d'initiés agissant au profit d'entités étrangères, comme l'affaire de l'ancien ingénieur de Google. Le blanchiment de cryptomonnaies, dominé par des réseaux professionnels chinois, finance cette économie souterraine et rend le traçage des fonds illicites de plus en plus complexe. Sur le plan géopolitique, les tensions internationales (ex: Caraïbe/Venezuela, États-Unis/Iran) ont des répercussions directes sur la cybersécurité, influençant les stratégies nationales et la surveillance. L'IA, elle-même, est à la fois une cible précieuse et un outil en évolution pour les attaquants (malware via extensions Chrome). Enfin, le cadre réglementaire tente de s'adapter, avec des initiatives législatives sur les enquêtes internes en France et la suppression de protocoles anciens comme NTLM par Microsoft. \n\nEn conclusion, l'état général des menaces est caractérisé par une convergence de techniques sophistiquées (zero-days, APTs) et de méthodes éprouvées (ingénierie sociale), visant à exploiter les maillons faibles techniques et humains. La chaîne d'approvisionnement logicielle, les identités numériques et les infrastructures cloud sont au cœur des attaques. Une défense en profondeur, intégrant des solutions résistantes au phishing, une visibilité accrue sur les environnements cloud, une détection comportementale avancée, et une sensibilisation continue des utilisateurs, est impérative pour maintenir la résilience face à des adversaires adaptatifs et persistants.",
+      "date": "2026-01-31"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters (clusters UNC6661, UNC6671, UNC6240)",
+        "secteur": "Divers (plateformes SaaS, entreprises de cryptomonnaies)",
+        "modop": "Vishing, hameçonnage ciblé, compromission de Single Sign-On (SSO) et Multi-Factor Authentication (MFA), exfiltration de données sensibles (PII, secrets commerciaux, communications), suppression de notifications de sécurité, campagnes de phishing secondaires, extorsion (menaces, DDoS, diffusion de données sur DLS)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso_bypass",
+          "mfa_bypass",
+          "data_exfiltration",
+          "extortion",
+          "ransomware",
+          "saas_compromise",
+          "unc6661",
+          "unc6671",
+          "unc6240"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/defense-against-shinyhunters-cybercrime-saas/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/expansion-shinyhunters-saas-data-theft/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Storm-1811",
+        "secteur": "Initial Access Broker (IAB) ciblant diverses organisations",
+        "modop": "Vishing via Microsoft Teams, utilisation de Quick Assist pour l'accès initial, déploiement de charges utiles PowerShell obfusquées (RAT web-socket), installation d'outils de persistance (AnyDesk, NetSupport Manager), énumération de groupes d'utilisateurs et recherche de credentials dans SYSVOL",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "initial_access_broker",
+          "iab",
+          "vishing",
+          "microsoft_teams",
+          "quick_assist",
+          "powershell_rat",
+          "persistence",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/quick-you-need-assistance"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Qilin (anciennement Agenda)",
+        "secteur": "Industrie (agroalimentaire, fabrication), santé, administrations locales, éducation",
+        "modop": "Ransomware-as-a-Service (RaaS), phishing, exploitation de vulnérabilités logicielles obsolètes, accès compromis, mots de passe faibles, APTs, exfiltration de données avant chiffrement, extorsion",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "raas",
+          "phishing",
+          "vulnerability_exploitation",
+          "data_exfiltration",
+          "extortion",
+          "qilin",
+          "agenda",
+          "industrial_control_systems",
+          "ics",
+          "ot"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cyberattaque-au-japon-asahi-breweries-paralysee-par-qilin/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Empire Market (Raheim Hamilton, Thomas Pavey)",
+        "secteur": "Cybercriminalité (facilitation de transactions illégales sur le dark web)",
+        "modop": "Opération d'une place de marché dark web facilitant le commerce de drogues, identifiants volés, données personnelles, faux-monnaie, outils de piratage. Utilisation de cryptomonnaies et services de \"tumbling\" pour le blanchiment",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "dark_web",
+          "drug_trafficking",
+          "stolen_credentials",
+          "data_theft",
+          "money_laundering",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187478/cyber-crime/empire-market-co-founder-faces-10-years-to-life-after-guilty-plea.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "10Xprofit (développeur d'extensions Chrome malveillantes)",
+        "secteur": "E-commerce (Amazon, AliExpress, Best Buy, Shein, Shopify, Walmart) et services d'IA (ChatGPT)",
+        "modop": "Développement et distribution d'extensions Chrome malveillantes pour détourner les liens d'affiliation, exfiltrer des données de produits, voler des jetons d'authentification ChatGPT. Création d'un faux sentiment d'urgence pour les achats",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malicious_extensions",
+          "chrome_extensions",
+          "affiliate_hijacking",
+          "data_exfiltration",
+          "credential_theft",
+          "chatgpt_theft",
+          "e_commerce"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Frog",
+        "secteur": "Éducation (Veronesi, Argentine)",
+        "modop": "Violation de données",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115985590280967390"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "PeckBirdy (APT lié à la Chine)",
+        "secteur": "Jeu d'argent en ligne chinois, entités gouvernementales asiatiques",
+        "modop": "Déploiement d'un framework C2 basé sur JScript pour le contrôle à distance. Utilisé par des groupes cybercriminels financiers et des groupes d'espionnage",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "espionage",
+          "jscript_c2",
+          "malware",
+          "financial_crime"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "UAT-8099 (APT lié à la Chine)",
+        "secteur": "Serveurs IIS en Asie (Thaïlande, Vietnam)",
+        "modop": "Ciblage de serveurs IIS vulnérables avec le malware BadIIS SEO. Utilisation de webshells, PowerShell et outils légitimes (GotoHTTP) pour l'accès à distance et la persistance. Création de comptes utilisateurs cachés (\"admin$\", \"mysql$\")",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "iis_compromise",
+          "webshells",
+          "powershell",
+          "persistence",
+          "bad_iis",
+          "seo_malware"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Linwei Ding (ancien ingénieur Google)",
+        "secteur": "Haute technologie (IA hardware)",
+        "modop": "Espionnage économique et vol de secrets commerciaux (TPUs, GPUs, SmartNICs de Google) au profit de startups basées en Chine. Exfiltration via Apple Notes et comptes personnels cloud pour contourner la détection",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "insider_threat",
+          "economic_espionage",
+          "intellectual_property_theft",
+          "ai_secrets",
+          "china_linked"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/30/google_engineer_convicted_ai_secrets_china/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Géopolitique, Économie, Énergie, Migrations, Sécurité",
+        "theme": "La doctrine Trump et les recompositions régionales dans la Caraïbe",
+        "description": "Les actions de Donald Trump au Venezuela ont perturbé les équilibres géopolitiques dans la Caraïbe, entraînant un ralentissement économique, des risques migratoires et une modification de la dépendance énergétique post-Petrocaribe. La région est devenue un terrain de rivalité accrue entre les États-Unis, la Chine, la Russie et l'UE, avec une présence militaire américaine renforcée et une pression pour contrer l'influence chinoise. Les territoires français d'outre-mer sont également affectés par ces dynamiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "venezuela",
+          "caraibe",
+          "amerique_latine",
+          "russie",
+          "chine",
+          "europe",
+          "france",
+          "energie",
+          "migrations",
+          "securite",
+          "doctrine_monroe"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-doctrine-trump-dans-la-caraibe-entre-recompositions-regionales-et-vulnerabilites-insulaires/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Géopolitique, Militaire, Nucléaire, Proche-Orient",
+        "theme": "Les États-Unis face à l’Iran : l’indécise armada",
+        "description": "Analyse de la posture militaire américaine face à l'Iran, avec des objectifs potentiels incluant le soutien à un soulèvement populaire, des frappes punitives, ou le démantèlement des programmes nucléaires/missiles et la fin du soutien aux proxys (Houthis, Hamas, Hezbollah). L'Iran affiche ses capacités de riposte, en partie reconstituées avec le soutien de la Chine. Les alliés régionaux des États-Unis expriment des craintes, compliquant la planification d'une opération majeure et durable.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "iran",
+          "proche_orient",
+          "nucleaire",
+          "militaire",
+          "houthis",
+          "hamas",
+          "hezbollah",
+          "chine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-face-a-liran-lindecise-armada/"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Blue Cross Blue Shield of Montana",
+        "description": "Violation de données affectant jusqu'à 462 000 membres via un fournisseur tiers, Conduent. L'incident fait l'objet d'un litige juridique concernant les obligations de déclaration sous une nouvelle loi du Montana.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "health_insurance",
+          "third_party_vendor",
+          "legal_dispute",
+          "blue_cross_blue_shield"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/30/investigation-into-data-breach-involving-blue-cross-blue-shield-members-could-head-to-court/?pk_campaign=feed&pk_kwd=investigation-into-data-breach-involving-blue-cross-blue-shield-members-could-head-to-court"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "SK Telecom",
+        "description": "Fuite de données personnelles des clients. L'entreprise a rejeté une proposition de règlement d'indemnisation de l'agence de consommation après avoir contesté une amende.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "sk_telecom",
+          "personal_data",
+          "compensation_dispute"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/30/sk-telecom-rejects-consumer-agencys-compensation-settlement-over-personal-data-leak/?pk_campaign=feed&pk_kwd=sk-telecom-rejects-consumer-agencys-compensation-settlement-over-personal-data-leak"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "400 000 Américains fortunés, dont Donald Trump (via IRS et Treasury)",
+        "description": "Un initié, Charles Littlejohn (ancien employé de Booz Allen), a divulgué les déclarations de revenus de 400 000 Américains fortunés aux médias. Donald Trump a intenté une action en justice de 10 milliards de dollars contre l'IRS et le Trésor.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "irs",
+          "treasury",
+          "donald_trump",
+          "insider_threat",
+          "tax_returns",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/trump-sues-irs-and-the-treasury-for-10-billion-because-his-tax-returns-were-leaked/?pk_campaign=feed&pk_kwd=trump-sues-irs-and-the-treasury-for-10-billion-because-his-tax-returns-were-leaked"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Violation de données affectant 33,7 millions de comptes clients. Une enquête policière est en cours pour obstruction présumée de la part du PDG de l'entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "customer_accounts",
+          "police_investigation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "TriZetto",
+        "description": "Exposition de données de santé affectant plus de 700 000 patients. La violation s'est produite en novembre 2024 mais n'a été découverte que près d'un an plus tard.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "trizetto",
+          "health_data",
+          "data_exposure",
+          "delayed_detection"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Veronesi (Argentine)",
+        "description": "Le groupe \"Frog\" revendique une violation de données contre l'établissement d'enseignement Veronesi en Argentine, divulguant 37 299 dossiers.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "veronesi",
+          "argentina",
+          "data_leak",
+          "frog_group"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115985590280967390"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2020-37043",
+        "cvss": "9.8",
+        "product": "10-Strike Bandwidth Monitor 3.9",
+        "description": "Dépassement de tampon (Buffer Overflow) permettant l'exécution de code à distance (RCE) via l'entrée de la clé d'enregistrement, contournant les protections SafeSEH, ASLR et DEP.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "10_strike_bandwidth_monitor",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37043"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37050",
+        "cvss": "9.8",
+        "product": "Quick Player 1.3",
+        "description": "Dépassement de tampon (Buffer Overflow) permettant l'exécution de code arbitraire via un fichier .m3l malveillant spécialement conçu.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "quick_player",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37050"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37052",
+        "cvss": "9.8",
+        "product": "AirControl 1.4.2",
+        "description": "Exécution de code à distance (RCE) pré-authentification via l'injection d'expressions Java malveillantes dans le point de terminaison /.seam.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_auth",
+          "java_injection",
+          "aircontrol",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37052"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37056",
+        "cvss": "9.8",
+        "product": "Crystal Shard http-protection 0.2.0",
+        "description": "Contournement de l'usurpation d'adresse IP (IP Spoofing Bypass) permettant aux attaquants de manipuler les en-têtes de requête (X-Forwarded-For, X-Client-IP, X-Real-IP) pour contourner les contrôles de sécurité et obtenir un accès non autorisé.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ip_spoofing",
+          "authentication_bypass",
+          "crystal_shard",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37056"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2025-54236",
+        "cvss": "9.8",
+        "product": "Magento (plateformes e-commerce)",
+        "description": "Vulnérabilité 'SessionReaper' permettant un accès non autorisé via la réutilisation de jetons de session invalidés, conduisant à un accès administratif de niveau root et au contournement des protections par mot de passe.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_hijacking",
+          "authentication_bypass",
+          "rce",
+          "magento",
+          "e_commerce",
+          "critical"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/attackers-hijacked-200-websites-exploiting-magento-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) par injection de code, activement exploitée par des attaquants non authentifiés. Permet un accès non autorisé aux données et la prise de contrôle du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_injection",
+          "ivanti_epmm",
+          "zero_day",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-001/",
+          "https://cert.europa.eu/publications/security-advisories/2026-001/",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-ivanti-endpoint-manager-mobile-could-allow-for-remote-code-execution_2026-009",
+          "https://securityaffairs.com/187488/security/u-s-cisa-adds-a-flaw-in-ivanti-epmm-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/30/ivanti_epmm_zero_days/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/",
+          "https://cybersecuritynews.com/ivanti-endpoint-manager-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) par injection de code, activement exploitée par des attaquants non authentifiés. Permet un accès non autorisé aux données et la prise de contrôle du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_injection",
+          "ivanti_epmm",
+          "zero_day",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-001/",
+          "https://cert.europa.eu/publications/security-advisories/2026-001/",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-ivanti-endpoint-manager-mobile-could-allow-for-remote-code-execution_2026-009",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/30/ivanti_epmm_zero_days/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/",
+          "https://cybersecuritynews.com/ivanti-endpoint-manager-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "9.3",
+        "product": "SmarterMail (versions antérieures au build 9511)",
+        "description": "Vulnérabilité de contournement d'authentification dans l'API de réinitialisation de mot de passe, activement exploitée. Permet à un attaquant non authentifié de prendre le contrôle de comptes administrateur et d'obtenir l'exécution de code à distance.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "rce",
+          "smartermail",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187496/security/smartertools-patches-critical-smartermail-flaw-allowing-code-execution.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-24423",
+        "cvss": "9.3",
+        "product": "SmarterMail (versions antérieures au build 9511)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée dans la méthode ConnectToHub API. Permet à un attaquant d'exécuter des commandes système arbitraires.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "smartermail",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187496/security/smartertools-patches-critical-smartermail-flaw-allowing-code-execution.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37049",
+        "cvss": "8.4",
+        "product": "Frigate 3.36.0.9",
+        "description": "Dépassement de tampon local (Local Buffer Overflow) dans le champ d'entrée de la ligne de commande, permettant l'exécution de code arbitraire.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "local_exploitation",
+          "frigate"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37049"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37051",
+        "cvss": "8.8",
+        "product": "Online-Exam-System 2015",
+        "description": "Injection SQL aveugle basée sur le temps (Time-based Blind SQL Injection) dans le formulaire de feedback, permettant d'extraire des hachages de mots de passe de la base de données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "time_based_blind_sql_injection",
+          "credential_theft",
+          "online_exam_system"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37051"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37057",
+        "cvss": "8.8",
+        "product": "Online-Exam-System 2015",
+        "description": "Injection SQL (SQL Injection) dans le module de feedback via le paramètre 'fid', permettant de manipuler les requêtes de la base de données.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "database_manipulation",
+          "online_exam_system"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37057"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Blanchiment crypto, la filière chinoise au cœur de 2025",
+        "description": "En 2025, les réseaux chinois de blanchiment d'argent ont traité 16,1 milliards de dollars de cryptomonnaies illicites, représentant environ 20% des fonds illicites sur blockchain. Ces groupes professionnalisés opèrent via Telegram et des plateformes de \"garantie\", offrant des services rapides et rentables pour convertir les fonds volés via des escroqueries ou des cyberattaques. Malgré les sanctions américaines, ces opérations migrent mais persistent.",
+        "threat_actor": "Réseaux chinois de blanchiment d'argent, Huione, Black U, Jingliang Su",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1567 (Exfiltration Over Web Service)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1048 (Exfiltration Over Alternative Protocol)"
+        ],
+        "analyse": "Le blanchiment de cryptomonnaies est un pilier essentiel de l'économie cybercriminelle, la filière chinoise jouant un rôle central. L'évolution vers des services structurés et résilients aux sanctions montre une adaptabilité constante des acteurs malveillants. Cela complique les efforts des forces de l'ordre pour perturber leurs opérations et tracer les fonds illicites, renforçant le cycle de financement des cyberattaques.",
+        "recommandations": "Renforcer la coopération internationale pour le suivi et la saisie des cryptomonnaies illicites, surveiller les plateformes de \"garantie\" et les canaux Telegram utilisés pour le recrutement et la promotion, éduquer le public et les entreprises sur les risques liés aux escroqueries impliquant des cryptomonnaies et les mules financières.",
+        "tags": [
+          "cryptomonnaie",
+          "blanchiment_argent",
+          "cybercriminalite",
+          "chine",
+          "telegram",
+          "pig_butchering",
+          "escroqueries",
+          "sanctions",
+          "T1567",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/blanchiment-crypto-la-filiere-chinoise-au-coeur-de-2025/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Cyberattaque au Japon : Asahi Breweries paralysée par Qilin",
+        "description": "Le groupe cybercriminel russophone Qilin a paralysé Asahi Breweries, le géant japonais de la brasserie, via une attaque par ransomware ayant affecté 30 sites de production. L'attaque a entraîné l'exfiltration de 27 Go de données et 9 300 fichiers, et a causé des pertes estimées à 9 milliards de yens. Qilin, qui opère un modèle RaaS, a exploité la centralisation de la chaîne logistique d'Asahi et utilise le phishing, l'exploitation de vulnérabilités et les APT pour ses intrusions.",
+        "threat_actor": "Qilin (anciennement Agenda)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "Cette attaque souligne la vulnérabilité des industries critiques, même les grandes entreprises, face aux ransomwares sophistiqués. L'impact financier et opérationnel (arrêt de production, pertes de marché) est significatif. La centralisation des systèmes, tout en optimisant l'efficacité, peut devenir un point de défaillance unique pour les attaquants. La faible préparation aux incidents de cybersécurité au Japon est également mise en évidence.",
+        "recommandations": "Renforcer la détection et la segmentation des réseaux, mettre à jour régulièrement les logiciels, améliorer la protection des données (sauvegardes, chiffrement), développer et tester un plan de réponse aux incidents (IRP) robuste, sensibiliser les employés aux risques de phishing, adopter une coopération public-privé pour l'échange d'informations sur les menaces.",
+        "tags": [
+          "ransomware",
+          "qilin",
+          "asahi_breweries",
+          "japon",
+          "agroalimentaire",
+          "raas",
+          "data_exfiltration",
+          "supply_chain",
+          "disruption",
+          "T1566.001",
+          "T1190",
+          "T1078",
+          "T1486"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cyberattaque-au-japon-asahi-breweries-paralysee-par-qilin/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Des attaquants ont piraté plus de 200 sites web en exploitant une vulnérabilité Magento pour obtenir un accès de niveau root",
+        "description": "Une campagne d'attaque a compromis plus de 200 sites e-commerce Magento en exploitant la vulnérabilité critique CVE-2025-54236 (SessionReaper). Cette faille permet la réutilisation de jetons de session invalidés pour obtenir un accès administratif de niveau root, contournant les protections par mot de passe. Des infrastructures de C2 ont été identifiées en Finlande et à Hong Kong, avec des déploiements de webshells au Canada et au Japon.",
+        "threat_actor": "Non applicable (multiples acteurs non spécifiés)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54236"
+          ]
+        },
+        "mitre_ttps": [
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Kerberos Tickets)",
+          "T1078 (Valid Accounts)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "L'exploitation de vulnérabilités d'authentification et de gestion de session dans des plateformes e-commerce majeures comme Magento pose un risque direct pour la confidentialité des données clients et les informations de paiement. L'ampleur de la campagne et la présence de C2 internationaux soulignent la professionnalisation des cybercriminels et la nécessité de mises à jour de sécurité et d'une surveillance continue.",
+        "recommandations": "Appliquer rapidement les mises à jour de sécurité des éditeurs (patch pour CVE-2025-54236), surveiller les systèmes pour détecter les activités suspectes post-exploitation (ex: déploiement de webshells, accès admin non autorisé), renforcer la gestion des sessions pour assurer l'invalidation correcte des jetons.",
+        "tags": [
+          "magento",
+          "e_commerce",
+          "vulnerability_exploitation",
+          "session_hijacking",
+          "cve_2025_54236",
+          "webshell",
+          "root_access",
+          "cybercrime",
+          "T1550.002",
+          "T1078",
+          "T1505.003"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/attackers-hijacked-200-websites-exploiting-magento-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Des extensions Chrome malveillantes détournent des liens d'affiliation et volent l'accès à ChatGPT",
+        "description": "Des chercheurs ont découvert des extensions Google Chrome malveillantes qui détournent les liens d'affiliation sur des plateformes d'e-commerce (ex: Amazon Ads Blocker remplaçant les tags d'affiliation) et volent les jetons d'authentification ChatGPT. Ces extensions, dont certaines sont liées à un toolkit MaaS \"Stanley\" pour le phishing, exploitent la confiance associée aux marques d'IA et les privilèges d'exécution du navigateur.",
+        "threat_actor": "10Xprofit (développeur), utilisateurs du toolkit \"Stanley\"",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "app.10xprofit[.]io"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189 (Drive-by Compromise)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "L'exploitation des extensions de navigateur comme vecteur d'attaque est en hausse, notamment avec l'intégration de l'IA dans les workflows d'entreprise. Le vol de jetons ChatGPT donne un accès persistant aux conversations et données, posant un risque significatif de fuite d'informations sensibles et d'usurpation d'identité. Le modèle MaaS \"Stanley\" abaisse la barrière à l'entrée pour les attaquants.",
+        "recommandations": "Éduquer les utilisateurs sur les dangers des extensions de navigateur, privilégier des extensions vérifiées, surveiller l'activité des extensions, implémenter des politiques de sécurité strictes pour les environnements BYOD et SaaS-first, utiliser des solutions de détection de l'exposition à l'IA.",
+        "tags": [
+          "chrome_extensions",
+          "malicious_extensions",
+          "affiliate_hijacking",
+          "chatgpt_theft",
+          "credential_theft",
+          "maas",
+          "stanley_toolkit",
+          "phishing",
+          "e_commerce",
+          "ai_security",
+          "T1189",
+          "T1078"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "L’enquête interne, un levier essentiel de gestion des risques en entreprise ?",
+        "description": "Analyse de l'essor et de l'encadrement des enquêtes internes en France face aux risques de harcèlement, discrimination, corruption, fraude. Souligne leur rôle crucial dans la gestion des risques juridiques, financiers et réputationnels, ainsi que leur importance pour la compétitivité et la protection contre les ingérences étrangères (FCPA, UK Bribery Act). L'article discute de la jurisprudence exigeant une méthodologie rigoureuse et des propositions législatives pour encadrer ces enquêtes, notamment en cas de coexistence avec une procédure pénale et la protection du secret professionnel des avocats.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article met en évidence l'importance croissante des enquêtes internes comme outil stratégique de gestion des risques pour les entreprises. Il souligne la nécessité d'un cadre juridique clair et de méthodologies rigoureuses pour garantir la recevabilité des conclusions devant les tribunaux et renforcer la souveraineté économique face à l'extraterritorialité des droits étrangers. C'est un sujet clé pour la gouvernance d'entreprise et la résilience face aux menaces diverses.",
+        "recommandations": "Définir un cadre clair pour les enquêtes internes (périmètre, objectifs, procédures), garantir l'impartialité des enquêteurs, recueillir des éléments exhaustifs et respecter les droits des salariés et le secret professionnel, se tenir informé de l'évolution législative pour assurer la conformité et la validité probante.",
+        "tags": [
+          "gouvernance",
+          "gestion_des_risques",
+          "conformite",
+          "enquete_interne",
+          "droit_du_travail",
+          "loi_sapin_ii",
+          "loi_waserman",
+          "fcpa",
+          "uk_bribery_act",
+          "souverainete_economique",
+          "juridique"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/lenquete-interne-un-levier-essentiel-de-gestion-des-risques-en-entreprise/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Un ancien employé de Google condamné pour le vol de secrets d'IA au profit de startups chinoises",
+        "description": "Linwei Ding, ancien ingénieur logiciel de Google, a été reconnu coupable d'espionnage économique et de vol de secrets commerciaux liés au hardware d'IA (TPUs, GPUs, SmartNICs) de Google. Il a exfiltré plus de 2 000 documents confidentiels en copiant des données vers Apple Notes, les convertissant en PDF et les téléchargeant sur son compte Google Cloud personnel pour échapper à la détection DLP. Il a ensuite fondé ou travaillé pour des entreprises basées en Chine visant à commercialiser ces technologies auprès d'entités contrôlées par la RPC.",
+        "threat_actor": "Linwei Ding (agissant au nom d'entreprises chinoises)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1052.001 (Exfiltration Over Physical Medium: External Removable Media)",
+          "T1078.003 (Valid Accounts: Local Account)",
+          "T1530 (Data from Cloud Storage Object)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "Cet incident met en lumière la menace persistante de l'espionnage économique et des menaces internes, en particulier dans des secteurs stratégiques comme l'IA. Les méthodes d'exfiltration furtives et l'intention de bénéficier à des entités étrangères soulignent la nécessité de contrôles DLP avancés, d'une surveillance continue de l'activité des employés et d'une vigilance accrue sur les transferts de propriété intellectuelle. L'implication d'entités liées à la Chine dans le vol de technologies critiques souligne des enjeux de souveraineté et de sécurité nationale.",
+        "recommandations": "Renforcer les politiques DLP et la surveillance des transferts de données (y compris vers des services cloud personnels et l'utilisation d'outils non-professionnels), améliorer la détection des activités inhabituelles d'accès et d'exfiltration par les employés, mettre en œuvre une politique stricte de gestion de la propriété intellectuelle et de l'accès aux informations sensibles, sensibiliser les employés aux risques d'espionnage économique et de recrutement par des entités étrangères.",
+        "tags": [
+          "economic_espionage",
+          "insider_threat",
+          "ip_theft",
+          "ai_secrets",
+          "china_linked",
+          "google",
+          "tpus",
+          "gpus",
+          "smartnics",
+          "data_exfiltration",
+          "dlp_bypass",
+          "T1537",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/30/google_engineer_convicted_ai_secrets_china/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Quick, You Need Assistance! (Campagne de Vishing via Microsoft Teams et Quick Assist)",
+        "description": "Une campagne de vishing via Microsoft Teams utilise l'outil Quick Assist pour obtenir un accès initial aux systèmes. Les attaquants se font passer pour le support informatique, déploient des charges utiles PowerShell obfusquées (RAT web-socket), installent des outils de persistance comme AnyDesk et NetSupport Manager, et tentent de découvrir des credentials. Cette activité chevauche les rapports de Storm-1811 et est suspectée d'être liée à des Initial Access Brokers (IAB).",
+        "threat_actor": "Storm-1811 (suspecté IAB)",
+        "indicator_of_compromise": {
+          "URL": [
+            "hxxps://prosearium[.]net/setting.pdf",
+            "hxxps://aerobionix[.]com/generation.pdf"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Vishing)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1133 (External Remote Services)",
+          "T1136.001 (Create Account: Local Account)"
+        ],
+        "analyse": "L'utilisation du vishing via Teams et d'outils légitimes comme Quick Assist rend ces attaques particulièrement difficiles à détecter par les défenses traditionnelles. Les IABs sont une menace persistante car ils vendent l'accès initial, permettant à d'autres groupes malveillants de lancer des attaques plus destructrices. L'automatisation observée dans la phase d'accès initial par Field Effect montre une efficacité accrue des attaquants.",
+        "recommandations": "Sensibiliser les utilisateurs aux risques du vishing, implémenter des processus de vérification stricts pour les demandes d'assistance, surveiller l'utilisation d'outils d'administration à distance comme Quick Assist, AnyDesk et NetSupport Manager, renforcer la détection des activités PowerShell obfusquées.",
+        "tags": [
+          "vishing",
+          "quick_assist",
+          "microsoft_teams",
+          "powershell",
+          "remote_access_trojan",
+          "rat",
+          "persistence",
+          "credential_theft",
+          "initial_access_broker",
+          "iab",
+          "storm_1811",
+          "T1566.002",
+          "T1078",
+          "T1059",
+          "T1133"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/quick-you-need-assistance"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Vishing pour l'Accès : Suivi de l'Expansion du Vol de Données SaaS par ShinyHunters",
+        "description": "Les groupes ShinyHunters (UNC6661, UNC6671, UNC6240) intensifient leurs opérations d'extorsion en utilisant le vishing sophistiqué et des sites d'hameçonnage pour voler les identifiants SSO et les codes MFA, ciblant les plateformes SaaS (Okta, Salesforce, Google Workspace, DocuSign, Atlassian, SharePoint, OneDrive) pour l'exfiltration de données sensibles et les communications. Ils utilisent des domaines d'hameçonnage imitant des portails d'entreprise, suppriment les notifications de sécurité (ex: ToogleBox Recall pour Gmail), envoient des phishings secondaires à des entités crypto, et utilisent des tactiques d'extorsion agressives (DDoS, harcèlement, fuites de données sur Limewire). L'activité n'est pas due à des vulnérabilités logicielles, mais à l'ingénierie sociale.",
+        "threat_actor": "ShinyHunters, UNC6661, UNC6671, UNC6240",
+        "indicator_of_compromise": {
+          "ASN": [
+            "11427",
+            "11878",
+            "33657",
+            "46375",
+            "201814",
+            "400595",
+            "577",
+            "7018",
+            "12479",
+            "20001",
+            "20845",
+            "23470",
+            "27924",
+            "395965"
+          ],
+          "DOMAIN": [
+            "<companyname>sso[.]com",
+            "my<companyname>sso[.]com",
+            "my-<companyname>sso[.]com",
+            "<companyname>internal[.]com",
+            "www.<companyname>internal[.]com",
+            "my<companyname>internal[.]com",
+            "<companyname>support[.]com",
+            "ticket-<companyname>[.]support",
+            "support-<companyname>[.]com",
+            "<companyname>okta[.]com",
+            "<companyname>azure[.]com",
+            "on<companyname>zendesk[.]com",
+            "<companyname>access[.]com",
+            "www.<companyname>access[.]com",
+            "my<companyname>acess[.]com"
+          ],
+          "EMAIL": [
+            "shinycorp@tutanota[.]com",
+            "shinygroup@onionmail[.]com"
+          ],
+          "IPv4": [
+            "24.242.93[.]122",
+            "23.234.100[.]107",
+            "23.234.100[.]235",
+            "73.135.228[.]98",
+            "157.131.172[.]74",
+            "149.50.97[.]144",
+            "67.21.178[.]234",
+            "142.127.171[.]133",
+            "76.64.54[.]159",
+            "76.70.74[.]63",
+            "206.170.208[.]23",
+            "68.73.213[.]196",
+            "37.15.73[.]132",
+            "104.32.172[.]247",
+            "85.238.66[.]242",
+            "199.127.61[.]200",
+            "209.222.98[.]200",
+            "38.190.138[.]239",
+            "198.52.166[.]197"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Vishing)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1552.001 (Unsecured Credentials: Credential Dumper)",
+          "T1556 (Forge Web Credentials)",
+          "T1111 (Multi-Factor Authentication Bypass)",
+          "T1078 (Valid Accounts)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1498 (Denial of Service: Distributed Denial of Service)",
+          "T1087.001 (Account Discovery: Local Account)",
+          "T1087.002 (Account Discovery: Domain Account)",
+          "T1530 (Data from Cloud Storage Object)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)"
+        ],
+        "analyse": "La sophistication de l'ingénierie sociale et la capacité des groupes ShinyHunters à s'adapter aux défenses (via des MFA non-résistants au phishing) représentent une menace significative pour la sécurité des identités et des données cloud. La diversité des plateformes SaaS ciblées et l'escalade des tactiques d'extorsion augmentent l'impact sur les victimes. La mise à jour des mécanismes d'authentification vers des solutions résistantes au phishing est critique.",
+        "recommandations": "Renforcer la sensibilisation des utilisateurs au vishing et à l'hameçonnage, adopter la MFA résistante au phishing (FIDO2/passkeys), implémenter des contrôles IAM stricts pour les accès aux SaaS et aux identités non-humaines, activer une journalisation détaillée sur les fournisseurs d'identité et les applications SaaS, développer des détections basées sur les TTPs observées. Mettre en place des procédures de \"shields up\" pour le help desk.",
+        "tags": [
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "mfa_bypass",
+          "sso_compromise",
+          "data_exfiltration",
+          "saas_security",
+          "cloud_security",
+          "extortion",
+          "unc6661",
+          "unc6671",
+          "unc6240",
+          "T1566.002",
+          "T1552.001",
+          "T1111",
+          "T1078",
+          "T1041",
+          "T1537",
+          "T1486",
+          "T1498",
+          "T1059.001"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/defense-against-shinyhunters-cybercrime-saas/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/expansion-shinyhunters-saas-data-theft/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Understanding Google Workspace Structure from a Cloud Forensics Lens",
+        "description": "Analyse approfondie des mécanismes de gestion des permissions dans Google Workspace, notamment les unités organisationnelles (OUs) et les groupes, et leur importance dans les enquêtes forensiques cloud pour comprendre l'accès aux données.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article est crucial pour les professionnels de la sécurité et les enquêteurs numériques, offrant une meilleure compréhension des structures de permission complexes des environnements cloud comme Google Workspace. Cela aide à identifier et à tracer les accès non autorisés ou les exfiltrations de données, réduisant le \"temps de détection\" et \"temps de réponse\" lors d'un incident.",
+        "recommandations": "Gérer rigoureusement les OUs et les groupes pour définir les permissions, vérifier régulièrement l'héritage des permissions, documenter clairement les rôles des groupes pour faciliter les enquêtes en cas de violation de données.",
+        "tags": [
+          "cloud_forensics",
+          "google_workspace",
+          "permissions",
+          "organizational_units",
+          "groups",
+          "identity_access_management",
+          "iam",
+          "incident_response",
+          "dfir"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/understanding-google-workspace-structure-from-a-cloud-forensics-lens"
+        ],
+        "date": "2026-01-31"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is currently marked by a surge in critical, actively exploited zero-day vulnerabilities, such as those affecting Ivanti EPMM and SmarterMail. These remote code execution flaws represent an immediate risk to organizations. In parallel, social engineering, including vishing and phishing, remains a primary attack vector, enabling multi-factor authentication (MFA) bypasses and initial access to cloud and SaaS environments, as illustrated by ShinyHunters and Storm-1811 campaigns. Cloud platforms are prime targets, with attackers abusing native functionalities for data exfiltration after obtaining valid access. Economic espionage and intellectual property theft, particularly in AI, are also on the rise, with cases of insiders acting on behalf of foreign entities, such as the former Google engineer's case. Cryptocurrency laundering, dominated by professional Chinese networks, fuels this underground economy and makes tracing illicit funds increasingly complex. Geopolitically, international tensions (e.g., Caribbean/Venezuela, US/Iran) have direct cybersecurity implications, influencing national strategies and surveillance. AI itself is both a valuable target and an evolving tool for attackers (malware via Chrome extensions). Finally, the regulatory framework is attempting to adapt, with legislative initiatives on internal investigations in France and Microsoft's deprecation of old protocols like NTLM. \n\nIn conclusion, the general state of threats is characterized by a dangerous combination of critical technical vulnerabilities and effective social engineering. The software supply chain, digital identities, and cloud infrastructures are at the heart of attacks. A defense-in-depth approach, including phishing-resistant security solutions, increased visibility into cloud environments, advanced behavioral detection, and continuous user awareness, is imperative to maintain resilience against adaptive and persistent adversaries.",
+      "date": "2026-01-31"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters (clusters UNC6661, UNC6671, UNC6240)",
+        "secteur": "Diverse (SaaS platforms, cryptocurrency companies)",
+        "modop": "Vishing, targeted phishing, Single Sign-On (SSO) and Multi-Factor Authentication (MFA) compromise, sensitive data exfiltration (PII, trade secrets, communications), deletion of security notifications, secondary phishing campaigns, extortion (threats, DDoS, data leaks on DLS)",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso_bypass",
+          "mfa_bypass",
+          "data_exfiltration",
+          "extortion",
+          "ransomware",
+          "saas_compromise",
+          "unc6661",
+          "unc6671",
+          "unc6240"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/defense-against-shinyhunters-cybercrime-saas/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/expansion-shinyhunters-saas-data-theft/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Storm-1811",
+        "secteur": "Initial Access Broker (IAB) targeting various organizations",
+        "modop": "Vishing via Microsoft Teams, use of Quick Assist for initial access, deployment of obfuscated PowerShell payloads (web-socket RAT), installation of persistence tools (AnyDesk, NetSupport Manager), user group enumeration and credential discovery in SYSVOL",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "initial_access_broker",
+          "iab",
+          "vishing",
+          "microsoft_teams",
+          "quick_assist",
+          "powershell_rat",
+          "persistence",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/quick-you-need-assistance"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Qilin (formerly Agenda)",
+        "secteur": "Industry (food & beverage, manufacturing), healthcare, local governments, education",
+        "modop": "Ransomware-as-a-Service (RaaS), phishing, exploitation of outdated software vulnerabilities, compromised access, weak passwords, APTs, data exfiltration before encryption, extortion",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "raas",
+          "phishing",
+          "vulnerability_exploitation",
+          "data_exfiltration",
+          "extortion",
+          "qilin",
+          "agenda",
+          "industrial_control_systems",
+          "ics",
+          "ot"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cyberattaque-au-japon-asahi-breweries-paralysee-par-qilin/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Empire Market (Raheim Hamilton, Thomas Pavey)",
+        "secteur": "Cybercrime (facilitating illegal transactions on the dark web)",
+        "modop": "Operating a dark web marketplace facilitating the trade of illegal drugs, stolen credentials, personal data, counterfeit money, hacking tools. Use of cryptocurrencies and \"tumbling\" services for money laundering",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "dark_web",
+          "drug_trafficking",
+          "stolen_credentials",
+          "data_theft",
+          "money_laundering",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187478/cyber-crime/empire-market-co-founder-faces-10-years-to-life-after-guilty-plea.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "10Xprofit (developer of malicious Chrome extensions)",
+        "secteur": "E-commerce (Amazon, AliExpress, Best Buy, Shein, Shopify, Walmart) and AI services (ChatGPT)",
+        "modop": "Developing and distributing malicious Chrome extensions to hijack affiliate links, exfiltrate product data, steal ChatGPT authentication tokens. Creating a false sense of urgency for purchases",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malicious_extensions",
+          "chrome_extensions",
+          "affiliate_hijacking",
+          "data_exfiltration",
+          "credential_theft",
+          "chatgpt_theft",
+          "e_commerce"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Frog",
+        "secteur": "Education (Veronesi, Argentina)",
+        "modop": "Data breach",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115985590280967390"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "PeckBirdy (China-linked APT)",
+        "secteur": "Chinese online gambling, Asian government entities",
+        "modop": "Deployment of a JScript-based C2 framework for remote control. Used by both financially motivated cybercrime groups and espionage groups",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "espionage",
+          "jscript_c2",
+          "malware",
+          "financial_crime"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "UAT-8099 (China-linked APT)",
+        "secteur": "IIS servers in Asia (Thailand, Vietnam)",
+        "modop": "Targeting vulnerable IIS servers with BadIIS SEO malware. Use of webshells, PowerShell, and legitimate tools (GotoHTTP) for remote access and persistence. Creation of hidden user accounts (\"admin$\", \"mysql$\")",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "china",
+          "iis_compromise",
+          "webshells",
+          "powershell",
+          "persistence",
+          "bad_iis",
+          "seo_malware"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "nom": "Linwei Ding (former Google engineer)",
+        "secteur": "High technology (AI hardware)",
+        "modop": "Economic espionage and theft of trade secrets (Google's TPUs, GPUs, SmartNICs) for China-based startups. Exfiltration via Apple Notes and personal cloud accounts to bypass detection",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "insider_threat",
+          "economic_espionage",
+          "intellectual_property_theft",
+          "ai_secrets",
+          "china_linked"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/30/google_engineer_convicted_ai_secrets_china/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Geopolitics, Economy, Energy, Migration, Security",
+        "theme": "Trump's Doctrine and Regional Reconfigurations in the Caribbean",
+        "description": "Donald Trump's actions in Venezuela have disrupted geopolitical balances in the Caribbean, leading to economic slowdown, migration risks, and a shift in energy dependence post-Petrocaribe. The region has become a battleground for increased rivalry between the United States, China, Russia, and the EU, with a reinforced US military presence and pressure to counter Chinese influence. France's overseas territories are also affected by these dynamics.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "venezuela",
+          "caribbean",
+          "latin_america",
+          "russia",
+          "china",
+          "europe",
+          "france",
+          "energy",
+          "migration",
+          "security",
+          "monroe_doctrine"
+        ],
+        "sources": [
+          "https://www.iris-france.org/la-doctrine-trump-dans-la-caraibe-entre-recompositions-regionales-et-vulnerabilites-insulaires/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Geopolitics, Military, Nuclear, Middle East",
+        "theme": "The United States vs. Iran: The Indecisive Armada",
+        "description": "Analysis of the US military posture towards Iran, with potential objectives including supporting a popular uprising, punitive strikes, or dismantling nuclear/missile programs and ending support for proxies (Houthis, Hamas, Hezbollah). Iran demonstrates its retaliation capabilities, partly reconstituted with China's support. Regional allies of the United States express concerns, complicating the planning of a major and sustained operation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "iran",
+          "middle_east",
+          "nuclear",
+          "military",
+          "houthis",
+          "hamas",
+          "hezbollah",
+          "china"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-etats-unis-face-a-liran-lindecise-armada/"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Blue Cross Blue Shield of Montana",
+        "description": "Data breach affecting up to 462,000 members via a third-party vendor, Conduent. The incident is subject to a legal dispute regarding reporting obligations under a new Montana law.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "health_insurance",
+          "third_party_vendor",
+          "legal_dispute",
+          "blue_cross_blue_shield"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/30/investigation-into-data-breach-involving-blue-cross-blue-shield-members-could-head-to-court/?pk_campaign=feed&pk_kwd=investigation-into-data-breach-involving-blue-cross-blue-shield-members-could-head-to-court"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "SK Telecom",
+        "description": "Personal data leak of customers. The company rejected a compensation settlement proposed by a consumer agency after overturning a fine.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "sk_telecom",
+          "personal_data",
+          "compensation_dispute"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/30/sk-telecom-rejects-consumer-agencys-compensation-settlement-over-personal-data-leak/?pk_campaign=feed&pk_kwd=sk-telecom-rejects-consumer-agencys-compensation-settlement-over-personal-data-leak"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Government",
+        "victime": "400,000 wealthy Americans, including Donald Trump (via IRS and Treasury)",
+        "description": "An insider, Charles Littlejohn (former Booz Allen employee), leaked tax returns of 400,000 wealthy Americans to the media. Donald Trump filed a $10 billion lawsuit against the IRS and Treasury.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "irs",
+          "treasury",
+          "donald_trump",
+          "insider_threat",
+          "tax_returns",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/29/trump-sues-irs-and-the-treasury-for-10-billion-because-his-tax-returns-were-leaked/?pk_campaign=feed&pk_kwd=trump-sues-irs-and-the-treasury-for-10-billion-because-his-tax-returns-were-leaked"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Data breach affecting 33.7 million customer accounts. A police investigation is underway for alleged obstruction by the company's CEO.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "customer_accounts",
+          "police_investigation"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "TriZetto",
+        "description": "Health data exposure affecting over 700,000 patients. The breach occurred in November 2024 but was discovered almost a year later.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "trizetto",
+          "health_data",
+          "data_exposure",
+          "delayed_detection"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Veronesi (Argentina)",
+        "description": "The \"Frog\" group claims a data breach against the educational institution Veronesi in Argentina, leaking 37,299 records.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "veronesi",
+          "argentina",
+          "data_leak",
+          "frog_group"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115985590280967390"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2020-37043",
+        "cvss": "9.8",
+        "product": "10-Strike Bandwidth Monitor 3.9",
+        "description": "Buffer Overflow allowing Remote Code Execution (RCE) via registration key input, bypassing SafeSEH, ASLR, and DEP protections.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "10_strike_bandwidth_monitor",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37043"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37050",
+        "cvss": "9.8",
+        "product": "Quick Player 1.3",
+        "description": "Buffer Overflow allowing arbitrary code execution via a specially crafted malicious .m3l file.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "quick_player",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37050"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37052",
+        "cvss": "9.8",
+        "product": "AirControl 1.4.2",
+        "description": "Pre-authentication Remote Code Execution (RCE) via malicious Java expression injection in the /.seam endpoint.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_auth",
+          "java_injection",
+          "aircontrol",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37052"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37056",
+        "cvss": "9.8",
+        "product": "Crystal Shard http-protection 0.2.0",
+        "description": "IP Spoofing Bypass allowing attackers to manipulate request headers (X-Forwarded-For, X-Client-IP, X-Real-IP) to circumvent security checks and gain unauthorized access.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ip_spoofing",
+          "authentication_bypass",
+          "crystal_shard",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37056"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2025-54236",
+        "cvss": "9.8",
+        "product": "Magento (e-commerce platforms)",
+        "description": "'SessionReaper' vulnerability allowing unauthorized access via reuse of invalidated session tokens, leading to root-level administrative access and bypassing password protections.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "session_hijacking",
+          "authentication_bypass",
+          "rce",
+          "magento",
+          "e_commerce",
+          "critical"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/attackers-hijacked-200-websites-exploiting-magento-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Remote Code Execution (RCE) vulnerability via code injection, actively exploited by unauthenticated attackers. Allows unauthorized data access and system takeover.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_injection",
+          "ivanti_epmm",
+          "zero_day",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-001/",
+          "https://cert.europa.eu/publications/security-advisories/2026-001/",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-ivanti-endpoint-manager-mobile-could-allow-for-remote-code-execution_2026-009",
+          "https://securityaffairs.com/187488/security/u-s-cisa-adds-a-flaw-in-ivanti-epmm-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/30/ivanti_epmm_zero_days/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/",
+          "https://cybersecuritynews.com/ivanti-endpoint-manager-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Remote Code Execution (RCE) vulnerability via code injection, actively exploited by unauthenticated attackers. Allows unauthorized data access and system takeover.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "code_injection",
+          "ivanti_epmm",
+          "zero_day",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-001/",
+          "https://cert.europa.eu/publications/security-advisories/2026-001/",
+          "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-ivanti-endpoint-manager-mobile-could-allow-for-remote-code-execution_2026-009",
+          "https://go.theregister.com/feed/www.theregister.com/2026/01/30/ivanti_epmm_zero_days/",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/",
+          "https://cybersecuritynews.com/ivanti-endpoint-manager-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "9.3",
+        "product": "SmarterMail (versions prior to build 9511)",
+        "description": "Authentication Bypass vulnerability in the password reset API, actively exploited. Allows an unauthenticated attacker to hijack administrator accounts and achieve remote code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "authentication_bypass",
+          "rce",
+          "smartermail",
+          "actively_exploited",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187496/security/smartertools-patches-critical-smartermail-flaw-allowing-code-execution.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2026-24423",
+        "cvss": "9.3",
+        "product": "SmarterMail (versions prior to build 9511)",
+        "description": "Unauthenticated Remote Code Execution (RCE) vulnerability in the ConnectToHub API method. Allows an attacker to execute arbitrary system commands.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "unauthenticated",
+          "smartermail",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187496/security/smartertools-patches-critical-smartermail-flaw-allowing-code-execution.html",
+          "https://thecyberexpress.com/the-cyber-express-weekly-roundup-january-2026/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37049",
+        "cvss": "8.4",
+        "product": "Frigate 3.36.0.9",
+        "description": "Local Buffer Overflow in the Command Line input field, allowing arbitrary code execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "local_exploitation",
+          "frigate"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37049"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37051",
+        "cvss": "8.8",
+        "product": "Online-Exam-System 2015",
+        "description": "Time-based Blind SQL Injection vulnerability in the feedback form, allowing extraction of database password hashes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "time_based_blind_sql_injection",
+          "credential_theft",
+          "online_exam_system"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37051"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "cve_id": "CVE-2020-37057",
+        "cvss": "8.8",
+        "product": "Online-Exam-System 2015",
+        "description": "SQL Injection vulnerability in the feedback module via the 'fid' parameter, allowing manipulation of database queries.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "database_manipulation",
+          "online_exam_system"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37057"
+        ],
+        "date": "2026-01-31"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Crypto Laundering: The Chinese Nexus in 2025",
+        "description": "In 2025, Chinese money laundering networks processed $16.1 billion in illicit cryptocurrencies, accounting for about 20% of illicit funds on the blockchain. These professionalized groups operate via Telegram and \"guarantee\" platforms, offering fast and profitable services to convert funds stolen through scams or cyberattacks. Despite U.S. sanctions, these operations migrate but persist.",
+        "threat_actor": "Chinese money laundering networks, Huione, Black U, Jingliang Su",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1567 (Exfiltration Over Web Service)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1048 (Exfiltration Over Alternative Protocol)"
+        ],
+        "analyse": "Cryptocurrency laundering is an essential pillar of the cybercriminal economy, with the Chinese network playing a central role. The evolution towards structured services resilient to sanctions shows the constant adaptability of malicious actors. This complicates law enforcement efforts to disrupt their operations and trace illicit funds, reinforcing the funding cycle of cyberattacks.",
+        "recommandations": "Strengthen international cooperation for tracking and seizing illicit cryptocurrencies, monitor \"guarantee\" platforms and Telegram channels used for recruitment and promotion, educate the public and businesses on the risks of cryptocurrency-related scams and financial mules.",
+        "tags": [
+          "cryptocurrency",
+          "money_laundering",
+          "cybercrime",
+          "china",
+          "telegram",
+          "pig_butchering",
+          "scams",
+          "sanctions",
+          "T1567",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/blanchiment-crypto-la-filiere-chinoise-au-coeur-de-2025/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Cyberattack in Japan: Asahi Breweries paralyzed by Qilin",
+        "description": "The Russian-speaking cybercriminal group Qilin paralyzed Asahi Breweries, the Japanese brewing giant, via a ransomware attack affecting 30 production sites. The attack led to the exfiltration of 27GB of data and 9,300 files, and caused estimated losses of 9 billion yen. Qilin, operating a RaaS model, exploited Asahi's centralized supply chain and uses phishing, vulnerability exploitation, and APTs for its intrusions.",
+        "threat_actor": "Qilin (formerly Agenda)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "This attack highlights the vulnerability of critical industries, even large corporations, to sophisticated ransomware. The financial and operational impact (production halt, market losses) is significant. System centralization, while optimizing efficiency, can become a single point of failure for attackers. Japan's low cybersecurity incident preparedness is also highlighted.",
+        "recommandations": "Strengthen network detection and segmentation, regularly update software, improve data protection (backups, encryption), develop and test a robust Incident Response Plan (IRP), educate employees on phishing risks, adopt public-private cooperation for threat intelligence sharing.",
+        "tags": [
+          "ransomware",
+          "qilin",
+          "asahi_breweries",
+          "japan",
+          "food_and_beverage",
+          "raas",
+          "data_exfiltration",
+          "supply_chain",
+          "disruption",
+          "T1566.001",
+          "T1190",
+          "T1078",
+          "T1486"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cyberattaque-au-japon-asahi-breweries-paralysee-par-qilin/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Attackers Hijacked 200+ Websites Exploiting Magento Vulnerability to Gain Root-level Access",
+        "description": "An attack campaign compromised over 200 Magento e-commerce websites by exploiting the critical CVE-2025-54236 (SessionReaper) vulnerability. This flaw allows the reuse of invalidated session tokens to gain root-level administrative access, bypassing password protections. C2 infrastructures were identified in Finland and Hong Kong, with webshell deployments in Canada and Japan.",
+        "threat_actor": "Not applicable (multiple unspecified actors)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-54236"
+          ]
+        },
+        "mitre_ttps": [
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Kerberos Tickets)",
+          "T1078 (Valid Accounts)",
+          "T1505.003 (Server Software Component: Web Shell)"
+        ],
+        "analyse": "Exploiting authentication and session management vulnerabilities in major e-commerce platforms like Magento poses a direct risk to customer data confidentiality and payment information. The scale of the campaign and the presence of international C2s highlight the professionalization of cybercriminals and the need for timely security updates and continuous monitoring.",
+        "recommandations": "Promptly apply vendor security updates (patch for CVE-2025-54236), monitor systems for suspicious post-exploitation activity (e.g., webshell deployment, unauthorized admin access), strengthen session management to ensure proper token invalidation.",
+        "tags": [
+          "magento",
+          "e_commerce",
+          "vulnerability_exploitation",
+          "session_hijacking",
+          "cve_2025_54236",
+          "webshell",
+          "root_access",
+          "cybercrime",
+          "T1550.002",
+          "T1078",
+          "T1505.003"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/attackers-hijacked-200-websites-exploiting-magento-vulnerability/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Researchers Uncover Chrome Extensions Abusing Affiliate Links and Stealing ChatGPT Access",
+        "description": "Researchers have discovered malicious Google Chrome extensions that hijack affiliate links on e-commerce platforms (e.g., Amazon Ads Blocker replacing affiliate tags) and steal ChatGPT authentication tokens. These extensions, some linked to a \"Stanley\" malware-as-a-service toolkit for phishing, exploit trust associated with AI brands and browser execution privileges.",
+        "threat_actor": "10Xprofit (developer), \"Stanley\" toolkit users",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "app.10xprofit[.]io"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189 (Drive-by Compromise)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1078 (Valid Accounts)"
+        ],
+        "analyse": "The exploitation of browser extensions as an attack vector is increasing, especially with the integration of AI into enterprise workflows. The theft of ChatGPT tokens grants persistent access to conversations and data, posing a significant risk of sensitive information leakage and impersonation. The \"Stanley\" MaaS model lowers the barrier to entry for attackers.",
+        "recommandations": "Educate users on the dangers of browser extensions, prioritize verified extensions, monitor extension activity, implement strict security policies for BYOD and SaaS-first environments, use AI exposure detection solutions.",
+        "tags": [
+          "chrome_extensions",
+          "malicious_extensions",
+          "affiliate_hijacking",
+          "chatgpt_theft",
+          "credential_theft",
+          "maas",
+          "stanley_toolkit",
+          "phishing",
+          "e_commerce",
+          "ai_security",
+          "T1189",
+          "T1078"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Internal Investigations: A Key Lever for Corporate Risk Management?",
+        "description": "Analysis of the rise and regulation of internal investigations in France concerning risks of harassment, discrimination, corruption, and fraud. It highlights their crucial role in managing legal, financial, and reputational risks, as well as their importance for competitiveness and protection against foreign interference (FCPA, UK Bribery Act). The article discusses jurisprudence requiring rigorous methodology and legislative proposals to regulate these investigations, particularly when coexisting with criminal proceedings and protecting attorney-client privilege.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This article highlights the increasing importance of internal investigations as a strategic risk management tool for businesses. It underscores the need for a clear legal framework and rigorous methodologies to ensure the admissibility of findings in court and to strengthen economic sovereignty against the extraterritoriality of foreign laws. It is a key topic for corporate governance and resilience to various threats.",
+        "recommandations": "Define a clear framework for internal investigations (scope, objectives, procedures), ensure the impartiality of investigators, collect comprehensive evidence and respect employee rights and professional secrecy, stay informed about legislative developments to ensure compliance and probative value.",
+        "tags": [
+          "governance",
+          "risk_management",
+          "compliance",
+          "internal_investigation",
+          "labor_law",
+          "sapin_ii_law",
+          "waserman_law",
+          "fcpa",
+          "uk_bribery_act",
+          "economic_sovereignty",
+          "legal"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/lenquete-interne-un-levier-essentiel-de-gestion-des-risques-en-entreprise/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Ex-Googler nailed for stealing AI secrets for Chinese startups",
+        "description": "Linwei Ding, a former Google software engineer, has been convicted of economic espionage and trade secret theft related to Google's AI hardware (TPUs, GPUs, SmartNICs). He exfiltrated over 2,000 confidential documents by copying data to Apple Notes, converting them to PDF, and uploading them to his personal Google Cloud account to evade DLP detection. He subsequently founded or worked for China-based companies aiming to market these technologies to PRC-controlled entities.",
+        "threat_actor": "Linwei Ding (acting on behalf of Chinese firms)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1052.001 (Exfiltration Over Physical Medium: External Removable Media)",
+          "T1078.003 (Valid Accounts: Local Account)",
+          "T1530 (Data from Cloud Storage Object)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "This incident highlights the persistent threat of economic espionage and insider threats, particularly in strategic sectors like AI. Stealthy exfiltration methods and the intent to benefit foreign entities underscore the need for advanced DLP controls, continuous monitoring of employee activity, and increased vigilance over intellectual property transfers. The involvement of China-linked entities in the theft of critical technologies raises sovereignty and national security concerns.",
+        "recommandations": "Strengthen DLP policies and monitor data transfers (including to personal cloud services and the use of non-professional tools), improve detection of unusual employee access and exfiltration activities, implement a strict intellectual property management policy and access to sensitive information, educate employees on the risks of economic espionage and recruitment by foreign entities.",
+        "tags": [
+          "economic_espionage",
+          "insider_threat",
+          "ip_theft",
+          "ai_secrets",
+          "china_linked",
+          "google",
+          "tpus",
+          "gpus",
+          "smartnics",
+          "data_exfiltration",
+          "dlp_bypass",
+          "T1537",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/01/30/google_engineer_convicted_ai_secrets_china/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Quick, You Need Assistance! (Microsoft Teams Vishing and Quick Assist Campaign)",
+        "description": "A vishing campaign via Microsoft Teams leverages the Quick Assist tool for initial system access. Attackers impersonate IT support, deploy obfuscated PowerShell payloads (web-socket RAT), install persistence tools like AnyDesk and NetSupport Manager, and attempt credential discovery. This activity overlaps with Storm-1811 reporting and is suspected to be Initial Access Broker (IAB) activity.",
+        "threat_actor": "Storm-1811 (suspected IAB)",
+        "indicator_of_compromise": {
+          "URL": [
+            "hxxps://prosearium[.]net/setting.pdf",
+            "hxxps://aerobionix[.]com/generation.pdf"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Vishing)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1133 (External Remote Services)",
+          "T1136.001 (Create Account: Local Account)"
+        ],
+        "analyse": "The use of vishing via Teams and legitimate tools like Quick Assist makes these attacks particularly difficult for traditional defenses to detect. IABs are a persistent threat as they sell initial access, allowing other malicious groups to launch more destructive attacks. The automation observed in the initial access phase by Field Effect shows increased attacker efficiency.",
+        "recommandations": "Educate users about vishing risks, implement strict verification processes for help desk requests, monitor the use of remote administration tools such as Quick Assist, AnyDesk, and NetSupport Manager, strengthen detection of obfuscated PowerShell activities.",
+        "tags": [
+          "vishing",
+          "quick_assist",
+          "microsoft_teams",
+          "powershell",
+          "remote_access_trojan",
+          "rat",
+          "persistence",
+          "credential_theft",
+          "initial_access_broker",
+          "iab",
+          "storm_1811",
+          "T1566.002",
+          "T1078",
+          "T1059",
+          "T1133"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/quick-you-need-assistance"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Vishing for Access: Tracking the Expansion of ShinyHunters-Branded SaaS Data Theft",
+        "description": "ShinyHunters groups (UNC6661, UNC6671, UNC6240) are escalating extortion operations using sophisticated vishing and phishing sites to steal SSO credentials and MFA codes, targeting SaaS platforms (Okta, Salesforce, Google Workspace, DocuSign, Atlassian, SharePoint, OneDrive) for sensitive data and communications exfiltration. They use corporate portal-mimicking phishing domains, delete security notifications (e.g., ToogleBox Recall for Gmail), send secondary phishings to crypto entities, and employ aggressive extortion tactics (DDoS, harassment, data leaks on Limewire). The activity is driven by social engineering, not software vulnerabilities.",
+        "threat_actor": "ShinyHunters, UNC6661, UNC6671, UNC6240",
+        "indicator_of_compromise": {
+          "ASN": [
+            "11427",
+            "11878",
+            "33657",
+            "46375",
+            "201814",
+            "400595",
+            "577",
+            "7018",
+            "12479",
+            "20001",
+            "20845",
+            "23470",
+            "27924",
+            "395965"
+          ],
+          "DOMAIN": [
+            "<companyname>sso[.]com",
+            "my<companyname>sso[.]com",
+            "my-<companyname>sso[.]com",
+            "<companyname>internal[.]com",
+            "www.<companyname>internal[.]com",
+            "my<companyname>internal[.]com",
+            "<companyname>support[.]com",
+            "ticket-<companyname>[.]support",
+            "support-<companyname>[.]com",
+            "<companyname>okta[.]com",
+            "<companyname>azure[.]com",
+            "on<companyname>zendesk[.]com",
+            "<companyname>access[.]com",
+            "www.<companyname>access[.]com",
+            "my<companyname>acess[.]com"
+          ],
+          "EMAIL": [
+            "shinycorp@tutanota[.]com",
+            "shinygroup@onionmail[.]com"
+          ],
+          "IPv4": [
+            "24.242.93[.]122",
+            "23.234.100[.]107",
+            "23.234.100[.]235",
+            "73.135.228[.]98",
+            "157.131.172[.]74",
+            "149.50.97[.]144",
+            "67.21.178[.]234",
+            "142.127.171[.]133",
+            "76.64.54[.]159",
+            "76.70.74[.]63",
+            "206.170.208[.]23",
+            "68.73.213[.]196",
+            "37.15.73[.]132",
+            "104.32.172[.]247",
+            "85.238.66[.]242",
+            "199.127.61[.]200",
+            "209.222.98[.]200",
+            "38.190.138[.]239",
+            "198.52.166[.]197"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Vishing)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1552.001 (Unsecured Credentials: Credential Dumper)",
+          "T1556 (Forge Web Credentials)",
+          "T1111 (Multi-Factor Authentication Bypass)",
+          "T1078 (Valid Accounts)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1027 (Obfuscated Files or Information)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1498 (Denial of Service: Distributed Denial of Service)",
+          "T1087.001 (Account Discovery: Local Account)",
+          "T1087.002 (Account Discovery: Domain Account)",
+          "T1530 (Data from Cloud Storage Object)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)"
+        ],
+        "analyse": "The sophistication of social engineering and ShinyHunters' ability to adapt to defenses (via non-phishing-resistant MFA) represent a significant threat to identity security and cloud data. The diversity of targeted SaaS platforms and escalating extortion tactics increase victim impact. Upgrading authentication mechanisms to phishing-resistant solutions is critical.",
+        "recommandations": "Strengthen user awareness of vishing and phishing, adopt phishing-resistant MFA (FIDO2/passkeys), implement strict IAM controls for SaaS access and non-human identities, enable detailed logging on identity providers and SaaS applications, develop detections based on observed TTPs. Implement \"shields up\" procedures for help desks.",
+        "tags": [
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "mfa_bypass",
+          "sso_compromise",
+          "data_exfiltration",
+          "saas_security",
+          "cloud_security",
+          "extortion",
+          "unc6661",
+          "unc6671",
+          "unc6240",
+          "T1566.002",
+          "T1552.001",
+          "T1111",
+          "T1078",
+          "T1041",
+          "T1537",
+          "T1486",
+          "T1498",
+          "T1059.001"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/defense-against-shinyhunters-cybercrime-saas/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/expansion-shinyhunters-saas-data-theft/"
+        ],
+        "date": "2026-01-31"
+      },
+      {
+        "title": "Understanding Google Workspace Structure from a Cloud Forensics Lens",
+        "description": "Deep dive into Google Workspace permission management mechanisms, including Organizational Units (OUs) and Groups, and their importance in cloud forensic investigations to understand data access.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This article is crucial for security professionals and digital investigators, offering a better understanding of the complex permission structures of cloud environments like Google Workspace. It helps identify and trace unauthorized access or data exfiltration, reducing detection and response times during an incident.",
+        "recommandations": "Strictly manage OUs and groups to define permissions, regularly check permission inheritance, clearly document group roles to facilitate investigations in the event of a data breach.",
+        "tags": [
+          "cloud_forensics",
+          "google_workspace",
+          "permissions",
+          "organizational_units",
+          "groups",
+          "identity_access_management",
+          "iam",
+          "incident_response",
+          "dfir"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/understanding-google-workspace-structure-from-a-cloud-forensics-lens"
+        ],
+        "date": "2026-01-31"
+      }
+    ]
+  }
+}
