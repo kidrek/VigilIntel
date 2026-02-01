@@ -1,0 +1,1323 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une diversité d'attaques ciblant la propriété intellectuelle, les infrastructures critiques et les données personnelles. On observe une augmentation des activités d'espionnage économique par des acteurs étatiques, comme l'illustre l'affaire Google et le vol de technologies d'IA. Les attaques contre les infrastructures critiques, telles que celles subies par la Pologne, révèlent une sophistication croissante des APT utilisant des malwares d'effacement pour le sabotage et l'exploitation de vulnérabilités périphériques (ex: FortiGate). Les tactiques de social engineering évoluent, avec des groupes comme ShinyHunters employant le vishing et le phishing en temps réel pour contourner l'authentification unique (SSO) et l'authentification multifacteur (MFA), menant à des violations de données massives et à des extorsions. Le nombre de violations de données reste élevé, affectant divers secteurs (comptabilité, télécommunications, activisme, restauration, éducation) et exposant des millions de dossiers personnels. La découverte et l'exploitation de vulnérabilités critiques, y compris des zero-days et des RCE non authentifiées dans des produits largement utilisés (Ivanti EPMM, FreePBX, Cacti, SmarterMail), soulignent l'importance d'une gestion proactive des patchs. Enfin, les enjeux de souveraineté numérique deviennent de plus en plus prégnants, comme le montre la vente d'Exaion, soulevant des questions sur la capacité des nations à protéger leurs actifs stratégiques en IA et blockchain. En conclusion, l'état général des menaces est caractérisé par une intensification des cyberattaques géopolitiques, une persistance des groupes cybercriminels adaptatifs et un défi constant lié aux vulnérabilités logicielles, nécessitant une vigilance et une résilience accrues.",
+      "date": "2026-02-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Linwei Ding",
+        "secteur": "Technologie (Intelligence Artificielle), Gouvernement (Chine)",
+        "modop": "Espionnage économique et vol de propriété intellectuelle. A volé des données sur l'infrastructure de supercalculateurs IA de Google et les a secrètement partagées avec des entreprises technologiques chinoises pour le compte du gouvernement de la République Populaire de Chine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionnage economique",
+          "vol de donnees",
+          "ai",
+          "chine",
+          "insider threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "ShinyHunters (alias UNC6240)",
+        "secteur": "Diverses organisations utilisant SaaS/SSO, Restauration (Panera Bread)",
+        "modop": "Campagnes de vishing et de phishing ciblées pour voler des identifiants SSO et des codes MFA, obtenir un accès aux applications SaaS cloud, exfiltrer des données et mener des extorsions. Publication de données volées en cas d'échec de l'extorsion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso bypass",
+          "mfa bypass",
+          "cloud data theft",
+          "extorsion",
+          "saas compromise",
+          "violation de donnees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/",
+          "https://haveibeenpwned.com/Breach/PaneraBread"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "UNC6661",
+        "secteur": "Diverses organisations utilisant SaaS/SSO",
+        "modop": "Se faisant passer pour du personnel informatique via vishing, utilisation de sites de phishing à l'effigie des entreprises pour capturer les identifiants SSO et MFA, enregistrement de son propre appareil MFA, vol de données depuis les applications cloud, utilisation d'add-ons Google Workspace (ToogleBox Recall) pour masquer l'activité. Agit comme un affilié de ShinyHunters.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso bypass",
+          "mfa bypass",
+          "cloud data theft",
+          "saas compromise",
+          "google workspace"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "UNC6671",
+        "secteur": "Diverses organisations",
+        "modop": "Exécute des demandes d'extorsion en utilisant un identifiant Tox différent et des tactiques de pression agressives, sans se revendiquer de ShinyHunters. Agit comme un affilié de ShinyHunters.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extorsion",
+          "tactiques agressives"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "Vincenzo Iozzo (alias 'OMISSIS')",
+        "secteur": "Gouvernements, Défense, Technologie (iOS, BlackBerry, Firefox), Criminel",
+        "modop": "Développement et vente d'exploits zero-day et d'outils cyber-offensifs à des gouvernements (États-Unis, Royaume-Uni, Arabie Saoudite) et à des acteurs non étatiques (Hezbollah), mise en place de programmes de surveillance cybernétique, blanchiment d'argent.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "zero-day",
+          "developpement d'exploits",
+          "marchand d'armes cybernetiques",
+          "renseignement",
+          "espionnage",
+          "hezbollah",
+          "gouvernements",
+          "blanchiment d'argent"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187515/laws-and-regulations/doj-releases-details-alleged-talented-hacker-working-for-jeffrey-epstein.html",
+          "https://t.me/vxunderground/8122"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "Static Tundra (alias Berserk Bear, Ghost Blizzard, Dragonfly)",
+        "secteur": "Secteur de l'Énergie, Infrastructures Critiques (Pologne)",
+        "modop": "Cyberattaques coordonnées de sabotage, exploitation de vulnérabilités FortiGate, altération du firmware, déploiement de malwares d'effacement (DynoWiper, LazyWiper) via Active Directory, vol de données à long terme et mouvement latéral.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "infrastructure critique",
+          "secteur de l'energie",
+          "pologne",
+          "sabotage",
+          "wiper malware",
+          "exploitation fortigate",
+          "vol de donnees"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187503/apt/cyberattacks-disrupt-communications-at-wind-solar-and-heat-facilities-in-poland/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "xploitleaks",
+        "secteur": "Éducation et Recherche (Azerbaïdjan)",
+        "modop": "Revendique des violations de données et la divulgation d'informations personnelles identifiables (PII).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "violation de donnees",
+          "pii",
+          "education",
+          "recherche"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115991252515576313"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "c0mmandor",
+        "secteur": "Restauration (Russie)",
+        "modop": "Revendique des violations de données et la divulgation de bases de données d'utilisateurs.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "violation de donnees",
+          "pii",
+          "restauration"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115990781045091412"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Industrie de l'Intelligence Artificielle",
+        "theme": "Espionnage économique et transfert de technologie",
+        "description": "Un ancien ingénieur de Google, Linwei Ding, a été reconnu coupable aux États-Unis d'avoir volé des données sur l'infrastructure de supercalculateurs IA de Google et de les avoir partagées secrètement avec des entreprises technologiques chinoises, agissant pour le compte du gouvernement de la République Populaire de Chine.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "espionnage economique",
+          "economic espionage",
+          "vol de donnees",
+          "data theft",
+          "intelligence artificielle",
+          "artificial intelligence",
+          "Chine",
+          "China",
+          "etats-unis",
+          "united states",
+          "insider threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Énergie, Infrastructures Critiques",
+        "theme": "Cyberattaques de sabotage étatiques",
+        "description": "La Pologne a été la cible de cyberattaques coordonnées visant plus de 30 fermes éoliennes et solaires, une entreprise manufacturière et une centrale thermique, avec l'intention de perturber les communications et potentiellement le fonctionnement. L'infrastructure d'attaque est fortement liée au groupe APT Static Tundra (Berserk Bear, Ghost Blizzard, Dragonfly), connu pour son intérêt pour le secteur de l'énergie et l'utilisation de malwares d'effacement (DynoWiper, LazyWiper).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "infrastructure critique",
+          "critical infrastructure",
+          "energie",
+          "energy",
+          "pologne",
+          "poland",
+          "sabotage",
+          "apt",
+          "static tundra",
+          "wiper malware"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187503/apt/cyberattacks-disrupt-communications-at-wind-solar-and-heat-facilities-in-poland/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Énergie, Cloud, Intelligence Artificielle, Blockchain",
+        "theme": "Souveraineté numérique et acquisitions stratégiques",
+        "description": "La filiale française Exaion d'EDF, spécialisée dans le cloud IA, la cybersécurité et la blockchain, a été majoritairement vendue au groupe américain Mara Holdings. Cette cession soulève des questions sur la souveraineté numérique de la France, en particulier concernant son potentiel dans le minage de cryptomonnaies et l'IA, et réduit sa capacité à concourir dans ces domaines stratégiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "souverainete numerique",
+          "digital sovereignty",
+          "france",
+          "etats-unis",
+          "usa",
+          "exaion",
+          "edf",
+          "blockchain",
+          "ia",
+          "cloud",
+          "cybersecurite",
+          "economie",
+          "actifs strategiques"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/vente-dexaion-un-nouveau-pas-en-arriere-dans-la-souverainete-numerique/"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Comptabilité",
+        "victime": "RINA Accountants & Advisors",
+        "description": "Violation de données en février 2022 exposant des informations personnelles identifiables (PII), y compris les numéros de sécurité sociale, de milliers de personnes. Un fonds de règlement de 400 000 $ a été créé pour indemniser les victimes.",
+        "tags": [
+          "violation",
+          "breach",
+          "rina accountants & advisors",
+          "comptabilite",
+          "accounting",
+          "pii",
+          "ssn",
+          "donnees personnelles",
+          "personal data",
+          "litige",
+          "reglement"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/rina-accountants-advisors-is-creating-400k-settlement-fund-to-settle-lawsuit-over-2022-data-breach/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Comcast",
+        "description": "Un accord de règlement de 117,5 millions de dollars pour une violation de données en 2023 liée à la vulnérabilité Citrix Bleed, affectant plus de 30 millions de clients actuels et anciens. L'accord prévoit trois ans de services de surveillance financière et de protection contre le vol d'identité, ainsi qu'un remboursement des dépenses ou un paiement en espèces.",
+        "tags": [
+          "violation",
+          "breach",
+          "comcast",
+          "telecommunications",
+          "cable",
+          "citrix bleed",
+          "donnees clients",
+          "customer data",
+          "reglement",
+          "litige",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/comcast-agrees-to-117-5-million-settlement-to-resolve-lawsuits-over-2023-citrix-bleed-data-breach/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Activisme",
+        "victime": "StopICE",
+        "description": "Une faille de sécurité majeure aurait exposé les informations personnelles de plus de 100 000 utilisateurs (noms, logins, mots de passe, numéros de téléphone, coordonnées GPS). Les hackers auraient envoyé ces données aux agences fédérales américaines (FBI, ICE, HSI).",
+        "tags": [
+          "violation",
+          "breach",
+          "stopice",
+          "activisme",
+          "activism",
+          "donnees personnelles",
+          "personal data",
+          "pii",
+          "gps",
+          "agences federales",
+          "us government"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/stopice-hacked-names-and-locations-of-over-100k-users-were-sent-to-the-fbi-ice-and-hsi/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Gouvernement (Commission Électorale), Journalisme",
+        "victime": "Site web de la Commission Électorale du Bangladesh (14 000 journalistes)",
+        "description": "Une défaillance technique sur le site de la Commission Électorale du Bangladesh a exposé les données personnelles sensibles (numéros d'identification nationaux, numéros de téléphone mobile, copies complètes des demandes) de 14 000 journalistes, permettant à quiconque d'accéder à ces informations.",
+        "tags": [
+          "violation",
+          "breach",
+          "bangladesh",
+          "commission electorale",
+          "election commission",
+          "journalisme",
+          "journalism",
+          "pii",
+          "nid",
+          "donnees personnelles",
+          "personal data",
+          "defaillance technique",
+          "government"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/bd-14000-journos-personal-data-leaked-online/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Éducation et Recherche",
+        "victime": "Secteur de l'Éducation et de la Recherche de l'Azerbaïdjan",
+        "description": "Le groupe 'xploitleaks' a revendiqué une violation de données exposant environ 817 241 dossiers, y compris les noms complets, les dates de naissance et les adresses résidentielles, du secteur de l'éducation et de la recherche en Azerbaïdjan.",
+        "tags": [
+          "violation",
+          "breach",
+          "azerbaïdjan",
+          "azerbaijan",
+          "education",
+          "recherche",
+          "xploitleaks",
+          "pii",
+          "donnees personnelles",
+          "personal data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115991252515576313"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Restauration",
+        "victime": "Dakota Sushi (Russie)",
+        "description": "Le groupe 'c0mmandor' a revendiqué une violation de données, divulguant une base de données d'utilisateurs de Dakota Sushi en Russie, avec des noms, e-mails, téléphones, adresses, identifiants de commande, méthodes de paiement et adresses IP.",
+        "tags": [
+          "violation",
+          "breach",
+          "russie",
+          "russia",
+          "dakota sushi",
+          "restauration",
+          "food service",
+          "pii",
+          "donnees personnelles",
+          "personal data",
+          "donnees de paiement",
+          "payment data",
+          "adresses ip"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115990781045091412"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Restauration",
+        "victime": "Panera Bread",
+        "description": "En janvier 2026, Panera Bread a subi une violation de données où le groupe ShinyHunters a publié 14 millions de dossiers, y compris 5,1 millions d'adresses e-mail uniques, ainsi que des noms, numéros de téléphone et adresses physiques, suite à une tentative d'extorsion échouée.",
+        "tags": [
+          "violation",
+          "breach",
+          "panera bread",
+          "shinyhunters",
+          "restauration",
+          "food service",
+          "pii",
+          "email",
+          "telephone",
+          "adresse physique",
+          "physical address",
+          "extorsion",
+          "publication de donnees"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/PaneraBread"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25069",
+        "cvss": 9.3,
+        "product": "SunFounder Pironman Dashboard (pm_dashboard)",
+        "description": "Vulnérabilité de path traversal dans les endpoints API des fichiers de log permettant à un attaquant distant non authentifié de lire et supprimer des fichiers arbitraires, menant à la divulgation d'informations sensibles, la perte de données et une compromission/DoS potentielle du système.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "path traversal",
+          "arbitrary file read",
+          "arbitrary file deletion",
+          "rce",
+          "sunfounder",
+          "pironman dashboard",
+          "critical vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25069"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-0921",
+        "cvss": "6.5 (impact critique)",
+        "product": "Iconics Suite SCADA system (GENESIS64, MC Works64)",
+        "description": "Vulnérabilité permettant le déclenchement de conditions de déni de service (DoS), l'élévation de privilèges et la corruption de fichiers binaires critiques sur les systèmes de contrôle industriel. Affecte les secteurs d'infrastructures critiques, et son exploitation est facilitée en combinaison avec CVE-2024-7587.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "scada",
+          "ics",
+          "dos",
+          "denial of service",
+          "privilege escalation",
+          "infrastructure critique",
+          "critical infrastructure",
+          "iconics suite"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/scada-vulnerability-triggers-dos/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-66039",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "Vulnérabilité de contournement d'authentification qui, enchaînée à d'autres failles, mène à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "authentication bypass",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-61675",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "Vulnérabilité d'injection SQL qui, enchaînée à d'autres failles, mène à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "sql injection",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-61678",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "Vulnérabilité de téléversement de fichier non restreint permettant l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "file upload",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-24367",
+        "cvss": "N/A (RCE)",
+        "product": "Cacti",
+        "description": "Exécution de code à distance (RCE) non authentifiée via le mécanisme de modèle de graphe, affectant les versions antérieures à 1.2.29.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "cacti",
+          "rce",
+          "non authentifie",
+          "unauthenticated",
+          "surveillance reseau",
+          "network monitoring",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "N/A (RCE)",
+        "product": "SmarterTools SmarterMail",
+        "description": "Vulnérabilité de téléversement de fichier non authentifié avec traversée de répertoire (path traversal) menant à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "smartermail",
+          "file upload",
+          "path traversal",
+          "rce",
+          "non authentifie",
+          "unauthenticated",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "N/A (Zero-day RCE)",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité zero-day d'exécution de code à distance (RCE) critique, activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "zero-day",
+          "rce",
+          "exploitation active",
+          "active exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/31/ivanti-epmm-zero-days-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "N/A (Zero-day RCE)",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité zero-day d'exécution de code à distance (RCE) critique, activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "zero-day",
+          "rce",
+          "exploitation active",
+          "active exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/31/ivanti-epmm-zero-days-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Cloud storage payment scam floods inboxes with fake renewals",
+        "description": "Une vaste campagne d'escroquerie par e-mail cible les utilisateurs avec de fausses alertes de renouvellement d'abonnement au stockage cloud. Les e-mails avertissent que les fichiers et comptes sont sur le point d'être bloqués ou supprimés en raison d'un échec de paiement. Ils redirigent vers des sites de phishing hébergés sur Google Cloud Storage pour voler les identifiants et proposer de fausses mises à niveau.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://storage.googleapis.com/"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002",
+          "T1059",
+          "T1583.001"
+        ],
+        "analyse": "Cette campagne vise un large éventail d'utilisateurs, exploitant la peur de la perte de données pour inciter au vol d'identifiants et à la fraude financière. L'utilisation de domaines légitimes (Google Cloud Storage) comme redirecteur peut augmenter la crédibilité perçue et la difficulté de détection. L'impact est la perte financière et la compromission des données pour les victimes.",
+        "recommandations": "Éduquer les utilisateurs à identifier les e-mails de phishing et les signes d'alerte. Vérifier la légitimité de l'expéditeur et ne jamais cliquer sur des liens suspects. Utiliser des mots de passe forts et uniques, ainsi que l'authentification multifacteur (MFA) pour tous les services cloud. Contacter directement le fournisseur de services via des canaux officiels en cas de doute sur un message de paiement.",
+        "tags": [
+          "phishing",
+          "scam",
+          "cloud storage",
+          "credential theft",
+          "social engineering",
+          "campagne malveillante",
+          "malicious campaign"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-storage-payment-scam-floods-inboxes-with-fake-renewals/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "title": "Mandiant details how ShinyHunters abuse SSO to steal cloud data",
+        "description": "Mandiant révèle les tactiques du groupe ShinyHunters et de ses affiliés (UNC6661, UNC6671) utilisant le vishing (phishing vocal) et des sites de phishing personnalisés pour voler les identifiants de connexion unique (SSO) et les codes d'authentification multifacteur (MFA). Ces attaques permettent d'accéder aux applications SaaS cloud (Okta, Microsoft Entra, Google SSO) pour exfiltrer des données, suivies de demandes d'extorsion. UNC6661 a également utilisé un add-on Google Workspace ('ToogleBox Recall') pour masquer ses activités.",
+        "threat_actor": "ShinyHunters, UNC6661, UNC6671",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1566.002",
+          "T1566.003",
+          "T1078",
+          "T1111",
+          "T1078.004",
+          "T1550.002",
+          "T1537",
+          "T1486",
+          "T1021.001",
+          "T1530",
+          "T1087.004"
+        ],
+        "analyse": "Cette campagne illustre une ingénierie sociale sophistiquée combinant vishing et phishing en temps réel pour contourner des contrôles de sécurité modernes comme le SSO et la MFA. Elle cible des services cloud critiques, entraînant des violations de données significatives et des extorsions. L'utilisation d'add-ons légitimes (Google Workspace) pour des actions malveillantes est une tactique notable pour la furtivité et la persistance.",
+        "recommandations": "Mettre en œuvre une authentification multifacteur (MFA) forte (par exemple, jetons FIDO2/matériels) et non basée sur SMS ou push faciles à intercepter. Sensibiliser les utilisateurs aux risques de vishing et de phishing, en particulier aux appels d'assistance technique non sollicités. Appliquer des contrôles d'accès stricts et le principe du moindre privilège pour les applications SaaS. Surveiller les journaux SSO pour détecter toute activité suspecte et auditer régulièrement les intégrations d'applications tierces.",
+        "tags": [
+          "shinyhunters",
+          "unc6661",
+          "unc6671",
+          "vishing",
+          "phishing",
+          "sso",
+          "mfa bypass",
+          "cloud security",
+          "data theft",
+          "extorsion",
+          "saas",
+          "mandiant",
+          "threat actor",
+          "mitre att&ck"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "title": "Researcher reveals evidence of private Instagram profiles leaking photos",
+        "description": "Un chercheur a découvert une faille de confidentialité dans Instagram où certains profils privés exposaient des liens directs vers des photos et des légendes à des utilisateurs non authentifiés, sur certains appareils mobiles, en raison d'une fuite côté serveur. Bien que Meta ait corrigé le problème, l'entreprise a rejeté le rapport, qualifiant la correction d'effet secondaire involontaire.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cette faille critique a permis un accès non autorisé à des contenus privés, soulevant des préoccupations sérieuses quant à la protection des données des utilisateurs sur les plateformes de médias sociaux. La réponse de Meta à la divulgation de la vulnérabilité met en lumière les défis en matière de transparence et de collaboration avec les chercheurs en sécurité, même après la correction d'une faille.",
+        "recommandations": "Pour les utilisateurs, revoir et renforcer leurs paramètres de confidentialité sur les réseaux sociaux. Pour les plateformes, améliorer les processus de divulgation des vulnérabilités, effectuer des analyses approfondies des causes profondes et maintenir une communication transparente avec les chercheurs. Sur le plan technique, mettre en œuvre des contrôles d'accès plus stricts, s'assurer de la désinfection des réponses du serveur et effectuer des tests de confidentialité rigoureux.",
+        "tags": [
+          "instagram",
+          "data leak",
+          "private data",
+          "privacy",
+          "vulnerabilite",
+          "vulnerability",
+          "meta",
+          "reseaux sociaux",
+          "social media",
+          "bug",
+          "divulgation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/researcher-reveals-evidence-of-private-instagram-profiles-leaking-photos/"
+        ],
+        "date": "2026-02-01"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is characterized by a diversity of attacks targeting intellectual property, critical infrastructure, and personal data. We are observing an increase in state-sponsored economic espionage activities, as illustrated by the Google case and the theft of AI technologies. Attacks against critical infrastructure, such as those suffered by Poland, reveal a growing sophistication of APTs using wiper malware for sabotage and the exploitation of edge vulnerabilities (e.g., FortiGate). Social engineering tactics are evolving, with groups like ShinyHunters employing real-time vishing and phishing to bypass Single Sign-On (SSO) and Multi-Factor Authentication (MFA), leading to massive data breaches and extortion. The number of data breaches remains high, affecting various sectors (accounting, telecommunications, activism, food service, education) and exposing millions of personal records. The discovery and exploitation of critical vulnerabilities, including zero-days and unauthenticated RCEs in widely used products (Ivanti EPMM, FreePBX, Cacti, SmarterMail), underscore the importance of proactive patch management. Finally, digital sovereignty issues are becoming increasingly prominent, as shown by the sale of Exaion, raising questions about nations' ability to protect their strategic assets in AI and blockchain. In conclusion, the overall state of threats is characterized by an intensification of geopolitical cyberattacks, a persistence of adaptive cybercriminal groups, and a constant challenge related to software vulnerabilities, requiring increased vigilance and resilience.",
+      "date": "2026-02-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Linwei Ding",
+        "secteur": "Technology (Artificial Intelligence), Government (China)",
+        "modop": "Economic espionage and intellectual property theft. Stole data on Google's AI supercomputing infrastructure and secretly shared it with Chinese tech firms on behalf of the People's Republic of China government.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "economic espionage",
+          "data theft",
+          "ai",
+          "china",
+          "insider threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "ShinyHunters (aka UNC6240)",
+        "secteur": "Various organizations using SaaS/SSO, Restaurant (Panera Bread)",
+        "modop": "Targeted vishing and phishing campaigns to steal SSO credentials and MFA codes, gain access to cloud SaaS applications, exfiltrate data, and carry out extortion. Publication of stolen data if extortion fails.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso bypass",
+          "mfa bypass",
+          "cloud data theft",
+          "extortion",
+          "saas compromise",
+          "data breach"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/",
+          "https://haveibeenpwned.com/Breach/PaneraBread"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "UNC6661",
+        "secteur": "Various organizations using SaaS/SSO",
+        "modop": "Impersonating IT staff via vishing, using company-branded phishing sites to capture SSO and MFA credentials, registering their own MFA device, stealing data from cloud applications, and using Google Workspace add-ons (ToogleBox Recall) to hide activity. Acts as an affiliate of ShinyHunters.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "phishing",
+          "sso bypass",
+          "mfa bypass",
+          "cloud data theft",
+          "saas compromise",
+          "google workspace"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "UNC6671",
+        "secteur": "Various organizations",
+        "modop": "Executes extortion demands using a different Tox ID and aggressive pressure tactics, not claiming to be ShinyHunters. Acts as an affiliate of ShinyHunters.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "extortion",
+          "aggressive tactics"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "Vincenzo Iozzo (aka 'OMISSIS')",
+        "secteur": "Governments, Defense, Technology (iOS, BlackBerry, Firefox), Criminal",
+        "modop": "Developing and selling zero-day exploits and offensive cyber tools to governments (US, UK, Saudi Arabia) and non-state actors (Hezbollah), establishing cyber surveillance programs, money laundering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "zero-day",
+          "exploit development",
+          "cyber arms dealer",
+          "intelligence",
+          "espionage",
+          "hezbollah",
+          "governments",
+          "money laundering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187515/laws-and-regulations/doj-releases-details-alleged-talented-hacker-working-for-jeffrey-epstein.html",
+          "https://t.me/vxunderground/8122"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "Static Tundra (aka Berserk Bear, Ghost Blizzard, Dragonfly)",
+        "secteur": "Energy Sector, Critical Infrastructure (Poland)",
+        "modop": "Coordinated sabotage cyberattacks, exploiting FortiGate vulnerabilities, firmware tampering, deploying wiper malware (DynoWiper, LazyWiper) via Active Directory, long-term data theft and lateral movement.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "critical infrastructure",
+          "energy sector",
+          "poland",
+          "sabotage",
+          "wiper malware",
+          "fortigate exploit",
+          "data theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187503/apt/cyberattacks-disrupt-communications-at-wind-solar-and-heat-facilities-in-poland/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "xploitleaks",
+        "secteur": "Education & Research (Azerbaijan)",
+        "modop": "Claims data breaches and the disclosure of Personally Identifiable Information (PII).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data breach",
+          "pii",
+          "education",
+          "research"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115991252515576313"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "nom": "c0mmandor",
+        "secteur": "Food service (Russia)",
+        "modop": "Claims data breaches and the disclosure of user databases.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data breach",
+          "pii",
+          "food service"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115990781045091412"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Artificial Intelligence Industry",
+        "theme": "Economic Espionage and Technology Transfer",
+        "description": "A former Google engineer, Linwei Ding, has been convicted in the U.S. for stealing data on Google's AI supercomputing infrastructure and secretly sharing it with Chinese tech firms, acting on behalf of the People's Republic of China government.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "economic espionage",
+          "data theft",
+          "artificial intelligence",
+          "China",
+          "united states",
+          "insider threat"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Energy, Critical Infrastructure",
+        "theme": "State-Sponsored Sabotage Cyberattacks",
+        "description": "Poland faced coordinated cyberattacks targeting over 30 wind and solar farms, a manufacturing company, and a major heat and power plant, with the intention of disrupting communications and potentially operations. The attack infrastructure is strongly linked to the APT group Static Tundra (Berserk Bear, Ghost Blizzard, Dragonfly), known for its interest in the energy sector and the use of wiper malware (DynoWiper, LazyWiper).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "critical infrastructure",
+          "energy",
+          "poland",
+          "sabotage",
+          "apt",
+          "static tundra",
+          "wiper malware"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187503/apt/cyberattacks-disrupt-communications-at-wind-solar-and-heat-facilities-in-poland/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Energy, Cloud, AI, Blockchain",
+        "theme": "Digital Sovereignty and Strategic Acquisitions",
+        "description": "Exaion, a French subsidiary of EDF specializing in AI cloud, cybersecurity, and blockchain, was largely sold to the American group Mara Holdings. This sale raises questions about France's digital sovereignty, particularly concerning its potential in cryptocurrency mining and AI, and reduces its ability to compete in these strategic areas.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "digital sovereignty",
+          "france",
+          "united states",
+          "usa",
+          "exaion",
+          "edf",
+          "blockchain",
+          "ai",
+          "cloud",
+          "cybersecurity",
+          "economy",
+          "strategic assets"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/vente-dexaion-un-nouveau-pas-en-arriere-dans-la-souverainete-numerique/"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Accounting",
+        "victime": "RINA Accountants & Advisors",
+        "description": "Data breach in February 2022 exposing Personally Identifiable Information (PII), including Social Security Numbers, for thousands of people. A $400,000 settlement fund has been created to compensate victims.",
+        "tags": [
+          "violation",
+          "breach",
+          "rina accountants & advisors",
+          "accounting",
+          "pii",
+          "ssn",
+          "personal data",
+          "lawsuit",
+          "settlement"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/rina-accountants-advisors-is-creating-400k-settlement-fund-to-settle-lawsuit-over-2022-data-breach/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Comcast",
+        "description": "A $117.5 million settlement agreement for a 2023 data breach related to the Citrix Bleed vulnerability, affecting over 30 million current and former customers. The agreement includes three years of financial monitoring and identity-theft protection service, as well as expense reimbursement or a cash payment.",
+        "tags": [
+          "violation",
+          "breach",
+          "comcast",
+          "telecommunications",
+          "cable",
+          "citrix bleed",
+          "customer data",
+          "settlement",
+          "lawsuit",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/comcast-agrees-to-117-5-million-settlement-to-resolve-lawsuits-over-2023-citrix-bleed-data-breach/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Activism",
+        "victime": "StopICE",
+        "description": "A major security breach reportedly exposed the personal information of over 100,000 users (names, logins, passwords, phone numbers, GPS coordinates). Hackers allegedly sent this data directly to US federal agencies (FBI, ICE, HSI).",
+        "tags": [
+          "violation",
+          "breach",
+          "stopice",
+          "activism",
+          "personal data",
+          "pii",
+          "gps",
+          "federal agencies",
+          "us government"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/stopice-hacked-names-and-locations-of-over-100k-users-were-sent-to-the-fbi-ice-and-hsi/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Government (Election Commission), Journalism",
+        "victime": "Bangladesh Election Commission website (14,000 journalists)",
+        "description": "A technical failure on the Bangladesh Election Commission website exposed sensitive PII (National ID numbers, mobile phone numbers, full application copies) of 14,000 journalists, allowing anyone to access this information.",
+        "tags": [
+          "violation",
+          "breach",
+          "bangladesh",
+          "election commission",
+          "journalism",
+          "pii",
+          "nid",
+          "personal data",
+          "technical failure",
+          "government"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/01/31/bd-14000-journos-personal-data-leaked-online/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Education & Research",
+        "victime": "Azerbaijan's Education & Research sector",
+        "description": "'xploitleaks' group claimed a data breach exposing approximately 817,241 records, including full names, birth dates, and home addresses, from Azerbaijan's education and research sector.",
+        "tags": [
+          "violation",
+          "breach",
+          "azerbaijan",
+          "education",
+          "research",
+          "xploitleaks",
+          "pii",
+          "personal data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115991252515576313"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Food Service",
+        "victime": "Dakota Sushi (Russia)",
+        "description": "'c0mmandor' group claimed a data breach, disclosing a user database from Dakota Sushi in Russia, including names, emails, phones, addresses, order IDs, payment methods, and IP addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "russia",
+          "dakota sushi",
+          "food service",
+          "pii",
+          "personal data",
+          "payment data",
+          "ip addresses"
+        ],
+        "sources": [
+          "https://infosec.exchange/@darkwebsonar/115990781045091412"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "secteur": "Restaurant",
+        "victime": "Panera Bread",
+        "description": "In January 2026, Panera Bread suffered a data breach where ShinyHunters published 14 million records, including 5.1 million unique email addresses, along with names, phone numbers, and physical addresses, following a failed extortion attempt.",
+        "tags": [
+          "violation",
+          "breach",
+          "panera bread",
+          "shinyhunters",
+          "restaurant",
+          "food service",
+          "pii",
+          "email",
+          "phone",
+          "physical address",
+          "extortion",
+          "data publication"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/PaneraBread"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25069",
+        "cvss": 9.3,
+        "product": "SunFounder Pironman Dashboard (pm_dashboard)",
+        "description": "Path traversal vulnerability in log file API endpoints allowing an unauthenticated remote attacker to read and delete arbitrary files, leading to sensitive information disclosure, data loss, and potential system compromise/DoS.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "path traversal",
+          "arbitrary file read",
+          "arbitrary file deletion",
+          "rce",
+          "sunfounder",
+          "pironman dashboard",
+          "critical vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25069"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-0921",
+        "cvss": "6.5 (critical impact)",
+        "product": "Iconics Suite SCADA system (GENESIS64, MC Works64)",
+        "description": "Vulnerability allowing attackers to trigger denial-of-service (DoS) conditions, elevate privileges, and corrupt critical system binaries on industrial control systems. Affects critical infrastructure sectors, and its exploitation is made easier when combined with CVE-2024-7587.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "scada",
+          "ics",
+          "dos",
+          "denial of service",
+          "privilege escalation",
+          "critical infrastructure",
+          "iconics suite"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/scada-vulnerability-triggers-dos/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-66039",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "Authentication bypass vulnerability that, when chained with other flaws, leads to remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "authentication bypass",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-61675",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "SQL injection vulnerability that, when chained with other flaws, leads to remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "sql injection",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-61678",
+        "cvss": "N/A (RCE)",
+        "product": "FreePBX",
+        "description": "Unrestricted file upload vulnerability enabling remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "freepbx",
+          "file upload",
+          "rce",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-24367",
+        "cvss": "N/A (RCE)",
+        "product": "Cacti",
+        "description": "Unauthenticated remote code execution (RCE) via the graph template mechanism, affecting versions prior to 1.2.29.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "cacti",
+          "rce",
+          "unauthenticated",
+          "network monitoring",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2025-52691",
+        "cvss": "N/A (RCE)",
+        "product": "SmarterTools SmarterMail",
+        "description": "Unauthenticated file upload vulnerability with path traversal leading to remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "smartermail",
+          "file upload",
+          "path traversal",
+          "rce",
+          "unauthenticated",
+          "exploit"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-exploit-modules/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "N/A (Zero-day RCE)",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Critical zero-day remote code execution (RCE) vulnerability, actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "zero-day",
+          "rce",
+          "active exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/31/ivanti-epmm-zero-days-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "N/A (Zero-day RCE)",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Critical zero-day remote code execution (RCE) vulnerability, actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti",
+          "epmm",
+          "zero-day",
+          "rce",
+          "active exploitation"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/01/31/ivanti-epmm-zero-days-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Cloud storage payment scam floods inboxes with fake renewals",
+        "description": "A large-scale email scam campaign is targeting users with fake cloud storage subscription renewal warnings. Emails falsely warn that photos, files, and accounts are about to be blocked or deleted due to alleged payment failure. They redirect to phishing sites hosted on Google Cloud Storage to steal credentials and promote fake upgrades.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://storage.googleapis.com/"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002",
+          "T1059",
+          "T1583.001"
+        ],
+        "analyse": "This widespread campaign targets general users, leveraging fear of data loss to push for credential theft and financial fraud. The use of legitimate domains (Google Cloud Storage) as a redirector may increase perceived credibility and detection difficulty. The impact is financial loss and data compromise for victims.",
+        "recommandations": "Educate users on identifying phishing emails and warning signs. Verify sender legitimacy and never click suspicious links. Use strong, unique passwords and multi-factor authentication (MFA) for all cloud services. Contact the service provider directly through official channels if in doubt about a payment message.",
+        "tags": [
+          "phishing",
+          "scam",
+          "cloud storage",
+          "credential theft",
+          "social engineering",
+          "malicious campaign"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cloud-storage-payment-scam-floods-inboxes-with-fake-renewals/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "title": "Mandiant details how ShinyHunters abuse SSO to steal cloud data",
+        "description": "Mandiant details how the ShinyHunters group and its affiliates (UNC6661, UNC6671) use vishing (voice phishing) and custom company-branded phishing sites to steal Single Sign-On (SSO) credentials and Multi-Factor Authentication (MFA) codes. These attacks grant access to cloud SaaS applications (Okta, Microsoft Entra, Google SSO) for data exfiltration, followed by extortion demands. UNC6661 also used a Google Workspace add-on ('ToogleBox Recall') to hide its activities.",
+        "threat_actor": "ShinyHunters, UNC6661, UNC6671",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1566.002",
+          "T1566.003",
+          "T1078",
+          "T1111",
+          "T1078.004",
+          "T1550.002",
+          "T1537",
+          "T1486",
+          "T1021.001",
+          "T1530",
+          "T1087.004"
+        ],
+        "analyse": "This campaign illustrates sophisticated social engineering combining real-time vishing and phishing to bypass modern security controls such as SSO and MFA. It targets critical cloud services, leading to significant data breaches and extortion. The use of legitimate add-ons (Google Workspace) for malicious actions is a notable tactic for stealth and persistence.",
+        "recommandations": "Implement strong Multi-Factor Authentication (MFA) (e.g., FIDO2/hardware tokens) not based on easily intercepted SMS or push notifications. Educate users about vishing and phishing risks, especially unsolicited helpdesk calls. Enforce strict access controls and the principle of least privilege for SaaS applications. Monitor SSO logs for suspicious activity and regularly audit third-party application integrations.",
+        "tags": [
+          "shinyhunters",
+          "unc6661",
+          "unc6671",
+          "vishing",
+          "phishing",
+          "sso",
+          "mfa bypass",
+          "cloud security",
+          "data theft",
+          "extortion",
+          "saas",
+          "mandiant",
+          "threat actor",
+          "mitre att&ck"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/"
+        ],
+        "date": "2026-02-01"
+      },
+      {
+        "title": "Researcher reveals evidence of private Instagram profiles leaking photos",
+        "description": "A researcher discovered a privacy flaw in Instagram where some private profiles exposed direct links to photos and captions to unauthenticated users on certain mobile devices, due to a server-side leak. Although Meta fixed the issue, the company dismissed the report, calling the fix an unintended side effect.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "This critical flaw allowed unauthorized access to private content, raising serious concerns about user data protection on social media platforms. Meta's response to the vulnerability disclosure highlights challenges in transparency and collaboration with security researchers, even after a flaw has been patched.",
+        "recommandations": "For users, review and strengthen privacy settings on social media. For platforms, improve vulnerability disclosure processes, conduct thorough root cause analyses, and maintain transparent communication with researchers. Technically, implement stricter access controls, ensure server response sanitization, and perform rigorous privacy testing.",
+        "tags": [
+          "instagram",
+          "data leak",
+          "private data",
+          "privacy",
+          "vulnerabilite",
+          "vulnerability",
+          "meta",
+          "social media",
+          "bug",
+          "disclosure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/researcher-reveals-evidence-of-private-instagram-profiles-leaking-photos/"
+        ],
+        "date": "2026-02-01"
+      }
+    ]
+  }
+}
