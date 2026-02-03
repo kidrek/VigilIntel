@@ -1,0 +1,1792 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification des activités cyber malveillantes, marquée par des attaques sophistiquées ciblant la chaîne d'approvisionnement logicielle et l'exploitation rapide de vulnérabilités zero-day. Les acteurs étatiques, notamment russes et chinois, continuent de mener des campagnes d'espionnage et de perturbation, exploitant des failles dans des logiciels couramment utilisés comme Microsoft Office et Notepad++. L'utilisation de l'IA par les attaquants pour générer du code malveillant et automatiser la distribution de malwares, comme observé avec MoltBot/OpenClaw et RedKitten, est une tendance émergente préoccupante. Les attaques de rançongiciels et les violations de données restent une menace constante, avec des groupes comme Scattered Lapsus ShinyHunters utilisant des tactiques de harcèlement psychologique. Des vulnérabilités critiques (CVSS >= 8) dans des produits clés tels qu'Ivanti EPMM, KiloView, Odoo, SandboxJS, Group-Office, OpenList et jsPDF soulignent la nécessité d'une gestion proactive des correctifs et d'une sécurité robuste. La menace supply chain est également mise en évidence par la compromission de MicroWorld Technologies et Notepad++. Géopolitiquement, les cyberattaques se mêlent aux tensions internationales, ciblant des infrastructures énergétiques et des groupes politiques. Globalement, l'environnement des menaces est en évolution rapide, nécessitant une vigilance accrue, une capacité de réponse rapide et une approche de défense multicouche, en particulier face à l'ingénierie sociale et aux attaques de la chaîne d'approvisionnement.",
+      "date": "2026-02-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT28 (UAC-0001, Fancy Bear)",
+        "secteur": "Gouvernement (Ukraine, UE), Secteur public",
+        "modop": "Exploitation de vulnérabilités zero-day (CVE-2026-21509 dans Microsoft Office) via des documents malveillants, ingénierie sociale (e-mails de phishing), détournement de COM, injection de DLL, shellcode caché dans des images, tâches planifiées pour la persistance, C2 via des services de stockage cloud légitimes (Filen).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "russia",
+          "espionnage",
+          "phishing",
+          "zero_day",
+          "com_hijacking",
+          "dll_sideloading",
+          "persistence",
+          "c2",
+          "cloud_storage",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Chinese state-sponsored threat actors (Lotus Blossom, Raspberry Typhoon, Bilbug, Spring Dragon)",
+        "secteur": "Télécommunications, Services financiers, Secteur public",
+        "modop": "Compromission de la chaîne d'approvisionnement logicielle (Notepad++), détournement du trafic de mise à jour en exploitant des vérifications faibles dans le mécanisme de mise à jour WinGUp, redirection vers des serveurs malveillants pour livrer des installateurs troyanisés, utilisation de privilèges internes volés pour regagner l'accès, déploiement de backdoor (Chrysalis).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "china",
+          "supply_chain",
+          "software_supply_chain",
+          "update_hijacking",
+          "backdoor",
+          "espionnage",
+          "telecom",
+          "financial_services"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/",
+          "https://fieldeffect.com/blog/chinese-linked-actors-notepad-update",
+          "https://securityaffairs.com/187531/security/nation-state-hack-exploited-hosting-infrastructure-to-hijack-notepad-updates/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "GlassWorm",
+        "secteur": "Utilisateurs macOS (développeurs, utilisateurs de crypto-monnaies)",
+        "modop": "Attaque via des extensions OpenVSX compromises, utilisation de caractères Unicode 'invisibles' pour cacher le code malveillant, vol de mots de passe, données de portefeuilles de crypto-monnaies, informations d'identification et configurations de développeurs (clés SSH, informations d'identification cloud/Git, fichiers .env), données de navigateur, bases de données Apple Notes, cookies Safari, accès à distance VNC, proxy SOCKS. C2 via Solana transaction memos, exfiltration vers des infrastructures contrôlées par l'attaquant.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "macos",
+          "supply_chain",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-attack-targets-macos-via-compromised-openvsx-extensions/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "RedKitten",
+        "secteur": "Organisations non-gouvernementales (ONG), Militants (Iran)",
+        "modop": "Campagne de cyberespionnage, ingénierie sociale (fichier Excel malveillant se faisant passer pour une liste de victimes de manifestations), utilisation de macros pour déployer un implant malveillant (SloppyMIO - malware C#), vol de fichiers, exécution de commandes arbitraires, récupération de modules additionnels depuis le cloud. Utilisation d'IA générative pour le développement du malware, C2 via GitHub, Google Drive et Telegram.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionnage",
+          "iran",
+          "social_engineering",
+          "malware",
+          "ai_assisted",
+          "data_exfiltration",
+          "command_execution",
+          "c2",
+          "activist_targeting",
+          "ngo_targeting"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-coded-oppression-redkitten-malware-targets-iranian-protesters/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Scattered Lapsus ShinyHunters (SLSH)",
+        "secteur": "Multiples organisations, y compris l'hôtellerie (Panera Bread)",
+        "modop": "Extorsion de données avec des tactiques de harcèlement psychologique, menaces physiques, 'swatting' contre les dirigeants et leurs familles, notification aux journalistes et régulateurs. Ingénierie sociale via téléphone (phishing d'employés se faisant passer pour le personnel informatique), sites de credential harvesting, vol de codes MFA, enregistrement de dispositifs pour MFA, fuite de données si le paiement est refusé.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_extortion",
+          "social_engineering",
+          "phishing",
+          "vishing",
+          "mfa_bypass",
+          "credential_theft",
+          "harassment",
+          "swatting",
+          "data_breach"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/please-dont-feed-the-scattered-lapsus-shiny-hunters/",
+          "https://securityaffairs.com/187556/data-breach/panera-bread-breach-affected-5-1-million-accounts-hibp-confirms/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Hackers (MongoDB)",
+        "secteur": "Organisations utilisant MongoDB",
+        "modop": "Exploitation d'instances MongoDB non sécurisées (bases de données exposées sans contrôles d'accès ou avec des configurations faibles), effacement de données et dépôt de notes de rançon demandant du Bitcoin.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransom",
+          "data_wiping",
+          "misconfiguration_exploitation",
+          "mongodb",
+          "data_extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187548/security/hackers-exploit-unsecured-mongodb-instances-to-wipe-data-and-demand-ransom/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "LockBit",
+        "secteur": "Santé (Capital Health)",
+        "modop": "Attaque par rançongiciel, compromission de données et demande de rançon.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "healthcare",
+          "data_breach"
+        ],
+        "sources": [
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/116003164515869974"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Malware MoltBot/OpenClaw",
+        "secteur": "Utilisateurs d'assistants IA (particuliers, développeurs), utilisateurs de crypto-monnaies",
+        "modop": "Campagne de malware via des 'skills' malveillants publiés sur les registres officiels (ClawHub, GitHub) d'assistants IA (OpenClaw/Moltbot). Ingénierie sociale pour tromper les utilisateurs en les faisant exécuter des commandes d'installation de malware (ex: 'AuthTool' pour télécharger NovaStealer). Cible: clés API de crypto-monnaies, portefeuilles, phrases de récupération, extensions de navigateur, données du Trousseau macOS, mots de passe de navigateur, clés SSH, identifiants cloud/Git, fichiers .env. Exploitation de la chaîne d'approvisionnement des 'skills' IA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "ai_skills",
+          "supply_chain",
+          "social_engineering",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "macos",
+          "windows"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-moltbot-skills-used-to-push-password-stealing-malware/",
+          "https://securityaffairs.com/187562/malware/moltbot-skills-exploited-to-distribute-400-malware-packages-in-days/"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Politique étrangère",
+        "theme": "Défaite du mouvement national kurde en Syrie",
+        "description": "Les Forces démocratiques syriennes (FDS), majoritairement kurdes, ont subi une défaite majeure en janvier 2026 face aux troupes de Damas, perdant le contrôle de 80% de leurs territoires. Cette situation est attribuée au désengagement américain, au changement d'alliance des tribus arabes, et au soutien turc à l'armée syrienne. Un accord du 30 janvier 2026 a entériné l'intégration des institutions de l'AANES à l'État syrien, l'incorporation des combattants des FDS à l'armée syrienne, mais a aussi concédé la reconnaissance du kurde comme langue nationale et du Newroz comme jour férié.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syrie",
+          "kurde",
+          "fds",
+          "rojava",
+          "conflit",
+          "relations_internationales",
+          "turquie",
+          "etats_unis"
+        ],
+        "sources": [
+          "https://www.iris-france.org/defaite-majeure-pour-le-mouvement-national-kurde-de-syrie/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "secteur": "Relations internationales, Humanitaire",
+        "theme": "Conflit israélo-palestinien et désinformation",
+        "description": "L'armée israélienne a admis l'exactitude des chiffres du ministère de la Santé du Hamas concernant les morts (71 000), contredisant les récits précédents de désinformation. Le passage de Rafah, contrôlé par l'Égypte, a rouvert, posant un dilemme aux Palestiniens entre rester et mourir ou partir avec un risque de non-retour, ce qui est interprété comme un choix entre plus de morts et un nettoyage ethnique, avec la passivité internationale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "palestine",
+          "conflit",
+          "rafah",
+          "humanitaire",
+          "desinformation",
+          "nettoyage_ethnique",
+          "egypte"
+        ],
+        "sources": [
+          "https://www.iris-france.org/israel-dement-ses-relais-dopinion-en-france/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "secteur": "Défense, Industrie, Souveraineté",
+        "theme": "Stratégie de Rheinmetall et souveraineté européenne de la défense",
+        "description": "Le géant allemand de l'armement Rheinmetall mène une stratégie agressive d'expansion via rachats et partenariats, notamment avec des entreprises américaines (Lockheed Martin, Anduril, ICEYE). Cette démarche, soutenue par l'Allemagne, vise à dominer le marché européen de la défense. Elle menace la souveraineté industrielle française et européenne en augmentant la dépendance technologique vis-à-vis des États-Unis et en concurrençant des projets franco-allemands comme le MGCS, notamment via une potentielle prise de contrôle de KNDS.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "defense",
+          "industrie",
+          "souverainete",
+          "europe",
+          "france",
+          "allemagne",
+          "etats_unis",
+          "rheinmetall",
+          "knds",
+          "mgcs",
+          "partenariats_strategiques",
+          "dependance_technologique"
+        ],
+        "date": "2026-02-03",
+        "sources": [
+          "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/souverainete-francaise-et-europeenne-menacees-la-predation-allemande-du-geant-de-larmement-rheinmetall/"
+        ]
+      },
+      {
+        "secteur": "Sécurité nationale, Technologie, Politique",
+        "theme": "Dépendances technologiques et sécurité nationale du Royaume-Uni",
+        "description": "Le Royaume-Uni fait face à des défis pour sa sécurité nationale en raison de sa dépendance vis-à-vis des fournisseurs technologiques américains, notamment concernant la modération en ligne et la lutte contre les campagnes d'influence étrangères. Des incidents récents (chatbot Grok de X, amende Cloudflare) illustrent la tension croissante entre les entreprises technologiques américaines et les gouvernements étrangers sur la régulation du contenu en ligne, compliquant les efforts du Royaume-Uni pour appliquer ses lois et perturber les opérations d'influence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "royaume_uni",
+          "etats_unis",
+          "securite_nationale",
+          "dependance_technologique",
+          "campagnes_influence",
+          "ia",
+          "regulation",
+          "moderation_online"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/tech-dependencies-undermine-uk-national-security"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "secteur": "Énergie, Infrastructure critique, Géopolitique",
+        "theme": "Cyberattaques destructrices contre le secteur énergétique polonais",
+        "description": "Fin décembre 2025, le secteur énergétique polonais a été la cible d'une série d'attaques cyber destructrices coordonnées, utilisant un nouveau malware appelé DynoWiper. L'opération a affecté plus de 30 sites d'énergie renouvelable et une centrale combinée de chaleur et d'électricité pendant une période de froid extrême.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "pologne",
+          "secteur_energie",
+          "infrastructure_critique",
+          "cyberattaque_destructive",
+          "malware",
+          "dynowiper"
+        ],
+        "sources": [
+          "https://sploited.blog/2026/02/02/dynowiper-and-the-polish-energy-sector/"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Restauration rapide",
+        "victime": "Panera Bread",
+        "description": "Panera Bread a subi une violation de données en janvier 2026, exposant 5,1 millions de comptes clients, incluant adresses e-mail, noms, numéros de téléphone et adresses physiques. Le groupe ShinyHunters a revendiqué l'attaque après que Panera ait refusé de payer une rançon, et a accédé aux systèmes via un code Microsoft Entra SSO volé lors d'une campagne de vishing.",
+        "tags": [
+          "violation",
+          "breach",
+          "panera_bread",
+          "restauration_rapide",
+          "clients",
+          "shinyhunters",
+          "vishing",
+          "microsoft_entra_sso",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187556/data-breach/panera-bread-breach-affected-5-1-million-accounts-hibp-confirms/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "secteur": "Commerce de détail (stations-service et dépanneurs)",
+        "victime": "Gulshan Management Services, Inc. (Handi Plus et Handi Stop)",
+        "description": "Une attaque par rançongiciel en septembre 2025 a compromis les numéros de sécurité sociale et de permis de conduire de 377 082 personnes, probablement des employés. L'accès initial a été obtenu par phishing, et l'incident est resté indétecté pendant plusieurs jours, permettant le vol de données sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "gulshan_management",
+          "commerce_detail",
+          "stations_service",
+          "employes",
+          "ransomware",
+          "phishing",
+          "ssn",
+          "permis_conduire"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/02/ransomware-attack-compromised-377000-peoples-social-security-and-drivers-license-numbers-from-texas-gas-station-and-convenience-store-chain/?pk_campaign=feed&pk_kwd=ransomware-attack-compromised-377000-peoples-social-security-and-drivers-license-numbers-from-texas-gas-station-and-convenience-store-chain"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Capital Health",
+        "description": "Capital Health a conclu un accord de 4,5 millions de dollars suite à une violation de données par rançongiciel attribuée au groupe LockBit. Les détails spécifiques des données compromises ne sont pas précisés, mais l'ampleur du règlement indique une compromission significative.",
+        "tags": [
+          "violation",
+          "breach",
+          "capital_health",
+          "sante",
+          "hopital",
+          "lockbit",
+          "ransomware",
+          "reglement_juridique"
+        ],
+        "sources": [
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/116003164515869974"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25142",
+        "cvss": "10.0",
+        "product": "SandboxJS",
+        "description": "Vulnérabilité de pollution de prototype ('Prototype Pollution') dans la bibliothèque de sandboxing JavaScript SandboxJS, permettant une évasion de sandbox et l'exécution de code à distance (RCE) via la restriction incorrecte de '__lookupGetter__'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sandboxjs",
+          "prototype_pollution",
+          "rce",
+          "sandbox_escape",
+          "javascript",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25142"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1453",
+        "cvss": "9.8",
+        "product": "KiloView Encoder Series",
+        "description": "Vulnérabilité critique de fonction critique sans authentification ('Missing Authentication for Critical Function') dans les encodeurs vidéo et dispositifs de streaming KiloView, permettant à un attaquant non authentifié de créer/supprimer des comptes administrateur et d'obtenir un contrôle administratif total à distance.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kiloview",
+          "encoder",
+          "streaming",
+          "authentification_manquante",
+          "rce",
+          "admin_privileges",
+          "critique"
+        ],
+        "sources": [
+          "https://securityonline.info/broadcast-hijack-critical-kiloview-flaw-cvss-9-8-grants-full-control/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti EPMM",
+        "description": "Vulnérabilité d'injection de code non authentifiée dans Ivanti EPMM, permettant l'exécution de code à distance (RCE). Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti_epmm",
+          "code_injection",
+          "rce",
+          "exploitation_active",
+          "critique",
+          "authentification"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/ivanti-epmm-vulnerabilities-active-exploitation"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti EPMM",
+        "description": "Vulnérabilité d'injection de code non authentifiée dans Ivanti EPMM, permettant l'exécution de code à distance (RCE). Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti_epmm",
+          "code_injection",
+          "rce",
+          "exploitation_active",
+          "critique",
+          "authentification"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/ivanti-epmm-vulnerabilities-active-exploitation"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25134",
+        "cvss": "9.4",
+        "product": "Group-Office",
+        "description": "Vulnérabilité d'injection d'arguments dans MaintenanceController::actionZipLanguage de Group-Office, permettant l'exécution de code à distance (RCE) en combinant avec l'upload d'un fichier zip malveillant.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "group_office",
+          "argument_injection",
+          "rce",
+          "code_execution",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25134"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25137",
+        "cvss": "9.1",
+        "product": "NixOs Odoo package",
+        "description": "L'implémentation NixOS d'Odoo expose publiquement le gestionnaire de base de données sans authentification, permettant le téléchargement ou la suppression de la base de données entière et du filestore.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nixos",
+          "odoo",
+          "authentification_manquante",
+          "data_exfiltration",
+          "data_deletion",
+          "critique",
+          "acces"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25137"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25059",
+        "cvss": "8.8",
+        "product": "OpenList Frontend",
+        "description": "Vulnérabilité de 'Path Traversal' dans les gestionnaires de copie et de suppression de fichiers de OpenList Frontend, permettant à un attaquant authentifié de contourner les restrictions de chemin et d'accéder/manipuler des fichiers d'autres utilisateurs.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openlist",
+          "path_traversal",
+          "file_manipulation",
+          "authentification",
+          "elevee"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25059"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-24763",
+        "cvss": "8.8",
+        "product": "OpenClaw (formerly Clawdbot)",
+        "description": "Vulnérabilité d'injection de commande authentifiée dans le mécanisme d'exécution sandbox Docker d'OpenClaw due à une gestion non sécurisée de la variable d'environnement PATH, permettant à un utilisateur authentifié d'influencer l'exécution de commandes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openclaw",
+          "clawdbot",
+          "docker",
+          "command_injection",
+          "rce",
+          "authentification",
+          "ia",
+          "elevee"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24763"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25060",
+        "cvss": "8.1",
+        "product": "OpenList Frontend",
+        "description": "Configuration TLS par défaut non sécurisée dans OpenList Frontend, où la vérification du certificat est désactivée par défaut, permettant des attaques Man-in-the-Middle (MitM) et l'interception/manipulation des communications de stockage.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openlist",
+          "tls",
+          "insecure_configuration",
+          "mitm",
+          "authentification",
+          "elevee"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25060"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-24737",
+        "cvss": "8.1",
+        "product": "jsPDF",
+        "description": "Vulnérabilité d'injection PDF dans AcroFormChoiceField de jsPDF, permettant l'exécution de JavaScript arbitraire lorsque la victime ouvre un document PDF malveillant en raison d'une mauvaise gestion des entrées non assainies.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "pdf_injection",
+          "javascript_execution",
+          "rce",
+          "elevee"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24737"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": "Not specified (Actively exploited zero-day)",
+        "product": "Microsoft Office",
+        "description": "Vulnérabilité activement exploitée dans plusieurs versions de Microsoft Office (zero-day), contournant les fonctionnalités de sécurité et permettant l'exécution de code suite à l'ouverture de documents malveillants. Utilisée par l'APT28 (UAC-0001) pour des attaques ciblant l'Ukraine et l'UE.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "zero_day",
+          "exploitation_active",
+          "rce",
+          "security_feature_bypass",
+          "apt28",
+          "critique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2nd February – Threat Intelligence Report",
+        "description": "Le rapport de Check Point Research met en évidence une compromission de la chaîne d'approvisionnement de MicroWorld Technologies (eScan antivirus). Des mises à jour malveillantes ont été distribuées via l'outil de mise à jour légitime, installant un malware multi-étapes pour la persistance, l'accès à distance et le blocage des mises à jour automatiques. L'incident souligne les risques liés à la confiance dans les mécanismes de mise à jour logicielle.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "TA0003 (Persistence), TA0008 (Impact), T1195.002 (Supply Chain Compromise: Software Update)",
+        "analyse": "Cet incident de chaîne d'approvisionnement impacte directement la sécurité des clients de MicroWorld Technologies, qui installent des mises à jour malveillantes via un canal de confiance. L'impact est potentiellement mondial étant donné la portée d'un éditeur d'antivirus. Il démontre la capacité des attaquants à cibler des maillons faibles dans la distribution de logiciels, compromettant la confiance des utilisateurs dans les systèmes de mise à jour légitimes.",
+        "recommandations": "Surveiller les anomalies dans les processus de mise à jour logicielle. Mettre en œuvre des vérifications d'intégrité supplémentaires pour les packages de mise à jour. Utiliser des solutions de sécurité multicouches et une segmentation réseau pour limiter la propagation en cas de compromission. Évaluer la sécurité des fournisseurs tiers, notamment ceux impliqués dans la chaîne d'approvisionnement logicielle.",
+        "tags": [
+          "threat_intelligence",
+          "supply_chain",
+          "malware",
+          "persistence",
+          "remote_access",
+          "antivirus",
+          "software_update"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-february-threat-intelligence-report/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "AI-Coded Oppression: “RedKitten” Malware Targets Iranian Protesters",
+        "description": "Une nouvelle campagne de cyberespionnage, nommée “RedKitten”, cible les ONG et les militants iraniens. Le malware SloppyMIO, probablement développé avec l'aide de l'IA générative, est distribué via une feuille de calcul Excel malveillante prétendant contenir une liste de victimes. Le malware est un outil de surveillance capable de voler des fichiers et d'exécuter des commandes. Il utilise GitHub, Google Drive et Telegram pour la configuration, la récupération des charges utiles et le C2, exploitant la confiance dans ces services légitimes. L'opération coïncide avec les “Dey 1404 Protests” en Iran.",
+        "threat_actor": "RedKitten",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.001 (Phishing: Spearphishing Attachment)",
+            "T1204.002 (User Execution: Malicious File)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1560 (Archive Collected Data)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1041 (Exfiltration Over C2 Channel)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1204.002 (User Execution: Malicious File), T1059 (Command and Scripting Interpreter), T1560 (Archive Collected Data), T1071.001 (Application Layer Protocol: Web Protocols), T1041 (Exfiltration Over C2 Channel)",
+        "analyse": "Cette campagne illustre une utilisation alarmante de l'IA générative pour créer des malwares, permettant à des acteurs avec moins d'expertise technique de mener des opérations sophistiquées. L'impact est une surveillance ciblée et la suppression des voix dissidentes, avec des implications graves pour les droits de l'homme et la liberté d'expression. L'utilisation de services légitimes pour le C2 rend la détection plus difficile et souligne la nécessité de surveiller les activités anormales sur ces plateformes.",
+        "recommandations": "Sensibiliser les ONG et militants aux risques d'ingénierie sociale et aux leurres émotionnels. Déployer des solutions EDR capables de détecter les comportements de macros malveillantes et les implantations de malware. Surveiller les communications C2 via des plateformes comme GitHub, Google Drive et Telegram pour des activités inhabituelles. Renforcer la sécurité des postes de travail et des réseaux des organisations ciblées. Utiliser des outils d'analyse de fichiers pour détecter les malwares générés par l'IA.",
+        "tags": [
+          "redkitten",
+          "cyberespionnage",
+          "iran",
+          "ong",
+          "activistes",
+          "social_engineering",
+          "malware",
+          "ai_assisted",
+          "surveillance",
+          "droits_humains"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-coded-oppression-redkitten-malware-targets-iranian-protesters/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Beyond ACLs: Mapping Windows Privilege Escalation Paths with BloodHound",
+        "description": "Cet article technique explore le fonctionnement des jetons d'accès et des privilèges Windows, et explique comment certains privilèges (comme SeDebugPrivilege, SeImpersonatePrivilege, SeAssignPrimaryTokenPrivilege) peuvent contourner les contrôles d'accès ACL standards, permettant des élévations de privilèges locales. Il décrit également comment BloodHound, via de nouvelles requêtes, peut être utilisé par les attaquants et les défenseurs pour cartographier ces chemins d'escalade de privilèges à travers un domaine Active Directory, en identifiant les droits attribués aux utilisateurs et aux machines.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1134 (Access Token Manipulation)",
+            "T1068 (Exploitation for Privilege Escalation)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1134 (Access Token Manipulation), T1068 (Exploitation for Privilege Escalation)",
+        "analyse": "L'analyse met en lumière la complexité de la gestion des privilèges Windows et les risques d'escalade. Elle fournit des insights cruciaux pour les équipes de sécurité et les attaquants sur la détection et l'exploitation des failles de configuration liées aux droits d'accès. La cartographie des privilèges avec BloodHound est essentielle pour identifier les chemins d'attaque cachés et renforcer la posture de sécurité d'un environnement Active Directory. Les implications sont locales mais peuvent mener à une compromission complète du domaine.",
+        "recommandations": "Utiliser BloodHound pour énumérer et visualiser les chemins d'escalade de privilèges basés sur les ACLs et les privilèges Windows. Mettre en œuvre le principe du moindre privilège. Restreindre l'attribution de privilèges sensibles (SeDebugPrivilege, SeImpersonatePrivilege). Configurer les droits de connexion (logon rights) pour limiter les mouvements latéraux des comptes privilégiés. Assurer une configuration UAC adéquate et sensibiliser les utilisateurs à l'exécution de processus avec des privilèges élevés.",
+        "tags": [
+          "privilege_escalation",
+          "windows",
+          "active_directory",
+          "bloodhound",
+          "acl",
+          "access_token",
+          "security_auditing",
+          "dfir",
+          "ttp",
+          "post_exploitation"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/beyond-acls-mapping-windows-privilege-escalation-paths-with-bloodhound.html"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Collecting Evidence from Google Workspace",
+        "description": "L'article aborde les méthodes de collecte de logs et de preuves lors d'investigations d'incidents impliquant Google Workspace. Il met en évidence les deux approches principales : l'interface d'administration Workspace (UI) et le SDK/APIs d'administration Workspace, soulignant que bien que la plateforme fournisse beaucoup de données, toutes ne sont pas également faciles à collecter ou à analyser. Il s'agit d'un guide pratique pour les équipes DFIR.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet article est crucial pour les équipes de réponse aux incidents qui doivent opérer dans des environnements cloud comme Google Workspace. La capacité à collecter efficacement des preuves est fondamentale pour comprendre la portée d'une compromission, identifier les tactiques des attaquants et mener une enquête forensique. La complexité de la collecte des données sur ces plateformes peut ralentir la réponse aux incidents si les procédures ne sont pas bien établies.",
+        "recommandations": "Développer des procédures claires pour la collecte de logs et de preuves depuis Google Workspace, en utilisant à la fois l'interface UI et les APIs. Tester régulièrement ces procédures dans le cadre d'exercices DFIR. S'assurer que les équipes ont les autorisations et les outils nécessaires pour accéder aux données pertinentes. Comprendre les types de données disponibles et leur rétention pour chaque source dans Google Workspace.",
+        "tags": [
+          "dfir",
+          "google_workspace",
+          "cloud_security",
+          "incident_response",
+          "log_management",
+          "evidence_collection",
+          "forensics"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/collecting-evidence-from-google-workspace"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Hackers exploit unsecured MongoDB instances to wipe data and demand ransom",
+        "description": "Des pirates exploitent plus de 1 400 instances de serveurs MongoDB exposées et non sécurisées pour effacer des données et laisser des notes de rançon, exigeant généralement 500 $ en Bitcoin. La plupart de ces compromissions résultent de bases de données laissées en ligne sans contrôles d'accès appropriés ou avec des configurations faibles, plutôt que d'exploits de vulnérabilités connues (bien que plus de 95 000 serveurs présentent des vulnérabilités, principalement DDoS). Le même acteur semble être derrière la majorité de ces attaques de rançon.",
+        "threat_actor": "Hackers (unique dominant actor)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1190 (Exploit Public-Facing Application)",
+            "T1485 (Data Destruction)",
+            "T1486 (Data Encrypt for Impact)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1485 (Data Destruction), T1486 (Data Encrypt for Impact)",
+        "analyse": "La facilité avec laquelle ces bases de données sont compromises met en évidence un problème persistant de gestion des configurations de sécurité de base. L'impact est direct pour les organisations victimes, entraînant une perte de données et des perturbations opérationnelles. Le risque est amplifié par la possibilité qu'une vulnérabilité RCE zero-day dans MongoDB puisse être exploitée à grande échelle, transformant la misconfiguration en une porte d'entrée massive pour des attaques de rançon.",
+        "recommandations": "Appliquer les meilleures pratiques de prévention et de durcissement pour les déploiements MongoDB. S'assurer que les bases de données ne sont pas exposées publiquement sans contrôles d'accès robustes. Mettre en œuvre l'authentification forte et le principe du moindre privilège. Surveiller les logs pour détecter les accès non autorisés et les tentatives de suppression de données. Effectuer des audits de sécurité réguliers des configurations MongoDB.",
+        "tags": [
+          "mongodb",
+          "data_wipe",
+          "ransom",
+          "misconfiguration",
+          "database_security",
+          "exploitation",
+          "data_destruction"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187548/security/hackers-exploit-unsecured-mongodb-instances-to-wipe-data-and-demand-ransom/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Malware campaign exploiting OpenClaw/MoltBot AI skills and compromised OpenVSX extensions",
+        "description": "Deux campagnes de malware distinctes exploitent les écosystèmes d'assistants IA (OpenClaw/Moltbot) et les extensions OpenVSX pour macOS. La première campagne ('GlassWorm') utilise des extensions OpenVSX compromises pour cibler macOS, volant des mots de passe, des données de crypto-portefeuilles et des identifiants de développeurs via des caractères Unicode 'invisibles' et des mémo de transaction Solana pour le C2. La seconde campagne abuse des 'skills' d'IA malveillants publiés sur ClawHub et GitHub (plus de 400 packages) pour distribuer des stealers d'informations (NovaStealer) sur macOS et Windows, en se faisant passer pour des outils de trading crypto et en utilisant des 'AuthTools' malveillants pour contourner Gatekeeper et voler des clés API, phrases de récupération, mots de passe de navigateur, clés SSH et identifiants cloud. Ces campagnes exploitent l'ingénierie sociale et le manque de sécurité dans les registres de 'skills' IA.",
+        "threat_actor": "GlassWorm operators, Malware MoltBot/OpenClaw",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "45.32.150.251"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 (Supply Chain Compromise: Software Update)",
+            "T1566.001 (Phishing: Spearphishing Attachment)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1003 (OS Credential Dumping)",
+            "T1555 (Credentials from Password Stores)",
+            "T1529 (System Shutdown/Reboot)",
+            "T1573 (Encrypted Channel)",
+            "T1572 (Protocol Tunneling)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1071.004 (Application Layer Protocol: DNS)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Software Update), T1566.001 (Phishing: Spearphishing Attachment), T1059 (Command and Scripting Interpreter), T1003 (OS Credential Dumping), T1555 (Credentials from Password Stores), T1529 (System Shutdown/Reboot), T1573 (Encrypted Channel), T1572 (Protocol Tunneling), T1071.001 (Application Layer Protocol: Web Protocols), T1071.004 (Application Layer Protocol: DNS)",
+        "analyse": "Ces attaques démontrent la convergence des menaces de supply chain, de l'ingénierie sociale et de l'abus de technologies émergentes (IA). L'exploitation des écosystèmes d'extensions et de 'skills' IA pose un risque significatif, en particulier pour les développeurs et les utilisateurs de crypto-monnaies. L'impact est la compromission de données sensibles et d'actifs financiers, contournant les protections natives du système (Gatekeeper). L'exclusion des systèmes russes suggère une origine géographique de l'attaquant.",
+        "recommandations": "Vérifier la légitimité des extensions et 'skills' IA avant installation. Isoler les assistants IA dans des machines virtuelles avec des permissions restreintes. Mettre en place une authentification forte pour les comptes de développeurs et de crypto-monnaies. Révoquer et renouveler tous les identifiants et mots de passe compromis après une infection. Utiliser des solutions EDR et des contrôles d'accès granulaires. Surveiller les communications C2 anormales et les exfiltrations de données. Sensibiliser les utilisateurs aux risques d'ingénierie sociale liés aux outils IA et aux plateformes d'extensions.",
+        "tags": [
+          "malware",
+          "glassworm",
+          "moltbot",
+          "openclaw",
+          "supply_chain",
+          "ai_abuse",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "macos",
+          "windows",
+          "social_engineering",
+          "gatekeeper_bypass"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-attack-targets-macos-via-compromised-openvsx-extensions/",
+          "https://www.bleepingcomputer.com/news/security/malicious-moltbot-skills-used-to-push-password-stealing-malware/",
+          "https://securityaffairs.com/187562/malware/moltbot-skills-exploited-to-distribute-400-malware-packages-in-days/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Nation-state actors exploit Microsoft Office zero-day (CVE-2026-21509) in attacks against Ukraine and EU",
+        "description": "Le groupe APT28 (UAC-0001, Fancy Bear), soutenu par la Russie, exploite activement la vulnérabilité zero-day récemment patchée CVE-2026-21509 dans Microsoft Office pour cibler des entités gouvernementales en Ukraine et dans l'Union Européenne. Les attaquants distribuent des documents Office malveillants qui déclenchent une chaîne de téléchargement basée sur WebDAV pour installer des malwares via le détournement de COM (EhStoreShell.dll), du shellcode caché dans une image (SplashScreen.png) et une tâche planifiée (OneDriveHealth) pour la persistance. Le framework COVENANT est déployé, utilisant le service de stockage cloud Filen (filen.io) pour les communications C2. La rapidité d'exploitation de cette zero-day après sa divulgation souligne l'agilité des acteurs étatiques russes.",
+        "threat_actor": "APT28 (UAC-0001, Fancy Bear)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-21509"
+          ],
+          "DOMAIN": [
+            "filen.io"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1204.002 (User Execution: Malicious File)",
+            "T1189 (Drive-by Compromise)",
+            "T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking)",
+            "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+            "T1027.001 (Obfuscated Files or Information: Steganography)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1071.004 (Application Layer Protocol: DNS)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1204.002 (User Execution: Malicious File), T1189 (Drive-by Compromise), T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking), T1053.005 (Scheduled Task/Job: Scheduled Task), T1027.001 (Obfuscated Files or Information: Steganography), T1071.001 (Application Layer Protocol: Web Protocols), T1071.004 (Application Layer Protocol: DNS)",
+        "analyse": "Cette campagne illustre la menace persistante et adaptable des acteurs étatiques russes, utilisant des zero-days pour des objectifs d'espionnage et de perturbation. La focalisation initiale sur l'Ukraine, suivie d'une expansion vers l'UE, confirme que l'Ukraine sert de terrain d'essai pour de nouvelles TTPs. L'utilisation de services cloud légitimes pour le C2 rend la détection plus difficile. L'impact est significatif pour la sécurité nationale des pays ciblés, menaçant la confidentialité des informations gouvernementales.",
+        "recommandations": "Appliquer immédiatement les mises à jour de sécurité Microsoft Office (KB5073455, KB5078131, KB5073724). Restreindre ou surveiller les connexions aux services de stockage cloud non essentiels (ex: filen.io). Mettre en œuvre des mesures de détection pour le détournement de COM, l'exécution de DLL malveillantes et la création de tâches planifiées suspectes. Sensibiliser les utilisateurs aux e-mails de phishing contenant des documents Office. Utiliser une approche de détection multicouche avec EDR et SIEM pour corréler les événements suspects.",
+        "tags": [
+          "apt28",
+          "uac_0001",
+          "fancy_bear",
+          "russia",
+          "nation_state",
+          "zero_day",
+          "microsoft_office",
+          "cve_2026_21509",
+          "exploitation_active",
+          "espionnage",
+          "ukraine",
+          "eu",
+          "phishing",
+          "c2",
+          "com_hijacking",
+          "covenant_framework"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Notepad++ update infrastructure compromised by Chinese state-linked actors (Lotus Blossom)",
+        "description": "Des acteurs étatiques chinois (probablement Lotus Blossom/APT group) ont compromis l'infrastructure de mise à jour de Notepad++ via une attaque de chaîne d'approvisionnement ciblée entre juin et décembre 2025. Ils ont exploité une faiblesse dans la vérification des mises à jour de l'outil WinGUp pour intercepter et rediriger sélectivement le trafic de certains utilisateurs vers des serveurs malveillants, distribuant des installateurs troyanisés et une backdoor custom nommée Chrysalis. La compromission a touché des entreprises des secteurs des télécommunications et des services financiers en Asie de l'Est. Notepad++ a depuis migré vers un nouvel hébergeur plus sécurisé et a renforcé les mécanismes de vérification des certificats et signatures des installateurs.",
+        "threat_actor": "Chinese state-sponsored threat actors (Lotus Blossom, Raspberry Typhoon, Bilbug, Spring Dragon)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 (Supply Chain Compromise: Software Update)",
+            "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+            "T1574.006 (Hijack Execution Flow: Dynamic-link Library Search Order Hijacking)",
+            "T1574.008 (Hijack Execution Flow: Path Interception)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1566.001 (Phishing: Spearphishing Attachment)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Software Update), T1574.001 (Hijack Execution Flow: DLL Side-Loading), T1574.006 (Hijack Execution Flow: Dynamic-link Library Search Order Hijacking), T1574.008 (Hijack Execution Flow: Path Interception), T1059 (Command and Scripting Interpreter), T1566.001 (Phishing: Spearphishing Attachment)",
+        "analyse": "Cette attaque de chaîne d'approvisionnement souligne la sophistication des acteurs étatiques chinois et leur capacité à compromettre des canaux de distribution logiciels légitimes. L'impact est potentiellement l'espionnage industriel et étatique sur des secteurs stratégiques. La persistance de l'attaquant et sa capacité à regagner un point d'appui après une interruption démontrent des ressources importantes. Cet incident met en lumière la nécessité pour les développeurs de logiciels et les organisations utilisatrices de renforcer la sécurité des mises à jour et la vérification des packages.",
+        "recommandations": "Mettre à jour toutes les installations de Notepad++ vers la version 8.9 ou ultérieure. Auditer les logs des terminaux pour toute exécution d'installateurs Notepad++ suspecte pendant la période de compromission (juin-décembre 2025). Renforcer la vérification des signatures et certificats pour toutes les mises à jour logicielles. Révoquer et renouveler les identifiants de service internes. Restreindre l'accès externe aux interfaces d'administration des serveurs. Mettre en œuvre une segmentation réseau autour des infrastructures d'hébergement et de mise à jour.",
+        "tags": [
+          "notepad++",
+          "supply_chain",
+          "nation_state",
+          "china",
+          "apt",
+          "update_hijacking",
+          "backdoor",
+          "espionnage",
+          "telecom",
+          "financial_services",
+          "chrysalis",
+          "lotus_blossom"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/",
+          "https://fieldeffect.com/blog/chinese-linked-actors-notepad-update",
+          "https://securityaffairs.com/187531/security/nation-state-hack-exploited-hosting-infrastructure-to-hijack-notepad-updates/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Please Don’t Feed the Scattered Lapsus ShinyHunters",
+        "description": "Scattered Lapsus ShinyHunters (SLSH) est un groupe d'extorsion de données se distinguant par des tactiques psychologiques agressives : harcèlement, menaces et 'swatting' contre les dirigeants et leurs familles, tout en alertant les médias et les régulateurs. Le groupe utilise le phishing téléphonique (vishing) pour voler les identifiants SSO et les codes MFA, puis enregistre ses propres appareils pour accéder aux systèmes. Une experte (Allison Nixon, Unit 221B) déconseille toute négociation prolongée, arguant que cela ne fait qu'encourager le groupe et que leur historique est peu fiable concernant la destruction des données.",
+        "threat_actor": "Scattered Lapsus ShinyHunters (SLSH)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.002 (Phishing: Spearphishing Link)",
+            "T1078 (Valid Accounts)",
+            "T1556 (Credential Access)",
+            "T1559 (Adversary-in-the-Middle)",
+            "T1530 (Data from Local System)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1573 (Encrypted Channel)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1566.002 (Phishing: Spearphishing Link), T1078 (Valid Accounts), T1556 (Credential Access), T1559 (Adversary-in-the-Middle), T1530 (Data from Local System), T1059 (Command and Scripting Interpreter), T1573 (Encrypted Channel)",
+        "analyse": "Ce rapport met en lumière une évolution des tactiques d'extorsion, intégrant des éléments de guerre psychologique pour maximiser la pression sur les victimes. L'imprévisibilité et le manque de professionnalisme de SLSH, comparés aux groupes de rançongiciels plus structurés, rendent les négociations particulièrement risquées. L'impact va au-delà de la perte de données, atteignant la réputation et le bien-être personnel des dirigeants.",
+        "recommandations": "Ne pas s'engager dans des négociations prolongées avec SLSH au-delà d'une réponse de refus de paiement. Former les employés aux campagnes de vishing et au phishing ciblé. Mettre en œuvre des MFA résistantes au phishing. Surveiller les tentatives d'enregistrement de nouveaux appareils pour les comptes SSO. Avoir un plan de réponse aux incidents incluant la gestion de la réputation et le soutien aux cadres ciblés par le harcèlement. Isoler les systèmes compromis et restaurer à partir de sauvegardes sécurisées.",
+        "tags": [
+          "data_extortion",
+          "ransom_gang",
+          "shinyhunters",
+          "slsh",
+          "vishing",
+          "phishing",
+          "mfa_bypass",
+          "social_engineering",
+          "harassment",
+          "swatting",
+          "psychological_warfare"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/please-dont-feed-the-scattered-lapsus-shiny-hunters/"
+        ],
+        "date": "2026-02-03"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals an intensification of malicious cyber activities, marked by sophisticated attacks targeting the software supply chain and the rapid exploitation of zero-day vulnerabilities. State-sponsored actors, notably Russian and Chinese, continue to conduct espionage and disruptive campaigns, exploiting flaws in commonly used software like Microsoft Office and Notepad++. The use of AI by attackers to generate malicious code and automate malware distribution, as observed with MoltBot/OpenClaw and RedKitten, is a growing concern. Ransomware attacks and data breaches remain a constant threat, with groups like Scattered Lapsus ShinyHunters employing psychological harassment tactics. Critical vulnerabilities (CVSS >= 8) in key products such as Ivanti EPMM, KiloView, Odoo, SandboxJS, Group-Office, OpenList, and jsPDF underscore the need for proactive patch management and robust security. Supply chain threats are also highlighted by the compromise of MicroWorld Technologies and Notepad++. Geopolitically, cyberattacks intertwine with international tensions, targeting energy infrastructure and political groups. Overall, the threat landscape is rapidly evolving, requiring increased vigilance, swift response capabilities, and a multi-layered defense approach, especially against social engineering and supply chain attacks.",
+      "date": "2026-02-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT28 (UAC-0001, Fancy Bear)",
+        "secteur": "Government (Ukraine, EU), Public Sector",
+        "modop": "Exploitation of zero-day vulnerabilities (CVE-2026-21509 in Microsoft Office) via malicious documents, social engineering (phishing emails), COM hijacking, DLL injection, shellcode hidden in images, scheduled tasks for persistence, C2 via legitimate cloud storage services (Filen).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "russia",
+          "espionage",
+          "phishing",
+          "zero_day",
+          "com_hijacking",
+          "dll_sideloading",
+          "persistence",
+          "c2",
+          "cloud_storage",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Chinese state-sponsored threat actors (Lotus Blossom, Raspberry Typhoon, Bilbug, Spring Dragon)",
+        "secteur": "Telecommunications, Financial Services, Public Sector",
+        "modop": "Compromise of software supply chain (Notepad++), hijacking of update traffic by exploiting weak verification in the WinGUp update mechanism, redirection to malicious servers to deliver trojanized installers, use of stolen internal credentials to regain access, deployment of backdoor (Chrysalis).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state",
+          "china",
+          "supply_chain",
+          "software_supply_chain",
+          "update_hijacking",
+          "backdoor",
+          "espionage",
+          "telecom",
+          "financial_services"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/",
+          "https://fieldeffect.com/blog/chinese-linked-actors-notepad-update",
+          "https://securityaffairs.com/187531/security/nation-state-hack-exploited-hosting-infrastructure-to-hijack-notepad-updates/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "GlassWorm",
+        "secteur": "macOS users (developers, cryptocurrency users)",
+        "modop": "Attack via compromised OpenVSX extensions, use of 'invisible' Unicode characters to hide malicious code, stealing passwords, crypto-wallet data, developer credentials and configurations (SSH keys, cloud/Git credentials, .env files), browser data, Apple Notes databases, Safari cookies, VNC-based remote access, SOCKS proxying. C2 via Solana transaction memos, exfiltration to attacker-controlled infrastructure.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "macos",
+          "supply_chain",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "developer_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-attack-targets-macos-via-compromised-openvsx-extensions/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "RedKitten",
+        "secteur": "Non-Governmental Organizations (NGOs), Activists (Iran)",
+        "modop": "Cyber-espionage campaign, social engineering (malicious Excel spreadsheet posing as a list of protest victims), use of macros to deploy a custom malware implant (SloppyMIO - C# malware), file theft, arbitrary command execution, retrieval of additional modules from the cloud. Use of generative AI for malware development, C2 via GitHub, Google Drive, and Telegram.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionage",
+          "iran",
+          "social_engineering",
+          "malware",
+          "ai_assisted",
+          "data_exfiltration",
+          "command_execution",
+          "c2",
+          "activist_targeting",
+          "ngo_targeting"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-coded-oppression-redkitten-malware-targets-iranian-protesters/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Scattered Lapsus ShinyHunters (SLSH)",
+        "secteur": "Multiple organizations, including hospitality (Panera Bread)",
+        "modop": "Data extortion using aggressive psychological tactics: harassment, threats, and 'swatting' against executives and their families, while notifying journalists and regulators. Social engineering via phone phishing (vishing) to steal SSO credentials and MFA codes, then registering their own devices to access systems. Data leakage if ransom is refused.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_extortion",
+          "social_engineering",
+          "phishing",
+          "vishing",
+          "mfa_bypass",
+          "credential_theft",
+          "harassment",
+          "swatting",
+          "data_breach"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/please-dont-feed-the-scattered-lapsus-shiny-hunters/",
+          "https://securityaffairs.com/187556/data-breach/panera-bread-breach-affected-5-1-million-accounts-hibp-confirms/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "Hackers (MongoDB)",
+        "secteur": "Organizations using MongoDB",
+        "modop": "Exploiting unsecured MongoDB instances (databases exposed without access controls or with weak configurations), wiping data, and leaving ransom notes demanding Bitcoin.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransom",
+          "data_wiping",
+          "misconfiguration_exploitation",
+          "mongodb",
+          "data_extortion"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187548/security/hackers-exploit-unsecured-mongodb-instances-to-wipe-data-and-demand-ransom/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "LockBit",
+        "secteur": "Healthcare (Capital Health)",
+        "modop": "Ransomware attack, data compromise, and ransom demand.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "healthcare",
+          "data_breach"
+        ],
+        "sources": [
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/116003164515869974"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "nom": "MoltBot/OpenClaw Malware",
+        "secteur": "AI assistant users (individuals, developers), cryptocurrency users",
+        "modop": "Malware campaign via malicious 'skills' published on official registries (ClawHub, GitHub) of AI assistants (OpenClaw/Moltbot). Social engineering to trick users into executing malware installation commands (e.g., 'AuthTool' for NovaStealer download). Targets: cryptocurrency API keys, wallet files and seed phrases, browser wallet extensions, macOS Keychain data, browser passwords, SSH keys, cloud credentials, Git credentials, .env files. Exploitation of the AI 'skills' supply chain.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "ai_skills",
+          "supply_chain",
+          "social_engineering",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "macos",
+          "windows"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/malicious-moltbot-skills-used-to-push-password-stealing-malware/",
+          "https://securityaffairs.com/187562/malware/moltbot-skills-exploited-to-distribute-400-malware-packages-in-days/"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25142",
+        "cvss": "10.0",
+        "product": "SandboxJS",
+        "description": "Prototype Pollution vulnerability in the JavaScript sandboxing library SandboxJS, allowing sandbox escape and remote code execution (RCE) via improper restriction of '__lookupGetter__'.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sandboxjs",
+          "prototype_pollution",
+          "rce",
+          "sandbox_escape",
+          "javascript",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25142"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1453",
+        "cvss": "9.8",
+        "product": "KiloView Encoder Series",
+        "description": "Critical 'Missing Authentication for Critical Function' vulnerability in KiloView video encoders and streaming devices, allowing an unauthenticated attacker to create/delete administrator accounts and gain full remote administrative control.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "kiloview",
+          "encoder",
+          "streaming",
+          "missing_authentication",
+          "rce",
+          "admin_privileges",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/broadcast-hijack-critical-kiloview-flaw-cvss-9-8-grants-full-control/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti EPMM",
+        "description": "Unauthenticated code injection vulnerability in Ivanti EPMM, allowing remote code execution (RCE). Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti_epmm",
+          "code_injection",
+          "rce",
+          "active_exploitation",
+          "critical",
+          "authentication"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/ivanti-epmm-vulnerabilities-active-exploitation"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti EPMM",
+        "description": "Unauthenticated code injection vulnerability in Ivanti EPMM, allowing remote code execution (RCE). Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "ivanti_epmm",
+          "code_injection",
+          "rce",
+          "active_exploitation",
+          "critical",
+          "authentication"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/ivanti-epmm-vulnerabilities-active-exploitation"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25134",
+        "cvss": "9.4",
+        "product": "Group-Office",
+        "description": "Argument Injection vulnerability in Group-Office's MaintenanceController::actionZipLanguage, leading to remote code execution (RCE) when combined with uploading a crafted zip file.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "group_office",
+          "argument_injection",
+          "rce",
+          "code_execution",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25134"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25137",
+        "cvss": "9.1",
+        "product": "NixOs Odoo package",
+        "description": "The NixOS implementation of Odoo publicly exposes the database manager without authentication, allowing unauthorized download or deletion of the entire database and filestore.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "nixos",
+          "odoo",
+          "missing_authentication",
+          "data_exfiltration",
+          "data_deletion",
+          "critical",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25137"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25059",
+        "cvss": "8.8",
+        "product": "OpenList Frontend",
+        "description": "Path Traversal vulnerability in OpenList Frontend's file copy and remove handlers, enabling an authenticated attacker to bypass path restrictions and access/manipulate other users' files.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openlist",
+          "path_traversal",
+          "file_manipulation",
+          "authentication",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25059"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-24763",
+        "cvss": "8.8",
+        "product": "OpenClaw (formerly Clawdbot)",
+        "description": "Authenticated Command Injection vulnerability in OpenClaw's Docker sandbox execution mechanism due to unsafe handling of the PATH environment variable, allowing an authenticated user to influence command execution.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openclaw",
+          "clawdbot",
+          "docker",
+          "command_injection",
+          "rce",
+          "authentication",
+          "ai",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24763"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-25060",
+        "cvss": "8.1",
+        "product": "OpenList Frontend",
+        "description": "Insecure default TLS configuration in OpenList Frontend, where certificate verification is disabled by default, enabling Man-in-the-Middle (MitM) attacks and interception/manipulation of storage communications.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "openlist",
+          "tls",
+          "insecure_configuration",
+          "mitm",
+          "authentication",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25060"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-24737",
+        "cvss": "8.1",
+        "product": "jsPDF",
+        "description": "PDF Injection vulnerability in jsPDF's AcroFormChoiceField, allowing arbitrary JavaScript execution when a victim opens a malicious PDF document due to improper handling of unsanitized input.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "pdf_injection",
+          "javascript_execution",
+          "rce",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24737"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "cve_id": "CVE-2026-21509",
+        "cvss": "Not specified (Actively exploited zero-day)",
+        "product": "Microsoft Office",
+        "description": "Actively exploited zero-day vulnerability in multiple Microsoft Office versions, bypassing security features and allowing code execution upon opening malicious documents. Used by APT28 (UAC-0001) for attacks targeting Ukraine and the EU.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "microsoft_office",
+          "zero_day",
+          "active_exploitation",
+          "rce",
+          "security_feature_bypass",
+          "apt28",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "2nd February – Threat Intelligence Report",
+        "description": "Check Point Research's report highlights a supply chain compromise affecting MicroWorld Technologies (eScan antivirus). Malicious updates were pushed via the legitimate eScan updater, delivering multi-stage malware that establishes persistence, enables remote access, and blocks automatic updates. The incident underscores the risks associated with trusting software update mechanisms.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "TA0003 (Persistence), TA0008 (Impact), T1195.002 (Supply Chain Compromise: Software Update)",
+        "analyse": "This supply chain incident directly impacts the security of MicroWorld Technologies' customers, who install malicious updates through a trusted channel. The impact is potentially global given the reach of an antivirus vendor. It demonstrates attackers' ability to target weak links in software distribution, eroding user trust in legitimate update systems.",
+        "recommandations": "Monitor for anomalies in software update processes. Implement additional integrity checks for update packages. Use multi-layered security solutions and network segmentation to limit spread in case of compromise. Evaluate the security of third-party vendors, especially those involved in the software supply chain.",
+        "tags": [
+          "threat_intelligence",
+          "supply_chain",
+          "malware",
+          "persistence",
+          "remote_access",
+          "antivirus",
+          "software_update"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-february-threat-intelligence-report/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "AI-Coded Oppression: “RedKitten” Malware Targets Iranian Protesters",
+        "description": "A new cyber-espionage campaign, named “RedKitten”, targets Iranian NGOs and activists. The SloppyMIO malware, likely developed with the aid of generative AI, is distributed via a malicious Excel spreadsheet purporting to contain a list of victims. The malware is a surveillance tool capable of stealing files and executing commands. It uses GitHub, Google Drive, and Telegram for configuration, payload retrieval, and C2, leveraging trust in these legitimate services. The operation coincides with the “Dey 1404 Protests” in Iran.",
+        "threat_actor": "RedKitten",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.001 (Phishing: Spearphishing Attachment)",
+            "T1204.002 (User Execution: Malicious File)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1560 (Archive Collected Data)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1041 (Exfiltration Over C2 Channel)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1204.002 (User Execution: Malicious File), T1059 (Command and Scripting Interpreter), T1560 (Archive Collected Data), T1071.001 (Application Layer Protocol: Web Protocols), T1041 (Exfiltration Over C2 Channel)",
+        "analyse": "This campaign demonstrates an alarming use of generative AI to create malware, enabling actors with less technical expertise to conduct sophisticated operations. The impact is targeted surveillance and suppression of dissident voices, with severe implications for human rights and freedom of expression. The use of legitimate services for C2 makes detection more challenging and highlights the need to monitor anomalous activities on these platforms.",
+        "recommandations": "Educate NGOs and activists about social engineering risks and emotional lures. Deploy EDR solutions capable of detecting malicious macro behaviors and malware implants. Monitor C2 communications via platforms like GitHub, Google Drive, and Telegram for unusual activity. Strengthen endpoint and network security for targeted organizations. Utilize file analysis tools to detect AI-generated malware.",
+        "tags": [
+          "redkitten",
+          "cyberespionage",
+          "iran",
+          "ngo",
+          "activists",
+          "social_engineering",
+          "malware",
+          "ai_assisted",
+          "surveillance",
+          "human_rights"
+        ],
+        "sources": [
+          "https://securityonline.info/ai-coded-oppression-redkitten-malware-targets-iranian-protesters/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Beyond ACLs: Mapping Windows Privilege Escalation Paths with BloodHound",
+        "description": "This technical article explores the workings of Windows access tokens and privileges, explaining how certain privileges (like SeDebugPrivilege, SeImpersonatePrivilege, SeAssignPrimaryTokenPrivilege) can bypass standard ACL access controls, enabling local privilege escalations. It also describes how BloodHound, through new queries, can be used by attackers and defenders to map these privilege escalation paths across an Active Directory domain, identifying rights assigned to users and machines.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1134 (Access Token Manipulation)",
+            "T1068 (Exploitation for Privilege Escalation)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1134 (Access Token Manipulation), T1068 (Exploitation for Privilege Escalation)",
+        "analyse": "The analysis highlights the complexity of Windows privilege management and the risks of escalation. It provides crucial insights for security teams and attackers on detecting and exploiting misconfigurations related to access rights. Mapping privileges with BloodHound is essential for identifying hidden attack paths and strengthening an Active Directory environment's security posture. Implications are local but can lead to full domain compromise.",
+        "recommandations": "Use BloodHound to enumerate and visualize privilege escalation paths based on ACLs and Windows privileges. Implement the principle of least privilege. Restrict the assignment of sensitive privileges (SeDebugPrivilege, SeImpersonatePrivilege). Configure logon rights to limit lateral movement of privileged accounts. Ensure adequate UAC configuration and educate users on running processes with elevated privileges.",
+        "tags": [
+          "privilege_escalation",
+          "windows",
+          "active_directory",
+          "bloodhound",
+          "acl",
+          "access_token",
+          "security_auditing",
+          "dfir",
+          "ttp",
+          "post_exploitation"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/en/publications/beyond-acls-mapping-windows-privilege-escalation-paths-with-bloodhound.html"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Collecting Evidence from Google Workspace",
+        "description": "The article discusses methods for collecting logs and evidence during incident investigations involving Google Workspace. It highlights two main approaches: the Workspace Admin interface (UI) and the Workspace Admin SDK/APIs, noting that while the platform provides a lot of data, not all of it is equally easy to collect or analyze. This serves as a practical guide for DFIR teams.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentioned",
+        "analyse": "This article is crucial for incident response teams operating in cloud environments like Google Workspace. The ability to effectively collect evidence is fundamental to understanding the scope of a compromise, identifying attacker tactics, and conducting forensic investigations. The complexity of data collection on these platforms can slow incident response if procedures are not well-established.",
+        "recommandations": "Develop clear procedures for collecting logs and evidence from Google Workspace, using both the UI and APIs. Regularly test these procedures as part of DFIR exercises. Ensure teams have the necessary permissions and tools to access relevant data. Understand the types of data available and their retention for each source in Google Workspace.",
+        "tags": [
+          "dfir",
+          "google_workspace",
+          "cloud_security",
+          "incident_response",
+          "log_management",
+          "evidence_collection",
+          "forensics"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/collecting-evidence-from-google-workspace"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Hackers exploit unsecured MongoDB instances to wipe data and demand ransom",
+        "description": "Hackers are exploiting over 1,400 exposed and unsecured MongoDB server instances to wipe data and leave ransom notes, typically demanding $500 in Bitcoin. Most of these compromises result from databases left online without proper access controls or with weak configurations, rather than exploits of known vulnerabilities (though over 95,000 servers have vulnerabilities, mainly DDoS). The same actor appears to be behind the majority of these ransom attacks.",
+        "threat_actor": "Hackers (unique dominant actor)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1190 (Exploit Public-Facing Application)",
+            "T1485 (Data Destruction)",
+            "T1486 (Data Encrypt for Impact)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1485 (Data Destruction), T1486 (Data Encrypt for Impact)",
+        "analyse": "The ease with which these databases are compromised highlights a persistent problem with basic security configuration management. The impact is direct for victim organizations, leading to data loss and operational disruption. The risk is amplified by the possibility that a MongoDB zero-day RCE vulnerability could be exploited at scale, transforming misconfiguration into a massive entry point for ransomware attacks.",
+        "recommandations": "Apply prevention and hardening best practices for MongoDB deployments. Ensure databases are not publicly exposed without robust access controls. Implement strong authentication and the principle of least privilege. Monitor logs for unauthorized access and data deletion attempts. Conduct regular security audits of MongoDB configurations.",
+        "tags": [
+          "mongodb",
+          "data_wipe",
+          "ransom",
+          "misconfiguration",
+          "database_security",
+          "exploitation",
+          "data_destruction"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187548/security/hackers-exploit-unsecured-mongodb-instances-to-wipe-data-and-demand-ransom/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Malware campaign exploiting OpenClaw/MoltBot AI skills and compromised OpenVSX extensions",
+        "description": "Two distinct malware campaigns are exploiting AI assistant ecosystems (OpenClaw/MoltBot) and OpenVSX extensions for macOS. The first campaign ('GlassWorm') uses compromised OpenVSX extensions to target macOS, stealing passwords, crypto-wallet data, and developer credentials via 'invisible' Unicode characters and Solana transaction memos for C2. The second campaign abuses malicious AI 'skills' published on ClawHub and GitHub (over 400 packages) to distribute info-stealers (NovaStealer) on macOS and Windows, posing as crypto trading tools and using malicious 'AuthTools' to bypass Gatekeeper and steal API keys, seed phrases, browser passwords, SSH keys, and cloud credentials. These campaigns leverage social engineering and a lack of security in AI 'skills' registries.",
+        "threat_actor": "GlassWorm operators, MoltBot/OpenClaw Malware",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [
+            "45.32.150.251"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 (Supply Chain Compromise: Software Update)",
+            "T1566.001 (Phishing: Spearphishing Attachment)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1003 (OS Credential Dumping)",
+            "T1555 (Credentials from Password Stores)",
+            "T1529 (System Shutdown/Reboot)",
+            "T1573 (Encrypted Channel)",
+            "T1572 (Protocol Tunneling)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1071.004 (Application Layer Protocol: DNS)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Software Update), T1566.001 (Phishing: Spearphishing Attachment), T1059 (Command and Scripting Interpreter), T1003 (OS Credential Dumping), T1555 (Credentials from Password Stores), T1529 (System Shutdown/Reboot), T1573 (Encrypted Channel), T1572 (Protocol Tunneling), T1071.001 (Application Layer Protocol: Web Protocols), T1071.004 (Application Layer Protocol: DNS)",
+        "analyse": "These attacks demonstrate the convergence of supply chain threats, social engineering, and the abuse of emerging technologies (AI). The exploitation of extension and AI 'skills' ecosystems poses a significant risk, particularly for developers and cryptocurrency users. The impact is the compromise of sensitive data and financial assets, bypassing native system protections (Gatekeeper). The exclusion of Russian-locale systems suggests a geographical origin of the attacker.",
+        "recommandations": "Verify the legitimacy of AI extensions and 'skills' before installation. Isolate AI assistants in virtual machines with restricted permissions. Implement strong authentication for developer and cryptocurrency accounts. Revoke and rotate all compromised credentials and passwords after infection. Use EDR solutions and granular access controls. Monitor for anomalous C2 communications and data exfiltration. Educate users about social engineering risks related to AI tools and extension platforms.",
+        "tags": [
+          "malware",
+          "glassworm",
+          "moltbot",
+          "openclaw",
+          "supply_chain",
+          "ai_abuse",
+          "info_stealer",
+          "credential_theft",
+          "cryptocurrency",
+          "macos",
+          "windows",
+          "social_engineering",
+          "gatekeeper_bypass"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-glassworm-attack-targets-macos-via-compromised-openvsx-extensions/",
+          "https://www.bleepingcomputer.com/news/security/malicious-moltbot-skills-used-to-push-password-stealing-malware/",
+          "https://securityaffairs.com/187562/malware/moltbot-skills-exploited-to-distribute-400-malware-packages-in-days/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Nation-state actors exploit Microsoft Office zero-day (CVE-2026-21509) in attacks against Ukraine and EU",
+        "description": "The Russian-backed APT28 group (UAC-0001, Fancy Bear) is actively exploiting the recently patched zero-day vulnerability CVE-2026-21509 in Microsoft Office to target government entities in Ukraine and the European Union. Attackers distribute malicious Office documents that trigger a WebDAV-based download chain to install malware via COM hijacking (EhStoreShell.dll), shellcode hidden in an image (SplashScreen.png), and a scheduled task (OneDriveHealth) for persistence. The COVENANT framework is deployed, using the legitimate cloud storage service Filen (filen.io) for C2 communications. The rapid exploitation of this zero-day after its disclosure highlights the agility of Russian state-sponsored actors.",
+        "threat_actor": "APT28 (UAC-0001, Fancy Bear)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2026-21509"
+          ],
+          "DOMAIN": [
+            "filen.io"
+          ],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1204.002 (User Execution: Malicious File)",
+            "T1189 (Drive-by Compromise)",
+            "T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking)",
+            "T1053.005 (Scheduled Task/Job: Scheduled Task)",
+            "T1027.001 (Obfuscated Files or Information: Steganography)",
+            "T1071.001 (Application Layer Protocol: Web Protocols)",
+            "T1071.004 (Application Layer Protocol: DNS)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1204.002 (User Execution: Malicious File), T1189 (Drive-by Compromise), T1574.002 (Hijack Execution Flow: DLL Search Order Hijacking), T1053.005 (Scheduled Task/Job: Scheduled Task), T1027.001 (Obfuscated Files or Information: Steganography), T1071.001 (Application Layer Protocol: Web Protocols), T1071.004 (Application Layer Protocol: DNS)",
+        "analyse": "This campaign illustrates the persistent and adaptable threat from Russian state-sponsored actors, using zero-days for espionage and disruption objectives. The initial focus on Ukraine, followed by expansion into the EU, confirms that Ukraine serves as a testing ground for new TTPs. The use of legitimate cloud services for C2 makes detection more challenging. The impact is significant for the national security of targeted countries, threatening the confidentiality of government information.",
+        "recommandations": "Immediately apply Microsoft Office security updates (KB5073455, KB5078131, KB5073724). Restrict or monitor connections to non-essential cloud storage services (e.g., filen.io). Implement detection measures for COM hijacking, malicious DLL execution, and suspicious scheduled task creation. Educate users about phishing emails containing Office documents. Use a multi-layered detection approach with EDR and SIEM to correlate suspicious events.",
+        "tags": [
+          "apt28",
+          "uac_0001",
+          "fancy_bear",
+          "russia",
+          "nation_state",
+          "zero_day",
+          "microsoft_office",
+          "cve_2026_21509",
+          "active_exploitation",
+          "espionage",
+          "ukraine",
+          "eu",
+          "phishing",
+          "c2",
+          "com_hijacking",
+          "covenant_framework"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-recently-patched-microsoft-office-bug-in-attacks/",
+          "https://securityonline.info/fancy-bear-returns-apt28-exploits-office-flaw-in-operation-neusploit/",
+          "https://socprime.com/blog/detect-uac-0001-attacks-exploiting-cve-2026-21509/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/02/russialinked_apt28_microsoft_office_bug/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Notepad++ update infrastructure compromised by Chinese state-linked actors (Lotus Blossom)",
+        "description": "Chinese state-sponsored actors (likely Lotus Blossom/APT group) compromised Notepad++'s update infrastructure through a targeted supply chain attack between June and December 2025. They exploited a weakness in the WinGUp update verification to selectively intercept and redirect traffic from certain users to malicious servers, distributing trojanized installers and a custom backdoor named Chrysalis. The compromise affected telecommunications and financial services companies in East Asia. Notepad++ has since migrated to a more secure hosting provider and strengthened installer certificate and signature verification mechanisms.",
+        "threat_actor": "Chinese state-sponsored threat actors (Lotus Blossom, Raspberry Typhoon, Bilbug, Spring Dragon)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1195.002 (Supply Chain Compromise: Software Update)",
+            "T1574.001 (Hijack Execution Flow: DLL Side-Loading)",
+            "T1574.006 (Hijack Execution Flow: Dynamic-link Library Search Order Hijacking)",
+            "T1574.008 (Hijack Execution Flow: Path Interception)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1566.001 (Phishing: Spearphishing Attachment)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Software Update), T1574.001 (Hijack Execution Flow: DLL Side-Loading), T1574.006 (Hijack Execution Flow: Dynamic-link Library Search Order Hijacking), T1574.008 (Hijack Execution Flow: Path Interception), T1059 (Command and Scripting Interpreter), T1566.001 (Phishing: Spearphishing Attachment)",
+        "analyse": "This supply chain attack underscores the sophistication of Chinese state-sponsored actors and their ability to compromise legitimate software distribution channels. The impact is potentially industrial and state-sponsored espionage on strategic sectors. The attacker's persistence and ability to regain a foothold after disruption demonstrate significant resources. This incident highlights the need for software developers and user organizations to strengthen update security and package verification.",
+        "recommandations": "Update all Notepad++ installations to version 8.9 or later. Audit endpoint logs for any suspicious Notepad++ installer executions during the compromise period (June-December 2025). Strengthen signature and certificate verification for all software updates. Revoke and rotate internal service credentials. Restrict external access to server administration interfaces. Implement network segmentation around hosting and update infrastructures.",
+        "tags": [
+          "notepad++",
+          "supply_chain",
+          "nation_state",
+          "china",
+          "apt",
+          "update_hijacking",
+          "backdoor",
+          "espionage",
+          "telecom",
+          "financial_services",
+          "chrysalis",
+          "lotus_blossom"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/",
+          "https://fieldeffect.com/blog/chinese-linked-actors-notepad-update",
+          "https://securityaffairs.com/187531/security/nation-state-hack-exploited-hosting-infrastructure-to-hijack-notepad-updates/"
+        ],
+        "date": "2026-02-03"
+      },
+      {
+        "title": "Please Don’t Feed the Scattered Lapsus ShinyHunters",
+        "description": "Scattered Lapsus ShinyHunters (SLSH) is a data extortion group known for aggressive psychological tactics: harassment, threats, and 'swatting' against executives and their families, while also alerting media and regulators. The group uses phone phishing (vishing) to steal SSO credentials and MFA codes, then registers their own devices to access systems. An expert (Allison Nixon, Unit 221B) advises against prolonged negotiations, arguing that it only encourages the group and that their history is unreliable regarding data destruction.",
+        "threat_actor": "Scattered Lapsus ShinyHunters (SLSH)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [
+            "T1566.002 (Phishing: Spearphishing Link)",
+            "T1078 (Valid Accounts)",
+            "T1556 (Credential Access)",
+            "T1559 (Adversary-in-the-Middle)",
+            "T1530 (Data from Local System)",
+            "T1059 (Command and Scripting Interpreter)",
+            "T1573 (Encrypted Channel)"
+          ],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "T1566.002 (Phishing: Spearphishing Link), T1078 (Valid Accounts), T1556 (Credential Access), T1559 (Adversary-in-the-Middle), T1530 (Data from Local System), T1059 (Command and Scripting Interpreter), T1573 (Encrypted Channel)",
+        "analyse": "This report highlights an evolution in extortion tactics, integrating psychological warfare elements to maximize pressure on victims. SLSH's unpredictability and lack of professionalism, compared to more structured ransomware groups, make prolonged negotiations particularly risky. The impact extends beyond data loss to reputational damage and the personal well-being of targeted executives.",
+        "recommandations": "Do not engage in prolonged negotiations with SLSH beyond a refusal to pay. Train employees on vishing and targeted phishing campaigns. Implement phishing-resistant MFA. Monitor for attempts to register new devices for SSO accounts. Have an incident response plan that includes reputation management and support for executives targeted by harassment. Isolate compromised systems and restore from secure backups.",
+        "tags": [
+          "data_extortion",
+          "ransom_gang",
+          "shinyhunters",
+          "slsh",
+          "vishing",
+          "phishing",
+          "mfa_bypass",
+          "social_engineering",
+          "harassment",
+          "swatting",
+          "psychological_warfare"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/please-dont-feed-the-scattered-lapsus-shiny-hunters/"
+        ],
+        "date": "2026-02-03"
+      }
+    ]
+  }
+}
