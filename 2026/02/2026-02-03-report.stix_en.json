@@ -1,6 +1,6 @@
 {
   "type": "bundle",
-  "id": "bundle--e7366235-ef57-4f24-b77f-1030ed321005",
+  "id": "bundle--f4d9d399-8f9f-4558-9fc7-3170dfe9e7c7",
   "objects": [
     {
       "type": "marking-definition",
@@ -43,24 +43,103 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--c5210f82-1ec2-476d-9421-fa5364c65038",
-      "created": "2026-02-03T21:45:50.000Z",
-      "modified": "2026-02-03T21:45:50.000Z",
+      "id": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T21:53:46.000Z",
+      "modified": "2026-02-03T21:53:46.000Z",
       "name": "VigilIntel",
       "identity_class": "organization"
     },
     {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--bdcbe394-be8e-448a-bdfe-ff21c895aea8",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "name": "CVE-2025-13176",
+      "description": "Elevation of Privilege (EoP) vulnerability affecting ESET Inspect Connector versions prior to 3.0.5765 on Windows. Exploitation allows a local attacker to gain elevated permissions on the affected system.\n\nAffected product: ESET Inspect Connector",
+      "labels": [
+        "vulnerability",
+        "EOP",
+        "Windows",
+        "EDR"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-13176"
+        },
+        {
+          "source_name": "source",
+          "url": "CERTFR-2026-AVI-0111"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--9c066dc0-65d0-4ed2-beda-0399e9121665",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "name": "MULTIPLE CVES",
+      "description": "Multiple security vulnerabilities (over 40 CVEs reported, ranging from 2016 to 2025) are addressed across various VMware products, including Foundation Core for VMware Tanzu Platform (versions prior to 3.1.7 and 3.2.3). The affected components require immediate patching across virtualization environments.\n\nAffected product: VMware Tanzu Platform",
+      "labels": [
+        "vulnerability",
+        "virtualization",
+        "VMware",
+        "Tanzu"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "MULTIPLE CVES"
+        },
+        {
+          "source_name": "source",
+          "url": "CERTFR-2026-AVI-0112"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--e2d46c64-d072-440d-9156-157d4b00143a",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "abstract": "Strategic analysis (EN)",
+      "content": "Today's intelligence focuses predominantly on critical security bulletins issued by CERT-FR concerning vulnerabilities in key infrastructure components. ESET Inspect Connector products are affected by an Elevation of Privilege (CVE-2025-13176), highlighting the persistent threat targeting security software itself. Furthermore, VMware released a very large number of patches covering numerous CVEs (over 40), including those impacting its Tanzu platforms. These alerts underscore the imperative for strict patching cycles, especially for hypervisors and EDR/XDR solutions, which are primary targets for threat actors seeking initial access or high-level persistence in enterprise environments.",
+      "object_refs": [
+        "identity--9c4387cb-5171-422f-90d8-4a7709da348f"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--2730aef1-9067-4eca-ac84-4d6dec7d23b1",
-      "created_by_ref": "identity--c5210f82-1ec2-476d-9421-fa5364c65038",
+      "id": "report--550e11f7-07b4-456a-8e22-1c2c50ded8d0",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
       "created": "2026-02-03T00:00:00.000Z",
       "modified": "2026-02-03T00:00:00.000Z",
       "name": "CTI Report (EN) - 2026-02-03",
       "description": "Aggregated CTI report for language EN",
       "published": "2026-02-03T00:00:00Z",
       "object_refs": [
-        "identity--c5210f82-1ec2-476d-9421-fa5364c65038"
+        "vulnerability--bdcbe394-be8e-448a-bdfe-ff21c895aea8",
+        "vulnerability--9c066dc0-65d0-4ed2-beda-0399e9121665",
+        "note--e2d46c64-d072-440d-9156-157d4b00143a"
       ],
       "labels": [
         "cti-report",
