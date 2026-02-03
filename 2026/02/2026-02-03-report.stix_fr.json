@@ -1,6 +1,6 @@
 {
   "type": "bundle",
-  "id": "bundle--2267a1a4-4fae-464c-8680-9be168736313",
+  "id": "bundle--a6fe209a-3f57-4a1d-9c9e-5aa598d99776",
   "objects": [
     {
       "type": "marking-definition",
@@ -43,24 +43,103 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--c5210f82-1ec2-476d-9421-fa5364c65038",
-      "created": "2026-02-03T21:45:50.000Z",
-      "modified": "2026-02-03T21:45:50.000Z",
+      "id": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T21:53:46.000Z",
+      "modified": "2026-02-03T21:53:46.000Z",
       "name": "VigilIntel",
       "identity_class": "organization"
     },
     {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--53aac27b-2cc4-4f0a-9911-7f0628414aec",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "name": "CVE-2025-13176",
+      "description": "Vulnérabilité d'élévation de privilèges (EoP) affectant les versions d'ESET Inspect Connector antérieures à 3.0.5765 sur Windows. L'exploitation permet à un attaquant local d'obtenir des permissions élevées sur le système ciblé.\n\nAffected product: ESET Inspect Connector",
+      "labels": [
+        "vulnerability",
+        "EOP",
+        "Windows",
+        "EDR"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-13176"
+        },
+        {
+          "source_name": "source",
+          "url": "CERTFR-2026-AVI-0111"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--76a185b1-3dcb-464d-a95f-b7ca0613fb86",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "name": "MULTIPLE CVES",
+      "description": "De multiples vulnérabilités de sécurité (plus de 40 CVE signalées, allant de 2016 à 2025) sont corrigées dans divers produits VMware, notamment Foundation Core pour VMware Tanzu Platform (versions antérieures à 3.1.7 et 3.2.3). Les composants affectés nécessitent une mise à jour immédiate dans les environnements de virtualisation.\n\nAffected product: VMware Tanzu Platform",
+      "labels": [
+        "vulnerability",
+        "virtualization",
+        "VMware",
+        "Tanzu"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "MULTIPLE CVES"
+        },
+        {
+          "source_name": "source",
+          "url": "CERTFR-2026-AVI-0112"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--45f8b059-0ff9-4478-ad77-0027a8b73e3d",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
+      "created": "2026-02-03T00:00:00.000Z",
+      "modified": "2026-02-03T00:00:00.000Z",
+      "abstract": "Strategic analysis (FR)",
+      "content": "La veille de ce jour est dominée par des bulletins de sécurité critiques émis par le CERT-FR concernant des vulnérabilités dans des infrastructures clés. Les produits ESET Inspect Connector sont affectés par une élévation de privilèges (CVE-2025-13176), soulignant la persistance des menaces ciblant les logiciels de sécurité eux-mêmes. De plus, VMware a publié un nombre très important de correctifs (plus de 40 CVE), y compris dans ses plateformes Tanzu. Ces alertes rappellent l'impératif de maintenir des cycles de mise à jour stricts, en particulier pour les hyperviseurs et les solutions EDR/XDR, qui sont des cibles primordiales pour les acteurs de la menace cherchant un accès initial ou une persistance élevée dans les environnements d'entreprise.",
+      "object_refs": [
+        "identity--9c4387cb-5171-422f-90d8-4a7709da348f"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--4d29d3a5-3f39-42f7-b9d9-ef063f262a90",
-      "created_by_ref": "identity--c5210f82-1ec2-476d-9421-fa5364c65038",
+      "id": "report--f18c5d62-d6ee-40ef-94ae-1133a78e6295",
+      "created_by_ref": "identity--9c4387cb-5171-422f-90d8-4a7709da348f",
       "created": "2026-02-03T00:00:00.000Z",
       "modified": "2026-02-03T00:00:00.000Z",
       "name": "CTI Report (FR) - 2026-02-03",
       "description": "Aggregated CTI report for language FR",
       "published": "2026-02-03T00:00:00Z",
       "object_refs": [
-        "identity--c5210f82-1ec2-476d-9421-fa5364c65038"
+        "vulnerability--53aac27b-2cc4-4f0a-9911-7f0628414aec",
+        "vulnerability--76a185b1-3dcb-464d-a95f-b7ca0613fb86",
+        "note--45f8b059-0ff9-4478-ad77-0027a8b73e3d"
       ],
       "labels": [
         "cti-report",
