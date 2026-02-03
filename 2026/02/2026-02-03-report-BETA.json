@@ -2,8 +2,8 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "Today's intelligence landscape is dominated by the publication of alerts concerning critical vulnerabilities affecting major products within the IT ecosystem. Particular attention must be paid to the numerous flaws discovered in VMware products, specifically Foundation Core for VMware Tanzu Platform. Although the specific risks are not detailed by the vendor, the pervasive nature of VMware solutions in critical and cloud infrastructures makes these patches urgent. Furthermore, a privilege escalation vulnerability in ESET Inspect Connector underscores the importance of securing security tools themselves, as their compromise can offer privileged access to an attacker. The focus remains on rapid patch application to minimize the attack surface.",
-      "fr": "La veille du jour est dominée par la publication d'alertes concernant des vulnérabilités critiques affectant des produits majeurs de l'écosystème IT. Une attention particulière doit être portée aux multiples failles découvertes dans les produits VMware, notamment Foundation Core pour VMware Tanzu Platform. Bien que les risques spécifiques ne soient pas détaillés par l'éditeur, la nature omniprésente des solutions VMware dans les infrastructures critiques et cloud rend ces correctifs urgents. De plus, une vulnérabilité d'élévation de privilèges dans ESET Inspect Connector souligne l'importance de sécuriser les outils de sécurité eux-mêmes, car leur compromission peut offrir un accès privilégié à un attaquant. L'accent reste mis sur l'application rapide des correctifs pour minimiser la surface d'attaque."
+      "en": "The reporting period is dominated by routine but significant vulnerability disclosures affecting critical enterprise software. The French CERT (CERT-FR) issued advisories concerning flaws in ESET Inspect Connector, which allows for Elevation of Privilege (CVE-2025-13176), and a large batch of approximately 40 vulnerabilities impacting multiple VMware Tanzu Platform components. Organizations must prioritize immediate patching for both vendors' products, especially within VMware environments, which serve as foundational infrastructure, to mitigate potential exploitation attempts against these widely deployed systems.",
+      "fr": "La période de veille est dominée par des divulgations de vulnérabilités, bien que routinières, qui sont significatives et affectent des logiciels d'entreprise critiques. Le CERT-FR a émis des avis concernant une faille permettant l'élévation de privilèges dans ESET Inspect Connector (CVE-2025-13176), ainsi qu'un lot important d'environ 40 vulnérabilités impactant divers composants de VMware Tanzu Platform. Les organisations doivent donner la priorité à l'application immédiate des correctifs pour les produits des deux éditeurs, en particulier dans les environnements VMware qui constituent souvent des infrastructures fondamentales, afin d'atténuer les tentatives d'exploitation potentielles contre ces systèmes largement déployés."
     },
     "date": "2026-02-03"
   },
@@ -18,38 +18,38 @@
       "epss": "",
       "product": "ESET Inspect Connector",
       "description": {
-        "en": "A vulnerability in ESET Inspect Connector versions prior to 3.0.5765 on Windows allows an attacker to perform a local privilege escalation.",
-        "fr": "Une vulnérabilité dans ESET Inspect Connector versions antérieures à 3.0.5765 sur Windows permet à un attaquant de provoquer une élévation de privilèges locale."
+        "en": "Vulnerability allowing an Elevation of Privilege in ESET Inspect Connector versions prior to 3.0.5765 on Windows systems. Patching is required immediately.",
+        "fr": "Vulnérabilité permettant une élévation de privilèges dans ESET Inspect Connector sur les systèmes Windows (versions antérieures à 3.0.5765). L'application d'un correctif est requise immédiatement."
       },
       "tags": [
         "vulnerability",
-        "privilege_escalation",
-        "EDR"
+        "Elevation of Privilege",
+        "ESET"
       ],
       "sources": [
-        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0111/"
+        "CERTFR-2026-AVI-0111"
       ],
-      "date": "2026-02-02"
+      "date": "2026-02-03"
     },
     {
-      "cve_id": "Multiple",
+      "cve_id": "Multiple CVEs",
       "euvd_id": "",
       "cvss": "",
       "epss": "",
       "product": "VMware Tanzu Platform",
       "description": {
-        "en": "Multiple vulnerabilities (including CVE-2016-1000027 through CVE-2025-39993) were discovered in VMware products, notably Foundation Core for VMware Tanzu Platform. These flaws can lead to unspecified security issues, necessitating immediate patching.",
-        "fr": "Multiples vulnérabilités (allant de CVE-2016-1000027 à CVE-2025-39993) ont été découvertes dans les produits VMware, notamment Foundation Core pour VMware Tanzu Platform. Ces failles peuvent permettre à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur, rendant l'application des correctifs immédiate."
+        "en": "Multiple vulnerabilities (including CVEs spanning from 2016 through 2025) were disclosed in various VMware Tanzu Platform components, such as Foundation Core and Isolation Segmentation. These flaws lead to unspecified security issues and require immediate updates.",
+        "fr": "Multiples vulnérabilités (incluant des CVE allant de 2016 à 2025) divulguées dans divers composants de VMware Tanzu Platform, notamment Foundation Core et Isolation Segmentation. Ces failles non spécifiées par l'éditeur nécessitent des mises à jour immédiates."
       },
       "tags": [
         "vulnerability",
-        "cloud_infrastructure",
-        "virtualization"
+        "VMware",
+        "Tanzu"
       ],
       "sources": [
-        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0112/"
+        "CERTFR-2026-AVI-0112"
       ],
-      "date": "2026-02-02"
+      "date": "2026-02-03"
     }
   ],
   "threats_analyse": []
