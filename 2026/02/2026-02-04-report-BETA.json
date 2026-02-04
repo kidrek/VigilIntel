@@ -2,66 +2,95 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "The integration of advanced Artificial Intelligence (AI) into Security Operations Centers (SOCs) marks a significant evolution towards autonomous security capabilities. Elastic's new Agent Builder and Workflows functionality demonstrate a shift from rigid Security Orchestration, Automation, and Response (SOAR) playbooks to a system where probabilistic AI reasoning drives deterministic automated responses, drastically reducing mean-time-to-triage. Concurrently, the industry is focusing on removing major technical barriers to modernization, highlighted by the introduction of automated detection rule migration support for legacy SIEM platforms like QRadar and Splunk, facilitating smoother and faster transitions to newer security ecosystems.",
-      "fr": "L'intégration de l'Intelligence Artificielle (IA) avancée dans les Centres d'Opérations de Sécurité (SOC) marque une évolution significative vers des capacités de sécurité autonomes. La nouvelle fonctionnalité Agent Builder et Workflows d'Elastic démontre un passage des playbooks rigides d'Orchestration, d'Automatisation et de Réponse en Matière de Sécurité (SOAR) à un système où le raisonnement probabiliste de l'IA pilote des réponses automatisées déterministes, réduisant considérablement le temps moyen de triage. Simultanément, l'industrie se concentre sur la suppression des obstacles techniques majeurs à la modernisation, soulignée par l'introduction d'un support de migration automatique des règles de détection pour les plateformes SIEM existantes comme QRadar et Splunk, facilitant des transitions plus fluides et rapides vers de nouveaux écosystèmes de sécurité."
+      "en": "The threat landscape is currently characterized by targeted supply chain compromise and the continued push toward security automation. New analysis confirms that Chinese state-linked actors utilized the compromised Notepad++ update infrastructure for highly selective reconnaissance against organizations in the government, finance, and IT sectors across Asia and the Americas. This sophisticated operation highlights the persistent risk associated with software distribution channels.\n\nSimultaneously, the defensive industry is accelerating its integration of Artificial Intelligence. Vendors are deploying 'Agentic AI' coupled with deterministic Workflows to automate security operations (SOC triage, incident response, host containment), aiming to reduce alert fatigue and transition analysts from reactive log chasing to proactive threat hunting. This trend is accompanied by technological advancements facilitating enterprise-level SIEM migrations, such as automated rule translation from legacy systems like QRadar to modern platforms.",
+      "fr": "Le paysage des menaces est actuellement caractérisé par la compromission ciblée de la chaîne d'approvisionnement et la poussée continue vers l'automatisation de la sécurité. Une nouvelle analyse confirme que des acteurs liés à l'État chinois ont utilisé l'infrastructure de mise à jour compromise de Notepad++ pour une reconnaissance très sélective contre des organisations des secteurs gouvernemental, financier et informatique, en Asie et dans les Amériques. Cette opération sophistiquée souligne le risque persistant associé aux canaux de distribution de logiciels.\n\nSimultanément, l'industrie défensive accélère son intégration de l'Intelligence Artificielle. Les fournisseurs déploient l'« IA Agentique » associée à des flux de travail déterministes pour automatiser les opérations de sécurité (triage du SOC, réponse aux incidents, confinement des hôtes), visant à réduire la fatigue des alertes et à faire passer les analystes de la chasse aux logs réactive à la recherche proactive de menaces. Cette tendance est accompagnée d'avancées technologiques facilitant les migrations de SIEM à l'échelle de l'entreprise, telles que la traduction automatisée des règles de systèmes hérités comme QRadar vers des plateformes modernes."
     },
     "date": "2026-02-04"
   },
   "malicious_actors_analyse": [
     {
-      "name": "Chinese State-Linked Actor (Supply Chain)",
-      "campaign": "Notepad++ Supply-Chain Compromise Update",
+      "name": "Chinese State-linked Actors",
+      "campaign": "Notepad++ Supply Chain Reconnaissance",
       "campaign_description": {
-        "en": "Updated intelligence regarding a sophisticated supply chain attack where state-linked actors compromised the Notepad++ update infrastructure. The actors selectively delivered modified executables to specific IP ranges for advanced reconnaissance targeting high-value systems.",
-        "fr": "Renseignement actualisé concernant une attaque sophistiquée de la chaîne logistique où des acteurs étatiques ont compromis l'infrastructure de mise à jour de Notepad++. Les acteurs ont délivré sélectivement des exécutables modifiés à des plages d'adresses IP spécifiques pour une reconnaissance avancée ciblant des systèmes de grande valeur."
+        "en": "Updated intelligence confirms sophisticated targeting using manipulated Notepad++ auto-update responses to deliver modified executables for system reconnaissance to specific IP address ranges.",
+        "fr": "Des renseignements mis à jour confirment un ciblage sophistiqué utilisant des réponses d'auto-mise à jour manipulées de Notepad++ pour livrer des exécutables modifiés à des plages d'adresses IP spécifiques pour la reconnaissance système."
       },
       "sector": {
-        "en": "Government, Finance, Information Technology",
-        "fr": "Gouvernement, Finance, Technologies de l'Information"
+        "en": "Government organization, Financial Institution, Information Technology Service Providers",
+        "fr": "Organisation gouvernementale, Institution financière, Fournisseurs de services de technologie de l'information"
       },
       "modop": {
-        "en": "Compromise of software update mechanism (supply chain attack) used for highly targeted delivery of reconnaissance malware. Utilized native Windows tools (`systeminfo`, `tasklist`, `whoami`) and `curl.exe` for data exfiltration to a public file-sharing service (`temp.sh`).",
-        "fr": "Compromission du mécanisme de mise à jour logicielle (attaque de la chaîne logistique) utilisée pour la livraison très ciblée de logiciels malveillants de reconnaissance. Utilisation d'outils Windows natifs (`systeminfo`, `tasklist`, `whoami`) et de `curl.exe` pour l'exfiltration de données vers un service de partage de fichiers public (`temp.sh`)."
+        "en": "Compromising the Notepad++ update channel to selectively deploy three distinct infection chains. These payloads executed native commands like `systeminfo`, `tasklist`, and `whoami` to gather configuration data, then uploaded the results using `curl.exe` to a public file-sharing service (temp.sh).",
+        "fr": "Compromission du canal de mise à jour de Notepad++ pour déployer sélectivement trois chaînes d'infection distinctes. Ces charges utiles exécutaient des commandes natives telles que `systeminfo`, `tasklist` et `whoami` pour collecter des données de configuration, puis téléversaient les résultats via `curl.exe` vers un service de partage de fichiers public (temp.sh)."
       },
       "tags": [
-        "Supply Chain Attack",
+        "Supply Chain",
+        "APT",
         "Reconnaissance",
-        "State-Sponsored",
-        "APT"
+        "Software Compromise"
       ],
       "sources": [
         "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
       ],
-      "date": "2026-02-03"
+      "date": "2026-02-04"
     }
   ],
-  "geopolitical_analyse": [],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Cross-sectoral targeting including Government, Finance, and IT",
+        "fr": "Ciblage intersectoriel incluant le gouvernement, la finance et l'informatique"
+      },
+      "theme": {
+        "en": "State-sponsored software supply chain compromise for reconnaissance",
+        "fr": "Compromission parrainée par l'État de la chaîne d'approvisionnement logicielle à des fins de reconnaissance"
+      },
+      "description": {
+        "en": "The Notepad++ supply chain attack, attributed to Chinese state-linked actors, demonstrated targeted espionage across diverse geographical regions and sensitive sectors. Victims were identified in Vietnam, El Salvador, Australia, and the Philippines, indicating a global strategic interest in gathering intelligence via widely used software.",
+        "fr": "L'attaque de la chaîne d'approvisionnement de Notepad++, attribuée à des acteurs étatiques chinois, a démontré une campagne d'espionnage ciblée à travers diverses régions géographiques et des secteurs sensibles. Des victimes ont été identifiées au Vietnam, au Salvador, en Australie et aux Philippines, signalant un intérêt stratégique mondial à collecter des renseignements via des logiciels largement utilisés."
+      },
+      "tags": [
+        "APT",
+        "China",
+        "Geopolitics",
+        "Supply Chain",
+        "Espionage"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
   "breach_analyse": [],
   "vulnerabilities_analyse": [],
   "threats_analyse": [
     {
       "title": {
-        "en": "TTPs of Chinese State-Linked Actor using Compromised Notepad++ Updater",
-        "fr": "TTP d'acteurs étatiques chinois utilisant le mécanisme de mise à jour compromis de Notepad++"
+        "en": "Notepad++ Supply Chain Reconnaissance TTPs",
+        "fr": "TTPs de Reconnaissance par la Chaîne d'Approvisionnement Notepad++"
       },
       "description": {
-        "en": "Analysis of the deep system reconnaissance phase conducted by Chinese state-linked actors using executables delivered via the compromised Notepad++ update channel. The goal was system profiling and identifying high-value targets across various critical sectors.",
-        "fr": "Analyse de la phase de reconnaissance système approfondie menée par des acteurs étatiques chinois utilisant des exécutables distribués via le canal de mise à jour compromis de Notepad++. L'objectif était le profilage du système et l'identification de cibles de grande valeur dans divers secteurs critiques."
+        "en": "Detailed analysis of the compromised Notepad++ update mechanism showing selective targeting of IP ranges for system reconnaissance using native OS commands and exfiltration via public file-sharing services (temp.sh).",
+        "fr": "Analyse détaillée du mécanisme de mise à jour compromis de Notepad++ montrant un ciblage sélectif de plages d'adresses IP pour la reconnaissance système à l'aide de commandes OS natives et l'exfiltration via des services publics de partage de fichiers (temp.sh)."
       },
-      "threat_actor": "Chinese State-Linked Actor (Supply Chain)",
+      "threat_actor": "Chinese State-linked Actors",
       "indicators": {
         "URL": [],
         "IPv4": [],
         "IPv6": [],
-        "DOMAIN": [
-          "temp.sh"
-        ],
+        "DOMAIN": [],
         "EMAIL": [],
         "HASH_SHA256": [],
         "HASH_SHA1": [],
         "HASH_MD5": [],
         "TOOLS": [
-          "curl.exe"
+          "curl.exe",
+          "systeminfo",
+          "tasklist",
+          "whoami",
+          "ipconfig",
+          "netstat"
         ]
       },
       "mitre_ttps": [
@@ -69,27 +98,27 @@
         "T1082",
         "T1057",
         "T1033",
-        "T1016"
+        "T1041"
       ],
       "analyse": {
-        "en": "The threat actor leveraged infrastructure compromise (T1195.002) to ensure initial access, followed by the use of standard Windows administrative commands and utilities like `curl.exe` for silent execution and data exfiltration. This blend of supply-chain access and living-off-the-land techniques emphasizes stealthy reconnaissance.",
-        "fr": "L'acteur de la menace a exploité une compromission d'infrastructure (T1195.002) pour assurer l'accès initial, suivie de l'utilisation de commandes administratives Windows standard et d'utilitaires comme `curl.exe` pour une exécution silencieuse et l'exfiltration de données. Ce mélange d'accès par chaîne logistique et de techniques 'living-off-the-land' met l'accent sur la reconnaissance furtive."
+        "en": "The attackers deployed three distinct infection chains via manipulated update responses, focusing on collecting detailed system configuration, running processes, and user accounts. The use of native tools (`systeminfo`, `curl.exe`) is typical for low-footprint reconnaissance.",
+        "fr": "Les attaquants ont déployé trois chaînes d'infection distinctes via des réponses de mise à jour manipulées, se concentrant sur la collecte de configurations système détaillées, des processus en cours et des comptes utilisateur. L'utilisation d'outils natifs (`systeminfo`, `curl.exe`) est typique de la reconnaissance à faible empreinte."
       },
       "recommandations": [
         {
-          "en": "Review endpoint logs for unexpected execution of `systeminfo`, `tasklist`, `whoami`, `ipconfig`, or `netstat` commands initiated by Notepad++ processes.",
-          "fr": "Examiner les journaux des endpoints pour toute exécution inattendue des commandes `systeminfo`, `tasklist`, `whoami`, `ipconfig` ou `netstat` initiées par les processus Notepad++."
+          "en": "Review endpoint logs for unexpected execution of commands (`systeminfo`, `tasklist`, `whoami`, `curl.exe`) initiated by Notepad++.",
+          "fr": "Examiner les journaux des endpoints pour détecter l'exécution inattendue de commandes (`systeminfo`, `tasklist`, `whoami`, `curl.exe`) initiées par Notepad++."
         },
         {
-          "en": "Monitor for unauthorized use of `curl.exe` uploading data, especially when communicating with public file-sharing domains like temp.sh.",
-          "fr": "Surveiller l'utilisation non autorisée de `curl.exe` téléchargeant des données, en particulier lors de la communication avec des domaines de partage de fichiers publics comme temp.sh."
+          "en": "Reinstall the latest version of Notepad++ from a trusted source and rotate credentials used on compromised systems.",
+          "fr": "Réinstaller la dernière version de Notepad++ à partir d'une source fiable et renouveler les identifiants utilisés sur les systèmes compromis."
         }
       ],
       "tags": [
         "Supply Chain",
         "Reconnaissance",
-        "C2",
-        "APT"
+        "Windows",
+        "TTP"
       ],
       "sources": [
         "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
@@ -98,14 +127,14 @@
     },
     {
       "title": {
-        "en": "Ensuring Forensic Readiness in Google Workspace",
-        "fr": "Assurer la préparation forensique dans Google Workspace"
+        "en": "Configuring API-based Audit Log Collection for Google Workspace (DFIR TTP)",
+        "fr": "Configuration de la Collecte de Journaux d'Audit Basée sur API pour Google Workspace (TTP DFIR)"
       },
       "description": {
-        "en": "A detailed security guide outlining the prerequisite steps for Google Workspace Super Admins to establish a robust, API-based mechanism for automated collection of audit and activity logs, crucial for digital forensics and threat hunting operations.",
-        "fr": "Un guide de sécurité détaillé décrivant les étapes préalables pour les Super Administrateurs Google Workspace afin d'établir un mécanisme robuste basé sur une API pour la collecte automatisée des journaux d'audit et d'activité, essentiels pour la criminalistique numérique et la chasse aux menaces."
+        "en": "Detailed walkthrough for setting up continuous collection of Google Workspace audit and activity logs using the Admin SDK Reports API, essential for comprehensive cloud security monitoring and forensic investigations.",
+        "fr": "Guide détaillé pour configurer la collecte continue des journaux d'audit et d'activité de Google Workspace via l'API Admin SDK Reports, essentielle pour la surveillance de la sécurité cloud et les enquêtes forensiques approfondies."
       },
-      "threat_actor": "N/A",
+      "threat_actor": "None",
       "indicators": {
         "URL": [
           "https://www.googleapis.com/auth/admin.reports.audit.readonly",
@@ -125,28 +154,28 @@
         ]
       },
       "mitre_ttps": [
-        "M1025"
+        "T1589"
       ],
       "analyse": {
-        "en": "Effective logging in a multi-cloud environment requires overcoming administrative complexity (linking Google Cloud identity/Service Accounts to Workspace Domain-Wide Delegation). Correct implementation ensures investigators can programmatically pull comprehensive logs without relying on restrictive UI exports, which is vital for post-incident analysis.",
-        "fr": "La journalisation efficace dans un environnement multi-cloud nécessite de surmonter la complexité administrative (lier l'identité Google Cloud/Comptes de Service à la délégation à l'échelle du domaine Workspace). Une mise en œuvre correcte garantit que les enquêteurs peuvent extraire des journaux complets par programme sans dépendre des exportations d'interface utilisateur restrictives, ce qui est essentiel pour l'analyse post-incident."
+        "en": "The configuration requires synchronizing steps across the Google Cloud Console (project creation, API enablement, service account setup) and the Google Workspace Admin Console (Domain-Wide Delegation using the Client ID and specific OAuth scopes). This method is critical for bypassing UI export limits and standardizing log retrieval for DFIR readiness.",
+        "fr": "La configuration nécessite la synchronisation des étapes entre la Google Cloud Console (création de projet, activation d'API, compte de service) et la Google Workspace Admin Console (Délégation à l'échelle du Domaine en utilisant l'ID Client et des scopes OAuth spécifiques). Cette méthode est essentielle pour contourner les limites d'exportation de l'interface utilisateur et standardiser la récupération des journaux pour la préparation au DFIR."
       },
       "recommandations": [
         {
-          "en": "Verify that service accounts utilizing Domain-Wide Delegation only have the minimum necessary OAuth scopes assigned (e.g., read-only access to audit reports).",
-          "fr": "Vérifier que les comptes de service utilisant la Délégation à l'échelle du domaine ne disposent que des portées OAuth minimales nécessaires (par exemple, un accès en lecture seule aux rapports d'audit)."
+          "en": "Establish a dedicated Google Cloud Service Account and enable Domain-Wide Delegation to allow repeatable, bulk extraction of audit logs via the Admin SDK Reports API.",
+          "fr": "Établir un Compte de Service Google Cloud dédié et activer la Délégation à l'échelle du Domaine pour permettre l'extraction répétable et en masse des journaux d'audit via l'API Admin SDK Reports."
         },
         {
-          "en": "Implement strict security procedures (e.g., vaulting) for the downloaded JSON key associated with the service account, as it grants high-level access to the Workspace domain.",
-          "fr": "Mettre en œuvre des procédures de sécurité strictes (par exemple, mise en coffre) pour la clé JSON téléchargée associée au compte de service, car elle accorde un accès de haut niveau au domaine Workspace."
+          "en": "Securely store the Service Account JSON key, treating it as highly sensitive credentials.",
+          "fr": "Stocker de manière sécurisée la clé JSON du Compte de Service, en la considérant comme une information d'identification hautement sensible."
         }
       ],
       "tags": [
-        "Forensic Readiness",
         "Cloud Security",
         "DFIR",
+        "Google Workspace",
         "Log Collection",
-        "blue-team"
+        "Best Practice"
       ],
       "sources": [
         "https://www.cyberengage.org/post/pulling-google-workspace-logs-via-api"
