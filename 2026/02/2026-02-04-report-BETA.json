@@ -2,65 +2,91 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "The early days of February 2026 show intensified activity from nation-state threat actors utilizing sophisticated attack chains and leveraging new vulnerabilities. The China-nexus APT activity targeting the Notepad++ supply chain is assessed as a highly advanced operation, utilizing DLL sideloading and Cobalt Strike. Concurrently, Russia-linked APT28 (Fancy Bear) launched 'Operation Neusploit,' exploiting a newly disclosed Microsoft Office vulnerability in targeted attacks against governmental and security entities. A major technical development is the documented use of AI/Large Language Models (LLMs) to accelerate cloud intrusion, achieving admin access in AWS environments in minutes, setting a new benchmark for attack speed and challenging traditional detection methodologies. Furthermore, hackers capitalized on a pre-disclosure vulnerability in React Native CLI (CVE-2025-11953) to deploy stealthy Rust-based malware. On the geopolitical front, major realignments are visible, especially in the Sahel where Mali pivots towards Russia and China post-French withdrawal, and in Latin America, marked by political polarization and aggressive US reassertion of influence following an intervention in Venezuela.",
-      "fr": "Le début du mois de février 2026 révèle une activité intensifiée des acteurs de la menace étatiques utilisant des chaînes d'attaque sophistiquées et exploitant de nouvelles vulnérabilités. L'activité de l'APT liée à la Chine ciblant la chaîne d'approvisionnement de Notepad++ est considérée comme une opération très avancée, utilisant le chargement latéral de DLL et Cobalt Strike. Simultanément, l'APT28 (Fancy Bear), lié à la Russie, a lancé l'« Opération Neusploit », exploitant une vulnérabilité récemment divulguée dans Microsoft Office lors d'attaques ciblées contre des entités gouvernementales et de sécurité. Un développement technique majeur est l'utilisation documentée de l'IA/des grands modèles de langage (LLM) pour accélérer l'intrusion dans le cloud, permettant d'obtenir un accès administrateur dans des environnements AWS en quelques minutes, établissant une nouvelle référence pour la vitesse d'attaque et remettant en question les méthodologies de détection traditionnelles. De plus, des attaquants ont tiré parti d'une vulnérabilité non encore divulguée dans React Native CLI (CVE-2025-11953) pour déployer un malware furtif basé sur Rust. Sur le plan géopolitique, des réalignements majeurs sont visibles, notamment au Sahel où le Mali se tourne vers la Russie et la Chine après le retrait français, et en Amérique latine, marquée par la polarisation politique et la réaffirmation agressive de l'influence américaine suite à une intervention au Venezuela."
+      "en": "The cyber threat landscape shows rapid technological acceleration, driven by Generative AI and advanced evasion techniques. Evidence suggests that threat actors are leveraging AI/LLMs to automate reconnaissance and accelerate cloud intrusions, achieving administrative access in under 10 minutes. This speed gain is coupled with increasing sophistication in defense evasion, highlighted by the widespread adoption of Bring Your Own Vulnerable Driver (BYOVD) attacks—using legitimate, signed kernel drivers (like the revoked EnCase driver or gaming anti-cheat drivers used by Interlock ransomware) to terminate EDR and antivirus products. Furthermore, the strategic attack surface is shifting: information-stealing malware is expanding rapidly to macOS using cross-platform languages, and the compromise of 'non-human identities' (API keys, tokens) is becoming a primary vector for silent, persistent access to cloud environments. Geopolitically, state-sponsored groups remain focused on espionage via supply chain attacks and the active exploitation of recently disclosed or older vulnerabilities (GitLab, SolarWinds) emphasized by CISA warnings.",
+      "fr": "Le paysage des menaces cyber montre une accélération technologique rapide, tirée par l'IA générative et des techniques d'évasion avancées. Des preuves suggèrent que les acteurs de la menace exploitent l'IA/LLM pour automatiser la reconnaissance et accélérer les intrusions dans le cloud, permettant d'obtenir un accès administratif en moins de 10 minutes. Ce gain de vitesse s'accompagne d'une sophistication croissante dans l'évasion des défenses, soulignée par l'adoption généralisée des attaques BYOVD (Bring Your Own Vulnerable Driver) — utilisant des pilotes de noyau légitimes et signés (comme le pilote EnCase révoqué ou des pilotes anti-triche de jeux vidéo utilisés par le ransomware Interlock) pour désactiver les produits EDR et antivirus. De plus, la surface d'attaque stratégique évolue : les malwares de vol d'informations se propagent rapidement à macOS en utilisant des langages multiplateformes, et le compromis des « identités non humaines » (clés API, jetons) devient un vecteur principal pour un accès silencieux et persistant aux environnements cloud. Sur le plan géopolitique, les groupes parrainés par des États restent axés sur l'espionnage via les attaques sur la chaîne d'approvisionnement et l'exploitation active de vulnérabilités récemment divulguées ou plus anciennes (GitLab, SolarWinds), comme le soulignent les avertissements de la CISA."
     },
     "date": "2026-02-04"
   },
   "malicious_actors_analyse": [
     {
-      "name": "APT39",
-      "campaign": "Notepad++ Supply Chain Compromise",
+      "name": "APT28",
+      "campaign": "Operation Neusploit",
       "campaign_description": {
-        "en": "Chinese state-linked actors compromised the update infrastructure of Notepad++'s hosting provider. This highly sophisticated supply chain attack involved intercepting update traffic and deploying malicious payloads using previously undocumented execution chains involving DLL sideloading and Cobalt Strike Beacon delivery.",
-        "fr": "Des acteurs liés à l'État chinois ont compromis l'infrastructure de mise à jour du fournisseur d'hébergement de Notepad++. Cette attaque de la chaîne d'approvisionnement, très sophistiquée, a intercepté le trafic de mise à jour et déployé des charges utiles malveillantes en utilisant des chaînes d'exécution non documentées impliquant le chargement latéral de DLL et la livraison de Cobalt Strike Beacon."
+        "en": "A targeted campaign exploiting a newly disclosed Microsoft Office vulnerability against governments, militaries, and security organizations.",
+        "fr": "Une campagne ciblée exploitant une vulnérabilité récemment divulguée de Microsoft Office contre les gouvernements, les militaires et les organisations de sécurité."
       },
       "sector": {
-        "en": "Software Developers, Technology, Government (indirect through software compromise)",
-        "fr": "Développeurs de logiciels, Technologie, Gouvernement (indirect via compromission logicielle)"
+        "en": "Government, Defense, Security Organizations",
+        "fr": "Gouvernement, Défense, Organisations de sécurité"
       },
       "modop": {
-        "en": "Supply Chain Compromise; infrastructure exploitation; DLL Sideloading for execution; Cobalt Strike Beacon deployment.",
-        "fr": "Compromission de la chaîne d'approvisionnement ; exploitation d'infrastructure ; chargement latéral de DLL pour l'exécution ; déploiement de Cobalt Strike Beacon."
+        "en": "Exploiting new Microsoft Office vulnerability for targeted cyber espionage.",
+        "fr": "Exploitation d'une nouvelle vulnérabilité Microsoft Office pour l'espionnage cybernétique ciblé."
       },
       "tags": [
-        "Supply Chain Attack",
-        "DLL Sideloading",
-        "China",
-        "APT",
-        "Cobalt Strike"
+        "Nation-State",
+        "Espionage",
+        "Microsoft Office Exploit"
       ],
       "sources": [
-        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
-        "https://securelist.com/notepad-supply-chain-attack/118708/",
-        "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+        "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit/"
       ],
       "date": "2026-02-04"
     },
     {
-      "name": "APT28",
-      "campaign": "Operation Neusploit",
+      "name": "APT41",
+      "campaign": "Amaranth Dragon Espionage",
       "campaign_description": {
-        "en": "Russia-linked APT28 launched Operation Neusploit, actively exploiting a newly disclosed vulnerability in Microsoft Office. The campaign targets governments, military, and security organizations for espionage purposes.",
-        "fr": "L'APT28, lié à la Russie, a lancé l'Opération Neusploit, exploitant activement une vulnérabilité récemment divulguée dans Microsoft Office. La campagne cible les gouvernements, l'armée et les organisations de sécurité à des fins d'espionnage."
+        "en": "A series of cyber espionage campaigns targeting government and law enforcement agencies across the Southeast Asian region throughout 2025. This group demonstrates a clear focus on geopolitical intelligence.",
+        "fr": "Une série de campagnes de cyberespionnage visant des agences gouvernementales et d'application de la loi dans la région de l'Asie du Sud-Est tout au long de 2025. Ce groupe montre un intérêt marqué pour le renseignement géopolitique."
       },
       "sector": {
-        "en": "Government, Defense, Security",
-        "fr": "Gouvernement, Défense, Sécurité"
+        "en": "Government, Law Enforcement, Southeast Asia",
+        "fr": "Gouvernement, Application de la loi, Asie du Sud-Est"
       },
       "modop": {
-        "en": "Targeted exploitation of a Microsoft Office vulnerability (likely N-day or Zero-day) for initial access, consistent with geopolitical espionage objectives.",
-        "fr": "Exploitation ciblée d'une vulnérabilité de Microsoft Office (probablement N-day ou Zero-day) pour l'accès initial, conformément aux objectifs d'espionnage géopolitique."
+        "en": "Weaponizing the WinRAR flaw (CVE-2025-8088) for initial access and targeted espionage.",
+        "fr": "Utilisation de la vulnérabilité WinRAR (CVE-2025-8088) comme arme pour l'accès initial et l'espionnage ciblé."
       },
       "tags": [
-        "Russia",
-        "APT",
-        "Zero-Day",
-        "Microsoft Office",
-        "Espionage"
+        "Nation-State",
+        "Espionage",
+        "Zero-Day Exploitation",
+        "WinRAR"
       ],
       "sources": [
-        "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+        "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+        "https://thehackernews.com/2026/02/china-linked-amaranth-dragon-exploits.html"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "name": "UNCXXXX",
+      "campaign": "Notepad++ Supply Chain Compromise",
+      "campaign_description": {
+        "en": "Chinese state-linked actors (likely Lotus Blossom/APT39 nexus) compromised the Notepad++ update infrastructure between June and December 2025, intercepting updates to redirect traffic to malicious servers. This operation featured undocumented infection chains.",
+        "fr": "Des acteurs liés à l'État chinois (probablement du nexus Lotus Blossom/APT39) ont compromis l'infrastructure de mise à jour de Notepad++ entre juin et décembre 2025, interceptant les mises à jour pour rediriger le trafic vers des serveurs malveillants. Cette opération a utilisé des chaînes d'infection non documentées."
+      },
+      "sector": {
+        "en": "Software Supply Chain, Technology",
+        "fr": "Chaîne d'approvisionnement logicielle, Technologie"
+      },
+      "modop": {
+        "en": "Supply chain compromise via hosting infrastructure, utilizing DLL sideloading and Cobalt Strike Beacon delivery.",
+        "fr": "Compromission de la chaîne d'approvisionnement via l'infrastructure d'hébergement, utilisant le détournement de DLL (DLL sideloading) et la livraison de Cobalt Strike Beacon."
+      },
+      "tags": [
+        "Nation-State",
+        "Supply Chain Attack",
+        "Espionage",
+        "DLL Sideloading"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+        "https://securelist.com/notepad-supply-chain-attack/118708/",
+        "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom/",
+        "https://sploited.blog/2026/02/03/a-technical-post-mortem-of-the-notepad-supply-chain-compromise/"
       ],
       "date": "2026-02-04"
     }
@@ -68,79 +94,190 @@
   "geopolitical_analyse": [
     {
       "sector": {
-        "en": "National Security, International Relations",
-        "fr": "Sécurité Nationale, Relations Internationales"
+        "en": "Defense, Economy, Geoeconomics",
+        "fr": "Défense, Économie, Géoéconomie"
       },
       "theme": {
-        "en": "Geopolitical pivot and challenges to sovereignty in the Central Sahel (Mali)",
-        "fr": "Pivot géopolitique et défis de souveraineté au Sahel central (Mali)"
+        "en": "Russian War Economy Expansion",
+        "fr": "Expansion de l'économie de guerre russe"
       },
       "description": {
-        "en": "Analysis of the systemic rupture in Mali following the withdrawal of French forces, marked by a pivot towards Russia (Wagner/Africa Corps) and China. Despite claims of 'recaptured sovereignty,' the regime faces persistent security threats, structural dependencies, and internal precarity, leading to the search for diversified partnerships, even with former adversaries like ECOWAS, to address the ongoing terrorism crisis.",
-        "fr": "Analyse de la rupture systémique au Mali suite au retrait des forces françaises, marquée par un pivot vers la Russie (Wagner/Africa Corps) et la Chine. Malgré les revendications de « souveraineté retrouvée », le régime est confronté à des menaces sécuritaires persistantes, des dépendances structurelles et une précarité interne, l'obligeant à rechercher des partenariats diversifiés, même avec d'anciens adversaires comme la CEDEAO, pour faire face à la crise terroriste en cours."
+        "en": "Analysis of Russia's defense industry growth, showing a 15.1% increase in manufacturing (2022-2024), significantly outpacing general GDP growth. This expansion is driven by direct military orders and robust import substitution efforts, supported by key administrative measures (prepayments, deregulation, labor flexibility) enabling rapid production scaling, particularly in electronics and specialized transport.",
+        "fr": "Analyse de la croissance de l'industrie de la défense russe, affichant une augmentation de 15,1 % dans le secteur manufacturier (2022-2024), dépassant largement la croissance du PIB général. Cette expansion est tirée par les commandes militaires directes et des efforts de substitution aux importations, soutenus par des mesures administratives clés (prépaiements, déréglementation, flexibilité du travail) permettant une mise à l'échelle rapide de la production, notamment dans l'électronique et les transports spécialisés."
       },
       "tags": [
-        "Mali",
-        "Sahel",
-        "Russia Influence",
-        "Geopolitical Shift"
+        "Russia",
+        "Defense Industry",
+        "Sanctions",
+        "Industrial Sovereignty"
       ],
       "sources": [
-        "https://www.iris-france.org/mali-sahel-une-souverainete-retrouvee/"
+        "https://www.epge.fr/point-de-situation-sur-leconomie-de-guerre-russe-fevrier-2026/"
       ],
       "date": "2026-02-04"
     },
     {
       "sector": {
-        "en": "Political Stability, International Relations",
-        "fr": "Stabilité Politique, Relations Internationales"
+        "en": "Energy, Finance, Geopolitics",
+        "fr": "Énergie, Finance, Géopolitique"
       },
       "theme": {
-        "en": "Expansion of far-right and conservative movements in Latin America and US interventionism",
-        "fr": "Expansion des mouvements d'extrême droite et conservateurs en Amérique latine et interventionnisme américain"
+        "en": "US-Venezuela Oil Links and the Petro-Dollar",
+        "fr": "Liens pétroliers États-Unis-Venezuela et le pétrodollar"
       },
       "description": {
-        "en": "The political landscape in Latin America is shifting rightward. This occurs amidst aggressive geopolitical maneuvering by the United States to reassert regional supremacy against China and Russia, exemplified by the controversial and illegal military intervention in Venezuela, allegedly resulting in the abduction of President Nicolas Maduro.",
-        "fr": "Le paysage politique en Amérique latine est en train de basculer vers la droite. Cela se produit dans un contexte de manœuvres géopolitiques agressives des États-Unis pour réaffirmer leur suprématie régionale face à la Chine et à la Russie, illustré par l'intervention militaire controversée et illégale au Venezuela, qui aurait entraîné l'enlèvement du président Nicolas Maduro."
+        "en": "The renewed oil relationship between Washington and Caracas is primarily strategic, securing extra-heavy crude vital for US Gulf Coast refineries. Geopolitically, this move aims to re-dollarize energy flows that had attempted to evade the US financial architecture, serving as a mechanism to stabilize the global dominance of the petro-dollar system against de-dollarization trends.",
+        "fr": "La reprise des relations pétrolières entre Washington et Caracas est avant tout stratégique, visant à sécuriser le brut extra-lourd essentiel aux raffineries américaines de la côte du Golfe. Géopolitiquement, cette démarche vise à redollariser des flux énergétiques qui avaient tenté d'échapper à l'architecture financière américaine, servant ainsi de mécanisme de stabilisation du système pétrodollar face aux tendances de dédollarisation."
       },
       "tags": [
-        "Latin America",
-        "US Foreign Policy",
+        "USA",
         "Venezuela",
-        "Political Polarization"
+        "Oil",
+        "Geoeconomics",
+        "Dédollarisation"
       ],
       "sources": [
-        "https://www.iris-france.org/en-amerique-latine-lexpansion-des-droites/"
+        "https://www.portail-ie.fr/univers/analyse-strategique-les-methodes-et-outils/2026/liaisons-petrolieres-washington-caracas-venezuela/"
       ],
       "date": "2026-02-04"
     },
     {
       "sector": {
-        "en": "Diplomacy, Regional Conflict",
-        "fr": "Diplomatie, Conflit Régional"
+        "en": "Government, Diplomacy, Information Warfare",
+        "fr": "Gouvernement, Diplomatie, Guerre de l'information"
       },
       "theme": {
-        "en": "Regional implications of Israel’s diplomatic recognition of Somaliland",
-        "fr": "Implications régionales de la reconnaissance diplomatique du Somaliland par Israël"
+        "en": "Japan countering disinformation regarding Fukushima water release",
+        "fr": "Le Japon face à la désinformation concernant le rejet des eaux de Fukushima"
       },
       "description": {
-        "en": "Israel became the first country to formally recognize Somaliland. This selective diplomatic move carries significant regional implications, potentially undermining the legitimacy of Somaliland in the eyes of many Somalis and impacting regional stability dynamics.",
-        "fr": "Israël est devenu le premier pays à reconnaître formellement le Somaliland. Ce geste diplomatique sélectif a des implications régionales significatives, sapant potentiellement la légitimité du Somaliland aux yeux de nombreux Somaliens et affectant la dynamique de stabilité régionale."
+        "en": "Japan is engaged in a strategic effort to assert scientific legitimacy while countering significant information warfare, primarily originating from China, concerning the release of treated water from the Fukushima Daiichi nuclear plant.",
+        "fr": "Le Japon est engagé dans un effort stratégique pour établir sa légitimité scientifique tout en contrant une guerre de l'information significative, émanant principalement de la Chine, concernant le rejet des eaux traitées de la centrale nucléaire de Fukushima Daiichi."
       },
       "tags": [
-        "Israel",
-        "Somaliland",
-        "Diplomacy",
-        "Regional Stability"
+        "Japan",
+        "China",
+        "Information Warfare",
+        "Disinformation"
       ],
       "sources": [
-        "https://www.rusi.org/explore-our-research/publications/commentary/selective-diplomacy-israels-somaliland-move-and-its-regional-implications"
+        "https://www.iris-france.org/le-japon-face-a-la-desinformation-le-cas-du-rejet-des-eaux-traitees-de-fukushima/"
       ],
       "date": "2026-02-04"
     }
   ],
-  "breach_analyse": [],
+  "breach_analyse": [
+    {
+      "victim": "AT&T",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "A dataset allegedly belonging to AT&T, containing 176 million records, including 148 million Social Security Numbers (SSNs), names, addresses, and phone numbers, has resurfaced on criminal forums, presenting a high risk of identity theft.",
+        "fr": "Un ensemble de données prétendument appartenant à AT&T, contenant 176 millions d'enregistrements, dont 148 millions de numéros de sécurité sociale (SSN), noms, adresses et numéros de téléphone, a refait surface sur des forums criminels, présentant un risque élevé d'usurpation d'identité."
+      },
+      "tags": [
+        "Data Leak",
+        "Identity Theft",
+        "PII",
+        "SSN"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116013958050485973"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "victim": "Iron Mountain",
+      "threat_actor": "Everest Extortion Group",
+      "sector": {
+        "en": "Storage, Logistics, Information Management",
+        "fr": "Stockage, Logistique, Gestion de l'information"
+      },
+      "description": {
+        "en": "Iron Mountain confirmed a breach initiated through a single compromised credential used to access marketing materials. The Everest extortion group claims to have stolen 1.4 TB of sensitive client data.",
+        "fr": "Iron Mountain a confirmé une violation initiée par un seul identifiant compromis utilisé pour accéder à des supports marketing. Le groupe d'extorsion Everest affirme avoir volé 1,4 To de données clients sensibles."
+      },
+      "tags": [
+        "Data Exfiltration",
+        "Extortion",
+        "Compromised Credential"
+      ],
+      "sources": [
+        "https://infosec.exchange/@beyondmachines1/116013430374874416"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "victim": "Geisinger Health (via Nuance Communications)",
+      "threat_actor": "Insider Threat",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Update on the criminal prosecution of a former Nuance Communications employee who compromised the Protected Health Information (PHI) of over 1.3 million Geisinger Health patients in 2023 following his termination. New charges of false statements have been added.",
+        "fr": "Mise à jour sur la poursuite pénale d'un ancien employé de Nuance Communications qui a compromis les informations de santé protégées (PHI) de plus de 1,3 million de patients de Geisinger Health en 2023, suite à son licenciement. De nouvelles accusations de fausses déclarations ont été ajoutées."
+      },
+      "tags": [
+        "Insider Threat",
+        "Healthcare",
+        "PHI",
+        "Legal Action"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/04/former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case/"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
   "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2021-39935",
+      "euvd_id": "",
+      "cvss": "",
+      "epss": "",
+      "product": "GitLab Community and Enterprise Editions",
+      "description": {
+        "en": "A critical Server-Side Request Forgery (SSRF) vulnerability, five years old, has been added to the CISA KEV catalog due to confirmed active exploitation in the wild. Government agencies are ordered to patch immediately.",
+        "fr": "Une vulnérabilité critique de type Server-Side Request Forgery (SSRF), vieille de cinq ans, a été ajoutée au catalogue KEV de la CISA en raison d'une exploitation active confirmée. Les agences gouvernementales ont l'ordre d'appliquer le correctif immédiatement."
+      },
+      "tags": [
+        "vulnerability",
+        "SSRF",
+        "Actively Exploited",
+        "KEV"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-warns-of-five-year-old-gitlab-flaw-exploited-in-attacks/",
+        "https://cybersecuritynews.com/cisa-warns-gitlab-ssrf-vulnerability-exploit/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "cve_id": "CVE-2025-40551",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "SolarWinds Web Help Desk",
+      "description": {
+        "en": "A critical vulnerability (rated 9.8) in SolarWinds Web Help Desk is being actively exploited by attackers less than a week after the vendor disclosed and fixed the flaw. CISA issued a mandatory patching directive.",
+        "fr": "Une vulnérabilité critique (notée 9.8) dans SolarWinds Web Help Desk est activement exploitée par des attaquants moins d'une semaine après que l'éditeur a divulgué et corrigé la faille. La CISA a émis une directive de correction obligatoire."
+      },
+      "tags": [
+        "vulnerability",
+        "Actively Exploited",
+        "RCE",
+        "KEV"
+      ],
+      "sources": [
+        "https://go.theregister.com/feed/www.theregister.com/2026/02/04/critical_solarwinds_web_help_desk/",
+        "https://www.security.nl/posting/923158/VS+meldt+actief+misbruik+van+kritiek+lek+in+SolarWinds+Web+Help+Desk"
+      ],
+      "date": "2026-02-04"
+    },
     {
       "cve_id": "CVE-2025-11953",
       "euvd_id": "",
@@ -148,17 +285,38 @@
       "epss": "",
       "product": "React Native CLI Metro server",
       "description": {
-        "en": "Critical vulnerability in the React Native CLI Metro server, which binds to external interfaces by default. This flaw allows remote command execution (RCE) and was actively exploited by attackers to deploy Rust-based malware weeks before its public disclosure.",
-        "fr": "Vulnérabilité critique dans le serveur Metro de React Native CLI, qui se lie aux interfaces externes par défaut. Cette faille permet l'exécution de commandes à distance (RCE) et a été activement exploitée par des attaquants pour déployer un malware basé sur Rust des semaines avant sa divulgation publique."
+        "en": "A critical zero-day flaw in the React Native CLI Metro server, allowing remote command execution (RCE) and the deployment of Rust-based malware, was exploited by hackers weeks before its public disclosure. The issue stems from the server binding to external interfaces by default.",
+        "fr": "Une faille critique de type zero-day dans le serveur React Native CLI Metro, permettant l'exécution de commandes à distance (RCE) et le déploiement de malwares basés sur Rust, a été exploitée par des pirates des semaines avant sa divulgation publique. Le problème provient du serveur qui se lie par défaut aux interfaces externes."
       },
       "tags": [
         "vulnerability",
-        "RCE",
         "Zero-Day",
-        "Exploitation"
+        "RCE",
+        "Pre-disclosure exploitation"
       ],
       "sources": [
-        "https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure.html"
+        "https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "cve_id": "CVE-2026-1633",
+      "euvd_id": "",
+      "cvss": "10.0",
+      "epss": "",
+      "product": "Synectix LAN 232 TRIO",
+      "description": {
+        "en": "CISA issued a maximum-severity alert (CVSS 10.0) for this critical vulnerability affecting a legacy ICS component (serial-to-ethernet adapter), which is considered unpatchable.",
+        "fr": "La CISA a émis une alerte de gravité maximale (CVSS 10.0) pour cette vulnérabilité critique affectant un composant ICS hérité (adaptateur série-vers-Ethernet), qui est jugée non patchable."
+      },
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "Unpatchable",
+        "Critical"
+      ],
+      "sources": [
+        "https://securityonline.info/unpatchable-critical-cisa-issues-cvss-10-0-alert-for-synectix-adapters/"
       ],
       "date": "2026-02-04"
     }
@@ -166,14 +324,14 @@
   "threats_analyse": [
     {
       "title": {
-        "en": "AI/LLM Assisted Cloud Intrusion Achieves Admin Access in 8 Minutes",
-        "fr": "L'intrusion dans le Cloud assistée par l'IA/LLM permet l'accès administrateur en 8 minutes"
+        "en": "EDR Evasion using Revoked EnCase Kernel Driver (BYOVD)",
+        "fr": "Évasion d'EDR utilisant un pilote de noyau EnCase révoqué (BYOVD)"
       },
       "description": {
-        "en": "An offensive operation targeting an AWS environment achieved escalation from initial access to administrative privileges in approximately 8 minutes. This rapid advancement was characterized by strong indicators suggesting the use of Large Language Models (LLMs) to automate reconnaissance, code generation, and real-time operational decisions.",
-        "fr": "Une opération offensive ciblant un environnement AWS a réussi à escalader de l'accès initial aux privilèges administratifs en environ 8 minutes. Cette progression rapide présente des indicateurs suggérant l'utilisation de grands modèles de langage (LLM) pour automatiser la reconnaissance, la génération de code et les décisions opérationnelles en temps réel."
+        "en": "Threat actors utilized compromised SonicWall VPN credentials for initial access, followed by an EDR killer tool that exploits a legitimate but long-revoked EnCase kernel driver. This Bring Your Own Vulnerable Driver (BYOVD) technique allows the termination of EDR processes, with the tool reportedly capable of detecting 59 security solutions.",
+        "fr": "Des acteurs de la menace ont utilisé des identifiants VPN SonicWall compromis pour l'accès initial, puis un outil d'élimination d'EDR exploitant un pilote de noyau EnCase légitime mais révoqué. Cette technique BYOVD (Bring Your Own Vulnerable Driver) permet de mettre fin aux processus EDR, l'outil étant capable de détecter 59 solutions de sécurité différentes."
       },
-      "threat_actor": "Unspecified",
+      "threat_actor": "UNCXXXX",
       "indicators": {
         "URL": [],
         "IPv4": [],
@@ -184,37 +342,142 @@
         "HASH_SHA1": [],
         "HASH_MD5": [],
         "TOOLS": [
-          "LLM/AI for Automation"
+          "EnCase Kernel Driver (revoked)",
+          "EDR killer tool"
         ]
       },
       "mitre_ttps": [
-        "T1078.004",
-        "T1588.003",
-        "T1068",
-        "TA0004"
+        "T1190 - Exploit Public-Facing Application",
+        "T1562 - Impair Defenses",
+        "T1543 - Create or Modify System Process"
       ],
       "analyse": {
-        "en": "The use of AI/LLMs dramatically increases the velocity and efficiency of cloud intrusion campaigns, narrowing the detection window (time-to-admin) and lowering the necessary skill barrier for complex cloud environments (AWS). Organizations must prioritize real-time monitoring and automation for response.",
-        "fr": "L'utilisation de l'IA/LLM augmente considérablement la vitesse et l'efficacité des campagnes d'intrusion dans le cloud, réduisant la fenêtre de détection (temps d'accès administrateur) et abaissant la barrière de compétences requises pour les environnements cloud complexes (AWS). Les organisations doivent donner la priorité à la surveillance en temps réel et à l'automatisation des réponses."
+        "en": "The use of signed, vulnerable, but legitimate kernel drivers (BYOVD) continues to be a highly effective technique for threat actors to achieve high privilege and execute defense evasion by terminating security tools, demonstrating a significant gap in operating system trust models.",
+        "fr": "L'utilisation de pilotes de noyau signés, vulnérables mais légitimes (BYOVD) reste une technique très efficace pour les acteurs de la menace afin d'obtenir des privilèges élevés et d'exécuter une évasion de défense en désactivant les outils de sécurité, révélant une faille significative dans les modèles de confiance des systèmes d'exploitation."
       },
       "recommandations": [
         {
-          "en": "Implement and strictly enforce continuous monitoring and 'least privilege' access policies in all cloud environments (IaaS and PaaS).",
-          "fr": "Mettre en œuvre et appliquer strictement une surveillance continue et des politiques d'accès au « moindre privilège » dans tous les environnements cloud (IaaS et PaaS)."
+          "en": "Implement strict controls over kernel driver loading capabilities and maintain an up-to-date blocklist of known vulnerable and revoked drivers.",
+          "fr": "Mettre en œuvre des contrôles stricts sur les capacités de chargement des pilotes de noyau et maintenir une liste noire à jour des pilotes vulnérables et révoqués connus."
         },
         {
-          "en": "Invest in automated response mechanisms capable of reacting to privilege escalation attempts within minutes to counter the accelerated attack speed enabled by AI.",
-          "fr": "Investir dans des mécanismes de réponse automatisée capables de réagir aux tentatives d'escalade de privilèges en quelques minutes pour contrer la vitesse d'attaque accélérée permise par l'IA."
+          "en": "Review logs for anomalies related to security process termination attempts following VPN-based initial access.",
+          "fr": "Examiner les journaux pour détecter les anomalies liées aux tentatives d'arrêt des processus de sécurité suite à un accès initial basé sur le VPN."
         }
       ],
       "tags": [
+        "BYOVD",
+        "Ransomware",
+        "Defense Evasion",
+        "TTP"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/edr-killer-tool-uses-signed-kernel-driver-from-forensic-software/",
+        "https://www.huntress.com/blog/encase-byovd-edr-killer"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "title": {
+        "en": "AI-Assisted Cloud Intrusion Achieves Admin Access in Under 10 Minutes",
+        "fr": "Intrusion Cloud Assistée par IA Atteignant l'Accès Administrateur en Moins de 10 Minutes"
+      },
+      "description": {
+        "en": "The Sysdig Threat Research Team observed an offensive cloud operation in an AWS environment where the threat actor moved from initial access to administrative privileges in less than 10 minutes, leveraging Large Language Models (LLMs) to automate reconnaissance and malicious code generation.",
+        "fr": "L'équipe de recherche sur les menaces de Sysdig a observé une opération offensive dans un environnement AWS où l'acteur de la menace est passé de l'accès initial aux privilèges administratifs en moins de 10 minutes, en tirant parti des Grands Modèles Linguistiques (LLM) pour automatiser la reconnaissance et la génération de code malveillant."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Large Language Models (LLMs)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1078 - Valid Accounts",
+        "T1059 - Command and Scripting Interpreter",
+        "T1589 - Gather Victim Identity Information (Automated)"
+      ],
+      "analyse": {
+        "en": "This incident highlights the strategic impact of Generative AI on accelerating breaches, particularly in cloud environments where complex configuration and credential management are common. The speed reduces the detection and response window for security teams.",
+        "fr": "Cet incident souligne l'impact stratégique de l'IA générative sur l'accélération des violations, en particulier dans les environnements cloud où la gestion complexe des configurations et des identifiants est courante. La rapidité réduit la fenêtre de détection et de réponse pour les équipes de sécurité."
+      },
+      "recommandations": [
+        {
+          "en": "Focus on automated real-time response mechanisms (Agentic AI) to neutralize threats before human intervention is possible.",
+          "fr": "Se concentrer sur des mécanismes de réponse automatisée en temps réel (IA agentive) pour neutraliser les menaces avant qu'une intervention humaine ne soit possible."
+        },
+        {
+          "en": "Implement strong segmentation and monitor privileged non-human identities (API keys, tokens) for anomalous activity.",
+          "fr": "Mettre en œuvre une segmentation stricte et surveiller les identités non humaines privilégiées (clés API, jetons) pour détecter toute activité anormale."
+        }
+      ],
+      "tags": [
+        "AI",
+        "LLM",
         "Cloud Security",
         "AWS",
-        "AI Assistance",
-        "Privilege Escalation"
+        "Speed of Attack"
       ],
       "sources": [
         "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "title": {
+        "en": "Large-Scale Citrix Gateway Reconnaissance Campaign",
+        "fr": "Campagne de Reconnaissance Massif des Passerelles Citrix"
+      },
+      "description": {
+        "en": "GreyNoise tracked a coordinated reconnaissance campaign targeting Citrix ADC/NetScaler Gateways. Attackers used over 63,000 residential proxies to discover login panels before transitioning to AWS infrastructure for enumerating vulnerable versions, indicating a highly coordinated and sophisticated targeting effort.",
+        "fr": "GreyNoise a suivi une campagne de reconnaissance coordonnée ciblant les passerelles Citrix ADC/NetScaler. Les attaquants ont utilisé plus de 63 000 proxys résidentiels pour découvrir les panneaux de connexion avant de passer à l'infrastructure AWS pour énumérer les versions vulnérables, indiquant un effort de ciblage hautement coordonné et sophistiqué."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1595 - Active Scanning",
+        "T1589 - Gather Victim Identity Information"
+      ],
+      "analyse": {
+        "en": "The dual-mode attack strategy—using residential proxies for stealthy initial discovery and AWS for high-volume enumeration—is designed to bypass standard rate limiting and reputation-based blocking mechanisms, demonstrating actor capability to leverage complex infrastructures for large-scale scanning.",
+        "fr": "La stratégie d'attaque à double mode — utilisant des proxys résidentiels pour une découverte initiale furtive et AWS pour une énumération à haut volume — est conçue pour contourner les mécanismes standard de limitation de débit et de blocage basés sur la réputation, démontrant la capacité des acteurs à tirer parti d'infrastructures complexes pour un balayage à grande échelle."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor network traffic for sudden shifts in reconnaissance origins (e.g., from residential IPs to known cloud providers like AWS).",
+          "fr": "Surveiller le trafic réseau pour détecter les changements soudains dans les origines de la reconnaissance (par exemple, des IP résidentielles aux fournisseurs de cloud connus comme AWS)."
+        },
+        {
+          "en": "Ensure all public-facing Citrix Gateways are fully patched and configured to restrict access only to essential geographic regions or IPs.",
+          "fr": "S'assurer que toutes les passerelles Citrix exposées au public sont entièrement corrigées et configurées pour restreindre l'accès uniquement aux régions géographiques ou IP essentielles."
+        }
+      ],
+      "tags": [
+        "Reconnaissance",
+        "Citrix",
+        "Scanning",
+        "Cloud Infrastructure"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187615/hacking/greynoise-tracks-massive-citrix-gateway-recon-using-63k-residential-proxies-and-aws/"
       ],
       "date": "2026-02-04"
     }
