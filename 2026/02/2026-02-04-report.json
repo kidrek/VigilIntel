@@ -1,0 +1,1505 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel des menaces cyber est marqué par l'ingéniosité des attaquants, l'évolution rapide des tactiques et l'exploitation continue des vulnérabilités critiques. Les attaques sur la chaîne d'approvisionnement, comme la compromission de Notepad++ par des acteurs étatiques chinois, démontrent une sophistication accrue et une capacité à cibler des mécanismes de confiance pour la reconnaissance et le déploiement de malwares. Simultanément, des groupes étatiques comme l'APT28 russe exploitent des vulnérabilités zero-day de Microsoft Office, mettant en évidence la persistance du cyberespionnage lié aux tensions géopolitiques en Europe de l'Est.\nL'intelligence artificielle (IA) est une épée à double tranchant. Alors que les défenseurs l'adoptent pour l'automatisation de la détection et la réponse aux incidents (par exemple, Elastic), les attaquants l'utilisent pour affiner leurs techniques de phishing (deepfakes, grammar parfaite) et rendre les campagnes de vishing plus convaincantes, comme observé avec ShinyHunters, soulignant l'importance critique de la sensibilisation humaine. Une tendance préoccupante est l'abus de plateformes cloud et CDN légitimes (Microsoft, Google) par les kits de phishing, rendant la détection plus ardue en raison du masquage dans le trafic légitime. De nombreuses vulnérabilités de haute criticité (CVSS entre 8.6 et 10.0), y compris des exécutions de code à distance (RCE) et des contournements d'authentification, sont activement découvertes et exploitées dans des produits variés tels que SolarWinds, FreePBX, React Server Components et ASUSTOR. Enfin, la pérennité de projets open-source essentiels, comme Sudo, soulève des questions sur la robustesse de l'infrastructure numérique mondiale en cas de sous-financement. L'état général des menaces est donc celui d'une pression constante, avec des adversaires adaptatifs exploitant à la fois les failles techniques et les vulnérabilités humaines, nécessitant une approche de sécurité multicouche et proactive.",
+      "date": "2026-02-04"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs liés à l'État chinois (Lotus Blossom / Billbug)",
+        "secteur": "Gouvernement, institutions financières, fournisseurs de services informatiques, télécommunications, aviation, infrastructures critiques, médias, individus",
+        "modop": "Compromission de la chaîne d'approvisionnement (infrastructure de mise à jour Notepad++), manipulation sélective des réponses de mise à jour, livraison d'exécutables modifiés, collecte de données de reconnaissance, sideloading de DLL, abus de logiciels légitimes (ProShow.exe, Bitdefender Submission Wizard), utilisation de Metasploit, Cobalt Strike Beacon, et backdoor personnalisée (Chrysalis).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "china",
+          "supply chain attack",
+          "reconnaissance",
+          "dll sideloading",
+          "cobalt strike",
+          "chrysalis",
+          "espionnage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "APT28 (UAC-0001, Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "secteur": "Gouvernements, armées, organisations de sécurité, utilisateurs en Europe centrale et orientale (Ukraine, Slovaquie, Roumanie)",
+        "modop": "Exploitation de vulnérabilité zero-day de Microsoft Office (CVE-2026-21509) via des fichiers RTF piégés, leurres d'ingénierie sociale localisés, déploiement d'implants MiniDoor (projet VBA Outlook pour le renvoi d'e-mails), PixyNetLoader (dépose des composants malveillants, détournement COM, proxying de DLL, chaînes chiffrées XOR) et Covenant Grunt (shellcode intégré dans PNG). Utilisation de l'API Filen pour le C2.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt28",
+          "fancy bear",
+          "russia",
+          "state-sponsored",
+          "zero-day",
+          "microsoft office",
+          "spearphishing",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "WorldLeaks",
+        "secteur": "Détail (Nike)",
+        "modop": "Cyberattaque avec revendication de fuite de données (1.4 TB), utilisation d'un \"shame site\".",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "worldleaks",
+          "ransomware",
+          "data exfiltration",
+          "extortion"
+        ],
+        "sources": [
+          "https://sekurak.pl/kilka-dni-po-informacji-o-rzekomym-wycieku-z-nike-1-4-tb-danych-wpis-znika-z-listy-shame-site-grupy-worldleaks-co-se-stalo/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Services Cloud (SaaS)",
+        "modop": "Utilisation de l'hameçonnage vocal (vishing) comme point de départ pour obtenir un accès non autorisé aux comptes SaaS.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "saas",
+          "cloud"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/google-warns-shinyhunters-use-vishing-to-breach-saas-accounts/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Géopolitique, Défense, Diplomatie",
+        "theme": "Reconnaissance d'État, conflits régionaux, sécurité maritime, groupes extrémistes",
+        "description": "Israël a reconnu le Somaliland le 26 décembre, une décision controversée qui bouleverse la géopolitique de la Corne de l'Afrique. Cette initiative est perçue comme un moyen pour Israël de renforcer sa présence stratégique (bases militaires potentielles, surveillance des Houthis, stratégie anti-Iran) près du détroit de Bab El Mandeb. Cela a entraîné une polarisation régionale, avec un contre-bloc mené par l'Égypte, l'Arabie Saoudite et la Turquie en soutien à la Somalie, et a intensifié les menaces d'Al Shabaab et des Houthis contre toute présence israélienne dans la région.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "somaliland",
+          "somalia",
+          "corne de l'afrique",
+          "securite maritime",
+          "houthis",
+          "al shabaab",
+          "iran"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/selective-diplomacy-israels-somaliland-move-and-its-regional-implications"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Géopolitique",
+        "theme": "Tendances politiques, influence externe",
+        "description": "L'Amérique latine est marquée par l'expansion des forces de droite (conservatrice, religieuse, extrême droite) et un retour agressif des États-Unis, notamment après une intervention militaire illégale au Venezuela en janvier 2026 et l'enlèvement du président Maduro. Washington vise à restaurer sa sphère d'influence face à ses rivaux (Chine, Russie).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "amerique latine",
+          "etats-unis",
+          "venezuela",
+          "chine",
+          "russie",
+          "elections"
+        ],
+        "sources": [
+          "https://www.iris-france.org/en-amerique-latine-lexpansion-des-droites/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Géopolitique",
+        "theme": "Conflit et intégration régionale",
+        "description": "Analyse de l'accord signé entre Damas et les forces kurdes en Syrie, et des enjeux liés à l'intégration des forces et de l'administration kurdes au sein de l'État syrien.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syrie",
+          "kurdes",
+          "conflit"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-kurdes-de-syrie-quel-avenir-les-mardis-de-liris/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Géopolitique, Défense, Économie",
+        "theme": "Souveraineté, coups d'État, alliances internationales, lutte contre le terrorisme",
+        "description": "Le Mali et d'autres États du Sahel central (AES) revendiquent une \"souveraineté retrouvée\" après des coups d'État, symbolisée par le retrait des forces françaises et une coopération accrue avec la Russie (via Africa Corps/Wagner Group), la Chine, la Turquie et les Émirats Arabes Unis. Cette rupture avec les partenaires traditionnels n'a pas résolu l'instabilité sécuritaire liée aux Groupes Armés Terroristes (GAT) et a créé de nouvelles dépendances, poussant la Russie à encourager un dialogue entre l'AES et la CEDEAO.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "mali",
+          "sahel",
+          "souverainete",
+          "russie",
+          "chine",
+          "turquie",
+          "emirats arabes unis",
+          "terrorisme",
+          "coups d'etat",
+          "wagner"
+        ],
+        "sources": [
+          "https://www.iris-france.org/mali-sahel-une-souverainete-retrouvee/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Cybersécurité, Gouvernement, Finance, IT",
+        "theme": "Cyberespionnage, attaques par chaîne d'approvisionnement",
+        "description": "Des acteurs liés à l'État chinois ont compromis l'infrastructure de mise à jour de Notepad++ de juin à décembre 2025. Cette opération de cyberespionnage sophistiquée ciblait des organisations gouvernementales, financières et des fournisseurs de services informatiques en Asie (Vietnam, Philippines), en Amérique centrale (El Salvador) et en Océanie (Australie) via des mises à jour malveillantes. L'objectif était la reconnaissance et le déploiement de logiciels malveillants, démontrant un intérêt stratégique pour la supply chain logicielle.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "cyberespionnage",
+          "supply chain",
+          "notepad++"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Gouvernement, Militaire, Sécurité",
+        "theme": "Cyberespionnage, conflits régionaux (Europe de l'Est)",
+        "description": "Le groupe russe APT28 (Fancy Bear) a mené l'Opération Neusploit, exploitant une vulnérabilité zero-day de Microsoft Office (CVE-2026-21509) pour cibler des entités en Europe centrale et de l'Est (Ukraine, Slovaquie, Roumanie). Cette campagne de cyberespionnage utilise des fichiers RTF piégés et des leurres localisés pour déployer les implants MiniDoor, PixyNetLoader et Covenant Grunt, démontrant un soutien aux objectifs stratégiques russes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "apt28",
+          "cyberespionnage",
+          "zero-day",
+          "ukraine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Rencontres/Social",
+        "victime": "WhiteDate",
+        "description": "Violation de données affectant 20 363 comptes utilisateurs de la plateforme WhiteDate.",
+        "tags": [
+          "violation",
+          "breach",
+          "whitedate",
+          "dating",
+          "comptes"
+        ],
+        "sources": [
+          "https://www.redpacketsecurity.com/whitedate-20-363-breached-accounts/#databreach"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Détail/Vêtements de sport",
+        "victime": "Nike",
+        "description": "Cyberattaque contre Nike revendiquée par le groupe WorldLeaks, qui prétend détenir environ 1,4 To de données (environ 188 000 fichiers). La mention de Nike a ensuite disparu de la \"shame site\" de WorldLeaks. L'entreprise a confirmé enquêter sur l'incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "nike",
+          "retail",
+          "worldleaks",
+          "ransomware",
+          "donnees"
+        ],
+        "sources": [
+          "https://sekurak.pl/kilka-dni-po-informacji-o-rzekomym-wycieku-z-nike-1-4-tb-danych-wpis-znika-z-listy-shame-site-grupy-worldleaks-co-se-stalo/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "SaaS",
+        "victime": "Utilisateurs de SaaS (non spécifié)",
+        "description": "Le groupe ShinyHunters utilise l'hameçonnage vocal (vishing) pour obtenir un accès non autorisé aux comptes SaaS. Google a émis un avertissement concernant cette activité.",
+        "tags": [
+          "violation",
+          "breach",
+          "saas",
+          "shinyhunters",
+          "vishing",
+          "unauthorized access"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/google-warns-shinyhunters-use-vishing-to-breach-saas-accounts/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Industrie (Vente d'alliages de nickel)",
+        "victime": "Koei",
+        "description": "Koei, un vendeur d'alliages de nickel, a confirmé un accès non autorisé et le chiffrement par ransomware. Une fuite de données n'a pas encore été confirmée.",
+        "tags": [
+          "violation",
+          "breach",
+          "koei",
+          "industrie",
+          "ransomware",
+          "chiffrement"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/koei-nickel-alloy-seller-confirms-unauthorized-access-and-ransomware-encryption-no-data-breach-confirmed/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1633",
+        "cvss": "10.0",
+        "product": "Synectix LAN 232 TRIO 3-Port serial to ethernet adapter",
+        "description": "Absence d'authentification pour l'interface de gestion web, permettant à des utilisateurs non authentifiés de modifier des paramètres critiques ou de réinitialiser l'appareil en usine.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "synectix",
+          "authentification",
+          "accès"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1633"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-40551",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Désérialisation de données non fiables, permettant à un attaquant non authentifié d'exécuter du code à distance (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "solarwinds",
+          "rce",
+          "deserialization"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187592/security/u-s-cisa-adds-solarwinds-web-help-desk-sangoma-freepbx-and-gitlab-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/04/cisas-adds-4-vulnerabilitis-to-kev-catalog/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2019-19006",
+        "cvss": "9.8",
+        "product": "Sangoma FreePBX",
+        "description": "Problème d'authentification incorrecte permettant à un attaquant distant de contourner le mécanisme de connexion et d'obtenir un accès administratif complet sans informations d'identification valides.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sangoma",
+          "freepbx",
+          "authentification",
+          "bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187592/security/u-s-cisa-adds-solarwinds-web-help-desk-sangoma-freepbx-and-gitlab-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/04/cisas-adds-4-vulnerabilitis-to-kev-catalog/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-25510",
+        "cvss": "9.9",
+        "product": "CI4MS (CodeIgniter 4-based CMS skeleton)",
+        "description": "Exécution de code à distance (RCE) via la création et la sauvegarde de fichiers arbitraires dans l'éditeur de fichiers pour les utilisateurs authentifiés avec des permissions d'éditeur de fichiers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ci4ms",
+          "rce",
+          "upload",
+          "file editor"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25510"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-1632",
+        "cvss": "9.3",
+        "product": "RISS SRL MOMA Seismic Station Version v2.4.2520 et antérieures",
+        "description": "Absence d'authentification pour l'interface de gestion web, permettant à un attaquant non authentifié de modifier les paramètres de configuration, d'acquérir des données de l'appareil ou de réinitialiser l'appareil à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "moma seismic station",
+          "authentification",
+          "accès",
+          "configuration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1632"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-25150",
+        "cvss": "9.3",
+        "product": "Qwik City (@builder.io/qwik-city middleware)",
+        "description": "Vulnérabilité de pollution de prototype dans la fonction formToObj() via le traitement des données de formulaire, permettant à des attaquants non authentifiés de polluer Object.prototype et potentiellement d'escalader des privilèges, de contourner l'authentification ou de provoquer un déni de service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "qwik city",
+          "prototype pollution",
+          "privilege escalation",
+          "authentication bypass",
+          "dos"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25150"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-24936",
+        "cvss": "9.5",
+        "product": "ASUSTOR ADM (ASUSTOR Data Master)",
+        "description": "Vulnérabilité d'injection de commande/écriture arbitraire de fichiers due à une validation d'entrée incorrecte dans un programme CGI, permettant à un attaquant distant non authentifié de prendre le contrôle du système NAS.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "asustor",
+          "adm",
+          "nas",
+          "rce",
+          "input validation"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2026-24936-critical-asustor-flaw-cvss-9-5-allows-remote-system-takeover/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-24512",
+        "cvss": "8.8",
+        "product": "ingress-nginx",
+        "description": "Injection de configuration via le champ Ingress `rules.http.paths.path`, pouvant conduire à l'exécution de code arbitraire dans le contexte du contrôleur ingress-nginx et à la divulgation de Secrets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ingress-nginx",
+          "rce",
+          "configuration injection",
+          "secrets disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24512"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-1580",
+        "cvss": "8.8",
+        "product": "ingress-nginx",
+        "description": "Injection de configuration via l'annotation Ingress `nginx.ingress.kubernetes.io/auth-method`, pouvant conduire à l'exécution de code arbitraire dans le contexte du contrôleur ingress-nginx et à la divulgation de Secrets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ingress-nginx",
+          "rce",
+          "configuration injection",
+          "secrets disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1580"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-46298",
+        "cvss": "8.8",
+        "product": "Apple Safari (JavaScriptCore FTL)",
+        "description": "Confusion de type lors de la matérialisation de nouveaux tableaux dans FTL, permettant l'exécution de code arbitraire à distance après interaction de l'utilisateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apple safari",
+          "javascriptcore",
+          "type confusion",
+          "rce"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-057/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2020-37084",
+        "cvss": "8.6",
+        "product": "School ERP Pro 1.0",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) permettant aux utilisateurs administrateurs authentifiés de télécharger des fichiers PHP arbitraires comme photos de profil en contournant les vérifications d'extension de fichier.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "school erp pro",
+          "rce",
+          "file upload",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37084"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components",
+        "description": "Vulnérabilité catastrophique permettant l'exécution de code à distance sans authentification, transformant les serveurs de développement exposés en portes ouvertes pour le déploiement de cryptominers et de reverse shells.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "react server components",
+          "rce",
+          "unauthenticated",
+          "cryptominers",
+          "reverse shells"
+        ],
+        "sources": [
+          "https://securityonline.info/react-under-siege-two-ips-drive-56-of-critical-cve-2025-55182-attacks/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Exploitation active de la vulnérabilité \"Metro4Shell\" de React Native CLI (CVE-2025-11953)",
+        "description": "Des attaquants exploitent activement CVE-2025-11953, surnommée \"Metro4Shell\", une faille critique d'injection de commande dans le serveur de développement Metro de React Native CLI. Cette vulnérabilité, qui permet l'exécution de code à distance non authentifiée en raison de l'exposition par défaut du serveur aux interfaces externes, a été exploitée dans la nature depuis décembre 2025, des semaines avant sa divulgation publique. L'exploitation implique la livraison de chargeurs PowerShell multi-étapes, la désactivation de Microsoft Defender, et le déploiement de malwares Rust packés UPX, de cryptominers et de shells inversés, souvent en utilisant la même infrastructure et les mêmes techniques. L'utilisation opérationnelle rapide et soutenue par les attaquants souligne l'écart significatif entre l'exploitation initiale et la sensibilisation publique généralisée, laissant de nombreux serveurs exposés vulnérables.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Exploitation de services exposés (T1210)",
+          "Interpréteur de commandes et de scripts (T1059 - PowerShell, cmd.exe)",
+          "Altération des défenses (T1562.001 - désactivation d'antivirus)",
+          "Transfert d'outils d'ingestion (T1105)",
+          "Évasion de défense (T1027 - empaquetage UPX)",
+          "Exécution de code à distance (CAPEC-248)"
+        ],
+        "analyse": "L'exploitation active et précoce d'une vulnérabilité critique dans un outil de développement souligne le risque persistant posé par les infrastructures de développement exposées et l'importance d'un patching rapide et d'une veille sur les menaces. Le déploiement de diverses charges utiles indique des motifs variés, du gain financier (cryptominers) à l'accès persistant (shells inversés). La déconnexion observée entre l'exploitation réelle et la perception publique crée une fenêtre dangereuse pour les adversaires.",
+        "recommandations": [
+          "Appliquer immédiatement le correctif pour CVE-2025-11953.",
+          "S'assurer que tous les serveurs de développement, en particulier les serveurs Metro de React Native CLI, ne sont jamais exposés à l'Internet public.",
+          "Mettre en œuvre une segmentation réseau et des règles de pare-feu strictes.",
+          "Renforcer la sécurité des points de terminaison pour détecter et prévenir le déploiement de malwares et les tentatives d'évasion des défenses.",
+          "Surveiller le trafic réseau sortant atypique."
+        ],
+        "tags": [
+          "react native",
+          "cli",
+          "metro4shell",
+          "cve-2025-11953",
+          "vulnerability exploitation",
+          "rce",
+          "rust malware",
+          "powershell",
+          "defense evasion",
+          "development infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure.html",
+          "https://securityonline.info/silent-intrusion-metro4shell-exploited-in-the-wild-since-december/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Hameçonnage en entreprise : comment les attaquants abusent des plateformes Microsoft et Google de confiance",
+        "description": "Les attaquants hébergent de plus en plus leurs infrastructures de kits de phishing sur des plateformes cloud et CDN légitimes, notamment Microsoft et Google, pour cibler les utilisateurs d'entreprise. Cette tactique exploite les domaines de confiance et les indicateurs valides, rendant la détection difficile pour les équipes de sécurité. Cela crée des défis majeurs en matière de visibilité et représente une menace mondiale pour les entreprises en tirant parti de leur confiance dans les principales plateformes.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Phishing (T1566)",
+          "Infrastructure Cloud (T1583.006 - potentiellement pour l'hébergement)",
+          "Évasion des défenses (T1562 - en abusant des plateformes de confiance)"
+        ],
+        "analyse": "Ce changement d'infrastructure de phishing vers des fournisseurs de cloud de confiance améliore considérablement la furtivité des campagnes, rendant les défenses périmétriques traditionnelles moins efficaces. Cela constitue une menace mondiale pour les entreprises de tous les secteurs en exploitant leur confiance dans les grandes plateformes.",
+        "recommandations": [
+          "Renforcer les passerelles de sécurité de la messagerie électronique.",
+          "Mettre en œuvre l'authentification multifacteur (MFA).",
+          "Dispenser une formation de sensibilisation des utilisateurs aux techniques de phishing sophistiquées.",
+          "Surveiller les journaux des plateformes cloud pour détecter toute activité suspecte."
+        ],
+        "tags": [
+          "phishing",
+          "enterprise",
+          "cloud security",
+          "microsoft",
+          "google",
+          "defense evasion",
+          "supply chain"
+        ],
+        "sources": [
+          "/cybersecurity-blog/enterprise-phishing-analysis/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Compromission de la chaîne d'approvisionnement de Notepad++ par l'APT Lotus Blossom liée à la Chine",
+        "description": "De juin à décembre 2025, des acteurs liés à l'État chinois, attribués à l'APT Lotus Blossom (Billbug), ont compromis l'infrastructure de mise à jour de Notepad++. Ils ont manipulé sélectivement les réponses de mise à jour pour livrer des exécutables modifiés et diverses charges utiles (Cobalt Strike Beacon, backdoor personnalisée Chrysalis) via plusieurs chaînes d'infection en évolution. Les premières étapes impliquaient la reconnaissance en collectant des informations système et en les exfiltrant vers des services de partage de fichiers publics (par exemple, temp.sh). Les attaquants ont abusé de logiciels légitimes (ProShow.exe) et de techniques comme le sideloading de DLL et l'exploitation de Microsoft Warbird pour dissimuler l'exécution de code malveillant. Les victimes comprenaient des organisations gouvernementales, des institutions financières et des fournisseurs de services informatiques en Asie, en Amérique centrale et en Océanie, soulignant un intérêt stratégique pour les chaînes d'approvisionnement logicielles.",
+        "threat_actor": "Lotus Blossom (Billbug), acteurs liés à l'État chinois",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [
+            "06a6a5a39193075734a32e0235bde0e979c27228",
+            "0d0f315fd8cf408a483f8e2dd1e69422629ed9fd",
+            "13179c8f19fbf3d8473c49983a199e6cb4f318f0",
+            "2a476cfb85fbf012fdbe63a37642c11afa5cf020",
+            "4c9aac447bf732acc97992290aa7a187b967ee2c",
+            "513090ecf034337857f786084fb14e63354e271c",
+            "573549869e84544e3ef253bdba79851dcde4963a",
+            "5dd0662eadbe5ba92acbd3485d8187112543bcfb",
+            "773d9d0139eaf89b7df34ceeb60e5f8c7cd2463b",
+            "7e0790226ea461bcc9ecd4be3c315ace41e1c122",
+            "821c0cafb2aab0f063ef7e313f64313fc81d46cd",
+            "8e6e505438c21f3d281e1cc257abdbf7223b7f5a",
+            "90e677d7ff5844407b9c073e3b7e896e078e11cd",
+            "94dffa9de5b665dc51bc36e2693b8a3a0a4cc6b8",
+            "9c3ba38890ed984a25abb6a094b5dbf052f22fa7",
+            "ac68d09dd50e357fd3de17a70b7724f8949441d7",
+            "ca4b6fe0c69472cd3d63b212eb805b7f65710d33",
+            "d7ffd7b588880cf61b603346a3557e7cce648c93",
+            "f49fbf2195dee991b1e5a727fd51391dcc2d7a4b",
+            "f59c0eff4deeb626730ad6a05c85eb138df48372c",
+            "f7910d943a013eede24ac89d6388c1b98f8b3717",
+            "fbd4915b3597942d88f319740a9b803cc51585c4"
+          ],
+          "URL": [
+            "http://124.222.137[.]114:9999/3yZR31VK",
+            "http://124.222.137[.]114:9999/api/Info/submit",
+            "http://124.222.137[.]114:9999/api/updateStatus/v1",
+            "http://45.32.144[.]255/update/update.exe",
+            "http://45.76.155[.]202/update/update.exe",
+            "http://59.110.7[.]32:8880/api/getBasicInfo/v1",
+            "http://59.110.7[.]32:8880/api/Metadata/submit",
+            "http://59.110.7[.]32:8880/uffhxpSy",
+            "http://95.179.213[.]0/update/AutoUpdater.exe",
+            "http://95.179.213[.]0/update/install.exe",
+            "http://95.179.213[.]0/update/update.exe",
+            "https://45.77.31[.]210/api/FileUpload/submit",
+            "https://45.77.31[.]210/api/update/v1",
+            "https://api.skycloudcenter[.]com/a/chat/s/70521ddf-a2ef-4adf-9cf0-6d8e24aaa821",
+            "https://api.wiresguard[.]com/api/FileUpload/submit",
+            "https://api.wiresguard[.]com/api/getInfo/v1",
+            "https://api.wiresguard[.]com/update/v1",
+            "https://api.wiresguard[.]com/users/system",
+            "https://cdncheck.it[.]com/api/FileUpload/submit",
+            "https://cdncheck.it[.]com/api/Metadata/submit",
+            "https://cdncheck.it[.]com/api/getInfo/v1",
+            "https://cdncheck.it[.]com/api/update/v1",
+            "https://safe-dns.it[.]com/dns-query",
+            "https://safe-dns.it[.]com/resolve",
+            "temp.sh"
+          ]
+        },
+        "mitre_ttps": [
+          "Compromission de la chaîne d'approvisionnement logicielle (T1588.006)",
+          "Interpréteur de commandes et de scripts (T1059)",
+          "Sideloading de DLL (T1574.001)",
+          "Exploitation pour l'exécution client (T1203)",
+          "Données du système local (T1005)",
+          "Exfiltration via le canal C2 (T1041)",
+          "Fichiers ou informations obfusqués (T1027)",
+          "Outil d'accès à distance (T1219)",
+          "Protocole de commande et de contrôle personnalisé (T1071.001)",
+          "Usurpation d'identité (T1036)",
+          "Découverte d'informations système (T1082)",
+          "Injection de processus (T1055)"
+        ],
+        "analyse": "Cette attaque sur la chaîne d'approvisionnement, hautement adaptative, démontre la capacité d'un adversaire sophistiqué à maintenir sa persistance et à échapper à la détection en modifiant fréquemment ses TTP et en exploitant des mécanismes de mise à jour logicielle de confiance. La compromission d'un éditeur de texte largement utilisé met en évidence la vulnérabilité croissante de la chaîne d'approvisionnement logicielle en tant que vecteur d'espionnage parrainé par l'État et de collecte de données ciblée. La portée mondiale et la diversité des victimes soulignent l'impact large et la valeur stratégique d'une telle attaque pour la reconnaissance et les opérations de suivi potentielles.",
+        "recommandations": [
+          "Mettre en œuvre des mesures robustes de sécurité de la chaîne d'approvisionnement, y compris des contrôles d'intégrité pour les mises à jour logicielles.",
+          "Surveiller les activités réseau suspectes, en particulier les connexions vers des services de partage de fichiers non approuvés ou l'infrastructure C2.",
+          "Améliorer les capacités de détection des points de terminaison pour identifier le sideloading de DLL et les comportements de processus inhabituels.",
+          "Auditer et faire pivoter régulièrement les informations d'identification, en particulier pour les systèmes potentiellement exposés pendant la période de compromission."
+        ],
+        "tags": [
+          "supply chain attack",
+          "notepad++",
+          "state-sponsored",
+          "apt",
+          "china",
+          "lotus blossom",
+          "chrysalis",
+          "cobalt strike",
+          "dll sideloading",
+          "reconnaissance",
+          "software update",
+          "espionage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html",
+          "https://sploited.blog/2026/02/03/a-technical-post-mortem-of-the-notepad-supply-chain-compromise/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "L'APT28 exploite une faille de Microsoft Office dans l'opération Neusploit",
+        "description": "Le groupe APT28 (Fancy Bear), lié à la Russie, a lancé l'\"Opération Neusploit\", exploitant la vulnérabilité zero-day de Microsoft Office CVE-2026-21509, activement utilisée. La campagne a ciblé l'Europe centrale et orientale, y compris l'Ukraine, la Slovaquie et la Roumanie, avec des fichiers RTF piégés et des leurres d'ingénierie sociale localisés. Les attaques ont déployé les implants MiniDoor (projet VBA Outlook pour le renvoi d'e-mails), PixyNetLoader et Covenant Grunt, montrant une évolution dans les TTP de l'APT28.",
+        "threat_actor": "APT28 (UAC-0001, Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1566.001",
+            "T1204",
+            "T1566.002",
+            "T1027.002",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploitation d'applications exposées (T1190 - client-side via Office)",
+          "Hameçonnage ciblé par pièce jointe (T1566.001)",
+          "Exécution par l'utilisateur (T1204)",
+          "Exécution de code à distance (CAPEC-248)",
+          "Implant interne (T1566.002 - MiniDoor, PixyNetLoader, Covenant Grunt)",
+          "Évasion de défense (T1027.002 - chaînes chiffrées XOR)",
+          "Commande et contrôle (T1071.001 - API Filen C2)"
+        ],
+        "analyse": "L'utilisation par l'APT28 d'une vulnérabilité zero-day dans Microsoft Office et de leurres localisés démontre ses capacités avancées et son ciblage stratégique d'entités d'Europe centrale et orientale. Le déploiement de plusieurs implants sophistiqués (MiniDoor, PixyNetLoader, Covenant Grunt) met en évidence un acteur de menace persistant et adaptable, axé sur l'espionnage.",
+        "recommandations": [
+          "Appliquer immédiatement le correctif pour CVE-2026-21509.",
+          "Mettre en œuvre des solutions robustes de filtrage d'e-mails et de sécurité.",
+          "Former les utilisateurs à reconnaître l'ingénierie sociale sophistiquée.",
+          "Surveiller les activités de projet VBA inhabituelles dans Outlook et les connexions réseau vers l'infrastructure C2 connue de l'APT28 (par exemple, l'API Filen)."
+        ],
+        "tags": [
+          "apt28",
+          "fancy bear",
+          "russia",
+          "operation neusploit",
+          "microsoft office",
+          "zero-day",
+          "cve-2026-21509",
+          "espionage",
+          "eastern europe",
+          "minidoor",
+          "cobalt strike",
+          "dll hijacking",
+          "com hijacking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Pourquoi les personnes intelligentes sont victimes des attaques de phishing",
+        "description": "Cet article de l'Unité 42 explore les facteurs psychologiques qui rendent même les individus \"intelligents\" vulnérables au phishing. Les attaquants exploitent des théories psychologiques (préparation, attaque, exploitation) et des tactiques d'ingénierie sociale (autorité, urgence, rareté) pour contourner les défenses techniques. L'avancement de l'IA, permettant une grammaire parfaite, des deepfakes et l'imitation vocale, brouille davantage les lignes entre les communications légitimes et frauduleuses, rendant la détection basée sur l'instinct peu fiable.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Ingénierie sociale (T1566)",
+          "Hameçonnage ciblé (T1566.001 - concept général)",
+          "Influence (T1588)"
+        ],
+        "analyse": "La dépendance à la manipulation psychologique et l'évolution rapide des techniques de phishing basées sur l'IA représentent un défi important pour la cybersécurité, déplaçant l'attention des défenses purement techniques vers l'éducation et la vigilance humaines. L'\"illusion de contrôle\" et la surconfiance exacerbent ce risque.",
+        "recommandations": [
+          "Mettre l'accent sur l'éducation continue en matière de sécurité.",
+          "Promouvoir un état d'esprit \"arrêter et évaluer\".",
+          "Vérifier les sources avant d'agir.",
+          "Réduire la dépendance à l'instinct.",
+          "Mettre en œuvre des solutions avancées de vérification des e-mails et de l'identité."
+        ],
+        "tags": [
+          "phishing",
+          "social engineering",
+          "human element",
+          "ai",
+          "deepfake",
+          "psychology",
+          "user awareness",
+          "security education"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/psychology-of-phishing/"
+        ],
+        "date": "2026-02-04"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cyber threat landscape is characterized by attacker ingenuity, rapidly evolving tactics, and continuous exploitation of critical vulnerabilities. Supply chain attacks, such as the Notepad++ compromise by Chinese state-linked actors, demonstrate increased sophistication and the ability to target trusted mechanisms for reconnaissance and malware deployment. Simultaneously, state-backed groups like Russia's APT28 are exploiting Microsoft Office zero-day vulnerabilities, highlighting the persistence of cyber espionage linked to geopolitical tensions in Eastern Europe.\nArtificial intelligence (AI) is a double-edged sword. While defenders are adopting it for automated detection and incident response (e.g., Elastic), attackers are using it to refine phishing techniques (deepfakes, perfect grammar) and make vishing campaigns more convincing, as observed with ShinyHunters, underscoring the critical importance of human awareness. A concerning trend is the abuse of legitimate cloud and CDN platforms (Microsoft, Google) by phishing kits, making detection more difficult due to masquerading within legitimate traffic. Numerous high-severity vulnerabilities (CVSS between 8.6 and 10.0), including Remote Code Execution (RCE) and authentication bypasses, are actively being discovered and exploited in various products such as SolarWinds, FreePBX, React Server Components, and ASUSTOR. Finally, the sustainability of essential open-source projects, like Sudo, raises questions about the robustness of the global digital infrastructure if maintenance is underfunded. The overall state of threats is thus one of constant pressure, with adaptive adversaries exploiting both technical flaws and human vulnerabilities, requiring a multi-layered and proactive security approach.",
+      "date": "2026-02-04"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Chinese state-linked actors (Lotus Blossom / Billbug)",
+        "secteur": "Government, financial institutions, IT service providers, telecommunications, aviation, critical infrastructure, media, individuals",
+        "modop": "Supply chain compromise (Notepad++ update infrastructure), selective manipulation of update responses, delivery of modified executables, reconnaissance data collection, DLL sideloading, abuse of legitimate software (ProShow.exe, Bitdefender Submission Wizard), use of Metasploit, Cobalt Strike Beacon, and custom backdoor (Chrysalis).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "china",
+          "supply chain attack",
+          "reconnaissance",
+          "dll sideloading",
+          "cobalt strike",
+          "chrysalis",
+          "espionage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "APT28 (UAC-0001, Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "secteur": "Governments, militaries, security organizations, users in Central and Eastern Europe (Ukraine, Slovakia, Romania)",
+        "modop": "Exploitation of Microsoft Office zero-day vulnerability (CVE-2026-21509) via weaponized RTF files, localized social engineering lures, deployment of MiniDoor (Outlook VBA project for email forwarding), PixyNetLoader (drops malicious components, COM hijacking, DLL proxying, XOR-encrypted strings), and Covenant Grunt (PNG-embedded shellcode) implants. Use of Filen API for C2.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt28",
+          "fancy bear",
+          "russia",
+          "state-sponsored",
+          "zero-day",
+          "microsoft office",
+          "spearphishing",
+          "espionage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "WorldLeaks",
+        "secteur": "Retail (Nike)",
+        "modop": "Cyberattack with claims of data leak (1.4 TB), using a \"shame site\".",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "worldleaks",
+          "ransomware",
+          "data exfiltration",
+          "extortion"
+        ],
+        "sources": [
+          "https://sekurak.pl/kilka-dni-po-informacji-o-rzekomym-wycieku-z-nike-1-4-tb-danych-wpis-znika-z-listy-shame-site-grupy-worldleaks-co-se-stalo/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Cloud Services (SaaS)",
+        "modop": "Using voice phishing (vishing) as a starting point to gain unauthorized access to SaaS accounts.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "vishing",
+          "phishing",
+          "saas",
+          "cloud"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/google-warns-shinyhunters-use-vishing-to-breach-saas-accounts/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Geopolitics, Defense, Diplomacy",
+        "theme": "State Recognition, Regional Conflicts, Maritime Security, Extremist Groups",
+        "description": "Israel recognized Somaliland on December 26, a controversial decision that reshapes the geopolitics of the Horn of Africa. This move is seen as a way for Israel to strengthen its strategic presence (potential military bases, monitoring of Houthis, anti-Iran strategy) near the Bab El Mandeb Strait. It has led to regional polarization, with a counter-bloc led by Egypt, Saudi Arabia, and Turkey in support of Somalia, and has intensified threats from Al Shabaab and the Houthis against any Israeli presence in the region.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "somaliland",
+          "somalia",
+          "horn of africa",
+          "maritime security",
+          "houthis",
+          "al shabaab",
+          "iran"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/selective-diplomacy-israels-somaliland-move-and-its-regional-implications"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Geopolitics",
+        "theme": "Political Trends, External Influence",
+        "description": "Latin America is marked by the expansion of right-wing forces (conservative, religious, far-right) and an aggressive return of the United States, particularly after an illegal military intervention in Venezuela in January 2026 and the abduction of President Maduro. Washington aims to restore its sphere of influence against its rivals (China, Russia).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "latin america",
+          "united states",
+          "venezuela",
+          "china",
+          "russia",
+          "elections"
+        ],
+        "sources": [
+          "https://www.iris-france.org/en-amerique-latine-lexpansion-des-droites/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Geopolitics",
+        "theme": "Conflict and Regional Integration",
+        "description": "Analysis of the agreement signed between Damascus and Kurdish forces in Syria, and the challenges related to the integration of Kurdish forces and administration into the Syrian state.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "syria",
+          "kurds",
+          "conflict"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-kurdes-de-syrie-quel-avenir-les-mardis-de-liris/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Geopolitics, Defense, Economy",
+        "theme": "Sovereignty, Coups d'État, International Alliances, Fight against Terrorism",
+        "description": "Mali and other Central Sahel states (AES) claim 'recovered sovereignty' after coups d'état, symbolized by the withdrawal of French forces and increased cooperation with Russia (via Africa Corps/Wagner Group), China, Turkey, and the United Arab Emirates. This break with traditional partners has not resolved the persistent security instability linked to Armed Terrorist Groups (GAT) and has created new dependencies, pushing Russia to encourage dialogue between AES and ECOWAS.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "mali",
+          "sahel",
+          "sovereignty",
+          "russia",
+          "china",
+          "turkey",
+          "united arab emirates",
+          "terrorism",
+          "coups d'etat",
+          "wagner"
+        ],
+        "sources": [
+          "https://www.iris-france.org/mali-sahel-une-souverainete-retrouvee/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Cybersecurity, Government, Finance, IT",
+        "theme": "Cyberespionage, Supply Chain Attacks",
+        "description": "Chinese state-linked actors compromised Notepad++ update infrastructure from June to December 2025. This sophisticated cyberespionage operation targeted government organizations, financial institutions, and IT service providers in Asia (Vietnam, Philippines), Central America (El Salvador), and Oceania (Australia) via malicious updates. The objective was reconnaissance and malware deployment, demonstrating a strategic interest in the software supply chain.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "cyberespionage",
+          "supply chain",
+          "notepad++"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Government, Military, Security",
+        "theme": "Cyberespionage, Regional Conflicts (Eastern Europe)",
+        "description": "The Russia-linked group APT28 (Fancy Bear) conducted Operation Neusploit, exploiting a Microsoft Office zero-day vulnerability (CVE-2026-21509) to target entities in Central and Eastern Europe (Ukraine, Slovakia, Romania). This cyberespionage campaign uses weaponized RTF files and localized lures to deploy MiniDoor, PixyNetLoader, and Covenant Grunt implants, demonstrating support for Russian strategic objectives.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "apt28",
+          "cyberespionage",
+          "zero-day",
+          "ukraine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Dating/Social",
+        "victime": "WhiteDate",
+        "description": "Data breach affecting 20,363 user accounts on the WhiteDate platform.",
+        "tags": [
+          "violation",
+          "breach",
+          "whitedate",
+          "dating",
+          "accounts"
+        ],
+        "sources": [
+          "https://www.redpacketsecurity.com/whitedate-20-363-breached-accounts/#databreach"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Retail/Sportswear",
+        "victime": "Nike",
+        "description": "Cyberattack against Nike claimed by the WorldLeaks group, which states it holds approximately 1.4 TB of data (about 188,000 files). The mention of Nike later disappeared from WorldLeaks' 'shame site'. The company confirmed investigating the incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "nike",
+          "retail",
+          "worldleaks",
+          "ransomware",
+          "data"
+        ],
+        "sources": [
+          "https://sekurak.pl/kilka-dni-po-informacji-o-rzekomym-wycieku-z-nike-1-4-tb-danych-wpis-znika-z-listy-shame-site-grupy-worldleaks-co-se-stalo/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "SaaS",
+        "victime": "SaaS users (unspecified)",
+        "description": "The ShinyHunters group uses voice phishing (vishing) to gain unauthorized access to SaaS accounts. Google issued a warning regarding this activity.",
+        "tags": [
+          "violation",
+          "breach",
+          "saas",
+          "shinyhunters",
+          "vishing",
+          "unauthorized access"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/google-warns-shinyhunters-use-vishing-to-breach-saas-accounts/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "secteur": "Industry (Nickel Alloy Sales)",
+        "victime": "Koei",
+        "description": "Koei, a nickel alloy seller, confirmed unauthorized access and ransomware encryption. A data leak has not yet been confirmed.",
+        "tags": [
+          "violation",
+          "breach",
+          "koei",
+          "industry",
+          "ransomware",
+          "encryption"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/koei-nickel-alloy-seller-confirms-unauthorized-access-and-ransomware-encryption-no-data-breach-confirmed/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1633",
+        "cvss": "10.0",
+        "product": "Synectix LAN 232 TRIO 3-Port serial to ethernet adapter",
+        "description": "Missing authentication for the web management interface, allowing unauthenticated users to modify critical device settings or factory reset the device.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "synectix",
+          "authentication",
+          "access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1633"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-40551",
+        "cvss": "9.8",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Deserialization of untrusted data, allowing an unauthenticated attacker to achieve remote code execution (RCE).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "solarwinds",
+          "rce",
+          "deserialization"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187592/security/u-s-cisa-adds-solarwinds-web-help-desk-sangoma-freepbx-and-gitlab-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/04/cisas-adds-4-vulnerabilitis-to-kev-catalog/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2019-19006",
+        "cvss": "9.8",
+        "product": "Sangoma FreePBX",
+        "description": "Improper authentication issue allowing a remote attacker to bypass the login mechanism and gain full administrative access without valid credentials.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sangoma",
+          "freepbx",
+          "authentication",
+          "bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187592/security/u-s-cisa-adds-solarwinds-web-help-desk-sangoma-freepbx-and-gitlab-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/04/cisas-adds-4-vulnerabilitis-to-kev-catalog/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-25510",
+        "cvss": "9.9",
+        "product": "CI4MS (CodeIgniter 4-based CMS skeleton)",
+        "description": "Remote Code Execution (RCE) via arbitrary file creation and save in file editor for authenticated users with file editor permissions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ci4ms",
+          "rce",
+          "upload",
+          "file editor"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25510"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-1632",
+        "cvss": "9.3",
+        "product": "RISS SRL MOMA Seismic Station Version v2.4.2520 and prior",
+        "description": "Missing authentication for the web management interface, which could allow an unauthenticated attacker to modify configuration settings, acquire device data or remotely reset the device.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "moma seismic station",
+          "authentication",
+          "access",
+          "configuration"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1632"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-25150",
+        "cvss": "9.3",
+        "product": "Qwik City (@builder.io/qwik-city middleware)",
+        "description": "Prototype pollution vulnerability in the formToObj() function via FormData processing, allowing unauthenticated attackers to pollute Object.prototype, potentially leading to privilege escalation, authentication bypass, or denial of service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "qwik city",
+          "prototype pollution",
+          "privilege escalation",
+          "authentication bypass",
+          "dos"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25150"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-24936",
+        "cvss": "9.5",
+        "product": "ASUSTOR ADM (ASUSTOR Data Master)",
+        "description": "Improper input validation vulnerability in a specific CGI program, allowing an unauthenticated remote attacker to write arbitrary data to any file on the system, leading to remote system takeover of NAS devices.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "asustor",
+          "adm",
+          "nas",
+          "rce",
+          "input validation"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2026-24936-critical-asustor-flaw-cvss-9-5-allows-remote-system-takeover/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-24512",
+        "cvss": "8.8",
+        "product": "ingress-nginx",
+        "description": "Configuration injection via the `rules.http.paths.path` Ingress field, leading to arbitrary code execution in the context of the ingress-nginx controller and disclosure of Secrets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ingress-nginx",
+          "rce",
+          "configuration injection",
+          "secrets disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24512"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2026-1580",
+        "cvss": "8.8",
+        "product": "ingress-nginx",
+        "description": "Configuration injection via the `nginx.ingress.kubernetes.io/auth-method` Ingress annotation, leading to arbitrary code execution in the context of the ingress-nginx controller and disclosure of Secrets.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ingress-nginx",
+          "rce",
+          "configuration injection",
+          "secrets disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1580"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-46298",
+        "cvss": "8.8",
+        "product": "Apple Safari (JavaScriptCore FTL)",
+        "description": "Type confusion in new array materialization within FTL, allowing remote attackers to execute arbitrary code with user interaction.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "apple safari",
+          "javascriptcore",
+          "type confusion",
+          "rce"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-057/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2020-37084",
+        "cvss": "8.6",
+        "product": "School ERP Pro 1.0",
+        "description": "Remote Code Execution (RCE) vulnerability allowing authenticated admin users to upload arbitrary PHP files as profile photos by bypassing file extension checks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "school erp pro",
+          "rce",
+          "file upload",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37084"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": "10.0",
+        "product": "React Server Components",
+        "description": "Catastrophic vulnerability allowing unauthenticated remote code execution, turning exposed development servers into open doors for deploying cryptominers and reverse shells.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "react server components",
+          "rce",
+          "unauthenticated",
+          "cryptominers",
+          "reverse shells"
+        ],
+        "sources": [
+          "https://securityonline.info/react-under-siege-two-ips-drive-56-of-critical-cve-2025-55182-attacks/"
+        ],
+        "date": "2026-02-04"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Active Exploitation of React Native CLI \"Metro4Shell\" Vulnerability (CVE-2025-11953)",
+        "description": "Attackers are actively exploiting CVE-2025-11953, dubbed \"Metro4Shell,\" a critical command injection flaw in the React Native CLI Metro development server. This vulnerability, which allows unauthenticated remote code execution due to the server binding to external interfaces by default, was exploited in the wild since December 2025, weeks before public disclosure. Exploitation involves delivering multi-stage PowerShell loaders, disabling Microsoft Defender, and deploying UPX-packed Rust malware, cryptominers, and reverse shells, often using the same infrastructure and techniques. The rapid and sustained operational use by attackers highlights the significant gap between initial exploitation and widespread public awareness, leaving many exposed servers vulnerable.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Exploitation of Remote Services (T1210)",
+          "Command and Scripting Interpreter (T1059 - PowerShell, cmd.exe)",
+          "Impair Defenses (T1562.001 - disable AV)",
+          "Ingress Tool Transfer (T1105)",
+          "Defense Evasion (T1027 - UPX packing)",
+          "Remote Code Execution (CAPEC-248)"
+        ],
+        "analyse": "The active and early exploitation of a critical vulnerability in a development tool underscores the persistent risk posed by exposed development infrastructure and the importance of timely patching and threat intelligence. The deployment of various payloads indicates diverse motives, from financial gain (cryptominers) to persistent access (reverse shells). The observed disconnect between real-world exploitation and public perception creates a dangerous window for adversaries.",
+        "recommandations": [
+          "Immediately patch CVE-2025-11953.",
+          "Ensure all development servers, especially React Native CLI Metro servers, are never exposed to the public internet.",
+          "Implement strict network segmentation and firewall rules.",
+          "Enhance endpoint security to detect and prevent malware deployment and defense evasion attempts.",
+          "Monitor for uncharacteristic outbound network traffic."
+        ],
+        "tags": [
+          "react native",
+          "cli",
+          "metro4shell",
+          "cve-2025-11953",
+          "vulnerability exploitation",
+          "rce",
+          "rust malware",
+          "powershell",
+          "defense evasion",
+          "development infrastructure"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure.html",
+          "https://securityonline.info/silent-intrusion-metro4shell-exploited-in-the-wild-since-december/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Enterprise Phishing: How Attackers Abuse Trusted Microsoft & Google Platforms",
+        "description": "Attackers are increasingly hosting phishing kit infrastructure on legitimate cloud and CDN platforms, particularly Microsoft and Google, to target enterprise users. This tactic leverages trusted domains and valid indicators, making detection challenging for security teams. This creates serious visibility challenges and poses a global threat to businesses by leveraging their trust in major platforms.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Phishing (T1566)",
+          "Cloud Infrastructure (T1583.006 - potentially for hosting)",
+          "Defense Evasion (T1562 - by abusing trusted platforms)"
+        ],
+        "analyse": "This shift in phishing infrastructure to trusted cloud providers significantly enhances the stealth of campaigns, making traditional perimeter defenses less effective. It poses a global threat to businesses across all sectors by leveraging their trust in major platforms.",
+        "recommandations": [
+          "Enhance email security gateways.",
+          "Implement multi-factor authentication (MFA).",
+          "Provide user awareness training on sophisticated phishing techniques.",
+          "Monitor cloud platform logs for suspicious activity."
+        ],
+        "tags": [
+          "phishing",
+          "enterprise",
+          "cloud security",
+          "microsoft",
+          "google",
+          "defense evasion",
+          "supply chain"
+        ],
+        "sources": [
+          "/cybersecurity-blog/enterprise-phishing-analysis/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Notepad++ Supply Chain Compromise by China-linked APT Lotus Blossom",
+        "description": "From June to December 2025, Chinese state-linked actors, attributed to APT Lotus Blossom (Billbug), compromised the Notepad++ update infrastructure. They selectively manipulated update responses to deliver modified executables and various payloads (Cobalt Strike Beacon, custom Chrysalis backdoor) through multiple, evolving infection chains. Initial stages involved reconnaissance by collecting system information and exfiltrating it to public file-sharing services (e.g., temp.sh). Attackers abused legitimate software (ProShow.exe) and techniques like DLL sideloading and exploitation of Microsoft Warbird to conceal malicious code execution. Victims included government organizations, financial institutions, and IT service providers in Asia, Central America, and Oceania, highlighting a strategic interest in software supply chains.",
+        "threat_actor": "Lotus Blossom (Billbug), Chinese state-linked actors",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA1": [
+            "06a6a5a39193075734a32e0235bde0e979c27228",
+            "0d0f315fd8cf408a483f8e2dd1e69422629ed9fd",
+            "13179c8f19fbf3d8473c49983a199e6cb4f318f0",
+            "2a476cfb85fbf012fdbe63a37642c11afa5cf020",
+            "4c9aac447bf732acc97992290aa7a187b967ee2c",
+            "513090ecf034337857f786084fb14e63354e271c",
+            "573549869e84544e3ef253bdba79851dcde4963a",
+            "5dd0662eadbe5ba92acbd3485d8187112543bcfb",
+            "773d9d0139eaf89b7df34ceeb60e5f8c7cd2463b",
+            "7e0790226ea461bcc9ecd4be3c315ace41e1c122",
+            "821c0cafb2aab0f063ef7e313f64313fc81d46cd",
+            "8e6e505438c21f3d281e1cc257abdbf7223b7f5a",
+            "90e677d7ff5844407b9c073e3b7e896e078e11cd",
+            "94dffa9de5b665dc51bc36e2693b8a3a0a4cc6b8",
+            "9c3ba38890ed984a25abb6a094b5dbf052f22fa7",
+            "ac68d09dd50e357fd3de17a70b7724f8949441d7",
+            "ca4b6fe0c69472cd3d63b212eb805b7f65710d33",
+            "d7ffd7b588880cf61b603346a3557e7cce648c93",
+            "f49fbf2195dee991b1e5a727fd51391dcc2d7a4b",
+            "f59c0eff4deeb626730ad6a05c85eb138df48372c",
+            "f7910d943a013eede24ac89d6388c1b98f8b3717",
+            "fbd4915b3597942d88f319740a9b803cc51585c4"
+          ],
+          "URL": [
+            "http://124.222.137[.]114:9999/3yZR31VK",
+            "http://124.222.137[.]114:9999/api/Info/submit",
+            "http://124.222.137[.]114:9999/api/updateStatus/v1",
+            "http://45.32.144[.]255/update/update.exe",
+            "http://45.76.155[.]202/update/update.exe",
+            "http://59.110.7[.]32:8880/api/getBasicInfo/v1",
+            "http://59.110.7[.]32:8880/api/Metadata/submit",
+            "http://59.110.7[.]32:8880/uffhxpSy",
+            "http://95.179.213[.]0/update/AutoUpdater.exe",
+            "http://95.179.213[.]0/update/install.exe",
+            "http://95.179.213[.]0/update/update.exe",
+            "https://45.77.31[.]210/api/FileUpload/submit",
+            "https://45.77.31[.]210/api/update/v1",
+            "https://api.skycloudcenter[.]com/a/chat/s/70521ddf-a2ef-4adf-9cf0-6d8e24aaa821",
+            "https://api.wiresguard[.]com/api/FileUpload/submit",
+            "https://api.wiresguard[.]com/api/getInfo/v1",
+            "https://api.wiresguard[.]com/update/v1",
+            "https://api.wiresguard[.]com/users/system",
+            "https://cdncheck.it[.]com/api/FileUpload/submit",
+            "https://cdncheck.it[.]com/api/Metadata/submit",
+            "https://cdncheck.it[.]com/api/getInfo/v1",
+            "https://cdncheck.it[.]com/api/update/v1",
+            "https://safe-dns.it[.]com/dns-query",
+            "https://safe-dns.it[.]com/resolve",
+            "temp.sh"
+          ]
+        },
+        "mitre_ttps": [
+          "Software Supply Chain Compromise (T1588.006)",
+          "Command and Scripting Interpreter (T1059)",
+          "DLL Sideloading (T1574.001)",
+          "Exploitation for Client Execution (T1203)",
+          "Data from Local System (T1005)",
+          "Exfiltration over C2 Channel (T1041)",
+          "Obfuscated Files or Information (T1027)",
+          "Remote Access Tool (T1219)",
+          "Custom Command and Control Protocol (T1071.001)",
+          "Masquerading (T1036)",
+          "System Information Discovery (T1082)",
+          "Process Injection (T1055)"
+        ],
+        "analyse": "This highly adaptive supply chain attack demonstrates a sophisticated adversary's ability to maintain persistence and evade detection by frequently changing TTPs and leveraging trusted software update mechanisms. The compromise of a widely used text editor highlights the increasing vulnerability of the software supply chain as a vector for state-sponsored espionage and targeted data collection. The global reach and diverse victimology underscore the broad impact and strategic value of such an attack for reconnaissance and potential follow-on operations.",
+        "recommandations": [
+          "Implement strong supply chain security measures including integrity checks for software updates.",
+          "Monitor for suspicious network activity, particularly connections to unapproved file-sharing services or C2 infrastructure.",
+          "Enhance endpoint detection capabilities to identify DLL sideloading and unusual process behavior.",
+          "Regularly audit and rotate credentials, especially for systems potentially exposed during the compromise period."
+        ],
+        "tags": [
+          "supply chain attack",
+          "notepad++",
+          "state-sponsored",
+          "apt",
+          "china",
+          "lotus blossom",
+          "chrysalis",
+          "cobalt strike",
+          "dll sideloading",
+          "reconnaissance",
+          "software update",
+          "espionage"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+          "https://securelist.com/notepad-supply-chain-attack/118708/",
+          "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html",
+          "https://sploited.blog/2026/02/03/a-technical-post-mortem-of-the-notepad-supply-chain-compromise/"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "APT28 Exploits Microsoft Office Flaw in Operation Neusploit",
+        "description": "Russia-linked APT28 (Fancy Bear) launched \"Operation Neusploit,\" exploiting the actively used Microsoft Office zero-day vulnerability CVE-2026-21509. The campaign targeted Central and Eastern Europe, including Ukraine, Slovakia, and Romania, with weaponized RTF files and localized social engineering lures. The attacks deployed MiniDoor (Outlook VBA project for email forwarding), PixyNetLoader, and Covenant Grunt implants, showing an evolution in APT28's TTPs.",
+        "threat_actor": "APT28 (UAC-0001, Fancy Bear, Pawn Storm, Sofacy Group, Sednit, BlueDelta, STRONTIUM)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1566.001",
+            "T1204",
+            "T1566.002",
+            "T1027.002",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploit Public-Facing Application (T1190 - client-side via Office)",
+          "Spearphishing Attachment (T1566.001)",
+          "User Execution (T1204)",
+          "Remote Code Execution (CAPEC-248)",
+          "Implant Internal (T1566.002 - MiniDoor, PixyNetLoader, Covenant Grunt)",
+          "Defense Evasion (T1027.002 - XOR-encrypted strings)",
+          "Command and Control (T1071.001 - Filen API C2)"
+        ],
+        "analyse": "APT28's use of a zero-day in Microsoft Office and localized lures demonstrates their advanced capabilities and strategic targeting of Central and Eastern European entities. The deployment of multiple sophisticated implants (MiniDoor, PixyNetLoader, Covenant Grunt) highlights a persistent and adaptable threat actor focused on espionage.",
+        "recommandations": [
+          "Patch CVE-2026-21509 immediately.",
+          "Implement robust email filtering and security solutions.",
+          "Train users to recognize sophisticated social engineering.",
+          "Monitor for unusual VBA project activity in Outlook and network connections to known APT28 C2 infrastructure (e.g., Filen API)."
+        ],
+        "tags": [
+          "apt28",
+          "fancy bear",
+          "russia",
+          "operation neusploit",
+          "microsoft office",
+          "zero-day",
+          "cve-2026-21509",
+          "espionage",
+          "eastern europe",
+          "minidoor",
+          "cobalt strike",
+          "dll hijacking",
+          "com hijacking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
+        ],
+        "date": "2026-02-04"
+      },
+      {
+        "title": "Why Smart People Fall For Phishing Attacks",
+        "description": "This Unit 42 article explores the psychological factors making even \"smart\" individuals vulnerable to phishing. Attackers leverage psychological theories (preparation, attack, exploitation) and social engineering tactics (authority, urgency, scarcity) to bypass technical defenses. The advancement of AI, enabling perfect grammar, deepfakes, and voice mimicry, further blurs the lines between legitimate and fraudulent communications, rendering instinct-based detection unreliable.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Social Engineering (T1566)",
+          "Spearphishing (T1566.001 - general concept)",
+          "Influence (T1588)"
+        ],
+        "analyse": "The reliance on psychological manipulation and the rapid evolution of AI-driven phishing techniques present a significant challenge to cybersecurity, shifting the focus from purely technical defenses to human education and vigilance. The \"illusion of control\" and overconfidence exacerbate this risk.",
+        "recommandations": [
+          "Emphasize continuous security education.",
+          "Promote a \"stop and assess\" mindset.",
+          "Verify sources before acting.",
+          "Reduce reliance on instinct.",
+          "Implement advanced email and identity verification solutions."
+        ],
+        "tags": [
+          "phishing",
+          "social engineering",
+          "human element",
+          "ai",
+          "deepfake",
+          "psychology",
+          "user awareness",
+          "security education"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/psychology-of-phishing/"
+        ],
+        "date": "2026-02-04"
+      }
+    ]
+  }
+}
