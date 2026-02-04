@@ -2,35 +2,65 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "The threat landscape is currently characterized by targeted supply chain compromise and the continued push toward security automation. New analysis confirms that Chinese state-linked actors utilized the compromised Notepad++ update infrastructure for highly selective reconnaissance against organizations in the government, finance, and IT sectors across Asia and the Americas. This sophisticated operation highlights the persistent risk associated with software distribution channels.\n\nSimultaneously, the defensive industry is accelerating its integration of Artificial Intelligence. Vendors are deploying 'Agentic AI' coupled with deterministic Workflows to automate security operations (SOC triage, incident response, host containment), aiming to reduce alert fatigue and transition analysts from reactive log chasing to proactive threat hunting. This trend is accompanied by technological advancements facilitating enterprise-level SIEM migrations, such as automated rule translation from legacy systems like QRadar to modern platforms.",
-      "fr": "Le paysage des menaces est actuellement caractérisé par la compromission ciblée de la chaîne d'approvisionnement et la poussée continue vers l'automatisation de la sécurité. Une nouvelle analyse confirme que des acteurs liés à l'État chinois ont utilisé l'infrastructure de mise à jour compromise de Notepad++ pour une reconnaissance très sélective contre des organisations des secteurs gouvernemental, financier et informatique, en Asie et dans les Amériques. Cette opération sophistiquée souligne le risque persistant associé aux canaux de distribution de logiciels.\n\nSimultanément, l'industrie défensive accélère son intégration de l'Intelligence Artificielle. Les fournisseurs déploient l'« IA Agentique » associée à des flux de travail déterministes pour automatiser les opérations de sécurité (triage du SOC, réponse aux incidents, confinement des hôtes), visant à réduire la fatigue des alertes et à faire passer les analystes de la chasse aux logs réactive à la recherche proactive de menaces. Cette tendance est accompagnée d'avancées technologiques facilitant les migrations de SIEM à l'échelle de l'entreprise, telles que la traduction automatisée des règles de systèmes hérités comme QRadar vers des plateformes modernes."
+      "en": "The early days of February 2026 show intensified activity from nation-state threat actors utilizing sophisticated attack chains and leveraging new vulnerabilities. The China-nexus APT activity targeting the Notepad++ supply chain is assessed as a highly advanced operation, utilizing DLL sideloading and Cobalt Strike. Concurrently, Russia-linked APT28 (Fancy Bear) launched 'Operation Neusploit,' exploiting a newly disclosed Microsoft Office vulnerability in targeted attacks against governmental and security entities. A major technical development is the documented use of AI/Large Language Models (LLMs) to accelerate cloud intrusion, achieving admin access in AWS environments in minutes, setting a new benchmark for attack speed and challenging traditional detection methodologies. Furthermore, hackers capitalized on a pre-disclosure vulnerability in React Native CLI (CVE-2025-11953) to deploy stealthy Rust-based malware. On the geopolitical front, major realignments are visible, especially in the Sahel where Mali pivots towards Russia and China post-French withdrawal, and in Latin America, marked by political polarization and aggressive US reassertion of influence following an intervention in Venezuela.",
+      "fr": "Le début du mois de février 2026 révèle une activité intensifiée des acteurs de la menace étatiques utilisant des chaînes d'attaque sophistiquées et exploitant de nouvelles vulnérabilités. L'activité de l'APT liée à la Chine ciblant la chaîne d'approvisionnement de Notepad++ est considérée comme une opération très avancée, utilisant le chargement latéral de DLL et Cobalt Strike. Simultanément, l'APT28 (Fancy Bear), lié à la Russie, a lancé l'« Opération Neusploit », exploitant une vulnérabilité récemment divulguée dans Microsoft Office lors d'attaques ciblées contre des entités gouvernementales et de sécurité. Un développement technique majeur est l'utilisation documentée de l'IA/des grands modèles de langage (LLM) pour accélérer l'intrusion dans le cloud, permettant d'obtenir un accès administrateur dans des environnements AWS en quelques minutes, établissant une nouvelle référence pour la vitesse d'attaque et remettant en question les méthodologies de détection traditionnelles. De plus, des attaquants ont tiré parti d'une vulnérabilité non encore divulguée dans React Native CLI (CVE-2025-11953) pour déployer un malware furtif basé sur Rust. Sur le plan géopolitique, des réalignements majeurs sont visibles, notamment au Sahel où le Mali se tourne vers la Russie et la Chine après le retrait français, et en Amérique latine, marquée par la polarisation politique et la réaffirmation agressive de l'influence américaine suite à une intervention au Venezuela."
     },
     "date": "2026-02-04"
   },
   "malicious_actors_analyse": [
     {
-      "name": "Chinese State-linked Actors",
-      "campaign": "Notepad++ Supply Chain Reconnaissance",
+      "name": "APT39",
+      "campaign": "Notepad++ Supply Chain Compromise",
       "campaign_description": {
-        "en": "Updated intelligence confirms sophisticated targeting using manipulated Notepad++ auto-update responses to deliver modified executables for system reconnaissance to specific IP address ranges.",
-        "fr": "Des renseignements mis à jour confirment un ciblage sophistiqué utilisant des réponses d'auto-mise à jour manipulées de Notepad++ pour livrer des exécutables modifiés à des plages d'adresses IP spécifiques pour la reconnaissance système."
+        "en": "Chinese state-linked actors compromised the update infrastructure of Notepad++'s hosting provider. This highly sophisticated supply chain attack involved intercepting update traffic and deploying malicious payloads using previously undocumented execution chains involving DLL sideloading and Cobalt Strike Beacon delivery.",
+        "fr": "Des acteurs liés à l'État chinois ont compromis l'infrastructure de mise à jour du fournisseur d'hébergement de Notepad++. Cette attaque de la chaîne d'approvisionnement, très sophistiquée, a intercepté le trafic de mise à jour et déployé des charges utiles malveillantes en utilisant des chaînes d'exécution non documentées impliquant le chargement latéral de DLL et la livraison de Cobalt Strike Beacon."
       },
       "sector": {
-        "en": "Government organization, Financial Institution, Information Technology Service Providers",
-        "fr": "Organisation gouvernementale, Institution financière, Fournisseurs de services de technologie de l'information"
+        "en": "Software Developers, Technology, Government (indirect through software compromise)",
+        "fr": "Développeurs de logiciels, Technologie, Gouvernement (indirect via compromission logicielle)"
       },
       "modop": {
-        "en": "Compromising the Notepad++ update channel to selectively deploy three distinct infection chains. These payloads executed native commands like `systeminfo`, `tasklist`, and `whoami` to gather configuration data, then uploaded the results using `curl.exe` to a public file-sharing service (temp.sh).",
-        "fr": "Compromission du canal de mise à jour de Notepad++ pour déployer sélectivement trois chaînes d'infection distinctes. Ces charges utiles exécutaient des commandes natives telles que `systeminfo`, `tasklist` et `whoami` pour collecter des données de configuration, puis téléversaient les résultats via `curl.exe` vers un service de partage de fichiers public (temp.sh)."
+        "en": "Supply Chain Compromise; infrastructure exploitation; DLL Sideloading for execution; Cobalt Strike Beacon deployment.",
+        "fr": "Compromission de la chaîne d'approvisionnement ; exploitation d'infrastructure ; chargement latéral de DLL pour l'exécution ; déploiement de Cobalt Strike Beacon."
       },
       "tags": [
-        "Supply Chain",
+        "Supply Chain Attack",
+        "DLL Sideloading",
+        "China",
         "APT",
-        "Reconnaissance",
-        "Software Compromise"
+        "Cobalt Strike"
       ],
       "sources": [
-        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
+        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure",
+        "https://securelist.com/notepad-supply-chain-attack/118708/",
+        "https://securityaffairs.com/187570/apt/notepad-infrastructure-hack-likely-tied-to-china-nexus-apt-lotus-blossom.html"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "name": "APT28",
+      "campaign": "Operation Neusploit",
+      "campaign_description": {
+        "en": "Russia-linked APT28 launched Operation Neusploit, actively exploiting a newly disclosed vulnerability in Microsoft Office. The campaign targets governments, military, and security organizations for espionage purposes.",
+        "fr": "L'APT28, lié à la Russie, a lancé l'Opération Neusploit, exploitant activement une vulnérabilité récemment divulguée dans Microsoft Office. La campagne cible les gouvernements, l'armée et les organisations de sécurité à des fins d'espionnage."
+      },
+      "sector": {
+        "en": "Government, Defense, Security",
+        "fr": "Gouvernement, Défense, Sécurité"
+      },
+      "modop": {
+        "en": "Targeted exploitation of a Microsoft Office vulnerability (likely N-day or Zero-day) for initial access, consistent with geopolitical espionage objectives.",
+        "fr": "Exploitation ciblée d'une vulnérabilité de Microsoft Office (probablement N-day ou Zero-day) pour l'accès initial, conformément aux objectifs d'espionnage géopolitique."
+      },
+      "tags": [
+        "Russia",
+        "APT",
+        "Zero-Day",
+        "Microsoft Office",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187581/apt/apt28-exploits-microsoft-office-flaw-in-operation-neusploit.html"
       ],
       "date": "2026-02-04"
     }
@@ -38,43 +68,112 @@
   "geopolitical_analyse": [
     {
       "sector": {
-        "en": "Cross-sectoral targeting including Government, Finance, and IT",
-        "fr": "Ciblage intersectoriel incluant le gouvernement, la finance et l'informatique"
+        "en": "National Security, International Relations",
+        "fr": "Sécurité Nationale, Relations Internationales"
       },
       "theme": {
-        "en": "State-sponsored software supply chain compromise for reconnaissance",
-        "fr": "Compromission parrainée par l'État de la chaîne d'approvisionnement logicielle à des fins de reconnaissance"
+        "en": "Geopolitical pivot and challenges to sovereignty in the Central Sahel (Mali)",
+        "fr": "Pivot géopolitique et défis de souveraineté au Sahel central (Mali)"
       },
       "description": {
-        "en": "The Notepad++ supply chain attack, attributed to Chinese state-linked actors, demonstrated targeted espionage across diverse geographical regions and sensitive sectors. Victims were identified in Vietnam, El Salvador, Australia, and the Philippines, indicating a global strategic interest in gathering intelligence via widely used software.",
-        "fr": "L'attaque de la chaîne d'approvisionnement de Notepad++, attribuée à des acteurs étatiques chinois, a démontré une campagne d'espionnage ciblée à travers diverses régions géographiques et des secteurs sensibles. Des victimes ont été identifiées au Vietnam, au Salvador, en Australie et aux Philippines, signalant un intérêt stratégique mondial à collecter des renseignements via des logiciels largement utilisés."
+        "en": "Analysis of the systemic rupture in Mali following the withdrawal of French forces, marked by a pivot towards Russia (Wagner/Africa Corps) and China. Despite claims of 'recaptured sovereignty,' the regime faces persistent security threats, structural dependencies, and internal precarity, leading to the search for diversified partnerships, even with former adversaries like ECOWAS, to address the ongoing terrorism crisis.",
+        "fr": "Analyse de la rupture systémique au Mali suite au retrait des forces françaises, marquée par un pivot vers la Russie (Wagner/Africa Corps) et la Chine. Malgré les revendications de « souveraineté retrouvée », le régime est confronté à des menaces sécuritaires persistantes, des dépendances structurelles et une précarité interne, l'obligeant à rechercher des partenariats diversifiés, même avec d'anciens adversaires comme la CEDEAO, pour faire face à la crise terroriste en cours."
       },
       "tags": [
-        "APT",
-        "China",
-        "Geopolitics",
-        "Supply Chain",
-        "Espionage"
+        "Mali",
+        "Sahel",
+        "Russia Influence",
+        "Geopolitical Shift"
       ],
       "sources": [
-        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
+        "https://www.iris-france.org/mali-sahel-une-souverainete-retrouvee/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "sector": {
+        "en": "Political Stability, International Relations",
+        "fr": "Stabilité Politique, Relations Internationales"
+      },
+      "theme": {
+        "en": "Expansion of far-right and conservative movements in Latin America and US interventionism",
+        "fr": "Expansion des mouvements d'extrême droite et conservateurs en Amérique latine et interventionnisme américain"
+      },
+      "description": {
+        "en": "The political landscape in Latin America is shifting rightward. This occurs amidst aggressive geopolitical maneuvering by the United States to reassert regional supremacy against China and Russia, exemplified by the controversial and illegal military intervention in Venezuela, allegedly resulting in the abduction of President Nicolas Maduro.",
+        "fr": "Le paysage politique en Amérique latine est en train de basculer vers la droite. Cela se produit dans un contexte de manœuvres géopolitiques agressives des États-Unis pour réaffirmer leur suprématie régionale face à la Chine et à la Russie, illustré par l'intervention militaire controversée et illégale au Venezuela, qui aurait entraîné l'enlèvement du président Nicolas Maduro."
+      },
+      "tags": [
+        "Latin America",
+        "US Foreign Policy",
+        "Venezuela",
+        "Political Polarization"
+      ],
+      "sources": [
+        "https://www.iris-france.org/en-amerique-latine-lexpansion-des-droites/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "sector": {
+        "en": "Diplomacy, Regional Conflict",
+        "fr": "Diplomatie, Conflit Régional"
+      },
+      "theme": {
+        "en": "Regional implications of Israel’s diplomatic recognition of Somaliland",
+        "fr": "Implications régionales de la reconnaissance diplomatique du Somaliland par Israël"
+      },
+      "description": {
+        "en": "Israel became the first country to formally recognize Somaliland. This selective diplomatic move carries significant regional implications, potentially undermining the legitimacy of Somaliland in the eyes of many Somalis and impacting regional stability dynamics.",
+        "fr": "Israël est devenu le premier pays à reconnaître formellement le Somaliland. Ce geste diplomatique sélectif a des implications régionales significatives, sapant potentiellement la légitimité du Somaliland aux yeux de nombreux Somaliens et affectant la dynamique de stabilité régionale."
+      },
+      "tags": [
+        "Israel",
+        "Somaliland",
+        "Diplomacy",
+        "Regional Stability"
+      ],
+      "sources": [
+        "https://www.rusi.org/explore-our-research/publications/commentary/selective-diplomacy-israels-somaliland-move-and-its-regional-implications"
       ],
       "date": "2026-02-04"
     }
   ],
   "breach_analyse": [],
-  "vulnerabilities_analyse": [],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-11953",
+      "euvd_id": "",
+      "cvss": "",
+      "epss": "",
+      "product": "React Native CLI Metro server",
+      "description": {
+        "en": "Critical vulnerability in the React Native CLI Metro server, which binds to external interfaces by default. This flaw allows remote command execution (RCE) and was actively exploited by attackers to deploy Rust-based malware weeks before its public disclosure.",
+        "fr": "Vulnérabilité critique dans le serveur Metro de React Native CLI, qui se lie aux interfaces externes par défaut. Cette faille permet l'exécution de commandes à distance (RCE) et a été activement exploitée par des attaquants pour déployer un malware basé sur Rust des semaines avant sa divulgation publique."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Zero-Day",
+        "Exploitation"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-to-deploy-rust-malware-before-public-disclosure.html"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
   "threats_analyse": [
     {
       "title": {
-        "en": "Notepad++ Supply Chain Reconnaissance TTPs",
-        "fr": "TTPs de Reconnaissance par la Chaîne d'Approvisionnement Notepad++"
+        "en": "AI/LLM Assisted Cloud Intrusion Achieves Admin Access in 8 Minutes",
+        "fr": "L'intrusion dans le Cloud assistée par l'IA/LLM permet l'accès administrateur en 8 minutes"
       },
       "description": {
-        "en": "Detailed analysis of the compromised Notepad++ update mechanism showing selective targeting of IP ranges for system reconnaissance using native OS commands and exfiltration via public file-sharing services (temp.sh).",
-        "fr": "Analyse détaillée du mécanisme de mise à jour compromis de Notepad++ montrant un ciblage sélectif de plages d'adresses IP pour la reconnaissance système à l'aide de commandes OS natives et l'exfiltration via des services publics de partage de fichiers (temp.sh)."
+        "en": "An offensive operation targeting an AWS environment achieved escalation from initial access to administrative privileges in approximately 8 minutes. This rapid advancement was characterized by strong indicators suggesting the use of Large Language Models (LLMs) to automate reconnaissance, code generation, and real-time operational decisions.",
+        "fr": "Une opération offensive ciblant un environnement AWS a réussi à escalader de l'accès initial aux privilèges administratifs en environ 8 minutes. Cette progression rapide présente des indicateurs suggérant l'utilisation de grands modèles de langage (LLM) pour automatiser la reconnaissance, la génération de code et les décisions opérationnelles en temps réel."
       },
-      "threat_actor": "Chinese State-linked Actors",
+      "threat_actor": "Unspecified",
       "indicators": {
         "URL": [],
         "IPv4": [],
@@ -85,100 +184,37 @@
         "HASH_SHA1": [],
         "HASH_MD5": [],
         "TOOLS": [
-          "curl.exe",
-          "systeminfo",
-          "tasklist",
-          "whoami",
-          "ipconfig",
-          "netstat"
+          "LLM/AI for Automation"
         ]
       },
       "mitre_ttps": [
-        "T1195.002",
-        "T1082",
-        "T1057",
-        "T1033",
-        "T1041"
+        "T1078.004",
+        "T1588.003",
+        "T1068",
+        "TA0004"
       ],
       "analyse": {
-        "en": "The attackers deployed three distinct infection chains via manipulated update responses, focusing on collecting detailed system configuration, running processes, and user accounts. The use of native tools (`systeminfo`, `curl.exe`) is typical for low-footprint reconnaissance.",
-        "fr": "Les attaquants ont déployé trois chaînes d'infection distinctes via des réponses de mise à jour manipulées, se concentrant sur la collecte de configurations système détaillées, des processus en cours et des comptes utilisateur. L'utilisation d'outils natifs (`systeminfo`, `curl.exe`) est typique de la reconnaissance à faible empreinte."
+        "en": "The use of AI/LLMs dramatically increases the velocity and efficiency of cloud intrusion campaigns, narrowing the detection window (time-to-admin) and lowering the necessary skill barrier for complex cloud environments (AWS). Organizations must prioritize real-time monitoring and automation for response.",
+        "fr": "L'utilisation de l'IA/LLM augmente considérablement la vitesse et l'efficacité des campagnes d'intrusion dans le cloud, réduisant la fenêtre de détection (temps d'accès administrateur) et abaissant la barrière de compétences requises pour les environnements cloud complexes (AWS). Les organisations doivent donner la priorité à la surveillance en temps réel et à l'automatisation des réponses."
       },
       "recommandations": [
         {
-          "en": "Review endpoint logs for unexpected execution of commands (`systeminfo`, `tasklist`, `whoami`, `curl.exe`) initiated by Notepad++.",
-          "fr": "Examiner les journaux des endpoints pour détecter l'exécution inattendue de commandes (`systeminfo`, `tasklist`, `whoami`, `curl.exe`) initiées par Notepad++."
+          "en": "Implement and strictly enforce continuous monitoring and 'least privilege' access policies in all cloud environments (IaaS and PaaS).",
+          "fr": "Mettre en œuvre et appliquer strictement une surveillance continue et des politiques d'accès au « moindre privilège » dans tous les environnements cloud (IaaS et PaaS)."
         },
         {
-          "en": "Reinstall the latest version of Notepad++ from a trusted source and rotate credentials used on compromised systems.",
-          "fr": "Réinstaller la dernière version de Notepad++ à partir d'une source fiable et renouveler les identifiants utilisés sur les systèmes compromis."
-        }
-      ],
-      "tags": [
-        "Supply Chain",
-        "Reconnaissance",
-        "Windows",
-        "TTP"
-      ],
-      "sources": [
-        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
-      ],
-      "date": "2026-02-04"
-    },
-    {
-      "title": {
-        "en": "Configuring API-based Audit Log Collection for Google Workspace (DFIR TTP)",
-        "fr": "Configuration de la Collecte de Journaux d'Audit Basée sur API pour Google Workspace (TTP DFIR)"
-      },
-      "description": {
-        "en": "Detailed walkthrough for setting up continuous collection of Google Workspace audit and activity logs using the Admin SDK Reports API, essential for comprehensive cloud security monitoring and forensic investigations.",
-        "fr": "Guide détaillé pour configurer la collecte continue des journaux d'audit et d'activité de Google Workspace via l'API Admin SDK Reports, essentielle pour la surveillance de la sécurité cloud et les enquêtes forensiques approfondies."
-      },
-      "threat_actor": "None",
-      "indicators": {
-        "URL": [
-          "https://www.googleapis.com/auth/admin.reports.audit.readonly",
-          "https://www.googleapis.com/auth/admin.reports.usage.readonly"
-        ],
-        "IPv4": [],
-        "IPv6": [],
-        "DOMAIN": [
-          "googleapis.com"
-        ],
-        "EMAIL": [],
-        "HASH_SHA256": [],
-        "HASH_SHA1": [],
-        "HASH_MD5": [],
-        "TOOLS": [
-          "Admin SDK – Reports API"
-        ]
-      },
-      "mitre_ttps": [
-        "T1589"
-      ],
-      "analyse": {
-        "en": "The configuration requires synchronizing steps across the Google Cloud Console (project creation, API enablement, service account setup) and the Google Workspace Admin Console (Domain-Wide Delegation using the Client ID and specific OAuth scopes). This method is critical for bypassing UI export limits and standardizing log retrieval for DFIR readiness.",
-        "fr": "La configuration nécessite la synchronisation des étapes entre la Google Cloud Console (création de projet, activation d'API, compte de service) et la Google Workspace Admin Console (Délégation à l'échelle du Domaine en utilisant l'ID Client et des scopes OAuth spécifiques). Cette méthode est essentielle pour contourner les limites d'exportation de l'interface utilisateur et standardiser la récupération des journaux pour la préparation au DFIR."
-      },
-      "recommandations": [
-        {
-          "en": "Establish a dedicated Google Cloud Service Account and enable Domain-Wide Delegation to allow repeatable, bulk extraction of audit logs via the Admin SDK Reports API.",
-          "fr": "Établir un Compte de Service Google Cloud dédié et activer la Délégation à l'échelle du Domaine pour permettre l'extraction répétable et en masse des journaux d'audit via l'API Admin SDK Reports."
-        },
-        {
-          "en": "Securely store the Service Account JSON key, treating it as highly sensitive credentials.",
-          "fr": "Stocker de manière sécurisée la clé JSON du Compte de Service, en la considérant comme une information d'identification hautement sensible."
+          "en": "Invest in automated response mechanisms capable of reacting to privilege escalation attempts within minutes to counter the accelerated attack speed enabled by AI.",
+          "fr": "Investir dans des mécanismes de réponse automatisée capables de réagir aux tentatives d'escalade de privilèges en quelques minutes pour contrer la vitesse d'attaque accélérée permise par l'IA."
         }
       ],
       "tags": [
         "Cloud Security",
-        "DFIR",
-        "Google Workspace",
-        "Log Collection",
-        "Best Practice"
+        "AWS",
+        "AI Assistance",
+        "Privilege Escalation"
       ],
       "sources": [
-        "https://www.cyberengage.org/post/pulling-google-workspace-logs-via-api"
+        "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
       ],
       "date": "2026-02-04"
     }
