@@ -2,172 +2,154 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "The cyber threat landscape for February 4, 2026, is dominated by sophisticated state-sponsored activity focusing on defense and critical infrastructure (CI), alongside escalating geopolitical influence operations. The campaign linked to UNC5312 targeting defense contractors indicates a persistent focus on high-value espionage. Concurrently, the rapid, active exploitation of the critical vulnerability CVE-2026-0099 in enterprise VPN solutions demonstrates how zero-day vulnerabilities remain the primary vector for initial access by advanced persistent threats (APTs). Financially motivated groups, exemplified by the Blackout ransomware group, continue to successfully compromise critical services by leveraging cloud misconfigurations. Finally, the strategic use of advanced deepfake technology in influence campaigns signals a significant increase in informational warfare tactics targeting democratic processes globally.",
-      "fr": "Le paysage de la cybermenace du 4 février 2026 est dominé par des activités sophistiquées parrainées par des États, visant la défense et les infrastructures critiques (IC), parallèlement à l'escalade des opérations d'influence géopolitique. La campagne liée à UNC5312 ciblant les entreprises de défense témoigne d'une concentration persistante sur l'espionnage de grande valeur. Simultanément, l'exploitation rapide et active de la vulnérabilité critique CVE-2026-0099 dans les solutions VPN d'entreprise démontre que les vulnérabilités zero-day restent le vecteur principal d'accès initial pour les menaces persistantes avancées (APT). Des groupes motivés financièrement, à l'image du groupe rançongiciel Blackout, continuent de compromettre avec succès des services essentiels en exploitant des erreurs de configuration dans le cloud. Enfin, l'utilisation stratégique de la technologie deepfake avancée dans les campagnes d'influence signale une augmentation significative des tactiques de guerre informationnelle ciblant les processus démocratiques mondiaux."
+      "en": "The integration of advanced Artificial Intelligence (AI) into Security Operations Centers (SOCs) marks a significant evolution towards autonomous security capabilities. Elastic's new Agent Builder and Workflows functionality demonstrate a shift from rigid Security Orchestration, Automation, and Response (SOAR) playbooks to a system where probabilistic AI reasoning drives deterministic automated responses, drastically reducing mean-time-to-triage. Concurrently, the industry is focusing on removing major technical barriers to modernization, highlighted by the introduction of automated detection rule migration support for legacy SIEM platforms like QRadar and Splunk, facilitating smoother and faster transitions to newer security ecosystems.",
+      "fr": "L'intégration de l'Intelligence Artificielle (IA) avancée dans les Centres d'Opérations de Sécurité (SOC) marque une évolution significative vers des capacités de sécurité autonomes. La nouvelle fonctionnalité Agent Builder et Workflows d'Elastic démontre un passage des playbooks rigides d'Orchestration, d'Automatisation et de Réponse en Matière de Sécurité (SOAR) à un système où le raisonnement probabiliste de l'IA pilote des réponses automatisées déterministes, réduisant considérablement le temps moyen de triage. Simultanément, l'industrie se concentre sur la suppression des obstacles techniques majeurs à la modernisation, soulignée par l'introduction d'un support de migration automatique des règles de détection pour les plateformes SIEM existantes comme QRadar et Splunk, facilitant des transitions plus fluides et rapides vers de nouveaux écosystèmes de sécurité."
     },
     "date": "2026-02-04"
   },
   "malicious_actors_analyse": [
     {
-      "name": "UNC5312",
-      "campaign": "GhostLocker Deployment",
+      "name": "Chinese State-Linked Actor (Supply Chain)",
+      "campaign": "Notepad++ Supply-Chain Compromise Update",
       "campaign_description": {
-        "en": "A new espionage campaign attributed to UNC5312, characterized by the use of novel spear-phishing techniques tailored to supply chain staff, leading to the deployment of a custom persistence backdoor known as GhostLocker.",
-        "fr": "Une nouvelle campagne d'espionnage attribuée à UNC5312, caractérisée par l'utilisation de nouvelles techniques d'hameçonnage ciblé (spear-phishing) adaptées au personnel de la chaîne d'approvisionnement, menant au déploiement d'une porte dérobée de persistance personnalisée nommée GhostLocker."
+        "en": "Updated intelligence regarding a sophisticated supply chain attack where state-linked actors compromised the Notepad++ update infrastructure. The actors selectively delivered modified executables to specific IP ranges for advanced reconnaissance targeting high-value systems.",
+        "fr": "Renseignement actualisé concernant une attaque sophistiquée de la chaîne logistique où des acteurs étatiques ont compromis l'infrastructure de mise à jour de Notepad++. Les acteurs ont délivré sélectivement des exécutables modifiés à des plages d'adresses IP spécifiques pour une reconnaissance avancée ciblant des systèmes de grande valeur."
       },
       "sector": {
-        "en": "Defense, Aerospace, Government Contractors",
-        "fr": "Défense, Aérospatiale, Sous-traitants gouvernementaux"
+        "en": "Government, Finance, Information Technology",
+        "fr": "Gouvernement, Finance, Technologies de l'Information"
       },
       "modop": {
-        "en": "Spear-phishing targeting highly specific employees (Supply Chain Management). Post-initial compromise involves deploying 'GhostLocker,' a lightweight custom backdoor used for persistent C2 communication and data exfiltration.",
-        "fr": "Hameçonnage ciblé visant des employés très spécifiques (Gestion de la chaîne d'approvisionnement). La post-compromission initiale implique le déploiement de 'GhostLocker', une porte dérobée personnalisée légère utilisée pour une communication C2 persistante et l'exfiltration de données."
+        "en": "Compromise of software update mechanism (supply chain attack) used for highly targeted delivery of reconnaissance malware. Utilized native Windows tools (`systeminfo`, `tasklist`, `whoami`) and `curl.exe` for data exfiltration to a public file-sharing service (`temp.sh`).",
+        "fr": "Compromission du mécanisme de mise à jour logicielle (attaque de la chaîne logistique) utilisée pour la livraison très ciblée de logiciels malveillants de reconnaissance. Utilisation d'outils Windows natifs (`systeminfo`, `tasklist`, `whoami`) et de `curl.exe` pour l'exfiltration de données vers un service de partage de fichiers public (`temp.sh`)."
       },
       "tags": [
-        "APT",
-        "Espionage",
-        "Custom Malware",
-        "GhostLocker"
-      ],
-      "sources": [
-        "https://securityblog.com/apt-unc5312-ghostlocker-2026"
-      ],
-      "date": "2026-02-04"
-    }
-  ],
-  "geopolitical_analyse": [
-    {
-      "sector": {
-        "en": "Global Politics, Social Media, Democratic Institutions",
-        "fr": "Politique mondiale, Médias sociaux, Institutions démocratiques"
-      },
-      "theme": {
-        "en": "Advanced Deepfake Influence Operations",
-        "fr": "Opérations d'Influence par Deepfake Avancé"
-      },
-      "description": {
-        "en": "A detailed report highlights coordinated influence operations targeting upcoming global elections. These campaigns leverage highly realistic deepfake technology across major social media platforms to spread sophisticated disinformation, aiming to undermine public trust and sow political instability.",
-        "fr": "Un rapport détaillé met en évidence des opérations d'influence coordonnées ciblant les prochaines élections mondiales. Ces campagnes exploitent la technologie deepfake très réaliste sur les principales plateformes de médias sociaux pour diffuser de la désinformation sophistiquée, dans le but de saper la confiance du public et d'engendrer l'instabilité politique."
-      },
-      "tags": [
-        "Disinformation",
-        "Influence Operations",
-        "Deepfakes",
-        "Elections",
-        "Information Warfare"
-      ],
-      "sources": [
-        "https://disinfo-tracker.org/deepfake-elections-2026"
-      ],
-      "date": "2026-02-04"
-    }
-  ],
-  "breach_analyse": [
-    {
-      "victim": "Major North American Utility Provider",
-      "threat_actor": "Blackout Ransomware",
-      "sector": {
-        "en": "Energy, Critical Infrastructure (CI)",
-        "fr": "Énergie, Infrastructure Critique (IC)"
-      },
-      "description": {
-        "en": "A significant ransomware incident affected a major utility company in North America. The Blackout group claimed responsibility, leaking preliminary proprietary data. The initial access vector was traced back to the exploitation of misconfigured access controls in a corporate cloud environment.",
-        "fr": "Un incident de rançongiciel majeur a touché une grande entreprise de services publics en Amérique du Nord. Le groupe Blackout a revendiqué la responsabilité, divulguant des données propriétaires préliminaires. Le vecteur d'accès initial a été attribué à l'exploitation de contrôles d'accès mal configurés dans un environnement cloud d'entreprise."
-      },
-      "tags": [
-        "Ransomware as a Service (RaaS)",
-        "Critical Infrastructure",
-        "Cloud Security",
-        "Data Exfiltration"
-      ],
-      "sources": [
-        "https://dfirreport.com/blackout-ransomware-utility-breach"
-      ],
-      "date": "2026-02-04"
-    }
-  ],
-  "vulnerabilities_analyse": [
-    {
-      "cve_id": "CVE-2026-0099",
-      "euvd_id": "EUVD-2026-0099",
-      "cvss": "9.8",
-      "epss": "0.97",
-      "product": "NetConnect Secure Gateway",
-      "description": {
-        "en": "Critical pre-authentication Remote Code Execution (RCE) vulnerability affecting the widely deployed NetConnect Secure Gateway (VPN appliance). The flaw allows unauthenticated remote attackers to execute arbitrary code on the underlying operating system.",
-        "fr": "Vulnérabilité critique d'exécution de code à distance (RCE) de type pré-authentification affectant la solution largement déployée NetConnect Secure Gateway (appliance VPN). La faille permet à des attaquants distants non authentifiés d'exécuter du code arbitraire sur le système d'exploitation sous-jacent."
-      },
-      "tags": [
-        "vulnerability",
-        "VPN",
-        "RCE",
-        "High Severity"
-      ],
-      "sources": [
-        "https://cisa.gov/alert/cve-2026-0099"
-      ],
-      "date": "2026-02-04"
-    }
-  ],
-  "threats_analyse": [
-    {
-      "title": {
-        "en": "Active Exploitation of NetConnect Secure Gateway Zero-Day (CVE-2026-0099)",
-        "fr": "Exploitation Active de la Vulnérabilité Zero-Day NetConnect Secure Gateway (CVE-2026-0099)"
-      },
-      "description": {
-        "en": "Advanced Persistent Threat (APT) groups have been observed actively exploiting CVE-2026-0099 immediately following its disclosure. Initial exploitation vectors involve rapid scanning for unpatched endpoints, followed by the injection of custom web shells for persistent remote access and internal reconnaissance.",
-        "fr": "Des groupes de menaces persistantes avancées (APT) ont été observés exploitant activement la CVE-2026-0099 immédiatement après sa divulgation. Les vecteurs d'exploitation initiaux impliquent une analyse rapide des endpoints non patchés, suivie par l'injection de web shells personnalisés pour un accès distant persistant et une reconnaissance interne."
-      },
-      "threat_actor": "State-sponsored Actors",
-      "indicators": {
-        "URL": [],
-        "IPv4": [
-          "192.0.2.14",
-          "203.0.113.88"
-        ],
-        "IPv6": [],
-        "DOMAIN": [
-          "netconnect-update[.]com"
-        ],
-        "EMAIL": [],
-        "HASH_SHA256": [
-          "9a3b2c1d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b"
-        ],
-        "HASH_SHA1": [],
-        "HASH_MD5": [],
-        "TOOLS": [
-          "Custom web shell",
-          "NetConnect_RCE_Loader"
-        ]
-      },
-      "mitre_ttps": [
-        "T1190 (Exploit Public-Facing Application)",
-        "T1505.003 (Server Software Component: Web Shell)",
-        "T1078.001 (Valid Accounts: Domain Accounts)"
-      ],
-      "analyse": {
-        "en": "The speed and sophistication of the exploitation suggest pre-disclosure knowledge or highly skilled reverse engineering capabilities by state-sponsored actors. The targeted use of this RCE bypasses most traditional perimeter defenses, granting actors a foothold deep within victim networks critical for lateral movement.",
-        "fr": "La rapidité et la sophistication de l'exploitation suggèrent une connaissance préalable à la divulgation ou des capacités de rétro-ingénierie très avancées par des acteurs étatiques. L'utilisation ciblée de cette RCE permet de contourner la plupart des défenses périmétriques traditionnelles, offrant aux acteurs une tête de pont essentielle pour le mouvement latéral au sein des réseaux victimes."
-      },
-      "recommandations": [
-        {
-          "en": "Immediately apply patches or vendor-provided mitigation steps for NetConnect Secure Gateway (CVE-2026-0099) and reboot the appliance.",
-          "fr": "Appliquer immédiatement les correctifs ou les mesures d'atténuation fournies par le fournisseur pour NetConnect Secure Gateway (CVE-2026-0099) et redémarrer l'appliance."
-        },
-        {
-          "en": "Perform forensic analysis on VPN logs and firewall traffic originating from the NetConnect appliance to detect post-exploitation activity, such as unusual process execution or outbound C2 communication.",
-          "fr": "Effectuer une analyse forensique des journaux VPN et du trafic de pare-feu provenant de l'appliance NetConnect pour détecter les activités post-exploitation, telles que l'exécution de processus inhabituels ou la communication C2 sortante."
-        }
-      ],
-      "tags": [
-        "Zero-day",
-        "Initial Access",
-        "High Risk",
+        "Supply Chain Attack",
+        "Reconnaissance",
+        "State-Sponsored",
         "APT"
       ],
       "sources": [
-        "https://cisa.gov/alert/cve-2026-0099"
+        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
+      ],
+      "date": "2026-02-03"
+    }
+  ],
+  "geopolitical_analyse": [],
+  "breach_analyse": [],
+  "vulnerabilities_analyse": [],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "TTPs of Chinese State-Linked Actor using Compromised Notepad++ Updater",
+        "fr": "TTP d'acteurs étatiques chinois utilisant le mécanisme de mise à jour compromis de Notepad++"
+      },
+      "description": {
+        "en": "Analysis of the deep system reconnaissance phase conducted by Chinese state-linked actors using executables delivered via the compromised Notepad++ update channel. The goal was system profiling and identifying high-value targets across various critical sectors.",
+        "fr": "Analyse de la phase de reconnaissance système approfondie menée par des acteurs étatiques chinois utilisant des exécutables distribués via le canal de mise à jour compromis de Notepad++. L'objectif était le profilage du système et l'identification de cibles de grande valeur dans divers secteurs critiques."
+      },
+      "threat_actor": "Chinese State-Linked Actor (Supply Chain)",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "temp.sh"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "curl.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1082",
+        "T1057",
+        "T1033",
+        "T1016"
+      ],
+      "analyse": {
+        "en": "The threat actor leveraged infrastructure compromise (T1195.002) to ensure initial access, followed by the use of standard Windows administrative commands and utilities like `curl.exe` for silent execution and data exfiltration. This blend of supply-chain access and living-off-the-land techniques emphasizes stealthy reconnaissance.",
+        "fr": "L'acteur de la menace a exploité une compromission d'infrastructure (T1195.002) pour assurer l'accès initial, suivie de l'utilisation de commandes administratives Windows standard et d'utilitaires comme `curl.exe` pour une exécution silencieuse et l'exfiltration de données. Ce mélange d'accès par chaîne logistique et de techniques 'living-off-the-land' met l'accent sur la reconnaissance furtive."
+      },
+      "recommandations": [
+        {
+          "en": "Review endpoint logs for unexpected execution of `systeminfo`, `tasklist`, `whoami`, `ipconfig`, or `netstat` commands initiated by Notepad++ processes.",
+          "fr": "Examiner les journaux des endpoints pour toute exécution inattendue des commandes `systeminfo`, `tasklist`, `whoami`, `ipconfig` ou `netstat` initiées par les processus Notepad++."
+        },
+        {
+          "en": "Monitor for unauthorized use of `curl.exe` uploading data, especially when communicating with public file-sharing domains like temp.sh.",
+          "fr": "Surveiller l'utilisation non autorisée de `curl.exe` téléchargeant des données, en particulier lors de la communication avec des domaines de partage de fichiers publics comme temp.sh."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "Reconnaissance",
+        "C2",
+        "APT"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/update-chinese-state-linked-actors-compromised-notepad-update-infrastructure"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "title": {
+        "en": "Ensuring Forensic Readiness in Google Workspace",
+        "fr": "Assurer la préparation forensique dans Google Workspace"
+      },
+      "description": {
+        "en": "A detailed security guide outlining the prerequisite steps for Google Workspace Super Admins to establish a robust, API-based mechanism for automated collection of audit and activity logs, crucial for digital forensics and threat hunting operations.",
+        "fr": "Un guide de sécurité détaillé décrivant les étapes préalables pour les Super Administrateurs Google Workspace afin d'établir un mécanisme robuste basé sur une API pour la collecte automatisée des journaux d'audit et d'activité, essentiels pour la criminalistique numérique et la chasse aux menaces."
+      },
+      "threat_actor": "N/A",
+      "indicators": {
+        "URL": [
+          "https://www.googleapis.com/auth/admin.reports.audit.readonly",
+          "https://www.googleapis.com/auth/admin.reports.usage.readonly"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "googleapis.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Admin SDK – Reports API"
+        ]
+      },
+      "mitre_ttps": [
+        "M1025"
+      ],
+      "analyse": {
+        "en": "Effective logging in a multi-cloud environment requires overcoming administrative complexity (linking Google Cloud identity/Service Accounts to Workspace Domain-Wide Delegation). Correct implementation ensures investigators can programmatically pull comprehensive logs without relying on restrictive UI exports, which is vital for post-incident analysis.",
+        "fr": "La journalisation efficace dans un environnement multi-cloud nécessite de surmonter la complexité administrative (lier l'identité Google Cloud/Comptes de Service à la délégation à l'échelle du domaine Workspace). Une mise en œuvre correcte garantit que les enquêteurs peuvent extraire des journaux complets par programme sans dépendre des exportations d'interface utilisateur restrictives, ce qui est essentiel pour l'analyse post-incident."
+      },
+      "recommandations": [
+        {
+          "en": "Verify that service accounts utilizing Domain-Wide Delegation only have the minimum necessary OAuth scopes assigned (e.g., read-only access to audit reports).",
+          "fr": "Vérifier que les comptes de service utilisant la Délégation à l'échelle du domaine ne disposent que des portées OAuth minimales nécessaires (par exemple, un accès en lecture seule aux rapports d'audit)."
+        },
+        {
+          "en": "Implement strict security procedures (e.g., vaulting) for the downloaded JSON key associated with the service account, as it grants high-level access to the Workspace domain.",
+          "fr": "Mettre en œuvre des procédures de sécurité strictes (par exemple, mise en coffre) pour la clé JSON téléchargée associée au compte de service, car elle accorde un accès de haut niveau au domaine Workspace."
+        }
+      ],
+      "tags": [
+        "Forensic Readiness",
+        "Cloud Security",
+        "DFIR",
+        "Log Collection",
+        "blue-team"
+      ],
+      "sources": [
+        "https://www.cyberengage.org/post/pulling-google-workspace-logs-via-api"
       ],
       "date": "2026-02-04"
     }
