@@ -1,0 +1,559 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The strategic landscape is marked by the accelerated weaponization of AI systems and the exploitation of infrastructure management components. Generative AI (GenAI) models are increasingly leveraged by threat actors for efficiency gains (advanced actors) or as learning tools (less experienced actors) across all phases of an attack, including profiling, social engineering content generation, and malware development. Critically, several major vulnerabilities were discovered in high-performance Large Language Model (LLM) inference servers (NVIDIA vLLM, Megatron-LM), signaling immediate security risks within emerging AI infrastructure.\nFurthermore, the long-term systemic risk of Non-Human Identities (NHIs) remains acute. Leaked API keys, cloud tokens, and service accounts—often lacking MFA and having indefinite lifespans—are frequently discovered in public repositories (e.g., Docker Hub), leading to high-impact breaches like the 2024 Snowflake incident. Finally, threat actors are diversifying their operations, with info-stealing malware campaigns expanding beyond Windows to target macOS environments using cross-platform languages (Python) and leveraging sophisticated social engineering tactics.",
+      "fr": "Le paysage stratégique est marqué par l'accélération de l'instrumentalisation des systèmes d'IA et l'exploitation des composants d'infrastructure. Les modèles d'IA générative (GenAI) sont de plus en plus utilisés par les acteurs de la menace pour gagner en efficacité (acteurs avancés) ou comme outils d'apprentissage (acteurs moins expérimentés) dans toutes les phases d'une attaque, y compris le profilage, la génération de contenu d'ingénierie sociale et le développement de logiciels malveillants. De manière critique, plusieurs vulnérabilités majeures ont été découvertes dans des serveurs d'inférence de Modèles de Langage de Grande Taille (LLM) à haute performance (NVIDIA vLLM, Megatron-LM), signalant des risques de sécurité immédiats au sein de l'infrastructure d'IA émergente.\nDe plus, le risque systémique à long terme des Identités Non-Humaines (INH) reste critique. Les clés API, les jetons cloud et les comptes de service divulgués — souvent dépourvus de MFA et ayant une durée de vie indéfinie — sont fréquemment découverts dans des dépôts publics (par exemple, Docker Hub), entraînant des compromissions à fort impact comme l'incident Snowflake de 2024. Enfin, les acteurs de la menace diversifient leurs opérations, les campagnes de logiciels malveillants de vol d'informations s'étendant au-delà de Windows pour cibler les environnements macOS en utilisant des langages multiplateformes (Python) et en tirant parti de tactiques d'ingénierie sociale sophistiquées."
+    },
+    "date": "2026-02-05"
+  },
+  "malicious_actors_analyse": [
+    {
+      "name": "APT41",
+      "campaign": "Amaranth Dragon Cyberespionage Campaigns",
+      "campaign_description": {
+        "en": "A series of highly targeted cyber-espionage campaigns focused on government and law enforcement agencies across Southeast Asia, leveraging spear-phishing and rapid zero-day exploitation for initial access and persistence.",
+        "fr": "Série de campagnes de cyberespionnage hautement ciblées visant les agences gouvernementales et les forces de l'ordre en Asie du Sud-Est, exploitant le spear-phishing et l'exploitation rapide de vulnérabilités zero-day pour l'accès initial et la persistance."
+      },
+      "sector": {
+        "en": "Government; Law Enforcement; Critical Infrastructure (Southeast Asia)",
+        "fr": "Gouvernement ; Forces de l'ordre ; Infrastructure critique (Asie du Sud-Est)"
+      },
+      "modop": {
+        "en": "Exploits the WinRAR path traversal vulnerability (CVE-2025-8088) within 10 days of public disclosure. Uses custom tools including Amaranth Loader to deploy AES-encrypted payloads (e.g., Havoc C2 framework) and a new Telegram-based RAT (TGAmaranth RAT) featuring anti-EDR evasion (ntdll.dll unhooking). C2 infrastructure is concealed behind Cloudflare and configured to respond only to targeted country IPs.",
+        "fr": "Exploite la vulnérabilité de traversée de chemin WinRAR (CVE-2025-8088) dans les 10 jours suivant sa divulgation publique. Utilise des outils personnalisés, notamment Amaranth Loader, pour déployer des charges utiles chiffrées par AES (par exemple, le framework Havoc C2) et un nouveau RAT basé sur Telegram (TGAmaranth RAT) doté de capacités d'évasion anti-EDR (décrochage de ntdll.dll). L'infrastructure C2 est masquée derrière Cloudflare et configurée pour répondre uniquement aux adresses IP des pays ciblés."
+      },
+      "tags": [
+        "Cyberespionage",
+        "APT",
+        "WinRAR Exploitation",
+        "Havoc C2",
+        "TGAmaranth RAT"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+        "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+        "https://securityonline.info/10-days-to-exploit-amaranth-dragon-weaponizes-winrar-flaw-to-spy-on-se-asia/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "name": "Rublevka Team",
+      "campaign": "Large-Scale Cryptocurrency Wallet Draining",
+      "campaign_description": {
+        "en": "A Russian-speaking cybercriminal group operating a massive affiliate-driven 'traffer team' operation specializing in crypto wallet draining, generating over $10 million through social engineering scams.",
+        "fr": "Groupe cybercriminel russophone gérant une opération massive de 'traffer team' axée sur l'affiliation, spécialisée dans le drainage de portefeuilles de cryptomonnaies, générant plus de 10 millions de dollars via des escroqueries par ingénierie sociale."
+      },
+      "sector": {
+        "en": "Cryptocurrency; Fintech; General Consumers",
+        "fr": "Cryptomonnaie ; Fintech ; Consommateurs généraux"
+      },
+      "modop": {
+        "en": "Leverages thousands of social engineering specialists (traffers) to direct victims to spoofed landing pages impersonating legitimate crypto services. These pages deploy custom JavaScript scripts designed to trick users into connecting their wallets and authorizing fraudulent transactions. The infrastructure is highly automated and supports over 90 wallet types.",
+        "fr": "Utilise des milliers de spécialistes en ingénierie sociale (traffers) pour diriger les victimes vers des pages de destination usurpées imitant des services de cryptomonnaie légitimes. Ces pages déploient des scripts JavaScript personnalisés conçus pour inciter les utilisateurs à connecter leurs portefeuilles et à autoriser des transactions frauduleuses. L'infrastructure est fortement automatisée et prend en charge plus de 90 types de portefeuilles."
+      },
+      "tags": [
+        "Cybercrime",
+        "Wallet Drainer",
+        "Social Engineering",
+        "Affiliate Program"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/rublevka-team-anatomy-russian-crypto-drainer-operation"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "name": "Unknown",
+      "campaign": "0apt Data Leak Hoax",
+      "campaign_description": {
+        "en": "Analysis revealing that the newly emerged 0apt group, which claimed responsibility for numerous high-profile data leaks (including medical technology and defense contractors), is a hoax. Their downloads consist only of random data streams (e.g., /dev/random) and not actual stolen data.",
+        "fr": "Analyse révélant que le nouveau groupe 0apt, qui revendiquait de nombreuses fuites de données de haut niveau (y compris des entreprises de technologie médicale et des sous-traitants de la défense), est une escroquerie. Leurs téléchargements ne contiennent que des flux de données aléatoires (par exemple, /dev/random) et non des données volées réelles."
+      },
+      "sector": {
+        "en": "Cybercrime; Media; Fraud",
+        "fr": "Cybercriminalité ; Médias ; Fraude"
+      },
+      "modop": {
+        "en": "Creation of a minimalist leak site listing major alleged victims. Downloads pipe random data (/dev/random) instead of genuine exfiltrated files, wasting researchers' time and spreading false panic.",
+        "fr": "Création d'un site de fuite minimaliste répertoriant de nombreuses victimes présumées. Les téléchargements renvoient des données aléatoires (/dev/random) au lieu de fichiers exfiltrés authentiques, gaspillant le temps des chercheurs et propageant une fausse panique."
+      },
+      "tags": [
+        "Hoax",
+        "Data Leak Fraud",
+        "Disinformation"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/04/dont-panic-0apts-listings-and-data-leaks-are-fakes-researchers/"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Defense and Economy",
+        "fr": "Défense et Économie"
+      },
+      "theme": {
+        "en": "The Growth of Russia's War Economy",
+        "fr": "La croissance de l'économie de guerre russe"
+      },
+      "description": {
+        "en": "The Russian manufacturing industry recorded 15.1% growth between 2022 and 2024, significantly outpacing general GDP growth (7.1%). This expansion is driven by direct military demand and extensive import substitution efforts aimed at achieving industrial sovereignty. This rapid complexification of industrial production is mainly concentrated in high value-added, advanced technology sectors supporting the defense industry.",
+        "fr": "L'industrie manufacturière russe a enregistré une croissance de 15,1% entre 2022 et 2024, dépassant largement la croissance générale du PIB (7,1%). Cette expansion est tirée par la demande militaire directe et par d'importants efforts de substitution aux importations visant la souveraineté industrielle. Cette complexification rapide de la production industrielle se concentre principalement sur les secteurs à haute valeur ajoutée et à techniques avancées soutenant l'industrie de la défense."
+      },
+      "tags": [
+        "Russia",
+        "Defense Industry",
+        "Economic Sanctions",
+        "Import Substitution"
+      ],
+      "sources": [
+        "https://www.epge.fr/point-de-situation-sur-leconomie-de-guerre-russe-fevrier-2026/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "sector": {
+        "en": "Energy; Finance",
+        "fr": "Énergie ; Finance"
+      },
+      "theme": {
+        "en": "US Strategic Rationale for Venezuelan Oil Ties",
+        "fr": "Logique stratégique américaine des liens pétroliers avec le Venezuela"
+      },
+      "description": {
+        "en": "The strategic rapprochement between Washington and Caracas is primarily motivated by the need to secure Venezuela's extra-heavy crude, which is technically necessary for U.S. Gulf Coast refinery infrastructure. Beyond energy needs, the move aims to reinforce the Petrodollar system by closing a monetary breach where Venezuela previously diversified settlements away from the U.S. dollar.",
+        "fr": "Le rapprochement stratégique entre Washington et Caracas est principalement motivé par la nécessité de sécuriser le brut extra-lourd vénézuélien, techniquement indispensable aux infrastructures de raffinage de la Côte du Golfe des États-Unis. Au-delà des besoins énergétiques, cette démarche vise à renforcer le système du pétrodollar en refermant une brèche monétaire où le Venezuela diversifiait les règlements au détriment du dollar américain."
+      },
+      "tags": [
+        "Venezuela",
+        "United States",
+        "Oil",
+        "Geoeconomics"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/analyse-strategique-les-methodes-et-outils/2026/liaisons-petrolieres-washington-caracas-venezuela/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "sector": {
+        "en": "European Security; Diplomacy",
+        "fr": "Sécurité européenne ; Diplomatie"
+      },
+      "theme": {
+        "en": "Turkish Influence Networks in Western Europe",
+        "fr": "Réseaux d'influence turcs en Europe occidentale"
+      },
+      "description": {
+        "en": "Analysis reveals a robust, multi-vector strategy by Erdoğan’s Turkey to exert influence across Western Europe, leveraging the Turkish diaspora (estimated at 5-6 million). Key vectors include religious control via DITIB and Millî Görüş, academic diplomacy, political infiltration, and the presence of ultra-nationalist organizations (Grey Wolves). This strategy poses challenges to European security and democratic integrity.",
+        "fr": "Une analyse révèle une stratégie multi-vectorielle et robuste de la Turquie d'Erdoğan pour exercer une influence en Europe occidentale, en s'appuyant sur la diaspora turque (estimée à 5-6 millions). Les vecteurs clés incluent le contrôle religieux via la DITIB et Millî Görüş, la diplomatie universitaire, l'infiltration politique et la présence d'organisations ultra-nationalistes (Loups Gris). Cette stratégie pose des défis à la sécurité et à l'intégrité démocratique européennes."
+      },
+      "tags": [
+        "Turkey",
+        "Europe",
+        "Geopolitics",
+        "Influence Operations"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/cartographie-de-la-turquie-derdogan/"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Betterment",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Finance; Investment",
+        "fr": "Finance ; Investissement"
+      },
+      "description": {
+        "en": "In January 2026, the automated investment platform Betterment confirmed a data breach resulting from a social engineering attack. The incident compromised data for 1.4 million customers, including names, email addresses, geographic locations, and a subset of records containing dates of birth, phone numbers, and physical addresses. No login credentials or customer account access were exposed.",
+        "fr": "En janvier 2026, la plateforme d'investissement automatisée Betterment a confirmé une violation de données résultant d'une attaque d'ingénierie sociale. L'incident a compromis les données de 1,4 million de clients, incluant les noms, adresses e-mail, emplacements géographiques, et pour un sous-ensemble, les dates de naissance, numéros de téléphone et adresses physiques. Aucune information d'identification ou accès aux comptes clients n'a été exposé."
+      },
+      "tags": [
+        "Data Breach",
+        "Social Engineering",
+        "Financial Services"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Betterment"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "victim": "Harvard University / University of Pennsylvania (UPenn)",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Education; Non-profit (Donors)",
+        "fr": "Éducation ; Organisation à but non lucratif (Donateurs)"
+      },
+      "description": {
+        "en": "Both Ivy League institutions suffered data breaches involving donor information. Harvard's breach (November 2025) resulted from a phone-based phishing attack targeting its Alumni Affairs and Development information, exposing biographical and donation details. The exposed data elements generally did not trigger mandatory state-level notification requirements (SSN, financial account numbers).",
+        "fr": "Les deux institutions de l'Ivy League ont subi des violations de données impliquant des informations sur les donateurs. La violation de Harvard (novembre 2025) est le résultat d'une attaque de phishing par téléphone ciblant les informations des Anciens et du Développement, exposant des détails biographiques et de dons. Les éléments de données exposés n'ont généralement pas déclenché les exigences de notification obligatoires au niveau de l'État (numéros de sécurité sociale, numéros de compte financier)."
+      },
+      "tags": [
+        "Data Breach",
+        "Phishing",
+        "Higher Education"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "victim": "Geisinger Health Patients (via Nuance Communications employee)",
+      "threat_actor": "Insider Threat",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Follow-up on the 2023 insider threat incident where a former Nuance Communications employee, Max Vance, accessed the protected health information (PHI) of over 1.3 million Geisinger Health patients shortly after his termination. The former employee is now facing additional federal charges for making false statements to the FBI regarding the unauthorized download of data.",
+        "fr": "Suivi de l'incident de menace interne de 2023 où un ancien employé de Nuance Communications, Max Vance, a accédé aux informations de santé protégées (PHI) de plus de 1,3 million de patients de Geisinger Health peu après son licenciement. L'ancien employé fait face à des accusations fédérales supplémentaires pour avoir fait de fausses déclarations au FBI concernant le téléchargement non autorisé de données."
+      },
+      "tags": [
+        "Insider Threat",
+        "PHI",
+        "Data Breach",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/04/former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case/"
+      ],
+      "date": "2026-02-04"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-22225",
+      "euvd_id": "",
+      "cvss": "8.2",
+      "epss": "",
+      "product": "VMware ESXi",
+      "description": {
+        "en": "High-severity arbitrary write vulnerability that allows an attacker with VMX process privileges to trigger an arbitrary kernel write, leading to a sandbox escape from the virtual machine. This flaw, patched in March 2025, is now confirmed by CISA to be actively exploited by ransomware groups.",
+        "fr": "Vulnérabilité d'écriture arbitraire de haute gravité qui permet à un attaquant disposant de privilèges sur le processus VMX de déclencher une écriture arbitraire dans le noyau, conduisant à une évasion du bac à sable de la machine virtuelle. Cette faille, corrigée en mars 2025, est désormais confirmée par la CISA comme étant activement exploitée par des groupes de ransomware."
+      },
+      "tags": [
+        "vulnerability",
+        "Exploited in the Wild",
+        "Ransomware",
+        "Virtualization"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-vmware-esxi-flaw-now-exploited-in-ransomware-attacks/",
+        "https://securityaffairs.com/187637/security/cve-2025-22225-in-vmware-esxi-now-used-in-active-ransomware-attacks.html"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "cve_id": "CVE-2025-40551",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "SolarWinds Web Help Desk",
+      "description": {
+        "en": "Critical Remote Code Execution (RCE) vulnerability stemming from untrusted data deserialization in the AjaxProxy component. The flaw allows unauthenticated, remote attackers to execute arbitrary code with maximum severity. CISA has added this flaw to its KEV catalog, confirming active exploitation in the wild.",
+        "fr": "Vulnérabilité critique d'Exécution de Code à Distance (RCE) résultant de la désérialisation de données non fiables dans le composant AjaxProxy. La faille permet à des attaquants distants non authentifiés d'exécuter du code arbitraire. La CISA a ajouté cette faille à son catalogue KEV, confirmant son exploitation active dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Exploited in the Wild",
+        "CISA KEV"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/critical-solarwinds-vulnerability-exploited"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "cve_id": "CVE-2026-22778",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "NVIDIA vLLM",
+      "description": {
+        "en": "Critical RCE vulnerability in the vLLM high-performance LLM inference library when serving video models. The exploit chains an information leak (to bypass ASLR) with a heap overflow via a crafted malicious video file, allowing remote code execution without authentication in default configurations.",
+        "fr": "Vulnérabilité RCE critique dans la bibliothèque d'inférence LLM haute performance vLLM lors de l'utilisation de modèles vidéo. L'exploitation combine une fuite d'information (pour contourner l'ASLR) avec un débordement de tas via un fichier vidéo malveillant, permettant l'exécution de code à distance sans authentification dans les configurations par défaut."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI",
+        "LLM",
+        "Critical"
+      ],
+      "sources": [
+        "https://securityonline.info/video-of-death-critical-vllm-flaw-cvss-9-8-grants-remote-code-execution/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2026-25202",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "Samsung MagicInfo9 Server",
+      "description": {
+        "en": "Critical hardcoded credential vulnerability affecting MagicInfo 9 Server (versions prior to 21.1090.1). This flaw allows unauthenticated attackers to log in to the database account using built-in credentials, granting full read/write/delete access to the entire database.",
+        "fr": "Vulnérabilité critique de créance codée en dur affectant MagicInfo 9 Server (versions antérieures à 21.1090.1). Cette faille permet à des attaquants non authentifiés de se connecter au compte de la base de données en utilisant les informations d'identification intégrées, accordant un accès complet en lecture/écriture/suppression à l'intégralité de la base de données."
+      },
+      "tags": [
+        "vulnerability",
+        "Hardcoded Credentials",
+        "RCE",
+        "Digital Signage"
+      ],
+      "sources": [
+        "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2026-1341",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "Avation Light Engine Pro",
+      "description": {
+        "en": "Critical vulnerability affecting this advanced lighting control device used in operational technology (OT) environments. The device exposes its configuration and control interface without any authentication or access control, allowing an attacker to take full control. The vendor has not responded to coordination requests from CISA.",
+        "fr": "Vulnérabilité critique affectant ce dispositif de contrôle d'éclairage avancé utilisé dans les environnements de technologie opérationnelle (OT). L'appareil expose son interface de configuration et de contrôle sans aucune authentification ni contrôle d'accès, permettant à un attaquant d'en prendre le contrôle total. Le fournisseur n'a pas répondu aux demandes de coordination de la CISA."
+      },
+      "tags": [
+        "vulnerability",
+        "OT",
+        "Critical Infrastructure",
+        "Authentication Bypass"
+      ],
+      "sources": [
+        "https://securityonline.info/cisa-warns-of-unpatched-avation-riss-critical-flaws/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2026-1498",
+      "euvd_id": "",
+      "cvss": "7.0",
+      "epss": "",
+      "product": "WatchGuard Fireware OS",
+      "description": {
+        "en": "LDAP Injection vulnerability in WatchGuard Fireware OS (versions 12.0 through 12.11.6 and 2025.1 through 2025.1.4). Allows a remote unauthenticated attacker to retrieve sensitive information from a connected LDAP authentication server, potentially leading to authentication bypass if they possess a valid passphrase fragment.",
+        "fr": "Vulnérabilité d'Injection LDAP dans WatchGuard Fireware OS. Elle permet à un attaquant distant non authentifié de récupérer des informations sensibles depuis un serveur d'authentification LDAP connecté, pouvant potentiellement entraîner un contournement d'authentification s'il possède un fragment de phrase de passe valide."
+      },
+      "tags": [
+        "vulnerability",
+        "LDAP Injection",
+        "Network Security"
+      ],
+      "sources": [
+        "https://securityonline.info/watchguard-patches-vpn-privesc-firebox-ldap-injection/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2025-10314",
+      "euvd_id": "",
+      "cvss": "8.8",
+      "epss": "",
+      "product": "Mitsubishi FREQSHIP-mini",
+      "description": {
+        "en": "Incorrect Default Permissions vulnerability in Mitsubishi Small-Capacity UPS Shutdown Software FREQSHIP-mini for Windows (versions 8.0.0 to 8.0.2). Allows a local attacker to achieve privilege escalation by replacing service executable files or DLLs in the installation directory with malicious files, leading to arbitrary code execution with system privileges.",
+        "fr": "Vulnérabilité de Permissions par Défaut Incorrectes dans le logiciel d'arrêt d'onduleur de petite capacité FREQSHIP-mini de Mitsubishi pour Windows. Permet à un attaquant local d'escalader les privilèges en remplaçant les fichiers exécutables de service ou les DLL dans le répertoire d'installation par des fichiers malveillants, conduisant à l'exécution de code arbitraire avec les privilèges système."
+      },
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "Privilege Escalation",
+        "OT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2025-10314"
+      ],
+      "date": "2026-02-05"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "NGINX Traffic Hijacking Campaign via Configuration Injection",
+        "fr": "Campagne de détournement de trafic NGINX par injection de configuration"
+      },
+      "description": {
+        "en": "A threat actor is compromising NGINX servers, particularly those using Baota hosting management panels and serving Asian (.in, .id, .th) or public sector (.edu, .gov) domains. The attackers inject malicious 'location' blocks into NGINX configuration files to silently redirect user traffic via the 'proxy_pass' directive to their backend infrastructure without exploiting a CVE.",
+        "fr": "Un acteur de la menace compromet des serveurs NGINX, en particulier ceux utilisant les panneaux de gestion Baota et servant des domaines asiatiques (.in, .id, .th) ou du secteur public (.edu, .gov). Les attaquants injectent des blocs 'location' malveillants dans les fichiers de configuration NGINX pour rediriger silencieusement le trafic utilisateur via la directive 'proxy_pass' vers leur infrastructure backend sans exploiter de CVE."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "158.94.210.227"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "zx.sh",
+          "bt.sh",
+          "4zdh.sh",
+          "zdh.sh",
+          "ok.sh"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002 (Phishing: Spearphishing Link)",
+        "T1573.001 (Protocol Tunneling: Standard Protocol)",
+        "T1071.001 (Application Layer Protocol: Web Protocols)"
+      ],
+      "analyse": {
+        "en": "This is a sophisticated campaign relying on persistence and stealth through configuration manipulation rather than vulnerability exploitation. The multi-stage toolkit ensures robust injection, validates changes using `nginx -t`, and utilizes a final stage (`ok.sh`) to exfiltrate a map of hijacked domains to the C2 IP (158.94.210.227). The preservation of HTTP headers helps the redirected traffic appear legitimate.",
+        "fr": "Il s'agit d'une campagne sophistiquée reposant sur la persistance et la furtivité via la manipulation de la configuration plutôt que l'exploitation de vulnérabilités. La boîte à outils multi-étapes assure une injection robuste, valide les changements en utilisant `nginx -t`, et utilise une étape finale (`ok.sh`) pour exfiltrer une carte des domaines détournés vers l'IP C2 (158.94.210.227). La conservation des en-têtes HTTP aide le trafic redirigé à paraître légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Implement file integrity monitoring (FIM) on NGINX configuration directories (`/etc/nginx/`).",
+          "fr": "Mettre en œuvre une surveillance de l'intégrité des fichiers (FIM) sur les répertoires de configuration NGINX (`/etc/nginx/`)."
+        },
+        {
+          "en": "Review NGINX logs and configurations for unauthorized 'location' blocks or suspicious 'proxy_pass' directives pointing to unknown external IPs.",
+          "fr": "Examiner les journaux et les configurations NGINX à la recherche de blocs 'location' non autorisés ou de directives 'proxy_pass' suspectes pointant vers des adresses IP externes inconnues."
+        }
+      ],
+      "tags": [
+        "NGINX",
+        "Traffic Redirection",
+        "Web Infrastructure"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-compromise-nginx-servers-to-redirect-user-traffic/"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "title": {
+        "en": "EDR Evasion using BYOVD with Revoked EnCase Driver",
+        "fr": "Évasion EDR utilisant BYOVD avec un pilote EnCase révoqué"
+      },
+      "description": {
+        "en": "In a recent incident following initial compromise via weak SonicWall SSL VPN credentials (lacking MFA), threat actors deployed a custom EDR killer tool. This tool leverages the 'Bring Your Own Vulnerable Driver' (BYOVD) technique by abusing the legitimate, signed-but-revoked EnCase kernel driver ('EnPortv.sys') to gain kernel-level privileges and terminate 59 different security product processes (EDR/AV), bypassing Windows protections like Protected Process Light (PPL).",
+        "fr": "Suite à un incident récent impliquant la compromission initiale via des identifiants SonicWall SSL VPN faibles (sans MFA), des acteurs de la menace ont déployé un outil 'tueur' d'EDR personnalisé. Cet outil utilise la technique BYOVD ('Bring Your Own Vulnerable Driver') en abusant du pilote noyau EnCase légitime mais révoqué ('EnPortv.sys') pour obtenir des privilèges au niveau du noyau et terminer 59 processus de produits de sécurité (EDR/AV), contournant les protections Windows comme Protected Process Light (PPL)."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "193.160.216.221",
+          "69.10.60.250"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "3111f4d74fac55103453c4c8adb742def007b96b7c8ed265347df97137fbee0",
+          "6a6aaeed4a6bbe82a08d197f5d40c2592a461175f181e0440e0ff45d5fb60939"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EnPortv.sys",
+          "EDR killer (disguised as firmware update utility)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1078.001 (Valid Accounts: Domain Accounts)",
+        "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "T1036.004 (Masquerading: Masquerade as a legitimate file)",
+        "T1562.001 (Impair Defenses: Disable or Modify System Firewall)",
+        "T1548.001 (Abuse Elevation Control Mechanism: Bypass User Account Control)"
+      ],
+      "analyse": {
+        "en": "The BYOVD technique exploits the gap in Windows Driver Signature Enforcement, which still accepts older, legitimate certificates (pre-July 29, 2015) even if they are expired or revoked. Initial access relied on weak credentials for the VPN, highlighting the continued importance of MFA. The EDR killer is a critical tool for post-exploitation success before payload delivery (e.g., ransomware).",
+        "fr": "La technique BYOVD exploite une lacune dans l'application de la signature de pilote Windows, qui accepte toujours les anciens certificats légitimes (antérieurs au 29 juillet 2015) même s'ils sont expirés ou révoqués. L'accès initial reposait sur des identifiants faibles pour le VPN, soulignant l'importance persistante du MFA. Le 'tueur' d'EDR est un outil critique pour le succès post-exploitation avant le déploiement de la charge utile (par exemple, un ransomware)."
+      },
+      "recommandations": [
+        {
+          "en": "Enable Multi-Factor Authentication (MFA) on all remote access services (VPNs, remote desktop).",
+          "fr": "Activer l'Authentification Multi-Facteurs (MFA) sur tous les services d'accès à distance (VPN, bureau à distance)."
+        },
+        {
+          "en": "Implement Windows Defender Application Control (WDAC) and enable Hypervisor-Protected Code Integrity (HVCI) to enforce Microsoft’s vulnerable driver blocklist.",
+          "fr": "Mettre en œuvre Windows Defender Application Control (WDAC) et activer Hypervisor-Protected Code Integrity (HVCI) pour appliquer la liste de blocage des pilotes vulnérables de Microsoft."
+        }
+      ],
+      "tags": [
+        "BYOVD",
+        "EDR Evasion",
+        "SonicWall",
+        "Initial Access",
+        "Defense Evasion"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/edr-killer-tool-uses-signed-kernel-driver-from-forensic-software/",
+        "https://www.huntress.com/blog/encase-byovd-edr-killer"
+      ],
+      "date": "2026-02-04"
+    },
+    {
+      "title": {
+        "en": "Massive Reconnaissance Campaign Targeting Citrix Gateways",
+        "fr": "Campagne de Reconnaissance Massive ciblant les passerelles Citrix"
+      },
+      "description": {
+        "en": "GreyNoise tracked a coordinated reconnaissance campaign targeting Citrix ADC (Application Delivery Controller) and NetScaler Gateways. The attack utilized over 63,000 residential proxies to discover login panels, followed by an aggressive phase of version enumeration (over 111,000 sessions) conducted primarily via AWS infrastructure. 79% of the activity targeted Citrix Gateway honeypots.",
+        "fr": "GreyNoise a suivi une campagne de reconnaissance coordonnée ciblant les passerelles Citrix ADC (Application Delivery Controller) et NetScaler. L'attaque a utilisé plus de 63 000 proxies résidentiels pour découvrir les panneaux de connexion, suivie d'une phase agressive d'énumération de versions (plus de 111 000 sessions) menée principalement via l'infrastructure AWS. 79% de l'activité a ciblé les honeypots Citrix Gateway."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Residential Proxies",
+          "AWS Infrastructure"
+        ]
+      },
+      "mitre_ttps": [
+        "T1595.002 (Active Scanning: Vulnerability Scanning)",
+        "T1592.004 (Gather Victim Identity Information: Credentials)",
+        "T1589.001 (Gather Victim Identity Information: Credentials)"
+      ],
+      "analyse": {
+        "en": "The dual-mode nature of the reconnaissance (proxies for discovery, AWS for enumeration) combined with the high targeting rate against Citrix assets suggests a preparatory phase for a major, future exploitation campaign, likely aimed at leveraging unpatched N-day or newly discovered zero-day vulnerabilities in these widely deployed network access devices.",
+        "fr": "La nature bimodale de la reconnaissance (proxies pour la découverte, AWS pour l'énumération) combinée au taux de ciblage élevé contre les actifs Citrix suggère une phase préparatoire à une future campagne d'exploitation majeure, visant probablement à exploiter des vulnérabilités N-day non corrigées ou de nouveaux zero-day dans ces dispositifs d'accès réseau largement déployés."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure all Citrix ADC and NetScaler Gateways are fully patched and configured to restrict access to management interfaces.",
+          "fr": "S'assurer que toutes les passerelles Citrix ADC et NetScaler sont entièrement corrigées et configurées pour restreindre l'accès aux interfaces de gestion."
+        },
+        {
+          "en": "Monitor network perimeter logs for unusual high-volume scanning activity originating from cloud infrastructure (e.g., AWS) or known residential proxy IPs.",
+          "fr": "Surveiller les journaux du périmètre réseau pour détecter une activité d'analyse inhabituelle à haut volume provenant d'infrastructures cloud (par exemple, AWS) ou d'IP de proxies résidentiels connus."
+        }
+      ],
+      "tags": [
+        "Reconnaissance",
+        "Citrix",
+        "Network Access Devices"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187615/hacking/greynoise-tracks-massive-citrix-gateway-recon-using-63k-residential-proxies-and-aws.html"
+      ],
+      "date": "2026-02-04"
+    }
+  ]
+}
