@@ -1,0 +1,2741 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification et une diversification des menaces cyber. L'intelligence artificielle générative émerge comme un outil à double tranchant, utilisée par les attaquants pour des activités allant du profilage de victimes à la création de malwares et à l'ingénierie sociale, tout en devenant elle-même une cible d'attaques. Les vulnérabilités critiques, en particulier les exécutions de code à distance (RCE) et les failles d'escalade de privilèges, continuent d'être activement exploitées, souvent des années après leur divulgation, notamment dans les environnements virtualisés (VMware ESXi) et les plateformes de développement (GitLab, n8n). La 'supply chain' reste un vecteur d'attaque privilégié, exploité à travers des fuites d'identités non humaines (clés API, tokens) ou la compromission de serveurs NGINX. Les attaques par rançongiciel et les campagnes d'espionnage (ex: Amaranth Dragon) exploitent ces failles pour cibler les secteurs gouvernementaux et les infrastructures critiques, notamment en Asie du Sud-Est. Parallèlement, la menace des infostealers s'étend aux systèmes macOS et utilise des techniques sophistiquées d'évasion. L'ingénierie sociale, exacerbée par l'IA et la confiance excessive des utilisateurs, demeure une porte d'entrée majeure pour les violations de données dans les secteurs financiers et éducatifs. Les efforts de reconnaissance à grande échelle contre des infrastructures clés (Citrix Gateway) signalent des campagnes d'exploitation futures. En conclusion, le paysage des menaces est caractérisé par une capacité d'adaptation rapide des attaquants aux nouvelles technologies et aux failles existantes, nécessitant une vigilance continue, des mises à jour rapides et une forte sensibilisation des utilisateurs.",
+      "date": "2026-02-05"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Amaranth Dragon",
+        "secteur": "Gouvernement, Forces de l'ordre",
+        "modop": "Exploitation de la vulnérabilité WinRAR CVE-2025-8088 via des archives piégées (ingénierie sociale), utilisation d'un chargeur personnalisé (Amaranth Loader) pour déployer le framework C2 Havoc, DLL sideloading, C2 géo-restreint, techniques anti-débogage/anti-EDR/AV (ntdll.dll déhooké), RAT contrôlé par bot Telegram (TGAmaranth RAT), persistance via le dossier de démarrage ou les clés de registre Run.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionnage",
+          "state_sponsored",
+          "apt41",
+          "winrar_exploit",
+          "cve-2025-8088",
+          "social_engineering",
+          "malware",
+          "loader",
+          "c2_framework",
+          "havoc_framework",
+          "rat",
+          "telegram_c2",
+          "dll_sideloading",
+          "defense_evasion",
+          "persistence",
+          "southeast_asia"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+          "https://securityonline.info/10-days-to-exploit-amaranth-dragon-weaponizes-winrar-flaw-to-spy-on-se-asia/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "APT41",
+        "secteur": "Gouvernement, Forces de l'ordre",
+        "modop": "Lié à Amaranth Dragon, partage des outils similaires (DodgeBox, Dustpan, Dusttrap) et des TTPs (DLL sideloading, utilisation d'instructions Sleep dans des exports inutilisés, création de threads dans des fonctions d'export). Implique des capacités sophistiquées de cyberespionnage.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionnage",
+          "state_sponsored",
+          "china",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Technologies de l'information (Conseil), Divers (Clients Red Hat)",
+        "modop": "Compromission d'instances GitLab pour l'exfiltration de référentiels privés et de rapports d'engagement client contenant des informations sensibles, y compris des identifiants embarqués (tokens, URIs de base de données, clés de service).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "gitlab",
+          "credential_theft",
+          "supply_chain",
+          "consulting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "Rublevka Team",
+        "secteur": "Cryptomonnaie, Fintech, Particuliers",
+        "modop": "Vol de cryptomonnaies à grande échelle via des campagnes de 'wallet draining' gérées par des affiliés. Utilise l'ingénierie sociale (fausses airdrops, giveaways, échanges, demandes KYC) via des pages de destination usurpées avec des scripts JavaScript de drainage. Utilise des bots Telegram pour les opérations d'affiliation, des générateurs de pages de destination, des fonctionnalités d'évasion (cloaking, 'Red Table Bypass') et prend en charge plus de 90 types de portefeuilles. Cible Solana (SOL), les tokens SPL et les NFTs. Exploite les API RPC exposées (Helius, WalletConnect, PublicNode). Utilise une infrastructure tournante derrière Cloudflare, y compris la génération algorithmique de noms de domaine (DGA).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "cryptocurrency_theft",
+          "crypto_drainer",
+          "social_engineering",
+          "phishing",
+          "wallet_drainer",
+          "solana",
+          "fintech",
+          "dga",
+          "cloaking",
+          "telegram_bot",
+          "fraud",
+          "financial_crime",
+          "russia"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/rublevka-team-anatomy-russian-crypto-drainer-operation/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Éducation (Enseignement supérieur)",
+        "modop": "Obtention d'un accès complet à un compte PennKey SSO d'employé via phishing, permettant d'accéder au VPN de l'université, aux données Salesforce, à la plateforme d'analyse Qlik, au système SAP BI et aux fichiers SharePoint, et d'exfiltrer des données de millions d'étudiants, anciens élèves et donateurs.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "phishing",
+          "account_takeover",
+          "education",
+          "sso",
+          "vpn"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/?pk_campaign=feed&pk_kwd=two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "UNC5537",
+        "secteur": "Services Cloud, Divers (Clients Snowflake)",
+        "modop": "Authentification dans environ 165 environnements clients Snowflake en utilisant des identifiants exposés (comptes API, utilisateurs d'automatisation, identités d'accès aux données) récoltés via des dumps de malwares infostealers ou des places de marché cybercriminelles. Ces identifiants manquaient souvent d'authentification multi-facteurs et étaient persistants. Accès à des informations sensibles d'entreprise et de clients, utilisées pour la vente ou l'extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cloud_security",
+          "credential_theft",
+          "data_exfiltration",
+          "snowflake",
+          "infostealer",
+          "extortion",
+          "api_keys",
+          "mfa_bypass"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Agriculture, Sécurité alimentaire, Relations internationales, Changement climatique, Union Européenne",
+        "theme": "Importance stratégique de l'agriculture, instabilité mondiale, politique agricole européenne, impacts climatiques, pivots géopolitiques",
+        "description": "Analyse soulignant l'agriculture comme un secteur stratégique fondamental dans un monde instable, servant de 'test de vérité' pour l'Europe. Aborde les erreurs passées de l'UE (désindustrialisation, sous-estimation de l'impact climatique) et la nécessité de se concentrer sur l'autosuffisance agricole et l'autonomie stratégique. Présente le 'CUBITA' (RDC, Ukraine, Brésil, Indonésie, Turquie, Australie) comme des États agro-stratégiques pivots dont la stabilité agricole influencera la sécurité alimentaire mondiale. Évoque également les dimensions agricoles de la rivalité sino-américaine et les nouvelles technologies alimentaires.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "agriculture",
+          "food_security",
+          "european_union",
+          "climate_change",
+          "strategic_autonomy",
+          "global_economy",
+          "international_trade",
+          "ukraine_war",
+          "supply_chain_resilience"
+        ],
+        "sources": [
+          "https://www.iris-france.org/tenir-lagriculture-comme-colonne-vertebrale-dun-monde-instable/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Relations internationales, Environnement, Changement climatique, Sécurité alimentaire, Économie, Géopolitique",
+        "theme": "Effondrement des écosystèmes, menaces à la sécurité nationale, instabilité géopolitique, compétition pour les ressources",
+        "description": "Une évaluation de la sécurité nationale britannique met en évidence l'accélération de la perte de biodiversité et de l'effondrement des écosystèmes mondiaux comme des menaces critiques. Les impacts incluent les mauvaises récoltes, les maladies et les catastrophes naturelles, entraînant une instabilité géopolitique, une insécurité économique, des conflits, des migrations et une concurrence accrue entre États pour les ressources (eau, nourriture, minéraux critiques). Le rapport suggère que ces phénomènes seront exploités par des acteurs étatiques et non étatiques, amplifiés par la désinformation. Recommande de renforcer la production alimentaire au Royaume-Uni et de modifier le comportement des consommateurs.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "climate_change",
+          "ecosystem_collapse",
+          "national_security",
+          "food_security",
+          "resource_competition",
+          "migration",
+          "disinformation",
+          "geopolitical_instability",
+          "uk"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/we-need-talk-about-ecosystem-collapse"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Relations internationales, Énergie, Santé publique, Guerre de l'information",
+        "theme": "Campagne de désinformation, légitimité scientifique, relations Japon-Chine",
+        "description": "La décision du Japon de rejeter les eaux traitées de la centrale nucléaire de Fukushima Daiichi est devenue un enjeu diplomatique majeur. Tokyo doit simultanément affirmer sa légitimité scientifique et contrer les offensives informationnelles, notamment celles provenant de Chine.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "japan",
+          "china",
+          "disinformation",
+          "information_warfare",
+          "fukushima",
+          "nuclear_energy",
+          "scientific_legitimacy",
+          "international_diplomacy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-japon-face-a-la-desinformation-le-cas-du-rejet-des-eaux-traitees-de-fukushima/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Marchés Darknet, Application de la loi, Cybercriminalité",
+        "theme": "Action internationale des forces de l'ordre, démantèlement des marchés Darknet",
+        "description": "Rui-Siang Lin, opérateur du Incognito Market (marché de drogue sur le darknet), a été condamné à 30 ans de prison pour avoir distribué plus de 105 millions de dollars de drogues illégales et pour blanchiment d'argent. Le marché a fonctionné de 2020 à 2024, facilitant plus de 640 000 transactions de drogue. Lin a volé plus d'un million de dollars aux utilisateurs lors de la fermeture et a tenté de les extorquer. Cet événement souligne la nature transnationale de la cybercriminalité et les efforts judiciaires internationaux.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "darknet_market",
+          "cybercrime",
+          "drug_trafficking",
+          "money_laundering",
+          "law_enforcement",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187623/deep-web/taiwanese-operator-of-incognito-market-sentenced-to-30-years-over-105m-darknet-drug-ring.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Défense, Économie, Géopolitique",
+        "theme": "Économie de guerre russe, croissance de l'industrie de la défense, substitution aux importations, mesures administratives et financières",
+        "description": "Analyse de la croissance industrielle significative de la Russie (15,1% pour l'industrie manufacturière, 7,1% pour le PIB 2022-2024), tirée par la demande directe et indirecte du secteur de la défense. Forte croissance dans les branches à haute valeur ajoutée et à technologies avancées (électronique, optique, transport, métaux). Détails des mesures administratives (normes flexibles pour l'industrie militaire, sous-traitance simplifiée, remplacement rapide des matériaux) et financières (paiements anticipés jusqu'à 80-100%) ayant permis une augmentation rapide de la production (ex: véhicules blindés x2.2, aviation militaire x4.6, missiles/artillerie x9.6, guerre électronique x12.5, munitions x22). Met en évidence l'absence de conversion forcée du civil vers le militaire.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "war_economy",
+          "defense_industry",
+          "industrial_production",
+          "import_substitution",
+          "military_spending",
+          "electronic_warfare",
+          "drones",
+          "manufacturing"
+        ],
+        "sources": [
+          "https://www.epge.fr/point-de-situation-sur-leconomie-de-guerre-russe-fevrier-2026/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Relations internationales, Politique",
+        "theme": "Recompositions géopolitiques, impact de la politique étrangère de Trump, déclin du multilatéralisme, relations transatlantiques",
+        "description": "Analyse des reconfigurations internationales majeures induites par une potentielle seconde présidence Trump, caractérisée par une primauté de la puissance et des intérêts nationaux dans les relations internationales. Remet en question le système international post-1945 et le multilatéralisme, entraînant une désorientation du monde occidental et une potentielle obsolescence du concept transatlantique. Interroge la lucidité stratégique de l'Europe face à ce paysage instable.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "international_relations",
+          "foreign_policy",
+          "trump_administration",
+          "multilateralism",
+          "transatlantic_relations",
+          "europe",
+          "global_order",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lordre-mondial-selon-trump-avec-justin-vaisse-entretiens-geopo/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Médias sociaux, IA, Application de la loi, Gouvernance de plateforme",
+        "theme": "Modération de contenu, Matériel d'abus sexuel sur enfants (CSAM), Éthique de l'IA, Extraction de données",
+        "description": "Les procureurs français, avec le soutien d'Europol, ont perquisitionné les bureaux de X à Paris suite à des allégations de facilitation de matériel d'abus sexuel sur enfants (CSAM) et d'autres contenus illégaux. L'enquête porte également sur les deepfakes à caractère sexuel générés par l'IA de X (Grok), la négation de crimes contre l'humanité et l'extraction de données non autorisée. Les autorités britanniques et européennes mènent également des enquêtes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "x_platform",
+          "twitter",
+          "ai",
+          "grok",
+          "csam",
+          "child_abuse_material",
+          "deepfake",
+          "illegal_content",
+          "platform_governance",
+          "law_enforcement",
+          "content_moderation",
+          "europe",
+          "france",
+          "uk"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187619/cyber-crime/paris-raid-on-x-focuses-on-child-abuse-material-allegations.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Énergie, Géopolitique, Finance",
+        "theme": "Relations pétrolières États-Unis-Venezuela, pétrodollar, brut extra-lourd, rôle de la Chine, sanctions",
+        "description": "L'intervention américaine au Venezuela vise à sécuriser le brut extra-lourd (stratégique pour le raffinage américain) et à 'redollariser' les flux pétroliers vénézuéliens, stabilisant ainsi le pétrodollar. Historiquement, le Venezuela fournissait du brut lourd aux États-Unis. La Chine, principal créancier du Venezuela, représentait 75-80% de ses exportations pétrolières, mais seulement 4% des importations totales de la Chine. Les infrastructures pétrolières vénézuéliennes sont dégradées, ce qui rend les investissements des grandes compagnies pétrolières américaines prudents. Souligne la convergence des intérêts énergétiques, financiers et géopolitiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "oil",
+          "energy_security",
+          "petrodollar",
+          "venezuela",
+          "united_states",
+          "china",
+          "sanctions",
+          "crude_oil",
+          "international_finance",
+          "geopolitical_rivalry"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/analyse-strategique-les-methodes-et-outils/2026/liaisons-petrolieres-washington-caracas-venezuela/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Relations internationales, Politique, Religion, Éducation, Médias, Renseignement",
+        "theme": "Réseaux d'influence turcs en Europe occidentale, soft power, diaspora, opposition politique",
+        "description": "Recherche OSINT cartographiant les réseaux d'influence d'Erdogan en Europe occidentale (5-6 millions de diasporas) à travers les domaines religieux (DITIB, Millî Görüş), politique (Loups Gris, IUD, ATIB), éducatif (YTB, Fondation Maarif, Instituts Yunus Emre, SETA, IKSV) et médiatique. Souligne le rôle central du MIT dans la collecte de renseignements et les actions contre les opposants à l'étranger. Vise à structurer la diaspora, maintenir les liens avec Ankara et contrer l'opposition. Les États européens renforcent la surveillance et les restrictions sur le financement étranger en raison des préoccupations concernant l'ingérence politique et l'autoritarisme transnational.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "turkey",
+          "erdogan",
+          "influence_operations",
+          "soft_power",
+          "diaspora",
+          "europe",
+          "intelligence_services",
+          "mit",
+          "religious_influence",
+          "political_infiltration",
+          "media_control",
+          "education",
+          "nationalism",
+          "panturkism",
+          "neo_ottomanism"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cartographie-de-la-turquie-derdogan/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services financiers (Plateforme d'investissement automatisé)",
+        "victime": "Betterment (1.4M clients)",
+        "description": "Violation de données attribuée à une attaque d'ingénierie sociale. Les clients ont reçu des messages frauduleux liés à la cryptomonnaie. 1,4 million d'adresses e-mail uniques, noms et données de localisation géographique ont été exposés. Un sous-ensemble d'enregistrements incluait également des dates de naissance, des numéros de téléphone et des adresses physiques. Aucune donnée d'accès aux comptes clients ou d'identifiants de connexion n'a été compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "fintech",
+          "investment_platform",
+          "social_engineering",
+          "crypto_scam",
+          "data_exfiltration",
+          "customer_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Betterment",
+          "https://techcrunch.com/2026/01/12/fintech-firm-betterment-confirms-data-breach-after-hackers-send-fake-crypto-scam-notification-to-users/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Geisinger Health (patients), Nuance Communications (ancien employé)",
+        "description": "Un ancien employé de Nuance Communications a compromis les informations de santé protégées (PHI) de plus de 1,3 million de patients de Geisinger Health après son licenciement. L'employé (Max Vance) a ensuite été accusé de charges supplémentaires pour avoir faussement nié avoir téléchargé des données non autorisées sur des appareils personnels.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "phi",
+          "protected_health_information",
+          "insider_threat",
+          "data_exfiltration",
+          "employee_misconduct",
+          "legal_action"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case/?pk_campaign=feed&pk_kwd=former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Éducation (Enseignement supérieur), Organisation à but non lucratif (Relations avec les donateurs)",
+        "victime": "Harvard University, University of Pennsylvania (UPenn)",
+        "description": "Les informations du service des Anciens Élèves et du Développement de Harvard ont été compromises via une attaque de phishing téléphonique. L'UPenn a subi une violation où des acteurs malveillants ont obtenu un accès complet au compte SSO PennKey d'un employé, exfiltrant des données de 1,2 million d'étudiants, anciens élèves et donateurs. Les données volées incluent des noms, dates de naissance, adresses, numéros de téléphone, valeur nette estimée, historique des dons et détails démographiques (religion, race, orientation sexuelle).",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "university",
+          "donor_information",
+          "student_data",
+          "alumni_data",
+          "phishing",
+          "social_engineering",
+          "account_takeover",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/?pk_campaign=feed&pk_kwd=two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2019-25281",
+        "cvss": "8.5",
+        "product": "NCP Secure Entry Client 9.2",
+        "description": "Vulnérabilité de chemin de service non cité dans plusieurs services Windows, permettant aux utilisateurs locaux d'injecter du code malveillant pour une exécution avec des privilèges LocalSystem.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ncp_secure_entry_client",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25281"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25281"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25283",
+        "cvss": "8.5",
+        "product": "Shrew Soft VPN Client 2.2.2",
+        "description": "Vulnérabilité de chemin de service non cité, permettant aux utilisateurs locaux d'exécuter du code arbitraire avec des privilèges système élevés en plaçant des exécutables malveillants.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "shrew_soft_vpn_client",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25283"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25283"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25285",
+        "cvss": "8.5",
+        "product": "Alps Pointing-device Controller 8.1202.1711.04",
+        "description": "Vulnérabilité de chemin de service non cité dans ApHidMonitorService, permettant aux attaquants locaux de placer un exécutable malveillant pour un accès au niveau système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "alps_pointing_device_controller",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25285"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25285"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25286",
+        "cvss": "8.5",
+        "product": "GCafé 3.0",
+        "description": "Vulnérabilité de chemin de service non cité dans gbClientService, permettant aux attaquants locaux d'injecter des exécutables malveillants pour une exécution avec des privilèges LocalSystem.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "gcafe",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25286"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25286"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25287",
+        "cvss": "8.5",
+        "product": "Adaware Web Companion version 4.8.2078.3950",
+        "description": "Vulnérabilité de chemin de service non cité dans WCAssistantService, permettant aux utilisateurs locaux d'injecter du code malveillant pour une exécution avec des privilèges LocalSystem.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adaware",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25287"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25288",
+        "cvss": "8.5",
+        "product": "Wacom WTabletService 6.6.7-3",
+        "description": "Vulnérabilité de chemin de service non cité, permettant aux attaquants locaux d'exécuter du code malveillant avec des privilèges élevés en insérant un exécutable dans le chemin de service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wacom",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25288"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25288"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2025-13192",
+        "cvss": "8.2",
+        "product": "Popup builder with Gamification, Multi-Step Popups, Page-Level Targeting, and WooCommerce Triggers plugin for WordPress",
+        "description": "Injection SQL non authentifiée via plusieurs endpoints de l'API REST en raison d'un échappement insuffisant des paramètres et d'un manque de préparation de la requête SQL. Permet l'extraction d'informations sensibles de la base de données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "sql_injection",
+          "sqli",
+          "unauthenticated_access",
+          "data_exfiltration",
+          "rest_api",
+          "cve-2025-13192"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13192"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-1632",
+        "cvss": "9.1",
+        "product": "RISS SRL’s MOMA Seismic Station v2.4.2520 and prior",
+        "description": "Manque d'authentification/contrôle d'accès, permettant à des attaquants non authentifiés de prendre le contrôle total de l'appareil, de modifier les paramètres de configuration, d'acquérir des données, de réinitialiser l'appareil à distance ou de provoquer une condition de déni de service.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "riss_srl",
+          "moma_seismic_station",
+          "operational_technology",
+          "ot",
+          "critical_vulnerability",
+          "unauthenticated_access",
+          "access_control_bypass",
+          "denial_of_service",
+          "dos",
+          "cve-2026-1632"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-of-unpatched-avation-riss-critical-flaws/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-22778",
+        "cvss": "9.8",
+        "product": "vLLM library for LLM inference (serving video models)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) permettant à des attaquants d'exécuter du code arbitraire en traitant un fichier vidéo malveillant, même avec des clés API activées.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vllm",
+          "llm",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "ai_security",
+          "video_processing",
+          "cve-2026-22778"
+        ],
+        "sources": [
+          "https://securityonline.info/video-of-death-critical-vllm-flaw-cvss-9-8-grants-remote-code-execution/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25200",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée via un téléchargement de fichier HTML non authentifié, entraînant une prise de contrôle de compte de la console de gestion MagicInfo.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "xss",
+          "cross_site_scripting",
+          "unauthenticated_access",
+          "account_takeover",
+          "critical_vulnerability",
+          "cve-2026-25200"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25201",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Exécution de code à distance (RCE) et escalade de privilèges via le téléchargement de fichiers arbitraires en raison d'une validation insuffisante de l'utilisateur et du type de fichier.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "remote_code_execution",
+          "rce",
+          "privilege_escalation",
+          "arbitrary_file_upload",
+          "critical_vulnerability",
+          "cve-2026-25201"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25202",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Comptes et mots de passe de base de données codés en dur, permettant de manipuler la base de données avec un accès via ces identifiants.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "hardcoded_credentials",
+          "database_manipulation",
+          "critical_vulnerability",
+          "cve-2026-25202"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Amaranth Dragon : Ciblage d'espionnage en Asie du Sud-Est via une faille WinRAR",
+        "description": "Le groupe cyberespion Amaranth Dragon, lié à l'APT41 chinois, exploite activement la vulnérabilité CVE-2025-8088 de WinRAR. Cette campagne cible les agences gouvernementales et les forces de l'ordre en Asie du Sud-Est. Le mode opératoire implique l'utilisation d'archives WinRAR piégées avec de l'ingénierie sociale (fausses invitations de réunion, documents salariaux) pour déployer un chargeur personnalisé (Amaranth Loader) et le framework C2 Havoc, voire un RAT contrôlé par Telegram. Les serveurs C2 sont géo-restreints, et des techniques anti-détection sont employées, notamment le DLL sideloading et la modification de ntdll.dll pour contourner les EDR. Le groupe montre une grande rapidité à exploiter les vulnérabilités récemment divulguées.",
+        "threat_actor": "Amaranth Dragon (liée à APT41)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "DOMAIN": [
+            "dailydownloads[.]net",
+            "easyboxsync[.]com",
+            "softwares.dailydownloads[.]net",
+            "updates.dailydownloads[.]net"
+          ],
+          "FILE_HASH_SHA256": [
+            "7af238050b2750da760b2cf5053bcf58054bcf44e9af1617d8b7af3ed98d09c6",
+            "9c21d538c2a556f4a5b351b29f3513097ac57643f291ff6d751400d8dbc69489"
+          ],
+          "URL": [
+            "drive.easyboxsync[.]com/resources/channels/v7/cambodia64",
+            "https://api.telegram.org",
+            "https://softwares.dailydownloads[.]net/products/microsoft/office/product-key/DB2F.activation.key",
+            "https://updates.dailydownloads[.]net/docs/microsoft/office/Office_Activation_Manual_DB2F.pdf"
+          ],
+          "YARA_RULE": [
+            "Mentionnées comme disponibles dans le rapport Check Point."
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Initial Access: User Execution (T1204)",
+          "Initial Access: Phishing (T1566)",
+          "Persistence: Boot or Logon Autostart Execution (T1547.001)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Impair Defenses (T1562.001)",
+          "Command and Control: Application Layer Protocol (T1071)",
+          "Command and Control: Ingress Tool Transfer (T1105)"
+        ],
+        "analyse": "Risque élevé pour la sécurité nationale et la confidentialité des informations gouvernementales en Asie du Sud-Est. La capacité du groupe à rapidement armer les vulnérabilités divulguées et à utiliser des techniques d'évasion sophistiquées souligne sa persistance et sa dangerosité. L'accent mis sur les entités gouvernementales et les forces de l'ordre indique un intérêt stratégique pour le renseignement géopolitique. Les restrictions géographiques du C2 limitent les 'effets collatéraux' et augmentent la discrétion des opérations.",
+        "recommandations": [
+          "Mettre à jour WinRAR (CVE-2025-8088) immédiatement.",
+          "Renforcer la sensibilisation des utilisateurs à l'ingénierie sociale et aux archives piégées.",
+          "Mettre en œuvre une défense en profondeur, y compris la surveillance des fichiers d'archives suspects et du trafic C2.",
+          "Déployer des règles YARA pour détecter les intrusions d'Amaranth Dragon.",
+          "Prioriser la gestion des vulnérabilités et l'application des correctifs."
+        ],
+        "tags": [
+          "amaranth_dragon",
+          "apt41",
+          "cyberespionnage",
+          "winrar",
+          "cve-2025-8088",
+          "government",
+          "law_enforcement",
+          "southeast_asia",
+          "havoc_framework",
+          "telegram_rat",
+          "social_engineering",
+          "persistence",
+          "defense_evasion",
+          "dll_sideloading",
+          "geo_targeting",
+          "t1190",
+          "t1204",
+          "t1566",
+          "t1071",
+          "t1105",
+          "t1547_001",
+          "t1027",
+          "t1562_001",
+          "vulnerability_management",
+          "patch_management",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+          "https://securityonline.info/10-days-to-exploit-amaranth-dragon-weaponizes-winrar-flaw-to-spy-on-se-asia/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA alerte sur les failles critiques non patchées dans Avation Light Engine Pro et RISS SRL MOMA Seismic Station",
+        "description": "La CISA a émis des alertes concernant des vulnérabilités critiques non corrigées dans deux dispositifs de technologie opérationnelle (OT) : Avation’s Light Engine Pro et RISS SRL’s MOMA Seismic Station (CVE-2026-1632, CVSS 9.1). Ces deux appareils exposent leurs interfaces de configuration et de contrôle sans aucune authentification, permettant à des attaquants non authentifiés de prendre le contrôle total, de manipuler les données ou de provoquer un déni de service. Les fournisseurs n'ont pas répondu aux demandes de coordination de la CISA.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1632"
+          ]
+        },
+        "mitre_ttps": [
+          "Defense Evasion: Bypass Access Controls (T1562.002)",
+          "Impact: Data Destruction (T1485)",
+          "Impact: Inhibit System Recovery (T1490)",
+          "Impact: Endpoint Denial of Service (T1499)",
+          "Impact: System Shutdown/Reboot (T1529)"
+        ],
+        "analyse": "Risque extrêmement élevé pour les infrastructures critiques et les environnements OT en raison de l'absence totale d'authentification et de la non-réponse des fournisseurs. L'exploitation pourrait entraîner des perturbations physiques, une perte d'intégrité des données ou l'aveuglement des systèmes de surveillance, avec des conséquences potentiellement désastreuses pour la sécurité publique ou industrielle.",
+        "recommandations": [
+          "Isoler immédiatement les appareils affectés derrière des pare-feu stricts et des VPN.",
+          "Tenter de contacter les fournisseurs pour obtenir des correctifs ou des conseils d'atténuation."
+        ],
+        "tags": [
+          "cisa",
+          "ot_security",
+          "critical_infrastructure",
+          "unauthenticated_access",
+          "denial_of_service",
+          "data_integrity",
+          "vendor_unresponsive",
+          "critical_vulnerability",
+          "t1562_002",
+          "t1499",
+          "cve-2026-1632"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-of-unpatched-avation-riss-critical-flaws/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA signale l'exploitation d'une vulnérabilité critique de SolarWinds Web Help Desk",
+        "description": "La CISA a confirmé l'exploitation active d'une vulnérabilité critique d'exécution de code à distance (RCE) (CVE-2025-40551) dans SolarWinds Web Help Desk via son composant AjaxProxy. Cette faille permet à des attaquants distants non authentifiés d'exécuter du code, conduisant à une prise de contrôle complète du système, un mouvement latéral et le vol d'identifiants. D'autres failles critiques de contournement d'authentification et de désérialisation (CVE-2025-40552, CVE-2025-40554, CVE-2025-40553) ont également été corrigées.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-40551",
+            "CVE-2025-40552",
+            "CVE-2025-40553",
+            "CVE-2025-40554"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Lateral Movement (T1021)"
+        ],
+        "analyse": "Vulnérabilité à haut risque en raison de sa criticité, de son exploitation distante non authentifiée et de son potentiel de compromission complète du système et de propagation latérale au sein des réseaux. Des activités d'exploitation similaires ont été observées précédemment pour Web Help Desk.",
+        "recommandations": [
+          "Appliquer la mise à jour 2026.1 de SolarWinds Web Help Desk.",
+          "Examiner les instances accessibles de l'extérieur, limiter l'exposition réseau et valider qu'aucune modification non autorisée n'est survenue avant l'application des correctifs."
+        ],
+        "tags": [
+          "solarwinds",
+          "web_help_desk",
+          "cve-2025-40551",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "unauthenticated_access",
+          "supply_chain",
+          "credential_theft",
+          "lateral_movement",
+          "t1190",
+          "t1552",
+          "t1021"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/critical-solarwinds-vulnerability-exploited"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA : La faille VMware ESXi est maintenant exploitée dans des attaques de rançongiciels",
+        "description": "La CISA confirme que des groupes de rançongiciels exploitent activement une vulnérabilité à haute gravité d'évasion de sandbox VMware ESXi (CVE-2025-22225), précédemment utilisée dans des attaques de type 'zero-day'. Des acteurs de la menace chinois auraient enchaîné cette faille avec d'autres (CVE-2025-22226, CVE-2025-22224) depuis février 2024 pour échapper aux sandboxes de machines virtuelles avec un accès privilégié. Cela mène désormais à des déploiements de rançongiciels.",
+        "threat_actor": "Groupes de rançongiciels, acteurs de la menace chinois (probablement étatiques)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-22224",
+            "CVE-2025-22225",
+            "CVE-2025-22226"
+          ]
+        },
+        "mitre_ttps": [
+          "Privilege Escalation: Exploitation for Privilege Escalation (T1068)",
+          "Impact: Data Encrypted for Impact (T1486)"
+        ],
+        "analyse": "Menace critique pour les environnements virtualisés, permettant un contrôle total des hyperviseurs et des machines virtuelles, conduisant au déploiement de rançongiciels. L'implication d'acteurs chinois et l'exploitation antérieure de zero-day indiquent des capacités sophistiquées. Les agences fédérales américaines ont été mandatées pour patcher cette faille rapidement.",
+        "recommandations": [
+          "Appliquer les correctifs pour les produits VMware ESXi contre CVE-2025-22225, CVE-2025-22226, CVE-2025-22224.",
+          "Les agences fédérales doivent patcher d'ici le 25 mars 2025, conformément à la directive BOD 22-01."
+        ],
+        "tags": [
+          "vmware",
+          "esxi",
+          "sandbox_escape",
+          "ransomware",
+          "zero_day",
+          "high_severity",
+          "critical_vulnerability",
+          "virtualization",
+          "state_sponsored_threat",
+          "t1068",
+          "t1486",
+          "cve-2025-22225",
+          "cve-2025-22226",
+          "cve-2025-22224"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-vmware-esxi-flaw-now-exploited-in-ransomware-attacks/",
+          "https://securityaffairs.com/187637/security/cve-2025-22225-in-vmware-esxi-now-used-in-active-ransomware-attacks.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA met en garde contre une faille GitLab vieille de cinq ans exploitée dans des attaques",
+        "description": "La CISA avertit de l'exploitation active d'une vulnérabilité SSRF (Server-Side Request Forgery) vieille de cinq ans (CVE-2021-39935) dans GitLab. Cette faille permet à des attaquants non authentifiés d'accéder à l'API CI Lint, potentiellement impactant les configurations CI/CD. Les agences gouvernementales américaines ont l'obligation de corriger cette faille avant le 24 février 2026.",
+        "threat_actor": "Acteurs cyber malveillants",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-39935"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)"
+        ],
+        "analyse": "Cette vulnérabilité représente un vecteur d'attaque fréquent, posant des risques importants en raison de l'accès potentiel aux pipelines CI/CD et aux configurations sensibles dans des plateformes largement utilisées comme GitLab (par plus de 50% des entreprises du Fortune 100).",
+        "recommandations": [
+          "Appliquer les correctifs pour les systèmes GitLab contre CVE-2021-39935.",
+          "Mettre en œuvre les mesures d'atténuation du fournisseur, suivre les directives de la BOD 22-01 pour les services cloud, ou cesser d'utiliser le produit si les atténuations ne sont pas disponibles."
+        ],
+        "tags": [
+          "gitlab",
+          "ssrf",
+          "server_side_request_forgery",
+          "ci_cd",
+          "supply_chain",
+          "vulnerability_exploitation",
+          "cisa",
+          "cve-2021-39935",
+          "t1190"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-five-year-old-gitlab-flaw-exploited-in-attacks/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "L'IA générative face aux attaques informatiques : une épée à double tranchant",
+        "description": "L'IA générative est de plus en plus utilisée par les attaquants pour des tâches telles que le profilage de victimes, la création de contenu d'ingénierie sociale et le développement de malwares, augmentant les performances des acteurs avancés et abaissant la barrière technique pour les moins expérimentés. Simultanément, les systèmes d'IA (LLM) sont eux-mêmes des cibles d'attaques, notamment l'empoisonnement de modèles, la compromission de la chaîne logicielle et l'exfiltration de données.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Reconnaissance: Victim Profiling (T1589)",
+          "Initial Access: Social Engineering (T1566)",
+          "Resource Development: Develop Malware (T1587.001)",
+          "Collection: Data Exfiltration (T1041)"
+        ],
+        "analyse": "L'intégration de l'IA générative dans les outils d'attaque augmente la sophistication et l'échelle des menaces. Cela crée de nouvelles surfaces d'attaque et des vulnérabilités spécifiques aux systèmes d'IA, soulignant un risque systémique dans l'écosystème numérique. L'adaptabilité des attaquants aux nouvelles technologies nécessite une approche proactive de la sécurité des systèmes d'IA et une vigilance accrue face aux tactiques d'ingénierie sociale améliorées par l'IA.",
+        "recommandations": [
+          "Renforcer la sensibilisation aux techniques d'ingénierie sociale assistées par l'IA.",
+          "Sécuriser les systèmes d'IA eux-mêmes contre l'empoisonnement de modèles, les compromissions de chaîne logicielle et l'exfiltration de données.",
+          "Mettre en œuvre des audits de sécurité spécifiques aux déploiements d'IA."
+        ],
+        "tags": [
+          "ia",
+          "generative_ai",
+          "artificial_intelligence",
+          "social_engineering",
+          "malware_development",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "t1589",
+          "t1566",
+          "t1587_001",
+          "t1041"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-001/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Les hackers compromettent les serveurs NGINX pour rediriger le trafic utilisateur",
+        "description": "Des acteurs de la menace compromettent des serveurs NGINX et des panneaux de gestion d'hébergement Baota, ciblant principalement des sites avec des TLD asiatiques, des sites gouvernementaux et éducatifs. Ils détournent le trafic utilisateur et le redirigent via leur infrastructure backend en abusant d'une directive de répartition de charge légitime, ce qui permet d'éviter les alertes de sécurité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1189 - Drive-by Compromise",
+            "T1090.002 - Proxy"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Drive-by Compromise (T1189)",
+          "Command and Control: Proxy (T1090.002)"
+        ],
+        "analyse": "Menace significative pour les infrastructures web, pouvant mener à des activités malveillantes secondaires (phishing, vol de données, distribution de malwares). Le ciblage de TLD spécifiques suggère des opérations régionales. L'abus d'une fonction légitime (répartition de charge) pour l'évasion met en évidence la sophistication des attaques et la nécessité d'une surveillance approfondie des configurations.",
+        "recommandations": [
+          "Surveiller les configurations NGINX pour détecter les modifications non autorisées, en particulier les directives de répartition de charge.",
+          "Inspecter le trafic pour identifier les schémas de redirection inhabituels.",
+          "Réaliser des audits réguliers des panneaux Baota et des journaux de serveurs."
+        ],
+        "tags": [
+          "nginx",
+          "baota",
+          "traffic_redirection",
+          "server_compromise",
+          "web_server",
+          "load_balancing",
+          "asian_tlds",
+          "government",
+          "education",
+          "supply_chain",
+          "t1090_002",
+          "t1189"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-compromise-nginx-servers-to-redirect-user-traffic/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Les identités non humaines : une épée à double tranchant pour la sécurité cloud",
+        "description": "Les identités non humaines divulguées, telles que les clés API et les tokens, sont un facteur majeur de violations dans les environnements cloud. La recherche de Flare a révélé plus de 10 000 images Docker Hub divulguant des secrets (clés API de production, tokens cloud, identifiants CI/CD, tokens d'accès de modèles d'IA). Des incidents notables incluent l'affaire Snowflake 2024 (groupe UNC5537 utilisant des dumps d'infostealers) et Home Depot (token GitHub exposé pendant plus d'un an). Ces identités ont souvent des privilèges étendus et persistants, et manquent d'authentification multifacteur, ce qui en fait des vecteurs d'attaque discrets et durables.",
+        "threat_actor": "UNC5537, Crimson Collective",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Collection: Data from Local System (T1005)",
+          "Exfiltration: Data Exfiltration (T1041)"
+        ],
+        "analyse": "Défaillance systémique dans le développement et l'exploitation des logiciels modernes, où les identités machine sont omniprésentes, à longue durée de vie, souvent sans MFA, et facilement exposées. Cela octroie un accès silencieux, durable et légitime, contournant les détections traditionnelles. Représente un risque significatif pour la supply chain et la sécurité cloud.",
+        "recommandations": [
+          "Mettre en œuvre des plateformes de gestion de l'exposition aux menaces pour une analyse continue des registres publics et des dépôts de code à la recherche d'identifiants exposés.",
+          "Rotation et expiration régulières des identités machine.",
+          "Mise en place d'une surveillance proactive.",
+          "Améliorer la gouvernance des identifiants."
+        ],
+        "tags": [
+          "non_human_identities",
+          "api_keys",
+          "tokens",
+          "cloud_security",
+          "supply_chain",
+          "credential_management",
+          "data_breach",
+          "docker_hub",
+          "github",
+          "gitlab",
+          "snowflake",
+          "home_depot",
+          "red_hat",
+          "unc5537",
+          "crimson_collective",
+          "t1552",
+          "t1005",
+          "t1041"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Un outil 'EDR killer' utilise un pilote de noyau signé provenant d'un logiciel de forensique",
+        "description": "Des hackers utilisent un outil 'EDR killer' qui abuse d'un pilote de noyau EnCase légitime mais révoqué pour désactiver les solutions de sécurité. Cet outil détecte 59 outils de sécurité et utilise la technique 'Bring Your Own Vulnerable Driver' (BYOVD) pour obtenir un accès au niveau du noyau. Windows accepte toujours l'ancien certificat de pilote en raison de la validation de l'horodatage plutôt que des listes de révocation de certificats (CRL), et d'une exception de Windows 10 pour les certificats plus anciens.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion: Impair Defenses (T1562)",
+          "Defense Evasion: Disable or Modify Tools (T1562.001)",
+          "Defense Evasion: Abuse of Exploitable Driver (T1562.007)"
+        ],
+        "analyse": "Technique d'évasion de défense sophistiquée exploitant des composants logiciels fiables mais vulnérables et des particularités de l'application des signatures de pilotes Windows. Cela représente un défi significatif pour la sécurité des endpoints et la réponse aux incidents, car il permet aux attaquants de contourner des protections critiques au niveau du noyau.",
+        "recommandations": [
+          "Activer l'authentification multifacteur (MFA) sur tous les services d'accès à distance.",
+          "Surveiller les journaux VPN pour toute activité suspecte.",
+          "Activer HVCI/Memory Integrity pour appliquer la liste de blocage des pilotes vulnérables de Microsoft."
+        ],
+        "tags": [
+          "edr_bypass",
+          "kernel_driver",
+          "byovd",
+          "defense_evasion",
+          "forensic_software",
+          "windows_security",
+          "signed_driver",
+          "t1562",
+          "t1562_001",
+          "t1562_007"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/edr-killer-tool-uses-signed-kernel-driver-from-forensic-software/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Microsoft : les malwares de vol d'informations s'étendent de Windows à macOS",
+        "description": "Les attaques de malwares de vol d'informations s'étendent rapidement de Windows à macOS, en tirant parti de langages multiplateformes (Python) et en abusant de plateformes fiables (WhatsApp). Les campagnes utilisent l'ingénierie sociale (faux sites web, logiciels, invites ClickFix, fichiers DMG malveillants) pour déployer des infostealers spécifiques à macOS (DigitStealer, MacSync, Atomic macOS Stealer (AMOS)) et basés sur Python (PXA Stealer, Eternidade Stealer). Ces malwares dérobent des identifiants, des portefeuilles de cryptomonnaies, des informations de développeurs et des sessions de navigateur, utilisant souvent Telegram pour le C2 et des outils natifs pour l'évasion.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access: Phishing (T1566)",
+          "Initial Access: User Execution (T1204)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Impair Defenses (T1562.001)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Credential Access: Steal Web Session Cookie (T1539)",
+          "Credential Access: Credentials from Password Stores (T1555)",
+          "Collection: Data from Local System (T1005)",
+          "Command and Control: Application Layer Protocol (T1071)"
+        ],
+        "analyse": "Menace croissante et multiplateforme, soulignant la nécessité d'une protection multi-OS. L'ingénierie sociale reste un vecteur principal, et l'abus d'applications fiables et d'outils natifs complique la détection. La compromission par des infostealers peut entraîner des violations de données, des prises de contrôle de comptes et des attaques sur la supply chain, ainsi que des attaques par rançongiciel.",
+        "recommandations": [
+          "Former les utilisateurs aux techniques d'ingénierie sociale (fausses publicités, installateurs, astuces de copier-coller).",
+          "Surveiller macOS pour les activités Terminal à risque (curl, décodage Base64, AppleScript).",
+          "Surveiller les accès inhabituels au trousseau, aux identifiants de navigateur, aux clés cloud et aux portefeuilles crypto.",
+          "Inspecter le trafic sortant pour les requêtes POST vers des domaines nouveaux ou suspects et pour les fichiers ZIP de courte durée créés dans les dossiers temporaires.",
+          "Bloquer les serveurs de commande et de contrôle connus à l'aide de la threat intelligence.",
+          "Renforcer les défenses contre l'abus de Python et des LOLBINs.",
+          "Activer la protection fournie par le cloud, l'EDR en mode blocage, la protection réseau et web, SmartScreen, l'enquête automatisée et la protection anti-falsification.",
+          "Appliquer des règles de réduction de la surface d'attaque pour bloquer les scripts obscurcis, les exécutables non fiables et les scripts lançant des charges utiles téléchargées."
+        ],
+        "tags": [
+          "info_stealer",
+          "malware",
+          "windows",
+          "macos",
+          "cross_platform",
+          "python_malware",
+          "social_engineering",
+          "phishing",
+          "whatsapp",
+          "telegram_c2",
+          "credential_theft",
+          "crypto_wallets",
+          "data_exfiltration",
+          "defense_evasion",
+          "t1566",
+          "t1204",
+          "t1027",
+          "t1562_001",
+          "t1552",
+          "t1539",
+          "t1555",
+          "t1005",
+          "t1071"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187608/security/microsoft-info-stealing-malware-expands-from-windows-to-macos.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Pourquoi les personnes intelligentes tombent dans les attaques de phishing",
+        "description": "Les attaques de phishing persistent malgré des défenses avancées, principalement en exploitant la psychologie humaine plutôt que les vulnérabilités techniques. Les attaquants utilisent des tactiques d'ingénierie sociale telles que l'urgence, l'autorité et la manipulation émotionnelle, amplifiées par l'IA (suppression des erreurs d'orthographe, deepfakes, imitation vocale). L'excès de confiance et l'« illusion de contrôle » rendent les individus vulnérables, les incitant souvent à ignorer les protocoles de sécurité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access: Phishing (T1566)",
+          "Initial Access: Spearphishing Link (T1566.002)"
+        ],
+        "analyse": "Le phishing reste très efficace en raison de facteurs humains (biais psychologiques, excès de confiance) et des avancées de l'IA. L'IA rend le phishing beaucoup plus difficile à détecter par des moyens humains traditionnels. Cela souligne la nécessité d'un passage d'une défense purement technique à une éducation continue des utilisateurs et à une vigilance accrue.",
+        "recommandations": [
+          "Arrêter et évaluer les messages, vérifier les sources avant toute action.",
+          "Éducation continue à la sécurité pour contrer les biais psychologiques.",
+          "Ne pas se fier uniquement à l'instinct.",
+          "Mettre en œuvre l'authentification multifacteur (MFA)."
+        ],
+        "tags": [
+          "phishing",
+          "social_engineering",
+          "human_element",
+          "psychology",
+          "ai_impact",
+          "deepfake",
+          "voice_mimicry",
+          "cybersecurity_awareness",
+          "t1566",
+          "t1566_002"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/psychology-of-phishing/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Rublevka Team : Anatomie d'une opération russe de 'crypto drainer'",
+        "description": "Le groupe cybercriminel russe Rublevka Team est spécialisé dans le vol à grande échelle de cryptomonnaies, ayant généré plus de 10 millions de dollars depuis 2023. Ils opèrent comme une 'équipe de trafiquants' utilisant l'ingénierie sociale pour diriger les victimes vers des pages de destination usurpées simulant des services cryptos. Ces pages déploient des scripts JavaScript de drainage personnalisés pour connecter les portefeuilles et autoriser des transactions frauduleuses, ciblant Solana (SOL) et d'autres chaînes. Leur infrastructure est automatisée, offrant des bots Telegram, des générateurs de pages de destination, des fonctionnalités d'évasion (cloaking, 'Red Table Bypass') et prenant en charge plus de 90 types de portefeuilles.",
+        "threat_actor": "Rublevka Team",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "burn-shard-bridge[.]xyz",
+            "commontechrepo[.]cc",
+            "efficient-endpoint[.]site",
+            "fontmaxplugin[.]cc",
+            "g-app-d[.]cc",
+            "open-sol[.]cc",
+            "pumptoken[.]net",
+            "rublevkateam[.]cc",
+            "sol-coin[.]xyz",
+            "sol-galaxy[.]cc",
+            "sol-hook[.]org",
+            "web-core[.]cc"
+          ],
+          "EMAIL": [
+            "alex[.]petrov[.]domain[@]emailsecure[.]tech"
+          ],
+          "FILE_HASH_SHA256": [
+            "9c21d538c2a556f4a5b351b29f3513097ac57643f291ff6d751400d8dbc69489",
+            "b9157f6bff6a6ee6ba5932ebac2c8796836b21eb3c69df08fbeb102e9228ba15"
+          ],
+          "IPv4": [
+            "158[.]94[.]208[.]165"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Social Engineering (T1566)",
+          "Initial Access: Spearphishing Link (T1566.002)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Exfiltration: Data Exfiltration (T1041)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Hide Artifacts: Runtime Data (T1564.003)",
+          "Defense Evasion: Hide Artifacts: Compiler Obfuscation (T1564.004)"
+        ],
+        "analyse": "Exemplifie l'industrialisation de la cybercriminalité en tant que service. Abaisse les barrières techniques, attire des affiliés mondiaux et pose des risques réputationnels et juridiques significatifs pour les plateformes de cryptomonnaie et les fournisseurs de fintech. La rotation rapide de l'infrastructure et les techniques de 'cloaking' sapent la détection traditionnelle de la fraude.",
+        "recommandations": [
+          "Mettre en place une surveillance proactive des usurpations de marque et des pages de destination contrefaites.",
+          "Renforcer la vérification des utilisateurs et l'authentification multifacteur (MFA) pour les portefeuilles de cryptomonnaie.",
+          "Collaborer entre les plateformes et la communauté de la sécurité pour les actions de démantèlement.",
+          "Éduquer les utilisateurs sur l'ingénierie sociale et les pratiques de sécurité des cryptomonnaies."
+        ],
+        "tags": [
+          "rublevka_team",
+          "cybercrime",
+          "cryptocurrency",
+          "wallet_drainer",
+          "social_engineering",
+          "phishing",
+          "solana",
+          "fintech",
+          "affiliate_program",
+          "dga",
+          "cloaking",
+          "defense_evasion",
+          "t1566",
+          "t1552",
+          "t1041",
+          "t1027",
+          "t1564_003",
+          "t1564_004"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/rublevka-team-anatomy-russian-crypto-drainer-operation/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Samsung MagicInfo9 : des failles critiques (CVSS 9.8) exposent les serveurs",
+        "description": "Le serveur Samsung MagicInfo9 est affecté par de multiples vulnérabilités critiques (CVE-2026-25202, CVE-2026-25201, CVE-2026-25200, toutes avec un CVSS de 9.8) permettant une prise de contrôle complète du serveur par des attaquants non authentifiés. Celles-ci incluent des identifiants de base de données codés en dur, une exécution de code à distance via le téléchargement de fichiers arbitraires, et du cross-site scripting (XSS) stocké menant à une prise de contrôle de compte. Elles affectent toutes les versions antérieures à la 21.1090.1.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-25200",
+            "CVE-2026-25201",
+            "CVE-2026-25202"
+          ]
+        },
+        "mitre_ttps": [
+          "Credential Access: Hardcoded Credentials (T1552.001)",
+          "Execution: Command and Scripting Interpreter (T1059)",
+          "Persistence: Server Software Component (T1505)",
+          "Privilege Escalation: Exploitation for Privilege Escalation (T1068)",
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Impact: Account Access Removal (T1531)"
+        ],
+        "analyse": "Risque extrêmement élevé pour les organisations utilisant l'affichage numérique géré par MagicInfo9, pouvant entraîner une compromission complète du réseau, une manipulation des données et un contrôle administratif. L'accès non authentifié augmente considérablement l'exploitabilité de ces failles.",
+        "recommandations": [
+          "Mettre à jour immédiatement le serveur MagicInfo9 vers la version 21.1090.1 ou ultérieure."
+        ],
+        "tags": [
+          "samsung",
+          "magicinfo9",
+          "digital_signage",
+          "critical_vulnerability",
+          "hardcoded_credentials",
+          "remote_code_execution",
+          "rce",
+          "xss",
+          "account_takeover",
+          "unauthenticated_access",
+          "t1552_001",
+          "t1059",
+          "t1505",
+          "t1068",
+          "t1190",
+          "t1531",
+          "cve-2026-25202",
+          "cve-2026-25201",
+          "cve-2026-25200"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Vulnérabilités critiques n8n divulguées avec des exploits publics",
+        "description": "Plusieurs vulnérabilités critiques d'exécution de code à distance (RCE) (CVE-2026-25049) dans la plateforme d'automatisation de flux de travail open-source n8n permettent aux utilisateurs authentifiés d'exécuter du code arbitraire, de contourner les mécanismes de désinfection et de prendre le contrôle total du serveur hôte. L'impact inclut le vol d'identifiants, le pivotement vers des comptes cloud et le détournement de flux de travail d'IA. Des exploits publics existent, augmentant le risque.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-25049"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190.003 - Implied RCE)"
+        ],
+        "analyse": "Impact élevé en raison de l'exécution de code à distance (RCE) et du potentiel de compromission généralisée des systèmes utilisant n8n, y compris les services cloud connectés et les pipelines d'IA. L'existence d'exploits publics augmente la surface d'attaque et la probabilité d'exploitation. La plateforme n8n est une cible attrayante pour les cybercriminels.",
+        "recommandations": [
+          "Mettre à jour la plateforme n8n vers la version la plus récente (actuellement 1.123.17 et 2.5.2) immédiatement.",
+          "Faire pivoter la clé 'N8N_ENCRYPTION_KEY' et tous les identifiants stockés sur le serveur.",
+          "Examiner les flux de travail pour détecter les expressions suspectes."
+        ],
+        "tags": [
+          "n8n",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "workflow_automation",
+          "cloud_security",
+          "api_keys",
+          "oauth_tokens",
+          "credential_theft",
+          "ai_security",
+          "cve-2026-25049",
+          "t1190_003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-n8n-flaws-disclosed-along-with-public-exploits/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "WatchGuard corrige les failles d'escalade de privilèges VPN et d'injection LDAP Firebox",
+        "description": "WatchGuard a émis des avis pour deux vulnérabilités : une faille d'escalade de privilèges locale (NCPVE-2025-0626) dans le client Mobile VPN with IPSec pour Windows lors de l'installation/mise à jour, permettant des droits SYSTEM ; et une injection LDAP (CVE-2026-1498, CVSS 7.0) dans Fireware OS, permettant à des attaquants distants non authentifiés de récupérer des informations sensibles depuis les serveurs LDAP et potentiellement de contourner l'authentification avec un mot de passe valide.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1498"
+          ]
+        },
+        "mitre_ttps": [
+          "Privilege Escalation (T1068)",
+          "Initial Access: Exploit Public-Facing Application (T1190 - related to Injection)",
+          "Collection: Data from Remote System (T1005)",
+          "Defense Evasion: Authentication Bypass (T1587.001)"
+        ],
+        "analyse": "L'escalade de privilèges locale est grave pour les endpoints avec accès physique ou si un attaquant a déjà un accès de bas niveau. L'injection LDAP menace les systèmes de gestion d'identité, pouvant mener à un accès non autorisé et à une compromission des données. Bien que le CVSS de l'injection LDAP soit inférieur à 8.0, son impact sur l'authentification est significatif.",
+        "recommandations": [
+          "Appliquer les correctifs pour le client WatchGuard Mobile VPN with IPSec et Fireware OS."
+        ],
+        "tags": [
+          "watchguard",
+          "vpn",
+          "firebox",
+          "privilege_escalation",
+          "ldap_injection",
+          "authentication_bypass",
+          "data_exfiltration",
+          "critical_vulnerability",
+          "t1068",
+          "t1190",
+          "t1005",
+          "t1587_001"
+        ],
+        "sources": [
+          "https://securityonline.info/watchguard-patches-vpn-privesc-firebox-ldap-injection/"
+        ],
+        "date": "2026-02-05"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification and diversification of cyber threats. Generative artificial intelligence emerges as a double-edged sword, used by attackers for activities ranging from victim profiling to malware creation and social engineering, while also becoming a target for attacks itself. Critical vulnerabilities, particularly remote code execution (RCE) and privilege escalation flaws, continue to be actively exploited, often years after their disclosure, notably in virtualized environments (VMware ESXi) and development platforms (GitLab, n8n). The supply chain remains a preferred attack vector, exploited through leaked non-human identities (API keys, tokens) or the compromise of NGINX servers. Ransomware attacks and espionage campaigns (e.g., Amaranth Dragon) exploit these flaws to target government sectors and critical infrastructures, particularly in Southeast Asia. Concurrently, the threat of infostealers is expanding to macOS systems and employing sophisticated evasion techniques. Social engineering, exacerbated by AI and excessive user trust, remains a major entry point for data breaches in financial and educational sectors. Large-scale reconnaissance efforts against key infrastructures (Citrix Gateway) indicate future exploitation campaigns. In conclusion, the threat landscape is characterized by attackers' rapid adaptation to new technologies and existing vulnerabilities, requiring continuous vigilance, prompt updates, and strong user awareness.",
+      "date": "2026-02-05"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Amaranth Dragon",
+        "secteur": "Government, Law Enforcement",
+        "modop": "Exploitation of WinRAR vulnerability CVE-2025-8088 via weaponized archives (social engineering), use of custom loader (Amaranth Loader) to deploy Havoc C2 framework, DLL sideloading, geo-restricted C2, anti-debugging/anti-EDR/AV techniques (unhooked ntdll.dll), Telegram bot-controlled RAT (TGAmaranth RAT), persistence via Startup folder or Registry Run key.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionage",
+          "state_sponsored",
+          "apt41",
+          "winrar_exploit",
+          "cve-2025-8088",
+          "social_engineering",
+          "malware",
+          "loader",
+          "c2_framework",
+          "havoc_framework",
+          "rat",
+          "telegram_c2",
+          "dll_sideloading",
+          "defense_evasion",
+          "persistence",
+          "southeast_asia"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+          "https://securityonline.info/10-days-to-exploit-amaranth-dragon-weaponizes-winrar-flaw-to-spy-on-se-asia/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "APT41",
+        "secteur": "Government, Law Enforcement",
+        "modop": "Linked to Amaranth Dragon, shares similar tools (DodgeBox, Dustpan, Dusttrap) and TTPs (DLL sideloading, Sleep instruction in unused exports, thread creation in export functions). Implies sophisticated cyberespionage capabilities.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cyberespionage",
+          "state_sponsored",
+          "china",
+          "dll_sideloading"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "Crimson Collective",
+        "secteur": "Information Technology (Consulting), Various (Red Hat Clients)",
+        "modop": "Compromising GitLab instances to exfiltrate private repositories and customer engagement reports containing sensitive information, including embedded credentials (tokens, database URIs, service keys).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "gitlab",
+          "credential_theft",
+          "supply_chain",
+          "consulting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "Rublevka Team",
+        "secteur": "Cryptocurrency, Fintech, Individuals",
+        "modop": "Large-scale cryptocurrency theft using affiliate-driven wallet draining campaigns. Employs social engineering (fake airdrops, giveaways, exchanges, KYC requests) via spoofed landing pages with custom JavaScript drainer scripts. Uses Telegram bots for affiliate operations, landing page generators, cloaking, and DDoS protections. Targets Solana (SOL), SPL tokens, NFTs. Relies on exposed RPC APIs (Helius, WalletConnect, PublicNode). Operates rotating infrastructure behind Cloudflare, including Domain Generation Algorithm (DGA) for domains.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "cryptocurrency_theft",
+          "crypto_drainer",
+          "social_engineering",
+          "phishing",
+          "wallet_drainer",
+          "solana",
+          "fintech",
+          "dga",
+          "cloaking",
+          "telegram_bot",
+          "fraud",
+          "financial_crime",
+          "russia"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/rublevka-team-anatomy-russian-crypto-drainer-operation/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Education (Higher Education)",
+        "modop": "Gained full access to an employee's PennKey SSO account via phishing, allowing access to the university's VPN, Salesforce data, Qlik analytics platform, SAP BI system, and SharePoint files, and exfiltrated data of millions of students, alumni, and donors.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_exfiltration",
+          "phishing",
+          "account_takeover",
+          "education",
+          "sso",
+          "vpn"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/?pk_campaign=feed&pk_kwd=two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "nom": "UNC5537",
+        "secteur": "Cloud Services, Various (Snowflake Customers)",
+        "modop": "Authenticated into approximately 165 Snowflake customer environments using exposed credentials (API accounts, automation users, data-access identities) harvested from historical infostealer malware dumps and cybercrime marketplaces. These credentials often lacked multi-factor authentication and were designed to persist indefinitely. Accessed highly sensitive corporate and customer information, which was later advertised for sale or used in extortion campaigns.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cloud_security",
+          "credential_theft",
+          "data_exfiltration",
+          "snowflake",
+          "infostealer",
+          "extortion",
+          "api_keys",
+          "mfa_bypass"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Agriculture, Food Security, International Relations, Climate Change, European Union",
+        "theme": "Strategic importance of agriculture, global instability, European agricultural policy, climate impacts, geopolitical pivots",
+        "description": "Analysis highlighting agriculture as a fundamental, enduring strategic sector amidst global instability, serving as a 'truth test' for Europe. Discusses the EU's past policy missteps (deindustrialization, underestimating climate impact) and the need for renewed focus on agricultural self-sufficiency and strategic autonomy. Introduces 'CUBITA' (DRC, Ukraine, Brazil, Indonesia, Turkey, Australia) as agro-strategic pivotal states whose agricultural stability will impact global food security. Also touches on agricultural dimensions of US-China rivalry and new food technologies.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "agriculture",
+          "food_security",
+          "european_union",
+          "climate_change",
+          "strategic_autonomy",
+          "global_economy",
+          "international_trade",
+          "ukraine_war",
+          "supply_chain_resilience"
+        ],
+        "sources": [
+          "https://www.iris-france.org/tenir-lagriculture-comme-colonne-vertebrale-dun-monde-instable/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "International Relations, Environment, Climate Change, Food Security, Economy, Geopolitics",
+        "theme": "Ecosystem collapse, national security threats, geopolitical instability, resource competition",
+        "description": "A UK national security assessment highlights accelerating global biodiversity loss and ecosystem collapse as critical threats. Impacts include crop failures, disease, natural disasters, leading to geopolitical instability, economic insecurity, conflict, migration, and increased inter-state competition for resources (water, food, critical minerals). The report suggests these phenomena will be exploited by state and non-state actors, amplified by disinformation. Recommends strengthening UK food production and shifting consumer behavior.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "climate_change",
+          "ecosystem_collapse",
+          "national_security",
+          "food_security",
+          "resource_competition",
+          "migration",
+          "disinformation",
+          "geopolitical_instability",
+          "uk"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/we-need-talk-about-ecosystem-collapse"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "International Relations, Energy, Public Health, Information Warfare",
+        "theme": "Disinformation campaign, scientific legitimacy, Japan-China relations",
+        "description": "Japan's decision to release treated water from the Fukushima Daiichi nuclear plant has become a significant diplomatic issue. Tokyo faces the dual challenge of asserting scientific legitimacy and countering information warfare, particularly from China.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "japan",
+          "china",
+          "disinformation",
+          "information_warfare",
+          "fukushima",
+          "nuclear_energy",
+          "scientific_legitimacy",
+          "international_diplomacy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-japon-face-a-la-desinformation-le-cas-du-rejet-des-eaux-traitees-de-fukushima/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Darknet Markets, Law Enforcement, Cybercrime",
+        "theme": "International Law Enforcement Action, Darknet Market Dismantling",
+        "description": "Rui-Siang Lin, operator of Incognito Market (darknet drug marketplace), was sentenced to 30 years in prison for distributing over $105 million in illegal drugs and money laundering. The market operated from 2020 to 2024, facilitating over 640,000 drug transactions. Lin stole over $1 million from users upon closure and attempted extortion. This event highlights the transnational nature of cybercrime and international judicial efforts.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "darknet_market",
+          "cybercrime",
+          "drug_trafficking",
+          "money_laundering",
+          "law_enforcement",
+          "international_cooperation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187623/deep-web/taiwanese-operator-of-incognito-market-sentenced-to-30-years-over-105m-darknet-drug-ring.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Defense, Economy, Geopolitics",
+        "theme": "Russian war economy, defense industry growth, import substitution, administrative and financial measures",
+        "description": "Analysis of Russia's significant industrial growth (15.1% for manufacturing, 7.1% for GDP 2022-2024), driven by direct and indirect defense sector demand. High growth in high-value, advanced technology branches (electronics, optics, transport, metals). Details administrative (flexible norms for military industry, simplified subcontracting, fast material replacement) and financial measures (up to 80-100% upfront payments) enabling rapid production increase (e.g., armored vehicles x2.2, military aviation x4.6, missiles/artillery x9.6, electronic warfare x12.5, ammunition x22). Highlights the lack of forced civil-to-military conversion.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "war_economy",
+          "defense_industry",
+          "industrial_production",
+          "import_substitution",
+          "military_spending",
+          "electronic_warfare",
+          "drones",
+          "manufacturing"
+        ],
+        "sources": [
+          "https://www.epge.fr/point-de-situation-sur-leconomie-de-guerre-russe-fevrier-2026/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "International Relations, Politics",
+        "theme": "Geopolitical shifts, Trump's foreign policy impact, decline of multilateralism, transatlantic relations",
+        "description": "Analysis of major international reconfigurations driven by a potential second Trump presidency, emphasizing a shift towards power-based, national-interest-first international relations. Challenges the post-1945 international system and multilateralism, leading to disorientation in the Western world and potential obsolescence of the transatlantic concept. Questions Europe's strategic clarity in this unstable landscape.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "international_relations",
+          "foreign_policy",
+          "trump_administration",
+          "multilateralism",
+          "transatlantic_relations",
+          "europe",
+          "global_order",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/lordre-mondial-selon-trump-avec-justin-vaisse-entretiens-geopo/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Social Media, AI, Law Enforcement, Platform Governance",
+        "theme": "Content Moderation, Child Sexual Abuse Material (CSAM), AI Ethics, Data Extraction",
+        "description": "French prosecutors, with Europol support, raided X offices in Paris over allegations of facilitating child sexual abuse material (CSAM) and other illegal content. The inquiry also covers sexually explicit deepfakes generated by X's AI (Grok), denial of crimes against humanity, and unauthorized data extraction. UK and EU authorities are also investigating.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "x_platform",
+          "twitter",
+          "ai",
+          "grok",
+          "csam",
+          "child_abuse_material",
+          "deepfake",
+          "illegal_content",
+          "platform_governance",
+          "law_enforcement",
+          "content_moderation",
+          "europe",
+          "france",
+          "uk"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187619/cyber-crime/paris-raid-on-x-focuses-on-child-abuse-material-allegations.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Energy, Geopolitics, Finance",
+        "theme": "US-Venezuela oil relations, petrodollar, extra-heavy crude, China's role, sanctions",
+        "description": "US intervention in Venezuela aims to secure extra-heavy crude (strategic for US refining) and \"redollarize\" Venezuelan oil flows, stabilizing the petrodollar. Historically, Venezuela supplied heavy crude to the US. China, Venezuela's main creditor, accounted for 75-80% of its oil exports, but only 4% of China's total imports. Venezuelan oil infrastructure is degraded, making major US oil company investment cautious. Highlights converging energy, financial, and geopolitical interests.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "oil",
+          "energy_security",
+          "petrodollar",
+          "venezuela",
+          "united_states",
+          "china",
+          "sanctions",
+          "crude_oil",
+          "international_finance",
+          "geopolitical_rivalry"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/analyse-strategique-les-methodes-et-outils/2026/liaisons-petrolieres-washington-caracas-venezuela/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "International Relations, Politics, Religion, Education, Media, Intelligence",
+        "theme": "Turkish influence networks in Western Europe, soft power, diaspora, political opposition",
+        "description": "OSINT research mapping Erdoğan's influence networks in Western Europe (5-6 million diaspora) across religious (DITIB, Millî Görüş), political (Grey Wolves, IUD, ATIB), educational (YTB, Maarif Foundation, Yunus Emre Institutes, SETA, IKSV) and media domains. Highlights the MIT's central role in intelligence gathering and actions against opponents abroad. Aims to structure the diaspora, maintain ties with Ankara and counter opposition. European states are increasing surveillance and restrictions on foreign funding due to concerns about political interference and authoritarian transnationalism.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "turkey",
+          "erdogan",
+          "influence_operations",
+          "soft_power",
+          "diaspora",
+          "europe",
+          "intelligence_services",
+          "mit",
+          "religious_influence",
+          "political_infiltration",
+          "media_control",
+          "education",
+          "nationalism",
+          "panturkism",
+          "neo_ottomanism"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/cartographie-de-la-turquie-derdogan/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial Services (Automated Investment Platform)",
+        "victime": "Betterment (1.4M customers)",
+        "description": "Data breach attributed to a social engineering attack. Customers received fraudulent crypto-related messages. Exposed 1.4M unique email addresses, names, and geographic location data. A subset of records also included dates of birth, phone numbers, and physical addresses. No access to customer accounts or login credentials was compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "financial_services",
+          "fintech",
+          "investment_platform",
+          "social_engineering",
+          "crypto_scam",
+          "data_exfiltration",
+          "customer_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Betterment",
+          "https://techcrunch.com/2026/01/12/fintech-firm-betterment-confirms-data-breach-after-hackers-send-fake-crypto-scam-notification-to-users/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Geisinger Health (patients), Nuance Communications (former employee)",
+        "description": "A former Nuance Communications employee compromised the Protected Health Information (PHI) of over 1.3 million Geisinger Health patients after being terminated. The employee (Max Vance) later faced additional charges for falsely denying downloading unauthorized data onto personal devices.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "phi",
+          "protected_health_information",
+          "insider_threat",
+          "data_exfiltration",
+          "employee_misconduct",
+          "legal_action"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case/?pk_campaign=feed&pk_kwd=former-nuance-communications-employee-facing-more-charges-in-2023-geisinger-data-breach-case"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "secteur": "Education (Higher Education), Non-profit (Donor relations)",
+        "victime": "Harvard University, University of Pennsylvania (UPenn)",
+        "description": "Harvard's Alumni Affairs and Development information was breached via a phone-based phishing attack. UPenn suffered a breach where threat actors gained full access to an employee's PennKey SSO account, exfiltrating data for ~1.2 million students, alumni, and donors. Stolen data includes names, dates of birth, addresses, phone numbers, estimated net worth, donation history, and demographic details (religion, race, sexual orientation).",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "higher_education",
+          "university",
+          "donor_information",
+          "student_data",
+          "alumni_data",
+          "phishing",
+          "social_engineering",
+          "account_takeover",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/?pk_campaign=feed&pk_kwd=two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2019-25281",
+        "cvss": "8.5",
+        "product": "NCP Secure Entry Client 9.2",
+        "description": "Unquoted service path vulnerability in multiple Windows services, allowing local users to inject malicious code for execution with LocalSystem privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ncp_secure_entry_client",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25281"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25281"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25283",
+        "cvss": "8.5",
+        "product": "Shrew Soft VPN Client 2.2.2",
+        "description": "Unquoted service path vulnerability, allowing local users to execute arbitrary code with elevated system privileges by placing malicious executables.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "shrew_soft_vpn_client",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25283"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25283"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25285",
+        "cvss": "8.5",
+        "product": "Alps Pointing-device Controller 8.1202.1711.04",
+        "description": "Unquoted service path vulnerability in ApHidMonitorService, allowing local attackers to place a malicious executable for system-level access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "alps_pointing_device_controller",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25285"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25285"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25286",
+        "cvss": "8.5",
+        "product": "GCafé 3.0",
+        "description": "Unquoted service path vulnerability in gbClientService, allowing local attackers to inject malicious executables for execution with LocalSystem permissions.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "gcafe",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25286"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25286"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25287",
+        "cvss": "8.5",
+        "product": "Adaware Web Companion version 4.8.2078.3950",
+        "description": "Unquoted service path vulnerability in WCAssistantService, allowing local users to inject malicious code for execution with LocalSystem privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "adaware",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25287"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2019-25288",
+        "cvss": "8.5",
+        "product": "Wacom WTabletService 6.6.7-3",
+        "description": "Unquoted service path vulnerability, allowing local attackers to execute malicious code with elevated privileges by inserting an executable in the service path.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wacom",
+          "privilege_escalation",
+          "local_access",
+          "unquoted_service_path",
+          "cve-2019-25288"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25288"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2025-13192",
+        "cvss": "8.2",
+        "product": "Popup builder with Gamification, Multi-Step Popups, Page-Level Targeting, and WooCommerce Triggers plugin for WordPress",
+        "description": "Unauthenticated SQL Injection via multiple REST API endpoints due to insufficient escaping of user-supplied parameters and lack of sufficient preparation of the existing SQL query. Allows extraction of sensitive information from the database.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "sql_injection",
+          "sqli",
+          "unauthenticated_access",
+          "data_exfiltration",
+          "rest_api",
+          "cve-2025-13192"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13192"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-1632",
+        "cvss": "9.1",
+        "product": "RISS SRL’s MOMA Seismic Station v2.4.2520 and prior",
+        "description": "Lack of authentication/access control, allowing unauthenticated attackers to take full control of the device, modify configuration settings, acquire device data, remotely reset, or cause a denial-of-service condition.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "riss_srl",
+          "moma_seismic_station",
+          "operational_technology",
+          "ot",
+          "critical_vulnerability",
+          "unauthenticated_access",
+          "access_control_bypass",
+          "denial_of_service",
+          "dos",
+          "cve-2026-1632"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-of-unpatched-avation-riss-critical-flaws/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-22778",
+        "cvss": "9.8",
+        "product": "vLLM library for LLM inference (serving video models)",
+        "description": "Remote Code Execution (RCE) vulnerability allowing attackers to execute arbitrary code by processing a malicious video file, even with API keys enabled.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "vllm",
+          "llm",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "ai_security",
+          "video_processing",
+          "cve-2026-22778"
+        ],
+        "sources": [
+          "https://securityonline.info/video-of-death-critical-vllm-flaw-cvss-9-8-grants-remote-code-execution/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25200",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Stored Cross-Site Scripting (XSS) via unauthenticated HTML file upload, leading to account takeover of the MagicInfo management console.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "xss",
+          "cross_site_scripting",
+          "unauthenticated_access",
+          "account_takeover",
+          "critical_vulnerability",
+          "cve-2026-25200"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25201",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Remote Code Execution (RCE) and privilege escalation via arbitrary file upload due to insufficient validation of user and file type.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "remote_code_execution",
+          "rce",
+          "privilege_escalation",
+          "arbitrary_file_upload",
+          "critical_vulnerability",
+          "cve-2026-25201"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "cve_id": "CVE-2026-25202",
+        "cvss": "9.8",
+        "product": "Samsung MagicInfo9 Server (prior to 21.1090.1)",
+        "description": "Hardcoded database account and password, allowing login with the account to manipulate the database.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "samsung",
+          "magicinfo9",
+          "hardcoded_credentials",
+          "database_manipulation",
+          "critical_vulnerability",
+          "cve-2026-25202"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Amaranth Dragon: Cyberespionage Targeting Southeast Asia via WinRAR Flaw",
+        "description": "The cyberespionage group Amaranth Dragon, linked to the Chinese APT41, is actively exploiting the WinRAR vulnerability CVE-2025-8088. This campaign targets government and law enforcement agencies in Southeast Asia. The modus operandi involves weaponized WinRAR archives using social engineering (fake meeting invitations, salary documents) to deploy a custom loader (Amaranth Loader) and the Havoc C2 framework, or even a Telegram-controlled RAT. C2 servers are geo-restricted, and anti-detection techniques are employed, including DLL sideloading and ntdll.dll modification to bypass EDRs. The group demonstrates high speed in weaponizing newly disclosed vulnerabilities.",
+        "threat_actor": "Amaranth Dragon (linked to APT41)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-8088"
+          ],
+          "DOMAIN": [
+            "dailydownloads[.]net",
+            "easyboxsync[.]com",
+            "softwares.dailydownloads[.]net",
+            "updates.dailydownloads[.]net"
+          ],
+          "FILE_HASH_SHA256": [
+            "7af238050b2750da760b2cf5053bcf58054bcf44e9af1617d8b7af3ed98d09c6",
+            "9c21d538c2a556f4a5b351b29f3513097ac57643f291ff6d751400d8dbc69489"
+          ],
+          "URL": [
+            "drive.easyboxsync[.]com/resources/channels/v7/cambodia64",
+            "https://api.telegram.org",
+            "https://softwares.dailydownloads[.]net/products/microsoft/office/product-key/DB2F.activation.key",
+            "https://updates.dailydownloads[.]net/docs/microsoft/office/Office_Activation_Manual_DB2F.pdf"
+          ],
+          "YARA_RULE": [
+            "Mentioned as available in the Check Point report."
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Initial Access: User Execution (T1204)",
+          "Initial Access: Phishing (T1566)",
+          "Persistence: Boot or Logon Autostart Execution (T1547.001)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Impair Defenses (T1562.001)",
+          "Command and Control: Application Layer Protocol (T1071)",
+          "Command and Control: Ingress Tool Transfer (T1105)"
+        ],
+        "analyse": "High risk for national security and government information confidentiality in Southeast Asia. The group's ability to quickly weaponize disclosed vulnerabilities and use sophisticated evasion techniques highlights its persistence and danger. The focus on government entities and law enforcement indicates a strategic interest in geopolitical intelligence. Geo-restrictions on C2 limit 'collateral damage' and increase operational stealth.",
+        "recommandations": [
+          "Immediately patch WinRAR (CVE-2025-8088).",
+          "Enhance user awareness of social engineering and weaponized archives.",
+          "Implement defense-in-depth, including monitoring for suspicious archive files and C2 traffic.",
+          "Deploy YARA rules to detect Amaranth Dragon intrusions.",
+          "Prioritize vulnerability management and patching."
+        ],
+        "tags": [
+          "amaranth_dragon",
+          "apt41",
+          "cyberespionage",
+          "winrar",
+          "cve-2025-8088",
+          "government",
+          "law_enforcement",
+          "southeast_asia",
+          "havoc_framework",
+          "telegram_rat",
+          "social_engineering",
+          "persistence",
+          "defense_evasion",
+          "dll_sideloading",
+          "geo_targeting",
+          "t1190",
+          "t1204",
+          "t1566",
+          "t1071",
+          "t1105",
+          "t1547_001",
+          "t1027",
+          "t1562_001",
+          "vulnerability_management",
+          "patch_management",
+          "threat_intelligence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-amaranth-dragon-cyberespionage-group-exploits-winrar-flaw/",
+          "https://research.checkpoint.com/2026/amaranth-dragon-weaponizes-cve-2025-8088-for-targeted-espionage/",
+          "https://securityonline.info/10-days-to-exploit-amaranth-dragon-weaponizes-winrar-flaw-to-spy-on-se-asia/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA Warns of Unpatched Critical Flaws in Avation Light Engine Pro and RISS SRL MOMA Seismic Station",
+        "description": "CISA issued alerts regarding critical unpatched vulnerabilities in two Operational Technology (OT) devices: Avation’s Light Engine Pro and RISS SRL’s MOMA Seismic Station (CVE-2026-1632, CVSS 9.1). Both devices expose their configuration and control interfaces without any authentication, allowing unauthenticated attackers to gain full control, manipulate data, or cause a denial-of-service condition. Vendors have not responded to CISA's coordination requests.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1632"
+          ]
+        },
+        "mitre_ttps": [
+          "Defense Evasion: Bypass Access Controls (T1562.002)",
+          "Impact: Data Destruction (T1485)",
+          "Impact: Inhibit System Recovery (T1490)",
+          "Impact: Endpoint Denial of Service (T1499)",
+          "Impact: System Shutdown/Reboot (T1529)"
+        ],
+        "analyse": "Extremely high risk for critical infrastructure and OT environments due to complete lack of authentication and vendor unresponsiveness. Exploitation could lead to physical disruption, data integrity loss, or blinding of monitoring systems, with potentially disastrous consequences for public or industrial safety.",
+        "recommandations": [
+          "Immediately isolate affected devices behind strict firewalls and VPNs.",
+          "Attempt to contact vendors for patches or mitigation advice."
+        ],
+        "tags": [
+          "cisa",
+          "ot_security",
+          "critical_infrastructure",
+          "unauthenticated_access",
+          "denial_of_service",
+          "data_integrity",
+          "vendor_unresponsive",
+          "critical_vulnerability",
+          "t1562_002",
+          "t1499",
+          "cve-2026-1632"
+        ],
+        "sources": [
+          "https://securityonline.info/cisa-warns-of-unpatched-avation-riss-critical-flaws/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA Flags Critical SolarWinds Web Help Desk Vulnerability as Exploited",
+        "description": "CISA confirmed active exploitation of a critical remote code execution (RCE) vulnerability (CVE-2025-40551) in SolarWinds Web Help Desk via its AjaxProxy component. This flaw allows unauthenticated remote attackers to execute code, leading to full system takeover, lateral movement, and credential theft. Other critical authentication bypass and deserialization flaws (CVE-2025-40552, CVE-2025-40554, CVE-2025-40553) were also addressed.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-40551",
+            "CVE-2025-40552",
+            "CVE-2025-40553",
+            "CVE-2025-40554"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Lateral Movement (T1021)"
+        ],
+        "analyse": "High-risk vulnerability due to its critical severity, unauthenticated remote exploitation, and potential for complete system compromise and lateral spread within networks. Previous similar exploitation activity noted for Web Help Desk.",
+        "recommandations": [
+          "Apply SolarWinds Web Help Desk 2026.1 update.",
+          "Review externally accessible instances, limit network exposure, and validate that no unauthorized changes occurred prior to patching."
+        ],
+        "tags": [
+          "solarwinds",
+          "web_help_desk",
+          "cve-2025-40551",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "unauthenticated_access",
+          "supply_chain",
+          "credential_theft",
+          "lateral_movement",
+          "t1190",
+          "t1552",
+          "t1021"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/critical-solarwinds-vulnerability-exploited"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA: VMware ESXi Flaw Now Exploited in Ransomware Attacks",
+        "description": "CISA confirms that ransomware gangs are actively exploiting a high-severity VMware ESXi sandbox escape vulnerability (CVE-2025-22225), previously used in zero-day attacks. Chinese-speaking threat actors were reportedly chaining this flaw with others (CVE-2025-22226, CVE-2025-22224) since February 2024 to escape VM sandboxes with privileged access. This is now leading to ransomware deployments.",
+        "threat_actor": "Ransomware gangs, Chinese-speaking threat actors (likely state-sponsored)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-22224",
+            "CVE-2025-22225",
+            "CVE-2025-22226"
+          ]
+        },
+        "mitre_ttps": [
+          "Privilege Escalation: Exploitation for Privilege Escalation (T1068)",
+          "Impact: Data Encrypted for Impact (T1486)"
+        ],
+        "analyse": "Critical threat to virtualized environments, enabling full control over hypervisors and virtual machines, leading to ransomware deployment. The involvement of Chinese-speaking actors and prior zero-day exploitation indicates sophisticated capabilities. U.S. federal agencies have been mandated to patch this flaw promptly.",
+        "recommandations": [
+          "Apply patches for VMware ESXi products against CVE-2025-22225, CVE-2025-22226, CVE-2025-22224.",
+          "Federal agencies must patch by March 25, 2025, as mandated by BOD 22-01."
+        ],
+        "tags": [
+          "vmware",
+          "esxi",
+          "sandbox_escape",
+          "ransomware",
+          "zero_day",
+          "high_severity",
+          "critical_vulnerability",
+          "virtualization",
+          "state_sponsored_threat",
+          "t1068",
+          "t1486",
+          "cve-2025-22225",
+          "cve-2025-22226",
+          "cve-2025-22224"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-vmware-esxi-flaw-now-exploited-in-ransomware-attacks/",
+          "https://securityaffairs.com/187637/security/cve-2025-22225-in-vmware-esxi-now-used-in-active-ransomware-attacks.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "CISA Warns of Five-Year-Old GitLab Flaw Exploited in Attacks",
+        "description": "CISA warns of active exploitation of a five-year-old Server-Side Request Forgery (SSRF) vulnerability (CVE-2021-39935) in GitLab. This flaw allows unauthenticated attackers to access the CI Lint API, potentially impacting CI/CD configurations. U.S. government agencies are mandated to patch this flaw by February 24, 2026.",
+        "threat_actor": "Malicious cyber actors",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-39935"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190)"
+        ],
+        "analyse": "This vulnerability represents a frequent attack vector, posing significant risks due to potential access to CI/CD pipelines and sensitive configurations in widely used platforms like GitLab (used by over 50% of Fortune 100 organizations).",
+        "recommandations": [
+          "Apply patches for GitLab systems against CVE-2021-39935.",
+          "Implement vendor mitigations, follow BOD 22-01 guidance for cloud services, or discontinue product use if mitigations are unavailable."
+        ],
+        "tags": [
+          "gitlab",
+          "ssrf",
+          "server_side_request_forgery",
+          "ci_cd",
+          "supply_chain",
+          "vulnerability_exploitation",
+          "cisa",
+          "cve-2021-39935",
+          "t1190"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-of-five-year-old-gitlab-flaw-exploited-in-attacks/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Critical Generative AI Faces Cyberattacks: A Double-Edged Sword",
+        "description": "Generative AI is increasingly used by attackers for tasks such as victim profiling, crafting social engineering content, and developing malware, boosting the performance of advanced actors and lowering the technical barrier for less experienced ones. Simultaneously, AI systems (LLMs) themselves are targets of attacks, including model poisoning, supply chain compromise, and data exfiltration.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Reconnaissance: Victim Profiling (T1589)",
+          "Initial Access: Social Engineering (T1566)",
+          "Resource Development: Develop Malware (T1587.001)",
+          "Collection: Data Exfiltration (T1041)"
+        ],
+        "analyse": "The integration of generative AI into attack tools increases the sophistication and scale of threats. This creates new attack surfaces and specific vulnerabilities within AI systems, highlighting a systemic risk in the digital ecosystem. Attackers' adaptability to new technologies necessitates a proactive approach to AI system security and heightened vigilance against AI-enhanced social engineering tactics.",
+        "recommandations": [
+          "Strengthen awareness of AI-assisted social engineering techniques.",
+          "Secure AI systems themselves against model poisoning, supply chain compromises, and data exfiltration.",
+          "Implement specific security audits for AI deployments."
+        ],
+        "tags": [
+          "ia",
+          "generative_ai",
+          "artificial_intelligence",
+          "social_engineering",
+          "malware_development",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "t1589",
+          "t1566",
+          "t1587_001",
+          "t1041"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-001/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Critical n8n Flaws Disclosed Along with Public Exploits",
+        "description": "Multiple critical remote code execution (RCE) vulnerabilities (CVE-2026-25049) in the n8n open-source workflow automation platform allow authenticated users to execute arbitrary code, bypass sanitization mechanisms, and gain full control of the host server. Impact includes credential theft, pivoting to connected cloud accounts, and hijacking AI workflows. Public exploits exist, increasing the risk.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-25049"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Exploit Public-Facing Application (T1190.003 - Implied RCE)"
+        ],
+        "analyse": "High impact due to RCE and potential for widespread compromise of systems leveraging n8n, including connected cloud services and AI pipelines. The existence of public exploits increases the attack surface and likelihood of exploitation. The n8n platform is an attractive target for cybercriminals.",
+        "recommandations": [
+          "Immediately update the n8n platform to the most recent version (currently 1.123.17 and 2.5.2).",
+          "Rotate the 'N8N_ENCRYPTION_KEY' and all credentials stored on the server.",
+          "Review workflows for suspicious expressions."
+        ],
+        "tags": [
+          "n8n",
+          "remote_code_execution",
+          "rce",
+          "critical_vulnerability",
+          "workflow_automation",
+          "cloud_security",
+          "api_keys",
+          "oauth_tokens",
+          "credential_theft",
+          "ai_security",
+          "cve-2026-25049",
+          "t1190_003"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-n8n-flaws-disclosed-along-with-public-exploits/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "EDR Killer Tool Uses Signed Kernel Driver From Forensic Software",
+        "description": "Hackers are using an EDR killer tool that abuses a legitimate, but revoked, EnCase kernel driver to disable security solutions. This tool detects 59 security tools and leverages the 'Bring Your Own Vulnerable Driver' (BYOVD) technique to gain kernel-level access. Windows still accepts the old driver certificate due to timestamp validation over CRL checks, and a Windows 10 exception for older certificates.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion: Impair Defenses (T1562)",
+          "Defense Evasion: Disable or Modify Tools (T1562.001)",
+          "Defense Evasion: Abuse of Exploitable Driver (T1562.007)"
+        ],
+        "analyse": "Sophisticated defense evasion technique exploiting trusted but vulnerable software components and Windows' driver signature enforcement quirks. This represents a significant challenge for endpoint security and incident response, as it allows attackers to bypass critical kernel-level protections.",
+        "recommandations": [
+          "Enable Multi-Factor Authentication (MFA) on all remote access services.",
+          "Monitor VPN logs for suspicious activity.",
+          "Enable HVCI/Memory Integrity to enforce Microsoft’s vulnerable driver blocklist."
+        ],
+        "tags": [
+          "edr_bypass",
+          "kernel_driver",
+          "byovd",
+          "defense_evasion",
+          "forensic_software",
+          "windows_security",
+          "signed_driver",
+          "t1562",
+          "t1562_001",
+          "t1562_007"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/edr-killer-tool-uses-signed-kernel-driver-from-forensic-software/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "GreyNoise Tracks Massive Citrix Gateway Recon Using 63K+ Residential Proxies and AWS",
+        "description": "GreyNoise observed a coordinated reconnaissance campaign targeting Citrix ADC and NetScaler Gateways (111,000+ sessions). Attackers used over 63,000 residential proxies to discover login panels, then switched to AWS infrastructure for aggressive version enumeration. The campaign shows careful operational security (VPNs/tunnels via Azure, Linux proxies for residential, datacenter settings for AWS) but identical TCP option ordering suggests common underlying tools. Likely maps infrastructure for future exploitation.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Reconnaissance: Vulnerability Scanning (T1595.002)",
+          "Reconnaissance: Gather Victim Network Information (T1590)",
+          "Command and Control: Proxy (T1090.002)",
+          "Resource Development: Compromise Infrastructure (T1583)"
+        ],
+        "analyse": "Pre-exploitation reconnaissance indicates a targeted, organized threat. The use of diverse proxy infrastructure and specific network settings highlights advanced operational security to evade detection. Focus on EPA setup files suggests interest in version-specific exploits.",
+        "recommandations": [
+          "Monitor for unusual user agents, rapid login enumeration, outdated browser fingerprints, and external access to sensitive paths.",
+          "Limit exposure, enforce authentication, suppress version info, and flag suspicious regional traffic."
+        ],
+        "tags": [
+          "citrix_gateway",
+          "citrix_adc",
+          "netscaler",
+          "reconnaissance",
+          "residential_proxies",
+          "aws",
+          "operational_security",
+          "vulnerability_scanning",
+          "infrastructure_mapping",
+          "t1595_002",
+          "t1590",
+          "t1090_002",
+          "t1583"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187615/hacking/greynoise-tracks-massive-citrix-gateway-recon-using-63k-residential-proxies-and-aws.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Hackers Compromise NGINX Servers to Redirect User Traffic",
+        "description": "Threat actors are compromising NGINX servers and Baota hosting management panels, primarily targeting sites with Asian TLDs, government, and educational sites. They hijack user traffic and reroute it through their backend infrastructure by abusing a legitimate load balancing directive, which evades security alerts.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1189 - Drive-by Compromise",
+            "T1090.002 - Proxy"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Drive-by Compromise (T1189)",
+          "Command and Control: Proxy (T1090.002)"
+        ],
+        "analyse": "Significant threat to web infrastructure, potentially leading to secondary malicious activities (phishing, data theft, malware distribution). Targeting specific TLDs suggests regional operations. Abusing a legitimate function (load balancing) for evasion highlights the sophistication of the attacks and the need for in-depth configuration monitoring.",
+        "recommandations": [
+          "Monitor NGINX configurations for unauthorized changes, especially load balancing directives.",
+          "Inspect traffic for unusual redirection patterns.",
+          "Conduct regular audits of Baota panels and server logs."
+        ],
+        "tags": [
+          "nginx",
+          "baota",
+          "traffic_redirection",
+          "server_compromise",
+          "web_server",
+          "load_balancing",
+          "asian_tlds",
+          "government",
+          "education",
+          "supply_chain",
+          "t1090_002",
+          "t1189"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-compromise-nginx-servers-to-redirect-user-traffic/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Microsoft: Info-Stealing Malware Expands from Windows to macOS",
+        "description": "Info-stealing malware attacks are rapidly expanding from Windows to macOS, leveraging cross-platform languages (Python) and abusing trusted platforms (WhatsApp). Campaigns use social engineering (fake websites, software, ClickFix-style prompts, malicious DMG files) to deploy macOS-specific stealers (DigitStealer, MacSync, Atomic macOS Stealer (AMOS)) and Python-based ones (PXA Stealer, Eternidade Stealer). These malwares steal credentials, crypto wallets, developer credentials, and browser sessions, often using Telegram for C2 and native tools for evasion.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access: Phishing (T1566)",
+          "Initial Access: User Execution (T1204)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Impair Defenses (T1562.001)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Credential Access: Steal Web Session Cookie (T1539)",
+          "Credential Access: Credentials from Password Stores (T1555)",
+          "Collection: Data from Local System (T1005)",
+          "Command and Control: Application Layer Protocol (T1071)"
+        ],
+        "analyse": "Growing cross-platform threat, emphasizing the need for multi-OS protection. Social engineering remains a primary vector, and abuse of trusted applications and native tools complicates detection. Infostealer compromise can lead to data breaches, account takeovers, supply chain attacks, and ransomware attacks.",
+        "recommandations": [
+          "Train users on social engineering tactics (fake ads, installers, copy-paste tricks).",
+          "Monitor macOS for risky Terminal activity (curl, Base64, AppleScript).",
+          "Watch for unusual access to Keychain, browser credentials, cloud keys, and crypto wallets.",
+          "Inspect outbound traffic for suspicious POST requests and short-lived ZIP files created in temp folders.",
+          "Block known Command and Control (C2) servers using threat intelligence.",
+          "Strengthen defenses against Python and LOLBIN abuse.",
+          "Enable cloud-delivered protection, EDR in block mode, network and web protection, SmartScreen, automated investigation, and tamper protection.",
+          "Apply Attack Surface Reduction (ASR) rules to block obfuscated scripts, untrusted executables, and scripts launching downloaded payloads."
+        ],
+        "tags": [
+          "info_stealer",
+          "malware",
+          "windows",
+          "macos",
+          "cross_platform",
+          "python_malware",
+          "social_engineering",
+          "phishing",
+          "whatsapp",
+          "telegram_c2",
+          "credential_theft",
+          "crypto_wallets",
+          "data_exfiltration",
+          "defense_evasion",
+          "t1566",
+          "t1204",
+          "t1027",
+          "t1562_001",
+          "t1552",
+          "t1539",
+          "t1555",
+          "t1005",
+          "t1071"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187608/security/microsoft-info-stealing-malware-expands-from-windows-to-macos.html"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Rublevka Team: Anatomy of a Russian Crypto Drainer Operation",
+        "description": "The Russian cybercriminal group Rublevka Team specializes in large-scale cryptocurrency theft, having generated over $10 million since 2023. They operate as a 'traffer team' using social engineering to direct victims to spoofed landing pages impersonating crypto services. These pages deploy custom JavaScript drainer scripts to connect wallets and authorize fraudulent transactions, targeting Solana (SOL) and other chains. Their infrastructure is automated, offering Telegram bots, landing page generators, evasion features (cloaking, 'Red Table Bypass') and supporting over 90 wallet types.",
+        "threat_actor": "Rublevka Team",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "burn-shard-bridge[.]xyz",
+            "commontechrepo[.]cc",
+            "efficient-endpoint[.]site",
+            "fontmaxplugin[.]cc",
+            "g-app-d[.]cc",
+            "open-sol[.]cc",
+            "pumptoken[.]net",
+            "rublevkateam[.]cc",
+            "sol-coin[.]xyz",
+            "sol-galaxy[.]cc",
+            "sol-hook[.]org",
+            "web-core[.]cc"
+          ],
+          "EMAIL": [
+            "alex[.]petrov[.]domain[@]emailsecure[.]tech"
+          ],
+          "FILE_HASH_SHA256": [
+            "9c21d538c2a556f4a5b351b29f3513097ac57643f291ff6d751400d8dbc69489",
+            "b9157f6bff6a6ee6ba5932ebac2c8796836b21eb3c69df08fbeb102e9228ba15"
+          ],
+          "IPv4": [
+            "158[.]94[.]208[.]165"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access: Social Engineering (T1566)",
+          "Initial Access: Spearphishing Link (T1566.002)",
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Exfiltration: Data Exfiltration (T1041)",
+          "Defense Evasion: Obfuscated Files or Information (T1027)",
+          "Defense Evasion: Hide Artifacts: Runtime Data (T1564.003)",
+          "Defense Evasion: Hide Artifacts: Compiler Obfuscation (T1564.004)"
+        ],
+        "analyse": "Exemplifies the industrialization of cybercrime-as-a-service. Lowers technical barriers, attracts global affiliates, and poses significant reputational and legal risks to cryptocurrency platforms and fintech providers. Rapid infrastructure rotation and cloaking undermine traditional fraud detection.",
+        "recommandations": [
+          "Implement proactive monitoring for brand impersonation and spoofed landing pages.",
+          "Enhance user verification and Multi-Factor Authentication (MFA) for crypto wallets.",
+          "Collaborate between platforms and the security community for takedown actions.",
+          "Educate users on social engineering and safe cryptocurrency practices."
+        ],
+        "tags": [
+          "rublevka_team",
+          "cybercrime",
+          "cryptocurrency",
+          "wallet_drainer",
+          "social_engineering",
+          "phishing",
+          "solana",
+          "fintech",
+          "affiliate_program",
+          "dga",
+          "cloaking",
+          "defense_evasion",
+          "t1566",
+          "t1552",
+          "t1041",
+          "t1027",
+          "t1564_003",
+          "t1564_004"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/rublevka-team-anatomy-russian-crypto-drainer-operation/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Samsung MagicInfo9 Critical Flaws (CVSS 9.8) Expose Servers",
+        "description": "Samsung MagicInfo9 Server is affected by multiple critical vulnerabilities (CVE-2026-25202, CVE-2026-25201, CVE-2026-25200, all with CVSS 9.8) allowing complete server takeover by unauthenticated attackers. These include hardcoded database credentials, remote code execution via arbitrary file upload, and stored cross-site scripting (XSS) leading to account takeover. All versions prior to 21.1090.1 are affected.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-25200",
+            "CVE-2026-25201",
+            "CVE-2026-25202"
+          ]
+        },
+        "mitre_ttps": [
+          "Credential Access: Hardcoded Credentials (T1552.001)",
+          "Execution: Command and Scripting Interpreter (T1059)",
+          "Persistence: Server Software Component (T1505)",
+          "Privilege Escalation: Exploitation for Privilege Escalation (T1068)",
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Impact: Account Access Removal (T1531)"
+        ],
+        "analyse": "Extremely high risk for organizations using digital signage managed by MagicInfo9, potentially leading to full network compromise, data manipulation, and administrative control. Unauthenticated access significantly increases the exploitability of these flaws.",
+        "recommandations": [
+          "Immediately update MagicInfo9 Server to version 21.1090.1 or later."
+        ],
+        "tags": [
+          "samsung",
+          "magicinfo9",
+          "digital_signage",
+          "critical_vulnerability",
+          "hardcoded_credentials",
+          "remote_code_execution",
+          "rce",
+          "xss",
+          "account_takeover",
+          "unauthenticated_access",
+          "t1552_001",
+          "t1059",
+          "t1505",
+          "t1068",
+          "t1190",
+          "t1531",
+          "cve-2026-25202",
+          "cve-2026-25201",
+          "cve-2026-25200"
+        ],
+        "sources": [
+          "https://securityonline.info/signage-hijack-samsung-magicinfo9-flaws-cvss-9-8-expose-servers/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "The Double-Edged Sword of Non-Human Identities",
+        "description": "Leaked non-human identities, such as API keys and tokens, are a major driver of breaches in cloud environments. Flare's research found over 10,000 Docker Hub images leaking secrets (production API keys, cloud tokens, CI/CD credentials, AI model access tokens). Notable incidents include the 2024 Snowflake case (UNC5537 group using infostealer dumps) and Home Depot (GitHub token exposed for over a year). These identities often have broad, persistent privileges and lack multi-factor authentication, making them quiet, durable attack vectors.",
+        "threat_actor": "UNC5537, Crimson Collective",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Credential Access: Unsecured Credentials (T1552)",
+          "Collection: Data from Local System (T1005)",
+          "Exfiltration: Data Exfiltration (T1041)"
+        ],
+        "analyse": "Systemic failure in modern software development and operations, where machine identities are pervasive, long-lived, often lack MFA, and are easily exposed. This grants silent, durable, and legitimate access, bypassing traditional detections. Represents a significant risk to the supply chain and cloud security.",
+        "recommandations": [
+          "Implement Threat Exposure Management platforms for continuous scanning of public registries and code repositories for exposed credentials.",
+          "Regular rotation and expiration of machine identities.",
+          "Implement proactive monitoring.",
+          "Improve credential governance."
+        ],
+        "tags": [
+          "non_human_identities",
+          "api_keys",
+          "tokens",
+          "cloud_security",
+          "supply_chain",
+          "credential_management",
+          "data_breach",
+          "docker_hub",
+          "github",
+          "gitlab",
+          "snowflake",
+          "home_depot",
+          "red_hat",
+          "unc5537",
+          "crimson_collective",
+          "t1552",
+          "t1005",
+          "t1041"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/the-double-edged-sword-of-non-human-identities/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Toxic Invites & Root Access: Cisco Patches Critical Meeting Flaws",
+        "description": "Cisco patched critical vulnerabilities in Cisco Meeting Management and Cisco TelePresence Collaboration Endpoint (CE) Software. The Meeting Management flaw allows authenticated remote attackers (video operator role) to upload arbitrary files, execute commands, and escalate to root via improper input validation in Certificate Management. CVE-2026-20119 (CVSS 7.5) affects TelePresence/RoomOS, causing DoS via crafted text in meeting invites without user interaction.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-20119"
+          ]
+        },
+        "mitre_ttps": [
+          "Execution: Command and Scripting Interpreter (T1059)",
+          "Privilege Escalation: Exploitation for Privilege Escalation (T1068)",
+          "Initial Access: Exploit Public-Facing Application (T1190)",
+          "Impact: Denial of Service (T1499)"
+        ],
+        "analyse": "Significant impact on enterprise collaboration platforms, allowing system takeover and service disruption. The Meeting Management flaw is particularly severe due to root access potential with relatively low-privileged authentication. DoS on TelePresence can disrupt critical communications.",
+        "recommandations": [
+          "Apply urgent updates for Cisco Meeting Management and Cisco TelePresence Collaboration Endpoint (CE) Software/RoomOS."
+        ],
+        "tags": [
+          "cisco",
+          "meeting_management",
+          "telepresence",
+          "roomos",
+          "critical_vulnerability",
+          "remote_code_execution",
+          "privilege_escalation",
+          "arbitrary_file_upload",
+          "denial_of_service",
+          "authenticated_access",
+          "t1059",
+          "t1068",
+          "t1190",
+          "t1499"
+        ],
+        "sources": [
+          "https://securityonline.info/toxic-invites-root-access-cisco-patches-critical-meeting-flaws/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "WatchGuard Patches VPN PrivEsc & Firebox LDAP Injection",
+        "description": "WatchGuard issued advisories for two vulnerabilities: a local privilege escalation flaw (NCPVE-2025-0626) in the Mobile VPN with IPSec client for Windows during installation/update, allowing SYSTEM rights; and an LDAP Injection (CVE-2026-1498, CVSS 7.0) in Fireware OS, allowing remote unauthenticated attackers to retrieve sensitive information from LDAP servers and potentially bypass authentication with a valid passphrase.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1498"
+          ]
+        },
+        "mitre_ttps": [
+          "Privilege Escalation (T1068)",
+          "Initial Access: Exploit Public-Facing Application (T1190 - related to Injection)",
+          "Collection: Data from Remote System (T1005)",
+          "Defense Evasion: Authentication Bypass (T1587.001)"
+        ],
+        "analyse": "The local privilege escalation is severe for endpoints with physical access or where an attacker already has low-level access. LDAP Injection threatens core identity management systems, potentially leading to unauthorized access and data compromise. Although the CVSS for LDAP injection is below 8.0, its impact on authentication is significant.",
+        "recommandations": [
+          "Apply patches for WatchGuard Mobile VPN with IPSec client and Fireware OS."
+        ],
+        "tags": [
+          "watchguard",
+          "vpn",
+          "firebox",
+          "privilege_escalation",
+          "ldap_injection",
+          "authentication_bypass",
+          "data_exfiltration",
+          "critical_vulnerability",
+          "t1068",
+          "t1190",
+          "t1005",
+          "t1587_001"
+        ],
+        "sources": [
+          "https://securityonline.info/watchguard-patches-vpn-privesc-firebox-ldap-injection/"
+        ],
+        "date": "2026-02-05"
+      },
+      {
+        "title": "Why Smart People Fall For Phishing Attacks",
+        "description": "Phishing attacks persist despite advanced defenses, largely due to exploiting human psychology rather than just technical vulnerabilities. Attackers use social engineering tactics such as urgency, authority, and emotional manipulation, which are amplified by AI (erasing spelling errors, deepfakes, voice mimicry). Overconfidence and the \"illusion of control\" make individuals vulnerable, often leading them to ignore security protocols.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access: Phishing (T1566)",
+          "Initial Access: Spearphishing Link (T1566.002)"
+        ],
+        "analyse": "Phishing remains highly effective due to human factors (psychological biases, overconfidence) and AI advancements. AI makes phishing much harder to detect by traditional human means. This highlights the need for a shift from purely technical defense to continuous user education and vigilance.",
+        "recommandations": [
+          "Stop and assess messages, verify sources before taking any action.",
+          "Continuous security education to counteract psychological biases.",
+          "Do not rely solely on instinct.",
+          "Implement Multi-Factor Authentication (MFA)."
+        ],
+        "tags": [
+          "phishing",
+          "social_engineering",
+          "human_element",
+          "psychology",
+          "ai_impact",
+          "deepfake",
+          "voice_mimicry",
+          "cybersecurity_awareness",
+          "t1566",
+          "t1566_002"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/psychology-of-phishing/"
+        ],
+        "date": "2026-02-05"
+      }
+    ]
+  }
+}
