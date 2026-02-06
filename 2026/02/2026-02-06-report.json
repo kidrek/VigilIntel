@@ -1,0 +1,2681 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification des menaces cybernétiques, marquée par plusieurs tendances clés. Premièrement, l'espionnage parrainé par des États-nations reste une préoccupation majeure, avec des groupes comme TGR-STA-1030 (Asie) et Amaranth-Dragon (Chine/APT41) ciblant activement des gouvernements et des infrastructures critiques à l'échelle mondiale, y compris en Asie du Sud-Est et en Europe. Leurs tactiques incluent des campagnes de phishing sophistiquées, l'exploitation de vulnérabilités N-day (comme la faille WinRAR CVE-2025-8088), et l'utilisation de rootkits de noyau Linux (ShadowGuard) pour une furtivité accrue. Deuxièmement, les opérations de rançongiciel continuent d'évoluer, avec des groupes comme Black Basta intégrant des capacités d'évasion de défense (BYOVD) directement dans leurs charges utiles, et des acteurs abusant de services légitimes (VMs ISPsystem) pour héberger leur infrastructure malveillante. Des attaques destructrices, comme DYNOWIPER en Pologne, mettent en évidence la menace persistante pour les infrastructures critiques, notamment le secteur de l'énergie. Troisièmement, l'abus de l'intelligence artificielle (IA) et des outils d'automatisation est une menace émergente. Des pièges tels que les compétences malveillantes OpenClaw/Clawdbot exploitent la confiance des utilisateurs pour voler des informations sensibles, tandis que des variantes de malware comme CrashFix intègrent l'ingénierie sociale basée sur le navigateur. La gestion des vulnérabilités reste un défi constant, avec un grand nombre de failles critiques (CVSS >= 8.0), incluant des exécutions de code à distance (RCE) et des élévations de privilèges (EoP) dans divers produits (Azure, n8n, unstructured library, Lexmark, Edimax). De nombreuses violations de données sont également signalées, souvent résultant de phishing ou d'exploitation de vulnérabilités, touchant des secteurs variés allant de l'éducation aux plateformes de newsletter et aux services financiers. L'état général des menaces est donc caractérisé par une sophistication croissante des attaquants, une persistance des menaces parrainées par des États, et une exploitation rapide des nouvelles technologies et des vulnérabilités, nécessitant des stratégies de défense en profondeur et une vigilance constante.",
+      "date": "2026-02-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "OpenClaw (aka Moltbot, Clawdbot)",
+        "secteur": "Grand public, Entreprises (en expansion), Utilisateurs de crypto-monnaies",
+        "modop": "Distribution de 'compétences' (skills) malveillantes via des plateformes d'IA open-source. Ces compétences exécutent des commandes shell cachées (souvent encodées en Base64), téléchargent des scripts/binaires supplémentaires et exfiltrent des clés privées de crypto-monnaies, secrets d'API, et informations d'identification.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "ai",
+          "social_engineering",
+          "cryptocurrency_theft",
+          "credential_exfiltration"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/helpful-skills-or-hidden-payloads-bitdefender-labs-dives-deep-into-the-openclaw-malicious-skill-trap",
+          "https://blog.talosintelligence.com/all-gas-no-brakes-time-to-come-to-ai-church/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Femwar02",
+        "secteur": "Éducation (universités)",
+        "modop": "Attaque par rançongiciel (ransomware) avec chiffrement de données. Souche de rançongiciel rapide et personnalisable, construite à partir de sources divulguées de Babuk, LockBit v2.0 et DarkSide.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_encryption",
+          "pro_russian"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/italian-university-la-sapienza-goes-offline-after-cyberattack/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Qilin (aka Agenda)",
+        "secteur": "Énergie, Industrie automobile, Médias, Services pathologiques",
+        "modop": "Opération de Ransomware-as-a-Service (RaaS). Utilisation de machines virtuelles ISPsystem pour l'hébergement et la livraison furtive de charges utiles. Vol de documents (jusqu'à 1 To) et chiffrement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gang-uses-ispsystem-vms-for- stealthy-payload-delivery/",
+          "https://www.bleepingcomputer.com/news/security/romanian-oil-pipeline-operator-conpet-discloses-cyberattack-qilin-ransomware/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Stan Ghouls (aka Bloody Wolf)",
+        "secteur": "Fabrication industrielle, Finance, IT, Organismes gouvernementaux, Logistique, Installations médicales, Institutions éducatives",
+        "modop": "Campagnes de spear-phishing avec pièces jointes PDF malveillantes. Utilisation de chargeurs Java personnalisés et du RAT NetSupport pour maintenir le contrôle des machines infectées. Infrastructure changeante avec de nouveaux domaines pour chaque campagne. Intérêt potentiel pour les malwares IoT (Mirai).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "spear_phishing",
+          "java_loader",
+          "netsupport_rat",
+          "data_theft",
+          "iot"
+        ],
+        "sources": [
+          "https://securelist.com/stan-ghouls-in-uzbekistan/118738/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Noname057(16)",
+        "secteur": "Sites web gouvernementaux, Hôtels, Événements sportifs majeurs (Jeux olympiques)",
+        "modop": "Attaques DDoS visant des cibles liées à la politique ou à des événements majeurs. Groupe pro-russe.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_russian",
+          "ddos"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187654/hacktivism/pro-russian-group-noname05716-launched-ddos-attacks-on-milano-cortina-2026-winter-olympics.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Amaranth-Dragon (écosystème APT41)",
+        "secteur": "Gouvernements, Agences de maintien de l'ordre",
+        "modop": "Campagnes de cyberespionnage très ciblées et furtives. Exploitation rapide de vulnérabilités N-day (ex: CVE-2025-8088 dans WinRAR). Utilisation de spear-phishing avec archives malveillantes hébergées sur le cloud, chargement de DLL side-loading, et déploiement du framework C2 Havoc en mémoire. Utilisation du RAT TGAmaranth contrôlé par bot Telegram.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "cyber_espionage",
+          "apt41",
+          "spear_phishing",
+          "vulnerability_exploitation",
+          "dll_sideloading",
+          "havoc_c2",
+          "tgamaranth_rat"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187647/apt/china-linked-amaranth-dragon-hackers-target-southeast-asian-governments-in-2025.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Black Basta (opéré par Cardinal)",
+        "secteur": "Non spécifié, mais large historique de ciblage d'organisations",
+        "modop": "Rançongiciel avec évasion de défense par 'Bring Your Own Vulnerable Driver' (BYOVD), intégrant un pilote vulnérable (NSecSoft NSecKrnl, CVE-2025-68947) directement dans la charge utile pour désactiver les logiciels de sécurité. Possibilité de temps de latence prolongé et persistance post-déploiement du rançongiciel (GotoHTTP RAT).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "byovd",
+          "defense_evasion",
+          "privilege_escalation",
+          "data_encryption",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "UAT-7290 (China-nexus APT)",
+        "secteur": "Télécommunications, Utilisateurs chinois, Routeurs et appareils Edge",
+        "modop": "Framework 'Adversary-in-the-Middle' (AiTM) sophistiqué nommé DKnife, composé de sept implants Linux. Manipule le trafic, intercepte les requêtes DNS, détourne les mises à jour d'applications (Android, Windows), délivre des backdoors (ShadowPad, DarkNimbus), perturbe le trafic de produits de sécurité et exfiltre l'activité utilisateur. Utilise des rootkits eBPF furtifs (ShadowGuard).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "apt",
+          "china_nexus",
+          "aitm",
+          "gateway_monitoring",
+          "traffic_manipulation",
+          "dns_hijacking",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "rootkit"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/knife-cutting-the-edge/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "TGR-STA-1030 (aka UNC6619, groupe étatique aligné asiatique)",
+        "secteur": "Gouvernements, Infrastructures critiques (télécommunications, services publics, transports aériens, police, contre-terrorisme)",
+        "modop": "Campagnes d'espionnage global avec phishing malveillant (liens Mega.nz), exploitation de vulnérabilités N-day (ex: Atlassian Crowd CVE-2019-11580), déploiement de frameworks C2 (VShell), webshells (Behinder, Neo-reGeorg, Godzilla) et rootkits Linux eBPF (ShadowGuard). Reconnaissance étendue et ciblée, focalisation sur les partenariats économiques et les ressources naturelles.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_aligned",
+          "cyber_espionage",
+          "phishing",
+          "vulnerability_exploitation",
+          "c2_framework",
+          "webshell",
+          "rootkit",
+          "reconnaissance",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "ShadowSyndicate",
+        "secteur": "Non spécifié, lié à diverses familles de rançongiciels",
+        "modop": "Cluster d'infrastructure malveillante lié à des rançongiciels (ex: ALPHV/BlackCat). Évolution des tactiques avec la rotation de multiples clés SSH pour segmenter l'infrastructure et compliquer l'attribution. Potentiellement un IAB (Initial Access Broker) ou un fournisseur de services d'hébergement 'bulletproof'.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "ransomware",
+          "infrastructure_abuse",
+          "ssh_key_rotation",
+          "iab",
+          "bulletproof_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-landlord-shadowsyndicate-rotates-keys-to-hide-infrastructure/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Acteurs de SEO poisoning (liés à React2Shell)",
+        "secteur": "Sites web NGINX, particulièrement domaines asiatiques (.in, .id, .th), secteurs éducatifs et gouvernementaux",
+        "modop": "Compromission de serveurs NGINX et panneaux de gestion (ex: Baota) pour injecter des configurations malveillantes. Détournement silencieux du trafic utilisateur (proxy_pass, location directives) vers des domaines contrôlés par l'attaquant pour des activités de référencement illégales (SEO poisoning), souvent liées au jeu.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "seo_poisoning",
+          "nginx_hijacking",
+          "traffic_redirection",
+          "web_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-proxy-nginx-hijacked-for-silent-seo-poisoning/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Politique étrangère, Énergie",
+        "theme": "Realpolitik et interventions étrangères",
+        "description": "Les actions de Donald Trump au Venezuela et en Iran démontrent une realpolitik axée sur les intérêts américains plutôt que sur la promotion de la démocratie. Au Venezuela, une intervention a conduit à l'éviction de Nicolás Maduro et à l'établissement d'un nouveau pouvoir favorisant les exportations pétrolières vers les États-Unis. En Iran, Trump a incité à la révolte populaire mais n'est pas intervenu face à la répression, privilégiant des négociations sur le programme nucléaire et le soutien aux proxys.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "etats_unis",
+          "venezuela",
+          "iran",
+          "realpolitik",
+          "interventions_etrangeres",
+          "politique_energetique"
+        ],
+        "sources": [
+          "https://www.iris-france.org/iran-venezuela-quelle-doctrine-trump/",
+          "https://www.iris-france.org/venezuela-iran-la-realpolitik-selon-trump/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Défense, Relations Internationales",
+        "theme": "Expiration du traité New START",
+        "description": "L'expiration du traité New START le 5 février 2026, dernier accord de contrôle des armements entre les États-Unis et la Russie, risque de compromettre davantage la crédibilité de la dissuasion élargie américaine en Europe et de complexifier les efforts de dissuasion conventionnelle. Bien que les impacts directs à court terme pour l'Europe soient limités, les conditions stratégiques sous-jacentes à cette expiration persistent et pourraient pousser les deux puissances à étendre leurs capacités stratégiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "new_start",
+          "russie",
+          "etats_unis",
+          "controle_armements",
+          "dissuasion_nucleaire",
+          "securite_europeenne"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/new-start-expiry-implications-europe"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Gouvernement, Sports",
+        "theme": "Hacktivisme pro-russe",
+        "description": "Le groupe pro-russe Noname057(16) a lancé des attaques DDoS contre des bureaux du Ministère des Affaires étrangères italien et des sites web des Jeux olympiques d'hiver de Milano Cortina 2026, ainsi que des hôtels. Ces attaques, bien que d'impact limité jusqu'à présent, sont classées comme des actions russes et sont surveillées par les autorités italiennes.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "italie",
+          "hacktivisme",
+          "ddos",
+          "jeux_olympiques"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187654/hacktivism/pro-russian-group-noname05716-launched-ddos-attacks-on-milano-cortina-2026-winter-olympics.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Santé",
+        "theme": "Guerre hybride contre les hôpitaux",
+        "description": "L'Association des Hôpitaux de Berlin (BKG) a alerté sur une série d'incidents 'inexplicables' dans les hôpitaux et établissements de santé de la capitale, allant d'incursions de drones et de cyberattaques à des intrusions et incendies criminels. Les services de sécurité et de renseignement allemands classent au moins certaines de ces attaques comme des actes potentiels de guerre hybride, soulignant la nécessité d'une collaboration avec les services de sécurité pour la protection des installations de santé.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "allemagne",
+          "sante",
+          "guerre_hybride",
+          "cyberattaque",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/05/berlin-hospitals-threatened-by-spate-of-attacks/?pk_campaign=feed&pk_kwd=berlin-hospitals-threatened-by-spate-of-attacks"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Gouvernement, Institutions Internationales",
+        "theme": "Avenir des ONG humanitaires",
+        "description": "L'article analyse l'évolution des ONG humanitaires vers une complexité organisationnelle croissante, influencée par l'accès aux fonds publics et l'ingénierie organisationnelle. Dans un contexte de coupes budgétaires sévères, cette 'gigantisme' est ébranlée, soulevant la question de la redéfinition d'une solidarité internationale plus résiliente et légitime. Bien que non directement une menace cyber, cela souligne la transformation des acteurs de la société civile qui pourraient devenir des cibles stratégiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ong",
+          "aide_humanitaire",
+          "politique_developpement",
+          "societe_civile"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-gigantisme-et-la-complexite-de-certaines-ong-humanitaires-a-lheure-dune-redefinition-de-la-solidarite-internationale/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gouvernement",
+        "victime": "Ministère espagnol de la Science",
+        "description": "Le ministère espagnol de la Science a partiellement fermé ses systèmes informatiques après qu'un acteur de la menace a revendiqué une attaque et publié des échantillons de données. L'attaquant affirme avoir exploité une vulnérabilité critique IDOR pour obtenir des informations d'identification d'administrateur complet. La validité des données n'a pas été confirmée par une source tierce.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "espagne",
+          "idor",
+          "donnees_volées"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spains-ministry-of-science-shuts-down-systems-after-breach-claims/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Énergie (Opérateur de pipeline pétrolier)",
+        "victime": "Conpet (Roumanie)",
+        "description": "Conpet, l'opérateur national de pipelines pétroliers en Roumanie, a divulgué une cyberattaque qui a perturbé ses systèmes commerciaux et mis hors ligne son site web. Les technologies opérationnelles (SCADA) n'ont pas été affectées. Les acteurs de la menace (groupe Qilin) affirment avoir volé près de 1 To de documents, y compris des informations financières et des scans de passeports.",
+        "tags": [
+          "violation",
+          "breach",
+          "energie",
+          "roumanie",
+          "conpet",
+          "qilin_ransomware",
+          "exfiltration_donnees",
+          "infrastructure_critique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-oil-pipeline-operator-conpet-discloses-cyberattack-qilin-ransomware/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Plateforme de newsletters",
+        "victime": "Substack",
+        "description": "Substack a informé ses utilisateurs d'une violation de données survenue en octobre 2025, mais découverte en février 2026. Des attaquants ont volé des adresses e-mail, numéros de téléphone et autres métadonnées internes pour environ 697 313 à 700 000 utilisateurs. Aucune information d'identification ou financière n'aurait été compromise. Le problème a été corrigé et des tentatives de phishing sont à craindre.",
+        "tags": [
+          "violation",
+          "breach",
+          "substack",
+          "plateforme_en_ligne",
+          "donnees_personnelles",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/newsletter-platform-substack-notifies-users-of-data-breach/",
+          "https://securityaffairs.com/187659/uncategorized/hacker-claims-theft-of-data-from-700000-substack-users-company-confirms-breach.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Université La Sapienza (Rome, Italie)",
+        "description": "La plus grande université d'Europe, La Sapienza à Rome, a été la cible d'une cyberattaque, perturbant ses systèmes informatiques. Les rapports suggèrent une attaque par rançongiciel attribuée au groupe pro-russe Femwar02, entraînant le chiffrement de données. Les techniciens travaillent à la restauration des systèmes à partir de sauvegardes.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "italie",
+          "universite",
+          "ransomware",
+          "femwar02",
+          "chiffrement_donnees"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/italian-university-la-sapienza-goes-offline-after-cyberattack/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Éducation, Services Financiers",
+        "victime": "Harvard University, University of Pennsylvania (UPenn)",
+        "description": "Deux universités de l'Ivy League, Harvard et UPenn, ont subi des violations de données concernant les informations de leurs donateurs. Chez Harvard, une attaque de phishing téléphonique en novembre a exposé des informations d'anciens élèves et de développement. Chez UPenn, ShinyHunters a eu un accès complet à un compte SSO d'employé, accédant à des données de 1,2 million d'étudiants, anciens élèves et donateurs, y compris des informations personnelles sensibles. Les notifications aux victimes sont en cours ou ont été limitées.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "harvard",
+          "upenn",
+          "donateurs",
+          "phishing",
+          "acces_non_autorise",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Fintech (plateforme d'investissement automatisée)",
+        "victime": "Betterment",
+        "description": "En janvier 2026, Betterment a confirmé une violation de données suite à une attaque d'ingénierie sociale. Des clients ont reçu des messages frauduleux liés à la crypto-monnaie. La violation a exposé 1,4 million d'adresses e-mail uniques, noms et données de localisation géographique, ainsi que pour un sous-ensemble, des dates de naissance, numéros de téléphone et adresses physiques. Les attaquants n'auraient pas eu accès aux comptes clients ni aux identifiants de connexion.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "betterment",
+          "ingenierie_sociale",
+          "crypto_scam",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Betterment"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Gouvernement (services technologiques)",
+        "victime": "Conduent",
+        "description": "Une violation de données chez le géant govtech Conduent continue de s'étendre, affectant des millions d'Américains supplémentaires.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "govtech",
+          "conduent",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/116021447983817832"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24300",
+        "cvss": 9.8,
+        "product": "Azure Front Door",
+        "description": "Vulnérabilité d'élévation de privilèges dans Azure Front Door.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "elevation_of_privilege"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24300"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-64712",
+        "cvss": 9.8,
+        "product": "unstructured library",
+        "description": "Vulnérabilité critique permettant l'écriture arbitraire de fichiers via le traitement de fichiers .msg malveillants, pouvant entraîner une exécution de code à distance (RCE). Affecte les versions <= 0.18.17.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "unstructured_library",
+          "llm",
+          "ai",
+          "arbitrary_file_write",
+          "rce",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityonline.info/4-million-downloads-at-risk-critical-unstructured-flaw-cvss-9-8-allows-rce/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-0106",
+        "cvss": 9.3,
+        "product": "Linux Kernel (vpu_mmap in vpu_ioctl)",
+        "description": "Vulnérabilité d'élévation de privilèges locale due à un mappage de mémoire d'adresse arbitraire possible en raison d'un manque de vérification des limites.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "linux",
+          "kernel",
+          "elevation_of_privilege",
+          "arbitrary_address_mmap"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0106"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-15330",
+        "cvss": 8.8,
+        "product": "Tanium Deploy",
+        "description": "Vulnérabilité d'entrée/validation incorrecte dans Tanium Deploy.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tanium",
+          "deploy",
+          "improper_input_validation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15330"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65079",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Dépassement de tampon basé sur le tas dans la fonction getCFFNames, permettant l'exécution de code à distance (RCE) sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "imprimante",
+          "rce",
+          "heap_buffer_overflow",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-066/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65080",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Confusion de type dans la méthode usecmap, permettant l'exécution de code à distance (RCE) sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "imprimante",
+          "rce",
+          "type_confusion",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-065/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65081",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Dépassement de tampon basé sur le tas dans la fonction execuserobject, permettant l'exécution de code à distance (RCE) sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "imprimante",
+          "rce",
+          "heap_buffer_overflow",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-064/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65082",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Traversée de répertoire dans le binaire libesffls, permettant l'exécution de code à distance (RCE) sans authentification.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "imprimante",
+          "rce",
+          "directory_traversal",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-063/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2020-37150",
+        "cvss": 8.7,
+        "product": "Edimax EW-7438RPn-v3 Mini 1.27",
+        "description": "Accès non authentifié à la page /wizard_reboot.asp en mode non configuré, divulguant le SSID Wi-Fi et la clé de sécurité.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "edimax",
+          "routeur",
+          "divulgation_informations",
+          "unauthenticated",
+          "wi-fi_password"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37150"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-32393",
+        "cvss": 8.7,
+        "product": "AutoGPT (autogpt-platform-beta-v0.6.32)",
+        "description": "Vulnérabilité de déni de service (DoS) dans ReadRSSFeedBlock. Un fichier XML profondément construit peut épuiser les ressources mémoire lors de l'analyse, provoquant un DoS. Corrigée en v0.6.32.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "autogpt",
+          "ai",
+          "dos",
+          "xml_parsing",
+          "memory_exhaustion"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32393"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24302",
+        "cvss": 8.6,
+        "product": "Azure Arc",
+        "description": "Vulnérabilité d'élévation de privilèges dans Azure Arc.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "elevation_of_privilege"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24302"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-21532",
+        "cvss": 8.2,
+        "product": "Azure Function",
+        "description": "Vulnérabilité de divulgation d'informations dans Azure Function.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "information_disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21532"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24737",
+        "cvss": 8.1,
+        "product": "jsPDF library",
+        "description": "Vulnérabilité d'injection de code permettant à un attaquant d'injecter du JavaScript malveillant via des API de création de formulaire (AcroformChoiceField.addOption, AcroFormCheckBox.appearanceState) non assainies.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "javascript",
+          "code_injection",
+          "xss",
+          "pdf_generation"
+        ],
+        "sources": [
+          "https://securityonline.info/pdf-poison-popular-javascript-library-patches-critical-injection-and-crash-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25056",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Git node)",
+        "description": "Vulnérabilité permettant à des utilisateurs authentifiés (avec permissions de création/modification de workflows) d'exécuter des commandes système arbitraires ou de lire des fichiers arbitraires sur l'hôte n8n. Corrigée en versions 2.5.0 et 1.123.10.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "arbitrary_command_execution",
+          "file_read",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25049",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Merge node)",
+        "description": "Vulnérabilité permettant à des utilisateurs authentifiés (avec permissions de création/modification de workflows) d'écrire des fichiers arbitraires sur le système de fichiers du serveur n8n, potentiellement via le mode SQL Query, menant à une exécution de code à distance (RCE). Corrigée en versions 2.4.0 et 1.118.0.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "arbitrary_file_write",
+          "authenticated_access",
+          "sql_query_mode"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25053",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Expression evaluation)",
+        "description": "Vulnérabilité permettant à des utilisateurs authentifiés (avec permissions de création/modification de workflows) d'abuser d'expressions malveillantes pour exécuter du code arbitraire.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "expression_evaluation",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24133",
+        "cvss": null,
+        "product": "jsPDF library",
+        "description": "Vulnérabilité de crash d'application ou de navigateur via le traitement de fichiers BMP malveillants avec des en-têtes manipulés (larges valeurs de largeur/hauteur) entraînant une allocation excessive de mémoire.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "javascript",
+          "dos",
+          "memory_exhaustion",
+          "image_processing"
+        ],
+        "sources": [
+          "https://securityonline.info/pdf-poison-popular-javascript-library-patches-critical-injection-and-crash-flaws/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Black Basta: Une capacité d'évasion de défense intégrée dans la charge utile du rançongiciel",
+        "description": "Le groupe de rançongiciels Black Basta (opéré par Cardinal) intègre une capacité d'évasion de défense par 'Bring Your Own Vulnerable Driver' (BYOVD) directement dans sa charge utile. Cette technique utilise un pilote Windows vulnérable signé (NSecSoft NSecKrnl, CVE-2025-68947) pour élever les privilèges et désactiver les logiciels de sécurité. Ce comportement est inhabituel et peut pointer vers une accélération des attaques sans laisser de fichiers externes. Des activités post-rançongiciel, comme l'utilisation du RAT GotoHTTP, ont également été observées.",
+        "threat_actor": "Black Basta (Cardinal)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-68947"
+          ],
+          "MITRE_ATT&CK": [
+            "T1562.001",
+            "T1068"
+          ]
+        },
+        "mitre_ttps": [
+          "Désactivation des contrôles de sécurité (T1562.001)",
+          "Élévation de privilèges via un pilote vulnérable (BYOVD) (T1068)"
+        ],
+        "analyse": "L'intégration directe du BYOVD dans la charge utile du rançongiciel rend la détection plus difficile et accélère la phase d'évasion. Cela signale une sophistication croissante des groupes de rançongiciels et une tentative de contourner les défenses améliorées des EDR. Le potentiel d'accès persistant post-rançongiciel (via GotoHTTP) indique des motivations au-delà de la simple extorsion, comme l'espionnage ou la revente d'accès.",
+        "recommandations": [
+          "Mettre en œuvre une détection comportementale robuste des activités des pilotes et des processus système.",
+          "Surveiller l'exécution de pilotes Windows vulnérables connus, même s'ils sont signés.",
+          "Renforcer la segmentation du réseau pour limiter le mouvement latéral après une compromission initiale.",
+          "Mettre en place des capacités de réponse rapide pour interrompre les chaînes d'attaque dès la phase d'évasion.",
+          "Sensibiliser les équipes de sécurité aux nouvelles tactiques d'intégration des évasions de défense par les rançongiciels."
+        ],
+        "tags": [
+          "ransomware",
+          "black_basta",
+          "byovd",
+          "defense_evasion",
+          "privilege_escalation",
+          "rce",
+          "threat_actor",
+          "cardinal"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Campagnes 'Shadow': Découverte de l'espionnage global",
+        "description": "Le groupe d'espionnage cybernétique TGR-STA-1030 (également connu sous le nom d'UNC6619), aligné sur un État asiatique, a compromis des gouvernements et des infrastructures critiques dans 37 pays au cours de la dernière année, et mené des reconnaissances dans 155 pays entre novembre et décembre 2025. Le groupe utilise des campagnes de phishing malveillantes (liens mega.nz), exploite des vulnérabilités N-day (ex: Atlassian Crowd CVE-2019-11580), et déploie des outils comme le framework C2 VShell, des webshells (Behinder, Neo-reGeorg, Godzilla) et un nouveau rootkit de noyau Linux furtif appelé ShadowGuard (rootkit eBPF). Leurs motivations semblent liées aux partenariats économiques et à l'extraction de ressources naturelles.",
+        "threat_actor": "TGR-STA-1030 (aka UNC6619)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2019-11580"
+          ],
+          "DOMAIN": [
+            "mega[.]nz",
+            "gouvn[.]me",
+            "888910[.]xyz"
+          ],
+          "FILE_HASH_SHA256": [
+            "7808B1E01EA790548B472026AC783C73A033BB90BBE548BF3006ABFBCB48C52D"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1190",
+            "T1210",
+            "T1059",
+            "T1505.003",
+            "T1070.004",
+            "T1573.001",
+            "T1068"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Attachment (T1566.002)",
+          "Exploitation de vulnérabilités exposées à Internet (T1190)",
+          "Latéral Movement (T1210)",
+          "Exécution via Command and Scripting Interpreter (T1059)",
+          "Déploiement de Web Shell (T1505.003)",
+          "Disguise Files or Information (T1070.004)",
+          "Proxy (T1573.001)",
+          "Élévation de privilèges (T1068)"
+        ],
+        "analyse": "Cette campagne d'espionnage d'ampleur mondiale, menée par un acteur étatique très sophistiqué, représente une menace persistante pour la souveraineté et la sécurité économique des pays ciblés. La focalisation sur les partenariats économiques et les ressources naturelles indique des objectifs stratégiques à long terme. L'utilisation de rootkits eBPF rend la détection et l'attribution particulièrement difficiles, car ces techniques opèrent au niveau du noyau, dissimulant leur activité aux outils de sécurité traditionnels.",
+        "recommandations": [
+          "Renforcer la sensibilisation au phishing, en particulier pour les employés ayant accès à des informations sensibles.",
+          "Appliquer rapidement les correctifs de sécurité pour les vulnérabilités N-day, en particulier celles des plateformes publiques comme Atlassian Crowd.",
+          "Mettre en œuvre une détection avancée des menaces basée sur le comportement (EDR/XDR) pour identifier les TTP post-exploitation et la présence de rootkits ou webshells.",
+          "Segmenter les réseaux et surveiller le trafic entre les segments, en particulier pour les infrastructures critiques.",
+          "Mettre en place une gestion stricte des identités et des accès (IAM) et l'authentification multifacteur (MFA)."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "state_aligned",
+          "apt",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit",
+          "critical_infrastructure",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "DYNOWIPER: Un malware destructeur ciblant le secteur de l'énergie en Pologne",
+        "description": "DYNOWIPER est un malware destructeur qui a ciblé le secteur de l'énergie en Pologne, en particulier les systèmes SCADA et les réseaux OT. Les attaquants ont mené des reconnaissances pendant des mois, exfiltrant des bases de données Active Directory, des configurations FortiGate et des données liées à la modernisation des réseaux OT avant de déployer deux versions de DYNOWIPER. Ce malware, bien que non techniquement sophistiqué, est très efficace pour la destruction rapide de données en combinant une corruption et une suppression indiscriminée de fichiers. Elastic Defend a démontré sa capacité à détecter et prévenir son exécution via la surveillance des fichiers canaris.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1485",
+            "T1567.002",
+            "T1560.001",
+            "T1083"
+          ]
+        },
+        "mitre_ttps": [
+          "Destruction de données (T1485)",
+          "Exfiltration vers un service Cloud (T1567.002)",
+          "Compression des données: Archivage au format Standard (T1560.001)",
+          "Découverte de fichiers et de répertoires (T1083)"
+        ],
+        "analyse": "L'incident souligne la vulnérabilité persistante des infrastructures critiques face aux attaques destructrices. La préparation approfondie de l'attaquant, avec reconnaissance et exfiltration préalable, montre une approche ciblée et méthodique. L'efficacité du malware, combinée à l'accès pré-positionné, pose un risque élevé. La capacité de détection comportementale, comme la surveillance des fichiers canaris, est cruciale pour atténuer l'impact des malwares destructeurs, même s'ils ne sont pas nouveaux.",
+        "recommandations": [
+          "Renforcer la surveillance et la segmentation des réseaux OT et SCADA.",
+          "Mettre en œuvre des solutions EDR/XDR avec des capacités de détection comportementale et de surveillance des fichiers canaris.",
+          "Effectuer des audits réguliers des configurations de sécurité des systèmes industriels.",
+          "Améliorer la gestion des sauvegardes et les plans de reprise après sinistre pour minimiser les interruptions de service en cas d'attaque destructrice.",
+          "Sensibiliser les équipes aux indicateurs de reconnaissance pré-attaque et à l'importance de la défense en profondeur."
+        ],
+        "tags": [
+          "malware",
+          "destructive_malware",
+          "dynowiper",
+          "critical_infrastructure",
+          "energy_sector",
+          "ot_security",
+          "scada",
+          "data_destruction"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/dynowiper"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Le 'landlord invisible': ShadowSyndicate fait pivoter les clés pour cacher son infrastructure",
+        "description": "Le cluster d'infrastructure malveillante ShadowSyndicate, lié à diverses familles de rançongiciels (notamment ALPHV/BlackCat), a évolué en faisant pivoter l'utilisation de multiples clés SSH pour segmenter son infrastructure. Cette nouvelle tactique, observée par Group-IB, vise à compliquer l'attribution et à renforcer la sécurité opérationnelle, s'éloignant de leur précédente habitude d'utiliser une seule clé SSH. Il est suggéré que ShadowSyndicate pourrait opérer en tant que 'Initial Access Broker' (IAB) ou fournisseur d'hébergement 'bulletproof'.",
+        "threat_actor": "ShadowSyndicate",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-24858",
+            "CVE-2026-21509",
+            "CVE-2026-20045",
+            "CVE-2024-23334"
+          ],
+          "MITRE_ATT&CK": [
+            "T1078.003",
+            "T1090.003"
+          ]
+        },
+        "mitre_ttps": [
+          "Comptes valides: Comptes d'entreprise (T1078.003)",
+          "Proxy: Hébergement Bulletproof (T1090.003)"
+        ],
+        "analyse": "La sophistication croissante de ShadowSyndicate, illustrée par la rotation des clés SSH et la segmentation de l'infrastructure, rend les efforts de suivi et d'attribution plus complexes pour les défenseurs. En tant que potentiel IAB ou fournisseur d'hébergement bulletproof, ce groupe joue un rôle facilitateur critique dans l'écosystème cybercriminel, soutenant de multiples campagnes de rançongiciels et cyberattaques. Leur adaptabilité souligne la nécessité de se concentrer sur les TTPs plutôt que sur de simples indicateurs d'infrastructure statiques.",
+        "recommandations": [
+          "Renforcer la surveillance des infrastructures d'hébergement 'bulletproof' et des services de proxy.",
+          "Développer des capacités d'attribution basées sur des corrélations comportementales et des TTPs plutôt que sur des IoCs isolés.",
+          "Implémenter une gestion stricte des clés SSH et des accès, en évitant la réutilisation des clés sur différentes infrastructures.",
+          "Participer à des échanges de renseignements sur les menaces pour partager rapidement les informations sur les évolutions des acteurs malveillants.",
+          "Mettre en place des mécanismes de détection des activités anormales sur les serveurs, tels que des connexions SSH inhabituelles."
+        ],
+        "tags": [
+          "threat_actor",
+          "shadowsyndicate",
+          "ransomware",
+          "infrastructure_abuse",
+          "operational_security",
+          "ssh",
+          "initial_access_broker",
+          "bulletproof_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-landlord-shadowsyndicate-rotates-keys-to-hide-infrastructure/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Le proxy invisible: NGINX détourné pour le SEO poisoning furtif",
+        "description": "Une nouvelle campagne cible les serveurs NGINX et les panneaux de gestion (comme Baota) pour injecter des configurations malveillantes. Ces configurations détournent silencieusement le trafic utilisateur vers des serveurs contrôlés par les attaquants, en manipulant les directives 'proxy_pass' et 'location'. La campagne, liée à des acteurs associés à l'exploitation de React2Shell, cible les domaines de premier niveau (TLD) asiatiques (.in, .id, .th) ainsi que les secteurs éducatifs et gouvernementaux, pour des activités de 'SEO poisoning' souvent liées au jeu. L'objectif est d'exploiter la réputation SEO des victimes sans défigurer les sites.",
+        "threat_actor": "Acteurs liés à React2Shell",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "pgslot",
+            "live"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1566.002",
+            "T1070.004",
+            "T1573"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploitation de vulnérabilités exposées à Internet (T1190)",
+          "Phishing (T1566.002)",
+          "Déguiser les fichiers ou les informations (T1070.004)",
+          "Proxy (T1573)"
+        ],
+        "analyse": "Cette campagne de 'SEO poisoning' représente une menace insidieuse car elle est conçue pour être invisible aux yeux de l'utilisateur et des propriétaires de sites. En exploitant la confiance dans les domaines légitimes et leur réputation SEO, les attaquants peuvent diffuser du contenu malveillant ou frauduleux (comme le jeu en ligne) à grande échelle sans être facilement détectés. La capacité à cibler des TLDs et secteurs spécifiques montre une approche sophistiquée.",
+        "recommandations": [
+          "Surveiller les fichiers de configuration NGINX pour toute modification inattendue des directives 'proxy_pass' et 'location'.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour les panneaux de gestion NGINX et Baota.",
+          "Effectuer des audits de sécurité réguliers des serveurs web pour détecter les injections de code ou les configurations malveillantes.",
+          "Utiliser des outils de détection d'altération de fichiers (FIM) pour surveiller l'intégrité des configurations critiques.",
+          "Sensibiliser les administrateurs aux techniques de 'SEO poisoning' et aux signes de compromission."
+        ],
+        "tags": [
+          "seo_poisoning",
+          "nginx",
+          "web_compromise",
+          "traffic_redirection",
+          "supply_chain",
+          "configuration_hijacking",
+          "black_hat_seo"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-proxy-nginx-hijacked-for-silent-seo-poisoning/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Knife Cutting the Edge: Divulgation d'un framework AiTM de surveillance de passerelle lié à la Chine",
+        "description": "Cisco Talos a découvert \"DKnife\", un framework sophistiqué de surveillance de passerelle et d'attaque \"Adversary-in-the-Middle\" (AiTM) lié à la Chine (UAT-7290), composé de sept implants Linux. Actif depuis au moins 2019, DKnife compromet les routeurs et les appareils périphériques pour intercepter le trafic réseau, voler les informations d'identification, détourner les mises à jour d'applications (Android/Windows) et livrer des malwares (ShadowPad, DarkNimbus). Il perturbe également le trafic des produits de sécurité et exfiltre l'activité des utilisateurs, ciblant principalement les utilisateurs chinois et les fournisseurs de télécommunications en Asie du Sud.",
+        "threat_actor": "UAT-7290 (China-nexus APT)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "43.132.205[.]118",
+            "10.3.3.3",
+            "47.93.54[.]134",
+            "117.175.185[.]81",
+            "192.168.92.92",
+            "1.1.1.1"
+          ],
+          "URL": [
+            "http[:]//fanyi.baidu[.]com/query_config_dk",
+            "http://10.3.3.3:81/app/base.apk"
+          ],
+          "FILE_HASH_SHA256": [
+            "2550aa4c4bc0a020ec4b16973df271b81118a7abea77f77fec2f575a32dc3444"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1567.002",
+            "T1071.001",
+            "T1090.002",
+            "T1003.003",
+            "T1562.001",
+            "T1071.004",
+            "T1059",
+            "T1564.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploitation de vulnérabilités exposées à Internet (T1190)",
+          "Exfiltration vers un service Cloud (T1567.002)",
+          "Protocole de commande et contrôle: HTTP/HTTPS (T1071.001)",
+          "Proxy: DNS (T1090.002)",
+          "Récupération d'informations d'identification: OS Credential Dumping (T1003.003)",
+          "Désactivation des contrôles de sécurité (T1562.001)",
+          "Protocole de commande et contrôle: DNS (T1071.004)",
+          "Exécution via Command and Scripting Interpreter (T1059)",
+          "Évasion de défense (T1564.001)"
+        ],
+        "analyse": "Le framework DKnife représente une menace de niveau APT hautement sophistiquée, capable d'un contrôle total du trafic réseau aux points d'entrée (routeurs, appareils edge). Son utilisation de techniques AiTM, de détournement de mises à jour légitimes et d'implants Linux furtifs le rend extrêmement difficile à détecter et à contrer. Le ciblage des télécommunications et des utilisateurs chinois suggère des objectifs d'espionnage à long terme. La connexion avec d'autres backdoors comme WizardNet et ShadowPad indique une chaîne d'outils évolutive et bien intégrée.",
+        "recommandations": [
+          "Renforcer la sécurité des routeurs et appareils edge Linux: audits des firmwares, authentification forte, segmentation du réseau et mises à jour directes des fournisseurs de confiance.",
+          "Mettre en place une surveillance approfondie du trafic réseau (NDR) pour détecter les anomalies, les détournements DNS et les exfiltrations.",
+          "Utiliser des outils de détection d'altération des fichiers (FIM) pour les configurations critiques et les binaires système.",
+          "Implémenter l'inspection TLS pour le trafic chiffré afin de détecter les attaques AiTM.",
+          "Sensibiliser les utilisateurs aux dangers des mises à jour d'applications non vérifiées et aux risques liés aux certificats TLS auto-signés."
+        ],
+        "tags": [
+          "apt",
+          "china_nexus",
+          "aitm",
+          "dknife",
+          "gateway_monitoring",
+          "traffic_manipulation",
+          "dns_hijacking",
+          "malware_delivery",
+          "darknimbus",
+          "shadowpad",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/knife-cutting-the-edge/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Le piège de la compétence malveillante OpenClaw : plongée approfondie de Bitdefender Labs",
+        "description": "Bitdefender Labs a découvert des centaines de \"compétences\" (skills) malveillantes OpenClaw se fondant parmi les légitimes, exploitant le projet open-source OpenClaw (alias Clawdbot/Moltbot) qui permet d'exécuter des actions au nom de l'utilisateur. Ces compétences, souvent commercialisées comme utiles (agents de trading crypto, aides de portefeuille), contiennent des commandes shell cachées (encodées en Base64) qui téléchargent des charges utiles supplémentaires et exfiltrent des clés privées de crypto-monnaies et des secrets d'API. Le risque s'étend aux environnements d'entreprise, les compétences axées sur la crypto représentant 54% des compétences malveillantes début février 2026.",
+        "threat_actor": "OpenClaw (aka Moltbot, Clawdbot)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "91.92.242.30"
+          ],
+          "URL": [
+            "glot.io",
+            "github.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1059.004",
+            "T1059.006",
+            "T1574.002",
+            "T1567",
+            "T1083",
+            "T1539",
+            "T1003.003",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Exécution via Command and Scripting Interpreter: TShell (T1059.004)",
+          "Exécution via Command and Scripting Interpreter: PowerShell (T1059.006)",
+          "Hijack de la recherche de chemin: Dll Search Order Hijacking (T1574.002)",
+          "Exfiltration (T1567)",
+          "Découverte de fichiers et de répertoires (T1083)",
+          "Vol d'informations d'identification: Secrets API (T1539)",
+          "Récupération d'informations d'identification: OS Credential Dumping (T1003.003)",
+          "Protocole de commande et contrôle: HTTP/HTTPS (T1071.001)"
+        ],
+        "analyse": "La popularité croissante des outils d'IA open-source et des modèles \"agentiques\" crée un nouveau vecteur d'attaque significatif, exploitant la confiance des utilisateurs et la facilité perçue d'automatisation. La capacité de ces \"compétences\" à exécuter des commandes système et à exfiltrer des données critiques, en particulier dans l'espace crypto, pose un risque financier et de réputation considérable. L'expansion vers les environnements d'entreprise est alarmante.",
+        "recommandations": [
+          "Mettre en place un \"AI Skills Checker\" pour évaluer le risque des compétences d'IA avant leur installation.",
+          "Former les utilisateurs à la détection des compétences d'IA malveillantes et à l'ingénierie sociale.",
+          "Surveiller les activités des processus déclenchées par les outils d'IA et les plateformes d'automatisation pour des comportements suspects (appels à l'infrastructure externe, exécution de shell, encodage Base64).",
+          "Restreindre les permissions des outils d'IA à l'environnement le moins privilégié possible et limiter l'accès aux informations sensibles (clés API, identifiants).",
+          "Implémenter une sécurité des points de terminaison (EDR) capable de détecter les exécutions de commandes shell cachées et les exfiltrations de données."
+        ],
+        "tags": [
+          "ai",
+          "openclaw",
+          "moltbot",
+          "clawdbot",
+          "malicious_skills",
+          "social_engineering",
+          "cryptocurrency_theft",
+          "api_secrets",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/helpful-skills-or-hidden-payloads-bitdefender-labs-dives-deep-into-the-openclaw-malicious-skill-trap"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Nouveau variant Clickfix 'CrashFix' déployant un cheval de Troie d'accès à distance Python",
+        "description": "Un nouveau variant de la campagne ClickFix, nommé CrashFix, vise à forcer les utilisateurs à exécuter des commandes malveillantes en provoquant le crash de leurs navigateurs via une boucle infinie. Cette ingénierie sociale, combinée à l'abus de binaires système légitimes ('living-off-the-land' comme finger.exe renommé en ct.exe) et à la livraison de charges utiles basées sur Python (WinPython, modes.py en tant que RAT ModeloRAT), permet aux attaquants d'établir une persistance et d'effectuer une reconnaissance sur des systèmes de grande valeur. L'attaque commence généralement par des publicités malveillantes pour des bloqueurs de publicité.",
+        "threat_actor": "ClickFix (CrashFix variant)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "69[.]67[.]173[.]30",
+            "144.31.221[.]197"
+          ],
+          "FILE_HASH_SHA256": [
+            "beb0229043741a7c7bfbb4f39d00f583e37ea378d11ed3302d0a2bc30f267006",
+            "c76c0146407069fd4c271d6e1e03448c481f0970ddbe7042b31f552e37b55817"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1204.001",
+            "T1059.001",
+            "T1027.001",
+            "T1036.003",
+            "T1105",
+            "T1574.001",
+            "T1053.005",
+            "T1083",
+            "T1049",
+            "T1018",
+            "T1007"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Exécution de l'utilisateur: Exécution de l'utilisateur de l'application malveillante (T1204.001)",
+          "Exécution via Command and Scripting Interpreter: PowerShell (T1059.001)",
+          "Obfuscated Files or Information: Cleartext (T1027.001)",
+          "Masquerade Defenses: Rename System Utilities (T1036.003)",
+          "Ingestion: Téléchargement de fichiers (T1105)",
+          "Détournement de l'ordre de recherche de DLL (T1574.001)",
+          "Exécution via Tâches planifiées (T1053.005)",
+          "Découverte de fichiers et de répertoires (T1083)",
+          "Découverte de la topologie du réseau (T1049)",
+          "Découverte des systèmes d'information (T1018)",
+          "Découverte des services exécutés (T1007)"
+        ],
+        "analyse": "CrashFix est une évolution notable de l'ingénierie sociale combinée à des techniques d'évasion sophistiquées. En provoquant délibérément des pannes de navigateur, les attaquants augmentent la probabilité que les utilisateurs exécutent des commandes malveillantes sous le prétexte de restaurer la fonctionnalité. L'utilisation de binaires 'living-off-the-land' et de Python portable complique la détection traditionnelle, ce qui met en évidence l'importance de la détection comportementale et de la sensibilisation des utilisateurs.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux tactiques d'ingénierie sociale basées sur le navigateur et aux risques liés à l'exécution de commandes non sollicitées pour 'réparer' des problèmes système.",
+          "Mettre en place des solutions EDR/XDR capables de détecter les comportements anormaux des binaires système et les exécutions de scripts PowerShell/Python.",
+          "Utiliser des passerelles web sécurisées et des filtres de contenu pour bloquer les publicités malveilluses et les redirections vers des sites de phishing.",
+          "Limiter l'exécution de Python non autorisé et d'autres interpréteurs de script sur les postes de travail.",
+          "Surveiller les créations de tâches planifiées inhabituelles et les modifications de la clé de registre 'Run' pour détecter la persistance."
+        ],
+        "tags": [
+          "clickfix",
+          "crashfix",
+          "python_rat",
+          "social_engineering",
+          "browser_hijacking",
+          "living_off_the_land",
+          "persistence",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Un piège hébergé dans le cloud: les phishers utilisent Vercel et Telegram pour contourner les filtres",
+        "description": "Une campagne de phishing sophistiquée a été découverte, utilisant une chaîne de documents PDF et l'infrastructure cloud légitime (Vercel Blob, Dropbox usurpé) pour voler des identifiants et contourner les filtres de sécurité. Le courrier électronique initial est techniquement propre, ne contenant pas de liens malveillants, mais plutôt une pièce jointe PDF qui mène à un deuxième PDF hébergé sur Vercel. Les informations volées (mots de passe, système, localisation) sont transmises via un bot Telegram, affichant une fausse alerte de 'connexion réussie'.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "vercel.app",
+            "dropbox.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1566.002",
+            "T1059.001",
+            "T1071.001",
+            "T1567.002",
+            "T1539",
+            "T1003.003"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Phishing: Spearphishing Attachment (T1566.002)",
+          "Exécution via Command and Scripting Interpreter: PowerShell (T1059.001)",
+          "Protocole de commande et contrôle: HTTP/HTTPS (T1071.001)",
+          "Exfiltration vers un service Cloud (T1567.002)",
+          "Vol d'informations d'identification: Secrets API (T1539)",
+          "Récupération d'informations d'identification: OS Credential Dumping (T1003.003)"
+        ],
+        "analyse": "Cette campagne illustre une évolution des techniques de phishing, rendant la détection plus difficile en abusant d'infrastructures cloud légitimes et en évitant les liens malveillants directs dans les e-mails. L'utilisation d'une chaîne de documents et d'un bot Telegram pour l'exfiltration montre une sophistication et une adaptabilité pour échapper aux défenses traditionnelles basées sur la réputation et l'analyse de liens. Le succès de ces attaques repose sur la confiance implicite des utilisateurs dans les pièces jointes et les services cloud populaires.",
+        "recommandations": [
+          "Renforcer la formation des utilisateurs pour identifier les techniques de phishing sophistiquées, y compris celles qui exploitent les services cloud légitimes et les chaînes de documents.",
+          "Implémenter une sécurité de la passerelle de messagerie (SEG) et des solutions anti-phishing avancées capables d'analyser les pièces jointes PDF pour les URL et les comportements suspects.",
+          "Mettre en œuvre l'authentification multifacteur (MFA) pour tous les comptes afin d'atténuer l'impact des identifiants volés.",
+          "Surveiller les logs d'accès aux services cloud pour détecter les activités inhabituelles et les exfiltrations vers des destinations non autorisées.",
+          "Utiliser des bacs à sable (sandboxing) pour analyser les pièces jointes avant qu'elles n'atteignent les utilisateurs."
+        ],
+        "tags": [
+          "phishing",
+          "social_engineering",
+          "cloud_abuse",
+          "vercel",
+          "telegram_bot",
+          "credential_theft",
+          "evasion"
+        ],
+        "sources": [
+          "https://securityonline.info/cloud-hosted-trap-phishers-use-vercel-telegram-to-bypass-filters/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Un groupe de rançongiciels utilise les VMs ISPsystem pour une livraison furtive de charges utiles",
+        "description": "Des opérateurs de rançongiciels (incluant LockBit, Qilin, Conti, BlackCat/ALPHV et Ursnif) hébergent et livrent des charges utiles malveillantes à grande échelle en abusant de machines virtuelles (VMs) fournies par ISPsystem, un fournisseur légitime de gestion d'infrastructure virtuelle. Les chercheurs de Sophos ont observé l'utilisation de VMs Windows avec des noms d'hôte identiques, suggérant des modèles par défaut. Cela permet aux acteurs malveillants de créer des infrastructures C2 et de livraison de charges utiles à faible coût et avec une faible barrière à l'entrée, souvent via des fournisseurs d'hébergement 'bulletproof'.",
+        "threat_actor": "Multiples groupes de rançongiciels (LockBit, Qilin, Conti, BlackCat/ALPHV, Ursnif)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "Stark Industries Solutions Ltd.",
+            "Zomro B.V.",
+            "First Server Limited",
+            "Partner Hosting LTD",
+            "JSC IOT",
+            "MasterRDP"
+          ],
+          "MITRE_ATT&CK": [
+            "T1587.001",
+            "T1583.001",
+            "T1071.001",
+            "T1105"
+          ]
+        },
+        "mitre_ttps": [
+          "Développement d'outils: Logiciel malveillant (T1587.001)",
+          "Acquisition d'infrastructure: Serveur privé virtuel (T1583.001)",
+          "Protocole de commande et contrôle: HTTP/HTTPS (T1071.001)",
+          "Ingestion: Téléchargement de fichiers (T1105)"
+        ],
+        "analyse": "L'abus d'infrastructures cloud et de services légitimes par les groupes de rançongiciels est une tendance persistante, car cela leur confère une légitimité et complique les efforts de détection et de démantèlement. L'utilisation de modèles de VMs par défaut et de fournisseurs d'hébergement 'bulletproof' permet une mise en œuvre rapide et discrète de l'infrastructure d'attaque. Cela met en évidence un défi pour les défenseurs, qui doivent surveiller non seulement le contenu mais aussi la réputation et le comportement des infrastructures d'hébergement.",
+        "recommandations": [
+          "Bloquer l'accès aux fournisseurs d'hébergement connus pour soutenir des activités cybercriminelles (liste des fournisseurs cités).",
+          "Mettre en œuvre une détection du trafic C2 basé sur des signatures et des comportements, ainsi que sur la réputation des adresses IP/domaines.",
+          "Surveiller les environnements cloud pour la présence de VMs non autorisées ou dont le comportement est suspect (ex: trafic vers des destinations inconnues, téléchargement de binaires suspects).",
+          "Renforcer les politiques de sécurité des VMs pour empêcher l'exécution de charges utiles malveillantes et limiter les privilèges.",
+          "Collaborer avec les fournisseurs de services cloud et d'hébergement pour signaler les abus et faire retirer les infrastructures malveillantes."
+        ],
+        "tags": [
+          "ransomware",
+          "ispsystem",
+          "vm_abuse",
+          "payload_delivery",
+          "c2_infrastructure",
+          "bulletproof_hosting",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gang-uses-ispsystem-vms-for-stealthy-payload-delivery/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Stan Ghouls cible la Russie et l'Ouzbékistan avec le RAT NetSupport",
+        "description": "Le groupe cybercriminel Stan Ghouls (également connu sous le nom de Bloody Wolf) mène des attaques ciblées contre des organisations en Russie, Ouzbékistan, Kirghizistan, Kazakhstan et potentiellement d'autres pays depuis 2023, en se concentrant sur les secteurs de la fabrication, de la finance et de l'IT. Le groupe utilise des e-mails de phishing avec des pièces jointes PDF malveillantes, des chargeurs Java personnalisés et le cheval de Troie d'accès à distance (RAT) NetSupport pour prendre le contrôle des machines victimes. Des indices suggèrent une possible expansion vers le malware IoT (Mirai).",
+        "threat_actor": "Stan Ghouls (aka Bloody Wolf)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mysoliq-uz[.]commy-xb[.]comxarid-uz[.]comach-uz[.]comsoliq-uz[.]comminjust-kg[.]comesf-kg[.]comtaxnotice-kg[.]comnotice-kg[.]comproauditkg[.]comkgauditcheck[.]comservicedoc-kg[.]comauditnotice-kg[.]comtax-kg[.]comrouming-uz[.]comaudit-kg[.]comkyrgyzstanreview[.]comsalyk-notofocations[.]com"
+          ],
+          "FILE_HASH_MD5": [
+            "cb9c28a4c6657ae5ea810020cb214ff0"
+          ],
+          "FILE_HASH_SHA256": [
+            "B4FF4AA3EBA9409F9F1A5210C95DC5C3AF9321DDB4BEF0C3CD1FF3C7C786F0E2056B75FE0D230E6FF53AC508E0F93CCBDB84FEBFD85F1469C28B4ED70AC6A638649C7CACDD545E30D015EDB9FCAB3A0CBE0C87A83267F1CE13B3F75C78EAC29578CB3ABD00A1975BEBEDA852B245087351703911DC437D4E3910CE7F866C970EFA53B0FCEF08F8FF3FFDDFEE7F1F4F1A79D0EEAFB30AA2BD4C261A51104F6ACC8DA8F0339D17E2466B3D73236D18B835299A7E3D6118AD91A9B6D37F94AC685B62AFACC37B71D564D75A58FC161900C3047A600E3AFBF4286175BADD4D88F131ED0CCADA1FE1E13EF78553A48260D932C363CD87178FD660C25CDD8D978685F661FF22BA4C3DF7AE4A936FCFDEB020EAB51D9EDC1DC8B6200F260589A4300009923557554730247D37E782DB3BEA365D60C34AD7E1F183A973FB8EE29DC454E80CC80A24841401529EC9C6A8456097750CE06C962E07E63D780E5C2777A661FC",
+            "1b740b17e53c4daeed45148bfbee4f143f99fed688c51977b122789a094fec2e8b0bbe7dc960f7185c330baa3d9b214c95db93454ec1d581311c832122d21b20646a680856f837254e6e361857458e178064f7ac9a5aa845ded6a1100a1d5752d0cf8946acd3d12df1e8ae4bb34f1a6edb796d87acb7d980264fdcf5e94757f0e3cb4dafa1fb596e1e34e4b139be1b05e0023eb058b0c82585a7340b6ed4cc060bf01810201004dcc484b3396607a4834C4FA06BD840405FBEC34FE49D759E8DA539A07891A339479C596BABE3060EA6b13f7ccbedfb71b0211c14afe0815b36f14275f8f420afd0f9a62f3992860d683f41091afd6256701dd70ac20c1c79fe5c4a57e2e40049f8e8a6a74aa8085c807e8feb501885eff246d4cb43c468b4118aa104e64b00b049264dc1b01412e6d98c63818261735ddff2fe98b3ae23bf7d"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1059.004",
+            "T1071.001",
+            "T1105",
+            "T1071.004",
+            "T1078.003",
+            "T1003",
+            "T1021.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Exécution via Command and Scripting Interpreter: TShell (T1059.004)",
+          "Protocole de commande et contrôle: HTTP/HTTPS (T1071.001)",
+          "Ingestion: Téléchargement de fichiers (T1105)",
+          "Protocole de commande et contrôle: DNS (T1071.004)",
+          "Comptes valides: Comptes d'entreprise (T1078.003)",
+          "Récupération d'informations d'identification (T1003)",
+          "Accès à distance à des services partagés (T1021.001)"
+        ],
+        "analyse": "Stan Ghouls est un acteur persistant et adaptable, ciblant des secteurs stratégiques avec des TTPs éprouvées comme le phishing et l'utilisation de RAT légitimes. Leur capacité à personnaliser les attaques en fonction des langues locales et à mettre à jour constamment leur infrastructure d'hébergement C2 rend la détection basée sur les IoCs difficile. L'intérêt potentiel pour l'IoT souligne une possible expansion des vecteurs d'attaque et des cibles.",
+        "recommandations": [
+          "Former les employés à la détection des e-mails de phishing, en particulier ceux avec des pièces jointes PDF.",
+          "Mettre en œuvre une solution EDR/XDR pour détecter les comportements des chargeurs Java malveillants et l'utilisation abusive d'outils légitimes comme NetSupport RAT.",
+          "Surveiller le trafic réseau pour identifier les connexions C2 vers des domaines nouvellement enregistrés ou suspects.",
+          "Appliquer le principe du moindre privilège pour les utilisateurs et les systèmes.",
+          "Envisager des audits de sécurité pour les appareils IoT si l'hypothèse de l'expansion vers l'IoT est confirmée."
+        ],
+        "tags": [
+          "threat_actor",
+          "stan_ghouls",
+          "bloody_wolf",
+          "spear_phishing",
+          "netsupport_rat",
+          "data_theft",
+          "cybercriminal",
+          "iot"
+        ],
+        "sources": [
+          "https://securelist.com/stan-ghouls-in-uzbekistan/118738/"
+        ],
+        "date": "2026-02-06"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification of cyber threats, marked by several key trends. Firstly, state-sponsored espionage remains a major concern, with groups like TGR-STA-1030 (Asia) and Amaranth-Dragon (China/APT41) actively targeting governments and critical infrastructure globally, including Southeast Asia and Europe. Their tactics include sophisticated phishing campaigns, exploitation of N-day vulnerabilities (like the WinRAR flaw CVE-2025-8088), and the use of Linux kernel rootkits (ShadowGuard) for increased stealth. Secondly, ransomware operations continue to evolve, with groups like Black Basta integrating defense evasion capabilities (BYOVD) directly into their payloads, and actors abusing legitimate services (ISPsystem VMs) to host their malicious infrastructure. Destructive attacks, such as DYNOWIPER in Poland, highlight the persistent threat to critical infrastructure, particularly the energy sector. Thirdly, the abuse of artificial intelligence (AI) and automation tools is an emerging threat. Traps like malicious OpenClaw/Clawdbot skills exploit user trust to steal sensitive information, while malware variants like CrashFix incorporate browser-based social engineering. Vulnerability management remains a constant challenge, with a high number of critical vulnerabilities (CVSS >= 8.0), including remote code execution (RCE) and privilege escalation (EoP) in various products (Azure, n8n, unstructured library, Lexmark, Edimax). Numerous data breaches are also reported, often resulting from phishing or vulnerability exploitation, affecting diverse sectors from education to newsletter platforms and financial services. The overall state of threats is thus characterized by increasing attacker sophistication, persistence of state-sponsored threats, and rapid exploitation of new technologies and vulnerabilities, requiring in-depth defense strategies and constant vigilance.",
+      "date": "2026-02-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "OpenClaw (aka Moltbot, Clawdbot)",
+        "secteur": "Consumers, Businesses (expanding), Cryptocurrency users",
+        "modop": "Distribution of malicious 'skills' via open-source AI platforms. These skills execute hidden shell commands (often Base64 encoded), download additional scripts/binaries, and exfiltrate cryptocurrency private keys, API secrets, and credentials.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware",
+          "ai",
+          "social_engineering",
+          "cryptocurrency_theft",
+          "credential_exfiltration"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/helpful-skills-or-hidden-payloads-bitdefender-labs-dives-deep-into-the-openclaw-malicious-skill-trap",
+          "https://blog.talosintelligence.com/all-gas-no-brakes-time-to-come-to-ai-church/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Femwar02",
+        "secteur": "Education (universities)",
+        "modop": "Ransomware attack involving data encryption. A fast and customizable ransomware strain, built from leaked sources of Babuk, LockBit v2.0, and DarkSide.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_encryption",
+          "pro_russian"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/italian-university-la-sapienza-goes-offline-after-cyberattack/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Qilin (aka Agenda)",
+        "secteur": "Energy, Automotive Industry, Media, Pathology Services",
+        "modop": "Ransomware-as-a-Service (RaaS) operation. Uses ISPsystem virtual machines for stealthy payload hosting and delivery. Data theft (up to 1TB) and encryption.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "raas",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gang-uses-ispsystem-vms-for- stealthy-payload-delivery/",
+          "https://www.bleepingcomputer.com/news/security/romanian-oil-pipeline-operator-conpet-discloses-cyberattack-qilin-ransomware/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Stan Ghouls (aka Bloody Wolf)",
+        "secteur": "Industrial Manufacturing, Finance, IT, Government organizations, Logistics, Medical facilities, Educational institutions",
+        "modop": "Spear-phishing campaigns with malicious PDF attachments. Uses custom Java-based loaders and the NetSupport RAT to maintain control over infected machines. Shifting infrastructure with new domains for each campaign. Potential interest in IoT malware (Mirai).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "spear_phishing",
+          "java_loader",
+          "netsupport_rat",
+          "data_theft",
+          "iot"
+        ],
+        "sources": [
+          "https://securelist.com/stan-ghouls-in-uzbekistan/118738/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Noname057(16)",
+        "secteur": "Government websites, Hotels, Major sports events (Olympic Games)",
+        "modop": "DDoS attacks targeting politically sensitive entities or major events. Pro-Russian group.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivism",
+          "pro_russian",
+          "ddos"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187654/hacktivism/pro-russian-group-noname05716-launched-ddos-attacks-on-milano-cortina-2026-winter-olympics.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Amaranth-Dragon (APT41 ecosystem)",
+        "secteur": "Governments, Law enforcement agencies",
+        "modop": "Highly targeted and stealthy cyber-espionage campaigns. Rapid exploitation of N-day vulnerabilities (e.g., CVE-2025-8088 in WinRAR). Uses spear-phishing with cloud-hosted malicious archives, DLL side-loading, and deployment of the Havoc C2 framework in memory. Uses TGAmaranth RAT controlled by a Telegram bot.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "cyber_espionage",
+          "apt41",
+          "spear_phishing",
+          "vulnerability_exploitation",
+          "dll_sideloading",
+          "havoc_c2",
+          "tgamaranth_rat"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187647/apt/china-linked-amaranth-dragon-hackers-target-southeast-asian-governments-in-2025.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "Black Basta (operated by Cardinal)",
+        "secteur": "Not specified, but broad history of targeting organizations",
+        "modop": "Ransomware with 'Bring Your Own Vulnerable Driver' (BYOVD) defense evasion, integrating a vulnerable Windows driver (NSecSoft NSecKrnl, CVE-2025-68947) directly into the payload to disable security software. Potential for long dwell time and post-ransomware persistence (GotoHTTP RAT).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "byovd",
+          "defense_evasion",
+          "privilege_escalation",
+          "data_encryption",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "UAT-7290 (China-nexus APT)",
+        "secteur": "Telecommunications, Chinese users, Routers and Edge devices",
+        "modop": "Sophisticated 'Adversary-in-the-Middle' (AiTM) framework named DKnife, composed of seven Linux implants. Manipulates traffic, intercepts DNS requests, hijacks application updates (Android, Windows), delivers backdoors (ShadowPad, DarkNimbus), disrupts security product traffic, and exfiltrates user activity. Uses stealthy eBPF rootkits (ShadowGuard).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "apt",
+          "china_nexus",
+          "aitm",
+          "gateway_monitoring",
+          "traffic_manipulation",
+          "dns_hijacking",
+          "supply_chain_attack",
+          "data_exfiltration",
+          "rootkit"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/knife-cutting-the-edge/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "TGR-STA-1030 (aka UNC6619, Asian state-aligned group)",
+        "secteur": "Governments, Critical infrastructure (telecommunications, public utilities, air transport, police, counter-terrorism)",
+        "modop": "Global espionage campaigns using malicious phishing (Mega.nz links), N-day vulnerability exploitation (e.g., Atlassian Crowd CVE-2019-11580), deployment of C2 frameworks (VShell), webshells (Behinder, Neo-reGeorg, Godzilla), and a new stealthy Linux eBPF kernel rootkit (ShadowGuard). Extensive and targeted reconnaissance, focus on economic partnerships and natural resources.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_aligned",
+          "cyber_espionage",
+          "phishing",
+          "vulnerability_exploitation",
+          "c2_framework",
+          "webshell",
+          "rootkit",
+          "reconnaissance",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "ShadowSyndicate",
+        "secteur": "Not specified, linked to various ransomware families",
+        "modop": "Malicious infrastructure cluster linked to ransomware (e.g., ALPHV/BlackCat). Evolving tactics with the rotation of multiple SSH keys to segment infrastructure and complicate attribution. Potentially operating as an Initial Access Broker (IAB) or bulletproof hosting provider.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "ransomware",
+          "infrastructure_abuse",
+          "ssh_key_rotation",
+          "iab",
+          "bulletproof_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-landlord-shadowsyndicate-rotates-keys-to-hide-infrastructure/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "nom": "SEO Poisoning Actors (linked to React2Shell)",
+        "secteur": "NGINX websites, particularly Asian top-level domains (.in, .id, .th), education and government sectors",
+        "modop": "Compromising NGINX servers and management panels (e.g., Baota) to inject malicious configurations. Silently redirects user traffic (proxy_pass, location directives) to attacker-controlled domains for black-hat SEO activities, often gambling-related.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercriminal",
+          "seo_poisoning",
+          "nginx_hijacking",
+          "traffic_redirection",
+          "web_compromise"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-proxy-nginx-hijacked-for-silent-seo-poisoning/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Foreign Policy, Energy",
+        "theme": "Realpolitik and foreign interventions",
+        "description": "Donald Trump's actions in Venezuela and Iran demonstrate a realpolitik approach focused on US interests rather than the promotion of democracy. In Venezuela, an intervention led to the removal of Nicolás Maduro and the establishment of a new power favoring oil exports to the United States. In Iran, Trump incited popular revolt but did not intervene in the face of repression, prioritizing negotiations on the nuclear program and proxy support.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "united_states",
+          "venezuela",
+          "iran",
+          "realpolitik",
+          "foreign_interventions",
+          "energy_policy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/iran-venezuela-quelle-doctrine-trump/",
+          "https://www.iris-france.org/venezuela-iran-la-realpolitik-selon-trump/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Defense, International Relations",
+        "theme": "New START Treaty Expiry",
+        "description": "The expiration of the New START Treaty on February 5, 2026, the last remaining arms control agreement between the United States and Russia, risks further undermining the credibility of US extended deterrence in Europe and complicating European and US conventional deterrence efforts. While short-term direct impacts for Europe are limited, the strategic conditions underlying this expiry persist and could drive both powers to expand their strategic capabilities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "new_start",
+          "russia",
+          "united_states",
+          "arms_control",
+          "nuclear_deterrence",
+          "european_security"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/new-start-expiry-implications-europe"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Government, Sports",
+        "theme": "Pro-Russian Hacktivism",
+        "description": "The pro-Russian group Noname057(16) launched DDoS attacks against Italian Foreign Ministry offices and the Milano Cortina 2026 Winter Olympics websites and hotels. These attacks, though of limited impact so far, are classified as Russian actions and are being monitored by Italian authorities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "italy",
+          "hacktivism",
+          "ddos",
+          "olympic_games"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187654/hacktivism/pro-russian-group-noname05716-launched-ddos-attacks-on-milano-cortina-2026-winter-olympics.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Healthcare",
+        "theme": "Hybrid Warfare against Hospitals",
+        "description": "The Berlin Hospital Association (BKG) issued a warning describing a spate of seemingly 'inexplicable incidents' at hospitals and healthcare facilities in the capital, ranging from drone incursions and cyberattacks to forced entry and arson. German security and intelligence services classify at least some of these attacks as potential acts of hybrid warfare, emphasizing the need for collaboration with security services for healthcare facility protection.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "germany",
+          "healthcare",
+          "hybrid_warfare",
+          "cyberattack",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/05/berlin-hospitals-threatened-by-spate-of-attacks/?pk_campaign=feed&pk_kwd=berlin-hospitals-threatened-by-spate-of-attacks"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Government, International Institutions",
+        "theme": "Future of Humanitarian NGOs",
+        "description": "The article analyzes the evolution of humanitarian NGOs towards increasing organizational complexity, influenced by access to public funds and organizational engineering. In a context of severe budget cuts, this 'gigantism' is shaken, raising the question of redefining a more resilient and legitimate international solidarity. While not directly a cyber threat, this highlights the transformation of civil society actors who could become strategic targets.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "ngo",
+          "humanitarian_aid",
+          "development_policy",
+          "civil_society"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-gigantisme-et-la-complexite-de-certaines-ong-humanitaires-a-lheure-dune-redefinition-de-la-solidarite-internationale/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Government",
+        "victime": "Spain's Ministry of Science",
+        "description": "The Spanish Ministry of Science partially shut down its IT systems after a threat actor claimed an attack and published data samples. The attacker claims to have exploited a critical Insecure Direct Object Reference (IDOR) vulnerability to gain full administrator-level credentials. Data authenticity has not been confirmed by a third party.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "spain",
+          "idor",
+          "stolen_data"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/spains-ministry-of-science-shuts-down-systems-after-breach-claims/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Energy (Oil Pipeline Operator)",
+        "victime": "Conpet (Romania)",
+        "description": "Conpet, Romania's national oil pipeline operator, disclosed a cyberattack that disrupted its business systems and took down the company's website. Operational technologies (SCADA) were not affected. Threat actors (Qilin group) claim to have stolen nearly 1TB of documents, including financial information and passport scans.",
+        "tags": [
+          "violation",
+          "breach",
+          "energy",
+          "romania",
+          "conpet",
+          "qilin_ransomware",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanian-oil-pipeline-operator-conpet-discloses-cyberattack-qilin-ransomware/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Newsletter Platform",
+        "victime": "Substack",
+        "description": "Substack notified users of a data breach that occurred in October 2025 but was discovered in February 2026. Attackers stole email addresses, phone numbers, and other internal metadata for approximately 697,313 to 700,000 users. No credentials or financial information were reportedly compromised. The issue has been fixed, and potential phishing attempts are anticipated.",
+        "tags": [
+          "violation",
+          "breach",
+          "substack",
+          "online_platform",
+          "personal_data",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/newsletter-platform-substack-notifies-users-of-data-breach/",
+          "https://securityaffairs.com/187659/uncategorized/hacker-claims-theft-of-data-from-700000-substack-users-company-confirms-breach.html"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Education",
+        "victime": "La Sapienza University (Rome, Italy)",
+        "description": "Europe's largest university, La Sapienza in Rome, was targeted by a cyberattack, disrupting its IT systems. Reports suggest a ransomware attack attributed to the pro-Russian group Femwar02, resulting in data encryption. Technicians are working to restore systems from backups.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "italy",
+          "university",
+          "ransomware",
+          "femwar02",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/italian-university-la-sapienza-goes-offline-after-cyberattack/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Education, Financial Services",
+        "victime": "Harvard University, University of Pennsylvania (UPenn)",
+        "description": "Two Ivy League universities, Harvard and UPenn, suffered data breaches involving donor information. At Harvard, a phone-based phishing attack in November exposed alumni and development information. At UPenn, ShinyHunters gained full access to an employee's SSO account, accessing data for 1.2 million students, alumni, and donors, including sensitive personal information. Notifications to victims are ongoing or were limited.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "harvard",
+          "upenn",
+          "donors",
+          "phishing",
+          "unauthorized_access",
+          "personal_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/04/two-ivy-league-universities-had-donor-information-breaches-will-donors-be-notified/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Fintech (automated investment platform)",
+        "victime": "Betterment",
+        "description": "In January 2026, Betterment confirmed a data breach following a social engineering attack. Customers received fraudulent cryptocurrency-related messages. The breach exposed 1.4 million unique email addresses, names, and geographic location data, and for a subset, dates of birth, phone numbers, and physical addresses. Attackers reportedly did not gain access to customer accounts or login credentials.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "betterment",
+          "social_engineering",
+          "crypto_scam",
+          "personal_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Betterment"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "secteur": "Government (technology services)",
+        "victime": "Conduent",
+        "description": "A data breach at govtech giant Conduent continues to expand, affecting millions more Americans.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "govtech",
+          "conduent",
+          "personal_data"
+        ],
+        "sources": [
+          "https://mastodon.thenewoil.org/@thenewoil/116021447983817832"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-24300",
+        "cvss": 9.8,
+        "product": "Azure Front Door",
+        "description": "Elevation of Privilege vulnerability in Azure Front Door.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "elevation_of_privilege"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24300"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-64712",
+        "cvss": 9.8,
+        "product": "unstructured library",
+        "description": "Critical vulnerability allowing arbitrary file write via processing malicious .msg files, potentially leading to Remote Code Execution (RCE). Affects versions <= 0.18.17.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "unstructured_library",
+          "llm",
+          "ai",
+          "arbitrary_file_write",
+          "rce",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityonline.info/4-million-downloads-at-risk-critical-unstructured-flaw-cvss-9-8-allows-rce/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-0106",
+        "cvss": 9.3,
+        "product": "Linux Kernel (vpu_mmap in vpu_ioctl)",
+        "description": "Local Privilege Escalation vulnerability due to possible arbitrary address mmap from a missing bounds check.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "linux",
+          "kernel",
+          "elevation_of_privilege",
+          "arbitrary_address_mmap"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0106"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-15330",
+        "cvss": 8.8,
+        "product": "Tanium Deploy",
+        "description": "Improper Input Validation vulnerability in Tanium Deploy.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "tanium",
+          "deploy",
+          "improper_input_validation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15330"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65079",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Heap-based Buffer Overflow in the getCFFNames function, allowing Remote Code Execution (RCE) without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "printer",
+          "rce",
+          "heap_buffer_overflow",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-066/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65080",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Type Confusion in the usecmap method, allowing Remote Code Execution (RCE) without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "printer",
+          "rce",
+          "type_confusion",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-065/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65081",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Heap-based Buffer Overflow in the execuserobject function, allowing Remote Code Execution (RCE) without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "printer",
+          "rce",
+          "heap_buffer_overflow",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-064/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-65082",
+        "cvss": 8.8,
+        "product": "Lexmark CX532adwe printers",
+        "description": "Directory Traversal in the libesffls binary, allowing Remote Code Execution (RCE) without authentication.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "lexmark",
+          "printer",
+          "rce",
+          "directory_traversal",
+          "unauthenticated"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-063/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2020-37150",
+        "cvss": 8.7,
+        "product": "Edimax EW-7438RPn-v3 Mini 1.27",
+        "description": "Unauthenticated access to the /wizard_reboot.asp page in unsetup mode, disclosing Wi-Fi SSID and security key.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "edimax",
+          "router",
+          "information_disclosure",
+          "unauthenticated",
+          "wi-fi_password"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37150"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2025-32393",
+        "cvss": 8.7,
+        "product": "AutoGPT (autogpt-platform-beta-v0.6.32)",
+        "description": "Denial of Service (DoS) vulnerability in ReadRSSFeedBlock. A carefully constructed, deep XML file can exhaust memory resources during parsing, causing DoS. Patched in v0.6.32.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "autogpt",
+          "ai",
+          "dos",
+          "xml_parsing",
+          "memory_exhaustion"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32393"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24302",
+        "cvss": 8.6,
+        "product": "Azure Arc",
+        "description": "Elevation of Privilege vulnerability in Azure Arc.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "elevation_of_privilege"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24302"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-21532",
+        "cvss": 8.2,
+        "product": "Azure Function",
+        "description": "Information Disclosure vulnerability in Azure Function.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "azure",
+          "cloud",
+          "information_disclosure"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-21532"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24737",
+        "cvss": 8.1,
+        "product": "jsPDF library",
+        "description": "Code Injection vulnerability allowing an attacker to inject malicious JavaScript via unsanitized form creation APIs (AcroformChoiceField.addOption, AcroFormCheckBox.appearanceState).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "javascript",
+          "code_injection",
+          "xss",
+          "pdf_generation"
+        ],
+        "sources": [
+          "https://securityonline.info/pdf-poison-popular-javascript-library-patches-critical-injection-and-crash-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25056",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Git node)",
+        "description": "Vulnerability allowing authenticated users (with workflow creation/modification permissions) to execute arbitrary system commands or read arbitrary files on the n8n host. Fixed in versions 2.5.0 and 1.123.10.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "arbitrary_command_execution",
+          "file_read",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25049",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Merge node)",
+        "description": "Vulnerability allowing authenticated users (with workflow creation/modification permissions) to write arbitrary files to the n8n server's filesystem, potentially via SQL Query mode, leading to Remote Code Execution (RCE). Fixed in versions 2.4.0 and 1.118.0.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "arbitrary_file_write",
+          "authenticated_access",
+          "sql_query_mode"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-25053",
+        "cvss": null,
+        "product": "n8n workflow automation platform (Expression evaluation)",
+        "description": "Vulnerability allowing authenticated users (with workflow creation/modification permissions) to abuse crafted expressions to execute arbitrary code.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "n8n",
+          "rce",
+          "expression_evaluation",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "cve_id": "CVE-2026-24133",
+        "cvss": null,
+        "product": "jsPDF library",
+        "description": "Application or browser crash vulnerability via processing malicious BMP files with manipulated headers (large width/height values) leading to excessive memory allocation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "jspdf",
+          "javascript",
+          "dos",
+          "memory_exhaustion",
+          "image_processing"
+        ],
+        "sources": [
+          "https://securityonline.info/pdf-poison-popular-javascript-library-patches-critical-injection-and-crash-flaws/"
+        ],
+        "date": "2026-02-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Black Basta: Defense Evasion Capability Embedded in Ransomware Payload",
+        "description": "The Black Basta ransomware group (operated by Cardinal) is integrating a 'Bring Your Own Vulnerable Driver' (BYOVD) defense evasion capability directly into its payload. This technique uses a signed vulnerable Windows driver (NSecSoft NSecKrnl, CVE-2025-68947) to elevate privileges and disable security software. This behavior is unusual and may point to an acceleration of attacks without dropping separate external files. Post-ransomware activity, such as the use of the GotoHTTP RAT, has also been observed.",
+        "threat_actor": "Black Basta (Cardinal)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-68947"
+          ],
+          "MITRE_ATT&CK": [
+            "T1562.001",
+            "T1068"
+          ]
+        },
+        "mitre_ttps": [
+          "Disable or Modify Tools (T1562.001)",
+          "Exploitation for Privilege Escalation (T1068)"
+        ],
+        "analyse": "The direct integration of BYOVD into the ransomware payload makes detection more difficult and accelerates the evasion phase. This signals increasing sophistication among ransomware groups and an attempt to bypass improved EDR defenses. The potential for persistent access post-ransomware (via GotoHTTP) indicates motivations beyond mere extortion, such as espionage or reselling access.",
+        "recommandations": [
+          "Implement robust behavioral detection of driver activities and system processes.",
+          "Monitor for the execution of known vulnerable Windows drivers, even if they are signed.",
+          "Strengthen network segmentation to limit lateral movement after initial compromise.",
+          "Establish rapid response capabilities to interrupt attack chains from the evasion phase.",
+          "Educate security teams on new tactics of integrating defense evasions by ransomware."
+        ],
+        "tags": [
+          "ransomware",
+          "black_basta",
+          "byovd",
+          "defense_evasion",
+          "privilege_escalation",
+          "rce",
+          "threat_actor",
+          "cardinal"
+        ],
+        "sources": [
+          "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Cloud-Hosted Trap: Phishers Use Vercel & Telegram to Bypass Filters",
+        "description": "A sophisticated phishing campaign has been discovered, using a chain of PDF documents and legitimate cloud infrastructure (Vercel Blob, impersonated Dropbox) to steal credentials and bypass security filters. The initial email is technically clean, containing no malicious links, but rather a PDF attachment that leads to a second PDF hosted on Vercel. Stolen information (passwords, system, location) is transmitted via a Telegram bot, displaying a fake 'Login successful' alert.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "vercel.app",
+            "dropbox.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1566.002",
+            "T1059.001",
+            "T1071.001",
+            "T1567.002",
+            "T1539",
+            "T1003.003"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Phishing: Spearphishing Attachment (T1566.002)",
+          "Command and Scripting Interpreter: PowerShell (T1059.001)",
+          "Command and Control: HTTP/HTTPS (T1071.001)",
+          "Exfiltration Over Cloud Service (T1567.002)",
+          "Credential Access: API Secrets (T1539)",
+          "Credential Access: OS Credential Dumping (T1003.003)"
+        ],
+        "analyse": "This campaign illustrates an evolution in phishing techniques, making detection more challenging by abusing legitimate cloud infrastructure and avoiding direct malicious links in emails. The use of a document chain and a Telegram bot for exfiltration demonstrates sophistication and adaptability to evade traditional reputation-based and link-analysis defenses. The success of these attacks relies on users' implicit trust in attachments and popular cloud services.",
+        "recommandations": [
+          "Enhance user training to identify sophisticated phishing techniques, including those that leverage legitimate cloud services and document chains.",
+          "Implement secure email gateway (SEG) and advanced anti-phishing solutions capable of analyzing PDF attachments for suspicious URLs and behaviors.",
+          "Implement multi-factor authentication (MFA) for all accounts to mitigate the impact of stolen credentials.",
+          "Monitor cloud service access logs to detect unusual activity and exfiltration to unauthorized destinations.",
+          "Utilize sandboxing for attachment analysis before they reach users."
+        ],
+        "tags": [
+          "phishing",
+          "social_engineering",
+          "cloud_abuse",
+          "vercel",
+          "telegram_bot",
+          "credential_theft",
+          "evasion"
+        ],
+        "sources": [
+          "https://securityonline.info/cloud-hosted-trap-phishers-use-vercel-telegram-to-bypass-filters/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "DYNOWIPER: Destructive Malware Targeting Poland's Energy Sector",
+        "description": "DYNOWIPER is a destructive malware that targeted Poland's energy sector, specifically SCADA systems and OT networks. Attackers conducted months of reconnaissance, exfiltrating Active Directory databases, FortiGate configurations, and OT network modernization data before deploying two versions of DYNOWIPER. This malware, though not technically sophisticated, is highly effective at rapid data destruction through indiscriminate file corruption and deletion. Elastic Defend demonstrated its ability to detect and prevent its execution via canary file monitoring.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1485",
+            "T1567.002",
+            "T1560.001",
+            "T1083"
+          ]
+        },
+        "mitre_ttps": [
+          "Data Destruction (T1485)",
+          "Exfiltration Over Cloud Service (T1567.002)",
+          "Archive Collected Data: Standard Archive (T1560.001)",
+          "File and Directory Discovery (T1083)"
+        ],
+        "analyse": "The incident highlights the persistent vulnerability of critical infrastructure to destructive attacks. The attacker's thorough preparation, with prior reconnaissance and exfiltration, demonstrates a targeted and methodical approach. The malware's effectiveness, combined with pre-positioned access, poses a high risk. Behavioral detection capabilities, such as canary file monitoring, are crucial for mitigating the impact of destructive malware, even if not novel.",
+        "recommandations": [
+          "Strengthen monitoring and segmentation of OT and SCADA networks.",
+          "Implement EDR/XDR solutions with behavioral detection capabilities and canary file monitoring.",
+          "Conduct regular security audits of industrial control system configurations.",
+          "Improve backup management and disaster recovery plans to minimize service interruptions in case of a destructive attack.",
+          "Educate teams on pre-attack reconnaissance indicators and the importance of defense-in-depth."
+        ],
+        "tags": [
+          "malware",
+          "destructive_malware",
+          "dynowiper",
+          "critical_infrastructure",
+          "energy_sector",
+          "ot_security",
+          "scada",
+          "data_destruction"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/dynowiper"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Helpful Skills or Hidden Payloads? Bitdefender Labs Dives Deep into the OpenClaw Malicious Skill Trap",
+        "description": "Bitdefender Labs uncovered hundreds of malicious OpenClaw 'skills' blending among legitimate ones, exploiting the OpenClaw open-source project (aka Clawdbot/Moltbot) which enables actions on behalf of the user. These skills, often marketed as helpful (crypto trading agents, wallet helpers), contain hidden shell commands (Base64 encoded) that download additional payloads and exfiltrate cryptocurrency private keys and API secrets. The risk is expanding to corporate environments, with crypto-focused skills accounting for 54% of malicious skills in early February 2026.",
+        "threat_actor": "OpenClaw (aka Moltbot, Clawdbot)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "91.92.242.30"
+          ],
+          "URL": [
+            "glot.io",
+            "github.com"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1059.004",
+            "T1059.006",
+            "T1574.002",
+            "T1567",
+            "T1083",
+            "T1539",
+            "T1003.003",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Command and Scripting Interpreter: TShell (T1059.004)",
+          "Command and Scripting Interpreter: PowerShell (T1059.006)",
+          "Hijack Execution Flow: Dll Search Order Hijacking (T1574.002)",
+          "Exfiltration (T1567)",
+          "File and Directory Discovery (T1083)",
+          "Credential Access: API Secrets (T1539)",
+          "Credential Access: OS Credential Dumping (T1003.003)",
+          "Command and Control: HTTP/HTTPS (T1071.001)"
+        ],
+        "analyse": "The growing popularity of open-source AI tools and 'agentic' models creates a significant new attack vector, exploiting user trust and the perceived ease of automation. The ability of these 'skills' to execute system commands and exfiltrate critical data, particularly in the crypto space, poses a significant financial and reputational risk. The expansion into corporate environments is alarming.",
+        "recommandations": [
+          "Implement an 'AI Skills Checker' to assess the risk of AI skills before installation.",
+          "Train users on detecting malicious AI skills and social engineering.",
+          "Monitor process activities triggered by AI tools and automation platforms for suspicious behaviors (external infrastructure calls, shell execution, Base64 encoding).",
+          "Restrict AI tool permissions to the least privileged environment possible and limit access to sensitive information (API keys, credentials).",
+          "Implement endpoint security (EDR) capable of detecting hidden shell command executions and data exfiltrations."
+        ],
+        "tags": [
+          "ai",
+          "openclaw",
+          "moltbot",
+          "clawdbot",
+          "malicious_skills",
+          "social_engineering",
+          "cryptocurrency_theft",
+          "api_secrets",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://www.bitdefender.com/en-us/blog/labs/helpful-skills-or-hidden-payloads-bitdefender-labs-dives-deep-into-the-openclaw-malicious-skill-trap"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Knife Cutting the Edge: Disclosing a China-nexus gateway-monitoring AitM framework",
+        "description": "Cisco Talos uncovered \"DKnife,\" a sophisticated gateway-monitoring and Adversary-in-the-Middle (AiTM) framework linked to China (UAT-7290), composed of seven Linux implants. Active since at least 2019, DKnife compromises routers and edge devices to intercept network traffic, steal credentials, hijack application updates (Android/Windows), and deliver malware (ShadowPad, DarkNimbus). It also disrupts security product traffic and exfiltrates user activity, primarily targeting Chinese users and telecommunications providers in South Asia.",
+        "threat_actor": "UAT-7290 (China-nexus APT)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "43.132.205[.]118",
+            "10.3.3.3",
+            "47.93.54[.]134",
+            "117.175.185[.]81",
+            "192.168.92.92",
+            "1.1.1.1"
+          ],
+          "URL": [
+            "http[:]//fanyi.baidu[.]com/query_config_dk",
+            "http://10.3.3.3:81/app/base.apk"
+          ],
+          "FILE_HASH_SHA256": [
+            "2550aa4c4bc0a020ec4b16973df271b81118a7abea77f77fec2f575a32dc3444"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1567.002",
+            "T1071.001",
+            "T1090.002",
+            "T1003.003",
+            "T1562.001",
+            "T1071.004",
+            "T1059",
+            "T1564.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploit Public-Facing Application (T1190)",
+          "Exfiltration Over Cloud Service (T1567.002)",
+          "Application Layer Protocol: Web Protocols (T1071.001)",
+          "Proxy: DNS (T1090.002)",
+          "OS Credential Dumping (T1003.003)",
+          "Disable or Modify Tools (T1562.001)",
+          "Application Layer Protocol: DNS (T1071.004)",
+          "Command and Scripting Interpreter (T1059)",
+          "Impair Defenses (T1564.001)"
+        ],
+        "analyse": "The DKnife framework represents a highly sophisticated APT-level threat, capable of full control over network traffic at entry points (routers, edge devices). Its use of AiTM techniques, legitimate update hijacking, and stealthy Linux implants makes it extremely difficult to detect and counter. The targeting of telecommunications and Chinese users suggests long-term espionage objectives. The connection with other backdoors like WizardNet and ShadowPad indicates an evolving and well-integrated toolchain.",
+        "recommandations": [
+          "Strengthen security of Linux routers and edge devices: firmware audits, strong authentication, network segmentation, and direct updates from trusted vendors.",
+          "Implement deep network traffic monitoring (NDR) to detect anomalies, DNS hijacking, and exfiltration.",
+          "Use file integrity monitoring (FIM) tools for critical configurations and system binaries.",
+          "Implement TLS inspection for encrypted traffic to detect AiTM attacks.",
+          "Educate users on the dangers of unverified application updates and risks associated with self-signed TLS certificates."
+        ],
+        "tags": [
+          "apt",
+          "china_nexus",
+          "aitm",
+          "dknife",
+          "gateway_monitoring",
+          "traffic_manipulation",
+          "dns_hijacking",
+          "malware_delivery",
+          "darknimbus",
+          "shadowpad",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/knife-cutting-the-edge/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "New Clickfix variant ‘CrashFix’ deploying Python Remote Access Trojan",
+        "description": "A new variant of the ClickFix campaign, named CrashFix, aims to coerce users into executing malicious commands by crashing their browsers via an infinite loop. This social engineering, combined with the abuse of legitimate 'living-off-the-land' binaries (like finger.exe renamed to ct.exe) and the delivery of Python-based payloads (WinPython, modes.py as ModeloRAT RAT), allows attackers to establish persistence and perform reconnaissance on high-value systems. The attack typically begins with malicious ads for ad blockers.",
+        "threat_actor": "ClickFix (CrashFix variant)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "69[.]67[.]173[.]30",
+            "144.31.221[.]197"
+          ],
+          "FILE_HASH_SHA256": [
+            "beb0229043741a7c7bfbb4f39d00f583e37ea378d11ed3302d0a2bc30f267006",
+            "c76c0146407069fd4c271d6e1e03448c481f0970ddbe7042b31f552e37b55817"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1204.001",
+            "T1059.001",
+            "T1027.001",
+            "T1036.003",
+            "T1105",
+            "T1574.001",
+            "T1053.005",
+            "T1083",
+            "T1049",
+            "T1018",
+            "T1007"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "User Execution: Malicious Link (T1204.001)",
+          "Command and Scripting Interpreter: PowerShell (T1059.001)",
+          "Obfuscated Files or Information: Cleartext (T1027.001)",
+          "Masquerading: Rename System Utilities (T1036.003)",
+          "Ingress Tool Transfer (T1105)",
+          "Hijack Execution Flow: DLL Search Order Hijacking (T1574.001)",
+          "Scheduled Task/Job: Scheduled Task (T1053.005)",
+          "File and Directory Discovery (T1083)",
+          "Network Share Discovery (T1049)",
+          "Remote System Discovery (T1018)",
+          "System Service Discovery (T1007)"
+        ],
+        "analyse": "CrashFix represents a notable evolution in social engineering combined with sophisticated evasion techniques. By deliberately causing browser crashes, attackers increase the likelihood of users executing malicious commands under the pretext of restoring functionality. The use of living-off-the-land binaries and portable Python complicates traditional detection, highlighting the importance of behavioral detection and user awareness.",
+        "recommandations": [
+          "Educate users about browser-based social engineering tactics and the risks of executing unsolicited commands to 'fix' system issues.",
+          "Implement EDR/XDR solutions capable of detecting abnormal behavior of system binaries and PowerShell/Python script executions.",
+          "Use secure web gateways and content filters to block malicious advertisements and redirects to phishing sites.",
+          "Restrict the execution of unauthorized Python and other script interpreters on workstations.",
+          "Monitor for unusual scheduled task creations and modifications to the 'Run' registry key for persistence."
+        ],
+        "tags": [
+          "clickfix",
+          "crashfix",
+          "python_rat",
+          "social_engineering",
+          "browser_hijacking",
+          "living_off_the_land",
+          "persistence",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Ransomware gang uses ISPsystem VMs for stealthy payload delivery",
+        "description": "Ransomware operators (including LockBit, Qilin, Conti, BlackCat/ALPHV, and Ursnif) are hosting and delivering malicious payloads at scale by abusing virtual machines (VMs) provisioned by ISPsystem, a legitimate virtual infrastructure management provider. Sophos researchers observed the use of Windows VMs with identical hostnames, suggesting default templates. This allows malicious actors to spin up C2 and payload-delivery infrastructure at low cost and with a low barrier to entry, often via 'bulletproof' hosting providers.",
+        "threat_actor": "Multiple ransomware groups (LockBit, Qilin, Conti, BlackCat/ALPHV, Ursnif)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "Stark Industries Solutions Ltd.",
+            "Zomro B.V.",
+            "First Server Limited",
+            "Partner Hosting LTD",
+            "JSC IOT",
+            "MasterRDP"
+          ],
+          "MITRE_ATT&CK": [
+            "T1587.001",
+            "T1583.001",
+            "T1071.001",
+            "T1105"
+          ]
+        },
+        "mitre_ttps": [
+          "Develop Capabilities: Malware (T1587.001)",
+          "Acquire Infrastructure: Virtual Private Server (T1583.001)",
+          "Command and Control: HTTP/HTTPS (T1071.001)",
+          "Ingress Tool Transfer (T1105)"
+        ],
+        "analyse": "The abuse of cloud infrastructure and legitimate services by ransomware groups is a persistent trend, as it lends them legitimacy and complicates detection and takedown efforts. The use of default VM templates and bulletproof hosting providers enables rapid and discreet deployment of attack infrastructure. This highlights a challenge for defenders, who must monitor not only content but also the reputation and behavior of hosting infrastructures.",
+        "recommandations": [
+          "Block access to hosting providers known to support cybercriminal activities (list of cited providers).",
+          "Implement C2 traffic detection based on signatures and behaviors, as well as the reputation of IP addresses/domains.",
+          "Monitor cloud environments for unauthorized VMs or those with suspicious behavior (e.g., traffic to unknown destinations, downloading suspicious binaries).",
+          "Strengthen VM security policies to prevent malicious payload execution and limit privileges.",
+          "Collaborate with cloud service and hosting providers to report abuse and have malicious infrastructure removed."
+        ],
+        "tags": [
+          "ransomware",
+          "ispsystem",
+          "vm_abuse",
+          "payload_delivery",
+          "c2_infrastructure",
+          "bulletproof_hosting",
+          "threat_actor"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ransomware-gang-uses-ispsystem-vms-for-stealthy-payload-delivery/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "Stan Ghouls targeting Russia and Uzbekistan with NetSupport RAT",
+        "description": "The cybercriminal group Stan Ghouls (also known as Bloody Wolf) has been launching targeted attacks against organizations in Russia, Uzbekistan, Kyrgyzstan, Kazakhstan, and potentially other countries since 2023, focusing on industrial manufacturing, finance, and IT sectors. The group uses phishing emails with malicious PDF attachments, custom Java-based loaders, and the NetSupport Remote Access Trojan (RAT) to gain control of victim machines. Evidence suggests a possible expansion into IoT malware (Mirai).",
+        "threat_actor": "Stan Ghouls (aka Bloody Wolf)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mysoliq-uz[.]commy-xb[.]comxarid-uz[.]comach-uz[.]comsoliq-uz[.]comminjust-kg[.]comesf-kg[.]comtaxnotice-kg[.]comnotice-kg[.]comproauditkg[.]comkgauditcheck[.]comservicedoc-kg[.]comauditnotice-kg[.]comtax-kg[.]comrouming-uz[.]comaudit-kg[.]comkyrgyzstanreview[.]comsalyk-notofocations[.]com"
+          ],
+          "FILE_HASH_MD5": [
+            "cb9c28a4c6657ae5ea810020cb214ff0"
+          ],
+          "FILE_HASH_SHA256": [
+            "B4FF4AA3EBA9409F9F1A5210C95DC5C3AF9321DDB4BEF0C3CD1FF3C7C786F0E2056B75FE0D230E6FF53AC508E0F93CCBDB84FEBFD85F1469C28B4ED70AC6A638649C7CACDD545E30D015EDB9FCAB3A0CBE0C87A83267F1CE13B3F75C78EAC29578CB3ABD00A1975BEBEDA852B245087351703911DC437D4E3910CE7F866C970EFA53B0FCEF08F8FF3FFDDFEE7F1F4F1A79D0EEAFB30AA2BD4C261A51104F6ACC8DA8F0339D17E2466B3D73236D18B835299A7E3D6118AD91A9B6D37F94AC685B62AFACC37B71D564D75A58FC161900C3047A600E3AFBF4286175BADD4D88F131ED0CCADA1FE1E13EF78553A48260D932C363CD87178FD660C25CDD8D978685F661FF22BA4C3DF7AE4A936FCFDEB020EAB51D9EDC1DC8B6200F260589A4300009923557554730247D37E782DB3BEA365D60C34AD7E1F183A973FB8EE29DC454E80CC80A24841401529EC9C6A8456097750CE06C962E07E63D780E5C2777A661FC",
+            "1b740b17e53c4daeed45148bfbee4f143f99fed688c51977b122789a094fec2e8b0bbe7dc960f7185c330baa3d9b214c95db93454ec1d581311c832122d21b20646a680856f837254e6e361857458e178064f7ac9a5aa845ded6a1100a1d5752d0cf8946acd3d12df1e8ae4bb34f1a6edb796d87acb7d980264fdcf5e94757f0e3cb4dafa1fb596e1e34e4b139be1b05e0023eb058b0c82585a7340b6ed4cc060bf01810201004dcc484b3396607a4834C4FA06BD840405FBEC34FE49D759E8DA539A07891A339479C596BABE3060EA6b13f7ccbedfb71b0211c14afe0815b36f14275f8f420afd0f9a62f3992860d683f41091afd6256701dd70ac20c1c79fe5c4a57e2e40049f8e8a6a74aa8085c807e8feb501885eff246d4cb43c468b4118aa104e64b00b049264dc1b01412e6d98c63818261735ddff2fe98b3ae23bf7d"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.001",
+            "T1059.004",
+            "T1071.001",
+            "T1105",
+            "T1071.004",
+            "T1078.003",
+            "T1003",
+            "T1021.001"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Link (T1566.001)",
+          "Command and Scripting Interpreter: TShell (T1059.004)",
+          "Command and Control: HTTP/HTTPS (T1071.001)",
+          "Ingress Tool Transfer (T1105)",
+          "Command and Control: DNS (T1071.004)",
+          "Valid Accounts: Enterprise Accounts (T1078.003)",
+          "Credential Access (T1003)",
+          "Remote Services: Remote Desktop Protocol (T1021.001)"
+        ],
+        "analyse": "Stan Ghouls is a persistent and adaptable actor, targeting strategic sectors with proven TTPs like phishing and the use of legitimate RATs. Their ability to customize attacks based on local languages and constantly update their C2 hosting infrastructure makes IoC-based detection challenging. The potential interest in IoT underscores a possible expansion of attack vectors and targets.",
+        "recommandations": [
+          "Train employees to detect phishing emails, especially those with malicious PDF attachments.",
+          "Implement an EDR/XDR solution to detect the behaviors of malicious Java loaders and the abuse of legitimate tools like NetSupport RAT.",
+          "Monitor network traffic to identify C2 connections to newly registered or suspicious domains.",
+          "Apply the principle of least privilege for users and systems.",
+          "Consider security audits for IoT devices if the hypothesis of IoT expansion is confirmed."
+        ],
+        "tags": [
+          "threat_actor",
+          "stan_ghouls",
+          "bloody_wolf",
+          "spear_phishing",
+          "netsupport_rat",
+          "data_theft",
+          "cybercriminal",
+          "iot"
+        ],
+        "sources": [
+          "https://securelist.com/stan-ghouls-in-uzbekistan/118738/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "The Invisible Landlord: ShadowSyndicate Rotates Keys to Hide Infrastructure",
+        "description": "The malicious infrastructure cluster known as ShadowSyndicate, linked to various ransomware families (notably ALPHV/BlackCat), has evolved by rotating the use of multiple SSH keys to segment its infrastructure. This new tactic, observed by Group-IB, aims to complicate attribution and enhance operational security, moving away from their previous habit of using a single SSH key. It is suggested that ShadowSyndicate could operate as an 'Initial Access Broker' (IAB) or a 'bulletproof' hosting provider.",
+        "threat_actor": "ShadowSyndicate",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-24858",
+            "CVE-2026-21509",
+            "CVE-2026-20045",
+            "CVE-2024-23334"
+          ],
+          "MITRE_ATT&CK": [
+            "T1078.003",
+            "T1090.003"
+          ]
+        },
+        "mitre_ttps": [
+          "Valid Accounts: Enterprise Accounts (T1078.003)",
+          "Proxy: Bulletproof Hosting (T1090.003)"
+        ],
+        "analyse": "ShadowSyndicate's increasing sophistication, evidenced by SSH key rotation and infrastructure segmentation, makes tracking and attribution efforts more complex for defenders. As a potential IAB or bulletproof hosting provider, this group plays a critical enabling role in the cybercriminal ecosystem, supporting multiple ransomware campaigns and cyberattacks. Their adaptability underscores the need to focus on TTPs rather than static infrastructure indicators.",
+        "recommandations": [
+          "Strengthen monitoring of 'bulletproof' hosting infrastructures and proxy services.",
+          "Develop attribution capabilities based on behavioral correlations and TTPs rather than isolated IoCs.",
+          "Implement strict SSH key and access management, avoiding key reuse across different infrastructures.",
+          "Participate in threat intelligence sharing to quickly disseminate information on evolving malicious actors.",
+          "Establish mechanisms for detecting abnormal activity on servers, such as unusual SSH connections."
+        ],
+        "tags": [
+          "threat_actor",
+          "shadowsyndicate",
+          "ransomware",
+          "infrastructure_abuse",
+          "operational_security",
+          "ssh",
+          "initial_access_broker",
+          "bulletproof_hosting"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-landlord-shadowsyndicate-rotates-keys-to-hide-infrastructure/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "The Invisible Proxy: NGINX Hijacked for Silent SEO Poisoning",
+        "description": "A new campaign targets NGINX servers and management panels (like Baota) to inject malicious configurations. These configurations silently redirect user traffic to attacker-controlled servers by manipulating 'proxy_pass' and 'location' directives. The campaign, linked to actors associated with React2Shell exploitation, targets Asian top-level domains (.in, .id, .th) as well as education and government sectors, for 'SEO poisoning' activities often related to gambling. The goal is to exploit the victims' SEO reputation without defacing websites.",
+        "threat_actor": "Actors linked to React2Shell",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "pgslot",
+            "live"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1566.002",
+            "T1070.004",
+            "T1573"
+          ]
+        },
+        "mitre_ttps": [
+          "Exploit Public-Facing Application (T1190)",
+          "Phishing (T1566.002)",
+          "Disguise Files or Information (T1070.004)",
+          "Proxy (T1573)"
+        ],
+        "analyse": "This SEO poisoning campaign represents an insidious threat because it is designed to be invisible to users and site owners. By exploiting trust in legitimate domains and their SEO reputation, attackers can disseminate malicious or fraudulent content (such as online gambling) at scale without being easily detected. The ability to target specific TLDs and sectors demonstrates a sophisticated approach.",
+        "recommandations": [
+          "Monitor NGINX configuration files for any unexpected modifications to 'proxy_pass' and 'location' directives.",
+          "Implement multi-factor authentication (MFA) for NGINX and Baota management panels.",
+          "Conduct regular security audits of web servers to detect code injections or malicious configurations.",
+          "Use file integrity monitoring (FIM) tools to monitor the integrity of critical configurations.",
+          "Educate administrators on SEO poisoning techniques and signs of compromise."
+        ],
+        "tags": [
+          "seo_poisoning",
+          "nginx",
+          "web_compromise",
+          "traffic_redirection",
+          "supply_chain",
+          "configuration_hijacking",
+          "black_hat_seo"
+        ],
+        "sources": [
+          "https://securityonline.info/the-invisible-proxy-nginx-hijacked-for-silent-seo-poisoning/"
+        ],
+        "date": "2026-02-06"
+      },
+      {
+        "title": "The Shadow Campaigns: Uncovering Global Espionage",
+        "description": "The cyber-espionage group TGR-STA-1030 (also known as UNC6619), aligned with an Asian state, has compromised governments and critical infrastructure in 37 countries over the past year, and conducted reconnaissance in 155 countries between November and December 2025. The group uses malicious phishing campaigns (mega.nz links), exploits N-day vulnerabilities (e.g., Atlassian Crowd CVE-2019-11580), and deploys tools like the VShell C2 framework, webshells (Behinder, Neo-reGeorg, Godzilla), and a new stealthy Linux kernel rootkit called ShadowGuard (eBPF rootkit). Their motivations appear linked to economic partnerships and natural resource extraction.",
+        "threat_actor": "TGR-STA-1030 (aka UNC6619)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2019-11580"
+          ],
+          "DOMAIN": [
+            "mega[.]nz",
+            "gouvn[.]me",
+            "888910[.]xyz"
+          ],
+          "FILE_HASH_SHA256": [
+            "7808B1E01EA790548B472026AC783C73A033BB90BBE548BF3006ABFBCB48C52D"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1190",
+            "T1210",
+            "T1059",
+            "T1505.003",
+            "T1070.004",
+            "T1573.001",
+            "T1068"
+          ]
+        },
+        "mitre_ttps": [
+          "Phishing: Spearphishing Attachment (T1566.002)",
+          "Exploit Public-Facing Application (T1190)",
+          "Lateral Movement (T1210)",
+          "Command and Scripting Interpreter (T1059)",
+          "Server Software Component: Web Shell (T1505.003)",
+          "Obfuscated Files or Information: Disguise Files or Information (T1070.004)",
+          "Proxy (T1573.001)",
+          "Exploitation for Privilege Escalation (T1068)"
+        ],
+        "analyse": "This global espionage campaign, conducted by a highly sophisticated state-aligned actor, represents a persistent threat to the sovereignty and economic security of targeted countries. The focus on economic partnerships and natural resources indicates long-term strategic objectives. The use of eBPF rootkits makes detection and attribution particularly challenging, as these techniques operate at the kernel level, concealing their activity from traditional security tools.",
+        "recommandations": [
+          "Enhance phishing awareness, especially for employees with access to sensitive information.",
+          "Promptly apply security patches for N-day vulnerabilities, particularly those in public platforms like Atlassian Crowd.",
+          "Implement advanced behavioral threat detection (EDR/XDR) to identify post-exploitation TTPs and the presence of rootkits or webshells.",
+          "Segment networks and monitor traffic between segments, especially for critical infrastructures.",
+          "Establish strict identity and access management (IAM) and multi-factor authentication (MFA)."
+        ],
+        "tags": [
+          "cyber_espionage",
+          "state_aligned",
+          "apt",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit",
+          "critical_infrastructure",
+          "geopolitics"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"
+        ],
+        "date": "2026-02-06"
+      }
+    ]
+  }
+}
