@@ -1,0 +1,740 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape this week is characterized by targeted destructive attacks against critical infrastructure and a significant adaptation in cybercrime TTPs, particularly involving the abuse of legitimate platforms. The DYNOWIPER campaign in Poland's energy sector highlights the continuing threat posed by state-aligned actors (Static Tundra/Berserk Bear) focused on physical disruption. Meanwhile, major ransomware groups like Black Basta are enhancing evasion capabilities by embedding Bring-Your-Own-Vulnerable-Driver (BYOVD) components directly into their payloads. A major trend is the exploitation of new technologies and platform oversights: the abuse of open-source AI agents (OpenClaw) for malware delivery, phishing campaigns leveraging trusted cloud services (Vercel, Telegram), and criminal organizations exploiting infrastructure template flaws (ISPsystem VMmanager) for stealthy C2 operations. Geopolitically, two major state-aligned espionage groups, TGR-STA-1030 (global targeting of governments) and Amaranth-Dragon (targeting Southeast Asian governments), demonstrate widespread, persistent espionage efforts.",
+      "fr": "Le paysage des menaces cette semaine est caractérisé par des attaques destructrices ciblées contre les infrastructures critiques et une adaptation significative des TTP du cybercrime, impliquant notamment l'abus de plateformes légitimes. La campagne DYNOWIPER visant le secteur énergétique polonais souligne la menace persistante posée par des acteurs alignés sur des États (Static Tundra/Berserk Bear) cherchant la perturbation physique. Parallèlement, des groupes majeurs de rançongiciels comme Black Basta améliorent leurs capacités d'évasion en intégrant des composants BYOVD (Bring-Your-Own-Vulnerable-Driver) directement dans leurs charges utiles. Une tendance majeure est l'exploitation des nouvelles technologies et des lacunes des plateformes : l'abus d'agents d'IA open-source (OpenClaw) pour la livraison de malwares, les campagnes de phishing exploitant des services cloud de confiance (Vercel, Telegram) et les organisations criminelles tirant parti des failles de modèles d'infrastructure (ISPsystem VMmanager) pour des opérations C2 furtives. Sur le plan géopolitique, deux groupes d'espionnage majeurs alignés sur des États, TGR-STA-1030 (ciblage mondial des gouvernements) et Amaranth-Dragon (ciblage des gouvernements d'Asie du Sud-Est), démontrent des efforts d'espionnage étendus et persistants."
+    },
+    "date": "2026-02-06"
+  },
+  "malicious_actors_analyse": [
+    {
+      "name": "Static Tundra (Ghost Blizzard, Berserk Bear)",
+      "campaign": "DYNOWIPER Destructive Campaign",
+      "campaign_description": {
+        "en": "A destructive cyberattack campaign targeting Poland’s energy infrastructure (30+ wind/solar farms and a major CHP plant) around December 2025 using custom-developed DYNOWIPER malware. The initial access was reportedly achieved via vulnerable Fortinet FortiGate devices exposed online.",
+        "fr": "Campagne cybernétique destructive ciblant l'infrastructure énergétique de la Pologne (plus de 30 fermes éoliennes/solaires et une centrale de cogénération majeure) vers décembre 2025, utilisant le malware DYNOWIPER. L'accès initial aurait été obtenu via des dispositifs Fortinet FortiGate vulnérables exposés en ligne."
+      },
+      "sector": {
+        "en": "Energy; Critical Infrastructure (CI)",
+        "fr": "Énergie ; Infrastructure Critique (IC)"
+      },
+      "modop": {
+        "en": "Exploiting FortiGate devices (initial access), reconnaissance of SCADA/OT networks, exfiltration of AD databases, and use of DYNOWIPER malware for irreversible data destruction (overwriting file headers).",
+        "fr": "Exploitation de dispositifs FortiGate (accès initial), reconnaissance des réseaux SCADA/OT, exfiltration de bases de données Active Directory, et utilisation du malware DYNOWIPER pour la destruction irréversible de données (écrasement des en-têtes de fichiers)."
+      },
+      "tags": [
+        "APT",
+        "Destructive Malware",
+        "Wiper",
+        "ICS/SCADA"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/dynowiper"
+      ],
+      "date": "2026-02-06"
+    },
+    {
+      "name": "Amaranth-Dragon",
+      "campaign": "Southeast Asian Government Espionage 2025",
+      "campaign_description": {
+        "en": "A cyber-espionage campaign targeting government and law enforcement agencies across Southeast Asia (including Thailand, Indonesia, Singapore, and the Philippines) throughout 2025. This activity is linked to the APT41 ecosystem.",
+        "fr": "Campagne de cyberespionnage ciblant les agences gouvernementales et les forces de l'ordre à travers l'Asie du Sud-Est (y compris la Thaïlande, l'Indonésie, Singapour et les Philippines) tout au long de 2025. Cette activité est liée à l'écosystème APT41."
+      },
+      "sector": {
+        "en": "Government; Law Enforcement",
+        "fr": "Gouvernement ; Forces de l'ordre"
+      },
+      "modop": {
+        "en": "Highly targeted, stealthy attacks using a previously unknown custom loader dubbed 'Amaranth Loader' for long-term espionage objectives.",
+        "fr": "Attaques hautement ciblées et furtives utilisant un chargeur personnalisé jusqu'alors inconnu, nommé 'Amaranth Loader', pour des objectifs d'espionnage à long terme."
+      },
+      "tags": [
+        "APT",
+        "China-nexus",
+        "Espionage",
+        "Loader"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187647/apt/china-linked-amaranth-dragon-hackers-target-southeast-asian-governments-in-2025.html"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "name": "TGR-STA-1030",
+      "campaign": "Shadow Campaigns",
+      "campaign_description": {
+        "en": "State-aligned espionage group operating out of Asia that compromised government and critical infrastructure organizations across 37 countries in the past year. Observed conducting active reconnaissance against 155 countries between November and December 2025.",
+        "fr": "Groupe d'espionnage aligné sur un État, opérant depuis l'Asie, ayant compromis des organisations gouvernementales et des infrastructures critiques dans 37 pays au cours de la dernière année. Des activités de reconnaissance active ont été observées contre 155 pays entre novembre et décembre 2025."
+      },
+      "sector": {
+        "en": "Government; Critical Infrastructure; Law Enforcement; Finance",
+        "fr": "Gouvernement ; Infrastructure Critique ; Forces de l'ordre ; Finance"
+      },
+      "modop": {
+        "en": "Targeting high-value systems (e-passport/e-visa services), exploiting vulnerabilities like CVE-2019-11580 (Atlassian Crowd), and relying on a mix of custom C2 frameworks and toolings. Utilizes sandbox evasion checks.",
+        "fr": "Ciblage de systèmes de grande valeur (services de passeport/visa électronique), exploitation de vulnérabilités comme CVE-2019-11580 (Atlassian Crowd) et utilisation d'un mélange de frameworks C2 personnalisés et d'outils. Utilise des vérifications d'évasion d'environnement d'analyse (sandbox)."
+      },
+      "tags": [
+        "APT",
+        "Espionage",
+        "Global Targeting",
+        "Vulnerability Exploitation"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "name": "ShadowSyndicate",
+      "campaign": "Infrastructure Evasion",
+      "campaign_description": {
+        "en": "An update on the notorious cybercrime infrastructure cluster known as ShadowSyndicate, linked to various ransomware families (including Clop and BlackCat). The group has started rotating its historically single SSH key across its C2 servers to evade detection and attribution.",
+        "fr": "Mise à jour sur le célèbre cluster d'infrastructure cybercriminelle connu sous le nom de ShadowSyndicate, lié à diverses familles de rançongiciels (y compris Clop et BlackCat). Le groupe a commencé à faire pivoter sa clé SSH, jusqu'alors unique, sur ses serveurs C2 pour échapper à la détection et à l'attribution."
+      },
+      "sector": {
+        "en": "Cybercrime Infrastructure; Initial Access Broker (IAB); Bulletproof Hosting (BPH)",
+        "fr": "Infrastructure cybercriminelle ; Courtier d'accès initial (IAB) ; Hébergement 'Bulletproof'"
+      },
+      "modop": {
+        "en": "Using bulletproof hosting providers, managing large clusters of servers, and rotating SSH keys to segment and obfuscate their activity, while maintaining loyalty to known 'friendly' hosting networks.",
+        "fr": "Utilisation de fournisseurs d'hébergement 'bulletproof', gestion de larges clusters de serveurs, et rotation des clés SSH pour segmenter et obscurcir leur activité, tout en restant fidèle aux réseaux d'hébergement 'amicaux' connus."
+      },
+      "tags": [
+        "Ransomware Ecosystem",
+        "Infrastructure",
+        "C2"
+      ],
+      "sources": [
+        "https://securityonline.info/the-invisible-landlord-shadowsyndicate-rotates-keys-to-hide-infrastructure/"
+      ],
+      "date": "2026-02-06"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Diplomacy; Nuclear Security",
+        "fr": "Diplomatie ; Sécurité Nucléaire"
+      },
+      "theme": {
+        "en": "Expiry of New START Treaty",
+        "fr": "Expiration du Traité New START"
+      },
+      "description": {
+        "en": "The New Strategic Arms Reduction Treaty (New START), the last remaining US-Russian arms control agreement, expired on February 5, 2026. This expiry removes limits on strategic delivery systems and verification measures, potentially complicating US and European efforts to strengthen conventional deterrence and further undermining strategic stability between the two nuclear powers.",
+        "fr": "Le Nouveau Traité de Réduction des Armes Stratégiques (New START), le dernier accord de contrôle des armements entre les États-Unis et la Russie, a expiré le 5 février 2026. Cette expiration supprime les limites sur les systèmes de livraison stratégiques et les mesures de vérification, compliquant potentiellement les efforts américains et européens pour renforcer la dissuasion conventionnelle et sapant davantage la stabilité stratégique entre les deux puissances nucléaires."
+      },
+      "tags": [
+        "Russia",
+        "USA",
+        "Arms Control",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://www.rusi.org/explore-our-research/publications/commentary/new-start-expiry-implications-europe"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "sector": {
+        "en": "Sports; Government; Diplomacy",
+        "fr": "Sport ; Gouvernement ; Diplomatie"
+      },
+      "theme": {
+        "en": "Pro-Russian Hacktivism Against Italian Targets",
+        "fr": "Hacktivisme pro-russe contre des cibles italiennes"
+      },
+      "description": {
+        "en": "The pro-Russian hacktivist group Noname057(16) claimed responsibility for DDoS attacks against Italian government targets, including Foreign Ministry offices and websites/hotels related to the Milano Cortina 2026 Winter Olympics. Italy’s Foreign Minister attributed these actions to Russian-led operations.",
+        "fr": "Le groupe hacktiviste pro-russe Noname057(16) a revendiqué des attaques DDoS contre des cibles gouvernementales italiennes, y compris des bureaux du ministère des Affaires étrangères et des sites web/hôtels liés aux Jeux Olympiques d'hiver de Milan Cortina 2026. Le ministre italien des Affaires étrangères a attribué ces actions à des opérations dirigées par la Russie."
+      },
+      "tags": [
+        "Russia",
+        "Italy",
+        "Hacktivism",
+        "DDoS"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187654/hacktivism/pro-russian-group-noname05716-launched-ddos-attacks-on-milano-cortina-2026-winter-olympics.html"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "sector": {
+        "en": "Healthcare; Government",
+        "fr": "Santé ; Gouvernement"
+      },
+      "theme": {
+        "en": "Hybrid Threats Targeting Berlin Hospitals",
+        "fr": "Menaces Hybrides Ciblant les Hôpitaux de Berlin"
+      },
+      "description": {
+        "en": "The Berlin Hospital Association (BKG) issued a warning concerning a spate of incidents, including cyberattacks, drone incursions, and arson, targeting healthcare facilities in the capital. Germany’s security services classify some of these acts as potential hybrid warfare, emphasizing the need for coordinated defense with security agencies.",
+        "fr": "L'Association des Hôpitaux de Berlin (BKG) a émis un avertissement concernant une vague d'incidents, notamment des cyberattaques, des incursions de drones et des incendies criminels, ciblant les établissements de santé de la capitale. Les services de sécurité allemands classent certains de ces actes comme des menaces de guerre hybride potentielles, soulignant la nécessité d'une défense coordonnée avec les agences de sécurité."
+      },
+      "tags": [
+        "Hybrid Warfare",
+        "Germany",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/05/berlin-hospitals-threatened-by-spate-of-attacks/?pk_campaign=feed&pk_kwd=berlin-hospitals-threatened-by-spate-of-attacks"
+      ],
+      "date": "2026-02-05"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Conpet",
+      "threat_actor": "Qilin",
+      "sector": {
+        "en": "Energy; Oil and Gas Pipeline Operator (Romania)",
+        "fr": "Énergie ; Opérateur d’oléoduc et de gazoduc (Roumanie)"
+      },
+      "description": {
+        "en": "Cyberattack disrupting corporate IT systems, confirmed by Conpet. The Qilin ransomware gang claimed responsibility, alleging the theft of nearly 1TB of documents, including internal financial data and passport scans. Operational Technology (SCADA/Telecom) systems were reported as unaffected.",
+        "fr": "Cyberattaque ayant perturbé les systèmes informatiques de l'entreprise, confirmée par Conpet. Le gang de rançongiciels Qilin a revendiqué l'attaque, affirmant avoir volé près de 1 To de documents, y compris des données financières internes et des scans de passeports. Les systèmes de technologie opérationnelle (SCADA/Télécom) n'auraient pas été affectés."
+      },
+      "tags": [
+        "Ransomware",
+        "Data Exfiltration",
+        "Critical Infrastructure"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/romanian-oil-pipeline-operator-conpet-discloses-cyberattack-qilin-ransomware/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "victim": "La Sapienza University of Rome",
+      "threat_actor": "Femwar02 (Rorschach)",
+      "sector": {
+        "en": "Education",
+        "fr": "Éducation"
+      },
+      "description": {
+        "en": "The largest university in Europe suffered a cyberattack, reportedly a Rorschach ransomware infection, causing a shutdown of network systems as a precautionary measure. Technicians are working with Italian authorities (CSIRT, ACN) to restore from backups.",
+        "fr": "La plus grande université d'Europe a subi une cyberattaque, rapportée comme étant une infection par le rançongiciel Rorschach (Femwar02), entraînant l'arrêt des systèmes de réseau par mesure de précaution. Les techniciens travaillent avec les autorités italiennes (CSIRT, ACN) pour restaurer les systèmes à partir de sauvegardes."
+      },
+      "tags": [
+        "Ransomware",
+        "Data Encryption",
+        "Service Disruption"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/italian-university-la-sapienza-goes-offline-after-cyberattack/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "victim": "Substack",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Technology; Media",
+        "fr": "Technologie ; Médias"
+      },
+      "description": {
+        "en": "Newsletter platform Substack disclosed a security incident that occurred in October 2025 but was only discovered in February 2026. The breach involved unauthorized access to limited user data, including email addresses and phone numbers for approximately 700,000 users. No financial or credential data was exposed.",
+        "fr": "La plateforme de newsletter Substack a révélé un incident de sécurité survenu en octobre 2025 mais découvert seulement en février 2026. La violation a impliqué un accès non autorisé à des données utilisateur limitées, incluant les adresses e-mail et les numéros de téléphone pour environ 700 000 utilisateurs. Aucune donnée financière ou d'identification n'a été exposée."
+      },
+      "tags": [
+        "Data Breach",
+        "Information Disclosure",
+        "Delayed Disclosure"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/newsletter-platform-substack-notifies-users-of-data-breach/",
+        "https://securityaffairs.com/187659/uncategorized/hacker-claims-theft-of-data-from-700000-substack-users-company-confirms-breach.html"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "victim": "Spain's Ministry of Science (Ministerio de Ciencia)",
+      "threat_actor": "GordonFreeman (Claimed)",
+      "sector": {
+        "en": "Government; Education",
+        "fr": "Gouvernement ; Éducation"
+      },
+      "description": {
+        "en": "The Ministry announced a partial shutdown of its IT systems following a 'technical incident.' A threat actor named 'GordonFreeman' claimed responsibility for the attack, stating they exploited a critical Insecure Direct Object Reference (IDOR) vulnerability to gain admin-level access and steal personal and official data.",
+        "fr": "Le Ministère a annoncé l'arrêt partiel de ses systèmes informatiques suite à un 'incident technique'. Un acteur de la menace nommé 'GordonFreeman' a revendiqué l'attaque, affirmant avoir exploité une vulnérabilité critique IDOR (Insecure Direct Object Reference) pour obtenir un accès de niveau administrateur et voler des données personnelles et officielles."
+      },
+      "tags": [
+        "Data Theft",
+        "Vulnerability Exploitation",
+        "IDOR"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/spains-ministry-of-science-shuts-down-systems-after-breach-claims/"
+      ],
+      "date": "2026-02-05"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-64712",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "Unstructured (Python Library)",
+      "description": {
+        "en": "Critical Path Traversal vulnerability in the `partition_msg` function of the unstructured library (used widely for preparing data for LLMs/AI). Affects versions up to 0.18.17. Allows authenticated attackers to write arbitrary files to the host filesystem via a crafted `.msg` email attachment, potentially leading to Remote Code Execution (RCE).",
+        "fr": "Vulnérabilité critique de Traversal de Chemin dans la fonction `partition_msg` de la librairie unstructured (largement utilisée pour préparer des données pour les LLM/IA). Affecte les versions jusqu'à 0.18.17. Permet aux attaquants authentifiés d'écrire des fichiers arbitraires sur le système de fichiers hôte via une pièce jointe `.msg` malveillante, pouvant mener à l'exécution de code à distance (RCE)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI Supply Chain",
+        "Path Traversal"
+      ],
+      "sources": [
+        "https://securityonline.info/4-million-downloads-at-risk-critical-unstructured-flaw-cvss-9-8-allows-rce/"
+      ],
+      "date": "2026-02-06"
+    },
+    {
+      "cve_id": "CVE-2026-25056",
+      "euvd_id": "",
+      "cvss": "9.4",
+      "epss": "",
+      "product": "n8n Workflow Automation Platform",
+      "description": {
+        "en": "One of a trio of high-severity RCE flaws affecting the n8n platform. This vulnerability specifically resides in the Merge node's SQL Query mode, allowing authenticated users with workflow modification permissions to write arbitrary files to the host server's filesystem, leading to RCE.",
+        "fr": "L'une des trois failles RCE de haute gravité affectant la plateforme n8n. Cette vulnérabilité se situe spécifiquement dans le mode Requête SQL du nœud Merge, permettant aux utilisateurs authentifiés avec des permissions de modification de workflow d'écrire des fichiers arbitraires sur le système de fichiers de l'hôte, conduisant à l'exécution de code à distance (RCE)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Workflow Automation"
+      ],
+      "sources": [
+        "https://securityonline.info/popular-n8n-platform-hit-by-triple-threat-of-rce-flaws/"
+      ],
+      "date": "2026-02-06"
+    },
+    {
+      "cve_id": "CVE-2026-24300",
+      "euvd_id": "",
+      "cvss": "9.8",
+      "epss": "",
+      "product": "Azure Front Door",
+      "description": {
+        "en": "Critical Elevation of Privilege Vulnerability in Azure Front Door, allowing attackers to achieve high privileges. Associated with Improper Access Control (CWE-284) and Incomplete Data Deletion in Multi-Tenant Environments (CAPEC-546).",
+        "fr": "Vulnérabilité critique d'Élévation de Privilèges dans Azure Front Door, permettant aux attaquants d'obtenir des privilèges élevés. Associée au contrôle d'accès inapproprié (CWE-284) et à la suppression incomplète de données dans les environnements multi-locataires (CAPEC-546)."
+      },
+      "tags": [
+        "vulnerability",
+        "Cloud",
+        "Elevation of Privilege",
+        "Critical"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-24300"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2026-0106",
+      "euvd_id": "",
+      "cvss": "9.3",
+      "epss": "",
+      "product": "Android (Pixel devices)",
+      "description": {
+        "en": "Critical Privilege Escalation Vulnerability (Arbitrary address mmap) in the `vpu_mmap` function of `vpu_ioctl` due to missing bounds checking. Allows a local attacker, without additional execution privileges, to escalate to root privileges.",
+        "fr": "Vulnérabilité critique d'Élévation de Privilèges (mappage arbitraire d'adresses mmap) dans la fonction `vpu_mmap` de `vpu_ioctl` en raison d'un manque de vérification des limites. Permet à un attaquant local, sans privilèges d'exécution supplémentaires, de s'élever aux privilèges root."
+      },
+      "tags": [
+        "vulnerability",
+        "Local Privilege Escalation",
+        "Android",
+        "Kernel"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-0106"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "cve_id": "CVE-2025-32393",
+      "euvd_id": "EUVD-2025-001088",
+      "cvss": "8.7 (CVSS 4.0)",
+      "epss": "",
+      "product": "AutoGPT",
+      "description": {
+        "en": "High-severity Denial of Service (DoS) vulnerability in the `ReadRSSFeedBlock` function (prior to v0.6.32). Exploiting lack of resource limits during deep XML parsing allows a remote, unauthenticated attacker to exhaust memory resources and cause a DoS.",
+        "fr": "Vulnérabilité de Déni de Service (DoS) de haute gravité dans la fonction `ReadRSSFeedBlock` (antérieure à v0.6.32). L'exploitation du manque de limites de ressources lors de l'analyse XML profonde permet à un attaquant distant non authentifié d'épuiser les ressources mémoire et de provoquer un DoS."
+      },
+      "tags": [
+        "vulnerability",
+        "AI",
+        "Denial of Service"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2025-32393"
+      ],
+      "date": "2026-02-05"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ClickFix Variant CrashFix Abuses LOLBINs for Python RAT Deployment",
+        "fr": "La variante CrashFix de ClickFix abuse des LOLBINs pour déployer un RAT Python"
+      },
+      "description": {
+        "en": "New variant of the ClickFix campaign, dubbed 'CrashFix,' uses social engineering by intentionally crashing the victim's browser. It then prompts the user to execute malicious commands via the Windows dialog box, abusing the legitimate Windows utility `finger.exe` (a Living-Off-the-Land Binary or LOLBIN) to download and execute a Python-based Remote Access Trojan (RAT) called ModeloRAT.",
+        "fr": "Nouvelle variante de la campagne ClickFix, nommée 'CrashFix', utilise l'ingénierie sociale en provoquant intentionnellement le crash du navigateur de la victime. Elle incite ensuite l'utilisateur à exécuter des commandes malveillantes via la boîte de dialogue Windows, abusant de l'utilitaire Windows légitime `finger.exe` (un LOLBIN) pour télécharger et exécuter un cheval de Troie d'accès à distance (RAT) basé sur Python appelé ModeloRAT."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://www.dropbox.com/scl/fi/znygol7goezlkhnwazci1/a1.zip",
+          "http://www.nexsnield.com"
+        ],
+        "IPv4": [
+          "69.67.173.30"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "nexsnield.com",
+          "googleusercontent.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "01eba1d7222c6d298d81c15df1e71a492b6a3992705883c527720e5b0bab701a",
+          "c76c0146407069fd4c271d6e1e03448c481f0970ddbe7042b31f552e37b55817"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ModeloRAT",
+          "WinPython",
+          "finger.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1059.003",
+        "T1218"
+      ],
+      "analyse": {
+        "en": "This evolution of ClickFix demonstrates increased sophistication in defense evasion by combining social engineering with the misuse of native binaries (`finger.exe`) and packaging the environment (WinPython) to ensure reliable execution of the Python RAT across various systems.",
+        "fr": "Cette évolution de ClickFix témoigne d'une sophistication accrue dans l'évasion des défenses, combinant l'ingénierie sociale avec l'abus de binaires natifs (`finger.exe`) et le conditionnement de l'environnement (WinPython) pour garantir l'exécution fiable du RAT Python sur divers systèmes."
+      },
+      "recommandations": [
+        {
+          "en": "Implement behavioral detection rules for unusual execution chains involving `finger.exe` or other LOLBINs initiating outbound network connections or executing scripts.",
+          "fr": "Implémenter des règles de détection comportementale pour les chaînes d'exécution inhabituelles impliquant `finger.exe` ou d'autres LOLBINs qui initient des connexions réseau sortantes ou exécutent des scripts."
+        },
+        {
+          "en": "Educate users about threats leveraging unexpected browser behavior and system dialogue boxes to avoid executing commands provided by external, unauthorized sources.",
+          "fr": "Sensibiliser les utilisateurs aux menaces exploitant un comportement de navigateur inattendu et les boîtes de dialogue système pour éviter d'exécuter des commandes fournies par des sources externes et non autorisées."
+        }
+      ],
+      "tags": [
+        "LOLBIN",
+        "Python RAT",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "title": {
+        "en": "OpenClaw AI Platform Skills Used to Deploy macOS Infostealer",
+        "fr": "Les 'Skills' malveillantes de la plateforme d'IA OpenClaw utilisées pour déployer un Infostealer macOS"
+      },
+      "description": {
+        "en": "Analysis of the OpenClaw (Moltbot/Clawdbot) agentic AI platform, which requires users to surrender private information (logins, API keys) to unvetted, modular 'skills.' Attackers are distributing malicious skills designed to execute hidden payloads, including the AMOS Stealer, a known macOS infostealer.",
+        "fr": "Analyse de la plateforme d'IA agentique OpenClaw (Moltbot/Clawdbot), qui exige des utilisateurs qu'ils confient des informations privées (identifiants, clés API) à des 'skills' modulaires non vérifiés. Des attaquants distribuent des 'skills' malveillantes conçues pour exécuter des charges utiles cachées, notamment l'infostealer AMOS Stealer, connu pour cibler macOS."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://91.92.242.30/6x8c0trkp4l9uugo",
+          "http://91.92.242.30/dx2w5j5bka6qkwxixattr"
+        ],
+        "IPv4": [
+          "91.92.242.30"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AMOS Stealer",
+          "OpenClaw"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1559",
+        "T1059"
+      ],
+      "analyse": {
+        "en": "The incident highlights the immediate security risks associated with the rapid proliferation of agentic AI platforms, where unvetted, user-installed code ('skills') can lead to system compromise and credential harvesting. The core vulnerability is the reliance on users granting high-level permissions to code whose security profile is opaque.",
+        "fr": "L'incident met en évidence les risques de sécurité immédiats associés à la prolifération rapide des plateformes d'IA agentiques, où le code non vérifié et installé par l'utilisateur ('skills') peut entraîner la compromission du système et le vol d'identifiants. La vulnérabilité fondamentale est la dépendance à l'utilisateur qui accorde des permissions de haut niveau à du code dont le profil de sécurité est opaque."
+      },
+      "recommandations": [
+        {
+          "en": "Security teams should prohibit the use of unvetted, third-party AI agents and 'skill' platforms in enterprise environments.",
+          "fr": "Les équipes de sécurité doivent interdire l'utilisation d'agents d'IA et de plateformes de 'skills' tiers non vérifiés dans les environnements d'entreprise."
+        },
+        {
+          "en": "Implement network monitoring to detect outbound communication associated with known infostealer C2s or execution of suspicious scripts, particularly on macOS systems.",
+          "fr": "Mettre en place une surveillance réseau pour détecter les communications sortantes associées à des C2 d'infostealers connus ou l'exécution de scripts suspects, en particulier sur les systèmes macOS."
+        }
+      ],
+      "tags": [
+        "AI",
+        "Infostealer",
+        "macOS"
+      ],
+      "sources": [
+        "https://www.bitdefender.com/en-us/blog/labs/helpful-skills-or-hidden-payloads-bitdefender-labs-dives-deep-into-the-openclaw-malicious-skill-trap",
+        "https://blog.talosintelligence.com/all-gas-no-brakes-time-to-come-to-ai-church/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "title": {
+        "en": "ISPsystem VM Templates Abused for Stealthy Ransomware Payload Delivery",
+        "fr": "Modèles de VM ISPsystem abusés pour la livraison furtive de charges utiles de rançongiciels"
+      },
+      "description": {
+        "en": "Ransomware groups (including LockBit, Qilin, Conti, BlackCat/ALPHV) are abusing default Windows VMs provisioned by ISPsystem’s VMmanager. These default templates reuse identical hostnames (e.g., WIN-LIVFRVQFMKO), allowing ransomware operators to host and deliver malicious payloads at scale with a low barrier to entry, often via 'bulletproof' hosting providers.",
+        "fr": "Des groupes de rançongiciels (incluant LockBit, Qilin, Conti, BlackCat/ALPHV) abusent des VM Windows par défaut provisionnées par VMmanager d'ISPsystem. Ces modèles par défaut réutilisent des noms d'hôte identiques (ex. : WIN-LIVFRVQFMKO), permettant aux opérateurs de rançongiciels d'héberger et de livrer des charges utiles malveillantes à grande échelle avec une faible barrière à l'entrée, souvent via des fournisseurs d'hébergement 'bulletproof'."
+      },
+      "threat_actor": "LockBit",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "LockBit",
+          "Qilin",
+          "Conti",
+          "BlackCat/ALPHV",
+          "VMmanager"
+        ]
+      },
+      "mitre_ttps": [
+        "T1583.003",
+        "T1102"
+      ],
+      "analyse": {
+        "en": "This method exploits a weakness in virtualization management design (default template reuse) combined with the complacency of bulletproof hosting providers, providing cybercriminals with scalable, low-cost, and easily disposable infrastructure for C2 and payload delivery.",
+        "fr": "Cette méthode exploite une faiblesse de conception dans la gestion de la virtualisation (réutilisation des modèles par défaut) combinée à la complaisance des fournisseurs d'hébergement 'bulletproof', offrant aux cybercriminels une infrastructure évolutive, peu coûteuse et facilement jetable pour le C2 et la livraison de charges utiles."
+      },
+      "recommandations": [
+        {
+          "en": "Security teams should monitor their network for connections to the identified ISPsystem default hostnames (e.g., WIN-LIVFRVQFMKO, WIN-344VU98D3RU) which are highly correlated with cybercriminal activity.",
+          "fr": "Les équipes de sécurité doivent surveiller leur réseau pour détecter les connexions aux noms d'hôte par défaut d'ISPsystem identifiés (par exemple, WIN-LIVFRVQFMKO, WIN-344VU98D3RU), qui sont fortement corrélés à l'activité cybercriminelle."
+        },
+        {
+          "en": "Cloud service providers and internal virtualization teams should ensure that default system identifiers and hostnames are randomized during VM deployment.",
+          "fr": "Les fournisseurs de services cloud et les équipes de virtualisation internes doivent s'assurer que les identifiants système et les noms d'hôte par défaut sont aléatoires lors du déploiement des VM."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Bulletproof Hosting",
+        "Infrastructure Abuse"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ransomware-gang-uses-ispsystem-vms-for- stealthy-payload-delivery/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "title": {
+        "en": "DKnife: China-Nexus AitM Framework Targeting Routers",
+        "fr": "DKnife : Framework AitM (Adversary-in-the-Middle) lié à la Chine ciblant les routeurs"
+      },
+      "description": {
+        "en": "Cisco Talos uncovered 'DKnife,' a fully featured Linux-based framework operating as an Adversary-in-the-Middle (AiTM) tool since at least 2019. It targets routers and edge devices to perform deep-packet inspection, manipulate network traffic (DNS hijacking), and deliver sophisticated backdoors like ShadowPad and DarkNimbus, primarily targeting Chinese-speaking users and IoT devices.",
+        "fr": "Cisco Talos a découvert 'DKnife', un framework Linux complet fonctionnant comme un outil AiTM (Adversary-in-the-Middle) depuis au moins 2019. Il cible les routeurs et les dispositifs périphériques pour effectuer l'inspection approfondie des paquets, manipuler le trafic réseau (détournement DNS) et livrer des portes dérobées sophistiquées comme ShadowPad et DarkNimbus, ciblant principalement les utilisateurs sinophones et les dispositifs IoT."
+      },
+      "threat_actor": "Unknown (China-nexus)",
+      "indicators": {
+        "URL": [
+          "http://117.175.185.81:8003/",
+          "http://47.93.54.134:8005/"
+        ],
+        "IPv4": [
+          "117.175.185.81",
+          "47.93.54.134"
+        ],
+        "IPv6": [
+          "240e:a03:a03:303:a03:303:a03:303"
+        ],
+        "DOMAIN": [
+          "api.m.jd.com",
+          "beta-api.m.jd.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "17a2dd45f9f57161b4cc40924296c4deab65beea447efb46d3178a9e76815d06",
+          "43891d3898a54a132d198be47a44a8d4856201fa7a87f3f850432ba9e038893a"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "c62d929e7b7e7b6165923a5dfc60cb56"
+        ],
+        "TOOLS": [
+          "ShadowPad",
+          "DarkNimbus",
+          "DKnife",
+          "WizardNet"
+        ]
+      },
+      "mitre_ttps": [
+        "T1090",
+        "T1071",
+        "T1565.002"
+      ],
+      "analyse": {
+        "en": "DKnife represents a sophisticated, long-running intelligence gathering and traffic manipulation operation. By operating at the gateway/router level, the threat actor achieves persistent, deep visibility, enabling them to hijack binary downloads and application updates for malware delivery without victim detection.",
+        "fr": "DKnife représente une opération sophistiquée et de longue date de collecte de renseignements et de manipulation de trafic. En opérant au niveau de la passerelle/du routeur, l'acteur de la menace obtient une visibilité profonde et persistante, lui permettant de détourner les téléchargements binaires et les mises à jour d'applications pour la livraison de malwares sans détection par la victime."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor DNS queries and traffic for unauthorized manipulation or redirection attempts, especially targeting update servers or high-interest domains.",
+          "fr": "Surveiller les requêtes DNS et le trafic pour détecter toute manipulation ou tentative de redirection non autorisée, ciblant en particulier les serveurs de mise à jour ou les domaines à fort intérêt."
+        },
+        {
+          "en": "Harden edge devices and routers by ensuring up-to-date firmware and implementing rigorous network segmentation to limit the impact of compromise.",
+          "fr": "Durcir les dispositifs périphériques et les routeurs en assurant des micrologiciels à jour et en mettant en œuvre une segmentation réseau rigoureuse pour limiter l'impact d'une compromission."
+        }
+      ],
+      "tags": [
+        "APT",
+        "AiTM",
+        "Router Hijacking",
+        "DNS Spoofing"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/knife-cutting-the-edge/"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "title": {
+        "en": "Black Basta Integrates BYOVD for Defense Evasion",
+        "fr": "Black Basta intègre le BYOVD pour l'évasion des défenses"
+      },
+      "description": {
+        "en": "The Black Basta ransomware gang was observed utilizing a Bring-Your-Own-Vulnerable-Driver (BYOVD) component embedded directly within the ransomware payload itself. This driver, identified as NsecSoft NSecKrnl (vulnerable to CVE-2025-68947), is used to elevate privileges and disable security software processes before encryption.",
+        "fr": "Le gang de rançongiciels Black Basta a été observé utilisant un composant BYOVD (Bring-Your-Own-Vulnerable-Driver) intégré directement dans la charge utile du rançongiciel. Ce pilote, identifié comme NsecSoft NSecKrnl (vulnérable à CVE-2025-68947), est utilisé pour élever les privilèges et désactiver les logiciels de sécurité avant le chiffrement."
+      },
+      "threat_actor": "Black Basta",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "206f27ae820783b7755bca89f83a0fe096dbb510018dd65b63fc80bd20c03261"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "NsecSoft NSecKrnl Driver"
+        ]
+      },
+      "mitre_ttps": [
+        "T1053",
+        "T1068",
+        "T1562.001"
+      ],
+      "analyse": {
+        "en": "Embedding the BYOVD component in the ransomware payload stream streamlines the attack chain and increases the speed and reliability of defense impairment, a critical step for modern ransomware operations. This adaptation signifies a push toward maximizing stealth and efficiency.",
+        "fr": "L'intégration du composant BYOVD dans le flux de la charge utile du rançongiciel rationalise la chaîne d'attaque et augmente la vitesse et la fiabilité de la désactivation des défenses, une étape critique pour les opérations de rançongiciel modernes. Cette adaptation signale une tendance à maximiser la furtivité et l'efficacité."
+      },
+      "recommandations": [
+        {
+          "en": "Harden operating systems against BYOVD exploitation by enforcing kernel driver blocklists for known vulnerable drivers, particularly NsecSoft NSecKrnl.",
+          "fr": "Durcir les systèmes d'exploitation contre l'exploitation de BYOVD en appliquant des listes de blocage de pilotes de noyau pour les pilotes vulnérables connus, en particulier NsecSoft NSecKrnl."
+        },
+        {
+          "en": "Monitor systems for the loading of unusual or unauthorized kernel drivers, especially when paired with processes known to perform destructive actions.",
+          "fr": "Surveiller les systèmes pour le chargement de pilotes de noyau inhabituels ou non autorisés, surtout lorsqu'ils sont associés à des processus connus pour effectuer des actions destructrices."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Defense Evasion",
+        "BYOVD",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd"
+      ],
+      "date": "2026-02-05"
+    },
+    {
+      "title": {
+        "en": "Cloud-Hosted Phishing Trap Using Vercel and Telegram C2",
+        "fr": "Piège de Phishing Hébergé dans le Cloud Utilisant Vercel et C2 Telegram"
+      },
+      "description": {
+        "en": "A sophisticated multi-stage phishing campaign that bypasses email filters by using a clean initial email containing a PDF attachment. This PDF redirects the victim to a second malicious PDF hosted on Vercel Blob (a legitimate cloud service), which finally leads to a fake Dropbox login page. Stolen credentials and system info are exfiltrated via a Telegram bot C2.",
+        "fr": "Une campagne de phishing multi-étapes sophistiquée qui contourne les filtres de messagerie en utilisant un e-mail initial propre contenant une pièce jointe PDF. Ce PDF redirige la victime vers un deuxième PDF malveillant hébergé sur Vercel Blob (un service cloud légitime), qui mène finalement à une fausse page de connexion Dropbox. Les identifiants volés et les informations système sont exfiltrés via un bot C2 Telegram."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Telegram Bot"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1071.001",
+        "T1102.001"
+      ],
+      "analyse": {
+        "en": "This campaign illustrates the increasing trend of 'living off the cloud,' where attackers leverage legitimate, high-reputation cloud hosting services (like Vercel) to host intermediate malicious stages, improving delivery rates and reducing suspicion compared to traditional malicious domains.",
+        "fr": "Cette campagne illustre la tendance croissante du 'living off the cloud', où les attaquants exploitent des services d'hébergement cloud légitimes et de haute réputation (comme Vercel) pour héberger des étapes malveillantes intermédiaires, améliorant les taux de livraison et réduisant la suspicion par rapport aux domaines malveillants traditionnels."
+      },
+      "recommandations": [
+        {
+          "en": "Review security policies to detect and flag emails containing attachments that lead to URLs hosted on common cloud storage platforms (e.g., Vercel, Dropbox, Google Drive) where the final destination is a login page.",
+          "fr": "Réviser les politiques de sécurité pour détecter et signaler les e-mails contenant des pièces jointes menant à des URL hébergées sur des plateformes de stockage cloud courantes (par exemple, Vercel, Dropbox, Google Drive) lorsque la destination finale est une page de connexion."
+        },
+        {
+          "en": "Implement strict egress filtering to monitor and block suspicious command-and-control communication, particularly unusual traffic to messaging platforms like Telegram.",
+          "fr": "Mettre en œuvre un filtrage strict du trafic sortant (egress) pour surveiller et bloquer les communications de commandement et contrôle suspectes, en particulier le trafic inhabituel vers des plateformes de messagerie comme Telegram."
+        }
+      ],
+      "tags": [
+        "Phishing",
+        "Cloud Abuse",
+        "Credential Harvesting"
+      ],
+      "sources": [
+        "https://securityonline.info/cloud-hosted-trap-phishers-use-vercel-telegram-to-bypass-filters/"
+      ],
+      "date": "2026-02-06"
+    }
+  ]
+}
