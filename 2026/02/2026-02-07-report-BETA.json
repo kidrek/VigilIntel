@@ -1,0 +1,484 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape is characterized by high-impact nation-state activity targeting critical infrastructure and government entities, coupled with actively exploited vulnerabilities entering the public domain. Notably, a Russian-linked APT campaign (Storm-1516) executed a disinformation operation targeting French political figures. Simultaneously, espionage groups like the newly identified TGR-STA-1030 are demonstrating advanced capabilities by deploying custom eBPF rootkits (ShadowGuard) on Linux systems globally, signifying a continued focus on kernel-level stealth. The energy sector remains a key target, as evidenced by the destructive DYNOWIPER attack in Poland. In terms of vulnerabilities, CISA added critical RCE flaws in SmarterMail and React Native CLI to its KEV catalog due to active exploitation by ransomware actors. Furthermore, cloud environments and browser security emerged as critical visibility gaps, with new research focusing on detection techniques (Unit 42) and the inadequacy of legacy security tools against in-browser TTPs (Keep Aware analysis).",
+      "fr": "Le paysage des menaces est marqué par une intense activité étatique ciblant les infrastructures critiques et les entités gouvernementales, associée à l'exploitation active de vulnérabilités critiques. Notamment, une campagne de désinformation liée à la Russie (Storm-1516) a visé des figures politiques françaises. Parallèlement, des groupes d'espionnage comme le nouveau TGR-STA-1030 déploient des capacités avancées, notamment un rootkit eBPF personnalisé (ShadowGuard) sur des systèmes Linux à l'échelle mondiale, signalant une persistance dans les techniques de furtivité au niveau du noyau. Le secteur de l'énergie reste une cible clé, comme l'a montré l'attaque destructrice DYNOWIPER en Pologne. Concernant les vulnérabilités, la CISA a ajouté des failles d'exécution de code à distance critiques dans SmarterMail et React Native CLI à son catalogue KEV en raison de leur exploitation active par des acteurs de rançongiciel. En outre, la sécurité des environnements cloud et des navigateurs est apparue comme un déficit de visibilité critique, avec de nouvelles recherches axées sur les techniques de détection (Unit 42) et l'inadéquation des outils de sécurité traditionnels face aux TTPs exécutées dans le navigateur (analyse Keep Aware)."
+    },
+    "date": "2026-02-07"
+  },
+  "malicious_actors_analyse": [
+    {
+      "name": "Static Tundra",
+      "campaign": "DYNOWIPER Destructive Campaign",
+      "campaign_description": {
+        "en": "A coordinated destructive cyberattack targeting Poland's critical energy infrastructure, affecting over 30 renewable energy facilities and a major combined heat and power (CHP) plant in December 2025. Initial access was reportedly gained by exploiting exposed Fortinet FortiGate devices (VPN interfaces without MFA) and reused credentials. The campaign involved months of reconnaissance targeting SCADA/OT networks and data exfiltration prior to the destructive phase.",
+        "fr": "Une campagne cybernétique destructive coordonnée visant l'infrastructure énergétique critique de la Pologne, affectant plus de 30 installations d'énergie renouvelable et une grande centrale de cogénération (CHP) en décembre 2025. L'accès initial aurait été obtenu en exploitant des dispositifs Fortinet FortiGate exposés (interfaces VPN sans MFA) et des identifiants réutilisés. La campagne a impliqué des mois de reconnaissance ciblant les réseaux SCADA/OT et l'exfiltration de données avant la phase destructive."
+      },
+      "sector": {
+        "en": "Energy, Critical Infrastructure (ICS/SCADA)",
+        "fr": "Énergie, Infrastructures Critiques (ICS/SCADA)"
+      },
+      "modop": {
+        "en": "Exploitation of network perimeter devices (FortiGate), extensive reconnaissance of OT systems, and deployment of custom data-wiping malware (DYNOWIPER) to irreversibly destroy data across the compromised networks.",
+        "fr": "Exploitation de dispositifs de périmètre réseau (FortiGate), reconnaissance approfondie des systèmes OT, et déploiement d'un logiciel malveillant destructeur personnalisé (DYNOWIPER) pour effacer irréversiblement les données sur les réseaux compromis."
+      },
+      "tags": [
+        "Wiper",
+        "APT",
+        "Destructive Attack",
+        "OT/ICS",
+        "Poland"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/dynowiper"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "name": "TGR-STA-1030 (Unknown)",
+      "campaign": "Global eBPF Rootkit Espionage Campaign",
+      "campaign_description": {
+        "en": "A global espionage campaign active for at least two years, targeting government and critical infrastructure networks across 37 countries. The group uses phishing and exploitation of vulnerable internet-facing systems for initial access, followed by the deployment of sophisticated post-compromise tools.",
+        "fr": "Une opération d'espionnage mondiale active depuis au moins deux ans, ciblant les réseaux gouvernementaux et les infrastructures critiques dans 37 pays. Le groupe utilise le phishing et l'exploitation de systèmes publics vulnérables pour l'accès initial, suivis par le déploiement d'outils post-compromission sophistiqués."
+      },
+      "sector": {
+        "en": "Government, Critical Infrastructure",
+        "fr": "Gouvernement, Infrastructures Critiques"
+      },
+      "modop": {
+        "en": "Initial access via phishing and system exploitation. Deploys obfuscated web shells (Behinder, Neo‑reGeorg, Godzilla) for remote access. Uses a custom Extended Berkeley Packet Filter (eBPF) rootkit named 'ShadowGuard' on Linux systems to achieve kernel-level persistence and stealth by hiding processes and intercepting system calls.",
+        "fr": "Accès initial par phishing et exploitation de systèmes. Déploiement de web shells obfusqués (Behinder, Neo‑reGeorg, Godzilla) pour l'accès à distance. Utilisation d'un rootkit eBPF (Extended Berkeley Packet Filter) personnalisé nommé 'ShadowGuard' sur les systèmes Linux pour une persistance au niveau du noyau et une furtivité en masquant les processus et en interceptant les appels système."
+      },
+      "tags": [
+        "APT",
+        "Espionage",
+        "Linux",
+        "eBPF Rootkit",
+        "Web Shells"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/global-espionage-operation-ebpf-rootkit-linux-systems"
+      ],
+      "date": "2026-02-07"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government, Media, Geopolitics (France/Russia)",
+        "fr": "Gouvernement, Médias, Géopolitique (France/Russie)"
+      },
+      "theme": {
+        "en": "Russian-linked Disinformation Campaign Targeting French President",
+        "fr": "Campagne de désinformation liée à la Russie ciblant le Président français"
+      },
+      "description": {
+        "en": "Viginum, the French service for combating foreign interference, detected a disinformation operation linked to the Russian network Storm-1516. The operation involved creating a fake website impersonating 'France-Soir' to publish an article falsely accusing President Emmanuel Macron of being involved in the Epstein affair. The content was then amplified on X (Twitter) by accounts identified as regular pro-Russian disinformation relays.",
+        "fr": "Viginum, le service français de lutte contre les ingérences étrangères, a détecté une opération de désinformation liée au réseau russe Storm-1516. L'opération consistait à créer un faux site Internet usurpant l'identité de 'France-Soir' pour publier un article accusant faussement le Président Emmanuel Macron d'être impliqué dans l'affaire Epstein. Le contenu a ensuite été amplifié sur X (Twitter) par des comptes identifiés comme des relais réguliers de la désinformation pro-russe."
+      },
+      "tags": [
+        "Disinformation",
+        "Russia",
+        "France",
+        "Information Warfare",
+        "Identity Theft"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/02/06/affaire-epstein-emmanuel-macron-victime-d-une-operation-de-desinformation-liee-a-la-russie_6665667_4408996.html"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "sector": {
+        "en": "Technology, Social Media, Regulation (EU)",
+        "fr": "Technologie, Médias Sociaux, Réglementation (UE)"
+      },
+      "theme": {
+        "en": "EU Regulatory Action Against TikTok Over Addictive Design",
+        "fr": "Action réglementaire de l'UE contre TikTok concernant la conception addictive"
+      },
+      "description": {
+        "en": "The European Commission issued preliminary findings stating that TikTok is facing a significant fine for breaching the Digital Services Act (DSA). The Commission alleges that TikTok's 'addictive design' features (infinite scroll, autoplay, notifications) fail to adequately assess and mitigate harm to users' physical and mental well-being, particularly minors. Potential fines could reach up to 6% of TikTok's global annual turnover.",
+        "fr": "La Commission européenne a émis des conclusions préliminaires indiquant que TikTok risque une amende importante pour violation du Digital Services Act (DSA). La Commission affirme que les fonctionnalités de 'conception addictive' de TikTok (défilement infini, lecture automatique, notifications) ne parviennent pas à évaluer et à atténuer adéquatement les dommages potentiels pour le bien-être physique et mental des utilisateurs, en particulier des mineurs. Les amendes potentielles pourraient atteindre jusqu'à 6 % du chiffre d'affaires annuel mondial de TikTok."
+      },
+      "tags": [
+        "Regulation",
+        "DSA",
+        "Compliance",
+        "TikTok",
+        "European Union"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/european-commission-says-tiktok-facing-fine-over-addictive-design/"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "sector": {
+        "en": "Diplomacy, Climate, Military",
+        "fr": "Diplomatie, Climat, Militaire"
+      },
+      "theme": {
+        "en": "Climate Vulnerability and Strategic Rivalries in the South Pacific",
+        "fr": "Vulnérabilité climatique et rivalités stratégiques dans le Pacifique Sud"
+      },
+      "description": {
+        "en": "The article highlights how the extreme climate vulnerability of Pacific Island States (PIS) is increasingly central to strategic geopolitical rivalries. PIS attempt to maintain a 'friends to all, enemies to none' strategy to secure necessary financial and logistical support against climate change, but this approach is challenged by the intensifying competition for control over the region by major global powers (US, Australia, China).",
+        "fr": "L'article souligne comment la vulnérabilité climatique extrême des États insulaires du Pacifique (EIP) est de plus en plus au centre des rivalités géopolitiques stratégiques. Les EIP tentent de maintenir une stratégie d''amis de tous, ennemis de personne' pour obtenir le soutien financier et logistique nécessaire contre le changement climatique, mais cette approche est mise à l'épreuve par la concurrence croissante pour le contrôle de la zone par les grandes puissances mondiales (États-Unis, Australie, Chine)."
+      },
+      "tags": [
+        "Geopolitics",
+        "Climate Change",
+        "Pacific",
+        "Strategic Competition"
+      ],
+      "sources": [
+        "https://www.iris-france.org/climat-et-puissance-dans-le-pacifique-sud-les-etats-insulaires-au-coeur-des-rivalites-strategiques/"
+      ],
+      "date": "2026-02-07"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Flickr",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Technology, Social Media",
+        "fr": "Technologie, Médias Sociaux"
+      },
+      "description": {
+        "en": "Flickr disclosed a potential data breach caused by a vulnerability in a third-party email service provider. The flaw, fixed on February 5, 2026, may have exposed user data including names, email addresses, Flickr usernames, IP addresses, and account activity. Passwords and payment information were reportedly not compromised.",
+        "fr": "Flickr a divulgué une potentielle violation de données causée par une vulnérabilité chez un fournisseur de services de messagerie tiers. La faille, corrigée le 5 février 2026, pourrait avoir exposé des données utilisateur, notamment les noms, adresses e-mail, noms d'utilisateur Flickr, adresses IP et activité du compte. Les mots de passe et les informations de paiement n'auraient pas été compromis."
+      },
+      "tags": [
+        "Data Breach",
+        "Third-party risk",
+        "PII"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/flickr-discloses-potential-data-breach-exposing-users-names-emails/"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "victim": "Substack",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Media, Publishing Platform",
+        "fr": "Médias, Plateforme de publication"
+      },
+      "description": {
+        "en": "A data breach that occurred in October 2025 was widely circulated in February 2026, exposing 663,121 account holder records. Compromised data included email addresses and publicly visible profile information (publication names, bios). A subset of records also included phone numbers.",
+        "fr": "Une violation de données survenue en octobre 2025 a été largement diffusée en février 2026, exposant 663 121 enregistrements de titulaires de compte. Les données compromises comprenaient les adresses e-mail et les informations de profil visibles publiquement (noms de publication, bios). Un sous-ensemble d'enregistrements incluait également des numéros de téléphone."
+      },
+      "tags": [
+        "Data Breach",
+        "PII",
+        "Credential Theft"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Substack"
+      ],
+      "date": "2026-02-07"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-24423",
+      "euvd_id": "",
+      "cvss": "Not Specified",
+      "epss": "",
+      "product": "SmarterTools SmarterMail",
+      "description": {
+        "en": "Critical missing authentication vulnerability in the ConnectToHub API method of SmarterMail (versions prior to build 9511). Exploitation allows remote code execution (RCE) without authentication, enabling attackers to redirect the instance to a malicious server and execute arbitrary commands. CISA has added this flaw to its KEV catalog, noting active exploitation by ransomware actors.",
+        "fr": "Vulnérabilité critique de manque d'authentification dans la méthode API ConnectToHub de SmarterMail (versions antérieures à la build 9511). L'exploitation permet l'exécution de code à distance (RCE) sans authentification, permettant aux attaquants de rediriger l'instance vers un serveur malveillant et d'exécuter des commandes arbitraires. La CISA a ajouté cette faille à son catalogue KEV, signalant son exploitation active par des acteurs de rançongiciels."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-warns-of-smartermail-rce-flaw-used-in-ransomware-attacks/",
+        "https://securityaffairs.com/187675/security/u-s-cisa-adds-smartertools-smartermail-and-react-native-community-cli-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "cve_id": "CVE-2025-11953",
+      "euvd_id": "",
+      "cvss": "Not Specified",
+      "epss": "",
+      "product": "React Native Community CLI",
+      "description": {
+        "en": "OS Command Injection vulnerability in the React Native CLI Metro server. The development server binds to external interfaces by default, allowing unauthenticated attackers to send POST requests and execute arbitrary programs or shell commands (especially on Windows). CISA added this flaw to its KEV catalog due to active exploitation.",
+        "fr": "Vulnérabilité d'injection de commandes OS dans le serveur Metro CLI de React Native. Le serveur de développement se lie aux interfaces externes par défaut, permettant à des attaquants non authentifiés d'envoyer des requêtes POST et d'exécuter des programmes ou des commandes shell arbitraires (en particulier sous Windows). La CISA a ajouté cette faille à son catalogue KEV en raison de son exploitation active."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV",
+        "Command Injection"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187675/security/u-s-cisa-adds-smartertools-smartermail-and-react-native-community-cli-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "cve_id": "CVE-2026-25049",
+      "euvd_id": "",
+      "cvss": "9.4",
+      "epss": "",
+      "product": "n8n Workflow Automation Platform",
+      "description": {
+        "en": "Critical vulnerability (CVSS 9.4) allowing remote command execution (RCE) via crafted expressions, bypassing a previous fix (CVE-2025-68613). Authenticated users with workflow-creation permissions can achieve full server compromise. A public Proof-of-Concept (PoC) exploit is available. The risk escalates when combined with the public webhook feature, enabling unauthenticated RCE.",
+        "fr": "Vulnérabilité critique (CVSS 9.4) permettant l'exécution de commandes à distance (RCE) via des expressions falsifiées, contournant une correction antérieure (CVE-2025-68613). Les utilisateurs authentifiés disposant des permissions de création de flux de travail peuvent compromettre l'intégralité du serveur. Un exploit de preuve de concept (PoC) public est disponible. Le risque est accru lorsqu'il est combiné à la fonctionnalité de webhook public, permettant une RCE non authentifiée."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "PoC",
+        "High Risk"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/poc-available-critical-n8n-remote-command-execution-flaw"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "cve_id": "ZDI-26-070",
+      "euvd_id": "",
+      "cvss": "Not Specified",
+      "epss": "",
+      "product": "Adobe ColdFusion",
+      "description": {
+        "en": "Remote Code Execution vulnerability requiring authentication. The flaw resides in the parsing of CAR files, specifically due to a lack of proper validation of user-supplied paths, resulting in a Directory Traversal attack that can lead to code execution in the context of SYSTEM.",
+        "fr": "Vulnérabilité d'exécution de code à distance nécessitant une authentification. La faille réside dans l'analyse des fichiers CAR, spécifiquement due à un manque de validation appropriée du chemin fourni par l'utilisateur, entraînant une attaque par contournement de répertoire (Directory Traversal) pouvant conduire à l'exécution de code dans le contexte de SYSTEM."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Directory Traversal"
+      ],
+      "sources": [
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-070/"
+      ],
+      "date": "2026-02-07"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "DKnife Linux Toolkit Used for Router Hijacking and Espionage",
+        "fr": "Toolkit Linux DKnife utilisé pour le détournement de routeurs et l'espionnage"
+      },
+      "description": {
+        "en": "A Linux ELF toolkit named DKnife has been used since 2019 by a China-nexus threat actor. It acts as a post-compromise framework for traffic monitoring, adversary-in-the-middle (AiTM) activities, credential harvesting, and malware delivery (including ShadowPad and DarkNimbus backdoors). It hijacks traffic at the edge-device level (routers) using a bridged TAP interface to intercept and rewrite packets.",
+        "fr": "Un toolkit Linux ELF nommé DKnife est utilisé depuis 2019 par un acteur de la menace lié à la Chine. Il sert de cadre post-compromission pour la surveillance du trafic, les activités d'adversaire au milieu (AiTM), la collecte d'identifiants et la livraison de logiciels malveillants (y compris les backdoors ShadowPad et DarkNimbus). Il détourne le trafic au niveau des périphériques de bord (routeurs) en utilisant une interface TAP pontée pour intercepter et réécrire les paquets."
+      },
+      "threat_actor": "Unknown (China-nexus)",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "DKnife",
+          "ShadowPad",
+          "DarkNimbus",
+          "HAProxy",
+          "n2n VPN"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071.001",
+        "T1578.002",
+        "T1567",
+        "T1574.009"
+      ],
+      "analyse": {
+        "en": "DKnife represents a sophisticated, persistent capability focused on high-value traffic monitoring and deep network access, bypassing standard endpoint controls by operating directly on the routing layer. Its association with ShadowPad and DarkNimbus confirms its use by highly organized state-sponsored actors.",
+        "fr": "DKnife représente une capacité sophistiquée et persistante axée sur la surveillance du trafic de grande valeur et l'accès profond au réseau, contournant les contrôles de sécurité classiques des postes de travail en opérant directement au niveau de la couche de routage. Son association avec ShadowPad et DarkNimbus confirme son utilisation par des acteurs étatiques très organisés."
+      },
+      "recommandations": [
+        {
+          "en": "Implement network monitoring capable of deep packet inspection (DPI) or analysis on edge devices, particularly looking for unusual bridged TAP interfaces.",
+          "fr": "Mettre en œuvre une surveillance réseau capable d'inspection approfondie des paquets (DPI) ou d'analyse sur les dispositifs de bord, en recherchant notamment les interfaces TAP pontées inhabituelles."
+        },
+        {
+          "en": "Ensure router and gateway firmware is rigorously patched and hardened, limiting exposed services and requiring strong authentication for VPN access.",
+          "fr": "S'assurer que le firmware des routeurs et passerelles est rigoureusement patché et durci, limitant les services exposés et exigeant une authentification forte pour l'accès VPN."
+        }
+      ],
+      "tags": [
+        "APT Tool",
+        "AiTM",
+        "Edge Device Security",
+        "Espionage"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/dknife-linux-toolkit-hijacks-router-traffic-to-spy-deliver-malware/"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "title": {
+        "en": "Gap in Browser Security Allowing Novel Attack Classes",
+        "fr": "Lacune dans la sécurité des navigateurs permettant de nouvelles classes d'attaques"
+      },
+      "description": {
+        "en": "An analysis highlights that traditional security stacks (EDR, Email, SASE) fail to provide adequate visibility into modern, browser-centric attacks. These new TTPs, such as UI-driven social engineering (ClickFix) and malicious browser extensions, abuse valid browser sessions and user actions, bypassing file or process inspection and leaving little traditional forensic evidence.",
+        "fr": "Une analyse souligne que les piles de sécurité traditionnelles (EDR, Email, SASE) n'offrent pas une visibilité adéquate sur les attaques modernes centrées sur le navigateur. Ces nouvelles TTPs, telles que l'ingénierie sociale pilotée par l'interface utilisateur (ClickFix) et les extensions de navigateur malveillantes, abusent des sessions de navigation valides et des actions utilisateur, contournant l'inspection des fichiers ou des processus et laissant peu de preuves forensiques traditionnelles."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ClickFix",
+          "Malicious Browser Extensions"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1189"
+      ],
+      "analyse": {
+        "en": "The increasing reliance on SaaS and web interfaces means the browser is now the primary execution environment. Security strategies must shift focus from network/endpoint binaries to securing the session and user interactions within the browser itself to counter threats that leverage authorized actions.",
+        "fr": "La dépendance croissante aux SaaS et aux interfaces web signifie que le navigateur est désormais l'environnement d'exécution principal. Les stratégies de sécurité doivent se concentrer sur la sécurisation de la session et des interactions utilisateur au sein même du navigateur pour contrer les menaces qui exploitent des actions autorisées."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy dedicated Browser Security or Web Session Monitoring tools that provide granular visibility into user actions, extension behavior, and script execution within the browser environment.",
+          "fr": "Déployer des outils dédiés de sécurité du navigateur ou de surveillance de session web qui offrent une visibilité granulaire sur les actions des utilisateurs, le comportement des extensions et l'exécution des scripts au sein de l'environnement du navigateur."
+        },
+        {
+          "fr": "Renforcer la formation des utilisateurs concernant l'ingénierie sociale basée sur l'interface utilisateur et les demandes non sollicitées de copier/coller ou de saisie d'informations sensibles.",
+          "en": "Reinforce user training regarding UI-based social engineering and unsolicited requests to copy/paste or enter sensitive information."
+        }
+      ],
+      "tags": [
+        "Browser Security",
+        "TTPs",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/edr-email-and-sase-miss-this-entire-class-of-browser-attacks/"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "title": {
+        "en": "Record-Breaking 31.4 Tbps DDoS Attack Linked to AISURU/Kimwolf Botnet",
+        "fr": "Attaque DDoS record de 31,4 Tbit/s liée au Botnet AISURU/Kimwolf"
+      },
+      "description": {
+        "en": "A record-breaking hyper-volumetric HTTP DDoS attack peaking at 31.4 Tbps was observed and mitigated by Cloudflare in November 2025. The attack, which lasted only 35 seconds, is linked to the AISURU/Kimwolf botnet and highlights a sharp increase (700% growth compared to late 2024) in the size and intensity of DDoS campaigns.",
+        "fr": "Une attaque DDoS HTTP hyper-volumétrique record, atteignant un pic de 31,4 Tbit/s, a été observée et atténuée par Cloudflare en novembre 2025. L'attaque, qui n'a duré que 35 secondes, est liée au botnet AISURU/Kimwolf et souligne une forte augmentation (croissance de 700 % par rapport à fin 2024) de la taille et de l'intensité des campagnes DDoS."
+      },
+      "threat_actor": "AISURU/Kimwolf Botnet Operators",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AISURU botnet",
+          "Kimwolf botnet"
+        ]
+      },
+      "mitre_ttps": [
+        "T1499"
+      ],
+      "analyse": {
+        "en": "This incident demonstrates that adversaries continue to leverage massive botnets to launch short-duration, extremely high-volume attacks designed to bypass or overwhelm traditional mitigation systems. Organizations relying on standard DDoS protection must ensure their defenses can handle capacity exceeding 30 Tbps.",
+        "fr": "Cet incident démontre que les adversaires continuent d'utiliser des botnets massifs pour lancer des attaques de courte durée et d'un volume extrêmement élevé, conçues pour contourner ou submerger les systèmes d'atténuation traditionnels. Les organisations comptant sur une protection DDoS standard doivent s'assurer que leurs défenses peuvent gérer une capacité supérieure à 30 Tbit/s."
+      },
+      "recommandations": [
+        {
+          "en": "Verify that DDoS mitigation services are configured for automatic, rapid detection and can handle multi-terabit volumetric attacks.",
+          "fr": "Vérifier que les services d'atténuation DDoS sont configurés pour une détection automatique et rapide et qu'ils peuvent gérer des attaques volumétriques de plusieurs térabits."
+        },
+        {
+          "en": "Implement network rate limiting and anomaly detection metrics sensitive to short-burst, high-capacity traffic floods.",
+          "fr": "Mettre en œuvre des limites de débit réseau et des métriques de détection d'anomalies sensibles aux inondations de trafic de courte durée et de grande capacité."
+        }
+      ],
+      "tags": [
+        "DDoS",
+        "Botnet",
+        "High Volume Attack"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187690/hacking/record-breaking-31-4-tbps-ddos-attack-hits-in-november-2025-stopped-by-cloudflare.html"
+      ],
+      "date": "2026-02-07"
+    },
+    {
+      "title": {
+        "en": "Widespread Exposure of Git Metadata on Web Servers",
+        "fr": "Exposition généralisée des métadonnées Git sur les serveurs Web"
+      },
+      "description": {
+        "en": "A study revealed that nearly 5 million public web servers are exposing Git repository metadata via publicly accessible `.git` directories. Crucially, over 250,000 of these leaks expose `.git/config` files containing active deployment credentials, allowing attackers to reconstruct source code, steal secrets, and gain direct infrastructure access.",
+        "fr": "Une étude a révélé que près de 5 millions de serveurs web publics exposent des métadonnées de référentiels Git via des répertoires `.git` accessibles publiquement. Surtout, plus de 250 000 de ces fuites exposent des fichiers `.git/config` contenant des identifiants de déploiement actifs, permettant aux attaquants de reconstituer le code source, de voler des secrets et d'obtenir un accès direct à l'infrastructure."
+      },
+      "threat_actor": "General Cybercrime / Opportunistic Attacker",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1589.001",
+        "T1552.001"
+      ],
+      "analyse": {
+        "en": "This risk stems from configuration errors (hidden folders going live) and default server settings that fail to block access to sensitive metadata. The widespread nature and inclusion of deployment credentials make this an easily automated and highly effective initial access vector for attackers.",
+        "fr": "Ce risque provient d'erreurs de configuration (dossiers cachés mis en ligne) et de paramètres de serveur par défaut qui n'empêchent pas l'accès aux métadonnées sensibles. La nature généralisée du problème et l'inclusion d'identifiants de déploiement en font un vecteur d'accès initial facilement automatisable et très efficace pour les attaquants."
+      },
+      "recommandations": [
+        {
+          "en": "Configure web servers (e.g., Apache, Nginx) to explicitly deny access to all hidden directories, especially the `.git` directory, in production environments.",
+          "fr": "Configurer les serveurs web (par exemple, Apache, Nginx) pour refuser explicitement l'accès à tous les répertoires cachés, en particulier le répertoire `.git`, dans les environnements de production."
+        },
+        {
+          "en": "Scan public-facing web infrastructure for exposed `.git` directories and credentials.",
+          "fr": "Analyser l'infrastructure web accessible au public à la recherche de répertoires `.git` et d'identifiants exposés."
+        }
+      ],
+      "tags": [
+        "Misconfiguration",
+        "Data Leak",
+        "Credential Exposure"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187674/security/nearly-5-million-web-servers-found-exposing-git-metadata-study-reveals-widespread-risk-of-code-and-credential-leaks.html"
+      ],
+      "date": "2026-02-07"
+    }
+  ]
+}
