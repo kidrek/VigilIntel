@@ -1,0 +1,963 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la menace cyber continue d'être dominé par des acteurs étatiques sophistiqués menant des campagnes d'espionnage à l'échelle mondiale, ciblant les infrastructures gouvernementales et les informations stratégiques. Parallèlement, les attaques par rançongiciel restent une menace prévalente, affectant des secteurs variés tels que le paiement et l'éducation, entraînant des perturbations majeures des services et des fuites de données potentielles. L'exploitation de vulnérabilités connues et de failles 'zero-day' dans des produits couramment utilisés pour l'accès privilégié ou la gestion des périphériques réseau, souligne l'importance cruciale de la gestion des correctifs et de la sécurité de la chaîne d'approvisionnement logicielle. Les vulnérabilités liées à l'authentification et à l'exécution de code à distance sont particulièrement préoccupantes en raison de leur facilité d'exploitation et de leur impact critique. La prolifération des fuites de données, souvent amplifiée par des vulnérabilités chez des fournisseurs tiers ou des erreurs de configuration, reste une constante, nécessitant une vigilance accrue et des réglementations plus strictes. En conclusion, l'état général des menaces est caractérisé par une intensification de l'espionnage parrainé par des États, des attaques opportunistes et ciblées par rançongiciel, et la persistance de vulnérabilités critiques exploitables, rendant la résilience cyber et la gestion proactive des risques indispensables.",
+      "date": "2026-02-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "TGR-STA-1030/UNC6619",
+        "secteur": "Gouvernemental, Infrastructure critique, Organisations liées à la politique commerciale et géopolitique",
+        "modop": "Opération d'espionnage 'Shadow Campaigns' utilisant le phishing, l'exploitation de 15 vulnérabilités connues (SAP, MS Exchange, D-Link, MS Windows), des malwares (Diaoyu, Cobalt Strike, VShell), des webshells (Behinder, Godzilla), des outils de tunneling (GOST, FRPS, IOX) et un rootkit (ShadowGuard).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "cyberespionage",
+          "APT",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "nom": "Femwar02 / Groupe pro-russe",
+        "secteur": "Éducation",
+        "modop": "Attaque par rançongiciel utilisant la souche 'Bablock/Rorschach', entraînant la perturbation des systèmes IT et l'arrêt de l'infrastructure universitaire. Le malware évite d'affecter les systèmes en langues russes ou post-soviétiques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "cybercrime",
+          "pro_russian",
+          "bablock",
+          "rorschach"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernemental, Infrastructure critique, Politique étrangère",
+        "theme": "Cyberespionnage d'État et influence géopolitique",
+        "description": "L'opération 'Shadow Campaigns' menée par le groupe TGR-STA-1030/UNC6619, aligné sur un État (opérant depuis l'Asie), a ciblé des infrastructures gouvernementales dans 155 pays. Les cibles incluent des organisations de politique commerciale et des questions géopolitiques dans les Amériques, des ministères et parlements européens, le ministère du Trésor australien, et des infrastructures critiques à Taiwan. L'activité d'espionnage vise le renseignement stratégique, économique et politique, avec un intérêt accru observé lors d'événements politiques clés, comme les élections au Honduras.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionnage",
+          "state_actor",
+          "asia",
+          "intelligence",
+          "national_security",
+          "election_interference",
+          "global_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financier, Services de paiement",
+        "victime": "BridgePay",
+        "description": "Une attaque par rançongiciel a mis hors ligne les systèmes clés du fournisseur américain de services de paiement BridgePay, provoquant une perturbation généralisée à l'échelle nationale. Selon les premières analyses, aucune donnée de carte de paiement n'a été compromise, mais les fichiers accédés ont été chiffrés.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "paiements",
+          "financier",
+          "service_disruption",
+          "chiffrement_données"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/payments-platform-bridgepay-confirms-ransomware-attack-behind-outage/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Université La Sapienza (Rome, Italie)",
+        "description": "L'Université La Sapienza de Rome est hors ligne depuis le 2 février 2026 suite à une cyberattaque. Il s'agit d'une attaque par rançongiciel, la souche 'Bablock/Rorschach' étant suspectée. L'incident a perturbé les systèmes IT, empêchant les étudiants d'accéder aux services essentiels comme la réservation d'examens et la vérification des paiements. Les infrastructures ont été coupées pour limiter la propagation, et une implication d'un groupe pro-russe est soupçonnée.",
+        "tags": [
+          "violation",
+          "breach",
+          "rançongiciel",
+          "éducation",
+          "italie",
+          "bablock",
+          "rorschach",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Gouvernemental, Justice, Protection des données",
+        "victime": "Autorité néerlandaise de protection des données (AP), Conseil de la Justice (Pays-Bas)",
+        "description": "Plusieurs agences néerlandaises ont subi une fuite de données majeure. Des données personnelles d'employés, incluant noms, adresses e-mail et numéros de téléphone, ont été consultées par des personnes non autorisées. La cause est une vulnérabilité dans le logiciel Ivanti Endpoint Manager Mobile.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "pays_bas",
+          "données_personnelles",
+          "vulnérabilité",
+          "ivanti",
+          "employee_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/07/several-dutch-agencies-suffer-major-data-breach/?pk_campaign=feed&pk_kwd=several-dutch-agencies-suffer-major-data-breach"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "E-commerce, Beauté",
+        "victime": "Beauty Garage",
+        "description": "Le site e-commerce Beauty Garage a temporairement suspendu ses paiements suite à la notification des sociétés de cartes de crédit concernant une possible fuite d'informations de cartes et de données personnelles.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "beauté",
+          "cartes_crédit",
+          "données_personnelles",
+          "incident"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/beauty-garage-ec-site-suspends-payments-over-possible-card-data-breach/#セキュリティ対策Lab"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Services en ligne, Photographie",
+        "victime": "Flickr",
+        "description": "Flickr a subi une violation de données qui a exposé des informations utilisateur via un fournisseur de services de messagerie tiers compromis.",
+        "tags": [
+          "violation",
+          "breach",
+          "flickr",
+          "données_utilisateur",
+          "tiers_compromis",
+          "cloud_service",
+          "privacy"
+        ],
+        "sources": [
+          "https://winbuzzer.com/2026/02/06/flickr-security-incident-third-party-email-data-breach-xcxwbn/"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25858",
+        "cvss": 9.3,
+        "product": "macrozheng mall",
+        "description": "Réinitialisation de mot de passe non authentifiée via divulgation OTP (One-Time Password) dans la réponse de l'API, permettant une prise de contrôle de compte à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "macrozheng_mall",
+          "authentication_bypass",
+          "otp_disclosure",
+          "account_takeover",
+          "critical",
+          "api_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25858"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2086",
+        "cvss": 9.0,
+        "product": "UTT HiPER 810G",
+        "description": "Débordement de tampon `strcpy` via l'argument `GroupName` dans la fonction `formFireWall` de l'interface de gestion, pouvant mener à une exécution de code à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "utt_hiper",
+          "buffer_overflow",
+          "rce",
+          "management_interface",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2086"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-25560",
+        "cvss": 8.7,
+        "product": "WeKan",
+        "description": "Injection de filtre LDAP dans l'authentification, permettant la manipulation des requêtes LDAP via l'entrée du nom d'utilisateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wekan",
+          "ldap_injection",
+          "authentication",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25560"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-25857",
+        "cvss": 8.6,
+        "product": "Tenda G300-F router firmware",
+        "description": "Injection de commande OS via la fonctionnalité de diagnostic WAN (`formSetWanDiag`), permettant l'exécution de commandes arbitraires à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "tenda_router",
+          "os_command_injection",
+          "rce",
+          "firmware_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25857"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2120",
+        "cvss": 8.3,
+        "product": "D-Link DIR-823X",
+        "description": "Injection de commande OS via la manipulation des paramètres `terminal_addr/server_ip/server_port` dans `/goform/set_server_settings`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "os_command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2120"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2118",
+        "cvss": 8.3,
+        "product": "UTT HiPER 810",
+        "description": "Injection de commande via la manipulation de l'argument `Isp_Name` dans la fonction `sub_4407D4` de `/goform/formReleaseConnect`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "utt_hiper",
+          "command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2118"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2085",
+        "cvss": 8.3,
+        "product": "D-Link DWR-M921",
+        "description": "Injection de commande via la manipulation de l'argument `ussdValue` dans la fonction `sub_419F20` de `/boafrm/formUSSDSetup` (point de terminaison de configuration USSD).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2085"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Payments platform BridgePay confirms ransomware attack behind outage",
+        "description": "Le fournisseur américain de services de paiement BridgePay a subi une attaque par rançongiciel, entraînant une interruption de service à l'échelle nationale et mettant hors ligne des systèmes clés. Les premières analyses forensiques indiquent qu'aucune donnée de carte de paiement n'a été compromise, mais les fichiers accédés ont été chiffrés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "L'incident souligne la vulnérabilité des infrastructures de paiement aux attaques par rançongiciel, avec un impact direct sur la disponibilité des services financiers. Bien qu'aucune donnée de carte n'ait été confirmée comme compromise, la perturbation à l'échelle nationale est significative pour les opérations commerciales.",
+        "recommandations": [
+          "Mettre en œuvre des plans de reprise après sinistre robustes.",
+          "Renforcer les contrôles d'accès et la segmentation réseau.",
+          "Assurer des sauvegardes régulières et isolées.",
+          "Former le personnel à la détection des menaces."
+        ],
+        "tags": [
+          "ransomware",
+          "payment_platform",
+          "service_disruption",
+          "financial_sector",
+          "incident",
+          "cybercrime",
+          "impact_availability",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/payments-platform-bridgepay-confirms-ransomware-attack-behind-outage/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "State actor targets 155 countries in 'Shadow Campaigns' espionage op",
+        "description": "Une opération d'espionnage cybernétique nommée 'Shadow Campaigns', menée par le groupe TGR-STA-1030/UNC6619 aligné sur un État (opérant depuis l'Asie), a ciblé des infrastructures gouvernementales dans 155 pays. L'objectif est la collecte de renseignement stratégique, économique et politique. Le groupe utilise le phishing, exploite des vulnérabilités connues (SAP Solution Manager, Microsoft Exchange Server, D-Link, Microsoft Windows), déploie des malwares comme Diaoyu (chargeur Cobalt Strike, VShell), des webshells (Behinder, Godzilla, Neo-reGeorg), des outils de tunneling (GOST, FRPS, IOX) et un rootkit de niveau noyau (ShadowGuard).",
+        "threat_actor": "TGR-STA-1030/UNC6619",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "dog3rj[.]tech",
+            "mega.nz",
+            "*.europa.eu"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Spearphishing Attachment)",
+          "T1566.002 (Spearphishing Link)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1505.003 (Deploy Web Shell)",
+          "T1014 (Rootkit)",
+          "T1071 (Application Layer Protocol)",
+          "T1090 (Proxy)",
+          "T1595 (Active Scanning)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "Cette campagne à grande échelle démontre la sophistication et les vastes ressources des acteurs étatiques, ciblant des informations sensibles à des fins géopolitiques. L'utilisation d'une combinaison de vulnérabilités connues, de phishing ciblé et d'outils avancés indique une menace persistante et difficile à détecter. L'impact est global, affectant la sécurité nationale et la politique étrangère de nombreux États.",
+        "recommandations": [
+          "Mettre à jour et patcher systématiquement les systèmes.",
+          "Renforcer la formation anti-phishing.",
+          "Déployer des solutions de détection de points de terminaison (EDR) et de SIEM pour détecter les malwares et les TTPs.",
+          "Surveiller activement les périphériques réseau (edge devices) et l'accès à distance.",
+          "Examiner les logs pour des connexions SSH suspectes et des artefacts de webshells."
+        ],
+        "tags": [
+          "state_actor",
+          "cyberespionage",
+          "TGR_STA_1030",
+          "UNC6619",
+          "shadow_campaigns",
+          "government",
+          "critical_infrastructure",
+          "global_threat",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit",
+          "cobalt_strike",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "BeyondTrust Remote Access Products 0-Day Vulnerability Allows Remote Code Execution",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE) de type 'zero-day' (CVE-2026-1731, injection de commande OS CWE-78) a été découverte dans les produits BeyondTrust Remote Support (RS versions 25.3.1 et antérieures) et Privileged Remote Access (PRA versions 24.3.4 et antérieures). Cette faille, sans authentification préalable, permet à des attaquants d'exécuter des commandes système arbitraires, menant à un compromis complet du système et à l'accès à des données sensibles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1731"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1210 (Exploitation of Remote Services)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "La nature pré-authentification et RCE de cette vulnérabilité la rend extrêmement dangereuse, car elle peut être exploitée sans interaction utilisateur ni informations d'identification. Étant donné l'utilisation répandue des produits BeyondTrust pour la gestion des accès privilégiés, l'impact potentiel sur les infrastructures d'entreprise est systémique, permettant un mouvement latéral et l'exfiltration de données critiques.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs fournis par BeyondTrust (BT26-02-RS pour Remote Support, BT26-02-PRA pour Privileged Remote Access).",
+          "Si la mise à niveau directe n'est pas possible, mettre à niveau vers une version prise en charge avant d'appliquer le correctif.",
+          "Isoler temporairement les systèmes si la mise à jour immédiate est impossible."
+        ],
+        "tags": [
+          "vulnerability",
+          "zero_day",
+          "rce",
+          "beyondtrust",
+          "remote_access",
+          "authentication_bypass",
+          "critical_vulnerability",
+          "command_injection"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/beyondtrust-remote-access-products-0-day-vulnerability/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "Several Dutch agencies suffer major data breach",
+        "description": "Plusieurs agences néerlandaises, dont l'Autorité néerlandaise de protection des données (AP) et le Conseil de la Justice, ont subi une violation de données majeure. Des données personnelles d'employés, y compris noms, adresses e-mail et numéros de téléphone, ont été consultées par des personnes non autorisées suite à une vulnérabilité dans le logiciel Ivanti Endpoint Manager Mobile.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1530 (Data from Local System: Internal)"
+        ],
+        "analyse": "Cette violation met en évidence les risques liés aux vulnérabilités logicielles dans les systèmes d'accès tiers et l'impact sur les données sensibles des employés d'organisations gouvernementales. La compromission d'une autorité de protection des données est particulièrement préoccupante.",
+        "recommandations": [
+          "Appliquer les correctifs pour les vulnérabilités logicielles tierces, en particulier celles affectant les outils de gestion d'endpoints.",
+          "Renforcer la surveillance des accès aux données sensibles et mettre en place une segmentation réseau stricte."
+        ],
+        "tags": [
+          "data_breach",
+          "government",
+          "netherlands",
+          "ivanti",
+          "vulnerability",
+          "personal_data",
+          "employee_data",
+          "data_protection_authority",
+          "incident"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/07/several-dutch-agencies-suffer-major-data-breach/?pk_campaign=feed&pk_kwd=several-dutch-agencies-suffer-major-data-breach"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "Italian university La Sapienza still offline to mitigate recent cyber attack",
+        "description": "L'Université La Sapienza de Rome est hors ligne depuis le 2 février 2026 suite à une cyberattaque, soupçonnée d'être un rançongiciel 'Bablock/Rorschach' mené par le groupe 'Femwar02' ou un acteur pro-russe. L'attaque a perturbé les services informatiques, empêchant les étudiants de s'inscrire aux examens ou d'accéder aux informations, et a forcé l'arrêt de l'infrastructure pour contenir la menace. Le rançongiciel évite le chiffrement sur les systèmes en langues russes/post-soviétiques.",
+        "threat_actor": "Femwar02, groupe pro-russe",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1562 (Impair Defenses - e.g., disabling security software)"
+        ],
+        "analyse": "L'incident montre comment les rançongiciels peuvent paralyser des institutions vitales comme les universités, affectant des milliers d'étudiants et le fonctionnement académique. La nature du rançongiciel (Bablock/Rorschach) et les soupçons sur un groupe pro-russe soulignent des motivations potentiellement géopolitiques ou opportunistes.",
+        "recommandations": [
+          "Mettre en œuvre des solutions anti-rançongiciel avancées.",
+          "Renforcer la sécurité des endpoints.",
+          "Maintenir des sauvegardes isolées et testées.",
+          "Élaborer des plans de communication de crise pour les incidents majeurs."
+        ],
+        "tags": [
+          "ransomware",
+          "education_sector",
+          "italy",
+          "la_sapienza",
+          "bablock",
+          "rorschach",
+          "femwar02",
+          "pro_russian_group",
+          "service_disruption",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape continues to be dominated by sophisticated state actors conducting global-scale espionage campaigns, targeting government infrastructure and strategic information. Concurrently, ransomware attacks remain a prevalent threat, affecting diverse sectors such as payments and education, leading to major service disruptions and potential data leaks. The exploitation of both known vulnerabilities and zero-day flaws in widely used products for privileged access or network device management underscores the critical importance of patch management and software supply chain security. Authentication and remote code execution vulnerabilities are particularly concerning due to their ease of exploitation and critical impact. The proliferation of data leaks, often amplified by third-party vendor vulnerabilities or misconfigurations, remains constant, requiring heightened vigilance and stricter regulations. In conclusion, the overall state of threats is characterized by an intensification of state-sponsored espionage, opportunistic and targeted ransomware attacks, and the persistence of critical exploitable vulnerabilities, making cyber resilience and proactive risk management indispensable.",
+      "date": "2026-02-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "TGR-STA-1030/UNC6619",
+        "secteur": "Governmental, Critical Infrastructure, Organizations involved in trade policy and geopolitical issues",
+        "modop": "Espionage operation 'Shadow Campaigns' using phishing, exploitation of 15 known vulnerabilities (SAP, MS Exchange, D-Link, MS Windows), malware (Diaoyu, Cobalt Strike, VShell), webshells (Behinder, Godzilla), tunneling tools (GOST, FRPS, IOX) and a kernel-level rootkit (ShadowGuard).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "cyberespionage",
+          "APT",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "nom": "Femwar02 / Pro-Russian group",
+        "secteur": "Education",
+        "modop": "Ransomware attack using the 'Bablock/Rorschach' strain, resulting in IT systems disruption and university infrastructure shutdown. The malware avoids affecting systems with Russian or post-Soviet languages.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "cybercrime",
+          "pro_russian",
+          "bablock",
+          "rorschach"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Governmental, Critical Infrastructure, Foreign Policy",
+        "theme": "State-sponsored Cyberespionage and Geopolitical Influence",
+        "description": "The 'Shadow Campaigns' operation by the state-aligned TGR-STA-1030/UNC6619 group (operating from Asia) targeted government infrastructure in 155 countries. Targets include trade policy organizations and geopolitical issues in the Americas, European ministries and parliaments, Australia's Treasury Department, and critical infrastructure in Taiwan. The espionage activity aims at strategic, economic, and political intelligence, with increased interest observed during key political events, such as elections in Honduras.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionage",
+          "state_actor",
+          "asia",
+          "intelligence",
+          "national_security",
+          "election_interference",
+          "global_espionage"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Financial, Payment Services",
+        "victime": "BridgePay",
+        "description": "A ransomware attack took key systems offline at U.S. payment gateway provider BridgePay, triggering a widespread nationwide disruption. Initial forensic findings indicate no payment card data was compromised, but accessed files were encrypted.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "payments",
+          "financial",
+          "service_disruption",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/payments-platform-bridgePay-confirms-ransomware-attack-behind-outage/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Education",
+        "victime": "La Sapienza University (Rome, Italy)",
+        "description": "Rome’s La Sapienza University has been offline since February 2, 2026, following a cyberattack. It is suspected to be a 'Bablock/Rorschach' ransomware attack. The incident disrupted IT systems, preventing students from accessing essential services like exam bookings and tuition payments. Infrastructures were shut down to limit spread, and a pro-Russian group is suspected of involvement.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "education",
+          "italy",
+          "bablock",
+          "rorschach",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Governmental, Justice, Data Protection",
+        "victime": "Dutch Data Protection Authority (AP), Council for Justice (Netherlands)",
+        "description": "Several Dutch agencies suffered a major data breach. Employee personal data, including names, email addresses, and phone numbers, was accessed by unauthorized persons due to a vulnerability in Ivanti Endpoint Manager Mobile software.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "netherlands",
+          "personal_data",
+          "vulnerability",
+          "ivanti",
+          "employee_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/07/several-dutch-agencies-suffer-major-data-breach/?pk_campaign=feed&pk_kwd=several-dutch-agencies-suffer-major-data-breach"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "E-commerce, Beauty",
+        "victime": "Beauty Garage",
+        "description": "The e-commerce site Beauty Garage temporarily suspended payments following notification from credit card companies regarding a possible leak of credit card information and personal data.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "beauty",
+          "credit_cards",
+          "personal_data",
+          "incident"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/beauty-garage-ec-site-suspends-payments-over-possible-card-data-breach/#セキュリティ対策Lab"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "secteur": "Online Services, Photography",
+        "victime": "Flickr",
+        "description": "Flickr experienced a data breach that exposed user information via a compromised third-party email vendor.",
+        "tags": [
+          "violation",
+          "breach",
+          "flickr",
+          "user_data",
+          "third_party_compromise",
+          "cloud_service",
+          "privacy"
+        ],
+        "sources": [
+          "https://winbuzzer.com/2026/02/06/flickr-security-incident-third-party-email-data-breach-xcxwbn/"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-25858",
+        "cvss": 9.3,
+        "product": "macrozheng mall",
+        "description": "Unauthenticated password reset via OTP (One-Time Password) disclosure in API response, allowing remote account takeover.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "macrozheng_mall",
+          "authentication_bypass",
+          "otp_disclosure",
+          "account_takeover",
+          "critical",
+          "api_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25858"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2086",
+        "cvss": 9.0,
+        "product": "UTT HiPER 810G",
+        "description": "Buffer overflow in `strcpy` via the `GroupName` argument in the `formFireWall` function of the Management Interface, potentially leading to remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "utt_hiper",
+          "buffer_overflow",
+          "rce",
+          "management_interface",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2086"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-25560",
+        "cvss": 8.7,
+        "product": "WeKan",
+        "description": "LDAP filter injection in authentication, allowing manipulation of LDAP queries via username input.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wekan",
+          "ldap_injection",
+          "authentication",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25560"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-25857",
+        "cvss": 8.6,
+        "product": "Tenda G300-F router firmware",
+        "description": "OS command injection via WAN diagnostic functionality (`formSetWanDiag`), enabling remote arbitrary command execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "tenda_router",
+          "os_command_injection",
+          "rce",
+          "firmware_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25857"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2120",
+        "cvss": 8.3,
+        "product": "D-Link DIR-823X",
+        "description": "OS command injection through manipulation of `terminal_addr/server_ip/server_port` parameters in `/goform/set_server_settings`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "os_command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2120"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2118",
+        "cvss": 8.3,
+        "product": "UTT HiPER 810",
+        "description": "Command injection via manipulation of the `Isp_Name` argument in the `sub_4407D4` function of `/goform/formReleaseConnect`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "utt_hiper",
+          "command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2118"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "cve_id": "CVE-2026-2085",
+        "cvss": 8.3,
+        "product": "D-Link DWR-M921",
+        "description": "Command injection through manipulation of the `ussdValue` argument in the `sub_419F20` function of `/boafrm/formUSSDSetup` (USSD Configuration Endpoint).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "d_link",
+          "command_injection",
+          "rce",
+          "router_vulnerability",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2085"
+        ],
+        "date": "2026-02-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Payments platform BridgePay confirms ransomware attack behind outage",
+        "description": "U.S. payment gateway provider BridgePay suffered a ransomware attack, causing a nationwide service disruption and knocking key systems offline. Initial forensic findings indicate no payment card data was compromised, but accessed files were encrypted.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1562.001 (Impair Defenses: Disable or Modify System Firewall)"
+        ],
+        "analyse": "The incident highlights the vulnerability of payment infrastructures to ransomware attacks, with a direct impact on the availability of financial services. While no card data was confirmed compromised, the nationwide disruption is significant for business operations.",
+        "recommandations": [
+          "Implement robust disaster recovery plans.",
+          "Strengthen access controls and network segmentation.",
+          "Ensure regular and isolated backups.",
+          "Train staff on threat detection."
+        ],
+        "tags": [
+          "ransomware",
+          "payment_platform",
+          "service_disruption",
+          "financial_sector",
+          "incident",
+          "cybercrime",
+          "impact_availability",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/payments-platform-bridgePay-confirms-ransomware-attack-behind-outage/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "State actor targets 155 countries in 'Shadow Campaigns' espionage op",
+        "description": "A state-aligned cyberespionage operation dubbed 'Shadow Campaigns' by the TGR-STA-1030/UNC6619 group (operating from Asia) targeted government infrastructure in 155 countries for strategic, economic, and political intelligence gathering. The group uses phishing, exploits known vulnerabilities (SAP Solution Manager, Microsoft Exchange Server, D-Link, Microsoft Windows), deploys malware like Diaoyu (Cobalt Strike, VShell loader), webshells (Behinder, Godzilla, Neo-reGeorg), tunneling tools (GOST, FRPS, IOX), and a kernel-level rootkit (ShadowGuard).",
+        "threat_actor": "TGR-STA-1030/UNC6619",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "dog3rj[.]tech",
+            "mega.nz",
+            "*.europa.eu"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Spearphishing Attachment)",
+          "T1566.002 (Spearphishing Link)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1505.003 (Deploy Web Shell)",
+          "T1014 (Rootkit)",
+          "T1071 (Application Layer Protocol)",
+          "T1090 (Proxy)",
+          "T1595 (Active Scanning)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "This large-scale campaign demonstrates the sophistication and vast resources of state actors, targeting sensitive information for geopolitical gains. The use of a combination of known vulnerabilities, targeted phishing, and advanced tools indicates a persistent and difficult-to-detect threat. The impact is global, affecting national security and foreign policy of numerous states.",
+        "recommandations": [
+          "Systematically update and patch systems.",
+          "Strengthen anti-phishing training.",
+          "Deploy Endpoint Detection and Response (EDR) and SIEM solutions to detect malware and TTPs.",
+          "Actively monitor edge network devices and remote access.",
+          "Review logs for suspicious SSH connections and webshell artifacts."
+        ],
+        "tags": [
+          "state_actor",
+          "cyberespionage",
+          "TGR_STA_1030",
+          "UNC6619",
+          "shadow_campaigns",
+          "government",
+          "critical_infrastructure",
+          "global_threat",
+          "phishing",
+          "vulnerability_exploitation",
+          "webshell",
+          "rootkit",
+          "cobalt_strike",
+          "geopolitique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "BeyondTrust Remote Access Products 0-Day Vulnerability Allows Remote Code Execution",
+        "description": "A critical zero-day remote code execution (RCE) vulnerability (CVE-2026-1731, CWE-78 OS Command Injection) has been disclosed in BeyondTrust Remote Support (RS versions 25.3.1 and earlier) and Privileged Remote Access (PRA versions 24.3.4 and earlier) products. This pre-authentication flaw allows attackers to execute arbitrary operating system commands, leading to complete system compromise and access to sensitive data.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1731"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1210 (Exploitation of Remote Services)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "The pre-authentication RCE nature of this vulnerability makes it extremely dangerous, as it can be exploited without user interaction or prior credentials. Given the widespread use of BeyondTrust products for privileged access management, the potential impact on enterprise infrastructures is systemic, enabling lateral movement and exfiltration of critical data.",
+        "recommandations": [
+          "Immediately apply patches provided by BeyondTrust (BT26-02-RS for Remote Support, BT26-02-PRA for Privileged Remote Access).",
+          "If direct upgrade is not possible, upgrade to a supported version before applying the patch.",
+          "Temporarily isolate systems if immediate patching is not feasible."
+        ],
+        "tags": [
+          "vulnerability",
+          "zero_day",
+          "rce",
+          "beyondtrust",
+          "remote_access",
+          "authentication_bypass",
+          "critical_vulnerability",
+          "command_injection"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/beyondtrust-remote-access-products-0-day-vulnerability/"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "Several Dutch agencies suffer major data breach",
+        "description": "Several Dutch agencies, including the Dutch Data Protection Authority (AP) and the Council for Justice, experienced a major data breach. Employee personal data, including names, email addresses, and phone numbers, was accessed by unauthorized persons due to a vulnerability in Ivanti Endpoint Manager Mobile software.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1530 (Data from Local System: Internal)"
+        ],
+        "analyse": "This breach highlights the risks associated with software vulnerabilities in third-party access systems and the impact on sensitive employee data within governmental organizations. The compromise of a data protection authority is particularly concerning.",
+        "recommandations": [
+          "Apply patches for third-party software vulnerabilities, especially those affecting endpoint management tools.",
+          "Strengthen monitoring of access to sensitive data and implement strict network segmentation."
+        ],
+        "tags": [
+          "data_breach",
+          "government",
+          "netherlands",
+          "ivanti",
+          "vulnerability",
+          "personal_data",
+          "employee_data",
+          "data_protection_authority",
+          "incident"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/07/several-dutch-agencies-suffer-major-data-breach/?pk_campaign=feed&pk_kwd=several-dutch-agencies-suffer-major-data-breach"
+        ],
+        "date": "2026-02-08"
+      },
+      {
+        "title": "Italian university La Sapienza still offline to mitigate recent cyber attack",
+        "description": "Rome’s La Sapienza University has been offline since February 2, 2026, following a cyberattack, suspected to be 'Bablock/Rorschach' ransomware by the 'Femwar02' group or a pro-Russian actor. The attack disrupted IT services, preventing students from booking exams or accessing information, and forced infrastructure shutdown to contain the threat. The ransomware avoids encryption on Russian/post-Soviet language systems.",
+        "threat_actor": "Femwar02, pro-Russian group",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1562 (Impair Defenses - e.g., disabling security software)"
+        ],
+        "analyse": "The incident demonstrates how ransomware can cripple vital institutions like universities, affecting thousands of students and academic operations. The nature of the ransomware (Bablock/Rorschach) and suspicions of a pro-Russian group point to potentially geopolitical or opportunistic motivations.",
+        "recommandations": [
+          "Implement advanced anti-ransomware solutions.",
+          "Strengthen endpoint security.",
+          "Maintain isolated and tested backups.",
+          "Develop crisis communication plans for major incidents."
+        ],
+        "tags": [
+          "ransomware",
+          "education_sector",
+          "italy",
+          "la_sapienza",
+          "bablock",
+          "rorschach",
+          "femwar02",
+          "pro_russian_group",
+          "service_disruption",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        ],
+        "date": "2026-02-08"
+      }
+    ]
+  }
+}
