@@ -1,0 +1,634 @@
+{
+  "type": "bundle",
+  "id": "bundle--40d9d73e-a699-4e1c-aec0-48d310737063",
+  "objects": [
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2022-10-01T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "extension-definition",
+      "spec_version": "2.1",
+      "id": "extension-definition--f8d78575-edfd-406e-8e84-6162a8450f5b",
+      "name": "PAP",
+      "description": "This defines PAP as a STIX extension",
+      "created": "2022-10-01T00:00:00.000Z",
+      "modified": "2022-10-01T00:00:00.000Z",
+      "schema": "https://github.com/oasis-open/cti-stix-common-objects/tree/master/extension-definition-specifications/pap",
+      "version": "1.0.0",
+      "extension_types": [
+        "property-extension"
+      ]
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92",
+      "created": "2022-10-01T00:00:00.000Z",
+      "name": "PAP:CLEAR",
+      "extensions": {
+        "extension-definition--f8d78575-edfd-406e-8e84-6162a8450f5b": {
+          "extension_type": "property-extension",
+          "pap": "clear"
+        }
+      }
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T04:05:19.000Z",
+      "modified": "2026-02-08T04:05:19.000Z",
+      "name": "VigilIntel",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--aeb1141f-2e4a-41ec-ba5c-013fb3937eea",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "TGR-STA-1030",
+      "labels": [
+        "State-Sponsored",
+        "Espionage",
+        "APT",
+        "Phishing"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "campaign",
+      "spec_version": "2.1",
+      "id": "campaign--66659512-502b-4e97-a396-7dcb7ff7f1bb",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "Shadow Campaigns",
+      "description": "A global espionage campaign targeting government and critical infrastructure entities across 155 countries for reconnaissance, leading to confirmed compromises in at least 37 countries. The campaign focuses on obtaining geopolitical, trade, energy, and defense information.",
+      "first_seen": "2026-02-08T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--74faf55f-a16d-43de-9818-ebf5e8f6f9c5",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "abstract": "(EN) TGR-STA-1030",
+      "content": "Sector: Government; Critical Infrastructure (Energy, Mining, Finance, Diplomacy, Law Enforcement)\n\nModus operandi:\nInitial access relied on highly tailored phishing emails sent to government officials. Subsequent activity includes extensive scanning and reconnaissance, sometimes timed around significant geopolitical events (e.g., the U.S. government shutdown or national elections).",
+      "object_refs": [
+        "threat-actor--aeb1141f-2e4a-41ec-ba5c-013fb3937eea",
+        "campaign--66659512-502b-4e97-a396-7dcb7ff7f1bb"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/state-actor-targets-155-countries-in-shadow-campaigns-espionage-op/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--1482b305-a45b-44e9-8cca-3d3e527567db",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "CVE-2026-1731",
+      "description": "A critical pre-authentication Remote Code Execution (RCE) 0-day vulnerability affecting BeyondTrust Remote Support (versions 25.3.1 and earlier) and Privileged Remote Access (versions 24.3.4 and prior). The flaw is classified as OS Command Injection (CWE-78) and allows unauthenticated remote attackers to execute arbitrary OS commands with high impact.\n\nAffected product: BeyondTrust Remote Support (RS) / Privileged Remote Access (PRA)",
+      "labels": [
+        "vulnerability",
+        "0-day",
+        "RCE",
+        "Command Injection",
+        "Privilege Access Management"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-1731"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cybersecuritynews.com/beyondtrust-remote-access-products-0-day-vulnerability/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--f001242d-d279-42a3-b974-8910cb9af278",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "CVE-2025-15027",
+      "description": "Critical unauthenticated privilege escalation vulnerability in the JAY Login & Register WordPress plugin (<= 2.6.03). The flaw allows unauthenticated attackers to elevate their privileges to that of an administrator via the 'jay_login_register_ajax_create_final_user' function, by updating arbitrary user meta.\n\nAffected product: JAY Login & Register (WordPress Plugin)",
+      "labels": [
+        "vulnerability",
+        "Privilege Escalation",
+        "WordPress"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-15027"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2025-15027"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--182a4fa6-01bf-4eea-867f-817d3bd98af0",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "CVE-2026-25858",
+      "description": "Critical authentication vulnerability (Unauthenticated Password Reset) in macrozheng mall (version 1.0.3 and prior). The password reset workflow discloses the One-Time Password (OTP) in the API response, allowing an attacker with only a known or guessable telephone number to perform remote account takeover.\n\nAffected product: macrozheng mall",
+      "labels": [
+        "vulnerability",
+        "Authentication Bypass",
+        "Account Takeover"
+      ],
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-25858"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-25858"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--7736681b-efcb-43f4-93fa-20c09ec8b2be",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "BridgePay Network Solutions",
+      "identity_class": "organization",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "UNKNOWN",
+      "labels": [
+        "threat-actor"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/payments-platform-bridgepay-confirms-ransomware-attack-behind-outage/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--2ae5d32d-825c-495b-b222-ef1ce1356f8d",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "Breach: BridgePay Network Solutions",
+      "description": "A major U.S. payment gateway confirmed a ransomware attack caused a widespread, nationwide outage affecting multiple critical services, including API gateways and virtual terminals. The disruption forced merchants and local government services (like City of Palm Bay, FL) to accept cash payments only. Initial forensics suggest no payment card data was compromised, but files were encrypted.\n\nSector: Financial Services; Payment Processing",
+      "labels": [
+        "Ransomware",
+        "Outage",
+        "Critical Infrastructure"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/payments-platform-bridgepay-confirms-ransomware-attack-behind-outage/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ],
+      "incident_type": "ransomware"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--14e21efa-ca3e-40bd-8d88-50fdefc97c83",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "La Sapienza University",
+      "identity_class": "organization",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--811d600f-9719-4035-b564-54d5d17f415d",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "Breach: La Sapienza University",
+      "description": "Rome’s La Sapienza University suffered a cyberattack (strongly suspected to be ransomware) leading to the shutdown of its entire network infrastructure since February 2nd. The disruption prevented students from booking exams, checking tuition, and accessing faculty contacts.\n\nSector: Academic; Education (Italy)",
+      "labels": [
+        "Ransomware",
+        "Education",
+        "Operational Disruption"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187702/cyber-crime/italian-university-la-sapienza-still-offline-to-mitigate-recent-cyber-attack.html"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ],
+      "incident_type": "ransomware"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--8b631fbc-e87c-4f74-a952-9bba75f1c737",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "Dutch Government Agencies",
+      "identity_class": "organization",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "incident",
+      "spec_version": "2.1",
+      "id": "incident--af1c3eff-8509-46b1-b208-5e503caa1658",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "Breach: Dutch Government Agencies",
+      "description": "The Dutch Data Protection Authority (AP) and the Council for Justice suffered a data breach. The exposure of personal data belonging to employees (names, emails, phone numbers) was caused by an exploited vulnerability in the Ivanti Endpoint Manager Mobile (EPMM) software used by the agencies.\n\nSector: Government (Netherlands)",
+      "labels": [
+        "Data Breach",
+        "Ivanti",
+        "Government"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://databreaches.net/2026/02/07/several-dutch-agencies-suffer-major-data-breach/?pk_campaign=feed&pk_kwd=several-dutch-agencies-suffer-major-data-breach"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ],
+      "incident_type": "data-leak"
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--45264763-b9ed-4f5c-93a9-7acf2d758d44",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Government (United States)\n\nTheme: Cyber Policy and Technical Debt Management\n\nCISA issued Binding Operational Directive 26-02, requiring U.S. Federal Civilian Executive Branch (FCEB) agencies to proactively address cybersecurity risks associated with End-of-Support (EoS) edge network devices. Agencies must identify and replace these devices within 12 to 18 months to reduce technical debt and mitigate associated cyber risks.\n\nTags: CISA, Policy, End-of-Support, Directive",
+      "object_refs": [
+        "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/187697/security/cisa-pushes-federal-agencies-to-retire-end-of-support-edge-devices.html"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--858bcfee-404e-407e-a46d-3e0d6ee2e150",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "abstract": "Geopolitical analysis (EN)",
+      "content": "Sector: Regulatory; Legal (Hong Kong)\n\nTheme: Mandatory Data Breach Reporting Legislation\n\nHong Kong's Privacy Commissioner for Personal Data announced plans to revive a stalled legislative reform effort. They will consult lawmakers this year about introducing mandatory data breach reporting requirements and associated penalties for companies, aiming to strengthen the city's privacy ordinance.\n\nTags: Regulation, Privacy, Legislation",
+      "object_refs": [
+        "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6"
+      ],
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://databreaches.net/2026/02/07/hong-kong-plans-to-revive-privacy-law-requiring-firms-to-report-data-breaches/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--44f2deae-816d-458a-bc91-0ee631890a48",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "abstract": "Strategic analysis (EN)",
+      "content": "The start of February 2026 is marked by high-level state-sponsored espionage and significant disruptive ransomware activity targeting critical services. Unit 42 reported on a prolific state actor, TGR-STA-1030/UNC6619, which has targeted 155 countries and successfully compromised dozens of government and critical infrastructure networks globally through extensive 'Shadow Campaigns'. Concurrently, ransomware continues to paralyze essential services, exemplified by the nationwide payment system outage at BridgePay and the shutdown of a major Italian university (La Sapienza). On the vulnerability front, a critical pre-authentication zero-day RCE (CVE-2026-1731) in BeyondTrust Remote Access products poses an immediate and severe risk to enterprise privileged access environments worldwide, demanding urgent patching action for self-hosted customers. Geopolitically, the US CISA has issued a directive requiring federal agencies to retire End-of-Support edge devices, highlighting the systemic risk posed by outdated infrastructure.",
+      "object_refs": [
+        "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c506c9e0-f67f-4055-8009-5401a42b51bc",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "name": "CTI Report (EN) - 2026-02-08",
+      "description": "Aggregated CTI report for language EN",
+      "published": "2026-02-08T00:00:00Z",
+      "object_refs": [
+        "threat-actor--aeb1141f-2e4a-41ec-ba5c-013fb3937eea",
+        "campaign--66659512-502b-4e97-a396-7dcb7ff7f1bb",
+        "note--74faf55f-a16d-43de-9818-ebf5e8f6f9c5",
+        "vulnerability--1482b305-a45b-44e9-8cca-3d3e527567db",
+        "vulnerability--f001242d-d279-42a3-b974-8910cb9af278",
+        "vulnerability--182a4fa6-01bf-4eea-867f-817d3bd98af0",
+        "incident--2ae5d32d-825c-495b-b222-ef1ce1356f8d",
+        "identity--7736681b-efcb-43f4-93fa-20c09ec8b2be",
+        "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+        "incident--811d600f-9719-4035-b564-54d5d17f415d",
+        "identity--14e21efa-ca3e-40bd-8d88-50fdefc97c83",
+        "incident--af1c3eff-8509-46b1-b208-5e503caa1658",
+        "identity--8b631fbc-e87c-4f74-a952-9bba75f1c737",
+        "note--45264763-b9ed-4f5c-93a9-7acf2d758d44",
+        "note--858bcfee-404e-407e-a46d-3e0d6ee2e150",
+        "note--44f2deae-816d-458a-bc91-0ee631890a48"
+      ],
+      "labels": [
+        "cti-report",
+        "lang:en"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ae2933a6-c116-4011-aa39-44b43e454dfc",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--66659512-502b-4e97-a396-7dcb7ff7f1bb",
+      "target_ref": "threat-actor--aeb1141f-2e4a-41ec-ba5c-013fb3937eea",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec9295c4-8326-4e74-a16a-c71504556017",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--aeb1141f-2e4a-41ec-ba5c-013fb3937eea",
+      "target_ref": "note--74faf55f-a16d-43de-9818-ebf5e8f6f9c5",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2392abcd-9f00-4db6-bb93-e2db07f675ca",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--66659512-502b-4e97-a396-7dcb7ff7f1bb",
+      "target_ref": "note--74faf55f-a16d-43de-9818-ebf5e8f6f9c5",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8fba91f3-e08e-40d4-8f4c-24896ab5b862",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--2ae5d32d-825c-495b-b222-ef1ce1356f8d",
+      "target_ref": "identity--7736681b-efcb-43f4-93fa-20c09ec8b2be",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5fc3d28a-2910-4d21-8e6b-0d0baa6c45cc",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "incident--2ae5d32d-825c-495b-b222-ef1ce1356f8d",
+      "target_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--08ccb8d5-ddea-4ef1-b0f8-02ea3a1e5cff",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "target_ref": "identity--7736681b-efcb-43f4-93fa-20c09ec8b2be",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac81a6d0-9a79-4a2f-a211-eb15d3c5beb6",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--811d600f-9719-4035-b564-54d5d17f415d",
+      "target_ref": "identity--14e21efa-ca3e-40bd-8d88-50fdefc97c83",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--646496c9-1d78-4bea-bd92-574c1864980a",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "incident--811d600f-9719-4035-b564-54d5d17f415d",
+      "target_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0fcc7208-38ea-43f6-874e-3ae20b2fa36c",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "target_ref": "identity--14e21efa-ca3e-40bd-8d88-50fdefc97c83",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1b127541-e6a3-4612-84df-a127c8ae4563",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "incident--af1c3eff-8509-46b1-b208-5e503caa1658",
+      "target_ref": "identity--8b631fbc-e87c-4f74-a952-9bba75f1c737",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f95c9824-5d48-4ea2-8c66-90ebe07fdeb7",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "incident--af1c3eff-8509-46b1-b208-5e503caa1658",
+      "target_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8babfffb-ab76-432f-8e92-085aa7b5fcd2",
+      "created_by_ref": "identity--4e09ac36-3d2e-4a79-b434-358ec7ecc5b6",
+      "created": "2026-02-08T00:00:00.000Z",
+      "modified": "2026-02-08T00:00:00.000Z",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--c0735e68-9d00-450f-afce-a01516fe9104",
+      "target_ref": "identity--8b631fbc-e87c-4f74-a952-9bba75f1c737",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    }
+  ]
+}
