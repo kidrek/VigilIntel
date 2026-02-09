@@ -1,0 +1,400 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape on February 9, 2026, is dominated by sophisticated state-aligned espionage and the critical exploitation of high-value remote management software. Two major intelligence campaigns were exposed: TGR-STA-1030 (UNC6619) targeting global critical infrastructure and government entities across 37 nations using the custom ShadowGuard Linux rootkit, and the China-nexus DKnife framework leveraging router and edge device compromise for years to deploy backdoors (ShadowPad, DarkNimbus) and execute advanced adversary-in-the-middle attacks, primarily against Chinese-speaking users.\n\nSimultaneously, active exploitation campaigns targeting SolarWinds Web Help Desk vulnerabilities (CVE-2025-26399, etc.) demonstrate rapid post-exploitation techniques, utilizing legitimate administrative tools like Zoho Assist, Velociraptor, and Cloudflared for persistent access and data exfiltration via Elastic Cloud infrastructure. This highlights the persistent danger of N-day flaws in widely used network management software.\n\nSeveral critical vulnerabilities were disclosed, including multiple CVSS 10.0 flaws in the SandboxJS library, and pre-authentication RCEs in BeyondTrust (CVSS 9.9) and FortiClient EMS (CVSS 9.1). The ICS sector is also affected, with Yokogawa FAST/TOOLS software found vulnerable to high-severity configuration and weak cryptography issues. Furthermore, while the Romanian oil pipeline operator Conpet confirmed a cyberattack, its operational SCADA systems were reported safe, underscoring the resilience efforts in critical infrastructure.",
+      "fr": "Le paysage des menaces au 9 février 2026 est dominé par l'espionnage sophistiqué aligné sur des États et l'exploitation critique de logiciels de gestion à distance de grande valeur. Deux campagnes de renseignement majeures ont été révélées : TGR-STA-1030 (UNC6619) ciblant les infrastructures critiques et les entités gouvernementales à travers 37 pays, utilisant le rootkit Linux personnalisé ShadowGuard, et le framework DKnife, lié à la Chine, qui exploite depuis des années la compromission des routeurs et des périphériques \"edge\" pour déployer des backdoors (ShadowPad, DarkNimbus) et exécuter des attaques avancées de type 'adversaire-au-milieu', visant principalement les utilisateurs sinophones.\n\nSimultanément, des campagnes d'exploitation active ciblant les vulnérabilités de SolarWinds Web Help Desk (CVE-2025-26399, etc.) démontrent des techniques rapides de post-exploitation, utilisant des outils administratifs légitimes tels que Zoho Assist, Velociraptor et Cloudflared pour un accès persistant et l'exfiltration de données via l'infrastructure Elastic Cloud. Cela met en évidence le danger persistant des failles N-day dans les logiciels de gestion de réseau largement utilisés.\n\nPlusieurs vulnérabilités critiques ont été divulguées, notamment plusieurs failles CVSS 10.0 dans la bibliothèque SandboxJS, et des RCE pré-authentification dans BeyondTrust (CVSS 9.9) et FortiClient EMS (CVSS 9.1). Le secteur ICS est également touché, le logiciel Yokogawa FAST/TOOLS étant vulnérable à des problèmes de configuration et de cryptographie faible de haute gravité. Par ailleurs, bien que l'opérateur roumain de pipeline pétrolier Conpet ait confirmé une cyberattaque, ses systèmes opérationnels SCADA sont restés sécurisés, soulignant les efforts de résilience dans les infrastructures critiques."
+    },
+    "date": "2026-02-09"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "UNC6619 (TGR-STA-1030)",
+      "campaign": "Espionage targeting 37 Nations",
+      "campaign_description": {
+        "en": "A massive state-aligned cyber espionage campaign attributed to the Asia-based group TGR-STA-1030 (UNC6619), which has compromised at least 70 organizations across 37 countries over the past year. Targets include ministries of finance, law enforcement, and critical infrastructure. Activities are often timed to coincide with geopolitical events. The initial access method is sophisticated phishing campaigns using malicious archives hosted on mega.nz.",
+        "fr": "Campagne d'espionnage cybernétique massive alignée sur un État, attribuée au groupe basé en Asie TGR-STA-1030 (UNC6619), qui a compromis au moins 70 organisations dans 37 pays au cours de l'année écoulée. Les cibles comprennent les ministères des finances, les forces de l'ordre et les infrastructures critiques. Les activités sont souvent synchronisées avec des événements géopolitiques. La méthode d'accès initiale est le phishing sophistiqué utilisant des archives malveillantes hébergées sur mega.nz."
+      },
+      "sector": {
+        "en": "Government; Finance; Critical Infrastructure; Law Enforcement",
+        "fr": "Gouvernement ; Finance ; Infrastructure Critique ; Application de la loi"
+      },
+      "modop": {
+        "en": "Uses the custom Linux kernel-level rootkit named 'ShadowGuard' which leverages eBPF technology to conceal process IDs (PIDs) from standard user-space tools. Initial access is achieved via sophisticated phishing distributing 'Diaoyu Loader' malware.",
+        "fr": "Utilise le rootkit personnalisé de niveau noyau Linux nommé 'ShadowGuard' qui exploite la technologie eBPF pour masquer les ID de processus (PID) des outils standard de l'espace utilisateur. L'accès initial est réalisé via un phishing sophistiqué distribuant le malware 'Diaoyu Loader'."
+      },
+      "tags": [
+        "APT",
+        "Espionage",
+        "Linux Rootkit",
+        "eBPF",
+        "Geopolitical"
+      ],
+      "sources": [
+        "https://securityonline.info/jackma-shadowguard-tgr-sta-1030-spies-on-37-nations-via-linux-rootkit/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "threat_actor": "China-nexus threat actors",
+      "campaign": "DKnife Gateway Monitoring and AitM",
+      "campaign_description": {
+        "en": "Long-running campaign (since 2019) using the 'DKnife' toolkit, a fully featured gateway-monitoring and adversary-in-the-middle (AitM) framework comprising seven Linux-based implants. It targets routers and edge devices to spy, manipulate traffic, and deliver backdoors. The campaign primarily focuses on Chinese-speaking users, stealing credentials from Chinese services and hijacking app updates (Android, Windows) to deploy ShadowPad and DarkNimbus.",
+        "fr": "Campagne de longue date (depuis 2019) utilisant le toolkit 'DKnife', un framework complet de surveillance de passerelle et d'adversaire-au-milieu (AitM) composé de sept implants basés sur Linux. Il cible les routeurs et les périphériques 'edge' pour espionner, manipuler le trafic et livrer des portes dérobées. La campagne se concentre principalement sur les utilisateurs sinophones, volant des identifiants de services chinois et détournant les mises à jour d'applications (Android, Windows) pour déployer ShadowPad et DarkNimbus."
+      },
+      "sector": {
+        "en": "Telecommunications; Residential Users; Technology; Government",
+        "fr": "Télécommunications ; Utilisateurs Résidentiels ; Technologie ; Gouvernement"
+      },
+      "modop": {
+        "en": "Deep-packet inspection, DNS hijacking, interception of Android and Windows updates, disruption of antivirus traffic (e.g., 360 Total Security). Uses encrypted hijacking rules (QQ TEA–based key) and deploys ShadowPad and DarkNimbus backdoors via malicious installers, often using a module named 'yitiji' (all-in-one).",
+        "fr": "Inspection approfondie des paquets, détournement DNS, interception des mises à jour Android et Windows, perturbation du trafic antivirus (par exemple, 360 Total Security). Utilise des règles de détournement chiffrées (clé QQ TEA) et déploie les backdoors ShadowPad et DarkNimbus via des installeurs malveillants, souvent à l'aide d'un module nommé 'yitiji' (tout-en-un)."
+      },
+      "tags": [
+        "APT",
+        "AitM",
+        "Router Hijacking",
+        "ShadowPad",
+        "DarkNimbus"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187716/malware/dknife-toolkit-abuses-routers-to-spy-and-deliver-malware-since-2019.html",
+        "https://securityonline.info/the-all-in-one-spy-dknife-malware-hijacks-routers-to-swap-downloads/"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Regulatory; Telecommunications",
+        "fr": "Réglementation ; Télécommunications"
+      },
+      "theme": {
+        "en": "FCC Alert on Ransomware Targeting Communications Providers",
+        "fr": "Alerte de la FCC sur le Ransomware ciblant les Fournisseurs de Communications"
+      },
+      "description": {
+        "en": "The U.S. Federal Communications Commission (FCC) issued Public Notice DA 26-96, urging communications providers to implement cybersecurity best practices to defend against ransomware attacks. The alert follows recent incidents involving small-to-medium sized communications companies that resulted in service disruption and exposure of information, posing significant risks to national security and public safety.",
+        "fr": "La Commission Fédérale des Communications (FCC) des États-Unis a émis l'Avis Public DA 26-96, exhortant les fournisseurs de communications à mettre en œuvre les meilleures pratiques de cybersécurité pour se défendre contre les attaques par ransomware. Cette alerte fait suite à de récents incidents impliquant des petites et moyennes entreprises de communication, entraînant des perturbations de service et l'exposition d'informations, ce qui représente des risques significatifs pour la sécurité nationale et la sécurité publique."
+      },
+      "tags": [
+        "Ransomware",
+        "Regulation",
+        "National Security"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/08/fcc-cybersecurity-alert-and-recommendations-to-communications-providers/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "sector": {
+        "en": "Finance; Critical Infrastructure; Government",
+        "fr": "Finance ; Infrastructure Critique ; Gouvernement"
+      },
+      "theme": {
+        "en": "TGR-STA-1030 Espionage Linked to Geopolitical Events",
+        "fr": "Espionnage de TGR-STA-1030 lié à des Événements Géopolitiques"
+      },
+      "description": {
+        "en": "The TGR-STA-1030 threat group targets are highly aligned with geopolitical and economic events, including reconnaissance on Honduran government infrastructure prior to an election concerning Taiwan ties, scanning the Czech President’s website after announcing a co-patronage for the Dalai Lama’s birthday, and compromising Congolese infrastructure linked to disputes involving an Asian mining company. This confirms the group’s role as a state-aligned intelligence gatherer.",
+        "fr": "Les cibles du groupe de menace TGR-STA-1030 sont fortement alignées sur des événements géopolitiques et économiques, notamment la reconnaissance de l'infrastructure gouvernementale hondurienne avant une élection concernant les liens avec Taïwan, le balayage du site Web du président tchèque après l'annonce d'un co-patronage pour l'anniversaire du Dalaï Lama, et la compromission d'infrastructures congolaises liée à des différends impliquant une société minière asiatique. Cela confirme le rôle du groupe en tant que collecteur de renseignements aligné sur un État."
+      },
+      "tags": [
+        "APT",
+        "Espionage",
+        "Geopolitical Alignment"
+      ],
+      "sources": [
+        "https://securityonline.info/jackma-shadowguard-tgr-sta-1030-spies-on-37-nations-via-linux-rootkit/"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Flickr (SmugMug)",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Social Media; Technology",
+        "fr": "Réseaux Sociaux ; Technologie"
+      },
+      "description": {
+        "en": "Flickr notified users of a possible data exposure resulting from a flaw in a third-party email service provider. The incident, discovered on February 5, 2026, potentially exposed user names, email addresses, IP addresses, and account activity for some members. Passwords and payment data were not exposed.",
+        "fr": "Flickr a informé ses utilisateurs d'une possible exposition de données résultant d'une faille chez un fournisseur de services de messagerie tiers. L'incident, découvert le 5 février 2026, a potentiellement exposé les noms d'utilisateurs, les adresses e-mail, les adresses IP et l'activité de compte de certains membres. Les mots de passe et les données de paiement n'ont pas été exposés."
+      },
+      "tags": [
+        "Data Breach",
+        "Third-Party Risk",
+        "Phishing Risk"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187753/data-breach/flickr-moves-to-contain-data-exposure-warns-users-of-phishing.html"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "victim": "Conpet (Romania)",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Critical Infrastructure; Oil and Gas",
+        "fr": "Infrastructure Critique ; Pétrole et Gaz"
+      },
+      "description": {
+        "en": "Romania's national oil pipeline operator, Conpet, confirmed a cyberattack that disrupted parts of its technology infrastructure and knocked its website offline. The company stated that oil transport operations were not affected, and operational technology systems (SCADA, telecommunications) remained fully functional.",
+        "fr": "Conpet, l'opérateur national roumain de pipeline pétrolier, a confirmé une cyberattaque qui a perturbé une partie de son infrastructure technologique et mis son site Web hors ligne. La société a déclaré que les opérations de transport de pétrole n'étaient pas affectées et que les systèmes de technologie opérationnelle (SCADA, télécommunications) restaient pleinement fonctionnels."
+      },
+      "tags": [
+        "Cyberattack",
+        "OT/IT Incident",
+        "Critical Infrastructure"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/08/romanias-oil-pipeline-operator-confirms-cyberattack-as-hackers-claim-data-theft/?pk_campaign=feed&pk_kwd=romanias-oil-pipeline-operator-confirms-cyberattack-as-hackers-claim-data-theft"
+      ],
+      "date": "2026-02-08"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-25520",
+      "euvd_id": "UNKNOWN",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "UNKNOWN",
+      "cpe": "cpe:2.3:a:sandboxjs:sandboxjs:*:*",
+      "product": "SandboxJS",
+      "vendor": "SandboxJS",
+      "description": {
+        "en": "Critical vulnerability allowing sandbox escape and arbitrary code execution on the host system due to improper handling of function return values, allowing access to the host’s Function constructor.",
+        "fr": "Vulnérabilité critique permettant l'évasion du bac à sable (sandbox escape) et l'exécution de code arbitraire sur le système hôte en raison d'une mauvaise gestion des valeurs de retour de fonction, permettant l'accès au constructeur de fonction de l'hôte."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Sandbox Escape",
+        "CVSS 10.0"
+      ],
+      "sources": [
+        "https://securityonline.info/code-red-4-critical-sandboxjs-flaws-cvss-10-0-allow-host-takeover/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "UNKNOWN",
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "UNKNOWN",
+      "cpe": "cpe:2.3:a:beyondtrust:privileged_remote_access:*:*",
+      "product": "Remote Support (RS) and Privileged Remote Access (PRA)",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "Critical pre-authentication Remote Code Execution (RCE) vulnerability that can be triggered by specially crafted client requests, leading to system compromise without authentication or user interaction. Affects self-hosted instances.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance (RCE) pré-authentification qui peut être déclenchée par des requêtes client spécialement conçues, menant à la compromission du système sans authentification ni interaction utilisateur. Affecte les instances auto-hébergées."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Pre-Auth",
+        "CVSS 9.9"
+      ],
+      "sources": [
+        "https://securityonline.info/cve-2026-1731-critical-beyondtrust-flaw-cvss-9-9-allows-pre-auth-rce/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2026-21643",
+      "euvd_id": "UNKNOWN",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "UNKNOWN",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_enterprise_management_server:*:*",
+      "product": "FortiClient Enterprise Management Server (EMS)",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Critical Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability (CWE-89) that may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests.",
+        "fr": "Vulnérabilité critique d'injection SQL (CWE-89) due à une neutralisation incorrecte des éléments spéciaux dans une commande SQL. Permet à un attaquant non authentifié d'exécuter du code ou des commandes non autorisées via des requêtes HTTP spécialement conçues."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "SQL Injection",
+        "Pre-Auth"
+      ],
+      "sources": [
+        "https://securityonline.info/endpoint-exposed-critical-forticlient-ems-flaw-cvss-9-1-allows-unauthenticated-rce/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2026-1615",
+      "euvd_id": "UNKNOWN",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8 (CVSS 3.1)",
+      "epss": "UNKNOWN",
+      "cpe": "cpe:2.3:a:jsonpath_project:jsonpath:*:*",
+      "product": "jsonpath (All versions)",
+      "vendor": "jsonpath project",
+      "description": {
+        "en": "Arbitrary Code Injection vulnerability via unsafe evaluation of user-supplied JSON Path expressions. The library relies on static-eval, which allows attackers to execute arbitrary JavaScript code, potentially leading to RCE in Node.js environments or XSS in browsers.",
+        "fr": "Vulnérabilité d'injection de code arbitraire via une évaluation non sécurisée des expressions JSON Path fournies par l'utilisateur. Le défaut réside dans l'utilisation de 'static-eval', permettant l'exécution de code JavaScript arbitraire (RCE sous Node.js ou XSS dans les navigateurs)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Code Injection",
+        "NodeJS"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-1615"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2025-66608",
+      "euvd_id": "UNKNOWN",
+      "cisa_kev": "FALSE",
+      "cvss": "8.7 (CVSS 4.0)",
+      "epss": "UNKNOWN",
+      "cpe": "cpe:2.3:a:yokogawa:fast\\/tools:*:*:*:*:*:*:*",
+      "product": "FAST/TOOLS (R9.01 to R10.04)",
+      "vendor": "Yokogawa Electric Corporation",
+      "description": {
+        "en": "URL Validation Remote File Disclosure vulnerability. Lack of proper URL validation allows an attacker to send specially crafted requests to steal files from the web server.",
+        "fr": "Vulnérabilité de divulgation de fichiers à distance due à une validation d'URL incorrecte. Un attaquant peut envoyer des requêtes spécialement conçues pour voler des fichiers depuis le serveur web."
+      },
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "File Disclosure",
+        "SCADA"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2025-66608"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Active Exploitation of SolarWinds Web Help Desk RCE Vulnerabilities",
+        "fr": "Exploitation Active des Vulnérabilités RCE de SolarWinds Web Help Desk"
+      },
+      "description": {
+        "en": "Attackers are actively exploiting RCE vulnerabilities in SolarWinds Web Help Desk (WHD) (including CVE-2025-26399, CVE-2025-40536, and CVE-2025-40551) to achieve persistent, interactive control over compromised networks across numerous organizations. The attacks pivot rapidly from initial compromise to hands-on-keyboard activity.",
+        "fr": "Des attaquants exploitent activement les vulnérabilités RCE dans SolarWinds Web Help Desk (WHD) (notamment CVE-2025-26399, CVE-2025-40536 et CVE-2025-40551) pour obtenir un contrôle persistant et interactif des réseaux compromis dans de nombreuses organisations. Les attaques passent rapidement de la compromission initiale à l'activité manuelle sur le clavier."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "hxxps://files.catbox[.]moe/tmp9fc.msi",
+          "https://vdfccjpnedujhrzscjtq.supabase.co/.../v4.msi"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "auth.qgtxtebl.workers.dev"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Zoho Assist RMM Agent",
+          "Velociraptor",
+          "Cloudflared",
+          "Elastic Cloud (for exfiltration)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1566: Phishing (Initial Access - implied)",
+        "T1059.001: PowerShell",
+        "T1572: Protocol Tunneling",
+        "T1562.001: Disable or Modify System Firewall",
+        "T1567.002: Exfiltration Over Web Service"
+      ],
+      "analyse": {
+        "en": "The threat actors use a highly organized and sophisticated post-exploitation toolchain, combining legitimate remote management software (Zoho Assist RMM) for initial persistence and stealthy DFIR/C2 tools (Velociraptor, Cloudflared tunnel via Cloudflare Worker) for redundancy and command execution. The use of Elastic Cloud's Bulk API for exfiltrating system information (Get-ComputerInfo) is an innovative tradecraft, repurposing SIEM infrastructure for attacker management.",
+        "fr": "Les acteurs de la menace utilisent une chaîne d'outils de post-exploitation hautement organisée et sophistiquée, combinant un logiciel de gestion à distance légitime (Zoho Assist RMM) pour la persistance initiale et des outils de DFIR/C2 discrets (Velociraptor, tunnel Cloudflared via Cloudflare Worker) pour la redondance et l'exécution de commandes. L'utilisation de l'API Bulk d'Elastic Cloud pour l'exfiltration d'informations système (Get-ComputerInfo) est une technique innovante, détournant l'infrastructure SIEM à des fins de gestion par l'attaquant."
+      },
+      "recommandations": [
+        {
+          "en": "Urgently update SolarWinds Web Help Desk to version 2026.1 or later to remediate CVE-2025-26399, CVE-2025-40536, and CVE-2025-40551.",
+          "fr": "Mettre à jour d'urgence SolarWinds Web Help Desk vers la version 2026.1 ou ultérieure pour corriger CVE-2025-26399, CVE-2025-40536 et CVE-2025-40551."
+        },
+        {
+          "en": "Remove administrative interfaces like SolarWinds WHD from direct internet exposure and monitor WHD-related processes (wrapper.exe, java.exe) for unexpected child processes (cmd.exe, msiexec.exe) or encoded PowerShell execution.",
+          "fr": "Retirer les interfaces administratives comme SolarWinds WHD de l'exposition directe à Internet et surveiller les processus liés à WHD (wrapper.exe, java.exe) à la recherche de processus enfants inattendus (cmd.exe, msiexec.exe) ou d'exécution PowerShell encodée."
+        }
+      ],
+      "tags": [
+        "Exploitation",
+        "SolarWinds",
+        "RCE",
+        "Post-Exploitation",
+        "C2"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/solarwinds-vulnerability-actively-exploited/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "title": {
+        "en": "Tirith: New Tool for Blocking Homoglyph Attacks in CLI Environments",
+        "fr": "Tirith : Nouvel Outil pour Bloquer les Attaques Homographes dans les Environnements CLI"
+      },
+      "description": {
+        "en": "Tirith is a new open-source, cross-platform tool designed to detect and prevent homoglyph attacks and command-line injection (e.g., pipe-to-shell patterns like 'curl | bash'). It works by hooking into the user’s shell (zsh, bash, fish, PowerShell) and inspecting URLs in pasted commands for deceptive characters from different alphabets that appear visually identical.",
+        "fr": "Tirith est un nouvel outil open-source et multiplateforme conçu pour détecter et prévenir les attaques homographes et l'injection de commandes en ligne (par exemple, les modèles 'pipe-to-shell' comme 'curl | bash'). Il fonctionne en s'accrochant au shell de l'utilisateur (zsh, bash, fish, PowerShell) et en inspectant les URL dans les commandes collées à la recherche de caractères trompeurs de différents alphabets qui semblent visuellement identiques."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Tirith"
+        ]
+      },
+      "mitre_ttps": [
+        "T1059: Command and Scripting Interpreter",
+        "T1071.001: Application Layer Protocol: Web Protocols (Abuse of URLs)"
+      ],
+      "analyse": {
+        "en": "This tool addresses a long-standing blind spot, as modern terminals remain susceptible to Unicode, ANSI escapes, and homoglyph attacks even though web browsers have patched these issues. Tirith provides a low-overhead, local defense mechanism against attacks common in ClickFix campaigns and supply-chain risks like typosquatting.",
+        "fr": "Cet outil comble un angle mort de longue date, car les terminaux modernes restent sensibles aux caractères Unicode, aux séquences d'échappement ANSI et aux attaques homographes, même si les navigateurs Web ont corrigé ces problèmes. Tirith fournit un mécanisme de défense local et à faible surcoût contre les attaques courantes dans les campagnes ClickFix et les risques de chaîne d'approvisionnement comme le typosquatting."
+      },
+      "recommandations": [
+        {
+          "en": "Organizations using shell environments heavily should evaluate the deployment of tools like Tirith to mitigate risks associated with copy-pasted commands containing hidden or deceptive characters.",
+          "fr": "Les organisations utilisant intensivement des environnements shell devraient évaluer le déploiement d'outils comme Tirith pour atténuer les risques associés aux commandes copiées-collées contenant des caractères cachés ou trompeurs."
+        },
+        {
+          "en": "End-users should be trained to manually inspect any command-line input, especially those involving 'pipe-to-shell' patterns (e.g., curl | bash), regardless of the apparent source URL.",
+          "fr": "Les utilisateurs finaux devraient être formés pour inspecter manuellement toute entrée en ligne de commande, en particulier celles impliquant des modèles 'pipe-to-shell' (par exemple, curl | bash), quelle que soit l'URL source apparente."
+        }
+      ],
+      "tags": [
+        "Defensive Tool",
+        "Homoglyph",
+        "CLI",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-tool-blocks-imposter-attacks-disguised-as-safe-commands/"
+      ],
+      "date": "2026-02-08"
+    }
+  ]
+}
