@@ -1,0 +1,380 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape for February 10, 2026, is dominated by high-intensity state-sponsored operations and sophisticated ransomware tactics. Chinese threat actors (UNC3886, Amaranth-Dragon, Storm 15-16) are aggressively targeting critical infrastructure in Singapore and Southeast Asia, while also engaging in information warfare against European defense interests. Concurrently, North Korean actor UNC1069 has integrated Generative AI (Deepfakes) into social engineering campaigns against the cryptocurrency sector. From a technical standpoint, 'Living-off-the-Land' (LotL) techniques have evolved, with attackers using legitimate virtualization software (QEMU) and RMM tools (Zoho ManageEngine) to hide malicious activity. Critical vulnerabilities in remote management and enterprise software (BeyondTrust, SolarWinds, Fortinet, SAP) remain primary entry vectors, necessitating urgent patching.",
+      "fr": "Le paysage des cybermenaces au 10 février 2026 est dominé par des opérations étatiques de haute intensité et des tactiques de ransomware sophistiquées. Des acteurs chinois (UNC3886, Amaranth-Dragon, Storm 15-16) ciblent agressivement les infrastructures critiques à Singapour et en Asie du Sud-Est, tout en menant une guerre informationnelle contre les intérêts de défense européens. Parallèlement, l'acteur nord-coréen UNC1069 a intégré l'IA générative (Deepfakes) dans ses campagnes d'ingénierie sociale contre le secteur des cryptomonnaies. Sur le plan technique, les techniques 'Living-off-the-Land' (LotL) évoluent, les attaquants utilisant des logiciels de virtualisation légitimes (QEMU) et des outils RMM (Zoho ManageEngine) pour masquer leurs activités. Les vulnérabilités critiques dans les logiciels de gestion à distance et d'entreprise (BeyondTrust, SolarWinds, Fortinet, SAP) restent des vecteurs d'entrée privilégiés, nécessitant un déploiement urgent de correctifs."
+    },
+    "date": "2026-02-10"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "UNC3886",
+      "campaign": "Operation Cyber Guardian",
+      "campaign_description": {
+        "en": "Targeted espionage campaign against Singapore's four largest telecommunication providers (Singtel, StarHub, M1, Simba). The actor used zero-day exploits and rootkits for persistence.",
+        "fr": "Campagne d'espionnage ciblée contre les quatre principaux fournisseurs de télécommunications de Singapour (Singtel, StarHub, M1, Simba). L'acteur a utilisé des exploits zero-day et des rootkits pour maintenir sa persistance."
+      },
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "modop": {
+        "en": "Exploitation of perimeter firewalls (zero-days), lateral movement, deployment of stealthy rootkits.",
+        "fr": "Exploitation de pare-feu périmétriques (zero-days), mouvement latéral, déploiement de rootkits furtifs."
+      },
+      "tags": [
+        "espionage",
+        "Singapore",
+        "telco",
+        "zero-day"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breach-singapores-four-largest-telcos/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "threat_actor": "Lazarus Group",
+      "campaign": "UNC1069 Crypto-Targeting",
+      "campaign_description": {
+        "en": "North Korean financially motivated campaign targeting FinTech and Crypto startups using AI-generated deepfakes and the 'ClickFix' technique to deploy custom malware.",
+        "fr": "Campagne nord-coréenne à but lucratif ciblant les startups FinTech et Crypto, utilisant des deepfakes générés par IA et la technique 'ClickFix' pour déployer des malwares personnalisés."
+      },
+      "sector": {
+        "en": "Cryptocurrency, Finance",
+        "fr": "Cryptomonnaie, Finance"
+      },
+      "modop": {
+        "en": "AI video deepfakes for social engineering, fake Zoom meetings, ClickFix (malicious troubleshooting commands), deployment of SILENCELIFT and DEEPBREATH malware.",
+        "fr": "Deepfakes vidéo IA pour l'ingénierie sociale, fausses réunions Zoom, ClickFix (commandes de dépannage malveillantes), déploiement des malwares SILENCELIFT et DEEPBREATH."
+      },
+      "tags": [
+        "UNC1069",
+        "North Korea",
+        "AI",
+        "Deepfake",
+        "Crypto",
+        "macOS"
+      ],
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "threat_actor": "Storm 15-16",
+      "campaign": "Anti-Rafale Disinformation",
+      "campaign_description": {
+        "en": "Russian disinformation campaign creating fake anti-corruption reports to discredit French-Ukrainian defense agreements (Rafale acquisition).",
+        "fr": "Campagne de désinformation russe créant de faux rapports anti-corruption pour discréditer les accords de défense franco-ukrainiens (acquisition de Rafale)."
+      },
+      "sector": {
+        "en": "Government, Defense",
+        "fr": "Gouvernement, Défense"
+      },
+      "modop": {
+        "en": "Creation of fraudulent websites (nabu-gov.com), identity theft of official organizations, massive propagation via social media bots.",
+        "fr": "Création de sites web frauduleux (nabu-gov.com), usurpation d'identité d'organisations officielles, propagation massive via des bots sur les réseaux sociaux."
+      },
+      "tags": [
+        "disinformation",
+        "Russia",
+        "Storm-1516",
+        "France",
+        "Ukraine"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/larmee-francaise-alerte-sur-une-fake-news-russe/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "threat_actor": "Qilin",
+      "campaign": "Conpet Ransomware Attack",
+      "campaign_description": {
+        "en": "Ransomware attack and data exfiltration (1TB) against Romania's national oil pipeline operator.",
+        "fr": "Attaque par ransomware et exfiltration de données (1 To) contre l'opérateur national d'oléoducs de Roumanie."
+      },
+      "sector": {
+        "en": "Energy, Critical Infrastructure",
+        "fr": "Énergie, Infrastructures Critiques"
+      },
+      "modop": {
+        "en": "Double extortion, targeting business IT systems while sparing OT (SCADA) initially.",
+        "fr": "Double extorsion, ciblage des systèmes informatiques de gestion tout en épargnant l'OT (SCADA) initialement."
+      },
+      "tags": [
+        "ransomware",
+        "Romania",
+        "energy",
+        "Qilin"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187736/cyber-crime/romanias-national-oil-pipeline-firm-conpet-reports-cyberattack.html"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Economic, Strategic Industry",
+        "fr": "Économique, Industrie Stratégique"
+      },
+      "theme": {
+        "en": "China's Rare Earth Export Controls",
+        "fr": "Contrôles chinois sur l'exportation des terres rares"
+      },
+      "description": {
+        "en": "China has enforced strict export controls on rare earth technologies, leveraging its monopoly to exert pressure on Western defense industries and economic rivals.",
+        "fr": "La Chine a imposé des contrôles d'exportation stricts sur les technologies liées aux terres rares, utilisant son monopole pour faire pression sur les industries de défense occidentales et ses rivaux économiques."
+      },
+      "tags": [
+        "China",
+        "Rare Earths",
+        "Economic Warfare"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/le-controle-de-la-chine-sur-les-terres-rares-un-levier-de-puissance-considerable-dans-la-guerre-economique/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "sector": {
+        "en": "Defense",
+        "fr": "Défense"
+      },
+      "theme": {
+        "en": "Aeronautical Defense Markets",
+        "fr": "Marchés de défense aéronautique"
+      },
+      "description": {
+        "en": "Emerging powers are shifting towards Chinese military aviation solutions as alternatives to costly Western equipment, leading to new strategic dependencies.",
+        "fr": "Les puissances émergentes se tournent vers les solutions d'aviation militaire chinoises comme alternatives aux équipements occidentaux coûteux, entraînant de nouvelles dépendances stratégiques."
+      },
+      "tags": [
+        "China",
+        "Aviation",
+        "Defense Market"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/strategies-dacces-aux-marches-de-defense-aeronautique-le-role-pivot-de-la-chine-pour-les-puissances-emergentes-1-3/"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "European Commission",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernement"
+      },
+      "description": {
+        "en": "Compromise of the central Mobile Device Management (MDM) infrastructure, leading to the potential exposure of staff names and mobile numbers.",
+        "fr": "Compromission de l'infrastructure centrale de gestion des appareils mobiles (MDM), entraînant l'exposition potentielle des noms et numéros de téléphone du personnel."
+      },
+      "tags": [
+        "MDM",
+        "vishing",
+        "EU"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187768/data-breach/european-commission-probes-cyberattack-on-mobile-device-management-system.html"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "victim": "Singtel, StarHub, M1, Simba",
+      "threat_actor": "UNC3886",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Invasion of the four major telcos in Singapore to steal technical data and establish persistent access via rootkits.",
+        "fr": "Invasion des quatre principaux opérateurs télécoms de Singapour pour voler des données techniques et établir un accès persistant via des rootkits."
+      },
+      "tags": [
+        "espionage",
+        "rootkit"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breach-singapores-four-largest-telcos/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "victim": "Flickr",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Social Media",
+        "fr": "Réseaux Sociaux"
+      },
+      "description": {
+        "en": "Data exposure caused by a vulnerability in a third-party email service provider. Exposed data includes names, emails, IPs, and account activity.",
+        "fr": "Exposition de données causée par une vulnérabilité chez un fournisseur tiers de services d'e-mailing. Les données exposées incluent noms, emails, IP et activité des comptes."
+      },
+      "tags": [
+        "third-party",
+        "data-leak"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187753/data-breach/flickr-moves-to-contain-data-exposure-warns-users-of-phishing.html"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "EUVD-2026-1731",
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+      "product": "Remote Support / Privileged Remote Access",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "A critical pre-authentication remote code execution vulnerability resulting from an OS command injection weakness.",
+        "fr": "Une vulnérabilité critique d'exécution de code à distance pré-authentification résultant d'une faiblesse d'injection de commande OS."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-rce-flaw-in-remote-support-software/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2025-40551",
+      "euvd_id": "EUVD-2025-40551",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:solarwinds:web_help_desk:*:*:*:*:*:*:*:*",
+      "product": "Web Help Desk",
+      "vendor": "SolarWinds",
+      "description": {
+        "en": "Critical untrusted deserialization flaw leading to remote code execution.",
+        "fr": "Faille critique de désérialisation non fiable menant à une exécution de code à distance."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Active Exploitation"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/threat-actors-exploit-solarwinds-wdh-flaws-to-deploy-velociraptor/"
+      ],
+      "date": "2026-02-09"
+    },
+    {
+      "cve_id": "CVE-2026-21643",
+      "euvd_id": "EUVD-2026-21643",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:fortinet:forticlientems:7.4.4:*:*:*:*:*:*:*",
+      "product": "FortiClientEMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "SQL Injection vulnerability in FortiClientEMS allowing unauthenticated remote code execution via crafted HTTP requests.",
+        "fr": "Vulnérabilité d'injection SQL dans FortiClientEMS permettant l'exécution de code à distance non authentifiée via des requêtes HTTP forgées."
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "Fortinet"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187787/security/critical-fortinet-forticlientems-flaw-allows-remote-code-execution.html"
+      ],
+      "date": "2026-02-09"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "SolarWinds WHD Exploitation with Virtualization Persistence",
+        "fr": "Exploitation de SolarWinds WHD avec persistance par virtualisation"
+      },
+      "description": {
+        "en": "Threat actors are exploiting SolarWinds Web Help Desk to deploy hidden QEMU virtual machines under the SYSTEM account, creating a 'ghost' SSH tunnel for persistent access.",
+        "fr": "Des acteurs malveillants exploitent SolarWinds Web Help Desk pour déployer des machines virtuelles QEMU cachées sous le compte SYSTEM, créant un tunnel SSH 'fantôme' pour un accès persistant."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://mylingocoin.com/audio/fix/6454694440"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "zoom.uswe05.us",
+          "nabu-gov.com",
+          "mylingocoin.com"
+        ],
+        "EMAIL": [
+          "esmahyft@proton.me"
+        ],
+        "HASH_SHA256": [
+          "03f00a143b8929585c122d490b6a3895d639c17d92C2223917e3a9ca1b8d30f9",
+          "1a30d6cdb0b98feed62563be8050db55ae0156ed437701d36a7b46aabf086ede"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "3712793d3847dd0962361aa528fa124c",
+          "4e4f2dfe143ba261fd8a18d1c4b58f2e"
+        ],
+        "TOOLS": [
+          "Velociraptor",
+          "Zoho ManageEngine Assist",
+          "QEMU",
+          "Cloudflared",
+          "CeWL",
+          "SILENCELIFT",
+          "DEEPBREATH",
+          "CHROMEPUSH"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1566.002",
+        "T1021.004",
+        "T1548.002",
+        "T1071.001"
+      ],
+      "analyse": {
+        "en": "The use of QEMU for persistence is a highly sophisticated 'Living-off-the-Land' tactic designed to bypass traditional EDR and monitoring tools by encapsulating malicious traffic within a virtualized container.",
+        "fr": "L'utilisation de QEMU pour la persistance est une tactique 'Living-off-the-Land' très sophistiquée conçue pour contourner les outils EDR et de surveillance traditionnels en encapsulant le trafic malveillant dans un conteneur virtualisé."
+      },
+      "recommandations": [
+        {
+          "en": "Update SolarWinds WHD to version 2026.1 immediately.",
+          "fr": "Mettre à jour immédiatement SolarWinds WHD vers la version 2026.1."
+        },
+        {
+          "en": "Hunt for unauthorized instances of QEMU or Zoho Assist processes (ToolsIQ.exe).",
+          "fr": "Rechercher des instances non autorisées de processus QEMU ou Zoho Assist (ToolsIQ.exe)."
+        }
+      ],
+      "tags": [
+        "SolarWinds",
+        "QEMU",
+        "LotL"
+      ],
+      "sources": [
+        "https://securityonline.info/virtual-invasion-solarwinds-whd-exploited-to-host-hidden-qemu-vms/",
+        "https://www.bleepingcomputer.com/news/security/threat-actors-exploit-solarwinds-wdh-flaws-to-deploy-velociraptor/"
+      ],
+      "date": "2026-02-09"
+    }
+  ]
+}
+
