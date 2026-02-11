@@ -1,0 +1,359 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for February 11, 2026, is dominated by the release of the Microsoft Patch Tuesday, which addresses 58 flaws including six actively exploited zero-days. Simultaneously, sophisticated espionage activity from North Korean (UNC1069) and Chinese (UNC3886) actors continues to target high-value sectors like Fintech and Telecommunications. The emergence of 'ZeroDayRAT' as a commercial spyware tool and the discovery of the 'VoidLink' framework indicate a shift toward highly modular and AI-assisted malware development.",
+      "fr": "Le paysage des menaces pour le 11 février 2026 est dominé par la publication du Patch Tuesday de Microsoft, qui corrige 58 failles, dont six vulnérabilités zero-day activement exploitées. Parallèlement, des activités d'espionnage sophistiquées menées par des acteurs nord-coréens (UNC1069) et chinois (UNC3886) continuent de cibler des secteurs à haute valeur comme la Fintech et les Télécommunications. L'émergence de 'ZeroDayRAT' en tant qu'outil d'espionnage commercial et la découverte du framework 'VoidLink' indiquent une transition vers un développement de logiciels malveillants hautement modulaires et assistés par IA."
+    },
+    "date": "2026-02-11"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "UNC1069",
+      "campaign": "Fintech AI Deepfake Campaign",
+      "campaign_description": {
+        "en": "UNC1069 is using AI-generated deepfake videos of CEOs in Telegram/Zoom meetings to trick cryptocurrency employees into running malicious commands, delivering macOS and Windows backdoors like WAVESHAPER and SUGARLOADER.",
+        "fr": "L'acteur UNC1069 utilise des vidéos deepfake de PDG générées par IA lors de réunions Telegram/Zoom pour inciter les employés du secteur des cryptomonnaies à exécuter des commandes malveillantes, installant des backdoors macOS et Windows tels que WAVESHAPER et SUGARLOADER."
+      },
+      "sector": {
+        "en": "Cryptocurrency, Fintech",
+        "fr": "Cryptomonnaie, Fintech"
+      },
+      "modop": {
+        "en": "Social engineering via Telegram, deepfake video calls, ClickFix technique, custom macOS malware families.",
+        "fr": "Ingénierie sociale via Telegram, appels vidéo deepfake, technique ClickFix, familles de malwares macOS personnalisées."
+      },
+      "tags": [
+        "UNC1069",
+        "Deepfake",
+        "Crypto-theft",
+        "macOS"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-theft-attacks/"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "threat_actor": "UNC3886",
+      "campaign": "Operation CYBER GUARDIAN",
+      "campaign_description": {
+        "en": "A sophisticated China-linked campaign targeting all four major Singaporean telecommunications operators (Singtel, StarHub, M1, SIMBA) to exfiltrate network-related data and maintain persistence via rootkits.",
+        "fr": "Une campagne sophistiquée liée à la Chine ciblant les quatre principaux opérateurs de télécommunications singapouriens (Singtel, StarHub, M1, SIMBA) pour exfiltrer des données réseau et maintenir une persistance via des rootkits."
+      },
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "modop": {
+        "en": "Exploitation of zero-day vulnerabilities in firewalls, deployment of passive rootkits, log tampering to evade detection.",
+        "fr": "Exploitation de vulnérabilités zero-day dans les pare-feu, déploiement de rootkits passifs, falsification des journaux pour échapper à la détection."
+      },
+      "tags": [
+        "UNC3886",
+        "Singapore",
+        "Espionage",
+        "Zero-day"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187792/apt/china-linked-apt-unc3886-targets-singapore-telcos.html",
+        "https://databreaches.net/2026/02/10/singapore-says-china-backed-hackers-targeted-its-four-largest-phone-companies/"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "threat_actor": "Scattered Spider",
+      "campaign": "Muddled Libra vSphere Intrusion",
+      "campaign_description": {
+        "en": "Creation of rogue virtual machines within target VMware vSphere environments to conduct reconnaissance, steal Active Directory databases (NTDS.dit), and target Snowflake infrastructure.",
+        "fr": "Création de machines virtuelles malveillantes au sein des environnements VMware vSphere cibles pour effectuer des reconnaissances, voler des bases de données Active Directory (NTDS.dit) et cibler l'infrastructure Snowflake."
+      },
+      "sector": {
+        "en": "Technology, Cloud Services",
+        "fr": "Technologie, Services Cloud"
+      },
+      "modop": {
+        "en": "Social engineering for initial access, rogue VM creation to bypass EDR, use of Chisel for tunneling, and stolen certificates for ticket forging.",
+        "fr": "Ingénierie sociale pour l'accès initial, création de VM malveillantes pour contourner l'EDR, utilisation de Chisel pour le tunneling et certificats volés pour la falsification de tickets."
+      },
+      "tags": [
+        "Muddled Libra",
+        "Scattered Spider",
+        "vSphere",
+        "Snowflake"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/"
+      ],
+      "date": "2026-02-10"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government, Space",
+        "fr": "Gouvernement, Spatial"
+      },
+      "theme": {
+        "en": "Sino-Algerian Space Cooperation",
+        "fr": "Coopération spatiale sino-algérienne"
+      },
+      "description": {
+        "en": "Launch of AlSat-3B via Chinese Long March 2C rocket, consolidating Algeria's space power in North Africa and creating long-term technological dependence on Beijing's 'Space Silk Road'.",
+        "fr": "Lancement d'AlSat-3B via une fusée chinoise Longue Marche 2C, consolidant la puissance spatiale de l'Algérie en Afrique du Nord et créant une dépendance technologique à long terme vis-à-vis de la 'Route de la Soie spatiale' de Pékin."
+      },
+      "tags": [
+        "China",
+        "Algeria",
+        "AlSat-3B",
+        "BRI"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/cooperation-spatiale-algerie-chine-pivot-de-la-route-de-la-soie-spatiale/"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "theme": {
+        "en": "European 5G Supply Chain Sovereignty",
+        "fr": "Souveraineté de la chaîne d'approvisionnement 5G en Europe"
+      },
+      "description": {
+        "en": "The European Commission is pushing for a revised cybersecurity law to exclude high-risk vendors (Huawei, ZTE) from 18 critical sectors beyond just mobile networks, targeting hybrid threats from Russia and China.",
+        "fr": "La Commission européenne pousse pour une loi de cybersécurité révisée afin d'exclure les fournisseurs à haut risque (Huawei, ZTE) de 18 secteurs critiques au-delà des seuls réseaux mobiles, ciblant les menaces hybrides de la Russie et de la Chine."
+      },
+      "tags": [
+        "EU",
+        "5G",
+        "Huawei",
+        "Sovereignty"
+      ],
+      "sources": [
+        "https://www.datasecuritybreach.fr/lue-durcit-la-5g-face-aux-fournisseurs-a-haut-risque/"
+      ],
+      "date": "2026-02-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Senegal National ID Office (DAF)",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Government, Civil Identity",
+        "fr": "Gouvernement, Identité Civile"
+      },
+      "description": {
+        "en": "Ransomware attack by 'Green Blood Group' resulted in the theft of 139 GB of citizen records and biometric data, forcing the closure of ID and passport services.",
+        "fr": "Une attaque par ransomware du groupe 'Green Blood Group' a entraîné le vol de 139 Go de dossiers de citoyens et de données biométriques, forçant la fermeture des services d'identité et de passeports."
+      },
+      "tags": [
+        "Senegal",
+        "Ransomware",
+        "Biometrics",
+        "Data Theft"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187811/data-breach/senegal-shuts-national-id-office-after-ransomware-attack.html"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "victim": "Dutch Data Protection Authority & Council for the Judiciary",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Government, Legal",
+        "fr": "Gouvernement, Juridique"
+      },
+      "description": {
+        "en": "Exploitation of Ivanti EPMM vulnerabilities exposed employee contact data. The European Commission also reported a similar intrusion on its mobile device management platform.",
+        "fr": "L'exploitation des vulnérabilités Ivanti EPMM a exposé les données de contact des employés. La Commission européenne a également signalé une intrusion similaire sur sa plateforme de gestion des appareils mobiles."
+      },
+      "tags": [
+        "Ivanti",
+        "EPMM",
+        "Netherlands",
+        "EU Commission"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187806/security/dutch-agencies-hit-by-ivanti-epmm-exploit-exposing-employee-contact-data.html"
+      ],
+      "date": "2026-02-10"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-21510",
+      "euvd_id": "EUVD-2026-21510",
+      "cisa_kev": "TRUE",
+      "cvss": "7.5",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+      "product": "Windows Shell / SmartScreen",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Actively exploited security feature bypass in Windows Shell allowing unauthenticated attackers to bypass SmartScreen warnings via specially crafted links or shortcut files.",
+        "fr": "Contournement de fonctionnalité de sécurité activement exploité dans Windows Shell permettant à des attaquants non authentifiés de contourner les avertissements SmartScreen via des liens ou des fichiers de raccourci spécialement conçus."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "SmartScreen"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/microsoft-february-2026-patch-tuesday-fixes-6-zero-days-58-flaws/",
+        "https://securityaffairs.com/187848/uncategorized/microsoft-patch-tuesday-security-updates-for-february-2026-fix-six-actively-exploited-zero-days.html"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "cve_id": "CVE-2026-21643",
+      "euvd_id": "EUVD-2026-21643",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_ems:7.4.4:*:*:*:*:*:*:*",
+      "product": "FortiClient EMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Critical unauthenticated SQL injection vulnerability in FortiClient EMS 7.4.4 that could lead to remote code execution.",
+        "fr": "Vulnérabilité d'injection SQL critique non authentifiée dans FortiClient EMS 7.4.4 pouvant entraîner une exécution de code à distance."
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "Fortinet",
+        "RCE"
+      ],
+      "sources": [
+        "https://socprime.com/blog/cve-2026-21643-vulnerability/"
+      ],
+      "date": "2026-02-10"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "SSHStalker Linux Botnet",
+        "fr": "Botnet Linux SSHStalker"
+      },
+      "description": {
+        "en": "A new Linux botnet leveraging old-school IRC for command-and-control, performing noisy SSH scans and brute-forcing to infect hosts.",
+        "fr": "Un nouveau botnet Linux exploitant le protocole IRC classique pour le commandement et contrôle, effectuant des scans SSH bruyants et des attaques par force brute pour infecter les hôtes."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "https://files.catbox.moe/tmp9fc.msi"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "handle.in"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "nmap (masqueraded)",
+          "IRC",
+          "SSH Brute-forcer"
+        ]
+      },
+      "mitre_ttps": [
+        "T1110",
+        "T1059.004",
+        "T1053.003",
+        "T1562.001"
+      ],
+      "analyse": {
+        "en": "SSHStalker prioritizes scale over stealth, utilizing 15-year-old CVEs for privilege escalation and 1-minute cron jobs for persistence.",
+        "fr": "SSHStalker privilégie l'échelle à la furtivité, utilisant des CVE vieilles de 15 ans pour l'élévation de privilèges et des tâches cron d'une minute pour la persistance."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unusual outbound IRC connections (port 6667).",
+          "fr": "Surveiller les connexions IRC sortantes inhabituelles (port 6667)."
+        },
+        {
+          "en": "Implement rate-limiting and alerting on SSH brute-force attempts.",
+          "fr": "Mettre en œuvre une limitation de débit et des alertes sur les tentatives de force brute SSH."
+        }
+      ],
+      "tags": [
+        "Botnet",
+        "Linux",
+        "IRC",
+        "SSHStalker"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-linux-botnet-sshstalker-uses-old-school-irc-for-c2-comms/"
+      ],
+      "date": "2026-02-10"
+    },
+    {
+      "title": {
+        "en": "ZeroDayRAT Commercial Spyware",
+        "fr": "Spyware commercial ZeroDayRAT"
+      },
+      "description": {
+        "en": "Advanced commercial spyware for Android and iOS sold on Telegram, offering full remote access including camera/microphone streaming and crypto-theft modules.",
+        "fr": "Logiciel d'espionnage commercial avancé pour Android et iOS vendu sur Telegram, offrant un accès à distance complet incluant le streaming caméra/micro et des modules de vol de cryptomonnaies."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "iplogger[.]org"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "iplogger.org"
+        ],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ZeroDayRAT",
+          "Telegram"
+        ]
+      },
+      "mitre_ttps": [
+        "T1517",
+        "T1636",
+        "T1418"
+      ],
+      "analyse": {
+        "en": "This tool represents a democratization of nation-state-level surveillance capabilities, targeting traditional banking and cryptocurrency wallets.",
+        "fr": "Cet outil représente une démocratisation des capacités de surveillance de niveau étatique, ciblant les banques traditionnelles et les portefeuilles de cryptomonnaies."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid installing applications from untrusted third-party sources or Telegram links.",
+          "fr": "Éviter d'installer des applications provenant de sources tierces non fiables ou de liens Telegram."
+        },
+        {
+          "en": "Enable mobile threat defense (MTD) solutions on corporate-owned devices.",
+          "fr": "Activer des solutions de défense contre les menaces mobiles (MTD) sur les appareils d'entreprise."
+        }
+      ],
+      "tags": [
+        "Spyware",
+        "RAT",
+        "Android",
+        "iOS"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187820/malware/zerodayrat-spyware-grants-attackers-total-access-to-mobile-devices.html"
+      ],
+      "date": "2026-02-10"
+    }
+  ]
+}
