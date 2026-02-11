@@ -1,0 +1,1339 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage des menaces cyber de plus en plus complexe, caractérisé par l'intensification des activités d'espionnage étatiques, la sophistication croissante des cybercriminels et l'émergence de nouvelles techniques d'évasion. La base industrielle de défense (DIB) est particulièrement ciblée par des acteurs russes, chinois, nord-coréens et iraniens, qui exploitent des vulnérabilités critiques dans les systèmes d'edge, les chaînes d'approvisionnement et même les processus de recrutement pour l'espionnage et le vol de propriété intellectuelle. L'utilisation de l'intelligence artificielle par les attaquants, notamment pour générer des leurres de phishing et faciliter le développement de malwares sophistiqués (comme VoidLink), marque une tendance préoccupante, bien que l'IA soit également mise à profit dans des vulnérabilités de prompt injection. Les attaques par rançongiciel continuent d'impacter des secteurs critiques, comme les services d'urgence et les organismes gouvernementaux, soulignant les risques liés aux systèmes hérités et à la gestion interne. Les vulnérabilités majeures incluent des failles critiques (CVSS >= 8) dans des produits largement utilisés, allant des systèmes de gestion des points de terminaison (Ivanti EPMM, FortiClient EMS) aux plateformes de serveurs de jeu et aux librairies cryptographiques, permettant des exécutions de code à distance, des contournements d'authentification et des dénis de service. La supply chain reste un vecteur d'attaque privilégié, comme en témoignent les incidents SolarWinds WHD et la distribution de logiciels malveillants via de faux sites 7-Zip. En conclusion, l'état général des menaces est élevé, nécessitant une approche proactive, une vigilance accrue face à l'ingénierie sociale et une attention particulière à la sécurité des infrastructures critiques et des chaînes d'approvisionnement.",
+      "date": "2026-02-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT43",
+        "secteur": "Défense, semi-conducteurs, fabrication automobile",
+        "modop": "Campagnes d'ingénierie sociale basées sur l'emploi, infrastructure mimant des entités de défense allemandes et américaines, pages de collecte d'identifiants, déploiement du backdoor THINWAVE et HANGMAN.V2.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Coree_du_Nord", "ingenierie_sociale", "recrutement", "malware", "THINWAVE", "HANGMAN.V2"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT44 (Sandworm, FROZENBARENTS)",
+        "secteur": "Militaire ukrainien, entités de défense occidentales",
+        "modop": "Exfiltration d'informations depuis des applications de messagerie chiffrée (Telegram, Signal) via accès physique ou exploitation de dispositifs mobiles, utilisation de scripts Windows Batch (WAVESIGN) et de malwares Android (INFAMOUSCHISEL) pour la collecte de données militaires.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Russie", "militaire", "Ukraine", "messagerie", "malware", "WAVESIGN", "INFAMOUSCHISEL", "collecte_donnees"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT45",
+        "secteur": "Défense, semi-conducteurs, fabrication automobile (Corée du Sud)",
+        "modop": "Opérations d'espionnage pour l'acquisition de propriété intellectuelle, déploiement du malware SMALLTIGER.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Coree_du_Nord", "propriete_intellectuelle", "malware", "SMALLTIGER"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT5",
+        "secteur": "Contractants de défense et aérospatiale",
+        "modop": "Campagnes de spear-phishing ciblant les adresses e-mail personnelles des employés actuels et anciens, leurres personnalisés (événements industriels, offres d'emploi, références locales, activités personnelles).",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Chine", "ingenierie_sociale", "phishing", "defense", "aerospace"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "BlueNoroff (Sapphire Sleet, TA44)",
+        "secteur": "Cryptomonnaie, Web3",
+        "modop": "Campagnes d'ingénierie sociale (vidéos générées par IA, technique ClickFix) pour délivrer des malwares macOS et Windows, ciblant le secteur des cryptomonnaies pour le vol de fonds et la collecte de données pour de futures campagnes de social engineering. Utilisation de malware SUGARLOADER et WAVESHAPER.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Coree_du_Nord", "cryptomonnaie", "Web3", "ingenierie_sociale", "ClickFix", "malware", "SUGARLOADER", "WAVESHAPER", "vol_donnees"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Cyber Isnaad Front",
+        "secteur": "Base industrielle de défense israélienne, pays étrangers (ex: Australie)",
+        "modop": "Opérations de hack-and-leak, compromission de la chaîne d'approvisionnement via un contractant de défense israélien, fuite d'informations militaires sensibles (plans d'achat de missiles).",
+        "tags": ["actor", "theat_actor", "hacktivisme", "Iran", "hack_and_leak", "chaine_approvisionnement", "defense", "Israel", "guerre_israel_hamas"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Cyber Toufan (UNC5318)",
+        "secteur": "Secteur militaire-industriel israélien",
+        "modop": "Opérations de hack-and-leak, compromission de la chaîne d'approvisionnement via une brèche dans l'infrastructure réseau d'un contractant de défense israélien, entraînant la compromission de multiples organisations de défense.",
+        "tags": ["actor", "theat_actor", "hacktivisme", "Iran", "hack_and_leak", "chaine_approvisionnement", "defense", "Israel", "guerre_israel_hamas"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Groupe lié aux services de renseignement russes (non nommé)",
+        "secteur": "Défense, militaire, gouvernement, énergie, aérospatiale, fabrication (Ukraine, Roumanie, Moldavie)",
+        "modop": "Campagnes de phishing utilisant des LLM pour la reconnaissance, la création de leurres (imitation d'organisations énergétiques ukrainiennes et roumaines) et l'aide à la configuration d'infrastructure C2. Distribution du malware CANFAIL (JavaScript obfusqué, PowerShell dropper) via liens Google Drive dans des archives RAR avec double extension .pdf.js.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "phishing", "Ia", "malware", "CANFAIL", "guerre_ukraine", "energie", "gouvernement"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Handala Hack (UNC5203)",
+        "secteur": "Gouvernement israélien, complexe militaire-industriel israélien",
+        "modop": "Opérations de hack-and-leak et de doxxing (campagne \"Handala RedWanted\" ciblant le personnel militaire et de sécurité israélien, \"Handala Alert\" pour soutenir des activités anti-régime à l'étranger), tactiques d'intimidation et de FUD (Fear, Uncertainty, Doubt).",
+        "tags": ["actor", "theat_actor", "hacktivisme", "Iran", "hack_and_leak", "doxxing", "Israel", "guerre_israel_hamas", "psychological_warfare"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Muddled Libra (Scattered Spider, UNC3944)",
+        "secteur": "Diverses organisations, incluant celles utilisant des fournisseurs de services gérés (MSP) et des centres d'appels",
+        "modop": "Ingénierie sociale (smishing, vishing) pour l'accès initial, ciblant les centres d'appels et les MSP. Exploitation de la psychologie humaine pour des réinitialisations de mots de passe et MFA. Utilisation minimale de malware, préférant les techniques 'living-off-the-land'. Création de machines virtuelles 'rogues' dans l'environnement des victimes, vol de certificats, utilisation de tunnels SSH (Chisel), vidage de credentials (NTDS.dit), énumération Active Directory (ADRecon, ADExplorer64), recherche web pour exfiltration de données, mouvements latéraux via SSH, RDP, PsExec, accès aux boîtes aux lettres.",
+        "tags": ["actor", "theat_actor", "cybercrime", "ingenierie_sociale", "living_off_the_land", "credential_dumping", "lateral_movement", "persistence", "cloud", "evasion_detection"],
+        "sources": ["https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "SSHStalker",
+        "secteur": "Systèmes Linux (cible générale)",
+        "modop": "Botnet utilisant IRC pour le C2. Attaque par force brute SSH, exploitation d'anciennes vulnérabilités Linux (CVEs de 2009-2010) pour l'élévation de privilèges, persistance via cron jobs, capacités DDoS. Priorise la résilience et le faible coût sur la furtivité.",
+        "tags": ["actor", "theat_actor", "botnet", "Linux", "IRC", "DDoS", "bruteforce", "vulnerabilites_anciennes", "privilege_escalation"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-linux-botnet-sshstalker-uses-old-school-irc-for-c2-comms/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "TEMP.Vermin",
+        "secteur": "Entités de défense ukrainiennes et occidentales",
+        "modop": "Déploiement de malwares (VERMONSTER, SPECTRUM, FIRMACHAGENT) via des leurres liés à la production de drones, aux systèmes anti-drones et de vidéosurveillance. Utilisation d'infrastructures masquant des entités aérospatiales et Telegram.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "Ukraine", "drones", "malware", "VERMONSTER", "SPECTRUM", "FIRMACHAGENT"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "The Green Blood",
+        "secteur": "Gouvernement (bureaux nationaux d'identité)",
+        "modop": "Attaque par rançongiciel, perturbation des services d'identité, passeports et biométrie, fuite de données sensibles (139 To de données de personnalisation de cartes).",
+        "tags": ["actor", "theat_actor", "cybercrime", "ransomware", "gouvernement", "services_publics", "violation_donnees", "fuite_donnees"],
+        "sources": ["https://securityaffairs.com/187811/data-breach/senegal-shuts-national-id-office-after-ransomware-attack/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Technologie, services financiers",
+        "modop": "Utilisation du framework modulaire VoidLink (Linux-based, rootkit eBPF/LKM, privilèges conteneur/sandbox escalade, évasion EDR, obfuscation), initialement via credentials pré-obtenus ou vulnérabilités de sérialisation Java (Apache Dubbo). Développement du framework assisté par IA. Campagnes de scan internes et externes. Actif depuis 2019, potentiellement une activité 'red team'.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Chine", "framework", "VoidLink", "Linux", "Ia", "rootkit", "evasion_detection", "cloud", "finance", "technologie"],
+        "sources": ["https://blog.talosintelligence.com/voidlink/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC1069",
+        "secteur": "Cryptomonnaie, Web3",
+        "modop": "Campagnes ciblées avec vidéos générées par IA et technique ClickFix pour distribuer des malwares macOS et Windows, visant le vol de cryptomonnaies et la collecte de données pour de futures campagnes d'ingénierie sociale. Déploiement de multiples familles de malwares (SUGARLOADER, WAVESHAPER, etc.).",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Coree_du_Nord", "cryptomonnaie", "Web3", "ingenierie_sociale", "ClickFix", "malware", "SUGARLOADER", "WAVESHAPER", "vol_donnees"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC1549",
+        "secteur": "Aérospatiale, défense, technologie, imagerie thermique, fournisseurs tiers",
+        "modop": "Exploitation de la confiance des fournisseurs tiers pour l'accès initial, pivot depuis les fournisseurs vers les clients. Cible le personnel informatique avec des emails malveillants pour voler des identifiants admin. Utilisation d'outils personnalisés (CRASHPAD) et détournement de sessions RDP. Leurres d'offres d'emploi, portails falsifiés, et conférences sur les drones.",
+        "tags": ["actor", "theat_actor", "espionnage", "Iran", "ingenierie_sociale", "chaine_approvisionnement", "privilege_escalation", "credential_theft", "RDP", "malware", "CRASHPAD", "defense", "aerospace"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC2970",
+        "secteur": "Défense",
+        "modop": "Campagnes d'ingénierie sociale ciblant le personnel de la défense en usurpant l'identité de recruteurs. Utilisation de Gemini pour l'OSINT, le profilage de cibles de grande valeur et la planification de campagnes de phishing sur mesure.",
+        "tags": ["actor", "theat_actor", "espionnage", "Coree_du_Nord", "ingenierie_sociale", "recrutement", "OSINT", "phishing", "Ia", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC3886",
+        "secteur": "Télécommunications (Singapour), défense, technologie, secteurs d'edge",
+        "modop": "Campagnes d'espionnage sophistiquées liées à la Chine. Exploitation de vulnérabilités zero-day dans des dispositifs d'edge (ex: Fortinet CVE-2022-41328) pour accéder aux réseaux, exfiltrer des données. Déploiement de rootkits pour la persistance, la dissimulation d'activités et la falsification de logs. Efforts intenses d'obfuscation pour un accès à long terme.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Chine", "telecommunications", "infrastructure_critique", "zero_day", "Fortinet", "rootkit", "evasion_detection", "log_tampering", "edge_devices"],
+        "sources": ["https://securityaffairs.com/187792/apt/china-linked-apt-unc3886-targets-singapore-telcos/", "https://databreaches.net/2026/02/10/singapore-says-china-backed-hackers-targeted-its-four-largest-phone-companies/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC4221",
+        "secteur": "Militaire ukrainien",
+        "modop": "Cible les applications de messagerie sécurisée (Signal, WhatsApp) via de faux liens d'invitation à des groupes, des pages de phishing pour collecter des données de géolocalisation. Utilise des kits de phishing Signal se faisant passer pour des applications militaires ukrainiennes (Kropyva, Delta). Déploiement de malwares Android (STALECOOKIE) et Windows (TINYWHALE, MESHAGENT) via la technique ClickFix.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "Ukraine", "messagerie", "phishing", "ClickFix", "malware", "STALECOOKIE", "TINYWHALE", "MESHAGENT", "collecte_donnees", "geolocation"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5114",
+        "secteur": "Militaire ukrainien",
+        "modop": "Distribution du malware Android CraxsRAT déguisé en mise à jour de l'application Kropyva, accompagné d'un document leurre mimant les instructions d'installation.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "Ukraine", "malware", "CraxsRAT", "phishing"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5125",
+        "secteur": "Unités de drones de première ligne ukrainiennes",
+        "modop": "Campagnes hautement ciblées utilisant des questionnaires Google Forms (se faisant passer pour une académie de formation de drones) pour la reconnaissance et la collecte d'informations personnelles. Distribution du backdoor MESSYFORK et du trojan bancaire Android GREYBATTLE via des applications de messagerie ou des sites web falsifiés d'entreprises d'IA militaire.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "Ukraine", "drones", "reconnaissance", "ingenierie_sociale", "malware", "MESSYFORK", "GREYBATTLE", "collecte_donnees"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5221",
+        "secteur": "Aérospatiale, défense, fournisseurs de services gérés (MSP), cabinets d'avocats, nœuds de la chaîne d'approvisionnement technologique",
+        "modop": "Acteur d'espionnage sophistiqué lié à la Chine. Exploitation de l'infrastructure d'edge (appliances VPN, pare-feu) pour l'accès initial et la persistance à long terme. Déploiement du malware BRICKSTORM. Ciblage sélectif des entités 'multiplicateurs de force' pour le renseignement. Durée de présence moyenne de 393 jours.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Chine", "edge_devices", "zero_day", "persistence", "evasion_detection", "malware", "BRICKSTORM", "chaine_approvisionnement", "aerospace", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5792",
+        "secteur": "Militaire et gouvernement ukrainiens, individus et organisations en Moldavie, Géorgie, France, États-Unis",
+        "modop": "Exploitation d'applications de messagerie sécurisée (Signal, WhatsApp) via la fonction de liaison d'appareils ou des pages de phishing. Envoi de pages d'invitation de groupe Signal altérées redirigeant vers des URL malveillantes pour lier un appareil contrôlé par l'acteur au compte Signal de la victime. Utilisation de domaines usurpant l'identité d'entreprises de fabrication de défense ukrainiennes.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "gouvernement", "messagerie", "phishing", "credential_theft", "Ukraine", "Moldavie", "Georgie", "France", "Etats_Unis"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5976",
+        "secteur": "Défense (contractants, entités de télécommunications), Ukraine, Royaume-Uni, États-Unis, Allemagne, France, Suède, Norvège, Turquie, Corée du Sud",
+        "modop": "Campagnes de phishing distribuant des fichiers de connexion RDP malveillux communiquant avec des domaines contrôlés par l'acteur usurpant l'identité d'une entité de télécommunications ukrainienne. Utilisation de leurres sur le thème des drones (documentation ORLAN-15 UAV) pour la collecte d'identifiants webmail.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "defense", "telecommunications", "phishing", "RDP", "credential_theft", "drones"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6096",
+        "secteur": "Utilisateurs Windows et Android (liés à la plateforme Delta battlefield management)",
+        "modop": "Opérations de livraison de malwares via WhatsApp Messenger. Distribution d'un fichier archive contenant un fichier LNK malveillant pour les utilisateurs Windows, menant au téléchargement d'une charge utile secondaire. Cible les appareils Android avec le malware GALLGRAB (version modifiée de \"Android Gallery Stealer\") pour collecter des fichiers locaux, des contacts et des données chiffrées d'applications de combat spécialisées.",
+        "tags": ["actor", "theat_actor", "espionnage", "Russie", "militaire", "plateforme_combat", "WhatsApp", "malware", "GALLGRAB", "Windows", "Android", "collecte_donnees"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6446",
+        "secteur": "Aérospatiale, défense (États-Unis, Moyen-Orient)",
+        "modop": "Utilisation d'applications de création de CV et de tests de personnalité malveillantes pour livrer des malwares personnalisés. Les applications fournissent une interface utilisateur tout en exécutant un malware en arrière-plan pour voler des données de reconnaissance système initiales.",
+        "tags": ["actor", "theat_actor", "espionnage", "Iran", "ingenierie_sociale", "recrutement", "malware", "aerospace", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6508",
+        "secteur": "Institutions de recherche (liées à la sécurité nationale américaine, politique étrangère, recherche médicale), contractants de défense",
+        "modop": "Attaque multi-étapes. Exploitation REDCap initiale, déploiement du malware INFINITERED (dropper récursif pour accès persistant et vol d'identifiants). Abus des règles de conformité des tenants pour réacheminer dynamiquement les messages (BCC une adresse email contrôlée par l'acteur) basés sur des mots-clés liés à la sécurité nationale, aux équipements militaires, à la politique étrangère et à la recherche médicale.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Chine", "malware", "INFINITERED", "credential_theft", "exfiltration_donnees", "politique_etrangere", "securite_nationale"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "ZeroDayRAT Operators",
+        "secteur": "Individus et organisations, notamment dans la finance (banque, crypto)",
+        "modop": "Distribution de spyware mobile commercial (Android/iOS) via smishing, phishing, fausses applications, liens malveillants. Offre un contrôle total à distance (caméra, micro, keylogging), vol de données bancaires et crypto, détournement de presse-papiers pour les adresses de portefeuille crypto, utilisation d'overlays pour voler les identifiants bancaires.",
+        "tags": ["actor", "theat_actor", "cybercrime", "spyware", "mobile", "Android", "iOS", "phishing", "smishing", "vol_donnees", "cryptomonnaie", "banque", "keylogger"],
+        "sources": ["https://securityaffairs.com/187820/malware/zerodayrat-spyware-grants-attackers-total-access-to-mobile-devices.html"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Espace, Défense, Technologies",
+        "theme": "Coopération spatiale et rivalité géopolitique",
+        "description": "La Chine a lancé deux satellites AlSat-3 pour l'Algérie, concrétisant un plan de coopération spatiale 2022-2026. Cette initiative, pivot de la \"Route de la Soie spatiale\" de Pékin, crée une dépendance technologique algérienne envers la Chine, tout en renforçant la capacité de surveillance de l'Algérie et son influence régionale, notamment face au Maroc. La maintenance des systèmes par les ingénieurs chinois soulève des questions sur le contrôle des données.",
+        "tags": ["geopolitique", "algerie", "chine", "espace", "defense", "surveillance", "technologies", "dependance", "influence", "big_data", "souverainete_spatiale", "route_de_la_soie"],
+        "sources": ["https://www.portail-ie.fr/univers/2026/cooperation-spatiale-algerie-chine-pivot-de-la-route-de-la-soie-spatiale/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Défense, Industrie, Finance",
+        "theme": "ESG et financement de l'industrie de la défense en Europe",
+        "description": "Le conflit en Ukraine a contraint l'Europe à réévaluer le rôle stratégique de la défense, perturbant le paradigme où les critères ESG (Environnemental, Social et Gouvernance) entravaient son financement. Il y a un glissement de l'exclusion vers un réengagement pragmatique, mais pas encore une réconciliation structurelle. La durabilité à long terme de la base industrielle de défense européenne dépendra de sa capacité à intégrer de manière crédible les principes ESG, en reconnaissant la sécurité comme une condition fondamentale de la durabilité.",
+        "tags": ["geopolitique", "defense", "europe", "finance", "ESG", "securite", "ukraine", "investissement", "industrie", "acceptabilite_publique"],
+        "sources": ["https://www.iris-france.org/public-acceptability-and-esg-vs-defence-exceptionalism-the-european-defence-industry-at-a-crossroads/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Gouvernement, Économie, Défense, Infrastructures, Énergie, Télécommunications",
+        "theme": "Diplomatie économique française en Afrique face à la concurrence internationale",
+        "description": "La France réajuste sa diplomatie économique en Afrique, passant d'une logique militaire à des partenariats industriels, énergétiques et stratégiques. Ce repositionnement fait face à un recul d'influence historique devant l'offensive commerciale et d'influence de la Chine, de la Russie, de la Turquie et des pays du Golfe. La difficulté française est désormais moins économique que symbolique, souffrant d'un affaiblissement de son soft power. L'initiative européenne Global Gateway vise à offrir une alternative qualitative aux investissements chinois pour reconstruire une capacité de projection économique crédible.",
+        "tags": ["geopolitique", "diplomatie", "afrique", "france", "chine", "russie", "turquie", "golfe", "energie", "infrastructure", "telecommunications", "soft_power", "influence", "competition_economique", "Global_Gateway"],
+        "sources": ["https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/diplomatie-economique-macron-afrique/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Transports publics, Surveillance, Vie privée, IA",
+        "theme": "Déploiement de l'IA pour la détection de fraude et les défis de la vie privée",
+        "description": "La MTA de New York teste des caméras à IA dans le métro pour détecter la fraude, générant des descriptions physiques des suspects. Cette initiative s'inscrit dans une tendance plus large de déploiement de technologies biométriques et de reconnaissance faciale par des entités publiques et privées à New York. Des défenseurs des libertés alertent sur l'extension d'un écosystème de surveillance et les risques d'inexactitudes, notamment pour les minorités, et le potentiel de ciblage policier.",
+        "tags": ["geopolitique", "ia", "surveillance", "vie_privee", "etats_unis", "transport_public", "reconnaissance_faciale", "ethique", "biometrie"],
+        "sources": ["https://www.datasecuritybreach.fr/new-york-veut-traquer-la-fraude-au-metro-avec-lia/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Défense, Sécurité maritime, Géopolitique",
+        "theme": "Stratégie maritime indienne et projection de puissance en Indo-Pacifique",
+        "description": "La marine indienne fait évoluer sa stratégie vers la doctrine SAGAR/MAHASAGAR, visant à projeter sa puissance navale en Indo-Pacifique pour sécuriser ses routes maritimes et contenir l'influence chinoise. L'Inde se modernise avec un fort accent sur la construction locale (\"Make in India\") et des partenariats (ex: France pour Rafale Marine), se positionnant comme \"Net Security Provider\" et participant activement au QUAD. Elle répond ainsi à l'ascension rapide de la marine chinoise et son \"collier de perles\".",
+        "tags": ["geopolitique", "inde", "chine", "indo_pacifique", "marine", "defense", "securite_maritime", "influence", "partenariat", "rafale", "make_in_india", "QUAD", "force_navale"],
+        "sources": ["https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/indian-navy-et-doctrine-sagar-instrument-de-puissance-en-indo-pacifique/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Géopolitique, Sport",
+        "theme": "Réintégration progressive de la Russie dans le sport mondial",
+        "description": "La Russie mène une stratégie opportuniste pour revenir dans le sport mondial après son exclusion suite aux scandales de dopage et à l'invasion de l'Ukraine. Elle tente de construire un \"contre-sport mondial\" tout en lobbysant discrètement pour une réintégration progressive, exploitant l'argument du \"sport apolitique\", les contraintes juridiques et les facteurs économiques. Le discours d'une administration américaine \"Trump II\" est perçu comme un accélérateur de cette normalisation. La présence minimale d'athlètes russes sous bannière neutre aux JO d'hiver 2026 marque une étape symbolique.",
+        "tags": ["geopolitique", "russie", "sport", "influence", "soft_power", "sharp_power", "ukraine", "sanctions", "diplomatie", "JO", "normalisation_sportive"],
+        "sources": ["https://www.iris-france.org/la-russie-de-retour-dans-le-sport-mondial/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Télécommunications, Infrastructures critiques, Géopolitique, Cybersécurité",
+        "theme": "Durcissement de la politique de l'UE sur les fournisseurs 5G à haut risque",
+        "description": "L'UE renforce sa législation sur la cybersécurité pour réduire la dépendance aux fournisseurs de technologies de l'information et de la communication (TIC) à haut risque, notamment chinois, étendant la \"boîte à outils 5G\" à 18 secteurs critiques. Les opérateurs ont moins de cinq ans pour remplacer les équipements sensibles. Le contexte géopolitique, incluant la guerre en Ukraine et les préoccupations concernant les actions coordonnées de Moscou et Pékin, durcit la perception du risque. Des pays comme le Danemark sont cités comme exemples de transition réussie sans coûts excessifs.",
+        "tags": ["geopolitique", "ue", "5g", "telecommunications", "securite_approvisionnement", "chine", "russie", "infrastructure_critique", "cybersécurité", "huawei", "zte", "risque_geopolitique"],
+        "sources": ["https://www.datasecuritybreach.fr/lue-durcit-la-5g-face-aux-fournisseurs-a-haut-risque/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Défense, Aérospatiale, Technologie, Commerce",
+        "theme": "Postures occidentale et française face à l'offensive commerciale chinoise dans la défense",
+        "description": "L'article analyse les stratégies américaine (dominance du F-35 pour les alliés), chinoise (ventes agressives de J-20/J-35 aux puissances émergentes) et européenne (diversification avec Rafale/Typhoon, projet SCAF pour l'autonomie) dans le marché des avions de combat. La Chine progresse dans l'accès aux chasseurs de 5e génération pour le 'Sud global', redéfinissant l'équilibre stratégique aérien mondial. Le projet SCAF européen est marqué par des tensions, visant l'autonomie plutôt que l'exportation massive, contrastant avec les approches américaine et chinoise.",
+        "tags": ["geopolitique", "defense", "chine", "etats_unis", "europe", "france", "armement", "aeronautique", "f35", "rafale", "typhoon", "scaf", "influence", "technologie", "commerce", "5eme_generation"],
+        "sources": ["https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/quelle-posture-francaise-et-occidentale-en-reponse-a-loffensive-commerciale-chinoise-3-3/"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Services d'urgence, Gouvernement",
+        "victime": "CodeRED emergency systems (nombreux systèmes EMS)",
+        "description": "Attaque par rançongiciel affectant l'environnement hérité d'OnSolve, perturbant les systèmes de services d'urgence et nécessitant une réponse prolongée.",
+        "tags": ["violation", "breach", "ransomware", "services_urgence", "gouvernement", "legacy_system"],
+        "sources": ["https://databreaches.net/2026/02/10/codered-emergency-notification-system-incident-update/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Violation de données massive due à des défaillances de gestion interne (non un piratage externe), entraînant d'importants risques réglementaires et juridiques, y compris des amendes potentielles et des poursuites aux États-Unis.",
+        "tags": ["violation", "breach", "e_commerce", "gestion_interne", "conformite", "reglementation", "litige"],
+        "sources": ["https://mastodon.social/@infomaxkorea/116049464686429935"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Gouvernement, Autorité de protection des données, Système judiciaire, Institutions européennes",
+        "victime": "Autorité néerlandaise de protection des données (AP), Conseil de la magistrature (Rvdr), Commission européenne",
+        "description": "Des cyberattaques exploitant des vulnérabilités nouvellement divulguées dans Ivanti Endpoint Manager Mobile (EPMM) ont exposé les données de contact des employés (noms, e-mails professionnels, numéros de téléphone). La Commission européenne a détecté des traces d'intrusion dans son système de gestion des appareils mobiles, sans compromission des appareils eux-mêmes. Ces données pourraient être utilisées pour des attaques de vishing et de phishing ciblées.",
+        "tags": ["violation", "breach", "gouvernement", "donnees_personnelles", "Ivanti", "EPMM", "zero_day", "phishing", "vishing", "espionnage", "expose_donnees"],
+        "sources": ["https://securityaffairs.com/187806/security/dutch-agencies-hit-by-ivanti-epmm-exploit-exposing-employee-contact-data.html", "https://securityonline.info/sleeping-with-the-enemy-dormant-backdoors-found-in-ivanti-epmm/", "https://infosec.exchange/@DevaOnBreaches/116049054665893497"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "Lotte Card",
+        "description": "Violation de données majeure entraînant un examen réglementaire approfondi et un vide de leadership prolongé, les conséquences dissuadant les candidats au poste de PDG.",
+        "tags": ["violation", "breach", "services_financiers", "gestion_entreprise", "reputation", "reglementation"],
+        "sources": ["https://mastodon.social/@infomaxkorea/116049366362897478"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Non-profit, Services de premiers secours",
+        "victime": "Association Nationale des Premiers Secours (ANPS)",
+        "description": "Violation de données de 5 600 comptes exposant des adresses e-mail uniques, noms, dates et lieux de naissance, due à un système hérité. Aucune donnée de santé, financière ou mots de passe n'a été affectée.",
+        "tags": ["violation", "breach", "non_profit", "sante", "donnees_personnelles", "legacy_system"],
+        "sources": ["https://haveibeenpwned.com/Breach/ANPS"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Gouvernement, Services publics, Gestion d'identité",
+        "victime": "Direction de l'Automatisation des Fichiers (DAF), Sénégal",
+        "description": "Cyberattaque par rançongiciel ayant entraîné la fermeture du bureau national des cartes d'identité du Sénégal, perturbant les services d'identité, de passeports et biométriques. Les attaquants ont divulgué 139 To de données sensibles, y compris des données de personnalisation de cartes. Un différend commercial avec un fournisseur tiers est mentionné comme contexte potentiel.",
+        "tags": ["violation", "breach", "gouvernement", "services_publics", "identite", "biometrie", "ransomware", "fuite_donnees", "infrastructure_critique"],
+        "sources": ["https://securityaffairs.com/187811/data-breach/senegal-shuts-national-id-office-after-ransomware-attack/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Consommateur (services de stalkerware)",
+        "victime": "Clients de services de stalkerware (plus de 500 000 dossiers de paiement)",
+        "description": "Un hacktiviste a exfiltré plus d'un demi-million de dossiers de paiement de clients d'un fournisseur d'applications de surveillance téléphonique (stalkerware), exposant les adresses e-mail et des informations de paiement partielles.",
+        "tags": ["violation", "breach", "consommateur", "stalkerware", "donnees_financieres", "donnees_personnelles", "hacktivisme"],
+        "sources": ["https://databreaches.net/2026/02/10/hacktivist-scrapes-over-500000-stalkerware-customers-payment-records/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Services financiers (KYC/AML)",
+        "victime": "Sumsub (entreprise tierce de KYC/AML)",
+        "description": "Violation de données impactant une entreprise européenne tierce spécialisée dans la gestion des risques KYC et AML.",
+        "tags": ["violation", "breach", "services_financiers", "KYC", "AML", "tiers", "donnees_personnelles"],
+        "sources": ["https://mastodon.thenewoil.org/@thenewoil/116049523936304344"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Jeux en ligne",
+        "victime": "Toy Battles (communauté de jeux en ligne)",
+        "description": "Violation de données exposant 1 000 adresses e-mail uniques, noms d'utilisateur, adresses IP et logs de chat. L'incident a été auto-déclaré à Have I Been Pwned.",
+        "tags": ["violation", "breach", "jeux_en_ligne", "donnees_personnelles", "comptes_utilisateurs"],
+        "sources": ["https://haveibeenpwned.com/Breach/ToyBattles"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-26009",
+        "cvss": 9.9,
+        "product": "Catalyst",
+        "description": "Exécution de code à distance en tant que root via l'exécution de scripts d'installation non conteneurisés dans les modèles de serveur.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "root", "script_execution", "Catalyst"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26009"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": 9.8,
+        "product": "FortiClient EMS",
+        "description": "Injection SQL permettant l'exécution de code arbitraire à distance non authentifiée via des requêtes HTTP spécialement conçues.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "RCE", "non_authentifie", "FortiClient_EMS"],
+        "sources": ["https://socprime.com/blog/cve-2026-21643-vulnerability/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-22906",
+        "cvss": 9.8,
+        "product": "WAGO 852 series Industrial Managed Switches",
+        "description": "Multiples vulnérabilités critiques incluant des clés de chiffrement codées en dur, un contournement d'authentification et l'exécution de code à distance, permettant une prise de contrôle à distance.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "authentification_bypass", "hardcoded_key", "WAGO", "OT", "ICS"],
+        "sources": ["https://securityonline.info/factory-flaw-critical-wago-switch-vulnerabilities-cvss-9-8-allow-remote-takeover/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25728",
+        "cvss": 9.3,
+        "product": "ClipBucket v5",
+        "description": "Condition de concurrence (TOCTOU) lors du téléchargement d'avatars/arrière-plans, permettant l'exécution de code à distance (PHP) avant la validation et la suppression du fichier.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "race_condition", "upload_file", "ClipBucket"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25728"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25993",
+        "cvss": 9.3,
+        "product": "EverShop",
+        "description": "Injection SQL de second ordre dans le traitement de réécriture d'URL, où une chaîne malveillante stockée dans 'url_key' est exécutée lors d'événements ultérieurs.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "second_order", "eCommerce", "EverShop"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25993"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2025-66630",
+        "cvss": 9.2,
+        "product": "Fiber (Go web framework)",
+        "description": "UUIDs prévisibles en raison de la gestion silencieuse des erreurs de 'crypto/rand', rendant les jetons de sécurité prévisibles et exposant le framework au détournement de session.",
+        "tags": ["vulnerabilite", "vulnerability", "predictable_UUID", "security_token", "hijacking", "Go_framework", "Fiber"],
+        "sources": ["https://securityonline.info/fiber-optic-failure-predictable-uuids-expose-go-web-framework-to-hijacking/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": 8.8,
+        "product": "MSHTML Framework",
+        "description": "Vulnérabilité de contournement de fonctionnalité de sécurité dans MSHTML Framework permettant l'exécution de code à distance via l'ouverture d'un fichier HTML ou LNK spécialement conçu. Actuellement exploitée.",
+        "tags": ["vulnerabilite", "vulnerability", "security_bypass", "code_execution", "MSHTML", "zero_day", "exploited_in_wild"],
+        "sources": ["https://blog.talosintelligence.com/microsoft-patch-tuesday-february-2026/", "https://krebsonsecurity.com/2026/02/patch-tuesday-february-2026-edition/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25947",
+        "cvss": 8.8,
+        "product": "Worklenz",
+        "description": "Multiples vulnérabilités d'injection SQL dans la construction de requêtes backend affectant divers contrôleurs de gestion de projet et de tâches.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "project_management", "Worklenz"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25947"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-1507",
+        "cvss": 8.7,
+        "product": "AVEVA PI Data Archive",
+        "description": "Exception non gérée permettant à un attaquant non authentifié de planter à distance les services PI essentiels, entraînant un déni de service.",
+        "tags": ["vulnerabilite", "vulnerability", "DoS", "remote", "unauthenticated", "AVEVA_PI_Data_Archive", "ICS", "OT"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-1507"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-1848",
+        "cvss": 8.2,
+        "product": "N/A",
+        "description": "Les connexions reçues du port proxy peuvent ne pas être comptées dans le total des connexions acceptées, entraînant des crashs de serveur et un déni de service si le nombre total de connexions dépasse les ressources disponibles.",
+        "tags": ["vulnerabilite", "vulnerability", "DoS", "proxy_port", "server_crash"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-1848"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-26007",
+        "cvss": 8.2,
+        "product": "cryptography (Python package)",
+        "description": "Attaque de sous-groupe due à l'absence de validation de sous-groupe pour les courbes SECT, permettant de divulguer des bits de clé privée (ECDH) ou de forger des signatures (ECDSA).",
+        "tags": ["vulnerabilite", "vulnerability", "subgroup_attack", "cryptography", "ECDH", "ECDSA", "private_key_leak", "signature_forgery"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26007"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Un aperçu du mode opératoire de Muddled Libra",
+        "description": "Cet article analyse en détail le mode opératoire du groupe cybercriminel Muddled Libra (alias Scattered Spider, UNC3944), révélant leur forte dépendance à l'ingénierie sociale (smishing, vishing) pour l'accès initial, ciblant les centres d'appels et les fournisseurs de services gérés. Ils privilégient les techniques 'living-off-the-land' et minimisent l'utilisation de malwares, créant des machines virtuelles 'rogues' dans les environnements ciblés pour échapper à la détection EDR. Leurs activités incluent le vol de certificats, l'établissement de tunnels SSH avec Chisel, le vidage de credentials de contrôleurs de domaine (NTDS.dit), l'énumération Active Directory (ADRecon, ADExplorer64), la recherche web pour l'exfiltration de données et les mouvements latéraux via RDP et PsExec. L'objectif est le vol de données sensibles et de propriétés intellectuelles, souvent via des tentatives d'exfiltration vers des buckets S3.",
+        "threat_actor": "Muddled Libra (Scattered Spider, UNC3944)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Social Engineering", "T1003 - OS Credential Dumping", "T1562 - Impair Defenses", "T1078 - Valid Accounts", "T1543 - Create or Modify System Process", "T1021 - Remote Services", "T1563 - Remote Service Session Hijacking", "T1087 - Account Discovery", "T1082 - System Information Discovery", "T1083 - File and Directory Discovery", "T1114 - Email Collection", "T1567 - Exfiltration Over Web Service", "T1565 - Virtualization"],
+        "analyse": "L'analyse met en lumière la sophistication des groupes cybercriminels qui exploitent la 'couche humaine' et les outils légitimes pour opérer furtivement. L'accent mis sur les VM 'rogues' et les techniques LotL montre un effort constant pour échapper aux défenses traditionnelles. L'impact potentiel est l'exfiltration de données sensibles et la perturbation des opérations commerciales dans divers secteurs.",
+        "recommandations": ["Mettre en œuvre une authentification multi-facteurs robuste (MFA).", "Sensibiliser les employés aux tactiques d'ingénierie sociale (smishing, vishing).", "Surveiller la création de machines virtuelles non autorisées dans l'environnement.", "Déployer des solutions EDR/XDR avancées pour détecter l'abus d'outils légitimes (LotL).", "Renforcer la surveillance des tentatives d'exfiltration de données vers des services de stockage cloud externes (ex: S3).", "Appliquer le principe du moindre privilège aux comptes et services."],
+        "tags": ["cybercrime", "social_engineering", "living_off_the_land", "credential_dumping", "lateral_movement", "persistence", "cloud", "evasion_detection", "vol_donnees", "DFIR"],
+        "sources": ["https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Au-delà du champ de bataille : menaces pour la base industrielle de défense",
+        "description": "Ce rapport exhaustif du Google Threat Intelligence Group (GTIG) analyse les menaces multiformes pesant sur la base industrielle de défense (DIB). Il met en évidence le ciblage persistant par des acteurs étatiques russes (APT44, TEMP.Vermin, UNC5125, UNC5792, UNC4221, UNC5976, UNC6096, UNC5114) et l'utilisation de l'IA pour le phishing, l'espionnage massif par des groupes liés à la Chine (UNC3886, UNC5221, APT5) via l'exploitation de zero-days sur les dispositifs d'edge, les infiltrations de travailleurs IT et les campagnes de recrutement par la Corée du Nord (APT45, APT43, UNC2970), et les opérations iraniennes (UNC1549, UNC6446) ciblant le personnel et les chaînes d'approvisionnement. Le rapport souligne également les risques de rançongiciel et d'extorsion affectant la chaîne d'approvisionnement manufacturière, ainsi que les opérations de hacktivisme pro-russe et pro-iranien (KillNet, Handala Hack, Cyber Toufan) axées sur les fuites de données et la perturbation.",
+        "threat_actor": "APT44, TEMP.Vermin, UNC5125, UNC5792, UNC4221, UNC5976, UNC6096, UNC5114, UNC1069, BlueNoroff, Sapphire Sleet, TA44, APT45, APT43, UNC2970, UNC1549, UNC6446, UNC3886, UNC5221, APT1, APT40, UNC3236, Volt Typhoon, UNC6508, APT5, KillNet, Heaven of the Slavs, Beregini, PalachPro, NoName057(16), Infrastructure Destruction Squad, JokerDNR, JokerDPR, Handala Hack, Cyber Toufan, Cyber Isnaad Front, miyako, USDoD",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2022-41328"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Phishing", "T1190 - Exploit Public-Facing Application", "T1195 - Supply Chain Compromise", "T1110 - Brute Force", "T1059 - Command and Scripting Interpreter", "T1053 - Scheduled Task/Job", "T1098 - Account Manipulation", "T1574 - Rogue/Trusted Relationships", "T1505 - Web Shell", "T1562 - Impair Defenses", "T1036 - Masquerading", "T1027 - Obfuscated Files or Information", "T1559 - Indirect Command Execution", "T1003 - OS Credential Dumping", "T1119 - Input Capture", "T1082 - System Information Discovery", "T1087 - Account Discovery", "T1135 - Network Share Discovery", "T1018 - Remote System Discovery", "T1021 - Remote Services", "T1563 - Remote Service Session Hijacking", "T1566.003 - Internal Spearphishing", "T1105 - Ingress Tool Transfer", "T1071 - Standard Application Layer Protocol", "T1573 - Encrypted Channel", "T1005 - Data from Local System", "T1039 - Data from Network Shared Drive", "T1114 - Email Collection", "T1567 - Exfiltration Over Web Service", "T1485 - Data Destruction", "T1486 - Data Encrypted for Impact", "T1491 - Denial of Service", "T1490 - Data Manipulation"],
+        "analyse": "La DIB est confrontée à une \"guerre cyber multi-vectorielle constante\", où les acteurs étatiques exploitent les tensions géopolitiques pour l'espionnage et le vol de propriété intellectuelle. L'accent est mis sur le ciblage humain, l'exploitation de zero-days dans les dispositifs d'edge, et les attaques de la chaîne d'approvisionnement. L'émergence de l'IA dans les tactiques d'attaque rend la détection plus difficile et nécessite une évolution des stratégies de défense.",
+        "recommandations": ["Renforcer la sensibilisation des employés à l'ingénierie sociale et aux menaces liées aux processus de recrutement.", "Mettre en œuvre une gestion rigoureuse des correctifs pour les dispositifs d'edge et les logiciels d'entreprise, en ciblant les vulnérabilités zero-day.", "Améliorer les capacités de chasse aux menaces au-delà des outils EDR/XDR traditionnels, en recherchant des indicateurs d'évasion.", "Sécuriser la chaîne d'approvisionnement via une évaluation approfondie des risques tiers et des pratiques de sécurité robustes.", "Intégrer les renseignements sur les menaces dans les architectures de sécurité proactives."],
+        "tags": ["defense", "aerospace", "gouvernement", "fabrication", "telecommunications", "technologie", "energie", "guerre_ukraine", "espionnage", "cyberguerre", "ransomware", "hacktivisme", "social_engineering", "zero_day", "supply_chain", "Ia", "evasion_detection", "malware", "vol_donnees", "vol_propriete_intellectuelle", "rapport_analyse", "APT", "menace_persistante"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Un APT lié à la Chine, UNC3886, cible les opérateurs de télécommunications de Singapour",
+        "description": "L'Agence de cybersécurité de Singapour (CSA) a révélé une campagne d'espionnage cybernétique ciblée menée par le groupe APT chinois UNC3886 contre les quatre principaux opérateurs de télécommunications du pays (M1, SIMBA Telecom, Singtel, StarHub) depuis juillet 2025. UNC3886 a exploité une vulnérabilité zero-day (CVE-2022-41328) dans un pare-feu Fortinet pour accéder aux réseaux, exfiltrer des données liées au réseau, et déployer des rootkits pour maintenir une persistance discrète et falsifier les logs. Bien que l'accès non autorisé ait été obtenu à des systèmes critiques, aucun vol de données ou perturbation de services à grande échelle n'a été signalé grâce à une réponse coordonnée des autorités.",
+        "threat_actor": "UNC3886",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2022-41328"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1543.002 - Create or Modify System Process: Rootkit", "T1070.004 - Indicator Removal: File Deletion", "T1070.004 - Indicator Removal: Log Tampering", "T1005 - Data from Local System", "T1041 - Exfiltration Over C2 Channel"],
+        "analyse": "Cette attaque met en évidence la menace continue et sophistiquée des acteurs étatiques contre les infrastructures critiques, en particulier les télécommunications. L'utilisation de zero-days et de rootkits montre des capacités avancées d'évasion et de persistance. La réponse coordonnée de Singapour a permis de limiter l'impact, mais la menace d'attaques futures reste élevée.",
+        "recommandations": ["Appliquer immédiatement les correctifs pour les vulnérabilités zero-day, notamment celles affectant les dispositifs d'edge comme les pare-feu.", "Mettre en œuvre des capacités avancées de chasse aux menaces pour détecter les rootkits et les falsifications de logs.", "Renforcer la segmentation du réseau pour contenir les mouvements latéraux des attaquants.", "Améliorer la sécurité des fournisseurs tiers, en particulier pour les produits critiques comme les pare-feu.", "Coordonner les efforts de défense cyber entre le gouvernement et les opérateurs d'infrastructures critiques."],
+        "tags": ["telecommunications", "singapour", "chine", "APT", "cyberguerre", "zero_day", "Fortinet", "rootkit", "evasion_detection", "infrastructure_critique", "espionnage", "log_tampering"],
+        "sources": ["https://securityaffairs.com/187792/apt/china-linked-apt-unc3886-targets-singapore-telcos/", "https://databreaches.net/2026/02/10/singapore-says-china-backed-hackers-targeted-its-four-largest-phone-companies/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Exploitation d'Ivanti EPMM : Backdoors dormantes et impacts sur les agences néerlandaises",
+        "description": "Une nouvelle campagne d'espionnage cybernétique cible Ivanti Endpoint Manager Mobile (EPMM), exploitant les vulnérabilités CVE-2026-1281 (contournement d'authentification) et CVE-2026-1340 (exécution de code à distance). Les attaquants déploient des backdoors dormantes en mémoire à l'emplacement `/mifs/403.jsp` qui ne s'activent qu'avec un paramètre de déclenchement spécifique, rendant la détection très difficile. Ces opérateurs agissent probablement comme des \"Initial Access Brokers\" (IAB), cherchant à vendre l'accès aux systèmes compromis. Parallèlement, les agences néerlandaises, dont l'Autorité de protection des données et le Conseil de la magistrature, ainsi que la Commission européenne, ont été touchées par des attaques exploitant ces mêmes failles, exposant les données de contact des employés (noms, e-mails professionnels, numéros de téléphone) à des fins de vishing et phishing.",
+        "threat_actor": "Non applicable (opérateurs de campagnes d'espionnage cybernétique, \"Initial Access Brokers\")",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2026-1281", "CVE-2026-1340"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": ["/mifs/403.jsp"],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1543.003 - Create or Modify System Process: Windows Service (In-memory backdoor)", "T1036 - Masquerading", "T1027 - Obfuscated Files or Information", "T1005 - Data from Local System", "T1041 - Exfiltration Over C2 Channel"],
+        "analyse": "Cette série d'incidents souligne la gravité des vulnérabilités dans les logiciels de gestion des terminaux d'entreprise (EMM), qui sont des cibles de grande valeur pour les acteurs de la menace. La nature dormante et en mémoire des backdoors indique une intention de persistance furtive et la vente potentielle d'accès. L'exposition des données de contact des employés augmente le risque de futures attaques d'ingénierie sociale ciblées contre des entités gouvernementales et institutionnelles sensibles.",
+        "recommandations": ["Mettre à jour et patcher immédiatement toutes les instances d'Ivanti EPMM vers les versions corrigées.", "Rechercher activement les \"tells\" spécifiques dans les logs de serveur, même en l'absence d'activité visible, pour détecter les backdoors dormantes.", "Considérer toute indication de cette activité comme une compromission confirmée et déclencher une réponse d'incident.", "Renforcer la sensibilisation des employés aux attaques de vishing et de phishing, en particulier lorsque des informations de contact ont été exposées.", "Mettre en œuvre des mesures de segmentation et de surveillance renforcées pour les systèmes EMM."],
+        "tags": ["ivanti", "EPMM", "mobile", "gouvernement", "donnees_personnelles", "zero_day", "backdoor", "espionnage", "phishing", "vishing", "IAB", "evasion_detection", "gestion_incidents"],
+        "sources": ["https://securityaffairs.com/187806/security/dutch-agencies-hit-by-ivanti-epmm-exploit-exposing-employee-contact-data.html", "https://securityonline.info/sleeping-with-the-enemy-dormant-backdoors-found-in-ivanti-epmm/", "https://infosec.exchange/@DevaOnBreaches/116049054665893497"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Un site 7-Zip malveillant distribue un installateur piégé avec un outil proxy",
+        "description": "Un faux site web 7-Zip (7zip[.]com) distribue un installateur modifié du populaire outil d'archivage, qui transforme l'ordinateur de l'utilisateur en un nœud de proxy résidentiel. Le malware, identifié comme 'hero.exe' ou 'Uphero', est signé numériquement avec un certificat révoqué et profile le système de l'utilisateur avant d'établir des connexions proxy sortantes sur des ports non standard. Le protocole C2 utilise une obfuscation XOR et les domaines de C2 sont basés sur le thème 'smshero'. Ce type de réseau proxy est souvent utilisé pour des activités malveillantes comme le bourrage d'identifiants, le phishing et la distribution de malwares.",
+        "threat_actor": "Non applicable (opérateurs de réseaux proxy résidentiels)",
+        "indicator_of_compromise": {
+          "DOMAIN": ["7zip[.]com", "iplogger[.]org"],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 - Spearphishing Attachment", "T1082 - System Information Discovery", "T1071 - Standard Application Layer Protocol", "T1498 - Exploitation of Remote Services"],
+        "analyse": "Cette campagne représente un risque significatif pour la chaîne d'approvisionnement logicielle et la sécurité des utilisateurs. En transformant les machines compromises en nœuds proxy résidentiels, les attaquants construisent une infrastructure pour mener d'autres activités cybercriminelles, ce qui peut rendre l'attribution et la détection plus difficiles pour les cibles finales. L'utilisation d'un certificat signé numériquement, même révoqué, peut induire les utilisateurs en erreur.",
+        "recommandations": ["Vérifier toujours la source des logiciels téléchargés, idéalement directement depuis les sites officiels du développeur.", "Mettre en œuvre des politiques de contrôle d'applications pour limiter l'exécution de programmes non autorisés.", "Surveiller les connexions réseau sortantes vers des ports non standard ou des domaines suspects.", "Utiliser des solutions de sécurité qui vérifient la réputation des fichiers et des certificats numériques."],
+        "tags": ["supply_chain", "logiciels", "proxy", "malware", "phishing", "IoC", "cybercrime", "distribution_logiciel", "usurpation_site"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/malicious-7-zip-site-distributes-installer-laced-with-proxy-tool/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Nouvel acteur de la menace, UAT-9921, utilise le framework VoidLink dans ses campagnes",
+        "description": "Cisco Talos a découvert UAT-9921, un nouvel acteur de la menace lié à la Chine, actif depuis au moins 2019, qui utilise le framework modulaire VoidLink. Ce framework, dont le développement a été assisté par l'IA, est spécifiquement conçu pour les systèmes Linux et inclut des fonctionnalités avancées telles que des rootkits eBPF/LKM, l'escalade de privilèges dans des conteneurs, l'évasion de sandbox, et l'obfuscation. UAT-9921 obtient un accès initial via des identifiants pré-obtenus ou l'exploitation de vulnérabilités de sérialisation Java (comme Apache Dubbo), puis déploie VoidLink pour des activités de scan internes et externes. Bien que ciblant principalement les secteurs de la technologie et des services financiers, la nature \"cloud-aware\" de VoidLink et les scans de réseaux suggèrent une absence de ciblage spécifique, soulevant la question d'une possible activité de 'red team'.",
+        "threat_actor": "UAT-9921",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-53770", "CVE-2025-53771"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1078 - Valid Accounts", "T1190 - Exploit Public-Facing Application", "T1543.002 - Create or Modify System Process: Rootkit", "T1068 - Exploitation for Privilege Escalation (Sandbox Escape)", "T1562 - Impair Defenses", "T1027 - Obfuscated Files or Information", "T1046 - Network Service Scanning", "T1090 - Proxy", "T1587.001 - Develop Capabilities: Malware", "T1587.004 - Develop Capabilities: Create Malware"],
+        "analyse": "L'émergence de frameworks comme VoidLink, développés avec l'aide de l'IA, représente une évolution significative dans les capacités des acteurs de la menace, en particulier pour les systèmes Linux et les environnements cloud/conteneurisés. La rapidité de développement et les fonctionnalités avancées d'évasion et de persistance posent un défi majeur aux défenses. La dualité potentielle entre activité malveillante et 'red teaming' souligne la nécessité d'une attribution prudente.",
+        "recommandations": ["Appliquer les correctifs pour les vulnérabilités de sérialisation Java, en particulier celles affectant des produits comme Apache Dubbo.", "Renforcer la détection et la réponse sur les systèmes Linux, y compris la surveillance des activités de rootkit eBPF/LKM.", "Mettre en œuvre des contrôles de sécurité robustes pour les environnements conteneurisés (Docker, Kubernetes).", "Utiliser des techniques de détection avancées pour identifier les malwares obfusqués et les comportements d'évasion EDR.", "Segmenter les réseaux et surveiller les scans internes et externes pour identifier les activités de reconnaissance."],
+        "tags": ["APT", "chine", "Linux", "malware", "framework", "VoidLink", "rootkit", "Ia", "evasion_detection", "cloud", "kubernetes", "docker", "IoC", "technologie", "finance"],
+        "sources": ["https://blog.talosintelligence.com/voidlink/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Des hackers nord-coréens utilisent de nouveaux malwares macOS dans des attaques de vol de cryptomonnaies",
+        "description": "Des hackers nord-coréens (attribués à UNC1069, avec des liens vers BlueNoroff/Sapphire Sleet/TA44) mènent des campagnes ciblées, utilisant des vidéos générées par IA et la technique \"ClickFix\" pour distribuer des malwares macOS et Windows. Leurs cibles sont le secteur des cryptomonnaies (plateformes d'échange centralisées, développeurs, fonds de capital-risque). L'infection utilise l'exécution d'AppleScript et déploie des malwares moins détectés comme SUGARLOADER et WAVESHAPER. L'objectif est le vol de cryptomonnaies et la collecte de données pour de futures campagnes d'ingénierie sociale, démontrant une évolution des tactiques depuis 2018.",
+        "threat_actor": "North Korean hackers (UNC1069, BlueNoroff / Sapphire Sleet / TA44)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Phishing", "T1566.002 - Spearphishing Link", "T1059.004 - Command and Scripting Interpreter: AppleScript", "T1059.005 - Command and Scripting Interpreter: PowerShell", "T1005 - Data from Local System", "T1567 - Exfiltration Over Web Service"],
+        "analyse": "Cette campagne représente une menace sophistiquée et évolutive pour le secteur des cryptomonnaies, exploitant l'ingénierie sociale avancée (y compris l'IA pour les leurres) et des malwares peu détectés. Le ciblage à la fois de macOS et Windows montre une adaptabilité des attaquants. Le vol de données d'identité pour de futures attaques souligne une approche à long terme et un modèle de recyclage des victimes.",
+        "recommandations": ["Mettre en place une sensibilisation accrue des utilisateurs à l'ingénierie sociale, en particulier face aux contenus vidéo générés par IA et aux techniques 'ClickFix'.", "Renforcer la détection des exécutions de scripts inhabituelles (AppleScript, PowerShell) sur les points de terminaison macOS et Windows.", "Utiliser des solutions EDR/XDR qui intègrent une analyse comportementale pour détecter les malwares moins connus.", "Appliquer le principe de moindre privilège aux utilisateurs et aux applications pour limiter l'impact en cas de compromission.", "Mettre en œuvre des politiques de sécurité robustes pour les transactions de cryptomonnaies et les portefeuilles numériques."],
+        "tags": ["coree_du_nord", "APT", "cryptomonnaie", "macos", "windows", "phishing", "social_engineering", "malware", "IoC", "vol_donnees", "ingenierie_sociale_ia", "Web3"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Nouveau botnet Linux SSHStalker utilise l'IRC à l'ancienne pour les communications C2",
+        "description": "Un nouveau botnet Linux, nommé SSHStalker, utilise le protocole de communication IRC pour ses opérations de commande et contrôle (C2), privilégiant la résilience et le faible coût à la furtivité. Il opère par force brute SSH pour obtenir un accès initial, puis exploite d'anciennes vulnérabilités du noyau Linux (datant de 2009-2010) pour l'élévation de privilèges. La persistance est assurée par des tâches cron d'une minute. Le botnet intègre des capacités de déni de service distribué (DDoS), bien qu'aucune attaque n'ait encore été observée, suggérant des tests ou l'accumulation d'accès.",
+        "threat_actor": "SSHStalker (botnet)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1110 - Brute Force", "T1053.005 - Scheduled Task/Job: Cron Job", "T1068 - Exploitation for Privilege Escalation", "T1071.001 - Standard Application Layer Protocol: IRC", "T1491 - Defacement: DDoS capabilities"],
+        "analyse": "Ce botnet démontre que des techniques \"à l'ancienne\" peuvent toujours être efficaces, en particulier contre des systèmes mal patchés ou non surveillés. Son architecture axée sur la résilience via IRC et l'exploitation de vulnérabilités connues mais négligées représentent une menace persistante pour les infrastructures Linux, avec un potentiel d'impact significatif via les attaques DDoS.",
+        "recommandations": ["Surveiller l'installation et l'exécution de compilateurs sur les serveurs de production, car SSHStalker compile des binaires sur les hôtes.", "Mettre en place des alertes pour les connexions sortantes de style IRC.", "Rechercher les tâches cron avec des cycles d'exécution courts provenant de chemins inhabituels.", "Appliquer une gestion rigoureuse des correctifs, en particulier pour les systèmes Linux, pour se protéger contre l'exploitation d'anciennes vulnérabilités."],
+        "tags": ["botnet", "Linux", "IRC", "DDoS", "privilege_escalation", "bruteforce", "IoC", "persistence", "vulnerabilites_anciennes"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-linux-botnet-sshstalker-uses-old-school-irc-for-c2-comms/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Exploitation de SolarWinds Web Help Desk - Février 2026",
+        "description": "De multiples intrusions ont été signalées suite à l'exploitation de vulnérabilités dans SolarWinds Web Help Desk (WHD), les activités d'exploitation ayant débuté en décembre 2025. Après l'accès initial (via `wrapper.exe` > `java.exe` > `cmd.exe`), les attaquants ont utilisé des logiciels de gestion à distance (RMM) légitimes pour la persistance, et l'outil forensique Velociraptor à des fins malveillantes (désactivation de Microsoft Defender, mise en place d'un tunnel Cloudflare). Une tâche planifiée nommée 'TPMProfiler' a été configurée pour lancer QEMU afin de maintenir un accès SSH. Des activités de vidage d'identifiants, y compris DCSync et l'extraction de la base de données `NTDS.dit` d'un contrôleur de domaine Windows, ont également été observées, s'appuyant fortement sur des techniques 'living-off-the-land'.",
+        "threat_actor": "Non applicable (acteurs de la menace non nommés)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1053.005 - Scheduled Task/Job", "T1562.001 - Disable or Modify System Firewall", "T1562.006 - Impair Defenses: Disable or Modify Tools", "T1003.003 - OS Credential Dumping: NTDS.dit", "T1219 - Remote Monitoring and Management Software", "T1059 - Command and Scripting Interpreter", "T1090 - Proxy"],
+        "analyse": "Cet incident met en évidence le risque de la chaîne d'approvisionnement et l'abus de logiciels d'entreprise légitimes. La dépendance aux techniques 'living-off-the-land' et l'exploitation d'outils forensiques à des fins malveillantes rendent la détection difficile pour les défenses traditionnelles. L'impact est significatif, impliquant la compromission de contrôleurs de domaine et l'accès persistant à l'environnement.",
+        "recommandations": ["Mettre en place une surveillance renforcée pour les processus enfants inhabituels lancés par les applications SolarWinds WHD.", "Détecter l'installation et la configuration de logiciels RMM non autorisés.", "Surveiller l'utilisation d'outils légitimes comme Velociraptor et QEMU dans des contextes suspects.", "Mettre en œuvre des règles de détection pour la modification des paramètres de sécurité (ex: Windows Defender, Firewall).", "Protéger les contrôleurs de domaine et détecter les tentatives de vidage de credentials (ex: extraction de NTDS.dit)."],
+        "tags": ["solarwinds", "zero_day", "supply_chain", "living_off_the_land", "rancongiciel", "exfiltration", "credential_dumping", "vm", "RMM", "persistence", "gestion_incidents"],
+        "sources": ["https://www.elastic.co/security-labs/solarwinds-whd-exploitation"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Vers une approche britannique de la cyber-campagne",
+        "description": "Cet article plaide pour une approche britannique proactive et dynamique de la cybersécurité, centrée sur la \"cyber-campagne\" continue plutôt qu'une dissuasion réactive. Cette stratégie implique des opérations cyber persistantes pour prendre l'avantage sur les adversaires, créer des frictions opérationnelles (manipulation technique et psychologique de l'environnement de l'adversaire) et réduire leur liberté de manœuvre. La \"Doctrine de l'effet cognitif\" est mise en avant comme une capacité distinctive britannique. L'Opération Cronos contre LockBit est citée comme un exemple illustratif de perturbation d'un groupe cybercriminel. L'objectif est d'assurer la sécurité nationale et économique du Royaume-Uni en anticipant et en exploitant les vulnérabilités, en s'inspirant des campagnes cyber ukrainiennes.",
+        "threat_actor": "LockBit (ciblé par Operation Cronos)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1491 - Denial of Service", "T1485 - Data Destruction", "T1490 - Data Manipulation", "T1562 - Impair Defenses", "T1070 - Indicator Removal (Information Suppression)"],
+        "analyse": "L'approche de la cyber-campagne représente un changement stratégique significatif, reconnaissant la nature constante de la compétition dans le cyberespace. En se concentrant sur l'initiative, la perturbation et l'effet cognitif, le Royaume-Uni cherche à maximiser l'efficacité de ses ressources limitées et à renforcer sa résilience. Cela a des implications géopolitiques en termes de projection de puissance et de maintien d'un avantage sur les adversaires étatiques et cybercriminels.",
+        "recommandations": ["Développer des métriques explicites de priorisation pour une allocation efficace des ressources cyber, en ciblant les points de pression des adversaires.", "Intégrer la \"Doctrine de l'effet cognitif\" pour amplifier les effets des cyber-campagnes sur les perceptions et le moral des adversaires.", "Assurer la résilience nationale en parallèle des opérations offensives, en anticipant les exploitations de vulnérabilités.", "Surmonter les frictions internes (autorisation politique, tolérance au risque, examen juridique) pour permettre une action cyber continue et cohérente à travers les agences gouvernementales."],
+        "tags": ["cyberdefense", "strategie", "royaume_uni", "deterrence", "cyberattaque", "influence", "lockbit", "cybercriminalite", "geopolitique", "renseignement", "ukraine", "cyber_operations"],
+        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/towards-british-approach-cyber-campaigning"],
+        "date": "2026-02-11"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an increasingly complex cyber threat landscape, characterized by intensified state-sponsored espionage activities, growing sophistication of cybercriminals, and the emergence of new evasion techniques. The Defense Industrial Base (DIB) is particularly targeted by Russian, Chinese, North Korean, and Iranian actors, who exploit critical vulnerabilities in edge systems, supply chains, and even recruitment processes for espionage and intellectual property theft. The use of artificial intelligence by attackers, notably for generating phishing lures and facilitating the development of sophisticated malware (like VoidLink), marks a concerning trend, although AI is also exploited in prompt injection vulnerabilities. Ransomware attacks continue to impact critical sectors, such as emergency services and government agencies, highlighting risks associated with legacy systems and internal management. Major vulnerabilities include critical flaws (CVSS >= 8) in widely used products, ranging from endpoint management systems (Ivanti EPMM, FortiClient EMS) to game server platforms and cryptographic libraries, enabling remote code execution, authentication bypasses, and denial-of-service. The supply chain remains a favored attack vector, as evidenced by SolarWinds WHD incidents and malware distribution via fake 7-Zip websites. In conclusion, the overall threat level is high, requiring a proactive approach, heightened vigilance against social engineering, and particular attention to the security of critical infrastructure and supply chains.",
+      "date": "2026-02-11"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT43",
+        "secteur": "Defense, semiconductor, automotive manufacturing",
+        "modop": "Employment-themed social engineering campaigns, infrastructure mimicking German and U.S. defense entities, credential harvesting pages, deployment of THINWAVE and HANGMAN.V2 backdoors.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "North_Korea", "social_engineering", "recruitment", "malware", "THINWAVE", "HANGMAN.V2"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT44 (Sandworm, FROZENBARENTS)",
+        "secteur": "Ukrainian military, Western defense entities",
+        "modop": "Exfiltration of information from encrypted messaging applications (Telegram, Signal) likely via physical access to devices or exploitation of mobile devices, use of Windows Batch scripts (WAVESIGN) and Android malware (INFAMOUSCHISEL) for data collection.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "Russia", "military", "Ukraine", "messaging", "malware", "WAVESIGN", "INFAMOUSCHISEL", "data_collection"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT45",
+        "secteur": "Defense, semiconductor, automotive manufacturing (South Korea)",
+        "modop": "Espionage operations for intellectual property acquisition, deployment of SMALLTIGER malware.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "North_Korea", "intellectual_property", "malware", "SMALLTIGER"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "APT5",
+        "secteur": "Aerospace and defense contractors",
+        "modop": "Spear-phishing campaigns targeting current and former employees' personal email addresses, using meticulously crafted lures related to professional roles, geographical locations, and personal interests (e.g., industry events, job offers, local community references).",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "China", "social_engineering", "phishing", "defense", "aerospace"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "BlueNoroff (Sapphire Sleet, TA44)",
+        "secteur": "Cryptocurrency, Web3",
+        "modop": "Tailored campaigns using AI-generated video and the ClickFix technique to deliver macOS and Windows malware to targets in the cryptocurrency sector for theft and data collection to fuel future social engineering campaigns. Utilizes malware such as SUGARLOADER and WAVESHAPER.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "North_Korea", "cryptocurrency", "Web3", "social_engineering", "ClickFix", "malware", "SUGARLOADER", "WAVESHAPER", "data_theft"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Cyber Isnaad Front",
+        "secteur": "Israeli defense industrial base, foreign countries (e.g., Australia)",
+        "modop": "Hack-and-leak operations, supply chain compromise via an Israeli defense contractor, leaking sensitive military information (e.g., missile purchase plans).",
+        "tags": ["actor", "theat_actor", "hacktivism", "Iran", "hack_and_leak", "supply_chain", "defense", "Israel", "israel_hamas_war"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Cyber Toufan (UNC5318)",
+        "secteur": "Israeli military-industrial sector",
+        "modop": "Hack-and-leak operations, supply chain compromise through a breach of an Israeli defense contractor's network infrastructure, leading to the compromise of multiple defense organizations.",
+        "tags": ["actor", "theat_actor", "hacktivism", "Iran", "hack_and_leak", "supply_chain", "defense", "Israel", "israel_hamas_war"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Handala Hack (UNC5203)",
+        "secteur": "Israeli Government, Israeli military-industrial complex",
+        "modop": "Hack-and-leak operations and doxxing (e.g., \"Handala RedWanted\" campaign targeting Israeli military and security personnel, \"Handala Alert\" to support anti-regime activities abroad), intimidation, and FUD (Fear, Uncertainty, Doubt) tactics.",
+        "tags": ["actor", "theat_actor", "hacktivism", "Iran", "hack_and_leak", "doxxing", "Israel", "israel_hamas_war", "psychological_warfare"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Muddled Libra (Scattered Spider, UNC3944)",
+        "secteur": "Various organizations, including those using Managed Service Providers (MSPs) and call centers",
+        "modop": "Social engineering (smishing, vishing) for initial access, targeting call centers and MSPs. Exploiting human psychology for password and MFA resets. Minimizing malware use, preferring 'living-off-the-land' techniques. Creating 'rogue' VMs within victim environments, stealing certificates, establishing SSH tunnels (Chisel), credential dumping (NTDS.dit), Active Directory enumeration (ADRecon, ADExplorer64), web searches for data exfiltration, lateral movement via SSH, RDP, PsExec, mailbox access.",
+        "tags": ["actor", "theat_actor", "cybercrime", "social_engineering", "living_off_the_land", "credential_dumping", "lateral_movement", "persistence", "cloud", "evasion_detection"],
+        "sources": ["https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "Russian intelligence services linked group (unnamed)",
+        "secteur": "Defense, military, government, energy, aerospace, manufacturing (Ukraine, Romania, Moldova)",
+        "modop": "Phishing operations leveraging LLMs for reconnaissance, creating lures (mimicking Ukrainian and Romanian energy organizations), and assisting with C2 infrastructure setup. Delivering CANFAIL malware (obfuscated JavaScript, PowerShell dropper) via Google Drive links in RAR archives with a .pdf.js double extension.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "phishing", "AI", "malware", "CANFAIL", "ukraine_war", "energy", "government"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "SSHStalker",
+        "secteur": "Linux systems (general target)",
+        "modop": "Botnet using IRC for C2 operations. SSH brute-forcing for initial access, exploiting old Linux kernel vulnerabilities (2009-2010 CVEs) for privilege escalation, cron-based persistence, DDoS capabilities. Prioritizes resilience and low cost over stealth.",
+        "tags": ["actor", "theat_actor", "botnet", "Linux", "IRC", "DDoS", "bruteforce", "old_vulnerabilities", "privilege_escalation"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-linux-botnet-sshstalker-uses-old-school-irc-for-c2-comms/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "TEMP.Vermin",
+        "secteur": "Ukrainian and Western defense entities",
+        "modop": "Deploying malware (VERMONSTER, SPECTRUM, FIRMACHAGENT) via lure content themed around drone production and development, anti-drone defense systems, and video surveillance systems. Using infrastructure masquerading as aerospace entities and Telegram.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "Ukraine", "drones", "malware", "VERMONSTER", "SPECTRUM", "FIRMACHAGENT"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "The Green Blood",
+        "secteur": "Government (national ID offices)",
+        "modop": "Ransomware attack, disrupting ID, passport, and biometric services, leaking sensitive data (139 TB of card personalization data).",
+        "tags": ["actor", "theat_actor", "cybercrime", "ransomware", "government", "public_services", "data_breach", "data_leak"],
+        "sources": ["https://securityaffairs.com/187811/data-breach/senegal-shuts-national-id-office-after-ransomware-attack/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Technology, financial services",
+        "modop": "Utilizing the modular VoidLink framework (Linux-based, eBPF/LKM rootkit, container/sandbox privilege escalation, EDR evasion, obfuscation), initially via pre-obtained credentials or Java serialization vulnerabilities (Apache Dubbo). Framework development assisted by AI. Conducting internal and external scanning activities. Active since 2019, potentially a 'red team' activity.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "China", "framework", "VoidLink", "Linux", "AI", "rootkit", "evasion_detection", "cloud", "finance", "technology"],
+        "sources": ["https://blog.talosintelligence.com/voidlink/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC1069",
+        "secteur": "Cryptocurrency, Web3",
+        "modop": "Targeted campaigns using AI-generated video and the ClickFix technique to deliver macOS and Windows malware, aimed at cryptocurrency theft and data collection for future social engineering campaigns. Deployment of multiple malware families (SUGARLOADER, WAVESHAPER, etc.).",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "North_Korea", "cryptocurrency", "Web3", "social_engineering", "ClickFix", "malware", "SUGARLOADER", "WAVESHAPER", "data_theft"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC1549",
+        "secteur": "Aerospace, defense, technology, thermal imaging, third-party suppliers",
+        "modop": "Gaining initial access through exploiting trusted third-party supplier connections, pivoting from service providers to customers. Targeting IT staff with malicious emails for administrator credential theft. Utilizing custom tools (CRASHPAD) and RDP session hijacking. Lures include fake job descriptions, portals, and drone-related conference themes.",
+        "tags": ["actor", "theat_actor", "espionage", "Iran", "social_engineering", "supply_chain", "privilege_escalation", "credential_theft", "RDP", "malware", "CRASHPAD", "defense", "aerospace"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC2970",
+        "secteur": "Defense",
+        "modop": "Consistent defense targeting, impersonating corporate recruiters in campaigns. Using Gemini for OSINT synthesis and profiling high-value targets to support campaign planning and reconnaissance, mapping technical job roles and salary information to create tailored phishing personas.",
+        "tags": ["actor", "theat_actor", "espionage", "North_Korea", "social_engineering", "recruitment", "OSINT", "phishing", "AI", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC3886",
+        "secteur": "Telecommunications (Singapore), defense, technology, edge sectors",
+        "modop": "Sophisticated China-linked cyber espionage campaigns. Exploiting zero-day vulnerabilities in edge devices (e.g., Fortinet CVE-2022-41328) to access networks and exfiltrate data. Deploying rootkits for persistence, activity concealment, and log tampering. Extensive obfuscation efforts for long-term access.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "China", "telecommunications", "critical_infrastructure", "zero_day", "Fortinet", "rootkit", "evasion_detection", "log_tampering", "edge_devices"],
+        "sources": ["https://securityaffairs.com/187792/apt/china-linked-apt-unc3886-targets-singapore-telcos/", "https://databreaches.net/2026/02/10/singapore-says-china-backed-hackers-targeted-its-four-largest-phone-companies/", "https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC4221",
+        "secteur": "Ukrainian military personnel",
+        "modop": "Targeting secure messaging apps (Signal, WhatsApp) via fake group invite links and phishing pages for geolocation data collection. Using Signal phishing kits masquerading as Ukrainian military apps (Kropyva, Delta). Deploying Android malware (STALECOOKIE) and Windows malware (TINYWHALE, MESHAGENT) via the ClickFix technique.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "Ukraine", "messaging", "phishing", "ClickFix", "malware", "STALECOOKIE", "TINYWHALE", "MESHAGENT", "data_collection", "geolocation"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5114",
+        "secteur": "Ukrainian military",
+        "modop": "Delivering a variant of the publicly available Android malware CraxsRAT masquerading as an update for the Kropyva app, accompanied by a lure document mimicking official installation instructions.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "Ukraine", "malware", "CraxsRAT", "phishing"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5125",
+        "secteur": "Ukrainian frontline drone units",
+        "modop": "Highly targeted campaigns using Google Forms questionnaires (purporting to be from a drone training academy) for reconnaissance and personal information collection. Delivering MESSYFORK backdoor and GREYBATTLE Android banking trojan via messaging apps or spoofed military AI company websites.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "Ukraine", "drones", "reconnaissance", "social_engineering", "malware", "MESSYFORK", "GREYBATTLE", "data_collection"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5221",
+        "secteur": "Aerospace, defense, Managed Service Providers (MSPs), law firms, central nodes in the technology supply chain",
+        "modop": "Sophisticated China-nexus espionage actor. Exploiting edge infrastructure (VPN appliances, firewalls) for initial access and long-term persistence. Deployment of BRICKSTORM malware. Highly selective targeting of 'force multipliers' for intelligence gathering. Average dwell time of 393 days.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "China", "edge_devices", "zero_day", "persistence", "evasion_detection", "malware", "BRICKSTORM", "supply_chain", "aerospace", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5792",
+        "secteur": "Ukrainian military and government entities, individuals and organizations in Moldova, Georgia, France, US",
+        "modop": "Exploiting secure messaging apps (Signal, WhatsApp) via device-linking feature or phishing pages. Sending altered 'group invite' pages redirecting to malicious URLs to link actor-controlled devices to victim Signal accounts. Using WhatsApp phishing pages and domains masquerading as Ukrainian defense manufacturing companies.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "government", "messaging", "phishing", "credential_theft", "Ukraine", "Moldova", "Georgia", "France", "US"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC5976",
+        "secteur": "Defense (contractors, telecommunications entities), Ukraine, UK, US, Germany, France, Sweden, Norway, Turkey, South Korea",
+        "modop": "Phishing campaign delivering malicious RDP connection files configured to communicate with actor-controlled domains spoofing a Ukrainian telecommunications entity. Using drone-themed lure content (ORLAN-15 UAV system operational documentation) for webmail credential harvesting.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "defense", "telecommunications", "phishing", "RDP", "credential_theft", "drones"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6096",
+        "secteur": "Windows and Android users (related to Delta battlefield management platform)",
+        "modop": "Malware delivery operations via WhatsApp Messenger using Delta battlefield management platform themes. Delivering an archive with a malicious LNK file for Windows users, leading to a secondary payload. Targeting Android devices with GALLGRAB malware (modified \"Android Gallery Stealer\") to collect local files, contacts, and encrypted data from specialized battlefield applications.",
+        "tags": ["actor", "theat_actor", "espionage", "Russia", "military", "battlefield_platform", "WhatsApp", "malware", "GALLGRAB", "Windows", "Android", "data_collection"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6446",
+        "secteur": "Aerospace, defense (US, Middle East)",
+        "modop": "Using malicious resume builder and personality test applications to deliver custom malware. Applications provide a user interface while malware runs in the background to steal initial system reconnaissance data.",
+        "tags": ["actor", "theat_actor", "espionage", "Iran", "social_engineering", "recruitment", "malware", "aerospace", "defense"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "UNC6508",
+        "secteur": "Research institutions (related to US national security, foreign policy, medical research), defense contractors",
+        "modop": "Multi-stage attack leveraging initial REDCap exploit and custom INFINITERED malware (recursive dropper for persistent remote access and credential theft). Abusing tenant compliance rules to dynamically reroute messages based on keywords related to national security, military equipment, foreign policy, and medical research, facilitating data exfiltration.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "China", "malware", "INFINITERED", "credential_theft", "data_exfiltration", "foreign_policy", "national_security"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "nom": "ZeroDayRAT Operators",
+        "secteur": "Individuals and organizations, especially in finance (banking, crypto)",
+        "modop": "Distributing commercial mobile spyware (Android/iOS) via smishing, phishing, fake apps, malicious links. Provides full remote access (camera, mic, keylogging), banking and crypto data theft, clipboard hijacking for crypto wallet addresses, overlay attacks for banking login details. Nation-state level capabilities now commercially available.",
+        "tags": ["actor", "theat_actor", "cybercrime", "spyware", "mobile", "Android", "iOS", "phishing", "smishing", "data_theft", "cryptocurrency", "banking", "keylogger"],
+        "sources": ["https://securityaffairs.com/187820/malware/zerodayrat-spyware-grants-attackers-total-access-to-mobile-devices.html"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Space, Defense, Technology",
+        "theme": "Space cooperation and geopolitical rivalry",
+        "description": "China launched two AlSat-3 satellites for Algeria, formalizing a 2022-2026 space cooperation plan. This initiative, a key component of Beijing's 'Space Silk Road,' creates Algerian technological dependence on China while strengthening Algeria's surveillance capabilities and regional influence, particularly against Morocco. System maintenance by Chinese engineers raises questions about data control.",
+        "tags": ["geopolitique", "algeria", "china", "space", "defense", "surveillance", "technology", "dependency", "influence", "big_data", "space_sovereignty", "silk_road"],
+        "sources": ["https://www.portail-ie.fr/univers/2026/cooperation-spatiale-algerie-chine-pivot-de-la-route-de-la-soie-spatiale/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Defense, Industry, Finance",
+        "theme": "ESG and financing of the European defense industry",
+        "description": "The conflict in Ukraine has forced Europe to re-evaluate the strategic role of defense, disrupting the paradigm where ESG (Environmental, Social, and Governance) criteria hindered its financing. There is a shift from exclusion to pragmatic re-engagement, but not yet a structural reconciliation. The long-term sustainability of Europe's defense industrial base will depend on its ability to credibly integrate ESG principles, recognizing security as a foundational condition for sustainability.",
+        "tags": ["geopolitique", "defense", "europe", "finance", "ESG", "security", "ukraine", "investment", "industry", "public_acceptability"],
+        "sources": ["https://www.iris-france.org/public-acceptability-and-esg-vs-defence-exceptionalism-the-european-defence-industry-at-a-crossroads/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Government, Economy, Defense, Infrastructure, Energy, Telecommunications",
+        "theme": "French economic diplomacy in Africa facing international competition",
+        "description": "France is readjusting its economic diplomacy in Africa, shifting from a military-centric approach to industrial, energy, and strategic partnerships. This repositioning is in response to a historical decline in influence against the commercial and influence offensive from China, Russia, Turkey, and Gulf countries. France's challenge is now less economic than symbolic, suffering from a weakening of its soft power. The European Global Gateway initiative aims to offer a qualitative alternative to Chinese investments to rebuild credible economic projection capabilities.",
+        "tags": ["geopolitique", "diplomacy", "africa", "france", "china", "russia", "turkey", "gulf_states", "energy", "infrastructure", "telecommunications", "soft_power", "influence", "economic_competition", "Global_Gateway"],
+        "sources": ["https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/diplomatie-economique-macron-afrique/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Public transport, Surveillance, Privacy, AI",
+        "theme": "Deployment of AI for fare evasion detection and privacy challenges",
+        "description": "New York City's MTA is testing AI-powered cameras in the subway to detect fare evasion, generating physical descriptions of suspects. This initiative is part of a broader trend of biometric and facial recognition technology deployment by public and private entities in NYC. Civil liberties advocates warn about the expansion of a surveillance ecosystem and risks of inaccuracies, especially for minorities, and the potential for police targeting.",
+        "tags": ["geopolitique", "AI", "surveillance", "privacy", "USA", "public_transport", "facial_recognition", "ethics", "biometrics"],
+        "sources": ["https://www.datasecuritybreach.fr/new-york-veut-traquer-la-fraude-au-metro-avec-lia/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Defense, Maritime Security, Geopolitics",
+        "theme": "Indian maritime strategy and power projection in the Indo-Pacific",
+        "description": "The Indian Navy is evolving its strategy towards the SAGAR/MAHASAGAR doctrine, aiming to project its naval power in the Indo-Pacific to secure maritime routes and contain Chinese influence. India is modernizing with a strong emphasis on local construction ('Make in India') and partnerships (e.g., France for Rafale Marine), positioning itself as a 'Net Security Provider' and actively participating in the QUAD. This responds to the rapid ascent of the Chinese navy and its 'String of Pearls' strategy.",
+        "tags": ["geopolitique", "india", "china", "indo_pacific", "navy", "defense", "maritime_security", "influence", "partnership", "rafale", "make_in_india", "QUAD", "naval_power"],
+        "sources": ["https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/indian-navy-et-doctrine-sagar-instrument-de-puissance-en-indo-pacifique/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Geopolitics, Sport",
+        "theme": "Russia's gradual reintegration into global sports",
+        "description": "Russia is pursuing an opportunistic strategy to return to global sports after its exclusion due to doping scandals and the invasion of Ukraine. It attempts to build a 'counter-sport world' while discreetly lobbying for gradual reintegration, leveraging the 'apolitical sport' argument, legal constraints, and economic factors. The discourse of a 'Trump II' administration is perceived as an accelerator of this normalization. The minimal presence of Russian athletes under a neutral banner at the 2026 Winter Olympics marks a symbolic step.",
+        "tags": ["geopolitique", "russia", "sport", "influence", "soft_power", "sharp_power", "ukraine", "sanctions", "diplomacy", "Olympics", "sport_normalization"],
+        "sources": ["https://www.iris-france.org/la-russie-de-retour-dans-le-sport-mondial/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Telecommunications, Critical Infrastructure, Geopolitics, Cybersecurity",
+        "theme": "EU tightens 5G policy against high-risk suppliers",
+        "description": "The EU is strengthening its cybersecurity legislation to reduce reliance on high-risk Information and Communication Technology (ICT) supply chain providers, particularly Chinese ones, extending the '5G toolbox' to 18 critical sectors. Operators have less than five years to replace sensitive equipment. The geopolitical context, including the war in Ukraine and concerns about coordinated actions by Moscow and Beijing, intensifies the risk perception. Countries like Denmark are cited as examples of successful transitions without excessive costs.",
+        "tags": ["geopolitique", "EU", "5G", "telecommunications", "supply_chain_security", "china", "russia", "critical_infrastructure", "cybersecurity", "huawei", "zte", "geopolitical_risk"],
+        "sources": ["https://www.datasecuritybreach.fr/lue-durcit-la-5g-face-aux-fournisseurs-a-haut-risque/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Defense, Aerospace, Technology, Trade",
+        "theme": "Western and French posture in response to China's commercial offensive in defense",
+        "description": "The article analyzes the American (F-35 dominance for allies), Chinese (aggressive sales of J-20/J-35 to emerging powers), and European (diversification with Rafale/Typhoon, SCAF project for autonomy) strategies in the combat aircraft market. China is advancing access to 5th-generation fighters for the 'Global South,' redefining the global strategic air balance. The European SCAF project is marked by tensions, aiming for autonomy rather than mass export, contrasting with American and Chinese approaches.",
+        "tags": ["geopolitique", "defense", "china", "USA", "europe", "france", "armaments", "aeronautics", "f35", "rafale", "typhoon", "SCAF", "influence", "technology", "trade", "5th_generation"],
+        "sources": ["https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/quelle-posture-francaise-et-occidentale-en-reponse-a-loffensive-commerciale-chinoise-3-3/"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Emergency services, Government",
+        "victime": "CodeRED emergency systems (numerous EMS systems)",
+        "description": "Ransomware attack affecting OnSolve's legacy environment, disrupting emergency services and requiring a prolonged response.",
+        "tags": ["violation", "breach", "ransomware", "emergency_services", "government", "legacy_system"],
+        "sources": ["https://databreaches.net/2026/02/10/codered-emergency-notification-system-incident-update/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Massive data breach due to internal management failures (not external hacking), leading to significant regulatory and legal risks, including potential fines and lawsuits in the US.",
+        "tags": ["violation", "breach", "e_commerce", "internal_management", "compliance", "regulation", "litigation"],
+        "sources": ["https://mastodon.social/@infomaxkorea/116049464686429935"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Government, Data Protection Authority, Judiciary System, European Institutions",
+        "victime": "Dutch Data Protection Authority (AP), Council for the Judiciary (Rvdr), European Commission",
+        "description": "Cyberattacks exploiting newly disclosed vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM) exposed employee contact data (names, work emails, phone numbers). The European Commission detected intrusion traces in its mobile device management system, though no mobile devices were compromised. This data could be used for targeted vishing and phishing attacks.",
+        "tags": ["violation", "breach", "government", "personal_data", "Ivanti", "EPMM", "zero_day", "phishing", "vishing", "espionage", "data_exposure"],
+        "sources": ["https://securityaffairs.com/187806/security/dutch-agencies-hit-by-ivanti-epmm-exploit-exposing-employee-contact-data.html", "https://securityonline.info/sleeping-with-the-enemy-dormant-backdoors-found-in-ivanti-epmm/", "https://infosec.exchange/@DevaOnBreaches/116049054665893497"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Financial services",
+        "victime": "Lotte Card",
+        "description": "Major data breach resulting in prolonged leadership vacuum due to regulatory scrutiny and fallout, deterring CEO candidates.",
+        "tags": ["violation", "breach", "financial_services", "corporate_governance", "reputation", "regulation"],
+        "sources": ["https://mastodon.social/@infomaxkorea/116049366362897478"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Non-profit, First Aid Services",
+        "victime": "Association Nationale des Premiers Secours (ANPS)",
+        "description": "Data breach of 5,600 accounts exposing unique email addresses, names, dates of birth, and places of birth, traced to a legacy system. No health, financial data, or passwords were impacted.",
+        "tags": ["violation", "breach", "non_profit", "health", "personal_data", "legacy_system"],
+        "sources": ["https://haveibeenpwned.com/Breach/ANPS"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Government, Public Services, Identity Management",
+        "victime": "Directorate of File Automation (DAF), Senegal",
+        "description": "Ransomware cyberattack led to the shutdown of Senegal's national ID card office, disrupting ID, passport, and biometric services. Attackers leaked 139 TB of sensitive data, including card personalization data. A commercial dispute with a third-party vendor is mentioned as a potential contextual factor.",
+        "tags": ["violation", "breach", "government", "public_services", "identity", "biometrics", "ransomware", "data_leak", "critical_infrastructure"],
+        "sources": ["https://securityaffairs.com/187811/data-breach/senegal-shuts-national-id-office-after-ransomware-attack/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Consumer (stalkerware services)",
+        "victime": "Stalkerware customers (over 500,000 payment records from a provider)",
+        "description": "A hacktivist scraped over half a million payment records from a consumer-grade 'stalkerware' phone surveillance app provider, exposing email addresses and partial payment information of customers who paid to spy on others.",
+        "tags": ["violation", "breach", "consumer", "stalkerware", "financial_data", "personal_data", "hacktivism"],
+        "sources": ["https://databreaches.net/2026/02/10/hacktivist-scrapes-over-500000-stalkerware-customers-payment-records/"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Financial services (KYC/AML)",
+        "victime": "Sumsub (European KYC third-party company)",
+        "description": "Data breach affecting a European third-party company specializing in KYC and AML risk management.",
+        "tags": ["violation", "breach", "financial_services", "KYC", "AML", "third_party", "personal_data"],
+        "sources": ["https://mastodon.thenewoil.org/@thenewoil/116049523936304344"],
+        "date": "2026-02-11"
+      },
+      {
+        "secteur": "Online gaming",
+        "victime": "Toy Battles (online gaming community)",
+        "description": "Data breach exposing 1,000 unique email addresses, usernames, IP addresses, and chat logs. The incident was self-submitted to Have I Been Pwned.",
+        "tags": ["violation", "breach", "online_gaming", "personal_data", "user_accounts"],
+        "sources": ["https://haveibeenpwned.com/Breach/ToyBattles"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-26009",
+        "cvss": 9.9,
+        "product": "Catalyst",
+        "description": "Remote Code Execution as Root via Containerized Install Script Execution in server templates.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "root", "script_execution", "Catalyst"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26009"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": 9.8,
+        "product": "FortiClient EMS",
+        "description": "SQL Injection enabling unauthenticated remote code execution via specially crafted HTTP requests.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "RCE", "unauthenticated", "FortiClient_EMS"],
+        "sources": ["https://socprime.com/blog/cve-2026-21643-vulnerability/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-22906",
+        "cvss": 9.8,
+        "product": "WAGO 852 series Industrial Managed Switches",
+        "description": "Multiple critical vulnerabilities including hardcoded encryption keys, authentication bypass, and remote code execution, allowing remote takeover.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "authentication_bypass", "hardcoded_key", "WAGO", "OT", "ICS"],
+        "sources": ["https://securityonline.info/factory-flaw-critical-wago-switch-vulnerabilities-cvss-9-8-allow-remote-takeover/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25728",
+        "cvss": 9.3,
+        "product": "ClipBucket v5",
+        "description": "Time-of-Check to Time-of-Use (TOCTOU) race condition in avatar/background image upload, allowing remote code execution (PHP) before file validation and deletion.",
+        "tags": ["vulnerabilite", "vulnerability", "RCE", "race_condition", "upload_file", "ClipBucket"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25728"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25993",
+        "cvss": 9.3,
+        "product": "EverShop",
+        "description": "Second-order SQL injection in URL rewrite processing, where a malicious string stored in 'url_key' is executed during subsequent event processing.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "second_order", "eCommerce", "EverShop"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25993"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2025-66630",
+        "cvss": 9.2,
+        "product": "Fiber (Go web framework)",
+        "description": "Predictable UUIDs due to silent error swallowing in 'crypto/rand' when secure randomness fails, making security tokens predictable and exposing the framework to hijacking.",
+        "tags": ["vulnerabilite", "vulnerability", "predictable_UUID", "security_token", "hijacking", "Go_framework", "Fiber"],
+        "sources": ["https://securityonline.info/fiber-optic-failure-predictable-uuids-expose-go-web-framework-to-hijacking/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": 8.8,
+        "product": "MSHTML Framework",
+        "description": "Security feature bypass vulnerability in MSHTML Framework allowing remote code execution via opening a specially crafted HTML or LNK file. Actively exploited.",
+        "tags": ["vulnerabilite", "vulnerability", "security_bypass", "code_execution", "MSHTML", "zero_day", "exploited_in_wild"],
+        "sources": ["https://blog.talosintelligence.com/microsoft-patch-tuesday-february-2026/", "https://krebsonsecurity.com/2026/02/patch-tuesday-february-2026-edition/"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-25947",
+        "cvss": 8.8,
+        "product": "Worklenz",
+        "description": "Multiple SQL injection vulnerabilities in backend SQL query construction affecting various project and task management controllers.",
+        "tags": ["vulnerabilite", "vulnerability", "SQL_Injection", "project_management", "Worklenz"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-25947"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-1507",
+        "cvss": 8.7,
+        "product": "AVEVA PI Data Archive",
+        "description": "Uncaught exception allowing an unauthenticated attacker to remotely crash core PI services, resulting in a denial-of-service.",
+        "tags": ["vulnerabilite", "vulnerability", "DoS", "remote", "unauthenticated", "AVEVA_PI_Data_Archive", "ICS", "OT"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-1507"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-1848",
+        "cvss": 8.2,
+        "product": "N/A",
+        "description": "Connections received from the proxy port may not count towards total accepted connections, resulting in server crashes and denial-of-service if the total number of connections exceeds available resources.",
+        "tags": ["vulnerabilite", "vulnerability", "DoS", "proxy_port", "server_crash"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-1848"],
+        "date": "2026-02-11"
+      },
+      {
+        "cve_id": "CVE-2026-26007",
+        "cvss": 8.2,
+        "product": "cryptography (Python package)",
+        "description": "Subgroup attack due to missing subgroup validation for SECT curves, allowing private key bit leakage (ECDH) or signature forgery (ECDSA).",
+        "tags": ["vulnerabilite", "vulnerability", "subgroup_attack", "cryptography", "ECDH", "ECDSA", "private_key_leak", "signature_forgery"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26007"],
+        "date": "2026-02-11"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "A Peek Into Muddled Libra’s Operational Playbook",
+        "description": "This article provides a detailed analysis of the cybercrime group Muddled Libra (aka Scattered Spider, UNC3944)'s operational playbook, revealing their heavy reliance on social engineering (smishing, vishing) for initial access, targeting call centers and Managed Service Providers. They prioritize 'living-off-the-land' techniques and minimize malware use, creating 'rogue' virtual machines within targeted environments to evade EDR detection. Their activities include stealing certificates, establishing SSH tunnels with Chisel, credential dumping from domain controllers (NTDS.dit), Active Directory enumeration (ADRecon, ADExplorer64), web searches for data exfiltration, and lateral movement via RDP and PsExec. The goal is the theft of sensitive data and intellectual property, often through exfiltration attempts to S3 buckets.",
+        "threat_actor": "Muddled Libra (Scattered Spider, UNC3944)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Social Engineering", "T1003 - OS Credential Dumping", "T1562 - Impair Defenses", "T1078 - Valid Accounts", "T1543 - Create or Modify System Process", "T1021 - Remote Services", "T1563 - Remote Service Session Hijacking", "T1087 - Account Discovery", "T1082 - System Information Discovery", "T1083 - File and Directory Discovery", "T1114 - Email Collection", "T1567 - Exfiltration Over Web Service", "T1565 - Virtualization"],
+        "analyse": "The analysis highlights the sophistication of cybercrime groups that exploit the 'human layer' and legitimate tools to operate stealthily. The focus on 'rogue' VMs and LotL techniques demonstrates a constant effort to bypass traditional defenses. The potential impact is the exfiltration of sensitive data and disruption of business operations across various sectors.",
+        "recommandations": ["Implement robust multi-factor authentication (MFA).", "Educate employees on social engineering tactics (smishing, vishing).", "Monitor for unauthorized virtual machine creation within the environment.", "Deploy advanced EDR/XDR solutions to detect the abuse of legitimate tools (LotL).", "Enhance monitoring of data exfiltration attempts to external cloud storage services (e.g., S3).", "Apply the principle of least privilege to accounts and services."],
+        "tags": ["cybercrime", "social_engineering", "living_off_the_land", "credential_dumping", "lateral_movement", "persistence", "cloud", "evasion_detection", "data_theft", "DFIR"],
+        "sources": ["https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Beyond the Battlefield: Threats to the Defense Industrial Base",
+        "description": "This comprehensive report by the Google Threat Intelligence Group (GTIG) analyzes the multifaceted threats to the Defense Industrial Base (DIB). It highlights persistent targeting by Russian state actors (APT44, TEMP.Vermin, UNC5125, UNC5792, UNC4221, UNC5976, UNC6096, UNC5114) including AI use for phishing, extensive espionage by China-linked groups (UNC3886, UNC5221, APT5) via zero-day exploitation in edge devices, IT worker infiltrations and recruitment campaigns by North Korea (APT45, APT43, UNC2970), and Iranian operations (UNC1549, UNC6446) targeting personnel and supply chains. The report also covers ransomware and extortion risks affecting the manufacturing supply chain, as well as pro-Russian and pro-Iranian hacktivist operations (KillNet, Handala Hack, Cyber Toufan) focused on data leaks and disruption.",
+        "threat_actor": "APT44, TEMP.Vermin, UNC5125, UNC5792, UNC4221, UNC5976, UNC6096, UNC5114, UNC1069, BlueNoroff, Sapphire Sleet, TA44, APT45, APT43, UNC2970, UNC1549, UNC6446, UNC3886, UNC5221, APT1, APT40, UNC3236, Volt Typhoon, UNC6508, APT5, KillNet, Heaven of the Slavs, Beregini, PalachPro, NoName057(16), Infrastructure Destruction Squad, JokerDNR, JokerDPR, Handala Hack, Cyber Toufan, Cyber Isnaad Front, miyako, USDoD",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2022-41328"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Phishing", "T1190 - Exploit Public-Facing Application", "T1195 - Supply Chain Compromise", "T1110 - Brute Force", "T1059 - Command and Scripting Interpreter", "T1053 - Scheduled Task/Job", "T1098 - Account Manipulation", "T1574 - Rogue/Trusted Relationships", "T1505 - Web Shell", "T1562 - Impair Defenses", "T1036 - Masquerading", "T1027 - Obfuscated Files or Information", "T1559 - Indirect Command Execution", "T1003 - OS Credential Dumping", "T1119 - Input Capture", "T1082 - System Information Discovery", "T1087 - Account Discovery", "T1135 - Network Share Discovery", "T1018 - Remote System Discovery", "T1021 - Remote Services", "T1563 - Remote Service Session Hijacking", "T1566.003 - Internal Spearphishing", "T1105 - Ingress Tool Transfer", "T1071 - Standard Application Layer Protocol", "T1573 - Encrypted Channel", "T1005 - Data from Local System", "T1039 - Data from Network Shared Drive", "T1114 - Email Collection", "T1567 - Exfiltration Over Web Service", "T1485 - Data Destruction", "T1486 - Data Encrypted for Impact", "T1491 - Denial of Service", "T1490 - Data Manipulation"],
+        "analyse": "The DIB faces a \"constant, multi-vector cyber siege,\" where state actors exploit geopolitical tensions for espionage and intellectual property theft. The focus is on human targeting, zero-day exploitation in edge devices, and supply chain attacks. The emergence of AI in attack tactics makes detection more challenging and necessitates evolving defense strategies.",
+        "recommandations": ["Strengthen employee awareness of social engineering and threats related to recruitment processes.", "Implement rigorous patch management for edge devices and enterprise software, targeting zero-day vulnerabilities.", "Enhance threat hunting capabilities beyond traditional EDR/XDR tools, looking for evasion indicators.", "Secure the supply chain through thorough third-party risk assessment and robust security practices.", "Integrate threat intelligence into proactive security architectures."],
+        "tags": ["defense", "aerospace", "government", "manufacturing", "telecommunications", "technology", "energy", "ukraine_war", "espionage", "cyberwarfare", "ransomware", "hacktivism", "social_engineering", "zero_day", "supply_chain", "AI", "evasion_detection", "malware", "data_theft", "intellectual_property_theft", "analysis_report", "APT", "persistent_threat"],
+        "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/threats-to-defense-industrial-base/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "China-linked APT UNC3886 targets Singapore telcos",
+        "description": "Singapore's Cyber Security Agency (CSA) disclosed a targeted cyber espionage campaign by China-linked APT group UNC3886 against the country's four major telecommunications operators (M1, SIMBA Telecom, Singtel, StarHub) since July 2025. UNC3886 exploited a zero-day vulnerability (CVE-2022-41328) in a Fortinet firewall to bypass network defenses, exfiltrate network-related data, and deploy rootkits for stealthy persistence and log tampering. While unauthorized access to critical systems was achieved, no widespread data theft or service disruption was reported due to coordinated response efforts by authorities.",
+        "threat_actor": "UNC3886",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2022-41328"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1543.002 - Create or Modify System Process: Rootkit", "T1070.004 - Indicator Removal: File Deletion", "T1070.004 - Indicator Removal: Log Tampering", "T1005 - Data from Local System", "T1041 - Exfiltration Over C2 Channel"],
+        "analyse": "This attack highlights the ongoing and sophisticated threat from state actors against critical infrastructure, particularly telecommunications. The use of zero-days and rootkits demonstrates advanced evasion and persistence capabilities. Singapore's coordinated response limited the impact, but the threat of future attacks remains high.",
+        "recommandations": ["Immediately apply patches for zero-day vulnerabilities, especially those affecting edge devices like firewalls.", "Implement advanced threat hunting capabilities to detect rootkits and log tampering.", "Strengthen network segmentation to contain lateral movement by attackers.", "Enhance security for third-party vendors, especially for critical products like firewalls.", "Coordinate cyber defense efforts between government and critical infrastructure operators."],
+        "tags": ["telecommunications", "singapore", "china", "APT", "cyberwarfare", "zero_day", "Fortinet", "rootkit", "evasion_detection", "critical_infrastructure", "espionage", "log_tampering"],
+        "sources": ["https://securityaffairs.com/187792/apt/china-linked-apt-unc3886-targets-singapore-telcos/", "https://databreaches.net/2026/02/10/singapore-says-china-backed-hackers-targeted-its-four-largest-phone-companies/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Ivanti EPMM Exploitation: Dormant Backdoors and Dutch Agency Impacts",
+        "description": "A new cyber espionage campaign is targeting Ivanti Endpoint Manager Mobile (EPMM), exploiting CVE-2026-1281 (authentication bypass) and CVE-2026-1340 (remote code execution). Attackers are deploying dormant, in-memory backdoors at `/mifs/403.jsp` that only activate with a specific trigger, making detection extremely difficult. These operators likely act as 'Initial Access Brokers' (IABs), aiming to sell access to compromised systems. Concurrently, Dutch agencies, including the Data Protection Authority and the Council for the Judiciary, along with the European Commission, were affected by attacks exploiting these same flaws, exposing employee contact data (names, work emails, phone numbers) for vishing and phishing purposes.",
+        "threat_actor": "Non applicable (Cyber espionage campaign operators, \"Initial Access Brokers\")",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2026-1281", "CVE-2026-1340"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": ["/mifs/403.jsp"],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1543.003 - Create or Modify System Process: Windows Service (In-memory backdoor)", "T1036 - Masquerading", "T1027 - Obfuscated Files or Information", "T1005 - Data from Local System", "T1041 - Exfiltration Over C2 Channel"],
+        "analyse": "This series of incidents underscores the severity of vulnerabilities in Enterprise Mobility Management (EMM) software, which are high-value targets for threat actors. The dormant and in-memory nature of the backdoors indicates an intent for stealthy persistence and potential sale of access. The exposure of employee contact data heightens the risk of future targeted social engineering attacks against sensitive governmental and institutional entities.",
+        "recommandations": ["Immediately update and patch all Ivanti EPMM instances to fixed versions.", "Actively hunt for specific 'tells' in server logs, even in the absence of visible activity, to detect dormant backdoors.", "Consider any indication of this activity as a confirmed compromise and initiate an incident response.", "Strengthen employee awareness of vishing and phishing attacks, especially when contact information has been exposed.", "Implement enhanced segmentation and monitoring measures for EMM systems."],
+        "tags": ["ivanti", "EPMM", "mobile", "government", "personal_data", "zero_day", "backdoor", "espionage", "phishing", "vishing", "IAB", "evasion_detection", "incident_management"],
+        "sources": ["https://securityaffairs.com/187806/security/dutch-agencies-hit-by-ivanti-epmm-exploit-exposing-employee-contact-data.html", "https://securityonline.info/sleeping-with-the-enemy-dormant-backdoors-found-in-ivanti-epmm/", "https://infosec.exchange/@DevaOnBreaches/116049054665893497"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Malicious 7-Zip site distributes installer laced with proxy tool",
+        "description": "A fake 7-Zip website (7zip[.]com) is distributing a trojanized installer of the popular archiving tool, which turns the user's computer into a residential proxy node. The malware, identified as 'hero.exe' or 'Uphero', is digitally signed with a revoked certificate and profiles the user's system before establishing outbound proxy connections on non-standard ports. The C2 protocol uses XOR obfuscation, and C2 domains are 'smshero'-themed. This type of proxy network is often used for malicious activities such as credential stuffing, phishing, and malware distribution.",
+        "threat_actor": "Non applicable (Operators of residential proxy networks)",
+        "indicator_of_compromise": {
+          "DOMAIN": ["7zip[.]com", "iplogger[.]org"],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566.001 - Spearphishing Attachment", "T1082 - System Information Discovery", "T1071 - Standard Application Layer Protocol", "T1498 - Exploitation of Remote Services"],
+        "analyse": "This campaign represents a significant risk to the software supply chain and user security. By turning compromised machines into residential proxy nodes, attackers build infrastructure to conduct further cybercriminal activities, making attribution and detection more challenging for end targets. The use of a digitally signed, albeit revoked, certificate can mislead users.",
+        "recommandations": ["Always verify the source of downloaded software, ideally directly from the official developer websites.", "Implement application control policies to restrict the execution of unauthorized programs.", "Monitor outbound network connections to non-standard ports or suspicious domains.", "Use security solutions that verify the reputation of files and digital certificates."],
+        "tags": ["supply_chain", "software", "proxy", "malware", "phishing", "IoC", "cybercrime", "software_distribution", "website_impersonation"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/malicious-7-zip-site-distributes-installer-laced-with-proxy-tool/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "New Linux botnet SSHStalker uses old-school IRC for C2 comms",
+        "description": "A newly documented Linux botnet named SSHStalker is using the IRC (Internet Relay Chat) communication protocol for command-and-control (C2) operations, prioritizing resilience and low cost over stealth. It operates by classic SSH brute-forcing for initial access, then exploits old Linux kernel vulnerabilities (from the 2009-2010 era) for privilege escalation. Persistence is achieved via one-minute cron jobs. The botnet includes distributed denial-of-service (DDoS) capabilities, though no such attacks have been observed yet, suggesting testing or access hoarding.",
+        "threat_actor": "SSHStalker (botnet)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1110 - Brute Force", "T1053.005 - Scheduled Task/Job: Cron Job", "T1068 - Exploitation for Privilege Escalation", "T1071.001 - Standard Application Layer Protocol: IRC", "T1491 - Defacement: DDoS capabilities"],
+        "analyse": "This botnet demonstrates that 'old-school' techniques can still be effective, particularly against unpatched or unmonitored systems. Its resilience-first architecture via IRC and exploitation of known but neglected vulnerabilities pose a persistent threat to Linux infrastructures, with significant potential impact via DDoS attacks.",
+        "recommandations": ["Monitor for compiler installation and execution on production servers, as SSHStalker compiles binaries on hosts.", "Set up alerts for IRC-style outbound connections.", "Look for cron jobs with short execution cycles from unusual paths.", "Implement rigorous patch management, especially for Linux systems, to defend against the exploitation of old vulnerabilities."],
+        "tags": ["botnet", "Linux", "IRC", "DDoS", "privilege_escalation", "bruteforce", "IoC", "persistence", "old_vulnerabilities"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/new-linux-botnet-sshstalker-uses-old-school-irc-for-c2-comms/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "New threat actor, UAT-9921, leverages VoidLink framework in campaigns",
+        "description": "Cisco Talos has discovered UAT-9921, a new China-linked threat actor active since at least 2019, utilizing the modular VoidLink framework. This framework, whose development was AI-assisted, is specifically designed for Linux systems and includes advanced features such as eBPF/LKM rootkits, container privilege escalation, sandbox escape, EDR evasion, and obfuscation. UAT-9921 gains initial access via pre-obtained credentials or exploiting Java serialization vulnerabilities (like Apache Dubbo), then deploys VoidLink for internal and external scanning activities. While primarily targeting technology and financial services sectors, VoidLink's cloud-aware nature and network scanning suggest a lack of specific targeting, raising the question of potential 'red team' activity.",
+        "threat_actor": "UAT-9921",
+        "indicator_of_compromise": {
+          "CVE": ["CVE-2025-53770", "CVE-2025-53771"],
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1078 - Valid Accounts", "T1190 - Exploit Public-Facing Application", "T1543.002 - Create or Modify System Process: Rootkit", "T1068 - Exploitation for Privilege Escalation (Sandbox Escape)", "T1562 - Impair Defenses", "T1027 - Obfuscated Files or Information", "T1046 - Network Service Scanning", "T1090 - Proxy", "T1587.001 - Develop Capabilities: Malware", "T1587.004 - Develop Capabilities: Create Malware"],
+        "analyse": "The emergence of frameworks like VoidLink, developed with AI assistance, represents a significant evolution in threat actor capabilities, especially for Linux systems and containerized/cloud environments. The rapid development and advanced evasion/persistence features pose a major challenge to defenses. The potential duality between malicious activity and 'red teaming' underscores the need for careful attribution.",
+        "recommandations": ["Apply patches for Java serialization vulnerabilities, especially those affecting products like Apache Dubbo.", "Strengthen detection and response on Linux systems, including monitoring for eBPF/LKM rootkit activity.", "Implement robust security controls for containerized environments (Docker, Kubernetes).", "Use advanced detection techniques to identify obfuscated malware and EDR evasion behaviors.", "Segment networks and monitor internal and external scans to identify reconnaissance activities."],
+        "tags": ["APT", "china", "Linux", "malware", "framework", "VoidLink", "rootkit", "AI", "evasion_detection", "cloud", "kubernetes", "docker", "IoC", "technology", "finance"],
+        "sources": ["https://blog.talosintelligence.com/voidlink/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "North Korean hackers use new macOS malware in crypto-theft attacks",
+        "description": "North Korean hackers (attributed to UNC1069, with links to BlueNoroff/Sapphire Sleet/TA44) are running tailored campaigns using AI-generated video and the 'ClickFix' technique to deliver macOS and Windows malware. Their targets are in the cryptocurrency sector (centralized exchanges, developers, venture capital funds). The infection chain involves AppleScript execution and deploys less-detected malware such as SUGARLOADER and WAVESHAPER. The objective is cryptocurrency theft and data collection for future social engineering campaigns, demonstrating an evolution of tactics since 2018.",
+        "threat_actor": "North Korean hackers (UNC1069, BlueNoroff / Sapphire Sleet / TA44)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1566 - Phishing", "T1566.002 - Spearphishing Link", "T1059.004 - Command and Scripting Interpreter: AppleScript", "T1059.005 - Command and Scripting Interpreter: PowerShell", "T1005 - Data from Local System", "T1567 - Exfiltration Over Web Service"],
+        "analyse": "This campaign represents a sophisticated and evolving threat to the cryptocurrency sector, leveraging advanced social engineering (including AI for lures) and low-detection malware. The targeting of both macOS and Windows demonstrates attacker adaptability. The theft of identity data for future attacks highlights a long-term approach and a victim recycling model.",
+        "recommandations": ["Implement increased user awareness training against social engineering, especially for AI-generated video content and 'ClickFix' techniques.", "Strengthen detection of unusual script executions (AppleScript, PowerShell) on both macOS and Windows endpoints.", "Utilize EDR/XDR solutions that incorporate behavioral analysis to detect lesser-known malware.", "Apply the principle of least privilege to users and applications to limit impact in case of compromise.", "Implement robust security policies for cryptocurrency transactions and digital wallets."],
+        "tags": ["north_korea", "APT", "cryptocurrency", "macos", "windows", "phishing", "social_engineering", "malware", "IoC", "data_theft", "AI_social_engineering", "Web3"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/north-korean-hackers-use-new-macos-malware-in-crypto-thievery-attacks/"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "SolarWinds Web Help Desk Exploitation - February 2026",
+        "description": "Multiple intrusions have been publicly reported stemming from the exploitation of SolarWinds Web Help Desk (WHD) vulnerabilities, with exploitation activity first occurring in December 2025. After initial access (via `wrapper.exe` > `java.exe` > `cmd.exe`), threat actors abused legitimate Remote Monitoring and Management (RMM) software for persistence, and the forensic tool Velociraptor for post-compromise execution (disabling Microsoft Defender, Cloudflare tunnel setup). A scheduled task named 'TPMProfiler' was configured to start QEMU to maintain SSH access. Credential dumping activities, including DCSync and `NTDS.dit` database extraction from a Windows domain controller, were also observed, heavily relying on 'living-off-the-land' techniques.",
+        "threat_actor": "Non applicable (unnamed threat actors)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1190 - Exploit Public-Facing Application", "T1053.005 - Scheduled Task/Job", "T1562.001 - Disable or Modify System Firewall", "T1562.006 - Impair Defenses: Disable or Modify Tools", "T1003.003 - OS Credential Dumping: NTDS.dit", "T1219 - Remote Monitoring and Management Software", "T1059 - Command and Scripting Interpreter", "T1090 - Proxy"],
+        "analyse": "This incident highlights supply chain risk and the abuse of legitimate enterprise software. The reliance on 'living-off-the-land' techniques and the exploitation of forensic tools for malicious purposes make detection challenging for traditional defenses. The impact is significant, involving domain controller compromise and persistent access to the environment.",
+        "recommandations": ["Implement enhanced monitoring for unusual child processes launched by SolarWinds WHD applications.", "Detect the installation and configuration of unauthorized RMM software.", "Monitor the use of legitimate tools like Velociraptor and QEMU in suspicious contexts.", "Implement detection rules for modification of security settings (e.g., Windows Defender, Firewall).", "Protect domain controllers and detect credential dumping attempts (e.g., NTDS.dit extraction)."],
+        "tags": ["solarwinds", "zero_day", "supply_chain", "living_off_the_land", "ransomware", "exfiltration", "credential_dumping", "VM", "RMM", "persistence", "incident_management"],
+        "sources": ["https://www.elastic.co/security-labs/solarwinds-whd-exploitation"],
+        "date": "2026-02-11"
+      },
+      {
+        "title": "Towards a British Approach to Cyber Campaigning",
+        "description": "This article advocates for a proactive and dynamic British approach to cybersecurity, focusing on continuous 'cyber campaigning' rather than reactive deterrence. This strategy involves persistent cyber operations to gain advantage over adversaries, create 'operational friction' (technical and psychological manipulation of the adversary's environment), and narrow their freedom of maneuver. The 'Doctrine of Cognitive Effect' is highlighted as a distinctive British capability. Operation Cronos against LockBit is cited as an illustrative example of disrupting a cybercriminal group. The objective is to secure the UK's national and economic future by anticipating and exploiting vulnerabilities, drawing inspiration from Ukrainian cyber campaigning.",
+        "threat_actor": "LockBit (targeted by Operation Cronos)",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": ["T1491 - Denial of Service", "T1485 - Data Destruction", "T1490 - Data Manipulation", "T1562 - Impair Defenses", "T1070 - Indicator Removal (Information Suppression)"],
+        "analyse": "The cyber campaigning approach represents a significant strategic shift, recognizing the constant nature of competition in cyberspace. By focusing on initiative, disruption, and cognitive effect, the UK seeks to maximize the efficiency of its limited resources and enhance its resilience. This has geopolitical implications in terms of power projection and maintaining an advantage over state and cybercriminal adversaries.",
+        "recommandations": ["Develop explicit prioritization metrics for efficient cyber resource allocation, targeting adversaries' pressure points.", "Integrate the 'Doctrine of Cognitive Effect' to amplify the impact of cyber campaigns on adversaries' perceptions and morale.", "Ensure national resilience concurrently with offensive operations, by anticipating vulnerability exploits.", "Overcome internal friction (political authorization, risk tolerance, legal review) to enable continuous and coherent cyber action across government agencies."],
+        "tags": ["cyberdefense", "strategy", "UK", "deterrence", "cyberattack", "influence", "lockbit", "cybercrime", "geopolitics", "intelligence", "ukraine", "cyber_operations"],
+        "sources": ["https://www.rusi.org/explore-our-research/publications/commentary/towards-british-approach-cyber-campaigning"],
+        "date": "2026-02-11"
+      }
+    ]
+  }
+}
