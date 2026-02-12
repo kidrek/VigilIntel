@@ -1,0 +1,351 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for early 2026 is characterized by three major trends: the professionalization of 'Vibecoding' (AI-generated malware), sophisticated supply chain attacks targeting core administrative tools (Notepad++, Microsoft Store add-ins), and the industrialization of Information Stealers (LummaStealer/CastleLoader). We observe a critical surge in the exploitation of Ivanti EPMM (CVE-2026-1281) and Apple zero-days (CVE-2026-20700), indicating a focus on high-value infrastructure. Geopolitically, the use of video games for state-sponsored propaganda and the weaponization of trade/separatist movements (Alberta) highlight the blending of cyber operations with psychological warfare.",
+      "fr": "Le paysage des menaces pour le début de l'année 2026 est caractérisé par trois tendances majeures : la professionnalisation du 'Vibecoding' (malwares générés par IA), des attaques sophistiquées contre la chaîne d'approvisionnement ciblant des outils d'administration (Notepad++, add-ins Microsoft Store), et l'industrialisation des 'Information Stealers' (LummaStealer/CastleLoader). On observe une recrudescence critique de l'exploitation d'Ivanti EPMM (CVE-2026-1281) et de zero-days Apple (CVE-2026-20700), indiquant un ciblage des infrastructures à haute valeur. Géopolitiquement, l'usage des jeux vidéo pour la propagande étatique et l'instrumentalisation de mouvements séparatistes (Alberta) soulignent la fusion des cyber-opérations avec la guerre psychologique."
+    },
+    "date": "2026-02-12"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Lotus Blossom",
+      "campaign": "Infrastructure-level hijack of Notepad++",
+      "campaign_description": {
+        "en": "State-sponsored group Lotus Blossom compromised the official Notepad++ hosting infrastructure to redirect update traffic and serve malicious update manifests to specific targets in SE Asia and the West.",
+        "fr": "Le groupe étatique Lotus Blossom a compromis l'infrastructure d'hébergement officielle de Notepad++ pour rediriger le trafic de mise à jour et servir des manifestes malveillants à des cibles spécifiques en Asie du Sud-Est et en Occident."
+      },
+      "sector": {
+        "en": "Government, Telecommunications, Critical Infrastructure, Cloud hosting",
+        "fr": "Gouvernement, Télécommunications, Infrastructures critiques, Hébergement cloud"
+      },
+      "modop": {
+        "en": "Infrastructure hijacking, DLL side-loading (using Bitdefender component), Lua script injection, custom backdoors (Chrysalis).",
+        "fr": "Détournement d'infrastructure, DLL side-loading (via composant Bitdefender), injection de scripts Lua, backdoors personnalisées (Chrysalis)."
+      },
+      "tags": [
+        "Supply Chain",
+        "State-sponsored",
+        "Chrysalis",
+        "Cobalt Strike"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/notepad-infrastructure-compromise/"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "threat_actor": "UAT-9921",
+      "campaign": "VoidLink Framework Deployment",
+      "campaign_description": {
+        "en": "A new Chinese-speaking threat actor leveraging a modular 'compile-on-demand' framework named VoidLink to target Linux systems, using AI-enabled IDEs for rapid development.",
+        "fr": "Un nouvel acteur cyber sinophone exploitant un framework modulaire de type 'compilation à la demande' nommé VoidLink ciblant les systèmes Linux, utilisant des IDE assistés par IA pour un développement rapide."
+      },
+      "sector": {
+        "en": "Technology, Financial Services",
+        "fr": "Technologie, Services financiers"
+      },
+      "modop": {
+        "en": "ZigLang implants, C plugins, eBPF/LKM rootkits, AI-assisted development, RBAC-enabled C2.",
+        "fr": "Implants ZigLang, plugins C, rootkits eBPF/LKM, développement assisté par IA, C2 avec gestion RBAC."
+      },
+      "tags": [
+        "VoidLink",
+        "AI-assisted",
+        "ZigLang",
+        "Rootkit"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/voidlink/"
+      ],
+      "date": "2026-02-11"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government / Sovereignty",
+        "fr": "Gouvernement / Souveraineté"
+      },
+      "theme": {
+        "en": "US-Canada Diplomatic Friction & Separatism",
+        "fr": "Frictions diplomatiques USA-Canada & Séparatisme"
+      },
+      "description": {
+        "en": "Analysis of the Trump administration's alleged support for Albertan separatism (Alberta Prosperity Project) as a tool to pressure the Canadian federal government and secure energy resources.",
+        "fr": "Analyse du soutien présumé de l'administration Trump au séparatisme albertain (Alberta Prosperity Project) comme levier de pression sur le gouvernement fédéral canadien et sécurisation des ressources énergétiques."
+      },
+      "tags": [
+        "Trump",
+        "Canada",
+        "Energy",
+        "Alberta"
+      ],
+      "sources": [
+        "https://www.iris-france.org/alberta-quand-trump-tente-de-faire-eclater-le-canada-de-linterieur/"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "sector": {
+        "en": "Media / Entertainment",
+        "fr": "Média / Divertissement"
+      },
+      "theme": {
+        "en": "Kremlin War Propaganda in Video Games",
+        "fr": "Propagande de guerre du Kremlin dans les jeux vidéo"
+      },
+      "description": {
+        "en": "The Russian state is increasingly funding 'patriotic' video games to shape narratives among younger demographics and bypass traditional media critical thinking.",
+        "fr": "L'État russe finance de plus en plus de jeux vidéo 'patriotiques' pour façonner les récits auprès des jeunes et contourner l'esprit critique appliqué aux médias traditionnels."
+      },
+      "tags": [
+        "Propaganda",
+        "Russia",
+        "Video Games",
+        "Influence"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/new-weapon-in-the-shadows-how-the-kremlin-uses-video-games-for-war-propaganda/"
+      ],
+      "date": "2026-02-11"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Volvo Group North America",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Automotive / Manufacturing",
+        "fr": "Automobile / Industrie"
+      },
+      "description": {
+        "en": "Data of nearly 17,000 employees exposed following a massive breach at business service provider Conduent, affecting a total of 25 million people across various states.",
+        "fr": "Données de près de 17 000 employés exposées suite à une faille massive chez le prestataire de services Conduent, affectant un total de 25 millions de personnes."
+      },
+      "tags": [
+        "Supply Chain",
+        "PII",
+        "Conduent"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187875/security/volvo-group-hit-in-massive-conduent-data-breach.html"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "victim": "Microsoft Account Users (4,000+)",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Multi-sector (Outlook Users)",
+        "fr": "Multi-sectoriel (Utilisateurs Outlook)"
+      },
+      "description": {
+        "en": "Hijacking of the 'AgreeTo' Outlook add-in on the official Microsoft Store. Attackers used abandoned URLs to plant phishing kits and steal credentials and credit card numbers.",
+        "fr": "Détournement de l'add-in Outlook 'AgreeTo' sur le Microsoft Store officiel. Des attaquants ont utilisé des URLs abandonnées pour implanter des kits de phishing et voler des identifiants et numéros de cartes bancaires."
+      },
+      "tags": [
+        "Phishing",
+        "Microsoft Store",
+        "Add-in",
+        "AgreeTo"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/microsoft-store-outlook-add-in-hijacked-to-steal-4-000-microsoft-accounts/"
+      ],
+      "date": "2026-02-11"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1281",
+      "euvd_id": "EUVD-2026-1281",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0013",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*",
+      "product": "Endpoint Manager Mobile (EPMM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Pre-authentication code injection vulnerability in Bash handler allowing remote code execution. Massive exploitation surge observed (28.3k IPs).",
+        "fr": "Vulnérabilité d'injection de code pré-authentification dans le gestionnaire Bash permettant l'exécution de code à distance. Pic d'exploitation massif observé (28,3k IPs)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Zero-day"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/ivanti-epmm-0-day-flaw-exploited/"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "cve_id": "CVE-2026-20700",
+      "euvd_id": "EUVD-2026-20700",
+      "cisa_kev": "TRUE",
+      "cvss": "Unknown",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:o:apple:iphone_os:*",
+      "product": "iOS, macOS, iPadOS",
+      "vendor": "Apple",
+      "description": {
+        "en": "Zero-day vulnerability in dyld (Dynamic Link Editor) exploited in sophisticated targeted attacks to execute arbitrary code.",
+        "fr": "Vulnérabilité zero-day dans dyld (Dynamic Link Editor) exploitée lors d'attaques ciblées sophistiquées pour exécuter du code arbitraire."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "Apple"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/apple-fixes-zero-day-flaw-used-in-extremely-sophisticated-attacks/"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "cve_id": "CVE-2026-20841",
+      "euvd_id": "EUVD-2026-20841",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:microsoft:notepad:*",
+      "product": "Windows 11 Notepad App",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Remote code execution flaw via malicious Markdown links in Notepad. Launching unverified protocols without warning.",
+        "fr": "Faille d'exécution de code à distance via des liens Markdown malveillants dans Notepad. Lancement de protocoles non vérifiés sans avertissement."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Notepad"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/windows-11-notepad-flaw-let-files-execute-silently-via-markdown-links/"
+      ],
+      "date": "2026-02-11"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "LummaStealer and CastleLoader Resurgence",
+        "fr": "Résurgence de LummaStealer et CastleLoader"
+      },
+      "description": {
+        "en": "Surge in LummaStealer (LummaC2) activity despite 2025 disruption. Delivered via CastleLoader using 'ClickFix' fake CAPTCHA social engineering.",
+        "fr": "Augmentation de l'activité LummaStealer (LummaC2) malgré le démantèlement de 2025. Livré via CastleLoader en utilisant l'ingénierie sociale 'ClickFix' (faux CAPTCHA)."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://45.221.64.224/12.d|iexThe"
+        ],
+        "IPv4": [
+          "45.221.64.224"
+        ],
+        "DOMAIN": [
+          "itch.io",
+          "activity.in",
+          "infrastructure.in",
+          "online.in"
+        ],
+        "PROCESS": [
+          "264-NTb.exe",
+          "h264-slot.exe",
+          "AutoIt3.exe",
+          "NewComers.exe",
+          "userexplorer.exe"
+        ],
+        "TOOLS": [
+          "LummaStealer",
+          "CastleLoader",
+          "Rugmi",
+          "DonutLoader"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1059.001",
+        "T1027",
+        "T1012"
+      ],
+      "analyse": {
+        "en": "Lumma has successfully migrated to bulletproof hosting providers. The 'ClickFix' technique tricks users into running PowerShell commands from the clipboard, bypassing technical detections by exploiting human error.",
+        "fr": "Lumma a migré avec succès vers des hébergeurs 'bulletproof'. La technique 'ClickFix' incite les utilisateurs à exécuter des commandes PowerShell depuis le presse-papiers, contournant les détections techniques via l'erreur humaine."
+      },
+      "recommandations": [
+        {
+          "en": "Disable PowerShell execution for standard users and monitor clipboard-to-shell activities.",
+          "fr": "Désactiver l'exécution PowerShell pour les utilisateurs standards et surveiller les activités de type 'presse-papiers vers shell'."
+        },
+        {
+          "en": "Implement blocklists for the identified C2 infrastructure and monitor for failed DNS lookups to non-existent domains.",
+          "fr": "Implémenter des listes de blocage pour l'infrastructure C2 identifiée et surveiller les échecs de résolution DNS vers des domaines inexistants."
+        }
+      ],
+      "tags": [
+        "Infostealer",
+        "ClickFix",
+        "MaaS"
+      ],
+      "sources": [
+        "https://www.bitdefender.com/en-us/blog/labs/lummastealer-second-life-castleloader",
+        "https://securelist.com/renengine-campaign-with-hijackloader-lumma-and-acr-stealer/118891/"
+      ],
+      "date": "2026-02-11"
+    },
+    {
+      "title": {
+        "en": "SSHStalker Linux Botnet",
+        "fr": "Botnet Linux SSHStalker"
+      },
+      "description": {
+        "en": "IRC-based botnet targeting Linux servers using legacy kernel exploits and mass SSH scanning. Maintains 'dormant persistence'.",
+        "fr": "Botnet basé sur IRC ciblant les serveurs Linux via des exploits de noyau legacy et du scan SSH de masse. Maintient une 'persistance dormante'."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "IPv4": [
+          "45.32.144.255",
+          "59.110.7.32"
+        ],
+        "TOOLS": [
+          "Tsunami",
+          "Keiten",
+          "SSHStalker"
+        ],
+        "PROCESS": [
+          "cron"
+        ]
+      },
+      "mitre_ttps": [
+        "T1110.001",
+        "T1053.003",
+        "T1068",
+        "T1043"
+      ],
+      "analyse": {
+        "en": "The botnet targets 2.6.x kernels still present in legacy enterprise environments and OT systems. It compiles malware directly on-host to evade file-based signatures.",
+        "fr": "Le botnet cible les noyaux 2.6.x encore présents dans les environnements legacy et les systèmes OT. Il compile les malwares directement sur l'hôte pour échapper aux signatures de fichiers."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce MFA for all SSH access and disable legacy Linux kernel support where possible.",
+          "fr": "Imposer le MFA pour tous les accès SSH et désactiver le support des noyaux Linux legacy si possible."
+        }
+      ],
+      "tags": [
+        "Botnet",
+        "Linux",
+        "IRC",
+        "Legacy"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187833/malware/sshstalker-botnet-targets-linux-servers-with-legacy-exploits-and-ssh-scanning.html"
+      ],
+      "date": "2026-02-11"
+    }
+  ]
+}
