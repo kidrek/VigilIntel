@@ -1,0 +1,2877 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage des menaces cyber caractérisé par l'intégration croissante de l'intelligence artificielle par les acteurs malveillants, une fragmentation géopolitique persistante et l'adaptation continue des groupes cybercriminels. Les menaces clés incluent l'utilisation de l'IA pour accélérer le cycle d'attaque, notamment la reconnaissance, l'ingénierie sociale sophistiquée (phishing augmenté par l'IA, techniques 'ClickFix', add-ins Outlook malveillants) et le développement de malwares (HONESTCUE, COINBAIT). Les tentatives d'extraction de modèles d'IA (distillation) sont également en hausse, soulignant un risque pour la propriété intellectuelle. Les acteurs étatiques (Chine, Russie, Iran, Corée du Nord) se concentrent sur l'accumulation discrète d'accès à des infrastructures critiques (systèmes d'identité, environnements cloud, périphériques) plutôt que sur des perturbations immédiates, créant une capacité latente d'espionnage et de perturbation future. Les groupes de ransomware (Qilin, InterLock, Warlock) continuent d'évoluer, adoptant des modèles décentralisés et des chaînes d'approvisionnement criminelles résilientes. Les vulnérabilités critiques, y compris les zero-days activement exploités dans des produits majeurs comme Apple, BeyondTrust et Fortinet, restent un point d'entrée privilégié pour les attaquants, tandis que des failles moins complexes mais exploitables (comme dans Notepad++, SmarterMail, FileZen) sont également utilisées. La dépendance vis-à-vis de l'IA et des services tiers, ainsi que la négligence des pratiques de sécurité fondamentales (fuites de clés API, mots de passe faibles pour SSH), créent de nouvelles surfaces d'attaque. En conclusion, l'état général des menaces est complexe et en constante évolution, exigeant une vigilance accrue, des stratégies de défense adaptatives et une considération sérieuse de l'impact de l'IA sur les capacités offensives et défensives.",
+      "date": "2026-02-13"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Qilin",
+        "secteur": "Énergie",
+        "modop": "Attaque par ransomware et exfiltration de données, ciblant les infrastructures critiques. Le groupe a volé des données de l'opérateur de pipeline roumain Conpet.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanias-oil-pipeline-operator-conpet-confirms-data-stolen-in-attack/",
+          "https://databreaches.net/2026/02/12/apollomd-reveals-that-626540-patients-were-affected-by-may-2025-cyberattack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Restauration",
+        "modop": "Violation de données via l'abus de SSO (Microsoft Entra) et le vishing, exfiltrant des millions d'enregistrements clients.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "sso_abuse",
+          "vishing",
+          "credential_stuffing"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "InterLock",
+        "secteur": "Santé",
+        "modop": "Attaque par ransomware, exfiltration et menace de publication de données sensibles. Cible le secteur de la santé, causant des perturbations de services.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/kettering-adventist-health-now-notifying-patients-affected-by-may-2025-ransomware-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC6418",
+        "secteur": "Défense, Gouvernement (Ukraine)",
+        "modop": "Utilisation abusive de l'IA (Gemini) pour la collecte de renseignements ciblée, la recherche de justificatifs d'identité et d'adresses e-mail sensibles, suivie de campagnes de phishing.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "ai_misuse",
+          "reconnaissance",
+          "phishing",
+          "intelligence_gathering",
+          "ukraine",
+          "defense_sector"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Temp.HEX",
+        "secteur": "Gouvernement, Organisations séparatistes (Pakistan)",
+        "modop": "Acteur basé en RPC, utilise l'IA (Gemini) pour compiler des informations détaillées sur des individus ciblés et collecter des données opérationnelles et structurelles sur des organisations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "intelligence_gathering",
+          "reconnaissance",
+          "pakistan"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT42",
+        "secteur": "Non spécifié, cible des entités et partenaires commerciaux",
+        "modop": "Acteur soutenu par le gouvernement iranien, exploite l'IA générative (Gemini) pour augmenter la reconnaissance et l'ingénierie sociale ciblée, notamment pour la recherche d'e-mails officiels, l'établissement de prétextes crédibles et la traduction.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "iran_backed",
+          "ai_misuse",
+          "social_engineering",
+          "reconnaissance",
+          "phishing",
+          "malware_development"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC2970",
+        "secteur": "Défense, Cybersécurité",
+        "modop": "Acteur soutenu par le gouvernement nord-coréen, se concentre sur le ciblage de la défense et l'usurpation d'identité de recruteurs d'entreprise. Utilise l'IA (Gemini) pour synthétiser l'OSINT et profiler des cibles de grande valeur.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "north_korea_backed",
+          "ai_misuse",
+          "defense_targeting",
+          "impersonation",
+          "osint",
+          "reconnaissance"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT31",
+        "secteur": "Non spécifié, cible des entités américaines",
+        "modop": "Acteur basé en RPC, utilise l'IA (Gemini) avec un persona d'expert en cybersécurité pour automatiser l'analyse de vulnérabilités et générer des plans de test ciblés, incluant RCE, contournement WAF et injection SQL.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "vulnerability_analysis",
+          "rce",
+          "waf_bypass",
+          "sql_injection",
+          "reconnaissance"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC795",
+        "secteur": "Non spécifié",
+        "modop": "Acteur basé en RPC, s'appuie fortement sur l'IA (Gemini) pour la résolution de problèmes de code, la recherche et le développement de capacités techniques pour leurs intrusions, ainsi que pour créer une capacité d'audit de code intégrée à l'IA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "prc_based",
+          "ai_misuse",
+          "coding",
+          "malware_development",
+          "code_auditing"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT41",
+        "secteur": "Non spécifié",
+        "modop": "Acteur basé en RPC, exploite l'IA (Gemini) pour accélérer le développement et le déploiement d'outils malveillants, la synthèse de connaissances, la résolution de problèmes en temps réel et la traduction de code.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "malware_development",
+          "tooling",
+          "code_translation"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC5356",
+        "secteur": "Cryptomonnaie, Organisations financières",
+        "modop": "Cluster de menaces à motivation financière, utilise des campagnes de phishing par SMS et téléphone. Impliqué dans la construction du kit de phishing COINBAIT, probablement accélérée par l'IA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "phishing",
+          "smishing",
+          "vishing",
+          "ai_accelerated"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Storm-2477",
+        "secteur": "Général (individus, entreprises)",
+        "modop": "Développeur du MaaS (Malware-as-a-Service) Lumma Stealer. Utilise l'ingénierie sociale, des logiciels crackés falsifiés et des leurres 'ClickFix' de faux CAPTCHA. Emploie des loaders comme CastleLoader et s'adapte rapidement aux actions des forces de l'ordre.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "maas",
+          "infostealer",
+          "social_engineering",
+          "clickfix",
+          "castleloader",
+          "malvertising"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187896/uncategorized/lummastealer-activity-spikes-post-law-enforcement-disruption/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Storm-2603",
+        "secteur": "Infrastructure de messagerie, PME",
+        "modop": "Acteur de menace basé en Chine. Exploite la vulnérabilité CVE-2026-23760 dans les serveurs SmarterMail pour contourner l'authentification, déployer le ransomware Warlock et utiliser l'outil de forensique Velociraptor pour la persistance et l'exécution de commandes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "china_based",
+          "ransomware",
+          "warlock",
+          "vulnerability_exploitation",
+          "smartermail",
+          "living_off_the_land",
+          "velociraptor"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "SSHStalker",
+        "secteur": "Serveurs Linux",
+        "modop": "Botnet exploitant des mots de passe SSH faibles pour compromettre les serveurs Linux. Utilise des tactiques datant de 2009, des C2 IRC, et des malwares connus comme Tsunami et Keiten.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "linux_servers",
+          "ssh_bruteforce",
+          "irc_c2",
+          "tsunami",
+          "keiten"
+        ],
+        "sources": [
+          "https://securityonline.info/back-to-the-future-sshstalker-botnet-revives-2009-tactics-to-hijack-linux-servers/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Technologie, Finance",
+        "modop": "Utilise le framework VoidLink avancé pour cibler principalement les systèmes Linux. VoidLink est modulaire, à la demande pour la création de plugins et conçu pour l'évasion de détection.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "voidlink",
+          "linux_systems",
+          "modular_malware",
+          "evasion"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/hand-over-the-keys-for-shannons-shenanigans/"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Télécommunications",
+        "theme": "Blocage de communications, ingérence étatique",
+        "description": "Le gouvernement russe intensifie ses efforts pour bloquer WhatsApp et Telegram dans le pays, citant la lutte contre la criminalité et la fraude. Cette mesure s'inscrit dans un durcissement du contrôle des plateformes de communication non soumises à son autorité, avec Meta (maison mère de WhatsApp) désignée comme entité 'extrémiste' depuis 2022.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "communication_blockade",
+          "censorship",
+          "whatsapp",
+          "telegram",
+          "roskomnadzor"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russia-tries-to-block-whatsapp-telegram-in-communication-blockade/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "theme": "Désarmement nucléaire, désinformation",
+        "description": "L'expiration du Traité New START le 6 février 2026 est accompagnée de campagnes de désinformation pro-Kremlin visant à minimiser la responsabilité de Moscou, à blâmer les acteurs extérieurs et à promouvoir l'idée d'une nouvelle multipolarité nucléaire. La Russie a progressivement sapé le traité en suspendant les inspections mutuelles et sa participation, tout en menant des campagnes de FIMI (Foreign Information Manipulation and Interference) accusant l'Occident de provoquer une confrontation nucléaire.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "new_start_treaty",
+          "nuclear_arms_control",
+          "disinformation",
+          "fimi",
+          "propaganda"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/as-new-start-ends-disinformation-about-it-continues/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Gouvernement, Défense, Économie",
+        "theme": "Politique intérieure et étrangère, relations internationales",
+        "description": "Suite à la victoire de Sanae Takaichi aux élections législatives du 9 février 2026, le Japon s'engage dans une politique néo-conservatrice. Les priorités incluent la relance économique, le renforcement de la défense (budget militaire à 2% du PIB d'ici mars 2026, cyberdéfense, spatial, frappes longue portée) et une ligne ferme face à la Chine, notamment concernant Taïwan. Les relations avec les États-Unis sont réaffirmées, malgré une incertitude due aux rapprochements entre Washington et Pékin.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "japan",
+          "china",
+          "united_states",
+          "defense_policy",
+          "taiwan",
+          "economic_policy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/japon-ce-que-nous-dit-la-victoire-de-la-premiere-ministre-takaichi-aux-elections-legislatives/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Énergie, Industrie, Gouvernement",
+        "theme": "Dépendance énergétique, guerre économique",
+        "description": "L'Italie est confrontée à une forte dépendance énergétique, transformant la problématique d'une dépendance 'politique' (fournisseurs) à une dépendance 'géostratégique' (itinéraires obligés). Les goulets d'étranglement maritimes comme Ormuz, Bab el-Mandeb et Suez, ainsi que les corridors terrestres sous influence (Turquie, Russie), sont des points de pression majeurs qui peuvent être exploités dans une guerre économique. Cette situation fragilise la compétitivité italienne et conditionne sa liberté politique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "italy",
+          "energy_security",
+          "economic_warfare",
+          "supply_chain",
+          "strait_of_hormuz",
+          "suez_canal",
+          "russia",
+          "turkey"
+        ],
+        "sources": [
+          "https://www.epge.fr/energie-et-souverainete-italiennes-quand-la-dependance-devient-une-arme/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Gouvernement, Renseignement, Défense",
+        "theme": "Espionnage, recrutement",
+        "description": "La CIA a diffusé une vidéo en chinois pour recruter des espions en Chine, ciblant les officiers militaires, diplomates, économistes, scientifiques et experts en technologies de pointe chinois. Cette initiative, qui risque d'intensifier les tensions avec Pékin, vise à obtenir des informations sur les dirigeants et hauts gradés chinois.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "united_states",
+          "espionage",
+          "intelligence_gathering",
+          "recruitment"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/02/12/la-cia-diffuse-une-video-destinee-a-recruter-des-espions-en-chine_6666550_3210.html"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Énergie",
+        "victime": "Conpet S.A. (opérateur national de pipeline pétrolier de Roumanie)",
+        "description": "L'opérateur national de pipeline pétrolier de Roumanie, Conpet S.A., a confirmé une exfiltration de données suite à une attaque du groupe de ransomware Qilin. Les données volées incluent des informations personnelles (noms, adresses postales, numéros d'identification personnelle) et des numéros de compte bancaire, certains documents étant marqués comme confidentiels et datant de novembre 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "energy",
+          "conpet",
+          "romania",
+          "qilin",
+          "ransomware",
+          "data_exfiltration",
+          "personal_data",
+          "bank_accounts"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanias-oil-pipeline-operator-conpet-confirms-data-stolen-in-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido (Pays-Bas)",
+        "description": "Le fournisseur de télécommunications néerlandais Odido a subi une cyberattaque exposant les données personnelles de 6,2 millions de clients. Les informations compromises comprennent les noms, adresses, numéros de téléphone, adresses e-mail, coordonnées bancaires (IBAN), dates de naissance et numéros de passeport/carte d'identité. L'accès non autorisé au système de contact client a été bloqué.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "odido",
+          "netherlands",
+          "cyberattack",
+          "personal_data",
+          "financial_data",
+          "identity_documents"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/odido-data-breach-exposes-personal-info-of-62-million-customers/",
+          "https://securityaffairs.com/187927/uncategorized/odido-confirms-massive-breach-6-2-million-customers-impacted.html",
+          "https://infosec.exchange/@beyondmachines1/116062505688477176",
+          "https://mastodon.thenewoil.org/@thenewoil/116062499890493982"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "ApolloMD (États-Unis)",
+        "description": "Une cyberattaque en mai 2025 contre ApolloMD, une entreprise de services de santé aux États-Unis, a exposé les données personnelles de plus de 626 000 patients. Les informations compromises, variant selon les individus, incluent noms, dates de naissance, adresses, diagnostics, détails de traitement, données d'assurance et, dans certains cas, numéros de sécurité sociale.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "apollomd",
+          "united_states",
+          "cyberattack",
+          "patient_data",
+          "phi",
+          "ssn"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187921/data-breach/apollomd-data-breach-impacts-626540-people.html",
+          "https://databreaches.net/2026/02/12/apollomd-reveals-that-626540-patients-were-affected-by-may-2025-cyberattack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Divers",
+        "victime": "Utilisateurs d'infostealer malware",
+        "description": "Une base de données non protégée contenant près de 150 millions de combinaisons nom d'utilisateur/mot de passe a été découverte publiquement accessible. Ces données proviennent principalement de malwares de type 'infostealer' (logs historiques) et incluent environ 48 millions de comptes Gmail, présentant un risque élevé de 'credential stuffing' et d'attaques subséquentes. Le serveur a été mis hors ligne après notification.",
+        "tags": [
+          "violation",
+          "breach",
+          "credential_leak",
+          "infostealer",
+          "gmail",
+          "credential_stuffing",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Restauration",
+        "victime": "Panera Bread (États-Unis)",
+        "description": "Le groupe ShinyHunters a revendiqué l'intrusion dans le système de Panera Bread en janvier 2026, affirmant avoir compromis plus de 14 millions d'enregistrements (révisé à 5,1 millions de comptes uniques par 'Have I Been Pwned'). L'accès aurait été obtenu via l'abus de SSO (Microsoft Entra) et le vishing.",
+        "tags": [
+          "violation",
+          "breach",
+          "restaurant",
+          "panera_bread",
+          "shinyhunters",
+          "sso_abuse",
+          "vishing",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Jeux en ligne",
+        "victime": "NationStates (jeu de simulation gouvernementale)",
+        "description": "Le jeu de simulation gouvernementale par navigateur, NationStates, a confirmé un incident de données après qu'un joueur ait exploité une vulnérabilité critique de RCE, copiant le code source et les données utilisateur du serveur de production. Les informations exposées incluent des adresses e-mail, des mots de passe hachés en MD5 (considérés comme non sécurisés), des adresses IP de connexion, des chaînes d'agent utilisateur de navigateur, et potentiellement des messages internes de 'Telegram'.",
+        "tags": [
+          "violation",
+          "breach",
+          "online_gaming",
+          "nationstates",
+          "rce",
+          "source_code_leak",
+          "user_data",
+          "md5_passwords",
+          "telegram_messages"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Kettering Adventist Health (Ohio, États-Unis)",
+        "description": "Kettering Adventist Health a été victime d'une attaque par ransomware en mai 2025 par le groupe InterLock. Les attaquants ont exfiltré environ 950 Go de données (732 490 fichiers), incluant potentiellement des noms, des numéros de sécurité sociale, des informations financières, médicales, de traitement, d'assurance, de facturation et des informations d'identification d'utilisateur.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "kettering_adventist_health",
+          "interlock",
+          "ransomware",
+          "data_exfiltration",
+          "phi",
+          "ssn",
+          "financial_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/kettering-adventist-health-now-notifying-patients-affected-by-may-2025-ransomware-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Services de voyage, Aviation",
+        "victime": "Service de livraison de bagages de JAL (Japan Airlines)",
+        "description": "Un accès non autorisé au service de livraison de bagages de JAL a potentiellement entraîné la fuite d'informations de réservation et personnelles pour environ 28 000 individus.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "travel_services",
+          "jal",
+          "japan_airlines",
+          "unauthorized_access",
+          "personal_data",
+          "booking_information"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/jal-baggage-delivery-service-breach-possible-leak-of-28k-booking-and-shipping-records/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Hôpital Musashi Kosugi de la Nippon Medical School (Japon)",
+        "description": "L'hôpital Musashi Kosugi de la Nippon Medical School a été victime d'une cyberattaque par ransomware, entraînant une possible fuite de 130 000 informations personnelles. Les attaquants ont émis une revendication d'attaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "nippon_medical_school",
+          "japan",
+          "ransomware",
+          "personal_data",
+          "cyberattack"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/nippon-medical-school-musashi-kosugi-hospital-hit-by-ransomware-possible-130k-data-breach/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "McLaren Northern Michigan (hôpital aux États-Unis)",
+        "description": "Un hôpital du Michigan, identifié comme potentiellement McLaren Northern Michigan, a fait l'objet d'une violation de la vie privée où des employés ont accédé aux informations personnelles d'un patient célèbre (Josh Clarke) et demandé des selfies pendant son traitement. Cela indique un problème persistant de fouinage interne dans les dossiers de célébrités, malgré les protections logicielles et d'audit censées empêcher de telles actions.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "mclaren_northern_michigan",
+          "united_states",
+          "privacy_violation",
+          "insider_threat",
+          "patient_records"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/its-2026-but-hospitals-still-havent-prevented-snooping-in-celebrities-records/?pk_campaign=feed&pk_kwd=its-2026-but-hospitals-still-havent-prevented-snooping-in-celebrities-records"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support et Privileged Remote Access",
+        "description": "Vulnérabilité critique de l'exécution de code à distance (RCE) pré-authentification, exploitée après la publication d'un PoC. Elle permet à un attaquant non authentifié d'exécuter des commandes système via des requêtes client spécialement conçues.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "pre_authentication",
+          "beyondtrust",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": "9.1",
+        "product": "Fortinet FortiClientEMS (version 7.4.4)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) non authentifiée via l'interface web, causée par une injection SQL. Permet à un attaquant distant d'envoyer des requêtes HTTP forgées pour injecter des commandes SQL et exécuter du code arbitraire sur le serveur sous-jacent.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "fortinet",
+          "forticlientems",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/forticlientems-critical-vulnerability"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21510",
+        "cvss": "8.8",
+        "product": "Microsoft Windows Shell",
+        "description": "Contournement de fonctionnalité de sécurité permettant à un attaquant de contourner les protections de sécurité (Windows SmartScreen) lorsqu'un utilisateur ouvre un contenu contrôlé par l'attaquant (lien malveillant ou fichier .LNK).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "security_bypass",
+          "microsoft",
+          "windows_shell",
+          "smartscreen"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": "8.8",
+        "product": "Microsoft MSHTML (Internet Explorer/Trident)",
+        "description": "Contournement de fonctionnalité de sécurité permettant à un attaquant de contourner les vérifications de sécurité intégrées via le réseau lorsqu'un utilisateur interagit avec un contenu fourni par l'attaquant (fichier ou lien malveillant invoquant le rendu MSHTML).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "security_bypass",
+          "microsoft",
+          "mshtml",
+          "internet_explorer",
+          "trident"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2024-43468",
+        "cvss": "N/A",
+        "product": "Microsoft Configuration Manager",
+        "description": "Vulnérabilité d'injection SQL permettant à un attaquant non authentifié d'envoyer des requêtes spécialement conçues pour déclencher un traitement non sûr et exécuter des commandes sur le serveur ou la base de données sous-jacente.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "microsoft",
+          "configuration_manager",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2025-15556",
+        "cvss": "N/A",
+        "product": "Notepad++ (versions antérieures à 8.8.9)",
+        "description": "Vulnérabilité critique d'exécution de code exploitée dans les mises à jour sans vérification d'intégrité de WinGUp. Un attaquant peut intercepter le trafic de mise à jour pour exécuter un installateur malveillant, permettant l'exécution de code arbitraire avec les privilèges de l'utilisateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "code_execution",
+          "notepad++",
+          "supply_chain",
+          "integrity_check_bypass",
+          "mitm",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://cybersecuritynews.com/notepad-code-execution-vulnerability/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "N/A",
+        "product": "Produits Apple (iOS, iPadOS, macOS, watchOS, tvOS, visionOS)",
+        "description": "Zero-day activement exploité dans l'éditeur de liens dynamiques (dyld) d'Apple, causé par un problème de corruption de mémoire. Permet à un attaquant ayant la capacité d'écrire en mémoire d'exécuter du code arbitraire sur les appareils vulnérables. Fait partie d'une attaque sophistiquée ciblant des individus spécifiques.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "rce",
+          "memory_corruption",
+          "apple",
+          "ios",
+          "macos",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/187890/security/apple-fixed-first-actively-exploited-zero-day-in-2026.html",
+          "https://socprime.com/blog/cve-2026-20700-vulnerability/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-1603",
+        "cvss": "8.6",
+        "product": "Ivanti Endpoint Manager (versions antérieures à 2024 SU4 SR1)",
+        "description": "Contournement d'authentification de gravité élevée permettant à un attaquant distant non authentifié d'accéder et de voler des informations de connexion sensibles. Une vulnérabilité XSS stockée est également présente.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "ivanti",
+          "endpoint_manager",
+          "xss",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187882/uncategorized/multiple-endpoint-manager-bugs-patched-by-ivanti-including-remote-auth-bypass/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-25108",
+        "cvss": "8.8",
+        "product": "FileZen",
+        "description": "Vulnérabilité d'injection de commande OS. Un utilisateur connecté peut envoyer une requête HTTP spécialement conçue pour exécuter une commande OS arbitraire lorsque l'option 'Antivirus Check' est activée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "os_command_injection",
+          "filezen",
+          "authenticated_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25108"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2020-37167",
+        "cvss": "9.8",
+        "product": "ClamAV ClamBC (versions <= 0.102.0)",
+        "description": "Vulnérabilité d'interprétation de bytecode permettant à des attaquants de manipuler les noms de fonctions du bytecode et d'exploiter une faible validation d'entrée pour potentiellement exécuter du bytecode malveillant ou causer un comportement inattendu du moteur ClamAV.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bytecode_manipulation",
+          "clamav",
+          "code_execution",
+          "weak_input_validation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37167"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25337",
+        "cvss": "9.8",
+        "product": "OwnCloud 8.1.8",
+        "description": "Vulnérabilité d'énumération de noms d'utilisateur permettant à des attaquants distants de découvrir des comptes utilisateurs en manipulant le point de terminaison share.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "username_enumeration",
+          "owncloud",
+          "information_disclosure",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25337"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25336",
+        "cvss": "8.4",
+        "product": "SpotAuditor 5.3.2",
+        "description": "Vulnérabilité de débordement de tampon local dans l'outil 'Base64 Encrypted Password' permettant l'exécution de code arbitraire via une charge utile Base64 malveillante, déclenchant une écriture SEH et l'exécution de shellcode.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "spotauditor",
+          "local_exploitation",
+          "seh_overwrite"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25336"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25335",
+        "cvss": "8.8",
+        "product": "PRO-7070 Hazır Profesyonel Web Sitesi 1.0",
+        "description": "Vulnérabilité de contournement d'authentification dans la page de connexion du panneau d'administration, permettant l'accès non autorisé à l'interface administrative en utilisant '=' 'or' comme nom d'utilisateur et mot de passe.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "web_application",
+          "admin_panel",
+          "pro_7070"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25335"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25333",
+        "cvss": "8.7",
+        "product": "Bullwark Momentum Series JAWS 1.0",
+        "description": "Vulnérabilité de traversée de répertoire permettant à des attaquants non authentifiés d'accéder à des fichiers système en manipulant les chemins des requêtes HTTP (ex: '/etc/passwd').",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "directory_traversal",
+          "unauthenticated",
+          "information_disclosure",
+          "bullwark_jaws"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25333"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25332",
+        "cvss": "8.4",
+        "product": "FTP Commander Pro 8.03",
+        "description": "Vulnérabilité de débordement de pile locale permettant l'exécution de code arbitraire en écrasant le registre EIP via une entrée de commande personnalisée, démontrant un potentiel RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_overflow",
+          "rce",
+          "ftp_commander_pro",
+          "local_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25332"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-0969",
+        "cvss": "N/A",
+        "product": "Next-Mdx-Remote (versions 4.3.0 à 5.0.0)",
+        "description": "Vulnérabilité critique permettant l'exécution de code arbitraire sur les serveurs React qui rendent du contenu MDX non fiable côté serveur (SSR). Les attaquants peuvent injecter du code malveillant comme eval(), Function() ou require().",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "next_mdx_remote",
+          "server_side_rendering",
+          "code_injection"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/vulnerability-in-next-mdx-remote/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "N/A",
+        "product": "SmarterMail servers",
+        "description": "Vulnérabilité critique permettant à un attaquant de contourner l'authentification et de prendre le contrôle du serveur. Activement exploitée par Storm-2603 pour déployer le ransomware Warlock.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "server_compromise",
+          "smartermail",
+          "ransomware",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": "N/A",
+        "product": "OpenClaw (versions antérieures à v2026.1.29)",
+        "description": "Vulnérabilité de RCE en un clic ('1-Klick-RCE-Schwachstelle') via Cross-Site WebSocket Hijacking, causée par une erreur de couplage entre l'interface utilisateur et la passerelle, permettant l'exfiltration de jetons et l'exécution de commandes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "cross_site_websocket_hijacking",
+          "token_exfiltration",
+          "openclaw",
+          "agentic_ai"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/openclaw-die-real-world-bestaetigung-der-mcp-risikoachsen/"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Abandoned Outlook Add-in “AgreeTo” Steals 4,000 Credentials",
+        "description": "Des chercheurs ont découvert un add-in Microsoft Outlook malveillant, 'AgreeTo', qui a siphonné plus de 4 000 identifiants Microsoft, numéros de cartes de crédit et réponses de sécurité bancaire. L'attaque a exploité un add-in abandonné dans l'Office Add-in Store, où les attaquants ont revendiqué l'URL Vercel expirée de l'application légitime et y ont déployé un kit de phishing. Cela a permis au kit de phishing d'être chargé au sein d'un processus Outlook de confiance, contournant les défenses traditionnelles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "vercel.app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Authentication Certificates)",
+          "T1189 (Drive-by Compromise)"
+        ],
+        "analyse": "Cet incident souligne une faiblesse architecturale dans le fonctionnement des add-ins modernes, où une application approuvée peut devenir malveillante si son backend est compromis. L'attaque contourne les passerelles de messagerie, les protections de points de terminaison et les filtres d'URL, exposant les organisations à des risques significatifs de vol d'informations d'identification et de compromission des comptes, avec un impact potentiel sur la confidentialité et l'intégrité des communications par e-mail.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques des add-ins, même s'ils sont issus de magasins officiels, et aux signes de pages de connexion usurpées.",
+          "Évaluer régulièrement les add-ins installés pour détecter les changements de comportement ou les URLs backend compromises.",
+          "Mettre en œuvre une authentification forte (MFA) pour tous les comptes, en particulier ceux avec accès aux add-ins d'entreprise.",
+          "Surveiller les logs d'accès aux services cloud et aux add-ins pour détecter les activités suspectes ou les tentatives de connexion échouées.",
+          "Les développeurs d'add-ins doivent sécuriser leurs URL backend et mettre en place des mécanismes de rotation des domaines si le projet est abandonné."
+        ],
+        "tags": [
+          "outlook",
+          "add_in",
+          "phishing",
+          "credential_theft",
+          "microsoft",
+          "supply_chain",
+          "social_engineering",
+          "bypass",
+          "vercel",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/inside-job-abandoned-outlook-add-in-agreeto-steals-4000-credentials/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Back to the Future: SSHStalker Botnet Revives 2009 Tactics to Hijack Linux Servers",
+        "description": "Le botnet SSHStalker, non documenté auparavant, a été découvert, utilisant un mélange de tactiques anciennes (C2 IRC) et d'automatisation moderne pour compromettre les serveurs Linux. Il exploite des mots de passe SSH faibles pour installer une suite de backdoors, incluant des variantes de bots basés sur C, des scripts Perl et des familles de malwares connues comme Tsunami et Keiten. L'opérateur, probablement de niveau intermédiaire et basé en Roumanie, privilégie l'évolutivité et la répétabilité à la furtivité.",
+        "threat_actor": "SSHStalker (Botnet operator)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1110.001 (Brute Force: Password Guessing)",
+          "T1219 (Remote Access Software)",
+          "T1543.002 (Create or Modify System Process: Systemd Service)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1573 (Encrypted Channel)"
+        ],
+        "analyse": "Ce botnet démontre que des techniques éprouvées, même anciennes, restent efficaces contre des systèmes mal configurés ou avec des pratiques de sécurité faibles. L'utilisation d'IRC pour le C2, bien que dépassée, offre une résilience et une redondance. L'impact est la compromission généralisée de serveurs Linux, potentiellement utilisés pour d'autres activités malveillantes (DDoS, cryptominage, hébergement de contenu malveillant).",
+        "recommandations": [
+          "Appliquer une politique de mots de passe forts et uniques pour tous les comptes SSH, idéalement avec l'authentification par clé SSH.",
+          "Mettre en œuvre des mécanismes de détection et de prévention des tentatives de brute force SSH (ex: Fail2ban).",
+          "Surveiller le trafic réseau pour détecter les communications IRC ou d'autres C2 non conventionnels.",
+          "Effectuer des audits réguliers des configurations de serveurs Linux et des services exposés sur Internet.",
+          "Utiliser des solutions EDR/XDR pour Linux pour détecter les exécutions de scripts suspects et les installations de malwares."
+        ],
+        "tags": [
+          "botnet",
+          "linux",
+          "ssh",
+          "brute_force",
+          "irc",
+          "malware",
+          "tsunami",
+          "keiten",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/back-to-the-future-sshstalker-botnet-revives-2009-tactics-to-hijack-linux-servers/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Critical BeyondTrust RCE flaw now exploited in attacks, patch now",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE) pré-authentification, CVE-2026-1731 (CVSS 9.9), dans les appliances BeyondTrust Remote Support et Privileged Remote Access est maintenant exploitée. Un PoC a été publié en ligne, menant à des attaques actives ciblant les portails BeyondTrust exposés pour exécuter des commandes sur les systèmes vulnérables.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1213 (Exploitation for Credential Access)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "Cette vulnérabilité présente un risque extrêmement élevé en raison de sa criticité (RCE pré-authentification) et de son exploitation active, pouvant entraîner un compromis système complet, un accès non autorisé, l'exfiltration de données et des perturbations de service. L'impact est particulièrement grave pour les organisations utilisant ces produits pour le support à distance ou l'accès privilégié.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs fournis par BeyondTrust pour les versions 25.3.1 et antérieures de Remote Support, et 24.3.4 et antérieures de Privileged Remote Access.",
+          "Considérer tous les appareils non patchés comme potentiellement compromis et lancer des investigations forensiques si des portails sont exposés.",
+          "Surveiller les journaux pour détecter des requêtes suspectes ciblant les portails BeyondTrust.",
+          "Restreindre l'accès réseau aux appliances BeyondTrust aux adresses IP autorisées uniquement."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "beyondtrust",
+          "exploited_in_the_wild",
+          "patch_management",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Detecting OpenClaw/Clawbot with SentinelOne: The Challenge of Blocking",
+        "description": "OpenClaw (alias Clawbot ou Moltbot) est un agent autonome alimenté par l'IA qui s'exécute sur les machines des employés, agissant comme un assistant IA capable d'interagir avec l'ordinateur, d'exécuter des commandes et d'accéder aux fichiers. Son blocage est complexe avec des EDR comme SentinelOne car il utilise un processus Node.js, dont la quarantaine pourrait casser d'autres applications légitimes dépendantes. L'article partage un script de remédiation pour tuer les processus, supprimer l'application et nettoyer les données utilisateur.",
+        "threat_actor": "OpenClaw (Clawbot, Moltbot)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript/JScript)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1070.004 (Indicator Removal: File Deletion)"
+        ],
+        "analyse": "OpenClaw représente une nouvelle génération de menaces basée sur l'IA agentique, brouillant les lignes entre outil légitime et malveillant. Le défi de la détection et du blocage réside dans son utilisation de processus système courants, ce qui rend les approches EDR traditionnelles potentiellement destructrices pour les systèmes. Cela souligne la nécessité de solutions de sécurité plus contextuelles et comportementales pour les menaces IA.",
+        "recommandations": [
+          "Évaluer les risques liés à l'exécution d'agents IA autonomes sur les postes de travail des employés et restreindre leur déploiement.",
+          "Mettre en œuvre des politiques de contrôle d'applications pour limiter l'exécution de processus Node.js ou d'autres interpréteurs de scripts aux cas d'utilisation légitimes.",
+          "Utiliser des scripts de remédiation ciblés pour supprimer OpenClaw sans impacter les applications légitimes dépendant de Node.js.",
+          "Renforcer la surveillance comportementale des points de terminaison pour détecter les activités inhabituelles initiées par des agents IA.",
+          "Sensibiliser les utilisateurs aux dangers des outils d'IA non approuvés et aux risques d'exécution de commandes non vérifiées."
+        ],
+        "tags": [
+          "openclaw",
+          "clawbot",
+          "moltbot",
+          "ai_agent",
+          "edr",
+          "sentinelone",
+          "node.js",
+          "dependency_issue",
+          "remediation_script",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/detecting-openclaw-clawbot-with-sentinelone-the-challenge-of-blocking"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Email Under Siege: Storm-2603 Exploits SmarterMail to Deploy Warlock Ransomware",
+        "description": "Le groupe Storm-2603, basé en Chine, exploite activement une vulnérabilité critique (CVE-2026-23760) dans les serveurs SmarterMail pour contourner l'authentification et prendre le contrôle du serveur. Après avoir réinitialisé les mots de passe administrateur, ils utilisent des fonctions légitimes du logiciel ('living off the land') pour déployer Velociraptor à des fins de persistance et de déploiement du ransomware Warlock. Cette campagne marque une escalade des attaques contre les infrastructures de messagerie.",
+        "threat_actor": "Storm-2603",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1546.008 (Event Triggered Execution: Accessibility Features)",
+          "T1053 (Scheduled Task/Job)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)"
+        ],
+        "analyse": "L'attaque démontre une sophistication tactique où l'acteur de la menace abuse des outils légitimes pour atteindre ses objectifs, rendant la détection plus difficile. La compromission des serveurs de messagerie est particulièrement impactante, car elle peut mener à des ransomwares, des fuites de données et à l'utilisation des serveurs compromis pour d'autres attaques, avec des conséquences graves pour la continuité des activités et la réputation.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2026-23760 sur tous les serveurs SmarterMail.",
+          "Auditer les journaux pour détecter toute réinitialisation de mot de passe administrateur ou activité suspecte sur les serveurs SmarterMail.",
+          "Mettre en œuvre une surveillance des processus pour détecter l'exécution inattendue d'outils de forensics comme Velociraptor sur les serveurs.",
+          "Renforcer les contrôles d'accès et segmenter les réseaux pour limiter la propagation latérale en cas de compromission.",
+          "Effectuer des sauvegardes régulières et isolées pour permettre la récupération des données en cas d'attaque par ransomware."
+        ],
+        "tags": [
+          "storm_2603",
+          "smartermail",
+          "ransomware",
+          "warlock",
+          "vulnerability_exploitation",
+          "authentication_bypass",
+          "living_off_the_land",
+          "velociraptor",
+          "china_based",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "February 2026 Microsoft updates include six exploited flaws",
+        "description": "Les mises à jour de Microsoft de février 2026 corrigent 59 vulnérabilités, dont six confirmées comme exploitées. Ces failles permettent le contournement de SmartScreen (CVE-2026-21510, CVSS 8.8), l'abus de MSHTML (CVE-2026-21513, CVSS 8.8), l'élévation de privilèges vers SYSTEM (CVE-2026-21533, CVE-2026-21525) et le déni de service local. Les exploitations nécessitent souvent une interaction utilisateur ou un accès existant, mettant en évidence le risque d'élévation de privilèges et la nécessité de patcher rapidement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1203 (Exploitation for Client Execution)",
+          "T1566 (Phishing)",
+          "T1059.005 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1548 (Abuse Elevation Control Mechanism)"
+        ],
+        "analyse": "La présence de six failles activement exploitées, y compris des contournements de sécurité et des élévations de privilèges, indique que les attaquants ciblent des points faibles courants dans les environnements Windows et Office. L'interaction utilisateur requise pour certaines exploitations souligne l'importance de l'ingénierie sociale. L'élévation de privilèges expose les systèmes à un mouvement latéral accru et à des compromissions plus profondes, en particulier sur les serveurs RDS et les environnements VDI.",
+        "recommandations": [
+          "Appliquer les correctifs Microsoft de février 2026 en priorité pour toutes les vulnérabilités exploitées, en se concentrant sur les environnements Windows et Office.",
+          "Renforcer les défenses contre le phishing et appliquer les règles de réduction de la surface d'attaque (ASR) de Microsoft Defender pour bloquer les comportements risqués (ex: exécution de fichiers de raccourcis à partir d'emplacements inscriptibles par l'utilisateur).",
+          "Désactiver ou restreindre les composants hérités (MSHTML, mode Internet Explorer) qui élargissent la surface d'attaque.",
+          "Appliquer le principe du moindre privilège et durcir l'accès aux services de bureau à distance (RDS) avec l'authentification au niveau du réseau (NLA) et l'authentification multifacteur (MFA)."
+        ],
+        "tags": [
+          "microsoft",
+          "patch_tuesday",
+          "vulnerabilities",
+          "exploited_in_the_wild",
+          "smartscreen",
+          "mshtml",
+          "privilege_escalation",
+          "windows",
+          "office",
+          "threat_report"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Fortinet fixes a critical flaw in FortiClientEMS",
+        "description": "Fortinet a corrigé une vulnérabilité critique (CVE-2026-21643, CVSS 9.1) dans FortiClientEMS 7.4.4. Cette faille permet une exécution de code à distance (RCE) non authentifiée via l'interface web, due à une injection SQL. Les serveurs de gestion exposés doivent être mis à niveau immédiatement vers la version 7.4.5 ou ultérieure. La compromission de ce serveur peut entraîner un compromis généralisé des points de terminaison et des identités.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1505 (Server Software Component)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)"
+        ],
+        "analyse": "Cette vulnérabilité est particulièrement dangereuse car elle cible un système de gestion centralisé (FortiClientEMS) avec un score CVSS élevé et ne nécessite pas d'authentification. L'exploitation peut conduire à un contrôle administratif sur les points de terminaison, une intégration avec les services d'annuaire et d'autres infrastructures, entraînant un impact large sur l'environnement client, y compris la perte de télémétrie et de visibilité audit. Les services de gestion exposés augmentent considérablement le risque.",
+        "recommandations": [
+          "Mettre à jour immédiatement FortiClientEMS 7.4.4 vers la version 7.4.5 ou ultérieure.",
+          "Réduire l'exposition des interfaces de gestion en limitant l'accès réseau et en utilisant des mesures de sécurité périmétriques.",
+          "Surveiller le trafic réseau pour détecter les requêtes inhabituelles vers les interfaces de gestion FortiClientEMS.",
+          "Mettre en place une surveillance de l'activité des processus inattendue sur les serveurs et des modifications de configuration anormales provenant de FortiClientEMS."
+        ],
+        "tags": [
+          "fortinet",
+          "forticlientems",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "unauthenticated",
+          "management_server",
+          "critical_vulnerability",
+          "threat_report"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/forticlientems-critical-vulnerability"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Google Takeout: The Quiet Data Exit Nobody Talks About",
+        "description": "Google Takeout est un mécanisme d'exportation de données sous-estimé dans Google Workspace, permettant aux utilisateurs de télécharger leurs propres données. D'un point de vue sécurité et forensique, il s'agit d'un chemin d'exfiltration de données intégré qui fonctionne trop bien. Ce n'est pas un malware, mais une fonctionnalité légitime qui peut être détournée pour la fuite de données massives, offrant un moyen discret et potentiellement indétectable pour l'exfiltration d'informations sensibles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1020 (Automated Exfiltration)",
+          "T1074.001 (Data Staged: Local Data Staging)"
+        ],
+        "analyse": "Le risque associé à Google Takeout réside dans son statut d'outil légitime et omniprésent, ce qui le rend difficile à bloquer sans impacter la productivité. Il peut être exploité par des initiés malveillants ou des acteurs externes ayant compromis un compte, pour exfiltrer d'énormes volumes de données sans déclencher d'alertes de sécurité traditionnelles. Cela représente une lacune importante dans la protection contre l'exfiltration de données pour les organisations utilisant Google Workspace.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance accrue des activités d'exportation de données via Google Takeout pour les comptes à haut risque ou les volumes de données inhabituels.",
+          "Renforcer l'authentification et les contrôles d'accès pour les comptes Google Workspace, y compris la MFA.",
+          "Utiliser des solutions de DLP (Data Loss Prevention) configurées pour détecter les tentatives d'exfiltration de données sensibles via des canaux légitimes comme Google Takeout.",
+          "Sensibiliser les employés aux risques d'utilisation abusive de Google Takeout et aux politiques d'entreprise concernant l'exportation de données."
+        ],
+        "tags": [
+          "google_takeout",
+          "data_exfiltration",
+          "google_workspace",
+          "insider_threat",
+          "cloud_security",
+          "dlp",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/google-takeout-the-quiet-data-exit-nobody-talks-about"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "description": "Le rapport du Google Threat Intelligence Group (GTIG) met en lumière l'intégration croissante de l'IA par les acteurs de la menace pour accélérer le cycle d'attaque. Les tendances incluent l'augmentation des attaques d'extraction de modèles (distillation), l'augmentation de la reconnaissance et de l'ingénierie sociale (phishing hyper-personnalisé) par des acteurs étatiques (UNC6418, Temp.HEX, APT42, UNC2970), le développement d'outils malveillants assistés par l'IA (APT31, UNC795, APT41, APT42), des malwares expérimentaux (HONESTCUE) et des kits de phishing générés par l'IA (COINBAIT). Le marché noir des services d'IA (Xanthorox) et l'abus des fonctionnalités de partage public des services d'IA pour les campagnes 'ClickFix' sont également documentés.",
+        "threat_actor": "UNC6418, Temp.HEX, APT42, UNC2970, APT31, UNC795, APT41, HONESTCUE, UNC5356 (COINBAIT), Xanthorox",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://www.virustotal.com/gui/collection/69f762800d3513e19acb8fa34895a46a137168%201370417db5a1db6ee9acad3f28",
+            "https://www.virustotal.com/gui/collection/0bfe8d133848734d730a219abd09a8404f47e4%20b446974be7ddcd288255ef1bb0",
+            "https://www.virustotal.com/gui/collection/dfd93a4d19773adacd2140f49ef12a7f33613f560cc7609638becac2d9c86900/iocs",
+            "https://www.virustotal.com/gui/collection/e72e3856e4c780078ba59c0a639b915fcab473e88f4701e16b36024d3d8c1578/summary"
+          ]
+        },
+        "mitre_ttps": [
+          "T1592 (Gather Victim Org Information)",
+          "T1566 (Phishing)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1583 (Develop Capabilities)",
+          "T1588 (Obtain Capabilities)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript/JScript)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1078 (Valid Accounts)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "L'IA devient un multiplicateur de force pour les attaquants, réduisant les barrières d'entrée et augmentant l'efficacité des campagnes. La menace n'est pas tant les attaques autonomes que l'augmentation de la vitesse, du coût et de la crédibilité de la tromperie. L'abus de services d'IA légitimes et le développement d'outils malveillants basés sur l'IA exigent des défenses proactives, des cadres de sécurité pour l'IA et une vigilance face aux nouvelles TTPs.",
+        "recommandations": [
+          "Surveiller l'accès aux API des LLM et détecter les modèles d'extraction ou de distillation.",
+          "Renforcer les défenses anti-phishing avec des leurres hyper-personnalisés et des techniques de construction de confiance.",
+          "Mettre en œuvre des systèmes de détection et de blocage pour les malwares intégrant l'IA, tels que HONESTCUE, et les kits de phishing comme COINBAIT.",
+          "Former les utilisateurs à identifier les campagnes 'ClickFix' qui abusent des services d'IA publics pour distribuer des malwares.",
+          "Sécuriser les clés API des services d'IA, car elles sont une cible majeure sur les marchés souterrains.",
+          "Développer des règles de détection réseau pour alerter sur le trafic vers les plateformes BaaS (Backend-as-a-Service) provenant de domaines non catégorisés ou nouvellement enregistrés."
+        ],
+        "tags": [
+          "ai",
+          "threat_actors",
+          "apt",
+          "phishing",
+          "malware",
+          "social_engineering",
+          "reconnaissance",
+          "model_extraction",
+          "agentic_ai",
+          "llm",
+          "ai_misuse",
+          "threat_report"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "LummaStealer activity spikes post-law enforcement disruption",
+        "description": "L'activité du LummaStealer, un infostealer MaaS (Malware-as-a-Service), a connu une forte augmentation après des démantèlements par les forces de l'ordre en 2025. Le malware est distribué via l'ingénierie sociale (faux logiciels crackés, fausses alertes CAPTCHA 'ClickFix', fausses mises à jour Steam) et utilise des loaders changeants comme CastleLoader. Une infrastructure partagée suggère une coordination entre les opérations CastleLoader et Lumma. LummaStealer cible les identifiants, sessions de navigateur, informations financières et portefeuilles de cryptomonnaies.",
+        "threat_actor": "Storm-2477 (Lumma Stealer developer), Octo Tempest, Storm-1607, Storm-1113, Storm-1674",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1078 (Valid Accounts)",
+          "T1550 (Use Alternate Authentication Material)",
+          "T1003 (OS Credential Dumping)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "La résilience de LummaStealer après des actions des forces de l'ordre démontre l'adaptabilité de l'écosystème cybercriminel MaaS. La dépendance à l'ingénierie sociale et aux loaders flexibles rend sa perturbation difficile par les défenses techniques traditionnelles. L'impact est significatif, allant du vol d'identifiants à la fraude, l'usurpation d'identité et le chantage, affectant un large éventail de victimes.",
+        "recommandations": [
+          "Renforcer la formation des utilisateurs pour reconnaître les attaques d'ingénierie sociale, y compris les faux CAPTCHA et les mises à jour logicielles frauduleuses.",
+          "Mettre en œuvre des solutions de détection de points de terminaison (EDR) capables de détecter les loaders en mémoire et les comportements suspects, comme CastleLoader.",
+          "Appliquer des contrôles de sécurité robustes pour la protection des sessions de navigateur, des portefeuilles de cryptomonnaies et des informations financières.",
+          "Surveiller les plateformes de distribution de logiciels pour la présence de logiciels crackés malveillants.",
+          "Utiliser des règles YARA ou d'autres signatures pour détecter les activités de LummaStealer et CastleLoader."
+        ],
+        "tags": [
+          "lummastealer",
+          "infostealer",
+          "maas",
+          "social_engineering",
+          "clickfix",
+          "castleloader",
+          "cybercrime",
+          "law_enforcement",
+          "evasion",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187896/uncategorized/lummastealer-activity-spikes-post-law-enforcement-disruption/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Microsoft: New Windows LNK spoofing issues aren't vulnerabilities",
+        "description": "Un chercheur en sécurité a révélé de multiples problèmes dans les fichiers de raccourcis Windows LNK qui permettent le déploiement de charges utiles malveillantes via l'usurpation d'identité du chemin. Microsoft a refusé de classer ces techniques comme des vulnérabilités de sécurité, arguant qu'elles nécessitent une interaction de l'utilisateur et ne franchissent pas les limites de sécurité, malgré des techniques similaires (CVE-2025-9491) ayant été largement exploitées par des groupes APT et cybercriminels.",
+        "threat_actor": "Evil Corp, Bitter, APT37, APT43 (Kimsuky), Mustang Panda, SideWinder, RedHotel, Konni (mentionnés pour CVE-2025-9491)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1566 (Phishing)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.006 (Command and Scripting Interpreter: PowerShell)"
+        ],
+        "analyse": "Malgré la position de Microsoft, ces techniques de 'spoofing' LNK sont des vecteurs d'attaque pratiques et efficaces, comme le prouve l'exploitation passée et continue de failles similaires. Elles permettent aux attaquants de dissimuler des exécutables malveillants derrière des icônes ou des descriptions apparemment inoffensives, trompant ainsi les utilisateurs et les professionnels de la sécurité. Cela crée un décalage entre la perception du risque par l'éditeur et la réalité de l'exploitation par les attaquants.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux dangers des fichiers LNK provenant de sources inconnues, même s'ils semblent inoffensifs.",
+          "Mettre en œuvre des politiques de Mark-of-the-Web pour les fichiers téléchargés et des règles ASR pour bloquer l'exécution de raccourcis à partir de répertoires inscriptibles par l'utilisateur.",
+          "Utiliser des solutions EDR/antivirus avec des capacités de détection comportementale pour identifier et bloquer l'exécution de charges utiles malveillantes via des fichiers LNK.",
+          "Auditer les systèmes pour détecter les fichiers LNK suspects qui pourraient utiliser ces techniques de 'spoofing'."
+        ],
+        "tags": [
+          "windows",
+          "lnk_files",
+          "spoofing",
+          "social_engineering",
+          "microsoft",
+          "threat_vector",
+          "apt",
+          "cybercrime",
+          "user_interaction",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-lnk-spoofing-issues-arent-vulnerabilities/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "OpenClaw: Die Real‑World‑Bestätigung der MCP‑Risikoachsen",
+        "description": "OpenClaw, également connu sous le nom de Clawbot ou Moltbot, est un framework d'agent IA auto-hébergé qui relie les canaux de chat à des capacités manuelles (exécution de commandes shell, accès aux fichiers, automatisation du navigateur). Des audits ont identifié des centaines de compétences malveillantes dans ClawHub, et une vulnérabilité de RCE en 1 clic (CVE-2026-25253) a été découverte, permettant l'exfiltration de jetons via Cross-Site WebSocket Hijacking. Des scans ont révélé plus de 21 000 instances OpenClaw accessibles publiquement et mal configurées, et des campagnes comme 'ClawHavoc' utilisent des scripts pour exécuter des charges utiles comme Atomic macOS Stealer.",
+        "threat_actor": "ClawHavoc",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1110.001 (Brute Force: Password Guessing)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1574 (Hijack Execution Flow)",
+          "T1003 (OS Credential Dumping)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "OpenClaw illustre la rapidité avec laquelle l'IA agentique peut transformer la productivité en une surface d'attaque pour la chaîne d'approvisionnement. Les accès standardisés aux outils, l'autonomie et les marchés ouverts créent de nouveaux vecteurs d'accès initial aux points de terminaison et aux réseaux. Les risques incluent l'empoisonnement des outils, l'injection de prompts, l'abus d'échantillonnage et les vulnérabilités liées aux mauvaises configurations, entraînant potentiellement l'exécution de code arbitraire et le vol de données sensibles.",
+        "recommandations": [
+          "Ne jamais utiliser OpenClaw sur des points de terminaison de production.",
+          "Si OpenClaw doit être utilisé, il doit être renforcé par l'isolement, le patch, la curation des compétences, l'audit et le principe du moindre privilège pour les outils.",
+          "Surveiller le marché ClawHub pour les compétences malveillantes et intégrer des services d'analyse de code comme VirusTotal Code Insight.",
+          "Assurer une configuration sécurisée des instances OpenClaw, en évitant l'exposition publique non sécurisée.",
+          "Mettre en œuvre une gouvernance organisationnelle pour l'utilisation des agents IA afin de réduire les risques de chaîne d'approvisionnement et d'abus logique."
+        ],
+        "tags": [
+          "openclaw",
+          "clawbot",
+          "moltbot",
+          "agentic_ai",
+          "rce",
+          "supply_chain",
+          "token_exfiltration",
+          "cross_site_websocket_hijacking",
+          "atomic_macos_stealer",
+          "threat_report"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/openclaw-die-real-world-bestaetigung-der-mcp-risikoachsen/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "State of Security Report | Recorded Future",
+        "description": "Les rapports 'State of Security' et 'Fragmentation Defined 2025's Threat Landscape' de Recorded Future analysent le paysage des menaces de 2025, caractérisé par la fragmentation géopolitique, l'évolution des opérations étatiques et des écosystèmes criminels. Les acteurs étatiques (Chine, Russie, Iran, Corée du Nord) se concentrent sur l'accumulation discrète d'accès (systèmes d'identité, cloud, périphériques) plutôt que sur des perturbations dramatiques. Les conflits (Israël-Iran, Inde-Pakistan, Thaïlande-Cambodge, Russie-Ukraine) ont des fronts numériques amplifiés par les hacktivistes et la désinformation. L'écosystème criminel s'est décentralisé, adoptant des modèles d'abonnement et des services spécialisés. L'IA a surtout augmenté la fraude et la manipulation plutôt que des attaques autonomes révolutionnaires.",
+        "threat_actor": "Chine, Russie, Iran, Corée du Nord (acteurs étatiques), RedMike (acteur sponsorisé par l'État chinois), groupes hacktivistes, Scattered LAPSUS$ Hunters, organisations criminelles transnationales chinoises",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1592 (Gather Victim Org Information)",
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071 (Application Layer Protocol)",
+          "T1090 (Proxy)",
+          "T1098 (Account Manipulation)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1583 (Develop Capabilities)"
+        ],
+        "analyse": "Le paysage des menaces est plus complexe et interconnecté, où les objectifs étatiques, les capacités criminelles et la technologie du secteur privé se renforcent mutuellement. La fragmentation réduit les délais d'alerte, car les adversaires sont souvent déjà présents dans les réseaux. L'IA amplifie les risques de fraude et de manipulation à grande échelle. La résilience organisationnelle est devenue primordiale face à cette convergence des menaces.",
+        "recommandations": [
+          "Prioriser le patch des appareils réseau mal surveillés, des appliances VPN et des systèmes périphériques.",
+          "Renforcer la détection des activités post-compromission pour anticiper les mouvements latéraux et les escalades de privilèges.",
+          "Améliorer les défenses contre le phishing et appliquer les règles Mark-of-the-Web pour les fichiers téléchargés.",
+          "Appliquer le principe du moindre privilège et durcir l'accès aux services de bureau à distance avec MFA.",
+          "Investir dans l'intelligence artificielle pour les défenses afin de détecter la désinformation et la fraude augmentées par l'IA.",
+          "Renforcer la surveillance de la chaîne d'approvisionnement criminelle décentralisée et des services spécialisés."
+        ],
+        "tags": [
+          "recorded_future",
+          "threat_landscape",
+          "geopolitics",
+          "state_sponsored",
+          "ransomware",
+          "ai_risk",
+          "supply_chain",
+          "espionage",
+          "hacktivism",
+          "cybercrime",
+          "disinformation",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/state-of-security",
+          "https://www.recordedfuture.com/blog/fragmentation-in-2025-what-it-means-for-2026"
+        ],
+        "date": "2026-02-13"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals a cybersecurity threat landscape characterized by the increasing integration of artificial intelligence by malicious actors, persistent geopolitical fragmentation, and the continuous adaptation of cybercriminal groups. Key threats include the use of AI to accelerate the attack lifecycle, particularly reconnaissance, sophisticated social engineering (AI-augmented phishing, 'ClickFix' techniques, malicious Outlook add-ins), and malware development (HONESTCUE, COINBAIT). AI model extraction attempts (distillation attacks) are also on the rise, highlighting an intellectual property risk. State-sponsored actors (China, Russia, Iran, North Korea) are focusing on covert accumulation of access to critical infrastructure (identity systems, cloud environments, edge devices) rather than immediate disruptions, creating a latent capacity for future espionage and disruption. Ransomware groups (Qilin, InterLock, Warlock) continue to evolve, adopting decentralized models and resilient criminal supply chains. Critical vulnerabilities, including actively exploited zero-days in major products like Apple, BeyondTrust, and Fortinet, remain prime entry points for attackers, while less complex but exploitable flaws (such as in Notepad++, SmarterMail, FileZen) are also being leveraged. Reliance on AI and third-party services, as well as neglect of fundamental security practices (API key leaks, weak SSH passwords), are creating new attack surfaces. In conclusion, the overall threat landscape is complex and constantly evolving, demanding increased vigilance, adaptive defense strategies, and serious consideration of AI's impact on both offensive and defensive capabilities.",
+      "date": "2026-02-13"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Qilin",
+        "secteur": "Energy",
+        "modop": "Ransomware attack and data exfiltration, targeting critical infrastructure. The group stole data from Romanian oil pipeline operator Conpet.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanias-oil-pipeline-operator-conpet-confirms-data-stolen-in-attack/",
+          "https://databreaches.net/2026/02/12/apollomd-reveals-that-626540-patients-were-affected-by-may-2025-cyberattack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Restaurant",
+        "modop": "Data breach via SSO abuse (Microsoft Entra) and vishing, exfiltrating millions of customer records.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "sso_abuse",
+          "vishing",
+          "credential_stuffing"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "InterLock",
+        "secteur": "Healthcare",
+        "modop": "Ransomware attack, exfiltration, and threat of publishing sensitive data. Targets the healthcare sector, causing service disruptions.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/kettering-adventist-health-now-notifying-patients-affected-by-may-2025-ransomware-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC6418",
+        "secteur": "Defense, Government (Ukraine)",
+        "modop": "Misuse of AI (Gemini) for targeted intelligence gathering, seeking sensitive account credentials and email addresses, followed by phishing campaigns.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "ai_misuse",
+          "reconnaissance",
+          "phishing",
+          "intelligence_gathering",
+          "ukraine",
+          "defense_sector"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Temp.HEX",
+        "secteur": "Government, Separatist Organizations (Pakistan)",
+        "modop": "PRC-based actor, uses AI (Gemini) to compile detailed information on specific individuals and collect operational and structural data on organizations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "intelligence_gathering",
+          "reconnaissance",
+          "pakistan"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT42",
+        "secteur": "Not specified, targets entities and business partners",
+        "modop": "Iranian government-backed actor, leverages generative AI models (Gemini) to significantly augment reconnaissance and targeted social engineering, including official email searches, credible pretext establishment, and translation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "iran_backed",
+          "ai_misuse",
+          "social_engineering",
+          "reconnaissance",
+          "phishing",
+          "malware_development"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC2970",
+        "secteur": "Defense, Cybersecurity",
+        "modop": "North Korean government-backed actor, focuses on defense targeting and impersonating corporate recruiters. Uses AI (Gemini) to synthesize OSINT and profile high-value targets for campaign planning and reconnaissance.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "north_korea_backed",
+          "ai_misuse",
+          "defense_targeting",
+          "impersonation",
+          "osint",
+          "reconnaissance"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT31",
+        "secteur": "Not specified, targets US entities",
+        "modop": "PRC-based actor, uses AI (Gemini) with a cybersecurity expert persona to automate vulnerability analysis and generate targeted testing plans, including RCE, WAF bypass, and SQL injection.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "vulnerability_analysis",
+          "rce",
+          "waf_bypass",
+          "sql_injection",
+          "reconnaissance"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC795",
+        "secteur": "Not specified",
+        "modop": "PRC-based actor, heavily relies on AI (Gemini) for code troubleshooting, research, and developing technical capabilities for intrusions, as well as creating an AI-integrated code auditing capability.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "prc_based",
+          "ai_misuse",
+          "coding",
+          "malware_development",
+          "code_auditing"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "APT41",
+        "secteur": "Not specified",
+        "modop": "PRC-based actor, leverages AI (Gemini) to accelerate the development and deployment of malicious tooling, including knowledge synthesis, real-time troubleshooting, and code translation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "prc_based",
+          "ai_misuse",
+          "malware_development",
+          "tooling",
+          "code_translation"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UNC5356",
+        "secteur": "Cryptocurrency, Financial Organizations",
+        "modop": "Financially motivated threat cluster, utilizes SMS and phone-based phishing campaigns. Involved in the construction of the COINBAIT phishing kit, likely accelerated by AI.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cybercrime",
+          "financially_motivated",
+          "phishing",
+          "smishing",
+          "vishing",
+          "ai_accelerated"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Storm-2477",
+        "secteur": "General (individuals, businesses)",
+        "modop": "Developer of the MaaS (Malware-as-a-Service) Lumma Stealer. Uses social engineering, fake cracked software, and fake CAPTCHA 'ClickFix' lures. Employs loaders like CastleLoader and rapidly adapts to law enforcement actions.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "maas",
+          "infostealer",
+          "social_engineering",
+          "clickfix",
+          "castleloader",
+          "malvertising"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187896/uncategorized/lummastealer-activity-spikes-post-law-enforcement-disruption/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "Storm-2603",
+        "secteur": "Email infrastructure, SMBs",
+        "modop": "China-based threat actor. Exploits CVE-2026-23760 vulnerability in SmarterMail servers to bypass authentication, deploy Warlock ransomware, and use the Velociraptor forensics tool for persistence and command execution.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "china_based",
+          "ransomware",
+          "warlock",
+          "vulnerability_exploitation",
+          "smartermail",
+          "living_off_the_land",
+          "velociraptor"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "SSHStalker",
+        "secteur": "Linux Servers",
+        "modop": "Botnet exploiting weak SSH passwords to compromise Linux servers. Uses tactics from 2009, IRC C2, and known malware like Tsunami and Keiten.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "linux_servers",
+          "ssh_bruteforce",
+          "irc_c2",
+          "tsunami",
+          "keiten"
+        ],
+        "sources": [
+          "https://securityonline.info/back-to-the-future-sshstalker-botnet-revives-2009-tactics-to-hijack-linux-servers/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Technology, Finance",
+        "modop": "Uses the advanced VoidLink framework to primarily target Linux systems. VoidLink is modular, on-demand for plugin creation, and designed for detection evasion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "voidlink",
+          "linux_systems",
+          "modular_malware",
+          "evasion"
+        ],
+        "sources": [
+          "https://blog.talosintelligence.com/hand-over-the-keys-for-shannons-shenanigans/"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Telecommunications",
+        "theme": "Communication blockade, state interference",
+        "description": "The Russian government is intensifying its efforts to block WhatsApp and Telegram in the country, citing the fight against crime and fraud. This measure is part of a tightening control over communication platforms not subject to its authority, with Meta (WhatsApp's parent company) designated as an 'extremist' entity since 2022.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "communication_blockade",
+          "censorship",
+          "whatsapp",
+          "telegram",
+          "roskomnadzor"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/russia-tries-to-block-whatsapp-telegram-in-communication-blockade/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Government, Defense",
+        "theme": "Nuclear disarmament, disinformation",
+        "description": "The expiration of the New START Treaty on February 6, 2026, is accompanied by pro-Kremlin disinformation campaigns aimed at minimizing Moscow's responsibility, blaming external actors, and promoting the idea of a new nuclear multipolarity. Russia has progressively undermined the treaty by suspending mutual inspections and its participation, while conducting FIMI (Foreign Information Manipulation and Interference) campaigns accusing the West of provoking a nuclear confrontation.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "new_start_treaty",
+          "nuclear_arms_control",
+          "disinformation",
+          "fimi",
+          "propaganda"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/as-new-start-ends-disinformation-about-it-continues/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Government, Defense, Economy",
+        "theme": "Domestic and foreign policy, international relations",
+        "description": "Following Sanae Takaichi's victory in the February 9, 2026, legislative elections, Japan is embarking on a neo-conservative policy. Priorities include economic recovery, strengthening defense (military budget to 2% of GDP by March 2026, cyber defense, space, long-range strikes), and a firm stance against China, particularly regarding Taiwan. Relations with the United States are reaffirmed, despite uncertainty due to rapprochements between Washington and Beijing.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "japan",
+          "china",
+          "united_states",
+          "defense_policy",
+          "taiwan",
+          "economic_policy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/japon-ce-que-nous-dit-la-victoire-de-la-premiere-ministre-takaichi-aux-elections-legislatives/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Energy, Industry, Government",
+        "theme": "Energy dependence, economic warfare",
+        "description": "Italy faces strong energy dependence, transforming the issue from a 'political' (suppliers) to a 'geostrategic' (obligatory routes) dependence. Maritime chokepoints like the Strait of Hormuz, Bab el-Mandeb, and Suez, as well as land corridors under influence (Turkey, Russia), are major pressure points that can be exploited in economic warfare. This situation weakens Italian competitiveness and conditions its political freedom.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "italy",
+          "energy_security",
+          "economic_warfare",
+          "supply_chain",
+          "strait_of_hormuz",
+          "suez_canal",
+          "russia",
+          "turkey"
+        ],
+        "sources": [
+          "https://www.epge.fr/energie-et-souverainete-italiennes-quand-la-dependance-devient-une-arme/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Government, Intelligence, Defense",
+        "theme": "Espionage, recruitment",
+        "description": "The CIA released a video in Chinese to recruit spies in China, targeting Chinese military officers, diplomats, economists, scientists, and high-tech experts. This initiative, which risks escalating tensions with Beijing, aims to obtain information on Chinese leaders and high-ranking officials.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "united_states",
+          "espionage",
+          "intelligence_gathering",
+          "recruitment"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/02/12/la-cia-diffuse-une-video-destinee-a-recruter-des-espions-en-chine_6666550_3210.html"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Energy",
+        "victime": "Conpet S.A. (Romania's national oil pipeline operator)",
+        "description": "Romania's national oil pipeline operator, Conpet S.A., confirmed data exfiltration following an attack by the Qilin ransomware group. Stolen data includes personal information (names, postal addresses, personal identification numbers) and bank account numbers, with some documents marked confidential and dating back to November 2025.",
+        "tags": [
+          "violation",
+          "breach",
+          "energy",
+          "conpet",
+          "romania",
+          "qilin",
+          "ransomware",
+          "data_exfiltration",
+          "personal_data",
+          "bank_accounts"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/romanias-oil-pipeline-operator-conpet-confirms-data-stolen-in-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido (Netherlands)",
+        "description": "Dutch telecommunications provider Odido suffered a cyberattack exposing personal data of 6.2 million customers. Compromised information includes names, addresses, phone numbers, email addresses, bank account details (IBANs), dates of birth, and passport/ID numbers. Unauthorized access to the customer contact system was blocked.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "odido",
+          "netherlands",
+          "cyberattack",
+          "personal_data",
+          "financial_data",
+          "identity_documents"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/odido-data-breach-exposes-personal-info-of-62-million-customers/",
+          "https://securityaffairs.com/187927/uncategorized/odido-confirms-massive-breach-6-2-million-customers-impacted.html",
+          "https://infosec.exchange/@beyondmachines1/116062505688477176",
+          "https://mastodon.thenewoil.org/@thenewoil/116062499890493982"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "ApolloMD (United States)",
+        "description": "A May 2025 cyberattack on ApolloMD, a US-based healthcare services company, exposed the personal data of over 626,000 patients. Compromised information, varying by individual, includes names, birth dates, addresses, diagnoses, treatment details, insurance data, and in some cases, Social Security numbers.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "apollomd",
+          "united_states",
+          "cyberattack",
+          "patient_data",
+          "phi",
+          "ssn"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187921/data-breach/apollomd-data-breach-impacts-626540-people.html",
+          "https://databreaches.net/2026/02/12/apollomd-reveals-that-626540-patients-were-affected-by-may-2025-cyberattack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Various",
+        "victime": "Infostealer malware users",
+        "description": "An unprotected database containing nearly 150 million username/password combinations was found publicly accessible. This data primarily originates from infostealer malware (historical logs) and includes approximately 48 million Gmail accounts, posing a high risk of credential stuffing and subsequent attacks. The host took the data offline after notification.",
+        "tags": [
+          "violation",
+          "breach",
+          "credential_leak",
+          "infostealer",
+          "gmail",
+          "credential_stuffing",
+          "data_exposure"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Restaurant",
+        "victime": "Panera Bread (United States)",
+        "description": "The ShinyHunters group claimed responsibility for an intrusion into Panera Bread's system in January 2026, asserting over 14 million records were compromised (later revised to 5.1 million unique accounts by 'Have I Been Pwned'). Access was reportedly gained via SSO (Microsoft Entra) abuse and vishing.",
+        "tags": [
+          "violation",
+          "breach",
+          "restaurant",
+          "panera_bread",
+          "shinyhunters",
+          "sso_abuse",
+          "vishing",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Online Gaming",
+        "victime": "NationStates (government simulation game)",
+        "description": "The browser-based government simulation game, NationStates, confirmed a data incident after a player exploited a critical RCE vulnerability, copying source code and user data from the production server. Exposed information includes email addresses, MD5 hashed passwords (considered insecure), login IP addresses, browser user-agent strings, and potentially internal 'Telegram' messages.",
+        "tags": [
+          "violation",
+          "breach",
+          "online_gaming",
+          "nationstates",
+          "rce",
+          "source_code_leak",
+          "user_data",
+          "md5_passwords",
+          "telegram_messages"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/weitere-news-im-februar-2/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Kettering Adventist Health (Ohio, United States)",
+        "description": "Kettering Adventist Health was hit by a ransomware attack in May 2025 by the InterLock group. Attackers exfiltrated approximately 950 GB of data (732,490 files), potentially including names, Social Security numbers, financial, medical, treatment, insurance, billing, and user credential information.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "kettering_adventist_health",
+          "interlock",
+          "ransomware",
+          "data_exfiltration",
+          "phi",
+          "ssn",
+          "financial_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/kettering-adventist-health-now-notifying-patients-affected-by-may-2025-ransomware-attack/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Travel Services, Aviation",
+        "victime": "JAL Baggage delivery service (Japan Airlines)",
+        "description": "Unauthorized access to JAL's baggage delivery service potentially led to the leak of booking and personal information for approximately 28,000 individuals.",
+        "tags": [
+          "violation",
+          "breach",
+          "aviation",
+          "travel_services",
+          "jal",
+          "japan_airlines",
+          "unauthorized_access",
+          "personal_data",
+          "booking_information"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/jal-baggage-delivery-service-breach-possible-leak-of-28k-booking-and-shipping-records/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Nippon Medical School Musashi Kosugi Hospital (Japan)",
+        "description": "Nippon Medical School Musashi Kosugi Hospital was hit by a ransomware cyberattack, potentially leading to the leak of 130,000 personal information records. The attackers issued a claim of responsibility for the attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "nippon_medical_school",
+          "japan",
+          "ransomware",
+          "personal_data",
+          "cyberattack"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/nippon-medical-school-musashi-kosugi-hospital-hit-by-ransomware-possible-130k-data-breach/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "McLaren Northern Michigan (hospital in the United States)",
+        "description": "A Michigan hospital, potentially identified as McLaren Northern Michigan, experienced a privacy breach where employees accessed the personal information of a celebrity patient (Josh Clarke) and requested selfies during his treatment. This indicates a persistent problem of insider snooping into celebrity records, despite software and auditing protections designed to prevent such actions.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "mclaren_northern_michigan",
+          "united_states",
+          "privacy_violation",
+          "insider_threat",
+          "patient_records"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/12/its-2026-but-hospitals-still-havent-prevented-snooping-in-celebrities-records/?pk_campaign=feed&pk_kwd=its-2026-but-hospitals-still-havent-prevented-snooping-in-celebrities-records"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support and Privileged Remote Access",
+        "description": "Critical pre-authentication Remote Code Execution (RCE) vulnerability, exploited after a PoC was published. It allows an unauthenticated attacker to execute operating system commands through specially crafted client requests.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "pre_authentication",
+          "beyondtrust",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": "9.1",
+        "product": "Fortinet FortiClientEMS (version 7.4.4)",
+        "description": "Critical unauthenticated Remote Code Execution (RCE) vulnerability via the web interface, caused by SQL injection. Allows a remote attacker to send crafted HTTP requests to inject SQL commands and achieve arbitrary code execution on the underlying server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "fortinet",
+          "forticlientems",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/forticlientems-critical-vulnerability"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21510",
+        "cvss": "8.8",
+        "product": "Microsoft Windows Shell",
+        "description": "Security feature bypass allowing an attacker to bypass user-facing security protections (Windows SmartScreen) when a user opens attacker-controlled content (malicious link or .LNK file).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "security_bypass",
+          "microsoft",
+          "windows_shell",
+          "smartscreen"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": "8.8",
+        "product": "Microsoft MSHTML (Internet Explorer/Trident)",
+        "description": "Security feature bypass allowing an attacker to bypass built-in security checks over a network when a user interacts with attacker-supplied content (malicious file or link invoking MSHTML rendering paths).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "security_bypass",
+          "microsoft",
+          "mshtml",
+          "internet_explorer",
+          "trident"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2024-43468",
+        "cvss": "N/A",
+        "product": "Microsoft Configuration Manager",
+        "description": "SQL Injection vulnerability allowing an unauthenticated attacker to send specially crafted requests to trigger unsafe processing and execute commands on the server or underlying database.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "microsoft",
+          "configuration_manager",
+          "rce",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2025-15556",
+        "cvss": "N/A",
+        "product": "Notepad++ (versions before 8.8.9)",
+        "description": "Critical code execution vulnerability exploited in WinGUp's updates lacking integrity checks. An attacker can intercept update traffic to run a malicious installer, allowing arbitrary code execution with user privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "code_execution",
+          "notepad++",
+          "supply_chain",
+          "integrity_check_bypass",
+          "mitm",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://cybersecuritynews.com/notepad-code-execution-vulnerability/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "N/A",
+        "product": "Apple products (iOS, iPadOS, macOS, watchOS, tvOS, visionOS)",
+        "description": "Actively exploited zero-day in Apple's Dynamic Link Editor (dyld), caused by a memory corruption issue. Allows an attacker with memory write capability to execute arbitrary code on vulnerable devices. Part of a sophisticated attack targeting specific individuals.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "zero_day",
+          "rce",
+          "memory_corruption",
+          "apple",
+          "ios",
+          "macos",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://securityaffairs.com/187890/security/apple-fixed-first-actively-exploited-zero-day-in-2026.html",
+          "https://socprime.com/blog/cve-2026-20700-vulnerability/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-1603",
+        "cvss": "8.6",
+        "product": "Ivanti Endpoint Manager (versions prior to 2024 SU4 SR1)",
+        "description": "High-severity authentication bypass vulnerability allowing an unauthenticated remote attacker to access and steal sensitive login information. A stored XSS vulnerability is also present.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "ivanti",
+          "endpoint_manager",
+          "xss",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187882/uncategorized/multiple-endpoint-manager-bugs-patched-by-ivanti-including-remote-auth-bypass/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-25108",
+        "cvss": "8.8",
+        "product": "FileZen",
+        "description": "OS command injection vulnerability. A logged-in user can send a specially crafted HTTP request to execute an arbitrary OS command when the 'Antivirus Check' option is enabled.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "os_command_injection",
+          "filezen",
+          "authenticated_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25108"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2020-37167",
+        "cvss": "9.8",
+        "product": "ClamAV ClamBC (versions <= 0.102.0)",
+        "description": "Bytecode interpreter vulnerability allowing attackers to manipulate bytecode function names and exploit weak input validation to potentially execute malicious bytecode or cause unexpected behavior in the ClamAV engine.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "bytecode_manipulation",
+          "clamav",
+          "code_execution",
+          "weak_input_validation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2020-37167"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25337",
+        "cvss": "9.8",
+        "product": "OwnCloud 8.1.8",
+        "description": "Username enumeration vulnerability allowing remote attackers to discover user accounts by manipulating the share.php endpoint.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "username_enumeration",
+          "owncloud",
+          "information_disclosure",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25337"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25336",
+        "cvss": "8.4",
+        "product": "SpotAuditor 5.3.2",
+        "description": "Local buffer overflow vulnerability in the 'Base64 Encrypted Password' tool allowing arbitrary code execution via a crafted malicious Base64 payload, triggering an SEH overwrite and shellcode execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "spotauditor",
+          "local_exploitation",
+          "seh_overwrite"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25336"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25335",
+        "cvss": "8.8",
+        "product": "PRO-7070 Hazır Profesyonel Web Sitesi 1.0",
+        "description": "Authentication bypass vulnerability in the administration panel login page, allowing unauthorized access to the administrative interface by using '=' 'or' as both username and password.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "web_application",
+          "admin_panel",
+          "pro_7070"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25335"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25333",
+        "cvss": "8.7",
+        "product": "Bullwark Momentum Series JAWS 1.0",
+        "description": "Directory traversal vulnerability allowing unauthenticated attackers to access system files by manipulating HTTP request paths (e.g., '/etc/passwd').",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "directory_traversal",
+          "unauthenticated",
+          "information_disclosure",
+          "bullwark_jaws"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25333"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2019-25332",
+        "cvss": "8.4",
+        "product": "FTP Commander Pro 8.03",
+        "description": "Local stack overflow vulnerability allowing arbitrary code execution by overwriting the EIP register through custom command input, demonstrating RCE potential.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_overflow",
+          "rce",
+          "ftp_commander_pro",
+          "local_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2019-25332"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-0969",
+        "cvss": "N/A",
+        "product": "Next-Mdx-Remote (versions 4.3.0 through 5.0.0)",
+        "description": "Critical vulnerability allowing arbitrary code execution on React servers that render untrusted MDX content server-side (SSR). Attackers can inject malicious code like eval(), Function(), or require().",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "next_mdx_remote",
+          "server_side_rendering",
+          "code_injection"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/vulnerability-in-next-mdx-remote/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "N/A",
+        "product": "SmarterMail servers",
+        "description": "Critical vulnerability allowing an attacker to bypass authentication and gain control of the server. Actively exploited by Storm-2603 to deploy Warlock ransomware.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "server_compromise",
+          "smartermail",
+          "ransomware",
+          "exploited_in_the_wild"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": "N/A",
+        "product": "OpenClaw (versions prior to v2026.1.29)",
+        "description": "One-click RCE vulnerability via Cross-Site WebSocket Hijacking, caused by a coupling error between the user interface and the gateway, enabling token exfiltration and command execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "cross_site_websocket_hijacking",
+          "token_exfiltration",
+          "openclaw",
+          "agentic_ai"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/openclaw-die-real-world-bestaetigung-der-mcp-risikoachsen/"
+        ],
+        "date": "2026-02-13"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Abandoned Outlook Add-in “AgreeTo” Steals 4,000 Credentials",
+        "description": "Researchers discovered a malicious Microsoft Outlook add-in, 'AgreeTo', that siphoned over 4,000 Microsoft credentials, credit card numbers, and banking security answers. The attack exploited an abandoned add-in in the Office Add-in Store, where attackers claimed the legitimate app's expired Vercel URL and deployed a phishing kit. This allowed the phishing kit to load within a trusted Outlook process, bypassing traditional defenses.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "vercel.app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1078 (Valid Accounts)",
+          "T1550.002 (Use Alternate Authentication Material: Steal or Forge Authentication Certificates)",
+          "T1189 (Drive-by Compromise)"
+        ],
+        "analyse": "This incident highlights an architectural weakness in how modern add-ins function, where an approved application can become malicious if its backend is compromised. The attack bypasses email gateways, endpoint protection, and URL filters, exposing organizations to significant risks of credential theft and account compromise, with potential impact on email communication confidentiality and integrity.",
+        "recommandations": [
+          "Educate users about the risks of add-ins, even from official stores, and the signs of spoofed login pages.",
+          "Regularly assess installed add-ins for changes in behavior or compromised backend URLs.",
+          "Implement strong authentication (MFA) for all accounts, especially those with access to enterprise add-ins.",
+          "Monitor logs for cloud services and add-ins to detect suspicious activity or failed login attempts.",
+          "Add-in developers must secure their backend URLs and implement domain rotation mechanisms if the project is abandoned."
+        ],
+        "tags": [
+          "outlook",
+          "add_in",
+          "phishing",
+          "credential_theft",
+          "microsoft",
+          "supply_chain",
+          "social_engineering",
+          "bypass",
+          "vercel",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/inside-job-abandoned-outlook-add-in-agreeto-steals-4000-credentials/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Back to the Future: SSHStalker Botnet Revives 2009 Tactics to Hijack Linux Servers",
+        "description": "The previously undocumented SSHStalker botnet was discovered, using a mix of old tactics (IRC C2) and modern automation to compromise Linux servers. It exploits weak SSH passwords to install a suite of backdoors, including C-based bot variants, Perl scripts, and known malware families like Tsunami and Keiten. The operator, likely mid-tier and based in Romania, prioritizes scalability and repeatability over stealth.",
+        "threat_actor": "SSHStalker (Botnet operator)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1110.001 (Brute Force: Password Guessing)",
+          "T1219 (Remote Access Software)",
+          "T1543.002 (Create or Modify System Process: Systemd Service)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1573 (Encrypted Channel)"
+        ],
+        "analyse": "This botnet demonstrates that proven techniques, even old ones, remain effective against misconfigured systems or those with weak security practices. The use of IRC for C2, though outdated, offers resilience and redundancy. The impact is widespread compromise of Linux servers, potentially used for other malicious activities (DDoS, cryptomining, hosting malicious content).",
+        "recommandations": [
+          "Enforce a strong, unique password policy for all SSH accounts, ideally with SSH key authentication.",
+          "Implement detection and prevention mechanisms for SSH brute-force attempts (e.g., Fail2ban).",
+          "Monitor network traffic to detect IRC communications or other unconventional C2.",
+          "Conduct regular audits of Linux server configurations and internet-exposed services.",
+          "Utilize Linux EDR/XDR solutions to detect suspicious script executions and malware installations."
+        ],
+        "tags": [
+          "botnet",
+          "linux",
+          "ssh",
+          "brute_force",
+          "irc",
+          "malware",
+          "tsunami",
+          "keiten",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/back-to-the-future-sshstalker-botnet-revives-2009-tactics-to-hijack-linux-servers/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Critical BeyondTrust RCE flaw now exploited in attacks, patch now",
+        "description": "A critical pre-authentication Remote Code Execution (RCE) vulnerability, CVE-2026-1731 (CVSS 9.9), in BeyondTrust Remote Support and Privileged Remote Access appliances is now being exploited. A PoC was published online, leading to active attacks targeting exposed BeyondTrust portals to execute commands on vulnerable systems.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1213 (Exploitation for Credential Access)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "This vulnerability poses an extremely high risk due to its criticality (pre-authentication RCE) and active exploitation, potentially leading to full system compromise, unauthorized access, data exfiltration, and service disruptions. The impact is particularly severe for organizations using these products for remote support or privileged access.",
+        "recommandations": [
+          "Immediately apply patches provided by BeyondTrust for Remote Support versions 25.3.1 and earlier, and Privileged Remote Access versions 24.3.4 and earlier.",
+          "Consider all unpatched devices as potentially compromised and launch forensic investigations if portals are exposed.",
+          "Monitor logs for suspicious requests targeting BeyondTrust portals.",
+          "Restrict network access to BeyondTrust appliances to authorized IP addresses only."
+        ],
+        "tags": [
+          "vulnerability",
+          "rce",
+          "beyondtrust",
+          "exploited_in_the_wild",
+          "patch_management",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/critical-beyondtrust-rce-flaw-now-exploited-in-attacks-patch-now/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Detecting OpenClaw/Clawbot with SentinelOne: The Challenge of Blocking",
+        "description": "OpenClaw (aka Clawbot or Moltbot) is an AI-powered autonomous agent running on employees' machines, acting as an AI assistant capable of interacting with the computer, executing commands, and accessing files. Blocking it with EDRs like SentinelOne is complex because it uses a Node.js process, which quarantining could break other legitimate dependent applications. The article shares a remediation script to kill processes, remove the application, and clean user data.",
+        "threat_actor": "OpenClaw (Clawbot, Moltbot)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.006 (Command and Scripting Interpreter: Python)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript/JScript)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1070.004 (Indicator Removal: File Deletion)"
+        ],
+        "analyse": "OpenClaw represents a new generation of agentic AI-based threats, blurring the lines between legitimate and malicious tools. The challenge of detection and blocking lies in its use of common system processes, making traditional EDR approaches potentially destructive to systems. This underscores the need for more contextual and behavioral security solutions for AI threats.",
+        "recommandations": [
+          "Evaluate the risks of running autonomous AI agents on employee workstations and restrict their deployment.",
+          "Implement application control policies to limit the execution of Node.js processes or other script interpreters to legitimate use cases.",
+          "Use targeted remediation scripts to remove OpenClaw without impacting legitimate applications dependent on Node.js.",
+          "Enhance endpoint behavioral monitoring to detect unusual activities initiated by AI agents.",
+          "Educate users about the dangers of unapproved AI tools and the risks of executing unverified commands."
+        ],
+        "tags": [
+          "openclaw",
+          "clawbot",
+          "moltbot",
+          "ai_agent",
+          "edr",
+          "sentinelone",
+          "node.js",
+          "dependency_issue",
+          "remediation_script",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/detecting-openclaw-clawbot-with-sentinelone-the-challenge-of-blocking"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Email Under Siege: Storm-2603 Exploits SmarterMail to Deploy Warlock Ransomware",
+        "description": "The China-based Storm-2603 group is actively exploiting a critical vulnerability (CVE-2026-23760) in SmarterMail servers to bypass authentication and gain server control. After resetting administrator passwords, they use legitimate software functions ('living off the land') to deploy Velociraptor for persistence and Warlock ransomware deployment. This campaign marks an escalation of attacks against email infrastructure.",
+        "threat_actor": "Storm-2603",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Valid Accounts: Local Accounts)",
+          "T1546.008 (Event Triggered Execution: Accessibility Features)",
+          "T1053 (Scheduled Task/Job)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1486 (Data Encrypted for Impact)",
+          "T1490 (Inhibit System Recovery)"
+        ],
+        "analyse": "The attack demonstrates tactical sophistication where the threat actor abuses legitimate tools to achieve their objectives, making detection more challenging. Compromise of email servers is particularly impactful, as it can lead to ransomware, data leaks, and the use of compromised servers for further attacks, with severe consequences for business continuity and reputation.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2026-23760 on all SmarterMail servers.",
+          "Audit logs to detect any administrator password resets or suspicious activity on SmarterMail servers.",
+          "Implement process monitoring to detect unexpected execution of forensic tools like Velociraptor on servers.",
+          "Strengthen access controls and segment networks to limit lateral movement in case of compromise.",
+          "Perform regular and isolated backups to enable data recovery in the event of a ransomware attack."
+        ],
+        "tags": [
+          "storm_2603",
+          "smartermail",
+          "ransomware",
+          "warlock",
+          "vulnerability_exploitation",
+          "authentication_bypass",
+          "living_off_the_land",
+          "velociraptor",
+          "china_based",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityonline.info/email-under-siege-storm-2603-exploits-smartermail-to-deploy-warlock-ransomware/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "February 2026 Microsoft updates include six exploited flaws",
+        "description": "Microsoft's February 2026 updates address 59 vulnerabilities, including six confirmed exploited in the wild. These flaws enable SmartScreen bypass (CVE-2026-21510, CVSS 8.8), legacy MSHTML abuse (CVE-2026-21513, CVSS 8.8), privilege escalation to SYSTEM (CVE-2026-21533, CVE-2026-21525), and local denial of service. Exploitations often require user interaction or existing access, highlighting the risk of privilege escalation and the need for rapid patching.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1203 (Exploitation for Client Execution)",
+          "T1566 (Phishing)",
+          "T1059.005 (Command and Scripting Interpreter: PowerShell)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1548 (Abuse Elevation Control Mechanism)"
+        ],
+        "analyse": "The presence of six actively exploited flaws, including security bypasses and privilege escalations, indicates that attackers are targeting common weaknesses in Windows and Office environments. The user interaction required for some exploits underscores the importance of social engineering. Privilege escalation exposes systems to increased lateral movement and deeper compromises, especially on RDS servers and VDI environments.",
+        "recommandations": [
+          "Prioritize applying Microsoft's February 2026 patches for all exploited vulnerabilities, focusing on Windows and Office environments.",
+          "Strengthen phishing defenses and apply Microsoft Defender Attack Surface Reduction (ASR) rules to block risky behaviors (e.g., execution of shortcut files from user-writable locations).",
+          "Disable or tightly restrict legacy components (MSHTML, Internet Explorer mode) that expand the attack surface.",
+          "Enforce least privilege principles and harden Remote Desktop Services (RDS) access with Network-Level Authentication (NLA) and multifactor authentication (MFA)."
+        ],
+        "tags": [
+          "microsoft",
+          "patch_tuesday",
+          "vulnerabilities",
+          "exploited_in_the_wild",
+          "smartscreen",
+          "mshtml",
+          "privilege_escalation",
+          "windows",
+          "office",
+          "threat_report"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/february-2026-microsoft-updates"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Fortinet fixes a critical flaw in FortiClientEMS",
+        "description": "Fortinet patched a critical vulnerability (CVE-2026-21643, CVSS 9.1) in FortiClientEMS 7.4.4. This flaw allows unauthenticated Remote Code Execution (RCE) via the web interface due to SQL injection. Exposed management servers should be upgraded immediately to 7.4.5 or later. Compromise of this server can translate directly into broad endpoint and identity compromise.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1505 (Server Software Component)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)"
+        ],
+        "analyse": "This vulnerability is particularly dangerous as it targets a centralized management system (FortiClientEMS) with a high CVSS score and requires no authentication. Exploitation can lead to administrative control over endpoints, integration with directory services, and other infrastructure, resulting in a broad impact on the client environment, including loss of telemetry and audit visibility. Exposed management services significantly increase the risk.",
+        "recommandations": [
+          "Immediately update FortiClientEMS 7.4.4 to version 7.4.5 or later.",
+          "Reduce exposure of management interfaces by limiting network access and using perimeter security measures.",
+          "Monitor network traffic to detect unusual requests to FortiClientEMS management interfaces.",
+          "Implement monitoring of unexpected process activity on servers and anomalous configuration pushes originating from FortiClientEMS."
+        ],
+        "tags": [
+          "fortinet",
+          "forticlientems",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "unauthenticated",
+          "management_server",
+          "critical_vulnerability",
+          "threat_report"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/forticlientems-critical-vulnerability"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Google Takeout: The Quiet Data Exit Nobody Talks About",
+        "description": "Google Takeout is an underestimated data exfiltration path in Google Workspace, allowing users to download their own data. From a security and forensics perspective, it is a built-in data export mechanism that works too well. It is not malware, but a legitimate feature that can be misused for massive data leaks, offering a discreet and potentially undetectable way to exfiltrate sensitive information.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1020 (Automated Exfiltration)",
+          "T1074.001 (Data Staged: Local Data Staging)"
+        ],
+        "analyse": "The risk associated with Google Takeout lies in its status as a legitimate and ubiquitous tool, making it difficult to block without impacting productivity. It can be exploited by malicious insiders or external actors who have compromised an account to exfiltrate huge volumes of data without triggering traditional security alerts. This represents a significant gap in data exfiltration protection for organizations using Google Workspace.",
+        "recommandations": [
+          "Implement increased monitoring of data export activities via Google Takeout for high-risk accounts or unusual data volumes.",
+          "Strengthen authentication and access controls for Google Workspace accounts, including MFA.",
+          "Use Data Loss Prevention (DLP) solutions configured to detect attempts to exfiltrate sensitive data through legitimate channels like Google Takeout.",
+          "Educate employees about the risks of Google Takeout misuse and corporate policies regarding data export."
+        ],
+        "tags": [
+          "google_takeout",
+          "data_exfiltration",
+          "google_workspace",
+          "insider_threat",
+          "cloud_security",
+          "dlp",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/google-takeout-the-quiet-data-exit-nobody-talks-about"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "description": "The Google Threat Intelligence Group (GTIG) report highlights the increasing integration of AI by threat actors to accelerate the attack lifecycle. Trends include rising model extraction (distillation) attacks, AI-augmented reconnaissance and social engineering (hyper-personalized phishing) by state actors (UNC6418, Temp.HEX, APT42, UNC2970), AI-assisted malicious tool development (APT31, UNC795, APT41, APT42), experimental malware (HONESTCUE), and AI-generated phishing kits (COINBAIT). The underground market for AI services (Xanthorox) and the abuse of public sharing features of AI services for 'ClickFix' campaigns are also documented.",
+        "threat_actor": "UNC6418, Temp.HEX, APT42, UNC2970, APT31, UNC795, APT41, HONESTCUE, UNC5356 (COINBAIT), Xanthorox",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://www.virustotal.com/gui/collection/69f762800d3513e19acb8fa34895a46a137168%201370417db5a1db6ee9acad3f28",
+            "https://www.virustotal.com/gui/collection/0bfe8d133848734d730a219abd09a8404f47e4%20b446974be7ddcd288255ef1bb0",
+            "https://www.virustotal.com/gui/collection/dfd93a4d19773adacd2140f49ef12a7f33613f560cc7609638becac2d9c86900/iocs",
+            "https://www.virustotal.com/gui/collection/e72e3856e4c780078ba59c0a639b915fcab473e88f4701e16b36024d3d8c1578/summary"
+          ]
+        },
+        "mitre_ttps": [
+          "T1592 (Gather Victim Org Information)",
+          "T1566 (Phishing)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1583 (Develop Capabilities)",
+          "T1588 (Obtain Capabilities)",
+          "T1059.007 (Command and Scripting Interpreter: JavaScript/JScript)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1078 (Valid Accounts)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "AI is becoming a force multiplier for attackers, lowering entry barriers and increasing campaign effectiveness. The threat is not so much autonomous attacks as it is the augmentation of the speed, cost, and credibility of deception. The misuse of legitimate AI services and the development of AI-based malicious tools demand proactive defenses, AI security frameworks, and vigilance against new TTPs.",
+        "recommandations": [
+          "Monitor LLM API access for extraction or distillation patterns.",
+          "Strengthen anti-phishing defenses against hyper-personalized lures and trust-building techniques.",
+          "Implement detection and blocking systems for AI-integrated malware, such as HONESTCUE, and phishing kits like COINBAIT.",
+          "Educate users to identify 'ClickFix' campaigns that abuse public AI services to distribute malware.",
+          "Secure AI service API keys, as they are a major target in underground markets.",
+          "Develop network detection rules to alert on traffic to BaaS (Backend-as-a-Service) platforms originating from uncategorized or newly registered domains."
+        ],
+        "tags": [
+          "ai",
+          "threat_actors",
+          "apt",
+          "phishing",
+          "malware",
+          "social_engineering",
+          "reconnaissance",
+          "model_extraction",
+          "agentic_ai",
+          "llm",
+          "ai_misuse",
+          "threat_report"
+        ],
+        "sources": [
+          "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "LummaStealer activity spikes post-law enforcement disruption",
+        "description": "LummaStealer, a MaaS (Malware-as-a-Service) infostealer, saw a sharp increase in activity after law enforcement takedowns in 2025. The malware is distributed via social engineering (fake cracked software, fake CAPTCHA 'ClickFix' alerts, bogus Steam updates) and uses changing loaders like CastleLoader. Shared infrastructure suggests coordination between CastleLoader and Lumma operations. LummaStealer targets credentials, browser sessions, financial information, and cryptocurrency wallets.",
+        "threat_actor": "Storm-2477 (Lumma Stealer developer), Octo Tempest, Storm-1607, Storm-1113, Storm-1674",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1078 (Valid Accounts)",
+          "T1550 (Use Alternate Authentication Material)",
+          "T1003 (OS Credential Dumping)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "LummaStealer's resilience after law enforcement actions demonstrates the adaptability of the MaaS cybercrime ecosystem. Its reliance on social engineering and flexible loaders makes it difficult to disrupt with traditional technical defenses. The impact is significant, ranging from credential theft to fraud, identity theft, and blackmail, affecting a wide range of victims.",
+        "recommandations": [
+          "Enhance user training to recognize social engineering attacks, including fake CAPTCHAs and fraudulent software updates.",
+          "Implement Endpoint Detection and Response (EDR) solutions capable of detecting in-memory loaders and suspicious behaviors, such as CastleLoader.",
+          "Apply robust security controls for the protection of browser sessions, cryptocurrency wallets, and financial information.",
+          "Monitor software distribution platforms for the presence of malicious cracked software.",
+          "Utilize YARA rules or other signatures to detect LummaStealer and CastleLoader activity."
+        ],
+        "tags": [
+          "lummastealer",
+          "infostealer",
+          "maas",
+          "social_engineering",
+          "clickfix",
+          "castleloader",
+          "cybercrime",
+          "law_enforcement",
+          "evasion",
+          "threat_report"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187896/uncategorized/lummastealer-activity-spikes-post-law-enforcement-disruption/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "Microsoft: New Windows LNK spoofing issues aren't vulnerabilities",
+        "description": "A security researcher revealed multiple issues in Windows LNK shortcut files that allow malicious payload deployment via path spoofing. Microsoft declined to classify these techniques as security vulnerabilities, arguing they require user interaction and do not breach security boundaries, despite similar techniques (CVE-2025-9491) having been widely exploited by APT and cybercrime groups.",
+        "threat_actor": "Evil Corp, Bitter, APT37, APT43 (Kimsuky), Mustang Panda, SideWinder, RedHotel, Konni (mentioned for CVE-2025-9491)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1566 (Phishing)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1059.006 (Command and Scripting Interpreter: PowerShell)"
+        ],
+        "analyse": "Despite Microsoft's stance, these LNK spoofing techniques are practical and effective attack vectors, as proven by past and ongoing exploitation of similar flaws. They allow attackers to hide malicious executables behind seemingly harmless icons or descriptions, deceiving both users and security professionals. This creates a disconnect between the vendor's perception of risk and the reality of attacker exploitation.",
+        "recommandations": [
+          "Educate users about the dangers of LNK files from unknown sources, even if they appear harmless.",
+          "Implement Mark-of-the-Web policies for downloaded files and ASR rules to block shortcut execution from user-writable directories.",
+          "Use EDR/antivirus solutions with behavioral detection capabilities to identify and block malicious payload execution via LNK files.",
+          "Audit systems to detect suspicious LNK files that might use these spoofing techniques."
+        ],
+        "tags": [
+          "windows",
+          "lnk_files",
+          "spoofing",
+          "social_engineering",
+          "microsoft",
+          "threat_vector",
+          "apt",
+          "cybercrime",
+          "user_interaction",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-lnk-spoofing-issues-arent-vulnerabilities/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "OpenClaw: Die Real‑World‑Bestätigung der MCP‑Risikoachsen",
+        "description": "OpenClaw, also known as Clawbot or Moltbot, is a self-hosted AI agent framework that links chat channels to 'manual' capabilities (shell command execution, file access, browser automation). Audits identified hundreds of malicious skills in ClawHub, and a 1-click RCE vulnerability (CVE-2026-25253) was discovered, allowing token exfiltration via Cross-Site WebSocket Hijacking. Scans revealed over 21,000 publicly accessible and misconfigured OpenClaw instances, and campaigns like 'ClawHavoc' use scripts to execute payloads such as Atomic macOS Stealer.",
+        "threat_actor": "ClawHavoc",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1078 (Valid Accounts)",
+          "T1110.001 (Brute Force: Password Guessing)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1547 (Boot or Logon Autostart Execution)",
+          "T1574 (Hijack Execution Flow)",
+          "T1003 (OS Credential Dumping)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "OpenClaw illustrates how quickly agentic AI can transform productivity into a supply chain attack surface. Standardized tool access, autonomy, and open marketplaces create new initial access vectors to endpoints and networks. Risks include tool poisoning, prompt injection, sampling abuse, and vulnerabilities related to misconfigurations, potentially leading to arbitrary code execution and sensitive data theft.",
+        "recommandations": [
+          "Never operate OpenClaw on production endpoints.",
+          "If OpenClaw must be used, it should be hardened based on isolation, patching, skill curation, auditing, and the principle of least privilege for tools.",
+          "Monitor the ClawHub marketplace for malicious skills and integrate code analysis services like VirusTotal Code Insight.",
+          "Ensure secure configuration of OpenClaw instances, avoiding unsecured public exposure.",
+          "Implement organizational governance for the use of AI agents to reduce supply chain risks and logical abuse."
+        ],
+        "tags": [
+          "openclaw",
+          "clawbot",
+          "moltbot",
+          "agentic_ai",
+          "rce",
+          "supply_chain",
+          "token_exfiltration",
+          "cross_site_websocket_hijacking",
+          "atomic_macos_stealer",
+          "threat_report"
+        ],
+        "sources": [
+          "https://research.hisolutions.com/2026/02/openclaw-die-real-world-bestaetigung-der-mcp-risikoachsen/"
+        ],
+        "date": "2026-02-13"
+      },
+      {
+        "title": "State of Security Report | Recorded Future",
+        "description": "Recorded Future's 'State of Security' and 'Fragmentation Defined 2025's Threat Landscape' reports analyze the 2025 threat landscape, characterized by geopolitical fragmentation, evolving state operations, and criminal ecosystems. State actors (China, Russia, Iran, North Korea) focus on covert accumulation of access (identity systems, cloud, edge devices) rather than dramatic disruptions. Conflicts (Israel-Iran, India-Pakistan, Thailand-Cambodia, Russia-Ukraine) have digital fronts amplified by hacktivists and disinformation. The criminal ecosystem has decentralized, adopting subscription models and specialized services. AI primarily augmented fraud and manipulation rather than revolutionary autonomous attacks.",
+        "threat_actor": "China, Russia, Iran, North Korea (state actors), RedMike (Chinese state-sponsored actor), Hacktivist groups, Scattered LAPSUS$ Hunters, Chinese transnational criminal organizations",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1592 (Gather Victim Org Information)",
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1078.004 (Valid Accounts: Cloud Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1071 (Application Layer Protocol)",
+          "T1090 (Proxy)",
+          "T1098 (Account Manipulation)",
+          "T1589 (Gather Victim Identity Information)",
+          "T1583 (Develop Capabilities)"
+        ],
+        "analyse": "The threat landscape is more complex and interconnected, where state objectives, criminal capabilities, and private-sector technology mutually reinforce each other. Fragmentation compresses warning times, as adversaries are often already present in networks. AI amplifies the risks of large-scale fraud and manipulation. Organizational resilience has become paramount in the face of this convergence of threats.",
+        "recommandations": [
+          "Prioritize patching poorly monitored network devices, VPN appliances, and perimeter systems.",
+          "Enhance post-compromise activity detection to anticipate lateral movement and privilege escalation.",
+          "Improve phishing defenses and apply Mark-of-the-Web rules for downloaded files.",
+          "Enforce least privilege principles and harden Remote Desktop Services access with MFA.",
+          "Invest in AI for defenses to detect AI-augmented disinformation and fraud.",
+          "Strengthen monitoring of the decentralized criminal supply chain and specialized services."
+        ],
+        "tags": [
+          "recorded_future",
+          "threat_landscape",
+          "geopolitics",
+          "state_sponsored",
+          "ransomware",
+          "ai_risk",
+          "supply_chain",
+          "espionage",
+          "hacktivism",
+          "cybercrime",
+          "disinformation",
+          "threat_report"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/state-of-security",
+          "https://www.recordedfuture.com/blog/fragmentation-in-2025-what-it-means-for-2026"
+        ],
+        "date": "2026-02-13"
+      }
+    ]
+  }
+}
