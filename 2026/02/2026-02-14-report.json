@@ -1,0 +1,2025 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle une intensification des menaces cyber, caractérisée par une diversification des tactiques d'attaque et un ciblage persistant de secteurs clés. Les acteurs étatiques et les groupes cybercriminels exploitent activement les vulnérabilités critiques, notamment les failles d'exécution de code à distance (RCE) et les problèmes d'authentification, souvent dans les heures suivant la publication de preuves de concept. La compromission de la chaîne d'approvisionnement logicielle et l'ingénierie sociale restent des vecteurs d'attaque prédominants. \n\nUne tendance majeure est l'intégration croissante de l'intelligence artificielle (IA) et des grands modèles de langage (LLM) par les attaquants pour des tâches allant de la reconnaissance et le profilage de cibles à la création de leurres de phishing sophistiqués et même la génération de code malveillant. Parallèlement, l'abus de vecteurs d'attaque mobiles et web, tels que les codes QR et les liens profonds in-app, est en forte augmentation pour contourner les défenses et dérober des informations sensibles. \n\nLes violations de données sont fréquentes, souvent dues à des mesures de sécurité inadéquates ou à des attaques d'ingénierie sociale, affectant des millions de clients dans divers secteurs. Sur le plan géopolitique, les tensions continuent d'alimenter les cyberattaques parrainées par des États, notamment de la part de la Chine, de la Russie, de la Corée du Nord et de l'Iran, visant l'espionnage, le sabotage d'infrastructures critiques et la guerre de l'information. L'Europe est particulièrement exposée aux influences économiques et cybernétiques étrangères, soulignant la nécessité d'une souveraineté numérique et d'une défense renforcée. \n\nEn conclusion, le paysage des menaces est marqué par une professionnalisation et une sophistication accrues des attaquants, une exploitation rapide des failles, et l'émergence de nouvelles méthodes tirant parti des technologies d'IA, exigeant des organisations une vigilance constante, des mises à jour rapides et une stratégie de défense proactive et résiliente.",
+      "date": "2026-02-14"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Lazarus Group (North Korean threat actors)",
+        "secteur": "Développeurs JavaScript et Python (liés à la cryptomonnaie)",
+        "modop": "Campagnes de faux recruteurs sur LinkedIn, Facebook, Reddit. Utilisation de packages malveillants (Graphalgo RAT downloader) sur npm et PyPi, introduction différée de la charge utile. Compromission de la chaîne d'approvisionnement logicielle.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "north_korea",
+          "supply_chain_attack",
+          "fake_recruiters",
+          "malware",
+          "rat",
+          "cryptocurrency_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-job-recruiters-hide-malware-in-developer-coding-challenges/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Organisations technologiques et financières",
+        "modop": "Utilisation du framework modulaire VoidLink (basé sur Zig, C, Go, compilation à la demande) sur des serveurs compromis pour le C2, dissimulation d'activité, et scan réseau. Accès via identifiants volés ou exploitation de failles de sérialisation Java (ex: Apache Dubbo). Intégration d'outils de codage IA pour le développement.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "modular_framework",
+          "voidlink",
+          "stolen_credentials",
+          "java_vulnerabilities",
+          "ai_development_tools",
+          "linux_targeting",
+          "financial_sector",
+          "technology_sector"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187969/ai/new-threat-actor-uat-9921-deploys-voidlink-against-enterprise-sectors.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "UNC2970 (acteur soutenu par le gouvernement nord-coréen)",
+        "secteur": "Secteur de la défense, recruteurs d'entreprise (usurpation d'identité)",
+        "modop": "Utilisation de Gemini AI pour l'OSINT et le profilage de cibles de grande valeur (entreprises de cybersécurité et de défense, rôles techniques).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "north_korea",
+          "ai_abuse",
+          "reconnaissance",
+          "target_profiling",
+          "defense_targeting",
+          "osint"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "APT42 (groupe lié à l'Iran)",
+        "secteur": "Ciblage large, ingénierie sociale",
+        "modop": "Utilisation d'outils d'IA générative (comme Gemini) pour renforcer la reconnaissance, trouver des adresses e-mail officielles, rechercher des organisations pour des prétextes crédibles, créer des personas adaptés, et pour la traduction linguistique.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "iran",
+          "ai_abuse",
+          "reconnaissance",
+          "social_engineering",
+          "phishing",
+          "persona_creation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Qilin (gang de ransomware)",
+        "secteur": "Opérateur de pipeline pétrolier (Conpet S.A., Roumanie), infrastructures critiques",
+        "modop": "Attaque par ransomware, exfiltration de près de 1 To de données sensibles de l'entreprise (informations financières et personnelles).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_gang",
+          "qilin",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066063809831896"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Lotus Blossom APT (lié à la Chine)",
+        "secteur": "Individus de grande valeur",
+        "modop": "Exploitation de la vulnérabilité CVE-2025-15556 (faille Notepad++) pour livrer la porte dérobée Chrysalis via des installateurs piégés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china",
+          "zero_day_exploit",
+          "supply_chain_attack",
+          "backdoor",
+          "chrysalis"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Acteur de la menace potentiellement lié aux services de renseignement russes (utilisant le malware CANFAIL)",
+        "secteur": "Organisations ukrainiennes de défense, militaires, gouvernementales et énergétiques",
+        "modop": "Utilisation de grands modèles de langage (LLM) pour la reconnaissance, la création de leurres et des questions techniques de base pour la configuration de C2. Déploiement du malware CANFAIL.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "russia",
+          "ai_abuse",
+          "reconnaissance",
+          "malware",
+          "canfail",
+          "ukraine_targeting",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/google-ties-suspected-russian-actor-to.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "COINBAIT (kit de phishing, potentiellement par UNC5356 ou groupes utilisant ClickFix)",
+        "secteur": "Utilisateurs de cryptomonnaies, utilisateurs Mac",
+        "modop": "Kit de phishing construit avec l'aide de l'IA (Lovable AI) pour imiter les plateformes d'échange de crypto et voler les identifiants. Lié à des escroqueries ClickFix hébergées par l'IA livrant des malwares comme ATOMIC.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing_kit",
+          "ai_abuse",
+          "cryptocurrency_theft",
+          "clickfix_scams",
+          "infostealer",
+          "atomic_malware"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Économie, technologie, défense, infrastructures (ports, télécoms 5G), recherche et développement",
+        "theme": "Influence économique et cybernétique de la Chine, souveraineté européenne, menaces hybrides, technologies de rupture",
+        "description": "L'UE fait face à une Chine devenue une puissance économique et politique affirmée, ce qui crée un déficit commercial important et une dépendance stratégique (terres rares, équipements sanitaires). Les investissements chinois dans les infrastructures critiques (ports) et la présence d'entreprises comme Huawei/ZTE dans les réseaux 5G suscitent des inquiétudes d'espionnage et d'ingérence. L'Europe est perçue comme un \"nain politique\" et \"vermisseau militaire\", attaquée par la Russie (guerre hybride) et la Chine, et sous pression des États-Unis. Un appel à l'émancipation des États-Unis et à la consolidation d'une souveraineté européenne est lancé en défense, économie, technologies et énergie. La DARPA lance un programme (MARRS) pour la fusion nucléaire en milieu solide à basse température, jugée stratégique pour la sécurité nationale américaine, alors qu'une PME française est déjà en avance dans ce domaine, soulignant l'enjeu de souveraineté technologique.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "chine",
+          "union_europeenne",
+          "russie",
+          "etats_unis",
+          "souverainete_economique",
+          "cyberespionnage",
+          "5g",
+          "infrastructures_critiques",
+          "dependance_strategique",
+          "technologies_de_rupture",
+          "fusion_nucleaire",
+          "desinformation",
+          "guerre_hybride"
+        ],
+        "sources": [
+          "https://www.epge.fr/fusion-nucleaire-en-milieu-solide-un-enjeu-de-securite-nationale-pour-les-etats-unis/",
+          "https://www.iris-france.org/quelle-place-pour-leurope-sur-le-grand-echiquier-du-monde/",
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/influence-economique-de-la-chine-quels-risques-pour-lue-1-2/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Relations internationales, défense, information, gaming",
+        "theme": "Désinformation russe, contrôle des armements nucléaires, guerre hybride, recrutement en ligne",
+        "description": "Le traité New START a expiré, la Russie minimisant sa responsabilité et blâmant l'Occident. Des campagnes de désinformation pro-Kremlin se poursuivent, accusant l'Occident de provoquer une confrontation nucléaire et utilisant de fausses allégations (terrorisme nucléaire ukrainien, biolabs, bombes sales). La Russie instrumentalise également les jeux vidéo (milsim comme Arma 3) et les plateformes de discussion (Discord) pour recruter des combattants étrangers pour la guerre en Ukraine, exploitant l'intérêt pour le combat et les difficultés économiques. Des campagnes de propagande sont intégrées aux jeux patriotiques. Cette stratégie vise à façonner les perceptions et à normaliser la menace nucléaire.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russie",
+          "new_start_treaty",
+          "desinformation",
+          "guerre_hybride",
+          "armes_nucleaires",
+          "recrutement_en_ligne",
+          "gaming",
+          "propagande",
+          "ukraine",
+          "otan"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/as-new-start-ends-disinformation-about-it-continues/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/how-russia-turns-gamers-fighters/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Diplomatie, économie, commerce, défense",
+        "theme": "Émergence du Vietnam, rivalités sino-américaines, diversification stratégique",
+        "description": "Le Vietnam utilise une \"diplomatie du bambou\" pour naviguer entre son imposant voisin, la Chine (avec des revendications territoriales contradictoires en mer de Chine), et les États-Unis (son principal partenaire commercial), cherchant à diversifier ses partenaires régionaux et internationaux pour réduire sa dépendance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "vietnam",
+          "chine",
+          "etats_unis",
+          "diplomatie_du_bambou",
+          "asie_pacifique",
+          "commerce_international"
+        ],
+        "sources": [
+          "https://www.iris-france.org/vietnam-un-emergent-incontournable-expliquez-moi/"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Mode de luxe",
+        "victime": "Louis Vuitton, Christian Dior Couture, Tiffany",
+        "description": "Des mesures de sécurité inadéquates ont conduit à l'exposition des données de plus de 5,5 millions de clients. Les incidents ont été causés par un malware sur un appareil d'employé (Louis Vuitton) et des attaques de phishing compromettant un service de gestion client SaaS (Salesforce), combinés à l'absence de restrictions d'accès IP, de limitations de téléchargement en masse et de notifications tardives. Les entreprises ont été collectivement condamnées à une amende de 25 millions de dollars par la Corée du Sud.",
+        "tags": [
+          "violation",
+          "breach",
+          "mode_de_luxe",
+          "louis_vuitton",
+          "christian_dior",
+          "tiffany",
+          "saas_breach",
+          "phishing",
+          "malware",
+          "donnees_clients",
+          "amende",
+          "coree_du_sud"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
+          "https://databreaches.net/2026/02/13/koreas-personal-information-protection-commissioner-fines-3-lvmh-luxury-brands-after-salesforce-data-breaches/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Santé, assurance maladie",
+        "victime": "Conduent Business Services LLC, Blue Cross Blue Shield of Texas",
+        "description": "Une violation des systèmes de Conduent, entre le 21 octobre 2024 et le 13 janvier 2025, a exposé les données personnelles sensibles d'environ 4 millions de résidents du Texas, y compris des bénéficiaires de Medicaid. Le Procureur général du Texas a ouvert une enquête pour déterminer la cause de la violation et la conformité avec les lois de l'État.",
+        "tags": [
+          "violation",
+          "breach",
+          "sante",
+          "assurance_maladie",
+          "conduent",
+          "blue_cross_blue_shield_of_texas",
+          "medicaid",
+          "donnees_personnelles_sensibles",
+          "enquete_gouvernementale"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/attorney-general-ken-paxton-demands-information-from-blue-cross-blue-shield-of-texas-and-conduent-as-part-of-investigation-into-largest-data/?pk_campaign=feed&pk_kwd=attorney-general-ken-paxton-demands-information-from-blue-cross-blue-shield-of-texas-and-conduent-as-part-of-investigation-into-largest-data",
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/116065588691614630"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "Une fuite de données massive en 2025 a été attribuée à une défaillance de gestion plutôt qu'à une cyberattaque sophistiquée. Un ancien ingénieur de Coupang a exploité des failles d'authentification entre avril et novembre, conduisant à l'exposition de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "defaillance_gestion",
+          "authentification_faible",
+          "donnees_clients"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/south-korea-blames-coupang-data-breach-on-management-failure-not-sophisticated-attack/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Gouvernement (administration fiscale)",
+        "victime": "Immigrants (données personnelles)",
+        "description": "L'IRS (Internal Revenue Service) a divulgué de manière inappropriée des milliers de dossiers personnels d'immigrants au Département de la Sécurité intérieure (DHS) dans le cadre d'un accord de partage de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "irs",
+          "dhs",
+          "partage_donnees_inapproprie",
+          "donnees_immigrants",
+          "confidentialite"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/irs-improperly-shares-immigrants-data-with-ice-explained/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Pétrole et gaz, infrastructures critiques",
+        "victime": "Conpet S.A. (opérateur de pipeline en Roumanie)",
+        "description": "Le gang de ransomware Qilin a volé près de 1 To de données d'entreprise, y compris des informations financières et personnelles sensibles, lors d'une cyberattaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "petrole_et_gaz",
+          "infrastructures_critiques",
+          "conpet",
+          "qilin",
+          "ransomware",
+          "exfiltration_donnees",
+          "donnees_financieres",
+          "donnees_personnelles"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066063809831896"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido (Pays-Bas)",
+        "description": "Une cyberattaque a exposé les données personnelles de 6,2 millions de clients via son système de contact. Les données volées comprennent les noms, adresses, numéros de téléphone, dates de naissance, numéros de compte bancaire et détails de documents d'identité. Le vecteur d'attaque est probablement l'ingénierie sociale de l'authentification multifacteur (MFA) des agents du service client.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "odido",
+          "donnees_clients",
+          "ingenierie_sociale",
+          "mfa_bypass",
+          "usurpation_identite"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066058429058173",
+          "https://infosec.exchange/@soc_goulash/116065339260033695",
+          "https://hostux.social/@Joris/116064808844769177"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-26333",
+        "cvss": "10.0",
+        "product": "Calero VeraSMART",
+        "description": "Vulnérabilité de lecture et écriture de fichiers arbitraires non authentifiée via le service .NET Remoting HTTP, pouvant conduire à l'exécution de code à distance (RCE) via l'exploitation de ViewState. Peut également exposer des hachages NTLMv2.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "arbitrary_file_read_write",
+          "deserialization",
+          "ntlmv2_hashes",
+          "critical_vulnerability",
+          "calero_verasmart"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26333"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support et Privileged Remote Access",
+        "description": "Vulnérabilité critique de pré-authentification d'exécution de code à distance (RCE). Permet à un attaquant non authentifié d'envoyer des requêtes spécialement conçues pour exécuter des commandes du système d'exploitation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_authentication",
+          "beyondtrust",
+          "remote_support",
+          "privileged_remote_access",
+          "actively_exploited",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187962/uncategorized/attackers-exploit-beyondtrust-cve-2026-1731-within-hours-of-poc-release.html",
+          "https://www.helpnetsecurity.com/2026/02/13/beyondtrust-cve-2026-1731-poc-exploit-activity/",
+          "https://www.security.nl/posting/924528/Kritiek+lek+in+BeyondTrust+Remote+Support+actief+misbruikt+bij+aanvallen?channel=rss",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26273",
+        "cvss": "9.8",
+        "product": "Known (plateforme de publication sociale)",
+        "description": "Vulnérabilité d'authentification brisée critique permettant la prise de contrôle de compte (ATO). Le jeton de réinitialisation de mot de passe est divulgué dans un champ HTML caché, permettant à un attaquant non authentifié de le récupérer pour n'importe quel utilisateur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "account_takeover",
+          "broken_authentication",
+          "password_reset_token_leakage",
+          "known",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26273"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) activement exploitée, conduisant à la compromission d'agences gouvernementales européennes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ivanti",
+          "epmm",
+          "actively_exploited",
+          "critical_vulnerability",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) activement exploitée, conduisant à la compromission d'agences gouvernementales européennes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ivanti",
+          "epmm",
+          "actively_exploited",
+          "critical_vulnerability",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2024-43468",
+        "cvss": "9.8",
+        "product": "Microsoft Configuration Manager (SCCM)",
+        "description": "Vulnérabilité d'injection SQL permettant à des attaquants non authentifiés d'exécuter des commandes arbitraires avec les privilèges les plus élevés sur le serveur et/ou la base de données du site. Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "rce",
+          "microsoft_configuration_manager",
+          "sccm",
+          "actively_exploited",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-flags-microsoft-configmgr-rce-flaw-as-exploited-in-attacks/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/13/critical_microsoft_bug_from_2024/",
+          "https://www.security.nl/posting/924588/VS+meldt+misbruik+van+kritiek+lek+in+Microsoft+Configuration+Manager?channel=rss",
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/13/cisa-kev-catalog-update-feb-12-2026/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26335",
+        "cvss": "9.3",
+        "product": "Calero VeraSMART",
+        "description": "Utilisation de valeurs machineKey IIS statiques, permettant à un attaquant de créer une charge utile ViewState valide et d'atteindre l'exécution de code à distance (RCE) dans le contexte de l'application IIS.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "static_machine_keys",
+          "viewstate_deserialization",
+          "calero_verasmart",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26335"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-15157",
+        "cvss": "8.8",
+        "product": "Plugin Starfish Review Generation & Marketing pour WordPress",
+        "description": "Modification non autorisée de données due à une vérification de capacité manquante, permettant à des attaquants authentifiés (niveau Abonné+) de mettre à jour des options arbitraires, pouvant mener à une élévation de privilèges vers un accès administrateur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "arbitrary_options_update",
+          "wordpress_plugin",
+          "starfish",
+          "authenticated_bypass",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15157"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": "8.8",
+        "product": "Google Chrome",
+        "description": "Vulnérabilité 'Use after free' dans le CSS, permettant à un attaquant distant d'exécuter du code arbitraire à l'intérieur d'un sandbox via une page HTML malveillante.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "use_after_free",
+          "rce",
+          "google_chrome",
+          "css",
+          "sandbox_escape",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2441"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26334",
+        "cvss": "8.5",
+        "product": "Calero VeraSMART",
+        "description": "Clés de chiffrement AES statiques codées en dur, permettant à un attaquant avec accès local d'extraire les clés et de déchiffrer les informations d'identification de service stockées, conduisant potentiellement à une élévation de privilèges locale.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hardcoded_credentials",
+          "aes_keys",
+          "privilege_escalation",
+          "information_disclosure",
+          "calero_verasmart",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26334"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-21956",
+        "cvss": "8.2",
+        "product": "Oracle VirtualBox (VMSVGA)",
+        "description": "Vulnérabilité d'accès hors limites (Out-Of-Bounds Access) dans le périphérique VMSVGA, permettant une élévation de privilèges locale pour exécuter du code arbitraire dans le contexte de l'hyperviseur.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "out_of_bounds_access",
+          "oracle_virtualbox",
+          "hypervisor_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://www.zerodayinitiative.com/advisories/ZDI-26-103/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-24853",
+        "cvss": "8.1",
+        "product": "Caido (kit d'audit de sécurité web)",
+        "description": "Contournement de la protection contre le DNS Rebind via l'injection d'un en-tête X-Forwarded-Host, menant à l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "dns_rebind",
+          "caido",
+          "web_security_auditing",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24853"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2033",
+        "cvss": "8.1",
+        "product": "MLflow Tracking Server",
+        "description": "Vulnérabilité de 'Directory Traversal' (parcours de répertoires) non authentifiée dans la gestion des chemins de fichiers d'artefacts, permettant l'exécution de code arbitraire (RCE) dans le contexte du compte de service.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "directory_traversal",
+          "mlflow_tracking_server",
+          "unauthenticated_rce",
+          "high_severity"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-105/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "7.8",
+        "product": "Apple (iOS, iPadOS, macOS, watchOS, tvOS, visionOS, Safari)",
+        "description": "Vulnérabilité de corruption de mémoire dans le Dynamic Link Editor (dyld), permettant une exécution de code au niveau système après un point d'appui initial. Activement exploitée dans des attaques ciblées.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "memory_corruption",
+          "privilege_escalation",
+          "rce",
+          "apple",
+          "dyld",
+          "actively_exploited",
+          "zero_day"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/apple-addresses-a-critical-flaw-exploited-in-targeted-attacks",
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/13/cisa-kev-catalog-update-feb-12-2026/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2034",
+        "cvss": "7.8",
+        "product": "Sante DICOM Viewer Pro",
+        "description": "Vulnérabilité de débordement de tampon (Buffer Overflow) lors de l'analyse des fichiers DCM, permettant à des attaquants distants d'exécuter du code arbitraire.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "sante_dicom_viewer_pro",
+          "user_interaction_required"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-104/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-15556",
+        "cvss": "N/A",
+        "product": "Notepad++ (versions antérieures à 8.8.9 utilisant WinGup)",
+        "description": "Vulnérabilité de téléchargement de code sans vérification d'intégrité, permettant à un attaquant d'exécuter du code arbitraire via un installateur malveillant lors d'une mise à jour. Activement exploitée par l'APT Lotus Blossom.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "code_without_integrity_check",
+          "rce",
+          "notepad++",
+          "supply_chain",
+          "apt_exploit",
+          "lotus_blossom",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-40536",
+        "cvss": "N/A",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Vulnérabilité de contournement de contrôle de sécurité permettant à un attaquant non authentifié d'accéder à des fonctionnalités restreintes. Activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "security_control_bypass",
+          "solarwinds",
+          "web_help_desk",
+          "unauthenticated_access",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2018-0802",
+        "cvss": "N/A",
+        "product": "Microsoft Equation Editor (EQNEDT32.EXE)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) dans Microsoft Equation Editor. Exploitée dans une nouvelle campagne XWorm RAT via des pièces jointes Excel malveillantes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "microsoft_equation_editor",
+          "excel_exploit",
+          "xworm_rat",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/new-xworm-rat-campaign-uses-themed-phishing-lures/"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Des faux recruteurs dissimulent des malwares dans des défis de codage pour développeurs",
+        "description": "Des acteurs malveillants nord-coréens ciblent des développeurs JavaScript et Python avec des offres d'emploi fictives liées à la cryptomonnaie. Ils diffusent des packages malveillants sur les registres npm et PyPi qui agissent comme des téléchargeurs pour un cheval de Troie d'accès à distance (RAT) nommé 'Graphalgo'. Le code malveillant est souvent activé de manière différée, et les attaquants utilisent des organisations GitHub pour héberger des dépôts \"propres\" qui introduisent des dépendances malveillantes.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {
+          "FILE_NAME": [
+            "bigmathutils"
+          ],
+          "SOFTWARE_PACKAGE": [
+            "npm",
+            "PyPi"
+          ],
+          "MITRE_ATT&CK": [
+            "T1589.001",
+            "T1588.006",
+            "T1195.002",
+            "T1204.002",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589.001 (Compromise Accounts: Social Media Accounts)",
+          "T1588.006 (Obtain Capabilities: Malware)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software and Supply Chain)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "La campagne cible des professionnels du développement, représentant un risque élevé de compromission de la chaîne d'approvisionnement logicielle. L'utilisation de packages populaires et de profils de recruteurs crédibles rend la détection difficile pour les cibles. L'impact géographique est potentiellement mondial étant donné la nature des plateformes de développement et de recrutement. La patience des attaquants (activation différée) rend la menace plus insidieuse.",
+        "recommandations": [
+          "Les développeurs ayant installé des packages suspects doivent réinitialiser tous les jetons et mots de passe de compte, et réinstaller leur système d'exploitation.",
+          "Mettre en place une vérification rigoureuse des dépendances logicielles provenant de registres publics.",
+          "Former les employés à l'identification des offres d'emploi frauduleuses et aux risques liés aux défis de codage non vérifiés."
+        ],
+        "tags": [
+          "malware",
+          "rat",
+          "supply_chain",
+          "phishing",
+          "développeurs",
+          "cryptomonnaie",
+          "npm",
+          "pypi",
+          "lazarus_group",
+          "reconnaissance",
+          "T1589.001",
+          "T1588.006",
+          "T1195.002",
+          "T1204.002",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-job-recruiters-hide-malware-in-developer-coding-challenges/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Des artefacts LLM Claude abusés pour diffuser des infostealers Mac dans une attaque ClickFix",
+        "description": "Des acteurs malveillants abusent des artefacts publics de Claude LLM et des annonces Google dans des campagnes 'ClickFix' pour distribuer des malwares de vol d'informations (infostealers) aux utilisateurs macOS. Les résultats de recherche malveillants conduisent les utilisateurs vers des artefacts Claude ou des articles Medium imitant le support Apple, les incitant à exécuter des commandes shell dans le Terminal, ce qui installe le malware MacSync/AMOS pour exfiltrer des données sensibles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "URL": [
+            "a2abotnet.com/gate"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1059.004",
+            "T1105",
+            "T1560.001"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)"
+        ],
+        "analyse": "Cette campagne montre une sophistication croissante dans l'utilisation de l'IA et des plateformes légitimes (Claude, Google Ads) pour des attaques de vol de données. La cible est large (utilisateurs macOS effectuant des recherches techniques). L'impact est un vol de données d'infostealer qui peut compromettre gravement la vie privée et la sécurité des utilisateurs. Le potentiel géographique est vaste, étant donné la portée des services ciblés.",
+        "recommandations": [
+          "Les utilisateurs doivent faire preuve de prudence et éviter d'exécuter des commandes Terminal qu'ils ne comprennent pas pleinement.",
+          "Demander aux chatbots, dans la même conversation, si les commandes fournies sont sûres.",
+          "Utiliser des bloqueurs de publicité pour réduire l'exposition aux annonces malveilluses."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "macos",
+          "ai_abuse",
+          "llm",
+          "clickfix",
+          "google_ads",
+          "shell_command_execution",
+          "exfiltration_donnees",
+          "T1566.002",
+          "T1059.004",
+          "T1105",
+          "T1560.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/claude-llm-artifacts-abused-to-push-mac-infostealers-in-clickfix-attack/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Google : des hackers soutenus par des États exploitent Gemini AI pour la reconnaissance cyber et les attaques",
+        "description": "Des acteurs étatiques (Corée du Nord, Iran, Chine, Russie) exploitent le modèle Gemini AI de Google pour la reconnaissance, le ciblage et le soutien aux opérations cyber. Le groupe nord-coréen UNC2970 utilise Gemini pour l'OSINT et le profilage de cibles de défense, tandis que le groupe iranien APT42 l'emploie pour la reconnaissance et la création de leurres d'ingénierie sociale. De nouveaux malwares comme HONESTCUE utilisent l'API Gemini pour générer du code malveillant à la demande (méthode sans fichier). Des kits de phishing comme COINBAIT sont également développés avec l'IA.",
+        "threat_actor": "UNC2970, APT42, Acteur derrière HONESTCUE, UNC5356 (lié à COINBAIT)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1592",
+            "T1594",
+            "T1598",
+            "T1566.001",
+            "T1059.003",
+            "T1027"
+          ]
+        },
+        "mitre_ttps": [
+          "T1592 (Gather Victim Host Information)",
+          "T1594 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "L'IA devient un outil puissant pour les acteurs étatiques dans toutes les phases de leurs attaques, de la reconnaissance à l'exécution de code. L'utilisation de LLM pour créer des leurres de phishing \"plus vrais que nature\" augmente l'efficacité de l'ingénierie sociale. L'approche \"fileless\" via la génération de code IA rend la détection plus difficile. Cela représente une évolution significative des capacités des attaquants et met en évidence de nouvelles vulnérabilités liées à l'abus des services d'IA.",
+        "recommandations": [
+          "Renforcer les mesures de sécurité autour des API et services d'IA pour prévenir l'abus.",
+          "Mettre en œuvre des détections avancées pour les malwares basés sur l'IA et les techniques \"fileless\".",
+          "Sensibiliser les utilisateurs aux nouvelles formes de phishing générées par l'IA.",
+          "Protéger les API keys des services cloud AI."
+        ],
+        "tags": [
+          "ai_abuse",
+          "nation_state_actor",
+          "reconnaissance",
+          "phishing",
+          "malware_generation",
+          "fileless_malware",
+          "llm",
+          "gemini_ai",
+          "unc2970",
+          "apt42",
+          "cryptocurrency_targeting",
+          "T1592",
+          "T1594",
+          "T1598",
+          "T1566.001",
+          "T1059.003",
+          "T1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Le phishing à la limite du Web et du mobile via les codes QR",
+        "description": "Analyse de l'utilisation extensive de codes QR malveillants ('quishing') pour contourner les contrôles de sécurité. Les attaquants utilisent des raccourcisseurs d'URL de QR codes, des liens profonds in-app (Telegram, Line, applications de paiement) et des téléchargements directs d'APK pour inciter les utilisateurs à interagir avec des destinations malveillantes. Ces méthodes facilitent le vol d'informations d'identification, les transactions non autorisées, la prise de contrôle de comptes et l'installation d'applications nuisibles.",
+        "threat_actor": "Non applicable (divers attaquants opportunistes, acteurs étatiques comme UAC-0185/UNC4221)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "qrco.de",
+            "me-qr.com",
+            "qrs.ly",
+            "cdnimg.jeayacrai.in.net",
+            "snitch.open-group.site",
+            "f9999.app",
+            "pyreneesakbash.com"
+          ],
+          "FILE_NAME": [
+            "yicai.apk",
+            "NagaPocker.apk"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566",
+            "T1598",
+            "T1071.001",
+            "T1059"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1598 (Phishing for Information)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "La généralisation des codes QR dans la vie quotidienne a créé un nouveau vecteur d'attaque très efficace, exploitant la confiance des utilisateurs et le manque de visibilité des systèmes de détection classiques sur les liens profonds in-app et les raccourcisseurs d'URL dynamiques. L'impact est significatif sur les services financiers, la messagerie, les réseaux sociaux et la distribution d'applications malveillantes, avec un potentiel de ciblage étatique comme démontré contre les utilisateurs ukrainiens de Signal.",
+        "recommandations": [
+          "Accroître la sensibilisation des utilisateurs aux risques liés aux codes QR, en les incitant à ne pas scanner les codes provenant de sources inconnues et à vérifier les destinations avant toute action.",
+          "Déployer des techniques de détection spécifiques aux codes QR dans les crawlers et solutions de sécurité pour analyser les données intégrées.",
+          "Utiliser des environnements de sandbox mobiles pour observer et analyser l'activité des liens profonds in-app.",
+          "Mettre en place des mesures de sécurité plus strictes pour les applications de messagerie et de paiement afin de prévenir la prise de contrôle de compte via des liens profonds."
+        ],
+        "tags": [
+          "phishing",
+          "qr_codes",
+          "quishing",
+          "mobile_security",
+          "deep_links",
+          "url_shorteners",
+          "apk_download",
+          "account_takeover",
+          "financial_fraud",
+          "signal_targeting",
+          "T1566",
+          "T1598",
+          "T1071.001",
+          "T1059"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/qr-codes-as-attack-vector/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Le nouvel acteur de la menace UAT-9921 déploie VoidLink contre les secteurs d'entreprise",
+        "description": "Cisco Talos a identifié un nouvel acteur de la menace, UAT-9921, utilisant un framework d'attaque modulaire appelé VoidLink pour cibler les organisations des secteurs de la technologie et des services financiers. VoidLink est installé sur des serveurs compromis pour le contrôle et la commande (C2), la dissimulation d'activité et le balayage de réseau. L'acteur utilise des identifiants volés ou exploite des failles de sérialisation Java pour l'accès initial. Le framework est développé avec l'aide d'outils de codage basés sur l'IA et dispose de capacités avancées comme les rootkits eBPF/LKM et l'évasion EDR.",
+        "threat_actor": "UAT-9921",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1078",
+            "T1190",
+            "T1057",
+            "T1049",
+            "T1070.004",
+            "T1059",
+            "T1548.002",
+            "T1574.006"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1057 (Process Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1548.002 (Bypass User Account Control)",
+          "T1574.006 (Hijack Execution Flow: Dynamic-Link Library Search Order Hijacking)"
+        ],
+        "analyse": "UAT-9921 représente une menace avancée, capable d'adapter ses outils et techniques à diverses victimes grâce à la conception flexible de VoidLink. L'utilisation d'outils de codage IA pour le développement du framework et ses capacités d'évasion EDR et de persistance (rootkits) le rendent particulièrement dangereux. La nature modulaire de VoidLink suggère une menace évolutive capable de réduire considérablement les délais de mouvement latéral et d'exfiltration de données, rendant la détection et la réponse plus difficiles.",
+        "recommandations": [
+          "Mettre en œuvre une gestion robuste des correctifs pour les vulnérabilités de sérialisation Java et autres failles exposées.",
+          "Renforcer l'authentification et surveiller l'utilisation des identifiants.",
+          "Améliorer la détection des activités de balayage réseau interne et externe, ainsi que les signes de C2.",
+          "Déployer des solutions de sécurité avancées capables de détecter les rootkits (eBPF/LKM) et les techniques d'évasion EDR."
+        ],
+        "tags": [
+          "threat_actor",
+          "voidlink",
+          "modular_framework",
+          "technologie",
+          "services_financiers",
+          "c2",
+          "data_exfiltration",
+          "privilege_escalation",
+          "edr_evasion",
+          "ai_development",
+          "T1078",
+          "T1190",
+          "T1057",
+          "T1049",
+          "T1070.004",
+          "T1059",
+          "T1548.002",
+          "T1574.006"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187969/ai/new-threat-actor-uat-9921-deploys-voidlink-against-enterprise-sectors.html"
+        ],
+        "date": "2026-02-14"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analysis of the articles reveals an intensification of cyber threats, characterized by a diversification of attack tactics and persistent targeting of key sectors. State-sponsored actors and cybercriminal groups are actively exploiting critical vulnerabilities, particularly remote code execution (RCE) flaws and authentication issues, often within hours of proof-of-concept publication. Software supply chain compromise and social engineering remain predominant attack vectors. \n\nA major trend is the increasing integration of artificial intelligence (AI) and large language models (LLM) by attackers for tasks ranging from reconnaissance and target profiling to sophisticated phishing lure creation and even malicious code generation. Concurrently, the abuse of mobile and web attack vectors, such as QR codes and in-app deep links, is rapidly increasing to bypass defenses and steal sensitive information. \n\nData breaches are frequent, often due to inadequate security measures or social engineering attacks, affecting millions of customers across various sectors. Geopolitically, tensions continue to fuel state-sponsored cyberattacks, particularly from China, Russia, North Korea, and Iran, aimed at espionage, critical infrastructure sabotage, and information warfare. Europe is particularly exposed to foreign economic and cybernetic influences, highlighting the need for digital sovereignty and strengthened defense. \n\nIn conclusion, the threat landscape is marked by increased professionalization and sophistication of attackers, rapid exploitation of flaws, and the emergence of new methods leveraging AI technologies, requiring organizations to maintain constant vigilance, rapid updates, and a proactive and resilient defense strategy.",
+      "date": "2026-02-14"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Lazarus Group (North Korean threat actors)",
+        "secteur": "JavaScript and Python developers (cryptocurrency-related)",
+        "modop": "Fake job recruiter campaigns on LinkedIn, Facebook, Reddit. Deployment of malicious packages (Graphalgo RAT downloader) on npm and PyPi registries, with delayed payload activation. Software supply-chain compromise.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "north_korea",
+          "supply_chain_attack",
+          "fake_recruiters",
+          "malware",
+          "rat",
+          "cryptocurrency_targeting"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-job-recruiters-hide-malware-in-developer-coding-challenges/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "UAT-9921",
+        "secteur": "Technology and financial organizations",
+        "modop": "Uses modular VoidLink framework (based on Zig, C, Go, compile-on-demand) on compromised servers for C2, activity hiding, and network scanning. Initial access via stolen credentials or exploitation of Java serialization flaws (e.g., Apache Dubbo). Incorporates AI-enabled coding tools for development.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "modular_framework",
+          "voidlink",
+          "stolen_credentials",
+          "java_vulnerabilities",
+          "ai_development_tools",
+          "linux_targeting",
+          "financial_sector",
+          "technology_sector"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187969/ai/new-threat-actor-uat-9921-deploys-voidlink-against-enterprise-sectors.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "UNC2970 (North Korean government-backed actor)",
+        "secteur": "Defense targeting, corporate recruiters (impersonation)",
+        "modop": "Used Gemini AI for OSINT and profiling high-value targets (cybersecurity and defense companies, technical job roles/salaries).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "north_korea",
+          "ai_abuse",
+          "reconnaissance",
+          "target_profiling",
+          "defense_targeting",
+          "osint"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "APT42 (Iran-linked group)",
+        "secteur": "Broad targeting, social engineering",
+        "modop": "Used generative AI tools like Gemini to boost reconnaissance, find official email addresses, research organizations for credible pretexts, create tailored personas, and for language translation.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "iran",
+          "ai_abuse",
+          "reconnaissance",
+          "social_engineering",
+          "phishing",
+          "persona_creation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Qilin (ransomware gang)",
+        "secteur": "Oil pipeline operator (Conpet S.A., Romania), critical infrastructure",
+        "modop": "Ransomware attack, exfiltrated nearly 1TB of sensitive company data (financial, personal info).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware_gang",
+          "qilin",
+          "data_exfiltration",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066063809831896"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Lotus Blossom APT (China-linked)",
+        "secteur": "Specific high-value individuals",
+        "modop": "Exploited CVE-2025-15556 (Notepad++ flaw) to deliver Chrysalis backdoor via trojanized installers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "china",
+          "zero_day_exploit",
+          "supply_chain_attack",
+          "backdoor",
+          "chrysalis"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "Possibly Russian intelligence-affiliated threat actor (using CANFAIL malware)",
+        "secteur": "Ukrainian defense, military, government, and energy organizations",
+        "modop": "Using Large Language Models (LLMs) for reconnaissance, lure creation, and basic technical questions for C2 setup; deploying CANFAIL malware.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "nation_state_actor",
+          "russia",
+          "ai_abuse",
+          "reconnaissance",
+          "malware",
+          "canfail",
+          "ukraine_targeting",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/google-ties-suspected-russian-actor-to.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "nom": "COINBAIT (phishing kit, likely by UNC5356 or groups using ClickFix)",
+        "secteur": "Cryptocurrency users, Mac users",
+        "modop": "Phishing kit built with AI (Lovable AI) to mimic crypto exchanges and steal login details. Linked to AI-hosted ClickFix scams delivering ATOMIC malware.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing_kit",
+          "ai_abuse",
+          "cryptocurrency_theft",
+          "clickfix_scams",
+          "infostealer",
+          "atomic_malware"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Economy, technology, defense, infrastructure (ports, 5G telecom), research and development",
+        "theme": "China's economic and cyber influence, European sovereignty, hybrid threats, disruptive technologies",
+        "description": "The EU faces China as an assertive economic and political power, leading to a significant trade deficit and strategic dependencies (rare earths, sanitary equipment). Chinese investments in critical infrastructure (ports) and the presence of companies like Huawei/ZTE in 5G networks raise concerns about espionage and interference. Europe is perceived as a 'political dwarf' and 'military worm,' attacked by Russia (hybrid warfare) and China, and under pressure from the US. A call for emancipation from the US and consolidation of European sovereignty in defense, economy, technology, and energy is made. DARPA launches a program (MARRS) for solid-state nuclear fusion at low temperatures, deemed strategic for US national security, while a French SME is already advanced in this field, highlighting the issue of technological sovereignty.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "china",
+          "european_union",
+          "russia",
+          "united_states",
+          "economic_sovereignty",
+          "cyberespionage",
+          "5g",
+          "critical_infrastructure",
+          "strategic_dependence",
+          "disruptive_technologies",
+          "nuclear_fusion",
+          "disinformation",
+          "hybrid_warfare"
+        ],
+        "sources": [
+          "https://www.epge.fr/fusion-nucleaire-en-milieu-solide-un-enjeu-de-securite-nationale-pour-les-etats-unis/",
+          "https://www.iris-france.org/quelle-place-pour-leurope-sur-le-grand-echiquier-du-monde/",
+          "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/influence-economique-de-la-chine-quels-risques-pour-lue-1-2/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "International relations, defense, information, gaming",
+        "theme": "Russian disinformation, nuclear arms control, hybrid warfare, online recruitment",
+        "description": "The New START Treaty expired, with Russia downplaying its responsibility and blaming the West. Pro-Kremlin disinformation campaigns continue, accusing the West of provoking a nuclear confrontation and using false allegations (Ukrainian nuclear terrorism, biolabs, dirty bombs). Russia also weaponizes video games (milsim like Arma 3) and chat platforms (Discord) to recruit foreign fighters for the war in Ukraine, exploiting interest in combat and economic hardships. Propaganda campaigns are integrated into patriotic games. This strategy aims to shape perceptions and normalize the nuclear threat.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "new_start_treaty",
+          "disinformation",
+          "hybrid_warfare",
+          "nuclear_arms",
+          "online_recruitment",
+          "gaming",
+          "propaganda",
+          "ukraine",
+          "nato"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/as-new-start-ends-disinformation-about-it-continues/",
+          "https://www.rusi.org/explore-our-research/publications/commentary/how-russia-turns-gamers-fighters"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Diplomacy, economy, trade, defense",
+        "theme": "Vietnam's emergence, Sino-American rivalries, strategic diversification",
+        "description": "Vietnam employs a \"bamboo diplomacy\" to navigate between its imposing neighbor, China (with conflicting territorial claims in the South China Sea), and the United States (its main trading partner), seeking to diversify its regional and international partnerships to reduce dependence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "vietnam",
+          "china",
+          "united_states",
+          "bamboo_diplomacy",
+          "asia_pacific",
+          "international_trade"
+        ],
+        "sources": [
+          "https://www.iris-france.org/vietnam-un-emergent-incontournable-expliquez-moi/"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Luxury fashion",
+        "victime": "Louis Vuitton, Christian Dior Couture, Tiffany",
+        "description": "Inadequate security measures led to the exposure of data for over 5.5 million customers. Incidents were caused by malware on an employee device (Louis Vuitton) and phishing attacks compromising a SaaS customer management service (Salesforce), combined with a lack of IP access restrictions, bulk download limitations, and delayed notifications. The companies were collectively fined $25 million by South Korea.",
+        "tags": [
+          "violation",
+          "breach",
+          "luxury_fashion",
+          "louis_vuitton",
+          "christian_dior",
+          "tiffany",
+          "saas_breach",
+          "phishing",
+          "malware",
+          "customer_data",
+          "fine",
+          "south_korea"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
+          "https://databreaches.net/2026/02/13/koreas-personal-information-protection-commissioner-fines-3-lvmh-luxury-brands-after-salesforce-data-breaches/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Healthcare, health insurance",
+        "victime": "Conduent Business Services LLC, Blue Cross Blue Shield of Texas",
+        "description": "A breach of Conduent's systems, between October 21, 2024, and January 13, 2025, exposed sensitive personal data of approximately 4 million Texas residents, including Medicaid recipients. The Texas Attorney General initiated an investigation to determine the cause of the breach and compliance with state laws.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "health_insurance",
+          "conduent",
+          "blue_cross_blue_shield_of_texas",
+          "medicaid",
+          "sensitive_personal_data",
+          "government_investigation"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/attorney-general-ken-paxton-demands-information-from-blue-cross-blue-shield-of-texas-and-conduent-as-part-of-investigation-into-largest-data/?pk_campaign=feed&pk_kwd=attorney-general-ken-paxton-demands-information-from-blue-cross-blue-shield-of-texas-and-conduent-as-part-of-investigation-into-largest-data",
+          "https://mastodon.clinicians-exchange.org/@rsstosecurity/116065588691614630"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "E-commerce",
+        "victime": "Coupang",
+        "description": "A massive data leak in 2025 was attributed to management failure rather than a sophisticated cyberattack. A former Coupang engineer exploited authentication flaws between April and November, leading to data exposure.",
+        "tags": [
+          "violation",
+          "breach",
+          "e_commerce",
+          "coupang",
+          "management_failure",
+          "weak_authentication",
+          "customer_data"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/south-korea-blames-coupang-data-breach-on-management-failure-not-sophisticated-attack/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Government (tax authority)",
+        "victime": "Immigrants (personal data)",
+        "description": "The IRS (Internal Revenue Service) improperly disclosed thousands of immigrants' personal information to the Department of Homeland Security (DHS) as part of a data-sharing agreement.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "irs",
+          "dhs",
+          "improper_data_sharing",
+          "immigrant_data",
+          "privacy"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/13/irs-improperly-shares-immigrants-data-with-ice-explained/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Oil and gas, critical infrastructure",
+        "victime": "Conpet S.A. (pipeline operator in Romania)",
+        "description": "The Qilin ransomware gang stole nearly 1TB of company data, including sensitive financial and personal information, during a cyberattack.",
+        "tags": [
+          "violation",
+          "breach",
+          "oil_and_gas",
+          "critical_infrastructure",
+          "conpet",
+          "qilin",
+          "ransomware",
+          "data_exfiltration",
+          "financial_data",
+          "personal_data"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066063809831896"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido (Netherlands)",
+        "description": "A cyberattack exposed the personal data of 6.2 million customers via its contact system. Stolen data includes names, addresses, phone numbers, dates of birth, bank account numbers, and ID document details. The attack vector was likely social engineering of customer service agents' multi-factor authentication (MFA).",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "odido",
+          "customer_data",
+          "social_engineering",
+          "mfa_bypass",
+          "identity_theft"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116066058429058173",
+          "https://infosec.exchange/@soc_goulash/116065339260033695",
+          "https://hostux.social/@Joris/116064808844769177"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-26333",
+        "cvss": "10.0",
+        "product": "Calero VeraSMART",
+        "description": "Unauthenticated arbitrary file read/write vulnerability via the .NET Remoting HTTP service, leading to remote code execution (RCE) through ViewState exploitation. Can also expose NTLMv2 hashes.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "arbitrary_file_read_write",
+          "deserialization",
+          "ntlmv2_hashes",
+          "critical_vulnerability",
+          "calero_verasmart"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26333"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support and Privileged Remote Access",
+        "description": "Critical pre-authentication remote code execution (RCE) vulnerability. Allows an unauthenticated attacker to send specially crafted requests to execute operating system commands.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "pre_authentication",
+          "beyondtrust",
+          "remote_support",
+          "privileged_remote_access",
+          "actively_exploited",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187962/uncategorized/attackers-exploit-beyondtrust-cve-2026-1731-within-hours-of-poc-release.html",
+          "https://www.helpnetsecurity.com/2026/02/13/beyondtrust-cve-2026-1731-poc-exploit-activity/",
+          "https://www.security.nl/posting/924528/Kritiek+lek+in+BeyondTrust+Remote+Support+actief+misbruikt+bij+aanvallen?channel=rss",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26273",
+        "cvss": "9.8",
+        "product": "Known (social publishing platform)",
+        "description": "Critical broken authentication vulnerability leading to Account Takeover (ATO). Password reset token is leaked in a hidden HTML input field, allowing an unauthenticated attacker to retrieve it for any user.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "account_takeover",
+          "broken_authentication",
+          "password_reset_token_leakage",
+          "known",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26273"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1281",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Actively exploited remote code execution (RCE) vulnerability, leading to compromise of European government agencies.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ivanti",
+          "epmm",
+          "actively_exploited",
+          "critical_vulnerability",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Actively exploited remote code execution (RCE) vulnerability, leading to compromise of European government agencies.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "ivanti",
+          "epmm",
+          "actively_exploited",
+          "critical_vulnerability",
+          "government_targeting"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2024-43468",
+        "cvss": "9.8",
+        "product": "Microsoft Configuration Manager (SCCM)",
+        "description": "SQL injection vulnerability allowing unauthenticated attackers to execute arbitrary commands with highest privileges on the server and/or underlying site database. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "sql_injection",
+          "rce",
+          "microsoft_configuration_manager",
+          "sccm",
+          "actively_exploited",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-flags-microsoft-configmgr-rce-flaw-as-exploited-in-attacks/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/13/critical_microsoft_bug_from_2024/",
+          "https://www.security.nl/posting/924588/VS+meldt+misbruik+van+kritiek+lek+in+Microsoft+Configuration+Manager?channel=rss",
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/13/cisa-kev-catalog-update-feb-12-2026/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26335",
+        "cvss": "9.3",
+        "product": "Calero VeraSMART",
+        "description": "Use of static IIS machineKey values, allowing an attacker to craft a valid ViewState payload and achieve remote code execution (RCE) within the context of the IIS application.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "static_machine_keys",
+          "viewstate_deserialization",
+          "calero_verasmart",
+          "critical_vulnerability"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26335"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-15157",
+        "cvss": "8.8",
+        "product": "Starfish Review Generation & Marketing for WordPress plugin",
+        "description": "Unauthorized modification of data due to a missing capability check, allowing authenticated attackers (Subscriber-level+) to update arbitrary options, potentially leading to privilege escalation to administrator access.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "arbitrary_options_update",
+          "wordpress_plugin",
+          "starfish",
+          "authenticated_bypass",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-15157"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": "8.8",
+        "product": "Google Chrome",
+        "description": "Use after free vulnerability in CSS, allowing a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "use_after_free",
+          "rce",
+          "google_chrome",
+          "css",
+          "sandbox_escape",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2441"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-26334",
+        "cvss": "8.5",
+        "product": "Calero VeraSMART",
+        "description": "Hardcoded static AES encryption keys, allowing a local attacker to extract keys and decrypt stored service credentials, potentially leading to local privilege escalation.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "hardcoded_credentials",
+          "aes_keys",
+          "privilege_escalation",
+          "information_disclosure",
+          "calero_verasmart",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26334"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-21956",
+        "cvss": "8.2",
+        "product": "Oracle VirtualBox (VMSVGA)",
+        "description": "Out-Of-Bounds Access vulnerability in the VMSVGA device, allowing local privilege escalation to execute arbitrary code in the context of the hypervisor.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "privilege_escalation",
+          "out_of_bounds_access",
+          "oracle_virtualbox",
+          "hypervisor_exploit",
+          "high_severity"
+        ],
+        "sources": [
+          "https://www.zerodayinitiative.com/advisories/ZDI-26-103/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-24853",
+        "cvss": "8.1",
+        "product": "Caido (web security auditing toolkit)",
+        "description": "DNS Rebind protection bypass via X-Forwarded-Host header injection, leading to remote code execution (RCE).",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "dns_rebind",
+          "caido",
+          "web_security_auditing",
+          "high_severity"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-24853"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2033",
+        "cvss": "8.1",
+        "product": "MLflow Tracking Server",
+        "description": "Unauthenticated directory traversal vulnerability in artifact file path handling, allowing remote code execution (RCE) in the context of the service account.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "directory_traversal",
+          "mlflow_tracking_server",
+          "unauthenticated_rce",
+          "high_severity"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-105/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "7.8",
+        "product": "Apple (iOS, iPadOS, macOS, watchOS, tvOS, visionOS, Safari)",
+        "description": "Memory corruption vulnerability in Dynamic Link Editor (dyld), allowing system-level code execution after an initial foothold. Actively exploited in targeted attacks.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "memory_corruption",
+          "privilege_escalation",
+          "rce",
+          "apple",
+          "dyld",
+          "actively_exploited",
+          "zero_day"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/apple-addresses-a-critical-flaw-exploited-in-targeted-attacks",
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thecyberthrone.in/2026/02/13/cisa-kev-catalog-update-feb-12-2026/",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2026-2034",
+        "cvss": "7.8",
+        "product": "Sante DICOM Viewer Pro",
+        "description": "Buffer Overflow vulnerability during DCM file parsing, allowing remote attackers to execute arbitrary code.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "sante_dicom_viewer_pro",
+          "user_interaction_required"
+        ],
+        "sources": [
+          "http://www.zerodayinitiative.com/advisories/ZDI-26-104/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-15556",
+        "cvss": "N/A",
+        "product": "Notepad++ (versions prior to 8.8.9 using WinGup)",
+        "description": "Download of code without integrity check vulnerability, allowing an attacker to execute arbitrary code via a malicious installer during an update. Actively exploited by the Lotus Blossom APT.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "code_without_integrity_check",
+          "rce",
+          "notepad++",
+          "supply_chain",
+          "apt_exploit",
+          "lotus_blossom",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2025-40536",
+        "cvss": "N/A",
+        "product": "SolarWinds Web Help Desk",
+        "description": "Security control bypass vulnerability allowing an unauthenticated attacker to access restricted functionality. Actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "security_control_bypass",
+          "solarwinds",
+          "web_help_desk",
+          "unauthenticated_access",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://infosec.exchange/@soc_goulash/116065339260033695"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "cve_id": "CVE-2018-0802",
+        "cvss": "N/A",
+        "product": "Microsoft Equation Editor (EQNEDT32.EXE)",
+        "description": "Remote Code Execution (RCE) vulnerability in Microsoft Equation Editor. Exploited in a new XWorm RAT campaign via malicious Excel attachments.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "rce",
+          "microsoft_equation_editor",
+          "excel_exploit",
+          "xworm_rat",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/new-xworm-rat-campaign-uses-themed-phishing-lures/"
+        ],
+        "date": "2026-02-14"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Claude LLM artifacts abused to push Mac infostealers in ClickFix attack",
+        "description": "Threat actors are abusing public Claude LLM artifacts and Google Ads in 'ClickFix' campaigns to distribute infostealer malware to macOS users. Malicious search results lead users to Claude artifacts or fake Apple Support articles instructing them to execute shell commands in Terminal, which installs the MacSync/AMOS infostealer to exfiltrate sensitive data.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [],
+          "URL": [
+            "a2abotnet.com/gate"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1059.004",
+            "T1105",
+            "T1560.001"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1059.004 (Command and Scripting Interpreter: Unix Shell)",
+          "T1105 (Ingress Tool Transfer)",
+          "T1560.001 (Archive Collected Data: Archive via Utility)"
+        ],
+        "analyse": "This campaign demonstrates increasing sophistication in using AI and legitimate platforms (Claude, Google Ads) for data-stealing attacks. The target is broad (macOS users performing technical searches). The impact is infostealer data theft that can severely compromise user privacy and security. The geographical potential is vast, given the reach of the targeted services.",
+        "recommandations": [
+          "Users should exercise caution and avoid executing Terminal commands they don't fully understand.",
+          "Ask chatbots, within the same conversation, if the provided commands are safe.",
+          "Use ad blockers to reduce exposure to malicious advertisements."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "macos",
+          "ai_abuse",
+          "llm",
+          "clickfix",
+          "google_ads",
+          "shell_command_execution",
+          "data_exfiltration",
+          "T1566.002",
+          "T1059.004",
+          "T1105",
+          "T1560.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/claude-llm-artifacts-abused-to-push-mac-infostealers-in-clickfix-attack/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Fake job recruiters hide malware in developer coding challenges",
+        "description": "North Korean threat actors are targeting JavaScript and Python developers with fake cryptocurrency-related job offers. They distribute malicious packages on npm and PyPi registries that act as downloaders for a remote access Trojan (RAT) dubbed 'Graphalgo'. The malicious code is often activated with a delay, and attackers use GitHub Organizations to host 'clean' repositories that introduce malicious dependencies.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {
+          "FILE_NAME": [
+            "bigmathutils"
+          ],
+          "SOFTWARE_PACKAGE": [
+            "npm",
+            "PyPi"
+          ],
+          "MITRE_ATT&CK": [
+            "T1589.001",
+            "T1588.006",
+            "T1195.002",
+            "T1204.002",
+            "T1071.001"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589.001 (Compromise Accounts: Social Media Accounts)",
+          "T1588.006 (Obtain Capabilities: Malware)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software and Supply Chain)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)"
+        ],
+        "analyse": "The campaign targets development professionals, posing a high risk of software supply chain compromise. The use of popular packages and credible recruiter profiles makes detection difficult for targets. The geographical impact is potentially global given the nature of development and recruitment platforms. The attackers' patience (delayed activation) makes the threat more insidious.",
+        "recommandations": [
+          "Developers who have installed suspicious packages should rotate all tokens and account passwords, and reinstall their operating system.",
+          "Implement rigorous verification of software dependencies from public registries.",
+          "Train employees to identify fraudulent job offers and risks associated with unverified coding challenges."
+        ],
+        "tags": [
+          "malware",
+          "rat",
+          "supply_chain",
+          "phishing",
+          "developers",
+          "cryptocurrency",
+          "npm",
+          "pypi",
+          "lazarus_group",
+          "reconnaissance",
+          "T1589.001",
+          "T1588.006",
+          "T1195.002",
+          "T1204.002",
+          "T1071.001"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-job-recruiters-hide-malware-in-developer-coding-challenges/"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Google: state-backed hackers exploit Gemini AI for cyber recon and attacks",
+        "description": "State-sponsored actors (North Korea, Iran, China, Russia) are exploiting Google's Gemini AI model for reconnaissance, targeting, and cyber operations support. North Korean group UNC2970 uses Gemini for OSINT and profiling defense targets, while Iran-linked APT42 employs it for reconnaissance and social engineering lure creation. New malware like HONESTCUE uses the Gemini API to generate malicious C# code on demand (fileless method). Phishing kits like COINBAIT are also developed with AI assistance.",
+        "threat_actor": "UNC2970, APT42, Actor behind HONESTCUE, UNC5356 (linked to COINBAIT)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1592",
+            "T1594",
+            "T1598",
+            "T1566.001",
+            "T1059.003",
+            "T1027"
+          ]
+        },
+        "mitre_ttps": [
+          "T1592 (Gather Victim Host Information)",
+          "T1594 (Gather Victim Identity Information)",
+          "T1598 (Phishing for Information)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1027 (Obfuscated Files or Information)"
+        ],
+        "analyse": "AI is becoming a powerful tool for state-sponsored actors across all phases of their attacks, from reconnaissance to code execution. The use of LLMs to create 'life-like' phishing lures increases social engineering effectiveness. The fileless approach via AI code generation makes detection more challenging. This represents a significant evolution in attacker capabilities and highlights new vulnerabilities related to AI service abuse.",
+        "recommandations": [
+          "Strengthen security measures around AI APIs and services to prevent abuse.",
+          "Implement advanced detections for AI-driven malware and fileless techniques.",
+          "Educate users on new forms of AI-generated phishing.",
+          "Protect AI cloud service API keys."
+        ],
+        "tags": [
+          "ai_abuse",
+          "nation_state_actor",
+          "reconnaissance",
+          "phishing",
+          "malware_generation",
+          "fileless_malware",
+          "llm",
+          "gemini_ai",
+          "unc2970",
+          "apt42",
+          "cryptocurrency_targeting",
+          "T1592",
+          "T1594",
+          "T1598",
+          "T1566.001",
+          "T1059.003",
+          "T1027"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "New threat actor UAT-9921 deploys VoidLink against enterprise sectors",
+        "description": "Cisco Talos has identified a new threat actor, UAT-9921, using a modular attack framework called VoidLink to target technology and financial organizations. VoidLink is installed on compromised servers for Command and Control (C2), activity concealment, and network scanning. The actor uses stolen credentials or exploits Java serialization flaws for initial access. The framework is developed with the help of AI-enabled coding tools and features advanced capabilities such as eBPF/LKM rootkits and EDR evasion.",
+        "threat_actor": "UAT-9921",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1078",
+            "T1190",
+            "T1057",
+            "T1049",
+            "T1070.004",
+            "T1059",
+            "T1548.002",
+            "T1574.006"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078 (Valid Accounts)",
+          "T1190 (Exploit Public-Facing Application)",
+          "T1057 (Process Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1070.004 (Indicator Removal on Host: File Deletion)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1548.002 (Bypass User Account Control)",
+          "T1574.006 (Hijack Execution Flow: Dynamic-Link Library Search Order Hijacking)"
+        ],
+        "analyse": "UAT-9921 represents an advanced threat, capable of adapting its tools and techniques to various victims due to VoidLink's flexible design. The use of AI coding tools for framework development and its EDR evasion and persistence capabilities (rootkits) make it particularly dangerous. VoidLink's modular nature suggests an evolving threat capable of significantly reducing lateral movement and data exfiltration timelines, making detection and response more challenging.",
+        "recommandations": [
+          "Implement robust patch management for Java serialization vulnerabilities and other exposed flaws.",
+          "Strengthen authentication and monitor credential usage.",
+          "Improve detection of internal and external network scanning activities, as well as C2 indicators.",
+          "Deploy advanced security solutions capable of detecting eBPF/LKM rootkits and EDR evasion techniques."
+        ],
+        "tags": [
+          "threat_actor",
+          "voidlink",
+          "modular_framework",
+          "technology",
+          "financial_services",
+          "c2",
+          "data_exfiltration",
+          "privilege_escalation",
+          "edr_evasion",
+          "ai_development",
+          "T1078",
+          "T1190",
+          "T1057",
+          "T1049",
+          "T1070.004",
+          "T1059",
+          "T1548.002",
+          "T1574.006"
+        ],
+        "sources": [
+          "https://securityaffairs.com/187969/ai/new-threat-actor-uat-9921-deploys-voidlink-against-enterprise-sectors.html"
+        ],
+        "date": "2026-02-14"
+      },
+      {
+        "title": "Phishing on the Edge of the Web and Mobile Using QR Codes",
+        "description": "Analysis of the extensive use of malicious QR codes ('quishing') to bypass security controls. Attackers leverage QR code URL shorteners, in-app deep links (Telegram, Line, payment apps), and direct APK downloads to trick users into interacting with malicious destinations. These methods facilitate credential theft, unauthorized transactions, account takeovers, and the installation of harmful applications.",
+        "threat_actor": "Not applicable (various opportunistic attackers, state actors like UAC-0185/UNC4221)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "qrco.de",
+            "me-qr.com",
+            "qrs.ly",
+            "cdnimg.jeayacrai.in.net",
+            "snitch.open-group.site",
+            "f9999.app",
+            "pyreneesakbash.com"
+          ],
+          "FILE_NAME": [
+            "yicai.apk",
+            "NagaPocker.apk"
+          ],
+          "MITRE_ATT&CK": [
+            "T1566",
+            "T1598",
+            "T1071.001",
+            "T1059"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1598 (Phishing for Information)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "The widespread use of QR codes in daily life has created a highly effective new attack vector, exploiting user trust and the lack of visibility of traditional detection systems into in-app deep links and dynamic URL shorteners. The impact is significant on financial services, messaging, social media, and malicious application distribution, with state-sponsored targeting potential as demonstrated against Ukrainian Signal users.",
+        "recommandations": [
+          "Increase user awareness of QR code risks, urging them not to scan codes from unknown sources and to verify destinations before any action.",
+          "Deploy QR code specific detection techniques in crawlers and security solutions to analyze embedded data.",
+          "Use mobile sandbox environments to observe and analyze in-app deep link activity.",
+          "Implement stricter security measures for messaging and payment applications to prevent account takeover via deep links."
+        ],
+        "tags": [
+          "phishing",
+          "qr_codes",
+          "quishing",
+          "mobile_security",
+          "deep_links",
+          "url_shorteners",
+          "apk_download",
+          "account_takeover",
+          "financial_fraud",
+          "signal_targeting",
+          "T1566",
+          "T1598",
+          "T1071.001",
+          "T1059"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/qr-codes-as-attack-vector/"
+        ],
+        "date": "2026-02-14"
+      }
+    ]
+  }
+}
