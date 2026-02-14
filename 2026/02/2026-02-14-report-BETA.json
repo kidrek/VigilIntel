@@ -1,0 +1,367 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for February 14, 2026, is dominated by the active exploitation of critical legacy and zero-day vulnerabilities. CISA has issued urgent warnings regarding a Microsoft Configuration Manager SQL injection (CVE-2024-43468) and an Apple zero-day (CVE-2026-20700). Geopolitically, the expiration of the New START treaty and Russia's hybrid warfare tactics—specifically the recruitment of foreign fighters via gaming platforms—signal a period of increased global instability. Furthermore, the industrialization of AI-assisted attacks, seen in campaigns like ClickFix using Claude LLM artifacts and state-backed actors (UNC2970, APT42) leveraging generative AI for reconnaissance, marks a significant shift in attacker efficiency.",
+      "fr": "Le paysage des menaces pour le 14 février 2026 est dominé par l'exploitation active de vulnérabilités critiques héritées et de vulnérabilités zero-day. Le CISA a émis des alertes urgentes concernant une injection SQL dans Microsoft Configuration Manager (CVE-2024-43468) et une faille zero-day chez Apple (CVE-2026-20700). Sur le plan géopolitique, l'expiration du traité New START et les tactiques de guerre hybride de la Russie—notamment le recrutement de combattants étrangers via des plateformes de jeux—signalent une période d'instabilité mondiale accrue. De plus, l'industrialisation des attaques assistées par l'IA, illustrée par les campagnes ClickFix détournant les artefacts de l'IA Claude et l'utilisation de l'IA générative par des acteurs étatiques (UNC2970, APT42) pour la reconnaissance, marque un tournant majeur dans l'efficacité des attaquants."
+    },
+    "date": "2026-02-14"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Lazarus Group",
+      "campaign": "Graphalgo",
+      "campaign_description": {
+        "en": "The North Korean Lazarus Group is conducting a fake recruiter campaign targeting JavaScript and Python developers. Using platforms like LinkedIn and Reddit, they invite targets to complete coding challenges containing malicious npm and PyPI dependencies that deliver a Remote Access Trojan (RAT).",
+        "fr": "Le groupe nord-coréen Lazarus mène une campagne de faux recruteurs ciblant les développeurs JavaScript et Python. Via LinkedIn et Reddit, ils invitent les cibles à relever des défis de code contenant des dépendances npm et PyPI malveillantes qui déploient un cheval de Troie d'accès à distance (RAT)."
+      },
+      "sector": {
+        "en": "Technology, Blockchain, Cryptocurrency",
+        "fr": "Technologie, Blockchain, Crypto-monnaie"
+      },
+      "modop": {
+        "en": "Fake job offers, social engineering via LinkedIn/Reddit, malicious coding challenges, supply chain poisoning (npm/PyPI).",
+        "fr": "Fausses offres d'emploi, ingénierie sociale via LinkedIn/Reddit, tests de code malveillants, empoisonnement de la chaîne d'approvisionnement (npm/PyPI)."
+      },
+      "tags": [
+        "North Korea",
+        "Supply Chain",
+        "Lazarus",
+        "npm",
+        "PyPI"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fake-job-recruiters-hide-malware-in-developer-coding-challenges/"
+      ],
+      "date": "2026-02-13"
+    },
+    {
+      "threat_actor": "APT42",
+      "campaign": "Generative AI Reconnaissance",
+      "campaign_description": {
+        "en": "The Iranian threat actor APT42 has been observed using Google's Gemini AI to enhance reconnaissance, targeted social engineering, and language translation to craft believable phishing pretexts.",
+        "fr": "L'acteur de menace iranien APT42 a été observé utilisant l'IA Gemini de Google pour améliorer la reconnaissance, l'ingénierie sociale ciblée et la traduction linguistique afin de créer des prétextes de phishing crédibles."
+      },
+      "sector": {
+        "en": "Global, Government, Defense",
+        "fr": "Global, Gouvernement, Défense"
+      },
+      "modop": {
+        "en": "Abuse of GenAI APIs for target profiling and translation.",
+        "fr": "Abus des API GenAI pour le profilage des cibles et la traduction."
+      },
+      "tags": [
+        "APT42",
+        "Iran",
+        "GenAI",
+        "Gemini"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187958/ai/google-state-backed-hackers-exploit-gemini-ai-for-cyber-recon-and-attacks.html"
+      ],
+      "date": "2026-02-13"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Nuclear / Defense",
+        "fr": "Nucléaire / Défense"
+      },
+      "theme": {
+        "en": "Expiration of New START Treaty",
+        "fr": "Expiration du traité New START"
+      },
+      "description": {
+        "en": "The New START Treaty officially expired on February 6, 2026. This has triggered a wave of pro-Russian disinformation aimed at blaming the West for the collapse of nuclear arms control and promoting a new nuclear multipolarity.",
+        "fr": "Le traité New START a officiellement expiré le 6 février 2026. Cela a déclenché une vague de désinformation pro-russe visant à rejeter sur l'Occident la responsabilité de l'effondrement du contrôle des armements nucléaires et à promouvoir une nouvelle multipolarité nucléaire."
+      },
+      "tags": [
+        "New START",
+        "Nuclear",
+        "Disinformation",
+        "Russia",
+        "USA"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/as-new-start-ends-disinformation-about-it-continues/"
+      ],
+      "date": "2026-02-13"
+    },
+    {
+      "sector": {
+        "en": "Societal / Military",
+        "fr": "Sociétal / Militaire"
+      },
+      "theme": {
+        "en": "Gamers as Hybrid Warfare Targets",
+        "fr": "Les joueurs comme cibles de la guerre hybride"
+      },
+      "description": {
+        "en": "Russia is weaponizing video games (e.g., Arma 3) and community platforms like Discord to recruit foreign nationals for its military operations in Ukraine. This highlights the conversion of entertainment platforms into battlefields for influence.",
+        "fr": "La Russie instrumentalise les jeux vidéo (ex: Arma 3) et les plateformes communautaires comme Discord pour recruter des ressortissants étrangers pour ses opérations militaires en Ukraine. Cela souligne la conversion des plateformes de divertissement en champs de bataille pour l'influence."
+      },
+      "tags": [
+        "Russia",
+        "Hybrid Warfare",
+        "Gaming",
+        "Recruitment",
+        "Discord"
+      ],
+      "sources": [
+        "https://www.rusi.org/explore-our-research/publications/commentary/how-russia-turns-gamers-fighters"
+      ],
+      "date": "2026-02-13"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "LVMH Group (Louis Vuitton, Dior, Tiffany)",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Luxury Goods",
+        "fr": "Luxe"
+      },
+      "description": {
+        "en": "South Korean regulators fined three LVMH brands $25 million for security failures leading to the breach of 5.5 million customer records. The breaches originated from malware on employee devices and phishing, targeting Salesforce SaaS environments.",
+        "fr": "Les régulateurs sud-coréens ont condamné trois marques de LVMH à une amende de 25 millions de dollars pour des failles de sécurité ayant entraîné la violation des données de 5,5 millions de clients. Les brèches provenaient de malwares sur les appareils des employés et de phishing, ciblant les environnements SaaS Salesforce."
+      },
+      "tags": [
+        "Data Breach",
+        "LVMH",
+        "SaaS",
+        "South Korea",
+        "Fine"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/louis-vuitton-dior-and-tiffany-fined-25-million-over-data-breaches/",
+        "https://databreaches.net/2026/02/13/koreas-personal-information-protection-commissioner-fines-3-lvmh-luxury-brands-after-salesforce-data-breaches/"
+      ],
+      "date": "2026-02-13"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2024-43468",
+      "euvd_id": "EUVD-2024-43468",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:configuration_manager:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Configuration Manager (ConfigMgr / SCCM)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical SQL injection vulnerability in Microsoft Configuration Manager that allows unauthenticated remote code execution. Exploited in the wild.",
+        "fr": "Vulnérabilité critique d'injection SQL dans Microsoft Configuration Manager permettant l'exécution de code à distance sans authentification. Exploitée dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "KEV",
+        "SQL Injection",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-flags-microsoft-configmgr-rce-flaw-as-exploited-in-attacks/",
+        "https://cybersecuritynews.com/microsoft-configuration-manager-sql-injection-vulnerability/"
+      ],
+      "date": "2026-02-13"
+    },
+    {
+      "cve_id": "CVE-2026-20700",
+      "euvd_id": "EUVD-2026-20700",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+      "product": "dyld (Dynamic Link Editor)",
+      "vendor": "Apple",
+      "description": {
+        "en": "Critical memory corruption zero-day in Apple's Dynamic Link Editor (dyld) exploited in targeted attacks to achieve system-level code execution.",
+        "fr": "Vulnérabilité zero-day de corruption mémoire critique dans le Dynamic Link Editor (dyld) d'Apple, exploitée dans des attaques ciblées pour obtenir l'exécution de code au niveau système."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "Apple",
+        "iOS",
+        "macOS"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/apple-addresses-a-critical-flaw-exploited-in-targeted-attacks",
+        "https://securityaffairs.com/187937/security/u-s-cisa-adds-solarwinds-web-help-desk-notepad-microsoft-configuration-manager-and-apple-devices-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-02-13"
+    },
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+      "product": "Remote Support / Privileged Remote Access",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "Critical OS command injection vulnerability in BeyondTrust Remote Support. Attacked hours after PoC release.",
+        "fr": "Vulnérabilité critique d'injection de commandes OS dans BeyondTrust Remote Support. Attaquée quelques heures après la publication du PoC."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "BeyondTrust"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187962/uncategorized/attackers-exploit-beyondtrust-cve-2026-1731-within-hours-of-poc-release.html"
+      ],
+      "date": "2026-02-13"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ClickFix Campaign abusing Claude LLM Artifacts",
+        "fr": "Campagne ClickFix abusant des artefacts de l'IA Claude"
+      },
+      "description": {
+        "en": "Threat actors are abusing Antropic’s Claude artifacts and Google Ads to deliver macOS infostealers. Users are tricked into executing malicious base64-encoded shell commands via a fake guide.",
+        "fr": "Des acteurs de menace détournent les artefacts Claude d'Anthropic et Google Ads pour diffuser des infostealers sur macOS. Les utilisateurs sont piégés et incités à exécuter des commandes shell malveillantes encodées en base64 via un faux guide."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://raxelpak.com/curl/[hash]",
+          "https://a2abotnet.com/gate"
+        ],
+        "IPv4": [
+          "20.217.81.20"
+        ],
+        "IPv6": [
+          ""
+        ],
+        "DOMAIN": [
+          "raxelpak.com",
+          "a2abotnet.com",
+          "claude.ai"
+        ],
+        "EMAIL": [
+          ""
+        ],
+        "HASH_SHA256": [
+          ""
+        ],
+        "HASH_SHA1": [
+          ""
+        ],
+        "HASH_MD5": [
+          ""
+        ],
+        "TOOLS": [
+          "Terminal",
+          "zsh",
+          "base64"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1059.004",
+        "T1204.002"
+      ],
+      "analyse": {
+        "en": "This campaign leverages the trust in popular AI platforms to bypass user suspicion. The use of fileless commands in Terminal makes detection harder for traditional EDR.",
+        "fr": "Cette campagne exploite la confiance accordée aux plateformes d'IA populaires pour contourner la méfiance des utilisateurs. L'utilisation de commandes sans fichier dans le Terminal rend la détection plus difficile pour les EDR traditionnels."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid executing Terminal commands provided by untrusted or third-party web guides.",
+          "fr": "Évitez d'exécuter des commandes Terminal fournies par des guides Web non fiables ou tiers."
+        },
+        {
+          "en": "Monitor for anomalous outbound HTTP POST requests to unauthorized gate domains.",
+          "fr": "Surveillez les requêtes HTTP POST sortantes anormales vers des domaines 'gate' non autorisés."
+        }
+      ],
+      "tags": [
+        "ClickFix",
+        "macOS",
+        "Claude",
+        "Infostealer"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/claude-llm-artifacts-abused-to-push-mac-infostealers-in-clickfix-attack/"
+      ],
+      "date": "2026-02-13"
+    },
+    {
+      "title": {
+        "en": "UAT-9921 VoidLink Framework",
+        "fr": "Framework VoidLink de UAT-9921"
+      },
+      "description": {
+        "en": "UAT-9921 is a newly discovered threat actor utilizing the 'VoidLink' modular framework. It focuses on Linux targets but shows potential for Windows support, offering advanced rootkit and container escape capabilities.",
+        "fr": "UAT-9921 est un nouvel acteur de menace utilisant le framework modulaire 'VoidLink'. Il se concentre sur les cibles Linux mais montre un potentiel de support Windows, offrant des capacités avancées de rootkit et d'évasion de conteneurs."
+      },
+      "threat_actor": "UAT-9921",
+      "indicators": {
+        "URL": [
+          ""
+        ],
+        "IPv4": [
+          ""
+        ],
+        "IPv6": [
+          ""
+        ],
+        "DOMAIN": [
+          ""
+        ],
+        "EMAIL": [
+          ""
+        ],
+        "HASH_SHA256": [
+          ""
+        ],
+        "HASH_SHA1": [
+          ""
+        ],
+        "HASH_MD5": [
+          ""
+        ],
+        "TOOLS": [
+          "VoidLink",
+          "Zig",
+          "Go",
+          "eBPF"
+        ]
+      },
+      "mitre_ttps": [
+        "T1068",
+        "T1014",
+        "T1611"
+      ],
+      "analyse": {
+        "en": "VoidLink represents a high-grade tool potentially developed with AI assistance, designed for rapid lateral movement and persistence in enterprise Linux environments.",
+        "fr": "VoidLink représente un outil de haute qualité potentiellement développé avec l'aide de l'IA, conçu pour un déplacement latéral rapide et une persistance dans les environnements Linux d'entreprise."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict monitoring of eBPF and LKM loading on Linux servers.",
+          "fr": "Implémentez une surveillance stricte du chargement eBPF et LKM sur les serveurs Linux."
+        },
+        {
+          "en": "Patch Java serialization vulnerabilities (Apache Dubbo) used for initial access.",
+          "fr": "Corrigez les vulnérabilités de sérialisation Java (Apache Dubbo) utilisées pour l'accès initial."
+        }
+      ],
+      "tags": [
+        "UAT-9921",
+        "VoidLink",
+        "Linux",
+        "Rootkit"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187969/ai/new-threat-actor-uat-9921-deploys-voidlink-against-enterprise-sectors.html"
+      ],
+      "date": "2026-02-13"
+    }
+  ]
+}
