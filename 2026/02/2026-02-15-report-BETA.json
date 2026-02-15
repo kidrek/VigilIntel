@@ -1,0 +1,275 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for mid-February 2026 is characterized by intense exploitation of critical vulnerabilities in enterprise management and remote access solutions (Ivanti, BeyondTrust, Microsoft SCCM). A single actor is notably responsible for 83% of Ivanti RCE attacks, signaling high automation. Concurrently, state-sponsored activity remains aggressive: Russian-linked groups are leveraging LLMs to enhance phishing campaigns in Ukraine, while Chinese actors targeted the Notepad++ update infrastructure for espionage. Finally, a creative shift in social engineering is observed with physical 'snail mail' letters targeting cryptocurrency wallet users (Trezor/Ledger), bypassing traditional digital filters.",
+      "fr": "Le paysage des menaces pour la mi-février 2026 est marqué par une exploitation intense de vulnérabilités critiques dans les solutions de gestion d'entreprise et d'accès à distance (Ivanti, BeyondTrust, Microsoft SCCM). Un acteur unique est responsable de 83 % des attaques RCE sur Ivanti, ce qui indique une automatisation élevée. Parallèlement, l'activité étatique reste agressive : des groupes liés à la Russie utilisent des LLM pour améliorer leurs campagnes de phishing en Ukraine, tandis que des acteurs chinois ont ciblé l'infrastructure de mise à jour de Notepad++ à des fins d'espionnage. Enfin, on observe une évolution créative de l'ingénierie sociale avec l'envoi de courriers postaux physiques ciblant les utilisateurs de portefeuilles de crypto-monnaies (Trezor/Ledger), contournant ainsi les filtres numériques traditionnels."
+    },
+    "date": "2026-02-15"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "ShinyHunters",
+      "campaign": "Okta Targeting Campaign / Figure Data Breach",
+      "campaign_description": {
+        "en": "The group claimed responsibility for a data breach at fintech firm Figure, stealing 2.5GB of data after a social engineering attack on an employee, likely part of a broader campaign against Okta users.",
+        "fr": "Le groupe a revendiqué une violation de données chez la société fintech Figure, dérobant 2,5 Go de données après une attaque d'ingénierie sociale contre un employé, s'inscrivant probablement dans une campagne plus large ciblant les utilisateurs d'Okta."
+      },
+      "sector": {
+        "en": "Financial Services (Fintech)",
+        "fr": "Services Financiers (Fintech)"
+      },
+      "modop": {
+        "en": "Social engineering, employee phishing, extortion via dark web leak sites.",
+        "fr": "Ingénierie sociale, phishing d'employés, extorsion via des sites de fuites sur le dark web."
+      },
+      "tags": [
+        "extortion",
+        "data-leak",
+        "social-engineering"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187988/data-breach/fintech-firm-figure-disclosed-data-breach-after-employee-phishing-attack.html"
+      ],
+      "date": "2026-02-14"
+    },
+    {
+      "threat_actor": "Sandworm Team",
+      "campaign": "Ukrainian Espionage 2026",
+      "campaign_description": {
+        "en": "Referenced in relation to ongoing operations against Ukraine, using tools like WAVESIGN and INFAMOUSCHISEL to extract data from Signal and Telegram on Windows/Android devices.",
+        "fr": "Référencé en lien avec des opérations en cours contre l'Ukraine, utilisant des outils comme WAVESIGN et INFAMOUSCHISEL pour extraire des données de Signal et Telegram sur des appareils Windows/Android."
+      },
+      "sector": {
+        "en": "Government, Defense, Energy",
+        "fr": "Gouvernement, Défense, Énergie"
+      },
+      "modop": {
+        "en": "Mobile malware, messaging app database exfiltration, infrastructure hijacking.",
+        "fr": "Malware mobile, exfiltration de bases de données d'applications de messagerie, détournement d'infrastructure."
+      },
+      "tags": [
+        "APT44",
+        "Ukraine",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187976/hacking/suspected-russian-hackers-deploy-canfail-malware-against-ukraine.html"
+      ],
+      "date": "2026-02-14"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "European Union / China",
+        "fr": "Union Européenne / Chine"
+      },
+      "theme": {
+        "en": "Economic Security and De-risking Strategy",
+        "fr": "Sécurité économique et stratégie de réduction des risques"
+      },
+      "description": {
+        "en": "The EU is implementing a 'de-risking' strategy to reduce strategic dependencies on China, specifically in sectors like semiconductors (Chips Act), batteries, and critical raw materials, while filtering foreign direct investments (IDE).",
+        "fr": "L'UE met en œuvre une stratégie de 'de-risking' pour réduire les dépendances stratégiques vis-à-vis de la Chine, notamment dans les secteurs des semi-conducteurs (Chips Act), des batteries et des matières premières critiques, tout en filtrant les investissements directs étrangers (IDE)."
+      },
+      "tags": [
+        "De-risking",
+        "Economic Intelligence",
+        "Sovereignty"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/influence-economique-de-la-chine-quels-risques-pour-lue-2-2/"
+      ],
+      "date": "2026-02-14"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Odido",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Massive data breach affecting 6.2 million customers of the Dutch phone giant.",
+        "fr": "Violation massive de données affectant 6,2 millions de clients du géant néerlandais de la téléphonie."
+      },
+      "tags": [
+        "Massive Breach",
+        "PII"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/14/dutch-phone-giant-odido-says-millions-of-customers-affected-by-data-breach/"
+      ],
+      "date": "2026-02-14"
+    },
+    {
+      "victim": "Flickr",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Technology / Social Media",
+        "fr": "Technologie / Réseaux Sociaux"
+      },
+      "description": {
+        "en": "Data leak via a third-party email provider exposing usernames, emails, and IP addresses of subscribers, potentially facilitating large-scale phishing.",
+        "fr": "Fuite de données via un prestataire de messagerie tiers exposant les noms d'utilisateur, les e-mails et les adresses IP des abonnés, facilitant potentiellement le phishing à grande échelle."
+      },
+      "tags": [
+        "Third-party risk",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.datasecuritybreach.fr/flickr-alerte-sur-une-fuite-via-un-prestataire-de-mails/"
+      ],
+      "date": "2026-02-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-2441",
+      "euvd_id": "EUVD-2026-2441",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "High-severity zero-day vulnerability (Use-after-free in CSS) being exploited in the wild to execute malicious code via compromised webpages.",
+        "fr": "Vulnérabilité zero-day de sévérité élevée (Use-after-free dans le CSS) exploitée dans la nature pour exécuter du code malveillant via des pages web compromises."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityonline.info/critical-alert-chrome-zero-day-cve-2026-2441-exploited-in-the-wild/"
+      ],
+      "date": "2026-02-15"
+    },
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "EUVD-2026-1731",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+      "product": "Remote Support / Privileged Remote Access",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "Critical pre-authentication remote code execution (RCE) vulnerability in BeyondTrust products. Observed being reconned and exploited shortly after PoC release.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance (RCE) pré-authentification dans les produits BeyondTrust. Observée en phase de reconnaissance et d'exploitation peu après la publication du PoC."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "CISA-KEV"
+      ],
+      "sources": [
+        "https://securityaffairs.com/187982/breaking-news/u-s-cisa-adds-a-flaw-in-beyondtrust-rs-and-pra-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-02-14"
+    },
+    {
+      "cve_id": "CVE-2024-43468",
+      "euvd_id": "EUVD-2024-43468",
+      "cisa_kev": "TRUE",
+      "cvss": "8.0+",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:configuration_manager:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Configuration Manager (SCCM)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical SQL injection vulnerability in SCCM allowing unauthenticated command execution. Added to CISA KEV.",
+        "fr": "Vulnérabilité critique d'injection SQL dans SCCM permettant l'exécution de commandes non authentifiées. Ajoutée au catalogue KEV de la CISA."
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "SCCM"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/microsoft-configuration-manager-sql-injection-vulnerability/"
+      ],
+      "date": "2026-02-14"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "CANFAIL Malware Campaign against Ukraine",
+        "fr": "Campagne du malware CANFAIL contre l'Ukraine"
+      },
+      "description": {
+        "en": "A new undocumented group linked to Russian intelligence uses LLMs to generate social engineering lures and delivers the CANFAIL malware (obfuscated JavaScript) via Google Drive RAR archives.",
+        "fr": "Un nouveau groupe non documenté lié aux services de renseignement russes utilise des LLM pour générer des leurres d'ingénierie sociale et distribue le malware CANFAIL (JavaScript offusqué) via des archives RAR sur Google Drive."
+      },
+      "threat_actor": "Suspected Russian Intelligence Services",
+      "indicators": {
+        "URL": [
+          "https://docs.google.com/forms/d/e/1FAIpQLSfGBXwSdUELbdBhDqPSCRCu9a9o-M0rse3y4SHNMvudPNryiQ/viewform?usp=send_form"
+        ],
+        "IPv4": [
+          "193.24.123.42",
+          "185.212.171.0"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "handle.in",
+          "trezor.authentication-check.io",
+          "ledger.setuptransactioncheck.com",
+          "radar.offseq.com",
+          "nexaspecs.com"
+        ],
+        "EMAIL": [
+          "security@wordfence.com",
+          "pierluigi.paganini@securityaffairs.co",
+          "securityfeed@infosec.exchange"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "CANFAIL",
+          "WAVESIGN",
+          "INFAMOUSCHISEL",
+          "LLMs"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1204.002",
+        "T1059.001",
+        "T1105"
+      ],
+      "analyse": {
+        "en": "The use of LLMs to overcome linguistic and technical barriers shows a professionalization of lower-tier state actors. The malware uses OAST-style callbacks for verification.",
+        "fr": "L'utilisation de LLM pour surmonter les barrières linguistiques et techniques montre une professionnalisation des acteurs étatiques de second rang. Le malware utilise des rappels de type OAST pour vérification."
+      },
+      "recommandations": [
+        {
+          "en": "Block the specific PROSPERO OOO IP address (193.24.123.42) used for multi-vulnerability scanning.",
+          "fr": "Bloquer l'adresse IP spécifique de PROSPERO OOO (193.24.123.42) utilisée pour le scan de vulnérabilités multiples."
+        },
+        {
+          "en": "Alert cryptocurrency wallet users about physical mail phishing campaigns requesting recovery phrases.",
+          "fr": "Alerter les utilisateurs de portefeuilles de crypto-monnaies sur les campagnes de phishing par courrier postal demandant des phrases de récupération."
+        }
+      ],
+      "tags": [
+        "phishing",
+        "CANFAIL",
+        "LLM",
+        "Ukraine"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/one-threat-actor-responsible-for-83-percent-of-recent-ivanti-rce-attacks/",
+        "https://securityaffairs.com/187976/hacking/suspected-russian-hackers-deploy-canfail-malware-against-ukraine.html"
+      ],
+      "date": "2026-02-14"
+    }
+  ]
+}
