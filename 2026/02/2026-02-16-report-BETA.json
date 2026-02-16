@@ -1,0 +1,379 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for February 2026 is marked by a significant escalation in supply chain attacks and highly creative social engineering. State-sponsored actors like Lazarus and Lotus Blossom are moving beyond simple malware delivery, instead compromising official software distribution infrastructures (Notepad++) and weaponizing developer ecosystems (npm/PyPI). Simultaneously, the 'ClickFix' technique has evolved to abuse core network protocols like DNS (nslookup) and browser functionality (JavaScript injection), bypassing traditional endpoint security. The massive exploitation of industrial systems (IoT/OT) via critical vulnerabilities with no immediate patches (ZLAN, Milvus) highlights a persistent risk to critical infrastructure.",
+      "fr": "Le paysage des menaces pour février 2026 est marqué par une escalade significative des attaques contre la chaîne d'approvisionnement et une ingénierie sociale particulièrement créative. Des acteurs étatiques tels que Lazarus et Lotus Blossom dépassent la simple diffusion de malwares pour compromettre les infrastructures officielles de distribution de logiciels (Notepad++) et armer les écosystèmes de développeurs (npm/PyPI). Simultanément, la technique 'ClickFix' a évolué pour abuser des protocoles réseau de base comme le DNS (nslookup) et des fonctionnalités du navigateur (injection JavaScript), contournant ainsi la sécurité traditionnelle des terminaux. L'exploitation massive de systèmes industriels (IoT/OT) via des vulnérabilités critiques sans correctif immédiat (ZLAN, Milvus) souligne un risque persistant pour les infrastructures critiques."
+    },
+    "date": "2026-02-16"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Lazarus Group",
+      "campaign": "graphalgo",
+      "campaign_description": {
+        "en": "A sophisticated recruitment-themed campaign targeting JavaScript and Python developers. Attackers pose as a blockchain company named 'Veltrix Capital' to trick candidates into running malicious npm and PyPI packages (e.g., bigmathutils) as part of technical tests.",
+        "fr": "Une campagne sophistiquée sur le thème du recrutement ciblant les développeurs JavaScript et Python. Les attaquants se font passer pour une société de blockchain nommée 'Veltrix Capital' pour inciter les candidats à exécuter des packages npm et PyPI malveillants (ex: bigmathutils) dans le cadre de tests techniques."
+      },
+      "sector": {
+        "en": "Technology, Cryptocurrency, Software Development",
+        "fr": "Technologie, Cryptomonnaie, Développement Logiciel"
+      },
+      "modop": {
+        "en": "Use of fake job interviews on LinkedIn/Reddit, hosting malicious code on GitHub, and pushing delayed malicious updates to trusted packages to deliver a Remote Access Trojan (RAT).",
+        "fr": "Utilisation de fausses entretiens d'embauche sur LinkedIn/Reddit, hébergement de code malveillant sur GitHub, et déploiement de mises à jour malveillantes différées sur des packages de confiance pour livrer un cheval de Troie d'accès distant (RAT)."
+      },
+      "tags": [
+        "Supply Chain",
+        "North Korea",
+        "npm",
+        "PyPI",
+        "Recruitment"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html"
+      ],
+      "date": "2026-02-15"
+    },
+    {
+      "threat_actor": "Lotus Blossom",
+      "campaign": "Notepad++ Hijack",
+      "campaign_description": {
+        "en": "A state-sponsored supply chain attack where the official Notepad++ hosting infrastructure was compromised to deliver malicious updates to specific targets in Southeast Asia.",
+        "fr": "Une attaque étatique de la chaîne d'approvisionnement où l'infrastructure d'hébergement officielle de Notepad++ a été compromise pour livrer des mises à jour malveillantes à des cibles spécifiques en Asie du Sud-Est."
+      },
+      "sector": {
+        "en": "Government, Telecommunications, Critical Infrastructure",
+        "fr": "Gouvernement, Télécommunications, Infrastructures Critiques"
+      },
+      "modop": {
+        "en": "Adversary-in-the-Middle (AitM) traffic hijacking on the hosting provider to selectively serve the Chrysalis backdoor or Cobalt Strike via DLL side-loading and Lua script injection.",
+        "fr": "Détournement de trafic de type Adversary-in-the-Middle (AitM) chez l'hébergeur pour servir sélectivement la porte dérobée Chrysalis ou Cobalt Strike via le side-loading de DLL et l'injection de scripts Lua."
+      },
+      "tags": [
+        "Supply Chain",
+        "AitM",
+        "Chrysalis",
+        "Notepad++"
+      ],
+      "sources": [
+        "https://securityonline.info/trusted-tool-weaponized-lotus-blossom-hijacks-notepad-updates/"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Technology & Human Resources",
+        "fr": "Technologie et Ressources Humaines"
+      },
+      "theme": {
+        "en": "State-sponsored Economic Espionage",
+        "fr": "Espionnage économique étatique"
+      },
+      "description": {
+        "en": "North Korean and Chinese-linked APTs (Lazarus, Lotus Blossom, UNC3886) are intensifying operations against software developers and telecommunication providers in Singapore and Southeast Asia to facilitate long-term intelligence gathering and financial theft.",
+        "fr": "Les APT liés à la Corée du Nord et à la Chine (Lazarus, Lotus Blossom, UNC3886) intensifient leurs opérations contre les développeurs de logiciels et les fournisseurs de télécommunications à Singapour et en Asie du Sud-Est pour faciliter la collecte de renseignements à long terme et le vol financier."
+      },
+      "tags": [
+        "North Korea",
+        "China",
+        "Southeast Asia",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html",
+        "https://securityaffairs.com/187996/security/security-affairs-newsletter-round-563-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Flickr",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Social Media / Photography",
+        "fr": "Réseaux Sociaux / Photographie"
+      },
+      "description": {
+        "en": "Data breach via a third-party email service provider. Exposed data includes usernames, emails, IP addresses, and geolocation data for up to 35 million monthly users.",
+        "fr": "Violation de données via un fournisseur tiers de services de messagerie. Les données exposées comprennent les noms d'utilisateur, les e-mails, les adresses IP et les données de géolocalisation pour jusqu'à 35 millions d'utilisateurs mensuels."
+      },
+      "tags": [
+        "Third-party breach",
+        "PII Leak",
+        "Phishing Risk"
+      ],
+      "sources": [
+        "https://www.datasecuritybreach.fr/flickr-alerte-sur-une-fuite-via-un-prestataire-de-mails/"
+      ],
+      "date": "2026-02-15"
+    },
+    {
+      "victim": "Mercer Advisors, Canada Goose, University of Pennsylvania",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Finance, Retail, Education",
+        "fr": "Finance, Vente au détail, Éducation"
+      },
+      "description": {
+        "en": "Multiple high-profile data thefts and extortion attempts. Mercer Advisors (5M+ records), Canada Goose (600k records), and UPenn (1.2M records) have been targeted with final warnings before public leaks.",
+        "fr": "Multiples vols de données et tentatives d'extorsion de haut niveau. Mercer Advisors (plus de 5 millions d'enregistrements), Canada Goose (600 000) et l'Université de Pennsylvanie (1,2 million) ont été ciblés par des avertissements finaux avant fuite publique."
+      },
+      "tags": [
+        "Extortion",
+        "Data Leak",
+        "PII"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/shinyhunters"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1490",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:cleantalk:cleantalk:*:*:*:*:*:wordpress:*:*",
+      "product": "Anti-Spam by CleanTalk",
+      "vendor": "CleanTalk",
+      "description": {
+        "en": "Unauthenticated authorization bypass in 'checkWithoutToken' function via Reverse DNS (PTR) spoofing, allowing arbitrary plugin installation and RCE.",
+        "fr": "Contournement d'autorisation non authentifié dans la fonction 'checkWithoutToken' via l'usurpation DNS inversée (PTR), permettant l'installation de plugins arbitraires et l'exécution de code à distance (RCE)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "DNS Spoofing",
+        "WordPress"
+      ],
+      "sources": [
+        "https://securityonline.info/200k-sites-exposed-critical-cleantalk-flaw-cvss-9-8-allows-rce/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-1358",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:airleader:airleader_master:*:*:*:*:*:*:*:*",
+      "product": "Airleader Master",
+      "vendor": "Airleader",
+      "description": {
+        "en": "Unrestricted file upload vulnerability in compressor management systems, allowing unauthenticated RCE with maximum privileges.",
+        "fr": "Vulnérabilité de téléchargement de fichiers sans restriction dans les systèmes de gestion de compresseurs, permettant une exécution de code à distance (RCE) non authentifiée avec les privilèges maximaux."
+      },
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "CISA KEV",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityonline.info/industrial-sabotage-risk-critical-airleader-flaw-cvss-9-8-exposed/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-21533",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "N/A",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Remote Desktop Services",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Windows Remote Desktop Services elevation of privilege; zero-day exploited in the wild.",
+        "fr": "Élévation de privilèges dans les services de bureau à distance Windows ; zero-day exploitée dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "Microsoft",
+        "KEV"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/windows-11-kb5077181-security-update/"
+      ],
+      "date": "2026-02-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ClickFix DNS-based PowerShell Delivery",
+        "fr": "Livraison PowerShell via DNS 'ClickFix'"
+      },
+      "description": {
+        "en": "A new ClickFix variant where victims are tricked into running an nslookup command against an attacker-controlled DNS server to retrieve and execute a PowerShell payload.",
+        "fr": "Une nouvelle variante de ClickFix où les victimes sont incitées à exécuter une commande nslookup vers un serveur DNS contrôlé par l'attaquant pour récupérer et exécuter une charge utile PowerShell."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "hxxps[:]//example[.]com"
+        ],
+        "IPv4": [
+          "84.21.189.20"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "example.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "nslookup",
+          "powershell.exe",
+          "cmd.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1132.001",
+        "T1059.001"
+      ],
+      "analyse": {
+        "en": "This evolution of ClickFix marks the first use of DNS as a payload delivery channel in this specific social engineering campaign. By using nslookup, attackers evade many URL-based security filters.",
+        "fr": "Cette évolution de ClickFix marque la première utilisation du DNS comme canal de diffusion de charge utile dans cette campagne d'ingénierie sociale spécifique. En utilisant nslookup, les attaquants contournent de nombreux filtres de sécurité basés sur les URL."
+      },
+      "recommandations": [
+        {
+          "en": "Block unauthorized DNS queries to non-corporate DNS servers at the firewall level.",
+          "fr": "Bloquez les requêtes DNS non autorisées vers des serveurs DNS non corporatifs au niveau du pare-feu."
+        },
+        {
+          "en": "Educate users to never execute commands provided by unsolicited 'support' or 'fix' pages.",
+          "fr": "Éduquez les utilisateurs à ne jamais exécuter de commandes fournies par des pages de 'support' ou de 'réparation' non sollicitées."
+        }
+      ],
+      "tags": [
+        "ClickFix",
+        "DNS",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-clickfix-attack-abuses-nslookup-to-retrieve-powershell-payload-via-dns/"
+      ],
+      "date": "2026-02-15"
+    },
+    {
+      "title": {
+        "en": "Lumma Stealer & Ninja Browser Google Groups Campaign",
+        "fr": "Campagne Lumma Stealer & Ninja Browser via Google Groups"
+      },
+      "description": {
+        "en": "Massive distribution of Lumma Stealer and Ninja Browser via thousands of weaponized Google Groups. Payloads are padded with null bytes (950MB) to evade AV scanning.",
+        "fr": "Distribution massive de Lumma Stealer et Ninja Browser via des milliers de Google Groups détournés. Les charges utiles sont complétées par des octets nuls (950 Mo) pour échapper à l'analyse antivirus."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "hxxps[:]//nb-download[.]com",
+          "hxxps[:]//ninja-browser[.]com"
+        ],
+        "IPv4": [
+          "152.42.139.18",
+          "89.111.170.100"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "nb-download.com",
+          "ninja-browser.com",
+          "ctm360.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Lumma Stealer",
+          "Ninja Browser"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003",
+        "T1027.001",
+        "T1189"
+      ],
+      "analyse": {
+        "en": "Attackers are abusing the trust associated with Google's ecosystem (Groups, Docs, Drive) to bypass legacy reputation-based filters.",
+        "fr": "Les attaquants abusent de la confiance associée à l'écosystème de Google (Groups, Docs, Drive) pour contourner les anciens filtres basés sur la réputation."
+      },
+      "recommandations": [
+        {
+          "en": "Implement file-size limits for real-time AV scanning and restrict execution of archives exceeding 500MB from web sources.",
+          "fr": "Implémentez des limites de taille de fichier pour l'analyse AV en temps réel et restreignez l'exécution d'archives dépassant 500 Mo provenant de sources web."
+        }
+      ],
+      "tags": [
+        "Infostealer",
+        "Google Groups",
+        "AV Evasion"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/"
+      ],
+      "date": "2026-02-15"
+    },
+    {
+        "title": {
+          "en": "Posteo Phishing Campaign",
+          "fr": "Campagne de Phishing Posteo"
+        },
+        "description": {
+          "en": "Active phishing site hosted on Weebly targeting Posteo mail users.",
+          "fr": "Site de phishing actif hébergé sur Weebly ciblant les utilisateurs de la messagerie Posteo."
+        },
+        "threat_actor": "Unknown",
+        "indicators": {
+          "URL": [
+            "hxxps[:]//authid1-posteo-mail-anmeldung1-oauth2onepass-0rbuwqsgvq[.]weebly[.]com/"
+          ],
+          "IPv4": [],
+          "IPv6": [],
+          "DOMAIN": [
+            "authid1-posteo-mail-anmeldung1-oauth2onepass-0rbuwqsgvq.weebly.com"
+          ],
+          "EMAIL": [],
+          "HASH_SHA256": [],
+          "HASH_SHA1": [],
+          "HASH_MD5": [],
+          "TOOLS": []
+        },
+        "mitre_ttps": [
+          "T1566.002"
+        ],
+        "analyse": {
+          "en": "Standard credential harvesting campaign using free hosting providers to lower costs and evade static detection.",
+          "fr": "Campagne standard de récolte d'identifiants utilisant des hébergeurs gratuits pour réduire les coûts et échapper à la détection statique."
+        },
+        "recommandations": [
+          {
+            "en": "Blacklist the specific Weebly subdomain in secure web gateways.",
+            "fr": "Mettre sur liste noire le sous-domaine Weebly spécifique dans les passerelles web sécurisées."
+          }
+        ],
+        "tags": [
+          "Phishing",
+          "Posteo",
+          "Weebly"
+        ],
+        "sources": [
+          "https://infosec.exchange/@urldna/116077835382253050"
+        ],
+        "date": "2026-02-16"
+      }
+  ]
+}
