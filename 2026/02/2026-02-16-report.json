@@ -1,0 +1,1229 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel des menaces est marqué par une recrudescence et une sophistication des attaques d'ingénierie sociale et des attaques contre la chaîne d'approvisionnement. Les attaquants, y compris des groupes parrainés par des États comme Lazarus Group et Lotus Blossom, exploitent de plus en plus des infrastructures légitimes (Google Groups, Pastebin, serveurs DNS, services de mise à jour de logiciels) pour distribuer des malwares (ex: Lumma Stealer, Ninja Browser), dérober des identifiants et réaliser des exfiltrations de données, ou pour cibler des transactions de cryptomonnaies. L'utilisation de techniques d'évasion innovantes, telles que l'abus des requêtes DNS pour la livraison de payloads ou le rembourrage de fichiers pour contourner les antivirus, est notable.\n\nParallèlement, un nombre significatif de vulnérabilités critiques (score CVSS >= 8), dont des RCE et des failles d'escalade de privilèges, sont activement exploitées, notamment dans des logiciels d'accès à distance (BeyondTrust), des systèmes de transfert de fichiers (FileZen) et même des systèmes de maison intelligente (JUNG eNet SMART HOME). Ces exploitations soulignent un besoin urgent de patcher et de gérer rigoureusement les vulnérabilités.\n\nLes violations de données sont diverses, allant des fuites via des prestataires tiers (Flickr) aux attaques par ransomware (Harima Chemical Group), en passant par les menaces internes sophistiquées (vol de secrets commerciaux, accès non autorisé chez Dai-ichi Life). La motivation financière est omniprésente, souvent liée aux cryptomonnaies ou à l'espionnage industriel. L'état général des menaces est élevé, exigeant une vigilance constante et une approche de sécurité proactive et multicouche, axée sur la résilience de la chaîne d'approvisionnement logicielle, la formation des utilisateurs, la gestion des identités et des accès, et une réponse rapide aux vulnérabilités connues.",
+      "date": "2026-02-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Lazarus Group",
+        "secteur": "Développeurs JavaScript et Python, Cryptomonnaies",
+        "modop": "Campagnes de faux recrutement ('graphalgo'), création de fausses entreprises blockchain (Veltrix Capital), distribution de packages npm/PyPI malveillux déguisés en tâches d'entretien, livraison d'un RAT chiffré multi-étapes qui vérifie les portefeuilles de cryptomonnaies et utilise un C2 protégé par jeton. Attaque de la chaîne d'approvisionnement logicielle.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "apt",
+          "north korea",
+          "supply chain",
+          "software development",
+          "cryptocurrency",
+          "fake recruitment",
+          "malware",
+          "rat"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Gouvernement, Télécommunications, Infrastructures critiques, Personnel IT (DevOps, ingénieurs réseau, administrateurs système) en Asie du Sud-Est, Amérique du Sud, États-Unis, Europe",
+        "modop": "Attaque ciblée de la chaîne d'approvisionnement (Adversary-in-the-Middle) en compromettant l'infrastructure d'hébergement de Notepad++ pour distribuer des mises à jour malveillantes de manière sélective, basée sur l'identification des victimes. Utilisation de backdoors légères pour la collecte de renseignements à long terme.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "supply chain",
+          "government",
+          "telecommunications",
+          "critical infrastructure",
+          "intelligence gathering",
+          "adversary-in-the-middle",
+          "backdoor"
+        ],
+        "sources": [
+          "https://securityonline.info/trusted-tool-weaponized-lotus-blossom-hijacks-notepad-updates/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "Lumma Stealer / Ninja Browser (Campagne)",
+        "secteur": "Utilisateurs généraux, potentiellement ceux engagés dans des forums liés à l'industrie",
+        "modop": "Ingénierie sociale via Google Groups, utilisation de raccourcisseurs d'URL/redirecteurs hébergés par Google pour livrer des charges utiles spécifiques à l'OS (Windows/Linux), rembourrage de fichiers avec des octets nuls pour échapper aux antivirus. Voleur d'informations.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "malware",
+          "social engineering",
+          "google groups",
+          "evasion",
+          "windows",
+          "linux"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "UNC3886",
+        "secteur": "Télécommunications (Singapour)",
+        "modop": "Campagne coordonnée de cyberespionnage, sondage profond des réseaux ciblés.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "cyber espionage",
+          "telecommunications",
+          "state-sponsored"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement/Administration Publique (Union Européenne)",
+        "theme": "Intrusion cyber",
+        "description": "La plateforme de gestion des appareils mobiles de la Commission européenne a été piratée, mais l'incident a été rapidement maîtrisé et aucune compromission des appareils mobiles n'a été détectée. L'intrusion a été découverte par CERT-EU.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "european commission",
+          "government",
+          "public administration",
+          "mobile management",
+          "intrusion"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Télécommunications",
+        "theme": "Cyberespionnage étatique",
+        "description": "Les quatre principales entreprises de télécommunications de Singapour ont été ciblées par une campagne coordonnée de cyberespionnage menée par le groupe de menace persistante avancée UNC3886, qui a sondé leurs réseaux en profondeur.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionnage",
+          "telecommunications",
+          "singapore",
+          "unc3886",
+          "apt"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Assurance",
+        "victime": "Dai-ichi Life (第一生命)",
+        "description": "Un employé détaché d'une agence d'assurance a obtenu 1 155 informations internes non autorisées.",
+        "tags": [
+          "violation",
+          "breach",
+          "insider threat",
+          "insurance",
+          "personal data",
+          "unauthorized access",
+          "dai-ichi life"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077157733921085"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Construction Routière, Industriel",
+        "victime": "Doro Kogyo (道路工業)",
+        "description": "Accès non autorisé au serveur de partage de fichiers de l'entreprise via des équipements de communication, avec une fuite potentielle d'informations de partenaires commerciaux.",
+        "tags": [
+          "violation",
+          "breach",
+          "data leak",
+          "file server",
+          "industrial",
+          "road construction",
+          "business partner data",
+          "unauthorized access",
+          "doro kogyo"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077849298287514"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Services en ligne, Hébergement de photos",
+        "victime": "Flickr",
+        "description": "Fuite de données potentielle via un prestataire de services de messagerie tiers, exposant noms d'utilisateur, adresses e-mail, surnoms Flickr, types de comptes, adresses IP, données de géolocalisation et informations d'activité. Aucune information d'identification de connexion ou financière n'a été affectée.",
+        "tags": [
+          "violation",
+          "breach",
+          "data leak",
+          "third-party",
+          "email provider",
+          "online service",
+          "pii",
+          "flickr"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/flickr-alerte-sur-une-fuite-via-un-prestataire-de-mails/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Industrie Chimique",
+        "victime": "Filiale américaine de Harima Chemical Group (ハリマ化成グループ)",
+        "description": "Attaque par ransomware affectant la filiale américaine, avec une fuite potentielle d'informations personnelles d'employés.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "personal data",
+          "chemical industry",
+          "employee data",
+          "harima chemical group"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077847393269049"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Éditeur de logiciels",
+        "victime": "SmarterTools (éditeur de SmarterMail)",
+        "description": "Compromission par un groupe de ransomware exploitant une vulnérabilité récemment corrigée dans son déploiement SmarterMail.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "software vendor",
+          "smartertools",
+          "vulnerability exploitation"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Fabrication/Conception (implicite)",
+        "victime": "Entreprise japonaise non spécifiée",
+        "description": "Un ancien employé a été arrêté pour avoir volé des secrets commerciaux, ayant copié 300 000 fichiers de données de conception avant de rejoindre une entreprise chinoise.",
+        "tags": [
+          "violation",
+          "breach",
+          "insider threat",
+          "industrial espionage",
+          "intellectual property",
+          "design data",
+          "china"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077048458129838"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": 9.9,
+        "product": "BeyondTrust Remote Support (RS) et Privileged Remote Access (PRA)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) non authentifiée, permettant aux attaquants d'exécuter des commandes système. Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "beyondtrust",
+          "remote access",
+          "active exploitation",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/exploited-in-the-wild-critical-beyondtrust-flaw-cvss-9-9-opens-door-to-network-takeover/",
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26366",
+        "cvss": 9.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Utilisation de identifiants par défaut (user:user, admin:admin) qui restent actifs après l'installation sans forcer un changement de mot de passe, permettant un accès administratif non authentifié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "default credentials",
+          "authentication bypass",
+          "smart home",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26366"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26369",
+        "cvss": 9.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Vulnérabilité d'escalade de privilèges due à des contrôles d'autorisation insuffisants dans la méthode JSON-RPC setUserGroup, permettant à des utilisateurs à faibles privilèges d'élever leur compte au groupe administratif.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege escalation",
+          "authorization bypass",
+          "smart home",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26369"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32059",
+        "cvss": 8.8,
+        "product": "ECU d'Infotainment (Pile Bluetooth Alps Alpine dans l'ECU d'Infotainment Bosch, Nissan Leaf ZE1)",
+        "description": "Dépassement de tampon basé sur la pile dans la pile Bluetooth, exploitable en recevant un paquet spécialement conçu sur le canal L2CAP, menant à l'exécution de code à distance avec des privilèges root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32059"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32061",
+        "cvss": 8.8,
+        "product": "ECU d'Infotainment (Pile Bluetooth Alps Alpine dans l'ECU d'Infotainment Bosch, Nissan Leaf ZE1)",
+        "description": "Dépassement de tampon basé sur la pile dans la pile Bluetooth, exploitable en recevant un paquet spécialement conçu sur le canal L2CAP, menant à l'exécution de code à distance avec des privilèges root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32061"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32062",
+        "cvss": 8.8,
+        "product": "ECU d'Infotainment (Pile Bluetooth Alps Alpine dans l'ECU d'Infotainment Bosch, Nissan Leaf ZE1)",
+        "description": "Dépassement de tampon basé sur la pile dans la pile Bluetooth, exploitable en recevant un paquet spécialement conçu sur le canal L2CAP, menant à l'exécution de code à distance avec des privilèges root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32062"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-25108",
+        "cvss": 8.8,
+        "product": "FileZen (Soliton Systems K.K.) V5.0.0-V5.0.10 et V4.2.1-V4.2.8",
+        "description": "Vulnérabilité d'injection de commande OS permettant à des utilisateurs authentifiés d'exécuter des commandes arbitraires sur le serveur. Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command injection",
+          "rce",
+          "filezen",
+          "active exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityonline.info/jpcert-cc-warns-of-active-exploits-targeting-critical-filezen-command-injection-flaw/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26368",
+        "cvss": 8.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Prise de contrôle de compte due à une autorisation manquante dans la méthode JSON-RPC resetUserPassword, permettant à tout utilisateur authentifié à faibles privilèges de réinitialiser les mots de passe de comptes arbitraires, y compris ceux des administrateurs.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "account takeover",
+          "authorization bypass",
+          "smart home",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26368"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-2540",
+        "cvss": 8.4,
+        "product": "Système Micca KE700",
+        "description": "Logique de resynchronisation défectueuse vulnérable aux attaques par relecture, nécessitant deux codes précédemment capturés, permettant le clonage des clés d'alarme et l'accès non autorisé au véhicule.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "replay attack",
+          "vehicle security",
+          "physical access",
+          "automotive",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2540"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ClickFix Attacks Leveraging DNS and Pastebin for Payload Delivery and Crypto Hijacking",
+        "description": "Des acteurs malveillants emploient des techniques d'ingénierie sociale 'ClickFix' pour distribuer des malwares et détourner des transactions de cryptomonnaies. Une campagne exploite les requêtes DNS, incitant les victimes à exécuter une commande qui effectue une recherche DNS personnalisée vers un serveur contrôlé par l'attaquant pour récupérer et exécuter un payload PowerShell. Une autre campagne abuse des commentaires Pastebin, piégeant les utilisateurs de cryptomonnaies à exécuter du JavaScript malveillant dans leur navigateur pour modifier les transactions d'échange de Bitcoin et rediriger les fonds vers les portefeuilles des attaquants. Ces attaques contournent les détections traditionnelles en faisant exécuter les étapes malveillantes par la victime.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "84.21.189.20"
+          ],
+          "DOMAIN": [
+            "rawtext.host"
+          ]
+        },
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1059.001 (Command and Scripting Interpreter: PowerShell), T1071.004 (Application Layer Protocol: DNS), T1059.007 (Command and Scripting Interpreter: JavaScript).",
+        "analyse": "Ces campagnes mettent en évidence une tendance croissante des attaques d'ingénierie sociale qui transfèrent la charge d'exécution sur la victime, exploitant des plateformes fiables comme Pastebin ou des services réseau fondamentaux comme DNS pour une livraison furtive de payloads. L'accent mis sur les utilisateurs de cryptomonnaies indique une motivation financière directe. La technique DNS démontre une méthode d'évasion innovante, tandis que l'attaque JavaScript basée sur le navigateur manipule directement la logique de l'application côté utilisateur.",
+        "recommandations": [
+          "Éduquer les utilisateurs sur les risques de l'exécution de commandes non sollicitées ou de scripts JavaScript depuis des sources non fiables.",
+          "Implémenter des politiques de sécurité des navigateurs et des extensions pour bloquer l'exécution de scripts malveillants injectés.",
+          "Surveiller les requêtes DNS inhabituelles vers des serveurs externes suspects (pour le cas nslookup).",
+          "Renforcer la détection des activités de phishing et d'ingénierie sociale, notamment celles utilisant des services légitimes comme Pastebin."
+        ],
+        "tags": [
+          "social engineering",
+          "clickfix",
+          "dns",
+          "powershell",
+          "javascript",
+          "cryptocurrency",
+          "phishing",
+          "transaction hijacking",
+          "evasion",
+          "malware delivery",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-clickfix-attack-abuses-nslookup-to-retrieve-powershell-payload-via-dns/",
+          "https://www.bleepingcomputer.com/news/security/pastebin-comments-push-clickfix-javascript-attack-to-hijack-crypto-swaps/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "CTM360: Lumma Stealer and Ninja Browser malware campaign abusing Google Groups",
+        "description": "CTM360 signale une campagne de malwares à grande échelle impliquant plus de 4 000 groupes Google malveillants et plus de 3 500 URL hébergées par Google. Des acteurs malveillants utilisent l'ingénierie sociale dans des forums liés à l'industrie, employant des raccourcisseurs d'URL ou des redirecteurs hébergés par Google pour livrer des charges utiles spécifiques à l'OS (Lumma Stealer pour Windows/Linux, trojan Ninja Browser). Les charges utiles sont complétées par des octets nuls pour échapper à la détection antivirus, visant à voler des identifiants et à maintenir la persistance.",
+        "threat_actor": "Lumma Stealer, Ninja Browser",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1071.004",
+            "T1036.004",
+            "T1036.005",
+            "T1027"
+          ]
+        },
+        "mitre_ttps": "T1566.002 (Phishing: Spearphishing Link), T1071.004 (Application Layer Protocol: DNS), T1036.004 (Masquerading: Impersonation), T1036.005 (Masquerading: Match Legitimate Name or Location), T1027 (Obfuscated Files or Information).",
+        "analyse": "Cette campagne illustre l'abus de plateformes en ligne fiables (Google Groups, Docs, Drive) et des techniques d'évasion (rembourrage d'octets nuls, charges utiles spécifiques à l'OS) pour distribuer des voleurs d'informations. L'accent mis sur le vol d'identifiants et le maintien de la persistance sur plusieurs systèmes d'exploitation indique une menace large et persistante. L'utilisation de discussions techniques d'apparence légitime rend difficile pour les utilisateurs de discerner le contenu malveillant.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux risques des liens et pièces jointes non sollicités, même sur des forums réputés.",
+          "Mettre en œuvre des solutions de sécurité des points de terminaison capables de détecter les techniques d'évasion (comme le rembourrage de fichiers).",
+          "Surveiller l'utilisation des services de redirection URL et des hôtes de fichiers cloud (Google Docs/Drive) dans un contexte malveillant.",
+          "Utiliser l'authentification multifacteur pour protéger les comptes, même si les identifiants sont volés."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "lumma stealer",
+          "ninja browser",
+          "google groups",
+          "social engineering",
+          "evasion",
+          "windows",
+          "linux",
+          "credential theft",
+          "persistence",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Exploited in the Wild: Critical BeyondTrust Flaw (CVSS 9.9) Opens Door to Network Takeover",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE) non authentifiée (CVE-2026-1731, CVSS 9.9) dans les solutions auto-hébergées BeyondTrust Remote Support et Privileged Remote Access est activement exploitée. Les acteurs de la menace déploient des outils RMM légitimes comme SimpleHelp (renommés pour échapper à la détection) pour la persistance et effectuent une découverte approfondie du réseau à l'aide d'outils tels qu'AdsiSearcher. La CISA a ajouté ce CVE à son catalogue des vulnérabilités connues exploitées (KEV). Les clients cloud sont patchés, mais les utilisateurs auto-hébergés doivent mettre à jour immédiatement.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "FILE_NAME": [
+            "remote access.exe"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1547.001",
+            "T1087",
+            "T1016",
+            "T1082"
+          ]
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder), T1087 (Account Discovery), T1016 (System Network Configuration Discovery), T1082 (System Information Discovery).",
+        "analyse": "L'exploitation active d'une RCE critique dans un logiciel d'accès à distance largement utilisé pose un risque immédiat et grave, en particulier pour les organisations gérant leurs propres instances. L'utilisation d'outils légitimes à des fins malveillantes (living off the land) combinée à des tactiques d'évasion rend la détection difficile. La progression rapide de l'accès initial à la persistance et à la découverte étendue du réseau indique des adversaires très motivés et capables cherchant une compromission étendue du réseau.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour CVE-2026-1731 sur toutes les instances auto-hébergées de BeyondTrust Remote Support et Privileged Remote Access.",
+          "Surveiller les logs pour détecter l'exécution de processus inhabituels, en particulier depuis des répertoires comme ProgramData.",
+          "Déployer une détection avancée des menaces (EDR) pour identifier l'utilisation abusive d'outils légitimes (comme SimpleHelp ou AdsiSearcher).",
+          "Réaliser des scans réguliers des systèmes exposés sur Internet pour identifier les vulnérabilités non patchées.",
+          "Appliquer le principe du moindre privilège et segmenter les réseaux pour limiter la portée d'une compromission."
+        ],
+        "tags": [
+          "rce",
+          "beyondtrust",
+          "active exploitation",
+          "vulnerability",
+          "remote access",
+          "persistence",
+          "network discovery",
+          "critical",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/exploited-in-the-wild-critical-beyondtrust-flaw-cvss-9-9-opens-door-to-network-takeover/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Malicious npm and PyPI packages linked to Lazarus APT fake recruiter campaign",
+        "description": "Le groupe Lazarus, lié à la Corée du Nord, mène une campagne sophistiquée de faux recrutement 'graphalgo', ciblant les développeurs JavaScript et Python via LinkedIn, Facebook et Reddit. Ils créent de fausses entreprises blockchain (ex: Veltrix Capital) et publient des packages open-source malveillants sur npm et PyPI déguisés en tâches d'entretien. Une fois exécutés, ces packages livrent un cheval de Troie d'accès à distance (RAT) chiffré et multi-étapes qui vérifie les portefeuilles de cryptomonnaies et utilise un C2 protégé par jeton. Cette campagne représente une compromission à long terme de la chaîne d'approvisionnement.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1195.002",
+            "T1566",
+            "T1219",
+            "T1071",
+            "T1041"
+          ]
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain), T1566 (Phishing), T1219 (Remote Access Software), T1071 (Application Layer Protocol), T1041 (Exfiltration Over C2 Channel).",
+        "analyse": "Ceci représente une attaque très sophistiquée et modulaire de la chaîne d'approvisionnement, tirant parti de la confiance des développeurs dans les référentiels open-source et les processus de recrutement. La patience du groupe Lazarus à établir la confiance et à utiliser des malwares multicouches indique des motivations étatiques axées sur le vol financier et potentiellement la collecte de renseignements auprès du secteur des cryptomonnaies. L'adaptation continue des façades de fausses entreprises démontre un adversaire résilient et bien doté en ressources.",
+        "recommandations": [
+          "Mettre en œuvre des processus de vérification rigoureux pour les packages open-source utilisés en développement.",
+          "Former les développeurs à identifier les campagnes de recrutement frauduleuses et les techniques d'ingénierie sociale.",
+          "Utiliser des environnements de développement isolés et des outils d'analyse de la chaîne d'approvisionnement logicielle.",
+          "Surveiller les activités réseau inhabituelles et les tentatives de connexion à des serveurs de commande et de contrôle.",
+          "Renforcer la sécurité des plateformes de développement et des référentiels de code."
+        ],
+        "tags": [
+          "apt",
+          "lazarus group",
+          "north korea",
+          "supply chain",
+          "npm",
+          "pypi",
+          "fake recruitment",
+          "social engineering",
+          "cryptocurrency",
+          "rat",
+          "malware",
+          "software development",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Trusted Tool Weaponized: Lotus Blossom Hijacks Notepad++ Updates",
+        "description": "Un rapport d'Unit 42 a révélé une attaque de chaîne d'approvisionnement très ciblée entre juin et décembre 2025, où le groupe de menace parrainé par l'État, Lotus Blossom, a compromis l'infrastructure d'hébergement officielle de Notepad++. Ils ont détourné le trafic de mise à jour pour délivrer des mises à jour malveillantes à des victimes sélectionnées en Asie du Sud-Est et au-delà, notamment dans les secteurs gouvernemental, des télécommunications et des infrastructures critiques. L'attaque utilise une capacité d''Adversary-in-the-Middle' pour cibler dynamiquement, déployant une backdoor légère pour la collecte d'informations à long terme.",
+        "threat_actor": "Lotus Blossom",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1195.002",
+            "T1557",
+            "T1195.003",
+            "T1071"
+          ]
+        },
+        "mitre_ttps": "T1195 (Supply Chain Compromise), T1557 (Adversary-in-the-Middle), T1195.003 (Compromise Software Supply Chain: Compromise via Third-Party Software, Supply Chain: Update Software), T1071 (Application Layer Protocol).",
+        "analyse": "Cette attaque de la chaîne d'approvisionnement démontre une sophistication élevée et une focalisation sur des cibles de grande valeur ayant des privilèges élevés. Le détournement sélectif des mises à jour d'un outil très fiable contourne les défenses traditionnelles de la chaîne d'approvisionnement logicielle. La nature ciblée et le déploiement d'une backdoor légère confirment une intention d'espionnage et de collecte de renseignements plutôt que de perturbation, posant un risque persistant aux secteurs gouvernementaux et critiques à l'échelle mondiale.",
+        "recommandations": [
+          "Mettre à jour Notepad++ vers la version 8.9.1 ou supérieure manuellement pour garantir une vérification plus stricte des signatures.",
+          "Implémenter une surveillance rigoureuse de l'intégrité des mises à jour logicielles, en vérifiant les signatures numériques et les sommes de contrôle.",
+          "Renforcer la sécurité des prestataires d'hébergement et des points de livraison de logiciels.",
+          "Sensibiliser le personnel informatique aux risques d'attaques de la chaîne d'approvisionnement et aux signes d'une compromission de mise à jour.",
+          "Déployer des contrôles réseau pour détecter les activités 'Adversary-in-the-Middle' sur les flux de mise à jour."
+        ],
+        "tags": [
+          "supply chain",
+          "state-sponsored",
+          "notepad++",
+          "lotus blossom",
+          "adversary-in-the-middle",
+          "software update",
+          "backdoor",
+          "intelligence gathering",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/trusted-tool-weaponized-lotus-blossom-hijacks-notepad-updates/"
+        ],
+        "date": "2026-02-16"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current threat landscape is characterized by a resurgence and sophistication of social engineering attacks and supply chain attacks. Threat actors, including state-sponsored groups like Lazarus Group and Lotus Blossom, are increasingly exploiting legitimate infrastructure (Google Groups, Pastebin, DNS servers, software update services) to deliver malware (e.g., Lumma Stealer, Ninja Browser), steal credentials, conduct data exfiltration, or target cryptocurrency transactions. The use of innovative evasion techniques, such as abusing DNS queries for payload delivery or file padding to bypass antivirus, is notable.\n\nConcurrently, a significant number of critical vulnerabilities (CVSS score >= 8), including RCEs and privilege escalation flaws, are actively being exploited. These target remote access software (BeyondTrust), file transfer systems (FileZen), and even smart home systems (JUNG eNet SMART HOME). These exploitations highlight an urgent need for patching and rigorous vulnerability management.\n\nData breaches are diverse, ranging from leaks via third-party providers (Flickr) to ransomware attacks (Harima Chemical Group) and sophisticated insider threats (trade secret theft, unauthorized access at Dai-ichi Life). Financial motivation is pervasive, often linked to cryptocurrencies or industrial espionage. The overall state of threats is elevated, demanding constant vigilance and a proactive, multi-layered security approach focused on software supply chain resilience, user education, identity and access management, and rapid response to known vulnerabilities.",
+      "date": "2026-02-16"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Lazarus Group",
+        "secteur": "JavaScript and Python Developers, Cryptocurrency",
+        "modop": "Fake job recruitment campaigns ('graphalgo'), creation of fake blockchain firms (Veltrix Capital), distributing malicious npm/PyPI packages disguised as interview tasks, delivering a multi-stage encrypted RAT payload that checks for cryptocurrency wallets and uses token-protected C2. Software supply chain attack.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "apt",
+          "north korea",
+          "supply chain",
+          "software development",
+          "cryptocurrency",
+          "fake recruitment",
+          "malware",
+          "rat"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Government, Telecommunications, Critical Infrastructure, IT Personnel (DevOps, Network Engineers, Sysadmins) in Southeast Asia, South America, U.S., Europe",
+        "modop": "Highly targeted supply chain attack (Adversary-in-the-Middle) by compromising Notepad++ hosting infrastructure to deliver malicious updates selectively based on victim fingerprinting. Uses lightweight backdoors for long-term intelligence gathering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "supply chain",
+          "government",
+          "telecommunications",
+          "critical infrastructure",
+          "intelligence gathering",
+          "adversary-in-the-middle",
+          "backdoor"
+        ],
+        "sources": [
+          "https://securityonline.info/trusted-tool-weaponized-lotus-blossom-hijacks-notepad-updates/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "Lumma Stealer / Ninja Browser (Campaign)",
+        "secteur": "General users, potentially those engaged in industry-related forums",
+        "modop": "Social engineering via Google Groups, using URL shorteners/redirectors hosted by Google to deliver OS-specific payloads (Windows/Linux), null byte padding to evade antivirus. Infostealing.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "malware",
+          "social engineering",
+          "google groups",
+          "evasion",
+          "windows",
+          "linux"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "nom": "UNC3886",
+        "secteur": "Telecommunications (Singapore)",
+        "modop": "Coordinated cyber espionage campaign, deep network probing.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt",
+          "cyber espionage",
+          "telecommunications",
+          "state-sponsored"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government/Public Administration (European Union)",
+        "theme": "Cyber Intrusion",
+        "description": "The European Commission's mobile device management platform was hacked, but the incident was swiftly contained, and no compromise of mobile devices was detected. The intrusion was discovered by CERT-EU.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "european commission",
+          "government",
+          "public administration",
+          "mobile management",
+          "intrusion"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Telecommunications",
+        "theme": "State-Sponsored Cyber Espionage",
+        "description": "Singapore's four major telecommunication companies were targeted by a coordinated cyber espionage campaign by the advanced persistent threat group UNC3886, probing deep into their networks.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionage",
+          "telecommunications",
+          "singapore",
+          "unc3886",
+          "apt"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Insurance",
+        "victime": "Dai-ichi Life (第一生命)",
+        "description": "A seconded employee from an insurance agency obtained 1,155 cases of unauthorized internal information.",
+        "tags": [
+          "violation",
+          "breach",
+          "insider threat",
+          "insurance",
+          "personal data",
+          "unauthorized access",
+          "dai-ichi life"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077157733921085"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Road Construction, Industrial",
+        "victime": "Doro Kogyo (道路工業)",
+        "description": "Unauthorized access to the company's file sharing server via communication equipment, with a potential leak of business partner information.",
+        "tags": [
+          "violation",
+          "breach",
+          "data leak",
+          "file server",
+          "industrial",
+          "road construction",
+          "business partner data",
+          "unauthorized access",
+          "doro kogyo"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077849298287514"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Online Photo Hosting, Online Services",
+        "victime": "Flickr",
+        "description": "Possible data leak through a third-party email provider, exposing usernames, email addresses, Flickr nicknames, account types, IP addresses, geolocation data, and activity information. No login credentials or financial data affected.",
+        "tags": [
+          "violation",
+          "breach",
+          "data leak",
+          "third-party",
+          "email provider",
+          "online service",
+          "pii",
+          "flickr"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/flickr-alerte-sur-une-fuite-via-un-prestataire-de-mails/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Chemical Industry",
+        "victime": "Harima Chemical Group (ハリマ化成グループ) US subsidiary",
+        "description": "Ransomware attack affecting the US subsidiary, with a potential leak of employee personal information.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "personal data",
+          "chemical industry",
+          "employee data",
+          "harima chemical group"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077847393269049"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Software Vendor",
+        "victime": "SmarterTools (maker of SmarterMail)",
+        "description": "Breached by a ransomware group leveraging a recently fixed vulnerability in its SmarterMail deployment.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "software vendor",
+          "smartertools",
+          "vulnerability exploitation"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "secteur": "Manufacturing/Design (implied)",
+        "victime": "Unspecified Japanese company",
+        "description": "A former employee was arrested for stealing trade secrets, having copied 300,000 design data files before transitioning to a Chinese company.",
+        "tags": [
+          "violation",
+          "breach",
+          "insider threat",
+          "industrial espionage",
+          "intellectual property",
+          "design data",
+          "china"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116077048458129838"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": 9.9,
+        "product": "BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA)",
+        "description": "Critical unauthenticated remote code execution (RCE) vulnerability that allows attackers to execute operating system commands. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "beyondtrust",
+          "remote access",
+          "active exploitation",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/exploited-in-the-wild-critical-beyondtrust-flaw-cvss-9-9-opens-door-to-network-takeover/",
+          "https://www.helpnetsecurity.com/2026/02/15/week-in-review-exploited-newly-patched-beyondtrust-rce-united-airlines-ciso-on-building-resilience/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26366",
+        "cvss": 9.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Use of default credentials (user:user, admin:admin) that remain active after installation without enforcing mandatory password change, allowing unauthenticated administrative access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "default credentials",
+          "authentication bypass",
+          "smart home",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26366"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26369",
+        "cvss": 9.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Privilege escalation vulnerability due to insufficient authorization checks in the setUserGroup JSON-RPC method, allowing low-privileged users to elevate their account to administrative group.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege escalation",
+          "authorization bypass",
+          "smart home",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26369"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32059",
+        "cvss": 8.8,
+        "product": "Infotainment ECU (Alps Alpine Bluetooth stack in Bosch Infotainment ECU, Nissan Leaf ZE1)",
+        "description": "Stack-based buffer overflow in the Bluetooth stack, exploitable by receiving a crafted packet on the L2CAP channel, leading to remote code execution with root privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32059"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32061",
+        "cvss": 8.8,
+        "product": "Infotainment ECU (Alps Alpine Bluetooth stack in Bosch Infotainment ECU, Nissan Leaf ZE1)",
+        "description": "Stack-based buffer overflow in the Bluetooth stack, exploitable by receiving a crafted packet on the L2CAP channel, leading to remote code execution with root privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32061"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2025-32062",
+        "cvss": 8.8,
+        "product": "Infotainment ECU (Alps Alpine Bluetooth stack in Bosch Infotainment ECU, Nissan Leaf ZE1)",
+        "description": "Stack-based buffer overflow in the Bluetooth stack, exploitable by receiving a crafted packet on the L2CAP channel, leading to remote code execution with root privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "buffer overflow",
+          "bluetooth",
+          "automotive",
+          "infotainment",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-32062"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-25108",
+        "cvss": 8.8,
+        "product": "FileZen (Soliton Systems K.K.) V5.0.0-V5.0.10 and V4.2.1-V4.2.8",
+        "description": "OS command injection flaw allowing authenticated users to execute arbitrary commands on the server. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command injection",
+          "rce",
+          "filezen",
+          "active exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://securityonline.info/jpcert-cc-warns-of-active-exploits-targeting-critical-filezen-command-injection-flaw/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-26368",
+        "cvss": 8.8,
+        "product": "JUNG eNet SMART HOME server 2.2.1/2.3.1",
+        "description": "Account takeover due to missing authorization in the resetUserPassword JSON-RPC method, allowing any authenticated low-privileged user to reset arbitrary account passwords, including administrators.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "account takeover",
+          "authorization bypass",
+          "smart home",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26368"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "cve_id": "CVE-2026-2540",
+        "cvss": 8.4,
+        "product": "Micca KE700 system",
+        "description": "Flawed resynchronization logic vulnerable to replay attacks, requiring two previously captured codes, allowing cloning of alarm keys and unauthorized vehicle access.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "replay attack",
+          "vehicle security",
+          "physical access",
+          "automotive",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2540"
+        ],
+        "date": "2026-02-16"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ClickFix Attacks Leveraging DNS and Pastebin for Payload Delivery and Crypto Hijacking",
+        "description": "Threat actors are employing \"ClickFix\" social engineering techniques to deliver malware and hijack cryptocurrency transactions. One campaign leverages DNS queries, asking victims to execute a command that performs a custom DNS lookup to an attacker-controlled server to retrieve and execute a PowerShell payload. Another campaign abuses Pastebin comments, tricking cryptocurrency users into running malicious JavaScript in their browsers to modify Bitcoin swap transactions and redirect funds to attacker wallets. These attacks bypass traditional detection by having the victim execute the malicious steps.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "84.21.189.20"
+          ],
+          "DOMAIN": [
+            "rawtext.host"
+          ]
+        },
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1059.001 (Command and Scripting Interpreter: PowerShell), T1071.004 (Application Layer Protocol: DNS), T1059.007 (Command and Scripting Interpreter: JavaScript).",
+        "analyse": "These campaigns highlight a growing trend of social engineering attacks that shift the execution burden to the victim, leveraging trusted platforms like Pastebin or fundamental network services like DNS for stealthy payload delivery. The focus on cryptocurrency users indicates a direct financial motivation. The DNS technique demonstrates an innovative evasion method, while the browser-based JavaScript attack directly manipulates user-side application logic.",
+        "recommandations": [
+          "Educate users on the risks of executing unsolicited commands or JavaScript scripts from untrusted sources.",
+          "Implement browser security policies and extensions to block the execution of injected malicious scripts.",
+          "Monitor for unusual DNS queries to suspicious external servers (for the nslookup case).",
+          "Strengthen detection of phishing and social engineering activities, especially those using legitimate services like Pastebin."
+        ],
+        "tags": [
+          "social engineering",
+          "clickfix",
+          "dns",
+          "powershell",
+          "javascript",
+          "cryptocurrency",
+          "phishing",
+          "transaction hijacking",
+          "evasion",
+          "malware delivery",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-clickfix-attack-abuses-nslookup-to-retrieve-powershell-payload-via-dns/",
+          "https://www.bleepingcomputer.com/news/security/pastebin-comments-push-clickfix-javascript-attack-to-hijack-crypto-swaps/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "CTM360: Lumma Stealer and Ninja Browser malware campaign abusing Google Groups",
+        "description": "CTM360 reports a large-scale malware campaign involving over 4,000 malicious Google Groups and 3,500 Google-hosted URLs. Threat actors use social engineering in industry-related forums, employing URL shorteners or Google-hosted redirectors to deliver OS-specific payloads (Lumma Stealer for Windows/Linux, Ninja Browser trojan). Payloads are padded with null bytes to evade antivirus detection, aiming to steal credentials and maintain persistence.",
+        "threat_actor": "Lumma Stealer, Ninja Browser",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1566.002",
+            "T1071.004",
+            "T1036.004",
+            "T1036.005",
+            "T1027"
+          ]
+        },
+        "mitre_ttps": "T1566.002 (Phishing: Spearphishing Link), T1071.004 (Application Layer Protocol: DNS), T1036.004 (Masquerading: Impersonation), T1036.005 (Masquerading: Match Legitimate Name or Location), T1027 (Obfuscated Files or Information).",
+        "analyse": "This campaign exemplifies the abuse of trusted online platforms (Google Groups, Docs, Drive) and evasion techniques (null byte padding, OS-specific payloads) to distribute infostealers. The focus on stealing credentials and maintaining persistence across multiple operating systems indicates a broad and persistent threat. The use of legitimate-looking technical discussions makes it difficult for users to discern malicious content.",
+        "recommandations": [
+          "Raise user awareness of the risks of unsolicited links and attachments, even on reputable forums.",
+          "Implement endpoint security solutions capable of detecting evasion techniques (such as file padding).",
+          "Monitor the use of URL redirection services and cloud file hosts (Google Docs/Drive) in a malicious context.",
+          "Use multi-factor authentication to protect accounts, even if credentials are stolen."
+        ],
+        "tags": [
+          "malware",
+          "infostealer",
+          "lumma stealer",
+          "ninja browser",
+          "google groups",
+          "social engineering",
+          "evasion",
+          "windows",
+          "linux",
+          "credential theft",
+          "persistence",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ctm360-lumma-stealer-and-ninja-browser-malware-campaign-abusing-google-groups/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Exploited in the Wild: Critical BeyondTrust Flaw (CVSS 9.9) Opens Door to Network Takeover",
+        "description": "A critical unauthenticated Remote Code Execution (RCE) vulnerability (CVE-2026-1731, CVSS 9.9) in self-hosted BeyondTrust Remote Support and Privileged Remote Access solutions is actively exploited. Threat actors deploy legitimate RMM tools like SimpleHelp (renamed to evade detection) for persistence and perform extensive network discovery using tools such as AdsiSearcher. CISA has added this CVE to its Known Exploited Vulnerabilities Catalog. Cloud customers are patched, but self-hosted users must update immediately.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "FILE_NAME": [
+            "remote access.exe"
+          ],
+          "MITRE_ATT&CK": [
+            "T1190",
+            "T1547.001",
+            "T1087",
+            "T1016",
+            "T1082"
+          ]
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder), T1087 (Account Discovery), T1016 (System Network Configuration Discovery), T1082 (System Information Discovery).",
+        "analyse": "The active exploitation of a critical RCE in widely used remote access software poses an immediate and severe risk, especially to organizations managing their own instances. The use of legitimate tools for malicious purposes (living off the land) combined with evasion tactics makes detection challenging. The rapid progression from initial access to persistence and extensive network discovery indicates highly motivated and capable adversaries seeking broad network compromise.",
+        "recommandations": [
+          "Immediately apply patches for CVE-2026-1731 on all self-hosted instances of BeyondTrust Remote Support and Privileged Remote Access.",
+          "Monitor logs for unusual process execution, especially from directories like ProgramData.",
+          "Deploy advanced threat detection (EDR) to identify the misuse of legitimate tools (like SimpleHelp or AdsiSearcher).",
+          "Conduct regular scans of internet-exposed systems to identify unpatched vulnerabilities.",
+          "Apply the principle of least privilege and segment networks to limit the scope of a compromise."
+        ],
+        "tags": [
+          "rce",
+          "beyondtrust",
+          "active exploitation",
+          "vulnerability",
+          "remote access",
+          "persistence",
+          "network discovery",
+          "critical",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/exploited-in-the-wild-critical-beyondtrust-flaw-cvss-9-9-opens-door-to-network-takeover/"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Malicious npm and PyPI packages linked to Lazarus APT fake recruiter campaign",
+        "description": "North Korea's Lazarus Group is conducting a sophisticated \"graphalgo\" fake recruitment campaign, targeting JavaScript and Python developers via LinkedIn, Facebook, and Reddit. They create fake blockchain companies (e.g., Veltrix Capital) and publish malicious open-source packages on npm and PyPI disguised as interview tasks. When executed, these packages deliver a multi-stage encrypted Remote Access Trojan (RAT) that checks for cryptocurrency wallets and uses token-protected C2. This campaign is a long-term supply chain compromise.",
+        "threat_actor": "Lazarus Group",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1195.002",
+            "T1566",
+            "T1219",
+            "T1071",
+            "T1041"
+          ]
+        },
+        "mitre_ttps": "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain), T1566 (Phishing), T1219 (Remote Access Software), T1071 (Application Layer Protocol), T1041 (Exfiltration Over C2 Channel).",
+        "analyse": "This represents a highly sophisticated and modular supply chain attack, leveraging developers' trust in open-source repositories and recruitment processes. Lazarus Group's patience in building trust and using multi-layered malware points to state-sponsored motives focused on financial theft and potentially intelligence gathering from the cryptocurrency sector. The continuous adaptation of fake company fronts indicates a resilient and well-resourced adversary.",
+        "recommandations": [
+          "Implement rigorous verification processes for open-source packages used in development.",
+          "Train developers to identify fraudulent recruitment campaigns and social engineering techniques.",
+          "Use isolated development environments and software supply chain analysis tools.",
+          "Monitor for unusual network activities and connection attempts to command and control servers.",
+          "Strengthen the security of development platforms and code repositories."
+        ],
+        "tags": [
+          "apt",
+          "lazarus group",
+          "north korea",
+          "supply chain",
+          "npm",
+          "pypi",
+          "fake recruitment",
+          "social engineering",
+          "cryptocurrency",
+          "rat",
+          "malware",
+          "software development",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188009/apt/malicious-npm-and-pypi-packages-llinked-to-lazarus-apt-fake-recruiter-campaign.html"
+        ],
+        "date": "2026-02-16"
+      },
+      {
+        "title": "Trusted Tool Weaponized: Lotus Blossom Hijacks Notepad++ Updates",
+        "description": "A Unit 42 report revealed a highly targeted supply chain attack between June and December 2025, where the state-sponsored threat group Lotus Blossom compromised the official hosting infrastructure of Notepad++. They hijacked update traffic to deliver malicious updates to selected victims in Southeast Asia and beyond, including government, telecommunications, and critical infrastructure sectors. The attack uses an 'Adversary-in-the-Middle' capability for dynamic targeting, deploying a lightweight backdoor for long-term intelligence gathering.",
+        "threat_actor": "Lotus Blossom",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [
+            "T1195.002",
+            "T1557",
+            "T1195.003",
+            "T1071"
+          ]
+        },
+        "mitre_ttps": "T1195 (Supply Chain Compromise), T1557 (Adversary-in-the-Middle), T1195.003 (Compromise Software Supply Chain: Compromise via Third-Party Software, Supply Chain: Update Software), T1071 (Application Layer Protocol).",
+        "analyse": "This supply chain attack demonstrates high sophistication and a focus on high-value targets with elevated privileges. The selective hijacking of updates for a widely trusted tool bypasses traditional software supply chain defenses. The targeted nature and deployment of a lightweight backdoor confirm an intent for espionage and intelligence gathering rather than disruption, posing a persistent risk to government and critical sectors globally.",
+        "recommandations": [
+          "Manually update Notepad++ to version 8.9.1 or higher to ensure stricter signature verification.",
+          "Implement rigorous monitoring of software update integrity, verifying digital signatures and checksums.",
+          "Strengthen the security of hosting providers and software delivery points.",
+          "Educate IT personnel about supply chain attack risks and signs of update compromise.",
+          "Deploy network controls to detect 'Adversary-in-the-Middle' activities on update streams."
+        ],
+        "tags": [
+          "supply chain",
+          "state-sponsored",
+          "notepad++",
+          "lotus blossom",
+          "adversary-in-the-middle",
+          "software update",
+          "backdoor",
+          "intelligence gathering",
+          "mitre_ttps"
+        ],
+        "sources": [
+          "https://securityonline.info/trusted-tool-weaponized-lotus-blossom-hijacks-notepad-updates/"
+        ],
+        "date": "2026-02-16"
+      }
+    ]
+  }
+}
