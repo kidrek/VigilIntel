@@ -1,0 +1,388 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for February 17, 2026, is dominated by three major trends: the rapid exploitation of critical infrastructure vulnerabilities (BeyondTrust, Ivanti), the emergence of the 'Agentic AI' attack surface, and large-scale ransomware impacts on public services. The discovery and active exploitation of zero-day vulnerabilities in Chrome (CVE-2026-2441) and Apple (CVE-2026-20700) highlight the persistent risk to endpoints. Simultaneously, the OpenClaw framework has become a primary target for infostealers, marking a shift where malware now specifically harvests AI 'souls' and authentication tokens to bypass traditional security controls.",
+      "fr": "Le paysage des menaces au 17 février 2026 est dominé par trois tendances majeures : l'exploitation rapide des vulnérabilités des infrastructures critiques (BeyondTrust, Ivanti), l'émergence de la surface d'attaque liée aux 'IA Agentes', et les impacts massifs de ransomwares sur les services publics. La découverte et l'exploitation active de vulnérabilités zero-day dans Chrome (CVE-2026-2441) et Apple (CVE-2026-20700) soulignent le risque persistant pour les terminaux. Simultanément, le framework OpenClaw est devenu une cible privilégiée pour les infostealers, marquant un tournant où les malwares récoltent désormais spécifiquement les 'âmes' d'IA et les jetons d'authentification pour contourner les contrôles de sécurité traditionnels."
+    },
+    "date": "2026-02-17"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "APT28",
+      "campaign": "Operation MacroMaze",
+      "campaign_description": {
+        "en": "A cyberespionage campaign targeting government entities in Western and Central Europe using decoy documents mimicking the Spanish government. It utilizes simple tools like VBScripts and headless Microsoft Edge for data exfiltration via Webhook.site.",
+        "fr": "Une campagne de cyberespionnage ciblant les entités gouvernementales en Europe occidentale et centrale utilisant des documents leurres imitant le gouvernement espagnol. Elle utilise des outils simples comme des VBScripts et Microsoft Edge en mode 'headless' pour l'exfiltration de données via Webhook.site."
+      },
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernemental"
+      },
+      "modop": {
+        "en": "Spear-phishing with malicious Word documents, XML tracking via INCLUDEPICTURE, living-off-the-land techniques using standard Windows tools and legitimate web services.",
+        "fr": "Spear-phishing avec documents Word malveillants, suivi XML via INCLUDEPICTURE, techniques de type 'living-off-the-land' utilisant des outils Windows standards et des services web légitimes."
+      },
+      "tags": [
+        "Fancy Bear",
+        "MacroMaze",
+        "Espionage",
+        "Europe"
+      ],
+      "sources": [
+        "https://securityonline.info/hiding-in-plain-sight-apt28s-operation-macromaze-hits-european-govs/"
+      ],
+      "date": "2026-02-17"
+    },
+    {
+      "threat_actor": "ShinyHunters",
+      "campaign": "Canada Goose & Figure Leak",
+      "campaign_description": {
+        "en": "The actor published over 600,000 records from Canada Goose and 2.5GB from the fintech firm Figure following failed extortion attempts. Figure's breach originated from a social engineering attack on an employee.",
+        "fr": "L'acteur a publié plus de 600 000 enregistrements de Canada Goose et 2,5 Go de la société fintech Figure après l'échec de tentatives d'extorsion. La brèche de Figure provient d'une attaque d'ingénierie sociale sur un employé."
+      },
+      "sector": {
+        "en": "Retail, Financial Services",
+        "fr": "Commerce de détail, Services financiers"
+      },
+      "modop": {
+        "en": "Data theft via social engineering and third-party compromise, followed by extortion on dedicated leak sites.",
+        "fr": "Vol de données via ingénierie sociale et compromission de tiers, suivi d'une extorsion sur des sites de fuite dédiés."
+      },
+      "tags": [
+        "Data Leak",
+        "Extortion",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188046/data-breach/shinyhunters-leaked-600k-canada-goose-customer-records-but-the-firm-denies-it-was-breached.html"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "threat_actor": "Nova",
+      "campaign": "Healthcare & European Targeting",
+      "campaign_description": {
+        "en": "The Nova ransomware/extortion group claimed multiple victims including Nebraska Health Imaging and Novabio (France), stealing large volumes of patient and medical data (up to 500GB).",
+        "fr": "Le groupe de ransomware/extorsion Nova a revendiqué plusieurs victimes dont Nebraska Health Imaging et Novabio (France), volant de gros volumes de données patient et médicales (jusqu'à 500 Go)."
+      },
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "modop": {
+        "en": "Network encryption and exfiltration of PDF, SQL, and SSH keys.",
+        "fr": "Chiffrement de réseau et exfiltration de fichiers PDF, SQL et clés SSH."
+      },
+      "tags": [
+        "Ransomware",
+        "Healthcare",
+        "Extortion"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/nova"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Defense, International Relations",
+        "fr": "Défense, Relations Internationales"
+      },
+      "theme": {
+        "en": "US-Europe Strategic Autonomy",
+        "fr": "Autonomie stratégique USA-Europe"
+      },
+      "description": {
+        "en": "Analysis from the 2026 Munich Security Conference indicates a shift towards European strategic sovereignty and rearmament (SAFE mechanism) due to perceived US hostility and the partition of security interests with Russia.",
+        "fr": "L'analyse de la Conférence sur la sécurité de Munich 2026 indique un basculement vers la souveraineté stratégique européenne et le réarmement (mécanisme SAFE) en raison d'une hostilité perçue des États-Unis et du partage des intérêts de sécurité avec la Russie."
+      },
+      "tags": [
+        "MSC2026",
+        "Strategic Autonomy",
+        "NATO"
+      ],
+      "sources": [
+        "https://www.rusi.org/explore-our-research/publications/commentary/making-europe-great-again-us-hostility-and-new-world-order"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Odido",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Unauthorized access to customer management system exposing data of 6.2 million customers.",
+        "fr": "Accès non autorisé au système de gestion client exposant les données de 6,2 millions de clients."
+      },
+      "tags": [
+        "Massive Breach",
+        "Customer Data"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/16th-february-threat-intelligence-report/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "victim": "BridgePay Network Solutions / City of Marietta",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Financial Services, Government",
+        "fr": "Services financiers, Gouvernement"
+      },
+      "description": {
+        "en": "Nationwide ransomware attack impacting payment gateways for hundreds of US municipalities including Marietta, Georgia.",
+        "fr": "Attaque de ransomware d'envergure nationale impactant les passerelles de paiement de centaines de municipalités américaines, dont Marietta, Géorgie."
+      },
+      "tags": [
+        "Ransomware",
+        "Payment Gateway"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/16/marietta-also-affected-by-bridgepay-ransomware-attack/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "victim": "University of Pennsylvania",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Education",
+        "fr": "Éducation"
+      },
+      "description": {
+        "en": "Breach of donor database impacting 623,750 accounts, including sensitive info like estimated income and donation history.",
+        "fr": "Violation de la base de données des donateurs impactant 623 750 comptes, incluant des infos sensibles comme les revenus estimés et l'historique des dons."
+      },
+      "tags": [
+        "Education",
+        "Data Leak"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/UniversityOfPennsylvania"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "victim": "Eurail B.V.",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Transportation",
+        "fr": "Transport"
+      },
+      "description": {
+        "en": "Compromised database containing traveler passport details, IBANs, and health info being sold on the dark web.",
+        "fr": "Base de données compromise contenant les détails de passeport des voyageurs, les IBAN et des infos de santé, vendue sur le dark web."
+      },
+      "tags": [
+        "Travel",
+        "Passport Data"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-2441",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Use-after-free vulnerability in CSS component of Google Chrome allowing remote code execution via crafted HTML pages. Actively exploited in the wild.",
+        "fr": "Vulnérabilité de type 'use-after-free' dans le composant CSS de Google Chrome permettant l'exécution de code à distance via des pages HTML forgées. Exploitée activement."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0172/",
+        "https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+      "product": "Remote Support / Privileged Remote Access",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "Pre-authentication OS command injection vulnerability allowing remote code execution. Massive exploitation observed shortly after PoC release.",
+        "fr": "Vulnérabilité d'injection de commande OS pré-authentification permettant l'exécution de code à distance. Exploitation massive observée peu après la sortie du PoC."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "CISA-KEV"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-beyondtrust-flaw-within-three-days/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-1281",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
+      "product": "Endpoint Manager Mobile (EPMM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Critical RCE flaw in Ivanti EPMM being heavily exploited. 83% of attacks originate from a single IP (193.24.123.42).",
+        "fr": "Faille RCE critique dans Ivanti EPMM faisant l'objet d'une exploitation intensive. 83 % des attaques proviennent d'une seule IP (193.24.123.42)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Active Exploitation"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/ivanti-epmm-rce-vulnerability-exploited/"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-20700",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+      "product": "iOS, macOS, iPadOS",
+      "vendor": "Apple",
+      "description": {
+        "en": "Memory corruption issue in dyld (Dynamic Link Editor) exploited in sophisticated attacks against specific individuals.",
+        "fr": "Problème de corruption de mémoire dans dyld (Dynamic Link Editor) exploité lors d'attaques sophistiquées contre des individus spécifiques."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "Apple"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/02/weekly-recap-outlook-add-ins-hijack-0.html"
+      ],
+      "date": "2026-02-16"
+    },
+    {
+      "cve_id": "CVE-2026-1358",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:airleader:airleader_master:*:*:*:*:*:*:*:*",
+      "product": "Airleader Master",
+      "vendor": "Airleader GmbH",
+      "description": {
+        "en": "Unrestricted file upload in ICS monitoring solution allowing unauthenticated remote code execution.",
+        "fr": "Téléchargement de fichier non restreint dans une solution de surveillance ICS permettant l'exécution de code à distance sans authentification."
+      },
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "RCE"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/airleader-vulnerability/"
+      ],
+      "date": "2026-02-16"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ClickFix Variant Using DNS Staging (ModeloRAT)",
+        "fr": "Variante ClickFix utilisant le staging DNS (ModeloRAT)"
+      },
+      "description": {
+        "en": "A new ClickFix variant tricks users into running nslookup commands to retrieve payloads via DNS, leading to the deployment of ModeloRAT.",
+        "fr": "Une nouvelle variante de ClickFix trompe les utilisateurs pour qu'ils exécutent des commandes nslookup afin de récupérer des charges utiles via DNS, menant au déploiement de ModeloRAT."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://azwsappdev.com/wdhmgpmihudkueq.zip"
+        ],
+        "IPv4": [
+          "193.24.123.42"
+        ],
+        "DOMAIN": [
+          "azwsappdev.com",
+          "webhook.site",
+          "robloxr.com.es"
+        ],
+        "EMAIL": [
+          "privacyhelp@eurail.com",
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "28887765582491348274476036626579"
+        ],
+        "TOOLS": [
+          "Vidar",
+          "ModeloRAT",
+          "GuLoader",
+          "Remcos",
+          "Raccoon",
+          "Lumma",
+          "OpenClaw"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1059.003",
+        "T1132.001",
+        "T1547.001"
+      ],
+      "analyse": {
+        "en": "Attackers are moving away from direct web-based payload delivery to DNS-based signaling to evade proxy/firewall detection. The target shift towards AI Agent frameworks (OpenClaw) represents a new high-value asset for infostealers.",
+        "fr": "Les attaquants délaissent la livraison directe de charges utiles via le Web pour une signalisation par DNS afin d'échapper à la détection par proxy/firewall. Le ciblage des frameworks d'IA Agentes (OpenClaw) représente un nouvel actif de haute valeur pour les infostealers."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor DNS traffic for unusual nslookup queries to external non-standard servers.",
+          "fr": "Surveiller le trafic DNS pour les requêtes nslookup inhabituelles vers des serveurs externes non standards."
+        },
+        {
+          "en": "Update Google Chrome and BeyondTrust instances immediately.",
+          "fr": "Mettre à jour immédiatement les instances Google Chrome et BeyondTrust."
+        }
+      ],
+      "tags": [
+        "ClickFix",
+        "DNS-Staging",
+        "Infostealer",
+        "AI-Security"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188039/hacking/microsoft-alerts-on-dns-based-clickfix-variant-delivering-malware-via-nslookup.html",
+        "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+      ],
+      "date": "2026-02-17"
+    }
+  ]
+}
