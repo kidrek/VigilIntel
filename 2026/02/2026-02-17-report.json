@@ -1,0 +1,1553 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification des menaces cyber, notamment par l'exploitation active de vulnérabilités Zero-Day dans des logiciels largement utilisés comme Google Chrome et des solutions d'accès à distance. L'écosystème de l'intelligence artificielle (IA) émerge comme une cible et un vecteur d'attaque privilégiés, avec des logiciels malveillants ciblant les secrets des agents IA et des groupes d'influence utilisant les LLM pour affiner leurs campagnes. Les campagnes de ransomware et les fuites de données restent prévalentes, touchant divers secteurs allant de l'hôtellerie aux administrations publiques, souvent via des compromissions de la chaîne d'approvisionnement ou des vulnérabilités dans des applications web. Les modes opératoires des attaquants évoluent, incorporant des techniques de \"living off the land\" et de nouvelles méthodes de diffusion de malwares via DNS. L'actualité géopolitique montre également une corrélation avec les activités cyber, en particulier l'espionnage étatique. En conclusion, le paysage des menaces est marqué par une sophistication croissante, une diversification des cibles et une utilisation accrue de l'IA par les attaquants, exigeant des défenses robustes et adaptatives.",
+      "date": "2026-02-17"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT28 (Fancy Bear/Forest Blizzard)",
+        "secteur": "Gouvernements européens",
+        "modop": "Campagne d'espionnage \"Operation MacroMaze\" utilisant des spear-phishing, des macros malveillantes, des techniques de living off the land (outils Windows standard, Edge sans interface graphique) pour l'exfiltration de données via Webhook.site.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyber_espionnage",
+          "spear_phishing",
+          "living_off_the_land",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityonline.info/hiding-in-plain-sight-apt28s-operation-macromaze-hits-european-govs/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "ClickFix (variante DNS)",
+        "secteur": "Tous secteurs (ciblant les utilisateurs via ingénierie sociale)",
+        "modop": "Ingénierie sociale (faux CAPTCHA/messages d'erreur), incitation des utilisateurs à exécuter des commandes `nslookup` via la boîte de dialogue Exécuter de Windows pour récupérer des charges utiles de second étage via DNS, puis déploiement de ModeloRAT (RAT basé sur Python).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "social_engineering",
+          "DNS_exfiltration",
+          "RAT",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188039/hacking/microsoft-alerts-on-dns-based-clickfix-variant-delivering-malware-via-nslookup.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Retail, Éducation, Plateformes de crowdfunding",
+        "modop": "Vol et fuite de données de clients (Canada Goose, Université de Pennsylvanie, Panera Bread), demandes de rançon, vente de données sur le dark web, vishing (pour Panera Bread).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "extortion",
+          "ransomware",
+          "vishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/",
+          "https://securityaffairs.com/188046/data-breach/shinyhunters-leaked-600k-canada-goose-customer-records-but-the-firm-denies-it-was-breached.html",
+          "https://haveibeenpwned.com/Breach/UniversityOfPennsylvania"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "Vidar infostealer (variante)",
+        "secteur": "Utilisateurs d'agents IA (OpenClaw)",
+        "modop": "Vol d'informations (clés API, jetons d'authentification, fichiers sensibles) liés à des frameworks d'IA.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "malware",
+          "data_theft",
+          "AI"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/infostealer-malware-found-stealing-openclaw-secrets-for-first-time/",
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Politique/Géopolitique",
+        "theme": "Recomposition idéologique du Parti républicain américain",
+        "description": "Analyse des quatre courants idéologiques (néoréaction, libertarianisme autoritaire, post-libéralisme, conservatisme chrétien) au sein du Parti républicain américain, façonnés par l'élection de Barack Obama en 2008 et la prise du Capitole en janvier 2021.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "États_Unis",
+          "Parti_Républicain",
+          "idéologie_politique"
+        ],
+        "sources": [
+          "https://www.iris-france.org/cartographie-des-courants-ideologiques-au-sein-du-parti-republicain/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Guerre de l'information/Technologie",
+        "theme": "L'IA dans les opérations d'influence et de désinformation",
+        "description": "Entretien avec Ben Nimmo d'OpenAI sur l'impact des grands modèles de langage (LLM) sur les opérations d'influence et de manipulation de l'information étrangère (FIMI). Les acteurs comme la Russie et la Chine utilisent ChatGPT pour améliorer la grammaire de leurs contenus, mais de nouvelles méthodes de détection des contenus générés par l'IA émergent également. La lutte pour l'intégrité de l'information entre dans une phase plus rapide et adaptative.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "IA",
+          "désinformation",
+          "opérations_d_influence",
+          "FIMI",
+          "LLM"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/interview-with-ben-nimmo-from-openai/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Géopolitique/Relations Internationales",
+        "theme": "L'évolution du rôle de l'Europe face à l'hostilité américaine",
+        "description": "Analyse de la manière dont l'hostilité des États-Unis (en particulier sous Trump) pousse involontairement l'Europe à devenir un rival indépendant, doté de capacités nucléaires et économiquement protectionniste. Cela force un équilibrage interne et une unité militaire et politique accrue pour la survie et le statut de superpuissance.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "États_Unis",
+          "OTAN",
+          "défense",
+          "autonomie_stratégique"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/making-europe-great-again-us-hostility-and-new-world-order"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Crowdfunding/Services financiers",
+        "victime": "APOIA.se (plateforme brésilienne)",
+        "description": "Violation de données confirmée en janvier 2026, avec une base de données publiée en ligne en décembre 2025, exposant 451 000 adresses e-mail uniques, noms et adresses physiques.",
+        "tags": [
+          "violation",
+          "breach",
+          "APOIA.se",
+          "crowdfunding",
+          "Brésil",
+          "données_personnelles"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/APOIAse"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Vente au détail de luxe",
+        "victime": "Canada Goose",
+        "description": "Le groupe ShinyHunters a divulgué plus de 600 000 dossiers clients (informations de commande, noms, e-mails, adresses, données de carte partielles). L'entreprise nie toute violation de ses propres systèmes.",
+        "tags": [
+          "violation",
+          "breach",
+          "Canada_Goose",
+          "retail",
+          "ShinyHunters",
+          "fuite_de_données",
+          "données_client"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188046/data-breach/shinyhunters-leaked-600k-canada-goose-customer-records-but-the-firm-denies-it-was-breached.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Pharmaceutique/Commerce de détail",
+        "victime": "DavaIndia Pharmacy",
+        "description": "Une faille de sécurité (sous-domaine administrateur exposé, accès non authentifié aux API super-administrateur) a permis un accès non autorisé aux données de commande des clients et un contrôle administratif complet, menaçant les fonctions de contrôle des médicaments.",
+        "tags": [
+          "violation",
+          "breach",
+          "DavaIndia_Pharmacy",
+          "pharmacie",
+          "retail",
+          "vulnérabilité",
+          "accès_non_autorisé",
+          "données_client"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188056/security/a-security-flaw-at-davaindia-pharmacy-allowed-attackers-to-access-customers-data-and-more.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Voyage",
+        "victime": "Eurail B.V.",
+        "description": "Violation de données ayant entraîné le vol de données de voyageurs (noms, détails de passeport/identité, IBAN, informations de santé, coordonnées) maintenant en vente sur le dark web.",
+        "tags": [
+          "violation",
+          "breach",
+          "Eurail",
+          "voyage",
+          "données_voyageurs",
+          "dark_web",
+          "vente_de_données"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Livingston HealthCare (Montana)",
+        "description": "Incident de cybersécurité ayant perturbé les systèmes téléphoniques et le réseau, entraînant la mise hors ligne temporaire de certains systèmes hospitaliers.",
+        "tags": [
+          "violation",
+          "breach",
+          "Livingston_HealthCare",
+          "santé",
+          "perturbation_réseau",
+          "incident_cyber"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/16/montana-hospital-restores-phones-as-cyber-related-network-disruptions-persist/?pk_campaign=feed&pk_kwd=montana-hospital-restores-phones-as-cyber-related-network-disruptions-persist"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Gouvernement/Traitement des paiements",
+        "victime": "Ville de Marietta (affectée par BridgePay Network Solutions)",
+        "description": "Attaque par ransomware contre le fournisseur de passerelle de paiement BridgePay Network Solutions ayant perturbé les paiements par carte de crédit en ligne pour la Ville de Marietta et des centaines de municipalités américaines. BridgePay rapporte qu'aucune donnée de carte de paiement utilisable n'a été compromise.",
+        "tags": [
+          "violation",
+          "breach",
+          "Marietta",
+          "BridgePay",
+          "ransomware",
+          "paiements_en_ligne",
+          "chaîne_d_approvisionnement",
+          "gouvernement"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/16/marietta-also-affected-by-bridgepay-ransomware-attack/?pk_campaign=feed&pk_kwd=marietta-also-affected-by-bridgepay-ransomware-attack"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Gouvernement/Application de la loi",
+        "victime": "Police néerlandaise",
+        "description": "Fuite accidentelle de documents confidentiels de la police néerlandaise, suivie d'une tentative d'extorsion par un individu qui les avait téléchargés et a été arrêté.",
+        "tags": [
+          "violation",
+          "breach",
+          "police_néerlandaise",
+          "fuite_de_données",
+          "extorsion",
+          "incident_interne"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-arrested-for-demanding-reward-after-accidental-police-data-leak/",
+          "https://databreaches.net/2026/02/16/he-tried-to-extort-the-dutch-police-it-didnt-work-out-well-for-him/?pk_campaign=feed&pk_kwd=he-tried-to-extort-the-dutch-police-it-didnt-work-out-well-for-him"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido (fournisseur de télécommunications néerlandais)",
+        "description": "Violation de données due à un accès non autorisé au système de gestion des clients, exposant les données personnelles de 6,2 millions de clients (noms, adresses, numéros de téléphone, e-mails).",
+        "tags": [
+          "violation",
+          "breach",
+          "Odido",
+          "télécommunications",
+          "Pays_Bas",
+          "données_personnelles",
+          "accès_non_autorisé"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/16th-february-threat-intelligence-report/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Retail/Bien-être sexuel",
+        "victime": "Tenga Co., Ltd. (fabricant japonais de jouets sexuels)",
+        "description": "Violation de données après qu'un hacker a accédé au compte de messagerie professionnel d'un employé, exposant potentiellement les noms des clients, les adresses e-mail, les correspondances passées, les détails des commandes et les demandes de service client.",
+        "tags": [
+          "violation",
+          "breach",
+          "Tenga",
+          "retail",
+          "Japon",
+          "messagerie_compromise",
+          "données_client",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188022/data-breach/japanese-sex-toys-maker-tenga-discloses-data-breach.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Université de Pennsylvanie",
+        "description": "Violation de données (octobre 2025) et demande de rançon par ShinyHunters, aboutissant à la publication de 624 000 adresses e-mail uniques, noms, adresses physiques et autres informations personnelles/donateurs en février 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "Université_de_Pennsylvanie",
+          "éducation",
+          "ShinyHunters",
+          "données_donateurs",
+          "rançon",
+          "fuite_de_données"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/UniversityOfPennsylvania"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Hôtellerie",
+        "victime": "Washington Hotel (Japon)",
+        "description": "Attaque par ransomware compromettant diverses données commerciales et affectant les terminaux de cartes de crédit. L'incident a débuté le 13 février 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "Washington_Hotel",
+          "hôtellerie",
+          "Japon",
+          "ransomware",
+          "données_commerciales",
+          "cartes_de_crédit"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/washington-hotel-in-japan-discloses-ransomware-infection-incident/"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-12062",
+        "cvss": "8.8",
+        "product": "WP Maps – Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters plugin for WordPress (<= 4.8.6)",
+        "description": "Local File Inclusion (LFI) authentifiée (niveau abonné et supérieur) via la fonction 'fc_load_template', permettant d'inclure et d'exécuter des fichiers .html arbitraires (avec exécution de code PHP possible) sur le serveur.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "LFI",
+          "WordPress",
+          "plugin",
+          "exécution_de_code",
+          "accès_authentifié"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12062"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2001",
+        "cvss": "8.8",
+        "product": "WowRevenue plugin for WordPress (<= 2.1.3)",
+        "description": "Vulnérabilité due à une vérification d'autorisation manquante dans la fonction 'Notice::install_activate_plugin', permettant à des attaquants authentifiés (niveau abonné et supérieur) d'installer des plugins arbitraires (conduisant potentiellement à une exécution de code à distance).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "autorisation_manquante",
+          "RCE",
+          "accès_authentifié"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2001"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2101",
+        "cvss": "8.7",
+        "product": "ENOVIAvpm Web Access (V1R16 à V1R19)",
+        "description": "Vulnérabilité de Cross-site Scripting (XSS) Réfléchie, permettant à un attaquant d'exécuter du code script arbitraire dans la session du navigateur de l'utilisateur.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "XSS",
+          "ENOVIAvpm",
+          "exécution_de_script",
+          "navigateur_web"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2101"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": "8.8",
+        "product": "Google Chrome (composant CSS)",
+        "description": "Vulnérabilité de type 'Use-after-free' permettant à un attaquant distant d'exécuter du code arbitraire dans le bac à sable via une page HTML spécialement conçue. Activement exploitée (Zero-Day).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "Zero_Day",
+          "Use_After_Free",
+          "RCE",
+          "exploit_actif"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0172/",
+          "https://www.bleepingcomputer.com/news/security/google-patches-first-chrome-zero-day-exploited-in-attacks-this-year/",
+          "https://securityaffairs.com/188029/security/google-fixes-first-actively-exploited-chrome-zero-day-of-2026.html",
+          "https://socprime.com/blog/cve-2026-14174-vulnerability/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/16/chromes_zeroday/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": "8.8",
+        "product": "OpenClaw (passerelle)",
+        "description": "Vulnérabilité de compromission totale de la passerelle OpenClaw, permettant l'exécution de commandes arbitraires via une fuite du jeton d'authentification primaire, si l'agent visite un site attaquant ou si l'utilisateur clique sur un lien malveillant.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "OpenClaw",
+          "IA_agentique",
+          "exécution_de_commande_arbitraire",
+          "fuite_jeton",
+          "compromission_passerelle"
+        ],
+        "sources": [
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2564",
+        "cvss": "9.2",
+        "product": "Intelbras VIP 3260 Z IA 2.840.00IB005.0.T",
+        "description": "Faille de sécurité dans la fonction '/OutsideCmd' permettant une récupération de mot de passe faible. Attaque distante possible, mais exploitation jugée complexe.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "Intelbras",
+          "récupération_mot_de_passe",
+          "accès",
+          "RCE_potentiel"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2564"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2566",
+        "cvss": "8.3",
+        "product": "Wavlink WL-NU516U1 (jusqu'à 130/260)",
+        "description": "Dépassement de tampon basé sur la pile dans la fonction 'sub_406194' du fichier '/cgi-bin/adm.cgi' via la manipulation de l'argument 'firmware_url'. L'attaque peut être lancée à distance et l'exploit est public.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "Wavlink",
+          "dépassement_de_tampon",
+          "RCE",
+          "exploit_public",
+          "firmware"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2566"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2567",
+        "cvss": "8.3",
+        "product": "Wavlink WL-NU516U1 20251208",
+        "description": "Dépassement de tampon basé sur la pile dans la fonction 'sub_401218' du fichier '/cgi-bin/nas.cgi' via la manipulation de l'argument 'User1Passwd'. L'attaque peut être lancée à distance et l'exploit est public.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "Wavlink",
+          "dépassement_de_tampon",
+          "RCE",
+          "exploit_public",
+          "nas"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2567"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2577",
+        "cvss": "10.0",
+        "product": "Nanobot (composant de pont WhatsApp)",
+        "description": "Détournement de session WhatsApp non authentifié via le pont WebSocket. Le serveur WebSocket est lié à toutes les interfaces réseau sans nécessiter d'authentification, permettant à un attaquant distant d'intercepter des messages, d'envoyer des messages et de capturer des codes QR d'authentification.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "Nanobot",
+          "WhatsApp",
+          "détournement_de_session",
+          "accès_non_authentifié",
+          "RCE_potentiel"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2577"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hiding in Plain Sight: APT28’s “Operation MacroMaze” Hits European Govs",
+        "description": "Le groupe russe APT28 (Fancy Bear/Forest Blizzard) a mené l'\"Operation MacroMaze\", une campagne d'espionnage ciblant des entités gouvernementales européennes. La campagne utilise des e-mails de spear-phishing avec des documents Word malveillants contenant un mécanisme de suivi. Des macros malveillantes déploient des VBScripts, des fichiers batch et des extraits HTML, employant des techniques de \"living off the land\" (outils Windows standard, navigateur Edge sans interface graphique) pour communiquer silencieusement et exfiltrer des informations système via Webhook.site, puis s'auto-nettoyer. L'objectif est la collecte rapide d'informations, rendant la détection et l'attribution difficiles.",
+        "threat_actor": "APT28 (Fancy Bear, Forest Blizzard)",
+        "indicator_of_compromise": {
+          "URL": [
+            "webhook[.]site"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1053 (Scheduled Task/Job)",
+          "T1574 (Hijack Execution Flow)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "APT28 continue d'affiner ses TTP en adoptant des approches \"low-tech, high-craft\" comme le \"living off the land\" et l'infrastructure éphémère. Cette stratégie exploite les services légitimes et les outils standard pour minimiser la détection et compliquer l'attribution. Le ciblage d'entités gouvernementales en Europe témoigne d'un espionnage étatique continu axé sur la collecte de renseignements politiques et stratégiques.",
+        "recommandations": [
+          "Renforcer la sécurité des e-mails pour détecter le spear-phishing",
+          "Mettre en œuvre des solutions EDR (Endpoint Detection and Response) pour identifier les techniques de \"living off the land\" et l'exécution de processus inhabituelle",
+          "Appliquer des politiques de sécurité des macros",
+          "Surveiller le trafic réseau pour les communications vers des domaines suspects comme webhook[.]site",
+          "Mener des formations régulières de sensibilisation des utilisateurs contre l'ingénierie sociale"
+        ],
+        "tags": [
+          "APT28",
+          "cyber_espionnage",
+          "spear_phishing",
+          "malware",
+          "living_off_the_land",
+          "data_exfiltration",
+          "gouvernement",
+          "Europe",
+          "T1566.001",
+          "T1204.002"
+        ],
+        "sources": [
+          "https://securityonline.info/hiding-in-plain-sight-apt28s-operation-macromaze-hits-european-govs/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Infostealer malware targeting OpenClaw AI assistant secrets / Key OpenClaw risks",
+        "description": "Des logiciels malveillants d'infostealer (par exemple, une variante de Vidar) ont été observés ciblant des secrets (clés API, jetons d'authentification) associés à l'assistant IA agentique OpenClaw. OpenClaw, un cadre d'agent IA local, traite des données sensibles et maintient une configuration persistante, faisant de ses fichiers une cible privilégiée. Des préoccupations existent concernant sa posture de sécurité laxiste et le stockage non chiffré des informations d'identification sensibles, conduisant à un potentiel important de menaces internes et de non-conformité réglementaire. Une vulnérabilité critique (CVE-2026-25253, CVSS 8.8) permettant la compromission de la passerelle via une fuite de jeton a été corrigée. Des compétences malveillantes ont également été trouvées dans le référentiel ClawHub.",
+        "threat_actor": "Vidar infostealer (variante), autres infostealers, acteurs de la menace téléchargeant des compétences malveillantes",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1552 (Unsecured Credentials)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "L'adoption croissante d'assistants IA comme OpenClaw dans les flux de travail professionnels présente une nouvelle surface d'attaque significative pour les infostealers. Le stockage centralisé de secrets non chiffrés par de tels agents crée un point de défaillance unique. L'émergence rapide de vulnérabilités et d'extensions malveillantes souligne les défis de sécurité dans les écosystèmes d'agents IA naissants, posant des risques de vol de données, de compromission réseau et de violations réglementaires.",
+        "recommandations": [
+          "Mettre en œuvre des contrôles d'accès stricts pour les agents IA",
+          "Chiffrer les données sensibles stockées par les cadres IA",
+          "Mettre à jour régulièrement les logiciels d'agent IA",
+          "Examiner rigoureusement les \"compétences\" tierces",
+          "Sensibiliser les utilisateurs aux risques liés à l'installation d'agents IA sur les appareils d'entreprise",
+          "Appliquer des politiques sur les catégories de données appropriées pour le traitement par l'IA",
+          "Surveiller les tentatives de connexion suspectes d'agents IA ou les activités inhabituelles sur les appareils d'entreprise"
+        ],
+        "tags": [
+          "AI",
+          "infostealer",
+          "malware",
+          "data_theft",
+          "API_keys",
+          "authentication_tokens",
+          "OpenClaw",
+          "agentic_AI",
+          "insider_threat",
+          "vulnerability",
+          "CVE-2026-25253",
+          "T1003",
+          "T1552"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/infostealer-malware-found-stealing-openclaw-secrets-for-first-time/",
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Malicious Outlook Add-in Turns Into Phishing Kit (from Weekly Recap)",
+        "description": "L'add-in légitime AgreeTo pour Outlook a été détourné et transformé en kit de phishing, volant plus de 4 000 identifiants de compte Microsoft. Ceci a été réalisé en prenant le contrôle d'un domaine associé au projet abandonné pour servir une fausse page de connexion Microsoft. L'incident met en évidence le risque que les actifs négligés ou abandonnés deviennent des vecteurs d'attaque, en particulier pour les add-ins Office qui s'exécutent dans un environnement de confiance et peuvent demander des autorisations sensibles.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "Les attaques de la chaîne d'approvisionnement exploitant des actifs logiciels légitimes abandonnés ou détournés, en particulier ceux profondément intégrés dans les suites de productivité comme Microsoft Outlook, représentent un risque significatif. La confiance implicite accordée aux add-ins distribués via les magasins officiels peut être exploitée pour le vol d'identifiants et une compromission organisationnelle plus large. Cet incident souligne l'importance d'une surveillance continue et d'une gestion du cycle de vie pour tous les composants logiciels, y compris les add-ins tiers.",
+        "recommandations": [
+          "Mettre en œuvre une vérification stricte et une surveillance continue des add-ins tiers, en particulier ceux dotés d'autorisations étendues",
+          "Sensibiliser les utilisateurs aux risques de phishing, même lorsqu'ils sont présentés dans des applications apparemment légitimes",
+          "Appliquer l'authentification multifacteur (MFA) pour atténuer la compromission des identifiants",
+          "Surveiller les accès suspects aux comptes Microsoft"
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "phishing",
+          "Outlook_add_in",
+          "credential_theft",
+          "Microsoft_account",
+          "social_engineering",
+          "T1195.002"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/weekly-recap-outlook-add-ins-hijack-0.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Microsoft alerts on DNS-based ClickFix variant delivering malware via nslookup",
+        "description": "Microsoft alerte sur une nouvelle variante de ClickFix utilisant une technique d'évasion basée sur DNS. Les attaquants incitent les utilisateurs à exécuter une commande `nslookup` via la boîte de dialogue Exécuter de Windows. Cette commande effectue une requête DNS vers un serveur externe codé en dur, la réponse `Name:` contenant la charge utile de deuxième étage, qui est ensuite extraite et exécutée. Cette charge utile télécharge un ZIP, extrait un script Python pour la reconnaissance et dépose un VBScript pour lancer ModeloRAT (un RAT basé sur Python) pour la persistance. Cette méthode réduit la dépendance aux requêtes web, aidant l'activité malveillante à se fondre dans le trafic réseau normal.",
+        "threat_actor": "ClickFix variant operators, ModeloRAT operators",
+        "indicator_of_compromise": {
+          "URL": [
+            "hxxp://azwsappdev[.]com/wdhmgpmihudkueq[.]zip"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1568.001 (Stageing: Drive-by Compromise)",
+          "T1048.003 (Exfiltration Over Alternative Protocol: DNS Exfiltration)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1083 (File and Directory Discovery)",
+          "T1057 (Process Discovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "Cette nouvelle variante de ClickFix démontre la sophistication croissante des attaquants pour échapper aux défenses de sécurité traditionnelles en utilisant le DNS comme canal de commande et de contrôle (C2) furtif et mécanisme de livraison de charge utile. L'utilisation de l'ingénierie sociale combinée à des utilitaires système légitimes (`nslookup`, `cmd.exe`) rend la détection difficile et souligne la nécessité d'une surveillance réseau avancée et d'analyses comportementales. Le déploiement de ModeloRAT assure un accès persistant et des capacités de reconnaissance.",
+        "recommandations": [
+          "Éduquer les utilisateurs sur les tactiques d'ingénierie sociale, en particulier les invites inattendues à exécuter des commandes",
+          "Mettre en œuvre une surveillance DNS avancée pour détecter les schémas de requêtes inhabituels ou les requêtes vers des serveurs DNS externes malveillux connus",
+          "Déployer des solutions EDR (Endpoint Detection and Response) pour surveiller l'exécution de processus suspects (par exemple, `cmd.exe` exécutant `nslookup` avec des paramètres douteux, suivi d'une exécution de script)",
+          "Bloquer l'accès aux domaines et adresses IP malveillants connus"
+        ],
+        "tags": [
+          "malware",
+          "ClickFix",
+          "ModeloRAT",
+          "DNS_exfiltration",
+          "social_engineering",
+          "reconnaissance",
+          "RAT",
+          "persistence",
+          "T1071.004",
+          "T1566.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188039/hacking/microsoft-alerts-on-dns-based-clickfix-variant-delivering-malware-via-nslookup.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Network Intelligence: Your Questions, Global Answers",
+        "description": "Cet article prône une approche d'\"intelligence réseau\" pour l'investigation des menaces, offrant une visibilité globale au-delà des flux de renseignements passifs. Il met l'accent sur l'utilisation de capteurs distribués dans de nombreux pays pour collecter des enregistrements de flux réseau basés uniquement sur des métadonnées à l'échelle d'Internet. Cela permet aux équipes de sécurité d'interroger activement le trafic réseau mondial pour des adresses IP spécifiques, de comprendre les schémas de communication, de différencier les attaques ciblées du bruit, de suivre l'infrastructure des adversaires dans les secteurs et de cartographier l'évolution de l'infrastructure C2. L'approche s'intègre aux plateformes SIEM/SOAR via API, permettant une investigation proactive et un blocage précoce de la reconnaissance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1071 (Application Layer Protocol)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1082 (System Information Discovery)",
+          "T1018 (Remote System Discovery)"
+        ],
+        "analyse": "Les flux de renseignements sur les menaces traditionnels submergent souvent les équipes de sécurité de données génériques, ce qui rend difficile la priorisation et la contextualisation des menaces. L'intelligence réseau, avec ses capacités de requête globales et actives et sa collecte basée uniquement sur des métadonnées, offre un moyen plus efficace et éthiquement plus sain d'obtenir des informations exploitables sur l'infrastructure et le ciblage des adversaires. Cela fait passer les opérations de sécurité d'une alerte réactive à une chasse et une investigation proactives des menaces, particulièrement critiques pour les adversaires sophistiqués.",
+        "recommandations": [
+          "Mettre en œuvre des plateformes d'intelligence réseau dotées de capacités de visibilité globale et de requête",
+          "Intégrer l'intelligence réseau aux solutions SIEM/SOAR existantes pour un enrichissement contextuel automatisé",
+          "Se concentrer sur la collecte basée uniquement sur des métadonnées pour une surveillance éthique et évolutive",
+          "Former les analystes du renseignement aux techniques d'interprétation des observations du réseau mondial"
+        ],
+        "tags": [
+          "threat_intelligence",
+          "network_security",
+          "global_visibility",
+          "threat_hunting",
+          "DFIR",
+          "C2_infrastructure",
+          "adversary_tracking",
+          "T1071"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/network-intelligence-questions-answered"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Passwords to passkeys: Staying ISO 27001 compliant in a passwordless era",
+        "description": "Cet article aborde la transition de l'authentification par mot de passe vers des solutions sans mot de passe comme les passkeys, en se concentrant sur le maintien de la conformité ISO/IEC 27001. Les passkeys, basées sur FIDO2/WebAuthn, offrent une sécurité renforcée (clés cryptographiques résistantes au phishing, AAL2/AAL3) et des avantages opérationnels (moins d'appels au service d'assistance, connexions plus rapides). Bien que leur adoption soit croissante (par exemple, Google, Amazon, Microsoft), les organisations doivent gérer un environnement mixte pendant la transition, prioriser les comptes sensibles pour l'adoption des passkeys et aborder les limitations comme les attaques par rétrogradation ou le phishing de code d'appareil. La conformité exige la documentation de l'architecture, des politiques, des évaluations des risques et des procédures de récupération.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1556 (Credential Access: Password Policies)",
+          "T1078 (Valid Accounts)",
+          "T1550 (Use Alternate Authentication Material)"
+        ],
+        "analyse": "Le passage à l'authentification sans mot de passe représente une avancée significative en cybersécurité, répondant aux menaces prévalentes comme la compromission des mots de passe et le phishing. Cependant, une adoption réussie, en particulier pour les organisations conformes à la norme ISO 27001, nécessite une approche stratégique et basée sur les risques, une planification détaillée et une documentation complète pour garantir le maintien de la gouvernance de la sécurité tout au long de la transition. Les défis résident dans la gestion des environnements d'authentification hybrides et l'adaptation aux nouveaux vecteurs d'attaque ciblant les implémentations de passkeys.",
+        "recommandations": [
+          "Prioriser les passkeys liées aux appareils pour les comptes privilégiés et les passkeys synchronisables pour les utilisateurs standard",
+          "Documenter les procédures de secours, les normes de chiffrement et les déclencheurs de réinscription",
+          "Maintenir une défense en profondeur avec une gestion robuste des sessions, une surveillance des schémas d'authentification et des exigences de sécurité des appareils",
+          "Planifier des délais de migration clairs et traiter la récupération des comptes de manière proactive",
+          "Mettre en œuvre des politiques transparentes concernant l'utilisation des agents IA"
+        ],
+        "tags": [
+          "authentication",
+          "passkeys",
+          "passwordless",
+          "ISO27001",
+          "compliance",
+          "security_strategy",
+          "phishing_resistant",
+          "FIDO2",
+          "WebAuthn",
+          "T1556"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/passwords-to-passkeys-staying-iso-27001-compliant-in-a-passwordless-era/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Using gcloud for Google Workspace Investigations (The Investigator’s Way)",
+        "description": "Cet article souligne l'importance d'utiliser `gcloud` pour les investigations Google Workspace, en particulier dans les environnements plus vastes ou plus matures où les journaux sont exportés vers Google Cloud. Alors que la console d'administration et les API Workspace ont des limites, `gcloud` fournit une interface en ligne de commande puissante pour une analyse approfondie de ces journaux agrégés, permettant aux enquêteurs d'effectuer des enquêtes numériques et des réponses aux incidents (DFIR) plus complètes et efficaces.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1070 (Indicator Removal on Host)",
+          "T1078 (Valid Accounts)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "La dépendance croissante aux services cloud pour les opérations commerciales critiques nécessite des capacités DFIR robustes. À mesure que les organisations mûrissent et centralisent les journaux dans des plateformes comme Google Cloud, des outils en ligne de commande comme `gcloud` deviennent essentiels pour des investigations efficaces. Ce changement exige des professionnels de la sécurité qu'ils développent des compétences médico-légales spécifiques au cloud pour répondre de manière adéquate aux incidents et analyser les indicateurs de compromission au-delà des vues de console de base.",
+        "recommandations": [
+          "Intégrer les journaux Google Workspace à Google Cloud pour une analyse centralisée",
+          "Former les équipes DFIR aux commandes `gcloud` et aux techniques de criminalistique cloud",
+          "Mettre en œuvre des alertes automatisées et des règles de corrélation basées sur les modèles observés dans les journaux cloud",
+          "Établir des procédures claires pour l'accès et l'analyse des journaux exportés vers le cloud pendant la réponse aux incidents"
+        ],
+        "tags": [
+          "DFIR",
+          "cloud_security",
+          "Google_Workspace",
+          "gcloud",
+          "incident_response",
+          "forensics",
+          "log_analysis",
+          "T1070"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/using-gcloud-for-google-workspace-investigations-the-investigator-s-way"
+        ],
+        "date": "2026-02-17"
+      }
+    ]
+  },
+  "EN": {
+    "Cross-cutting Analysis": {
+      "analyse": "The analyzed period reveals an intensification of cyber threats, particularly through the active exploitation of Zero-Day vulnerabilities in widely used software such as Google Chrome and remote access solutions. The Artificial Intelligence (AI) ecosystem is emerging as a prime target and attack vector, with malware targeting AI agent secrets and influence groups using LLMs to refine their campaigns. Ransomware campaigns and data breaches remain prevalent, affecting various sectors from hospitality to public administrations, often via supply chain compromises or vulnerabilities in web applications. Attacker modus operandi are evolving, incorporating 'living off the land' techniques and new malware propagation methods via DNS. Geopolitical news also shows a correlation with cyber activities, particularly state-sponsored espionage. In conclusion, the threat landscape is marked by increasing sophistication, diversification of targets, and greater use of AI by attackers, requiring robust and adaptive defenses.",
+      "date": "2026-02-17"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "nom": "APT28 (Fancy Bear/Forest Blizzard)",
+        "secteur": "European Governments",
+        "modop": "Espionage campaign \"Operation MacroMaze\" using spear-phishing, malicious macros, living-off-the-land techniques (standard Windows tools, headless Edge browser) for data exfiltration via Webhook.site.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "cyber_espionage",
+          "spear_phishing",
+          "living_off_the_land",
+          "data_exfiltration"
+        ],
+        "sources": [
+          "https://securityonline.info/hiding-in-plain-sight-apt28s-operation-macromaze-hits-european-govs/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "ClickFix (DNS variant)",
+        "secteur": "All sectors (targeting users via social engineering)",
+        "modop": "Social engineering (fake CAPTCHA/error messages), tricking users into running `nslookup` commands via Windows Run dialog to fetch second-stage payloads via DNS, then deploying ModeloRAT (Python-based RAT).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "social_engineering",
+          "DNS_exfiltration",
+          "RAT",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188039/hacking/microsoft-alerts-on-dns-based-clickfix-variant-delivering-malware-via-nslookup.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Retail, Education, Crowdfunding Platforms",
+        "modop": "Customer data theft and leakage (Canada Goose, University of Pennsylvania, Panera Bread), ransom demands, dark web data sales, vishing (for Panera Bread).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "extortion",
+          "ransomware",
+          "vishing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/",
+          "https://securityaffairs.com/188046/data-breach/shinyhunters-leaked-600k-canada-goose-customer-records-but-the-firm-denies-it-was-breached.html",
+          "https://haveibeenpwned.com/Breach/UniversityOfPennsylvania"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "nom": "Vidar infostealer (variant)",
+        "secteur": "AI Agent Users (OpenClaw)",
+        "modop": "Information stealing (API keys, authentication tokens, sensitive files) related to AI frameworks.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "malware",
+          "data_theft",
+          "AI"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/infostealer-malware-found-stealing-openclaw-secrets-for-first-time/",
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Summary of Geopolitical News": [
+      {
+        "secteur": "Politics/Geopolitics",
+        "theme": "Ideological recomposition of the American Republican Party",
+        "description": "Analysis of the four ideological currents (neo-reaction, authoritarian libertarianism, post-liberalism, Christian conservatism) within the American Republican Party, shaped by Barack Obama's election in 2008 and the January 6th Capitol attack in 2021.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "USA",
+          "Republican_Party",
+          "political_ideology"
+        ],
+        "sources": [
+          "https://www.iris-france.org/cartographie-des-courants-ideologiques-au-sein-du-parti-republicain/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Information Warfare/Technology",
+        "theme": "AI in influence and disinformation operations",
+        "description": "Interview with OpenAI's Ben Nimmo on the impact of Large Language Models (LLMs) on influence operations and Foreign Information Manipulation and Interference (FIMI). Actors like Russia and China use ChatGPT to improve the grammar of their content, but new detection methods for AI-generated content are also emerging. The fight for information integrity is entering a faster, more adaptive phase.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "AI",
+          "disinformation",
+          "influence_operations",
+          "FIMI",
+          "LLM"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/interview-with-ben-nimmo-from-openai/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Geopolitics/International Relations",
+        "theme": "Europe's evolving role in the face of US hostility",
+        "description": "Analysis of how US hostility (especially under Trump) is inadvertently pushing Europe towards becoming an independent, nuclear-capable, and economically protectionist rival. This forces internal balancing and increased military and political unity for survival and superpower status.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Europe",
+          "USA",
+          "NATO",
+          "defense",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/making-europe-great-again-us-hostility-and-new-world-order"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Summary of Data Breaches": [
+      {
+        "secteur": "Crowdfunding/Financial Services",
+        "victime": "APOIA.se (Brazilian platform)",
+        "description": "Data breach confirmed in January 2026, with a database posted online in December 2025, exposing 451,000 unique email addresses, names, and physical addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "APOIA.se",
+          "crowdfunding",
+          "Brazil",
+          "personal_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/APOIAse"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Luxury Retail",
+        "victime": "Canada Goose",
+        "description": "ShinyHunters group leaked over 600,000 customer records (order info, names, emails, addresses, partial card data). The company denies any breach of its own systems.",
+        "tags": [
+          "violation",
+          "breach",
+          "Canada_Goose",
+          "retail",
+          "ShinyHunters",
+          "data_leak",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188046/data-breach/shinyhunters-leaked-600k-canada-goose-customer-records-but-the-firm-denies-it-was-breached.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Pharmaceutical/Retail",
+        "victime": "DavaIndia Pharmacy",
+        "description": "A security flaw (exposed admin subdomain, unauthenticated super-admin API access) allowed unauthorized access to customer order data and full administrative control, risking drug-control functions.",
+        "tags": [
+          "violation",
+          "breach",
+          "DavaIndia_Pharmacy",
+          "pharmacy",
+          "retail",
+          "vulnerability",
+          "unauthorized_access",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188056/security/a-security-flaw-at-davaindia-pharmacy-allowed-attackers-to-access-customers-data-and-more.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Travel",
+        "victime": "Eurail B.V.",
+        "description": "Data breach leading to the theft of traveler data (names, passport/ID details, IBANs, health information, contact details) now for sale on the dark web.",
+        "tags": [
+          "violation",
+          "breach",
+          "Eurail",
+          "travel",
+          "traveler_data",
+          "dark_web",
+          "data_sale"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/eurail-says-stolen-traveler-data-now-up-for-sale-on-dark-web/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Livingston HealthCare (Montana)",
+        "description": "Cybersecurity incident disrupted phone systems and network, leading to temporary offline status of some hospital systems.",
+        "tags": [
+          "violation",
+          "breach",
+          "Livingston_HealthCare",
+          "healthcare",
+          "network_disruption",
+          "cyber_incident"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/16/montana-hospital-restores-phones-as-cyber-related-network-disruptions-persist/?pk_campaign=feed&pk_kwd=montana-hospital-restores-phones-as-cyber-related-network-disruptions-persist"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Government/Payment Processing",
+        "victime": "City of Marietta (affected by BridgePay Network Solutions)",
+        "description": "Ransomware attack on payment gateway provider BridgePay Network Solutions disrupted online credit card payments for the City of Marietta and hundreds of US municipalities. BridgePay reports no usable payment card data was compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "Marietta",
+          "BridgePay",
+          "ransomware",
+          "online_payments",
+          "supply_chain",
+          "government"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/16/marietta-also-affected-by-bridgepay-ransomware-attack/?pk_campaign=feed&pk_kwd=marietta-also-affected-by-bridgepay-ransomware-attack"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Government/Law Enforcement",
+        "victime": "Dutch Police",
+        "description": "Accidental leak of confidential police documents, followed by an extortion attempt by an individual who downloaded them and was subsequently arrested.",
+        "tags": [
+          "violation",
+          "breach",
+          "Dutch_Police",
+          "data_leak",
+          "extortion",
+          "insider_incident"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/man-arrested-for-demanding-reward-after-accidental-police-data-leak/",
+          "https://databreaches.net/2026/02/16/he-tried-to-extort-the-dutch-police-it-didnt-work-out-well-for-him/?pk_campaign=feed&pk_kwd=he-tried-to-extort-the-dutch-police-it-didnt-work-out-well-for-him"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido (Dutch telecom provider)",
+        "description": "Data breach due to unauthorized access to the customer management system, exposing personal data of 6.2 million customers (names, addresses, phone numbers, emails).",
+        "tags": [
+          "violation",
+          "breach",
+          "Odido",
+          "telecommunications",
+          "Netherlands",
+          "personal_data",
+          "unauthorized_access"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/16th-february-threat-intelligence-report/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Retail/Sexual Wellness",
+        "victime": "Tenga Co., Ltd. (Japanese sex toy maker)",
+        "description": "Data breach after a hacker accessed an employee's professional email account, potentially exposing customer names, email addresses, past correspondence, order details, and customer service inquiries.",
+        "tags": [
+          "violation",
+          "breach",
+          "Tenga",
+          "retail",
+          "Japan",
+          "email_compromise",
+          "customer_data",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188022/data-breach/japanese-sex-toys-maker-tenga-discloses-data-breach.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Education",
+        "victime": "University of Pennsylvania",
+        "description": "Data breach (October 2025) and ransom demand by ShinyHunters, leading to the publication of 624,000 unique email addresses, names, physical addresses, and other personal/donor information in February 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "University_of_Pennsylvania",
+          "education",
+          "ShinyHunters",
+          "donor_data",
+          "ransom",
+          "data_leak"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/UniversityOfPennsylvania"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "secteur": "Hospitality",
+        "victime": "Washington Hotel (Japan)",
+        "description": "Ransomware attack compromising various business data and affecting credit card terminals. The incident began on February 13, 2026.",
+        "tags": [
+          "violation",
+          "breach",
+          "Washington_Hotel",
+          "hospitality",
+          "Japan",
+          "ransomware",
+          "business_data",
+          "credit_cards"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/washington-hotel-in-japan-discloses-ransomware-infection-incident/"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Summary of Vulnerabilities": [
+      {
+        "cve_id": "CVE-2025-12062",
+        "cvss": "8.8",
+        "product": "WP Maps – Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters plugin for WordPress (<= 4.8.6)",
+        "description": "Authenticated (Subscriber+) Local File Inclusion (LFI) via the 'fc_load_template' function, allowing inclusion and execution of arbitrary .html files (with PHP code execution possible) on the server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "LFI",
+          "WordPress",
+          "plugin",
+          "code_execution",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-12062"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2001",
+        "cvss": "8.8",
+        "product": "WowRevenue plugin for WordPress (<= 2.1.3)",
+        "description": "Vulnerability due to a missing capability check in the 'Notice::install_activate_plugin' function, allowing authenticated attackers (subscriber-level and above) to install arbitrary plugins (potentially leading to Remote Code Execution).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WordPress",
+          "plugin",
+          "missing_authorization",
+          "RCE",
+          "authenticated_access"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2001"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2101",
+        "cvss": "8.7",
+        "product": "ENOVIAvpm Web Access (V1R16 to V1R19)",
+        "description": "Reflected Cross-site Scripting (XSS) vulnerability, allowing an attacker to execute arbitrary script code in the user's browser session.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "XSS",
+          "ENOVIAvpm",
+          "script_execution",
+          "web_browser"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2101"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": "8.8",
+        "product": "Google Chrome (CSS component)",
+        "description": "Use-after-free vulnerability, allowing a remote attacker to execute arbitrary code inside the sandbox via a specially crafted HTML page. Actively exploited (Zero-Day).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "Zero_Day",
+          "Use_After_Free",
+          "RCE",
+          "actively_exploited"
+        ],
+        "sources": [
+          "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0172/",
+          "https://www.bleepingcomputer.com/news/security/google-patches-first-chrome-zero-day-exploited-in-attacks-this-year/",
+          "https://securityaffairs.com/188029/security/google-fixes-first-actively-exploited-chrome-zero-day-of-2026.html",
+          "https://socprime.com/blog/cve-2026-14174-vulnerability/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/16/chromes_zeroday/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": "8.8",
+        "product": "OpenClaw (gateway)",
+        "description": "Vulnerability leading to total compromise of the OpenClaw gateway, allowing arbitrary command execution via primary authentication token leakage, if the agent visits an attacker's site or the user clicks a malicious link.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "OpenClaw",
+          "agentic_AI",
+          "arbitrary_command_execution",
+          "token_leakage",
+          "gateway_compromise"
+        ],
+        "sources": [
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2564",
+        "cvss": "9.2",
+        "product": "Intelbras VIP 3260 Z IA 2.840.00IB005.0.T",
+        "description": "Security flaw in the '/OutsideCmd' function allowing weak password recovery. Remote attack is possible, but exploitation is considered complex.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Intelbras",
+          "password_recovery",
+          "access",
+          "potential_RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2564"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2566",
+        "cvss": "8.3",
+        "product": "Wavlink WL-NU516U1 (up to 130/260)",
+        "description": "Stack-based buffer overflow in the 'sub_406194' function of the '/cgi-bin/adm.cgi' file via 'firmware_url' argument manipulation. The attack can be launched remotely, and the exploit is public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Wavlink",
+          "buffer_overflow",
+          "RCE",
+          "public_exploit",
+          "firmware"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2566"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2567",
+        "cvss": "8.3",
+        "product": "Wavlink WL-NU516U1 20251208",
+        "description": "Stack-based buffer overflow in the 'sub_401218' function of the '/cgi-bin/nas.cgi' file via 'User1Passwd' argument manipulation. The attack can be launched remotely, and the exploit is public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Wavlink",
+          "buffer_overflow",
+          "RCE",
+          "public_exploit",
+          "nas"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2567"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "cve_id": "CVE-2026-2577",
+        "cvss": "10.0",
+        "product": "Nanobot (WhatsApp bridge component)",
+        "description": "Unauthenticated WhatsApp session hijack via WebSocket Bridge. The WebSocket server binds to all network interfaces without requiring authentication, allowing a remote attacker to intercept messages, send messages, and capture authentication QR codes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Nanobot",
+          "WhatsApp",
+          "session_hijack",
+          "unauthenticated_access",
+          "potential_RCE"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2577"
+        ],
+        "date": "2026-02-17"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hiding in Plain Sight: APT28’s “Operation MacroMaze” Hits European Govs",
+        "description": "The Russian state-sponsored group APT28 (Fancy Bear/Forest Blizzard) conducted \"Operation MacroMaze\", an espionage campaign targeting European government entities. The campaign uses spear-phishing emails with malicious Word documents containing a tracking mechanism. Malicious macros deploy VBScripts, batch files, and HTML snippets, employing \"living off the land\" techniques (standard Windows tools, headless Edge browser) to silently communicate and exfiltrate system information via Webhook.site, then self-cleaning. The objective is rapid information gathering, making detection and attribution difficult.",
+        "threat_actor": "APT28 (Fancy Bear, Forest Blizzard)",
+        "indicator_of_compromise": {
+          "URL": [
+            "webhook[.]site"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.002 (User Execution: Malicious File)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1053 (Scheduled Task/Job)",
+          "T1574 (Hijack Execution Flow)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1041 (Exfiltration Over C2 Channel)"
+        ],
+        "analyse": "APT28 continues to refine its TTPs by adopting low-tech, high-craft approaches like \"living off the land\" and ephemeral infrastructure. This strategy leverages legitimate services and standard tools to minimize detection and complicate attribution. Targeting government entities in Europe signifies ongoing state-sponsored espionage focused on political and strategic intelligence gathering.",
+        "recommandations": [
+          "Enhance email security to detect spear-phishing",
+          "Implement Endpoint Detection and Response (EDR) solutions to identify \"living off the land\" techniques and unusual process execution",
+          "Enforce macro security policies",
+          "Monitor network traffic for communications to suspicious domains like webhook[.]site",
+          "Conduct regular user awareness training against social engineering"
+        ],
+        "tags": [
+          "APT28",
+          "cyber_espionage",
+          "spear_phishing",
+          "malware",
+          "living_off_the_land",
+          "data_exfiltration",
+          "government",
+          "Europe",
+          "T1566.001",
+          "T1204.002"
+        ],
+        "sources": [
+          "https://securityonline.info/hiding-in-plain-sight-apt28s-operation-macromaze-hits-european-govs/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Infostealer malware targeting OpenClaw AI assistant secrets / Key OpenClaw risks",
+        "description": "Information-stealing malware (e.g., Vidar variant) has been observed targeting secrets (API keys, authentication tokens) associated with the OpenClaw agentic AI assistant. OpenClaw, a local AI agent framework, processes sensitive data and maintains persistent configuration, making its files a prime target. Concerns exist regarding its lax security posture and unencrypted storage of sensitive credentials, leading to significant insider threat potential and regulatory non-compliance. A critical vulnerability (CVE-2026-25253, CVSS 8.8) allowing gateway compromise via token leakage has been patched. Malicious skills have also been found in the ClawHub repository.",
+        "threat_actor": "Vidar infostealer (variant), other information stealers, threat actors uploading malicious skills",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1003 (OS Credential Dumping)",
+          "T1059 (Command and Scripting Interpreter)",
+          "T1552 (Unsecured Credentials)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "The increasing adoption of AI assistants like OpenClaw in professional workflows presents a significant new attack surface for infostealers. The centralized storage of unencrypted secrets by such agents creates a single point of failure. The rapid emergence of vulnerabilities and malicious extensions highlights the security challenges in nascent AI agent ecosystems, posing risks of data theft, network compromise, and regulatory violations.",
+        "recommandations": [
+          "Implement strong access controls for AI agents",
+          "Encrypt sensitive data stored by AI frameworks",
+          "Regularly update AI agent software",
+          "Rigorously vet third-party 'skills'",
+          "Educate users on risks of installing AI agents on corporate devices",
+          "Enforce policies on data categories suitable for AI processing",
+          "Monitor for suspicious AI agent connection attempts or unusual activity on corporate devices"
+        ],
+        "tags": [
+          "AI",
+          "infostealer",
+          "malware",
+          "data_theft",
+          "API_keys",
+          "authentication_tokens",
+          "OpenClaw",
+          "agentic_AI",
+          "insider_threat",
+          "vulnerability",
+          "CVE-2026-25253",
+          "T1003",
+          "T1552"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/infostealer-malware-found-stealing-openclaw-secrets-for-first-time/",
+          "https://www.kaspersky.co.uk/blog/moltbot-enterprise-risk-management/30091/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Malicious Outlook Add-in Turns Into Phishing Kit (from Weekly Recap)",
+        "description": "The legitimate AgreeTo add-in for Outlook was hijacked and converted into a phishing kit, stealing over 4,000 Microsoft account credentials. This was achieved by seizing control of a domain associated with the abandoned project to serve a fake Microsoft login page. The incident highlights the risk of overlooked and abandoned assets becoming attack vectors, especially for Office add-ins which run in a trusted environment and can request sensitive permissions.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.002 (Phishing: Spearphishing Link)",
+          "T1195.002 (Supply Chain Compromise: Compromise Software Supply Chain)",
+          "T1539 (Steal Web Session Cookie)"
+        ],
+        "analyse": "Supply chain attacks leveraging abandoned or hijacked legitimate software assets, particularly those deeply integrated into productivity suites like Microsoft Outlook, pose a significant risk. The implicit trust placed in add-ins distributed through official stores can be exploited for credential theft and broader organizational compromise. This incident underscores the importance of continuous monitoring and lifecycle management for all software components, including third-party add-ins.",
+        "recommandations": [
+          "Implement strict vetting and continuous monitoring of third-party add-ins, especially those with extensive permissions",
+          "Educate users about phishing risks, even when presented within seemingly legitimate applications",
+          "Enforce multi-factor authentication (MFA) to mitigate credential compromise",
+          "Monitor for suspicious access to Microsoft accounts"
+        ],
+        "tags": [
+          "supply_chain_attack",
+          "phishing",
+          "Outlook_add_in",
+          "credential_theft",
+          "Microsoft_account",
+          "social_engineering",
+          "T1195.002"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/weekly-recap-outlook-add-ins-hijack-0.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Microsoft alerts on DNS-based ClickFix variant delivering malware via nslookup",
+        "description": "Microsoft warns of a new ClickFix variant employing a DNS-based evasion technique. Attackers trick users into running an `nslookup` command via the Windows Run dialog. This command performs a DNS lookup against a hard-coded external server, with the `Name:` response containing the second-stage payload, which is then extracted and executed. This payload downloads a ZIP, extracts a Python script for reconnaissance, and drops a VBScript to launch ModeloRAT (a Python-based RAT) for persistence. This method reduces reliance on web requests, helping malicious activity blend into normal network traffic.",
+        "threat_actor": "ClickFix variant operators, ModeloRAT operators",
+        "indicator_of_compromise": {
+          "URL": [
+            "hxxp://azwsappdev[.]com/wdhmgpmihudkueq[.]zip"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1204.001 (User Execution: Malicious Link)",
+          "T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+          "T1568.001 (Stageing: Drive-by Compromise)",
+          "T1048.003 (Exfiltration Over Alternative Protocol: DNS Exfiltration)",
+          "T1071.004 (Application Layer Protocol: DNS)",
+          "T1083 (File and Directory Discovery)",
+          "T1057 (Process Discovery)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)"
+        ],
+        "analyse": "This new ClickFix variant demonstrates attackers' evolving sophistication in evading traditional security defenses by leveraging DNS as a covert command and control (C2) channel and payload delivery mechanism. The use of social engineering combined with legitimate system utilities (`nslookup`, `cmd.exe`) makes detection challenging and highlights the need for advanced network monitoring and behavioral analytics. ModeloRAT's deployment ensures persistent access and reconnaissance capabilities.",
+        "recommandations": [
+          "Educate users about social engineering tactics, particularly unexpected prompts to run commands",
+          "Implement advanced DNS monitoring to detect unusual query patterns or lookups to known malicious external DNS servers",
+          "Deploy Endpoint Detection and Response (EDR) solutions to monitor for suspicious process execution (e.g., `cmd.exe` executing `nslookup` with suspicious parameters, followed by script execution)",
+          "Block access to known malicious domains and IP addresses"
+        ],
+        "tags": [
+          "malware",
+          "ClickFix",
+          "ModeloRAT",
+          "DNS_exfiltration",
+          "social_engineering",
+          "reconnaissance",
+          "RAT",
+          "persistence",
+          "T1071.004",
+          "T1566.001"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188039/hacking/microsoft-alerts-on-dns-based-clickfix-variant-delivering-malware-via-nslookup.html"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Network Intelligence: Your Questions, Global Answers",
+        "description": "This article advocates for a \"network intelligence\" approach to threat investigation, offering global visibility beyond passive threat feeds. It emphasizes using distributed sensors across many countries to collect metadata-only network flow records at internet scale. This allows security teams to actively query global network traffic for specific IPs, understand communication patterns, differentiate targeted attacks from noise, track adversary infrastructure across sectors, and map C2 infrastructure evolution. The approach integrates with SIEMs/SOAR platforms via API, enabling proactive investigation and early blocking of reconnaissance.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1071 (Application Layer Protocol)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1082 (System Information Discovery)",
+          "T1018 (Remote System Discovery)"
+        ],
+        "analyse": "Traditional threat intelligence feeds often overwhelm security teams with generic data, making it difficult to prioritize and contextualize threats. Network intelligence, with its global, active query capabilities and metadata-only collection, offers a more efficient and ethically sound way to gain actionable insights into adversary infrastructure and targeting. This shifts security operations from reactive alerting to proactive threat hunting and investigation, particularly critical for sophisticated adversaries.",
+        "recommandations": [
+          "Implement network intelligence platforms with global visibility and query capabilities",
+          "Integrate network intelligence with existing SIEM/SOAR solutions for automated context enrichment",
+          "Focus on metadata-only collection for ethical and scalable monitoring",
+          "Train intelligence analysts in tradecraft for interpreting global network observations"
+        ],
+        "tags": [
+          "threat_intelligence",
+          "network_security",
+          "global_visibility",
+          "threat_hunting",
+          "DFIR",
+          "C2_infrastructure",
+          "adversary_tracking",
+          "T1071"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/network-intelligence-questions-answered"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Passwords to passkeys: Staying ISO 27001 compliant in a passwordless era",
+        "description": "This article discusses the transition from password-based authentication to passwordless solutions like passkeys, focusing on maintaining ISO/IEC 27001 compliance. Passkeys, built on FIDO2/WebAuthn, offer enhanced security (phishing-resistant cryptographic keys, AAL2/AAL3) and operational benefits (reduced help desk calls, faster sign-ins). While adoption is growing (e.g., Google, Amazon, Microsoft), organizations must manage a mixed environment during transition, prioritize sensitive accounts for passkey adoption, and address limitations like downgrade attacks or device code phishing. Compliance requires documenting architecture, policies, risk assessments, and recovery procedures.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1556 (Credential Access: Password Policies)",
+          "T1078 (Valid Accounts)",
+          "T1550 (Use Alternate Authentication Material)"
+        ],
+        "analyse": "The move to passwordless authentication represents a significant advancement in cybersecurity, addressing prevalent threats like password compromise and phishing. However, successful adoption, especially for ISO 27001 compliant organizations, requires a strategic, risk-based approach, detailed planning, and comprehensive documentation to ensure security governance is maintained throughout the transition. The challenges lie in managing hybrid authentication environments and adapting to new attack vectors targeting passkey implementations.",
+        "recommandations": [
+          "Prioritize device-bound passkeys for privileged accounts and syncable passkeys for standard users",
+          "Document fallback procedures, encryption standards, and re-enrollment triggers",
+          "Maintain defense-in-depth with robust session management, authentication pattern monitoring, and device security",
+          "Plan clear migration timelines and address account recovery proactively",
+          "Implement transparent policies on AI agent use"
+        ],
+        "tags": [
+          "authentication",
+          "passkeys",
+          "passwordless",
+          "ISO27001",
+          "compliance",
+          "security_strategy",
+          "phishing_resistant",
+          "FIDO2",
+          "WebAuthn",
+          "T1556"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/passwords-to-passkeys-staying-iso-27001-compliant-in-a-passwordless-era/"
+        ],
+        "date": "2026-02-17"
+      },
+      {
+        "title": "Using gcloud for Google Workspace Investigations (The Investigator’s Way)",
+        "description": "This article highlights the importance of using `gcloud` for Google Workspace investigations, especially in larger or more mature environments where logs are exported to Google Cloud. While the Admin Console and Workspace APIs have limits, `gcloud` provides a powerful command-line interface for in-depth analysis of these aggregated logs, enabling investigators to perform more comprehensive and efficient digital forensics and incident response (DFIR).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1070 (Indicator Removal on Host)",
+          "T1078 (Valid Accounts)",
+          "T1098 (Account Manipulation)"
+        ],
+        "analyse": "The increasing reliance on cloud services for critical business operations necessitates robust DFIR capabilities. As organizations mature and centralize logs in platforms like Google Cloud, command-line tools like `gcloud` become essential for effective investigations. This shift requires security professionals to develop cloud-specific forensic skills to adequately respond to incidents and analyze compromise indicators beyond basic console views.",
+        "recommandations": [
+          "Integrate Google Workspace logs with Google Cloud for centralized analysis",
+          "Train DFIR teams on `gcloud` commands and cloud forensics techniques",
+          "Implement automated alerts and correlation rules based on patterns observed in cloud logs",
+          "Establish clear procedures for accessing and analyzing cloud-exported logs during incident response"
+        ],
+        "tags": [
+          "DFIR",
+          "cloud_security",
+          "Google_Workspace",
+          "gcloud",
+          "incident_response",
+          "forensics",
+          "log_analysis",
+          "T1070"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/using-gcloud-for-google-workspace-investigations-the-investigator-s-way"
+        ],
+        "date": "2026-02-17"
+      }
+    ]
+  }
+}
