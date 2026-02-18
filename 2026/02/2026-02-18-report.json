@@ -1,0 +1,2477 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage de la cybersécurité du 18 février 2026 révèle un environnement de menaces complexe et en constante évolution, caractérisé par plusieurs tendances clés. On observe une persistance et une sophistication accrues des acteurs étatiques (comme l'UNC6201 et TGR-STA-1030), ciblant les infrastructures critiques, les gouvernements et les secteurs de haute technologie via l'exploitation de vulnérabilités zero-day (CVE-2026-22769, vulnérabilités Ivanti EPMM), le développement de malwares sur mesure (Grimbolt, rootkits eBPF) et des techniques d'évasion avancées (Ghost NICs, SPA iptables). Les attaques sur la chaîne d'approvisionnement restent un vecteur critique et en croissance, illustré par le malware Android Keenadu intégré dans le firmware et SmartLoader clonant des projets GitHub légitimes pour diffuser des infostealers. Les vulnérabilités dans les extensions VSCode et les secrets codés en dur dans les bundles JavaScript soulignent des faiblesses systémiques. Le ransomware et la cybercriminalité continuent d'affecter de nombreux secteurs, avec des opérations comme Phobos et LockBit, et des fuites de données entraînant des amendes réglementaires et la vente d'informations sur le dark web. L'IA est à la fois un outil pour les attaquants (proxy C2, malwares adaptatifs) et une cible (vol de configurations d'agents IA), soulevant des questions éthiques et de confiance. Enfin, un flux constant de vulnérabilités critiques est activement exploité, et les systèmes de contrôle industriels (OT/ICS) sont de plus en plus ciblés par des acteurs étatiques et des ransomwares, souvent avec une visibilité limitée pour les défenseurs. L'ensemble de ces tendances indique une convergence des menaces cyber avec les tensions géopolitiques et la guerre économique, rendant le travail de défenseurs de plus en plus complexe.",
+      "date": "2026-02-18"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UNC6201",
+        "secteur": "Infrastructures de virtualisation, potentiellement les secteurs gouvernementaux, juridiques et technologiques",
+        "modop": "Exploitation d'une vulnérabilité zero-day dans Dell RecoverPoint for Virtual Machines (CVE-2026-22769) via des identifiants codés en dur. Déploiement de web shells (SLAYSTYLE) et de backdoors personnalisés (BRICKSTORM, GRIMBOLT). Création de 'Ghost NICs' pour un mouvement latéral furtif dans les environnements VMware ESXi et utilisation d'iptables pour l'autorisation de paquets uniques. Groupe de menace suspecté lié à la RPC (République Populaire de Chine).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "parrainé-par-l'état",
+          "Chine",
+          "espionnage",
+          "exploit-zero-day",
+          "backdoor",
+          "web-shell",
+          "persistance",
+          "mouvement-latéral",
+          "VMware",
+          "virtualisation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "XWorm (RAT commercial)",
+        "secteur": "Entreprises d'Amérique latine (LATAM)",
+        "modop": "Diffusion via de faux reçus financiers, avec des mécanismes de livraison de plus en plus sophistiqués pour contourner les défenses régionales et atteindre les utilisateurs professionnels. La charge utile finale est souvent un Trojan d'accès à distance (RAT) comme XWorm.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "RAT",
+          "campagne-malveillante",
+          "phishing",
+          "secteur-financier",
+          "LATAM"
+        ],
+        "sources": [
+          "/cybersecurity-blog/xworm-latam-campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Keenadu (backdoor)",
+        "secteur": "Utilisateurs Android, en particulier les utilisateurs de tablettes",
+        "modop": "Intégration dans le firmware des appareils (attaque de la chaîne d'approvisionnement), les applications système et les applications Google Play. Compromission des bibliothèques Android principales (libandroid_runtime.so) pour fonctionner dans le contexte de chaque application installée, contournant le sandboxing et les permissions. Principalement pour la fraude publicitaire, mais capable de vol de données généralisé (médias, messages, identifiants bancaires, localisation, requêtes de navigation privée) et d'actions risquées sur l'appareil. Lié aux botnets Triada et BADBOX. Évite les langues/fuseaux horaires associés à la Chine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Android-malware",
+          "backdoor",
+          "attaque-firmware",
+          "chaîne-d'approvisionnement",
+          "fraude-publicitaire",
+          "vol-de-données",
+          "sécurité-mobile",
+          "botnet"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-keenadu-backdoor-found-in-android-firmware-google-play-apps/",
+          "https://securelist.com/keenadu-android-backdoor/118913/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "TGR-STA-1030",
+        "secteur": "Gouvernements et infrastructures critiques dans 37 pays",
+        "modop": "Accès initial via des campagnes de phishing et des systèmes exposés sur Internet. Déploiement de web shells obfusqués et d'un rootkit eBPF personnalisé sur Linux pour une persistance furtive au niveau du noyau. Utilisation de frameworks C2 basés sur Go et d'infrastructures VPS louées. Campagne d'espionnage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionnage",
+          "gouvernement",
+          "infrastructure-critique",
+          "phishing",
+          "web-shell",
+          "rootkit",
+          "eBPF",
+          "Linux",
+          "persistance",
+          "C2"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "SmartLoader (groupe de malwares)",
+        "secteur": "Développeurs (ciblant spécifiquement les utilisateurs du projet Oura MCP Server)",
+        "modop": "Clonage de projets GitHub légitimes (Oura MCP Server) pour diffuser l'infostealer StealC via des installateurs piégés. Utilisation de LuaJIT, obfuscation lourde de machines virtuelles, tâches planifiées déguisées en pilotes Realtek. Vise à voler les identifiants de développeurs, les mots de passe de navigateurs, les portefeuilles de cryptomonnaies, les clés API et les identifiants cloud. Les indicateurs suggèrent des opérations basées en Chine.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "infostealer",
+          "attaque-chaîne-d'approvisionnement",
+          "campagne-malveillante",
+          "développeurs",
+          "écosystème-IA",
+          "vol-d'identifiants",
+          "cryptomonnaie"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188135/ai/smartloader-hackers-clone-oura-mcp-project-to-spread-stealc-malware.html"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Opération de ransomware Phobos",
+        "secteur": "Plus de 1 000 victimes dans le monde, y compris des écoles publiques américaines, des fournisseurs de soins de santé, des organisations à but non lucratif, des organismes gouvernementaux et des entreprises privées (même un contractant lié au département de la Défense des États-Unis)",
+        "modop": "Modèle de Ransomware-as-a-Service (RaaS). Les affiliés déploient des rançongiciels, extorquent les victimes et partagent les profits. Un suspect arrêté en Pologne pour la création/distribution d'outils, la possession d'identifiants volés (connexions, mots de passe, numéros de cartes de crédit, adresses IP de serveurs) et la communication avec le groupe via des messages chiffrés. Les demandes de rançon ont dépassé 16 millions de dollars.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "RaaS",
+          "cybercriminalité",
+          "exfiltration-de-données",
+          "extorsion",
+          "gouvernement",
+          "santé",
+          "éducation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188128/cyber-crime/polish-cybercrime-police-arrest-man-linked-to-phobos-ransomware-operation.html",
+          "https://databreaches.net/2026/02/17/poland-arrests-suspect-linked-to-phobos-ransomware-operation/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Scattered LAPSUS$ Hunters",
+        "secteur": "Marques de luxe (Dior, Louis Vuitton, Tiffany & Co.), clients Salesforce",
+        "modop": "Compromission de comptes Salesforce d'entreprises par des tactiques d'ingénierie sociale (hameçonnage vocal, malwares sur les appareils des employés) pour voler des millions de dossiers clients. Campagne d'extorsion.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "violation-de-données",
+          "ingénierie-sociale",
+          "phishing",
+          "extorsion",
+          "Salesforce",
+          "commerce-de-luxe"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "LockBit ransomware gang",
+        "secteur": "Organisations australiennes (par exemple, Aeromedical Society of Australasia)",
+        "modop": "Attaques par ransomware, probablement avec exfiltration et chiffrement de données. (Les TTP spécifiques ne sont pas détaillés dans le post des réseaux sociaux, mais sont généralement connus pour l'exfiltration et le chiffrement des données).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "violation-de-données",
+          "extorsion",
+          "Australie"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/116088587327619149"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "AZURITE, PYROXENE, SYLVANITE, KAMACITE, ELECTRUM, VOLTZITE",
+        "secteur": "Environnements OT, infrastructures critiques, chaîne d'approvisionnement OT européenne, infrastructures ukrainiennes (FAI, coupures de courant)",
+        "modop": "AZURITE, PYROXENE, SYLVANITE sont de nouveaux groupes en 2025. SYLVANITE se concentre sur l'accès initial via l'exploitation rapide de vulnérabilités (Ivanti, F5, SAP, ConnectWise), utilisant Cobalt Strike, Sliver, des web shells, puis transmet l'accès à d'autres acteurs comme VOLTZITE. KAMACITE construit l'accès, soutient ELECTRUM (lié aux pannes de courant en Ukraine). KAMACITE utilise le spear phishing contre le personnel d'ingénierie/fournisseurs, la reconnaissance contre les dispositifs industriels exposés (Schneider Electric, Smart HMIs, Accuenergy, Sierra Wireless). ELECTRUM utilise des malwares destructeurs (PathWiper). Ces groupes sont spécialisés, montrant une division du travail.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "menaces-OT",
+          "ICS",
+          "infrastructure-critique",
+          "parrainé-par-l'état",
+          "espionnage",
+          "malware-destructeur",
+          "chaîne-d'approvisionnement",
+          "exploitation-de-vulnérabilité"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernance / Juridique / Droits numériques",
+        "theme": "Réglementation gouvernementale des VPN pour l'application des lois anti-piratage",
+        "description": "Un tribunal espagnol a ordonné à NordVPN et ProtonVPN de bloquer 16 sites web facilitant le piratage de matchs de football. Le tribunal a jugé que les fournisseurs de VPN sont soumis au Règlement européen sur les services numériques, les obligeant à empêcher la violation du droit d'auteur via leur infrastructure, sans notification préalable aux fournisseurs de VPN.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "action-juridique",
+          "blocage-VPN",
+          "violation-droit-d'auteur",
+          "droits-numériques",
+          "Espagne",
+          "réglementation-UE"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/legal/spain-orders-nordvpn-protonvpn-to-block-laliga-piracy-sites/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Relations internationales / Militaire / Technologie",
+        "theme": "Réglementation et aspects de double usage de la technologie des drones",
+        "description": "Les drones représentent une révolution aéronautique avec des applications à double usage (civiles et militaires). Les réglementations européennes (UAS) et les lois nationales définissent les obligations des télépilotes, l'immatriculation, l'enregistrement et la signalisation. Les défis juridiques dépassent le seul droit aérien pour inclure la vie privée, la protection des données personnelles, la sécurité et le droit international humanitaire dans les conflits armés.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "drones",
+          "technologie-double-usage",
+          "réglementation",
+          "vie-privée",
+          "droit-international-humanitaire"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-droit-des-drones-en-question/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Économie / Industrie / Relations internationales",
+        "theme": "Résilience et transformation de l'industrie russe sous les sanctions occidentales",
+        "description": "Un rapport analyse la résilience, la résistance et la transformation remarquables de l'industrie et de l'économie russes de 2022 à 2026 face à des sanctions occidentales importantes et continues en raison de la guerre russo-ukrainienne. L'industrie est observée comme se déplaçant progressivement des productions de base vers une complexification et une modernisation accrues.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "guerre-économique",
+          "sanctions",
+          "Russie",
+          "guerre-ukraine",
+          "résilience-industrielle",
+          "transformation-économique"
+        ],
+        "sources": [
+          "https://www.epge.fr/resilience-resistance-et-transformation-de-lindustrie-russe-sous-sanctions-occidentales-2022-2026/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Sécurité internationale / Défense / Géopolitique",
+        "theme": "L'évolution de la posture de sécurité de l'Europe face à la menace russe",
+        "description": "L'Europe entre dans une phase de 'tempête qui approche', nécessitant une réponse sociétale et unifiée face à la menace russe. Des comparaisons sont établies avec la préparation d'avant la Seconde Guerre mondiale. Des diplomates européens et des experts en défense discutent d'une approche 'société toute entière', exhortant à adopter un 'état d'esprit de temps de guerre' et une communication publique plus claire sur la menace et les contributions potentielles en cas de conflit. Les objectifs russes d'annexer l'Ukraine et les territoires européens voisins, ainsi que les efforts pour déstabiliser les sociétés européennes, persistent.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "sécurité-européenne",
+          "menace-russie",
+          "OTAN",
+          "stratégie-défense",
+          "résilience-sociétale",
+          "désinformation"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/gathering-storm"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Gouvernement / Juridique / Application de la loi",
+        "theme": "Arrestation d'un suspect de cybercriminalité (ransomware Phobos) et coopération policière internationale",
+        "description": "La police cybercriminelle polonaise a arrêté un homme de 47 ans lié à l'opération de ransomware Phobos. Des preuves trouvées sur les appareils saisis comprenaient des identifiants volés, des numéros de cartes de crédit et des adresses IP de serveurs, utilisés pour diverses attaques, y compris des ransomwares. L'arrestation s'inscrit dans le cadre de l''Opération Aether', coordonnée par Europol, ciblant les opérateurs de Phobos à l'échelle mondiale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "application-loi-cyber",
+          "ransomware",
+          "coopération-internationale",
+          "Phobos",
+          "Pologne",
+          "Europol"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188128/cyber-crime/polish-cybercrime-police-arrest-man-linked-to-phobos-ransomware-operation.html",
+          "https://databreaches.net/2026/02/17/poland-arrests-suspect-linked-to-phobos-ransomware-operation/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Gouvernement / Réglementation / Juridique",
+        "theme": "Amendes imposées par le régulateur sud-coréen de la protection de la vie privée pour des violations de données",
+        "description": "La Commission de protection des informations personnelles de Corée du Sud a infligé une amende totale de 25 millions de dollars aux marques de luxe Dior, Louis Vuitton et Tiffany & Co. suite à des violations de données de leurs systèmes Salesforce par les Scattered LAPSUS$ Hunters. Les amendes soulignent la rigueur réglementaire en matière de protection des données clients en cas d'incidents de sécurité causés par l'ingénierie sociale.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "action-réglementaire",
+          "confidentialité-données",
+          "violation-données",
+          "amendes",
+          "Corée-du-Sud",
+          "Salesforce"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce de luxe",
+        "victime": "Dior, Louis Vuitton, Tiffany & Co. (clients Salesforce)",
+        "description": "Amende de 25 millions de dollars infligée par la Corée du Sud pour des violations majeures de données clients résultant de systèmes Salesforce compromis. Les attaquants (Scattered LAPSUS$ Hunters) ont utilisé l'ingénierie sociale (hameçonnage vocal, malwares sur les appareils des employés) pour obtenir l'accès et voler des millions de dossiers clients. Dior : 1,95 million de dossiers via hameçonnage vocal. Louis Vuitton : 3,6 millions via malware sur les appareils des employés. Tiffany & Co. : 4 600 via hameçonnage.",
+        "tags": [
+          "violation",
+          "breach",
+          "commerce-de-luxe",
+          "Salesforce",
+          "données-clients",
+          "ingénierie-sociale",
+          "phishing",
+          "malware",
+          "Corée-du-Sud"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Voyages / Tourisme",
+        "victime": "Eurail B.V.",
+        "description": "Données de voyageurs (informations personnelles, de commande, de réservation de voyage, y compris les participants au programme DiscoverEU) volées lors d'une violation plus tôt dans l'année, désormais proposées à la vente sur le dark web, avec un échantillon publié sur Telegram.",
+        "tags": [
+          "violation",
+          "breach",
+          "données-voyage",
+          "données-clients",
+          "dark-web",
+          "vente-données",
+          "Eurail"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188075/data-breach/hackers-sell-stolen-eurail-traveler-information-on-dark-web/",
+          "https://databreaches.net/2026/02/17/hackers-offer-to-sell-millions-of-eurail-user-records/?pk_campaign=feed&pk_kwd=hackers-offer-to-sell-millions-of-eurail-user-records"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Vente au détail (Vêtements)",
+        "victime": "Canada Goose",
+        "description": "Violation de données datant d'août 2025 chez un tiers, affectant 581 877 adresses e-mail uniques parmi 920 000 enregistrements. A exposé les noms de clients, numéros de téléphone, adresses IP, adresses physiques et données partielles de cartes de crédit (type, 4 derniers chiffres). Les données concernent des transactions clients passées.",
+        "tags": [
+          "violation",
+          "breach",
+          "vente-au-détail",
+          "données-clients",
+          "chaîne-d'approvisionnement",
+          "données-carte-crédit",
+          "Canada-Goose"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CanadaGoose"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Services d'IA (Underground)",
+        "victime": "WormGPT",
+        "description": "Violation revendiquée exposant les e-mails, les informations de paiement, les abonnements et les métadonnées de 19 000 utilisateurs. Les risques incluent le phishing ciblé, l'usurpation d'identité et la fraude.",
+        "tags": [
+          "violation",
+          "breach",
+          "service-IA",
+          "outil-cybercrime",
+          "données-utilisateurs",
+          "phishing",
+          "usurpation-identité",
+          "fraude"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/116088664447011683"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Jeux / E-commerce",
+        "victime": "Sony Music Shop",
+        "description": "Les informations personnelles des utilisateurs étaient visibles par d'autres utilisateurs en raison d'un bug, entraînant une exposition des données.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "données-personnelles",
+          "bug",
+          "Sony-Music-Shop"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116089182328319680"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Sports / E-commerce (Golf)",
+        "victime": "Acheteurs d'équipements de golf au Japon (données vendues comme 'liste de riches japonais')",
+        "description": "Des hackers vendent des informations personnelles d'acheteurs d'équipements de golf, se faisant passer pour une 'liste de riches japonais' sur des marchés illicites.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "données-personnelles",
+          "vente-données",
+          "Japon",
+          "liste-riches"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116088474906046835"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Santé / Organisations médicales",
+        "victime": "Aeromedical Society of Australasia",
+        "description": "Listée par le groupe de ransomware LockBit, indiquant une attaque par ransomware avec probablement une exfiltration de données.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "ransomware",
+          "exfiltration-données",
+          "LockBit",
+          "Australie"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/116088587327619149"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22769",
+        "cvss": "10.0",
+        "product": "Dell RecoverPoint for Virtual Machines",
+        "description": "Vulnérabilité liée à un identifiant codé en dur permettant un accès distant non authentifié et une persistance au niveau root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hardcoded-credential",
+          "RCE",
+          "authentication-bypass",
+          "Dell-RecoverPoint",
+          "zero-day"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-22769",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1670",
+        "cvss": "9.8",
+        "product": "Honeywell CCTV Products",
+        "description": "Exposition d'un point de terminaison d'API non authentifié permettant de modifier à distance l'adresse e-mail de récupération de mot de passe 'oublié'.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication-bypass",
+          "API-exposure",
+          "Honeywell-CCTV"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1670"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Vulnérabilité d'injection de code dans le mécanisme de transfert de fichiers Android, permettant l'exécution de code arbitraire à distance non authentifiée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "code-injection",
+          "Ivanti-EPMM"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/ivanti-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1490",
+        "cvss": "9.8",
+        "product": "Plugin CleanTalk Anti-Spam pour WordPress",
+        "description": "Contournement d'autorisation via l'usurpation d'enregistrement DNS inversé (PTR) sur la fonction 'checkWithoutToken', menant à l'installation de plugins arbitraires non authentifiés et à une potentielle RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authorization-bypass",
+          "WordPress",
+          "RCE-potential",
+          "plugin"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cleantalk-cve-2026-1490/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support et Privileged Remote Access",
+        "description": "RCE pré-authentification via injection de commandes, permettant à des attaquants non authentifiés d'exécuter des commandes au niveau du système d'exploitation avec des privilèges élevés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "command-injection",
+          "BeyondTrust"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": "9.1",
+        "product": "FortiClientEMS 7.4.4",
+        "description": "Exécution de code arbitraire à distance non authentifiée via l'interface web.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "FortiClientEMS"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-23595",
+        "cvss": "8.8",
+        "product": "API d'application (générique)",
+        "description": "Contournement d'authentification dans l'API d'application permettant la création d'un compte administratif non autorisé.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication-bypass",
+          "admin-account-creation",
+          "API"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23595"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-13689",
+        "cvss": "8.8",
+        "product": "IBM DataStage sur Cloud Pak for Data",
+        "description": "Exécution de commandes arbitraires authentifiées et accès à des informations sensibles en raison de téléchargements de fichiers non restreints.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "file-upload",
+          "IBM-DataStage"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13689"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-26119",
+        "cvss": "8.8",
+        "product": "Windows Admin Center",
+        "description": "Authentification incorrecte permettant à un attaquant autorisé d'élever ses privilèges sur un réseau.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege-escalation",
+          "authentication",
+          "Windows-Admin-Center"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26119"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-2627",
+        "cvss": "8.5",
+        "product": "Softland FBackup jusqu'à 9.9",
+        "description": "Vulnérabilité de 'link following' dans le composant Sauvegarde/Restauration (HID.dll), nécessitant un accès local. L'exploit est public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "link-following",
+          "local-exploit",
+          "Softland-FBackup"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2627"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-13691",
+        "cvss": "8.1",
+        "product": "IBM DataStage sur Cloud Pak for Data 5.1.2 à 5.3.0",
+        "description": "Retourne des informations sensibles dans une réponse HTTP, permettant l'usurpation d'identité d'autres utilisateurs du système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information-disclosure",
+          "impersonation",
+          "IBM-DataStage"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13691"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-65715",
+        "cvss": "N/A",
+        "product": "Extension Code Runner de VSCode",
+        "description": "Exécution de code à distance (RCE) en modifiant le fichier de configuration de l'extension. Gravité élevée à critique.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "VSCode-extension",
+          "supply-chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/flaws-in-popular-vscode-extensions-expose-developers-to-attacks/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "N/A",
+        "product": "Versions d'Apple OS",
+        "description": "Vulnérabilité critique exploitée dans des attaques ciblées, permettant une élévation de privilèges au niveau système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege-escalation",
+          "zero-day",
+          "Apple"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-2447",
+        "cvss": "N/A",
+        "product": "Mozilla Firefox v147.0.3",
+        "description": "Faille critique liée à la mémoire (dépassement de tampon de la pile), permettant l'exécution de code arbitraire.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "heap-buffer-overflow",
+          "Mozilla-Firefox"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/firefox-v147-0-3-released/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-4427",
+        "cvss": "N/A",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Exploité dans un service public américain pour extraire des données (détails d'utilisateurs LDAP, jetons Office 365) et permettre un mouvement latéral.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data-exfiltration",
+          "lateral-movement",
+          "Ivanti-EPMM",
+          "critical-infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-4428",
+        "cvss": "N/A",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Exploité dans un service public américain pour extraire des données (détails d'utilisateurs LDAP, jetons Office 365) et permettre un mouvement latéral.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data-exfiltration",
+          "lateral-movement",
+          "Ivanti-EPMM",
+          "critical-infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-26019",
+        "cvss": "N/A",
+        "product": "Paquet langchain/community",
+        "description": "Vulnérabilité de contournement SSRF (Server-Side Request Forgery) permettant l'accès aux points de terminaison de métadonnées cloud, au localhost ou aux réseaux internes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SSRF",
+          "information-disclosure",
+          "internal-network-access",
+          "langchain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-community-ssrf-bypass-vulnerability/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI in the Middle: Turning Web-Based AI Services into C2 Proxies & The Future Of AI Driven Attacks",
+        "description": "Recherche démontrant comment les services d'IA basés sur le web, comme Grok et Microsoft Copilot, peuvent être utilisés abusivement comme proxys de Commandement et Contrôle (C2) furtifs. Les attaquants peuvent tirer parti des assistants IA dotés de capacités de navigation web pour récupérer des URL contrôlées par l'attaquant et renvoyer des réponses, créant un canal bidirectionnel sans clés API ni comptes enregistrés. Cela marque un glissement vers les malwares pilotés par l'IA, où les modèles d'IA façonnent dynamiquement le comportement de l'implant, priorisent les données et adaptent les tactiques en fonction du contexte de l'hôte.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/"
+          ]
+        },
+        "mitre_ttps": [
+          "Command and Control (TA0011)",
+          "Ingress Tool Transfer (T1105)",
+          "Exfiltration (TA0010)",
+          "Data from Network Shared Drive (T1039)",
+          "Data from Local System (T1005)"
+        ],
+        "analyse": "Cette recherche met en évidence une menace émergente significative où les services d'IA, de plus en plus intégrés dans les flux de travail d'entreprise, peuvent être réaffectés en canaux C2 furtifs, rendant la détection plus difficile car le trafic d'IA se fond dans le trafic d'entreprise normal. Le concept de malware piloté par l'IA suggère des campagnes plus adaptatives, contextuelles et moins prévisibles, potentiellement automatisant le triage, le ciblage et les choix opérationnels en temps réel. Cela pourrait réduire drastiquement les coûts d'attaque et augmenter les taux de réussite pour les acteurs moins qualifiés.",
+        "recommandations": "Les fournisseurs d'IA doivent renforcer les fonctionnalités de récupération web, appliquer l'authentification et donner aux entreprises un contrôle et une visibilité accrus sur la manière dont leurs modèles accèdent aux URL externes. Les défenseurs doivent commencer à considérer les domaines d'IA comme des points de sortie de grande valeur, surveiller les modèles d'utilisation automatisés et inhabituels, et incorporer le trafic d'IA dans leurs playbooks de chasse aux menaces et de réponse aux incidents. Déplacer la sécurité vers la gauche avec des tests SAST, des analyses de dépôts et des garde-fous IDE.",
+        "tags": [
+          "IA",
+          "C2",
+          "développement-malware",
+          "TTPs",
+          "chaîne-d'approvisionnement",
+          "sécurité-entreprise",
+          "veille-menace",
+          "détection",
+          "atténuation",
+          "menaces-futures"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "De BRICKSTORM à GRIMBOLT : UNC6201 exploite une vulnérabilité Zero-Day dans Dell RecoverPoint for Virtual Machines",
+        "description": "Analyse de l'UNC6201, un groupe de menaces suspecté lié à la Chine, exploitant une vulnérabilité zero-day (CVE-2026-22769, CVSS 10.0) dans Dell RecoverPoint for Virtual Machines depuis la mi-2024. Le groupe a utilisé des identifiants codés en dur pour déployer des web shells SLAYSTYLE et des backdoors personnalisés (BRICKSTORM, GRIMBOLT). Ils ont également employé des tactiques inédites comme la création de 'Ghost NICs' pour un mouvement latéral furtif dans les environnements VMware ESXi et l'utilisation d'iptables pour l'autorisation de paquets uniques.",
+        "threat_actor": "UNC6201 (groupe de menaces suspecté lié à la RPC), UNC5221 (chevauchements, synonyme de Silk Typhoon), Warp Panda (CrowdStrike, lié à Brickstorm)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "24a11a26a2586f4fba7bfe89df2e21a0809ad85069e442da98c37c4add369a0c",
+            "dfb37247d12351ef9708cb6631ce2d7017897503657c6b882a711c0da8a9a591",
+            "92fb4ad6dee9362d0596fda7bbcfe1ba353f812ea801d1870e37bfc6376e624a",
+            "aa688682d44f0c6b0ed7f30b981a609100107f2d414a3a6e5808671b112d1878",
+            "2388ed7aee0b6b392778e8f9e98871c06499f476c9e7eae6ca0916f827fe65df",
+            "320a0b5d4900697e125cebb5ff03dee7368f8f087db1c1570b0b62f5a986d759",
+            "90b760ed1d0dcb3ef0f2b6d6195c9d852bcb65eca293578982a8c4b64f51b035",
+            "45313a6745803a7f57ff35f5397fdf117eaec008a76417e6e2ac8a6280f7d830"
+          ],
+          "IPv4": [
+            "149.248.11.71"
+          ],
+          "URL": [
+            "wss://149.248.11.71/rest/apisession"
+          ],
+          "YARA_RULE": [
+            "G_APT_BackdoorToehold_GRIMBOLT_1",
+            "G_Hunting_BackdoorToehold_GRIMBOLT_1",
+            "G_APT_BackdoorWebshell_SLAYSTYLE_4"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Exploit Public-Facing Application (T1190)",
+          "External Remote Services (T1133)",
+          "Credential Access (TA0006)",
+          "Hardcoded Credentials (T1552.001)",
+          "Persistence (TA0003)",
+          "Boot or Logon Autostart Execution (T1547)",
+          "Modify Existing Service (T1543.003)",
+          "Server Software Component (T1505)",
+          "Web Shell (T1505.003)",
+          "Backdoor (T1505.002)",
+          "Lateral Movement (TA0008)",
+          "Create Account (T1136)",
+          "Network Share Discovery (T1087)",
+          "Remote Services (T1021)",
+          "Impair Defenses (TA0009)",
+          "Disable or Modify Tools (T1562)",
+          "Hide Artifacts (T1564)",
+          "Obfuscated Files or Information (T1027)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Proxy (T1090)",
+          "Multi-Stage Channels (T1104)"
+        ],
+        "analyse": "Cette campagne d'espionnage de longue date menée par un acteur étatique démontre des capacités sophistiquées, incluant l'exploitation de zero-day, le développement de malwares personnalisés (Grimbolt conçu pour échapper à l'analyse) et des techniques d'évasion avancées dans des environnements virtualisés (Ghost NICs, SPA iptables). Le ciblage de l'infrastructure VMware et des appliances sans agents EDR traditionnels met en évidence une concentration sur les actifs de grande valeur et difficiles à surveiller pour une persistance à long terme, posant une menace significative aux secteurs gouvernementaux, juridiques et technologiques.",
+        "recommandations": "Appliquer immédiatement les correctifs pour CVE-2026-22769. Mener une analyse forensique de Dell RecoverPoint (journaux web pour les requêtes /manager, fichiers WAR téléchargés, journaux d'applications Tomcat, modifications de convert_hosts.sh). Mettre en œuvre une surveillance robuste des activités suspectes dans les environnements virtualisés, y compris les modifications d'interface réseau et d'iptables. Améliorer la visibilité sur les appliances critiques qui manquent généralement d'EDR.",
+        "tags": [
+          "parrainé-par-l'état",
+          "Chine",
+          "espionnage",
+          "zero-day",
+          "Dell-RecoverPoint",
+          "VMware",
+          "sécurité-virtualisation",
+          "backdoor",
+          "web-shell",
+          "persistance",
+          "mouvement-latéral",
+          "C2",
+          "TTPs",
+          "vulnérabilité-critique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Keenadu Backdoor : Firmware Android et applications Google Play compromises",
+        "description": "Découverte de Keenadu, un backdoor Android sophistiqué intégré dans le firmware de plusieurs marques d'appareils, les applications système et les applications Google Play. Keenadu compromet les bibliothèques Android principales (libandroid_runtime.so) pour fonctionner dans le contexte de chaque application installée, contournant le sandboxing et les permissions. Bien que actuellement axé sur la fraude publicitaire, il a des capacités de vol de données étendues (médias, messages, identifiants bancaires, localisation, requêtes de navigation privée). Le malware évite les langues/fuseaux horaires associés à la Chine et a des liens avec les botnets Triada et BADBOX, suggérant une attaque de la chaîne d'approvisionnement pendant la phase de fabrication de l'appareil.",
+        "threat_actor": "Opérateurs Keenadu (liés aux botnets Triada et BADBOX)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "bccd56a6b6c9496ff1acd40628edd25ec4c0e65a5c56038034555ec4a09d3a37",
+            "cb9f86c02f756fb9afdb2fe1ad0184eef59ad0c8e47228b603efc0ff790d4a0c",
+            "f9b740dd08df6c66009b27c618f1e08602c4c7209b82bbed19b962fb61ad2de3",
+            "185220652fbbc266d4fdf3e668c26e5936db58957342024f9bc1cdecf2f163d6",
+            "4964743c742bb899527017b8d06d4eaa58f282540ab1bd5ccfb632ef0d273654",
+            "59aee75ece46962c4eb09de78edaa3fa8d493346cb84fbbfdb5187ae046ab8d3",
+            "9d16a10031cddd222d26fcb5aa88a009a191b683a9307276f0fc68a2a9253da1",
+            "65f290dd99f9113592fba90ea10cb9b368990fbc668b3d2cfbefed874bb24711",
+            "6d93fb8897bf94b62a56aca31961756a",
+            "2922df6713f865c9cba3de1fe56849d73dae1f297098fa9d9d4ee0335f0aeed3",
+            "462a23bc22d06e5662d379b9011d89ff4c4ca7a2a25dbe15a4a39c11cfef2fb2",
+            "5048406d8d0affa80c18f8b1d6d76e21529632abf8246dfe555153de6ae2a9df",
+            "7ceccea499cfd3f9f9981104fc05bcbd912bc4f756f18049b241934f62bfb06c",
+            "98ff5a3b5f2cdf2e8f58f96d70db2875aa5bf06f0cc5a8a3400e90570fb081b0",
+            "ad60f46e724d88af6bcacb8c269ac3c1dc3d454a7edb683bec75a6a1e28a4877",
+            "f0184f6955479d631ea4b1ea0f38a35d",
+            "07546413bdcb0e28eadead4e2b0db59d0c1f61eeebc4176d533b4fc0a36b9d61",
+            "10d8e8765adb1cbe485cb7d7f4df21e411eaf02f41b9c93e9b3189aa39059419",
+            "19df24591b3d76ad3d0a6f548e608a431bfb3edb394d7c018e06ed31c7eea937",
+            "1c52e14095f23132719145cf24a2f9dc21846f602bcabccb00de35d994f153c9",
+            "2419583128d7c75e9f0627614c2aa73f28e6936302f2d290c2fec63ca647f8a6",
+            "382764921919868d810a5cf0391ea193",
+            "45bf58973111e00e378ee9b7b43b7d2d56036c2490e63a3e55df4558f7ecf893",
+            "64947d3a929e1bb860bf748a15dba57c69225f41dcae6ddb78a6aa6a3caa82e1",
+            "6df8284a4acee337078a6a62a8b652106f6e14b4449c0518258beb5a40ad7203",
+            "7882796fdae0043153aa75576e5d0b357c3e70937da7721dd1243638b467cff1",
+            "9ddd621daab4c4bc811b7c1990d7e9eaa0f775dd99108cb3b76953e25f5cdae4",
+            "b841debc5307afc8a4592ea60d64de14c57de69b401eb58c0aad786531c02c28",
+            "ca59e49878bcf2c72b99d15c98323bcdd07eb2db261c425bda0f046b736e372",
+            "d4be9b2b73e565b1181118cb7f44a102d9aecc9d4bf1d4b39aa551f3a1bcc6b7",
+            "e9bed47953986f90e814ed5ed25b010c",
+            "0bc94bc4bc4d69705e4f08aaf0e976b31276480838340dcbc699d1f32f30a5e9",
+            "15fb99660dbd52d66f074eaa4cf1366d2dca15e9e83bca37817f46b24b00d197",
+            "350313656502388947c7cbcd08dc5a953e36ffda0a946009cb9059b69c6a6f0d",
+            "5b0726d66422f76d8ba4fbb9765c68f668b64bf1dea3eb314ce273923b8df5109",
+            "195454da9e2cb22a3d58dbbf7982be8a4a6ff86413b3b2a893627c4cff34399b",
+            "163fa76bde53cd80d727d88b7b1d94fba0a349f177ffb3e398f8c780d911580b",
+            "ba23f4b66a0e07f837f2832a8cd3bd4d6ebc5526e957866c02c938fc01349eee",
+            "c7ab99beb846eec4ecee232ac0b3246ef119626a3b07f46386e65de312cf151fca",
+            "eadbee39fddc907a3ae0315d86178",
+            "3d185f30b00270e7e30fc4e29a68237f"
+          ],
+          "IPv4": [
+            "110.34.191.81",
+            "110.34.191.82",
+            "67.198.232.4",
+            "67.198.232.187"
+          ],
+          "DOMAIN": [
+            "fbsimg.com",
+            "tmgstatic.com",
+            "gbugreport.com",
+            "aifacecloud.com",
+            "goaimb.com",
+            "proczone.com",
+            "gvvt1.com",
+            "dllpgd.click",
+            "fbgraph.com",
+            "newsroomlabss.com",
+            "sliidee.com",
+            "keepgo123.com",
+            "gsonx.com",
+            "gmsstatic.com",
+            "ytimg2.com",
+            "glogstatic.com",
+            "gstatic2.com",
+            "uscelluliar.com",
+            "playstations.click",
+            "zcnewy.com"
+          ]
+        },
+        "mitre_ttps": [
+          "Persistence (TA0003)",
+          "Boot or Logon Autostart Execution (T1547)",
+          "Supply Chain Compromise (TA0001)",
+          "Compromise Software Supply Chain (T1195.002)",
+          "Compromise Developer Tools (T1195.003)",
+          "Data from Local System (T1005)",
+          "Data from Network Shared Drive (T1039)",
+          "Input Capture (T1056)",
+          "Keylogging (T1056.001)",
+          "Credential Access (TA0006)",
+          "Steal Web Session Cookie (T1539)",
+          "Steal Application Access Token (T1539.001)",
+          "Exfiltration (TA0010)",
+          "Data Staging (T1074)",
+          "Ingress Tool Transfer (T1105)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Application Layer Protocol (T1071)"
+        ],
+        "analyse": "Keenadu représente une menace mobile très sophistiquée et omniprésente, tirant parti d'une compromission profonde du système via des attaques de la chaîne d'approvisionnement sur le firmware Android. Sa capacité à contourner les mécanismes de sécurité Android de base et à opérer sur toutes les applications le rend extrêmement difficile à supprimer, impactant la vie privée des utilisateurs et l'intégrité de l'appareil. Les liens avec d'autres botnets majeurs (Triada, BADBOX) suggèrent un écosystème de logiciels malveillants mobiles coordonné et en évolution. La focalisation principale sur la fraude publicitaire, mais avec des capacités de vol de données étendues, souligne l'étendue du risque.",
+        "recommandations": "Pour les appareils infectés, l'installation d'une version de firmware propre est recommandée. Les utilisateurs doivent être prudents avec les sources d'applications non officielles et surveiller les comportements suspects de l'appareil. Les fournisseurs doivent renforcer la sécurité de la chaîne d'approvisionnement, en particulier pendant la phase de fabrication de l'appareil, afin d'empêcher l'injection de logiciels malveillants au niveau du firmware. Vérifier régulièrement les mises à jour du firmware auprès de sources fiables.",
+        "tags": [
+          "Android",
+          "malware-mobile",
+          "backdoor",
+          "firmware",
+          "attaque-chaîne-d'approvisionnement",
+          "fraude-publicitaire",
+          "exfiltration-données",
+          "invasion-vie-privée",
+          "botnet",
+          "Triada",
+          "BADBOX"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-keenadu-backdoor-found-in-android-firmware-google-play-apps/",
+          "https://securelist.com/keenadu-android-backdoor/118913/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Les équipes OT perdent l'avantage temporel face aux acteurs de la menace industrielle",
+        "description": "Le rapport 2026 de Dragos sur les environnements OT/ICS met en lumière une aggravation du paysage des menaces pour les environnements industriels. Les adversaires se concentrent sur la 'cartographie des boucles de contrôle' pour comprendre les processus physiques et provoquer un impact, et des groupes de menaces spécialisés (AZURITE, PYROXENE, SYLVANITE) créent des voies d'accès pour des acteurs plus capables. Les groupes de ransomwares provoquent d'importantes perturbations opérationnelles dans les environnements OT/ICS, souvent classées à tort comme des incidents uniquement informatiques. Des exemples spécifiques incluent l'exploitation d'Ivanti EPMM (CVE-2025-4427, CVE-2025-4428) pour l'extraction de données et le mouvement latéral par SYLVANITE et un malware destructeur (PathWiper) d'ELECTRUM ciblant l'infrastructure ukrainienne.",
+        "threat_actor": "AZURITE, PYROXENE, SYLVANITE, KAMACITE, ELECTRUM, VOLTZITE (groupes étatiques), groupes de ransomwares",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-4427",
+            "CVE-2025-4428"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Exploit Public-Facing Application (T1190)",
+          "Vulnerabilities (T1589.001)",
+          "Reconnaissance (TA0043)",
+          "Active Scanning (T1595)",
+          "Develop Capabilities (TA0023)",
+          "Stage Capabilities (T1600)",
+          "Lateral Movement (TA0008)",
+          "Remote Services (T1021)",
+          "Impair Process Control (T0801)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Data Exfiltration (TA0010)",
+          "Data Destruction (T1485)",
+          "Ransomware (T1486)",
+          "Resource Hijacking (T1496)"
+        ],
+        "analyse": "La spécialisation et la sophistication croissantes des acteurs de la menace ciblant les environnements OT/ICS, combinées à leur focalisation sur la compréhension des processus physiques, représentent un risque grave et croissant pour les infrastructures critiques. Le flou entre l'informatique et l'OT, associé à une visibilité et une surveillance souvent médiocres dans les réseaux OT, permet aux ransomwares et aux groupes étatiques de provoquer d'importantes perturbations opérationnelles. Cette tendance réduit la fenêtre de réponse et augmente le potentiel de dommages généralisés.",
+        "recommandations": "Les organisations industrielles doivent collecter les données du réseau OT, surveiller les voies d'accès à distance et traiter les postes de travail d'ingénierie et les systèmes de délimitation OT comme des actifs opérationnels de grande valeur. Mettre en œuvre une segmentation forte entre les réseaux IT et OT. Améliorer les capacités de réponse aux incidents avec une expertise et une télémétrie spécifiques à l'OT. Prioriser le patching rapide des systèmes exposés à Internet et des périphériques.",
+        "tags": [
+          "sécurité-OT",
+          "sécurité-ICS",
+          "infrastructure-critique",
+          "parrainé-par-l'état",
+          "ransomware",
+          "exploitation-vulnérabilité",
+          "chaîne-d'approvisionnement",
+          "systèmes-contrôle-industriel",
+          "gestion-actifs",
+          "détection",
+          "atténuation",
+          "PathWiper"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Les failles dans les extensions VSCode populaires exposent les développeurs aux attaques",
+        "description": "Des vulnérabilités de gravité élevée à critique affectent des extensions populaires de Visual Studio Code (VSCode), avec plus de 128 millions de téléchargements cumulés. Ces failles, incluant CVE-2025-65715 dans Code Runner (exécution de code à distance en modifiant la configuration) et une vulnérabilité XSS en un clic dans Microsoft Live Preview (accès à des fichiers locaux sensibles), exposent les environnements d'entreprise au mouvement latéral, à l'exfiltration de données et à la prise de contrôle du système. Les risques incluent le vol de clés API et de fichiers de configuration.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-65715"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Software Supply Chain (T1195.002)",
+          "Drive-by Compromise (T1189)",
+          "Exploit Public-Facing Application (T1190)",
+          "Remote Code Execution (T1210)",
+          "Client-side Execution (T1059)",
+          "Cross-Site Scripting (T1059.007)",
+          "Credential Access (TA0006)",
+          "Steal Web Session Cookie (T1539)",
+          "Data Exfiltration (TA0010)",
+          "Data from Configuration Repository (T1552.004)",
+          "Data from Local System (T1005)",
+          "Lateral Movement (TA0008)",
+          "Remote Services (T1021)"
+        ],
+        "analyse": "L'utilisation généralisée des extensions VSCode fait de ces vulnérabilités un risque significatif pour la chaîne d'approvisionnement, car les attaquants peuvent exploiter des extensions compromises pour pivoter de la machine d'un développeur vers les réseaux d'entreprise. La capacité à voler des données sensibles comme les clés API et les fichiers de configuration a de graves implications pour l'intégrité du développement logiciel et la sécurité organisationnelle, en particulier si les développeurs travaillent avec un accès privilégié ou des bases de code sensibles.",
+        "recommandations": "Les développeurs doivent examiner et mettre à jour régulièrement les extensions VSCode. Les organisations doivent mettre en œuvre des politiques de sécurité pour l'utilisation des extensions, rechercher les vulnérabilités connues dans les outils de développement et utiliser des solutions EDR (Endpoint Detection and Response) pour surveiller les postes de travail des développeurs à la recherche d'activités suspectes. Mettre en œuvre des contrôles d'accès forts et les principes du moindre privilège pour les comptes de développeurs.",
+        "tags": [
+          "vulnérabilité",
+          "VSCode",
+          "extensions",
+          "chaîne-d'approvisionnement",
+          "RCE",
+          "XSS",
+          "sécurité-développeur",
+          "exfiltration-données",
+          "clés-API"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/flaws-in-popular-vscode-extensions-expose-developers-to-attacks/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Hackers Steal OpenClaw Configuration in Emerging AI Agent Threat",
+        "description": "Découverte d'un nouveau voleur d'informations qui a exfiltré l'environnement de configuration OpenClaw d'une victime (précédemment Clawdbot et Moltbot), y compris openclaw.json (jetons de passerelle, e-mail), device.json (clés cryptographiques privées) et les fichiers 'soul' et mémoire décrivant le comportement et le contexte personnel de l'agent IA. Il s'agit d'une attaque 'fourre-tout', où une routine générale de collecte de fichiers a involontairement capturé des données sensibles d'agents IA, signalant une nouvelle tendance de l'activité des voleurs d'informations vers le ciblage des identités et des paramètres des agents IA personnels.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Data from Local System (T1005)",
+          "Credential Access (TA0006)",
+          "Steal Application Access Token (T1539.001)",
+          "Steal Web Session Cookie (T1539)",
+          "Exfiltration (TA0010)",
+          "Data Staging (T1074)"
+        ],
+        "analyse": "Cet incident met en lumière un vecteur de menace émergent où les voleurs d'informations évoluent pour cibler les agents IA personnels, traitant leurs configurations et leurs données comme des 'âmes numériques'. La compromission des environnements d'agents IA peut donner aux attaquants un miroir de la vie numérique de la victime, des clés cryptographiques et des jetons de session pour les modèles d'IA avancés, allant au-delà du vol d'identifiants traditionnel. Cela entraînera le développement de modules spécialisés de 'voleur d'IA'.",
+        "recommandations": "Mettre en œuvre une sécurité robuste des points de terminaison et des solutions de prévention des pertes de données (DLP) sur les machines hébergeant les configurations d'agents IA. Les utilisateurs doivent être conscients de la nature sensible des données des agents IA et les sécuriser de manière aussi critique que les autres identifiants personnels ou d'entreprise. Les développeurs d'agents IA devraient envisager une meilleure sécurité dès la conception pour les fichiers de configuration sensibles et les données utilisateur.",
+        "tags": [
+          "sécurité-IA",
+          "infostealer",
+          "OpenClaw",
+          "exfiltration-données",
+          "vol-d'identifiants",
+          "invasion-vie-privée",
+          "menace-émergente",
+          "identité-numérique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188097/malware/hackers-steal-openclaw-configuration-in-emerging-ai-agent-threat.html"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Ivanti EPMM : Vulnérabilités critiques activement exploitées",
+        "description": "Exploitation active de deux vulnérabilités zero-day critiques (CVE-2026-1281 et CVE-2026-1340, CVSS 9.8) dans Ivanti Endpoint Manager Mobile (EPMM). Ces failles d'injection de code permettent à des attaquants distants non authentifiés d'exécuter du code arbitraire et d'obtenir un contrôle total sur l'infrastructure de gestion des appareils mobiles (MDM). Les attaquants déploient des web shells (par exemple, 401.jsp, 403.jsp, 1.jsp), des cryptominers, des backdoors persistants et des agents de surveillance (Nezha) pour établir le contrôle et tester la vulnérabilité via des commandes de sommeil.",
+        "threat_actor": "Attaquants opportunistes non identifiés. TGR-STA-1030 et SYLVANITE exploitent également des vulnérabilités Ivanti (CVE-2025-4427, CVE-2025-4428).",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2026-1281",
+            "CVE-2026-1340"
+          ],
+          "FILE": [
+            "401.jsp",
+            "403.jsp",
+            "1.jsp"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Exploit Public-Facing Application (T1190)",
+          "Remote Code Execution (T1210)",
+          "Persistence (TA0003)",
+          "Web Shell (T1505.003)",
+          "Backdoor (T1505.002)",
+          "Command and Control (TA0011)",
+          "Ingress Tool Transfer (T1105)",
+          "Reconnaissance (TA0043)",
+          "Active Scanning (T1595)",
+          "Vulnerability Scanning (T1595.002)",
+          "System Information Discovery (T1082)"
+        ],
+        "analyse": "La militarisation rapide et l'exploitation active des vulnérabilités Ivanti EPMM soulignent le risque critique posé par les périphériques non patchés et la fenêtre de temps qui se réduit entre la divulgation des vulnérabilités et l'exploitation de masse. La compromission de l'infrastructure MDM confère aux attaquants un contrôle étendu sur les flottes mobiles d'entreprise, permettant un accès généralisé et potentiellement une persistance profonde, en particulier pour les organisations d'infrastructure critique ciblées par des groupes comme TGR-STA-1030 ou SYLVANITE.",
+        "recommandations": "Appliquer immédiatement les correctifs RPM d'Ivanti. Examiner les appliances pour détecter les signes d'exploitation (par exemple, des web shells inattendus, des processus suspects, des agents de surveillance). Mettre en œuvre des solutions EDR (Endpoint Detection and Response) et XDR (Extended Detection and Response) pour surveiller les journaux Ivanti EPMM et l'activité réseau. Adopter une mentalité de compromission supposée pour les interfaces de gestion exposées à Internet.",
+        "tags": [
+          "exploitation-vulnérabilité",
+          "Ivanti-EPMM",
+          "zero-day",
+          "RCE",
+          "sécurité-MDM",
+          "web-shell",
+          "backdoor",
+          "cryptominer",
+          "infrastructure-critique",
+          "chasse-menace"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/ivanti-cve-2026-1281-cve-2026-1340/",
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "LATAM Businesses Hit by XWorm via Fake Financial Receipts: Full Campaign Analysis",
+        "description": "Analyse de campagnes de malwares en évolution ciblant les entreprises d'Amérique latine (LATAM). Les attaquants utilisent des mécanismes de livraison de plus en plus sophistiqués, tels que de faux reçus financiers, pour contourner les défenses régionales et atteindre les utilisateurs professionnels. La charge utile finale est souvent constituée de Trojans d'accès à distance (RAT) commerciaux comme XWorm, permettant aux attaquants de prendre le contrôle et potentiellement de voler des données.",
+        "threat_actor": "Opérateurs XWorm (groupe non nommé utilisant un RAT commercial)",
+        "indicator_of_compromise": {
+          "URL": [
+            "/cybersecurity-blog/xworm-latam-campaign/"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Phishing (T1566)",
+          "Spearphishing Attachment (T1566.001)",
+          "Drive-by Compromise (T1189)",
+          "User Execution (T1204)",
+          "Malicious File (T1204.002)",
+          "Command and Control (TA0011)",
+          "Remote Access Tool (T1219)",
+          "Data Exfiltration (TA0010)"
+        ],
+        "analyse": "La tendance des mécanismes de livraison sophistiqués pour les malwares commerciaux met en évidence la capacité d'adaptation des attaquants à cibler des régions spécifiques et à contourner les défenses localisées. L'utilisation de faux documents financiers suggère une focalisation sur la compromission de la messagerie d'entreprise (BEC) ou la fraude financière, indiquant un potentiel élevé de pertes financières et de vol de données pour les organisations affectées en LATAM.",
+        "recommandations": "Renforcer la formation des utilisateurs à l'identification des tentatives de phishing, en particulier celles impliquant des documents financiers. Mettre en œuvre des passerelles de sécurité e-mail avancées et des solutions de détection et de réponse des points de terminaison (EDR). Améliorer les mécanismes de défense régionaux pour contrer les tactiques de livraison en évolution.",
+        "tags": [
+          "campagne-malware",
+          "XWorm",
+          "RAT",
+          "phishing",
+          "ingénierie-sociale",
+          "compromission-messagerie-entreprise",
+          "fraude-financière",
+          "ciblage-LATAM"
+        ],
+        "sources": [
+          "/cybersecurity-blog/xworm-latam-campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Leaked Secrets in JavaScript: What 5 Million Apps Revealed",
+        "description": "Une recherche d'Intruder révèle plus de 42 000 jetons exposés sur 334 types de secrets dans les bundles JavaScript de 5 millions d'applications. Des clés API (par exemple, des jetons d'accès personnels GitLab donnant accès à des dépôts privés et des secrets CI/CD) ont été trouvées directement intégrées. Les outils SAST et DAST traditionnels manquent souvent ces fuites en raison de limitations dans les méthodes de balayage, la configuration ou la couverture des expressions régulières, en particulier pour les secrets introduits pendant les phases de construction et de déploiement qui contournent les contrôles 'shift-left'.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://portal.intruder.io/assets/index-DzChsIZu.js"
+          ]
+        },
+        "mitre_ttps": [
+          "Credential Access (TA0006)",
+          "Hardcoded Credentials (T1552.001)",
+          "Information Exposure (T1595.002)",
+          "Data Exfiltration (TA0010)",
+          "Data from Local System (T1005)",
+          "Develop Capabilities (TA0023)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Software Supply Chain (T1195.002)"
+        ],
+        "analyse": "Ce problème généralisé de secrets codés en dur dans le code frontal représente une surface d'attaque significative et souvent négligée, en particulier au sein de la chaîne d'approvisionnement logicielle. Les clés API divulguées peuvent accorder aux attaquants un accès profond aux systèmes internes d'une organisation, aux dépôts de code source et même à l'infrastructure cloud. Le manque de pratiques de test de sécurité actuelles (SAST/DAST) souligne la nécessité d'une détection plus complète des secrets tout au long du cycle de vie du développement et du déploiement, d'autant plus que l'automatisation et le code généré par l'IA augmentent.",
+        "recommandations": "Mettre en œuvre des solutions robustes de gestion des secrets qui empêchent le codage en dur des identifiants. Intégrer des outils avancés de détection des secrets (au-delà des expressions régulières de base) dans les pipelines CI/CD et les environnements d'exécution. Adopter les principes de sécurité 'shift-left', mais étendre également les contrôles aux étapes post-construction et déploiement. Auditer régulièrement le code frontal à la recherche de jetons exposés.",
+        "tags": [
+          "gestion-secrets",
+          "clés-API",
+          "JavaScript",
+          "sécurité-frontend",
+          "sécurité-chaîne-approvisionnement",
+          "SAST",
+          "DAST",
+          "exfiltration-données",
+          "accès-identifiants",
+          "code-insécurisé"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/what-5-million-apps-revealed-about-secrets-in-javascript/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Poorly Crafted Phishing Campaign Leverages Bogus Security Incident Report",
+        "description": "Une campagne de phishing utilisant un faux rapport d'incident de sécurité PDF, hébergé sur AWS, pour effrayer les victimes afin qu'elles activent la 2FA. La campagne cible les utilisateurs de MetaMask, affirmant une activité de connexion inhabituelle. Bien que mal conçue (par exemple, l'adresse 'De' non usurpée, PDF générique), elle vise à manipuler les victimes pour qu'elles 'augmentent' leur sécurité en se conformant aux instructions de l'attaquant, ce qui peut entraîner le vol d'identifiants ou la compromission de compte.",
+        "threat_actor": "Opérateurs de phishing non identifiés",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://access-authority-2fa7abff0e.s3.us-east-1.amazonaws.com/index.html"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Phishing (T1566)",
+          "Spearphishing Link (T1566.002)",
+          "Social Engineering (T1566.001)",
+          "User Execution (T1204)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Infrastructure (T1195.004)",
+          "Credential Access (TA0006)",
+          "Phishing for Information (T1566.002)"
+        ],
+        "analyse": "Cette campagne de phishing, malgré sa faible qualité, démontre la dépendance continue des attaquants à l'ingénierie sociale et aux tactiques de peur. En tirant parti des préoccupations de sécurité courantes (rapports d'incidents, invites 2FA), les attaquants tentent de contourner la vigilance des utilisateurs, en particulier lorsqu'ils ciblent des plateformes spécifiques comme MetaMask. L'utilisation de services légitimes comme AWS pour l'hébergement ajoute une couche de crédibilité.",
+        "recommandations": "Renforcer la formation des utilisateurs, en mettant l'accent sur le scepticisme vis-à-vis des alertes de sécurité inattendues et des liens, même s'ils sont hébergés sur des services réputés. Mettre en œuvre des filtres e-mail puissants. Éduquer les utilisateurs à identifier les adresses d'expéditeur usurpées et les campagnes de phishing personnalisées. Conseiller aux utilisateurs de vérifier les invites de sécurité directement via les canaux officiels, et non via des liens dans les e-mails.",
+        "tags": [
+          "phishing",
+          "ingénierie-sociale",
+          "vol-identifiants",
+          "abus-AWS",
+          "MetaMask",
+          "contournement-2FA",
+          "sensibilisation-utilisateur"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188116/security/poorly-crafted-phishing-campaign-leverages-bogus-security-incident-report.html"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "SmartLoader Hackers Clone Oura MCP Project to Spread StealC Malware",
+        "description": "Le groupe de malwares SmartLoader cible désormais les développeurs en clonant des projets GitHub légitimes, tels que le Oura MCP Server, pour diffuser l'infostealer StealC. Les attaquants ont créé une infrastructure trompeuse de faux forks et de contributeurs pour crédibiliser des versions piégées d'outils de développement populaires. Une fois installé, le malware, utilisant LuaJIT et l'obfuscation de VM, vole les identifiants de développeurs, les mots de passe de navigateurs, les portefeuilles de cryptomonnaies, les clés API et les identifiants cloud. Cette campagne signifie un glissement vers la compromission des écosystèmes d'assistants IA et des chaînes d'approvisionnement des développeurs.",
+        "threat_actor": "SmartLoader (opérations basées en Chine), StealC (infostealer)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Software Supply Chain (T1195.002)",
+          "Drive-by Compromise (T1189)",
+          "User Execution (T1204)",
+          "Malicious File (T1204.002)",
+          "Execution (TA0002)",
+          "Command and Scripting Interpreter (T1059)",
+          "Obfuscated Files or Information (T1027)",
+          "Virtualization/Sandbox Evasion (T1497)",
+          "Credential Access (TA0006)",
+          "Steal Web Credentials (T1555.003)",
+          "Steal Application Access Token (T1539.001)",
+          "Data from Local System (T1005)",
+          "Data from Network Shared Drive (T1039)",
+          "Exfiltration (TA0010)"
+        ],
+        "analyse": "Cette campagne met en évidence une stratégie avancée d'attaque de la chaîne d'approvisionnement ciblant l'écosystème de l'IA et les environnements de développeurs. En clonant des projets légitimes et en créant une fausse crédibilité, SmartLoader contourne les vérifications de sécurité traditionnelles, compromettant des cibles de grande valeur (développeurs ayant accès à des identifiants sensibles). Ce glissement indique un investissement accru des attaquants dans l'infrastructure d'ingénierie sociale et constitue une menace grave pour les organisations qui dépendent des outils d'IA et des services cloud gérés.",
+        "recommandations": "Les développeurs doivent vérifier rigoureusement les outils d'IA et les serveurs MCP, en recherchant la légitimité des projets, les communautés actives et les mainteneurs réputés au-delà des simples métriques GitHub. Les organisations doivent mettre en œuvre des pratiques de sécurité robustes pour la chaîne d'approvisionnement, y compris la vérification de la signature du code et l'analyse des composants suspects. Renforcer la sécurité des points de terminaison sur les postes de travail des développeurs pour détecter les infostealers et les malwares obfusqués.",
+        "tags": [
+          "attaque-chaîne-d'approvisionnement",
+          "infostealer",
+          "SmartLoader",
+          "StealC",
+          "GitHub",
+          "sécurité-développeur",
+          "écosystème-IA",
+          "vol-identifiants",
+          "obfuscation",
+          "menace-Chine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188135/ai/smartloader-hackers-clone-oura-mcp-project-to-spread-stealc-malware.html"
+        ],
+        "date": "2026-02-18"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cybersecurity landscape on February 18, 2026, reveals a complex and evolving threat environment characterized by several key trends. We observe persistent and sophisticated state-backed actors (such as UNC6201 and TGR-STA-1030), targeting critical infrastructure, government, and high-tech sectors via zero-day exploitation (CVE-2026-22769, Ivanti EPMM vulnerabilities), custom malware development (Grimbolt, eBPF rootkits), and advanced evasion techniques (Ghost NICs, iptables SPA). Supply chain attacks remain a critical and growing vector, illustrated by the Keenadu Android malware embedded in firmware and SmartLoader cloning legitimate GitHub projects to spread infostealers. Vulnerabilities in VSCode extensions and hardcoded secrets in JavaScript bundles highlight systemic weaknesses. Ransomware and cybercrime continue to affect various sectors, with operations like Phobos and LockBit, and data breaches leading to regulatory fines and information sales on the dark web. AI is both a tool for attackers (C2 proxy, adaptive malware) and a target (AI agent configuration theft), raising ethical and trust questions. Finally, a constant stream of critical vulnerabilities is actively exploited, and industrial control systems (OT/ICS) are increasingly targeted by state-aligned actors and ransomware, often with limited visibility for defenders. All these trends indicate a convergence of cyber threats with geopolitical tensions and economic warfare, making the work of defenders increasingly complex.",
+      "date": "2026-02-18"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UNC6201",
+        "secteur": "Virtualization infrastructure, potentially government, legal, and technology sectors",
+        "modop": "Exploitation of a zero-day vulnerability in Dell RecoverPoint for Virtual Machines (CVE-2026-22769) via hardcoded credentials. Deployment of custom backdoors (SLAYSTYLE web shell, BRICKSTORM, GRIMBOLT). Creation of \"Ghost NICs\" for stealthy lateral movement in VMware ESXi environments and use of iptables for Single Packet Authorization. Suspected PRC-nexus threat cluster.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "state-sponsored",
+          "China",
+          "espionage",
+          "zero-day-exploit",
+          "backdoor",
+          "web-shell",
+          "persistence",
+          "lateral-movement",
+          "VMware",
+          "virtualization"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "XWorm (commodity RAT)",
+        "secteur": "Businesses in Latin America (LATAM)",
+        "modop": "Delivery via fake financial receipts, with increasingly sophisticated delivery mechanisms to bypass regional defenses and reach business users. The final payload often consists of commodity Remote Access Trojans (RATs) like XWorm.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "RAT",
+          "malware-campaign",
+          "phishing",
+          "financial-sector",
+          "LATAM"
+        ],
+        "sources": [
+          "/cybersecurity-blog/xworm-latam-campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Keenadu (backdoor)",
+        "secteur": "Android users, especially tablet users",
+        "modop": "Embedded in device firmware (supply chain attack), system apps, and Google Play apps. Compromises core Android libraries (libandroid_runtime.so) to operate within the context of every installed app, bypassing sandboxing and permissions. Primarily for ad fraud, but capable of broad data theft (media, messages, banking credentials, location, incognito search queries) and risky device actions. Linked to Triada and BADBOX botnets. Avoids China-associated language/timezone.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Android-malware",
+          "backdoor",
+          "firmware-attack",
+          "supply-chain",
+          "ad-fraud",
+          "data-theft",
+          "mobile-security",
+          "botnet"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-keenadu-backdoor-found-in-android-firmware-google-play-apps/",
+          "https://securelist.com/keenadu-android-backdoor/118913/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "TGR-STA-1030",
+        "secteur": "Government and critical infrastructure across 37 countries",
+        "modop": "Initial access via phishing and vulnerable internet-facing systems. Deployment of obfuscated web shells and a custom eBPF rootkit on Linux for stealthy, kernel-level persistence. Use of Go-based C2 frameworks and leased VPS infrastructure. Espionage campaign.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionage",
+          "government",
+          "critical-infrastructure",
+          "phishing",
+          "web-shell",
+          "rootkit",
+          "eBPF",
+          "Linux",
+          "persistence",
+          "C2"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "SmartLoader (malware group)",
+        "secteur": "Developers (specifically targeting Oura MCP Server project users)",
+        "modop": "Cloning legitimate GitHub projects (Oura MCP Server) to spread the StealC info-stealer via trojanized installers. Use of LuaJIT, heavy VM obfuscation, scheduled tasks disguised as Realtek drivers. Aims to steal developer credentials, browser passwords, cryptocurrency wallets, API keys, and cloud credentials. Indicators point to China-based operations.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "info-stealer",
+          "supply-chain-attack",
+          "malware-campaign",
+          "developers",
+          "AI-ecosystem",
+          "credential-theft",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188135/ai/smartloader-hackers-clone-oura-mcp-project-to-spread-stealc-malware.html"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Phobos ransomware operation",
+        "secteur": "More than 1,000 victims worldwide including U.S. public schools, healthcare providers, nonprofit organizations, government bodies, and private firms (even a DoD contractor)",
+        "modop": "Ransomware-as-a-service (RaaS) model. Affiliates deploy ransomware, extort victims, and share profits. A suspect arrested in Poland for creating/distributing tools, possessing stolen credentials (logins, passwords, credit card numbers, server IPs), and communicating with the group via encrypted messaging. Ransom demands exceeded $16 million.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "RaaS",
+          "cybercrime",
+          "data-exfiltration",
+          "extortion",
+          "government",
+          "healthcare",
+          "education"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188128/cyber-crime/polish-cybercrime-police-arrest-man-linked-to-phobos-ransomware-operation.html",
+          "https://databreaches.net/2026/02/17/poland-arrests-suspect-linked-to-phobos-ransomware-operation/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "Scattered LAPSUS$ Hunters",
+        "secteur": "Luxury brands (Dior, Louis Vuitton, Tiffany & Co.), Salesforce customers",
+        "modop": "Compromising corporate Salesforce accounts using social engineering tactics (voice phishing, malware on employee devices) to steal millions of customer records. Extortion campaign.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data-breach",
+          "social-engineering",
+          "phishing",
+          "extortion",
+          "Salesforce",
+          "luxury-retail"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "LockBit ransomware gang",
+        "secteur": "Australian organizations (e.g., Aeromedical Society of Australasia)",
+        "modop": "Ransomware attacks, likely involving data exfiltration and encryption. (Specific TTPs not detailed in the social media post, but generally known for data exfiltration and encryption).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data-breach",
+          "extortion",
+          "Australia"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/116088587327619149"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "nom": "AZURITE, PYROXENE, SYLVANITE, KAMACITE, ELECTRUM, VOLTZITE",
+        "secteur": "OT environments, critical infrastructure, European OT supply chain, Ukrainian infrastructure (ISPs, power outages)",
+        "modop": "AZURITE, PYROXENE, SYLVANITE are new groups in 2025. SYLVANITE focuses on initial access via rapid exploitation of vulnerabilities (Ivanti, F5, SAP, ConnectWise), using Cobalt Strike, Sliver, web shells, then hands access to other actors like VOLTZITE. KAMACITE builds access, supports ELECTRUM (tied to Ukraine power outages). KAMACITE uses spear phishing against engineering/vendor personnel, reconnaissance against exposed industrial devices (Schneider Electric, Smart HMIs, Accuenergy, Sierra Wireless). ELECTRUM uses destructive malware (PathWiper). These groups are specialized, showing a division of labor.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "OT-threats",
+          "ICS",
+          "critical-infrastructure",
+          "state-sponsored",
+          "espionage",
+          "destructive-malware",
+          "supply-chain",
+          "vulnerability-exploitation"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Governance / Legal / Digital Rights",
+        "theme": "Government regulation of VPNs for piracy enforcement",
+        "description": "A Spanish court ordered NordVPN and ProtonVPN to block 16 websites facilitating football match piracy. The court deemed VPN providers subject to EU Digital Services Regulation, obligating them to prevent copyright infringement through their infrastructure, without prior notification to the VPN providers.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "legal-action",
+          "VPN-blocking",
+          "copyright-infringement",
+          "digital-rights",
+          "Spain",
+          "EU-regulation"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/legal/spain-orders-nordvpn-protonvpn-to-block-laliga-piracy-sites/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "International Relations / Military / Technology",
+        "theme": "Regulation and dual-use aspects of drone technology",
+        "description": "Drones are a revolutionary aeronautical technology with dual-use (civilian and military) applications. European regulations (UAS) and national laws define pilot obligations, registration, and reporting. Legal challenges extend beyond air law to include privacy, personal data protection, security, and international humanitarian law in armed conflicts.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "drones",
+          "dual-use-technology",
+          "regulation",
+          "privacy",
+          "international-humanitarian-law"
+        ],
+        "sources": [
+          "https://www.iris-france.org/le-droit-des-drones-en-question/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Economy / Industry / International Relations",
+        "theme": "Resilience and transformation of Russian industry under Western sanctions",
+        "description": "A report analyzing the remarkable resilience, resistance, and transformation of Russian industry and economy from 2022-2026 under significant and continuous Western sanctions due to the Russia-Ukraine war. The industry is observed to be moving beyond basic productions towards increased complexity and modernization.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "economic-warfare",
+          "sanctions",
+          "Russia",
+          "Ukraine-war",
+          "industrial-resilience",
+          "economic-transformation"
+        ],
+        "sources": [
+          "https://www.epge.fr/resilience-resistance-et-transformation-de-lindustrie-russe-sous-sanctions-occidentales-2022-2026/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "International Security / Defense / Geopolitics",
+        "theme": "Europe's evolving security posture in response to the threat from Russia",
+        "description": "Europe is entering a \"gathering storm\" phase, requiring a societal and unified response to the threat from Russia. Comparisons are drawn to pre-WWII readiness. Senior European diplomats and defense experts discuss a \"whole-of-society\" approach, urging a \"wartime mindset\" and clearer public communication on the threat and potential contributions in a conflict. Russian objectives to annex Ukraine and neighboring territories and efforts to destabilize European societies persist.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "European-security",
+          "Russia-threat",
+          "NATO",
+          "defense-strategy",
+          "societal-resilience",
+          "disinformation"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/gathering-storm"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Government / Legal / Enforcement",
+        "theme": "Arrest of cybercrime suspect (Phobos ransomware) and international law enforcement cooperation",
+        "description": "Polish cybercrime police arrested a 47-year-old man linked to the Phobos ransomware operation. Evidence found on seized devices included stolen credentials, credit card numbers, and server IP addresses, used for various attacks including ransomware. The arrest was part of \"Operation Aether,\" coordinated by Europol, targeting Phobos operators globally.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cybercrime-enforcement",
+          "ransomware",
+          "international-cooperation",
+          "Phobos",
+          "Poland",
+          "Europol"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188128/cyber-crime/polish-cybercrime-police-arrest-man-linked-to-phobos-ransomware-operation.html",
+          "https://databreaches.net/2026/02/17/poland-arrests-suspect-linked-to-phobos-ransomware-operation/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Government / Regulatory / Legal",
+        "theme": "Fines imposed by South Korean privacy regulator for data breaches",
+        "description": "South Korea’s Personal Information Protection Commission fined luxury brands Dior, Louis Vuitton, and Tiffany & Co. a total of $25 million following data breaches of their Salesforce systems by Scattered LAPSUS$ Hunters. The fines underscore regulatory strictness in protecting customer data in the event of security incidents caused by social engineering.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "regulatory-action",
+          "data-privacy",
+          "data-breach",
+          "fines",
+          "South-Korea",
+          "Salesforce"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Luxury Retail",
+        "victime": "Dior, Louis Vuitton, Tiffany & Co. (Salesforce customers)",
+        "description": "Fined $25M by South Korea for major customer data breaches resulting from compromised Salesforce systems. Attackers (Scattered LAPSUS$ Hunters) used social engineering (voice phishing, malware on employee devices) to gain access and steal millions of customer records. Dior: 1.95M records via voice phishing. Louis Vuitton: 3.6M via malware on employee devices. Tiffany & Co.: 4,600 via phishing.",
+        "tags": [
+          "violation",
+          "breach",
+          "luxury-retail",
+          "Salesforce",
+          "customer-data",
+          "social-engineering",
+          "phishing",
+          "malware",
+          "South-Korea"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188064/hacking/south-korea-slaps-25m-fine-on-dior-louis-vuitton-tiffany-over-salesforce-breach/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Travel / Tourism",
+        "victime": "Eurail B.V.",
+        "description": "Traveler data (personal, order, travel reservation info, including DiscoverEU program participants) stolen in a breach earlier in the year, now offered for sale on the dark web, with a sample published on Telegram.",
+        "tags": [
+          "violation",
+          "breach",
+          "travel-data",
+          "customer-data",
+          "dark-web",
+          "data-sale",
+          "Eurail"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188075/data-breach/hackers-sell-stolen-eurail-traveler-information-on-dark-web/",
+          "https://databreaches.net/2026/02/17/hackers-offer-to-sell-millions-of-eurail-user-records/?pk_campaign=feed&pk_kwd=hackers-offer-to-sell-millions-of-eurail-user-records"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Retail (Apparel)",
+        "victime": "Canada Goose",
+        "description": "Data breach from August 2025 at a third party, affecting 581,877 unique email addresses among 920k records. Exposed customer names, phone numbers, IP addresses, physical addresses, and partial credit card data (type, last 4 digits). Data relates to past customer transactions.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "customer-data",
+          "supply-chain",
+          "credit-card-data",
+          "Canada-Goose"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CanadaGoose"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "AI Services (Underground)",
+        "victime": "WormGPT",
+        "description": "Claimed breach exposing emails, payment information, subscriptions, and metadata for 19,000 users. Risks include targeted phishing, impersonation, and fraud.",
+        "tags": [
+          "violation",
+          "breach",
+          "AI-service",
+          "cybercrime-tool",
+          "user-data",
+          "phishing",
+          "impersonation",
+          "fraud"
+        ],
+        "sources": [
+          "https://mastox.eu/@zataz/116088664447011683"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Gaming / E-commerce",
+        "victime": "Sony Music Shop",
+        "description": "Personal information of users was viewable by other users due to a bug, leading to data exposure.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "personal-data",
+          "bug",
+          "Sony-Music-Shop"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116089182328319680"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Sports / E-commerce (Golf)",
+        "victime": "Golf equipment buyers in Japan (data sold as \"Japanese wealthy list\")",
+        "description": "Hackers are selling personal information of golf equipment buyers, masquerading it as a \"Japanese wealthy list\" on illicit markets.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "personal-data",
+          "data-sale",
+          "Japan",
+          "wealthy-list"
+        ],
+        "sources": [
+          "https://mastodon.social/@securityLab_jp/116088474906046835"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "secteur": "Healthcare / Medical Organizations",
+        "victime": "Aeromedical Society of Australasia",
+        "description": "Listed by the LockBit ransomware gang, indicating a ransomware attack with likely data exfiltration.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "data-exfiltration",
+          "LockBit",
+          "Australia"
+        ],
+        "sources": [
+          "https://mastodon.social/@David_Hollingworth/116088587327619149"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-22769",
+        "cvss": "10.0",
+        "product": "Dell RecoverPoint for Virtual Machines",
+        "description": "Hardcoded credential vulnerability allowing unauthenticated remote access and root-level persistence.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "hardcoded-credential",
+          "RCE",
+          "authentication-bypass",
+          "Dell-RecoverPoint",
+          "zero-day"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-22769",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1670",
+        "cvss": "9.8",
+        "product": "Honeywell CCTV Products",
+        "description": "Unauthenticated API endpoint exposure allowing remote change of \"forgot password\" recovery email address.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication-bypass",
+          "API-exposure",
+          "Honeywell-CCTV"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1670"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss": "9.8",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Code injection vulnerability in Android File Transfer mechanism, enabling unauthenticated remote code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "code-injection",
+          "Ivanti-EPMM"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/ivanti-cve-2026-1281-cve-2026-1340/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1490",
+        "cvss": "9.8",
+        "product": "CleanTalk Anti-Spam plugin for WordPress",
+        "description": "Authorization bypass via reverse DNS (PTR record) spoofing on 'checkWithoutToken' function, leading to unauthenticated arbitrary plugin installation and potential RCE.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authorization-bypass",
+          "WordPress",
+          "RCE-potential",
+          "plugin"
+        ],
+        "sources": [
+          "https://thecyberexpress.com/cleantalk-cve-2026-1490/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": "9.9",
+        "product": "BeyondTrust Remote Support and Privileged Remote Access",
+        "description": "Pre-auth RCE via command injection, allowing unauthenticated attackers to execute OS-level commands with elevated privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "command-injection",
+          "BeyondTrust"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-21643",
+        "cvss": "9.1",
+        "product": "FortiClientEMS 7.4.4",
+        "description": "Unauthenticated remote code execution via the web interface.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "FortiClientEMS"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-23595",
+        "cvss": "8.8",
+        "product": "Application API (generic)",
+        "description": "Authentication bypass in the application API allowing unauthorized administrative account creation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication-bypass",
+          "admin-account-creation",
+          "API"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-23595"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-13689",
+        "cvss": "8.8",
+        "product": "IBM DataStage on Cloud Pak for Data",
+        "description": "Authenticated arbitrary command execution and sensitive information access due to unrestricted file uploads.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "file-upload",
+          "IBM-DataStage"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13689"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-26119",
+        "cvss": "8.8",
+        "product": "Windows Admin Center",
+        "description": "Improper authentication allowing an authorized attacker to elevate privileges over a network.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege-escalation",
+          "authentication",
+          "Windows-Admin-Center"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26119"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-2627",
+        "cvss": "8.5",
+        "product": "Softland FBackup up to 9.9",
+        "description": "Link following vulnerability in Backup/Restore component (HID.dll), requiring local access. The exploit is public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "link-following",
+          "local-exploit",
+          "Softland-FBackup"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2627"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-13691",
+        "cvss": "8.1",
+        "product": "IBM DataStage on Cloud Pak for Data 5.1.2 through 5.3.0",
+        "description": "Returns sensitive information in an HTTP response, allowing user impersonation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "information-disclosure",
+          "impersonation",
+          "IBM-DataStage"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2025-13691"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-65715",
+        "cvss": "N/A",
+        "product": "Code Runner VSCode extension",
+        "description": "Remote Code Execution (RCE) by modifying the extension's configuration file. High to critical severity.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "VSCode-extension",
+          "supply-chain"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/flaws-in-popular-vscode-extensions-expose-developers-to-attacks/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-20700",
+        "cvss": "N/A",
+        "product": "Apple OS versions",
+        "description": "Critical vulnerability exploited in targeted attacks, allowing privilege escalation to system-level code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege-escalation",
+          "zero-day",
+          "Apple"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/weekly-threat-round-up-critical-apple-flaw-ebpf-rootkit-more"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-2447",
+        "cvss": "N/A",
+        "product": "Mozilla Firefox v147.0.3",
+        "description": "Critical memory-related flaw (heap buffer overflow), allowing arbitrary code execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "RCE",
+          "heap-buffer-overflow",
+          "Mozilla-Firefox"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/firefox-v147-0-3-released/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-4427",
+        "cvss": "N/A",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Exploited at a U.S. utility to extract data (LDAP user details, Office 365 tokens) and achieve lateral movement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data-exfiltration",
+          "lateral-movement",
+          "Ivanti-EPMM",
+          "critical-infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2025-4428",
+        "cvss": "N/A",
+        "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+        "description": "Exploited at a U.S. utility to extract data (LDAP user details, Office 365 tokens) and achieve lateral movement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "data-exfiltration",
+          "lateral-movement",
+          "Ivanti-EPMM",
+          "critical-infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "cve_id": "CVE-2026-26019",
+        "cvss": "N/A",
+        "product": "langchain/community package",
+        "description": "Server-Side Request Forgery (SSRF) bypass vulnerability, allowing access to cloud metadata endpoints, localhost, or internal networks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SSRF",
+          "information-disclosure",
+          "internal-network-access",
+          "langchain"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/langchain-community-ssrf-bypass-vulnerability/"
+        ],
+        "date": "2026-02-18"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI in the Middle: Turning Web-Based AI Services into C2 Proxies & The Future Of AI Driven Attacks",
+        "description": "Research demonstrating how web-based AI services like Grok and Microsoft Copilot can be abused as covert Command and Control (C2) proxies. Attackers can leverage AI assistants with web-browsing capabilities to fetch attacker-controlled URLs and return responses, creating a bidirectional channel without API keys or registered accounts. This marks a shift towards AI-Driven malware, where AI models dynamically shape implant behavior, prioritize data, and adapt tactics based on host context.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/"
+          ]
+        },
+        "mitre_ttps": [
+          "Command and Control (TA0011)",
+          "Ingress Tool Transfer (T1105)",
+          "Exfiltration (TA0010)",
+          "Data from Network Shared Drive (T1039)",
+          "Data from Local System (T1005)"
+        ],
+        "analyse": "This research highlights a significant evolving threat where AI services, increasingly integrated into enterprise workflows, can be repurposed as stealthy C2 channels, making detection more challenging as AI traffic blends with normal corporate traffic. The concept of AI-Driven malware suggests more adaptive, context-aware, and less predictable campaigns, potentially automating triage, targeting, and operational choices in real-time. This could drastically reduce attack costs and increase success rates for less skilled actors.",
+        "recommandations": "AI providers need to harden web-fetch features, enforce authentication, and provide enterprises with greater control and visibility. Defenders should treat AI domains as high-value egress points, monitor for automated/unusual usage patterns, and incorporate AI traffic into hunting and incident response playbooks. Shift security left with SAST, repository scanning, and IDE guardrails.",
+        "tags": [
+          "AI",
+          "C2",
+          "malware-development",
+          "TTPs",
+          "supply-chain",
+          "enterprise-security",
+          "threat-intelligence",
+          "detection",
+          "mitigation",
+          "future-threats"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "From BRICKSTORM to GRIMBOLT: UNC6201 Exploiting a Dell RecoverPoint for Virtual Machines Zero-Day",
+        "description": "Analysis of UNC6201, a suspected China-nexus threat cluster, exploiting a zero-day vulnerability (CVE-2026-22769, CVSS 10.0) in Dell RecoverPoint for Virtual Machines since mid-2024. The group used hardcoded credentials to deploy SLAYSTYLE web shells and custom backdoors (BRICKSTORM, GRIMBOLT). They also employed novel tactics like creating \"Ghost NICs\" for stealthy lateral movement in VMware ESXi environments and using iptables for Single Packet Authorization.",
+        "threat_actor": "UNC6201 (suspected PRC-nexus threat cluster), UNC5221 (overlaps, synonymous with Silk Typhoon), Warp Panda (CrowdStrike, linked to Brickstorm)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "24a11a26a2586f4fba7bfe89df2e21a0809ad85069e442da98c37c4add369a0c",
+            "dfb37247d12351ef9708cb6631ce2d7017897503657c6b882a711c0da8a9a591",
+            "92fb4ad6dee9362d0596fda7bbcfe1ba353f812ea801d1870e37bfc6376e624a",
+            "aa688682d44f0c6b0ed7f30b981a609100107f2d414a3a6e5808671b112d1878",
+            "2388ed7aee0b6b392778e8f9e98871c06499f476c9e7eae6ca0916f827fe65df",
+            "320a0b5d4900697e125cebb5ff03dee7368f8f087db1c1570b0b62f5a986d759",
+            "90b760ed1d0dcb3ef0f2b6d6195c9d852bcb65eca293578982a8c4b64f51b035",
+            "45313a6745803a7f57ff35f5397fdf117eaec008a76417e6e2ac8a6280f7d830"
+          ],
+          "IPv4": [
+            "149.248.11.71"
+          ],
+          "URL": [
+            "wss://149.248.11.71/rest/apisession"
+          ],
+          "YARA_RULE": [
+            "G_APT_BackdoorToehold_GRIMBOLT_1",
+            "G_Hunting_BackdoorToehold_GRIMBOLT_1",
+            "G_APT_BackdoorWebshell_SLAYSTYLE_4"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Exploit Public-Facing Application (T1190)",
+          "External Remote Services (T1133)",
+          "Credential Access (TA0006)",
+          "Hardcoded Credentials (T1552.001)",
+          "Persistence (TA0003)",
+          "Boot or Logon Autostart Execution (T1547)",
+          "Modify Existing Service (T1543.003)",
+          "Server Software Component (T1505)",
+          "Web Shell (T1505.003)",
+          "Backdoor (T1505.002)",
+          "Lateral Movement (TA0008)",
+          "Create Account (T1136)",
+          "Network Share Discovery (T1087)",
+          "Remote Services (T1021)",
+          "Impair Defenses (TA0009)",
+          "Disable or Modify Tools (T1562)",
+          "Hide Artifacts (T1564)",
+          "Obfuscated Files or Information (T1027)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Proxy (T1090)",
+          "Multi-Stage Channels (T1104)"
+        ],
+        "analyse": "This long-running espionage campaign by a state-backed actor demonstrates sophisticated capabilities, including zero-day exploitation, custom malware development (Grimbolt designed to evade analysis), and advanced evasion techniques within virtualized environments (Ghost NICs, iptables SPA). The targeting of VMware infrastructure and appliances lacking traditional EDR agents highlights a focus on high-value, hard-to-monitor assets for long-term persistence, posing a significant threat to government, legal, and technology sectors.",
+        "recommandations": "Immediately apply remediations for CVE-2026-22769. Conduct forensic analysis of Dell RecoverPoint (web logs for /manager requests, uploaded WAR files, Tomcat application logs, `convert_hosts.sh` modifications). Implement robust monitoring for suspicious activity in virtualized environments, including network interface changes and iptables modifications. Improve visibility on critical appliances that typically lack EDR.",
+        "tags": [
+          "state-sponsored",
+          "China",
+          "espionage",
+          "zero-day",
+          "Dell-RecoverPoint",
+          "VMware",
+          "virtualization-security",
+          "backdoor",
+          "web-shell",
+          "persistence",
+          "lateral-movement",
+          "C2",
+          "TTPs",
+          "critical-vulnerability"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploiting-dell-zero-day-flaw-since-mid-2024/",
+          "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/",
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/18/dell_0day_brickstorm_campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Keenadu Backdoor: Android Firmware and Google Play Apps Compromised",
+        "description": "Discovery of Keenadu, a sophisticated Android backdoor found embedded in firmware of multiple device brands, system applications, and Google Play apps. Keenadu compromises core Android libraries (libandroid_runtime.so) to operate within the context of every installed app, bypassing sandboxing and permissions. While currently focused on ad fraud, it has capabilities for broad data theft (media, messages, banking credentials, location, incognito browser queries). The malware avoids China-associated language/timezone and has connections to the Triada and BADBOX botnets, suggesting a supply chain attack during the device build phase.",
+        "threat_actor": "Keenadu operators (linked to Triada and BADBOX botnets)",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "bccd56a6b6c9496ff1acd40628edd25ec4c0e65a5c56038034555ec4a09d3a37",
+            "cb9f86c02f756fb9afdb2fe1ad0184eef59ad0c8e47228b603efc0ff790d4a0c",
+            "f9b740dd08df6c66009b27c618f1e08602c4c7209b82bbed19b962fb61ad2de3",
+            "185220652fbbc266d4fdf3e668c26e5936db58957342024f9bc1cdecf2f163d6",
+            "4964743c742bb899527017b8d06d4eaa58f282540ab1bd5ccfb632ef0d273654",
+            "59aee75ece46962c4eb09de78edaa3fa8d493346cb84fbbfdb5187ae046ab8d3",
+            "9d16a10031cddd222d26fcb5aa88a009a191b683a9307276f0fc68a2a9253da1",
+            "65f290dd99f9113592fba90ea10cb9b368990fbc668b3d2cfbefed874bb24711",
+            "6d93fb8897bf94b62a56aca31961756a",
+            "2922df6713f865c9cba3de1fe56849d73dae1f297098fa9d9d4ee0335f0aeed3",
+            "462a23bc22d06e5662d379b9011d89ff4c4ca7a2a25dbe15a4a39c11cfef2fb2",
+            "5048406d8d0affa80c18f8b1d6d76e21529632abf8246dfe555153de6ae2a9df",
+            "7ceccea499cfd3f9f9981104fc05bcbd912bc4f756f18049b241934f62bfb06c",
+            "98ff5a3b5f2cdf2e8f58f96d70db2875aa5bf06f0cc5a8a3400e90570fb081b0",
+            "ad60f46e724d88af6bcacb8c269ac3c1dc3d454a7edb683bec75a6a1e28a4877",
+            "f0184f6955479d631ea4b1ea0f38a35d",
+            "07546413bdcb0e28eadead4e2b0db59d0c1f61eeebc4176d533b4fc0a36b9d61",
+            "10d8e8765adb1cbe485cb7d7f4df21e411eaf02f41b9c93e9b3189aa39059419",
+            "19df24591b3d76ad3d0a6f548e608a431bfb3edb394d7c018e06ed31c7eea937",
+            "1c52e14095f23132719145cf24a2f9dc21846f602bcabccb00de35d994f153c9",
+            "2419583128d7c75e9f0627614c2aa73f28e6936302f2d290c2fec63ca647f8a6",
+            "382764921919868d810a5cf0391ea193",
+            "45bf58973111e00e378ee9b7b43b7d2d56036c2490e63a3e55df4558f7ecf893",
+            "64947d3a929e1bb860bf748a15dba57c69225f41dcae6ddb78a6aa6a3caa82e1",
+            "6df8284a4acee337078a6a62a8b652106f6e14b4449c0518258beb5a40ad7203",
+            "7882796fdae0043153aa75576e5d0b357c3e70937da7721dd1243638b467cff1",
+            "9ddd621daab4c4bc811b7c1990d7e9eaa0f775dd99108cb3b76953e25f5cdae4",
+            "b841debc5307afc8a4592ea60d64de14c57de69b401eb58c0aad786531c02c28",
+            "ca59e49878bcf2c72b99d15c98323bcdd07eb2db261c425bda0f046b736e372",
+            "d4be9b2b73e565b1181118cb7f44a102d9aecc9d4bf1d4b39aa551f3a1bcc6b7",
+            "e9bed47953986f90e814ed5ed25b010c",
+            "0bc94bc4bc4d69705e4f08aaf0e976b31276480838340dcbc699d1f32f30a5e9",
+            "15fb99660dbd52d66f074eaa4cf1366d2dca15e9e83bca37817f46b24b00d197",
+            "350313656502388947c7cbcd08dc5a953e36ffda0a946009cb9059b69c6a6f0d",
+            "5b0726d66422f76d8ba4fbb9765c68f668b64bf1dea3eb314ce273923b8df5109",
+            "195454da9e2cb22a3d58dbbf7982be8a4a6ff86413b3b2a893627c4cff34399b",
+            "163fa76bde53cd80d727d88b7b1d94fba0a349f177ffb3e398f8c780d911580b",
+            "ba23f4b66a0e07f837f2832a8cd3bd4d6ebc5526e957866c02c938fc01349eee",
+            "c7ab99beb846eec4ecee232ac0b3246ef119626a3b07f46386e65de312cf151fca",
+            "eadbee39fddc907a3ae0315d86178",
+            "3d185f30b00270e7e30fc4e29a68237f"
+          ],
+          "IPv4": [
+            "110.34.191.81",
+            "110.34.191.82",
+            "67.198.232.4",
+            "67.198.232.187"
+          ],
+          "DOMAIN": [
+            "fbsimg.com",
+            "tmgstatic.com",
+            "gbugreport.com",
+            "aifacecloud.com",
+            "goaimb.com",
+            "proczone.com",
+            "gvvt1.com",
+            "dllpgd.click",
+            "fbgraph.com",
+            "newsroomlabss.com",
+            "sliidee.com",
+            "keepgo123.com",
+            "gsonx.com",
+            "gmsstatic.com",
+            "ytimg2.com",
+            "glogstatic.com",
+            "gstatic2.com",
+            "uscelluliar.com",
+            "playstations.click",
+            "zcnewy.com"
+          ]
+        },
+        "mitre_ttps": [
+          "Persistence (TA0003)",
+          "Boot or Logon Autostart Execution (T1547)",
+          "Supply Chain Compromise (TA0001)",
+          "Compromise Software Supply Chain (T1195.002)",
+          "Compromise Developer Tools (T1195.003)",
+          "Data from Local System (T1005)",
+          "Data from Network Shared Drive (T1039)",
+          "Input Capture (T1056)",
+          "Keylogging (T1056.001)",
+          "Credential Access (TA0006)",
+          "Steal Web Session Cookie (T1539)",
+          "Steal Application Access Token (T1539.001)",
+          "Exfiltration (TA0010)",
+          "Data Staging (T1074)",
+          "Ingress Tool Transfer (T1105)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Application Layer Protocol (T1071)"
+        ],
+        "analyse": "Keenadu represents a highly sophisticated and pervasive mobile threat, leveraging deep system compromise via supply chain attacks on Android firmware. Its ability to bypass core Android security mechanisms and operate across all applications makes it extremely difficult to remove, impacting user privacy and device integrity. The connections to other major botnets (Triada, BADBOX) suggest a coordinated and evolving mobile malware ecosystem. The primary focus on ad fraud but with capabilities for extensive data theft underscores the broad risk.",
+        "recommandations": "For infected devices, installing a clean firmware version is recommended. Users should be cautious with unofficial app sources and monitor for suspicious device behavior. Vendors must enhance supply chain security, particularly during the device build phase, to prevent firmware-level malware injection. Regularly check for firmware updates from trusted sources.",
+        "tags": [
+          "Android",
+          "mobile-malware",
+          "backdoor",
+          "firmware",
+          "supply-chain-attack",
+          "ad-fraud",
+          "data-exfiltration",
+          "privacy-invasion",
+          "botnet",
+          "Triada",
+          "BADBOX"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/new-keenadu-backdoor-found-in-android-firmware-google-play-apps/",
+          "https://securelist.com/keenadu-android-backdoor/118913/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "LATAM Businesses Hit by XWorm via Fake Financial Receipts: Full Campaign Analysis",
+        "description": "Analysis of evolving malware campaigns targeting Latin American (LATAM) businesses. Attackers use increasingly sophisticated delivery mechanisms, such as fake financial receipts, to bypass regional defenses and reach business users. The final payload often consists of commodity Remote Access Trojans (RATs) like XWorm, enabling attackers to gain control and potentially steal data.",
+        "threat_actor": "XWorm operators (unnamed group using commodity RAT)",
+        "indicator_of_compromise": {
+          "URL": [
+            "/cybersecurity-blog/xworm-latam-campaign/"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Phishing (T1566)",
+          "Spearphishing Attachment (T1566.001)",
+          "Drive-by Compromise (T1189)",
+          "User Execution (T1204)",
+          "Malicious File (T1204.002)",
+          "Command and Control (TA0011)",
+          "Remote Access Tool (T1219)",
+          "Data Exfiltration (TA0010)"
+        ],
+        "analyse": "The trend of sophisticated delivery mechanisms for commodity malware highlights attackers' adaptability in targeting specific regions and bypassing localized defenses. The use of fake financial documents suggests a focus on business email compromise (BEC) or financial fraud, indicating a high potential for financial loss and data theft for affected organizations in LATAM.",
+        "recommandations": "Enhance user training on identifying phishing attempts, especially those involving financial documents. Implement advanced email security gateways and endpoint detection and response (EDR) solutions. Improve regional defense mechanisms to counter evolving delivery tactics.",
+        "tags": [
+          "malware-campaign",
+          "XWorm",
+          "RAT",
+          "phishing",
+          "social-engineering",
+          "business-email-compromise",
+          "financial-fraud",
+          "LATAM-targeting"
+        ],
+        "sources": [
+          "/cybersecurity-blog/xworm-latam-campaign/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Leaked Secrets in JavaScript: What 5 Million Apps Revealed",
+        "description": "Research by Intruder revealing over 42,000 exposed tokens across 334 secret types in JavaScript bundles of 5 million applications. API keys (e.g., GitLab personal access tokens granting access to private repositories and CI/CD secrets) were found directly embedded. Traditional SAST and DAST tools often miss these leaks due to limitations in scanning methods, configuration, or regex coverage, especially for secrets introduced during build and deployment phases that bypass shift-left controls.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://portal.intruder.io/assets/index-DzChsIZu.js"
+          ]
+        },
+        "mitre_ttps": [
+          "Credential Access (TA0006)",
+          "Hardcoded Credentials (T1552.001)",
+          "Information Exposure (T1595.002)",
+          "Data Exfiltration (TA0010)",
+          "Data from Local System (T1005)",
+          "Develop Capabilities (TA0023)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Software Supply Chain (T1195.002)"
+        ],
+        "analyse": "This widespread issue of hardcoded secrets in front-end code represents a significant and often overlooked attack surface, particularly within the software supply chain. Leaked API keys can grant attackers deep access to an organization's internal systems, source code repositories, and even cloud infrastructure. The gap in current security testing practices (SAST/DAST) highlights the need for more comprehensive secrets detection across the entire development and deployment lifecycle, especially as automation and AI-generated code increase.",
+        "recommandations": "Implement robust secrets management solutions that prevent hardcoding credentials. Integrate advanced secrets detection tools (beyond basic regex) into CI/CD pipelines and runtime environments. Adopt shift-left security principles but also extend checks to post-build and deployment stages. Regularly audit front-end code for exposed tokens.",
+        "tags": [
+          "secrets-management",
+          "API-keys",
+          "JavaScript",
+          "front-end-security",
+          "supply-chain-security",
+          "SAST",
+          "DAST",
+          "data-exfiltration",
+          "credential-access",
+          "insecure-coding"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/what-5-million-apps-revealed-about-secrets-in-javascript/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "OT Teams Losing Time Advantage Against Industrial Threat Actors",
+        "description": "Dragos' 2026 OT/ICS Year in Review highlights a worsening threat landscape for industrial environments. Adversaries are focusing on \"control-loop mapping\" to understand physical processes and induce impact, and specialized threat groups (AZURITE, PYROXENE, SYLVANITE) are building access pathways for more capable actors. Ransomware groups are causing significant operational disruption in OT/ICS, often misclassified as IT-only incidents. Specific examples include Ivanti EPMM exploitation (CVE-2025-4427, CVE-2025-4428) for data extraction and lateral movement by SYLVANITE and destructive malware (PathWiper) from ELECTRUM targeting Ukrainian infrastructure.",
+        "threat_actor": "AZURITE, PYROXENE, SYLVANITE, KAMACITE, ELECTRUM, VOLTZITE (state-aligned groups), Ransomware groups",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-4427",
+            "CVE-2025-4428"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Exploit Public-Facing Application (T1190)",
+          "Vulnerabilities (T1589.001)",
+          "Reconnaissance (TA0043)",
+          "Active Scanning (T1595)",
+          "Develop Capabilities (TA0023)",
+          "Stage Capabilities (T1600)",
+          "Lateral Movement (TA0008)",
+          "Remote Services (T1021)",
+          "Impair Process Control (T0801)",
+          "Command and Control (TA0011)",
+          "Custom Command and Control Protocol (T1095)",
+          "Data Exfiltration (TA0010)",
+          "Data Destruction (T1485)",
+          "Ransomware (T1486)",
+          "Resource Hijacking (T1496)"
+        ],
+        "analyse": "The increasing specialization and sophistication of threat actors targeting OT/ICS environments, combined with their focus on understanding physical processes, represents a severe and escalating risk to critical infrastructure. The blurred lines between IT and OT, coupled with often poor visibility and monitoring in OT networks, allow ransomware and state-aligned groups to cause significant operational disruption. This trend shortens the response window and expands the potential for widespread damage.",
+        "recommandations": "Industrial organizations must collect OT network data, monitor remote access pathways, and treat engineering workstations and OT boundary systems as high-value operational assets. Implement strong segmentation between IT and OT networks. Improve incident response capabilities with OT-specific expertise and telemetry. Prioritize timely patching of internet-facing systems and edge devices.",
+        "tags": [
+          "OT-security",
+          "ICS-security",
+          "critical-infrastructure",
+          "state-sponsored",
+          "ransomware",
+          "vulnerability-exploitation",
+          "supply-chain",
+          "industrial-control-systems",
+          "asset-management",
+          "detection",
+          "mitigation",
+          "PathWiper"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/02/17/ot-cybersecurity-threats-2026-research/"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "Poorly Crafted Phishing Campaign Leverages Bogus Security Incident Report",
+        "description": "A phishing campaign using a fake PDF security incident report, hosted on AWS, to scare victims into enabling 2FA. The campaign targets MetaMask users, claiming unusual login activity. Despite being poorly crafted (e.g., \"From\" address not spoofed, generic PDF), it aims to manipulate victims into \"increasing\" their security by complying with attacker instructions, potentially leading to credential theft or account compromise.",
+        "threat_actor": "Unnamed phishing operators",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://access-authority-2fa7abff0e.s3.us-east-1.amazonaws.com/index.html"
+          ]
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Phishing (T1566)",
+          "Spearphishing Link (T1566.002)",
+          "Social Engineering (T1566.001)",
+          "User Execution (T1204)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Infrastructure (T1195.004)",
+          "Credential Access (TA0006)",
+          "Phishing for Information (T1566.002)"
+        ],
+        "analyse": "This phishing campaign, despite its low quality, demonstrates attackers' continuous reliance on social engineering and fear tactics. By leveraging common security concerns (incident reports, 2FA prompts), attackers attempt to bypass user vigilance, particularly when targeting specific platforms like MetaMask. The use of legitimate services like AWS for hosting adds a layer of credibility.",
+        "recommandations": "Enhance user awareness training, emphasizing skepticism towards unexpected security alerts and links, even if hosted on reputable services. Implement strong email filters. Educate users about identifying spoofed sender addresses and customizing phishing campaigns. Advise users to verify security prompts directly through official channels, not via links in emails.",
+        "tags": [
+          "phishing",
+          "social-engineering",
+          "credential-theft",
+          "AWS-abuse",
+          "MetaMask",
+          "2FA-bypass",
+          "user-awareness"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188116/security/poorly-crafted-phishing-campaign-leverages-bogus-security-incident-report.html"
+        ],
+        "date": "2026-02-18"
+      },
+      {
+        "title": "SmartLoader Hackers Clone Oura MCP Project to Spread StealC Malware",
+        "description": "The SmartLoader malware group is now targeting developers by cloning legitimate GitHub projects, such as the Oura MCP Server, to spread the StealC info-stealer. Attackers created a deceptive infrastructure of fake forks and contributors to lend credibility to trojanized versions of popular developer tools. Once installed, the malware, using LuaJIT and VM obfuscation, steals developer credentials, browser passwords, cryptocurrency wallets, API keys, and cloud credentials. This campaign signifies a shift towards compromising AI assistant ecosystems and developer supply chains.",
+        "threat_actor": "SmartLoader (China-based operations), StealC (info-stealer)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001)",
+          "Supply Chain Compromise (T1195)",
+          "Compromise Software Supply Chain (T1195.002)",
+          "Drive-by Compromise (T1189)",
+          "User Execution (T1204)",
+          "Malicious File (T1204.002)",
+          "Execution (TA0002)",
+          "Command and Scripting Interpreter (T1059)",
+          "Obfuscated Files or Information (T1027)",
+          "Virtualization/Sandbox Evasion (T1497)",
+          "Credential Access (TA0006)",
+          "Steal Web Credentials (T1555.003)",
+          "Steal Application Access Token (T1539.001)",
+          "Data from Local System (T1005)",
+          "Data from Network Shared Drive (T1039)",
+          "Exfiltration (TA0010)"
+        ],
+        "analyse": "This campaign highlights an advanced supply chain attack strategy targeting the AI ecosystem and developer environments. By cloning legitimate projects and building fake credibility, SmartLoader bypasses traditional security vetting, compromising high-value targets (developers with access to sensitive credentials). This shift indicates increased attacker investment in social engineering infrastructure and poses a severe threat to organizations relying on AI tools and managed cloud services.",
+        "recommandations": "Developers must vet AI tooling and MCP servers rigorously, checking for project legitimacy, active communities, and reputable maintainers beyond simple GitHub metrics. Organizations should implement strong supply chain security practices, including code signing verification and scanning for suspicious components. Enhance endpoint security on developer workstations to detect info-stealers and obfuscated malware.",
+        "tags": [
+          "supply-chain-attack",
+          "info-stealer",
+          "SmartLoader",
+          "StealC",
+          "GitHub",
+          "developer-security",
+          "AI-ecosystem",
+          "credential-theft",
+          "obfuscation",
+          "China-threat"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188135/ai/smartloader-hackers-clone-oura-mcp-project-to-spread-stealc-malware.html"
+        ],
+        "date": "2026-02-18"
+      }
+    ]
+  }
+}
