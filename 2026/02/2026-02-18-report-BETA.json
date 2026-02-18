@@ -1,0 +1,314 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape for February 18, 2026, is dominated by sophisticated espionage operations originating from Chinese state-sponsored actors (UNC6201, Lotus Blossom, Silk Typhoon) targeting virtualization infrastructure and supply chains. A major critical zero-day in Dell RecoverPoint (CVSS 10.0) highlights the shift toward 'Ghost NIC' techniques to evade detection in VMware environments. Simultaneously, the emergence of AI-driven Command and Control (C2) proxies using legitimate services like Grok and Copilot signals a new era of adaptive malware. Significant data breaches affecting the fintech (Figure) and luxury (LVMH) sectors underscore the continued efficacy of social engineering and third-party compromises.",
+      "fr": "Le paysage des menaces cyber pour le 18 février 2026 est dominé par des opérations d'espionnage sophistiquées provenant d'acteurs étatiques chinois (UNC6201, Lotus Blossom, Silk Typhoon) ciblant les infrastructures de virtualisation et les chaînes d'approvisionnement. Une faille zero-day critique dans Dell RecoverPoint (CVSS 10.0) met en lumière l'utilisation de techniques de 'Ghost NIC' pour échapper à la détection dans les environnements VMware. Parallèlement, l'émergence de proxies C2 pilotés par l'IA via des services légitimes comme Grok et Copilot marque une nouvelle ère de malwares adaptatifs. Des violations de données massives touchant la fintech (Figure) et le luxe (LVMH) confirment l'efficacité persistante de l'ingénierie sociale et des compromissions de tiers."
+    },
+    "date": "2026-02-18"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "UNC6201",
+      "campaign": "Grimbolt Espionage",
+      "campaign_description": {
+        "en": "A suspected PRC-nexus group exploiting critical zero-days in virtualization software to deploy novel backdoors like GRIMBOLT and BRICKSTORM.",
+        "fr": "Un groupe suspecté d'être lié à la Chine exploitant des failles zero-day critiques dans les logiciels de virtualisation pour déployer des backdoors comme GRIMBOLT et BRICKSTORM."
+      },
+      "sector": {
+        "en": "Government, Technology, Healthcare, Manufacturing",
+        "fr": "Gouvernement, Technologie, Santé, Industrie"
+      },
+      "modop": {
+        "en": "Exploitation of CVE-2026-22769, creation of 'Ghost NICs' on ESXi for lateral movement, and use of Single Packet Authorization (SPA) via iptables.",
+        "fr": "Exploitation de la CVE-2026-22769, création de 'Ghost NICs' sur ESXi pour le mouvement latéral, et utilisation de Single Packet Authorization (SPA) via iptables."
+      },
+      "tags": [
+        "PRC-nexus",
+        "Virtualization",
+        "Zero-day"
+      ],
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day/"
+      ],
+      "date": "2026-02-17"
+    },
+    {
+      "threat_actor": "Lotus Blossom",
+      "campaign": "Notepad++ Supply Chain Compromise",
+      "campaign_description": {
+        "en": "A long-term campaign that compromised the hosting provider of Notepad++ to redirect users to malicious updates delivering the Chrysalis backdoor.",
+        "fr": "Une campagne de longue durée ayant compromis l'hébergeur de Notepad++ pour rediriger les utilisateurs vers des mises à jour malveillantes diffusant la backdoor Chrysalis."
+      },
+      "sector": {
+        "en": "General Users, Developers",
+        "fr": "Utilisateurs généraux, Développeurs"
+      },
+      "modop": {
+        "en": "Compromise of update infrastructure, redirection of requests to malicious XML/binary files.",
+        "fr": "Compromission de l'infrastructure de mise à jour, redirection des requêtes vers des fichiers XML/binaires malveillants."
+      },
+      "tags": [
+        "Supply Chain",
+        "Backdoor",
+        "Chrysalis"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/notepad-plus-plus-boosts-update-security-with-double-lock-mechanism/"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Technology, Legal",
+        "fr": "Technologie, Juridique"
+      },
+      "theme": {
+        "en": "VPN Regulation and Piracy Control",
+        "fr": "Régulation des VPN et contrôle du piratage"
+      },
+      "description": {
+        "en": "A Spanish court ordered NordVPN and ProtonVPN to block piracy sites related to LaLiga, applying EU Digital Services Regulations to VPN infrastructure.",
+        "fr": "Un tribunal espagnol a ordonné à NordVPN et ProtonVPN de bloquer les sites de piratage liés à LaLiga, appliquant le règlement de l'UE sur les services numériques aux infrastructures VPN."
+      },
+      "tags": [
+        "VPN",
+        "Spain",
+        "Privacy",
+        "Legal"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/legal/spain-orders-nordvpn-protonvpn-to-block-laliga-piracy-sites/"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Figure.com",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Fintech",
+        "fr": "Fintech"
+      },
+      "description": {
+        "en": "Data breach involving 967,178 accounts including PII (Names, DOIs, addresses) due to an employee social engineering attack.",
+        "fr": "Violation de données touchant 967 178 comptes incluant des données personnelles (Noms, dates de naissance, adresses) suite à une attaque d'ingénierie sociale contre un employé."
+      },
+      "tags": [
+        "Data Breach",
+        "Fintech",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Figure"
+      ],
+      "date": "2026-02-18"
+    },
+    {
+      "victim": "Canada Goose",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Retail",
+        "fr": "Commerce de détail"
+      },
+      "description": {
+        "en": "Breach of 581,877 unique accounts. Data includes names, IP addresses, and partial credit card info, originating from a third-party compromise.",
+        "fr": "Violation de 581 877 comptes uniques. Les données incluent des noms, adresses IP et des informations partielles de cartes bancaires, provenant d'une compromission de tiers."
+      },
+      "tags": [
+        "Data Breach",
+        "Third-party",
+        "Retail"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/CanadaGoose"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-22769",
+      "euvd_id": "EUVD-2026-22769",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "0.15",
+      "cpe": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:*:*:*:*:*:*:*:*",
+      "product": "RecoverPoint for Virtual Machines",
+      "vendor": "Dell",
+      "description": {
+        "en": "Hardcoded credential vulnerability in Dell RecoverPoint for VM allowing unauthenticated remote access and root persistence.",
+        "fr": "Identifiants codés en dur dans Dell RecoverPoint pour VM permettant un accès distant non authentifié et une persistance root."
+      },
+      "tags": [
+        "vulnerability",
+        "critical",
+        "zero-day"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-22769"
+      ],
+      "date": "2026-02-17"
+    },
+    {
+      "cve_id": "CVE-2026-1281",
+      "euvd_id": "EUVD-2026-1281",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.08",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
+      "product": "Endpoint Manager Mobile (EPMM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Unsafe bash script usage allows unauthenticated remote code execution via arithmetic expansion.",
+        "fr": "L'utilisation non sécurisée de scripts bash permet l'exécution de code à distance non authentifiée via l'expansion arithmétique."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "MDM"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/ivanti-cve-2026-1281-cve-2026-1340/"
+      ],
+      "date": "2026-02-17"
+    },
+    {
+      "cve_id": "CVE-2026-1670",
+      "euvd_id": "EUVD-2026-1670",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.02",
+      "cpe": "cpe:2.3:o:honeywell:cctv:*:*:*:*:*:*:*:*",
+      "product": "CCTV Products",
+      "vendor": "Honeywell",
+      "description": {
+        "en": "Exposed API endpoint allows unauthenticated users to change the 'forgot password' recovery email address.",
+        "fr": "Un point de terminaison API exposé permet à des utilisateurs non authentifiés de modifier l'adresse e-mail de récupération de mot de passe."
+      },
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "API"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-1670"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Keenadu Android Firmware Backdoor",
+        "fr": "Backdoor Keenadu dans le firmware Android"
+      },
+      "description": {
+        "en": "Sophisticated Android malware embedded in device firmware, compromising Zygote to control all installed applications.",
+        "fr": "Malware Android sophistiqué intégré au firmware de l'appareil, compromettant Zygote pour contrôler toutes les applications installées."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://trends.search-hub.cn/vuGs8"
+        ],
+        "DOMAIN": [
+          "aifacecloud.com",
+          "fbsimg.com",
+          "glogstatic.com",
+          "keepgo123.com",
+          "proczone.com",
+          "sliidee.com"
+        ],
+        "HASH_MD5": [
+          "02c4c7209b82bbed19b962fb61ad2de3",
+          "07546413bdcb0e28eadead4e2b0db59d",
+          "1bfb3edb394d7c018e06ed31c7eea937"
+        ],
+        "TOOLS": [
+          "Keenadu",
+          "Triada",
+          "BADBOX"
+        ]
+      },
+      "mitre_ttps": [
+        "T1542.001",
+        "T1055",
+        "T1584"
+      ],
+      "analyse": {
+        "en": "Keenadu represents a persistent threat where malware is pre-installed in the supply chain or via OTA updates. Its deep integration makes standard OS removal impossible.",
+        "fr": "Keenadu représente une menace persistante où le malware est pré-installé dans la chaîne d'approvisionnement ou via des mises à jour OTA. Son intégration profonde rend la suppression standard impossible."
+      },
+      "recommandations": [
+        {
+          "en": "Install clean firmware versions from verified manufacturers.",
+          "fr": "Installer des versions de firmware propres provenant de fabricants vérifiés."
+        },
+        {
+          "en": "Monitor outbound traffic for known malicious C2 domains.",
+          "fr": "Surveiller le trafic sortant vers les domaines C2 malveillants connus."
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Supply Chain",
+        "Backdoor"
+      ],
+      "sources": [
+        "https://securelist.com/keenadu-android-backdoor/118913/"
+      ],
+      "date": "2026-02-17"
+    },
+    {
+      "title": {
+        "en": "AI Services as C2 Proxies",
+        "fr": "Services d'IA comme Proxies C2"
+      },
+      "description": {
+        "en": "Abuse of AI assistants like Grok and Copilot to act as bidirectional command-and-control relays.",
+        "fr": "Abus d'assistants IA comme Grok et Copilot pour agir en tant que relais de commande et contrôle bidirectionnels."
+      },
+      "threat_actor": "Multiple",
+      "indicators": {
+        "URL": [
+          "https://copilot.microsoft.com",
+          "https://grok.com"
+        ],
+        "DOMAIN": [
+          "reasoning.in"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071.001",
+        "T1090.003"
+      ],
+      "analyse": {
+        "en": "Attackers leverage the web-browsing capabilities of AI assistants to fetch commands and exfiltrate data, blending malicious traffic with legitimate enterprise AI usage.",
+        "fr": "Les attaquants exploitent les capacités de navigation Web des assistants IA pour récupérer des commandes et exfiltrer des données, mélangeant le trafic malveillant avec l'utilisation légitime de l'IA en entreprise."
+      },
+      "recommandations": [
+        {
+          "en": "Inspect traffic to AI service providers for high-entropy payloads in query parameters.",
+          "fr": "Inspecter le trafic vers les fournisseurs de services IA pour détecter des charges utiles à haute entropie dans les paramètres de requête."
+        },
+        {
+          "en": "Apply granular egress controls on AI domains.",
+          "fr": "Appliquer des contrôles de sortie granulaires sur les domaines liés à l'IA."
+        }
+      ],
+      "tags": [
+        "AI",
+        "C2",
+        "Proxy"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/"
+      ],
+      "date": "2026-02-17"
+    }
+  ]
+}
