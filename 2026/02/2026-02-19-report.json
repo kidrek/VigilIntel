@@ -1,0 +1,1831 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "L'analyse des articles révèle un paysage de menaces cyber complexe et en constante évolution, marqué par plusieurs tendances clés. Les attaques sur la chaîne d'approvisionnement restent une méthode privilégiée des acteurs malveillants, comme en témoignent les compromissions des systèmes de mise à jour de Notepad++ par des groupes APT liés à la Chine (Lotus Blossom) et l'intégration de backdoors (Keenadu) dans le firmware Android. Des vulnérabilités critiques dans les produits Dell RecoverPoint et Ivanti EPMM, y compris des zero-days, ont été activement exploitées par des APT liés à la Chine (UNC6201), permettant un accès persistant et un mouvement latéral furtif dans les infrastructures critiques et virtuelles. La rapidité d'exploitation est également un facteur crucial, avec des vulnérabilités SmarterMail rapidement transformées en exploits de ransomware via des canaux underground. L'ingénierie sociale reste une technique efficace pour les violations de données, comme l'incident chez Figure Technology Solutions. L'abus de l'IA est une menace émergente, avec des démonstrations de communication C2 furtive via des assistants AI et des bugs (Copilot) contournant les politiques de prévention des pertes de données. De nombreuses vulnérabilités d'exécution de code à distance (RCE) et de contournement d'authentification ont été découvertes dans divers produits, soulignant l'importance d'une gestion proactive des correctifs. Enfin, la cybersécurité est de plus en plus imbriquée dans le contexte géopolitique, notamment la course à la cryptographie post-quantique entre les États-Unis, la Chine et l'Europe, et la rivalité sino-américaine en Afrique pour l'accès aux ressources stratégiques.",
+      "date": "2026-02-19"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UNC6201",
+        "secteur": "Gouvernement, télécommunications, aviation, infrastructures critiques, médias, finance",
+        "modop": "Exploitation de vulnérabilités zero-day (ex: CVE-2026-22769), utilisation de comptes à privilèges codés en dur, déploiement de webshells (SLAYSTYLE) et de backdoors (BRICKSTORM, GRIMBOLT), mouvement latéral furtif (Ghost NICs) dans les environnements VMware, exploitation de la chaîne d'approvisionnement (Notepad++).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "Chine",
+          "espionnage",
+          "zero_day",
+          "supply_chain",
+          "RCE",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/",
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Gouvernement, télécommunications, aviation, infrastructures critiques, médias",
+        "modop": "Compromission de la chaîne d'approvisionnement (système de mise à jour de Notepad++), manipulation de manifestes de mise à jour XML, livraison de backdoors personnalisées (Chrysalis) via DLL sideloading.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "Chine",
+          "espionnage",
+          "supply_chain",
+          "backdoor",
+          "DLL_sideloading"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "GrayCharlie (aka SmartApeSG, ZPHP, HANEYMANEY)",
+        "secteur": "Divers, avec un focus sur les cabinets d'avocats américains",
+        "modop": "Compromission de sites WordPress via injection de JavaScript malveillant, redirection vers de fausses pages de mise à jour de navigateur ou leurres ClickFix, distribution de NetSupport RAT, Stealc et SectopRAT. Suspecté de s'appuyer sur une compromission de la chaîne d'approvisionnement via un fournisseur IT partagé.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "malware_distribution",
+          "WordPress",
+          "supply_chain",
+          "ingénierie_sociale",
+          "NetSupport_RAT",
+          "Stealc",
+          "SectopRAT"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/graycharlie-hijacks-law-firm-sites-suspected-supply-chain-attack"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Keenadu operators",
+        "secteur": "Utilisateurs d'appareils mobiles Android (grand public)",
+        "modop": "Préinstallation de backdoors Android dans le firmware des appareils ou dissimulées dans des applications système (compromission de la chaîne d'approvisionnement), distribution via des magasins officiels. Utilisé pour la fraude publicitaire (click bots), le contrôle à distance, le vol d'identifiants et la livraison de charges utiles malveillantes. Utilise des signatures numériques valides.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "Android",
+          "ad_fraud",
+          "remote_control",
+          "credential_theft",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188147/malware/keenadu-backdoor-found-preinstalled-on-android-devices-powers-ad-fraud-campaign.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Rhysida",
+        "secteur": "Gouvernement tribal (tribus Cheyenne et Arapaho d'Oklahoma)",
+        "modop": "Attaques par ransomware.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems/?pk_campaign=feed&pk_kwd=oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Matthew A. Akande",
+        "secteur": "Cabinets de préparation fiscale, services fiscaux gouvernementaux",
+        "modop": "Attaques de phishing, intrusions informatiques (Warzone RAT), vol d'informations personnellement identifiables (PII), dépôt de déclarations fiscales frauduleuses.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "phishing",
+          "data_theft",
+          "fraud",
+          "Warzone_RAT"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/nigerian-man-sentenced-to-eight-years-in-prison-for-computer-intrusion-and-theft/?pk_campaign=feed&pk_kwd=nigerian-man-sentenced-to-eight-years-in-prison-for-computer-intrusion-and-theft"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "International, technologie, défense, économie",
+        "theme": "Course à la cryptographie post-quantique et souveraineté numérique",
+        "description": "La révolution quantique menace de rendre obsolète le chiffrement actuel, bouleversant les équilibres géopolitiques. Les États-Unis et la Chine investissent massivement pour dominer la cryptographie quantique, perçue comme le 'nucléaire du XXIe siècle'. L'Europe accuse un retard significatif, ce qui pose des risques majeurs pour sa souveraineté numérique, économique et la protection de ses infrastructures critiques. L'enjeu est de protéger les données publiques, privées et critiques, notamment dans le secteur financier, spatial et militaire, face à la puissance de décryptage des algorithmes quantiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "quantique",
+          "cryptographie",
+          "PQC",
+          "souveraineté",
+          "Europe",
+          "Etats_Unis",
+          "Chine",
+          "infrastructures_critiques",
+          "défense"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/normes-conformite-et-post-quantique-le-droit-a-lepreuve-des-ruptures-technologiques-1-3-la-course-au-quantique/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "International, politique étrangère, économie, défense",
+        "theme": "Rivalité sino-américaine en Afrique et implications pour l'Europe",
+        "description": "La Chine a annoncé la suppression des droits de douane pour 53 pays africains à partir du 1er mai 2026, consolidant sa position de premier partenaire économique face à la rivalité croissante avec les États-Unis. Washington, sous l'administration Trump, a imposé des droits de douane supplémentaires et cherche à sécuriser les approvisionnements en minerais stratégiques. L'Afrique est un théâtre de compétition géoéconomique où les États-Unis privilégient la sécurisation des ressources et l'endiguement de l'influence chinoise, tandis que la Chine mise sur l'intégration commerciale et les investissements. L'Union Européenne cherche à se positionner comme un partenaire stabilisateur via l'initiative Global Gateway.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Afrique",
+          "Chine",
+          "Etats_Unis",
+          "Europe",
+          "commerce",
+          "ressources_stratégiques",
+          "diplomatie",
+          "économie"
+        ],
+        "sources": [
+          "https://www.iris-france.org/droits-de-douane-lafrique-au-coeur-de-la-rivalite-sino-americaine/",
+          "https://www.iris-france.org/trump-et-lafrique-avec-niagale-bagayoko-entretiens-geopo/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "International, défense, diplomatie",
+        "theme": "Sécurité transatlantique et Conférence de Munich",
+        "description": "La Conférence de Munich sur la sécurité 2026 a mis en évidence l'état des relations transatlantiques, les États-Unis demandant à l'Europe d'assumer une plus grande responsabilité pour sa propre défense. Le discours du Secrétaire d'État américain Marco Rubio a souligné la nécessité de réformer les institutions internationales tout en remettant en question les piliers de la relation transatlantique. L'Europe doit renforcer ses capacités de défense, construire une résilience démocratique et maintenir son soutien à l'Ukraine, qui est au cœur des enjeux de sécurité et de négociations de paix. Les politiques américaines pourraient également influencer la stabilité politique européenne.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "sécurité_transatlantique",
+          "Europe",
+          "Etats_Unis",
+          "Ukraine",
+          "défense",
+          "diplomatie",
+          "Conférence_de_Munich"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/barometer-check-transatlantic-security-and-munich-security-conference",
+          "https://www.iris-france.org/conference-de-munich-illusions-europeennes-les-mardis-de-liris/"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Finance, technologie (Fintech)",
+        "victime": "Figure Technology Solutions",
+        "description": "Des pirates ont volé les informations personnelles et de contact de près d'un million de comptes (967 200) de la société de technologie financière Figure Technology Solutions. Les données exposées datent de janvier 2026 et comprennent des adresses e-mail uniques, des noms, des numéros de téléphone, des adresses physiques et des dates de naissance. L'incident est attribué à une attaque d'ingénierie sociale où un employé a été incité à fournir un accès.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "données_personnelles",
+          "ingénierie_sociale",
+          "Figure_Technology_Solutions",
+          "vol_de_données"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/data-breach-at-fintech-firm-figure-affects-nearly-1-million-accounts/",
+          "https://haveibeenpwned.com/Breach/Figure"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "Finance, gouvernement",
+        "victime": "Ministère de l'Économie français (fichier national des comptes bancaires)",
+        "description": "Un hacker a accédé aux données de 1,2 million de comptes bancaires français en utilisant des identifiants officiels volés. La violation a permis de consulter des informations telles que les numéros de compte, l'identité des titulaires, leur adresse et, dans certains cas, le numéro fiscal. Aucune information sur les soldes ou les transactions n'a été consultée. Les risques incluent l'utilisation des RIB pour des prélèvements indus et des tentatives d'escroquerie plus crédibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "gouvernement",
+          "données_bancaires",
+          "identifiants_volés",
+          "France",
+          "piratage"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188200/hacking/french-ministry-confirms-data-access-to-1-2-million-bank-accounts.html",
+          "https://www.lemonde.fr/pixels/article/2026/02/18/piratage-du-fichier-national-des-comptes-bancaires-quels-risques-et-comment-s-en-proteger_6667313_4408996.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "Gouvernement tribal",
+        "victime": "Tribus Cheyenne et Arapaho d'Oklahoma",
+        "description": "Les tribus Cheyenne et Arapaho d'Oklahoma ont subi une attaque par ransomware qui a forcé l'arrêt de leurs réseaux informatiques, perturbant les services de messagerie et de téléphonie. L'incident a temporairement suspendu certaines opérations. Le groupe de ransomware Rhysida a revendiqué l'attaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "ransomware",
+          "Rhysida",
+          "Oklahoma",
+          "perturbation_systèmes"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems/?pk_campaign=feed&pk_kwd=oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-2686",
+        "cvss": "10.0",
+        "product": "SECCN Dingcheng G10",
+        "description": "Injection de commande OS via la manipulation de l'argument 'User' dans le fichier /cgi-bin/session_login.cgi, permettant une exécution de commande à distance. L'attaque est possible à distance et un exploit public a été divulgué.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SECCN_Dingcheng_G10",
+          "injection_commande",
+          "RCE",
+          "exploit_public"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2686"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-22769",
+        "cvss": "10.0",
+        "product": "Dell RecoverPoint for Virtual Machines",
+        "description": "Vulnérabilité de credential codé en dur permettant à un attaquant distant non authentifié d'obtenir un accès non autorisé au système d'exploitation sous-jacent avec persistance au niveau root. Activement exploitée par un groupe APT lié à la Chine (UNC6201).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dell_RecoverPoint",
+          "credentials_codés_en_dur",
+          "RCE",
+          "zero_day",
+          "exploitation_active",
+          "APT",
+          "UNC6201"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-27180",
+        "cvss": "9.8",
+        "product": "MajorDoMo (aka Major Domestic Module)",
+        "description": "Exécution de code à distance (RCE) non authentifiée via une compromission de la chaîne d'approvisionnement par empoisonnement d'URL de mise à jour. Un attaquant peut injecter des fichiers PHP arbitraires, y compris des webshells, dans le répertoire racine du serveur web.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MajorDoMo",
+          "RCE",
+          "supply_chain",
+          "update_URL_poisoning",
+          "unauthenticated",
+          "webshell"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-27180"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "9.3",
+        "product": "SmarterMail",
+        "description": "Vulnérabilité de contournement d'authentification et de logique de réinitialisation de mot de passe, permettant aux attaquants de réinitialiser les identifiants administrateur ou d'obtenir un accès privilégié. Activement exploitée dans des campagnes de ransomware.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "authentification_bypass",
+          "password_reset",
+          "exploitation_active",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/telegram-channels-expose-rapid-weaponization-of-smartermail-flaws/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2329",
+        "cvss": "9.3",
+        "product": "Grandstream GXP1600 series VoIP phones",
+        "description": "Débordement de tampon basé sur la pile non authentifié dans le service API web, permettant une exécution de code à distance (RCE) avec des privilèges root. Peut conduire au vol d'identifiants et à l'interception d'appels VoIP.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Grandstream_VoIP",
+          "RCE",
+          "buffer_overflow",
+          "unauthenticated",
+          "credential_theft",
+          "VoIP_interception"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
+          "https://www.security.nl/posting/925322/Lek+in+Grandstream+VoiP-telefoons+laat+aanvaller+gesprekken+afluisteren?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-25548",
+        "cvss": "9.1",
+        "product": "InvoicePlane",
+        "description": "Exécution de code à distance (RCE) critique dans InvoicePlane 1.7.0 via une chaîne d'inclusion de fichiers locaux (LFI) et d'empoisonnement de journaux. Un administrateur authentifié peut exécuter des commandes système arbitraires en manipulant le paramètre 'public_invoice_template'.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "InvoicePlane",
+          "RCE",
+          "LFI",
+          "log_poisoning",
+          "authenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25548"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2650",
+        "cvss": "8.8",
+        "product": "Google Chrome",
+        "description": "Débordement de tampon de tas dans le composant Media de Google Chrome (avant 145.0.7632.109), permettant à un attaquant distant d'exploiter potentiellement la corruption de tas via une page HTML malveillante.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "heap_buffer_overflow",
+          "RCE",
+          "corruption_mémoire",
+          "navigateur"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2650"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2649",
+        "cvss": "8.8",
+        "product": "Google Chrome V8",
+        "description": "Débordement d'entier dans V8 de Google Chrome (avant 145.0.7632.109), permettant à un attaquant distant d'exploiter potentiellement la corruption de tas via une page HTML malveillante.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "V8",
+          "integer_overflow",
+          "RCE",
+          "corruption_mémoire",
+          "navigateur"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2649"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-27182",
+        "cvss": "8.4",
+        "product": "Saturn Remote Mouse Server",
+        "description": "Vulnérabilité d'injection de commande permettant à des attaquants non authentifiés sur le réseau local d'exécuter des commandes arbitraires en envoyant des trames UDP JSON spécialement conçues sur le port 27000.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Saturn_Remote_Mouse_Server",
+          "injection_commande",
+          "RCE",
+          "unauthenticated",
+          "réseau_local"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-27182"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2670",
+        "cvss": "8.3",
+        "product": "Advantech WISE-6610",
+        "description": "Injection de commande OS via la manipulation de l'argument 'delete_file' dans le fichier /cgi-bin/luci/admin/openvpn_apply du composant Background Management. L'attaque peut être exécutée à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Advantech_WISE-6610",
+          "injection_commande",
+          "RCE",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2670"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Des plateformes d'IA peuvent être utilisées pour une communication furtive de logiciels malveillants",
+        "description": "Check Point a démontré la possibilité d'abuser des assistants IA (tels que Grok et Microsoft Copilot) dotés de capacités de navigation web pour intermédier les communications de commande et contrôle (C2) de logiciels malveillants. Cette méthode permet aux malwares de communiquer de manière furtive avec une interface web d'IA, en lui demandant de récupérer une URL contrôlée par l'attaquant et de recevoir la réponse via la sortie de l'IA, contournant ainsi les défenses traditionnelles par des données chiffrées.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Command and Control (TA0011)",
+          "Application Layer Protocol (T1071)",
+          "Web Protocols (T1071.001)"
+        ],
+        "analyse": "Cette recherche met en lumière une nouvelle technique potentiellement très furtive pour les communications C2, exploitant des services d'IA de confiance. Cela complexifie la détection par les SOC et soulève des défis importants pour les entreprises utilisant des assistants IA, qui pourraient devenir des vecteurs insoupçonnés pour les attaquants.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance robuste des interactions des services d'IA, en particulier pour les connexions sortantes initiées par des agents IA.",
+          "Renforcer le filtrage de contenu pour les données chiffrées ou à haute entropie dans les sorties des IA.",
+          "Sensibiliser les utilisateurs aux risques d'abus des outils d'IA à des fins malveillantes."
+        ],
+        "tags": [
+          "AI",
+          "C2",
+          "malware",
+          "furtif",
+          "interfaces_web",
+          "recherche",
+          "copilot",
+          "grok",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ai-platforms-can-be-abused-for-stealthy-malware-communication/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Le groupe APT lié à la Chine (UNC6201) exploite une vulnérabilité zero-day dans Dell RecoverPoint (CVE-2026-22769)",
+        "description": "Un groupe APT lié à la Chine (UNC6201) exploite depuis mi-2024 une vulnérabilité zero-day critique (CVE-2026-22769, CVSS 10.0) dans Dell RecoverPoint for Virtual Machines. Cette faille, due à des identifiants codés en dur, permet à un attaquant distant non authentifié d'obtenir un accès root. Les attaquants déploient des webshells (SLAYSTYLE) et des backdoors (BRICKSTORM, GRIMBOLT), utilisant des tactiques furtives comme les 'Ghost NICs' pour le mouvement latéral dans les environnements VMware et le Single Packet Authorization.",
+        "threat_actor": "UNC6201 (suspecté d'être lié à la Chine, avec des chevauchements avec UNC5221, potentiellement Silk Typhoon)",
+        "indicator_of_compromise": {
+          "MITRE_ATT&CK": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Valid Accounts (T1078) [Identifiants codés en dur]",
+          "Persistence (TA0003) - Boot or Logon Autostart Execution (T1547)",
+          "Lateral Movement (TA0008) - Remote Services (T1021) [Pivoting VMware, Ghost NICs]",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071), Custom Command and Control Protocol (T1573) [SLAYSTYLE, BRICKSTORM, GRIMBOLT]",
+          "Defense Evasion (TA0005) [Ghost NICs, packagin UPX, compilation Native AOT]",
+          "Discovery (TA0007)"
+        ],
+        "analyse": "Cette campagne d'espionnage sophistiquée et persistante cible des infrastructures virtuelles critiques. L'utilisation de zero-days, d'identifiants codés en dur et de techniques furtives de mouvement latéral indique des capacités avancées et une focalisation sur l'accès à long terme et discret. L'impact est élevé sur les organisations ciblées, en particulier dans les secteurs gouvernementaux, des télécommunications et des infrastructures critiques.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs Dell pour CVE-2026-22769.",
+          "Mettre en œuvre une gestion robuste des identifiants, en évitant les valeurs codées en dur.",
+          "Surveiller les environnements VMware pour détecter des interfaces réseau ou des schémas de trafic inhabituels (Ghost NICs).",
+          "Déployer des solutions EDR/XDR capables de détecter les backdoors avancées et le mouvement latéral.",
+          "Utiliser des règles YARA pour BRICKSTORM, GRIMBOLT et SLAYSTYLE."
+        ],
+        "tags": [
+          "APT",
+          "Chine",
+          "zero_day",
+          "Dell",
+          "RecoverPoint",
+          "UNC6201",
+          "BRICKSTORM",
+          "GRIMBOLT",
+          "SLAYSTYLE",
+          "supply_chain",
+          "espionnage",
+          "infrastructures_critiques",
+          "VMware",
+          "TTPs"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Des vulnérabilités critiques dans les téléphones VoIP Grandstream GXP1600 permettent l'exécution de code à distance non authentifiée (CVE-2026-2329)",
+        "description": "Une vulnérabilité critique (CVE-2026-2329, CVSS 9.3) dans les téléphones VoIP Grandstream GXP1600 permet une exécution de code à distance (RCE) non authentifiée avec des privilèges root. Cette faille de débordement de tampon basée sur la pile dans le service API web peut entraîner le vol d'identifiants et l'interception d'appels VoIP en reconfigurant l'appareil pour utiliser un proxy SIP malveillant.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [RCE]",
+          "Credential Access (TA0006) - OS Credential Dumping (T1003)",
+          "Impact (TA0040) - Data Exfiltration (T1041) [Interception d'appels VoIP]"
+        ],
+        "analyse": "Cette vulnérabilité présente un risque significatif pour les organisations utilisant des téléphones VoIP Grandstream vulnérables, surtout s'ils sont exposés à Internet. Une exploitation réussie pourrait mener à l'interception de communications sensibles, au vol de données et à la compromission totale de l'appareil, impactant la confidentialité et l'intégrité.",
+        "recommandations": [
+          "Appliquer immédiatement les mises à jour de firmware de Grandstream.",
+          "Minimiser l'exposition réseau des appareils VoIP et les isoler derrière des pare-feu.",
+          "Mettre en œuvre une segmentation réseau robuste pour les réseaux vocaux.",
+          "Surveiller les configurations de proxy SIP inhabituelles ou le trafic sortant des appareils VoIP."
+        ],
+        "tags": [
+          "Grandstream",
+          "VoIP",
+          "RCE",
+          "buffer_overflow",
+          "CVE-2026-2329",
+          "non_authentifié",
+          "critique",
+          "appareil_réseau",
+          "TTPs"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
+          "https://www.security.nl/posting/925322/Lek+in+Grandstream+VoiP-telefoons+laat+aanvaller+gesprekken+afluisteren?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "GrayCharlie détourne des sites de cabinets d'avocats via une attaque présumée de la chaîne d'approvisionnement",
+        "description": "GrayCharlie (alias SmartApeSG), un acteur de la menace actif depuis mi-2023, compromet des sites WordPress en y injectant du JavaScript malveillant pour rediriger les visiteurs vers de fausses pages de mise à jour de navigateur ou des leurres ClickFix, distribuant ainsi le RAT NetSupport. Les infections évoluent souvent vers le déploiement de Stealc et SectopRAT. Un groupe de sites de cabinets d'avocats américains a été compromis, probablement via une attaque de la chaîne d'approvisionnement impliquant un fournisseur IT partagé (ex: SMB Team). Le groupe cible des organisations à travers le monde, avec un focus sur les États-Unis, pour le vol de données et le gain financier.",
+        "threat_actor": "GrayCharlie (SmartApeSG, ZPHP, HANEYMANEY)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "joiner.best",
+            "persistancejs.store",
+            "signaturepl.com",
+            "filmlerzltyazilimsx.shop",
+            "vimsltd.com"
+          ],
+          "EMAIL": [
+            "oreshnik[@]mailum.com"
+          ],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [
+            "31804c48f9294c9fa7c165c89e487bfbebeda6daf3244ad30b93122bf933c79c",
+            "59e7e7698d77531bfbfea4739d29c14e188b5d3109f63881b9bcc87c72e9de78",
+            "5f1bd92ad6edea67762c7101cb810dc28fd861f7b8c62e6459226b7ea54e1428"
+          ],
+          "IPv4": [
+            "94.158.245.135",
+            "94.158.245.174",
+            "94.158.245.56",
+            "5.181.156.234",
+            "85.158.110.179"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Drive-by Compromise (T1187), Supply Chain Compromise (T1195)",
+          "Execution (TA0002) - User Execution (T1204) [Fausses mises à jour de navigateur, ClickFix]",
+          "Persistence (TA0003) - Registry Run Keys / Startup Folder (T1547.001)",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071) [C2 NetSupport RAT]",
+          "Defense Evasion (TA0005) - DLL Side-Loading (T1574.002) [Sectop RAT]",
+          "Collection (TA0009) - Data from Local System (T1005)",
+          "Exfiltration (TA0010)"
+        ],
+        "analyse": "Cette campagne en cours démontre une activité persistante d'acteurs de la menace tirant parti de vulnérabilités web courantes et de l'ingénierie sociale. L'accent mis sur les cabinets d'avocats suggère un potentiel de vol de données de grande valeur (informations clients, propriété intellectuelle). Le vecteur de la chaîne d'approvisionnement présumé via un fournisseur IT partagé est un multiplicateur de risques significatif.",
+        "recommandations": [
+          "Mettre en œuvre une gestion robuste des correctifs pour WordPress et ses plugins.",
+          "Bloquer les IoC connus.",
+          "Déployer un filtrage d'e-mails avancé et des proxys web.",
+          "Surveiller les injections JavaScript inhabituelles sur les sites web.",
+          "Sensibiliser les utilisateurs aux fausses mises à jour de navigateur et aux leurres ClickFix.",
+          "Mettre en œuvre une segmentation réseau stricte pour limiter le mouvement latéral."
+        ],
+        "tags": [
+          "GrayCharlie",
+          "SmartApeSG",
+          "WordPress",
+          "supply_chain",
+          "malware",
+          "NetSupport_RAT",
+          "Stealc",
+          "SectopRAT",
+          "fausses_mises_à_jour",
+          "ClickFix",
+          "cabinets_avocats",
+          "vol_de_données",
+          "gain_financier",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/graycharlie-hijacks-law-firm-sites-suspected-supply-chain-attack"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Le groupe APT lié à la Chine Lotus Blossom (Chrysalis Backdoor) a piraté le système de mise à jour de Notepad++",
+        "description": "Un groupe APT lié à la Chine (Lotus Blossom) a compromis l'infrastructure d'hébergement de Notepad++ (juin-décembre 2025) pour détourner son système de mise à jour. Les attaquants ont manipulé les manifestes de mise à jour XML et redirigé le trafic vers des serveurs malveillants, utilisant GUP (Get Update Program) pour livrer une backdoor personnalisée appelée Chrysalis. L'attaque a abusé du sideloading de DLL via un binaire Bitdefender renommé. Notepad++ version 8.9.2 introduit désormais une vérification cryptographique de bout en bout pour les manifestes et les installateurs afin d'atténuer cette attaque de la chaîne d'approvisionnement. La CVE-2026-25926 (CVSS 7.3), une vulnérabilité de chemin de recherche non sûr, a également été corrigée.",
+        "threat_actor": "Lotus Blossom (APT lié à la Chine)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Supply Chain Compromise (T1195) [Détournement du système de mise à jour]",
+          "Execution (TA0002)",
+          "Persistence (TA0003) - DLL Side-Loading (T1574.002)",
+          "Command and Control (TA0011) [Backdoor Chrysalis]",
+          "Defense Evasion (TA0005) - Obfuscated Files or Information (T1027)",
+          "Discovery (TA0007) - System Information Discovery (T1082)"
+        ],
+        "analyse": "Cette attaque très ciblée sur la chaîne d'approvisionnement démontre des méthodes sophistiquées par un acteur étatique pour compromettre les mécanismes de mise à jour de logiciels de confiance à des fins d'espionnage à long terme. L'utilisation de backdoors personnalisées et d'obfuscation souligne les défis de la détection des menaces persistantes avancées. La remédiation améliore la sécurité de la chaîne d'approvisionnement logicielle.",
+        "recommandations": [
+          "Mettre à niveau Notepad++ vers la version 8.9.2 ou ultérieure immédiatement.",
+          "Supprimer les certificats auto-signés dépréciés.",
+          "Mettre en œuvre des pratiques de sécurité strictes pour la chaîne d'approvisionnement logicielle, y compris la vérification cryptographique de toutes les mises à jour et composants.",
+          "Surveiller le trafic de mise à jour inhabituel ou les tentatives de chargement d'exécutables/DLL non signés."
+        ],
+        "tags": [
+          "Notepad++",
+          "supply_chain",
+          "APT",
+          "Chine",
+          "Lotus_Blossom",
+          "Chrysalis",
+          "backdoor",
+          "DLL_sideloading",
+          "détournement_mise_à_jour",
+          "espionnage",
+          "TTPs",
+          "CVE-2026-25926"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Keenadu : Backdoor préinstallée sur les appareils Android, alimentant des campagnes de fraude publicitaire",
+        "description": "Kaspersky a découvert Keenadu, une backdoor Android préinstallée dans le firmware des appareils ou cachée dans les applications système, également distribuée via les magasins officiels. Elle fonctionne comme un chargeur multi-étapes pour la fraude publicitaire (bots de clics), le contrôle à distance complet, le vol d'identifiants et la livraison de charges utiles malveillantes. L'utilisation de signatures numériques valides et la préinstallation suggèrent une compromission de la chaîne d'approvisionnement affectant plusieurs fournisseurs, contournant les permissions Android.",
+        "threat_actor": "Opérateurs de Keenadu (groupe de fraude publicitaire, contrôle à distance, vol d'identifiants)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Supply Chain Compromise (T1195) [Firmware préinstallé]",
+          "Persistence (TA0003) - Boot or Logon Autostart Execution (T1547) [Injection dans le processus Zygote]",
+          "Privilege Escalation (TA0004) - Bypass User Account Control (T1548) [Contourne les permissions Android]",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071)",
+          "Collection (TA0009) - Data from Local System (T1005) [Vol d'identifiants, données d'appareil]",
+          "Impact (TA0040) - Resource Hijacking (T1496) [Fraude publicitaire, bots de clics]"
+        ],
+        "analyse": "Cette backdoor Android très furtive présente une menace significative pour les utilisateurs mobiles, en particulier en raison de sa nature de compromission de la chaîne d'approvisionnement et de sa capacité à contourner les mesures de sécurité standard. La livraison retardée de la charge utile (2,5 mois) indique une sécurité opérationnelle sophistiquée. Elle souligne le risque de logiciels malveillants préinstallés sur les appareils grand public.",
+        "recommandations": [
+          "Les utilisateurs devraient s'approvisionner en appareils auprès de fournisseurs de confiance et vérifier leur intégrité.",
+          "Les organisations devraient mettre en œuvre des solutions de gestion des appareils mobiles (MDM) avec des politiques de sécurité robustes et effectuer des vérifications d'intégrité régulières sur les appareils Android.",
+          "Surveiller les comportements inhabituels des applications, le trafic réseau ou les modifications inattendues des applications système."
+        ],
+        "tags": [
+          "Keenadu",
+          "Android",
+          "backdoor",
+          "malware",
+          "fraude_publicitaire",
+          "contrôle_à_distance",
+          "vol_identifiants",
+          "chaîne_approvisionnement",
+          "préinstallé",
+          "firmware",
+          "mobile",
+          "TTPs"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188147/malware/keenadu-backdoor-found-preinstalled-on-android-devices-powers-ad-fraud-campaign.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Vulnérabilités zero-day critiques dans Ivanti EPMM exploitées dans la nature ciblant les réseaux d'entreprise",
+        "description": "Deux vulnérabilités zero-day critiques (CVE-2026-1281 et CVE-2026-1340) dans Ivanti Endpoint Manager Mobile (EPMM) sont activement exploitées, permettant à des attaquants non authentifiés d'exécuter du code arbitraire à distance. Ces failles donnent un contrôle complet sur l'infrastructure de gestion des appareils mobiles (MDM), conduisant à des reverse shells, des webshells, de la reconnaissance et le déploiement de malwares. L'exploitation est observée depuis l'été 2025, ciblant les secteurs gouvernementaux, de la santé, de la fabrication et des services professionnels à l'échelle mondiale.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [Exécution de code arbitraire]",
+          "Persistence (TA0003) - Server Software Component (T1505) [Web Shells]",
+          "Discovery (TA0007) - System Information Discovery (T1082)",
+          "Command and Control (TA0011) - Standard Application Layer Protocol (T1071.001) [Reverse Shells]"
+        ],
+        "analyse": "Ces exploits zero-day sur Ivanti EPMM représentent une menace grave pour la gestion de la mobilité d'entreprise, pouvant potentiellement compromettre l'ensemble du parc d'appareils mobiles gérés d'une organisation et fournir un accès persistant aux réseaux internes. La longue période d'exploitation (depuis l'été 2025) suggère des attaquants sophistiqués axés sur la furtivité et la compromission à long terme.",
+        "recommandations": [
+          "Appliquer immédiatement tous les correctifs disponibles pour Ivanti EPMM.",
+          "Mener des enquêtes forensiques approfondies (DFIR) pour détecter des signes de compromission remontant à l'été 2025.",
+          "Surveiller l'infrastructure MDM pour détecter tout accès non autorisé, activité inhabituelle ou webshells déployés.",
+          "Mettre en œuvre une segmentation réseau forte pour les serveurs MDM."
+        ],
+        "tags": [
+          "Ivanti",
+          "EPMM",
+          "zero_day",
+          "RCE",
+          "CVE-2026-1281",
+          "CVE-2026-1340",
+          "critique",
+          "exploitation",
+          "MDM",
+          "gouvernement",
+          "santé",
+          "fabrication",
+          "services_professionnels",
+          "TTPs"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/critical-ivanti-epmm-zero-day-vulnerabilities/",
+          "https://www.security.nl/posting/925342/%27Kritieke+Ivanti-kwetsbaarheid+sinds+zomer+vorig+jaar+misbruikt+bij+aanvallen%27?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "16 vulnérabilités zero-day dans des plateformes PDF populaires permettent l'exécution de code et l'exfiltration de données",
+        "description": "16 vulnérabilités zero-day, incluant une injection de commande OS critique (CVSS 9.8 dans Foxit PDF SDK for Web), SSRF (CVE-2025-70400), XSS basé sur le DOM (CVE-2025-70401) et des failles de traversée de chemin, ont été découvertes dans les services cloud Apryse WebViewer et Foxit PDF. Ces failles permettent l'exécution de code et l'exfiltration de données, affectant des millions d'utilisateurs en entreprise. La découverte a combiné l'intuition humaine et un essaim d'agents IA.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [Injection de commande OS]",
+          "Impact (TA0040) - Data Exfiltration (T1041)",
+          "Defense Evasion (TA0005)"
+        ],
+        "analyse": "Cet ensemble étendu de vulnérabilités zero-day dans des plateformes PDF largement utilisées constitue un risque généralisé et significatif pour les utilisateurs en entreprise. La nature de ces failles (RCE, SSRF, XSS, Path Traversal) indique un potentiel d'impact grave sur la confidentialité, l'intégrité des données et le contrôle du système. L'utilisation de l'IA pour la découverte met en évidence l'évolution des capacités de recherche sur les menaces.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs pour Apryse WebViewer et Foxit PDF SDK for Web.",
+          "Auditer les déploiements de serveurs de signature côté serveur pour les validations d'entrée manquantes.",
+          "Appliquer une politique de sécurité de contenu (Content-Security-Policy) stricte et une validation de l'origine de postMessage sur tous les composants PDF intégrés."
+        ],
+        "tags": [
+          "PDF",
+          "zero_day",
+          "RCE",
+          "injection_commande_OS",
+          "SSRF",
+          "XSS",
+          "path_traversal",
+          "Apryse_WebViewer",
+          "Foxit_PDF",
+          "entreprise",
+          "exfiltration_données",
+          "recherche_IA",
+          "TTPs"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/pdf-zero-day-vulnerabilities/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Pare-feux, la porte d’entrée de 90 % des ransomwares",
+        "description": "Le rapport mondial sur les menaces Managed XDR de Barracuda 2025 indique que 90 % des incidents de ransomware observés ont exploité des pare-feu, principalement en raison de logiciels non corrigés ou de comptes faibles. Les attaques peuvent être très rapides (Akira, 3 heures entre l'intrusion et le chiffrement). Le rapport souligne l'utilisation d'outils d'accès à distance légitimes, d'appareils non gérés, de comptes dormants et de chiffrements obsolètes (CVE-2013-2566) comme faiblesses courantes. Les attaques de la chaîne d'approvisionnement ont considérablement augmenté. Le mouvement latéral est un indicateur fort du déploiement imminent de ransomwares.",
+        "threat_actor": "Opérateurs de ransomware (général, ex: Akira)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190), Valid Accounts (T1078), Supply Chain Compromise (T1195)",
+          "Execution (TA0002) - Remote Services (T1021)",
+          "Persistence (TA0003)",
+          "Privilege Escalation (TA0004)",
+          "Defense Evasion (TA0005)",
+          "Lateral Movement (TA0008)",
+          "Impact (TA0040) - Data Encryptio for Impact (T1486) [Ransomware]"
+        ],
+        "analyse": "Ce rapport met en évidence le rôle critique des pare-feu comme points d'accès initiaux pour les ransomwares, souvent dû à des défaillances d'hygiène de base. La rapidité des attaques modernes par ransomware exige une détection et une réponse rapides. L'augmentation des incidents de la chaîne d'approvisionnement et l'exploitation de vulnérabilités obsolètes soulignent la nécessité d'une gestion complète de la posture de sécurité sur l'ensemble de la surface d'attaque.",
+        "recommandations": [
+          "Mettre en œuvre une gestion robuste des correctifs pour tous les appareils réseau, en particulier les pare-feu.",
+          "Appliquer des contrôles d'accès stricts et l'authentification multifacteur (MFA).",
+          "Effectuer des audits de sécurité réguliers des fournisseurs tiers.",
+          "Surveiller les activités inhabituelles sur les outils d'accès à distance et les signes de mouvement latéral.",
+          "Déprécier et supprimer activement les systèmes utilisant un chiffrement obsolète."
+        ],
+        "tags": [
+          "ransomware",
+          "pare_feu",
+          "accès_initial",
+          "chaîne_approvisionnement",
+          "logiciels_non_corrigés",
+          "comptes_faibles",
+          "Akira",
+          "mouvement_latéral",
+          "TTPs",
+          "hygiène_cybersécurité"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/pare-feux-la-porte-dentree-de-90-des-ransomwares/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Campagnes de ransomware exploitant rapidement les failles de SmarterMail (CVE-2026-24423, CVE-2026-23760)",
+        "description": "Des acteurs de la menace exploitent rapidement des vulnérabilités SmarterMail récemment divulguées (CVE-2026-24423 : RCE non authentifiée ; CVE-2026-23760 : CVSS 9.3, contournement d'authentification/réinitialisation de mot de passe) pour des campagnes de ransomware. Des canaux Telegram underground ont partagé des PoC et des identifiants admin volés quelques jours après la divulgation. Ces failles critiques permettent l'exécution de code à distance et le contournement d'authentification, conduisant à la prise de contrôle complète du serveur et au mouvement latéral au sein des réseaux d'entreprise. La CISA a ajouté CVE-2026-24423 à son catalogue KEV en raison de son exploitation active.",
+        "threat_actor": "Opérateurs de ransomware (général)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [Exécution de code à distance]",
+          "Credential Access (TA0006) - Brute Force (T1110) [Identifiants volés]",
+          "Defense Evasion (TA0005)",
+          "Persistence (TA0003)",
+          "Impact (TA0040) - Data Encryptio for Impact (T1486) [Ransomware]"
+        ],
+        "analyse": "La rapide transformation de ces vulnérabilités critiques de SmarterMail en armes met en évidence l'agilité des groupes de ransomware et l'importance d'une correction rapide, en particulier pour les infrastructures de messagerie exposées à Internet. La compromission des serveurs de messagerie fournit un point d'accès initial significatif pour le mouvement latéral et le contrôle total du réseau.",
+        "recommandations": [
+          "Appliquer immédiatement les correctifs SmarterMail vers la version 1.7.1 ou ultérieure.",
+          "Surveiller les serveurs de messagerie exposés au réseau pour détecter des signes d'exploitation, des tentatives d'accès inhabituelles ou un mouvement latéral.",
+          "Mettre en œuvre l'authentification multifacteur pour tous les comptes administrateur.",
+          "Examiner et renouveler régulièrement les identifiants."
+        ],
+        "tags": [
+          "SmarterMail",
+          "ransomware",
+          "CVE-2026-24423",
+          "CVE-2026-23760",
+          "RCE",
+          "contournement_authentification",
+          "serveur_messagerie",
+          "critique",
+          "exploitation",
+          "CISA_KEV",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/telegram-channels-expose-rapid-weaponization-of-smartermail-flaws/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Accélération de la confirmation des attaques APT avec Attack Discovery, Workflows et Agent Builder",
+        "description": "Elastic Security démontre comment ses fonctionnalités Attack Discovery, Workflows et Agent Builder peuvent détecter, corréler et confirmer automatiquement les attaques de niveau APT, comme Chrysalis, réduisant ainsi le temps de réponse des analystes. Cette approche transforme la chasse manuelle en confirmation automatisée, en tirant parti de l'automatisation alimentée par l'IA pour identifier les attaques coordonnées au milieu du bruit, vérifier les logiciels malveillants, rechercher dans les journaux et générer des réponses aux incidents.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (TA0005) - Obfuscated Files or Information (T1027)",
+          "Persistence (TA0003) - DLL Side-Loading (T1574.002)"
+        ],
+        "analyse": "Cet article souligne la dépendance croissante à l'IA et à l'automatisation dans les centres d'opérations de sécurité (SOC) pour lutter contre les APT rapides et sophistiquées. L'automatisation des flux de travail de détection, de corrélation et de réponse est cruciale pour égaler la vitesse des attaquants modernes et améliorer l'efficacité globale du SOC.",
+        "recommandations": [
+          "Investir dans des plateformes de détection et de réponse avancées avec l'automatisation alimentée par l'IA.",
+          "Mettre en œuvre une journalisation et une surveillance complètes.",
+          "Développer et tester des flux de travail automatisés pour la réponse aux incidents.",
+          "Améliorer les capacités de chasse aux menaces avec des outils assistés par l'IA."
+        ],
+        "tags": [
+          "APT",
+          "SOC",
+          "automatisation",
+          "AI",
+          "détection",
+          "réponse",
+          "Chrysalis",
+          "workflows",
+          "chasse_aux_menaces",
+          "opérations_sécurité",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/speeding-apt-attack-discovery-confirmation-with-attack-discovery-workflows-and-agent-builder"
+        ],
+        "date": "2026-02-19"
+      }
+    ]
+  },
+  "EN": {
+    "Cross-cutting analysis": {
+      "analyse": "The analysis of the articles reveals a complex and constantly evolving cyber threat landscape, marked by several key trends. Supply chain attacks remain a favored method for malicious actors, as evidenced by the compromise of Notepad++'s update systems by China-linked APT groups (Lotus Blossom) and the integration of backdoors (Keenadu) into Android firmware. Critical vulnerabilities in Dell RecoverPoint and Ivanti EPMM products, including zero-days, have been actively exploited by China-linked APTs (UNC6201), enabling persistent access and stealthy lateral movement within critical and virtual infrastructures. Speed of exploitation is also a crucial factor, with SmarterMail vulnerabilities rapidly weaponized into ransomware exploits via underground channels. Social engineering remains an effective technique for data breaches, such as the incident at Figure Technology Solutions. The misuse of AI is an emerging threat, with demonstrations of stealthy C2 communication via AI assistants and bugs (Copilot) bypassing data loss prevention policies. Numerous remote code execution (RCE) and authentication bypass vulnerabilities have been discovered in various products, highlighting the importance of proactive patch management. Finally, cybersecurity is increasingly intertwined with the geopolitical context, particularly the race for post-quantum cryptography between the US, China, and Europe, and the Sino-American rivalry in Africa for access to strategic resources.",
+      "date": "2026-02-19"
+    },
+    "Summary of malicious actors": [
+      {
+        "nom": "UNC6201",
+        "secteur": "Government, telecommunications, aviation, critical infrastructure, media, finance",
+        "modop": "Exploitation of zero-day vulnerabilities (e.g., CVE-2026-22769), use of hardcoded credentials, deployment of webshells (SLAYSTYLE) and backdoors (BRICKSTORM, GRIMBOLT), stealthy lateral movement (Ghost NICs) in VMware environments, supply chain exploitation (Notepad++).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "China",
+          "espionage",
+          "zero_day",
+          "supply_chain",
+          "RCE",
+          "lateral_movement"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/",
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Government, telecommunications, aviation, critical infrastructure, media",
+        "modop": "Supply chain compromise (Notepad++ update system), manipulation of XML update manifests, delivery of custom backdoors (Chrysalis) via DLL sideloading.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "China",
+          "espionage",
+          "supply_chain",
+          "backdoor",
+          "DLL_sideloading"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "GrayCharlie (aka SmartApeSG, ZPHP, HANEYMANEY)",
+        "secteur": "Various, with a focus on US law firms",
+        "modop": "Compromising WordPress sites via malicious JavaScript injection, redirecting to fake browser update pages or ClickFix lures, distributing NetSupport RAT, Stealc, and SectopRAT. Suspected supply chain compromise via a shared IT provider.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "malware_distribution",
+          "WordPress",
+          "supply_chain",
+          "social_engineering",
+          "NetSupport_RAT",
+          "Stealc",
+          "SectopRAT"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/graycharlie-hijacks-law-firm-sites-suspected-supply-chain-attack"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Keenadu operators",
+        "secteur": "Android mobile device users (consumers)",
+        "modop": "Pre-installation of Android backdoors in device firmware or hidden in system apps (supply chain compromise), distribution via official stores. Used for ad fraud (click bots), full remote control, credential theft, and malicious payload delivery. Uses valid digital signatures.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "malware",
+          "Android",
+          "ad_fraud",
+          "remote_control",
+          "credential_theft",
+          "supply_chain"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188147/malware/keenadu-backdoor-found-preinstalled-on-android-devices-powers-ad-fraud-campaign.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Rhysida",
+        "secteur": "Tribal government (Oklahoma Cheyenne and Arapaho Tribes)",
+        "modop": "Ransomware attacks.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "extortion"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems/?pk_campaign=feed&pk_kwd=oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "nom": "Matthew A. Akande",
+        "secteur": "Tax preparation firms, government tax services",
+        "modop": "Phishing attacks, computer intrusions (Warzone RAT), stealing Personally Identifiable Information (PII), filing fraudulent tax returns.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "phishing",
+          "data_theft",
+          "fraud",
+          "Warzone_RAT"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/nigerian-man-sentenced-to-eight-years-in-prison-for-computer-intrusion-and-theft/?pk_campaign=feed&pk_kwd=nigerian-man-sentenced-to-eight-years-in-prison-for-computer-intrusion-and-theft"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Summary of geopolitical news": [
+      {
+        "secteur": "International, technology, defense, economy",
+        "theme": "Post-Quantum Cryptography Race and Digital Sovereignty",
+        "description": "The quantum revolution threatens to render current encryption obsolete, disrupting geopolitical balances. The United States and China are investing heavily to dominate quantum cryptography, seen as the 'nuclear of the 21st century.' Europe significantly lags, posing major risks to its digital and economic sovereignty and the protection of its critical infrastructure. The challenge is to protect public, private, and critical data, particularly in the financial, space, and military sectors, against the decryption power of quantum algorithms.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "quantum",
+          "cryptography",
+          "PQC",
+          "sovereignty",
+          "Europe",
+          "United_States",
+          "China",
+          "critical_infrastructure",
+          "defense"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/normes-conformite-et-post-quantique-le-droit-a-lepreuve-des-ruptures-technologiques-1-3-la-course-au-quantique/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "International, foreign policy, economy, defense",
+        "theme": "Sino-American Rivalry in Africa and Implications for Europe",
+        "description": "China announced the elimination of tariffs for 53 African countries starting May 1, 2026, solidifying its position as Africa's top economic partner amid growing rivalry with the United States. Washington, under the Trump administration, imposed additional tariffs and seeks to secure strategic mineral supplies. Africa is a geopolitical competition ground where the US prioritizes resource security and containing Chinese influence, while China focuses on trade integration and investments. The European Union aims to position itself as a stabilizing partner via the Global Gateway initiative.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Africa",
+          "China",
+          "United_States",
+          "Europe",
+          "trade",
+          "strategic_resources",
+          "diplomacy",
+          "economy"
+        ],
+        "sources": [
+          "https://www.iris-france.org/droits-de-douane-lafrique-au-coeur-de-la-rivalite-sino-americaine/",
+          "https://www.iris-france.org/trump-et-lafrique-avec-niagale-bagayoko-entretiens-geopo/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "International, defense, diplomacy",
+        "theme": "Transatlantic Security and Munich Conference",
+        "description": "The 2026 Munich Security Conference highlighted the state of transatlantic relations, with the United States urging Europe to take greater responsibility for its own defense. US Secretary of State Marco Rubio's speech emphasized the need to reform international institutions while questioning the cornerstones of the transatlantic relationship. Europe must strengthen its defense capabilities, build democratic resilience, and maintain its support for Ukraine, which is at the heart of security issues and peace negotiations. US policies could also influence European political stability.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "transatlantic_security",
+          "Europe",
+          "United_States",
+          "Ukraine",
+          "defense",
+          "diplomacy",
+          "Munich_Conference"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/barometer-check-transatlantic-security-and-munich-security-conference",
+          "https://www.iris-france.org/conference-de-munich-illusions-europeennes-les-mardis-de-liris/"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Summary of data breaches": [
+      {
+        "secteur": "Finance, technology (Fintech)",
+        "victime": "Figure Technology Solutions",
+        "description": "Hackers stole personal and contact information from nearly 1 million accounts (967,200) of the fintech company Figure Technology Solutions. Exposed data dates back to January 2026 and includes unique email addresses, names, phone numbers, physical addresses, and dates of birth. The incident is attributed to a social engineering attack where an employee was tricked into providing access.",
+        "tags": [
+          "violation",
+          "breach",
+          "fintech",
+          "personal_data",
+          "social_engineering",
+          "Figure_Technology_Solutions",
+          "data_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/data-breach-at-fintech-firm-figure-affects-nearly-1-million-accounts/",
+          "https://haveibeenpwned.com/Breach/Figure"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "Finance, government",
+        "victime": "French Ministry of Economy (national bank account database)",
+        "description": "A hacker gained access to data from 1.2 million French bank accounts using stolen official credentials. The breach allowed viewing information such as account numbers, account holder identities, addresses, and in some cases, tax numbers. No information on balances or transactions was accessed. Risks include unauthorized direct debits using RIBs and more credible phishing attempts.",
+        "tags": [
+          "violation",
+          "breach",
+          "finance",
+          "government",
+          "bank_data",
+          "stolen_credentials",
+          "France",
+          "hacking"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188200/hacking/french-ministry-confirms-data-access-to-1-2-million-bank-accounts.html",
+          "https://www.lemonde.fr/pixels/article/2026/02/18/piratage-du-fichier-national-des-comptes-bancaires-quels-risques-et-comment-s-en-proteger_6667313_4408996.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "secteur": "Tribal government",
+        "victime": "Oklahoma Cheyenne and Arapaho Tribes",
+        "description": "The Cheyenne and Arapaho Tribes of Oklahoma suffered a ransomware attack that forced a shutdown of their tribal computer networks, disrupting email and phone services. The incident temporarily suspended some operations. The Rhysida ransomware group claimed responsibility for the attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "ransomware",
+          "Rhysida",
+          "Oklahoma",
+          "system_disruption"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/18/oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems/?pk_campaign=feed&pk_kwd=oklahoma-cheyenne-and-arapaho-tribes-say-ransomware-disrupted-tribal-systems"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Summary of vulnerabilities": [
+      {
+        "cve_id": "CVE-2026-2686",
+        "cvss": "10.0",
+        "product": "SECCN Dingcheng G10",
+        "description": "OS command injection via manipulation of the 'User' argument in the /cgi-bin/session_login.cgi file, allowing remote code execution. The attack is possible remotely and a public exploit has been disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SECCN_Dingcheng_G10",
+          "command_injection",
+          "RCE",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2686"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-22769",
+        "cvss": "10.0",
+        "product": "Dell RecoverPoint for Virtual Machines",
+        "description": "Hardcoded credential vulnerability allowing an unauthenticated remote attacker to gain unauthorized access to the underlying operating system with root-level persistence. Actively exploited by a China-linked APT group (UNC6201).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Dell_RecoverPoint",
+          "hardcoded_credentials",
+          "RCE",
+          "zero_day",
+          "active_exploitation",
+          "APT",
+          "UNC6201"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-27180",
+        "cvss": "9.8",
+        "product": "MajorDoMo (aka Major Domestic Module)",
+        "description": "Unauthenticated remote code execution (RCE) via supply chain compromise through update URL poisoning. An attacker can deploy arbitrary PHP files, including webshells, to the webroot.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "MajorDoMo",
+          "RCE",
+          "supply_chain",
+          "update_URL_poisoning",
+          "unauthenticated",
+          "webshell"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-27180"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-23760",
+        "cvss": "9.3",
+        "product": "SmarterMail",
+        "description": "Authentication bypass and password reset logic flaw, allowing attackers to reset administrator credentials or gain privileged access. Actively exploited in ransomware campaigns.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "SmarterMail",
+          "authentication_bypass",
+          "password_reset",
+          "active_exploitation",
+          "ransomware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/telegram-channels-expose-rapid-weaponization-of-smartermail-flaws/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2329",
+        "cvss": "9.3",
+        "product": "Grandstream GXP1600 series VoIP phones",
+        "description": "Unauthenticated stack-based buffer overflow in the web API service, allowing remote code execution (RCE) with root privileges. Can lead to credential theft and VoIP call interception.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Grandstream_VoIP",
+          "RCE",
+          "buffer_overflow",
+          "unauthenticated",
+          "credential_theft",
+          "VoIP_interception"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
+          "https://www.security.nl/posting/925322/Lek+in+Grandstream+VoiP-telefoons+laat+aanvaller+gesprekken+afluisteren?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-25548",
+        "cvss": "9.1",
+        "product": "InvoicePlane",
+        "description": "Critical Remote Code Execution (RCE) vulnerability in InvoicePlane 1.7.0 through a chained Local File Inclusion (LFI) and Log Poisoning attack. An authenticated administrator can execute arbitrary system commands.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "InvoicePlane",
+          "RCE",
+          "LFI",
+          "log_poisoning",
+          "authenticated"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-25548"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2650",
+        "cvss": "8.8",
+        "product": "Google Chrome",
+        "description": "Heap buffer overflow in the Media component of Google Chrome (prior to 145.0.7632.109), potentially allowing a remote attacker to exploit heap corruption via a crafted HTML page.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "heap_buffer_overflow",
+          "RCE",
+          "memory_corruption",
+          "browser"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2650"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2649",
+        "cvss": "8.8",
+        "product": "Google Chrome V8",
+        "description": "Integer overflow in V8 in Google Chrome (prior to 145.0.7632.109), potentially allowing a remote attacker to exploit heap corruption via a crafted HTML page.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Google_Chrome",
+          "V8",
+          "integer_overflow",
+          "RCE",
+          "memory_corruption",
+          "browser"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2649"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-27182",
+        "cvss": "8.4",
+        "product": "Saturn Remote Mouse Server",
+        "description": "Command injection vulnerability allowing unauthenticated attackers on the local network to execute arbitrary commands by sending specially crafted UDP JSON frames to port 27000.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Saturn_Remote_Mouse_Server",
+          "command_injection",
+          "RCE",
+          "unauthenticated",
+          "local_network"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-27182"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "cve_id": "CVE-2026-2670",
+        "cvss": "8.3",
+        "product": "Advantech WISE-6610",
+        "description": "OS command injection via manipulation of the 'delete_file' argument in the /cgi-bin/luci/admin/openvpn_apply file of the Background Management component. The attack can be executed remotely.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Advantech_WISE-6610",
+          "command_injection",
+          "RCE",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2670"
+        ],
+        "date": "2026-02-19"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Accelerating APT Attack Confirmation with Attack Discovery, Workflows, and Agent Builder",
+        "description": "Elastic Security demonstrates how its Attack Discovery, Workflows, and Agent Builder features can automatically detect, correlate, and confirm APT-level attacks, such as Chrysalis, thereby reducing analyst response time. This approach transforms manual hunting into automated confirmation, leveraging AI-powered automation to identify coordinated attacks amidst noise, verify malware, search logs, and generate incident responses.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Defense Evasion (TA0005) - Obfuscated Files or Information (T1027)",
+          "Persistence (TA0003) - DLL Side-Loading (T1574.002)"
+        ],
+        "analyse": "This article highlights the increasing reliance on AI and automation in Security Operations Centers (SOCs) to combat fast-moving and sophisticated APTs. Automating detection, correlation, and response workflows is crucial for matching the speed of modern attackers and improving overall SOC efficiency and effectiveness.",
+        "recommandations": [
+          "Invest in advanced detection and response platforms with AI-powered automation.",
+          "Implement comprehensive logging and monitoring.",
+          "Develop and test automated workflows for incident response.",
+          "Enhance threat hunting capabilities with AI-assisted tools."
+        ],
+        "tags": [
+          "APT",
+          "SOC",
+          "automation",
+          "AI",
+          "detection",
+          "response",
+          "Chrysalis",
+          "workflows",
+          "threat_hunting",
+          "security_operations",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/speeding-apt-attack-discovery-confirmation-with-attack-discovery-workflows-and-agent-builder"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "AI platforms can be abused for stealthy malware communication",
+        "description": "Check Point demonstrated the potential to abuse AI assistants (such as Grok and Microsoft Copilot) with web browsing capabilities for covert command-and-control (C2) communication of malware. This method allows malware to stealthily communicate with an AI web interface, instructing it to fetch an attacker-controlled URL and receive the response via the AI's output, bypassing traditional defenses through encrypted data.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Command and Control (TA0011)",
+          "Application Layer Protocol (T1071)",
+          "Web Protocols (T1071.001)"
+        ],
+        "analyse": "This research highlights a new, potentially very stealthy C2 communication technique, leveraging trusted AI services. This complicates detection by SOCs and poses significant challenges for organizations using AI assistants, which could become unsuspected vectors for attackers.",
+        "recommandations": [
+          "Implement robust monitoring of AI service interactions, especially for outbound connections initiated by AI agents.",
+          "Enhance content filtering for encrypted or high-entropy data within AI outputs.",
+          "Educate users on the potential misuse of AI tools for malicious purposes."
+        ],
+        "tags": [
+          "AI",
+          "C2",
+          "malware",
+          "stealth",
+          "web_interfaces",
+          "research",
+          "copilot",
+          "grok",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ai-platforms-can-be-abused-for-stealthy-malware-communication/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "China-linked APT (UNC6201) exploiting Dell RecoverPoint zero-day (CVE-2026-22769)",
+        "description": "A suspected China-linked APT group (UNC6201) has been exploiting a critical zero-day vulnerability (CVE-2026-22769, CVSS 10.0) in Dell RecoverPoint for Virtual Machines since mid-2024. This flaw, due to hardcoded credentials, allows an unauthenticated remote attacker to gain root access. Attackers deploy webshells (SLAYSTYLE) and backdoors (BRICKSTORM, GRIMBOLT), using stealthy tactics like 'Ghost NICs' for lateral movement in VMware environments and Single Packet Authorization.",
+        "threat_actor": "UNC6201 (suspected China-linked APT, overlaps with UNC5221, possibly Silk Typhoon)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Valid Accounts (T1078) [Hardcoded credentials]",
+          "Persistence (TA0003) - Boot or Logon Autostart Execution (T1547)",
+          "Lateral Movement (TA0008) - Remote Services (T1021) [VMware pivoting, Ghost NICs]",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071), Custom Command and Control Protocol (T1573) [SLAYSTYLE, BRICKSTORM, GRIMBOLT]",
+          "Defense Evasion (TA0005) [Ghost NICs, UPX packing, Native AOT compilation]",
+          "Discovery (TA0007)"
+        ],
+        "analyse": "This sophisticated and persistent espionage campaign targets critical virtual infrastructure. The use of zero-days, hardcoded credentials, and stealthy lateral movement techniques (Ghost NICs, SPA) indicates advanced capabilities and a focus on long-term, covert access. The impact is high on targeted organizations, particularly in government, telecom, and critical infrastructure sectors.",
+        "recommandations": [
+          "Immediately apply Dell patches for CVE-2026-22769.",
+          "Implement robust credential management, avoiding hardcoded values.",
+          "Monitor VMware environments for unusual network interfaces or traffic patterns ('Ghost NICs').",
+          "Deploy EDR/XDR solutions capable of detecting advanced backdoors and lateral movement.",
+          "Use YARA rules for BRICKSTORM, GRIMBOLT, and SLAYSTYLE."
+        ],
+        "tags": [
+          "APT",
+          "China",
+          "zero_day",
+          "Dell",
+          "RecoverPoint",
+          "UNC6201",
+          "BRICKSTORM",
+          "GRIMBOLT",
+          "SLAYSTYLE",
+          "supply_chain",
+          "espionage",
+          "critical_infrastructure",
+          "VMware",
+          "TTPs"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188176/apt/china-linked-apt-weaponized-dell-recoverpoint-zero-day-since-2024.html",
+          "https://socprime.com/blog/cve-2026-22769-vulnerability/",
+          "https://www.helpnetsecurity.com/2026/02/18/exploited-dell-zero-day-cve-2026-22769-brickstorm-grimbolt/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Critical Ivanti EPMM Zero-Day Vulnerabilities Exploited in The Wild Targeting Corporate Networks",
+        "description": "Two critical zero-day vulnerabilities (CVE-2026-1281 and CVE-2026-1340) in Ivanti Endpoint Manager Mobile (EPMM) are actively exploited, allowing unauthenticated attackers to execute arbitrary code remotely. These flaws grant complete control over mobile device management (MDM) infrastructure, leading to reverse shells, webshells, reconnaissance, and malware deployment. Exploitation has been observed since summer 2025, targeting government, healthcare, manufacturing, and professional services sectors globally.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [Arbitrary code execution]",
+          "Persistence (TA0003) - Server Software Component (T1505) [Web Shells]",
+          "Discovery (TA0007) - System Information Discovery (T1082)",
+          "Command and Control (TA0011) - Standard Application Layer Protocol (T1071.001) [Reverse Shells]"
+        ],
+        "analyse": "These zero-day exploits on Ivanti EPMM represent a severe threat to enterprise mobility management, potentially compromising an organization's entire fleet of managed mobile devices and providing persistent access to internal networks. The long period of exploitation (since summer 2025) suggests sophisticated attackers focused on stealth and long-term compromise.",
+        "recommandations": [
+          "Immediately apply all available patches for Ivanti EPMM.",
+          "Conduct thorough forensic investigations (DFIR) for signs of compromise dating back to summer 2025.",
+          "Monitor MDM infrastructure for unauthorized access, unusual activity, or deployed webshells.",
+          "Implement strong network segmentation for MDM servers."
+        ],
+        "tags": [
+          "Ivanti",
+          "EPMM",
+          "zero_day",
+          "RCE",
+          "CVE-2026-1281",
+          "CVE-2026-1340",
+          "critical",
+          "exploitation",
+          "MDM",
+          "government",
+          "healthcare",
+          "manufacturing",
+          "professional_services",
+          "TTPs"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/critical-ivanti-epmm-zero-day-vulnerabilities/",
+          "https://www.security.nl/posting/925342/%27Kritieke+Ivanti-kwetsbaarheid+sinds+zomer+vorig+jaar+misbruikt+bij+aanvallen%27?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "End-to-end update verification arrives in Notepad++ with version 8.9.2 (Notepad++ update system hijacked by China-linked APT Lotus Blossom - Chrysalis Backdoor)",
+        "description": "A China-linked APT group (Lotus Blossom) compromised Notepad++'s hosting infrastructure (June-December 2025) to hijack its update system. Attackers manipulated XML update manifests and redirected traffic to malicious servers, using GUP (Get Update Program) to deliver a custom backdoor called Chrysalis. The attack abused DLL sideloading via a renamed Bitdefender binary. Notepad++ version 8.9.2 now introduces end-to-end cryptographic verification for update manifests and installers to mitigate this supply chain attack. CVE-2026-25926 (CVSS 7.3), an unsafe search path vulnerability, was also patched.",
+        "threat_actor": "Lotus Blossom (China-linked APT)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Supply Chain Compromise (T1195) [Update system hijacking]",
+          "Execution (TA0002)",
+          "Persistence (TA0003) - DLL Side-Loading (T1574.002)",
+          "Command and Control (TA0011) [Chrysalis backdoor]",
+          "Defense Evasion (TA0005) - Obfuscated Files or Information (T1027)",
+          "Discovery (TA0007) - System Information Discovery (T1082)"
+        ],
+        "analyse": "This highly targeted supply chain attack demonstrates sophisticated methods by a nation-state actor to compromise trusted software update mechanisms for long-term espionage. The use of custom backdoors and obfuscation highlights the challenges in detecting advanced persistent threats. The remediation improves software supply chain security.",
+        "recommandations": [
+          "Immediately upgrade Notepad++ to version 8.9.2 or later.",
+          "Remove deprecated self-signed certificates.",
+          "Implement strict software supply chain security practices, including cryptographic verification of all updates and components.",
+          "Monitor for unusual update traffic or attempts to load unsigned executables/DLLs."
+        ],
+        "tags": [
+          "Notepad++",
+          "supply_chain",
+          "APT",
+          "China",
+          "Lotus_Blossom",
+          "Chrysalis",
+          "backdoor",
+          "DLL_sideloading",
+          "update_hijacking",
+          "espionage",
+          "TTPs",
+          "CVE-2026-25926"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/notepad-version-8.9.2",
+          "https://securityaffairs.com/188192/hacking/notepad-patches-flaw-used-to-hijack-update-system.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Grandstream GXP1600 VoIP Phones Exposed to Unauthenticated Remote Code Execution (CVE-2026-2329)",
+        "description": "A critical vulnerability (CVE-2026-2329, CVSS 9.3) in Grandstream GXP1600 series VoIP phones allows unauthenticated remote code execution (RCE) with root privileges. This stack-based buffer overflow in the web-based API service (\"/cgi-bin/api.values.get\") can lead to credential theft and call interception by reconfiguring the device to use a malicious SIP proxy.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [RCE]",
+          "Credential Access (TA0006) - OS Credential Dumping (T1003)",
+          "Impact (TA0040) - Data Exfiltration (T1041) [VoIP call interception]"
+        ],
+        "analyse": "This vulnerability poses a significant risk for organizations using vulnerable Grandstream VoIP phones, especially if exposed to the internet. Successful exploitation could lead to sensitive communication interception, data theft, and full device compromise, impacting confidentiality and integrity.",
+        "recommandations": [
+          "Immediately apply firmware updates from Grandstream.",
+          "Minimize network exposure of VoIP devices and isolate them behind firewalls.",
+          "Implement strong network segmentation for voice networks.",
+          "Monitor for unusual SIP proxy configurations or outbound traffic from VoIP devices."
+        ],
+        "tags": [
+          "Grandstream",
+          "VoIP",
+          "RCE",
+          "buffer_overflow",
+          "CVE-2026-2329",
+          "unauthenticated",
+          "critical",
+          "network_device",
+          "TTPs"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/grandstream-gxp1600-voip-phones-exposed.html",
+          "https://www.security.nl/posting/925322/Lek+in+Grandstream+VoiP-telefoons+laat+aanvaller+gesprekken+afluisteren?channel=rss"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "GrayCharlie Hijacks Law Firm Sites in Suspected Supply-Chain Attack",
+        "description": "GrayCharlie (aka SmartApeSG), a threat actor active since mid-2023, compromises WordPress sites, injecting malicious JavaScript to redirect visitors to fake browser update pages or ClickFix lures, delivering NetSupport RAT. Infections often escalate to Stealc and SectopRAT. A cluster of US law firm sites was compromised, possibly via a supply-chain attack involving a shared IT provider (e.g., SMB Team). The group targets organizations worldwide, with a focus on the US, for data theft and financial gain.",
+        "threat_actor": "GrayCharlie (SmartApeSG, ZPHP, HANEYMANEY)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [
+            "joiner.best",
+            "persistancejs.store",
+            "signaturepl.com",
+            "filmlerzltyazilimsx.shop",
+            "vimsltd.com"
+          ],
+          "EMAIL": [
+            "oreshnik[@]mailum.com"
+          ],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [
+            "31804c48f9294c9fa7c165c89e487bfbebeda6daf3244ad30b93122bf933c79c",
+            "59e7e7698d77531bfbfea4739d29c14e188b5d3109f63881b9bcc87c72e9de78",
+            "5f1bd92ad6edea67762c7101cb810dc28fd861f7b8c62e6459226b7ea54e1428"
+          ],
+          "IPv4": [
+            "94.158.245.135",
+            "94.158.245.174",
+            "94.158.245.56",
+            "5.181.156.234",
+            "85.158.110.179"
+          ],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Drive-by Compromise (T1187), Supply Chain Compromise (T1195)",
+          "Execution (TA0002) - User Execution (T1204) [Fake browser updates, ClickFix]",
+          "Persistence (TA0003) - Registry Run Keys / Startup Folder (T1547.001)",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071) [NetSupport RAT C2]",
+          "Defense Evasion (TA0005) - DLL Side-Loading (T1574.002) [Sectop RAT]",
+          "Collection (TA0009) - Data from Local System (T1005)",
+          "Exfiltration (TA0010)"
+        ],
+        "analyse": "This ongoing campaign demonstrates persistent threat actor activity leveraging common web vulnerabilities and social engineering. The focus on law firms suggests potential for high-value data theft (client information, intellectual property). The suspected supply chain vector through a shared IT provider is a significant risk multiplier.",
+        "recommandations": [
+          "Implement robust patch management for WordPress and plugins.",
+          "Block known IoCs.",
+          "Deploy advanced email filtering and web proxies.",
+          "Monitor for unusual JavaScript injections on websites.",
+          "Educate users about fake browser updates and ClickFix lures.",
+          "Implement strong network segmentation to limit lateral movement."
+        ],
+        "tags": [
+          "GrayCharlie",
+          "SmartApeSG",
+          "WordPress",
+          "supply_chain",
+          "malware",
+          "NetSupport_RAT",
+          "Stealc",
+          "SectopRAT",
+          "fake_updates",
+          "ClickFix",
+          "law_firms",
+          "data_theft",
+          "financial_gain",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/research/graycharlie-hijacks-law-firm-sites-suspected-supply-chain-attack"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Keenadu backdoor found preinstalled on Android devices, powers Ad fraud campaign",
+        "description": "Kaspersky discovered Keenadu, an Android backdoor preinstalled in device firmware or hidden in system apps, also distributed via official stores. It functions as a multi-stage loader for ad fraud (click bots), full remote control, credential theft, and malicious payload delivery. The use of valid digital signatures and pre-installation suggests a supply chain compromise affecting multiple vendors, bypassing Android permissions.",
+        "threat_actor": "Keenadu operators (ad fraud, remote control, credential theft group)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Supply Chain Compromise (T1195) [Pre-installed firmware]",
+          "Persistence (TA0003) - Boot or Logon Autostart Execution (T1547) [Injects into Zygote process]",
+          "Privilege Escalation (TA0004) - Bypass User Account Control (T1548) [Bypasses Android permissions]",
+          "Command and Control (TA0011) - Application Layer Protocol (T1071)",
+          "Collection (TA0009) - Data from Local System (T1005) [Credential theft, device data]",
+          "Impact (TA0040) - Resource Hijacking (T1496) [Ad fraud, click bots]"
+        ],
+        "analyse": "This highly stealthy Android backdoor poses a significant threat to mobile users, especially due to its supply chain compromise nature and ability to bypass standard security measures. The delayed payload delivery (2.5 months) indicates sophisticated operational security. It highlights the risk of pre-installed malware on consumer devices.",
+        "recommandations": [
+          "Users should source devices from trusted vendors and check for integrity.",
+          "Organizations should implement mobile device management (MDM) solutions with strong security policies and perform regular integrity checks on Android devices.",
+          "Monitor for unusual app behavior, network traffic, or unexpected system app modifications."
+        ],
+        "tags": [
+          "Keenadu",
+          "Android",
+          "backdoor",
+          "malware",
+          "ad_fraud",
+          "remote_control",
+          "credential_theft",
+          "supply_chain",
+          "preinstalled",
+          "firmware",
+          "mobile",
+          "TTPs"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188147/malware/keenadu-backdoor-found-preinstalled-on-android-devices-powers-ad-fraud-campaign.html"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "16 Zero-Day Vulnerabilities in Popular PDF Platforms Enable Code Execution and Data Exfiltration",
+        "description": "16 zero-day vulnerabilities, including a critical OS Command Injection (CVSS 9.8 in Foxit PDF SDK for Web), SSRF (CVE-2025-70400), DOM-based XSS (CVE-2025-70401), and Path Traversal flaws, were discovered across Apryse WebViewer and Foxit PDF cloud services. These flaws allow code execution and data exfiltration, affecting millions of enterprise users. The discovery combined human intuition with an AI agent swarm for systematic coverage.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [OS Command Injection]",
+          "Impact (TA0040) - Data Exfiltration (T1041)",
+          "Defense Evasion (TA0005)"
+        ],
+        "analyse": "This extensive set of zero-day vulnerabilities in widely used PDF platforms poses a broad and significant risk for enterprise users. The nature of these flaws (RCE, SSRF, XSS, Path Traversal) indicates potential for severe impact on data confidentiality, integrity, and system control. The use of AI for discovery highlights evolving threat research capabilities.",
+        "recommandations": [
+          "Immediately apply patches for Apryse WebViewer and Foxit PDF SDK for Web.",
+          "Audit server-side signature server deployments for missing input validation.",
+          "Enforce strict Content-Security-Policy and postMessage origin validation across all embedded PDF components."
+        ],
+        "tags": [
+          "PDF",
+          "zero_day",
+          "RCE",
+          "OS_command_injection",
+          "SSRF",
+          "XSS",
+          "path_traversal",
+          "Apryse_WebViewer",
+          "Foxit_PDF",
+          "enterprise",
+          "data_exfiltration",
+          "AI_research",
+          "TTPs"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/pdf-zero-day-vulnerabilities/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Ransomware 2025: Firewalls as Entry Point for 90% of Attacks",
+        "description": "Barracuda's Managed XDR Global Threat Report 2025 indicates that 90% of observed ransomware incidents exploited firewalls, primarily through unpatched software or weak accounts. Attacks can be very rapid (e.g., Akira, 3 hours from intrusion to encryption). The report highlights the use of legitimate remote access tools, unmanaged devices, dormant accounts, and outdated encryption (CVE-2013-2566) as common weaknesses. Supply chain attacks increased significantly. Lateral movement is a strong indicator of impending ransomware deployment.",
+        "threat_actor": "Ransomware operators (general, e.g., Akira)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190), Valid Accounts (T1078), Supply Chain Compromise (T1195)",
+          "Execution (TA0002) - Remote Services (T1021)",
+          "Persistence (TA0003)",
+          "Privilege Escalation (TA0004)",
+          "Defense Evasion (TA0005)",
+          "Lateral Movement (TA0008)",
+          "Impact (TA0040) - Data Encryptio for Impact (T1486) [Ransomware]"
+        ],
+        "analyse": "This report emphasizes the critical role of firewalls as initial access points for ransomware, often due to basic hygiene failures. The speed of modern ransomware attacks demands rapid detection and response. The increase in supply chain incidents and the exploitation of outdated vulnerabilities underscore the need for comprehensive security posture management across the attack surface.",
+        "recommandations": [
+          "Implement robust patch management for all network devices, especially firewalls.",
+          "Enforce strong access controls and multi-factor authentication (MFA).",
+          "Conduct regular security audits of third-party vendors.",
+          "Monitor for unusual activity on remote access tools and signs of lateral movement.",
+          "Actively deprecate and remove systems using obsolete encryption."
+        ],
+        "tags": [
+          "ransomware",
+          "firewall",
+          "initial_access",
+          "supply_chain",
+          "unpatched_software",
+          "weak_accounts",
+          "Akira",
+          "lateral_movement",
+          "TTPs",
+          "cybersecurity_hygiene"
+        ],
+        "sources": [
+          "https://www.datasecuritybreach.fr/pare-feux-la-porte-dentree-de-90-des-ransomwares/"
+        ],
+        "date": "2026-02-19"
+      },
+      {
+        "title": "Ransomware Campaigns Rapidly Leveraging SmarterMail Vulnerabilities (CVE-2026-24423, CVE-2026-23760)",
+        "description": "Threat actors are rapidly weaponizing recently disclosed SmarterMail vulnerabilities (CVE-2026-24423: unauthenticated RCE; CVE-2026-23760: CVSS 9.3, authentication bypass/password reset) for ransomware campaigns. Underground Telegram channels shared PoCs and stolen admin credentials within days of disclosure. These critical flaws allow remote code execution and authentication bypass, leading to full server takeover and lateral movement within corporate networks. CISA added CVE-2026-24423 to its KEV catalog due to active exploitation.",
+        "threat_actor": "Ransomware operators (general)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Initial Access (TA0001) - Exploit Public-Facing Application (T1190)",
+          "Execution (TA0002) - Command and Scripting Interpreter (T1059) [Remote Code Execution]",
+          "Credential Access (TA0006) - Brute Force (T1110) [Stolen credentials]",
+          "Defense Evasion (TA0005)",
+          "Persistence (TA0003)",
+          "Impact (TA0040) - Data Encryptio for Impact (T1486) [Ransomware]"
+        ],
+        "analyse": "The rapid weaponization of these critical SmarterMail vulnerabilities highlights the agility of ransomware groups and the importance of timely patching, especially for internet-facing email infrastructure. Compromise of email servers provides a significant initial access point for lateral movement and full network control.",
+        "recommandations": [
+          "Immediately apply SmarterMail patches to version 1.7.1 or later.",
+          "Monitor network-exposed email servers for signs of exploitation, unusual access attempts, or lateral movement.",
+          "Implement multi-factor authentication for all administrator accounts.",
+          "Regularly review and rotate credentials."
+        ],
+        "tags": [
+          "SmarterMail",
+          "ransomware",
+          "CVE-2026-24423",
+          "CVE-2026-23760",
+          "RCE",
+          "authentication_bypass",
+          "email_server",
+          "critical",
+          "exploitation",
+          "CISA_KEV",
+          "TTPs"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/telegram-channels-expose-rapid-weaponization-of-smartermail-flaws/"
+        ],
+        "date": "2026-02-19"
+      }
+    ]
+  }
+}
