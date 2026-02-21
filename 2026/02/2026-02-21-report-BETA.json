@@ -1,0 +1,443 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cybersecurity landscape as of February 21, 2026, is dominated by the critical exploitation of zero-day vulnerabilities in enterprise edge solutions, specifically BeyondTrust (CVE-2026-1731) and Dell RecoverPoint (CVE-2026-22769), which are being leveraged by both state-sponsored actors (China-nexus) and ransomware groups. Simultaneously, a massive wave of identity data breaches is reaching unprecedented scales, highlighted by the leak of 1 to 3 billion records from IDMerit and 1.2 million banking records from France's FICOBA registry. The report also marks a technological shift with the emergence of PromptSpy, the first known Android malware exploiting generative AI (Google Gemini) for persistence, and a significant judicial crackdown on North Korean IT worker schemes used to fund prohibited weapons programs.",
+      "fr": "Le paysage de la cybersécurité au 21 février 2026 est dominé par l'exploitation critique de vulnérabilités zero-day dans les solutions d'infrastructure d'entreprise, notamment BeyondTrust (CVE-2026-1731) et Dell RecoverPoint (CVE-2026-22769), utilisées à la fois par des acteurs étatiques (liés à la Chine) et des groupes de ransomware. Parallèlement, une vague massive de violations de données d'identité atteint des échelles sans précédent, illustrée par la fuite de 1 à 3 milliards de dossiers chez IDMerit et de 1,2 million de dossiers bancaires du registre français FICOBA. Le rapport note également un tournant technologique avec l'émergence de PromptSpy, le premier malware Android connu exploitant l'IA générative (Google Gemini) pour sa persistance, ainsi qu'un coup d'arrêt judiciaire majeur porté aux réseaux de travailleurs IT nord-coréens finançant des programmes d'armement interdits."
+    },
+    "date": "2026-02-21"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Silk Typhoon",
+      "campaign": "BeyondTrust & Dell Exploitation",
+      "campaign_description": {
+        "en": "China-nexus group observed exploiting critical flaws in BeyondTrust Remote Support and Dell RecoverPoint for cyber espionage and lateral movement.",
+        "fr": "Groupe lié à la Chine observé exploitant des failles critiques dans BeyondTrust Remote Support et Dell RecoverPoint pour de l'espionnage et des mouvements latéraux."
+      },
+      "sector": {
+        "en": "Financial Services, Legal, Healthcare, Government",
+        "fr": "Services financiers, Juridique, Santé, Gouvernement"
+      },
+      "modop": {
+        "en": "Exploitation of CVE-2026-1731 and CVE-2026-22769 to deploy Grimbolt and Brickstorm backdoors, and the use of 'Ghost NICs' on VMs to bypass detection.",
+        "fr": "Exploitation des failles CVE-2026-1731 et CVE-2026-22769 pour déployer les backdoors Grimbolt et Brickstorm, et utilisation de 'Ghost NICs' sur des VM pour contourner la détection."
+      },
+      "tags": [
+        "China-nexus",
+        "Zero-day",
+        "Espionage",
+        "UNC6201"
+      ],
+      "sources": [
+        "https://go.theregister.com/feed/www.theregister.com/2026/02/20/cisa_dell_vulnerability/",
+        "https://thehackernews.com/2026/02/beyondtrust-flaw-used-for-web-shells.html"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "threat_actor": "Lapsus$",
+      "campaign": "Adidas Partner Breach",
+      "campaign_description": {
+        "en": "Claimed theft of 815,000 records from an Adidas third-party martial arts partner.",
+        "fr": "Revendication du vol de 815 000 enregistrements auprès d'un partenaire d'arts martiaux tiers d'Adidas."
+      },
+      "sector": {
+        "en": "Retail, Sportswear",
+        "fr": "Commerce de détail, Articles de sport"
+      },
+      "modop": {
+        "en": "Data exfiltration via third-party compromise.",
+        "fr": "Exfiltration de données via la compromission d'un tiers."
+      },
+      "tags": [
+        "Lapsus$",
+        "Extortion",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.theregister.com/2026/02/18/adidas_investigates_thirdparty_data_breach/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "threat_actor": "Tren de Aragua",
+      "campaign": "ATM Jackpotting Surge 2025",
+      "campaign_description": {
+        "en": "A massive ATM jackpotting scheme using Ploutus malware to steal over $20 million in the US in 2025.",
+        "fr": "Une vaste opération de 'jackpotting' de distributeurs utilisant le malware Ploutus pour voler plus de 20 millions de dollars aux USA en 2025."
+      },
+      "sector": {
+        "en": "Finance, Banking",
+        "fr": "Finance, Banque"
+      },
+      "modop": {
+        "en": "Physical access to ATMs using generic keys to install Ploutus malware via hard drive manipulation, bypassing bank authorization.",
+        "fr": "Accès physique aux ATM avec des clés génériques pour installer Ploutus via manipulation du disque dur, contournant l'autorisation bancaire."
+      },
+      "tags": [
+        "TdA",
+        "Ploutus",
+        "Jackpotting",
+        "Financial Crime"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fbi-over-20-million-stolen-in-surge-of-atm-malware-attacks-in-2025/"
+      ],
+      "date": "2026-02-21"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "International Relations / Defense",
+        "fr": "Relations Internationales / Défense"
+      },
+      "theme": {
+        "en": "North Korean IT Worker Schemes",
+        "fr": "Réseaux de travailleurs IT nord-coréens"
+      },
+      "description": {
+        "en": "Sentencing of Oleksandr Didenko for facilitating a 'laptop farm' scheme that helped North Korean agents infiltrate 40 U.S. firms to fund weapons and missile programs.",
+        "fr": "Condamnation d'Oleksandr Didenko pour avoir facilité un réseau de 'fermes d'ordinateurs' aidant des agents nord-coréens à infiltrer 40 entreprises américaines pour financer des programmes d'armement."
+      },
+      "tags": [
+        "DPRK",
+        "Sanctions Evasion",
+        "Identity Theft"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188305/cyber-crime/north-korean-it-worker-scam-nets-ukrainian-five-year-sentence-in-the-u-s.html"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "sector": {
+        "en": "Financial / Global Economy",
+        "fr": "Finances / Économie Mondiale"
+      },
+      "theme": {
+        "en": "Russian Shadow Crypto Economy",
+        "fr": "Économie crypto de l'ombre en Russie"
+      },
+      "description": {
+        "en": "RUSI report highlights how Russia uses stablecoins and a layered crypto ecosystem to bypass international sanctions for military procurement.",
+        "fr": "Un rapport du RUSI souligne comment la Russie utilise les stablecoins et un écosystème crypto stratifié pour contourner les sanctions internationales pour ses achats militaires."
+      },
+      "tags": [
+        "Russia",
+        "Sanctions",
+        "Cryptocurrency",
+        "Stablecoins"
+      ],
+      "sources": [
+        "https://www.rusi.org/explore-our-research/publications/commentary/shadow-crypto-economy-feeding-russias-war-machine"
+      ],
+      "date": "2026-02-21"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "FICOBA (French National Bank Account Registry)",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Government / Finance",
+        "fr": "Gouvernement / Finance"
+      },
+      "description": {
+        "en": "Breach involving credentials stolen from a civil servant, exposing 1.2 million account details including IBANs, identities, and addresses.",
+        "fr": "Violation impliquant des identifiants volés à un fonctionnaire, exposant 1,2 million de coordonnées de comptes, incluant IBAN, identités et adresses."
+      },
+      "tags": [
+        "Data Leak",
+        "France",
+        "PII"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/data-breach-at-french-bank-registry-impacts-12-million-accounts/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "victim": "IDMerit",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Identity Verification / Fintech",
+        "fr": "Vérification d'identité / Fintech"
+      },
+      "description": {
+        "en": "Massive exposure of 1 to 3 billion personal records and biometrics on the open web due to a misconfiguration.",
+        "fr": "Exposition massive de 1 à 3 milliards de données personnelles et de biométrie sur le web en raison d'une mauvaise configuration."
+      },
+      "tags": [
+        "Identity",
+        "Biometrics",
+        "Global Leak"
+      ],
+      "sources": [
+        "https://mefi.social/@MissConstrue/116106110983764338"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "victim": "University of Mississippi Medical Center (UMMC)",
+      "threat_actor": "Unknown (Ransomware)",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Ransomware attack resulting in the shutdown of all clinics and loss of access to the Epic EMR system.",
+        "fr": "Attaque de ransomware ayant entraîné la fermeture de toutes les cliniques et la perte d'accès au système de dossiers médicaux Epic."
+      },
+      "tags": [
+        "Ransomware",
+        "Hospital",
+        "Availability"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/university-of-mississippi-medical-center-closes-clinics-after-ransomware-attack/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "victim": "CarMax",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Retail / Automotive",
+        "fr": "Commerce / Automobile"
+      },
+      "description": {
+        "en": "Leak of 431,371 accounts following a failed extortion attempt in January 2026.",
+        "fr": "Fuite de 431 371 comptes suite à une tentative d'extorsion ratée en janvier 2026."
+      },
+      "tags": [
+        "CarMax",
+        "Extortion",
+        "Email Leak"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/CarMax"
+      ],
+      "date": "2026-02-21"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1731",
+      "euvd_id": "EUVD-2026-1731",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "N/A",
+      "cpe": "cpe:/a:beyondtrust:remote_support",
+      "product": "Remote Support / Privileged Remote Access",
+      "vendor": "BeyondTrust",
+      "description": {
+        "en": "Pre-authentication RCE vulnerability caused by OS command injection in thin-scc-wrapper, exploited in ransomware campaigns.",
+        "fr": "Vulnérabilité RCE pré-authentification causée par une injection de commande OS dans thin-scc-wrapper, exploitée dans des campagnes de ransomware."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Actively Exploited"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-beyondtrust-rce-flaw-now-exploited-in-ransomware-attacks/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "cve_id": "CVE-2026-22769",
+      "euvd_id": "EUVD-2026-22769",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:/a:dell:recoverpoint_for_virtual_machines",
+      "product": "RecoverPoint for Virtual Machines",
+      "vendor": "Dell",
+      "description": {
+        "en": "Hardcoded credentials vulnerability allowing unauthorized access, exploited by China-nexus groups.",
+        "fr": "Vulnérabilité d'identifiants codés en dur permettant un accès non autorisé, exploitée par des groupes liés à la Chine."
+      },
+      "tags": [
+        "vulnerability",
+        "Hardcoded Credentials",
+        "Espionage"
+      ],
+      "sources": [
+        "https://go.theregister.com/feed/www.theregister.com/2026/02/20/cisa_dell_vulnerability/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "cve_id": "CVE-2025-68121",
+      "euvd_id": "EUVD-2025-68121",
+      "cisa_kev": "FALSE",
+      "cvss": "N/A",
+      "epss": "N/A",
+      "cpe": "cpe:/a:traefik:traefik",
+      "product": "Traefik",
+      "vendor": "Traefik",
+      "description": {
+        "en": "Security policy bypass discovered in Traefik Proxy versions 2.x and 3.x.",
+        "fr": "Contournement de la politique de sécurité découvert dans Traefik Proxy versions 2.x et 3.x."
+      },
+      "tags": [
+        "vulnerability",
+        "Bypass"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0191/"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "cve_id": "CVE-2026-2329",
+      "euvd_id": "EUVD-2026-2329",
+      "cisa_kev": "FALSE",
+      "cvss": "N/A",
+      "epss": "N/A",
+      "cpe": "cpe:/h:grandstream:gxp1600",
+      "product": "GXP1600 Series VoIP Phones",
+      "vendor": "Grandstream",
+      "description": {
+        "en": "Unauthenticated stack-based buffer overflow allowing root privilege escalation on the device.",
+        "fr": "Dépassement de tampon de pile non authentifié permettant une élévation de privilèges root sur l'appareil."
+      },
+      "tags": [
+        "vulnerability",
+        "VoIP",
+        "Buffer Overflow"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/grandstream-voip-phones-vulnerability/"
+      ],
+      "date": "2026-02-21"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "MIMICRAT ClickFix Campaign",
+        "fr": "Campagne ClickFix MIMICRAT"
+      },
+      "description": {
+        "en": "Multi-stage campaign using compromised legitimate sites (ClickFix technique) to deliver a custom C++ RAT with malleable C2 profiles.",
+        "fr": "Campagne multi-étapes utilisant des sites légitimes compromis (technique ClickFix) pour livrer un RAT C++ personnalisé avec des profils C2 malléables."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://www.investonline.in/js/jq.php",
+          "http://www.google.com/?q=dj1"
+        ],
+        "IPv4": [
+          "45.13.212.250",
+          "45.13.212.251",
+          "23.227.202.114"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "bincheck.io",
+          "xMRi.neTwOrk",
+          "WexMrI.CC",
+          "ndibstersoft.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "a508d0bb583dc6e5f97b6094f8f910b5b6f2b9d5528c04e4dee62c343fce6f4b"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "MIMICRAT",
+          "PowerShell",
+          "Lua Loader"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1059.001",
+        "T1548.002",
+        "T1140"
+      ],
+      "analyse": {
+        "en": "This campaign is highly sophisticated, bypassing browser protections by convincing users to execute a command from the clipboard. The final payload, MIMICRAT, supports SOCKS5 tunneling and token impersonation.",
+        "fr": "Cette campagne est très sophistiquée, contournant les protections des navigateurs en convainquant les utilisateurs d'exécuter une commande depuis le presse-papiers. La charge utile finale, MIMICRAT, supporte le tunneling SOCKS5 et l'usurpation de jetons."
+      },
+      "recommandations": [
+        {
+          "en": "Block the identified domains and IPs at the firewall level.",
+          "fr": "Bloquez les domaines et IP identifiés au niveau du pare-feu."
+        },
+        {
+          "en": "Educate users about the 'ClickFix' social engineering lures that ask to paste PowerShell commands.",
+          "fr": "Sensibilisez les utilisateurs aux leurres d'ingénierie sociale 'ClickFix' qui demandent de coller des commandes PowerShell."
+        }
+      ],
+      "tags": [
+        "ClickFix",
+        "RAT",
+        "MIMICRAT"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/mimicrat-custom-rat-mimics-c2-frameworks"
+      ],
+      "date": "2026-02-21"
+    },
+    {
+      "title": {
+        "en": "PromptSpy Android AI Malware",
+        "fr": "Malware Android PromptSpy via IA"
+      },
+      "description": {
+        "en": "Android malware using Google Gemini AI to analyze screen content and provide instructions to maintain app persistence in 'recent apps'.",
+        "fr": "Malware Android utilisant l'IA Google Gemini pour analyser le contenu de l'écran et fournir des instructions afin de maintenir la persistance de l'application dans les 'applications récentes'."
+      },
+      "threat_actor": "Unknown (Chinese-speaking environment suspected)",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PromptSpy",
+          "VNCSpy",
+          "Gemini AI API"
+        ]
+      },
+      "mitre_ttps": [
+        "T1624.001",
+        "T1417.001"
+      ],
+      "analyse": {
+        "en": "First known instance of mobile malware using LLMs for real-time decision-making regarding UI navigation and persistence, making it highly adaptive to different Android versions.",
+        "fr": "Première instance connue de malware mobile utilisant des LLM pour la prise de décision en temps réel concernant la navigation dans l'interface utilisateur et la persistance, le rendant très adaptable aux différentes versions d'Android."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure Google Play Protect is active and avoid sideloading banking-themed apps from unofficial websites.",
+          "fr": "Assurez-vous que Google Play Protect est actif et évitez le chargement latéral d'applications thématiques bancaires depuis des sites non officiels."
+        },
+        {
+          "en": "Monitor for unusual Accessibility Services requests on mobile devices.",
+          "fr": "Surveillez les demandes inhabituelles de services d'accessibilité sur les appareils mobiles."
+        }
+      ],
+      "tags": [
+        "Android",
+        "AI",
+        "Gemini",
+        "PromptSpy"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188261/ai/promptspy-abuses-gemini-ai-to-gain-persistent-access-on-android.html"
+      ],
+      "date": "2026-02-21"
+    }
+  ]
+}
