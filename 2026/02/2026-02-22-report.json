@@ -1,0 +1,1185 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Cette période de veille révèle une intensification et une diversification des menaces cyber, particulièrement marquées par l'utilisation croissante de l'intelligence artificielle (IA) par les attaquants. Des acteurs financièrement motivés exploitent l'IA pour automatiser et étendre leurs campagnes, comme en témoignent les violations de FortiGate, où l'IA a servi à la reconnaissance, à la planification et à la génération de code, abaissant ainsi la barrière technique d'entrée pour des attaques à grande échelle.\nLes attaques de la supply chain restent une préoccupation majeure avec l'exploitation active d'une vulnérabilité RCE critique dans React Server Components (React2Shell) par un acteur potentiellement étatique, ciblant des secteurs clés comme le gouvernement et la défense. Les vulnérabilités d'exécution de code à distance (RCE) continuent de dominer le paysage des menaces, notamment avec des zero-days (Google Chrome) et des failles critiques dans des plateformes largement utilisées comme Roundcube Webmail et divers routeurs Tenda/UTT.\nLe phishing reste une méthode d'accès initiale prévalente, évoluant vers des services PhaaS (Phishing-as-a-Service) sophistiqués qui contournent l'authentification multi-facteurs (MFA) via des attaques Adversary-in-the-Middle (AiTM). Par ailleurs, l'émergence de spywares mobiles (Predator sur iOS) démontre des capacités avancées pour la surveillance furtive, soulignant les risques persistants pour la vie privée.\nEnfin, la guerre de l'information (désinformation russe) et les opérations de cyber-espionnage (répéteurs de drones en Biélorussie) s'intègrent profondément dans les conflits géopolitiques, montrant comment le cyberespace est un front stratégique essentiel.\n**Conclusion**: L'état général des menaces est caractérisé par une sophistication technique accrue (IA, spywares), une persistance des techniques d'ingénierie sociale (PhaaS, AiTM), et une exploitation rapide des vulnérabilités critiques. Les défenseurs doivent prioriser le patching, renforcer la posture d'authentification (FIDO2/Passkeys), et développer des capacités de détection comportementale pour faire face à cette évolution rapide des menaces.",
+      "date": "2026-02-22"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Intellexa",
+        "secteur": "Vendeur de logiciels espions (surveillance)",
+        "modop": "Développement et vente du spyware Predator, capable de masquer l'activité micro/caméra sur iOS via des hooks dans SpringBoard.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "spyware",
+          "surveillance_vendor",
+          "predator",
+          "ios_malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-hooks-ios-springboard-to-hide-mic-camera-activity/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Acteur Financièrement Motivé (parlant russe, assisté par IA)",
+        "secteur": "Opportuniste (plus de 600 pare-feu FortiGate dans 55 pays), ciblant les infrastructures de sauvegarde Veeam et les environnements Active Directory.",
+        "modop": "Utilisation de l'IA (Claude, DeepSeek, ARXON MCP) pour la reconnaissance, la planification d'attaques et le développement d'outils. Exploitation des interfaces de gestion FortiGate exposées et des identifiants faibles. Activités post-compromission incluant Meterpreter, Mimikatz, attaques DCSync, mouvement latéral (pass-the-hash/ticket). Vise le déploiement de rançongiciels.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "financially_motivated",
+          "ai_assisted",
+          "fortigate_breach",
+          "credential_stuffing",
+          "ransomware_precursor",
+          "russia"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
+          "https://cybersecuritynews.com/600-fortigate-devices-hacked/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Opérateurs de Phishing-as-a-Service (PhaaS)",
+        "secteur": "Utilise l'ingénierie sociale pour cibler les utilisateurs de Gmail (et de Microsoft 365 via des kits comme Tycoon 2FA).",
+        "modop": "Phishing Adversary-in-the-Middle (AiTM) pour voler les cookies de session authentifiés après une authentification MFA légitime. Bloque les notifications de non-distribution (NDR) pour prolonger l'indétection de la campagne.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phaas",
+          "phishing",
+          "aitm",
+          "gmail",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/the-gmail-phaas-playbook-anatomy-of-a-repeat-offender"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "APT28 / Winter Vivern",
+        "secteur": "Gouvernement, Diplomatie, entités de haute valeur (cibles historiques de Roundcube).",
+        "modop": "Exploitation de vulnérabilités dans Roundcube Webmail pour voler des identifiants et espionner des communications.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "state_sponsored",
+          "espionage",
+          "roundcube",
+          "webmail"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188324/security/u-s-cisa-adds-roundcube-webmail-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Commerce automobile en ligne (CarGurus)",
+        "modop": "Violation de données, suivie d'une tentative d'extorsion et publication publique des données volées.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "extorsion",
+          "shinyhunters",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CarGurus"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Acteur potentiellement étatique (ILovePoop toolkit)",
+        "secteur": "Gouvernement, défense, finance et industries à l'échelle mondiale.",
+        "modop": "Utilisation du toolkit \"ILovePoop\" pour la reconnaissance et l'exploitation active de CVE-2025-55182 (RCE dans React Server Components).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "reconnaissance",
+          "rce",
+          "react2shell",
+          "ilovepoop_toolkit"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Gouvernement (Ukraine, Russie, Biélorussie)",
+        "theme": "Cyber-espionnage et soutien aux opérations militaires russes",
+        "description": "Des hacktivistes ukrainiens (Fenix, InformNapalm) ont découvert l'utilisation par la Russie de systèmes de répéteurs de drones en Biélorussie, améliorant ses capacités de frappe en Ukraine. Suite à cela, des sanctions ont été imposées au dirigeant biélorusse.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionnage",
+          "cyberwarfare",
+          "ukraine",
+          "russie",
+          "bielorussie",
+          "drones",
+          "sanctions",
+          "hacktivisme"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/ukrainian-hackers-uncover-how-russian-drone-operators-are-using-belarus/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Défense, Gouvernement (Russie, Ukraine, OTAN)",
+        "theme": "Guerre de l'information et mythe de l'invincibilité russe",
+        "description": "Analyse de la stratégie de désinformation du Kremlin visant à projeter une image de puissance militaire russe invincible. Cette narration utilise l'exagération, la fabrication et le révisionnisme historique pour saper le soutien occidental à l'Ukraine, démoraliser la société ukrainienne et influencer les négociations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "désinformation",
+          "information_warfare",
+          "russie",
+          "ukraine",
+          "propagande",
+          "mythologie_militaire"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/the-fimi-of-russian-invincibility-how-a-myth-becomes-a-strategic-weapon-2/"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé (dentaire)",
+        "victime": "Grange Dental Care",
+        "description": "Une attaque cybernétique a frappé un cabinet dentaire, mais la victime a été saluée pour sa réponse rapide et sa transparence. Les détails spécifiques de la violation ou des données compromises ne sont pas précisés.",
+        "tags": [
+          "violation",
+          "breach",
+          "cyber_attack",
+          "healthcare",
+          "dental",
+          "transparency"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/this-is-how-you-do-it-dentist-speaks-out-after-practice-hit-by-cyber-attack/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Médias sociaux / Plateformes en ligne",
+        "victime": "Discord (utilisateurs des données de vérification d'âge)",
+        "description": "Une faille a été découverte dans les composants frontend liés au fournisseur d'identité Persona utilisés par Discord pour la vérification de l'âge, rendant potentiellement ces données sensibles accessibles sur le web ouvert.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_leak",
+          "frontend",
+          "discord",
+          "age_verification",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/discords-age-verification-data-has-a-frontend-leak-now-what/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Marché automobile en ligne",
+        "victime": "CarGurus",
+        "description": "ShinyHunters a violé CarGurus en février 2026, exposant plus de 12 millions d'adresses e-mail, des identifiants de compte, des données de pré-qualification financière, des informations de concessionnaires et d'abonnements, ainsi que des noms, numéros de téléphone, adresses physiques et IP, et les résultats des demandes de financement automobile. Les données ont été publiées publiquement après une tentative d'extorsion.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_theft",
+          "cargurus",
+          "shinyhunters",
+          "extortion",
+          "pii",
+          "financial_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CarGurus",
+          "https://www.theregister.com/2026/02/18/shinyhunters_cargurus_breach/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Services financiers / FinTech",
+        "victime": "Clients PayPal (environ 100)",
+        "description": "Une erreur de code dans l'application de prêt \"Working Capital\" de PayPal a exposé accidentellement des informations personnelles identifiables (PII) de 100 clients, incluant noms, numéros de sécurité sociale, dates de naissance, adresses e-mail et adresses professionnelles. Des transactions non autorisées ont également eu lieu pour certains.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_exposure",
+          "paypal",
+          "pii",
+          "coding_error",
+          "financial_data"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/20/paypal_app_code_error_leak/",
+          "https://infosec.exchange/@soc_goulash/116110632366279167"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (Next.js)",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) dans les composants serveur React. Activement exploitée par un acteur potentiellement étatique utilisant le toolkit \"ILovePoop\".",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "react2shell",
+          "react",
+          "nextjs",
+          "supply_chain",
+          "state_sponsored_actor",
+          "exploit_en_cours",
+          "critical"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2025-49113",
+        "cvss": 9.9,
+        "product": "Roundcube Webmail",
+        "description": "Vulnérabilité de désérialisation de données non fiables permettant l'exécution de code à distance (RCE).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "roundcube",
+          "webmail",
+          "deserialization",
+          "cisa",
+          "kev"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188324/security/u-s-cisa-adds-roundcube-webmail-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": 9.8,
+        "product": "Google Chrome",
+        "description": "Vulnérabilité de corruption de mémoire (memory bug) zero-day dans la gestion des polices permettant l'exécution de code à distance (RCE) via des pages web malveillantes. Activement exploitée.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "chrome",
+          "zero_day",
+          "code_execution",
+          "memory_corruption",
+          "exploit_en_cours"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/update-chrome-now-zero-day-bug-allows-code-execution-via-malicious-webpages/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2909",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le point de terminaison Diagnostic Ping Endpoint (formPing) permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2909"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2908",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le point de terminaison Loopback Detection Configuration Endpoint (formLoopBack) permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2908"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2907",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le point de terminaison GPON Configuration Endpoint (formgponConf) permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2907"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2906",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le point de terminaison Samba Configuration Endpoint (formSamba) permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2906"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2905",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le point de terminaison Wireless Configuration Endpoint (formWlanSetup) permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2905"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2904",
+        "cvss": 9.0,
+        "product": "UTT HiPER 810G 1.7.7-171114",
+        "description": "Dépassement de tampon dans la fonction strcpy du fichier /goform/ConfigExceptAli permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "utt",
+          "hiper",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2904"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2886",
+        "cvss": 9.0,
+        "product": "Tenda A21 1.0.0.0",
+        "description": "Dépassement de tampon basé sur la pile (stack-based buffer overflow) dans la fonction set_device_name du fichier /goform/SetOnlineDevName permettant l'exécution de code à distance.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "a21",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2886"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Attaques assistées par IA contre des pare-feu FortiGate",
+        "description": "Un acteur malveillant russophone, motivé financièrement, a utilisé des services d'IA générative (Claude, DeepSeek, ARXON) pour compromettre plus de 600 pare-feu FortiGate dans 55 pays en cinq semaines. L'attaque a exploité des interfaces de gestion exposées et des identifiants faibles plutôt que des vulnérabilités zero-day. L'IA a automatisé la reconnaissance (gogo, Nuclei), la planification d'attaques, la génération de commandes et le développement d'outils. Les activités post-compromission incluaient l'extraction de configurations, la compromission d'Active Directory via Meterpreter et Mimikatz (attaques DCSync), et le ciblage d'infrastructures de sauvegarde Veeam, probablement en préparation de déploiements de rançongiciels.",
+        "threat_actor": "Acteur Financièrement Motivé (parlant russe, assisté par IA)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "212.11.64[.]250"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001 - Valid Accounts: Domain Accounts",
+          "T1110.001 - Password Spraying",
+          "T1003.001 - OS Credential Dumping: LSASS Memory",
+          "T1003.003 - OS Credential Dumping: NTDS Queriable File",
+          "T1003.006 - OS Credential Dumping: DCSync",
+          "T1550.002 - Use Alternate Authentication Material: Pass the Hash",
+          "T1550.003 - Use Alternate Authentication Material: Pass the Ticket",
+          "T1078.003 - Valid Accounts: Local Accounts",
+          "T1589 - Gather Victim Identity Information",
+          "T1595 - Active Scanning"
+        ],
+        "analyse": "Cette campagne met en évidence l'impact multiplicateur de l'IA sur les opérations d'attaque, permettant à des acteurs moins qualifiés d'atteindre une échelle et une efficacité accrues. L'opportunisme des cibles et la focalisation sur les faiblesses fondamentales (interfaces exposées, identifiants faibles) soulignent la persistance de ces problèmes de sécurité. La capacité à extraire des configurations, des identifiants AD et à cibler les sauvegardes est très critique pour le déploiement de rançongiciels.",
+        "recommandations": [
+          "Ne pas exposer les interfaces de gestion FortiGate à Internet.",
+          "Activer l'authentification multi-facteurs (MFA).",
+          "Utiliser des mots de passe VPN différents des comptes Active Directory.",
+          "Renforcer l'infrastructure de sauvegarde.",
+          "Auditer les activités SSH inhabituelles et les créations de comptes VPN."
+        ],
+        "tags": [
+          "ai",
+          "ransomware",
+          "fortigate",
+          "credential_stuffing",
+          "mfa_bypass",
+          "threat_actor",
+          "russia",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
+          "https://cybersecuritynews.com/600-fortigate-devices-hacked/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "Campagne d'exploitation active de React2Shell (CVE-2025-55182)",
+        "description": "Une vulnérabilité critique d'exécution de code à distance (RCE) dans les composants serveur React (React2Shell, CVE-2025-55182, CVSS 10.0) est activement exploitée. Un acteur potentiellement étatique utilise un nouveau toolkit appelé \"ILovePoop\" pour des activités de reconnaissance ciblant les gouvernements, la défense, la finance et les secteurs industriels à l'échelle mondiale. Le patching est complexe en raison de l'intégration de React dans Next.js, rendant la détection difficile pour les scanners de dépendances standard.",
+        "threat_actor": "Acteur potentiellement étatique (ILovePoop toolkit)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182"
+          ]
+        },
+        "mitre_ttps": [
+          "T1210 - Exploitation of Remote Services",
+          "T1592 - Gather Victim Host Information",
+          "T1071.001 - Application Layer Protocol: Web Protocols (for React/Next.js exploitation)"
+        ],
+        "analyse": "L'exploitation d'une vulnérabilité critique dans les composants serveur React, combinée à un toolkit spécifique et à un acteur potentiellement étatique, indique une menace de supply chain sophistiquée. La difficulté de patching et de détection renforce le risque pour les cibles de grande valeur dans des secteurs sensibles.",
+        "recommandations": [
+          "Prioriser le patching de CVE-2025-55182, en particulier pour les organisations utilisant React Server Components (notamment via Next.js).",
+          "Mettre en œuvre une détection comportementale pour les activités post-exploitation."
+        ],
+        "tags": [
+          "rce",
+          "vulnerability",
+          "react2shell",
+          "supply_chain",
+          "state_sponsored_actor",
+          "reconnaissance",
+          "government",
+          "defense",
+          "finance",
+          "industry",
+          "exploit_en_cours"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "Le Modus Operandi du PhaaS ciblant Gmail",
+        "description": "Une analyse révèle un modèle cohérent d'attaques de Phishing-as-a-Service (PhaaS) ciblant les comptes Gmail. Les attaquants utilisent des opérations Adversary-in-the-Middle (AiTM) pour voler des cookies de session après une authentification MFA légitime. Un indicateur clé est le blocage délibéré de `mailer-daemon@googlemail.com` avant l'envoi massif de spams, afin de masquer les notifications d'échec de livraison et prolonger l'indétection de la campagne. Ces kits PhaaS abaissent le seuil technique pour des campagnes sophistiquées.",
+        "threat_actor": "Opérateurs de PhaaS (ex: kit ciblant Google, cousin de Tycoon 2FA)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mailer-daemon@googlemail.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Link",
+          "T1559.001 - Adversary-in-the-Middle",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools",
+          "T1078 - Valid Accounts"
+        ],
+        "analyse": "La sophistication croissante des kits PhaaS, qui permettent de contourner la MFA via des techniques AiTM, représente une menace majeure pour la sécurité des comptes. La tactique de bloquer les NDR montre une connaissance approfondie des mécanismes de détection et une volonté d'optimiser la persistance des campagnes de phishing, ce qui est particulièrement préoccupant pour les organisations et les utilisateurs individuels.",
+        "recommandations": [
+          "Implémenter des méthodes d'authentification résistantes à l'AiTM telles que les clés matérielles FIDO2 ou les passkeys.",
+          "Surveiller les logs Gmail pour la création de règles de filtre inhabituelles (en particulier pour `mailer-daemon@googlemail.com`).",
+          "Analyser les adresses IP de connexion et les ASN.",
+          "Examiner les contenus des dossiers d'envoi pour les modèles de phishing."
+        ],
+        "tags": [
+          "phishing",
+          "phaas",
+          "aitm",
+          "gmail",
+          "mfa_bypass",
+          "social_engineering",
+          "credential_theft",
+          "session_hijacking"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/the-gmail-phaas-playbook-anatomy-of-a-repeat-offender"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "Techniques de Furtivité du Spyware Predator sur iOS",
+        "description": "Le spyware Predator d'Intellexa peut masquer les indicateurs d'enregistrement de la caméra et du microphone sur iOS (versions 14 et antérieures) en utilisant une fonction de hook (`HiddenDot::setupHook()`) dans SpringBoard. Cette technique intercepte et annule les mises à jour de l'activité des capteurs avant qu'elles n'atteignent l'interface utilisateur, rendant la surveillance indétectable pour l'utilisateur. Le malware utilise également des techniques d'appariement de motifs d'instructions ARM64 pour contourner les vérifications de permissions de la caméra.",
+        "threat_actor": "Intellexa (vendeur du spyware Predator)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1560.001 - Data from iOS Devices: Mobile Device System Data (implied from camera/mic access)",
+          "T1546.014 - Event Triggered Execution: Emond (SpringBoard hook)",
+          "T1588.002 - Obtain Capabilities: Tool (Malware)"
+        ],
+        "analyse": "Cette analyse révèle un niveau élevé de sophistication technique des spywares commerciaux, capables de contourner des mécanismes de sécurité fondamentaux d'iOS. La capacité à rendre la surveillance invisible à l'utilisateur final représente un risque significatif pour la vie privée et la sécurité individuelle, en particulier pour les cibles de grande valeur.",
+        "recommandations": [
+          "Redémarrer régulièrement les appareils iOS.",
+          "Utiliser des outils d'analyse de malware mobile comme iVerify Basic.",
+          "Activer le mode Verrouillage (Lockdown Mode) d'iOS pour se prémunir contre des attaques sophistiquées."
+        ],
+        "tags": [
+          "spyware",
+          "ios",
+          "predator",
+          "malware",
+          "surveillance",
+          "mobile_security",
+          "zero_click",
+          "privacy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-hooks-ios-springboard-to-hide-mic-camera-activity/"
+        ],
+        "date": "2026-02-22"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "This intelligence period reveals an intensification and diversification of cyber threats, particularly marked by the increasing use of artificial intelligence (AI) by attackers. Financially motivated actors are leveraging AI to automate and scale their campaigns, as evidenced by the FortiGate breaches, where AI was used for reconnaissance, planning, and code generation, thereby lowering the technical entry barrier for large-scale attacks.\nSupply chain attacks remain a major concern with the active exploitation of a critical RCE vulnerability in React Server Components (React2Shell) by a possibly state-sponsored actor, targeting key sectors like government and defense. Remote Code Execution (RCE) vulnerabilities continue to dominate the threat landscape, notably with zero-days (Google Chrome) and critical flaws in widely used platforms such as Roundcube Webmail and various Tenda/UTT routers.\nPhishing remains a prevalent initial access method, evolving into sophisticated Phishing-as-a-Service (PhaaS) offerings that bypass multi-factor authentication (MFA) via Adversary-in-the-Middle (AiTM) attacks. Furthermore, the emergence of mobile spyware (Predator on iOS) demonstrates advanced capabilities for stealthy surveillance, highlighting persistent privacy risks.\nFinally, information warfare (Russian disinformation) and cyber-espionage operations (drone repeaters in Belarus) are deeply integrated into geopolitical conflicts, showing how cyberspace is a critical strategic front.\n**Conclusion**: The general state of threats is characterized by increased technical sophistication (AI, spyware), persistence of social engineering techniques (PhaaS, AiTM), and rapid exploitation of critical vulnerabilities. Defenders must prioritize patching, strengthen authentication posture (FIDO2/Passkeys), and develop behavioral detection capabilities to counter this rapidly evolving threat landscape.",
+      "date": "2026-02-22"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "nom": "Intellexa",
+        "secteur": "Spyware Vendor (Surveillance)",
+        "modop": "Development and sale of Predator spyware, capable of hiding mic/camera activity on iOS via SpringBoard hooks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "spyware",
+          "surveillance_vendor",
+          "predator",
+          "ios_malware"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-hooks-ios-springboard-to-hide-mic-camera-activity/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Financially Motivated Actor (Russian-speaking, AI-assisted)",
+        "secteur": "Opportunistic (over 600 FortiGate firewalls in 55 countries), targeting Veeam backup infrastructure and Active Directory environments.",
+        "modop": "Utilizes AI (Claude, DeepSeek, ARXON MCP) for reconnaissance, attack planning, and tool development. Exploits exposed FortiGate management interfaces and weak credentials. Post-compromise activities include Meterpreter, Mimikatz, DCSync attacks, lateral movement (pass-the-hash/ticket). Aims for ransomware deployment.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "financially_motivated",
+          "ai_assisted",
+          "fortigate_breach",
+          "credential_stuffing",
+          "ransomware_precursor",
+          "russia"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
+          "https://cybersecuritynews.com/600-fortigate-devices-hacked/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Phishing-as-a-Service (PhaaS) Operators",
+        "secteur": "Uses social engineering to target Gmail users (and Microsoft 365 via kits like Tycoon 2FA).",
+        "modop": "Adversary-in-the-Middle (AiTM) phishing to steal authenticated session cookies after legitimate MFA authentication. Blocks non-delivery reports (NDR) to extend campaign stealth.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phaas",
+          "phishing",
+          "aitm",
+          "gmail",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/the-gmail-phaas-playbook-anatomy-of-a-repeat-offender"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "APT28 / Winter Vivern",
+        "secteur": "Government, Diplomacy, High-Value Entities (historical targets of Roundcube).",
+        "modop": "Exploitation of vulnerabilities in Roundcube Webmail to steal credentials and spy on communications.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "state_sponsored",
+          "espionage",
+          "roundcube",
+          "webmail"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188324/security/u-s-cisa-adds-roundcube-webmail-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Online Automotive Marketplace (CarGurus)",
+        "modop": "Data breach, followed by an extortion attempt and public release of stolen data.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "extortion",
+          "shinyhunters",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CarGurus"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "nom": "Possibly State-Sponsored Actor (ILovePoop toolkit)",
+        "secteur": "Government, Defense, Finance, and Industrial sectors globally.",
+        "modop": "Uses the \"ILovePoop\" toolkit for reconnaissance and active exploitation of CVE-2025-55182 (RCE in React Server Components).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "reconnaissance",
+          "rce",
+          "react2shell",
+          "ilovepoop_toolkit"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Summary of Geopolitical News": [
+      {
+        "secteur": "Defense, Government (Ukraine, Russia, Belarus)",
+        "theme": "Cyber espionage and support for Russian military operations",
+        "description": "Ukrainian hacktivists (Fenix, InformNapalm) uncovered Russia's use of drone repeater systems in Belarus, enhancing its strike capabilities in Ukraine. Following this, sanctions were imposed on the Belarusian leader.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "cyberespionage",
+          "cyberwarfare",
+          "ukraine",
+          "russia",
+          "belarus",
+          "drones",
+          "sanctions",
+          "hacktivism"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/ukrainian-hackers-uncover-how-russian-drone-operators-are-using-belarus/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Defense, Government (Russia, Ukraine, NATO)",
+        "theme": "Information warfare and the myth of Russian invincibility",
+        "description": "Analysis of the Kremlin's disinformation strategy aiming to project an image of invincible Russian military power. This narrative uses exaggeration, fabrication, and historical revisionism to undermine Western support for Ukraine, demoralize Ukrainian society, and influence negotiations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "disinformation",
+          "information_warfare",
+          "russia",
+          "ukraine",
+          "propaganda",
+          "military_mythology"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/the-fimi-of-russian-invincibility-how-a-myth-becomes-a-strategic-weapon-2/"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Summary of Data Breaches": [
+      {
+        "secteur": "Healthcare (dental)",
+        "victime": "Grange Dental Care",
+        "description": "A cyber attack hit a dental practice, but the victim was praised for its quick response and transparency. Specific details of the breach or compromised data are not specified.",
+        "tags": [
+          "violation",
+          "breach",
+          "cyber_attack",
+          "healthcare",
+          "dental",
+          "transparency"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/this-is-how-you-do-it-dentist-speaks-out-after-practice-hit-by-cyber-attack/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Social Media / Online Platforms",
+        "victime": "Discord (users' age verification data)",
+        "description": "A flaw was discovered in frontend components tied to identity vendor Persona used by Discord for age verification, potentially making sensitive age verification data accessible on the open web.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_leak",
+          "frontend",
+          "discord",
+          "age_verification",
+          "pii"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/discords-age-verification-data-has-a-frontend-leak-now-what/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Online automotive marketplace",
+        "victime": "CarGurus",
+        "description": "ShinyHunters breached CarGurus in February 2026, exposing over 12 million email addresses, user account IDs, finance pre-qualification data, dealer account and subscription information, names, phone numbers, physical and IP addresses, and auto finance application outcomes. The data was publicly released after an extortion attempt.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_theft",
+          "cargurus",
+          "shinyhunters",
+          "extortion",
+          "pii",
+          "financial_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/CarGurus",
+          "https://www.theregister.com/2026/02/18/shinyhunters_cargurus_breach/"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "secteur": "Financial services / FinTech",
+        "victime": "PayPal customers (approx. 100)",
+        "description": "A coding error in PayPal's Working Capital loan application accidentally exposed Personally Identifiable Information (PII) for 100 customers, including names, Social Security numbers, dates of birth, email addresses, and business addresses. Unauthorized transactions also occurred for some.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_exposure",
+          "paypal",
+          "pii",
+          "coding_error",
+          "financial_data"
+        ],
+        "sources": [
+          "https://go.theregister.com/feed/www.theregister.com/2026/02/20/paypal_app_code_error_leak/",
+          "https://infosec.exchange/@soc_goulash/116110632366279167"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Summary of Vulnerabilities": [
+      {
+        "cve_id": "CVE-2025-55182",
+        "cvss": 10.0,
+        "product": "React Server Components (Next.js)",
+        "description": "Critical Remote Code Execution (RCE) vulnerability in React Server Components. Actively exploited by a possibly state-sponsored actor using the \"ILovePoop\" toolkit.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "react2shell",
+          "react",
+          "nextjs",
+          "supply_chain",
+          "state_sponsored_actor",
+          "exploit_en_cours",
+          "critical"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2025-49113",
+        "cvss": 9.9,
+        "product": "Roundcube Webmail",
+        "description": "Deserialization of untrusted data vulnerability allowing Remote Code Execution (RCE).",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "roundcube",
+          "webmail",
+          "deserialization",
+          "cisa",
+          "kev"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188324/security/u-s-cisa-adds-roundcube-webmail-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2441",
+        "cvss": 9.8,
+        "product": "Google Chrome",
+        "description": "Zero-day memory corruption vulnerability (memory bug) in font handling allowing Remote Code Execution (RCE) via malicious webpages. Actively exploited.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "chrome",
+          "zero_day",
+          "code_execution",
+          "memory_corruption",
+          "exploit_en_cours"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/21/update-chrome-now-zero-day-bug-allows-code-execution-via-malicious-webpages/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2909",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Stack-based buffer overflow in Diagnostic Ping Endpoint (formPing) allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2909"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2908",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Stack-based buffer overflow in Loopback Detection Configuration Endpoint (formLoopBack) allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2908"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2907",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Stack-based buffer overflow in GPON Configuration Endpoint (formgponConf) allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2907"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2906",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Stack-based buffer overflow in Samba Configuration Endpoint (formSamba) allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2906"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2905",
+        "cvss": 9.0,
+        "product": "Tenda HG9 300001138",
+        "description": "Stack-based buffer overflow in Wireless Configuration Endpoint (formWlanSetup) allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "hg9",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2905"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2904",
+        "cvss": 9.0,
+        "product": "UTT HiPER 810G 1.7.7-171114",
+        "description": "Buffer overflow in strcpy function of /goform/ConfigExceptAli allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "utt",
+          "hiper",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2904"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "cve_id": "CVE-2026-2886",
+        "cvss": 9.0,
+        "product": "Tenda A21 1.0.0.0",
+        "description": "Stack-based buffer overflow in set_device_name function of /goform/SetOnlineDevName allowing remote code execution.",
+        "tags": [
+          "vulnérabilité",
+          "vulnerability",
+          "rce",
+          "tenda",
+          "a21",
+          "buffer_overflow",
+          "remote_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2886"
+        ],
+        "date": "2026-02-22"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "AI-Assisted Attacks Against FortiGate Firewalls",
+        "description": "A Russian-speaking, financially motivated threat actor leveraged generative AI services (Claude, DeepSeek, ARXON) to compromise over 600 FortiGate firewalls across 55 countries in five weeks. The attacks exploited exposed management interfaces and weak credentials, not zero-day vulnerabilities. AI automated reconnaissance (gogo, Nuclei), attack planning, command generation, and tool development. Post-compromise activities included extracting configurations, compromising Active Directory via Meterpreter and Mimikatz (DCSync attacks), and targeting Veeam backup infrastructure, likely in preparation for ransomware deployment.",
+        "threat_actor": "Financially Motivated Actor (Russian-speaking, AI-assisted)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "212.11.64[.]250"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001 - Valid Accounts: Domain Accounts",
+          "T1110.001 - Password Spraying",
+          "T1003.001 - OS Credential Dumping: LSASS Memory",
+          "T1003.003 - OS Credential Dumping: NTDS Queriable File",
+          "T1003.006 - OS Credential Dumping: DCSync",
+          "T1550.002 - Use Alternate Authentication Material: Pass the Hash",
+          "T1550.003 - Use Alternate Authentication Material: Pass the Ticket",
+          "T1078.003 - Valid Accounts: Local Accounts",
+          "T1589 - Gather Victim Identity Information",
+          "T1595 - Active Scanning"
+        ],
+        "analyse": "This campaign highlights the multiplying impact of AI on attack operations, enabling less-skilled actors to achieve increased scale and efficiency. The opportunistic targeting and focus on fundamental weaknesses (exposed interfaces, weak credentials) underscore the persistence of these security issues. The ability to extract configurations, AD credentials, and target backups is highly critical for ransomware deployment.",
+        "recommandations": [
+          "Do not expose FortiGate management interfaces to the internet.",
+          "Enable multi-factor authentication (MFA).",
+          "Use unique VPN passwords, different from Active Directory accounts.",
+          "Harden backup infrastructure.",
+          "Audit for unusual SSH activity and VPN account creation."
+        ],
+        "tags": [
+          "ai",
+          "ransomware",
+          "fortigate",
+          "credential_stuffing",
+          "mfa_bypass",
+          "threat_actor",
+          "russia",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/amazon-ai-assisted-hacker-breached-600-fortigate-firewalls-in-5-weeks/",
+          "https://cybersecuritynews.com/600-fortigate-devices-hacked/",
+          "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "Active Exploitation Campaign of React2Shell (CVE-2025-55182)",
+        "description": "A critical Remote Code Execution (RCE) vulnerability in React Server Components (React2Shell, CVE-2025-55182, CVSS 10.0) is being actively exploited. A possibly state-sponsored actor is using a new \"ILovePoop\" toolkit for reconnaissance against government, defense, finance, and industrial targets globally. Patching is complex due to React being bundled as a 'vendored' package within Next.js, making it invisible to standard dependency scanners.",
+        "threat_actor": "Possibly State-Sponsored Actor (ILovePoop toolkit)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2025-55182"
+          ]
+        },
+        "mitre_ttps": [
+          "T1210 - Exploitation of Remote Services",
+          "T1592 - Gather Victim Host Information",
+          "T1071.001 - Application Layer Protocol: Web Protocols (for React/Next.js exploitation)"
+        ],
+        "analyse": "The exploitation of a critical vulnerability in React Server Components, combined with a specific toolkit and a possibly state-sponsored actor, indicates a sophisticated supply chain threat. The difficulty in patching and detection increases the risk for high-value targets in sensitive sectors.",
+        "recommandations": [
+          "Prioritize patching CVE-2025-55182, especially for organizations using React Server Components (notably via Next.js).",
+          "Implement behavioral detection for post-exploitation activities."
+        ],
+        "tags": [
+          "rce",
+          "vulnerability",
+          "react2shell",
+          "supply_chain",
+          "state_sponsored_actor",
+          "reconnaissance",
+          "government",
+          "defense",
+          "finance",
+          "industry",
+          "exploit_en_cours"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116110632366279167",
+          "https://www.darkreading.com/application-security/attackers-new-tool-scan-react2shell-exposure"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "The Gmail PhaaS Playbook",
+        "description": "An analysis reveals a consistent pattern of Phishing-as-a-Service (PhaaS) attacks targeting Gmail accounts. Attackers use Adversary-in-the-Middle (AiTM) operations to steal authenticated session cookies after legitimate MFA authentication. A key indicator is the deliberate blocking of `mailer-daemon@googlemail.com` prior to mass spam runs, to hide delivery failure notifications and prolong campaign stealth. These PhaaS kits lower the technical barrier for sophisticated campaigns.",
+        "threat_actor": "PhaaS Operators (e.g., Google-focused kit, cousin of Tycoon 2FA)",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "mailer-daemon@googlemail.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.001 - Phishing: Spearphishing Link",
+          "T1559.001 - Adversary-in-the-Middle",
+          "T1562.001 - Impair Defenses: Disable or Modify Tools",
+          "T1078 - Valid Accounts"
+        ],
+        "analyse": "The increasing sophistication of PhaaS kits, which enable MFA bypass via AiTM techniques, poses a major threat to account security. The tactic of blocking NDRs demonstrates deep knowledge of detection mechanisms and a desire to optimize phishing campaign persistence, which is particularly concerning for organizations and individual users.",
+        "recommandations": [
+          "Implement AiTM-resistant authentication methods like FIDO2 hardware keys or passkeys.",
+          "Monitor Gmail logs for unusual filter rule creation (especially for `mailer-daemon@googlemail.com`).",
+          "Analyze login IP addresses and ASN data.",
+          "Examine sent mail folder content for phishing templates."
+        ],
+        "tags": [
+          "phishing",
+          "phaas",
+          "aitm",
+          "gmail",
+          "mfa_bypass",
+          "social_engineering",
+          "credential_theft",
+          "session_hijacking"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/the-gmail-phaas-playbook-anatomy-of-a-repeat-offender"
+        ],
+        "date": "2026-02-22"
+      },
+      {
+        "title": "Predator Spyware's iOS Stealth Techniques",
+        "description": "Intellexa's Predator spyware can hide iOS camera and microphone recording indicators (iOS 14 and older) by using a hook function (`HiddenDot::setupHook()`) within SpringBoard. This technique intercepts and nullifies sensor activity updates before they reach the UI layer, making surveillance undetectable to the user. The malware also uses ARM64 instruction pattern matching to bypass camera permission checks.",
+        "threat_actor": "Intellexa (Predator spyware vendor)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1560.001 - Data from iOS Devices: Mobile Device System Data (implied from camera/mic access)",
+          "T1546.014 - Event Triggered Execution: Emond (SpringBoard hook)",
+          "T1588.002 - Obtain Capabilities: Tool (Malware)"
+        ],
+        "analyse": "This analysis reveals a high level of technical sophistication in commercial spyware, capable of bypassing fundamental iOS security mechanisms. The ability to make surveillance invisible to the end-user poses a significant risk to privacy and individual security, especially for high-value targets.",
+        "recommandations": [
+          "Regularly reboot iOS devices.",
+          "Use mobile malware analysis tools like iVerify Basic.",
+          "Enable iOS Lockdown Mode to protect against sophisticated attacks."
+        ],
+        "tags": [
+          "spyware",
+          "ios",
+          "predator",
+          "malware",
+          "surveillance",
+          "mobile_security",
+          "zero_click",
+          "privacy"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/predator-spyware-hooks-ios-springboard-to-hide-mic-camera-activity/"
+        ],
+        "date": "2026-02-22"
+      }
+    ]
+  }
+}
