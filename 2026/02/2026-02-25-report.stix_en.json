@@ -1,6 +1,6 @@
 {
   "type": "bundle",
-  "id": "bundle--cb551acc-1e7b-4b8e-a710-fa542c774b60",
+  "id": "bundle--4c4266a5-6a29-4339-a4d9-e67f182a6c1f",
   "objects": [
     {
       "type": "marking-definition",
@@ -43,17 +43,17 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--1b252252-c851-4131-9181-df0cd239289e",
-      "created": "2026-02-25T04:15:21.000Z",
-      "modified": "2026-02-25T04:15:21.000Z",
+      "id": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
+      "created": "2026-02-25T06:38:41.000Z",
+      "modified": "2026-02-25T06:38:41.000Z",
       "name": "VigilIntel",
       "identity_class": "organization"
     },
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "APT28",
@@ -81,8 +81,8 @@
     {
       "type": "campaign",
       "spec_version": "2.1",
-      "id": "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Operation MacroMaze / Operation Neusploit",
@@ -106,8 +106,8 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "CVE-2026-21509",
@@ -129,16 +129,16 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--04905433-0301-4d9f-a46a-56bca6ad0bfa",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "note--fd04553b-8580-4ffe-b7b6-19eeebe1422c",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "abstract": "(EN) APT28",
       "content": "Sector: Government, Military, European entities\n\nModus operandi:\nSpear-phishing, tracking pixels (INCLUDEPICTURE), VBA macros, webhook.site exfiltration, headless browser usage.",
       "object_refs": [
-        "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
-        "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-        "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e"
+        "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
+        "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+        "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0"
       ],
       "external_references": [
         {
@@ -158,8 +158,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--85028ccd-a9fb-484c-847d-208c947a90c2",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--a5621e45-9ac9-4644-ab1a-ff0b3b33800a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Lazarus Group",
@@ -188,8 +188,8 @@
     {
       "type": "campaign",
       "spec_version": "2.1",
-      "id": "campaign--1046c2e3-f505-41f5-9884-60e203df303d",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "campaign--1da7fcd2-baf6-465b-8445-517b1bdde292",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Medusa Ransomware Adoption",
@@ -213,15 +213,15 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--d8292378-72b4-4e0c-b458-140d3cf43825",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "note--fb68c09a-7f3b-4a92-9c1b-c90c3b73e477",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "abstract": "(EN) Lazarus Group",
       "content": "Sector: Healthcare, Non-profits, Government\n\nModus operandi:\nRansomware-as-a-Service (Medusa), custom backdoors (Comebacker, Blindingcan), credential dumping (Mimikatz).",
       "object_refs": [
-        "threat-actor--85028ccd-a9fb-484c-847d-208c947a90c2",
-        "campaign--1046c2e3-f505-41f5-9884-60e203df303d"
+        "threat-actor--a5621e45-9ac9-4644-ab1a-ff0b3b33800a",
+        "campaign--1da7fcd2-baf6-465b-8445-517b1bdde292"
       ],
       "external_references": [
         {
@@ -241,8 +241,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--63168817-d42e-4dc2-80ae-088e17a00c7d",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--a8ef710a-0b6f-4d1e-b240-47a9e47724eb",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ShinyHunters",
@@ -273,8 +273,8 @@
     {
       "type": "campaign",
       "spec_version": "2.1",
-      "id": "campaign--2a7dd8c8-bb2f-4fa7-bf33-5a6e70cff885",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "campaign--a80532c6-bce4-4e76-88d0-e017fdbefac7",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Early 2026 Extortion Spree",
@@ -302,15 +302,15 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--488bd299-dfca-4870-bdfd-e26ed5d7dc16",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "note--a2640513-e987-4cf1-bdb5-5f69d425e349",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "abstract": "(EN) ShinyHunters",
       "content": "Sector: Hospitality, Automotive, Telecommunications\n\nModus operandi:\nVishing, SSO account hijacking, OAuth application abuse, data leak site pressure.",
       "object_refs": [
-        "threat-actor--63168817-d42e-4dc2-80ae-088e17a00c7d",
-        "campaign--2a7dd8c8-bb2f-4fa7-bf33-5a6e70cff885"
+        "threat-actor--a8ef710a-0b6f-4d1e-b240-47a9e47724eb",
+        "campaign--a80532c6-bce4-4e76-88d0-e017fdbefac7"
       ],
       "external_references": [
         {
@@ -334,8 +334,8 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--b8215ffd-d1b6-4c52-8b9b-878fd73df5d2",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "vulnerability--488b107a-9cd3-4770-b8df-89f64e8bcc55",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "CVE-2025-40538",
@@ -371,8 +371,8 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--b0469118-825c-46dc-8626-6f0fb4fd5418",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "vulnerability--49cf7e58-edf1-4e07-8761-67d9ce7f178a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "CVE-2025-13942",
@@ -408,8 +408,8 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--a2488862-fea7-4d79-acd0-15c8fb2aa63c",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "identity--d07d2d64-1d17-47dc-8b8d-9981040abd40",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Vikor Scientific (Vanta Diagnostics)",
@@ -422,8 +422,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--7601d995-8152-4598-b36c-fb7af2a657de",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--d27a17a9-1fc7-4836-9cf0-41b8f9ffeb1a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Everest Ransomware",
@@ -444,8 +444,8 @@
     {
       "type": "incident",
       "spec_version": "2.1",
-      "id": "incident--e16bbe24-5933-4ae6-8f05-7af263e2703e",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "incident--cf329c22-b5b5-4133-ab16-b300f79a7ac0",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Breach: Vikor Scientific (Vanta Diagnostics)",
@@ -470,8 +470,8 @@
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--8bf9e104-c22f-41ac-a63b-867de965859f",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "identity--ffc839f0-377c-41ce-a8dd-2c5bf5a420b8",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Seoul Public Bike Service (Ttareungyi)",
@@ -484,8 +484,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--bdfdcc42-0ef5-4d33-a7f4-fd0b3328df42",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--70959350-0f4f-4183-a831-8c3e80383167",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Unknown (Charged individuals)",
@@ -506,8 +506,8 @@
     {
       "type": "incident",
       "spec_version": "2.1",
-      "id": "incident--10f3eedc-f2a5-4970-9201-f5b7a4cb3c22",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "incident--247ba6bc-f157-424d-be4e-87be34ada46d",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Breach: Seoul Public Bike Service (Ttareungyi)",
@@ -531,14 +531,14 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--bd6d326a-e476-439d-907a-871d26b19df2",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "note--2c292da7-b633-4291-afa0-89c38a5d0950",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "abstract": "Geopolitical analysis (EN) / Russian New Generation Warfare (NGW)",
       "content": "Sector: International Relations / NATO\n\nTheme: Russian New Generation Warfare (NGW)\n\nRussian military doctrine is evolving into a full-scale 'New Generation Warfare' campaign against NATO members, integrating cyberattacks, sabotage, and influence operations to degrade political unity and test defensive capabilities before 2028.\n\nTags: Russia, NATO, Hybrid Warfare, NGW",
       "object_refs": [
-        "identity--1b252252-c851-4131-9181-df0cd239289e"
+        "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
       ],
       "external_references": [
         {
@@ -554,8 +554,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Unknown (Operation Bizarre Bazaar)",
@@ -576,8 +576,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--3750eeb4-867b-48ce-9837-709b3e0c7865",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--f6e1a247-97e1-4299-a57f-76ae0b624cec",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Model Context Protocol (MCP) server scanning",
@@ -599,8 +599,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--d289693f-fabf-4074-94b9-65e25513809e",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--34f9274d-fc32-408c-949e-b5b89768e92b",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Shodan",
@@ -622,8 +622,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--00f98b71-4297-472b-bb0a-15e7c42aad4e",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--2ec8b32f-6afe-4945-9366-3b889b33e5fe",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Censys",
@@ -645,8 +645,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d79758f7-76c7-4fdd-802c-2fd70ef2beaf",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--46338bbb-c6a8-46df-bdca-3410fabbacfe",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1586",
@@ -664,8 +664,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--b64fd939-1f22-49ea-bcae-a42b76521899",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--ef428c47-692d-4f08-853c-0d6e56e618f2",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1539",
@@ -683,8 +683,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--16a40806-501d-45db-9375-12a8499572dd",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--c29278c6-4ac5-4bcb-975f-ec906440bc37",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1496",
@@ -702,25 +702,25 @@
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "LLMjacking and Cloud-AI Resource Theft",
       "description": "Industrialized monetization of unauthorized AI access (Operation Bizarre Bazaar). Threat actors steal compute cycles and API access to resell on underground markets via silver.inc.\n\nAnalysis:\nLLMjacking has evolved from simple credential theft to a service-based economy. Attackers focus on Model Context Protocol (MCP) servers to bridge to internal infrastructure.\n\nRecommendations:\n- Monitor API usage for unusual patterns and rotate keys frequently.\n- Treat internal AI endpoints as internet-facing assets with strict IAM controls.",
       "published": "2026-02-25T00:00:00Z",
       "object_refs": [
-        "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
+        "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
         "url--bc06982d-e8ce-519e-9255-bf778c14505c",
         "domain-name--8f847374-4550-5c93-9a77-ebf684577ec5",
         "domain-name--51360bdf-30ed-59ba-abc1-a59e0e08d5ef",
         "domain-name--aabe6719-c1e2-54d3-88d9-2b066342c35e",
-        "tool--3750eeb4-867b-48ce-9837-709b3e0c7865",
-        "tool--d289693f-fabf-4074-94b9-65e25513809e",
-        "tool--00f98b71-4297-472b-bb0a-15e7c42aad4e",
-        "attack-pattern--d79758f7-76c7-4fdd-802c-2fd70ef2beaf",
-        "attack-pattern--b64fd939-1f22-49ea-bcae-a42b76521899",
-        "attack-pattern--16a40806-501d-45db-9375-12a8499572dd"
+        "tool--f6e1a247-97e1-4299-a57f-76ae0b624cec",
+        "tool--34f9274d-fc32-408c-949e-b5b89768e92b",
+        "tool--2ec8b32f-6afe-4945-9366-3b889b33e5fe",
+        "attack-pattern--46338bbb-c6a8-46df-bdca-3410fabbacfe",
+        "attack-pattern--ef428c47-692d-4f08-853c-0d6e56e618f2",
+        "attack-pattern--c29278c6-4ac5-4bcb-975f-ec906440bc37"
       ],
       "labels": [
         "LLMjacking",
@@ -741,8 +741,8 @@
     {
       "type": "threat-actor",
       "spec_version": "2.1",
-      "id": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Unknown (Russian-speaking)",
@@ -763,8 +763,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--45ff548f-c145-4db4-99cc-a605321be054",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--ad6309fd-ba31-4809-a6e1-52feea673608",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Python-based recon utilities",
@@ -786,8 +786,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--c9de5772-34c8-4607-a189-87b4c69ba650",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--1073b2aa-0c61-49de-b768-1d7417471c82",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "Go-based configuration parsers",
@@ -809,8 +809,8 @@
     {
       "type": "tool",
       "spec_version": "2.1",
-      "id": "tool--038dfb4b-d478-4b24-a5fa-ac9ad9e36bef",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "tool--6378cdee-c361-4c8b-88a9-f47635f28fe8",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "GenAI automated workflows",
@@ -832,8 +832,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f5f36915-2df9-443a-b636-d7a7c53630d5",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--5316102e-6e86-466f-b72a-7c6c67d291e4",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1595",
@@ -851,8 +851,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5fb28f6f-8f9b-44e5-a332-16562c55edd3",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--c4bd8742-a98e-40f4-8f40-68ea12bba9e2",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1110",
@@ -870,8 +870,8 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--b0e4f5d8-0dec-4e96-9519-33b0d2c5a992",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "attack-pattern--d3971e46-e24a-483a-8e19-7407aeaa48cd",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "ATT&CK T1078",
@@ -889,21 +889,21 @@
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "AI-Automated Credential Harvesting against FortiGate",
       "description": "A low-skill Russian-speaking actor used GenAI to automate reconnaissance and credential harvesting against over 600 FortiGate devices globally.\n\nAnalysis:\nThe campaign demonstrates how commercial LLMs lower the barrier for opportunistic attacks on exposed management interfaces.\n\nRecommendations:\n- Disable internet-facing management interfaces on firewalls.\n- Enforce MFA for all administrative access.",
       "published": "2026-02-25T00:00:00Z",
       "object_refs": [
-        "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-        "tool--45ff548f-c145-4db4-99cc-a605321be054",
-        "tool--c9de5772-34c8-4607-a189-87b4c69ba650",
-        "tool--038dfb4b-d478-4b24-a5fa-ac9ad9e36bef",
-        "attack-pattern--f5f36915-2df9-443a-b636-d7a7c53630d5",
-        "attack-pattern--5fb28f6f-8f9b-44e5-a332-16562c55edd3",
-        "attack-pattern--b0e4f5d8-0dec-4e96-9519-33b0d2c5a992"
+        "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+        "tool--ad6309fd-ba31-4809-a6e1-52feea673608",
+        "tool--1073b2aa-0c61-49de-b768-1d7417471c82",
+        "tool--6378cdee-c361-4c8b-88a9-f47635f28fe8",
+        "attack-pattern--5316102e-6e86-466f-b72a-7c6c67d291e4",
+        "attack-pattern--c4bd8742-a98e-40f4-8f40-68ea12bba9e2",
+        "attack-pattern--d3971e46-e24a-483a-8e19-7407aeaa48cd"
       ],
       "labels": [
         "AI",
@@ -924,14 +924,14 @@
     {
       "type": "note",
       "spec_version": "2.1",
-      "id": "note--94408d8f-ebe2-4a0c-b9a3-1bccf462e6ab",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "note--27ef1478-cc06-4569-8acc-0f37a286a23a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "abstract": "Strategic analysis (EN)",
       "content": "The threat landscape for late February 2026 is characterized by three major trends: the mass industrialization of AI-assisted cybercrime, a resurgence of critical infrastructure vulnerabilities, and the consolidation of state-sponsored ransomware tactics. Low-skill actors are now successfully compromising enterprise-grade firewalls (FortiGate) using commercial LLMs for automation. Meanwhile, APT groups like Lazarus and APT28 are refining their exfiltration methods—using webhooks and adopting RaaS (Medusa) to fund espionage. A significant wave of critical vulnerabilities in SolarWinds, Zyxel, and VMware highlights persistent risks in edge and management software, while the ShinyHunters group continues a high-profile extortion spree against major consumer and hospitality brands.",
       "object_refs": [
-        "identity--1b252252-c851-4131-9181-df0cd239289e"
+        "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
       ],
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
@@ -941,36 +941,36 @@
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--7ebd51f8-a247-4923-a872-c8f8ce4651b5",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "report--93434756-80a3-404c-a74a-35c17de617c2",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "name": "CTI Report (EN) - 2026-02-25",
       "description": "Aggregated CTI report for language EN",
       "published": "2026-02-25T00:00:00Z",
       "object_refs": [
-        "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
-        "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-        "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e",
-        "note--04905433-0301-4d9f-a46a-56bca6ad0bfa",
-        "threat-actor--85028ccd-a9fb-484c-847d-208c947a90c2",
-        "campaign--1046c2e3-f505-41f5-9884-60e203df303d",
-        "note--d8292378-72b4-4e0c-b458-140d3cf43825",
-        "threat-actor--63168817-d42e-4dc2-80ae-088e17a00c7d",
-        "campaign--2a7dd8c8-bb2f-4fa7-bf33-5a6e70cff885",
-        "note--488bd299-dfca-4870-bdfd-e26ed5d7dc16",
-        "vulnerability--b8215ffd-d1b6-4c52-8b9b-878fd73df5d2",
-        "vulnerability--b0469118-825c-46dc-8626-6f0fb4fd5418",
-        "incident--e16bbe24-5933-4ae6-8f05-7af263e2703e",
-        "identity--a2488862-fea7-4d79-acd0-15c8fb2aa63c",
-        "threat-actor--7601d995-8152-4598-b36c-fb7af2a657de",
-        "incident--10f3eedc-f2a5-4970-9201-f5b7a4cb3c22",
-        "identity--8bf9e104-c22f-41ac-a63b-867de965859f",
-        "threat-actor--bdfdcc42-0ef5-4d33-a7f4-fd0b3328df42",
-        "note--bd6d326a-e476-439d-907a-871d26b19df2",
-        "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-        "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-        "note--94408d8f-ebe2-4a0c-b9a3-1bccf462e6ab"
+        "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
+        "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+        "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0",
+        "note--fd04553b-8580-4ffe-b7b6-19eeebe1422c",
+        "threat-actor--a5621e45-9ac9-4644-ab1a-ff0b3b33800a",
+        "campaign--1da7fcd2-baf6-465b-8445-517b1bdde292",
+        "note--fb68c09a-7f3b-4a92-9c1b-c90c3b73e477",
+        "threat-actor--a8ef710a-0b6f-4d1e-b240-47a9e47724eb",
+        "campaign--a80532c6-bce4-4e76-88d0-e017fdbefac7",
+        "note--a2640513-e987-4cf1-bdb5-5f69d425e349",
+        "vulnerability--488b107a-9cd3-4770-b8df-89f64e8bcc55",
+        "vulnerability--49cf7e58-edf1-4e07-8761-67d9ce7f178a",
+        "incident--cf329c22-b5b5-4133-ab16-b300f79a7ac0",
+        "identity--d07d2d64-1d17-47dc-8b8d-9981040abd40",
+        "threat-actor--d27a17a9-1fc7-4836-9cf0-41b8f9ffeb1a",
+        "incident--247ba6bc-f157-424d-be4e-87be34ada46d",
+        "identity--ffc839f0-377c-41ce-a8dd-2c5bf5a420b8",
+        "threat-actor--70959350-0f4f-4183-a831-8c3e80383167",
+        "note--2c292da7-b633-4291-afa0-89c38a5d0950",
+        "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+        "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+        "note--27ef1478-cc06-4569-8acc-0f37a286a23a"
       ],
       "labels": [
         "cti-report",
@@ -990,7 +990,7 @@
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
       ],
       "value": "https://silver.inc",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e"
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
     },
     {
       "type": "domain-name",
@@ -1001,7 +1001,7 @@
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
       ],
       "value": "silver.inc",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e"
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
     },
     {
       "type": "domain-name",
@@ -1012,7 +1012,7 @@
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
       ],
       "value": "models.it",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e"
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
     },
     {
       "type": "domain-name",
@@ -1023,18 +1023,18 @@
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
       ],
       "value": "payments.ai",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e"
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d"
     },
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--9945c634-020c-48c8-8051-3de0fdf86d14",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--9c1ec8e5-5132-4a3b-9ef3-8a382bce975a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-      "target_ref": "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
+      "source_ref": "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+      "target_ref": "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1043,13 +1043,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--8a7ab513-f73e-4b51-85d6-a7d231eb53bc",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--5730dd4b-7f75-4ad0-9c7a-edfdfe5ab791",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
-      "target_ref": "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e",
+      "source_ref": "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
+      "target_ref": "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1058,13 +1058,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--eebe56a3-d353-4688-87c7-d44f7a83a9ed",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--85c2feec-3094-4db7-b43d-ee05742a959a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-      "target_ref": "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e",
+      "source_ref": "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+      "target_ref": "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1073,13 +1073,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--903b279a-64b2-452d-8c08-e671292dccf5",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--34081bc6-78ee-4da4-ad34-b572cb8afa2a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "threat-actor--78fa0a47-aa8b-409f-a305-418dff2e6276",
-      "target_ref": "note--04905433-0301-4d9f-a46a-56bca6ad0bfa",
+      "source_ref": "threat-actor--fe7bd555-9493-4664-b82a-4d3c3807960e",
+      "target_ref": "note--fd04553b-8580-4ffe-b7b6-19eeebe1422c",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1088,13 +1088,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--7ea1eb46-c495-4a82-ad46-1346ab21ccd5",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--af6c2816-7654-40d2-8c47-b1e5bac5b780",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "campaign--5388539a-c50f-4c07-875e-d4d2072a927c",
-      "target_ref": "note--04905433-0301-4d9f-a46a-56bca6ad0bfa",
+      "source_ref": "campaign--c6e1fdcc-a7f1-40a5-a4dc-2c58383b7b2f",
+      "target_ref": "note--fd04553b-8580-4ffe-b7b6-19eeebe1422c",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1103,13 +1103,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--ac8f1a24-cf7f-47f1-a287-13762ab49154",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--0b382d95-1b96-4d22-8586-27aa8103e922",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "note--04905433-0301-4d9f-a46a-56bca6ad0bfa",
-      "target_ref": "vulnerability--57c9db29-cb63-4ca0-bfb5-a2a01a0a555e",
+      "source_ref": "note--fd04553b-8580-4ffe-b7b6-19eeebe1422c",
+      "target_ref": "vulnerability--a502bb9c-1456-49a7-a3b9-f20d0aec2db0",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1118,13 +1118,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--cd7fa679-c042-4876-822e-eed227153447",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--99ad5fd9-ebfe-48fe-935e-82aa166b5fb1",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "campaign--1046c2e3-f505-41f5-9884-60e203df303d",
-      "target_ref": "threat-actor--85028ccd-a9fb-484c-847d-208c947a90c2",
+      "source_ref": "campaign--1da7fcd2-baf6-465b-8445-517b1bdde292",
+      "target_ref": "threat-actor--a5621e45-9ac9-4644-ab1a-ff0b3b33800a",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1133,13 +1133,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--6273b509-36b4-4aae-b587-0f57baaba506",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--9d39cc4a-2611-4695-b576-828d3bf146b1",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "threat-actor--85028ccd-a9fb-484c-847d-208c947a90c2",
-      "target_ref": "note--d8292378-72b4-4e0c-b458-140d3cf43825",
+      "source_ref": "threat-actor--a5621e45-9ac9-4644-ab1a-ff0b3b33800a",
+      "target_ref": "note--fb68c09a-7f3b-4a92-9c1b-c90c3b73e477",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1148,13 +1148,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--60a6d62c-f779-40b2-990c-d129b399b17a",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--caebeb3d-f918-4ac1-97d7-6eaab2b0d456",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "campaign--1046c2e3-f505-41f5-9884-60e203df303d",
-      "target_ref": "note--d8292378-72b4-4e0c-b458-140d3cf43825",
+      "source_ref": "campaign--1da7fcd2-baf6-465b-8445-517b1bdde292",
+      "target_ref": "note--fb68c09a-7f3b-4a92-9c1b-c90c3b73e477",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1163,13 +1163,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--e007d20e-566a-4924-a600-4511bc121569",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--a849f1a1-e843-4e71-bdd4-d9b3def53e23",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "campaign--2a7dd8c8-bb2f-4fa7-bf33-5a6e70cff885",
-      "target_ref": "threat-actor--63168817-d42e-4dc2-80ae-088e17a00c7d",
+      "source_ref": "campaign--a80532c6-bce4-4e76-88d0-e017fdbefac7",
+      "target_ref": "threat-actor--a8ef710a-0b6f-4d1e-b240-47a9e47724eb",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1178,13 +1178,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--7a8cbf56-7645-4577-8d16-e7820a7f82e7",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--2fb2043c-f26c-4d6e-bf64-e6b2d965e837",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "threat-actor--63168817-d42e-4dc2-80ae-088e17a00c7d",
-      "target_ref": "note--488bd299-dfca-4870-bdfd-e26ed5d7dc16",
+      "source_ref": "threat-actor--a8ef710a-0b6f-4d1e-b240-47a9e47724eb",
+      "target_ref": "note--a2640513-e987-4cf1-bdb5-5f69d425e349",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1193,13 +1193,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--2b74a361-af06-4384-81e0-446d8308b3ae",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--4a2637ef-7771-49e8-9591-acb70680f74e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "campaign--2a7dd8c8-bb2f-4fa7-bf33-5a6e70cff885",
-      "target_ref": "note--488bd299-dfca-4870-bdfd-e26ed5d7dc16",
+      "source_ref": "campaign--a80532c6-bce4-4e76-88d0-e017fdbefac7",
+      "target_ref": "note--a2640513-e987-4cf1-bdb5-5f69d425e349",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1208,13 +1208,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--f3aba8fc-795e-4aa5-b32d-cf799f7b4642",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--2490d44e-a992-4d20-ad5f-4b8a00d8c014",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "incident--e16bbe24-5933-4ae6-8f05-7af263e2703e",
-      "target_ref": "identity--a2488862-fea7-4d79-acd0-15c8fb2aa63c",
+      "source_ref": "incident--cf329c22-b5b5-4133-ab16-b300f79a7ac0",
+      "target_ref": "identity--d07d2d64-1d17-47dc-8b8d-9981040abd40",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1223,13 +1223,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--e0e8c933-07c4-4860-83bf-3d8fb40b0e44",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--b85c4c1a-dd23-4e12-8163-85ca574cc834",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "incident--e16bbe24-5933-4ae6-8f05-7af263e2703e",
-      "target_ref": "threat-actor--7601d995-8152-4598-b36c-fb7af2a657de",
+      "source_ref": "incident--cf329c22-b5b5-4133-ab16-b300f79a7ac0",
+      "target_ref": "threat-actor--d27a17a9-1fc7-4836-9cf0-41b8f9ffeb1a",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1238,13 +1238,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--7b60fb93-0443-4225-a261-967ff3f684c7",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--3e163e9a-ebc2-46e7-b015-eba489dc9eef",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "threat-actor--7601d995-8152-4598-b36c-fb7af2a657de",
-      "target_ref": "identity--a2488862-fea7-4d79-acd0-15c8fb2aa63c",
+      "source_ref": "threat-actor--d27a17a9-1fc7-4836-9cf0-41b8f9ffeb1a",
+      "target_ref": "identity--d07d2d64-1d17-47dc-8b8d-9981040abd40",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1253,13 +1253,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--bc0aa346-03e2-4a82-b76f-25c8bb8c2008",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--7edb80b2-550c-4ac7-a029-762874fbd58c",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "incident--10f3eedc-f2a5-4970-9201-f5b7a4cb3c22",
-      "target_ref": "identity--8bf9e104-c22f-41ac-a63b-867de965859f",
+      "source_ref": "incident--247ba6bc-f157-424d-be4e-87be34ada46d",
+      "target_ref": "identity--ffc839f0-377c-41ce-a8dd-2c5bf5a420b8",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1268,13 +1268,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--a55faa46-2a37-46ad-bb9d-10f12132b492",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--eeef1f69-ec9e-473e-97eb-d45b42d89bb7",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "attributed-to",
-      "source_ref": "incident--10f3eedc-f2a5-4970-9201-f5b7a4cb3c22",
-      "target_ref": "threat-actor--bdfdcc42-0ef5-4d33-a7f4-fd0b3328df42",
+      "source_ref": "incident--247ba6bc-f157-424d-be4e-87be34ada46d",
+      "target_ref": "threat-actor--70959350-0f4f-4183-a831-8c3e80383167",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1283,13 +1283,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--a006c387-6847-46c6-addf-37c3fb35d862",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--a983d002-ab38-41dc-9e1a-b1be62fd9347",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "targets",
-      "source_ref": "threat-actor--bdfdcc42-0ef5-4d33-a7f4-fd0b3328df42",
-      "target_ref": "identity--8bf9e104-c22f-41ac-a63b-867de965859f",
+      "source_ref": "threat-actor--70959350-0f4f-4183-a831-8c3e80383167",
+      "target_ref": "identity--ffc839f0-377c-41ce-a8dd-2c5bf5a420b8",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1298,13 +1298,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--842a1d15-76b3-41bc-8255-a72517fdc5a2",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--78273d69-1f4f-4b4b-8f10-d7f1e4ef9f0a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "tool--3750eeb4-867b-48ce-9837-709b3e0c7865",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "tool--f6e1a247-97e1-4299-a57f-76ae0b624cec",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1313,13 +1313,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--f00daf63-21f0-483e-99fa-6e73d83623c5",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--15d55d82-bb57-4a1a-b5c8-f5a2f138acff",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "tool--d289693f-fabf-4074-94b9-65e25513809e",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "tool--34f9274d-fc32-408c-949e-b5b89768e92b",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1328,13 +1328,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--9b89c016-2040-44f2-b0d8-1c6abf673133",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--2858eeb9-35e4-45d8-83d3-943fc2cc05c7",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "tool--00f98b71-4297-472b-bb0a-15e7c42aad4e",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "tool--2ec8b32f-6afe-4945-9366-3b889b33e5fe",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1343,13 +1343,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--83f82e98-95d2-4a80-b788-4bc26db20afa",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--4fbe2d7a-cd49-431c-ac85-a34c8253c663",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "attack-pattern--d79758f7-76c7-4fdd-802c-2fd70ef2beaf",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "attack-pattern--46338bbb-c6a8-46df-bdca-3410fabbacfe",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1358,13 +1358,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--56cba95e-cc5c-40ce-84cb-b62701c53aaf",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--cb1cdb60-eebf-4d1c-a9b3-f8fd1118f599",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "attack-pattern--b64fd939-1f22-49ea-bcae-a42b76521899",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "attack-pattern--ef428c47-692d-4f08-853c-0d6e56e618f2",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1373,13 +1373,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--cd930541-6d37-48af-89dc-f7fd54736a15",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--a552741b-fca0-4c0e-8070-f3a6225e9af5",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
-      "target_ref": "attack-pattern--16a40806-501d-45db-9375-12a8499572dd",
+      "source_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
+      "target_ref": "attack-pattern--c29278c6-4ac5-4bcb-975f-ec906440bc37",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1388,13 +1388,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--1f61257e-a926-4c75-8ee4-2d6f1f477871",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--4ab26caa-b579-47b9-92d1-b58f8e1d5463",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "threat-actor--7a715f25-ffc3-4b94-a0a7-ce6c66a7650a",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "threat-actor--eb8a49ac-4afa-400f-82c2-4830e112620d",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1403,13 +1403,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--70cbfc22-a612-4313-98bd-66efb03d155e",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--525067f5-f103-477a-987f-69d289d85610",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "tool--3750eeb4-867b-48ce-9837-709b3e0c7865",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "tool--f6e1a247-97e1-4299-a57f-76ae0b624cec",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1418,13 +1418,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--fab9e84d-42b4-41a7-a801-eb111b838e03",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--20250f6f-3076-4c83-908d-81eba6e03880",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "tool--d289693f-fabf-4074-94b9-65e25513809e",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "tool--34f9274d-fc32-408c-949e-b5b89768e92b",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1433,13 +1433,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--0a39431b-ef20-4c02-bfc4-5c4def5b6a02",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--03be2f9f-10a0-4860-86af-61eac87fa65c",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "tool--00f98b71-4297-472b-bb0a-15e7c42aad4e",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "tool--2ec8b32f-6afe-4945-9366-3b889b33e5fe",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1448,13 +1448,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--13fa408b-cd98-413b-96c7-acca5e45f286",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--17bda0ad-e37d-4e25-a4f7-de3456affbc1",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "attack-pattern--d79758f7-76c7-4fdd-802c-2fd70ef2beaf",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "attack-pattern--46338bbb-c6a8-46df-bdca-3410fabbacfe",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1463,13 +1463,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--708ff0e5-6f73-48d1-aa80-e14028c7da3f",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--1486b6e7-7053-473a-98f2-218ab0c6ad85",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "attack-pattern--b64fd939-1f22-49ea-bcae-a42b76521899",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "attack-pattern--ef428c47-692d-4f08-853c-0d6e56e618f2",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1478,13 +1478,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--1948295e-78ec-4025-bbf5-af1d10019299",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--6198a001-5c89-4451-9103-a31193718193",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
-      "target_ref": "attack-pattern--16a40806-501d-45db-9375-12a8499572dd",
+      "source_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
+      "target_ref": "attack-pattern--c29278c6-4ac5-4bcb-975f-ec906440bc37",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1493,13 +1493,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--ad1120d1-b4ba-446a-a947-40bffdaee1f3",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--db02ae2c-7144-4fe0-9678-1c36de8a4558",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "tool--45ff548f-c145-4db4-99cc-a605321be054",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "tool--ad6309fd-ba31-4809-a6e1-52feea673608",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1508,13 +1508,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--201a7ea3-000e-431e-8237-513701f0f040",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--86abf48e-90a1-495c-9fce-2c2deaf19cfd",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "tool--c9de5772-34c8-4607-a189-87b4c69ba650",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "tool--1073b2aa-0c61-49de-b768-1d7417471c82",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1523,13 +1523,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--b6002bb7-159f-4410-b04a-fde7387ca096",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--59b2364f-a118-4e84-b146-de67cf3cecbb",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "tool--038dfb4b-d478-4b24-a5fa-ac9ad9e36bef",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "tool--6378cdee-c361-4c8b-88a9-f47635f28fe8",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1538,13 +1538,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--3fdae25f-b2bb-499f-92e7-968ec3fed74b",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--be0bcdfe-8394-41de-af2b-be26a8ad5c59",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "attack-pattern--f5f36915-2df9-443a-b636-d7a7c53630d5",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "attack-pattern--5316102e-6e86-466f-b72a-7c6c67d291e4",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1553,13 +1553,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--e08bff09-4bba-417c-aa22-07553ed37b69",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--08562bc9-e2f6-4b04-8076-8b434434b332",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "attack-pattern--5fb28f6f-8f9b-44e5-a332-16562c55edd3",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "attack-pattern--c4bd8742-a98e-40f4-8f40-68ea12bba9e2",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1568,13 +1568,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--d2122cb5-028b-4d0b-ac7f-270af23c3a36",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--25ddbc20-cb59-40e1-a24a-da946aa9c238",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "uses",
-      "source_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
-      "target_ref": "attack-pattern--b0e4f5d8-0dec-4e96-9519-33b0d2c5a992",
+      "source_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
+      "target_ref": "attack-pattern--d3971e46-e24a-483a-8e19-7407aeaa48cd",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1583,13 +1583,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--729186f0-50e0-43b9-bc33-880004e8437c",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--a4361c2c-1f53-4a9d-bf56-73777f68942c",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "threat-actor--1fdd4439-1d79-437c-a276-5e6975b023c4",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "threat-actor--dd5a7f37-47b5-485d-afb6-2ddec452f934",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1598,13 +1598,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--57e9d715-5167-4d7d-b1ea-def41ba3b274",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--1e6e66e7-d4fe-4e3c-9bf4-28bd2a0d9c21",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "tool--45ff548f-c145-4db4-99cc-a605321be054",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "tool--ad6309fd-ba31-4809-a6e1-52feea673608",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1613,13 +1613,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--2748e0b3-e242-496e-97dd-a60d781cb7f8",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--b770becf-843b-4f53-b1ab-9d71de9b2a36",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "tool--c9de5772-34c8-4607-a189-87b4c69ba650",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "tool--1073b2aa-0c61-49de-b768-1d7417471c82",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1628,13 +1628,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--56df63fe-d468-4a33-9924-57c9c3a2acf6",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--39f8aaf3-051c-47e1-89a6-8d0d99502286",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "tool--038dfb4b-d478-4b24-a5fa-ac9ad9e36bef",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "tool--6378cdee-c361-4c8b-88a9-f47635f28fe8",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1643,13 +1643,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--13ff127c-3de9-4829-818a-0e28c389c982",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--58b2b0e5-6517-4ef3-bf1d-945164cbbe3f",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "attack-pattern--f5f36915-2df9-443a-b636-d7a7c53630d5",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "attack-pattern--5316102e-6e86-466f-b72a-7c6c67d291e4",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1658,13 +1658,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--246e0b09-d9a0-453f-925d-125a29103d4b",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--502674fa-b631-4f6f-aa84-ccb954e58d68",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "attack-pattern--5fb28f6f-8f9b-44e5-a332-16562c55edd3",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "attack-pattern--c4bd8742-a98e-40f4-8f40-68ea12bba9e2",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1673,13 +1673,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--2fc27eb4-40f5-402a-98d7-2e3e5bc6763a",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "id": "relationship--5ab3dcab-52c4-4100-a8a7-b864b38d456a",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "created": "2026-02-25T00:00:00.000Z",
       "modified": "2026-02-25T00:00:00.000Z",
       "relationship_type": "related-to",
-      "source_ref": "report--40988502-b4f1-4f8d-9e01-6a5a91413062",
-      "target_ref": "attack-pattern--b0e4f5d8-0dec-4e96-9519-33b0d2c5a992",
+      "source_ref": "report--11fb12fd-7107-4e1f-a5d1-e66750cd0e6e",
+      "target_ref": "attack-pattern--d3971e46-e24a-483a-8e19-7407aeaa48cd",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1688,13 +1688,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--3aef8ea5-8d49-5c3b-b0c9-5c0c98bb1755",
+      "id": "relationship--faa5119e-c971-573a-94ac-8b80a0ccc659",
       "relationship_type": "related-to",
       "source_ref": "url--bc06982d-e8ce-519e-9255-bf778c14505c",
-      "target_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
+      "target_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
       "created": "2026-02-25T00:00:00Z",
       "modified": "2026-02-25T00:00:00Z",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1703,13 +1703,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--fa96ff5c-d466-5bd9-b4e2-a4963d55c5cb",
+      "id": "relationship--7ea44ec5-d755-5782-91ce-3e1376fa9bc4",
       "relationship_type": "related-to",
       "source_ref": "domain-name--8f847374-4550-5c93-9a77-ebf684577ec5",
-      "target_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
+      "target_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
       "created": "2026-02-25T00:00:00Z",
       "modified": "2026-02-25T00:00:00Z",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1718,13 +1718,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--3c601009-db5a-5d61-a213-2241fb600a05",
+      "id": "relationship--1b2c6296-4823-5329-8b7d-f193387ed11d",
       "relationship_type": "related-to",
       "source_ref": "domain-name--51360bdf-30ed-59ba-abc1-a59e0e08d5ef",
-      "target_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
+      "target_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
       "created": "2026-02-25T00:00:00Z",
       "modified": "2026-02-25T00:00:00Z",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
@@ -1733,13 +1733,13 @@
     {
       "type": "relationship",
       "spec_version": "2.1",
-      "id": "relationship--531ad988-92be-502c-a6f7-837720e51b2e",
+      "id": "relationship--a2746aea-febb-5109-a64e-d2024e64cfaa",
       "relationship_type": "related-to",
       "source_ref": "domain-name--aabe6719-c1e2-54d3-88d9-2b066342c35e",
-      "target_ref": "report--118b3c4d-cb30-4125-887b-adb069fafad7",
+      "target_ref": "report--a1a7d18e-0e21-46ef-9252-73365482b78f",
       "created": "2026-02-25T00:00:00Z",
       "modified": "2026-02-25T00:00:00Z",
-      "created_by_ref": "identity--1b252252-c851-4131-9181-df0cd239289e",
+      "created_by_ref": "identity--680240d9-ac26-4b6c-862b-47f7d91a1b6d",
       "object_marking_refs": [
         "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
         "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
