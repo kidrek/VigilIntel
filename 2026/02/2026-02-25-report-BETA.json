@@ -1,0 +1,327 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for late February 2026 is characterized by three major trends: the mass industrialization of AI-assisted cybercrime, a resurgence of critical infrastructure vulnerabilities, and the consolidation of state-sponsored ransomware tactics. Low-skill actors are now successfully compromising enterprise-grade firewalls (FortiGate) using commercial LLMs for automation. Meanwhile, APT groups like Lazarus and APT28 are refining their exfiltration methods—using webhooks and adopting RaaS (Medusa) to fund espionage. A significant wave of critical vulnerabilities in SolarWinds, Zyxel, and VMware highlights persistent risks in edge and management software, while the ShinyHunters group continues a high-profile extortion spree against major consumer and hospitality brands.",
+      "fr": "Le paysage des menaces de la fin février 2026 se caractérise par trois tendances majeures : l'industrialisation massive de la cybercriminalité assistée par IA, une recrudescence des vulnérabilités critiques dans les infrastructures et la consolidation des tactiques de ransomware étatiques. Des acteurs peu qualifiés compromettent désormais avec succès des pare-feux d'entreprise (FortiGate) en utilisant des LLM commerciaux pour l'automatisation. Parallèlement, les groupes APT comme Lazarus et APT28 affinent leurs méthodes d'exfiltration — utilisant des webhooks et adoptant le RaaS (Medusa) pour financer l'espionnage. Une vague importante de vulnérabilités critiques chez SolarWinds, Zyxel et VMware souligne les risques persistants dans les logiciels de périmètre, tandis que le groupe ShinyHunters poursuit une série d'extorsions médiatisées contre de grandes marques de consommation et d'hôtellerie."
+    },
+    "date": "2026-02-25"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "APT28",
+      "campaign": "Operation MacroMaze / Operation Neusploit",
+      "campaign_description": {
+        "en": "Targeting European entities using weaponized documents with INCLUDEPICTURE tracking and webhook-based exfiltration. Also exploited a Microsoft Office zero-day (CVE-2026-21509) to deploy MiniDoor and PixyNetLoader.",
+        "fr": "Ciblage d'entités européennes à l'aide de documents piégés avec suivi INCLUDEPICTURE et exfiltration via webhooks. Exploitation également d'un zero-day Microsoft Office (CVE-2026-21509) pour déployer MiniDoor et PixyNetLoader."
+      },
+      "sector": {
+        "en": "Government, Military, European entities",
+        "fr": "Gouvernement, Militaire, Entités européennes"
+      },
+      "modop": {
+        "en": "Spear-phishing, tracking pixels (INCLUDEPICTURE), VBA macros, webhook.site exfiltration, headless browser usage.",
+        "fr": "Spear-phishing, pixels espions (INCLUDEPICTURE), macros VBA, exfiltration via webhook.site, utilisation de navigateurs sans tête (headless)."
+      },
+      "tags": [
+        "APT28",
+        "Webhook",
+        "Zero-Day",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188421/apt/operation-macromaze-apt28-exploits-webhooks-for-covert-data-exfiltration.html",
+        "https://www.recordedfuture.com/blog/january-2026-cve-landscape"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "threat_actor": "Lazarus Group",
+      "campaign": "Medusa Ransomware Adoption",
+      "campaign_description": {
+        "en": "North Korean state-backed group (including sub-group Stonefly) is now utilizing Medusa Ransomware-as-a-Service to target U.S. healthcare and Middle Eastern organizations for financial gain and espionage funding.",
+        "fr": "Le groupe étatique nord-coréen (incluant le sous-groupe Stonefly) utilise désormais le RaaS Medusa pour cibler le secteur de la santé aux États-Unis et des organisations au Moyen-Orient afin de générer des profits et financer l'espionnage."
+      },
+      "sector": {
+        "en": "Healthcare, Non-profits, Government",
+        "fr": "Santé, Organismes à but non lucratif, Gouvernement"
+      },
+      "modop": {
+        "en": "Ransomware-as-a-Service (Medusa), custom backdoors (Comebacker, Blindingcan), credential dumping (Mimikatz).",
+        "fr": "Ransomware-as-a-Service (Medusa), backdoors personnalisées (Comebacker, Blindingcan), vol d'identifiants (Mimikatz)."
+      },
+      "tags": [
+        "Lazarus",
+        "Stonefly",
+        "Medusa",
+        "Healthcare",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://www.security.com/threat-intelligence/lazarus-medusa-ransomware",
+        "https://databreaches.net/2026/02/24/lazarus-hackers-adopt-medusa-ransomware-for-extortion-campaigns-targeting-healthcare-and-nonprofits/"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "threat_actor": "ShinyHunters",
+      "campaign": "Early 2026 Extortion Spree",
+      "campaign_description": {
+        "en": "High-volume data theft and extortion targeting Wynn Resorts, CarGurus (12.4M records), and Dutch telecom Odido (8M customers). Threats include data leaks and unspecified digital disruptions.",
+        "fr": "Vols de données et extorsions massives ciblant Wynn Resorts, CarGurus (12,4 millions d'enregistrements) et le télécom néerlandais Odido (8 millions de clients). Les menaces incluent des fuites de données et des perturbations numériques non spécifiées."
+      },
+      "sector": {
+        "en": "Hospitality, Automotive, Telecommunications",
+        "fr": "Hôtellerie, Automobile, Télécommunications"
+      },
+      "modop": {
+        "en": "Vishing, SSO account hijacking, OAuth application abuse, data leak site pressure.",
+        "fr": "Vishing, détournement de comptes SSO, abus d'applications OAuth, pression via site de fuite (leaksite)."
+      },
+      "tags": [
+        "ShinyHunters",
+        "Data Breach",
+        "Extortion"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/wynn-resorts-confirms-employee-data-breach-after-extortion-threat/",
+        "https://www.bleepingcomputer.com/news/security/cargurus-data-breach-exposes-information-of-124-million-accounts/",
+        "https://databreaches.net/2026/02/24/hackers-threaten-to-leak-8-million-peoples-stolen-data-if-dutch-telecom-odido-wont-pay-ransom/"
+      ],
+      "date": "2026-02-25"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "International Relations / NATO",
+        "fr": "Relations Internationales / OTAN"
+      },
+      "theme": {
+        "en": "Russian New Generation Warfare (NGW)",
+        "fr": "Guerre de Nouvelle Génération Russe (NGW)"
+      },
+      "description": {
+        "en": "Russian military doctrine is evolving into a full-scale 'New Generation Warfare' campaign against NATO members, integrating cyberattacks, sabotage, and influence operations to degrade political unity and test defensive capabilities before 2028.",
+        "fr": "La doctrine militaire russe évolue vers une campagne de 'Guerre de Nouvelle Génération' à grande échelle contre les membres de l'OTAN, intégrant cyberattaques, sabotages et opérations d'influence pour dégrader l'unité politique et tester les capacités défensives avant 2028."
+      },
+      "tags": [
+        "Russia",
+        "NATO",
+        "Hybrid Warfare",
+        "NGW"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/preparing-for-russias-new-generation-warfare-in-europe"
+      ],
+      "date": "2026-02-25"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Vikor Scientific (Vanta Diagnostics)",
+      "threat_actor": "Everest Ransomware",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Data breach affecting 140,000 patients due to a compromise at third-party supplier Catalyst RCM. Stolen data includes EMRs, billing info, and PII.",
+        "fr": "Violation de données touchant 140 000 patients suite à la compromission du fournisseur tiers Catalyst RCM. Les données volées incluent des dossiers médicaux électroniques (EMR), des informations de facturation et des PII."
+      },
+      "tags": [
+        "Supply Chain",
+        "Ransomware",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188397/data-breach/everest-ransomware-hits-vikor-scientific-s-supplier-data-of-140000-patients-stolen.html"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "victim": "Seoul Public Bike Service (Ttareungyi)",
+      "threat_actor": "Unknown (Charged individuals)",
+      "sector": {
+        "en": "Public Transport",
+        "fr": "Transport Public"
+      },
+      "description": {
+        "en": "Breach exposing data of 4.62 million riders (90% of registered users) including IDs, phone numbers, and addresses. Two teenagers charged.",
+        "fr": "Brèche exposant les données de 4,62 millions de cyclistes (90 % des utilisateurs inscrits), incluant identifiants, numéros de téléphone et adresses. Deux adolescents inculpés."
+      },
+      "tags": [
+        "South Korea",
+        "PII Leak"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/24/korean-cops-charge-teens-over-bike-hire-breach-that-exposed-data-on-4-62m-riders/"
+      ],
+      "date": "2026-02-25"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-40538",
+      "euvd_id": "EUVD-2025-40538",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:solarwinds:serv-u:*:*:*:*:*:*:*:*",
+      "product": "Serv-U",
+      "vendor": "SolarWinds",
+      "description": {
+        "en": "Broken access control in SolarWinds Serv-U allowing a malicious actor to create a system admin user and execute arbitrary code as root.",
+        "fr": "Contrôle d'accès défaillant dans SolarWinds Serv-U permettant à un acteur malveillant de créer un utilisateur administrateur système et d'exécuter du code arbitraire en tant que root."
+      },
+      "tags": [
+        "vulnerability",
+        "Critical",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188454/hacking/solarwinds-patches-four-critical-serv-u-flaws-enabling-root-access.html"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "cve_id": "CVE-2025-13942",
+      "euvd_id": "EUVD-2025-13942",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:h:zyxel:*:*:*:*:*:*:*:*:*",
+      "product": "4G LTE/5G NR CPE, DSL/Ethernet Routers",
+      "vendor": "Zyxel",
+      "description": {
+        "en": "Critical command injection vulnerability in the UPnP function allowing remote unauthenticated attackers to execute OS commands.",
+        "fr": "Vulnérabilité critique d'injection de commande dans la fonction UPnP permettant à des attaquants distants non authentifiés d'exécuter des commandes OS."
+      },
+      "tags": [
+        "vulnerability",
+        "Command Injection",
+        "Edge Device"
+      ],
+      "sources": [
+        "https://securityonline.info/total-takeover-critical-zyxel-flaw-cvss-9-8-exposes-routers-to-remote-command-injection/"
+      ],
+      "date": "2026-02-25"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "LLMjacking and Cloud-AI Resource Theft",
+        "fr": "LLMjacking et vol de ressources Cloud-AI"
+      },
+      "description": {
+        "en": "Industrialized monetization of unauthorized AI access (Operation Bizarre Bazaar). Threat actors steal compute cycles and API access to resell on underground markets via silver.inc.",
+        "fr": "Monétisation industrialisée d'accès IA non autorisés (Opération Bizarre Bazaar). Les acteurs malveillants volent des cycles de calcul et des accès API pour les revendre sur des marchés souterrains via silver.inc."
+      },
+      "threat_actor": "Unknown (Operation Bizarre Bazaar)",
+      "indicators": {
+        "URL": [
+          "https://silver.inc"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "silver.inc",
+          "models.it",
+          "payments.ai"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Model Context Protocol (MCP) server scanning",
+          "Shodan",
+          "Censys"
+        ]
+      },
+      "mitre_ttps": [
+        "T1586",
+        "T1539",
+        "T1496"
+      ],
+      "analyse": {
+        "en": "LLMjacking has evolved from simple credential theft to a service-based economy. Attackers focus on Model Context Protocol (MCP) servers to bridge to internal infrastructure.",
+        "fr": "Le LLMjacking a évolué du simple vol d'identifiants vers une économie de services. Les attaquants se concentrent sur les serveurs Model Context Protocol (MCP) pour créer des ponts vers les infrastructures internes."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor API usage for unusual patterns and rotate keys frequently.",
+          "fr": "Surveiller l'utilisation des API pour détecter des schémas inhabituels et renouveler les clés fréquemment."
+        },
+        {
+          "en": "Treat internal AI endpoints as internet-facing assets with strict IAM controls.",
+          "fr": "Traiter les endpoints IA internes comme des actifs exposés à Internet avec des contrôles IAM stricts."
+        }
+      ],
+      "tags": [
+        "LLMjacking",
+        "AI",
+        "Resource Hijacking"
+      ],
+      "sources": [
+        "https://www.sysdig.com/blog/llmjacking-from-emerging-threat-to-black-market-reality"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "title": {
+        "en": "AI-Automated Credential Harvesting against FortiGate",
+        "fr": "Collecte d'identifiants automatisée par IA contre FortiGate"
+      },
+      "description": {
+        "en": "A low-skill Russian-speaking actor used GenAI to automate reconnaissance and credential harvesting against over 600 FortiGate devices globally.",
+        "fr": "Un acteur russophone peu qualifié a utilisé la GenAI pour automatiser la reconnaissance et la collecte d'identifiants contre plus de 600 appareils FortiGate dans le monde."
+      },
+      "threat_actor": "Unknown (Russian-speaking)",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Python-based recon utilities",
+          "Go-based configuration parsers",
+          "GenAI automated workflows"
+        ]
+      },
+      "mitre_ttps": [
+        "T1595",
+        "T1110",
+        "T1078"
+      ],
+      "analyse": {
+        "en": "The campaign demonstrates how commercial LLMs lower the barrier for opportunistic attacks on exposed management interfaces.",
+        "fr": "Cette campagne démontre comment les LLM commerciaux abaissent la barrière à l'entrée pour les attaques opportunistes sur les interfaces de gestion exposées."
+      },
+      "recommandations": [
+        {
+          "en": "Disable internet-facing management interfaces on firewalls.",
+          "fr": "Désactiver les interfaces de gestion exposées à Internet sur les pare-feux."
+        },
+        {
+          "en": "Enforce MFA for all administrative access.",
+          "fr": "Appliquer l'authentification multi-facteur (MFA) pour tous les accès administratifs."
+        }
+      ],
+      "tags": [
+        "AI",
+        "FortiGate",
+        "Automation"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/threat-actor-ai-fortigate-intrusion-activity"
+      ],
+      "date": "2026-02-25"
+    }
+  ]
+}
