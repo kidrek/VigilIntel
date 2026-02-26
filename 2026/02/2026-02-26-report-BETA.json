@@ -1,0 +1,247 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for February 26, 2026, is dominated by critical supply chain vulnerabilities and state-sponsored espionage. High-severity zero-day exploits in network infrastructure (Cisco Catalyst SD-WAN) have been leveraged by sophisticated actors like UAT-8616 since 2023. Concurrently, AI tools (Claude Code, Langflow, OpenClaw) are emerging as new attack vectors for remote code execution and credential theft. A major global espionage campaign, GRIDTIDE (UNC2814), highlights the continued abuse of legitimate cloud services (Google Sheets) for command-and-control, affecting telecom and government sectors across 42 countries.",
+      "fr": "Le paysage des menaces au 26 février 2026 est dominé par des vulnérabilités critiques de la chaîne logistique et l'espionnage étatique. Des exploits zero-day de haute sévérité dans les infrastructures réseau (Cisco Catalyst SD-WAN) sont exploités par des acteurs sophistiqués comme UAT-8616 depuis 2023. Parallèlement, les outils d'IA (Claude Code, Langflow, OpenClaw) émergent comme de nouveaux vecteurs d'attaque pour l'exécution de code à distance et le vol d'identifiants. Une campagne d'espionnage mondiale majeure, GRIDTIDE (UNC2814), souligne l'abus persistant de services cloud légitimes (Google Sheets) pour le C2, impactant les secteurs des télécoms et gouvernementaux dans 42 pays."
+    },
+    "date": "2026-02-26"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Regulation & Privacy",
+        "fr": "Réglementation et Vie Privée"
+      },
+      "theme": {
+        "en": "EU Chat Control & Digital Sovereignty",
+        "fr": "Chat Control de l'UE et Souveraineté Numérique"
+      },
+      "description": {
+        "en": "Denmark reversed its position on the CSA Regulation, opposing mandatory scanning of encrypted messages. Meanwhile, Russia fined Google for VPN distribution, signaling a fragmentation of global internet governance.",
+        "fr": "Le Danemark a inversé sa position sur le règlement CSA, s'opposant au scan obligatoire des messages cryptés. Parallèlement, la Russie a condamné Google à une amende pour la distribution de VPN, signalant une fragmentation de la gouvernance mondiale d'Internet."
+      },
+      "tags": ["EU", "Russia", "Encryption", "VPN", "Regulation"],
+      "sources": ["https://edri.org/our-work/chat-control-is-in-the-final-stretch-but-it-could-be-a-marathon-not-a-sprint/", "https://www.reuters.com/world/russia-fines-google-distributing-vpn-services-tass-reports-2026-02-25/"],
+      "date": "2026-02-26"
+    },
+    {
+      "sector": {
+        "en": "Government & Strategy",
+        "fr": "Gouvernement et Stratégie"
+      },
+      "theme": {
+        "en": "South Korea Cybersecurity Law Updates",
+        "fr": "Mise à jour des lois de cybersécurité en Corée du Sud"
+      },
+      "description": {
+        "en": "Following massive breaches, South Korean lawmakers are proposing updates to the Network Act and Personal Information Protection Act to enhance governance and sanctions.",
+        "fr": "À la suite de brèches massives, les législateurs sud-coréens proposent des mises à jour du Network Act et du Personal Information Protection Act pour renforcer la gouvernance et les sanctions."
+      },
+      "tags": ["South Korea", "Data Privacy", "Legislation"],
+      "sources": ["https://databreaches.net/2026/02/25/south-korea-considers-updates-to-data-and-cyber-laws/"],
+      "date": "2026-02-26"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "CarGurus",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Automotive Retail",
+        "fr": "Vente Automobile"
+      },
+      "description": {
+        "en": "12.4 million account records leaked, including emails, addresses, and finance application results.",
+        "fr": "Fuite de 12,4 millions de comptes, incluant emails, adresses et résultats de demandes de financement."
+      },
+      "tags": ["Data Leak", "PII"],
+      "sources": ["https://securityaffairs.com/188491/cyber-crime/shinyhunters-cyberattack-on-cargurus-impacts-12-4-million-users.html"],
+      "date": "2026-02-26"
+    },
+    {
+      "victim": "Canadian Tire",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Retail",
+        "fr": "Commerce de détail"
+      },
+      "description": {
+        "en": "Confirmed breach of 38.3 million unique email addresses and personal data from an October 2025 incident.",
+        "fr": "Violation confirmée de 38,3 millions d'adresses email uniques et de données personnelles provenant d'un incident d'octobre 2025."
+      },
+      "tags": ["Data Breach", "Retail"],
+      "sources": ["https://haveibeenpwned.com/Breach/CanadianTire"],
+      "date": "2026-02-26"
+    },
+    {
+      "victim": "Clalit Health Services",
+      "threat_actor": "Handala",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Iranian-linked group Handala claims to have stolen sensitive medical data for over 10,000 patients.",
+        "fr": "Le groupe Handala, lié à l'Iran, prétend avoir volé des données médicales sensibles pour plus de 10 000 patients."
+      },
+      "tags": ["Healthcare", "Iran-Nexus", "Espionage"],
+      "sources": ["https://databreaches.net/2026/02/25/clalit-probes-suspected-cyberattack-after-iranian-linked-hackers-leak-patient-files/"],
+      "date": "2026-02-26"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-20127",
+      "euvd_id": "EUVD-2026-20127",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN Controller and Manager",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Critical authentication bypass vulnerability allowing unauthenticated remote access to high-privilege internal accounts via the NETCONF interface. Actively exploited since 2023.",
+        "fr": "Vulnérabilité critique de contournement d'authentification permettant un accès distant non authentifié à des comptes internes hautement privilégiés via l'interface NETCONF. Exploitée activement depuis 2023."
+      },
+      "tags": ["vulnerability", "RCE", "Zero-day", "CISA KEV"],
+      "sources": ["https://fieldeffect.com/blog/max-severity-zero-day-cisco-catalyst-sd-wan-patched", "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-002/"],
+      "date": "2026-02-26"
+    },
+    {
+      "cve_id": "CVE-2025-13942",
+      "euvd_id": "EUVD-2025-13942",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:h:zyxel:router:*:*:*:*:*:*:*:*",
+      "product": "Multiple Routers",
+      "vendor": "Zyxel",
+      "description": {
+        "en": "Critical RCE flaw in UPnP function allowing unauthenticated OS command execution if WAN access is enabled.",
+        "fr": "Faille RCE critique dans la fonction UPnP permettant l'exécution de commandes système non authentifiées si l'accès WAN est activé."
+      },
+      "tags": ["vulnerability", "RCE", "IoT"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/zyxel-warns-of-critical-rce-flaw-affecting-over-a-dozen-routers/"],
+      "date": "2026-02-26"
+    },
+    {
+      "cve_id": "CVE-2026-27966",
+      "euvd_id": "EUVD-2026-27966",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+      "product": "Langflow",
+      "vendor": "Langflow AI",
+      "description": {
+        "en": "Remote Code Execution in CSV Agent node via prompt injection due to hardcoded settings.",
+        "fr": "Exécution de code à distance dans le nœud CSV Agent via une injection de prompt en raison de paramètres codés en dur."
+      },
+      "tags": ["vulnerability", "AI", "RCE"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-27966"],
+      "date": "2026-02-26"
+    },
+    {
+      "cve_id": "CVE-2026-25108",
+      "euvd_id": "EUVD-2026-25108",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:soliton:filezen:*:*:*:*:*:*:*:*",
+      "product": "FileZen",
+      "vendor": "Soliton Systems K.K",
+      "description": {
+        "en": "OS command injection allowing authenticated users to execute arbitrary commands. Added to CISA KEV.",
+        "fr": "Injection de commande OS permettant aux utilisateurs authentifiés d'exécuter des commandes arbitraires. Ajoutée au catalogue KEV du CISA."
+      },
+      "tags": ["vulnerability", "CISA KEV", "Exploited"],
+      "sources": ["https://securityaffairs.com/188473/hacking/u-s-cisa-adds-a-flaw-in-soliton-systems-k-k-filezen-to-its-known-exploited-vulnerabilities-catalog.html"],
+      "date": "2026-02-26"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "GRIDTIDE Espionage Campaign (UNC2814)",
+        "fr": "Campagne d'espionnage GRIDTIDE (UNC2814)"
+      },
+      "description": {
+        "en": "Suspected PRC-nexus group UNC2814 targeting telecom and government agencies globally. The campaign uses the GRIDTIDE backdoor which abuses Google Sheets API for C2.",
+        "fr": "Groupe suspecté d'être lié à la Chine (UNC2814) ciblant les télécoms et agences gouvernementales. La campagne utilise la porte dérobée GRIDTIDE qui abuse de l'API Google Sheets pour le C2."
+      },
+      "threat_actor": "UNC2814",
+      "indicators": {
+        "URL": [
+          "http://130.94.6.228/amp.tar.gz",
+          "http://130.94.6.228/apt.tar.gz",
+          "http://130.94.6.228/update.tar.gz",
+          "https://sheets.googleapis.com:443/v4/spreadsheets/"
+        ],
+        "IPv4": [
+          "130.94.6.228", "139.180.219.115", "139.84.236.237", "149.28.128.128", "149.28.139.125", "178.79.188.181", "195.123.211.70", "195.123.226.235", "202.59.10.122", "207.148.73.18", "38.180.205.14", "38.54.112.184", "38.54.31.146", "38.54.32.244", "38.54.37.196", "38.54.82.69", "38.60.171.242", "38.60.194.21", "38.60.224.25", "38.60.252.66", "45.76.157.113", "45.76.184.214", "45.77.254.168", "45.90.59.129", "5.34.176.6", "65.20.104.91"
+        ],
+        "DOMAIN": [
+          "1cv2f3d5s6a9w.ddnsfree.com", "admina.freeddns.org", "afsaces.accesscam.org", "ancisesic.accesscam.org", "applebox.camdvr.org", "appler.kozow.com", "asdad21ww.freeddns.org", "aw2o25forsbc.camdvr.org", "awcc001jdaigfwdagdcew.giize.com", "bab2o25com.accesscam.org", "babaji.accesscam.org", "babi5599ss.ddnsgeek.com", "balabalabo.mywire.org", "bggs.giize.com", "bibabo.freeddns.org", "binmol.webredirect.org", "bioth.giize.com", "boemobww.ddnsfree.com", "brcallletme.theworkpc.com", "btbtutil.theworkpc.com", "btltan.ooguy.com", "camcampkes.ddnsfree.com", "camsqewivo.kozow.com", "ccammutom.ddnsgeek.com", "cdnvmtools.theworkpc.com", "cloacpae.ddnsfree.com", "cmwwoods1.theworkpc.com", "cnrpaslceas.freeddns.org", "codemicros12.gleeze.com", "cressmiss.ooguy.com", "cvabiasbae.ddnsfree.com", "cvnoc01da1cjmnftsd.accesscam.org", "cvpc01aenusocirem.accesscam.org", "cvpc01cgsdfn53hgd.giize.com", "dclcwpdtsdcc.ddnsfree.com", "dlpossie.ddnsfree.com", "dnsfreedb.ddnsfree.com", "doboudix1024.mywire.org", "evilginx2.loseyourip.com", "examp1e.webredirect.org", "faeelt.giize.com", "fakjcsaeyhs.ddnsfree.com", "fasceadvcva3.gleeze.com", "ffosies2024.camdvr.org", "fgdedd1dww.gleeze.com", "filipinet.ddnsgeek.com", "freeios.theworkpc.com", "ftpuser14.gleeze.com", "ftpzpak.kozow.com", "globoss.kozow.com", "gogo2025up.ddnsfree.com", "googlel.gleeze.com", "googles.accesscam.org", "googles.ddnsfree.com", "googlett.camdvr.org", "googllabwws.gleeze.com", "gtaldps31c.ddnsfree.com", "hamkorg.kozow.com", "honidoo.loseyourip.com", "huygdr12.loseyourip.com", "icekancusjhea.ddnsgeek.com", "idstandsuui.kozow.com", "indoodchat.theworkpc.com", "jarvis001.freeddns.org", "kaushalya.freeddns.org", "khyes001ndfpnuewdm.kozow.com", "kskxoscieontrolanel.gleeze.com", "ksv01sokudwongsj.theworkpc.com", "lcskiecjj.loseyourip.com", "lcskiecs.ddnsfree.com", "losiesca.ddnsgeek.com", "lps2staging.ddnsfree.com", "lsls.casacam.net", "ltiuys.ddnsgeek.com", "ltiuys.kozow.com", "mailsdy.gleeze.com", "maliclick1.ddnsfree.com", "mauritasszddb.ddnsfree.com", "meetls.kozow.com", "microsoft.bumbleshrimp.com", "ml3.freeddns.org", "mlksucnayesk.kozow.com", "mmmfaco2025.mywire.org", "mms.bumbleshrimp.com", "mmvmtools.giize.com", "modgood.gleeze.com", "mosplosaq.accesscam.org", "mysql.casacam.net", "nenigncagvawr.giize.com", "nenignenigoncqvoo.ooguy.com", "nenigoncqnutgo.accesscam.org", "nenigoncuopzc.giize.com", "nims.gleeze.com", "nisaldwoa.theworkpc.com", "nmszablogs.ddnsfree.com", "nodekeny11.freeddns.org", "nodjs2o25nodjs.giize.com", "npeoples.theworkpc.com", "officeshan.kozow.com", "okkstt.ddnsgeek.com", "oldatain1.ddnsgeek.com", "onlyosun.ooguy.com", "osix.ddnsgeek.com", "ovmmiuy.mywire.org", "palamolscueajfvc.gleeze.com", "pawanp.kozow.com", "pcmainecia.ddnsfree.com", "pcvmts3.kozow.com", "peisuesacae.loseyourip.com", "peowork.ddnsgeek.com", "pepesetup.ddnsfree.com", "pewsus.freeddns.org", "plcoaweniva.ddnsgeek.com", "policyagent.theworkpc.com", "polokinyea.gleeze.com", "pplodsssead222.loseyourip.com", "pplosad231.kozow.com", "ppsabedon.gleeze.com", "prdanjana01.ddnsfree.com", "prepaid127.freeddns.org", "priftp.kozow.com", "prihxlcs.ddnsfree.com", "prihxlcsw.theworkpc.com", "pxlaxvvva.freeddns.org", "quitgod2023luck.giize.com", "rabbit.ooguy.com", "rsm323.kozow.com", "saf3asg.giize.com", "scopps.ddnsgeek.com", "sdhite43.ddnsfree.com", "sdsuytoins63.kozow.com", "selfad.gleeze.com", "serious.kozow.com", "setupcodpr2.freeddns.org", "sgsn.accesscam.org", "smartfren.giize.com", "sn0son4t31bbsvopou.camdvr.org", "sn0son4t31opc.freeddns.org", "soovuy.gleeze.com", "styuij.mywire.org", "supceasfg1.loseyourip.com", "systemsz.kozow.com", "t31c0mjumpcuyerop.ooguy.com", "t31c0mopamcuiomx.kozow.com", "t31c0mopmiuewklg.webredirect.org", "t31c0mopocuveop.accesscam.org", "t3lc0mcanyqbfac.loseyourip.com", "t3lc0mczmoihwc.camdvr.org", "t3lc0mh4udncifw.casacam.net", "t3lc0mhasvnctsk.giize.com", "t3lm0rtlcagratu.kozow.com", "tch.giize.com", "telcomn.giize.com", "telen.bumbleshrimp.com", "telkom.ooguy.com", "telkomservices.theworkpc.com", "thbio.kozow.com", "timpe.kozow.com", "timpe.webredirect.org", "tlse001hdfuwwgdgpnn.theworkpc.com", "tltlsktelko.ddnsfree.com", "transport.dynuddns.net", "trvcl.bumbleshrimp.com", "ttsiou12.loseyourip.com", "ua2o25yth.ddnsgeek.com", "udieyg.gleeze.com", "unnjunnani.ddnsfree.com", "updatamail.kozow.com", "updatasuccess.ddnsgeek.com", "updateservices.kozow.com", "updatetools.giize.com", "uscplxsecjs.ddnsgeek.com", "usoshared1.ddnsfree.com", "vals.bumbleshrimp.com", "vass.ooguy.com", "vass2025.casacam.net", "vmtools.camdvr.org", "vmtools.loseyourip.com", "vosies.ddnsfree.com", "vpaspmine.freeddns.org", "wdlcamaakc.ooguy.com", "winfoss1.kozow.com", "ysiohbk.camdvr.org", "zammffayhd.ddnsfree.com", "zmcmvmbm.ddnsfree.com", "zwmn350n3o1fsdf3gs.kozow.com", "zwmn350n3o1ugety2xbe.camdvr.org", "zwmn350n3o1vsdrggs.ddnsfree.com", "zwt310n3o1unety2kab.webredirect.org", "zwt310n3o2unety6a3k.kozow.com", "zwt31n3t0nidoqmve.camdvr.org", "zwt3ln3t1aimckalw.theworkpc.com"
+        ],
+        "HASH_SHA256": [
+          "01fc3bd5a78cd59255a867ffb3dfdd6e0b7713ee90098ea96cc01c640c6495eb", "4eb994b816a1a24cf97bfd7551d00fe14b810859170dbf15180d39e05cd7c0f9", "669917bad46a57e5f2de037f8ec200a44fb579d723af3e2f1be1e8479a267966", "ce36a5fc44cbd7de947130b67be9e732a7b4086fb1df98a5afd724087c973b47", "d25024ccea8eac85a9522289cfb709f2ed4e20176dd37855bacc2cd75c995606", "eb08c840f4c95e2fa5eff05e5f922f86c766f5368a63476f046b2b9dbffc2033"
+        ],
+        "TOOLS": ["GRIDTIDE"]
+      },
+      "mitre_ttps": ["T1102.002", "T1071.001"],
+      "analyse": {
+        "en": "UNC2814 demonstrates a high level of operational security by using legitimate cloud environments to hide C2 traffic. This campaign specifically targets infrastructure in 42 countries, focusing on PII theft and long-term persistence within telecom networks.",
+        "fr": "UNC2814 fait preuve d'une sécurité opérationnelle élevée en utilisant des environnements cloud légitimes pour masquer le trafic C2. Cette campagne cible spécifiquement les infrastructures dans 42 pays, se concentrant sur le vol de PII et la persistance à long terme dans les réseaux de télécommunications."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor and restrict egress traffic to Google Sheets API from unauthorized servers.",
+          "fr": "Surveiller et restreindre le trafic sortant vers l'API Google Sheets depuis les serveurs non autorisés."
+        },
+        {
+          "en": "Implement network segmentation and multi-factor authentication for sensitive administrative interfaces.",
+          "fr": "Mettre en œuvre la segmentation réseau et l'authentification multifacteur pour les interfaces d'administration sensibles."
+        }
+      ],
+      "tags": ["Espionage", "China", "Telecom", "Google Sheets"],
+      "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign/"],
+      "date": "2026-02-26"
+    },
+    {
+      "title": {
+        "en": "UAT-8616 Exploitation of Cisco SD-WAN",
+        "fr": "Exploitation de Cisco SD-WAN par UAT-8616"
+      },
+      "description": {
+        "en": "A sophisticated actor (UAT-8616) has been exploiting CVE-2026-20127 and CVE-2022-20775 to gain root access on Cisco Catalyst SD-WAN controllers.",
+        "fr": "Un acteur sophistiqué (UAT-8616) exploite CVE-2026-20127 et CVE-2022-20775 pour obtenir un accès root sur les contrôleurs Cisco Catalyst SD-WAN."
+      },
+      "threat_actor": "UAT-8616",
+      "indicators": {
+        "IPv4": ["1.1.1.10"],
+        "DIRECTORY": [
+          "/var/log", "/var/log/tmplog/vdebug", "/var/volatile/log", "/var/volatile/log/vdebug", "/etc/ssh/sshd_config", "/home/root/.ssh/authorized_keys", "/home/vmanage-admin/.ssh/authorized_keys"
+        ]
+      },
+      "mitre_ttps": ["T1190", "T1068", "T1548.001"],
+      "analyse": {
+        "en": "Activity dating back to 2023 indicates long-term stealthy exploitation. Attackers use software version downgrades and zero-day bugs to bypass high-privilege account security.",
+        "fr": "L'activité remontant à 2023 indique une exploitation furtive à long terme. Les attaquants utilisent des rétrogradations de versions logicielles et des failles zero-day pour contourner la sécurité des comptes privilégiés."
+      },
+      "recommandations": [
+        {
+          "en": "Patch Cisco Catalyst SD-WAN to versions 20.12.5.3, 20.12.6.1, or 20.15.4.2 immediately.",
+          "fr": "Corriger Cisco Catalyst SD-WAN vers les versions 20.12.5.3, 20.12.6.1 ou 20.15.4.2 immédiatement."
+        },
+        {
+          "en": "Review control connection peering events and audit SSH keys for unauthorized entries.",
+          "fr": "Examiner les événements d'appairage des connexions de contrôle et auditer les clés SSH pour détecter les entrées non autorisées."
+        }
+      ],
+      "tags": ["Zero-day", "Cisco", "Espionage"],
+      "sources": ["https://blog.talosintelligence.com/uat-8616-sd-wan/"],
+      "date": "2026-02-26"
+    }
+  ]
+}
