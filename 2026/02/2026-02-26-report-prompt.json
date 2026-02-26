@@ -1,0 +1,522 @@
+
+## Vulnérabilité dans Cisco Catalyst SD-WAN (25 février 2026)
+A vulnerability has been discovered in Cisco Catalyst SD-WAN, allowing attackers to bypass security policies. Affected versions include Catalyst SD-WAN versions 20.12.5.x prior to 20.12.5.3, 20.12.6.x prior to 20.12.6.1, 20.15.x prior to 20.15.4.2, 20.18.x prior to 20.18.2.1, and versions prior to 20.9.8.2; Cisco plans to release a security patch version 20.9.8.2 on February 27, 2026. Versions 20.11.x, 20.13.x, 20.14.x, and 20.16.x are affected but will not receive security updates. 
+observables: {'domain-name': ['cert.ssi.gouv.fr', 'cve.org'], 'ipv4-addr': ['20.12.5.3', '20.12.6.1', '20.15.4.2', '20.18.2.1', '20.9.8.2'], 'url': ['http://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0210', 'http://www.cve.org/CVERecord?id=CVE-2026-20127', 'https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk', 'https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0210/', 'https://www.cve.org/CVERecord?id=CVE-2026-20127'], 'vulnerability': ['CVE-2026-20127']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational']
+Sources: https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-002/
+Source level: 1
+## Chat Control is in the final stretch – but it could be a marathon, not a sprint
+In late 2025, Denmark reversed course on the controversial CSA Regulation, proposing to eliminate mandatory scanning of private messages and add protections for encrypted communications, after seven EU countries failed to reach an agreement. The Council's position, while not perfect, avoids provisions that would force services like Signal or WhatsApp to scan user messages or undermine encryption, aligning with the European Parliament’s 2023 position. However, disagreements remain regarding a "voluntary" scanning scheme and the potential for mandatory age verification, which could require users to provide sensitive data for accessing online communications. The final negotiations are scheduled for June 2026, but face delays and ongoing influence from the European Commission. 
+observables: {'domain-name': ['fightchatcontrol.eu']}
+Publication date: Wed, 25 Feb 2026 13:02:07 +0000
+Source type: ['reglementary']
+Sources: https://edri.org/our-work/chat-control-is-in-the-final-stretch-but-it-could-be-a-marathon-not-a-sprint/
+Source level: 1
+## Finding Signal in the Noise: Lessons Learned Running a Honeypot with AI Assistance &#x5b;Guest Diary&#x5d;, (Tue, Feb 24th)
+An ISC intern, Austin Bodolay, details experiences deploying and operating a honeypot with AI assistance. The honeypot, part of the DShield project, collects data from scans and attacks, generating 8 million logs from 14,000 unique IP addresses. AI, specifically ChatGPT, proved valuable for syntax assistance, alternative perspectives, and maintaining analytical focus, helping to identify patterns and validate conclusions, such as recognizing a botnet scanning for vulnerable Apache servers. The analysis highlights the importance of comprehensive data collection and the limitations of relying solely on incoming traffic logs. 
+observables: {'domain-name': ['cisa.gov', 'cve.org', 'sans.edu'], 'ipv4-addr': ['100.173.183.197', '184.200.100.31', '20.86.82.62', '45.43.37.254', '45.48.37.254', '45.49.37.254', '46.43.37.204', '48.43.37.204', '94.247.150.119', '98.117.22.183'], 'url': ['http://www.cisa.gov/news-events/cybersecurity-advisories/aa24-016a', 'http://www.cve.org/CVERecord?id=CVE-2021-42013', 'http://www.sans.edu/cyber-security-programs/bachelors-degree', 'https://blog.cloudflare.com/measuring-network-connections-at-scale/', 'https://blog.qualys.com/vulnerabilities-threat-research/2021/10/27/apache-http-server-path-traversal-remote-code-execution-cve-2021-41773-cve-2021-42013', 'https://chatgpt.com/', 'https://github.com/bruneaug/DShield-Sensor', 'https://github.com/bruneaug/DShield-SIEM', 'https://nvd.nist.gov/vuln/detail/CVE-2021-41773', 'https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-016a', 'https://www.cve.org/CVERecord?id=CVE-2021-42013', 'https://www.sans.edu/cyber-security-programs/bachelors-degree/'], 'vulnerability': ['CVE-2021-42013', 'CVE-2021-41773']}
+Publication date: Thu, 26 Feb 2026 02:11:08 GMT
+Source type: ['operational', 'strategical']
+Sources: https://isc.sans.edu/diary/rss/32744
+Source level: 2
+
+## ISC Stormcast For Thursday, February 26th, 2026 https://isc.sans.edu/podcastdetail/9826, (Thu, Feb 26th)
+The class is titled Diary Archives. 
+observables: {}
+Publication date: Thu, 26 Feb 2026 02:00:03 GMT
+Source type: ['operational', 'strategical']
+Sources: https://isc.sans.edu/diary/rss/32750
+Source level: 2
+
+## The CLAIR Model: A Synthesized Conceptual Framework for Mapping Critical Infrastructure Interdependencies &#x5b;Guest Diary&#x5d;, (Wed, Feb 25th)
+The CLAIR Model is a new conceptual framework designed to address the analytical gap created by the convergence of Information Technology (IT) and Operational Technology (OT). It synthesizes the Purdue Enterprise Reference Architecture (PERA) with the Zachman Framework for Enterprise Architecture to provide a structured scope for identifying and visualizing critical infrastructure interdependencies. The model expands the traditional five-level Purdue hierarchy into a ten-level architectural stack, incorporating dependencies on primary utility infrastructure and cloud systems. A key aspect of the CLAIR Model is its ability to categorize dependencies and visualize them using Sankey Flow Maps, enabling organizations to understand and mitigate cascading failures, such as those resulting from power grid disruptions impacting data centers. 
+observables: {'domain-name': ['cyber.gov.au', 'fortinet.com', 'opengroup.org'], 'url': ['https://doi.org/10.1111/j.1530-9290.2008.00004.x', 'https://doi.org/10.6028/NIST.SP.800-40r4']}
+Publication date: Wed, 25 Feb 2026 21:09:28 GMT
+Source type: ['operational', 'strategical']
+Sources: https://isc.sans.edu/diary/rss/32748
+Source level: 2
+
+## ISC Stormcast For Wednesday, February 25th, 2026 https://isc.sans.edu/podcastdetail/9824, (Wed, Feb 25th)
+The class is titled Diary Archives. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 02:00:02 GMT
+Source type: ['operational', 'strategical']
+Sources: https://isc.sans.edu/diary/rss/32746
+Source level: 2
+## Medical device maker UFP Technologies warns of data stolen in cyberattack
+UFP Technologies, a medical device manufacturer, disclosed a cybersecurity incident impacting its IT systems and resulting in data theft. The company detected suspicious activity on February 14 and engaged cybersecurity advisors to investigate, discovering that data was stolen from compromised systems, though the threat has been removed. While the company hasn't determined if personal information was exfiltrated, it stated that billing and label-making functions were affected, and it is assessing the potential impact on operations and financials. 
+observables: {'domain-name': ['handle.in']}
+Publication date: Wed, 25 Feb 2026 18:02:16 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/medical-device-maker-ufp-technologies-warns-of-data-stolen-in-cyberattack/
+Source level: 2
+
+## Fake Next.js job interview tests backdoor developer's devices
+A coordinated campaign is targeting software developers with malicious repositories disguised as legitimate Next.js projects and technical assessment materials. Attackers aim to achieve remote code execution on developer machines, exfiltrate data, and introduce additional payloads. The attack triggers through various methods, including VS Code, the development server, and backend startup, ultimately deploying a JavaScript backdoor that profiles the host and connects to a command-and-control server. Microsoft recommends developers enforce VS Code Workspace Trust, use Attack Surface Reduction rules, and minimize secrets on developer endpoints. 
+observables: {'domain-name': ['handle.in']}
+Publication date: Wed, 25 Feb 2026 16:47:12 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/fake-nextjs-job-interview-tests-backdoor-developers-devices/
+Source level: 2
+
+## Critical Cisco SD-WAN bug exploited in zero-day attacks since 2023
+A critical authentication bypass vulnerability, CVE-2026-20127, affects Cisco Catalyst SD-WAN Controller and Manager, allowing remote attackers to compromise systems and add malicious peers to networks. Exploitation has been ongoing since 2023, attributed to a sophisticated threat actor tracked as UAT-8616, who leveraged CVE-2022-20775 to gain root access. CISA has issued an Emergency Directive requiring agencies to inventory, investigate, and patch affected systems by February 27, 2026, and Cisco has released software updates to address the vulnerability. 
+observables: {'directory': ['/var/log', '/var/log/tmplog/vdebug', '/var/volatile/log', '/var/volatile/log/vdebug'], 'domain-name': ['bleepingcomputer.com', 'handle.in'], 'vulnerability': ['CVE-2026-20127', 'CVE-2022-20775']}
+Publication date: Wed, 25 Feb 2026 13:01:51 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/critical-cisco-sd-wan-bug-exploited-in-zero-day-attacks-since-2023/
+Source level: 2
+
+## Chinese cyberspies breached dozens of telecom firms, govt agencies
+A suspected Chinese threat actor, UNC2814, conducted a global espionage campaign targeting telecom and government networks, impacting 53 organizations in 42 countries. The campaign, active since 2023, utilized a new C-based backdoor named GRIDTIDE, which abuses the Google Sheets API for command-and-control operations. Google, Mandiant, and partners disrupted the campaign by terminating cloud projects and sinkholing domains, but anticipate the actor will resume activity. 
+observables: {'domain-name': ['handle.in']}
+Publication date: Wed, 25 Feb 2026 12:00:15 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breached-dozens-of-telecom-firms-govt-agencies/
+Source level: 2
+
+## Marquis sues SonicWall over backup breach that led to ransomware attack
+Marquis Software Solutions has filed a lawsuit against SonicWall, alleging gross negligence and misrepresentation led to a ransomware attack impacting 74 U.S. banks. The attack, occurring on August 14, 2025, involved the theft of personal information after hackers compromised a SonicWall firewall by exploiting a security gap in the vendor’s MySonicWall cloud backup service. The vulnerability allowed unauthorized access to firewall configuration backup files, and SonicWall disclosed the incident three weeks later, initially underestimating the impact to all clients. Marquis is now defending over 36 consumer class action lawsuits related to the attack and seeks monetary damages and equitable relief. 
+observables: {'domain-name': ['handle.in']}
+Publication date: Wed, 25 Feb 2026 10:54:44 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/marquis-sues-sonicwall-over-backup-breach-that-led-to-ransomware-attack/
+Source level: 2
+
+## The OpenClaw Hype: Analysis of Chatter from Open-Source Deep and Dark Web
+OpenClaw, initially a developer's side project for AI-assisted automation, has rapidly gained attention due to security implications and hype cycles. The platform, which allows users to manage tasks through modular plugins called "skills," presents a supply-chain security risk, although it hasn't yet been fully weaponized. Security researchers have identified critical vulnerabilities, including remote code execution and credential theft, and discussions around malicious derivatives like ClawDBot and MoltBot are prevalent. While underground forums show limited exploitation, the distribution of malicious skills within the platform remains a significant concern, as it allows attackers to inherit automation environment permissions. 
+observables: {'vulnerability': ['CVE-2026-25253']}
+Publication date: Wed, 25 Feb 2026 10:01:11 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/the-openclaw-hype-analysis-of-chatter-from-open-source-deep-and-dark-web/
+Source level: 2
+
+## Zyxel warns of critical RCE flaw affecting over a dozen routers
+Zyxel has released security updates to address a critical remote command execution (RCE) vulnerability, CVE-2025-13942, affecting over a dozen router models. The flaw exists in the UPnP function and allows unauthenticated attackers to execute OS commands if both WAN access and the UPnP function are enabled. Shadowserver tracks nearly 120,000 Internet-exposed Zyxel devices, and CISA is monitoring 12 Zyxel vulnerabilities actively exploited in the wild. Zyxel also patched two high-severity command-injection vulnerabilities (CVE-2025-13943 and CVE-2026-1459) and advises users to replace end-of-life routers due to unpatchable zero-day vulnerabilities. 
+observables: {'domain-name': ['handle.in'], 'vulnerability': ['CVE-2025-13942', 'CVE-2025-13943', 'CVE-2026-1459', 'CVE-2024-40891']}
+Publication date: Wed, 25 Feb 2026 07:53:02 -0500
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.bleepingcomputer.com/news/security/zyxel-warns-of-critical-rce-flaw-affecting-over-a-dozen-routers/
+Source level: 2
+## Caught in the Hook: RCE and API Token Exfiltration Through Claude Code Project Files | CVE-2025-59536 | CVE-2026-21852
+Check Point Research discovered critical vulnerabilities in Anthropic’s Claude Code that allow attackers to achieve remote code execution and steal API credentials through malicious project configurations. The vulnerabilities exploit Hooks, Model Context Protocol (MCP) servers, and environment variables, enabling arbitrary shell command execution and API key exfiltration when users clone untrusted repositories. Attackers can inject malicious configurations into repositories, bypass user consent for MCP server initialization, and intercept API communications to steal credentials. These vulnerabilities pose supply chain risks, as malicious configurations can spread through pull requests, honeypot repositories, or compromised developer accounts, and Anthropic has released patches to remediate all reported issues. 
+observables: {'directory': ['/Users/alice/avesoue-python-tools', '/Users/alice/awesome-python-tools', '/Users/alice/awesone-pythoa-tools', '/Users/alice/awesoue-python-tools', '/Users/alice/cool-project'], 'domain-name': ['server.com'], 'url': ['http://attacker-server.com'], 'vulnerability': ['CVE-2025-59536', 'CVE-2026-21852', 'GHSA-PH6W-F82W-28W6']}
+Publication date: Wed, 25 Feb 2026 13:58:39 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/
+Source level: 1
+## Hidden in Plain Sight: How Attackers Weaponize Alternate Data Streams to Hide Malware
+Windows' NTFS file system allows for hidden data streams attached to files, known as Alternate Data Streams (ADS). Attackers exploit this feature to conceal malware, including ransomware payloads, by embedding malicious code within seemingly harmless files, evading security tools. Attackers utilize legitimate Windows tools like rundll32.exe, wscript, and certutil to execute payloads directly from these hidden ADS streams, a technique documented under MITRE ATT&CK ID T1564.004. Detection methods involve using Windows commands like dir /r and Get-Item, forensic tools like Streams.exe, and security tools providing command-line visibility to identify unusual ADS activity. 
+observables: {'process': ['rundll32.exe', 'Streams.exe'], 'mitre': {'technique': ['T1564.004']}}
+Publication date: Wed, 25 Feb 2026 19:27:01 GMT
+Source type: ['operational']
+Sources: https://www.cyberengage.org/post/hidden-in-plain-sight-how-attackers-weaponize-alternate-data-streams-to-hide-malware
+Source level: 2
+## Make The Most of Network Firewall Logs with Elastic Security
+The article discusses leveraging firewall data within Elastic Security, emphasizing its importance for network visibility and security. Network firewalls filter traffic based on organizational rules and generate logs that record allowed and denied connections, supplementing data from sources like endpoint telemetry. Key fields within firewall logs, such as timestamps, source/destination IPs and ports, protocol, and action identifiers, provide valuable insights into network activity and potential threats. Elastic Security facilitates log collection through Elastic Agent and offers integrations for various firewall vendors, enabling visualization and exploration of network data via the Network Page, which includes interactive maps and data tables. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 GMT
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.elastic.co/security-labs/make-the-most-of-network-firewall-logs-with-elastic
+Source level: 1
+## Maximum‑severity zero day in Cisco Catalyst SD‑WAN now patched
+Cisco disclosed CVE-2026-20127, a maximum-severity zero-day vulnerability in Catalyst SD-WAN Controller and Manager, allowing unauthenticated remote access to high-privilege internal accounts. The flaw, with a CVSS score of 10.0, enables attackers to manipulate routing and policy across the SD-WAN control plane via the NETCONF interface, and limited exploitation occurred prior to the patch release. Affected deployment types include On-Prem, Cisco Hosted SD-WAN Cloud, Cisco Hosted SD-WAN Cloud - Cisco Managed, and Cisco Hosted SD-WAN Cloud - FedRAMP Environment. Organizations are advised to apply patches, collect artifacts, review environments for compromise, and implement Cisco’s SD-WAN hardening guidance. 
+observables: {'email-addr': ['letschat@fieldeffect.com'], 'vulnerability': ['CVE-2026-20127']}
+Publication date: Wed, 25 Feb 2026 21:00:58 GMT
+Source type: ['operational']
+Sources: https://fieldeffect.com/blog/max-severity-zero-day-cisco-catalyst-sd-wan-patched
+Source level: 2
+
+## Typosquatting campaign targets npm, CI pipelines, and AI‑driven development
+Researchers detailed SANDWORM_MODE, a supply-chain attack campaign involving at least 19 malicious Node Package Manager (npm) packages impersonating developer utilities and AI coding tools. The malicious packages deployed a Model Context Protocol (MCP) server and used prompt-injection techniques to harvest SSH keys, cloud credentials, npm tokens, and environment secrets. The campaign builds on techniques used in the 2025 Shai-Hulud campaign and targets high-traffic Node.js utilities, cryptocurrency tooling, and AI coding assistants. npm and GitHub removed the malicious packages and related infrastructure following coordinated disclosure. 
+observables: {'email-addr': ['letschat@fieldeffect.com']}
+Publication date: Wed, 25 Feb 2026 14:37:50 GMT
+Source type: ['operational']
+Sources: https://fieldeffect.com/blog/typosquatting-campaign-sandworm-mode
+Source level: 2
+## Detection Without Remediation is Just Surveillance Theater
+The external threat intelligence market has historically focused on scanning the dark web, identifying threats, and alerting customers, but this approach has not prevented breaches. The proliferation of low-cost infostealer malware has accelerated the time between credential theft and network compromise, creating a "remediation velocity gap." Flare is developing a Threat Exposure Management (TEM) technology stack that automatically remediates compromised credentials by integrating with identity providers like Microsoft Entra ID, resetting passwords within seconds and eliminating human intervention. This approach is gaining traction with Managed Security Service Providers (MSSPs) who are seeking remediation infrastructure to embed into their service delivery. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 14:30:42 +0000
+Source type: ['operational']
+Sources: https://flare.io/learn/resources/blog/detection-without-remediation-surveillance-theater
+Source level: 1
+## Exposing the Undercurrent: Disrupting the GRIDTIDE Global Cyber Espionage Campaign
+Google Threat Intelligence Group (GTIG), Mandiant, and partners disrupted a global espionage campaign targeting telecommunications and government organizations across four continents. The suspected PRC-nexus cyber espionage group, UNC2814, has been tracked since 2017 and impacted 53 victims in 42 countries. The group used API calls to Google Sheets as command-and-control (C2) infrastructure, disguising malicious traffic as legitimate activity. Actions taken included terminating Google Cloud Projects, disabling attacker infrastructure and accounts, releasing indicators of compromise (IOCs), and discovering a novel backdoor called GRIDTIDE. GRIDTIDE leverages Google Sheets for C2 communication and exfiltrates data, including personally identifiable information (PII), from compromised systems. 
+observables: {'directory': ['/bin/sh', '/usr/sbin/xapt', '/var/tmp', '/var/tmp/xapt'], 'domain-name': ['1cv2f3d5s6a9w.ddnsfree.com', 'admina.freeddns.org', 'afsaces.accesscam.org', 'ancisesic.accesscam.org', 'applebox.camdvr.org', 'appler.kozow.com', 'asdad21ww.freeddns.org', 'aw2o25forsbc.camdvr.org', 'awcc001jdaigfwdagdcew.giize.com', 'bab2o25com.accesscam.org', 'babaji.accesscam.org', 'babi5599ss.ddnsgeek.com', 'balabalabo.mywire.org', 'bggs.giize.com', 'bibabo.freeddns.org', 'binmol.webredirect.org', 'bioth.giize.com', 'boemobww.ddnsfree.com', 'brcallletme.theworkpc.com', 'btbtutil.theworkpc.com', 'btltan.ooguy.com', 'camcampkes.ddnsfree.com', 'camsqewivo.kozow.com', 'ccammutom.ddnsgeek.com', 'cdnvmtools.theworkpc.com', 'cloacpae.ddnsfree.com', 'cmwwoods1.theworkpc.com', 'cnrpaslceas.freeddns.org', 'codemicros12.gleeze.com', 'cressmiss.ooguy.com', 'cvabiasbae.ddnsfree.com', 'cvnoc01da1cjmnftsd.accesscam.org', 'cvpc01aenusocirem.accesscam.org', 'cvpc01cgsdfn53hgd.giize.com', 'dclcwpdtsdcc.ddnsfree.com', 'dlpossie.ddnsfree.com', 'dnsfreedb.ddnsfree.com', 'doboudix1024.mywire.org', 'evilginx2.loseyourip.com', 'examp1e.webredirect.org', 'faeelt.giize.com', 'fakjcsaeyhs.ddnsfree.com', 'fasceadvcva3.gleeze.com', 'ffosies2024.camdvr.org', 'fgdedd1dww.gleeze.com', 'filipinet.ddnsgeek.com', 'freeios.theworkpc.com', 'ftpuser14.gleeze.com', 'ftpzpak.kozow.com', 'globoss.kozow.com', 'gogo2025up.ddnsfree.com', 'googlel.gleeze.com', 'googles.accesscam.org', 'googles.ddnsfree.com', 'googlett.camdvr.org', 'googllabwws.gleeze.com', 'gtaldps31c.ddnsfree.com', 'hamkorg.kozow.com', 'honidoo.loseyourip.com', 'huygdr12.loseyourip.com', 'icekancusjhea.ddnsgeek.com', 'idstandsuui.kozow.com', 'indoodchat.theworkpc.com', 'jarvis001.freeddns.org', 'kaushalya.freeddns.org', 'khyes001ndfpnuewdm.kozow.com', 'kskxoscieontrolanel.gleeze.com', 'ksv01sokudwongsj.theworkpc.com', 'lcskiecjj.loseyourip.com', 'lcskiecs.ddnsfree.com', 'losiesca.ddnsgeek.com', 'lps2staging.ddnsfree.com', 'lsls.casacam.net', 'ltiuys.ddnsgeek.com', 'ltiuys.kozow.com', 'mailsdy.gleeze.com', 'maliclick1.ddnsfree.com', 'mauritasszddb.ddnsfree.com', 'meetls.kozow.com', 'microsoft.bumbleshrimp.com', 'ml3.freeddns.org', 'mlksucnayesk.kozow.com', 'mmmfaco2025.mywire.org', 'mms.bumbleshrimp.com', 'mmvmtools.giize.com', 'modgood.gleeze.com', 'mosplosaq.accesscam.org', 'mysql.casacam.net', 'nenigncagvawr.giize.com', 'nenignenigoncqvoo.ooguy.com', 'nenigoncqnutgo.accesscam.org', 'nenigoncuopzc.giize.com', 'nims.gleeze.com', 'nisaldwoa.theworkpc.com', 'nmszablogs.ddnsfree.com', 'nodekeny11.freeddns.org', 'nodjs2o25nodjs.giize.com', 'npeoples.theworkpc.com', 'officeshan.kozow.com', 'okkstt.ddnsgeek.com', 'oldatain1.ddnsgeek.com', 'onlyosun.ooguy.com', 'osix.ddnsgeek.com', 'ovmmiuy.mywire.org', 'palamolscueajfvc.gleeze.com', 'pawanp.kozow.com', 'pcmainecia.ddnsfree.com', 'pcvmts3.kozow.com', 'peisuesacae.loseyourip.com', 'peowork.ddnsgeek.com', 'pepesetup.ddnsfree.com', 'pewsus.freeddns.org', 'plcoaweniva.ddnsgeek.com', 'policyagent.theworkpc.com', 'polokinyea.gleeze.com', 'pplodsssead222.loseyourip.com', 'pplosad231.kozow.com', 'ppsabedon.gleeze.com', 'prdanjana01.ddnsfree.com', 'prepaid127.freeddns.org', 'priftp.kozow.com', 'prihxlcs.ddnsfree.com', 'prihxlcsw.theworkpc.com', 'pxlaxvvva.freeddns.org', 'quitgod2023luck.giize.com', 'rabbit.ooguy.com', 'rsm323.kozow.com', 'saf3asg.giize.com', 'scopps.ddnsgeek.com', 'sdhite43.ddnsfree.com', 'sdsuytoins63.kozow.com', 'selfad.gleeze.com', 'serious.kozow.com', 'setupcodpr2.freeddns.org', 'sgsn.accesscam.org', 'smartfren.giize.com', 'sn0son4t31bbsvopou.camdvr.org', 'sn0son4t31opc.freeddns.org', 'soovuy.gleeze.com', 'styuij.mywire.org', 'supceasfg1.loseyourip.com', 'systemsz.kozow.com', 't31c0mjumpcuyerop.ooguy.com', 't31c0mopamcuiomx.kozow.com', 't31c0mopmiuewklg.webredirect.org', 't31c0mopocuveop.accesscam.org', 't3lc0mcanyqbfac.loseyourip.com', 't3lc0mczmoihwc.camdvr.org', 't3lc0mh4udncifw.casacam.net', 't3lc0mhasvnctsk.giize.com', 't3lm0rtlcagratu.kozow.com', 'tch.giize.com', 'telcomn.giize.com', 'telen.bumbleshrimp.com', 'telkom.ooguy.com', 'telkomservices.theworkpc.com', 'thbio.kozow.com', 'timpe.kozow.com', 'timpe.webredirect.org', 'tlse001hdfuwwgdgpnn.theworkpc.com', 'tltlsktelko.ddnsfree.com', 'transport.dynuddns.net', 'trvcl.bumbleshrimp.com', 'ttsiou12.loseyourip.com', 'ua2o25yth.ddnsgeek.com', 'udieyg.gleeze.com', 'unnjunnani.ddnsfree.com', 'updatamail.kozow.com', 'updatasuccess.ddnsgeek.com', 'updateservices.kozow.com', 'updatetools.giize.com', 'uscplxsecjs.ddnsgeek.com', 'usoshared1.ddnsfree.com', 'vals.bumbleshrimp.com', 'vass.ooguy.com', 'vass2025.casacam.net', 'vmtools.camdvr.org', 'vmtools.loseyourip.com', 'vosies.ddnsfree.com', 'vpaspmine.freeddns.org', 'wdlcamaakc.ooguy.com', 'winfoss1.kozow.com', 'ysiohbk.camdvr.org', 'zammffayhd.ddnsfree.com', 'zmcmvmbm.ddnsfree.com', 'zwmn350n3o1fsdf3gs.kozow.com', 'zwmn350n3o1ugety2xbe.camdvr.org', 'zwmn350n3o1vsdrggs.ddnsfree.com', 'zwt310n3o1unety2kab.webredirect.org', 'zwt310n3o2unety6a3k.kozow.com', 'zwt31n3t0nidoqmve.camdvr.org', 'zwt3ln3t1aimckalw.theworkpc.com'], 'file': [{'hash_type': 'SHA-256', 'values': ['01fc3bd5a78cd59255a867ffb3dfdd6e0b7713ee90098ea96cc01c640c6495eb', '4eb994b816a1a24cf97bfd7551d00fe14b810859170dbf15180d39e05cd7c0f9', '669917bad46a57e5f2de037f8ec200a44fb579d723af3e2f1be1e8479a267966', 'ce36a5fc44cbd7de947130b67be9e732a7b4086fb1df98a5afd724087c973b47', 'd25024ccea8eac85a9522289cfb709f2ed4e20176dd37855bacc2cd75c995606', 'eb08c840f4c95e2fa5eff05e5f922f86c766f5368a63476f046b2b9dbffc2033']}], 'ipv4-addr': ['130.94.6.228', '139.180.219.115', '139.84.236.237', '149.28.128.128', '149.28.139.125', '178.79.188.181', '195.123.211.70', '195.123.226.235', '202.59.10.122', '207.148.73.18', '38.180.205.14', '38.54.112.184', '38.54.31.146', '38.54.32.244', '38.54.37.196', '38.54.82.69', '38.60.171.242', '38.60.194.21', '38.60.224.25', '38.60.252.66', '45.76.157.113', '45.76.184.214', '45.77.254.168', '45.90.59.129', '5.34.176.6', '65.20.104.91'], 'url': ['http://130.94.6.228/amp.tar.gz', 'http://130.94.6.228/apt.tar.gz', 'http://130.94.6.228/update.tar.gz', 'https://sheets.googleapis.com:443/v4/spreadsheets/']}
+Publication date: Wed, 25 Feb 2026 14:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign/
+Source level: 1
+## 5 Signs Your Organization Needs AI Governance
+AI adoption is rapidly expanding across organizations, driving innovation and efficiency but creating governance gaps. Many companies are deploying AI faster than they did with previous technologies, leading to concerns about data exposures, unvetted security configurations, and compliance blind spots. Organizations need to implement AI governance to address regulatory requirements, ensure data classification, foster business unit trust, and establish clear ownership for AI risk. Proactive AI governance will enable innovation, reduce risk, and position organizations for long-term success. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 10:00:00 +0000
+Source type: ['operational']
+Sources: https://www.guidepointsecurity.com/blog/five-signs-your-organization-needs-ai-governance/
+Source level: 2
+## The million-dollar front door and the tailgater: Why strong auth could fail at SaaS session integrity
+Attackers are bypassing strong authentication measures by exploiting vulnerabilities in session integrity after the initial login. Security professionals have focused on securing the login event with measures like FIDO2 and device trust, but have neglected to secure the subsequent single sign-on (SSO) sessions. The handoff of authentication to applications creates a vulnerability where stolen session cookies can be used to access resources, bypassing all previous security controls. Mitigations include deploying token binding, shortening session timeouts, implementing IP pinning, monitoring session anomalies, and adopting continuous access evaluation. 
+observables: {'domain-name': ['redcanary.com', 'resource.redcanary.com']}
+Publication date: Wed, 25 Feb 2026 14:00:19 +0000
+Source type: ['']
+Sources: https://redcanary.com/blog/security-operations/saas-session-integrity/
+Source level: 1
+## Untrusted repositories turn Claude code into an attack vector
+Flaws in Anthropic’s Claude Code AI coding assistant could allow remote code execution and API key theft when users open untrusted repositories. Check Point Research found vulnerabilities, CVE-2025-59536 and CVE-2026-21852, that abuse features like Hooks and environment variables to execute shell commands and exfiltrate API credentials. Opening a crafted repository could trigger hidden commands, bypass consent safeguards, and potentially expose shared enterprise cloud environments, while compromised API keys could allow attackers to access and modify shared data. Anthropic addressed the issues by tightening trust prompts and restricting API calls. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731', 'CVE-2025-59536', 'CVE-2026-21852']}
+Publication date: Wed, 25 Feb 2026 21:39:43 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188508/security/untrusted-repositories-turn-claude-code-into-an-attack-vector.html
+Source level: 2
+
+## Critical Zyxel router flaw exposed devices to remote attacks
+Zyxel addressed a critical remote code execution vulnerability, tracked as CVE-2025-13942, affecting multiple router models. The vulnerability, present in the UPnP feature, allows unauthenticated attackers to execute operating system commands if WAN access and the UPnP function are enabled. Several other vulnerabilities, including null pointer dereferences and command injection bugs, were also addressed, requiring administrator credentials for exploitation. Patched firmware versions are expected in March 2026. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731', 'CVE-2025-13942', 'CVE-2026-1459', 'CVE-2025-11847', 'CVE-2025-11848', 'CVE-2025-13943', 'CVE-2025-11845', 'CVE-2025-11846']}
+Publication date: Wed, 25 Feb 2026 20:28:45 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188501/security/critical-zyxel-router-flaw-exposed-devices-to-remote-attacks.html
+Source level: 2
+
+## ShinyHunters cyberattack on CarGurus impacts 12.4 Million users
+The ShinyHunters group leaked data from 12.4 million CarGurus accounts, exposing personal information from the U.S.-based auto research and shopping platform. The 6.1GB archive contained emails, account IDs, finance applications, dealer info, names, phone numbers, addresses, IPs, and auto finance application results. This data breach poses risks of phishing, social engineering attacks, identity theft, and account takeovers for CarGurus customers. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731']}
+Publication date: Wed, 25 Feb 2026 11:37:58 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188491/cyber-crime/shinyhunters-cyberattack-on-cargurus-impacts-12-4-million-users.html
+Source level: 2
+
+## Former U.S. Defense contractor executive sentenced for selling zero-day exploits to Russian broker Operation Zero
+A former L3Harris employee received a prison sentence of over seven years for selling eight zero-day exploits to a Russian broker, Operation Zero, for millions. Peter Williams, an Australian national, pleaded guilty to trade secret theft and was ordered to forfeit assets, including cryptocurrency and property. The U.S. State Department and OFAC have sanctioned individuals and entities linked to Operation Zero, which brokers exploits to non-NATO countries for malicious activities. The stolen exploits could target civilian and military victims worldwide, potentially causing an estimated $35 million in losses. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731']}
+Publication date: Wed, 25 Feb 2026 10:06:10 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188482/intelligence/former-u-s-defense-contractor-executive-sentenced-for-selling-zero-day-exploits-to-russian-broker-operation-zero.html
+Source level: 2
+
+## U.S. CISA adds a flaw in Soliton Systems K.K FileZen to its Known Exploited Vulnerabilities catalog
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added a flaw in Soliton Systems K.K FileZen to its Known Exploited Vulnerabilities catalog. The vulnerability, tracked as CVE-2026-25108, is an operating system command injection that could allow an authenticated user to execute arbitrary commands. The flaw impacts Versions 5.0.0 to 5.0.10 and Versions 4.2.1 to 4.2.8, and CISA orders federal agencies to fix it by March 17, 2026. Soliton is aware of active exploitation and advises users to update to version 5.0.11 or later and change user passwords. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731', 'CVE-2026-25108']}
+Publication date: Wed, 25 Feb 2026 09:23:17 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188473/hacking/u-s-cisa-adds-a-flaw-in-soliton-systems-k-k-filezen-to-its-known-exploited-vulnerabilities-catalog.html
+Source level: 2
+
+## Lazarus APT group deployed Medusa Ransomware against Middle East target
+The Lazarus APT group, linked to North Korea, deployed Medusa ransomware against an unnamed organization in the Middle East. This attack follows a pattern of financially motivated cybercrime by Lazarus, which previously used ransomware like Maui and Play. The group has also targeted U.S. healthcare organizations, with average ransom demands reaching $260,000, and a North Korean IT worker received a five-year sentence in the U.S. for scamming. 
+observables: {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-1731']}
+Publication date: Wed, 25 Feb 2026 08:18:36 +0000
+Source type: ['']
+Sources: https://securityaffairs.com/188460/apt/lazarus-apt-group-deployed-medusa-ransomware-against-middle-east-target.html
+Source level: 2
+## Eliminating runtime blind spots: How CleanStart and Sysdig build continuous trust across the container lifecycle
+The blog post discusses eliminating runtime blind spots in container security through a partnership between CleanStart and Sysdig. Container adoption has expanded the attack surface, and incidents like the Tesla Kubernetes breach highlight the need for runtime security. CleanStart provides hardened base images with cryptographic provenance, while Sysdig offers runtime threat detection and forensics. The combination creates a continuous trust chain from build to runtime, enabling verifiable security and reducing alert fatigue. 
+observables: {'domain-name': ['only.no'], 'url': ['https://cdn.prod.website-files.com/681e366f54a6e3ce87159ca4/699dfa695b382ebd3e9abace_c2ac1891.png', 'https://cdn.prod.website-files.com/681e366f54a6e3ce87159ca4/699dfa695b382ebd3e9abad1_f127c2a1.png', 'https://cdn.prod.website-files.com/681e366f54a6e3ce87159ca4/699f302840dc67868cafe51e_699e896f0eea6c0a95d80e8c_70d2d88b.png']}
+Publication date: Wed, 25 Feb 2026 00:00:00 GMT
+Source type: ['']
+Sources: https://www.sysdig.com/blog/eliminating-runtime-blind-spots-how-cleanstart-and-sysdig-build-continuous-trust-across-the-container-lifecycle
+Source level: 2
+## Active exploitation of Cisco Catalyst SD-WAN by UAT-8616
+Cisco Talos is tracking the exploitation of CVE-2026-20127, a vulnerability in Cisco Catalyst SD-WAN Controller that allows unauthenticated remote attackers to gain administrative privileges. The activity, designated "UAT-8616," is attributed to a highly sophisticated cyber threat actor with evidence of malicious activity dating back to 2023, who escalated to root user via a software version downgrade and exploited CVE-2022-20775. Investigators recommend validating control connection peering events, checking timestamps, IP addresses, peer types, and correlating events with authentication logs to identify potential compromise, and reviewing for indicators like malicious user accounts, unauthorized SSH keys, and log clearing. Cisco has published security advisories and a hardening guide for additional protection. 
+observables: {'directory': ['/etc/ssh/sshd_config', '/home/root/.ssh/authorized_keys', '/home/root/.ssh/known_hosts', '/home/vmanage-admin/.ssh/authorized_keys', '/var/log'], 'ipv4-addr': ['1.1.1.10'], 'url': ['https://sec.cloudapps.cisco.com/security/center/resources/Cisco-Catalyst-SD-WAN-HardeningGuide'], 'vulnerability': ['CVE-2026-20127', 'CVE-2022-20775']}
+Publication date: Wed, 25 Feb 2026 16:13:36 GMT
+Source type: ['']
+Sources: https://blog.talosintelligence.com/uat-8616-sd-wan/
+Source level: 1
+## ⚠️ CRITICAL: CVE-2026-27577 in n8n allows authenticated users to inject code & run system commands (CVSS 9.4). Affected: <2.10.1, <2.9.3, <1.123.22. Upgrade ASAP & restrict workflow perms! https://radar.offseq.com/threat/cve-2026-27577-cwe-94-improper-control-of-generati-fe1b37b0 #OffSeq #n8n #vuln #infosec
+CVE-2026-27577 in n8n enables authenticated users to inject code and execute system commands, receiving a CVSS score of 9.4. Versions prior to 2.10.1, 2.9.3, and 1.123.22 are affected. Immediate upgrades and workflow permission restrictions are recommended. 
+observables: {'domain-name': ['radar.offseq.com'], 'vulnerability': ['CVE-2026-27577']}
+Publication date: Thu, 26 Feb 2026 07:41:30 +0000
+Source type: ['']
+Sources: https://infosec.exchange/@offseq/116135757706584807
+Source level: 2
+
+## ⋅ 53 intrusions dans 42 pays, et tout passait par Google Sheetshttps://www.clubic.com/actualite-602251-intrusions-dans-42-pays-et-tout-passait-par-google-sheets.html#InfoSec
+Okay, I understand. Please provide the text you want me to analyze. I will produce a factual summary adhering to your strict rules. 
+observables: {'artifact': [], 'autonomous-system': [], 'directory': [], 'domain-name': [], 'email-addr': [], 'email-message': [], 'file': [], 'ipv4-addr': [], 'ipv6-addr': [], 'mac-addr': [], 'mutex': [], 'network-traffic': [], 'process': [], 'software': [], 'url': [], 'user-account': [], 'windows-registry-key': [], 'x509-certificate': [], 'vulnerability': [], 'mitre': []}
+Publication date: Thu, 26 Feb 2026 07:41:30 +0000
+Source type: ['']
+Sources: https://mamot.fr/@Steve12L/116135721953500676
+Source level: 2
+
+## Regulatory Development: Jurisdiction: Russia Entity: Google / Alphabet Inc. Fine: 22M roubles (~$288K) Source: TASS Issue: Alleged distribution of VPN services via Google PlaySecurity implications: • VPN services enable bypass of national filtering • App store governance under sovereign pressure • Cross-border compliance exposure • Increasing enforcement targeting distribution channelsThis signals continued fragmentation of global internet governance models.Source: https://www.reuters.com/world/russia-fines-google-distributing-vpn-services-tass-reports-2026-02-25/Follow @technadu for regulatory and cybersecurity intelligence. Share your operational risk perspective below.#Infosec #Google #Alphabet #VPN #CyberPolicy #AppStoreGovernance #DigitalSovereignty #TechCompliance #InternetRegulation #SecurityStrategy #GlobalTech
+infosec.exchange is a Mastodon server for individuals interested in information and cybersecurity, with 11,000 active users. Russia fined Google/Alphabet Inc. 22 million roubles (~$288,000) for allegedly distributing VPN services through Google Play, which enables bypassing of national filtering. This incident highlights increasing enforcement targeting distribution channels and signals continued fragmentation of global internet governance models. 
+observables: {'domain-name': ['reuters.com'], 'email-addr': ['technadu@infosec.exchangeRegulatory'], 'url': ['http://www.reuters.com/world/russia-fines-google-distributing-vpn-services-tass-reports-2026-02-25/Follow', 'https://www.reuters.com/world/russia-fines-google-distributing-vpn-services-tass-reports-2026-02-25/Follow']}
+Publication date: Thu, 26 Feb 2026 07:41:30 +0000
+Source type: ['']
+Sources: https://infosec.exchange/@technadu/116135619786000004
+Source level: 2
+
+## @somebody Its literally mathematically impossible to have a secure Ai.Which is fantastic, seeing how so many (allegedly) reputable #infosec folk post stupid memes about increasingly larger information systems architecture instead of TRYING 😁
+infosec.exchange is a Mastodon server for individuals interested in information and cyber security. The server has 11,000 active users and is administered by Jerry. A user, @n_dimension, stated that achieving secure AI is mathematically impossible and criticized other security professionals for focusing on memes rather than system architecture. 
+observables: {'email-addr': ['n_dimension@infosec.exchange']}
+Publication date: Thu, 26 Feb 2026 07:41:30 +0000
+Source type: ['']
+Sources: https://infosec.exchange/@n_dimension/116135592634869968
+Source level: 2
+
+## Hackers Expose The Massive Surveillance Stack Hiding Inside Your “Age Verification” Check https://www.techdirt.com/2026/02/25/hackers-expose-the-massive-surveillance-stack-hiding-inside-your-age-verification-check/(Wow this is really enlightening. They didn't just estimate your age. They scoured the internet to find anything they could about you, conducted surveillence, and labeled you agaisnt 14 intelligence-threat categories. And they left thousands of files publicly accessible too) #Infosec
+Hackers revealed a surveillance system embedded within age verification checks, which involves scouring the internet for personal information and categorizing individuals into 14 intelligence-threat categories. The system collects data to estimate age, and thousands of files related to this process were left publicly accessible. This practice raises concerns about the extent of data collection and potential misuse during age verification. 
+observables: {'domain-name': ['techdirt.com']}
+Publication date: Thu, 26 Feb 2026 07:41:30 +0000
+Source type: ['']
+Sources: https://mindly.social/@sgtgary/116135574911294002
+Source level: 2
+
+## hab inzwischen so viele technik-accounts mit Schwerpunkt Privacy/digital Security abonniert, dass ich mich gerade frage: werde ich nächstes Jahr um diese Zeit vielleicht sogar halbwegs verstehen was die da so schreiben?! #nooblerntdinge #privacy #infosec
+The user has subscribed to numerous technical accounts focused on privacy and digital security. They are questioning whether they will understand the content posted by these accounts by next year. The post references learning new things related to privacy and information security. 
+observables: {}
+Publication date: Thu, 26 Feb 2026 06:42:15 +0000
+Source type: ['']
+Sources: https://troet.cafe/@onni/116135569865698076
+Source level: 2
+
+## i always seed my rng with 123. this way, i no longer need to make backups of my computers! in case of disk failure, i just generate a new key and it's always the same!  #protip #lifehack #infosec
+A user on xyzzy.link shared a technique for ensuring data consistency after disk failure by seeding their random number generator (RNG) with a fixed value (123). This method eliminates the need for backups as the system state can be recreated by regenerating the key. The post includes the hashtags #protip, #lifehack, and #infosec. 
+observables: {}
+Publication date: Thu, 26 Feb 2026 06:42:15 +0000
+Source type: ['']
+Sources: https://xyzzy.link/objects/4a567c47-3ecf-4077-bdd2-959c1dd1d47f
+Source level: 2
+## CVE-2026-25191 - FinalCode Client DLL Hijacking Vulnerability
+A DLL hijacking vulnerability (CVE-2026-25191) exists in the FinalCode Client installer from Digital Arts Inc. due to an issue with the DLL search path. An attacker could potentially execute arbitrary code with the installer's privileges by placing a malicious DLL in the same directory as the installer. The vulnerability has a CVSS score of 7.8 (CVSS 3.0) and 8.4 (CVSS 4.0), indicating a high severity. Remediation involves updating the installer, securing DLL loading locations, and validating privilege escalation controls. 
+observables: {'domain-name': ['cvefeed.io', 'daj.jp'], 'email-addr': ['vultures@jpcert.or.jp'], 'url': ['http://www.daj.jp/shared/php/downloadset/c/parts.php?page=dl&filename=information_20260226_01.pdf', 'https://jvn.jp/en/jp/JVN48498976/', 'https://www.daj.jp/shared/php/downloadset/c/parts.php?page=dl&filename=information_20260226_01.pdf'], 'vulnerability': ['CVE-2026-25191']}
+Publication date: Thu, 26 Feb 2026 06:17:16 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-25191
+Source level: 2
+
+## CVE-2026-23703 - "FinalCode Client by Digital Arts Inc. - Privilege Escalation Vulnerability"
+The installer for Digital Arts Inc.'s FinalCode Client has a privilege escalation vulnerability (CVE-2026-23703) due to incorrect default permissions. This allows a non-administrative user to execute arbitrary code with SYSTEM privileges. The vulnerability was published on February 26, 2026, and is associated with CWE-276 (Incorrect Default Permissions), with CVSS scores ranging from 7.8 to 8.5 depending on the version. Mitigation strategies include correcting default permissions, updating the installer, and verifying file permissions. 
+observables: {'domain-name': ['cvefeed.io', 'daj.jp'], 'email-addr': ['vultures@jpcert.or.jp'], 'url': ['http://www.daj.jp/shared/php/downloadset/c/parts.php?page=dl&filename=information_20260226_01.pdf', 'https://jvn.jp/en/jp/JVN48498976/', 'https://www.daj.jp/shared/php/downloadset/c/parts.php?page=dl&filename=information_20260226_01.pdf'], 'vulnerability': ['CVE-2026-23703']}
+Publication date: Thu, 26 Feb 2026 06:17:15 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-23703
+Source level: 2
+
+## CVE-2026-1311 - Worry Proof Backup <= 0.2.4 - Authenticated (Subscriber+) Path Traversal via Backup Upload
+The Worry Proof Backup plugin for WordPress is vulnerable to Path Traversal, affecting versions up to 0.2.4. Authenticated attackers with Subscriber-level access or higher can upload malicious ZIP archives to write arbitrary files, potentially leading to remote code execution. The vulnerability has a CVSS score of 8.8 and is associated with CWE-22. Updates to a version later than 0.2.4 are recommended to mitigate the risk. 
+observables: {'domain-name': ['cvefeed.io'], 'email-addr': ['security@wordfence.com'], 'url': ['http://www.wordfence.com/threat-intel/vulnerabilities/id/3ffd6ce0-2536-43a5-9925-438bc653d0e5?source=cve', 'https://plugins.trac.wordpress.org/browser/worry-proof-backup/tags/0.2.4/inc/libs/upload-backup.php#L97', 'https://plugins.trac.wordpress.org/browser/worry-proof-backup/trunk/inc/libs/upload-backup.php#L97', 'https://www.wordfence.com/threat-intel/vulnerabilities/id/3ffd6ce0-2536-43a5-9925-438bc653d0e5?source=cve'], 'vulnerability': ['CVE-2026-1311']}
+Publication date: Thu, 26 Feb 2026 05:17:41 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-1311
+Source level: 2
+
+## CVE-2026-27975 - Ajenti has a potential Remote Code Execution
+A Remote Code Execution vulnerability (CVE-2026-27975) exists in Ajenti, a Linux and BSD server admin panel, affecting versions prior to 2.2.13. An unauthenticated user could exploit this vulnerability to execute arbitrary code on the server. The vulnerability has a CVSS score of 8.1 (HIGH) and is fixed in version 2.2.13. Affected users are advised to update to version 2.2.13 or later and ensure proper authentication controls are in place. 
+observables: {'domain-name': ['cvefeed.io'], 'email-addr': ['security-advisories@github.com'], 'url': ['https://github.com/ajenti/ajenti/releases/tag/v2.2.13', 'https://github.com/ajenti/ajenti/security/advisories/GHSA-vcw3-r3fx-j444'], 'vulnerability': ['CVE-2026-27975', 'GHSA-VCW3-R3FX-J444']}
+Publication date: Thu, 26 Feb 2026 03:16:05 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-27975
+Source level: 2
+
+## CVE-2026-1779 - User Registration & Membership <= 5.1.2 - Authentication Bypass
+The User Registration & Membership plugin for WordPress has a high-severity authentication bypass vulnerability (CVE-2026-1779) affecting versions up to 5.1.2. The vulnerability exists due to incorrect authentication in the 'register_member' function, allowing unauthenticated attackers to log in newly registered users. The CVSS score is 8.1, and the vulnerability is associated with CWE-288. Affected users are advised to update the plugin to a patched version. 
+observables: {'domain-name': ['cvefeed.io'], 'email-addr': ['security@wordfence.com'], 'url': ['http://www.wordfence.com/threat-intel/vulnerabilities/id/d99bc021-ba9e-4294-8dd2-c25bc8007d05?source=cve', 'https://plugins.trac.wordpress.org/browser/user-registration/tags/5.0.4/modules/membership/includes/AJAX.php#L246', 'https://www.wordfence.com/threat-intel/vulnerabilities/id/d99bc021-ba9e-4294-8dd2-c25bc8007d05?source=cve'], 'vulnerability': ['CVE-2026-1779']}
+Publication date: Thu, 26 Feb 2026 03:16:03 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-1779
+Source level: 2
+
+## CVE-2026-27969 - Vitess users with backup storage access can write to arbitrary file paths on restore
+A critical vulnerability (CVE-2026-27969) exists in Vitess, a database clustering system, affecting versions prior to 23.0.3 and 22.0.4. Attackers with read/write access to backup storage can manipulate manifest files to write arbitrary files during restoration, potentially granting unauthorized access and command execution. The vulnerability is classified as a path traversal issue, receiving a CVSS 4.0 score of 9.3, and updates to versions 23.0.3 or 22.0.4 are recommended to mitigate the risk. 
+observables: {'domain-name': ['cvefeed.io'], 'email-addr': ['security-advisories@github.com'], 'file': [{'hash_type': 'SHA-1', 'values': ['c565cab615bc962bda061dcd645aa7506c59ca4a']}], 'url': ['https://github.com/vitessio/vitess/commit/c565cab615bc962bda061dcd645aa7506c59ca4a', 'https://github.com/vitessio/vitess/pull/19470', 'https://github.com/vitessio/vitess/security/advisories/GHSA-r492-hjgh-c9gw'], 'vulnerability': ['CVE-2026-27969', 'GHSA-R492-HJGH-C9GW']}
+Publication date: Thu, 26 Feb 2026 02:16:24 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-27969
+Source level: 2
+
+## CVE-2026-27966 - Langflow has Remote Code Execution in CSV Agent
+Langflow, a tool for building and deploying AI-powered agents, has a critical Remote Code Execution (RCE) vulnerability (CVE-2026-27966). Prior to version 1.8.0, a hardcoded setting in the CSV Agent node allowed attackers to execute arbitrary Python and OS commands via prompt injection, potentially leading to full system compromise. The vulnerability is rated 9.8 on the CVSS 3.1 scale and is associated with CWE-94. Users are advised to update to version 1.8.0 or later, restrict the Python REPL tool, and sanitize user inputs. 
+observables: {'domain-name': ['cvefeed.io'], 'email-addr': ['security-advisories@github.com'], 'file': [{'hash_type': 'SHA-1', 'values': ['d8c6480daa17b2f2af0b5470cdf5c3d28dc9e508']}], 'url': ['https://github.com/langflow-ai/langflow/commit/d8c6480daa17b2f2af0b5470cdf5c3d28dc9e508', 'https://github.com/langflow-ai/langflow/security/advisories/GHSA-3645-fxcv-hqr4'], 'vulnerability': ['CVE-2026-27966', 'GHSA-3645-FXCV-HQR4']}
+Publication date: Thu, 26 Feb 2026 02:16:23 +0000
+Source type: ['']
+Sources: https://cvefeed.io/vuln/detail/CVE-2026-27966
+Source level: 2
+## ZDI-26-132: Siemens SINEC NMS Uncontrolled Search Path Element Local Privilege Escalation Vulnerability
+The vulnerability enables local attackers to escalate privileges on Siemens SINEC NMS installations. Exploitation requires the attacker to execute low-privileged code on the target system. The flaw stems from an OpenSSL configuration issue where the product loads an unsecured configuration file, allowing privilege escalation and arbitrary code execution as SYSTEM. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-132/
+Source level: 2
+
+## ZDI-26-131: Siemens SINEC NMS Uncontrolled Search Path Element Local Privilege Escalation Vulnerability
+The vulnerability enables local privilege escalation on Siemens SINEC NMS installations. Exploitation requires the attacker to execute low-privileged code initially. The flaw stems from an OpenSSL configuration file loaded from an insecure location, allowing privilege escalation and arbitrary code execution. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-131/
+Source level: 2
+
+## ZDI-26-130: IceWarp collaboration Directory Traversal Information Disclosure Vulnerability
+A vulnerability in IceWarp allows remote attackers to disclose sensitive information without authentication. The flaw is due to insufficient validation of a user-supplied path within the collaboration endpoint's ticket parameter handling. This enables attackers to disclose information while operating in the context of root. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-130/
+Source level: 2
+
+## ZDI-26-129: Socomec DIRIS A-40 HTTP API Authentication Bypass Vulnerability
+A vulnerability in Socomec DIRIS A-40 power monitoring devices allows network-adjacent attackers to bypass authentication without requiring credentials. The flaw resides in the web API implementation, which listens on TCP port 80 by default due to a lack of authentication controls. Attackers can exploit this to bypass authentication on the system. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-129/
+Source level: 2
+
+## ZDI-26-128: (Pwn2Own) Ubiquiti Networks AI Pro Uncaught Exception Denial-of-Service Vulnerability
+A vulnerability in Ubiquiti Networks AI Pro allows network-adjacent attackers to trigger a denial-of-service condition without authentication. The flaw resides in the parsing of WebSocket headers due to insufficient validation of user-supplied data, leading to an uncaught exception. Attackers can exploit this to disrupt system functionality. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-128/
+Source level: 2
+
+## ZDI-26-127: (Pwn2Own) Ubiquiti Networks AI Pro Cleartext Transmission Information Disclosure Vulnerability
+The vulnerability in Ubiquiti Networks AI Pro allows network-adjacent attackers to disclose sensitive information without authentication. The flaw stems from supporting a legacy authentication method, which can be exploited to reveal stored credentials. This compromise can potentially lead to further system breaches. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-127/
+Source level: 2
+
+## ZDI-26-126: (Pwn2Own) Ubiquiti Networks AI Pro Discovery Protocol Missing Encryption Protocol Downgrade Vulnerability
+A vulnerability in Ubiquiti Networks AI Pro allows network-adjacent attackers to downgrade the communication protocol without authentication. The flaw resides within the discovery protocol due to the absence of encryption in the communication channel. Attackers can exploit this to manipulate the system's communication protocol. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 -0600
+Source type: ['']
+Sources: http://www.zerodayinitiative.com/advisories/ZDI-26-126/
+Source level: 2
+## Multiples vulnérabilités dans les produits Mozilla (25 février 2026)
+Multiple vulnerabilities have been discovered in Mozilla products. These vulnerabilities may allow an attacker to trigger remote code execution, privilege escalation, data confidentiality compromise, and policy circumvention. Affected systems include Firefox ESR versions prior to 115.33, Firefox ESR versions prior to 140.8, Firefox for iOS versions prior to 147.4, Firefox versions prior to 148, Thunderbird versions prior to 140.8, and Thunderbird versions prior to 148. Refer to the Mozilla security advisories and associated CVE records for detailed information and remediation. 
+observables: {'domain-name': ['cve.org', 'mozilla.org'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2026-2634', 'http://www.cve.org/CVERecord?id=CVE-2026-2757', 'http://www.cve.org/CVERecord?id=CVE-2026-2758', 'http://www.cve.org/CVERecord?id=CVE-2026-2759', 'http://www.cve.org/CVERecord?id=CVE-2026-2760', 'http://www.cve.org/CVERecord?id=CVE-2026-2761', 'http://www.cve.org/CVERecord?id=CVE-2026-2762', 'http://www.cve.org/CVERecord?id=CVE-2026-2763', 'http://www.cve.org/CVERecord?id=CVE-2026-2764', 'http://www.cve.org/CVERecord?id=CVE-2026-2765', 'http://www.cve.org/CVERecord?id=CVE-2026-2766', 'http://www.cve.org/CVERecord?id=CVE-2026-2767', 'http://www.cve.org/CVERecord?id=CVE-2026-2768', 'http://www.cve.org/CVERecord?id=CVE-2026-2769', 'http://www.cve.org/CVERecord?id=CVE-2026-2770', 'http://www.cve.org/CVERecord?id=CVE-2026-2771', 'http://www.cve.org/CVERecord?id=CVE-2026-2772', 'http://www.cve.org/CVERecord?id=CVE-2026-2773', 'http://www.cve.org/CVERecord?id=CVE-2026-2774', 'http://www.cve.org/CVERecord?id=CVE-2026-2775', 'http://www.cve.org/CVERecord?id=CVE-2026-2776', 'http://www.cve.org/CVERecord?id=CVE-2026-2777', 'http://www.cve.org/CVERecord?id=CVE-2026-2778', 'http://www.cve.org/CVERecord?id=CVE-2026-2779', 'http://www.cve.org/CVERecord?id=CVE-2026-2780', 'http://www.cve.org/CVERecord?id=CVE-2026-2781', 'http://www.cve.org/CVERecord?id=CVE-2026-2782', 'http://www.cve.org/CVERecord?id=CVE-2026-2783', 'http://www.cve.org/CVERecord?id=CVE-2026-2784', 'http://www.cve.org/CVERecord?id=CVE-2026-2785', 'http://www.cve.org/CVERecord?id=CVE-2026-2786', 'http://www.cve.org/CVERecord?id=CVE-2026-2787', 'http://www.cve.org/CVERecord?id=CVE-2026-2788', 'http://www.cve.org/CVERecord?id=CVE-2026-2789', 'http://www.cve.org/CVERecord?id=CVE-2026-2790', 'http://www.cve.org/CVERecord?id=CVE-2026-2791', 'http://www.cve.org/CVERecord?id=CVE-2026-2792', 'http://www.cve.org/CVERecord?id=CVE-2026-2793', 'http://www.cve.org/CVERecord?id=CVE-2026-2794', 'http://www.cve.org/CVERecord?id=CVE-2026-2795', 'http://www.cve.org/CVERecord?id=CVE-2026-2796', 'http://www.cve.org/CVERecord?id=CVE-2026-2797', 'http://www.cve.org/CVERecord?id=CVE-2026-2798', 'http://www.cve.org/CVERecord?id=CVE-2026-2799', 'http://www.cve.org/CVERecord?id=CVE-2026-2800', 'http://www.cve.org/CVERecord?id=CVE-2026-2801', 'http://www.cve.org/CVERecord?id=CVE-2026-2802', 'http://www.cve.org/CVERecord?id=CVE-2026-2803', 'http://www.cve.org/CVERecord?id=CVE-2026-2804', 'http://www.cve.org/CVERecord?id=CVE-2026-2805', 'http://www.cve.org/CVERecord?id=CVE-2026-2806', 'http://www.cve.org/CVERecord?id=CVE-2026-2807', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-12', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-13', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-14', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-15', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-16', 'http://www.mozilla.org/en-US/security/advisories/mfsa2026-17', 'https://www.cve.org/CVERecord?id=CVE-2026-2634', 'https://www.cve.org/CVERecord?id=CVE-2026-2757', 'https://www.cve.org/CVERecord?id=CVE-2026-2758', 'https://www.cve.org/CVERecord?id=CVE-2026-2759', 'https://www.cve.org/CVERecord?id=CVE-2026-2760', 'https://www.cve.org/CVERecord?id=CVE-2026-2761', 'https://www.cve.org/CVERecord?id=CVE-2026-2762', 'https://www.cve.org/CVERecord?id=CVE-2026-2763', 'https://www.cve.org/CVERecord?id=CVE-2026-2764', 'https://www.cve.org/CVERecord?id=CVE-2026-2765', 'https://www.cve.org/CVERecord?id=CVE-2026-2766', 'https://www.cve.org/CVERecord?id=CVE-2026-2767', 'https://www.cve.org/CVERecord?id=CVE-2026-2768', 'https://www.cve.org/CVERecord?id=CVE-2026-2769', 'https://www.cve.org/CVERecord?id=CVE-2026-2770', 'https://www.cve.org/CVERecord?id=CVE-2026-2771', 'https://www.cve.org/CVERecord?id=CVE-2026-2772', 'https://www.cve.org/CVERecord?id=CVE-2026-2773', 'https://www.cve.org/CVERecord?id=CVE-2026-2774', 'https://www.cve.org/CVERecord?id=CVE-2026-2775', 'https://www.cve.org/CVERecord?id=CVE-2026-2776', 'https://www.cve.org/CVERecord?id=CVE-2026-2777', 'https://www.cve.org/CVERecord?id=CVE-2026-2778', 'https://www.cve.org/CVERecord?id=CVE-2026-2779', 'https://www.cve.org/CVERecord?id=CVE-2026-2780', 'https://www.cve.org/CVERecord?id=CVE-2026-2781', 'https://www.cve.org/CVERecord?id=CVE-2026-2782', 'https://www.cve.org/CVERecord?id=CVE-2026-2783', 'https://www.cve.org/CVERecord?id=CVE-2026-2784', 'https://www.cve.org/CVERecord?id=CVE-2026-2785', 'https://www.cve.org/CVERecord?id=CVE-2026-2786', 'https://www.cve.org/CVERecord?id=CVE-2026-2787', 'https://www.cve.org/CVERecord?id=CVE-2026-2788', 'https://www.cve.org/CVERecord?id=CVE-2026-2789', 'https://www.cve.org/CVERecord?id=CVE-2026-2790', 'https://www.cve.org/CVERecord?id=CVE-2026-2791', 'https://www.cve.org/CVERecord?id=CVE-2026-2792', 'https://www.cve.org/CVERecord?id=CVE-2026-2793', 'https://www.cve.org/CVERecord?id=CVE-2026-2794', 'https://www.cve.org/CVERecord?id=CVE-2026-2795', 'https://www.cve.org/CVERecord?id=CVE-2026-2796', 'https://www.cve.org/CVERecord?id=CVE-2026-2797', 'https://www.cve.org/CVERecord?id=CVE-2026-2798', 'https://www.cve.org/CVERecord?id=CVE-2026-2799', 'https://www.cve.org/CVERecord?id=CVE-2026-2800', 'https://www.cve.org/CVERecord?id=CVE-2026-2801', 'https://www.cve.org/CVERecord?id=CVE-2026-2802', 'https://www.cve.org/CVERecord?id=CVE-2026-2803', 'https://www.cve.org/CVERecord?id=CVE-2026-2804', 'https://www.cve.org/CVERecord?id=CVE-2026-2805', 'https://www.cve.org/CVERecord?id=CVE-2026-2806', 'https://www.cve.org/CVERecord?id=CVE-2026-2807', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-12/', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-13/', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-14/', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-15/', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-16/', 'https://www.mozilla.org/en-US/security/advisories/mfsa2026-17/'], 'vulnerability': ['CVE-2026-2634', 'CVE-2026-2757', 'CVE-2026-2758', 'CVE-2026-2759', 'CVE-2026-2760', 'CVE-2026-2761', 'CVE-2026-2762', 'CVE-2026-2763', 'CVE-2026-2764', 'CVE-2026-2765', 'CVE-2026-2766', 'CVE-2026-2767', 'CVE-2026-2768', 'CVE-2026-2769', 'CVE-2026-2770', 'CVE-2026-2771', 'CVE-2026-2772', 'CVE-2026-2773', 'CVE-2026-2774', 'CVE-2026-2775', 'CVE-2026-2776', 'CVE-2026-2777', 'CVE-2026-2778', 'CVE-2026-2779', 'CVE-2026-2780', 'CVE-2026-2781', 'CVE-2026-2782', 'CVE-2026-2783', 'CVE-2026-2784', 'CVE-2026-2785', 'CVE-2026-2786', 'CVE-2026-2787', 'CVE-2026-2788', 'CVE-2026-2789', 'CVE-2026-2790', 'CVE-2026-2791', 'CVE-2026-2792', 'CVE-2026-2793', 'CVE-2026-2794', 'CVE-2026-2795', 'CVE-2026-2796', 'CVE-2026-2797', 'CVE-2026-2798', 'CVE-2026-2799', 'CVE-2026-2800', 'CVE-2026-2801', 'CVE-2026-2802', 'CVE-2026-2803', 'CVE-2026-2804', 'CVE-2026-2805', 'CVE-2026-2806', 'CVE-2026-2807']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0204/
+Source level: 1
+
+## Multiples vulnérabilités dans SolarWinds Serv-U (25 février 2026)
+Multiple vulnerabilities have been discovered in SolarWinds Serv-U, allowing an attacker to trigger remote code execution and bypass security policies. Versions prior to 15.5.4 are affected, and users should refer to the vendor's security advisories for patches. The vulnerabilities are referenced by CVE-2025-40538, CVE-2025-40539, CVE-2025-40540, and CVE-2025-40541. 
+observables: {'domain-name': ['cve.org', 'solarwinds.com'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2025-40538', 'http://www.cve.org/CVERecord?id=CVE-2025-40539', 'http://www.cve.org/CVERecord?id=CVE-2025-40540', 'http://www.cve.org/CVERecord?id=CVE-2025-40541', 'http://www.solarwinds.com/trust-center/security-advisories/cve-2025-40538', 'http://www.solarwinds.com/trust-center/security-advisories/cve-2025-40539', 'http://www.solarwinds.com/trust-center/security-advisories/cve-2025-40540', 'http://www.solarwinds.com/trust-center/security-advisories/cve-2025-40541', 'https://www.cve.org/CVERecord?id=CVE-2025-40538', 'https://www.cve.org/CVERecord?id=CVE-2025-40539', 'https://www.cve.org/CVERecord?id=CVE-2025-40540', 'https://www.cve.org/CVERecord?id=CVE-2025-40541', 'https://www.solarwinds.com/trust-center/security-advisories/cve-2025-40538', 'https://www.solarwinds.com/trust-center/security-advisories/cve-2025-40539', 'https://www.solarwinds.com/trust-center/security-advisories/cve-2025-40540', 'https://www.solarwinds.com/trust-center/security-advisories/cve-2025-40541'], 'vulnerability': ['CVE-2025-40538', 'CVE-2025-40539', 'CVE-2025-40540', 'CVE-2025-40541']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0205/
+Source level: 1
+
+## Multiples vulnérabilités dans les produits Trend Micro (25 février 2026)
+Multiple vulnerabilities have been discovered in Trend Micro products, enabling remote code execution and privilege escalation. Affected systems include Apex One as a Service versions prior to 14.0.20315, Apex One versions prior to CP Build 14136, and Trend Vision One Endpoint Standard Endpoint Protection versions prior to 14.0.20315. The Trend Micro security bulletin KA-0022458 provides details and remediation steps, and references several CVEs including CVE-2025-54948, CVE-2025-54987, CVE-2025-71210 through CVE-2025-71217. 
+observables: {'domain-name': ['cve.org'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2025-54948', 'http://www.cve.org/CVERecord?id=CVE-2025-54987', 'http://www.cve.org/CVERecord?id=CVE-2025-71210', 'http://www.cve.org/CVERecord?id=CVE-2025-71211', 'http://www.cve.org/CVERecord?id=CVE-2025-71212', 'http://www.cve.org/CVERecord?id=CVE-2025-71213', 'http://www.cve.org/CVERecord?id=CVE-2025-71214', 'http://www.cve.org/CVERecord?id=CVE-2025-71215', 'http://www.cve.org/CVERecord?id=CVE-2025-71216', 'http://www.cve.org/CVERecord?id=CVE-2025-71217', 'https://success.trendmicro.com/en-US/solution/KA-0022458', 'https://www.cve.org/CVERecord?id=CVE-2025-54948', 'https://www.cve.org/CVERecord?id=CVE-2025-54987', 'https://www.cve.org/CVERecord?id=CVE-2025-71210', 'https://www.cve.org/CVERecord?id=CVE-2025-71211', 'https://www.cve.org/CVERecord?id=CVE-2025-71212', 'https://www.cve.org/CVERecord?id=CVE-2025-71213', 'https://www.cve.org/CVERecord?id=CVE-2025-71214', 'https://www.cve.org/CVERecord?id=CVE-2025-71215', 'https://www.cve.org/CVERecord?id=CVE-2025-71216', 'https://www.cve.org/CVERecord?id=CVE-2025-71217'], 'vulnerability': ['CVE-2025-54948', 'CVE-2025-54987', 'CVE-2025-71210', 'CVE-2025-71211', 'CVE-2025-71212', 'CVE-2025-71213', 'CVE-2025-71214', 'CVE-2025-71215', 'CVE-2025-71216', 'CVE-2025-71217']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0206/
+Source level: 1
+
+## Multiples vulnérabilités dans GitLab (25 février 2026)
+Multiple vulnerabilities have been discovered in GitLab, enabling attackers to cause denial of service, remote indirect code injection (XSS), and security policy bypass. GitLab Community Edition (CE) and Enterprise Edition (EE) versions 18.8.x prior to 18.8.5, 18.9.x prior to 18.9.1, and versions prior to 18.7.5 are affected. Refer to GitLab’s security bulletin and the provided CVE records for remediation. 
+observables: {'domain-name': ['cve.org'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2025-14103', 'http://www.cve.org/CVERecord?id=CVE-2025-14511', 'http://www.cve.org/CVERecord?id=CVE-2025-3525', 'http://www.cve.org/CVERecord?id=CVE-2026-0752', 'http://www.cve.org/CVERecord?id=CVE-2026-1388', 'http://www.cve.org/CVERecord?id=CVE-2026-1662', 'http://www.cve.org/CVERecord?id=CVE-2026-1725', 'http://www.cve.org/CVERecord?id=CVE-2026-1747', 'http://www.cve.org/CVERecord?id=CVE-2026-2845', 'https://about.gitlab.com/releases/2026/02/25/patch-release-gitlab-18-9-1-released/', 'https://www.cve.org/CVERecord?id=CVE-2025-14103', 'https://www.cve.org/CVERecord?id=CVE-2025-14511', 'https://www.cve.org/CVERecord?id=CVE-2025-3525', 'https://www.cve.org/CVERecord?id=CVE-2026-0752', 'https://www.cve.org/CVERecord?id=CVE-2026-1388', 'https://www.cve.org/CVERecord?id=CVE-2026-1662', 'https://www.cve.org/CVERecord?id=CVE-2026-1725', 'https://www.cve.org/CVERecord?id=CVE-2026-1747', 'https://www.cve.org/CVERecord?id=CVE-2026-2845'], 'vulnerability': ['CVE-2025-14103', 'CVE-2025-14511', 'CVE-2025-3525', 'CVE-2026-0752', 'CVE-2026-1388', 'CVE-2026-1662', 'CVE-2026-1725', 'CVE-2026-1747', 'CVE-2026-2845']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0207/
+Source level: 1
+
+## Vulnérabilité dans les produits Synology (25 février 2026)
+A vulnerability has been discovered in Synology products, potentially leading to data integrity and confidentiality breaches. The affected system is the Synology Presto Client versions prior to 2.1.3-0672. Refer to the Synology security advisory Synology_SA_26_02 and CVE-2026-3091 for remediation. 
+observables: {'domain-name': ['cve.org', 'synology.com'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2026-3091', 'http://www.synology.com/en-global/security/advisory/Synology_SA_26_02', 'https://www.cve.org/CVERecord?id=CVE-2026-3091', 'https://www.synology.com/en-global/security/advisory/Synology_SA_26_02'], 'vulnerability': ['CVE-2026-3091']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0208/
+Source level: 1
+
+## Multiples vulnérabilités dans les produits VMware (25 février 2026)
+Multiple vulnerabilities exist within VMware products. This advisory, reference CERTFR-2026-AVI-0209, was released on February 25, 2026, and is tracked by CERT-FR. The information originates from VMware security bulletins 37025 through 37075, all published on February 24th and 25th, 2026. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0209/
+Source level: 1
+
+## Multiples vulnérabilités dans Cisco Catalyst SD-WAN (25 février 2026)
+Multiple vulnerabilities have been identified in Cisco Catalyst SD-WAN, potentially leading to data integrity and confidentiality breaches, security policy circumvention, remote code execution, and privilege escalation. Affected versions include 20.12.5.x prior to 20.12.5.3, 20.12.6.x prior to 20.12.6.1, 20.15.x prior to 20.15.4.2, 20.18.x prior to 20.18.2.1, and versions prior to 20.9.8.2, with versions 20.11.x, 20.13.x, 20.14.x, and 20.16.x reaching end-of-maintenance. Cisco plans to release a security patch for version 20.9.8.2 on February 27, 2026, and the vulnerability CVE-2026-20127 is reportedly being actively exploited. CERT-FR recommends migrating to a maintained version with the latest security patches. 
+observables: {'domain-name': ['cve.org'], 'ipv4-addr': ['20.12.5.3', '20.12.6.1', '20.15.4.2', '20.18.2.1', '20.9.8.2'], 'url': ['http://www.cve.org/CVERecord?id=CVE-2026-20122', 'http://www.cve.org/CVERecord?id=CVE-2026-20126', 'http://www.cve.org/CVERecord?id=CVE-2026-20127', 'http://www.cve.org/CVERecord?id=CVE-2026-20128', 'http://www.cve.org/CVERecord?id=CVE-2026-20129', 'http://www.cve.org/CVERecord?id=CVE-2026-20133', 'https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v', 'https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk', 'https://www.cve.org/CVERecord?id=CVE-2026-20122', 'https://www.cve.org/CVERecord?id=CVE-2026-20126', 'https://www.cve.org/CVERecord?id=CVE-2026-20127', 'https://www.cve.org/CVERecord?id=CVE-2026-20128', 'https://www.cve.org/CVERecord?id=CVE-2026-20129', 'https://www.cve.org/CVERecord?id=CVE-2026-20133'], 'vulnerability': ['CVE-2026-20127', 'CVE-2026-20122', 'CVE-2026-20126', 'CVE-2026-20128', 'CVE-2026-20129', 'CVE-2026-20133']}
+Publication date: Wed, 25 Feb 2026 00:00:00 +0000
+Source type: ['operational', 'vulnerabilities']
+Sources: https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0210/
+Source level: 1
+## Clalit probes suspected cyberattack after Iranian-linked hackers leak patient files
+Clalit Health Services, Israel’s largest health maintenance organization, is investigating a suspected cyberattack. The Iranian-linked hacking group “Handala” claims to have breached Clalit’s systems and released thousands of documents online. These documents include medical referral forms, sick leave certificates, and internal correspondence, potentially exposing personal details of patients and employees. The group claims to have compromised sensitive medical information for over 10,000 patients and threatens further action. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 21:28:28 +0000
+Source type: ['']
+Sources: https://databreaches.net/2026/02/25/clalit-probes-suspected-cyberattack-after-iranian-linked-hackers-leak-patient-files/?pk_campaign=feed&pk_kwd=clalit-probes-suspected-cyberattack-after-iranian-linked-hackers-leak-patient-files
+Source level: 2
+
+## South Korea considers updates to data and cyber laws
+Recent data breaches in Korea's telecommunications, retail, and finance sectors have spurred lawmakers and regulators to strengthen cybersecurity measures. Amendments are being advanced to the Act on Promotion of Information and Communications Network Utilization and Information Protection, and the Personal Information Protection Act. The Network Act applies to information and communications service providers, while the Personal Information Protection Act governs personal data protection. Proposed changes aim to improve data protection and security governance, and enhance incident response and sanctions. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 13:33:16 +0000
+Source type: ['']
+Sources: https://databreaches.net/2026/02/25/south-korea-considers-updates-to-data-and-cyber-laws/?pk_campaign=feed&pk_kwd=south-korea-considers-updates-to-data-and-cyber-laws
+Source level: 2
+
+## UAE claims it stopped ‘terrorist’ ransomware attack
+The United Arab Emirates reportedly thwarted a ransomware attack targeting its digital infrastructure over the weekend. The Cyber Security Council stated the attacks involved network infiltration attempts, ransomware deployment, and phishing campaigns. The attacks also utilized artificial intelligence to develop sophisticated offensive tools, indicating a shift in methods by terrorist groups. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 13:33:10 +0000
+Source type: ['']
+Sources: https://databreaches.net/2026/02/25/uae-claims-it-stopped-terrorist-ransomware-attack/?pk_campaign=feed&pk_kwd=uae-claims-it-stopped-terrorist-ransomware-attack
+Source level: 2
+
+## Wynn Resorts Confirms Data Breach After Hackers Remove It From Leak Site
+The website databreaches.net utilizes a security service to prevent malicious bot activity. A verification process was initiated to confirm the user is not a bot. The verification was successful, and the system is currently awaiting a response from databreaches.net. 
+observables: {'domain-name': ['databreaches.net']}
+Publication date: Wed, 25 Feb 2026 13:33:01 +0000
+Source type: ['']
+Sources: https://databreaches.net/2026/02/25/wynn-resorts-confirms-data-breach-after-hackers-remove-it-from-leak-site/?pk_campaign=feed&pk_kwd=wynn-resorts-confirms-data-breach-after-hackers-remove-it-from-leak-site
+Source level: 2
+## Canadian Tire - 38,306,562 breached accounts
+In October 2025, Canadian Tire experienced a data breach impacting nearly 42 million records, including 38 million unique email addresses, names, phone numbers, and physical addresses. Compromised data also included dates of birth, passwords stored as PBKDF2 hashes, and partial credit card data such as card type, expiry, and masked card number. Canadian Tire stated that bank account information and loyalty program data were not affected, and recommends users change passwords and enable two-factor authentication. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 06:53:25 Z
+Source type: ['']
+Sources: https://haveibeenpwned.com/Breach/CanadianTire
+Source level: 2
+## La vision du Népal sur l’Indo-Pacifique : un paysage stratégique en mutation
+The Indo-Pacific region is a dynamic and contested area, encompassing 60% of the global population and contributing over 65% of the world’s GDP. This region connects the Indian and Pacific Oceans, facilitating over half of global maritime trade. For Nepal, despite being landlocked, the Indo-Pacific significantly influences the country's economy, diplomacy, and security, requiring a clear vision aligned with national interests and democratic values. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 18:15:01 +0000
+Source type: ['']
+Sources: https://www.iris-france.org/la-vision-du-nepal-sur-lindo-pacifique-un-paysage-strategique-en-mutation/
+Source level: 2
+
+## Géopolitique : le choix de l’indépendance. Avec François Ruffin
+International politics is returning to the forefront of the French public debate and will be central to upcoming presidential programs. France and the European Union can no longer rely on their historical ally, the United States, due to geopolitical shifts caused by Donald Trump's second term and the questioning of the international system. To maintain strategic sovereignty, France and the European Union need geopolitical independence through diversifying partnerships and relocating strategic industries. The podcast features a discussion with François Ruffin, a candidate in the presidential election. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 18:15:01 +0000
+Source type: ['']
+Sources: https://www.iris-france.org/geopolitique-le-choix-de-lindependance-avec-francois-ruffin/
+Source level: 2
+
+## Iran : la bombe hydrique
+Iran faces a severe water scarcity crisis, with over 70% of its main aquifers being overexploited, leading to collapsing water tables and reduced renewable water resources. This situation, exacerbated by policies encouraging water-intensive agriculture and subsidized water and energy, is fueling social unrest, rural migration, and food price inflation. The water crisis poses a significant threat to Iran's stability, exceeding the risks associated with nuclear ambitions or military conflict, and is a key factor in shaping the country's internal dynamics and external posture. 
+observables: {}
+Publication date: Wed, 25 Feb 2026 17:13:40 +0000
+Source type: ['']
+Sources: https://www.iris-france.org/iran-la-bombe-hydrique/
+Source level: 2
+## Middle Powers Must Win the AI Deployment Race
+Middle powers like the UK and Canada should focus on deploying AI rather than developing ever larger AI models. They should collaborate to win the deployment race, embedding AI across economies and militaries to solve specific problems. A UK-Canada Partnership on AI Deployment is proposed, structured around five pillars to accelerate adoption and safeguard sovereignty. The partnership would involve shared procurement, collaborative testing, talent circulation, and joint operational testbeds. 
+observables: {'email-addr': ['069JimMc@rusi.org', 'commentaries@rusi.org'], 'url': ['https://ik.imagekit.io/po8th4g4eqj/production/tr:fo-face,ar-88-112,w-168/Alexandra-MacEachern-160x224px.jpg', 'https://ik.imagekit.io/po8th4g4eqj/production/tr:fo-face,ar-88-112,w-168/Broderick-McDonald-AuthorImage-160x224px.jpg', 'https://ik.imagekit.io/po8th4g4eqj/production/tr:fo-face,ar-88-112,w-168/Connor-Attridge-AuthorImage-160x224px.jpg', 'https://ik.imagekit.io/po8th4g4eqj/production/tr:w-1168/Data-Centre-BannerImage-1168x440px.jpg']}
+Publication date: Wed, 25 Feb 2026 00:00:00 GMT
+Source type: ['']
+Sources: https://www.rusi.org/explore-our-research/publications/commentary/middle-powers-must-win-ai-deployment-race
+Source level: 2
+
+## Russia, Navalny and the Uses of Poison in State-Sponsored Assassinations
+Aleksey Navalny's death in a Russian prison was determined by European laboratories to be caused by poisoning with the toxin Epibatidine. The European governments condemned Russia's breach of international law and disregard for the Chemical Weapons Convention, calling for action. Throughout history, elites and those challenging authority have used poison, with states employing it in assassinations since at least 1945, including democracies. Russia and its allies have a long history of using poison against dissidents and foreign leaders, and while methods of delivery and detection evolve, the practice is likely to continue. 
+observables: {'domain-name': ['concerns.in', 'victims.in'], 'email-addr': ['commentaries@rusi.org'], 'url': ['https://ik.imagekit.io/po8th4g4eqj/production/tr:fo-face,ar-88-112,w-168/Brett-Edwards-Author-Image-160x224px.png', 'https://ik.imagekit.io/po8th4g4eqj/production/tr:fo-face,ar-88-112,w-168/luca-trenta-160x224px.jpg', 'https://ik.imagekit.io/po8th4g4eqj/production/tr:w-1168/Navalny-outside-BannerImage-1168x440px.jpg']}
+Publication date: Wed, 25 Feb 2026 00:00:00 GMT
+Source type: ['']
+Sources: https://www.rusi.org/explore-our-research/publications/commentary/russia-navalny-and-uses-poison-state-sponsored-assassinations
+Source level: 2
