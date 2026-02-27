@@ -1,0 +1,324 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for late February 2026 is dominated by the revelation of long-term zero-day exploitation of Cisco SD-WAN infrastructure by the sophisticated actor UAT-8616. This campaign, active since 2023, underscores a strategic shift toward targeting edge-facing network management systems for persistent access. Simultaneously, large-scale data breaches at ManoMano (38M), Conduent (2.5M), and Odido (2M) highlight systemic supply chain risks through third-party providers. The emergence of 'Dohdoor' malware targeting US critical sectors (Education, Healthcare) with DNS-over-HTTPS techniques further demonstrates the evolution of stealthy C2 mechanisms. Finally, the exposure of Gemini AI API keys signals a new frontier in 'secret leakage' vulnerabilities as AI integration accelerates.",
+      "fr": "Le paysage des menaces de fin février 2026 est dominé par la révélation de l'exploitation de vulnérabilités zero-day de longue durée sur les infrastructures Cisco SD-WAN par l'acteur sophistiqué UAT-8616. Cette campagne, active depuis 2023, souligne un virage stratégique vers le ciblage des systèmes de gestion réseau en périphérie pour un accès persistant. Parallèlement, des violations de données massives chez ManoMano (38M), Conduent (2,5M) et Odido (2M) mettent en évidence les risques systémiques de la chaîne d'approvisionnement via des prestataires tiers. L'émergence du malware 'Dohdoor' ciblant les secteurs critiques américains (éducation, santé) avec des techniques DNS-over-HTTPS démontre l'évolution des mécanismes de C2 furtifs. Enfin, l'exposition des clés API de Google Gemini signale une nouvelle frontière dans les vulnérabilités de fuite de secrets avec l'accélération de l'intégration de l'IA."
+    },
+    "date": "2026-02-27"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Information Operations",
+        "fr": "Opérations d'information"
+      },
+      "theme": {
+        "en": "Pro-Kremlin Disinformation and FIMI Campaigns",
+        "fr": "Désinformation Pro-Kremlin et campagnes FIMI"
+      },
+      "description": {
+        "en": "Russia continues to leverage AI-enhanced Foreign Information Manipulation and Interference (FIMI) to smear Ukrainian athletes and discredit European institutions (specifically France). Measures also include domestic censorship by banning VPNs and blocking communication platforms like WhatsApp.",
+        "fr": "La Russie continue d'utiliser la manipulation et l'interférence d'informations étrangères (FIMI) dopées à l'IA pour salir les athlètes ukrainiens et discréditer les institutions européennes (notamment la France). Les mesures incluent également une censure intérieure par l'interdiction des VPN et le blocage de plateformes comme WhatsApp."
+      },
+      "tags": [
+        "Russia",
+        "Disinformation",
+        "FIMI",
+        "Ukraine",
+        "Censorship"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/russias-quest-for-disinformation-gold/",
+        "https://www.iris-france.org/russie-ukraine-quel-etat-des-lieux-apres-4-ans-de-guerre/"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "sector": {
+        "en": "Government & Defense",
+        "fr": "Gouvernement et Défense"
+      },
+      "theme": {
+        "en": "AI Ethics and Military Contracts",
+        "fr": "Éthique de l'IA et contrats militaires"
+      },
+      "description": {
+        "en": "Anthropic has refused a US Department of Defense contract demand to remove guardrails on its Claude AI, citing risks of autonomous weapon misuse and domestic surveillance. This highlights the growing tension between AI vendors and military requirements.",
+        "fr": "Anthropic a refusé une demande du département de la Défense américain visant à supprimer les garde-fous de son IA Claude, invoquant des risques de détournement pour des armes autonomes et de surveillance intérieure. Cela souligne la tension croissante entre les fournisseurs d'IA et les exigences militaires."
+      },
+      "tags": [
+        "AI",
+        "Anthropic",
+        "Pentagon",
+        "Ethics",
+        "Autonomous Weapons"
+      ],
+      "sources": [
+        "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/02/27/anthropic_pentagon_response/"
+      ],
+      "date": "2026-02-27"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "ManoMano",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "E-commerce",
+        "fr": "E-commerce"
+      },
+      "description": {
+        "en": "Data breach affecting 38 million customers due to a compromise of a third-party customer service provider (Zendesk mentioned in context). Exposed data includes names, emails, and phone numbers.",
+        "fr": "Violation de données touchant 38 millions de clients suite à la compromission d'un prestataire tiers de service client (Zendesk mentionné dans le contexte). Les données exposées incluent noms, emails et numéros de téléphone."
+      },
+      "tags": [
+        "Data Breach",
+        "Third-party risk",
+        "ManoMano"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/european-dyi-chain-manomano-data-breach-impacts-38-million-customers/"
+      ],
+      "date": "2026-02-26"
+    },
+    {
+      "victim": "Odido",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Dutch telco Odido suffered a breach involving 2 million records and 688,102 accounts. Sensitive data including bank account numbers, passport details, and driver's licenses were potentially exposed.",
+        "fr": "L'opérateur néerlandais Odido a subi une violation impliquant 2 millions d'enregistrements et 688 102 comptes. Des données sensibles, notamment des numéros de compte bancaire, des passeports et des permis de conduire, ont été potentiellement exposées."
+      },
+      "tags": [
+        "Data Breach",
+        "Odido",
+        "PII",
+        "Extortion"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Odido"
+      ],
+      "date": "2026-02-26"
+    },
+    {
+      "victim": "Olympique de Marseille",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Sports",
+        "fr": "Sports"
+      },
+      "description": {
+        "en": "Confirmed cyberattack and data leak involving information of approximately 400,000 individuals, including names and contact details.",
+        "fr": "Cyberattaque confirmée et fuite de données impliquant les informations d'environ 400 000 personnes, incluant les noms et coordonnées."
+      },
+      "tags": [
+        "Data Leak",
+        "Football",
+        "Phishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/olympique-marseille-football-club-confirms-cyberattack-after-data-leak/"
+      ],
+      "date": "2026-02-26"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-20127",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN Manager / Controller",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Critical authentication bypass vulnerability in Cisco Catalyst SD-WAN products allowing an unauthenticated remote attacker to gain administrative privileges. Exploited in the wild since 2023.",
+        "fr": "Vulnérabilité critique de contournement d'authentification dans les produits Cisco Catalyst SD-WAN permettant à un attaquant distant non authentifié d'obtenir des privilèges administratifs. Exploitée activement depuis 2023."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "CISA KEV"
+      ],
+      "sources": [
+        "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v",
+        "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-cisco-catalyst-sd-wan-products-could-allow-for-authentication-bypass_2026-016"
+      ],
+      "date": "2026-02-25"
+    },
+    {
+      "cve_id": "CVE-2026-21902",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:juniper:junos_os_evolved:*:*:*:*:*:*:*:*",
+      "product": "Junos OS Evolved",
+      "vendor": "Juniper Networks",
+      "description": {
+        "en": "Critical vulnerability in PTX Series routers allowing unauthenticated code execution as root via the 'On-Box Anomaly Detection' framework.",
+        "fr": "Vulnérabilité critique dans les routeurs de la série PTX permettant l'exécution de code non authentifié en tant que root via le framework 'On-Box Anomaly Detection'."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Root"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0214/",
+        "https://supportportal.juniper.net/s/article/JSA107128"
+      ],
+      "date": "2026-02-26"
+    },
+    {
+      "cve_id": "CVE-2025-71210",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:trendmicro:apex_one:*:*:*:*:*:*:*:*",
+      "product": "Apex One",
+      "vendor": "Trend Micro",
+      "description": {
+        "en": "Path traversal vulnerability in Trend Micro Apex One management console allowing for remote code execution on Windows systems.",
+        "fr": "Vulnérabilité de traversée de chemin dans la console de gestion Trend Micro Apex One permettant l'exécution de code à distance sur les systèmes Windows."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Path Traversal"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-critical-apex-one-rce-vulnerabilities/"
+      ],
+      "date": "2026-02-26"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "UAT-10027: Deployment of Dohdoor Backdoor",
+        "fr": "UAT-10027 : Déploiement du backdoor Dohdoor"
+      },
+      "description": {
+        "en": "Campaign targeting US education and healthcare sectors since December 2025. It uses phishing and DLL sideloading to install 'Dohdoor', a stealthy backdoor utilizing DNS-over-HTTPS (DoH) for C2 through Cloudflare infrastructure.",
+        "fr": "Campagne ciblant les secteurs américains de l'éducation et de la santé depuis décembre 2025. Elle utilise le phishing et le DLL sideloading pour installer 'Dohdoor', un backdoor furtif utilisant le DNS-over-HTTPS (DoH) pour le C2 via l'infrastructure Cloudflare."
+      },
+      "threat_actor": "Lazarus Group",
+      "indicators": {
+        "URL": [
+          "https://talosintelligence.com/talos_file_reputation?s=41f14d86bcaf8e949160ee2731802523e0c76fea87adf00ee7fe9567c3cec610",
+          "https://talosintelligence.com/talos_file_reputation?s=90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+          "https://talosintelligence.com/talos_file_reputation?s=96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+          "https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+          "https://talosintelligence.com/talos_file_reputation?s=d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1"
+        ],
+        "IPv4": [
+          "1.1.1.1",
+          "20.12.5.3",
+          "20.12.6.1",
+          "20.15.4.2",
+          "20.18.2.1",
+          "20.9.8.2",
+          "100.173.183.197",
+          "184.200.100.31",
+          "20.86.82.62",
+          "45.43.37.254",
+          "45.48.37.254",
+          "45.49.37.254",
+          "46.43.37.204",
+          "48.43.37.204",
+          "94.247.150.119",
+          "98.117.22.183"
+        ],
+        "IPv6": [
+          "1201",
+          "95"
+        ],
+        "DOMAIN": [
+          "cloudflare-dns.com",
+          "cisco.com",
+          "cyber.gov.au",
+          "ncsc.gov.uk",
+          "cisa.gov",
+          "cve.org",
+          "sans.edu",
+          "proofpoint.com",
+          "lunarcyber.com"
+        ],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co",
+          "cna@vuldb.com",
+          "ics-cert@hq.dhs.gov",
+          "069JimMc@rusi.org"
+        ],
+        "HASH_SHA256": [
+          "41f14d86bcaf8e949160ee2731802523e0c76fea87adf00ee7fe9567c3cec610",
+          "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+          "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+          "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+          "d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1"
+        ],
+        "HASH_SHA1": [
+          "a1f86950e1314b0c740f9cd9b7e9dbab7d02af51"
+        ],
+        "HASH_MD5": [
+          "0c883b1d66afce606d9830f48d69d74b",
+          "2915b3f8b703eb744fc54c81f4a9c67f",
+          "85bbddc502f7b10871621fd460243fbc",
+          "aac3165ece2959f39ff98334618d10d9",
+          "c2efb2dcacba6d3ccc175b6ce1b7ed0a",
+          "466556e923186364e82cbdb4cad8df2c",
+          "7FF31977972C224A76155D13B6D685E3"
+        ],
+        "TOOLS": [
+          "Dohdoor",
+          "GRIDTIDE",
+          "PowerShell",
+          "DLL Sideloading",
+          "Sysdig",
+          "Field Effect MDR"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1574.002",
+        "T1071.004",
+        "T1059.001",
+        "T1548.002",
+        "T1140"
+      ],
+      "analyse": {
+        "en": "UAT-10027 utilizes advanced evasion techniques including custom XOR-SUB decryption and NTDLL unhooking. The use of Cloudflare to mask C2 traffic and hijacking legitimate DNS processes via DoH makes this threat particularly difficult to detect with traditional perimeter defenses.",
+        "fr": "UAT-10027 utilise des techniques d'évasion avancées, notamment le déchiffrement XOR-SUB personnalisé et le unhooking de NTDLL. L'utilisation de Cloudflare pour masquer le trafic C2 et le détournement des processus DNS légitimes via DoH rend cette menace particulièrement difficile à détecter avec les défenses périmétriques traditionnelles."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unusual DoH (DNS-over-HTTPS) traffic and audit PowerShell execution logs.",
+          "fr": "Surveiller le trafic DoH (DNS-over-HTTPS) inhabituel et auditer les journaux d'exécution PowerShell."
+        },
+        {
+          "en": "Implement strict DLL sideloading protections and application whitelisting.",
+          "fr": "Mettre en œuvre des protections strictes contre le DLL sideloading et la mise sur liste blanche des applications."
+        }
+      ],
+      "tags": [
+        "Dohdoor",
+        "APT",
+        "C2",
+        "Stealth",
+        "UAT-10027"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/new-dohdoor-malware-campaign/",
+        "https://securityaffairs.com/188558/apt/uat-10027-campaign-hits-u-s-education-and-healthcare-with-stealthy-dohdoor-backdoor.html"
+      ],
+      "date": "2026-02-26"
+    }
+  ]
+}
