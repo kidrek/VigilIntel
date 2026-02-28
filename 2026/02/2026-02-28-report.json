@@ -1,0 +1,2791 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La veille cyber révèle une intensification et une diversification des menaces, avec des tendances marquées par l'exploitation de vulnérabilités critiques (souvent à fort score CVSS) et l'abus de la chaîne d'approvisionnement via des fournisseurs tiers. L'usage de l'Intelligence Artificielle (IA) par les attaquants se confirme, comme en témoigne la création de fausses identités, tandis que les défenseurs explorent l'IA pour automatiser la détection, l'analyse et la réponse aux incidents. Les groupes parrainés par des États-nations, comme APT37 et MuddyWater, continuent de cibler des infrastructures sensibles et de développer des malwares sophistiqués, y compris pour les réseaux isolés. Les fuites de données massives sont monnaie courante, souvent déclenchées par des erreurs de configuration ou des compromissions de sous-traitants, soulignant l'importance de l'hygiène de sécurité et de la gestion des identités et accès. La persistance des menaces sur des systèmes non patchés et l'évolution des techniques de commandement et contrôle (C2), comme l'utilisation de blockchains, nécessitent une adaptation constante des stratégies de défense. En conclusion, l'état général des menaces est élevé, exigeant une vigilance accrue, des mises à jour rapides et une approche proactive, notamment face aux menaces avancées et à l'exploitation de nouvelles technologies.",
+      "date": "2026-02-28"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT37 (ScarCruft)",
+        "secteur": "Divers, intérêt pour les récits médiatiques nord-coréens",
+        "modop": "Utilisation de fichiers de raccourci Windows (LNK) malveillants, déploiement de scripts PowerShell pour extraire des charges utiles, installation de l'environnement d'exécution Ruby déguisé en utilitaire USB légitime, modification de fichiers RubyGems, création de répertoires cachés sur les lecteurs USB, transformation des périphériques de stockage amovibles en relais C2 bidirectionnels, déploiement de spyware Windows (FOOTWINE) pour keylogging, captures d'écran, enregistrement audio/vidéo, manipulation de fichiers, accès au registre et commandes shell à distance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionnage",
+          "Corée_du_Nord",
+          "air_gap",
+          "malware",
+          "RESTLEAF",
+          "SNAKEDROPPER",
+          "THUMBSBD",
+          "VIRUSTASK",
+          "FOOTWINE",
+          "USB_infection",
+          "C2_bidirectionnel"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "The Com",
+        "secteur": "Enfants et adolescents",
+        "modop": "Réseau cybercriminel décentralisé ciblant et victimisant des jeunes pour l'extorsion, la violence et la production de matériel d'exploitation sexuelle d'enfants (CSAM). Utilise des sous-groupes comme « 764 » pour le recrutement et le chantage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "extorsion",
+          "CSAM",
+          "recrutement",
+          "réseau_extremiste"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/police-crackdown-on-the-com-cybercrime-gang-leads-to-30-arrests/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UNC5221 (lié à la Chine)",
+        "secteur": "Infrastructures critiques, entreprises utilisant Ivanti Connect Secure",
+        "modop": "Exploitation de vulnérabilités zero-day (CVE-2025-0282) dans les appareils Ivanti Connect Secure pour déployer l'implant malveillant RESURGE. Utilise des mécanismes de persistance et d'évasion sophistiqués, y compris un faux certificat Ivanti pour l'authentification et une variante de SpawnSloth pour la falsification des journaux.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "Chine",
+          "zero_day",
+          "RESURGE",
+          "Ivanti",
+          "persistance",
+          "évasion",
+          "falsification_journaux"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Yurii Nazarenko (alias \"John Wick\", \"Tor Ford\", \"Uriel Septimberus\")",
+        "secteur": "Services financiers, plateformes de cryptomonnaies",
+        "modop": "Opération du site web 'OnlyFake' basé sur l'IA, générant et vendant plus de 10 000 faux documents d'identification (passeports, permis de conduire, cartes de sécurité sociale) pour contourner les exigences de vérification 'Know Your Customer' (KYC). Paiements en cryptomonnaie.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "fraude",
+          "IA",
+          "faux_documents",
+          "KYC_bypass",
+          "cryptomonnaie"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ukrainian-man-pleads-guilty-to-running-ai-powered-fake-id-site/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Opérateurs du botnet Aeternum",
+        "secteur": "Non spécifié, infrastructure de botnet",
+        "modop": "Utilisation de contrats intelligents sur la blockchain Polygon pour l'infrastructure de commandement et contrôle (C2), rendant la détection et la perturbation plus difficiles. Le botnet C++ chargeur stocke les instructions sur la blockchain publique, que les machines infectées interrogent via des points d'accès RPC. Offert à la vente avec un panneau de contrôle ou en code source C++.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "blockchain",
+          "C2",
+          "Polygon",
+          "malware_as_a_service",
+          "résilience"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188627/mobile-2/aeternum-botnet-hides-commands-in-polygon-smart-contracts.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Télécommunications (PBX)",
+        "modop": "Exploitation de la vulnérabilité CVE-2025-64328 (injection de commandes post-authentification) dans les instances Sangoma FreePBX pour déployer le webshell EncystPHP, permettant l'exécution de commandes arbitraires avec des privilèges élevés.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "exploitation_vulnérabilité",
+          "webshell",
+          "EncystPHP",
+          "FreePBX",
+          "télécommunications"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "MuddyWater (aka TEMP.Zagros, TA450, G0069)",
+        "secteur": "Moyen-Orient et Afrique du Nord (MENA), secteurs non spécifiés",
+        "modop": "Campagne \"Operation Olalampo\" utilisant des e-mails de phishing avec des pièces jointes Microsoft Office malveillantes. Déploiement de téléchargeurs (GhostFetch, HTTP_VIP) pour profiler les systèmes et livrer des charges utiles secondaires, y compris le backdoor GhostBackDoor et CHAR (backdoor basé sur Rust contrôlé par Telegram bot). Exploitation de serveurs exposés pour l'accès initial.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "Iran",
+          "phishing",
+          "malware",
+          "backdoor",
+          "GhostFetch",
+          "HTTP_VIP",
+          "GhostBackDoor",
+          "CHAR",
+          "Telegram_C2",
+          "MENA"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UAT-8616 (acteur sophistiqué, potentiellement étatique)",
+        "secteur": "Infrastructures nationales critiques (CNI), dispositifs périphériques de réseau",
+        "modop": "Exploitation d'une vulnérabilité zero-day critique (CVE-2026-20127) dans la plateforme Cisco Catalyst SD-WAN pour contourner l'authentification et insérer des pairs malveillants dans les réseaux ciblés. Escalade de privilèges en rétrogradant le logiciel à une version plus ancienne pour exploiter une ancienne faille de niveau root (CVE-2022-20775), puis restauration pour l'évasion de détection.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "nation_state",
+          "zero_day",
+          "Cisco_SD-WAN",
+          "RCE",
+          "contournement_authentification",
+          "escalade_privilèges",
+          "CNI"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UAT-10027 (lien faible avec Lazarus Group)",
+        "secteur": "Santé, éducation (États-Unis)",
+        "modop": "Campagne d'infection multi-étapes utilisant l'ingénierie sociale, des téléchargeurs PowerShell, le chargement latéral de DLL, Cloudflare DNS-over-HTTPS pour le C2, l'évasion EDR par l'unhooking des appels système ntdll.dll, et l'hollowage de processus.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Lazarus_Group",
+          "Corée_du_Nord",
+          "santé",
+          "éducation",
+          "ingénierie_sociale",
+          "PowerShell",
+          "DLL_sideloading",
+          "Cloudflare",
+          "EDR_bypass"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Télécommunications",
+        "modop": "Vol et fuite de données massives (informations personnelles, coordonnées bancaires, numéros de passeport et permis de conduire) suite au refus de paiement de rançon. Ciblent les opérateurs télécoms.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "fuite_données",
+          "Odido",
+          "télécommunications",
+          "extorsion"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://mstdn.social/@Hackread/116144466656538627"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Indra",
+        "secteur": "Commerce de détail (e-commerce)",
+        "modop": "Compromission d'un sous-traitant de support client (possiblement Zendesk) de la plateforme ManoMano, menant à l'exposition de 37,8 millions de comptes utilisateurs incluant noms, e-mails, numéros de téléphone et échanges de service client.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "fuite_données",
+          "ManoMano",
+          "supply_chain_attack",
+          "e-commerce"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://infosec.exchange/@DevaOnBreaches/116145243161953434"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Gerald Eddie Brown (ex-officier USAF) et Stephen Su Bin (hacker chinois)",
+        "secteur": "Défense nationale (États-Unis), armée chinoise",
+        "modop": "Conspiration pour fournir une formation sur les avions de combat à des pilotes militaires chinois et vente d'exploits classifiés (zero-day) à un courtier d'armes cybernétiques russe (Operation Zero) pour des millions de dollars en cryptomonnaie.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionnage",
+          "insider_threat",
+          "Chine",
+          "Russie",
+          "zero_day",
+          "vente_exploits"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, défense",
+        "theme": "Règles de confidentialité, données personnelles",
+        "description": "La Cour d'appel du Royaume-Uni a statué que le devoir de sécurité des données d'un contrôleur s'applique à toutes les données personnelles dont il est responsable, même si un tiers attaquant ne pouvait pas identifier les individus à partir de l'ensemble de données exfiltré. Cette décision ajoute des précisions aux débats sur la définition des \"données personnelles\" et les obligations des contrôleurs, en lien avec la loi britannique sur la protection des données de 1998 et la jurisprudence plus récente du RGPD.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Royaume-Uni",
+          "RGPD",
+          "data_privacy",
+          "régulation"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/uk-court-of-appeal-rules-on-the-concept-of-personal-data-in-the-context-of-data-security/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Défense, technologie",
+        "theme": "Classification des informations sensibles",
+        "description": "Les iPhones et iPads d'Apple ont reçu l'approbation de l'OTAN pour gérer des informations classifiées jusqu'au niveau \"RESTRICTED\". Ils sont désormais listés dans le Catalogue des produits d'assurance de l'information (NIAPC) de l'OTAN, permettant au personnel militaire d'utiliser ces appareils commerciaux pour des communications et opérations sensibles sans logiciel de sécurité spécialisé, grâce à une configuration durcie (iNDIGO).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "OTAN",
+          "Apple",
+          "sécurité_nationale",
+          "informations_classifiées",
+          "défense"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188618/security/iphone-and-ipad-are-the-first-consumer-devices-cleared-for-natos-restricted-classification.html",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement, défense",
+        "theme": "Désinformation et influence étrangère",
+        "description": "La Russie mène une campagne de désinformation, y compris des efforts \"AI-enhanced FIMI\" (Foreign Information Manipulation and Interference), pour salir les athlètes ukrainiens aux Jeux olympiques et accuser la France de se diriger vers l'autoritarisme. Le Kremlin utilise aussi des tactiques de diversion, comme en tentant de lier le rapport sur l'empoisonnement de Navalny aux fichiers d'Epstein, pour masquer son rôle dans la répression interne et contourner les interdictions de VPN.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russie",
+          "désinformation",
+          "propagande",
+          "AI",
+          "Ukraine",
+          "censure",
+          "relations_internationales"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russias-quest-for-disinformation-gold/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement, défense",
+        "theme": "Législation et préparation militaire",
+        "description": "Le projet de loi sur les forces armées de 2026 au Royaume-Uni vise à améliorer la flexibilité des services armés, notamment en actualisant les seuils de rappel des réservistes pour inclure les 'opérations de guerre' et en augmentant l'âge maximal de rappel. Bien que technique, cette loi est critiquée pour ne pas aborder les questions fondamentales de financement et de capacité réelle des forces de réserve, ni la préparation à un conflit prolongé. Elle contraste avec les mesures plus ambitieuses de pays alliés en matière d'investissement et de soutien sociétal à la défense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Royaume-Uni",
+          "défense",
+          "législation_militaire",
+          "préparation_guerre",
+          "réservistes"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/sticking-power-or-plaster-uk-armed-forces-bill-2026-and-preparedness"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement, crime organisé",
+        "theme": "Lutte contre le crime organisé, ingérence étrangère",
+        "description": "Une opération militaire mexicaine, avec le soutien des renseignements américains, a conduit à la mort d'El Mencho, un chef influent du crime organisé. Des vagues de violence ont suivi, révélant l'enracinement des cartels. Le soutien américain, bien que présenté comme souverain, s'inscrit dans la doctrine Monroe, soulevant des questions sur l'implication de Washington dans les affaires de sécurité du continent, en contradiction avec les principes du droit international.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Mexique",
+          "crime_organisé",
+          "Etats-Unis",
+          "doctrine_Monroe",
+          "droit_international"
+        ],
+        "sources": [
+          "https://www.iris-france.org/mexique-quels-objectifs-derriere-lelimination-d-el-mencho/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Minorités, politique nationale",
+        "theme": "Inclusion des minorités, instrumentalisation politique",
+        "description": "Le processus de paix en Turquie remet en question l'inclusion des minorités ethnoculturelles. L'article met en lumière la situation des Lazes, une population bien intégrée mais dont la langue est menacée. Le président Erdoğan instrumentalise cette communauté pour critiquer l'activisme kurde, soulignant les enjeux complexes de la préservation culturelle et de la souveraineté numérique dans un contexte géopolitique interne tendu.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Turquie",
+          "minorités",
+          "culture",
+          "politique_nationale",
+          "Erdoğan",
+          "Kurdes"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-lazes-de-turquie-une-minorite-oubliee/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Commerce de détail (e-commerce)",
+        "victime": "ManoMano",
+        "description": "Violation de données chez le détaillant européen ManoMano, affectant 38 millions de comptes clients. L'incident est survenu via la compromission d'un fournisseur de services tiers. Les données exposées incluent les noms, prénoms, adresses e-mail, numéros de téléphone et interactions avec le service client. Aucune donnée bancaire ou mot de passe n'a été compromis. L'acteur \"Indra\" sur BreachForums a revendiqué l'attaque.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "ManoMano",
+          "données_personnelles",
+          "fournisseur_tiers",
+          "Indra",
+          "phishing",
+          "Europe"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188582/data-breach/manomano-data-breach-impacted-38-million-customer-accounts.html",
+          "https://infosec.exchange/@DevaOnBreaches/116145243161953434",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Cegedim Santé (France)",
+        "description": "Piratage d'un logiciel pour médecins (Mon Logiciel Médical - MLM) édité par Cegedim Santé, entraînant le vol de données administratives et, pour un nombre limité, de notes médicales personnelles. Jusqu'à 15 millions de personnes pourraient être concernées. L'incident a été découvert fin 2025. Des échantillons de données ont été proposés à la vente en ligne. Le ministère de la Santé français a confirmé l'incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "France",
+          "Cegedim",
+          "données_médicales",
+          "données_personnelles",
+          "logiciel_médical"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/hackers-steal-medical-details-of-15-million-in-france/?pk_campaign=feed&pk_kwd=hackers-steal-medical-details-of-15-million-in-france",
+          "https://www.lemonde.fr/pixels/article/2026/02/27/des-donnees-de-sante-derobees-a-la-suite-du-piratage-d-un-logiciel-pour-medecins_6668562_4408996.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Geisinger Health (via Nuance Communications)",
+        "description": "Un ancien employé de Nuance Communications, Max Vance (Andre J. Burk), a accédé et volé plus de 1,2 million de dossiers de patients de Geisinger Health après la fin de son emploi. La violation a été détectée par Geisinger qui a alerté Nuance. Vance a plaidé coupable.",
+        "tags": [
+          "violation",
+          "breach",
+          "santé",
+          "Geisinger_Health",
+          "Nuance_Communications",
+          "dossiers_patients",
+          "menace_interne",
+          "accès_non_autorisé"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/former-nuance-employee-admits-breaching-more-than-1-2m-geisinger-patient-records/?pk_campaign=feed&pk_kwd=former-nuance-employee-admits-breaching-more-than-1-2m-geisinger-patient-records"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement (fiscalité), cryptomonnaies",
+        "victime": "Service National des Impôts de Corée du Sud",
+        "description": "Les autorités sud-coréennes ont accidentellement exposé la clé de récupération d'un portefeuille de cryptomonnaies saisi (phrase mnémonique) dans une photo de communiqué de presse, entraînant le vol de 4,8 millions de dollars en crypto par des hackers.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "Corée_du_Sud",
+          "cryptomonnaie",
+          "erreur_humaine",
+          "vol_fonds"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/south-korean-authorities-accidentally-hand-hackers-4-8m-in-crypto/?pk_campaign=feed&pk_kwd=south-korean-authorities-accidentally-hand-hackers-4-8m-in-crypto"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement",
+        "victime": "Agences gouvernementales mexicaines",
+        "description": "Un hacker a utilisé le chatbot d'IA d'Anthropic PBC, Claude, pour mener des attaques contre des agences gouvernementales mexicaines, entraînant le vol d'une grande quantité d'informations fiscales et électorales sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "Mexique",
+          "AI",
+          "chatbot",
+          "données_fiscales",
+          "données_électorales",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/hacker-used-anthropics-claude-to-steal-sensitive-mexican-data/?pk_campaign=feed&pk_kwd=hacker-used-anthropics-claude-to-steal-sensitive-mexican-data"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Gouvernement (système pénitentiaire)",
+        "victime": "Agence néerlandaise des prisons (DJI)",
+        "description": "Des hackers ont eu accès aux données du personnel de l'agence néerlandaise des prisons (DJI) pendant au moins cinq mois. Les informations exposées incluent les adresses e-mail, les numéros de téléphone et les certificats de sécurité du personnel, augmentant le risque d'extorsion ou de chantage.",
+        "tags": [
+          "violation",
+          "breach",
+          "gouvernement",
+          "Pays-Bas",
+          "données_personnelles",
+          "personnel_prisonnier",
+          "extorsion",
+          "chantage"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/nl-hackers-had-access-to-prison-staff-data-for-five-months/?pk_campaign=feed&pk_kwd=nl-hackers-had-access-to-prison-staff-data-for-five-months"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Défense, gouvernement",
+        "victime": "Armée malaisienne, Ministère malaisien",
+        "description": "Un acteur de la menace vendrait des données de l'armée et du ministère malaisiens sur le dark web. Les détails spécifiques des données volées ne sont pas précisés dans l'article social, mais cela indique une violation potentielle d'informations sensibles.",
+        "tags": [
+          "violation",
+          "breach",
+          "défense",
+          "Malaisie",
+          "dark_web",
+          "données_gouvernementales",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://mastodon.social/@lowyat/116145311613572773"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Sport",
+        "victime": "Olympique de Marseille",
+        "description": "Le club de football de l'Olympique de Marseille a confirmé une cyberattaque suite à la revendication d'un hacker qui prétendait avoir volé des données de 400 000 employés et supporters. Le club a déclaré qu'aucune coordonnée bancaire ou mot de passe n'avait été compromis et que les opérations restaient normales.",
+        "tags": [
+          "violation",
+          "breach",
+          "sport",
+          "Olympique_Marseille",
+          "données_personnelles",
+          "cyberattaque",
+          "football"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116145248588916738"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido (Pays-Bas)",
+        "description": "Le groupe ShinyHunters a divulgué 2 millions de dossiers du telco néerlandais Odido après le refus de l'entreprise de payer la rançon, affirmant avoir volé jusqu'à 21 millions de dossiers clients, incluant des numéros de compte bancaire, des PII, des numéros de passeport et des permis de conduire.",
+        "tags": [
+          "violation",
+          "breach",
+          "télécommunications",
+          "Odido",
+          "ShinyHunters",
+          "ransomware",
+          "fuite_données",
+          "PII",
+          "Pays-Bas"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://mstdn.social/@Hackread/116144466656538627"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Industrie, finance",
+        "victime": "IDMerit",
+        "description": "Une base de données sensible d'IDMkyc, filiale d'IDMerit (leader de la vérification d'identité numérique), a été exposée publiquement sans authentification, révélant 1 milliard de données personnelles, dont 52 millions de citoyens français. Les PII comprennent des cartes d'identité, numéros de téléphone, adresses physiques et électroniques. Ces données sont critiques pour les processus KYC dans la FinTech et le secteur bancaire, et leur exposition crée des risques de spear phishing, fraude au crédit et usurpation d'identité. La faille a été corrigée suite à l'alerte de CyberNews.",
+        "tags": [
+          "violation",
+          "breach",
+          "identification_numérique",
+          "FinTech",
+          "banque",
+          "KYC",
+          "données_personnelles",
+          "France",
+          "usurpation_identité",
+          "hameçonnage"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/faille-idmerit-verification-identite-souverainete-numerique/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-28411",
+        "cvss": 9.8,
+        "product": "WeGIA < 3.6.5",
+        "description": "Vulnérabilité de contournement de l'authentification via l'utilisation non sécurisée de la fonction `extract($_REQUEST)` qui permet à un attaquant non authentifié d'écraser des variables locales dans des scripts PHP, donnant un accès non autorisé aux zones administratives.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WeGIA",
+          "authentification_bypass",
+          "PHP",
+          "accès_non_autorisé",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28411"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-13942",
+        "cvss": 9.8,
+        "product": "Zyxel EX3510-B0 router (firmware < 5.17(ABUP.15.1)C0)",
+        "description": "Vulnérabilité d'injection de commande dans le service UPnP qui permet à des attaquants distants non authentifiés d'exécuter des commandes système d'exploitation via des requêtes SOAP UPnP spécialement conçues, si UPnP et l'accès WAN sont activés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Zyxel",
+          "routeur",
+          "UPnP",
+          "injection_commande",
+          "RCE",
+          "non_authentifié",
+          "critique"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/zyxel-patch-upnp-command-injection-flaw"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-21902",
+        "cvss": 9.3,
+        "product": "Juniper Networks Junos OS Evolved (PTX Series routers)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) due à une attribution incorrecte de permissions pour une ressource critique dans le framework de détection d'anomalies On-Box, permettant à un attaquant non authentifié d'exécuter du code en tant que root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Juniper",
+          "Junos_OS_Evolved",
+          "PTX_Series",
+          "RCE",
+          "non_authentifié",
+          "mauvaise_configuration",
+          "critique"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188609/security/juniper-issues-emergency-patch-for-critical-ptx-router-rce.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28517",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "Vulnérabilité d'injection de commande OS dans report_network_map.php, où le paramètre de configuration 'dot' est passé directement à exec() sans validation, permettant l'exécution de commandes arbitraires si un attaquant peut modifier la valeur fac_Config.dot.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "injection_commande_OS",
+          "RCE",
+          "mauvaise_validation",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28517"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28516",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "Vulnérabilité d'injection SQL dans Config::UpdateParameter, permettant à un utilisateur authentifié d'exécuter des requêtes SQL arbitraires en raison de l'absence de déclarations préparées ou de sanitation d'entrée adéquates.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "injection_SQL",
+          "authentifié",
+          "accès_données",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28516"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28515",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "Vulnérabilité de manque d'autorisation dans install.php et container-install.php, exposant la fonctionnalité de configuration LDAP sans vérification des rôles, permettant à tout utilisateur authentifié (ou non authentifié si REMOTE_USER est mal configuré) de modifier la configuration.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "manque_autorisation",
+          "accès_non_autorisé",
+          "LDAP",
+          "configuration",
+          "critique"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28515"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-20127",
+        "cvss": 9.3,
+        "product": "Cisco Catalyst SD-WAN Controller, Manager, Cloud (on-premises et cloud)",
+        "description": "Vulnérabilité critique de contournement d'authentification dans le mécanisme d'authentification de peering qui permet à des attaquants distants non authentifiés de compromettre les contrôleurs et d'insérer des pairs malveillants dans les réseaux ciblés, entraînant un accès privilégié élevé et une manipulation des configurations réseau.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "SD-WAN",
+          "authentification_bypass",
+          "RCE",
+          "critique",
+          "accès_privilégié",
+          "réseau"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28426",
+        "cvss": 8.7,
+        "product": "Statamic < 5.73.11 et < 6.4.0 (CMS)",
+        "description": "Vulnérabilité XSS stockée dans les composants liés aux SVG et icônes, permettant à des utilisateurs authentifiés avec des permissions appropriées d'injecter du JavaScript malveillant qui s'exécute lorsqu'il est visualisé par des utilisateurs avec des privilèges plus élevés, menant à une escalade de privilèges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Statamic",
+          "CMS",
+          "XSS_stockée",
+          "escalade_privilèges",
+          "authentifié",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28426"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": 8.6,
+        "product": "Sangoma FreePBX >= 17.0.2.36 (corrigé en 17.0.3)",
+        "description": "Vulnérabilité d'injection de commande post-authentification permettant à tout utilisateur ayant accès au panneau d'administration FreePBX d'exécuter des commandes shell arbitraires sur l'hôte sous-jacent en tant qu'utilisateur 'asterisk'. Activement exploitée dans la nature.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Sangoma",
+          "FreePBX",
+          "injection_commande",
+          "RCE",
+          "post_authentification",
+          "exploitation_active",
+          "high"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28416",
+        "cvss": 8.2,
+        "product": "Gradio < 6.6.0 (package Python)",
+        "description": "Vulnérabilité SSRF (Server-Side Request Forgery) permettant à un attaquant d'effectuer des requêtes HTTP arbitraires depuis le serveur de la victime en hébergeant un espace Gradio malveillant. Le `proxy_url` de la configuration est trusté, donnant accès aux services internes et réseaux privés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Gradio",
+          "SSRF",
+          "accès_interne",
+          "cloud",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28416"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28425",
+        "cvss": 8.0,
+        "product": "Statamic < 5.73.11 et < 6.4.0 (CMS)",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) via des entrées du panneau de contrôle compatibles avec Antlers, permettant à un utilisateur authentifié d'accéder à des configurations sensibles, de modifier ou d'exfiltrer des données et d'impacter la disponibilité.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Statamic",
+          "CMS",
+          "RCE",
+          "Antlers",
+          "authentifié",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28425"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": null,
+        "product": "OpenClaw < 2026.2.25 (outil IA)",
+        "description": "Vulnérabilité \"ClawJacked\" dans le gateway WebSocket local permettant à un site web malveillant de prendre le contrôle d'un agent IA en exécutant des attaques par force brute sur les mots de passe et en obtenant un accès administratif complet sans interaction utilisateur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "OpenClaw",
+          "AI",
+          "WebSocket",
+          "prise_de_contrôle",
+          "accès_non_autorisé",
+          "critique"
+        ],
+        "sources": [
+          "https://hackread.com/openclaw-vulnerability-openclaw-hijack-ai-agents/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-0282",
+        "cvss": null,
+        "product": "Ivanti Connect Secure",
+        "description": "Vulnérabilité zero-day activement exploitée par l'implant RESURGE pour obtenir un accès persistant et indétectable sur les appareils Ivanti Connect Secure.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Ivanti",
+          "zero_day",
+          "exploitation_active",
+          "RESURGE",
+          "accès_persistant",
+          "critique"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-15498",
+        "cvss": null,
+        "product": "Pro3W CMS (toutes versions jusqu'à 1.2.0)",
+        "description": "Vulnérabilité d'injection SQL dans le formulaire de connexion permettant à un attaquant non authentifié de contourner l'authentification et d'obtenir des privilèges administratifs.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Pro3W_CMS",
+          "injection_SQL",
+          "authentification_bypass",
+          "non_authentifié",
+          "accès_administrateur",
+          "critique"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2026/02/CVE-2025-15498/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "APT37 hackers use new malware to breach air-gapped networks",
+        "description": "Le groupe de hackers nord-coréens APT37 (ScarCruft) déploie un nouveau toolkit (\"Ruby Jumper\" : RESTLEAF, SNAKEDROPPER, THUMBSBD, VIRUSTASK, FOOTWINE) pour exfiltrer des données des réseaux isolés (air-gapped). L'attaque débute par des fichiers LNK malveillants, utilise des clés USB infectées comme relais C2 bidirectionnels et déploie un spyware Windows multifonctionnel.",
+        "threat_actor": "APT37 (ScarCruft)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1023 (Adversary-Controlled Island)",
+          "T1090 (Proxy)",
+          "T1059.001 (PowerShell)",
+          "T1547.001 (Registry Run Keys / Startup Folder)",
+          "T1053.005 (Scheduled Task)",
+          "T1005 (Data from Local System)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1123 (Audio Capture)",
+          "T1083 (File and Directory Discovery)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "L'attaque cible des entités intéressées par les récits médiatiques nord-coréens, suggérant un motif d'espionnage. La capacité à compromettre les réseaux isolés via des périphériques USB transformés en C2 bidirectionnels représente une menace sérieuse pour les environnements de haute sécurité, augmentant le risque d'exfiltration de données sensibles et de surveillance persistante.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux dangers des fichiers LNK malveillants et des clés USB inconnues.",
+          "Mettre en place des politiques strictes de contrôle des périphériques amovibles (USB).",
+          "Surveiller les installations logicielles non autorisées (ex: environnement Ruby déguisé).",
+          "Déployer des solutions de détection de menaces avancées capables d'identifier les activités de C2 masquées, y compris via des canaux non traditionnels.",
+          "Effectuer des scans réguliers des systèmes pour détecter la présence de répertoires cachés et de logiciels malveillants.",
+          "Renforcer la sécurité des systèmes air-gapped par des contrôles physiques et des audits réguliers."
+        ],
+        "tags": [
+          "APT37",
+          "ScarCruft",
+          "malware",
+          "air_gap",
+          "espionnage",
+          "Corée_du_Nord",
+          "USB",
+          "C2",
+          "persistance",
+          "exfiltration",
+          "keylogging",
+          "T1023",
+          "T1090",
+          "T1059.001",
+          "T1547.001",
+          "T1053.005",
+          "T1005",
+          "T1041",
+          "T1071.001",
+          "T1115",
+          "T1113",
+          "T1123",
+          "T1083",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Aeternum botnet hides commands in Polygon smart contracts",
+        "description": "Le botnet Aeternum utilise les contrats intelligents de la blockchain Polygon pour son infrastructure de commandement et contrôle (C2). Ce mécanisme décentralisé rend la détection et la perturbation plus difficiles, évitant les méthodes traditionnelles de démantèlement basées sur les serveurs centraux. Le botnet C++ chargeur, vendu en tant que produit, stocke les instructions sur la blockchain publique.",
+        "threat_actor": "Opérateurs du botnet Aeternum",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1102.002 (Web Service: Bidirectional Command and Control)",
+          "T1090 (Proxy)"
+        ],
+        "analyse": "L'utilisation de la blockchain pour le C2 représente une évolution significative dans la résilience des botnets. Cette approche rend les botnets \"permanents\" et résistants aux mesures de takedown traditionnelles, augmentant le risque d'attaques à grande échelle (DDoS, bourrage d'identifiants, fraude au clic) et de services de proxy malveillants. Le modèle est susceptible d'être réutilisé par d'autres développeurs de malwares.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance proactive du trafic réseau pour détecter les communications vers des points d'accès RPC de blockchain inhabituels.",
+          "Renforcer les capacités de mitigation DDoS pour filtrer le trafic malveillant à la périphérie du réseau, étant donné la difficulté à démanteler la source du C2.",
+          "Sensibiliser les équipes de sécurité aux nouvelles techniques de C2 basées sur la blockchain.",
+          "Intégrer la détection des activités liées à la cryptomonnaie et aux blockchains dans les stratégies de sécurité."
+        ],
+        "tags": [
+          "botnet",
+          "Aeternum",
+          "blockchain",
+          "Polygon",
+          "C2",
+          "résilience",
+          "malware",
+          "cybercrime",
+          "DDoS",
+          "T1071.001",
+          "T1102.002",
+          "T1090"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188627/mobile-2/aeternum-botnet-hides-commands-in-polygon-smart-contracts.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "CISA warns that RESURGE malware can be dormant on Ivanti devices",
+        "description": "La CISA a émis une alerte concernant RESURGE, un implant malveillant utilisé dans des attaques zero-day exploitant CVE-2025-0282 sur les appareils Ivanti Connect Secure. RESURGE peut rester dormant et indétecté, agissant comme un C2 passif. Il utilise des techniques d'évasion réseau sophistiquées, notamment le hooking de la fonction `accept()` pour inspecter les paquets TLS via une empreinte CRC32 spécifique et un faux certificat Ivanti pour l'authentification. Une variante de SpawnSloth est utilisée pour la falsification des journaux.",
+        "threat_actor": "UNC5221 (lié à la Chine)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-0282"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1090 (Proxy)",
+          "T1542.001 (Component Firmware: Bootkit)",
+          "T1573.001 (Encrypted Channel: Symmetric Cryptography)",
+          "T1562.002 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1562.006 (Impair Defenses: Indicator Removal on Host)"
+        ],
+        "analyse": "La capacité de RESURGE à rester latent et indétecté sur les systèmes Ivanti Connect Secure représente une menace persistante et difficile à éradiquer. Les techniques d'évasion, comme le faux certificat TLS et la falsification des journaux, compliquent la détection et l'analyse forensique, permettant à l'acteur de la menace de maintenir un accès sécurisé et caché à long terme. L'exploitation de zero-days par des acteurs liés à des États-nations (Chine) souligne l'importance des dispositifs de périphérie de réseau comme cibles stratégiques.",
+        "recommandations": [
+          "Rechercher activement les signes de l'implant RESURGE sur les appareils Ivanti Connect Secure, même si les scans initiaux ne révèlent rien.",
+          "Mettre en œuvre des mises à jour et des correctifs immédiats pour CVE-2025-0282.",
+          "Renforcer la surveillance des communications TLS pour détecter les empreintes spécifiques ou les certificats non authentiques.",
+          "Effectuer des analyses forensiques approfondies pour détecter la falsification des journaux et la présence de malwares persistants.",
+          "Isoler les appareils compromis et envisager des reconstructions complètes si une infection est confirmée.",
+          "Implémenter des contrôles d'accès stricts et une segmentation réseau pour limiter la portée potentielle d'une compromission."
+        ],
+        "tags": [
+          "RESURGE",
+          "malware",
+          "Ivanti",
+          "zero_day",
+          "CVE-2025-0282",
+          "C2",
+          "évasion",
+          "persistance",
+          "UNC5221",
+          "Chine",
+          "T1071.001",
+          "T1090",
+          "T1542.001",
+          "T1573.001",
+          "T1562.002",
+          "T1562.006"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Europol-led crackdown on The Com hackers leads to 30 arrests",
+        "description": "L'opération \"Project Compass\" dirigée par Europol a abouti à 30 arrestations et à l'identification de 179 suspects liés à \"The Com\", un collectif cybercriminel en ligne. Ce réseau extrémiste nihiliste cible les enfants et adolescents pour l'extorsion, la violence et la production de matériel d'exploitation sexuelle d'enfants (CSAM), avec des sous-groupes comme \"764\" connus pour le recrutement et le chantage.",
+        "threat_actor": "The Com (incluant le sous-groupe \"764\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1531 (Account Access Removal)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "Cette opération démontre la coopération internationale pour démanteler les réseaux cybercriminels ciblant les populations vulnérables. Le succès de \"Project Compass\" souligne l'importance des enquêtes coordonnées et de l'échange d'informations entre les forces de l'ordre de différents pays. Les activités de The Com, avec leurs liens avec l'extorsion et le CSAM, ont un impact sociétal et psychologique grave.",
+        "recommandations": [
+          "Mettre en place des mesures de protection et de sensibilisation pour les enfants et adolescents sur les dangers en ligne.",
+          "Renforcer la coopération internationale pour lutter contre le cybercrime ciblant les mineurs.",
+          "Signaler toute activité suspecte en ligne aux autorités compétentes.",
+          "Promouvoir des environnements numériques sûrs et des politiques de modération de contenu robustes sur les plateformes en ligne."
+        ],
+        "tags": [
+          "The_Com",
+          "Europol",
+          "cybercrime",
+          "extorsion",
+          "CSAM",
+          "mineurs",
+          "application_loi",
+          "coopération_internationale",
+          "T1566",
+          "T1078",
+          "T1531",
+          "T1059"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/police-crackdown-on-the-com-cybercrime-gang-leads-to-30-arrests/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "How AI Aids Incident Response: Why Humans Alone Cannot Do IR Efficiently",
+        "description": "L'IA accélère considérablement la réponse aux incidents en corrélant les alertes, en tirant des données contextuelles de multiples outils, en analysant les modèles comportementaux, et en générant des rapports structurés en quelques minutes. Elle permet aux équipes SOC de se concentrer sur les investigations à haute valeur ajoutée plutôt que sur les tâches manuelles répétitives, comblant les lacunes des processus traditionnels, notamment en termes de temps et d'évolutivité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059 (Command and Scripting Interpreter)",
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1033 (System Owner/User Discovery)"
+        ],
+        "analyse": "L'intégration de l'IA dans la réponse aux incidents (IR) transforme le SOC d'une posture réactive à une posture plus proactive et efficiente. L'IA permet une meilleure corrélation des alertes, une reconstruction plus rapide des chronologies d'attaque et une automatisation des actions de confinement, réduisant ainsi le temps de détection et de réponse. Cela est crucial face à la complexité croissante des menaces et au volume d'alertes, bien que des coûts d'intégration et de formation soient à considérer.",
+        "recommandations": [
+          "Évaluer les sources de données existantes et identifier les points d'intégration pour les outils d'IA.",
+          "Développer des taxonomies d'alertes et des niveaux de gravité standardisés pour optimiser l'efficacité de l'IA.",
+          "Mettre en place des points de validation humaine et former les analystes à superviser les résultats de l'IA plutôt qu'à effectuer toutes les tâches manuellement.",
+          "Intégrer l'IA pour générer des rapports structurés pour les parties prenantes et les régulateurs.",
+          "Adapter les stratégies de sécurité pour inclure la détection de la dérive des modèles d'IA et des comportements adversariaux spécifiques à l'IA."
+        ],
+        "tags": [
+          "AI",
+          "Incident_Response",
+          "SOC",
+          "automatisation",
+          "détection",
+          "analyse",
+          "réponse",
+          "efficacité",
+          "T1059",
+          "T1083",
+          "T1049",
+          "T1033"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188599/ai/how-ai-aids-incident-response-why-humans-alone-cannot-do-ir-efficiently/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "12 Million exposed .env files reveal widespread security failures",
+        "description": "Plus de 12 millions d'adresses IP exposent des fichiers .env publiquement accessibles, divulguant des informations sensibles telles que des identifiants de base de données, des clés API, des secrets de signature JWT, des jetons cloud et d'autres valeurs critiques. Cette vulnérabilité, résultant de mauvaises configurations (règles de refus manquantes, proxys mal configurés, secrets embarqués dans des images conteneur), représente un problème mondial d'hygiène de sécurité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1003.008 (OS Credential Dumping: .bash_history and .zsh_history)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Cloud Accounts)"
+        ],
+        "analyse": "L'exposition massive de fichiers .env permet aux attaquants de contourner la phase d'intrusion initiale et d'accéder directement aux systèmes avec des identifiants valides. Cela conduit à des vols de données, des escalades de privilèges, des abus d'API et des compromissions de comptes. Ce problème systémique est lié à un manque de gouvernance des secrets et de sensibilisation à la sécurité dans les workflows de développement et de déploiement, avec un impact mondial significatif.",
+        "recommandations": [
+          "Bloquer l'accès public aux fichiers cachés (.env, .env.bak, .env.old) au niveau du serveur et du CDN.",
+          "Déplacer les secrets hors des répertoires accessibles via le web et les intégrer dans des systèmes de gestion des secrets centralisés avec des journaux d'audit et une rotation automatisée.",
+          "Définir des permissions minimales pour les clés et appliquer des restrictions réseau.",
+          "Mettre en œuvre des analyses automatisées des secrets dans les référentiels et les pipelines CI/CD.",
+          "Traiter l'exposition d'un fichier .env comme un incident de sécurité complet, en révoquant immédiatement l'accès public et en faisant pivoter tous les secrets concernés."
+        ],
+        "tags": [
+          "configuration_erreur",
+          "fuite_secrets",
+          "fichier_env",
+          "API_keys",
+          "JWT_secrets",
+          "cloud_tokens",
+          "mauvaise_hygiène",
+          "T1537",
+          "T1003.008",
+          "T1552.001",
+          "T1078",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188590/hacking/12-million-exposed-env-files-reveal-widespread-security-failures.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "SRUM-DUMP v3: A Practical Guide to Windows Forensics with the New GUI and Feature",
+        "description": "SRUM-DUMP v3 est une mise à jour majeure d'un outil de forensique Windows, offrant une interface utilisateur graphique (GUI) en trois étapes, un système de configuration JSON et une fonctionnalité \"dirty words\" pour la mise en évidence de mots-clés. Il prend en charge les clichés instantanés de volume (Volume Shadow Copy) pour l'extraction de fichiers système verrouillés sans réparation manuelle et inclut deux moteurs d'analyse ESE pour les bases de données corrompues. L'outil analyse les tables d'utilisation de la connectivité réseau, de l'utilisation des données réseau par application, et de l'utilisation des ressources d'application pour l'exécution d'applications.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1057 (Process Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1012 (Query Registry)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "SRUM-DUMP v3 améliore considérablement les capacités d'investigation forensique sur les systèmes Windows. La nouvelle GUI et les fonctionnalités telles que les \"dirty words\" et la prise en charge des Volume Shadow Copies simplifient et accélèrent l'analyse des données SRUM (System Resource Usage Monitor), cruciales pour reconstruire les activités du système, les connexions réseau et l'exécution des applications. Cela permet aux analystes d'identifier plus rapidement les activités suspectes et de gagner un temps précieux dans les enquêtes DFIR.",
+        "recommandations": [
+          "Intégrer SRUM-DUMP v3 dans les kits d'outils DFIR pour l'analyse des systèmes Windows.",
+          "Utiliser la fonctionnalité \"dirty words\" pour cibler rapidement les indicateurs de compromission connus (noms de processus, noms d'utilisateurs suspects, noms de réseau).",
+          "Exploiter le support des Volume Shadow Copies pour extraire les bases de données SRUM de systèmes en direct sans interruption.",
+          "Former les analystes à l'interprétation des données SRUM pour identifier les volumes de données anormaux et les exécutions d'applications inattendues."
+        ],
+        "tags": [
+          "forensique",
+          "Windows",
+          "DFIR",
+          "SRUM-DUMP",
+          "SRUM",
+          "analyse_système",
+          "détection_anomalies",
+          "Volume_Shadow_Copy",
+          "T1083",
+          "T1049",
+          "T1057",
+          "T1033",
+          "T1012",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/srum-dump-v3-a-practical-guide-to-windows-forensics-with-the-new-gui-and-feature"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Third-Party Patching and the Business Footprint We All Share",
+        "description": "L'article souligne que la véritable surface d'attaque des entreprises est souvent définie par les outils quotidiens (lecteurs PDF, clients de messagerie, utilitaires d'archivage). Le \"drift\" (décalage) des logiciels tiers augmente le risque d'exploitation, car les vulnérabilités dans ces applications largement utilisées sont des points d'entrée privilégiés pour les attaquants. Malgré les efforts pour les systèmes d'exploitation, le patching des applications tierces est souvent négligé, créant des années de potentiel d'exploitation cumulé.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1078 (Valid Accounts)",
+          "T1566 (Phishing)"
+        ],
+        "analyse": "La négligence du patching des applications tierces constitue un risque majeur et généralisé pour les entreprises, car ces outils sont des cibles attrayantes pour les attaquants en raison de leur ubiquité et de la familiarité des utilisateurs avec leur utilisation. Les exploits s'appuient sur des vulnérabilités connues et des comportements routiniers des utilisateurs, permettant des compromissions rapides et à grande échelle. Une gestion inefficace des correctifs tiers conduit à une accumulation silencieuse de potentiel d'exploitation et rend difficile la traçabilité des compromissions.",
+        "recommandations": [
+          "Prioriser le patching des applications tierces avec la même rigueur que celui des systèmes d'exploitation.",
+          "Mettre en place une visibilité continue sur les logiciels tiers installés sur les endpoints et sur leurs versions.",
+          "Adopter des solutions de gestion des correctifs capables de remédier rapidement et de manière cohérente aux applications vulnérables.",
+          "Sensibiliser les utilisateurs aux risques liés à l'ouverture de fichiers (PDF, Word, Excel) et de liens provenant de sources inconnues ou suspectes.",
+          "Établir des baselines de sécurité pour les applications tierces et surveiller activement le \"drift\" de configuration."
+        ],
+        "tags": [
+          "patching",
+          "logiciels_tiers",
+          "surface_attaque",
+          "vulnérabilité",
+          "gestion_des_correctifs",
+          "risque_exploitation",
+          "sécurité_endpoints",
+          "T1190",
+          "T1203",
+          "T1078",
+          "T1566"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/third-party-patching-and-the-business-footprint-we-all-share/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Ukrainian man pleads guilty to running AI-powered fake ID site",
+        "description": "Yurii Nazarenko a plaidé coupable d'avoir géré OnlyFake, un site web alimenté par l'IA qui a généré et vendu plus de 10 000 photos de faux documents d'identification (passeports, permis de conduire, cartes de sécurité sociale) pour plus de 50 pays. Ces faux IDs étaient principalement utilisés pour contourner les exigences de vérification 'Know Your Customer' (KYC) des banques et des plateformes de cryptomonnaies, dans le but de faciliter le blanchiment d'argent.",
+        "threat_actor": "Yurii Nazarenko (alias \"John Wick\", \"Tor Ford\", \"Uriel Septimberus\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1589 (Establish Accounts)"
+        ],
+        "analyse": "Cet incident met en lumière l'utilisation croissante de l'IA par les cybercriminels pour des activités frauduleuses à grande échelle. La facilité de création de faux documents réalistes via l'IA compromet l'intégrité des processus de vérification d'identité (KYC), posant des risques significatifs pour la sécurité financière, la lutte contre le terrorisme et le blanchiment d'argent. L'affaire souligne la nécessité de renforcer les mécanismes de vérification d'identité et de surveiller l'abus des technologies d'IA.",
+        "recommandations": [
+          "Renforcer les procédures de vérification d'identité et de 'Know Your Customer' (KYC) en utilisant des méthodes robustes qui vont au-delà de la simple vérification de documents numériques.",
+          "Mettre en œuvre des technologies de détection d'IA pour identifier les faux documents générés par l'IA.",
+          "Sensibiliser les institutions financières et les plateformes de cryptomonnaies aux techniques de fraude basées sur l'IA.",
+          "Coopérer avec les forces de l'ordre pour démanteler les services de création de faux documents et poursuivre les opérateurs."
+        ],
+        "tags": [
+          "fraude",
+          "AI",
+          "faux_documents",
+          "KYC_bypass",
+          "blanchiment_argent",
+          "cybercrime",
+          "Yurii_Nazarenko",
+          "OnlyFake",
+          "T1566",
+          "T1078",
+          "T1589"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ukrainian-man-pleads-guilty-to-running-ai-powered-fake-id-site/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Why 2026 is the Year to Upgrade to an Agentic AI SOC",
+        "description": "L'article soutient que 2026 marque le point d'inflexion pour l'adoption des SOC basés sur l'IA agentique, qui diffèrent des modèles copilot en automatisant la priorisation des attaques, l'exécution de confinement en boucle fermée et la fourniture de raisonnements traçables. Ces systèmes IA peuvent planifier, agir et s'adapter sans guidage humain pas à pas, coordonnant plusieurs agents pour résoudre des problèmes complexes et permettant aux analystes de se concentrer sur les investigations à haute valeur ajoutée.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1057 (Process Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1012 (Query Registry)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "L'IA agentique promet une transformation structurelle des opérations de sécurité, offrant un triage plus rapide, des investigations plus précises et une réponse automatisée. Cela réduit considérablement le temps de séjour des attaquants et l'effort humain requis, permettant aux analystes de se concentrer sur des tâches stratégiques. Cependant, la transparence, l'explicabilité et l'auditabilité des décisions de l'IA sont essentielles pour maintenir la confiance et le contrôle humain. Les organisations doivent se préparer à la transition, en évaluant les sources de données et en formant les analystes.",
+        "recommandations": [
+          "Évaluer la maturité des frameworks d'IA et des contrôles de gouvernance pour l'intégration de l'IA agentique.",
+          "Investir dans des plateformes d'IA offrant une transparence et une traçabilité des décisions (\"reasoning trace\").",
+          "Former les analystes de SOC à superviser les agents IA, à vérifier leurs conclusions et à intervenir lorsque le jugement humain est requis.",
+          "Prioriser l'automatisation des tâches répétitives et à faible valeur ajoutée pour libérer les analystes.",
+          "Intégrer l'IA pour corréler les alertes et construire des récits d'attaque cohérents afin de réduire le bruit."
+        ],
+        "tags": [
+          "AI",
+          "SOC_agentique",
+          "automatisation",
+          "réponse_incidents",
+          "détection",
+          "analyse",
+          "efficacité_SOC",
+          "transparence_IA",
+          "auditabilité_IA",
+          "T1083",
+          "T1049",
+          "T1057",
+          "T1033",
+          "T1012",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/why-2026-is-the-year-to-upgrade-to-an-agentic-ai-soc/"
+        ],
+        "date": "2026-02-28"
+      }
+    ]
+  },
+  "EN": {
+    "Transversal Analysis": {
+      "analysis": "Cyber threat intelligence indicates an intensification and diversification of threats, marked by the exploitation of critical vulnerabilities (often with high CVSS scores) and supply chain abuse through third-party vendors. The use of Artificial Intelligence (AI) by attackers is confirmed, as evidenced by the creation of fake identities, while defenders are exploring AI to automate incident detection, analysis, and response. Nation-state-sponsored groups, such as APT37 and MuddyWater, continue to target sensitive infrastructures and develop sophisticated malware, including for air-gapped networks. Massive data breaches are commonplace, often triggered by misconfigurations or subcontractor compromises, highlighting the importance of security hygiene and identity and access management. The persistence of threats on unpatched systems and the evolution of command and control (C2) techniques, such as blockchain usage, necessitate constant adaptation of defense strategies. In conclusion, the overall threat landscape is high, requiring increased vigilance, rapid updates, and a proactive approach, especially against advanced threats and the exploitation of new technologies.",
+      "date": "2026-02-28"
+    },
+    "Malicious Actors Summary": [
+      {
+        "nom": "APT37 (ScarCruft)",
+        "secteur": "Various, interest in North Korean media narratives",
+        "modop": "Uses malicious Windows shortcut files (LNK), deploys PowerShell scripts to extract payloads, installs Ruby runtime environment disguised as a legitimate USB utility, modifies RubyGems files, creates hidden directories on USB drives, turns removable storage devices into bidirectional C2 relays, deploys Windows spyware (FOOTWINE) for keylogging, screenshot capture, audio/video recording, file manipulation, registry access, and remote shell commands.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "espionage",
+          "North_Korea",
+          "air_gap",
+          "malware",
+          "RESTLEAF",
+          "SNAKEDROPPER",
+          "THUMBSBD",
+          "VIRUSTASK",
+          "FOOTWINE",
+          "USB_infection",
+          "bidirectional_C2"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "The Com",
+        "secteur": "Children and teenagers",
+        "modop": "Decentralized cybercrime collective targeting and victimizing young people for extortion, violence, and the production of child sexual exploitation material (CSAM). Uses subgroups like \"764\" for grooming and blackmail.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "extortion",
+          "CSAM",
+          "recruitment",
+          "extremist_network"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/police-crackdown-on-the-com-cybercrime-gang-leads-to-30-arrests/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UNC5221 (China-linked)",
+        "secteur": "Critical infrastructure, organizations using Ivanti Connect Secure",
+        "modop": "Exploiting zero-day vulnerabilities (CVE-2025-0282) in Ivanti Connect Secure devices to deploy the RESURGE malicious implant. Uses sophisticated persistence and evasion mechanisms, including a fake Ivanti certificate for authentication and a SpawnSloth variant for log tampering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "China",
+          "zero_day",
+          "RESURGE",
+          "Ivanti",
+          "persistence",
+          "evasion",
+          "log_tampering"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Yurii Nazarenko (aka \"John Wick\", \"Tor Ford\", \"Uriel Septimberus\")",
+        "secteur": "Financial services, cryptocurrency platforms",
+        "modop": "Operated the AI-powered 'OnlyFake' website, which generated and sold over 10,000 fake identification documents (passports, driver's licenses, social security cards) to bypass Know Your Customer (KYC) verification requirements, primarily for money laundering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "fraud",
+          "AI",
+          "fake_documents",
+          "KYC_bypass",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ukrainian-man-pleads-guilty-to-running-ai-powered-fake-id-site/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Aeternum botnet operators",
+        "secteur": "Unspecified, botnet infrastructure",
+        "modop": "Utilizes Polygon blockchain smart contracts for command and control (C2) infrastructure, making it harder to detect and disrupt. The C++ botnet loader stores instructions on the public blockchain, which infected machines poll via RPC endpoints. Offered for sale with a control panel or as full C++ source code.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "botnet",
+          "blockchain",
+          "C2",
+          "Polygon",
+          "malware_as_a_service",
+          "resilience"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188627/mobile-2/aeternum-botnet-hides-commands-in-polygon-smart-contracts.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Telecommunications (PBX)",
+        "modop": "Exploiting CVE-2025-64328 (post-authentication command injection) in Sangoma FreePBX instances to deploy the EncystPHP webshell, allowing arbitrary shell command execution with elevated privileges.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "cybercrime",
+          "vulnerability_exploitation",
+          "webshell",
+          "EncystPHP",
+          "FreePBX",
+          "telecommunications"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "MuddyWater (aka TEMP.Zagros, TA450, G0069)",
+        "secteur": "Middle East and North Africa (MENA), unspecified sectors",
+        "modop": "\"Operation Olalampo\" campaign using phishing emails with malicious Microsoft Office attachments. Deployment of downloaders (GhostFetch, HTTP_VIP) to profile systems and deliver secondary payloads, including the GhostBackDoor backdoor and CHAR (Rust-based backdoor controlled by Telegram bot). Exploiting public-facing servers for initial access.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "Iran",
+          "phishing",
+          "malware",
+          "backdoor",
+          "GhostFetch",
+          "HTTP_VIP",
+          "GhostBackDoor",
+          "CHAR",
+          "Telegram_C2",
+          "MENA"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UAT-8616 (sophisticated, potentially nation-state actor)",
+        "secteur": "Critical National Infrastructure (CNI), network edge devices",
+        "modop": "Exploiting a critical zero-day vulnerability (CVE-2026-20127) in Cisco Catalyst SD-WAN platform to bypass authentication and insert malicious peers into targeted networks. Privilege escalation by downgrading software to an older version to exploit an older root-level flaw (CVE-2022-20775), then restoring the original version to evade detection.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "APT",
+          "nation_state",
+          "zero_day",
+          "Cisco_SD-WAN",
+          "RCE",
+          "authentication_bypass",
+          "privilege_escalation",
+          "CNI"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "UAT-10027 (low confidence Lazarus Group link)",
+        "secteur": "Healthcare, education (US)",
+        "modop": "Multi-stage infection campaign using social engineering, PowerShell downloaders, DLL sideloading, Cloudflare DNS-over-HTTPS for C2, EDR bypass via ntdll.dll syscall unhooking, and process hollowing.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "Lazarus_Group",
+          "North_Korea",
+          "healthcare",
+          "education",
+          "social_engineering",
+          "PowerShell",
+          "DLL_sideloading",
+          "Cloudflare",
+          "EDR_bypass"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Telecommunications",
+        "modop": "Stealing and leaking massive amounts of data (personal information, bank account numbers, passport numbers, driver's licenses) after ransom refusal. Targeting telecom operators.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "ransomware",
+          "data_leak",
+          "Odido",
+          "telecommunications",
+          "extortion"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://mstdn.social/@Hackread/116144466656538627"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Indra",
+        "secteur": "Retail (e-commerce)",
+        "modop": "Compromise of a third-party customer support subcontractor (possibly Zendesk) of the ManoMano platform, leading to the exposure of 37.8 million user accounts including names, emails, phone numbers, and customer service exchanges.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_leak",
+          "ManoMano",
+          "supply_chain_attack",
+          "e-commerce"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://infosec.exchange/@DevaOnBreaches/116145243161953434"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "nom": "Gerald Eddie Brown (former USAF officer) and Stephen Su Bin (Chinese hacker)",
+        "secteur": "National defense (US), Chinese military",
+        "modop": "Conspiracy to provide combat aircraft training to Chinese military pilots and selling classified (zero-day) exploits to a Russian cyber-weapons broker (Operation Zero) for millions of dollars in cryptocurrency.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "espionage",
+          "insider_threat",
+          "China",
+          "Russia",
+          "zero_day",
+          "exploit_sale"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Geopolitical News Summary": [
+      {
+        "secteur": "Government, defense",
+        "theme": "Privacy regulations, personal data",
+        "description": "The UK Court of Appeal ruled that a controller’s data security duty applies to all personal data it controls, regardless of whether a third-party attacker could identify individuals from the exfiltrated dataset. This decision adds clarity to debates surrounding the definition of “personal data” and controllers’ obligations, relating to the UK Data Protection Act 1998 and more recent GDPR jurisprudence.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "UK",
+          "GDPR",
+          "data_privacy",
+          "regulation"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/uk-court-of-appeal-rules-on-the-concept-of-personal-data-in-the-context-of-data-security/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Defense, technology",
+        "theme": "Classification of sensitive information",
+        "description": "Apple’s iPhones and iPads have received NATO approval to handle classified information up to “RESTRICTED” level. They are now listed in the NATO Information Assurance Product Catalogue (NIAPC), allowing military personnel to securely use these commercial devices for sensitive communications and operations without specialized security software, thanks to a hardened configuration (iNDIGO).",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "NATO",
+          "Apple",
+          "national_security",
+          "classified_information",
+          "defense"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188618/security/iphone-and-ipad-are-the-first-consumer-devices-cleared-for-natos-restricted-classification.html",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government, defense",
+        "theme": "Disinformation and foreign influence",
+        "description": "Russia is conducting a disinformation campaign, including \"AI-enhanced FIMI\" (Foreign Information Manipulation and Interference) efforts, to smear Ukrainian athletes at the Olympics and accuse France of moving towards authoritarianism. The Kremlin also uses distraction tactics, such as attempting to link the Navalny poisoning report to the Epstein files, to obscure its role in internal repression and bypass VPN bans.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Russia",
+          "disinformation",
+          "propaganda",
+          "AI",
+          "Ukraine",
+          "censorship",
+          "international_relations"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russias-quest-for-disinformation-gold/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government, defense",
+        "theme": "Legislation and military preparedness",
+        "description": "The UK Armed Forces Bill 2026 aims to improve flexibility for the armed services, particularly by updating reservist recall thresholds to include 'warlike operations' and raising the maximum recall age. Although technical, the bill is criticized for not addressing fundamental issues of funding and actual capacity of reserve forces, nor preparedness for protracted conflict. It contrasts with more ambitious measures by allied countries in terms of investment and societal support for defense.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "UK",
+          "defense",
+          "military_legislation",
+          "war_preparedness",
+          "reservists"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/sticking-power-or-plaster-uk-armed-forces-bill-2026-and-preparedness"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government, organized crime",
+        "theme": "Fight against organized crime, foreign interference",
+        "description": "A Mexican military operation, with support from US intelligence, led to the death of El Mencho, an influential organized crime leader. Waves of violence followed, revealing the deep roots of cartels. US support, while presented as sovereign, falls within the Monroe Doctrine, raising questions about Washington's involvement in continental security affairs, contradicting principles of international law.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Mexico",
+          "organized_crime",
+          "US",
+          "Monroe_Doctrine",
+          "international_law"
+        ],
+        "sources": [
+          "https://www.iris-france.org/mexique-quels-objectifs-derriere-lelimination-d-el-mencho/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Minorities, national politics",
+        "theme": "Inclusion of minorities, political instrumentalization",
+        "description": "The peace process in Turkey brings into question the inclusion of ethnocultural minorities. The article highlights the situation of the Lazes, a well-integrated population whose language is threatened. President Erdoğan instrumentalizes this community to criticize Kurdish activism, emphasizing the complex challenges of cultural preservation and digital sovereignty in a tense internal geopolitical context.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "Turkey",
+          "minorities",
+          "culture",
+          "national_politics",
+          "Erdoğan",
+          "Kurds"
+        ],
+        "sources": [
+          "https://www.iris-france.org/les-lazes-de-turquie-une-minorite-oubliee/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Data Breach Summary": [
+      {
+        "secteur": "Retail (e-commerce)",
+        "victime": "ManoMano",
+        "description": "Data breach at European retailer ManoMano, impacting 38 million customer accounts. The incident occurred via the compromise of a third-party service provider. Exposed data includes first names, last names, email addresses, phone numbers, and customer service interactions. No banking details or passwords were compromised. The actor \"Indra\" on BreachForums claimed responsibility for the attack.",
+        "tags": [
+          "violation",
+          "breach",
+          "e-commerce",
+          "ManoMano",
+          "personal_data",
+          "third_party_vendor",
+          "Indra",
+          "phishing",
+          "Europe"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188582/data-breach/manomano-data-breach-impacted-38-million-customer-accounts.html",
+          "https://infosec.exchange/@DevaOnBreaches/116145243161953434",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Cegedim Santé (France)",
+        "description": "Hacking of a medical software (Mon Logiciel Médical - MLM) published by Cegedim Santé, resulting in the theft of administrative data and, for a limited number, personal medical notes. Up to 15 million people could be affected. The incident was discovered at the end of 2025. Data samples were offered for sale online. The French Ministry of Health confirmed the incident.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "France",
+          "Cegedim",
+          "medical_data",
+          "personal_data",
+          "medical_software"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/hackers-steal-medical-details-of-15-million-in-france/?pk_campaign=feed&pk_kwd=hackers-steal-medical-details-of-15-million-in-france",
+          "https://www.lemonde.fr/pixels/article/2026/02/27/des-donnees-de-sante-derobees-a-la-suite-du-piratage-d-un-logiciel-pour-medecins_6668562_4408996.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Geisinger Health (via Nuance Communications)",
+        "description": "A former employee of Nuance Communications, Max Vance (Andre J. Burk), accessed and stole over 1.2 million Geisinger Health patient records after his employment was terminated. The breach was detected by Geisinger who notified Nuance. Vance pleaded guilty.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "Geisinger_Health",
+          "Nuance_Communications",
+          "patient_records",
+          "insider_threat",
+          "unauthorized_access"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/former-nuance-employee-admits-breaching-more-than-1-2m-geisinger-patient-records/?pk_campaign=feed&pk_kwd=former-nuance-employee-admits-breaching-more-than-1-2m-geisinger-patient-records"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government (taxation), cryptocurrencies",
+        "victime": "South Korean National Tax Service",
+        "description": "South Korean authorities accidentally exposed a seized cryptocurrency wallet's recovery key (mnemonic phrase) in a press release photo, leading to hackers stealing $4.8 million in crypto.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "South_Korea",
+          "cryptocurrency",
+          "human_error",
+          "fund_theft"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/south-korean-authorities-accidentally-hand-hackers-4-8m-in-crypto/?pk_campaign=feed&pk_kwd=south-korean-authorities-accidentally-hand-hackers-4-8m-in-crypto"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government",
+        "victime": "Mexican government agencies",
+        "description": "A hacker used Anthropic PBC's AI chatbot, Claude, to conduct a series of attacks against Mexican government agencies, resulting in the theft of a huge trove of sensitive tax and voter information.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "Mexico",
+          "AI",
+          "chatbot",
+          "tax_data",
+          "voter_data",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/hacker-used-anthropics-claude-to-steal-sensitive-mexican-data/?pk_campaign=feed&pk_kwd=hacker-used-anthropics-claude-to-steal-sensitive-mexican-data"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Government (prison system)",
+        "victime": "Dutch prisons agency (DJI)",
+        "description": "Hackers had access to data from the Dutch prisons agency (DJI) for at least five months. Exposed information includes email addresses, phone numbers, and security certificates of staff, increasing the risk of extortion or blackmail.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "Netherlands",
+          "personal_data",
+          "prison_staff",
+          "extortion",
+          "blackmail"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/27/nl-hackers-had-access-to-prison-staff-data-for-five-months/?pk_campaign=feed&pk_kwd=nl-hackers-had-access-to-prison-staff-data-for-five-months"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Defense, government",
+        "victime": "Malaysian Army, Malaysian Ministry",
+        "description": "A threat actor is allegedly selling Malaysian Army and Ministry data on the dark web. Specific details of the stolen data are not provided in the social media post, but it indicates a potential breach of sensitive information.",
+        "tags": [
+          "violation",
+          "breach",
+          "defense",
+          "Malaysia",
+          "dark_web",
+          "government_data",
+          "cybercrime"
+        ],
+        "sources": [
+          "https://mastodon.social/@lowyat/116145311613572773"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Sports",
+        "victime": "Olympique de Marseille",
+        "description": "The Olympique de Marseille football club confirmed a cyberattack after a hacker claimed to have stolen data on 400,000 staff and supporters. The club stated that no banking details or passwords were compromised and operations remained normal.",
+        "tags": [
+          "violation",
+          "breach",
+          "sports",
+          "Olympique_Marseille",
+          "personal_data",
+          "cyberattack",
+          "football"
+        ],
+        "sources": [
+          "https://infosec.exchange/@DevaOnBreaches/116145248588916738"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido (Netherlands)",
+        "description": "The ShinyHunters group leaked 2 million records from Dutch telco Odido after the company's refusal to pay ransom, claiming up to 21 million customer records were stolen in the breach, including bank account numbers, PII, passport numbers, and driving licenses.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "Odido",
+          "ShinyHunters",
+          "ransomware",
+          "data_leak",
+          "PII",
+          "Netherlands"
+        ],
+        "sources": [
+          "https://infosec.exchange/@soc_goulash/116144610744065779",
+          "https://mstdn.social/@Hackread/116144466656538627"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "secteur": "Industry, finance",
+        "victime": "IDMerit",
+        "description": "A sensitive database belonging to IDMkyc, a subsidiary of IDMerit (a leader in digital identity verification), was publicly exposed without authentication, revealing 1 billion personal data records, including 52 million French citizens. PII included ID cards, phone numbers, physical and email addresses. This data is critical for KYC processes in FinTech and banking, and its exposure creates risks of spear phishing, credit fraud, and identity theft. The vulnerability was fixed after CyberNews' alert.",
+        "tags": [
+          "violation",
+          "breach",
+          "digital_identity",
+          "FinTech",
+          "banking",
+          "KYC",
+          "personal_data",
+          "France",
+          "identity_theft",
+          "phishing"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/faille-idmerit-verification-identite-souverainete-numerique/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Vulnerabilities Summary": [
+      {
+        "cve_id": "CVE-2026-28411",
+        "cvss": 9.8,
+        "product": "WeGIA < 3.6.5",
+        "description": "Authentication bypass vulnerability via unsafe use of the `extract($_REQUEST)` function, allowing an unauthenticated attacker to overwrite local variables in PHP scripts, leading to unauthorized access to administrative areas.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "WeGIA",
+          "authentication_bypass",
+          "PHP",
+          "unauthorized_access",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28411"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-13942",
+        "cvss": 9.8,
+        "product": "Zyxel EX3510-B0 router (firmware < 5.17(ABUP.15.1)C0)",
+        "description": "Command-injection vulnerability in the UPnP service allowing unauthenticated remote attackers to execute operating system commands via specially crafted UPnP SOAP requests, if both UPnP and WAN access are enabled.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Zyxel",
+          "router",
+          "UPnP",
+          "command_injection",
+          "RCE",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/zyxel-patch-upnp-command-injection-flaw"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-21902",
+        "cvss": 9.3,
+        "product": "Juniper Networks Junos OS Evolved (PTX Series routers)",
+        "description": "Remote Code Execution (RCE) vulnerability due to an Incorrect Permission Assignment for Critical Resource in the On-Box Anomaly detection framework, allowing an unauthenticated attacker to execute code as root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Juniper",
+          "Junos_OS_Evolved",
+          "PTX_Series",
+          "RCE",
+          "unauthenticated",
+          "misconfiguration",
+          "critical"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188609/security/juniper-issues-emergency-patch-for-critical-ptx-router-rce.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28517",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "OS Command Injection vulnerability in report_network_map.php, where the 'dot' configuration parameter is passed directly to exec() without validation, allowing arbitrary command execution if an attacker can modify fac_Config.dot.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "OS_command_injection",
+          "RCE",
+          "improper_validation",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28517"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28516",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "SQL Injection vulnerability in Config::UpdateParameter, allowing an authenticated user to execute arbitrary SQL statements against the underlying database due to lack of prepared statements or proper input sanitization.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "SQL_injection",
+          "authenticated",
+          "data_access",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28516"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28515",
+        "cvss": 9.3,
+        "product": "openDCIM <= 23.04",
+        "description": "Missing Authorization vulnerability in install.php and container-install.php, exposing LDAP configuration functionality without enforcing application role checks, allowing any authenticated user (or unauthenticated if REMOTE_USER is misconfigured) to modify application configuration.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "openDCIM",
+          "missing_authorization",
+          "unauthorized_access",
+          "LDAP",
+          "configuration",
+          "critical"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28515"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-20127",
+        "cvss": 9.3,
+        "product": "Cisco Catalyst SD-WAN Controller, Manager, Cloud (on-premises and cloud)",
+        "description": "Critical authentication bypass vulnerability in the peering authentication mechanism, allowing unauthenticated remote attackers to compromise controllers and insert malicious peers into targeted networks, leading to high-privilege internal access and network configuration manipulation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Cisco",
+          "SD-WAN",
+          "authentication_bypass",
+          "RCE",
+          "critical",
+          "privileged_access",
+          "network"
+        ],
+        "sources": [
+          "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28426",
+        "cvss": 8.7,
+        "product": "Statamic < 5.73.11 and < 6.4.0 (CMS)",
+        "description": "Stored XSS vulnerability in SVG and icon related components, allowing authenticated users with appropriate permissions to inject malicious JavaScript that executes when viewed by higher-privileged users, leading to privilege escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Statamic",
+          "CMS",
+          "stored_XSS",
+          "privilege_escalation",
+          "authenticated",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28426"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": 8.6,
+        "product": "Sangoma FreePBX >= 17.0.2.36 (fixed in 17.0.3)",
+        "description": "Post-authentication command injection vulnerability allowing any user with access to the FreePBX Administration panel to execute arbitrary shell commands on the underlying host as the 'asterisk' user. Actively exploited in the wild.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Sangoma",
+          "FreePBX",
+          "command_injection",
+          "RCE",
+          "post_authentication",
+          "active_exploitation",
+          "high"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/900-sangoma-freepbx-instances.html",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28416",
+        "cvss": 8.2,
+        "product": "Gradio < 6.6.0 (Python package)",
+        "description": "Server-Side Request Forgery (SSRF) vulnerability allowing an attacker to make arbitrary HTTP requests from a victim's server by hosting a malicious Gradio Space. The `proxy_url` from the config is trusted, granting access to internal services and private networks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Gradio",
+          "SSRF",
+          "internal_access",
+          "cloud",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28416"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-28425",
+        "cvss": 8.0,
+        "product": "Statamic < 5.73.11 and < 6.4.0 (CMS)",
+        "description": "Remote Code Execution (RCE) vulnerability via Antlers-enabled control panel inputs, allowing an authenticated user to access sensitive configurations, modify or exfiltrate data, and potentially impact availability.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Statamic",
+          "CMS",
+          "RCE",
+          "Antlers",
+          "authenticated",
+          "high"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28425"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2026-25253",
+        "cvss": null,
+        "product": "OpenClaw < 2026.2.25 (AI tool)",
+        "description": "The \"ClawJacked\" vulnerability in the local WebSocket gateway allows a malicious website to hijack an AI agent by brute-forcing passwords and gaining full administrative access without user interaction.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "OpenClaw",
+          "AI",
+          "WebSocket",
+          "takeover",
+          "unauthorized_access",
+          "critical"
+        ],
+        "sources": [
+          "https://hackread.com/openclaw-vulnerability-openclaw-hijack-ai-agents/",
+          "https://thecyberexpress.com/tce-weekly-roundup-cybersecurity-updates/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-0282",
+        "cvss": null,
+        "product": "Ivanti Connect Secure",
+        "description": "Actively exploited zero-day vulnerability by the RESURGE implant to gain persistent and undetected access on Ivanti Connect Secure devices.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Ivanti",
+          "zero_day",
+          "active_exploitation",
+          "RESURGE",
+          "persistent_access",
+          "critical"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "cve_id": "CVE-2025-15498",
+        "cvss": null,
+        "product": "Pro3W CMS (all versions through 1.2.0)",
+        "description": "SQL injection vulnerability in the login form allowing an unauthenticated attacker to bypass authentication and gain administrative privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "Pro3W_CMS",
+          "SQL_injection",
+          "authentication_bypass",
+          "unauthenticated",
+          "admin_access",
+          "critical"
+        ],
+        "sources": [
+          "https://cert.pl/en/posts/2026/02/CVE-2025-15498/"
+        ],
+        "date": "2026-02-28"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "APT37 hackers use new malware to breach air-gapped networks",
+        "description": "North Korean hacking group APT37 (ScarCruft) is deploying a new toolkit (\"Ruby Jumper\": RESTLEAF, SNAKEDROPPER, THUMBSBD, VIRUSTASK, FOOTWINE) to exfiltrate data from air-gapped networks. The attack starts with malicious LNK files, uses infected USB drives as bidirectional C2 relays, and deploys multi-functional Windows spyware.",
+        "threat_actor": "APT37 (ScarCruft)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1023 (Adversary-Controlled Island)",
+          "T1090 (Proxy)",
+          "T1059.001 (PowerShell)",
+          "T1547.001 (Registry Run Keys / Startup Folder)",
+          "T1053.005 (Scheduled Task)",
+          "T1005 (Data from Local System)",
+          "T1041 (Exfiltration Over C2 Channel)",
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1115 (Clipboard Data)",
+          "T1113 (Screen Capture)",
+          "T1123 (Audio Capture)",
+          "T1083 (File and Directory Discovery)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "The attack targets entities interested in North Korean media narratives, suggesting an espionage motive. The ability to compromise air-gapped networks via USB devices turned into bidirectional C2 poses a severe threat to high-security environments, increasing the risk of sensitive data exfiltration and persistent surveillance.",
+        "recommandations": [
+          "Educate users about the dangers of malicious LNK files and unknown USB drives.",
+          "Implement strict removable media (USB) control policies.",
+          "Monitor for unauthorized software installations (e.g., disguised Ruby environment).",
+          "Deploy advanced threat detection solutions capable of identifying covert C2 activities, including via non-traditional channels.",
+          "Conduct regular system scans to detect hidden directories and malicious software.",
+          "Enhance the security of air-gapped systems through physical controls and regular audits."
+        ],
+        "tags": [
+          "APT37",
+          "ScarCruft",
+          "malware",
+          "air_gap",
+          "espionage",
+          "North_Korea",
+          "USB",
+          "C2",
+          "persistence",
+          "exfiltration",
+          "keylogging",
+          "T1023",
+          "T1090",
+          "T1059.001",
+          "T1547.001",
+          "T1053.005",
+          "T1005",
+          "T1041",
+          "T1071.001",
+          "T1115",
+          "T1113",
+          "T1123",
+          "T1083",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Aeternum botnet hides commands in Polygon smart contracts",
+        "description": "The Aeternum botnet uses Polygon blockchain smart contracts for its command-and-control (C2) infrastructure. This decentralized mechanism makes detection and disruption harder, avoiding traditional server-based takedown methods. The C++ botnet loader, sold as a product, stores instructions on the public blockchain.",
+        "threat_actor": "Aeternum botnet operators",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1102.002 (Web Service: Bidirectional Command and Control)",
+          "T1090 (Proxy)"
+        ],
+        "analyse": "The use of blockchain for C2 represents a significant evolution in botnet resilience. This approach makes botnets 'permanent' and resistant to traditional takedown measures, increasing the risk of large-scale attacks (DDoS, credential stuffing, click fraud) and malicious proxy services. The model is likely to be reused by other malware developers.",
+        "recommandations": [
+          "Implement proactive monitoring of network traffic to detect communications to unusual blockchain RPC endpoints.",
+          "Strengthen DDoS mitigation capabilities to filter malicious traffic at the network edge, given the difficulty in dismantling the C2 source.",
+          "Educate security teams on new blockchain-based C2 techniques.",
+          "Integrate cryptocurrency and blockchain-related activity detection into security strategies."
+        ],
+        "tags": [
+          "botnet",
+          "Aeternum",
+          "blockchain",
+          "Polygon",
+          "C2",
+          "resilience",
+          "malware",
+          "cybercrime",
+          "DDoS",
+          "T1071.001",
+          "T1102.002",
+          "T1090"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188627/mobile-2/aeternum-botnet-hides-commands-in-polygon-smart-contracts.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "CISA warns that RESURGE malware can be dormant on Ivanti devices",
+        "description": "CISA issued a warning about RESURGE, a malicious implant used in zero-day attacks exploiting CVE-2025-0282 on Ivanti Connect Secure devices. RESURGE can remain dormant and undetected, acting as a passive C2. It employs sophisticated network evasion techniques, including hooking the `accept()` function to inspect TLS packets via a specific CRC32 fingerprint and a fake Ivanti certificate for authentication. A SpawnSloth variant is used for log tampering.",
+        "threat_actor": "UNC5221 (China-linked)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [
+            "CVE-2025-0282"
+          ],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1071.001 (Application Layer Protocol: Web Protocols)",
+          "T1090 (Proxy)",
+          "T1542.001 (Component Firmware: Bootkit)",
+          "T1573.001 (Encrypted Channel: Symmetric Cryptography)",
+          "T1562.002 (Impair Defenses: Disable or Modify System Firewall)",
+          "T1562.006 (Impair Defenses: Indicator Removal on Host)"
+        ],
+        "analyse": "RESURGE's ability to remain latent and undetected on Ivanti Connect Secure systems represents a persistent and hard-to-eradicate threat. Evasion techniques, such as the fake TLS certificate and log tampering, complicate detection and forensic analysis, allowing the threat actor to maintain secure and hidden long-term access. The exploitation of zero-days by nation-state-linked actors (China) underscores the importance of network edge devices as strategic targets.",
+        "recommandations": [
+          "Actively hunt for signs of the RESURGE implant on Ivanti Connect Secure devices, even if initial scans reveal nothing.",
+          "Implement immediate updates and patches for CVE-2025-0282.",
+          "Strengthen monitoring of TLS communications to detect specific fingerprints or inauthentic certificates.",
+          "Conduct in-depth forensic analyses to detect log tampering and the presence of persistent malware.",
+          "Isolate compromised devices and consider full reinstallation if an infection is confirmed.",
+          "Implement strict access controls and network segmentation to limit the potential scope of a compromise."
+        ],
+        "tags": [
+          "RESURGE",
+          "malware",
+          "Ivanti",
+          "zero_day",
+          "CVE-2025-0282",
+          "C2",
+          "evasion",
+          "persistence",
+          "UNC5221",
+          "China",
+          "T1071.001",
+          "T1090",
+          "T1542.001",
+          "T1573.001",
+          "T1562.002",
+          "T1562.006"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cisa-warns-that-resurge-malware-can-be-dormant-on-ivanti-devices/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Europol-led crackdown on The Com hackers leads to 30 arrests",
+        "description": "Europol-led \"Project Compass\" operation resulted in 30 arrests and the identification of 179 suspects linked to \"The Com,\" an online cybercrime collective. This nihilistic extremist network targets children and teenagers for extortion, violence, and the production of child sexual exploitation material (CSAM), with subgroups like \"764\" known for grooming and blackmail.",
+        "threat_actor": "The Com (including subgroup \"764\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1531 (Account Access Removal)",
+          "T1059 (Command and Scripting Interpreter)"
+        ],
+        "analyse": "This operation demonstrates international cooperation to dismantle cybercrime networks targeting vulnerable populations. The success of \"Project Compass\" underscores the importance of coordinated investigations and information exchange among law enforcement agencies across different countries. The activities of The Com, with its links to extortion and CSAM, have a severe societal and psychological impact.",
+        "recommandations": [
+          "Implement protection and awareness measures for children and teenagers regarding online dangers.",
+          "Strengthen international cooperation to combat cybercrime targeting minors.",
+          "Report any suspicious online activity to relevant authorities.",
+          "Promote safe digital environments and robust content moderation policies on online platforms."
+        ],
+        "tags": [
+          "The_Com",
+          "Europol",
+          "cybercrime",
+          "extortion",
+          "CSAM",
+          "minors",
+          "law_enforcement",
+          "international_cooperation",
+          "T1566",
+          "T1078",
+          "T1531",
+          "T1059"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/police-crackdown-on-the-com-cybercrime-gang-leads-to-30-arrests/",
+          "https://infosec.exchange/@soc_goulash/116144610744065779"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "How AI Aids Incident Response: Why Humans Alone Cannot Do IR Efficiently",
+        "description": "AI significantly accelerates incident response by correlating alerts, pulling contextual data from multiple tools, analyzing behavioral patterns, and generating structured reports in minutes. It enables SOC teams to focus on high-value investigations rather than repetitive manual tasks, filling the gaps in traditional processes, particularly in terms of time and scalability.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1059 (Command and Scripting Interpreter)",
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1033 (System Owner/User Discovery)"
+        ],
+        "analyse": "Integrating AI into Incident Response (IR) transforms the SOC from a reactive to a more proactive and efficient posture. AI allows for better alert correlation, faster reconstruction of attack timelines, and automation of containment actions, thereby reducing detection and response times. This is crucial given the increasing complexity of threats and the volume of alerts, although integration and training costs need to be considered.",
+        "recommandations": [
+          "Assess existing data sources and identify integration points for AI tools.",
+          "Develop standardized alert taxonomies and severity levels to optimize AI effectiveness.",
+          "Implement human validation points and train analysts to monitor AI outputs rather than performing all tasks manually.",
+          "Integrate AI to generate structured reports for stakeholders and regulators.",
+          "Adapt security strategies to include detection of AI model drift and AI-specific adversarial behaviors."
+        ],
+        "tags": [
+          "AI",
+          "Incident_Response",
+          "SOC",
+          "automation",
+          "detection",
+          "analysis",
+          "response",
+          "efficiency",
+          "T1059",
+          "T1083",
+          "T1049",
+          "T1033"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188599/ai/how-ai-aids-incident-response-why-humans-alone-cannot-do-ir-efficiently/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "12 Million exposed .env files reveal widespread security failures",
+        "description": "Over 12 million IP addresses are exposing publicly accessible .env files, disclosing sensitive information such as database credentials, API keys, JWT signing secrets, cloud tokens, and other critical values. This vulnerability, resulting from misconfigurations (missing deny rules, misconfigured proxies, secrets embedded in container images), represents a global security hygiene problem.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1537 (Transfer Data to Cloud Account)",
+          "T1003.008 (OS Credential Dumping: .bash_history and .zsh_history)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)",
+          "T1078 (Valid Accounts)",
+          "T1078.003 (Cloud Accounts)"
+        ],
+        "analyse": "The massive exposure of .env files allows attackers to bypass the initial intrusion phase and directly access systems with valid credentials. This leads to data theft, privilege escalation, API abuse, and account compromises. This systemic issue is linked to a lack of secret governance and security awareness in development and deployment workflows, with a significant global impact.",
+        "recommandations": [
+          "Block public access to hidden files (.env, .env.bak, .env.old) at the server and CDN level.",
+          "Move secrets out of web-accessible directories and integrate them into centralized secret management systems with audit logs and automated rotation.",
+          "Define minimal permissions for keys and enforce network restrictions.",
+          "Implement automated secret scanning in repositories and CI/CD pipelines.",
+          "Treat the exposure of an .env file as a full security incident, immediately revoking public access and rotating all affected secrets."
+        ],
+        "tags": [
+          "configuration_error",
+          "secret_leak",
+          "env_file",
+          "API_keys",
+          "JWT_secrets",
+          "cloud_tokens",
+          "poor_hygiene",
+          "T1537",
+          "T1003.008",
+          "T1552.001",
+          "T1078",
+          "T1078.003"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188590/hacking/12-million-exposed-env-files-reveal-widespread-security-failures.html"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "SRUM-DUMP v3: A Practical Guide to Windows Forensics with the New GUI and Feature",
+        "description": "SRUM-DUMP v3 is a major update to a Windows forensic tool, offering a three-step Graphical User Interface (GUI), a JSON configuration system, and a \"dirty words\" feature for keyword highlighting. It supports Volume Shadow Copy for extracting locked live-system files without manual repair and includes two ESE parsing engines for corrupt databases. The tool analyzes network connectivity usage, network data usage by application, and application resource usage tables for application execution.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1057 (Process Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1012 (Query Registry)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "SRUM-DUMP v3 significantly enhances forensic investigation capabilities on Windows systems. The new GUI and features such as \"dirty words\" and Volume Shadow Copy support simplify and speed up the analysis of SRUM (System Resource Usage Monitor) data, which is crucial for reconstructing system activities, network connections, and application execution. This allows analysts to identify suspicious activities faster and save valuable time in DFIR investigations.",
+        "recommandations": [
+          "Integrate SRUM-DUMP v3 into DFIR toolkits for Windows system analysis.",
+          "Utilize the \"dirty words\" feature to quickly target known Indicators of Compromise (process names, suspicious user names, network names).",
+          "Leverage Volume Shadow Copy support to extract SRUM databases from live systems without interruption.",
+          "Train analysts in interpreting SRUM data to identify abnormal data volumes and unexpected application executions."
+        ],
+        "tags": [
+          "forensics",
+          "Windows",
+          "DFIR",
+          "SRUM-DUMP",
+          "SRUM",
+          "system_analysis",
+          "anomaly_detection",
+          "Volume_Shadow_Copy",
+          "T1083",
+          "T1049",
+          "T1057",
+          "T1033",
+          "T1012",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/srum-dump-v3-a-practical-guide-to-windows-forensics-with-the-new-gui-and-feature"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Third-Party Patching and the Business Footprint We All Share",
+        "description": "The article highlights that the true attack surface of enterprises is often defined by everyday tools (PDF readers, email clients, archive utilities). Third-party software drift increases exploit risk, as vulnerabilities in these widely used applications are prime entry points for attackers. Despite efforts for operating systems, patching third-party applications is often neglected, creating years of cumulative exploit potential.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1203 (Exploitation for Client Execution)",
+          "T1078 (Valid Accounts)",
+          "T1566 (Phishing)"
+        ],
+        "analyse": "Neglecting third-party application patching poses a major and widespread risk for businesses, as these tools are attractive targets for attackers due to their ubiquity and users' familiarity with their use. Exploits leverage known vulnerabilities and routine user behaviors, allowing for rapid and large-scale compromises. Ineffective third-party patch management leads to a silent accumulation of exploit potential and makes it difficult to trace compromises.",
+        "recommandations": [
+          "Prioritize third-party application patching with the same rigor as operating system patching.",
+          "Implement continuous visibility into third-party software installed on endpoints and their versions.",
+          "Adopt patch management solutions capable of quickly and consistently remediating vulnerable applications.",
+          "Educate users about the risks of opening files (PDF, Word, Excel) and links from unknown or suspicious sources.",
+          "Establish security baselines for third-party applications and actively monitor for configuration drift."
+        ],
+        "tags": [
+          "patching",
+          "third_party_software",
+          "attack_surface",
+          "vulnerability",
+          "patch_management",
+          "exploit_risk",
+          "endpoint_security",
+          "T1190",
+          "T1203",
+          "T1078",
+          "T1566"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/third-party-patching-and-the-business-footprint-we-all-share/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Ukrainian man pleads guilty to running AI-powered fake ID site",
+        "description": "Yurii Nazarenko pleaded guilty to operating OnlyFake, an AI-powered website that generated and sold over 10,000 photos of fake identification documents (passports, driver's licenses, social security cards) for more than 50 countries. These fake IDs were primarily used to bypass 'Know Your Customer' (KYC) verification requirements at banks and cryptocurrency exchanges, aiming to facilitate money laundering.",
+        "threat_actor": "Yurii Nazarenko (aka \"John Wick\", \"Tor Ford\", \"Uriel Septimberus\")",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1566 (Phishing)",
+          "T1078 (Valid Accounts)",
+          "T1589 (Establish Accounts)"
+        ],
+        "analyse": "This incident highlights the increasing use of AI by cybercriminals for large-scale fraudulent activities. The ease of creating realistic fake documents via AI compromises the integrity of identity verification (KYC) processes, posing significant risks to financial security, counter-terrorism, and anti-money laundering efforts. The case underscores the need to strengthen identity verification mechanisms and monitor the abuse of AI technologies.",
+        "recommandations": [
+          "Strengthen identity verification and 'Know Your Customer' (KYC) procedures using robust methods that go beyond simple digital document verification.",
+          "Implement AI detection technologies to identify AI-generated fake documents.",
+          "Educate financial institutions and cryptocurrency platforms on AI-based fraud techniques.",
+          "Cooperate with law enforcement to dismantle fake document creation services and prosecute operators."
+        ],
+        "tags": [
+          "fraud",
+          "AI",
+          "fake_documents",
+          "KYC_bypass",
+          "money_laundering",
+          "cybercrime",
+          "Yurii_Nazarenko",
+          "OnlyFake",
+          "T1566",
+          "T1078",
+          "T1589"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/ukrainian-man-pleads-guilty-to-running-ai-powered-fake-id-site/"
+        ],
+        "date": "2026-02-28"
+      },
+      {
+        "title": "Why 2026 is the Year to Upgrade to an Agentic AI SOC",
+        "description": "The article argues that 2026 marks the inflection point for adopting Agentic AI SOCs, which differ from copilot models by automating attack prioritization, executing closed-loop containment, and providing traceable reasoning. These AI systems can plan, act, and adapt without step-by-step human guidance, coordinating multiple agents to solve complex problems and allowing analysts to focus on high-value investigations.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "T1083 (File and Directory Discovery)",
+          "T1049 (System Network Connections Discovery)",
+          "T1057 (Process Discovery)",
+          "T1033 (System Owner/User Discovery)",
+          "T1012 (Query Registry)",
+          "T1560 (Archive Collected Data)"
+        ],
+        "analyse": "Agentic AI promises a structural transformation of security operations, offering faster triage, more precise investigations, and automated response. This significantly reduces attacker dwell time and human effort, allowing analysts to focus on strategic tasks. However, transparency, explainability, and auditability of AI decisions are essential to maintain human trust and control. Organizations must prepare for the transition by assessing data sources and training analysts.",
+        "recommandations": [
+          "Evaluate the maturity of AI frameworks and governance controls for integrating agentic AI.",
+          "Invest in AI platforms that offer transparency and traceability of decisions (\"reasoning trace\").",
+          "Train SOC analysts to oversee AI agents, verify their conclusions, and intervene when human judgment is required.",
+          "Prioritize automating repetitive, low-value tasks to free up analysts.",
+          "Integrate AI to correlate alerts and build coherent attack narratives to reduce noise."
+        ],
+        "tags": [
+          "AI",
+          "Agentic_SOC",
+          "automation",
+          "incident_response",
+          "detection",
+          "analysis",
+          "SOC_efficiency",
+          "AI_transparency",
+          "AI_auditability",
+          "T1083",
+          "T1049",
+          "T1057",
+          "T1033",
+          "T1012",
+          "T1560"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/why-2026-is-the-year-to-upgrade-to-an-agentic-ai-soc/"
+        ],
+        "date": "2026-02-28"
+      }
+    ]
+  }
+}
