@@ -1,0 +1,336 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for late February 2026 is characterized by a critical concentration of vulnerabilities in networking and security infrastructure (Juniper, Cisco, Zyxel, SonicWall) and a significant surge in large-scale data breaches impacting the healthcare and e-commerce sectors (Cegedim, ManoMano). We observe a professionalization of AI-assisted fraud, notably with the 'OnlyFake' platform, and a shift toward decentralized C2 infrastructures using blockchain (Aeternum botnet). State-sponsored groups like APT37 and MuddyWater remain highly active, targeting air-gapped systems and the MENA region respectively.",
+      "fr": "Le paysage de la menace pour la fin février 2026 est marqué par une concentration critique de vulnérabilités affectant les infrastructures réseau et de sécurité (Juniper, Cisco, Zyxel, SonicWall) ainsi qu'une recrudescence massive de violations de données dans les secteurs de la santé et du e-commerce (Cegedim, ManoMano). On observe une professionnalisation de la fraude assistée par l'IA, notamment avec la plateforme 'OnlyFake', et une évolution vers des infrastructures C2 décentralisées via la blockchain (botnet Aeternum). Les groupes étatiques tels qu'APT37 et MuddyWater restent très actifs, ciblant respectivement les systèmes déconnectés (air-gapped) et la région MENA."
+    },
+    "date": "2026-02-28"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "APT37",
+      "campaign": "Ruby Jumper",
+      "campaign_description": {
+        "en": "APT37 is using a new suite of malware (RESTLEAF, SNAKEDROPPER, THUMBSBD, VIRUSTASK, FOOTWINE) to bridge air-gapped networks via removable drives. The infection starts with malicious LNK files and decoy documents related to the Palestine-Israel conflict.",
+        "fr": "APT37 utilise une nouvelle suite de malwares (RESTLEAF, SNAKEDROPPER, THUMBSBD, VIRUSTASK, FOOTWINE) pour franchir le fossé technologique des réseaux déconnectés via des clés USB. L'infection débute par des fichiers LNK malveillants et des documents leurres liés au conflit israélo-palestinien."
+      },
+      "sector": {
+        "en": "Critical Infrastructure, Military, Research",
+        "fr": "Infrastructures critiques, Militaire, Recherche"
+      },
+      "modop": {
+        "en": "Initial access via LNK files; use of Ruby interpreter for persistence; bidirectional C2 relay via hidden folders on USB drives.",
+        "fr": "Accès initial via des fichiers LNK ; utilisation de l'interpréteur Ruby pour la persistance ; relais C2 bidirectionnel via des dossiers cachés sur clés USB."
+      },
+      "tags": [
+        "Air-gap",
+        "USB Malware",
+        "North Korea",
+        "Espionage"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/apt37-hackers-use-new-malware-to-breach-air-gapped-networks/"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "threat_actor": "MuddyWater",
+      "campaign": "Operation Olalampo",
+      "campaign_description": {
+        "en": "Iranian threat actor MuddyWater is targeting the MENA region using new malware variants like GhostFetch, GhostBackDoor, and a Rust-based backdoor named CHAR, controlled via Telegram bots.",
+        "fr": "L'acteur étatique iranien MuddyWater cible la région MENA avec de nouvelles variantes de malwares telles que GhostFetch, GhostBackDoor et une porte dérobée en Rust nommée CHAR, pilotée via des bots Telegram."
+      },
+      "sector": {
+        "en": "Government, Critical Sectors in MENA",
+        "fr": "Gouvernement, Secteurs critiques dans la zone MENA"
+      },
+      "modop": {
+        "en": "Phishing emails with macro-enabled Office documents; deployment of novel downloaders; use of Telegram for C2.",
+        "fr": "E-mails de phishing avec documents Office activant des macros ; déploiement de nouveaux téléchargeurs ; utilisation de Telegram pour le C2."
+      },
+      "tags": [
+        "Iran",
+        "Phishing",
+        "Rust",
+        "Telegram C2"
+      ],
+      "sources": [
+        "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/"
+      ],
+      "date": "2026-02-27"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Telecommunications, Privacy",
+        "fr": "Télécommunications, Vie privée"
+      },
+      "theme": {
+        "en": "SIM Binding Mandate in India",
+        "fr": "Mandat de liaison SIM en Inde"
+      },
+      "description": {
+        "en": "India is enforcing continuous 'SIM binding' for encrypted apps like WhatsApp, Telegram, and Signal. Ostensibly for cybersecurity against fraud, critics view it as a device-level surveillance mechanism that forces re-authentication every 6 hours.",
+        "fr": "L'Inde impose une 'liaison SIM' continue pour les applications chiffrées (WhatsApp, Telegram, Signal). Officiellement pour lutter contre la fraude, cette mesure est critiquée comme un outil de surveillance forçant une ré-authentification toutes les 6 heures."
+      },
+      "tags": [
+        "India",
+        "Surveillance",
+        "Privacy",
+        "SIM Binding"
+      ],
+      "sources": [
+        "https://hachyderm.io/@pheonix/116147508742721147"
+      ],
+      "date": "2026-02-28"
+    },
+    {
+      "sector": {
+        "en": "Artificial Intelligence, Government Policy",
+        "fr": "Intelligence Artificielle, Politique Gouvernementale"
+      },
+      "theme": {
+        "en": "US Government Purge of Anthropic",
+        "fr": "Purge d'Anthropic du gouvernement américain"
+      },
+      "description": {
+        "en": "President Trump ordered a purge of Anthropic AI software from federal systems, labeling the company as 'woke' and a 'supply-chain risk' following disputes over AI safeguards for military use.",
+        "fr": "Le président Trump a ordonné la purge des logiciels d'Anthropic des systèmes fédéraux, qualifiant l'entreprise de 'woke' et de 'risque pour la chaîne d'approvisionnement' suite à des différends sur les garde-fous de l'IA pour l'usage militaire."
+      },
+      "tags": [
+        "USA",
+        "Anthropic",
+        "AI Policy",
+        "Trump"
+      ],
+      "sources": [
+        "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/02/27/trump_orders_purge_of_anthropic/"
+      ],
+      "date": "2026-02-28"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Cegedim Santé / French Patients",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "The medical data of 15 million patients in France was compromised via Cegedim's 'Mon Logiciel Médical' (MLM). Stolen data includes administrative details and some sensitive medical notes.",
+        "fr": "Les données médicales de 15 millions de patients en France ont été compromises via le logiciel 'Mon Logiciel Médical' (MLM) de Cegedim. Les données volées incluent des détails administratifs et certaines notes médicales sensibles."
+      },
+      "tags": [
+        "Data Breach",
+        "France",
+        "Health Data"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/02/27/des-donnees-de-sante-derobees-a-la-suite-du-piratage-d-un-logiciel-pour-medecins_6668562_4408996.html",
+        "https://www.france24.com/fr/france/20260227-donn%C3%A9es-m%C3%A9dicales-15-millions-de-fran%C3%A7ais-pirat%C3%A9es-sant%C3%A9-cyberattaque"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "victim": "ManoMano",
+      "threat_actor": "Indra",
+      "sector": {
+        "en": "E-commerce",
+        "fr": "E-commerce"
+      },
+      "description": {
+        "en": "European DIY platform ManoMano suffered a breach via a third-party provider, exposing personal data (names, emails, phones) of 38 million customer accounts.",
+        "fr": "La plateforme européenne ManoMano a subi une violation de données via un prestataire tiers, exposant les données personnelles (noms, e-mails, téléphones) de 38 millions de comptes clients."
+      },
+      "tags": [
+        "Third-party Risk",
+        "E-commerce",
+        "Data Leak"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188582/data-breach/manomano-data-breach-impacted-38-million-customer-accounts.html"
+      ],
+      "date": "2026-02-27"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-21902",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:o:juniper:junos_os_evolved:25.4:*:*:*:*:*:*:*",
+      "product": "Junos OS Evolved",
+      "vendor": "Juniper Networks",
+      "description": {
+        "en": "Critical RCE in the On-Box Anomaly Detection framework of PTX routers. Unauthenticated remote attackers can execute code as root via a single packet.",
+        "fr": "RCE critique dans le framework 'On-Box Anomaly Detection' des routeurs PTX. Un attaquant distant non authentifié peut exécuter du code en tant que root via un seul paquet."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Critical Infrastructure"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188609/security/juniper-issues-emergency-patch-for-critical-ptx-router-rce.html"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "cve_id": "CVE-2026-20127",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Maximum severity authentication bypass in Catalyst SD-WAN platform. Actively exploited by threat actor UAT-8616 to insert malicious peers.",
+        "fr": "Contournement d'authentification de sévérité maximale dans la plateforme Catalyst SD-WAN. Exploité activement par l'acteur UAT-8616 pour insérer des pairs malveillants."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "Authentication Bypass"
+      ],
+      "sources": [
+        "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-9-7/"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "cve_id": "CVE-2025-13942",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:h:zyxel:ex3510-b0:*:*:*:*:*:*:*:*",
+      "product": "EX3510-B0 router",
+      "vendor": "Zyxel",
+      "description": {
+        "en": "Critical command-injection vulnerability in the UPnP service. Allows unauthenticated remote attackers to execute OS commands via crafted SOAP requests.",
+        "fr": "Vulnérabilité critique d'injection de commande dans le service UPnP. Permet à des attaquants distants non authentifiés d'exécuter des commandes OS via des requêtes SOAP forgées."
+      },
+      "tags": [
+        "vulnerability",
+        "Command Injection",
+        "UPnP"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/zyxel-patch-upnp-command-injection-flaw"
+      ],
+      "date": "2026-02-27"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Aeternum Botnet - Blockchain C2",
+        "fr": "Botnet Aeternum - C2 sur Blockchain"
+      },
+      "description": {
+        "en": "A botnet that uses Polygon blockchain smart contracts for its command-and-control infrastructure, making it highly resilient to traditional takedowns.",
+        "fr": "Un botnet qui utilise des contrats intelligents sur la blockchain Polygon pour son infrastructure C2, ce qui le rend très résistant aux méthodes de démantèlement traditionnelles."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "http://peargxn3oki34c4savcbcfqofjjwjnnyrlrbszfv6ujlx36mhrh57did.onion/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "pear@onionmail.org"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Aeternum Loader"
+        ]
+      },
+      "mitre_ttps": [
+        "T1584.005",
+        "T1102"
+      ],
+      "analyse": {
+        "en": "The use of Polygon's smart contracts for instruction storage ensures the C2 remains permanent and reachable via public RPC endpoints.",
+        "fr": "L'utilisation de contrats intelligents Polygon pour stocker les instructions garantit que le C2 reste permanent et joignable via des points de terminaison RPC publics."
+      },
+      "recommandations": [
+        {
+          "en": "Filter outgoing traffic at the edge to block connections to known public RPC endpoints if not required for business.",
+          "fr": "Filtrer le trafic sortant au niveau du périmètre pour bloquer les connexions aux points RPC publics connus si non requis pour l'activité."
+        }
+      ],
+      "tags": [
+        "Blockchain C2",
+        "Polygon",
+        "Botnet"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188627/mobile-2/aeternum-botnet-hides-commands-in-polygon-smart-contracts.html"
+      ],
+      "date": "2026-02-27"
+    },
+    {
+      "title": {
+        "en": "Trojanized Gaming Utilities Campaign",
+        "fr": "Campagne d'utilitaires de jeu trojanisés"
+      },
+      "description": {
+        "en": "Attackers are distributing trojanized gaming tools (Xeno.exe, RobloxPlayerBeta.exe) to deliver a stealthy Remote Access Trojan (RAT).",
+        "fr": "Des attaquants distribuent des outils de jeu trojanisés (Xeno.exe, RobloxPlayerBeta.exe) pour délivrer un cheval de Troie d'accès à distance (RAT) furtif."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "79.110.49.15"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "3526af9189533470bc0e90d54bafb0db7bda784be82a372ce112e361f7c7b104"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Xeno",
+          "RobloxPlayerBeta"
+        ]
+      },
+      "mitre_ttps": [
+        "T1059.001",
+        "T1053.005",
+        "T1562.001"
+      ],
+      "analyse": {
+        "en": "The malware uses PowerShell and LOLBins like cmstp.exe for stealth, excludes itself from Microsoft Defender, and sets up persistence via scheduled tasks.",
+        "fr": "Le malware utilise PowerShell et des LOLBins comme cmstp.exe pour la furtivité, s'exclut de Microsoft Defender et établit une persistance via des tâches planifiées."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unauthorized Microsoft Defender exclusions and scheduled tasks pointing to uncommon directories.",
+          "fr": "Surveiller les exclusions Microsoft Defender non autorisées et les tâches planifiées pointant vers des répertoires inhabituels."
+        }
+      ],
+      "tags": [
+        "RAT",
+        "Gaming Malware",
+        "Defender Evasion"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188639/uncategorized/microsoft-warns-of-rat-delivered-through-trojanized-gaming-utilities.html"
+      ],
+      "date": "2026-02-28"
+    }
+  ]
+}
