@@ -1,0 +1,1452 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Cette période révèle une intensification des attaques visant des points d'entrée variés, de l'extension de navigateur aux infrastructures critiques, avec une prédilection pour l'exfiltration et le chiffrement de données à des fins d'extorsion. Les menaces clés incluent les attaques de chaîne d'approvisionnement (extensions compromises, écosystèmes IA), l'exploitation de l'IA par les attaquants (malicious skills sur ClawHub) et des vulnérabilités critiques (buffer overflows, injection SQL, bypass d'authentification) souvent liées à des produits grand public ou des plateformes spécifiques (routeurs Tenda, systèmes OpenClaw, chargeurs EV2GO). On observe également une forte activité de reconnaissance préalable aux attaques de ransomware ciblant les VPN SSL, ainsi que des incidents géopolitiques majeurs comme le black-out internet en Iran, soulignant l'utilisation des cyberattaques comme instrument de guerre. Les violations de données sont généralisées, touchant des millions d'utilisateurs dans le commerce de détail et les télécommunications, et révélant des risques accrus pour les données sensibles et financières. La gestion des cyberrisques est compliquée par le manque d'expertise en cybersécurité dans certaines régions et par des lacunes dans la compréhension des actifs numériques par les autorités.\nConclusion : Le paysage des menaces est caractérisé par une sophistication croissante et une diversification des vecteurs d'attaque, exigeant une vigilance constante et une adoption rapide des correctifs et des meilleures pratiques de sécurité, notamment l'MFA et la segmentation réseau.",
+      "date": "2026-03-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Akira",
+        "secteur": "Multiples (spécifiquement mentionné pour les intrusions via SonicWall VPN)",
+        "modop": "Ransomware, exploitation de VPN SSL pour l'accès initial, chiffrement de réseau.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "initial_access",
+          "vpn_exploitation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "BobVonNeumann (alias 26medias)",
+        "secteur": "Cryptomonnaie, écosystème IA (ClawHub)",
+        "modop": "Campagne d'escroquerie aux cryptomonnaies multi-niveaux, attaques agent-à-agent, promotion de compétences malveillantes sur ClawHub, manipulation d'agents IA.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cryptocurrency_scam",
+          "ai_agent_attack",
+          "supply_chain",
+          "social_engineering",
+          "clawhub_skill"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Cookie Spider",
+        "secteur": "Cybercriminalité (location d'infostealers)",
+        "modop": "Développement et location de l'infostealer Atomic Stealer, distribution via compétences malveillantes sur ClawHub.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware_development",
+          "clawhub_skill",
+          "macos"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Dort",
+        "secteur": "Cybercriminalité (opérateur de botnet)",
+        "modop": "Opération du botnet Kimwolf, attaques DDoS, doxing, inondation de courriels, swatting.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "ddos",
+          "doxing",
+          "swatting"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Fog",
+        "secteur": "Multiples (spécifiquement mentionné pour les intrusions via SonicWall VPN)",
+        "modop": "Ransomware, exploitation de VPN SSL pour l'accès initial, chiffrement de réseau.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "initial_access",
+          "vpn_exploitation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Inc Ransom",
+        "secteur": "Transport aérien (Air Côte d’Ivoire), Secteur public (gouvernement sénégalais)",
+        "modop": "Rançongiciel à double extorsion (exfiltration et chiffrement de données), publication de données sur le dark web.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "double_extortion",
+          "data_exfiltration",
+          "dark_web"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Interlock",
+        "secteur": "Santé (Apex Spine and Neurosurgery)",
+        "modop": "Attaque par rançongiciel, vol et fuite de données sensibles (informations personnelles et médicales).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_breach",
+          "healthcare",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/116147674932265244"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Shinyhunters",
+        "secteur": "Télécommunications (Odido)",
+        "modop": "Vol de données client, demande de rançon, menace de publication progressive des données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "cyber_extortion",
+          "telecom",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/leaked-odido-data-exposes-sensitive-information/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "@liuhui1010",
+        "secteur": "Distribution de logiciels malveillants, macOS",
+        "modop": "Campagne de distribution de malwares via commentaires sur les pages de compétences ClawHub légitimes, incitant à exécuter des commandes Terminal pour récupérer Atomic Stealer.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware_delivery",
+          "social_engineering",
+          "clawhub",
+          "macos",
+          "atomic_stealer"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Télécommunications, Infrastructures Critiques",
+        "theme": "Cyberguerre, contrôle de l'information",
+        "description": "L'Iran a subi un quasi-blackout Internet total, la connectivité nationale chutant à 4% des niveaux habituels, pendant des frappes militaires menées par les États-Unis et Israël. Cet incident, similaire à des mesures précédentes, est perçu comme un outil de contrôle du régime pour limiter les flux d'informations, réduire la pression étrangère ou contrer les cybermenaces contre les infrastructures critiques. Des cyberattaques à grande échelle auraient également frappé l'Iran, perturbant des plateformes nationales majeures.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "internet_blackout",
+          "cyber_warfare",
+          "state_sponsored_attack",
+          "critical_infrastructure",
+          "information_control",
+          "us_israel_strikes"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/israel-plunges-iran-into-darkness-with-largest-cyberattack-in-history-during-attack-against-iran/",
+          "https://securityaffairs.com/188648/cyber-warfare-2/iran-s-internet-near-totally-blacked-out-amid-us-israeli-strikes.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Santé",
+        "victime": "Apex Spine and Neurosurgery",
+        "description": "Une attaque par rançongiciel revendiquée par le groupe Interlock a compromis les informations personnelles et médicales de 2 500 individus. Les attaquants ont volé et divulgué 20 Go de fichiers sensibles, y compris des numéros de sécurité sociale et des dossiers de santé.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "medical_data",
+          "personal_information",
+          "data_leak",
+          "interlock"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/116147674932265244"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Transport aérien",
+        "victime": "Air Côte d’Ivoire",
+        "description": "La compagnie aérienne a été victime d'un rançongiciel à double extorsion en février, entraînant l'exfiltration et le chiffrement de 208 Go de données sensibles (informations financières, RH, contrats, et données personnelles de passagers remontant à 2012). Le groupe Inc Ransom a revendiqué l'attaque et publié les données.",
+        "tags": [
+          "violation",
+          "breach",
+          "air_transport",
+          "ransomware",
+          "double_extortion",
+          "data_exfiltration",
+          "sensitive_data",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Commerce de détail",
+        "victime": "Canadian Tire",
+        "description": "Une violation de données en octobre 2025 a exposé les données personnelles de plus de 38 millions de comptes, incluant noms, adresses, e-mails, années de naissance, mots de passe chiffrés et, dans certains cas, numéros de carte de crédit tronqués. Moins de 150 000 comptes incluaient également les dates de naissance complètes.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "personal_data",
+          "passwords",
+          "credit_card",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188659/data-breach/canadian-tire-2025-data-breach-impacts-38-million-users.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Secteur Public",
+        "victime": "National Tax Service de la Corée du Sud",
+        "description": "L'agence fiscale a accidentellement exposé la phrase de récupération mnémonique d'un portefeuille de cryptomonnaies saisi dans un communiqué de presse officiel, permettant aux hackers de voler l'équivalent de 4,8 millions de dollars en cryptomonnaies (4 millions de jetons Pre-Retogeum).",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "cryptocurrency",
+          "wallet_seed",
+          "data_exposure",
+          "theft",
+          "financial"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/48m-in-crypto-stolen-after-korean-tax-agency-exposes-wallet-seed/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido",
+        "description": "Une deuxième fuite de données clients volées a révélé des informations très sensibles, y compris des détails sur les victimes de harcèlement et de violence domestique. Au total, 6,2 millions de clients actuels et anciens sont concernés. Les données incluent noms, adresses, numéros de téléphone, dates de naissance, numéros de compte bancaire et numéros d'identification. Les pirates, Shinyhunters, réclamaient une rançon de plus de 1 million d'euros.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "customer_data",
+          "sensitive_data",
+          "cyber_extortion",
+          "shinyhunters",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/leaked-odido-data-exposes-sensitive-information/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Secteur Public",
+        "victime": "Direction de l’automatisation des fichiers (Sénégal), Direction générale des impôts et domaines sénégalaise",
+        "description": "Le Sénégal a été victime d'une attaque en février sur l'agence nationale chargée des cartes d'identité, passeports et données biométriques, entraînant la suspension temporaire de la production de cartes. En octobre 2025, les impôts et domaines avaient subi une attaque similaire avec exfiltration d'environ un téraoctet de données. Attaques attribuées au groupe Inc Ransom.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "senegal",
+          "personal_data",
+          "biometric_data",
+          "data_exfiltration",
+          "ransomware",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Services hébergés",
+        "victime": "TheSqua.re",
+        "description": "Une violation de données en juin 2025 aurait exposé 107 000 adresses e-mail uniques de clients, ainsi que d'autres détails personnels comme noms, numéros de téléphone et villes. Les données ont été publiées sur un forum de hacking populaire.",
+        "tags": [
+          "violation",
+          "breach",
+          "customer_data",
+          "email_addresses",
+          "personal_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@XposedOrNot/116148386627598299"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": 9.9,
+        "product": "BeyondTrust Privileged Remote Access et Remote Support appliances",
+        "description": "Injection de commande non authentifiée dans les appliances BeyondTrust PRA et RS.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "unauthenticated",
+          "beyondtrust",
+          "privileged_remote_access"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-adds-new-modules-targeting-linux-rc4/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-2844",
+        "cvss": 9.3,
+        "product": "Microchip TimePictra (v11.0 à 11.3 SP2)",
+        "description": "Vulnérabilité de contournement de l'authentification pour les fonctions critiques, permettant la manipulation de la configuration/environnement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "critical_function",
+          "configuration_manipulation",
+          "microchip",
+          "timepictra"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2844"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3010",
+        "cvss": 9.3,
+        "product": "Microchip TimePictra (v11.0 à 11.3 SP2)",
+        "description": "Vulnérabilité de Cross-Site Scripting (XSS) stockée, permettant l'interrogation du système pour des informations.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "stored_xss",
+          "cross_site_scripting",
+          "microchip",
+          "timepictra"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3010"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3376",
+        "cvss": 9.0,
+        "product": "Tenda F453 (v1.0.0.3)",
+        "description": "Dépassement de tampon dans la fonction fromSafeMacFilter, exploitable à distance.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3376"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3377",
+        "cvss": 9.0,
+        "product": "Tenda F453 (v1.0.0.3)",
+        "description": "Dépassement de tampon dans la fonction fromSafeUrlFilter, exploitable à distance et ayant un exploit public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3377"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-28562",
+        "cvss": 8.2,
+        "product": "wpForo Forum (v2.4.14)",
+        "description": "Vulnérabilité d'injection SQL non authentifiée via le paramètre ORDER BY des sujets, permettant l'extraction aveugle de créanciers de la base de données WordPress.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "unauthenticated",
+          "wordpress",
+          "wpforo",
+          "credential_extraction"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28562"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "QuickLens Chrome extension steals crypto, shows ClickFix attack",
+        "description": "L'extension Chrome 'QuickLens - Search Screen with Google Lens' a été compromise et utilisée pour distribuer des malwares et voler des cryptomonnaies à des milliers d'utilisateurs. Après un changement de propriétaire, une mise à jour malveillante a été déployée, désactivant les en-têtes de sécurité du navigateur, communiquant avec un serveur C2 et affichant de fausses mises à jour Google (attaque ClickFix) pour voler des phrases de récupération et des actifs de portefeuilles crypto. Des infostealers (AMOS) ciblant macOS ont également été rapportés.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "api.extensionanalyticspro[.]top",
+            "google-update[.]icu"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189 (Drive-by Compromise)",
+          "T1555.002 (Credential Access: Browser Saved Passwords)",
+          "T1555.003 (Credential Access: Credential API Hooking)",
+          "T1566 (Phishing)",
+          "T1133 (External Remote Services)"
+        ],
+        "analyse": "L'impact est direct sur les utilisateurs de portefeuilles de cryptomonnaies et de navigateurs Chrome, avec un risque élevé de vol d'actifs numériques et d'informations d'identification. La compromission d'une extension populaire démontre un vecteur d'attaque de chaîne d'approvisionnement efficace, touchant des milliers d'utilisateurs et potentiellement macOS avec des infostealers.",
+        "recommandations": [
+          "Désinstaller complètement l'extension QuickLens",
+          "Analyser les appareils pour détecter les malwares",
+          "Réinitialiser les mots de passe de tous les comptes stockés dans le navigateur",
+          "Être vigilant face aux demandes de 'vérification' ou d'exécution de code non sollicitées."
+        ],
+        "tags": [
+          "chrome_extension",
+          "supply_chain_attack",
+          "malware",
+          "cryptocurrency_theft",
+          "infostealer",
+          "clickfix_attack",
+          "c2_communication",
+          "macos"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/quicklens-chrome-extension-steals-crypto-shows-clickfix-attack/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "5 IoT Vulnerabilities That Stop Projects and How to Avoid Them",
+        "description": "Cet article analyse les vulnérabilités courantes des appareils IoT qui freinent le développement de projets, comme les caméras compromises (ex: AVTECH avec CVE-2024-7029), les identifiants par défaut non modifiés et les logiciels non patchés. Il met en lumière l'impact de ces failles sur les secteurs manufacturier et des bornes de recharge de véhicules électriques, citant l'incident de Colonial Pipeline comme exemple des conséquences d'un compte VPN non protégé.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-7029"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information)",
+          "T1592 (Gather Victim Org Information) - for reconnaissance of vulnerable IoT devices",
+          "T0801 (Improper Handling of Insufficiently Privileged Users) - related to default credentials"
+        ],
+        "analyse": "L'impact est sectoriel, affectant le développement et le déploiement des initiatives IoT, notamment dans le secteur manufacturier et des infrastructures de recharge de VE. Les conséquences peuvent être des millions de dollars en rançons, amendes réglementaires et pertes opérationnelles, ainsi que des perturbations de la chaîne d'approvisionnement.",
+        "recommandations": [
+          "Auditer le matériel avant l'achat",
+          "Appliquer l'authentification multifacteur (MFA)",
+          "Segmenter correctement les réseaux",
+          "Planifier les mises à jour du micrologiciel dès la spécification de l'appareil",
+          "Utiliser l'isolation réseau pour les appareils non patchables."
+        ],
+        "tags": [
+          "iot",
+          "vulnerability_management",
+          "default_credentials",
+          "patch_management",
+          "critical_infrastructure",
+          "manufacturing",
+          "supply_chain",
+          "risk_management"
+        ],
+        "sources": [
+          "https://hackread.com/5-iot-vulnerabilities-killing-projects-launch/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Who is the Kimwolf Botmaster “Dort”?",
+        "description": "Cet article profile \"Dort\", l'opérateur du botnet Kimwolf, considéré comme le plus grand et le plus perturbateur au monde. Suite à la divulgation d'une vulnérabilité utilisée pour assembler Kimwolf, Dort a coordonné une série d'attaques DDoS, de doxing et d'inondation de courriels contre des chercheurs en sécurité et un journaliste, allant jusqu'à envoyer une équipe SWAT chez un chercheur.",
+        "threat_actor": "Dort",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Endpoint Denial of Service)",
+          "T1591 (Gather Victim Network Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "L'impact est notable sur les individus ciblés (harcèlement, menaces physiques, doxing), mais l'existence du botnet Kimwolf représente une menace stratégique pour la stabilité d'Internet via des attaques DDoS massives. Cela souligne les risques de représailles extrêmes contre les chercheurs en sécurité et les journalistes exposant des acteurs malveillants.",
+        "recommandations": [
+          "Non mentionnées spécifiquement dans l'article, mais les mesures générales de protection incluent la surveillance DDoS, la protection contre le doxing et le renforcement de la sécurité personnelle en ligne."
+        ],
+        "tags": [
+          "botnet",
+          "threat_actor_profiling",
+          "ddos",
+          "doxing",
+          "swatting",
+          "cybercrime",
+          "harassment"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "L’Afrique de l’Ouest, terrain de jeu des cybercriminels",
+        "description": "Cet article met en lumière la vulnérabilité croissante de l'Afrique de l'Ouest aux cyberattaques, en particulier les rançongiciels, en raison d'un manque d'experts en cybersécurité. Il décrit l'attaque par double extorsion contre Air Côte d'Ivoire par le groupe Inc Ransom, où 208 Go de données sensibles ont été exfiltrées et chiffrées. Des agences gouvernementales sénégalaises ont également été ciblées par des attaques similaires, entraînant des fuites de données massives et des perturbations de services.",
+        "threat_actor": "Inc Ransom",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "L'impact est significatif sur les secteurs du transport aérien et public en Afrique de l'Ouest, avec des perturbations opérationnelles, des fuites de données sensibles (financières, RH, passagers, biométriques) et des risques accrus pour la sécurité physique des victimes. La faiblesse de la cybersécurité régionale rend les infrastructures numériques particulièrement vulnérables, pouvant avoir des conséquences transfrontalières.",
+        "recommandations": [
+          "Investir dans la formation d'experts en cybersécurité",
+          "Renforcer les capacités des agences nationales de sécurité des systèmes d'information",
+          "Adopter des mesures de protection contre les rançongiciels, y compris des sauvegardes robustes et des plans de réponse aux incidents."
+        ],
+        "tags": [
+          "ransomware",
+          "double_extortion",
+          "africa",
+          "west_africa",
+          "data_exfiltration",
+          "critical_infrastructure",
+          "government",
+          "air_transport",
+          "cyber_poverty",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Microsoft warns of RAT delivered through trojanized gaming utilities",
+        "description": "Microsoft alerte sur une campagne où des acteurs de la menace distribuent des utilitaires de jeu truqués (Xeno.exe ou RobloxPlayerBeta.exe) via navigateurs et plateformes de chat. Ces outils déploient un RAT furtif en utilisant PowerShell, des LOLBins comme cmstp.exe, des exclusions de Microsoft Defender et des tactiques de persistance via des tâches planifiées et des scripts de démarrage. Le payload final est un malware multifonction.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1036.003 (Masquerading: Rename System Utility)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1218 (Signed Binary Proxy Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1566.001 (Phishing: Spearphishing Attachment/Link)"
+        ],
+        "analyse": "L'impact principal concerne les utilisateurs de jeux vidéo, avec un risque élevé d'infection par des RATs, permettant un accès à distance complet. La furtivité des méthodes utilisées (LOLBins, Defender evasion) rend la détection difficile et le potentiel d'impact large en raison de la popularité des plateformes de jeu.",
+        "recommandations": [
+          "Éduquer les utilisateurs sur les risques des utilitaires de jeu non officiels",
+          "Utiliser des solutions de sécurité robustes et maintenir les signatures à jour",
+          "Surveiller l'exécution de PowerShell et l'utilisation de LOLBins",
+          "Mettre en œuvre des politiques de moindre privilège."
+        ],
+        "tags": [
+          "rat",
+          "malware_campaign",
+          "gaming",
+          "trojanized_software",
+          "powershell",
+          "lolbins",
+          "persistence",
+          "defender_evasion",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188639/malware/microsoft-warns-of-rat-delivered-through-trojanized-gaming-utilities.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Critical CISA Advisory Unmasks Severe Flaws in EV2GO Charging Networks",
+        "description": "La CISA a publié un avis critique concernant des vulnérabilités graves dans la plateforme de recharge EV2GO pour véhicules électriques. L'exploitation réussie de ces failles pourrait permettre aux attaquants d'usurper l'identité des stations de recharge, de détourner des sessions, de supprimer ou rediriger le trafic légitime, entraînant des attaques par déni de service à grande échelle et la manipulation des données envoyées au backend. Cela représente une menace sérieuse pour l'infrastructure des véhicules électriques.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information) - for impersonation",
+          "T1592 (Gather Victim Org Information) - for mapping network",
+          "T1498 (Denial of Service) - for large-scale DoS",
+          "T1078 (Valid Accounts) - for session hijacking"
+        ],
+        "analyse": "L'impact est critique sur les infrastructures de recharge de véhicules électriques et potentiellement sur le réseau électrique. Ces vulnérabilités menacent la sécurité et la disponibilité des services de recharge, avec des répercussions sur les conducteurs et la stabilité du réseau national.",
+        "recommandations": [
+          "Examiner l'avis CISA (ICSA-26-057-04)",
+          "Prioriser la protection des réseaux de recharge et du réseau électrique."
+        ],
+        "tags": [
+          "critical_infrastructure",
+          "ev_charging_networks",
+          "cisa_advisory",
+          "vulnerability",
+          "denial_of_service",
+          "session_hijacking",
+          "data_manipulation",
+          "transportation"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-cisa-advisory-unmasks-severe-flaws-in-ev2go-charging-networks/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Massive SonicWall Reconnaissance Campaign Signals Imminent Ransomware Strikes",
+        "description": "Une campagne de reconnaissance très coordonnée a ciblé l'infrastructure SonicWall SonicOS entre le 22 et le 25 février 2026, avec plus de 84 000 sessions de scan depuis plus de 4 300 adresses IP uniques. Les attaquants, utilisant des services proxy commerciaux, vérifient la présence de VPN SSL SonicWall activés, prélude aux attaques de rançongiciels. Les groupes Akira et Fog sont connus pour exploiter ces vulnérabilités VPN pour des accès initiaux menant à des chiffrements de réseau rapides.",
+        "threat_actor": "Akira, Fog",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-53704"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002 (Active Scanning: Vulnerability Scans)",
+          "T1133 (External Remote Services)",
+          "T1078 (Valid Accounts)",
+          "T1486 (Data Encrypted for Impact)"
+        ],
+        "analyse": "L'impact est potentiellement systémique, signalant des attaques imminentes par rançongiciel contre les organisations utilisant des équipements SonicWall. Les intrusions via VPN SSL sont un vecteur d'accès initial majeur, ayant déjà coûté à des groupes comme Akira environ 244 millions de dollars. Le potentiel géographique est mondial, ciblant toute organisation exposant des VPN SonicWall.",
+        "recommandations": [
+          "Examiner les sessions VPN actives pour détecter les IP suspectes (hors base d'utilisateurs normale)",
+          "Vérifier et patcher le firmware SonicOS (versions vulnérables: 7.1.1-7058, 7.1.2-7019, 8.0.0-8035)",
+          "Appliquer l'authentification multifacteur (MFA) pour tous les utilisateurs VPN SSL."
+        ],
+        "tags": [
+          "ransomware",
+          "reconnaissance",
+          "sonicwall",
+          "vpn_exploitation",
+          "initial_access",
+          "threat_intelligence",
+          "mfa",
+          "patch_management",
+          "akira",
+          "fog"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
+        "description": "Une faille de sécurité critique dans les agents d'IA locaux OpenClaw permet à des sites web malveillants de prendre le contrôle via WebSocket, contournant les mécanismes de sécurité. L'article détaille la distribution de l'infostealer Atomic Stealer via des compétences malveillantes sur ClawHub, y compris des attaques agent-à-agent et des arnaques aux cryptomonnaies. Plusieurs vulnérabilités (RCE, injection de commande, SSRF, contournement d'authentification) ont été corrigées.",
+        "threat_actor": "Cookie Spider, @liuhui1010, BobVonNeumann (alias 26medias)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "91.92.242.30"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1566 (Phishing)",
+          "T1555.002 (Credential Access: Browser Saved Passwords)",
+          "T1547.001 (Boot or Logon Autostart Execution)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)"
+        ],
+        "analyse": "L'impact est potentiellement étendu sur l'écosystème de l'IA, avec des risques d'exécution de code à distance, de compromission des hôtes, de vol de créanciers et de manipulation d'agents IA, notamment dans le secteur des cryptomonnaies. Cela soulève des préoccupations importantes pour la sécurité de la chaîne d'approvisionnement logicielle des agents IA et l'intégrité des plateformes de développement.",
+        "recommandations": [
+          "Appliquer les dernières mises à jour (v2026.2.25, v2026.2.13, v2026.1.20, v2026.1.29, v2026.2.1, v2026.2.2, v2026.2.14)",
+          "Auditer les accès accordés aux agents IA",
+          "Appliquer des contrôles de gouvernance pour les identités non-humaines",
+          "Auditer les compétences avant installation",
+          "Éviter de fournir des identifiants et clés sauf nécessité",
+          "Surveiller le comportement des compétences",
+          "Déployer OpenClaw dans des environnements isolés (VM dédiée ou système physique séparé) avec des créanciers non-privilégiés et un accès à des données non-sensibles."
+        ],
+        "tags": [
+          "ai_security",
+          "vulnerability",
+          "websocket_hijacking",
+          "supply_chain_attack",
+          "infostealer",
+          "atomic_stealer",
+          "cryptocurrency",
+          "rce",
+          "command_injection",
+          "authentication_bypass",
+          "log_poisoning"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "This period shows an intensification of attacks targeting various entry points, from browser extensions to critical infrastructure, with a clear preference for data exfiltration and encryption for extortion purposes. Key threats include supply chain attacks (compromised extensions, AI ecosystems), the exploitation of AI by attackers (malicious skills on ClawHub), and critical vulnerabilities (buffer overflows, SQL injection, authentication bypasses) often related to consumer products or specific platforms (Tenda routers, OpenClaw systems, EV2GO chargers). There is also significant reconnaissance activity preceding ransomware attacks targeting SSL VPNs, as well as major geopolitical incidents such as the internet blackout in Iran, highlighting the use of cyberattacks as a tool of warfare. Data breaches are widespread, affecting millions of users in retail and telecommunications, revealing increased risks for sensitive and financial data. Cybersecurity risk management is complicated by a lack of cybersecurity expertise in some regions and gaps in authorities' understanding of digital assets.\nConclusion: The threat landscape is characterized by increasing sophistication and diversification of attack vectors, demanding constant vigilance and rapid adoption of patches and security best practices, including MFA and network segmentation.",
+      "date": "2026-03-01"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Akira",
+        "secteur": "Multiple (specifically mentioned for SonicWall VPN intrusions)",
+        "modop": "Ransomware, exploitation of SSL VPNs for initial access, network encryption.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "initial_access",
+          "vpn_exploitation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "BobVonNeumann (aka 26medias)",
+        "secteur": "Cryptocurrency, AI ecosystem (ClawHub)",
+        "modop": "Multi-layered cryptocurrency scam campaign, agent-to-agent attacks, promotion of malicious skills on ClawHub, manipulation of AI agents.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "cryptocurrency_scam",
+          "ai_agent_attack",
+          "supply_chain",
+          "social_engineering",
+          "clawhub_skill"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Cookie Spider",
+        "secteur": "Cybercrime (infostealer rental)",
+        "modop": "Development and rental of the Atomic Stealer infostealer, distribution via malicious skills on ClawHub.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "infostealer",
+          "malware_development",
+          "clawhub_skill",
+          "macos"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Dort",
+        "secteur": "Cybercrime (botnet operator)",
+        "modop": "Operation of the Kimwolf botnet, DDoS attacks, doxing, email flooding, swatting.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "botnet",
+          "ddos",
+          "doxing",
+          "swatting"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Fog",
+        "secteur": "Multiple (specifically mentioned for SonicWall VPN intrusions)",
+        "modop": "Ransomware, exploitation of SSL VPNs for initial access, network encryption.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "initial_access",
+          "vpn_exploitation",
+          "data_encryption"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Inc Ransom",
+        "secteur": "Air Transport (Air Côte d’Ivoire), Public Sector (Senegalese government)",
+        "modop": "Double extortion ransomware (data exfiltration and encryption), publication of data on the dark web.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "double_extortion",
+          "data_exfiltration",
+          "dark_web"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Interlock",
+        "secteur": "Healthcare (Apex Spine and Neurosurgery)",
+        "modop": "Ransomware attack, theft and leak of sensitive data (personal and medical information).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_breach",
+          "healthcare",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/116147674932265244"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "Shinyhunters",
+        "secteur": "Telecommunications (Odido)",
+        "modop": "Theft of customer data, ransom demand, threat of progressive data publication.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "cyber_extortion",
+          "telecom",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/leaked-odido-data-exposes-sensitive-information/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "nom": "@liuhui1010",
+        "secteur": "Malware distribution, macOS",
+        "modop": "Malware delivery campaign via comments on legitimate ClawHub skill pages, instructing users to run Terminal commands to retrieve Atomic Stealer.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "malware_delivery",
+          "social_engineering",
+          "clawhub",
+          "macos",
+          "atomic_stealer"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Telecommunications, Critical Infrastructure",
+        "theme": "Cyber warfare, information control",
+        "description": "Iran experienced a near-total internet blackout, with national connectivity dropping to 4% of ordinary levels, amidst military strikes carried out by the US and Israel. This incident, similar to previous measures, is seen as a regime control tool to curb information flows, reduce foreign pressure, or counter cyber threats against critical infrastructure. Large-scale cyberattacks reportedly struck Iran alongside the military strikes, disrupting major domestic platforms.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "internet_blackout",
+          "cyber_warfare",
+          "state_sponsored_attack",
+          "critical_infrastructure",
+          "information_control",
+          "us_israel_strikes"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/israel-plunges-iran-into-darkness-with-largest-cyberattack-in-history-during-attack-against-iran/",
+          "https://securityaffairs.com/188648/cyber-warfare-2/iran-s-internet-near-totally-blacked-out-amid-us-israeli-strikes.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Healthcare",
+        "victime": "Apex Spine and Neurosurgery",
+        "description": "A ransomware attack claimed by the Interlock group compromised the personal and medical information of 2,500 individuals. Attackers stole and leaked 20 GB of sensitive files including Social Security numbers and health records.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "medical_data",
+          "personal_information",
+          "data_leak",
+          "interlock"
+        ],
+        "sources": [
+          "https://infosec.exchange/@beyondmachines1/116147674932265244"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Air Transport",
+        "victime": "Air Côte d’Ivoire",
+        "description": "The airline was a victim of a double extortion ransomware attack in February, leading to the exfiltration and encryption of 208 GB of sensitive data (financial, HR, contracts, and passenger personal data dating back to 2012). The Inc Ransom group claimed the attack and published the data.",
+        "tags": [
+          "violation",
+          "breach",
+          "air_transport",
+          "ransomware",
+          "double_extortion",
+          "data_exfiltration",
+          "sensitive_data",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Retail",
+        "victime": "Canadian Tire",
+        "description": "A data breach in October 2025 exposed personal data from over 38 million accounts, including names, addresses, emails, year of birth, encrypted passwords, and in some cases, truncated credit card numbers. Less than 150,000 accounts also included full dates of birth.",
+        "tags": [
+          "violation",
+          "breach",
+          "retail",
+          "personal_data",
+          "passwords",
+          "credit_card",
+          "customer_data"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188659/data-breach/canadian-tire-2025-data-breach-impacts-38-million-users.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Government",
+        "victime": "South Korea's National Tax Service",
+        "description": "The tax agency accidentally exposed the mnemonic recovery phrase of a seized cryptocurrency wallet in an official press release, allowing hackers to steal 6.4 billion won ($4.8M) worth in cryptocurrency (4 million Pre-Retogeum tokens).",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "cryptocurrency",
+          "wallet_seed",
+          "data_exposure",
+          "theft",
+          "financial"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/48m-in-crypto-stolen-after-korean-tax-agency-exposes-wallet-seed/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido",
+        "description": "A second batch of stolen customer data was leaked, revealing highly sensitive information, including details on stalking and domestic violence victims. A total of 6.2 million current and former customers are affected. Data includes names, addresses, phone numbers, dates of birth, bank account numbers, and ID numbers. The attackers, Shinyhunters, demanded a ransom of over 1 million euros.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecom",
+          "customer_data",
+          "sensitive_data",
+          "cyber_extortion",
+          "shinyhunters",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/02/28/leaked-odido-data-exposes-sensitive-information/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Public Sector",
+        "victime": "Direction de l’automatisation des fichiers (Senegal), Direction générale des impôts et domaines sénégalaise",
+        "description": "Senegal suffered an attack in February on the national agency responsible for identity cards, passports, and biometric data, leading to the temporary suspension of card production. In October 2025, the General Directorate of Taxes and Estates experienced a similar attack with the exfiltration of approximately one terabyte of data. Attacks attributed to the Inc Ransom group.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "senegal",
+          "personal_data",
+          "biometric_data",
+          "data_exfiltration",
+          "ransomware",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "secteur": "Hosted Services",
+        "victime": "TheSqua.re",
+        "description": "A data breach in June 2025 allegedly exposed 107,000 unique customer email addresses, along with other personal details such as names, phone numbers, and cities. The data was later posted to a popular hacking forum.",
+        "tags": [
+          "violation",
+          "breach",
+          "customer_data",
+          "email_addresses",
+          "personal_data",
+          "data_leak"
+        ],
+        "sources": [
+          "https://infosec.exchange/@XposedOrNot/116148386627598299"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-1731",
+        "cvss": 9.9,
+        "product": "BeyondTrust Privileged Remote Access and Remote Support appliances",
+        "description": "Unauthenticated command injection vulnerability in BeyondTrust PRA and RS appliances.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "unauthenticated",
+          "beyondtrust",
+          "privileged_remote_access"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/metasploit-adds-new-modules-targeting-linux-rc4/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-2844",
+        "cvss": 9.3,
+        "product": "Microchip TimePictra (v11.0 through 11.3 SP2)",
+        "description": "Authentication bypass vulnerability for critical functions, allowing configuration/environment manipulation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "critical_function",
+          "configuration_manipulation",
+          "microchip",
+          "timepictra"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-2844"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3010",
+        "cvss": 9.3,
+        "product": "Microchip TimePictra (v11.0 through 11.3 SP2)",
+        "description": "Stored Cross-Site Scripting (XSS) vulnerability, allowing query system for information.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "xss",
+          "stored_xss",
+          "cross_site_scripting",
+          "microchip",
+          "timepictra"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3010"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3376",
+        "cvss": 9.0,
+        "product": "Tenda F453 (v1.0.0.3)",
+        "description": "Buffer overflow in the fromSafeMacFilter function, remotely exploitable.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3376"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-3377",
+        "cvss": 9.0,
+        "product": "Tenda F453 (v1.0.0.3)",
+        "description": "Buffer overflow in the fromSafeUrlFilter function, remotely exploitable with a public exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3377"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "cve_id": "CVE-2026-28562",
+        "cvss": 8.2,
+        "product": "wpForo Forum (v2.4.14)",
+        "description": "Unauthenticated SQL injection vulnerability via Topics ORDER BY parameter, allowing blind boolean extraction of credentials from the WordPress database.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "unauthenticated",
+          "wordpress",
+          "wpforo",
+          "credential_extraction"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-28562"
+        ],
+        "date": "2026-03-01"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "QuickLens Chrome extension steals crypto, shows ClickFix attack",
+        "description": "The 'QuickLens - Search Screen with Google Lens' Chrome extension was compromised and used to distribute malware and steal cryptocurrency from thousands of users. After an ownership change, a malicious update was deployed, stripping browser security headers, communicating with a C2 server, and displaying fake Google updates (ClickFix attack) to steal seed phrases and crypto wallet assets. Infostealers (AMOS) targeting macOS were also reported.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "api.extensionanalyticspro[.]top",
+            "google-update[.]icu"
+          ]
+        },
+        "mitre_ttps": [
+          "T1189 (Drive-by Compromise)",
+          "T1555.002 (Credential Access: Browser Saved Passwords)",
+          "T1555.003 (Credential Access: Credential API Hooking)",
+          "T1566 (Phishing)",
+          "T1133 (External Remote Services)"
+        ],
+        "analyse": "The impact is direct on cryptocurrency wallet users and Chrome browser users, with a high risk of digital asset theft and credential compromise. The compromise of a popular extension demonstrates an effective supply chain attack vector, affecting thousands of users and potentially macOS with infostealers.",
+        "recommandations": [
+          "Completely uninstall the QuickLens extension",
+          "Scan devices for malware",
+          "Reset passwords for all accounts stored in the browser",
+          "Be vigilant against unsolicited 'verification' requests or code execution."
+        ],
+        "tags": [
+          "chrome_extension",
+          "supply_chain_attack",
+          "malware",
+          "cryptocurrency_theft",
+          "infostealer",
+          "clickfix_attack",
+          "c2_communication",
+          "macos"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/quicklens-chrome-extension-steals-crypto-shows-clickfix-attack/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "5 IoT Vulnerabilities That Stop Projects and How to Avoid Them",
+        "description": "This article analyzes common IoT device vulnerabilities hindering project development, such as compromised cameras (e.g., AVTECH with CVE-2024-7029), unchanged default credentials, and unpatched software. It highlights the impact of these flaws on manufacturing and EV charging sectors, citing the Colonial Pipeline incident as an example of the consequences of an unprotected VPN account.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-7029"
+          ]
+        },
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information)",
+          "T1592 (Gather Victim Org Information) - for reconnaissance of vulnerable IoT devices",
+          "T0801 (Improper Handling of Insufficiently Privileged Users) - related to default credentials"
+        ],
+        "analyse": "The impact is sectoral, affecting the development and deployment of IoT initiatives, particularly in manufacturing and EV charging infrastructure. Consequences can include millions of dollars in ransoms, regulatory fines, and operational losses, as well as supply chain disruptions.",
+        "recommandations": [
+          "Audit hardware before purchase",
+          "Enforce multifactor authentication (MFA)",
+          "Properly segment networks",
+          "Plan firmware updates from the initial device specification",
+          "Use network isolation for unpatchable devices."
+        ],
+        "tags": [
+          "iot",
+          "vulnerability_management",
+          "default_credentials",
+          "patch_management",
+          "critical_infrastructure",
+          "manufacturing",
+          "supply_chain",
+          "risk_management"
+        ],
+        "sources": [
+          "https://hackread.com/5-iot-vulnerabilities-killing-projects-launch/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Who is the Kimwolf Botmaster “Dort”?",
+        "description": "This article profiles \"Dort,\" the operator of the Kimwolf botnet, considered the world's largest and most disruptive. Following the disclosure of a vulnerability used to assemble Kimwolf, Dort coordinated a barrage of DDoS attacks, doxing, and email flooding against security researchers and a journalist, even sending a SWAT team to a researcher's home.",
+        "threat_actor": "Dort",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1499 (Endpoint Denial of Service)",
+          "T1591 (Gather Victim Network Information)",
+          "T1598 (Phishing for Information)"
+        ],
+        "analyse": "The impact is notable on targeted individuals (harassment, physical threats, doxing), but the existence of the Kimwolf botnet represents a strategic threat to internet stability via massive DDoS attacks. This highlights the risks of extreme retaliation against security researchers and journalists exposing malicious actors.",
+        "recommandations": [
+          "Not specifically mentioned in the article, but general protection measures include DDoS monitoring, protection against doxing, and strengthening personal online security."
+        ],
+        "tags": [
+          "botnet",
+          "threat_actor_profiling",
+          "ddos",
+          "doxing",
+          "swatting",
+          "cybercrime",
+          "harassment"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "L’Afrique de l’Ouest, terrain de jeu des cybercriminels",
+        "description": "This article highlights the increasing vulnerability of West Africa to cyberattacks, particularly ransomware, due to a lack of cybersecurity experts. It describes the double extortion attack against Air Côte d'Ivoire by the Inc Ransom group, where 208 GB of sensitive data were exfiltrated and encrypted. Senegalese government agencies have also been targeted by similar attacks, leading to massive data leaks and service disruptions.",
+        "threat_actor": "Inc Ransom",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1486 (Data Encrypted for Impact)",
+          "T1560 (Archive Collected Data)",
+          "T1537 (Transfer Data to Cloud Account)"
+        ],
+        "analyse": "The impact is significant on the air transport and public sectors in West Africa, with operational disruptions, leaks of sensitive data (financial, HR, passenger, biometric), and increased risks to the physical safety of victims. The weakness of regional cybersecurity makes digital infrastructure particularly vulnerable, potentially having cross-border consequences.",
+        "recommandations": [
+          "Invest in training cybersecurity experts",
+          "Strengthen the capabilities of national information system security agencies",
+          "Adopt measures to protect against ransomware, including robust backups and incident response plans."
+        ],
+        "tags": [
+          "ransomware",
+          "double_extortion",
+          "africa",
+          "west_africa",
+          "data_exfiltration",
+          "critical_infrastructure",
+          "government",
+          "air_transport",
+          "cyber_poverty",
+          "inc_ransom"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Microsoft warns of RAT delivered through trojanized gaming utilities",
+        "description": "Microsoft warns of a campaign where threat actors distribute trojanized gaming utilities (Xeno.exe or RobloxPlayerBeta.exe) via browsers and chat platforms. These tools deploy a stealthy RAT using PowerShell, LOLBins like cmstp.exe, Microsoft Defender exclusions, and persistence tactics via scheduled tasks and startup scripts. The final payload is a multi-purpose malware.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1036.003 (Masquerading: Rename System Utility)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "T1218 (Signed Binary Proxy Execution)",
+          "T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+          "T1566.001 (Phishing: Spearphishing Attachment/Link)"
+        ],
+        "analyse": "The primary impact is on gaming users, with a high risk of RAT infections, allowing full remote access. The stealthiness of the methods used (LOLBins, Defender evasion) makes detection difficult, and the potential for broad impact due to the popularity of gaming platforms.",
+        "recommandations": [
+          "Educate users about the risks of unofficial gaming utilities",
+          "Use robust security solutions and keep signatures updated",
+          "Monitor PowerShell execution and LOLBin usage",
+          "Implement least privilege policies."
+        ],
+        "tags": [
+          "rat",
+          "malware_campaign",
+          "gaming",
+          "trojanized_software",
+          "powershell",
+          "lolbins",
+          "persistence",
+          "defender_evasion",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188639/malware/microsoft-warns-of-rat-delivered-through-trojanized-gaming-utilities.html"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Critical CISA Advisory Unmasks Severe Flaws in EV2GO Charging Networks",
+        "description": "CISA has issued a critical advisory regarding severe vulnerabilities in the EV2GO charging platform for electric vehicles. Successful exploitation of these flaws could allow attackers to impersonate charging stations, hijack sessions, suppress or misroute legitimate traffic, leading to large-scale denial of service attacks and manipulation of data sent to the backend. This poses a serious threat to EV infrastructure.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1589 (Gather Victim Identity Information) - for impersonation",
+          "T1592 (Gather Victim Org Information) - for mapping network",
+          "T1498 (Denial of Service) - for large-scale DoS",
+          "T1078 (Valid Accounts) - for session hijacking"
+        ],
+        "analyse": "The impact is critical on electric vehicle charging infrastructure and potentially on the power grid. These vulnerabilities threaten the security and availability of charging services, with repercussions for drivers and national grid stability.",
+        "recommandations": [
+          "Review the CISA advisory (ICSA-26-057-04)",
+          "Prioritize securing charging networks and the power grid."
+        ],
+        "tags": [
+          "critical_infrastructure",
+          "ev_charging_networks",
+          "cisa_advisory",
+          "vulnerability",
+          "denial_of_service",
+          "session_hijacking",
+          "data_manipulation",
+          "transportation"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-cisa-advisory-unmasks-severe-flaws-in-ev2go-charging-networks/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "Massive SonicWall Reconnaissance Campaign Signals Imminent Ransomware Strikes",
+        "description": "A highly coordinated reconnaissance campaign targeted SonicWall SonicOS infrastructure between February 22 and 25, 2026, with over 84,000 scanning sessions from more than 4,300 unique IP addresses. Attackers, using commercial proxy services, are checking for enabled SonicWall SSL VPNs, a prelude to ransomware attacks. Akira and Fog groups are known to exploit these VPN vulnerabilities for initial access leading to rapid network encryption.",
+        "threat_actor": "Akira, Fog",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2024-53704"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002 (Active Scanning: Vulnerability Scans)",
+          "T1133 (External Remote Services)",
+          "T1078 (Valid Accounts)",
+          "T1486 (Data Encrypted for Impact)"
+        ],
+        "analyse": "The impact is potentially systemic, signaling imminent ransomware attacks against organizations using SonicWall equipment. SSL VPN intrusions are a major initial access vector, having already cost groups like Akira an estimated $244 million. The geographical potential is global, targeting any organization exposing SonicWall VPNs.",
+        "recommandations": [
+          "Review active VPN sessions for suspicious IPs (outside normal user base)",
+          "Verify and patch SonicOS firmware (vulnerable versions: 7.1.1-7058, 7.1.2-7019, 8.0.0-8035)",
+          "Enforce Multi-Factor Authentication (MFA) for all SSL VPN users."
+        ],
+        "tags": [
+          "ransomware",
+          "reconnaissance",
+          "sonicwall",
+          "vpn_exploitation",
+          "initial_access",
+          "threat_intelligence",
+          "mfa",
+          "patch_management",
+          "akira",
+          "fog"
+        ],
+        "sources": [
+          "https://securityonline.info/massive-sonicwall-reconnaissance-campaign-signals-imminent-ransomware-strikes/"
+        ],
+        "date": "2026-03-01"
+      },
+      {
+        "title": "ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket",
+        "description": "A critical security flaw in local OpenClaw AI agents allows malicious websites to hijack control via WebSocket, bypassing security mechanisms. The article details the distribution of the Atomic Stealer infostealer through malicious skills on ClawHub, including agent-to-agent attacks and cryptocurrency scams. Several vulnerabilities (RCE, command injection, SSRF, authentication bypass) have been patched.",
+        "threat_actor": "Cookie Spider, @liuhui1010, BobVonNeumann (aka 26medias)",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "91.92.242.30"
+          ]
+        },
+        "mitre_ttps": [
+          "T1190 (Exploit Public-Facing Application)",
+          "T1566 (Phishing)",
+          "T1555.002 (Credential Access: Browser Saved Passwords)",
+          "T1555.003 (Credential Access: Credential API Hooking)",
+          "T1547.001 (Boot or Logon Autostart Execution)",
+          "T1566.001 (Phishing: Spearphishing Attachment)",
+          "T1566.002 (Phishing: Spearphishing Link)"
+        ],
+        "analyse": "The impact is potentially widespread across the AI ecosystem, with risks of remote code execution, host compromise, credential theft, and manipulation of AI agents, particularly in the cryptocurrency sector. This raises significant concerns for the software supply chain security of AI agents and the integrity of development platforms.",
+        "recommandations": [
+          "Apply the latest updates (v2026.2.25, v2026.2.13, v2026.1.20, v2026.1.29, v2026.2.1, v2026.2.2, v2026.2.14)",
+          "Audit access granted to AI agents",
+          "Enforce governance controls for non-human identities",
+          "Audit skills before installation",
+          "Avoid providing credentials and keys unless essential",
+          "Monitor skill behavior",
+          "Deploy OpenClaw in isolated environments (dedicated VM or separate physical system) with non-privileged credentials and access only to non-sensitive data."
+        ],
+        "tags": [
+          "ai_security",
+          "vulnerability",
+          "websocket_hijacking",
+          "supply_chain_attack",
+          "infostealer",
+          "atomic_stealer",
+          "cryptocurrency",
+          "rce",
+          "command_injection",
+          "authentication_bypass",
+          "log_poisoning"
+        ],
+        "sources": [
+          "https://thehackernews.com/2026/02/clawjacked-flaw-lets-malicious-sites.html"
+        ],
+        "date": "2026-03-01"
+      }
+    ]
+  }
+}
