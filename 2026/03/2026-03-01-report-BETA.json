@@ -1,0 +1,358 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The period ending March 1, 2026, is marked by a massive convergence of kinetic and cyber warfare, specifically with the launch of Operation 'Epic Fury' and 'Roar of the Lion' by US and Israeli forces against Iran, resulting in a near-total (96%) internet blackout in the country. This state-level activity is mirrored by high-impact criminal operations, including the exposure of 38 million accounts in the Canadian Tire breach and the 'ClawJacked' vulnerability targeting the burgeoning AI agent ecosystem (OpenClaw). The discovery of a critical 'one-packet-to-root' flaw in Juniper PTX routers (CVE-2026-21902) and widespread reconnaissance against SonicWall infrastructure by ransomware groups like Akira signify an imminent threat to global network backbones and critical infrastructure.",
+      "fr": "La période se terminant le 1er mars 2026 est marquée par une convergence massive entre guerre cinétique et cybernétique, notamment avec le lancement des opérations 'Epic Fury' et 'Roar of the Lion' par les forces américaines et israéliennes contre l'Iran, entraînant une coupure quasi totale (96 %) d'Internet dans le pays. Cette activité étatique est mise en parallèle avec des opérations criminelles à fort impact, notamment la compromission de 38 millions de comptes chez Canadian Tire et la vulnérabilité 'ClawJacked' ciblant l'écosystème naissant des agents IA (OpenClaw). La découverte d'une faille critique 'one-packet-to-root' dans les routeurs Juniper PTX (CVE-2026-21902) et une campagne de reconnaissance massive contre les infrastructures SonicWall par des groupes de ransomware comme Akira signalent une menace imminente pour les dorsales réseau mondiales et les infrastructures critiques."
+    },
+    "date": "2026-03-01"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Dort",
+      "campaign": "Kimwolf Botnet Operations",
+      "campaign_description": {
+        "en": "A threat actor known as 'Dort' (identified as Jacob Butler) operates the Kimwolf botnet, the world’s largest and most disruptive botnet, targeting security researchers with DDoS, doxing, and swatting attacks.",
+        "fr": "Un acteur de menace connu sous le nom de 'Dort' (identifié comme Jacob Butler) opère le botnet Kimwolf, le plus grand et le plus perturbateur au monde, ciblant des chercheurs en sécurité avec des attaques DDoS, du doxing et du swatting."
+      },
+      "sector": {
+        "en": "Cybersecurity, Infrastructure",
+        "fr": "Cybersécurité, Infrastructures"
+      },
+      "modop": {
+        "en": "Exploiting residential proxy services to infect IoT devices (TV boxes, digital photo frames) to build a massive botnet for DDoS and harassment.",
+        "fr": "Exploitation de services de proxy résidentiels pour infecter des appareils IoT (boîtiers TV, cadres photo numériques) afin de construire un botnet massif pour des DDoS et du harcèlement."
+      },
+      "tags": [
+        "Kimwolf",
+        "DDoS",
+        "Doxing",
+        "Dort",
+        "Botnet"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "threat_actor": "ShinyHunters",
+      "campaign": "Odido Extortion",
+      "campaign_description": {
+        "en": "The group exfiltrated data from 6.2 to 8 million customers of Dutch telecom provider Odido, leaking sensitive notes on stalking and domestic violence victims to force a ransom payment.",
+        "fr": "Le groupe a exfiltré les données de 6,2 à 8 millions de clients du fournisseur télécom néerlandais Odido, divulguant des notes sensibles sur des victimes de harcèlement et de violence domestique pour forcer le paiement d'une rançon."
+      },
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "modop": {
+        "en": "Data theft and double extortion via public leaks on dark web forums.",
+        "fr": "Vol de données et double extorsion via des fuites publiques sur les forums du dark web."
+      },
+      "tags": [
+        "ShinyHunters",
+        "Data Breach",
+        "Extortion",
+        "Odido"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/02/28/leaked-odido-data-exposes-sensitive-information/"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "threat_actor": "Inc Ransom",
+      "campaign": "West Africa Targeting",
+      "campaign_description": {
+        "en": "Targeting critical entities in West Africa, most recently Air Côte d’Ivoire, exfiltrating 208GB of sensitive financial and passenger data.",
+        "fr": "Ciblage d'entités critiques en Afrique de l'Ouest, plus récemment Air Côte d'Ivoire, exfiltrant 208 Go de données financières et de passagers sensibles."
+      },
+      "sector": {
+        "en": "Aviation, Government",
+        "fr": "Aviation, Gouvernement"
+      },
+      "modop": {
+        "en": "Ransomware deployment and double extortion following refusal to pay.",
+        "fr": "Déploiement de ransomware et double extorsion suite au refus de paiement."
+      },
+      "tags": [
+        "Inc Ransom",
+        "West Africa",
+        "Air Côte d’Ivoire",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/afrique/article/2026/02/28/l-afrique-de-l-ouest-terrain-de-jeu-des-cybercriminels_6668670_3212.html"
+      ],
+      "date": "2026-03-01"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "National Infrastructure, Middle East",
+        "fr": "Infrastructures nationales, Moyen-Orient"
+      },
+      "theme": {
+        "en": "US-Israel-Iran Conflict",
+        "fr": "Conflit USA-Israël-Iran"
+      },
+      "description": {
+        "en": "Israel and the US launched Operation 'Roar of the Lion' and 'Epic Fury', combining kinetic strikes with a massive cyberattack that caused a 96% drop in Iran's internet connectivity.",
+        "fr": "Israël et les États-Unis ont lancé les opérations 'Roar of the Lion' et 'Epic Fury', combinant des frappes cinétiques avec une cyberattaque massive qui a provoqué une chute de 96 % de la connectivité Internet en Iran."
+      },
+      "tags": [
+        "Iran",
+        "Cyber Warfare",
+        "Internet Blackout",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188648/cyber-warfare-2/iran-s-internet-near-totally-blacked-out-amid-us-israeli-strikes.html",
+        "https://www.rusi.org/explore-our-research/publications/commentary/rapid-reaction-us-israeli-joint-strikes-iran"
+      ],
+      "date": "2026-03-01"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Canadian Tire",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Retail",
+        "fr": "Commerce de détail"
+      },
+      "description": {
+        "en": "A massive data breach exposed personal details of 38 million accounts, including names, addresses, emails, birth years, and encrypted passwords.",
+        "fr": "Une violation massive de données a exposé les détails personnels de 38 millions de comptes, incluant les noms, adresses, emails, années de naissance et mots de passe chiffrés."
+      },
+      "tags": [
+        "Canadian Tire",
+        "Data Breach",
+        "Retail"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188659/data-breach/canadian-tire-2025-data-breach-impacts-38-million-users.html"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "victim": "South Korea National Tax Service",
+      "threat_actor": "Unknown (Opportunistic)",
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernement"
+      },
+      "description": {
+        "en": "Exposure of a Ledger wallet mnemonic seed phrase in official press release photos led to the theft of $4.8 million in PRTG tokens.",
+        "fr": "L'exposition de la phrase de récupération d'un portefeuille Ledger dans des photos de communiqué de presse officiel a entraîné le vol de 4,8 millions de dollars en jetons PRTG."
+      },
+      "tags": [
+        "South Korea",
+        "Crypto Theft",
+        "Seed Phrase",
+        "OPSEC"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/48m-in-crypto-stolen-after-korean-tax-agency-exposes-wallet-seed/"
+      ],
+      "date": "2026-03-01"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-21902",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "Unknown",
+      "cpe": "cpe:/o:juniper:junos_evolved:25.4",
+      "product": "PTX Series routers running Junos OS Evolved",
+      "vendor": "Juniper Networks",
+      "description": {
+        "en": "Critical 'One Packet to Root' vulnerability in the On-Box Anomaly Detection framework allows unauthenticated root access via a single network request.",
+        "fr": "Vulnérabilité critique 'One Packet to Root' dans le framework On-Box Anomaly Detection permettant un accès root non authentifié via une seule requête réseau."
+      },
+      "tags": [
+        "Critical",
+        "RCE",
+        "Root",
+        "Juniper"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/02/28/cve-2026-21902-juniper-ptx-one-packet-to-root-vulnerability/"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-24731",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.4",
+      "epss": "Unknown",
+      "cpe": "cpe:/h:ev2go:charging_station",
+      "product": "EV2GO Charging Platform",
+      "vendor": "EV2GO",
+      "description": {
+        "en": "WebSocket endpoints lack authentication, allowing attackers to impersonate charging stations and manipulate backend data.",
+        "fr": "Les points de terminaison WebSocket manquent d'authentification, permettant à des attaquants d'usurper l'identité de bornes de recharge et de manipuler les données backend."
+      },
+      "tags": [
+        "IoT",
+        "EV",
+        "Authentication Bypass"
+      ],
+      "sources": [
+        "https://securityonline.info/critical-cisa-advisory-unmasks-severe-flaws-in-ev2go-charging-networks/"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-28562",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "Unknown",
+      "cpe": "cpe:/a:gopro:wpforo",
+      "product": "wpForo Forum",
+      "vendor": "wpForo",
+      "description": {
+        "en": "Unauthenticated SQL injection vulnerability in Topics::get_topics() via the wpfob parameter.",
+        "fr": "Vulnérabilité d'injection SQL non authentifiée dans Topics::get_topics() via le paramètre wpfob."
+      },
+      "tags": [
+        "SQLi",
+        "WordPress",
+        "Plugin"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-28562"
+      ],
+      "date": "2026-03-01"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Malicious QuickLens Chrome Extension",
+        "fr": "Extension Chrome Malveillante QuickLens"
+      },
+      "description": {
+        "en": "The QuickLens extension was compromised to deploy ClickFix attacks and steal crypto-wallet seed phrases from thousands of users.",
+        "fr": "L'extension QuickLens a été compromise pour déployer des attaques ClickFix et voler les phrases de récupération de portefeuilles crypto de milliers d'utilisateurs."
+      },
+      "threat_actor": "LLC Quick Lens (support@doodlebuggle.top)",
+      "indicators": {
+        "URL": [
+          "https://api.extensionanalyticspro[.]top/extensions/callback",
+          "http://google-update[.]icu"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "api.extensionanalyticspro.top",
+          "google-update.icu",
+          "doodlebuggle.top"
+        ],
+        "EMAIL": [
+          "support@doodlebuggle.top"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ClickFix",
+          "QuickLens"
+        ]
+      },
+      "mitre_ttps": [
+        "T1176",
+        "T1566.002",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "A supply chain attack on a legitimate browser extension that leverages social engineering (fake Google Update prompts) to execute malicious code locally and drain crypto assets.",
+        "fr": "Une attaque de la chaîne d'approvisionnement sur une extension de navigateur légitime qui utilise l'ingénierie sociale (faux messages Google Update) pour exécuter du code malveillant localement et vider les actifs crypto."
+      },
+      "recommandations": [
+        {
+          "en": "Remove QuickLens extension immediately and scan for local malware.",
+          "fr": "Supprimer immédiatement l'extension QuickLens et analyser la présence de malwares locaux."
+        },
+        {
+          "en": "Reset all browser-stored passwords and transfer funds to a new crypto wallet.",
+          "fr": "Réinitialiser tous les mots de passe enregistrés dans le navigateur et transférer les fonds vers un nouveau portefeuille crypto."
+        }
+      ],
+      "tags": [
+        "Chrome Extension",
+        "Crypto",
+        "ClickFix"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/quicklens-chrome-extension-steals-crypto-shows-clickfix-attack/"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "title": {
+        "en": "Agent Tesla via Phishing & Process Hollowing",
+        "fr": "Agent Tesla via Phishing et Process Hollowing"
+      },
+      "description": {
+        "en": "A new phishing campaign delivering Agent Tesla credential stealer through business-themed emails using layered scripts that stay in memory.",
+        "fr": "Une nouvelle campagne de phishing diffusant le voleur d'identifiants Agent Tesla via des emails professionnels utilisant des scripts en couches restant en mémoire."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://otx.alienvault.com/pulse/69a37d1f44dd8f812266e935"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "social.raytec.co"
+        ],
+        "EMAIL": [
+          "techbot@social.raytec.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Agent Tesla",
+          "Process Hollowing"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1055.012",
+        "T1059.001"
+      ],
+      "analyse": {
+        "en": "Memory-only execution tactics used to bypass traditional disk-based antivirus scans.",
+        "fr": "Tactiques d'exécution uniquement en mémoire utilisées pour contourner les analyses antivirus traditionnelles basées sur le disque."
+      },
+      "recommandations": [
+        {
+          "en": "Enable MFA for all business email accounts.",
+          "fr": "Activer le MFA pour tous les comptes de messagerie professionnels."
+        },
+        {
+          "en": "Deploy endpoint detection (EDR) capable of monitoring memory process hollowing.",
+          "fr": "Déployer une solution EDR capable de surveiller le 'process hollowing' en mémoire."
+        }
+      ],
+      "tags": [
+        "Agent Tesla",
+        "Phishing",
+        "Memory-only"
+      ],
+      "sources": [
+        "https://social.raytec.co/@techbot/116150981816585858"
+      ],
+      "date": "2026-03-01"
+    }
+  ]
+}
