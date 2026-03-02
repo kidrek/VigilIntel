@@ -1,0 +1,443 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape for March 2, 2026, is dominated by the strategic weaponization of Artificial Intelligence and the emergence of cybercrime 'supergroups.' We observe a critical trend where generative AI (Claude Code) is being used to automate exploits against government infrastructure in Mexico. Simultaneously, the alliance between ShinyHunters, Lapsus$, and Scattered Spider (forming the 'Scattered Lapsus$ Hunters') indicates a shift toward hybrid operations combining sophisticated vishing with traditional data extortion. Vulnerability research shows a massive wave of critical flaws in network appliances (Tenda) and specialized AI/dev tools (Langflow, Angular SSR), emphasizing that the supply chain of both IoT and modern development frameworks remains a high-value target for remote code execution.",
+      "fr": "Le paysage des menaces cyber pour le 2 mars 2026 est dominé par l'instrumentalisation stratégique de l'Intelligence Artificielle et l'émergence de « super-groupes » de cybercriminalité. Nous observons une tendance critique où l'IA générative (Claude Code) est utilisée pour automatiser des exploits contre les infrastructures gouvernementales au Mexique. Simultanément, l'alliance entre ShinyHunters, Lapsus$ et Scattered Spider (formant les 'Scattered Lapsus$ Hunters') indique une transition vers des opérations hybrides combinant du vishing sophistiqué et de l'extorsion de données traditionnelle. La recherche en vulnérabilités montre une vague massive de failles critiques dans les équipements réseau (Tenda) et les outils de développement/IA (Langflow, Angular SSR), soulignant que la chaîne d'approvisionnement de l'IoT et des frameworks de développement modernes reste une cible de choix pour l'exécution de code à distance."
+    },
+    "date": "2026-03-02"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "ShinyHunters",
+      "campaign": "Odido Data Extortion",
+      "campaign_description": {
+        "en": "ShinyHunters leaked a massive dataset from the Dutch telecom provider Odido, impacting 6.1 million users. The leak includes sensitive data such as IBANs, passport numbers, and internal Salesforce records.",
+        "fr": "ShinyHunters a divulgué une base de données massive du fournisseur de télécoms néerlandais Odido, impactant 6,1 millions d'utilisateurs. La fuite comprend des données sensibles telles que des IBAN, des numéros de passeport et des enregistrements Salesforce internes."
+      },
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "modop": {
+        "en": "Data theft from CRM systems (Salesforce), followed by public leak on Tor sites to pressure the victim.",
+        "fr": "Vol de données à partir de systèmes CRM (Salesforce), suivi d'une fuite publique sur des sites Tor pour faire pression sur la victime."
+      },
+      "tags": [
+        "Extortion",
+        "Data Leak",
+        "Telecommunications"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "threat_actor": "Scattered Spider",
+      "campaign": "Vishing Supergroup Recruitment",
+      "campaign_description": {
+        "en": "A supergroup formed by Lapsus$, Scattered Spider, and ShinyHunters is recruiting female callers for high-stakes vishing attacks targeting corporate IT help desks.",
+        "fr": "Un super-groupe formé par Lapsus$, Scattered Spider et ShinyHunters recrute des opératrices pour des attaques de vishing (phishing vocal) ciblant les services d'assistance informatique des entreprises."
+      },
+      "sector": {
+        "en": "Cross-sector (Corporate IT)",
+        "fr": "Multi-sectoriel (IT d'entreprise)"
+      },
+      "modop": {
+        "en": "Social engineering via voice calls to bypass MFA and reset credentials, using gender-specific scripts to disarm help desk staff.",
+        "fr": "Ingénierie sociale via des appels vocaux pour contourner le MFA et réinitialiser les identifiants, utilisant des scripts spécifiques par genre pour désarmer le personnel de l'assistance."
+      },
+      "tags": [
+        "Vishing",
+        "Social Engineering",
+        "MFA Bypass"
+      ],
+      "sources": [
+        "https://securityonline.info/the-new-voice-of-fraud-cybercrime-supergroup-recruits-female-callers-to-breach-corporate-it-help-desks/"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "threat_actor": "INJ3CTOR3",
+      "campaign": "EncystPHP FreePBX Exploitation",
+      "campaign_description": {
+        "en": "Exploitation of CVE-2025-64328 to deploy the EncystPHP web shell on Sangoma FreePBX instances worldwide.",
+        "fr": "Exploitation de la CVE-2025-64328 pour déployer le web shell EncystPHP sur des instances Sangoma FreePBX dans le monde entier."
+      },
+      "sector": {
+        "en": "VoIP / IT Services",
+        "fr": "VoIP / Services IT"
+      },
+      "modop": {
+        "en": "Command injection via endpoint manager, installation of PHP-based web shells for persistence and root access.",
+        "fr": "Injection de commande via le gestionnaire de points de terminaison, installation de web shells PHP pour la persistance et l'accès root."
+      },
+      "tags": [
+        "Web Shell",
+        "Exploitation",
+        "VoIP"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+      ],
+      "date": "2026-03-02"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernement"
+      },
+      "theme": {
+        "en": "AI Weaponization in Mexico",
+        "fr": "Militarisation de l'IA au Mexique"
+      },
+      "description": {
+        "en": "Hackers utilized Anthropic’s Claude Code and OpenAI’s GPT-4 to automate data exfiltration and exploit generation against 10 Mexican government agencies.",
+        "fr": "Des pirates ont utilisé Claude Code d'Anthropic et GPT-4 d'OpenAI pour automatiser l'exfiltration de données et la génération d'exploits contre 10 agences gouvernementales mexicaines."
+      },
+      "tags": [
+        "Mexico",
+        "AI Abuse",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188696/ai/claude-code-abused-to-steal-150gb-in-cyberattack-on-mexican-agencies.html"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "sector": {
+        "en": "Government / Finance",
+        "fr": "Gouvernement / Finance"
+      },
+      "theme": {
+        "en": "South Korean Police Data Leak",
+        "fr": "Fuite de données de la police sud-coréenne"
+      },
+      "description": {
+        "en": "South Korean authorities accidentally exposed mnemonic phrases for seized crypto-wallets in a high-resolution press release photograph, leading to loss of funds.",
+        "fr": "Les autorités sud-coréennes ont accidentellement exposé les phrases mnémoniques de portefeuilles crypto saisis dans une photographie de communiqué de presse haute résolution, entraînant une perte de fonds."
+      },
+      "tags": [
+        "South Korea",
+        "OPSEC failure",
+        "Crypto"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/03/01/south-korean-police-lose-seized-crypto-by-posting-password-online/"
+      ],
+      "date": "2026-03-02"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Odido",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Data breach affecting 6.1 million users, exposing names, addresses, phone numbers, IBANs, and passport details.",
+        "fr": "Violation de données affectant 6,1 millions d'utilisateurs, exposant les noms, adresses, numéros de téléphone, IBAN et détails de passeport."
+      },
+      "tags": [
+        "PII Leak",
+        "Netherlands"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "victim": "KomikoAI",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Technology / AI",
+        "fr": "Technologie / IA"
+      },
+      "description": {
+        "en": "Leak of 1.1 million accounts including AI prompts, emails, and forum posts.",
+        "fr": "Fuite de 1,1 million de comptes comprenant des prompts d'IA, des emails et des messages de forum."
+      },
+      "tags": [
+        "AI Prompts",
+        "Credential Leak"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/KomikoAI"
+      ],
+      "date": "2026-03-02"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-27728",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:oneuptime:oneuptime:*:*:*:*:*:*:*:*",
+      "product": "OneUptime Probe",
+      "vendor": "OneUptime",
+      "description": {
+        "en": "Critical command injection in NetworkPathMonitor component allowing RCE via unsanitized input in diagnostic tools.",
+        "fr": "Injection de commande critique dans le composant NetworkPathMonitor permettant une exécution de code à distance via une entrée non aseptisée dans les outils de diagnostic."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Critical"
+      ],
+      "sources": [
+        "https://securityonline.info/cve-2026-27728-cvss-10-critical-command-injection-flaw-in-oneuptime-probe-enables-full-server-takeover/"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "cve_id": "CVE-2026-27966",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+      "product": "Langflow",
+      "vendor": "Langflow",
+      "description": {
+        "en": "Remote Code Execution (RCE) via the CSV Agent due to hardcoded 'allow_dangerous_code' setting.",
+        "fr": "Exécution de code à distance (RCE) via l'agent CSV en raison du paramètre codé en dur 'allow_dangerous_code'."
+      },
+      "tags": [
+        "vulnerability",
+        "AI",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityonline.info/critical-9-8-flaw-in-langflows-ai-csv-agent-opens-a-direct-path-to-root-shell/"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "cve_id": "CVE-2026-3400",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:h:tenda:ac15:*:*:*:*:*:*:*:*",
+      "product": "AC15",
+      "vendor": "Tenda",
+      "description": {
+        "en": "Stack-based buffer overflow in TextEditingConversion function allowing remote exploitation.",
+        "fr": "Dépassement de tampon basé sur la pile dans la fonction TextEditingConversion permettant une exploitation à distance."
+      },
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "Buffer Overflow"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-3400"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "cve_id": "CVE-2025-64328",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.6",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:sangoma:freepbx:*:*:*:*:*:*:*:*",
+      "product": "FreePBX",
+      "vendor": "Sangoma",
+      "description": {
+        "en": "Post-authentication command injection in endpoint manager interface.",
+        "fr": "Injection de commande post-authentification dans l'interface du gestionnaire de points de terminaison."
+      },
+      "tags": [
+        "vulnerability",
+        "VoIP",
+        "Exploited"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+      ],
+      "date": "2026-03-02"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ClawJacked Attack on OpenClaw AI Agents",
+        "fr": "Attaque ClawJacked sur les agents IA OpenClaw"
+      },
+      "description": {
+        "en": "High-severity flaw (ClawJacked) allows malicious websites to silently brute-force local OpenClaw instances via WebSockets, bypassing rate limiting due to localhost exemptions.",
+        "fr": "Une faille de haute sévérité (ClawJacked) permet à des sites malveillants de forcer brutalement des instances locales d'OpenClaw via des WebSockets, contournant la limitation de débit en raison des exemptions localhost."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "bleepingcomputer.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "OpenClaw",
+          "WebSockets"
+        ]
+      },
+      "mitre_ttps": [
+        "T1110.001",
+        "T1559.003"
+      ],
+      "analyse": {
+        "en": "The vulnerability leverages the default binding of the gateway to localhost. Since browser cross-origin policies don't block localhost WebSockets, an external site can act as a bridge to the local agent.",
+        "fr": "La vulnérabilité exploite la liaison par défaut de la passerelle vers localhost. Comme les politiques cross-origin des navigateurs ne bloquent pas les WebSockets localhost, un site externe peut agir comme un pont vers l'agent local."
+      },
+      "recommandations": [
+        {
+          "en": "Upgrade OpenClaw to version 2026.2.26 or later.",
+          "fr": "Mettre à jour OpenClaw vers la version 2026.2.26 ou ultérieure."
+        },
+        {
+          "en": "Avoid running AI agents with default authentication on exposed local ports.",
+          "fr": "Éviter d'exécuter des agents IA avec l'authentification par défaut sur des ports locaux exposés."
+        }
+      ],
+      "tags": [
+        "AI Agent",
+        "ClawJacked",
+        "Localhost"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "title": {
+        "en": "EncystPHP Web Shell Campaign",
+        "fr": "Campagne de Web Shell EncystPHP"
+      },
+      "description": {
+        "en": "Malicious campaign targeting Sangoma FreePBX instances to install the EncystPHP dropper and maintain persistence through root-level users.",
+        "fr": "Campagne malveillante ciblant les instances Sangoma FreePBX pour installer le dropper EncystPHP et maintenir la persistance via des utilisateurs de niveau root."
+      },
+      "threat_actor": "INJ3CTOR3",
+      "indicators": {
+        "URL": [
+          "http://crm.razatelefonia.pro"
+        ],
+        "IPv4": [
+          "45.234.176.202"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "crm.razatelefonia.pro"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EncystPHP",
+          "Web Shell"
+        ]
+      },
+      "mitre_ttps": [
+        "T1505.003",
+        "T1059.006"
+      ],
+      "analyse": {
+        "en": "The campaign is highly automated, deleting logs and rival web shells upon installation to ensure exclusive control over the compromised PBX.",
+        "fr": "La campagne est hautement automatisée, supprimant les logs et les web shells concurrents dès l'installation pour assurer un contrôle exclusif sur le PBX compromis."
+      },
+      "recommandations": [
+        {
+          "en": "Block the IP 45.234.176.202 and domain crm.razatelefonia.pro.",
+          "fr": "Bloquer l'IP 45.234.176.202 et le domaine crm.razatelefonia.pro."
+        },
+        {
+          "en": "Audit FreePBX instances for unauthorized root users or modified cron jobs.",
+          "fr": "Auditer les instances FreePBX pour détecter des utilisateurs root non autorisés ou des tâches cron modifiées."
+        }
+      ],
+      "tags": [
+        "VoIP",
+        "Webshell",
+        "INJ3CTOR3"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+      ],
+      "date": "2026-03-02"
+    },
+    {
+      "title": {
+        "en": "Minerva Discord Token Stealer",
+        "fr": "Voleur de jetons Discord Minerva"
+      },
+      "description": {
+        "en": "A malicious script (minerva.py) embedded in piracy-related websites designed to steal Discord authentication tokens using OAuth redirection.",
+        "fr": "Un script malveillant (minerva.py) intégré dans des sites liés au piratage, conçu pour voler les jetons d'authentification Discord en utilisant la redirection OAuth."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://minerva-archive.org/auth/discord/callback"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "minerva-archive.org",
+          "myrient.erista.me"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "fcb7f854d0527c7615cb46fe5e0591db2106b0881f616ec9ad770f8474a20b52"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1557.001",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "The script uses OAuth flows to capture tokens, which are then transmitted to non-Discord servers, potentially acting as a honeypot for legal tracking of piracy users.",
+        "fr": "Le script utilise les flux OAuth pour capturer des jetons, qui sont ensuite transmis à des serveurs tiers, agissant potentiellement comme un pot de miel pour le suivi juridique des utilisateurs de sites de piratage."
+      },
+      "recommandations": [
+        {
+          "en": "Review Discord authorized applications and revoke access to 'Minerva Archive'.",
+          "fr": "Vérifier les applications Discord autorisées et révoquer l'accès à 'Minerva Archive'."
+        },
+        {
+          "en": "Monitor for the SHA256 hash in script executions.",
+          "fr": "Surveiller le hachage SHA256 dans les exécutions de scripts."
+        }
+      ],
+      "tags": [
+        "Discord",
+        "Credential Theft",
+        "Piracy"
+      ],
+      "sources": [
+        "https://chaos.social/@agowa338/116157460298380916"
+      ],
+      "date": "2026-03-02"
+    }
+  ]
+}
