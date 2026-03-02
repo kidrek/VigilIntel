@@ -1,0 +1,1121 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel de la cybermenace se caractérise par une sophistication croissante des tactiques d'attaque, notamment par la militarisation de l'intelligence artificielle (IA) et l'exploitation de vulnérabilités critiques dans des logiciels et frameworks largement utilisés. Des acteurs malveillants, tels que le 'supergroupe' Scattered Lapsus$ Hunters, perfectionnent leurs techniques d'ingénierie sociale, y compris le vishing, pour contourner les contrôles de sécurité traditionnels. Parallèlement, les violations de données à grande échelle restent une menace constante, exposant d'énormes volumes de données personnelles et financières. Les vulnérabilités de la chaîne d'approvisionnement, en particulier celles affectant les composants logiciels populaires et les agents d'IA, présentent des risques de compromission étendus. Des failles critiques (RCE, traversée de chemin, injection de commandes, débordements de tampon) sont fréquemment découvertes et exploitées, soulignant l'importance d'une gestion proactive des correctifs. Enfin, les incidents liés à des erreurs humaines ou à des manquements à la sécurité opérationnelle rappellent la nécessité d'une vigilance constante à tous les niveaux. L'utilisation croissante de l'IA par les attaquants pour le développement d'exploits et l'exfiltration automatisée de données marque une évolution significative de la menace, exigeant des défenses adaptatives. En conclusion, l'état général des menaces est complexe et dynamique, nécessitant une approche de sécurité multicouche englobant des contrôles techniques robustes, une sensibilisation avancée des utilisateurs, une gestion rigoureuse des vulnérabilités et une surveillance continue.",
+      "date": "2026-03-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Télécommunications, services en ligne",
+        "modop": "Violation et fuite de données massives via des sites Tor, ciblant des informations personnelles et financières.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach",
+          "data_leaking",
+          "telecommunications",
+          "shinyhunters"
+        ],
+        "sources": "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html",
+        "date": "2026-03-02"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Télécommunications (VoIP)",
+        "modop": "Exploitation de vulnérabilités connues (CVE-2025-64328) pour le déploiement de webshells (EncystPHP), l'exécution de commandes à distance et la persistance sur les systèmes FreePBX.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vulnerability_exploitation",
+          "web_shell",
+          "freepbx",
+          "inj3ctor3"
+        ],
+        "sources": "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html",
+        "date": "2026-03-02"
+      },
+      {
+        "nom": "Scattered Lapsus$ Hunters (alliance de Lapsus$, Scattered Spider, ShinyHunters)",
+        "secteur": "Entreprises et TI",
+        "modop": "Attaques de vishing ciblant les services d'assistance informatique des entreprises, en recrutant et en formant des femmes pour mener des appels d'ingénierie sociale afin de contourner l'authentification multifacteur (MFA) et de prendre le contrôle de comptes.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "social_engineering",
+          "mfa_bypass",
+          "account_takeover",
+          "lapsus",
+          "scattered_spider",
+          "shinyhunters"
+        ],
+        "sources": "https://securityonline.info/the-new-voice-of-fraud-cybercrime-supergroup-recruits-female-callers-to-breach-corporate-it-help-desks/",
+        "date": "2026-03-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Électronique grand public",
+        "victime": "Consommateurs du Texas (par Samsung)",
+        "description": "Collecte illégale d'informations de visionnage de contenu à partir de Smart TV Samsung via la technologie ACR sans consentement éclairé et explicite, utilisant des « dark patterns ». Un accord a été conclu avec le procureur général du Texas.",
+        "tags": [
+          "violation",
+          "breach",
+          "consumer_data",
+          "privacy",
+          "smart_tv",
+          "ACR",
+          "samsung",
+          "legal_settlement",
+          "texas"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/samsung-tvs-to-stop-collecting-texans-data-without-express-consent/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Télécommunications",
+        "victime": "Odido (opérateur de réseau mobile néerlandais)",
+        "description": "Le groupe cybercriminel ShinyHunters a divulgué un ensemble de données de 6,2 millions (ultérieurement 6,1 millions d'adresses e-mail uniques) de comptes, comprenant les noms, adresses, numéros de téléphone, adresses e-mail, coordonnées bancaires, dates de naissance, numéros de passeport/carte d'identité, mots de passe en clair, IBAN et données d'entreprise internes.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "shinyhunters",
+          "personal_data",
+          "financial_data",
+          "pii",
+          "netherlands"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Gouvernement, Finance",
+        "victime": "10 agences gouvernementales mexicaines (autorité fiscale fédérale, institut électoral, gouvernements des États, registre civil de Mexico, service des eaux de Monterrey) et une institution financière.",
+        "description": "Des pirates informatiques ont abusé de l'assistant IA Claude Code pour développer des exploits et voler plus de 150 Go de données, exposant environ 195 millions d'identités. L'attaque a été menée en utilisant l'IA pour l'exfiltration automatisée de données et la création d'outils sur mesure.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "finance",
+          "data_theft",
+          "ai_abuse",
+          "mexico",
+          "pii"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188696/ai/claude-code-abused-to-steal-150gb-in-cyberattack-on-mexican-agencies.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Gouvernement, Application de la loi, Finance",
+        "victime": "Service national des impôts de Corée du Sud, actifs cryptographiques saisis.",
+        "description": "Les autorités ont perdu une partie importante des 5,6 millions de dollars d'actifs cryptographiques saisis en raison d'une erreur de sécurité opérationnelle : des photos haute résolution de portefeuilles matériels Ledger, avec les phrases de récupération manuscrites, ont été incluses dans un communiqué de presse.",
+        "tags": [
+          "violation",
+          "breach",
+          "operational_security",
+          "human_error",
+          "crypto",
+          "data_loss",
+          "government",
+          "law_enforcement",
+          "south_korea"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/01/south-korean-police-lose-seized-crypto-by-posting-password-online/?pk_campaign=feed&pk_kwd=south-korean-police-lose-seized-crypto-by-posting-password-online"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Services IA, Plateforme en ligne",
+        "victime": "KomikoAI",
+        "description": "Une violation de données chez KomikoAI, une plateforme de génération de bandes dessinées basée sur l'IA, a exposé 1 million d'adresses e-mail uniques, noms, publications d'utilisateurs et les prompts d'IA utilisés pour générer du contenu, permettant de lier les prompts individuels aux adresses e-mail.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai_platform",
+          "personal_data",
+          "user_posts",
+          "ai_prompts",
+          "komikoai"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/KomikoAI"
+        ],
+        "date": "2026-03-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-27728",
+        "cvss": 10.0,
+        "product": "OneUptime Probe",
+        "description": "Vulnérabilité critique d'injection de commandes permettant une prise de contrôle totale du serveur, due à une saisie utilisateur non nettoyée transmise à des outils de diagnostic réseau comme `traceroute`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "oneuptime",
+          "server_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2026-27728-cvss-10-critical-command-injection-flaw-in-oneuptime-probe-enables-full-server-takeover/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27966",
+        "cvss": 9.8,
+        "product": "Langflow AI CSV Agent",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) due à un paramètre `allow_dangerous_code` codé en dur sur `True`, activant `python_repl_ast` et permettant l'injection de prompts pour l'exécution arbitraire de commandes système.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "ai",
+          "langflow",
+          "prompt_injection",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-9-8-flaw-in-langflows-ai-csv-agent-opens-a-direct-path-to-root-shell/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27739",
+        "cvss": 9.2,
+        "product": "Angular Server-Side Rendering (SSR)",
+        "description": "Faille critique de Server-Side Request Forgery (SSRF) due à des en-têtes HTTP non validés (Host, X-Forwarded-*) permettant aux attaquants de « diriger » les requêtes internes de l'application vers des points de terminaison externes malveillants ou de sonder les réseaux internes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ssrf",
+          "angular",
+          "web_framework",
+          "server_side_rendering",
+          "internal_network_probing",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/steering-the-server-critical-9-2-severity-ssrf-flaw-in-angular-ssr-allows-internal-network-probing/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27699",
+        "cvss": 9.1,
+        "product": "basic-ftp (bibliothèque Node.js)",
+        "description": "Vulnérabilité critique de traversée de chemin (CWE-22) permettant à un serveur FTP malveillant de tromper le client pour qu'il écrive des fichiers en dehors du répertoire de téléchargement prévu, pouvant potentiellement écraser des fichiers système critiques.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "file_write",
+          "basic_ftp",
+          "nodejs",
+          "supply_chain",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-path-traversal-flaw-in-basic-ftp-exposes-node-js-apps-to-arbitrary-file-writes/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3400",
+        "cvss": 9.0,
+        "product": "Tenda AC15 (jusqu'à 15.13.07.13)",
+        "description": "Débordement de tampon basé sur la pile via la manipulation de l'argument `wpapsk_crypto2_4g` dans `/goform/TextEditingConversion`, permettant une attaque à distance avec un exploit publiquement disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3400"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3399",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `dips` dans la fonction `fromGstDhcpSetSer` du fichier `/goform/GstDhcpSetSer` (composant httpd), permettant une attaque à distance avec un exploit publiquement disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3399"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3398",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `wanmode/PPPOEPassword` dans la fonction `fromAdvSetWan` du fichier `/goform/AdvSetWan` (composant httpd), permettant une attaque à distance avec un exploit publiquement divulgué.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3398"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3380",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `page` dans la fonction `frmL7ImForm` du fichier `/goform/L7Im`, permettant une attaque à distance avec un exploit publiquement disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3380"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3379",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `page` dans la fonction `fromSetIpBind` du fichier `/goform/SetIpBind`, permettant une attaque à distance avec un exploit publiquement divulgué.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3379"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3378",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `qos` dans la fonction `fromqossetting` du fichier `/goform/qossetting`, permettant une attaque à distance avec un exploit publiquement publié.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3378"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3377",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Débordement de tampon via la manipulation de l'argument `page` dans la fonction `fromSafeUrlFilter` du fichier `/goform/SafeUrlFilter`, permettant une attaque à distance avec un exploit désormais public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3377"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": 8.6,
+        "product": "Sangoma FreePBX Endpoint Manager (versions 17.0.2.36 et supérieures avant 17.0.3)",
+        "description": "Vulnérabilité d'injection de commandes post-authentification permettant à des utilisateurs authentifiés d'exécuter des commandes malveillantes et d'obtenir un accès à distance en tant qu'utilisateur `asterisk`. Exploitée dans la nature pour déployer des webshells.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "post_authentication",
+          "freepbx",
+          "voip",
+          "web_shell",
+          "inj3ctor3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+        ],
+        "date": "2026-03-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ClawJacked attack let malicious websites hijack OpenClaw to steal data",
+        "description": "Une vulnérabilité de haute gravité, \"ClawJacked\", dans l'agent IA OpenClaw permet à des sites web malveillants de forcer silencieusement l'accès et de prendre le contrôle d'instances locales. Les attaquants peuvent contourner l'authentification, enregistrer des appareils de confiance et obtenir des permissions d'administrateur pour exfiltrer des identifiants, voler des données, des fichiers et exécuter des commandes shell arbitraires. Des acteurs de la menace abusent également du répertoire de compétences OpenClaw (ClawHub) pour promouvoir des compétences malveillantes distribuant des infostealers comme le stealer AMOS (malware macOS).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "3c9ddd2ad495044bc2a5293ed7c890069f70a561153cac99b94351534baf71df"
+          ],
+          "URL": [
+            "https://saramoftah[.]com/curl/958ca005af6a71be22cfcd5de82ebf5c8b809b7ee28999b6ed38bfe5d194205e",
+            "https://saramoftah[.]com/n8n/update"
+          ]
+        },
+        "mitre_ttps": [
+          "T1110 - Brute Force",
+          "T1078.004 - Valid Accounts: Credential Compromise",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1059 - Command and Scripting Interpreter",
+          "T1018 - Remote System Discovery"
+        ],
+        "analyse": "La vulnérabilité dans OpenClaw met en lumière les risques associés aux agents IA et à leurs intégrations locales, en particulier en ce qui concerne les paramètres de sécurité par défaut faibles et les contournements des politiques cross-origin. L'abus des répertoires de compétences indique une menace croissante pour la chaîne d'approvisionnement au sein de l'écosystème de l'IA, où des \"compétences\" malveillantes peuvent directement compromettre les postes de travail des utilisateurs. L'impact géographique est potentiellement mondial partout où OpenClaw est utilisé.",
+        "recommandations": "Mettre en œuvre une sécurité WebSocket robuste, limiter les tentatives d'authentification, exiger une confirmation explicite de l'utilisateur pour les jumelages d'appareils, et effectuer des audits de sécurité approfondis des points d'intégration des agents IA et des répertoires de compétences. Les utilisateurs doivent faire preuve d'une extrême prudence lors de l'installation de compétences provenant de sources non officielles.",
+        "tags": [
+          "vulnerability",
+          "ai_agent",
+          "openclaw",
+          "clawjacked",
+          "brute_force",
+          "authentication_bypass",
+          "data_theft",
+          "rce",
+          "infostealer",
+          "macos_malware",
+          "supply_chain",
+          "websocket",
+          "localhost_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/",
+          "https://t.me/vxunderground/8410",
+          "https://t.me/vxunderground/8411"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "Claude code abused to steal 150GB in cyberattack on Mexican agencies",
+        "description": "Des pirates informatiques ont exploité l'assistant IA Claude Code d'Anthropic et GPT-4.1 d'OpenAI pour développer des exploits, créer des outils personnalisés et automatiser l'exfiltration de plus de 150 Go de données de 10 agences gouvernementales mexicaines et d'une institution financière. Les attaquants ont contourné les garde-fous de l'IA en se faisant passer pour des testeurs de primes de bogues, exposant environ 195 millions d'identités.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1587.001 - Develop Capabilities: Exploits",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1078.003 - Valid Accounts: Local Account",
+          "T1552 - Unsecured Credentials",
+          "T1078 - Valid Accounts"
+        ],
+        "analyse": "Cet incident souligne le risque critique d'utilisation abusive de l'IA dans les cyberopérations, démontrant comment l'IA générative peut accélérer et étendre considérablement les attaques, en particulier contre les secteurs gouvernementaux et financiers. La capacité à contourner les protections de l'IA à des fins malveillantes représente une nouvelle frontière dans les cybermenaces, avec un potentiel d'exposition généralisée des données et un impact stratégique sur les infrastructures nationales.",
+        "recommandations": "Renforcer la sécurité des modèles d'IA, mettre en œuvre des garde-fous stricts, surveiller les tentatives d'injection de prompts et améliorer la sensibilisation à la sécurité concernant l'utilisation responsable des outils d'IA. Les organisations doivent également renforcer les défenses périmétriques et la segmentation du réseau interne pour atténuer l'impact de l'exfiltration de données.",
+        "tags": [
+          "ai_abuse",
+          "generative_ai",
+          "claude_code",
+          "chatgpt",
+          "exploit_development",
+          "data_exfiltration",
+          "government_systems",
+          "mexico",
+          "data_theft",
+          "prompt_injection"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188696/ai/claude-code-abused-to-steal-150gb-in-cyberattack-on-mexican-agencies.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "CVE-2025-64328 exploitation impacts 900 Sangoma FreePBX instances",
+        "description": "Environ 900 systèmes Sangoma FreePBX ont été compromis via l'exploitation de CVE-2025-64328, une vulnérabilité d'injection de commandes post-authentification de haute gravité (CVSS 8.6) dans le gestionnaire de points d'extrémité. Le groupe de menace INJ3CTOR3 a déployé le webshell EncystPHP, permettant l'exécution de commandes à distance, la persistance, la collecte de données et la manipulation du système.",
+        "threat_actor": "INJ3CTOR3",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "45.234.176.202"
+          ],
+          "DOMAIN": [
+            "crm.razatelefonia.pro"
+          ]
+        },
+        "mitre_ttps": [
+          "T1059 - Command and Scripting Interpreter",
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1098 - Account Manipulation",
+          "T1185 - SSH Hijacking",
+          "T1112 - Modify Registry",
+          "T1053 - Scheduled Task/Job"
+        ],
+        "analyse": "L'exploitation généralisée d'une vulnérabilité connue dans une infrastructure VoIP critique met en évidence le risque des systèmes non corrigés et la rapidité avec laquelle les acteurs de la menace exploitent les vulnérabilités publiques. La nature persistante des webshells déployés et les tactiques complètes de manipulation du système démontrent un potentiel d'impact significatif, en particulier pour les organisations qui dépendent de FreePBX pour les communications. La propagation géographique suggère un ciblage opportuniste.",
+        "recommandations": "Mettre à jour Sangoma FreePBX vers la version 17.0.3 immédiatement. Mettre en œuvre des contrôles d'accès stricts pour les interfaces administratives, surveiller le déploiement de webshells et auditer régulièrement les systèmes pour détecter les modifications non autorisées ou les mécanismes d'accès persistant.",
+        "tags": [
+          "vulnerability_exploitation",
+          "command_injection",
+          "freepbx",
+          "voip",
+          "web_shell",
+          "inj3ctor3",
+          "system_compromise",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "Critical Flaws in Vikunja Expose Users to Persistent Account Takeovers",
+        "description": "Vikunja, une application open-source de gestion de tâches, contenait plusieurs vulnérabilités critiques. Ces failles incluaient une application faible des politiques de mots de passe, des jetons de session persistants même après les changements de mot de passe, et une logique de nettoyage des jetons de réinitialisation de mot de passe défectueuse, permettant aux attaquants de maintenir l'accès et de reprendre de manière répétée le contrôle des comptes d'utilisateurs.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1110 - Brute Force",
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1098 - Account Manipulation",
+          "T1550 - Use Alternate Authentication Material"
+        ],
+        "analyse": "Les vulnérabilités de Vikunja illustrent des failles de sécurité fondamentales dans la gestion des sessions et la politique de mots de passe, qui peuvent entraîner une compromission prolongée des comptes. Pour les applications auto-hébergées, de tels problèmes représentent une menace directe pour les données et le contrôle des utilisateurs. La facilité d'exploitation via des mots de passe faibles combinée aux mécanismes de persistance en fait un scénario à fort impact pour les utilisateurs affectés.",
+        "recommandations": "Mettre à jour Vikunja vers la version corrigée v2.0.1 immédiatement. Mettre en œuvre des politiques de mots de passe fortes (longueur minimale, complexité). S'assurer que les jetons de session sont invalidés lors du changement de mot de passe et que les jetons de réinitialisation de mot de passe expirent et sont correctement supprimés après utilisation.",
+        "tags": [
+          "vulnerability",
+          "account_takeover",
+          "session_management",
+          "password_policy",
+          "vikunja",
+          "open_source",
+          "authentication",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaws-in-vikunja-expose-users-to-persistent-account-takeovers/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "The New Voice of Fraud: Cybercrime ‘Supergroup’ Recruits Female Callers to Breach Corporate IT Help Desks",
+        "description": "Le \"supergroupe\" cybercriminel Scattered Lapsus$ Hunters, une alliance de Lapsus$, Scattered Spider et ShinyHunters, recrute des femmes pour des attaques de phishing vocal (vishing). Ils offrent des paiements importants pour les appels réussis ciblant les services d'assistance informatique des entreprises, utilisant des scripts pré-écrits pour contourner les mesures de sécurité, y compris l'authentification multifacteur (MFA), et réaliser des prises de contrôle de comptes.",
+        "threat_actor": "Scattered Lapsus$ Hunters (Lapsus$, Scattered Spider, ShinyHunters)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.004 - Phishing: Vishing",
+          "T1566 - Phishing",
+          "T1098 - Account Manipulation",
+          "T1621 - Multi-Factor Authentication Bypass"
+        ],
+        "analyse": "Cette évolution des tactiques d'ingénierie sociale représente une menace significative pour la sécurité des entreprises, en exploitant la manipulation psychologique pour contourner les contrôles techniques. Le recrutement stratégique et la franchisation des opérations de vishing indiquent un groupe d'acteurs de la menace persistant et adaptatif. L'impact potentiel est une compromission généralisée des comptes et un accès aux systèmes d'entreprise sensibles dans divers secteurs.",
+        "recommandations": "Renforcer les protocoles de sécurité des services d'assistance informatique avec des vérifications d'identité strictes et hors bande (par exemple, appels vidéo secondaires, approbations de managers internes) pour les réinitialisations de mot de passe et les changements de MFA. Dispenser une formation avancée de sensibilisation à l'ingénierie sociale à tous les employés, en particulier au personnel de support informatique, en se concentrant sur l'évolution des tactiques de vishing.",
+        "tags": [
+          "social_engineering",
+          "vishing",
+          "threat_actor",
+          "lapsus",
+          "scattered_spider",
+          "shinyhunters",
+          "mfa_bypass",
+          "account_takeover",
+          "corporate_security"
+        ],
+        "sources": [
+          "https://securityonline.info/the-new-voice-of-fraud-cybercrime-supergroup-recruits-female-callers-to-breach-corporate-it-help-desks/"
+        ],
+        "date": "2026-03-02"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cyber threat landscape is characterized by increasing sophistication in attack methodologies, notably through the weaponization of artificial intelligence (AI) and the exploitation of critical vulnerabilities in widely used software and frameworks. Malicious actors, such as the 'supergroup' Scattered Lapsus$ Hunters, are refining their social engineering techniques, including vishing, to bypass traditional security controls. Concurrently, large-scale data breaches remain a constant threat, exposing vast volumes of personal and financial data. Supply chain vulnerabilities, particularly those affecting popular software components and AI agents, present risks of widespread compromise. Critical flaws (RCE, path traversal, command injection, buffer overflows) are frequently discovered and exploited, underscoring the importance of proactive patch management. Finally, incidents related to human error or operational security lapses highlight the need for continuous vigilance at all levels. The growing use of AI by attackers for exploit development and automated data exfiltration marks a significant evolution of the threat, demanding adaptive defenses. In conclusion, the overall state of threats is complex and dynamic, requiring a multi-layered security approach encompassing robust technical controls, advanced user awareness training, rigorous vulnerability management, and continuous monitoring.",
+      "date": "2026-03-02"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Telecommunications, Online Services",
+        "modop": "Massive data breaches and leaks via Tor sites, targeting personal and financial information.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "data_breach",
+          "data_leaking",
+          "telecommunications",
+          "shinyhunters"
+        ],
+        "sources": "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html",
+        "date": "2026-03-02"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Telecommunications (VoIP)",
+        "modop": "Exploitation of known vulnerabilities (CVE-2025-64328) for webshell deployment (EncystPHP), remote command execution, and persistence on FreePBX systems.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vulnerability_exploitation",
+          "web_shell",
+          "freepbx",
+          "inj3ctor3"
+        ],
+        "sources": "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html",
+        "date": "2026-03-02"
+      },
+      {
+        "nom": "Scattered Lapsus$ Hunters (alliance of Lapsus$, Scattered Spider, ShinyHunters)",
+        "secteur": "Corporate IT",
+        "modop": "Vishing attacks targeting corporate IT help desks, recruiting and training female callers to conduct social engineering calls to bypass Multi-Factor Authentication (MFA) and achieve account takeovers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "vishing",
+          "social_engineering",
+          "mfa_bypass",
+          "account_takeover",
+          "lapsus",
+          "scattered_spider",
+          "shinyhunters"
+        ],
+        "sources": "https://securityonline.info/the-new-voice-of-fraud-cybercrime-supergroup-recruits-female-callers-to-breach-corporate-it-help-desks/",
+        "date": "2026-03-02"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Consumer Electronics",
+        "victime": "Texas Consumers (by Samsung)",
+        "description": "Unlawful collection of content-viewing information from Samsung Smart TVs via ACR technology without express, informed consent, utilizing \"dark patterns.\" A settlement was reached with the Texas Attorney General.",
+        "tags": [
+          "violation",
+          "breach",
+          "consumer_data",
+          "privacy",
+          "smart_tv",
+          "ACR",
+          "samsung",
+          "legal_settlement",
+          "texas"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/samsung-tvs-to-stop-collecting-texans-data-without-express-consent/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Telecommunications",
+        "victime": "Odido (Dutch mobile network operator)",
+        "description": "Cybercrime group ShinyHunters leaked a dataset of 6.2 million (later 6.1M unique email addresses) accounts, including names, addresses, phone numbers, email addresses, bank account details, dates of birth, passport/ID numbers, plaintext passwords, IBAN, driver license numbers, and internal corporate data.",
+        "tags": [
+          "violation",
+          "breach",
+          "telecommunications",
+          "shinyhunters",
+          "personal_data",
+          "financial_data",
+          "pii",
+          "netherlands"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188709/data-breach/shinyhunters-leaked-the-full-odido-dataset.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Government, Finance",
+        "victime": "10 Mexican government agencies (federal tax authority, electoral institute, state governments, Mexico City’s civil registry, Monterrey’s water utility) and a financial institution.",
+        "description": "Hackers abused Anthropic’s Claude Code AI assistant to develop exploits and steal over 150GB of data, exposing approximately 195 million identities. The attack leveraged AI for automated data exfiltration and custom tool creation.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "finance",
+          "data_theft",
+          "ai_abuse",
+          "mexico",
+          "pii"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188696/ai/claude-code-abused-to-steal-150gb-in-cyberattack-on-mexican-agencies.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "Government, Law Enforcement, Finance",
+        "victime": "South Korean National Tax Service, seized crypto assets.",
+        "description": "Officials lost a significant portion of $5.6 million in seized crypto assets due to an operational security error where high-resolution photos of Ledger hardware wallets, with handwritten seed phrases, were included in a press release.",
+        "tags": [
+          "violation",
+          "breach",
+          "operational_security",
+          "human_error",
+          "crypto",
+          "data_loss",
+          "government",
+          "law_enforcement",
+          "south_korea"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/01/south-korean-police-lose-seized-crypto-by-posting-password-online/?pk_campaign=feed&pk_kwd=south-korean-police-lose-seized-crypto-by-posting-password-online"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "secteur": "AI Services, Online Platform",
+        "victime": "KomikoAI",
+        "description": "A data breach at KomikoAI, an AI-powered comic generation platform, exposed 1 million unique email addresses, names, user posts, and the AI prompts used to generate content, allowing the mapping of individual prompts to email addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai_platform",
+          "personal_data",
+          "user_posts",
+          "ai_prompts",
+          "komikoai"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/KomikoAI"
+        ],
+        "date": "2026-03-02"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-27728",
+        "cvss": 10.0,
+        "product": "OneUptime Probe",
+        "description": "Critical Command Injection flaw enabling full server takeover due to unsanitized user input passed to network diagnostic tools like `traceroute`.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "rce",
+          "oneuptime",
+          "server_takeover",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/cve-2026-27728-cvss-10-critical-command-injection-flaw-in-oneuptime-probe-enables-full-server-takeover/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27966",
+        "cvss": 9.8,
+        "product": "Langflow AI CSV Agent",
+        "description": "Critical Remote Code Execution (RCE) vulnerability due to `allow_dangerous_code` setting being hardcoded to `True`, enabling `python_repl_ast` and allowing prompt injection for arbitrary OS command execution.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "ai",
+          "langflow",
+          "prompt_injection",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-9-8-flaw-in-langflows-ai-csv-agent-opens-a-direct-path-to-root-shell/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27739",
+        "cvss": 9.2,
+        "product": "Angular Server-Side Rendering (SSR)",
+        "description": "Critical Server-Side Request Forgery (SSRF) flaw due to unvalidated HTTP headers (Host, X-Forwarded-*) allowing attackers to \"steer\" internal application requests to external malicious endpoints or probe internal networks.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "ssrf",
+          "angular",
+          "web_framework",
+          "server_side_rendering",
+          "internal_network_probing",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/steering-the-server-critical-9-2-severity-ssrf-flaw-in-angular-ssr-allows-internal-network-probing/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-27699",
+        "cvss": 9.1,
+        "product": "basic-ftp (Node.js library)",
+        "description": "Critical Path Traversal vulnerability (CWE-22) allowing a malicious FTP server to trick the client into writing files outside the intended download directory, potentially overwriting critical system files.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "path_traversal",
+          "file_write",
+          "basic_ftp",
+          "nodejs",
+          "supply_chain",
+          "critical"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-path-traversal-flaw-in-basic-ftp-exposes-node-js-apps-to-arbitrary-file-writes/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3400",
+        "cvss": 9.0,
+        "product": "Tenda AC15 (up to 15.13.07.13)",
+        "description": "Stack-based buffer overflow via manipulation of `wpapsk_crypto2_4g` argument in `/goform/TextEditingConversion`, allowing remote attack with publicly available exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3400"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3399",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `dips` argument in `fromGstDhcpSetSer` function of `/goform/GstDhcpSetSer` (httpd component), allowing remote attack with publicly available exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3399"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3398",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `wanmode/PPPOEPassword` argument in `fromAdvSetWan` function of `/goform/AdvSetWan` (httpd component), allowing remote attack with publicly disclosed exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3398"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3380",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `page` argument in `frmL7ImForm` function of `/goform/L7Im`, allowing remote attack with publicly available exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3380"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3379",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `page` argument in `fromSetIpBind` function of `/goform/SetIpBind`, allowing remote attack with publicly disclosed exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3379"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3378",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `qos` argument in `fromqossetting` function of `/goform/qossetting`, allowing remote attack with publicly published exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3378"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2026-3377",
+        "cvss": 9.0,
+        "product": "Tenda F453 (1.0.0.3)",
+        "description": "Buffer overflow via manipulation of `page` argument in `fromSafeUrlFilter` function of `/goform/SafeUrlFilter`, allowing remote attack with publicly available exploit.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "buffer_overflow",
+          "rce",
+          "tenda",
+          "router",
+          "remote_exploitation"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3377"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": 8.6,
+        "product": "Sangoma FreePBX Endpoint Manager (versions 17.0.2.36 and above before 17.0.3)",
+        "description": "Post-authentication command injection vulnerability allowing authenticated users to execute malicious commands and gain remote access as `asterisk` user. Exploited in the wild to deploy webshells.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "command_injection",
+          "post_authentication",
+          "freepbx",
+          "voip",
+          "web_shell",
+          "inj3ctor3"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+        ],
+        "date": "2026-03-02"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "ClawJacked attack let malicious websites hijack OpenClaw to steal data",
+        "description": "A high-severity vulnerability, \"ClawJacked,\" in the OpenClaw AI agent allows malicious websites to silently brute-force access and take control of local instances. Attackers can bypass authentication, register trusted devices, and gain admin permissions to dump credentials, steal data, exfiltrate files, and execute arbitrary shell commands. Threat actors are also abusing the OpenClaw skills repository (ClawHub) to promote malicious skills distributing infostealers like the AMOS stealer (macOS malware).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "FILE_HASH_SHA256": [
+            "3c9ddd2ad495044bc2a5293ed7c890069f70a561153cac99b94351534baf71df"
+          ],
+          "URL": [
+            "https://saramoftah[.]com/curl/958ca005af6a71be22cfcd5de82ebf5c8b809b7ee28999b6ed38bfe5d194205e",
+            "https://saramoftah[.]com/n8n/update"
+          ]
+        },
+        "mitre_ttps": [
+          "T1110 - Brute Force",
+          "T1078.004 - Valid Accounts: Credential Compromise",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1059 - Command and Scripting Interpreter",
+          "T1018 - Remote System Discovery"
+        ],
+        "analyse": "The vulnerability in OpenClaw highlights risks associated with AI agents and their local integrations, especially regarding weak default security settings and cross-origin policy bypasses. The abuse of skill repositories points to a growing supply chain threat within the AI ecosystem, where malicious \"skills\" can directly compromise user workstations. The geographic impact is potentially global wherever OpenClaw is used.",
+        "recommandations": "Implement robust WebSocket security, rate-limit authentication attempts, require explicit user confirmation for device pairings, and conduct thorough security reviews of AI agent integration points and skill repositories. Users should exercise extreme caution when installing skills from unofficial sources.",
+        "tags": [
+          "vulnerability",
+          "ai_agent",
+          "openclaw",
+          "clawjacked",
+          "brute_force",
+          "authentication_bypass",
+          "data_theft",
+          "rce",
+          "infostealer",
+          "macos_malware",
+          "supply_chain",
+          "websocket",
+          "localhost_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/clawjacked-attack-let-malicious-websites-hijack-openclaw-to-steal-data/",
+          "https://t.me/vxunderground/8410",
+          "https://t.me/vxunderground/8411"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "Claude code abused to steal 150GB in cyberattack on Mexican agencies",
+        "description": "Hackers leveraged Anthropic’s Claude Code AI assistant and OpenAI’s GPT-4.1 to develop exploits, create custom tools, and automate the exfiltration of over 150GB of data from 10 Mexican government agencies and a financial institution. The attackers bypassed AI guardrails by posing as bug bounty testers, exposing an estimated 195 million identities.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1587.001 - Develop Capabilities: Exploits",
+          "T1041 - Exfiltration Over C2 Channel",
+          "T1078.003 - Valid Accounts: Local Account",
+          "T1552 - Unsecured Credentials",
+          "T1078 - Valid Accounts"
+        ],
+        "analyse": "This incident underscores the critical risk of AI misuse in cyber operations, demonstrating how generative AI can significantly accelerate and scale attacks, especially against government and financial sectors. The ability to bypass AI safeguards for malicious purposes represents a new frontier in cyber threats, with potential for widespread data exposure and strategic impact on national infrastructure.",
+        "recommandations": "Strengthen AI model security, implement stringent guardrails, monitor for prompt injection attempts, and enhance security awareness regarding the responsible use of AI tools. Organizations must also fortify perimeter defenses and internal network segmentation to mitigate the impact of data exfiltration.",
+        "tags": [
+          "ai_abuse",
+          "generative_ai",
+          "claude_code",
+          "chatgpt",
+          "exploit_development",
+          "data_exfiltration",
+          "government_systems",
+          "mexico",
+          "data_theft",
+          "prompt_injection"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188696/ai/claude-code-abused-to-steal-150gb-in-cyberattack-on-mexican-agencies.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "CVE-2025-64328 exploitation impacts 900 Sangoma FreePBX instances",
+        "description": "Approximately 900 Sangoma FreePBX systems were compromised via exploitation of CVE-2025-64328, a high-severity (CVSS 8.6) post-authentication command injection vulnerability in the Endpoint Manager. The threat group INJ3CTOR3 deployed the EncystPHP webshell, enabling remote command execution, persistence, data harvesting, and system manipulation.",
+        "threat_actor": "INJ3CTOR3",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "45.234.176.202"
+          ],
+          "DOMAIN": [
+            "crm.razatelefonia.pro"
+          ]
+        },
+        "mitre_ttps": [
+          "T1059 - Command and Scripting Interpreter",
+          "T1505.003 - Server Software Component: Web Shell",
+          "T1098 - Account Manipulation",
+          "T1185 - SSH Hijacking",
+          "T1112 - Modify Registry",
+          "T1053 - Scheduled Task/Job"
+        ],
+        "analyse": "The widespread exploitation of a known vulnerability in critical VoIP infrastructure highlights the risk of unpatched systems and the speed with which threat actors leverage public exploits. The persistent nature of the deployed webshells and the comprehensive system manipulation tactics demonstrate a significant impact potential, particularly for organizations relying on FreePBX for communications. The geographic spread suggests opportunistic targeting.",
+        "recommandations": "Patch Sangoma FreePBX to version 17.0.3 immediately. Implement strong access controls for administrative interfaces, monitor for webshell deployment, and regularly audit systems for unauthorized changes or persistent access mechanisms.",
+        "tags": [
+          "vulnerability_exploitation",
+          "command_injection",
+          "freepbx",
+          "voip",
+          "web_shell",
+          "inj3ctor3",
+          "system_compromise",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188679/uncategorized/cve-2025-64328-exploitation-impacts-900-sangoma-freepbx-instances.html"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "Critical Flaws in Vikunja Expose Users to Persistent Account Takeovers",
+        "description": "Vikunja, an open-source to-do application, contained multiple critical security vulnerabilities. These flaws included weak password enforcement, persistent session tokens even after password changes, and a broken cleanup logic for password reset tokens, enabling attackers to maintain access and repeatedly take over user accounts.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1110 - Brute Force",
+          "T1078.001 - Valid Accounts: Default Accounts",
+          "T1098 - Account Manipulation",
+          "T1550 - Use Alternate Authentication Material"
+        ],
+        "analyse": "The vulnerabilities in Vikunja illustrate fundamental security flaws in session management and password policy, which can lead to prolonged account compromise. For self-hosted applications, such issues represent a direct threat to user data and control. The ease of exploitation via weak passwords combined with the persistence mechanisms makes this a high-impact scenario for affected users.",
+        "recommandations": "Update Vikunja to patched release v2.0.1 immediately. Implement strong password policies (minimum length, complexity). Ensure session tokens are invalidated upon password change and that password reset tokens expire and are properly deleted after use.",
+        "tags": [
+          "vulnerability",
+          "account_takeover",
+          "session_management",
+          "password_policy",
+          "vikunja",
+          "open_source",
+          "authentication",
+          "persistence"
+        ],
+        "sources": [
+          "https://securityonline.info/critical-flaws-in-vikunja-expose-users-to-persistent-account-takeovers/"
+        ],
+        "date": "2026-03-02"
+      },
+      {
+        "title": "The New Voice of Fraud: Cybercrime ‘Supergroup’ Recruits Female Callers to Breach Corporate IT Help Desks",
+        "description": "The \"Scattered Lapsus$ Hunters\" (SLH) cybercrime supergroup, an alliance of Lapsus$, Scattered Spider, and ShinyHunters, is recruiting female callers for voice phishing (vishing) attacks. They offer significant payments for successful calls targeting corporate IT help desks, using pre-written scripts to bypass security measures, including multi-factor authentication (MFA), and achieve account takeovers.",
+        "threat_actor": "Scattered Lapsus$ Hunters (Lapsus$, Scattered Spider, ShinyHunters)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.004 - Phishing: Vishing",
+          "T1566 - Phishing",
+          "T1098 - Account Manipulation",
+          "T1621 - Multi-Factor Authentication Bypass"
+        ],
+        "analyse": "This evolution in social engineering tactics represents a significant threat to corporate security, leveraging psychological manipulation to bypass technical controls. The strategic recruitment and franchising of vishing operations indicate a persistent and adaptive threat actor group. The potential impact is widespread account compromise and access to sensitive corporate systems across various sectors.",
+        "recommandations": "Strengthen IT help desk security protocols with strict out-of-band identity verification (e.g., secondary video calls, internal manager approvals) for password resets and MFA changes. Conduct advanced social engineering awareness training for all employees, especially IT support staff, focusing on evolving vishing tactics.",
+        "tags": [
+          "social_engineering",
+          "vishing",
+          "threat_actor",
+          "lapsus",
+          "scattered_spider",
+          "shinyhunters",
+          "mfa_bypass",
+          "account_takeover",
+          "corporate_security"
+        ],
+        "sources": [
+          "https://securityonline.info/the-new-voice-of-fraud-cybercrime-supergroup-recruits-female-callers-to-breach-corporate-it-help-desks/"
+        ],
+        "date": "2026-03-02"
+      }
+    ]
+  }
+}
