@@ -1,0 +1,2649 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage des menaces cyber est marqué par une intensité croissante, étroitement liée aux tensions géopolitiques mondiales. L'exploitation de l'intelligence artificielle se confirme comme un vecteur majeur pour les attaquants, que ce soit pour orchestrer des campagnes sophistiquées (CyberStrikeAI), créer de fausses identités (OnlyFake) ou exploiter de nouvelles surfaces d'attaque introduites par l'intégration de l'IA dans les navigateurs (Chrome Gemini). Les vulnérabilités critiques, souvent liées à l'authentification, l'exécution de code à distance ou les injections SQL, continuent d'offrir des points d'entrée privilégiés. Les acteurs de la menace sont diversifiés, allant des groupes étatiques sophistiqués (APT28, APT37, groupes liés à la Chine) aux cybercriminels opportunistes (ShinyHunters, INC Ransom, groupes de vol d'informations) et aux hacktivistes, chacun adaptant ses méthodes aux cibles et aux contextes. Les attaques de la chaîne d'approvisionnement restent une préoccupation majeure, tout comme les campagnes de désinformation et de guerre de l'information dans les zones de conflit. Les violations de données sont persistantes, touchant des secteurs variés comme la santé, l'éducation et les services en ligne, avec une mention particulière des menaces internes. En conclusion, l'état général des menaces est élevé, nécessitant une vigilance constante, des stratégies de défense multicouches et une réactivité rapide face aux innovations techniques des adversaires.",
+      "date": "2026-03-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT28 (Fancy Bear)",
+        "secteur": "Gouvernement (Ukraine, Slovaquie, Roumanie), potentiellement large",
+        "modop": "Exploitation de vulnérabilités zero-day MSHTML (CVE-2026-21513) via fichiers LNK malveillants ou pages HTML, contournement des contrôles de sécurité, exécution de code. Utilisation de CVE-2026-21509 via fichiers RTF malveillants pour déployer des logiciels malveillants de vol d'e-mails et de backdoors. Infrastructure liée à wellnesscaremed[.]com.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt28",
+          "fancy_bear",
+          "state_sponsored",
+          "zero_day",
+          "rce",
+          "code_execution",
+          "email_theft",
+          "backdoor",
+          "exploitation",
+          "spear_phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/",
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "APT37 (ScarCruft, Reaper, Group123)",
+        "secteur": "Gouvernement, défense, militaire, médias (historiquement Corée du Sud), cibles air-gapped",
+        "modop": "Campagne \"Ruby Jumper\". Utilisation de fichiers LNK malveillants, PowerShell, shellcode chiffré. Déploiement de backdoors (RESTLEAF utilisant Zoho WorkDrive pour C2, BLUELIGHT utilisant des services cloud légitimes pour C2) et d'implants USB (THUMBSBD pour exfiltration/commandes via médias amovibles dans réseaux air-gapped, VIRUSTASK pour propagation via raccourcis USB malveillants).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt37",
+          "scar_cruft",
+          "ruby_jumper",
+          "state_sponsored",
+          "espionage",
+          "data_exfiltration",
+          "malware",
+          "backdoor",
+          "air_gapped",
+          "usb_infection",
+          "c2",
+          "cloud_c2",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188767/apt/apt37-combines-cloud-storage-and-usb-implants-to-infiltrate-air-gapped-systems.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Department of Peace (Hacktivistes)",
+        "secteur": "Gouvernement (Département de la Sécurité Intérieure des États-Unis - DHS, Immigration and Customs Enforcement - ICE)",
+        "modop": "Hacktivisme, fuite de documents prétendument volés liés à des contrats entre le DHS/ICE et plus de 6 000 entreprises, y compris des contractants de la défense.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "department_of_peace",
+          "hacktivism",
+          "data_leak",
+          "government_targeting",
+          "activism"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/?pk_campaign=feed&pk_kwd=hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "GrayBravo",
+        "secteur": "Large (vol de credentials, fraude financière, usurpation d'identité)",
+        "modop": "Résurgence du malware LummaStealer coordonné avec l'infrastructure CastleLoader. Propagation via des leurres d'ingénierie sociale (faux CAPTCHA).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "graybravo",
+          "lummatealer",
+          "castleloader",
+          "infostealer",
+          "credential_theft",
+          "financial_fraud",
+          "identity_compromise",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "INC Ransom",
+        "secteur": "Éducation (Denmark School District)",
+        "modop": "Attaque par ransomware, chiffrement de fichiers et exfiltration de données (70.76 GB), causant des perturbations du réseau.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "inc_ransom",
+          "ransomware",
+          "data_exfiltration",
+          "encryption"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/wisconsin-k-12-district-hit-by-weeklong-outage/?pk_campaign=feed&pk_kwd=wisconsin-k-12-district-hit-by-weeklong-outage"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Téléphonie (FreePBX instances)",
+        "modop": "Exploitation de vulnérabilités post-authentification (CVE-2025-64328) dans FreePBX pour déployer des web shells persistantes (EncystPHP) et obtenir un accès à distance.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "inj3ctor3",
+          "exploitation",
+          "web_shell",
+          "remote_access",
+          "freepbx",
+          "command_injection"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Gouvernement, Énergie, Finance, Télécommunications, Technologie (ciblant les administrateurs et développeurs de Notepad++)",
+        "modop": "Compromission de l'infrastructure d'hébergement officielle de Notepad++ (chaîne d'approvisionnement) pour déployer des backdoors à des fins de collecte de renseignements à long terme.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "lotus_blossom",
+          "china_linked",
+          "apt",
+          "supply_chain_attack",
+          "notepad++",
+          "backdoor",
+          "intelligence_gathering"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Mercenary Akula (UAC-0050)",
+        "secteur": "Institutions financières supportant l'Ukraine",
+        "modop": "Campagne de spearphishing ciblant un conseiller juridique d'une institution financière européenne. Usurpation de domaines judiciaires ukrainiens pour obtenir un accès à distance, collecte de renseignements ou vol financier.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "mercenary_akula",
+          "uac-0050",
+          "russia_linked",
+          "spear_phishing",
+          "financial_theft",
+          "intelligence_gathering",
+          "remote_access"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Qilin group",
+        "secteur": "Énergie (Conpet, opérateur de pipeline pétrolier roumain)",
+        "modop": "Attaque par ransomware sur les systèmes IT d'entreprise, revendication du vol de près de 1 To de données sensibles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "qilin",
+          "ransomware",
+          "data_exfiltration",
+          "corporate_it",
+          "energy_sector"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Hospitalité (Wynn Resorts), E-commerce (\"The Com\" a également mentionné des attaques contre des détaillants britanniques)",
+        "modop": "Extorsion, fuite de données d'employés, attaques liées à \"The Com\" (réseau cybercriminel visant enfants/adolescents, vols de données d'utilisateurs premium Pornhub).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "extortion",
+          "data_leak",
+          "cybercrime",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-march-threat-intelligence-report/",
+          "https://securityaffairs.com/188708/cyber-crime/europols-project-compass-nets-30-arrests-in-crackdown-on-the-com.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Storm-1516",
+        "secteur": "Politique (cible: Président Emmanuel Macron)",
+        "modop": "Campagne de désinformation pro-russe, fausses associations (Macron-Epstein) via faux sites web (France-Soir) et e-mails fabriqués, amplifiée via X.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "storm-1516",
+          "russia_linked",
+          "disinformation",
+          "influence_operation",
+          "social_engineering",
+          "fake_news"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "TGR-STA-1030",
+        "secteur": "Gouvernements (37 pays, dont 5 entités nationales d'application de la loi et 3 ministères des finances), Infrastructures critiques",
+        "modop": "Campagnes \"Shadow Campaigns\". Compromission d'organisations pour l'espionnage. Activités de reconnaissance ciblées sur 155 pays, axées sur les partenariats économiques et les ressources naturelles.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "tgr-sta-1030",
+          "china_linked",
+          "cyberespionage",
+          "government_targeting",
+          "critical_infrastructure",
+          "reconnaissance",
+          "shadow_campaigns"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "The Com / Scattered Spider",
+        "secteur": "Enfants et adolescents (ciblage), Commerce de détail (attaques sur IT de détaillants britanniques), Services pour adultes (utilisateurs premium Pornhub)",
+        "modop": "Recrutement et exploitation de jeunes via médias sociaux, messageries, plateformes de jeux/streaming. Attaques IT, menaces à la bombe, coercition, vol de données (Pornhub). Structure décentralisée.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "the_com",
+          "scattered_spider",
+          "cybercrime",
+          "social_engineering",
+          "extortion",
+          "targeting_minors",
+          "data_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188708/cyber-crime/europols-project-compass-nets-30-arrests-in-crackdown-on-the-com.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UAC-0252",
+        "secteur": "Non spécifié, mais vise des mises à jour d'applications civiles et militaires",
+        "modop": "Diffusion d'e-mails malveillants incitant à mettre à jour des applications mobiles, utilisation des stealers SHADOWSNIFF et SALATSTEALER.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "uac-0252",
+          "spear_phishing",
+          "credential_theft",
+          "data_exfiltration",
+          "malware",
+          "shadowsniff",
+          "salatstealer"
+        ],
+        "sources": [
+          "https://cert.gov.ua/article/6287707"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UNC2814 (GRIDTIDE)",
+        "secteur": "Télécommunications, Gouvernements (42 pays confirmés, 20 suspectés)",
+        "modop": "Campagne d'espionnage cybernétique global. Utilisation de la backdoor GRIDTIDE. Abus d'API basé sur le cloud pour le commandement et contrôle furtifs.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "unc2814",
+          "china_linked",
+          "cyberespionage",
+          "telecommunications",
+          "government_targeting",
+          "backdoor",
+          "gridtide",
+          "api_abuse",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UNC6201",
+        "secteur": "Non spécifié, ciblant Dell RecoverPoint for Virtual Machines",
+        "modop": "Exploitation zero-day (CVE-2026-22769) dans Dell RecoverPoint pour les machines virtuelles, permettant le mouvement latéral, l'accès persistant et le déploiement de malwares (SLAYSTYLE, BRICKSTORM, GRIMBOLT).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "unc6201",
+          "china_linked",
+          "zero_day",
+          "exploitation",
+          "lateral_movement",
+          "persistence",
+          "malware",
+          "dell_recoverpoint"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Yurii Nazarenko (opérateur de OnlyFake)",
+        "secteur": "Cybercrime, Services illégaux",
+        "modop": "Exploitation d'IA pour générer et vendre plus de 10 000 fausses pièces d'identité numériques (passeports, permis de conduire, cartes de sécurité sociale) de plusieurs pays, permettant le contournement des exigences KYC pour le blanchiment d'argent et la dissimulation d'identité. Paiement en cryptomonnaie.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "yuriy_nazarenko",
+          "onlyfake",
+          "cybercrime",
+          "fraud",
+          "identity_theft",
+          "ai_abuse",
+          "kyc_bypass",
+          "money_laundering",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188734/cyber-crime/ukrainian-hacker-pleads-guilty-to-running-onlyfake-ai-id-scam-site.html"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Défense, Renseignement, Économie, Technologie, Télécommunications",
+        "theme": "Enjeux de la souveraineté informationnelle et stratégique spatiale pour l'Afrique",
+        "description": "L'Afrique cherche à faire de l'espace un levier stratégique pour la puissance et la survie, notamment en matière de renseignement (SIGINT, GEOINT, COMINT, IMINT), de contrôle des ressources et de gouvernance des données. Le continent est fortement dépendant des satellites et services spatiaux étrangers, ce qui soulève des questions de souveraineté. Des initiatives comme l'Agence Spatiale Africaine (AfSA) sont en cours, mais des défis subsistent en matière d'investissement et de capacités industrielles/humaines.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "africa",
+          "space_power",
+          "data_sovereignty",
+          "intelligence",
+          "sigint",
+          "geoint",
+          "comint",
+          "imint",
+          "technology_dependence",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/afrique-espace-strategique/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Applications mobiles, Religion, Information",
+        "theme": "Utilisation d'une application religieuse iranienne pour diffuser de la propagande israélienne",
+        "description": "Une application de prière populaire en Iran aurait été compromise par Israël, qui l'utiliserait pour diffuser des messages de propagande (\"l'aide est arrivée\") aux utilisateurs, en exploitant l'accès à la localisation et la confiance dans les notifications push.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "iran",
+          "propaganda",
+          "cyber_attack",
+          "mobile_application",
+          "information_warfare",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/02/iran_prayer_app_propaganda_hack_israel/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Défense, Énergie, Transport maritime, Infrastructures critiques, Gouvernement",
+        "theme": "Escalade du conflit au Moyen-Orient et ses implications cybernétiques et économiques",
+        "description": "Opérations militaires coordonnées entre les États-Unis et Israël contre l'Iran, entraînant la mort du Guide suprême Ali Khamenei et des ripostes iraniennes de missiles et drones dans la région. Risque élevé d'opérations cybernétiques destructrices par des acteurs étatiques iraniens contre les infrastructures critiques. Le détroit d'Ormuz est sous haute tension, avec des perturbations de la chaîne d'approvisionnement maritime et aérienne. Des groupes hacktivistes pro-iraniens ont annoncé des opérations cybernétiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "usa",
+          "israel",
+          "middle_east",
+          "conflict",
+          "cyberwarfare",
+          "critical_infrastructure",
+          "supply_chain",
+          "strait_of_hormuz",
+          "hacktivism",
+          "energy_markets",
+          "maritime_security"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know",
+          "https://blog.talosintelligence.com/talos-developing-situation-in-the-middle-east/",
+          "https://www.iris-france.org/le-conflit-en-iran-fait-ressurgir-la-peur-des-consequences-dun-blocage-du-detroit-dormuz-sur-leconomie-mondiale/",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/02/iran_war_tech_supply_chain/",
+          "https://www.iris-france.org/iran-le-regime-decapite-et-apres/",
+          "https://www.iris-france.org/attaques-israelo-etats-uniennes-contre-liran-quelles-consequences-sur-les-monarchies-du-golfe/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Sécurité nationale, Criminalité organisée, Gouvernement",
+        "theme": "Limites de la stratégie de \"décapitation\" des cartels et escalade de la violence au Mexique",
+        "description": "L'élimination du leader du Cartel Jalisco Nueva Generación (CJNG), \"El Mencho\", par les forces de sécurité mexicaines, soutenues par le renseignement américain, a entraîné des représailles immédiates et un risque d'escalade de la violence. La stratégie de ciblage des chefs de cartels a historiquement conduit à la fragmentation des groupes et à une augmentation de la compétition et de la violence, sans réellement démanteler les marchés illicites. La nouvelle présidente mexicaine fait face à une pression américaine pour une action militaire forte.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "mexico",
+          "organised_crime",
+          "cartel",
+          "cjng",
+          "el_mencho",
+          "drug_trafficking",
+          "violence",
+          "security_policy",
+          "decapitation_strategy",
+          "us_pressure"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/limits-decapitation-mexicos-security-outlook-after-el-mencho"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Gouvernement, Médias, Télécommunications, Éducation, Société",
+        "theme": "Contrôle de l'information et russification des territoires ukrainiens occupés",
+        "description": "La Russie a mis en place un système strict de contrôle de l'information dans les territoires ukrainiens occupés (TOT), incluant la suppression des médias ukrainiens, l'imposition de médias russes, la \"russification\" des infrastructures de télécommunications, le blocage d'applications de messagerie et l'interdiction de l'utilisation de la langue ukrainienne dans l'éducation et les services publics. Ces mesures visent à remodeler l'identité ukrainienne et à supprimer la dissidence, créant un \"limbe informationnel\" pour les habitants.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "ukraine",
+          "information_warfare",
+          "occupation",
+          "propaganda",
+          "media_control",
+          "censorship",
+          "russification",
+          "human_rights"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russias-information-grip-on-ukraines-occupied-territories/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Cyberdéfense, Gouvernement, Infrastructures critiques, Chaînes d'approvisionnement",
+        "theme": "Risque accru de cyberattaques iraniennes",
+        "description": "Le NCSC du Royaume-Uni a alerté les organisations britanniques d'un risque accru de cyberattaques iraniennes en raison du conflit au Moyen-Orient. Le risque concerne particulièrement les entités ayant une présence ou des chaînes d'approvisionnement dans la région. Les groupes de hackers iraniens parrainés par l'État sont probablement toujours capables d'attaquer malgré la coupure généralisée d'Internet en Iran.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "iran",
+          "cyberattack",
+          "middle_east",
+          "conflict",
+          "ncsc",
+          "state_sponsored",
+          "supply_chain",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/uk-warns-of-iranian-cyberattack-risks-amid-middle-east-conflict/",
+          "https://securityaffairs.com/188800/apt/middle-east-crisis-prompts-uk-warning-on-potential-iranian-cyber-activity.html"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Social Media, Individuals",
+        "victime": "Des centaines de jeunes femmes (y compris des mineures)",
+        "description": "Piratage et extorsion de comptes de médias sociaux (Snapchat, Instagram) par Jamarcus Mosley pour voler et menacer de divulguer des images/vidéos privées et nues, exigeant du contenu supplémentaire ou de l'argent.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "extortion",
+          "cyberstalking",
+          "minors",
+          "credentials_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/alabama-man-pleads-guilty-to-hacking-extorting-hundreds-of-women/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Intelligence Artificielle, Plateforme en ligne",
+        "victime": "Utilisateurs de KomikoAI (plateforme de génération de bandes dessinées assistée par l'IA)",
+        "description": "Violation de données exposant 1 million d'adresses e-mail uniques, noms, publications d'utilisateurs et prompts IA utilisés pour générer du contenu, permettant de relier les prompts individuels aux adresses e-mail.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai_platform",
+          "pii",
+          "email_address",
+          "user_posts",
+          "ai_prompts",
+          "data_mapping"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/KomikoAI"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Applications Mobiles, Social/Rencontres",
+        "victime": "Utilisateurs de Lovora (application de couples et de relations)",
+        "description": "Violation de données exposant 496 000 adresses e-mail uniques, noms d'affichage, photos de profil et autres informations personnelles collectées via l'application.",
+        "tags": [
+          "violation",
+          "breach",
+          "mobile_app",
+          "dating_app",
+          "pii",
+          "email_address",
+          "profile_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Lovora"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Nippon Medical School Musashikosugi Hospital",
+        "description": "Attaque par ransomware confirmée, divulguant environ 130 000 dossiers de données personnelles. Le vecteur d'intrusion initial était un VPN de maintenance.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "pii",
+          "vpn_compromise",
+          "data_leak"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/nippon-medical-school-musashikosugi-hospital-ransomware-130k-data-breach/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Applications Mobiles, Santé/Bien-être",
+        "victime": "Utilisateurs de Quitbro (application d'aide à l'addiction à la pornographie)",
+        "description": "Violation de données exposant 23 000 adresses e-mail uniques, années de naissance, réponses aux questions intégrées à l'application et dernière heure de rechute enregistrée.",
+        "tags": [
+          "violation",
+          "breach",
+          "mobile_app",
+          "health_app",
+          "pii",
+          "email_address",
+          "sensitive_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Quitbro"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Hospitalité, Jeux",
+        "victime": "Wynn Resorts",
+        "description": "Des données d'employés ont été consultées suite à une menace d'extorsion liée au groupe ShinyHunters.",
+        "tags": [
+          "violation",
+          "breach",
+          "hospitality",
+          "employee_data",
+          "extortion",
+          "shinyhunters"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-march-threat-intelligence-report/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "OCAT, LLC dba Evoke Wellness at Hilliard (centre de traitement de la toxicomanie)",
+        "description": "Activité non autorisée dans le réseau et accès aux informations des patients (nom, adresse, e-mail, téléphone, date de naissance, SSN, permis de conduire, passeport, numéro de dossier médical, dates d'admission/sortie, diagnostic, allergies, pharmacie, médicaments, résultats de laboratoire, informations d'assurance maladie, informations de carte de paiement, photo, état civil, employeur, race/origine ethnique, E-Signature). Attribué à une menace interne.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "insider_threat",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/evoke-wellness-at-hilliard-updates-its-breach-notification/?pk_campaign=feed&pk_kwd=evoke-wellness-at-hilliard-updates-its-breach-notification"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "victime": "Département de la Sécurité Intérieure des États-Unis (DHS), Immigration and Customs Enforcement (ICE)",
+        "description": "Le groupe hacktiviste \"Department of Peace\" a divulgué des documents prétendument volés liés à des contrats entre le DHS/ICE et plus de 6 000 entreprises, y compris des contractants de la défense.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "hacktivism",
+          "data_leak",
+          "department_of_peace",
+          "contract_data"
+        ],
+        "date": "2026-03-03",
+        "sources": [
+          "https://databreaches.net/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/?pk_campaign=feed&pk_kwd=hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data"
+        ]
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Insight Hospital and Medical Center",
+        "description": "Un individu non autorisé a accédé au réseau entre le 22 août et le 11 septembre 2025. 360 Go de \"données confidentielles\" (environ 900 000 fichiers) divulgués sur le dark web par le groupe Termite. Les informations comprennent le nom, le SSN, la date de naissance, le permis de conduire, le numéro de passeport, les informations de compte financier, les informations liées au traitement et les informations d'assurance maladie.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "pii",
+          "phi",
+          "dark_web",
+          "termite",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/data-from-insight-hospital-and-medical-center-leaked-on-dark-web/?pk_campaign=feed&pk_kwd=data-from-insight-hospital-and-medical-center-leaked-on-dark-web"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Éducation",
+        "victime": "Denmark School District",
+        "description": "Cyberattaque par le groupe INC Ransom, chiffrant des fichiers et acquérant 70,76 Go de données, provoquant une panne d'Internet d'une semaine.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "ransomware",
+          "data_exfiltration",
+          "inc_ransom",
+          "outage"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/wisconsin-k-12-district-hit-by-weeklong-outage/?pk_campaign=feed&pk_kwd=wisconsin-k-12-district-hit-by-weeklong-outage"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": "8.6",
+        "product": "FreePBX Endpoint Manager",
+        "description": "Vulnérabilité de type injection de commande post-authentification (command-injection) dans le module filestore d'Endpoint Manager. Permet l'exécution de commandes arbitraires en tant qu'utilisateur asterisk.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "freepbx",
+          "command_injection",
+          "post_authentication",
+          "web_shell",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-0628",
+        "cvss": "8.8",
+        "product": "Google Chrome (fonctionnalité Gemini AI)",
+        "description": "Insuffisance de l'application des politiques dans la balise WebView de Google Chrome (fonctionnalité Gemini) permettant l'injection de scripts JavaScript malveillants dans le panneau Gemini privilégié, conduisant à l'escalade de privilèges, l'accès aux fichiers locaux, à la caméra et au microphone.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "chrome",
+          "gemini",
+          "ai",
+          "privilege_escalation",
+          "webview",
+          "local_file_access",
+          "camera_access",
+          "microphone_access"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/gemini-live-in-chrome-hijacking/",
+          "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
+          "https://cybersecuritynews.com/chrome-gemini-vulnerability/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-0754",
+        "cvss": "8.2",
+        "product": "Poly Voice device (SIP Service Providers)",
+        "description": "Extraction d'une clé de test et d'un certificat embarqués depuis un appareil Poly Voice, pouvant mener à l'usurpation d'identité si le fournisseur SIP ne valide pas correctement le certificat.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "poly_voice",
+          "sip",
+          "impersonation",
+          "certificate_theft",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0754"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-1566",
+        "cvss": "8.8",
+        "product": "LatePoint – Calendar Booking Plugin for Appointments and Events (WordPress)",
+        "description": "Escalade de privilèges via la réinitialisation de mot de passe pour les utilisateurs avec le rôle \"LatePoint Agent+\", permettant de lier un client à un ID utilisateur arbitraire et de réinitialiser le mot de passe, y compris celui des administrateurs.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "latepoint",
+          "privilege_escalation",
+          "password_reset",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1566"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": "8.8",
+        "product": "Microsoft HTML (MSHTML) framework",
+        "description": "Vulnérabilité zero-day (contournement des contrôles de sécurité d'Internet Explorer) dans le framework MSHTML permettant l'exécution de code à distance via l'ouverture d'une page HTML ou d'un fichier LNK malveillant.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "mshtml",
+          "internet_explorer",
+          "zero_day",
+          "rce",
+          "code_execution",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-26712",
+        "cvss": "9.8",
+        "product": "code-projects Simple Food Order System v1.0",
+        "description": "Vulnérabilité d'injection SQL dans le fichier /food/view-ticket-admin.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "web_application",
+          "code-projects"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26712"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-26713",
+        "cvss": "9.8",
+        "product": "code-projects Simple Food Order System v1.0",
+        "description": "Vulnérabilité d'injection SQL dans le fichier /food/routers/cancel-order.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "web_application",
+          "code-projects"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26713"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3336",
+        "cvss": "8.7",
+        "product": "AWS-LC",
+        "description": "Contournement de la validation de la chaîne de certificats dans PKCS7_verify() permettant à un utilisateur non authentifié de contourner la vérification de la chaîne de certificats lors du traitement d'objets PKCS7 avec plusieurs signataires.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "certificate_validation_bypass",
+          "pkcs7",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3336"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3337",
+        "cvss": "8.2",
+        "product": "AWS-LC",
+        "description": "Discrépance temporelle observable dans le déchiffrement AES-CCM permettant à un utilisateur non authentifié de déterminer la validité d'un tag d'authentification par analyse temporelle. Impacter les implémentations via l'API EVP CIPHER : EVP_aes_128_ccm, EVP_aes_192_ccm et EVP_aes_256_ccm.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "timing_side_channel",
+          "aes-ccm",
+          "decryption",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3337"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3338",
+        "cvss": "8.7",
+        "product": "AWS-LC",
+        "description": "Contournement de la validation de signature dans PKCS7_verify() permettant à un utilisateur non authentifié de contourner la vérification de signature lors du traitement d'objets PKCS7 avec Attributs Authentifiés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "signature_validation_bypass",
+          "pkcs7",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3338"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "CyberStrikeAI tool adopted by hackers for AI-powered attacks",
+        "description": "Analyse de l'adoption par des cybercriminels d'une plateforme open-source de test de sécurité basée sur l'IA, CyberStrikeAI. Cet outil, intégrant plus de 100 outils de sécurité et un moteur d'orchestration IA, permet d'automatiser des chaînes d'attaque complètes (scan réseau, test web, exploitation, cracking de mots de passe, post-exploitation). Le même acteur menaçant derrière des violations de FortiGate a été observé utilisant CyberStrikeAI. Le déploiement de ces moteurs d'orchestration IA par les adversaires est susceptible d'accélérer le ciblage automatisé des dispositifs edge exposés.",
+        "threat_actor": "L'acteur menaçant derrière les récentes violations des firewalls Fortinet FortiGate",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "212.11.64.250"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002",
+          "T1590",
+          "T1592",
+          "T1596",
+          "T1098",
+          "T1078",
+          "T1059",
+          "T1068",
+          "T1589",
+          "T1003"
+        ],
+        "analyse": "La prolifération d'outils d'orchestration d'attaques basés sur l'IA comme CyberStrikeAI réduit la barrière à l'entrée pour les cybercriminels et augmente la vitesse et l'échelle des attaques automatisées. Les dispositifs edge (firewalls, VPN) sont particulièrement ciblé. Cela signale une évolution des méthodes d'attaque vers plus d'autonomie et d'efficacité, rendant les défenses traditionnelles potentiellement moins efficaces.",
+        "recommandations": [
+          "Préparer les défenses à des attaques automatisées et pilotées par l'IA ciblant les dispositifs edge.",
+          "Renforcer les contrôles d'accès pour les interfaces d'administration et mettre en œuvre une authentification forte (MFA).",
+          "Maintenir les systèmes à jour avec les derniers correctifs de sécurité."
+        ],
+        "tags": [
+          "ai",
+          "cyberstrikeai",
+          "automated_attacks",
+          "attack_platform",
+          "fortinet",
+          "fortigate",
+          "edge_devices",
+          "reconnaissance",
+          "exploitation",
+          "threat_actor_activity",
+          "supply_chain",
+          "ai_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Fake Google Security site uses PWA app to steal credentials, MFA codes",
+        "description": "Campagne de phishing utilisant une fausse page de sécurité Google Account pour distribuer une Progressive Web App (PWA) malveillante. Cette PWA est capable de voler des codes OTP (MFA), de collecter des adresses de portefeuille de cryptomonnaies et d'acheminer le trafic de l'attaquant via le navigateur de la victime. L'attaque exploite les fonctionnalités des PWA et l'ingénierie sociale pour tromper les utilisateurs et leur faire installer le malware, accordant des permissions risquées. Une application Android compagnon peut également être proposée pour des capacités supplémentaires (keylogging, interception de notifications, persistance).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "google-prism.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002",
+          "T1056.001",
+          "T1552.001",
+          "T1071.001",
+          "T1090.003",
+          "T1083",
+          "T1555.003"
+        ],
+        "analyse": "Cette campagne démontre une utilisation astucieuse de fonctionnalités légitimes des navigateurs (PWA) et de l'ingénierie sociale pour contourner les protections traditionnelles. La capacité à voler des codes MFA et à utiliser le périphérique de la victime comme proxy augmente la persistance et la furtivité des attaques. Le ciblage via des mises à jour de sécurité factices est particulièrement efficace.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux tactiques de phishing, en insistant sur le fait que Google ne demande pas d'installations logicielles via des pop-ups.",
+          "Vérifier l'authenticité des pages de sécurité en consultant directement les paramètres de compte Google.",
+          "Révoquer les droits d'administrateur de l'appareil pour les applications suspectes (\"System Service\" / com.device.sync) et les désinstaller."
+        ],
+        "tags": [
+          "phishing",
+          "pwa",
+          "google",
+          "credentials_theft",
+          "mfa_bypass",
+          "cryptocurrency_theft",
+          "network_proxy",
+          "social_engineering",
+          "android_malware",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-google-security-site-uses-pwa-app-to-steal-credentials-mfa-codes/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "How Deepfakes and Injection Attacks Are Breaking Identity Verification",
+        "description": "Analyse de l'évolution des deepfakes et des attaques par injection ciblant les processus de vérification d'identité (onboarding, récupération de compte). Ces techniques permettent d'usurper des identités et d'établir un accès persistant dans des environnements de confiance, avec des impacts durables (persistance de compte, escalade de privilèges). Les défenses basées uniquement sur la détection visuelle des deepfakes sont insuffisantes ; une validation complète de la session (perception, intégrité de l'appareil, signaux comportementaux) est nécessaire pour arrêter les attaques synthétiques et injectées en temps réel.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078",
+          "T1566",
+          "T1078.003",
+          "T1548.002",
+          "T1098"
+        ],
+        "analyse": "Les méthodes d'usurpation d'identité deviennent plus sophistiquées avec l'IA et les attaques par injection, rendant les systèmes de vérification d'identité traditionnels obsolètes. L'impact est systémique, affectant la confiance dans les systèmes d'identité numériques. Les entreprises doivent adopter des approches de validation multicouches en temps réel.",
+        "recommandations": [
+          "Mettre en œuvre une validation de session complète qui inclut la perception (détection des deepfakes), l'intégrité de l'appareil et les signaux comportementaux.",
+          "Développer des défenses résilientes qui ne se basent pas uniquement sur la détection des pixels manipulés, mais valident l'authenticité de l'interaction complète."
+        ],
+        "tags": [
+          "deepfake",
+          "identity_verification",
+          "injection_attack",
+          "fraud",
+          "ai_abuse",
+          "social_engineering",
+          "account_takeover",
+          "privilege_escalation",
+          "security_architecture"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/how-deepfakes-and-injection-attacks-are-breaking-identity-verification/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Кібератаки UAC-0252 з використанням стілерів SHADOWSNIFF та SALATSTEALER (CERT-UA#20032)",
+        "description": "Le CERT-UA a détecté depuis janvier 2026 des cyberattaques du groupe UAC-0252. Le mode opératoire implique la diffusion d'e-mails, prétendument émanant d'organes du pouvoir exécutif central et des administrations régionales, exhortant à la mise à jour d'applications mobiles largement utilisées par les systèmes civils et militaires. L'objectif est de distribuer les stealers SHADOWSNIFF et SALATSTEALER.",
+        "threat_actor": "UAC-0252",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1552.001",
+          "T1560.001",
+          "T1071.001"
+        ],
+        "analyse": "Campagne de cyberattaque ciblant potentiellement des informations sensibles liées à des applications militaires et civiles via l'ingénierie sociale et la distribution de logiciels malveillants. L'usurpation d'organismes gouvernementaux confère de la légitimité aux e-mails malveillants, augmentant le risque de compromission des cibles.",
+        "recommandations": [
+          "Sensibiliser les utilisateurs aux e-mails de phishing, même ceux qui semblent légitimes.",
+          "Mettre en œuvre une vérification stricte des sources pour les mises à jour d'applications.",
+          "Utiliser des solutions de détection de logiciels malveillants et de protection des endpoints."
+        ],
+        "tags": [
+          "uac-0252",
+          "cert-ua",
+          "spear_phishing",
+          "malware",
+          "stealer",
+          "shadowsniff",
+          "salatstealer",
+          "mobile_applications",
+          "government_impersonation",
+          "cybercrime",
+          "data_theft",
+          "ukraine"
+        ],
+        "sources": [
+          "https://cert.gov.ua/article/6287707"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "OAlerts.evtx — The Hidden Microsoft Office Evidence Log",
+        "description": "Analyse d'OAlerts.evtx, un fichier journal d'événements Windows méconnu qui enregistre chaque fois que Microsoft Office affiche une boîte de dialogue à l'utilisateur. Ce journal peut contenir des informations cruciales pour les investigations numériques (DFIR), telles que le nom des fichiers modifiés, des e-mails supprimés, des tentatives d'accès à des documents chiffrés, et leur horodatage. Il permet de détecter l'activité de fichiers sur des médias amovibles que d'autres artefacts pourraient manquer. Bien que n'enregistrant pas l'identité de l'utilisateur directement, il peut être corrélé avec le journal de sécurité Windows pour une attribution.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1560.001",
+          "T1083",
+          "T1562.001",
+          "T1005",
+          "T1059"
+        ],
+        "analyse": "Cet article révèle une source d'informations précieuse pour le DFIR, souvent négligée. OAlerts.evtx offre une visibilité granulaire sur les interactions de l'utilisateur avec les documents Office, complétant d'autres journaux et artefacts pour reconstruire une chronologie d'événements et identifier les activités malveillantes ou suspectes. Son utilité est accentuée par sa capacité à enregistrer l'activité sur les médias amovibles.",
+        "recommandations": [
+          "Intégrer OAlerts.evtx dans les processus d'investigation numérique.",
+          "Former les analystes DFIR à l'exploitation de ce journal.",
+          "Corréler les événements OAlerts.evtx avec les journaux de sécurité (logons) et d'autres artefacts (fichiers LNK, Jump Lists) pour une analyse complète."
+        ],
+        "tags": [
+          "dfir",
+          "forensics",
+          "microsoft_office",
+          "windows_event_log",
+          "oalerts.evtx",
+          "evidence_collection",
+          "incident_response",
+          "data_discovery",
+          "user_activity_monitoring"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/oalerts-evtx-the-hidden-microsoft-office-evidence-log"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Researchers report FreePBX exploitation: 900+ systems compromised",
+        "description": "Exploitation à grande échelle de la vulnérabilité CVE-2025-64328 (CVSS 8.6, injection de commande post-authentification) dans les instances Sangoma FreePBX. Plus de 900 systèmes ont été compromis avec des web shells persistantes. L'acteur INJ3CTOR3 déploie la web shell EncystPHP pour maintenir l'accès, exécuter des commandes arbitraires et pivoter plus profondément dans les réseaux. L'exploitation a commencé en décembre 2025 malgré les patchs de novembre 2025, soulignant l'importance de l'application rapide des correctifs.",
+        "threat_actor": "INJ3CTOR3",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190",
+          "T1505.003",
+          "T1059",
+          "T1068",
+          "T1133"
+        ],
+        "analyse": "Vulnérabilité critique dans des systèmes PBX largement déployés, permettant un contrôle total de l'infrastructure vocale et une porte d'entrée pour des intrusions plus larges. Le délai entre la publication du patch et la persistance de l'exploitation met en évidence les défis de la gestion des correctifs dans de nombreuses organisations. Les interfaces exposées et les faibles identifiants augmentent le risque.",
+        "recommandations": [
+          "Restreindre l'accès au panneau d'administration FreePBX aux réseaux de confiance via des règles de pare-feu.",
+          "Appliquer immédiatement le patch officiel (CVE-2025-64328) et s'assurer que le correctif d'urgence EDGE est en place pour les déploiements plus anciens.",
+          "Effectuer un examen d'intégrité complet des systèmes affectés, supprimer les web shells non autorisées et surveiller les modèles d'exécution de commandes et les connexions sortantes inattendues."
+        ],
+        "tags": [
+          "freepbx",
+          "vulnerability",
+          "exploitation",
+          "web_shell",
+          "command_injection",
+          "inj3ctor3",
+          "telephony",
+          "critical_infrastructure",
+          "patch_management",
+          "remote_access",
+          "persistent_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Taming Agentic Browsers: Vulnerability in Chrome Allowed Extensions to Hijack New Gemini Panel",
+        "description": "Découverte d'une vulnérabilité de haute gravité (CVE-2026-0628, CVSS 8.8) dans l'implémentation de la fonction Gemini de Google Chrome. Cette faille permet à des extensions malveillantes (même avec des permissions de base via declarativeNetRequest API) d'injecter du code JavaScript dans le panneau Gemini privilégié. Cela mène à une élévation de privilèges, permettant l'accès aux fichiers locaux du système d'exploitation, à la caméra et au microphone de la victime, et à l'affichage de contenu de phishing. Le risque est exacerbé par l'intégration d'IA directement dans les navigateurs, élargissant la surface d'attaque.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://gemini.google.com/app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001",
+          "T1548.002",
+          "T1059.007",
+          "T1083",
+          "T1125",
+          "T1566.002"
+        ],
+        "analyse": "L'intégration croissante de l'IA dans les navigateurs introduit de nouveaux vecteurs d'attaque et des risques de sécurité inédits, notamment l'escalade de privilèges et l'accès à des ressources sensibles (caméra, microphone, fichiers locaux) via des composants fiables du navigateur. La vulnérabilité met en lumière les défis de sécurité liés à l'octroi de privilèges élevés aux agents IA.",
+        "recommandations": [
+          "Mettre à jour Google Chrome immédiatement (version 143.0.7499.192/.193 ou supérieure).",
+          "Les organisations doivent s'assurer que Chrome est mis à jour sur tous les endpoints.",
+          "Être vigilant face aux extensions malveillantes et aux applications basées sur l'IA, auditer leurs permissions."
+        ],
+        "tags": [
+          "vulnerability",
+          "chrome",
+          "gemini",
+          "ai",
+          "privilege_escalation",
+          "local_file_access",
+          "camera_access",
+          "microphone_access",
+          "phishing",
+          "browser_extension",
+          "declarative_net_request_api",
+          "security_model_bypass",
+          "cve-2026-0628"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/gemini-live-in-chrome-hijacking/",
+          "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
+          "https://cybersecuritynews.com/chrome-gemini-vulnerability/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "APT37 combines cloud storage and USB implants to infiltrate air-gapped systems",
+        "description": "Analyse de la campagne \"Ruby Jumper\" du groupe APT37 (Corée du Nord) utilisant des fichiers LNK malveillants, des backdoors (RESTLEAF, BLUELIGHT) pour le C2 via des services cloud légitimes (Zoho WorkDrive, Google Drive, Microsoft OneDrive) et des implants USB (THUMBSBD, VIRUSTASK) pour infiltrer et exfiltrer des données de réseaux isolés (air-gapped).",
+        "threat_actor": "APT37 (ScarCruft, Reaper, Group123)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1059.001",
+          "T1059.003",
+          "T1573.001",
+          "T1071.001",
+          "T1105",
+          "T1020.001",
+          "T1083",
+          "T1048.003",
+          "T1090.002",
+          "T1056.001",
+          "T1125"
+        ],
+        "analyse": "Campagne d'espionnage sophistiquée ciblant des réseaux sensibles, potentiellement gouvernementaux/militaires, avec une capacité d'opérer sur des systèmes isolés. L'utilisation de services cloud légitimes rend la détection du C2 plus difficile. Le ciblage de réseaux air-gapped représente un risque élevé pour la sécurité nationale et la propriété intellectuelle.",
+        "recommandations": [
+          "Renforcer la surveillance des points d'accès physiques et contrôler l'utilisation des médias amovibles.",
+          "Mettre en place une surveillance accrue de l'activité des endpoints et une analyse des flux réseau pour détecter les communications inhabituelles vers les services cloud.",
+          "Mettre à jour les systèmes et sensibiliser aux attaques par fichiers LNK."
+        ],
+        "tags": [
+          "apt",
+          "north_korea",
+          "espionage",
+          "malware",
+          "backdoor",
+          "c2",
+          "cloud_storage",
+          "usb_implant",
+          "air_gapped",
+          "data_exfiltration",
+          "ruby_jumper",
+          "restleaf",
+          "bluelight",
+          "thumbsbd",
+          "virustask",
+          "footwine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188767/apt/apt37-combines-cloud-storage-and-usb-implants-to-infiltrate-air-gapped-systems.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "ClawJacked flaw exposed OpenClaw users to data theft",
+        "description": "Vulnérabilité \"ClawJacked\" de haute gravité dans le framework d'agents IA OpenClaw. Permet à des sites web malveillants de prendre le contrôle d'instances locales d'agents IA via une connexion WebSocket à localhost et une attaque par force brute contre le mot de passe, contournant les limites de débit. Cela octroie un contrôle admin, permettant l'extraction de configurations, la lecture de logs et l'exécution de commandes sur les appareils liés, menant potentiellement à la compromission complète de la station de travail.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078.001",
+          "T1548.002",
+          "T1059.007",
+          "T1083",
+          "T1003.001"
+        ],
+        "analyse": "Met en évidence les risques de sécurité inhérents aux frameworks d'agents IA locaux et l'hypothèse de confiance envers le trafic localhost. La facilité d'exploitation (visite d'un site malveillant) et l'impact potentiel (compromission de la station de travail, vol de données sensibles) sont significatifs, en particulier pour les développeurs utilisant ces outils. Cela souligne le besoin de gouvernance et de contrôles stricts pour les agents IA.",
+        "recommandations": [
+          "Mettre à jour immédiatement OpenClaw vers la version 2026.2.25 ou ultérieure.",
+          "Restreindre les permissions et les identifiants des agents IA au strict nécessaire.",
+          "Auditer les outils IA sur les machines de développement et implémenter des contrôles de politique stricts, une surveillance d'accès et des pistes d'audit pour les agents IA."
+        ],
+        "tags": [
+          "vulnerability",
+          "ai",
+          "openclaw",
+          "clawjacked",
+          "data_theft",
+          "remote_control",
+          "authentication_bypass",
+          "privilege_escalation",
+          "web_socket",
+          "localhost",
+          "security_governance"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188749/hacking/clawjacked-flaw-exposed-openclaw-users-to-data-theft.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "mitmproxy for fun and profit: Interception et analyse de flux applicatifs",
+        "description": "Analyse technique approfondie de l'outil open-source mitmproxy pour l'interception, la modification et la relecture de communications réseau (HTTP/S, TCP/UDP) sur différentes plateformes (Linux, Android, iOS). L'article détaille les modes explicite et transparent, l'importance des certificats racine (et le contournement du Certificate Pinning sur Android rooté via Magisk), et l'utilisation de l'API de scripting de mitmproxy pour manipuler les requêtes (ex: spoofer la localisation Google, altérer un clone Git pour télécharger un dépôt malveillant, intercepter des messages chiffrés Mumble).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1090.002",
+          "T1071",
+          "T1573",
+          "T1059",
+          "T1557.001",
+          "T1114.001"
+        ],
+        "analyse": "Démontre l'efficacité et la flexibilité de mitmproxy pour l'analyse de sécurité et l'altération des flux réseau, même pour des protocoles complexes ou chiffrés. Met en évidence que la connaissance approfondie des protocoles et la manipulation des certificats peuvent contourner de nombreuses protections. Souligne l'importance de techniques comme le certificate pinning, mais aussi ses limites face à des environnements contrôlés ou rootés.",
+        "recommandations": [
+          "Implémenter et renforcer le certificate pinning pour les applications sensibles.",
+          "Auditer la configuration des applications client (ex: git) pour éviter des comportements permissifs.",
+          "Sensibiliser les développeurs aux risques liés à l'interception de trafic et aux environnements de test non sécurisés."
+        ],
+        "tags": [
+          "mitmproxy",
+          "network_interception",
+          "traffic_analysis",
+          "application_security",
+          "tls_decryption",
+          "certificate_pinning_bypass",
+          "reverse_engineering",
+          "linux",
+          "android",
+          "ios",
+          "grpc",
+          "protobuf",
+          "git_manipulation"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/mitmproxy-for-fun-and-profit-interception-et-analyse-de-flux-applicatifs.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Russia-linked APT28 exploited MSHTML zero-day CVE-2026-21513 before patch",
+        "description": "Le groupe APT28 (lié à la Russie) a exploité une vulnérabilité zero-day (CVE-2026-21513, CVSS 8.8) dans le framework MSHTML de Microsoft avant qu'elle ne soit patchée. Cette vulnérabilité, un contournement de contrôle de sécurité d'Internet Explorer, permet l'exécution de code à distance via l'ouverture de fichiers LNK ou de pages HTML malveillantes. La campagne utilisait un échantillon malveillant document.doc.LnK.download et une infrastructure C2 (wellnesscaremed[.]com), manipulant les limites de confiance via des iframes imbriquées pour contourner les protections.",
+        "threat_actor": "APT28",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "wellnesscaremed.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1203",
+          "T1566.001",
+          "T1059.007",
+          "T1546.001",
+          "T1071.001"
+        ],
+        "analyse": "L'exploitation active d'une vulnérabilité zero-day par un acteur étatique montre une capacité d'attaque sophistiquée et une menace persistante contre les systèmes Windows. La méthode d'exploitation contourne plusieurs couches de sécurité, y compris les protections du navigateur et les marquages de fichiers, soulignant la complexité des attaques modernes et le besoin de défenses multicouches.",
+        "recommandations": [
+          "Appliquer les correctifs Microsoft dès que possible pour CVE-2026-21513.",
+          "Sensibiliser les utilisateurs aux risques liés aux fichiers LNK et aux liens HTML provenant de sources inconnues.",
+          "Déployer des protections avancées pour les endpoints capables de détecter les comportements d'exécution de code inattendus et les communications C2."
+        ],
+        "tags": [
+          "apt28",
+          "russia",
+          "state_sponsored",
+          "zero_day",
+          "mshtml",
+          "internet_explorer",
+          "code_execution",
+          "remote_code_execution",
+          "cve-2026-21513",
+          "phishing",
+          "lnk_file",
+          "exploit",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/"
+        ],
+        "date": "2026-03-03"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The cyber threat landscape is marked by increasing intensity, closely linked to global geopolitical tensions. The exploitation of artificial intelligence is confirmed as a major vector for attackers, whether to orchestrate sophisticated campaigns (CyberStrikeAI), create fake identities (OnlyFake), or exploit new attack surfaces introduced by AI integration in browsers (Chrome Gemini). Critical vulnerabilities, often related to authentication, remote code execution, or SQL injections, continue to offer privileged entry points. Threat actors are diverse, ranging from sophisticated state-sponsored groups (APT28, APT37, China-linked groups) to opportunistic cybercriminals (ShinyHunters, INC Ransom, info-stealing groups) and hacktivists, each adapting their methods to targets and contexts. Supply chain attacks remain a major concern, as do disinformation and information warfare campaigns in conflict zones. Data breaches are persistent, affecting various sectors such as healthcare, education, and online services, with a particular mention of insider threats. In conclusion, the overall threat level is high, requiring constant vigilance, multi-layered defense strategies, and rapid responsiveness to adversaries' technical innovations.",
+      "date": "2026-03-03"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "APT28 (Fancy Bear)",
+        "secteur": "Government (Ukraine, Slovakia, Romania), potentially broad",
+        "modop": "Exploitation of MSHTML zero-day vulnerabilities (CVE-2026-21513) via malicious LNK files or HTML pages, security control bypass, code execution. Use of CVE-2026-21509 via malicious RTF files to deploy email-stealing malware and backdoors. Infrastructure linked to wellnesscaremed[.]com.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt28",
+          "fancy_bear",
+          "state_sponsored",
+          "zero_day",
+          "rce",
+          "code_execution",
+          "email_theft",
+          "backdoor",
+          "exploitation",
+          "spear_phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/",
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "APT37 (ScarCruft, Reaper, Group123)",
+        "secteur": "Government, defense, military, media (historically South Korea), air-gapped targets",
+        "modop": "Operation \"Ruby Jumper\". Use of malicious LNK files, PowerShell, encrypted shellcode. Deployment of backdoors (RESTLEAF using Zoho WorkDrive for C2, BLUELIGHT using legitimate cloud services for C2) and USB implants (THUMBSBD for exfiltration/commands via removable media in air-gapped networks, VIRUSTASK for propagation via malicious USB shortcuts).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "apt37",
+          "scar_cruft",
+          "ruby_jumper",
+          "state_sponsored",
+          "espionage",
+          "data_exfiltration",
+          "malware",
+          "backdoor",
+          "air_gapped",
+          "usb_infection",
+          "c2",
+          "cloud_c2",
+          "phishing"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188767/apt/apt37-combines-cloud-storage-and-usb-implants-to-infiltrate-air-gapped-systems.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Department of Peace (Hacktivists)",
+        "secteur": "Government (U.S. Department of Homeland Security - DHS, Immigration and Customs Enforcement - ICE)",
+        "modop": "Hacktivism, leakage of allegedly stolen documents related to contracts between DHS/ICE and over 6,000 companies, including defense contractors.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "department_of_peace",
+          "hacktivism",
+          "data_leak",
+          "government_targeting",
+          "activism"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/?pk_campaign=feed&pk_kwd=hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "GrayBravo",
+        "secteur": "Broad (credential theft, financial fraud, identity compromise)",
+        "modop": "Resurgence of LummaStealer malware coordinated with CastleLoader infrastructure. Propagation via social engineering lures (fake CAPTCHAs).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "graybravo",
+          "lummatealer",
+          "castleloader",
+          "infostealer",
+          "credential_theft",
+          "financial_fraud",
+          "identity_compromise",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "INC Ransom",
+        "secteur": "Education (Denmark School District)",
+        "modop": "Ransomware attack, encrypting files and acquiring 70.76 GB of data, causing a week-long internet outage.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "inc_ransom",
+          "ransomware",
+          "data_exfiltration",
+          "encryption"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/wisconsin-k-12-district-hit-by-weeklong-outage/?pk_campaign=feed&pk_kwd=wisconsin-k-12-district-hit-by-weeklong-outage"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "INJ3CTOR3",
+        "secteur": "Telephony (FreePBX instances)",
+        "modop": "Exploitation of post-authentication command-injection vulnerability (CVE-2025-64328) in FreePBX to deploy persistent web shells (EncystPHP) and gain remote access.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "inj3ctor3",
+          "exploitation",
+          "web_shell",
+          "remote_access",
+          "freepbx",
+          "command_injection"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Lotus Blossom",
+        "secteur": "Government, Energy, Finance, Telecommunications, Technology (targeting Notepad++ administrators and developers)",
+        "modop": "Compromise of the official Notepad++ hosting infrastructure (supply chain) to deploy backdoors for long-term intelligence gathering.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "lotus_blossom",
+          "china_linked",
+          "apt",
+          "supply_chain_attack",
+          "notepad++",
+          "backdoor",
+          "intelligence_gathering"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Mercenary Akula (UAC-0050)",
+        "secteur": "Financial institutions supporting Ukraine",
+        "modop": "Spearphishing campaign targeting a senior legal advisor at a European financial institution supporting Ukraine. Impersonation of Ukrainian judicial domains to gain remote access for intelligence gathering or financial theft.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "mercenary_akula",
+          "uac-0050",
+          "russia_linked",
+          "spear_phishing",
+          "financial_theft",
+          "intelligence_gathering",
+          "remote_access"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Qilin group",
+        "secteur": "Energy (Conpet, Romanian oil pipeline operator)",
+        "modop": "Ransomware attack on corporate IT systems, claiming theft of nearly 1TB of sensitive data.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "qilin",
+          "ransomware",
+          "data_exfiltration",
+          "corporate_it",
+          "energy_sector"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "ShinyHunters",
+        "secteur": "Hospitality (Wynn Resorts), E-commerce (\"The Com\" also mentioned attacks on British retailers)",
+        "modop": "Extortion, employee data leak, attacks linked to \"The Com\" (cybercrime network targeting children/teenagers, theft of premium Pornhub user data).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "shinyhunters",
+          "extortion",
+          "data_leak",
+          "cybercrime",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-march-threat-intelligence-report/",
+          "https://securityaffairs.com/188708/cyber-crime/europols-project-compass-nets-30-arrests-in-crackdown-on-the-com.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Storm-1516",
+        "secteur": "Politics (target: President Emmanuel Macron)",
+        "modop": "Pro-Russian disinformation campaign, false associations (Macron-Epstein) via fake websites (France-Soir) and fabricated emails, amplified via X.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "storm-1516",
+          "russia_linked",
+          "disinformation",
+          "influence_operation",
+          "social_engineering",
+          "fake_news"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "TGR-STA-1030",
+        "secteur": "Governments (37 countries, including 5 national law enforcement entities and 3 finance ministries), Critical Infrastructure",
+        "modop": "\"Shadow Campaigns\". Compromise of organizations for espionage. Reconnaissance activities targeting 155 countries, focused on economic partnerships and natural resources.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "tgr-sta-1030",
+          "china_linked",
+          "cyberespionage",
+          "government_targeting",
+          "critical_infrastructure",
+          "reconnaissance",
+          "shadow_campaigns"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "The Com / Scattered Spider",
+        "secteur": "Children and teenagers (targeting), Retail (attacks on British retailers' IT systems), Adult services (Pornhub premium users)",
+        "modop": "Recruitment and exploitation of young people via social media, messaging apps, gaming/streaming platforms. IT attacks, bomb threats, coercion, data theft (Pornhub). Decentralized structure.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "the_com",
+          "scattered_spider",
+          "cybercrime",
+          "social_engineering",
+          "extortion",
+          "targeting_minors",
+          "data_theft"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188708/cyber-crime/europols-project-compass-nets-30-arrests-in-crackdown-on-the-com.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UAC-0252",
+        "secteur": "Unspecified, but targets updates for civilian and military applications",
+        "modop": "Distribution of malicious emails, purportedly from central executive authorities and regional administrations, urging updates to widely used mobile applications by civilian and military systems. Objective is to distribute SHADOWSNIFF and SALATSTEALER stealers.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "uac-0252",
+          "spear_phishing",
+          "credential_theft",
+          "data_exfiltration",
+          "malware",
+          "shadowsniff",
+          "salatstealer"
+        ],
+        "sources": [
+          "https://cert.gov.ua/article/6287707"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UNC2814 (GRIDTIDE)",
+        "secteur": "Telecommunications, Governments (42 confirmed, 20 suspected countries)",
+        "modop": "Global cyberespionage campaign. Use of the GRIDTIDE backdoor. Cloud-based API abuse for covert command and control.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "unc2814",
+          "china_linked",
+          "cyberespionage",
+          "telecommunications",
+          "government_targeting",
+          "backdoor",
+          "gridtide",
+          "api_abuse",
+          "cloud_c2"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "UNC6201",
+        "secteur": "Unspecified, targeting Dell RecoverPoint for Virtual Machines",
+        "modop": "Zero-day exploitation (CVE-2026-22769) in Dell RecoverPoint for Virtual Machines, enabling lateral movement, persistent access, and deployment of malware (SLAYSTYLE, BRICKSTORM, GRIMBOLT).",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "unc6201",
+          "china_linked",
+          "zero_day",
+          "exploitation",
+          "lateral_movement",
+          "persistence",
+          "malware",
+          "dell_recoverpoint"
+        ],
+        "sources": [
+          "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "nom": "Yurii Nazarenko (OnlyFake operator)",
+        "secteur": "Cybercrime, Illegal Services",
+        "modop": "AI exploitation to generate and sell over 10,000 fake digital identification documents (passports, driver's licenses, social security cards) from various countries, allowing KYC requirements bypass for money laundering and identity concealment. Payment in cryptocurrency.",
+        "tags": [
+          "actor",
+          "theat_actor",
+          "yuriy_nazarenko",
+          "onlyfake",
+          "cybercrime",
+          "fraud",
+          "identity_theft",
+          "ai_abuse",
+          "kyc_bypass",
+          "money_laundering",
+          "cryptocurrency"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188734/cyber-crime/ukrainian-hacker-pleads-guilty-to-running-onlyfake-ai-id-scam-site.html"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Defense, Intelligence, Economy, Technology, Telecommunications",
+        "theme": "Challenges of informational and strategic space sovereignty for Africa",
+        "description": "Africa seeks to leverage space as a strategic asset for power and survival, particularly in intelligence (SIGINT, GEOINT, COMINT, IMINT), resource control, and data governance. The continent is heavily dependent on foreign satellites and space services, raising sovereignty concerns. Initiatives like the African Space Agency (AfSA) are underway, but challenges remain in investment and industrial/human capabilities.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "africa",
+          "space_power",
+          "data_sovereignty",
+          "intelligence",
+          "sigint",
+          "geoint",
+          "comint",
+          "imint",
+          "technology_dependence",
+          "strategic_autonomy"
+        ],
+        "sources": [
+          "https://www.portail-ie.fr/univers/2026/afrique-espace-strategique/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Mobile Applications, Religion, Information",
+        "theme": "Use of an Iranian religious application to spread Israeli propaganda",
+        "description": "A popular prayer app in Iran was reportedly compromised by Israel, which is using it to spread propaganda messages (\"help has arrived\") to users by exploiting location access and trust in push notifications.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "israel",
+          "iran",
+          "propaganda",
+          "cyber_attack",
+          "mobile_application",
+          "information_warfare",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/02/iran_prayer_app_propaganda_hack_israel/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Defense, Energy, Maritime Transport, Critical Infrastructure, Government",
+        "theme": "Escalation of Middle East conflict and its cyber and economic implications",
+        "description": "Coordinated US-Israeli military operations against Iran, leading to the death of Supreme Leader Ali Khamenei and Iranian missile and drone retaliations in the region. High risk of destructive cyber operations by Iranian state actors against critical infrastructure. The Strait of Hormuz is under high tension, with disruptions to maritime and air supply chains. Pro-Iranian hacktivist groups have announced cyber operations.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "usa",
+          "israel",
+          "middle_east",
+          "conflict",
+          "cyberwarfare",
+          "critical_infrastructure",
+          "supply_chain",
+          "strait_of_hormuz",
+          "hacktivism",
+          "energy_markets",
+          "maritime_security"
+        ],
+        "sources": [
+          "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know",
+          "https://blog.talosintelligence.com/talos-developing-situation-in-the-middle-east/",
+          "https://www.iris-france.org/le-conflit-en-iran-fait-ressurgir-la-peur-des-consequences-dun-blocage-du-detroit-dormuz-sur-leconomie-mondiale/",
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/02/iran_war_tech_supply_chain/",
+          "https://www.iris-france.org/iran-le-regime-decapite-et-apres/",
+          "https://www.iris-france.org/attaques-israelo-etats-uniennes-contre-liran-quelles-consequences-sur-les-monarchies-du-golfe/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "National Security, Organized Crime, Government",
+        "theme": "Limits of cartel \"decapitation\" strategy and escalation of violence in Mexico",
+        "description": "The elimination of Cartel Jalisco Nueva Generación (CJNG) leader \"El Mencho\" by Mexican security forces, supported by US intelligence, led to immediate retaliation and a risk of escalating violence. Targeting cartel leaders has historically led to group fragmentation and increased competition and violence, without truly dismantling illicit markets. The new Mexican president faces US pressure for strong military action.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "mexico",
+          "organised_crime",
+          "cartel",
+          "cjng",
+          "el_mencho",
+          "drug_trafficking",
+          "violence",
+          "security_policy",
+          "decapitation_strategy",
+          "us_pressure"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/limits-decapitation-mexicos-security-outlook-after-el-mencho"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Government, Media, Telecommunications, Education, Society",
+        "theme": "Information control and Russification of occupied Ukrainian territories",
+        "description": "Russia has implemented a strict system of information control in the temporarily occupied Ukrainian territories (TOT), including the suppression of Ukrainian media, imposition of Russian media, \"Russification\" of telecommunications infrastructure, blocking of messaging apps, and prohibition of Ukrainian language use in education and public services. These measures aim to reshape Ukrainian identity and suppress dissent, creating an \"information limbo\" for residents.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "russia",
+          "ukraine",
+          "information_warfare",
+          "occupation",
+          "propaganda",
+          "media_control",
+          "censorship",
+          "russification",
+          "human_rights"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russias-information-grip-on-ukraines-occupied-territories/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Cyberdefense, Government, Critical Infrastructure, Supply Chains",
+        "theme": "Heightened risk of Iranian cyberattacks",
+        "description": "The UK's NCSC alerted British organizations to a heightened risk of Iranian cyberattacks amid the Middle East conflict. The risk particularly concerns entities with a presence or supply chains in the region. Iranian state-sponsored hacking groups are likely still able to attack despite widespread Internet blackout in Iran.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "uk",
+          "iran",
+          "cyberattack",
+          "middle_east",
+          "conflict",
+          "ncsc",
+          "state_sponsored",
+          "supply_chain",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/uk-warns-of-iranian-cyberattack-risks-amid-middle-east-conflict/",
+          "https://securityaffairs.com/188800/apt/middle-east-crisis-prompts-uk-warning-on-potential-iranian-cyber-activity.html"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Social Media, Individuals",
+        "victime": "Hundreds of young women (including minors)",
+        "description": "Hacking and extortion of social media accounts (Snapchat, Instagram) by Jamarcus Mosley to steal and threaten to release private nude images/videos, demanding further content or money.",
+        "tags": [
+          "violation",
+          "breach",
+          "social_media",
+          "extortion",
+          "cyberstalking",
+          "minors",
+          "credentials_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/alabama-man-pleads-guilty-to-hacking-extorting-hundreds-of-women/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Artificial Intelligence, Online Platform",
+        "victime": "KomikoAI (AI-powered comic generation platform) users",
+        "description": "Data breach exposing 1 million unique email addresses, names, user posts, and AI prompts used to generate content, allowing mapping of individual AI prompts to email addresses.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai_platform",
+          "pii",
+          "email_address",
+          "user_posts",
+          "ai_prompts",
+          "data_mapping"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/KomikoAI"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Mobile Applications, Social/Dating",
+        "victime": "Lovora (couples and relationship app) users",
+        "description": "Data breach exposing 496,000 unique email addresses, display names, profile photos, and other personal information collected through the app.",
+        "tags": [
+          "violation",
+          "breach",
+          "mobile_app",
+          "dating_app",
+          "pii",
+          "email_address",
+          "profile_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Lovora"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Nippon Medical School Musashikosugi Hospital",
+        "description": "Ransomware attack confirmed, leaking approximately 130,000 personal data records. Initial intrusion vector was a maintenance VPN.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "pii",
+          "vpn_compromise",
+          "data_leak"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/nippon-medical-school-musashikosugi-hospital-ransomware-130k-data-breach/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Mobile Applications, Health/Wellness",
+        "victime": "Quitbro (porn addiction app) users",
+        "description": "Data breach exposing 23,000 unique email addresses, years of birth, responses to in-app questions, and last recorded relapse time.",
+        "tags": [
+          "violation",
+          "breach",
+          "mobile_app",
+          "health_app",
+          "pii",
+          "email_address",
+          "sensitive_data"
+        ],
+        "sources": [
+          "https://haveibeenpwned.com/Breach/Quitbro"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Hospitality, Gaming",
+        "victime": "Wynn Resorts",
+        "description": "Employee data was accessed following an extortion threat linked to the ShinyHunters group.",
+        "tags": [
+          "violation",
+          "breach",
+          "hospitality",
+          "employee_data",
+          "extortion",
+          "shinyhunters"
+        ],
+        "sources": [
+          "https://research.checkpoint.com/2026/2nd-march-threat-intelligence-report/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "OCAT, LLC dba Evoke Wellness at Hilliard (addiction treatment center)",
+        "description": "Unauthorized activity within the network and access to patient information (name, address, email, phone, DOB, SSN, DL, passport, medical record number, admission/discharge dates, diagnosis, allergies, pharmacy, medication, lab results, health insurance, payment card, photo, marital status, employer, race/ethnicity, E-Signature). Attributed to an insider threat.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "insider_threat",
+          "pii",
+          "phi"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/evoke-wellness-at-hilliard-updates-its-breach-notification/?pk_campaign=feed&pk_kwd=evoke-wellness-at-hilliard-updates-its-breach-notification"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Government, Defense",
+        "victime": "U.S. Department of Homeland Security (DHS), Immigration and Customs Enforcement (ICE)",
+        "description": "Hacktivist group \"Department of Peace\" leaked allegedly stolen documents related to contracts between DHS/ICE and over 6,000 companies, including defense contractors.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "hacktivism",
+          "data_leak",
+          "department_of_peace",
+          "contract_data"
+        ],
+        "date": "2026-03-03",
+        "sources": [
+          "https://databreaches.net/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/?pk_campaign=feed&pk_kwd=hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data"
+        ]
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Insight Hospital and Medical Center",
+        "description": "An unauthorized individual accessed the network between August 22 and September 11, 2025. 360 GB of \"confidential data\" (approx. 900,000 files) leaked on the dark web by the Termite group. Information includes name, SSN, DOB, DL, passport, financial account, treatment-related, health insurance.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "patient_data",
+          "pii",
+          "phi",
+          "dark_web",
+          "termite",
+          "data_leak"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/data-from-insight-hospital-and-medical-center-leaked-on-dark-web/?pk_campaign=feed&pk_kwd=data-from-insight-hospital-and-medical-center-leaked-on-dark-web"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "secteur": "Education",
+        "victime": "Denmark School District",
+        "description": "Cyberattack by the INC Ransom group, encrypting files and acquiring 70.76 GB of data, causing a week-long internet outage.",
+        "tags": [
+          "violation",
+          "breach",
+          "education",
+          "ransomware",
+          "data_exfiltration",
+          "inc_ransom",
+          "outage"
+        ],
+        "sources": [
+          "https://databreaches.net/2026/03/02/wisconsin-k-12-district-hit-by-weeklong-outage/?pk_campaign=feed&pk_kwd=wisconsin-k-12-district-hit-by-weeklong-outage"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-64328",
+        "cvss": "8.6",
+        "product": "FreePBX Endpoint Manager",
+        "description": "Post-authentication command-injection vulnerability in the Endpoint Manager filestore module. Allows arbitrary command execution as the asterisk user.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "freepbx",
+          "command_injection",
+          "post_authentication",
+          "web_shell",
+          "rce"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-0628",
+        "cvss": "8.8",
+        "product": "Google Chrome (Gemini AI feature)",
+        "description": "Insufficient policy enforcement in Google Chrome's WebView tag (Gemini feature) allowing malicious extensions to inject JavaScript code into the privileged Gemini panel, leading to privilege escalation, access to local files, camera, and microphone.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "chrome",
+          "gemini",
+          "ai",
+          "privilege_escalation",
+          "webview",
+          "local_file_access",
+          "camera_access",
+          "microphone_access"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/gemini-live-in-chrome-hijacking/",
+          "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
+          "https://cybersecuritynews.com/chrome-gemini-vulnerability/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-0754",
+        "cvss": "8.2",
+        "product": "Poly Voice device (SIP Service Providers)",
+        "description": "Extraction of an embedded test key and certificate from a Poly Voice device, potentially leading to impersonation if the SIP service provider does not properly validate the device certificate.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "poly_voice",
+          "sip",
+          "impersonation",
+          "certificate_theft",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-0754"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-1566",
+        "cvss": "8.8",
+        "product": "LatePoint – Calendar Booking Plugin for Appointments and Events (WordPress)",
+        "description": "Privilege escalation via password reset for users with \"LatePoint Agent+\" role, allowing linking a customer to an arbitrary user ID and resetting the password, including administrators'.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "wordpress",
+          "latepoint",
+          "privilege_escalation",
+          "password_reset",
+          "authentication"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-1566"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-21513",
+        "cvss": "8.8",
+        "product": "Microsoft HTML (MSHTML) framework",
+        "description": "Zero-day vulnerability (Internet Explorer security control bypass) in the MSHTML framework allowing remote code execution via opening a malicious HTML page or LNK file.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "microsoft",
+          "mshtml",
+          "internet_explorer",
+          "zero_day",
+          "rce",
+          "code_execution",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-26712",
+        "cvss": "9.8",
+        "product": "code-projects Simple Food Order System v1.0",
+        "description": "SQL Injection vulnerability in /food/view-ticket-admin.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "web_application",
+          "code-projects"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26712"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-26713",
+        "cvss": "9.8",
+        "product": "code-projects Simple Food Order System v1.0",
+        "description": "SQL Injection vulnerability in /food/routers/cancel-order.php.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "sql_injection",
+          "web_application",
+          "code-projects"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-26713"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3336",
+        "cvss": "8.7",
+        "product": "AWS-LC",
+        "description": "PKCS7_verify Certificate Chain Validation Bypass allowing an unauthenticated user to bypass certificate chain verification when processing PKCS7 objects with multiple signers.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "certificate_validation_bypass",
+          "pkcs7",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3336"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3337",
+        "cvss": "8.2",
+        "product": "AWS-LC",
+        "description": "Observable timing discrepancy in AES-CCM decryption allowing an unauthenticated user to potentially determine authentication tag validity via timing analysis. Impacts implementations through the EVP CIPHER API: EVP_aes_128_ccm, EVP_aes_192_ccm, and EVP_aes_256_ccm.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "timing_side_channel",
+          "aes-ccm",
+          "decryption",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3337"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "cve_id": "CVE-2026-3338",
+        "cvss": "8.7",
+        "product": "AWS-LC",
+        "description": "PKCS7_verify Signature Validation Bypass allowing an unauthenticated user to bypass signature verification when processing PKCS7 objects with Authenticated Attributes.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "aws",
+          "aws-lc",
+          "signature_validation_bypass",
+          "pkcs7",
+          "authentication_bypass"
+        ],
+        "sources": [
+          "https://aws.amazon.com/security/security-bulletins/rss/2026-005-aws/",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3338"
+        ],
+        "date": "2026-03-03"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "APT37 combines cloud storage and USB implants to infiltrate air-gapped systems",
+        "description": "Analysis of the \"Ruby Jumper\" campaign by APT37 (North Korea) using malicious LNK files, backdoors (RESTLEAF, BLUELIGHT) for C2 via legitimate cloud services (Zoho WorkDrive, Google Drive, Microsoft OneDrive), and USB implants (THUMBSBD, VIRUSTASK) to infiltrate and exfiltrate data from air-gapped networks.",
+        "threat_actor": "APT37 (ScarCruft, Reaper, Group123)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1059.001",
+          "T1059.003",
+          "T1573.001",
+          "T1071.001",
+          "T1105",
+          "T1020.001",
+          "T1083",
+          "T1048.003",
+          "T1090.002",
+          "T1056.001",
+          "T1125"
+        ],
+        "analyse": "Sophisticated espionage campaign targeting sensitive networks, potentially governmental/military, with the ability to operate on isolated systems. The use of legitimate cloud services makes C2 detection more difficult. Targeting air-gapped networks represents a high risk for national security and intellectual property.",
+        "recommandations": [
+          "Strengthen monitoring of physical access points and control the use of removable media.",
+          "Implement increased endpoint activity monitoring and network flow analysis to detect unusual communications to cloud services.",
+          "Update systems and raise awareness of LNK file attacks."
+        ],
+        "tags": [
+          "apt",
+          "north_korea",
+          "espionage",
+          "malware",
+          "backdoor",
+          "c2",
+          "cloud_storage",
+          "usb_implant",
+          "air_gapped",
+          "data_exfiltration",
+          "ruby_jumper",
+          "restleaf",
+          "bluelight",
+          "thumbsbd",
+          "virustask",
+          "footwine"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188767/apt/apt37-combines-cloud-storage-and-usb-implants-to-infiltrate-air-gapped-systems.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "ClawJacked flaw exposed OpenClaw users to data theft",
+        "description": "High-severity \"ClawJacked\" vulnerability in the OpenClaw AI agent framework. Allows malicious websites to take control of local AI agent instances via a WebSocket connection to localhost and a brute-force attack against the password, bypassing rate limits. This grants admin control, enabling configuration extraction, log reading, and command execution on linked devices, potentially leading to full workstation compromise.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078.001",
+          "T1548.002",
+          "T1059.007",
+          "T1083",
+          "T1003.001"
+        ],
+        "analyse": "Highlights the inherent security risks of local AI agent frameworks and the assumption of trust in localhost traffic. The ease of exploitation (visiting a malicious site) and the potential impact (workstation compromise, sensitive data theft) are significant, especially for developers using these tools. This underscores the need for governance and strict controls for AI agents.",
+        "recommandations": [
+          "Immediately update OpenClaw to version 2026.2.25 or later.",
+          "Restrict AI agent permissions and credentials to the bare minimum necessary.",
+          "Audit AI tools on development machines and implement strict policy controls, access monitoring, and audit trails for AI agents."
+        ],
+        "tags": [
+          "vulnerability",
+          "ai",
+          "openclaw",
+          "clawjacked",
+          "data_theft",
+          "remote_control",
+          "authentication_bypass",
+          "privilege_escalation",
+          "web_socket",
+          "localhost",
+          "security_governance"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188749/hacking/clawjacked-flaw-exposed-openclaw-users-to-data-theft.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "CyberStrikeAI tool adopted by hackers for AI-powered attacks",
+        "description": "Analysis of cybercriminals' adoption of an open-source AI-based security testing platform, CyberStrikeAI. This tool, integrating over 100 security tools and an AI orchestration engine, enables the automation of full attack chains (network scanning, web testing, exploitation, password cracking, post-exploitation). The same threat actor behind FortiGate breaches was observed using CyberStrikeAI. The deployment of such AI orchestration engines by adversaries is likely to accelerate the automated targeting of exposed edge devices.",
+        "threat_actor": "The threat actor behind recent Fortinet FortiGate firewall breaches",
+        "indicator_of_compromise": {
+          "IPv4": [
+            "212.11.64.250"
+          ]
+        },
+        "mitre_ttps": [
+          "T1595.002",
+          "T1590",
+          "T1592",
+          "T1596",
+          "T1098",
+          "T1078",
+          "T1059",
+          "T1068",
+          "T1589",
+          "T1003"
+        ],
+        "analyse": "The proliferation of AI-powered attack orchestration tools like CyberStrikeAI lowers the barrier to entry for cybercriminals and increases the speed and scale of automated attacks. Edge devices (firewalls, VPNs) are particularly targeted. This signals an evolution in attack methods towards greater autonomy and efficiency, potentially making traditional defenses less effective.",
+        "recommandations": [
+          "Prepare defenses for automated, AI-driven attacks targeting edge devices.",
+          "Strengthen access controls for administrative interfaces and implement strong multi-factor authentication (MFA).",
+          "Keep systems up-to-date with the latest security patches."
+        ],
+        "tags": [
+          "ai",
+          "cyberstrikeai",
+          "automated_attacks",
+          "attack_platform",
+          "fortinet",
+          "fortigate",
+          "edge_devices",
+          "reconnaissance",
+          "exploitation",
+          "threat_actor_activity",
+          "supply_chain",
+          "ai_abuse"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Fake Google Security site uses PWA app to steal credentials, MFA codes",
+        "description": "Phishing campaign using a fake Google Account security page to deliver a malicious Progressive Web App (PWA). This PWA is capable of stealing one-time passcodes (MFA), harvesting cryptocurrency wallet addresses, and proxying attacker traffic through victims' browsers. The attack leverages PWA features and social engineering to deceive users into installing the malware and granting risky permissions. A companion Android app can also be offered for additional capabilities (keylogging, notification interception, persistence).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "google-prism.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1566.002",
+          "T1056.001",
+          "T1552.001",
+          "T1071.001",
+          "T1090.003",
+          "T1083",
+          "T1555.003"
+        ],
+        "analyse": "This campaign demonstrates a clever use of legitimate browser features (PWA) and social engineering to bypass traditional protections. The ability to steal MFA codes and use the victim's device as a proxy increases the persistence and stealth of attacks. Targeting via fake security updates is particularly effective.",
+        "recommandations": [
+          "Educate users on phishing tactics, emphasizing that Google does not request software installations via pop-ups for enhanced security.",
+          "Verify the authenticity of security pages by directly accessing Google Account settings.",
+          "Revoke device administrator rights for suspicious apps (\"System Service\" / com.device.sync) and uninstall them."
+        ],
+        "tags": [
+          "phishing",
+          "pwa",
+          "google",
+          "credentials_theft",
+          "mfa_bypass",
+          "cryptocurrency_theft",
+          "network_proxy",
+          "social_engineering",
+          "android_malware",
+          "persistence"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-google-security-site-uses-pwa-app-to-steal-credentials-mfa-codes/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "How Deepfakes and Injection Attacks Are Breaking Identity Verification",
+        "description": "Analysis of the evolving deepfakes and injection attacks targeting identity verification processes (onboarding, account recovery). These techniques enable impersonation and persistent access within trusted environments, with lasting impacts (account persistence, privilege escalation pathways). Defenses based solely on visual deepfake detection are insufficient; full session validation (perception, device integrity, behavioral signals) is needed to stop synthetic and injected attacks in real-time.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1078",
+          "T1566",
+          "T1078.003",
+          "T1548.002",
+          "T1098"
+        ],
+        "analyse": "Identity impersonation methods are becoming more sophisticated with AI and injection attacks, rendering traditional identity verification systems obsolete. The impact is systemic, affecting trust in digital identity systems. Enterprises must adopt multi-layered, real-time validation approaches.",
+        "recommandations": [
+          "Implement full session validation that includes perception (deepfake detection), device integrity, and behavioral signals.",
+          "Develop resilient defenses that do not rely solely on detecting manipulated pixels, but validate the authenticity of the entire interaction."
+        ],
+        "tags": [
+          "deepfake",
+          "identity_verification",
+          "injection_attack",
+          "fraud",
+          "ai_abuse",
+          "social_engineering",
+          "account_takeover",
+          "privilege_escalation",
+          "security_architecture"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/how-deepfakes-and-injection-attacks-are-breaking-identity-verification/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "mitmproxy for fun and profit: Interception et analyse de flux applicatifs",
+        "description": "In-depth technical analysis of the open-source mitmproxy tool for intercepting, modifying, and replaying network communications (HTTP/S, TCP/UDP) across various platforms (Linux, Android, iOS). The article details explicit and transparent modes, the importance of root certificates (and bypassing Certificate Pinning on rooted Android via Magisk), and using mitmproxy's scripting API to manipulate requests (e.g., spoofing Google location, altering a Git clone to download a malicious repository, intercepting encrypted Mumble messages).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1090.002",
+          "T1071",
+          "T1573",
+          "T1059",
+          "T1557.001",
+          "T1114.001"
+        ],
+        "analyse": "Demonstrates the effectiveness and flexibility of mitmproxy for security analysis and network flow alteration, even for complex or encrypted protocols. Highlights that deep protocol knowledge and certificate manipulation can bypass many protections. Underscores the importance of techniques like certificate pinning, but also its limitations against controlled or rooted environments.",
+        "recommandations": [
+          "Implement and strengthen certificate pinning for sensitive applications.",
+          "Audit client application configurations (e.g., Git) to prevent permissive behaviors.",
+          "Educate developers on the risks associated with traffic interception and insecure testing environments."
+        ],
+        "tags": [
+          "mitmproxy",
+          "network_interception",
+          "traffic_analysis",
+          "application_security",
+          "tls_decryption",
+          "certificate_pinning_bypass",
+          "reverse_engineering",
+          "linux",
+          "android",
+          "ios",
+          "grpc",
+          "protobuf",
+          "git_manipulation"
+        ],
+        "sources": [
+          "https://www.synacktiv.com/publications/mitmproxy-for-fun-and-profit-interception-et-analyse-de-flux-applicatifs.html"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "OAlerts.evtx — The Hidden Microsoft Office Evidence Log",
+        "description": "Analysis of OAlerts.evtx, an overlooked Windows Event Log file that records every time Microsoft Office displays a dialog box to the user. This log can contain crucial information for Digital Forensics and Incident Response (DFIR), such as names of modified files, deleted emails, attempts to access encrypted documents, and their timestamps. It allows detecting file activity on removable media that other artifacts might miss. Although it doesn't directly record user identity, it can be correlated with the Windows Security Event Log for attribution.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1560.001",
+          "T1083",
+          "T1562.001",
+          "T1005",
+          "T1059"
+        ],
+        "analyse": "This article reveals a valuable, often overlooked, source of information for DFIR. OAlerts.evtx offers granular visibility into user interactions with Office documents, complementing other logs and artifacts to reconstruct a timeline of events and identify malicious or suspicious activities. Its usefulness is enhanced by its ability to record activity on removable media.",
+        "recommandations": [
+          "Integrate OAlerts.evtx into digital investigation processes.",
+          "Train DFIR analysts to exploit this log.",
+          "Correlate OAlerts.evtx events with security logs (logons) and other artifacts (LNK files, Jump Lists) for comprehensive analysis."
+        ],
+        "tags": [
+          "dfir",
+          "forensics",
+          "microsoft_office",
+          "windows_event_log",
+          "oalerts.evtx",
+          "evidence_collection",
+          "incident_response",
+          "data_discovery",
+          "user_activity_monitoring"
+        ],
+        "sources": [
+          "https://www.cyberengage.org/post/oalerts-evtx-the-hidden-microsoft-office-evidence-log"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Researchers report FreePBX exploitation: 900+ systems compromised",
+        "description": "Large-scale exploitation of CVE-2025-64328 (CVSS 8.6, post-authentication command-injection) in Sangoma FreePBX instances. Over 900 systems were compromised with persistent web shells. Threat actor INJ3CTOR3 deploys the EncystPHP web shell to maintain access, execute arbitrary commands, and pivot deeper into networks. Exploitation began in December 2025 despite patches released in November 2025, highlighting the importance of rapid patch application.",
+        "threat_actor": "INJ3CTOR3",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1190",
+          "T1505.003",
+          "T1059",
+          "T1068",
+          "T1133"
+        ],
+        "analyse": "Critical vulnerability in widely deployed PBX systems, allowing full control of voice infrastructure and an entry point for broader intrusions. The delay between patch release and persistent exploitation highlights the challenges of patch management in many organizations. Exposed interfaces and weak credentials increase risk.",
+        "recommandations": [
+          "Restrict access to the FreePBX Administration Panel to trusted networks via firewall rules.",
+          "Immediately apply the official patch (CVE-2025-64328) and ensure the emergency EDGE module fix is in place for older deployments.",
+          "Perform a full integrity review of affected systems, remove unauthorized web shells, and monitor for command execution patterns and unexpected outbound connections."
+        ],
+        "tags": [
+          "freepbx",
+          "vulnerability",
+          "exploitation",
+          "web_shell",
+          "command_injection",
+          "inj3ctor3",
+          "telephony",
+          "critical_infrastructure",
+          "patch_management",
+          "remote_access",
+          "persistent_access"
+        ],
+        "sources": [
+          "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Russia-linked APT28 exploited MSHTML zero-day CVE-2026-21513 before patch",
+        "description": "Russia-linked APT28 exploited a zero-day vulnerability (CVE-2026-21513, CVSS 8.8) in Microsoft's MSHTML framework before it was patched. This vulnerability, an Internet Explorer security control bypass, allows remote code execution via opening malicious LNK files or HTML pages. The campaign used a malicious sample document.doc.LnK.download and C2 infrastructure (wellnesscaremed[.]com), manipulating trust boundaries via nested iframes to bypass protections.",
+        "threat_actor": "APT28",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "wellnesscaremed.com"
+          ]
+        },
+        "mitre_ttps": [
+          "T1203",
+          "T1566.001",
+          "T1059.007",
+          "T1546.001",
+          "T1071.001"
+        ],
+        "analyse": "The active exploitation of a zero-day vulnerability by a state actor demonstrates sophisticated attack capability and a persistent threat against Windows systems. The exploitation method bypasses multiple security layers, including browser protections and file markings, highlighting the complexity of modern attacks and the need for multi-layered defenses.",
+        "recommandations": [
+          "Apply Microsoft patches for CVE-2026-21513 as soon as possible.",
+          "Educate users on the risks associated with LNK files and HTML links from unknown sources.",
+          "Deploy advanced endpoint protection capable of detecting unexpected code execution behaviors and C2 communications."
+        ],
+        "tags": [
+          "apt28",
+          "russia",
+          "state_sponsored",
+          "zero_day",
+          "mshtml",
+          "internet_explorer",
+          "code_execution",
+          "remote_code_execution",
+          "cve-2026-21513",
+          "phishing",
+          "lnk_file",
+          "exploit",
+          "security_bypass"
+        ],
+        "sources": [
+          "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html",
+          "https://cybersecuritynews.com/mshtml-framework-0-day-exploited/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Taming Agentic Browsers: Vulnerability in Chrome Allowed Extensions to Hijack New Gemini Panel",
+        "description": "Discovery of a high-severity vulnerability (CVE-2026-0628, CVSS 8.8) in Google Chrome's Gemini feature implementation. This flaw allows malicious extensions (even with basic permissions via the declarativeNetRequest API) to inject JavaScript code into the privileged Gemini panel. This leads to privilege escalation, allowing access to the operating system's local files, the victim's camera and microphone, and the display of phishing content. The risk is exacerbated by AI integration directly into browsers, expanding the attack surface.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "URL": [
+            "https://gemini.google.com/app"
+          ]
+        },
+        "mitre_ttps": [
+          "T1078.001",
+          "T1548.002",
+          "T1059.007",
+          "T1083",
+          "T1125",
+          "T1566.002"
+        ],
+        "analyse": "The increasing integration of AI into browsers introduces new attack vectors and unprecedented security risks, notably privilege escalation and access to sensitive resources (camera, microphone, local files) via trusted browser components. The vulnerability highlights the security challenges associated with granting high privileges to AI agents.",
+        "recommandations": [
+          "Update Google Chrome immediately (version 143.0.7499.192/.193 or higher).",
+          "Organizations must ensure Chrome is updated across all endpoints.",
+          "Be vigilant against malicious extensions and AI-based applications, auditing their permissions."
+        ],
+        "tags": [
+          "vulnerability",
+          "chrome",
+          "gemini",
+          "ai",
+          "privilege_escalation",
+          "local_file_access",
+          "camera_access",
+          "microphone_access",
+          "phishing",
+          "browser_extension",
+          "declarative_net_request_api",
+          "security_model_bypass",
+          "cve-2026-0628"
+        ],
+        "sources": [
+          "https://unit42.paloaltonetworks.com/gemini-live-in-chrome-hijacking/",
+          "https://thehackernews.com/2026/03/new-chrome-vulnerability-let-malicious.html",
+          "https://cybersecuritynews.com/chrome-gemini-vulnerability/"
+        ],
+        "date": "2026-03-03"
+      },
+      {
+        "title": "Кібератаки UAC-0252 з використанням стілерів SHADOWSNIFF та SALATSTEALER (CERT-UA#20032)",
+        "description": "CERT-UA has detected cyberattacks from the UAC-0252 group since January 2026. The modus operandi involves distributing emails, purportedly from central executive authorities and regional administrations, urging updates to mobile applications widely used by civilian and military systems. The objective is to distribute SHADOWSNIFF and SALATSTEALER stealers.",
+        "threat_actor": "UAC-0252",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "T1566.001",
+          "T1204.002",
+          "T1552.001",
+          "T1560.001",
+          "T1071.001"
+        ],
+        "analyse": "Cyberattack campaign potentially targeting sensitive information related to military and civilian applications via social engineering and malware distribution. Impersonation of government bodies lends legitimacy to malicious emails, increasing the risk of target compromise.",
+        "recommandations": [
+          "Educate users on phishing emails, even those that appear legitimate.",
+          "Implement strict source verification for application updates.",
+          "Use malware detection solutions and endpoint protection."
+        ],
+        "tags": [
+          "uac-0252",
+          "cert-ua",
+          "spear_phishing",
+          "malware",
+          "stealer",
+          "shadowsniff",
+          "salatstealer",
+          "mobile_applications",
+          "government_impersonation",
+          "cybercrime",
+          "data_theft",
+          "ukraine"
+        ],
+        "sources": [
+          "https://cert.gov.ua/article/6287707"
+        ],
+        "date": "2026-03-03"
+      }
+    ]
+  }
+}
