@@ -1,0 +1,339 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape on March 3, 2026, is dominated by the massive escalation of the conflict in the Middle East following 'Operation Epic Fury', leading to immediate retaliatory cyber activity from Iranian state-sponsored and hacktivist groups (Handala Hack, Cyber Islamic Resistance). Simultaneously, a critical trend is emerging in the weaponization of Artificial Intelligence: hackers are adopting AI-native platforms like CyberStrikeAI to automate attack chains, while high-severity vulnerabilities in AI-integrated products (Chrome Gemini, Claude Code, OpenClaw) are being actively disclosed or exploited. Furthermore, Russian APT28 remains highly active, exploiting zero-day vulnerabilities (CVE-2026-21513) for geopolitical espionage in Europe.",
+      "fr": "Le paysage des menaces cyber au 3 mars 2026 est dominé par l'escalade massive du conflit au Moyen-Orient suite à l'opération 'Epic Fury', entraînant des représailles cyber immédiates de la part de groupes étatiques et hacktivistes iraniens (Handala Hack, Cyber Islamic Resistance). Parallèlement, une tendance critique émerge dans l'utilisation offensive de l'intelligence artificielle : les attaquants adoptent des plateformes natives IA comme CyberStrikeAI pour automatiser les chaînes d'attaque, tandis que des vulnérabilités critiques dans des produits intégrant l'IA (Chrome Gemini, Claude Code, OpenClaw) sont activement découvertes ou exploitées. Enfin, le groupe russe APT28 reste très actif, exploitant des vulnérabilités zero-day (CVE-2026-21513) à des fins d'espionnage géopolitique en Europe."
+    },
+    "date": "2026-03-03"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "APT28",
+      "campaign": "Central and Eastern Europe Espionage",
+      "campaign_description": {
+        "en": "Exploitation of an MSHTML zero-day (CVE-2026-21513) to bypass security controls and execute code via malicious LNK and HTML files.",
+        "fr": "Exploitation d'une faille zero-day MSHTML (CVE-2026-21513) pour contourner les contrôles de sécurité et exécuter du code via des fichiers LNK et HTML malveillants."
+      },
+      "sector": {
+        "en": "Government, Defense",
+        "fr": "Gouvernement, Défense"
+      },
+      "modop": {
+        "en": "Spear-phishing with weaponized LNK files bypassing Mark of the Web (MotW). Use of wellnesscaremed[.]com infrastructure.",
+        "fr": "Spear-phishing avec des fichiers LNK piégés contournant le Mark of the Web (MotW). Utilisation de l'infrastructure wellnesscaremed[.]com."
+      },
+      "tags": [
+        "Russia",
+        "Zero-day",
+        "MSHTML"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188782/security/russia-linked-apt28-exploited-mshtml-zero-day-cve-2026-21513-before-patch.html"
+      ],
+      "date": "2026-03-03"
+    },
+    {
+      "threat_actor": "APT37",
+      "campaign": "Ruby Jumper",
+      "campaign_description": {
+        "en": "Infiltration of air-gapped networks using multi-stage malware (THUMBSBD, SNAKEDROPPER) delivered via USB and using cloud services like Zoho WorkDrive for C2.",
+        "fr": "Infiltration de réseaux isolés (air-gapped) utilisant des malwares multi-étapes (THUMBSBD, SNAKEDROPPER) propagés par USB et utilisant des services cloud comme Zoho WorkDrive pour le C2."
+      },
+      "sector": {
+        "en": "Government, Defense, South Korea-related entities",
+        "fr": "Gouvernement, Défense, Entités liées à la Corée du Sud"
+      },
+      "modop": {
+        "en": "Use of Ruby-based environment (SNAKEDROPPER) disguised as USB utilities. THUMBSBD manages data exfiltration from isolated systems via hidden folders on removable media.",
+        "fr": "Utilisation d'un environnement basé sur Ruby (SNAKEDROPPER) camouflé en utilitaire USB. THUMBSBD gère l'exfiltration de données depuis des systèmes isolés via des dossiers cachés sur supports amovibles."
+      },
+      "tags": [
+        "North Korea",
+        "Air-gap",
+        "USB Malware"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188767/apt/apt37-combines-cloud-storage-and-usb-implants-to-infiltrate-air-gapped-systems.html"
+      ],
+      "date": "2026-03-03"
+    },
+    {
+      "threat_actor": "Scattered Spider",
+      "campaign": "The Com Network Operations",
+      "campaign_description": {
+        "en": "The broader Com network, including ShinyHunters and Scattered Spider, targeted retailers and premium users of various platforms (Odido, Pornhub).",
+        "fr": "Le réseau élargi 'The Com', incluant ShinyHunters et Scattered Spider, a ciblé des détaillants et des utilisateurs premium de diverses plateformes (Odido, Pornhub)."
+      },
+      "sector": {
+        "en": "Telecommunications, Retail, Adult Entertainment",
+        "fr": "Télécommunications, Commerce de détail, Divertissement pour adultes"
+      },
+      "modop": {
+        "en": "Data theft and extortion via social engineering and credential harvesting.",
+        "fr": "Vol de données et extorsion via l'ingénierie sociale et la collecte d'identifiants."
+      },
+      "tags": [
+        "The Com",
+        "Extortion",
+        "Data Breach"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188708/cyber-crime/europols-project-compass-nets-30-arrests-in-crackdown-on-the-com.html"
+      ],
+      "date": "2026-03-03"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Energy, Maritime, Critical Infrastructure",
+        "fr": "Énergie, Maritime, Infrastructures critiques"
+      },
+      "theme": {
+        "en": "Iran-Israel Military Conflict (Operation Epic Fury)",
+        "fr": "Conflit militaire Iran-Israël (Opération Epic Fury)"
+      },
+      "description": {
+        "en": "The killing of Iranian Supreme Leader Ali Khamenei has triggered immediate kinetic and cyber retaliation across the Middle East. Threats focus on maritime transit (Strait of Hormuz) and critical infrastructure in Israel, USA, and Gulf states.",
+        "fr": "L'élimination du Guide suprême iranien Ali Khamenei a déclenché des représailles cinétiques et cybernétiques immédiates au Moyen-Orient. Les menaces se concentrent sur le transit maritime (détroit d'Ormuz) et les infrastructures critiques en Israël, aux États-Unis et dans les États du Golfe."
+      },
+      "tags": [
+        "Middle-East",
+        "Iran",
+        "War"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know",
+        "https://unit42.paloaltonetworks.com/iranian-cyberattacks-2026/"
+      ],
+      "date": "2026-03-03"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Wynn Resorts",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Hospitality, Casino",
+        "fr": "Hôtellerie, Casino"
+      },
+      "description": {
+        "en": "Exfiltration of HR-related data and employee records following an extortion threat. Operations were reportedly not disrupted.",
+        "fr": "Exfiltration de données RH et de dossiers d'employés suite à une menace d'extorsion. Les opérations n'auraient pas été perturbées."
+      },
+      "tags": [
+        "Data Leak",
+        "Extortion"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/2nd-march-threat-intelligence-report/"
+      ],
+      "date": "2026-03-03"
+    },
+    {
+      "victim": "Odido",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Major data breach involving millions of customer records leaked by the ShinyHunters group.",
+        "fr": "Violation majeure de données impliquant des millions de dossiers clients fuis par le groupe ShinyHunters."
+      },
+      "tags": [
+        "Telecommunications",
+        "Data Leak"
+      ],
+      "sources": [
+        "https://cert.europa.eu/publications/threat-intelligence/cb26-03/"
+      ],
+      "date": "2026-03-03"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-0628",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Google Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Insufficient policy enforcement in WebView tag allowed malicious extensions to hijack the Gemini Live panel, gaining access to camera, microphone, and local files.",
+        "fr": "Une application insuffisante des politiques dans la balise WebView permettait à des extensions malveillantes de détourner le panneau Gemini Live, accédant ainsi à la caméra, au micro et aux fichiers locaux."
+      },
+      "tags": [
+        "vulnerability",
+        "AI",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/gemini-live-in-chrome-hijacking/"
+      ],
+      "date": "2026-03-03"
+    },
+    {
+      "cve_id": "CVE-2025-64328",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.6",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:sangoma:freepbx:*:*:*:*:*:*:*:*",
+      "product": "FreePBX",
+      "vendor": "Sangoma",
+      "description": {
+        "en": "Command injection vulnerability in the Endpoint Manager filestore module. Exploited to deploy EncystPHP web shells on over 900 systems.",
+        "fr": "Vulnérabilité d'injection de commande dans le module filestore d'Endpoint Manager. Exploitée pour déployer des shells web EncystPHP sur plus de 900 systèmes."
+      },
+      "tags": [
+        "vulnerability",
+        "Active Exploitation",
+        "VoIP"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/freepbx-exploitation-900-systems-compromised"
+      ],
+      "date": "2026-03-03"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "CyberStrikeAI Hacking Tool Adoption",
+        "fr": "Adoption de l'outil de piratage CyberStrikeAI"
+      },
+      "description": {
+        "en": "An AI-native security testing platform built in Go, adopted by threat actors for automated vulnerability discovery and attack orchestration against edge devices like FortiGate.",
+        "fr": "Une plateforme de test de sécurité native IA construite en Go, adoptée par des attaquants pour la découverte automatisée de vulnérabilités et l'orchestration d'attaques contre des équipements de bordure comme FortiGate."
+      },
+      "threat_actor": "Unknown (linked to FortiGate campaigns)",
+      "indicators": {
+        "URL": [
+          "https://github.com/CyberStrikeAI/CyberStrikeAI"
+        ],
+        "IPv4": [
+          "212.11.64.250"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "CyberStrikeAI",
+          "PrivHunterAI",
+          "InfiltrateX"
+        ]
+      },
+      "mitre_ttps": [
+        "T1595",
+        "T1059",
+        "T1068"
+      ],
+      "analyse": {
+        "en": "CyberStrikeAI lowers the barrier for low-skilled attackers by automating the full attack chain (Nmap, Metasploit, etc.) via AI agents.",
+        "fr": "CyberStrikeAI réduit la barrière à l'entrée pour les attaquants peu qualifiés en automatisant toute la chaîne d'attaque (Nmap, Metasploit, etc.) via des agents IA."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor and block the identified IP 212.11.64.250.",
+          "fr": "Surveiller et bloquer l'IP identifiée 212.11.64.250."
+        },
+        {
+          "en": "Review edge device exposure and patch known vulnerabilities in VPN/Firewall appliances.",
+          "fr": "Examiner l'exposition des équipements périmétriques et corriger les vulnérabilités connues des appliances VPN/Firewall."
+        }
+      ],
+      "tags": [
+        "AI-Powered Attack",
+        "Automation"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cyberstrikeai-tool-adopted-by-hackers-for-ai-powered-attacks/"
+      ],
+      "date": "2026-03-03"
+    },
+    {
+      "title": {
+        "en": "UAC-0252 Phishing and Stealer Campaign",
+        "fr": "Campagne de Phishing et Stealers du groupe UAC-0252"
+      },
+      "description": {
+        "en": "Distribution of SHADOWSNIFF and SALATSTEALER malwares via spoofed government emails and XSS-vulnerable websites.",
+        "fr": "Distribution des malwares SHADOWSNIFF et SALATSTEALER via des e-mails gouvernementaux usurpés et des sites web vulnérables aux XSS."
+      },
+      "threat_actor": "UAC-0252",
+      "indicators": {
+        "URL": [
+          "http://150.241.64.21:8888/client/addclient",
+          "https://salat.cn/sa1at/",
+          "https://mk-gov-ua.github.io/jgfjdhkmbvn.github.io/raw/refs/heads/main/Diia_Update_4.7.1_Official.exe"
+        ],
+        "IPv4": [
+          "150.241.64.21",
+          "95.85.224.14",
+          "91.92.34.130"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "ua-gov.info",
+          "nfkavn.bond",
+          "salator.ru"
+        ],
+        "EMAIL": [
+          "cazi@scpc.gov.ua",
+          "press@cip.gov.ua"
+        ],
+        "HASH_SHA256": [
+          "3abf295b79992532b03261a81643124d134fa7e86fb901b3bfc74ad0f192dc7f",
+          "b5e685e57c625032ec067be94a2854cce1b7c5a51e8d6bd833841a893d5d88b7"
+        ],
+        "HASH_SHA1": [
+          "566AF34DA63411A0D81F3EC27E9B1C7E4B1A77B0"
+        ],
+        "HASH_MD5": [
+          "2591d145ff510f7fc4d6290d3bfcb130",
+          "e457cb42ca5a6ecd8b99d89ed2958b29"
+        ],
+        "TOOLS": [
+          "SHADOWSNIFF",
+          "SALATSTEALER",
+          "DEAFTICK"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1204.002",
+        "T1059.001"
+      ],
+      "analyse": {
+        "en": "UAC-0252 uses social engineering by prompting users to update official mobile apps (Diia) to deliver info-stealers.",
+        "fr": "UAC-0252 utilise l'ingénierie sociale en incitant les utilisateurs à mettre à jour des applications mobiles officielles (Diia) pour livrer des voleurs d'informations."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict filtering for GitHub-hosted executable files.",
+          "fr": "Mettre en œuvre un filtrage strict pour les fichiers exécutables hébergés sur GitHub."
+        },
+        {
+          "en": "Educate users about fake application update alerts.",
+          "fr": "Sensibiliser les utilisateurs aux fausses alertes de mise à jour d'applications."
+        }
+      ],
+      "tags": [
+        "Ukraine",
+        "Stealer",
+        "Phishing"
+      ],
+      "sources": [
+        "https://cert.gov.ua/article/6287707"
+      ],
+      "date": "2026-03-03"
+    }
+  ]
+}
