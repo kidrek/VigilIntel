@@ -1,0 +1,397 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape on March 4, 2026, is dominated by a massive escalation in the Middle East, where kinetic operations (Operations Epic Fury and Roaring Lion) are tightly integrated with cyber-espionage and infrastructure sabotage. Simultaneously, the discovery of the 'Coruna' exploit kit reveals a sophisticated secondary market for iOS zero-days, transitioning from surveillance vendors to state actors and cybercriminals. Ransomware remains a critical industrial threat, with groups like Qilin and Anubis expanding their victimology, while identity-based threats abusing OAuth protocols and AI-targeted prompt injections represent the next frontier of defensive challenges.",
+      "fr": "Le paysage des menaces cyber au 4 mars 2026 est dominé par une escalade massive au Moyen-Orient, où les opérations cinétiques (Opérations Epic Fury et Roaring Lion) sont étroitement intégrées à l'espionnage cyber et au sabotage d'infrastructures. Parallèlement, la découverte du kit d'exploitation 'Coruna' révèle un marché secondaire sophistiqué pour les zero-days iOS, passant des fournisseurs de surveillance aux acteurs étatiques et aux cybercriminels. Le ransomware reste une menace industrielle critique, avec des groupes comme Qilin et Anubis étendant leur victimologie, tandis que les menaces basées sur l'identité abusant des protocoles OAuth et les injections de commandes ciblant l'IA représentent les nouveaux défis défensifs."
+    },
+    "date": "2026-03-04"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "UAC-0252",
+      "campaign": "CERT-UA#20032",
+      "campaign_description": {
+        "en": "Phishing campaigns targeting Ukrainian government bodies using SHADOWSNIFF and SALATSTEALER infostealers, staged on legitimate GitHub infrastructure.",
+        "fr": "Campagnes de phishing ciblant les organismes gouvernementaux ukrainiens utilisant les infostealers SHADOWSNIFF et SALATSTEALER, hébergés sur l'infrastructure légitime GitHub."
+      },
+      "sector": {
+        "en": "Government, Military",
+        "fr": "Gouvernement, Militaire"
+      },
+      "modop": {
+        "en": "Spear-phishing emails with malicious archives or XSS links leading to executable payloads hosted on GitHub.",
+        "fr": "E-mails de spear-phishing avec des archives malveillantes ou des liens XSS menant à des charges utiles exécutables hébergées sur GitHub."
+      },
+      "tags": [
+        "Ukraine",
+        "Infostealer",
+        "GitHub abuse"
+      ],
+      "sources": [
+        "https://socprime.com/blog/uac-0252-attacks-using-shadowsniff-salatstealer/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "threat_actor": "Anubis",
+      "campaign": "AkzoNobel Data Leak",
+      "campaign_description": {
+        "en": "Ransomware-as-a-Service operation targeting multinational corporations, recently breaching AkzoNobel and leaking 170GB of data.",
+        "fr": "Opération de Ransomware-as-a-Service ciblant des multinationales, ayant récemment compromis AkzoNobel et divulgué 170 Go de données."
+      },
+      "sector": {
+        "en": "Manufacturing, Chemical",
+        "fr": "Industrie, Chimie"
+      },
+      "modop": {
+        "en": "Double-extortion using ransomware and data wipers to coerce victims.",
+        "fr": "Double extorsion utilisant des rançongiciels et des effaceurs de données (wipers) pour contraindre les victimes."
+      },
+      "tags": [
+        "Ransomware",
+        "Data Leak",
+        "Wiper"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/paint-maker-giant-akzonobel-confirms-cyberattack-on-us-site/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "threat_actor": "Clop",
+      "campaign": "Oracle EBS Zero-day Exploitation 2025",
+      "campaign_description": {
+        "en": "Mass exploitation of Oracle E-Business Suite vulnerabilities (CVE-2025-61882) targeting over 100 organizations, including Madison Square Garden.",
+        "fr": "Exploitation massive de vulnérabilités zero-day d'Oracle E-Business Suite (CVE-2025-61882) ciblant plus de 100 organisations, dont le Madison Square Garden."
+      },
+      "sector": {
+        "en": "Multi-sector",
+        "fr": "Multi-sectoriel"
+      },
+      "modop": {
+        "en": "Exploitation of RCE flaws in Oracle Concurrent Processing to exfiltrate massive volumes of corporate data.",
+        "fr": "Exploitation de failles RCE dans Oracle Concurrent Processing pour exfiltrer des volumes massifs de données d'entreprise."
+      },
+      "tags": [
+        "CVE-2025-61882",
+        "Oracle EBS",
+        "Data Extortion"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188814/cyber-crime/oracle-ebs-2025-campaign-impacts-madison-square-garden-sensitive-data-leaked.html"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Energy, Critical Infrastructure, Government",
+        "fr": "Énergie, Infrastructures Critiques, Gouvernement"
+      },
+      "theme": {
+        "en": "Middle East Kinetic and Cyber Conflict",
+        "fr": "Conflit cinétique et cyber au Moyen-Orient"
+      },
+      "description": {
+        "en": "Massive military strikes (Operations Epic Fury/Roaring Lion) against Iran followed by widespread cyber-attacks. Iran's internet connectivity dropped to 1-4%. Iranian proxies are retaliating with DDoS and camera hacking against Israel and Western allies.",
+        "fr": "Frappes militaires massives (Opérations Epic Fury/Roaring Lion) contre l'Iran suivies de cyberattaques généralisées. La connectivité Internet de l'Iran est tombée à 1-4%. Les proxys iraniens ripostent par des attaques DDoS et le piratage de caméras contre Israël et ses alliés occidentaux."
+      },
+      "tags": [
+        "Iran",
+        "Israel",
+        "USA",
+        "Kinetic Cyber Integration"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/iranian-cyberattacks-2026/",
+        "https://www.rusi.org/explore-our-research/publications/commentary/israels-roaring-lion-military-target-political-decision-iran"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "AkzoNobel",
+      "threat_actor": "Anubis",
+      "sector": {
+        "en": "Manufacturing",
+        "fr": "Industrie"
+      },
+      "description": {
+        "en": "Breach of a U.S. site resulting in the theft of 170GB of data, including confidential agreements and passport scans.",
+        "fr": "Violation d'un site américain entraînant le vol de 170 Go de données, y compris des accords confidentiels et des scans de passeports."
+      },
+      "tags": [
+        "Data Leak",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/paint-maker-giant-akzonobel-confirms-cyberattack-on-us-site/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "victim": "LexisNexis Legal & Professional",
+      "threat_actor": "FulcrumSec",
+      "sector": {
+        "en": "Data Analytics / Legal",
+        "fr": "Analyse de données / Juridique"
+      },
+      "description": {
+        "en": "Exploitation of a React2Shell vulnerability in an AWS environment. 2GB of legacy data (pre-2020) including customer IDs and support tickets were leaked.",
+        "fr": "Exploitation d'une vulnérabilité React2Shell dans un environnement AWS. 2 Go de données historiques (avant 2020), y compris des identifiants clients et des tickets de support, ont été divulgués."
+      },
+      "tags": [
+        "Cloud Breach",
+        "AWS",
+        "React"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/lexisnexis-confirms-data-breach-as-hackers-leak-stolen-files/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "victim": "Madison Square Garden (MSG)",
+      "threat_actor": "Clop",
+      "sector": {
+        "en": "Entertainment",
+        "fr": "Divertissement"
+      },
+      "description": {
+        "en": "Data theft via Oracle EBS vulnerability resulting in the leak of 210GB of files containing Social Security Numbers and financial records.",
+        "fr": "Vol de données via une vulnérabilité Oracle EBS entraînant la fuite de 210 Go de fichiers contenant des numéros de sécurité sociale et des dossiers financiers."
+      },
+      "tags": [
+        "Data Leak",
+        "Zero-day"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188814/cyber-crime/oracle-ebs-2025-campaign-impacts-madison-square-garden-sensitive-data-leaked.html"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-21385",
+      "euvd_id": "EUVD-2026-21385",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:google:android:*:*:*:*:*:*:*:*",
+      "product": "Android OS",
+      "vendor": "Google / Qualcomm",
+      "description": {
+        "en": "Buffer over-read in Qualcomm Graphics component allowing access to sensitive memory. Actively exploited in targeted attacks.",
+        "fr": "Dépassement de lecture de tampon dans le composant Qualcomm Graphics permettant l'accès à la mémoire sensible. Activement exploité dans des attaques ciblées."
+      },
+      "tags": [
+        "vulnerability",
+        "Exploited-in-the-wild"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0231/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2026-22719",
+      "euvd_id": "EUVD-2026-22719",
+      "cisa_kev": "TRUE",
+      "cvss": "8.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:vmware:aria_operations:*:*:*:*:*:*:*:*",
+      "product": "Aria Operations",
+      "vendor": "VMware by Broadcom",
+      "description": {
+        "en": "Command injection vulnerability allowing unauthenticated remote code execution during support-assisted migration.",
+        "fr": "Vulnérabilité d'injection de commande permettant l'exécution de code à distance non authentifiée lors d'une migration assistée par le support."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-flags-vmware-aria-operations-rce-flaw-as-exploited-in-attacks/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2026-27971",
+      "euvd_id": "EUVD-2026-27971",
+      "cisa_kev": "FALSE",
+      "cvss": "9.2",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:builder:qwik:*:*:*:*:*:*:*:*",
+      "product": "Qwik Framework",
+      "vendor": "Qwik",
+      "description": {
+        "en": "Critical unauthenticated RCE via unsafe deserialization in the server$ RPC mechanism.",
+        "fr": "RCE critique non authentifiée via une désérialisation non sécurisée dans le mécanisme RPC server$."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Deserialization"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-27971"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2025-68121",
+      "euvd_id": "EUVD-2025-68121",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:vmware:tanzu:*:*:*:*:*:*:*:*",
+      "product": "Tanzu RabbitMQ / Greenplum",
+      "vendor": "VMware by Broadcom",
+      "description": {
+        "en": "Critical TLS authentication bypass in Go's crypto/tls library affecting various Tanzu products during session resumption.",
+        "fr": "Contournement critique de l'authentification TLS dans la bibliothèque crypto/tls de Go affectant divers produits Tanzu lors de la reprise de session."
+      },
+      "tags": [
+        "vulnerability",
+        "Authentication Bypass",
+        "TLS"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/tls-authentication-bypass-vmware-tanzu"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Coruna: Advanced iOS Exploit Kit",
+        "fr": "Coruna : Kit d'exploitation iOS avancé"
+      },
+      "description": {
+        "en": "A powerful exploit kit featuring 5 full exploit chains and 23 exploits targeting iOS versions 13.0 to 17.2.1. It has circulated among surveillance vendors, espionage groups (UNC6353), and financially motivated actors (UNC6691).",
+        "fr": "Un kit d'exploitation puissant comprenant 5 chaînes d'exploitation complètes et 23 exploits ciblant les versions iOS 13.0 à 17.2.1. Il a circulé entre des fournisseurs de surveillance, des groupes d'espionnage (UNC6353) et des acteurs à motivation financière (UNC6691)."
+      },
+      "threat_actor": "UNC6353 / UNC6691",
+      "indicators": {
+        "URL": [
+          "http://cdn.uacounter.com/stat.html",
+          "http://ddus17.com/tuiliu/group.html",
+          "https://26a.online/group.html",
+          "http://www.appstoreconn.com/xmweb/group.html"
+        ],
+        "IPv4": [
+          "16.3.116.4"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "2s3b3rknfqtwwpo.xyz",
+          "6zvjeulzaw5c0mv.xyz",
+          "appstoreconn.com",
+          "cdn.uacounter.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "023e5fb71923cfa2088b9a48ad8566ff7ac92a99630add0629a5edf4679888de",
+          "1fb9dedf1de81d387eff4bd5e747f730dd03c440157a66f20fdb5e95f64318c0"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Coruna Exploit Kit",
+          "WebKit RCE",
+          "PAC bypass"
+        ]
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1204.001",
+        "T1566.002"
+      ],
+      "analyse": {
+        "en": "The Coruna kit demonstrates the industrialization of zero-day exploits. It uses sophisticated JavaScript obfuscation and fingerprinting to deliver specific payloads based on the iPhone model. It targets old vulnerabilities like CVE-2024-23222 and CVE-2023-43000.",
+        "fr": "Le kit Coruna démontre l'industrialisation des exploits zero-day. Il utilise une obfuscation JavaScript sophistiquée et du fingerprinting pour délivrer des charges utiles spécifiques basées sur le modèle d'iPhone. Il cible des vulnérabilités anciennes comme CVE-2024-23222 et CVE-2023-43000."
+      },
+      "recommandations": [
+        {
+          "en": "Update iPhones to the latest iOS version immediately.",
+          "fr": "Mettre à jour les iPhone vers la dernière version d'iOS immédiatement."
+        },
+        {
+          "en": "Enable Lockdown Mode for high-risk users.",
+          "fr": "Activer le mode 'Lockdown' pour les utilisateurs à haut risque."
+        }
+      ],
+      "tags": [
+        "iOS",
+        "Zero-day",
+        "Exploit Kit",
+        "Spyware"
+      ],
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "title": {
+        "en": "OAuth Redirection Abuse in Phishing Campaigns",
+        "fr": "Abus de la redirection OAuth dans les campagnes de phishing"
+      },
+      "description": {
+        "en": "Attackers leverage legitimate OAuth redirection flows to bypass email security. By triggering errors with invalid scopes, they force the identity provider to redirect victims to malicious infrastructure.",
+        "fr": "Les attaquants exploitent les flux de redirection OAuth légitimes pour contourner la sécurité de la messagerie. En déclenchant des erreurs avec des 'scopes' invalides, ils forcent le fournisseur d'identité à rediriger les victimes vers une infrastructure malveillante."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "https://otx.alienvault.com/pulse/69a7951f4031f1383fa80b8f"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EvilProxy",
+          "AitM frameworks"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1557.001"
+      ],
+      "analyse": {
+        "en": "This is an identity-based threat that abuses standards-compliant behavior. It is effective even against users with MFA when AitM frameworks like EvilProxy are used to steal session cookies.",
+        "fr": "Il s'agit d'une menace basée sur l'identité qui abuse d'un comportement conforme aux standards. Elle est efficace même contre les utilisateurs disposant du MFA lorsque des frameworks AitM comme EvilProxy sont utilisés pour voler les cookies de session."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict user consent for third-party OAuth applications.",
+          "fr": "Restreindre le consentement des utilisateurs pour les applications OAuth tierces."
+        },
+        {
+          "en": "Monitor for unusual redirect URIs in OAuth application registrations.",
+          "fr": "Surveiller les URI de redirection inhabituelles dans les enregistrements d'applications OAuth."
+        }
+      ],
+      "tags": [
+        "OAuth",
+        "Phishing",
+        "AitM",
+        "Bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abuse-oauth-error-flows-to-spread-malware/"
+      ],
+      "date": "2026-03-04"
+    }
+  ]
+}
