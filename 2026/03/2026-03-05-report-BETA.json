@@ -1,0 +1,407 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for March 2026 is characterized by a high-intensity fusion of kinetic and cyber warfare in the Middle East, alongside significant developments in mobile exploitation and the professionalization of phishing-as-a-service. The ongoing US-Israel-Iran conflict has triggered massive cyber operations, including strategic targeting of critical infrastructure (IP cameras, control systems) for battlefield assessment. Simultaneously, the discovery of the 'Coruna' iOS exploit kit highlights the migration of spyware-grade tools to financial cybercriminals. Law enforcement remains active, notably with the seizure of the Leakbase forum. Organizations face increased risk from sophisticated AiTM (Adversary-in-the-Middle) phishing campaigns (Tycoon2FA) and critical zero-day vulnerabilities in management platforms (Cisco, VMware).",
+      "fr": "Le paysage de la menace pour mars 2026 se caractérise par une fusion intense de la guerre cinétique et cyber au Moyen-Orient, ainsi que par des développements majeurs dans l'exploitation mobile et la professionnalisation du 'phishing-as-a-service'. Le conflit en cours entre les États-Unis, Israël et l'Iran a déclenché des cyber-opérations massives, notamment le ciblage stratégique d'infrastructures critiques (caméras IP, systèmes de contrôle) pour l'évaluation des dommages sur le champ de bataille. Parallèlement, la découverte du kit d'exploitation iOS 'Coruna' souligne la migration d'outils de type logiciel espion vers des cybercriminels financiers. Les autorités restent actives, notamment avec la saisie du forum Leakbase. Les organisations sont confrontées à un risque accru de campagnes de phishing sophistiquées de type AiTM (Tycoon2FA) et de vulnérabilités zero-day critiques dans les plateformes de gestion (Cisco, VMware)."
+    },
+    "date": "2026-03-05"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Storm-1747",
+      "campaign": "Tycoon2FA PhaaS Operation",
+      "campaign_description": {
+        "en": "Tycoon2FA is a massive Phishing-as-a-Service (PhaaS) platform using Adversary-in-the-Middle (AiTM) techniques to bypass MFA for Microsoft 365 and Gmail. It sends tens of millions of messages monthly, targeting over 500,000 organizations.",
+        "fr": "Tycoon2FA est une plateforme massive de Phishing-as-a-Service (PhaaS) utilisant des techniques Adversary-in-the-Middle (AiTM) pour contourner le MFA de Microsoft 365 et Gmail. Elle envoie des dizaines de millions de messages par mois, ciblant plus de 500 000 organisations."
+      },
+      "sector": {
+        "en": "Cross-sector",
+        "fr": "Multi-sectoriel"
+      },
+      "modop": {
+        "en": "AiTM proxy, session cookie theft, MFA bypass, heavy code obfuscation, custom CAPTCHAs, and Telegram exfiltration.",
+        "fr": "Proxy AiTM, vol de cookies de session, contournement MFA, forte obfuscation de code, CAPTCHAs personnalisés et exfiltration via Telegram."
+      },
+      "tags": [
+        "PhaaS",
+        "AiTM",
+        "MFA-Bypass",
+        "Credential-Theft"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "threat_actor": "Clop",
+      "campaign": "Zero-Day Mass Exploitation",
+      "campaign_description": {
+        "en": "Clop (Lace Tempest) continues its strategy of exploiting zero-day vulnerabilities in Managed File Transfer (MFT) solutions like Cleo (CVE-2024-50623), MOVEit, and GoAnywhere for large-scale data extortion.",
+        "fr": "Clop (Lace Tempest) poursuit sa stratégie d'exploitation de vulnérabilités zero-day dans les solutions de transfert de fichiers gérés (MFT) telles que Cleo (CVE-2024-50623), MOVEit et GoAnywhere pour l'extorsion de données à grande échelle."
+      },
+      "sector": {
+        "en": "Technology, Finance, Healthcare",
+        "fr": "Technologie, Finance, Santé"
+      },
+      "modop": {
+        "en": "Exploitation of MFT zero-days, SQL injection, unrestricted file upload, deployment of 'LEMURLOOT' web shell, and data-only extortion via torrents.",
+        "fr": "Exploitation de vulnérabilités MFT zero-day, injection SQL, téléchargement de fichiers non restreint, déploiement du web shell 'LEMURLOOT' et extorsion de données via torrents."
+      },
+      "tags": [
+        "Ransomware",
+        "Extortion",
+        "MFT",
+        "Zero-Day"
+      ],
+      "sources": [
+        "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "threat_actor": "APT41",
+      "campaign": "Silver Dragon / MonikerLoader",
+      "campaign_description": {
+        "en": "The Silver Dragon group (linked to APT41) targets government entities in Europe and SE Asia using MonikerLoader and BamboLoader to deliver Cobalt Strike beacons via server exploitation and phishing.",
+        "fr": "Le groupe Silver Dragon (lié à APT41) cible les entités gouvernementales en Europe et en Asie du Sud-Est en utilisant MonikerLoader et BamboLoader pour délivrer des balises Cobalt Strike via l'exploitation de serveurs et le phishing."
+      },
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernemental"
+      },
+      "modop": {
+        "en": "Public-facing server exploitation, phishing, Windows service hijacking for persistence, Google Drive-based C2 (GearDoor backdoor).",
+        "fr": "Exploitation de serveurs exposés, phishing, détournement de services Windows pour la persistance, C2 basé sur Google Drive (backdoor GearDoor)."
+      },
+      "tags": [
+        "APT41",
+        "Silver Dragon",
+        "C2-GoogleDrive",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188895/apt/from-phishing-to-google-drive-c2-silver-dragon-expands-apt41-playbook.html"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Energy, Critical Infrastructure, Government",
+        "fr": "Énergie, Infrastructures Critiques, Gouvernement"
+      },
+      "theme": {
+        "en": "Middle East Military & Cyber Escalation",
+        "fr": "Escalade Militaire et Cyber au Moyen-Orient"
+      },
+      "description": {
+        "en": "Following US-Israeli strikes (Operation Epic Fury/Lion's Roar) on Iranian sites, a massive cyber spillover is observed. Iranian actors are targeting IP cameras (Hikvision/Dahua) across the Gulf, Israel, and Cyprus for battle damage assessment. A nationwide internet blackout in Iran (connectivity at 1%) is reported.",
+        "fr": "Suite aux frappes américano-israéliennes (Opération Epic Fury/Lion's Roar) sur des sites iraniens, un débordement cyber massif est observé. Les acteurs iraniens ciblent les caméras IP (Hikvision/Dahua) à travers le Golfe, Israël et Chypre pour l'évaluation des dommages. Une coupure nationale d'Internet en Iran (connectivité à 1%) est signalée."
+      },
+      "tags": [
+        "Iran",
+        "Israel",
+        "USA",
+        "Middle-East-Conflict",
+        "Hybrid-Warfare"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/interplay-between-iranian-targeting-of-ip-cameras-and-physical-warfare-in-the-middle-east/",
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict",
+        "https://fieldeffect.com/blog/cyber-spillover-risks-2026-middle-east-escalation"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "University of Hawaiʻi Cancer Center",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Healthcare/Education",
+        "fr": "Santé/Éducation"
+      },
+      "description": {
+        "en": "A ransomware attack occurring in August 2025 (disclosed/updated March 2026) exposed the personal data of 1.2 million individuals, including SSNs and health-related research data.",
+        "fr": "Une attaque par ransomware survenue en août 2025 (divulguée/mise à jour en mars 2026) a exposé les données personnelles de 1,2 million de personnes, y compris les numéros de sécurité sociale et des données de recherche liées à la santé."
+      },
+      "tags": [
+        "Ransomware",
+        "Data-Exfiltration",
+        "SSN"
+      ],
+      "sources": [
+        "https://securityaffairs.com/188876/data-breach/data-breach-at-university-of-hawai%ca%bbi-cancer-center-impacts-1-2-million-individuals.html"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "victim": "HungerRush",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Retail/Food",
+        "fr": "Restauration"
+      },
+      "description": {
+        "en": "Threat actors compromised an employee's device (infostealer) or a third-party vendor's credentials to gain access to HungerRush's email marketing service, leading to extortion emails being sent to millions of restaurant customers.",
+        "fr": "Des acteurs malveillants ont compromis l'appareil d'un employé (infostealer) ou les identifiants d'un fournisseur tiers pour accéder au service de marketing par courriel de HungerRush, entraînant l'envoi d'e-mails d'extorsion à des millions de clients de restaurants."
+      },
+      "tags": [
+        "Extortion",
+        "Infostealer",
+        "Supply-Chain"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hacker-mass-mails-hungerrush-extortion-emails-to-restaurant-patrons/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "victim": "LexisNexis Legal & Professional",
+      "threat_actor": "FulcrumSec",
+      "sector": {
+        "en": "Legal Services",
+        "fr": "Services Juridiques"
+      },
+      "description": {
+        "en": "Breach of AWS infrastructure via the 'React2Shell' vulnerability in an unpatched React app. Approximately 2GB of legacy data and 21,000 account details were stolen.",
+        "fr": "Violation de l'infrastructure AWS via la vulnérabilité 'React2Shell' dans une application React non patchée. Environ 2 Go de données anciennes et les détails de 21 000 comptes ont été dérobés."
+      },
+      "tags": [
+        "AWS",
+        "React2Shell",
+        "Data-Leaked"
+      ],
+      "sources": [
+        "https://indieweb.social/@jbz/116174652753887098"
+      ],
+      "date": "2026-03-05"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-22719",
+      "euvd_id": "EUVD-2026-0001",
+      "cisa_kev": "TRUE",
+      "cvss": "8.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:broadcom:vmware_aria_operations:*:*:*:*:*:*:*:*",
+      "product": "VMware Aria Operations",
+      "vendor": "Broadcom",
+      "description": {
+        "en": "A command injection vulnerability in the support-assisted product migration workflow allows unauthenticated remote code execution.",
+        "fr": "Une vulnérabilité d'injection de commande dans le flux de migration de produit assisté par le support permet une exécution de code à distance non authentifiée."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "CISA-KEV"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/cisa-rce-vmware-aria-operations"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2026-21385",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:qualcomm:graphics_subcomponent:*:*:*:*:*:*:*:*",
+      "product": "Graphics Subcomponent (Multiple Chipsets)",
+      "vendor": "Qualcomm",
+      "description": {
+        "en": "Integer overflow in the graphics component leading to memory corruption. Flagged by Google for targeted exploitation in Android devices.",
+        "fr": "Dépassement d'entier dans le composant graphique entraînant une corruption de mémoire. Signalé par Google pour une exploitation ciblée sur les appareils Android."
+      },
+      "tags": [
+        "vulnerability",
+        "Memory-Corruption",
+        "Zero-Day",
+        "Android"
+      ],
+      "sources": [
+        "https://socprime.com/blog/cve-2026-21386-vulnerability/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2026-20079",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+      "product": "Secure Firewall Management Center (FMC)",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Critical authentication bypass in the web interface allowing unauthenticated attackers to obtain root access to the OS.",
+        "fr": "Contournement d'authentification critique dans l'interface web permettant à des attaquants non authentifiés d'obtenir un accès root au système d'exploitation."
+      },
+      "tags": [
+        "vulnerability",
+        "Auth-Bypass",
+        "Root-Access"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisco-warns-of-max-severity-secure-fmc-flaws-giving-root-access/"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "cve_id": "CVE-2026-28289",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:freescout:freescout:*:*:*:*:*:*:*:*",
+      "product": "FreeScout Helpdesk",
+      "vendor": "FreeScout",
+      "description": {
+        "en": "Zero-click RCE via email attachment. Attackers use zero-width Unicode characters to bypass filename validation filters (Patch bypass for CVE-2026-27636).",
+        "fr": "RCE zero-click via pièce jointe d'e-mail. Les attaquants utilisent des caractères Unicode à largeur nulle pour contourner les filtres de validation de nom de fichier."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-Click",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/mail2shell-zero-click-attack-lets-hackers-hijack-freescout-mail-servers/"
+      ],
+      "date": "2026-03-04"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Coruna iOS Exploit Kit Proliferation",
+        "fr": "Prolifération du kit d'exploitation iOS Coruna"
+      },
+      "description": {
+        "en": "A highly sophisticated set of 23 iOS exploits targeting versions 13.0 to 17.2.1. Initially used for state-sponsored surveillance, it is now being utilized by financial actors (UNC6691) for cryptocurrency theft.",
+        "fr": "Un ensemble très sophistiqué de 23 exploits iOS ciblant les versions 13.0 à 17.2.1. Initialement utilisé pour la surveillance étatique, il est désormais exploité par des acteurs financiers (UNC6691) pour le vol de crypto-monnaies."
+      },
+      "threat_actor": "UNC6691, UNC6353",
+      "indicators": {
+        "URL": [
+          "https://astro.thorousha.ru/vojd4e50fw4o!g/$ENCODED",
+          "https://backend.vmfuiojitnlb.es/CGyP9!CbhSU22YT2/",
+          "https://branch.cricomai.sa.com/b@GrBOPttIrJA/*EMAIL_ADDRESS",
+          "https://kzagniw.es/LI6vGlx7@1wPztdy",
+          "https://mysql.vecedoo.online/JB5ow79@fKst02/#EMAIL_ADDRESS",
+          "https://piwf.ariitdc.es/kv2gVMHLZ@dNeXt/$EMAIL_ADDRESS",
+          "https://q9y3.efwzxgd.es/MEaap8nZG5A@c8T/*EMAIL_ADDRESS",
+          "https://qonnfp.wnrathttb.ru/Fe2yiyoKvg3YTfV!/$EMAIL_ADDRESS"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "cricomai.sa.com",
+          "vecedoo.online",
+          "wnrathttb.ru",
+          "thorousha.ru"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PlasmaLoader",
+          "PlasmaGrid",
+          "Coruna Kit"
+        ]
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1404",
+        "T1629",
+        "T1548"
+      ],
+      "analyse": {
+        "en": "The transition of Coruna from espionage to mass-scale crime represents a dangerous trend in exploit accessibility. The kit features PAC bypasses, sandbox escapes, and kernel privilege escalation.",
+        "fr": "La transition de Coruna de l'espionnage au crime de masse représente une tendance dangereuse dans l'accessibilité des exploits. Le kit comprend des contournements PAC, des évasions de sandbox et une élévation de privilèges noyau."
+      },
+      "recommandations": [
+        {
+          "en": "Update iOS to the latest version immediately (iOS 18+).",
+          "fr": "Mettre à jour iOS vers la version la plus récente immédiatement (iOS 18+)."
+        },
+        {
+          "en": "Enable Lockdown Mode for high-risk individuals.",
+          "fr": "Activer le mode de protection maximale (Lockdown Mode) pour les personnes à haut risque."
+        }
+      ],
+      "tags": [
+        "Exploit-Kit",
+        "iOS",
+        "Crypto-Theft",
+        "Spyware"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/spyware-grade-coruna-ios-exploit-kit-now-used-in-crypto-theft-attacks/",
+        "https://securityaffairs.com/188928/security/google-uncovers-coruna-ios-exploit-kit-targeting-ios-13-17-2-1.html"
+      ],
+      "date": "2026-03-04"
+    },
+    {
+      "title": {
+        "en": "LastPass Spoofed Support Alerts",
+        "fr": "Alertes de support LastPass usurpées"
+      },
+      "description": {
+        "en": "Phishing campaign spoofing LastPass support via 'verify-lastpass.com'. Emails claim unauthorized access or vault change requests to steal master passwords.",
+        "fr": "Campagne de phishing usurpant le support LastPass via 'verify-lastpass.com'. Les e-mails prétendent un accès non autorisé ou des demandes de changement de coffre-fort pour voler les mots de passe maîtres."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://verify-lastpass.com"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "verify-lastpass.com"
+        ],
+        "EMAIL": [
+          "abuse@lastpass.com"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1589"
+      ],
+      "analyse": {
+        "en": "The campaign leverages 'display name spoofing' to trick users on mobile clients where the full sender address is hidden.",
+        "fr": "La campagne exploite l'usurpation du nom d'affichage pour tromper les utilisateurs sur les clients mobiles où l'adresse de l'expéditeur complète est masquée."
+      },
+      "recommandations": [
+        {
+          "en": "Remind users that master passwords are never requested by support.",
+          "fr": "Rappeler aux utilisateurs que les mots de passe maîtres ne sont jamais demandés par le support."
+        },
+        {
+          "en": "Report suspicious emails to abuse@lastpass.com.",
+          "fr": "Signaler les courriels suspects à abuse@lastpass.com."
+        }
+      ],
+      "tags": [
+        "Phishing",
+        "Credential-Theft",
+        "LastPass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fake-lastpass-support-email-threads-try-to-steal-vault-passwords/"
+      ],
+      "date": "2026-03-04"
+    }
+  ]
+}
