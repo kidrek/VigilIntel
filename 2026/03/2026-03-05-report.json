@@ -1,0 +1,1521 @@
+
+{
+  "EN": {
+    "Cross-cutting Analysis": {
+      "analysis": "A surge in sophisticated cyberattacks, often linked to geopolitical tensions, marks this period. Zero-day vulnerabilities remain a preferred attack vector, as illustrated by Clop's campaigns targeting file transfer solutions and exploits like Coruna for iOS. The use of advanced phishing kits, bypassing multi-factor authentication (MFA), is also sharply increasing. Supply chain attacks, including the exploitation of malicious OAuth applications and securing AI components, are growing concerns. Concurrently, the Middle East conflict demonstrates the interconnectedness between the physical and cyber domains, with cyber operations targeting intelligence and disruption. The sophistication of Linux rootkits is evolving with the adoption of techniques like eBPF. These trends highlight the need for increased vigilance, rapid patching, strong authentication, and a multi-layered security approach. The attack surface is expanding with the integration of new technologies and the complexity of software dependencies.",
+      "date": "2026-03-05"
+    },
+    "Summary of Malicious Actors": [
+      {
+        "nom": "Akira",
+        "secteur": "Businesses",
+        "modop": "Zero-day vulnerability exploitation, encrypting business critical servers impacting daily operations.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "zero_day",
+          "data_encryption"
+        ],
+        "sources": "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "BQTLock",
+        "secteur": "Businesses across industries",
+        "modop": "New ransomware strain, capable of encrypting entire environments in minutes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "bqtlock"
+        ],
+        "sources": "https://any.run/cybersecurity-blog/february-26-attacks/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Clop (Cl0p)",
+        "secteur": "File transfer and storage solutions (Accellion FTA, GoAnywhere MFT, MOVEit, Cleo MFT, Oracle EBS)",
+        "modop": "Data extortion via zero-day exploitation (SQL injection, RCE, unrestricted file upload), webshell deployment.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_extortion",
+          "zero_day",
+          "supply_chain_attack",
+          "ransomware_group",
+          "webshell",
+          "sql_injection",
+          "rce"
+        ],
+        "sources": "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Coruna (CryptoWaters) / UNC6353 / UNC6691",
+        "secteur": "iPhone users (espionage targets, Ukrainian e-commerce/industrial platform users, Chinese cryptocurrency holders)",
+        "modop": "Zero-click iOS exploit kit (23 exploits, 5 chains) for RCE and financial/cryptocurrency information theft. Used by surveillance vendors, spies (UNC6353), and Chinese financial actors (UNC6691).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "exploit_kit",
+          "zero_day",
+          "ios",
+          "rce",
+          "spyware",
+          "crypto_theft",
+          "watering_hole_attack",
+          "unc6353",
+          "unc6691",
+          "cryptowaters"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/spyware-grade-coruna-ios-exploit-kit-now-used-in-crypto-theft-attacks/, https://securityaffairs.com/188928/security/google-uncovers-coruna-ios-exploit-kit-targeting-ios-13-17-2-1.html, https://www.lemonde.fr/pixels/article/2026/03/04/un-outil-de-piratage-d-iphone-tres-elabore-utilise-a-la-fois-par-des-espions-et-des-cybercriminels_6669486_4408996.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Department of Peace",
+        "secteur": "Government (U.S. Department of Homeland Security) and companies collaborating with immigration enforcement",
+        "modop": "Hacktivism, leaking contract data to protest government actions.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "data_leak",
+          "government",
+          "homeland_security"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173740429876749",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "FulcrumSec",
+        "secteur": "Legal & Professional (LexisNexis)",
+        "modop": "Access to AWS infrastructure by exploiting React2Shell vulnerability in an unpatched React frontend app.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "aws",
+          "vulnerability_exploit"
+        ],
+        "sources": "https://indieweb.social/@jbz/116174652753887098, https://infosec.exchange/@DevaOnBreaches/116173745276380722",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Gr0lum",
+        "secteur": "File sharing platforms (YggTorrent)",
+        "modop": "Hacking and destruction of servers/databases to protest a paid economic model.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "data_destruction",
+          "piracy_site"
+        ],
+        "sources": "https://www.lemonde.fr/pixels/article/2026/03/04/yggtorrent-l-un-des-plus-gros-sites-francophones-de-telechargement-illegal-pirate-ses-serveurs-vides_6669483_4408996.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Groupes hacktivistes pro-iraniens (Handala Hack Team, Cyber Islamic Resistance, RipperSec, APT IRAN, Cyber Fattah)",
+        "secteur": "Israeli and regional targets (energy, gas)",
+        "modop": "Coordinated cyber operations, claims of DDoS, website defacements, data leaks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "iran_nexus",
+          "ddos",
+          "defacement",
+          "data_leak"
+        ],
+        "sources": "https://research.checkpoint.com/2026/interplay-between-iranian-targeting-of-ip-cameras-and-physical-warfare-in-the-middle-east/, https://fieldeffect.com/blog/cyber-spillover-risks-2026-middle-east-escalation, https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "ION-79",
+        "secteur": "Iranian population",
+        "modop": "Affiliated with IRGC Basij, actively producing content tied to the current conflict.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "influence_operation",
+          "iran_nexus",
+          "disinformation"
+        ],
+        "sources": "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Silver Dragon (tied to APT41)",
+        "secteur": "Government entities (Europe, Southeast Asia)",
+        "modop": "Exploitation of public-facing servers, phishing with malicious attachments, hijacking legitimate Windows services for persistence, use of Cobalt Strike and Google Drive for C2.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "government",
+          "espionage",
+          "server_exploit",
+          "phishing",
+          "cobalt_strike",
+          "c2",
+          "google_drive",
+          "apt41"
+        ],
+        "sources": "https://securityaffairs.com/188895/apt/from-phishing-to-google-drive-c2-silver-dragon-expands-apt41-playbook.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Storm-2035 (ION-24)",
+        "secteur": "International audiences, Iranian population",
+        "modop": "Iranian influence operations network, strategic narrative shaping, coordinated inauthentic behavior on social media, amplifying false narratives to exaggerate Iranian military capabilities and complicate battle damage assessment.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "influence_operation",
+          "iran_nexus",
+          "disinformation",
+          "social_media"
+        ],
+        "sources": "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Tycoon2FA (Storm-1747)",
+        "secteur": "Multiple sectors (education, healthcare, finance, non-profit, government)",
+        "modop": "Adversary-in-the-Middle (AiTM) phishing-as-a-service (PhaaS) platform to bypass MFA, steal credentials and session tokens via spoofed login pages. Uses obfuscation, browser fingerprinting, custom CAPTCHAs.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing",
+          "phaas",
+          "aitm",
+          "mfa_bypass",
+          "credential_theft",
+          "session_hijacking",
+          "storm_1747"
+        ],
+        "sources": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/",
+        "date": "2026-03-05"
+      }
+    ],
+    "Summary of Geopolitical News": [
+      {
+        "secteur": "Multiple (government, defense, energy, finance, telecommunications, maritime shipping, critical infrastructure)",
+        "theme": "Escalation of geopolitical tensions and cyber spillover risks",
+        "description": "Coordinated US-Israeli strikes on Iranian military and nuclear sites (February 28, 2026), death of Supreme Leader Ali Khamenei. Iranian retaliation with missile and drone strikes across 9 countries. Increased hacktivist activity (DDoS, defacements, data leaks) targeting Iran's adversaries. Damage to Amazon Web Services data centers. Iran-nexus threat actors targeting IP cameras (Israel, UAE, Qatar, Bahrain, Kuwait, Lebanon, Cyprus). Strait of Hormuz transits declined, Qatar declared force majeure on gas exports. Potential targets: political/military officials, dissidents, Jewish communities, defense contractors, financial institutions, critical infrastructure.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "middle_east",
+          "iran",
+          "israel",
+          "usa",
+          "cyber_warfare",
+          "hacktivism",
+          "ddos",
+          "data_leak",
+          "critical_infrastructure",
+          "energy",
+          "maritime",
+          "supply_chain",
+          "espionage"
+        ],
+        "sources": "https://research.checkpoint.com/2026/interplay-between-iranian-targeting-of-ip-cameras-and-physical-warfare-in-the-middle-east/, https://fieldeffect.com/blog/cyber-spillover-risks-2026-middle-east-escalation, https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      }
+    ],
+    "Summary of Data Breaches": [
+      {
+        "secteur": "Video Games",
+        "victime": "Cloud Imperium Games",
+        "description": "Data breach (January 21, 2026) where hackers accessed basic user data (names, emails, DOB). No passwords or payment information were exposed. The company was criticized for delay and poor communication.",
+        "tags": [
+          "violation",
+          "breach",
+          "gaming",
+          "pii",
+          "email",
+          "dob"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173734330873665",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Restaurant, Point-of-Sale (POS) Technology",
+        "victime": "Customers of restaurants using the HungerRush platform",
+        "description": "Email extortion campaign. A threat actor accessed a third-party vendor's email marketing service account via compromised credentials, exposing customer contact information (names, email addresses, mailing addresses, phone numbers). The attacker's claims of sensitive passwords and financial data were disputed by HungerRush.",
+        "tags": [
+          "violation",
+          "breach",
+          "restaurant",
+          "pos",
+          "email_marketing",
+          "extortion",
+          "pii",
+          "third_party_breach"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/hacker-mass-mails-hungerrush-extortion-emails-to-restaurant-patrons/",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Cybercrime (forum)",
+        "victime": "Members of the LeakBase forum",
+        "description": "Forum shut down by authorities (FBI and 14 countries). Data of 142,000 members compromised.",
+        "tags": [
+          "violation",
+          "breach",
+          "cybercrime",
+          "law_enforcement",
+          "data_leak",
+          "forum"
+        ],
+        "sources": "https://cyberscoop.com/leakbase-cybercrime-forum-seized/, https://mastodon.thenewoil.org/@thenewoil/116175038102707583",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Legal & Professional",
+        "victime": "LexisNexis Legal & Professional",
+        "description": "FulcrumSec group breached the company's AWS infrastructure on February 24, 2026, by exploiting the React2Shell vulnerability in an unpatched React frontend app. Approximately 2GB of legacy data (before 2020) was stolen, including information on over 21,000 accounts, some of which were .gov users. No financial data, SSNs, or active passwords were exposed.",
+        "tags": [
+          "violation",
+          "breach",
+          "legal",
+          "professional_services",
+          "aws",
+          "react2shell",
+          "vulnerability_exploit",
+          "legacy_data",
+          "pii"
+        ],
+        "sources": "https://indieweb.social/@jbz/116174652753887098, https://infosec.exchange/@DevaOnBreaches/116173745276380722, https://mastodon.social/@securityLab_jp/116174661319975728",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Artificial Intelligence",
+        "victime": "Tsukuru AI",
+        "description": "Unauthorized access to the company's AWS account, resulting in 176,000 spam emails being sent.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai",
+          "aws",
+          "spam",
+          "unauthorized_access"
+        ],
+        "sources": "https://mastodon.social/@securityLab_jp/116174661319975728",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Government, Defense",
+        "victime": "U.S. Department of Homeland Security",
+        "description": "Hacktivist group \"Department of Peace\" claimed to have hacked and leaked contract data involving over 6,000 companies (including Microsoft, Oracle, Palantir Technologies). The objective was to protest government actions related to immigration enforcement.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "homeland_security",
+          "hacktivism",
+          "data_leak",
+          "contract_data"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173740429876749",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Healthcare, Research",
+        "victime": "University of Hawaiʻi Cancer Center",
+        "description": "Ransomware attack (August 31, 2025) exposing personal data of 1.2 million individuals. Compromised data: names, Social Security numbers, driver's license details, voter registration records, limited health data, and research registry information.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "research",
+          "ransomware",
+          "pii",
+          "phi",
+          "social_security_number",
+          "identity_theft"
+        ],
+        "sources": "https://securityaffairs.com/188876/data-breach/data-breach-at-university-of-hawai%ca%bbi-cancer-center-impacts-1-2-million-individuals.html",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "File Sharing, Illegal Content",
+        "victime": "YggTorrent",
+        "description": "Hacking claimed by \"Gr0lum\" (March 3-4, 2026) who \"emptied\" and then \"destroyed\" servers and 7 databases, in protest against a new paid subscription model. The torrent catalog was preserved and published.",
+        "tags": [
+          "violation",
+          "breach",
+          "piracy",
+          "data_destruction",
+          "hacktivism"
+        ],
+        "sources": "https://www.lemonde.fr/pixels/article/2026/03/04/yggtorrent-l-un-des-plus-gros-sites-francophones-de-telechargement-illegal-pirate-ses-serveurs-vides_6669483_4408996.html",
+        "date": "2026-03-05"
+      }
+    ],
+    "Summary of Vulnerabilities": [
+      {
+        "cve_id": "CVE-2026-20079",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center (FMC) Software",
+        "description": "Authentication bypass vulnerability in the web interface, allowing an unauthenticated attacker to gain root access via crafted HTTP requests.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "rce",
+          "root_access",
+          "cisco",
+          "fmc",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-max-severity-secure-fmc-flaws-giving-root-access/, https://securityaffairs.com/188921/security/cisco-fixes-maximum-severity-secure-fmc-bugs-threatening-firewall-security.html, https://securityonline.info/root-access-for-all-critical-auth-bypass-hits-cisco-firewall-management-center/, https://thecyberthrone.in/2026/03/05/two-perfect-10s-cisco-fmc-under-siege/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-20131",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center (FMC) Software, Cisco Security Cloud Control (SCC) Firewall Management",
+        "description": "Remote Code Execution (RCE) vulnerability due to insecure Java deserialization in the web-based management interface. Allows arbitrary Java code execution as root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "deserialization",
+          "java",
+          "cisco",
+          "fmc",
+          "scc",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-max-severity-secure-fmc-flaws-giving-root-access/, https://securityaffairs.com/188921/security/cisco-fixes-maximum-severity-secure-fmc-bugs-threatening-firewall-security.html, https://securityonline.info/critical-10-0-cvss-flaw-in-cisco-secure-fmc-hands-hackers-root-access-to-enterprise-firewalls/, https://thecyberthrone.in/2026/03/05/two-perfect-10s-cisco-fmc-under-siege/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-28289",
+        "cvss": 10.0,
+        "product": "FreeScout helpdesk platform",
+        "description": "Maximum severity unauthenticated remote code execution (RCE) via a zero-click attack. Exploits a patch bypass using a \"zero-width space\" character to conceal a malicious file extension (.htaccess) during upload.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "zero_click",
+          "authentication_bypass",
+          "file_upload",
+          "freescout",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/mail2shell-zero-click-attack-lets-hackers-hijack-freescout-mail-servers/, https://securityonline.info/cvss-10-0-unauthenticated-remote-code-execution-in-freescout-public-proof-of-concept-disclosed/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29000",
+        "cvss": 10.0,
+        "product": "pac4j-jwt (Java library)",
+        "description": "Critical vulnerability allowing an unauthenticated remote attacker to forge administrative JSON Web Tokens (JWT) by abusing the combination of signature (JWS) and encryption (JWE), provided they possess the server's RSA public key.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication",
+          "jwt",
+          "jws",
+          "jwe",
+          "token_forgery",
+          "java",
+          "critical"
+        ],
+        "sources": "https://securityonline.info/critical-10-0-cvss-flaw-in-pac4j-jwt-lets-hackers-forge-admin-tokens/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29127",
+        "cvss": 9.2,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Overly permissive file system permissions (0777) on the `monitor` user's home directory, containing SUID Root Binaries, potentially leading to local privilege escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "file_permissions",
+          "suid",
+          "satellite_receiver",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29127",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29123",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "SUID root-owned binary in the `xd` user home directory (`/home/xd/terminal/XDTerminal`), potentially leading to local privilege escalation via PATH hijacking, symlink abuse, or shared object hijacking.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "suid",
+          "path_hijacking",
+          "symlink_abuse",
+          "shared_object_hijacking",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29123",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29124",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Multiple SUID root-owned binaries in the `monitor` user home directory (`/home/monitor/terminal`, etc.), potentially leading to local privilege escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "suid",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29124",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29128",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver firmware",
+        "description": "Configuration credential disclosure via world-readable files (`zebra.conf`, `bgpd.conf`, `ospfd.conf`, `ripd.conf`) containing hardcoded or plaintext passwords, allowing remote access or local privilege escalation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "credential_disclosure",
+          "hardcoded_password",
+          "plaintext_password",
+          "privilege_escalation",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29128",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-26034",
+        "cvss": 8.5,
+        "product": "UPS Multi-UPS Management Console (MUMC) version 01.06.0001 (A03)",
+        "description": "Incorrect Default Permissions (CWE-276) vulnerability allowing arbitrary code execution with SYSTEM privileges by loading a specially crafted DLL.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "code_execution",
+          "dll_hijacking",
+          "ups_mumc",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-26034",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29126",
+        "cvss": 8.5,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Incorrect permission assignment (world-writable file) in `/etc/udhcpc/default.script`, allowing a local unprivileged attacker to potentially execute arbitrary commands with root privileges (local privilege escalation and persistence).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "file_permissions",
+          "persistence",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29126",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-26033",
+        "cvss": 8.4,
+        "product": "UPS Multi-UPS Management Console (MUMC) version 01.06.0001 (A03)",
+        "description": "Unquoted Search Path or Element (CWE-428) vulnerability, allowing a user with write access to a directory on the system drive to execute arbitrary code with SYSTEM privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "code_execution",
+          "unquoted_search_path",
+          "ups_mumc",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-26033",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-22719",
+        "cvss": 8.1,
+        "product": "Broadcom VMware Aria Operations, VMware Cloud Foundation, VMware Telco Cloud Infrastructure, VMware Telco Cloud Platform",
+        "description": "Unauthenticated command execution vulnerability during a support-assisted migration workflow. Allows remote code execution (RCE) on the Aria Operations appliance. Actively exploited.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_execution",
+          "vmware",
+          "aria_operations",
+          "cloud_foundation",
+          "telco_cloud",
+          "actively_exploited",
+          "high"
+        ],
+        "sources": "https://fieldeffect.com/blog/cisa-rce-vmware-aria-operations, https://securityaffairs.com/188887/security/u-s-cisa-adds-qualcomm-and-broadcom-vmware-aria-operations-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+        "date": "2026-03-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Major Cyber Attacks in February 2026: BQTLock, Thread-Hijack Phishing, and MFA Bypass Evolution",
+        "description": "Overview of major cyber threats in February 2026, including new ransomware strains like BQTLock, thread-hijack phishing campaigns, and the evolution of Multi-Factor Authentication (MFA) bypass techniques. Highlights emerging malware families and evolving attack techniques.",
+        "threat_actor": "BQTLock (ransomware)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The article highlights an intensification and diversification of threats, with faster ransomware and more stealthy phishing techniques, particularly those targeting modern authentication processes. The rapid evolution of attack methods requires continuous vigilance and adaptation of defenses to counter emerging threats.",
+        "recommandations": "Update detection systems to identify new ransomware families, educate users on advanced phishing techniques (thread-hijack), and strengthen authentication process security to prevent MFA bypass.",
+        "tags": [
+          "cyberattack",
+          "ransomware",
+          "bqtlock",
+          "phishing",
+          "mfa_bypass",
+          "thread_hijack",
+          "malware_families",
+          "emerging_threats"
+        ],
+        "sources": [
+          "https://any.run/cybersecurity-blog/february-26-attacks/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Hooked on Linux: Rootkit Taxonomy, Hooking Techniques and Tradecraft",
+        "description": "In-depth analysis of Linux rootkit taxonomy, tracing their evolution from userland shared object hijacking and kernel-space loadable kernel module hooking to modern eBPF- and io_uring-powered techniques. Explains how rootkits manipulate the operating system to conceal malicious activity (files, processes, network connections).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1014 (Rootkit), T1055 (Process Injection), T1547.006 (Boot or Logon Autostart Execution: Kernel Modules and Extensions), T1574.006 (Hijack Execution Flow: Dynamic-link Library Hijacking)",
+        "analyse": "The article highlights the increasing sophistication of Linux rootkits and the challenges they pose to traditional detection. The evolution towards stealthier techniques like eBPF and io_uring makes persistence and evasion more effective, but also riskier for attackers in terms of system stability. The importance of low-level monitoring and detection engineering is emphasized.",
+        "recommandations": "Implement kernel integrity checks, monitor for abnormal module loading and eBPF/io_uring activity. Use memory forensics tools to identify rootkits. Develop detection rules based on rootkit-specific TTPs. Keep systems up to date.",
+        "tags": [
+          "rootkit",
+          "linux",
+          "kernel",
+          "ebpf",
+          "io_uring",
+          "persistence",
+          "evasion",
+          "syscall_hooking",
+          "userland_hooking",
+          "security_research",
+          "technical_analysis"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/linux-rootkits-1-hooked-on-linux"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "The Economics of Clop’s Zero-Day Campaigns: Why Mass Exploitation Isn’t Paying Off",
+        "description": "Analysis of Clop's data extortion campaigns, which exploit zero-day vulnerabilities in managed file transfer solutions. The article examines the group's economic model, revealing that despite a large number of victims and exfiltrated data, the financial return on investment is often low compared to groups using encryption.",
+        "threat_actor": "Clop (Cl0p), Akira (for comparison)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-27101",
+            "CVE-2023-0669",
+            "CVE-2023-34362",
+            "CVE-2024-50623",
+            "CVE-2025-61882"
+          ]
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1078 (Valid Accounts), T1133 (External Remote Services), T1505.003 (Server Software Component: Web Shell), T1567 (Exfiltration Over Web Service)",
+        "analyse": "The analysis shows that Clop's \"data theft only\" model, while enabling large-scale intrusions, generates less pressure on victims and lower payments compared to double extortion attacks (encryption + data theft). This questions the long-term effectiveness of this strategy for the group, suggesting that operational impact on victims is a key factor in ransom payments.",
+        "recommandations": "Maintain a rigorous patching policy for exposed applications and services, especially managed file transfer solutions. Implement network segmentation to limit lateral movement. Establish threat intelligence programs to identify and mitigate zero-day vulnerabilities. Strengthen authentication and access controls for sensitive services.",
+        "tags": [
+          "clop",
+          "zero_day",
+          "data_extortion",
+          "ransomware",
+          "supply_chain_attack",
+          "webshell",
+          "mft",
+          "accellion",
+          "goanywhere",
+          "moveit",
+          "cleo",
+          "oracle_ebs",
+          "cve",
+          "economy",
+          "threat_actor_analysis"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale",
+        "description": "In-depth analysis of Tycoon2FA, an \"Adversary-in-the-Middle\" (AiTM) phishing-as-a-service (PhaaS) platform that targeted over 500,000 organizations monthly. The kit enabled threat actors to bypass MFA, steal credentials and session tokens by mimicking popular service login pages (Microsoft 365, Gmail).",
+        "threat_actor": "Storm-1747 (Tycoon2FA operator)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1078 (Valid Accounts), T1550.002 (Use Alternate Authentication: Pass the Cookie), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "Tycoon2FA's success lies in its ability to bypass common MFA methods through the AiTM approach, its high adaptability (rapid infrastructure changes, evasion techniques like custom CAPTCHAs and obfuscation), and its ease of use for less skilled cybercriminals. The impact is large-scale identity compromise, even with MFA enabled.",
+        "recommandations": "Eliminate traditional credentials and adopt phishing-resistant MFA methods (FIDO2 security keys, Windows Hello for Business, Microsoft Authenticator passkeys). Implement mail flow rules to detect and block spoofing emails. Enforce anti-spoofing protections. Immediately revoke session tokens and authenticator apps after an incident.",
+        "tags": [
+          "phishing",
+          "aitm",
+          "phaas",
+          "mfa_bypass",
+          "credential_theft",
+          "session_hijacking",
+          "email_security",
+          "identity_security",
+          "threat_actor_analysis",
+          "microsoft_365",
+          "gmail",
+          "storm_1747"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "How AI is Quietly Becoming a Supply Chain Problem",
+        "description": "Analysis of how AI, despite its benefits, introduces supply chain vulnerabilities due to its reliance on complex components (chips, cloud infrastructure, open-source libraries, pre-trained models). The article highlights the systemic risk to national security and businesses due to supplier concentration and lack of visibility into dependencies.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Not mentioned (risk analysis)",
+        "analyse": "The widespread integration of AI creates new dimensions of complexity in supply chains, making systems harder to inspect and vulnerabilities potentially more impactful. Supplier concentration (hardware, models) and the distributed nature of AI components increase the risk of systemic disruption and espionage, requiring a security-by-design approach.",
+        "recommandations": "Develop policies to enhance the resilience of AI supply chains. Examine assurance mechanisms (e.g., Software Bill of Materials - SBOM) and adapt them to AI specificities (models, datasets). Emphasize security from the earliest stages of AI development and deployment.",
+        "tags": [
+          "ai",
+          "supply_chain",
+          "artificial_intelligence",
+          "risk_management",
+          "national_security",
+          "critical_infrastructure",
+          "software_bill_of_materials",
+          "data_exposure",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/how-ai-quietly-becoming-supply-chain-problem"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Breaking down a supply chain attack leveraging a malicious Google Workspace OAuth app",
+        "description": "Analysis of a late 2024 supply chain attack targeting Chrome extension developers. The attack leveraged a malicious Google OAuth application (\"Privacy Policy Extension\") to gain authorization to modify and publish malicious versions of extensions, which in turn stole session cookies and authentication tokens from Facebook Ads accounts.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "developer@example.com"
+          ],
+          "IPv4": [
+            "136.226.68.203"
+          ]
+        },
+        "mitre_ttps": "T1553.006 (Subvert Trust Controls: Code Signing), T1566.002 (Phishing: Spearphishing Link), T1136.003 (Valid Accounts: Cloud Accounts), T1189 (Drive-by Compromise), T1539 (Privilege Escalation: Steal or Forge Kerberos Tickets), T1526 (Cloud Service Discovery), T1078 (Valid Accounts)",
+        "analyse": "This sophisticated attack illustrates the risks associated with third-party applications and OAuth consent management in cloud environments. The abuse of trust in legitimate applications and development platforms (Chrome Web Store) allows for large-scale, difficult-to-detect propagation. The impact is the theft of authentication tokens and access to sensitive accounts (Facebook Ads).",
+        "recommandations": "Review third-party applications with high or unusual permissions. Limit users' ability to consent to applications without administrative approval. Regularly audit authorized applications and their permissions. Monitor for behavioral anomalies in applications.",
+        "tags": [
+          "supply_chain_attack",
+          "oauth",
+          "google_workspace",
+          "chrome_extension",
+          "phishing",
+          "session_hijacking",
+          "credential_theft",
+          "facebook_ads",
+          "cloud_security",
+          "third_party_risk",
+          "application_security"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/google-workspace-oauth-attack/"
+        ],
+        "date": "2026-03-05"
+      }
+    ]
+  },
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Une recrudescence des cyberattaques sophistiquées, souvent liées à des tensions géopolitiques, marque cette période. Les vulnérabilités \"zero-day\" restent un vecteur d'attaque privilégié, comme l'illustrent les campagnes de Clop ciblant les solutions de transfert de fichiers et les exploits tels que Coruna pour iOS. L'utilisation de kits de phishing avancés, contournant l'authentification multi-facteurs (MFA), est également en forte augmentation. Les attaques sur la chaîne d'approvisionnement, y compris l'exploitation d'applications OAuth malveillantes et la sécurisation des composants d'IA, sont des préoccupations croissantes. Parallèlement, le conflit au Moyen-Orient démontre l'interconnexion entre les domaines physique et cybernétique, avec des cyberopérations visant le renseignement et la perturbation. La sophistication des rootkits Linux évolue avec l'adoption de techniques comme eBPF. Ces tendances soulignent la nécessité d'une vigilance accrue, d'une application rapide des correctifs, d'une authentification forte et d'une approche multicouche de la sécurité. La surface d'attaque s'élargit avec l'intégration de nouvelles technologies et la complexité des dépendances logicielles.",
+      "date": "2026-03-05"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Akira",
+        "secteur": "Entreprises",
+        "modop": "Exploitation de vulnérabilités zero-day, chiffrement de serveurs critiques pour les opérations quotidiennes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "zero_day",
+          "data_encryption"
+        ],
+        "sources": "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "BQTLock",
+        "secteur": "Entreprises de tous secteurs",
+        "modop": "Nouvelle souche de rançongiciel, capable de chiffrer des environnements entiers en quelques minutes.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "bqtlock"
+        ],
+        "sources": "https://any.run/cybersecurity-blog/february-26-attacks/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Clop (Cl0p)",
+        "secteur": "Solutions de transfert et de stockage de fichiers (Accellion FTA, GoAnywhere MFT, MOVEit, Cleo MFT, Oracle EBS)",
+        "modop": "Extorsion de données via exploitation de vulnérabilités zero-day (injection SQL, RCE, téléchargement de fichiers non restreint), déploiement de webshells.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_extortion",
+          "zero_day",
+          "supply_chain_attack",
+          "ransomware_group",
+          "webshell",
+          "sql_injection",
+          "rce"
+        ],
+        "sources": "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Coruna (CryptoWaters) / UNC6353 / UNC6691",
+        "secteur": "Utilisateurs d'iPhone (cibles d'espionnage, utilisateurs de plateformes d'e-commerce/industrielles ukrainiennes, détenteurs de cryptomonnaies chinois)",
+        "modop": "Kit d'exploitation iOS (23 exploits, 5 chaînes) zero-click pour RCE et vol d'informations financières/cryptomonnaies. Utilisé par des entreprises de surveillance, des espions (UNC6353), et des acteurs financiers chinois (UNC6691).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "exploit_kit",
+          "zero_day",
+          "ios",
+          "rce",
+          "spyware",
+          "crypto_theft",
+          "watering_hole_attack",
+          "unc6353",
+          "unc6691",
+          "cryptowaters"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/spyware-grade-coruna-ios-exploit-kit-now-used-in-crypto-theft-attacks/, https://securityaffairs.com/188928/security/google-uncovers-coruna-ios-exploit-kit-targeting-ios-13-17-2-1.html, https://www.lemonde.fr/pixels/article/2026/03/04/un-outil-de-piratage-d-iphone-tres-elabore-utilise-a-la-fois-par-des-espions-et-des-cybercriminels_6669486_4408996.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Department of Peace",
+        "secteur": "Gouvernement (U.S. Department of Homeland Security) et entreprises collaborant avec l'immigration",
+        "modop": "Hacktivisme, fuite de données contractuelles en protestation contre les actions gouvernementales.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "data_leak",
+          "government",
+          "homeland_security"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173740429876749",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "FulcrumSec",
+        "secteur": "Juridique et Professionnel (LexisNexis)",
+        "modop": "Accès à l'infrastructure AWS via l'exploitation de la vulnérabilité React2Shell dans une application React non patchée.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "data_breach",
+          "aws",
+          "vulnerability_exploit"
+        ],
+        "sources": "https://indieweb.social/@jbz/116174652753887098, https://infosec.exchange/@DevaOnBreaches/116173745276380722",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Gr0lum",
+        "secteur": "Plateformes de partage de fichiers (YggTorrent)",
+        "modop": "Piratage et destruction de serveurs/bases de données pour contester un modèle économique payant.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "data_destruction",
+          "piracy_site"
+        ],
+        "sources": "https://www.lemonde.fr/pixels/article/2026/03/04/yggtorrent-l-un-des-plus-gros-sites-francophones-de-telechargement-illegal-pirate-ses-serveurs-vides_6669483_4408996.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Groupes hacktivistes pro-iraniens (Handala Hack Team, Cyber Islamic Resistance, RipperSec, APT IRAN, Cyber Fattah)",
+        "secteur": "Cibles israéliennes et régionales (énergie, gaz)",
+        "modop": "Opérations cybernétiques coordonnées, revendications de DDoS, défigurations de sites web, fuites de données.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "hacktivist",
+          "iran_nexus",
+          "ddos",
+          "defacement",
+          "data_leak"
+        ],
+        "sources": "https://research.checkpoint.com/2026/interplay-between-iranian-targeting-of-ip-cameras-and-physical-warfare-in-the-middle-east/, https://fieldeffect.com/blog/cyber-spillover-risks-2026-middle-east-escalation, https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "ION-79",
+        "secteur": "Population iranienne",
+        "modop": "Affilié au IRGC Basij, produit activement du contenu lié au conflit actuel.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "influence_operation",
+          "iran_nexus",
+          "disinformation"
+        ],
+        "sources": "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Silver Dragon (lié à APT41)",
+        "secteur": "Entités gouvernementales (Europe, Asie du Sud-Est)",
+        "modop": "Exploitation de serveurs exposés, phishing avec pièces jointes malveillantes, détournement de services Windows légitimes pour la persistance, utilisation de Cobalt Strike et Google Drive pour le C2.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "apt",
+          "government",
+          "espionage",
+          "server_exploit",
+          "phishing",
+          "cobalt_strike",
+          "c2",
+          "google_drive",
+          "apt41"
+        ],
+        "sources": "https://securityaffairs.com/188895/apt/from-phishing-to-google-drive-c2-silver-dragon-expands-apt41-playbook.html",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Storm-2035 (ION-24)",
+        "secteur": "Audiences internationales, population iranienne",
+        "modop": "Réseau d'opérations d'influence iranien, façonnage de récits stratégiques, comportement inauthentique coordonné sur les médias sociaux, amplification de fausses narrations pour exagérer les capacités militaires iraniennes et compliquer l'évaluation des dommages.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "influence_operation",
+          "iran_nexus",
+          "disinformation",
+          "social_media"
+        ],
+        "sources": "https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      },
+      {
+        "nom": "Tycoon2FA (Storm-1747)",
+        "secteur": "Multiples secteurs (éducation, santé, finance, ONG, gouvernement)",
+        "modop": "Plateforme de phishing-as-a-service (PhaaS) \"Adversary-in-the-Middle\" (AiTM) pour contourner l'MFA, vol de crédentiels et jetons de session via des pages de connexion falsifiées. Utilise l'obfuscation, le fingerprinting, les CAPTCHA personnalisés.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "phishing",
+          "phaas",
+          "aitm",
+          "mfa_bypass",
+          "credential_theft",
+          "session_hijacking",
+          "storm_1747"
+        ],
+        "sources": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/",
+        "date": "2026-03-05"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Multiples (gouvernement, défense, énergie, finance, télécommunications, transport maritime, infrastructures critiques)",
+        "theme": "Escalade des tensions géopolitiques et risques de cyberdébordement",
+        "description": "Frappes coordonnées américano-israéliennes contre l'Iran (28 février 2026), mort du Guide suprême Ali Khamenei. Rétorsion iranienne par des frappes de missiles et de drones dans 9 pays. Augmentation de l'activité hacktiviste (DDoS, défigurations, fuites de données) ciblant les adversaires de l'Iran. Dommages aux centres de données AWS. Menaces d'acteurs liés à l'Iran ciblant les caméras IP (Israël, EAU, Qatar, Bahreïn, Koweït, Liban, Chypre). Réduction du transit dans le détroit d'Ormuz, déclaration de force majeure pour les exportations de gaz du Qatar. Cibles potentielles : responsables politiques/militaires, dissidents, communautés juives, sous-traitants de la défense, institutions financières, infrastructures critiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "middle_east",
+          "iran",
+          "israel",
+          "usa",
+          "cyber_warfare",
+          "hacktivism",
+          "ddos",
+          "data_leak",
+          "critical_infrastructure",
+          "energy",
+          "maritime",
+          "supply_chain",
+          "espionage"
+        ],
+        "sources": "https://research.checkpoint.com/2026/interplay-between-iranian-targeting-of-ip-cameras-and-physical-warfare-in-the-middle-east/, https://fieldeffect.com/blog/cyber-spillover-risks-2026-middle-east-escalation, https://www.recordedfuture.com/blog/ongoing-iran-conflict-what-you-need-to-know, https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "date": "2026-03-05"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Jeux vidéo",
+        "victime": "Cloud Imperium Games",
+        "description": "Violation de données (21 janvier 2026) où des hackers ont accédé à des données utilisateur de base (noms, emails, dates de naissance). Aucuns mots de passe ni informations de paiement n'ont été exposés. L'entreprise a été critiquée pour le délai et la mauvaise communication.",
+        "tags": [
+          "violation",
+          "breach",
+          "gaming",
+          "pii",
+          "email",
+          "dob"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173734330873665",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Restauration, Technologie de point de vente (POS)",
+        "victime": "Clients de restaurants utilisant la plateforme HungerRush",
+        "description": "Campagne d'extorsion par email. Un acteur de la menace a accédé à un compte de service de marketing par email d'un fournisseur tiers via des identifiants compromis, exposant les informations de contact des clients (noms, adresses email, adresses postales, numéros de téléphone). Les allégations de l'attaquant concernant des mots de passe et données financières sensibles ont été contestées par HungerRush.",
+        "tags": [
+          "violation",
+          "breach",
+          "restaurant",
+          "pos",
+          "email_marketing",
+          "extortion",
+          "pii",
+          "third_party_breach"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/hacker-mass-mails-hungerrush-extortion-emails-to-restaurant-patrons/",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Cybercriminalité (forum)",
+        "victime": "Membres du forum LeakBase",
+        "description": "Fermeture du forum par les autorités (FBI et 14 pays). Données de 142 000 membres compromises.",
+        "tags": [
+          "violation",
+          "breach",
+          "cybercrime",
+          "law_enforcement",
+          "data_leak",
+          "forum"
+        ],
+        "sources": "https://cyberscoop.com/leakbase-cybercrime-forum-seized/, https://mastodon.thenewoil.org/@thenewoil/116175038102707583",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Juridique et Professionnel",
+        "victime": "LexisNexis Legal & Professional",
+        "description": "Le groupe FulcrumSec a violé l'infrastructure AWS de l'entreprise le 24 février 2026 en exploitant la vulnérabilité React2Shell dans une application front-end React non patchée. Environ 2 Go de données héritées (antérieures à 2020) ont été dérobées, incluant des informations sur plus de 21 000 comptes, dont des utilisateurs .gov. Aucune donnée financière, numéro de sécurité sociale ou mot de passe actif n'a été exposé.",
+        "tags": [
+          "violation",
+          "breach",
+          "legal",
+          "professional_services",
+          "aws",
+          "react2shell",
+          "vulnerability_exploit",
+          "legacy_data",
+          "pii"
+        ],
+        "sources": "https://indieweb.social/@jbz/116174652753887098, https://infosec.exchange/@DevaOnBreaches/116173745276380722, https://mastodon.social/@securityLab_jp/116174661319975728",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Intelligence Artificielle",
+        "victime": "Tsukuru AI",
+        "description": "Accès non autorisé au compte AWS de l'entreprise, entraînant l'envoi de 176 000 emails de spam.",
+        "tags": [
+          "violation",
+          "breach",
+          "ai",
+          "aws",
+          "spam",
+          "unauthorized_access"
+        ],
+        "sources": "https://mastodon.social/@securityLab_jp/116174661319975728",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Gouvernement, Défense",
+        "victime": "U.S. Department of Homeland Security",
+        "description": "Le groupe hacktiviste \"Department of Peace\" a revendiqué le piratage et la fuite de données contractuelles impliquant plus de 6 000 entreprises (dont Microsoft, Oracle, Palantir Technologies). L'objectif était de protester contre les actions du gouvernement concernant l'application de l'immigration.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "homeland_security",
+          "hacktivism",
+          "data_leak",
+          "contract_data"
+        ],
+        "sources": "https://infosec.exchange/@DevaOnBreaches/116173740429876749",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Santé, Recherche",
+        "victime": "University of Hawaiʻi Cancer Center",
+        "description": "Attaque par rançongiciel (31 août 2025) ayant exposé les données personnelles de 1,2 million d'individus. Données compromises : noms, numéros de sécurité sociale, détails de permis de conduire, dossiers d'inscription électorale, informations de santé limitées et informations de registres de recherche.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "research",
+          "ransomware",
+          "pii",
+          "phi",
+          "social_security_number",
+          "identity_theft"
+        ],
+        "sources": "https://securityaffairs.com/188876/data-breach/data-breach-at-university-of-hawai%ca%bbi-cancer-center-impacts-1-2-million-individuals.html",
+        "date": "2026-03-05"
+      },
+      {
+        "secteur": "Partage de fichiers, Contenu illégal",
+        "victime": "YggTorrent",
+        "description": "Piratage revendiqué par \"Gr0lum\" (3-4 mars 2026) qui a \"vidé\" puis \"détruit\" les serveurs et 7 bases de données, en protestation contre un nouveau modèle d'abonnement payant. Le catalogue de torrents a été conservé et publié.",
+        "tags": [
+          "violation",
+          "breach",
+          "piracy",
+          "data_destruction",
+          "hacktivism"
+        ],
+        "sources": "https://www.lemonde.fr/pixels/article/2026/03/04/yggtorrent-l-un-des-plus-gros-sites-francophones-de-telechargement-illegal-pirate-ses-serveurs-vides_6669483_4408996.html",
+        "date": "2026-03-05"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-20079",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center (FMC) Software",
+        "description": "Vulnérabilité de contournement d'authentification dans l'interface web, permettant à un attaquant non authentifié d'obtenir un accès root via l'envoi de requêtes HTTP spécialement conçues.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "rce",
+          "root_access",
+          "cisco",
+          "fmc",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-max-severity-secure-fmc-flaws-giving-root-access/, https://securityaffairs.com/188921/security/cisco-fixes-maximum-severity-secure-fmc-bugs-threatening-firewall-security.html, https://securityonline.info/root-access-for-all-critical-auth-bypass-hits-cisco-firewall-management-center/, https://thecyberthrone.in/2026/03/05/two-perfect-10s-cisco-fmc-under-siege/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-20131",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center (FMC) Software, Cisco Security Cloud Control (SCC) Firewall Management",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) due à une désérialisation Java insécurisée dans l'interface de gestion web. Permet l'exécution de code Java arbitraire en tant que root.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "deserialization",
+          "java",
+          "cisco",
+          "fmc",
+          "scc",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-max-severity-secure-fmc-flaws-giving-root-access/, https://securityaffairs.com/188921/security/cisco-fixes-maximum-severity-secure-fmc-bugs-threatening-firewall-security.html, https://securityonline.info/critical-10-0-cvss-flaw-in-cisco-secure-fmc-hands-hackers-root-access-to-enterprise-firewalls/, https://thecyberthrone.in/2026/03/05/two-perfect-10s-cisco-fmc-under-siege/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-28289",
+        "cvss": 10.0,
+        "product": "FreeScout helpdesk platform",
+        "description": "Exécution de code à distance non authentifiée (RCE) de gravité maximale via une attaque zero-click. Exploite un contournement de patch en utilisant un caractère \"espace de largeur nulle\" (zero-width space) pour masquer l'extension d'un fichier malveillant (.htaccess) lors de l'upload.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "zero_click",
+          "authentication_bypass",
+          "file_upload",
+          "freescout",
+          "critical"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/mail2shell-zero-click-attack-lets-hackers-hijack-freescout-mail-servers/, https://securityonline.info/cvss-10-0-unauthenticated-remote-code-execution-in-freescout-public-proof-of-concept-disclosed/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29000",
+        "cvss": 10.0,
+        "product": "pac4j-jwt (bibliothèque Java)",
+        "description": "Vulnérabilité critique permettant à un attaquant distant non authentifié de forger des jetons d'administration JWT (JSON Web Tokens) en abusant de la combinaison de la signature (JWS) et du chiffrement (JWE), à condition de posséder la clé publique RSA du serveur.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication",
+          "jwt",
+          "jws",
+          "jwe",
+          "token_forgery",
+          "java",
+          "critical"
+        ],
+        "sources": "https://securityonline.info/critical-10-0-cvss-flaw-in-pac4j-jwt-lets-hackers-forge-admin-tokens/",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29127",
+        "cvss": 9.2,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Permissions de système de fichiers excessivement permissives (0777) sur le répertoire personnel de l'utilisateur `monitor`, contenant des binaires SUID Root, pouvant conduire à une élévation de privilèges locale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "file_permissions",
+          "suid",
+          "satellite_receiver",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29127",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29123",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Binaire SUID root-owned dans le répertoire personnel de l'utilisateur `xd` (`/home/xd/terminal/XDTerminal`), pouvant conduire à une élévation de privilèges locale via détournement de PATH, abus de symlink ou détournement d'objets partagés.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "suid",
+          "path_hijacking",
+          "symlink_abuse",
+          "shared_object_hijacking",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29123",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29124",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Multiples binaires SUID root-owned dans le répertoire personnel de l'utilisateur `monitor` (`/home/monitor/terminal`, etc.), pouvant conduire à une élévation de privilèges locale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "suid",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29124",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29128",
+        "cvss": 8.6,
+        "product": "IDC SFX2100 Satellite Receiver firmware",
+        "description": "Divulgation d'identifiants de configuration via des fichiers lisibles par tous (`zebra.conf`, `bgpd.conf`, `ospfd.conf`, `ripd.conf`) contenant des mots de passe codés en dur ou en texte clair, permettant un accès distant ou une élévation de privilèges locale.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "credential_disclosure",
+          "hardcoded_password",
+          "plaintext_password",
+          "privilege_escalation",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29128",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-26034",
+        "cvss": 8.5,
+        "product": "UPS Multi-UPS Management Console (MUMC) version 01.06.0001 (A03)",
+        "description": "Vulnérabilité de permissions par défaut incorrectes (CWE-276) permettant l'exécution de code arbitraire avec des privilèges SYSTEM via le chargement d'une DLL spécialement conçue.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "code_execution",
+          "dll_hijacking",
+          "ups_mumc",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-26034",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-29126",
+        "cvss": 8.5,
+        "product": "IDC SFX2100 Satellite Receiver",
+        "description": "Attribution de permissions incorrectes (fichier inscriptible par tous) dans `/etc/udhcpc/default.script`, permettant à un attaquant local non privilégié d'exécuter potentiellement des commandes arbitraires avec des privilèges root (élévation de privilèges locale et persistance).",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "file_permissions",
+          "persistence",
+          "satellite_receiver",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-29126",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-26033",
+        "cvss": 8.4,
+        "product": "UPS Multi-UPS Management Console (MUMC) version 01.06.0001 (A03)",
+        "description": "Vulnérabilité de chemin de recherche non cité ou d'élément non cité (CWE-428) permettant à un utilisateur avec des droits d'écriture sur un répertoire du disque système d'exécuter du code arbitraire avec des privilèges SYSTEM.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "privilege_escalation",
+          "code_execution",
+          "unquoted_search_path",
+          "ups_mumc",
+          "high"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-26033",
+        "date": "2026-03-05"
+      },
+      {
+        "cve_id": "CVE-2026-22719",
+        "cvss": 8.1,
+        "product": "Broadcom VMware Aria Operations, VMware Cloud Foundation, VMware Telco Cloud Infrastructure, VMware Telco Cloud Platform",
+        "description": "Vulnérabilité d'exécution de commandes non authentifiées pendant un flux de migration assistée par le support. Permet l'exécution de code à distance (RCE) sur l'appliance Aria Operations. Actuellement exploitée.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_execution",
+          "vmware",
+          "aria_operations",
+          "cloud_foundation",
+          "telco_cloud",
+          "actively_exploited",
+          "high"
+        ],
+        "sources": "https://fieldeffect.com/blog/cisa-rce-vmware-aria-operations, https://securityaffairs.com/188887/security/u-s-cisa-adds-qualcomm-and-broadcom-vmware-aria-operations-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+        "date": "2026-03-05"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Major Cyber Attacks in February 2026: BQTLock, Thread-Hijack Phishing, and MFA Bypass Evolution",
+        "description": "Aperçu des menaces cyber majeures de février 2026, incluant de nouvelles souches de rançongiciels comme BQTLock, des campagnes de phishing par détournement de fil de discussion (thread-hijack phishing) et l'évolution des techniques de contournement de l'authentification multi-facteurs (MFA). Souligne l'émergence de nouveaux logiciels malveillants et l'adaptation des techniques d'attaque.",
+        "threat_actor": "BQTLock (rançongiciel)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'article met en évidence une intensification et une diversification des menaces, avec des rançongiciels plus rapides et des techniques de phishing plus furtives, notamment celles qui ciblent les processus d'authentification modernes. L'évolution rapide des méthodes d'attaque exige une vigilance continue et une adaptation des défenses pour faire face aux menaces émergentes.",
+        "recommandations": "Mettre à jour les systèmes de détection pour identifier les nouvelles familles de rançongiciels, sensibiliser les utilisateurs aux techniques de phishing avancées (détournement de fil de discussion), et renforcer la sécurité des processus d'authentification pour prévenir le contournement de l'MFA.",
+        "tags": [
+          "cyberattack",
+          "ransomware",
+          "bqtlock",
+          "phishing",
+          "mfa_bypass",
+          "thread_hijack",
+          "malware_families",
+          "emerging_threats"
+        ],
+        "sources": [
+          "https://any.run/cybersecurity-blog/february-26-attacks/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Fake LastPass support email threads try to steal vault passwords",
+        "description": "Avertissement de LastPass concernant une campagne de phishing ciblant ses utilisateurs avec de faux emails d'assistance signalant un accès non autorisé au compte ou un changement d'adresse email. Les attaquants se font passer pour le support LastPass pour inciter les victimes à cliquer sur des liens malveillants et à divulguer leur mot de passe maître.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "DOMAIN": [
+            "verify-lastpass.com"
+          ]
+        },
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1059.003 (Command and Scripting Interpreter: Windows Command Shell)",
+        "analyse": "Cette campagne démontre la persistance et la sophistication des attaques de phishing visant les gestionnaires de mots de passe, services critiques pour la sécurité numérique. L'utilisation de l'ingénierie sociale via des fils de discussion d'email falsifiés et l'usurpation d'identité de marque visent à créer un sentiment d'urgence et de légitimité, rendant la détection difficile pour l'utilisateur final. L'impact potentiel est le vol de mot de passe maître, menant à un compromis total du coffre-fort.",
+        "recommandations": "Ne jamais divulguer le mot de passe maître en réponse à un email. Vérifier toujours l'expéditeur réel des emails de sécurité. Utiliser l'MFA robuste (authentificateurs physiques ou applications) pour tous les comptes. Signaler les emails suspects à LastPass.",
+        "tags": [
+          "phishing",
+          "lastpass",
+          "credential_theft",
+          "social_engineering",
+          "impersonation",
+          "email_spoofing",
+          "master_password"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/fake-lastpass-support-email-threads-try-to-steal-vault-passwords/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Hooked on Linux: Rootkit Taxonomy, Hooking Techniques and Tradecraft",
+        "description": "Analyse approfondie de la taxonomie des rootkits Linux, traçant leur évolution des techniques d'usurpation d'objets partagés en espace utilisateur et de hooking de modules de noyau aux méthodes modernes basées sur eBPF et io_uring. Explique comment les rootkits manipulent le système d'exploitation pour dissimuler des activités malveillantes (fichiers, processus, connexions réseau).",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1014 (Rootkit), T1055 (Process Injection), T1547.006 (Boot or Logon Autostart Execution: Kernel Modules and Extensions), T1574.006 (Hijack Execution Flow: Dynamic-link Library Hijacking)",
+        "analyse": "L'article souligne la sophistication croissante des rootkits Linux et les défis qu'ils posent à la détection traditionnelle. L'évolution vers des techniques plus furtives comme eBPF et io_uring rend la persistance et l'évasion plus efficaces, mais aussi plus risquées pour les attaquants en termes de stabilité du système. L'importance de la surveillance de bas niveau et de l'ingénierie de la détection est mise en avant.",
+        "recommandations": "Mettre en œuvre des contrôles d'intégrité du noyau, surveiller les chargements de modules et l'activité eBPF/io_uring anormale. Utiliser des outils de forensic mémoire pour identifier les rootkits. Développer des règles de détection basées sur les TTPs spécifiques aux rootkits. Maintenir les systèmes à jour.",
+        "tags": [
+          "rootkit",
+          "linux",
+          "kernel",
+          "ebpf",
+          "io_uring",
+          "persistence",
+          "evasion",
+          "syscall_hooking",
+          "userland_hooking",
+          "security_research",
+          "technical_analysis"
+        ],
+        "sources": [
+          "https://www.elastic.co/security-labs/linux-rootkits-1-hooked-on-linux"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "The Economics of Clop’s Zero-Day Campaigns: Why Mass Exploitation Isn’t Paying Off",
+        "description": "Analyse des campagnes d'extorsion de données de Clop, qui exploitent des vulnérabilités zero-day dans des solutions de transfert de fichiers gérés. L'article examine le modèle économique du groupe, révélant que malgré un grand nombre de victimes et de données exfiltrées, le retour sur investissement financier est souvent faible par rapport aux groupes utilisant le chiffrement.",
+        "threat_actor": "Clop (Cl0p), Akira (pour comparaison)",
+        "indicator_of_compromise": {
+          "CVE": [
+            "CVE-2021-27101",
+            "CVE-2023-0669",
+            "CVE-2023-34362",
+            "CVE-2024-50623",
+            "CVE-2025-61882"
+          ]
+        },
+        "mitre_ttps": "T1190 (Exploit Public-Facing Application), T1078 (Valid Accounts), T1133 (External Remote Services), T1505.003 (Server Software Component: Web Shell), T1567 (Exfiltration Over Web Service)",
+        "analyse": "L'analyse montre que le modèle \"vol de données uniquement\" de Clop, bien que permettant des intrusions à grande échelle, génère moins de pression sur les victimes et des paiements inférieurs par rapport aux attaques par double extorsion (chiffrement + vol de données). Cela remet en question l'efficacité à long terme de cette stratégie pour le groupe, suggérant que l'impact opérationnel sur les victimes est un facteur clé des paiements de rançon.",
+        "recommandations": "Maintenir une politique de correctifs rigoureuse pour les applications et services exposés, en particulier les solutions de transfert de fichiers gérés. Implémenter une segmentation réseau pour limiter les mouvements latéraux. Mettre en place des programmes de renseignement sur les menaces pour identifier et atténuer les vulnérabilités zero-day. Renforcer l'authentification et les contrôles d'accès pour les services sensibles.",
+        "tags": [
+          "clop",
+          "zero_day",
+          "data_extortion",
+          "ransomware",
+          "supply_chain_attack",
+          "webshell",
+          "mft",
+          "accellion",
+          "goanywhere",
+          "moveit",
+          "cleo",
+          "oracle_ebs",
+          "cve",
+          "economy",
+          "threat_actor_analysis"
+        ],
+        "sources": [
+          "https://www.guidepointsecurity.com/blog/the-economics-of-clops-zero-day-campaigns/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale",
+        "description": "Analyse approfondie de Tycoon2FA, une plateforme de phishing-as-a-service (PhaaS) de type \"Adversary-in-the-Middle\" (AiTM) qui a ciblé plus de 500 000 organisations par mois. Le kit permettait aux acteurs malveillants de contourner l'MFA, de voler les identifiants et les jetons de session en imitant des pages de connexion de services populaires (Microsoft 365, Gmail).",
+        "threat_actor": "Storm-1747 (opérateur de Tycoon2FA)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "T1566.001 (Phishing: Spearphishing Attachment), T1566.002 (Phishing: Spearphishing Link), T1078 (Valid Accounts), T1550.002 (Use Alternate Authentication: Pass the Cookie), T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder)",
+        "analyse": "Le succès de Tycoon2FA réside dans sa capacité à contourner les méthodes MFA courantes grâce à l'approche AiTM, sa grande adaptabilité (changement rapide de l'infrastructure, techniques d'évasion comme les CAPTCHA personnalisés et l'obfuscation) et sa facilité d'utilisation pour les cybercriminels moins expérimentés. L'impact est un compromis d'identité à grande échelle, même avec l'MFA activée.",
+        "recommandations": "Éliminer les identifiants traditionnels et adopter des méthodes MFA résistantes au phishing (clés de sécurité FIDO2, Windows Hello for Business, passkeys Microsoft Authenticator). Appliquer des règles de flux de courrier pour détecter et bloquer les emails de spoofing. Mettre en œuvre des protections anti-spoofing. Révoquer immédiatement les jetons de session et les applications d'authentification après un incident.",
+        "tags": [
+          "phishing",
+          "aitm",
+          "phaas",
+          "mfa_bypass",
+          "credential_theft",
+          "session_hijacking",
+          "email_security",
+          "identity_security",
+          "threat_actor_analysis",
+          "microsoft_365",
+          "gmail",
+          "storm_1747"
+        ],
+        "sources": [
+          "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "How AI is Quietly Becoming a Supply Chain Problem",
+        "description": "Analyse de la manière dont l'IA, malgré ses avantages, introduit des vulnérabilités de chaîne d'approvisionnement en raison de sa dépendance à des composants complexes (puces, infrastructure cloud, bibliothèques open-source, modèles pré-entraînés). L'article souligne le risque systémique pour la sécurité nationale et les entreprises dû à la concentration des fournisseurs et au manque de visibilité sur les dépendances.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": "Non mentionnées (analyse de risque)",
+        "analyse": "L'intégration généralisée de l'IA crée de nouvelles dimensions de complexité dans les chaînes d'approvisionnement, rendant les systèmes plus difficiles à inspecter et les vulnérabilités potentiellement plus impactantes. La concentration des fournisseurs (matériel, modèles) et la nature distribuée des composants d'IA augmentent le risque de perturbation systémique et d'espionnage, nécessitant une approche de sécurité intégrée dès la conception.",
+        "recommandations": "Développer des politiques pour renforcer la résilience des chaînes d'approvisionnement de l'IA. Examiner les mécanismes d'assurance (ex: Software Bill of Materials - SBOM) et les adapter aux spécificités de l'IA (modèles, datasets). Mettre l'accent sur la sécurité dès les premières étapes du développement et du déploiement de l'IA.",
+        "tags": [
+          "ai",
+          "supply_chain",
+          "artificial_intelligence",
+          "risk_management",
+          "national_security",
+          "critical_infrastructure",
+          "software_bill_of_materials",
+          "data_exposure",
+          "service_disruption"
+        ],
+        "sources": [
+          "https://www.rusi.org/explore-our-research/publications/commentary/how-ai-quietly-becoming-supply-chain-problem"
+        ],
+        "date": "2026-03-05"
+      },
+      {
+        "title": "Breaking down a supply chain attack leveraging a malicious Google Workspace OAuth app",
+        "description": "Analyse d'une attaque de chaîne d'approvisionnement fin 2024 ciblant les développeurs d'extensions Chrome. L'attaque utilisait une application OAuth Google malveillante (\"Privacy Policy Extension\") pour obtenir l'autorisation de modifier et de publier des versions malveillantes d'extensions, qui à leur tour volaient les cookies de session et les jetons d'authentification des comptes Facebook Ads.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "EMAIL": [
+            "developer@example.com"
+          ],
+          "IPv4": [
+            "136.226.68.203"
+          ]
+        },
+        "mitre_ttps": "T1553.006 (Subvert Trust Controls: Code Signing), T1566.002 (Phishing: Spearphishing Link), T1136.003 (Valid Accounts: Cloud Accounts), T1189 (Drive-by Compromise), T1539 (Privilege Escalation: Steal or Forge Kerberos Tickets), T1526 (Cloud Service Discovery), T1078 (Valid Accounts)",
+        "analyse": "Cette attaque sophistiquée illustre les risques liés aux applications tierces et à la gestion des consentements OAuth dans les environnements cloud. L'abus de confiance envers les applications légitimes et les plateformes de développement (Chrome Web Store) permet une propagation à grande échelle et difficilement détectable. L'impact se traduit par le vol de jetons d'authentification et l'accès à des comptes sensibles (Facebook Ads).",
+        "recommandations": "Examiner les applications tierces avec des autorisations élevées ou inhabituelles. Limiter la capacité des utilisateurs à consentir à des applications sans approbation administrative. Auditer régulièrement les applications autorisées et leurs permissions. Surveiller les anomalies comportementales des applications.",
+        "tags": [
+          "supply_chain_attack",
+          "oauth",
+          "google_workspace",
+          "chrome_extension",
+          "phishing",
+          "session_hijacking",
+          "credential_theft",
+          "facebook_ads",
+          "cloud_security",
+          "third_party_risk",
+          "application_security"
+        ],
+        "sources": [
+          "https://redcanary.com/blog/threat-detection/google-workspace-oauth-attack/"
+        ],
+        "date": "2026-03-05"
+      }
+    ]
+  }
+}
