@@ -1,0 +1,1245 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période récente est marquée par une intensification et une diversification des menaces cyber, avec des acteurs étatiques et financiers exploitant activement les vulnérabilités et l'IA. Les groupes d'APT russes et iraniens ciblent des entités ukrainiennes et les infrastructures critiques américaines, tandis que les acteurs liés à la Chine visent les télécommunications sud-américaines et que les groupes nord-coréens s'attaquent aux entreprises de cryptomonnaie. Les attaques de la chaîne d'approvisionnement et les campagnes de logiciels malveillants tirant parti de l'IA générative se multiplient, rendant la détection plus complexe. On observe une persistance des vulnérabilités de type exécution de code à distance (RCE) et contournement d'authentification, notamment dans les produits d'entreprise et les systèmes d'exploitation mobiles. La prolifération des menaces met en lumière l'importance d'une hygiène de sécurité robuste, de la segmentation des réseaux, et d'une surveillance continue pour contrer les tactiques adverses évolutives. L'utilisation de l'IA par les attaquants pour automatiser et accélérer la reconnaissance, la découverte de vulnérabilités et le développement d'exploits est une tendance majeure. La communauté de la cybersécurité doit s'adapter rapidement à ces évolutions pour éviter un déséquilibre en faveur des attaquants. En conclusion, le paysage des menaces est en constante évolution, avec une sophistication accrue des attaques et une pression grandissante sur les défenses, nécessitant une approche proactive et multicouche de la sécurité.",
+      "date": "2026-03-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-9244",
+        "secteur": "Télécommunications",
+        "modop": "Attaques ciblées, utilisation de malwares (TernDoor, PeerTime, BruteEntry) pour compromettre des systèmes Windows, Linux et des équipements de périphérie. Exploitation du protocole BitTorrent pour le C2 et du DLL side-loading.",
+        "tags": ["actor", "theat_actor", "APT", "Chine", "télécommunications", "malware", "DLL_side-loading", "BitTorrent", "C2", "espionnage"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/chinese-state-hackers-target-telcos-with-new-malware-toolkit/", "https://blog.talosintelligence.com/uat-9244/"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "Phobos Ransomware",
+        "secteur": "Multiples (plus de 1000 entités publiques et privées)",
+        "modop": "Ransomware-as-a-Service (RaaS), vente de la plateforme sur des forums darknet, ciblage par chiffrement de données et demande de rançon en cryptomonnaie.",
+        "tags": ["actor", "theat_actor", "ransomware", "Phobos", "criminalité_financière", "RaaS", "extorsion"],
+        "sources": ["https://securityaffairs.com/188984/security/phobos-ransomware-admin-faces-up-to-20-years-after-guilty-plea.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "APT28 (Russia-linked)",
+        "secteur": "Entités ukrainiennes (organisations)",
+        "modop": "Campagne de phishing ciblant la mise en œuvre de malwares (BadPaw, MeowMeow), utilisation d'HTA, d'obfuscation (.NET Reactor) et de techniques anti-analyse. Utilisation de la stéganographie.",
+        "tags": ["actor", "theat_actor", "APT", "Russie", "Ukraine", "phishing", "BadPaw", "MeowMeow", "malware", "espionnage_cyber", "stéganographie"],
+        "sources": ["https://securityaffairs.com/188974/apt/russian-apt-targets-ukraine-with-badpaw-and-meowmeow-malware.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "UNC6353, UNC6691 (Acteur financier chinois), Vendeurs de surveillance",
+        "secteur": "Utilisateurs d'iPhone, entreprises de cryptomonnaie",
+        "modop": "Utilisation du kit d'exploitation Coruna iOS (CryptoWaters), comprenant 23 exploits dans 5 chaînes pour cibler les iPhones (iOS 13-17.2.1) via des attaques de type 'watering hole' et des sites d'arnaque financière. Exfiltration d'informations financières et de données de portefeuilles crypto.",
+        "tags": ["actor", "theat_actor", "APT", "Chine", "vendeur_surveillance", "exploit_kit", "iOS", "iPhone", "Coruna", "CryptoWaters", "watering_hole", "cybercriminalité_financière", "espionnage"],
+        "sources": ["https://securityaffairs.com/188928/security/google-uncovers-coruna-ios-exploit-kit-targeting-ios-13-17-2-1.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "Seedworm (MuddyWater, Temp Zagros, Static Kitten)",
+        "secteur": "Banque américaine, aéroport, entreprise de logiciels (notamment celle liée à la défense/aérospatiale avec une présence en Israël), ONGs (US/Canada)",
+        "modop": "Attaques ciblées, déploiement de backdoors (Dindoor, Fakeset, Stagecomp, Darkcomp), utilisation de certificats signés (Amy Cherne, Donald Gay). Espionnage et collecte d'informations.",
+        "tags": ["actor", "theat_actor", "APT", "Iran", "Seedworm", "MuddyWater", "espionnage", "backdoor", "infrastructures_critiques", "secteur_financier", "aérospatiale"],
+        "sources": ["https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "Acteurs de la menace liés à la DPRK",
+        "secteur": "Organisations de cryptomonnaie",
+        "modop": "Campagne coordonnée, exploitation de vulnérabilités connues (CVE-2025-55182 dans React2Shell), balayage massif avec contournement de WAF, vol de code source propriétaire, de clés privées et d'actifs cloud.",
+        "tags": ["actor", "theat_actor", "APT", "Corée_du_Nord", "cryptomonnaie", "vol_de_données", "cloud_security", "React2Shell", "WAF_bypass"],
+        "sources": ["https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "UAT-8616",
+        "secteur": "Organisations de haute valeur",
+        "modop": "Exploitation active de vulnérabilités critiques dans Cisco Catalyst SD-WAN Manager pour établir des accès persistants.",
+        "tags": ["actor", "theat_actor", "APT", "espionnage", "Cisco", "SD-WAN", "exploitation_0day"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Énergie, transport maritime, économie mondiale",
+        "theme": "Tensions géopolitiques dans le détroit d'Ormuz",
+        "description": "Les récentes opérations militaires américano-israéliennes en Iran et la riposte iranienne ont intensifié les tensions dans le Moyen-Orient. Le détroit d'Ormuz, vital pour le commerce mondial de pétrole et de gaz, est menacé de blocage, entraînant une hausse des primes d'assurance et la suspension des services de transport maritime. Les conséquences économiques mondiales seraient importantes, avec des impacts sur les prix de l'énergie et l'approvisionnement alimentaire des pays du Golfe. Les acteurs iraniens (comme Handala, Marshtreader, Druidfly, Damselfly) sont également actifs dans des cyberattaques destructrices et d'espionnage, ciblant Israël, les États-Unis et leurs alliés. L'utilisation de caméras IP pour la reconnaissance et l'évaluation des dommages lors de frappes militaires est une tactique observée.",
+        "tags": ["géopolitique", "geopolitic", "Iran", "Israël", "États-Unis", "Moyen-Orient", "détroit_Ormuz", "énergie", "commerce_maritime", "guerre_économique", "cyber_conflict", "reconnaissance"],
+        "sources": ["https://www.iris-france.org/ormuz-petit-detroit-grandes-secousses/", "https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us", "https://www.iris-france.org/le-regime-iranien-va-t-il-survivre-les-mardis-de-liris/", "https://www.iris-france.org/guerre-en-iran-scenarios-militaires-avec-le-general-nicolas-richoux/", "https://securityonline.info/eyes-on-the-front-iranian-threat-actors-weaponize-ip-cameras-in-middle-east-conflict/"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Défense, communication militaire, infrastructures critiques",
+        "theme": "Dépendance militaire russe et coupure Starlink",
+        "description": "Début février 2026, les troupes russes en Ukraine ont subi une coupure du système de communication satellitaire Starlink, entraînant une désorganisation des commandements, de la logistique et de l'utilisation des drones. Cette dépendance à une technologie civile américaine a ralenti leur avancée et permis à l'Ukraine de regagner du territoire. La Russie tente de développer sa propre constellation satellite (Rassvet) mais fait face à des retards importants. Cet incident met en lumière la vulnérabilité des armées modernes aux infrastructures de communication et les défis technologiques auxquels la Russie est confrontée.",
+        "tags": ["géopolitique", "geopolitic", "Russie", "Ukraine", "Starlink", "conflit_armé", "communication_satellitaire", "guerre_technologique", "désinformation"],
+        "sources": ["https://euvsdisinfo.eu/starlink-shutdown-exposes-russias-military-dependence/", "https://securityaffairs.com/188974/apt/russian-apt-targets-ukraine-with-badpaw-and-meowmeow-malware.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Secteur minier, énergie, géopolitique",
+        "theme": "Contrôle des terres rares au Myanmar par des groupes armés non-étatiques",
+        "description": "Depuis le coup d'État militaire de 2021, l'Armée d'indépendance kachin (KIA) a consolidé son contrôle sur les principaux sites d'extraction de terres rares (dysprosium, terbium) au Myanmar. Ces minerais, essentiels pour les moteurs électriques et les éoliennes, génèrent plus de 200 millions de dollars de revenus annuels pour la KIA. Ce contrôle par une entité proto-étatique en guerre ouverte avec le gouvernement central soulève des questions stratégiques majeures pour la sécurité d'approvisionnement en minerais critiques et impacte la transition énergétique mondiale.",
+        "tags": ["géopolitique", "geopolitic", "Myanmar", "KIA", "terres_rares", "matières_premières_critiques", "transition_énergétique", "conflit_armé", "chaîne_approvisionnement"],
+        "sources": ["https://www.iris-france.org/myanmar-quand-les-groupes-armes-non-etatiques-deviennent-des-acteurs-strategiques-de-la-transition-energetique/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Application de startup",
+        "victime": "Kippu (application startup)",
+        "description": "Une vulnérabilité de logique de programmation a permis à des utilisateurs non autorisés d'effectuer un vidage complet de la base de données via une simple requête HTTP GET, exposant potentiellement toutes les données des utilisateurs. Incident mettant en lumière des pratiques de codage 'vibe coded' insécurisées.",
+        "tags": ["violation", "breach", "application", "startup", "base_de_données", "exposition_de_données", "HTTP_GET", "vulnérabilité_logique", "mauvaise_configuration"],
+        "sources": ["https://t.me/vxunderground/8437", "https://t.me/vxunderground/8436"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "PIH Health",
+        "description": "PIH Health a notifié ses patients d'un incident de piratage survenu en 2024, entraînant l'exposition d'informations administratives pour 15,8 millions de patients et de notes médicales sensibles pour environ 165 000 individus. Cet incident souligne la persistance des menaces sur le secteur de la santé.",
+        "tags": ["violation", "breach", "santé", "PIH_Health", "données_médicales", "informations_personnelles_de_santé", "cyberattaque", "piratage", "confidentialité"],
+        "sources": ["https://mastodon.clinicians-exchange.org/@HIPAABot/116177919037575936"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Finance, Cryptomonnaie",
+        "victime": "U.S. Marshals Service (actifs cryptos saisis)",
+        "description": "Un contractant du gouvernement américain a été arrêté pour avoir volé plus de 46 millions de dollars en cryptomonnaie auprès de l'U.S. Marshals Service. Le suspect a exposé ses activités lors d'une dispute en ligne, révélant la traçabilité des fonds liés au hack de Bitfinex 2016.",
+        "tags": ["violation", "breach", "finance", "cryptomonnaie", "vol_de_fonds", "corruption_interne", "Bitfinex", "FBI", "application_de_la_loi"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fbi-arrests-suspect-linked-to-46m-crypto-theft-from-us-marshals/"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Cryptomonnaie, Cloud",
+        "victime": "Entreprises de cryptomonnaie",
+        "description": "Des acteurs menaçants liés à la Corée du Nord ont mené une campagne coordonnée contre des entreprises de cryptomonnaie, volant du code source propriétaire, des clés privées et des secrets stockés dans le cloud. Ils ont exploité une vulnérabilité (CVE-2025-55182) dans le framework React2Shell et utilisé des techniques de balayage massif avec contournement de WAF pour identifier les plateformes de staking exposées.",
+        "tags": ["violation", "breach", "cryptomonnaie", "cloud", "vol_de_données", "clés_privées", "code_source", "DPRK", "React2Shell", "Kubernetes_Secrets"],
+        "sources": ["https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-21536",
+        "cvss": 9.8,
+        "product": "Microsoft Devices Pricing Program",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE).",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "Microsoft", "exécution_de_code_à_distance"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-21536"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29606",
+        "cvss": 9.8,
+        "product": "OpenClaw",
+        "description": "Contournement de la vérification de signature de webhook via la compatibilité ngrok Loopback, permettant des requêtes non authentifiées et des attaques de 'request flooding'.",
+        "tags": ["vulnérabilité", "vulnerability", "authentification", "bypass", "webhook", "OpenClaw", "ngrok"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-29606"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29058",
+        "cvss": 9.8,
+        "product": "AVideo-Encoder (AVideo Platform)",
+        "description": "Vulnérabilité critique d'injection de commande 'zero-click' permettant l'exécution de commandes arbitraires sur le système d'exploitation du serveur. Absence d'échappement de shell adéquat dans la validation d'URL.",
+        "tags": ["vulnérabilité", "vulnerability", "injection_de_commande", "RCE", "AVideo", "zero_click", "shell_escaping"],
+        "sources": ["https://securityonline.info/stream-hijacked-critical-zero-click-command-injection-flaw-exposed-in-avideo-encoder/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-22552",
+        "cvss": 9.4,
+        "product": "ePower epower.ie",
+        "description": "Absence d'authentification sur les points d'extrémité WebSocket, permettant l'usurpation non autorisée de stations de charge et la manipulation des données backend, menant à une élévation de privilèges et un contrôle de l'infrastructure de charge.",
+        "tags": ["vulnérabilité", "vulnerability", "authentification", "privilege_escalation", "ePower", "WebSocket", "infrastructure_de_charge"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-22552"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20079",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center",
+        "description": "Vulnérabilité permettant à un attaquant distant non authentifié de contourner l'authentification et d'exécuter du code Java arbitraire avec des privilèges root.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentification_bypass", "Cisco", "firewall", "root_privileges"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20131",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center",
+        "description": "Vulnérabilité permettant à un attaquant distant non authentifié de contourner l'authentification et d'exécuter du code Java arbitraire avec des privilèges root.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentification_bypass", "Cisco", "firewall", "root_privileges"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20127",
+        "cvss": 10.0,
+        "product": "Cisco Catalyst SD-WAN Controller et Manager",
+        "description": "Faille de sécurité critique activement exploitée par UAT-8616 pour établir des accès persistants. Permet un contournement d'authentification et une exécution de code arbitraire à distance.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentification_bypass", "Cisco", "SD-WAN", "exploitation_0day", "UAT-8616"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20128",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnérabilité activement exploitée dans Catalyst SD-WAN Manager.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "SD-WAN", "exploitation_0day"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20122",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnérabilité activement exploitée dans Catalyst SD-WAN Manager.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "SD-WAN", "exploitation_0day"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29000",
+        "cvss": 9.8,
+        "product": "pac4j-jwt",
+        "description": "Défaut de validation de signature dans la gestion des JWT chiffrés (JWE), permettant aux attaquants de forger des jetons d'authentification valides avec la clé publique RSA du serveur, contournant ainsi l'authentification et accédant à des rôles administratifs.",
+        "tags": ["vulnérabilité", "vulnerability", "authentification", "bypass", "JWT", "JWE", "pac4j", "Java", "cryptographie"],
+        "sources": ["https://fieldeffect.com/blog/maximum-severity-flaw-java-jwt-library"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-1492",
+        "cvss": 9.8,
+        "product": "WordPress User Registration & Membership plugin",
+        "description": "Permet à des attaquants de créer des comptes administrateur sans authentification en raison d'une acceptation de rôle fournie par l'utilisateur lors de l'enregistrement.",
+        "tags": ["vulnérabilité", "vulnerability", "authentification", "privilege_escalation", "WordPress", "plugin", "admin_account_creation"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3612",
+        "cvss": 8.3,
+        "product": "Wavlink WL-NU516U1",
+        "description": "Injection de commande via la manipulation de l'argument 'firmware_url' dans la fonction 'sub_405AF4' du fichier '/cgi-bin/adm.cgi' (composant OTA Online Upgrade), exploitable à distance. L'exploit a été divulgué publiquement.",
+        "tags": ["vulnérabilité", "vulnerability", "injection_de_commande", "RCE", "Wavlink", "firmware", "OTA_update"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-3612"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-28710",
+        "cvss": 8.1,
+        "product": "Acronis Cyber Protect",
+        "description": "Divulgation et manipulation d'informations sensibles en raison d'une authentification inappropriée.",
+        "tags": ["vulnérabilité", "vulnerability", "authentification_bypass", "sensitive_information_disclosure", "Acronis"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-28710"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-26125",
+        "cvss": 8.6,
+        "product": "Payment Orchestrator Service",
+        "description": "Vulnérabilité d'élévation de privilèges.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "payment_orchestrator"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26125"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3336",
+        "cvss": 8.0,
+        "product": "AWS-LC",
+        "description": "Vulnérabilité de contournement de validation dans la fonction PKCS7_verify(), permettant de subvertir les communications chiffrées ou de vérifier des signatures numériques forgées.",
+        "tags": ["vulnérabilité", "vulnerability", "AWS", "AWS-LC", "cryptographie", "validation_bypass", "PKCS7_verify"],
+        "sources": ["https://securityonline.info/cracking-the-clouds-crypto-unauthenticated-bypass-flaws-found-in-amazons-aws-lc-library/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3338",
+        "cvss": 8.0,
+        "product": "AWS-LC",
+        "description": "Vulnérabilité de contournement de validation dans la fonction PKCS7_verify(), permettant de subvertir les communications chiffrées ou de vérifier des signatures numériques forgées.",
+        "tags": ["vulnérabilité", "vulnerability", "AWS", "AWS-LC", "cryptographie", "validation_bypass", "PKCS7_verify"],
+        "sources": ["https://securityonline.info/cracking-the-clouds-crypto-unauthenticated-bypass-flaws-found-in-amazons-aws-lc-library/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-25611",
+        "cvss": 7.5,
+        "product": "MongoDB",
+        "description": "Vulnérabilité de haute gravité permettant à des attaquants non authentifiés de faire planter les serveurs MongoDB exposés via une attaque par épuisement des connexions. Bien que le CVSS soit de 7.5, sa facilité d'exploitation et son impact critique (DoS) la rendent notable.",
+        "tags": ["vulnérabilité", "vulnerability", "DoS", "MongoDB", "resource_exhaustion", "crash_server"],
+        "sources": ["https://cybersecuritynews.com/mongodb-vulnerability-crash-server/", "https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CERTFR-2026-AVI-0242",
+        "cvss": 9.8,
+        "product": "Produits Cisco",
+        "description": "Multiples vulnérabilités, dont certaines permettent l'exécution de code arbitraire à distance (RCE), le déni de service à distance (DoS) et l'atteinte à la confidentialité des données.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "RCE", "DoS", "confidentialité"],
+        "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0242/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Hackers d'État chinois ciblent les opérateurs de télécommunications avec de nouveaux kits de logiciels malveillants",
+        "description": "L'acteur de menace persistant avancé (APT) chinois UAT-9244 cible les fournisseurs de services de télécommunications en Amérique du Sud depuis 2024, compromettant des appareils Windows, Linux et de périphérie réseau. La campagne utilise trois familles de malwares inédites: TernDoor (backdoor Windows via DLL side-loading), PeerTime (backdoor Linux basée sur BitTorrent pour le C2) et BruteEntry (scanner de force brute pour l'infrastructure proxy).",
+        "threat_actor": "UAT-9244 (APT lié à la Chine, associé à FamousSparrow et Tropic Trooper)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0002: Exécution",
+          "TA0003: Persistance",
+          "TA0004: Élévation de Privilèges",
+          "TA0008: Mouvement Latéral",
+          "TA0011: Commandement et Contrôle",
+          "T1574.002: Détournement de Flux d'Exécution: Chargement Latéral de DLL",
+          "T1059.001: Interpréteur de Commandes et de Scripts: PowerShell",
+          "T1027: Fichiers ou Informations Obfusqués",
+          "T1071.001: Protocole de Couche Applicative: Protocoles Web",
+          "T1071.004: Protocole de Couche Applicative: DNS",
+          "T1566.001: Phishing: Pièce Jointe d'Hameçonnage Ciblé",
+          "T1090: Proxy (BruteEntry)",
+          "T1078: Comptes Valides",
+          "T1110: Attaque par Force Brute"
+        ],
+        "analyse": "La campagne vise spécifiquement les télécommunications, un secteur stratégique pour l'espionnage et le contrôle des infrastructures. L'utilisation de malwares personnalisés et de techniques évasives (BitTorrent pour le C2, .NET Reactor, anti-analyse) démontre une sophistication élevée et un objectif de persistance à long terme. La cible géographique (Amérique du Sud) indique un élargissement des zones d'opérations des groupes APT chinois.",
+        "recommandations": [
+          "Mettre en œuvre une surveillance comportementale avancée pour détecter le DLL side-loading.",
+          "Renforcer l'authentification et les contrôles d'accès sur les équipements de périphérie et les systèmes critiques.",
+          "Utiliser des solutions EDR/XDR pour la détection des malwares multi-plateformes (Windows, Linux).",
+          "Surveiller le trafic réseau pour des communications C2 inhabituelles (ex: trafic BitTorrent non autorisé).",
+          "Effectuer des audits de sécurité réguliers des configurations et des applications exposées sur Internet."
+        ],
+        "tags": ["APT", "Chine", "télécommunications", "malware", "espionnage", "TernDoor", "PeerTime", "BruteEntry", "DLL_side-loading", "BitTorrent", "C2"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/chinese-state-hackers-target-telcos-with-new-malware-toolkit/", "https://blog.talosintelligence.com/uat-9244/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Cisco confirme l'exploitation active de vulnérabilités critiques dans Catalyst SD-WAN Manager",
+        "description": "Cisco a confirmé l'exploitation active de plusieurs vulnérabilités critiques dans ses produits Catalyst SD-WAN Manager (CVE-2026-20128, CVE-2026-20122 et CVE-2026-20127) et Secure Firewall Management Center (CVE-2026-20079, CVE-2026-20131). Ces failles, certaines avec un score CVSS de 10.0, permettent l'exécution de code arbitraire à distance avec des privilèges root et le contournement d'authentification par des attaquants non authentifiés. L'acteur UAT-8616 est lié à l'exploitation de CVE-2026-20127 pour établir des accès persistants dans des organisations de haute valeur.",
+        "threat_actor": "UAT-8616",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2026-20128", "CVE-2026-20122", "CVE-2026-20127", "CVE-2026-20079", "CVE-2026-20131"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0002: Exécution",
+          "TA0003: Persistance",
+          "TA0004: Élévation de Privilèges",
+          "TA0005: Évasion des Défenses",
+          "T1190: Exploiter une Application Face à Internet",
+          "T1078: Comptes Valides",
+          "T1068: Exploitation pour l'Élévation de Privilèges",
+          "T1059.004: Interpréteur de Commandes et de Scripts: PowerShell"
+        ],
+        "analyse": "L'exploitation active de vulnérabilités critiques dans des équipements réseau et de sécurité centraux comme Cisco Catalyst SD-WAN et Secure Firewall Management Center pose un risque systémique majeur pour de nombreuses organisations. Ces appliances sont souvent des points d'entrée privilégiés pour les APT, offrant un accès initial, une persistance et des capacités d'exécution de code avec les privilèges les plus élevés. La nature des vulnérabilités (RCE, bypass d'authentification) et le CVSS élevé soulignent l'urgence d'appliquer les correctifs.",
+        "recommandations": [
+          "Appliquer immédiatement les mises à jour logicielles recommandées par Cisco.",
+          "Limiter l'accès aux interfaces d'administration des appareils SD-WAN et Firewall à des réseaux sécurisés uniquement.",
+          "Désactiver les services HTTP et FTP inutiles sur ces équipements.",
+          "Changer les mots de passe administrateur par défaut et renforcer les politiques d'authentification.",
+          "Surveiller activement les logs de trafic pour toute activité inattendue vers et depuis ces systèmes."
+        ],
+        "tags": ["Cisco", "SD-WAN", "Firewall", "vulnérabilité", "RCE", "authentification_bypass", "exploitation_0day", "UAT-8616", "infrastructures_critiques"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html", "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0242/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Analyse technique : Du 'Patch diff' à l'obtention des privilèges SYSTEM et taxonomie des rootkits Linux",
+        "description": "Ces articles décrivent deux analyses techniques approfondies. Le premier détaille une vulnérabilité Use-After-Free (UAF) dans Windows DWM (Desktop Window Manager), exploitée pour une élévation de privilèges de l'utilisateur à SYSTEM, en utilisant des LLMs et le patch diffing pour le développement d'exploit. Le second explore la taxonomie des rootkits Linux, leur évolution des techniques d'injection en userland aux techniques avancées en kernel-space (LKM, eBPF, io_uring) et leurs stratégies de hooking (IDT, syscall table, inline hooking, VFS, ftrace, kprobes).",
+        "threat_actor": "Non mentionné directement comme cible, mais les techniques sont utilisées par des acteurs sophistiqués.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2022-0847"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0004: Élévation de Privilèges",
+          "TA0005: Évasion des Défenses",
+          "TA0003: Persistance",
+          "T1068: Exploitation pour l'Élévation de Privilèges",
+          "T1543.003: Créer ou Modifier un Processus Système: Service Windows",
+          "T1574.004: Détournement de Flux d'Exécution: Détournement de l'Ordre de Recherche de DLL",
+          "T1014: Rootkit",
+          "T1059: Interpréteur de Commandes et de Scripts",
+          "T1071: Protocole de Couche Applicative"
+        ],
+        "analyse": "Le premier article révèle la facilité croissante, grâce aux LLMs, de transformer des vulnérabilités complexes en exploits fonctionnels, réduisant ainsi le temps de développement des '1-day exploits'. Cela intensifie la course entre attaquants et défenseurs. Le second article fournit une compréhension cruciale des mécanismes d'évasion et de persistance des rootkits sur Linux, soulignant l'évolution des techniques pour contourner les défenses modernes. Ces analyses sont essentielles pour les défenseurs afin de mieux anticiper et détecter les menaces les plus sophistiquées.",
+        "recommandations": [
+          "Mettre en œuvre des correctifs rapidement pour les vulnérabilités du noyau et les élévations de privilèges.",
+          "Renforcer les contrôles d'intégrité du noyau (Kernel Integrity Checks) et les solutions EDR pour détecter les rootkits basés sur LKM, eBPF ou io_uring.",
+          "Utiliser des mécanismes de protection de la mémoire (W^X, CR0 WP) et de signature de modules pour limiter les manipulations du noyau.",
+          "Surveiller les activités de processus inhabituelles et les appels système suspects.",
+          "Investir dans la formation des équipes de sécurité sur les techniques d'exploitation avancées et l'ingénierie inversée."
+        ],
+        "tags": ["Windows_DWM", "Use-After-Free", "privilege_escalation", "SYSTEM", "patch_diffing", "LLM", "exploit_development", "Linux_rootkit", "kernel_security", "eBPF", "io_uring", "syscall_hooking", "DFIR"],
+        "sources": ["https://www.elastic.co/security-labs/patch-diff-to-system", "https://www.elastic.co/security-labs/linux-rootkits-1-hooked-on-linux"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Le FBI et Europol démantèlent le forum cybercriminel LeakBase",
+        "description": "Le FBI et Europol, en coordination avec 14 pays, ont démantelé LeakBase (leakbase[.]la), un forum cybercriminel majeur actif depuis 2021, spécialisé dans le commerce de bases de données et de 'stealer logs' contenant des identifiants volés. L'opération 'Leak' a conduit à des arrestations, des perquisitions et environ 100 interventions ciblant 37 utilisateurs actifs. La base de données de LeakBase a été saisie, permettant de désanonymiser de nombreux utilisateurs et d'envoyer un message clair sur l'absence d'anonymat en ligne pour les cybercriminels.",
+        "threat_actor": "Cybercriminels divers, administrateurs et utilisateurs de LeakBase",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": ["leakbase.la"],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0007: Découverte",
+          "TA0008: Mouvement Latéral",
+          "TA0009: Collection",
+          "T1078: Comptes Valides",
+          "T1560: Archiver les Données Collectées",
+          "T1587: Développer des Capacités (Développer des Outils)",
+          "T1588: Obtenir des Capacités (Acquérir l'Accès, Logiciels Malveillants)",
+          "T1110: Attaque par Force Brute"
+        ],
+        "analyse": "Cette opération démontre la portée mondiale des efforts de collaboration des forces de l'ordre pour perturber l'écosystème cybercriminel. Le démantèlement d'un forum central de commerce de données volées réduit l'accès des cybercriminels aux informations d'identification et aux outils de piratage, mais met aussi en évidence l'importance continue des mots de passe forts et de la MFA pour les individus et les organisations. L'action souligne que l'anonymat perçu sur les plateformes cybercriminelles est fragile.",
+        "recommandations": [
+          "Encourager l'utilisation de mots de passe uniques et complexes et de l'authentification multifactorielle (MFA).",
+          "Surveiller les forums et marchés noirs pour détecter la fuite de données d'entreprise ou d'identifiants.",
+          "Mettre en œuvre des outils de gestion des identités et des accès (IAM) robustes.",
+          "Sensibiliser les employés aux risques de phishing et de vol d'identifiants.",
+          "Collaborer avec les autorités pour signaler et perturber les infrastructures cybercriminelles."
+        ],
+        "tags": ["cybercriminalité", "LeakBase", "démantèlement", "FBI", "Europol", "vol_de_données", "stealer_logs", "darknet", "application_de_la_loi"],
+        "sources": ["https://securityaffairs.com/188958/cyber-crime/operation-leak-fbi-and-europol-dismantle-leakbase-cybercrime-forum.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "L'IA au service d'un piratage éclair de FortiGate et promotion de faux dépôts OpenClaw AI par Bing AI",
+        "description": "Une campagne a compromis plus de 600 équipements FortiGate dans 55 pays, non par des failles logicielles, mais par des mots de passe faibles sur des consoles de gestion exposées. L'attaquant a utilisé des services d'IA générative pour automatiser et accélérer la reconnaissance et l'exploitation, récupérant configurations, identifiants et plans réseau, avec pour objectif de préparer un rançongiciel. Parallèlement, Bing AI a promu de faux dépôts GitHub d'OpenClaw (un agent AI open-source) distribuant des infostealers et des malwares proxy, exploitant la confiance dans les outils d'IA et les référentiels open-source.",
+        "threat_actor": "Cybercriminel opportuniste (FortiGate), Acteurs de la menace inconnus (OpenClaw)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0003: Persistance",
+          "TA0004: Élévation de Privilèges",
+          "TA0005: Évasion des Défenses",
+          "TA0006: Accès aux Identifiants",
+          "TA0007: Découverte",
+          "TA0008: Mouvement Latéral",
+          "TA0009: Collection",
+          "TA0011: Commandement et Contrôle",
+          "TA0042: Développement de Ressources",
+          "T1190: Exploiter une Application Face à Internet",
+          "T1078: Comptes Valides",
+          "T1110: Attaque par Force Brute",
+          "T1588: Obtenir des Capacités (Développer des Logiciels)",
+          "T1566.002: Phishing: Lien d'Hameçonnage Ciblé",
+          "T1059: Interpréteur de Commandes et de Scripts",
+          "T1027: Fichiers ou Informations Obfusqués",
+          "T1574.002: Détournement de Flux d'Exécution: Chargement Latéral de DLL"
+        ],
+        "analyse": "Ces incidents illustrent la montée en puissance de l'IA comme outil d'accélération pour les attaquants, réduisant la barrière technique et augmentant l'échelle des campagnes, même pour des vulnérabilités d'hygiène de base. La confiance dans les plateformes de recherche et les dépôts open-source est exploitée, créant de nouveaux vecteurs de supply chain et de social engineering. L'impact est potentiel pour les PME et grandes entreprises n'ayant pas une hygiène de sécurité irréprochable et qui adoptent l'IA sans précaution.",
+        "recommandations": [
+          "Appliquer une politique de mots de passe forts et l'authentification multifactorielle (MFA) sur toutes les interfaces d'administration exposées.",
+          "Mener des audits de configuration réguliers pour éviter l'exposition inutile de services sur Internet.",
+          "Sensibiliser les utilisateurs aux risques des dépôts de code tiers et des recommandations d'IA générative non vérifiées.",
+          "Mettre en place des solutions de détection et de réponse des terminaux (EDR) pour identifier les activités suspectes d'agents AI.",
+          "Surveiller les tentatives d'accès aux Active Directory et aux serveurs de sauvegarde avec des alertes spécifiques."
+        ],
+        "tags": ["IA", "AI", "FortiGate", "OpenClaw", "phishing", "malware", "infostealer", "ransomware_prep", "mots_de_passe_faibles", "supply_chain_attack", "social_engineering"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/bing-ai-promoted-fake-openclaw-github-repo-pushing-info-stealing-malware/", "https://redcanary.com/blog/threat-detection/openclaw-ai/", "https://www.datasecuritybreach.fr/lia-au-service-dun-piratage-eclair-de-fortigate/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Les acteurs de la menace iraniens armementent des caméras IP dans le conflit au Moyen-Orient",
+        "description": "Un rapport de Check Point Research révèle une campagne intensifiée d'acteurs de la menace iraniens visant à compromettre des caméras IP au Moyen-Orient. Ces caméras seraient utilisées comme outils de reconnaissance en temps réel pour des opérations de missiles et l'évaluation des dommages de combat (BDA), potentiellement avant même les lancements de missiles. L'activité s'aligne avec des événements régionaux majeurs et souligne l'intégration des cyberopérations dans la doctrine militaire iranienne.",
+        "threat_actor": "Acteurs de la menace iraniens (Iranian-nexus threat actors)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2026-2256", "CVE-2025-34067", "CVE-2025-33053", "CVE-2021-36260", "CVE-2021-33044", "CVE-2018-0171", "CVE-2017-7921"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0007: Découverte",
+          "TA0009: Collection",
+          "TA0011: Commandement et Contrôle",
+          "T1190: Exploiter une Application Face à Internet",
+          "T1133: Services Distants Externes",
+          "T1083: Découverte de Fichiers et Répertoires",
+          "T1046: Découverte de Services Réseau"
+        ],
+        "analyse": "L'utilisation de caméras IP pour la reconnaissance militaire est une tactique innovante qui brouille les lignes entre cyber-guerre et conflit cinétique. Cela offre aux acteurs iraniens une capacité de renseignement en temps réel cruciale pour leurs opérations, tout en étant difficile à détecter et à contrer. L'impact est direct sur la sécurité régionale et la capacité des adversaires à mener des actions militaires sans être surveillés. Cet incident met en évidence une évolution des stratégies de guerre hybride.",
+        "recommandations": [
+          "Sécuriser et segmenter les réseaux sur lesquels sont connectées des caméras IP, en particulier dans les zones à risque géopolitique.",
+          "Appliquer les correctifs de sécurité pour les vulnérabilités connues des caméras IP et des équipements réseau.",
+          "Mettre en œuvre des politiques de mots de passe forts et de MFA pour tous les appareils connectés.",
+          "Surveiller le trafic réseau et les logs des caméras IP pour détecter toute activité anormale ou accès non autorisé.",
+          "Réaliser des audits de sécurité réguliers des infrastructures OT/IoT pour identifier les points faibles."
+        ],
+        "tags": ["géopolitique", "Iran", "Moyen-Orient", "caméras_IP", "reconnaissance", "guerre_hybride", "cyber-guerre", "APT", "Check_Point"],
+        "sources": ["https://securityonline.info/eyes-on-the-front-iranian-threat-actors-weaponize-ip-cameras-in-middle-east-conflict/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Enterprise Browser Security Blind Spots and ANY.RUN Threat Coverage Digest",
+        "description": "Le rapport '2026 State of Browser Security Report' souligne que le navigateur est devenu le système d'exploitation du travail moderne, mais est souvent sous-protégé, créant des angles morts de sécurité. 41% des employés utilisent des outils web IA, conduisant à de nouveaux risques de phishing, extensions malveillantes et ingénierie sociale. Parallèlement, ANY.RUN a réalisé des améliorations majeures en intelligence des menaces et couverture sandbox en février, incluant de nouveaux rapports de TI, une visibilité comportementale étendue pour des dizaines de familles de malwares, et des milliers de nouvelles règles de détection réseau pour les campagnes de phishing et de vol de données.",
+        "threat_actor": "Non applicable, ciblage générique par des menaces basées sur le navigateur",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Accès Initial",
+          "TA0005: Évasion des Défenses",
+          "TA0009: Collection",
+          "TA0011: Commandement et Contrôle",
+          "T1566: Phishing",
+          "T1189: Compromission par Téléchargement Discret",
+          "T1133: Services Distants Externes",
+          "T1204.001: Exécution par l'Utilisateur: Lien Malveillant",
+          "T1059.007: Interpréteur de Commandes et de Scripts: JavaScript"
+        ],
+        "analyse": "L'évolution du navigateur en un point de contrôle critique mais sous-sécurisé crée un défi majeur pour les entreprises, exacerbé par l'adoption rapide d'outils basés sur l'IA et la fragmentation de leur usage. La nécessité d'une surveillance continue et de solutions de détection comportementale est primordiale. Les avancées comme celles d'ANY.RUN dans la détection des malwares et des campagnes de phishing sont essentielles pour combler ces lacunes de visibilité et contrer les nouvelles menaces qui exploitent les comportements des utilisateurs et les faiblesses des plateformes. L'IA présente un double tranchant, à la fois source de nouvelles vulnérabilités et outil de détection amélioré.",
+        "recommandations": [
+          "Adopter une stratégie de sécurité centrée sur le navigateur, allant au-delà des contrôles réseau et des agents endpoint traditionnels.",
+          "Mettre en place des politiques d'utilisation strictes pour les outils web basés sur l'IA et surveiller leur utilisation.",
+          "Renforcer la détection du phishing par des solutions avancées et la formation des utilisateurs.",
+          "Gérer de manière proactive les extensions de navigateur à haut risque et surveiller leurs permissions.",
+          "Intégrer l'intelligence des menaces et les capacités de sandbox pour améliorer la détection des malwares."
+        ],
+        "tags": ["navigateur", "browser_security", "IA", "AI", "phishing", "malware", "extensions_malveillantes", "ingénierie_sociale", "visibilité_sécurité", "threat_intelligence", "sandbox"],
+        "sources": ["/cybersecurity-blog/threat-coverage-digest-february-2026/", "https://www.bleepingcomputer.com/news/security/2026-browser-data-reveals-major-enterprise-security-blind-spots/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Wikipedia victime d'un ver JavaScript auto-propageant",
+        "description": "La Wikimedia Foundation a subi un incident de sécurité où un ver JavaScript auto-propageant a vandalisé des pages et modifié des scripts utilisateurs sur plusieurs wikis. Le script malveillant, initialement hébergé sur Wikipedia russe, s'est propagé en injectant du code dans les fichiers common.js des utilisateurs connectés et le MediaWiki:Common.js global, exécutant un loader malveillant. L'incident a entraîné la modification de près de 4 000 pages et la réinitialisation de 85 fichiers common.js d'utilisateurs.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0003: Persistance",
+          "TA0002: Exécution",
+          "TA0005: Évasion des Défenses",
+          "T1059.007: Interpréteur de Commandes et de Scripts: JavaScript",
+          "T1105: Transfert d'Outils Entrants",
+          "T1546.007: Exécution Déclenchée par un Événement: Fonctionnalités d'Accessibilité"
+        ],
+        "analyse": "Cet incident met en évidence la vulnérabilité des plateformes web collaboratives aux scripts malveillants, même via des failles de logique ou d'erreur humaine (chargement accidentel du script). La capacité d'auto-propagation du ver a permis une diffusion rapide et un impact étendu sur le contenu et l'expérience utilisateur, affectant la fiabilité de l'information sur une plateforme mondiale. L'utilisation de scripts JavaScript globaux comme vecteur de propagation est un risque élevé.",
+        "recommandations": [
+          "Renforcer les contrôles de sécurité et les revues de code pour les scripts globaux et les modifications de scripts utilisateurs.",
+          "Mettre en œuvre une politique de sécurité stricte pour les comptes avec des privilèges élevés (par exemple, comptes d'employés testant des fonctionnalités).",
+          "Utiliser des bacs à sable (sandboxes) pour le test de nouvelles fonctionnalités ou de scripts tiers.",
+          "Surveiller les modifications inattendues des fichiers de configuration ou des scripts système (ex: common.js, MediaWiki:Common.js).",
+          "Effectuer des sauvegardes régulières et des procédures de restauration rapide en cas de vandalisme à grande échelle."
+        ],
+        "tags": ["Wikipedia", "JavaScript_worm", "auto-propagation", "vandalisme", "script_malveillant", "web_security"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/wikipedia-hit-by-self-propagating-javascript-worm-that-vandalized-pages/"],
+        "date": "2026-03-06"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The recent period has seen an intensification and diversification of cyber threats, with both state-sponsored and financially motivated actors actively exploiting vulnerabilities and AI. Russian and Iranian APT groups are targeting Ukrainian entities and critical US infrastructure, while China-linked actors are aiming at South American telecommunications, and North Korean groups are attacking cryptocurrency firms. Supply chain attacks and AI-powered malware campaigns are on the rise, making detection more complex. A persistence of Remote Code Execution (RCE) and authentication bypass vulnerabilities is observed, particularly in enterprise products and mobile operating systems. The proliferation of threats highlights the importance of robust security hygiene, network segmentation, and continuous monitoring to counter evolving adversary tactics. The use of AI by attackers to automate and accelerate reconnaissance, vulnerability discovery, and exploit development is a major trend. The cybersecurity community must adapt quickly to these developments to prevent an imbalance favoring attackers. In conclusion, the threat landscape is constantly evolving, with increasing sophistication of attacks and growing pressure on defenses, requiring a proactive and multi-layered security approach.",
+      "date": "2026-03-06"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "UAT-9244",
+        "secteur": "Telecommunications",
+        "modop": "Targeted attacks, using malware (TernDoor, PeerTime, BruteEntry) to compromise Windows, Linux systems, and network edge devices. Exploitation of BitTorrent protocol for C2 and DLL side-loading.",
+        "tags": ["actor", "theat_actor", "APT", "China", "telecommunications", "malware", "DLL_side-loading", "BitTorrent", "C2", "espionage"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/chinese-state-hackers-target-telcos-with-new-malware-toolkit/", "https://blog.talosintelligence.com/uat-9244/"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "Phobos Ransomware",
+        "secteur": "Multiple (over 1000 public and private entities)",
+        "modop": "Ransomware-as-a-Service (RaaS), platform sales on darknet forums, targeting data encryption and cryptocurrency ransom demands.",
+        "tags": ["actor", "theat_actor", "ransomware", "Phobos", "financial_crime", "RaaS", "extortion"],
+        "sources": ["https://securityaffairs.com/188984/security/phobos-ransomware-admin-faces-up-to-20-years-after-guilty-plea.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "APT28 (Russia-linked)",
+        "secteur": "Ukrainian entities (organizations)",
+        "modop": "Phishing campaign deploying malware (BadPaw, MeowMeow), using HTA, obfuscation (.NET Reactor), and anti-analysis techniques. Steganography usage.",
+        "tags": ["actor", "theat_actor", "APT", "Russia", "Ukraine", "phishing", "BadPaw", "MeowMeow", "malware", "cyber_espionage", "steganography"],
+        "sources": ["https://securityaffairs.com/188974/apt/russian-apt-targets-ukraine-with-badpaw-and-meowmeow-malware.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "UNC6353, UNC6691 (Chinese financial threat actor), Surveillance vendors",
+        "secteur": "iPhone users, cryptocurrency firms",
+        "modop": "Utilizing Coruna iOS exploit kit (CryptoWaters), comprising 23 exploits in 5 chains to target iPhones (iOS 13-17.2.1) via watering hole attacks and fake financial scam sites. Exfiltration of financial information and crypto wallet data.",
+        "tags": ["actor", "theat_actor", "APT", "China", "surveillance_vendor", "exploit_kit", "iOS", "iPhone", "Coruna", "CryptoWaters", "watering_hole", "financial_cybercrime", "espionnage"],
+        "sources": ["https://securityaffairs.com/188928/security/google-uncovers-coruna-ios-exploit-kit-targeting-ios-13-17-2-1.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "Seedworm (MuddyWater, Temp Zagros, Static Kitten)",
+        "secteur": "US bank, airport, software company (especially defense/aerospace-related with Israeli presence), NGOs (US/Canada)",
+        "modop": "Targeted attacks, deploying backdoors (Dindoor, Fakeset, Stagecomp, Darkcomp), using signed certificates (Amy Cherne, Donald Gay). Espionage and information gathering.",
+        "tags": ["actor", "theat_actor", "APT", "Iran", "Seedworm", "MuddyWater", "espionage", "backdoor", "critical_infrastructure", "financial_sector", "aerospace"],
+        "sources": ["https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "DPRK-linked threat actors",
+        "secteur": "Cryptocurrency organizations",
+        "modop": "Coordinated campaign, exploiting known vulnerabilities (CVE-2025-55182 in React2Shell framework), mass scanning with WAF bypass techniques, stealing proprietary source code, private keys, and cloud-stored secrets.",
+        "tags": ["actor", "theat_actor", "APT", "North_Korea", "cryptocurrency", "data_theft", "cloud_security", "React2Shell", "WAF_bypass"],
+        "sources": ["https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      },
+      {
+        "nom": "UAT-8616",
+        "secteur": "High-value organizations",
+        "modop": "Active exploitation of critical vulnerabilities in Cisco Catalyst SD-WAN Manager to establish persistent access.",
+        "tags": ["actor", "theat_actor", "APT", "espionage", "Cisco", "SD-WAN", "0day_exploitation"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Energy, Maritime Transport, Global Economy",
+        "theme": "Geopolitical Tensions in the Strait of Hormuz",
+        "description": "Recent US-Israeli military operations in Iran and the Iranian retaliation have escalated tensions in the Middle East. The Strait of Hormuz, vital for global oil and gas trade, faces a potential blockade, leading to increased insurance premiums and suspension of shipping services. Global economic consequences would be significant, impacting energy prices and food supplies for Gulf countries. Iranian actors (such as Handala, Marshtreader, Druidfly, Damselfly) are also active in destructive cyberattacks and espionage, targeting Israel, the US, and their allies. The use of IP cameras for reconnaissance and battle damage assessment during military strikes is an observed tactic.",
+        "tags": ["géopolitique", "geopolitic", "Iran", "Israel", "USA", "Middle_East", "Strait_of_Hormuz", "energy", "maritime_trade", "economic_warfare", "cyber_conflict", "reconnaissance"],
+        "sources": ["https://www.iris-france.org/ormuz-petit-detroit-grandes-secousses/", "https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us", "https://www.iris-france.org/le-regime-iranien-va-t-il-survivre-les-mardis-de-liris/", "https://www.iris-france.org/guerre-en-iran-scenarios-militaires-avec-le-general-nicolas-richoux/", "https://securityonline.info/eyes-on-the-front-iranian-threat-actors-weaponize-ip-cameras-in-middle-east-conflict/"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Defense, Military Communication, Critical Infrastructure",
+        "theme": "Russian Military Dependence and Starlink Shutdown",
+        "description": "In early February 2026, Russian troops in Ukraine experienced a shutdown of the Starlink satellite communication system, leading to disorganization in command, logistics, and drone usage. This reliance on American civilian technology slowed their advance and allowed Ukraine to regain territory. Russia is attempting to develop its own satellite constellation (Rassvet) but faces significant delays. This incident highlights the vulnerability of modern armies to communication infrastructures and the technological challenges Russia faces.",
+        "tags": ["géopolitique", "geopolitic", "Russia", "Ukraine", "Starlink", "armed_conflict", "satellite_communication", "technological_warfare", "disinformation"],
+        "sources": ["https://euvsdisinfo.eu/starlink-shutdown-exposes-russias-military-dependence/", "https://securityaffairs.com/188974/apt/russian-apt-targets-ukraine-with-badpaw-and-meowmeow-malware.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Mining Sector, Energy, Geopolitics",
+        "theme": "Control of Rare Earths in Myanmar by Non-State Armed Groups",
+        "description": "Since the 2021 military coup in Myanmar, the Kachin Independence Army (KIA) has consolidated its control over major rare earth extraction sites (dysprosium, terbium) in Myanmar. These critical minerals, essential for electric motors and wind turbines, generate over $200 million in annual revenue for the KIA. This control by a proto-state entity in open conflict with the central government raises significant strategic questions for the security of critical mineral supply and impacts the global energy transition.",
+        "tags": ["géopolitique", "geopolitic", "Myanmar", "KIA", "rare_earths", "critical_raw_materials", "energy_transition", "armed_conflict", "supply_chain"],
+        "sources": ["https://www.iris-france.org/myanmar-quand-les-groupes-armes-non-etatiques-deviennent-des-acteurs-strategiques-de-la-transition-energetique/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Startup Application",
+        "victime": "Kippu (startup app)",
+        "description": "A programming logic vulnerability allowed unauthorized users to perform a full database dump via a simple HTTP GET request, potentially exposing all user data. Incident highlights insecure 'vibe coded' development practices.",
+        "tags": ["violation", "breach", "application", "startup", "database", "data_exposure", "HTTP_GET", "logic_vulnerability", "misconfiguration"],
+        "sources": ["https://t.me/vxunderground/8437", "https://t.me/vxunderground/8436"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "PIH Health",
+        "description": "PIH Health notified patients of a hacking incident in 2024, resulting in the exposure of administrative information for 15.8 million patients and sensitive doctors' notes for approximately 165,000 individuals. This incident underscores the persistent threats to the healthcare sector.",
+        "tags": ["violation", "breach", "healthcare", "PIH_Health", "medical_data", "personal_health_information", "cyberattack", "hacking", "confidentiality"],
+        "sources": ["https://mastodon.clinicians-exchange.org/@HIPAABot/116177919037575936"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Finance, Cryptocurrency",
+        "victime": "U.S. Marshals Service (seized crypto assets)",
+        "description": "A US government contractor was arrested for stealing over $46 million in cryptocurrency from the U.S. Marshals Service. The suspect exposed his activities during an online dispute, revealing the traceability of funds linked to the 2016 Bitfinex hack.",
+        "tags": ["violation", "breach", "finance", "cryptocurrency", "funds_theft", "insider_threat", "Bitfinex", "FBI", "law_enforcement"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/fbi-arrests-suspect-linked-to-46m-crypto-theft-from-us-marshals/"],
+        "date": "2026-03-06"
+      },
+      {
+        "secteur": "Cryptocurrency, Cloud",
+        "victime": "Cryptocurrency firms",
+        "description": "North Korea-linked threat actors launched a coordinated campaign against cryptocurrency firms, stealing proprietary source code, private keys, and cloud-stored secrets. They exploited a vulnerability (CVE-2025-55182) in the React2Shell framework and used mass scanning with WAF bypass techniques to identify exposed staking platforms.",
+        "tags": ["violation", "breach", "cryptocurrency", "cloud", "data_theft", "private_keys", "source_code", "DPRK", "React2Shell", "Kubernetes_Secrets"],
+        "sources": ["https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-21536",
+        "cvss": 9.8,
+        "product": "Microsoft Devices Pricing Program",
+        "description": "Remote Code Execution (RCE) vulnerability.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "Microsoft", "remote_code_execution"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-21536"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29606",
+        "cvss": 9.8,
+        "product": "OpenClaw",
+        "description": "Webhook signature-verification bypass via ngrok Loopback compatibility, allowing unauthenticated requests and potential request flooding attacks.",
+        "tags": ["vulnérabilité", "vulnerability", "authentication", "bypass", "webhook", "OpenClaw", "ngrok"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-29606"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29058",
+        "cvss": 9.8,
+        "product": "AVideo-Encoder (AVideo Platform)",
+        "description": "Critical zero-click command injection vulnerability allowing arbitrary operating system command execution on the server. Lacks proper shell escaping in URL validation.",
+        "tags": ["vulnérabilité", "vulnerability", "command_injection", "RCE", "AVideo", "zero_click", "shell_escaping"],
+        "sources": ["https://securityonline.info/stream-hijacked-critical-zero-click-command-injection-flaw-exposed-in-avideo-encoder/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-22552",
+        "cvss": 9.4,
+        "product": "ePower epower.ie",
+        "description": "Missing authentication on WebSocket endpoints, enabling unauthorized charging station impersonation and backend data manipulation, leading to privilege escalation and control over charging infrastructure.",
+        "tags": ["vulnérabilité", "vulnerability", "authentication", "privilege_escalation", "ePower", "WebSocket", "charging_infrastructure"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-22552"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20079",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center",
+        "description": "Vulnerability allowing an unauthenticated, remote attacker to bypass authentication and execute arbitrary Java code with root privileges.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentication_bypass", "Cisco", "firewall", "root_privileges"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20131",
+        "cvss": 10.0,
+        "product": "Cisco Secure Firewall Management Center",
+        "description": "Vulnerability allowing an unauthenticated, remote attacker to bypass authentication and execute arbitrary Java code with root privileges.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentication_bypass", "Cisco", "firewall", "root_privileges"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20127",
+        "cvss": 10.0,
+        "product": "Cisco Catalyst SD-WAN Controller and Manager",
+        "description": "Critical security flaw actively exploited by UAT-8616 to establish persistent footholds. Allows authentication bypass and remote arbitrary code execution.",
+        "tags": ["vulnérabilité", "vulnerability", "RCE", "authentication_bypass", "Cisco", "SD-WAN", "0day_exploitation", "UAT-8616"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20128",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Actively exploited vulnerability in Catalyst SD-WAN Manager.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "SD-WAN", "0day_exploitation"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-20122",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Actively exploited vulnerability in Catalyst SD-WAN Manager.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "SD-WAN", "0day_exploitation"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-29000",
+        "cvss": 9.8,
+        "product": "pac4j-jwt",
+        "description": "Signature validation flaw in encrypted JWT (JWE) handling, allowing attackers to forge valid authentication tokens using the server’s RSA public key, bypassing authentication and gaining administrative roles.",
+        "tags": ["vulnérabilité", "vulnerability", "authentication", "bypass", "JWT", "JWE", "pac4j", "Java", "cryptography"],
+        "sources": ["https://fieldeffect.com/blog/maximum-severity-flaw-java-jwt-library"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-1492",
+        "cvss": 9.8,
+        "product": "WordPress User Registration & Membership plugin",
+        "description": "Allows attackers to create administrator accounts without authentication due to user-supplied role acceptance during registration.",
+        "tags": ["vulnérabilité", "vulnerability", "authentication", "privilege_escalation", "WordPress", "plugin", "admin_account_creation"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/wordpress-membership-plugin-bug-exploited-to-create-admin-accounts/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3612",
+        "cvss": 8.3,
+        "product": "Wavlink WL-NU516U1",
+        "description": "Command injection via manipulation of the 'firmware_url' argument in the 'sub_405AF4' function of '/cgi-bin/adm.cgi' (OTA Online Upgrade component), remotely exploitable. Exploit has been publicly disclosed.",
+        "tags": ["vulnérabilité", "vulnerability", "command_injection", "RCE", "Wavlink", "firmware", "OTA_update"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-3612"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-28710",
+        "cvss": 8.1,
+        "product": "Acronis Cyber Protect",
+        "description": "Sensitive information disclosure and manipulation due to improper authentication.",
+        "tags": ["vulnérabilité", "vulnerability", "authentication_bypass", "sensitive_information_disclosure", "Acronis"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-28710"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-26125",
+        "cvss": 8.6,
+        "product": "Payment Orchestrator Service",
+        "description": "Elevation of Privilege vulnerability.",
+        "tags": ["vulnérabilité", "vulnerability", "privilege_escalation", "payment_orchestrator"],
+        "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26125"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3336",
+        "cvss": 8.0,
+        "product": "AWS-LC",
+        "description": "Validation bypass vulnerability in the PKCS7_verify() function, allowing subversion of encrypted communications or verification of forged digital signatures.",
+        "tags": ["vulnérabilité", "vulnerability", "AWS", "AWS-LC", "cryptography", "validation_bypass", "PKCS7_verify"],
+        "sources": ["https://securityonline.info/cracking-the-clouds-crypto-unauthenticated-bypass-flaws-found-in-amazons-aws-lc-library/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-3338",
+        "cvss": 8.0,
+        "product": "AWS-LC",
+        "description": "Validation bypass vulnerability in the PKCS7_verify() function, allowing subversion of encrypted communications or verification of forged digital signatures.",
+        "tags": ["vulnérabilité", "vulnerability", "AWS", "AWS-LC", "cryptography", "validation_bypass", "PKCS7_verify"],
+        "sources": ["https://securityonline.info/cracking-the-clouds-crypto-unauthenticated-bypass-flaws-found-in-amazons-aws-lc-library/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CVE-2026-25611",
+        "cvss": 7.5,
+        "product": "MongoDB",
+        "description": "High-severity vulnerability allowing unauthenticated attackers to crash exposed MongoDB servers using a connection-exhaustion attack. While CVSS is 7.5, its ease of exploitation and critical impact (DoS) makes it noteworthy.",
+        "tags": ["vulnérabilité", "vulnerability", "DoS", "MongoDB", "resource_exhaustion", "crash_server"],
+        "sources": ["https://cybersecuritynews.com/mongodb-vulnerability-crash-server/", "https://cybersecuritynews.com/suspected-dprk-threat-actors-compromise-crypto-firms/"],
+        "date": "2026-03-06"
+      },
+      {
+        "cve_id": "CERTFR-2026-AVI-0242",
+        "cvss": 9.8,
+        "product": "Cisco Products",
+        "description": "Multiple vulnerabilities, some allowing remote arbitrary code execution (RCE), remote denial of service (DoS), and data confidentiality breach.",
+        "tags": ["vulnérabilité", "vulnerability", "Cisco", "RCE", "DoS", "confidentiality"],
+        "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0242/"],
+        "date": "2026-03-06"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Chinese State Hackers Target Telcos with New Malware Toolkits",
+        "description": "The China-linked Advanced Persistent Threat (APT) actor UAT-9244 has been targeting telecommunication service providers in South America since 2024, compromising Windows, Linux, and network-edge devices. The campaign utilizes three previously undocumented malware families: TernDoor (a Windows backdoor via DLL side-loading), PeerTime (a Linux backdoor using BitTorrent for C2), and BruteEntry (a brute-force scanner for proxy infrastructure).",
+        "threat_actor": "UAT-9244 (China-linked APT, associated with FamousSparrow and Tropic Trooper)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0002: Execution",
+          "TA0003: Persistence",
+          "TA0004: Privilege Escalation",
+          "TA0008: Lateral Movement",
+          "TA0011: Command and Control",
+          "T1574.002: Hijack Execution Flow: DLL Side-Loading",
+          "T1059.001: Command and Scripting Interpreter: PowerShell",
+          "T1027: Obfuscated Files or Information",
+          "T1071.001: Application Layer Protocol: Web Protocols",
+          "T1071.004: Application Layer Protocol: DNS",
+          "T1566.001: Phishing: Spearphishing Attachment",
+          "T1090: Proxy (BruteEntry)",
+          "T1078: Valid Accounts",
+          "T1110: Brute Force"
+        ],
+        "analyse": "This campaign specifically targets telecommunications, a strategic sector for espionage and infrastructure control. The use of custom malware and evasive techniques (BitTorrent for C2, .NET Reactor, anti-analysis) demonstrates high sophistication and a long-term persistence objective. The geographical target (South America) indicates an expansion of Chinese APT groups' operational areas.",
+        "recommandations": [
+          "Implement advanced behavioral monitoring to detect DLL side-loading.",
+          "Strengthen authentication and access controls on edge devices and critical systems.",
+          "Utilize EDR/XDR solutions for multi-platform malware detection (Windows, Linux).",
+          "Monitor network traffic for unusual C2 communications (e.g., unauthorized BitTorrent traffic).",
+          "Conduct regular security audits of internet-exposed configurations and applications."
+        ],
+        "tags": ["APT", "China", "telecommunications", "malware", "espionage", "TernDoor", "PeerTime", "BruteEntry", "DLL_side-loading", "BitTorrent", "C2"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/chinese-state-hackers-target-telcos-with-new-malware-toolkit/", "https://blog.talosintelligence.com/uat-9244/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Cisco Confirms Active Exploitation of Critical Vulnerabilities in Catalyst SD-WAN Manager",
+        "description": "Cisco has confirmed the active exploitation of several critical vulnerabilities in its Catalyst SD-WAN Manager (CVE-2026-20128, CVE-2026-20122, and CVE-2026-20127) and Secure Firewall Management Center (CVE-2026-20079, CVE-2026-20131) products. These flaws, some with a CVSS score of 10.0, allow remote arbitrary code execution with root privileges and authentication bypass by unauthenticated attackers. The UAT-8616 actor is linked to the exploitation of CVE-2026-20127 to establish persistent footholds in high-value organizations.",
+        "threat_actor": "UAT-8616",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2026-20128", "CVE-2026-20122", "CVE-2026-20127", "CVE-2026-20079", "CVE-2026-20131"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0002: Execution",
+          "TA0003: Persistence",
+          "TA0004: Privilege Escalation",
+          "TA0005: Defense Evasion",
+          "T1190: Exploit Public-Facing Application",
+          "T1078: Valid Accounts",
+          "T1068: Exploitation for Privilege Escalation",
+          "T1059.004: Command and Scripting Interpreter: PowerShell"
+        ],
+        "analyse": "The active exploitation of critical vulnerabilities in core network and security equipment like Cisco Catalyst SD-WAN and Secure Firewall Management Center poses a major systemic risk for many organizations. These appliances are often prime entry points for APTs, offering initial access, persistence, and code execution capabilities with the highest privileges. The nature of the vulnerabilities (RCE, authentication bypass) and the high CVSS underscore the urgency of applying patches.",
+        "recommandations": [
+          "Immediately apply software updates recommended by Cisco.",
+          "Limit access to administrative interfaces of SD-WAN and Firewall devices to secure networks only.",
+          "Disable unnecessary HTTP and FTP services on these devices.",
+          "Change default administrator passwords and strengthen authentication policies.",
+          "Actively monitor traffic logs for any unexpected activity to and from these systems."
+        ],
+        "tags": ["Cisco", "SD-WAN", "Firewall", "vulnerability", "RCE", "authentication_bypass", "0day_exploitation", "UAT-8616", "critical_infrastructure"],
+        "sources": ["https://thehackernews.com/2026/03/cisco-confirms-active-exploitation-of.html", "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0242/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Technical Analysis: Patch Diff to SYSTEM Privilege Escalation and Linux Rootkit Taxonomy",
+        "description": "These articles describe two in-depth technical analyses. The first details a Use-After-Free (UAF) vulnerability in Windows DWM (Desktop Window Manager), exploited for privilege escalation from user to SYSTEM, utilizing LLMs and patch diffing for exploit development. The second explores Linux rootkit taxonomy, tracing their evolution from userland injection techniques to advanced kernel-space methods (LKM, eBPF, io_uring) and their hooking strategies (IDT, syscall table, inline hooking, VFS, ftrace, kprobes).",
+        "threat_actor": "Not directly mentioned as targets, but techniques are used by sophisticated actors.",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2022-0847"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0004: Privilege Escalation",
+          "TA0005: Defense Evasion",
+          "TA0003: Persistence",
+          "T1068: Exploitation for Privilege Escalation",
+          "T1543.003: Create or Modify System Process: Windows Service",
+          "T1574.004: Hijack Execution Flow: DLL Search Order Hijacking",
+          "T1014: Rootkit",
+          "T1059: Command and Scripting Interpreter",
+          "T1071: Application Layer Protocol"
+        ],
+        "analyse": "The first article reveals the increasing ease, thanks to LLMs, of transforming complex vulnerabilities into functional exploits, thus reducing the development time for '1-day exploits'. This intensifies the race between attackers and defenders. The second article provides crucial insight into Linux rootkit evasion and persistence mechanisms, highlighting the evolution of techniques to bypass modern defenses. These analyses are essential for defenders to better anticipate and detect the most sophisticated threats.",
+        "recommandations": [
+          "Rapidly apply patches for kernel vulnerabilities and privilege escalation flaws.",
+          "Strengthen Kernel Integrity Checks and EDR solutions to detect rootkits based on LKM, eBPF, or io_uring.",
+          "Utilize memory protection mechanisms (W^X, CR0 WP) and module signing to limit kernel manipulations.",
+          "Monitor for unusual process activities and suspicious system calls.",
+          "Invest in training security teams on advanced exploitation techniques and reverse engineering."
+        ],
+        "tags": ["Windows_DWM", "Use-After-Free", "privilege_escalation", "SYSTEM", "patch_diffing", "LLM", "exploit_development", "Linux_rootkit", "kernel_security", "eBPF", "io_uring", "syscall_hooking", "DFIR"],
+        "sources": ["https://www.elastic.co/security-labs/patch-diff-to-system", "https://www.elastic.co/security-labs/linux-rootkits-1-hooked-on-linux"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "FBI and Europol Dismantle LeakBase Cybercrime Forum",
+        "description": "The FBI and Europol, in coordination with 14 countries, dismantled LeakBase (leakbase[.]la), a major cybercrime forum active since 2021, specializing in the trade of databases and 'stealer logs' containing stolen credentials. Operation 'Leak' led to arrests, house searches, and approximately 100 interventions targeting 37 active users. LeakBase's database was seized, allowing the deanonymization of numerous users and sending a clear message about the lack of online anonymity for cybercriminals.",
+        "threat_actor": "Various cybercriminals, LeakBase administrators and users",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": ["leakbase.la"],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0007: Discovery",
+          "TA0008: Lateral Movement",
+          "TA0009: Collection",
+          "T1078: Valid Accounts",
+          "T1560: Archive Collected Data",
+          "T1587: Develop Capabilities (Develop Tooling)",
+          "T1588: Obtain Capabilities (Acquire Access, Malware)",
+          "T1110: Brute Force"
+        ],
+        "analyse": "This operation demonstrates the global reach of law enforcement's collaborative efforts to disrupt the cybercrime ecosystem. The dismantling of a central stolen data trading forum reduces cybercriminals' access to credentials and hacking tools but also highlights the ongoing importance of strong passwords and MFA for individuals and organizations. The action underscores that the perceived anonymity on cybercrime platforms is fragile.",
+        "recommandations": [
+          "Encourage the use of unique, complex passwords and multi-factor authentication (MFA).",
+          "Monitor dark forums and marketplaces for leaks of corporate data or credentials.",
+          "Implement robust Identity and Access Management (IAM) tools.",
+          "Educate employees on the risks of phishing and credential theft.",
+          "Collaborate with authorities to report and disrupt cybercrime infrastructures."
+        ],
+        "tags": ["cybercrime", "LeakBase", "dismantlement", "FBI", "Europol", "data_theft", "stealer_logs", "darknet", "law_enforcement"],
+        "sources": ["https://securityaffairs.com/188958/cyber-crime/operation-leak-fbi-and-europol-dismantle-leakbase-cybercrime-forum.html"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "AI Fuels Rapid FortiGate Hacking and Bing AI Promotes Fake OpenClaw Repos Spreading Malware",
+        "description": "A campaign compromised over 600 FortiGate devices in 55 countries, not via software flaws, but through weak passwords on exposed management consoles. The attacker leveraged generative AI services to automate and accelerate reconnaissance and exploitation, collecting configurations, credentials, and network maps, with the goal of preparing for ransomware deployment. Concurrently, Bing AI promoted fake GitHub repositories for OpenClaw (an open-source AI agent) that distributed information stealers and proxy malware, exploiting trust in AI tools and open-source repositories.",
+        "threat_actor": "Opportunistic cybercriminal (FortiGate), Unknown threat actors (OpenClaw)",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0003: Persistence",
+          "TA0004: Privilege Escalation",
+          "TA0005: Defense Evasion",
+          "TA0006: Credential Access",
+          "TA0007: Discovery",
+          "TA0008: Lateral Movement",
+          "TA0009: Collection",
+          "TA0011: Command and Control",
+          "TA0042: Resource Development",
+          "T1190: Exploit Public-Facing Application",
+          "T1078: Valid Accounts",
+          "T1110: Brute Force",
+          "T1588: Obtain Capabilities (Develop Software)",
+          "T1566.002: Phishing: Spearphishing Link",
+          "T1059: Command and Scripting Interpreter",
+          "T1027: Obfuscated Files or Information",
+          "T1574.002: Hijack Execution Flow: DLL Side-Loading"
+        ],
+        "analyse": "These incidents illustrate the rising prominence of AI as an acceleration tool for attackers, lowering the technical barrier and increasing the scale of campaigns, even for basic hygiene vulnerabilities. Trust in search platforms and open-source repositories is being exploited, creating new supply chain and social engineering vectors. The potential impact is significant for SMBs and large enterprises lacking impeccable security hygiene and adopting AI without caution.",
+        "recommandations": [
+          "Enforce a strong password policy and multi-factor authentication (MFA) on all exposed administrative interfaces.",
+          "Conduct regular configuration audits to prevent unnecessary exposure of services to the internet.",
+          "Educate users about the risks of third-party code repositories and unverified generative AI recommendations.",
+          "Implement Endpoint Detection and Response (EDR) solutions to identify suspicious AI agent activities.",
+          "Monitor Active Directory and backup server access attempts with specific alerts."
+        ],
+        "tags": ["AI", "FortiGate", "OpenClaw", "phishing", "malware", "infostealer", "ransomware_prep", "weak_passwords", "supply_chain_attack", "social_engineering"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/bing-ai-promoted-fake-openclaw-github-repo-pushing-info-stealing-malware/", "https://redcanary.com/blog/threat-detection/openclaw-ai/", "https://www.datasecuritybreach.fr/lia-au-service-dun-piratage-eclair-de-fortigate/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Iranian Threat Actors Weaponize IP Cameras in Middle East Conflict",
+        "description": "A report from Check Point Research reveals an intensified campaign by Iranian-nexus threat actors to compromise IP cameras across the Middle East. These cameras are allegedly used as real-time reconnaissance tools for missile operations and battle damage assessment (BDA), potentially even before missile launches. The activity aligns with major regional events and highlights the integration of cyber operations into Iranian military doctrine.",
+        "threat_actor": "Iranian-nexus threat actors",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": ["CVE-2026-2256", "CVE-2025-34067", "CVE-2025-33053", "CVE-2021-36260", "CVE-2021-33044", "CVE-2018-0171", "CVE-2017-7921"],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0007: Discovery",
+          "TA0009: Collection",
+          "TA0011: Command and Control",
+          "T1190: Exploit Public-Facing Application",
+          "T1133: External Remote Services",
+          "T1083: File and Directory Discovery",
+          "T1046: Network Service Discovery"
+        ],
+        "analyse": "The use of IP cameras for military reconnaissance is an innovative tactic that blurs the lines between cyber warfare and kinetic conflict. This provides Iranian actors with real-time intelligence capabilities crucial for their operations, while being difficult to detect and counter. The impact is direct on regional security and the ability of adversaries to conduct military actions without being monitored. This incident highlights an evolution in hybrid warfare strategies.",
+        "recommandations": [
+          "Secure and segment networks to which IP cameras are connected, especially in geopolitical risk areas.",
+          "Apply security patches for known vulnerabilities in IP cameras and network equipment.",
+          "Implement strong password policies and MFA for all connected devices.",
+          "Monitor network traffic and IP camera logs for any abnormal activity or unauthorized access.",
+          "Conduct regular security audits of OT/IoT infrastructures to identify weak points."
+        ],
+        "tags": ["geopolitics", "Iran", "Middle_East", "IP_cameras", "reconnaissance", "hybrid_warfare", "cyber_warfare", "APT", "Check_Point"],
+        "sources": ["https://securityonline.info/eyes-on-the-front-iranian-threat-actors-weaponize-ip-cameras-in-middle-east-conflict/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Enterprise Browser Security Blind Spots and ANY.RUN Threat Coverage Digest",
+        "description": "The '2026 State of Browser Security Report' highlights that the browser has become the operating system for modern work, yet is often under-protected, creating security blind spots. 41% of employees use AI web tools, leading to new risks from phishing, malicious extensions, and social engineering. Concurrently, ANY.RUN made major improvements in threat intelligence and sandbox coverage in February, including new TI reports, expanded behavioral visibility for dozens of malware families, and thousands of new network detection rules for phishing and data-stealing campaigns.",
+        "threat_actor": "Not applicable, generic targeting by browser-based threats",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0001: Initial Access",
+          "TA0005: Defense Evasion",
+          "TA0009: Collection",
+          "TA0011: Command and Control",
+          "T1566: Phishing",
+          "T1189: Drive-by Compromise",
+          "T1133: External Remote Services",
+          "T1204.001: User Execution: Malicious Link",
+          "T1059.007: Command and Scripting Interpreter: JavaScript"
+        ],
+        "analyse": "The evolution of the browser into a critical but under-secured control point creates a major challenge for enterprises, exacerbated by the rapid adoption of AI-powered web tools and fragmented usage. The need for continuous monitoring and behavioral detection solutions is paramount. Advances like ANY.RUN's in malware detection and phishing campaigns are essential to bridge these visibility gaps and counter emerging threats that exploit user behaviors and platform weaknesses. AI presents a double-edged sword, being both a source of new vulnerabilities and an improved detection tool.",
+        "recommandations": [
+          "Adopt a browser-centric security strategy, extending beyond traditional network controls and endpoint agents.",
+          "Implement strict usage policies for AI-powered web tools and monitor their adoption.",
+          "Enhance phishing detection with advanced solutions and user training.",
+          "Proactively manage high-risk browser extensions and monitor their permissions.",
+          "Integrate threat intelligence and sandbox capabilities to improve malware detection."
+        ],
+        "tags": ["browser", "browser_security", "AI", "phishing", "malware", "malicious_extensions", "social_engineering", "security_visibility", "threat_intelligence", "sandbox"],
+        "sources": ["/cybersecurity-blog/threat-coverage-digest-february-2026/", "https://www.bleepingcomputer.com/news/security/2026-browser-data-reveals-major-enterprise-security-blind-spots/"],
+        "date": "2026-03-06"
+      },
+      {
+        "title": "Wikipedia Hit by Self-Propagating JavaScript Worm that Vandalized Pages",
+        "description": "The Wikimedia Foundation experienced a security incident where a self-propagating JavaScript worm vandalized pages and modified user scripts across multiple wikis. The malicious script, initially hosted on Russian Wikipedia, spread by injecting code into logged-in users' common.js files and the global MediaWiki:Common.js, executing a malicious loader. The incident resulted in approximately 4,000 pages being modified and about 85 user common.js files being reset.",
+        "threat_actor": "Not applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": [
+          "TA0003: Persistence",
+          "TA0002: Execution",
+          "TA0005: Defense Evasion",
+          "T1059.007: Command and Scripting Interpreter: JavaScript",
+          "T1105: Ingress Tool Transfer",
+          "T1546.007: Event Triggered Execution: Accessibility Features"
+        ],
+        "analyse": "This incident highlights the vulnerability of collaborative web platforms to malicious scripts, even through logic flaws or human error (accidental script loading). The worm's self-propagating capability allowed rapid dissemination and extensive impact on content and user experience, affecting the reliability of information on a global platform. The use of global JavaScript scripts as a propagation vector poses a high risk.",
+        "recommandations": [
+          "Strengthen security controls and code reviews for global scripts and user script modifications.",
+          "Implement a strict security policy for accounts with elevated privileges (e.g., employee accounts testing features).",
+          "Use sandboxes for testing new features or third-party scripts.",
+          "Monitor for unexpected modifications to configuration files or system scripts (e.g., common.js, MediaWiki:Common.js).",
+          "Perform regular backups and implement rapid restoration procedures in case of large-scale vandalism."
+        ],
+        "tags": ["Wikipedia", "JavaScript_worm", "self-propagation", "vandalism", "malicious_script", "web_security"],
+        "sources": ["https://www.bleepingcomputer.com/news/security/wikipedia-hit-by-self-propagating-javascript-worm-that-vandalized-pages/"],
+        "date": "2026-03-06"
+      }
+    ]
+  }
+}
