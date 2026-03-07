@@ -1,0 +1,297 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cybersecurity landscape as of March 7, 2026, is dominated by three major trends: the mass operationalization of Artificial Intelligence by both attackers and defenders, a significant increase in zero-day exploitation targeting enterprise edge infrastructure, and heightened state-sponsored activity linked to Middle Eastern geopolitical tensions. Google's GTIG report confirms a record share of zero-days (48%) targeting enterprise technologies. AI is now a central 'tradecraft' tool, with groups like Jasper Sleet (North Korea) using LLMs for fraudulent personas and malware development, while defenders like Mozilla and Elastic use AI to accelerate vulnerability discovery and exploit analysis. The breach of FBI surveillance management systems and the massive healthcare data exposure at Cognizant TriZetto highlight the critical vulnerability of sensitive governmental and medical data repositories.",
+      "fr": "Le paysage de la cybersécurité au 7 mars 2026 est dominé par trois tendances majeures : l'opérationnalisation massive de l'intelligence artificielle par les attaquants et les défenseurs, une augmentation significative de l'exploitation de vulnérabilités zero-day ciblant les infrastructures critiques d'entreprise, et une activité étatique accrue liée aux tensions géopolitiques au Moyen-Orient. Le rapport GTIG de Google confirme une part record de zero-days (48 %) ciblant les technologies d'entreprise. L'IA est désormais un outil central de 'tradecraft', avec des groupes comme Jasper Sleet (Corée du Nord) utilisant des LLM pour créer des identités frauduleuses et développer des malwares, tandis que des défenseurs comme Mozilla et Elastic utilisent l'IA pour accélérer la découverte de vulnérabilités. La compromission des systèmes de gestion de la surveillance du FBI et l'exposition massive de données de santé chez Cognizant TriZetto soulignent la vulnérabilité critique des dépôts de données sensibles gouvernementaux et médicaux."
+    },
+    "date": "2026-03-07"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "MuddyWater",
+      "campaign": "Dindoor Deployment",
+      "campaign_description": {
+        "en": "Iranian APT MuddyWater is deploying a new backdoor called 'Dindoor' and a Python-based malware 'Fakeset' targeting U.S. banks, airports, and nonprofits.",
+        "fr": "L'APT iranien MuddyWater déploie une nouvelle porte dérobée nommée 'Dindoor' et un malware Python 'Fakeset' ciblant les banques, aéroports et organisations à but non lucratif aux États-Unis."
+      },
+      "sector": {
+        "en": "Finance, Aviation, Non-profit, Defense",
+        "fr": "Finance, Aviation, ONG, Défense"
+      },
+      "modop": {
+        "en": "Use of Deno runtime to execute JS/TS code, signed certificates, and data exfiltration via Rclone to Wasabi cloud storage.",
+        "fr": "Utilisation de l'environnement Deno pour exécuter du code JS/TS, certificats signés, et exfiltration de données via Rclone vers le stockage cloud Wasabi."
+      },
+      "tags": [
+        "Iran",
+        "Dindoor",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189060/apt/iran-linked-muddywater-deploys-dindoor-malware-against-u-s-organizations.html"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "threat_actor": "Dust Specter",
+      "campaign": "Iraqi Ministry Impersonation",
+      "campaign_description": {
+        "en": "Suspected Iran-nexus group targeting Iraqi government officials with phishing emails delivering custom .NET backdoors.",
+        "fr": "Groupe suspecté d'être lié à l'Iran ciblant les responsables gouvernementaux irakiens avec des emails de phishing propageant des backdoors .NET personnalisées."
+      },
+      "sector": {
+        "en": "Government",
+        "fr": "Gouvernement"
+      },
+      "modop": {
+        "en": "Phishing with password-protected archives, DLL side-loading (VLC, WingetUI), and AI-assisted malware development (SPLITDROP, TWINTALK).",
+        "fr": "Phishing avec archives protégées par mot de passe, DLL side-loading (VLC, WingetUI), et développement de malwares assisté par IA (SPLITDROP, TWINTALK)."
+      },
+      "tags": [
+        "Iran",
+        "Iraq",
+        "AI-Generated Malware"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189033/apt/iran-nexus-apt-dust-specter-targets-iraq-officials-with-new-malware.html"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "threat_actor": "Kimsuky",
+      "campaign": "Jasper Sleet / Coral Sleet AI Ops",
+      "campaign_description": {
+        "en": "North Korean remote IT workers leveraging generative AI to create fraudulent digital personas and accelerate malware engineering.",
+        "fr": "Travailleurs informatiques distants nord-coréens utilisant l'IA générative pour créer des identités numériques frauduleuses et accélérer l'ingénierie de malwares."
+      },
+      "sector": {
+        "en": "Technology, Multiple",
+        "fr": "Technologie, Multiple"
+      },
+      "modop": {
+        "en": "Use of LLMs for culturally appropriate persona building, GAN-based domain generation, and 'agentic' AI for end-to-end lure development.",
+        "fr": "Utilisation de LLM pour la création de personas culturellement adaptés, génération de domaines basée sur les GAN, et IA 'agentique' pour le développement de leurres de bout en bout."
+      },
+      "tags": [
+        "North Korea",
+        "AI",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "International Relations",
+        "fr": "Relations Internationales"
+      },
+      "theme": {
+        "en": "Middle East Conflict & Disinformation",
+        "fr": "Conflit au Moyen-Orient et Désinformation"
+      },
+      "description": {
+        "en": "The war involving the US, Israel, and Iran (started Feb 2026) is accompanied by massive Russian disinformation campaigns. Russia is attempting to position itself as a peace guarantor while spreading false claims about Ukrainian/Western nuclear plots and sabotage.",
+        "fr": "La guerre impliquant les États-Unis, Israël et l'Iran (débutée en février 2026) s'accompagne de campagnes massives de désinformation russe. La Russie tente de se positionner comme garant de la paix tout en diffusant de fausses allégations sur des complots nucléaires et des sabotages ukrainiens/occidentaux."
+      },
+      "tags": [
+        "Russia",
+        "Iran",
+        "Disinformation"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/how-russia-lies-about-the-war-in-the-middle-east/",
+        "https://www.iris-france.org/frappes-sur-liran-un-premier-bilan-geopolitique/"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "FBI",
+      "threat_actor": "Unknown (Possibly Salt Typhoon related)",
+      "sector": {
+        "en": "Law Enforcement",
+        "fr": "Forces de l'ordre"
+      },
+      "description": {
+        "en": "Breach of systems used to manage surveillance and wiretap warrants. Address by FBI after identifying 'suspicious activity'.",
+        "fr": "Compromission de systèmes utilisés pour gérer les mandats de surveillance et d'écoutes téléphoniques. Incident traité par le FBI après identification d'une 'activité suspecte'."
+      },
+      "tags": [
+        "FBI",
+        "Surveillance",
+        "Wiretap"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fbi-investigates-breach-of-surveillance-and-wiretap-systems/"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "victim": "Cognizant TriZetto",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Healthcare IT",
+        "fr": "Santé / IT"
+      },
+      "description": {
+        "en": "Data breach exposing sensitive health and insurance data of 3.4 million patients. Unauthorized access lasted from Nov 2024 to Oct 2025.",
+        "fr": "Fuite de données exposant des informations sensibles de santé et d'assurance pour 3,4 millions de patients. L'accès non autorisé a duré de novembre 2024 à octobre 2025."
+      },
+      "tags": [
+        "Healthcare",
+        "Data Leak",
+        "PHI"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cognizant-trizetto-breach-exposes-health-data-of-34-million-patients/"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-20127",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "Unknown",
+      "cpe": "cpe:/a:cisco:catalyst_sd-wan_manager",
+      "product": "Catalyst SD-WAN Controller and Manager",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Maximum-severity authentication bypass in peering mechanism allowing full administrative access. Exploited since 2023 by UAT-8616.",
+        "fr": "Contournement d'authentification de sévérité critique dans le mécanisme de peering permettant un accès administratif complet. Exploité depuis 2023 par UAT-8616."
+      },
+      "tags": [
+        "Critical",
+        "Active Exploitation",
+        "SD-WAN"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189056/security/cisco-flags-ongoing-exploitation-of-two-recently-patched-catalyst-sd-wan-flaws.html"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "cve_id": "CVE-2026-25070",
+      "euvd_id": "Unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "Unknown",
+      "cpe": "cpe:/h:xikestor:sks8310-8x",
+      "product": "SKS8310-8X Network Switch",
+      "vendor": "XikeStor",
+      "description": {
+        "en": "OS command injection in the /goform/PingTestSet endpoint via destIp parameter allowing remote code execution as root.",
+        "fr": "Injection de commande OS dans le point de terminaison /goform/PingTestSet via le paramètre destIp permettant une exécution de code à distance en tant que root."
+      },
+      "tags": [
+        "Critical",
+        "Command Injection",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-25070"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "cve_id": "CVE-2017-7921",
+      "euvd_id": "Unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:/h:hikvision:ip_camera",
+      "product": "IP Cameras",
+      "vendor": "Hikvision",
+      "description": {
+        "en": "Legacy improper authentication vulnerability added to CISA KEV due to ongoing exploitation in 2026.",
+        "fr": "Vulnérabilité d'authentification incorrecte héritée ajoutée au catalogue KEV de la CISA en raison d'exploitations en cours en 2026."
+      },
+      "tags": [
+        "CISA KEV",
+        "Surveillance"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/03/06/cisa-adds-five-flaws-to-its-kev-catalog/"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "InstallFix Social Engineering Technique",
+        "fr": "Technique d'ingénierie sociale InstallFix"
+      },
+      "description": {
+        "en": "A variant of ClickFix targeting developers by pushing malicious 'curl-to-bash' commands via fake CLI tool installation guides (e.g., Claude Code).",
+        "fr": "Une variante de ClickFix ciblant les développeurs en poussant des commandes 'curl-to-bash' malveillantes via de faux guides d'installation d'outils CLI (ex: Claude Code)."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [
+          "https://claude-code-cmd.squarespace.com"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "wriconsult.com",
+          "claude-code-cmd.squarespace.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "082a55731f972cd15e103104229a68175a8c59a52bae05daa8ed4302df7c2dec"
+        ],
+        "HASH_SHA1": [
+          "e97d8ecbd8d6ba468c418ca496fcd18f78131233"
+        ],
+        "HASH_MD5": [
+          "ef08074bdfb377fb12cd904184c089bc"
+        ],
+        "TOOLS": [
+          "Amatera Stealer",
+          "Lumma Stealer",
+          "GodZilla web shell",
+          "AntSword",
+          "Fast Reverse Proxy (FRP)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1059.001",
+        "T1553.002"
+      ],
+      "analyse": {
+        "en": "Attackers exploit the 'trust the domain' model and the common developer practice of copying terminal commands. Payloads like Amatera and Lumma steal browser credentials and crypto wallets.",
+        "fr": "Les attaquants exploitent le modèle de confiance par domaine et la pratique courante des développeurs consistant à copier des commandes de terminal. Les charges utiles comme Amatera et Lumma volent les identifiants de navigateur et les portefeuilles crypto."
+      },
+      "recommandations": [
+        {
+          "en": "Verify installation commands from official primary documentation sources only.",
+          "fr": "Vérifiez les commandes d'installation uniquement à partir des sources de documentation officielles."
+        },
+        {
+          "en": "Use browser protection tools to flag newly created typosquatted domains.",
+          "fr": "Utilisez des outils de protection de navigateur pour signaler les domaines de typosquattage récemment créés."
+        }
+      ],
+      "tags": [
+        "ClickFix",
+        "Stealer",
+        "Developer Targeting"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fake-claude-code-install-guides-push-infostealers-in-installfix-attacks/",
+        "https://securityaffairs.com/189046/malware/microsoft-warns-of-clickfix-campaign-exploiting-windows-terminal-for-lumma-stealer.html"
+      ],
+      "date": "2026-03-07"
+    }
+  ]
+}
