@@ -1,0 +1,871 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "La période analysée révèle une intensification et une sophistication croissante des menaces cybernétiques, marquée par l'intégration de l'intelligence artificielle à toutes les étapes des attaques. Les acteurs malveillants, notamment des groupes de ransomware comme Velvet Tempest et des acteurs étatiques, exploitent l'IA pour accélérer la reconnaissance, générer des leurres de phishing plus efficaces, développer des malwares et construire des infrastructures d'attaque. Parallèlement, l'IA devient également un outil puissant pour la défense, avec le lancement de solutions comme OpenAI Codex Security et l'utilisation de modèles comme Claude Opus 4.6 d'Anthropic pour la détection et la correction automatisées de vulnérabilités critiques. Cela met en lumière une course à l'armement IA dans le cyberespace. \n\nLes ransomwares restent une menace prépondérante, avec des techniques d'accès initial comme le 'ClickFix' et l'utilisation de backdoors complexes pour la persistance et l'exfiltration de données, souvent suivie de doubles extorsions. Le secteur de la santé est particulièrement ciblé par ces attaques, comme en témoignent les violations chez TriZetto et Clínica Dávila. Les infrastructures gouvernementales ne sont pas épargnées, avec une intrusion significative au FBI. \n\nSur le plan géopolitique, le cyberespace est un domaine stratégique. Des acteurs liés à l'Iran ciblent des caméras IP dans des régions sensibles pour l'espionnage militaire et l'évaluation des dommages, tandis que des nations comme les États-Unis développent des stratégies cyber nationales axées sur la supériorité technologique, la protection des infrastructures critiques et la collaboration public-privé. \n\nDe nombreuses vulnérabilités critiques (CVSS >= 8) ont été découvertes dans divers produits, notamment des overflows de pile, des contournements d'authentification et des exécutions de code à distance (RCE), avec des exploits souvent disponibles publiquement, soulignant la nécessité de mises à jour rapides et de contrôles d'accès renforcés. \n\nEn conclusion, l'état général des menaces est caractérisé par une escalade technologique due à l'IA, une persistance des attaques par ransomware, une activité étatique ciblée et une vigilance constante nécessaire face à des vulnérabilités à fort impact.",
+      "date": "2026-03-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Velvet Tempest",
+        "secteur": "Entreprises et réseaux d'entreprise",
+        "modop": "Campagnes de malvertising menant à la technique ClickFix/CAPTCHA pour l'accès initial. Utilisation de commandes PowerShell pour déployer DonutLoader et la backdoor CastleRAT (RAT, voleur d'informations comme LummaStealer). Activités 'hands-on keyboard' incluant la reconnaissance Active Directory, la découverte d'hôtes, le profilage d'environnement et la récolte de credentiels Chrome via PowerShell. Associé à des ransomwares dévastateurs comme Ryuk, REvil, Conti, BlackMatter, BlackCat/ALPHV, LockBit et RansomHub. Typiquement associé à des attaques à double extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "malvertising",
+          "clickfix",
+          "backdoor",
+          "infostealer",
+          "credential_harvesting",
+          "double_extortion",
+          "lotl"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Jasper Sleet (Storm-0287)",
+        "secteur": "Divers (schémas de travailleurs IT à distance)",
+        "modop": "Utilisation de l'IA générative pour créer des personas numériques frauduleux (listes de noms, formats d'e-mail culturellement appropriés) et analyser des offres d'emploi IT pour adapter des identités factices.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ai_abuse",
+          "social_engineering",
+          "phishing",
+          "fraud"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Coral Sleet (Storm-1877)",
+        "secteur": "Divers (schémas de travailleurs IT à distance)",
+        "modop": "Utilisation de l'IA générative dans leurs opérations, notamment dans le cadre de schémas de travailleurs IT à distance pour accélérer les attaques et réduire les barrières techniques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ai_abuse",
+          "social_engineering",
+          "phishing",
+          "fraud"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Acteurs liés à l'Iran",
+        "secteur": "Militaire, Gouvernement, Infrastructures critiques (Israël, États du Golfe, Liban, Chypre)",
+        "modop": "Ciblage de caméras IP (principalement Hikvision et Dahua) via l'exploitation de vulnérabilités connues (e.g., CVE-2021-33044, CVE-2021-33045, CVE-2017-7921) en utilisant des infrastructures VPN et VPS. Objectif probable : renseignement militaire et évaluation des dommages de bataille, souvent en phase avec les tensions géopolitiques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "espionage",
+          "cyber_warfare",
+          "geopolitical",
+          "ip_camera_hacking"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "LockBit 5.0",
+        "secteur": "Santé (Clínica Dávila)",
+        "modop": "Ransomware et exfiltration de données. Publication de données obtenues via une attaque Devman précédente, suggérant une revente de données entre groupes. Double extorsion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare_targeted",
+          "extortion"
+        ],
+        "sources": "https://www.security-chu.com/2026/03/lockbit-filtra-los-datos-de-la-clinica-davila.html",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Devman",
+        "secteur": "Santé (Clínica Dávila)",
+        "modop": "Ransomware. Attaque initiale contre Clínica Dávila, avec potentielle vente ou partage des données exfiltrées à d'autres groupes comme LockBit.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare_targeted"
+        ],
+        "sources": "https://www.security-chu.com/2026/03/lockbit-filtra-los-datos-de-la-clinica-davila.html",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Gouvernement, Infrastructures critiques, Secteur privé",
+        "theme": "Stratégie nationale de cybersécurité des États-Unis",
+        "description": "Le livre blanc \"President Trump’s Cyber Strategy for America\" décrit la vision américaine pour maintenir la dominance dans le cyberespace face aux menaces croissantes. La stratégie vise à moderniser les réseaux fédéraux (architectures Zero Trust, cryptographie post-quantique, migration cloud, outils de sécurité IA), protéger les infrastructures critiques (énergie, finance, télécommunications, santé, data centers) et les chaînes d'approvisionnement, assurer la supériorité technologique dans les technologies émergentes (IA, quantique, cryptographie avancée), développer une main-d'œuvre cyber qualifiée et adopter une posture proactive pour perturber les cybermenaces avec des actions coordonnées.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "national_security",
+          "cyber_strategy",
+          "government",
+          "critical_infrastructure",
+          "ai",
+          "quantum_computing"
+        ],
+        "sources": "https://securityaffairs.com/189083/security/reading-white-house-president-trumps-cyber-strategy-for-america-march-2026.html",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Militaire, Gouvernement, Infrastructures critiques",
+        "theme": "Espionnage cybernétique étatique",
+        "description": "Des acteurs liés à l'Iran ciblent activement des caméras IP (Hikvision, Dahua) en Israël et dans les États du Golfe (Émirats arabes unis, Qatar, Bahreïn, Koweït, Liban, Chypre). Ces attaques, utilisant des infrastructures VPN/VPS pour exploiter des vulnérabilités connues, visent probablement le renseignement militaire et l'évaluation des dommages de bataille, coïncidant avec des périodes de tensions géopolitiques.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "israel",
+          "gulf_states",
+          "cyber_espionage",
+          "military_intelligence",
+          "ip_cameras"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Gouvernement / Application de la loi",
+        "victime": "Federal Bureau of Investigation (FBI)",
+        "description": "Le FBI enquête sur une intrusion et une activité cybernétique suspecte dans un système interne non classifié contenant des données sensibles de surveillance et d'enquête. Ces données incluent des enregistrements de mandats tels que les registres de composition et de traçage, ainsi que des informations d'identification personnelle (PII) liées à des enquêtes. L'incident est attribué à des techniques \"sophistiquées\", y compris l'exploitation de l'infrastructure d'un FAI commercial.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "law_enforcement",
+          "espionage",
+          "sensitive_data",
+          "fbi"
+        ],
+        "sources": "https://securityaffairs.com/189087/hacking/fbi-probing-intrusion-into-system-managing-sensitive-surveillance-information.html",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Santé / Assurance",
+        "victime": "TriZetto (filiale de Cognizant)",
+        "description": "Une violation de données a exposé les informations sensibles de plus de 3,4 millions de personnes après que des pirates ont accédé à un portail de vérification d'assurance entre novembre 2024 et octobre 2025. Les informations compromises peuvent inclure les noms, dates de naissance, numéros de sécurité sociale (SSN) et détails d'assurance.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "insurance",
+          "phi",
+          "pii",
+          "cognizant",
+          "trizetto"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cognizant-trizetto-breach-exposes-health-data-of-34-million-patients/",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Santé",
+        "victime": "Clínica Dávila (Chili)",
+        "description": "Le groupe de ransomware LockBit 5.0 a publié toutes les informations de Clínica Dávila. L'institution médicale avait déjà été attaquée par le ransomware Devman en décembre de l'année précédente, suggérant que Devman a vendu une partie des données à LockBit. Cela représente une double extorsion et une potentielle complication pour la notification aux patients.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "lockbit",
+          "devman",
+          "data_exfiltration",
+          "chile"
+        ],
+        "sources": "https://www.security-chu.com/2026/03/lockbit-filtra-los-datos-de-la-clinica-davila.html",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-30861",
+        "cvss": 9.9,
+        "product": "WeKnora (versions 0.2.5 à 0.2.10)",
+        "description": "Exécution de code à distance (RCE) via injection de commande non authentifiée dans la validation de configuration MCP stdio. Les attaquants peuvent créer un compte et exploiter un contournement de la liste blanche de commandes pour exécuter des commandes arbitraires avec les privilèges de l'application.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "weknora",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30861",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30860",
+        "cvss": 9.9,
+        "product": "WeKnora (versions antérieures à 0.2.12)",
+        "description": "Exécution de code à distance (RCE) via contournement d'injection SQL dans la fonctionnalité de requête de base de données de l'application AI. Un attaquant non authentifié peut exécuter du code arbitraire sur le serveur de base de données en contournant les protections d'injection SQL.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "weknora",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30860",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2017-7921",
+        "cvss": 9.8,
+        "product": "Hikvision (plusieurs produits)",
+        "description": "Vulnérabilité d'authentification incorrecte permettant potentiellement un accès non autorisé. Identifiée dans le catalogue KEV (Known Exploited Vulnerabilities) du CISA, indiquant une exploitation active et connue.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "hikvision",
+          "ip_camera",
+          "kev_catalog",
+          "critical"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30863",
+        "cvss": 9.3,
+        "product": "Parse Server (versions antérieures à 8.6.10 et 9.5.0-alpha.11)",
+        "description": "Contournement de la validation de l'audience JWT dans les adaptateurs d'authentification Google, Apple et Facebook. Permet à un attaquant d'utiliser un JWT valide émis pour une application différente pour s'authentifier en tant qu'utilisateur sur le serveur Parse cible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "jwt",
+          "parse_server",
+          "critical",
+          "access_control"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30863",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3679",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Débordement de tampon basé sur la pile dans la fonction formQuickIndex du fichier /goform/QuickIndex. L'exploitation est possible à distance via la manipulation des arguments mit_linktype/PPPOEPassword et un exploit public est disponible.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3679",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3678",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Débordement de tampon basé sur la pile dans la fonction sub_3C434 du fichier /goform/AdvSetWan. L'attaque peut être lancée à distance en manipulant les arguments wanmode/PPPOEPassword et l'exploit a été divulgué publiquement.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3678",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3677",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Débordement de tampon basé sur la pile dans la fonction fromSetCfm du fichier /goform/setcfm. L'attaque est possible à distance via la manipulation des arguments funcname/funcpara1 et l'exploit a été rendu public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3677",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30855",
+        "cvss": 8.8,
+        "product": "WeKnora (versions antérieures à 0.3.2)",
+        "description": "Contrôle d'accès brisé (Broken Access Control) dans les points d'extrémité de gestion des locataires. Permet à tout utilisateur authentifié de lire, modifier ou supprimer n'importe quel locataire par ID, conduisant à une prise de contrôle de compte inter-locataires et à la destruction de données.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "broken_access_control",
+          "authorization_bypass",
+          "weknora",
+          "tenant_management",
+          "high_severity",
+          "account_takeover"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30855",
+        "date": "2026-03-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Microsoft : Les hackers abusent de l'IA à chaque étape des cyberattaques",
+        "description": "Microsoft alerte sur l'utilisation croissante de l'intelligence artificielle par les acteurs de la menace pour accélérer les attaques, étendre les activités malveillantes et réduire les barrières techniques. Les outils d'IA générative sont employés pour la reconnaissance, le phishing (rédaction de leurres), le développement d'infrastructures, la création et le débogage de malwares, et les activités post-compromission. Des groupes nord-coréens comme Jasper Sleet (Storm-0287) et Coral Sleet (Storm-1877) intègrent l'IA dans des schémas de travailleurs IT frauduleux pour créer des personas numériques et adapter des identités factices.",
+        "threat_actor": "Jasper Sleet (Storm-0287), Coral Sleet (Storm-1877)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0043 (Reconnaissance)",
+          "T1598 (Phishing for Information)",
+          "T1592 (Gather Victim Host Information)",
+          "TA0001 (Initial Access)",
+          "T1566 (Phishing)",
+          "TA0002 (Execution)",
+          "T1059 (Command and Scripting Interpreter)",
+          "TA0003 (Persistence)",
+          "T1583 (Acquire Infrastructure)",
+          "T1584 (Compromise Infrastructure)"
+        ],
+        "analyse": "L'IA agit comme un multiplicateur de force, réduisant la friction technique et accélérant l'exécution des attaques, permettant aux acteurs malveillants d'opérer avec une efficacité accrue. Cela rend la détection plus difficile et nécessite une évolution des défenses, notamment le durcissement des systèmes d'identité contre le phishing et la sécurisation des systèmes d'IA eux-mêmes.",
+        "recommandations": "Détecter l'utilisation anormale des identifiants. Renforcer les systèmes d'identité contre le phishing. Sécuriser les systèmes d'IA qui pourraient être ciblés. Mettre en œuvre une surveillance proactive pour les TTPs liés à l'IA.",
+        "tags": [
+          "ai_abuse",
+          "threat_actor_ttps",
+          "phishing",
+          "malware_development",
+          "infrastructure_development",
+          "reconnaissance",
+          "force_multiplier",
+          "ai"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/"
+        ],
+        "date": "2026-03-08"
+      },
+      {
+        "title": "Les intrusions par le ransomware Termite liées aux attaques ClickFix CastleRAT",
+        "description": "Les acteurs du ransomware Velvet Tempest utilisent la technique ClickFix et des utilitaires Windows légitimes pour déployer le malware DonutLoader et la backdoor CastleRAT. Après l'accès initial via une campagne de malvertising, Velvet Tempest mène des activités manuelles comme la reconnaissance Active Directory, la découverte d'hôtes, le profilage d'environnement, et utilise un script PowerShell pour récolter les identifiants Chrome. Bien que Velvet Tempest soit typiquement associé à des attaques à double extorsion avec des souches de ransomware comme Ryuk, REvil, Conti, BlackMatter, BlackCat/ALPHV, LockBit et RansomHub, l'incident observé n'a pas déployé Termite, mais a staged DonutLoader et récupéré CastleRAT, un RAT connu pour distribuer des familles de RATs et des infostealers comme LummaStealer.",
+        "threat_actor": "Velvet Tempest",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1566.004 (Phishing: Drive-by Compromise)",
+          "TA0002 (Execution)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "TA0007 (Discovery)",
+          "T1087 (Account Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1082 (System Information Discovery)",
+          "TA0006 (Credential Access)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)"
+        ],
+        "analyse": "L'incident met en évidence la sophistication des acteurs de ransomware qui utilisent des techniques d'ingénierie sociale avancées (ClickFix) et s'appuient sur des outils légitimes (Living Off The Land) pour éviter la détection. L'utilisation d'une chaîne d'infection multi-étapes avec des backdoors complexes et des voleurs d'informations permet une persistance profonde et une exfiltration de données avant même le déploiement final du ransomware, augmentant l'impact potentiel des attaques par double extorsion.",
+        "recommandations": "Mettre en œuvre une solution de sécurité des e-mails robuste pour filtrer les malvertising. Sensibiliser les utilisateurs aux techniques d'ingénierie sociale comme ClickFix. Surveiller l'exécution anormale de scripts PowerShell et l'utilisation d'utilitaires Windows légitimes. Déployer une solution EDR pour détecter les activités post-compromission, y compris la reconnaissance AD et la tentative de vol de credentials. Mettre en œuvre la MFA pour tous les comptes et segmenter les réseaux.",
+        "tags": [
+          "ransomware",
+          "threat_actor",
+          "velvet_tempest",
+          "clickfix",
+          "castlerat",
+          "donutloader",
+          "malvertising",
+          "double_extortion",
+          "living_off_the_land",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/"
+        ],
+        "date": "2026-03-08"
+      },
+      {
+        "title": "Évolution des outils de sécurité basés sur l'IA : Codex Security d'OpenAI et Claude Opus 4.6 d'Anthropic",
+        "description": "OpenAI a lancé Codex Security (anciennement Aardvark), un agent de sécurité basé sur l'IA qui identifie, valide et corrige des vulnérabilités complexes dans le code. Cet outil réduit les faux positifs en construisant des modèles de menace contextuels et en validant les découvertes via des preuves de concept (PoC) en environnement sandbox. En bêta privée, il a scanné plus de 1,2 million de commits, identifiant 792 vulnérabilités critiques et 10 561 de haute gravité, aboutissant à 14 CVE officiels dans des projets open source majeurs comme OpenSSH, GnuTLS, PHP et Chromium. Parallèlement, Anthropic a utilisé son grand modèle de langage (LLM) Claude Opus 4.6 pour découvrir 22 nouvelles vulnérabilités (dont 14 de haute gravité) dans le navigateur Firefox en seulement deux semaines. Ces initiatives démontrent la capacité croissante de l'IA à révolutionner la détection et la correction des vulnérabilités, agissant comme un atout puissant pour les équipes de sécurité, même si la capacité des modèles à créer des exploits rudimentaires soulève des questions sur le double usage de cette technologie.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "L'intégration de l'IA dans les outils de sécurité marque une avancée majeure dans la posture de défense cyber. Ces solutions offrent une capacité d'analyse à grande échelle et une précision accrue, permettant une détection proactive et une correction plus efficace des vulnérabilités, en particulier dans l'écosystème open source. La validation automatique des vulnérabilités et la génération de correctifs contextuels réduisent considérablement la charge de travail des équipes de sécurité. Toutefois, le potentiel de l'IA à être utilisée pour générer des exploits, même limités, met en évidence la nécessité d'une recherche et d'un développement responsables dans ce domaine.",
+        "recommandations": "Intégrer les outils de sécurité basés sur l'IA dans les pipelines de développement et de DevSecOps pour une détection et une correction continues des vulnérabilités. Utiliser l'IA comme complément aux équipes de sécurité humaines pour l'analyse et la validation. Investir dans la formation des équipes de sécurité sur l'utilisation et l'interprétation des résultats des outils IA. Participer aux programmes open source favorisant l'IA pour la sécurité.",
+        "tags": [
+          "AI",
+          "security_tools",
+          "vulnerability_discovery",
+          "application_security",
+          "openai",
+          "anthropic",
+          "codex_security",
+          "claude_opus",
+          "open_source_security",
+          "devsecops",
+          "false_positive_reduction"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/openai-launches-codex-security/",
+          "https://thehackernews.com/2026/03/anthropic-finds-22-firefox.html",
+          "https://thehackernews.com/2026/03/openai-codex-security-scanned-12.html"
+        ],
+        "date": "2026-03-08"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The analyzed period reveals an increasing intensification and sophistication of cyber threats, marked by the integration of artificial intelligence at all stages of attacks. Malicious actors, including ransomware groups like Velvet Tempest and state-sponsored actors, are leveraging AI to accelerate reconnaissance, generate more effective phishing lures, develop malware, and build attack infrastructures. Concurrently, AI is also becoming a powerful tool for defense, with the launch of solutions like OpenAI Codex Security and the use of models like Anthropic's Claude Opus 4.6 for automated detection and patching of critical vulnerabilities. This highlights an AI arms race in cyberspace. \n\nRansomware remains a dominant threat, with initial access techniques such as 'ClickFix' and the use of complex backdoors for persistence and data exfiltration, often followed by double extortion. The healthcare sector is particularly targeted by these attacks, as evidenced by breaches at TriZetto and Clínica Dávila. Government infrastructures are not spared, with a significant intrusion at the FBI. \n\nFrom a geopolitical perspective, cyberspace is a strategic domain. Iran-linked actors are targeting IP cameras in sensitive regions for military espionage and battle damage assessment, while nations like the United States are developing national cyber strategies focused on technological superiority, critical infrastructure protection, and public-private collaboration. \n\nNumerous critical vulnerabilities (CVSS >= 8) have been discovered in various products, including stack overflows, authentication bypasses, and remote code executions (RCE), with exploits often publicly available, emphasizing the need for rapid updates and strengthened access controls. \n\nIn conclusion, the overall state of threats is characterized by technological escalation due to AI, persistent ransomware attacks, targeted state-sponsored activity, and the constant vigilance required against high-impact vulnerabilities.",
+      "date": "2026-03-08"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Velvet Tempest",
+        "secteur": "Enterprises and corporate networks",
+        "modop": "Malvertising campaigns leading to ClickFix/CAPTCHA technique for initial access. Uses PowerShell commands to deploy DonutLoader and the CastleRAT backdoor (RAT, information stealer like LummaStealer). Hands-on keyboard activities include Active Directory reconnaissance, host discovery, environment profiling, and harvesting Chrome credentials via PowerShell. Associated with devastating ransomware strains like Ryuk, REvil, Conti, BlackMatter, BlackCat/ALPHV, LockBit, and RansomHub. Typically associated with double-extortion attacks.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "malvertising",
+          "clickfix",
+          "backdoor",
+          "infostealer",
+          "credential_harvesting",
+          "double_extortion",
+          "lotl"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Jasper Sleet (Storm-0287)",
+        "secteur": "Various (remote IT worker schemes)",
+        "modop": "Leverages generative AI to streamline the development of fraudulent digital personas (culturally appropriate name lists, email formats) and to review IT job postings to tailor fake identities.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ai_abuse",
+          "social_engineering",
+          "phishing",
+          "fraud"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Coral Sleet (Storm-1877)",
+        "secteur": "Various (remote IT worker schemes)",
+        "modop": "Utilizes generative AI in their operations, particularly within remote IT worker schemes to accelerate attacks and lower technical barriers.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ai_abuse",
+          "social_engineering",
+          "phishing",
+          "fraud"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Iran-linked actors",
+        "secteur": "Military, Government, Critical Infrastructure (Israel, Gulf states, Lebanon, Cyprus)",
+        "modop": "Targeting IP cameras (mainly Hikvision and Dahua) by exploiting known vulnerabilities (e.g., CVE-2021-33044, CVE-2021-33045, CVE-2017-7921) using VPN and VPS infrastructure. Probable objective: military intelligence and battle damage assessment, often coinciding with geopolitical tensions.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "espionage",
+          "cyber_warfare",
+          "geopolitical",
+          "ip_camera_hacking"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "LockBit 5.0",
+        "secteur": "Healthcare (Clínica Dávila)",
+        "modop": "Ransomware and data exfiltration. Publication of data obtained through a previous Devman attack, suggesting data resale between groups. Double extortion.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare_targeted",
+          "extortion"
+        ],
+        "sources": "https://infosec.exchange/@chum1ng0/116190695898667519",
+        "date": "2026-03-08"
+      },
+      {
+        "nom": "Devman",
+        "secteur": "Healthcare (Clínica Dávila)",
+        "modop": "Ransomware. Initial attack against Clínica Dávila, with potential sale or sharing of exfiltrated data to other groups like LockBit.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_exfiltration",
+          "healthcare_targeted"
+        ],
+        "sources": "https://infosec.exchange/@chum1ng0/116190695898667519",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Government, Critical Infrastructure, Private Sector",
+        "theme": "United States National Cybersecurity Strategy",
+        "description": "The \"President Trump’s Cyber Strategy for America\" white paper outlines the US vision to maintain dominance in cyberspace amidst growing threats. The strategy aims to modernize federal networks (Zero Trust architectures, post-quantum cryptography, cloud migration, AI-driven security tools), protect critical infrastructure (energy, financial, telecommunications, healthcare, data centers) and supply chains, ensure technological superiority in emerging technologies (AI, quantum, advanced cryptography), develop a skilled cyber workforce, and adopt a proactive posture to disrupt cyber threats through coordinated actions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "national_security",
+          "cyber_strategy",
+          "government",
+          "critical_infrastructure",
+          "ai",
+          "quantum_computing"
+        ],
+        "sources": "https://securityaffairs.com/189083/security/reading-white-house-president-trumps-cyber-strategy-for-america-march-2026.html",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Military, Government, Critical Infrastructure",
+        "theme": "State-sponsored cyber espionage",
+        "description": "Iran-linked actors are actively targeting IP cameras (Hikvision, Dahua) across Israel and Gulf states (UAE, Qatar, Bahrain, Kuwait, Lebanon, Cyprus). These attacks, leveraging VPN/VPS infrastructure to exploit known vulnerabilities, are likely aimed at military intelligence and battle damage assessment, coinciding with periods of geopolitical tensions.",
+        "tags": [
+          "geopolitique",
+          "geopolitic",
+          "iran",
+          "israel",
+          "gulf_states",
+          "cyber_espionage",
+          "military_intelligence",
+          "ip_cameras"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Government / Law Enforcement",
+        "victime": "Federal Bureau of Investigation (FBI)",
+        "description": "The FBI is investigating an intrusion and suspicious cyber activity on an unclassified internal system containing sensitive surveillance and investigation data. This data includes records from legal tools like pen registers and trap-and-trace orders, as well as personally identifiable information (PII) related to investigations. The incident is attributed to \"sophisticated\" techniques, including the exploitation of a commercial ISP’s infrastructure.",
+        "tags": [
+          "violation",
+          "breach",
+          "government",
+          "law_enforcement",
+          "espionage",
+          "sensitive_data",
+          "fbi"
+        ],
+        "sources": "https://securityaffairs.com/189087/hacking/fbi-probing-intrusion-into-system-managing-sensitive-surveillance-information.html",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Healthcare / Insurance",
+        "victime": "TriZetto (under Cognizant)",
+        "description": "A data breach exposed sensitive information of over 3.4 million individuals after hackers accessed an insurance verification portal from November 2024 to October 2025. Compromised information may include names, dates of birth, Social Security Numbers (SSNs), and insurance details.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "insurance",
+          "phi",
+          "pii",
+          "cognizant",
+          "trizetto"
+        ],
+        "sources": "https://www.bleepingcomputer.com/news/security/cognizant-trizetto-breach-exposes-health-data-of-34-million-patients/",
+        "date": "2026-03-08"
+      },
+      {
+        "secteur": "Healthcare",
+        "victime": "Clínica Dávila (Chile)",
+        "description": "The LockBit 5.0 ransomware group published all information from Clínica Dávila. The medical institution had previously been attacked by the Devman ransomware in December of the previous year, suggesting that Devman sold a portion of the data to LockBit. This represents a double extortion and potential complications for patient notification.",
+        "tags": [
+          "violation",
+          "breach",
+          "healthcare",
+          "ransomware",
+          "lockbit",
+          "devman",
+          "data_exfiltration",
+          "chile"
+        ],
+        "sources": "https://www.security-chu.com/2026/03/lockbit-filtra-los-datos-de-la-clinica-davila.html",
+        "date": "2026-03-08"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2026-30861",
+        "cvss": 9.9,
+        "product": "WeKnora (versions 0.2.5 to 0.2.10)",
+        "description": "Unauthenticated Remote Code Execution (RCE) via command injection in MCP stdio configuration validation. Attackers can create an account and exploit a bypass of the command whitelist to execute arbitrary commands with application privileges.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "command_injection",
+          "weknora",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30861",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30860",
+        "cvss": 9.9,
+        "product": "WeKnora (versions prior to 0.2.12)",
+        "description": "Remote Code Execution (RCE) via SQL injection bypass in the AI application's database query functionality. An unauthenticated attacker can execute arbitrary code on the database server by bypassing SQL injection protections.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "rce",
+          "sql_injection",
+          "weknora",
+          "unauthenticated",
+          "critical"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30860",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2017-7921",
+        "cvss": 9.8,
+        "product": "Hikvision (multiple products)",
+        "description": "Improper authentication vulnerability potentially allowing unauthorized access. Identified in CISA's KEV (Known Exploited Vulnerabilities) catalog, indicating active and known exploitation.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "hikvision",
+          "ip_camera",
+          "kev_catalog",
+          "critical"
+        ],
+        "sources": "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30863",
+        "cvss": 9.3,
+        "product": "Parse Server (versions prior to 8.6.10 and 9.5.0-alpha.11)",
+        "description": "JWT audience validation bypass in Google, Apple, and Facebook authentication adapters. Allows an attacker to use a validly signed JWT issued for a different application to authenticate as any user on the target Parse Server.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "authentication_bypass",
+          "jwt",
+          "parse_server",
+          "critical",
+          "access_control"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30863",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3679",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Stack-based buffer overflow in the formQuickIndex function of the /goform/QuickIndex file. Exploitation is possible remotely via manipulation of mit_linktype/PPPOEPassword arguments, and a public exploit is available.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3679",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3678",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Stack-based buffer overflow in the sub_3C434 function of the /goform/AdvSetWan file. The attack can be initiated remotely by manipulating wanmode/PPPOEPassword arguments, and the exploit has been publicly disclosed.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3678",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-3677",
+        "cvss": 9.0,
+        "product": "Tenda FH451 (version 1.0.0.9)",
+        "description": "Stack-based buffer overflow in the fromSetCfm function of the /goform/setcfm file. The attack is possible remotely via manipulation of funcname/funcpara1 arguments, and the exploit has been made public.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "stack_buffer_overflow",
+          "rce_potential",
+          "tenda",
+          "fh451",
+          "remote_exploit",
+          "high_severity"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-3677",
+        "date": "2026-03-08"
+      },
+      {
+        "cve_id": "CVE-2026-30855",
+        "cvss": 8.8,
+        "product": "WeKnora (versions prior to 0.3.2)",
+        "description": "Broken Access Control in tenant management endpoints. Allows any authenticated user to read, modify, or delete any tenant by ID, leading to cross-tenant account takeover and data destruction.",
+        "tags": [
+          "vulnerabilité",
+          "vulnerability",
+          "broken_access_control",
+          "authorization_bypass",
+          "weknora",
+          "tenant_management",
+          "high_severity",
+          "account_takeover"
+        ],
+        "sources": "https://cvefeed.io/vuln/detail/CVE-2026-30855",
+        "date": "2026-03-08"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Microsoft: Hackers Abusing AI at Every Stage of Cyberattacks",
+        "description": "Microsoft warns about the increasing use of artificial intelligence by threat actors to accelerate attacks, scale malicious activity, and lower technical barriers across all aspects of a cyberattack. Generative AI tools are employed for reconnaissance, phishing (drafting lures), infrastructure development, malware creation and debugging, and post-compromise activities. North Korean groups like Jasper Sleet (Storm-0287) and Coral Sleet (Storm-1877) integrate AI into fraudulent remote IT worker schemes to create digital personas and tailor fake identities.",
+        "threat_actor": "Jasper Sleet (Storm-0287), Coral Sleet (Storm-1877)",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0043 (Reconnaissance)",
+          "T1598 (Phishing for Information)",
+          "T1592 (Gather Victim Host Information)",
+          "TA0001 (Initial Access)",
+          "T1566 (Phishing)",
+          "TA0002 (Execution)",
+          "T1059 (Command and Scripting Interpreter)",
+          "TA0003 (Persistence)",
+          "T1583 (Acquire Infrastructure)",
+          "T1584 (Compromise Infrastructure)"
+        ],
+        "analyse": "AI acts as a force multiplier, reducing technical friction and accelerating attack execution, allowing malicious actors to operate with increased efficiency. This makes detection more challenging and necessitates evolving defenses, including hardening identity systems against phishing and securing AI systems themselves.",
+        "recommandations": "Detect abnormal credential use. Harden identity systems against phishing. Secure AI systems that may become targets. Implement proactive monitoring for AI-related TTPs.",
+        "tags": [
+          "ai_abuse",
+          "threat_actor_ttps",
+          "phishing",
+          "malware_development",
+          "infrastructure_development",
+          "reconnaissance",
+          "force_multiplier",
+          "ai"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/"
+        ],
+        "date": "2026-03-08"
+      },
+      {
+        "title": "Termite Ransomware Breaches Linked to ClickFix CastleRAT Attacks",
+        "description": "Ransomware threat actors tracked as Velvet Tempest are using the ClickFix technique and legitimate Windows utilities to deploy the DonutLoader malware and the CastleRAT backdoor. After obtaining initial access through a malvertising campaign, Velvet Tempest performs hands-on keyboard activities such as Active Directory reconnaissance, host discovery, environment profiling, and using a PowerShell script to harvest Chrome credentials. While Velvet Tempest is typically associated with double-extortion attacks involving ransomware strains like Ryuk, REvil, Conti, BlackMatter, BlackCat/ALPHV, LockBit, and RansomHub, the observed intrusion did not deploy Termite but staged DonutLoader and retrieved CastleRAT, a RAT known for distributing other RATs and info stealers like LummaStealer.",
+        "threat_actor": "Velvet Tempest",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "TA0001 (Initial Access)",
+          "T1566.004 (Phishing: Drive-by Compromise)",
+          "TA0002 (Execution)",
+          "T1059.001 (Command and Scripting Interpreter: PowerShell)",
+          "TA0007 (Discovery)",
+          "T1087 (Account Discovery)",
+          "T1018 (Remote System Discovery)",
+          "T1082 (System Information Discovery)",
+          "TA0006 (Credential Access)",
+          "T1552.001 (Unsecured Credentials: Credentials in Files)"
+        ],
+        "analyse": "The incident highlights the sophistication of ransomware actors using advanced social engineering techniques (ClickFix) and legitimate tools (Living Off The Land) to evade detection. The multi-stage infection chain with complex backdoors and information stealers allows for deep persistence and data exfiltration even before the final ransomware deployment, increasing the potential impact of double extortion attacks.",
+        "recommandations": "Implement robust email security to filter malvertising. Educate users on social engineering techniques like ClickFix. Monitor abnormal PowerShell script execution and the use of legitimate Windows utilities. Deploy EDR solutions to detect post-compromise activities, including AD reconnaissance and credential theft attempts. Implement MFA for all accounts and segment networks.",
+        "tags": [
+          "ransomware",
+          "threat_actor",
+          "velvet_tempest",
+          "clickfix",
+          "castlerat",
+          "donutloader",
+          "malvertising",
+          "double_extortion",
+          "living_off_the_land",
+          "credential_theft"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/"
+        ],
+        "date": "2026-03-08"
+      },
+      {
+        "title": "Evolution of AI-powered Security Tools: OpenAI's Codex Security and Anthropic's Claude Opus 4.6",
+        "description": "OpenAI launched Codex Security (formerly Aardvark), an AI-powered security agent designed to autonomously identify, validate, and remediate complex vulnerabilities in code. This tool reduces false positives by building contextual threat models and validating findings via sandboxed Proof-of-Concepts (PoCs). In its private beta, it scanned over 1.2 million commits, identifying 792 critical and 10,561 high-severity vulnerabilities, leading to 14 official CVEs in major open-source projects like OpenSSH, GnuTLS, PHP, and Chromium. Concurrently, Anthropic utilized its large language model (LLM) Claude Opus 4.6 to discover 22 new vulnerabilities (14 high-severity) in the Firefox web browser in just two weeks. These initiatives demonstrate AI's growing capability to revolutionize vulnerability detection and patching, acting as a powerful asset for security teams, although the models' ability to create rudimentary exploits raises questions about the dual-use nature of this technology.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {},
+        "mitre_ttps": [
+          "Non mentionnées"
+        ],
+        "analyse": "The integration of AI into security tools marks a major advancement in cyber defense posture. These solutions offer large-scale analysis capabilities and increased accuracy, enabling proactive detection and more efficient remediation of vulnerabilities, especially in the open-source ecosystem. Automated vulnerability validation and contextual patch generation significantly reduce the workload of security teams. However, AI's potential to be used for exploit generation, even if limited, highlights the need for responsible research and development in this field.",
+        "recommandations": "Integrate AI-powered security tools into development and DevSecOps pipelines for continuous vulnerability detection and remediation. Use AI as a complement to human security teams for analysis and validation. Invest in training security teams on the use and interpretation of AI tool results. Participate in open-source programs promoting AI for security.",
+        "tags": [
+          "AI",
+          "security_tools",
+          "vulnerability_discovery",
+          "application_security",
+          "openai",
+          "anthropic",
+          "codex_security",
+          "claude_opus",
+          "open_source_security",
+          "devsecops",
+          "false_positive_reduction"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/openai-launches-codex-security/",
+          "https://thehackernews.com/2026/03/anthropic-finds-22-firefox.html",
+          "https://thehackernews.com/2026/03/openai-codex-security-scanned-12.html"
+        ],
+        "date": "2026-03-08"
+      }
+    ]
+  }
+}
