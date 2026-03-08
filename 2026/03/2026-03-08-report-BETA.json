@@ -1,0 +1,317 @@
+
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape as of March 8, 2026, is dominated by two major trends: the operationalization of Artificial Intelligence and the intensification of surveillance-focused state-sponsored activity. AI has reached a 'duality' stage; while threat actors like Jasper Sleet (North Korea) use it to create flawless fraudulent identities and automate malware development, defenders like OpenAI and Anthropic are utilizing large-scale AI agents (Codex Security, Claude) to identify thousands of vulnerabilities in critical open-source software and browsers like Firefox. Geopolitically, Middle Eastern tensions have shifted toward large-scale exploitation of IoT infrastructure (IP cameras) for military intelligence and damage assessment. Meanwhile, ransomware affiliates like Velvet Tempest are refining social engineering through the 'ClickFix' technique to bypass traditional perimeters.",
+      "fr": "Le paysage des cybermenaces au 8 mars 2026 est dominé par deux tendances majeures : l'opérationnalisation de l'intelligence artificielle et l'intensification des activités étatiques axées sur la surveillance. L'IA a atteint un stade de « dualité » ; alors que des acteurs comme Jasper Sleet (Corée du Nord) l'utilisent pour créer des identités frauduleuses parfaites et automatiser le développement de malwares, les défenseurs comme OpenAI et Anthropic utilisent des agents IA à grande échelle (Codex Security, Claude) pour identifier des milliers de vulnérabilités dans les logiciels open-source critiques et les navigateurs comme Firefox. Sur le plan géopolitique, les tensions au Moyen-Orient se sont déplacées vers l'exploitation massive des infrastructures IoT (caméras IP) pour le renseignement militaire. Parallèlement, les affiliés de ransomware comme Velvet Tempest affinent l'ingénierie sociale via la technique « ClickFix » pour contourner les périmètres traditionnels."
+    },
+    "date": "2026-03-08"
+  },
+  "malicious_actors_analyse": [
+    {
+      "threat_actor": "Velvet Tempest",
+      "campaign": "ClickFix CastleRAT Operations",
+      "campaign_description": {
+        "en": "Velvet Tempest (DEV-0504) is using malvertising and fake CAPTCHAs (ClickFix) to trick users into executing commands that deploy DonutLoader and the CastleRAT backdoor. Though typically a ransomware affiliate, they are focusing on persistent access and environment profiling.",
+        "fr": "Velvet Tempest (DEV-0504) utilise le malvertising et de faux CAPTCHAs (ClickFix) pour inciter les utilisateurs à exécuter des commandes déployant DonutLoader et la porte dérobée CastleRAT. Bien qu'étant généralement un affilié de ransomware, ils se concentrent ici sur l'accès persistant et le profilage d'environnement."
+      },
+      "sector": {
+        "en": "Non-profit, Cross-sector",
+        "fr": "Organisations à but non lucratif, multi-sectoriel"
+      },
+      "modop": {
+        "en": "Initial access via 'ClickFix' social engineering; abuse of Windows utilities (finger.exe, csc.exe) for payload delivery; PowerShell for credential harvesting and persistence.",
+        "fr": "Accès initial via l'ingénierie sociale 'ClickFix' ; abus d'utilitaires Windows (finger.exe, csc.exe) pour la livraison de charges utiles ; PowerShell pour la collecte d'identifiants et la persistance."
+      },
+      "tags": [
+        "Ransomware",
+        "ClickFix",
+        "CastleRAT",
+        "DEV-0504"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/termite-ransomware-breaches-linked-to-clickfix-castlerat-attacks/"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "threat_actor": "Lazarus Group",
+      "campaign": "Jasper Sleet AI Personas",
+      "campaign_description": {
+        "en": "North Korean actors Jasper Sleet (Storm-0287) and Coral Sleet (Storm-1877) use generative AI to create culturally accurate digital identities, resumes, and communications to infiltrate Western companies as remote IT workers.",
+        "fr": "Les acteurs nord-coréens Jasper Sleet (Storm-0287) et Coral Sleet (Storm-1877) utilisent l'IA générative pour créer des identités numériques, des CV et des communications culturellement crédibles afin d'infiltrer les entreprises occidentales en tant que travailleurs informatiques à distance."
+      },
+      "sector": {
+        "en": "Technology, Software Development",
+        "fr": "Technologie, Développement logiciel"
+      },
+      "modop": {
+        "en": "Leveraging LLMs to summarize job postings, tailor fake personas, and translate content to maintain high-quality social engineering lures.",
+        "fr": "Exploitation des LLM pour synthétiser les offres d'emploi, adapter les faux profils et traduire le contenu afin de maintenir des leurres d'ingénierie sociale de haute qualité."
+      },
+      "tags": [
+        "Jasper Sleet",
+        "Storm-0287",
+        "North Korea",
+        "AI-Abuse"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/microsoft-hackers-abusing-ai-at-every-stage-of-cyberattacks/"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "threat_actor": "MuddyWater",
+      "campaign": "Dindoor Malware Campaign",
+      "campaign_description": {
+        "en": "The Iranian-linked actor MuddyWater is deploying Dindoor malware against U.S. organizations and targeting IP cameras in the Middle East for military reconnaissance.",
+        "fr": "L'acteur MuddyWater, lié à l'Iran, déploie le malware Dindoor contre des organisations américaines et cible des caméras IP au Moyen-Orient pour la reconnaissance militaire."
+      },
+      "sector": {
+        "en": "Government, Critical Infrastructure, Defense",
+        "fr": "Gouvernement, Infrastructures critiques, Défense"
+      },
+      "modop": {
+        "en": "Exploitation of N-day vulnerabilities in Hikvision/Dahua cameras; deployment of custom RATs (Dindoor).",
+        "fr": "Exploitation de vulnérabilités N-day dans les caméras Hikvision/Dahua ; déploiement de RAT personnalisés (Dindoor)."
+      },
+      "tags": [
+        "MuddyWater",
+        "Iran",
+        "Dindoor",
+        "IoT-Targeting"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html",
+        "https://social.raytec.co/@techbot/116191207797516175"
+      ],
+      "date": "2026-03-08"
+    }
+  ],
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "International Relations / Policy",
+        "fr": "Relations Internationales / Politique"
+      },
+      "theme": {
+        "en": "US Cyber Strategy for America (March 2026)",
+        "fr": "Stratégie cybernétique américaine (Mars 2026)"
+      },
+      "description": {
+        "en": "The Trump administration's new cyber strategy frames cyberspace as a strategic domain to project power. Key pillars include modernizing federal networks with zero-trust and post-quantum cryptography, and acting proactively to disrupt adversaries.",
+        "fr": "La nouvelle stratégie cyber de l'administration Trump définit le cyberespace comme un domaine stratégique de projection de puissance. Les piliers incluent la modernisation des réseaux fédéraux (Zero-Trust, cryptographie post-quantique) et une action proactive pour perturber les adversaires."
+      },
+      "tags": [
+        "Policy",
+        "USA",
+        "Strategy",
+        "Zero-Trust"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189083/security/reading-white-house-president-trumps-cyber-strategy-for-america-march-2026.html"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Federal Bureau of Investigation (FBI)",
+      "threat_actor": "Unknown (Sophisticated)",
+      "sector": {
+        "en": "Government / Law Enforcement",
+        "fr": "Gouvernement / Application de la loi"
+      },
+      "description": {
+        "en": "Intrusion into an internal unclassified system containing sensitive surveillance data, including 'pen register' and 'trap and trace' records. Attackers exploited commercial ISP infrastructure.",
+        "fr": "Intrusion dans un système interne non classifié contenant des données de surveillance sensibles, notamment des enregistrements 'pen register' et 'trap and trace'. Les attaquants ont exploité l'infrastructure d'un FAI commercial."
+      },
+      "tags": [
+        "Espionage",
+        "FBI",
+        "Surveillance-Data"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189087/hacking/fbi-probing-intrusion-into-system-managing-sensitive-surveillance-information.html"
+      ],
+      "date": "2026-02-17"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-30860",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:tencent:weknora:*:*:*:*:*:*:*:*",
+      "product": "WeKnora",
+      "vendor": "Tencent",
+      "description": {
+        "en": "SQL Injection in AI Database Query Tool allowing unauthenticated Remote Code Execution (RCE) via PostgreSQL expression smuggling.",
+        "fr": "Injection SQL dans l'outil de requête de base de données IA permettant une exécution de code à distance (RCE) non authentifiée via la contrebande d'expressions PostgreSQL."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "SQLi",
+        "AI-Framework"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116191201102471895",
+        "https://cvefeed.io/vuln/detail/CVE-2026-30860"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "cve_id": "CVE-2026-20122",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "7.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN Manager",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Arbitrary File Overwrite vulnerability in Catalyst SD-WAN Manager API being actively exploited in the wild.",
+        "fr": "Vulnérabilité d'écrasement de fichier arbitraire dans l'API de Cisco Catalyst SD-WAN Manager, activement exploitée dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "Exploited",
+        "Cisco",
+        "SD-WAN"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/03/07/cisco-catalyst-sd-wan-active-exploitation-alert/"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "cve_id": "CVE-2026-30863",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:*:*:*",
+      "product": "Parse Server",
+      "vendor": "Parseplatform",
+      "description": {
+        "en": "JWT audience validation bypass in authentication adapters for Google, Apple, and Facebook.",
+        "fr": "Contournement de la validation de l'audience JWT dans les adaptateurs d'authentification pour Google, Apple et Facebook."
+      },
+      "tags": [
+        "vulnerability",
+        "Authentication-Bypass",
+        "JWT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-30863"
+      ],
+      "date": "2026-03-07"
+    },
+    {
+      "cve_id": "CVE-2017-7921",
+      "euvd_id": "EUVD-2017-0001",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:hikvision:ip_camera_firmware:*:*:*:*:*:*:*:*",
+      "product": "IP Camera Firmware",
+      "vendor": "Hikvision",
+      "description": {
+        "en": "Improper authentication vulnerability in Hikvision IP cameras, recently added to CISA KEV due to Iranian targeting.",
+        "fr": "Vulnérabilité d'authentification incorrecte dans les caméras IP Hikvision, récemment ajoutée au catalogue KEV de la CISA en raison du ciblage par l'Iran."
+      },
+      "tags": [
+        "vulnerability",
+        "CISA-KEV",
+        "IoT"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html"
+      ],
+      "date": "2026-03-07"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Middle East IP Camera Surveillance Campaign",
+        "fr": "Campagne de surveillance des caméras IP au Moyen-Orient"
+      },
+      "description": {
+        "en": "Surge in scanning and exploitation of Hikvision and Dahua IP cameras across Israel, UAE, Qatar, and Bahrain, attributed to Iranian actors for battle damage assessment.",
+        "fr": "Augmentation du scan et de l'exploitation des caméras IP Hikvision et Dahua en Israël, aux Émirats Arabes Unis, au Qatar et à Bahreïn, attribuée à des acteurs iraniens pour l'évaluation des dommages de combat."
+      },
+      "threat_actor": "MuddyWater",
+      "indicators": {
+        "URL": [
+          "https://github.com/acquiredsecurity/forensic-webhistory",
+          "https://otx.alienvault.com/pulse/69acdc94b7bc2b107f5b8c7a"
+        ],
+        "IPv4": [
+          "20.12.5.3",
+          "20.18.2.1",
+          "20.9.8.2"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "radar.offseq.com",
+          "cyberengage.org",
+          "tenda.com.cn"
+        ],
+        "EMAIL": [
+          "cna@vuldb.com",
+          "security-advisories@github.com",
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "DonutLoader",
+          "CastleRAT",
+          "KAPE",
+          "forensic-webhistory",
+          "Dindoor",
+          "finger.exe",
+          "csc.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1204.002",
+        "T1059.001",
+        "T1105",
+        "T1078",
+        "T1588.006"
+      ],
+      "analyse": {
+        "en": "The campaign highlights the strategic value of IoT in modern warfare, where compromised cameras serve as real-time intelligence nodes.",
+        "fr": "La campagne souligne la valeur stratégique de l'IoT dans la guerre moderne, où les caméras compromises servent de nœuds de renseignement en temps réel."
+      },
+      "recommandations": [
+        {
+          "en": "Place IP cameras behind VPN or Zero-Trust gateways and restrict outbound traffic.",
+          "fr": "Placer les caméras IP derrière des passerelles VPN ou Zero-Trust et restreindre le trafic sortant."
+        },
+        {
+          "en": "Patch Hikvision products (CVE-2017-7921) and Dahua devices immediately.",
+          "fr": "Corriger immédiatement les produits Hikvision (CVE-2017-7921) et les appareils Dahua."
+        }
+      ],
+      "tags": [
+        "IoT",
+        "Surveillance",
+        "Iran",
+        "Hikvision",
+        "Dahua"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189069/cyber-warfare-2/iran-linked-hackers-target-ip-cameras-across-israel-and-gulf-states-for-military-intelligence.html"
+      ],
+      "date": "2026-03-08"
+    }
+  ]
+}
