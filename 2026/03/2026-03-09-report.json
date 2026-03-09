@@ -1,0 +1,1178 @@
+
+{
+  "FR": {
+    "Analyse transversale": {
+      "analyse": "Le paysage actuel de la cybersécurité est marqué par une convergence de menaces sophistiquées, d'innovations technologiques exploitées par les attaquants, et de défis réglementaires. Les assistants IA, bien qu'augmentant la productivité, ont ouvert de vastes surfaces d'attaque, rendant les systèmes vulnérables aux injections d'instructions malveillantes et aux compromissions de la chaîne d'approvisionnement logicielle. Cette « fragilité de l'IA » nécessite une refonte des stratégies de sécurité, notamment l'isolation des agents et une surveillance accrue des interactions autonomes. Simultanément, les techniques de phishing évoluent, avec l'abus de domaines DNS spéciaux (.arpa, IPv6) et la militarisation de la logique de redirection OAuth pour contourner les défenses traditionnelles. Des campagnes massives de malwares, comme BoryptGrab, utilisent des plateformes légitimes (GitHub) et le référencement abusif pour distribuer des stealers sophistiqués, ciblant les informations d'identification et les crypto-monnaies, avec une origine potentielle d'acteurs russophones. La commercialisation d'exploits zero-day pour des failles critiques (comme dans Windows RDS) souligne un marché souterrain dynamique et dangereux. De nombreuses vulnérabilités critiques (Nginx UI, AVideo, IceWarp, FreeScout, Tenda F453) avec des scores CVSS élevés continuent d'apparaître, souvent avec des exploits publics ou activement exploités, nécessitant une gestion proactive des correctifs. Géopolitiquement, la cybersécurité est une arène de guerre hybride, avec la Russie menant des opérations contre la Pologne et l'UE/OTAN, et des APT iraniennes ciblant les secteurs critiques américains. Les tensions autour de la chaîne d'approvisionnement des semi-conducteurs (Nexperia/Chine) montrent également comment les différends politiques peuvent avoir des répercussions cybernétiques et économiques mondiales. Des violations de données (Makimura, PGF Life, Murata Manufacturing) continuent d'affecter divers secteurs. En parallèle, des décisions juridiques (CJUE sur le remboursement des victimes de phishing) redéfinissent les responsabilités des institutions financières face aux cyberincidents. En conclusion, les menaces sont de plus en plus complexes, autonomes et interconnectées, exacerbées par l'IA et les tensions géopolitiques, exigeant une approche de sécurité adaptative, multicouche et axée sur la résilience.",
+      "date": "2026-03-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Acteurs à motivation financière (utilisant Coruna exploit kit)",
+        "secteur": "Multi-secteur, Individus (via terminaux mobiles iOS)",
+        "modop": "Déploiement d'un kit d'exploitation iOS de qualité espionnage (Coruna), dont l'usage a évolué de la surveillance commerciale à l'espionnage étatique, puis à la cybercriminalité financière.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "exploit_kit",
+          "iOS",
+          "mobile_security",
+          "cybercrime",
+          "espionage",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "Acteur russophone",
+        "secteur": "Multi-secteur, individus (ciblant les identifiants et crypto-monnaies)",
+        "modop": "Distribution de l'info-stealer BoryptGrab via plus de 100 dépôts GitHub malveillants utilisant des techniques de référencement abusif. Déploiement de backdoors (TunnesshClient, HeaconLoad) et utilisation de fonctions anti-analyse. Utilisation de services IA commerciaux pour automatiser et étendre les attaques (compromission FortiGate).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "financially_motivated",
+          "info_stealer",
+          "malware",
+          "github",
+          "seo_poisoning",
+          "russia",
+          "ai_augmented_attack"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189110/malware/massive-github-malware-operation-spreads-boryptgrab-stealer.html",
+          "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "APT liée à l'Iran",
+        "secteur": "Secteurs critiques américains (gouvernement, infrastructures)",
+        "modop": "Utilisation de nouvelles portes dérobées (backdoors) pour des intrusions continues dans les réseaux d'organisations américaines, potentiellement liées à des tensions géopolitiques.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "iran",
+          "apt",
+          "cyber_espionage",
+          "backdoor",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "NightSpire",
+        "secteur": "Industrie",
+        "modop": "Attaques par ransomware, entraînant l'interruption des opérations et la nécessité d'une récupération.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_encryption",
+          "extortion"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/makimura-recovers-from-ransomware-nightspire-claims-attack/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technologies, semi-conducteurs",
+        "theme": "Tensions géopolitiques, chaîne d'approvisionnement, souveraineté technologique",
+        "description": "Le ministère chinois du Commerce a averti de perturbations supplémentaires de la chaîne d'approvisionnement mondiale des semi-conducteurs après que le fabricant de puces néerlandais Nexperia ait coupé l'accès à certains de ses systèmes (SAP, Microsoft 365) pour le personnel chinois. Cette action fait suite à un différend sur le transfert illégal de technologie de fabrication de puces vers la société chinoise mère de Nexperia, Wingtech Technologies.",
+        "tags": [
+          "geopolitique",
+          "supply_chain",
+          "semi_conducteurs",
+          "Chine",
+          "Pays-Bas",
+          "souverainete_technologique"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/09/asia_tech_news_roundup/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Gouvernement, infrastructures critiques (US)",
+        "theme": "APT parrainée par l'État, cyberespionnage, tensions géopolitiques",
+        "description": "Un groupe de hackers lié à l'Iran a été actif dans les réseaux de plusieurs organisations américaines depuis début février, soulevant des inquiétudes quant à des opérations cyber plus larges liées aux tensions géopolitiques croissantes au Moyen-Orient. Le groupe utilise de nouvelles portes dérobées.",
+        "tags": [
+          "geopolitique",
+          "Iran",
+          "APT",
+          "cyberespionnage",
+          "infrastructures_critiques",
+          "Etats-Unis",
+          "Moyen-Orient",
+          "backdoor"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Défense, infrastructures critiques",
+        "theme": "Guerre hybride, cyberattaques étatiques, désinformation",
+        "description": "La Pologne fait face à une guerre hybride croissante menée par la Russie et la Biélorussie depuis l'invasion de l'Ukraine. Cela inclut des opérations d'influence, des cyberattaques (multipliées par cinq sur les réseaux militaires entre 2021 et 2022, et des dizaines de milliers sur les structures civiles), des sabotages et de la désinformation, visant à déstabiliser l'OTAN et l'UE.",
+        "tags": [
+          "geopolitique",
+          "guerre_hybride",
+          "cyberattaques",
+          "Russie",
+          "Pologne",
+          "Biélorussie",
+          "OTAN",
+          "UE",
+          "infrastructures_critiques",
+          "desinformation"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/03/08/la-pologne-en-premiere-ligne-face-a-la-guerre-hybride-menee-par-la-russie_6669955_3210.html"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Information, politique sociale",
+        "theme": "Désinformation, guerre hybride, valeurs conservatrices, politique démographique",
+        "description": "L'article analyse la propagande pro-Kremlin dépeignant la Russie comme un paradis pour les femmes, combinant conservatisme et féminisme, en contraste avec l'Occident. Il expose les réalités d'une politique démographique intrusive, la criminalisation de certaines formes d'abus domestiques et la promotion de rôles de genre traditionnels, servant des objectifs de soft power et de consolidation interne face à la guerre et au déclin démographique.",
+        "tags": [
+          "geopolitique",
+          "desinformation",
+          "Russie",
+          "soft_power",
+          "droits_des_femmes",
+          "propagande",
+          "guerre_hybride"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russia-a-womens-paradise/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Industrie",
+        "victime": "Makimura",
+        "description": "Récupération après une attaque par ransomware du groupe NightSpire.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "industrie",
+          "NightSpire"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/makimura-recovers-from-ransomware-nightspire-claims-attack/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Électronique, manufacture",
+        "victime": "Murata Manufacturing",
+        "description": "Accès non autorisé révélant la lecture potentielle d'informations sur des tiers et des données internes de l'entreprise.",
+        "tags": [
+          "violation",
+          "breach",
+          "unauthorized_access",
+          "data_exfiltration",
+          "electronique",
+          "murata_manufacturing"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/murata-manufacturing-discloses-breach-third-party-data-risk/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Services financiers",
+        "victime": "PGF生命 (Prudential Life)",
+        "description": "Exfiltration d'informations chez PGF Life, une filiale de Prudential Life.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_exfiltration",
+          "services_financiers",
+          "prudential_life"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/pgf-life-data-exfiltration-scandal-prudential-group/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14500",
+        "cvss": 9.8,
+        "product": "IceWarp",
+        "description": "Vulnérabilité critique d'exécution de code à distance (RCE) non authentifiée dans la plateforme de communication et collaboration IceWarp, permettant aux attaquants d'obtenir un accès non autorisé aux serveurs non patchés. Plus de 1 200 instances exposées sur internet sont toujours vulnérables.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "IceWarp",
+          "RCE",
+          "unauthenticated",
+          "critical_vulnerability",
+          "software_vulnerability"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-20122",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnérabilité dans Cisco Catalyst SD-WAN Manager, activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Cisco",
+          "SD_WAN",
+          "exploited",
+          "network_device"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-20128",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnérabilité dans la fonction Data Collection Agent (DCA) du Cisco Catalyst SD-WAN Manager, permettant à un attaquant authentifié et local d'obtenir des privilèges utilisateur DCA. Activement exploitée.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Cisco",
+          "SD_WAN",
+          "privilege_escalation",
+          "exploited",
+          "network_device"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-21533",
+        "cvss": 9.0,
+        "product": "Windows Remote Desktop Services (RDS)",
+        "description": "Vulnérabilité zero-day d'escalade de privilèges dans les services de bureau à distance Windows, exploitée activement et vendue sur le dark web. Permet à un attaquant authentifié avec des droits d'utilisateur standard d'obtenir le contrôle administratif local.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Windows",
+          "Remote_Desktop_Services",
+          "privilege_escalation",
+          "zero_day",
+          "dark_web"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/windows-remote-desktop-services-0-day/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-27944",
+        "cvss": 9.8,
+        "product": "Nginx UI",
+        "description": "Vulnérabilité critique permettant aux attaquants non authentifiés de télécharger et de déchiffrer des sauvegardes complètes du serveur Nginx UI, exposant des données sensibles (identifiants, jetons de session, clés privées SSL, configurations Nginx) en raison d'un endpoint /api/backup sans authentification et de la divulgation des clés de chiffrement dans les en-têtes de réponse HTTP.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Nginx_UI",
+          "RCE",
+          "authentification",
+          "data_exfiltration",
+          "critical_vulnerability",
+          "server_backup",
+          "decryption_keys"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189123/security/critical-nginx-ui-flaw-cve-2026-27944-exposes-server-backups.html",
+          "https://securityonline.info/unauthenticated-nginx-ui-flaw-leaks-decryption-keys-and-server-secrets/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-28289",
+        "cvss": 9.8,
+        "product": "FreeScout",
+        "description": "Vulnérabilité d'exécution de code à distance (RCE) non authentifiée et sans clic dans la plateforme de help desk open source FreeScout, exploitable en envoyant un e-mail spécialement conçu à une boîte aux lettres FreeScout.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "FreeScout",
+          "RCE",
+          "unauthenticated",
+          "zero_click",
+          "email_attack"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-29058",
+        "cvss": 9.8,
+        "product": "AVideo Platform",
+        "description": "Vulnérabilité critique de type injection de commande (zero-click) permettant l'exécution de commandes arbitraires sur le système d'exploitation par des attaquants non authentifiés, menant au détournement de flux vidéo.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "AVideo",
+          "RCE",
+          "command_injection",
+          "zero_click",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/avideo-platform-vulnerability/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-3726, CVE-2026-3727, CVE-2026-3728, CVE-2026-3729, CVE-2026-3732, CVE-2026-3768, CVE-2026-3769",
+        "cvss": 9.0,
+        "product": "Tenda F453 (version 1.0.0.3)",
+        "description": "Plusieurs vulnérabilités de dépassement de tampon basé sur la pile (stack-based buffer overflow) dans le routeur Tenda F453. Elles permettent une exploitation à distance en manipulant des arguments spécifiques dans diverses fonctions (/goform/WrlclientSet, /goform/WrlExtraSet, /goform/exeCommand, /goform/PPTPDClient, /goform/setcfm, /goform/QuickIndex, /goform/webExcptypemanFilter). Les exploits sont publics.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Tenda_F453",
+          "buffer_overflow",
+          "RCE",
+          "remote_exploitation",
+          "network_device",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3769",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3768",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3732",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3729",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3728",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3727",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3726"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "Des hackers abusent des domaines DNS .arpa et d'IPv6 pour contourner les défenses anti-phishing",
+        "description": "Des acteurs malveillants exploitent les domaines spéciaux « .arpa » et les enregistrements DNS inverses IPv6 pour créer des campagnes de phishing plus efficaces, évitant les vérifications de réputation de domaine et les passerelles de sécurité e-mail. Ils utilisent des leurres d'offres de prix ou de notifications de compte, redirigeant les victimes via des systèmes de distribution de trafic vers des sites de phishing. Cette méthode est rendue difficile à détecter car les domaines .arpa manquent d'informations WHOIS et d'âge de domaine.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.002 - Spearphishing Link), Defense Evasion (T1036 - Masquerading)",
+        "analyse": "Cette technique montre une sophistication croissante des attaques de phishing, exploitant les aspects techniques de l'infrastructure internet pour échapper aux défenses. Cela pose un défi pour les solutions de sécurité traditionnelles qui se basent sur des indicateurs de réputation de domaine, nécessitant une analyse plus approfondie des requêtes DNS et des chaînes de redirection.",
+        "recommandations": "Mettre en œuvre des passerelles de sécurité e-mail avancées capables d'analyser les enregistrements DNS inverses IPv6 et CNAME. Surveiller les redirections suspectes. Sensibiliser les utilisateurs aux techniques de phishing sophistiquées. Les équipes de sécurité devraient également surveiller l'utilisation de plateformes DNS comme Hurricane Electric et Cloudflare pour des configurations anormales.",
+        "tags": [
+          "phishing",
+          "DNS",
+          "IPv6",
+          "defense_evasion",
+          "email_security",
+          "cybercrime",
+          "domain_reputation",
+          "subdomain_shadowing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-abuse-arpa-dns-and-ipv6-to-evade-phishing-defenses/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Un conseiller de la CJUE suggère aux banques de rembourser immédiatement les victimes de phishing",
+        "description": "Un conseiller général de la Cour de Justice de l'UE a émis un avis formel indiquant que les banques devraient rembourser immédiatement les titulaires de compte victimes de transactions non autorisées, même en cas de faute de leur part (ex: fraude par phishing). Le processus permettrait ensuite aux banques de recouvrer les pertes si la négligence grave du client est prouvée. Cette opinion n'est pas encore une décision finale, mais elle indique une direction potentielle pour la législation européenne.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "Cet avis a des implications juridiques et financières importantes pour les banques de l'UE, augmentant potentiellement leur responsabilité initiale face à la fraude. Il pourrait inciter les institutions financières à renforcer leurs systèmes de détection des fraudes et leurs programmes de sensibilisation des clients.",
+        "recommandations": "Les banques devraient revoir leurs procédures de remboursement et investir dans des technologies de détection de la fraude plus robustes. Les équipes juridiques devront se préparer à une possible évolution de la jurisprudence européenne sur la responsabilité des clients et des banques en cas d'incidents cyber.",
+        "tags": [
+          "legal",
+          "policy",
+          "phishing",
+          "financial_sector",
+          "fraud_detection",
+          "liability",
+          "EU_law"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/legal/eu-court-adviser-says-banks-must-immediately-refund-phishing-victims/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Des acteurs menaçants utilisent la logique de redirection OAuth pour distribuer des malwares",
+        "description": "Une campagne de phishing en cours abuse du mécanisme de redirection d'authentification OAuth pour éviter les défenses habituelles d'e-mail et de navigateur. Les attaquants ciblent les organisations gouvernementales et du secteur public, redirigeant les utilisateurs, à leur insu, de pages de connexion fiables vers leur propre infrastructure pour diffuser des malwares ou capturer des identifiants.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.002 - Spearphishing Link), Defense Evasion (T1559 - Adversary-in-the-Middle), Credential Access (T1559 - Adversary-in-the-Middle)",
+        "analyse": "L'exploitation de la logique de redirection OAuth représente une technique d'évasion sophistiquée, car elle exploite un mécanisme de confiance pour contourner les contrôles de sécurité. Cela rend les attaques particulièrement dangereuses pour les utilisateurs moins avertis et met en évidence la nécessité de défenses multicouches qui vont au-delà de la simple détection de domaines malveillants.",
+        "recommandations": "Mettre en œuvre l'authentification multifacteur (MFA) partout où cela est possible. Éduquer les utilisateurs sur les signes de redirections suspectes et la nécessité de vérifier l'URL finale avant d'entrer des identifiants. Utiliser des solutions de sécurité qui inspectent le comportement des redirections et les attributs des sessions OAuth. Surveiller les logs d'authentification pour des activités anormales.",
+        "tags": [
+          "phishing",
+          "OAuth",
+          "defense_evasion",
+          "credential_access",
+          "government",
+          "public_sector",
+          "malware_delivery",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Comment les assistants IA redéfinissent les enjeux de sécurité",
+        "description": "Les assistants IA autonomes (comme OpenClaw) introduisent de nouveaux défis de sécurité en ayant un accès étendu aux systèmes des utilisateurs. Les risques incluent des interfaces web mal configurées exposant des identifiants (clés API, secrets OAuth), des attaques de la chaîne d'approvisionnement via des référentiels de compétences (ClawHub), et des attaques par injection d'instructions (prompt injection) menant à des actions non autorisées ou à l'exfiltration de données. Des acteurs comme un groupe russophone ont déjà utilisé l'IA pour automatiser des attaques sophistiquées contre des milliers d'appareils FortiGate.",
+        "threat_actor": "Acteur russophone",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566 - Phishing), Defense Evasion (T1036 - Masquerading), Credential Access (T1559 - Adversary-in-the-Middle), Exfiltration (T1041 - Exfiltration Over C2 Channel), Supply Chain Compromise (T1195.002 - Compromise Software Supply Chain)",
+        "analyse": "L'intégration croissante des assistants IA autonomes dans les environnements professionnels crée une nouvelle surface d'attaque massive. La capacité de ces agents à agir de manière proactive et à accéder à des données sensibles, combinée à leur susceptibilité aux attaques par injection d'instructions, rend les organisations vulnérables à des menaces sans précédent. La dissolution des frontières entre données et code complexifie la détection des activités malveillantes.",
+        "recommandations": "Implémenter une isolation stricte des agents IA (machines virtuelles, réseaux isolés, règles de pare-feu restrictives). Appliquer le principe de la « trifecta létale » (accès aux données privées, exposition à du contenu non fiable, communication externe) pour gérer les risques. Développer des stratégies de sécurité spécifiques pour limiter la « fragilité de l'IA » et surveiller attentivement le comportement des agents. Évaluer et sécuriser les référentiels de compétences (skill repositories).",
+        "tags": [
+          "AI_security",
+          "prompt_injection",
+          "supply_chain",
+          "data_exfiltration",
+          "autonomous_agents",
+          "insider_threat",
+          "defense_evasion",
+          "privileged_access",
+          "FortiGate_exploitation"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Vaste opération de malware sur GitHub distribuant le stealer BoryptGrab",
+        "description": "Trend Micro a découvert une campagne distribuant l'info-stealer BoryptGrab via plus de 100 dépôts GitHub. Les attaquants utilisent des mots-clés SEO dans les fichiers README pour imiter des logiciels légitimes, redirigeant les victimes vers des pages de téléchargement malveillantes. BoryptGrab cible les données de navigateurs, portefeuilles de crypto-monnaies, informations système et fichiers utilisateurs. Des variantes incluent une backdoor PyInstaller (TunnesshClient) et un downloader Golang (HeaconLoad), avec des éléments russophones suggérant l'origine de l'acteur.",
+        "threat_actor": "Acteur russophone",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.001 - Spearphishing Attachment, T1189 - Drive-by Compromise), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Defense Evasion (T1027 - Obfuscated Files or Information, T1497 - Virtualization/Sandbox Evasion), Collection (T1005 - Data from Local System), Exfiltration (T1041 - Exfiltration Over C2 Channel)",
+        "analyse": "Cette campagne illustre une utilisation astucieuse de plateformes légitimes (GitHub) et de techniques de référencement pour distribuer des malwares à grande échelle. La sophistication de BoryptGrab, avec ses capacités d'info-stealer, de backdoor et d'anti-analyse, le rend particulièrement dangereux pour les utilisateurs ciblant les identifiants et les actifs financiers. L'implication potentielle d'acteurs russophones souligne la persistance de cette région dans la cybercriminalité.",
+        "recommandations": "Mettre en place des solutions EDR robustes. Sensibiliser les utilisateurs à la vérification des sources de téléchargement, en particulier pour les logiciels 'gratuits' ou 'craqués'. Bloquer l'accès aux dépôts GitHub malveillants connus. Appliquer des politiques de sécurité strictes sur les exécutions de scripts et l'installation de logiciels. Utiliser l'authentification multifacteur pour tous les comptes en ligne.",
+        "tags": [
+          "malware",
+          "info_stealer",
+          "GitHub",
+          "supply_chain",
+          "SEO_poisoning",
+          "cryptocurrency",
+          "data_exfiltration",
+          "Russian_threat_actor",
+          "defense_evasion",
+          "persistence",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189110/malware/massive-github-malware-operation-spreads-boryptgrab-stealer.html"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Claude Code Security vs. OpenAI Codex Security – La course aux armements de l'IA",
+        "description": "Cet article compare Claude Code Security d'Anthropic et OpenAI Codex Security, deux outils lancés début 2026 utilisant des grands modèles linguistiques (LLM) pour détecter et corriger les vulnérabilités logicielles. L'analyse technique met en évidence leur capacité à aller au-delà des analyseurs statiques traditionnels, marquant un tournant dans la sécurité des applications, où l'IA transforme la détection et la correction des failles de sécurité.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Non mentionnées",
+        "analyse": "L'émergence de ces outils IA souligne une évolution majeure dans la sécurité des applications. Ils promettent d'accélérer l'identification et la résolution des vulnérabilités, potentiellement en réduisant la charge sur les équipes AppSec. Cependant, cela pose également des questions sur la confiance dans les résultats de l'IA et la nécessité de l'expertise humaine pour la validation et le contexte.",
+        "recommandations": "Les équipes de développement et de sécurité des applications devraient évaluer l'intégration de ces outils IA dans leurs pipelines CI/CD pour améliorer la détection précoce des vulnérabilités. Néanmoins, une validation humaine reste essentielle pour les résultats critiques. Développer une expertise interne sur l'IA et ses implications pour la sécurité logicielle.",
+        "tags": [
+          "AI",
+          "application_security",
+          "vulnerability_detection",
+          "code_security",
+          "LLM",
+          "DevSecOps"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/03/08/claude-code-security-vs-openai-codex-security-ai-arms-race/"
+        ],
+        "date": "2026-03-09"
+      }
+    ]
+  },
+  "EN": {
+    "Analyse transversale": {
+      "analyse": "The current cybersecurity landscape is marked by a convergence of sophisticated threats, technological innovations exploited by attackers, and regulatory challenges. AI assistants, while boosting productivity, have opened vast attack surfaces, making systems vulnerable to malicious prompt injections and software supply chain compromises. This 'AI fragility' necessitates a rethinking of security strategies, including agent isolation and increased monitoring of autonomous interactions. Simultaneously, phishing techniques are evolving, with the abuse of special DNS domains (.arpa, IPv6) and the weaponization of OAuth redirection logic to bypass traditional defenses. Massive malware campaigns, like BoryptGrab, leverage legitimate platforms (GitHub) and SEO poisoning to distribute sophisticated stealers, targeting credentials and cryptocurrencies, with a potential Russian-speaking actor origin. The commercialization of zero-day exploits for critical flaws (e.g., in Windows RDS) highlights a dynamic and dangerous underground market. Numerous critical vulnerabilities (Nginx UI, AVideo, IceWarp, FreeScout, Tenda F453) with high CVSS scores continue to emerge, often with public or actively exploited exploits, requiring proactive patch management. Geopolitically, cybersecurity is an arena of hybrid warfare, with Russia conducting operations against Poland and the EU/NATO, and Iran-linked APTs targeting US critical sectors. Tensions around the semiconductor supply chain (Nexperia/China) also show how political disputes can have global cyber and economic repercussions. Data breaches (Makimura, PGF Life, Murata Manufacturing) continue to affect various sectors. In parallel, legal decisions (CJEU on refunding phishing victims) are redefining the responsibilities of financial institutions in the face of cyber incidents. In conclusion, threats are increasingly complex, autonomous, and interconnected, exacerbated by AI and geopolitical tensions, demanding an adaptive, multi-layered, and resilience-focused security approach.",
+      "date": "2026-03-09"
+    },
+    "Synthèse des acteurs malveillants": [
+      {
+        "nom": "Financially motivated actors (using Coruna exploit kit)",
+        "secteur": "Multi-sector, Individuals (via iOS mobile devices)",
+        "modop": "Deployment of a spy-grade iOS exploit kit (Coruna), whose use evolved from commercial surveillance to state-linked espionage, and finally to financial cybercrime.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "exploit_kit",
+          "iOS",
+          "mobile_security",
+          "cybercrime",
+          "espionage",
+          "financially_motivated"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "Russian-speaking threat actor",
+        "secteur": "Multi-sector, individuals (targeting credentials and cryptocurrencies)",
+        "modop": "Distributing the BoryptGrab info-stealer via over 100 malicious GitHub repositories using SEO poisoning techniques. Deploying backdoors (TunnesshClient, HeaconLoad) and employing anti-analysis features. Using commercial AI services to automate and scale attacks (FortiGate compromise).",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "financially_motivated",
+          "info_stealer",
+          "malware",
+          "github",
+          "seo_poisoning",
+          "russia",
+          "ai_augmented_attack"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189110/malware/massive-github-malware-operation-spreads-boryptgrab-stealer.html",
+          "https://krebsonsecurity.com/2026/03/how-ai-ass",
+          "assistants-are-moving-the-security-goalposts/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "Iran-linked APT",
+        "secteur": "US critical sectors (government, infrastructure)",
+        "modop": "Using new backdoors for persistent intrusions into networks of US organizations, potentially linked to rising geopolitical tensions in the Middle East.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "state_sponsored",
+          "iran",
+          "apt",
+          "cyber_espionage",
+          "backdoor",
+          "critical_infrastructure"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "nom": "NightSpire",
+        "secteur": "Industry",
+        "modop": "Ransomware attacks, leading to operational disruption and recovery efforts.",
+        "tags": [
+          "actor",
+          "threat_actor",
+          "ransomware",
+          "data_encryption",
+          "extortion"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/makimura-recovers-from-ransomware-nightspire-claims-attack/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse de l'actualité géopolitique": [
+      {
+        "secteur": "Technology, semiconductors",
+        "theme": "Geopolitical tensions, supply chain, technological sovereignty",
+        "description": "China's Ministry of Commerce warned of further disruption to the global semiconductor supply chain after Dutch chipmaker Nexperia cut access to some of its systems (SAP, Microsoft 365) for Chinese staff. This action follows a dispute over the illegal transfer of critical chipmaking technology to Nexperia's Chinese parent company, Wingtech Technologies.",
+        "tags": [
+          "geopolitic",
+          "supply_chain",
+          "semiconductors",
+          "China",
+          "Netherlands",
+          "technological_souverainty"
+        ],
+        "sources": [
+          "https://go.theregister.com/i/cfa/https://www.theregister.com/2026/03/09/asia_tech_news_roundup/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Government, critical infrastructure (US)",
+        "theme": "State-sponsored APT, cyber espionage, geopolitical tensions",
+        "description": "An Iran-linked hacking group has been active within the networks of several US organizations since early February, raising concerns about broader cyber operations connected to escalating geopolitical tensions in the Middle East. The group is using new backdoors.",
+        "tags": [
+          "geopolitic",
+          "Iran",
+          "APT",
+          "cyber_espionage",
+          "critical_infrastructure",
+          "United_States",
+          "Middle_East",
+          "backdoor"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Defense, critical infrastructure",
+        "theme": "Hybrid warfare, state-sponsored cyberattacks, disinformation",
+        "description": "Poland is facing an escalating hybrid war led by Russia and Belarus since the invasion of Ukraine. This includes influence operations, cyberattacks (increased fivefold on military networks between 2021 and 2022, and tens of thousands on civilian structures), sabotage, and disinformation, aimed at destabilizing NATO and the EU.",
+        "tags": [
+          "geopolitic",
+          "hybrid_warfare",
+          "cyberattacks",
+          "Russia",
+          "Poland",
+          "Belarus",
+          "NATO",
+          "EU",
+          "critical_infrastructure",
+          "disinformation"
+        ],
+        "sources": [
+          "https://www.lemonde.fr/international/article/2026/03/08/la-pologne-en-premiere-ligne-face-a-la-guerre-hybride-menee-par-la-russie_6669955_3210.html"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Information, social policy",
+        "theme": "Disinformation, hybrid warfare, conservative values, demographic policy",
+        "description": "The article analyzes pro-Kremlin propaganda portraying Russia as a women's paradise, combining conservatism and feminism, in contrast to the West. It exposes the realities of intrusive demographic policies, the decriminalization of some forms of domestic abuse, and the promotion of traditional gender roles, serving soft power objectives and internal consolidation amidst war and demographic decline.",
+        "tags": [
+          "geopolitic",
+          "disinformation",
+          "Russia",
+          "soft_power",
+          "women_rights",
+          "propaganda",
+          "hybrid_warfare"
+        ],
+        "sources": [
+          "https://euvsdisinfo.eu/russia-a-womens-paradise/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse des violations de données": [
+      {
+        "secteur": "Industry",
+        "victime": "Makimura",
+        "description": "Recovery completed following a ransomware attack by the NightSpire group.",
+        "tags": [
+          "violation",
+          "breach",
+          "ransomware",
+          "industry",
+          "NightSpire"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/makimura-recovers-from-ransomware-nightspire-claims-attack/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Electronics, Manufacturing",
+        "victime": "Murata Manufacturing",
+        "description": "Unauthorized access revealed potential reading of third-party and internal company information.",
+        "tags": [
+          "violation",
+          "breach",
+          "unauthorized_access",
+          "data_exfiltration",
+          "electronics",
+          "murata_manufacturing"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/murata-manufacturing-discloses-breach-third-party-data-risk/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "secteur": "Financial Services",
+        "victime": "PGF Life (Prudential Life)",
+        "description": "Data exfiltration incident at PGF Life, a Prudential Life affiliate.",
+        "tags": [
+          "violation",
+          "breach",
+          "data_exfiltration",
+          "financial_services",
+          "prudential_life"
+        ],
+        "sources": [
+          "https://rocket-boys.co.jp/security-measures-lab/pgf-life-data-exfiltration-scandal-prudential-group/"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Synthèse des vulnérabilités": [
+      {
+        "cve_id": "CVE-2025-14500",
+        "cvss": 9.8,
+        "product": "IceWarp",
+        "description": "Critical unauthenticated Remote Code Execution (RCE) vulnerability in the IceWarp business communication and collaboration platform, allowing attackers to gain unauthorized access to unpatched servers. Over 1,200 internet-facing instances remain vulnerable.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "IceWarp",
+          "RCE",
+          "unauthenticated",
+          "critical_vulnerability",
+          "software_vulnerability"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-20122",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnerability in Cisco Catalyst SD-WAN Manager, actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Cisco",
+          "SD_WAN",
+          "exploited",
+          "network_device"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-20128",
+        "cvss": 8.0,
+        "product": "Cisco Catalyst SD-WAN Manager",
+        "description": "Vulnerability in the Data Collection Agent (DCA) feature of Cisco Catalyst SD-WAN Manager, allowing an authenticated, local attacker to gain DCA user privileges. Actively exploited.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Cisco",
+          "SD_WAN",
+          "privilege_escalation",
+          "exploited",
+          "network_device"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-21533",
+        "cvss": 9.0,
+        "product": "Windows Remote Desktop Services (RDS)",
+        "description": "Zero-day privilege escalation vulnerability in Windows Remote Desktop Services, actively exploited and sold on dark web forums. Allows an authenticated attacker with standard user rights to gain local administrative control.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Windows",
+          "Remote_Desktop_Services",
+          "privilege_escalation",
+          "zero_day",
+          "dark_web"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/windows-remote-desktop-services-0-day/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-27944",
+        "cvss": 9.8,
+        "product": "Nginx UI",
+        "description": "Critical vulnerability allowing unauthenticated attackers to download and decrypt full Nginx UI server backups, exposing sensitive data (credentials, session tokens, SSL private keys, Nginx configurations) due to an unauthenticated /api/backup endpoint and the disclosure of encryption keys in HTTP response headers.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Nginx_UI",
+          "RCE",
+          "authentication",
+          "data_exfiltration",
+          "critical_vulnerability",
+          "server_backup",
+          "decryption_keys"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189123/security/critical-nginx-ui-flaw-cve-2026-27944-exposes-server-backups.html",
+          "https://securityonline.info/unauthenticated-nginx-ui-flaw-leaks-decryption-keys-and-server-secrets/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-28289",
+        "cvss": 9.8,
+        "product": "FreeScout",
+        "description": "Unauthenticated, zero-click Remote Code Execution (RCE) vulnerability in the open-source help desk platform FreeScout, exploitable by sending a specially crafted email to a FreeScout mailbox.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "FreeScout",
+          "RCE",
+          "unauthenticated",
+          "zero_click",
+          "email_attack"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-29058",
+        "cvss": 9.8,
+        "product": "AVideo Platform",
+        "description": "Critical zero-click command injection vulnerability allowing unauthenticated attackers to execute arbitrary operating system commands on the targeted server, leading to stream hijacking.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "AVideo",
+          "RCE",
+          "command_injection",
+          "zero_click",
+          "unauthenticated"
+        ],
+        "sources": [
+          "https://cybersecuritynews.com/avideo-platform-vulnerability/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "cve_id": "CVE-2026-3726, CVE-2026-3727, CVE-2026-3728, CVE-2026-3729, CVE-2026-3732, CVE-2026-3768, CVE-2026-3769",
+        "cvss": 9.0,
+        "product": "Tenda F453 (version 1.0.0.3)",
+        "description": "Multiple stack-based buffer overflow vulnerabilities in the Tenda F453 router. They allow remote exploitation by manipulating specific arguments in various functions (/goform/WrlclientSet, /goform/WrlExtraSet, /goform/exeCommand, /goform/PPTPDClient, /goform/setcfm, /goform/QuickIndex, /goform/webExcptypemanFilter). Exploits are publicly available.",
+        "tags": [
+          "vulnerabilite",
+          "vulnerability",
+          "Tenda_F453",
+          "buffer_overflow",
+          "RCE",
+          "remote_exploitation",
+          "network_device",
+          "public_exploit"
+        ],
+        "sources": [
+          "https://cvefeed.io/vuln/detail/CVE-2026-3769",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3768",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3732",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3729",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3728",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3727",
+          "https://cvefeed.io/vuln/detail/CVE-2026-3726"
+        ],
+        "date": "2026-03-09"
+      }
+    ],
+    "Articles": [
+      {
+        "title": "EU Court Adviser Says Banks Must Immediately Refund Phishing Victims",
+        "description": "Athanasios Rantos, the Advocate General of the Court of Justice of the EU, issued a formal opinion suggesting banks must immediately refund account holders affected by unauthorized transactions, even if the customer is at fault (e.g., phishing fraud). The process allows banks to later seek recovery if gross negligence is proven. This opinion is not a final ruling but indicates a potential direction for EU law.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Not mentioned",
+        "analyse": "This opinion has significant legal and financial implications for EU banks, potentially increasing their initial liability for fraud. It may incentivize financial institutions to enhance their fraud detection systems and customer awareness programs.",
+        "recommandations": "Banks should review their refund procedures and invest in more robust fraud detection technologies. Legal teams should prepare for potential shifts in European jurisprudence regarding customer and bank liability in cyber incidents.",
+        "tags": [
+          "legal",
+          "policy",
+          "phishing",
+          "financial_sector",
+          "fraud_detection",
+          "liability",
+          "EU_law"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/legal/eu-court-adviser-says-banks-must-immediately-refund-phishing-victims/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Hackers abuse .arpa DNS and ipv6 to evade phishing defenses",
+        "description": "Threat actors are abusing special-use \".arpa\" domains and IPv6 reverse DNS records, often via hijacked CNAMEs and subdomain shadowing on platforms like Hurricane Electric and Cloudflare, to evade email security and domain reputation checks in phishing campaigns. Lures include prize/survey rewards, redirecting victims through traffic distribution systems to phishing sites. This method is hard to detect as .arpa domains lack WHOIS info and domain age.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.002 - Spearphishing Link), Defense Evasion (T1036 - Masquerading)",
+        "analyse": "This technique demonstrates increasing sophistication in phishing attacks, exploiting technical aspects of internet infrastructure to bypass defenses. This poses a challenge for traditional security solutions relying on domain reputation indicators, requiring a deeper analysis of DNS queries and redirection chains.",
+        "recommandations": "Implement advanced email security gateways capable of analyzing IPv6 reverse DNS and CNAME records. Monitor for suspicious redirections. Educate users about sophisticated phishing techniques. Security teams should also monitor for abnormal configurations on DNS platforms like Hurricane Electric and Cloudflare.",
+        "tags": [
+          "phishing",
+          "DNS",
+          "IPv6",
+          "defense_evasion",
+          "email_security",
+          "cybercrime",
+          "domain_reputation",
+          "subdomain_shadowing"
+        ],
+        "sources": [
+          "https://www.bleepingcomputer.com/news/security/hackers-abuse-arpa-dns-and-ipv6-to-evade-phishing-defenses/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Threat actors weaponize OAuth redirection logic to deliver malware",
+        "description": "An ongoing phishing campaign abuses the OAuth authentication redirection mechanism to avoid triggering conventional email and browser defenses. Attackers target government and public-sector organizations, unwittingly redirecting users from trusted login pages to their own infrastructure to serve malware or capture login credentials.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.002 - Spearphishing Link), Defense Evasion (T1559 - Adversary-in-the-Middle), Credential Access (T1559 - Adversary-in-the-Middle)",
+        "analyse": "The exploitation of OAuth redirection logic represents a sophisticated evasion technique, as it leverages a trusted mechanism to bypass security controls. This makes the attacks particularly dangerous for less tech-savvy users and highlights the need for multi-layered defenses that go beyond simple detection of malicious domains.",
+        "recommandations": "Implement multi-factor authentication (MFA) wherever possible. Educate users on signs of suspicious redirects and the need to verify the final URL before entering credentials. Use security solutions that inspect redirection behavior and OAuth session attributes. Monitor authentication logs for anomalous activity.",
+        "tags": [
+          "phishing",
+          "OAuth",
+          "defense_evasion",
+          "credential_access",
+          "government",
+          "public_sector",
+          "malware_delivery",
+          "social_engineering"
+        ],
+        "sources": [
+          "https://www.helpnetsecurity.com/2026/03/08/week-in-review-weaponized-oauth-redirection-logic-delivers-malware-patch-tuesday-forecast/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "How AI Assistants are Moving the Security Goalposts",
+        "description": "Autonomous AI assistants (like OpenClaw) introduce new security challenges by having extensive access to user systems. Risks include misconfigured web interfaces exposing credentials (API keys, OAuth secrets), supply chain attacks via skill repositories (ClawHub), and prompt injection attacks leading to unauthorized actions or data exfiltration. Actors like a Russian-speaking group have already used AI to automate sophisticated attacks against thousands of FortiGate devices.",
+        "threat_actor": "Russian-speaking threat actor",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566 - Phishing), Defense Evasion (T1036 - Masquerading), Credential Access (T1559 - Adversary-in-the-Middle), Exfiltration (T1041 - Exfiltration Over C2 Channel), Supply Chain Compromise (T1195.002 - Compromise Software Supply Chain)",
+        "analyse": "The increasing integration of autonomous AI assistants into professional environments creates a massive new attack surface. The ability of these agents to act proactively and access sensitive data, combined with their susceptibility to prompt injection attacks, leaves organizations vulnerable to unprecedented threats. The dissolution of boundaries between data and code complicates the detection of malicious activities.",
+        "recommandations": "Implement strict isolation for AI agents (virtual machines, isolated networks, restrictive firewall rules). Apply the 'lethal trifecta' principle (private data access, exposure to untrusted content, external communication) to manage risks. Develop specific security strategies to limit 'AI fragility' and carefully monitor agent behavior. Evaluate and secure skill repositories.",
+        "tags": [
+          "AI_security",
+          "prompt_injection",
+          "supply_chain",
+          "data_exfiltration",
+          "autonomous_agents",
+          "insider_threat",
+          "defense_evasion",
+          "privileged_access",
+          "FortiGate_exploitation"
+        ],
+        "sources": [
+          "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Massive GitHub malware operation spreads BoryptGrab stealer",
+        "description": "Trend Micro uncovered a campaign distributing the BoryptGrab information stealer via over 100 GitHub repositories. Attackers use SEO keywords in README files to mimic legitimate software, redirecting victims to malicious download pages. BoryptGrab targets browser data, cryptocurrency wallets, system information, and user files. Variants include a PyInstaller backdoor (TunnesshClient) and a Golang downloader (HeaconLoad), with Russian language elements suggesting the actor's origin.",
+        "threat_actor": "Russian-speaking threat actor",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Initial Access (T1566.001 - Spearphishing Attachment, T1189 - Drive-by Compromise), Execution (T1059 - Command and Scripting Interpreter), Persistence (T1547 - Boot or Logon Autostart Execution), Defense Evasion (T1027 - Obfuscated Files or Information, T1497 - Virtualization/Sandbox Evasion), Collection (T1005 - Data from Local System), Exfiltration (T1041 - Exfiltration Over C2 Channel)",
+        "analyse": "This campaign illustrates a cunning use of legitimate platforms (GitHub) and SEO techniques to distribute malware on a large scale. BoryptGrab's sophistication, with its info-stealer, backdoor, and anti-analysis capabilities, makes it particularly dangerous for users, targeting credentials and financial assets. The potential involvement of Russian-speaking actors highlights the persistence of this region in cybercrime.",
+        "recommandations": "Implement robust EDR solutions. Educate users on verifying download sources, especially for 'free' or 'crapped' software. Block access to known malicious GitHub repositories. Enforce strict security policies on script execution and software installation. Use multi-factor authentication for all online accounts.",
+        "tags": [
+          "malware",
+          "info_stealer",
+          "GitHub",
+          "supply_chain",
+          "SEO_poisoning",
+          "cryptocurrency",
+          "data_exfiltration",
+          "Russian_threat_actor",
+          "defense_evasion",
+          "persistence",
+          "privilege_escalation"
+        ],
+        "sources": [
+          "https://securityaffairs.com/189110/malware/massive-github-malware-operation-spreads-boryptgrab-stealer.html"
+        ],
+        "date": "2026-03-09"
+      },
+      {
+        "title": "Claude Code Security vs. OpenAI Codex Security – AI Arms Race",
+        "description": "This article compares Anthropic's Claude Code Security and OpenAI Codex Security, two tools launched in early 2026 utilizing Large Language Models (LLMs) to detect and fix software vulnerabilities. The technical analysis highlights their ability to go beyond traditional static analyzers, marking a turning point in application security where AI transforms the detection and remediation of security flaws.",
+        "threat_actor": "Non applicable",
+        "indicator_of_compromise": {
+          "ASN": [],
+          "CVE": [],
+          "DOMAIN": [],
+          "EMAIL": [],
+          "FILE_HASH_SHA1": [],
+          "FILE_HASH_SHA256": [],
+          "IPv4": [],
+          "IPv6": [],
+          "MITRE_ATT&CK": [],
+          "URL": [],
+          "YARA_RULE": []
+        },
+        "mitre_ttps": "Not mentioned",
+        "analyse": "The emergence of these AI tools signifies a major evolution in application security. They promise to accelerate vulnerability identification and resolution, potentially reducing the burden on AppSec teams. However, this also raises questions about trust in AI outputs and the necessity of human expertise for validation and context.",
+        "recommandations": "Application development and security teams should evaluate integrating these AI tools into their CI/CD pipelines to enhance early vulnerability detection. Nevertheless, human validation remains critical for high-impact findings. Develop internal expertise on AI and its implications for software security.",
+        "tags": [
+          "AI",
+          "application_security",
+          "vulnerability_detection",
+          "code_security",
+          "LLM",
+          "DevSecOps"
+        ],
+        "sources": [
+          "https://thecyberthrone.in/2026/03/08/claude-code-security-vs-openai-codex-security-ai-arms-race/"
+        ],
+        "date": "2026-03-09"
+      }
+    ]
+  }
+}
