@@ -1,0 +1,3485 @@
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "id": "bundle--6f283970-1920-5c26-ae29-602073458076",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "created": "2026-03-10T09:44:38Z",
+      "modified": "2026-03-10T09:44:38Z",
+      "name": "VigilIntel",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "extension-definition",
+      "spec_version": "2.1",
+      "id": "extension-definition--f8d78575-edfd-406e-8e84-6162a8450f5b",
+      "name": "PAP",
+      "description": "This defines PAP as a STIX extension",
+      "created": "2022-10-01T00:00:00.000Z",
+      "modified": "2022-10-01T00:00:00.000Z",
+      "schema": "https://github.com/oasis-open/cti-stix-common-objects/tree/master/extension-definition-specifications/pap",
+      "version": "1.0.0",
+      "extension_types": [
+        "property-extension"
+      ]
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92",
+      "created": "2022-10-01T00:00:00.000Z",
+      "name": "PAP:CLEAR",
+      "extensions": {
+        "extension-definition--f8d78575-edfd-406e-8e84-6162a8450f5b": {
+          "extension_type": "property-extension",
+          "pap": "clear"
+        }
+      }
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--efb8876d-7887-54d9-bf06-2a6261153109",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les articles mettent en évidence diverses menaces cybersécurité et risques géopolitiques, y compris les vulnérabilités des logiciels, les attaques de phishing et l'impact des conflits géopolitiques sur la cybersécurité. Les organisations doivent prioriser les correctifs, renforcer la surveillance et améliorer les plans de réponse aux incidents.\n\n**EN:** The articles highlight various cybersecurity threats and geopolitical risks, including vulnerabilities in software, phishing attacks, and the impact of geopolitical conflicts on cybersecurity. Organizations should prioritize patching, enhance monitoring, and strengthen incident response plans.\n",
+      "object_refs": [],
+      "abstract": "Strategic | Daily brief (2026-03-10)",
+      "labels": [
+        "strategic",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--903d0663-c1ae-541b-abb0-5eb8fda60d8f",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les articles discutent de l'impact des conflits géopolitiques, tels que la guerre en Ukraine et les tensions au Moyen-Orient, sur la cybersécurité. Ils soulignent la nécessité pour les organisations d'évaluer les risques géopolitiques et de renforcer leur résilience.\n\n**EN:** Articles discuss the impact of geopolitical conflicts, such as the war in Ukraine and tensions in the Middle East, on cybersecurity. They highlight the need for organizations to assess geopolitical risks and enhance their resilience.\n\n## Context\n- Date: 2026-03-10\n- Sector: Géopolitique / Geopolitics\n- Theme: Impact des conflits géopolitiques sur la cybersécurité / Impact of Geopolitical Conflicts on Cybersecurity\n\n## Tags\ngeopolitics, cybersecurity, conflict, resilience\n\n## Sources\n- https://euvsdisinfo.eu/a-historians-big-picture-russias-war-against-ukraine-and-how-to-end-it-in-a-right-way/\n- https://www.iris-france.org/quand-la-violence-trumpiste-gangrene-loccident/\n- https://www.iris-france.org/iran-10-jours-de-guerre-ou-en-est-on/\n- https://www.iris-france.org/le-sud-global-une-couverture-infomationnelle-au-service-de-linfluence-mediatique-de-pekin-en-afrique-de-louest-francophone/\n- https://www.rusi.org/explore-our-research/publications/commentary/if-nato-cannot-protect-everyone-it-cannot-defend-anyone\n- https://www.rusi.org/explore-our-research/publications/commentary/iraqs-top-shia-cleric-denounces-war-against-iran-implies-moderation\n",
+      "object_refs": [],
+      "abstract": "Geopolitical | Impact des conflits géopolitiques sur la cybersécurité (2026-03-10)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://euvsdisinfo.eu/a-historians-big-picture-russias-war-against-ukraine-and-how-to-end-it-in-a-right-way/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.iris-france.org/quand-la-violence-trumpiste-gangrene-loccident/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.iris-france.org/iran-10-jours-de-guerre-ou-en-est-on/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.iris-france.org/le-sud-global-une-couverture-infomationnelle-au-service-de-linfluence-mediatique-de-pekin-en-afrique-de-louest-francophone/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.rusi.org/explore-our-research/publications/commentary/if-nato-cannot-protect-everyone-it-cannot-defend-anyone"
+        },
+        {
+          "source_name": "source",
+          "url": "https://www.rusi.org/explore-our-research/publications/commentary/iraqs-top-shia-cleric-denounces-war-against-iran-implies-moderation"
+        }
+      ],
+      "labels": [
+        "geopolitics",
+        "cybersecurity",
+        "conflict",
+        "resilience",
+        "geopolitical",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "UNKNOWN",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "labels": [
+        "threat-actor",
+        "data breach",
+        "ericsson",
+        "telecommunications",
+        "usa",
+        "service provider",
+        "identity theft",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--686f76f3-3a0d-5158-9ef9-f6bc75ed0440",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Ericsson Inc.",
+      "identity_class": "organization",
+      "labels": [
+        "victim",
+        "data breach",
+        "ericsson",
+        "telecommunications",
+        "usa",
+        "service provider",
+        "identity theft",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--55bd6d8f-6ba3-5a01-924f-7936e672dd16",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "identity--686f76f3-3a0d-5158-9ef9-f6bc75ed0440",
+      "labels": [
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--89581936-f5fd-52c0-94eb-f4a34276ac3e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Ericsson Inc. a subi une violation de données affectant les employés et les clients après qu'un fournisseur de services a été piraté entre le 17 avril et le 22 avril 2025. La violation a impliqué le vol d'informations personnelles, y compris les noms, adresses, numéros de sécurité sociale et détails financiers, affectant au moins 4 377 personnes au Texas.\n\n**EN:** Ericsson Inc. experienced a data breach impacting employees and customers after a service provider was hacked between April 17 and April 22, 2025. The breach involved the theft of personal information, including names, addresses, Social Security Numbers, and financial details, affecting at least 4,377 individuals in Texas.\n\n## Context\n- Date: 2026-03-09\n- Victim: Ericsson Inc.\n- Threat actor: UNKNOWN\n- Sector: Télécommunications / Telecommunications\n\n## Tags\ndata breach, ericsson, telecommunications, usa, service provider, identity theft\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/ericsson-us-discloses-data-breach-after-service-provider-hack/\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "identity--686f76f3-3a0d-5158-9ef9-f6bc75ed0440"
+      ],
+      "abstract": "Breach | Ericsson Inc. (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/ericsson-us-discloses-data-breach-after-service-provider-hack/"
+        }
+      ],
+      "labels": [
+        "data breach",
+        "ericsson",
+        "telecommunications",
+        "usa",
+        "service provider",
+        "identity theft",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--23020822-168b-5118-a84c-248653f8a8b4",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Anubis ransomware group",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "labels": [
+        "threat-actor",
+        "ransomware",
+        "data theft",
+        "cyberattack",
+        "anubis",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--2c9a2f59-f585-5737-9b54-6a2fb90bf82e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "AkzoNobel",
+      "identity_class": "organization",
+      "labels": [
+        "victim",
+        "ransomware",
+        "data theft",
+        "cyberattack",
+        "anubis",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e358e7b2-1eb1-5be9-85d6-fc7dfc02f612",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--23020822-168b-5118-a84c-248653f8a8b4",
+      "target_ref": "identity--2c9a2f59-f585-5737-9b54-6a2fb90bf82e",
+      "labels": [
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--7a0b8231-7ef6-54d3-b0e0-402ff000c1ee",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** AkzoNobel a confirmé une cyberattaque sur un site aux États-Unis, avec le groupe de ransomware Anubis affirmant avoir volé 170 Go de données.\n\n**EN:** AkzoNobel confirmed a cyberattack on a US site, with the Anubis ransomware group claiming to have stolen 170 GB of data.\n\n## Context\n- Date: 2026-03-09\n- Victim: AkzoNobel\n- Threat actor: Anubis ransomware group\n- Sector: Fabrication / Manufacturing\n\n## Tags\nransomware, data theft, cyberattack, anubis\n\n## Sources\n- https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/\n",
+      "object_refs": [
+        "threat-actor--23020822-168b-5118-a84c-248653f8a8b4",
+        "identity--2c9a2f59-f585-5737-9b54-6a2fb90bf82e"
+      ],
+      "abstract": "Breach | AkzoNobel (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/"
+        }
+      ],
+      "labels": [
+        "ransomware",
+        "data theft",
+        "cyberattack",
+        "anubis",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--52f99c60-f945-5a54-9f79-42b5fbf9462f",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "LexisNexis",
+      "identity_class": "organization",
+      "labels": [
+        "victim",
+        "data breach",
+        "lexisnexis",
+        "legal",
+        "regulatory",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a8d9b979-08ca-597c-8545-fbbe089c8443",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "identity--52f99c60-f945-5a54-9f79-42b5fbf9462f",
+      "labels": [
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--794073e6-6d0f-5196-9d06-2b26e956c734",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** LexisNexis a subi une violation de données avec des attaquants affirmant avoir volé 3,9 millions d'enregistrements.\n\n**EN:** LexisNexis suffered a breach with attackers claiming to have stolen 3.9 million records.\n\n## Context\n- Date: 2026-03-09\n- Victim: LexisNexis\n- Threat actor: UNKNOWN\n- Sector: Juridique et réglementaire / Legal and Regulatory\n\n## Tags\ndata breach, lexisnexis, legal, regulatory\n\n## Sources\n- https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "identity--52f99c60-f945-5a54-9f79-42b5fbf9462f"
+      ],
+      "abstract": "Breach | LexisNexis (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/"
+        }
+      ],
+      "labels": [
+        "data breach",
+        "lexisnexis",
+        "legal",
+        "regulatory",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--7eec0db7-e14a-596c-a62e-90227392fc09",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Wikimedia Foundation",
+      "identity_class": "organization",
+      "labels": [
+        "victim",
+        "cyberattack",
+        "wikimedia",
+        "javascript worm",
+        "non-profit",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6a256784-b243-5216-bcfe-712b4059514c",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "identity--7eec0db7-e14a-596c-a62e-90227392fc09",
+      "labels": [
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--bded8150-d262-5860-9fc7-f53e81363627",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** La Wikimedia Foundation a été confrontée à un ver JavaScript auto-propagateur affectant 3 996 pages.\n\n**EN:** Wikimedia Foundation faced a self-propagating JavaScript worm impacting 3,996 pages.\n\n## Context\n- Date: 2026-03-09\n- Victim: Wikimedia Foundation\n- Threat actor: UNKNOWN\n- Sector: Sans but lucratif / Non-profit\n\n## Tags\ncyberattack, wikimedia, javascript worm, non-profit\n\n## Sources\n- https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "identity--7eec0db7-e14a-596c-a62e-90227392fc09"
+      ],
+      "abstract": "Breach | Wikimedia Foundation (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/"
+        }
+      ],
+      "labels": [
+        "cyberattack",
+        "wikimedia",
+        "javascript worm",
+        "non-profit",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--94ba5a54-7ba7-5b1e-9fa1-577bd008eeb8",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TriZetto Provider Solutions",
+      "identity_class": "organization",
+      "labels": [
+        "victim",
+        "data breach",
+        "healthcare",
+        "trizetto",
+        "patient data",
+        "ssn",
+        "insurance information",
+        "identity theft",
+        "cybercrime",
+        "2025",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--15a3ccf8-ba0f-50f4-8ef4-4692e46196cf",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "targets",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "identity--94ba5a54-7ba7-5b1e-9fa1-577bd008eeb8",
+      "labels": [
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--40befe41-fb21-5dd2-ab5d-55ffb56a63e8",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** TriZetto Provider Solutions a divulgué une violation de données affectant plus de 3,4 millions de personnes, avec des données exposées incluant les informations d'assurance et médicales.\n\n**EN:** TriZetto Provider Solutions disclosed a breach affecting over 3.4 million people, with exposed data including insurance and medical information.\n\n## Context\n- Date: 2026-03-09\n- Victim: TriZetto Provider Solutions\n- Threat actor: UNKNOWN\n- Sector: Santé / Healthcare\n\n## Tags\ndata breach, healthcare, trizetto, patient data, ssn, insurance information, identity theft, cybercrime, 2025\n\n## Sources\n- https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/\n- https://securityaffairs.com/189149/data-breach/cognizants-trizetto-provider-solutions-data-breach-impacted-over-3-4-million-patients.html\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "identity--94ba5a54-7ba7-5b1e-9fa1-577bd008eeb8"
+      ],
+      "abstract": "Breach | TriZetto Provider Solutions (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://research.checkpoint.com/2026/9th-march-threat-intelligence-report/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/189149/data-breach/cognizants-trizetto-provider-solutions-data-breach-impacted-over-3-4-million-patients.html"
+        }
+      ],
+      "labels": [
+        "data breach",
+        "healthcare",
+        "trizetto",
+        "patient data",
+        "ssn",
+        "insurance information",
+        "identity theft",
+        "cybercrime",
+        "2025",
+        "breach",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--0a7b277e-8b0f-5d89-ba14-8ac9f5475c1e",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-0953",
+      "description": "CVE-2026-0953 affecte toutes les versions de Themeum Tutor LMS Pro pour WordPress, permettant aux attaquants de contourner l'authentification en utilisant des jetons OAuth et de potentiellement compromettre les comptes administrateurs. La vulnérabilité provient d'une mise en œuvre défectueuse de la connexion sociale.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-0953"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0953"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-0953"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--e1c46a49-6569-5f25-a520-b0262aa48d6e",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-0953 affecte toutes les versions de Themeum Tutor LMS Pro pour WordPress, permettant aux attaquants de contourner l'authentification en utilisant des jetons OAuth et de potentiellement compromettre les comptes administrateurs. La vulnérabilité provient d'une mise en œuvre défectueuse de la connexion sociale.\n\n**EN:** CVE-2026-0953 affects all versions of Themeum Tutor LMS Pro for WordPress, allowing attackers to bypass authentication using OAuth tokens and potentially compromise admin accounts. The vulnerability stems from a flawed social login implementation.\n\n## Details\n- CVE: CVE-2026-0953\n- Vendor: Themeum\n- Product: Themeum Tutor LMS Pro\n- CVSS: 9.8\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://infosec.exchange/@offseq/116203359237268165\n- https://cvefeed.io/vuln/detail/CVE-2026-0953\n",
+      "object_refs": [
+        "vulnerability--0a7b277e-8b0f-5d89-ba14-8ac9f5475c1e"
+      ],
+      "abstract": "Vulnerability | CVE-2026-0953 (2026-03-10)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://infosec.exchange/@offseq/116203359237268165"
+        },
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-0953"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--c542b3e7-dfd8-5365-bc5e-7ed7049fc9e6",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-27685",
+      "description": "CVE-2026-27685 est une vulnérabilité critique dans SAP NetWeaver Enterprise Portal Administration, permettant à un utilisateur privilégié de télécharger un contenu malveillant qui, lors de la désérialisation, peut compromettre la confidentialité, l'intégrité et la disponibilité du système hôte.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-27685"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27685"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-27685"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--01e7b214-43b9-5f80-8421-5dae3009e652",
+      "created": "2026-03-10T00:00:00Z",
+      "modified": "2026-03-10T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-27685 est une vulnérabilité critique dans SAP NetWeaver Enterprise Portal Administration, permettant à un utilisateur privilégié de télécharger un contenu malveillant qui, lors de la désérialisation, peut compromettre la confidentialité, l'intégrité et la disponibilité du système hôte.\n\n**EN:** CVE-2026-27685 is a critical vulnerability in SAP NetWeaver Enterprise Portal Administration, allowing a privileged user to upload malicious content that, upon deserialization, can compromise the confidentiality, integrity, and availability of the host system.\n\n## Details\n- CVE: CVE-2026-27685\n- Vendor: SAP\n- Product: SAP NetWeaver Enterprise Portal Administration\n- CVSS: 9.1\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-27685\n",
+      "object_refs": [
+        "vulnerability--c542b3e7-dfd8-5365-bc5e-7ed7049fc9e6"
+      ],
+      "abstract": "Vulnerability | CVE-2026-27685 (2026-03-10)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-27685"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--ca034812-e50c-59ba-9095-aaf2021ee02e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-30921",
+      "description": "CVE-2026-30921 est une vulnérabilité critique d'exécution de code à distance (RCE) dans les moniteurs synthétiques OneUptime, permettant aux utilisateurs de projet à privilèges faibles d'exécuter du code arbitraire sur l'hôte/le conteneur de sonde via du code Playwright personnalisé.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-30921"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30921"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-30921"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--99bf367b-e412-5674-afca-d00e2ba052ca",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-30921 est une vulnérabilité critique d'exécution de code à distance (RCE) dans les moniteurs synthétiques OneUptime, permettant aux utilisateurs de projet à privilèges faibles d'exécuter du code arbitraire sur l'hôte/le conteneur de sonde via du code Playwright personnalisé.\n\n**EN:** CVE-2026-30921 is a critical Remote Code Execution (RCE) vulnerability in OneUptime Synthetic Monitors, allowing low-privileged project users to execute arbitrary code on the probe host/container via custom Playwright code.\n\n## Details\n- CVE: CVE-2026-30921\n- Vendor: OneUptime\n- Product: OneUptime Synthetic Monitor\n- CVSS: 9.9\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-30921\n",
+      "object_refs": [
+        "vulnerability--ca034812-e50c-59ba-9095-aaf2021ee02e"
+      ],
+      "abstract": "Vulnerability | CVE-2026-30921 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-30921"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--fcd878ed-223c-53bf-bfd6-aadeb1f8d013",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-30920",
+      "description": "CVE-2026-30920 est une vulnérabilité de contrôle d'accès brisé dans OneUptime, permettant une liaison de projet non autorisée et un accès au dépôt. La vulnérabilité provient de la confiance accordée aux valeurs contrôlées par l'attaquant dans les rappels d'application GitHub et du manque de vérifications d'autorisation sur les points de terminaison associés.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-30920"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30920"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-30920"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--41743a31-03bd-5976-a092-35db541a39c5",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-30920 est une vulnérabilité de contrôle d'accès brisé dans OneUptime, permettant une liaison de projet non autorisée et un accès au dépôt. La vulnérabilité provient de la confiance accordée aux valeurs contrôlées par l'attaquant dans les rappels d'application GitHub et du manque de vérifications d'autorisation sur les points de terminaison associés.\n\n**EN:** CVE-2026-30920 is a broken access control vulnerability in OneUptime, allowing unauthorized project binding and repository access. The vulnerability arises from trusting attacker-controlled values in GitHub App callbacks and lacking authorization checks on related endpoints.\n\n## Details\n- CVE: CVE-2026-30920\n- Vendor: OneUptime\n- Product: OneUptime\n- CVSS: 8.6\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-30920\n",
+      "object_refs": [
+        "vulnerability--fcd878ed-223c-53bf-bfd6-aadeb1f8d013"
+      ],
+      "abstract": "Vulnerability | CVE-2026-30920 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-30920"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--50cca209-de7f-5a7b-9890-3401d1327703",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-30887",
+      "description": "CVE-2026-30887 est une vulnérabilité critique dans OneUptime, permettant l'exécution de code à distance (RCE) en raison de code JavaScript fourni par l'utilisateur non nettoyé exécuté dans un module Node.js. La vulnérabilité permet aux attaquants de contourner le sandboxing, d'obtenir l'accès au processus et de potentiellement compromettre l'ensemble du cluster.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-30887"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30887"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-30887"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--77026bd2-fcbd-5b64-b4ba-f01b663f7ccc",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-30887 est une vulnérabilité critique dans OneUptime, permettant l'exécution de code à distance (RCE) en raison de code JavaScript fourni par l'utilisateur non nettoyé exécuté dans un module Node.js. La vulnérabilité permet aux attaquants de contourner le sandboxing, d'obtenir l'accès au processus et de potentiellement compromettre l'ensemble du cluster.\n\n**EN:** CVE-2026-30887 is a critical vulnerability in OneUptime, allowing remote code execution (RCE) due to unsanitized user-provided JavaScript code executed within a Node.js module. The vulnerability enables attackers to bypass sandboxing, gain process access, and potentially compromise the entire cluster.\n\n## Details\n- CVE: CVE-2026-30887\n- Vendor: OneUptime\n- Product: OneUptime\n- CVSS: 9.9\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-30887\n",
+      "object_refs": [
+        "vulnerability--50cca209-de7f-5a7b-9890-3401d1327703"
+      ],
+      "abstract": "Vulnerability | CVE-2026-30887 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-30887"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--ab78fa3a-eb06-55f0-a927-672a2781b198",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-30869",
+      "description": "CVE-2026-30869 est une vulnérabilité de traversée de chemin dans SiYuan, permettant aux attaquants de lire des fichiers arbitraires, y compris des données de configuration sensibles comme les jetons API et les codes d'authentification.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-30869"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30869"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-30869"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--978501e8-7eeb-5790-a655-1202765b20a2",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-30869 est une vulnérabilité de traversée de chemin dans SiYuan, permettant aux attaquants de lire des fichiers arbitraires, y compris des données de configuration sensibles comme les jetons API et les codes d'authentification.\n\n**EN:** CVE-2026-30869 is a path traversal vulnerability in SiYuan, allowing attackers to read arbitrary files, including sensitive configuration data like API tokens and authentication codes.\n\n## Details\n- CVE: CVE-2026-30869\n- Vendor: SiYuan\n- Product: SiYuan\n- CVSS: 9.3\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-30869\n",
+      "object_refs": [
+        "vulnerability--ab78fa3a-eb06-55f0-a927-672a2781b198"
+      ],
+      "abstract": "Vulnerability | CVE-2026-30869 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-30869"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--33f9364c-4cc1-5d1a-b49f-2ba4c6d53944",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-30862",
+      "description": "CVE-2026-30862 est une vulnérabilité critique de type XSS stocké dans les versions d'Appsmith antérieures à 1.96, permettant à un attaquant disposant d'un compte utilisateur régulier de prendre potentiellement le contrôle complet d'un compte administrateur.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-30862"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30862"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-30862"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--f4d772ae-1e19-5cf8-bdd5-b02b2f8959e2",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-30862 est une vulnérabilité critique de type XSS stocké dans les versions d'Appsmith antérieures à 1.96, permettant à un attaquant disposant d'un compte utilisateur régulier de prendre potentiellement le contrôle complet d'un compte administrateur.\n\n**EN:** CVE-2026-30862 is a critical Stored XSS vulnerability in Appsmith versions prior to 1.96, allowing an attacker with a regular user account to potentially gain full administrative account takeover.\n\n## Details\n- CVE: CVE-2026-30862\n- Vendor: Appsmith\n- Product: Appsmith\n- CVSS: 9.0\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://cvefeed.io/vuln/detail/CVE-2026-30862\n",
+      "object_refs": [
+        "vulnerability--33f9364c-4cc1-5d1a-b49f-2ba4c6d53944"
+      ],
+      "abstract": "Vulnerability | CVE-2026-30862 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-30862"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--613915a9-0383-578f-bbf6-4a0168b8ddc5",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-24281",
+      "description": "CVE-2026-24281 est une vulnérabilité dans Apache Zookeeper, pouvant potentiellement entraîner des violations de la confidentialité des données et une contournement des politiques de sécurité.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24281"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24281"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-24281"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--e9515b6e-dbd8-5d5f-9704-82f88ebea1d1",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-24281 est une vulnérabilité dans Apache Zookeeper, pouvant potentiellement entraîner des violations de la confidentialité des données et une contournement des politiques de sécurité.\n\n**EN:** CVE-2026-24281 is a vulnerability in Apache Zookeeper, potentially leading to data confidentiality breaches and security policy circumvention.\n\n## Details\n- CVE: CVE-2026-24281\n- Vendor: Apache\n- Product: Apache Zookeeper\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0251/\n",
+      "object_refs": [
+        "vulnerability--613915a9-0383-578f-bbf6-4a0168b8ddc5"
+      ],
+      "abstract": "Vulnerability | CVE-2026-24281 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0251/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--0760d9c9-3802-50f1-9ce7-32d9ed2d8783",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-24308",
+      "description": "CVE-2026-24308 est une vulnérabilité dans Apache Zookeeper, pouvant potentiellement entraîner des violations de la confidentialité des données et une contournement des politiques de sécurité.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-24308"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24308"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-24308"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--8485a324-ac95-53b2-99d1-d132b6306f72",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-24308 est une vulnérabilité dans Apache Zookeeper, pouvant potentiellement entraîner des violations de la confidentialité des données et une contournement des politiques de sécurité.\n\n**EN:** CVE-2026-24308 is a vulnerability in Apache Zookeeper, potentially leading to data confidentiality breaches and security policy circumvention.\n\n## Details\n- CVE: CVE-2026-24308\n- Vendor: Apache\n- Product: Apache Zookeeper\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0251/\n",
+      "object_refs": [
+        "vulnerability--0760d9c9-3802-50f1-9ce7-32d9ed2d8783"
+      ],
+      "abstract": "Vulnerability | CVE-2026-24308 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0251/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--7fb0519d-7498-5365-bb20-2d2a4089cf08",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3536",
+      "description": "CVE-2026-3536 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3536"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3536"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3536"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--ab5ea56c-170e-5817-944d-1631258bc860",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3536 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3536 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3536\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--7fb0519d-7498-5365-bb20-2d2a4089cf08"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3536 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--ef801675-1a19-541a-ad88-f204ab783ff9",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3538",
+      "description": "CVE-2026-3538 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3538"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3538"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3538"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--23aca8dc-a143-59f5-81f7-f88ded5b53d9",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3538 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3538 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3538\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--ef801675-1a19-541a-ad88-f204ab783ff9"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3538 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--8e13727c-128b-5f6e-bee5-06d363c964bb",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3539",
+      "description": "CVE-2026-3539 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3539"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3539"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3539"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--ea124ec1-0f7a-59d3-a00f-7e84f2301ed4",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3539 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3539 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3539\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--8e13727c-128b-5f6e-bee5-06d363c964bb"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3539 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--118ef31e-f49b-574c-a02d-b0d091896805",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3540",
+      "description": "CVE-2026-3540 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3540"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3540"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3540"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--f7786f85-0837-5888-bcec-711be0aaf8a6",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3540 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3540 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3540\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--118ef31e-f49b-574c-a02d-b0d091896805"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3540 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--6fefb346-790c-554a-8410-cebb7c92be9a",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3541",
+      "description": "CVE-2026-3541 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3541"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3541"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3541"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--1a16c7b5-a162-5cb9-87b8-69a8bdc0ac5e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3541 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3541 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3541\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--6fefb346-790c-554a-8410-cebb7c92be9a"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3541 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--be95ba59-aed5-5c06-96ad-2b65e652b2df",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3542",
+      "description": "CVE-2026-3542 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3542"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3542"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3542"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--429ab174-5023-54ae-8eed-54ab6069f129",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3542 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3542 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3542\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--be95ba59-aed5-5c06-96ad-2b65e652b2df"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3542 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--26d49e70-0ae8-5db7-aa68-2007b0bb4cd6",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3543",
+      "description": "CVE-2026-3543 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3543"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3543"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3543"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--2b6ffa60-293d-5825-91d8-f7d1666fa617",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3543 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3543 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3543\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--26d49e70-0ae8-5db7-aa68-2007b0bb4cd6"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3543 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--9f8260d2-dffc-5600-a3a3-bc72b349a018",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3544",
+      "description": "CVE-2026-3544 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3544"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3544"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3544"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--bc2d8073-b11a-532e-9009-7d0ca2e49bbf",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3544 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3544 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3544\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--9f8260d2-dffc-5600-a3a3-bc72b349a018"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3544 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--ff23cf7a-43f6-5897-9dbf-2cb59a336c15",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CVE-2026-3545",
+      "description": "CVE-2026-3545 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-3545"
+        },
+        {
+          "source_name": "nvd",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3545"
+        },
+        {
+          "source_name": "circl",
+          "url": "https://vulnerability.circl.lu/vuln/CVE-2026-3545"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--52a69ac6-8667-5c70-86e9-a5c25867b9e9",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** CVE-2026-3545 est une vulnérabilité dans Microsoft Edge, permettant potentiellement à un attaquant de déclencher une faille de sécurité non spécifiée.\n\n**EN:** CVE-2026-3545 is a vulnerability in Microsoft Edge, potentially allowing an attacker to trigger an unspecified security issue.\n\n## Details\n- CVE: CVE-2026-3545\n- Vendor: Microsoft\n- Product: Microsoft Edge\n- CVSS: (unknown)\n- EPSS: (unknown)\n- CISA KEV: FALSE\n\n## Sources\n- https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/\n",
+      "object_refs": [
+        "vulnerability--ff23cf7a-43f6-5897-9dbf-2cb59a336c15"
+      ],
+      "abstract": "Vulnerability | CVE-2026-3545 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0253/"
+        }
+      ],
+      "labels": [
+        "vulnerability",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6c10ac7f-4da1-5cbe-99ef-928471b085a7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "T1566.001",
+      "labels": [
+        "attack-pattern",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--314d4d58-40f5-52b0-b439-e08cb274e7f9",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "attack-pattern--6c10ac7f-4da1-5cbe-99ef-928471b085a7",
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--faa284fc-3448-5d43-8eb3-849f30e7a3f8",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "T1566.002",
+      "labels": [
+        "attack-pattern",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--299b48ce-6614-5a8f-9f6e-993112bde6b2",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "attack-pattern--faa284fc-3448-5d43-8eb3-849f30e7a3f8",
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--610005de-0ace-5124-b4e7-1c56417dcdda",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "T1189",
+      "labels": [
+        "attack-pattern",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--91d4dc8f-f75f-59e9-9c37-24af499d3d1d",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "attack-pattern--610005de-0ace-5124-b4e7-1c56417dcdda",
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0640ed07-653e-5351-bd7c-68b9bdac98c2",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "T1078.004",
+      "labels": [
+        "attack-pattern",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078.004"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e17f3ebd-8e86-51c7-b37f-5c04d8fa9ec7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "attack-pattern--0640ed07-653e-5351-bd7c-68b9bdac98c2",
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9ce1af54-17a8-58d1-9b3d-6af8187aeb3d",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "T1082",
+      "labels": [
+        "attack-pattern",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ad97c4b-c7cd-5373-8842-3018f247f9a6",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "attack-pattern--9ce1af54-17a8-58d1-9b3d-6af8187aeb3d",
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "spec_version": "2.1",
+      "id": "domain-name--1de44f84-f609-5869-a673-eb6218c022f7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "value": "usa.com",
+      "labels": [
+        "observable",
+        "domain",
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--095e2239-8ca5-5669-80aa-a745067dd731",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Le Federal Bureau of Investigation (FBI) a émis un avertissement concernant des attaques de phishing où des criminels usurpent l'identité de responsables de villes et de comtés des États-Unis pour cibler des entreprises et des particuliers cherchant à obtenir des permis de planification et de zonage. Les attaquants utilisent des informations publiquement disponibles pour rendre leurs messages légitimes et demandent des paiements par virement bancaire, paiement pair-à-pair ou cryptomonnaie.\n\n**EN:** The Federal Bureau of Investigation (FBI) has issued a warning about phishing attacks where criminals impersonate U.S. city and county officials to target businesses and individuals seeking planning and zoning permits. Attackers use publicly available information to make their messages appear legitimate and request payments via wire transfer, peer-to-peer payment, or cryptocurrency.\n\n## Actor / TTPs / Tools\n- Threat actor: UNKNOWN\n- MITRE TTPs: T1566.001, T1566.002, T1189, T1078.004, T1082\n- Tools: (none)\n\n## Analysis\n**FR:** Les organisations doivent prioriser la formation des employés pour reconnaître les emails de phishing, en insistant sur la vérification des demandes par le biais de canaux officiels. Renforcer les processus de gestion des risques des fournisseurs pour garantir la sécurité des canaux de communication des tiers. Mettre en place une authentification à deux facteurs pour tous les systèmes et comptes critiques. Renforcer la surveillance du trafic email pour détecter les schémas suspects et les demandes de paiement inhabituelles. Développer une campagne de sensibilisation du public pour éduquer les citoyens et les entreprises sur cette arnaque spécifique.\n\n**EN:** Organizations should prioritize employee training on recognizing phishing emails, emphasizing verification of requests through official channels. Strengthen vendor risk management processes to ensure third-party communication channels are secure. Implement multi-factor authentication for all critical systems and accounts. Enhance monitoring of email traffic for suspicious patterns and unusual payment requests. Develop a public awareness campaign to educate citizens and businesses about this specific scam.\n\n## Recommendations\n- **FR:** Mettre en place des règles de filtrage des emails pour bloquer les emails provenant de domaines non gouvernementaux ressemblant à des officiels.\n  **EN:** Implement email filtering rules to block emails from non-government domains resembling official ones.\n- **FR:** Déployer un bac à sable pour analyser les pièces jointes PDF suspectes pour détecter du contenu malveillant.\n  **EN:** Deploy sandboxing to analyze suspicious PDF attachments for malicious content.\n- **FR:** Renforcer les règles SIEM pour détecter les demandes de paiement inhabituelles et les activités de virement bancaire.\n  **EN:** Enhance SIEM rules to detect unusual payment requests and wire transfer activity.\n- **FR:** Surveiller les forums publics et les réseaux sociaux pour les discussions sur les arnaques aux permis.\n  **EN:** Monitor public forums and social media for discussions about permit scams.\n- **FR:** Mettre en place un processus pour que les employés puissent facilement signaler les emails de phishing suspects.\n  **EN:** Implement a process for employees to easily report suspected phishing emails.\n- **FR:** Renforcer les serveurs de messagerie pour prévenir l'usurpation et l'accès non autorisé.\n  **EN:** Harden email servers to prevent spoofing and unauthorized access.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: usa.com\n- IPv4: (none)\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\nphishing, zoning permits, government impersonation, fraud, fbi, ic3, email scam, public awareness, cybercrime, financial fraud\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/fbi-warns-of-phishing-attacks-impersonating-us-city-county-officials/\n- https://securityaffairs.com/189165/cyber-crime/fbi-alert-scammers-target-zoning-permit-applicants.html\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "attack-pattern--6c10ac7f-4da1-5cbe-99ef-928471b085a7",
+        "attack-pattern--faa284fc-3448-5d43-8eb3-849f30e7a3f8",
+        "attack-pattern--610005de-0ace-5124-b4e7-1c56417dcdda",
+        "attack-pattern--0640ed07-653e-5351-bd7c-68b9bdac98c2",
+        "attack-pattern--9ce1af54-17a8-58d1-9b3d-6af8187aeb3d",
+        "domain-name--1de44f84-f609-5869-a673-eb6218c022f7"
+      ],
+      "abstract": "Threat | Attaques de phishing se faisant passer pour des responsables de villes et de comtés des États-Unis (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-of-phishing-attacks-impersonating-us-city-county-officials/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/189165/cyber-crime/fbi-alert-scammers-target-zoning-permit-applicants.html"
+        }
+      ],
+      "labels": [
+        "phishing",
+        "zoning permits",
+        "government impersonation",
+        "fraud",
+        "fbi",
+        "ic3",
+        "email scam",
+        "public awareness",
+        "cybercrime",
+        "financial fraud",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--a5d90cf0-ec47-53c1-8399-25f1cecea567",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "BlackBasta",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "labels": [
+        "threat-actor",
+        "phishing",
+        "microsoft teams",
+        "malware",
+        "a0backdoor",
+        "social engineering",
+        "remote access",
+        "dll sideloading",
+        "sandbox detection",
+        "dns mx queries",
+        "blackbasta",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--0f32aa58-87c8-584b-bb7f-756048fc2a24",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les pirates ciblent les organisations financières et de santé en contactant les employés sur Microsoft Teams, les trompant pour qu'ils accordent un accès à distance via Quick Assist afin de déployer le malware A0Backdoor. Les attaquants utilisent l'ingénierie sociale, en envoyant d'abord du spam puis en se faisant passer pour le personnel informatique pour gagner la confiance et initier des sessions à distance. Le malware utilise le chargement latéral de DLL, la détection de bac à sable et les requêtes DNS MX pour la communication de commande et de contrôle, et est lié au gang de ransomware BlackBasta dissous.\n\n**EN:** Hackers are targeting financial and healthcare organizations by contacting employees on Microsoft Teams, tricking them into granting remote access via Quick Assist to deploy the A0Backdoor malware. Attackers use social engineering, initially sending spam and then posing as IT staff to gain trust and initiate remote sessions. The malware utilizes DLL sideloading, sandbox detection, and DNS MX queries for command-and-control communication, and is linked to the dissolved BlackBasta ransomware gang.\n\n## Actor / TTPs / Tools\n- Threat actor: BlackBasta\n- MITRE TTPs: (none)\n- Tools: (none)\n\n## Analysis\n**FR:** Les organisations doivent prioriser la formation des employés pour reconnaître les tentatives de phishing et les tactiques d'ingénierie sociale. Mettre en place des contrôles d'accès stricts pour les outils d'assistance à distance comme Quick Assist. Renforcer la surveillance des activités de session à distance et déployer des solutions de détection et de réponse aux points d'extrémité (EDR) pour détecter et contenir des logiciels malveillants comme A0Backdoor.\n\n**EN:** Organizations should prioritize employee training on recognizing phishing attempts and social engineering tactics. Implement strict access controls for remote assistance tools like Quick Assist. Enhance monitoring of remote session activities and deploy endpoint detection and response (EDR) solutions to detect and contain malware like A0Backdoor.\n\n## Recommendations\n- **FR:** Effectuer régulièrement des simulations de phishing pour sensibiliser les employés.\n  **EN:** Conduct regular phishing simulations to raise employee awareness.\n- **FR:** Restreindre l'utilisation de Quick Assist et d'autres outils d'assistance à distance aux seuls personnels autorisés.\n  **EN:** Restrict the use of Quick Assist and other remote assistance tools to authorized personnel only.\n- **FR:** Mettre en place une segmentation réseau pour limiter le mouvement latéral en cas de compromission.\n  **EN:** Implement network segmentation to limit lateral movement in case of a compromise.\n- **FR:** Déployer des solutions EDR pour surveiller et répondre aux activités suspectes.\n  **EN:** Deploy EDR solutions to monitor and respond to suspicious activities.\n- **FR:** Examiner et mettre à jour les plans de réponse aux incidents pour traiter les éventuelles infections par des logiciels malveillants.\n  **EN:** Review and update incident response plans to address potential malware infections.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\nphishing, microsoft teams, malware, a0backdoor, social engineering, remote access, dll sideloading, sandbox detection, dns mx queries, blackbasta\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/microsoft-teams-phishing-targets-employees-with-backdoors/\n",
+      "object_refs": [
+        "threat-actor--a5d90cf0-ec47-53c1-8399-25f1cecea567"
+      ],
+      "abstract": "Threat | Phishing Microsoft Teams cible les employés avec le malware A0Backdoor (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-teams-phishing-targets-employees-with-backdoors/"
+        }
+      ],
+      "labels": [
+        "phishing",
+        "microsoft teams",
+        "malware",
+        "a0backdoor",
+        "social engineering",
+        "remote access",
+        "dll sideloading",
+        "sandbox detection",
+        "dns mx queries",
+        "blackbasta",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--4bafc2ae-96ae-5ef1-b3ce-5eeea038d3d3",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les pirates exploitent de plus en plus les vulnérabilités nouvellement divulguées dans les logiciels tiers pour obtenir un accès initial aux environnements cloud, avec une fenêtre d'attaque se réduisant à quelques jours seulement. Les répondeurs aux incidents ont déterminé que les exploits de bugs étaient le principal vecteur d'accès dans 44,5 % des intrusions investiguées, tandis que les identifiants étaient responsables de 27 %. Les vulnérabilités courantes incluent les failles d'exécution de code à distance (RCE) comme celles de React2Shell (CVE-2025-55182) et XWiki (CVE-2025-24893). Les acteurs de la menace exploitent les identités compromises par le biais de phishing et de vishing, ciblant souvent le personnel du help desk informatique. Les objectifs des attaques impliquent fréquemment une exfiltration silencieuse de données et une persistance à long terme, avec des acteurs parrainés par l'État maintenant l'accès pendant plus d'un an et demi.\n\n**EN:** Hackers are increasingly exploiting newly disclosed vulnerabilities in third-party software to gain initial access to cloud environments, with the window for attacks shrinking to just days. Incident responders determined that bug exploits were the primary access vector in 44.5% of investigated intrusions, while credentials were responsible for 27%. Common vulnerabilities include remote code execution (RCE) flaws like those in React2Shell (CVE-2025-55182) and XWiki (CVE-2025-24893). Threat actors are leveraging compromised identities through phishing and vishing, often targeting IT help desk staff. Attack objectives frequently involve silent data exfiltration and long-term persistence, with state-sponsored actors maintaining access for over a year and a half.\n\n## Actor / TTPs / Tools\n- Threat actor: UNKNOWN\n- MITRE TTPs: (none)\n- Tools: (none)\n\n## Analysis\n**FR:** Les organisations doivent prioriser la gestion des vulnérabilités et la mise à jour des correctifs, en se concentrant sur les logiciels tiers. Renforcer les mesures de sécurité des comptes et mettre en place des protections de credentials améliorées. Développer des capacités de réponse automatisée aux incidents pour répondre aux délais d'attaque accélérés. Renforcer la formation des employés pour reconnaître et éviter les attaques de phishing et de vishing. Mettre en place des mécanismes de protection des données pour prévenir les menaces internes et l'exfiltration des données.\n\n**EN:** Organizations should prioritize vulnerability management and patching, focusing on third-party software. Strengthen account security measures and implement enhanced credential protections. Develop automated incident response capabilities to address the accelerated attack timelines. Enhance employee training to recognize and avoid phishing and vishing attacks. Implement data protection mechanisms to prevent insider threats and data exfiltration.\n\n## Recommendations\n- **FR:** Mettre en place des processus de détection et de correction automatisés des vulnérabilités.\n  **EN:** Implement automated vulnerability scanning and patching processes.\n- **FR:** Renforcer les règles SIEM pour détecter les tentatives d'exploitation des vulnérabilités connues.\n  **EN:** Enhance SIEM rules to detect exploitation attempts of known vulnerabilities.\n- **FR:** Renforcer l'authentification à deux facteurs (MFA) et appliquer le principe du moindre privilège.\n  **EN:** Strengthen multi-factor authentication (MFA) and enforce least privilege access.\n- **FR:** Surveiller le trafic réseau pour détecter les transferts de données sortantes inhabituels.\n  **EN:** Monitor network traffic for unusual outbound data transfers.\n- **FR:** Mettre en place des solutions de prévention des pertes de données (DLP) pour détecter et prévenir l'exfiltration des données.\n  **EN:** Implement data loss prevention (DLP) solutions to detect and prevent data exfiltration.\n- **FR:** Renforcer les environnements Kubernetes et les pipelines CI/CD.\n  **EN:** Harden Kubernetes environments and CI/CD pipelines.\n- **FR:** Examiner et sécuriser les configurations OpenID Connect (OIDC).\n  **EN:** Review and secure OpenID Connect (OIDC) configurations.\n- **FR:** Mettre en place une journalisation et une audit robustes dans les environnements cloud.\n  **EN:** Implement robust logging and auditing across cloud environments.\n- **FR:** Effectuer régulièrement des formations de sensibilisation à la sécurité pour les développeurs.\n  **EN:** Conduct regular security awareness training for developers.\n- **FR:** Employer des techniques de chasse aux menaces pour identifier proactivement les activités malveillantes.\n  **EN:** Employ threat hunting techniques to proactively identify malicious activity.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\ncve-2025-55182, cve-2025-24893, rce, cloud, vulnerability, phishing, vishing, rondodox, unc1549, supply chain\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/google-cloud-attacks-exploit-flaws-more-than-weak-credentials/\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d"
+      ],
+      "abstract": "Threat | Google : Les attaques sur le cloud exploitent davantage les failles que les identifiants faibles (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/google-cloud-attacks-exploit-flaws-more-than-weak-credentials/"
+        }
+      ],
+      "labels": [
+        "cve-2025-55182",
+        "cve-2025-24893",
+        "rce",
+        "cloud",
+        "vulnerability",
+        "phishing",
+        "vishing",
+        "rondodox",
+        "unc1549",
+        "supply chain",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--0bb9f433-536c-5579-b03a-8c882d15c4d3",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Des pirates soutenus par l'État russe mènent des campagnes de phishing ciblant les responsables gouvernementaux, les militaires et les journalistes pour accéder à des messages sensibles via Signal et WhatsApp. Les attaques impliquent l'usurpation d'identité des chatbots de support de Signal et l'exploitation des fonctionnalités de liaison des appareils pour obtenir le contrôle du compte et surveiller les messages. Les agences de renseignement néerlandaises conseillent aux utilisateurs de vérifier les liens et les codes QR, de réviser les appareils liés et d'éviter de partager des informations sensibles via les applications de messagerie.\n\n**EN:** Russian state-sponsored hackers are conducting phishing campaigns targeting government officials, military personnel, and journalists to access sensitive messages via Signal and WhatsApp. The attacks involve impersonating Signal support chatbots and exploiting device linking features to gain account control and monitor messages. Dutch intelligence agencies advise users to verify links and QR codes, review linked devices, and avoid sharing sensitive information via messaging apps.\n\n## Actor / TTPs / Tools\n- Threat actor: UNKNOWN\n- MITRE TTPs: (none)\n- Tools: (none)\n\n## Analysis\n**FR:** Les organisations doivent prioriser la formation des employés pour reconnaître les tentatives de phishing et les tactiques d'ingénierie sociale. Mettre en place des contrôles d'accès stricts pour les applications de messagerie et appliquer l'authentification à deux facteurs (MFA) pour tous les comptes utilisateurs. Renforcer la surveillance des activités de compte et déployer des solutions de détection et de réponse aux points d'extrémité (EDR) pour détecter et contenir les éventuelles compromissions.\n\n**EN:** Organizations should prioritize employee training on recognizing phishing attempts and social engineering tactics. Implement strict access controls for messaging apps and enforce multi-factor authentication (MFA) for all user accounts. Enhance monitoring of account activities and deploy endpoint detection and response (EDR) solutions to detect and contain potential compromises.\n\n## Recommendations\n- **FR:** Effectuer régulièrement des simulations de phishing pour sensibiliser les employés.\n  **EN:** Conduct regular phishing simulations to raise employee awareness.\n- **FR:** Restreindre l'utilisation de Signal et WhatsApp aux seuls personnels autorisés.\n  **EN:** Restrict the use of Signal and WhatsApp to authorized personnel only.\n- **FR:** Mettre en place une segmentation réseau pour limiter le mouvement latéral en cas de compromission.\n  **EN:** Implement network segmentation to limit lateral movement in case of a compromise.\n- **FR:** Déployer des solutions EDR pour surveiller et répondre aux activités suspectes.\n  **EN:** Deploy EDR solutions to monitor and respond to suspicious activities.\n- **FR:** Examiner et mettre à jour les plans de réponse aux incidents pour traiter les éventuelles détournements de compte.\n  **EN:** Review and update incident response plans to address potential account hijacking.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\nsignal, whatsapp, phishing, account hijacking, social engineering, device linking, qr codes, sensitive information, messaging apps, russian hackers\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/dutch-govt-warns-of-signal-whatsapp-account-hijacking-attacks/\n- https://securityaffairs.com/189156/intelligence/russia-linked-hackers-target-signal-whatsapp-of-officials-globally.html\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d"
+      ],
+      "abstract": "Threat | Le gouvernement néerlandais met en garde contre les attaques de détournement de comptes Signal et WhatsApp (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/dutch-govt-warns-of-signal-whatsapp-account-hijacking-attacks/"
+        },
+        {
+          "source_name": "source",
+          "url": "https://securityaffairs.com/189156/intelligence/russia-linked-hackers-target-signal-whatsapp-of-officials-globally.html"
+        }
+      ],
+      "labels": [
+        "signal",
+        "whatsapp",
+        "phishing",
+        "account hijacking",
+        "social engineering",
+        "device linking",
+        "qr codes",
+        "sensitive information",
+        "messaging apps",
+        "russian hackers",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--ef72b02c-84ee-5457-b6f6-f4942e770911",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "ShinyHunters",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "labels": [
+        "threat-actor",
+        "salesforce",
+        "data theft",
+        "shinyhunters",
+        "aurainspector",
+        "guest user permissions",
+        "public apis",
+        "aura event monitoring",
+        "misconfiguration",
+        "extortion",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--787637e9-34ec-5a8a-8931-c99c2c2e874f",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "AuraInspector",
+      "labels": [
+        "tool",
+        "salesforce",
+        "data theft",
+        "shinyhunters",
+        "aurainspector",
+        "guest user permissions",
+        "public apis",
+        "aura event monitoring",
+        "misconfiguration",
+        "extortion",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--01a26821-3872-585e-9e16-06fd3212cd60",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--ef72b02c-84ee-5457-b6f6-f4942e770911",
+      "target_ref": "tool--787637e9-34ec-5a8a-8931-c99c2c2e874f",
+      "labels": [
+        "salesforce",
+        "data theft",
+        "shinyhunters",
+        "aurainspector",
+        "guest user permissions",
+        "public apis",
+        "aura event monitoring",
+        "misconfiguration",
+        "extortion",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "spec_version": "2.1",
+      "id": "ipv4-addr--e08bd19a-eece-56c3-b8be-8a4e7b82740d",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "value": "120.0.0.0",
+      "labels": [
+        "observable",
+        "ipv4",
+        "salesforce",
+        "data theft",
+        "shinyhunters",
+        "aurainspector",
+        "guest user permissions",
+        "public apis",
+        "aura event monitoring",
+        "misconfiguration",
+        "extortion",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--1fa4cfa1-6150-5d63-8c48-7a0b63451796",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les pirates exploitent les plateformes Salesforce Experience Cloud mal configurées pour voler des données, avec le gang d'extorsion ShinyHunters revendiquant la responsabilité des attaques en cours. Les attaquants utilisent une version modifiée de l'outil AuraInspector de Mandiant pour scanner les instances vulnérables, exploitant les configurations incorrectes des profils d'utilisateurs invités qui permettent un accès non autorisé aux données. Salesforce conseille aux clients d'auditer les permissions des utilisateurs invités, de désactiver l'accès des invités aux API publiques et de réviser les journaux de surveillance des événements Aura.\n\n**EN:** Hackers are exploiting misconfigured Salesforce Experience Cloud platforms to steal data, with the ShinyHunters extortion gang claiming responsibility for ongoing attacks. Attackers are using a modified version of Mandiant's AuraInspector tool to scan for vulnerable instances, exploiting guest user profile misconfigurations that allow unauthorized data access. Salesforce advises customers to audit guest user permissions, disable guest access to public APIs, and review Aura Event Monitoring logs.\n\n## Actor / TTPs / Tools\n- Threat actor: ShinyHunters\n- MITRE TTPs: (none)\n- Tools: AuraInspector\n\n## Analysis\n**FR:** Les organisations utilisant Salesforce doivent prioriser l'audit des permissions des utilisateurs invités et la désactivation de l'accès des invités inutile aux API publiques. Mettre en place des contrôles d'accès stricts et appliquer le principe du moindre privilège. Renforcer la surveillance des environnements Salesforce et déployer des systèmes de détection d'intrusion (IDS) pour détecter et répondre aux tentatives d'accès non autorisé aux données.\n\n**EN:** Organizations using Salesforce should prioritize auditing guest user permissions and disabling unnecessary guest access to public APIs. Implement strict access controls and enforce the principle of least privilege. Enhance monitoring of Salesforce environments and deploy intrusion detection systems (IDS) to detect and respond to unauthorized data access attempts.\n\n## Recommendations\n- **FR:** Effectuer régulièrement des audits des permissions et des niveaux d'accès des utilisateurs invités.\n  **EN:** Conduct regular audits of guest user permissions and access levels.\n- **FR:** Désactiver l'accès des invités aux API publiques sauf si absolument nécessaire.\n  **EN:** Disable guest access to public APIs unless absolutely necessary.\n- **FR:** Mettre en place une segmentation réseau pour limiter l'impact d'une éventuelle violation.\n  **EN:** Implement network segmentation to limit the impact of a potential breach.\n- **FR:** Déployer des IDS pour surveiller les tentatives d'accès non autorisé aux données.\n  **EN:** Deploy IDS to monitor for unauthorized data access attempts.\n- **FR:** Examiner et mettre à jour les plans de réponse aux incidents pour traiter les éventuelles violations de données.\n  **EN:** Review and update incident response plans to address potential data theft incidents.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: 120.0.0.0\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\nsalesforce, data theft, shinyhunters, aurainspector, guest user permissions, public apis, aura event monitoring, misconfiguration, extortion, cybercrime\n\n## Sources\n- https://www.bleepingcomputer.com/news/security/shinyhunters-claims-ongoing-salesforce-aura-data-theft-attacks/\n",
+      "object_refs": [
+        "threat-actor--ef72b02c-84ee-5457-b6f6-f4942e770911",
+        "tool--787637e9-34ec-5a8a-8931-c99c2c2e874f",
+        "ipv4-addr--e08bd19a-eece-56c3-b8be-8a4e7b82740d"
+      ],
+      "abstract": "Threat | ShinyHunters revendique des attaques en cours de vol de données Salesforce Aura (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-ongoing-salesforce-aura-data-theft-attacks/"
+        }
+      ],
+      "labels": [
+        "salesforce",
+        "data theft",
+        "shinyhunters",
+        "aurainspector",
+        "guest user permissions",
+        "public apis",
+        "aura event monitoring",
+        "misconfiguration",
+        "extortion",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--4152950e-cf6b-5f25-9b90-de8227dce39b",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Microsoft étiquettera bientôt automatiquement les bots tiers dans les lobbies de Microsoft Teams, nécessitant que les organisateurs les autorisent explicitement à rejoindre les réunions. Cette fonctionnalité, prévue pour un déploiement en mai 2026, vise à prévenir l'acceptation accidentelle des bots et à renforcer le contrôle sur les participants aux réunions. Le changement fait suite à l'ajout récent de fonctionnalités de rapport d'appels et de contrôles administratifs pour bloquer les utilisateurs externes de Teams, répondant aux préoccupations concernant les attaques d'ingénierie sociale et la cybercriminalité.\n\n**EN:** Microsoft will soon automatically tag third-party bots in Microsoft Teams lobbies, requiring organizers to explicitly allow them to join meetings. This feature, scheduled for rollout in May 2026, aims to prevent accidental acceptance of bots and enhance control over meeting participants. The change follows recent additions of call reporting features and admin controls to block external Teams users, addressing concerns about social engineering attacks and cybercrime.\n\n## Actor / TTPs / Tools\n- Threat actor: UNKNOWN\n- MITRE TTPs: (none)\n- Tools: (none)\n\n## Analysis\n**FR:** Les organisations doivent examiner leur posture de risque actuelle concernant l'accès des bots tiers aux réunions Teams. Mettre à jour les politiques de gestion des bots pour les aligner sur la nouvelle fonctionnalité et éduquer les utilisateurs sur le nouveau processus d'étiquetage des bots. Renforcer les fonctionnalités existantes de protection contre la fraude et envisager des contrôles supplémentaires pour prévenir l'accès non autorisé des bots.\n\n**EN:** Organizations should review their current risk posture regarding third-party bot access to Teams meetings. Update bot management policies to align with the new feature and educate users on the new bot tagging process. Enhance existing fraud-protection features and consider additional controls to prevent unauthorized bot access.\n\n## Recommendations\n- **FR:** Mettre en place des alertes pour les activités inhabituelles des bots dans les lobbies Teams avant le déploiement de la fonctionnalité.\n  **EN:** Implement alerts for unusual bot activity in Teams lobbies prior to the feature rollout.\n- **FR:** Développer des playbooks pour la réponse aux incidents impliquant un accès non autorisé des bots.\n  **EN:** Develop playbooks for incident response involving unauthorized bot access.\n- **FR:** Configurer la surveillance pour suivre les taux d'approbation des bots et identifier les anomalies potentielles.\n  **EN:** Configure monitoring to track bot approval rates and identify potential anomalies.\n- **FR:** Renforcer les politiques de réunion Teams pour restreindre l'accès des bots en fonction des besoins organisationnels.\n  **EN:** Harden Teams meeting policies to restrict bot access based on organizational needs.\n- **FR:** Examiner et mettre à jour les flux existants de renseignement sur les menaces pour inclure les indicateurs d'activité malveillante des bots.\n  **EN:** Review and update existing threat intelligence feeds to include indicators of malicious bot activity.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: (none)\n- Hashes: (none)\n\n## Tags\nmicrosoft teams, bots, third-party, meeting, security, lobby, organizers, control, social engineering, cybercrime\n\n## Sources\n- https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-will-tag-third-party-bots-in-meeting-lobbies/\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d"
+      ],
+      "abstract": "Threat | Microsoft Teams étiquettera les bots tiers tentant de rejoindre les réunions (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-will-tag-third-party-bots-in-meeting-lobbies/"
+        }
+      ],
+      "labels": [
+        "microsoft teams",
+        "bots",
+        "third-party",
+        "meeting",
+        "security",
+        "lobby",
+        "organizers",
+        "control",
+        "social engineering",
+        "cybercrime",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--6f33516a-cc8b-5e86-8868-e06f760684b1",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "CyberStrikeAI",
+      "labels": [
+        "tool",
+        "fortinet",
+        "fortigate",
+        "ai",
+        "cyberstrikeai",
+        "vulnerability scanning",
+        "authentication",
+        "firewall",
+        "edge infrastructure",
+        "compromise",
+        "multi-factor authentication",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1f52ae37-b91f-541e-8e6e-f20847dd02bb",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+      "target_ref": "tool--6f33516a-cc8b-5e86-8868-e06f760684b1",
+      "labels": [
+        "fortinet",
+        "fortigate",
+        "ai",
+        "cyberstrikeai",
+        "vulnerability scanning",
+        "authentication",
+        "firewall",
+        "edge infrastructure",
+        "compromise",
+        "multi-factor authentication",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "email-addr",
+      "spec_version": "2.1",
+      "id": "email-addr--72abdd30-eceb-596e-8815-c961633b0862",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "value": "letschat@fieldeffect.com",
+      "labels": [
+        "observable",
+        "email",
+        "fortinet",
+        "fortigate",
+        "ai",
+        "cyberstrikeai",
+        "vulnerability scanning",
+        "authentication",
+        "firewall",
+        "edge infrastructure",
+        "compromise",
+        "multi-factor authentication",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--e5b1cf2c-8d3e-541e-a5d7-ebebca8abb79",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Field Effect observe une augmentation de la cible des appareils Fortinet au début de 2026, avec des acteurs de la menace exploitant des vulnérabilités, des interfaces de gestion exposées et une authentification faible. Les chercheurs ont identifié une augmentation de l'utilisation d'une plateforme de sécurité offensive open-source activée par l'IA, CyberStrikeAI, ciblant les appareils FortiGate, entraînant la compromission de plus de 600 appareils dans 55 pays entre janvier et février 2026. Cette tendance est alimentée par l'automatisation pilotée par l'IA, abaissant le seuil de compétence pour les attaques à grande échelle.\n\n**EN:** Field Effect is observing increased targeting of Fortinet devices in early 2026, with threat actors exploiting vulnerabilities, exposed management interfaces, and weak authentication. Researchers have identified a surge in the use of an open-source, AI-enabled offensive security platform, CyberStrikeAI, targeting FortiGate devices, leading to the compromise of over 600 devices across 55 countries between January and February 2026. This trend is driven by AI-driven automation, lowering the skill threshold for large-scale attacks.\n\n## Actor / TTPs / Tools\n- Threat actor: UNKNOWN\n- MITRE TTPs: (none)\n- Tools: CyberStrikeAI\n\n## Analysis\n**FR:** Les organisations doivent prioriser les améliorations de la posture de sécurité des appareils Fortinet pour atténuer le risque accru. Investir dans des capacités de détection de menaces pilotées par l'IA pour identifier et répondre aux attaques activées par l'IA. Renforcer les processus de gestion des vulnérabilités pour assurer la correction rapide des appareils Fortinet. Renforcer les mécanismes d'authentification, en particulier l'authentification à deux facteurs (MFA), pour prévenir l'accès basé sur les identifiants. Développer des plans de réponse aux incidents spécifiquement axés sur les compromissions d'appareils Fortinet.\n\n**EN:** Organizations should prioritize Fortinet device security posture improvements to mitigate the increased risk. Invest in AI-driven threat detection capabilities to identify and respond to AI-enabled attacks. Enhance vulnerability management processes to ensure timely patching of Fortinet devices. Strengthen authentication mechanisms, particularly MFA, to prevent credential-based access. Develop incident response plans specifically addressing Fortinet device compromises.\n\n## Recommendations\n- **FR:** Surveiller les avis et les conseils du Fortinet Product Security Incident Response Team.\n  **EN:** Monitor Fortinet Product Security Incident Response Team notices and advisories.\n- **FR:** Appliquer les mises à jour actuelles traitant des vulnérabilités connues et valider les versions de firmware.\n  **EN:** Apply current updates addressing known vulnerabilities and validate firmware versions.\n- **FR:** Mettre en place des listes de contrôle d'accès pour les services exposés sur Internet.\n  **EN:** Implement access control lists for internet-exposed services.\n- **FR:** Appliquer l'authentification à deux facteurs (MFA) pour tous les comptes de services externes.\n  **EN:** Enforce MFA for all external service accounts.\n- **FR:** Examiner et supprimer les comptes obsolètes ou inutilisés.\n  **EN:** Review and remove legacy or unused accounts.\n- **FR:** Faire pivoter les identifiants pour les comptes administratifs et les comptes de liaison de répertoire.\n  **EN:** Rotate credentials for administrative accounts and directory bind accounts.\n- **FR:** Réduire l'exposition des services de gestion et d'accès à distance.\n  **EN:** Reduce exposure of management and remote access services.\n- **FR:** Examiner les journaux FortiGate pour détecter les activités anormales.\n  **EN:** Review FortiGate logs for anomalous activity.\n- **FR:** Examiner les appareils affectés pour détecter les artefacts post-exploitation.\n  **EN:** Review affected devices for post-exploitation artifacts.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: letschat@fieldeffect.com\n- Hashes: (none)\n\n## Tags\nfortinet, fortigate, ai, cyberstrikeai, vulnerability scanning, authentication, firewall, edge infrastructure, compromise, multi-factor authentication\n\n## Sources\n- https://fieldeffect.com/blog/fortinet-increased-targeting-ai-enabled-attacks-2026\n",
+      "object_refs": [
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "tool--6f33516a-cc8b-5e86-8868-e06f760684b1",
+        "email-addr--72abdd30-eceb-596e-8815-c961633b0862"
+      ],
+      "abstract": "Threat | Les appareils Fortinet sous une cible accrue alors que les attaques activées par l'IA se développent en 2026 (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://fieldeffect.com/blog/fortinet-increased-targeting-ai-enabled-attacks-2026"
+        }
+      ],
+      "labels": [
+        "fortinet",
+        "fortigate",
+        "ai",
+        "cyberstrikeai",
+        "vulnerability scanning",
+        "authentication",
+        "firewall",
+        "edge infrastructure",
+        "compromise",
+        "multi-factor authentication",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Seedworm",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "labels": [
+        "threat-actor",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e958eca2-a11a-5ad0-87b1-ac283dc6e6da",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Dindoor",
+      "labels": [
+        "tool",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--33a9ca5b-3911-51d4-ab6b-f87bccc66c52",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "tool--e958eca2-a11a-5ad0-87b1-ac283dc6e6da",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--dfb5f318-167b-5ece-a8e9-2e1415a1e512",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "Fakeset",
+      "labels": [
+        "tool",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f3992a0d-9f12-5fd8-aba1-033f05524d41",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "tool--dfb5f318-167b-5ece-a8e9-2e1415a1e512",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7b7cff32-d772-5425-b2d3-aadf6a5ae56c",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0001",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7977212e-b3a4-5282-b8c6-54bed5028d01",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--7b7cff32-d772-5425-b2d3-aadf6a5ae56c",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8c93112e-192b-56b6-a868-3011db3d0bc0",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0002",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--074fdd69-1124-5687-b20c-90d34e24088f",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--8c93112e-192b-56b6-a868-3011db3d0bc0",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1bb48f5d-dadb-566f-8579-9916e5577054",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0004",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2a72263-a830-5920-b890-db2349a7ac13",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--1bb48f5d-dadb-566f-8579-9916e5577054",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b9691999-b561-5f5c-8210-6d37c76e6eb8",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0005",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5f502d41-3727-5e6e-b55c-a5d9d2309d63",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--b9691999-b561-5f5c-8210-6d37c76e6eb8",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ccd4adc5-cf2a-560a-991a-e57b113a7565",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0006",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--da0561c3-9d99-50d5-8fea-053818d1eed7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--ccd4adc5-cf2a-560a-991a-e57b113a7565",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--36bfcb05-8c63-5c00-8474-258373f83fba",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0007",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--83bd6f5c-a83f-5457-96c7-e1b78bac6429",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--36bfcb05-8c63-5c00-8474-258373f83fba",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--051140c1-d584-5a55-b4a1-b772ffe5bb4d",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0008",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d12704ca-44c1-5186-a952-54bc67c26c20",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--051140c1-d584-5a55-b4a1-b772ffe5bb4d",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--932a8483-46df-5e7e-899f-9b8c0cef457c",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0009",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--36c2d922-7e3b-56b4-bf48-07daaf14248e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--932a8483-46df-5e7e-899f-9b8c0cef457c",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8a887c54-d2d0-5e4c-a7e2-42d381f533a7",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0011",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--37c3acdf-ba2f-5dcf-b859-e04edc1d9cfe",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--8a887c54-d2d0-5e4c-a7e2-42d381f533a7",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--24b0300a-e340-5bba-93aa-9e81d6c62f18",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "TA0014",
+      "labels": [
+        "attack-pattern",
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--342b44c5-f9c6-592e-9826-c2d1543475d5",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+      "target_ref": "attack-pattern--24b0300a-e340-5bba-93aa-9e81d6c62f18",
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--5098c9a5-858e-505c-bc3f-90f129fc1c9e",
+      "created": "2026-03-09T00:00:00Z",
+      "modified": "2026-03-09T00:00:00Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "content": "## Summary\n**FR:** Les chercheurs ont lié de nouvelles activités de logiciels malveillants au groupe APT iranien Seedworm et à des acteurs alignés sur l'Iran compromettant des caméras connectées à Internet dans tout le Moyen-Orient. L'activité impliquait le déploiement de logiciels malveillants comme Dindoor et Fakeset, affectant une banque américaine, une organisation à but non lucratif canadienne, un aéroport américain et une société de logiciels israélienne. Les caméras compromises ont été utilisées pour le renseignement, le suivi des mouvements de troupes et le soutien aux frappes dans le monde réel.\n\n**EN:** Researchers linked new malware activity to the Iranian APT group Seedworm and Iranian-aligned actors compromising internet-connected cameras across the Middle East. The activity involved the deployment of malware like Dindoor and Fakeset, impacting a U.S. bank, a Canadian nonprofit, a U.S. airport, and an Israeli software company. Compromised cameras were used for intelligence gathering, tracking troop movements, and supporting real-world strikes.\n\n## Actor / TTPs / Tools\n- Threat actor: Seedworm\n- MITRE TTPs: TA0001, TA0002, TA0004, TA0005, TA0006, TA0007, TA0008, TA0009, TA0011, TA0014\n- Tools: Dindoor, Fakeset\n\n## Analysis\n**FR:** Les organisations doivent prioriser le renforcement et la segmentation des appareils IoT, les traitant comme des composants essentiels du périmètre de sécurité. Évaluer et atténuer les risques associés aux plateformes de stockage cloud, en restreignant l'accès et en surveillant l'activité. Mettre en œuvre les principes de confiance zéro, en particulier pour les fournisseurs de services gérés, afin de limiter l'impact opérationnel. Examiner et mettre à jour les plans de réponse aux incidents pour traiter les éventuels effets de débordement des conflits régionaux. Renforcer la collecte et le partage du renseignement sur les menaces pour rester informé des tactiques émergentes des APT iraniens.\n\n**EN:** Organizations should prioritize hardening and segmentation of IoT devices, treating them as core security perimeter components. Assess and mitigate risks associated with cloud storage platforms, restricting access and monitoring activity. Implement zero-trust principles, especially for managed service providers, to limit operational impact. Review and update incident response plans to address potential spillover effects from regional conflicts. Enhance threat intelligence gathering and sharing to stay informed about emerging Iranian APT tactics.\n\n## Recommendations\n- **FR:** Mettre en place une surveillance continue des connexions sortantes des appareils IoT.\n  **EN:** Implement continuous monitoring of outbound connections from IoT devices.\n- **FR:** Renforcer les appareils exposés en appliquant une authentification forte et en désactivant les interfaces inutilisées.\n  **EN:** Harden exposed devices by enforcing strong authentication and disabling unused interfaces.\n- **FR:** Assurer la correction rapide des vulnérabilités de firmware et de logiciel sur tous les appareils connectés à Internet.\n  **EN:** Ensure timely patching of firmware and software vulnerabilities on all internet-connected devices.\n- **FR:** Auditer toutes les caméras et appareils IoT connectés à Internet pour détecter les mauvaises configurations et les vulnérabilités.\n  **EN:** Audit all internet-connected cameras and IoT devices for misconfigurations and vulnerabilities.\n- **FR:** Mettre en place une segmentation réseau pour limiter le mouvement latéral en cas de compromission.\n  **EN:** Implement network segmentation to limit lateral movement in case of compromise.\n\n## Indicators (raw)\n- URLs: (none)\n- Domains: (none)\n- IPv4: (none)\n- IPv6: (none)\n- Emails: letschat@fieldeffect.com\n- Hashes: (none)\n\n## Tags\nseedworm, iran, apt, dindoor, fakeset, iot, middle east, cyber warfare, surveillance, mois\n\n## Sources\n- https://fieldeffect.com/blog/seedworm-iran-cyber-activity\n",
+      "object_refs": [
+        "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+        "tool--e958eca2-a11a-5ad0-87b1-ac283dc6e6da",
+        "tool--dfb5f318-167b-5ece-a8e9-2e1415a1e512",
+        "attack-pattern--7b7cff32-d772-5425-b2d3-aadf6a5ae56c",
+        "attack-pattern--8c93112e-192b-56b6-a868-3011db3d0bc0",
+        "attack-pattern--1bb48f5d-dadb-566f-8579-9916e5577054",
+        "attack-pattern--b9691999-b561-5f5c-8210-6d37c76e6eb8",
+        "attack-pattern--ccd4adc5-cf2a-560a-991a-e57b113a7565",
+        "attack-pattern--36bfcb05-8c63-5c00-8474-258373f83fba",
+        "attack-pattern--051140c1-d584-5a55-b4a1-b772ffe5bb4d",
+        "attack-pattern--932a8483-46df-5e7e-899f-9b8c0cef457c",
+        "attack-pattern--8a887c54-d2d0-5e4c-a7e2-42d381f533a7",
+        "attack-pattern--24b0300a-e340-5bba-93aa-9e81d6c62f18",
+        "email-addr--72abdd30-eceb-596e-8815-c961633b0862"
+      ],
+      "abstract": "Threat | Dernière activité cybernétique iranienne dans le contexte de l'escalade au Moyen-Orient (2026-03-09)",
+      "external_references": [
+        {
+          "source_name": "source",
+          "url": "https://fieldeffect.com/blog/seedworm-iran-cyber-activity"
+        }
+      ],
+      "labels": [
+        "seedworm",
+        "iran",
+        "apt",
+        "dindoor",
+        "fakeset",
+        "iot",
+        "middle east",
+        "cyber warfare",
+        "surveillance",
+        "mois",
+        "threat",
+        "viglintel",
+        "daily-report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--db6def6a-86e7-59ba-9799-aa2093323366",
+      "created": "2026-03-10T09:44:38Z",
+      "modified": "2026-03-10T09:44:38Z",
+      "created_by_ref": "identity--1dc08bb0-1b9a-5415-b578-aacc99ac99ea",
+      "name": "VigilIntel Report 2026-03-10",
+      "description": "Generated STIX 2.1 bundle for OpenCTI ingestion (TLP:CLEAR + PAP:CLEAR, tags, improved note layout).",
+      "published": "2026-03-10T00:00:00Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "note--efb8876d-7887-54d9-bf06-2a6261153109",
+        "note--903d0663-c1ae-541b-abb0-5eb8fda60d8f",
+        "threat-actor--9b462eb2-323e-5466-a58f-dd29c204ff3d",
+        "identity--686f76f3-3a0d-5158-9ef9-f6bc75ed0440",
+        "relationship--55bd6d8f-6ba3-5a01-924f-7936e672dd16",
+        "note--89581936-f5fd-52c0-94eb-f4a34276ac3e",
+        "threat-actor--23020822-168b-5118-a84c-248653f8a8b4",
+        "identity--2c9a2f59-f585-5737-9b54-6a2fb90bf82e",
+        "relationship--e358e7b2-1eb1-5be9-85d6-fc7dfc02f612",
+        "note--7a0b8231-7ef6-54d3-b0e0-402ff000c1ee",
+        "identity--52f99c60-f945-5a54-9f79-42b5fbf9462f",
+        "relationship--a8d9b979-08ca-597c-8545-fbbe089c8443",
+        "note--794073e6-6d0f-5196-9d06-2b26e956c734",
+        "identity--7eec0db7-e14a-596c-a62e-90227392fc09",
+        "relationship--6a256784-b243-5216-bcfe-712b4059514c",
+        "note--bded8150-d262-5860-9fc7-f53e81363627",
+        "identity--94ba5a54-7ba7-5b1e-9fa1-577bd008eeb8",
+        "relationship--15a3ccf8-ba0f-50f4-8ef4-4692e46196cf",
+        "note--40befe41-fb21-5dd2-ab5d-55ffb56a63e8",
+        "vulnerability--0a7b277e-8b0f-5d89-ba14-8ac9f5475c1e",
+        "note--e1c46a49-6569-5f25-a520-b0262aa48d6e",
+        "vulnerability--c542b3e7-dfd8-5365-bc5e-7ed7049fc9e6",
+        "note--01e7b214-43b9-5f80-8421-5dae3009e652",
+        "vulnerability--ca034812-e50c-59ba-9095-aaf2021ee02e",
+        "note--99bf367b-e412-5674-afca-d00e2ba052ca",
+        "vulnerability--fcd878ed-223c-53bf-bfd6-aadeb1f8d013",
+        "note--41743a31-03bd-5976-a092-35db541a39c5",
+        "vulnerability--50cca209-de7f-5a7b-9890-3401d1327703",
+        "note--77026bd2-fcbd-5b64-b4ba-f01b663f7ccc",
+        "vulnerability--ab78fa3a-eb06-55f0-a927-672a2781b198",
+        "note--978501e8-7eeb-5790-a655-1202765b20a2",
+        "vulnerability--33f9364c-4cc1-5d1a-b49f-2ba4c6d53944",
+        "note--f4d772ae-1e19-5cf8-bdd5-b02b2f8959e2",
+        "vulnerability--613915a9-0383-578f-bbf6-4a0168b8ddc5",
+        "note--e9515b6e-dbd8-5d5f-9704-82f88ebea1d1",
+        "vulnerability--0760d9c9-3802-50f1-9ce7-32d9ed2d8783",
+        "note--8485a324-ac95-53b2-99d1-d132b6306f72",
+        "vulnerability--7fb0519d-7498-5365-bb20-2d2a4089cf08",
+        "note--ab5ea56c-170e-5817-944d-1631258bc860",
+        "vulnerability--ef801675-1a19-541a-ad88-f204ab783ff9",
+        "note--23aca8dc-a143-59f5-81f7-f88ded5b53d9",
+        "vulnerability--8e13727c-128b-5f6e-bee5-06d363c964bb",
+        "note--ea124ec1-0f7a-59d3-a00f-7e84f2301ed4",
+        "vulnerability--118ef31e-f49b-574c-a02d-b0d091896805",
+        "note--f7786f85-0837-5888-bcec-711be0aaf8a6",
+        "vulnerability--6fefb346-790c-554a-8410-cebb7c92be9a",
+        "note--1a16c7b5-a162-5cb9-87b8-69a8bdc0ac5e",
+        "vulnerability--be95ba59-aed5-5c06-96ad-2b65e652b2df",
+        "note--429ab174-5023-54ae-8eed-54ab6069f129",
+        "vulnerability--26d49e70-0ae8-5db7-aa68-2007b0bb4cd6",
+        "note--2b6ffa60-293d-5825-91d8-f7d1666fa617",
+        "vulnerability--9f8260d2-dffc-5600-a3a3-bc72b349a018",
+        "note--bc2d8073-b11a-532e-9009-7d0ca2e49bbf",
+        "vulnerability--ff23cf7a-43f6-5897-9dbf-2cb59a336c15",
+        "note--52a69ac6-8667-5c70-86e9-a5c25867b9e9",
+        "attack-pattern--6c10ac7f-4da1-5cbe-99ef-928471b085a7",
+        "relationship--314d4d58-40f5-52b0-b439-e08cb274e7f9",
+        "attack-pattern--faa284fc-3448-5d43-8eb3-849f30e7a3f8",
+        "relationship--299b48ce-6614-5a8f-9f6e-993112bde6b2",
+        "attack-pattern--610005de-0ace-5124-b4e7-1c56417dcdda",
+        "relationship--91d4dc8f-f75f-59e9-9c37-24af499d3d1d",
+        "attack-pattern--0640ed07-653e-5351-bd7c-68b9bdac98c2",
+        "relationship--e17f3ebd-8e86-51c7-b37f-5c04d8fa9ec7",
+        "attack-pattern--9ce1af54-17a8-58d1-9b3d-6af8187aeb3d",
+        "relationship--5ad97c4b-c7cd-5373-8842-3018f247f9a6",
+        "domain-name--1de44f84-f609-5869-a673-eb6218c022f7",
+        "note--095e2239-8ca5-5669-80aa-a745067dd731",
+        "threat-actor--a5d90cf0-ec47-53c1-8399-25f1cecea567",
+        "note--0f32aa58-87c8-584b-bb7f-756048fc2a24",
+        "note--4bafc2ae-96ae-5ef1-b3ce-5eeea038d3d3",
+        "note--0bb9f433-536c-5579-b03a-8c882d15c4d3",
+        "threat-actor--ef72b02c-84ee-5457-b6f6-f4942e770911",
+        "tool--787637e9-34ec-5a8a-8931-c99c2c2e874f",
+        "relationship--01a26821-3872-585e-9e16-06fd3212cd60",
+        "ipv4-addr--e08bd19a-eece-56c3-b8be-8a4e7b82740d",
+        "note--1fa4cfa1-6150-5d63-8c48-7a0b63451796",
+        "note--4152950e-cf6b-5f25-9b90-de8227dce39b",
+        "tool--6f33516a-cc8b-5e86-8868-e06f760684b1",
+        "relationship--1f52ae37-b91f-541e-8e6e-f20847dd02bb",
+        "email-addr--72abdd30-eceb-596e-8815-c961633b0862",
+        "note--e5b1cf2c-8d3e-541e-a5d7-ebebca8abb79",
+        "threat-actor--8b32f93c-5d78-506c-8b5e-c4b6e94e1899",
+        "tool--e958eca2-a11a-5ad0-87b1-ac283dc6e6da",
+        "relationship--33a9ca5b-3911-51d4-ab6b-f87bccc66c52",
+        "tool--dfb5f318-167b-5ece-a8e9-2e1415a1e512",
+        "relationship--f3992a0d-9f12-5fd8-aba1-033f05524d41",
+        "attack-pattern--7b7cff32-d772-5425-b2d3-aadf6a5ae56c",
+        "relationship--7977212e-b3a4-5282-b8c6-54bed5028d01",
+        "attack-pattern--8c93112e-192b-56b6-a868-3011db3d0bc0",
+        "relationship--074fdd69-1124-5687-b20c-90d34e24088f",
+        "attack-pattern--1bb48f5d-dadb-566f-8579-9916e5577054",
+        "relationship--b2a72263-a830-5920-b890-db2349a7ac13",
+        "attack-pattern--b9691999-b561-5f5c-8210-6d37c76e6eb8",
+        "relationship--5f502d41-3727-5e6e-b55c-a5d9d2309d63",
+        "attack-pattern--ccd4adc5-cf2a-560a-991a-e57b113a7565",
+        "relationship--da0561c3-9d99-50d5-8fea-053818d1eed7",
+        "attack-pattern--36bfcb05-8c63-5c00-8474-258373f83fba",
+        "relationship--83bd6f5c-a83f-5457-96c7-e1b78bac6429",
+        "attack-pattern--051140c1-d584-5a55-b4a1-b772ffe5bb4d",
+        "relationship--d12704ca-44c1-5186-a952-54bc67c26c20",
+        "attack-pattern--932a8483-46df-5e7e-899f-9b8c0cef457c",
+        "relationship--36c2d922-7e3b-56b4-bf48-07daaf14248e",
+        "attack-pattern--8a887c54-d2d0-5e4c-a7e2-42d381f533a7",
+        "relationship--37c3acdf-ba2f-5dcf-b859-e04edc1d9cfe",
+        "attack-pattern--24b0300a-e340-5bba-93aa-9e81d6c62f18",
+        "relationship--342b44c5-f9c6-592e-9826-c2d1543475d5",
+        "note--5098c9a5-858e-505c-bc3f-90f129fc1c9e"
+      ],
+      "labels": [
+        "viglintel",
+        "daily-report",
+        "report"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+        "marking-definition--ad15a0cd-55b6-4588-a14c-a66105329b92"
+      ]
+    }
+  ]
+}
