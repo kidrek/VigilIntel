@@ -1,0 +1,316 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "March 2026 marks a paradigm shift in the threat landscape, characterized by the convergence of state-sponsored operations and the cybercriminal ecosystem, particularly within Iranian (MOIS) activity. The massive Microsoft Patch Tuesday (93 flaws) highlights a new era of AI-driven vulnerability discovery, with CVE-2026-21536 being the first AI-identified critical flaw. Furthermore, identity compromise has officially surpassed technical exploits as the primary entry vector, accounting for 80% of observed cloud incidents. The emergence of 'EDR killers' like BlackSanta and stealth techniques like 'Zombie ZIP' indicates a continuous escalation in evasion capabilities targeting modern security stacks.",
+      "fr": "Le mois de mars 2026 marque un changement de paradigme dans le paysage des menaces, caractérisé par la convergence des opérations étatiques et de l'écosystème cybercriminel, particulièrement dans les activités iraniennes (MOIS). Le Patch Tuesday massif de Microsoft (93 failles) souligne une nouvelle ère de découverte de vulnérabilités par l'IA, avec la CVE-2026-21536 comme première faille critique identifiée par un agent autonome. Par ailleurs, le compromis d'identité a officiellement dépassé les exploits techniques comme vecteur d'entrée principal, représentant 80 % des incidents cloud observés. L'émergence de « tueurs d'EDR » comme BlackSanta et de techniques furtives comme « Zombie ZIP » indique une escalade continue des capacités d'évasion ciblant les outils de sécurité modernes."
+    },
+    "date": "2026-03-11"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Military & Infrastructure",
+        "fr": "Militaire et Infrastructures"
+      },
+      "theme": {
+        "en": "US-Israel-Iran Cyber Warfare",
+        "fr": "Guerre cyber US-Israël-Iran"
+      },
+      "description": {
+        "en": "The military conflict has escalated into a total cyber domain. Iran is facing a 10-day near-total internet blackout (~1% connectivity) following joint US-Israeli kinetic and cyber strikes (Operation Epic Fury). Retaliatory actions by Iran-aligned groups (Handala, Cyber Islamic Resistance, NoName057) are now targeting critical infrastructure (ICS/SCADA) in Israel, Jordan, and Gulf states, including water pumps and energy grids. The White House has unveiled a new proactive offensive cyber strategy to 'impose costs' on nation-state adversaries.",
+        "fr": "Le conflit militaire s'est étendu au domaine cyber total. L'Iran subit une coupure quasi totale d'Internet depuis 10 jours (~1 % de connectivité) suite aux frappes cinétiques et cyber conjointes américano-israéliennes (Opération Epic Fury). Les actions de représailles des groupes affiliés à l'Iran (Handala, Cyber Islamic Resistance, NoName057) ciblent désormais les infrastructures critiques (ICS/SCADA) en Israël, en Jordanie et dans les pays du Golfe, incluant des pompes à eau et des réseaux énergétiques. La Maison Blanche a dévoilé une nouvelle stratégie cyber offensive proactive pour « imposer des coûts » aux adversaires étatiques."
+      },
+      "tags": ["warfare", "critical_infrastructure", "iran", "israel", "usa"],
+      "sources": ["Flare", "CSIS", "Europol"],
+      "date": "2026-03-11"
+    },
+    {
+      "sector": {
+        "en": "Agriculture & Defense",
+        "fr": "Agriculture et Défense"
+      },
+      "theme": {
+        "en": "Ukraine and European Sovereignty",
+        "fr": "L'Ukraine et la souveraineté européenne"
+      },
+      "description": {
+        "en": "Ukraine remains a central pillar of global food security despite the ongoing war. Meanwhile, Hungary is integrating defense procurement with domestic industry development to modernize its military capabilities. Historians emphasize that Ukraine's resistance has granted Europe time to rethink its strategic autonomy and security dependencies, particularly regarding hydrocarbon revenues that fund the Russian war effort.",
+        "fr": "L'Ukraine reste un pilier central de la sécurité alimentaire mondiale malgré la guerre. Parallèlement, la Hongrie intègre ses acquisitions de défense au développement de son industrie nationale pour moderniser ses capacités militaires. Les historiens soulignent que la résistance ukrainienne a offert à l'Europe le temps de repenser son autonomie stratégique et ses dépendances sécuritaires, notamment vis-à-vis des revenus d'hydrocarbures finançant l'effort de guerre russe."
+      },
+      "tags": ["geopolitics", "ukraine", "hungary", "food_security"],
+      "sources": ["IRIS", "EUvsDisinfo"],
+      "date": "2026-03-11"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Ericsson US",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Ericsson US confirmed a data breach resulting from a compromise of a third-party service provider. Personal information of employees and customers was accessed between April 17 and April 22, 2025.",
+        "fr": "Ericsson US a confirmé une violation de données résultant de la compromission d'un fournisseur de services tiers. Les informations personnelles d'employés et de clients ont été consultées entre le 17 et le 22 avril 2025."
+      },
+      "tags": ["data_breach", "third_party_risk"],
+      "sources": ["Security Affairs"],
+      "date": "2026-03-11"
+    },
+    {
+      "victim": "Shamir Medical Center",
+      "threat_actor": "Qilin (Iranian affiliate)",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "A major cyberattack initially attributed to the Qilin ransomware group was later assessed as an Iranian-backed operation. Limited medical data and emails were leaked, part of a sustained campaign against Israeli hospitals.",
+        "fr": "Une attaque cyber majeure initialement attribuée au groupe de ransomware Qilin a été ultérieurement identifiée comme une opération soutenue par l'Iran. Des données médicales et des courriels ont été divulgués dans le cadre d'une campagne prolongée contre les hôpitaux israéliens."
+      },
+      "tags": ["ransomware", "state_sponsored", "israel"],
+      "sources": ["Check Point"],
+      "date": "2026-03-11"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1603",
+      "euvd_id": "EUVD-2026-1603",
+      "cisa_kev": "TRUE",
+      "cvss": "8.6",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager:*:*:*:*:*:*:*:*",
+      "product": "Endpoint Manager (EPM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Authentication bypass vulnerability in Ivanti EPM allowing unauthenticated attackers to retrieve sensitive credential material via an alternate authentication path.",
+        "fr": "Vulnérabilité de contournement d'authentification dans Ivanti EPM permettant à des attaquants non authentifiés de récupérer des identifiants sensibles via un chemin d'authentification alternatif."
+      },
+      "tags": ["vulnerability", "auth_bypass", "cisa_kev"],
+      "sources": ["CISA", "Field Effect"],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2026-21536",
+      "euvd_id": "EUVD-2026-21536",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:microsoft:devices_pricing_program:*:*:*:*:*:*:*:*",
+      "product": "Devices Pricing Program",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical remote code execution vulnerability discovered by an AI autonomous agent (XBOW). This cloud-based service flaw allows RCE without user interaction.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance découverte par un agent autonome d'IA (XBOW). Cette faille de service cloud permet une RCE sans interaction utilisateur."
+      },
+      "tags": ["vulnerability", "RCE", "AI_discovered"],
+      "sources": ["Microsoft", "SANS ISC", "KrebsOnSecurity"],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2026-23813",
+      "euvd_id": "EUVD-2026-23813",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:o:hpe:aruba_networking_aos-cx:*:*:*:*:*:*:*:*",
+      "product": "Aruba Networking AOS-CX",
+      "vendor": "HPE",
+      "description": {
+        "en": "Critical authentication bypass in the web-based management interface allowing remote actors to reset admin passwords.",
+        "fr": "Contournement d'authentification critique dans l'interface de gestion web permettant à des acteurs distants de réinitialiser les mots de passe administrateur."
+      },
+      "tags": ["vulnerability", "auth_bypass"],
+      "sources": ["BleepingComputer", "HPE"],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2026-0866",
+      "euvd_id": "EUVD-2026-0866",
+      "cisa_kev": "FALSE",
+      "cvss": "Unknown",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:zip_format:zip:*:*:*:*:*:*:*:*",
+      "product": "ZIP parsing engines",
+      "vendor": "Multiple",
+      "description": {
+        "en": "The 'Zombie ZIP' technique manipulates ZIP headers to trick security tools into scanning compressed noise, bypassing 50/51 AV engines on VirusTotal.",
+        "fr": "La technique 'Zombie ZIP' manipule les en-têtes ZIP pour tromper les outils de sécurité et leur faire scanner du bruit compressé, contournant 50/51 moteurs AV sur VirusTotal."
+      },
+      "tags": ["vulnerability", "evasion", "detection_bypass"],
+      "sources": ["BleepingComputer", "CERT/CC"],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2025-54820",
+      "euvd_id": "EUVD-2025-54820",
+      "cisa_kev": "FALSE",
+      "cvss": "7.0",
+      "epss": "Unknown",
+      "cpe": "cpe:2.3:a:fortinet:fortimanager:*:*:*:*:*:*:*:*",
+      "product": "FortiManager",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Stack-based buffer overflow in the fgtupdates service allowing unauthenticated RCE under specific conditions.",
+        "fr": "Dépassement de tampon basé sur la pile dans le service fgtupdates permettant une RCE non authentifiée sous certaines conditions."
+      },
+      "tags": ["vulnerability", "RCE", "buffer_overflow"],
+      "sources": ["Cybersecurity News", "Fortinet"],
+      "date": "2026-03-11"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "BlackSanta: Advanced EDR Killer targeting HR",
+        "fr": "BlackSanta : Tueur d'EDR avancé ciblant les RH"
+      },
+      "description": {
+        "en": "Russian-speaking actor targets HR departments with ISO files containing .LNK and PowerShell scripts. The payload, BlackSanta, silences AV/EDR solutions by kernel-level process termination using legitimate drivers (BYOD).",
+        "fr": "Un acteur russophone cible les services RH avec des fichiers ISO contenant des scripts .LNK et PowerShell. La charge utile, BlackSanta, neutralise les solutions AV/EDR par terminaison de processus au niveau noyau via des pilotes légitimes (BYOD)."
+      },
+      "threat_actor": "Unknown (Russian-speaking)",
+      "indicators": {
+        "URL": ["dropbox.com"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["SumatraPDF", "RogueKiller driver", "IObitUnlocker.sys"]
+      },
+      "mitre_ttps": ["T1566.001", "T1059.001", "T1562.001", "T1055.012"],
+      "analyse": {
+        "en": "Highly sophisticated evasion chain using steganography and DLL sideloading. The focus on kernel-level security suppression is a growing trend for persistent actors.",
+        "fr": "Chaîne d'évasion très sophistiquée utilisant la stéganographie et le DLL sideloading. La suppression de la sécurité au niveau noyau est une tendance croissante des acteurs persistants."
+      },
+      "recommandations": [
+        {
+          "en": "Block ISO file mounts from non-admin users.",
+          "fr": "Bloquer le montage de fichiers ISO pour les utilisateurs non administrateurs."
+        },
+        {
+          "en": "Monitor for unauthorized loading of truesight.sys and IObitUnlocker.sys.",
+          "fr": "Surveiller le chargement non autorisé de truesight.sys et IObitUnlocker.sys."
+        }
+      ],
+      "tags": ["malware", "EDR_killer", "HR_target"],
+      "sources": ["BleepingComputer", "Aryaka"],
+      "date": "2026-03-11"
+    },
+    {
+      "title": {
+        "en": "APT28 Long-term Espionage in Ukraine",
+        "fr": "Espionnage longue durée d'APT28 en Ukraine"
+      },
+      "description": {
+        "en": "APT28 is using two paired implants, BEARDSHELL and COVENANT, for persistent surveillance of Ukrainian military forces. The malware exploits cloud providers (Icedrive, Filen) for C2 resilience.",
+        "fr": "APT28 utilise deux implants jumelés, BEARDSHELL et COVENANT, pour la surveillance persistante des forces militaires ukrainiennes. Les malwares exploitent des fournisseurs cloud (Icedrive, Filen) pour la résilience du C2."
+      },
+      "threat_actor": "APT28",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["icedrive.net", "filen.io"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["BEARDSHELL", "COVENANT", "SLIMAGENT"]
+      },
+      "mitre_ttps": ["T1568.002", "T1071.001", "T1102"],
+      "analyse": {
+        "en": "Direct code lineage linked to 2010-era implants (XAgent), showing long-term stability and adaptation of their custom toolkit.",
+        "fr": "Lignage de code direct lié aux implants des années 2010 (XAgent), montrant une stabilité et une adaptation à long terme de leur boîte à outils personnalisée."
+      },
+      "recommandations": [
+        {
+          "en": "Audit outgoing traffic to niche cloud storage providers.",
+          "fr": "Auditer le trafic sortant vers les fournisseurs de stockage cloud de niche."
+        }
+      ],
+      "tags": ["APT", "espionage", "ukraine"],
+      "sources": ["Security Affairs", "ESET"],
+      "date": "2026-03-11"
+    },
+    {
+      "title": {
+        "en": "Iranian MOIS & MuddyWater Criminal Convergence",
+        "fr": "Convergence criminelle du MOIS iranien et MuddyWater"
+      },
+      "description": {
+        "en": "MOIS-linked actors (MuddyWater, Void Manticore) are increasingly using criminal tools like Rhadamanthys infostealer and Castle Loader. MuddyWater has pre-positioned 'DinDoor' backdoors in US banks, airports, and defense networks.",
+        "fr": "Les acteurs liés au MOIS (MuddyWater, Void Manticore) utilisent de plus en plus d'outils criminels comme l'infostealer Rhadamanthys et Castle Loader. MuddyWater a pré-positionné des backdoors 'DinDoor' dans des banques, aéroports et réseaux de défense américains."
+      },
+      "threat_actor": "MuddyWater",
+      "indicators": {
+        "URL": [],
+        "IPv4": ["18.223.24.218"],
+        "IPv6": [],
+        "DOMAIN": ["onmicrosoft.com"],
+        "EMAIL": [],
+        "HASH_SHA256": ["077ab28d66abdafad9f5411e18d26e87fe43da1410ee8fe846bd721ab0cb52de", "aae017e7a36e016655c91bd01b4f3c46309bbe540733f82cce29392e72e9bd1f"],
+        "HASH_SHA1": ["0902d7915a19975817ec1ccb0f2f6714aed19638", "b674578d4bdb24cd58bf2dc884eaa658b7aa250c"],
+        "HASH_MD5": ["eb5e96e05129e5691f9677be4e396c88"],
+        "TOOLS": ["Rhadamanthys", "rclone", "DinDoor", "Castle Loader"]
+      },
+      "mitre_ttps": ["T1566.002", "T1588.002", "T1048.003"],
+      "analyse": {
+        "en": "The use of criminal infrastructure and Malware-as-a-Service allows Iran to maintain plausible deniability while enhancing technical reach.",
+        "fr": "L'utilisation d'infrastructures criminelles et de Malware-as-a-Service permet à l'Iran de maintenir un déni plausible tout en augmentant sa portée technique."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unauthorized use of rclone for data exfiltration.",
+          "fr": "Surveiller l'utilisation non autorisée de rclone pour l'exfiltration de données."
+        }
+      ],
+      "tags": ["MOIS", "iran", "cyber_crime_overlap"],
+      "sources": ["Check Point", "Flare", "Symantec"],
+      "date": "2026-03-11"
+    },
+    {
+      "title": {
+        "en": "BeatBanker: Android Banking Trojan posing as Starlink",
+        "fr": "BeatBanker : Trojan bancaire Android se faisant passer pour Starlink"
+      },
+      "description": {
+        "en": "New Android malware targeting Brazil. Poses as Starlink app. Uses a modified XMRig for Monero mining and maintains persistence by playing an inaudible 5-second audio file loop.",
+        "fr": "Nouveau malware Android ciblant le Brésil. Se fait passer pour l'application Starlink. Utilise une version modifiée de XMRig pour le minage de Monero et maintient sa persistance en jouant une boucle audio inaudible de 5 secondes."
+      },
+      "threat_actor": "Unknown",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["XMRig 6.17.0", "BTMOB RAT", "output8.mp3"]
+      },
+      "mitre_ttps": ["T1477", "T1402", "T1430"],
+      "analyse": {
+        "en": "Unique persistence mechanism via audio playback prevents the OS from suspending the malicious process.",
+        "fr": "Mécanisme de persistance unique via la lecture audio empêchant l'OS de suspendre le processus malveillant."
+      },
+      "recommandations": [
+        {
+          "en": "Disable sideloading of APKs on corporate mobile devices.",
+          "fr": "Désactiver l'installation d'APKs (sideloading) sur les appareils mobiles d'entreprise."
+        }
+      ],
+      "tags": ["android", "banking_trojan", "cryptominer"],
+      "sources": ["BleepingComputer", "Kaspersky"],
+      "date": "2026-03-11"
+    }
+  ]
+}
+```
