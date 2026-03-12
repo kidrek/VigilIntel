@@ -9,21 +9,19 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [iranian mois actors the cyber crime connection](#iranian-mois-actors-the-cyber-crime-connection)
-  * [microsoft march 2026 patch tuesday fixes 2 zero days 79 flaws](#microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws)
-  * [monitoring cyberattacks directly linked to the us israel iran military conflict](#monitoring-cyberattacks-directly-linked-to-the-us-israel-iran-military-conflict)
-  * [new blacksanta edr killer spotted targeting hr departments](#new-blacksanta-edr-killer-spotted-targeting-hr-departments)
-  * [ivanti endpoint manager under active exploitation](#ivanti-endpoint-manager-under-active-exploitation)
-  * [attackers exploit fortigate devices to access sensitive network information](#attackers-exploit-fortigate-devices-to-access-sensitive-network-information)
-  * [apt28 conducts long term espionage on ukrainian forces using custom malware](#apt28-conducts-long-term-espionage-on-ukrainian-forces-using-custom-malware)
+  * [Panorama de la cybermenace 2025](#panorama-de-la-cybermenace-2025)
+  * [Attaque destructrice du groupe Handala contre Stryker](#attaque-destructrice-du-groupe-handala-contre-stryker)
+  * [Campagne PhantomRaven : empoisonnement de la chaîne d'approvisionnement NPM](#campagne-phantomraven-empoisonnement-de-la-chaine-dapprovisionnement-npm)
+  * [Malware via de fausses publicités "Claude Code"](#malware-via-de-fausses-publicites-claude-code)
+  * [Sécurité des agents IA autonomes (Agentic AI)](#securite-des-agents-ia-autonomes-agentic-ai)
+  * [KadNap : botnet furtif ciblant les routeurs Asus](#kadnap-botnet-furtif-ciblant-les-routeurs-asus)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage de la menace de mars 2026 est marqué par une intensification critique du conflit cyber entre l'axe États-Unis/Israël et l'Iran, où les infrastructures industrielles (SCADA) deviennent des cibles prioritaires. On observe une hybridation croissante entre les services de renseignement étatiques (notamment l'Iran avec le MOIS) et l'écosystème du cybercrime, les acteurs étatiques utilisant désormais des outils criminels "sur étagère" pour complexifier l'attribution. Le "Patch Tuesday" de Microsoft souligne une nouvelle ère de vulnérabilités, avec l'émergence de failles découvertes par des agents d'IA, augmentant la vitesse de l'exploitation automatisée. Parallèlement, l'identité numérique devient la surface d'attaque dominante, avec 80 % des incidents liés à la compromission de comptes cloud et à l'abus d'outils de collaboration (Teams, Zoom). Les techniques d'évasion se sophistiquent, comme le démontrent le malware BlackSanta capable de neutraliser les EDR et la technique "Zombie ZIP" contournant la quasi-totalité des antivirus. Enfin, la menace pesant sur les passerelles d'accès (Ivanti, FortiGate) reste une constante, servant de vecteur privilégié pour le vol d'identifiants à privilèges et le mouvement latéral massif.
-
+Le paysage cyber de ce début d'année 2026 est marqué par une érosion définitive des frontières entre activisme pro-étatique et cybercriminalité pure, illustrée par l'attaque d'envergure contre Stryker. L'émergence de "Gulf War III" suite aux tensions entre les États-Unis, Israël et l'Iran transforme le cyberespace en champ de bataille de représailles directes, où les entreprises technologiques deviennent des cibles de "wiper" par procuration. Parallèlement, l'industrialisation des attaques sur la chaîne d'approvisionnement (NPM, routeurs domestiques) démontre une volonté d'exfiltration massive de données de développement pour compromettre les infrastructures futures. L'intelligence artificielle devient un double vecteur : outil de découverte de vulnérabilités critiques pour les défenseurs, mais aussi appât sophistiqué pour des campagnes de malvertising ciblant les profils techniques. Les vulnérabilités des équipements de bordure (Edge) restent le point d'entrée privilégié, exploitées avec une rapidité accrue par des botnets P2P complexes comme KadNap. La mise en œuvre du Cyber Resilience Act (CRA) devient un impératif stratégique pour les organisations face à ces menaces systémiques. Les décideurs doivent anticiper des perturbations globales de la logistique maritime et médicale dues à ces interférences géopolitiques. La résilience passera désormais par une gestion hybride stricte des identités et un durcissement des accès aux outils d'automatisation comme n8n.
 <br>
 <br>
 <div id="syntheses"></div>
@@ -36,11 +34,9 @@ Le paysage de la menace de mars 2026 est marqué par une intensification critiqu
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| **APT28 (Fancy Bear)** | Défense, Gouvernement (Ukraine) | Espionnage à long terme, malwares personnalisés (BEARDSHELL, COVENANT) | [Security Affairs](https://securityaffairs.com/189230/apt/apt28-conducts-long-term-espionage-on-ukrainian-forces-using-custom-malware.html) |
-| **BlackSanta** | Ressources Humaines (RH) | Spear-phishing (ISO), DLL side-loading, désactivation massive d'EDR/Antivirus | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-blacksanta-edr-killer-spotted-targeting-hr-departments/) |
-| **MuddyWater (MOIS)** | Télécoms, Défense, Énergie | Utilisation de malwares criminels (Castle Loader), backdoors Dindoor, exploitation d'identités cloud | [Check Point](https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/) / [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| **ShinyHunters** | Cloud (Salesforce) | Scan massif d'Experience Cloud, exploitation de mauvaises configurations de droits "invité" | [Security Affairs](https://securityaffairs.com/189214/security/threat-actors-use-custom-aurainspector-to-harvest-data-from-salesforce-systems.html) |
-| **Void Manticore (Handala)** | Énergie, Infrastructures critiques (Israël) | Hack-and-leak, utilisation de l'infostealer Rhadamanthys, wipers destructifs | [Check Point](https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/) |
+| **Handala (Hatef/Void Manticore)** | Santé, Medtech, Infrastructures critiques | Vol de données, utilisation abusive de MDM (Intune) pour effacement à distance (wiper). | https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/ |
+| **PhantomRaven** | Développeurs, JavaScript/NPM | Empoisonnement de paquets NPM, Remote Dynamic Dependencies (RDD). | https://www.bleepingcomputer.com/news/security/new-phantomraven-npm-attack-wave-steals-dev-data-via-88-packages/ |
+| **VoidLink** | Organisations diverses | Utilisation d'agents IA autonomes pour des opérations malveillantes. | https://blog.talosintelligence.com/agentic-ai-security-why-you-need-to-know-about-autonomous-agents-now/ |
 
 <br/>
 <br/>
@@ -50,11 +46,9 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Défense / Multi-sectoriel | Conflit Israël-Iran-USA | Blackout internet en Iran, frappes cinétiques sur les QG cyber de l'IRGC, et cyberattaques sur les systèmes SCADA israéliens. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Énergie | Ukraine | Résilience agricole et logistique de l'Ukraine face à l'arme alimentaire utilisée par la Russie. | [IRIS](https://www.iris-france.org/ukraine-front-agricole-dispute/) |
-| Gouvernemental | Hongrie | Pratiques de passation de marchés de défense centrées sur la modernisation industrielle nationale. | [IRIS](https://www.iris-france.org/what-are-the-main-drivers-of-member-states-defence-procurement-practices-the-hungarian-case/) |
-| Maritime | Golfe Persique | Perturbation massive des systèmes GPS/AIS affectant plus de 1100 navires suite à des opérations de guerre électronique. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Sécurité Européenne | UE | Europol avertit d'une hausse des menaces terroristes et cyber sur le sol européen liées à l'escalade au Moyen-Orient. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Santé / Medtech | Conflit Iran-USA/Israël | Attaque wiper contre Stryker en représailles à des frappes militaires américaines. | https://www.lemonde.fr/pixels/article/2026/03/11/des-pirates-pro-iraniens-revendiquent-une-importante-cyberattaque-d-une-entreprise-medicale-americaine_6670550_4408996.html |
+| Transport Maritime | Conflit Moyen-Orient | Risque de récession mondiale et blocage des routes maritimes en Asie suite à "Gulf War III". | https://www.rusi.org/explore-our-research/publications/commentary/gulf-war-iii-warning-about-effects-taiwan-straits-war-i |
+| Défense / Nucléaire | Souveraineté Européenne | Vision de Macron sur la "dissuasion avancée" pour protéger les alliés européens face à la menace russe. | https://www.rusi.org/explore-our-research/publications/commentary/macron-offers-promising-vision-nuclear-deterrence-europe |
 
 <br/>
 <br/>
@@ -65,9 +59,7 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| EDRi files DSA complaint against YouTube | EDRi | 10/03/2026 | Belgique / UE | Digital Services Act (DSA) | Plainte concernant l'absence d'alternative réelle au profilage dans les systèmes de recommandation. | [EDRi](https://edri.org/our-work/edri-files-dsa-complaint-against-youtube-for-undermining-user-autonomy/) |
-| The eID Wallet still doesn’t deserve your full trust | EDRi | 10/03/2026 | UE | Regulation (EU) 2024/1183 (eIDAS 2.0) | Critiques sur les actes d'exécution techniques affaiblissant la protection de la vie privée (traçabilité). | [EDRi](https://edri.org/our-work/the-eid-wallet-still-doesnt-deserve-your-full-trust/) |
-| White House Unveils National Cyber Strategy | Sean Cairncross | 10/03/2026 | USA | Cyber Strategy for America 2026 | Nouvelle stratégie offensive visant à imposer des coûts aux adversaires étatiques. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Biking the CRA with Balena | Harald Fischer | 11/03/2026 | Union Européenne | Cyber Resilience Act (CRA) | Obligations de gestion des risques cyber, documentation technique et responsabilité des produits Open Source. | https://openssf.org/blog/2026/03/11/first-steps-towards-cyber-resilience-act-conformity-biking-the-cra-with-balena-at-fosdem-2026/ |
 
 <br/>
 <br/>
@@ -77,26 +69,23 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Énergie | Sharjah National Oil Corporation (UAE) | Exfiltration de 1,3 To de données (contrats, finances) par le groupe Handala. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Santé | Shamir Medical Center (Israël) | Attaque par ransomware Qilin (affilié iranien), fuite de correspondances et données médicales. | [Check Point](https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/) |
-| Santé | TriZetto Provider Solutions | Violation de données impactant plus de 3,4 millions de patients. | [Security Affairs](https://securityaffairs.com/189266/security/microsoft-patch-tuesday-security-updates-for-march-2026-fixed-84-bugs.html) |
-| Télécommunications | Ericsson US | Compromission d'un fournisseur tiers exposant des données employés et clients. | [Security Affairs](https://securityaffairs.com/189197/data-breach/ericsson-us-confirms-breach-after-third-party-provider-attack.html) |
+| Développement logiciel | Développeurs NPM | Exfiltration de jetons CI/CD (.npmrc, .gitconfig) et variables d'environnement via 88 paquets malveillants. | https://www.bleepingcomputer.com/news/security/new-phantomraven-npm-attack-wave-steals-dev-data-via-88-packages/ |
+| Santé / Medtech | Stryker | Exfiltration revendiquée de 50 To de données critiques avant effacement des systèmes. | https://www.bleepingcomputer.com/news/security/medtech-giant-stryker-offline-after-iran-linked-wiper-malware-attack/ |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées, classées par score CVSS.
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité.
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2026-21536 | 9.8 | Microsoft Devices Pricing Program | Remote Code Execution (RCE) - IA discovered | [SANS](https://isc.sans.edu/diary/rss/32782) / [Krebs](https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/) |
-| CVE-2025-41709 | 9.8 | Janitza / Weidmueller Energy Meters | Command Injection (RCE) | [Security Online](https://securityonline.info/critical-rce-vulnerabilities-uncovered-in-janitza-and-weidmueller-energy-meters/) |
-| CVE-2025-26399 | 9.8 | SolarWinds Web Help Desk | Deserialization of Untrusted Data | [Security Affairs](https://securityaffairs.com/189172/security/u-s-cisa-adds-ivanti-epm-solarwinds-and-omnissa-workspace-one-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-23813 | 9.8 | HPE Aruba Networking AOS-CX | Authentication Bypass (Admin password reset) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hpe-warns-of-critical-aos-cx-flaw-allowing-admin-password-resets/) |
-| CVE-2026-1603 | 8.6 | Ivanti Endpoint Manager (EPM) | Authentication Bypass (KEV CISA) | [Field Effect](https://fieldeffect.com/blog/ivanti-endpoint-manager-active-exploitation) |
-| CVE-2026-21262 | 8.8 | Microsoft SQL Server | Elevation of Privilege (Zero-day / Public) | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws/) |
-| CVE-2026-0866 | N/A | Format ZIP (Moteurs AV) | Technique "Zombie ZIP" (Evasion de détection) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-zombie-zip-technique-lets-malware-slip-past-security-tools/) |
+| CVE-2026-27591 | 9.9 | Winter CMS | Escalade de privilèges (Authenticated Backend) | https://cvefeed.io/vuln/detail/CVE-2026-27591 |
+| CVE-2025-66956 | 9.9 | Asseco SEE Live 2.0 | Contrôle d'accès incorrect / Exécution d'attachements | https://cvefeed.io/vuln/detail/CVE-2025-66956 |
+| CVE-2026-23813 | 9.8 | HPE Aruba AOS-CX | Contournement d'authentification (Web Management) | https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0262/ |
+| CVE-2026-32136 | 9.8 | AdGuard Home | Contournement d'authentification via h2c Upgrade | https://cvefeed.io/vuln/detail/CVE-2026-32136 |
+| CVE-2026-21536 | 9.8 | Windows (Devices Pricing) | Exécution de code à distance (Découvert par IA) | https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/ |
+| CVE-2025-68613 | 9.8 | n8n (Workflow Automation) | Exécution de code à distance (RCE) activement exploitée | https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-n8n-rce-flaw-exploited-in-attacks/ |
 
 <br/>
 <br/>
@@ -105,13 +94,12 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Iranian MOIS Actors & the Cyber Crime Connection | Analyse majeure de la convergence entre espionnage étatique et cybercriminalité. | [Check Point](https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/) |
-| Microsoft March 2026 Patch Tuesday | Synthèse indispensable des mises à jour de sécurité critiques du mois. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws/) |
-| Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict | Chronologie détaillée d'un conflit cyber-cinétique majeur. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| New ‘BlackSanta’ EDR killer spotted targeting HR departments | Découverte d'une nouvelle technique sophistiquée de neutralisation des outils de sécurité. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-blacksanta-edr-killer-spotted-targeting-hr-departments/) |
-| Ivanti Endpoint Manager under active exploitation | Alerte critique sur une exploitation active (KEV CISA). | [Field Effect](https://fieldeffect.com/blog/ivanti-endpoint-manager-active-exploitation) |
-| Attackers exploit FortiGate devices to access sensitive network information | Incident concret d'exploitation de passerelles pour le vol d'identifiants AD. | [Security Affairs](https://securityaffairs.com/189241/security/attackers-exploit-fortigate-devices-to-access-sensitive-network-information.html) |
-| APT28 conducts long-term espionage on Ukrainian forces | Analyse technique du retour d'un acteur étatique russe majeur. | [Security Affairs](https://securityaffairs.com/189230/apt/apt28-conducts-long-term-espionage-on-ukrainian-forces-using-custom-malware.html) |
+| Agentic AI security: Why you need to know about autonomous agents now | Analyse prospective essentielle sur les risques liés aux agents IA autonomes. | https://blog.talosintelligence.com/agentic-ai-security-why-you-need-to-know-about-autonomous-agents-now/ |
+| KadNap bot compromises 14,000+ devices to route malicious traffic | Analyse technique d'un botnet P2P sophistiqué ciblant les routeurs Asus. | https://securityaffairs.com/189251/malware/kadnap-bot-compromises-14000-devices-to-route-malicious-traffic.html |
+| Medtech giant Stryker offline after Iran-linked wiper malware attack | Cas d'étude majeur de wiper pro-étatique impactant une infrastructure de santé globale. | https://www.bleepingcomputer.com/news/security/medtech-giant-stryker-offline-after-iran-linked-wiper-malware-attack/ |
+| New PhantomRaven NPM attack wave steals dev data via 88 packages | Alerte critique sur la compromission de la chaîne d'approvisionnement des développeurs JS. | https://www.bleepingcomputer.com/news/security/new-phantomraven-npm-attack-wave-steals-dev-data-via-88-packages/ |
+| Panorama de la cybermenace 2025 | Rapport de référence de l'ANSSI sur les tendances stratégiques actuelles. | https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-AVI-0259/ |
+| Windows and macOS Malware Spreads via Fake “Claude Code” Google Ads | Exemple concret de social engineering utilisant l'IA comme leurre pour infecter des profils techniques. | https://www.bitdefender.com/en-us/blog/labs/fake-claude-code-google-ads-malware |
 
 <br/>
 <br/>
@@ -120,168 +108,160 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| The RSAC 2026 Conference talks worth catching | Contenu promotionnel / événementiel peu opérationnel. | [Red Canary](https://redcanary.com/blog/news-events/rsac-2026/) |
-| Security News Digest - 2026-03-11 | Redondance avec les articles détaillés déjà sélectionnés. | [Social Media](https://infosec.exchange/@securityfeed/116208187850182165) |
-| ASN: AS137425 Location: Dhaka | Information de routine sans contexte de menace spécifique. | [Social Media](https://infosec.exchange/@shodansafari/116207833026896761) |
-| ISC Stormcast for Wednesday, March 11th | Format podcast avec peu de détails écrits exploitables. | [SANS ISC](https://isc.sans.edu/diary/rss/32784) |
+| ISC Stormcast For Thursday, March 12th, 2026 | Contenu audio sans résumé textuel détaillé exploitable. | https://isc.sans.edu/diary/rss/32790 |
+| Spinning complex ideas into clear docs with Kri Dontje | Interview centrée sur la communication technique, sans menace cyber directe. | https://blog.talosintelligence.com/spinning-complex-ideas-into-clear-docs-with-kri-dontje/ |
+| Vertrauen im digitalen Zeitalter | Commentaire général sur la confiance numérique sans données techniques spécifiques. | https://research.hisolutions.com/2026/03/vertrauen-im-digitalen-zeitalter/ |
+| WhatsApp introduces parent-managed accounts for pre-teens | Actualité de fonctionnalité produit, impact limité sur la menace entreprise. | https://www.bleepingcomputer.com/news/security/whatsapp-introduces-parent-managed-accounts-for-pre-teens/ |
 
 <br>
 <br>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="iranian-mois-actors-the-cyber-crime-connection"></div>
+<div id="panorama-de-la-cybermenace-2025"></div>
 
-## Iranian MOIS Actors & the Cyber Crime Connection
-L'analyse de Check Point Research révèle une évolution majeure des tactiques de renseignement iranien (MOIS). Des groupes comme MuddyWater et Void Manticore ne se contentent plus d'imiter des cybercriminels, mais intègrent activement l'écosystème criminel pour leurs opérations. Ils utilisent désormais des infostealers commerciaux (Rhadamanthys), des botnets tiers (Tsundere) et des services de Malware-as-a-Service (Castle Loader). Cette approche offre deux avantages : l'augmentation des capacités techniques via des outils matures et une complexification extrême de l'attribution. Les attaques contre les hôpitaux israéliens (Shamir Medical Center) via l'infrastructure de ransomware Qilin illustrent cette transition où le crime devient une ressource opérationnelle d'État.
+## Panorama de la cybermenace 2025
+L'ANSSI (CERT-FR) publie son rapport annuel soulignant l'érosion des frontières entre attaquants étatiques et cybercriminels. Les groupes liés à la Russie et à la Chine intensifient leurs efforts d'espionnage contre les réseaux diplomatiques mondiaux. Le détournement d'outils légitimes et de services cloud devient la norme, compliquant les processus d'imputation. Les équipements de bordure (firewalls, passerelles) sont massivement ciblés par l'exploitation de vulnérabilités Zero-Day ou n-day. On observe un glissement significatif du ransomware classique vers l'exfiltration pure de données, jugée plus discrète et lucrative. L'ingénierie sociale évolue pour inclure des faux supports informatiques plus sophistiqués. L'IA générative commence à être intégrée dans les arsenaux offensifs sans toutefois créer de rupture technologique majeure immédiate. Les tensions géopolitiques exacerbent les cyberattaques destructrices contre les infrastructures critiques. L'ANSSI appelle à une vigilance accrue sur les solutions exposées sur Internet. La coopération internationale reste l'outil principal pour contrer les fuites de données affectant les acteurs malveillants eux-mêmes.
 
-**Analyse de l'impact** : Impact critique sur la capacité de détection et d'attribution des équipes de réponse aux incidents, car les marqueurs techniques sont partagés avec des groupes criminels financiers communs.
+**Analyse de l'impact** : Impact stratégique majeur sur la confiance dans les outils de bordure et les services cloud. L'impossibilité de distinguer clairement les mobiles (crime vs espionnage) complexifie la réponse aux incidents.
 
 **Recommandations** : 
-* Renforcer la surveillance des infostealers même dans des contextes non financiers.
-* Surveiller l'utilisation d'outils de transfert comme `rclone` vers des services cloud (Wasabi).
-* Vérifier les certificats de signature de code suspects ("Amy Cherne", "Donald Gay").
+* Prioriser le déploiement de correctifs sur les équipements exposés (Edge) sous 24h.
+* Mettre en œuvre une stratégie "Zero Trust" stricte pour les accès administratifs cloud.
+* Renforcer la surveillance des exfiltrations massives de données via des outils de DLP.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | MuddyWater, Void Manticore, Qilin (affilié) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.001: Spear-phishing with link * T1588.002: Acquire Infrastructure (Criminal Tools) * T1486: Data Encrypted for Impact |
-| Observables & Indicateurs de compromission | * IP: 18.223.24.218 * Hash: aae017e7a36e016655c91bd01b4f3c46309bbe540733f82cce29392e72e9bd1f (Rhadamanthys) * Certificats: Amy Cherne, Donald Gay |
+| Groupe ou acteur malveillant | Groupes liés à la Russie et à la Chine (non nommés spécifiquement dans le résumé) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1020: Automated Exfiltration <br/> * T1566: Phishing |
+| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni dans ce rapport de synthèse.``` |
 
 ### Source (url) du ou des articles
-* https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/
+* https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-002/
 
 <br>
-<div id="microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws"></div>
+<br>
 
-## Microsoft March 2026 Patch Tuesday fixes 2 zero-days, 79 flaws
-Le Patch Tuesday de mars 2026 corrige 79 vulnérabilités, dont deux "zero-day" divulgués publiquement (CVE-2026-21262 et CVE-2026-26127). Huit vulnérabilités sont classées comme critiques. Un fait notable est la découverte par une IA (agent XBOW) de la faille RCE critique CVE-2026-21536 dans les services cloud de Microsoft. Les correctifs couvrent Windows, Office, SQL Server et Azure. Les failles de Microsoft Office exploitables via le volet de visualisation (Preview Pane) restent une priorité haute, tout comme une faille d'Excel (CVE-2026-26144) pouvant être détournée par Copilot pour exfiltrer des données.
+<div id="attaque-destructrice-du-groupe-handala-contre-stryker"></div>
 
-**Analyse de l'impact** : Risque élevé d'escalade de privilèges et d'exécution de code à distance sur les parcs Windows. L'automatisation de la découverte de failles par l'IA accélère le cycle d'exploitation.
+## Attaque destructrice du groupe Handala contre Stryker
+Le géant des équipements médicaux Stryker a subi une attaque dévastatrice par le groupe pro-iranien Handala. Les pirates affirment avoir exfiltré 50 To de données sensibles avant de déclencher un "wiper" sur plus de 200 000 systèmes. L'attaque aurait exploité la solution Microsoft Intune pour envoyer des commandes d'effacement à distance aux appareils connectés, y compris les mobiles des employés. Les opérations mondiales de Stryker dans 79 pays ont été paralysées, forçant un retour aux procédures papier. L'incident est présenté comme une mesure de représailles après des frappes américaines en Iran. Le groupe a défacé les pages de connexion Entra ID avec son logo. Stryker a confirmé l'incident via un formulaire SEC 8-K, admettant une perturbation mondiale de son environnement Microsoft. Les hôpitaux clients rapportent des difficultés d'approvisionnement en matériel chirurgical. Handala est lié au Ministère iranien du Renseignement (MOIS) et est connu pour ses opérations de guerre psychologique. L'utilisation malveillante d'outils d'administration légitimes (Living Off the Land) est ici centrale.
+
+**Analyse de l'impact** : Rupture critique de la chaîne d'approvisionnement médicale mondiale. L'utilisation des outils de MDM (Intune) comme vecteur de destruction crée un précédent alarmant pour la gestion des flottes d'appareils mobiles.
 
 **Recommandations** : 
-* Déployer prioritairement les correctifs pour SQL Server (CVE-2026-21262).
-* Désactiver le volet de visualisation dans Outlook si le patch ne peut être appliqué immédiatement.
-* Restreindre les privilèges des utilisateurs Copilot sur les données sensibles dans Excel.
+* Segmenter strictement les droits d'administration sur les consoles MDM (MFA obligatoire, approbation multi-utilisateurs).
+* Auditer les logs Intune/Entra pour détecter des commandes d'effacement massif ("Wipe") anormales.
+* Désinstaller temporairement les profils de gestion d'entreprise sur les appareils personnels (BYOD) en cas de suspicion de compromission du tenant.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non applicable |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1203: Exploitation for Client Execution * T1068: Exploitation for Privilege Escalation |
-| Observables & Indicateurs de compromission | CVE-2026-21262, CVE-2026-26127, CVE-2026-21536, CVE-2026-26144 |
+| Groupe ou acteur malveillant | Handala (Void Manticore / Hatef) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078.004: Cloud Accounts <br/> * T1485: Data Destruction <br/> * T1566.002: Spearphishing Link |
+| Observables & Indicateurs de compromission | ```* Logo Handala sur pages de connexion Entra ID <br/> * Commandes de remote wipe via Microsoft Intune``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/microsoft/microsoft-march-2026-patch-tuesday-fixes-2-zero-days-79-flaws/
-* https://isc.sans.edu/diary/rss/32782
-* https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/
+* https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/
+* https://www.bleepingcomputer.com/news/security/medtech-giant-stryker-offline-after-iran-linked-wiper-malware-attack/
 
 <br>
-<div id="monitoring-cyberattacks-directly-linked-to-the-us-israel-iran-military-conflict"></div>
+<br>
 
-## Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict
-Le conflit cyber-cinétique entre les États-Unis, Israël et l'Iran a atteint un paroxysme en mars 2026. L'Iran subit un blackout internet quasi-total (1 % de connectivité) suite à des frappes israéliennes sur les infrastructures de télécommunications et de commandement de l'IRGC. En représailles, des collectifs hacktivistes pro-iraniens et russes (NoName057) multiplient les attaques contre les systèmes de contrôle industriel (ICS) israéliens, affirmant avoir pris le contrôle de pompes à eau et de systèmes énergétiques. Des opérations d'influence massives via des applications mobiles compromises (BadeSaba) ont été observées pour diffuser des messages de propagande.
+<div id="campagne-phantomraven-empoisonnement-de-la-chaine-dapprovisionnement-npm"></div>
 
-**Analyse de l'impact** : Menace directe sur la sécurité physique et les services essentiels (eau, électricité) au Moyen-Orient. Risque de débordement vers les alliés occidentaux (frappes DDoS sur des ports US).
+## Campagne PhantomRaven : empoisonnement de la chaîne d'approvisionnement NPM
+La campagne "PhantomRaven" frappe le registre npm avec 88 nouveaux paquets malveillants ciblant les développeurs JavaScript. Ces paquets utilisent la technique "Remote Dynamic Dependencies" (RDD) pour contourner l'analyse statique automatique. Le fichier `package.json` appelle une dépendance externe via une URL, téléchargeant le malware uniquement lors de l'exécution de `npm install`. Le but principal est l'exfiltration de données de configuration sensibles : `.gitconfig`, `.npmrc` et variables d'environnement. Les jetons CI/CD pour GitHub, GitLab et Jenkins sont spécifiquement visés. La campagne utilise le "slopsquatting", imitant des projets populaires comme Babel ou GraphQL avec des noms générés par IA. L'infrastructure d'attaque repose sur des serveurs Amazon EC2 utilisant des noms de domaine liés au mot "artifact". Les données volées sont envoyées via des requêtes HTTP GET/POST ou des WebSockets vers un serveur C2. Plus de 80 paquets malveillants seraient encore actifs sur le registre. Les chercheurs notent une rotation fréquente des comptes jetables pour publier ces paquets.
+
+**Analyse de l'impact** : Risque majeur de compromission en cascade des environnements de production via le vol de secrets de développement et de déploiement (CI/CD).
 
 **Recommandations** : 
-* Isoler impérativement les interfaces de gestion ICS/SCADA d'Internet.
-* Activer une surveillance accrue sur les logs d'accès VPN provenant de zones géopolitiques instables.
-* Sensibiliser les utilisateurs aux risques de malwares mobiles thématiques (alertes de guerre).
+* Utiliser des fichiers de verrouillage (`package-lock.json`) et auditer systématiquement les nouvelles dépendances.
+* Interdire les installations npm sans validation préalable des URL de dépendances externes au niveau du proxy.
+* Faire pivoter immédiatement tous les jetons CI/CD si un paquet suspect a été installé.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | IRGC, CyberAv3ngers, NoName057(16), Handala |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0801: Monitor Process State * T0814: Denial of Service (ICS) * T1491: Defacement |
-| Observables & Indicateurs de compromission | CVE-2017-7921 (Hikvision), CVE-2021-22681 (Rockwell) |
+| Groupe ou acteur malveillant | PhantomRaven |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.001: Supply Chain Compromise: Dependencies <br/> * T1552.001: Credentials In Files <br/> * T1071.001: Web Protocols |
+| Observables & Indicateurs de compromission | ```* Domaines contenant "artifact" sur AWS EC2 <br/> * Appels externes dans package.json vers des URL non-npm <br/> * Exfiltration vers des endpoints PHP modifiés``` |
 
 ### Source (url) du ou des articles
-* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+* https://www.bleepingcomputer.com/news/security/new-phantomraven-npm-attack-wave-steals-dev-data-via-88-packages/
 
 <br>
-<div id="new-blacksanta-edr-killer-spotted-targeting-hr-departments"></div>
+<br>
 
-## New ‘BlackSanta’ EDR killer spotted targeting HR departments
-Le malware BlackSanta cible spécifiquement les services RH via des ISO malveillants déguisés en CV. Une fois exécuté, il déploie un module de neutralisation ("EDR killer") extrêmement efficace. BlackSanta utilise des pilotes légitimes détournés (BYOD - Bring Your Own Driver) comme IObitUnlocker.sys pour terminer les processus de sécurité au niveau du noyau. Il ajoute également des exclusions dans Microsoft Defender et réduit la télémétrie envoyée vers le cloud de sécurité. Le malware effectue des tests de lecture/écriture disque et des vérifications d'environnement (anti-VM/sandbox) avant de charger son payload final par "process hollowing".
+<div id="malware-via-de-fausses-publicites-claude-code"></div>
 
-**Analyse de l'impact** : Menace sérieuse pour l'intégrité des postes de travail RH qui gèrent des données sensibles. La neutralisation de l'EDR rend l'infection invisible aux outils classiques.
+## Malware via de fausses publicités "Claude Code"
+Bitdefender a détecté une campagne malveillante via Google Ads ciblant les utilisateurs recherchant "Claude Code" d'Anthropic. Les publicités redirigent vers des sites contrefaits hébergés sur Squarespace mimant la documentation officielle. L'attaque utilise la tactique "ClickFix" : les victimes sont incitées à copier-coller des commandes terminal pour l'installation. Sur Windows, la commande abuse de `mshta.exe` pour télécharger un stealer (Trojan.Stealer.GJ). Sur macOS, un script complexe décode une charge utile en Base64 pour installer une porte dérobée Mach-O. Cette backdoor permet l'exécution de commandes à distance et le vol de données de navigateur et de cryptomonnaies. Les attaquants auraient compromis un compte publicitaire légitime appartenant à une entreprise malaisienne pour passer les filtres de Google. Aucun exploit technique n'est utilisé ; l'infection repose entièrement sur l'ingénierie sociale et la confiance envers les résultats sponsorisés. Les binaires macOS effectuent des vérifications anti-sandbox et anti-VM. La charge utile macOS présente des similitudes avec le stealer AMOS.
+
+**Analyse de l'impact** : Compromission directe des postes de travail des développeurs et analystes de données, avec accès complet au système de fichiers et aux identifiants.
 
 **Recommandations** : 
-* Bloquer le montage des fichiers ISO au niveau de la politique de groupe (GPO) pour les utilisateurs non techniques.
-* Surveiller le chargement de pilotes non signés ou connus pour être abusés (IObitUnlocker.sys).
-* Implémenter des alertes sur les modifications des clés de registre Microsoft Defender.
+* Sensibiliser les utilisateurs à ne jamais copier-coller des commandes terminal provenant de sites non vérifiés.
+* Bloquer l'exécution de `mshta.exe` via des politiques de restriction logicielle (AppLocker/WDAC).
+* Utiliser un bloqueur de publicités au niveau de l'entreprise pour filtrer les résultats sponsorisés.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Acteur russophone (non nommé) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1562.001: Disable or Modify Tools * T1055.012: Process Hollowing * T1574.002: DLL Side-Loading |
-| Observables & Indicateurs de compromission | * Pilotes: truesight.sys, IObitUnlocker.sys * Archive: SumatraPDF avec DWrite.dll malveillant |
+| Groupe ou acteur malveillant | Non mentionné (Similitudes avec AMOS) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.002: User Execution: Malicious File <br/> * T1059.001: PowerShell <br/> * T1218.005: Mshta |
+| Observables & Indicateurs de compromission | ```* hxxps://download.active-version[.]com/claude <br/> * hxxps://claude-code-cmd.squarespace[.]com <br/> * SHA256: 3b4d3a59024f14cf1f07395afd6957be05d125e00ae8fdcea3a5dee1d8ab9dd3``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/new-blacksanta-edr-killer-spotted-targeting-hr-departments/
+* https://www.bitdefender.com/en-us/blog/labs/fake-claude-code-google-ads-malware
 
 <br>
-<div id="ivanti-endpoint-manager-under-active-exploitation"></div>
+<br>
 
-## Ivanti Endpoint Manager under active exploitation
-La vulnérabilité CVE-2026-1603 (CVSS 8.6) affectant Ivanti Endpoint Manager (EPM) est activement exploitée selon la CISA. Cette faille de contournement d'authentification permet à un attaquant non authentifié, ayant un accès réseau au serveur central, de récupérer des identifiants stockés. Ivanti EPM étant une solution de gestion centralisée avec des privilèges élevés sur tout le parc (Windows, macOS, IoT), sa compromission offre un contrôle quasi-total sur l'infrastructure ciblée. Le patch correctif est disponible depuis février 2026 (version 2024 SU5).
+<div id="securite-des-agents-ia-autonomes-agentic-ai"></div>
 
-**Analyse de l'impact** : Risque critique de mouvement latéral massif et de vol d'identifiants à hauts privilèges.
+## Sécurité des agents IA autonomes (Agentic AI)
+Cisco Talos alerte sur les risques émergents liés au déploiement des agents IA autonomes dans les entreprises. Ces systèmes, capables de planifier et d'exécuter des tâches avec des outils réels, introduisent de nouvelles surfaces d'attaque. Un agent compromis pourrait causer des dommages supérieurs à un utilisateur humain en raison de sa vitesse d'exécution. Les vulnérabilités incluent la fuite de données lors de requêtes web et la manipulation de l'agent par des instructions externes. Le caractère non-déterministe des LLM rend les approches classiques d'autorisation/blocage insuffisantes. Talos préconise une supervision par des modèles tiers ("Safety models") pour évaluer les conséquences avant exécution. Les attaquants utilisent déjà des frameworks comme VoidLink pour automatiser l'exploration et l'exfiltration. À l'avenir, des agents autonomes pourraient être déployés localement chez la victime pour agir via des "covert channels" asynchrones. Le threat modeling doit désormais intégrer les privilèges spécifiques accordés aux identités machine gérées par l'IA. La traçabilité et l'auditabilité des actions de l'agent sont des impératifs réglementaires.
+
+**Analyse de l'impact** : Risque systémique de perte de contrôle sur les processus automatisés, pouvant mener à des destructions de données massives ou des fuites d'informations confidentielles à l'insu des opérateurs.
 
 **Recommandations** : 
-* Mettre à jour immédiatement vers EPM 2024 SU5.
-* Isoler le serveur EPM dans un segment réseau administratif restreint (Jump host).
-* Effectuer une rotation immédiate de tous les secrets et identifiants gérés par Ivanti.
+* Appliquer le principe du moindre privilège aux jetons d'accès (API keys) utilisés par les agents IA.
+* Mettre en place un "Human-in-the-loop" pour la validation des étapes critiques (suppression, modification de config).
+* Isoler les environnements d'exécution des agents dans des bacs à sable (sandboxing) réseau stricts.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non applicable |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1556: Modify Authentication Process * T1555: Credentials from Password Stores |
-| Observables & Indicateurs de compromission | CVE-2026-1603 |
+| Groupe ou acteur malveillant | Utilisateurs de VoidLink |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1059: Command and Scripting Interpreter <br/> * T1020: Automated Exfiltration <br/> * T1568: Dynamic Resolution |
+| Observables & Indicateurs de compromission | ```Aucun IoC spécifique fourni (Analyse stratégique)``` |
 
 ### Source (url) du ou des articles
-* https://fieldeffect.com/blog/ivanti-endpoint-manager-active-exploitation
-* https://securityaffairs.com/189172/security/u-s-cisa-adds-ivanti-epm-solarwinds-and-omnissa-workspace-one-flaws-to-its-known-exploited-vulnerabilities-catalog.html
+* https://blog.talosintelligence.com/agentic-ai-security-why-you-need-to-know-about-autonomous-agents-now/
 
 <br>
-<div id="attackers-exploit-fortigate-devices-to-access-sensitive-network-information"></div>
-
-## Attackers exploit FortiGate devices to access sensitive network information
-SentinelOne rapporte plusieurs incidents où des pare-feu FortiGate ont été compromis pour servir de tête de pont. Les attaquants exploitent des vulnérabilités de validation de signature SSO (CVE-2025-59718/19) pour obtenir un accès administrateur sans authentification. Une fois l'accès obtenu, ils exfiltrent les fichiers de configuration contenant les identifiants chiffrés des comptes de service LDAP. Ces identifiants sont ensuite déchiffrés hors-ligne pour s'authentifier sur l'Active Directory (AD), permettant l'enrôlement de stations de travail pirates et le déploiement d'outils RMM (Pulseway, MeshAgent).
-
-**Analyse de l'impact** : Compromission totale de l'AD à partir d'un accès périphérique mal sécurisé. Les secteurs de la santé et des MSP sont particulièrement visés.
-
-**Recommandations** : 
-* Appliquer les correctifs FortiOS pour le SSO immédiatement.
-* Limiter l'accès aux interfaces d'administration FortiGate à des adresses IP sources de confiance.
-* Surveiller la création de nouveaux comptes administrateurs locaux sur les appliances réseau.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Non applicable (espionnage/financier) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1556.002: Password Policy Discovery * T1555.004: Windows Credential Manager * T1219: Remote Access Software |
-| Observables & Indicateurs de compromission | * CVE-2025-59718, CVE-2025-59719, CVE-2026-24858 * Fichiers: NTDS.dit exfiltré |
-
-### Source (url) du ou des articles
-* https://securityaffairs.com/189241/security/attackers-exploit-fortigate-devices-to-access-sensitive-network-information.html
-
 <br>
-<div id="apt28-conducts-long-term-espionage-on-ukrainian-forces-using-custom-malware"></div>
 
-## APT28 conducts long-term espionage on Ukrainian forces using custom malware
-Le groupe APT28 (lié au GRU russe) mène une campagne d'espionnage active contre le personnel militaire ukrainien depuis avril 2024. Le toolkit repose sur deux implants modernes : BEARDSHELL (backdoor C++) et COVENANT (framework de post-exploitation modifié). Ces outils utilisent des services cloud légitimes (Icedrive, Filen) pour leur communication C2 afin de rester furtifs. BEARDSHELL présente des similitudes de code avec XTunnel, utilisé lors du piratage du DNC en 2016, confirmant la pérennité de l'expertise de développement du groupe. SLIMAGENT, un autre module, est utilisé pour la capture de captures d'écran et l'exfiltration de documents.
+<div id="kadnap-botnet-furtif-ciblant-les-routeurs-asus"></div>
 
-**Analyse de l'impact** : Risque d'espionnage stratégique et tactique persistant sur les opérations militaires.
+## KadNap : botnet furtif ciblant les routeurs Asus
+Lumen Technologies a identifié le botnet "KadNap" ayant compromis plus de 14 000 routeurs Asus, principalement aux États-Unis. Ce botnet utilise une version personnalisée du protocole P2P Kademlia pour masquer ses serveurs de commande et contrôle (C2). Les appareils infectés servent de relais de proxy via un service nommé "Doppelganger", possiblement lié au réseau Faceless. L'infection débute par un script malveillant qui télécharge un binaire ELF (ARM/MIPS) sur l'équipement de bordure. Le malware synchronise son horloge via NTP et génère des identifiants uniques pour rejoindre le réseau DHT. Contrairement à un réseau P2P classique, KadNap maintient des nœuds persistants pour garder le contrôle du réseau. Ces routeurs compromis sont revendus pour mener des attaques par force brute ou des exploitations ciblées. La furtivité est renforcée par la redirection des entrées/sorties vers `/dev/null`. Le botnet est actif depuis août 2025 et continue de croître. Plus de 60 % des victimes se situent aux États-Unis, suivis par Taïwan et l'Europe.
+
+**Analyse de l'impact** : Création d'une infrastructure de proxy résidentiel massive permettant aux attaquants de masquer l'origine de leurs assauts derrière des IP légitimes de confiance.
 
 **Recommandations** : 
-* Analyser les flux sortants vers les services de stockage cloud peu communs (Filen, Icedrive).
-* Rechercher les mécanismes de persistance basés sur le framework Covenant.
-* Surveiller l'utilisation suspecte de scripts PowerShell déchiffrés en mémoire.
+* Mettre à jour le firmware des routeurs Asus et désactiver l'administration à distance.
+* Surveiller les communications sortantes inhabituelles vers les ports non-standards ou le trafic UDP lié au DHT.
+* Réinitialiser les équipements suspects et changer les mots de passe d'administration par défaut.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | APT28 (Fancy Bear / GRU) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1102.002: Bidirectional Communication * T1113: Screen Capture * T1027.001: Binary Obfuscation (Opaque Predicate) |
-| Observables & Indicateurs de compromission | * Malwares: BEARDSHELL, SLIMAGENT * C2: Icedrive API, Filen.io |
+| Groupe ou acteur malveillant | Opérateurs de Doppelganger (ex-Faceless/TheMoon) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1090.002: External Proxy <br/> * T1584.005: Botnet <br/> * T1201: Password Policy Discovery |
+| Observables & Indicateurs de compromission | ```* IP: 45.135.180.38 <br/> * IP: 45.135.180.177 <br/> * Binaire ELF (ARM/MIPS) furtif``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/189230/apt/apt28-conducts-long-term-espionage-on-ukrainian-forces-using-custom-malware.html
+* https://securityaffairs.com/189251/malware/kadnap-bot-compromises-14000-devices-to-route-malicious-traffic.html
