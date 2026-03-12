@@ -1,0 +1,314 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The strategic landscape of 2026 is marked by the complete erosion of boundaries between state-sponsored actors and cybercriminals, as highlighted in the ANSSI 2025 panorama. A major paradigm shift is observed with the transition from traditional ransomware to pure data exfiltration and destructive wiper attacks, notably illustrated by the massive Handala campaign against Stryker. Furthermore, the integration of 'Agentic AI' (autonomous AI agents) into both offensive frameworks and defensive perimeters is becoming a critical point of friction, necessitating new risk management models that move beyond traditional deterministic security.",
+      "fr": "Le paysage stratégique de 2026 est marqué par l'érosion complète des frontières entre acteurs étatiques et cybercriminels, comme le souligne le panorama 2025 de l'ANSSI. Un changement de paradigme majeur est observé avec le passage du rançongiciel traditionnel à l'exfiltration pure de données et aux attaques destructrices de type 'wiper', illustré par la campagne massive de Handala contre Stryker. De plus, l'intégration de l'IA 'agentique' (agents autonomes) dans les frameworks offensifs et les périmètres défensifs devient un point de friction critique, nécessitant de nouveaux modèles de gestion des risques dépassant la sécurité déterministe traditionnelle."
+    },
+    "date": "2026-03-12"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Defense and International Relations",
+        "fr": "Défense et Relations Internationales"
+      },
+      "theme": {
+        "en": "Middle East Escalation & Gulf War III",
+        "fr": "Escalade au Moyen-Orient et Troisième Guerre du Golfe"
+      },
+      "description": {
+        "en": "The conflict between the US/Israel and Iran (referred to as Gulf War III) has triggered massive ripples in global shipping and energy markets. Analysts warn that this provides a blueprint for potential disruptions in the Taiwan Strait. Concurrently, France is proposing a 'forward deterrence' nuclear vision for Europe to reduce reliance on the US umbrella.",
+        "fr": "Le conflit entre les États-Unis/Israël et l'Iran (désigné sous le nom de Troisième Guerre du Golfe) a déclenché des ondes de choc massives dans le transport maritime mondial et les marchés de l'énergie. Les analystes avertissent que cela préfigure des perturbations potentielles dans le détroit de Taïwan. Parallèlement, la France propose une vision nucléaire de 'dissuasion avancée' pour l'Europe afin de réduire la dépendance au parapluie américain."
+      },
+      "tags": [
+        "Geopolitics",
+        "Iran",
+        "Shipping",
+        "Nuclear Deterrence"
+      ],
+      "sources": [
+        "https://www.iris-france.org/la-guerre-en-iran-vue-de-russie-et-dukraine-avec-hugues-pernet/",
+        "https://www.rusi.org/explore-our-research/publications/commentary/gulf-war-iii-warning-about-effects-taiwan-straits-war-i"
+      ],
+      "date": "2026-03-12"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Stryker (Medical Technology)",
+      "threat_actor": "Handala",
+      "sector": {
+        "en": "Healthcare / Medical Devices",
+        "fr": "Santé / Équipements Médicaux"
+      },
+      "description": {
+        "en": "Global medical giant Stryker suffered a catastrophic wiper attack. The actor 'Handala' (linked to Iranian intelligence) claims to have wiped 200,000 systems and exfiltrated 50TB of data. The attack allegedly leveraged Microsoft Intune for remote wiping of workstations and mobile devices.",
+        "fr": "Le géant médical mondial Stryker a subi une attaque de type 'wiper' catastrophique. L'acteur 'Handala' (lié au renseignement iranien) prétend avoir effacé 200 000 systèmes et exfiltré 50 To de données. L'attaque aurait exploité Microsoft Intune pour l'effacement à distance des postes de travail et terminaux mobiles."
+      },
+      "tags": [
+        "Wiper",
+        "Intune",
+        "Healthcare",
+        "Data Theft"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/",
+        "https://www.bleepingcomputer.com/news/security/medtech-giant-stryker-offline-after-iran-linked-wiper-malware-attack/"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "victim": "npm ecosystem / JavaScript Developers",
+      "threat_actor": "PhantomRaven",
+      "sector": {
+        "en": "Technology / Software Development",
+        "fr": "Technologie / Développement Logiciel"
+      },
+      "description": {
+        "en": "88 malicious npm packages exfiltrating sensitive developer data (gitconfig, npmrc, environment variables) were identified. The campaign uses Remote Dynamic Dependencies (RDD) to bypass automated scanners.",
+        "fr": "88 paquets npm malveillants exfiltrant des données sensibles de développeurs (gitconfig, npmrc, variables d'environnement) ont été identifiés. La campagne utilise des dépendances dynamiques distantes (RDD) pour contourner les scanners automatisés."
+      },
+      "tags": [
+        "Supply Chain",
+        "npm",
+        "Data Exfiltration"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-phantomraven-npm-attack-wave-steals-dev-data-via-88-packages/"
+      ],
+      "date": "2026-03-12"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-32136",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:adguard:adguard_home:*:*:*:*:*:*:*:*",
+      "product": "AdGuard Home",
+      "vendor": "AdGuard",
+      "description": {
+        "en": "Authentication bypass via HTTP/2 Cleartext (h2c) upgrade. An unauthenticated attacker can bypass all authentication by requesting an upgrade to h2c.",
+        "fr": "Contournement d'authentification via la mise à niveau HTTP/2 Cleartext (h2c). Un attaquant non authentifié peut contourner toute authentification en demandant une mise à niveau vers h2c."
+      },
+      "tags": [
+        "vulnerability",
+        "Auth Bypass",
+        "h2c"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-32136"
+      ],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2025-68613",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:*:*:*",
+      "product": "n8n",
+      "vendor": "n8n",
+      "description": {
+        "en": "Remote Code Execution (RCE) in workflow expression evaluation. CISA ordered federal agencies to patch this vulnerability due to active exploitation.",
+        "fr": "Exécution de code à distance (RCE) dans l'évaluation des expressions de workflow. Le CISA a ordonné aux agences fédérales de corriger cette vulnérabilité en raison d'une exploitation active."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-n8n-rce-flaw-exploited-in-attacks/"
+      ],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2026-21536",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Devices Pricing Program",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical RCE bug notable for being the first vulnerability identified by an autonomous AI penetration testing agent (XBOW).",
+        "fr": "Faille RCE critique notable pour être la première vulnérabilité identifiée par un agent de test d'intrusion IA autonome (XBOW)."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI-Discovery"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/"
+      ],
+      "date": "2026-03-11"
+    },
+    {
+      "cve_id": "CVE-2026-2313",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:elementor:ally:*:*:*:*:*:*:*:*",
+      "product": "Ally Plugin",
+      "vendor": "Elementor",
+      "description": {
+        "en": "SQL Injection vulnerability in Elementor Ally plugin affecting over 250,000 WordPress sites. Exploitable if connected to an account and Remediation module is active.",
+        "fr": "Vulnérabilité par injection SQL dans l'extension Elementor Ally affectant plus de 250 000 sites WordPress. Exploitable si connecté à un compte et que le module de remédiation est actif."
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "WordPress"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/sqli-flaw-in-elementor-ally-plugin-impacts-250k-plus-wordpress-sites/"
+      ],
+      "date": "2026-03-11"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Malicious 'Claude Code' Malvertising Campaign",
+        "fr": "Campagne de Malvertising malveillante ciblant 'Claude Code'"
+      },
+      "description": {
+        "en": "Attackers are abusing Google Ads to push fake documentation for Anthropic's 'Claude Code'. Victims are lured to Squarespace subdomains where they are instructed to execute commands using 'mshta.exe' (Windows) or 'curl|zsh' (macOS) to install stealer malware and backdoors.",
+        "fr": "Des attaquants abusent de Google Ads pour diffuser une fausse documentation pour 'Claude Code' d'Anthropic. Les victimes sont attirées vers des sous-domaines Squarespace où elles sont invitées à exécuter des commandes via 'mshta.exe' (Windows) ou 'curl|zsh' (macOS) pour installer des 'stealers' et des backdoors."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "https://download.active-version.com/claude",
+          "https://wriconsult.com/n8n/update",
+          "https://claude-code-cmd.squarespace.com",
+          "http://code.claude.ai/download/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "download.active-version.com",
+          "wriconsult.com",
+          "claude-code-cmd.squarespace.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "79cd21185c51a5bfe2cfebdc51e14b258d91549fc0e4e09b6939c2a8a1c5ac19",
+          "3b4d3a59024f14cf1f07395afd6957be05d125e00ae8fdcea3a5dee1d8ab9dd3",
+          "eb4d9a0e4c483dc29ae8c4d31fafcd583c457923d3344745b5c7ab13abed4dc5",
+          "505b32ac2b6fffb5fac81d5bdc2e1e8581fc4196dfb01aee852216a3ad6ff47e",
+          "762fb099115d1917b6f673cc5c74a4b61962a64d640673aaf02566ca6a3dbfa4",
+          "a78e487995ab452c5990b4baff6a4fa485ae2798c2ddd13718c17eb641f11646"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "mshta.exe",
+          "zsh",
+          "Trojan.Stealer.GJ",
+          "Trojan.Stealer.GK",
+          "Mach-O Backdoor"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1204.002",
+        "T1218.005"
+      ],
+      "analyse": {
+        "en": "The campaign uses 'ClickFix' social engineering techniques, mimicking legitimate developer tools installation processes. The use of mshta.exe and obfuscated shell scripts allows for fileless execution in initial stages.",
+        "fr": "La campagne utilise des techniques d'ingénierie sociale 'ClickFix', imitant les processus d'installation d'outils de développement légitimes. L'utilisation de mshta.exe et de scripts shell offusqués permet une exécution sans fichier dans les premières étapes."
+      },
+      "recommandations": [
+        {
+          "en": "Block the associated domains and monitor PowerShell/Terminal executions involving remote web requests.",
+          "fr": "Bloquer les domaines associés et surveiller les exécutions PowerShell/Terminal impliquant des requêtes web distantes."
+        },
+        {
+          "en": "Ensure endpoint protection solutions (EDR) are configured to alert on mshta.exe calling external URLs.",
+          "fr": "S'assurer que les solutions de protection des terminaux (EDR) sont configurées pour alerter sur mshta.exe appelant des URL externes."
+        }
+      ],
+      "tags": [
+        "Malvertising",
+        "ClickFix",
+        "Stealer",
+        "ClaudeCode"
+      ],
+      "sources": [
+        "https://www.bitdefender.com/en-us/blog/labs/fake-claude-code-google-ads-malware"
+      ],
+      "date": "2026-03-11"
+    },
+    {
+      "title": {
+        "en": "BeatBanker and BTMOB Android Malware Campaign",
+        "fr": "Campagne de malware Android BeatBanker et BTMOB"
+      },
+      "description": {
+        "en": "A sophisticated dual-threat campaign targeting Brazilian Android users via fake Starlink and government apps. It installs both a Monero miner (using silent audio to avoid battery killers) and a banking trojan/RAT (BTMOB) that intercepts USDT transfers.",
+        "fr": "Une campagne sophistiquée à double menace ciblant les utilisateurs Android brésiliens via de fausses applications Starlink et gouvernementales. Elle installe à la fois un mineur de Monero (utilisant un son silencieux pour éviter les tueurs de processus batterie) et un cheval de Troie bancaire/RAT (BTMOB) qui intercepte les transferts USDT."
+      },
+      "threat_actor": "UNKNOWN",
+      "indicators": {
+        "URL": [
+          "https://cupomgratisfood.shop"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "cupomgratisfood.shop"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "XMRig",
+          "BTMOB RAT",
+          "BeatBanker",
+          "Firebase Cloud Messaging"
+        ]
+      },
+      "mitre_ttps": [
+        "T1477",
+        "T1417",
+        "T1430"
+      ],
+      "analyse": {
+        "en": "BeatBanker uses high-level persistence tricks like looped silent audio. The evolution from a simple banker to the BTMOB RAT indicates a shift towards more complete device control.",
+        "fr": "BeatBanker utilise des astuces de persistance de haut niveau comme l'audio silencieux en boucle. L'évolution d'un simple banquier vers le RAT BTMOB indique un changement vers un contrôle plus complet de l'appareil."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid installing APKs from non-official sources, especially those distributed via WhatsApp or suspicious web ads.",
+          "fr": "Éviter l'installation d'APK de sources non officielles, en particulier ceux distribués via WhatsApp ou des publicités web suspectes."
+        },
+        {
+          "en": "Monitor and restrict 'Accessibility Services' permissions for third-party apps.",
+          "fr": "Surveiller et restreindre les permissions 'Services d'accessibilité' pour les applications tierces."
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Android",
+        "CryptoMiner",
+        "RAT"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189288/malware/beatbanker-malware-targets-android-users-with-banking-trojan-and-crypto-miner.html",
+        "https://www.kaspersky.co.uk/blog/beatbanker-btmob-android-malware-disguised-starlink-inss-reembolso/30132/"
+      ],
+      "date": "2026-03-11"
+    }
+  ]
+}
+```
