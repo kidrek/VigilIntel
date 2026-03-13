@@ -1,0 +1,458 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is currently dominated by a major escalation in the Middle East conflict, with Iranian state-sponsored actors (Void Manticore/Handala Hack) shifting from propaganda to large-scale destructive wiper attacks against critical infrastructure and medical giants like Stryker. Concurrently, we observe the rapid industrialization of AI-assisted malware development (Slopoly, AI-generated PowerShell wipers) and the professionalization of cloud-focused extortion groups like ShinyHunters, who claim massive data exfiltration (1 petabyte) from telecommunications providers. The window between vulnerability disclosure and active exploitation continues to shrink, now measured in hours for critical infrastructure flaws.",
+      "fr": "Le paysage des menaces cyber est actuellement dominé par une escalade majeure du conflit au Moyen-Orient, avec des acteurs étatiques iraniens (Void Manticore/Handala Hack) passant de la propagande à des attaques destructrices de type 'wiper' à grande échelle contre des infrastructures critiques et des géants médicaux comme Stryker. Parallèlement, on observe une industrialisation rapide du développement de malwares assisté par IA (Slopoly, wipers PowerShell générés par IA) et une professionnalisation des groupes d'extorsion axés sur le cloud comme ShinyHunters, revendiquant des exfiltrations massives (1 pétaoctet) chez des fournisseurs de télécommunications. Le délai entre la divulgation d'une vulnérabilité et son exploitation active continue de se réduire, se comptant désormais en heures pour les failles touchant les infrastructures critiques."
+    },
+    "date": "2026-03-13"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Defense and Government",
+        "fr": "Défense et Gouvernement"
+      },
+      "theme": {
+        "en": "Iran-Israel-US Conflict Escalation",
+        "fr": "Escalade du conflit Iran-Israël-USA"
+      },
+      "description": {
+        "en": "Iranian threat actors have launched 'Operation Roar of the Lion' following kinetic strikes. This includes massive wiper campaigns against US and Israeli targets, espionage via compromised security cameras (Hikvision/Dahua), and threats against financial institutions in the Gulf region.",
+        "fr": "Les acteurs de menaces iraniens ont lancé l'opération 'Roar of the Lion' suite à des frappes cinétiques. Cela inclut des campagnes massives de 'wipers' contre des cibles américaines et israéliennes, de l'espionnage via des caméras de sécurité compromises (Hikvision/Dahua), et des menaces contre les institutions financières de la région du Golfe."
+      },
+      "tags": [
+        "Iran",
+        "Israel",
+        "CyberWarfare",
+        "Handala"
+      ],
+      "sources": [
+        "Flare",
+        "Check Point",
+        "Unit 42"
+      ],
+      "date": "2026-03-13"
+    },
+    {
+      "sector": {
+        "en": "Military",
+        "fr": "Militaire"
+      },
+      "theme": {
+        "en": "Chinese Espionage in Southeast Asia",
+        "fr": "Espionnage chinois en Asie du Sud-Est"
+      },
+      "description": {
+        "en": "A persistent espionage cluster (CL-STA-1087) suspected to be operating from China has been targeting military organizations in Southeast Asia since 2020, focusing on gathering intelligence on organizational structures and joint exercises with Western forces.",
+        "fr": "Un groupe d'espionnage persistant (CL-STA-1087) suspecté d'opérer depuis la Chine cible les organisations militaires en Asie du Sud-Est depuis 2020, se concentrant sur la collecte de renseignements sur les structures organisationnelles et les exercices conjoints avec les forces occidentales."
+      },
+      "tags": [
+        "China",
+        "Espionage",
+        "CL-STA-1087",
+        "AppleChris"
+      ],
+      "sources": [
+        "Unit 42"
+      ],
+      "date": "2026-03-13"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Stryker",
+      "threat_actor": "Void Manticore",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Handala Hack (Void Manticore) executed a major wiper attack leveraging Microsoft Intune MDM to issue remote wipe commands to over 200,000 devices globally.",
+        "fr": "Handala Hack (Void Manticore) a exécuté une attaque 'wiper' majeure en exploitant Microsoft Intune MDM pour envoyer des commandes d'effacement à distance à plus de 200 000 appareils dans le monde."
+      },
+      "tags": [
+        "Wiper",
+        "SupplyChain",
+        "MDM"
+      ],
+      "sources": [
+        "BleepingComputer",
+        "Flare",
+        "Unit 42"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "victim": "Telus Digital",
+      "threat_actor": "ShinyHunters",
+      "sector": {
+        "en": "Telecommunications",
+        "fr": "Télécommunications"
+      },
+      "description": {
+        "en": "Threat actors claim to have stolen 1 petabyte of data, including source code and customer PII, using credentials discovered in a third-party breach (Salesloft Drift).",
+        "fr": "Les attaquants affirment avoir volé 1 pétaoctet de données, y compris du code source et des informations personnelles de clients, en utilisant des identifiants découverts dans une brèche tierce (Salesloft Drift)."
+      },
+      "tags": [
+        "DataTheft",
+        "CredentialStuffed",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "BleepingComputer",
+        "CBC"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "victim": "Loblaw Companies Limited",
+      "threat_actor": "Unknown",
+      "sector": {
+        "en": "Retail",
+        "fr": "Commerce de détail"
+      },
+      "description": {
+        "en": "Canadian retail giant notified customers of a data breach involving basic PII (names, phone numbers, email addresses) after detecting suspicious activity on its network.",
+        "fr": "Le géant canadien de la distribution a informé ses clients d'une violation de données impliquant des informations personnelles de base après avoir détecté une activité suspecte sur son réseau."
+      },
+      "tags": [
+        "PII",
+        "Canada",
+        "Retail"
+      ],
+      "sources": [
+        "BleepingComputer"
+      ],
+      "date": "2026-03-12"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-21262",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:sql_server:*:*:*:*:*:*:*:*",
+      "product": "SQL Server",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Elevation of Privilege vulnerability in Microsoft SQL Server allowing an authenticated attacker to reach sysadmin privileges.",
+        "fr": "Vulnérabilité d'élévation de privilèges dans Microsoft SQL Server permettant à un attaquant authentifié d'obtenir des privilèges sysadmin."
+      },
+      "tags": [
+        "vulnerability",
+        "EoP",
+        "SQLServer"
+      ],
+      "sources": [
+        "SOC Prime",
+        "Microsoft"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "cve_id": "CVE-2026-23813",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:hpe:aruba_aos-cx:*:*:*:*:*:*:*:*",
+      "product": "AOS-CX",
+      "vendor": "Aruba / HPE",
+      "description": {
+        "en": "Critical authentication bypass in the web-based management interface of Aruba CX-series switches.",
+        "fr": "Contournement d'authentification critique dans l'interface de gestion web des commutateurs Aruba série CX."
+      },
+      "tags": [
+        "vulnerability",
+        "AuthBypass",
+        "NetworkInfrastructure"
+      ],
+      "sources": [
+        "Field Effect"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "cve_id": "CVE-2026-3909",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "High-severity out-of-bounds write flaw in the Skia graphics engine, actively exploited in the wild.",
+        "fr": "Défaut d'écriture hors limites de haute sévérité dans le moteur graphique Skia, activement exploité dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-Day",
+        "RCE"
+      ],
+      "sources": [
+        "Security Online",
+        "Google"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "cve_id": "CVE-2025-68613",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:*:*:*",
+      "product": "n8n",
+      "vendor": "n8n",
+      "description": {
+        "en": "Critical RCE in workflow expression evaluation system, added to CISA KEV catalog.",
+        "fr": "RCE critique dans le système d'évaluation des expressions de workflow, ajoutée au catalogue CISA KEV."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV"
+      ],
+      "sources": [
+        "CISA",
+        "SecurityAffairs"
+      ],
+      "date": "2026-03-12"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Storm-2561 SEO Poisoning Campaign",
+        "fr": "Campagne d'empoisonnement SEO par Storm-2561"
+      },
+      "description": {
+        "en": "Storm-2561 uses SEO poisoning to distribute fake VPN clients (masquerading as Pulse Secure, Fortinet, Ivanti) that side-load the Hyrax infostealer.",
+        "fr": "Storm-2561 utilise l'empoisonnement SEO pour distribuer de faux clients VPN (se faisant passer pour Pulse Secure, Fortinet, Ivanti) qui chargent furtivement l'infostealer Hyrax."
+      },
+      "threat_actor": "Storm-2561",
+      "indicators": {
+        "URL": [
+          "hxxps://github.com/latestver/vpn/releases/download/vpn-client2/VPN-CLIENT.zip"
+        ],
+        "IPv4": [
+          "194.76.226.93"
+        ],
+        "IPv6": [
+          ""
+        ],
+        "DOMAIN": [
+          "vpn-fortinet.com",
+          "ivanti-vpn.org",
+          "checkpoint-vpn.com",
+          "cisco-secure-client.es",
+          "forticlient-vpn.de",
+          "sophos-connect.org",
+          "vpn-connection.pro"
+        ],
+        "EMAIL": [
+          ""
+        ],
+        "HASH_SHA256": [
+          "57a50a1c04254df3db638e75a64d5dd3b0d6a460829192277e252dc0c157a62f",
+          "862f004679d3b142d9d2c729e78df716aeeda0c7a87a11324742a5a8eda9b557",
+          "6c9ab17a4aff2cdf408815ec120718f19f1a31c13fc5889167065d448a40dfe6",
+          "6129d717e4e3a6fb4681463e421a5603b640bc6173fb7ba45a41a881c79415ca"
+        ],
+        "HASH_SHA1": [
+          ""
+        ],
+        "HASH_MD5": [
+          ""
+        ],
+        "TOOLS": [
+          "Hyrax",
+          "MSI Installer"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1574.002",
+        "T1547.001"
+      ],
+      "analyse": {
+        "en": "Storm-2561 targets users searching for enterprise software. The malware is digitally signed by a now-revoked certificate from 'Taiyuan Lihua Near Information Technology Co., Ltd.' to bypass security controls.",
+        "fr": "Storm-2561 cible les utilisateurs recherchant des logiciels d'entreprise. Le malware est signé numériquement par un certificat désormais révoqué de 'Taiyuan Lihua Near Information Technology Co., Ltd.' pour contourner les contrôles de sécurité."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce phishing-resistant MFA for all remote access endpoints.",
+          "fr": "Appliquer une authentification multifacteur résistante au phishing pour tous les accès distants."
+        },
+        {
+          "en": "Monitor for unauthorized files in %CommonFiles%\\Pulse Secure and similar directories.",
+          "fr": "Surveiller les fichiers non autorisés dans %CommonFiles%\\Pulse Secure et les répertoires similaires."
+        }
+      ],
+      "tags": [
+        "SEO-Poisoning",
+        "CredentialTheft",
+        "VPN-Spoofing"
+      ],
+      "sources": [
+        "Microsoft"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "title": {
+        "en": "Void Manticore (Handala) Wiper Infrastructure",
+        "fr": "Infrastructure Wiper de Void Manticore (Handala)"
+      },
+      "description": {
+        "en": "The actor uses custom wipers (handala.exe) and legitimate tools (NetBird, VeraCrypt) for destructive operations. They leverage Starlink IP ranges for operational security.",
+        "fr": "L'acteur utilise des wipers personnalisés (handala.exe) et des outils légitimes (NetBird, VeraCrypt) pour des opérations destructrices. Ils exploitent les plages IP Starlink pour leur sécurité opérationnelle."
+      },
+      "threat_actor": "Void Manticore",
+      "indicators": {
+        "URL": [
+          "official NetBird website"
+        ],
+        "IPv4": [
+          "107.189.19.52",
+          "146.185.219.235",
+          "82.25.35.25",
+          "31.57.35.223"
+        ],
+        "IPv6": [
+          ""
+        ],
+        "DOMAIN": [
+          ""
+        ],
+        "EMAIL": [
+          ""
+        ],
+        "HASH_SHA256": [
+          ""
+        ],
+        "HASH_SHA1": [
+          ""
+        ],
+        "HASH_MD5": [
+          "5986ab04dd6b3d259935249741d3eff2",
+          "3cb9dea916432ffb8784ac36d1f2d3cd",
+          "3236facc7a30df4ba4e57fddfba41ec5"
+        ],
+        "TOOLS": [
+          "NetBird",
+          "VeraCrypt",
+          "ADRecon"
+        ]
+      },
+      "mitre_ttps": [
+        "T1133",
+        "T1484.001",
+        "T1561.002",
+        "T1486"
+      ],
+      "analyse": {
+        "en": "Handala's tactics involve quick lateral movement via RDP after gaining access through compromised VPN credentials. The use of AI-assisted PowerShell scripts for wiping signifies an evolution in their toolset.",
+        "fr": "Les tactiques d'Handala impliquent un mouvement latéral rapide via RDP après avoir obtenu l'accès via des identifiants VPN compromis. L'utilisation de scripts PowerShell assistés par IA pour l'effacement signifie une évolution de leur arsenal."
+      },
+      "recommandations": [
+        {
+          "en": "Block or restrict Starlink IP ranges if not business-essential.",
+          "fr": "Bloquer ou restreindre les plages IP Starlink si elles ne sont pas essentielles à l'entreprise."
+        },
+        {
+          "en": "Audit Microsoft Intune and GPO changes for unauthorized remote wipe commands.",
+          "fr": "Auditer les modifications Microsoft Intune et GPO pour détecter des commandes d'effacement à distance non autorisées."
+        }
+      ],
+      "tags": [
+        "Wiper",
+        "MOIS",
+        "Iranian-APT"
+      ],
+      "sources": [
+        "Check Point",
+        "Unit 42"
+      ],
+      "date": "2026-03-12"
+    },
+    {
+      "title": {
+        "en": "CL-STA-1087 Espionage Operation",
+        "fr": "Opération d'espionnage CL-STA-1087"
+      },
+      "description": {
+        "en": "Deploying AppleChris and MemFun backdoors against Southeast Asian military targets.",
+        "fr": "Déploiement des backdoors AppleChris et MemFun contre des cibles militaires en Asie du Sud-Est."
+      },
+      "threat_actor": "Unknown (China-nexus)",
+      "indicators": {
+        "URL": [
+          "Pastebin DDR"
+        ],
+        "IPv4": [
+          "154.39.142.177",
+          "154.39.137.203",
+          "8.212.169.27",
+          "109.248.24.177",
+          "8.220.135.151"
+        ],
+        "IPv6": [
+          ""
+        ],
+        "DOMAIN": [
+          ""
+        ],
+        "EMAIL": [
+          ""
+        ],
+        "HASH_SHA256": [
+          "9e44a460196cc92fa6c6c8a12d74fb73a55955045733719e3966a7b8ced6c500",
+          "5a6ba08efcef32f5f38df544c319d1983adc35f3db64f77fa5b51b44d0e5052c",
+          "ad25b40315dad0bda5916854e1925c1514f8f8b94e4ee09a43375cc1e77422ad",
+          "ee4d4b7340b3fa70387050cd139b43ecc65d0cfd9e3c7dcb94562f5c9c91f58f"
+        ],
+        "HASH_SHA1": [
+          ""
+        ],
+        "HASH_MD5": [
+          ""
+        ],
+        "TOOLS": [
+          "AppleChris",
+          "MemFun",
+          "Getpass (Mimikatz variant)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1021.001",
+        "T1047",
+        "T1105"
+      ],
+      "analyse": {
+        "en": "The actor demonstrates high operational patience, often remaining dormant for months. They use Dead Drop Resolvers (DDR) via Pastebin and Dropbox to update C2 infrastructure.",
+        "fr": "L'acteur fait preuve d'une grande patience opérationnelle, restant souvent dormant pendant des mois. Ils utilisent des Dead Drop Resolvers (DDR) via Pastebin et Dropbox pour mettre à jour l'infrastructure C2."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unexpected Pastebin or Dropbox traffic from servers.",
+          "fr": "Surveiller le trafic inattendu vers Pastebin ou Dropbox depuis les serveurs."
+        }
+      ],
+      "tags": [
+        "Espionage",
+        "Military",
+        "Backdoor"
+      ],
+      "sources": [
+        "Unit 42"
+      ],
+      "date": "2026-03-12"
+    }
+  ]
+}
+```
