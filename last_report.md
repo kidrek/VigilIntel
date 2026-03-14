@@ -9,18 +9,21 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [“handala hack” – unveiling group’s modus operandi](#handala-hack--unveiling-groups-modus-operandi)
-  * [ai-generated slopoly malware used in interlock ransomware attack](#ai-generated-slopoly-malware-used-in-interlock-ransomware-attack)
-  * [us disrupts socksescort proxy network powered by linux malware](#us-disrupts-socksescort-proxy-network-powered-by-linux-malware)
-  * [tengu ransomware: what security teams need to know](#tengu-ransomware-what-security-teams-need-to-know)
-  * [storm-2561 uses seo poisoning to distribute fake vpn clients for credential theft](#storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft)
-  * [suspected china-based espionage operation against military targets in southeast asia](#suspected-china-based-espionage-operation-against-military-targets-in-southeast-asia)
+  * [attaque destructrice et espionnage lié au conflit irano-israélien](#attaque-destructrice-et-espionnage-lie-au-conflit-irano-israelien)
+  * [operation synergia iii et demantelement de socksescort](#operation-synergia-iii-et-demantelement-de-socksescort)
+  * [zero-days chrome activement exploites cve-2026-3909 et cve-2026-3910](#zero-days-chrome-activement-exploites-cve-2026-3909-et-cve-2026-3910)
+  * [campagne storm-2561 ciblant les vpn d’entreprise](#campagne-storm-2561-ciblant-les-vpn-dentreprise)
+  * [ivanti epmm : persistance via sleeper shells](#ivanti-epmm-persistance-via-sleeper-shells)
+  * [hive0163 et lusage de malwares generes par ia slopoly](#hive0163-et-lusage-de-malwares-generes-par-ia-slopoly)
+  * [espionnage russe sur les messageries chiffrees signal et whatsapp](#espionnage-russe-sur-les-messageries-chiffrees-signal-et-whatsapp)
+  * [vulnerabilite critique sql injection dans le plugin wordpress ally](#vulnerabilite-critique-sql-injection-dans-le-plugin-wordpress-ally)
+
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel de la menace est marqué par une escalade sans précédent des cyber-opérations étatiques liées au conflit US-Israël-Iran, où les attaques destructrices de type "wiper" prennent le pas sur l'extorsion financière classique. L'acteur Handala Hack (Void Manticore) illustre cette tendance en exploitant des outils de gestion légitimes comme Microsoft Intune pour paralyser des infrastructures critiques à l'échelle mondiale. Parallèlement, l'usage de l'IA générative pour le développement de malwares, comme Slopoly, abaisse la barrière technique pour les attaquants, permettant la création rapide de codes évasifs. Les vulnérabilités logicielles dans les outils d'automatisation (n8n) et les extensions de navigateur deviennent des vecteurs de compromission de la chaîne d'approvisionnement extrêmement critiques. Le démantèlement du réseau SocksEscort démontre l'efficacité des actions policières internationales, bien que la résilience des botnets comme AVRecon reste préoccupante. Les décideurs doivent s'attendre à une volatilité accrue due à la nouvelle stratégie cyber offensive des États-Unis, susceptible de provoquer des représailles. La gestion des identités et des accès privilégiés (PAM/PIM) devient le rempart indispensable contre des acteurs qui privilégient désormais l'usage de comptes légitimes détournés. Enfin, la pression pour l'innovation en IA en Europe pourrait fragiliser les cadres réglementaires de protection des données au profit de la compétitivité.
+Le paysage actuel de la menace est dominé par une hybridation croissante entre cyber-opérations militaires et cybercriminalité organisée. L'escalade du conflit entre l'Iran, Israël et les États-Unis a déclenché des attaques destructrices majeures, notamment le sabotage de l'infrastructure mondiale de Stryker via l'abus de solutions MDM, marquant un tournant dans l'utilisation de capacités étatiques contre des cibles commerciales. Parallèlement, l'année 2026 s'ouvre sur une pression extrême sur les navigateurs web, avec la découverte et l'exploitation immédiate de plusieurs failles Zero-day dans Google Chrome. Les forces de l'ordre marquent des points significatifs via les opérations Synergia III et Lightning, démantelant des réseaux de botnets massifs comme AVrecon et SocksEscort. On observe également une démocratisation de l'IA générative par des groupes comme Hive0163 pour produire des malwares polymorphes, compliquant la détection traditionnelle. L'espionnage ciblant les communications chiffrées (Signal/WhatsApp) par des acteurs russes confirme que la confidentialité des échanges reste une cible prioritaire pour le renseignement étatique. Enfin, le détournement des outils d'administration (Intune, VPN, RMM) s'impose comme le vecteur d'accès privilégié pour les attaques à fort impact.
 <br>
 <br>
 <div id="syntheses"></div>
@@ -33,17 +36,13 @@ Le paysage actuel de la menace est marqué par une escalade sans précédent des
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| AiLock | Entreprises mondiales | Ransomware double-extorsion, chiffrement ChaCha20/NTRU | England Hockey |
-| APT28 | Gouvernements, Militaires | Phishing via fichiers .LNK, exploitation MSHTML (CVE-2026-21513) | Recorded Future |
-| CL-STA-1087 (Chine) | Militaire (Asie du Sud-Est) | Backdoors sur mesure (AppleChris, MemFun), DLL Hijacking | Unit 42 |
-| Handala Hack (Void Manticore) | Infrastructures critiques, Médical | Wiper destructeur, abus de Microsoft Intune, vol de données | Checkpoint, Unit 42 |
-| Hive0163 | Finance, Santé | Malware généré par IA (Slopoly), intrusion via ClickFix | BleepingComputer |
-| Lotus Blossom | Utilisateurs de Notepad++ | Attaque supply-chain via faux installeurs, Cobalt Strike | Recorded Future |
-| Medusa | Santé, Services d'urgence | Ransomware, vol de données (219 GB) | Bell Ambulance |
-| ShinyHunters | BPO, Télécoms, Cloud | Vishing (voix), vol de jetons Microsoft Entra, accès via fuites GCP | Telus Digital |
-| Storm-1811 | Finance, Santé | Phishing via Teams, malware A0Backdoor via Quick Assist | The Hacker News |
-| Storm-2561 | Utilisateurs de VPN | SEO Poisoning, faux installeurs VPN signés, infostealer Hyrax | Microsoft Security |
-| Tengu | Tech, Manufacturier, Public | Ransomware-as-a-Service, abus de RDP/VPN sans MFA | Flare |
+| **313 Team** | Gouvernements (Roumanie, Koweït) | Attaques DDoS massives pour raisons politiques | Flare.io |
+| **APT28 (Pawn Storm)** | Diplomatie, Gouvernements, Journalistes | Phishing, exploitation de Zero-days MSHTML | Flare.io |
+| **Handala Hack** | Santé, Énergie, Finance | Wiper (effacement de données) via abus de MDM Intune, exfiltration massive | Flare.io, SentinelOne |
+| **Hive0163** | Multitâche (financièrement motivé) | Usage de malwares générés par IA (Slopoly), Ransomware | Security Affairs |
+| **Keymous Plus** | Gouvernements du Golfe | Campagnes DDoS rotatives à grande échelle | Flare.io |
+| **SmartApeSG** | Tout secteur | Injection de scripts ClickFix, faux CAPTCHA pour distribuer Remcos RAT | ISC SANS |
+| **Storm-2561** | Tout secteur (Utilisateurs VPN) | SEO Poisoning, faux installateurs de clients VPN (Ivanti, Cisco) | BleepingComputer |
 
 <br/>
 <br/>
@@ -53,11 +52,11 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Afghanistan / Pakistan | Conflit frontalier | Escalade des tensions et bombardements le long de la ligne Durand. | IRIS |
-| Europe | Terrorisme & Cyber | Alertes d'Europol sur des représailles iraniennes (bombes, cyberattaques) sur le sol européen. | Flare |
-| Iran | Blackout Internet | Coupure quasi-totale de l'internet en Iran suite aux frappes américano-israéliennes. | Flare |
-| Moyen-Orient | Guerre Cyber | Conflit US-Israël-Iran : vagues d'attaques wipers et sabotages d'infrastructures ICS/SCADA. | Flare, Unit 42 |
-| Turquie | Diplomatie | Ankara tente de maintenir une neutralité délicate face au conflit en Iran. | IRIS |
+| Infrastructure Nucléaire | Pologne | Tentative d'attaque cyber contre le Centre National de Recherche Nucléaire (NCBJ). | Security Affairs, BleepingComputer |
+| Défense / Diplomatie | UK / Afghanistan | Fuite de données du Ministère de la Défense britannique concernant 18 700 Afghans. | DataBreaches.net |
+| Énergie / Transport | Iran / Golfe | Blocus numérique en Iran (connectivité à 1%) et cyberattaques sur le transport maritime pétrolier. | Recorded Future, IRIS |
+| Relations Internationales | Russie / Ukraine | Campagnes de désinformation russes liant le conflit en Iran à la crise ukrainienne. | EUvsDisinfo |
+| Sport / Diplomatie | Monde / USA | Tensions diplomatiques sur la participation de l'Iran à la Coupe du Monde 2026. | IRIS |
 
 <br/>
 <br/>
@@ -65,12 +64,12 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 <div id="synthese-reglementaire"></div>
 
 ## Synthèse réglementaire et juridiques
-Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » (cybersécurité, protection des données, cybersécurité publique, etc.) :
+Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Digital Omnibus | Commission Européenne | 12/03/2026 | Union Européenne | Digital Omnibus / IA Act | Projet de simplification administrative visant à alléger les contraintes réglementaires pour favoriser l'IA. | EDRi |
-| ENISA Technical Advisory | ENISA | 12/03/2026 | Union Européenne | DevSecOps Guidance | Recommandations sur la sécurisation des gestionnaires de paquets tiers (npm, pip, Maven). | Security Affairs |
-| US National Cyber Strategy | Sean Cairncross | 10/03/2026 | États-Unis | Cyber Strategy for America | Nouvelle stratégie mettant l'accent sur les opérations offensives pour imposer des coûts aux adversaires. | Flare |
+| BOD 22-01 Update | CISA | 13/03/2026 | USA | Binding Operational Directive 22-01 | Obligation pour les agences fédérales de corriger les failles Chrome exploitées. | Security Affairs |
+| ENISA Technical Advisory | ENISA | 12/03/2026 | UE | DevSecOps Guidance | Recommandations sur la sécurisation des gestionnaires de paquets logiciels. | Security Affairs |
+| SEC 8-K Filings | Stryker | 12/03/2026 | USA | SEC Reporting | Notification officielle d'un incident cyber majeur ayant un impact financier. | Flare.io |
 
 <br/>
 <br/>
@@ -80,31 +79,27 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Distribution / Retail | Loblaw (Canada) | Accès non autorisé à des informations de base (noms, emails, téléphones). | BleepingComputer |
-| Médical | Stryker (USA) | Attaque massive par wiper (Handala Hack), 50 To de données exfiltrées. | Flare |
-| Santé | Bell Ambulance | Violation de données affectant 238 000 personnes (SSN, données médicales). | Security Affairs |
-| Santé / Assurance | TriZetto | Hack d'un an exposé, données de 3,4 millions de patients compromises. | Joe Talos |
-| Sport | England Hockey | Revendication de 129 Go de données volées par le gang AiLock. | BleepingComputer |
-| Télécoms / BPO | Telus Digital | Vol présumé de 1 pétaoctet de données par ShinyHunters (données clients et appels). | BleepingComputer |
+| Énergie | Sharjah National Oil Corp | Exfiltration de 1,3 To de données (contrats, dossiers financiers). | Flare.io |
+| Gouvernement | MoD (Royaume-Uni) | Fuite d'informations sensibles sur 18 700 ressortissants afghans. | DataBreaches.net |
+| Santé | Stryker Corporation | Exfiltration de 50 To de données suivie d'un effacement (wiper) des systèmes. | Flare.io, SentinelOne |
+| Santé | Bell Ambulance | Violation de données impactant plus de 238 000 personnes. | Security Affairs |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2025-68613 | 10.0 | n8n | Exécution de code à distance (RCE) | CISA, The Register |
-| CVE-2026-3611 | 10.0 | Honeywell IQ4x BMS | Absence d'authentification critique | CVE Feed |
-| CVE-2026-32306 | 9.9 | OneUptime (ClickHouse) | Injection SQL critique | CVE Feed |
-| CVE-2026-23813 | 9.8 | Aruba AOS-CX | Contournement d'authentification critique | Field Effect |
-| CVE-2026-32304 | 9.8 | Locutus | Exécution de code à distance (RCE) | CVE Feed |
-| CVE-2026-21666 | 9.8 | Veeam Backup & Replication | Exécution de code à distance (RCE) | BleepingComputer |
-| CVE-2026-32301 | 9.3 | Centrifugo | Server-Side Request Forgery (SSRF) | CVE Feed |
-| CVE-2026-21262 | 8.8 | Microsoft SQL Server | Élévation de privilèges (EoP) | SOC Prime |
-| CVE-2026-3909 | Crit. | Google Chrome (Skia) | Out-of-bounds write (Zero-day) | SecurityOnline |
-| CVE-2026-3910 | Crit. | Google Chrome (V8) | Erreur d'implémentation (Zero-day) | SecurityOnline |
+| CVE-2025-15060 | 9.8 | Claude-hovercraft | Exécution de code à distance (RCE) | CVE Feed |
+| CVE-2026-32626 | 9.7 | AnythingLLM Desktop | XSS vers RCE | Mastodon / OffSeq |
+| CVE-2026-3083 | 8.8 | GStreamer | Out-of-bounds Write / RCE | CVE Feed |
+| CVE-2026-3909 | 8.8 | Google Chrome (Skia) | Heap Corruption (Exploitée) | CERT-FR, CISA |
+| CVE-2026-3910 | 8.8 | Google Chrome (V8) | Arbitrary Code Execution (Exploitée) | CERT-FR, CISA, SOC Prime |
+| CVE-2026-32627 | 8.7 | cpp-httplib | Bypass de vérification TLS | CVE Feed |
+| CVE-2026-3227 | 8.5 | TP-Link (WR802N/841N/840N) | Command Injection | CVE Feed |
+| CVE-2026-32729 | 8.1 | Runtipi | Bypass de 2FA (Brute-force) | CVE Feed |
+| CVE-2026-2413 | - | WordPress (Ally plugin) | SQL Injection critique | HackRead |
 
 <br/>
 <br/>
@@ -113,12 +108,14 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| “Handala Hack” – Unveiling Group’s Modus Operandi | Détails tactiques cruciaux sur un acteur étatique majeur actuel. | https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/ |
-| AI-generated Slopoly malware | Première observation documentée de malware complexe généré par IA. | https://www.bleepingcomputer.com/news/security/ai-generated-slopoly-malware-used-in-interlock-ransomware-attack/ |
-| US disrupts SocksEscort proxy network | Analyse d'une opération de démantèlement internationale réussie. | https://www.bleepingcomputer.com/news/security/us-disrupts-socksescort-proxy-network-powered-by-linux-malware/ |
-| Tengu Ransomware: What Security Teams Need to Know | Analyse complète d'un nouveau RaaS très actif. | https://flare.io/learn/resources/blog/tengu-ransomware |
-| Storm-2561 fake VPN clients | Alerte sur une technique sophistiquée de SEO poisoning ciblant les accès distants. | https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/ |
-| China-Based Espionage Against Military Targets | Rapport détaillé sur des backdoors persistantes en Asie. | https://unit42.paloaltonetworks.com/espionage-campaign-against-military-targets/ |
+| Monitoring Cyberattacks Linked to US-Israel-Iran Conflict | Analyse détaillée d'une cyber-guerre étatique majeure en cours. | https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict |
+| Police sinkholes 45,000 IP addresses | Succès majeur de coopération internationale contre l'infrastructure cybercriminelle. | https://www.bleepingcomputer.com/news/security/police-sinkholes-45-000-ip-addresses-in-cybercrime-crackdown/ |
+| Multiples vulnérabilités dans Google Chrome | Alerte critique sur des Zero-days activement exploités. | https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0286/ |
+| Fake enterprise VPN sites used to steal company credentials | Tactique de phishing sophistiquée ciblant l'accès initial en entreprise. | https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/ |
+| Ivanti EPMM ‘Sleeper Shells’ not so sleepy? | Analyse technique sur la persistance post-exploitation. | https://blog.nviso.eu/2026/03/13/ivanti-epmm-sleeper-shells-not-so-sleepy/ |
+| AI-assisted Slopoly malware powers Hive0163 | Illustration concrète de l'usage de l'IA par les attaquants. | https://securityaffairs.com/189378/malware/ai-assisted-slopoly-malware-powers-hive0163s-ransomware-campaigns.html |
+| Signal support : une vraie campagne d'espionnage russe | Ciblage d'outils de communication sécurisés pour des cibles de haut niveau. | https://www.lemonde.fr/pixels/article/2026/03/13/signal-support-un-faux-message-d-alerte-une-vraie-campagne-d-espionnage-des-utilisateurs-de-la-messagerie-attribuee-a-la-russie_6671046_4408996.html |
+| SQL Injection in Ally WordPress Plugin Exposes 200K+ Sites | Risque massif sur la chaîne d'approvisionnement web. | https://hackread.com/sql-injection-vulnerability-ally-wordpress-plugin/ |
 
 <br/>
 <br/>
@@ -127,145 +124,209 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| ISC Stormcast | Format podcast sans détails textuels exploitables pour ce rapport. | https://isc.sans.edu/diary/rss/32792 |
-| Licensing Review of Microsoft 365 E7 | Article à visée commerciale et promotionnelle sur les licences. | https://www.guidepointsecurity.com/blog/microsoft-licensing-review-365-e7/ |
-| This one’s for you, Mom | Newsletter Talos contenant trop d'avis personnels et peu de données techniques neuves. | https://blog.talosintelligence.com/this-ones-for-you-mom/ |
+| ISC Stormcast For Friday, March 13th | Podcast sans contenu textuel exploitable directement. | https://isc.sans.edu/diary/rss/32792 |
+| From VMware to what’s next | Contenu sponsorisé par un éditeur (Acronis). | https://www.bleepingcomputer.com/news/security/from-vmware-to-whats-next-protecting-data-during-hypervisor-migration/ |
+| Meet the CE SentinelOne Assistant | Annonce d'un outil personnel/communautaire. | https://www.cyberengage.org/post/meet-the-ce-sentinelone-assistant-i-built-it-for-myself-but-you-can-try-it-too |
+| Beyond File Servers | Article d'opinion sur l'architecture de données. | https://securityaffairs.com/189368/security/beyond-file-servers-securing-unstructured-data-in-the-era-of-ai.html |
+| Who Will Pay the Cost of Freedom in Europe? | Analyse économique et politique, pas purement cyber. | https://www.rusi.org/explore-our-research/publications/commentary/who-will-pay-cost-freedom-europe |
 
 <br>
-<br>
+<br/>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="handala-hack--unveiling-groups-modus-operandi"></div>
 
-## “Handala Hack” – Unveiling Group’s Modus Operandi
-Handala Hack est un acteur affilié au ministère iranien du Renseignement (MOIS), opérant sous plusieurs identités comme Void Manticore ou Homeland Justice. Le groupe privilégie les attaques destructrices de type "wiping" combinées à des fuites de données (hack-and-leak). Récemment, ils ont visé des infrastructures critiques en Israël et de grandes entreprises américaines comme Stryker. Leur mode opératoire repose sur un accès manuel (hands-on) après avoir obtenu des identifiants compromis, souvent via des VPN ou du phishing. Une fois à l'intérieur, ils se déplacent latéralement par RDP et utilisent des outils de tunnellisation comme NetBird. Pour la destruction, ils déploient plusieurs wipers simultanément, dont un script PowerShell probablement assisté par IA. Ils utilisent également des outils de chiffrement légitimes comme VeraCrypt pour rendre les données irrécupérables. Le groupe abuse des scripts de connexion GPO pour propager leurs malwares sur tout le réseau. Les analyses montrent une baisse de leur discipline opérationnelle, avec des connexions directes depuis des IP iraniennes. Des preuves suggèrent qu'ils ont ciblé plus de 200 000 appareils chez Stryker via Microsoft Intune.
+<div id="attaque-destructrice-et-espionnage-lie-au-conflit-irano-israelien"></div>
 
-**Analyse de l'impact** : Impact critique sur la continuité d'activité. La combinaison de wipers et de chiffrement par des outils légitimes rend la récupération extrêmement complexe sans sauvegardes hors-ligne robustes. L'utilisation d'outils d'administration (Intune, GPO) pour la destruction massive multiplie la vitesse de l'attaque.
+## Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict
+Le conflit entre les États-Unis, Israël et l'Iran a atteint un niveau de cyberguerre sans précédent, structuré en trois phases depuis juin 2025. L'incident le plus marquant concerne la société Stryker, victime d'une attaque par wiper revendiquée par le groupe Handala (lié au MOIS iranien). Les attaquants ont utilisé l'accès à la console Microsoft Intune pour déclencher des commandes de "remote wipe" (effacement à distance) sur plus de 200 000 appareils dans 79 pays. Parallèlement, des campagnes DDoS massives ciblent les ministères de plusieurs pays arabes accusés de soutenir les États-Unis. Des tentatives d'intrusion contre le centre nucléaire polonais NCBJ ont également été détectées. L'Iran impose un blackout quasi-total sur son internet national pour limiter les cyber-répliques occidentales. La menace s'étend désormais aux entreprises technologiques américaines comme Google, Microsoft et Nvidia, explicitement désignées comme cibles par les autorités iraniennes.
 
-**Recommandations** :
-* Appliquer impérativement le MFA sur tous les accès VPN et comptes privilégiés.
-* Restreindre les capacités de "wipe" à distance dans Microsoft Intune via des politiques d'approbation multi-administrateur (MAA).
-* Surveiller les connexions RDP provenant de machines utilisant des noms par défaut (ex: DESKTOP-XXXXXX).
-* Bloquer les outils de tunnellisation non autorisés comme NetBird et surveiller l'usage de VeraCrypt.
+**Analyse de l'impact** : Impact critique sur la continuité des activités mondiales dans le secteur de la santé (Stryker) et menace directe sur les infrastructures critiques de l'OTAN (Pologne, Roumanie).
 
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Handala Hack (Void Manticore / Storm-1084) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1133: External Remote Services<br/>* T1078.002: Domain Accounts<br/>* T1561.002: Disk Structure Wipe<br/>* T1484.001: Group Policy Modification |
-| Observables & Indicateurs de compromission | * IP: 107.189.19.52 (VPS)<br/>* IP: 146.185.219.235 (VPN exit)<br/>* Hash (PowerShell Wiper): 3cb9dea916432ffb8784ac36d1f2d3cd |
-
-### Source (url) du ou des articles
-* https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/
-* https://unit42.paloaltonetworks.com/handala-hack-wiper-attacks/
-
-<br/>
-<div id="ai-generated-slopoly-malware-used-in-interlock-ransomware-attack"></div>
-
-## AI-generated Slopoly malware used in Interlock ransomware attack
-Une nouvelle souche de malware nommée Slopoly a été identifiée lors d'attaques du ransomware Interlock. Ce malware, un script PowerShell agissant comme client C2, présente des signes clairs de création par intelligence artificielle générative (LLM). Les chercheurs d'IBM X-Force ont noté des commentaires extensifs, une gestion d'erreurs structurée et des noms de variables très explicites, rares dans les développements humains. Slopoly permet de maintenir une persistance sur un serveur compromis et de collecter des informations système. Bien que décrit comme "polymorphe" dans ses commentaires, il ne modifie pas réellement son code en exécution. L'attaque débute par une technique d'ingénierie sociale de type "ClickFix". Outre Slopoly, les attaquants déploient les backdoors NodeSnake et InterlockRAT. Le groupe derrière ces attaques, Hive0163, est motivé par l'extorsion financière massive. Cette utilisation de l'IA montre une accélération dans le développement de malwares personnalisés pour échapper à la détection.
-
-**Analyse de l'impact** : L'impact est significatif par la capacité de l'IA à générer des variantes uniques de malwares simples, compliquant la détection par signature. Cela permet à des acteurs peu sophistiqués de maintenir des accès persistants plus longtemps.
-
-**Recommandations** :
-* Sensibiliser les utilisateurs aux ruses "ClickFix" (fausses alertes de navigateur demandant de copier/coller une commande).
-* Surveiller l'exécution de scripts PowerShell suspects dans le répertoire C:\ProgramData\Microsoft\Windows\Runtime\.
-* Implémenter une surveillance des tâches planifiées nommées "Runtime Broker" pointant vers des scripts.
+**Recommandations** : 
+*   Sécuriser les accès aux consoles MDM (Intune, AirWatch) avec une authentification multifacteur (MFA) robuste et des restrictions IP.
+*   Auditer les privilèges d'administration "Remote Wipe" et mettre en place des alertes sur l'utilisation massive de cette fonctionnalité.
+*   Renforcer la surveillance des actifs exposés pour les entreprises ayant des liens commerciaux avec Israël ou des opérations au Moyen-Orient.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Hive0163 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1059.001: PowerShell<br/>* T1566: Phishing (ClickFix)<br/>* T1053.005: Scheduled Task |
-| Observables & Indicateurs de compromission | * Chemin: C:\ProgramData\Microsoft\Windows\Runtime\<br/>* Processus: cmd.exe via PowerShell |
+| Groupe ou acteur malveillant | Handala Hack (Void Manticore), MuddyWater, 313 Team, CyberAv3ngers |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1078: Valid Accounts (Abus de comptes MDM) <br/> • T1485: Data Destruction (Wiper) <br/> • T1498: Network Denial of Service |
+| Observables & Indicateurs de compromission | ```• handala-hack.io • Intune console unauthorized access • Patterns de wipers sur endpoints Windows/Linux``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/ai-generated-slopoly-malware-used-in-interlock-ransomware-attack/
+* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+* https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know
+* https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-11-7/
 
-<br/>
-<div id="us-disrupts-socksescort-proxy-network-powered-by-linux-malware"></div>
+<br>
+<br>
 
-## US disrupts SocksEscort proxy network powered by Linux malware
-Les autorités américaines et européennes ont démantelé le réseau de proxy cybercriminel SocksEscort. Ce réseau reposait sur plus de 20 000 appareils infectés chaque semaine, principalement des routeurs SOHO via le malware AVRecon. SocksEscort vendait l'accès à des adresses IP "propres" pour permettre aux cybercriminels de contourner les listes de blocage. Le service a été impliqué dans des vols de cryptomonnaies s'élevant à des millions de dollars et des fraudes bancaires. L'opération a permis de saisir 34 domaines et 23 serveurs dans sept pays, ainsi que de geler 3,5 millions de dollars en cryptomonnaies. AVRecon, actif depuis 2021, avait infecté plus de 70 000 routeurs Linux. Malgré une première tentative de neutralisation en 2023, les opérateurs avaient réussi à rétablir leur infrastructure. Plus de la moitié des victimes se situaient aux États-Unis et au Royaume-Uni. Cette action coordonnée marque un coup d'arrêt important pour les services de routage anonyme utilisés par les botnets.
+<div id="operation-synergia-iii-et-demantelement-de-socksescort"></div>
 
-**Analyse de l'impact** : La neutralisation réduit immédiatement la capacité des attaquants à masquer leur origine géographique lors d'attaques de phishing ou de brute force. Cependant, l'existence de botnets similaires comme KadNap montre la persistance de cette menace sur les équipements réseaux.
+## Police sinkholes 45,000 IP addresses in cybercrime crackdown
+L'opération internationale "Synergia III", menée par Interpol, a permis de neutraliser plus de 45 000 adresses IP malveillantes et de saisir des serveurs liés à des activités de phishing, malwares et ransomwares. En parallèle, l'opération "Lightning" a démantelé SocksEscort, un service de proxy malveillant alimenté par le botnet AVrecon. Ce réseau utilisait environ 360 000 routeurs résidentiels infectés pour permettre aux cybercriminels de masquer leur origine lors de fraudes bancaires et d'attaques DDoS. Les autorités de 72 pays ont participé à ces actions, aboutissant à 94 arrestations. Les pertes financières évitées se chiffrent en millions de dollars, incluant des vols de cryptomonnaies. L'enquête a révélé que les appareils étaient souvent infectés via des vulnérabilités connues non corrigées dans les modems SOHO.
 
-**Recommandations** :
-* Remplacer les routeurs en fin de vie (EoL) qui ne reçoivent plus de mises à jour de sécurité.
-* Changer impérativement les mots de passe administrateur par défaut des équipements réseaux.
-* Désactiver les panneaux d'accès à distance (WAN administration) si non strictement nécessaires.
+**Analyse de l'impact** : Réduction significative de l'infrastructure de dissimulation disponible pour les attaquants, perturbant les campagnes de phishing et de fraude à grande échelle.
+
+**Recommandations** : 
+*   Mettre à jour systématiquement le firmware des routeurs résidentiels et modems (SOHO).
+*   Utiliser des flux de threat intelligence intégrant les IP récemment sinkholées par Interpol pour nettoyer les accès internes.
+*   Surveiller les flux sortants inhabituels vers des noeuds de botnet connus.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Opérateurs de SocksEscort / AVRecon |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1090: Proxy<br/>* T1201: Password Policy Discovery<br/>* T1584: Compromise Infrastructure |
-| Observables & Indicateurs de compromission | * Botnet: AVRecon<br/>* Protocoles: Kademlia DHT (pour botnets similaires) |
+| Groupe ou acteur malveillant | Réseaux de botnet AVrecon et opérateurs de SocksEscort |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1584: Compromise Infrastructure <br/> • T1090: Proxy |
+| Observables & Indicateurs de compromission | ```• Botnet AVrecon binaries • 45,000 sinkholed IPs (via Interpol feeds)``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/us-disrupts-socksescort-proxy-network-powered-by-linux-malware/
+* https://www.bleepingcomputer.com/news/security/police-sinkholes-45-000-ip-addresses-in-cybercrime-crackdown/
+* https://securityaffairs.com/189391/security/us-and-european-authorities-disrupt-socksescort-proxy-service-tied-to-avrecon-botnet.html
+* https://databreaches.net/2026/03/13/45000-malicious-ip-addresses-taken-down-in-international-cyber-operation/
 
-<br/>
-<div id="tengu-ransomware-what-security-teams-need-to-know"></div>
+<br>
+<br>
 
-## Tengu Ransomware: What Security Teams Need to Know
-Tengu est une opération de Ransomware-as-a-Service (RaaS) apparue en octobre 2025 avec déjà 50 victimes revendiquées. Le groupe utilise un modèle classique de double extorsion : vol de données suivi d'un chiffrement. Leurs cibles sont variées, incluant la technologie, l'industrie manufacturière et le secteur public. L'accès initial se fait quasi exclusivement par l'abus de comptes valides sur des services RDP ou VPN sans MFA. Une fois dans le réseau, les affiliés utilisent massivement des outils légitimes (LOLBins) comme PowerShell et cmd. Ils désactivent Microsoft Defender (via Set-MpPreference) et effacent les journaux d'événements. La persistance est établie via des clés de registre aux noms trompeurs (ex: WindowsSecurityUpdate). L'exfiltration des données s'appuie sur des outils comme Rclone et WinSCP. Les fichiers chiffrés reçoivent l'extension .tengu.
+<div id="zero-days-chrome-activement-exploites-cve-2026-3909-et-cve-2026-3910"></div>
 
-**Analyse de l'impact** : Risque élevé de fuite de données et d'arrêt de production. Le groupe cible spécifiquement les organisations ayant une hygiène de sécurité des identifiants faible.
+## Multiples vulnérabilités dans Google Chrome (CVE-2026-3909 et CVE-2026-3910)
+Google a publié une mise à jour d'urgence pour corriger deux vulnérabilités de haute sévérité activement exploitées dans le monde réel. La faille CVE-2026-3909 concerne une écriture hors limites dans la bibliothèque graphique Skia, pouvant entraîner une corruption de mémoire. La seconde, CVE-2026-3910, réside dans le moteur JavaScript V8 et permet l'exécution de code arbitraire à l'intérieur de la sandbox du navigateur. Ces failles sont déclenchables via la simple consultation d'une page HTML malveillante. La CISA a ajouté ces vulnérabilités à son catalogue KEV, imposant une correction aux agences fédérales avant le 27 mars 2026. L'absence de détails techniques publics suggère que l'exploitation est encore limitée à des acteurs sophistiqués.
 
-**Recommandations** :
-* Imposer un MFA résistant au phishing (FIDO2) pour tous les accès distants.
-* Surveiller l'utilisation de `wevtutil cl` (effacement de logs), signe d'une action malveillante imminente.
-* Restreindre ou bloquer les outils d'exfiltration comme Rclone s'ils ne sont pas nécessaires.
-* Maintenir des sauvegardes hors-ligne et segmentées.
+**Analyse de l'impact** : Risque majeur de compromission de postes de travail via une simple navigation web ("drive-by download").
+
+**Recommandations** : 
+*   Déployer immédiatement la version 146.0.7680.75/76 (ou supérieure) de Google Chrome sur tous les systèmes.
+*   Forcer le redémarrage des navigateurs pour valider l'installation du correctif.
+*   Surveiller les versions de navigateurs tiers basés sur Chromium (Edge, Brave) pour leurs mises à jour respectives.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Tengu Ransomware Group |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078: Valid Accounts<br/>* T1562.001: Disable or Modify Tools<br/>* T1070.001: Clear Windows Event Logs<br/>* T1567: Exfiltration Over Web Service |
-| Observables & Indicateurs de compromission | * Registre: HKLM\...\Run\SystemSecurityMonitor<br/>* Extension: .tengu<br/>* Hash (MD5): dfbc9412be99b25137ab6ab575489a93 |
+| Groupe ou acteur malveillant | Non spécifié (exploitation active confirmée) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1203: Exploitation for Client Execution <br/> • T1189: Drive-by Compromise |
+| Observables & Indicateurs de compromission | ```• Versions antérieures à 146.0.7680.75 • Requêtes vers domaines suspects suite à navigation web``` |
 
 ### Source (url) du ou des articles
-* https://flare.io/learn/resources/blog/tengu-ransomware
+* https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0286/
+* https://securityaffairs.com/189373/hacking/google-fixed-two-new-actively-exploited-flaws-in-the-chrome-browser.html
+* https://socprime.com/blog/cve-2026-3910-vulnerability/
 
-<br/>
-<div id="storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft"></div>
+<br>
+<br>
 
-## Storm-2561 uses SEO poisoning to distribute fake VPN clients for credential theft
-L'acteur cybercriminel Storm-2561 utilise le "SEO poisoning" pour distribuer de faux clients VPN. En manipulant les résultats de recherche pour des termes comme "Pulse VPN download", il attire les utilisateurs vers des sites frauduleux. Ces sites redirigent vers des dépôts GitHub contenant des fichiers ZIP malveillants. L'installeur MSI déploie un exécutable légitime détourné pour charger latéralement (DLL side-loading) des DLL malveillantes. Ces DLL installent une variante de l'infostealer Hyrax conçue pour voler les identifiants VPN saisis. Pour plus de crédibilité, les fichiers sont signés numériquement par un certificat d'une entreprise technologique chinoise (désormais révoqué). Après le vol des identifiants, l'application affiche une fausse erreur et redirige l'utilisateur vers le site officiel du VPN. Cette ruse permet de minimiser les soupçons de l'utilisateur qui finit par installer le logiciel légitime.
+<div id="campagne-storm-2561-ciblant-les-vpn-dentreprise"></div>
 
-**Analyse de l'impact** : Risque majeur de compromission des accès initiaux à l'entreprise. Le vol des identifiants VPN permet aux attaquants de pénétrer directement dans le réseau interne sans passer par des vulnérabilités complexes.
+## Fake enterprise VPN sites used to steal company credentials
+L'acteur de menace Storm-2561 utilise des techniques de "SEO poisoning" pour diriger les utilisateurs vers de faux sites de téléchargement de VPN d'entreprise (Ivanti, Cisco, Fortinet). Les victimes téléchargent un fichier ZIP contenant un installateur MSI malveillant. Une fois exécuté, le logiciel installe un véritable client VPN mais injecte simultanément le malware "Hyrax infostealer". Le malware présente une interface de connexion identique à l'originale pour capturer les identifiants. Pour éviter la détection, il affiche une erreur d'installation après le vol des données et redirige l'utilisateur vers le site officiel. Le malware établit une persistance via la clé de registre Windows `RunOnce`.
 
-**Recommandations** :
-* Sensibiliser les utilisateurs à ne télécharger des logiciels d'entreprise que via les portails officiels internes.
-* Utiliser Microsoft Edge avec SmartScreen pour bloquer les sites de phishing connus.
-* Activer l'EDR en mode blocage pour détecter le side-loading de DLL inhabituelles dans les répertoires programmes.
+**Analyse de l'impact** : Risque critique de vol d'accès initiaux à haut privilège permettant des intrusions ultérieures de type ransomware ou espionnage.
+
+**Recommandations** : 
+*   Éduquer les utilisateurs sur le téléchargement de logiciels uniquement via le portail applicatif interne ou les sources officielles.
+*   Bloquer l'exécution de binaires non signés ou signés par des certificats révoqués (ex: Taiyuan Lihua Near IT Co.).
+*   Surveiller la création de fichiers dans `%CommonFiles%\Pulse Secure` et les modifications de la clé `RunOnce`.
 
 | Indicateurs | Descriptions |
 |:---|:---|
 | Groupe ou acteur malveillant | Storm-2561 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Spearphishing Link (SEO poisoning)<br/>* T1574.002: DLL Side-Loading<br/>* T1555: Credentials from Password Stores |
-| Observables & Indicateurs de compromission | * Domaine: vpn-fortinet[.]com<br/>* IP C2: 194.76.226.93:8080<br/>* Signataire: Taiyuan Lihua Near Information Technology Co., Ltd. |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1566.002: Spearphishing Link (SEO poisoning) <br/> • T1036: Masquerading <br/> • T1539: Steal Web Session Cookie |
+| Observables & Indicateurs de compromission | ```• Pulse.exe (malveillant) • dwmapi.dll (loader) • inspector.dll (Hyrax) • connectionsstore.dat (volé)``` |
 
 ### Source (url) du ou des articles
-* https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/
+* https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/
 
-<br/>
-<div id="suspected-china-based-espionage-operation-against-military-targets-in-southeast-asia"></div>
+<br>
+<br>
 
-## Suspected China-Based Espionage Operation Against Military Targets in Southeast Asia
-Une opération d'espionnage sophistiquée, baptisée CL-STA-1087, cible les organisations militaires en Asie du Sud-Est depuis 2020. L'acteur, suspecté d'être lié à la Chine, fait preuve d'une grande patience opérationnelle, restant parfois dormant plusieurs mois. Ils utilisent des backdoors sur mesure nommées AppleChris et MemFun pour maintenir l'accès. Le vecteur initial d'infection reste indéterminé, mais le groupe se déplace via WMI et détourne des services comme le Volume Shadow Copy. Ils recherchent activement des documents sensibles sur les structures organisationnelles militaires et la collaboration avec les forces occidentales. AppleChris utilise des techniques de "Dead Drop Resolver" (DDR) via Pastebin ou Dropbox pour localiser ses serveurs C2. MemFun est un malware multi-étapes opérant presque entièrement en mémoire pour éviter la détection. Un variant personnalisé de Mimikatz, appelé Getpass, est utilisé pour récolter les identifiants système.
+<div id="ivanti-epmm-persistance-via-sleeper-shells"></div>
 
-**Analyse de l'impact** : Risque critique d'espionnage d'État et de vol de secrets militaires. La persistance et l'utilisation d'outils en mémoire rendent ces attaques extrêmement difficiles à détecter par des solutions antivirus classiques.
+## Ivanti EPMM ‘Sleeper Shells’ not so sleepy?
+Des recherches récentes sur les vulnérabilités CVE-2026-1281 et CVE-2026-1340 affectant Ivanti EPMM (anciennement MobileIron Core) révèlent une campagne active utilisant des "Sleeper Shells". Un fichier `403.jsp` est injecté pour servir de chargeur de classe Java furtif. Contrairement aux premiers rapports suggérant un outil dormant, NVISO a observé des commandes actives visant à exfiltrer des bases de données LDAP et des configurations système (`tar` de `/mi/tomcat-properties`). Les attaquants utilisent des requêtes HTTP avec des paramètres encodés en Base64 pour exécuter des scripts de reconnaissance et de nettoyage automatisés. Cette technique permet de maintenir un accès persistant même après l'application des correctifs si le système a déjà été compromis.
 
-**Recommandations** :
-* Auditer les logs WMI pour détecter des exécutions de scripts PowerShell distants suspects.
-* Surveiller les connexions vers Pastebin et Dropbox depuis des serveurs sensibles.
-* Utiliser des solutions de type EDR/XDR capables de détecter les injections en mémoire et le "process hollowing".
+**Analyse de l'impact** : Compromission totale des données de gestion des terminaux mobiles (MDM), incluant les identifiants LDAP des utilisateurs.
+
+**Recommandations** : 
+*   Vérifier la présence du fichier `/mifs/403.jsp` sur les instances Ivanti EPMM.
+*   Analyser les logs Tomcat pour des requêtes vers des fichiers JSP inhabituels avec des paramètres courts (ex: `?k=`).
+*   En cas de détection, procéder à une réinitialisation complète de l'instance et des secrets LDAP associés.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | CL-STA-1087 (Nexus Chinois) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1047: Windows Management Instrumentation<br/>* T1574.001: DLL Hijacking<br/>* T1102: Web Service (DDR)<br/>* T1003: OS Credential Dumping |
-| Observables & Indicateurs de compromission | * Mutex: 0XFEXYCDAPPLE05CHRIS<br/>* IP C2: 154.39.142.177<br/>* Hash (AppleChris): 9e44a460196cc92fa6c6c8a12d74fb73a55955045733719e3966a7b8ced6c500 |
+| Groupe ou acteur malveillant | Inconnu (lié à la campagne 403.jsp) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1505.003: Web Shell <br/> • T1059.004: OS Command Shell |
+| Observables & Indicateurs de compromission | ```• /mifs/403.jsp • /mi/tomcat/webapps/mifs/css/mibasecss.css • Paramètre k0f53cf964d387``` |
 
 ### Source (url) du ou des articles
-* https://unit42.paloaltonetworks.com/espionage-campaign-against-military-targets/
+* https://blog.nviso.eu/2026/03/13/ivanti-epmm-sleeper-shells-not-so-sleepy/
+
+<br>
+<br>
+
+<div id="hive0163-et-lusage-de-malwares-generes-par-ia-slopoly"></div>
+
+## AI-assisted Slopoly malware powers Hive0163’s ransomware campaigns
+IBM X-Force a identifié un nouveau malware nommé "Slopoly", utilisé par le groupe Hive0163. Ce script PowerShell présente des caractéristiques structurelles et des commentaires suggérant une génération via un modèle de langage (LLM). Slopoly agit comme un client C2 capable de collecter des données système, d'envoyer des "heartbeats" et de maintenir la persistance via des tâches planifiées. Le groupe Hive0163 utilise ce vecteur pour maintenir un accès à long terme lors d'attaques par ransomware Interlock. Cette évolution démontre comment l'IA agit comme un multiplicateur de force, permettant à des acteurs malveillants de créer rapidement des outils furtifs et personnalisés pour chaque cible.
+
+**Analyse de l'impact** : Augmentation de la vitesse de développement des malwares et difficulté accrue pour les signatures antivirus traditionnelles.
+
+**Recommandations** : 
+*   Renforcer la surveillance de l'exécution de scripts PowerShell via le logging (Script Block Logging).
+*   Surveiller la création de tâches planifiées inhabituelles via le processus `cmd.exe`.
+*   Utiliser des solutions EDR basées sur le comportement plutôt que sur les signatures pour détecter les malwares "éphémères".
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Hive0163 |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1059.001: PowerShell <br/> • T1053.005: Scheduled Task <br/> • T1588.006: Obtain Capabilities: AI-Assisted |
+| Observables & Indicateurs de compromission | ```• Slopoly PowerShell script • FIRST_READ_ME.txt (Ransom note) • JunkFiction loader``` |
+
+### Source (url) du ou des articles
+* https://securityaffairs.com/189378/malware/ai-assisted-slopoly-malware-powers-hive0163s-ransomware-campaigns.html
+
+<br>
+<br>
+
+<div id="espionnage-russe-sur-les-messageries-chiffrees-signal-et-whatsapp"></div>
+
+## Signal support : une vraie campagne d'espionnage russe
+Une vaste campagne de phishing cible les utilisateurs des messageries Signal et WhatsApp en Europe, attribuée à des acteurs étatiques russes. Les attaquants envoient des messages se faisant passer pour le support technique de Signal, invoquant une "activité suspecte" pour inciter la victime à fournir un code de vérification SMS. Si le code est obtenu, le pirate peut lier le compte de la cible à son propre appareil (ordinateur ou tablette). Bien qu'ils ne puissent pas voir l'historique des messages passés, ils obtiennent l'accès aux contacts et peuvent usurper l'identité de la victime pour de nouvelles attaques de phishing. Une variante plus dangereuse utilise des QR codes pour tenter de récupérer l'historique des messages.
+
+**Analyse de l'impact** : Risque d'espionnage de haut niveau et de compromission de la chaîne de confiance entre diplomates, militaires et journalistes.
+
+**Recommandations** : 
+*   Activer impérativement le "Verrouillage de l'enregistrement" (Registration Lock) et un code PIN sur Signal.
+*   Ne jamais scanner de QR code envoyé par messagerie pour "vérifier" un compte.
+*   Rappeler aux utilisateurs que le support de Signal ou WhatsApp ne demande jamais de codes de vérification par message.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Acteurs étatiques russes (probablement APT28 ou Sandworm) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1566: Phishing <br/> • T1098.002: Additional Cloud Credentials |
+| Observables & Indicateurs de compromission | ```• Messages provenant de faux comptes "Signal Support" • Demandes de codes PIN/SMS inattendues``` |
+
+### Source (url) du ou des articles
+* https://www.lemonde.fr/pixels/article/2026/03/13/signal-support-un-faux-message-d-alerte-une-vraie-campagne-d-espionnage-des-utilisateurs-de-la-messagerie-attribuee-a-la-russie_6671046_4408996.html
+
+<br>
+<br>
+
+<div id="vulnerabilite-critique-sql-injection-dans-le-plugin-wordpress-ally"></div>
+
+## SQL Injection Vulnerability in Ally WordPress Plugin Exposes 200K+ Sites
+Une vulnérabilité critique d'injection SQL (CVE-2026-2413) a été découverte dans le plugin WordPress "Ally", utilisé par plus de 400 000 sites. La faille permet à un attaquant non authentifié d'exécuter des requêtes SQL arbitraires via des paramètres URL mal filtrés. En utilisant des techniques de "Blind SQL injection" basées sur le temps, les attaquants peuvent extraire les condensés de mots de passe des administrateurs et les adresses e-mail de la base de données. Bien qu'un correctif (v4.1.0) ait été publié fin février, environ 60% des installations n'ont pas encore été mises à jour, laissant 200 000 sites vulnérables à des attaques automatisées.
+
+**Analyse de l'impact** : Risque d'accès administrateur et de vol de données massifs sur les sites WordPress impactés.
+
+**Recommandations** : 
+*   Mettre à jour le plugin Ally vers la version 4.1.0 ou supérieure immédiatement.
+*   Auditer les journaux d'accès web pour des requêtes suspectes contenant des clauses SQL (ex: `UNION SELECT`, `SLEEP`).
+*   Utiliser un pare-feu applicatif web (WAF) avec des règles génériques de protection contre les injections SQL.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non applicable (vulnérabilité logicielle) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1190: Exploit Public-Facing Application |
+| Observables & Indicateurs de compromission | ```• CVE-2026-2413 • Requêtes HTTP GET avec paramètres SQL injectés``` |
+
+### Source (url) du ou des articles
+* https://hackread.com/sql-injection-vulnerability-ally-wordpress-plugin/
