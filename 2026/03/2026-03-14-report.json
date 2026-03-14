@@ -1,0 +1,324 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape on March 14, 2026, is dominated by the massive escalation of the US-Israel-Iran conflict, marked by the first confirmed destructive retaliatory strikes against US critical infrastructure (Stryker). This period highlights a shift toward 'Agentic AI' in malware development (Slopoly) and a high volume of zero-day exploitation in ubiquitous software like Google Chrome and Apple iOS. International law enforcement (Operation Synergia III) continues to battle vast proxy networks used for anonymity in cybercrime.",
+      "fr": "Le paysage des menaces cyber au 14 mars 2026 est dominé par l'escalade massive du conflit États-Unis-Israël-Iran, marquée par les premières frappes destructrices confirmées contre des infrastructures critiques américaines (Stryker). Cette période souligne une transition vers l'utilisation de l'IA agentique dans le développement de malwares (Slopoly) et un volume élevé d'exploitations zero-day dans des logiciels omniprésents tels que Google Chrome et Apple iOS. La coopération policière internationale (Opération Synergia III) continue de lutter contre les vastes réseaux de proxys utilisés pour l'anonymat criminel."
+    },
+    "date": "2026-03-14"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government & Diplomacy",
+        "fr": "Gouvernement et Diplomatie"
+      },
+      "theme": {
+        "en": "US-Israel-Iran Cyber Warfare Escalation",
+        "fr": "Escalade de la cyberguerre États-Unis-Israël-Iran"
+      },
+      "description": {
+        "en": "Iranian-linked actors have expanded targeting to NATO members (Romania) and US commercial interests. Iran faces a near-total internet blackout while Russia utilizes the conflict for disinformation campaigns linking it to the Ukrainian crisis.",
+        "fr": "Des acteurs liés à l'Iran ont étendu leurs cibles aux membres de l'OTAN (Roumanie) et aux intérêts commerciaux américains. L'Iran subit une coupure quasi totale d'Internet tandis que la Russie utilise le conflit pour des campagnes de désinformation le liant à la crise ukrainienne."
+      },
+      "tags": [
+        "Iran",
+        "Cyber War",
+        "NATO",
+        "Disinformation"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict",
+        "https://euvsdisinfo.eu/how-russia-lies-about-the-war-in-the-middle-east-2/"
+      ],
+      "date": "2026-03-14"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Stryker Corporation",
+      "threat_actor": "Void Manticore",
+      "sector": {
+        "en": "Healthcare / Medical Technology",
+        "fr": "Santé / Technologie Médicale"
+      },
+      "description": {
+        "en": "Major wiper attack attributed to Handala (Void Manticore) leveraging Microsoft Intune MDM to remotely wipe 200,000+ devices across 79 countries, causing global operational disruption.",
+        "fr": "Attaque majeure par wiper attribuée à Handala (Void Manticore) utilisant Microsoft Intune MDM pour effacer à distance plus de 200 000 appareils dans 79 pays, provoquant une interruption opérationnelle mondiale."
+      },
+      "tags": [
+        "wiper",
+        "MDM abuse",
+        "Handala"
+      ],
+      "sources": [
+        "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-11-7/",
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-03-14"
+    },
+    {
+      "victim": "National Centre for Nuclear Research (NCBJ), Poland",
+      "threat_actor": "Unknown (Iran suspected)",
+      "sector": {
+        "en": "Nuclear Research",
+        "fr": "Recherche Nucléaire"
+      },
+      "description": {
+        "en": "Cyberattack targeted the IT infrastructure of Poland's nuclear research center. The attack was blocked before impact. Iranian indicators were found but may be false flags.",
+        "fr": "Une cyberattaque a visé l'infrastructure informatique du centre de recherche nucléaire polonais. L'attaque a été bloquée avant tout impact. Des indicateurs iraniens ont été trouvés mais pourraient être des leurres."
+      },
+      "tags": [
+        "critical infrastructure",
+        "Poland"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/polands-nuclear-research-centre-targeted-by-cyberattack/",
+        "https://securityaffairs.com/189399/security/hackers-targeted-polands-national-centre-for-nuclear-research.html"
+      ],
+      "date": "2026-03-14"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-3910",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:/a:google:chrome",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "High-severity inappropriate implementation in V8 engine allowing remote code execution via crafted HTML pages. Actively exploited in the wild.",
+        "fr": "Implémentation inappropriée de haute sévérité dans le moteur V8 permettant l'exécution de code à distance via des pages HTML forgées. Activement exploitée."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0286/",
+        "https://socprime.com/blog/cve-2026-3910-vulnerability/"
+      ],
+      "date": "2026-03-14"
+    },
+    {
+      "cve_id": "CVE-2026-3909",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:/a:google:skia",
+      "product": "Chrome (Skia)",
+      "vendor": "Google",
+      "description": {
+        "en": "Out-of-bounds write in Skia 2D graphics library used in Chrome. Allows memory corruption and code execution.",
+        "fr": "Écriture hors limites dans la bibliothèque graphique 2D Skia utilisée dans Chrome. Permet la corruption de mémoire et l'exécution de code."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189411/security/u-s-cisa-adds-google-chrome-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-03-14"
+    },
+    {
+      "cve_id": "CVE-2026-32626",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.7",
+      "epss": "N/A",
+      "cpe": "cpe:/a:mintplexlabs:anythingllm",
+      "product": "AnythingLLM Desktop",
+      "vendor": "Mintplex Labs",
+      "description": {
+        "en": "Critical XSS to RCE chain in AnythingLLM Desktop versions up to 1.11.1.",
+        "fr": "Chaîne critique XSS vers RCE dans AnythingLLM Desktop jusqu'à la version 1.11.1."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI Security"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116224939030354423"
+      ],
+      "date": "2026-03-14"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "SmartApeSG Campaign Distributing Remcos RAT",
+        "fr": "Campagne SmartApeSG distribuant Remcos RAT"
+      },
+      "description": {
+        "en": "A campaign using 'ClickFix' style fake CAPTCHA pages to trick users into executing malicious PowerShell commands that install Remcos RAT via DLL side-loading.",
+        "fr": "Une campagne utilisant de fausses pages CAPTCHA de style 'ClickFix' pour inciter les utilisateurs à exécuter des commandes PowerShell malveillantes installant Remcos RAT via le chargement de DLL (side-loading)."
+      },
+      "threat_actor": "SmartApeSG",
+      "indicators": {
+        "URL": [
+          "https://cpajoliette.com/d.js",
+          "https://retrypoti.top/endpoint/signin-cache.js",
+          "https://retrypoti.top/endpoint/login-asset.php?Iah0QU0N",
+          "https://retrypoti.top/endpoint/handler-css.js?00109a4cb788daa811",
+          "http://forcebiturg.com/boot",
+          "http://forcebiturg.com/proc"
+        ],
+        "IPv4": [
+          "193.178.170.155"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "retrypoti.top",
+          "forcebiturg.com",
+          "cpajoliette.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "b170ffc8612618c822eb03030a8a62d4be8d6a77a11e4e41bb075393ca504ab7"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Remcos RAT",
+          "PowerShell"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1574.002",
+        "T1204.002"
+      ],
+      "analyse": {
+        "en": "SmartApeSG consistently pivots on compromised websites to inject scripts. The move to 'ClickFix' instructions demonstrates social engineering sophistication to bypass automated security filters.",
+        "fr": "SmartApeSG pivote systématiquement sur des sites Web compromis pour injecter des scripts. Le passage aux instructions 'ClickFix' démontre une sophistication de l'ingénierie sociale pour contourner les filtres de sécurité automatisés."
+      },
+      "recommandations": [
+        {
+          "en": "Block the identified IOC domains and IPs at the firewall level.",
+          "fr": "Bloquez les domaines et IP identifiés dans les IOC au niveau du pare-feu."
+        },
+        {
+          "en": "Educate users to never paste 'ClickFix' commands into Windows Run prompts.",
+          "fr": "Éduquez les utilisateurs à ne jamais coller de commandes 'ClickFix' dans l'invite d'exécution Windows."
+        }
+      ],
+      "tags": [
+        "RemcosRAT",
+        "Phishing",
+        "ClickFix"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32796"
+      ],
+      "date": "2026-03-14"
+    },
+    {
+      "title": {
+        "en": "Storm-2561 Fake Enterprise VPN Sites",
+        "fr": "Faux sites VPN d'entreprise Storm-2561"
+      },
+      "description": {
+        "en": "Threat actor Storm-2561 uses SEO poisoning to direct users to fake VPN download sites (Cisco, Fortinet, Ivanti) to deliver the Hyrax infostealer.",
+        "fr": "L'acteur Storm-2561 utilise l'empoisonnement SEO pour diriger les utilisateurs vers de faux sites de téléchargement de VPN (Cisco, Fortinet, Ivanti) afin de diffuser l'infostealer Hyrax."
+      },
+      "threat_actor": "Storm-2561",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Hyrax infostealer",
+          "dwmapi.dll",
+          "inspector.dll",
+          "Pulse.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1583.005"
+      ],
+      "analyse": {
+        "en": "Storm-2561 leverages legitimate but revoked digital certificates to sign malware, increasing the likelihood of successful infection by mimicking authentic installer processes.",
+        "fr": "Storm-2561 exploite des certificats numériques légitimes mais révoqués pour signer ses malwares, augmentant la probabilité d'infection en imitant les processus d'installation authentiques."
+      },
+      "recommandations": [
+        {
+          "en": "Enable EDR in block mode for unsigned or recently revoked signed binaries.",
+          "fr": "Activez l'EDR en mode blocage pour les binaires non signés ou signés avec des certificats récemment révoqués."
+        }
+      ],
+      "tags": [
+        "SEO Poisoning",
+        "Infostealer",
+        "VPN"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fake-enterprise-vpn-downloads-used-to-steal-company-credentials/"
+      ],
+      "date": "2026-03-14"
+    },
+    {
+      "title": {
+        "en": "AI-Assisted Malware 'Slopoly' by Hive0163",
+        "fr": "Malware assisté par l'IA 'Slopoly' par Hive0163"
+      },
+      "description": {
+        "en": "Hive0163 (financially motivated) deployed Slopoly, a PowerShell backdoor likely generated via LLM, to maintain persistent access during ransomware operations.",
+        "fr": "Hive0163 (motivé financièrement) a déployé Slopoly, une porte dérobée PowerShell probablement générée via LLM, pour maintenir un accès persistant pendant des opérations de ransomware."
+      },
+      "threat_actor": "Hive0163",
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Slopoly",
+          "NodeSnake",
+          "InterlockRAT",
+          "AzCopy"
+        ]
+      },
+      "mitre_ttps": [
+        "T1059.001",
+        "T1053.005"
+      ],
+      "analyse": {
+        "en": "The use of AI-generated malware markers (heavy commenting, LLM-style structure) signals a new phase in the cyber arms race where attackers can rapidly iterate code.",
+        "fr": "L'utilisation de marqueurs de malwares générés par IA (commentaires abondants, structure de style LLM) signale une nouvelle phase dans la course aux armements cyber où les attaquants peuvent itérer du code rapidement."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict PowerShell execution policies and monitor for unusual scheduled tasks.",
+          "fr": "Implémentez des politiques d'exécution PowerShell strictes et surveillez les tâches planifiées inhabituelles."
+        }
+      ],
+      "tags": [
+        "AI Malware",
+        "Hive0163",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189378/malware/ai-assisted-slopoly-malware-powers-hive0163s-ransomware-campaigns.html"
+      ],
+      "date": "2026-03-14"
+    }
+  ]
+}
+```
