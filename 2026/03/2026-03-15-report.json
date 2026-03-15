@@ -1,0 +1,280 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The reporting period is characterized by intense activity in vulnerability exploitation and supply chain compromises. Two major trends emerge: the active exploitation of Zero-Day vulnerabilities in Google Chrome (Skia and V8) requiring emergency patching, and a significant supply chain attack against the AppsFlyer Web SDK used for cryptocurrency theft. Furthermore, global law enforcement cooperation via INTERPOL's Operation Synergia III has successfully dismantled over 45,000 malicious infrastructures, signaling a strong counter-offensive against phishing and ransomware networks. Credential theft remains a primary vector, illustrated by campaigns from Storm-2561 and SmartApeSG targeting VPN infrastructure and corporate portals.",
+      "fr": "La période de rapport est caractérisée par une activité intense d'exploitation de vulnérabilités et de compromissions de la chaîne d'approvisionnement. Deux tendances majeures émergent : l'exploitation active de vulnérabilités Zero-Day dans Google Chrome (Skia et V8) nécessitant des correctifs d'urgence, et une attaque importante de la chaîne d'approvisionnement contre le SDK Web d'AppsFlyer utilisé pour le vol de crypto-monnaies. Par ailleurs, la coopération policière mondiale via l'opération Synergia III d'INTERPOL a permis de démanteler plus de 45 000 infrastructures malveillantes. Le vol d'identifiants reste un vecteur primaire, illustré par les campagnes de Storm-2561 et SmartApeSG ciblant les infrastructures VPN et les portails d'entreprise."
+    },
+    "date": "2026-03-15"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Law Enforcement",
+        "fr": "Forces de l'ordre"
+      },
+      "theme": {
+        "en": "Global Cybercrime Crackdown",
+        "fr": "Répression mondiale de la cybercriminalité"
+      },
+      "description": {
+        "en": "Operation Synergia III, led by INTERPOL across 72 countries, targeted phishing, malware, and ransomware infrastructure. This operation highlights the increasing efficacy of international cooperation between public law enforcement and private cybersecurity firms to disrupt criminal ecosystems globally.",
+        "fr": "L'opération Synergia III, menée par INTERPOL dans 72 pays, a ciblé les infrastructures de phishing, de malwares et de ransomwares. Cette opération souligne l'efficacité croissante de la coopération internationale entre les forces de l'ordre et le secteur privé pour perturber les écosystèmes criminels mondiaux."
+      },
+      "tags": [
+        "INTERPOL",
+        "Synergia III",
+        "Takedown"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189420/cyber-crime/interpol-operation-synergia-iii-leads-to-45000-malicious-ips-dismantled-and-94-arrests-worldwide.html"
+      ],
+      "date": "2026-03-15"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "AppsFlyer (and downstream web users)",
+      "threat_actor": "{UNKNOWN}",
+      "sector": {
+        "en": "Marketing Technology / Software Supply Chain",
+        "fr": "Technologies marketing / Chaîne d'approvisionnement logicielle"
+      },
+      "description": {
+        "en": "A domain registrar incident allowed attackers to inject malicious JavaScript into the AppsFlyer Web SDK. The script intercepted cryptocurrency wallet addresses (BTC, ETH, SOL, etc.) on customer websites and replaced them with attacker-controlled addresses.",
+        "fr": "Un incident chez le registraire de domaine a permis à des attaquants d'injecter du JavaScript malveillant dans le SDK Web AppsFlyer. Le script interceptait les adresses de portefeuilles de crypto-monnaies (BTC, ETH, SOL, etc.) sur les sites clients pour les remplacer par des adresses contrôlées par l'attaquant."
+      },
+      "tags": [
+        "supply-chain",
+        "crypto-stealer",
+        "javascript-injection"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/appsflyer-web-sdk-used-to-spread-crypto-stealer-javascript-code/"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "victim": "Starbucks",
+      "threat_actor": "{UNKNOWN}",
+      "sector": {
+        "en": "Retail / Food & Beverage",
+        "fr": "Commerce de détail / Restauration"
+      },
+      "description": {
+        "en": "Unauthorized access to Starbucks Partner Central accounts occurred following phishing attacks using spoofed portals. Data for 889 employees, including SSNs and bank details, was potentially exposed between Jan 19 and Feb 11, 2026.",
+        "fr": "Un accès non autorisé aux comptes Starbucks Partner Central a eu lieu suite à des attaques de phishing utilisant des portails contrefaits. Les données de 889 employés (numéros de sécurité sociale, coordonnées bancaires) ont été potentiellement compromises entre le 19 janv. et le 11 fév. 2026."
+      },
+      "tags": [
+        "data-breach",
+        "phishing",
+        "employee-data"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189438/security/starbucks-data-breach-impacts-889-employees.html"
+      ],
+      "date": "2026-03-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-3909",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Out-of-bounds write in Skia graphics engine allows a remote attacker to perform memory access via a crafted HTML page. Actively exploited in the wild.",
+        "fr": "Écriture hors limites dans le moteur graphique Skia permettant à un attaquant distant d'accéder à la mémoire via une page HTML forgée. Exploitée activement dans la nature."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "rce"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/03/14/cisa-adds-two-google-chrome-zero-days-to-kev/",
+        "https://www.security.nl/posting/928543/Google+meldde+ten+onrechte+dat+Chrome-lek+was+gedicht%2C+rolt+nieuwe+update+uit"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "cve_id": "CVE-2026-3910",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Inappropriate implementation in V8 JavaScript engine allows remote code execution within the sandbox via a crafted HTML page. Actively exploited in the wild.",
+        "fr": "Implémentation inappropriée dans le moteur JavaScript V8 permettant l'exécution de code à distance dans le bac à sable via une page HTML forgée. Exploitée activement."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "rce"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/03/14/cisa-adds-two-google-chrome-zero-days-to-kev/"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "cve_id": "CVE-2026-25750",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:langchain:langsmith:*:*:*:*:*:*:*:*",
+      "product": "LangSmith",
+      "vendor": "LangChain",
+      "description": {
+        "en": "Critical account takeover vulnerability in LangSmith due to insecure baseUrl parameter configuration, allowing session token theft.",
+        "fr": "Vulnérabilité critique de prise de contrôle de compte dans LangSmith due à une configuration non sécurisée du paramètre baseUrl, permettant le vol de jetons de session."
+      },
+      "tags": [
+        "vulnerability",
+        "account-takeover",
+        "ai-security"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/critical-langsmith-account-takeover-vulnerability/"
+      ],
+      "date": "2026-03-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "SmartApeSG Remcos RAT Campaign",
+        "fr": "Campagne SmartApeSG distribuant Remcos RAT"
+      },
+      "description": {
+        "en": "The SmartApeSG campaign utilizes 'ClickFix' fake CAPTCHA pages to trick users into executing malicious commands that download Remcos RAT via DLL side-loading.",
+        "fr": "La campagne SmartApeSG utilise de fausses pages CAPTCHA de type 'ClickFix' pour inciter les utilisateurs à exécuter des commandes malveillantes téléchargeant Remcos RAT via DLL side-loading."
+      },
+      "threat_actor": "SmartApeSG",
+      "indicators": {
+        "URL": [
+          "https://cpajoliette.com/d.js",
+          "https://retrypoti.top/endpoint/signin-cache.js",
+          "https://retrypoti.top/endpoint/login-asset.php?Iah0QU0N",
+          "https://retrypoti.top/endpoint/handler-css.js?00109a4cb788daa811",
+          "http://forcebiturg.com/boot",
+          "https://forcebiturg.com/boot",
+          "http://forcebiturg.com/proc",
+          "https://forcebiturg.com/proc"
+        ],
+        "IPv4": [
+          "193.178.170.155"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "retrypoti.top",
+          "forcebiturg.com",
+          "cpajoliette.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "b170ffc8612618c822eb03030a8a62d4be8d6a77a11e4e41bb075393ca504ab7"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Remcos RAT",
+          "ClickFix"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1204.002",
+        "T1574.002",
+        "T1547.001"
+      ],
+      "analyse": {
+        "en": "Persistent campaign targeting Windows users by impersonating security verification processes. The use of PowerShell/Cmd scripts via clipboard injection (ClickFix) bypasses traditional email filtering.",
+        "fr": "Campagne persistante ciblant les utilisateurs Windows en imitant des processus de vérification de sécurité. L'utilisation de scripts PowerShell via l'injection dans le presse-papiers (ClickFix) contourne les filtrages de courriels traditionnels."
+      },
+      "recommandations": [
+        {
+          "en": "Educate users about the dangers of copying and pasting commands into the 'Run' dialog from untrusted websites.",
+          "fr": "Sensibiliser les utilisateurs aux dangers du copier-coller de commandes dans la boîte de dialogue 'Exécuter' depuis des sites non fiables."
+        },
+        {
+          "en": "Monitor for unusual PowerShell or Cmd execution patterns originating from browser processes.",
+          "fr": "Surveiller les modèles d'exécution PowerShell ou Cmd inhabituels provenant des processus de navigation."
+        }
+      ],
+      "tags": [
+        "RAT",
+        "SmartApeSG",
+        "ClickFix"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32796"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "title": {
+        "en": "Storm-2561 VPN Spoofing Campaign",
+        "fr": "Campagne d'usurpation de VPN par Storm-2561"
+      },
+      "description": {
+        "en": "Storm-2561 uses SEO poisoning to direct users to fake VPN download sites (Ivanti, Cisco, Fortinet). The malicious installers deploy the Hyrax infostealer to harvest corporate credentials.",
+        "fr": "Storm-2561 utilise le 'SEO poisoning' pour diriger les utilisateurs vers de faux sites de téléchargement de VPN (Ivanti, Cisco, Fortinet). Les installateurs malveillants déploient l'infostealer Hyrax pour voler des identifiants d'entreprise."
+      },
+      "threat_actor": "Storm-2561",
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "194.76.226.93"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Hyrax Infostealer",
+          "Pulse.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1583.005",
+        "T1036",
+        "T1574.002"
+      ],
+      "analyse": {
+        "en": "High-fidelity social engineering that mimics the corporate remote access workflow. The actor uses valid (now revoked) code-signing certificates to increase credibility.",
+        "fr": "Ingénierie sociale de haute fidélité imitant le flux de travail d'accès à distance en entreprise. L'acteur utilise des certificats de signature de code valides (désormais révoqués) pour accroître sa crédibilité."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce downloading of corporate software only from internal repositories or verified official vendor portals.",
+          "fr": "Imposer le téléchargement des logiciels d'entreprise uniquement à partir de dépôts internes ou de portails officiels vérifiés."
+        },
+        {
+          "en": "Implement multi-factor authentication (MFA) to mitigate the impact of stolen VPN credentials.",
+          "fr": "Implémenter l'authentification multi-facteurs (MFA) pour atténuer l'impact du vol d'identifiants VPN."
+        }
+      ],
+      "tags": [
+        "infostealer",
+        "VPN",
+        "SEO-poisoning"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189426/cyber-crime/storm-2561-lures-victims-to-spoofed-vpn-sites-to-harvest-corporate-logins.html"
+      ],
+      "date": "2026-03-15"
+    }
+  ]
+}
+```
