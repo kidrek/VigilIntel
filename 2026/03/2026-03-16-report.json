@@ -1,0 +1,240 @@
+```json
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for March 16, 2026, is dominated by critical vulnerabilities in edge infrastructure (FortiGate, Windows RRAS) and a surge in multi-sector ransomware attacks. Geopolitical tensions between the US, Israel, and Iran are directly translating into increased cyber hostilities. Furthermore, the industrialization of 'Foreign Information Manipulation and Interference' (FIMI) by state actors like Russia and China remains a systemic risk to democratic processes. A notable trend is the evolution of developer-focused security tools (Betterleaks) and the emergence of 'rogue' elements within the incident response community, as evidenced by DOJ charges against a negotiator linked to BlackCat.",
+      "fr": "Le paysage des menaces pour le 16 mars 2026 est dominé par des vulnérabilités critiques dans les infrastructures de bord (FortiGate, Windows RRAS) et une recrudescence d'attaques de ransomware multisectorielles. Les tensions géopolitiques entre les États-Unis, Israël et l'Iran se traduisent directement par une augmentation des hostilités cybernétiques. De plus, l'industrialisation de la « Manipulation de l'information et ingérence étrangère » (FIMI) par des acteurs étatiques comme la Russie et la Chine reste un risque systémique pour les processus démocratiques. Une tendance notable est l'évolution des outils de sécurité destinés aux développeurs (Betterleaks) et l'émergence d'éléments « véreux » au sein de la communauté de réponse aux incidents, comme le prouvent les accusations du DOJ contre un négociateur lié à BlackCat."
+    },
+    "date": "2026-03-16"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": "Government & International Relations",
+        "fr": "Gouvernement et Relations Internationales"
+      },
+      "theme": {
+        "en": "Iran-US/Israel Cyber Hostilities",
+        "fr": "Hostilités cybernétiques Iran-États-Unis/Israël"
+      },
+      "description": {
+        "en": "Escalation of hostilities between Iran and the U.S./Israel has led to a heightened threat landscape, with proactive identification of Iranian-sponsored Indicators of Compromise (IOC) by security firms.",
+        "fr": "L'escalade des hostilités entre l'Iran et les États-Unis/Israël a entraîné une intensification des menaces, avec une identification proactive des indicateurs de compromission (IOC) parrainés par l'Iran par les entreprises de sécurité."
+      },
+      "tags": [
+        "Iran",
+        "Israel",
+        "USA",
+        "State-sponsored"
+      ],
+      "sources": [
+        "https://securityboulevard.com/2026/03/update-iranian-u-s-israeli-hostilities-lead-to-increased-threat-landscape/"
+      ],
+      "date": "2026-03-16"
+    },
+    {
+      "sector": {
+        "en": "Public Opinion & Democracy",
+        "fr": "Opinion publique et démocratie"
+      },
+      "theme": {
+        "en": "FIMI (Foreign Information Manipulation and Interference)",
+        "fr": "FIMI (Manipulation de l'information et ingérence étrangère)"
+      },
+      "description": {
+        "en": "Coordinated deceptive behavior by Russia and China designed to manipulate the information environment, undermine democratic trust, and amplify societal polarization.",
+        "fr": "Comportement trompeur coordonné de la Russie et de la Chine conçu pour manipuler l'environnement de l'information, saper la confiance démocratique et amplifier la polarisation sociétale."
+      },
+      "tags": [
+        "Disinformation",
+        "FIMI",
+        "Russia",
+        "China"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/foreign-information-manipulation-and-interference-fimi-explained/"
+      ],
+      "date": "2026-03-16"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Royal Bahrain Hospital",
+      "threat_actor": "Payload Ransomware",
+      "sector": {
+        "en": "Healthcare",
+        "fr": "Santé"
+      },
+      "description": {
+        "en": "Claim of 110 GB data theft using a double-extortion model. Ransom deadline set for March 23.",
+        "fr": "Revendication d'un vol de 110 Go de données via un modèle de double extorsion. Échéance de rançon fixée au 23 mars."
+      },
+      "tags": [
+        "ransomware",
+        "data-exfiltration",
+        "Bahrain"
+      ],
+      "sources": [
+        "https://securityaffairs.com/189467/cyber-crime/payload-ransomware-claims-the-hack-of-royal-bahrain-hospital.html"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "victim": "Stryker",
+      "threat_actor": "Handala",
+      "sector": {
+        "en": "Healthcare / Medical Devices",
+        "fr": "Santé / Dispositifs médicaux"
+      },
+      "description": {
+        "en": "Pro-Palestinian/Iran-linked group Handala claimed a cyberattack causing global operational disruptions and affecting Irish staff.",
+        "fr": "Le groupe Handala, lié à l'Iran et pro-palestinien, a revendiqué une cyberattaque provoquant des perturbations opérationnelles mondiales et affectant le personnel irlandais."
+      },
+      "tags": [
+        "Handala",
+        "Stryker",
+        "Medical-device"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "victim": "Baydöner",
+      "threat_actor": "UNKNOWN",
+      "sector": {
+        "en": "Food & Beverage",
+        "fr": "Restauration"
+      },
+      "description": {
+        "en": "Data breach exposing 1,266,822 customer accounts including plaintext passwords and national IDs.",
+        "fr": "Violation de données exposant 1 266 822 comptes clients, incluant des mots de passe en clair et des identifiants nationaux."
+      },
+      "tags": [
+        "databreach",
+        "Turkey",
+        "customer-data"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Baydoner"
+      ],
+      "date": "2026-03-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-24858",
+      "euvd_id": "N/A",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:h:fortinet:fortigate:*:*:*:*:*:*:*:*",
+      "product": "FortiGate Next-Generation Firewall",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Zero-day vulnerability in FortiCloud SSO allowing attackers to log into FortiGate devices using rogue accounts.",
+        "fr": "Vulnérabilité zero-day dans le SSO FortiCloud permettant aux attaquants de se connecter aux appareils FortiGate via des comptes malveillants."
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "firewall"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/fortigate-firewalls-exploited/"
+      ],
+      "date": "2026-03-15"
+    },
+    {
+      "cve_id": "CVE-2026-25172",
+      "euvd_id": "N/A",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:o:microsoft:windows_11:-:*:*:*:*:*:*:*",
+      "product": "Windows Routing and Remote Access Service (RRAS)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Remote Code Execution flaw in RRAS management tool triggered when connecting to an attacker-controlled server.",
+        "fr": "Faille d'exécution de code à distance (RCE) dans l'outil de gestion RRAS, déclenchée lors de la connexion à un serveur contrôlé par l'attaquant."
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "hotpatch"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/windows-11-out-of-band-update/"
+      ],
+      "date": "2026-03-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "FortiGate Exploitation Campaign with RMM Lateral Movement",
+        "fr": "Campagne d'exploitation FortiGate avec mouvement latéral via RMM"
+      },
+      "description": {
+        "en": "Threat actors exploit FortiGate vulnerabilities to extract LDAP/AD credentials from configuration files and deploy RMM tools like MeshAgent and Pulseway for persistence.",
+        "fr": "Des acteurs malveillants exploitent les vulnérabilités FortiGate pour extraire les identifiants LDAP/AD des fichiers de configuration et déploient des outils RMM comme MeshAgent et Pulseway pour la persistance."
+      },
+      "threat_actor": "Storm-2561",
+      "indicators": {
+        "URL": [
+          "ndibstersoft.com",
+          "neremedysoft.com"
+        ],
+        "IPv4": [
+          "193.24.211.61",
+          "172.67.196.232"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "ndibstersoft.com",
+          "neremedysoft.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Pulseway",
+          "MeshAgent",
+          "SoftPerfect Network Scanner"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1552.001",
+        "T1021.002",
+        "T1219"
+      ],
+      "analyse": {
+        "en": "The campaign targets edge devices to bypass perimeter security. Attackers utilize reversible encryption in FortiOS configuration files to gain domain access.",
+        "fr": "La campagne cible les périphériques de bord pour contourner la sécurité périmétrique. Les attaquants utilisent le chiffrement réversible des fichiers de configuration FortiOS pour accéder au domaine."
+      },
+      "recommandations": [
+        {
+          "en": "Apply Fortinet firmware patches for CVE-2025-59718, CVE-2025-59719, and CVE-2026-24858.",
+          "fr": "Appliquer les correctifs de firmware Fortinet pour les CVE-2025-59718, CVE-2025-59719 et CVE-2026-24858."
+        },
+        {
+          "en": "Rotate all LDAP and AD credentials associated with network appliances.",
+          "fr": "Renouveler tous les identifiants LDAP et AD associés aux équipements réseau."
+        }
+      ],
+      "tags": [
+        "FortiGate",
+        "RMM",
+        "Credential-Theft"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/fortigate-firewalls-exploited/"
+      ],
+      "date": "2026-03-15"
+    }
+  ]
+}
+```
