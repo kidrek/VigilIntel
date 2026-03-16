@@ -9,17 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [AppsFlyer Web SDK compromis pour diffuser un malware de vol de crypto-monnaies](#appsflyer-web-sdk-compromis-pour-diffuser-un-malware-de-vol-de-crypto-monnaies)
-  * [Interpol : L'Opération Synergia III démantèle 45 000 serveurs malveillants](#interpol--loperation-synergia-iii-demantele-45-000-serveurs-malveillants)
-  * [La campagne SmartApeSG utilise des pages ClickFix pour diffuser le RAT Remcos](#la-campagne-smartapesg-utilise-des-pages-clickfix-pour-diffuser-le-rat-remcos)
-  * [Storm-2561 usurpe des sites VPN pour dérober des identifiants d'entreprise](#storm-2561-usurpe-des-sites-vpn-pour-derober-des-identifiants-dentreprise)
+  * [FortiGate Firewalls Exploited in Wave of Attacks](#fortigate-firewalls-exploited-in-wave-of-attacks)
+  * [Betterleaks a new open source secrets scanner](#betterleaks-a-new-open-source-secrets-scanner)
+  * [Microsoft Releases Out-of-Band Patch for RRAS](#microsoft-releases-out-of-band-patch-for-rras)
+  * [OpenAI says ChatGPT ads are not rolling out globally](#openai-says-chatgpt-ads-are-not-rolling-out-globally)
+  * [Foreign Information Manipulation and Interference explained](#foreign-information-manipulation-and-interference-explained)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber actuel est marqué par une intensification des attaques sur la chaîne d'approvisionnement, illustrée par la compromission du SDK d'AppsFlyer impactant des milliers d'applications web. Parallèlement, des groupes comme Storm-2561 et SmartApeSG affinent leurs méthodes d'accès initial en utilisant le "SEO poisoning" et des techniques d'ingénierie sociale sophistiquées comme "ClickFix" (faux CAPTCHA). L'exploitation active de vulnérabilités Zero-day dans les navigateurs, notamment Chrome, demeure un vecteur critique nécessitant une réactivité immédiate des équipes de sécurité. On observe également une menace croissante sur les infrastructures d'IA, avec des vulnérabilités permettant le vol de propriété intellectuelle. Toutefois, la coopération internationale porte ses fruits, comme le montre l'opération Synergia III d'Interpol qui a neutralisé des dizaines de milliers d'infrastructures malveillantes. Les entreprises doivent renforcer la surveillance de leurs bibliothèques tierces et sécuriser prioritairement les accès distants (VPN). La gestion des correctifs sans interruption (hotpatching) devient une nécessité stratégique pour les services critiques. Enfin, la sensibilisation des employés reste primordiale face à des campagnes de phishing toujours plus ciblées sur les portails internes.
+Le paysage cyber de la mi-mars 2026 est marqué par une intensification des tensions géopolitiques au Moyen-Orient, se traduisant par des attaques ciblées contre des infrastructures critiques et de santé, notamment par les groupes Handala et Payload. L'exploitation massive de vulnérabilités critiques sur les équipements de bordure, tels que les pare-feux FortiGate, confirme que ces dispositifs restent des points d'entrée privilégiés pour des courtiers d'accès (IAB) et des groupes d'espionnage. Parallèlement, l'écosystème du ransomware fait face à une crise de confiance interne suite à l'inculpation d'un négociateur d'incidents accusé de collusion avec le groupe BlackCat. Sur le plan technologique, l'automatisation de la détection de secrets (Betterleaks) et l'introduction de la publicité dans l'IA générative (OpenAI) soulignent une mutation des outils de défense et de monétisation. Enfin, la publication de la stratégie cyber de l'administration Trump et les avertissements européens sur les opérations d'influence (FIMI) indiquent une volonté étatique de durcir les réponses face aux menaces hybrides. Les entreprises doivent prioriser le patching immédiat des systèmes RRAS et FortiOS face à des menaces de plus en plus automatisées.
 
 <br>
 <br>
@@ -33,8 +34,14 @@ Le paysage cyber actuel est marqué par une intensification des attaques sur la 
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| SmartApeSG | Multi-secteurs | Infiltration de sites légitimes, faux CAPTCHA (ClickFix), diffusion du RAT Remcos | [SANS ISC](https://isc.sans.edu/diary/rss/32796) |
-| Storm-2561 | Entreprises (utilisateurs de VPN) | SEO Poisoning, usurpation de sites de téléchargement VPN (Cisco, Fortinet, Ivanti), Infostealer Hyrax | [Security Affairs](https://securityaffairs.com/189426/cyber-crime/storm-2561-lures-victims-to-spoofed-vpn-sites-to-harvest-corporate-logins.html) |
+| APT28 | Forces armées | Espionnage à long terme via des malwares personnalisés | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| APT36 | Gouvernemental / Militaire | Utilisation de "Vibeware" | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| BlackCat (ALPHV) | Multiples | Ransomware-as-a-service, collusion avec des négociateurs d'incidents | [DataBreaches.net](https://databreaches.net/2026/03/15/ransomware-incident-responder-gave-info-to-blackcat-cybercriminals-during-negotiations-doj-alleges/) |
+| Handala | Santé / Médical | Hacktivisme pro-palestinien, attaques de perturbation (Stryker) | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| Nightspire | Comptabilité, Éducation, Microfinance | Ransomware, publications sur blog de fuites | [CTI.FYI](https://infosec.exchange/@CTI_FYI/116236394215607588) |
+| Payload Ransomware | Santé, Logistique, Immobilier | Double extorsion (chiffrement ChaCha20 + vol de données) | [Security Affairs](https://securityaffairs.com/189467/cyber-crime/payload-ransomware-claims-the-hack-of-royal-bahrain-hospital.html) |
+| ShinyHunters | Services Cloud | Ciblage de Salesforce Experience Cloud | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
+| Storm-2561 | Entreprises | Phishing via de faux sites VPN pour vol d'identifiants | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
 
 <br/>
 <br/>
@@ -44,7 +51,11 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| International (72 pays) | Coopération policière | L'opération Synergia III, coordonnée par INTERPOL, a permis le démantèlement de 45 000 infrastructures malveillantes et 94 arrestations. | [Security Affairs](https://securityaffairs.com/189420/cyber-crime/interpol-operation-synergia-iii-leads-to-45000-malicious-ips-dismantled-and-94-arrests-worldwide.html) |
+| Défense / Espace | Menaces hybrides | Airbus alerte sur les menaces spatiales et les failles de la supply chain | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
+| Gouvernemental | Conflit Moyen-Orient | Augmentation du niveau de menace lié aux hostilités Iran-USA/Israël | [Security Boulevard](https://securityboulevard.com/2026/03/update-iranian-u-s-israeli-hostilities-lead-to-increased-threat-landscape/) |
+| Gouvernemental | Stratégie Nationale | Publication de la nouvelle stratégie cyber de l'administration Trump | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
+| Santé | Conflit Moyen-Orient | Revendication par un groupe lié à l'Iran de l'attaque contre le géant médical Stryker | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
+| Transports | Cyber-espionnage | Hackers russes ciblant les comptes Signal et WhatsApp de diplomates | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
 
 <br/>
 <br/>
@@ -54,8 +65,10 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 ## Synthèse réglementaire et juridiques
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
-|:---|:---|:---|:---|:---|:---|:---|:---|
-| Néant | - | - | - | - | Aucune nouvelle réglementation mentionnée dans les articles analysés. | - |
+|:---|:---|:---|:---|:---|:---|:---|
+| CSAM detection rules extension | Parlement Européen | 15/03/2026 | Union Européenne | Exemption Vie Privée | Extension des règles de détection volontaire des contenus pédopornographiques jusqu'en 2027 | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
+| Incident responder accused of helping ransomware gangs | DOJ | 15/03/2026 | États-Unis | Computer Fraud and Abuse Act | Accusation criminelle contre un expert en réponse à incident pour collusion avec BlackCat | [DataBreaches.net](https://databreaches.net/2026/03/15/ransomware-incident-responder-gave-info-to-blackcat-cybercriminals-during-negotiations-doj-alleges/) |
+| President Trump’s Cyber Strategy for America | Maison Blanche | 15/03/2026 | États-Unis | Stratégie Cyber | Nouveau cadre politique renforçant la réponse coordonnée et agressive face aux menaces étatiques | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
 
 <br/>
 <br/>
@@ -65,22 +78,31 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Restauration | Starbucks | Accès non autorisé à 889 comptes d'employés via un portail "Partner Central" usurpé (phishing). Vol de SSN et coordonnées bancaires. | [Security Affairs](https://securityaffairs.com/189438/security/starbucks-data-breach-impacts-889-employees.html) |
+| Alimentation | Baydöner | Fuite de 1,2 million d'e-mails, noms, téléphones et mots de passe en clair | [HIBP](https://haveibeenpwned.com/Breach/Baydoner) |
+| Automobile | F-One (エフワン) | Compromission de 170 000 dossiers clients par BlackShrantac | [SecurityLab_jp](https://mastodon.social/@securityLab_jp/116236384517595018) |
+| Café / Retail | Starbucks | Accès non autorisé à 889 comptes d'employés via phishing | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| Jeux Vidéo | Divine Skins | Vol de 105 814 comptes (e-mails, pseudos, historique d'achats) | [HIBP](https://haveibeenpwned.com/Breach/DivineSkins) |
+| Santé | Royal Bahrain Hospital | Vol de 110 Go de données patient par le groupe Payload | [Security Affairs](https://securityaffairs.com/189467/cyber-crime/payload-ransomware-claims-the-hack-of-royal-bahrain-hospital.html) |
+| Santé | TriZetto (Cognizant) | Violation impactant plus de 3,4 millions de patients | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| Technologie | Ericsson US | Confirmation de violation via un fournisseur tiers | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité.
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2026-25750 | 9.8 (Critique) | LangSmith (AI Monitoring) | Prise de contrôle de compte (Insecure API configuration) | [Cybersecurity News](https://cybersecuritynews.com/critical-langsmith-account-takeover-vulnerability/) |
-| CVE-2026-3909 | 8.8 (Élevé) | Google Chrome (Skia) | Out-of-bounds Write (Zero-day exploitée) | [The Cyber Throne](https://thecyberthrone.in/2026/03/14/cisa-adds-two-google-chrome-zero-days-to-kev/) / [Security.nl](https://www.security.nl/posting/928543/Google+meldde+ten+onrechte+dat+Chrome-lek+was+gedicht%2C+rolt+nieuwe+update+uit?channel=rss) |
-| CVE-2026-3910 | 8.8 (Élevé) | Google Chrome (V8) | Inappropriate Implementation (Zero-day exploitée) | [The Cyber Throne](https://thecyberthrone.in/2026/03/14/cisa-adds-two-google-chrome-zero-days-to-kev/) / [Security.nl](https://www.security.nl/posting/928543/Google+meldde+ten+onrechte+dat+Chrome-lek+was+gedicht%2C+rolt+nieuwe+update+uit?channel=rss) |
-| CVE-2026-25172 | Élevé | Windows 11 RRAS | Exécution de code à distance (RCE) | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-11-oob-hotpatch-to-fix-rras-rce-flaw/) |
-| CVE-2026-25173 | Élevé | Windows 11 RRAS | Exécution de code à distance (RCE) | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-11-oob-hotpatch-to-fix-rras-rce-flaw/) |
-| CVE-2026-26111 | Élevé | Windows 11 RRAS | Exécution de code à distance (RCE) | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-11-oob-hotpatch-to-fix-rras-rce-flaw/) |
+| CVE-2025-59718 | 9.8 | Fortinet FortiGate | Défaut de vérification de signature SAML | [Cybersecurity News](https://cybersecuritynews.com/fortigate-firewalls-exploited/) |
+| CVE-2025-59719 | 9.8 | Fortinet FortiGate | Défaut de vérification de signature SAML | [Cybersecurity News](https://cybersecuritynews.com/fortigate-firewalls-exploited/) |
+| CVE-2017-20223 | 9.8 | Telesquare SKT LTE Router | Insecure Direct Object Reference (IDOR) | [CVEFeed.io](https://cvefeed.io/vuln/detail/CVE-2017-20223) |
+| CVE-2017-20224 | 9.8 | Telesquare SKT LTE Router | Arbitrary File Upload via WebDAV | [CVEFeed.io](https://cvefeed.io/vuln/detail/CVE-2017-20224) |
+| CVE-2026-24858 | 9.8 | Fortinet FortiGate | Zero-day d'authentification FortiCloud | [Cybersecurity News](https://cybersecuritynews.com/fortigate-firewalls-exploited/) |
+| CVE-2015-20120 | 8.8 | RealtyScript 4.0.2 | Blind SQL Injection (Time-based) | [CVEFeed.io](https://cvefeed.io/vuln/detail/CVE-2015-20120) |
+| CVE-2017-20222 | 8.7 | Telesquare SKT LTE Router | Remote Reboot (DoS) sans authentification | [CVEFeed.io](https://cvefeed.io/vuln/detail/CVE-2017-20222) |
+| CVE-2017-20220 | 8.7 | Serviio PRO 1.8 | Changement de mot de passe REST API non authentifié | [CVEFeed.io](https://cvefeed.io/vuln/detail/CVE-2017-20220) |
+| CVE-2026-25172 | 8.5 | Windows 11 RRAS | Exécution de code à distance (RCE) | [Cybersecurity News](https://cybersecuritynews.com/windows-11-out-of-band-update/) |
 
 <br/>
 <br/>
@@ -89,10 +111,12 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| AppsFlyer Web SDK hijacked to spread crypto-stealing JavaScript code | Menace critique sur la supply chain impactant des milliers d'applications. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/appsflyer-web-sdk-used-to-spread-crypto-stealer-javascript-code/) |
-| Interpol – Operation Synergia III leads to 45,000 malicious IPs dismantled | Actualité majeure sur le démantèlement d'infrastructures cybercriminelles mondiales. | [Security Affairs](https://securityaffairs.com/189420/cyber-crime/interpol-operation-synergia-iii-leads-to-45000-malicious-ips-dismantled-and-94-arrests-worldwide.html) |
-| SmartApeSG campaign uses ClickFix page to push Remcos RAT | Analyse technique d'une campagne active utilisant des techniques d'ingénierie sociale modernes. | [SANS ISC](https://isc.sans.edu/diary/rss/32796) |
-| Storm-2561 lures victims to spoofed VPN sites to harvest corporate logins | Risque élevé pour les accès distants en entreprise via SEO poisoning. | [Security Affairs](https://securityaffairs.com/189426/cyber-crime/storm-2561-lures-victims-to-spoofed-vpn-sites-to-harvest-corporate-logins.html) |
+| Betterleaks, a new open-source secrets scanner | Présentation d'un outil de défense majeur (successeur de Gitleaks). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/betterleaks-a-new-open-source-secrets-scanner-to-replace-gitleaks/) |
+| OpenAI says ChatGPT ads are not rolling out globally | Information stratégique sur la monétisation et la confidentialité de l'IA. | [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-chatgpt-ads-are-not-rolling-out-globally-for-now/) |
+| FortiGate Firewalls Exploited in Wave of Attacks | Menace critique active sur des équipements réseau critiques. | [Cybersecurity News](https://cybersecuritynews.com/fortigate-firewalls-exploited/) |
+| Microsoft Releases Out-of-Band Patch for RRAS | Alerte sur une vulnérabilité RCE critique sur Windows 11. | [Cybersecurity News](https://cybersecuritynews.com/windows-11-out-of-band-update/) |
+| Foreign Information Manipulation and Interference explained | Analyse de fond sur les menaces hybrides et la désinformation. | [EUvsDisinfo](https://euvsdisinfo.eu/foreign-information-manipulation-and-interference-fimi-explained/) |
+| Week in review: AiTM phishing, malware campaign | Synthèse exhaustive des menaces hebdomadaires. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/15/week-in-review-aitm-phishing-kit-used-to-hijack-aws-accounts-year-long-malware-campaign-targets-hr/) |
 
 <br/>
 <br/>
@@ -101,116 +125,132 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| CISA Adds Two Google Chrome Zero-Days to KEV | Contenu exclusivement axé sur des vulnérabilités déjà traitées en synthèse. | [The Cyber Throne](https://thecyberthrone.in/2026/03/14/cisa-adds-two-google-chrome-zero-days-to-kev/) |
-| Critical LangSmith Account Takeover Vulnerability Puts Users at Risk | Publication focalisée sur une vulnérabilité spécifique traitée en synthèse. | [Cybersecurity News](https://cybersecuritynews.com/critical-langsmith-account-takeover-vulnerability/) |
-| Google meldde ten onrechte dat Chrome-lek was gedicht, rolt nieuwe update uit | Doublon thématique sur les vulnérabilités Chrome déjà traitées. | [Security.nl](https://www.security.nl/posting/928543/Google+meldde+ten+onrechte+dat+Chrome-lek+was+gedicht%2C+rolt+nieuwe+update+uit?channel=rss) |
-| Microsoft releases Windows 11 OOB hotpatch to fix RRAS RCE flaw | Publication focalisée sur des vulnérabilités spécifiques traitées en synthèse. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-11-oob-hotpatch-to-fix-rras-rce-flaw/) |
-| Starbucks data breach impacts 889 employees | Article sur une violation de données, exclu des synthèses d'articles selon les critères. | [Security Affairs](https://securityaffairs.com/189438/security/starbucks-data-breach-impacts-889-employees.html) |
+| Security Affairs newsletter Round 567 | Newsletter généraliste compilant des articles déjà traités individuellement. | [Security Affairs](https://securityaffairs.com/189451/breaking-news/security-affairs-newsletter-round-567-by-pierluigi-paganini-international-edition.html) |
+| SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 88 | Liste de liens sans analyse profonde, contenu redondant. | [Security Affairs](https://securityaffairs.com/189459/breaking-news/security-affairs-malware-newsletter-round-88.html) |
+| Nightspire ransom group blog posts | Notifications brèves de ransomware sans détails techniques. | [CTI.FYI](https://infosec.exchange/@CTI_FYI/116236394215607588) |
 
 <br>
-<br>
+<br/>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="appsflyer-web-sdk-compromis-pour-diffuser-un-malware-de-vol-de-crypto-monnaies"></div>
+<div id="fortigate-firewalls-exploited-in-wave-of-attacks"></div>
 
-## AppsFlyer Web SDK hijacked to spread crypto-stealing JavaScript code
-Le SDK Web d'AppsFlyer, utilisé par plus de 15 000 entreprises, a subi une attaque de type supply chain via une compromission de leur registraire de domaine. Entre le 9 et le 11 mars 2026, du code JavaScript malveillant a été injecté dans le fichier servi par `websdk.appsflyer.com`. Ce script interceptait les adresses de portefeuilles de crypto-monnaies (Bitcoin, Ethereum, Solana, etc.) saisies par les utilisateurs sur les sites clients pour les remplacer par celles de l'attaquant. Bien que le SDK mobile ne soit pas affecté, des milliers d'applications web ont potentiellement diffusé ce payload. L'attaquant a utilisé l'obfuscation pour masquer son activité tout en maintenant les fonctions légitimes du SDK. AppsFlyer a confirmé l'incident et affirme avoir repris le contrôle du domaine. Cette attaque souligne la fragilité des dépendances tierces massivement déployées.
+## FortiGate Firewalls Exploited in Wave of Attacks to Breach Networks and Steal Credentials
+Une vague d'attaques en début d'année 2026 a ciblé les pare-feux FortiGate en exploitant trois vulnérabilités majeures, dont la zero-day CVE-2026-24858. Les attaquants utilisent des jetons SAML falsifiés ou des comptes FortiCloud pour obtenir des privilèges administratifs sans authentification valide. Une fois l'accès établi, ils extraient les fichiers de configuration contenant des identifiants de comptes LDAP et Active Directory. Ces identifiants sont souvent déchiffrables en raison d'un schéma de chiffrement réversible dans FortiOS. Les attaquants pivotent ensuite vers le réseau interne pour déployer des outils RMM (Pulseway, MeshAgent) et exfiltrer la base NTDS.dit des contrôleurs de domaine. SentinelOne souligne que des courtiers d'accès (IAB) maintiennent des accès persistants pendant plusieurs mois. Le manque de rétention des journaux sur les équipements FortiGate entrave l'analyse post-incident. Les recommandations incluent la rotation immédiate de tous les secrets stockés dans les configurations FortiGate.
 
-**Analyse de l'impact** : L'impact est potentiellement massif en raison de l'omniprésence du SDK d'AppsFlyer. Le vol financier direct des utilisateurs finaux peut nuire gravement à la réputation des entreprises clientes et entraîner des pertes financières directes.
+**Analyse de l'impact** : L'impact est critique car il permet un accès direct et privilégié au cœur du réseau d'entreprise (AD) depuis l'extérieur, contournant totalement les barrières de sécurité traditionnelles.
 
-**Recommandations** :
-* Examiner les journaux de télémétrie réseau pour détecter des requêtes API suspectes provenant de `websdk.appsflyer.com` sur la période du 9 au 11 mars.
-* Effectuer une rétrogradation (downgrade) vers une version connue et saine du SDK ou s'assurer de charger la version corrigée post-11 mars.
-* Mettre en œuvre des politiques de Content Security Policy (CSP) restrictives pour limiter l'exécution de scripts tiers non vérifiés.
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Non mentionné (ShinyHunters cité pour contexte passé) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise: SW Dependencies<br/>* T1566: Phishing (Redirect)<br/>* T1059.007: JavaScript execution |
-| Observables & Indicateurs de compromission | ```* websdk.appsflyer.com``` |
-
-### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/appsflyer-web-sdk-used-to-spread-crypto-stealer-javascript-code/
-
-<br/>
-<br/>
-
-<div id="interpol--loperation-synergia-iii-demantele-45-000-serveurs-malveillants"></div>
-
-## Interpol – Operation Synergia III leads to 45,000 malicious IPs dismantled and 94 arrests worldwide
-L'opération Synergia III, menée par INTERPOL entre juillet 2025 et janvier 2026, a porté un coup majeur à la cybercriminalité mondiale. Impliquant 72 pays, cette action a permis de neutraliser 45 000 adresses IP malveillantes et serveurs liés au phishing, aux ransomwares et aux malwares. Au total, 94 individus ont été arrêtés et 110 autres font l'objet d'enquêtes approfondies. Les forces de l'ordre ont saisi 212 appareils électroniques lors de raids coordonnés. À Macao, plus de 33 000 sites de phishing imitant des banques et des casinos ont été identifiés. Au Bangladesh et au Togo, des réseaux de fraude aux prêts et d'extorsion ont été démantelés. L'opération a bénéficié du soutien technique de sociétés privées comme Group-IB, Trend Micro et S2W.
-
-**Analyse de l'impact** : Cette opération réduit significativement la capacité opérationnelle de nombreux réseaux cybercriminels à court terme. Elle renforce la dissuasion globale et démontre l'efficacité des partenariats public-privé dans la lutte contre les infrastructures malveillantes.
-
-**Recommandations** :
-* Les équipes de Threat Hunting doivent corréler leurs logs avec les listes d'IP démantelées par Interpol si celles-ci sont publiées via les flux de renseignement partenaires (Group-IB, Trend Micro).
-* Maintenir une veille sur les nouvelles infrastructures de remplacement qui seront inévitablement créées par les acteurs non appréhendés.
+**Recommandations** : 
+* Appliquer immédiatement les correctifs pour CVE-2025-59718, CVE-2025-59719 et CVE-2026-24858.
+* Augmenter la rétention des logs FortiGate à un minimum de 14 jours (idéalement 60+).
+* Surveiller la création de comptes administrateurs locaux suspects (ex: "support", "ssl-admin").
+* Restreindre l'attribut mS-DS-MachineAccountQuota pour limiter la jonction de postes malveillants au domaine.
+* Rotation systématique des mots de passe AD/LDAP utilisés par les appliances après patching.
 
 Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Réseaux de phishing et de fraude non nommés individuellement |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1583.003: Acquire Infrastructure: Virtual Private Server<br/>* T1566: Phishing |
-| Observables & Indicateurs de compromission | ```45 000 adresses IP malveillantes neutralisées (détails via flux partenaires INTERPOL)``` |
+| Groupe ou acteur malveillant | Non spécifié (IAB probables) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1552.001: Credentials In Files <br/> * T1021.002: SMB/Windows Admin Shares <br/> * T1543.003: Windows Service |
+| Observables & Indicateurs de compromission | ```* 193.24.211.61 (IP attaquante) * 172.67.196.232 (IP exfiltration Cloudflare) * ndibstersoft.com * neremedysoft.com * WIN-X8WRBOSK0OF (Rogue Host) * WIN-YRSXLEONJY2 (Rogue Host)``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/189420/cyber-crime/interpol-operation-synergia-iii-leads-to-45000-malicious-ips-dismantled-and-94-arrests-worldwide.html
+* https://cybersecuritynews.com/fortigate-firewalls-exploited/
+<br>
+<br>
 
-<br/>
-<br/>
+<div id="betterleaks-a-new-open-source-secrets-scanner"></div>
 
-<div id="la-campagne-smartapesg-utilise-des-pages-clickfix-pour-diffuser-le-rat-remcos"></div>
+## Betterleaks, a new open-source secrets scanner to replace Gitleaks
+Zach Rice, le créateur de Gitleaks, a lancé "Betterleaks", un nouvel outil open-source conçu pour surpasser son prédécesseur en termes de rapidité et d'efficacité. Développé en Go pur sans dépendances complexes comme CGO, Betterleaks utilise la tokenisation BPE plutôt que l'entropie classique, atteignant un taux de rappel de 98,6 %. L'outil permet de scanner des répertoires, des fichiers et des dépôts Git pour identifier des clés API, des jetons et des secrets accidentellement exposés. Il intègre la validation des règles via CEL (Common Expression Language) et gère automatiquement les secrets multi-encodés. Le projet est soutenu par Aikido Security et bénéficie de contributions provenant de Red Hat et Amazon. Des fonctionnalités futures prévoient l'assistance par IA (LLM) pour la classification et la révocation automatique des secrets via API.
 
-## SmartApeSG campaign uses ClickFix page to push Remcos RAT
-La campagne SmartApeSG (également connue sous les noms ZPHP ou HANEYMANEY) utilise désormais des techniques "ClickFix" pour infecter les utilisateurs. L'attaque commence par l'injection d'un script malveillant dans des sites web légitimes compromis. Ce script génère un faux CAPTCHA invitant l'utilisateur à prouver qu'il est humain. Une fois la case cochée, des instructions s'affichent, demandant à l'utilisateur de copier une commande PowerShell dans le presse-papiers, d'ouvrir une fenêtre "Exécuter" et de la coller. Cette action télécharge et exécute une archive ZIP déguisée en fichier PDF. Le contenu déploie le cheval de Troie d'accès à distance (RAT) Remcos via une technique de DLL side-loading. L'infection est rendue persistante via une modification de la base de registre Windows.
+**Analyse de l'impact** : Outil stratégique pour le DevSecOps, permettant de réduire drastiquement la surface d'exposition des secrets dans les chaînes CI/CD avec une meilleure précision que les outils actuels.
 
-**Analyse de l'impact** : Le RAT Remcos permet un contrôle total de la machine infectée, incluant l'exfiltration de données, l'enregistrement de frappe et l'accès à la webcam. L'ingénierie sociale via ClickFix est particulièrement efficace car elle contourne les solutions de filtrage d'URL classiques.
-
-**Recommandations** :
-* Bloquer les domaines d'infrastructure identifiés (ex: `retrypoti[.]top`, `forcebiturg[.]com`).
-* Sensibiliser les utilisateurs à ne jamais copier/coller des commandes inconnues dans la fenêtre "Exécuter" (Run).
-* Surveiller les exécutions PowerShell suspectes avec des arguments encodés ou des connexions réseau vers des IP inhabituelles.
+**Recommandations** : 
+* Intégrer Betterleaks dans les pipelines de pré-commit pour empêcher l'envoi de secrets vers les dépôts.
+* Configurer des règles personnalisées via CEL pour les formats de jetons internes spécifiques à l'entreprise.
+* Utiliser les capacités de scan parallèle pour auditer l'historique complet des dépôts Git volumineux.
 
 Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | SmartApeSG |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.002: User Execution: Malicious File<br/>* T1574.002: Hijack Execution Flow: DLL Side-Loading<br/>* T1059.001: PowerShell execution |
-| Observables & Indicateurs de compromission | ```* hxxps://cpajoliette[.]com/d.js
-* hxxps://retrypoti[.]top/endpoint/signin-cache.js
-* hxxp://forcebiturg[.]com/boot
-* 193.178.170.155 (TLS Remcos)
-* b170ffc8612618c822eb03030a8a62d4be8d6a77a11e4e41bb075393ca504ab7 (ZIP/Malware)``` |
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | T1552: Unsecured Credentials |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
 
 ### Source (url) du ou des articles
-* https://isc.sans.edu/diary/rss/32796
+* https://www.bleepingcomputer.com/news/security/betterleaks-a-new-open-source-secrets-scanner-to-replace-gitleaks/
+<br>
+<br>
 
-<br/>
-<br/>
+<div id="microsoft-releases-out-of-band-patch-for-rras"></div>
 
-<div id="storm-2561-usurpe-des-sites-vpn-pour-derober-des-identifiants-dentreprise"></div>
+## Microsoft Releases Out-of-Band Patch to Fix Critical RRAS RCE Vulnerabilities in Windows 11
+Microsoft a publié un correctif d'urgence (out-of-band) le 13 mars 2026 pour corriger trois vulnérabilités critiques dans le service de routage et d'accès distant (RRAS) de Windows 11 (24H2 et 25H2). Les failles, notamment CVE-2026-25172, CVE-2026-25173 et CVE-2026-26111, permettent à un serveur distant malveillant d'exécuter du code à distance lorsqu'un utilisateur s'y connecte via l'outil de gestion RRAS. Ce correctif est diffusé via la technologie "hotpatch", permettant une application en mémoire sans nécessiter de redémarrage du système. Cette méthode est particulièrement avantageuse pour les environnements d'entreprise afin de minimiser les interruptions. Seuls les appareils configurés pour le hotpatching reçoivent cette mise à jour spécifique. Microsoft recommande une vérification immédiate de l'application de KB5084597.
 
-## Storm-2561 lures victims to spoofed VPN sites to harvest corporate logins
-Le groupe Storm-2561 mène une vaste campagne de vol d'identifiants en utilisant le "SEO poisoning" pour manipuler les résultats de recherche. Les attaquants créent des sites web imitant les portails de téléchargement de VPN reconnus tels que Cisco AnyConnect, Fortinet et Ivanti Pulse Secure. Les victimes, cherchant à télécharger ces clients, sont redirigées vers des archives ZIP malveillantes hébergées sur GitHub. L'installeur MSI trojanisé utilise le DLL side-loading pour déployer l'infostealer "Hyrax". Ce dernier dérobe non seulement les identifiants saisis, mais aussi les fichiers de configuration de connexion VPN stockés localement. Pour tromper l'utilisateur, l'installeur affiche un faux message d'erreur après le vol et redirige vers le site officiel pour une installation légitime, masquant ainsi toute trace d'infection.
+**Analyse de l'impact** : Risque élevé d'exécution de code pour les administrateurs réseau utilisant RRAS, pouvant mener à une compromission totale de la station de travail administrative.
 
-**Analyse de l'impact** : Cette menace est critique pour la sécurité périmétrique des entreprises. Le vol de configurations et d'identifiants VPN permet aux attaquants de pénétrer directement dans le réseau interne, facilitant des attaques ultérieures comme le déploiement de ransomwares.
-
-**Recommandations** :
-* Restreindre la capacité des utilisateurs à installer des logiciels non approuvés (privilèges administrateur).
-* Surveiller les modifications de la clé de registre `RunOnce` et l'exécution du processus `Pulse.exe` depuis des répertoires non standards.
-* Imposer l'authentification multi-facteurs (MFA) pour tous les accès VPN afin de mitiger le vol d'identifiants.
+**Recommandations** : 
+* Vérifier l'activation de la fonctionnalité hotpatch sur les flottes Windows 11 éligibles.
+* Appliquer KB5084597 (OS Builds 26200.7982/26100.7982) sans délai.
+* À défaut de patch, limiter l'utilisation de l'outil de gestion RRAS vers des serveurs non certifiés ou inconnus.
 
 Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Storm-2561 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1588.004: Search Engine Optimization (SEO) Poisoning<br/>* T1036: Masquerading<br/>* T1547.001: Boot or Logon Autostart Execution: Registry Run Keys |
-| Observables & Indicateurs de compromission | ```* 194.76.226.93:8080 (C2)
-* Pulse.exe (malveillant)
-* C:\ProgramData\Pulse Secure\ConnectionStore\connectionstore.dat (Cible)``` |
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | T1210: Exploitation of Remote Services |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/189426/cyber-crime/storm-2561-lures-victims-to-spoofed-vpn-sites-to-harvest-corporate-logins.html
+* https://cybersecuritynews.com/windows-11-out-of-band-update/
+<br>
+<br>
+
+<div id="openai-says-chatgpt-ads-are-not-rolling-out-globally"></div>
+
+## OpenAI says ChatGPT ads are not rolling out globally for now
+OpenAI a précisé que l'introduction de publicités dans ChatGPT est actuellement limitée aux utilisateurs des plans "Free" et "Go" situés exclusivement aux États-Unis. Cette clarification fait suite à des inquiétudes sur Reddit après une mise à jour de la politique de confidentialité mentionnant la publicité. Bien que les publicités soient personnalisées en fonction des requêtes, OpenAI affirme qu'elles n'influencent pas les réponses du modèle de langage. Les publicités apparaissent sous les réponses et ne sont pas visibles pour les utilisateurs de moins de 18 ans. L'entreprise adopte une approche délibérée par étapes pour évaluer l'impact sur l'expérience utilisateur avant toute expansion mondiale. Aucun partage de données de conversation avec les annonceurs n'est effectué selon OpenAI.
+
+**Analyse de l'impact** : Impact modéré sur la confidentialité ; bien que les données ne soient pas "partagées", la personnalisation implique une analyse des intentions de l'utilisateur à des fins commerciales au sein de l'interface.
+
+**Recommandations** : 
+* Pour les entreprises, privilégier les plans Enterprise ou Business où la publicité est absente.
+* Sensibiliser les utilisateurs sur le fait que les suggestions "post-réponse" peuvent être des placements payants.
+* Surveiller les futures mises à jour des conditions d'utilisation pour les juridictions hors USA.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | Non mentionnées |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
+
+### Source (url) du ou des articles
+* https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-chatgpt-ads-are-not-rolling-out-globally-for-now/
+<br>
+<br>
+
+<div id="foreign-information-manipulation-and-interference-explained"></div>
+
+## Foreign Information Manipulation and Interference (FIMI) explained
+L'Union Européenne définit le concept de FIMI comme un comportement coordonné et trompeur d'acteurs étrangers visant à manipuler l'environnement informationnel d'un État. Contrairement à la simple désinformation qui se concentre sur le contenu, le FIMI met l'accent sur les acteurs et leurs comportements (réseaux de bots, faux comptes, IA générative). La Russie est identifiée comme l'acteur le plus prolifique, utilisant ces tactiques pour saper la confiance dans les institutions démocratiques et polariser les sociétés occidentales. La Chine utilise également le FIMI pour réduire au silence les critiques à l'étranger et pousser ses propres récits. Les campagnes FIMI sont souvent couplées à des cyberattaques et des fuites de données opportunistes. La réponse démocratique repose sur la détection, la résilience sociétale (littératie médiatique) et des mesures diplomatiques comme les sanctions.
+
+**Analyse de l'impact** : Menace stratégique majeure pour la cohésion sociale et la légitimité des processus électoraux, augmentant la volatilité politique.
+
+**Recommandations** : 
+* Mettre en œuvre une veille informationnelle pour détecter les narratifs hostiles ciblant l'entreprise ou son secteur.
+* Former les employés à la détection de deepfakes et de contenus synthétiques (vishing/phishing AI).
+* Collaborer avec les autorités nationales en cas de détection de campagnes d'influence coordonnées.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Russie (Services de renseignement), Chine |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1585: Establish Accounts <br/> * T1566: Phishing <br/> * T1584: Compromise Infrastructure |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
+
+### Source (url) du ou des articles
+* https://euvsdisinfo.eu/foreign-information-manipulation-and-interference-fimi-explained/
