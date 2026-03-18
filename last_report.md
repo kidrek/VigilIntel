@@ -9,19 +9,20 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Évolution de la menace iranienne : du wiper à l'armement de l'identité](#evolution-de-la-menace-iranienne--du-wiper-a-larmement-de-lidentite)
-  * [Boggy serpens : analyse d'une campagne d'espionnage sophistiquée](#boggy-serpens--analyse-dune-campagne-despionnage-sophistiquee)
-  * [Ransomware 2025 : pression accrue et mutation des tactiques](#ransomware-2025--pression-accrue-et-mutation-des-tactiques)
-  * [Drillapp : un nouveau backdoor ciblant l'ukraine via edge](#drillapp--un-nouveau-backdoor-ciblant-lukraine-via-edge)
-  * [L'économie des infostealers en 2025 : une accélération alarmante](#leconomie-des-infostealers-en-2025--une-acceleration-alarmante)
-  * [Rondodox : expansion massive d'un botnet exploitant 174 vulnérabilités](#rondodox--expansion-massive-dun-botnet-exploitant-174-vulnerabilites)
+  * [Attaque dévastatrice contre Stryker : 80 000 appareils effacés via Microsoft Intune](#attaque-devastatrice-contre-stryker-80-000-appareils-effaces-via-microsoft-intune)
+  * [Glassworm : une campagne de supply chain massive ciblant GitHub et npm](#glassworm-une-campagne-de-supply-chain-massive-ciblant-github-et-npm)
+  * [Leaknet et la technique ClickFix : l'usage furtif du runtime Deno](#leaknet-et-la-technique-clickfix-lusage-furtif-du-runtime-deno)
+  * [Cursorjack : exploitation des deeplinks dans l'IDE Cursor](#cursorjack-exploitation-des-deeplinks-dans-lide-cursor)
+  * [Manipulation des assistants IA par substitution de polices de caractères](#manipulation-des-assistants-ia-par-substitution-de-polices-de-caracteres)
+  * [CL-STA-1087 : cyber-espionnage de longue durée contre les forces armées d'Asie du Sud-Est](#cl-sta-1087-cyber-espionnage-de-longue-duree-contre-les-forces-armees-dasie-du-sud-est)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber de mars 2026 est marqué par une escalade majeure du conflit tripartite US-Israël-Iran, où le domaine cyber sert de multiplicateur de force asymétrique. L'attaque massive contre Stryker illustre un changement de paradigme : le passage de l'usage de malwares personnalisés (wipers) à "l'armement de l'identité", où des outils d'administration légitimes (Microsoft Intune) sont détournés pour une destruction à grande échelle. Parallèlement, l'écosystème du ransomware mute face à la baisse de rentabilité, délaissant les grandes entreprises pour multiplier les attaques contre des structures plus petites et ciblant systématiquement les infrastructures de virtualisation (ESXi). L'économie des *infostealers* s'industrialise, avec une exploitation croissante des cookies de session pour contourner l'authentification multi-facteurs (MFA), désormais jugée insuffisante. En Europe, l'accent est mis sur la résilience industrielle via le *European Chips Act* et le renforcement de la "digital fairness" face aux modèles manipulateurs. La Russie maintient une pression constante sur l'Ukraine par des attaques hybrides ciblant le réseau énergétique et l'utilisation de backdoors innovants comme DRILLAPP. Enfin, la nouvelle stratégie cyber américaine sous l'administration Trump prône une posture offensive décomplexée, incitant le secteur privé à participer activement à la disruption des réseaux adverses.
+Le paysage de la menace cyber en mars 2026 est marqué par une accélération sans précédent des cycles d'attaque, portée par l'intégration massive de l'IA et l'exploitation des infrastructures de gestion centralisées. L'incident majeur frappant Stryker démontre que la compromission d'un seul compte administrateur sur une plateforme MDM (Microsoft Intune) peut paralyser une multinationale en effaçant instantanément 80 000 terminaux, transformant les outils de résilience en vecteurs de destruction. Parallèlement, l'émergence des agents IA autonomes (OpenClaw, Cursor) crée une nouvelle surface d'attaque où des vulnérabilités de type "prompt injection" et "deeplink hijacking" permettent des exécutions de code furtives. Sur le plan géopolitique, le conflit US-Israël-Iran s'étend au cyberespace avec des attaques de représailles systématiques et des sanctions européennes fermes contre les entités chinoises et iraniennes. La menace "GlassWorm" illustre la fragilité persistante de la supply chain logicielle, tandis que l'utilisation du runtime Deno par LeakNet montre une volonté d'évasion sophistiquée en environnement mémoire. Les décideurs doivent impérativement renforcer la gouvernance des identités machines et sécuriser le déploiement des outils d'IA pour contrer ces menaces à "vitesse machine".
+
 <br>
 <br>
 <div id="syntheses"></div>
@@ -34,18 +35,16 @@ Le paysage cyber de mars 2026 est marqué par une escalade majeure du conflit tr
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| APT28 (Pawn Storm) | Gouvernement, Ukraine | Utilisation du toolkit "Roundish", exploitation de Roundcube | [The Hacker News](https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html) |
-| Boggy Serpens (MuddyWater) | Diplomatie, Énergie, Maritime, Finance | Phishing via comptes compromis, malware en Rust (BlackBeard), RMM | [Unit 42](https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/) |
-| Camaro Dragon | Gouvernement, Énergie (Qatar) | Déploiement de PlugX et Cobalt Strike | [Check Point](https://research.checkpoint.com/2026/16th-march-threat-intelligence-report/) |
-| CyberAv3ngers | Infrastructures critiques (Eau, Énergie) | Exploitation de PLC/OT, malware IOCONTROL | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Forbidden Hyena (4B1D) | Organisations en Russie | BlackReaperRAT, Blackout Locker ransomware | [The Hacker News](https://thehackernews.com/2026/03/weekly-recap-chrome-0-days-router.html) |
-| Handala Hack (Void Manticore) | Santé, Technologies médicales, Infrastructures israéliennes | Wiper via abus MDM (Intune), exfiltration de données | [BleepingComputer](https://www.bleepingcomputer.com/news/security/stryker-attack-wiped-tens-of-thousands-of-devices-no-malware-needed/) / [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Hydro Kitten | Secteur financier | Ciblage des services financiers US/alliés | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Laundry Bear (Void Blizzard) | Défense, Ukraine | Backdoor DRILLAPP via Microsoft Edge | [Security Affairs](https://securityaffairs.com/189519/malware/russia-linked-apt-uses-drillapp-backdoor-to-spy-on-ukrainian-targets.html) |
-| LummaC2 | Global | Infostealer-as-a-Service, évasion de sandbox trigonométrique | [Recorded Future](https://www.recordedfuture.com/blog/identity-trend-report-march-blog) |
-| Russian Legion | Défense (Israël) | Allégations de compromission de l'Iron Dome | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| ShinyHunters | Télécommunications (Telus Digital) | Vol de données massif, demande de rançon | [Check Point](https://research.checkpoint.com/2026/16th-march-threat-intelligence-report/) |
-| TA402 (Frankenstein) | Gouvernement Moyen-Orient | Phishing thématique via emails diplomatiques compromis | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| CL-STA-1087 | Militaire (Asie du Sud-Est) | Backdoors AppleChris et MemFun, persistance longue durée, DLL hijacking. | [Security Affairs](https://securityaffairs.com/189553/apt/cl-sta-1087-targets-military-capabilities-since-2020.html) |
+| Emennet Pasargad | Médias, Événementiel (Paris 2024) | Influence, vol de données, piratage de panneaux publicitaires. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/europe-sanctions-chinese-and-iranian-firms-for-cyberattacks/) |
+| Flax Typhoon (Integrity Tech) | Infrastructures critiques | Botnet 'Raptor Train', compromission de dispositifs IoT/Edge. | [Security Affairs](https://securityaffairs.com/189585/security/eu-sanctions-chinese-and-iranian-actors-over-cyberattacks-on-critical-infrastructure.html) |
+| GlassWorm | Développeurs, Supply Chain | Maliciels sur GitHub/npm, C2 via blockchain Solana, caractères Unicode invisibles. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/glassworm-malware-hits-400-plus-code-repos-on-github-npm-vscode-openvsx/) |
+| Handala (Void Manticore) | Santé, Médical, Gouvernement | Wiper, abus de Microsoft Intune pour effacement à distance. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| i-Soon (Anxun) | Gouvernements, Infrastructures | Hacker-for-hire, services d'espionnage pour le compte de l'État chinois. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/europe-sanctions-chinese-and-iranian-firms-for-cyberattacks/) |
+| LeakNet | Entreprises diverses | Technique "ClickFix", usage du runtime Deno pour exécution en mémoire. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/leaknet-ransomware-uses-clickfix-and-deno-runtime-for-stealthy-attacks/) |
+| MuddyWater (MOIS) | Banque, Aviation, Défense | Backdoors Python (Fakeset), exfiltration via Rclone, accès persistants. | [Cybersecurity News](https://cybersecuritynews.com/iranian-cyber-ops-maintain-us-network-footholds/) |
+| RondoDox | IoT, Serveurs web | Botnet exploitant 174 vulnérabilités (dont React2Shell). | [Security Affairs](https://securityaffairs.com/189569/malware/rondodox-botnet-expands-arsenal-targeting-174-flaws-and-hits-15000-daily-exploit-attempts.html) |
+| SiegedSec | Politique, Think Tanks | Hacktivisme pro-LGBTQ+, SQL injection, XSS. | [Flare](https://flare.io/learn/resources/blog/rise-and-fall-siegedsec) |
 
 <br/>
 <br/>
@@ -55,14 +54,14 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Défense | Conflit Iran-Israël-USA | Intensification des cyber-opérations liées au conflit cinétique entamé le 28 février 2026. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Énergie | Guerre en Ukraine | Frappes russes méthodiques sur le réseau électrique ukrainien durant l'hiver. | [EUvsDisinfo](https://euvsdisinfo.eu/targeting-the-grid-shaping-the-story-russias-dual-assault-on-ukraine/) |
-| Énergie | Sommet Nucléaire | Deuxième sommet mondial à Paris sur la relance du nucléaire dans un contexte d'instabilité. | [IRIS](https://www.iris-france.org/sommet-sur-lenergie-nucleaire-comment-envisager-la-relance-du-nucleaire-dans-un-contexte-dinstabilite-geopolitique/) |
-| Gouvernement | Stratégie Cyber US | Publication de la stratégie cyber sous Trump privilégiant l'offensive et la domination technologique. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/brief-bold-and-beautiful-reactions-us-national-cyber-strategy) |
-| Maritime | Résilience Portuaire | Analyse de la résilience du port Nantes-Saint-Nazaire face aux enjeux de souveraineté. | [Portail IE](https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/competitivite-et-resilience-de-la-zone-industrialo-portuaire-de-nantes-saint-nazaire/) |
+| Défense / International | Conflit US-Israël-Iran | Escalade cyber suite aux frappes cinétiques. Blackout total de l'internet en Iran (18ème jour). | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Gouvernemental | Sanctions Européennes | L'UE sanctionne 3 entreprises et 2 individus (Chine et Iran) pour des cyberattaques contre les infrastructures critiques. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/europe-sanctions-chinese-and-iranian-firms-for-cyberattacks/) |
+| Militaire | Modernisation de l'armée | Transformation de l'Armée de Terre française vers une "Armée de Combat" (SCORPION) face aux menaces russes. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/lessons-french-armys-transformation-towards-modern-fighting-army) |
+| Souveraineté | IA Open Source | Partenariat stratégique entre Mistral AI (France) et NVIDIA (USA) pour la coalition Nemotron. | [Portail de l'IE](https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/mistral-ai-sassocie-a-nvidia-pour-developper-les-modeles-dia-en-source-ouverte/) |
+| International | Désinformation (FIMI) | Publication du 4ème rapport du SEAE sur les manipulations de l'information étrangère par la Russie et la Chine. | [EUvsDisinfo](https://euvsdisinfo.eu/4th-eeas-report-on-fimi-threats-dismantling-the-fimi-house-of-cards/) |
 
-<br/>
-<br/>
+<br>
+<br>
 
 <div id="synthese-reglementaire"></div>
 
@@ -70,9 +69,10 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Civil society calls for an ambitious Digital Fairness Act | EDRi | 16/03/2026 | Union Européenne | Digital Fairness Act (DFA) | Appel à moderniser la protection des consommateurs contre les designs manipulateurs et l'extraction de données. | [EDRi](https://edri.org/our-work/civil-society-calls-for-an-ambitious-digital-fairness-act-on-world-consumer-rights-day/) |
-| Open EU Foundry status granted to Silicon Box | Commission Européenne | 16/03/2026 | Union Européenne | European Chips Act | Octroi d'un statut facilitant le soutien administratif et financier pour la production de semi-conducteurs. | [European Commission](https://digital-strategy.ec.europa.eu/en/news/open-eu-foundry-status-granted-innovative-chiplet-facility) |
-| Stratégie Cyber pour l'Amérique | Administration Trump | Mars 2026 | États-Unis | National Cyber Strategy 2026 | Stratégie courte (7 pages) axée sur la défense active, la domination technologique (IA) et l'offensive préemptive. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/brief-bold-and-beautiful-reactions-us-national-cyber-strategy) |
+| Backbone connectivity for Digital Global Gateways | Commission Européenne | 17/03/2026 | Union Européenne | CEF-DIG-2026 | Financement pour la sécurisation et la redondance des câbles sous-marins et réseaux terrestres. | [Digital Strategy](https://digital-strategy.ec.europa.eu/en/funding/backbone-connectivity-digital-global-gateways-studies-0) |
+| Equipment for smart European cable systems | Commission Européenne | 17/03/2026 | Union Européenne | CEF-DIG-2026 | Appel à projets pour équiper les câbles de capacités de surveillance "smart" contre le sabotage. | [Digital Strategy](https://digital-strategy.ec.europa.eu/en/funding/equipment-smart-european-cable-systems-works) |
+| GCA Endorses Global Framework against Fraud | Global Cyber Alliance | 17/03/2026 | Internationale (ONU/INTERPOL) | Call to Action on Combating Fraud | Soutien au cadre de partenariat public-privé pour lutter contre la fraude industrialisée par l'IA. | [Global Cyber Alliance](https://globalcyberalliance.org/gca-endorses-the-global-public-private-partnership-framework-against-fraud/) |
+| The Digital Omnibus: A step back from the brink | EDRi | 17/03/2026 | Union Européenne | RGPD / ePrivacy | Analyse des compromis au Conseil de l'UE sur la simplification réglementaire du paquet "Omnibus". | [EDRi](https://edri.org/our-work/the-digital-omnibus-a-step-back-from-the-brink-but-the-risks-remain/) |
 
 <br/>
 <br/>
@@ -82,11 +82,11 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Administration | Companies House (UK) | Faille WebFiling exposant les données de 5 millions d'entreprises (dates de naissance, adresses) depuis oct. 2025. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/uks-companies-house-confirms-security-flaw-exposed-business-data/) |
-| Collectivité | DeKalb County (Tennessee) | Attaque par ransomware touchant le bureau du shérif et la prison, perturbant les emails et les dossiers. | [DataBreaches.net](https://databreaches.net/2026/03/16/dekalb-county-tennessee-sheriff-and-jail-hit-by-ransomware-attack/) |
-| Distribution | Loblaw Companies | Accès non autorisé au réseau informatique exposant noms, numéros et adresses email de clients. | [Check Point](https://research.checkpoint.com/2026/16th-march-threat-intelligence-report/) |
-| Santé | Stryker Corporation | Wiper massif de 80 000 appareils via abus Microsoft Intune par le groupe Handala (Iran). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/stryker-attack-wiped-tens-of-thousands-of-devices-no-malware-needed/) |
-| Télécoms | Telus Digital | Revendication de vol d'un pétaoctet de données par ShinyHunters (rançon de 65M$). | [Check Point](https://research.checkpoint.com/2026/16th-march-threat-intelligence-report/) |
+| Santé / Médical | Stryker Corporation | Effacement de 80 000 terminaux via Intune. Handala revendique 50 To de données volées (non confirmé). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/attack-on-stryker-s-microsoft-environment-wiped-employee-devices-without-malware.html) |
+| Services / Réparation | Sears | Samantha, l'agent IA de Sears, exposait les appels vocaux et SMS des clients sur le web. | [DataBreaches.net](https://databreaches.net/2026/03/17/sears-exposed-ai-chatbot-phone-calls-and-text-chats-to-anyone-on-the-web/) |
+| Médias | Charlie Hebdo | Vente des données de 230 000 abonnés par le groupe Emennet Pasargad. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/europe-sanctions-chinese-and-iranian-firms-for-cyberattacks/) |
+| Santé | Royal Bahrain Hospital | Revendication de piratage par le groupe Payload Ransomware. | [Security Affairs](https://securityaffairs.com/189585/security/eu-sanctions-chinese-and-iranian-actors-over-cyberattacks-on-critical-infrastructure.html) |
+| Éducation | Saint Elizabeth University | Accès non autorisé au système de caméras de sécurité par SiegedSec. | [Flare](https://flare.io/learn/resources/blog/rise-and-fall-siegedsec) |
 
 <br/>
 <br/>
@@ -96,19 +96,13 @@ Voici un tableau récapitulatif des violations de données constatées :
 Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2026-3059 | 9.8 | SGLang (AI Framework) | Désérialisation Python Pickle non sécurisée (RCE) | [SecurityOnline](https://securityonline.info/poisoned-pickle-critical-unpatched-rce-flaws-sglang-ai-infrastructure/) |
-| CVE-2026-3060 | 9.8 | SGLang (AI Framework) | Désérialisation Python Pickle non sécurisée (RCE) | [SecurityOnline](https://securityonline.info/poisoned-pickle-critical-unpatched-rce-flaws-sglang-ai-infrastructure/) |
-| CVE-2025-68613 | 10.0 | n8n workflow platform | Exécution de code à distance (RCE) - Exploitée | [Check Point](https://research.checkpoint.com/2026/16th-march-threat-intelligence-report/) |
-| CVE-2026-28792 | 9.7 | TinaCMS | Path Traversal + CORS misconfiguration (RCE) | [SecurityOnline](https://securityonline.info/drive-by-hijack-critical-9-7-cvss-tinacms-flaw-cve-2026-28792/) |
-| CVE-2026-32267 | 9.2 | Craft CMS | Escalade de privilèges via ImpersonateWithToken | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-32267) |
-| CVE-2026-30881 | 8.8 | Chamilo LMS | Injection SQL dans l'endpoint AJAX | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-30881) |
-| CVE-2026-30875 | 8.8 | Chamilo LMS | RCE via Import H5P (File Upload) | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-30875) |
-| CVE-2025-13957 | 8.8 | Schneider EcoStruxure | Mot de passe codé en dur (RCE) | [ZDI](http://www.zerodayinitiative.com/advisories/ZDI-26-212/) |
-| CVE-2026-29522 | 8.7 | ZwickRoell Test Data | Path Traversal LFI | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-29522) |
-| CVE-2026-31386 | 8.6 | LiteSpeed Web Server | Injection de commande OS via WebAdmin | [SecurityOnline](https://securityonline.info/server-siege-critical-8-6-cvss-flaw-litespeed-web-server-os-command-injection/) |
-| CVE-2026-3909 | Haut | Google Chrome | Out-of-bounds write dans Skia - Exploitée | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0297/) |
-| CVE-2026-3910 | Haut | Microsoft Edge | Vulnérabilité V8 - Exploitée | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0298/) |
-| CVE-2025-47813 | 4.3 | Wing FTP Server | Information Disclosure (Path leak) - Exploitée | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-flags-wing-ftp-server-flaw-as-actively-exploited-in-attacks/) |
+| CVE-2026-21994 | 9.8 | Oracle Edge Cloud Infrastructure | Compromission totale via HTTP (Unauthenticated) | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-21994) |
+| CVE-2026-21643 | 9.1 | Fortinet FortiClient EMS | Injection SQL pré-authentification (Zero-click) | [Security Online](https://securityonline.info/publicly-disclosed-critical-zero-click-sql-injection-forticlient-ems-cve-2026-21643/) |
+| CVE-2026-3288 | 8.8 | Ingress-nginx (Kubernetes) | Injection de configuration NGINX permettant une RCE | [Sysdig](https://www.sysdig.com/blog/detecting-cve-2026-3288-cve-2026-24512-ingress-nginx-configuration-injection-vulnerabilities-for-kubernetes) |
+| CVE-2026-27811 | 8.8 | Roxy-WI | Injection de commande via paramètre 'diff' (RCE) | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-27811) |
+| CVE-2026-22730 | 8.8 | Spring AI (MariaDB) | Injection SQL via metadata-based access control | [Security Online](https://securityonline.info/critical-spring-ai-vulnerabilities-sql-jsonpath-injection-cve-2026-22730/) |
+| CVE-2026-22171 | 8.8 | OpenClaw | Traversée de fichiers (Path Traversal) via Feishu media keys | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-22171) |
+| CVE-2026-3909 | - (Exploitée) | Microsoft Edge | Vulnérabilité critique activement exploitée ("In the wild") | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0303/) |
 
 <br/>
 <br/>
@@ -117,12 +111,12 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Boggy Serpens Threat Assessment | Rapport détaillé sur un groupe étatique iranien majeur et ses nouveaux outils IA. | [Unit 42](https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/) |
-| DRILLAPP backdoor targets Ukraine | Analyse d'une nouvelle technique de backdoor utilisant Microsoft Edge pour la furtivité. | [Security Affairs](https://securityaffairs.com/189519/malware/russia-linked-apt-uses-drillapp-backdoor-to-spy-on-ukrainian-targets.html) |
-| Inside the Infostealer Economy 2025 | Étude statistique exhaustive sur l'évolution du vol d'identifiants et le contournement MFA. | [Recorded Future](https://www.recordedfuture.com/blog/identity-trend-report-march-blog) |
-| Iranian Cyber Threat Evolution | Vision stratégique sur le passage des wipers vers l'abus des outils d'administration (MDM). | [Unit 42](https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-threats/) |
-| Ransomware Under Pressure: TTPs | Analyse de Mandiant sur les changements de modèles économiques et techniques des ransomwares. | [Google/Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape/) |
-| RondoDox Botnet Expands | Cas d'école d'un botnet industrialisé utilisant plus de 174 exploits et des IPs résidentielles. | [Cybersecurity News](https://cybersecuritynews.com/rondodox-botnet-expands/) |
+| Attack on Stryker’s Microsoft environment wiped employee devices without malware | Incident majeur illustrant l'abus d'outils d'administration (MDM) pour une destruction massive. | [Security Affairs](https://securityaffairs.com/189535/hacking/attack-on-stryker-s-microsoft-environment-wiped-employee-devices-without-malware.html) |
+| GlassWorm malware hits 400+ code repos on GitHub, npm, VSCode, OpenVSX | Campagne de supply chain sophistiquée ciblant l'écosystème de développement moderne. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/glassworm-malware-hits-400-plus-code-repos-on-github-npm-vscode-openvsx/) |
+| LeakNet ransomware uses ClickFix, Deno runtime in stealthy attacks | Utilisation innovante du runtime Deno pour l'évasion des défenses traditionnelles. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/leaknet-ransomware-uses-clickfix-and-deno-runtime-for-stealthy-attacks/) |
+| CursorJack: weaponizing Deeplinks to exploit Cursor IDE | Nouvelle méthode d'attaque exploitant les protocoles deeplink dans les IDE basés sur l'IA. | [Proofpoint](https://www.proofpoint.com/us/blog/threat-insight/cursorjack-weaponizing-deeplinks-exploit-cursor-ide) |
+| New font-rendering trick hides malicious commands from AI tools | Technique ingénieuse de contournement des guardrails de sécurité des assistants IA (substitution de glyphes). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-font-rendering-trick-hides-malicious-commands-from-ai-tools/) |
+| CL-STA-1087 targets military capabilities since 2020 | Espionnage étatique de long terme utilisant des backdoors modulaires et furtives. | [Security Affairs](https://securityaffairs.com/189553/apt/cl-sta-1087-targets-military-capabilities-since-2020.html) |
 
 <br/>
 <br/>
@@ -131,153 +125,161 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| Mastodon posts (multiples) | Réseaux sociaux non autorisés par les critères. | [Mastodon](https://mastodon.social/) |
-| Stryker attack wiped devices | Classé en synthèse des violations de données. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/stryker-attack-wiped-tens-of-thousands-of-devices-no-malware-needed/) |
-| UK Companies House flaw | Classé en synthèse des violations de données. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/uks-companies-house-confirms-security-flaw-exposed-business-data/) |
-| CISA flags Wing FTP Server | Traité dans la synthèse des vulnérabilités. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-flags-wing-ftp-server-flaw-as-actively-exploited-in-attacks/) |
-| SGLang AI infrastructure vulns | Traité dans la synthèse des vulnérabilités. | [SecurityOnline](https://securityonline.info/poisoned-pickle-critical-unpatched-rce-flaws-sglang-ai-infrastructure/) |
-| DeKalb County Ransomware | Classé en synthèse des violations de données. | [DataBreaches.net](https://databreaches.net/2026/03/16/dekalb-county-tennessee-sheriff-and-jail-hit-by-ransomware-attack/) |
+| Free Applied Skills assessment for Defender XDR | Contenu éducatif/promotionnel, pas une menace cyber. | [Reddit](https://www.reddit.com/r/blueteamsec/comments/1rwpoqw/free_applied_skills_assessment_for_defender_xdr/) |
+| Security Stack Recommendations for a Mid-Size Dev Company | Discussion communautaire et conseils, pas une actualité de veille. | [Reddit](https://www.reddit.com/r/blueteamsec/comments/1rw3ex7/security_stack_recommendations_for_a_midsize_dev/) |
+| ISC Stormcast For Tuesday, March 17th, 2026 | Podcast généraliste sans détails textuels exploitables. | [SANS ISC](https://isc.sans.edu/diary/rss/32802) |
+| Identity and Access Management in Google Cloud | Guide opérationnel sur les bonnes pratiques GCP, pas un incident. | [CyberEngage](https://www.cyberengage.org/post/identity-and-access-management-in-google-cloud) |
+| Mistral AI s’associe à NVIDIA | Actualité business/partenariat technologique. | [Portail de l'IE](https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/mistral-ai-sassocie-a-nvidia-pour-developper-les-modeles-dia-en-source-ouverte/) |
 
 <br>
-<br/>
+<br>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="evolution-de-la-menace-iranienne--du-wiper-a-larmement-de-lidentite"></div>
+<div id="attaque-devastatrice-contre-stryker-80-000-appareils-effaces-via-microsoft-intune"></div>
 
-## Évolution de la menace iranienne : du wiper à l'armement de l'identité
-L'analyse retrace une décennie d'opérations cyber offensives iraniennes, soulignant une mutation radicale depuis 2023. Historiquement, des groupes comme APT33 (Curious Serpens) utilisaient des malwares de type "wiper" (Shamoon) pour détruire physiquement les disques. Aujourd'hui, les acteurs iraniens, notamment Void Manticore (Handala), privilégient les techniques de *Living-off-the-Land* (LotL) en ciblant les plans de gestion d'identité. L'attaque contre Stryker illustre cette tendance : aucun malware destructeur n'a été utilisé, mais des comptes d'administrateurs globaux ont été compromis pour envoyer des commandes légitimes de "remote wipe" via Microsoft Intune. Cette approche permet de contourner les solutions EDR/AV qui ne détectent pas de code malveillant, mais des actions administratives autorisées. L'objectif est d'atteindre une échelle de destruction massive (200 000 appareils) avec un coût de développement minimal. Cette stratégie offre également un déni plausible en imitant des cybercriminels ou des hacktivistes.
+## Attaque dévastatrice contre Stryker : 80 000 appareils effacés via Microsoft Intune
+Le géant des technologies médicales Stryker a subi une attaque destructrice sans précédent. L'acteur de menace, identifié comme Handala (front du groupe iranien Void Manticore), a compromis un compte administrateur pour accéder à la console Microsoft Intune. Entre 05h00 et 08h00 UTC le 11 mars, l'attaquant a exécuté la commande native "Wipe" sur près de 80 000 appareils (PC et smartphones), y compris des terminaux personnels (BYOD). L'attaque n'a utilisé aucun malware traditionnel, exploitant uniquement les fonctionnalités légitimes de la plateforme de gestion. Bien que Handala revendique le vol de 50 To de données, les premières investigations de Microsoft DART et Palo Alto Unit 42 n'ont pas confirmé d'exfiltration. Les systèmes de commande électronique de Stryker sont restés hors ligne pendant plus d'une semaine, obligeant à des processus manuels.
 
-**Analyse de l'impact** : La menace ne réside plus dans le binaire malveillant mais dans la compromission du "Tier-0" (administration cloud). L'impact est systémique, capable de paralyser une multinationale en quelques heures via ses propres outils de gestion.
+**Analyse de l'impact** : L'impact est critique en termes de disponibilité et de continuité d'activité. L'utilisation de "Living-off-the-Land" (LotL) sur des outils d'administration centralisés rend la détection par EDR inopérante puisque les actions sont perçues comme légitimes. La destruction des données sur les appareils BYOD pose également des défis juridiques et de protection de la vie privée.
 
 **Recommandations** :
-*   Implémenter l'approbation multi-administrateurs (Multi-Admin Approval) pour les commandes sensibles comme l'effacement d'appareils (Wipe).
-*   Gérer les plateformes MDM/RMM comme des infrastructures critiques de niveau Tier-0 avec un contrôle de changement rigoureux.
-*   Éliminer les privilèges permanents et utiliser le *Privileged Identity Management* (PIM) pour des accès "Just-In-Time".
-*   Maintenir des sauvegardes hors-ligne, immuables et isolées du tenant cloud principal.
+* Activer l'approbation multi-administrateur (Multi-Admin Approval) pour les actions destructrices dans Intune/Azure.
+* Imposer l'accès conditionnel strict pour les comptes d'administration (MFA résistant au phishing, localisation nommée).
+* Auditer en temps réel la création de nouveaux comptes "Global Administrator".
+* Segmenter les réseaux de gestion des appareils pour isoler les environnements critiques.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Handala Hack (Void Manticore / Iran MOIS) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1078.004: Cloud Accounts<br/>• T1531: Account Access Removal<br/>• T1020: Automated Exfiltration<br/>• T1562.001: Disable or Modify Tools |
-| Observables & Indicateurs de compromission | ```Abus de commandes Microsoft Intune (Wipe/Factory Reset) via comptes compromis.``` |
+| Groupe ou acteur malveillant | Handala / Void Manticore |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078.004: Cloud Accounts<br>* T1531: Account Access Removal (via Wipe)<br>* T1566: Phishing |
+| Observables & Indicateurs de compromission | ```Aucun IoC malveillant (malware) - auditer les logs Intune pour l'ID d'opération 'Wipe' et les adresses IP d'administration inhabituelles.``` |
 
 ### Source (url) du ou des articles
-* https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-threats/
+* https://www.bleepingcomputer.com/news/security/attack-on-stryker-s-microsoft-environment-wiped-employee-devices-without-malware/
+* https://securityaffairs.com/189535/hacking/attack-on-stryker-s-microsoft-environment-wiped-employee-devices-without-malware.html
+* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+
 <br>
 <br>
 
-<div id="boggy-serpens--analyse-dune-campagne-despionnage-sophistiquee"></div>
+<div id="glassworm-une-campagne-de-supply-chain-massive- ciblant-github-et-npm"></div>
 
-## Boggy Serpens : analyse d'une campagne d'espionnage sophistiquee
-Le groupe iranien Boggy Serpens (MuddyWater), lié au MOIS, a considérablement affiné son mode opératoire au cours de l'année écoulée. Il utilise désormais des leurres de phishing extrêmement personnalisés, basés sur des renseignements préalablement exfiltrés, pour cibler les secteurs de l'énergie et du maritime aux Émirats Arabes Unis. L'acteur utilise une plateforme d'orchestration web personnalisée en Python pour automatiser l'envoi massif d'emails via des comptes officiels compromis, contournant ainsi les filtres anti-spam. Techniquement, le groupe a adopté le langage Rust (backdoors BlackBeard et LampoRAT) et intègre du code généré par IA, identifiable par l'usage inhabituel d'emojis dans les journaux de debug. Une nouvelle famille de backdoor HTTP, nommée Nuso, utilise des codes de statut HTTP (ex: 201/204) comme déclencheurs de commandes plutôt que des chaînes de caractères traditionnelles. Le groupe maintient également une lignée de macros VBA sophistiquées utilisant des boucles de temporisation mathématiques pour épuiser les délais d'analyse des bacs à sable (sandboxes).
+## Glassworm : une campagne de supply chain massive ciblant GitHub et npm
+La campagne GlassWorm a frappé plus de 433 composants open-source, incluant 200 dépôts Python et 151 dépôts JavaScript sur GitHub, ainsi que des extensions VSCode. Les attaquants utilisent des caractères Unicode invisibles pour dissimuler du code malveillant au sein des sources. Une fois exécuté, le script interroge la blockchain Solana toutes les cinq secondes pour recevoir des instructions C2 via des "memos" de transaction. Le payload final est un info-stealer basé sur Node.js qui cible les clés SSH, les portefeuilles de crypto-monnaies et les identifiants de développeurs. Les indices suggèrent une origine russophone, le malware vérifiant la langue du système pour s'auto-terminer s'il détecte une configuration russe. La persistance est assurée par un fichier `~/init.json`.
 
-**Analyse de l'impact** : Forte capacité d'espionnage économique et politique, avec une résilience accrue grâce à la diversification des langages de programmation (C++, Rust, Python) et l'abus de services légitimes comme Telegram pour le C2.
+**Analyse de l'impact** : Menace sérieuse pour l'intégrité de la supply chain logicielle. La compromission des environnements de développement peut mener à des accès persistants dans les infrastructures de production des entreprises clientes via les accès et secrets volés.
 
 **Recommandations** :
-*   Surveiller les connexions UDP inhabituelles (ports 1259/1269) vers des IPs suspectes.
-*   Bloquer l'exécution de macros VBA non signées et surveiller l'usage de WMI par les processus Office.
-*   Auditer les comptes d'utilisateurs pour des signes de détournement (envoi massif d'emails, connexions depuis des localisations inhabituelles).
+* Rechercher la variable marqueur `lzcdrtfxyqiplpd` dans les bases de code.
+* Vérifier la présence du fichier de persistance `~/init.json`.
+* Surveiller l'installation de binaires Node.js inattendus dans les répertoires personnels.
+* Auditer les dates des commits Git pour détecter des anomalies entre la date de l'auteur et celle du committer.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Boggy Serpens (MuddyWater) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1566.002: Spearphishing Link<br/>• T1071.001: Web Protocols<br/>• T1102.002: Bidirectional Communication (Telegram API)<br/>• T1059.005: Visual Basic |
-| Observables & Indicateurs de compromission | ```• Domains: stratioai[.]org, screenai[.]online, bootcamptg[.]org<br/>• IP: 157.20.182[.]75, 64.7.198[.]12<br/>• SHA-256 (Nuso): 1b9e6fe4b03285b2e768c57e320d84323ac9167598395918d56a12e568b0009a<br/>• Token Telegram: 8398566164:AAEJbk6EOirZ_ybm4PJ-q8mOpr1RkZx1H7Q``` |
+| Groupe ou acteur malveillant | GlassWorm |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Dependencies and Development Tools<br>* T1027: Obfuscated Files or Information (Unicode)<br>* T1102: Web Service (Solana C2) |
+| Observables & Indicateurs de compromission | ```* lzcdrtfxyqiplpd (Variable)<br>* ~/init.json (Persistance)<br>* Solana Address (C2)``` |
 
 ### Source (url) du ou des articles
-* https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/
+* https://www.bleepingcomputer.com/news/security/glassworm-malware-hits-400-plus-code-repos-on-github-npm-vscode-openvsx/
+
 <br>
 <br>
 
-<div id="ransomware-2025--pression-accrue-et-mutation-des-tactiques"></div>
+<div id="leaknet-et-la-technique-clickfix-lusage-furtif-du-runtime-deno"></div>
 
-## Ransomware 2025 : pression accrue et mutation des tactiques
-Le rapport Mandiant/Google souligne une baisse de la rentabilité globale des opérations de ransomware en 2025, poussant les acteurs à devenir plus agressifs. Une tendance majeure est le ciblage systématique des infrastructures de virtualisation, avec 43 % des intrusions ciblant ESXi (contre 29 % en 2024). Les attaquants automatisent désormais le déploiement sur les hyperviseurs via des scripts PowerShell et des outils comme NetExec. Le vol de données est devenu quasi systématique (77 % des cas), servant de levier de pression principal au-delà du chiffrement. On note un délaissement des outils classiques comme Cobalt Strike BEACON au profit de frameworks de test d'intrusion plus récents comme AdaptixC2. Le vecteur d'accès initial privilégié reste l'exploitation de vulnérabilités sur les VPN et pare-feux (Fortinet, SonicWall). Enfin, l'usage de l'IA pour l'analyse des points de pression des victimes et des technologies Web3 (smart contracts) pour la résilience des C2 commence à émerger.
+## Leaknet et la technique ClickFix : l'usage furtif du runtime Deno
+Le groupe LeakNet adopte la technique "ClickFix" (leurres de fausses corrections de navigateurs) pour infecter des environnements corporate. L'innovation majeure réside dans l'utilisation du runtime légitime Deno (JavaScript/TypeScript) comme loader de malware. En téléchargeant l'exécutable Deno officiel, signé et donc souvent autorisé par les solutions de sécurité, les attaquants peuvent exécuter du code malveillant directement en mémoire sans laisser d'artefacts sur le disque. Une fois l'ID victime généré, le loader se connecte à un C2 pour exfiltrer des données vers des compartiments Amazon S3. Le mouvement latéral est assuré via PsExec et le DLL sideloading (`jli.dll`).
 
-**Analyse de l'impact** : Transition vers un modèle d'extorsion de données pure et vulnérabilité critique des serveurs de virtualisation qui permettent un arrêt complet de la production.
+**Analyse de l'impact** : Risque d'évasion élevé face aux antivirus traditionnels grâce à la stratégie "Bring Your Own Runtime" (BYOR). L'automatisation du fingerprinting et de la persistance via PowerShell/VBS augmente la vélocité des attaques.
 
 **Recommandations** :
-*   Durcir les hyperviseurs ESXi : désactiver SSH, activer le mode Lockdown et désactiver l'option ExecInstalledOnly.
-*   Surveiller l'usage d'outils de synchronisation cloud comme Rclone et MEGASync utilisés pour l'exfiltration.
-*   Prioriser le correctif des CVE sur les équipements périmétriques (VPN/Firewall).
+* Bloquer ou surveiller étroitement l'exécution du binaire `deno.exe` en dehors des environnements de développement approuvés.
+* Rechercher des exécutions suspectes de `msiexec` initiées par des navigateurs.
+* Surveiller le trafic outbound inhabituel vers des buckets Amazon S3.
+* Vérifier les tentatives de DLL sideloading dans `C:\ProgramData\USOShared`.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | REDBIKE (Akira), Qilin, RansomHub, LockBit.WarLock |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1190: Exploit Public-Facing Application<br/>• T1484.001: Group Policy Modification<br/>• T1048.003: Exfiltration Over Unencrypted Non-HTTP Protocol (Rclone)<br/>• T1562.001: Disable or Modify Tools |
-| Observables & Indicateurs de compromission | ```• Scripts: Veeam-Get-Creds.ps1<br/>• Ransomware families: REDBIKE, AGENDA, INC, NITROGEN<br/>• Processus: vmsvc, esxcli``` |
+| Groupe ou acteur malveillant | LeakNet |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.002: User Execution (ClickFix)<br>* T1574.002: DLL Side-Loading<br>* T1059.001: PowerShell |
+| Observables & Indicator de compromission | ```* Romeo.ps1 / Juliet.vbs (Scripts)<br>* deno.exe (Runtime utilisé à des fins malveillantes)<br>* jli.dll (DLL malveillante)``` |
 
 ### Source (url) du ou des articles
-* https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape/
+* https://www.bleepingcomputer.com/news/security/leaknet-ransomware-uses-clickfix-and-deno-runtime-for-stealthy-attacks/
+
 <br>
 <br>
 
-<div id="drillapp--un-nouveau-backdoor-ciblant-lukraine-via-edge"></div>
+<div id="cursorjack-exploitation-des-deeplinks-dans-lide-cursor"></div>
 
-## Drillapp : un nouveau backdoor ciblant l'ukraine via edge
-Une nouvelle campagne d'espionnage attribuée avec une confiance modérée au groupe russe Laundry Bear (Void Blizzard) utilise un malware innovant nommé DRILLAPP. Ce backdoor se distingue par l'utilisation abusive du mode "headless" et des paramètres de débogage de Microsoft Edge pour s'exécuter furtivement. En activant le paramètre `--remote-debugging-port`, les attaquants utilisent le protocole Chrome DevTools (CDP) pour contourner les restrictions JavaScript et exfiltrer des fichiers, enregistrer l'audio du microphone ou capturer l'écran. L'infection débute par des fichiers LNK ou CPL déguisés en documents caritatifs ("Come Back Alive") ou techniques (installation Starlink). Le script malveillant est souvent hébergé sur des services de partage de texte publics comme pastefy.app. Cette méthode permet de dissimuler l'activité malveillante derrière un processus système courant et légitime, rendant la détection par les outils de surveillance traditionnels très difficile.
+## Cursorjack : exploitation des deeplinks dans l'IDE Cursor
+L'IDE basé sur l'IA "Cursor" présente une faiblesse dans la gestion du gestionnaire de protocole `cursor://`. La méthode CursorJack abuse des deeplinks utilisés pour installer des serveurs Model Context Protocol (MCP). Un attaquant peut créer un lien malveillant qui, après acceptation par l'utilisateur, configure un serveur MCP exécutant des commandes arbitraires avec les privilèges de l'utilisateur. En test, une session Meterpreter a été établie simplement en convainquant un utilisateur d'installer un "plugin" via une page de phishing. Aucune distinction visuelle n'existe entre un lien légitime et un lien malveillant dans l'interface d'installation actuelle.
 
-**Analyse de l'impact** : Menace sérieuse pour la confidentialité des données sur les postes de travail, permettant une surveillance audiovisuelle en temps réel sans éveiller les soupçons.
+**Analyse de l'impact** : Ciblage direct des développeurs, souvent détenteurs de secrets critiques (clés SSH, tokens cloud, code source). La persistance est possible car le serveur MCP est relancé à chaque démarrage de l'IDE.
 
 **Recommandations** :
-*   Surveiller les lignes de commande de navigateur incluant `--remote-debugging-port` ou `--disable-web-security`.
-*   Restreindre l'exécution des fichiers .CPL et surveiller la création de fichiers .LNK dans les dossiers temporaires.
-*   Bloquer l'accès aux sites de partage de code/texte non nécessaires (pastefy.app, etc.).
+* Sensibiliser les développeurs à ne jamais installer de serveurs MCP depuis des sources non officielles (MCP Directory).
+* Auditer le fichier `~/.cursor/mcp.json` pour détecter des commandes ou URLs suspectes.
+* Utiliser des solutions de protection de la navigation pour bloquer les redirections vers le protocole `cursor://`.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Laundry Bear (UAC-0190 / Void Blizzard) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1204.002: Malicious File<br/>• T1189: Drive-by Compromise<br/>• T1123: Audio Capture<br/>• T1113: Screen Capture |
-| Observables & Indicateurs de compromission | ```• URLs: pastefy[.]app, gnome[.]com<br/>• Paramètres: --no-sandbox, --remote-debugging-port, --allow-file-access-from-files<br/>• Extensions: .lnk, .cpl``` |
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.001: Malicious Link<br>* T1548: Abuse Elevation Control Mechanism<br>* T1133: External Remote Services (Malicious MCP Server) |
+| Observables & Indicateurs de compromission | ```* mcp.json (Configuration modifiée)<br>* cursor://anysphere.cursor-deeplink/mcp/install (Schéma URL)``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/189519/malware/russia-linked-apt-uses-drillapp-backdoor-to-spy-on-ukrainian-targets.html
+* https://www.proofpoint.com/us/blog/threat-insight/cursorjack-weaponizing-deeplinks-exploit-cursor-ide
+
 <br>
 <br>
 
-<div id="leconomie-des-infostealers-en-2025--une-acceleration-alarmante"></div>
+<div id="manipulation-des-assistants-ia-par-substitution-de-polices-de-caracteres"></div>
 
-## L'économie des infostealers en 2025 : une accélération alarmante
-Le vol d'identifiants est devenu le vecteur d'accès initial dominant en 2025, avec une accélération marquée en fin d'année (+90 % de volume au dernier trimestre). Les infostealers comme LummaStealer ciblent spécifiquement les systèmes d'authentification (VPN, plateformes cloud, RMM). Une découverte majeure est que 31 % des identifiants volés incluent désormais des cookies de session actifs, permettant un contournement total du MFA (Multi-Factor Authentication). Chaque appareil infecté (souvent un appareil personnel utilisé pour le télétravail) livre en moyenne 87 jeux d'identifiants. Malgré les actions policières (opération contre LummaC2 en mai 2025), les malwares se réinventent rapidement via des rebrandings (StealC v2, MacSync). Les attaquants utilisent des techniques sophistiquées comme l'analyse trigonométrique des mouvements de souris pour détecter les environnements d'analyse automatisés.
+## Manipulation des assistants IA par substitution de polices de caractères
+Une nouvelle technique d'attaque utilise le rendu de polices personnalisées pour masquer des commandes malveillantes aux yeux des assistants IA (ChatGPT, Gemini, etc.). L'attaquant remplace les glyphes d'une police : le texte lisible par l'IA semble inoffensif dans le code HTML (ex: "Instructions de nettoyage"), mais le rendu visuel pour l'utilisateur affiche une commande dangereuse (ex: un reverse shell). Lors d'un test, si l'utilisateur demande à l'IA si la page est sûre, l'assistant répond positivement car il n'analyse que le DOM textuel, ignorant la transformation visuelle opérée par la police personnalisée. Microsoft a adressé le problème, mais Google l'a classé comme dépendant du social engineering.
 
-**Analyse de l'impact** : Le MFA n'est plus un rempart absolu. La compromission d'un seul appareil personnel peut exposer l'intégralité de l'infrastructure d'entreprise via le vol de sessions.
+**Analyse de l'impact** : Érosion de la confiance envers les assistants de sécurité IA. Cette technique permet de tromper les outils d'analyse automatisés qui ne simulent pas le rendu visuel complet de la page.
 
 **Recommandations** :
-*   Réduire la durée de vie des jetons de session (session tokens) pour les applications critiques.
-*   Mettre en place des politiques d'accès conditionnel basées sur la conformité de l'appareil (device health).
-*   Surveiller les journaux d'accès pour des réutilisations de cookies depuis des adresses IP ou des navigateurs inhabituels.
-*   Sensibiliser au risque lié à l'usage d'appareils personnels non gérés pour accéder aux ressources d'entreprise.
+* Ne pas se fier uniquement aux assistants IA pour valider la sécurité d'une commande à exécuter dans un terminal.
+* Étendre les scanners de sécurité pour détecter les substitutions de glyphes massives dans les fichiers de polices web.
+* Analyser les CSS pour détecter les textes cachés (opacité zéro, taille de police minuscule).
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | LummaC2, Rhadamanthys, StealC v2, MacSync |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1539: Steal Web Session Cookie<br/>• T1555.003: Credentials from Web Browsers<br/>• T1027: Obfuscated Files or Information<br/>• T1497: Virtualization/Sandbox Evasion |
-| Observables & Indicateurs de compromission | ```Usage de techniques "ClickFix" et faux téléchargements CAPTCHA pour l'infection initiale.``` |
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204: User Execution<br>* T1027: Obfuscated Files or Information |
+| Observables & Indicateurs de compromission | ```Usage de polices web (WOFF/TTF) avec remappage de glyphes asymétrique.``` |
 
 ### Source (url) du ou des articles
-* https://www.recordedfuture.com/blog/identity-trend-report-march-blog
+* https://www.bleepingcomputer.com/news/security/new-font-rendering-trick-hides-malicious-commands-from-ai-tools/
+
 <br>
 <br>
 
-<div id="rondodox--expansion-massive-dun-botnet-exploitant-174-vulnerabilites"></div>
+<div id="cl-sta-1087-cyber-espionnage-de-longue-duree-contre-les-forces-armees-dasie-du-sud-est"></div>
 
-## Rondodox : expansion massive d'un botnet exploitant 174 vulnérabilités
-RondoDox est un nouveau botnet spécialisé dans les attaques par déni de service (DoS), construit sur une base Mirai mais avec une ambition technique inédite. Il intègre un arsenal de 174 exploits ciblant 18 architectures système différentes, des serveurs x86 aux objets connectés (ARM, MIPS). Sa particularité réside dans sa réactivité : il intègre de nouvelles vulnérabilités quelques jours seulement après leur divulgation publique (ex: CVE-2025-55182 ajoutée en 3 jours). Le botnet utilise une couche d'hébergement trompeuse basée sur des adresses IP résidentielles compromises (UniFi, Android TV, domotique) pour masquer son infrastructure de contrôle. Les serveurs de commande renvoient des pages de leurre (vidéos de fond avec boutons inactifs) pour bloquer les tentatives d'analyse par les chercheurs en sécurité. 
+## CL-STA-1087 : cyber-espionnage de longue durée contre les forces armées d'Asie du Sud-Est
+Une campagne d'espionnage attribuée à un acteur lié à la Chine cible les organisations militaires en Asie du Sud-Est depuis 2020. L'attaquant utilise des outils sur mesure : les backdoors AppleChris (évoluant vers une version 'Tunneler') et MemFun, ainsi qu'un extracteur de d'identifiants nommé Getpass. Le groupe fait preuve d'une grande patience, restant dormant pendant plusieurs mois avant de s'activer pour exfiltrer des fichiers spécifiques sur les capacités militaires et la collaboration avec les forces occidentales. Ils exploitent Pastebin et Dropbox comme "dead drop resolvers" pour localiser leurs serveurs C2 de manière dynamique. MemFun est particulièrement furtif, s'exécutant entièrement en mémoire via le process hollowing.
 
-**Analyse de l'impact** : Capacité de frappe DoS massive et difficile à filtrer en raison de la nature résidentielle des sources d'attaque.
+**Analyse de l'impact** : Risque géopolitique majeur avec le vol de secrets militaires sensibles et la compréhension des structures de commandement C4I. La persistance de 6 ans démontre l'inefficacité des détections périmétriques classiques face à cet acteur.
 
 **Recommandations** :
-*   Désactiver les services d'administration à distance inutilisés sur les objets connectés.
-*   Mettre à jour immédiatement les équipements réseau exposés à Internet.
-*   Utiliser des solutions de protection anti-DDoS capables d'identifier les comportements de trafic botnet sur des plages IP résidentielles.
+* Surveiller les activités PowerShell suspectes créant des reverse shells.
+* Auditer l'accès au processus `lsass.exe` par des DLL non signées ou déguisées en outils légitimes.
+* Bloquer les accès aux domaines Pastebin et Dropbox dans les environnements de serveurs critiques.
+* Rechercher l'indicateur de persistance WMI utilisé par l'acteur.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Opérateurs du botnet RondoDox |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1498: Network Denial of Service<br/>• T1190: Exploit Public-Facing Application<br/>• T1584.005: Compromise Infrastructure (Botnet)<br/>• T1205: Traffic Signaling |
-| Observables & Indicateurs de compromission | ```• CVEs ciblées: CVE-2025-55182, CVE-2025-62593<br/>• Flux de 15 000 tentatives d'exploitation par jour.``` |
+| Groupe ou acteur malveillant | CL-STA-1087 (Chine-nexus) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1003.001: LSASS Memory (Getpass)<br>* T1055.012: Process Hollowing<br>* T1102.001: Dead Drop Resolver (Pastebin) |
+| Observables & Indicateurs de compromission | ```* AppleChris / MemFun (Malwares)<br>* GoogleUpdate.exe (Loader utilisé par MemFun)<br>* WinSAT.db (Log de Getpass)``` |
 
 ### Source (url) du ou des articles
-* https://cybersecuritynews.com/rondodox-botnet-expands/
+* https://securityaffairs.com/189553/apt/cl-sta-1087-targets-military-capabilities-since-2020.html
