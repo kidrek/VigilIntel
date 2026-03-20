@@ -9,17 +9,21 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [darksword : un kit d'exploitation ios sophistiqué utilisé par plusieurs acteurs](#darksword-un-kit-dexploitation-ios-sophistiqué-utilisé-par-plusieurs-acteurs)
-  * [interlock ransomware : exploitation de vulnérabilités zero-day cisco secure fmc](#interlock-ransomware-exploitation-de-vulnérabilités-zero-day-cisco-secure-fmc)
-  * [silentconnect et windsurf : le ciblage des outils de développement s'intensifie](#silentconnect-et-windsurf-le-ciblage-des-outils-de-développement-sintensifie)
-  * [cyber-conflit iran-israël-usa : une escalade numérique majeure](#cyber-conflit-iran-israël-usa-une-escalade-numérique-majeure)
+  * [Darksword : un kit d'exploitation ios puissant utilisé par des acteurs étatiques](#darksword-un-kit-dexploitation-ios-puissant-utilisé-par-des-acteurs-étatiques)
+  * [Exploitation d'un zero-day cisco fmc par le groupe de ransomware interlock](#exploitation-dun-zero-day-cisco-fmc-par-le-groupe-de-ransomware-interlock)
+  * [Vitesse record de l'exploitation de l'ia : le cas langflow](#vitesse-record-de-lexploitation-de-lia--le-cas-langflow)
+  * [Silentconnect : un chargeur furtif distribuant screenconnect](#silentconnect--un-chargeur-furtif-distribuant-screenconnect)
+  * [Saisie par le fbi des domaines du groupe de hacktivistes handala](#saisie-par-le-fbi-des-domaines-du-groupe-de-hacktivistes-handala)
+  * [Faille critique ubiquiti unifi permettant la prise de contrôle de comptes](#faille-critique-ubiquiti-unifi-permettant-la-prise-de-contrôle-de-comptes)
+  * [Frappes iraniennes sur les infrastructures cloud : un tournant stratégique](#frappes-iraniennes-sur-les-infrastructures-cloud--un-tournant-stratégique)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel de la menace cyber est marqué par une intensification sans précédent des opérations d'espionnage d'État et de sabotage industriel, portées par les tensions géopolitiques au Moyen-Orient et en Europe de l'Est. L'émergence du kit d'exploitation "DarkSword" illustre la démocratisation de capacités offensives de niveau étatique, désormais partagées entre plusieurs groupes malveillants pour cibler massivement les écosystèmes mobiles iOS. Parallèlement, l'exploitation par le groupe Interlock d'une vulnérabilité zero-day sur les pare-feux Cisco souligne une tendance critique : les acteurs de ransomware n'attendent plus les correctifs pour frapper les infrastructures critiques, notamment le secteur de la santé. On observe également un déplacement de la menace vers les environnements de développement, avec l'utilisation ingénieuse de la blockchain Solana pour distribuer des charges utiles et des extensions IDE compromises. L'intelligence artificielle devient un vecteur double, facilitant à la fois le codage de malwares complexes et constituant une nouvelle surface d'attaque via les agents IA autonomes. Enfin, la professionnalisation de la fraude au remboursement démontre que la cybercriminalité de bas niveau s'industrialise en adoptant des modèles de service (SaaS) robustes. Pour les décideurs, la priorité absolue doit être la résilience des chaînes d'approvisionnement logicielles et le durcissement des accès à distance. La veille stratégique confirme que la défense périmétrique traditionnelle est insuffisante face à des acteurs capables de pré-positionner des accès des mois avant toute escalade cinétique.
+Le paysage actuel de la menace cyber est marqué par une hybridation croissante entre cyberespionnage étatique, activités de ransomware et tensions géopolitiques cinétiques. L'exploitation de vulnérabilités "Zero-Day" dans les infrastructures de gestion centrale, telles que Cisco FMC par le groupe Interlock, illustre une volonté d'accéder directement au cœur des réseaux d'entreprise pour maximiser l'impact. Parallèlement, l'émergence du kit DarkSword démontre que les capacités d'exploitation sophistiquées sur iOS ne sont plus l'apanage de quelques nations, mais circulent sur un marché secondaire accessible. L'utilisation massive et détournée d'outils de gestion à distance (RMM) comme ScreenConnect confirme une tendance lourde vers l'utilisation d'outils légitimes pour l'exfiltration et le contrôle ("Living off the Land"). On observe également une accélération fulgurante du cycle de militarisation des failles, notamment sur les outils d'IA comme Langflow, exploités en moins de 24 heures après divulgation. Sur le plan géopolitique, le conflit iranien franchit un seuil critique avec des attaques de drones physiques contre des centres de données AWS aux Émirats, remettant en cause la résilience territoriale du cloud. La saisie des infrastructures de Handala par le FBI souligne toutefois une réponse coordonnée des forces de l'ordre face aux opérations d'influence étrangères. Enfin, la persistance de l'espionnage russe via le ciblage systématique de suites de collaboration comme Zimbra reste une menace majeure pour les entités gouvernementales européennes.
+
 <br>
 <br>
 <div id="syntheses"></div>
@@ -32,16 +36,13 @@ Le paysage actuel de la menace cyber est marqué par une intensification sans pr
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| APT33 (IRGC) | Énergie, Défense (USA) | Password spraying, ciblage des systèmes de sécurité | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| APT55 (IRGC) | Énergie, Défense (USA) | Cyber-espionnage, collecte de cibles | [Euronews/Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| CyberAv3ngers | Infrastructures critiques (Eau, Énergie) | Exploitation de mots de passe par défaut sur les ICS | [Euronews/Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Handala Hack | Médical (Stryker), ICS, Énergie | Abus de Microsoft Intune (MDM wipe), défaçage | [The Register/Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Interlock | Santé, Éducation, Gouvernement | Exploitation de zero-day Cisco, double extorsion | [BleepingComputer](https://www.bleepingcomputer.com/news/security/interlock-ransomware-exploited-secure-fmc-flaw-in-zero-day-attacks-since-january/) |
-| Kimsuky | Divers | Malwares utilisant l'API Dropbox | [Reddit/IIJ](https://www.reddit.com/r/blueteamsec/comments/1rxe9cf/dropbox_api%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Bkimsuky%E3%81%AE%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2_kimsuky_malware/) |
-| MuddyWater (MOIS) | Finance, Aéroports, Défense (META region) | Opération Olalampo, courtier d'accès initiaux | [ESET/Halcyon/Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| ShinyHunters | Protection de l'identité (Aura) | Extorsion de données après vol par phishing | [BleepingComputer](https://www.bleepingcomputer.com/news/security/aura-confirms-data-breach-exposing-900-000-marketing-contacts/) |
-| UNC6353 (Russe) | Gouvernemental (Ukraine) | Watering hole, kit DarkSword/Coruna | [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/) |
-| UNC6748 | Snapchat users (Arabie Saoudite) | Phishing Snapchat, kit DarkSword | [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/) |
+| APT28 (Fancy Bear) | Gouvernements (Ukraine) | Exploitation Zimbra (XSS), JavaScript malveillant | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/russian-apt28-military-hackers-exploit-zimbra-flaw-in-ukrainian-govt-attacks/) |
+| Bluenoroff (Lazarus Group) | Crypto-monnaies | Compromission de laptop d'employé, vol de secrets de production | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/bitrefill-blames-north-korean-lazarus-group-for-cyberattack/) |
+| Handala (Hatef/Hamsa) | Santé, Infrastructure (Israël, USA) | Wiper massif via Microsoft Intune, opérations d'influence | [Flare](https://flare.io/learn/resources/blog/handala-seizure) |
+| Interlock | Éducation, Santé, Industrie | Exploitation Zero-day Cisco FMC, malware assisté par IA | [Security Affairs](https://securityaffairs.com/189636/malware/interlock-group-exploiting-the-cisco-fmc-flaw-cve-2026-20131-36-days-before-disclosure.html) |
+| Runningcrab | Documents militaires (Missiles) | Infostealer Speagle ciblant Cobra DocGuard | [Symantec](https://www.security.com/threat-intelligence/speagle-cobradocguard-infostealer) |
+| TeamPCP | Environnements Cloud / Kubernetes | Cryptojacking, mouvement latéral via API K8s | [Elastic](https://www.elastic.co/security-labs/teampcp-container-attack-scenario) |
+| UNC6353 | Utilisateurs iOS (Ukraine) | Kit d'exploitation DarkSword, vol de données mobiles | [Help Net Security](https://www.helpnetsecurity.com/2026/03/19/darksword-ios-exploit-iphone/) |
 
 <br/>
 <br/>
@@ -51,12 +52,10 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Civil / Télécoms | Conflit Iran-Israël-USA | Blackout internet quasi-total en Iran (1% de connectivité) depuis 19 jours. | [NetBlocks](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Énergie | Stratégie Nucléaire | Le retour stratégique à l'énergie nucléaire comme réponse à l'instabilité géopolitique des hydrocarbures. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/energy-security-lessons-oil-crises-and-nuclear-powers-strategic-return) |
-| Étatique | Guerre hybride Baltique | Campagne informationnelle russe autour d'une fictive "République populaire de Narva" en Estonie. | [IRIS](https://www.iris-france.org/la-republique-populaire-de-narva-lestonie-dans-le-viseur-de-la-russie/) |
-| Gouvernemental | Sanctions EU | L'UE sanctionne des acteurs chinois et iraniens pour des cyberattaques contre les infrastructures critiques. | [SecurityAffairs](https://securityaffairs.com/189628/security/u-s-cisa-adds-microsoft-sharepoint-and-zimbra-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| Nucléaire | Conflit Iran-Pologne | Enquête polonaise sur une tentative de hack du Centre national de recherche nucléaire liée à l'Iran. | [Axios/Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Sport | Droits de l'Homme | Publication d'une feuille de route européenne pour la protection des droits des athlètes. | [IRIS](https://www.iris-france.org/roadmap-for-the-protection-respect-and-promotion-of-the-human-rights-of-athletes-in-sport-in-europe-2/) |
+| Cloud / Énergie | Conflit Iranien | Frappes de drones Shahed contre des data centers AWS aux Émirats Arabes Unis et à Bahreïn. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/iranian-data-strikes-shake-global-digital-infrastructure) |
+| Défense | OPSEC Militaire | Le porte-avions Charles de Gaulle localisé en temps réel via l'application Strava d'un officier. | [Le Monde](https://www.lemonde.fr/pixels/article/2026/03/19/iphone-l-inquietante-proliferation-des-outils-concus-pour-pirater-les-appareils-d-apple_6672393_4408996.html) |
+| Diplomatie | Espionnage Russe | Vienne identifiée comme le hub majeur du renseignement électronique (SIGINT) russe en Europe ciblant l'OTAN. | [Security Affairs](https://securityaffairs.com/189653/intelligence/russia-establishes-vienna-as-key-western-spy-hub-targeting-nato.html) |
+| Maritime | Point stratégique | Blocage du détroit d'Ormuz par l'Iran, paralysant les marchés pétroliers et gaziers mondiaux. | [IRIS](https://www.iris-france.org/detroit-dormuz-un-point-passage-strategique-unique/) |
 
 <br/>
 <br/>
@@ -65,12 +64,9 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 
 ## Synthèse réglementaire et juridiques
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
-| Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
+| Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| UK Watchdog Tightens Cyber Incident Reporting | Yaminin Kahlia | 18/03/2026 | Royaume-Uni | FCA Reporting Rules | Nouvelles règles de signalement des incidents tiers et cyber sous 12 mois. | [DataBreaches.net](https://databreaches.net/2026/03/18/uk-watchdog-tightens-cyber-incident-reporting-rules-as-attacks-surge/) |
-| Five lessons from three years of DSA risk assessments | ECNL / EDRi | 18/03/2026 | Union Européenne | Digital Services Act (DSA) | Analyse des lacunes de transparence dans les rapports d'audit des VLOPs (Facebook, X, etc.). | [EDRi](https://edri.org/our-work/five-lessons-from-three-years-of-risk-assessments-under-the-digital-services-act/) |
-| Court rules in favour of Bits of Freedom | Bits of Freedom | 18/03/2026 | Pays-Bas | DSA / GDPR | Meta condamné à offrir un flux non profilé (chronologique) à ses utilisateurs. | [EDRi](https://edri.org/our-work/court-again-rules-in-favour-of-bits-of-freedom-freedom-of-choice-for-instagram-and-facebook-users-remains-intact/) |
-| Proofpoint Pursues FedRAMP High Authorization | Proofpoint | 18/03/2026 | USA | FedRAMP High | Processus d'autorisation pour les charges de travail fédérales à haut impact. | [Proofpoint](https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-pursues-fedramp-high-authorization-process-collaboration-security) |
+| The European Union – the media freedom hub | Commission Européenne | 19/03/2026 | Union Européenne | Action préparatoire PPPA-2026 | Financement de 3M€ pour soutenir les médias indépendants en exil (Russie, Biélorussie, Ukraine). | [Digital Strategy EC](https://digital-strategy.ec.europa.eu/en/funding/european-union-media-freedom-hub-0) |
 
 <br/>
 <br/>
@@ -80,27 +76,29 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Finance | Marquis | Ransomware en août 2025 via SonicWall. 672 000 personnes impactées, perturbations chez 74 banques. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/marquis-ransomware-gang-stole-data-of-672-000-people-in-2025-cyberattack/) |
-| Médical | Intuitive | Attaque par phishing ciblé sur un employé. Fuite de données clients et employés. | [SecurityAffairs](https://securityaffairs.com/189598/data-breach/robotic-surgery-firm-intuitive-reports-data-breach-after-targeted-phishing-attack.html) |
-| Santé | Royal Bahrain Hospital | Revendication de piratage par le groupe Payload Ransomware. | [SecurityAffairs](https://securityaffairs.com/189628/security/u-s-cisa-adds-microsoft-sharepoint-and-zimbra-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| Sécurité / Marketing | Aura | Phishing vocal (Vishing) exposant 900 000 contacts marketing. Données héritées d'une acquisition de 2021. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/aura-confirms-data-breach-exposing-900-000-marketing-contacts/) |
-| Social | Starbucks | Violation de données impactant 889 employés. | [SecurityAffairs](https://securityaffairs.com/189628/security/u-s-cisa-adds-microsoft-sharepoint-and-zimbra-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| E-commerce | Aura | Fuite de données exposant 900 000 contacts marketing. | [Mastodon](https://mastodon.thenewoil.org/@thenewoil/116258321254295063) |
+| E-commerce | Bitrefill | Vol de données clients (18 500 enregistrements) et détournement de portefeuilles crypto par Lazarus. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/bitrefill-blames-north-korean-lazarus-group-for-cyberattack/) |
+| Finance | Navia Benefit Solutions | Violation impactant 2,7 millions de personnes. Vol de noms, SSN et dates de naissance. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/navia-discloses-data-breach-impacting-27-million-people/) |
+| Santé | Deaconess Health System | Données de patients compromises via un fournisseur de dossiers médicaux tiers. | [DataBreaches.net](https://databreaches.net/2026/03/19/deaconess-patients-sensitive-data-stolen-in-vendor-breach/) |
+| Santé | Seoul National University Hospital | Fuite accidentelle de 16 000 dossiers de patients due à une erreur d'adresse email. | [DataBreaches.net](https://databreaches.net/2026/03/19/personal-information-of-16000-individuals-leaked-from-seoul-national-university-hospital/) |
+| Santé | UMMC (University of Mississippi) | Interruption de service prolongée et compromission de la plateforme Epic EMR. | [DataBreaches.net](https://databreaches.net/2026/03/19/ummc-continues-investigating-cyberattack-and-recovering-from-impact/) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2026-20131 | 10.0 | Cisco Secure Firewall (FMC) | Exécution de code à distance (RCE) via désérialisation | [The Hacker News](https://thehackernews.com/2026/03/interlock-ransomware-exploits-cisco-fmc.html) |
-| CVE-2026-32731 | 9.9 | ApostropheCMS | Zip Slip / Écriture de fichier arbitraire | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-32731) |
-| CVE-2026-32746 | 9.8 | GNU InetUtils telnetd | Buffer Overflow / RCE en tant que root | [SecurityAffairs](https://securityaffairs.com/189620/hacking/researchers-warn-of-unpatched-critical-telnetd-flaw-affecting-all-versions.html) |
-| CVE-2026-3564 | Critiques | ScreenConnect | Défaut de vérification de signature cryptographique | [BleepingComputer](https://www.bleepingcomputer.com/news/security/connectwise-patches-new-flaw-allowing-screenconnect-hijacking/) |
-| CVE-2026-20963 | 8.8 | MS SharePoint | Désérialisation de données non fiables / RCE | [CISA/SecurityAffairs](https://securityaffairs.com/189628/security/u-s-cisa-adds-microsoft-sharepoint-and-zimbra-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-31998 | 8.3 | OpenClaw | Contournement d'autorisation dans Synology Chat | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-31998) |
-| CVE-2026-3888 | 7.8 | Ubuntu Desktop 24.04+ | Escalade de privilèges locaux (LPE) vers root | [Qualys/SecurityAffairs](https://securityaffairs.com/189614/security/cve-2026-3888-ubuntu-desktop-24-04-vulnerable-to-root-exploit.html) |
-| CVE-2026-20643 | - | WebKit (Safari) | Contournement de la Same Origin Policy (SOP) | [SOC Prime](https://socprime.com/blog/cve-2026-20643-vulnerability/) |
+| CVE-2026-22557 | 10.0 | Ubiquiti UniFi Network App | Path Traversal / Account Takeover | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-unifi-flaw-that-may-enable-account-takeover/) |
+| CVE-2026-20131 | 10.0 | Cisco Secure FMC | Insecure Deserialization (RCE) | [Security Affairs](https://securityaffairs.com/189682/security/u-s-cisa-adds-a-flaw-in-cisco-fmc-and-cisco-scc-firewall-management-to-its-known-exploited-vulnerabilities-catalog.html) |
+| CVE-2026-32767 | 9.8 | SiYuan | Authorization Bypass / SQL Injection | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-32767) |
+| CVE-2026-32817 | 9.1 | Admidio | Missing Authorization / CSRF | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-32817) |
+| CVE-2026-33017 | 8.8 | Langflow (IA) | Unauthenticated RCE | [Sysdig](https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours) |
+| CVE-2026-21570 | 8.6 | Atlassian Bamboo | Remote Code Execution | [SecurityOnline](https://securityonline.info/high-severity-rce-flaw-atlassian-bamboo-data-center-cve-2026-21570/) |
+| CVE-2025-32975 | 8.4 | Quest KACE SMA | Authentication Bypass | [SecurityOnline](https://securityonline.info/critical-quest-kace-flaw-exploited-network-takeover-cve-2025-32975/) |
+| CVE-2026-33001 | 7.8 | Jenkins | Path Traversal / Symbolic Link | [SecurityOnline](https://securityonline.info/pipeline-poison-critical-jenkins-vulnerabilities-rce-cve-2026-33001/) |
 
 <br/>
 <br/>
@@ -109,11 +107,13 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| DarkSword: iOS Exploit Chain Adopted by Multiple Threat Actors | Menace critique ciblant la mobilité, exploitant des vulnérabilités zero-day. | [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/) |
-| Interlock Ransomware Exploits Cisco FMC Zero-Day | Utilisation de zero-day par un groupe de ransomware, ciblage critique. | [The Hacker News](https://thehackernews.com/2026/03/interlock-ransomware-exploits-cisco-fmc.html) |
-| Monitoring Cyberattacks Directly Linked to US-Israel-Iran Conflict | Synthèse complète d'un conflit cyber-étatique majeur actuel. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| SilentConnect Delivers ScreenConnect | Analyse d'un nouveau loader ciblant les outils RMM légitimes. | [Elastic](https://www.elastic.co/security-labs/silentconnect-delivers-screenconnect) |
-| Windsurf IDE Extension Drops Malware via Solana | Innovation technique utilisant une blockchain pour les infrastructures de commande. | [Bitdefender](https://www.bitdefender.com/en-us/blog/labs/windsurf-extension-malware-solana) |
+| DarkSword emerges as powerful iOS exploit tool | Menace sophistiquée contre les terminaux mobiles, ciblage géopolitique et financier. | [Security Affairs](https://securityaffairs.com/189662/hacking/darksword-emerges-as-powerful-ios-exploit-tool-in-global-attacks.html) |
+| FBI seizes Handala data leak site | Saisie majeure d'infrastructure d'un groupe lié à l'Iran après l'attaque Stryker. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/fbi-seizes-handala-data-leak-site-after-stryker-cyberattack/) |
+| Interlock group exploiting the CISCO FMC flaw | Utilisation d'un zero-day critique par un groupe de ransomware, impact majeur sur l'infra. | [Security Affairs](https://securityaffairs.com/189636/malware/interlock-group-exploiting-the-cisco-fmc-flaw-cve-2026-20131-36-days-before-disclosure.html) |
+| Iranian Data Strikes Shake Global Digital Infrastructure | Passage à des cyberattaques cinétiques contre des datacenters cloud physiques. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/iranian-data-strikes-shake-global-digital-infrastructure) |
+| Langflow AI pipelines compromised in 20 hours | Démonstration de la vitesse d'exploitation des nouvelles technologies (IA/RAG). | [Sysdig](https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours) |
+| Max severity Ubiquiti UniFi flaw | Score CVSS 10 sur un outil de gestion réseau centralisé ubiquitaire. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-unifi-flaw-that-may-enable-account-takeover/) |
+| SILENTCONNECT Delivers ScreenConnect | Analyse technique d'un nouveau chargeur utilisant des techniques d'évasion avancées. | [Elastic](https://www.elastic.co/security-labs/silentconnect-delivers-screenconnect) |
 
 <br/>
 <br/>
@@ -122,112 +122,182 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| Brian Cute Appointed President and CEO of GCA | Actualité purement institutionnelle sans analyse de menace. | [Global Cyber Alliance](https://globalcyberalliance.org/brian-cute-president-ceo/) |
-| Linux & Cloud Detection Engineering - Getting Started with D4C | Contenu éducatif/tutoriel produit, pas une menace active. | [Elastic](https://www.elastic.co/security-labs/getting-started-with-defend-for-containers) |
-| Observability Pipeline: Managing Telemetry at Scale | Article promotionnel sur l'architecture de données, pas de menace. | [SOC Prime](https://socprime.com/blog/what-is-an-observability-pipeline/) |
-| Transparent COM instrumentation for malware analysis | Présentation d'un outil d'analyse open-source (DispatchLogger). | [Cisco Talos](https://blog.talosintelligence.com/transparent-com-instrumentation-for-malware-analysis/) |
+| 7 Ways to Prevent Privilege Escalation | Article de conseil/marketing plutôt que d'actualité cyber. | [Specops](https://www.bleepingcomputer.com/news/security/7-ways-to-prevent-privilege-escalation-via-password-resets/) |
+| Detecting Time Manipulation in Windows | Guide pédagogique sur la forensique. | [CyberEngage](https://www.cyberengage.org/post/detecting-time-manipulation-in-windows-you-don-t-always-need-full-forensics) |
+| ISC Stormcast | Bulletin de podcast trop généraliste sans détails techniques spécifiques nouveaux. | [SANS ISC](https://isc.sans.edu/podcastdetail/9858) |
+| Navia Benefit Solutions Breach | Pure notification de violation de données (déjà synthétisée). | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/navia-discloses-data-breach-impacting-27-million-people/) |
 
 <br>
-<br/>
+<br>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="darksword-un-kit-dexploitation-ios-sophistiqué-utilisé-par-plusieurs-acteurs"></div>
+<div id="darksword-un-kit-dexploitation-ios-puissant-utilisé-par-des-acteurs-étatiques"></div>
 
-## [DarkSword: iOS Exploit Chain Adopted by Multiple Threat Actors]
-Découvert par Google, Lookout et iVerify, DarkSword est un kit d'exploitation iOS utilisant six vulnérabilités, dont quatre zero-days au moment de leur exploitation. Il cible les versions iOS 18.4 à 18.7 et a été utilisé contre des victimes en Ukraine, Turquie, Malaisie et Arabie Saoudite. Trois familles de malwares (GHOSTBLADE, GHOSTKNIFE, GHOSTSABER) ont été identifiées, chacune étant capable d'extraire une quantité massive de données sensibles (photos, messages, localisation, portefeuilles crypto). Le groupe russe UNC6353 l'utilise activement via des attaques de type "watering hole" sur des sites gouvernementaux ukrainiens. Le kit se distingue par une utilisation exclusive de JavaScript, évitant ainsi les protections natives d'Apple. Une fois les données exfiltrées, le malware s'autodétruit pour compliquer l'analyse forensique.
+## Darksword : un kit d'exploitation ios puissant utilisé par des acteurs étatiques
+DarkSword est un nouveau kit d'exploitation ciblant les versions iOS 18.4 à 18.7, découvert lors d'attaques par point deau contre des sites ukrainiens. Il utilise une chaîne de six vulnérabilités, dont trois zero-days, pour obtenir un accès total aux appareils Apple. Le kit est conçu pour une exfiltration rapide ("hit-and-run") des données sensibles : identifiants, galeries photos, messages et portefeuilles de crypto-monnaies. Les chercheurs attribuent son utilisation au groupe UNC6353 (lié à la Russie) ainsi qu'à des clients de la société de surveillance turque PARS Defense. Contrairement aux spywares traditionnels, DarkSword nettoie ses traces et s'auto-supprime quelques minutes après l'infection. Sa prolifération suggère un marché secondaire actif où des outils de cyberespionnage de haut niveau sont vendus à divers acteurs.
 
-**Analyse de l'impact** : Impact critique sur la confidentialité des communications et des actifs financiers (cryptomonnaies) pour les utilisateurs à haut risque. La sophistication et la prolifération du kit entre divers acteurs suggèrent l'existence d'un marché de cyber-espionnage commercial très actif.
+**Analyse de l'impact** : Compromission complète des flottes mobiles iOS non à jour. Risque majeur d'exfiltration de secrets industriels, financiers et gouvernementaux sur des terminaux personnels ou professionnels.
 
 **Recommandations** : 
-* Mettre à jour immédiatement les appareils iOS vers la version 26.3 ou supérieure.
-* Activer le "Lockdown Mode" (Mode Isolement) pour les profils à risque (journalistes, officiels, diplomates).
-* Surveiller les requêtes réseau vers les domaines identifiés comme `cdncounter[.]net` ou `snapshare[.]chat`.
-* Utiliser des solutions de Mobile Threat Defense (MTD) pour détecter les anomalies système (évasion de bac à sable).
+* Mettre à jour immédiatement les appareils iOS vers la version 18.7.6 ou iOS 26.3.1.
+* Pour les profils à risque, activer le "Lockdown Mode" (Mode Isolement).
+* Surveiller les connexions réseau sortantes vers des domaines suspects comme `cdncounter[.]net`.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UNC6353, UNC6748, PARS Defense |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.001: User Execution (Phishing/Link) <br/> * T1068: Exploitation for Privilege Escalation <br/> * T1539: Steal Web Session Cookie |
-| Observables & Indicateurs de compromission | ```* static.cdncounter[.]net * snapshare[.]chat * sahibndn[.]io * e5.malaymoil[.]com * 2e5a56beb63f21d9347310412ae6efb29fd3db2d3a3fc0798865a29a3c578d35 (GHOSTBLADE)``` |
+| Groupe ou acteur malveillant | UNC6353, clients de PARS Defense |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1204.001: User Execution: Malicious Link <br/> • T1404: Exploitation for Privilege Escalation |
+| Observables & Indicateurs de compromission | • Domain: cdncounter[.]net <br/> • Script: rce_loader.js |
 
 ### Source (url) du ou des articles
-* https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain/
-* https://www.lookout.com/blog/darksword
-* https://go.theregister.com/feed/www.theregister.com/2026/03/18/darksword_exploit_kit_steals_iphone/
+* https://securityaffairs.com/189662/hacking/darksword-emerges-as-powerful-ios-exploit-tool-in-global-attacks.html
+* https://www.helpnetsecurity.com/2026/03/19/darksword-ios-exploit-iphone/
+* https://www.lemonde.fr/pixels/article/2026/03/19/iphone-l-inquietante-proliferation-des-outils-concus-pour-pirater-les-appareils-d-apple_6672393_4408996.html
 
 <br>
-<br/>
-<div id="interlock-ransomware-exploitation-de-vulnérabilités-zero-day-cisco-secure-fmc"></div>
+<br>
 
-## [Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131]
-L'acteur de ransomware Interlock a exploité une vulnérabilité critique (CVE-2026-20131) dans les pare-feux Cisco plus de 30 jours avant sa divulgation publique. Cette faille de désérialisation permet une exécution de code arbitraire avec des privilèges root, sans authentification. Une erreur de configuration d'un serveur des attaquants a permis à Amazon de découvrir l'intégralité de leur boîte à outils post-exploitation. Cette trousse comprend des scripts de reconnaissance PowerShell massifs, des chevaux de Troie personnalisés en JavaScript et Java, ainsi que l'abus de logiciels légitimes comme ScreenConnect ou Volatility. Le groupe cible prioritairement le secteur médical, exerçant une pression maximale par la menace de sanctions réglementaires en plus de l'extorsion de données.
+<div id="exploitation-dun-zero-day-cisco-fmc-par-le-groupe-de-ransomware-interlock"></div>
 
-**Analyse de l'impact** : Menace directe sur la continuité des soins et la sécurité des données médicales. L'exploitation réussie d'un zero-day sur un équipement périmétrique critique comme un firewall FMC rend les systèmes internes vulnérables sans préavis.
+## Exploitation d'un zero-day cisco fmc par le groupe de ransomware interlock
+Le groupe de ransomware Interlock a exploité une vulnérabilité zero-day critique (CVE-2026-20131) dans Cisco Secure Firewall Management Center (FMC) pendant 36 jours avant sa divulgation publique. La faille, de type désérialisation Java non sécurisée, permet à un attaquant distant non authentifié d'exécuter du code arbitraire avec les privilèges root. Interlock a utilisé cet accès pour déployer des scripts PowerShell cartographiant les réseaux et des chevaux de Troie d'accès distant (RAT) personnalisés. Le groupe a également abusé d'outils légitimes comme ScreenConnect et Volatility pour maintenir sa persistance et exfiltrer des données. Cette attaque démontre l'évolution d'Interlock, qui utilise désormais des malware assistés par IA ("Slopoly") et des exploits sophistiqués contre les infrastructures de sécurité. Les secteurs de l'éducation et de la santé ont été particulièrement ciblés.
+
+**Analyse de l'impact** : Risque de prise de contrôle totale de la politique de sécurité réseau d'une organisation. Facilitation des mouvements latéraux et du déploiement de ransomwares à grande échelle.
 
 **Recommandations** : 
-* Appliquer les patchs Cisco publiés le 4 mars 2026 immédiatement sur les instances FMC.
-* Auditer les logs système pour détecter des requêtes HTTP PUT inhabituelles ou des déploiements d'exécutables ELF.
-* Vérifier la légitimité de toute installation de ScreenConnect dans l'environnement.
-* Restreindre l'accès à l'interface de gestion FMC aux réseaux internes de confiance uniquement.
+* Appliquer les correctifs Cisco publiés début mars 2026 immédiatement.
+* Vérifier les logs d'accès HTTP pour des requêtes Java sérialisées suspectes vers l'interface de gestion FMC.
+* Isoler les interfaces d'administration derrière un VPN et restreindre l'accès à des adresses IP de confiance.
 
 | Indicateurs | Descriptions |
 |:---|:---|
 | Groupe ou acteur malveillant | Interlock |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1059.001: PowerShell <br/> * T1021.001: Remote Desktop Protocol |
-| Observables & Indicateurs de compromission | ```* Utilisation d'un webshell Java résident en mémoire * Purge des logs *.log toutes les 5 minutes via cron * Scripts d'énumération compressant les données en ZIP par hôte``` |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1210: Exploitation of Remote Services <br/> • T1027.002: Software Packing <br/> • T1219: Remote Access Software |
+| Observables & Indicateurs de compromission | • CVE: CVE-2026-20131 <br/> • Malware: Slopoly |
 
 ### Source (url) du ou des articles
-* https://thehackernews.com/2026/03/interlock-ransomware-exploits-cisco-fmc.html
-* https://www.bleepingcomputer.com/news/security/interlock-ransomware-exploited-secure-fmc-flaw-in-zero-day-attacks-since-january/
-* https://cybersecuritynews.com/cisco-firewall-0-day-ransomware/
+* https://securityaffairs.com/189682/security/u-s-cisa-adds-a-flaw-in-cisco-fmc-and-cisco-scc-firewall-management-to-its-known-exploited-vulnerabilities-catalog.html
+* https://securityaffairs.com/189636/malware/interlock-group-exploiting-the-cisco-fmc-flaw-cve-2026-20131-36-days-before-disclosure.html
 
 <br>
-<br/>
-<div id="silentconnect-et-windsurf-le-ciblage-des-outils-de-développement-sintensifie"></div>
+<br>
 
-## [Windsurf IDE Extension Drops Malware via Solana Blockchain]
-Une nouvelle campagne cible les développeurs via des extensions malveillantes pour l'IDE Windsurf (comparable à VS Code). L'extension, nommée `reditorsupporter.r-vscode`, récupère son code malveillant directement depuis les transactions de la blockchain Solana pour contourner les outils de détection classiques. Le malware évite délibérément les systèmes russes et se concentre sur l'exfiltration de données de navigation (mots de passe, cookies de session) depuis Chrome. Parallèlement, le chargeur "SilentConnect" utilise des techniques avancées comme le "PEB masquerading" (se déguiser en processus légitime `winhlp32.exe`) pour déployer discrètement l'outil RMM ScreenConnect via des liens Google Drive.
+<div id="vitesse-record-de-lexploitation-de-lia--le-cas-langflow"></div>
 
-**Analyse de l'impact** : Risque élevé de compromission de la chaîne d'approvisionnement logicielle. Le ciblage des développeurs permet d'accéder à des secrets d'API, des clés de production et des environnements privilégiés.
+## Vitesse record de l'exploitation de l'ia : le cas langflow
+Moins de 20 heures après la publication de l'avis de sécurité pour CVE-2026-33017, une faille d'exécution de code à distance (RCE) dans Langflow, les premières tentatives d'exploitation ont été observées. Langflow est un framework visuel populaire pour construire des agents d'IA et des pipelines RAG (Retrieval-Augmented Generation). L'attaquant peut envoyer une simple requête HTTP POST contenant du code Python arbitraire pour l'exécuter sur le serveur. Sysdig a détecté des scans automatisés utilisant l'outil Nuclei pour exfiltrer des variables d'environnement et des clés d'API. Des scripts personnalisés ont également été vus tentant de lire `/etc/passwd` et de déployer des "payloads" de second stade. Cette rapidité opérationnelle sans preuve de concept (PoC) publique préalable souligne que les attaquants militarisent désormais les failles IA de manière structurelle.
+
+**Analyse de l'impact** : Compromission de la chaîne d'approvisionnement logicielle via le vol de clés d'accès aux modèles de langage (LLM) et aux bases de données vectorielles.
 
 **Recommandations** : 
-* Interdire l'installation d'extensions IDE non vérifiées ou provenant de sources inconnues.
-* Surveiller l'activité réseau liée aux API Solana (api.mainnet-beta.solana[.]com) sur les postes de développement.
-* Implémenter le "Multi-Admin Approval" pour les commandes critiques sur les outils MDM/RMM.
-* Chasser les anomalies dans le Process Environment Block (PEB) via des outils EDR avancés.
+* Mettre à jour Langflow vers une version corrigée ou désactiver l'endpoint `/api/v1/build_public_tmp`.
+* Restreindre l'accès réseau aux instances Langflow via un proxy inverse avec authentification.
+* Auditer et faire pivoter toutes les clés d'API et secrets stockés dans les variables d'environnement des conteneurs Langflow.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non mentionné (exclusion des cibles russes suggérée) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1584.007: Compromise Infrastructure: Serverless/Blockchain <br/> * T1564: Hide Artifacts <br/> * T1534: Internal Spearphishing |
-| Observables & Indicator of Compromise | ```* windsurf.exe * UpdateApp (Tâche planifiée) * bumptobabeco[.]top * hxxps://drive.google[.]com/uc?id=1ohZxxT-h7xWVgclB1kvpvwkF0AGWoUtq``` |
+| Groupe ou acteur malveillant | Inconnu (infrastructure Nuclei identifiée) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1190: Exploit Public-Facing Application <br/> • T1552.001: Credentials in Files |
+| Observables & Indicateurs de compromission | • IP: 173.212.205[.]251 <br/> • IP: 77.110.106[.]154 |
 
 ### Source (url) du ou des articles
-* https://www.bitdefender.com/en-us/blog/labs/windsurf-extension-malware-solana
+* https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours
+
+<br>
+<br>
+
+<div id="silentconnect--un-chargeur-furtif-distribuant-screenconnect"></div>
+
+## Silentconnect : un chargeur furtif distribuant screenconnect
+Elastic Security Labs a découvert un nouveau chargeur .NET nommé SilentConnect, utilisé dans des campagnes de phishing pour déployer l'outil RMM ScreenConnect. L'infection commence par un téléchargement de fichier VBScript après avoir passé un CAPTCHA Cloudflare malveillant. Le malware utilise des techniques d'évasion sophistiquées comme le masquage du bloc d'environnement de processus (PEB) pour se faire passer pour `winhlp32.exe`. Il inclut également des mécanismes de contournement de l'UAC et ajoute des exclusions à Microsoft Defender pour éviter la détection. Une fois installé, ScreenConnect permet à l'attaquant un contrôle direct par clavier ("hands-on-keyboard") de la machine victime. L'infrastructure d'hébergement s'appuie sur Google Drive et Cloudflare R2 pour gagner en crédibilité et contourner les filtres réseau.
+
+**Analyse de l'impact** : Accès persistant et non autorisé à des terminaux d'entreprise sous couvert d'outils d'administration légitimes. Risque élevé de déploiement de ransomwares ou d'exfiltration de données massives.
+
+**Recommandations** : 
+* Auditer systématiquement l'utilisation des outils RMM (ScreenConnect, AnyDesk, etc.) dans l'environnement.
+* Bloquer les exécutions PowerShell utilisant des politiques de contournement (`-ExecutionPolicy Bypass`) sans signature valide.
+* Surveiller les modifications suspectes du PEB et les ajouts d'exclusions via WMI dans Microsoft Defender.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non applicable (campagne non attribuée) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1059.001: PowerShell <br/> • T1562.001: Disable or Modify Tools <br/> • T1027: Obfuscated Files or Information |
+| Observables & Indicateurs de compromission | • Hash: 8bab731ac2f7d015b81c2002f518fff06ea751a34a711907e80e98cf70b557db <br/> • Domain: bumptobabeco[.]top |
+
+### Source (url) du ou des articles
 * https://www.elastic.co/security-labs/silentconnect-delivers-screenconnect
 
 <br>
-<br/>
-<div id="cyber-conflit-iran-israël-usa-une-escalade-numérique-majeure"></div>
+<br>
 
-## [Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict]
-Le conflit au Moyen-Orient a généré une période de cyberguerre d'une intensité record. Les groupes liés au CGRI (CyberAv3ngers, APT33) ciblent les systèmes industriels américains (eau, électricité) en exploitant des mots de passe par défaut. L'entreprise médicale Stryker subit une interruption majeure de ses systèmes de commande suite à une attaque par déni de service de type "wipe" via MDM. MuddyWater agit comme un courtier d'accès pour des opérations destructrices en Europe et aux États-Unis. Un nouveau ransomware, Sicarii, a été identifié : il détruit les données de manière irréversible à cause d'une faille volontaire de gestion de clés, rendant tout paiement inutile.
+<div id="saisie-par-le-fbi-des-domaines-du-groupe-de-hacktivistes-handala"></div>
 
-**Analyse de l'impact** : Risque systémique pour les infrastructures critiques mondiales. La collaboration entre hacktivistes étatiques et cybercriminels russes augmente la portée et la toxicité des attaques.
+## Saisie par le fbi des domaines du groupe de hacktivistes handala
+Le FBI a saisi plusieurs domaines appartenant au groupe de hacktivistes Handala, lié à l'Iran, suite à une attaque cybernétique dévastatrice contre le géant médical Stryker. Handala avait réussi à compromettre un compte administrateur et à utiliser Microsoft Intune pour lancer une commande de réinitialisation d'usine ("wipe") sur environ 80 000 appareils, incluant des ordinateurs et des téléphones mobiles d'employés. Les domaines saisis, `handala-redwanted[.]to` et `handala-hack[.]to`, servaient à la publication de revendications et de données exfiltrées. Bien que cette saisie perturbe leur canal de distribution, le groupe a déjà annoncé sur Telegram la création d'une nouvelle infrastructure plus résiliente. Cette opération montre que le groupe utilise désormais des méthodes destructrices dépassant le simple cadre régional pour cibler des infrastructures critiques aux États-Unis.
+
+**Analyse de l'impact** : Désorganisation massive des opérations de santé et perte potentielle de données critiques sur les terminaux finaux.
 
 **Recommandations** : 
-* Changer immédiatement tous les mots de passe par défaut sur les systèmes OT/ICS.
-* Isoler physiquement ou via VLAN les systèmes de sécurité des processus industriels.
-* Réaliser des sauvegardes "Air-gapped" hors ligne face au risque de malwares de type wiper/Sicarii.
-* Effectuer une chasse aux menaces (Threat Hunting) sur les backdoors Dindoor et Fakeset.
+* Sécuriser et durcir les accès à Microsoft Intune en limitant les privilèges de "Wipe" et en exigeant une authentification multifacteur (MFA) forte.
+* Réviser les politiques de délégation administrative au sein d'Azure AD / Entra ID.
+* Surveiller les canaux Telegram de menace pour anticiper les nouveaux domaines de fuite.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | CyberAv3ngers, APT33, MuddyWater, Sicarii Group |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0806: External Network Boundaries <br/> * T1485: Data Destruction <br/> * T1489: Service Stop |
-| Observables & Indicateurs de compromission | ```* Malware Sicarii * Backdoors Dindoor/Fakeset * Activité runtime Deno inhabituelle``` |
+| Groupe ou acteur malveillant | Handala (Hatef / Hamsa) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1078: Valid Accounts <br/> • T1485: Data Destruction <br/> • T1071.001: Web Protocols |
+| Observables & Indicateurs de compromission | • Domain: handala-hack[.]to <br/> • Domain: handala-redwanted[.]to |
 
 ### Source (url) du ou des articles
-* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
-* https://securityaffairs.com/189604/cyber-warfare-2/tracking-the-iran-war-a-month-of-escalation-and-regional-impact.html
+* https://www.bleepingcomputer.com/news/security/fbi-seizes-handala-data-leak-site-after-stryker-cyberattack/
+* https://flare.io/learn/resources/blog/handala-seizure
+
+<br>
+<br>
+
+<div id="faille-critique-ubiquiti-unifi-permettant-la-prise-de-contrôle-de-comptes"></div>
+
+## Faille critique ubiquiti unifi permettant la prise de contrôle de comptes
+Ubiquiti a corrigé deux vulnérabilités majeures dans son application UniFi Network, dont une faille de criticité maximale (CVE-2026-22557). Cette vulnérabilité de traversée de chemin ("Path Traversal") permet à un attaquant distant sans privilèges d'accéder aux fichiers du système sous-jacent et de détourner des comptes utilisateurs sans interaction. Une seconde faille d'injection NoSQL permet également une escalade de privilèges pour les utilisateurs déjà authentifiés. Ces outils étant centraux pour la gestion de points d'accès Wi-Fi et de routeurs, leur compromission permet souvent de constituer des botnets massifs, comme ceux précédemment démantelés par le FBI et attribués au renseignement militaire russe (GRU).
+
+**Analyse de l'impact** : Risque de compromission totale des infrastructures réseau locales et distantes gérées via UniFi. Potentiel de surveillance du trafic et de pivotement vers d'autres segments de réseau.
+
+**Recommandations** : 
+* Mettre à jour UniFi Network Application vers la version 10.1.89 ou supérieure.
+* Ne pas exposer l'interface de gestion UniFi directement sur Internet.
+* Effectuer un audit des comptes administrateurs créés récemment pour détecter une éventuelle compromission passée.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non mentionné (historiquement exploité par le GRU) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1068: Exploitation for Privilege Escalation <br/> • T1078: Valid Accounts |
+| Observables & Indicateurs de compromission | • CVE: CVE-2026-22557 <br/> • CVE: CVE-2026-22558 |
+
+### Source (url) du ou des articles
+* https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-unifi-flaw-that-may-enable-account-takeover/
+* https://securityaffairs.com/189689/security/critical-ubiquiti-unifi-unifi-security-flaw-allows-potential-account-hijacking.html
+
+<br>
+<br>
+
+<div id="frappes-iraniennes-sur-les-infrastructures-cloud-un-tournant-strategique"></div>
+
+## Frappes iraniennes sur les infrastructures cloud : un tournant stratégique
+L'Iran a initié une nouvelle doctrine de ciblage en frappant physiquement des centres de données AWS aux Émirats Arabes Unis à l'aide de drones Shahed. Cette escalade cinétique vise à identifier et perturber le rôle de ces infrastructures dans le support des capacités militaires et de renseignement ennemies. Bien que le cloud soit souvent perçu comme immatériel, ces frappes soulignent la vulnérabilité physique des régions de disponibilité. L'impact a causé des interruptions significatives dans les services financiers et d'entreprise du Golfe. Cette stratégie s'inscrit dans une volonté iranienne de rétablir une dissuasion asymétrique en imposant des coûts économiques et physiques directs aux alliés des États-Unis. L'incident remet en question les concepts de souveraineté numérique basés sur la localisation stricte des données dans des zones de conflit potentiel.
+
+**Analyse de l'impact** : Rupture de la confiance dans la disponibilité des services cloud régionaux. Nécessité pour les organisations de repenser leurs plans de continuité d'activité (PCA) multi-régionaux.
+
+**Recommandations** : 
+* Évaluer la dépendance critique aux datacenters situés dans des zones géopolitiques instables.
+* Implémenter des stratégies de basculement ("failover") vers des régions cloud géographiquement éloignées.
+* Traiter les infrastructures cloud comme des actifs stratégiques nécessitant une protection physique renforcée au même titre que les réseaux d'énergie.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | IRGC (Garde de la Révolution Iranienne) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | Non applicable (Attaque cinétique) |
+| Observables & Indicateurs de compromission | Drones Shahed, ciblage AWS UAE |
+
+### Source (url) du ou des articles
+* https://www.rusi.org/explore-our-research/publications/commentary/iranian-data-strikes-shake-global-digital-infrastructure
