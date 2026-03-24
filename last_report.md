@@ -9,20 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [VoidStealer : une nouvelle technique de contournement de l'A-BE de Chrome](#voidstealer--une-nouvelle-technique-de-contournement-de-la-be-de-chrome)
-  * [Campagne de phishing russe ciblant WhatsApp et Signal](#campagne-de-phishing-russe-ciblant-whatsapp-et-signal)
-  * [Vulnérabilité critique RCE dans Oracle Identity Manager](#vulnerabilite-critique-rce-dans-oracle-identity-manager)
-  * [Compromission massive de l'organisation GitHub d'Aqua Security par TeamPCP](#compromission-massive-de-lorganisation-github-daqua-security-par-teampcp)
-  * [DarkSword : un kit d'exploitation iOS sophistiqué utilisé à l'échelle mondiale](#darksword--un-kit-dexploitation-ios-sophistique-utilise-a-lechelle-mondiale)
-  * [Alerte critique de Rockwell Automation sur les contrôleurs industriels](#alerte-critique-de-rockwell-automation-sur-les-controleurs-industriels)
-  * [Prise de contrôle totale via les commutateurs IP-KVM non sécurisés](#prise-de-controle-totale-via-les-commutateurs-ip-kvm-non-securises)
+  * [attaque de la chaîne d'approvisionnement d'aqua security par teampcp](#attaque-de-la-chaine-dapprovisionnement-daqua-security-par-teampcp)
+  * [compromission de crunchyroll via un prestataire bpo](#compromission-de-crunchyroll-via-un-prestataire-bpo)
+  * [m-trends 2026 : le panorama des menaces de mandiant](#m-trends-2026-le-panorama-des-menaces-de-mandiant)
+  * [suivi des cyberattaques liées au conflit us-israel-iran](#suivi-des-cyberattaques-liées-au-conflit-us-israel-iran)
+  * [le retour de la plateforme tycoon2fa après son démantèlement](#le-retour-de-la-plateforme-tycoon2fa-après-son-démantèlement)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel des cybermenaces est marqué par une sophistication accrue des techniques d'exfiltration et de persistance. L'émergence de VoidStealer démontre une capacité d'innovation technique notable, utilisant des points d'arrêt matériels pour neutraliser les protections récentes de Google Chrome. Parallèlement, la sécurité de la chaîne d'approvisionnement logicielle reste une vulnérabilité majeure, comme l'illustre la compromission d'Aqua Security via des jetons CI/CD dérobés. Les infrastructures critiques sont sous une pression constante, Rockwell Automation appelant à une déconnexion immédiate des automates exposés pour contrer des activités adverses ciblées. Sur le plan de l'espionnage, le kit DarkSword révèle une utilisation intensive de chaînes d'exploitation iOS multi-villes par des acteurs étatiques et commerciaux. Les services de renseignement russes intensifient leurs efforts contre les communications chiffrées (Signal, WhatsApp) des officiels et journalistes par le biais de l'ingénierie sociale. Enfin, les vulnérabilités critiques dans les solutions de gestion d'identité (Oracle) soulignent l'importance vitale de la gestion des correctifs hors cycle pour les actifs "joyaux de la couronne". Les décideurs doivent prioriser l'isolation des réseaux industriels et le renforcement de la sécurité des environnements de développement DevOps.
+Le paysage cyber de ce premier trimestre 2026 est marqué par une hybridation croissante entre conflits cinétiques et opérations numériques de haute intensité, particulièrement dans le triangle US-Israël-Iran. Les acteurs étatiques comme Handala Hack et TeamPCP industrialisent le sabotage via des outils de gestion cloud (Microsoft Intune) et des malwares destructeurs de type wiper. Parallèlement, la menace sur la chaîne d'approvisionnement atteint un point critique, illustrée par la compromission répétée d'Aqua Security et l'exploitation de prestataires de services (BPO) pour atteindre des millions d'utilisateurs. Mandiant souligne une accélération spectaculaire des phases d'attaque : le délai moyen de passage entre l'accès initial et l'action malveillante est tombé à seulement 22 secondes. L'identité numérique devient le pivot central des défenses, tandis que les attaquants ciblent désormais les infrastructures de sauvegarde pour empêcher toute restauration. L'émergence de plateformes de "Phishing-as-a-Service" résilientes comme Tycoon2FA démontre l'inefficacité relative des démantèlements d'infrastructure sans arrestations physiques. Enfin, l'intégration de l'IA générative dans les processus de détection et de réponse devient une nécessité opérationnelle pour faire face à l'automatisation des offensives.
 
 <br>
 <br>
@@ -36,14 +34,11 @@ Le paysage actuel des cybermenaces est marqué par une sophistication accrue des
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Interlock | Firewalls d'entreprise | Exploitation de vulnérabilités Zero-day (Cisco FMC) | [Help Net Security](https://www.helpnetsecurity.com/2026/03/22/week-in-review-screenconnect-servers-open-to-attack-exploited-microsoft-sharepoint-flaw/) |
-| MuddyWater (Iran) | Diplomatie, Énergie, Finance | Exploitation de vulnérabilités de code injection (Laravel) | [Security Affairs](https://securityaffairs.com/189776/security/u-s-cisa-adds-apple-laravel-livewire-and-craft-cms-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| Renseignement Russe (APT) | Gouvernement, Militaire, Journalisme | Phishing et détournement de comptes Signal/WhatsApp | [Security Affairs](https://securityaffairs.com/189808/intelligence/russia-linked-actors-target-whatsapp-and-signal-in-phishing-campaign.html) |
-| Secp0 | Logiciels de gestion de mots de passe | Exploitation de faiblesses de chiffrement | [CTI.fyi](https://infosec.exchange/@CTI_FYI/116275376219129794) |
-| Spacebears | Santé, Divers | Ransomware-as-a-Service | [CTI.fyi](https://infosec.exchange/@CTI_FYI/116275819546238241) |
-| TeamPCP | Cloud-native, DevOps | Empoisonnement de la chaîne d'approvisionnement (GitHub Actions) | [OpenSourceMalware](https://opensourcemalware.com/blog/teampcp-aquasec-com-github-org-compromise) |
-| UNC6353 (Russie) | Surveillance ciblée | Utilisation du kit d'exploitation iOS DarkSword | [Security Online](https://securityonline.info/unmasking-darksword-gtig-exposes-full-chain-ios-exploit-zero-day/) |
-| VoidStealer | Utilisateurs finaux | Malware-as-a-Service (MaaS) - Infostealer | [BleepingComputer](https://www.bleepingcomputer.com/news/security/voidstealer-malware-steals-chrome-master-key-via-debugger-trick/) |
+| Handala Hack (Void Manticore) | Multinationales US, Infrastructures israéliennes | Sabotage via Microsoft Intune, exfiltration de données, wipers | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Nasir Security | Secteur de l'énergie (Golfe) | BEC, Spear phishing, exploitation d'applications publiques | [Security Affairs](https://securityaffairs.com/189865/cyber-warfare-2/pro-iranian-nasir-security-is-targeting-energy-companies-in-the-gulf.html) |
+| TeamPCP (CanisterWorm) | Cloud, Kubernetes, Chaîne d'approvisionnement | Wipers ciblés géographiquement, empoisonnement de tags GitHub/Docker | [KrebsOnSecurity](https://krebsonsecurity.com/2026/03/canisterworm-springs-wiper-attack-targeting-iran/) |
+| Tycoon2FA (Opérateurs) | Comptes Microsoft 365 & Gmail | Phishing-as-a-Service (PhaaS), contournement MFA via AiTM | [BleepingComputer](https://www.bleepingcomputer.com/news/security/tycoon2fa-phishing-platform-returns-after-recent-police-disruption/) |
+| UNC3944 | Services IT, SaaS, Hyperviseurs | Vishing (social engineering vocal), vol de cookies de session et jetons OAuth | [Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/) |
 
 <br/>
 <br/>
@@ -53,11 +48,10 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Défense | Espionnage maritime | Le porte-avions Charles de Gaulle localisé en temps réel via les données de l'application Strava. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Diplomatie / Militaire | Cyber-espionnage | Les services russes ciblent activement les communications Signal et WhatsApp des officiels de l'OTAN. | [Security Affairs](https://securityaffairs.com/189808/intelligence/russia-linked-actors-target-whatsapp-and-signal-in-phishing-campaign.html) |
-| Infrastructure critique | Ukraine | Campagne d'espionnage russe utilisant le backdoor DRILLAPP contre des entités ukrainiennes. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| International | Sanctions EU | L'Union Européenne sanctionne des entités chinoises et iraniennes pour des cyberattaques contre les États membres. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Souveraineté | Autriche | Vienne identifiée comme un hub majeur pour l'espionnage russe ciblant les communications de l'OTAN. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
+| Civil / Infrastructure | Conflit Moyen-Orient | Frappes de missiles iraniens sur Dimona et Arad en réponse à l'attaque de Natanz. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Civil / Population | Black-out Internet | L'Iran subit un blocage d'Internet d'État depuis plus de 528 heures consécutives. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| États / Multilatéral | Guerre des systèmes | Analyse de la résilience énergétique suite au black-out ibérique de 2025 et ses leçons pour l'Europe. | [Portail IE](https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/impact-du-black-out-iberique-sur-la-resilience-energetique/) |
+| Gouvernemental | Loi de Sécurité Nationale | Hong Kong autorise la police à exiger les mots de passe des téléphones et ordinateurs. | [The Guardian](https://www.theguardian.com/world/2026/mar/24/hong-kong-phone-passwords-national-security-law) |
 
 <br/>
 <br/>
@@ -68,9 +62,8 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| 4chan shrugs off UK regulator | Ofcom | 22/03/2026 | Royaume-Uni | Online Safety Act | Amende de 450 000 £ pour défaut de vérification de l'âge et accès des enfants à des contenus inappropriés. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/22/week-in-review-screenconnect-servers-open-to-attack-exploited-microsoft-sharepoint-flaw/) |
-| Binding Operational Directive 22-01 | CISA | 22/03/2026 | États-Unis | BOD 22-01 | Obligation pour les agences fédérales de corriger les vulnérabilités exploitées (KEV) avant le 3 avril 2026. | [Security Affairs](https://securityaffairs.com/189776/security/u-s-cisa-adds-apple-laravel-livewire-and-craft-cms-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| EU sanctions on Chinese and Iranian actors | Conseil de l'UE | 22/03/2026 | Union Européenne | Régime de sanctions cyber de l'UE | Sanctions contre 3 entités et 2 individus impliqués dans des cyberattaques contre l'UE. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
+| Amendments to the National Security Law | Gouvernement de Hong Kong | 24/03/2026 | Hong Kong | National Security Law | Pouvoir de réquisition des mots de passe et méthodes de déchiffrement par la police. | [The Guardian](https://www.theguardian.com/world/2026/mar/24/hong-kong-phone-passwords-national-security-law) |
+| NIST Cyber AI Profile (Reflections) | Katerina Megas et al. | 23/03/2026 | États-Unis | NIST CSF 2.0 / AI RMF | Directives pour la gestion des risques liés à l'IA et taxonomie commune de l'IA. | [NIST](https://www.nist.gov/blogs/cybersecurity-insights/reflections-second-nist-cyber-ai-profile-workshop) |
 
 <br/>
 <br/>
@@ -80,32 +73,28 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Administration publique | City of Los Angeles | Violation de données par le groupe de ransomware WorldLeaks. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Administration publique | Companies House (UK) | Exposition potentielle des données personnelles de millions d'entreprises via le service WebFiling. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/22/week-in-review-screenconnect-servers-open-to-attack-exploited-microsoft-sharepoint-flaw/) |
-| Cybersécurité | Aqua Security | Compromission de 44 dépôts GitHub internes, exposition de code source propriétaire et secrets CI/CD. | [OpenSourceMalware](https://opensourcemalware.com/blog/teampcp-aquasec-com-github-org-compromise) |
-| Santé | Navia Benefit Solutions | Violation de données impactant près de 2,7 millions de personnes. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Santé | Royal Bahrain Hospital | Revendication de piratage par le groupe Payload Ransomware. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Santé / Technologie | Intuitive (Chirurgie robotique) | Violation de données suite à une attaque de phishing ciblée. | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Sécurité en ligne | Aura | Accès non autorisé à 900 000 enregistrements de contacts suite à un phishing téléphonique. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/22/week-in-review-screenconnect-servers-open-to-attack-exploited-microsoft-sharepoint-flaw/) |
+| Divertissement | Crunchyroll | Vol présumé des données de 6,8 millions d'utilisateurs (tickets de support Zendesk). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/crunchyroll-probes-breach-after-hacker-claims-to-steal-68m-users-data/) |
+| Éducation | Éducation Nationale (France) | Compromission des données de 243 000 agents via le logiciel RH "Compas". | [Le Monde](https://www.lemonde.fr/education/article/2026/03/24/le-piratage-d-un-logiciel-compromet-les-donnees-de-243-000-agents-de-l-education-nationale_6673988_1473685.html) |
+| Santé / RH | Navia Benefit Solutions | Violation affectant 2,6 millions d'individus (données de santé et prestations). | [Check Point](https://research.checkpoint.com/2026/23rd-march-threat-intelligence-report/) |
+| Services Médicaux | Telehealth (OpenLoop & Woundtech) | 3,7 millions de patients affectés par des vols de données et tentatives d'extorsion. | [DataBreaches.net](https://databreaches.net/2026/03/23/3-7-million-telehealth-patients-allegedly-affected-by-two-recent-breaches/) |
+| Transport / Auto | Mazda Motor Corp | Exposition de 692 enregistrements concernant des employés et partenaires. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/mazda-discloses-security-breach-exposing-employee-and-partner-data/) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées, classées par score CVSS.
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | Produit affecté | Type de vulnérabilité | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|
-| CVE-2025-32432 | 10.0 | Craft CMS | Injection de code / RCE | [Security Affairs](https://securityaffairs.com/189776/security/u-s-cisa-adds-apple-laravel-livewire-and-craft-cms-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-21992 | 9.8 | Oracle Identity Manager | Remote Code Execution (RCE) | [Security Affairs](https://securityaffairs.com/189796/security/oracle-fixes-critical-rce-flaw-cve-2026-21992-in-identity-manager.html) |
-| CVE-2025-54068 | 9.8 | Laravel Livewire | Injection de code | [Security Affairs](https://securityaffairs.com/189776/security/u-s-cisa-adds-apple-laravel-livewire-and-craft-cms-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-32297 | 9.8 | Angeet ES3 KVM | Accès fichier non authentifié | [Security Online](https://securityonline.info/below-edr-unsecured-ip-kvm-switches-total-system-takeover/) |
-| CVE-2026-4558 | 9.0 | Linksys MR9600 | OS Command Injection | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4558) |
-| CVE-2026-4551 | 9.0 | Tenda F453 | Stack-based buffer overflow | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4551) |
-| CVE-2026-4555 | 9.0 | D-Link DIR-513 | Stack-based buffer overflow (EOL) | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4555) |
-| CVE-2025-31277 | 8.8 | Apple Multiple Products | Buffer Overflow | [Security Affairs](https://securityaffairs.com/189776/security/u-s-cisa-adds-apple-laravel-livewire-and-craft-cms-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-33295 | 8.2 | AVideo | Stored XSS via CDN plugin | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33295) |
-| CVE-2026-33293 | 8.1 | AVideo | Path Traversal / File Deletion | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33293) |
+| CVE-2026-21992 | 9.8 | Oracle Identity Manager | Exécution de code à distance (RCE) | [Oracle](https://www.cisecurity.org/advisory/a-vulnerability-in-oracle-products-could-allow-for-remote-code-execution_2026-024) |
+| CVE-2026-4001 | 9.8 | WooCommerce Custom Product Addons Pro | Remote Code Execution (RCE) | [Wordfence](https://cvefeed.io/vuln/detail/CVE-2026-4001) |
+| CVE-2026-32746 | 9.8 | GNU InetUtils telnetd | Buffer Overflow / RCE | [Check Point](https://research.checkpoint.com/2026/23rd-march-threat-intelligence-report/) |
+| CVE-2026-33211 | 9.6 | Tekton Pipelines | Path Traversal / Vol de jetons | [GitHub Security](https://cvefeed.io/vuln/detail/CVE-2026-33211) |
+| CVE-2026-3055 | 9.3 | Citrix NetScaler ADC / Gateway | Out-of-bounds Read (Memory Overread) | [Citrix](https://cert.europa.eu/publications/security-advisories/2026-003/) |
+| CVE-2026-33286 | 9.1 | Graphiti | Arbitrary Method Execution | [GitHub Security](https://cvefeed.io/vuln/detail/CVE-2026-33286) |
+| CVE-2025-14233 | 8.8 | Canon imageCLASS (Imprimantes) | Memory Corruption / RCE | [ZDI](http://www.zerodayinitiative.com/advisories/ZDI-26-222/) |
+| CVE-2026-3533 | 8.8 | JupiterX Core (WordPress) | Unrestricted File Upload | [Wordfence](https://cvefeed.io/vuln/detail/CVE-2026-3533) |
 
 <br/>
 <br/>
@@ -114,13 +103,11 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| VoidStealer malware steals Chrome master key via debugger trick | Technique innovante de contournement de l'ABE de Chrome via hardware breakpoints. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/voidstealer-malware-steals-chrome-master-key-via-debugger-trick/) |
-| Oracle fixes critical RCE flaw CVE-2026-21992 in Identity Manager | Alerte de sécurité critique hors cycle pour un composant d'identité vital. | [Security Affairs](https://securityaffairs.com/189796/security/oracle-fixes-critical-rce-flaw-cve-2026-21992-in-identity-manager.html) |
-| TeamPCP Defaces Aqua Security's Internal GitHub Org | Escalade majeure d'une attaque de chaîne d'approvisionnement ciblant un éditeur cyber. | [OpenSourceMalware](https://opensourcemalware.com/blog/teampcp-aquasec-com-github-org-compromise) |
-| Russia-linked actors target WhatsApp and Signal in phishing campaign | Menace persistante contre les communications chiffrées des officiels et journalistes. | [Security Affairs](https://securityaffairs.com/189808/intelligence/russia-linked-actors-target-whatsapp-and-signal-in-phishing-campaign.html) |
-| Unmasking DarkSword: Full-Chain iOS Exploit | Analyse d'un kit d'exploitation mobile sophistiqué utilisé par des acteurs étatiques. | [Security Online](https://securityonline.info/unmasking-darksword-gtig-exposes-full-chain-ios-exploit-zero-day/) |
-| Rockwell Automation Issues Urgent Warning | Alerte proactive cruciale pour la sécurité des infrastructures industrielles (OT). | [Security Online](https://securityonline.info/rockwell-automation-urgent-warning-disconnect-industrial-controllers-ot-security/) |
-| How Unsecured IP-KVM Switches Grant Total System Takeover | Exposition de vulnérabilités "sous l'EDR" affectant la gestion à distance du matériel. | [Security Online](https://securityonline.info/below-edr-unsecured-ip-kvm-switches-total-system-takeover/) |
+| 44 Aqua Security repositories defaced after Trivy supply chain breach | Escalade majeure d'une attaque supply chain contre un éditeur de sécurité. | [Security Affairs](https://securityaffairs.com/189856/uncategorized/44-aqua-security-repositories-defaced-after-trivy-supply-chain-breach.html) |
+| Crunchyroll probes breach after hacker claims to steal 6.8M users' data | Illustration parfaite de la menace via les prestataires BPO et le vol de session Okta. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/crunchyroll-probes-breach-after-hacker-claims-to-steal-68m-users-data/) |
+| M-Trends 2026: Data, Insights, and Strategies From the Frontlines | Rapport de référence sur les tendances TTP et la réduction critique des fenêtres d'attaque. | [Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/) |
+| Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict | Synthèse exhaustive du cyber-sabotage étatique en temps de guerre cinétique. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Tycoon2FA phishing platform returns after recent police disruption | Analyse de la résilience des plateformes PhaaS face aux démantèlements policiers. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/tycoon2fa-phishing-platform-returns-after-recent-police-disruption/) |
 
 <br/>
 <br/>
@@ -129,176 +116,132 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 89 | Synthèse de synthèse (liste d'articles sans analyse propre). | [Security Affairs](https://securityaffairs.com/189771/security/security-affairs-malware-newsletter-round-89.html) |
-| Security Affairs newsletter Round 568 | Synthèse de synthèse (liste d'articles sans analyse propre). | [Security Affairs](https://securityaffairs.com/189765/breaking-news/security-affairs-newsletter-round-568-by-pierluigi-paganini-international-edition.html) |
-| Week in review: ScreenConnect servers open to attack | Résumé hebdomadaire d'informations déjà traitées individuellement. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/22/week-in-review-screenconnect-servers-open-to-attack-exploited-microsoft-sharepoint-flaw/) |
-| ISC Stormcast For Monday, March 23rd, 2026 | Podcast quotidien généraliste sans détails techniques spécifiques supplémentaires. | [ISC SANS](https://isc.sans.edu/podcastdetail/9860) |
-| New ransom group blog post! spacebears | Notification de violation traitée dans la synthèse des violations. | [CTI.fyi](https://infosec.exchange/@CTI_FYI/116275819546238241) |
-| Ensuring robust compliance & governance | Article d'opinion/conseil générique sans actualité cyber spécifique. | [Mastodon](https://mastodon.social/@archibaldtitan/116275624564204770) |
+| OpenAI rolls out ChatGPT Library | Simple annonce de fonctionnalité produit sans impact sécurité direct. | [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-rolls-out-chatgpt-library-to-store-your-personal-files/) |
+| Snowflake's ongoing pitch: bring AI to data | Article promotionnel / marketing sur la stratégie d'IA de Snowflake. | [The Register](https://www.theregister.com/2026/03/23/snowflake_ai_data_project_snowwork/) |
+| ISC Stormcast For Tuesday, March 24th | Podcast quotidien sans contenu détaillé dans le texte analysé. | [SANS ISC](https://isc.sans.edu/diary/rss/32822) |
+| RuneScape Boards breach | Information sur une fuite de données datant de 2011, peu pertinente pour la veille actuelle. | [HIBP](https://haveibeenpwned.com/Breach/RSBoards) |
 
 <br>
-<br>
+<br/>
 <div id="articles"></div>
 
 # ARTICLES
+<div id="attaque-de-la-chaine-dapprovisionnement-daqua-security-par-teampcp"></div>
 
-<div id="voidstealer--une-nouvelle-technique-de-contournement-de-la-be-de-chrome"></div>
+## 44 Aqua Security repositories defaced after Trivy supply chain breach
+L'organisation GitHub interne d'Aqua Security (aquasec-com) a été victime d'un sabotage massif orchestré par l'acteur TeamPCP. En seulement deux minutes, 44 dépôts ont été renommés avec le préfixe "tpcp-docs-" et leurs descriptions ont été modifiées par un script automatisé. L'attaque semble découler d'une compromission précédente du pipeline CI/CD de l'outil Trivy. L'attaquant a utilisé un jeton de compte de service (PAT) volé pour obtenir des privilèges d'administrateur. Cette intrusion a exposé du code propriétaire, des configurations d'infrastructure et des bases de connaissances internes. TeamPCP a testé la validité du jeton sept heures avant l'attaque finale en créant brièvement une branche fantôme. Cet incident souligne la persistance des menaces après un nettoyage incomplet de secrets compromis. Il met en lumière la vulnérabilité des jetons d'accès personnels (PAT) par rapport aux applications GitHub plus sécurisées.
 
-## VoidStealer : une nouvelle technique de contournement de l'A-BE de Chrome
-VoidStealer est un nouveau malware-as-a-service (MaaS) qui utilise une méthode furtive pour contourner l'Application-Bound Encryption (ABE) de Google Chrome. Cette protection, introduite en juin 2024, vise à sécuriser les cookies et les données sensibles. VoidStealer parvient à extraire la clé de chiffrement `v20_master_key` directement depuis la mémoire du navigateur lors de son exécution. Pour ce faire, il utilise des points d'arrêt matériels (hardware breakpoints) via une technique de débogage. Le malware lance un processus de navigation suspendu, s'y attache comme débogueur et attend le chargement des DLL cibles (`chrome.dll` ou `msedge.dll`). Il scanne ensuite la mémoire pour identifier l'instruction exacte où la clé apparaît en clair. Cette approche permet l'extraction sans nécessiter d'élévation de privilèges ou d'injection de code complexe. La technique semble inspirée du projet open-source ElevationKatz. Google travaille continuellement sur des correctifs pour bloquer ces méthodes de contournement.
-
-**Analyse de l'impact** : L'impact est majeur pour la confidentialité des utilisateurs, car l'ABE était considéré comme un rempart solide contre les infostealers. Cette technique rend inefficace une protection clé de Chrome, facilitant le vol massif de sessions de connexion (cookies) et de mots de passe enregistrés.
-
-**Recommandations** :
-- Surveiller les processus suspects s'attachant en tant que débogueur aux navigateurs Web (Chrome, Edge).
-- Utiliser des solutions EDR capables de détecter l'utilisation inhabituelle de points d'arrêt matériels (hardware breakpoints).
-- Encourager l'utilisation de gestionnaires de mots de passe externes au navigateur et l'activation systématique de la double authentification (2FA).
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | VoidStealer (MaaS) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1539: Steal Web Session Cookie <br/> * T1003.001: OS Credential Dumping (LSASS/Browser) <br/> * T1056.004: Credential API Hooking |
-| Observables & Indicateurs de compromission | ```* chrome.dll <br/> * msedge.dll <br/> * ReadProcessMemory calls targetting browser memory``` |
-
-### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/voidstealer-malware-steals-chrome-master-key-via-debugger-trick/
-
-<br/>
-<div id="campagne-de-phishing-russe-ciblant-whatsapp-et-signal"></div>
-
-## Campagne de phishing russe ciblant WhatsApp et Signal
-Le FBI et les agences de renseignement néerlandaises ont émis une alerte concernant des campagnes de phishing russes ciblant les utilisateurs de Signal et WhatsApp. Les acteurs, liés aux services de renseignement russes, visent des cibles à haute valeur ajoutée, notamment des responsables gouvernementaux, des militaires, des politiciens et des journalistes. L'objectif n'est pas de casser le chiffrement de bout en bout, mais de prendre le contrôle des comptes. Les attaquants se font passer pour des comptes de support technique officiels des applications. Ils incitent les victimes à partager des codes de vérification, des codes PIN ou à cliquer sur des liens malveillants. Une technique courante consiste à abuser de la fonction "appareils liés" pour ajouter le dispositif de l'attaquant au compte de la victime. Une fois l'accès obtenu, les attaquants peuvent lire les messages, accéder aux contacts et usurper l'identité de la victime. Cette campagne illustre l'efficacité continue de l'ingénierie sociale pour contourner des protections techniques robustes.
-
-**Analyse de l'impact** : L'impact est critique sur le plan de la sécurité nationale et de l'espionnage. Le détournement de communications sensibles peut mener à l'exfiltration d'informations classifiées, à la surveillance de diplomates et à la compromission de sources journalistiques.
+**Analyse de l'impact** : Impact critique sur la réputation et la propriété intellectuelle d'un leader de la sécurité cloud. Risque de compromission en cascade pour les clients utilisant des outils d'Aqua si des secrets ont été exfiltrés du code source.
 
 **Recommandations** :
-- Sensibiliser les personnels sensibles au fait que les supports techniques d'applications ne demandent jamais de codes de vérification par message.
-- Activer systématiquement le verrouillage de l'enregistrement (code PIN) sur Signal et WhatsApp.
-- Vérifier régulièrement la liste des "Appareils liés" dans les paramètres de l'application.
+* Révoquer immédiatement tous les jetons PAT des comptes de service et passer à des GitHub Apps avec des jetons à courte durée de vie.
+* Imposer l'authentification multi-facteurs (MFA) pour tous les comptes ayant accès aux dépôts, y compris les bots.
+* Mener une rotation complète des secrets (clés AWS, jetons API) présents ou référencés dans les dépôts compromis.
+* Mettre en œuvre une surveillance stricte des API GitHub pour détecter les changements massifs de métadonnées en un court laps de temps.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Services de renseignement russes (suspecté UNC6353 ou similaire) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Spearphishing Link <br/> * T1566.003: Spearphishing Service <br/> * T1098.005: Account Manipulation: Device Registration |
-| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni``` |
+| Groupe ou acteur malveillant | TeamPCP (alias CanisterWorm, DeadCatx3) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise (Software Dependencies) <br/> * T1078.004: Valid Accounts (Cloud Accounts) <br/> * T1565.001: Data Manipulation (Stored Data Manipulation) |
+| Observables & Indicateurs de compromission | ```* aquasecurtiy[.]org <br/> * tdtqy-oyaaa-aaaae-af2dq-cai[.]raw[.]icp0[.]io <br/> * /tmp/pglog <br/> * Jeton de compte Argon-DevOps-Mgt (ID 139343333)``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/189808/intelligence/russia-linked-actors-target-whatsapp-and-signal-in-phishing-campaign.html
-
-<br/>
-<div id="vulnerabilite-critique-rce-dans-oracle-identity-manager"></div>
-
-## Vulnérabilité critique RCE dans Oracle Identity Manager
-Oracle a publié un correctif d'urgence pour une vulnérabilité critique, identifiée sous le nom CVE-2026-21992, affectant Oracle Identity Manager (OIM) et Web Services Manager. Cette faille présente un score CVSS de 9.8, indiquant une gravité maximale. Elle permet à un attaquant distant et non authentifié d'exécuter du code arbitraire via des requêtes HTTP. L'exploitation réussie peut entraîner une prise de contrôle totale du système, compromettant l'ensemble de l'infrastructure d'identité de l'entreprise. Cette alerte est particulièrement sérieuse car elle fait suite à une vulnérabilité similaire (CVE-2025-61757) qui a déjà été activement exploitée par des groupes d'attaquants comme Interlock. Oracle a choisi une publication hors cycle (Security Alert), soulignant l'imminence de la menace. Des honeypots ont déjà détecté des tentatives de scan sur les points de terminaison OIM associés. Les organisations utilisant les versions 12.2.1.4.0 et 14.1.2.1.0 sont directement impactées.
-
-**Analyse de l'impact** : L'impact est potentiellement catastrophique car OIM constitue le "joyau de la couronne" de l'infrastructure. Une compromission permet non seulement l'accès aux données, mais aussi la création de comptes privilèges et le mouvement latéral vers tous les systèmes fédérés.
-
-**Recommandations** :
-- Appliquer immédiatement le correctif Oracle hors cycle sans attendre la prochaine mise à jour trimestrielle.
-- Isoler les interfaces OIM du réseau public et restreindre l'accès aux segments internes de confiance.
-- Déployer des règles WAF pour bloquer les requêtes HTTP suspectes ciblant les API REST d'OIM.
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Acteurs non nommés (scans observés depuis 89.238.132[.]76, 185.245.82[.]81) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1210: Exploitation of Remote Services |
-| Observables & Indicateurs de compromission | ```* 89.238.132.76 <br/> * 185.245.82.81 <br/> * 138.199.29.153``` |
-
-### Source (url) du ou des articles
-* https://securityaffairs.com/189796/security/oracle-fixes-critical-rce-flaw-cve-2026-21992-in-identity-manager.html
-* https://thecyberthrone.in/2026/03/22/oracle-patches-cve-2026-21992-unauthenticated-rce/
-
-<br/>
-<div id="compromission-massive-de-lorganisation-github-daqua-security-par-teampcp"></div>
-
-## Compromission massive de l'organisation GitHub d'Aqua Security par TeamPCP
-L'organisation GitHub interne d'Aqua Security (`aquasec-com`) a été victime d'une attaque de défaçage et d'exfiltration massive par le groupe TeamPCP. En l'espace de deux minutes, 44 dépôts privés ont été renommés avec le préfixe `tpcp-docs-` et leurs descriptions ont été modifiées. L'analyse médico-légale suggère que l'attaque a été rendue possible par le vol d'un jeton (PAT) du compte de service `Argon-DevOps-Mgt`. Ce jeton aurait été collecté lors d'une précédente compromission de la chaîne d'approvisionnement ciblant les GitHub Actions de Trivy. L'attaquant a testé le jeton sept heures avant l'attaque finale en créant et supprimant une branche furtive. Cette compromission expose des codes sources propriétaires, des configurations CI/CD, des bibliothèques Go partagées et des bases de connaissances internes. TeamPCP, déjà connu pour ses attaques contre les écosystèmes cloud-native, démontre une fois de plus sa capacité à cibler les acteurs mêmes de la cybersécurité.
-
-**Analyse de l'impact** : L'impact est extrêmement préjudiciable pour la propriété intellectuelle d'Aqua Security. L'exposition des pipelines CI/CD et des secrets associés (clés AWS, tokens API) pourrait permettre des attaques ultérieures encore plus graves contre l'infrastructure de production ou les clients de l'éditeur.
-
-**Recommandations** :
-- Révoquer immédiatement tous les jetons d'accès personnels (PAT) et les secrets associés aux comptes de service compromis.
-- Auditer l'ensemble des dépôts pour détecter l'insertion de code malveillant ou de backdoors.
-- Verrouiller les actions GitHub sur des commits SHA spécifiques plutôt que sur des tags de version.
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | TeamPCP (alias DeadCatx3, PCPcat, CanisterWorm) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise: Software Dependencies <br/> * T1567: Exfiltration Over Web Service <br/> * T1078.004: Valid Accounts: Cloud Accounts |
-| Observables & Indicateurs de compromission | ```* Argon-DevOps-Mgt (GitHub ID: 139343333) <br/> * tpcp-docs- <br/> * /tmp/pglog <br/> * 18a24f83e807479438dcab7a1804c51a00dafc1d526698a66e0640d1e5dd671a``` |
-
-### Source (url) du ou des articles
+* https://securityaffairs.com/189856/uncategorized/44-aqua-security-repositories-defaced-after-trivy-supply-chain-breach.html
 * https://opensourcemalware.com/blog/teampcp-aquasec-com-github-org-compromise
+* https://www.bleepingcomputer.com/news/security/trivy-supply-chain-attack-spreads-to-docker-github-repos/
 
-<br/>
-<div id="darksword--un-kit-dexploitation-ios-sophistique-utilise-a-lechelle-mondiale"></div>
+<br>
+<br>
+<div id="compromission-de-crunchyroll-via-un-prestataire-bpo"></div>
 
-## DarkSword : un kit d'exploitation iOS sophistiqué utilisé à l'échelle mondiale
-Le Google Threat Intelligence Group (GTIG) a révélé l'existence de "DarkSword", un kit d'exploitation iOS "full-chain" actif depuis novembre 2025. Utilisé par divers vendeurs de surveillance commerciale et des acteurs étatiques, ce kit a ciblé des individus en Arabie saoudite, en Turquie, en Malaisie et en Ukraine. DarkSword exploite une séquence complexe de six vulnérabilités (dont certaines Zero-day) pour obtenir un contrôle total de l'appareil, du navigateur jusqu'au noyau (kernel). Il supporte les versions iOS 18.4 à 18.7. L'attaque commence par un compromis de site Web ("watering hole") qui déclenche une chaîne d'exécution en plusieurs étapes. Une fois l'appareil compromis, le kit peut livrer trois familles de malwares : GHOSTBLADE, GHOSTKNIFE et GHOSTSABER. Ces payloads permettent l'exfiltration de messages chiffrés, la surveillance de la localisation et l'activation à distance du microphone et de la caméra. Apple a corrigé l'ensemble des vulnérabilités avec iOS 26.3.
+## Crunchyroll probes breach after hacker claims to steal 6.8M users' data
+Le service de streaming Crunchyroll fait l'objet d'une enquête suite à une violation de données affectant potentiellement 6,8 millions d'utilisateurs. L'attaquant aurait accédé au système via le compte Okta SSO d'un agent de support employé par Telus International, un prestataire BPO. La compromission a été facilitée par un malware infectant l'ordinateur de l'agent. Grâce à cet accès, l'attaquant a pu télécharger 8 millions de tickets de support depuis l'instance Zendesk de Crunchyroll. Les données exposées comprennent des noms d'utilisateurs, adresses e-mail, adresses IP et contenus de tickets. Dans de rares cas, des numéros de carte de crédit partagés par les clients dans les messages ont été vus par l'attaquant. Une demande de rançon de 5 millions de dollars a été envoyée à Crunchyroll sans réponse. L'accès a été révoqué après 24 heures, mais l'extraction des données était déjà terminée.
 
-**Analyse de l'impact** : L'impact est significatif pour la protection de la vie privée et la sécurité des données mobiles. La prolifération de tels kits "clés en main" permet à des acteurs moins sophistiqués de mener des opérations d'espionnage de niveau étatique contre des cibles stratégiques.
-
-**Recommandations** :
-- Mettre à jour immédiatement tous les appareils iOS vers la version 26.3 ou ultérieure.
-- Pour les profils à haut risque, activer le "Lockdown Mode" d'Apple qui bloque la plupart des chaînes d'exploitation complexes basées sur le Web.
-- Éviter de cliquer sur des liens provenant de sources non sollicitées, même via des messageries chiffrées.
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | UNC6353 (suspecté), Vendeurs de surveillance commerciale |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1203: Exploitation for Client Execution <br/> * T1068: Exploitation for Privilege Escalation <br/> * T1512: Endpoint Denial of Service (via kernel panic) |
-| Observables & Indicateurs de compromission | ```* GHOSTBLADE <br/> * GHOSTKNIFE <br/> * GHOSTSABER <br/> * rce_module.js``` |
-
-### Source (url) du ou des articles
-* https://securityonline.info/unmasking-darksword-gtig-exposes-full-chain-ios-exploit-zero-day/
-
-<br/>
-<div id="alerte-critique-de-rockwell-automation-sur-les-controleurs-industriels"></div>
-
-## Alerte critique de Rockwell Automation sur les contrôleurs industriels
-Rockwell Automation a émis un avertissement urgent demandant à ses clients de déconnecter immédiatement leurs contrôleurs industriels (PLC) de l'internet public. Cette mesure proactive fait suite à l'observation d'activités malveillantes ciblant spécifiquement ces équipements de technologie opérationnelle (OT). Les automates programmables sont les composants critiques gérant les processus physiques dans les usines, les centrales d'eau ou les infrastructures d'énergie. L'exposition directe de ces appareils sur internet facilite les attaques par balayage (scanning) et l'exploitation de vulnérabilités connues ou non. Rockwell souligne que la sécurité de sa base installée dépend crucialement de la suppression du vecteur d'attaque le plus courant : l'accès distant non sécurisé. La société recommande une stratégie de "défense en profondeur", incluant la segmentation réseau et l'activation des protections natives des contrôleurs. Plusieurs CVE critiques (CVE-2025-13823, CVE-2021-22681) sont citées comme exemples de risques persistants pour les gammes Micro800 et Logix.
-
-**Analyse de l'impact** : L'impact sur la sécurité industrielle est majeur. Une prise de contrôle d'automates peut entraîner des interruptions de service critiques, des dommages physiques aux installations ou poser des risques pour la sécurité publique (cas des usines de traitement des eaux).
+**Analyse de l'impact** : Risque élevé de phishing ciblé pour les utilisateurs dont les informations de contact et l'historique de support ont été volés. Exposition de la fragilité de la chaîne d'approvisionnement via les prestataires de services externes (BPO).
 
 **Recommandations** :
-- Vérifier qu'aucun contrôleur Rockwell (PLC) n'est accessible directement depuis l'internet public (Shodan, Censys).
-- Mettre en œuvre des passerelles VPN sécurisées avec authentification multi-facteurs pour tout accès de maintenance à distance.
-- Appliquer la segmentation réseau (VLAN dédiés OT) pour isoler les systèmes de contrôle du réseau d'entreprise.
+* Renforcer la sécurisation des accès tiers par des politiques de "Zero Trust" et des accès conditionnels stricts.
+* Sensibiliser les utilisateurs à ne jamais partager de données sensibles (comme des numéros de carte) dans les tickets de support.
+* Auditer les terminaux des prestataires externes pour s'assurer du respect des normes de sécurité (EDR, correctifs).
+* Surveiller les signes de vol de jetons de session (session hijacking) au sein des plateformes Okta et Zendesk.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Acteurs non nommés (cyber-adversaires ciblant l'ICS/OT) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0866: Network Scanning <br/> * T0815: Remote System Discovery <br/> * T0812: Default Credentials |
-| Observables & Indicateurs de compromission | ```Accès sur ports CIP/Modbus (port 44818, 502)``` |
+| Groupe ou acteur malveillant | Non applicable (Individu anonyme) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078.003: Valid Accounts (Cloud Accounts) <br/> * T1566: Phishing <br/> * T1212: Exploitation for Credential Access |
+| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni pour le malware initial``` |
 
 ### Source (url) du ou des articles
-* https://securityonline.info/rockwell-automation-urgent-warning-disconnect-industrial-controllers-ot-security/
+* https://www.bleepingcomputer.com/news/security/crunchyroll-probes-breach-after-hacker-claims-to-steal-6.8m-users-data/
 
-<br/>
-<div id="prise-de-contre-totale-via-les-commutateurs-ip-kvm-non-securises"></div>
+<br>
+<br>
+<div id="m-trends-2026-le-panorama-des-menaces-de-mandiant"></div>
 
-## Prise de contrôle totale via les commutateurs IP-KVM non sécurisés
-Des chercheurs d'Eclypsium ont publié une analyse technique alarmante sur la sécurité des commutateurs IP-KVM (Keyboard, Video, Mouse). Ces dispositifs, utilisés pour la gestion à distance des serveurs, présentent des vulnérabilités critiques souvent ignorées car elles se situent "sous l'EDR". En compromettant un KVM, un attaquant obtient l'équivalent d'un accès physique direct à la machine ciblée. Cela inclut le contrôle du clavier, de la vidéo et de la souris au niveau du BIOS, permettant de désactiver le Secure Boot ou de contourner les écrans de verrouillage. L'étude a révélé neuf vulnérabilités chez quatre vendeurs majeurs (GL-iNet, Angeet, Sipeed, JetKVM), allant de l'injection de commandes OS à l'absence de vérification de l'authenticité des firmwares. Une fonctionnalité particulièrement dangereuse est l'émulation de périphériques USB (BadUSB), permettant au KVM d'injecter des commandes à très haute vitesse. Le FBI et Microsoft ont déjà signalé l'utilisation de ces appareils par des acteurs nord-coréens (DPRK) pour maintenir une présence furtive.
+## M-Trends 2026: Data, Insights, and Strategies From the Frontlines
+Le rapport M-Trends 2026 de Mandiant révèle une transformation profonde de la rapidité des cyberattaques en 2025. Le temps moyen entre l'accès initial et le passage à un groupe d'exécution (hand-off) est passé de 8 heures à 22 secondes. Les exploits restent le vecteur d'infection dominant (32 %), suivis d'une forte hausse du phishing vocal (11 %). Les attaquants ciblent désormais activement les hyperviseurs et les infrastructures de sauvegarde pour empêcher toute récupération. Le secteur technologique est devenu la cible prioritaire, dépassant le secteur financier. Les groupes d'espionnage privilégient la persistance sur les périphériques réseau (VPN, routeurs) dépourvus de télémétrie EDR. Les attaquants utilisent également l'IA pour automatiser l'évasion des malwares et extraire des données sensibles. Le temps de rétention moyen des logs (90 jours) est jugé insuffisant face à des intrusions dont la durée de présence dépasse souvent un an.
 
-**Analyse de l'impact** : L'impact est total car la menace est invisible pour les solutions de sécurité logicielles classiques. Un attaquant peut persister dans le matériel, modifier le BIOS et prendre le contrôle total des serveurs avant même que le système d'exploitation ne démarre.
+**Analyse de l'impact** : Les organisations doivent réagir instantanément aux alertes de faible intensité, car le délai de réaction humaine est devenu incompatible avec la vitesse automatisée des attaquants. La résilience opérationnelle est menacée par le ciblage direct des capacités de restauration.
 
 **Recommandations** :
-- Placer tous les dispositifs IP-KVM sur un VLAN de gestion dédié et strictement isolé.
-- Ne jamais exposer les interfaces Web des KVM directement sur internet; utiliser des tunnels VPN sécurisés.
-- Auditer l'inventaire matériel pour détecter les KVM "fantômes" ou non autorisés installés par des tiers.
+* Automatiser la réponse aux alertes de malware initial pour bloquer les intrusions avant le passage à l'action interactive.
+* Isoler les consoles de gestion de virtualisation et de sauvegarde en tant qu'actifs de "Tier-0" avec un accès restreint.
+* Étendre la rétention des logs critiques bien au-delà de 90 jours pour permettre les investigations a posteriori sur les APT.
+* Implémenter une vérification continue de l'identité et passer de la détection basée sur les IoC statiques à l'analyse comportementale.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Acteurs étatiques (DPRK suspecté), Hackeurs indépendants |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1498: Direct Hardware Access <br/> * T1200: Hardware Additions <br/> * T1542.001: Pre-OS Boot: System Firmware |
-| Observables & Indicateurs de compromission | ```* CVE-2026-32297 (ES3 KVM) <br/> * CVE-2026-32298 (OS command injection)``` |
+| Groupe ou acteur malveillant | UNC3944, UNC6201, UNC5807 |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1566.004: Voice Phishing <br/> * T1485: Data Destruction (Backup Deletion) <br/> * T1021.002: SMB/Windows Admin Shares |
+| Observables & Indicateurs de compromission | ```Malwares BRICKSTORM, QUIETVAULT, PROMPTFLUX``` |
 
 ### Source (url) du ou des articles
-* https://securityonline.info/below-edr-unsecured-ip-kvm-switches-total-system-takeover/
+* https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/
+
+<br>
+<br>
+<div id="suivi-des-cyberattaques-liées-au-conflit-us-israel-iran"></div>
+
+## Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict
+Le conflit entre les États-Unis, Israël et l'Iran génère une guerre cybernétique d'une intensité sans précédent. Le groupe Handala Hack, lié au renseignement iranien, a causé le sabotage de plus de 200 000 appareils dans 79 pays via Microsoft Intune. Cette attaque contre la multinationale Stryker a duré 13 jours avant un début de restauration partielle. Les attaquants utilisent des techniques "living-off-the-land", détournant des outils de gestion légitimes pour lancer des commandes d'effacement à distance. En représailles aux missiles iraniens, les États-Unis et Israël intensifient leurs pressions sur les infrastructures critiques. L'Iran subit un black-out Internet quasi-total depuis quatre semaines, sans que cela n'affecte l'activité de ses groupes proxys basés à l'étranger. La menace s'étend désormais aux entreprises technologiques et financières occidentales présentes au Moyen-Orient.
+
+**Analyse de l'impact** : Risque systémique pour les entreprises dépendantes de plateformes de gestion centralisée (MDM). Les tensions cinétiques au Moyen-Orient se traduisent directement par des tentatives de sabotage d'infrastructures critiques et commerciales mondiales.
+
+**Recommandations** :
+* Activer l'approbation multi-administrateur pour toutes les commandes critiques (comme le wipe) dans Microsoft Intune ou équivalent.
+* Revoir les dépendances aux systèmes de recalibrage connectés pour les infrastructures de sécurité et de santé.
+* Surveiller étroitement les signes de scan de vulnérabilités provenant de sources inhabituelles sur les actifs exposés à Internet.
+* Effectuer des exercices de crise simulant une perte massive de terminaux (laptops/serveurs) suite à un détournement de l'outil d'administration.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Handala Hack (MOIS / Void Manticore) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078: Valid Accounts <br/> * T1485: Data Destruction (Intune MDM wipe) <br/> * T1059: Command and Scripting Interpreter |
+| Observables & Indicateurs de compromission | ```Utilisation frauduleuse de Microsoft Intune ; pas de malware traditionnel identifié``` |
+
+### Source (url) du ou des articles
+* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+
+<br>
+<br>
+<div id="le-retour-de-la-plateforme-tycoon2fa-après-son-démantèlement"></div>
+
+## Tycoon2FA phishing platform returns after recent police disruption
+Malgré une opération internationale menée par Europol et Microsoft le 4 mars, la plateforme Tycoon2FA a retrouvé son plein niveau d'activité. L'infrastructure, composée de plus de 330 domaines saisis, a été rapidement remplacée par de nouvelles inscriptions de domaines et d'adresses IP. Tycoon2FA est une plateforme de Phishing-as-a-Service (PhaaS) spécialisée dans le vol de comptes Microsoft 365 et Gmail. Elle utilise des techniques "Adversary-in-the-Middle" (AiTM) pour intercepter les jetons de session et contourner la double authentification (2FA). La plateforme génère environ 30 millions d'e-mails de phishing par mois. Ses opérateurs ont intégré des pages de leurre générées par IA pour accroître la crédibilité des attaques. Sans arrestations physiques des administrateurs, les cybercriminels parviennent à reconstruire leur capacité opérationnelle en quelques jours.
+
+**Analyse de l'impact** : Persistance d'une menace de haut niveau contre les entreprises utilisant Office 365. Le 2FA traditionnel n'est plus suffisant contre ce type de plateforme automatisée.
+
+**Recommandations** :
+* Déployer des méthodes d'authentification résistantes au phishing (FIDO2, Passkeys).
+* Surveiller les règles de boîte de réception suspectes créées immédiatement après une connexion utilisateur (signe de post-compromission).
+* Filtrer les URL raccourcies et les domaines nouvellement enregistrés dans les passerelles de messagerie.
+* Analyser les connexions provenant d'adresses IP associées à des services cloud ou des proxies malveillants.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Opérateurs de Tycoon2FA |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1557.001: Adversary-in-the-Middle <br/> * T1566.002: Spearphishing Link <br/> * T1114: Email Collection |
+| Observables & Indicateurs de compromission | ```Utilisation massive de domaines éphémères et de redirection via des outils de présentation légitimes``` |
+
+### Source (url) du ou des articles
+* https://www.bleepingcomputer.com/news/security/tycoon2fa-phishing-platform-returns-after-recent-police-disruption/
