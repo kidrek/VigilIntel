@@ -21,3 +21,9 @@ The collected data is processed by a large language model (LLM) to enable:
 * Strategic summaries designed to inform decision-makers.
 
 This system aims to enhance both the responsiveness of security operations and the overall understanding of the evolving threat landscape.
+
+
+## License
+
+This dataset is licensed under CC BY-NC 4.0.
+Commercial use is strictly prohibited.
