@@ -9,18 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [TeamPCP : Campagne massive de Supply Chain et extension vers PyPI](#teampcp-campagne-massive-de-supply-chain-et-extension-vers-pypi)
-  * [Red Menshen : Espionnage étatique via BPFDoor dans les télécoms](#red-menshen-espionnage-etatique-via-bpfdoor-dans-les-telecoms)
-  * [BRUSHWORM et BRUSHLOGGER : Menaces persistantes contre le secteur financier](#brushworm-et-brushlogger-menaces-persistantes-contre-le-secteur-financier)
-  * [Campagne de phishing AITM ciblant TikTok Business](#campagne-de-phishing-aitm-ciblant-tiktok-business)
-  * [Fausses alertes de sécurité VS Code sur GitHub](#fausses-alertes-de-securite-vs-code-sur-github)
+  * [Attaque de l'acteur UAC-0255 via le malware AGEWHEEZE](#attaque-de-lacteur-uac0255-via-le-malware-agewheeze)
+  * [Campagne TeamPCP : Transition vers la phase de monétisation](#campagne-teampcp-transition-vers-la-phase-de-monetisation)
+  * [Infinity Stealer : Nouvelle menace macOS via ClickFix](#infinity-stealer-nouvelle-menace-macos-via-clickfix)
+  * [Alerte Apple : Exploitations actives Coruna et DarkSword](#alerte-apple-exploitations-actives-coruna-et-darksword)
+  * [Compromission majeure de la Commission Européenne par ShinyHunters](#compromission-majeure-de-la-commission-europeenne-par-shinyhunters)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber actuel est marqué par une industrialisation sans précédent des attaques sur la chaîne d'approvisionnement (Supply Chain), illustrée par l'agressivité du groupe TeamPCP ciblant PyPI et GitHub. L'émergence de partenariats hybrides entre acteurs du cyberespionnage et opérateurs de ransomwares (Vect) signale une convergence dangereuse visant une exfiltration massive suivie d'une extorsion systématique. Parallèlement, les infrastructures critiques, notamment les télécoms au Moyen-Orient et en Asie, subissent des intrusions furtives de longue durée (Red Menshen) via des implants de niveau noyau (BPFDoor), rendant la détection traditionnelle inopérante. La compromis de comptes de hauts dirigeants (FBI, LiteLLM) confirme que le ciblage individuel reste le vecteur privilégié pour contourner les protections d'entreprise. On observe également une exploitation accrue des outils d'IA et de développement (Trivy, Spring AI, VS Code), transformant les instruments de sécurité en vecteurs d'infection. Les tensions géopolitiques autour de l'Iran et de la Chine catalysent des cyber-opérations de type "wiper" et d'espionnage académique, menaçant la souveraineté technologique occidentale. Face à ces menaces, la posture régalienne française privilégie une défense active structurée, tout en proscrivant fermement le "hack-back" privé pour éviter toute escalade incontrôlée. Une vigilance accrue sur la rotation atomique des secrets et le verrouillage des dépendances CI/CD est désormais une nécessité vitale pour les organisations.
+Le paysage cyber actuel est marqué par une transition majeure des groupes d'attaquants, passant de l'expansion de l'accès initial vers une phase agressive de monétisation, comme l'illustre la campagne TeamPCP via le ransomware Vect. Parallèlement, les institutions internationales et gouvernementales restent des cibles prioritaires, avec des compromissions revendiquées contre la Commission Européenne et le directeur du FBI, soulignant la vulnérabilité persistante des infrastructures cloud et des comptes personnels à privilèges. En Ukraine, l'acteur UAC-0255 innove en usurpant l'identité du CERT-UA pour diffuser le RAT AGEWHEEZE, démontrant une sophistication accrue dans l'ingénierie sociale. L'écosystème macOS voit apparaître Infinity Stealer, utilisant le compilateur Nuitka pour échapper aux analyses statiques, confirmant la montée en puissance des malwares sur cette plateforme. L'urgence de mise à jour sur iOS est soulignée par Apple face aux kits d'exploitation "Coruna" et "DarkSword" ciblant des failles noyau. Globalement, le "credential fan-out" observé dans les attaques de chaîne d'approvisionnement montre qu'un seul secret volé peut désormais exposer des milliers d'organisations en cascade. Les décideurs doivent impérativement renforcer la surveillance des pipelines CI/CD et accélérer la rotation des secrets d'infrastructure. Enfin, l'intégration systématique de techniques d'évasion comme la stéganographie WAV ou l'usage d'API légitimes (GitHub Releases) pour l'exfiltration complexifie radicalement la détection périmétrique traditionnelle.
 
 <br>
 <br>
@@ -34,12 +34,11 @@ Le paysage cyber actuel est marqué par une industrialisation sans précédent d
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Handala | Gouvernemental (FBI), Médical (Stryker) | Piratage de boîtes mails personnelles, Wiper, influence propalestinienne | [Le Monde](https://www.lemonde.fr/pixels/article/2026/03/27/des-hackeurs-iraniens-revendiquent-le-piratage-de-la-boite-mail-personnelle-du-directeur-du-fbi_6674660_4408996.html) |
-| LAPSUS$ | Pharmacie (AstraZeneca), Technologie | Extorsion de données, vol de dépôts de code source | [SANS ISC](https://isc.sans.edu/diary/32838) |
-| Red Menshen | Télécommunications, Gouvernemental | Implants BPFDoor furtifs au niveau noyau (Linux/BSD), magic packets | [Security Affairs](https://securityaffairs.com/190029/malware/china-linked-red-menshen-apt-deploys-stealthy-bpfdoor-implants-in-telecom-networks.html) |
-| ShinyHunters | Cybercriminalité (BreachForums) | Fuite de bases de données utilisateurs, gestion de forums underground | [HackRead](https://hackread.com/shinyhunters-breachforums-leak-300000-user-database/) |
-| TeamPCP | Supply Chain (PyPI, GitHub), IA/ML | Compromission de packages (WAV steganography), vol de credentials, déploiement de wipers | [SANS ISC](https://isc.sans.edu/diary/32838) |
-| Vect | Transversal (Affiliés) | Ransomware-as-a-Service (RaaS), partenariat avec TeamPCP | [SANS ISC](https://isc.sans.edu/diary/32838) |
+| Handala (Void Manticore) | Gouvernement, Santé | Phishing, vol de données, wipers (Stryker), ciblage de comptes Gmail personnels | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
+| LAPSUS$ | Pharmacie, Technologie | Extorsion, vol de données (AstraZeneca suspecté) | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
+| ShinyHunters | Institutions Publiques, Éducation | Vol de données massif via infrastructure cloud (AWS), fuites sur sites Tor | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
+| TeamPCP | Chaîne d'approvisionnement (Software), CI/CD | Compromission de paquets (PyPI, npm), vol de credentials, stéganographie | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
+| UAC-0255 | Gouvernement, Santé, Finance (Ukraine) | Usurpation d'identité (CERT-UA), phishing via Files.fm, RAT AGEWHEEZE (Go) | [CERT-UA](https://cert.gov.ua/article/6288047) |
 
 <br/>
 <br/>
@@ -49,10 +48,9 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Gouvernemental | Commission Européenne | Enquête sur une intrusion majeure dans un environnement cloud AWS (350 Go de données volées). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/european-commission-investigating-breach-after-amazon-cloud-account-hack/) |
-| Éducation / Recherche | UK Universities | Mise en garde contre l'espionnage et les activités d'influence chinoises dans les universités britanniques. | [RUSI](https://www.rusi.org/explore-our-research/publications/commentary/who-pays-price-managing-china-related-risks-uk-universities) |
-| Défense / Souveraineté | Iran / Moyen-Orient | Déploiement de capacités aéroterrestres US/Israël et multiplication des cyber-attaques wipers contre les infrastructures iraniennes. | [IRIS](https://www.iris-france.org/operations-aeroterrestres-sur-liran-de-quoi-parle-t-on/) |
-| Sécurité Internationale | Diego Garcia (Océan Indien) | Attribution à l'Iran d'une attaque de missile contre une base anglo-américaine, sur fond de désinformation russe. | [EUvsDisinfo](https://euvsdisinfo.eu/disrupting-the-foundations-of-fimi/) |
+| Défense / Gouvernement | Conflit Iran-Israël-USA | Le groupe Handala, lié à l'Iran, a fuité des données du compte Gmail personnel du directeur du FBI | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
+| Gouvernemental | Conflit Ukraine-Russie | Campagne de cyberespionnage massive contre les institutions ukrainiennes utilisant l'image du CERT-UA | [CERT-UA](https://cert.gov.ua/article/6288047) |
+| Institutions Internationales | Souveraineté Européenne | Revendication de vol de 350 Go de données appartenant à la Commission Européenne par ShinyHunters | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
 
 <br/>
 <br/>
@@ -60,12 +58,10 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 <div id="synthese-reglementaire"></div>
 
 ## Synthèse réglementaire et juridiques
-Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
+Voici un tableau récapitulatif complet des articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Active Cyber Defense Certainty Act | Nino Caraty | 27/03/2026 | États-Unis | Proposition de loi 2019 | Projet autorisant les mesures de défense active (hack-back) sous conditions de notification au FBI. | [Portail-IE](https://www.portail-ie.fr/univers/risques-et-gouvernance-cyber/2026/la-legitime-defense-numerique-les-entreprises-francaises-doivent-elles-sarmer-pour-maintenir-leur-perennite-et-leur-competitivite/) |
-| Amende contre xAI (Grok) | HackerWorkspace | 27/03/2026 | Pays-Bas | Décision judiciaire | Menace d'amendes suite à la génération d'images nues non consensuelles par l'IA Grok. | [HackerWorkspace](https://hackerworkspace.com/article/dutch-court-threatens-xai-with-fines-over-grok-s-nonconsensual-nude-images) |
-| Doctrine de lutte informatique offensive (LIO) | SGDSN / COMCYBER | 27/03/2026 | France | Cadre stratégique national | Rappel de la séparation stricte entre acteurs privés (défense) et État (seules armées habilitées à l'offensive). | [Portail-IE](https://www.portail-ie.fr/univers/risques-et-gouvernance-cyber/2026/la-legitime-defense-numerique-les-entreprises-francaises-doivent-elles-sarmer-pour-maintenir-leur-perennite-et-leur-competitivite/) |
+| Directive BOD 22-01 | CISA | 28/03/2026 | États-Unis | BOD 22-01 | Obligation pour les agences fédérales de corriger les vulnérabilités du catalogue KEV avant échéance | [Security Affairs](https://securityaffairs.com/190076/uncategorized/u-s-cisa-adds-a-flaw-in-f5-big-ip-amp-to-its-known-exploited-vulnerabilities-catalog.html) |
 
 <br/>
 <br/>
@@ -75,12 +71,13 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Cybercriminalité | BreachForums V5 | Fuite de 339 778 comptes (emails, noms d'utilisateurs, hashs de mots de passe Argon2). | [HIBP](https://haveibeenpwned.com/Breach/BreachForumsV5) |
-| Gouvernemental | Commission Européenne | Vol de 350 Go de données incluant des bases de données d'employés et des serveurs de messagerie. | [SecurityAffairs](https://securityaffairs.com/190067/data-breach/the-european-commission-confirmed-a-cyberattack-affecting-part-of-its-cloud-systems.html) |
-| Gouvernemental | Police Néerlandaise | Compromission via phishing ; impact limité selon l'agence, pas d'accès aux données des citoyens. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/dutch-police-discloses-security-breach-after-phishing-attack/) |
-| Gouvernemental | Shérif du comté de Jackson (USA) | Attaque par ransomware ayant paralysé l'ensemble du réseau et des systèmes de rapport. | [DataBreaches](https://databreaches.net/2026/03/27/ransomware-attack-totally-cripples-jackson-county-sheriffs-office-in-indiana/) |
-| Pharmaceutique | AstraZeneca | Revendication de vol de 3 Go de données (code interne, configurations cloud, données employés) par LAPSUS$. | [SANS ISC](https://isc.sans.edu/diary/32838) |
-| Sport | AFC Ajax | Accès non autorisé aux données des supporters et manipulation des systèmes de billetterie. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/ajax-football-club-hack-exposed-fan-data-enabled-ticket-hijack/) |
+| Éducation | Infinite Campus | Vol de données via ShinyHunters, impactant principalement les informations d'annuaires étudiants | [DataBreaches](https://databreaches.net/2026/03/28/thankfully-the-infinite-campus-incident-did-not-involve-a-lot-of-non-directory-student-information/) |
+| Gouvernemental | Commission Européenne | Vol revendiqué de 350 Go de données (e-mails, contrats) via une brèche sur un compte AWS | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
+| Gouvernemental | Kash Patel (Directeur FBI) | Compromission d'un compte Gmail personnel et fuite de fichiers historiques | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
+| Santé | AstraZeneca | Revendication non confirmée de vol de 3 Go de données par LAPSUS$ | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
+| Santé | Corewell Health | Violation de données via le consultant Pinnacle Holdings impactant des milliers de patients | [DataBreaches](https://databreaches.net/2026/03/28/thousands-of-corewell-health-patients-affected-by-security-breach/) |
+| Santé | Woodfords Family Services | Notification d'une attaque par ransomware datant d'avril 2024 | [DataBreaches](https://databreaches.net/2026/03/28/woodfords-family-services-notifying-patients-and-families-about-2024-ransomware-attack/) |
+| Technologie | Anthropic | Fuite d'informations sur le futur modèle d'IA "Claude Mythos" | [DataBreaches](https://databreaches.net/2026/03/28/meet-claude-mythos-leaked-anthropic-post-reveals-the-powerful-upcoming-model/) |
 
 <br/>
 <br/>
@@ -90,15 +87,13 @@ Voici un tableau récapitulatif des violations de données constatées :
 Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2026-4681 | 10.0 | Non spécifié | FALSE | PTC Windchill & FlexPLM | Exécution de code à distance (RCE) via désérialisation | Non mentionnées | Vulnérabilité critique de désérialisation permettant une exécution de code à distance sans authentification. | [Security Affairs](https://securityaffairs.com/190049/security/cisa-and-bsi-warn-orgs-of-critical-ptc-windchill-and-flexplm-flaw.html) |
-| CVE-2026-3055 | 9.3 | Non spécifié | FALSE | Citrix NetScaler ADC/Gateway | Fuite de mémoire (Session Hijacking) | Non mentionnées | Permet à un attaquant non authentifié de lire la mémoire sensible pour voler des jetons de session. | [Field Effect](https://fieldeffect.com/blog/netscaler-adc-gateway-vulnerabilities) |
-| CVE-2026-33992 | 9.3 | Non spécifié | FALSE | pyLoad | Server-Side Request Forgery (SSRF) | Non mentionnées | L'absence de validation des URLs permet d'accéder aux métadonnées des fournisseurs cloud (ex: DigitalOcean). | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33992) |
-| CVE-2026-33634 | 9.3 | Non spécifié | TRUE | Aquasecurity Trivy | Supply Chain / Injection | Non mentionnées | Utilisation de credentials compromis pour diffuser des versions malveillantes via GitHub Actions. | [Security Affairs](https://securityaffairs.com/190044/security/u-s-cisa-adds-an-aquasecurity-trivy-flaw-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-22738 | 9.3 | Non spécifié | FALSE | Spring AI | RCE / SSRF | Non mentionnées | Vulnérabilités multiples permettant l'exécution de code et le contournement de politiques de sécurité. | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0365/) |
-| CVE-2026-33991 | 8.8 | Non spécifié | FALSE | WeGIA | SQL Injection | Non mentionnées | Injection SQL dans `deletar_tag.php` via la fonction `extract($_REQUEST)` sans préparation de requête. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33991) |
-| CVE-2026-33981 | 8.3 | Non spécifié | FALSE | changedetection.io | Information Exposure | Non mentionnées | Fuite de variables d'environnement sensibles via l'utilisation de la commande `jq env` dans les filtres. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33981) |
-| CVE-2026-33980 | 8.3 | Non spécifié | FALSE | Azure Data Explorer | KQL Injection | Non mentionnées | Permet l'exécution de requêtes Kusto arbitraires via des f-strings non assainies. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-33980) |
-| CVE-2026-4248 | 8.0 | Non spécifié | FALSE | WordPress Ultimate Member | Account Takeover | Non mentionnées | Fuite de jeton de réinitialisation de mot de passe via un shortcode, permettant la prise de contrôle d'un admin. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4248) |
+| CVE-2025-53521 | 9.8 | Non spécifié | TRUE | F5 BIG-IP APM | Remote Code Execution (RCE) | T1190: Exploit Public-Facing Application | Permet l'exécution de code à distance via du trafic malveillant sur les serveurs virtuels avec politique d'accès activée | [Security Affairs](https://securityaffairs.com/190076/uncategorized/u-s-cisa-adds-a-flaw-in-f5-big-ip-amp-to-its-known-exploited-vulnerabilities-catalog.html) |
+| CVE-2018-25223 | 9.8 | Non spécifié | FALSE | Crashmail 1.6 | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Permet l'exécution de code à distance via des entrées malveillantes | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25223) |
+| CVE-2018-25221 | 9.8 | Non spécifié | FALSE | EChat Server 3.1 | Buffer Overflow | T1210: Exploitation of Remote Services | Dépassement de tampon via le paramètre 'username' sur l'endpoint chat.ghp | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25221) |
+| CVE-2018-25220 | 9.8 | Non spécifié | FALSE | Bochs 2.6-5 | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Exécution de code via chaîne ROP après injection de 1200 octets | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25220) |
+| CVE-2026-5004 | 9.0 | Non spécifié | FALSE | Wavlink WL-WN579X3-C | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Dépassement via l'argument 'UpnpEnabled' dans firewall.cgi | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-5004) |
+| CVE-2018-25225 | 8.6 | Non spécifié | FALSE | SIPP 3.3 | Stack-based Buffer Overflow | T1203: Exploitation for Client Execution | Injection de code via fichier de configuration malveillant | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25225) |
+| CVE-2026-33634 | Non spécifié | Non spécifié | TRUE | CI/CD Ecosystem (TeamPCP) | Supply Chain Vulnerability | T1195.002: Compromise Software Supply Chain | Liée à la campagne TeamPCP, échéance de remédiation CISA fixée au 08 avril 2026 | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
 
 <br/>
 <br/>
@@ -107,11 +102,11 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| TeamPCP Supply Chain Campaign: Update 002 | Analyse exhaustive d'une menace supply chain majeure en cours. | [SANS ISC](https://isc.sans.edu/diary/rss/32838) |
-| China-linked Red Menshen APT deploys stealthy BPFDoor implants | Analyse technique d'une campagne d'espionnage critique dans les télécoms. | [SecurityAffairs](https://securityaffairs.com/190029/malware/china-linked-red-menshen-apt-deploys-stealthy-bpfdoor-implants-in-telecom-networks.html) |
-| Elastic Security Labs uncovers BRUSHWORM and BRUSHLOGGER | Détails sur de nouveaux malwares ciblant le secteur financier. | [Elastic](https://www.elastic.co/security-labs/brushworm-targets-financial-services) |
-| Fake VS Code alerts on GitHub spread malware to developers | Alerte sur une nouvelle technique de phishing ciblant les développeurs. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/fake-vs-code-alerts-on-github-spread-malware-to-developers/) |
-| New AITM phishing wave hijacks TikTok Business accounts | Évolution des techniques de phishing AITM vers de nouvelles plateformes sociales. | [SecurityAffairs](https://securityaffairs.com/190058/security/new-aitm-phishing-wave-hijacks-tiktok-business-accounts.html) |
+| Apple issues urgent lock screen warnings for unpatched iPhones and iPads | Alerte critique sur des exploitations actives ("Coruna", "DarkSword") ciblant le noyau iOS | [Security Affairs](https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html) |
+| Кібератака UAC-0255 під виглядом сповіщення від CERT-UA із застосуванням програмного засобу AGEWHEEZE | Campagne d'espionnage sophistiquée utilisant une usurpation d'autorité cyber nationale | [CERT-UA](https://cert.gov.ua/article/6288047) |
+| New Infinity Stealer malware grabs macOS data via ClickFix lures | Nouvelle menace macOS utilisant des techniques d'évasion avancées (Nuitka) et ingénierie sociale | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/new-infinity-stealer-malware-grabs-macos-data-via-clickfix-lures/) |
+| ShinyHunters claims the hack of the European Commission | Incident géopolitique majeur impactant les institutions européennes et le cloud AWS | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
+| TeamPCP Supply Chain Campaign: Update 003 | Suivi d'une campagne de chaîne d'approvisionnement mondiale entrant en phase de monétisation | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
 
 <br/>
 <br/>
@@ -120,128 +115,140 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| ISC Stormcast For Friday, March 27th, 2026 | Contenu audio/podcast redondant avec les rapports écrits. | [SANS ISC](https://isc.sans.edu/diary/rss/32836) |
-| Agentic GRC: Teams Get the Tech. | Article d'opinion sponsorisé sans indicateurs techniques concrets. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/agentic-grc-teams-get-the-tech-the-mindset-shift-is-whats-missing/) |
-| Windows 11 KB5079391 update rolls out | Mise à jour de fonctionnalités mineures sans impact critique sur la sécurité immédiate. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5079391-update-rolls-out-smart-app-control-improvements/) |
-| Anti-piracy coalition takes down AnimePlay app | Information purement opérationnelle sur la lutte contre le piratage, hors menace cyber directe. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/anti-piracy-coalition-takes-down-animeplay-app-with-5-million-users/) |
-| Mastodon / Social Media posts (divers) | Sources non structurées, doublons ou informations trop parcellaires. | [Divers (Mastodon/Hachyderm)](https://mastodon.social/...) |
+| 2026-03-28 RDP Honeypot IOCs | Données brutes de honeypot sans analyse contextuelle | [Mastodon / RDP Snitch](https://infosec.exchange/@rdpsnitch/116309589550476564) |
+| Cloud security is more critical than ever | Publication de type sensibilisation générale sans nouvelle menace spécifique | [Mastodon](https://mastodon.social/@archibaldtitan/116309564514976682) |
+| Possible Phishing on robiox.com | Notification isolée d'un seul IoC de phishing | [Mastodon / URLDNA](https://infosec.exchange/@urldna/116309636258124505) |
+| The Run Dialog: Small Key, Loud Evidence | Article à visée éducative/forensics, pas une actualité de veille | [CyberEngage](https://www.cyberengage.org/post/the-run-dialog-small-key-loud-evidence) |
+| TIAMAT: The First Autonomous AI Operating System | Contenu promotionnel pour un projet technologique | [Mastodon](https://mastodon.social/@TiamatEnity/116309734013107423) |
 
 <br>
-<br/>
+<br>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="teampcp-campagne-supply-chain"></div>
 
-## TeamPCP : Campagne massive de Supply Chain et extension vers PyPI
-Le groupe TeamPCP a intensifié sa campagne de supply chain en compromettant le SDK Python de Telnyx sur PyPI (plus de 670 000 téléchargements mensuels). Des versions malveillantes (4.87.1 et 4.87.2) utilisent une nouvelle technique de stéganographie via des fichiers WAV pour dissimuler leurs charges utiles. Sur Windows, un binaire persistant est déposé sous le nom `msbuild.exe` dans le dossier de démarrage, tandis que sur Linux/macOS, le malware récolte des identifiants. Parallèlement, TeamPCP s'est associé au ransomware Vect pour lancer un programme d'affiliation massif via BreachForums, marquant un pivot de la simple intrusion vers l'extorsion à grande échelle. Le groupe LAPSUS$ a également revendiqué le piratage d'AstraZeneca en utilisant des credentials volés lors des phases précédentes de cette campagne (Trivy/Checkmarx). L'analyse révèle que le vecteur initial pour LiteLLM était le compte GitHub personnel de son PDG, soulignant le ciblage de dirigeants. CISA a ajusté la date limite de remédiation pour la vulnérabilité Trivy (CVE-2026-33634) au 8 avril 2026.
+<div id="attaque-de-lacteur-uac0255-via-le-malware-agewheeze"></div>
 
-**Analyse de l'impact** : Impact critique sur l'écosystème de développement Python et les pipelines CI/CD. La convergence entre supply chain, RaaS et exploitation de forums cybercriminels crée une menace systémique capable de déploiements industriels de ransomwares.
+## Attaque de l'acteur UAC-0255 sous couvert du CERT-UA via le malware AGEWHEEZE
+Le CERT-UA a détecté une campagne malveillante sophistiquée les 26 et 27 mars 2026 ciblant de nombreux secteurs en Ukraine. Les attaquants utilisent des e-mails de phishing usurpant l'identité du CERT-UA, invitant les victimes à installer un prétendu "outil de protection" depuis la plateforme Files.fm. Un site miroir frauduleux, cert-ua[.]tech, a également été mis en place pour renforcer la crédibilité de l'attaque. Le fichier téléchargé installe AGEWHEEZE, un outil de contrôle à distance (RAT) écrit en Go. Ce malware permet le contrôle de l'écran, la manipulation de fichiers, l'exfiltration du presse-papier et l'exécution de commandes système. L'infrastructure de commande (C2) est hébergée chez OVH et présente des traces en langue russe. La persistance est assurée par des tâches planifiées nommées "SvcHelper" ou "CoreService". Des liens avec le groupe "Cyber Serp" sont suspectés via des commentaires dans le code HTML.
 
-**Recommandations** :
-- Vérifier immédiatement la présence des versions 4.87.1/2 de Telnyx et 1.82.8 de LiteLLM.
-- Rechercher des fichiers `.wav` suspects et l'exécutable `msbuild.exe` dans les dossiers Startup Windows.
-- Surveiller les connexions sortantes vers `models.litellm.cloud`.
-- Réinitialiser impérativement tous les secrets (clés SSH, tokens cloud) ayant transité par des environnements exposés.
+**Analyse de l'impact** : Impact critique pour la souveraineté numérique ukrainienne. L'usurpation d'une autorité de réponse aux incidents (CERT) brise la chaîne de confiance et peut paralyser les efforts de remédiation légitimes tout en offrant un accès total aux systèmes compromis.
 
+**Recommandations** : 
+* Bloquer les domaines cert-ua[.]tech et creepy[.]ltd au niveau du DNS/Proxy.
+* Rechercher la présence des exécutables SysSvc.exe et service.exe dans %APPDATA%.
+* Monitorer les tâches planifiées inhabituelles nommées SvcHelper et CoreService.
+* Sensibiliser les utilisateurs sur le fait que le CERT-UA ne demande jamais l'installation d'outils via des liens tiers type Files.fm.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | TeamPCP, Vect, LAPSUS$ |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise<br/>* T1027.003: Steganography (WAV files)<br/>* T1547.001: Boot or Logon Autostart Execution<br/>* T1078.004: Cloud Accounts |
-| Observables & Indicateurs de compromission | * Domaine : `models.litellm.cloud`<br/>* Fichier : `msbuild.exe`<br/>* Chemin : `~/.config/sysmon/sysmon.py`<br/>* Processus : `node-setup-*` (Kubernetes) |
+| Groupe ou acteur malveillant | UAC-0255 |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Phishing: Malicious Link <br/> * T1059: Command and Scripting Interpreter <br/> * T1053.005: Scheduled Task <br/> * T1105: Ingress Tool Transfer |
+| Observables & Indicateurs de compromission | ```* IP: 54.36.237.92 <br/> * Domain: cert-ua[.]tech <br/> * Hash (AGEWHEEZE): 5f16463f5c463f5f2f69f31c6ce7d3040d07876156a265b5521737f1c7a2a9b3 <br/> * Path: %APPDATA%\SysSvc\SysSvc.exe``` |
 
 ### Source (url) du ou des articles
-* https://isc.sans.edu/diary/rss/32838
-* https://www.bleepingcomputer.com/news/security/backdoored-telnyx-pypi-package-pushes-malware-hidden-in-wav-audio/
+* https://cert.gov.ua/article/6288047
 
 <br>
 <br>
-<div id="red-menshen-bpfdoor-telecom"></div>
 
-## Red Menshen : Espionnage étatique via BPFDoor dans les télécoms
-Le groupe APT Red Menshen, lié à la Chine, mène une campagne d'espionnage de longue durée ciblant les réseaux de télécommunications au Moyen-Orient et en Asie. L'acteur utilise l'implant BPFDoor, un backdoor Linux furtif qui réside dans le noyau et n'écoute sur aucun port visible. L'activation se fait via des "paquets magiques" spécialement conçus, permettant une surveillance quasi invisible du trafic. Les nouvelles variantes dissimulent leurs déclencheurs dans le trafic HTTPS légitime et utilisent le protocole SCTP pour accéder aux données de signalisation et aux localisations des abonnés. Red Menshen imite des services légitimes (Docker, serveurs HPE) pour se fondre dans les environnements 5G. Cette stratégie de "cellules dormantes" assure une persistance pluriannuelle.
+<div id="campagne-teampcp-transition-vers-la-phase-de-monetisation"></div>
 
-**Analyse de l'impact** : Menace stratégique majeure pour la confidentialité des communications gouvernementales et citoyennes. La capacité de l'implant à intercepter les flux de signalisation télécom remet en cause la sécurité des identités numériques.
+## Campagne TeamPCP : Transition vers la phase de monétisation
+La campagne de chaîne d'approvisionnement TeamPCP observe une pause opérationnelle de 48 heures sans nouvelle compromisison, suggérant un passage à la phase de monétisation des données volées (environ 300 Go). Cette évolution est marquée par un partenariat avec l'affilié de ransomware Vect. Palo Alto Networks a publié des règles comportementales pour détecter ces attaques CI/CD, se concentrant sur l'énumération anormale de secrets et les transferts de données vers des domaines récents. Parallèlement, la Cloud Security Alliance a analysé un "wiper" Kubernetes ciblant spécifiquement les systèmes paramétrés en langue farsi. L'analyse de GitGuardian révèle un "credential fan-out" de 10 000 pour 1, signifiant qu'un seul token volé a pu exposer des milliers de secrets en aval. L'exfiltration via les "GitHub Releases" est confirmée comme une technique de contournement des solutions DLP. Enfin, l'intrusion chez AstraZeneca reste à confirmer malgré les revendications de LAPSUS$.
 
-**Recommandations** :
-- Implémenter une surveillance rigoureuse des filtres BPF (Berkeley Packet Filter) au niveau système.
-- Rechercher des anomalies dans le trafic ICMP et SCTP.
-- Auditer les processus Linux pour détecter des anomalies de type "Raw Sockets" sans ports ouverts.
+**Analyse de l'impact** : Risque systémique élevé pour les entreprises utilisant des pipelines DevOps. Le passage au ransomware signifie que les accès volés ces 10 derniers jours vont maintenant être transformés en attaques destructrices ou extorsions.
 
+**Recommandations** : 
+* Réaliser une rotation complète des secrets et tokens PAT utilisés dans les pipelines CI/CD.
+* Déployer des politiques d'admission Kubernetes pour bloquer les DaemonSets privilégiés montant le hostPath /.
+* Rechercher les archives nommées tpcp.tar.gz sur les runners.
+* Monitorer les accès au processus memory de Runner.Worker.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Red Menshen (Chine) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1014: Rootkit<br/>* T1573.001: Symmetric Cryptography<br/>* T1021.004: SSH (TinyShell)<br/>* T1205.002: Socket Filters (BPFDoor) |
-| Observables & Indicateurs de compromission | * Type d'implant : ELF 64-bit BPFdoor<br/>* Marqueur : `0xFFFFFFFF`<br/>* Protocole : SCTP, ICMP |
+| Groupe ou acteur malveillant | TeamPCP, Vect (Affilié), LAPSUS$ (suspecté) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Compromise Software Supply Chain <br/> * T1567.001: Exfiltration to Cloud Repository (GitHub Releases) <br/> * T1485: Data Destruction (Kubernetes Wiper) |
+| Observables & Indicateurs de compromission | ```* Domain: api.github.com (exfiltration channel) <br/> * File: tpcp.tar.gz <br/> * CVE: CVE-2026-33634``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190029/malware/china-linked-red-menshen-apt-deploys-stealthy-bpfdoor-implants-in-telecom-networks.html
+* https://isc.sans.edu/diary/rss/32842
 
 <br>
 <br>
-<div id="brushworm-brushlogger-elastic"></div>
 
-## BRUSHWORM et BRUSHLOGGER : Menaces persistantes contre le secteur financier
-Une institution financière d'Asie du Sud a été la cible de deux nouveaux composants malveillants : BRUSHWORM et BRUSHLOGGER. BRUSHWORM est un backdoor modulaire capable de se propager via USB en utilisant des noms de fichiers attractifs comme `Salary Slips.exe`. Il effectue des vérifications anti-sandbox sophistiquées (résolution d'écran, hyperviseurs) et exfiltre une vaste gamme de documents (Office, PDF, SQL, archives). BRUSHLOGGER est un enregistreur de frappe qui utilise le side-loading de DLL en se faisant passer pour `libcurl.dll`. Il capture les frappes système et le contexte des fenêtres actives, stockant les données dans des fichiers XOR-encryptés. Les erreurs de codage suggèrent une utilisation possible de l'IA pour la génération de code par les attaquants.
+<div id="infinity-stealer-nouvelle-menace-macos-via-clickfix"></div>
 
-**Analyse de l'impact** : Risque élevé de vol de données financières et de propriété intellectuelle. La capacité de propagation USB rend ce malware efficace même dans des environnements isolés (air-gapped).
+## Infinity Stealer : Nouvelle menace macOS via ClickFix
+Une nouvelle campagne d'info-stealer baptisée "Infinity Stealer" cible les utilisateurs de macOS en utilisant la technique d'ingénierie sociale ClickFix. L'attaque commence par une fausse page de vérification CAPTCHA Cloudflare (sur update-check[.]com) qui incite l'utilisateur à copier-coller une commande curl malveillante dans son Terminal. Cette commande exécute un chargeur écrit en Python et compilé avec Nuitka, ce qui transforme le script en binaire natif Mach-O, rendant l'analyse statique et la détection très difficiles. Le malware effectue des vérifications anti-analyse avant de décompresser le payload final. Il est capable de voler les mots de passe des navigateurs (Chrome, Firefox), les trousseaux d'accès Keychain, les portefeuilles crypto et les fichiers de configuration (.env) contenant des secrets de développement. L'exfiltration se fait via HTTP POST avec une notification envoyée aux attaquants sur Telegram.
 
-**Recommandations** :
-- Désactiver l'exécution automatique des périphériques USB.
-- Surveiller la création de tâches planifiées nommées `MSGraphics` ou `MSRecorder`.
-- Rechercher les répertoires cachés dans `C:\ProgramData\Photoes\`.
+**Analyse de l'impact** : Risque élevé pour les développeurs et administrateurs utilisant macOS. La technique de compilation Nuitka marque une évolution dans la sophistication des malwares macOS, cherchant à contourner les protections Gatekeeper et les EDR par l'exécution de commandes Terminal par l'utilisateur lui-même.
 
+**Recommandations** : 
+* Interdire l'utilisation de commandes Terminal copiées-collées depuis des sources web non vérifiées.
+* Surveiller les connexions sortantes vers le domaine update-check[.]com.
+* Déployer des règles EDR détectant l'exécution de scripts Bash via curl | bash vers le répertoire /tmp.
+* Rechercher la présence de binaires inhabituels générés par Nuitka (UpdateHelper.bin).
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Activité non attribuée spécifiquement (Ciblage Asie du Sud) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1053.005: Scheduled Task<br/>* T1574.002: DLL Side-Loading<br/>* T1056.001: Keylogging<br/>* T1091: Replication Through Removable Media |
-| Observables & Indicateurs de compromission | * Mutex : `Windows-Updates-KB852654856`<br/>* Hash : `89891aa3867c1a57512d77e8e248d4a35dd32e99dcda0344a633be402df4a9a7`<br/>* Chemin : `C:\Users\Public\Systeminfo\` |
+| Groupe ou acteur malveillant | Non mentionné |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.002: User Execution: Malicious File <br/> * T1059.004: Unix Shell <br/> * T1555: Credentials from Password Stores <br/> * T1140: Deinstall or Deactivate Security Software |
+| Observables & Indicateurs de compromission | ```* Domain: update-check[.]com <br/> * Binary: UpdateHelper.bin <br/> * Technique: Nuitka-compiled Python payload``` |
 
 ### Source (url) du ou des articles
-* https://www.elastic.co/security-labs/brushworm-targets-financial-services
+* https://www.bleepingcomputer.com/news/security/new-infinity-stealer-malware-grabs-macos-data-via-clickfix-lures/
 
 <br>
 <br>
-<div id="campagne-de-phishing-aitm-ciblant-tiktok-business"></div>
 
-## Campagne de phishing AITM ciblant TikTok Business
-Une nouvelle vague de phishing de type Adversary-in-the-Middle (AiTM) cible les comptes TikTok for Business. L'objectif est de prendre le contrôle de ces comptes pour mener des campagnes de malvertising et de fraude publicitaire. Les attaquants utilisent des domaines fraîchement enregistrés protégés par Cloudflare Turnstile pour évader les outils de détection automatisés. Les victimes sont redirigées depuis des sites légitimes (Google Storage) vers des pages imitant TikTok ou Google "Schedule a call". Les kits AiTM permettent de capturer les identifiants et les jetons de session en temps réel, contournant ainsi l'authentification multi-facteurs (MFA). La compromission d'un compte TikTok lié à un compte Google peut entraîner une cascade de vols de données.
+<div id="alerte-apple-exploitations-actives-coruna-et-darksword"></div>
 
-**Analyse de l'impact** : Détournement de budgets publicitaires et utilisation de comptes de confiance pour diffuser des malwares (ex: Vidar, StealC). Risque de réputation important pour les entreprises.
+## Alerte Apple : Exploitations actives Coruna et DarkSword
+Apple a émis des avertissements urgents via des notifications sur l'écran de verrouillage pour les utilisateurs d'iPhones et d'iPads non patchés. Ces alertes concernent des exploitations actives basées sur le web ciblant des versions obsolètes d'iOS (de la version 13 à 17.2.1). Les kits d'exploitation identifiés, "Coruna" et "DarkSword", utilisent du contenu web malveillant pour déclencher des chaînes d'infection permettant le vol de données sensibles. Les chercheurs de Kaspersky ont révélé que "Coruna" utilise une version mise à jour d'un exploit de noyau déjà vu dans la campagne "Operation Triangulation" de 2023. Bien que les versions iOS 18.x soient protégées contre Coruna, elles resteraient cibles potentielles pour DarkSword sur les versions antérieures à 18.7. Apple insiste sur l'installation immédiate des mises à jour de sécurité critiques pour rompre ces attaques.
 
-**Recommandations** :
-- Former les équipes marketing à la vérification des URLs de connexion.
-- Utiliser des clés de sécurité matérielles (FIDO2) pour contrer le phishing AiTM.
-- Surveiller les activités inhabituelles sur les plateformes de gestion publicitaire.
+**Analyse de l'impact** : Risque critique de compromission de la confidentialité des données mobiles. La réutilisation de frameworks d'exploitation d'élite suggère que ces outils sont désormais industrialisés ou partagés entre groupes d'espionnage.
 
+**Recommandations** : 
+* Forcer la mise à jour immédiate de tous les appareils iOS vers la dernière version disponible (iOS 17.7+ ou 18.x).
+* Activer le "Lockdown Mode" (Mode Isolement) pour les utilisateurs à haut risque, ce qui bloque ces vecteurs d'attaque web.
+* Activer la fonction "Safe Browsing" de Safari par défaut via MDM.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1557: Adversary-in-the-Middle<br/>* T1566.002: Spearphishing Link |
-| Observables & Indicateurs de compromission | * Utilisation de Cloudflare Turnstile sur des domaines de phishing. |
+| Groupe ou acteur malveillant | Operation Triangulation (liens suspectés) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.001: User Execution: Malicious Link <br/> * T1068: Exploitation for Privilege Escalation <br/> * T1430: Location Tracking |
+| Observables & Indicateurs de compromission | ```* Exploit Kits: Coruna, DarkSword <br/> * Vulnerability: Kernel exploits (ref. Operation Triangulation)``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190058/security/new-aitm-phishing-wave-hijacks-tiktok-business-accounts.html
+* https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html
 
 <br>
 <br>
-<div id="fausses-alertes-de-securite-vs-code-sur-github"></div>
 
-## Fausses alertes de sécurité VS Code sur GitHub
-Une campagne massive cible les développeurs sur GitHub via de fausses alertes de sécurité VS Code postées dans les sections "Discussions". Les messages, utilisant des titres alarmants comme "Severe Vulnerability - Immediate Update Required", incitent à télécharger des versions "patchées" d'extensions hébergées sur Google Drive. Les victimes sont redirigées vers un site de reconnaissance (`drnatashachinn[.]com`) qui profile les systèmes (OS, locale, timezone) via JavaScript. Ce système de distribution de trafic (TDS) permet de ne délivrer le malware final qu'aux cibles réelles, excluant les bots et les chercheurs. Les comptes utilisés pour poster ces alertes sont souvent nouveaux ou usurpés.
+<div id="compromission-majeure-de-la-commission-europeenne-par-shinyhunters"></div>
 
-**Analyse de l'impact** : Risque d'infection des stations de travail des développeurs par des infostealers ou des outils d'accès à distance (RAT), compromettant l'intégrité du code source de l'organisation.
+## Compromission majeure de la Commission Européenne par ShinyHunters
+Le groupe de cybercriminalité ShinyHunters revendique une intrusion massive dans l'infrastructure de la Commission Européenne. Les attaquants affirment avoir volé plus de 350 Go de données, incluant des serveurs de messagerie, des bases de données, des documents confidentiels et des contrats. La Commission a confirmé avoir détecté une attaque le 24 mars ciblant l'infrastructure cloud hébergeant les sites Europa.eu. Bien que l'institution affirme que ses systèmes internes n'ont pas été touchés, ShinyHunters a publié des captures d'écran suggérant une compromission de leur compte AWS. AWS a nié toute faille de sa propre infrastructure, suggérant une erreur de configuration ou un vol de credentials côté client. ShinyHunters est connu pour utiliser le vishing (phishing vocal) et l'ingénierie sociale pour accéder aux plateformes SaaS comme Okta ou Microsoft 365.
 
-**Recommandations** :
-- Sensibiliser les développeurs à ne jamais télécharger d'extensions en dehors des marketplaces officielles.
-- Vérifier systématiquement la légitimité des CVE cités sur des sources officielles (NVD, MITRE).
-- Bloquer le domaine de reconnaissance identifié au niveau du proxy/DNS.
+**Analyse de l'impact** : Impact géopolitique et réputationnel majeur. La fuite potentielle de correspondances diplomatiques et de contrats européens représente un risque de chantage et d'espionnage économique à long terme.
 
+**Recommandations** : 
+* Renforcer l'authentification multi-facteurs (MFA) sur tous les comptes à privilèges cloud (AWS, Azure).
+* Auditer les configurations S3 et les politiques IAM pour détecter des accès non autorisés ou des expositions publiques.
+* Sensibiliser le personnel aux techniques de social engineering (vishing) ciblant les administrateurs IT.
+* Surveiller les sites de fuite Tor de ShinyHunters pour toute publication d'échantillons de données.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.001: Malicious Link<br/>* T1584.001: DNS Server (TDS)<br/>* T1592: Gather Victim Host Information |
-| Observables & Indicateurs de compromission | * Domaine : `drnatashachinn[.]com` |
+| Groupe ou acteur malveillant | ShinyHunters |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.003: Phishing: Voice <br/> * T1078.004: Valid Accounts: Cloud Accounts <br/> * T1537: Transfer Data to Cloud Account |
+| Observables & Indicateurs de compromission | ```* Target: europa.eu cloud infrastructure <br/> * Platform: AWS <br/> * Volume: 350 GB+``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/fake-vs-code-alerts-on-github-spread-malware-to-developers/
+* https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html
