@@ -9,19 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Attaque de l'acteur UAC-0255 via le malware AGEWHEEZE](#attaque-de-lacteur-uac0255-via-le-malware-agewheeze)
-  * [Campagne TeamPCP : Transition vers la phase de monétisation](#campagne-teampcp-transition-vers-la-phase-de-monetisation)
-  * [Infinity Stealer : Nouvelle menace macOS via ClickFix](#infinity-stealer-nouvelle-menace-macos-via-clickfix)
-  * [Alerte Apple : Exploitations actives Coruna et DarkSword](#alerte-apple-exploitations-actives-coruna-et-darksword)
-  * [Compromission majeure de la Commission Européenne par ShinyHunters](#compromission-majeure-de-la-commission-europeenne-par-shinyhunters)
+  * [IA et Malware : La maturité opérationnelle de l'agentique avec VoidLink](#ia-et-malware-la-maturite-operationnelle-de-lagentique-avec-voidlink)
+  * [Ciblage stratégique : Le groupe Handala compromet le Directeur du FBI](#ciblage-strategique-le-groupe-handala-compromet-le-directeur-du-fbi)
+  * [Vulnérabilités critiques en périphérie : F5 BIG-IP et Citrix NetScaler](#vulnerabilites-critiques-en-peripherie-f5-big-ip-et-citrix-netscaler)
+  * [Exploitation iOS : Évolution des kits Coruna et DarkSword](#exploitation-ios-evolution-des-kits-coruna-et-darksword)
+  * [Menaces sur la Supply Chain : Les campagnes agressives de TeamPCP](#menaces-sur-la-supply-chain-les-campagnes-agressives-de-teampcp)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber actuel est marqué par une transition majeure des groupes d'attaquants, passant de l'expansion de l'accès initial vers une phase agressive de monétisation, comme l'illustre la campagne TeamPCP via le ransomware Vect. Parallèlement, les institutions internationales et gouvernementales restent des cibles prioritaires, avec des compromissions revendiquées contre la Commission Européenne et le directeur du FBI, soulignant la vulnérabilité persistante des infrastructures cloud et des comptes personnels à privilèges. En Ukraine, l'acteur UAC-0255 innove en usurpant l'identité du CERT-UA pour diffuser le RAT AGEWHEEZE, démontrant une sophistication accrue dans l'ingénierie sociale. L'écosystème macOS voit apparaître Infinity Stealer, utilisant le compilateur Nuitka pour échapper aux analyses statiques, confirmant la montée en puissance des malwares sur cette plateforme. L'urgence de mise à jour sur iOS est soulignée par Apple face aux kits d'exploitation "Coruna" et "DarkSword" ciblant des failles noyau. Globalement, le "credential fan-out" observé dans les attaques de chaîne d'approvisionnement montre qu'un seul secret volé peut désormais exposer des milliers d'organisations en cascade. Les décideurs doivent impérativement renforcer la surveillance des pipelines CI/CD et accélérer la rotation des secrets d'infrastructure. Enfin, l'intégration systématique de techniques d'évasion comme la stéganographie WAV ou l'usage d'API légitimes (GitHub Releases) pour l'exfiltration complexifie radicalement la détection périmétrique traditionnelle.
-
+Le paysage de la menace cyber en ce début d'année 2026 est marqué par une rupture technologique majeure : l'IA générative est passée du stade expérimental à une maturité opérationnelle fulgurante, comme l'illustre le framework VoidLink. Parallèlement, l'activisme d'État, notamment iranien avec le groupe Handala, démontre une capacité de nuisance symbolique forte en ciblant directement les communications personnelles des hauts responsables du renseignement américain. La périphérie des réseaux (Edge) reste une zone de faille critique, avec des vulnérabilités RCE massives sur F5 BIG-IP et Citrix NetScaler faisant l'objet de mandats de correction d'urgence par la CISA. Le risque sur la "Supply Chain" logicielle s'intensifie avec les attaques répétées de TeamPCP sur les dépôts PyPI, exploitant la confiance des développeurs dans les outils d'IA. Sur le front mobile, l'évolution de kits d'exploitation sophistiqués comme Coruna souligne la persistance des menaces ciblant iOS via le Web. Enfin, la confiance envers les infrastructures Cloud gouvernementales (Microsoft GCC High) est ébranlée par des révélations sur des processus de certification défaillants. Ces tendances exigent une réévaluation urgente de la posture de défense, intégrant l'automatisation de la réponse et une surveillance accrue des actifs exposés.
 <br>
 <br>
 <div id="syntheses"></div>
@@ -34,12 +33,11 @@ Le paysage cyber actuel est marqué par une transition majeure des groupes d'att
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Handala (Void Manticore) | Gouvernement, Santé | Phishing, vol de données, wipers (Stryker), ciblage de comptes Gmail personnels | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
-| LAPSUS$ | Pharmacie, Technologie | Extorsion, vol de données (AstraZeneca suspecté) | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
-| ShinyHunters | Institutions Publiques, Éducation | Vol de données massif via infrastructure cloud (AWS), fuites sur sites Tor | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
-| TeamPCP | Chaîne d'approvisionnement (Software), CI/CD | Compromission de paquets (PyPI, npm), vol de credentials, stéganographie | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
-| UAC-0255 | Gouvernement, Santé, Finance (Ukraine) | Usurpation d'identité (CERT-UA), phishing via Files.fm, RAT AGEWHEEZE (Go) | [CERT-UA](https://cert.gov.ua/article/6288047) |
-
+| Handala (Hatef / Hamsa) | Gouvernement (USA), Médical (Stryker) | Hacktivisme, exfiltration de données, sabotage | [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-confirms-hack-of-director-patels-personal-email-inbox/) |
+| Lapsus$ | Santé / Pharmacie | Vol de données à but d'extorsion | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| Red Menshen | Télécommunications | Implants furtifs BPFdoor | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| ShinyHunters | Institutions Publiques | Compromission de Cloud / Exfiltration | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| TeamPCP | Supply Chain (Développeurs) | Empoisonnement de paquets PyPI / GitHub | [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/) |
 <br/>
 <br/>
 <div id="synthese-geopolitique"></div>
@@ -48,9 +46,11 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Défense / Gouvernement | Conflit Iran-Israël-USA | Le groupe Handala, lié à l'Iran, a fuité des données du compte Gmail personnel du directeur du FBI | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
-| Gouvernemental | Conflit Ukraine-Russie | Campagne de cyberespionnage massive contre les institutions ukrainiennes utilisant l'image du CERT-UA | [CERT-UA](https://cert.gov.ua/article/6288047) |
-| Institutions Internationales | Souveraineté Européenne | Revendication de vol de 350 Go de données appartenant à la Commission Européenne par ShinyHunters | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
+| Gouvernement | Espionnage Chine-Belgique | Utilisation de faux profils LinkedIn pour espionner l'OTAN et l'UE. | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| Gouvernement | Relations Iran-USA | Piratage du compte Gmail personnel du directeur du FBI par un groupe lié au MOIS iranien. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-confirms-hack-of-director-patels-personal-email-inbox/) |
+| Renseignement | Russie vs USA | Ciblage des comptes Signal et WhatsApp par le renseignement russe. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/) |
+| Sécurité Nationale | Commerce International | Bannissement par la FCC des routeurs étrangers pour des raisons de sécurité nationale. | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| Surveillance | Vie Privée | Débat aux USA sur l'achat de données de masse par les agences fédérales (ICE) auprès de courtiers. | [NPR via Mastodon](https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic) |
 
 <br/>
 <br/>
@@ -58,11 +58,12 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 <div id="synthese-reglementaire"></div>
 
 ## Synthèse réglementaire et juridiques
-Voici un tableau récapitulatif complet des articles juridiques relatifs à la réglementation « CYBER » :
+Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Directive BOD 22-01 | CISA | 28/03/2026 | États-Unis | BOD 22-01 | Obligation pour les agences fédérales de corriger les vulnérabilités du catalogue KEV avant échéance | [Security Affairs](https://securityaffairs.com/190076/uncategorized/u-s-cisa-adds-a-flaw-in-f5-big-ip-amp-to-its-known-exploited-vulnerabilities-catalog.html) |
-
+| CareCloud notifies the SEC | CareCloud | 29/03/2026 | USA | SEC Filing | Notification obligatoire suite à une intrusion dans un environnement de dossiers médicaux électroniques. | [DataBreaches](https://databreaches.net/2026/03/29/carecloud-notifies-the-sec-after-attack-on-one-of-its-ehr-environments/) |
+| FCC Updates Covered List | FCC | 29/03/2026 | USA | FCC Covered List | Interdiction d'importation et de vente de nouveaux routeurs fabriqués à l'étranger pour risque de sécurité. | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| NIST updates DNS security guidance | NIST | 29/03/2026 | USA | SP 800-81r3 | Mise à jour des directives sur le déploiement sécurisé du DNS pour la première fois en 12 ans. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/) |
 <br/>
 <br/>
 <div id="synthese-des-violations-de-donnees"></div>
@@ -71,30 +72,25 @@ Voici un tableau récapitulatif complet des articles juridiques relatifs à la r
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Éducation | Infinite Campus | Vol de données via ShinyHunters, impactant principalement les informations d'annuaires étudiants | [DataBreaches](https://databreaches.net/2026/03/28/thankfully-the-infinite-campus-incident-did-not-involve-a-lot-of-non-directory-student-information/) |
-| Gouvernemental | Commission Européenne | Vol revendiqué de 350 Go de données (e-mails, contrats) via une brèche sur un compte AWS | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
-| Gouvernemental | Kash Patel (Directeur FBI) | Compromission d'un compte Gmail personnel et fuite de fichiers historiques | [Security Affairs](https://securityaffairs.com/190088/intelligence/iran-linked-group-handala-hacked-fbi-director-kash-patels-personal-email-account.html) |
-| Santé | AstraZeneca | Revendication non confirmée de vol de 3 Go de données par LAPSUS$ | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
-| Santé | Corewell Health | Violation de données via le consultant Pinnacle Holdings impactant des milliers de patients | [DataBreaches](https://databreaches.net/2026/03/28/thousands-of-corewell-health-patients-affected-by-security-breach/) |
-| Santé | Woodfords Family Services | Notification d'une attaque par ransomware datant d'avril 2024 | [DataBreaches](https://databreaches.net/2026/03/28/woodfords-family-services-notifying-patients-and-families-about-2024-ransomware-attack/) |
-| Technologie | Anthropic | Fuite d'informations sur le futur modèle d'IA "Claude Mythos" | [DataBreaches](https://databreaches.net/2026/03/28/meet-claude-mythos-leaked-anthropic-post-reveals-the-powerful-upcoming-model/) |
-
+| Gouvernement | Commission Européenne | Revendication de piratage par le groupe ShinyHunters. | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| Gouvernement | Kash Patel (Directeur FBI) | Compromission d'un compte Gmail personnel ; fuite de photos et documents historiques. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-confirms-hack-of-director-patels-personal-email-inbox/) |
+| Gouvernement | Ministère des Finances (Pays-Bas) | Violation de données affectant le personnel suite à une cyberattaque. | [Security Affairs](https://securityaffairs.com/190104/uncategorized/security-affairs-newsletter-round-569-by-pierluigi-paganini-international-edition.html) |
+| Santé | CareCloud | Accès non autorisé à l'un des six environnements de dossiers médicaux électroniques (EHR). | [DataBreaches](https://databreaches.net/2026/03/29/carecloud-notifies-the-sec-after-attack-on-one-of-its-ehr-environments/) |
+| Sport | AFC Ajax | Accès non autorisé aux adresses email de supporters via des vulnérabilités d'API. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/) |
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité.
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2025-53521 | 9.8 | Non spécifié | TRUE | F5 BIG-IP APM | Remote Code Execution (RCE) | T1190: Exploit Public-Facing Application | Permet l'exécution de code à distance via du trafic malveillant sur les serveurs virtuels avec politique d'accès activée | [Security Affairs](https://securityaffairs.com/190076/uncategorized/u-s-cisa-adds-a-flaw-in-f5-big-ip-amp-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2018-25223 | 9.8 | Non spécifié | FALSE | Crashmail 1.6 | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Permet l'exécution de code à distance via des entrées malveillantes | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25223) |
-| CVE-2018-25221 | 9.8 | Non spécifié | FALSE | EChat Server 3.1 | Buffer Overflow | T1210: Exploitation of Remote Services | Dépassement de tampon via le paramètre 'username' sur l'endpoint chat.ghp | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25221) |
-| CVE-2018-25220 | 9.8 | Non spécifié | FALSE | Bochs 2.6-5 | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Exécution de code via chaîne ROP après injection de 1200 octets | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25220) |
-| CVE-2026-5004 | 9.0 | Non spécifié | FALSE | Wavlink WL-WN579X3-C | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Dépassement via l'argument 'UpnpEnabled' dans firewall.cgi | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-5004) |
-| CVE-2018-25225 | 8.6 | Non spécifié | FALSE | SIPP 3.3 | Stack-based Buffer Overflow | T1203: Exploitation for Client Execution | Injection de code via fichier de configuration malveillant | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2018-25225) |
-| CVE-2026-33634 | Non spécifié | Non spécifié | TRUE | CI/CD Ecosystem (TeamPCP) | Supply Chain Vulnerability | T1195.002: Compromise Software Supply Chain | Liée à la campagne TeamPCP, échéance de remédiation CISA fixée au 08 avril 2026 | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
-
+| CVE-2025-53521 | 9.8 | N/A | TRUE | F5 BIG-IP APM | Exécution de code à distance (RCE) | T1190: Exploit Public-Facing Application | Faille critique permettant de contourner les limites de sécurité et d'exécuter du code via du trafic malveillant. | [SecurityOnline](https://securityonline.info/f5-big-ip-rce-vulnerability-cve-2025-53521-cisa-kev/) |
+| CVE-2026-3055 | 9.3 | N/A | FALSE | Citrix NetScaler ADC/Gateway | Memory Overread (Out-of-bounds Read) | T1005: Data from Local System | Fuite potentielle de données sensibles en mémoire, notamment des jetons de session SAML. | [Security Affairs](https://securityaffairs.com/190131/hacking/urgent-alert-netscaler-bug-cve-2026-3055-probed-by-attackers-could-leak-sensitive-data.html) |
+| CVE-2026-27876 | 9.1 | N/A | FALSE | Grafana (sqlExpressions) | Exécution de code à distance (RCE) | T1210: Exploitation of Remote Services | Chaînage d'écriture de fichiers via des expressions SQL pour obtenir un accès SSH. | [SecurityOnline](https://securityonline.info/grafana-critical-rce-vulnerability-cve-2026-27876-sql-expressions/) |
+| CVE-2026-5046 | 9.0 | N/A | FALSE | Tenda FH1201 | Buffer Overflow | T1210: Exploitation of Remote Services | Débordement de tampon dans la fonction formWrlExtraSet permettant une attaque à distance. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5046) |
+| CVE-2026-4946 | 8.8 | N/A | FALSE | NSA Ghidra | Exécution de code à distance (RCE) | T1203: Exploitation for Client Execution | Traitement incorrect des directives d'annotation (@execute) lors de l'auto-analyse de binaires. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4946) |
+| CVE-2026-2370 | 8.1 | N/A | FALSE | GitLab CE/EE | Broken Access Control | T1078: Valid Accounts | Obtention d'identifiants d'installation Jira Connect par des utilisateurs avec des privilèges minimaux. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-2370) |
 <br/>
 <br/>
 <div id="articles-selectionnes"></div>
@@ -102,12 +98,11 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Apple issues urgent lock screen warnings for unpatched iPhones and iPads | Alerte critique sur des exploitations actives ("Coruna", "DarkSword") ciblant le noyau iOS | [Security Affairs](https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html) |
-| Кібератака UAC-0255 під виглядом сповіщення від CERT-UA із застосуванням програмного засобу AGEWHEEZE | Campagne d'espionnage sophistiquée utilisant une usurpation d'autorité cyber nationale | [CERT-UA](https://cert.gov.ua/article/6288047) |
-| New Infinity Stealer malware grabs macOS data via ClickFix lures | Nouvelle menace macOS utilisant des techniques d'évasion avancées (Nuitka) et ingénierie sociale | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/new-infinity-stealer-malware-grabs-macos-data-via-clickfix-lures/) |
-| ShinyHunters claims the hack of the European Commission | Incident géopolitique majeur impactant les institutions européennes et le cloud AWS | [Security Affairs](https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html) |
-| TeamPCP Supply Chain Campaign: Update 003 | Suivi d'une campagne de chaîne d'approvisionnement mondiale entrant en phase de monétisation | [SANS ISC](https://isc.sans.edu/diary/rss/32842) |
-
+| AI Threat Landscape Digest January-February 2026 | Analyse approfondie du framework VoidLink et de l'usage opérationnel de l'IA par les attaquants. | [Check Point Research](https://research.checkpoint.com/2026/ai-threat-landscape-digest-january-february-2026/) |
+| Apple issues urgent lock screen warnings for unpatched iPhones | Détails sur les kits d'exploitation Coruna et DarkSword ciblant activement iOS. | [Security Affairs](https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html) |
+| CISA Issues Three-Days Patch Mandate for Critical 9.8 F5 BIG-IP RCE | Alerte sur une vulnérabilité critique activement exploitée sur des équipements de bord. | [SecurityOnline](https://securityonline.info/f5-big-ip-rce-vulnerability-cve-2025-53521-cisa-kev/) |
+| FBI confirms hack of Director Patel's personal email inbox | Cas concret de ciblage de VIP et de hacktivisme d'État iranien. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-confirms-hack-of-director-patels-personal-email-inbox/) |
+| Week in review: NIST updates DNS guidance, compromised LiteLLM packages | Synthèse des attaques de Supply Chain par TeamPCP et évolutions normatives. | [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/) |
 <br/>
 <br/>
 <div id="articles-non-selectionnes"></div>
@@ -115,140 +110,126 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| 2026-03-28 RDP Honeypot IOCs | Données brutes de honeypot sans analyse contextuelle | [Mastodon / RDP Snitch](https://infosec.exchange/@rdpsnitch/116309589550476564) |
-| Cloud security is more critical than ever | Publication de type sensibilisation générale sans nouvelle menace spécifique | [Mastodon](https://mastodon.social/@archibaldtitan/116309564514976682) |
-| Possible Phishing on robiox.com | Notification isolée d'un seul IoC de phishing | [Mastodon / URLDNA](https://infosec.exchange/@urldna/116309636258124505) |
-| The Run Dialog: Small Key, Loud Evidence | Article à visée éducative/forensics, pas une actualité de veille | [CyberEngage](https://www.cyberengage.org/post/the-run-dialog-small-key-loud-evidence) |
-| TIAMAT: The First Autonomous AI Operating System | Contenu promotionnel pour un projet technologique | [Mastodon](https://mastodon.social/@TiamatEnity/116309734013107423) |
-
+| At a #CyberSecurity forum recently... | Message social sans contenu technique suffisant. | [Mastodon](https://mstdn.ca/@mamba/116315174309783513) |
+| DEF CON 34 Call for Music | Information organisationnelle non liée à une menace. | [Mastodon](https://defcon.social/@Defcon_Music/116315073618945324) |
+| That should get you PQC resistance... | Discussion technique sur une configuration spécifique (PQC) sans actualité de menace directe. | [Mastodon](https://mastodon.social/@JulianOliver/116315154967077163) |
+| This is quite the read... White House app | Lien social vers un blog sans résumé intégré. | [Mastodon](https://fosstodon.org/@shawnhooper/116315310093780888) |
 <br>
-<br>
+<br/>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="attaque-de-lacteur-uac0255-via-le-malware-agewheeze"></div>
+<div id="ia-et-malware-la-maturite-operationnelle-de-lagentique-avec-voidlink"></div>
 
-## Attaque de l'acteur UAC-0255 sous couvert du CERT-UA via le malware AGEWHEEZE
-Le CERT-UA a détecté une campagne malveillante sophistiquée les 26 et 27 mars 2026 ciblant de nombreux secteurs en Ukraine. Les attaquants utilisent des e-mails de phishing usurpant l'identité du CERT-UA, invitant les victimes à installer un prétendu "outil de protection" depuis la plateforme Files.fm. Un site miroir frauduleux, cert-ua[.]tech, a également été mis en place pour renforcer la crédibilité de l'attaque. Le fichier téléchargé installe AGEWHEEZE, un outil de contrôle à distance (RAT) écrit en Go. Ce malware permet le contrôle de l'écran, la manipulation de fichiers, l'exfiltration du presse-papier et l'exécution de commandes système. L'infrastructure de commande (C2) est hébergée chez OVH et présente des traces en langue russe. La persistance est assurée par des tâches planifiées nommées "SvcHelper" ou "CoreService". Des liens avec le groupe "Cyber Serp" sont suspectés via des commentaires dans le code HTML.
+## IA et Malware : La maturité opérationnelle de l'agentique avec VoidLink
+L'année 2026 marque l'avènement des malwares développés par des agents IA autonomes. Le framework VoidLink, comprenant des rootkits Linux sophistiqués (eBPF/LKM), a été produit en seulement une semaine par un développeur unique utilisant l'IDE TRAE SOLO de ByteDance. Cette performance, qui aurait nécessité 30 semaines à une équipe humaine, repose sur le "Spec Driven Development" (SDD) où l'IA implémente des sprints complets à partir de spécifications Markdown. L'étude montre que les attaquants privilégient désormais les modèles commerciaux (Claude, GPT-4) via des techniques de contournement architectural (abus des fichiers CLAUDE.md) plutôt que de simples "prompts" de jailbreak. Les modèles auto-hébergés restent coûteux et moins performants pour la génération de code compilable. Par ailleurs, 90 % des entreprises utilisant l'IA générative subissent des fuites de données sensibles via les requêtes des employés. Le framework RAPTOR illustre également comment transformer un agent de code en opérateur offensif autonome. L'IA n'est plus un outil expérimental mais un composant temps réel des pipelines d'attaque.
 
-**Analyse de l'impact** : Impact critique pour la souveraineté numérique ukrainienne. L'usurpation d'une autorité de réponse aux incidents (CERT) brise la chaîne de confiance et peut paralyser les efforts de remédiation légitimes tout en offrant un accès total aux systèmes compromis.
+**Analyse de l'impact** : L'impact est systémique : la barrière à l'entrée pour créer des cyber-menaces de niveau étatique s'effondre. La rapidité de développement et la qualité professionnelle du code généré par l'IA rendent la détection traditionnelle obsolète, car l'origine "IA" du code est invisible sans preuve opérationnelle (OPSEC).
 
-**Recommandations** : 
-* Bloquer les domaines cert-ua[.]tech et creepy[.]ltd au niveau du DNS/Proxy.
-* Rechercher la présence des exécutables SysSvc.exe et service.exe dans %APPDATA%.
-* Monitorer les tâches planifiées inhabituelles nommées SvcHelper et CoreService.
-* Sensibiliser les utilisateurs sur le fait que le CERT-UA ne demande jamais l'installation d'outils via des liens tiers type Files.fm.
+**Recommandations** :
+*   Intégrer l'hypothèse d'un développement assisté par IA dans toutes les analyses de nouveaux malwares.
+*   Surveiller l'utilisation des IDE IA (Cursor, TRAE, Copilot) au sein de l'entreprise pour prévenir les fuites de code source.
+*   Mettre en œuvre des contrôles de Data Loss Prevention (DLP) spécifiques aux flux vers les LLM commerciaux.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UAC-0255 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Phishing: Malicious Link <br/> * T1059: Command and Scripting Interpreter <br/> * T1053.005: Scheduled Task <br/> * T1105: Ingress Tool Transfer |
-| Observables & Indicateurs de compromission | ```* IP: 54.36.237.92 <br/> * Domain: cert-ua[.]tech <br/> * Hash (AGEWHEEZE): 5f16463f5c463f5f2f69f31c6ce7d3040d07876156a265b5521737f1c7a2a9b3 <br/> * Path: %APPDATA%\SysSvc\SysSvc.exe``` |
+| Groupe ou acteur malveillant | Non mentionné (Développeur individuel identifié via faille OPSEC) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1588.006: Obtain Capabilities: AI Services<br/>• T1014: Rootkit<br/>• T1548.001: Abuse Elevation Control Mechanism |
+| Observables & Indicateurs de compromission | • Framework: VoidLink (Linux)<br/>• Composants: eBPF rootkit, LKM modules<br/>• IDE utilisé: TRAE SOLO |
 
 ### Source (url) du ou des articles
-* https://cert.gov.ua/article/6288047
-
+* [Check Point Research](https://research.checkpoint.com/2026/ai-threat-landscape-digest-january-february-2026/)
 <br>
 <br>
 
-<div id="campagne-teampcp-transition-vers-la-phase-de-monetisation"></div>
+<div id="ciblage-strategique-le-groupe-handala-compromet-le-directeur-du-fbi"></div>
 
-## Campagne TeamPCP : Transition vers la phase de monétisation
-La campagne de chaîne d'approvisionnement TeamPCP observe une pause opérationnelle de 48 heures sans nouvelle compromisison, suggérant un passage à la phase de monétisation des données volées (environ 300 Go). Cette évolution est marquée par un partenariat avec l'affilié de ransomware Vect. Palo Alto Networks a publié des règles comportementales pour détecter ces attaques CI/CD, se concentrant sur l'énumération anormale de secrets et les transferts de données vers des domaines récents. Parallèlement, la Cloud Security Alliance a analysé un "wiper" Kubernetes ciblant spécifiquement les systèmes paramétrés en langue farsi. L'analyse de GitGuardian révèle un "credential fan-out" de 10 000 pour 1, signifiant qu'un seul token volé a pu exposer des milliers de secrets en aval. L'exfiltration via les "GitHub Releases" est confirmée comme une technique de contournement des solutions DLP. Enfin, l'intrusion chez AstraZeneca reste à confirmer malgré les revendications de LAPSUS$.
+## Ciblage stratégique : Le groupe Handala compromet le Directeur du FBI
+Le groupe de piratage Handala, affilié au ministère du Renseignement iranien (MOIS), a revendiqué la compromission du compte Gmail personnel de Kash Patel, directeur du FBI. Les attaquants ont publié des photos personnelles, des documents et des correspondances historiques pour prouver leur intrusion. Le FBI a confirmé l'incident, précisant qu'aucune donnée gouvernementale ou classifiée récente n'a été compromise. Handala affirme avoir agi en représailles aux saisies de domaines par le FBI et à la prime de 10 millions de dollars offerte par le gouvernement américain pour leur identification. Bien que les systèmes internes du FBI n'aient pas été touchés, l'action sert d'outil de propagande puissant. Le groupe a précédemment mené des attaques destructrices contre l'entreprise médicale Stryker, détruisant près de 80 000 appareils. Cette attaque souligne la vulnérabilité des communications privées des hauts responsables face à des acteurs étatiques persistants.
 
-**Analyse de l'impact** : Risque systémique élevé pour les entreprises utilisant des pipelines DevOps. Le passage au ransomware signifie que les accès volés ces 10 derniers jours vont maintenant être transformés en attaques destructrices ou extorsions.
+**Analyse de l'impact** : L'impact est principalement psychologique et réputationnel. Il démontre que même les responsables de la cybersécurité nationale sont vulnérables via leur vie privée, créant un risque de chantage ou d'influence géopolitique.
 
-**Recommandations** : 
-* Réaliser une rotation complète des secrets et tokens PAT utilisés dans les pipelines CI/CD.
-* Déployer des politiques d'admission Kubernetes pour bloquer les DaemonSets privilégiés montant le hostPath /.
-* Rechercher les archives nommées tpcp.tar.gz sur les runners.
-* Monitorer les accès au processus memory de Runner.Worker.
+**Recommandations** :
+*   Appliquer des politiques d'hygiène numérique strictes pour les VIP/Exécutifs (isolation totale des comptes personnels et professionnels).
+*   Généraliser l'usage de clés de sécurité matérielles (type FIDO2) pour tous les comptes personnels des employés sensibles.
+*   Réaliser des audits de l'empreinte numérique (OSINT) pour les décideurs afin de réduire la surface d'attaque.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | TeamPCP, Vect (Affilié), LAPSUS$ (suspecté) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Compromise Software Supply Chain <br/> * T1567.001: Exfiltration to Cloud Repository (GitHub Releases) <br/> * T1485: Data Destruction (Kubernetes Wiper) |
-| Observables & Indicateurs de compromission | ```* Domain: api.github.com (exfiltration channel) <br/> * File: tpcp.tar.gz <br/> * CVE: CVE-2026-33634``` |
+| Groupe ou acteur malveillant | Handala (Hatef / Hamsa) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1589: Gather Victim Identity Information<br/>• T1566: Phishing (suspecté pour accès Gmail)<br/>• T1567: Exfiltration Over Web Service |
+| Observables & Indicateurs de compromission | Aucun IoC technique fourni dans l'article (compromission de service tiers). |
 
 ### Source (url) du ou des articles
-* https://isc.sans.edu/diary/rss/32842
-
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-confirms-hack-of-director-patels-personal-email-inbox/)
 <br>
 <br>
 
-<div id="infinity-stealer-nouvelle-menace-macos-via-clickfix"></div>
+<div id="vulnerabilites-critiques-en-peripherie-f5-big-ip-et-citrix-netscaler"></div>
 
-## Infinity Stealer : Nouvelle menace macOS via ClickFix
-Une nouvelle campagne d'info-stealer baptisée "Infinity Stealer" cible les utilisateurs de macOS en utilisant la technique d'ingénierie sociale ClickFix. L'attaque commence par une fausse page de vérification CAPTCHA Cloudflare (sur update-check[.]com) qui incite l'utilisateur à copier-coller une commande curl malveillante dans son Terminal. Cette commande exécute un chargeur écrit en Python et compilé avec Nuitka, ce qui transforme le script en binaire natif Mach-O, rendant l'analyse statique et la détection très difficiles. Le malware effectue des vérifications anti-analyse avant de décompresser le payload final. Il est capable de voler les mots de passe des navigateurs (Chrome, Firefox), les trousseaux d'accès Keychain, les portefeuilles crypto et les fichiers de configuration (.env) contenant des secrets de développement. L'exfiltration se fait via HTTP POST avec une notification envoyée aux attaquants sur Telegram.
+## Vulnérabilités critiques en périphérie : F5 BIG-IP et Citrix NetScaler
+Deux équipements critiques d'infrastructure réseau font l'objet d'alertes majeures. La CISA a ajouté CVE-2025-53521 (score 9.8) à son catalogue des vulnérabilités exploitées, imposant un correctif sous 3 jours pour les agences fédérales. Cette faille RCE dans F5 BIG-IP APM permet à un attaquant non authentifié d'intercepter du trafic chiffré et de se déplacer latéralement dans le réseau. Parallèlement, Citrix NetScaler fait face à CVE-2026-3055 (score 9.3), une erreur de lecture mémoire hors limites. Cette vulnérabilité est activement ciblée par des campagnes de reconnaissance via des requêtes POST sur l'endpoint `/cgi/GetAuthMethods`. Elle affecte spécifiquement les instances configurées comme fournisseurs d'identité SAML (IdP). Les chercheurs comparent cette faille à "CitrixBleed" pour sa capacité à exfiltrer des jetons de session en mémoire. L'exploitation massive semble imminente selon les réseaux de pots de miel (honeypots).
 
-**Analyse de l'impact** : Risque élevé pour les développeurs et administrateurs utilisant macOS. La technique de compilation Nuitka marque une évolution dans la sophistication des malwares macOS, cherchant à contourner les protections Gatekeeper et les EDR par l'exécution de commandes Terminal par l'utilisateur lui-même.
+**Analyse de l'impact** : L'impact est critique car ces dispositifs se situent à la frontière du réseau. Une compromission réussie permet de contourner les pare-feux traditionnels et d'accéder directement au cœur des systèmes d'information d'entreprise et gouvernementaux.
 
-**Recommandations** : 
-* Interdire l'utilisation de commandes Terminal copiées-collées depuis des sources web non vérifiées.
-* Surveiller les connexions sortantes vers le domaine update-check[.]com.
-* Déployer des règles EDR détectant l'exécution de scripts Bash via curl | bash vers le répertoire /tmp.
-* Rechercher la présence de binaires inhabituels générés par Nuitka (UpdateHelper.bin).
+**Recommandations** :
+*   Patch immédiat des systèmes F5 BIG-IP vers les versions supportées.
+*   Vérifier si NetScaler est configuré en tant que SAML IdP via la commande `add authentication samlIdPProfile`.
+*   Surveiller les logs HTTP pour des requêtes anormales vers `/cgi/GetAuthMethods`.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non mentionné |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.002: User Execution: Malicious File <br/> * T1059.004: Unix Shell <br/> * T1555: Credentials from Password Stores <br/> * T1140: Deinstall or Deactivate Security Software |
-| Observables & Indicateurs de compromission | ```* Domain: update-check[.]com <br/> * Binary: UpdateHelper.bin <br/> * Technique: Nuitka-compiled Python payload``` |
+| Groupe ou acteur malveillant | Acteurs non identifiés (ciblage de masse observé) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1190: Exploit Public-Facing Application<br/>• T1005: Data from Local System |
+| Observables & Indicateurs de compromission | • CVE-2025-53521 (F5)<br/>• CVE-2026-3055 (Citrix)<br/>• Endpoint cible: /cgi/GetAuthMethods |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/new-infinity-stealer-malware-grabs-macos-data-via-clickfix-lures/
-
+* [SecurityOnline - F5](https://securityonline.info/f5-big-ip-rce-vulnerability-cve-2025-53521-cisa-kev/)
+* [Security Affairs - NetScaler](https://securityaffairs.com/190131/hacking/urgent-alert-netscaler-bug-cve-2026-3055-probed-by-attackers-could-leak-sensitive-data.html)
 <br>
 <br>
 
-<div id="alerte-apple-exploitations-actives-coruna-et-darksword"></div>
+<div id="exploitation-ios-evolution-des-kits-coruna-et-darksword"></div>
 
-## Alerte Apple : Exploitations actives Coruna et DarkSword
-Apple a émis des avertissements urgents via des notifications sur l'écran de verrouillage pour les utilisateurs d'iPhones et d'iPads non patchés. Ces alertes concernent des exploitations actives basées sur le web ciblant des versions obsolètes d'iOS (de la version 13 à 17.2.1). Les kits d'exploitation identifiés, "Coruna" et "DarkSword", utilisent du contenu web malveillant pour déclencher des chaînes d'infection permettant le vol de données sensibles. Les chercheurs de Kaspersky ont révélé que "Coruna" utilise une version mise à jour d'un exploit de noyau déjà vu dans la campagne "Operation Triangulation" de 2023. Bien que les versions iOS 18.x soient protégées contre Coruna, elles resteraient cibles potentielles pour DarkSword sur les versions antérieures à 18.7. Apple insiste sur l'installation immédiate des mises à jour de sécurité critiques pour rompre ces attaques.
+## Exploitation iOS : Évolution des kits Coruna et DarkSword
+Apple a émis des avertissements urgents via l'écran de verrouillage pour les utilisateurs d'iPhones et iPads non patchés. Des kits d'exploitation web sophistiqués, nommés "Coruna" et "DarkSword", ciblent activement les versions d'iOS allant de la 13 à la 17.2.1. Coruna semble être une évolution directe du framework utilisé lors de la campagne "Operation Triangulation" de 2023, partageant des similarités de code frappantes dans ses exploits de noyau (kernel). DarkSword, plus récent, vise les versions iOS 18.4 à 18.7. Ces attaques sont déclenchées par simple consultation d'un site web compromis ou clic sur un lien malveillant, permettant le vol de données sensibles. Bien que le mode "Isolement" (Lockdown Mode) bloque ces attaques, Apple insiste sur la mise à jour immédiate vers iOS 15/16 minimum pour les anciens appareils. La persistance de ces frameworks suggère un investissement continu d'acteurs de cyber-espionnage dans l'exploitation mobile.
 
-**Analyse de l'impact** : Risque critique de compromission de la confidentialité des données mobiles. La réutilisation de frameworks d'exploitation d'élite suggère que ces outils sont désormais industrialisés ou partagés entre groupes d'espionnage.
+**Analyse de l'impact** : Impact élevé pour la confidentialité des données mobiles. La capacité de ces kits à infecter des appareils sans interaction complexe (zero-click ou simple clic) facilite l'espionnage à grande échelle de cibles d'intérêt.
 
-**Recommandations** : 
-* Forcer la mise à jour immédiate de tous les appareils iOS vers la dernière version disponible (iOS 17.7+ ou 18.x).
-* Activer le "Lockdown Mode" (Mode Isolement) pour les utilisateurs à haut risque, ce qui bloque ces vecteurs d'attaque web.
-* Activer la fonction "Safe Browsing" de Safari par défaut via MDM.
+**Recommandations** :
+*   Forcer la mise à jour immédiate de tous les terminaux iOS vers la version la plus récente disponible.
+*   Activer le "Lockdown Mode" pour les utilisateurs à haut risque (journalistes, officiels, exécutifs).
+*   Éduquer les utilisateurs sur les risques liés aux liens suspects, même sur des messageries chiffrées.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Operation Triangulation (liens suspectés) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1204.001: User Execution: Malicious Link <br/> * T1068: Exploitation for Privilege Escalation <br/> * T1430: Location Tracking |
-| Observables & Indicateurs de compromission | ```* Exploit Kits: Coruna, DarkSword <br/> * Vulnerability: Kernel exploits (ref. Operation Triangulation)``` |
+| Groupe ou acteur malveillant | Lié potentiellement aux auteurs d'Operation Triangulation |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1203: Exploitation for Client Execution<br/>• T1068: Exploitation for Privilege Escalation |
+| Observables & Indicateurs de compromission | • Frameworks: Coruna, DarkSword<br/>• Vecteur: Web content malveillant |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html
-
+* [Security Affairs](https://securityaffairs.com/190109/security/apple-issues-urgent-lock-screen-warnings-for-unpatched-iphones-and-ipads.html)
 <br>
 <br>
 
-<div id="compromission-majeure-de-la-commission-europeenne-par-shinyhunters"></div>
+<div id="menaces-sur-la-supply-chain-les-campagnes-agressives-de-teampcp"></div>
 
-## Compromission majeure de la Commission Européenne par ShinyHunters
-Le groupe de cybercriminalité ShinyHunters revendique une intrusion massive dans l'infrastructure de la Commission Européenne. Les attaquants affirment avoir volé plus de 350 Go de données, incluant des serveurs de messagerie, des bases de données, des documents confidentiels et des contrats. La Commission a confirmé avoir détecté une attaque le 24 mars ciblant l'infrastructure cloud hébergeant les sites Europa.eu. Bien que l'institution affirme que ses systèmes internes n'ont pas été touchés, ShinyHunters a publié des captures d'écran suggérant une compromission de leur compte AWS. AWS a nié toute faille de sa propre infrastructure, suggérant une erreur de configuration ou un vol de credentials côté client. ShinyHunters est connu pour utiliser le vishing (phishing vocal) et l'ingénierie sociale pour accéder aux plateformes SaaS comme Okta ou Microsoft 365.
+## Menaces sur la Supply Chain : Les campagnes agressives de TeamPCP
+Le groupe cybercriminel TeamPCP intensifie ses attaques contre les dépôts de logiciels open source. Après avoir compromis des dépôts de GitHub et Aqua Security (Trivy), le groupe a ciblé la bibliothèque populaire LiteLLM sur PyPI. Les versions compromises (1.82.7 et 1.82.8), téléchargées des millions de fois, incluaient un voleur d'identifiants et un dropper de malware. TeamPCP a également empoisonné le paquet Telnyx pour diffuser des logiciels malveillants. Les attaquants exploitent la rapidité d'adoption des outils d'IA pour glisser du code malveillant dans des dépendances couramment utilisées par les développeurs. La CISA a intégré la vulnérabilité liée à Trivy (CVE-2026-33634) à son catalogue de menaces actives. Ces incidents montrent une transition des attaques directes vers une compromission de l'infrastructure de développement elle-même.
 
-**Analyse de l'impact** : Impact géopolitique et réputationnel majeur. La fuite potentielle de correspondances diplomatiques et de contrats européens représente un risque de chantage et d'espionnage économique à long terme.
+**Analyse de l'impact** : L'impact est majeur pour l'intégrité des pipelines CI/CD. Une seule bibliothèque compromise peut infecter des milliers d'applications finales, offrant aux attaquants un accès privilégié aux environnements de production des entreprises.
 
-**Recommandations** : 
-* Renforcer l'authentification multi-facteurs (MFA) sur tous les comptes à privilèges cloud (AWS, Azure).
-* Auditer les configurations S3 et les politiques IAM pour détecter des accès non autorisés ou des expositions publiques.
-* Sensibiliser le personnel aux techniques de social engineering (vishing) ciblant les administrateurs IT.
-* Surveiller les sites de fuite Tor de ShinyHunters pour toute publication d'échantillons de données.
+**Recommandations** :
+*   Utiliser des outils de scan de dépendances (SCA) en temps réel dans les pipelines de build.
+*   Épingler les versions des bibliothèques (pinning) et utiliser des sommes de contrôle (hashes) pour vérifier l'intégrité des paquets.
+*   Mettre en place des registres privés de paquets (mirroring) pour contrôler les mises à jour avant leur déploiement.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | ShinyHunters |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.003: Phishing: Voice <br/> * T1078.004: Valid Accounts: Cloud Accounts <br/> * T1537: Transfer Data to Cloud Account |
-| Observables & Indicateurs de compromission | ```* Target: europa.eu cloud infrastructure <br/> * Platform: AWS <br/> * Volume: 350 GB+``` |
+| Groupe ou acteur malveillant | TeamPCP |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | • T1195.002: Supply Chain Compromise: Compromise Software Dependencies<br/>• T1552.001: Unsecured Credentials: Credentials in Files |
+| Observables & Indicateurs de compromission | • Paquets PyPI: litellm (1.82.7, 1.82.8), telnyx<br/>• Vulnérabilité: CVE-2026-33634 |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190095/data-breach/shinyhunters-claims-the-hack-of-the-european-commission.html
+* [Help Net Security](https://www.helpnetsecurity.com/2026/03/29/week-in-review-nist-updates-dns-security-guidance-compromised-litellm-pypi-packages/)
