@@ -9,19 +9,19 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [TeamPCP : Extension de la campagne et monétisation](#teampcp-extension-de-la-campagne-et-monetisation)
-  * [RoadK1ll : Nouvel implant de pivot via WebSocket](#roadk1ll-nouvel-implant-de-pivot-via-websocket)
-  * [Exploitation active de Citrix NetScaler (CVE-2026-3055)](#exploitation-active-de-citrix-netscaler-cve-2026-3055)
-  * [Fuite de données ChatGPT via DNS Tunneling](#fuite-de-donnees-chatgpt-via-dns-tunneling)
-  * [F5 BIG-IP : Vulnérabilité critique reclassée en RCE](#f5-big-ip-vulnerabilite-critique-reclassee-en-rce)
-  * [TA446 : Utilisation du kit d'exploitation DarkSword contre iOS](#ta446-utilisation-du-kit-dexploitation-darksword-contre-ios)
+  * [compromission-majeure-de-la-supply-chain-via-le-paquet-npm-axios](#compromission-majeure-de-la-supply-chain-via-le-paquet-npm-axios)
+  * [escalade-de-la-campagne-teampcp-vers-les-environnements-cloud](#escalade-de-la-campagne-teampcp-vers-les-environnements-cloud)
+  * [operation-truechaos-exploitation-dune-0-day-contre-des-gouvernements](#operation-truechaos-exploitation-dune-0-day-contre-des-gouvernements)
+  * [vulnerabilites-double-agent-dans-google-cloud-vertex-ai](#vulnerabilites-double-agent-dans-google-cloud-vertex-ai)
+  * [faille-critique-dans-le-gigabyte-control-center](#faille-critique-dans-le-gigabyte-control-center)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel de la menace est dominé par une transition critique des attaques de la chaîne d'approvisionnement vers une phase de monétisation agressive, illustrée par le groupe TeamPCP. Ce dernier exploite un gisement de 300 Go de comptes dérobés pour cibler des plateformes de données cloud comme Databricks et extorquer des entreprises majeures. Parallèlement, nous observons une réduction drastique du délai entre la divulgation d'une vulnérabilité et son exploitation active, notamment sur les équipements de bord de réseau (F5, Citrix, Fortinet), qui restent des cibles privilégiées pour l'accès initial. Sur le plan tactique, l'utilisation de tunnels WebSocket (RoadK1ll) et de canaux DNS dissimulés (ChatGPT) souligne une sophistication croissante dans l'exfiltration et le pivotement interne. La dimension géopolitique s'intensifie avec le conflit en Iran, où le cyberespace devient un prolongement direct des hostilités, comme en témoigne le piratage du compte personnel du directeur du FBI par le groupe Handala. Enfin, l'adaptation de kits d'exploitation iOS (DarkSword) par des acteurs étatiques russes montre que la mobilité reste un maillon faible stratégique. Les décideurs doivent prioriser la rotation des secrets et la sécurisation des accès distants SAML/OIDC face à ces menaces persistantes.
+Le paysage actuel des menaces est marqué par une industrialisation sans précédent des attaques sur la chaîne d'approvisionnement (Supply Chain), ciblant les outils fondamentaux des développeurs comme Axios ou Trivy. Cette tendance, illustrée par les campagnes massives de TeamPCP et UNC1069, démontre une volonté de compromettre les environnements de construction (CI/CD) pour moissonner des identités cloud à grande échelle. L'exploitation de vulnérabilités Zero-day, notamment dans TrueConf par des acteurs liés à la Chine, confirme que les communications gouvernementales restent une cible prioritaire pour l'espionnage. Parallèlement, l'usage de l'intelligence artificielle par des groupes étatiques, notamment aux Émirats Arabes Unis, accélère la reconnaissance et la personnalisation des attaques. Le conflit au Moyen-Orient continue de générer une activité cyber hybride intense, mêlant hacktivisme et opérations étatiques destructrices contre les infrastructures critiques. La souveraineté technologique devient une réponse étatique majeure, comme en témoigne la nationalisation des activités stratégiques d'Atos par la France. Les entreprises doivent désormais considérer l'identité machine et les agents IA comme de nouveaux périmètres de sécurité critiques. La résilience passe impérativement par un durcissement des contrôles internes et une surveillance accrue des accès privilégiés pour contrer les menaces d'origine interne. Enfin, la pression réglementaire s'intensifie avec l'interdiction de matériels étrangers jugés risqués aux États-Unis, redéfinissant les critères de confiance dans les équipements réseaux.
+
 <br>
 <br>
 <div id="syntheses"></div>
@@ -34,13 +34,13 @@ Le paysage actuel de la menace est dominé par une transition critique des attaq
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Handala Hack | Gouvernement US, FBI | Phishing, vol de données personnelles et fuite (Doxxing) | [The Hacker News](https://thehackernews.com/2026/03/weekly-recap-telecom-sleeper-cells-llm.html) |
-| LAPSUS$ | Santé, Industrie | Vol de code source et exfiltration de données massives | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
-| Mustang Panda (Stately Taurus) | Gouvernements Asie du Sud-Est | Propagation par USB (USBFect), malwares PUBLOAD et CoolClient | [Security Affairs](https://securityaffairs.com/190174/apt/china-linked-groups-target-southeast-asian-government-with-advanced-malware-in-2025.html) |
-| Red Menshen | Télécommunications | Implants kernel BPFDoor pour une persistance à long terme | [The Hacker News](https://thehackernews.com/2026/03/weekly-recap-telecom-sleeper-cells-llm.html) |
-| TA446 (ColdRiver/Callisto) | Défense, ONG, iCloud | Spear-phishing ciblant iOS via le kit DarkSword | [Security Affairs](https://securityaffairs.com/190139/apt/russia-linked-apt-ta446-uses-darksword-exploit-to-target-iphone-users-in-phishing-wave.html) |
-| TeamPCP | Cloud, Développeurs, DevOps | Empoisonnement de la chaîne d'approvisionnement, vol de tokens CI/CD | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
-| XP95 | Gouvernement, Santé | Ransomware et exfiltration de données statistiques | [DataBreaches.net](https://databreaches.net/2026/03/30/south-african-government-agency-and-spanish-psychological-software-provider-victims-of-cyberattacks-by-xp95/) |
+| CipherForce | Secteurs variés | Ransomware, partenariat avec TeamPCP | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
+| Handala Hack | Gouvernement US, Santé | Wipe de données via Intune, exfiltration | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| LAPSUS$ | Pharmaceutique | Vol et divulgation gratuite de données | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
+| Muddy Water | Énergie, Défense | Spear phishing, vol d'identifiants | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Qilin | Industrie, Finance | Ransomware-as-a-Service (RaaS) | [Talos](https://blog.talosintelligence.com/ransomware-in-2025-blending-in-is-the-strategy/) |
+| TeamPCP (UNC6780) | Développeurs, Cloud | Supply chain poisoning (NPM, PyPI, GitHub) | [Unit 42](https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks/) |
+| UNC1069 | Développeurs, Crypto | Supply chain, RAT WAVESHAPER.V2 | [Google Threat Intelligence](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/) |
 
 <br/>
 <br/>
@@ -50,10 +50,12 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Gouvernement | Conflit Iran-USA | Piratage du compte Gmail personnel du directeur du FBI par le groupe Handala (Iran) | [Le Monde](https://www.lemonde.fr/pixels/article/2026/03/30/depuis-le-debut-de-la-guerre-en-iran-les-hackeurs-proches-de-teheran-menent-des-attaques-opportunistes-a-la-portee-limitee_6675442_4408996.html) |
-| Gouvernement | Tension Chine-Asie du Sud-Est | Campagnes d'espionnage massives de Mustang Panda contre un gouvernement d'Asie du Sud-Est | [Security Affairs](https://securityaffairs.com/190174/apt/china-linked-groups-target-southeast-asian-government-with-advanced-malware-in-2025.html) |
-| Institutions | Europe-Chine/Iran | Cyberattaque contre la Commission européenne (350 Go volés) suite aux sanctions de l'UE contre des entités chinoises et iraniennes | [Infosec.exchange](https://infosec.exchange/@brian_greenberg/116321046727605004) |
-| Défense | Russie-OTAN | Recrudescence des attaques de spear-phishing de TA446 visant les pays de l'OTAN via iOS | [Security Affairs](https://securityaffairs.com/190139/apt/russia-linked-apt-ta446-uses-darksword-exploit-to-target-iphone-users-in-phishing-wave.html) |
+| Énergie | Guerre Économique | Impact du conflit iranien sur les prix de l'énergie et les routes maritimes. | [EPGE](https://www.epge.fr/quand-la-guerre-militaire-englobe-le-champ-economique/) |
+| État / Défense | Souveraineté | Nationalisation par l'État français des activités stratégiques de Bull (Atos). | [Le Monde](https://www.lemonde.fr/economie/article/2026/03/31/atos-cede-ses-activites-strategiques-a-l-etat-qui-revendique-une-etape-pour-la-souverainete-technologique-francaise_6675694_3234.html) |
+| Gouvernement | Alliance | Projet de "Conseil de sécurité des cinq puissances moyennes (MP5)". | [IRIS](https://www.iris-france.org/nouvelle-architecture-securitaire-a-lere-post-dissuasion-elargie-vers-la-creation-dun-conseil-de-securite-des-cinq-puissances-moyennes-mp5-coree-japon-france-ro/) |
+| Gouvernement | Diplomatie | Visite d'Emmanuel Macron au Japon et en Corée du Sud. | [IRIS](https://www.iris-france.org/visite-demmanuel-macron-a-tokyo-et-seoul-proteger-leurope-et-lindo-pacifique-face-a-linterventionnisme-etats-unien-et-aux-crises-internationales/) |
+| Infrastructure | Conflit Cyber | Blackout internet prolongé en Iran (32 jours). | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Maritime | Menace Houthie | Attaques de missiles cruise et drones contre Israël par les forces Houthis. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
 
 <br/>
 <br/>
@@ -64,9 +66,9 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Apple adds macOS Terminal warning | Bill Toulas | 30/03/2026 | Monde (Apple) | macOS Tahoe 26.4 | Nouveau mécanisme de blocage et d'alerte lors du copier-coller de commandes Terminal potentiellement malveillantes | [BleepingComputer](https://www.bleepingcomputer.com/news/security/apple-adds-macos-terminal-warning-to-block-clickfix-attacks/) |
-| CISA KEV Catalog Additions | CISA | 27/03/2026 | USA | BOD 22-01 | Ajout des vulnérabilités F5 (CVE-2025-53521) et Trivy (CVE-2026-33634) au catalogue des vulnérabilités exploitées | [Field Effect](https://fieldeffect.com/blog/updated-f5-big-ip-apm-vulnerability-kev) |
-| FCC Router Ban | FCC | 30/03/2026 | USA | Covered List | Interdiction d'importation de routeurs grand public de fabrication étrangère jugés risqués pour la sécurité nationale | [The Hacker News](https://thehackernews.com/2026/03/weekly-recap-telecom-sleeper-cells-llm.html) |
+| Digital Fairness Act Consultation | EU Commission | 31/03/2026 | Union Européenne | Digital Fairness Act | Consultation publique visant à protéger les mineurs en ligne et réguler les interfaces trompeuses. | [EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/consultations/have-your-say-digital-fairness-act) |
+| FCC Consumer Router Ban | FCC | 20/03/2026 | États-Unis | National Security Decision | Interdiction d'importation de routeurs fabriqués hors des États-Unis pour des raisons de sécurité nationale. | [ZATAZ](https://www.datasecuritybreach.fr/la-fcc-bloque-les-routeurs-etrangers-aux-etats-unis/) |
+| Sanction Intesa Sanpaolo | Garante | 31/03/2026 | Italie | RGPD | Amende de 31,8 millions d'euros pour défaut de contrôle interne sur l'accès aux données clients. | [ZATAZ](https://www.datasecuritybreach.fr/intesa-sanpaolo-sanctionnee-pour-faille-interne/) |
 
 <br/>
 <br/>
@@ -76,25 +78,31 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Gouvernement | Commission Européenne | Vol allégué de 350 Go de données comprenant des emails, bases de données et contrats confidentiels | [Infosec.exchange](https://infosec.exchange/@brian_greenberg/116321046727605004) |
-| Gouvernement | Statistics South Africa | Attaque par le ransomware XP95 ciblant l'agence nationale des statistiques | [DataBreaches.net](https://databreaches.net/2026/03/30/south-african-government-agency-and-spanish-psychological-software-provider-victims-of-cyberattacks-by-xp95/) |
-| Pharmacie | AstraZeneca | Publication gratuite par LAPSUS$ de 3 Go de données (infos développeurs GitHub, code source interne) après échec de vente | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
-| Santé | CareCloud | Violation de données impactant l'un des six environnements de dossiers médicaux électroniques (EHR) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/healthcare-tech-firm-carecloud-says-hackers-stole-patient-data/) |
-| Santé | West Tallinn Central Hospital | Un patient a reçu une clé USB contenant ses radios ainsi que les données de santé d'autres patients par erreur | [DataBreaches.net](https://databreaches.net/2026/03/30/estonian-hospital-sends-patient-home-with-other-peoples-health-data/) |
+| Bancaire | Intesa Sanpaolo | Accès illicite d'un employé aux données de 3 573 clients sur deux ans. | [ZATAZ](https://www.datasecuritybreach.fr/intesa-sanpaolo-sanctionnee-pour-faille-interne/) |
+| Bancaire | Lloyds Banking Group | Exposition des transactions de 450 000 clients suite à une mise à jour défectueuse. | [Security Affairs](https://securityaffairs.com/190213/data-breach/nearly-half-a-million-mobile-customers-of-lloyds-banking-group-affected-by-a-security-incident.html) |
+| Gouvernement | Ministère des Finances (Pays-Bas) | Treasury banking portal mis hors ligne suite à une intrusion détectée le 19 mars. | [Security Affairs](https://securityaffairs.com/190204/hacking/dutch-ministry-of-finance-takes-treasury-systems-offline-amid-cyber-incident-investigation.html) |
+| Industrie | Dow Inc | Revendication de violation de données par le groupe Qilin (pas de preuve encore). | [Security Affairs](https://securityaffairs.com/190186/cyber-crime/qilin-ransomware-allegedly-breached-chemical-manufacturer-giant-dow-inc.html) |
+| Pharmaceutique | AstraZeneca | Publication gratuite de 3 Go de données (code source, données employés) par LAPSUS$. | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
+| Services IA | Cuties AI | Brèche exposant 144 000 comptes (emails, avatars, prompts). | [HIBP](https://haveibeenpwned.com/Breach/CutiesAI) |
+| Technologie | Anthropic (Claude Code) | Fuite accidentelle du code source via un fichier de debug dans un paquet NPM. | [Bleeping Computer](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-code-source-code-accidentally-leaked-in-npm-package/) |
+| Technologie | Cisco | Vol de code source lié à la compromission initiale des identifiants Trivy (TeamPCP). | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité.
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2025-53521 | 9.8 | Non mentionné | TRUE | F5 BIG-IP APM | Remote Code Execution (RCE) | T1190: Exploit Public-Facing Application | Reclassée de DoS à RCE critique. Exploitation active pour déployer des webshells via des politiques d'accès mal configurées. | [F5 Advisory](https://my.f5.com/manage/s/article/K000156741) |
-| CVE-2026-4257 | 9.8 | Non mentionné | FALSE | Contact Form by Supsystic (WP) | Server-Side Template Injection (SSTI) | T1190: Exploit Public-Facing Application | Injection Twig non sandboxée permettant l'exécution de code PHP arbitraire par des utilisateurs non authentifiés. | [Wordfence](https://www.wordfence.com/threat-intel/vulnerabilities/id/415c9658-bfb2-453b-a697-c63c08b0ca61?source=cve) |
-| CVE-2026-33757 | 9.6 | Non mentionné | FALSE | OpenBao | OIDC Session Hijacking | T1550: Use Alternate Authentication Material | Fail politique d'authentification OIDC en mode direct permettant le détournement de session sans confirmation utilisateur. | [SecurityOnline](https://securityonline.info/openbao-critical-oidc-vulnerability-session-hijacking-xss/) |
-| CVE-2026-33864 | 9.4 | Non mentionné | FALSE | node-convict (npm) | Prototype Pollution | T1211: Exploitation for Privilege Escalation | Bypass de filtres via manipulation de String.prototype permettant d'injecter des propriétés malveillantes globales. | [SecurityOnline](https://securityonline.info/node-convict-prototype-pollution-vulnerability-cve-2026-33864/) |
-| CVE-2026-3055 | 9.3 | Non mentionné | FALSE | Citrix NetScaler ADC/Gateway | Memory Overread | T1190: Exploit Public-Facing Application | Lecture mémoire hors limites permettant de voler des jetons de session administrative sur les équipements configurés en SAML IDP. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-citrix-netscaler-memory-flaw-actively-exploited-in-attacks/) |
-| CVE-2026-21643 | 9.1 | Non mentionné | FALSE | Fortinet FortiClient EMS | SQL Injection | T1190: Exploit Public-Facing Application | Injection SQL via le header "Site" permettant l'exécution de commandes à distance par un attaquant non authentifié. | [Security Affairs](https://securityaffairs.com/190158/security/critical-fortinet-forticlient-ems-flaw-exploited-for-remote-code-execution.html) |
+| CVE-2026-34449 | 9.6 | N/A | FALSE | SiYuan | RCE | Non mentionnées | Exécution de code à distance via une politique CORS permissive et injection JS. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-34449) |
+| CVE-2026-34406 | 9.4 | N/A | FALSE | APTRS | Privilege Escalation | Non mentionnées | Élévation de privilèges via l'assignation de masse du champ is_superuser. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-34406) |
+| CVE-2026-3055 | 9.3 | N/A | TRUE | Citrix NetScaler | Memory Overread | Non mentionnées | Lecture hors limites permettant la fuite de données sensibles si configuré en SAML IDP. | [Security Affairs](https://securityaffairs.com/190197/security-affairs-newsletter-round-569.html) |
+| CVE-2026-4415 | 9.2 | N/A | FALSE | GIGABYTE Control Center | Arbitrary File Write | Non mentionnées | Écriture de fichier arbitraire via la fonction "pairing" menant à une RCE. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/gigabyte-control-center-vulnerable-to-arbitrary-file-write-flaw/) |
+| CVE-2026-34448 | 9.0 | N/A | FALSE | SiYuan | Stored XSS | Non mentionnées | XSS stockée dans le rendu des vues attributs menant à une exécution de commandes. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-34448) |
+| CVE-2026-5214 | 9.0 | N/A | FALSE | D-Link (DNS-1550-04) | Buffer Overflow | Non mentionnées | Dépassement de tampon dans la gestion des quotas de groupe. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5214) |
+| CVE-2025-53521 | N/A | N/A | TRUE | F5 BIG-IP APM | RCE | Non mentionnées | Faille critique d'exécution de code à distance exploitée activement. | [CERT-FR](https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-004/) |
+| CVE-2026-3502 | 7.8 | N/A | FALSE | TrueConf Client | 0-day RCE | T1574.002 : DLL Side-Loading | Abus du mécanisme de mise à jour pour distribuer des malwares. | [Check Point](https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/) |
 
 <br/>
 <br/>
@@ -103,12 +111,11 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| TeamPCP Supply Chain Campaign: Update 004 | Analyse détaillée d'une campagne de chaîne d'approvisionnement majeure en cours de monétisation. | [SANS ISC](https://isc.sans.edu/diary/rss/32846) |
-| New RoadK1ll WebSocket implant | Identification d'un nouvel implant furtif pour le mouvement latéral via des protocoles légitimes. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-roadk1ll-websocket-implant-used-to-pivot-on-breached-networks/) |
-| Critical Citrix NetScaler memory flaw exploited | Alerte immédiate sur une vulnérabilité critique activement exploitée sur des équipements d'accès. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-citrix-netscaler-memory-flaw-actively-exploited-in-attacks/) |
-| ChatGPT Data Leakage via Hidden Outbound Channel | Découverte d'une méthode innovante d'exfiltration via DNS tunneling dans les environnements IA. | [Check Point Research](https://research.checkpoint.com/2026/chatgpt-data-leakage-via-a-hidden-outbound-channel-in-the-code-execution-runtime/) |
-| Hackers now exploit critical F5 BIG-IP flaw | Reclassification majeure d'une vulnérabilité et signalement d'exploitation active. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-f5-big-ip-flaw-in-attacks-patch-now/) |
-| Russia-linked APT TA446 uses DarkSword exploit | Menace étatique sophistiquée ciblant les appareils mobiles (iOS) via des exploits récents. | [Security Affairs](https://securityaffairs.com/190139/apt/russia-linked-apt-ta446-uses-darksword-exploit-to-target-iphone-users-in-phishing-wave.html) |
+| North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package | Analyse détaillée d'une attaque Supply Chain majeure par un groupe APT. | [Google Threat Intelligence](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/) |
+| TeamPCP expands supply chain intrusions into cloud and enterprise environments | Documentation de l'escalade de TeamPCP vers le vol de secrets Cloud chez Cisco/Databricks. | [Field Effect](https://fieldeffect.com/blog/teampcp-expands-supply-chain-intrusions) |
+| Operation TrueChaos: 0-Day Exploitation Against Southeast Asian Government Targets | Découverte d'une 0-day exploitée par des acteurs étatiques chinois. | [Check Point Research](https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/) |
+| Double Agents: Exposing Security Blind Spots in GCP Vertex AI | Recherche critique sur les risques d'identités des agents IA. | [Unit 42](https://unit42.paloaltonetworks.com/double-agents-vertex-ai/) |
+| GIGABYTE Control Center vulnerable to arbitrary file write flaw | Vulnérabilité critique impactant un large parc de matériel informatique. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/gigabyte-control-center-vulnerable-to-arbitrary-file-write-flaw/) |
 
 <br/>
 <br/>
@@ -117,155 +124,137 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| ISC Stormcast For Tuesday, March 31st | Format podcast trop succinct pour une analyse technique détaillée. | [SANS ISC](https://isc.sans.edu/podcastdetail/9872) |
-| DShield (Cowrie) Honeypot Stats | Statistiques générales et méthodologiques sans menace immédiate spécifique. | [SANS ISC](https://isc.sans.edu/diary/rss/32840) |
-| How to Evaluate AI SOC Agents | Contenu promotionnel/sponsorisé de type "livre blanc" sans information sur une menace réelle. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/how-to-evaluate-ai-soc-agents-7-questions-gartner-says-you-should-be-asking/) |
-| Wave Browser: Gaming Platforms | Présentation marketing d'un navigateur orienté utilisateur, pas de veille cyber. | [Hackread](https://hackread.com/strongswan-flaw-attackers-crash-vpn-integer-underflow/) |
-| Discord age verification fiasco | Sujet lié à la confidentialité et aux politiques de plateforme plutôt qu'à une intrusion. | [Infosec.exchange](https://infosec.exchange/@brian_greenberg/116321127124914201) |
+| Have your say on the Digital Fairness Act | Article purement réglementaire traité dans la synthèse. | [European Commission](https://digital-strategy.ec.europa.eu/en/consultations/have-your-say-digital-fairness-act) |
+| ISC Stormcast for March 31st | Podcast récapitulatif sans détails exclusifs par rapport aux sources écrites. | [SANS ISC](https://isc.sans.edu/podcastdetail/9872) |
+| OkCupid facial recognition incident | Information sur la vie privée ancienne/traitée sur les réseaux sociaux. | [Mastodon](https://pouet.chapril.org/@dallo/116326260349031142) |
+| Anthropic accidentally leaks Claude Code source code | Article sur une fuite accidentelle traitée dans la synthèse des violations. | [Bleeping Computer](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-code-source-code-accidentally-leaked-in-npm-package/) |
 
 <br>
-<br/>
+<br>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="teampcp-extension-de-la-campagne-et-monetisation"></div>
+<div id="compromission-majeure-de-la-supply-chain-via-le-paquet-npm-axios"></div>
 
-## TeamPCP : Extension de la campagne et monétisation
-La campagne de la chaîne d'approvisionnement TeamPCP est entrée dans une phase critique de monétisation de ses actifs volés. Databricks enquête actuellement sur une compromission potentielle liée à une récolte de comptes effectuée par le groupe, marquant la première victime d'entreprise d'envergure. TeamPCP gère désormais deux filières de ransomware en parallèle : leur propre opération, CipherForce, et un programme d'affiliation via Vect. Le groupe détient un trésor de 300 Go de comptes volés, incluant des tokens AWS et des configurations CloudFormation. Par ailleurs, LAPSUS$ a publié gratuitement 3 Go de données d'AstraZeneca après avoir échoué à les vendre. La pause dans les nouvelles compromissions de paquets open-source (npm, PyPI) dépasse désormais 96 heures. Les défenseurs sont invités à utiliser cette fenêtre pour réinitialiser les secrets et auditer les pipelines CI/CD. La signature RSA-4096 partagée reste l'indicateur d'attribution le plus fiable entre les différentes opérations du groupe.
+## North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack
+Une attaque sophistiquée a ciblé la bibliothèque Axios, téléchargée plus de 100 millions de fois par semaine, via la compromission d'un compte de mainteneur. L'attaquant (UNC1069) a publié des versions malveillantes (1.14.1 et 0.30.4) introduisant une dépendance nommée `plain-crypto-js`. Ce paquet exécute un dropper nommé `setup.js` via un hook `postinstall`, déployant ensuite le RAT WAVESHAPER.V2 sur Windows, macOS et Linux. Le malware utilise des techniques d'anti-forensics pour supprimer ses traces après l'infection. Les charges utiles sont spécifiques à chaque système d'exploitation mais partagent un protocole C2 identique. L'infrastructure C2 utilise des serveurs Express.js et un User-Agent obsolète d'IE8 pour se fondre dans le trafic. L'attribution au groupe UNC1069 est basée sur des chevauchements d'infrastructure VPN et l'évolution du code de WAVESHAPER. La campagne démontre l'attractivité persistante de l'écosystème NPM comme vecteur de compromission de masse.
 
-**Analyse de l'impact** : L'impact est systémique pour les organisations utilisant des outils de sécurité compromis (Trivy, KICS) ou des bibliothèques cloud (LiteLLM, Telnyx). La fuite de tokens cloud permet une persistance et un pivotement profond dans les infrastructures AWS/GCP/Azure, au-delà de la simple compromission logicielle.
+**Analyse de l'impact** : Impact critique potentiel sur des millions d'environnements de développement et de serveurs de production. Accès complet aux systèmes infectés permettant le vol de secrets, de code source et la persistance à long terme.
 
 **Recommandations** :
-* Rotation immédiate de toutes les clés d'API, tokens CI/CD et identifiants cloud ayant transité par des versions compromises.
-* Surveillance des connexions sortantes vers des adresses IP brutes à partir des serveurs de build.
-* Blocage des déploiements utilisant des versions non épinglées (unpinned) des paquets LiteLLM (<v1.82.6) et Telnyx.
+* Auditer les arbres de dépendances pour détecter `plain-crypto-js` ou Axios v1.14.1/0.30.4.
+* Verrouiller (pin) les versions d'Axios sur les versions sûres (1.14.0 ou 0.30.3).
+* Désactiver l'exécution automatique des scripts NPM (`ignore-scripts=true`).
+* Faire pivoter tous les secrets/tokens présents sur les machines potentiellement infectées.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | TeamPCP (aliases: PCPcat, ShellForce, CipherForce) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise: Software Dependencies <br/> * T1552: Unsecured Credentials <br/> * T1486: Data Encrypted for Impact |
-| Observables & Indicateurs de compromission | ```* Clef publique RSA-4096 partagée <br/> * Payload caché dans fichiers .WAV <br/> * Distribution via GHOSTYNETWORKS (ASNs)``` |
+| Groupe ou acteur malveillant | UNC1069 (lié à la Corée du Nord) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise<br/>* T1059.007: JavaScript Execution<br/>* T1547.001: Registry Run Keys Persistence<br/>* T1070.004: File Deletion (Anti-forensics) |
+| Observables & Indicateurs de compromission | * `sfrclak[.]com`<br/>* `142.11.206.73`<br/>* SHA256: `e10b1fa84f1d6481625f741b69892780140d4e0e7769e7491e5f4d894c2e0e09` (setup.js) |
 
 ### Source (url) du ou des articles
-* [SANS ISC - TeamPCP Update 004](https://isc.sans.edu/diary/rss/32846)
-* [Field Effect - TeamPCP Multi-ecosystem expansion](https://fieldeffect.com/blog/teampcp-supply-chain-intrusions-developers)
+* https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/
+* https://www.elastic.co/security-labs/axios-one-rat-to-rule-them-all
+* https://www.elastic.co/security-labs/axios-supply-chain-compromise-detections
+
 <br>
 <br>
 
-<div id="roadk1ll-nouvel-implant-de-pivot-via-websocket"></div>
+<div id="escalade-de-la-campagne-teampcp-vers-les-environnements-cloud"></div>
 
-## RoadK1ll : Nouvel implant de pivot via WebSocket
-Découvert lors d'un incident de réponse par Blackpoint, RoadK1ll est un implant malveillant basé sur Node.js conçu pour le mouvement latéral discret. Contrairement aux outils classiques, il n'écoute pas de port entrant mais établit une connexion WebSocket sortante vers l'infrastructure de l'attaquant. Ce tunnel permet de relayer le trafic TCP vers des services internes (RDP, bases de données, interfaces d'administration) non exposés sur Internet. L'implant peut gérer plusieurs connexions simultanées sur le même tunnel, maximisant l'efficacité de l'attaquant. Il intègre un mécanisme de reconnexion automatique en cas d'interruption du canal. RoadK1ll ne possède pas de mécanisme de persistance propre (registre ou tâche planifiée), opérant uniquement tant que son processus est actif. Son architecture légère lui permet de se fondre dans le trafic réseau normal, contournant souvent les contrôles de périmètre classiques.
+## TeamPCP expands supply chain intrusions into cloud and enterprise environments
+La campagne Supply Chain lancée par TeamPCP a franchi une étape critique en exploitant des identifiants volés lors des compromissions de Trivy, LiteLLM et Checkmarx. Cisco a confirmé une intrusion dans ses environnements de développement internes impliquant un plugin GitHub Action malveillant. Plus de 300 dépôts GitHub ont été clonés, incluant du code source pour des produits de défense basés sur l'IA. Databricks fait également l'objet d'une enquête pour une compromission alléguée de jetons AWS STS et CloudFormation. TeamPCP utilise désormais le ver/wiper "CanisterWorm" pour se propager latéralement dans les clusters Kubernetes. Le groupe opère via trois canaux de monétisation : exploitation directe de secrets, ransomware CipherForce (propre) et Vect (affiliés). Cette progression montre un cycle complet allant de l'attaque amont sur l'open-source à l'intrusion d'entreprise ciblée.
 
-**Analyse de l'impact** : Cet implant transforme une machine compromise en un point de relais (proxy) contrôlable, annulant les bénéfices de la segmentation réseau. Il permet à un attaquant externe de naviguer dans le réseau interne avec le niveau de confiance de la machine infectée.
+**Analyse de l'impact** : Menace systémique pour les infrastructures Cloud et DevOps. Risque élevé d'extorsion suite au vol de code source et de données clients sensibles.
 
 **Recommandations** :
-* Rechercher des processus Node.js inhabituels sans persistance apparente sur les serveurs et postes de travail.
-* Monitorer les connexions sortantes persistantes sur le protocole WebSocket vers des adresses IP inconnues.
-* Mettre en œuvre une micro-segmentation stricte pour limiter les capacités de rebond TCP même depuis des hôtes de confiance.
+* Rotation impérative de tous les secrets exposés (clés AWS, SSH, GitHub tokens).
+* Réimager les postes de travail des développeurs exposés aux outils compromis.
+* Activer le Multi-Factor Authentication (MFA) résistant au phishing sur tous les comptes privilégiés.
+* Auditer les logs AWS CloudTrail pour toute activité inhabituelle de type "ECS Exec" ou accès S3.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1090.003: Proxy: Multi-hop Proxy <br/> * T1572: Protocol Tunneling <br/> * T1021: Remote Services |
-| Observables & Indicateurs de compromission | ```* Commandes: CONNECT, DATA, CLOSE <br/> * Protocole: WebSocket custom <br/> * Agent: Node.js runtime``` |
+| Groupe ou acteur malveillant | TeamPCP (PCPcat, ShellForce) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1021.007: Cloud Service Dashboard<br/>* T1528: Steal Application Access Token<br/>* T1485: Data Destruction (CanisterWorm) |
+| Observables & Indicateurs de compromission | * `scan.aquasecurtiy[.]org`<br/>* `checkmarx[.]zone`<br/>* `models.litellm[.]cloud` |
 
 ### Source (url) du ou des articles
-* [BleepingComputer - New RoadK1ll WebSocket implant](https://www.bleepingcomputer.com/news/security/new-roadk1ll-websocket-implant-used-to-pivot-on-breached-networks/)
+* https://fieldeffect.com/blog/teampcp-expands-supply-chain-intrusions
+* https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks/
+* https://isc.sans.edu/diary/rss/32846
+
 <br>
 <br>
 
-<div id="exploitation-active-de-citrix-netscaler-cve-2026-3055"></div>
+<div id="operation-truechaos-exploitation-dune-0-day-contre-des-gouvernements"></div>
 
-## Exploitation active de Citrix NetScaler (CVE-2026-3055)
-Une vulnérabilité critique de lecture mémoire hors limites (CVE-2026-3055) dans Citrix NetScaler ADC et Gateway est activement exploitée. La faille affecte les équipements configurés en tant que fournisseur d'identité SAML (IDP). Des chercheurs ont observé des tentatives de reconnaissance dès le 27 mars, suivies d'exploitations réelles. L'attaque permet d'extraire des identifiants de session administrative directement depuis la mémoire du système. Il s'avère que CVE-2026-3055 regroupe au moins deux bugs distincts impactant les points de terminaison '/saml/login' et '/wsfed/passive'. Environ 29 000 instances NetScaler sont actuellement exposées sur Internet. La simplicité de l'exploitation — l'envoi d'un paramètre vide suffit à déclencher la fuite mémoire — rend cette menace particulièrement urgente. Les technicités de cette faille rappellent les incidents "CitrixBleed" de 2023.
+## Operation TrueChaos: 0-Day Exploitation Against Southeast Asian Government Targets
+Check Point Research a identifié une campagne d'espionnage ciblée, "Operation TrueChaos", exploitant une vulnérabilité Zero-day (CVE-2026-3502) dans le client TrueConf. L'attaquant, lié à la Chine, a compromis le serveur TrueConf on-premises d'un département IT gouvernemental en Asie du Sud-Est. En remplaçant le paquet de mise à jour légitime par une version piégée, le malware a été distribué automatiquement à toutes les agences connectées. La chaîne d'infection utilise le DLL side-loading pour charger l'implant Havoc, un framework de post-exploitation. Des outils de reconnaissance et d'escalade de privilèges (UAC bypass via `iscsicpl.exe`) ont été observés. L'activité chevauche des opérations utilisant le malware ShadowPad. TrueConf a publié un correctif dans la version 8.5.3 du client Windows.
 
-**Analyse de l'impact** : La compromission d'un NetScaler Gateway peut entraîner la prise de contrôle totale de l'infrastructure d'accès distant. Le vol de jetons de session active permet de contourner l'authentification multi-facteurs (MFA) pour les accès administratifs.
+**Analyse de l'impact** : Risque d'espionnage critique pour les institutions utilisant TrueConf en environnement fermé ou air-gappé. Distribution massive de malware via un canal de mise à jour de confiance.
 
 **Recommandations** :
-* Mettre à jour immédiatement vers les versions corrigées (ex: 14.1-60.58 ou 13.1-62.23).
-* Invalider toutes les sessions actives et forcer une reconnexion après l'application du correctif.
-* Surveiller les logs HTTP pour des requêtes anormales vers '/saml/login' avec des paramètres malformés ou vides.
+* Mettre à jour les clients TrueConf vers la version 8.5.3+ immédiatement.
+* Rechercher la présence de processus inhabituels comme `poweriso.exe` ou `7z-x64.dll` dans `%ProgramData%`.
+* Auditer les logs réseau pour toute communication vers les IP de C2 Havoc identifiées.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (plusieurs acteurs identifiés via honeypots) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1005: Data from Local System |
-| Observables & Indicateurs de compromission | ```* Endpoints: /saml/login, /wsfed/passive <br/> * Scripts de détection: Python (via watchTowr) <br/> * IPs sources connues liées à l'exploitation``` |
+| Groupe ou acteur malveillant | Acteur lié à la Chine (espionnage) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1574.002: DLL Side-Loading<br/>* T1548.002: Bypass User Account Control<br/>* T1546.009: AppCert DLLs Persistence |
+| Observables & Indicateurs de compromission | * `47.237.15[.]197`<br/>* `43.134.90[.]60`<br/>* SHA256: `248a4d7d4c48478dcbeade8f7dba80b3` (7z-x64.dll) |
 
 ### Source (url) du ou des articles
-* [BleepingComputer - Critical Citrix NetScaler memory flaw](https://www.bleepingcomputer.com/news/security/critical-citrix-netscaler-memory-flaw-actively-exploited-in-attacks/)
-* [The Hacker News - Citrix Flaw Under Active Exploitation](https://thehackernews.com/2026/03/weekly-recap-telecom-sleeper-cells-llm.html)
+* https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/
+
 <br>
 <br>
 
-<div id="fuite-de-donnees-chatgpt-via-dns-tunneling"></div>
+<div id="vulnerabilites-double-agent-dans-google-cloud-vertex-ai"></div>
 
-## Fuite de données ChatGPT via DNS Tunneling
-Check Point Research a identifié un canal de communication sortant caché dans l'environnement d'exécution de code de ChatGPT. Bien que cet environnement soit isolé et n'ait pas d'accès direct à Internet, les requêtes DNS restent autorisées. Un attaquant peut utiliser le DNS tunneling pour exfiltrer des données sensibles (historique médical, secrets financiers, fichiers téléchargés) encodées dans des sous-domaines. L'attaque commence par un simple prompt malveillant qui instruit le modèle de résumer les messages et de les envoyer vers un serveur contrôlé. Cette méthode permet également d'établir un "reverse shell" bidirectionnel dans le runtime Linux de l'IA. OpenAI a déployé un correctif le 20 février 2026 après avoir identifié le problème. Cette vulnérabilité met en lumière les risques liés aux capacités d'analyse de données et d'exécution de scripts des assistants IA.
+## Double Agents: Exposing Security Blind Spots in GCP Vertex AI
+L'équipe Unit 42 a découvert des failles structurelles dans le modèle de permissions par défaut de Google Cloud Vertex AI. Un agent IA déployé via l'ADK peut être détourné pour extraire les identifiants de l'agent de service associé. Ces permissions excessives permettent à un attaquant de s'évader du contexte de l'IA pour accéder en lecture seule à tous les compartiments Google Cloud Storage du projet client. De plus, l'accès s'étend aux dépôts d'images privés de Google, permettant le téléchargement de code source propriétaire du Reasoning Engine. L'utilisation du module Python `pickle` pour la sérialisation pose également un risque d'exécution de code à distance (RCE). Google a réagi en recommandant l'utilisation de "Bring Your Own Service Account" (BYOSA) et en documentant plus précisément l'isolation des agents.
 
-**Analyse de l'impact** : L'impact est majeur pour la confidentialité des données d'entreprise partagées avec des assistants IA. Un "GPT" personnalisé malveillant pourrait silencieusement voler des secrets industriels sans qu'aucune alerte de partage de données externe ne soit déclenchée.
+**Analyse de l'impact** : Risque d'exfiltration de données massives et de vol de propriété intellectuelle cloud. Les agents IA deviennent des "double agents" agissant contre l'organisation.
 
 **Recommandations** :
-* Auditer l'utilisation des GPTs personnalisés au sein de l'organisation et restreindre ceux provenant de sources non vérifiées.
-* Surveiller les requêtes DNS volumineuses ou structurées de manière anormale provenant des infrastructures cloud.
-* Sensibiliser les utilisateurs au risque de copier-coller des "prompts de productivité" trouvés sur des forums publics.
+* Appliquer le principe du moindre privilège en utilisant des comptes de service dédiés (BYOSA).
+* Restreindre les scopes OAuth 2.0 pour éviter l'accès aux données Workspace.
+* Éviter la désérialisation de fichiers `pickle` provenant de sources non fiables.
+* Auditer systématiquement les configurations d'agents IA avant leur mise en production.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Preuve de concept (Check Point Research) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1071.004: Application Layer Protocol: DNS <br/> * T1041: Exfiltration Over C2 Channel |
-| Observables & Indicateurs de compromission | ```* Requêtes DNS avec données encodées en sous-domaines <br/> * Communication bidirectionnelle via réponses DNS``` |
+| Groupe ou acteur malveillant | Non applicable (Recherche en sécurité) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1078.004: Cloud Accounts<br/>* T1537: Transfer Data to Cloud Account<br/>* T1613: Container and Cloud Help Desk |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
 
 ### Source (url) du ou des articles
-* [Check Point Research - ChatGPT Data Leakage](https://research.checkpoint.com/2026/chatgpt-data-leakage-via-a-hidden-outbound-channel-in-the-code-execution-runtime/)
+* https://unit42.paloaltonetworks.com/double-agents-vertex-ai/
+
 <br>
 <br>
 
-<div id="f5-big-ip-vulnerabilite-critique-reclassee-en-rce"></div>
+<div id="faille-critique-dans-le-gigabyte-control-center"></div>
 
-## F5 BIG-IP : Vulnérabilité critique reclassée en RCE
-F5 Networks a officiellement reclassé la vulnérabilité CVE-2025-53521 affectant BIG-IP APM (Access Policy Manager). Initialement considérée comme un déni de service (DoS), de nouvelles informations ont confirmé qu'elle permet une exécution de code à distance (RCE) non authentifiée. La faille réside dans le traitement du trafic malveillant par la logique APM lorsqu'elle est liée à un serveur virtuel. CISA a ajouté cette vulnérabilité à son catalogue KEV, signalant une exploitation active dans la nature. Des attaquants utilisent cette faille pour déployer des webshells et obtenir une persistance sur les équipements. Plus de 240 000 instances BIG-IP sont exposées en ligne, bien que toutes ne soient pas vulnérables. F5 recommande une vérification urgente des disques, des journaux et de l'historique des terminaux pour détecter tout signe de compromission.
+## GIGABYTE Control Center vulnerable to arbitrary file write flaw
+Le GIGABYTE Control Center (GCC), utilitaire préinstallé sur des millions d'ordinateurs portables et cartes mères, présente une vulnérabilité critique (CVE-2026-4415). La faille réside dans la fonction de couplage ("pairing") réseau du logiciel. Un attaquant distant non authentifié peut exploiter ce mécanisme pour écrire des fichiers arbitraires sur le système d'exploitation hôte. Cette capacité permet par extension une exécution de code arbitraire (RCE), une élévation de privilèges ou un déni de service. Le score CVSS v4 est de 9.2, soulignant la gravité de la menace. GIGABYTE a publié la version 25.12.10.01 pour corriger la gestion des chemins de téléchargement et l'authentification des commandes.
 
-**Analyse de l'impact** : Une exploitation réussie donne un contrôle total sur l'équipement de gestion des accès. Cela permet aux attaquants de voler des informations d'identification, de modifier les politiques de sécurité et de pivoter vers le réseau interne.
+**Analyse de l'impact** : Risque de compromission totale de postes de travail d'entreprise et de serveurs équipés de matériel GIGABYTE.
 
 **Recommandations** :
-* Appliquer immédiatement les correctifs fournis (ex: v17.5.1.3, v15.1.10.8).
-* Isoler les serveurs virtuels activés par l'APM des réseaux non approuvés si la mise à jour n'est pas possible immédiatement.
-* Chasser les IoC : modification inattendue de fichiers, hashes de fichiers inhabituels, trafic HTTPS sortant avec type de contenu CSS et réponses HTTP 201.
+* Mettre à jour GCC vers la version 25.12.10.01 ou supérieure immédiatement.
+* Désactiver la fonction de "pairing" si elle n'est pas strictement nécessaire.
+* Restreindre l'accès réseau aux ports utilisés par l'utilitaire via un pare-feu.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (acteurs étatiques et cybercriminels suspectés) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1505.003: Server Software Component: Web Shell |
-| Observables & Indicateurs de compromission | ```* Trafic HTTPS sortant anormal <br/> * Fichiers webshells sur le disque BIG-IP``` |
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1210: Exploitation of Remote Services<br/>* T1068: Exploitation for Privilege Escalation |
+| Observables & Indicateurs de compromission | CVE-2026-4415 |
 
 ### Source (url) du ou des articles
-* [BleepingComputer - Hackers exploit F5 BIG-IP flaw](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-f5-big-ip-flaw-in-attacks-patch-now/)
-* [Field Effect - CISA adds F5 vulnerability to KEV](https://fieldeffect.com/blog/updated-f5-big-ip-apm-vulnerability-kev)
-<br>
-<br>
-
-<div id="ta446-utilisation-du-kit-dexploitation-darksword-contre-ios"></div>
-
-## TA446 : Utilisation du kit d'exploitation DarkSword contre iOS
-Le groupe APT TA446 (lié à la Russie, également connu sous le nom de ColdRiver ou Star Blizzard) a été observé utilisant le kit d'exploitation DarkSword dans des campagnes de spear-phishing. Cette vague d'attaques cible spécifiquement les utilisateurs d'iPhone, marquant une évolution dans les cibles habituelles du groupe. Les courriels malveillants usurpent l'identité de l'Atlantic Council pour inciter les victimes à cliquer sur des liens. Un filtrage côté serveur redirige uniquement les utilisateurs d'iOS vers le kit d'exploitation, tandis que les autres voient un PDF bénin. Le kit comprend des composants de redirection, un chargeur (loader) et des capacités d'exécution de code à distance (RCE) nommées GHOSTBLADE. Bien qu'aucune évasion de sandbox n'ait été confirmée, l'adoption de ce kit montre une volonté d'expansion de la collecte de renseignements vers les terminaux mobiles.
-
-**Analyse de l'impact** : Le ciblage réussi des appareils mobiles permet d'accéder aux comptes iCloud, aux communications chiffrées et aux données de localisation des individus ciblés (gouvernements, think tanks, entités financières).
-
-**Recommandations** :
-* Maintenir les appareils iOS à jour avec les dernières versions de sécurité (iOS 17+).
-* Sensibiliser les utilisateurs VIP aux risques de phishing sophistiqué via des invitations à des conférences ou des documents de réflexion.
-* Utiliser des solutions de Mobile Threat Defense (MTD) pour détecter les redirections vers des infrastructures malveillantes connues.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | TA446 (ColdRiver / Star Blizzard) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Phishing: Spearphishing Link <br/> * T1203: Exploitation for Client Execution |
-| Observables & Indicateurs de compromission | ```* Domaines: escofiringbijou[.]com, motorbeylimited[.]com <br/> * Hash Loader (MD5): 5fa967dbef026679212f1a6ffa68d575``` |
-
-### Source (url) du ou des articles
-* [Security Affairs - TA446 uses DarkSword exploit](https://securityaffairs.com/190139/apt/russia-linked-apt-ta446-uses-darksword-exploit-to-target-iphone-users-in-phishing-wave.html)
-<br>
-<br>
+* https://www.bleepingcomputer.com/news/security/gigabyte-control-center-vulnerable-to-arbitrary-file-write-flaw/
