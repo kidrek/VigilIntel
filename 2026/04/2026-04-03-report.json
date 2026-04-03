@@ -1,1 +1,1128 @@
-{"strategic_analysis": {"analyse": {"en": "The threat landscape on April 3rd, 2026, is dominated by high-impact supply chain compromises (Axios), the industrialization of EDR-blinding techniques (Qilin), and a surge in state-sponsored mobile exploits (Coldriver). Geopolitical tensions in the Middle East and Ukraine continue to manifest through destructive wiper attacks and coordinated influence operations. Furthermore, the systematic infiltration of Western IT departments by North Korean agents (NKITW) represents a growing long-term risk to corporate integrity. In France, the significant increase in Mirai-driven botnet activity highlights the persistent vulnerability of IoT infrastructures.", "fr": "Le paysage de la menace au 3 avril 2026 est domin\u00e9 par des compromissions de la cha\u00eene d'approvisionnement \u00e0 fort impact (Axios), l'industrialisation des techniques de neutralisation des EDR (Qilin) et une recrudescence des exploits mobiles \u00e9tatiques (Coldriver). Les tensions g\u00e9opolitiques au Moyen-Orient et en Ukraine continuent de se manifester par des attaques destructrices (wipers) et des op\u00e9rations d'influence coordonn\u00e9es. Par ailleurs, l'infiltration syst\u00e9matique des d\u00e9partements IT occidentaux par des agents nord-cor\u00e9ens (NKITW) repr\u00e9sente un risque croissant pour l'int\u00e9grit\u00e9 des entreprises. En France, l'augmentation significative de l'activit\u00e9 des botnets Mirai souligne la vuln\u00e9rabilit\u00e9 persistante des infrastructures IoT."}, "date": "2026-04-03"}, "geopolitical_analyse": [{"sector": {"en": ["Defense", "Energy"], "fr": ["D\u00e9fense", "\u00c9nergie"]}, "theme": {"en": "Ukraine-Russia Conflict Escalation", "fr": "Escalade du conflit Ukraine-Russie"}, "description": {"en": "Ukrainian drone strikes on Russian oil ports (Ust-Luga, Primorsk) followed by Kremlin narratives accusing the West of preparing coups in allied nations like Hungary.", "fr": "Frappes de drones ukrainiens sur les ports p\u00e9troliers russes (Ust-Luga, Primorsk) suivies de narratifs du Kremlin accusant l'Occident de pr\u00e9parer des coups d'\u00c9tat dans des nations alli\u00e9es comme la Hongrie."}, "recommandations": [{"en": "Monitor for retaliatory cyberattacks against critical energy infrastructure in Europe.", "fr": "Surveiller les cyberattaques de repr\u00e9sailles contre les infrastructures \u00e9nerg\u00e9tiques critiques en Europe."}, {"en": "Audit supply chain links with entities operating in conflict zones.", "fr": "Auditer les liens de la cha\u00eene d'approvisionnement avec des entit\u00e9s op\u00e9rant dans les zones de conflit."}], "tags": ["geopolitics", "energy", "conflict"], "sources": ["EUvsDisinfo"], "date": "2026-04-03"}, {"sector": {"en": ["Technology", "Defense"], "fr": ["Technologie", "D\u00e9fense"]}, "theme": {"en": "Middle East Cyber Tensions", "fr": "Tensions Cyber au Moyen-Orient"}, "description": {"en": "The IRGC has designated 18 US tech companies as legitimate targets. Concurrently, Houthis, Hezbollah, and Iran are coordinating cyber and physical threats in the Red Sea region.", "fr": "L'IRGC a d\u00e9sign\u00e9 18 entreprises technologiques am\u00e9ricaines comme cibles l\u00e9gitimes. Parall\u00e8lement, les Houthis, le Hezbollah et l'Iran coordonnent des menaces cyber et physiques dans la r\u00e9gion de la mer Rouge."}, "recommandations": [{"en": "Increase security posture for US-based tech firms with Middle Eastern operations.", "fr": "Augmenter la posture de s\u00e9curit\u00e9 pour les entreprises technologiques bas\u00e9es aux \u00c9tats-Unis ayant des op\u00e9rations au Moyen-Orient."}], "tags": ["IRGC", "Middle East", "threat"], "sources": ["Flare"], "date": "2026-04-03"}], "breach_analyse": [{"victim": "Stryker", "threat_actor": "Handala Hack", "threat_actor_origin": "Iran", "threat_actor_type": "Hacktiviste", "threat_actor_aliases": ["Void Manticore"], "sector": {"en": ["Healthcare", "Medical Technology"], "fr": ["Sant\u00e9", "Technologie M\u00e9dicale"]}, "description": {"en": "Massive data-wiping attack affecting 80,000 devices. Attackers exploited a Global Admin account and abused Microsoft Intune to deploy the wiper.", "fr": "Attaque massive par wiper touchant 80 000 appareils. Les attaquants ont exploit\u00e9 un compte Global Admin et abus\u00e9 de Microsoft Intune pour d\u00e9ployer le malware destructeur."}, "mitre_ttps": ["T1485", "T1078.003", "T1496"], "recommandations": [{"en": "Enforce MFA and multi-admin approval for sensitive Intune operations.", "fr": "Imposer le MFA et l'approbation multi-administrateurs pour les op\u00e9rations Intune sensibles."}, {"en": "Monitor for unauthorized Global Admin account creations.", "fr": "Surveiller les cr\u00e9ations de comptes Global Admin non autoris\u00e9es."}], "tags": ["wiper", "medical", "Intune"], "sources": ["BleepingComputer", "Flare"], "date": "2026-04-03"}, {"victim": "Drift Protocol", "threat_actor": "Unknown", "threat_actor_origin": "Unknown", "threat_actor_type": "Cybercriminel", "threat_actor_aliases": [], "sector": {"en": ["Finance", "Cryptocurrency"], "fr": ["Finance", "Cryptomonnaie"]}, "description": {"en": "Loss of $280 million after hackers seized Security Council powers using durable nonce accounts.", "fr": "Perte de 280 millions de dollars apr\u00e8s que des pirates ont pris le contr\u00f4le des pouvoirs du Conseil de S\u00e9curit\u00e9 via des comptes durable nonce."}, "mitre_ttps": ["T1563"], "recommandations": [{"en": "Review blockchain security council governance models.", "fr": "Revoir les mod\u00e8les de gouvernance des conseils de s\u00e9curit\u00e9 blockchain."}], "tags": ["DeFi", "finance", "theft"], "sources": ["BleepingComputer"], "date": "2026-04-03"}], "vulnerabilities_analyse": [{"cve_id": "CVE-2025-55182", "euvd_id": "EUVD-2025-55182", "cisa_kev": "FALSE", "cvss": "10.0", "epss": "N/A", "cpe": "cpe:2.3:a:nextjs:nextjs:*:*:*:*:*:*:*:"}]}
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current threat landscape is marked by an increased industrialization of software supply chain compromises, as illustrated by the massive attack on the npm Axios package by North Korean actors. The exploitation of recent vulnerabilities such as React2Shell demonstrates an alarming velocity in the transition from discovery to large-scale automated exploitation, often facilitated by AI. In parallel, the conflict between Iran, Israel, and the United States is intensifying in cyberspace, with direct threats from the Islamic Revolutionary Guard Corps (IRGC) against 18 American technology companies. Cybercriminal groups like Qilin are perfecting their capabilities to blind defense solutions (EDR), making ransomware attacks more stealthy. The virtualization ecosystem, particularly vSphere, is becoming a preferred target for establishing durable persistence beneath the guest operating system. A professionalization of hybrid fraud schemes is also observed, using stolen identities and international recruitment to infiltrate Western enterprises. The mobile threat reaches a new level with the deployment of complex iOS exploits by Russian state actors. Finally, France is experiencing growing pressure with a tripling of attack events linked to Mirai family botnets.",
+      "fr": "Le paysage actuel de la menace est marqué par une industrialisation accrue des compromissions de la chaîne d'approvisionnement logicielle, comme l'illustre l'attaque massive sur le package npm Axios par des acteurs nord-coréens. L'exploitation de vulnérabilités récentes telles que React2Shell démontre une vélocité alarmante dans la transition de la découverte à l'exploitation automatisée à grande échelle, souvent facilitée par l'IA. Parallèlement, le conflit entre l'Iran, Israël et les États-Unis s'intensifie dans le cyberespace, avec des menaces directes des Gardiens de la Révolution contre 18 entreprises technologiques américaines. Les groupes cybercriminels comme Qilin perfectionnent leurs capacités d'aveuglement des solutions de défense (EDR), rendant les attaques par ransomware plus furtives. L'écosystème de la virtualisation, notamment vSphere, devient une cible privilégiée pour l'établissement de persistances durables sous le système d'exploitation invité. On observe également une professionnalisation des fraudes hybrides, utilisant des identités volées et le recrutement international pour infiltrer les entreprises occidentales. La menace mobile franchit un nouveau palier avec le déploiement d'exploits iOS complexes par des acteurs étatiques russes. Enfin, la France subit une pression croissante avec un triplement des événements d'attaques liés à des botnets de la famille Mirai."
+    },
+    "date": "2026-04-03"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Critical_Infrastructure", "Government_and_Defense"],
+        "fr": ["Infrastructure_Critique", "Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Ukraine-Russia Conflict – Strikes on Russian Oil Infrastructure",
+        "fr": "Conflit Ukraine-Russie – Frappes sur les infrastructures pétrolières russes"
+      },
+      "description": {
+        "en": "Ukrainian drones struck the Russian oil ports of Ust-Luga and Primorsk, targeting critical energy export infrastructure. The Kremlin blamed NATO and warned of potential destabilization in Hungary, leveraging the incident for broader information operations.",
+        "fr": "Des drones ukrainiens ont frappé les ports pétroliers russes d'Ust-Luga et Primorsk, ciblant des infrastructures critiques d'exportation d'énergie. Le Kremlin a accusé l'OTAN et averti d'une potentielle déstabilisation en Hongrie, utilisant l'incident pour des opérations d'information plus larges."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor threat intelligence feeds for potential retaliatory cyberattacks against European energy infrastructure operators, particularly pipelines and LNG terminals.",
+          "fr": "Surveiller les flux de renseignements sur les menaces pour détecter d'éventuelles cyberattaques de représailles contre les opérateurs européens d'infrastructures énergétiques, notamment les pipelines et terminaux GNL."
+        },
+        {
+          "en": "Reinforce OT/ICS security monitoring for energy companies operating in or near conflict zones, ensuring segmentation between IT and OT networks.",
+          "fr": "Renforcer la surveillance de sécurité OT/ICS pour les entreprises énergétiques opérant dans ou à proximité des zones de conflit, en assurant la segmentation entre les réseaux IT et OT."
+        }
+      ],
+      "tags": ["ukraine", "russia", "energy", "oil", "drone", "conflict"],
+      "sources": ["https://euvsdisinfo.eu/ukraine-hits-russian-oil-ports-kremlin-blames-nato-and-warns-of-a-coup-in-hungary/"],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense", "Media_and_Communication"],
+        "fr": ["Gouvernement_et_Défense", "Médias_et_Communication"]
+      },
+      "theme": {
+        "en": "Pro-Kremlin Influence Operation Targeting Hungary",
+        "fr": "Opération d'influence pro-Kremlin ciblant la Hongrie"
+      },
+      "description": {
+        "en": "Pro-Kremlin narratives are accusing the EU and Ukraine of planning a coup d'état in Hungary. This disinformation campaign aims to destabilize EU cohesion and drive a wedge between member states ahead of key political events.",
+        "fr": "Des narratifs pro-Kremlin accusent l'UE et l'Ukraine de préparer un coup d'État en Hongrie. Cette campagne de désinformation vise à déstabiliser la cohésion de l'UE et à creuser des divisions entre les États membres à l'approche d'événements politiques clés."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen media literacy programs and fact-checking partnerships in Central European countries to counter state-sponsored disinformation narratives.",
+          "fr": "Renforcer les programmes d'éducation aux médias et les partenariats de vérification des faits dans les pays d'Europe centrale pour contrer les récits de désinformation parrainés par des États."
+        },
+        {
+          "en": "Coordinate with EU cybersecurity agencies (ENISA) and EUvsDisinfo to track and attribute information warfare campaigns targeting member states.",
+          "fr": "Se coordonner avec les agences de cybersécurité de l'UE (ENISA) et EUvsDisinfo pour suivre et attribuer les campagnes de guerre informationnelle ciblant les États membres."
+        }
+      ],
+      "tags": ["disinformation", "russia", "hungary", "EU", "influence-operation", "kremlin"],
+      "sources": ["https://euvsdisinfo.eu/ukraine-hits-russian-oil-ports-kremlin-blames-nato-and-warns-of-a-coup-in-hungary/"],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": ["Critical_Infrastructure", "Media_and_Communication"],
+        "fr": ["Infrastructure_Critique", "Médias_et_Communication"]
+      },
+      "theme": {
+        "en": "Iran Internet Blackout – Day 34",
+        "fr": "Coupure Internet en Iran – 34ème jour"
+      },
+      "description": {
+        "en": "The internet blackout in Iran has entered its 34th consecutive day with connectivity reduced to approximately 1%. This severely limits the flow of information and the ability of the population to access uncensored content, while also impacting Iranian businesses and civil society.",
+        "fr": "La coupure internet en Iran entre dans son 34ème jour consécutif avec une connectivité réduite à environ 1%. Cela limite sévèrement la circulation de l'information et la capacité de la population à accéder à des contenus non censurés, tout en impactant les entreprises et la société civile iraniennes."
+      },
+      "recommandations": [
+        {
+          "en": "Organizations with operations in Iran should activate business continuity plans for communication and data access, leveraging satellite or VPN infrastructure where permitted.",
+          "fr": "Les organisations ayant des opérations en Iran doivent activer leurs plans de continuité d'activité pour la communication et l'accès aux données, en utilisant des infrastructures satellitaires ou VPN là où c'est autorisé."
+        },
+        {
+          "en": "Monitor geopolitical developments closely as prolonged internet shutdowns often precede or accompany escalatory actions; prepare for increased hybrid threats from Iranian actors.",
+          "fr": "Surveiller de près les développements géopolitiques, car les coupures internet prolongées précèdent ou accompagnent souvent des actions d'escalade ; se préparer à une augmentation des menaces hybrides de la part d'acteurs iraniens."
+        }
+      ],
+      "tags": ["iran", "internet-blackout", "censorship", "civil-liberties"],
+      "sources": ["https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": ["Technology_and_Telecom", "Government_and_Defense"],
+        "fr": ["Technologie_et_Télécom", "Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "IRGC Designates 18 US Tech Companies as Legitimate Targets",
+        "fr": "L'IRGC désigne 18 entreprises technologiques américaines comme cibles légitimes"
+      },
+      "description": {
+        "en": "Iran's Islamic Revolutionary Guard Corps (IRGC) has officially designated 18 American technology companies as legitimate military targets in the Middle East conflict. This escalatory declaration significantly raises the risk of state-sponsored cyberattacks and hybrid operations against major US tech firms.",
+        "fr": "Les Gardiens de la Révolution islamique d'Iran (IRGC) ont officiellement désigné 18 entreprises technologiques américaines comme cibles militaires légitimes dans le cadre du conflit au Moyen-Orient. Cette déclaration d'escalade augmente significativement le risque de cyberattaques parrainées par l'État et d'opérations hybrides contre les grandes entreprises technologiques américaines."
+      },
+      "recommandations": [
+        {
+          "en": "US technology companies operating in the Middle East should immediately review their threat exposure, reinforce perimeter defenses, and activate enhanced threat monitoring protocols.",
+          "fr": "Les entreprises technologiques américaines opérant au Moyen-Orient doivent immédiatement revoir leur exposition aux menaces, renforcer leurs défenses périmétriques et activer des protocoles de surveillance des menaces renforcés."
+        },
+        {
+          "en": "Coordinate with CISA and sector-specific ISACs to share intelligence and implement collective defense measures against IRGC-affiliated threat actors.",
+          "fr": "Se coordonner avec la CISA et les ISAC sectoriels pour partager le renseignement et mettre en œuvre des mesures de défense collective contre les acteurs de menace affiliés à l'IRGC."
+        }
+      ],
+      "tags": ["iran", "IRGC", "US-tech", "middle-east", "state-sponsored", "hybrid-warfare"],
+      "sources": ["https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": ["Critical_Infrastructure", "Government_and_Defense"],
+        "fr": ["Infrastructure_Critique", "Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Houthi Joint Attacks Threatening Bab al-Mandeb Strait",
+        "fr": "Attaques conjointes des Houthis menaçant le détroit de Bab al-Mandeb"
+      },
+      "description": {
+        "en": "Houthi forces are launching coordinated attacks in conjunction with Iran and Hezbollah, posing a direct threat to shipping routes through the Bab al-Mandeb strait. This threatens global maritime trade and energy supply chains, with potential cascading effects on European markets.",
+        "fr": "Les forces Houthis lancent des attaques coordonnées en conjonction avec l'Iran et le Hezbollah, menaçant directement les routes maritimes à travers le détroit de Bab al-Mandeb. Cela menace le commerce maritime mondial et les chaînes d'approvisionnement énergétiques, avec des effets potentiels en cascade sur les marchés européens."
+      },
+      "recommandations": [
+        {
+          "en": "Organizations dependent on Red Sea shipping routes should diversify supply chains and activate contingency logistics plans while monitoring the evolving situation.",
+          "fr": "Les organisations dépendant des routes maritimes de la mer Rouge doivent diversifier leurs chaînes d'approvisionnement et activer des plans logistiques de contingence tout en surveillant l'évolution de la situation."
+        },
+        {
+          "en": "Energy companies and port operators should reinforce cybersecurity of maritime logistics systems and OT environments against potential retaliatory cyberattacks.",
+          "fr": "Les entreprises énergétiques et les opérateurs portuaires doivent renforcer la cybersécurité des systèmes logistiques maritimes et des environnements OT contre d'éventuelles cyberattaques de représailles."
+        }
+      ],
+      "tags": ["houthi", "iran", "hezbollah", "red-sea", "maritime", "supply-chain"],
+      "sources": ["https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"],
+      "date": "2026-04-03"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "United Finance Egypt",
+      "threat_actor": "Payload",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance"],
+        "fr": ["Finance"]
+      },
+      "description": {
+        "en": "The Payload ransomware group claimed full compromise of United Finance Egypt's infrastructure, resulting in the exfiltration and potential publication of customer data. The attack included complete infrastructure takeover and data leak.",
+        "fr": "Le groupe de ransomware Payload a revendiqué la compromission complète de l'infrastructure de United Finance Egypt, entraînant l'exfiltration et la publication potentielle de données clients. L'attaque a inclus la prise de contrôle totale de l'infrastructure et une fuite de données."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1041: Exfiltration Over C2 Channel",
+        "T1657: Financial Theft"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement network segmentation to isolate critical financial systems and prevent lateral movement in case of initial compromise.",
+          "fr": "Mettre en œuvre une segmentation réseau pour isoler les systèmes financiers critiques et prévenir les mouvements latéraux en cas de compromission initiale."
+        },
+        {
+          "en": "Deploy EDR solutions with behavioral detection and maintain offline backups to enable recovery without paying ransom.",
+          "fr": "Déployer des solutions EDR avec détection comportementale et maintenir des sauvegardes hors ligne pour permettre la récupération sans payer de rançon."
+        }
+      ],
+      "tags": ["ransomware", "finance", "data-breach", "payload"],
+      "sources": ["https://www.ransomlook.io//group/payload"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Drift Protocol",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance"],
+        "fr": ["Finance"]
+      },
+      "description": {
+        "en": "Hackers stole $280 million from Drift Protocol by seizing Security Council powers through compromised durable nonce accounts. The attackers gained governance control over the decentralized finance protocol, enabling unauthorized fund transfers.",
+        "fr": "Des hackers ont volé 280 millions de dollars à Drift Protocol en s'emparant des pouvoirs du Conseil de Sécurité via des comptes à nonce durable compromis. Les attaquants ont obtenu le contrôle de gouvernance du protocole de finance décentralisée, permettant des transferts de fonds non autorisés."
+      },
+      "mitre_ttps": [
+        "T1078: Valid Accounts",
+        "T1657: Financial Theft",
+        "T1565: Data Manipulation"
+      ],
+      "recommandations": [
+        {
+          "en": "DeFi protocols should implement multi-signature requirements for all governance and treasury actions, with time-locks on critical operations to allow detection of unauthorized changes.",
+          "fr": "Les protocoles DeFi doivent mettre en place des exigences de multi-signature pour toutes les actions de gouvernance et de trésorerie, avec des délais sur les opérations critiques pour permettre la détection de changements non autorisés."
+        },
+        {
+          "en": "Implement continuous monitoring of on-chain governance activity and automated alerts for unusual voting patterns or unexpected privilege escalations.",
+          "fr": "Mettre en place une surveillance continue de l'activité de gouvernance on-chain et des alertes automatisées pour les schémas de vote inhabituels ou les escalades de privilèges inattendues."
+        }
+      ],
+      "tags": ["defi", "crypto", "finance", "governance-attack", "280M"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/drift-loses-280-million-as-hackers-seize-security-council-powers/"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "National Assembly (Ecuador)",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "description": {
+        "en": "Ecuador's National Assembly was targeted by two separate cyberattacks aimed at accessing confidential data and disrupting services. The attacks are part of a broader trend of cybercrime targeting Latin American government institutions.",
+        "fr": "L'Assemblée nationale de l'Équateur a été ciblée par deux cyberattaques distinctes visant à accéder à des données confidentielles et à perturber les services. Ces attaques s'inscrivent dans une tendance plus large de la cybercriminalité ciblant les institutions gouvernementales d'Amérique latine."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1498: Network Denial of Service",
+        "T1213: Data from Information Repositories"
+      ],
+      "recommandations": [
+        {
+          "en": "Government institutions in Latin America should conduct comprehensive vulnerability assessments and deploy web application firewalls (WAF) on all public-facing services.",
+          "fr": "Les institutions gouvernementales en Amérique latine doivent mener des évaluations complètes des vulnérabilités et déployer des pare-feu applicatifs web (WAF) sur tous les services exposés au public."
+        },
+        {
+          "en": "Establish regional information sharing partnerships (ISACs) between Latin American government CERTs to improve collective response to coordinated attacks.",
+          "fr": "Établir des partenariats régionaux de partage d'informations (ISAC) entre les CERT gouvernementaux d'Amérique latine pour améliorer la réponse collective aux attaques coordonnées."
+        }
+      ],
+      "tags": ["government", "latin-america", "ecuador", "data-breach"],
+      "sources": ["https://www.recordedfuture.com/research/latin-america-and-the-caribbean-cybercrime-landscape"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Citizens of Paraguay",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "description": {
+        "en": "A massive data leak exposed personal information of Paraguayan citizens on the dark web, including national ID numbers, dates of birth, and home addresses. This large-scale breach puts millions of individuals at risk of identity theft and fraud.",
+        "fr": "Une fuite de données massive a exposé les informations personnelles de citoyens paraguayens sur le dark web, notamment les numéros d'identité nationale, les dates de naissance et les adresses domiciliaires. Cette violation à grande échelle expose des millions de personnes au risque de vol d'identité et de fraude."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "recommandations": [
+        {
+          "en": "Government agencies holding citizen PII should encrypt all data at rest, implement strict access controls, and conduct regular audits of database access logs.",
+          "fr": "Les agences gouvernementales détenant des informations personnelles de citoyens doivent chiffrer toutes les données au repos, mettre en place des contrôles d'accès stricts et effectuer des audits réguliers des journaux d'accès aux bases de données."
+        },
+        {
+          "en": "Deploy Data Loss Prevention (DLP) solutions to detect and block unauthorized exfiltration of large datasets containing personal information.",
+          "fr": "Déployer des solutions de prévention contre la perte de données (DLP) pour détecter et bloquer l'exfiltration non autorisée de grands ensembles de données contenant des informations personnelles."
+        }
+      ],
+      "tags": ["government", "latin-america", "paraguay", "pii", "data-breach", "dark-web"],
+      "sources": ["https://www.recordedfuture.com/research/latin-america-and-the-caribbean-cybercrime-landscape"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "The Center for Hearing & Speech",
+      "threat_actor": "Interlock",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Santé_et_Sciences_du_Vivant"]
+      },
+      "description": {
+        "en": "The Center for Hearing & Speech was listed as a victim on the Interlock ransomware group's blog. The healthcare organization faces potential exposure of sensitive patient data including audiological records.",
+        "fr": "Le Center for Hearing & Speech a été listé comme victime sur le blog du groupe de ransomware Interlock. L'organisation de santé fait face à une exposition potentielle de données patients sensibles incluant des dossiers audiologiques."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1657: Financial Theft",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "recommandations": [
+        {
+          "en": "Healthcare organizations must comply with HIPAA breach notification requirements and immediately notify affected patients while engaging a specialized IR firm.",
+          "fr": "Les organisations de santé doivent se conformer aux exigences de notification de violation HIPAA et informer immédiatement les patients affectés tout en faisant appel à une société de réponse aux incidents spécialisée."
+        },
+        {
+          "en": "Implement network segmentation between clinical systems (EHR, medical devices) and administrative networks to limit blast radius of ransomware deployments.",
+          "fr": "Mettre en place une segmentation réseau entre les systèmes cliniques (DPI, dispositifs médicaux) et les réseaux administratifs pour limiter le rayon d'action des déploiements de ransomware."
+        }
+      ],
+      "tags": ["ransomware", "healthcare", "interlock", "patient-data"],
+      "sources": ["https://cti.fyi/groups/interlock.html"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Tscherne Consulting",
+      "threat_actor": "Payload",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Services_aux_Entreprises"]
+      },
+      "description": {
+        "en": "Austrian consulting firm Tscherne Consulting suffered a data breach claimed by the Payload ransomware group, potentially exposing client business data and confidential consulting records.",
+        "fr": "La société de conseil autrichienne Tscherne Consulting a subi une violation de données revendiquée par le groupe de ransomware Payload, exposant potentiellement les données commerciales des clients et les dossiers de conseil confidentiels."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "recommandations": [
+        {
+          "en": "Consulting firms handling sensitive client data should implement Zero Trust architecture and enforce MFA on all remote access entry points.",
+          "fr": "Les cabinets de conseil traitant des données clients sensibles doivent mettre en œuvre une architecture Zero Trust et appliquer le MFA sur tous les points d'entrée d'accès distant."
+        },
+        {
+          "en": "Maintain immutable, air-gapped backups tested regularly to ensure business recovery without ransom payment in case of encryption-based attacks.",
+          "fr": "Maintenir des sauvegardes immuables et déconnectées testées régulièrement pour assurer la reprise d'activité sans paiement de rançon en cas d'attaques basées sur le chiffrement."
+        }
+      ],
+      "tags": ["ransomware", "consulting", "austria", "payload", "data-breach"],
+      "sources": ["https://www.ransomlook.io//group/payload"],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Stryker Corporation",
+      "threat_actor": "Handala Hack",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "Hacktivist / État",
+      "threat_actor_aliases": ["Void Manticore"],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences", "Technology_and_Telecom"],
+        "fr": ["Santé_et_Sciences_du_Vivant", "Technologie_et_Télécom"]
+      },
+      "description": {
+        "en": "Medtech giant Stryker Corporation announced full operational recovery three weeks after a devastating wiper malware attack. The attack, claimed by pro-Iranian group Handala Hack, wiped approximately 80,000 devices. Attackers created a Global Administrator account after compromising a Windows domain admin account, then abused Microsoft Intune to distribute the wiper payload across the organization. A masquerading file was discovered that concealed attacker activities during intrusion. Class-action lawsuits claiming $20 million in damages are underway.",
+        "fr": "Le géant de la technologie médicale Stryker Corporation a annoncé avoir retrouvé sa pleine capacité opérationnelle trois semaines après une attaque dévastatrice par malware wiper. L'attaque, revendiquée par le groupe pro-iranien Handala Hack, a effacé environ 80 000 appareils. Les attaquants ont créé un compte Global Administrator après avoir compromis un compte administrateur de domaine Windows, puis ont abusé de Microsoft Intune pour distribuer le payload wiper dans toute l'organisation. Un fichier de masquage a été découvert, dissimulant les activités des attaquants durant l'intrusion. Des actions de groupe réclamant 20 millions de dollars de dommages sont en cours."
+      },
+      "mitre_ttps": [
+        "T1485: Data Destruction",
+        "T1078.003: Valid Accounts – Cloud Accounts",
+        "T1496: Resource Hijacking",
+        "T1036: Masquerading",
+        "T1098: Account Manipulation"
+      ],
+      "recommandations": [
+        {
+          "en": "Harden Microsoft Intune configurations by enforcing MFA on all administrative actions and implementing multi-administrator approval workflows for device-wide policy deployments.",
+          "fr": "Durcir les configurations Microsoft Intune en appliquant le MFA sur toutes les actions administratives et en mettant en œuvre des workflows d'approbation multi-administrateurs pour les déploiements de politiques à l'échelle des appareils."
+        },
+        {
+          "en": "Maintain air-gapped, immutable backups and regularly test disaster recovery procedures to enable full infrastructure rebuild without external dependencies.",
+          "fr": "Maintenir des sauvegardes immuables et déconnectées et tester régulièrement les procédures de reprise après sinistre pour permettre une reconstruction complète de l'infrastructure sans dépendances externes."
+        },
+        {
+          "en": "Monitor for creation of new Global Administrator accounts and implement alerting on Intune policy modifications affecting large device populations.",
+          "fr": "Surveiller la création de nouveaux comptes Global Administrator et implémenter des alertes sur les modifications de politiques Intune affectant un grand nombre d'appareils."
+        }
+      ],
+      "tags": ["wiper", "iran", "handala", "intune", "healthcare", "fortune500", "data-destruction"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/medtech-giant-stryker-fully-operational-after-data-wiping-attack/",
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-03"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-55182",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": null,
+      "cpe": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:*:*:*",
+      "product": "Next.js / React Server Components",
+      "vendor": "Vercel",
+      "description": {
+        "en": "Unsafe deserialization in React Server Components allows unauthenticated remote code execution (RCE). Exploited at scale by UAT-10608 to compromise over 760 hosts in 24 hours, extracting environment variables, SSH keys, Kubernetes tokens, and cloud secrets (AWS, Azure, GCP).",
+        "fr": "Une désérialisation non sécurisée dans les React Server Components permet une exécution de code à distance (RCE) pré-authentification. Exploitée à grande échelle par UAT-10608 pour compromettre plus de 760 hôtes en 24 heures, en extrayant des variables d'environnement, des clés SSH, des tokens Kubernetes et des secrets cloud (AWS, Azure, GCP)."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1552.004: Unsecured Credentials – Private Keys",
+        "T1555.004: Credentials from Password Stores"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately update Next.js to the latest patched version. Audit all .env files and rotate any secrets that may have been exposed (AWS keys, GitHub tokens, Stripe keys, etc.).",
+          "fr": "Mettre à jour immédiatement Next.js vers la dernière version corrigée. Auditer tous les fichiers .env et renouveler les secrets potentiellement exposés (clés AWS, tokens GitHub, clés Stripe, etc.)."
+        },
+        {
+          "en": "Enforce IMDSv2 on all AWS EC2 instances to prevent metadata exfiltration, and scan application code for use of __NEXT_DATA__ containing sensitive configuration values.",
+          "fr": "Appliquer IMDSv2 sur toutes les instances AWS EC2 pour prévenir l'exfiltration des métadonnées, et analyser le code applicatif pour détecter l'utilisation de __NEXT_DATA__ contenant des valeurs de configuration sensibles."
+        }
+      ],
+      "tags": ["vulnerability", "rce", "react", "nextjs", "supply-chain", "critical"],
+      "sources": ["https://blog.talosintelligence.com/uat-10608-inside-a-large-scale-automated-credential-harvesting-operation-targeting-web-applications/"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-33105",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": null,
+      "cpe": "cpe:2.3:a:microsoft:azure_kubernetes_service:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Azure Kubernetes Service",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Improper authorization in Azure Kubernetes Service allows unauthenticated remote privilege escalation via the network. An attacker could gain elevated privileges within the Kubernetes cluster without prior authentication.",
+        "fr": "Une autorisation inappropriée dans Azure Kubernetes Service permet une élévation de privilèges à distance non authentifiée via le réseau. Un attaquant pourrait obtenir des privilèges élevés dans le cluster Kubernetes sans authentification préalable."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft security patches immediately for Azure Kubernetes Service. Review RBAC policies and restrict network access to Kubernetes API endpoints.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité Microsoft pour Azure Kubernetes Service. Revoir les politiques RBAC et restreindre l'accès réseau aux endpoints de l'API Kubernetes."
+        },
+        {
+          "en": "Enable audit logging for all Kubernetes API calls and monitor for anomalous privilege escalation attempts or unexpected cluster role bindings.",
+          "fr": "Activer la journalisation des audits pour tous les appels API Kubernetes et surveiller les tentatives anormales d'élévation de privilèges ou les liaisons de rôles de cluster inattendues."
+        }
+      ],
+      "tags": ["vulnerability", "azure", "kubernetes", "privilege-escalation", "critical", "microsoft"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-33105"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-33107",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": null,
+      "cpe": "cpe:2.3:a:microsoft:azure_databricks:*:*:*:*:*:*:*:*",
+      "product": "Azure Databricks",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Server-Side Request Forgery (SSRF) vulnerability in Azure Databricks enabling remote privilege escalation. An attacker can abuse internal metadata services to gain elevated access within the Databricks environment.",
+        "fr": "Vulnérabilité de type Server-Side Request Forgery (SSRF) dans Azure Databricks permettant une élévation de privilèges à distance. Un attaquant peut abuser des services de métadonnées internes pour obtenir un accès élevé dans l'environnement Databricks."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1090: Proxy"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft's security advisory patch immediately. Restrict outbound network requests from Databricks clusters and implement allowlists for permitted external destinations.",
+          "fr": "Appliquer immédiatement le correctif de l'avis de sécurité Microsoft. Restreindre les requêtes réseau sortantes des clusters Databricks et implémenter des listes d'autorisation pour les destinations externes autorisées."
+        },
+        {
+          "en": "Review and audit all service principals and managed identities associated with Azure Databricks workspaces for over-privileged permissions.",
+          "fr": "Examiner et auditer tous les principaux de service et identités managées associés aux espaces de travail Azure Databricks pour détecter des permissions excessives."
+        }
+      ],
+      "tags": ["vulnerability", "azure", "databricks", "ssrf", "privilege-escalation", "critical", "microsoft"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-33107"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-32213",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": null,
+      "cpe": "cpe:2.3:a:microsoft:azure_ai_foundry:*:*:*:*:*:*:*:*",
+      "product": "Azure AI Foundry",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Improper authorization vulnerability in Azure AI Foundry allows unauthorized privilege escalation. An attacker with network access can gain elevated permissions within the AI platform, potentially accessing model endpoints, training data, and connected resources.",
+        "fr": "Vulnérabilité d'autorisation inappropriée dans Azure AI Foundry permettant une élévation de privilèges non autorisée. Un attaquant disposant d'un accès réseau peut obtenir des permissions élevées dans la plateforme IA, accédant potentiellement aux endpoints de modèles, aux données d'entraînement et aux ressources connectées."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft security patches for Azure AI Foundry immediately. Enforce principle of least privilege on all AI Foundry service principals and user accounts.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité Microsoft pour Azure AI Foundry. Appliquer le principe du moindre privilège sur tous les principaux de service et comptes utilisateurs d'AI Foundry."
+        },
+        {
+          "en": "Monitor Azure AI Foundry audit logs for unauthorized access attempts and implement network access controls to restrict reachability of AI endpoints.",
+          "fr": "Surveiller les journaux d'audit Azure AI Foundry pour les tentatives d'accès non autorisées et implémenter des contrôles d'accès réseau pour restreindre l'accessibilité des endpoints IA."
+        }
+      ],
+      "tags": ["vulnerability", "azure", "ai", "privilege-escalation", "critical", "microsoft"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-32213"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-20093",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": null,
+      "cpe": "cpe:2.3:h:cisco:integrated_management_controller:-:*:*:*:*:*:*:*",
+      "product": "Cisco Integrated Management Controller (IMC)",
+      "vendor": "Cisco",
+      "description": {
+        "en": "An authentication bypass vulnerability in Cisco IMC allows an unauthenticated remote attacker to reset passwords for all users, including the Admin account, via a crafted HTTP request. This could lead to full out-of-band management control of Cisco UCS servers.",
+        "fr": "Une vulnérabilité de contournement d'authentification dans Cisco IMC permet à un attaquant distant non authentifié de réinitialiser les mots de passe de tous les utilisateurs, y compris le compte Admin, via une requête HTTP forgée. Cela pourrait conduire à un contrôle total de la gestion hors bande des serveurs Cisco UCS."
+      },
+      "mitre_ttps": [
+        "T1556: Modify Authentication Process",
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Cisco IMC to versions 4.15.5+, 4.18.3+, or 6.0(1.250174)+ depending on the hardware model. Apply patches immediately as no workaround is available.",
+          "fr": "Mettre à jour Cisco IMC vers les versions 4.15.5+, 4.18.3+ ou 6.0(1.250174)+ selon le modèle matériel. Appliquer les correctifs immédiatement car aucune solution de contournement n'est disponible."
+        },
+        {
+          "en": "Isolate IMC management interfaces (CIMC) in dedicated out-of-band VLANs with strict firewall rules, ensuring only authorized jump hosts can reach the management plane.",
+          "fr": "Isoler les interfaces de gestion IMC (CIMC) dans des VLAN hors bande dédiés avec des règles de pare-feu strictes, en s'assurant que seuls les hôtes de rebond autorisés peuvent atteindre le plan de gestion."
+        }
+      ],
+      "tags": ["vulnerability", "cisco", "authentication-bypass", "imc", "ucs", "critical"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/critical-cisco-imc-auth-bypass-gives-attackers-admin-access/",
+        "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-auth-bypass-AgG2BxTn"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-20160",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": null,
+      "cpe": "cpe:2.3:a:cisco:smart_software_manager_on-prem:*:*:*:*:*:*:*:*",
+      "product": "Cisco Smart Software Manager On-Prem (SSM On-Prem)",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Unintentional exposure of an internal service in Cisco SSM On-Prem allows remote unauthenticated attackers to execute arbitrary commands with root privileges. This critical RCE vulnerability completely compromises the license management server.",
+        "fr": "L'exposition involontaire d'un service interne dans Cisco SSM On-Prem permet à des attaquants distants non authentifiés d'exécuter des commandes arbitraires avec les privilèges root. Cette vulnérabilité RCE critique compromet complètement le serveur de gestion des licences."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Cisco's security patches for SSM On-Prem immediately. Restrict network access to SSM On-Prem to only authorized license management servers and jump hosts.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité Cisco pour SSM On-Prem. Restreindre l'accès réseau à SSM On-Prem aux seuls serveurs de gestion de licences autorisés et hôtes de rebond."
+        },
+        {
+          "en": "Enable monitoring for suspicious command execution patterns on SSM On-Prem hosts and review all administrative access logs for anomalies.",
+          "fr": "Activer la surveillance des schémas d'exécution de commandes suspects sur les hôtes SSM On-Prem et examiner tous les journaux d'accès administratifs pour détecter des anomalies."
+        }
+      ],
+      "tags": ["vulnerability", "cisco", "rce", "ssm", "root", "critical"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/critical-cisco-imc-auth-bypass-gives-attackers-admin-access/",
+        "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ssm-cli-execution-cHUcWuNr"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-2699",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": null,
+      "cpe": "cpe:2.3:a:progress:sharefile:*:*:*:*:*:*:*:*",
+      "product": "Progress ShareFile",
+      "vendor": "Progress Software",
+      "description": {
+        "en": "Improper HTTP redirect handling in Progress ShareFile allows unauthenticated access to the administrative interface. Can be chained with CVE-2026-2701 to achieve pre-authentication RCE.",
+        "fr": "Une gestion incorrecte des redirections HTTP dans Progress ShareFile permet un accès non authentifié à l'interface d'administration. Peut être chaîné avec CVE-2026-2701 pour obtenir une RCE pré-authentification."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1078: Valid Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Progress ShareFile security patches immediately. Place the ShareFile admin interface behind VPN or IP allowlist restrictions.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité Progress ShareFile. Placer l'interface d'administration ShareFile derrière un VPN ou des restrictions de liste d'autorisation d'IP."
+        },
+        {
+          "en": "Monitor ShareFile access logs for unusual redirect patterns or access to administrative endpoints from unauthorized IP addresses.",
+          "fr": "Surveiller les journaux d'accès ShareFile pour détecter des schémas de redirection inhabituels ou des accès aux endpoints administratifs depuis des adresses IP non autorisées."
+        }
+      ],
+      "tags": ["vulnerability", "sharefile", "auth-bypass", "progress", "critical"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/new-progress-sharefile-flaws-can-be-chained-in-pre-auth-rce-attacks/"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-2701",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": null,
+      "cpe": "cpe:2.3:a:progress:sharefile:*:*:*:*:*:*:*:*",
+      "product": "Progress ShareFile",
+      "vendor": "Progress Software",
+      "description": {
+        "en": "Exploitation of file upload functions in Progress ShareFile allows an attacker to place an ASPX web shell in the web root, enabling persistent remote code execution. Chainable with CVE-2026-2699 for pre-authentication RCE.",
+        "fr": "L'exploitation des fonctions d'upload de fichiers dans Progress ShareFile permet à un attaquant de placer un web shell ASPX dans le webroot, permettant une exécution de code à distance persistante. Chaînable avec CVE-2026-2699 pour une RCE pré-authentification."
+      },
+      "mitre_ttps": [
+        "T1505.003: Server Software Component – Web Shell",
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Progress ShareFile patches immediately. Implement file upload restrictions and scan for unauthorized ASPX files in the ShareFile web root directory.",
+          "fr": "Appliquer immédiatement les correctifs Progress ShareFile. Implémenter des restrictions sur les uploads de fichiers et analyser les fichiers ASPX non autorisés dans le répertoire web root de ShareFile."
+        },
+        {
+          "en": "Deploy web application firewall (WAF) rules to detect and block web shell upload attempts and suspicious file upload patterns.",
+          "fr": "Déployer des règles de pare-feu applicatif web (WAF) pour détecter et bloquer les tentatives d'upload de web shells et les schémas d'upload de fichiers suspects."
+        }
+      ],
+      "tags": ["vulnerability", "sharefile", "rce", "webshell", "progress"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/new-progress-sharefile-flaws-can-be-chained-in-pre-auth-rce-attacks/"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-32211",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": null,
+      "cpe": "cpe:2.3:a:microsoft:azure_mcp_server:*:*:*:*:*:*:*:*",
+      "product": "Azure MCP Server",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Missing authentication for a critical function in Azure MCP Server leads to sensitive information disclosure. An unauthenticated attacker can access confidential data exposed by the MCP server endpoint.",
+        "fr": "Absence d'authentification pour une fonction critique dans Azure MCP Server entraînant la divulgation d'informations sensibles. Un attaquant non authentifié peut accéder à des données confidentielles exposées par l'endpoint du serveur MCP."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1213: Data from Information Repositories"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft's patch for Azure MCP Server. Implement network-level access controls to restrict MCP server accessibility to authorized clients only.",
+          "fr": "Appliquer le correctif Microsoft pour Azure MCP Server. Implémenter des contrôles d'accès au niveau réseau pour restreindre l'accessibilité du serveur MCP aux seuls clients autorisés."
+        },
+        {
+          "en": "Audit all data accessible through the MCP server endpoint and classify sensitive information for enhanced protection and access logging.",
+          "fr": "Auditer toutes les données accessibles via l'endpoint du serveur MCP et classifier les informations sensibles pour une protection renforcée et une journalisation des accès."
+        }
+      ],
+      "tags": ["vulnerability", "azure", "mcp", "information-disclosure", "microsoft"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-32211"],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-5281",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": null,
+      "epss": null,
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Google Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Use-After-Free vulnerability in Chrome's WebGPU Dawn implementation allows remote code execution via a crafted HTML page. Actively exploited in the wild and listed in CISA KEV catalog. Affects all major Chrome versions prior to the patch.",
+        "fr": "Vulnérabilité Use-After-Free dans l'implémentation WebGPU Dawn de Chrome permettant l'exécution de code à distance via une page HTML forgée. Activement exploitée dans la nature et listée dans le catalogue CISA KEV. Affecte toutes les versions majeures de Chrome antérieures au correctif."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution",
+        "T1189: Drive-by Compromise"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately update Google Chrome to the latest available version across all endpoints. Enable automatic browser updates organization-wide.",
+          "fr": "Mettre à jour immédiatement Google Chrome vers la dernière version disponible sur tous les endpoints. Activer les mises à jour automatiques du navigateur à l'échelle de l'organisation."
+        },
+        {
+          "en": "Deploy web filtering and DNS security controls to block access to known malicious domains serving exploit pages. Consider temporary use of Chrome's Enhanced Safe Browsing mode.",
+          "fr": "Déployer des contrôles de filtrage web et de sécurité DNS pour bloquer l'accès aux domaines malveillants connus hébergeant des pages d'exploit. Envisager l'utilisation temporaire du mode de navigation sécurisée améliorée de Chrome."
+        }
+      ],
+      "tags": ["vulnerability", "chrome", "0day", "use-after-free", "webgpu", "cisa-kev", "actively-exploited"],
+      "sources": ["https://cybersecuritynews.com/chrome-0-day-flaw-exploited/"],
+      "date": "2026-04-03"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Axios npm Supply Chain Compromise by North Korean Actor UNC1069",
+        "fr": "Compromission de la chaîne d'approvisionnement npm Axios par l'acteur nord-coréen UNC1069"
+      },
+      "description": {
+        "en": "The extremely popular Axios npm package (100M+ weekly downloads) was compromised by a North Korea-linked actor (UNC1069) via maintainer account hijacking. Malicious versions 1.14.1 and 0.30.4 were published, embedding a phantom dependency 'plain-crypto-js' that executes a postinstall hook deploying a cross-platform RAT. The C2 infrastructure was overwhelmed by the volume of requests before being neutralized. The attack is part of a broader wave including Trivy, LiteLLM, and Telnyx compromises.",
+        "fr": "Le package npm Axios extrêmement populaire (100M+ de téléchargements hebdomadaires) a été compromis par un acteur lié à la Corée du Nord (UNC1069) via le détournement d'un compte de mainteneur. Les versions malveillantes 1.14.1 et 0.30.4 ont été publiées, intégrant une dépendance fantôme 'plain-crypto-js' qui exécute un hook postinstall déployant un RAT multiplateforme. L'infrastructure C2 a été submergée par le volume de requêtes avant d'être neutralisée. L'attaque s'inscrit dans une vague plus large incluant les compromissions de Trivy, LiteLLM et Telnyx."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": ["UNC1069", "HIDDEN COBRA", "Zinc", "APT38"],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance"],
+        "fr": ["Technologie_et_Télécom", "Finance"]
+      },
+      "indicators": {
+        "URL": ["hxxp://www.npmjs.com/package/axios/v/0.30.4"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["plain-crypto-js", "msbuild.exe"]
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise – Compromise Software Dependencies and Development Tools",
+        "T1547.001: Boot or Logon Autostart Execution – Registry Run Keys / Startup Folder",
+        "T1059: Command and Scripting Interpreter"
+      ],
+      "analyse": {
+        "en": "This attack demonstrates the growing industrialization of software supply chain attacks by North Korean state actors targeting the open-source ecosystem. The exploitation of a trusted package with 100M+ weekly downloads represents a potentially catastrophic blast radius affecting thousands of production environments. AI-based differential code analysis proved critical for early detection. The simultaneous targeting of multiple developer tools (Trivy, LiteLLM, Telnyx) indicates a coordinated, resource-rich campaign.",
+        "fr": "Cette attaque démontre l'industrialisation croissante des attaques de la chaîne d'approvisionnement logicielle par des acteurs étatiques nord-coréens ciblant l'écosystème open source. L'exploitation d'un package de confiance avec 100M+ de téléchargements hebdomadaires représente un rayon d'action potentiellement catastrophique affectant des milliers d'environnements de production. L'analyse différentielle de code basée sur l'IA s'est avérée critique pour la détection précoce. Le ciblage simultané de plusieurs outils de développement (Trivy, LiteLLM, Telnyx) indique une campagne coordonnée disposant de ressources importantes."
+      },
+      "recommandations": [
+        {
+          "en": "Apply a minimum 7-day 'soak time' before updating npm dependencies in production pipelines. Use lockfiles (package-lock.json) and pin exact versions with integrity hashes.",
+          "fr": "Appliquer un 'soak time' minimum de 7 jours avant de mettre à jour les dépendances npm en production. Utiliser des fichiers de verrouillage (package-lock.json) et épingler les versions exactes avec des hachages d'intégrité."
+        },
+        {
+          "en": "Audit and restrict postinstall hooks in CI/CD pipelines using tools like npm audit. Deploy AppControl policies to block execution of unsigned binaries from package directories.",
+          "fr": "Auditer et restreindre les hooks postinstall dans les pipelines CI/CD en utilisant des outils comme npm audit. Déployer des politiques AppControl pour bloquer l'exécution de binaires non signés depuis les répertoires de packages."
+        },
+        {
+          "en": "Implement software composition analysis (SCA) tools with real-time malicious package detection in all CI/CD workflows.",
+          "fr": "Implémenter des outils d'analyse de la composition logicielle (SCA) avec détection en temps réel des packages malveillants dans tous les workflows CI/CD."
+        }
+      ],
+      "tags": ["supply-chain", "npm", "axios", "north-korea", "RAT", "unc1069", "lazarus"],
+      "sources": [
+        "https://www.elastic.co/security-labs/how-we-caught-the-axios-supply-chain-attack",
+        "https://www.helpnetsecurity.com/2026/04/02/supply-chain-hacks-data-theft/"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "BRICKSTORM Malware Targeting VMware vSphere Infrastructure",
+        "fr": "Malware BRICKSTORM ciblant les infrastructures VMware vSphere"
+      },
+      "description": {
+        "en": "BRICKSTORM malware specifically targets VMware vSphere infrastructure, particularly vCenter (VCSA) and ESXi hypervisors. Attackers exploit weak security architectures and absence of MFA on admin accounts to establish persistence at the virtualization layer. Once vCenter is compromised, the attacker gains total control over all VMs, bypassing OS-level permissions via direct VMDK file access. The malware uses log blinding techniques and native binaries (LOLBins) for stealth. Classic EDR agents do not support these control planes, creating a critical visibility gap.",
+        "fr": "Le malware BRICKSTORM cible spécifiquement les infrastructures VMware vSphere, en particulier vCenter (VCSA) et les hyperviseurs ESXi. Les attaquants exploitent des architectures de sécurité faibles et l'absence de MFA sur les comptes d'administration pour établir une persistance au niveau de la couche de virtualisation. Une fois vCenter compromis, l'attaquant obtient un contrôle total sur toutes les VMs, contournant les permissions au niveau OS via l'accès direct aux fichiers VMDK. Le malware utilise des techniques d'aveuglement des journaux et des binaires natifs (LOLBins) pour rester discret. Les agents EDR classiques ne supportent pas ces plans de contrôle, créant un déficit de visibilité critique."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Critical_Infrastructure"],
+        "fr": ["Technologie_et_Télécom", "Infrastructure_Critique"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["BRICKSTORM", "SLAYSTYLE"]
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1098.004: Account Manipulation – SSH Authorized Keys",
+        "T1484.002: Domain or Tenant Policy Modification – Domain Controller Authentication"
+      ],
+      "analyse": {
+        "en": "BRICKSTORM represents a sophisticated Tier-0 infrastructure threat targeting the virtualization hypervisor layer, which is typically outside the coverage of conventional EDR tools. The ability to directly access VMDK files enables silent exfiltration of NTDS.dit databases and complete destruction of restoration capabilities. This attack vector is particularly dangerous as it can render air-gapped backup strategies ineffective if the backup infrastructure itself runs on the compromised hypervisor.",
+        "fr": "BRICKSTORM représente une menace sophistiquée de Tier-0 ciblant la couche hyperviseur de virtualisation, qui se trouve typiquement hors de la couverture des outils EDR conventionnels. La capacité d'accéder directement aux fichiers VMDK permet l'exfiltration silencieuse de bases de données NTDS.dit et la destruction complète des capacités de restauration. Ce vecteur d'attaque est particulièrement dangereux car il peut rendre inefficaces les stratégies de sauvegarde air-gapped si l'infrastructure de sauvegarde elle-même tourne sur l'hyperviseur compromis."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy Mandiant's vCenter hardening script and enforce MFA for all vsphere.local SSO sessions. Isolate management interfaces (VAMI port 5480, SSH port 22) behind Privileged Access Workstations (PAW).",
+          "fr": "Déployer le script de durcissement vCenter de Mandiant et imposer le MFA pour toutes les sessions SSO vsphere.local. Isoler les interfaces de gestion (VAMI port 5480, SSH port 22) derrière des stations de travail à accès privilégié (PAW)."
+        },
+        {
+          "en": "Enable systematic auditd log forwarding to an external SIEM. Monitor for VCSA_FW_DROP events and unexpected modifications to /etc/audisp/plugins.d/syslog.conf.",
+          "fr": "Activer le forwarding systématique des logs auditd vers un SIEM externe. Surveiller les événements VCSA_FW_DROP et les modifications inattendues de /etc/audisp/plugins.d/syslog.conf."
+        }
+      ],
+      "tags": ["vsphere", "vmware", "esxi", "vcenter", "brickstorm", "hypervisor", "espionage"],
+      "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/vsphere-brickstorm-defender-guide/"],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "Qilin Ransomware Group EDR Killer – Advanced Defense Evasion",
+        "fr": "EDR Killer du groupe ransomware Qilin – Évasion avancée des défenses"
+      },
+      "description": {
+        "en": "The Qilin ransomware group uses a sophisticated malicious DLL 'msimg32.dll' to disable EDR solutions before deploying the final ransomware payload. The multi-stage infection uses DLL side-loading via legitimate applications. The loader uses VEH/SEH exceptions to obfuscate execution flow and bypasses user-mode hooks via the 'Halo's Gate' technique. It then loads two kernel drivers (rwdrv.sys and hlpdrv.sys) to directly access kernel physical memory, overwriting kernel objects and removing process creation notification callbacks for security software. Capable of neutralizing 300+ EDR drivers from virtually all vendors.",
+        "fr": "Le groupe de ransomware Qilin utilise une DLL malveillante sophistiquée 'msimg32.dll' pour désactiver les solutions EDR avant de déployer le payload ransomware final. L'infection multi-étapes utilise le side-loading de DLL via des applications légitimes. Le loader utilise des exceptions VEH/SEH pour obscurcir le flux d'exécution et contourne les hooks en mode utilisateur via la technique 'Halo's Gate'. Il charge ensuite deux drivers noyau (rwdrv.sys et hlpdrv.sys) pour accéder directement à la mémoire physique du noyau, écrasant les objets noyau et supprimant les callbacks de notification de création de processus des logiciels de sécurité. Capable de neutraliser 300+ drivers EDR de pratiquement tous les éditeurs."
+      },
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": ["Agenda"],
+      "sector": {
+        "en": ["Industry_and_Manufacturing", "Healthcare_and_Life_Sciences", "Real_Estate_and_Construction"],
+        "fr": ["Industrie_et_Fabrication", "Santé_et_Sciences_du_Vivant", "Immobilier_et_Construction"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "7787da25451f5538766240f4a8a2846d0a589c59391e15f188aa077e8b888497",
+          "16f83f056177c4ec24c7e99d01ca9d9d6713bd0497eeedb777a3ffefa99c97f0"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["msimg32.dll", "rwdrv.sys", "hlpdrv.sys"]
+      },
+      "mitre_ttps": [
+        "T1562.001: Impair Defenses – Disable or Modify Tools",
+        "T1574.002: Hijack Execution Flow – DLL Side-Loading",
+        "T1014: Rootkit"
+      ],
+      "analyse": {
+        "en": "Qilin's EDR killer represents a significant advancement in ransomware evasion capabilities, achieving near-complete neutralization of endpoint security through kernel-level driver abuse. The use of legitimate hardware drivers (TechPowerUp ThrottleStop) as a proxy for kernel memory access significantly complicates detection. The ability to kill 300+ different EDR products makes this a highly versatile tool applicable to virtually any target environment, dramatically increasing the success rate of ransomware deployments.",
+        "fr": "L'EDR killer de Qilin représente une avancée significative dans les capacités d'évasion des ransomwares, atteignant une neutralisation quasi-complète de la sécurité des endpoints via l'abus de drivers au niveau noyau. L'utilisation de drivers matériels légitimes (TechPowerUp ThrottleStop) comme proxy pour l'accès à la mémoire noyau complique significativement la détection. La capacité à tuer 300+ produits EDR différents en fait un outil très polyvalent applicable à pratiquement n'importe quel environnement cible, augmentant considérablement le taux de succès des déploiements de ransomware."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for anomalous usage of hardware management drivers like TechPowerUp ThrottleStop (rwdrv.sys). Implement detection rules for bpf_probe_write_user syscall writes and ntdll.dll .mrdata section modifications.",
+          "fr": "Surveiller l'utilisation anormale des drivers de gestion matérielle comme TechPowerUp ThrottleStop (rwdrv.sys). Implémenter des règles de détection pour les écritures syscall bpf_probe_write_user et les modifications de la section .mrdata de ntdll.dll."
+        },
+        {
+          "en": "Enable kernel-level protection features (Microsoft Vulnerable Driver Blocklist, HVCI) to prevent loading of known malicious drivers. Alert on loading of unsigned or revoked kernel drivers.",
+          "fr": "Activer les fonctionnalités de protection au niveau noyau (liste de blocage des drivers vulnérables Microsoft, HVCI) pour empêcher le chargement de drivers malveillants connus. Alerter sur le chargement de drivers noyau non signés ou révoqués."
+        }
+      ],
+      "tags": ["ransomware", "qilin", "edr-killer", "rootkit", "dll-sideloading", "kernel"],
+      "sources": ["https://blog.talosintelligence.com/qilin-edr-killer/"],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "UAT-10608: Large-Scale Automated Credential Harvesting via React2Shell",
+        "fr": "UAT-10608 : Récolte automatisée de secrets à grande échelle via React2Shell"
+      },
+      "description": {
+        "en": "A massive automated campaign orchestrated by UAT-10608 targets Next.js applications vulnerable to React2Shell (CVE-2025-55182). Over 760 hosts were compromised within 24 hours across multiple cloud providers. An automated harvesting script extracts environment variables, SSH keys, Kubernetes tokens, and cloud secrets (AWS/Azure/GCP). Data is centralized on a C2 server via an interface named 'NEXUS Listener' that allows attackers to browse victim secrets with detailed statistics.",
+        "fr": "Une campagne massive automatisée orchestrée par UAT-10608 cible les applications Next.js vulnérables à React2Shell (CVE-2025-55182). Plus de 760 hôtes ont été compromis en 24 heures à travers divers fournisseurs cloud. Un script de récolte automatisé extrait les variables d'environnement, les clés SSH, les tokens Kubernetes et les secrets cloud (AWS/Azure/GCP). Les données sont centralisées sur un serveur C2 via une interface nommée 'NEXUS Listener' permettant aux attaquants de naviguer dans les secrets de chaque victime avec des statistiques détaillées."
+      },
+      "threat_actor": "UAT-10608",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance", "Business_Services"],
+        "fr": ["Technologie_et_Télécom", "Finance", "Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": ["144.172.102.88", "172.86.127.128"],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [".eba9ee1e4.sh", "NEXUS Listener"]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1555.004: Credentials from Password Stores – Windows Credential Manager",
+        "T1552.004: Unsecured Credentials – Private Keys"
+      ],
+      "analyse": {
+        "en": "The UAT-10608 campaign represents a textbook case of fully automated, AI-assisted vulnerability exploitation at scale. The speed of compromise (760+ hosts in 24 hours) indicates automated scanning and exploitation pipelines. The NEXUS Listener C2 interface demonstrates significant operational maturity. The stolen credentials (AWS keys, GitHub tokens, Stripe keys) create severe cascading supply chain risk affecting downstream customers and integrated services of compromised organizations.",
+        "fr": "La campagne UAT-10608 représente un cas d'école d'exploitation automatisée de vulnérabilité à grande échelle, potentiellement assistée par IA. La vitesse de compromission (760+ hôtes en 24 heures) indique des pipelines d'analyse et d'exploitation automatisés. L'interface C2 NEXUS Listener démontre une maturité opérationnelle significative. Les identifiants volés (clés AWS, tokens GitHub, clés Stripe) créent un risque sévère de compromission en cascade de la chaîne d'approvisionnement affectant les clients en aval et les services intégrés des organisations compromises."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately update Next.js to the latest patched version. Rotate all exposed secrets (AWS keys, GitHub tokens, Stripe keys, Kubernetes service account tokens) as a precautionary measure.",
+          "fr": "Mettre à jour immédiatement Next.js vers la dernière version corrigée. Renouveler tous les secrets potentiellement exposés (clés AWS, tokens GitHub, clés Stripe, tokens de comptes de service Kubernetes) par précaution."
+        },
+        {
+          "en": "Enforce IMDSv2 on all AWS EC2 instances. Block IP addresses 144.172.102.88 and 172.86.127.128 at perimeter firewalls and cloud security groups.",
+          "fr": "Appliquer IMDSv2 sur toutes les instances AWS EC2. Bloquer les adresses IP 144.172.102.88 et 172.86.127.128 au niveau des pare-feu périmètriques et des groupes de sécurité cloud."
+        }
+      ],
+      "tags": ["credential-harvesting", "react2shell", "nextjs", "automated", "cloud", "uat-10608"],
+      "sources": ["https://blog.talosintelligence.com/uat-10608-inside-a-large-scale-automated-credential-harvesting-operation-targeting-web-applications/"],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "NKITW Operation – North Korean IT Worker International Recruitment Network",
+        "fr": "Opération NKITW – Réseau de recrutement international des travailleurs IT nord-coréens"
+      },
+      "description": {
+        "en": "The North Korean regime has extended its IT worker infiltration program (NKITW) by actively recruiting engineers in Iran, Syria, and Saudi Arabia as proxies. These recruits perform technical interviews in English on behalf of DPRK agents, bypassing international sanctions. Internal documents reveal structured hiring plans with daily application quotas (100+ per profile). IT workers use fake LinkedIn profiles and US-based facilitators to receive work laptops. 'Michael' and 'Lander' are identified code names managing these recruitment cells, offering cryptocurrency salaries.",
+        "fr": "Le régime nord-coréen a étendu son programme d'infiltration de travailleurs IT (NKITW) en recrutant activement des ingénieurs en Iran, Syrie et Arabie Saoudite comme prête-noms. Ces recrues effectuent les entretiens techniques en anglais pour le compte des agents de la RPDC, contournant les sanctions internationales. Des documents internes révèlent des plans d'embauche structurés avec des quotas d'applications quotidiennes (100+ par profil). Les travailleurs IT utilisent de faux profils LinkedIn et des facilitateurs aux États-Unis pour recevoir les ordinateurs portables de travail. 'Michael' et 'Lander' sont des noms de code identifiés gérant ces cellules de recrutement, offrant des salaires en cryptomonnaies."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": ["NKITW", "UNC5267", "FAMOUS CHOLLIMA"],
+      "sector": {
+        "en": ["Government_and_Defense", "Finance", "Technology_and_Telecom"],
+        "fr": ["Gouvernement_et_Défense", "Finance", "Technologie_et_Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": ["192.168.109.2"],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1078.004: Valid Accounts – Cloud Accounts",
+        "T1098: Account Manipulation"
+      ],
+      "analyse": {
+        "en": "The NKITW operation represents the most advanced evolution of insider threat programs by a nation-state, combining social engineering, identity fraud, and international recruitment networks to achieve persistent access to critical sectors. The use of Iranian, Syrian, and Saudi Arabian intermediaries provides both deniability and circumvention of Western background check processes. The cryptocurrency payment model creates an incentive structure that transcends traditional sanctioned-country boundaries, potentially making this program highly scalable.",
+        "fr": "L'opération NKITW représente l'évolution la plus avancée des programmes de menaces internes par un État-nation, combinant l'ingénierie sociale, la fraude à l'identité et des réseaux de recrutement internationaux pour obtenir un accès persistant aux secteurs critiques. L'utilisation d'intermédiaires iraniens, syriens et saoudiens offre à la fois la dénégation plausible et le contournement des processus de vérification des antécédents occidentaux. Le modèle de paiement en cryptomonnaies crée une structure d'incitation qui transcende les frontières traditionnelles des pays sanctionnés, rendant potentiellement ce programme très évolutif."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen identity verification processes during recruitment (biometrics, video background checks, multi-factor identity validation across multiple sources). Verify authenticity of GitHub and LinkedIn histories.",
+          "fr": "Renforcer les processus de vérification d'identité lors du recrutement (biométrie, vérification de l'arrière-plan vidéo, validation d'identité multi-facteurs à partir de plusieurs sources). Vérifier l'authenticité des historiques GitHub et LinkedIn."
+        },
+        {
+          "en": "Monitor employee VPN access IP addresses for extreme geographic inconsistencies. Implement behavioral analytics (UEBA) to detect anomalous data access patterns from newly onboarded employees.",
+          "fr": "Surveiller les adresses IP d'accès VPN des employés pour détecter des incohérences géographiques extrêmes. Implémenter des analyses comportementales (UEBA) pour détecter les schémas d'accès aux données anormaux des employés nouvellement intégrés."
+        }
+      ],
+      "tags": ["north-korea", "insider-threat", "recruitment", "social-engineering", "nkitw", "sanctions-evasion"],
+      "sources": ["https://flare.io/learn/resources/blog/iranian-recruits-inside-the-nkitw-operation"],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "UAC-0255 (CyberSerp) Impersonates CERT-UA to Distribute AGEWHEEZE RAT",
+        "fr": "UAC-0255 (CyberSerp) usurpe l'identité du CERT-UA pour distribuer le RAT AGEWHEEZE"
+      },
+      "description": {
+        "en": "Pro-Russian actor UAC-0255 (CyberSerp) conducted a massive phishing campaign impersonating Ukraine's CERT-UA, reaching approximately 1 million users. Emails warned of an imminent Russian cyberattack and urged installation of a fake 'security tool'. The link led to a counterfeit site (cert-ua[.]tech) hosting an archive containing the AGEWHEEZE RAT. Written in Go and using WebSockets for C2, AGEWHEEZE allows full host takeover (command execution, screenshot capture, clipboard theft). The malicious site was likely AI-generated to increase credibility.",
+        "fr": "L'acteur pro-russe UAC-0255 (CyberSerp) a mené une campagne de phishing massive usurpant l'identité du CERT-UA ukrainien, touchant environ 1 million d'utilisateurs. Les emails avertissaient d'une cyberattaque russe imminente et incitaient à installer un faux 'outil de sécurité'. Le lien menait vers un site contrefait (cert-ua[.]tech) hébergeant une archive contenant le RAT AGEWHEEZE. Écrit en Go et utilisant des WebSockets pour son C2, AGEWHEEZE permet une prise de contrôle totale de l'hôte (exécution de commandes, capture d'écran, vol de presse-papier). Le site malveillant a probablement été généré par IA pour augmenter sa crédibilité."
+      },
+      "threat_actor": "UAC-0255",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": ["CyberSerp"],
+      "sector": {
+        "en": ["Government_and_Defense", "Education_and_Research"],
+        "fr": ["Gouvernement_et_Défense", "Éducation_et_Recherche"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["cert-ua[.]tech"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["AGEWHEEZE", "protection_tool.zip"]
+      },
+      "mitre_ttps": [
+        "T1566.002: Phishing – Spearphishing Link",
+        "T1071.001: Application Layer Protocol – Web Protocols",
+        "T1547.001: Boot or Logon Autostart Execution – Registry Run Keys / Startup Folder"
+      ],
+      "analyse": {
+        "en": "This campaign represents a sophisticated authority impersonation attack, leveraging the trusted status of national cybersecurity agencies to maximize infection rates. The use of AI-generated websites to increase credibility marks an evolution in social engineering techniques. Targeting government and educational institutions in Ukraine aligns with Russian strategic objectives to undermine Ukrainian institutional resilience. The scale (1M targeted users) indicates significant infrastructure investment.",
+        "fr": "Cette campagne représente une attaque sophistiquée d'usurpation d'autorité, exploitant le statut de confiance des agences nationales de cybersécurité pour maximiser les taux d'infection. L'utilisation de sites web générés par IA pour augmenter la crédibilité marque une évolution dans les techniques d'ingénierie sociale. Le ciblage des institutions gouvernementales et éducatives ukrainiennes s'aligne avec les objectifs stratégiques russes visant à saper la résilience institutionnelle ukrainienne. L'échelle (1M d'utilisateurs ciblés) indique un investissement significatif en infrastructure."
+      },
+      "recommandations": [
+        {
+          "en": "Block the domain cert-ua[.]tech at DNS and proxy levels. Deploy AppLocker policies to prevent execution of unauthorized binaries from the AppData directory.",
+          "fr": "Bloquer le domaine cert-ua[.]tech au niveau DNS et proxy. Déployer des politiques AppLocker pour interdire l'exécution de binaires non autorisés depuis le répertoire AppData."
+        },
+        {
+          "en": "Implement user awareness training focused on authority impersonation techniques and establish a clear communication protocol for security announcements from official agencies.",
+          "fr": "Mettre en œuvre une formation de sensibilisation des utilisateurs axée sur les techniques d'usurpation d'autorité et établir un protocole de communication clair pour les annonces de sécurité des agences officielles."
+        }
+      ],
+      "tags": ["phishing", "impersonation", "cert-ua", "ukraine", "russia", "rat", "agewheeze", "go"],
+      "sources": [
+        "https://securityaffairs.com/190287/hacking/threat-actor-uac-0255-impersonate-cert-ua-to-spread-agewheeze-malware-via-phishing.html",
+        "https://sploited.blog/2026/04/02/weekly-threat-landscape-thursday-roundup-2/"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "TA446 (COLDRIVER) Targets iOS Devices with DarkSword Exploit",
+        "fr": "TA446 (COLDRIVER) cible les appareils iOS avec l'exploit DarkSword"
+      },
+      "description": {
+        "en": "Russian FSB-linked group TA446 (COLDRIVER/Callisto) is now using a leaked iOS exploit chain named 'DarkSword'. The campaign targets diplomats, government personnel, and international policy experts via spear-phishing emails impersonating the Atlantic Council. The exploit achieves compromise with minimal user interaction, enabling surveillance and sensitive data exfiltration from iPhones. This marks a strategic shift for COLDRIVER, historically focused on web credential theft. The absence of classic binary persistence complicates forensic analysis on infected devices.",
+        "fr": "Le groupe TA446 (COLDRIVER/Callisto), affilié au FSB russe, utilise désormais une chaîne d'exploit iOS nommée 'DarkSword'. La campagne cible des diplomates, des personnels gouvernementaux et des experts en politique internationale via des emails de spear-phishing imitant l'Atlantic Council. L'exploit permet une compromission avec peu ou pas d'interaction utilisateur, autorisant la surveillance et l'exfiltration de données sensibles depuis les iPhones. Cela marque un changement stratégique pour COLDRIVER, historiquement focalisé sur le vol d'identifiants web. L'absence de persistance binaire classique complique l'analyse forensique sur les appareils infectés."
+      },
+      "threat_actor": "COLDRIVER",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": ["TA446", "Callisto Group", "Star Blizzard", "Seaborgium"],
+      "sector": {
+        "en": ["Government_and_Defense", "Nonprofit_and_NGO"],
+        "fr": ["Gouvernement_et_Défense", "Associatif_et_ONG"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["DarkSword"]
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution",
+        "T1566.002: Phishing – Spearphishing Link",
+        "T1005: Data from Local System"
+      ],
+      "analyse": {
+        "en": "The adoption of a sophisticated iOS exploit chain by COLDRIVER represents a significant capability escalation for this historically credential-theft-focused group. DarkSword's near-zero-click compromise capability poses severe risks to diplomatic communications confidentiality and government operational security. The targeting of Atlantic Council-affiliated professionals suggests focused intelligence collection objectives aligned with Russian foreign policy interests. The lack of persistent binary indicators makes traditional IOC-based detection ineffective.",
+        "fr": "L'adoption d'une chaîne d'exploit iOS sophistiquée par COLDRIVER représente une escalade significative des capacités pour ce groupe historiquement axé sur le vol d'identifiants. La capacité de compromission quasi sans-clic de DarkSword pose des risques sévères pour la confidentialité des communications diplomatiques et la sécurité opérationnelle gouvernementale. Le ciblage des professionnels affiliés à l'Atlantic Council suggère des objectifs de collecte de renseignements ciblés alignés avec les intérêts de politique étrangère russes. L'absence d'indicateurs binaires persistants rend inefficace la détection traditionnelle basée sur les IOC."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately apply all iOS security updates. Enable 'Lockdown Mode' for all high-risk profiles (diplomats, government officials, defense researchers).",
+          "fr": "Appliquer immédiatement toutes les mises à jour de sécurité iOS. Activer le 'Mode Isolement' pour tous les profils à haut risque (diplomates, fonctionnaires gouvernementaux, chercheurs en défense)."
+        },
+        {
+          "en": "Deploy Mobile Threat Defense (MTD) solutions to monitor unusual outbound network connections from mobile devices and detect anomalous behavioral patterns indicative of mobile implant activity.",
+          "fr": "Déployer des solutions de Mobile Threat Defense (MTD) pour surveiller les connexions réseau sortantes inhabituelles depuis les appareils mobiles et détecter les schémas comportementaux anormaux indicatifs d'une activité d'implant mobile."
+        }
+      ],
+      "tags": ["ios", "exploit", "coldriver", "russia", "fsb", "spearphishing", "darksword", "diplomacy"],
+      "sources": ["https://sploited.blog/2026/04/02/weekly-threat-landscape-thursday-roundup-2/"],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "Mirai Botnet Cyberattacks Against French Infrastructure Tripling",
+        "fr": "Triplement des cyberattaques de botnets Mirai contre les infrastructures françaises"
+      },
+      "description": {
+        "en": "The Global Cyber Alliance (GCA) observed a tripling of cyberattacks targeting French networks between May 2025 and February 2026, primarily driven by Mirai family botnets (LZRD, SORA variants). A distinct spike of attacks originating from French infrastructure was noted in December 2025, indicating a wave of local device infections. Targets include ministries, La Poste (French postal service), and banking infrastructure. Attack infrastructure persistence was observed, with IPs repeatedly targeting the same sensors over months. Netherlands, Vietnam, and Germany are the primary geographic sources.",
+        "fr": "La Global Cyber Alliance (GCA) a observé un triplement des cyberattaques ciblant les réseaux français entre mai 2025 et février 2026, principalement portées par des botnets de la famille Mirai (variantes LZRD, SORA). Un pic distinct d'attaques originaires d'infrastructures françaises a été noté en décembre 2025, indiquant une vague d'infections d'appareils locaux. Les cibles incluent des ministères, La Poste et des infrastructures bancaires. Une persistance des infrastructures d'attaque a été observée, avec des IP ciblant de manière répétée les mêmes capteurs sur plusieurs mois. Les Pays-Bas, le Vietnam et l'Allemagne sont les principales sources géographiques."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Critical_Infrastructure", "Government_and_Defense", "Finance"],
+        "fr": ["Infrastructure_Critique", "Gouvernement_et_Défense", "Finance"]
+      },
+      "indicators": {
+        "URL": ["hxxp://cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-007.pdf"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Mirai.A", "Mirai.D", "LZRD", "SORA", "Cult"]
+      },
+      "mitre_ttps": [
+        "T1595: Active Scanning",
+        "T1498: Network Denial of Service",
+        "T1046: Network Service Discovery"
+      ],
+      "analyse": {
+        "en": "The tripling of Mirai botnet attacks against French infrastructure represents a structural shift in the threat landscape for France's critical services. The December 2025 spike of attacks originating from French infrastructure itself indicates successful mass compromise of French IoT devices, creating a domestic attack platform. The persistent targeting of the same sensors suggests either coordinated campaigns or automated botnet infrastructure with long-term objective lists. The combination of government, postal, and banking targets suggests either opportunistic mass scanning or coordinated targeting of French national services.",
+        "fr": "Le triplement des attaques de botnets Mirai contre les infrastructures françaises représente un changement structurel dans le paysage des menaces pour les services critiques français. Le pic de décembre 2025 d'attaques originaires des infrastructures françaises elles-mêmes indique une compromission massive réussie des appareils IoT français, créant une plateforme d'attaque domestique. Le ciblage persistant des mêmes capteurs suggère soit des campagnes coordonnées, soit une infrastructure de botnet automatisée avec des listes d'objectifs à long terme. La combinaison des cibles gouvernementales, postales et bancaires suggère soit un balayage de masse opportuniste, soit un ciblage coordonné des services nationaux français."
+      },
+      "recommandations": [
+        {
+          "en": "Strictly enforce IoT security best practices (change default passwords, close unnecessary ports, apply firmware updates). Deploy DDoS protection solutions upstream of critical services.",
+          "fr": "Appliquer strictement les bonnes pratiques de sécurité IoT (changement des mots de passe par défaut, fermeture des ports non nécessaires, application des mises à jour firmware). Déployer des solutions de protection DDoS en amont des services critiques."
+        },
+        {
+          "en": "Monitor outbound traffic flows toward known Mirai C2 infrastructure and implement network anomaly detection to identify compromised IoT devices within the organization's network.",
+          "fr": "Surveiller les flux de trafic sortant vers les infrastructures C2 connues de Mirai et implémenter la détection d'anomalies réseau pour identifier les appareils IoT compromis au sein du réseau de l'organisation."
+        }
+      ],
+      "tags": ["mirai", "botnet", "france", "ddos", "iot", "infrastructure", "lzrd", "sora"],
+      "sources": ["https://globalcyberalliance.org/cyberattacks-on-france-are-rising-heres-what-the-aide-data-shows/"],
+      "date": "2026-04-03"
+    }
+  ]
+}
