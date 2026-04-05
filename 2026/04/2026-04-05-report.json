@@ -4,7 +4,7 @@
       "en": "The April 2026 threat landscape is characterized by an increasing hybridization of kinetic conflicts and cyber operations, particularly in the Middle East where attacks align with military agendas. Extreme professionalization of social engineering is observed, notably against software supply chains (Axios/NPM). Industrialized phishing via OAuth 2.0 Device Code abuse shows rapid adaptation to MFA. Persistent targeting of perimeter solutions (Fortinet, Progress ShareFile) by state actors and the emergence of AI-automated malware tools confirm a major technological paradigm shift.",
       "fr": "Le paysage de la menace d'avril 2026 est marqué par une hybridation croissante entre conflits cinétiques et opérations cyber, particulièrement au Moyen-Orient où les cyber-attaques s'alignent désormais sur les agendas militaires. On observe une professionnalisation extrême de l'ingénierie sociale, notamment contre la chaîne d'approvisionnement logicielle (Axios/NPM). L'industrialisation du phishing via l'abus du flux Device Code d'OAuth 2.0 montre une adaptation rapide au MFA. Le ciblage persistant des solutions de périmètre (Fortinet, Progress ShareFile) par des acteurs étatiques et l'émergence d'outils d'IA pour automatiser les malwares confirment un changement de paradigme technologique majeur."
     },
-    "date": "2026-04-03"
+    "date": "2026-04-05"
   },
   "geopolitical_analyse": [
     {
@@ -44,7 +44,7 @@
       "sources": [
         "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "sector": {
@@ -81,7 +81,7 @@
       "sources": [
         "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "sector": {
@@ -118,7 +118,7 @@
       "sources": [
         "https://securityaffairs.com/190348/cyber-crime/qilin-ransomware-group-claims-the-hack-of-german-political-party-die-linke.html"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     }
   ],
   "breach_analyse": [
@@ -163,7 +163,7 @@
       "sources": [
         "https://securityaffairs.com/190333/security/european-commission-breach-exposed-data-of-30-eu-entities-cert-eu-says.html"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "victim": "Crunchyroll",
@@ -205,7 +205,7 @@
       "sources": [
         "https://haveibeenpwned.com/Breach/Crunchyroll"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "victim": "Hospital Authority (Hong Kong)",
@@ -243,7 +243,7 @@
       "sources": [
         "https://databreaches.net/2026/04/04/hong-kong-hospital-authority-apologises-for-data-breach-involving-56000-patients/"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     }
   ],
   "vulnerabilities_analyse": [
@@ -280,7 +280,7 @@
       "sources": [
         "https://cybersecuritynews.com/progress-sharefile-vulnerability/"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "cve_id": "CVE-2026-35616",
@@ -317,7 +317,7 @@
       "sources": [
         "https://www.cisecurity.org/advisory/a-vulnerability-in-fortinet-forticlientemscould-allow-for-arbitrary-code-execution_2026-031"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "cve_id": "CVE-2026-3502",
@@ -353,7 +353,7 @@
       "sources": [
         "https://securityaffairs.com/190341/security/u-s-cisa-adds-a-flaw-in-trueconf-client-to-its-known-exploited-vulnerabilities-catalog.html"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     }
   ],
   "threats_analyse": [
@@ -421,7 +421,7 @@
       "sources": [
         "https://www.bleepingcomputer.com/news/security/axios-npm-hack-used-fake-teams-error-fix-to-hijack-maintainer-account/"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "title": {
@@ -496,7 +496,7 @@
       "sources": [
         "https://www.bleepingcomputer.com/news/security/device-code-phishing-attacks-surge-37x-as-new-kits-spread-online/"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     },
     {
       "title": {
@@ -559,7 +559,7 @@
       "sources": [
         "https://securityaffairs.com/190341/security/u-s-cisa-adds-a-flaw-in-trueconf-client-to-its-known-exploited-vulnerabilities-catalog.html"
       ],
-      "date": "2026-04-03"
+      "date": "2026-04-05"
     }
   ]
 }
