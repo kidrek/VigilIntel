@@ -1,0 +1,565 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The April 2026 threat landscape is characterized by an increasing hybridization of kinetic conflicts and cyber operations, particularly in the Middle East where attacks align with military agendas. Extreme professionalization of social engineering is observed, notably against software supply chains (Axios/NPM). Industrialized phishing via OAuth 2.0 Device Code abuse shows rapid adaptation to MFA. Persistent targeting of perimeter solutions (Fortinet, Progress ShareFile) by state actors and the emergence of AI-automated malware tools confirm a major technological paradigm shift.",
+      "fr": "Le paysage de la menace d'avril 2026 est marqué par une hybridation croissante entre conflits cinétiques et opérations cyber, particulièrement au Moyen-Orient où les cyber-attaques s'alignent désormais sur les agendas militaires. On observe une professionnalisation extrême de l'ingénierie sociale, notamment contre la chaîne d'approvisionnement logicielle (Axios/NPM). L'industrialisation du phishing via l'abus du flux Device Code d'OAuth 2.0 montre une adaptation rapide au MFA. Le ciblage persistant des solutions de périmètre (Fortinet, Progress ShareFile) par des acteurs étatiques et l'émergence d'outils d'IA pour automatiser les malwares confirment un changement de paradigme technologique majeur."
+    },
+    "date": "2026-04-03"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "US-Israel-Iran Hybrid Conflict",
+        "fr": "Conflit hybride US-Israël-Iran"
+      },
+      "description": {
+        "en": "Intensification of cyber warfare linked to military strikes in the Middle East, with threats to strategic straits and coordinated DDoS attacks by groups like 313 Team aligning with IRGC military deadlines.",
+        "fr": "Intensification de la cyberguerre liée aux frappes militaires au Moyen-Orient, avec des menaces sur les détroits stratégiques et des attaques DDoS coordonnées par des groupes comme 313 Team s'alignant sur les agendas des Gardiens de la Révolution."
+      },
+      "recommandations": [
+        {
+          "en": "Geofence network traffic to block incoming connections from high-risk regions involved in the conflict.",
+          "fr": "Mettre en place un filtrage géographique pour bloquer les connexions entrantes en provenance des régions à haut risque impliquées dans le conflit."
+        },
+        {
+          "en": "Verify the resilience of DDoS mitigation services and update incident response plans for critical infrastructure.",
+          "fr": "Vérifier la résilience des services de mitigation DDoS et mettre à jour les plans de réponse aux incidents pour les infrastructures critiques."
+        }
+      ],
+      "tags": [
+        "Geopolitics",
+        "Cyberwarfare",
+        "Middle-East"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Iran Internet Blackout",
+        "fr": "Blocus numérique en Iran"
+      },
+      "description": {
+        "en": "The Iranian regime has maintained a near-total internet blackout (1% connectivity) for over 36 days to control the population while maintaining whitelisted access for elites.",
+        "fr": "Le régime iranien maintient un black-out internet quasi total (1% de connectivité) depuis plus de 36 jours pour contrôler la population tout en maintenant des accès sur liste blanche pour les élites."
+      },
+      "recommandations": [
+        {
+          "en": "Establish alternative communication channels for personnel or assets operating in the region.",
+          "fr": "Établir des canaux de communication alternatifs pour le personnel ou les actifs opérant dans la région."
+        },
+        {
+          "en": "Monitor for unauthorized use of whitelisted institutional accounts used to bypass the blockade.",
+          "fr": "Surveiller l'utilisation non autorisée de comptes institutionnels autorisés utilisés pour contourner le blocus."
+        }
+      ],
+      "tags": [
+        "Censorship",
+        "Iran",
+        "Blackout"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Election Interference and Political Targeting",
+        "fr": "Ingérence électorale et ciblage politique"
+      },
+      "description": {
+        "en": "The Russian-linked Qilin ransomware group has claimed a cyberattack against the German political party Die Linke, indicating continued interest in political interference.",
+        "fr": "Le groupe de ransomware Qilin, lié à la Russie, a revendiqué une cyberattaque contre le parti politique allemand Die Linke, indiquant un intérêt continu pour l'ingérence politique."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance security monitoring for political organizations and associated staff during sensitive periods.",
+          "fr": "Renforcer la surveillance de la sécurité pour les organisations politiques et le personnel associé pendant les périodes sensibles."
+        },
+        {
+          "en": "Implement strict data classification and protection for sensitive constituent and policy information.",
+          "fr": "Mettre en œuvre une classification et une protection strictes des données pour les informations sensibles sur les électeurs et les politiques."
+        }
+      ],
+      "tags": [
+        "Politics",
+        "Ransomware",
+        "Germany"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190348/cyber-crime/qilin-ransomware-group-claims-the-hack-of-german-political-party-die-linke.html"
+      ],
+      "date": "2026-04-03"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "European Commission",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "description": {
+        "en": "Breach of an AWS account via a compromised security tool (Trivy), leading to the exfiltration of 350 GB of data, including 51,000 emails and contracts from 30 EU entities.",
+        "fr": "Compromission d'un compte AWS via un outil de sécurité compromis (Trivy), entraînant l'exfiltration de 350 Go de données, dont 51 000 emails et des contrats de 30 entités de l'UE."
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise",
+        "T1552.001: Unsecured Credentials: Private Keys",
+        "T1537: Transfer Data to Cloud Account"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all AWS access keys and implement short-lived session tokens instead of permanent keys.",
+          "fr": "Renouveler toutes les clés d'accès AWS et implémenter des jetons de session à courte durée de vie au lieu de clés permanentes."
+        },
+        {
+          "en": "Audit all third-party security scanners and software supply chains for unauthorized modifications.",
+          "fr": "Auditer tous les scanners de sécurité tiers et les chaînes d'approvisionnement logicielles pour détecter des modifications non autorisées."
+        }
+      ],
+      "tags": [
+        "Cloud",
+        "API Key",
+        "European Commission"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190333/security/european-commission-breach-exposed-data-of-30-eu-entities-cert-eu-says.html"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Crunchyroll",
+      "threat_actor": "UNKNOWN",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "UNKNOWN",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment",
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Hôtellerie_et_Divertissement",
+          "Commerce_de_Détail_et_Consommation"
+        ]
+      },
+      "description": {
+        "en": "Data leak via Zendesk impacting 1.2 million users, exposing email addresses.",
+        "fr": "Fuite de données via Zendesk impactant 1,2 million d'utilisateurs, exposant les adresses e-mail."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit third-party support platform permissions and data retention policies.",
+          "fr": "Auditer les permissions des plateformes de support tierces et les politiques de rétention des données."
+        },
+        {
+          "en": "Notify impacted users and advise them to be vigilant against targeted phishing campaigns.",
+          "fr": "Notifier les utilisateurs impactés et leur conseiller d'être vigilants face aux campagnes de phishing ciblées."
+        }
+      ],
+      "tags": [
+        "Data Leak",
+        "Third-party Risk"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Crunchyroll"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "victim": "Hospital Authority (Hong Kong)",
+      "threat_actor": "UNKNOWN",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "UNKNOWN",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Data breach involving 56,000 patients in the Kowloon East cluster.",
+        "fr": "Violation de données concernant 56 000 patients du groupe hospitalier Kowloon East."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Implement database encryption and strict access controls for patient records.",
+          "fr": "Implémenter le chiffrement des bases de données et des contrôles d'accès stricts pour les dossiers des patients."
+        },
+        {
+          "en": "Perform a comprehensive forensic audit to determine the root cause of the data exposure.",
+          "fr": "Réaliser un audit forensique complet pour déterminer la cause profonde de l'exposition des données."
+        }
+      ],
+      "tags": [
+        "Healthcare",
+        "Patient Data"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/04/hong-kong-hospital-authority-apologises-for-data-breach-involving-56000-patients/"
+      ],
+      "date": "2026-04-03"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-2699",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:progress:sharefile:*:*:*:*:*:*:*:*",
+      "product": "Progress ShareFile",
+      "vendor": "Progress",
+      "description": {
+        "en": "Authentication bypass via 'Execution After Redirect' on Admin.aspx, allowing unauthorized access to the management interface.",
+        "fr": "Contournement d'authentification via 'Execution After Redirect' sur Admin.aspx, permettant un accès non autorisé à l'interface de gestion."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Progress ShareFile Storage Zones Controller to version 5.12.4 or higher immediately.",
+          "fr": "Mettre à jour immédiatement Progress ShareFile Storage Zones Controller vers la version 5.12.4 ou supérieure."
+        },
+        {
+          "en": "Restrict access to the management interface to internal networks or via VPN.",
+          "fr": "Restreindre l'accès à l'interface de gestion aux réseaux internes ou via un VPN."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Authentication Bypass"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/progress-sharefile-vulnerability/"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-35616",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.1",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_ems:*:*:*:*:*:*:*:*",
+      "product": "FortiClient EMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "API authentication bypass allowing remote code execution (RCE) on the management server.",
+        "fr": "Contournement d'authentification API permettant l'exécution de code à distance (RCE) sur le serveur de gestion."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "TA0001: Initial Access"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the emergency hotfix FG-IR-26-099 provided by Fortinet.",
+          "fr": "Appliquer le correctif d'urgence FG-IR-26-099 fourni par Fortinet."
+        },
+        {
+          "en": "Monitor system logs for unusual API calls originating from unknown external IP addresses.",
+          "fr": "Surveiller les logs système pour détecter des appels API inhabituels provenant d'adresses IP externes inconnues."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "CISA KEV"
+      ],
+      "sources": [
+        "https://www.cisecurity.org/advisory/a-vulnerability-in-fortinet-forticlientemscould-allow-for-arbitrary-code-execution_2026-031"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "cve_id": "CVE-2026-3502",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:trueconf:trueconf_client:*:*:*:*:*:*:*:*",
+      "product": "TrueConf Client",
+      "vendor": "TrueConf",
+      "description": {
+        "en": "Unverified update mechanism allowing attackers to inject malicious software by replacing legitimate update files.",
+        "fr": "Mécanisme de mise à jour non vérifié permettant à des attaquants d'injecter des logiciels malveillants en remplaçant les fichiers de mise à jour légitimes."
+      },
+      "mitre_ttps": [
+        "T1543: Create or Modify System Process"
+      ],
+      "recommandations": [
+        {
+          "en": "Update TrueConf Client according to CISA's BOD 22-01 timeline (before April 16, 2026).",
+          "fr": "Mettre à jour le client TrueConf selon le calendrier BOD 22-01 de la CISA (avant le 16 avril 2026)."
+        },
+        {
+          "en": "Implement binary integrity checks and enforce signed updates for all internal software distributions.",
+          "fr": "Mettre en œuvre des contrôles d'intégrité binaire et imposer des mises à jour signées pour toutes les distributions de logiciels internes."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Supply Chain",
+        "CISA KEV"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190341/security/u-s-cisa-adds-a-flaw-in-trueconf-client-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-04-03"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Axios NPM Supply Chain Attack by UNC1069",
+        "fr": "Attaque de la chaîne d'approvisionnement NPM Axios par UNC1069"
+      },
+      "description": {
+        "en": "A highly sophisticated social engineering campaign by North Korean actor UNC1069 targeted an Axios maintainer, leading to the publication of malicious NPM packages (1.14.1, 0.30.4) containing the WAVESHAPER.V2 RAT.",
+        "fr": "Une campagne d'ingénierie sociale sophistiquée menée par l'acteur nord-coréen UNC1069 a ciblé un mainteneur d'Axios, entraînant la publication de packages NPM malveillants (1.14.1, 0.30.4) contenant le RAT WAVESHAPER.V2."
+      },
+      "threat_actor": "UNC1069",
+      "threat_actor_origin": "NORTH KOREA",
+      "threat_actor_type": "Nation-State",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "WAVESHAPER.V2",
+          "plain-crypto-js",
+          "axios@1.14.1",
+          "axios@0.30.4"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003: Phishing: Spearphishing via Service",
+        "T1195.002: Supply Chain Compromise: Compromise Software Dependencies",
+        "T1204.002: User Execution: Malicious File"
+      ],
+      "analyse": {
+        "en": "The attack utilized a fake Slack environment and a fraudulent Microsoft Teams 'error fix' to trick a developer into running malware. This demonstrates the increasing evolution of 'ClickFix' tactics targeting developers.",
+        "fr": "L'attaque a utilisé un faux environnement Slack et un correctif d'erreur Microsoft Teams frauduleux pour inciter un développeur à exécuter un malware. Cela démontre l'évolution des tactiques 'ClickFix' ciblant les développeurs."
+      },
+      "recommandations": [
+        {
+          "en": "Audit all NPM dependencies for Axios versions 1.14.1 and 0.30.4 and remove them.",
+          "fr": "Auditer toutes les dépendances NPM pour les versions 1.14.1 et 0.30.4 d'Axios et les supprimer."
+        },
+        {
+          "en": "Mandate hardware MFA (FIDO2) for publishing any package to public repositories.",
+          "fr": "Imposer le MFA matériel (FIDO2) pour la publication de tout package sur les dépôts publics."
+        }
+      ],
+      "tags": [
+        "NPM",
+        "Supply Chain",
+        "UNC1069"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/axios-npm-hack-used-fake-teams-error-fix-to-hijack-maintainer-account/"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "Surge in OAuth 2.0 Device Code Phishing",
+        "fr": "Explosion du phishing par Device Code OAuth 2.0"
+      },
+      "description": {
+        "en": "Phishing attacks abusing the OAuth 2.0 Device Authorization Grant have increased 37.5x, using kits like EvilTokens and Docupoll to bypass MFA by stealing access tokens.",
+        "fr": "Les attaques de phishing abusant du flux Device Authorization Grant d'OAuth 2.0 ont augmenté de 37,5 fois, utilisant des kits comme EvilTokens et Docupoll pour contourner le MFA en volant des jetons d'accès."
+      },
+      "threat_actor": "UNKNOWN",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "EvilTokens operators",
+        "VENOM",
+        "CLURE"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_Télecom",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "workers.dev",
+          "github.io"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EvilTokens",
+          "Docupoll",
+          "Flow_Token",
+          "VENOM"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002: Phishing: Spearphishing Link",
+        "T1528: Steal Application Access Token",
+        "T1550.001: Use Alternate Authentication Material: Application Access Token"
+      ],
+      "analyse": {
+        "en": "By hijacking the Device Code flow, attackers can gain persistent access to SaaS accounts (like O365) without needing the user's password or second factor directly, as the user performs the authentication on a legitimate site.",
+        "fr": "En détournant le flux Device Code, les attaquants peuvent obtenir un accès persistant aux comptes SaaS (comme O365) sans avoir besoin du mot de passe ou du deuxième facteur de l'utilisateur, celui-ci effectuant l'authentification sur un site légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Disable the 'Device Code' flow in Microsoft Entra ID or Google Workspace if it is not required for business operations.",
+          "fr": "Désactiver le flux 'Device Code' dans Microsoft Entra ID ou Google Workspace s'il n'est pas requis pour les opérations commerciales."
+        },
+        {
+          "en": "Implement Conditional Access policies to restrict token issuance to managed devices or specific IP ranges.",
+          "fr": "Mettre en œuvre des politiques d'accès conditionnel pour restreindre l'émission de jetons aux appareils gérés ou à des plages IP spécifiques."
+        }
+      ],
+      "tags": [
+        "Phishing",
+        "OAuth",
+        "MFA Bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/device-code-phishing-attacks-surge-37x-as-new-kits-spread-online/"
+      ],
+      "date": "2026-04-03"
+    },
+    {
+      "title": {
+        "en": "Operation TrueChaos",
+        "fr": "Opération TrueChaos"
+      },
+      "description": {
+        "en": "A targeted espionage campaign attributed to Chinese actors using the TrueConf video conferencing platform to deploy ShadowPad and Havoc frameworks via malicious updates.",
+        "fr": "Une campagne d'espionnage ciblée attribuée à des acteurs chinois utilisant la plateforme de visioconférence TrueConf pour déployer les frameworks ShadowPad et Havoc via des mises à jour malveillantes."
+      },
+      "threat_actor": "UNKNOWN",
+      "threat_actor_origin": "CHINA",
+      "threat_actor_type": "Nation-State",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ShadowPad",
+          "Havoc Framework"
+        ]
+      },
+      "mitre_ttps": [
+        "T1543.003: Create or Modify System Process: Windows Service",
+        "T1574.002: DLL Side-Loading"
+      ],
+      "analyse": {
+        "en": "Attackers exploit the local trust of TrueConf update servers in isolated environments to deliver backdoored versions of the client software.",
+        "fr": "Les attaquants exploitent la confiance locale des serveurs de mise à jour TrueConf dans des environnements isolés pour livrer des versions du logiciel client avec une porte dérobée."
+      },
+      "recommandations": [
+        {
+          "en": "Perform deep packet inspection (DPI) on traffic between clients and internal update servers.",
+          "fr": "Effectuer une inspection approfondie des paquets (DPI) sur le trafic entre les clients et les serveurs de mise à jour internes."
+        },
+        {
+          "en": "Isolate video conferencing servers from sensitive internal network segments.",
+          "fr": "Isoler les serveurs de visioconférence des segments de réseau interne sensibles."
+        }
+      ],
+      "tags": [
+        "Espionage",
+        "ShadowPad",
+        "China"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190341/security/u-s-cisa-adds-a-flaw-in-trueconf-client-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-04-03"
+    }
+  ]
+}
