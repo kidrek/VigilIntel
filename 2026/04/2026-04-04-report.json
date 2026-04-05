@@ -4,7 +4,7 @@
       "en": "The current cyber landscape is marked by an unprecedented intensification of supply chain attacks, illustrated by the TeamPCP campaign affecting over 1,000 SaaS environments, including the European Commission. Simultaneously, the cyber-conflict related to US-Israel-Iran tensions is reaching extreme criticality, with direct threats against global technological infrastructures and massive data destruction operations (wiper). The intrusion into the FBI by the Chinese actor Salt Typhoon highlights the vulnerability of intelligence agencies to sophisticated state groups. AI system security is emerging as a new critical front, with vulnerabilities allowing sandbox escape and the hijacking of autonomous agents. The healthcare sector remains a preferred target, suffering from record ransom demands and prolonged care interruptions. The active exploitation of vulnerabilities in critical gateways like F5 BIG-IP demonstrates increased attacker reactivity following disclosure. Finally, the systematic attribution of complex attacks to North Korea (Drift, Axios) confirms its role as a major disruptor in the crypto and software ecosystem. Decision-makers must imperatively strengthen identity monitoring (SS0) and open-source dependency auditing.",
       "fr": "Le paysage cyber actuel est marqué par une intensification sans précédent des attaques sur la chaîne d'approvisionnement (Supply Chain), illustrée par la campagne TeamPCP qui touche désormais plus de 1 000 environnements SaaS, dont la Commission Européenne. Parallèlement, le cyber-conflit lié aux tensions US-Israël-Iran atteint un niveau de criticité extrême, avec des menaces directes contre les infrastructures technologiques mondiales et des opérations de destruction de données massives (wiper). L'intrusion au sein du FBI par l'acteur chinois Salt Typhoon souligne la vulnérabilité des agences de renseignement face à des groupes étatiques sophistiqués. La sécurité des systèmes d'intelligence artificielle émerge comme un nouveau front critique, avec des vulnérabilités permettant l'évasion de sandbox et le détournement d'agents autonomes. Le secteur de la santé reste une cible privilégiée, subissant des demandes de rançons records et des interruptions de soins prolongées. L'exploitation active de vulnérabilités sur des passerelles critiques comme F15 BIG-IP démontre une réactivité accrue des attaquants après la divulgation de failles. Enfin, l'attribution systématique d'attaques complexes à la Corée du Nord (Drift, Axios) confirme son rôle de perturbateur majeur dans l'écosystème crypto et logiciel. Les décideurs doivent impérativement renforcer la surveillance des identités (SSO) et l'audit des dépendances open-source."
     },
-    "date": "2026-04-03"
+    "date": "2026-04-04"
   },
   "geopolitical_analyse": [
     {
@@ -32,7 +32,7 @@
       ],
       "tags": ["Cyberwarfare", "State-sponsored"],
       "sources": ["https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "sector": {
@@ -59,7 +59,7 @@
       ],
       "tags": ["Espionage", "China"],
       "sources": ["https://www.lemonde.fr/pixels/article/2026/04/03/le-fbi-reconnait-avoir-subi-une-intrusion-informatique-majeure_6676360_4408996.html"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "sector": {
@@ -86,7 +86,7 @@
       ],
       "tags": ["Ransomware", "Political"],
       "sources": ["https://www.bleepingcomputer.com/news/security/die-linke-german-lan-party-confirms-data-stolen-by-qilin-ransomware/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "sector": {
@@ -113,7 +113,7 @@
       ],
       "tags": ["Threats", "Iran"],
       "sources": ["https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     }
   ],
   "breach_analyse": [
@@ -144,7 +144,7 @@
       ],
       "tags": ["Cloud", "Supply_Chain"],
       "sources": ["https://isc.sans.edu/diary/rss/32864"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "victim": "Mercor AI",
@@ -173,7 +173,7 @@
       ],
       "tags": ["AI", "Data_Breach"],
       "sources": ["https://hackread.com/ai-firm-mercor-breach-hackers-4tb-data/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "victim": "Hims & Hers",
@@ -202,7 +202,7 @@
       ],
       "tags": ["Cloud", "Healthcare"],
       "sources": ["https://www.bleepingcomputer.com/news/security/hims-and-hers-warns-of-data-breach-after-zendesk-support-ticket-breach/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "victim": "Sportradar AG",
@@ -231,7 +231,7 @@
       ],
       "tags": ["Data_Exposure", "Supply_Chain"],
       "sources": ["https://isc.sans.edu/diary/rss/32864"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "victim": "Cisco",
@@ -260,7 +260,7 @@
       ],
       "tags": ["SaaS", "Data_Leak_Threat"],
       "sources": ["https://hackread.com/shinyhunters-hackers-cisco-records-data-leak/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     }
   ],
   "vulnerabilities_analyse": [
@@ -290,7 +290,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://securityonline.info/juju-critical-vulnerability-cvss-10-cve-2026-4370/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2026-34938",
@@ -318,7 +318,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-34938"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2025-53521",
@@ -346,7 +346,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://cybersecuritynews.com/14000-f5-big-ip-apm-exposed-online/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2026-35616",
@@ -374,7 +374,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-35616"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2026-33579",
@@ -402,7 +402,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://arstechnica.com/security/2026/04/heres-why-its-prudent-for-openclaw-users-to-assume-compromise/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2026-34751",
@@ -430,7 +430,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://securityonline.info/payload-cms-password-reset-vulnerability-cve-2026-34751/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "cve_id": "CVE-2026-5281",
@@ -458,7 +458,7 @@
       ],
       "tags": ["vulnerability"],
       "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0392/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     }
   ],
   "threats_analyse": [
@@ -507,7 +507,7 @@
       ],
       "tags": ["Supply_Chain", "Cloud"],
       "sources": ["https://isc.sans.edu/diary/rss/32864", "https://hackread.com/ai-firm-mercor-breach-hackers-4tb-data/"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "title": {
@@ -555,7 +555,7 @@
       ],
       "tags": ["Espionage", "Cyberwarfare"],
       "sources": ["https://www.lemonde.fr/pixels/article/2026/04/03/le-fbi-reconnait-avoir-subi-une-intrusion-informatique-majeure_6676360_4408996.html", "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "title": {
@@ -602,7 +602,7 @@
       ],
       "tags": ["AI_Security", "Vulnerability"],
       "sources": ["https://unit42.paloaltonetworks.com/amazon-bedrock-multiagent-applications/", "https://cvefeed.io/vuln/detail/CVE-2026-34938"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     },
     {
       "title": {
@@ -649,7 +649,7 @@
       ],
       "tags": ["Supply_Chain", "Crypto"],
       "sources": ["https://blog.talosintelligence.com/axois-npm-supply-chain-incident/", "https://securityaffairs.com/190330/hacking/north-korea-linked-hackers-drain-285m-from-drift-in-sophisticated-attack.html"],
-      "date": "2026-04-03"
+      "date": "2026-04-04"
     }
   ]
 }
