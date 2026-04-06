@@ -1,0 +1,531 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current cyber landscape is marked by an intensifying convergence between kinetic and digital operations, particularly illustrated by the use of spyware during missile strikes in Israel. There is an industrialization of destructive capabilities through the emergence of the 'Wiper-as-a-Service' model by Iranian proxies, lowering the technical threshold for paralyzing attacks. Simultaneously, software supply chain threats are confirmed with the compromise of the 'Axios' npm package by North Korea, targeting the massive exfiltration of cloud secrets and credentials. The active exploitation of critical zero-day vulnerabilities in perimeter solutions like Fortinet emphasizes the urgency of ultra-fast patching cycles. The automation of attacks on modern frameworks (Next.js) now allows attackers to compromise hundreds of hosts in less than 24 hours to harvest API and SSH keys.",
+      "fr": "Le paysage cyber actuel est marqué par une intensification de la convergence entre opérations cinétiques et numériques, particulièrement illustrée par l'usage de spywares lors de frappes de missiles en Israël. On observe une industrialisation des capacités destructrices via l'émergence du modèle 'Wiper-as-a-Service' par les proxies iraniens, abaissant le seuil technique requis pour des attaques paralysantes. Parallèlement, la menace sur la chaîne d'approvisionnement logicielle se confirme avec le compromis du paquet npm 'Axios' par la Corée du Nord, visant l'exfiltration massive de secrets cloud et d'identifiants. L'exploitation active de vulnérabilités critiques 'zero-day' sur des solutions d'accès périmétriques comme Fortinet souligne l'urgence de cycles de correctifs ultra-rapides."
+    },
+    "date": "2026-04-06"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Security",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "S\u00e9curit\u00e9",
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Israel-Iran Cyber-Kinetic Conflict",
+        "fr": "Conflit Cyber-Cin\u00e9tique Isra\u00ebl-Iran"
+      },
+      "description": {
+        "en": "Deployment of spyware campaigns disguised as bomb alert applications during missile strikes to maximize psychological impact and data collection.",
+        "fr": "D\u00e9ploiement de campagnes de spywares d\u00e9guis\u00e9s en applications d'alerte aux bombardements lors de frappes de missiles pour maximiser l'impact psychologique et la collecte de donn\u00e9es."
+      },
+      "recommandations": [
+        {
+          "en": "Educate personnel in conflict zones against downloading unofficial emergency applications.",
+          "fr": "\u00c9duquer le personnel en zone de conflit contre le t\u00e9l\u00e9chargement d'applications d'urgence non officielles."
+        },
+        {
+          "en": "Implement mobile threat defense (MTD) solutions to detect malicious APKs.",
+          "fr": "Mettre en \u0153uvre des solutions de d\u00e9fense contre les menaces mobiles (MTD) pour d\u00e9tecter les APK malveillants."
+        }
+      ],
+      "tags": [
+        "spyware",
+        "geopolitics",
+        "warfare"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Political Targeted Attack in Germany",
+        "fr": "Attaque cibl\u00e9e politique en Allemagne"
+      },
+      "description": {
+        "en": "The Qilin ransomware group claimed an attack against the German political party 'Die Linke'.",
+        "fr": "Le groupe de ransomware Qilin a revendiqu\u00e9 une attaque contre le parti politique allemand 'Die Linke'."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen authentication for political organizations' administrative accounts.",
+          "fr": "Renforcer l'authentification des comptes administratifs des organisations politiques."
+        },
+        {
+          "en": "Deploy endpoint detection and response (EDR) on all workstations and servers.",
+          "fr": "D\u00e9ployer un EDR sur tous les postes de travail et serveurs."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "politics",
+        "germany"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-04-06"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Lloyds Banking Group",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Security incident affecting the personal data of approximately 500,000 mobile banking customers.",
+        "fr": "Incident de s\u00e9curit\u00e9 affectant les donn\u00e9es personnelles de pr\u00e8s de 500 000 clients mobiles."
+      },
+      "mitre_ttps": [
+        "T1566: Phishing"
+      ],
+      "recommandations": [
+        {
+          "en": "Notify affected customers and provide credit monitoring services.",
+          "fr": "Informer les clients concern\u00e9s et fournir des services de surveillance du cr\u00e9dit."
+        },
+        {
+          "en": "Review mobile application API security and access controls.",
+          "fr": "R\u00e9viser la s\u00e9curit\u00e9 des API de l'application mobile et les contr\u00f4les d'acc\u00e8s."
+        }
+      ],
+      "tags": [
+        "data_breach",
+        "banking",
+        "PII"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "victim": "PSK Wind Technologies",
+      "threat_actor": "Handala Hack",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [
+        "Handala"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense",
+          "Industrie_et_Fabrication"
+        ]
+      },
+      "description": {
+        "en": "Confirmed data breach at this Israeli defense subcontractor by the pro-Iranian group Handala.",
+        "fr": "Br\u00e8che de donn\u00e9es confirm\u00e9e chez ce sous-traitant de la d\u00e9fense isra\u00e9lien par le groupe pro-iranien Handala."
+      },
+      "mitre_ttps": [
+        "T1485: Data Destruction",
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit third-party access and supply chain security for defense contractors.",
+          "fr": "Auditer les acc\u00e8s tiers et la s\u00e9curit\u00e9 de la cha\u00eene d'approvisionnement pour les prestataires de d\u00e9fense."
+        },
+        {
+          "en": "Implement strict data egress filtering to prevent mass exfiltration.",
+          "fr": "Mettre en place un filtrage strict de la sortie des donn\u00e9es pour emp\u00eacher l'exfiltration massive."
+        }
+      ],
+      "tags": [
+        "defense",
+        "exfiltration",
+        "hacktivism"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190379/malware/security-affairs-malware-newsletter-round-91.html"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "victim": "Drift (Solana)",
+      "threat_actor": "UNC1069",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "BlueNoroff",
+        "Lazarus Group"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Theft of $285 million in cryptocurrency by North Korea-linked actors.",
+        "fr": "Vol de 285 millions de dollars en cryptomonnaie par des acteurs li\u00e9s \u00e0 la Cor\u00e9e du Nord."
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1204.002: Malicious File"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce multi-signature wallets for large transactions.",
+          "fr": "Imposer des portefeuilles multi-signatures pour les transactions importantes."
+        },
+        {
+          "en": "Conduct regular smart contract audits and monitor blockchain anomalies.",
+          "fr": "R\u00e9aliser des audits r\u00e9guliers des smart contracts et surveiller les anomalies de la blockchain."
+        }
+      ],
+      "tags": [
+        "crypto",
+        "heist",
+        "APT"
+      ],
+      "sources": [
+        "https://mastodon.social/@SubProxy/116355155429365798"
+      ],
+      "date": "2026-04-06"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-35616",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_ems:7.4.5:*:*:*:*:*:*:*",
+      "product": "FortiClient EMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Improper access control flaw allowing unauthenticated remote code execution via forged HTTP requests.",
+        "fr": "Faille de contr\u00f4le d'acc\u00e8s permettant une ex\u00e9cution de code \u00e0 distance sans authentification via des requ\u00eates HTTP forg\u00e9es."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply immediate hotfixes for FortiClient EMS versions 7.4.5 and 7.4.6.",
+          "fr": "Appliquer imm\u00e9diatement les hotfixes pour FortiClient EMS versions 7.4.5 et 7.4.6."
+        },
+        {
+          "en": "Isolate EMS servers from the public internet until patched.",
+          "fr": "Isoler les serveurs EMS d'Internet jusqu'\u00e0 l'application du correctif."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "zero-day"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-fortinet-forticlient-ems-flaw-cve-2026-35616-exploited-in-attacks/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "cve_id": "CVE-2025-55182",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:*:*:*",
+      "product": "Next.js (React2Shell)",
+      "vendor": "Vercel",
+      "description": {
+        "en": "RCE vulnerability in Next.js components exploited for automated command execution and secret theft.",
+        "fr": "Vuln\u00e9rabilit\u00e9 RCE dans les composants Next.js exploit\u00e9e pour l'ex\u00e9cution automatis\u00e9e de commandes et le vol de secrets."
+      },
+      "mitre_ttps": [
+        "T1505: Server Software Component",
+        "T1555: Credentials from Password Stores"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Next.js frameworks to the latest secure version.",
+          "fr": "Mettre \u00e0 jour les frameworks Next.js vers la derni\u00e8re version s\u00e9curis\u00e9e."
+        },
+        {
+          "en": "Rotate all cloud API keys and SSH tokens if signs of compromise are found.",
+          "fr": "Effectuer une rotation de toutes les cl\u00e9s API cloud et tokens SSH en cas de signes de compromission."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "cloud",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "cve_id": "CVE-2026-3055",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.3",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:citrix:netscaler_adc:*:*:*:*:*:*:*:*",
+      "product": "Citrix NetScaler",
+      "vendor": "Citrix",
+      "description": {
+        "en": "Memory overread vulnerability allowing sensitive data leakage from local system memory.",
+        "fr": "Vuln\u00e9rabilit\u00e9 de lecture m\u00e9moire hors limites permettant la fuite de donn\u00e9es sensibles depuis la m\u00e9moire du syst\u00e8me local."
+      },
+      "mitre_ttps": [
+        "T1005: Data from Local System"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Citrix NetScaler appliances to the latest firmware versions.",
+          "fr": "Mettre \u00e0 jour les appliances Citrix NetScaler vers les derni\u00e8res versions du firmware."
+        },
+        {
+          "en": "Monitor for unusual memory access patterns or unauthorized data exfiltration.",
+          "fr": "Surveiller les sch\u00e9mas d'acc\u00e8s m\u00e9moire inhabituels ou l'exfiltration de donn\u00e9es non autoris\u00e9e."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "leak",
+        "network_security"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-04-06"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Massive Credential Theft Campaign via React2Shell",
+        "fr": "Campagne massive d'extraction de secrets via React2Shell"
+      },
+      "description": {
+        "en": "UAT-10608 is using the NEXUS Listener framework to exploit Next.js applications, compromising over 700 hosts for cloud secrets.",
+        "fr": "UAT-10608 utilise le framework NEXUS Listener pour exploiter des applications Next.js, compromettant plus de 700 h\u00f4tes pour voler des secrets cloud."
+      },
+      "threat_actor": "UAT-10608",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminalit\u00e9",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "NEXUS Listener framework"
+        ]
+      },
+      "mitre_ttps": [
+        "T1505: Server Software Component",
+        "T1555: Credentials from Password Stores",
+        "T1048: Exfiltration Over Alternative Protocol"
+      ],
+      "analyse": {
+        "en": "Highly automated campaign targeting developer environments to pivot into cloud infrastructures (AWS/GCP/Azure).",
+        "fr": "Campagne hautement automatis\u00e9e ciblant les environnements de d\u00e9veloppement pour pivoter vers les infrastructures cloud (AWS/GCP/Azure)."
+      },
+      "recommandations": [
+        {
+          "en": "Implement secret scanning in CI/CD pipelines to prevent leakage of hardcoded credentials.",
+          "fr": "Impl\u00e9menter le scan de secrets dans les pipelines CI/CD pour emp\u00eacher la fuite d'identifiants cod\u00e9s en dur."
+        },
+        {
+          "en": "Apply least privilege principles to containerized service accounts.",
+          "fr": "Appliquer les principes du moindre privil\u00e8ge aux comptes de service conteneuris\u00e9s."
+        }
+      ],
+      "tags": [
+        "cloud_security",
+        "automation",
+        "credential_theft"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "title": {
+        "en": "NPM Axios Supply Chain Compromise",
+        "fr": "Attaque par canal d'approvisionnement visant le paquet npm Axios"
+      },
+      "description": {
+        "en": "North Korean actor UNC1069 compromised the Axios maintainer account to inject malicious RAT versions.",
+        "fr": "L'acteur nord-cor\u00e9en UNC1069 a compromis le compte du mainteneur d'Axios pour injecter des versions malveillantes de type RAT."
+      },
+      "threat_actor": "UNC1069",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "BlueNoroff"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "RustBucket variant",
+          "Axios RAT"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.001: Compromise Software Dependencies",
+        "T1552: Unsecured Credentials"
+      ],
+      "analyse": {
+        "en": "Strategic targeting of developers to bypass perimeter security and gain long-term persistence in production networks.",
+        "fr": "Ciblage strat\u00e9gique des d\u00e9veloppeurs pour contourner la s\u00e9curit\u00e9 p\u00e9rim\u00e9trique et obtenir une persistance \u00e0 long terme dans les r\u00e9seaux de production."
+      },
+      "recommandations": [
+        {
+          "en": "Use package-lock.json and audit all dependency changes using Software Composition Analysis (SCA).",
+          "fr": "Utiliser package-lock.json et auditer tous les changements de d\u00e9pendances via des outils SCA."
+        },
+        {
+          "en": "Implement code signing verification for all third-party libraries used in production.",
+          "fr": "Mettre en place la v\u00e9rification des signatures de code pour toutes les biblioth\u00e8ques tierces utilis\u00e9es en production."
+        }
+      ],
+      "tags": [
+        "supply_chain",
+        "npm",
+        "APT"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "title": {
+        "en": "Malicious CMD Script Technical Analysis",
+        "fr": "Analyse technique d'une infection par script CMD malveillant"
+      },
+      "description": {
+        "en": "A sophisticated infection chain using privilege escalation and Windows Defender exclusion to deploy a payload disguised as a JPG image.",
+        "fr": "Une cha\u00eene d'infection sophistiqu\u00e9e utilisant l'escalade de privil\u00e8ges et l'exclusion Windows Defender pour d\u00e9ployer un payload d\u00e9guis\u00e9 en image JPG."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://search[.]app/a3qBe",
+          "hxxps://is[.]gd/cjIjvU"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "IntelGraphicsTask (Scheduled Task)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1548.002: Bypass User Account Control",
+        "T1053.005: Scheduled Task",
+        "T1562.001: Disable or Modify Tools"
+      ],
+      "analyse": {
+        "en": "The script uses LOLBins like curl.exe and PowerShell to bypass security products and establish persistence via legitimate-looking tasks.",
+        "fr": "Le script utilise des LOLBins comme curl.exe et PowerShell pour contourner les produits de s\u00e9curit\u00e9 et \u00e9tablir une persistance via des t\u00e2ches d'apparence l\u00e9gitime."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor PowerShell commands involving 'Add-MpPreference' to detect antivirus exclusion attempts.",
+          "fr": "Surveiller les commandes PowerShell impliquant 'Add-MpPreference' pour d\u00e9tecter les tentatives d'exclusion antivirus."
+        },
+        {
+          "en": "Block the execution of .cmd and .bat files from non-trusted zones like email downloads.",
+          "fr": "Bloquer l'ex\u00e9cution des fichiers .cmd et .bat provenant de zones non s\u00e9curis\u00e9es comme les t\u00e9l\u00e9chargements d'e-mails."
+        }
+      ],
+      "tags": [
+        "malware",
+        "persistence",
+        "stealth"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190358/hacking/image-or-malware-read-until-the-end-and-answer-in-comments.html"
+      ],
+      "date": "2026-04-06"
+    }
+  ]
+}
