@@ -1,0 +1,913 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current threat landscape is characterized by a drastic reduction in 'Time-to-Exploit', exemplified by the Storm-1175 group's ability to weaponize vulnerabilities in less than 24 hours. State-sponsored actors, particularly from North Korea (Slow Pisces/Lazarus), are reaching new levels of sophistication using in-person social engineering at conferences to compromise financial ecosystems. Concurrently, the Iran-Israel-USA conflict is catalyzing massive cyber operations against critical infrastructures. There is also a resurgence in hardware (GPUBreach) and critical software (Fortinet, F5) vulnerabilities being immediately exploited. Generative AI is transforming vulnerability discovery, saturating remediation capacities. Decision-makers must prioritize defense-in-depth for Kubernetes environments and rigorous RBAC management. Vigilance against 'physical' social engineering is now an imperative for high-value sectors. Finally, the leak of zero-day exploits (BlueHammer) highlights increasing tensions between researchers and vendors, raising risks for unpatched Windows environments.",
+      "fr": "Le paysage actuel de la menace est marqu\u00e9 par une r\u00e9duction drastique du 'Time-to-Exploit', illustr\u00e9e par le groupe Storm-1175 capable de militariser des vuln\u00e9rabilit\u00e9s en moins de 24 heures. La sophistication des acteurs \u00e9tatiques, notamment nord-cor\u00e9ens (Slow Pisces/Lazarus), atteint un nouveau sommet avec l'usage de l'ing\u00e9nierie sociale en personne lors de conf\u00e9rences pour compromettre des \u00e9cosyst\u00e8mes financiers. Parall\u00e8lement, le conflit Iran-Isra\u00ebl-USA catalyse des op\u00e9rations cyber massives contre les infrastructures critiques. On observe \u00e9galement une recrudescence des vuln\u00e9rabilit\u00e9s mat\u00e9rielles (GPUBreach) et logicielles critiques (Fortinet, F5) faisant l'objet d'exploitations imm\u00e9diates. L'IA g\u00e9n\u00e9rative transforme la d\u00e9couverte de vuln\u00e9rabilit\u00e9s, saturant les capacit\u00e9s de rem\u00e9diation. Les d\u00e9cideurs doivent prioriser la d\u00e9fense en profondeur des environnements Kubernetes et la gestion rigoureuse du RBAC. La vigilance face \u00e0 l'ing\u00e9nierie sociale 'physique' devient un imp\u00e9ratif pour les secteurs \u00e0 haute valeur ajout\u00e9e. Enfin, la fuite d'exploits zero-day (BlueHammer) souligne les tensions croissantes entre chercheurs et \u00e9diteurs, augmentant le risque pour les parcs Windows non patch\u00e9s."
+    },
+    "date": "2026-04-07"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Turkish Defense Industry Expansion",
+        "fr": "Expansion de l'industrie de d\u00e9fense turque"
+      },
+      "description": {
+        "en": "Massive expansion of Ankara in the European weapons and drone market, creating a partnership dilemma for the EU.",
+        "fr": "Expansion massive d'Ankara sur le march\u00e9 europ\u00e9en de l'armement et des drones, cr\u00e9ant un dilemme de partenariat pour l'UE."
+      },
+      "recommandations": [
+        {
+          "en": "Evaluate supply chain dependencies on non-EU defense technologies.",
+          "fr": "\u00c9valuer les d\u00e9pendances de la cha\u00eene d'approvisionnement vis-\u00e0-vis des technologies de d\u00e9fense hors UE."
+        },
+        {
+          "en": "Foster strategic dialogues between EU and Turkish industrial stakeholders.",
+          "fr": "Favoriser les dialogues strat\u00e9giques entre les parties prenantes industrielles de l'UE et de la Turquie."
+        }
+      ],
+      "tags": [
+        "Defense",
+        "Turkey",
+        "EU",
+        "Drones"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/industrie-defense-turque-partenariat-europe/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Iran-Israel-USA Conflict Escalation",
+        "fr": "Escalade du conflit Iran-Isra\u00ebl-USA"
+      },
+      "description": {
+        "en": "Expiration of the US ultimatum regarding the Strait of Hormuz, increasing risks of cyberattacks on electrical grids.",
+        "fr": "Expiration de l'ultimatum am\u00e9ricain concernant le d\u00e9troit d'Ormuz, augmentant les risques de cyberattaques sur les r\u00e9seaux \u00e9lectriques."
+      },
+      "recommandations": [
+        {
+          "en": "Heighten monitoring of SCADA and ICS environments for abnormal patterns.",
+          "fr": "Renforcer la surveillance des environnements SCADA et ICS pour d\u00e9tecter des sch\u00e9mas anormaux."
+        },
+        {
+          "en": "Establish emergency communication protocols for critical infrastructure operators.",
+          "fr": "\u00c9tablir des protocoles de communication d'urgence pour les op\u00e9rateurs d'infrastructures critiques."
+        }
+      ],
+      "tags": [
+        "Energy",
+        "Middle East",
+        "Cyber Warfare"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "M\u00e9dias_et_Communication"
+        ]
+      },
+      "theme": {
+        "en": "Iran Internet Blackout",
+        "fr": "Blackout Internet en Iran"
+      },
+      "description": {
+        "en": "National internet shutdown in Iran for 38 days with connectivity at 1% due to military tensions.",
+        "fr": "Coupure nationale d'Internet en Iran depuis 38 jours (connectivit\u00e9 \u00e0 1%) en r\u00e9ponse aux tensions militaires."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor the impact of regional blackouts on global traffic and services.",
+          "fr": "Surveiller l'impact des blackouts r\u00e9gionaux sur le trafic et les services mondiaux."
+        },
+        {
+          "en": "Ensure redundant communication paths for international business operations in the region.",
+          "fr": "Assurer des voies de communication redondantes pour les op\u00e9rations commerciales internationales dans la r\u00e9gion."
+        }
+      ],
+      "tags": [
+        "Telecoms",
+        "Iran",
+        "Blackout"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "theme": {
+        "en": "Maine Hospital Cybersecurity Bill (LD 2103)",
+        "fr": "Projet de loi Maine sur la cybers\u00e9curit\u00e9 des h\u00f4pitaux (LD 2103)"
+      },
+      "description": {
+        "en": "The Maine House advances a bill to strengthen hospital cybersecurity and ensure continuity of care during attacks.",
+        "fr": "La Chambre du Maine fait avancer un projet de loi visant \u00e0 renforcer la cybers\u00e9curit\u00e9 des h\u00f4pitaux et \u00e0 assurer la continuit\u00e9 des soins lors d'attaques."
+      },
+      "recommandations": [
+        {
+          "en": "Track similar legislative developments to ensure regulatory compliance in healthcare.",
+          "fr": "Suivre les d\u00e9veloppements l\u00e9gislatifs similaires pour assurer la conformit\u00e9 r\u00e9glementaire dans la sant\u00e9."
+        },
+        {
+          "en": "Prioritize investments in disaster recovery specifically for clinical systems.",
+          "fr": "Prioriser les investissements dans la reprise apr\u00e8s sinistre sp\u00e9cifiquement pour les syst\u00e8mes cliniques."
+        }
+      ],
+      "tags": [
+        "Regulation",
+        "Healthcare",
+        "USA"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/06/maine-house-advances-mccabe-bill-to-strengthen-cybersecurity-at-maine-hospitals/"
+      ],
+      "date": "2026-04-06"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "European Commission (Europa.eu)",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "description": {
+        "en": "Compromise of the Europa.eu platform via a supply chain attack on the Trivy tool.",
+        "fr": "Compromission de la plateforme Europa.eu via une attaque sur la cha\u00eene d'approvisionnement de l'outil Trivy."
+      },
+      "mitre_ttps": [
+        "T1195.002: Software Supply Chain Compromise"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify the integrity of container scanning tools and their update mechanisms.",
+          "fr": "V\u00e9rifier l'int\u00e9grit\u00e9 des outils de scan de conteneurs et leurs m\u00e9canismes de mise \u00e0 jour."
+        },
+        {
+          "en": "Implement binary authorization to ensure only signed code is deployed.",
+          "fr": "Mettre en \u0153uvre l'autorisation binaire pour s'assurer que seul le code sign\u00e9 est d\u00e9ploy\u00e9."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "Europa.eu",
+        "Trivy"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "victim": "Drift Protocol",
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "Slow Pisces",
+        "Labyrinth Chollima",
+        "UNC4736",
+        "APT38"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Theft of $280 million after a six-month in-person social engineering operation and malicious TestFlight/VSCode deployment.",
+        "fr": "Vol de 280 millions de dollars suite \u00e0 une op\u00e9ration d'ing\u00e9nierie sociale physique de six mois et au d\u00e9ploiement de TestFlight/VSCode malveillants."
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1195.001: Supply Chain Compromise",
+        "T1556: Modify Authentication Process"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit multisignature governance processes and restrict physical access to key holders.",
+          "fr": "Auditer les processus de gouvernance multisignature et restreindre l'acc\u00e8s physique aux d\u00e9tenteurs de cl\u00e9s."
+        },
+        {
+          "en": "Ban the use of unverified applications via TestFlight on devices with access to production secrets.",
+          "fr": "Interdire l'utilisation d'applications non v\u00e9rifi\u00e9es via TestFlight sur des appareils ayant acc\u00e8s aux secrets de production."
+        }
+      ],
+      "tags": [
+        "Cryptocurrency",
+        "Social Engineering",
+        "Lazarus"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/drift-280m-crypto-theft-linked-to-6-month-in-person-operation/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "victim": "Hasbro",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce_de_D\u00e9tail_et_Consommation"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized network access leading to several weeks of system downtime.",
+        "fr": "Acc\u00e8s non autoris\u00e9 au r\u00e9seau entra\u00eenant la mise hors ligne de syst\u00e8mes pendant plusieurs semaines."
+      },
+      "mitre_ttps": [
+        "T1078: Valid Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Conduct a full forensic analysis of the initial entry point.",
+          "fr": "Effectuer une analyse forensique compl\u00e8te du point d'entr\u00e9e initial."
+        },
+        {
+          "en": "Enforce strict network segmentation to prevent lateral movement.",
+          "fr": "Appliquer une segmentation r\u00e9seau stricte pour emp\u00eacher les mouvements lat\u00e9raux."
+        }
+      ],
+      "tags": [
+        "Intrusion",
+        "Hasbro"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "victim": "Valley Family Health Care",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Two consecutive data breaches affecting 4,300 patients due to a third-party vendor vulnerability.",
+        "fr": "Deux violations de donn\u00e9es cons\u00e9cutives affectant 4 300 patients suite \u00e0 une faille chez un prestataire tiers."
+      },
+      "mitre_ttps": [
+        "T1195: Supply Chain Compromise"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform rigorous security audits on third-party service providers handling sensitive data.",
+          "fr": "R\u00e9aliser des audits de s\u00e9curit\u00e9 rigoureux sur les prestataires tiers g\u00e9rant des donn\u00e9es sensibles."
+        },
+        {
+          "en": "Encrypt patient data at rest to mitigate the impact of a breach.",
+          "fr": "Chiffrer les donn\u00e9es des patients au repos pour att\u00e9nuer l'impact d'une violation."
+        }
+      ],
+      "tags": [
+        "Healthcare",
+        "Data Breach",
+        "Third-party"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/06/two-breaches-one-quarter-valley-family-health-cares-challenging-start-to-2026/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "victim": "Roan and Eurocamp",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "H\u00f4tellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Exposure of customer booking data subsequently used for WhatsApp-based scams.",
+        "fr": "Exposition des donn\u00e9es de r\u00e9servation des clients utilis\u00e9es ensuite pour des arnaques via WhatsApp."
+      },
+      "mitre_ttps": [
+        "T1566.001: Spearphishing Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Inform affected customers about the risks of phishing via mobile messaging apps.",
+          "fr": "Informer les clients concern\u00e9s des risques de phishing via les applications de messagerie mobile."
+        },
+        {
+          "en": "Implement stronger access controls on database management interfaces.",
+          "fr": "Mettre en \u0153uvre des contr\u00f4les d'acc\u00e8s plus stricts sur les interfaces de gestion de base de donn\u00e9es."
+        }
+      ],
+      "tags": [
+        "Tourism",
+        "Scam",
+        "WhatsApp"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/"
+      ],
+      "date": "2026-04-07"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-34838",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:groupoffice:groupoffice:*:*:*:*:*:*:*:*",
+      "product": "GroupOffice CRM",
+      "vendor": "GroupOffice",
+      "description": {
+        "en": "Insecure deserialization vulnerability allowing Remote Code Execution (RCE) via malicious object injection.",
+        "fr": "Vuln\u00e9rabilit\u00e9 de d\u00e9s\u00e9rialisation non s\u00e9curis\u00e9e permettant l'ex\u00e9cution de code \u00e0 distance (RCE) via l'injection d'objets malveillants."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update GroupOffice CRM to the latest version immediately.",
+          "fr": "Mettre \u00e0 jour GroupOffice CRM vers la derni\u00e8re version imm\u00e9diatement."
+        },
+        {
+          "en": "Disable insecure deserialization features where not strictly required.",
+          "fr": "D\u00e9sactiver les fonctions de d\u00e9s\u00e9rialisation non s\u00e9curis\u00e9es lorsqu'elles ne sont pas strictement n\u00e9cessaires."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Deserialization"
+      ],
+      "sources": [
+        "https://securityonline.info/groupoffice-cve-2026-34838-insecure-deserialization-rce/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2025-53521",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:f5:big-ip_apm:*:*:*:*:*:*:*:*",
+      "product": "F5 BIG-IP APM",
+      "vendor": "F5",
+      "description": {
+        "en": "Critical Remote Code Execution (RCE) flaw allowing code execution on exposed instances.",
+        "fr": "Faille critique d'ex\u00e9cution de code \u00e0 distance (RCE) permettant l'ex\u00e9cution de code sur les instances expos\u00e9es."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply F5 security patches for BIG-IP APM immediately.",
+          "fr": "Appliquer imm\u00e9diatement les correctifs de s\u00e9curit\u00e9 F5 pour BIG-IP APM."
+        },
+        {
+          "en": "Restrict access to the management interface to internal networks only.",
+          "fr": "Restreindre l'acc\u00e8s \u00e0 l'interface de gestion aux seuls r\u00e9seaux internes."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "F5",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190384/security/attackers-exploit-rce-flaw-as-14000-f5-big-ip-apm-instances-remain-exposed.html"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2026-0740",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:ninjaforms:ninja_forms:*:*:*:*:*:*:wordpress:*",
+      "product": "Ninja Forms (WP)",
+      "vendor": "Ninja Forms",
+      "description": {
+        "en": "Arbitrary File Upload vulnerability leading to full WordPress site compromise.",
+        "fr": "T\u00e9l\u00e9chargement de fichiers arbitraires menant \u00e0 une compromission totale du site WordPress."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Ninja Forms plugin to the latest version on all WordPress instances.",
+          "fr": "Mettre \u00e0 jour le plugin Ninja Forms vers la derni\u00e8re version sur toutes les instances WordPress."
+        },
+        {
+          "en": "Scan the uploads directory for any suspicious PHP files.",
+          "fr": "Scanner le r\u00e9pertoire des t\u00e9l\u00e9chargements pour d\u00e9tecter tout fichier PHP suspect."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "File Upload"
+      ],
+      "sources": [
+        "https://securityonline.info/ninja-forms-file-upload-rce-vulnerability-cve-2026-0740/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2025-55182",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:react_server_components:react_server_components:*:*:*:*:*:*:*:*",
+      "product": "React Server Components",
+      "vendor": "React",
+      "description": {
+        "en": "Insecure Deserialization flaw (React2Shell) allowing command execution within Kubernetes workloads.",
+        "fr": "Faille de d\u00e9s\u00e9rialisation non s\u00e9curis\u00e9e (React2Shell) permettant l'ex\u00e9cution de commandes au sein des workloads Kubernetes."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the least privilege principle to Kubernetes RBAC configurations.",
+          "fr": "Appliquer le principe du moindre privil\u00e8ge aux configurations RBAC de Kubernetes."
+        },
+        {
+          "en": "Update affected React Server Components libraries.",
+          "fr": "Mettre \u00e0 jour les biblioth\u00e8ques React Server Components affect\u00e9es."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Kubernetes",
+        "React"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/modern-kubernetes-threats/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2026-35616",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.1",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_ems:7.4.5:*:*:*:*:*:*:*",
+      "product": "FortiClient EMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Improper Access Control in API allowing authentication bypass and remote code execution.",
+        "fr": "Contournement d'authentification API permettant l'ex\u00e9cution de code \u00e0 distance d\u00e9 au contr\u00f4le d'acc\u00e8s inappropri\u00e9."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the hotfix provided by Fortinet for versions 7.4.5 and 7.4.6.",
+          "fr": "Appliquer le correctif d'urgence fourni par Fortinet pour les versions 7.4.5 et 7.4.6."
+        },
+        {
+          "en": "Isolate the EMS interface from the public internet.",
+          "fr": "Isoler l'interface EMS d'Internet."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Fortinet",
+        "KEV"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/fortinet-releases-forticlient-ems-hotfix"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2026-35393",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:golang:goshs:*:*:*:*:*:*:*:*",
+      "product": "goshs (GoLang)",
+      "vendor": "GoLang",
+      "description": {
+        "en": "Path Traversal allowing arbitrary file writes via unsanitized POST downloads.",
+        "fr": "\u00c9criture de fichiers arbitraires via des t\u00e9l\u00e9chargements POST non sanitis\u00e9s (Path Traversal)."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update goshs to a patched version or use an alternative file server.",
+          "fr": "Mettre \u00e0 jour goshs vers une version corrig\u00e9e ou utiliser un serveur de fichiers alternatif."
+        },
+        {
+          "en": "Implement input sanitization for all file upload paths.",
+          "fr": "Mettre en \u0153uvre la sanitisation des entr\u00e9es pour tous les chemins de t\u00e9l\u00e9chargement de fichiers."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Path Traversal",
+        "GoLang"
+      ],
+      "sources": [
+        "https://radar.offseq.com/threat/cve-2026-35393-cwe-22-improper-limitation-of-a-pat-b57d1ba3"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "cve_id": "CVE-2026-5709",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:amazon:aws_research_and_engineering_studio:*:*:*:*:*:*:*:*",
+      "product": "AWS RES",
+      "vendor": "Amazon",
+      "description": {
+        "en": "Command Injection in the FileBrowser API of AWS Research and Engineering Studio.",
+        "fr": "Injection de commandes dans l'API FileBrowser d'AWS Research and Engineering Studio."
+      },
+      "mitre_ttps": [
+        "T1059: Command and Scripting Interpreter"
+      ],
+      "recommandations": [
+        {
+          "en": "Update AWS RES environment to the latest secure version.",
+          "fr": "Mettre \u00e0 jour l'environnement AWS RES vers la derni\u00e8re version s\u00e9curis\u00e9e."
+        },
+        {
+          "en": "Restrict API access using IAM roles and policies.",
+          "fr": "Restreindre l'acc\u00e8s \u00e0 l'API \u00e0 l'aide de r\u00f4les et de politiques IAM."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AWS",
+        "Cloud"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-5709"
+      ],
+      "date": "2026-04-07"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Storm-1175 High-Velocity Medusa Ransomware Campaigns",
+        "fr": "Campagnes \u00e0 haute v\u00e9locit\u00e9 du ransomware Medusa par Storm-1175"
+      },
+      "description": {
+        "en": "Storm-1175 exploits vulnerabilities within 24 hours of disclosure to deploy Medusa ransomware, targeting healthcare and finance.",
+        "fr": "Storm-1175 exploite des vuln\u00e9rabilit\u00e9s dans les 24 heures suivant leur divulgation pour d\u00e9ployer le ransomware Medusa."
+      },
+      "threat_actor": "Storm-1175",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "Medusa Affiliate"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences",
+          "Finance",
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant",
+          "Finance",
+          "\u00c9ducation_et_Recherche"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "185.135.86.149"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "0cefeb6210b7103fd32b996beff518c9b6e1691a97bb1cda7f5fb57905c4be96"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PDQ Deployer",
+          "Rclone",
+          "SimpleHelp"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1543.003: Windows Service",
+        "T1021.001: Remote Desktop Protocol",
+        "T1567.002: Exfiltration to Cloud Storage"
+      ],
+      "analyse": {
+        "en": "High-velocity intrusions focusing on web-facing asset exploitation. They often use N-day or Zero-day flaws before patches are applied.",
+        "fr": "Intrusions \u00e0 haute v\u00e9locit\u00e9 se concentrant sur l'exploitation d'actifs expos\u00e9s. Ils utilisent souvent des failles N-day ou Zero-day."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize immediate patching of internet-exposed assets.",
+          "fr": "Prioriser le déploiement immédiat des correctifs pour les actifs exposés."
+        },
+        {
+          "en": "Activate Tamper Protection on antivirus solutions.",
+          "fr": "Activer la protection contre les altérations (Tamper Protection) sur les solutions antivirus."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Medusa",
+        "Microsoft"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "title": {
+        "en": "GPUBreach: Hardware Takeover via GDDR6",
+        "fr": "GPUBreach : Prise de contr\u00f4le mat\u00e9rielle via la GDDR6"
+      },
+      "description": {
+        "en": "New attack using Rowhammer on GPU memory to bypass isolation and escalate privileges to root.",
+        "fr": "Nouvelle attaque utilisant Rowhammer sur la m\u00e9moire GPU pour contourner l'isolation et obtenir des privil\u00e8ges root."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Recherche",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Education_and_Research",
+          "Security"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "\u00c9ducation_et_Recherche",
+          "S\u00e9curit\u00e9"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "CUDA",
+          "GPUBreach"
+        ]
+      },
+      "mitre_ttps": [
+        "T1495: Firmware Corruption",
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "analyse": {
+        "en": "Hardware vulnerability affecting GDDR6-equipped GPUs, breaking IOMMU isolation in multi-tenant environments.",
+        "fr": "Vuln\u00e9rabilit\u00e9 mat\u00e9rielle affectant les GPU \u00e9quip\u00e9s de GDDR6, brisant l'isolation IOMMU dans les environnements partag\u00e9s."
+      },
+      "recommandations": [
+        {
+          "en": "Enable Error Correction Code (ECC) on compatible Enterprise GPUs.",
+          "fr": "Activer la correction d'erreurs m\u00e9moire (ECC) sur les GPU Enterprise compatibles."
+        },
+        {
+          "en": "Monitor CUDA workloads for unusual memory patterns.",
+          "fr": "Surveiller les workloads CUDA pour d\u00e9tecter des sch\u00e9mas m\u00e9moire inhabituels."
+        }
+      ],
+      "tags": [
+        "Hardware",
+        "GPU",
+        "Rowhammer"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-gpubreach-attack-enables-system-takeover-via-gpu-rowhammer/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "title": {
+        "en": "BlueHammer Zero-Day Leak",
+        "fr": "Fuite de l'exploit Zero-Day BlueHammer"
+      },
+      "description": {
+        "en": "Leak of a local privilege escalation (LPE) exploit for Windows combining TOCTOU and path confusion.",
+        "fr": "Fuite d'un exploit d'\u00e9l\u00e9vation de privil\u00e8ges locaux (LPE) pour Windows combinant TOCTOU et confusion de chemin."
+      },
+      "threat_actor": "Nightmare-Eclipse",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Chercheur",
+      "threat_actor_aliases": [
+        "Chaotic Eclipse"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://github.com/Nightmare-Eclipse/BlueHammer"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "BlueHammer PoC"
+        ]
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1003.002: Security Account Manager"
+      ],
+      "analyse": {
+        "en": "Disgruntled researcher leaked the exploit after a disagreement with Microsoft. Allows obtaining SYSTEM privileges.",
+        "fr": "Un chercheur a divulgu\u00e9 l'exploit apr\u00e8s un d\u00e9saccord avec Microsoft. Permet d'obtenir les privil\u00e8ges SYSTEM."
+      },
+      "recommandations": [
+        {
+          "en": "Limit local administrative privileges on all Windows workstations.",
+          "fr": "Limiter les privil\u00e8ges administratifs locaux sur tous les postes de travail Windows."
+        },
+        {
+          "en": "Use EDR to detect unauthorized access to the SAM database.",
+          "fr": "Utiliser un EDR pour d\u00e9tecter les acc\u00e8s non autoris\u00e9s \u00e0 la base SAM."
+        }
+      ],
+      "tags": [
+        "Zero-day",
+        "Windows",
+        "LPE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/disgruntled-researcher-leaks-bluehammer-windows-zero-day-exploit/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "title": {
+        "en": "Kubernetes Exploitation and Token Theft",
+        "fr": "Exploitation Kubernetes et vol de tokens"
+      },
+      "description": {
+        "en": "Increase in attacks targeting Kubernetes clusters via React2Shell and Service Account Token (SAT) theft.",
+        "fr": "Augmentation des attaques ciblant les clusters Kubernetes via React2Shell et le vol de tokens de compte de service (SAT)."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "Slow Pisces",
+        "UNC4736",
+        "TeamTNT",
+        "VoidLink"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "104.238.149.198"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "05eac3663d47a29da0d32f67e10d161f831138e10958dcd88b9dc97038948f69"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "VoidLink"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1528: Steal Application Access Token",
+        "T1613: Container and Resource Discovery"
+      ],
+      "analyse": {
+        "en": "Attackers move from public web vulnerabilities to pod execution, harvesting SATs to pivot within the cluster.",
+        "fr": "Les attaquants passent des vuln\u00e9rabilit\u00e9s web publiques \u00e0 l'ex\u00e9cution dans les pods, r\u00e9coltant les SAT pour pivoter dans le cluster."
+      },
+      "recommandations": [
+        {
+          "en": "Use short-lived projected service account tokens (SAT).",
+          "fr": "Utiliser des jetons de service \u00e0 dur\u00e9e de vie courte (Projected SAT)."
+        },
+        {
+          "en": "Monitor API calls for access to /var/run/secrets/ in Kubernetes pods.",
+          "fr": "Surveiller les appels API pour les acc\u00e8s au r\u00e9pertoire /var/run/secrets/ dans les pods."
+        }
+      ],
+      "tags": [
+        "Kubernetes",
+        "Cloud",
+        "Token Theft"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/modern-kubernetes-threats/"
+      ],
+      "date": "2026-04-07"
+    }
+  ]
+}
