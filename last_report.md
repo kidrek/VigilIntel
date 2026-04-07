@@ -9,19 +9,20 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Exploitation critique de FortiClient EMS](#exploitation-critique-de-forticlient-ems)
-  * [Campagne massive d'extraction de secrets via React2Shell](#campagne-massive-dextraction-de-secrets-via-react2shell)
-  * [Convergence cyber-cinétique dans le conflit US-Israël-Iran](#convergence-cyber-cinetique-dans-le-conflit-us-israel-iran)
-  * [Analyse technique d'une infection par script CMD malveillant](#analyse-technique-dune-infection-par-script-cmd-malveillant)
-  * [Attaque par canal d'approvisionnement visant le paquet npm Axios](#attaque-par-canal-dapprovisionnement-visant-le-paquet-npm-axios)
+  * [Fortinet : Exploitation active de la vulnérabilité critique CVE-2026-35616](#fortinet-exploitation-active-de-la-vulnerabilite-critique-cve-2026-35393)
+  * [BlueHammer : Fuite d'un exploit Zero-Day pour Windows](#bluehammer-fuite-dun-exploit-zero-day-pour-windows)
+  * [Drift Protocol : Vol de 280M$ par ingénierie sociale physique (Lazarus)](#drift-protocol-vol-de-280m-par-ingenierie-sociale-physique-lazarus)
+  * [Storm-1175 : L'élite du Ransomware Medusa et l'exploitation ultra-rapide](#storm-1175-lelite-du-ransomware-medusa-et-lexploitation-ultra-rapide)
+  * [GPUBreach : Prise de contrôle système via Rowhammer sur GPU](#gpubreach-prise-de-controle-systeme-via-rowhammer-sur-gpu)
+  * [Doxxing des leaders de REvil et GandCrab par la police allemande](#doxxing-des-leaders-de-revil-et-gandcrab-par-la-police-allemande)
+  * [Menaces sur Kubernetes : Augmentation massive des vols de jetons](#menaces-sur-kubernetes-augmentation-massive-des-vols-de-jetons)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber actuel est marqué par une intensification de la convergence entre opérations cinétiques et numériques, particulièrement illustrée par l'usage de spywares lors de frappes de missiles en Israël. On observe une industrialisation des capacités destructrices via l'émergence du modèle "Wiper-as-a-Service" par les proxies iraniens, abaissant le seuil technique requis pour des attaques paralysantes. Parallèlement, la menace sur la chaîne d'approvisionnement logicielle se confirme avec le compromis du paquet npm "Axios" par la Corée du Nord, visant l'exfiltration massive de secrets cloud et d'identifiants. L'exploitation active de vulnérabilités critiques "zero-day" sur des solutions d'accès périmétriques comme Fortinet souligne l'urgence de cycles de correctifs ultra-rapides. L'automatisation des attaques sur les frameworks modernes (Next.js) permet désormais aux attaquants de compromettre des centaines d'hôtes en moins de 24 heures pour récolter des clés API et SSH. Ces tendances démontrent une volonté des acteurs étatiques de maximiser l'impact psychologique et économique tout en automatisant le vol de données à haute valeur stratégique.
-
+Le paysage actuel de la menace est marqué par une accélération sans précédent du cycle d'exploitation, où des groupes comme Storm-1175 (Medusa) militarisent des vulnérabilités moins de 24 heures après leur divulgation. L'émergence de techniques d'ingénierie sociale "physique", orchestrées par des acteurs nord-coréens lors de conférences internationales pour compromettre des protocoles DeFi comme Drift, démontre un investissement opérationnel sur le long terme (6 mois). Parallèlement, le conflit US-Israël-Iran atteint un point de rupture cyber-cinétique, avec des menaces directes contre 18 géants technologiques américains et des infrastructures énergétiques. L'IA générative transforme également la découverte de vulnérabilités en un défi de capacité de traitement pour les mainteneurs de logiciels libres. On observe une résurgence des attaques matérielles sophistiquées, à l'instar de GPUBreach, contournant les protections IOMMU via la mémoire vidéo. Enfin, le doxxing des cadres de REvil prouve une efficacité accrue de la coopération policière internationale, malgré l'impunité relative offerte par certains territoires. Cette période exige une réactivité immédiate sur le patching des actifs périmétriques et une vigilance accrue lors des interactions humaines de haut niveau.
 <br>
 <br>
 <div id="syntheses"></div>
@@ -34,14 +35,12 @@ Le paysage cyber actuel est marqué par une intensification de la convergence en
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| **BlueNoroff** | Cryptomonnaie, macOS | Utilisation de malwares RustBucket pour l'exfiltration | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
-| **Handala Hack** | Défense, Infrastructure israélienne | Wiper, abus de MDM Intune, vol de données | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| **Kimsuky** | Gouvernement (UK), R&D | Fichiers LNK malveillants, backdoor Python | [OTX Alientvault](https://social.raytec.co/@techbot/116353998219070686) |
-| **Qilin** | Partis politiques, Industrie | Ransomware, exfiltration de données | [Security Affairs](https://securityaffairs.com/190379/malware/security-affairs-malware-newsletter-round-91.html) |
-| **TA446** (lié à la Russie) | Utilisateurs iPhone | Kit d'exploitation iOS DarkSword via spear-phishing | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
-| **UAC-0255** | Ukraine (Gouvernement) | Impersonnalisation du CERT-UA, malware AGEWHEEZE | [Security Affairs](https://securityaffairs.com/190379/malware/security-affairs-malware-newsletter-round-91.html) |
-| **UAT-10608** | Cloud, Applications Next.js | Exploitation React2Shell, framework NEXUS Listener | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/) |
-| **UNC1069** (Corée du Nord) | Développeurs, Chaîne d'approvisionnement | Hijacking de comptes npm (Axios), malware RAT | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
+| **Handala** | Israël (Défense, Infrastructures) | Brute-force VPN, Wiper-as-a-Service, exfiltration de données. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **IRGC** (Gardiens de la Révolution) | Technologie, Énergie, Finance (USA/EAU) | Désignation de cibles stratégiques, menaces hybrides cyber-cinétiques. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **Lazarus** (Slow Pisces / UNC4736) | Crypto-monnaie, Finance, Cloud | Ingénierie sociale physique (conférences), vol de jetons Kubernetes/AWS. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/drift-280m-crypto-theft-linked-to-6-month-in-person-operation/), [Unit 42](https://unit42.paloaltonetworks.com/modern-kubernetes-threats/) |
+| **REvil / GandCrab** | Multi-sectoriel (Global) | Ransomware-as-a-Service (RaaS), double extorsion. | [Krebs on Security](https://krebsonsecurity.com/2026/04/germany-doxes-unkn-head-of-ru-ransomware-gangs-revil-gandcrab/) |
+| **Storm-1175** (Affilié Medusa) | Santé, Éducation, Finance | Exploitation ultra-rapide de 0-days et N-days sur actifs web. | [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/) |
+| **UNC1069** | Supply Chain (npm) | Compromission du package Axios pour livrer des chevaux de Troie. | [Security Affairs](https://securityaffairs.com/190413/uncategorized/phishing-lnk-files-and-github-c2-power-new-dprk-cyber-attacks.html) |
 
 <br/>
 <br/>
@@ -51,10 +50,10 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Cyber-Guerre | Conflit Israël-Iran | Campagne de spyware via de fausses applications d'alerte à la bombe lors de frappes de missiles. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Cyber-Guerre | Conflit US-Iran | Sauvetage d'un pilote de F-15E suivi d'une intensification des opérations d'information pro-iraniennes. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Infrastructure | Iran | Coupure prolongée d'Internet en Iran (37 jours) avec un trafic réduit à 1%. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Politique | Allemagne | Revendication par le groupe Qilin d'une attaque contre le parti politique "Die Linke". | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
+| États-Unis / Iran | Conflit Cyber-Cinétique | Expiration de l'ultimatum américain sur le détroit d'Ormuz ; risque maximal de cyber-représailles contre l'énergie. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Technologie / Défense | Liste de cibles IRGC | L'Iran désigne 18 entreprises technologiques US (Microsoft, Google, Apple, etc.) comme cibles légitimes. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Iran | Blackout Internet | L'Iran entre dans son 38ème jour de coupure quasi-totale d'internet au niveau national. | [Check Point](https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/) |
+| Turquie / Europe | Industrie de Défense | Dilemme européen sur les partenariats militaires avec la Turquie face à sa montée en puissance technologique. | [Portail de l'IE](https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/industrie-defense-turque-partenariat-europe/) |
 
 <br/>
 <br/>
@@ -62,10 +61,10 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 <div id="synthese-reglementaire"></div>
 
 ## Synthèse réglementaire et juridiques
-Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
+Voici un tableau récapitulatif des articles juridiques relatifs à la réglementation cyber :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Verification des développeurs Android | Google | 05/04/2026 | Mondiale | Google Play Policy | Déploiement obligatoire de la vérification d'identité pour tous les développeurs sur Play Console. | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
+| Maine House advances hospital cybersecurity bill | Maine House Democrats | 06/04/2026 | Maine, USA | LD 2103 | Obligation pour les hôpitaux d'adopter des plans de continuité et des standards de sécurité cyber. | [DataBreaches](https://databreaches.net/2026/04/06/maine-house-advances-mccabe-bill-to-strengthen-cybersecurity-at-maine-hospitals/) |
 
 <br/>
 <br/>
@@ -75,25 +74,26 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Automobile | Dow Inc | Fuite de données présumée suite à une attaque du groupe Qilin. | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
-| Banque | Lloyds Banking Group | Incident de sécurité affectant les données personnelles de près de 500 000 clients mobiles. | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
-| Défense | PSK Wind Technologies | Brèche confirmée par le groupe pro-iranien Handala chez ce sous-traitant israélien. | [Security Affairs](https://securityaffairs.com/190379/malware/security-affairs-malware-newsletter-round-91.html) |
-| Finance | Drift (Solana) | Vol de 285 millions de dollars en cryptomonnaie par des acteurs liés à la Corée du Nord. | [Mastodon](https://mastodon.social/@SubProxy/116355155429365798) |
-| Gouvernement | Commission Européenne | Brèche de données exposant 30 entités de l'UE via une compromission de la chaîne d'approvisionnement cloud. | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
+| Éducation | Écoles de New York | Augmentation de 72 % des incidents de données scolaires en 2025. | [DataBreaches](https://databreaches.net/2026/04/06/nys-school-data-incidents-rose-72-in-2025-with-44-reported-on-long-island/) |
+| Gouvernement | Commission Européenne | Compromission via une plateforme tierce liée à l'attaque de la chaîne logistique Trivy. | [Check Point](https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/) |
+| Industrie | Hasbro | Détection d'un accès non autorisé au réseau ; systèmes mis hors ligne. | [Check Point](https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/) |
+| Juridique | DocketWise | Violation de données affectant les informations personnelles de clients de cabinets d'immigration. | [DataBreaches](https://databreaches.net/2026/04/06/two-data-security-incidents-affected-immigration-law-firms-and-their-clients/) |
+| Loisirs | Roan & Eurocamp | Fuite de données clients utilisées pour des arnaques au paiement via WhatsApp. | [Check Point](https://research.checkpoint.com/2026/6th-march-threat-intelligence-report-2/) |
+| Santé | Valley Family Health Care | Affecté par la violation de TriZetto Provider Solutions (TPS) touchant 4 300 patients. | [DataBreaches](https://databreaches.net/2026/04/06/two-breaches-one-quarter-valley-family-health-cares-challenging-start-to-2026/) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
-Voici un tableau récapitulatif des vulnérabilités identifiées :
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité.
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2026-35616 | 9.8 | Non spécifié | TRUE | FortiClient EMS | Contrôle d'accès incorrect | T1190: Exploit Public-Facing Application | Permet l'exécution de code à distance sans authentification via des requêtes forgées. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-fortinet-forticlient-ems-flaw-cve-2026-35616-exploited-in-attacks/) |
-| CVE-2025-55182 | 9.8 | Non spécifié | TRUE | Next.js (React2Shell) | RCE / Injection | T1505: Server Software Component | Exploitation de composants Next.js pour l'exécution de commandes et le vol de secrets. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/) |
-| CVE-2026-3055 | 9.3 | Non spécifié | TRUE | Citrix NetScaler | Memory Overread | T1005: Data from Local System | Fuite de données sensibles via une lecture mémoire hors limites. | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
-| CVE-2026-5605 | 9.0 | Non spécifié | FALSE | Tenda CH22 | Stack-based Overflow | T1210: Exploitation of Remote Services | Dépassement de tampon dans la fonction formWrlExtraSet permettant une exploitation distante. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5605) |
-| CVE-2026-4272 | 8.1 | Non spécifié | FALSE | Honeywell Handheld Scanners | Auth Bypass / RCE | T1210: Exploitation of Remote Services | Permet l'exécution de commandes système via Bluetooth sans authentification. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4272) |
+| **CVE-2026-34838** | 10.0 | N/A | FALSE | GroupOffice CRM | Désérialisation non sécurisée | Non mentionnées | Permet une exécution de code à distance (RCE) via une chaîne POP utilisant Guzzle. | [SecurityOnline](https://securityonline.info/groupoffice-cve-2026-34838-insecure-deserialization-rce/) |
+| **CVE-2026-0740** | 9.8 | N/A | FALSE | Ninja Forms (WordPress) | Téléchargement de fichier non sécurisé | Non mentionnées | Un attaquant peut uploader des fichiers PHP et obtenir une RCE. | [SecurityOnline](https://securityonline.info/ninja-forms-file-upload-rce-vulnerability-cve-2026-0740/) |
+| **CVE-2025-53521** | 9.8 | N/A | TRUE | F5 BIG-IP APM | Exécution de code à distance (RCE) | Non mentionnées | Trafic malveillant spécifique déclenchant une RCE sur les serveurs virtuels. | [Security Affairs](https://securityaffairs.com/190384/security/attackers-exploit-rce-flaw-as-14000-f5-big-ip-apm-instances-remain-exposed.html) |
+| **CVE-2026-35616** | 9.1 | N/A | TRUE | Fortinet FortiClient EMS | Contrôle d'accès incorrect | Non mentionnées | Bypass d'authentification API permettant l'exécution de code ou de commandes. | [Fortinet](https://fieldeffect.com/blog/fortinet-releases-forticlient-ems-hotfix) |
+| **CVE-2026-35393** | N/A | N/A | FALSE | goshs | Path Traversal | Non mentionnées | Permet l'écriture de fichiers n'importe où sur le système via des uploads POST. | [OffSeq](https://infosec.exchange/@offseq/116360834428673806) |
 
 <br/>
 <br/>
@@ -102,11 +102,12 @@ Voici un tableau récapitulatif des vulnérabilités identifiées :
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Analyse d'un script CMD malveillant | Détails tactiques précis sur l'évasion d'antivirus et la persistance. | [Security Affairs](https://securityaffairs.com/190358/hacking/image-or-malware-read-until-the-end-and-answer-in-comments.html) |
-| Campagne d'extraction via React2Shell | Alerte sur une automatisation massive ciblant les environnements cloud. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/) |
-| Conflit US-Israël-Iran : Contexte Cyber | Analyse de la convergence cyber-cinétique et du modèle "Wiper-as-a-Service". | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| FortiClient EMS : Vulnérabilité critique | Criticité extrême et exploitation active sur un produit périmétrique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-fortinet-forticlient-ems-flaw-cve-2026-35616-exploited-in-attacks/) |
-| Hijacking npm Axios par la Corée du Nord | Menace majeure sur la chaîne d'approvisionnement (Supply Chain). | [Security Affairs](https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html) |
+| German authorities identify REvil and GangCrab ransomware bosses | Identification majeure de leaders de cybercriminalité historique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/german-authorities-identify-revil-and-gangcrab-ransomware-bosses/) |
+| Drift $280M crypto theft linked to 6-month in-person operation | Mode opératoire d'ingénierie sociale physique exceptionnel par le groupe Lazarus. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/drift-280m-crypto-theft-linked-to-6-month-in-person-operation/) |
+| New GPUBreach attack enables system takeover via GPU rowhammer | Menace technologique avancée sur le matériel GPU. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-gpubreach-attack-enables-system-takeover-via-gpu-rowhammer/) |
+| Disgruntled researcher leaks “BlueHammer” Windows zero-day exploit | Menace immédiate suite à la fuite publique d'un exploit zero-day OS. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/disgruntled-researcher-leaks-bluehammer-windows-zero-day-exploit/) |
+| Storm-1175 focuses gaze on vulnerable web-facing assets | Analyse détaillée d'un acteur ransomware à haute vélocité. | [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/) |
+| Understanding Current Threats to Kubernetes Environments | Étude critique sur l'augmentation des attaques d'identité Cloud/Kubernetes. | [Unit 42](https://unit42.paloaltonetworks.com/modern-kubernetes-threats/) |
 
 <br/>
 <br/>
@@ -115,135 +116,182 @@ Voici un tableau récapitulatif des vulnérabilités identifiées :
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| Attaque DCSync Active Directory | Article purement éducatif/générique sur une technique connue. | [Deniz Halil](https://denizhalil.com/2026/03/27/dcsync-attack-active-directory-guide/) |
-| ISC Stormcast 06/04/2026 | Sommaire de podcast trop généraliste. | [SANS ISC](https://isc.sans.edu/podcastdetail/9880) |
-| Killer Robots Podcast | Discussion éthique et philosophique, peu de données techniques exploitables. | [Malwarebytes](https://www.malwarebytes.com/blog/podcast/2026/04/killer-robots-are-here-now-what-lock-and-code-s07e07) |
-| Vulnérabilités Kados R10 (2019) | Failles datant de 2019, manque de pertinence pour une veille actuelle. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2019-25704) |
+| ISC Stormcast For Tuesday, April 7th, 2026 | Format podcast trop générique, informations couvertes par d'autres articles détaillés. | [ISC SANS](https://isc.sans.edu/podcastdetail/9882) |
+| SpaceCoastSec Meetup | Événement communautaire local sans valeur analytique de menace. | [Mastodon](https://mastodon.social/@spacecoastsec/116360176792335021) |
+| Even experienced devs often hardcode API keys | Conseil de sécurité généraliste sans actualité spécifique. | [Mastodon](https://mastodon.social/@threatchain/116360538159089020) |
+| Microsoft fixes Classic Outlook bug | Bug fonctionnel de livraison d'emails sans impact cyber majeur direct. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-classic-outlook-bug-causing-email-delivery-issues/) |
 
 <br>
 <br>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="exploitation-critique-de-forticlient-ems"></div>
 
-## [New FortiClient EMS flaw exploited in attacks, emergency patch released]
-Fortinet a publié en urgence une mise à jour pour corriger la vulnérabilité CVE-2026-35616, affectant FortiClient EMS versions 7.4.5 et 7.4.6. Cette faille de contrôle d'accès permet à un attaquant non authentifié d'exécuter du code à distance via des requêtes HTTP forgées. La vulnérabilité est activement exploitée dans la nature, confirmée comme un "zero-day" avant son correctif. Plus de 2 000 instances exposées ont été identifiées, principalement aux États-Unis et en Allemagne. Cette faille suit une autre vulnérabilité critique corrigée la semaine précédente. Les correctifs sont disponibles sous forme de "hotfixes" spécifiques pour les versions impactées. Une montée de version vers la 7.4.7 est recommandée dès sa disponibilité. L'absence de mesures d'atténuation alternatives rend l'application des correctifs impérative.
+<div id="fortinet-exploitation-active-de-la-vulnerabilite-critique-cve-2026-35393"></div>
 
-**Analyse de l'impact** : Impact critique sur la sécurité périmétrique des entreprises utilisant Fortinet pour la gestion de leurs terminaux, pouvant mener à un compromis total du réseau interne.
+## Fortinet : Exploitation active de la vulnérabilité critique CVE-2026-35616
+Une vulnérabilité critique d'improper access control (CVE-2026-35616) affecte les versions 7.4.5 et 7.4.6 de FortiClient Enterprise Management Server (EMS). Cette faille permet à un attaquant non authentifié de bypasser les vérifications de l'API EMS via des requêtes HTTP forgées. Des tentatives d'exploitation en mode "zero-day" ont été observées dès le 31 mars 2026. Une fois l'authentification contournée, l'attaquant obtient des privilèges administratifs complets sur le serveur. Ce contrôle permet de modifier les politiques de sécurité des endpoints et de distribuer des charges utiles malveillantes aux appareils enrôlés. CISA a ajouté cette vulnérabilité à son catalogue KEV le 6 avril avec un délai de remédiation très court. Le score CVSS est évalué à 9.1 ou 9.8 selon les sources, soulignant sa dangerosité extrême. Fortinet a publié un hotfix d'urgence en attendant la version permanente 7.4.7. Les instances exposées sur internet sont les plus à risque.
 
-**Recommandations** :
-*   Appliquer immédiatement les hotfixes pour les versions 7.4.5 et 7.4.6 de FortiClient EMS.
-*   Isoler les serveurs EMS d'Internet si le correctif ne peut être appliqué immédiatement.
-*   Surveiller les logs HTTP pour des requêtes inhabituelles vers les API de gestion EMS.
-
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (exploité en "wild") |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br> * T1068: Exploitation for Privilege Escalation |
-| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni dans l'article au-delà de la CVE-ID.``` |
-
-### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/new-fortinet-forticlient-ems-flaw-cve-2026-35616-exploited-in-attacks/
-
-<br>
-<br>
-
-<div id="campagne-massive-dextraction-de-secrets-via-react2shell"></div>
-
-## [Hackers exploit React2Shell in automated credential theft campaign]
-Le groupe UAT-10608 mène une campagne automatisée d'envergure ciblant la vulnérabilité React2Shell (CVE-2025-55182) dans les applications Next.js. Au moins 766 hôtes ont été compromis en seulement 24 heures pour dérober des secrets critiques. Les attaquants utilisent un framework nommé "NEXUS Listener" pour gérer l'exfiltration massive de données. Les informations ciblées incluent les identifiants AWS/GCP/Azure, les clés SSH privées, les tokens GitHub et les variables d'environnement. Le vol s'effectue via des scripts placés dans les répertoires temporaires des serveurs compromis. Cette campagne facilite les attaques ultérieures sur la chaîne d'approvisionnement et les mouvements latéraux via SSH. Cisco Talos a pu analyser un panneau de contrôle exposé, révélant l'ampleur du butin. Les victimes sont réparties mondialement chez divers fournisseurs cloud.
-
-**Analyse de l'impact** : Risque majeur de compromission de l'infrastructure cloud et de fuite de données massives via le vol de tokens d'accès à privilèges élevés.
+**Analyse de l'impact** : L'impact est majeur car le serveur EMS centralise la gestion de la sécurité de tout le parc informatique ; sa compromission équivaut à un contrôle total sur les postes de travail et serveurs de l'entreprise.
 
 **Recommandations** :
-*   Mettre à jour les frameworks Next.js et auditer l'exposition des données côté serveur.
-*   Rotation immédiate de tous les secrets (clés API, SSH, tokens cloud) en cas de suspicion.
-*   Activer le scan de secrets et appliquer le principe du moindre privilège pour les containers.
+* Appliquer immédiatement le hotfix Fortinet pour les versions EMS 7.4.5 et 7.4.6.
+* Restreindre l'accès à l'interface API EMS aux réseaux de confiance uniquement (VPN, proxy d'identité).
+* Analyser les logs API pour détecter des appels inhabituels ou des exécutions de commandes suspectes remontant jusqu'au 31 mars 2026.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UAT-10608 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1505: Server Software Component <br> * T1555: Credentials from Password Stores <br> * T1048: Exfiltration Over Alternative Protocol |
-| Observables & Indicateurs de compromission | ```* NEXUS Listener framework <br> * Exfiltration via port 8080 <br> * Scripts malveillants dans /tmp``` |
+| Groupe ou acteur malveillant | Non spécifié (exploitation opportuniste détectée par watchTowr) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application |
+| Observables & Indicateurs de compromission | ```Requêtes HTTP malveillantes vers les endpoints de l'API EMS.``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/hackers-exploit-react2shell-in-automated-credential-theft-campaign/
+* https://fieldeffect.com/blog/fortinet-releases-forticlient-ems-hotfix
+* https://cybersecuritynews.com/cisa-warns-fortinet-vulnerability/
+* https://go.theregister.com/feed/www.theregister.com/2026/04/06/forticlient_ems_bug_exploited/
 
 <br>
 <br>
 
-<div id="convergence-cyber-cinetique-dans-le-conflit-us-israel-iran"></div>
+<div id="bluehammer-fuite-dun-exploit-zero-day-pour-windows"></div>
 
-## [Monitoring Cyberattacks Directly Linked to the US-Israel-Iran Military Conflict]
-Le conflit entre les États-Unis, Israël et l'Iran a généré une période de cyber-guerre intensive sans précédent. Une campagne de spyware iranienne cible actuellement les civils israéliens via de fausses applications de localisation d'abris anti-bombes. Ces SMS malveillants sont envoyés précisément pendant les frappes de missiles pour maximiser les téléchargements sous l'effet de la panique. Le groupe Code Blue signale un virage stratégique iranien du "Ransomware-as-a-Service" vers le "Wiper-as-a-Service". Ce modèle permet de distribuer des outils destructeurs identiques à divers groupes proxies pour compliquer l'attribution. En Iran, la coupure quasi-totale d'Internet (1% de connectivité) entre dans son 37ème jour pour museler la population. Près de 5 800 cyberattaques ont été enregistrées contre les intérêts américains et israéliens depuis le début des hostilités.
+## BlueHammer : Fuite d'un exploit Zero-Day pour Windows
+Un chercheur en sécurité mécontent du traitement de son rapport par Microsoft a publié un exploit fonctionnel pour une vulnérabilité de Windows baptisée "BlueHammer". Cette faille de type Local Privilege Escalation (LPE) combine un TOCTOU (time-of-check to time-of-use) et une confusion de chemin. L'exploit permet à un utilisateur local d'accéder à la base de données SAM (Security Account Manager) qui contient les condensats de mots de passe. En obtenant ces accès, un attaquant peut élever ses privilèges jusqu'au niveau SYSTEM, prenant ainsi le contrôle total de la machine. L'exploit a été confirmé comme fonctionnel sur les versions clientes de Windows, bien que des instabilités subsistent sur Windows Server. Microsoft considère cette faille comme un Zero-day puisqu'aucun correctif n'est disponible à ce jour. Le code a été diffusé via un dépôt GitHub par l'alias "Chaotic Eclipse".
 
-**Analyse de l'impact** : Escalade de la menace destructive (wipers) et utilisation tactique du cyber pour soutenir des opérations psychologiques et cinétiques en temps réel.
+**Analyse de l'impact** : Risque élevé de compromission complète des postes de travail par des utilisateurs malveillants ou via des logiciels malveillants déjà présents sur le système.
 
 **Recommandations** :
-*   Renforcer la vigilance sur les menaces mobiles (SMishing) ciblant les employés en zones de conflit.
-*   Bloquer les flux réseau entrants provenant de plages IP iraniennes non nécessaires.
-*   Maintenir des sauvegardes "hors ligne" robustes face à la recrudescence des malwares de type wiper.
+* Surveiller les accès inhabituels aux fichiers de la base SAM.
+* Limiter l'accès physique et logique aux machines sensibles jusqu'à la sortie d'un patch officiel.
+* Renforcer la surveillance des processus suspects tentant de spawner un shell avec les privilèges SYSTEM.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Handala Hack, IRGC, 313 Team, Fox Kitten |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Spearphishing Service <br> * T1485: Data Destruction <br> * T1471: Data Encrypted for Impact (Pseudo-ransomware) |
-| Observables & Indicateurs de compromission | ```* Malware: Shamoon 4.0 <br> * App: Fake Bomb Shelter (Android) <br> * Tunnels: NetBird``` |
+| Groupe ou acteur malveillant | Chaotic Eclipse / Nightmare-Eclipse (chercheur) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1068: Exploitation for Privilege Escalation <br/> * T1003.002: Security Account Manager |
+| Observables & Indicateurs de compromission | ```Dépôt GitHub Nightmare-Eclipse/BlueHammer (PoC).``` |
 
 ### Source (url) du ou des articles
-* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+* https://www.bleepingcomputer.com/news/security/disgruntled-researcher-leaks-bluehammer-windows-zero-day-exploit/
 
 <br>
 <br>
 
-<div id="analyse-technique-dune-infection-par-script-cmd-malveillant"></div>
+<div id="drift-protocol-vol-de-280m-par-ingenierie-sociale-physique-lazarus"></div>
 
-## [Image or Malware? Read until the end and answer in comments]
-Une analyse détaillée d'un script `.cmd` malveillant révèle une chaîne d'infection sophistiquée visant les systèmes Windows. Le script débute par une escalade de privilèges via PowerShell pour s'exécuter en tant qu'administrateur. Il configure immédiatement des exclusions dans Windows Defender pour son répertoire d'installation caché. Le malware utilise `curl.exe` pour télécharger un payload déguisé en image `.jpg`, qui est ensuite renommé en `.zip` et extrait. La persistance est établie via une tâche planifiée nommée "IntelGraphicsTask" pour paraître légitime. Le script finalise l'infection par un redémarrage forcé du système sous 60 secondes avant de s'auto-supprimer. L'analyse des fichiers extraits (DLL et exécutable) montre des techniques d'obfuscation et l'utilisation de fonctions dupliquées pour tromper les analystes.
+## Drift Protocol : Vol de 280M$ par ingénierie sociale physique (Lazarus)
+Le protocole Drift (Solana) a été victime d'un vol de 280 millions de dollars suite à une opération de longue haleine attribuée au groupe nord-coréen Lazarus (UNC4736). L'attaque se distingue par l'utilisation d'une infiltration physique : les attaquants ont rencontré des contributeurs de Drift en personne lors de conférences crypto mondiales. Se faisant passer pour une société de trading quantitatif, ils ont tissé des liens pendant six mois via Telegram. L'accès initial a probablement été obtenu via un dépôt de code malveillant partagé ou une application de test compromise (TestFlight). Les attaquants ont ensuite pris le contrôle du Conseil de Sécurité pour drainer les fonds en seulement 12 minutes. Cette opération montre un niveau de sophistication extrême, mélangeant espionnage humain et cybercriminalité financière.
 
-**Analyse de l'impact** : Risque de prise de contrôle totale de la machine victime avec des mécanismes d'évasion d'antivirus efficaces au moment de l'infection.
+**Analyse de l'impact** : Impact dévastateur sur l'écosystème DeFi Solana et démonstration d'une nouvelle frontière dans les méthodes d'accès initial.
 
 **Recommandations** :
-*   Interdire l'exécution de scripts `.cmd` ou `.bat` provenant de sources non fiables (e-mail).
-*   Monitorer l'utilisation de `Add-MpPreference` dans PowerShell via les outils EDR/SIEM.
-*   Rechercher la présence de tâches planifiées suspectes comme "IntelGraphicsTask".
+* Instaurer des procédures de vérification strictes pour tout nouveau partenaire ou collaborateur rencontré lors d'événements.
+* Auditer les outils de développement (VSCode/Cursor) et interdire l'utilisation d'applications non vérifiées via TestFlight.
+* Mettre en place des délais de retrait (timelocks) sur les pouvoirs administratifs multisig.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1548.002: Bypass User Account Control <br> * T1053.005: Scheduled Task <br> * T1562.001: Disable or Modify Tools (AV Exclusion) |
-| Observables & Indicateurs de compromission | ```* URL: hxxps://search[.]app/a3qBe <br> * URL: hxxps://is[.]gd/cjIjvU <br> * Tâche: \Microsoft\Windows\IntelGraphicsTask``` |
+| Groupe ou acteur malveillant | UNC4736 (Lazarus / AppleJeus) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566: Phishing <br/> * T1591: Gather Victim Org Information |
+| Observables & Indicateurs de compromission | ```Comptes Telegram supprimés post-attaque.``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190358/hacking/image-or-malware-read-until-the-end-and-answer-in-comments.html
+* https://www.bleepingcomputer.com/news/security/drift-280m-crypto-theft-linked-to-6-month-in-person-operation/
 
 <br>
 <br>
 
-<div id="attaque-par-canal-dapprovisionnement-visant-le-paquet-npm-axios"></div>
+<div id="storm-1175-lelite-du-ransomware-medusa-et-lexploitation-ultra-rapide"></div>
 
-## [North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package]
-L'acteur nord-coréen UNC1069 a réussi à détourner le compte d'un mainteneur du paquet npm très populaire "Axios". Cette attaque par la chaîne d'approvisionnement a permis d'injecter des versions malveillantes du paquet pour diffuser un cheval de Troie (RAT). L'objectif principal semble être le vol d'identifiants de développeurs et l'exfiltration de secrets de configuration. L'attaque utilise des techniques d'injection de dépendances pour se propager silencieusement dans les projets utilisant Axios. Google et SentinelOne ont lié cette activité à l'APT BlueNoroff, connu pour ses motivations financières. L'incident souligne la fragilité des écosystèmes de gestion de paquets et l'impact démesuré du compromis d'un seul compte clé.
+## Storm-1175 : L'élite du Ransomware Medusa et l'exploitation ultra-rapide
+Storm-1175, un groupe cybercriminel basé en Chine, mène des campagnes de ransomware Medusa à une vélocité exceptionnelle. Le groupe cible les vulnérabilités sur les systèmes web-facing dès leur divulgation, parfois moins de 24 heures après l'annonce (ex: CVE-2025-31324 sur SAP NetWeaver). Ils utilisent également des vulnérabilités zero-day, notamment sur SmarterMail (CVE-2026-23760) et GoAnywhere MFT. Leur chaîne d'attaque est optimisée pour passer de l'accès initial à l'exfiltration de données en quelques jours, voire 24 heures. Ils privilégient les outils RMM (Atera, AnyDesk) pour la persistance et Rclone pour l'exfiltration massive. La phase finale utilise souvent PDQ Deployer pour distribuer la charge utile Medusa sur l'ensemble du réseau compromis.
 
-**Analyse de l'impact** : Risque systémique pour des millions d'applications web dépendant d'Axios, pouvant mener à des compromissions en cascade de serveurs de production.
+**Analyse de l'impact** : Risque critique pour les organisations de santé, d'éducation et de finance en raison de la rapidité de l'impact (moins de 24h).
 
 **Recommandations** :
-*   Vérifier les versions des paquets Axios utilisées et s'assurer de ne pas utiliser de versions compromises (vérifier les signatures).
-*   Implémenter le "lock-filing" (package-lock.json) et auditer les changements de dépendances.
-*   Utiliser des outils de SCA (Software Composition Analysis) pour détecter les paquets malveillants connus.
+* Patching ultra-rapide (moins de 24h) pour tout actif exposé sur internet.
+* Activer la protection anti-tamper sur les solutions EDR/AV pour empêcher la désactivation des protections.
+* Surveiller et bloquer l'utilisation non autorisée d'outils de synchronisation comme Rclone.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UNC1069 (BlueNoroff / Corée du Nord) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.001: Compromise Software Dependencies <br> * T1552: Unsecured Credentials |
-| Observables & Indicateurs de compromission | ```* Paquet: axios (npm) <br> * Malware: RustBucket variant / Axios RAT``` |
+| Groupe ou acteur malveillant | Storm-1175 (affilié Medusa) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br/> * T1021.001: Remote Desktop Protocol <br/> * T1567.002: Exfiltration to Cloud Storage |
+| Observables & Indicateurs de compromission | ```IPs: 185.135.86.149, 134.195.91.224 / SHA-256: 0cefeb6210b7103fd32b996beff518c9b6e1691a97bb1cda7f5fb57905c4be96``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190368/breaking-news/security-affairs-newsletter-round-571-by-pierluigi-paganini-international-edition.html
-* https://securityaffairs.com/190379/malware/security-affairs-malware-newsletter-round-91.html
+* https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/
+* https://securityonline.info/storm-1175-medusa-ransomware-high-velocity-attacks/
+
+<br>
+<br>
+
+<div id="gpubreach-prise-de-controle-systeme-via-rowhammer-sur-gpu"></div>
+
+## GPUBreach : Prise de contrôle système via Rowhammer sur GPU
+Des chercheurs de l'Université de Toronto ont présenté "GPUBreach", une attaque exploitant le phénomène Rowhammer sur les mémoires GDDR6 des GPU. Contrairement aux attaques précédentes, GPUBreach permet une élévation de privilèges jusqu'au niveau root sans avoir à désactiver l'IOMMU (Input-Output Memory Management Unit). En induisant des inversions de bits (bit-flips) dans les tables de pages du GPU, un noyau CUDA non privilégié peut obtenir un accès complet en lecture/écriture à la mémoire système. Cette capacité est ensuite couplée à l'exploitation de bugs de sécurité mémoire dans les pilotes NVIDIA pour compromettre l'hôte CPU. L'attaque a été démontrée sur des GPU NVIDIA RTX A6000, couramment utilisés pour l'entraînement d'IA.
+
+**Analyse de l'impact** : Menace sérieuse pour les environnements de Cloud et d'IA où des utilisateurs tiers peuvent exécuter du code sur des ressources GPU partagées.
+
+**Recommandations** :
+* Activer le mode ECC (Error-Correcting Code) au niveau système sur les GPU compatibles.
+* Isoler physiquement les workloads GPU critiques.
+* Mettre à jour les pilotes NVIDIA dès la sortie des patches de sécurité mentionnant les protections contre Rowhammer.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non applicable (recherche académique) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1068: Exploitation for Privilege Escalation <br/> * T1535: Unused/Unsupported Cloud Regions (via GPU manipulation) |
+| Observables & Indicateurs de compromission | ```Comportements anormaux d'accès mémoire via CUDA.``` |
+
+### Source (url) du ou des articles
+* https://www.bleepingcomputer.com/news/security/new-gpubreach-attack-enables-system-takeover-via-gpu-rowhammer/
+
+<br>
+<br>
+
+<div id="doxxing-des-leaders-de-revil-et-gandcrab-par-la-police-allemande"></div>
+
+## Doxxing des leaders de REvil et GandCrab par la police allemande
+La police fédérale allemande (BKA) a identifié officiellement deux ressortissants russes comme étant les leaders des opérations ransomware GandCrab et REvil entre 2019 et 2021. Daniil Maksimovich Shchukin (31 ans), connu sous l'alias "UNKN" ou "UNKNOWN", et Anatoly Sergeevitsch Kravchuk (43 ans) sont accusés d'avoir orchestré au moins 130 extorsions en Allemagne. Shchukin agissait comme le visage du groupe sur les forums cybercriminels (XSS). REvil, successeur de GandCrab, a été pionnier dans la "double extorsion". Le BKA a diffusé des photos et des détails personnels, incluant des tatouages, pour aider à leur localisation. Les autorités estiment qu'ils se trouvent actuellement en Russie, ce qui limite les possibilités d'arrestation immédiate.
+
+**Analyse de l'impact** : Victoire symbolique et opérationnelle pour les forces de l'ordre, limitant la liberté de mouvement des acteurs ciblés et décourageant potentiellement d'autres cybercriminels.
+
+**Recommandations** :
+* Ne pas payer de rançon, car cela finance directement ces structures identifiées.
+* Maintenir des sauvegardes hors ligne robustes, REvil étant spécialisé dans l'exfiltration et le chiffrement massif.
+* Signaler toute activité suspecte liée aux alias identifiés aux autorités compétentes.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | REvil / GandCrab |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1486: Data Encrypted for Impact <br/> * T1021.001: RDP Lateral Movement |
+| Observables & Indicateurs de compromission | ```Portefeuille crypto de Shchukin contenant plus de 317 000 $.``` |
+
+### Source (url) du ou des articles
+* https://www.bleepingcomputer.com/news/security/german-authorities-identify-revil-and-gangcrab-ransomware-bosses/
+* https://krebsonsecurity.com/2026/04/germany-doxes-unkn-head-of-ru-ransomware-gangs-revil-gandcrab/
+
+<br>
+<br>
+
+<div id="menaces-sur-kubernetes-augmentation-massive-des-vols-de-jetons"></div>
+
+## Menaces sur Kubernetes : Augmentation massive des vols de jetons
+Unit 42 (Palo Alto Networks) signale une augmentation de 282 % des opérations de vol de jetons Kubernetes en un an. Le secteur informatique est le plus touché (78 % de l'activité). L'attaque type consiste à obtenir une exécution de code initiale (via des vulnérabilités comme React2Shell - CVE-2025-55182), puis à extraire les jetons de compte de service (Service Account Tokens) montés dans les pods. Ces jetons sont ensuite utilisés pour interagir avec l'API Kubernetes, énumérer les secrets et pivoter vers l'infrastructure Cloud sous-jacente. Le groupe Lazarus a notamment utilisé ces techniques pour compromettre les systèmes financiers d'échanges de crypto-monnaies. Les mauvaises configurations de RBAC (Role-Based Access Control) restent le principal facilitateur de ces escalades de privilèges.
+
+**Analyse de l'impact** : Risque systémique pour les infrastructures Cloud-native où une seule compromission de conteneur peut mener à un contrôle total du cluster et du compte Cloud.
+
+**Recommandations** :
+* Imposer le principe du moindre privilège via des rôles RBAC strictement limités.
+* Utiliser des jetons de compte de service à durée de vie courte et projetés (projected tokens).
+* Activer et surveiller les logs d'audit Kubernetes pour détecter des appels API anormaux.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Slow Pisces (Lazarus / TraderTraitor) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1613: Container and Resource Discovery <br/> * T1528: Steal Application Access Token |
+| Observables & Indicateurs de compromission | ```Accès au fichier /var/run/secrets/kubernetes.io/serviceaccount/token par des processus inhabituels (curl, wget).``` |
+
+### Source (url) du ou des articles
+* https://unit42.paloaltonetworks.com/modern-kubernetes-threats/
