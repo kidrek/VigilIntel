@@ -1,0 +1,967 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape of early 2026 is marked by an intensification of hybrid conflicts, particularly on the US-Israel-Iran axis, where cyber operations serve as extensions of kinetic strikes. Industrialization of 'edge' vulnerability exploitation (SOHO routers) is prominent, as seen in APT28's Operation FrostArmada, which uses massive DNS hijacking to bypass MFA via Adversary-in-the-Middle attacks. The speed of criminal groups like Storm-1175, capable of weaponizing exploits within hours, nearly eliminates traditional patching windows. AI agents introduce new critical vectors, such as sandbox escapes in AWS AgentCore, while global cybercrime costs hit a record $21 billion, driven by AI-powered scams and crypto-assets. Threat actors are also targeting Web3 software supply chains (Velora) and exploiting SaaS notification pipelines (GitHub/Jira) for phishing.",
+      "fr": "Le paysage cyber de ce début d'année 2026 est marqué par une intensification des conflits hybrides, particulièrement sur l'axe États-Unis-Israël-Iran, où le cyber sert de prolongement aux frappes cinétiques. On observe une industrialisation de l'exploitation des vulnérabilités « edge » (routeurs SOHO), illustrée par l'opération FrostArmada d'APT28, qui privilégie le détournement DNS massif pour contourner le MFA via des attaques Adversary-in-the-Middle. La célérité des groupes criminels, tel Storm-1175, capable d'armer des exploits en quelques heures, réduit quasiment à néant les fenêtres de correctifs traditionnelles. L'essor des agents IA introduit de nouveaux vecteurs critiques, comme l'évasion de sandbox sur AWS AgentCore, tandis que le coût global de la cybercriminalité atteint 21 milliards de dollars, porté par les arnaques dopées à l'IA et aux crypto-actifs. La menace se déplace également vers la supply chain logicielle Web3 (Velora) et l'exploitation des pipelines de notification SaaS (GitHub/Jira) pour blanchir le phishing."
+    },
+    "date": "2026-04-08"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Technologie_et_Télecom"
+        ]
+      },
+      "theme": {
+        "en": "US-Iran-Israel Hybrid Conflict",
+        "fr": "Conflit hybride US-Iran-Israël"
+      },
+      "description": {
+        "en": "Israeli strikes on South Pars and Iranian threats against the Stargate AI data center in Abu Dhabi highlight the intersection of energy, AI, and kinetic warfare.",
+        "fr": "Frappes israéliennes sur South Pars et menaces iraniennes contre le centre de données Stargate AI à Abou Dabi, illustrant l'intersection entre énergie, IA et guerre cinétique."
+      },
+      "recommandations": [
+        {
+          "en": "Increase physical and cyber monitoring of critical data centers in the Middle East.",
+          "fr": "Augmenter la surveillance physique et cyber des centres de données critiques au Moyen-Orient."
+        },
+        {
+          "en": "Implement regional geo-fencing for sensitive infrastructure management interfaces.",
+          "fr": "Mettre en œuvre un géo-fencing régional pour les interfaces de gestion des infrastructures sensibles."
+        }
+      ],
+      "tags": [
+        "Geopolitics",
+        "Middle East",
+        "Data Centers"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Finance",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Finance",
+          "Médias_et_Communication"
+        ]
+      },
+      "theme": {
+        "en": "Russian Internal Censorship Impact",
+        "fr": "Impact de la censure interne en Russie"
+      },
+      "description": {
+        "en": "A major outage crippled Russian banking apps and metro payments nationwide due to governmental VPN blocking efforts backfiring.",
+        "fr": "Une panne majeure a paralysé les applications bancaires et les paiements du métro en Russie à cause d'un blocage gouvernemental des VPN ayant entraîné des effets collatéraux."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify payment processing dependencies to avoid single points of failure related to network censorship.",
+          "fr": "Diversifier les dépendances de traitement des paiements pour éviter les points de défaillance uniques liés à la censure réseau."
+        },
+        {
+          "en": "Maintain offline payment capabilities for critical public transport systems.",
+          "fr": "Maintenir des capacités de paiement hors-ligne pour les systèmes de transport public critiques."
+        }
+      ],
+      "tags": [
+        "Russia",
+        "Censorship",
+        "Banking"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190464/security/major-outage-cripples-russian-banking-apps-and-metro-payments-nationwide.html"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Iranian Internet Blackout",
+        "fr": "Blackout internet en Iran"
+      },
+      "description": {
+        "en": "Iran maintains a national internet blackout for the 39th consecutive day, limiting connectivity to 1%.",
+        "fr": "L'Iran maintient un blackout internet national pour la 39ème journée consécutive, limitant la connectivité à 1%."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure satellite-based communication backups for diplomatic and NGO missions in the region.",
+          "fr": "Assurer des sauvegardes de communication par satellite pour les missions diplomatiques et les ONG dans la région."
+        },
+        {
+          "en": "Monitor Iranian threat actor activity spikes during internal connectivity restorations.",
+          "fr": "Surveiller les pics d'activité des acteurs de menaces iraniens lors des restaurations de connectivité interne."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Blackout",
+        "Human Rights"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Targeting of Industrial Control Systems (PLC)",
+        "fr": "Ciblage des automates industriels (PLC)"
+      },
+      "description": {
+        "en": "US agencies alert on systematic Iranian targeting of Rockwell/Allen-Bradley and Unitronics PLCs in critical infrastructure.",
+        "fr": "Les agences américaines alertent sur le ciblage systématique des automates industriels Rockwell/Allen-Bradley et Unitronics par l'Iran dans les infrastructures critiques."
+      },
+      "recommandations": [
+        {
+          "en": "Change default passwords on all PLC and HMI interfaces immediately.",
+          "fr": "Changer immédiatement les mots de passe par défaut sur toutes les interfaces PLC et HMI."
+        },
+        {
+          "en": "Disconnect OT systems from the public internet and use secure gateways.",
+          "fr": "Déconnecter les systèmes OT d'Internet et utiliser des passerelles sécurisées."
+        }
+      ],
+      "tags": [
+        "OT",
+        "ICS",
+        "PLC",
+        "Iran"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Agriculture_and_Environment"
+        ],
+        "fr": [
+          "Technologie_et_Télecom",
+          "Agriculture_et_Environnement"
+        ]
+      },
+      "theme": {
+        "en": "EU AI Act Energy Consumption Consultation",
+        "fr": "Consultation AI Act sur la consommation énergétique"
+      },
+      "description": {
+        "en": "European Commission consultation on measuring the environmental footprint of general-purpose AI models.",
+        "fr": "Consultation de la Commission européenne sur la mesure de l'empreinte environnementale des modèles d'IA généralistes."
+      },
+      "recommandations": [
+        {
+          "en": "Review AI infrastructure energy efficiency to comply with upcoming environmental transparency requirements.",
+          "fr": "Revoir l'efficacité énergétique de l'infrastructure IA pour se conformer aux futures exigences de transparence environnementale."
+        },
+        {
+          "en": "Participate in the consultation to influence sustainable AI framework development.",
+          "fr": "Participer à la consultation pour influencer le développement du cadre de l'IA durable."
+        }
+      ],
+      "tags": [
+        "AI Act",
+        "Environment",
+        "Regulation"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-measuring-energy-consumption-and-emissions-ai-models-and-systems"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "French E-Invoicing Reform",
+        "fr": "Réforme de la facturation électronique en France"
+      },
+      "description": {
+        "en": "Implementation of mandatory e-invoicing in France to combat VAT fraud, perceived as a new strategic data target.",
+        "fr": "Mise en œuvre de la facturation électronique obligatoire en France pour lutter contre la fraude à la TVA, perçue comme un nouveau gisement de données stratégiques."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure PDP (Partner Dematerialization Platforms) comply with high cybersecurity standards.",
+          "fr": "S'assurer que les PDP (Plateformes de Dématérialisation Partenaires) respectent des standards de cybersécurité élevés."
+        },
+        {
+          "en": "Monitor for phishing campaigns impersonating the new billing portals.",
+          "fr": "Surveiller les campagnes de phishing usurpant l'identité des nouveaux portails de facturation."
+        }
+      ],
+      "tags": [
+        "France",
+        "Tax",
+        "Data Privacy"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/facturation-electronique-tva/"
+      ],
+      "date": "2026-04-07"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Jones Day",
+      "threat_actor": "Silent Ransom Group",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "SRG"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "description": {
+        "en": "Exfiltration of files for 10 clients via a targeted phishing attack.",
+        "fr": "Exfiltration de fichiers pour 10 clients via une attaque de phishing ciblée."
+      },
+      "mitre_ttps": [
+        "T1566: Phishing"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement advanced email filtering and sandboxing for legal firms.",
+          "fr": "Mettre en œuvre un filtrage d'email avancé et du sandboxing pour les cabinets juridiques."
+        },
+        {
+          "en": "Conduct data minimization audits to reduce impact during breaches.",
+          "fr": "Effectuer des audits de minimisation des données pour réduire l'impact lors des violations."
+        }
+      ],
+      "tags": [
+        "Legal",
+        "Phishing",
+        "Data Theft"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/06/jones-day-confirms-limited-breach-after-phishing-attack-by-silent-ransom-group/"
+      ],
+      "date": "2026-04-06"
+    },
+    {
+      "victim": "Snowflake Customers",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "ShinyHunters"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie_et_Télecom",
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Data theft affecting multiple companies following the compromise of SaaS integrator Anodot.",
+        "fr": "Vol de données affectant plusieurs entreprises suite à la compromission de l'intégrateur SaaS Anodot."
+      },
+      "mitre_ttps": [
+        "T1537: Transfer Data to Cloud Account"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce Multi-Factor Authentication on all SaaS administrative accounts.",
+          "fr": "Imposer l'authentification multi-facteurs sur tous les comptes administratifs SaaS."
+        },
+        {
+          "en": "Audit third-party integrator permissions and API tokens periodically.",
+          "fr": "Auditer périodiquement les permissions des intégrateurs tiers et les jetons d'API."
+        }
+      ],
+      "tags": [
+        "SaaS",
+        "Supply Chain",
+        "Cloud Security"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/snowflake-customers-hit-in-data-theft-attacks-after-saas-integrator-breach/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "victim": "Stryker",
+      "threat_actor": "Handala Hack",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [
+        "Handala"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Massive erasure of 80,000 devices via the abuse of Microsoft Intune MDM.",
+        "fr": "Effacement massif de 80 000 appareils via l'abus du MDM Microsoft Intune."
+      },
+      "mitre_ttps": [
+        "T1485: Data Destruction",
+        "T1078.004: Cloud Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict MDM remote wipe permissions to a limited set of verified administrators.",
+          "fr": "Restreindre les permissions d'effacement à distance du MDM à un groupe limité d'administrateurs vérifiés."
+        },
+        {
+          "en": "Monitor MDM audit logs for unusual mass-action commands.",
+          "fr": "Surveiller les journaux d'audit du MDM pour détecter des commandes d'actions groupées inhabituelles."
+        }
+      ],
+      "tags": [
+        "MDM",
+        "Healthcare",
+        "Wiper"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-08"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-59528",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+      "product": "Flowise",
+      "vendor": "FlowiseAI",
+      "description": {
+        "en": "Remote code execution via JS injection in the CustomMCP node due to lack of validation in open-source AI platform Flowise.",
+        "fr": "Exécution de code à distance via injection JS dans le nœud CustomMCP en raison d'un manque de validation dans la plateforme IA Flowise."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Flowise to the latest version and disable unused nodes.",
+          "fr": "Mettre à jour Flowise vers la dernière version et désactiver les nœuds inutilisés."
+        },
+        {
+          "en": "Implement strict input validation for all custom AI workflow nodes.",
+          "fr": "Mettre en œuvre une validation stricte des entrées pour tous les nœuds de workflow IA personnalisés."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190471/security/attackers-exploit-critical-flowise-flaw-cve-2025-59528-for-remote-code-execution.html"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-0740",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:ninjaforms:ninja_forms:*:*:*:*:*:wordpress:*:*",
+      "product": "Ninja Forms",
+      "vendor": "Saturday Drive",
+      "description": {
+        "en": "Arbitrary file upload in Ninja Forms WordPress plugin allowing remote code execution.",
+        "fr": "Téléchargement de fichier arbitraire dans le plugin WordPress Ninja Forms permettant l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Patch Ninja Forms immediately and verify file upload directory permissions.",
+          "fr": "Patcher Ninja Forms immédiatement et vérifier les permissions du répertoire de téléchargement de fichiers."
+        },
+        {
+          "en": "Use a Web Application Firewall (WAF) to block malicious file upload attempts.",
+          "fr": "Utiliser un Web Application Firewall (WAF) pour bloquer les tentatives de téléchargement de fichiers malveillants."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-flaw-in-ninja-forms-wordpress-plugin/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-35616",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.1",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:fortinet:forticlient_ems:*:*:*:*:*:*:*:*",
+      "product": "FortiClient EMS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Improper access control in API allowing authentication bypass and privilege escalation.",
+        "fr": "Contrôle d'accès impropre dans l'API permettant un bypass d'authentification et une escalade de privilèges."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security updates provided by Fortinet for EMS products.",
+          "fr": "Appliquer les mises à jour de sécurité fournies par Fortinet pour les produits EMS."
+        },
+        {
+          "en": "Restrict access to the EMS management API to trusted administrative networks.",
+          "fr": "Restreindre l'accès à l'API de gestion EMS aux réseaux administratifs de confiance."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Privilege Escalation",
+        "Fortinet"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0400/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-1346",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:ibm:verify_identity_access:*:*:*:*:*:*:*:*",
+      "product": "IBM Verify Identity Access",
+      "vendor": "IBM",
+      "description": {
+        "en": "Privilege escalation allowing a local user to obtain ROOT rights on containers.",
+        "fr": "Escalade de privilèges permettant à un utilisateur local d'obtenir les droits ROOT sur les conteneurs."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Update IBM Verify Identity Access to the latest patched version.",
+          "fr": "Mettre à jour IBM Verify Identity Access vers la dernière version corrigée."
+        },
+        {
+          "en": "Harden container runtime configurations to prevent root escapes.",
+          "fr": "Durcir les configurations du runtime de conteneur pour prévenir les évasions root."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Privilege Escalation",
+        "Containers"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116366496766197307"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-99999",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "N/A",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows (BlueHammer)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Zero-day Local Privilege Escalation (LPE) involving TOCTOU and path confusion to obtain SYSTEM rights.",
+        "fr": "Zero-day d'escalade de privilèges locale (LPE) impliquant un TOCTOU et une confusion de chemin pour obtenir les droits SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply upcoming Microsoft security patches immediately upon release.",
+          "fr": "Appliquer les correctifs de sécurité Microsoft à venir dès leur publication."
+        },
+        {
+          "en": "Monitor system logs for unusual path traversals or symbolic link manipulations.",
+          "fr": "Surveiller les journaux système pour détecter des traversées de chemin inhabituelles ou des manipulations de liens symboliques."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "LPE"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/07/1-billion-microsoft-users-warned-as-angry-hacker-drops-0-day-exploit/"
+      ],
+      "date": "2026-04-07"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "FBI Cybercrime Report 2025: Record Losses",
+        "fr": "Rapport FBI 2025 sur la cybercriminalité : pertes record"
+      },
+      "description": {
+        "en": "Record $21 billion lost to cybercrime in 2025, with major increases in crypto-fraud and AI-driven scams.",
+        "fr": "Pertes record de 21 milliards de dollars liées à la cybercriminalité en 2025, avec une hausse majeure des fraudes aux cryptos et des arnaques basées sur l'IA."
+      },
+      "threat_actor": "Multiple (BEC, Crypto-scammers)",
+      "threat_actor_origin": "GLOBAL",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Finance",
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "ic3.gov"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1566.002: Spearphishing Link"
+      ],
+      "analyse": {
+        "en": "Investment fraud and crypto-scams ($11B) are the main drivers. Deepfakes and voice cloning are now significant components of the threat landscape.",
+        "fr": "La fraude à l'investissement et les crypto-arnaques (11Md$) sont les principaux moteurs. Les deepfakes et le clonage de voix sont désormais des composantes significatives du paysage des menaces."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen awareness regarding AI deepfakes and implement out-of-band verification for transfers.",
+          "fr": "Renforcer la sensibilisation aux deepfakes IA et implémenter une vérification hors-canal pour les transferts."
+        },
+        {
+          "en": "Monitor crypto-asset fraud vectors and investment platforms.",
+          "fr": "Surveiller les vecteurs de fraude aux crypto-actifs et les plateformes d'investissement."
+        }
+      ],
+      "tags": [
+        "Cybercrime",
+        "FBI",
+        "AI Scams",
+        "Crypto"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fbi-americans-lost-a-record-21-billion-to-cybercrime-last-year/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "Operation FrostArmada: APT28 SOHO Router DNS Hijacking",
+        "fr": "Opération FrostArmada : Détournement DNS sur routeurs SOHO par APT28"
+      },
+      "description": {
+        "en": "Global campaign targeting 18,000 MikroTik and TP-Link routers to steal M365 tokens through DNS hijacking.",
+        "fr": "Campagne mondiale ciblant 18 000 routeurs MikroTik et TP-Link pour voler des tokens M365 via détournement DNS."
+      },
+      "threat_actor": "APT28",
+      "threat_actor_origin": "RUSSIA",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [
+        "Forest Blizzard",
+        "Fancy Bear"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "64.120.31.96",
+          "79.141.160.78",
+          "23.106.120.119",
+          "79.141.173.211",
+          "185.117.89.32",
+          "185.237.166.55"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AiTM Toolkits"
+        ]
+      },
+      "mitre_ttps": [
+        "T1557: Adversary-in-the-Middle",
+        "T1584.002: DNS Server",
+        "T1098: Account Manipulation"
+      ],
+      "analyse": {
+        "en": "High risk of stealthy cloud account compromise (Azure/M365) bypassing MFA via session token theft.",
+        "fr": "Risque élevé de compromission furtive de comptes cloud (Azure/M365) contournant le MFA via le vol de jetons de session."
+      },
+      "recommandations": [
+        {
+          "en": "Replace obsolete SOHO equipment and enable certificate pinning via MDM.",
+          "fr": "Remplacer les équipements SOHO obsolètes et activer le pinning de certificat via MDM."
+        },
+        {
+          "en": "Monitor DHCP/DNS configuration changes on corporate and remote networks.",
+          "fr": "Surveiller les modifications de configuration DHCP/DNS sur les réseaux d'entreprise et distants."
+        }
+      ],
+      "tags": [
+        "APT28",
+        "DNS Hijacking",
+        "SOHO",
+        "M365"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/authorities-disrupt-dns-hijacks-used-to-steal-microsoft-365-logins/",
+        "https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "title": {
+        "en": "Storm-1175: Rapid Exploitation for Medusa Ransomware",
+        "fr": "Storm-1175 : Exploitation rapide pour le ransomware Medusa"
+      },
+      "description": {
+        "en": "Chinese-linked actor exploiting critical vulnerabilities within hours to deploy Medusa ransomware.",
+        "fr": "Acteur lié à la Chine exploitant des vulnérabilités critiques en quelques heures pour déployer le ransomware Medusa."
+      },
+      "threat_actor": "Storm-1175",
+      "threat_actor_origin": "CHINA",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences",
+          "Education_and_Research",
+          "Finance"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant",
+          "Éducation_et_Recherche",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Gaze.exe",
+          "AnyDesk",
+          "ScreenConnect",
+          "Rclone",
+          "PDQ Deployer"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1219: Remote Access Software",
+        "T1567.002: Exfiltration to Cloud Storage"
+      ],
+      "analyse": {
+        "en": "The reaction window for patching perimeter assets has shrunk to less than 24 hours.",
+        "fr": "La fenêtre de réaction pour le patching des actifs périmétriques est désormais réduite à moins de 24 heures."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize emergency patching of perimeter systems (Exchange, Ivanti).",
+          "fr": "Prioriser le patching d'urgence des systèmes périmétriques (Exchange, Ivanti)."
+        },
+        {
+          "en": "Strictly restrict unauthorized RMM tool usage and monitor Rclone activity.",
+          "fr": "Restreindre strictement l'usage d'outils RMM non autorisés et surveiller l'activité Rclone."
+        }
+      ],
+      "tags": [
+        "Medusa",
+        "Ransomware",
+        "Storm-1175"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/storm-1175-exploits-vulnerabilities-in-medusa-ransomware-ops"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "AWS AgentCore Sandbox Evasion",
+        "fr": "Évasion de sandbox AWS AgentCore"
+      },
+      "description": {
+        "en": "Method to bypass Amazon Bedrock AgentCore network isolation via DNS tunneling and MMDS vulnerability.",
+        "fr": "Méthode de contournement de l'isolation réseau d'Amazon Bedrock AgentCore via tunneling DNS et vulnérabilité MMDS."
+      },
+      "threat_actor": "N/A (Research)",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Research",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "dnshook.site"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1071.004: DNS Tunneling",
+        "T1552.005: Cloud Credentials"
+      ],
+      "analyse": {
+        "en": "Critical risk of data exfiltration from supposedly isolated AI agents using legacy metadata services.",
+        "fr": "Risque critique d'exfiltration de données depuis des agents IA supposés isolés utilisant des services de métadonnées hérités."
+      },
+      "recommandations": [
+        {
+          "en": "Migrate to MMDSv2 for all AgentCore agents and enable Route 53 DNS Firewall.",
+          "fr": "Migrer vers MMDSv2 pour tous les agents AgentCore et activer le pare-feu DNS Route 53."
+        },
+        {
+          "en": "Use VPC mode for complete network isolation of AI workloads.",
+          "fr": "Utiliser le mode VPC pour une isolation réseau complète des charges de travail IA."
+        }
+      ],
+      "tags": [
+        "AWS",
+        "AI",
+        "Sandbox Evasion",
+        "DNS Tunneling"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/bypass-of-aws-sandbox-network-isolation-mode/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "Velora DEX SDK Supply Chain Compromise",
+        "fr": "Compromission de la supply chain du SDK Velora DEX"
+      },
+      "description": {
+        "en": "Malicious code injection in npm package @velora-dex/sdk version 9.4.1 targeting DeFi/Web3 ecosystems.",
+        "fr": "Injection de code malveillant dans le package npm @velora-dex/sdk version 9.4.1 ciblant les écosystèmes DeFi/Web3."
+      },
+      "threat_actor": "UNKNOWN",
+      "threat_actor_origin": "UNKNOWN",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Finance",
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "89.36.224.5"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "install.sh",
+          "bm9odXAgYmFzaCAtYyAiJChjdXJs"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Malicious Software Compilation",
+        "T1059.004: Unix Shell"
+      ],
+      "analyse": {
+        "en": "Likely injection at the build pipeline level; targeting private keys and environment variables in Web3 environments.",
+        "fr": "Injection probable au niveau du pipeline de build ; ciblage des clés privées et des variables d'environnement dans les environnements Web3."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately uninstall version 9.4.1 and audit lock files.",
+          "fr": "Désinstaller immédiatement la version 9.4.1 et auditer les fichiers lock."
+        },
+        {
+          "en": "Rotate all secrets (API keys, server access) exposed to the compromised SDK.",
+          "fr": "Effectuer une rotation de tous les secrets (clés API, accès serveurs) exposés au SDK compromis."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "Web3",
+        "npm",
+        "Malware"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/velora-hacked"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "Anthropic Mythos: AI-Powered Vulnerability Detection",
+        "fr": "Anthropic Mythos : Détection de vulnérabilités par IA"
+      },
+      "description": {
+        "en": "Release of a highly capable model for automated vulnerability discovery, with restricted access to prevent misuse.",
+        "fr": "Sortie d'un modèle hautement performant pour la découverte automatisée de vulnérabilités, avec un accès restreint pour prévenir les abus."
+      },
+      "threat_actor": "N/A (Defensive Model)",
+      "threat_actor_origin": "US",
+      "threat_actor_type": "Security Company",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "fr": [
+          "Technologie_et_Télecom",
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Mythos"
+        ]
+      },
+      "mitre_ttps": [
+        "T1595: Active Scanning"
+      ],
+      "analyse": {
+        "en": "The 'Mythos' model represents an arms race in AI between defensive vulnerability hunting and potential automated offensive exploitation.",
+        "fr": "Le modèle 'Mythos' représente une course aux armements IA entre la chasse défensive aux vulnérabilités et l'exploitation offensive automatisée potentielle."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate AI-assisted code reviews while maintaining human validation of results.",
+          "fr": "Intégrer des revues de code assistées par IA tout en maintenant une validation humaine des résultats."
+        },
+        {
+          "en": "Monitor for the emergence of unregulated offensive AI scanning tools.",
+          "fr": "Surveiller l'émergence d'outils de scan IA offensifs non régulés."
+        }
+      ],
+      "tags": [
+        "AI",
+        "Vulnerability Scanning",
+        "Anthropic"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/07/cybersecurite-anthropic-restreint-le-lancement-de-son-dernier-modele-d-ia-pour-prevenir-les-risques_6677931_4408996.html"
+      ],
+      "date": "2026-04-07"
+    }
+  ]
+}
