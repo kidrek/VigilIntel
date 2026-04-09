@@ -1,0 +1,500 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The early April 2026 cyber landscape is characterized by increasing hybridization between kinetic geopolitical tensions and digital sabotage, notably through Iranian targeting of American industrial controllers (PLCs). Supply chain attacks have reached a peak with UNC6780 (TeamPCP), capable of compromising thousands of SaaS environments and stealing source code from tech leaders like Cisco. A paradigm shift is observed in macOS threats, moving away from classic payloads toward fileless social engineering techniques. The proliferation of AI introduces risks related to autonomous agents whose non-deterministic behavior escapes traditional controls, requiring a redesign of privilege models. State actors, particularly Russian (APT28), are pivoting toward dominating the network layer (Edge devices) for large-scale interception. BPO provider compromise is emerging as a preferred vector to reach sensitive corporate data via support tools. Finally, persistent unpatched critical vulnerabilities on exposed equipment (Ivanti, ActiveMQ) highlight systemic patch management fatigue.",
+      "fr": "Le paysage cyber de ce début avril 2026 est marqué par une hybridation croissante entre tensions géopolitiques cinétiques et opérations de sabotage numérique, particulièrement via le ciblage iranien des automates industriels (PLC) américains. L'industrialisation des attaques sur la chaîne d'approvisionnement atteint un sommet avec l'acteur UNC6780 (TeamPCP), capable de compromettre des milliers d'environnements SaaS et de dérober le code source de leaders technologiques comme Cisco. On observe un changement de paradigme dans la menace macOS, qui délaisse les payloads classiques pour des techniques d'ingénierie sociale \"fileless\" exploitant les outils natifs du système. La généralisation de l'IA introduit de nouveaux risques liés aux \"agents autonomes\" dont le comportement non-déterministe échappe aux contrôles traditionnels, nécessitant une refonte des modèles de privilèges. Les acteurs étatiques, notamment russes (APT28), pivotent vers une domination de la couche réseau (Edge devices) pour l'interception de flux à grande échelle. La compromission des prestataires de services (BPO) s'affirme comme le vecteur privilégié pour atteindre les données sensibles des grandes entreprises via leurs outils de support. Enfin, la persistance de vulnérabilités critiques non corrigées sur des équipements exposés (Ivanti, ActiveMQ) souligne une fatigue systémique du patch management face à une exploitation quasi instantanée."
+    },
+    "date": "2026-04-09"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "US-Israel-Iran Kinetic and Cyber Sabotage",
+        "fr": "Conflit cin\u00e9tique et cyber sabotage US-Isra\u00ebl-Iran"
+      },
+      "description": {
+        "en": "Confirmation of Iranian sabotage of Rockwell Automation PLCs in US critical infrastructure, despite a announced two-week ceasefire.",
+        "fr": "Confirmation du sabotage iranien des automates Rockwell Automation dans les infrastructures critiques am\u00e9ricaines, malgr\u00e9 l'annonce d'un cessez-le-feu de deux semaines."
+      },
+      "recommandations": [
+        {
+          "en": "Harden industrial control systems by removing them from the public internet.",
+          "fr": "Durcir les syst\u00e8mes de contr\u00f4le industriel en les retirant de l'Internet public."
+        },
+        {
+          "en": "Implement strict firewalling for OT protocols such as EtherNet/IP (port 44818).",
+          "fr": "Mettre en \u0153uvre un pare-feu strict pour les protocoles OT tels que l'EtherNet/IP (port 44818)."
+        }
+      ],
+      "tags": [
+        "OT",
+        "ICS",
+        "Sabotage",
+        "Iran"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Russian Espionage against Ukraine/NATO",
+        "fr": "Espionnage russe contre l'Ukraine et l'OTAN"
+      },
+      "description": {
+        "en": "Massive campaign by APT28 aimed at mapping and sabotaging logistics flows and military aid in Ukraine and allied countries.",
+        "fr": "Campagne massive d'APT28 visant \u00e0 cartographier et saboter les flux logistiques et l'aide militaire en Ukraine et dans les pays alli\u00e9s."
+      },
+      "recommandations": [
+        {
+          "en": "Increase monitoring of diplomatic and military logistical communications.",
+          "fr": "Accro\u00eetre la surveillance des communications diplomatiques et logistiques militaires."
+        },
+        {
+          "en": "Deploy advanced threat hunting to detect stenography in network traffic.",
+          "fr": "D\u00e9ployer une recherche de menaces avanc\u00e9e pour d\u00e9tecter la st\u00e9ganographie dans le trafic r\u00e9seau."
+        }
+      ],
+      "tags": [
+        "Espionnage",
+        "APT28",
+        "Ukraine"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/apt28-deploys-prismex-malware-in.html"
+      ],
+      "date": "2026-04-08"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Cisco",
+      "threat_actor": "UNC6780",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "TeamPCP"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "description": {
+        "en": "Theft of over 300 source code repositories, including AI technologies, via a supply chain attack on the Trivy tool and a malicious GitHub Action.",
+        "fr": "Vol de plus de 300 r\u00e9pertoires de code source, incluant des technologies d'IA, via une attaque supply chain sur l'outil Trivy et une GitHub Action malveillante."
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise: Software Dependencies",
+        "T1078.004: Valid Accounts: Cloud Accounts",
+        "T1537: Transfer Data to Cloud Account"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a mandatory rotation of all secrets and API keys used in CI/CD pipelines.",
+          "fr": "Effectuer une rotation obligatoire de tous les secrets et cl\u00e9s API utilis\u00e9s dans les pipelines CI/CD."
+        },
+        {
+          "en": "Audit all third-party GitHub Actions and enforce pinned versions by SHA hash.",
+          "fr": "Auditer toutes les GitHub Actions tierces et imposer le verrouillage des versions par hash SHA."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "Source Code Theft",
+        "Cisco"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32880"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "victim": "Signature Healthcare",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Crapuleux",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Cyberattack (suspected ransomware) causing ambulance diversions and paralysis of pharmacy services.",
+        "fr": "Cyberattaque (suspicion de ransomware) entra\u00eenant le d\u00e9tournement d'ambulances et la paralysie des services de pharmacie."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate critical medical systems from the corporate network.",
+          "fr": "Isoler les syst\u00e8mes m\u00e9dicaux critiques du r\u00e9seau d'entreprise."
+        },
+        {
+          "en": "Test offline backup restoration procedures for patient data systems.",
+          "fr": "Tester les proc\u00e9dures de restauration des sauvegardes hors ligne pour les syst\u00e8mes de donn\u00e9es patients."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Hospital",
+        "Service Disruption"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190504/security/signature-healthcare-hit-by-cyberattack-services-and-pharmacies-impacted.html"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "victim": "LAPD (Los Angeles Police)",
+      "threat_actor": "World Leaks",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "description": {
+        "en": "Theft and leak of sensitive personnel files of officers and internal investigations.",
+        "fr": "Vol et fuite de dossiers personnels d'officiers et d'enqu\u00eates internes sensibles."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement Data Loss Prevention (DLP) solutions on sensitive databases.",
+          "fr": "Mettre en \u0153uvre des solutions de pr\u00e9vention contre la perte de donn\u00e9es (DLP) sur les bases de donn\u00e9es sensibles."
+        },
+        {
+          "en": "Strengthen authentication for remote access to administrative internal portals.",
+          "fr": "Renforcer l'authentification pour les acc\u00e8s distants aux portails internes administratifs."
+        }
+      ],
+      "tags": [
+        "Data Leak",
+        "Law Enforcement"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/08/hackers-steal-and-leak-sensitive-lapd-police-documents/"
+      ],
+      "date": "2026-04-08"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-1340",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
+      "product": "Ivanti EPMM",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Unauthenticated Remote Code Execution (RCE) exploited in the wild via code injection.",
+        "fr": "Ex\u00e9cution de code \u00e0 distance (RCE) non authentifi\u00e9e exploit\u00e9e dans la nature via injection de code."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the security patch immediately as mandated by CISA BOD 22-01.",
+          "fr": "Appliquer le correctif de s\u00e9curit\u00e9 imm\u00e9diatement comme l'exige la BOD 22-01 de la CISA."
+        },
+        {
+          "en": "Inspect web server logs for suspicious command injection patterns.",
+          "fr": "Inspecter les journaux du serveur web pour d\u00e9celer des motifs d'injection de commandes suspects."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "KEV"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-ivanti-epmm-flaw-by-sunday/"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-34197",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
+      "product": "Apache ActiveMQ",
+      "vendor": "Apache",
+      "description": {
+        "en": "Remote Code Execution via Jolokia API allowing the loading of remote Spring XML files.",
+        "fr": "Ex\u00e9cution de code \u00e0 distance via l'API Jolokia permettant le chargement de fichiers XML Spring distants."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable the Jolokia interface if not strictly required or restrict its access.",
+          "fr": "D\u00e9sactiver l'interface Jolokia si elle n'est pas strictement requise ou restreindre son acc\u00e8s."
+        },
+        {
+          "en": "Upgrade ActiveMQ to the latest version to mitigate 13-year-old underlying bugs.",
+          "fr": "Mettre \u00e0 jour ActiveMQ vers la derni\u00e8re version pour corriger des bogues sous-jacents vieux de 13 ans."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "ActiveMQ"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/13-year-old-bug-in-activemq-lets-hackers-remotely-execute-commands/"
+      ],
+      "date": "2026-04-08"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "UNC6780 (TeamPCP) Supply Chain Campaign",
+        "fr": "Campagne Supply Chain de UNC6780 (TeamPCP)"
+      },
+      "description": {
+        "en": "Industrial-scale exploitation of CI/CD pipelines through Trivy vulnerability and malicious GitHub plugins.",
+        "fr": "Exploitation \u00e0 l'\u00e9chelle industrielle des pipelines CI/CD via une vuln\u00e9rabilit\u00e9 Trivy et des plugins GitHub malveillants."
+      },
+      "threat_actor": "UNC6780",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "TeamPCP"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "SANDCLOCK",
+          "Trivy"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise: Software Dependencies",
+        "T1078.004: Valid Accounts: Cloud Accounts",
+        "T1537: Transfer Data to Cloud Account"
+      ],
+      "analyse": {
+        "en": "UNC6780 has successfully compromised over 1,000 SaaS environments. They specialize in monetizing stolen secrets and source code.",
+        "fr": "UNC6780 a compromis avec succ\u00e8s plus de 1 000 environnements SaaS. Ils se sp\u00e9cialisent dans la mon\u00e9tisation de secrets et de codes sources d\u00e9rob\u00e9s."
+      },
+      "recommandations": [
+        {
+          "en": "Harden CI/CD runners and use short-lived credentials for cloud access.",
+          "fr": "Durcir les ex\u00e9cuteurs CI/CD et utiliser des identifiants \u00e0 courte dur\u00e9e de vie pour les acc\u00e8s cloud."
+        },
+        {
+          "en": "Implement build attestation and integrity checks for all software dependencies.",
+          "fr": "Mettre en \u0153uvre l'attestation de build et des contr\u00f4les d'int\u00e9grit\u00e9 pour toutes les d\u00e9pendances logicielles."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "SaaS",
+        "Source Code"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32880"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "APT28 PRISMEX Deployment",
+        "fr": "D\u00e9ploiement de la suite PRISMEX par APT28"
+      },
+      "description": {
+        "en": "A new sophisticated malware suite using stenography to hide payloads in PNG images targeting Ukraine and logistics allies.",
+        "fr": "Une nouvelle suite de malwares sophistiqu\u00e9e utilisant la st\u00e9ganographie pour dissimuler des payloads dans des images PNG visant l'Ukraine et ses alli\u00e9s logistiques."
+      },
+      "threat_actor": "APT28",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [
+        "Fancy Bear",
+        "UAC-0001"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "wellnesscaremed[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PRISMEX",
+          "PrismexDrop",
+          "PrismexLoader",
+          "Covenant"
+        ]
+      },
+      "mitre_ttps": [
+        "T1027.003: Steganography",
+        "T1546.015: Component Object Model Hijacking",
+        "T1567.002: Exfiltration to Cloud Storage"
+      ],
+      "analyse": {
+        "en": "APT28 uses legitimate cloud services like Filen.io for C2 traffic to blend in with normal network activity.",
+        "fr": "APT28 utilise des services cloud l\u00e9gitimes comme Filen.io pour le trafic C2 afin de se fondre dans l'activit\u00e9 r\u00e9seau normale."
+      },
+      "recommandations": [
+        {
+          "en": "Block access to unauthorized cloud storage providers such as Filen.io.",
+          "fr": "Bloquer l'acc\u00e8s aux fournisseurs de stockage cloud non autoris\u00e9s tels que Filen.io."
+        },
+        {
+          "en": "Monitor for COM object hijacking and unusual scheduled tasks on endpoints.",
+          "fr": "Surveiller le d\u00e9tournement d'objets COM et les t\u00e2ches planifi\u00e9es inhabituelles sur les terminaux."
+        }
+      ],
+      "tags": [
+        "Espionage",
+        "Russia",
+        "Stenography"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190510/apt/russia-linked-apt28-uses-prismex-to-infiltrate-ukraine-and-allied-infrastructure-with-advanced-tactics.html"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "title": {
+        "en": "UNC6783 BPO and Zendesk Targeting",
+        "fr": "Ciblage des BPO et de Zendesk par UNC6783"
+      },
+      "description": {
+        "en": "Actor targeting Business Process Outsourcing providers using social engineering to steal Zendesk support tickets.",
+        "fr": "Acteur ciblant les prestataires de BPO via ing\u00e9nierie sociale pour d\u00e9rober des tickets de support Zendesk."
+      },
+      "threat_actor": "UNC6783",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Crapuleux",
+      "threat_actor_aliases": [
+        "Raccoon"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Commerce_de_D\u00e9tail_et_Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "zendesk-support.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Phishing kits"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003: Spearphishing via Service",
+        "T1556.006: Modify Authentication Process: Multi-Factor Authentication",
+        "T1078: Valid Accounts"
+      ],
+      "analyse": {
+        "en": "The actor uses sophisticated phishing pages capable of bypassing MFA by stealing clipboard content or using session tokens.",
+        "fr": "L'acteur utilise des pages de phishing sophistiqu\u00e9es capables de contourner le MFA en d\u00e9robant le contenu du presse-papier ou en utilisant des jetons de session."
+      },
+      "recommandations": [
+        {
+          "en": "Transition to FIDO2 security keys for all support personnel to prevent MFA phishing.",
+          "fr": "Passer aux cl\u00e9s de s\u00e9curit\u00e9 FIDO2 pour tout le personnel de support afin de pr\u00e9venir le phishing MFA."
+        },
+        {
+          "en": "Implement monitoring for the creation of unauthorized MFA devices in Okta.",
+          "fr": "Mettre en \u0153uvre une surveillance de la cr\u00e9ation de p\u00e9riph\u00e9riques MFA non autoris\u00e9s dans Okta."
+        }
+      ],
+      "tags": [
+        "Social Engineering",
+        "BPO",
+        "Zendesk"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/google-new-unc6783-hackers-steal-corporate-zendesk-support-tickets/"
+      ],
+      "date": "2026-04-08"
+    }
+  ]
+}
