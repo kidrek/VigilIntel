@@ -9,19 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Le FBI annonce des pertes record de 21 milliards de dollars liées à la cybercriminalité](#le-fbi-annonce-des-pertes-record-de-21-milliards-de-dollars-liees-a-la-cybercriminalite)
-  * [Opération FrostArmada : démantèlement d'un réseau APT28 de détournement DNS sur routeurs SOHO](#operation-frostarmada-demantelement-dun-reseau-apt28-de-detournement-dns-sur-routeurs-soho)
-  * [Storm-1175 : une célérité alarmante dans l'exploitation des failles pour le ransomware Medusa](#storm-1175-une-celerite-alarmante-dans-lexploitation-des-failles-pour-le-ransomware-medusa)
-  * [Évasion de bac à sable dans AWS AgentCore : une menace directe sur les agents IA](#evasion-de-bac-a-sable-dans-aws-agentcore-une-menace-directe-sur-les-agents-ia)
-  * [Compromission de la chaîne d'approvisionnement : le cas du SDK Velora DEX](#compromission-de-la-chaine-dapprovisionnement-le-cas-du-sdk-velora-dex)
-  * [L'IA au service de la défense : Anthropic restreint son modèle Mythos](#lia-au-service-de-la-defense-anthropic-restreint-son-modele-mythos)
+  * [TeamPCP / UNC6780 : Escalade dans la supply chain](#teampcp-unc6780-escalade-dans-la-supply-chain)
+  * [Conflit US-Israël-Iran : Sabotage des infrastructures critiques](#conflit-us-israel-iran-sabotage-des-infrastructures-critiques)
+  * [APT28 : Déploiement de la suite PRISMEX](#apt28-deploiement-de-la-suite-prismex)
+  * [Sécurisation de l'IA Agentique et Projet Glasswing](#securisation-de-lia-agentique-et-projet-glasswing)
+  * [UNC6783 : Ciblage des BPO et des tickets Zendesk](#unc6783-ciblage-des-bpo-et-des-tickets-zendesk)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber de ce début d'année 2026 est marqué par une intensification sans précédent des conflits hybrides, particulièrement sur l'axe États-Unis-Israël-Iran, où le cyber sert de prolongement direct aux frappes cinétiques. Parallèlement, on observe une industrialisation de l'exploitation des vulnérabilités « edge » (routeurs SOHO), illustrée par l'opération FrostArmada d'APT28, qui privilégie désormais le détournement DNS massif pour contourner le MFA via des attaques Adversary-in-the-Middle. La célérité des groupes criminels, tel Storm-1175, capable d'armer des exploits en quelques heures, réduit quasiment à néant les fenêtres de correctifs traditionnelles. L'essor des agents IA introduit de nouveaux vecteurs critiques, comme l'évasion de sandbox sur AWS AgentCore, tandis que le coût global de la cybercriminalité atteint un sommet historique (21 milliards de dollars selon le FBI), porté par les arnaques dopées à l'IA et aux crypto-actifs. La menace se déplace également vers la supply chain logicielle Web3 (Velora) et l'exploitation des pipelines de notification SaaS (GitHub/Jira) pour blanchir le phishing. Enfin, la souveraineté économique est mise à l'épreuve par des réformes structurelles, comme la facturation électronique, perçue comme un nouveau gisement de données stratégiques pour l'espionnage d'État.
+Le paysage cyber de ce début avril 2026 est marqué par une hybridation croissante entre tensions géopolitiques cinétiques et opérations de sabotage numérique, particulièrement via le ciblage iranien des automates industriels (PLC) américains. L'industrialisation des attaques sur la chaîne d'approvisionnement atteint un sommet avec l'acteur UNC6780 (TeamPCP), capable de compromettre des milliers d'environnements SaaS et de dérober le code source de leaders technologiques comme Cisco. On observe un changement de paradigme dans la menace macOS, qui délaisse les payloads classiques pour des techniques d'ingénierie sociale "fileless" exploitant les outils natifs du système. La généralisation de l'IA introduit de nouveaux risques liés aux "agents autonomes" dont le comportement non-déterministe échappe aux contrôles traditionnels, nécessitant une refonte des modèles de privilèges. Les acteurs étatiques, notamment russes (APT28), pivotent vers une domination de la couche réseau (Edge devices) pour l'interception de flux à grande échelle. La compromission des prestataires de services (BPO) s'affirme comme le vecteur privilégié pour atteindre les données sensibles des grandes entreprises via leurs outils de support. Enfin, la persistance de vulnérabilités critiques non corrigées sur des équipements exposés (Ivanti, ActiveMQ) souligne une fatigue systémique du patch management face à une exploitation quasi instantanée.
 
 <br>
 <br>
@@ -35,13 +34,12 @@ Le paysage cyber de ce début d'année 2026 est marqué par une intensification 
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| APT28 (Forest Blizzard) | Gouvernements, IT, Infrastructures | Détournement DNS sur routeurs SOHO, vol de tokens M365 | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/authorities-disrupt-dns-hijacks-used-to-steal-microsoft-365-logins/) |
-| CyberAv3ngers (IRGC) | Infrastructures critiques (Eau/Énergie) | Exploitation de PLC unitronics et Rockwell/Allen-Bradley | [CISA](https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/) |
-| Handala Hack | Défense, Santé, Technologie | Wiper, abus de MDM Intune, vol de données (Stryker) | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| NightSpire | Secteurs variés | Ransomware-as-a-Service, utilisation de AnyDesk, MEGASync | [Huntress](https://www.huntress.com/blog/nightspire-ransomware) |
-| ShinyHunters | Services financiers, Technologie | Vol de tokens via intégrateurs SaaS (Anodot/Snowflake) | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/snowflake-customers-hit-in-data-theft-attacks-after-saas-integrator-breach/) |
-| Silent Ransom Group (SRG) | Services juridiques | Phishing ciblé et exfiltration de données (Jones Day) | [DataBreaches](https://databreaches.net/2026/04/06/jones-day-confirms-limited-breach-after-phishing-attack-by-silent-ransom-group/) |
-| Storm-1175 | Santé, Éducation, Finance | Exploitation ultra-rapide de CVE récentes, Medusa Ransomware | [Field Effect](https://fieldeffect.com/blog/storm-1175-exploits-vulnerabilities-in-medusa-ransomware-ops) |
+| **APT28 (Fancy Bear)** | Défense, Gouvernement, Logistique (Ukraine/OTAN) | Spear-phishing, exploitation de vulnérabilités Office, malware PRISMEX, détournement DNS | [Security Affairs](https://securityaffairs.com/190510/apt/russia-linked-apt28-uses-prismex-to-infiltrate-ukraine-and-allied-infrastructure-with-advanced-tactics.html) |
+| **Handala Hack** | Infrastructure israélienne, USA | Wiper, intrusion via VPN brute-force, exfiltration et fuite de données | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **MuddyWater (IRGC)** | Énergie, Eau, Gouvernement (USA) | Ciblage de PLC (Rockwell Automation), utilisation de C2 via Telegram | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **ShinyHunters** | Cloud, SaaS, Technologie | Exploitation de tokens d'authentification (Snowflake/Anodot), extorsion | [SANS ISC](https://isc.sans.edu/diary/rss/32880) |
+| **UNC6780 (TeamPCP)** | Développement logiciel, SaaS | Compromission de pipelines CI/CD (Trivy), vol de secrets/code source, malware SANDCLOCK | [SANS ISC](https://isc.sans.edu/diary/rss/32880) |
+| **UNC6783 (Raccoon)** | BPO (Business Process Outsourcing) | Ingénierie sociale via chat, usurpation de pages Okta/Zendesk, vol de sessions MFA | [BleepingComputer](https://www.bleepingcomputer.com/news/security/google-new-unc6783-hackers-steal-corporate-zendesk-support-tickets/) |
 
 <br/>
 <br/>
@@ -51,10 +49,10 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Énergie / IA | Conflit US-Iran-Israël | Frappes israéliennes sur South Pars et menaces iraniennes contre le centre de données Stargate AI à Abou Dabi. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Finance / Transport | Censure en Russie | Panne majeure des services bancaires et des paiements du métro à cause d'un "tir ami" lors du blocage des VPN par le gouvernement. | [Security Affairs](https://securityaffairs.com/190464/security/major-outage-cripples-russian-banking-apps-and-metro-payments-nationwide.html) |
-| Gouvernement | Blackout numérique | L'Iran maintient un blackout internet national pour la 39ème journée consécutive, limitant la connectivité à 1%. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Infrastructures | Menaces étatiques | Les agences américaines (FBI/CISA) alertent sur le ciblage systématique des automates industriels (PLC) Rockwell par l'Iran. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/us-warns-of-iranian-hackers-targeting-critical-infrastructure/) |
+| État Iranien | Conflit cinétique/Cyber | Annonce d'un cessez-le-feu de deux semaines médié par le Pakistan suite aux frappes américano-israéliennes. | [IRIS](https://www.iris-france.org/trump-triomphe-apparent-echec-en-realite/) |
+| Infrastructure Critique (USA) | Sabotage industriel | Les agences américaines confirment le sabotage de PLC Rockwell Automation par des acteurs affiliés à l'Iran. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Ukraine / OTAN | Espionnage russe | Campagne massive d'APT28 visant à cartographier et saboter les flux logistiques et d'aide militaire. | [The Hacker News](https://thehackernews.com/2026/04/apt28-deploys-prismex-malware-in.html) |
+| Venezuela | Transition Politique | Delcy Rodríguez assure l'intérim présidentiel après l'extraction de Maduro par les forces spéciales américaines. | [Recorded Future](https://www.recordedfuture.com/research/understanding-and-anticipating-venezuelan-government-actions) |
 
 <br/>
 <br/>
@@ -62,11 +60,12 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 <div id="synthese-reglementaire"></div>
 
 ## Synthèse réglementaire et juridiques
-Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
+Voici un tableau récapitulatif des articles juridiques relatifs à la réglementation cyber :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Targeted consultation on measuring energy consumption of AI | Commission Européenne | 07/04/2026 | Union Européenne | AI Act (Annex XI) | Consultation sur le cadre de mesure de l'empreinte environnementale des modèles d'IA généralistes. | [European Commission](https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-measuring-energy-consumption-and-emissions-ai-models-and-systems) |
-| Facturation électronique de la TVA | Maxime Mercier et al. | 07/04/2026 | France | Loi de finances 2020 / Ordonnance 2021 | Réforme imposant la facturation électronique via des plateformes agréées (PDP) pour lutter contre la fraude. | [Portail IE](https://www.portail-ie.fr/univers/2026/facturation-electronique-tva/) |
+| Cyber Threat Intelligence Framework | CERT-EU | 08-04-2026 | Union Européenne | Règlement 2023/2841 | Standardisation du partage de renseignement sur les menaces pour les entités de l'UE. | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cyber-threat-intelligence-framework/) |
+| CISA orders feds to patch exploited Ivanti | Sergiu Gatlan | 08-04-2026 | USA (Fédéral) | BOD 22-01 | Obligation de corriger CVE-2026-1340 avant le 11 avril 2026 pour les agences gouvernementales. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-ivanti-epmm-flaw-by-sunday/) |
+| 1 000ème certification ISO 27001 | Portail IE | 08-04-2026 | France | ISO/IEC 27001 | Célébration de la millième certification en France, illustrant la maturité de la gestion de la sécurité de l'information. | [Portail IE](https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/retour-sur-le-forum-incyber-2026-a-lille/) |
 
 <br/>
 <br/>
@@ -76,9 +75,10 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Juridique | Jones Day | Exfiltration de fichiers pour 10 clients par le Silent Ransom Group via une attaque de phishing. | [DataBreaches](https://databreaches.net/2026/04/06/jones-day-confirms-limited-breach-after-phishing-attack-by-silent-ransom-group/) |
-| Technologie | Snowflake (clients) | Vol de données affectant plusieurs entreprises suite à la compromission de l'intégrateur SaaS Anodot. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/snowflake-customers-hit-in-data-theft-attacks-after-saas-integrator-breach/) |
-| Médical | Stryker | Effacement massif de 80 000 appareils par le groupe Handala via l'abus du MDM Microsoft Intune. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Gouvernement | LAPD (Los Angeles Police) | Vol et fuite de dossiers personnels d'officiers et d'enquêtes internes par World Leaks. | [DataBreaches.net](https://databreaches.net/2026/04/08/hackers-steal-and-leak-sensitive-lapd-police-documents/) |
+| Santé | Signature Healthcare | Cyberattaque (possible ransomware) entraînant le détournement d'ambulances et la paralysie des pharmacies. | [Security Affairs](https://securityaffairs.com/190504/security/signature-healthcare-hit-by-cyberattack-services-and-pharmacies-impacted.html) |
+| Technologie | Cisco | Vol de plus de 300 répertoires de code source (IA, produits non publiés) via la supply chain Trivy. | [SANS ISC](https://isc.sans.edu/diary/rss/32880) |
+| Web / IA | My Lovely AI | Fuite des données de 106 271 comptes, incluant des prompts utilisateur et des contenus privés. | [HIBP](https://haveibeenpwned.com/Breach/MyLovelyAI) |
 
 <br/>
 <br/>
@@ -88,11 +88,12 @@ Voici un tableau récapitulatif des violations de données constatées :
 Voici un tableau récapitulatif des vulnérabilités identifiées :
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2025-59528 | 10.0 | Non mentionné | TRUE | Flowise (Open-source AI) | Injection de code JS / RCE | T1190: Exploit Public-Facing Application | Exécution de code arbitraire via le nœud CustomMCP sans validation. | [Security Affairs](https://securityaffairs.com/190471/security/attackers-exploit-critical-flowise-flaw-cve-2025-59528-for-remote-code-execution.html) |
-| CVE-2026-0740 | 9.8 | Non mentionné | TRUE | Ninja Forms (WordPress) | Upload de fichier arbitraire | T1190: Exploit Public-Facing Application | Permet l'exécution de code à distance via l'extension d'upload de fichiers. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-flaw-in-ninja-forms-wordpress-plugin/) |
-| CVE-2026-35616 | 9.1 | Non mentionné | TRUE | Fortinet FortiClient EMS | Contrôle d'accès impropre | T1068: Exploitation for Privilege Escalation | Bypass d'authentification via API permettant une escalade de privilèges. | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0400/) |
-| CVE-2026-1346 | 9.3 | Non mentionné | FALSE | IBM Verify Identity Access | Escalade de privilèges | T1068: Exploitation for Privilege Escalation | Permet à un utilisateur local d'obtenir les droits ROOT sur les conteneurs. | [OffSeq](https://infosec.exchange/@offseq/116366496766197307) |
-| N/A (BlueHammer) | N/A | N/A | FALSE | Microsoft Windows | Zero-day LPE | T1068: Exploitation for Privilege Escalation | Fléau de type TOCTOU et confusion de chemin permettant d'obtenir les droits SYSTEM. | [DataBreaches](https://databreaches.net/2026/04/07/1-billion-microsoft-users-warned-as-angry-hacker-drops-0-day-exploit/) |
+| CVE-2026-1340 | 9.8 | Non spécifié | TRUE | Ivanti EPMM | Injection de code | T1190 : Exploit Public-Facing Application | RCE non authentifiée exploitée activement depuis janvier. | [Security Affairs](https://securityaffairs.com/190519/security/u-s-cisa-adds-a-flaw-in-ivanti-epmm-to-its-known-exploited-vulnerabilities-catalog-2.html) |
+| CVE-2026-39890 | 9.8 | Non spécifié | FALSE | PraisonAI | Désérialisation YAML | T1203 : Exploitation for Client Execution | Exécution de code JavaScript arbitraire via le chargement de définitions d'agents. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-39890) |
+| CVE-2026-1188 | 9.8 | Non spécifié | FALSE | IBM Verify Access | Buffer Overflow | T1210 : Exploitation of Remote Services | Dépassement de tampon dans la bibliothèque Eclipse OMR menant à une compromission système. | [Cybersecurity News](https://cybersecuritynews.com/ibm-identity-and-verify-access-vulnerabilities/) |
+| CVE-2026-3199 | 9.4 | Non spécifié | FALSE | Sonatype Nexus | Injection de propriétés | T1210 : Exploitation of Remote Services | RCE authentifiée via le composant de gestion des tâches. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-3199) |
+| CVE-2026-34197 | 8.8 | Non spécifié | FALSE | Apache ActiveMQ | RCE via Jolokia | T1210 : Exploitation of Remote Services | Chaîne d'exploitation via l'API de gestion Jolokia pour charger des fichiers Spring XML distants. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/13-year-old-bug-in-activemq-lets-hackers-remotely-execute-commands/) |
+| CVE-2026-5747 | 8.7 | Non spécifié | FALSE | AWS Firecracker | Out-of-bounds Write | T1611 : Escape to Host | Un invité privilégié root peut s'évader vers l'hôte via la couche de transport virtio-pci. | [Security Online](https://securityonline.info/aws-firecracker-cve-2026-5747-virtio-pci-vulnerability/) |
 
 <br/>
 <br/>
@@ -101,12 +102,11 @@ Voici un tableau récapitulatif des vulnérabilités identifiées :
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Authorities disrupt router DNS hijacks used to steal Microsoft 365 logins | Analyse majeure d'une opération APT28 de grande ampleur. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/authorities-disrupt-dns-hijacks-used-to-steal-microsoft-365-logins/) |
-| Cracks in the Bedrock: Escaping the AWS AgentCore Sandbox | Recherche technique critique sur la sécurité des agents IA cloud. | [Unit 42](https://unit42.paloaltonetworks.com/bypass-of-aws-sandbox-network-isolation-mode/) |
-| FBI: Americans lost a record $21 billion to cybercrime last year | Données statistiques stratégiques pour les décideurs. | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/fbi-americans-lost-a-record-21-billion-to-cybercrime-last-year/) |
-| Storm-1175 exploits web-facing vulnerabilities in Medusa ransomware operations | Alerte sur la réduction drastique du temps d'exploitation des CVE. | [Field Effect](https://fieldeffect.com/blog/storm-1175-exploits-vulnerabilities-in-medusa-ransomware-ops) |
-| The Trojan horse of cybercrime: Weaponizing SaaS notification pipelines | Nouveau vecteur d'attaque via les notifications GitHub/Jira. | [Cisco Talos](https://blog.talosintelligence.com/weaponizing-saas-notification-pipelines/) |
-| Velora SDK Version 9.4.1 Compromised And Installing Malware | Incident majeur de supply chain logicielle. | [OpenSource Malware](https://opensourcemalware.com/blog/velora-hacked) |
+| TeamPCP Supply Chain Campaign Update 007 | Menace systémique majeure sur les pipelines de développement et impact critique (Cisco). | [SANS ISC](https://isc.sans.edu/diary/rss/32880) |
+| Monitoring Cyberattacks directly linked to US-Israel-Iran | Escalade géopolitique majeure avec sabotage avéré d'infrastructures critiques (OT/ICS). | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Russia-linked APT28 uses PRISMEX with advanced tactics | Nouvelle suite de malwares sophistiquée utilisant la stéganographie contre l'Ukraine. | [Security Affairs](https://securityaffairs.com/190510/apt/russia-linked-apt28-uses-prismex-to-infiltrate-ukraine-and-allied-infrastructure-with-advanced-tactics.html) |
+| Securing Agentic AI / Project Glasswing | Analyse prospective sur les nouveaux vecteurs d'attaque liés à l'autonomie de l'IA. | [OpenSSF](https://openssf.org/blog/2026/04/08/openssf-tech-talk-recap-securing-agentic-ai/) |
+| Google: New UNC6783 hackers steal support tickets | Nouvelle technique de ciblage indirect via les prestataires BPO et l'abus de Zendesk. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/google-new-unc6783-hackers-steal-corporate-zendesk-support-tickets/) |
 
 <br/>
 <br/>
@@ -115,132 +115,133 @@ Voici un tableau récapitulatif des vulnérabilités identifiées :
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| ISC Stormcast For Wednesday, April 8th, 2026 | Contenu podcast sans détails textuels exploitables. | [ISC SANS](https://isc.sans.edu/diary/rss/32876) |
-| Why Your Automated Pentesting Tool Just Hit a Wall | Article promotionnel sponsorisé (Picus Security). | [Bleeping Computer](https://www.bleepingcomputer.com/news/security/why-your-automated-pentesting-tool-just-hit-a-wall/) |
-| Russia Hacked Routers to Steal Microsoft Office Tokens | Doublon avec l'article de Bleeping Computer sur FrostArmada. | [KrebsOnSecurity](https://krebsonsecurity.com/2026/04/russia-hacked-routers-to-steal-microsoft-office-tokens/) |
-| Multiple Vulnerabilities in Mozilla Products | Alerte de vulnérabilité classique couverte par d'autres synthèses. | [CISecurity](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-mozilla-products-could-allow-for-arbitrary-code-execution_2026-032) |
+| Don’t Pack a Scam | Article de sensibilisation généraliste sans nouvelle menace technique. | [GCA](https://globalcyberalliance.org/dont-pack-a-scam-how-to-travel-smart-in-a-digital-world/) |
+| Microsoft rolls out fix for Start Menu search | Problème de performance/bug IT, non lié à une menace cyber. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-rolls-out-fix-for-broken-windows-start-menu-search/) |
+| ISC Stormcast Podcast | Simple lien vers un flux audio sans résumé textuel exploitable. | [SANS ISC](https://isc.sans.edu/diary/rss/32882) |
+| Is a $30,000 GPU Good at Password Cracking? | Étude comparative de matériel, utile mais pas une actualité de menace immédiate. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/is-a-30-000-gpu-good-at-password-cracking/) |
+| Number Usage in Passwords | Analyse statistique de recherche académique sans incident lié. | [SANS ISC](https://isc.sans.edu/diary/rss/32866) |
 
 <br>
 <br>
 <div id="articles"></div>
 
 # ARTICLES
-<div id="le-fbi-annonce-des-pertes-record-de-21-milliards-de-dollars-liees-a-la-cybercriminalite"></div>
+<div id="teampcp-unc6780-escalade-dans-la-supply-chain"></div>
 
-## Le FBI annonce des pertes record de 21 milliards de dollars liées à la cybercriminalité
-Le FBI rapporte une hausse de 26 % des pertes financières liées à la cybercriminalité aux États-Unis en 2025, atteignant 21 milliards de dollars. Plus d'un million de plaintes ont été traitées par l'IC3. La fraude à l'investissement reste le principal moteur avec 8,6 milliards de dollars de pertes, suivie par le phishing et l'extorsion. Les escroqueries liées aux crypto-actifs ont causé plus de 11 milliards de dollars de préjudices. Pour la première fois, le rapport inclut les arnaques basées sur l'IA (deepfakes, clonage de voix), représentant 893 millions de dollars. Les personnes de plus de 60 ans sont les victimes les plus touchées (7,7 milliards de dollars). Les secteurs de la santé et de l'énergie sont les infrastructures critiques les plus visées. Le FBI a réussi à geler 679 millions de dollars grâce à sa cellule d'intervention financière.
+## TeamPCP / UNC6780 : Escalade dans la supply chain
+L'acteur UNC6780 (TeamPCP) continue son exploitation massive de la vulnérabilité CVE-2026-33634 affectant l'outil de scan de sécurité Trivy. Cisco est confirmé comme la victime la plus notable, avec le vol de plus de 300 dépôts GitHub privés contenant du code source sensible, y compris des technologies d'IA. L'attaque a été réalisée via un plugin GitHub Action malveillant permettant l'accès aux systèmes de build. Parallèlement, Google a formellement désigné ce groupe comme UNC6780 et identifié leur payload principal sous le nom de SANDCLOCK. L'impact s'étend à plus de 1 000 environnements SaaS compromis, illustrant une capacité de mouvement latéral via des clés AWS dérobées. Bien que les sites de fuite de CipherForce soient actuellement hors ligne, les deadlines d'extorsion approchent pour des victimes comme Sportradar. Cette campagne marque une transition de l'intrusion pure vers la monétisation agressive des secrets dérobés.
 
-**Analyse de l'impact** : L'impact est massif, non seulement sur l'économie globale mais aussi sur la confiance numérique, avec une professionnalisation accrue des escrocs utilisant l'IA.
+**Analyse de l'impact** : Impact critique sur l'intégrité de la supply chain logicielle globale. Le vol du code source de Cisco pourrait faciliter la découverte de vulnérabilités zero-day futures dans leurs produits.
 
-**Recommandations** : Renforcer la sensibilisation aux deepfakes, implémenter des processus de double vérification hors-ligne pour tout transfert de fonds, et surveiller les vecteurs de fraude aux crypto-actifs.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Multiples (BEC, Crypto-scammers) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566: Phishing<br/>* T1566.002: Spearphishing Link |
-| Observables & Indicateurs de compromission | ```ic3.gov``` |
-
-### Source (url) du ou des articles
-* [Bleeping Computer](https://www.bleepingcomputer.com/news/security/fbi-americans-lost-a-record-21-billion-to-cybercrime-last-year/)
-<br/>
-<br/>
-
-<div id="operation-frostarmada-demantelement-dun-reseau-apt28-de-detournement-dns-sur-routeurs-soho"></div>
-
-## Opération FrostArmada : démantèlement d'un réseau APT28 de détournement DNS sur routeurs SOHO
-Une opération internationale a neutralisé "FrostArmada", une campagne menée par le groupe russe APT28 (GRU). L'attaque ciblait 18 000 routeurs MikroTik et TP-Link dans 120 pays. Les attaquants modifiaient les paramètres DNS des routeurs pour rediriger le trafic d'authentification vers des serveurs malveillants (AiTM). Cette méthode permettait de capturer des identifiants et des tokens OAuth Microsoft 365 sans infecter les postes de travail. Les routeurs visés étaient principalement des modèles SOHO en fin de vie ou non patchés. Les victimes étaient principalement des agences gouvernementales, des fournisseurs IT et des services de police. Le FBI a utilisé une autorisation judiciaire pour réinitialiser à distance les résolveurs DNS compromis.
-
-**Analyse de l'impact** : Risque élevé de compromission furtive de comptes cloud (Azure/M365) contournant le MFA grâce au vol de jetons de session.
-
-**Recommandations** : Remplacer les équipements SOHO obsolètes, activer le "certificate pinning" sur les appareils mobiles/laptops via MDM, et surveiller les modifications DHCP/DNS sur le réseau.
+**Recommandations** :
+* **SOC** : Rechercher l'utilisation anormale de clés d'accès AWS et de tokens GitHub dans les logs CloudTrail.
+* **DFIR** : Procéder à une rotation immédiate de tous les secrets (API keys, certificats) ayant transité par des pipelines utilisant Trivy (v0.69.2+ requise).
+* **Threat Hunting** : Détecter le malware SANDCLOCK via ses indicateurs comportementaux dans les environnements CI/CD.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | APT28 (Forest Blizzard / Fancy Bear) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1557: Adversary-in-the-Middle<br/>* T1584.002: DNS Server<br/>* T1098: Account Manipulation |
-| Observables & Indicateurs de compromission | ```* 64.120.31.96 * 79.141.160.78 * 23.106.120.119 * 79.141.173.211 * 185.117.89.32 * 185.237.166.55``` |
+| Groupe ou acteur malveillant | UNC6780 (TeamPCP), ShinyHunters |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002 : Supply Chain Compromise (Software Dependencies) <br/> * T1078.004 : Valid Accounts (Cloud Accounts) <br/> * T1537 : Transfer Data to Cloud Account |
+| Observables & Indicateurs de compromission | * Malware : SANDCLOCK <br/> * CVE associée : CVE-2026-33634 |
 
 ### Source (url) du ou des articles
-* [Bleeping Computer](https://www.bleepingcomputer.com/news/security/authorities-disrupt-dns-hijacks-used-to-steal-microsoft-365-logins/)
-* [Microsoft Security](https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/)
-<br/>
-<br/>
+* https://isc.sans.edu/diary/rss/32880
 
-<div id="storm-1175-une-celerite-alarmante-dans-lexploitation-des-failles-pour-le-ransomware-medusa"></div>
+<br>
+<br>
 
-## Storm-1175 : une célérité alarmante dans l'exploitation des failles pour le ransomware Medusa
-Storm-1175 est un acteur motivé financièrement, lié à la Chine, spécialisé dans le déploiement rapide du ransomware Medusa. Le groupe se distingue par sa capacité à weaponiser des vulnérabilités dans les heures suivant leur publication. Plus de 16 vulnérabilités critiques (Exchange, Ivanti, Papercut) ont été exploitées depuis 2023. L'acteur utilise des outils d'administration légitimes (RMM) comme AnyDesk ou ScreenConnect pour rester discret. Le mouvement latéral s'effectue via PowerShell et PsExec, avec une exfiltration de données par Rclone. Storm-1175 cible particulièrement les secteurs de la santé et de l'éducation aux USA, UK et Australie. Les déploiements de ransomware sont souvent réalisés via PDQ Deployer ou des GPO compromises.
+<div id="conflit-us-israel-iran-sabotage-des-infrastructures-critiques"></div>
 
-**Analyse de l'impact** : La fenêtre de réaction pour le patching est désormais réduite à moins de 24 heures pour les actifs exposés.
+## Conflit US-Israël-Iran : Sabotage des infrastructures critiques
+Les agences américaines (CISA, FBI, NSA) ont émis une alerte conjointe (AA26-097A) confirmant que des acteurs cyber iraniens ciblent activement les automates programmables industriels (PLC) Rockwell Automation/Allen-Bradley. Ces intrusions ont entraîné des pertes financières et des perturbations opérationnelles dans les secteurs de l'eau, de l'énergie et des services gouvernementaux. Les attaquants exploitent des équipements exposés sur Internet en utilisant le logiciel de configuration Studio 5000 Logix Designer via des infrastructures louées à l'étranger. Bien qu'un cessez-le-feu de deux semaines ait été annoncé le 7 avril, la menace reste critique, les agences de renseignement craignant la présence de "backdoors" dormantes. Les ports 44818, 2222, 102, 22 et 502 sont particulièrement visés pour l'accès et le contrôle. Les tactiques rappellent celles de CyberAv3ngers (IRGC) observées fin 2023.
 
-**Recommandations** : Prioriser le patching d'urgence des systèmes périmétriques, restreindre strictement l'usage des outils RMM non autorisés et surveiller l'usage atypique de Rclone et PDQ Deployer.
+**Analyse de l'impact** : Menace directe sur la sécurité publique et la continuité des services essentiels aux USA et dans les pays alliés.
+
+**Recommandations** :
+* **Equipes OT** : Déconnecter immédiatement tous les PLC de l'Internet public et les placer derrière des pare-feu industriels/VPN.
+* **SOC** : Surveiller les flux entrants sur les ports OT mentionnés (ex: 44818) en provenance d'adresses IP étrangères.
+* **Architecture** : Passer les contrôleurs Rockwell en mode physique "RUN" pour empêcher les modifications de projet à distance.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Storm-1175 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application<br/>* T1219: Remote Access Software<br/>* T1567.002: Exfiltration to Cloud Storage |
-| Observables & Indicateurs de compromission | ```* Gaze.exe (Processus ransomware)``` |
+| Groupe ou acteur malveillant | CyberAv3ngers (affilié IRGC / MOIS) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0815 : External Remote Services <br/> * T0843 : Modification of Parameter <br/> * T0831 : Data Destruction |
+| Observables & Indicateurs de compromission | * Ports cibles : 44818, 2222, 102, 22, 502 <br/> * Outil : Dropbear SSH, Studio 5000 Logix Designer |
 
 ### Source (url) du ou des articles
-* [Field Effect](https://fieldeffect.com/blog/storm-1175-exploits-vulnerabilities-in-medusa-ransomware-ops)
-* [Security Affairs](https://securityaffairs.com/190440/cyber-crime/fast-moving-storm-1175-uses-new-exploits-to-breach-networks-and-drop-medusa.html)
-<br/>
-<br/>
+* https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict
+* https://www.lemonde.fr/pixels/article/2026/04/08/des-hackeurs-lies-a-l-iran-ont-perturbe-des-sites-industriels-americains_6678228_4408996.html
 
-<div id="evasion-de-bac-a-sable-dans-aws-agentcore-une-menace-directe-sur-les-agents-ia"></div>
+<br>
+<br>
 
-## Évasion de bac à sable dans AWS AgentCore : une menace directe sur les agents IA
-L'équipe Unit 42 a découvert une méthode permettant de contourner l'isolation du réseau de la "sandbox" d'Amazon Bedrock AgentCore. Malgré un mode "sans accès réseau externe", les chercheurs ont réussi à établir une communication via tunnel DNS. Le service Code Interpreter utilisait un microVM Metadata Service (MMDS) vulnérable, ne requérant pas de jeton de session (IMDSv1-style). Un attaquant peut ainsi exfiltrer des identifiants IAM et des données sensibles en les encodant dans des requêtes DNS récursives. L'isolation DNS n'était pas totale, permettant de résoudre des domaines publics et de transmettre des données à un serveur faisant autorité. AWS a depuis mis à jour sa documentation et renforcé la configuration MMDS par défaut vers la version v2.
+<div id="apt28-deploiement-de-la-suite-prismex"></div>
 
-**Analyse de l'impact** : Risque critique d'exfiltration de données confidentielles traitées par des agents IA supposés être isolés.
+## APT28 : Déploiement de la suite PRISMEX
+Le groupe de renseignement militaire russe APT28 mène une vaste campagne d'espionnage contre l'Ukraine et ses alliés logistiques (Pologne, Roumanie, Slovaquie). La suite de malwares identifiée, PRISMEX, se distingue par l'utilisation intensive de la stéganographie pour dissimuler ses payloads dans des images PNG. L'infection débute par du spear-phishing avec des documents RTF exploitant CVE-2026-21509 pour forcer une connexion WebDAV. Les composants incluent des droppers (PrismexDrop), des chargeurs (PrismexLoader) et des implants basés sur le framework Covenant. Le groupe utilise des services cloud légitimes comme Filen.io pour l'exfiltration et le C2, rendant le trafic difficile à distinguer des flux normaux. Les leurres portent sur des inventaires de drones et des données météorologiques, essentiels aux opérations militaires de terrain.
 
-**Recommandations** : Utiliser le mode VPC pour une isolation réseau complète, activer le pare-feu DNS Route 53 Resolver et migrer impérativement vers MMDSv2 pour tous les agents AgentCore.
+**Analyse de l'impact** : Risque élevé de sabotage logistique et de vol de renseignement stratégique sur l'aide militaire à l'Ukraine.
+
+**Recommandations** :
+* **SOC** : Bloquer les domaines associés à Filen.io et surveiller les requêtes DNS vers des domaines WebDAV suspects.
+* **Endpoint** : Surveiller le détournement d'objets COM (COM hijacking) et la création de tâches planifiées redémarrant explorer.exe.
+* **Threat Hunting** : Analyser les fichiers images "SplashScreen.png" pour détecter des anomalies de structure liées à la stéganographie.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non applicable (Recherche) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1071.004: DNS Tunneling<br/>* T1552.005: Cloud Credentials |
-| Observables & Indicateurs de compromission | ```dnshook.site``` |
+| Groupe ou acteur malveillant | APT28 (Fancy Bear / UAC-0001) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1027.003 : Steganography <br/> * T1546.015 : Component Object Model Hijacking <br/> * T1567.002 : Exfiltration to Cloud Storage |
+| Observables & Indicateurs de compromission | * Domaine : wellnesscaremed[.]com <br/> * Service C2 : Filen.io <br/> * CVE : CVE-2026-21509, CVE-2026-21513 |
 
 ### Source (url) du ou des articles
-* [Unit 42](https://unit42.paloaltonetworks.com/bypass-of-aws-sandbox-network-isolation-mode/)
-<br/>
-<br/>
+* https://securityaffairs.com/190510/apt/russia-linked-apt28-uses-prismex-to-infiltrate-ukraine-and-allied-infrastructure-with-advanced-tactics.html
+* https://thehackernews.com/2026/04/apt28-deploys-prismex-malware-in.html
 
-<div id="compromission-de-la-chaine-dapprovisionnement-le-cas-du-sdk-velora-dex"></div>
+<br>
+<br>
 
-## Compromission de la chaîne d'approvisionnement : le cas du SDK Velora DEX
-Le package npm `@velora-dex/sdk` en version 9.4.1 a été identifié comme contenant un code malveillant. L'injection s'est probablement produite au niveau du pipeline de build plutôt que dans le dépôt source. Une charge utile encodée en base64 s'exécute automatiquement lors de l'importation du package via `child_process.exec`. Le malware télécharge un script shell depuis le serveur C2 `89.36.224.5` pour obtenir une exécution de code arbitraire. Cette attaque cible spécifiquement l'écosystème DeFi/Web3 pour voler des clés privées ou des variables d'environnement. Les versions antérieures et les versions de développement (dev.1, dev.2) ne sont pas affectées. La version 9.4.2 a été publiée pour corriger l'incident.
+<div id="securisation-de-lia-agentique-et-projet-glasswing"></div>
 
-**Analyse de l'impact** : Risque majeur de vol d'actifs cryptographiques et de compromission totale des serveurs de développement/production utilisant ce SDK.
+## Sécurisation de l'IA Agentique et Projet Glasswing
+L'évolution vers une IA dite "agentique" (agents autonomes capables d'exécuter du code et d'appeler des outils) crée une nouvelle surface d'attaque non-déterministe. Contrairement aux logiciels classiques, les agents IA suivent le chemin de moindre résistance, pouvant extraire des données sensibles par excès de zèle sans intention malveillante. L'OpenSSF a introduit le catalogue de menaces SAFE-MCP, inspiré de MITRE ATT&CK, pour classifier ces attaques (ex: SAFE-T1201). En parallèle, Anthropic a dévoilé "Project Glasswing", une initiative visant à utiliser le modèle Claude Mythos pour détecter des vulnérabilités critiques avant les attaquants. Ce modèle aurait déjà identifié des milliers de failles dans des OS et navigateurs majeurs. L'enjeu est de limiter l'accès à ces capacités offensives de l'IA tout en renforçant les défenses via des agents de sécurité guidés par l'humain dans les SOC.
 
-**Recommandations** : Désinstaller immédiatement la version 9.4.1, auditer les fichiers de verrouillage (lock files), et faire une rotation complète de tous les secrets exfiltrés (clés API, accès serveurs).
+**Analyse de l'impact** : Transformation radicale du cycle de vulnérabilité. L'IA peut réduire le temps d'investigation des SOC mais aussi accélérer drastiquement le développement d'exploits sophistiqués.
+
+**Recommandations** :
+* **Architecture** : Appliquer le principe du moindre privilège strict aux agents IA (least privilege as an architectural requirement).
+* **Développement** : Imposer un Software Bill of Materials (SBOM) pour toutes les dépendances open source des piles IA (souvent > 3000).
+* **SOC** : Intégrer des agents IA non-autonomes pour l'aide au diagnostic, tout en gardant une validation humaine (Human-in-the-loop).
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Inconnu (Surgical Supply Chain Attack) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Malicious Software Compilation<br/>* T1059.004: Unix Shell |
-| Observables & Indicateurs de compromission | ```* 89.36.224.5 * install.sh * bm9odXAgYmFzaCAtYyAiJChjdXJs (Signature Base64)``` |
+| Groupe ou acteur malveillant | Non applicable (Menace structurelle / Recherche) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1201 : MCP Rugpull Attack (SAFE-MCP) <br/> * T1190 : Exploit Public-Facing Application (AI-driven) |
+| Observables & Indicateurs de compromission | * Modèles IA : Claude Mythos, SAFE-MCP framework |
 
 ### Source (url) du ou des articles
-* [OpenSource Malware](https://opensourcemalware.com/blog/velora-hacked)
-<br/>
-<br/>
+* https://openssf.org/blog/2026/04/08/openssf-tech-talk-recap-securing-agentic-ai/
+* https://securityaffairs.com/190496/ai/project-glasswing-powered-by-claude-mythos-defending-software-before-hackers-do.html
 
-<div id="lia-au-service-de-la-defense-anthropic-restreint-son-modele-mythos"></div>
+<br>
+<br>
 
-## L'IA au service de la défense : Anthropic restreint son modèle Mythos
-Anthropic a dévoilé "Mythos", un modèle d'IA particulièrement performant pour la détection de vulnérabilités logicielles complexes. Contrairement aux modèles traditionnels, Mythos excelle dans l'analyse de code pour identifier des failles exploitables par des hackers. Pour prévenir les risques d'usage malveillant, Anthropic a décidé de limiter l'accès à une cinquantaine de partenaires sélectionnés (Microsoft, Linux Foundation, Apple, Cisco). Ce programme, baptisé "Projet Glasswing", vise à corriger les infrastructures critiques avant que des attaquants n'utilisent des outils similaires. L'entreprise offre également 100 millions de dollars en crédits d'utilisation pour soutenir les efforts de sécurisation. Cette annonce souligne la course aux armements entre l'IA défensive et offensive.
+<div id="unc6783-ciblage-des-bpo-et-tickets-zendesk"></div>
 
-**Analyse de l'impact** : Double tranchant ; si cet outil aide à la sécurisation massive, sa fuite ou l'émergence d'un équivalent non régulé pourrait automatiser l'exploitation de failles à l'échelle mondiale.
+## UNC6783 : Ciblage des BPO et des tickets Zendesk
+L'acteur malveillant UNC6783 (possiblement lié au persona "Mr. Raccoon") cible stratégiquement les fournisseurs de Business Process Outsourcing (BPO) pour atteindre les données de grandes entreprises clientes. En utilisant l'ingénierie sociale via chat en direct, l'attaquant redirige les employés du support vers des pages de phishing Okta usurpant l'identité de l'organisation visée. Ces pages utilisent des kits capables de voler le contenu du presse-papier pour contourner les protections MFA. Le but est d'accéder aux consoles d'administration Zendesk pour exfiltrer des millions de tickets de support contenant des données personnelles, des informations sur les employés et des rapports de sécurité internes. Une violation majeure a été revendiquée chez Adobe via un prestataire basé en Inde, avec 13 millions de tickets prétendument dérobés pour extorsion.
 
-**Recommandations** : Surveiller les sorties de modèles spécialisés en "vuln-scanning" et intégrer des revues de code assistées par IA pour les développeurs, tout en validant systématiquement les résultats.
+**Analyse de l'impact** : Risque majeur de fuite de données massives et d'extorsion. La confiance dans la chaîne de support externe est gravement compromise.
+
+**Recommandations** :
+* **IAM** : Déployer des clés de sécurité FIDO2 pour le MFA, insensibles au phishing de tokens.
+* **SOC** : Surveiller et bloquer les domaines suivant le motif `<org>[.]zendesk-support<##>[.]com`.
+* **Audit** : Auditer régulièrement les enregistrements de nouveaux périphériques MFA, en particulier pour les comptes ayant des accès aux outils de support.
 
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non applicable (Modèle défensif) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1595: Active Scanning (Potentiel) |
-| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni``` |
+| Groupe ou acteur malveillant | UNC6783 (Raccoon) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.003 : Spearphishing via Service <br/> * T1556.006 : Modify Authentication Process: Multi-Factor Authentication <br/> * T1078 : Valid Accounts |
+| Observables & Indicateurs de compromission | * Domaines de phishing : motifs zendesk-support[.]com <br/> * Cibles : Plateformes Zendesk, Okta |
 
 ### Source (url) du ou des articles
-* [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/07/cybersecurite-anthropic-restreint-le-lancement-de-son-dernier-modele-d-ia-pour-prevenir-les-risques_6677931_4408996.html)
+* https://www.bleepingcomputer.com/news/security/google-new-unc6783-hackers-steal-corporate-zendesk-support-tickets/
