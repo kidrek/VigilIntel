@@ -1,0 +1,639 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The Q2 2026 cyber threat landscape is characterized by a critical shift toward identity exploitation and the compromise of management infrastructures as primary vectors. The massive use of 'Phishing-as-a-Service' platforms like VENOM or EvilProxy demonstrates that traditional Multi-Factor Authentication (MFA) is now systematically bypassed by Adversary-in-the-Middle (AiTM) techniques. Simultaneously, the weaponization of administrative tools, such as the hijacking of Microsoft Intune against Stryker, transforms defense levers into tools for mass asset destruction. Threat actors are also targeting the software supply chain and SaaS services, exploiting trust in automated notifications to spread sophisticated malware like LucidRook. Geopolitically, instability in the Middle East and Russian operations targeting SOHO routers confirm the increasing use of civilian infrastructure for strategic espionage. Finally, the acceleration of critical vulnerability exploitation, often within 10 hours of disclosure using AI, mandates a drastic reduction in reaction times.",
+      "fr": "Le paysage de la menace cyber au second trimestre 2026 est marqué par un basculement critique vers l'exploitation de l'identité et la compromission des infrastructures de gestion comme vecteurs privilégiés. L'utilisation massive de plateformes de 'Phishing-as-a-Service' telles que VENOM ou EvilProxy démontre que l'authentification multifacteur (MFA) traditionnelle est désormais systématiquement contournée par des techniques d'Adversary-in-the-Middle (AiTM). Parallèlement, l'armement des outils d'administration, illustré par le détournement des solutions MDM (Microsoft Intune) contre Stryker, transforme les leviers de défense en armes de destruction massive d'actifs. La menace se déplace également vers la supply chain logicielle et les services SaaS, où la confiance implicite accordée aux notifications automatisées est exploitée pour diffuser des malwares sophistiqués comme LucidRook. Sur le plan géopolitique, l'instabilité au Moyen-Orient et les cyber-opérations russes ciblant les routeurs domestiques confirment l'instrumentalisation croissante de l'infrastructure civile pour l'espionnage stratégique. Enfin, l'accélération de l'exploitation des vulnérabilités critiques, souvent moins de 10 heures après leur divulgation grâce à l'assistance de l'IA, impose aux décideurs une réduction drastique des temps de réaction."
+    },
+    "date": "2026-04-10"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Technologie_et_Télécom"
+        ]
+      },
+      "theme": {
+        "en": "China - NSCC Data Breach",
+        "fr": "Chine - Violation de données du NSCC"
+      },
+      "description": {
+        "en": "Alleged theft of 10 PB of military and research data from the National Supercomputing Center in Tianjin.",
+        "fr": "Allégation de vol de 10 Po de données militaires et de recherche auprès du Centre National de Supercalcul de Tianjin."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen air-gapping for sensitive research environments.",
+          "fr": "Renforcer l'isolation (air-gapping) des environnements de recherche sensibles."
+        },
+        {
+          "en": "Implement behavioral monitoring on large data transfers from high-performance computing assets.",
+          "fr": "Mettre en œuvre une surveillance comportementale sur les transferts de données massifs depuis les actifs de calcul intensif."
+        }
+      ],
+      "tags": [
+        "China",
+        "Espionage",
+        "Supercomputing"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190536/hacking/the-alleged-breach-of-chinas-national-supercomputing-center-can-have-serious-geopolitical-consequences.html"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "US-Iran Cyber Operations",
+        "fr": "Opérations cyber États-Unis - Iran"
+      },
+      "description": {
+        "en": "Hacking of FBI Director Kash Patel's personal emails by a group linked to Iran.",
+        "fr": "Piratage des emails personnels du directeur du FBI Kash Patel par un groupe lié à l'Iran."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce mandatory hardware MFA for personal accounts of high-profile officials.",
+          "fr": "Imposer une authentification MFA matérielle obligatoire pour les comptes personnels des hauts responsables."
+        },
+        {
+          "en": "Conduct regular digital footprint audits for key leadership personnel.",
+          "fr": "Réaliser des audits réguliers de l'empreinte numérique pour le personnel de direction clé."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "FBI",
+        "Personal Targeting"
+      ],
+      "sources": [
+        "https://research.hisolutions.com/2026/04/weitere-news-im-april-2/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Israel-Iran Conflict",
+        "fr": "Conflit Israël - Iran"
+      },
+      "description": {
+        "en": "Continuation of offensive cyber operations (wipers) despite a fragile ceasefire announcement.",
+        "fr": "Poursuite des cyber-opérations offensives (wipers) malgré l'annonce fragile d'un cessez-le-feu."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance backup frequency and offline storage for critical infrastructure systems.",
+          "fr": "Augmenter la fréquence des sauvegardes et le stockage hors ligne pour les systèmes d'infrastructure critique."
+        },
+        {
+          "en": "Prepare incident response playbooks specifically for destructive wiper attacks.",
+          "fr": "Préparer des plans de réponse aux incidents spécifiquement pour les attaques destructrices de type wiper."
+        }
+      ],
+      "tags": [
+        "Israel",
+        "Iran",
+        "Wiper"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télécom"
+        ]
+      },
+      "theme": {
+        "en": "European Union AI Regulation",
+        "fr": "Réglementation IA de l'Union Européenne"
+      },
+      "description": {
+        "en": "The AI Continent Action Plan delivers milestones for trusted AI and infrastructure in Europe.",
+        "fr": "L'AI Continent Action Plan franchit des étapes majeures pour une IA de confiance et des infrastructures en Europe."
+      },
+      "recommandations": [
+        {
+          "en": "Review AI system compliance against the latest AI Omnibus pillars.",
+          "fr": "Réviser la conformité des systèmes d'IA par rapport aux derniers piliers de l'AI Omnibus."
+        },
+        {
+          "en": "Ensure data sovereignty when deploying generative AI tools within the EU.",
+          "fr": "Garantir la souveraineté des données lors du déploiement d'outils d'IA générative au sein de l'UE."
+        }
+      ],
+      "tags": [
+        "Regulation",
+        "AI",
+        "EU"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/news/ai-continent-action-plan-delivers-major-milestones"
+      ],
+      "date": "2026-04-09"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Figure",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Exposure of 967,200 email records, facilitating credential stuffing attacks.",
+        "fr": "Exposition de 967 200 enregistrements d'emails, facilitant les attaques de credential stuffing."
+      },
+      "mitre_ttps": [
+        "T1110.004: Credential Stuffing"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement rate-limiting and CAPTCHAs on all login endpoints.",
+          "fr": "Mettre en œuvre une limitation de débit (rate-limiting) et des CAPTCHAs sur tous les points d'accès de connexion."
+        },
+        {
+          "en": "Notify users to change passwords if reused across other services.",
+          "fr": "Notifier les utilisateurs de changer leurs mots de passe s'ils sont réutilisés sur d'autres services."
+        }
+      ],
+      "tags": [
+        "Leak",
+        "Credential Stuffing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "victim": "ChipSoft",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Ransomware attack impacting digital services for several Dutch hospitals.",
+        "fr": "Attaque par ransomware impactant les services numériques de plusieurs hôpitaux néerlandais."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify network segmentation between administrative and clinical environments.",
+          "fr": "Vérifier la segmentation réseau entre les environnements administratifs et cliniques."
+        },
+        {
+          "en": "Test disaster recovery plans for hospital management systems.",
+          "fr": "Tester les plans de reprise après sinistre pour les systèmes de gestion hospitalière."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Hospital"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/healthcare-it-solutions-provider-chipsoft-hit-by-ransomware-attack/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "victim": "Stryker",
+      "threat_actor": "Handala Hack",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Abuse of Microsoft Intune MDM to remotely wipe devices and deploy wipers.",
+        "fr": "Abus de la solution MDM Microsoft Intune pour effacer à distance des appareils et déployer des wipers."
+      },
+      "mitre_ttps": [
+        "T1078.004: Cloud Accounts",
+        "T1485: Data Destruction"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce phishing-resistant MFA for all MDM administrators.",
+          "fr": "Imposer une authentification MFA résistante au phishing pour tous les administrateurs MDM."
+        },
+        {
+          "en": "Limit MDM remote wipe permissions using a just-in-time (JIT) access model.",
+          "fr": "Limiter les permissions d'effacement à distance MDM via un modèle d'accès juste-à-temps (JIT)."
+        }
+      ],
+      "tags": [
+        "MDM Abuse",
+        "Wiper"
+      ],
+      "sources": [
+        "https://research.hisolutions.com/2026/04/stryker-breach-wenn-das-eigene-mdm-zur-waffe-wird/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "victim": "Eurail",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Data breach impacting 308,777 travelers, including names and passport numbers.",
+        "fr": "Violation de données impactant 308 777 voyageurs, incluant noms et numéros de passeport."
+      },
+      "mitre_ttps": [
+        "T1560: Archive Collected Data"
+      ],
+      "recommandations": [
+        {
+          "en": "Encrypt sensitive traveler identification data at rest.",
+          "fr": "Chiffrer les données d'identification sensibles des voyageurs au repos."
+        },
+        {
+          "en": "Conduct a third-party risk assessment for all booking and ticketing partners.",
+          "fr": "Réaliser une évaluation des risques tiers pour tous les partenaires de réservation et de billetterie."
+        }
+      ],
+      "tags": [
+        "Data Leak",
+        "PII",
+        "Transport"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190570/data-breach-eurail-data-breach-impacted-308777-people.html"
+      ],
+      "date": "2026-04-09"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-34424",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.90",
+      "cpe": "cpe:2.3:a:nextendweb:smart_slider_3:*:*:*:*:pro:*:*:*",
+      "product": "Smart Slider 3 Pro",
+      "vendor": "Nextendweb",
+      "description": {
+        "en": "Critical supply chain compromise in Smart Slider 3 Pro allowing code injection via update system.",
+        "fr": "Compromission critique de la supply chain dans Smart Slider 3 Pro permettant l'injection de code via le système de mise à jour."
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately disable automated updates for Smart Slider 3 Pro until a verified patch is released.",
+          "fr": "Désactiver immédiatement les mises à jour automatiques pour Smart Slider 3 Pro jusqu'à la publication d'un correctif vérifié."
+        },
+        {
+          "en": "Inspect WordPress files for unexpected PHP modifications in plugin directories.",
+          "fr": "Inspecter les fichiers WordPress pour des modifications PHP inattendues dans les répertoires de plugins."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Supply Chain",
+        "WordPress"
+      ],
+      "sources": [
+        "https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "cve_id": "CVE-2026-33017",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.85",
+      "cpe": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+      "product": "Langflow",
+      "vendor": "Langflow",
+      "description": {
+        "en": "Unauthenticated RCE via exposed build endpoints in Langflow.",
+        "fr": "Exécution de code à distance (RCE) non authentifiée via l'exposition d'endpoints de build dans Langflow."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict access to Langflow web interfaces behind a VPN or authenticated proxy.",
+          "fr": "Restreindre l'accès aux interfaces web de Langflow derrière un VPN ou un proxy authentifié."
+        },
+        {
+          "en": "Update Langflow to the latest version immediately to patch unauthenticated endpoints.",
+          "fr": "Mettre à jour Langflow vers la dernière version immédiatement pour corriger les endpoints non authentifiés."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AI Tool"
+      ],
+      "sources": [
+        "https://research.hisolutions.com/2026/04/weitere-news-im-april-2/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "cve_id": "GHSA-2679-6mx9-h9xc",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "0.10",
+      "cpe": "cpe:2.3:a:marimo:marimo:*:*:*:*:*:*:*:*",
+      "product": "Marimo",
+      "vendor": "Marimo",
+      "description": {
+        "en": "Pre-authentication RCE via WebSocket without validation in Marimo Python notebooks.",
+        "fr": "RCE pré-authentification via WebSocket sans validation dans les notebooks Python Marimo."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Enable authentication and token validation for all Marimo server instances.",
+          "fr": "Activer l'authentification et la validation des jetons pour toutes les instances de serveur Marimo."
+        },
+        {
+          "en": "Monitor WebSocket connections for unauthorized command execution patterns.",
+          "fr": "Surveiller les connexions WebSocket pour des schémas d'exécution de commandes non autorisées."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Python"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/marimo-oss-python-notebook-rce-from-disclosure-to-exploitation-in-under-10-hours"
+      ],
+      "date": "2026-04-09"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "UAT-10362 Targets NGOs in Taiwan with LucidRook Malware",
+        "fr": "UAT-10362 cible les ONG à Taiwan avec le malware LucidRook"
+      },
+      "description": {
+        "en": "UAT-10362 uses a Lua-based malware called LucidRook for strategic espionage against Taiwanese NGOs and universities, employing DLL side-loading and Gmail-based exfiltration.",
+        "fr": "UAT-10362 utilise un malware basé sur Lua nommé LucidRook pour l'espionnage stratégique contre les ONG et universités taïwanaises, employant le DLL side-loading et l'exfiltration via Gmail."
+      },
+      "threat_actor": "UAT-10362",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research",
+          "Nonprofit_and_NGO"
+        ],
+        "fr": [
+          "Éducation_et_Recherche",
+          "Associatif_et_ONG"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "LucidRook",
+          "LucidKnight",
+          "LucidPawn",
+          "DismCore.dll"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574.002: DLL Side-Loading",
+        "T1059.006: Lua scripting",
+        "T1020: Automated Exfiltration"
+      ],
+      "analyse": {
+        "en": "The use of Lua bytecode makes the malware highly stealthy and difficult to analyze forensically. The modular design allows for rapid functionality updates without binary changes.",
+        "fr": "L'utilisation du bytecode Lua rend le malware extrêmement furtif et difficile à analyser. Sa conception modulaire permet des mises à jour rapides des fonctionnalités sans modifier le binaire."
+      },
+      "recommandations": [
+        {
+          "en": "Block execution of LNK files from temporary and external directories.",
+          "fr": "Bloquer l'exécution de fichiers LNK à partir des répertoires temporaires et externes."
+        },
+        {
+          "en": "Monitor for unexpected Lua interpreter processes in user environments.",
+          "fr": "Surveiller les processus d'interprète Lua inattendus dans les environnements utilisateurs."
+        }
+      ],
+      "tags": [
+        "Espionage",
+        "Taiwan",
+        "Lua"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/the-threat-hunters-gambit/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "title": {
+        "en": "Storm-2755 Payroll Piracy Campaign in Canada",
+        "fr": "Campagne de piratage de paie Storm-2755 au Canada"
+      },
+      "description": {
+        "en": "Financial threat actor Storm-2755 targets Canadian employees using SEO poisoning and AiTM phishing to steal session tokens and redirect direct deposits.",
+        "fr": "L'acteur Storm-2755 cible les employés canadiens en utilisant le SEO poisoning et le phishing AiTM pour voler les jetons de session et détourner les virements de salaire."
+      },
+      "threat_actor": "Storm-2755",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Business_Services"
+        ],
+        "fr": [
+          "Finance",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "bluegraintours[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Axios/1.7.9"
+        ]
+      },
+      "mitre_ttps": [
+        "T1557: Adversary-in-the-Middle",
+        "T1137.005: Outlook Rules",
+        "T1566.002: Spearphishing Link"
+      ],
+      "analyse": {
+        "en": "The attacker uses the Axios HTTP client to replay session tokens, bypassing MFA. Post-compromise, they create inbox rules to hide payroll change notifications.",
+        "fr": "L'attaquant utilise le client HTTP Axios pour rejouer les jetons de session, contournant le MFA. Après compromission, ils créent des règles de messagerie pour cacher les notifications de changement de RIB."
+      },
+      "recommandations": [
+        {
+          "en": "Alert on inbox rules containing keywords like 'payroll', 'bank', or 'RIB'.",
+          "fr": "Alerter sur les règles de messagerie contenant des mots-clés comme 'paie', 'banque' ou 'RIB'."
+        },
+        {
+          "en": "Implement Continuous Access Evaluation (CAE) to revoke sessions upon risk detection.",
+          "fr": "Mettre en œuvre l'évaluation continue de l'accès (CAE) pour révoquer les sessions en cas de détection de risque."
+        }
+      ],
+      "tags": [
+        "AiTM",
+        "Payroll",
+        "Canada"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/"
+      ],
+      "date": "2026-04-09"
+    },
+    {
+      "title": {
+        "en": "VENOM Phishing Targeting Executive Identities",
+        "fr": "Phishing VENOM ciblant les identités de cadres dirigeants"
+      },
+      "description": {
+        "en": "A Phishing-as-a-Service platform targeting C-suite executives using QR codes and device-code authentication attacks.",
+        "fr": "Une plateforme Phishing-as-a-Service ciblant les cadres dirigeants via des QR codes et des attaques par authentification 'device-code'."
+      },
+      "threat_actor": "VENOM operators",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Finance"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "VENOM PhaaS"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003: Phishing via QR Code",
+        "T1557: Adversary-in-the-Middle",
+        "T1528: Steal Application Access Token"
+      ],
+      "analyse": {
+        "en": "VENOM bypasses desktop security by forcing users onto mobile devices via QR codes and exploits 'Device Code' flows for persistence.",
+        "fr": "VENOM contourne la sécurité bureautique en forçant les utilisateurs vers le mobile via des QR codes et exploite les flux 'Device Code' pour la persistance."
+      },
+      "recommandations": [
+        {
+          "en": "Disable the 'Device Code' authentication flow if not strictly necessary for the organization.",
+          "fr": "Désactiver le flux d'authentification 'Device Code' s'il n'est pas strictement nécessaire pour l'organisation."
+        },
+        {
+          "en": "Deploy FIDO2 security keys for all high-value executive accounts.",
+          "fr": "Déployer des clés de sécurité FIDO2 pour tous les comptes de cadres à haute valeur."
+        }
+      ],
+      "tags": [
+        "BEC",
+        "QR Code",
+        "Executive Targeting"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-venom-phishing-attacks-steal-senior-executives-microsoft-logins/"
+      ],
+      "date": "2026-04-09"
+    }
+  ]
+}
