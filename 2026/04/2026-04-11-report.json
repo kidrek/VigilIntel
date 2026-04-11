@@ -1,0 +1,735 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current threat landscape is marked by an unprecedented acceleration of the exploitation cycle, where defenders often face exploitation before disclosure. Key trends include the strategic targeting of Western critical infrastructure by Iranian actors, highly sophisticated supply chain attacks targeting diagnostic tools, and the normalization of Adversary-in-the-Middle (AiTM) techniques to bypass traditional MFA. Healthcare and legal sectors remain high-value targets for ransomware and data extortion groups like SRG.",
+      "fr": "Le paysage actuel des menaces cyber est marqué par une accélération sans précédent du cycle d'exploitation, où les défenseurs font souvent face à l'exploitation avant la divulgation. Les tendances clés incluent le ciblage stratégique des infrastructures critiques occidentales par des acteurs iraniens, des attaques de supply chain sophistiquées ciblant des outils de diagnostic, et la normalisation des techniques d'Adversary-in-the-Middle (AiTM) pour contourner le MFA traditionnel. Les secteurs de la santé et du droit restent des cibles de choix pour le rançongiciel et l'extorsion de données par des groupes comme SRG."
+    },
+    "date": "2026-04-11"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "China-India Tech Relocation",
+        "fr": "Relocalisation technologique Chine-Inde"
+      },
+      "description": {
+        "en": "Red Hat is closing its engineering operations in China to relocate to India, citing concerns over industrial espionage.",
+        "fr": "Red Hat ferme ses activit\u00e9s d'ing\u00e9nierie en Chine pour les relocaliser en Inde, par crainte de l'espionnage industriel."
+      },
+      "recommandations": [
+        {
+          "en": "Audit intellectual property access for regional development centers.",
+          "fr": "Auditer l'acc\u00e8s \u00e0 la propri\u00e9t\u00e9 intellectuelle pour les centres de d\u00e9veloppement r\u00e9gionaux."
+        },
+        {
+          "en": "Implement strict data exfiltration monitoring for employees in high-risk jurisdictions.",
+          "fr": "Mettre en place une surveillance stricte de l'exfiltration de donn\u00e9es pour les employ\u00e9s dans les juridictions \u00e0 haut risque."
+        }
+      ],
+      "tags": [
+        "espionage",
+        "geopolitics"
+      ],
+      "sources": [
+        "https://www.theregister.com/2026/04/10/red_hat_ends_china_engineering/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Privacy and State Pressure in France",
+        "fr": "Vie priv\u00e9e et pressions \u00e9tatiques en France"
+      },
+      "description": {
+        "en": "GrapheneOS is exiting the French market following smear campaigns and police pressure regarding encryption and privacy features.",
+        "fr": "GrapheneOS quitte le march\u00e9 fran\u00e7ais suite \u00e0 une campagne de d\u00e9nigrement et des pressions de la police sur le chiffrement."
+      },
+      "recommandations": [
+        {
+          "en": "Review the regulatory compliance of privacy-focused hardware in European jurisdictions.",
+          "fr": "Examiner la conformit\u00e9 r\u00e9glementaire des mat\u00e9riels ax\u00e9s sur la vie priv\u00e9e dans les juridictions europ\u00e9ennes."
+        },
+        {
+          "en": "Ensure alternative secure communication channels are available for sensitive staff.",
+          "fr": "S'assurer que des canaux de communication s\u00e9curis\u00e9s alternatifs sont disponibles pour le personnel sensible."
+        }
+      ],
+      "tags": [
+        "privacy",
+        "encryption"
+      ],
+      "sources": [
+        "https://nordictimes.com/tech/grapheneos-exits-france-after-threats-and-smear-campaign/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Russian Disinformation in Europe",
+        "fr": "D\u00e9sinformation russe en Europe"
+      },
+      "description": {
+        "en": "Russian disinformation campaigns are targeting elections in Bulgaria, Hungary, and Armenia to weaken EU unity.",
+        "fr": "Campagnes de d\u00e9sinformation russes ciblant les \u00e9lections en Bulgarie, Hongrie et Arm\u00e9nie pour affaiblir l'unit\u00e9 europ\u00e9enne."
+      },
+      "recommandations": [
+        {
+          "en": "Increase social media monitoring for coordinated inauthentic behavior during election periods.",
+          "fr": "Augmenter la surveillance des r\u00e9seaux sociaux pour d\u00e9celer les comportements inauthentiques coordonn\u00e9s en p\u00e9riode \u00e9lectorale."
+        },
+        {
+          "en": "Promote media literacy programs to help citizens identify state-sponsored propaganda.",
+          "fr": "Promouvoir des programmes d'éducation aux médias pour aider les citoyens à identifier la propagande étatique."
+        }
+      ],
+      "tags": [
+        "disinformation",
+        "elections"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/the-kremlin-points-at-ukraine-as-a-threat-for-the-baltic-states-and-accuses-the-eu-with-meddling-in-upcoming-elections/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Iran-Israel/US Conflict Escalation",
+        "fr": "Escalade du conflit Iran-Isra\u00ebl/USA"
+      },
+      "description": {
+        "en": "Intensification of cyberattacks on Industrial Control Systems (ICS) in the context of ongoing military conflict.",
+        "fr": "Intensification des cyberattaques sur les syst\u00e8mes de contr\u00f4le industriel (ICS) dans le cadre du conflit militaire."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate OT networks from the public internet.",
+          "fr": "Isoler les r\u00e9seaux OT de l'internet public."
+        },
+        {
+          "en": "Implement network segment monitoring for unusual cross-zone traffic.",
+          "fr": "Mettre en place une surveillance de la segmentation r\u00e9seau pour le trafic inhabituel entre zones."
+        }
+      ],
+      "tags": [
+        "ICS",
+        "OT",
+        "state-sponsored"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Bitcoin Depot",
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Theft of 50.9 BTC ($3.6M) through the compromise of settlement accounts via stolen credentials.",
+        "fr": "Vol de 50.9 BTC (3.6M$) via un compromis de comptes de r\u00e8glement par des identifiants vol\u00e9s."
+      },
+      "mitre_ttps": [
+        "T1078: Valid Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce hardware-based MFA for all financial settlement accounts.",
+          "fr": "Imposer un MFA mat\u00e9riel pour tous les comptes de r\u00e8glement financiers."
+        },
+        {
+          "en": "Implement transaction approval workflows requiring multiple authorized signers.",
+          "fr": "Mettre en place des flux d'approbation de transactions n\u00e9cessitant plusieurs signataires autoris\u00e9s."
+        }
+      ],
+      "tags": [
+        "crypto",
+        "theft"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190578/cyber-crime/bitcoin-depot-hack-leads-to-3-6m-bitcoin-theft-via-stolen-credentials.html"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "victim": "Orrick, Herrington & Sutcliffe",
+      "threat_actor": "Silent Ransom Group",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "SRG"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "description": {
+        "en": "Massive exfiltration of confidential client and employee files by SRG following failed negotiations.",
+        "fr": "Exfiltration massive de fichiers clients et employ\u00e9s confidentiels par SRG suite \u00e0 un \u00e9chec de n\u00e9gociation."
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "recommandations": [
+        {
+          "en": "Enhance Data Loss Prevention (DLP) controls for sensitive legal documents.",
+          "fr": "Renforcer les contr\u00f4les de pr\u00e9vention des fuites de donn\u00e9es (DLP) pour les documents juridiques sensibles."
+        },
+        {
+          "en": "Implement strict access controls and session monitoring for document management systems.",
+          "fr": "Mettre en place des contr\u00f4les d'acc\u00e8s stricts et une surveillance des sessions pour les syst\u00e8mes de gestion documentaire."
+        }
+      ],
+      "tags": [
+        "extortion",
+        "data-leak"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/10/silent-ransom-group-leaked-another-big-law-firm-orrick-herrington-sutcliffe/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "victim": "ChipSoft",
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Ransomware attack on EHR provider ChipSoft, affecting dozens of hospitals in the Netherlands and Belgium.",
+        "fr": "Ran\u00e7onnement du fournisseur d'EHR ChipSoft, impactant des dizaines d'h\u00f4pitaux aux Pays-Bas et en Belgique."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure offline backups of electronic health records (EHR) are regularly tested.",
+          "fr": "S'assurer que les sauvegardes hors ligne des dossiers de sant\u00e9 \u00e9lectroniques (EHR) sont test\u00e9es r\u00e9guli\u00e8rement."
+        },
+        {
+          "en": "Review supply chain security for critical medical software providers.",
+          "fr": "Examiner la s\u00e9curit\u00e9 de la cha\u00eene d'approvisionnement pour les fournisseurs de logiciels m\u00e9dicaux critiques."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "healthcare"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190615/cyber-crime/ransomware-attack-on-chipsoft-knocks-ehr-services-offline-across-hospitals-in-the-netherlands-and-belgium.html"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "victim": "Microsoft (Canadian Employees)",
+      "threat_actor": "Storm-2755",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "description": {
+        "en": "AiTM and SEO poisoning attacks targeting employees to steal session tokens and redirect payroll deposits.",
+        "fr": "Attaques AiTM et empoisonnement SEO ciblant les employ\u00e9s pour voler des jetons de session et d\u00e9tourner les d\u00e9p\u00f4ts de paie."
+      },
+      "mitre_ttps": [
+        "T1566.002: Spearphishing Link",
+        "T1557: Adversary-in-the-Middle",
+        "T1114.003: Email Forwarding Rule"
+      ],
+      "recommandations": [
+        {
+          "en": "Deploy phishing-resistant MFA like FIDO2/Passkeys.",
+          "fr": "D\u00e9ployer un MFA r\u00e9sistant au phishing tel que FIDO2/Passkeys."
+        },
+        {
+          "en": "Audit mailbox forwarding rules and HR platform bank change alerts.",
+          "fr": "Auditer les r\u00e8gles de transfert de bo\u00eete aux lettres et les alertes de changement de banque sur les plateformes RH."
+        }
+      ],
+      "tags": [
+        "AiTM",
+        "BEC",
+        "fraud"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/microsoft-canadian-employees-targeted-in-payroll-pirate-attacks/"
+      ],
+      "date": "2026-04-10"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-40175",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:axios_project:axios:*:*:*:*:*:node.js:*:*",
+      "product": "Axios",
+      "vendor": "Axios Project",
+      "description": {
+        "en": "Prototype Pollution allowing RCE or full cloud compromise via AWS IMDSv2.",
+        "fr": "Prototype Pollution permettant une RCE ou un compromis complet du cloud via AWS IMDSv2."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Axios to the latest patched version immediately.",
+          "fr": "Mettre \u00e0 jour Axios vers la derni\u00e8re version corrig\u00e9e imm\u00e9diatement."
+        },
+        {
+          "en": "Restrict access to AWS IMDSv2 if not strictly required.",
+          "fr": "Restreindre l'acc\u00e8s \u00e0 AWS IMDSv2 s'il n'est pas strictement requis."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-40175"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "cve_id": "CVE-2026-4149",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:h:sonos:era_300:-:*:*:*:*:*:*:*",
+      "product": "Sonos Era 300",
+      "vendor": "Sonos",
+      "description": {
+        "en": "Out-of-bounds Access in SMB response handling allowing kernel-level code execution.",
+        "fr": "Acc\u00e8s hors limites dans la gestion des r\u00e9ponses SMB permettant une ex\u00e9cution de code au niveau noyau."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply firmware updates to Sonos devices.",
+          "fr": "Appliquer les mises \u00e0 jour de firmware sur les appareils Sonos."
+        },
+        {
+          "en": "Isolate IoT devices from production networks.",
+          "fr": "Isoler les appareils IoT des r\u00e9seaux de production."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-4149"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "cve_id": "CVE-2026-5059",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:amazon:aws_mcp_server:*:*:*:*:*:*:*:*",
+      "product": "aws-mcp-server",
+      "vendor": "AWS",
+      "description": {
+        "en": "Command Injection via AWS CLI allowing unauthenticated arbitrary code execution.",
+        "fr": "Injection de commande via AWS CLI permettant l'ex\u00e9cution de code arbitraire sans authentification."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution"
+      ],
+      "recommandations": [
+        {
+          "en": "Patch aws-mcp-server to version 1.0.1 or higher.",
+          "fr": "Patcher aws-mcp-server vers la version 1.0.1 ou sup\u00e9rieure."
+        },
+        {
+          "en": "Monitor AWS CLI logs for unusual command patterns.",
+          "fr": "Surveiller les journaux AWS CLI pour d\u00e9celer des mod\u00e8les de commande inhabituels."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "cloud"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-5059"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "cve_id": "CVE-2025-59528",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+      "product": "Flowise",
+      "vendor": "FlowiseAI",
+      "description": {
+        "en": "Critical vulnerability allowing Remote Code Execution (RCE).",
+        "fr": "Vuln\u00e9rabilit\u00e9 critique permettant l'ex\u00e9cution de code \u00e0 distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade Flowise to the latest secure release.",
+          "fr": "Mettre \u00e0 niveau Flowise vers la derni\u00e8re version s\u00e9curis\u00e9e."
+        },
+        {
+          "en": "Implement a Web Application Firewall (WAF) to block exploit attempts.",
+          "fr": "Mettre en place un pare-feu d'application Web (WAF) pour bloquer les tentatives d'exploitation."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190615/cyber-crime/ransomware-attack-on-chipsoft-knocks-ehr-services-offline-across-hospitals-in-the-netherlands-and-belgium.html"
+      ],
+      "date": "2026-04-10"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "CPUID Supply Chain Attack",
+        "fr": "Attaque de la Supply Chain CPUID"
+      },
+      "description": {
+        "en": "Compromise of the CPUID API led to the distribution of a trojanized HWiNFO loader disguised as CPU-Z and HWMonitor updates.",
+        "fr": "Le compromis de l'API CPUID a conduit \u00e0 la distribution d'un loader HWiNFO trojanis\u00e9 d\u00e9guis\u00e9 en mises \u00e0 jour CPU-Z et HWMonitor."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "a8ba9ba93b4509a86e3d7dd40fd0652c2743e32277760c5f7942b788b74c5285",
+          "53c3e0f8627917e8972a627b9e68adf9c21966428a85cb1c28f47cb21db3c12b"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "HWiNFO_Monitor_Setup.zip"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise",
+        "T1027.002: Software Packing",
+        "T1055: Process Injection"
+      ],
+      "analyse": {
+        "en": "High impact for hardware diagnostic tool users; malware runs in memory to evade EDR. Likely linked to previous FileZilla attacks.",
+        "fr": "Impact \u00e9lev\u00e9 pour les utilisateurs d'outils de diagnostic mat\u00e9riel ; le malware s'ex\u00e9cute en m\u00e9moire pour \u00e9luder les EDR. Probablement li\u00e9 aux pr\u00e9c\u00e9dentes attaques FileZilla."
+      },
+      "recommandations": [
+        {
+          "en": "Verify hashes of CPU-Z/HWMonitor downloads against official sources.",
+          "fr": "V\u00e9rifier les hachages des t\u00e9l\u00e9chargements CPU-Z/HWMonitor par rapport aux sources officielles."
+        },
+        {
+          "en": "Monitor for unusual MSBuild.exe or PowerShell.exe network activity.",
+          "fr": "Surveiller l'activit\u00e9 r\u00e9seau inhabituelle de MSBuild.exe ou PowerShell.exe."
+        }
+      ],
+      "tags": [
+        "supply-chain",
+        "malware"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "title": {
+        "en": "Iranian Targeting of US Industrial Devices",
+        "fr": "Ciblage iranien des appareils industriels am\u00e9ricains"
+      },
+      "description": {
+        "en": "Iranian groups are targeting Rockwell Automation PLCs exposed on the public internet to manipulate HMI/SCADA data.",
+        "fr": "Des groupes iraniens ciblent les automates Rockwell Automation expos\u00e9s sur internet pour manipuler les donn\u00e9es HMI/SCADA."
+      },
+      "threat_actor": "CyberAv3ngers",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Industrie_et_Fabrication"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T0815: Asset Identification",
+        "T0831: Data Manipulation",
+        "T0883: Control Device Periphery"
+      ],
+      "analyse": {
+        "en": "Critical threat to physical safety and essential services (water, power) with 4,000 devices exposed.",
+        "fr": "Menace critique pour la s\u00e9curit\u00e9 physique et les services essentiels (eau, \u00e9nergie) avec 4 000 appareils expos\u00e9s."
+      },
+      "recommandations": [
+        {
+          "en": "Disconnect PLCs from the public internet immediately.",
+          "fr": "D\u00e9connecter imm\u00e9diatement les automates de l'internet public."
+        },
+        {
+          "en": "Monitor traffic on ports 44818, 2222, 102, and 502.",
+          "fr": "Surveiller le trafic sur les ports 44818, 2222, 102 et 502."
+        }
+      ],
+      "tags": [
+        "OT",
+        "ICS",
+        "Iran"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/nearly-4-000-us-industrial-devices-exposed-to-iranian-cyberattacks/"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "title": {
+        "en": "UAT-10362 LucidRook Campaign in Taiwan",
+        "fr": "Campagne LucidRook de UAT-10362 \u00e0 Ta\u00efwan"
+      },
+      "description": {
+        "en": "Phishing campaign targeting NGOs and universities in Taiwan using LucidRook malware (Lua/Rust).",
+        "fr": "Campagne de phishing ciblant les ONG et universit\u00e9s \u00e0 Ta\u00efwan utilisant le malware LucidRook (Lua/Rust)."
+      },
+      "threat_actor": "UAT-10362",
+      "threat_actor_origin": "",
+      "threat_actor_type": "State-aligned",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Nonprofit_and_NGO",
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Associatif_et_ONG",
+          "\u00c9ducation_et_Recherche"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "dnslog[.]ink"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "archive1.zip",
+          "archive.zip"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574.002: DLL Side-Loading",
+        "T1059.006: Python/Lua Bytecode",
+        "T1614: System Location Discovery"
+      ],
+      "analyse": {
+        "en": "Sophisticated espionage campaign using password-protected archives and DLL side-loading to evade detection.",
+        "fr": "Campagne d'espionnage sophistiqu\u00e9e utilisant des archives prot\u00e9g\u00e9es par mot de passe et le DLL side-loading pour \u00e9viter la d\u00e9tection."
+      },
+      "recommandations": [
+        {
+          "en": "Block outbound FTP traffic to unknown hosts.",
+          "fr": "Bloquer le trafic FTP sortant vers des h\u00f4tes inconnus."
+        },
+        {
+          "en": "Monitor for anomalous execution of DISM.exe.",
+          "fr": "Surveiller l'ex\u00e9cution anormale de DISM.exe."
+        }
+      ],
+      "tags": [
+        "espionage",
+        "APT",
+        "Taiwan"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190598/security/uat-10362-linked-to-lucidrook-attacks-targeting-taiwan-based-institutions.html"
+      ],
+      "date": "2026-04-10"
+    },
+    {
+      "title": {
+        "en": "UNC6783 Social Engineering against BPOs",
+        "fr": "Ing\u00e9nierie sociale de UNC6783 contre les BPO"
+      },
+      "description": {
+        "en": "Targeting of BPO employees via live chat directing them to fake Zendesk/Okta pages to steal session data.",
+        "fr": "Ciblage des employ\u00e9s BPO via le chat en direct les dirigeant vers de fausses pages Zendesk/Okta pour voler des donn\u00e9es de session."
+      },
+      "threat_actor": "UNC6783",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Mr. Raccoon"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "<org>[.]zendesk-support<##>[.]com"
+        ],
+        "EMAIL": [
+          "protonmail.com"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.003: Spearphishing Service",
+        "T1098.005: Device Registration",
+        "T1213: Data from Information Repositories"
+      ],
+      "analyse": {
+        "en": "Group bypasses MFA by stealing clipboard contents and registering rogue devices.",
+        "fr": "Le groupe contourne le MFA en volant le contenu du presse-papiers et en enregistrant des appareils malveillants."
+      },
+      "recommandations": [
+        {
+          "en": "Prohibit sharing authentication links via chat tools.",
+          "fr": "Interdire le partage de liens d'authentification via les outils de chat."
+        },
+        {
+          "en": "Monitor for new MFA device registrations for privileged accounts.",
+          "fr": "Surveiller l'enregistrement de nouveaux appareils MFA pour les comptes privil\u00e9gi\u00e9s."
+        }
+      ],
+      "tags": [
+        "social-engineering",
+        "extortion",
+        "BPO"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/fake-zendesk-okta-pages-to-bypass-mfa"
+      ],
+      "date": "2026-04-10"
+    }
+  ]
+}
