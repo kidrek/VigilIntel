@@ -1,0 +1,496 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is characterized by a drastic reduction in the time between vulnerability disclosure and active exploitation, as seen with Marimo. Critical infrastructure, particularly in the US, is under constant pressure from state-backed actors like Iran exploiting exposed PLCs. Supply chain attacks are evolving to target developers via malicious IDE extensions. Meanwhile, international cooperation is becoming more effective against large-scale crypto fraud, despite the massive number of victims. The healthcare sector remains a primary target for ransomware operations like Anubis.",
+      "fr": "Le paysage des cybermenaces est marqué par une réduction drastique du délai entre la divulgation d'une vulnérabilité et son exploitation active, comme illustré par Marimo. Les infrastructures critiques, particulièrement aux États-Unis, subissent une pression constante d'acteurs étatiques comme l'Iran exploitant des automates exposés. Les attaques de supply chain évoluent pour cibler les développeurs via des extensions d'IDE malveillantes. Parallèlement, la coopération internationale devient plus efficace contre la fraude crypto massive, malgré un nombre élevé de victimes. Le secteur de la santé reste une cible privilégiée pour les rançongiciels comme Anubis."
+    },
+    "date": "2026-04-12"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "theme": {
+        "en": "International Law Enforcement Cooperation",
+        "fr": "Coopération policière internationale"
+      },
+      "description": {
+        "en": "Operation Atlantic involves the UK, USA, and Canada collaborating to dismantle international crypto fraud networks and freeze criminal assets.",
+        "fr": "L'opération Atlantic mobilise le Royaume-Uni, les États-Unis et le Canada pour démanteler des réseaux de fraude crypto internationaux et geler les avoirs criminels."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen public-private partnerships to share fraud data in real-time.",
+          "fr": "Renforcer les partenariats public-privé pour partager les données sur la fraude en temps réel."
+        },
+        {
+          "en": "Align national fraud strategies with international law enforcement standards.",
+          "fr": "Aligner les stratégies nationales de lutte contre la fraude sur les standards policiers internationaux."
+        }
+      ],
+      "tags": [
+        "Operation Atlantic",
+        "Crypto Fraud"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/"
+      ],
+      "date": "2026-04-11"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "State-Sponsored Cyber Sabotage",
+        "fr": "Cyber-sabotage étatique"
+      },
+      "description": {
+        "en": "Iranian state-linked groups are actively targeting industrial control systems (OT) in the United States, posing risks to water and energy sectors.",
+        "fr": "Des groupes liés à l'État iranien ciblent activement les systèmes de contrôle industriel (OT) aux États-Unis, menaçant les secteurs de l'eau et de l'énergie."
+      },
+      "recommandations": [
+        {
+          "en": "Review diplomatic and defensive posture regarding critical infrastructure protection.",
+          "fr": "Réviser la posture diplomatique et défensive concernant la protection des infrastructures critiques."
+        },
+        {
+          "en": "Increase federal oversight of cybersecurity standards for utility providers.",
+          "fr": "Augmenter la surveillance fédérale des normes de cybersécurité pour les fournisseurs de services publics."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "OT Sabotage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html"
+      ],
+      "date": "2026-04-12"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Brockton Hospital (Signature Healthcare)",
+      "threat_actor": "Anubis",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "A ransomware attack by the Anubis group caused significant disruption to healthcare services and electronic records at Brockton Hospital.",
+        "fr": "Une attaque par rançongiciel du groupe Anubis a causé des interruptions significatives des services de santé et des dossiers électroniques au Brockton Hospital."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement offline, immutable backups for critical patient data.",
+          "fr": "Mettre en œuvre des sauvegardes hors ligne et immuables pour les données critiques des patients."
+        },
+        {
+          "en": "Conduct regular ransomware tabletop exercises for medical staff.",
+          "fr": "Réaliser régulièrement des exercices de simulation de rançongiciel pour le personnel médical."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/"
+      ],
+      "date": "2026-04-11"
+    },
+    {
+      "victim": "20,000+ Crypto Investors",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "More than 20,000 individuals worldwide were victims of crypto fraud, including approval phishing and investment scams.",
+        "fr": "Plus de 20 000 individus dans le monde ont été victimes de fraudes crypto, incluant l'approval phishing et les arnaques à l'investissement."
+      },
+      "mitre_ttps": [
+        "T1566.002: Spearphishing Link",
+        "T1566.003: Spearphishing Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Educate users to never grant full wallet permissions to unknown decentralized applications.",
+          "fr": "Éduquer les utilisateurs à ne jamais accorder de permissions complètes sur leur portefeuille à des applications décentralisées inconnues."
+        },
+        {
+          "en": "Use hardware wallets for storing significant amounts of digital assets.",
+          "fr": "Utiliser des portefeuilles matériels (hardware wallets) pour stocker des quantités significatives d'actifs numériques."
+        }
+      ],
+      "tags": [
+        "Crypto Fraud",
+        "Phishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/"
+      ],
+      "date": "2026-04-11"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-4149",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:h:sonos:era_300:*:*:*:*:*:*:*:*",
+      "product": "Era 300",
+      "vendor": "Sonos",
+      "description": {
+        "en": "Out-of-bounds Access in SMB allows remote code execution in kernel context via the DataOffset field.",
+        "fr": "Un accès hors limites dans SMB permet l'exécution de code à distance dans le contexte du noyau via le champ DataOffset."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply firmware updates from Sonos immediately.",
+          "fr": "Appliquer immédiatement les mises à jour de micrologiciel de Sonos."
+        },
+        {
+          "en": "Disable unnecessary SMB features on the local network.",
+          "fr": "Désactiver les fonctionnalités SMB inutiles sur le réseau local."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-4149"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "cve_id": "CVE-2026-5059",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:amazon:aws-mcp-server:*:*:*:*:*:*:*:*",
+      "product": "aws-mcp-server",
+      "vendor": "AWS",
+      "description": {
+        "en": "Command injection vulnerability allowing unauthenticated remote code execution via the allowed commands list.",
+        "fr": "Vulnérabilité d'injection de commande permettant l'exécution de code à distance sans authentification via la liste des commandes autorisées."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update aws-mcp-server to the latest version.",
+          "fr": "Mettre à jour aws-mcp-server vers la dernière version."
+        },
+        {
+          "en": "Implement strict input validation on all user-supplied command strings.",
+          "fr": "Mettre en œuvre une validation stricte des entrées sur toutes les chaînes de commande fournies par l'utilisateur."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-5059"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "cve_id": "CVE-2026-39987",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.3",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:marimo:marimo:*:*:*:*:*:*:*:*",
+      "product": "Marimo",
+      "vendor": "Marimo",
+      "description": {
+        "en": "Pre-authentication RCE in Marimo Python notebooks due to lack of validation on the WebSocket terminal endpoint.",
+        "fr": "RCE pré-authentification dans les notebooks Python Marimo en raison d'un manque de validation sur le point de terminaison WebSocket du terminal."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services",
+        "T1552.001: Unsecured Credentials: Private Keys"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade Marimo to version 0.23.0 or higher.",
+          "fr": "Mettre à jour Marimo vers la version 0.23.0 ou supérieure."
+        },
+        {
+          "en": "Isolate notebook instances behind a secure VPN or authentication proxy.",
+          "fr": "Isoler les instances de notebook derrière un VPN sécurisé ou un proxy d'authentification."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html"
+      ],
+      "date": "2026-04-08"
+    },
+    {
+      "cve_id": "CVE-2026-34621",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.6",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
+      "product": "Acrobat Reader",
+      "vendor": "Adobe",
+      "description": {
+        "en": "Prototype Pollution vulnerability allowing RCE via the opening of a malicious file.",
+        "fr": "Vulnérabilité de pollution de prototype permettant une RCE via l'ouverture d'un fichier malveillant."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update Adobe Acrobat Reader to the latest patched version.",
+          "fr": "Mettre à jour Adobe Acrobat Reader vers la dernière version corrigée."
+        },
+        {
+          "en": "Deploy file sandboxing solutions to inspect incoming PDF files.",
+          "fr": "Déployer des solutions de sandboxing de fichiers pour inspecter les fichiers PDF entrants."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-34621"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "cve_id": "CVE-2026-31845",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:rukovoditel:rukovoditel:*:*:*:*:*:*:*:*",
+      "product": "Rukovoditel CRM",
+      "vendor": "Rukovoditel",
+      "description": {
+        "en": "Reflected XSS via the 'zd_echo' parameter of the Zadarma API, allowing session theft.",
+        "fr": "XSS réfléchi via le paramètre 'zd_echo' de l'API Zadarma, permettant le vol de session."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Patch Rukovoditel CRM and sanitize API inputs.",
+          "fr": "Patcher Rukovoditel CRM et assainir les entrées de l'API."
+        },
+        {
+          "en": "Enable HTTPOnly and Secure flags on session cookies.",
+          "fr": "Activer les drapeaux HTTPOnly et Secure sur les cookies de session."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-31845"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "cve_id": "CVE-2026-5144",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:buddypress:groupblog:*:*:*:*:*:*:*:*",
+      "product": "BuddyPress Groupblog",
+      "vendor": "BuddyPress",
+      "description": {
+        "en": "IDOR vulnerability allowing privilege escalation from subscriber to administrator on Multisite networks.",
+        "fr": "Vulnérabilité IDOR permettant une escalade de privilèges d'abonné à administrateur sur les réseaux Multisite."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update the BuddyPress Groupblog plugin immediately.",
+          "fr": "Mettre à jour le plugin BuddyPress Groupblog immédiatement."
+        },
+        {
+          "en": "Conduct an audit of user roles and permissions on the WordPress multisite.",
+          "fr": "Réaliser un audit des rôles et des permissions des utilisateurs sur le multisite WordPress."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-5144"
+      ],
+      "date": "2026-04-12"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "GlassWorm Zig-based Supply Chain Attack",
+        "fr": "Attaque Supply Chain GlassWorm via un dropper Zig"
+      },
+      "description": {
+        "en": "GlassWorm targets developers using a Zig-compiled dropper hidden in fake VS Code extensions to infect multiple IDEs and steal data.",
+        "fr": "GlassWorm cible les développeurs en utilisant un dropper compilé en Zig caché dans de fausses extensions VS Code pour infecter plusieurs IDE et voler des données."
+      },
+      "threat_actor": "GlassWorm",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "specstudio/code-wakatime-activity-tracker",
+          "floktokbok.autoimport"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise: Compromise Software Dependencies",
+        "T1547.001: Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+      ],
+      "analyse": {
+        "en": "This campaign demonstrates advanced evasion techniques by using the Zig language and targeting developer tools, which are often less scrutinized than production systems.",
+        "fr": "Cette campagne démontre des techniques d'évasion avancées en utilisant le langage Zig et en ciblant les outils de développement, souvent moins surveillés que les systèmes de production."
+      },
+      "recommandations": [
+        {
+          "en": "Audit and restrict IDE extensions to verified publishers only.",
+          "fr": "Auditer et restreindre les extensions d'IDE aux seuls éditeurs vérifiés."
+        },
+        {
+          "en": "Monitor for unauthorized outgoing connections from developer environments to blockchain-related domains.",
+          "fr": "Surveiller les connexions sortantes non autorisées des environnements de développement vers des domaines liés à la blockchain."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "Zig",
+        "IDE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "title": {
+        "en": "CyberAv3ngers Targeting Critical Infrastructure PLCs",
+        "fr": "Ciblage des automates d'infrastructures critiques par CyberAv3ngers"
+      },
+      "description": {
+        "en": "Iranian-linked group CyberAv3ngers targets exposed Rockwell Automation PLCs to manipulate SCADA data and cause operational disruptions.",
+        "fr": "Le groupe lié à l'Iran CyberAv3ngers cible les automates Rockwell Automation exposés pour manipuler les données SCADA et causer des interruptions opérationnelles."
+      },
+      "threat_actor": "CyberAv3ngers",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Port 44818 (EtherNet/IP)",
+          "Modbus",
+          "VNC"
+        ]
+      },
+      "mitre_ttps": [
+        "T0883: Screen Capture",
+        "T0833: Modify Parameter",
+        "T0866: Software Discovery"
+      ],
+      "analyse": {
+        "en": "Over 5,000 devices are exposed, with a majority in the U.S., making them easy targets for reconnaissance and direct manipulation without authentication.",
+        "fr": "Plus de 5 000 appareils sont exposés, majoritairement aux États-Unis, ce qui en fait des cibles faciles pour la reconnaissance et la manipulation directe sans authentification."
+      },
+      "recommandations": [
+        {
+          "en": "Disconnect all PLCs from the public internet immediately.",
+          "fr": "Déconnecter immédiatement tous les automates programmables de l'Internet public."
+        },
+        {
+          "en": "Implement ZTNA or secure VPNs for any required remote industrial access.",
+          "fr": "Mettre en œuvre le ZTNA ou des VPN sécurisés pour tout accès industriel distant nécessaire."
+        }
+      ],
+      "tags": [
+        "ICS",
+        "PLC",
+        "CyberAv3ngers"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html"
+      ],
+      "date": "2026-04-12"
+    }
+  ]
+}
