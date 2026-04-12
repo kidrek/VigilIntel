@@ -9,21 +9,17 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Supply chain attack at cpuid pushes malware with cpu-z hwmonitor](#supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor)
-  * [Nearly 4000 us industrial devices exposed to iranian cyberattacks](#nearly-4000-us-industrial-devices-exposed-to-iranian-cyberattacks)
-  * [Analysis of one billion cisa kev remediation records](#analysis-of-one-billion-cisa-kev-remediation-records)
-  * [Microsoft canadian employees targeted in payroll pirate attacks](#microsoft-canadian-employees-targeted-in-payroll-pirate-attacks)
-  * [Uat-10362 linked to lucidrook attacks targeting taiwan](#uat-10362-linked-to-lucidrook-attacks-targeting-taiwan)
-  * [Unc6783 uses fake zendesk and okta pages to bypass mfa](#unc6783-uses-fake-zendesk-and-okta-pages-to-bypass-mfa)
-  * [Potential adobe reader zero-day reported](#potential-adobe-reader-zero-day-reported)
+  * [Plus de 20 000 victimes de fraude crypto identifiées lors d'un coup de filet international](#plus-de-20000-victimes-de-fraude-crypto-identifiees-lors-dun-coup-de-filet-international)
+  * [Censys identifie 5 219 appareils exposés aux attaques des APT iraniens](#censys-identifie-5-219-appareils-exposes-aux-attaques-des-apt-iraniens)
+  * [GlassWorm évolue avec un dropper en Zig pour infecter les outils de développement](#glassworm-evolue-avec-un-dropper-en-zig-pour-infecter-les-outils-de-developpement)
+  * [CVE-2026-39987 : RCE sur Marimo exploitée quelques heures après sa divulgation](#cve-2026-39987-rce-sur-marimo-exploitee-quelques-heures-apres-sa-divulgation)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel des menaces cyber est marqué par une accélération sans précédent du cycle d'exploitation, où le temps moyen de remédiation (souvent mesuré en saisons) est totalement dépassé par la vélocité des attaquants (mesurée en heures). L'industrialisation de l'exploitation, dopée par l'automatisation et l'IA, réduit la fenêtre de correctif à une valeur parfois négative, les vulnérabilités étant exploitées avant même leur divulgation officielle. Parallèlement, les infrastructures critiques occidentales, notamment les automates industriels (PLC), font l'objet d'un ciblage stratégique accru par des acteurs étatiques iraniens dans un contexte de tensions géopolitiques mondiales. Les attaques de la "Supply Chain", illustrées par le compromis de l'API de CPUID, confirment que les outils d'administration et de diagnostic restent des vecteurs privilégiés pour infecter massivement des parcs informatiques. Les techniques d'Adversary-in-the-Middle (AiTM) et de détournement de sessions MFA se normalisent, rendant les méthodes d'authentification classiques obsolètes face à des groupes comme Storm-2755. Le secteur de la santé subit une pression constante avec des attaques par rançongiciel (ChipSoft, Signature Healthcare) provoquant des ruptures de soins critiques en Europe et aux États-Unis. On observe également une professionnalisation des campagnes d'ingénierie sociale ciblant les services de support (Zendesk, Okta) pour l'exfiltration de données massives. Enfin, la fuite de données de grands cabinets d'avocats par le groupe SRG souligne la volonté des attaquants de monétiser la confidentialité juridique par l'extorsion pure. La résilience passera par l'adoption de modèles d'opérations de risque autonomes et une hygiène stricte de la surface d'exposition internet.
-
+Le paysage actuel des cybermenaces est marqué par une réduction drastique du délai entre la divulgation d'une vulnérabilité et son exploitation active, illustrée par le cas Marimo où des acteurs malveillants ont réagi en moins de dix heures. L'infrastructure critique, particulièrement aux États-Unis, subit une pression constante de la part d'acteurs étatiques comme l'Iran, qui tirent parti de l'exposition directe d'automates programmables (PLCs) sur Internet. Les attaques sur la chaîne d'approvisionnement évoluent également, ciblant désormais les développeurs via des extensions d'IDE compromises, une méthode furtive pour infiltrer des environnements de production. En parallèle, la cybercriminalité financière, bien que massive avec plus de 20 000 victimes de fraudes crypto, fait face à une réponse internationale de plus en plus coordonnée et efficace. Le secteur de la santé reste une cible de choix pour les opérations de rançongiciel (Anubis), provoquant des interruptions de soins critiques. Les organisations doivent prioriser la réduction de l'exposition de leurs actifs industriels et le durcissement de la surveillance des outils tiers. La coopération public-privé s'affirme comme le rempart le plus solide contre ces menaces transfrontalières.
 <br>
 <br>
 <div id="syntheses"></div>
@@ -36,13 +32,9 @@ Le paysage actuel des menaces cyber est marqué par une accélération sans pré
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| CyberAv3ngers | Infrastructures critiques (Eau, Énergie) | Exploitation de PLC Unitronics et Rockwell Automation | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Handala Hack | Santé, Gouvernement, Tech | Wiper, abus d'Intune MDM, exfiltration de données | [Field Effect](https://fieldeffect.com/blog/fake-zendesk-okta-pages-to-bypass-mfa) |
-| MuddyWater (MOIS) | Défense, Aérospatiale | Framework CastleRAT, malware ChainShell (blockchain) | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Silent Ransom Group (SRG) | Juridique (Cabinets d'avocats) | Social engineering, phishing, extorsion sans malware | [DataBreaches](https://databreaches.net/2026/04/10/silent-ransom-group-leaked-another-big-law-firm-orrick-herrington-sutcliffe/) |
-| Storm-2755 | Ressources Humaines, Finance | AiTM, empoisonnement SEO, vol de tokens MFA | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-canadian-employees-targeted-in-payroll-pirate-attacks/) |
-| UAT-10362 | ONG, Universités (Taïwan) | Phishing, malware LucidRook (Lua), DLL Sideloading | [Security Affairs](https://securityaffairs.com/190598/security/uat-10362-linked-to-lucidrook-attacks-targeting-taiwan-based-institutions.html) |
-| UNC6783 (alias Raccoon) | Support client (Zendesk, Okta) | Social engineering via live chat, vol de presse-papier | [Field Effect](https://fieldeffect.com/blog/fake-zendesk-okta-pages-to-bypass-mfa) |
+| Anubis | Santé / Hôpitaux | Ransomware-as-a-Service (RaaS), chiffrement de données | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
+| CyberAv3ngers (lié à l'Iran/IRGC) | Infrastructures critiques (Eau, Énergie, Gouv) | Exploitation de PLCs Rockwell Automation exposés, manipulation de données SCADA | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
+| GlassWorm | Développeurs de logiciels | Attaque supply chain via fausses extensions IDE (npm, VS Code), dropper Zig, C2 Solana | [Security Affairs](https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html) |
 
 <br/>
 <br/>
@@ -52,10 +44,8 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Défense / Tech | Chine vs Inde | Red Hat ferme ses activités d'ingénierie en Chine pour les relocaliser en Inde, par crainte de l'espionnage industriel. | [The Register](https://go.theregister.com/i/cfa/https://www.theregister.com/2026/04/10/red_hat_ends_china_engineering/) |
-| Gouvernement | France vs Privacy | GrapheneOS quitte le marché français suite à une campagne de dénigrement et des pressions de la police française sur le chiffrement. | [Nordic Times](https://nordictimes.com/tech/grapheneos-exits-france-after-threats-and-smear-campaign/) |
-| Gouvernement | Russie vs Europe | Campagnes de désinformation russes ciblant les élections en Bulgarie, Hongrie et Arménie pour affaiblir l'unité européenne. | [EUvsDisinfo](https://euvsdisinfo.eu/the-kremlin-points-at-ukraine-as-a-threat-for-the-baltic-states-and-accuses-the-eu-with-meddling-in-upcoming-elections/) |
-| Infrastructures | Iran vs Israël/USA | Intensification des cyberattaques sur les systèmes de contrôle industriel (ICS) dans le cadre du conflit militaire. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Étatique / Infrastructures | Cyber-espionnage / Sabotage | Des groupes liés à l'Iran ciblent activement des dispositifs de contrôle industriel (OT) aux États-Unis. | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
+| Finance / Justice internationale | Coopération policière | "Operation Atlantic" : action conjointe du Royaume-Uni, des États-Unis et du Canada contre la fraude crypto mondiale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
 
 <br/>
 <br/>
@@ -66,9 +56,7 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Security Slam 2026 | Stacey Potter | 10/04/2026 | Internationale | Open Source Security Baseline | Projet visant à sécuriser l'écosystème open source via des évaluations de conformité. | [OpenSSF](https://openssf.org/blog/2026/04/10/security-slam-2026-celebrating-our-security-champions-and-project-milestones/) |
-| Registre national des cancers | Collectif Santé | 10/04/2026 | France | Décret du 26/12/2025 | Critique sur la collecte massive de données sensibles et l'atteinte à la vie privée par l'Institut national du cancer. | [Le Monde](https://www.lemonde.fr/idees/article/2026/04/10/le-registre-national-des-cancers-constitue-un-fourre-tout-heterogene-de-donnees-sensibles-couvrant-de-multiples-facettes-de-la-vie-privee_6678770_3232.html) |
-| Gmail End-to-End Encryption | Sergiu Gatlan | 10/04/2026 | Internationale | Client-Side Encryption (CSE) | Déploiement du chiffrement de bout en bout sur mobile pour les licences Google Workspace Enterprise. | [BleepingComputer](https://www.bleepingcomputer.com/news/google/google-rolls-out-gmail-end-to-end-encryption-on-mobile-devices/) |
+| Fraud Strategy (U.K. Government) | Gouvernement britannique | 11/04/2026 | Royaume-Uni | Stratégie Nationale contre la Fraude | Modèle de partenariat public-privé visant à connecter les données industrielles et l'expertise policière pour prévenir la fraude. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
 
 <br/>
 <br/>
@@ -78,23 +66,24 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Finance | Bitcoin Depot | Vol de 50.9 BTC (3.6M$) via un compromis de comptes de règlement. | [Security Affairs](https://securityaffairs.com/190578/cyber-crime/bitcoin-depot-hack-leads-to-3-6m-bitcoin-theft-via-stolen-credentials.html) |
-| Juridique | Orrick, Herrington & Sutcliffe | Exfiltration massive de fichiers clients et employés confidentiels par SRG suite à un échec de négociation. | [DataBreaches](https://databreaches.net/2026/04/10/silent-ransom-group-leaked-another-big-law-firm-orrick-herrington-sutcliffe/) |
-| Santé | ChipSoft | Rançonnement du fournisseur d'EHR, impactant des dizaines d'hôpitaux aux Pays-Bas et en Belgique. | [Security Affairs](https://securityaffairs.com/190615/cyber-crime/ransomware-attack-on-chipsoft-knocks-ehr-services-offline-across-hospitals-in-the-netherlands-and-belgium.html) |
-| Santé | Signature Healthcare | Attaque réseau forçant la diversion des ambulances et la fermeture des pharmacies à Brockton. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Finance | 20 000+ particuliers | Victimes identifiées de fraudes à l'investissement et "approval phishing" à l'échelle internationale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
+| Santé | Brockton Hospital (Signature Healthcare) | Attaque par rançongiciel Anubis entraînant une interruption des services électroniques et des soins. | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
 
 <br/>
 <br/>
 <div id="synthese-des-vulnerabilites"></div>
 
 ## Synthèse des vulnérabilités
+Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2026-40175 | 10.0 | N/A | FALSE | Axios | Prototype Pollution / RCE | T1190: Exploit Public-Facing Application | Permet une escalade vers l'exécution de code ou le compromis complet du cloud via AWS IMDSv2. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-40175) |
-| CVE-2026-4149 | 10.0 | N/A | FALSE | Sonos Era 300 | Out-of-bounds Access | T1210: Exploitation of Remote Services | Vulnérabilité critique dans la gestion des réponses SMB permettant une exécution de code au niveau noyau. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4149) |
-| CVE-2026-5059 | 9.8 | N/A | FALSE | aws-mcp-server | Command Injection | T1203: Exploitation for Client Execution | Injection de commande via AWS CLI permettant l'exécution de code arbitraire sans authentification. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5059) |
-| CVE-2025-59528 | N/A | N/A | FALSE | Flowise | RCE | Non mentionnées | Exploitation d'une faille critique permettant l'exécution de code à distance. | [Security Affairs](https://securityaffairs.com/190615/cyber-crime/ransomware-attack-on-chipsoft-knocks-ehr-services-offline-across-hospitals-in-the-netherlands-and-belgium.html) |
-| CVE-2026-40189 | 9.3 | N/A | FALSE | goshs | Auth Bypass | T1548: Abuse Elevation Control Mechanism | Permet de supprimer le fichier ACL pour accéder au contenu protégé. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-40189) |
+| CVE-2026-4149 | 10.0 | Non spécifié | FALSE | Sonos Era 300 | Out-of-bounds Access (SMB) | Non mentionnées | Permet l'exécution de code à distance dans le contexte du noyau via le champ DataOffset des réponses SMB. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4149) |
+| CVE-2026-5059 | 9.8 | Non spécifié | FALSE | aws-mcp-server | Command Injection | Non mentionnées | Injection de commande via la liste des commandes autorisées, permettant une RCE sans authentification. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5059) |
+| CVE-2026-5058 | 9.8 | Non spécifié | FALSE | aws-mcp-server | Command Injection | Non mentionnées | Similaire à la CVE-2026-5059, défaut de validation des chaînes fournies par l'utilisateur. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5058) |
+| CVE-2026-34621 | 9.6 | Non spécifié | FALSE | Adobe Acrobat Reader | Prototype Pollution | Non mentionnées | Modification non contrôlée des attributs du prototype d'objet permettant une RCE via l'ouverture d'un fichier malveillant. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-34621) |
+| CVE-2026-39987 | 9.3 | Non spécifié | FALSE | Marimo (Python notebook) | Pre-Auth RCE | Non mentionnées | Absence de validation d'authentification sur le terminal WebSocket (/terminal/ws) permettant un shell complet. | [Security Affairs](https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html) |
+| CVE-2026-31845 | 9.3 | Non spécifié | FALSE | Rukovoditel CRM | Reflected XSS | Non mentionnées | Injection de script via le paramètre 'zd_echo' de l'API Zadarma, permettant le vol de session. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-31845) |
+| CVE-2026-5144 | 8.8 | Non spécifié | FALSE | BuddyPress Groupblog | Privilege Escalation | Non mentionnées | Défaut de contrôle IDOR permettant à un simple abonné de devenir administrateur sur un réseau Multisite. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5144) |
 
 <br/>
 <br/>
@@ -103,13 +92,11 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Analysis of one billion CISA KEV remediation records | Analyse stratégique majeure sur l'accélération de l'exploitation. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/) |
-| CPUID hacked to deliver malware | Attaque supply chain sur des outils de diagnostic populaires. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/) |
-| Microsoft: Canadian employees targeted in payroll pirate attacks | Détails opérationnels sur les techniques AiTM et contournement MFA. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-canadian-employees-targeted-in-payroll-pirate-attacks/) |
-| Nearly 4,000 US industrial devices exposed | Menace critique sur les infrastructures industrielles (OT). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/nearly-4-000-us-industrial-devices-exposed-to-iranian-cyberattacks/) |
-| Potential Adobe Reader Zero-Day | Alerte sur une vulnérabilité zero-day potentielle en cours d'exploitation. | [Field Effect](https://fieldeffect.com/blog/researcher-reports-potential-adobe-reader-zero-day) |
-| UAT-10362 linked to LucidRook attacks | Détails sur une nouvelle campagne APT sophistiquée à Taïwan. | [Security Affairs](https://securityaffairs.com/190598/security/uat-10362-linked-to-lucidrook-attacks-targeting-taiwan-based-institutions.html) |
-| UNC6783 Uses Fake Zendesk and Okta Pages | Analyse des méthodes de social engineering ciblant le support. | [Field Effect](https://fieldeffect.com/blog/fake-zendesk-okta-pages-to-bypass-mfa) |
+| Over 20,000 crypto fraud victims identified in international crackdown | Action majeure de lutte contre la cybercriminalité financière mondiale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
+| Brockton Hospital still dealing with aftermath of ransomware attack | Impact opérationnel réel d'un ransomware sur des services de santé critiques. | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
+| Censys finds 5,219 devices exposed to attacks by Iranian APTs | Menace étatique directe sur les infrastructures critiques (ICS/SCADA). | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
+| CVE-2026-39987: Marimo RCE exploited in hours after disclosure | Démonstration de la vélocité extrême d'exploitation des vulnérabilités actuelles. | [Security Affairs](https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html) |
+| GlassWorm evolves with Zig dropper to infect multiple developer tools | Attaque supply chain sophistiquée ciblant les environnements de développement. | [Security Affairs](https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html) |
 
 <br/>
 <br/>
@@ -118,10 +105,13 @@ Voici un tableau récapitulatif des violations de données constatées :
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| Cyber Job Dating 2026 | Article promotionnel / RH sans contenu technique cyber. | [Campus Cyber](https://campuscyber.fr/cyber-job-dating-2026/) |
-| RFC 1178 (1990): Choosing a Name | Contenu historique sans pertinence pour la menace actuelle. | [Social Media](https://infosec.exchange/@676e696f70/116382894635437907) |
-| The TTP Ep. 22: The Collapse of the Patch Window | Doublon thématique avec l'article de Qualys/Qualys. | [Talos](https://blog.talosintelligence.com/video-the-ttp-ep-22-the-collapse-of-the-patch-window/) |
-| Video live announcement Glasswing | Simple annonce de stream sur les réseaux sociaux. | [Social Media](https://infosec.exchange/@0ddj0bb/116383224584590245) |
+| 🚨 HIGH risk: Optimole WordPress plugin... | Publication provenant d'un réseau social (Mastodon). | [OffSeq](https://infosec.exchange/@offseq/116388792901284434) |
+| Comparison of Android-based Operating Systems | Publication provenant d'un réseau social (Mastodon). | [Mastodon](https://nerdculture.de/@anon_4601/116388577211771302) |
+| New security advisory: CVE-2026-39911 | Publication provenant d'un réseau social (Mastodon). | [Matchbook3469](https://mastodon.social/@Matchbook3469/116388561092693522) |
+| Поганые вещи в инфобезе (Opinion piece) | Publication provenant d'un réseau social (Mastodon). | [meowmashine](https://ioc.exchange/@meowmashine/116388931137974056) |
+| Red teamers don’t just rely on software... | Publication provenant d'un réseau social (Mastodon) / Contenu promotionnel. | [dan_nanni](https://mastodon.social/@dan_nanni/116388663072153035) |
+| Seen this mistake kill companies: hardcoded API keys | Publication provenant d'un réseau social (Mastodon). | [threatchain](https://mastodon.social/@threatchain/116388853720157844) |
+| What is NetBIOS and SMB Exploitation Techniques | Publication provenant d'un réseau social (Mastodon) / Guide technique général. | [halildeniz](https://mastodon.social/@halildeniz/116388885860868664) |
 
 <br>
 <br>
@@ -129,140 +119,100 @@ Voici un tableau récapitulatif des violations de données constatées :
 
 # ARTICLES
 
-<div id="supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor"></div>
+<div id="plus-de-20000-victimes-de-fraude-crypto-identifiees-lors-dun-coup-de-filet-international"></div>
 
-## CPUID hacked to deliver malware via CPU-Z, HWMonitor downloads
-Le site officiel de CPUID a été victime d'une attaque de la "supply chain" via le compromis d'une API secondaire. Pendant environ six heures, les liens de téléchargement des outils populaires CPU-Z et HWMonitor ont été détournés vers des exécutables malveillants hébergés sur Cloudflare R2. Le malware distribué est une version trojanisée de l'outil HWiNFO, emballée dans un installeur russe. Selon les chercheurs, ce loader est sophistiqué, fonctionnant presque entièrement en mémoire pour échapper aux EDR. L'attaquant utiliserait des techniques de proxying des fonctionnalités NTDLL via un assemblage .NET. Ce groupe semble être le même que celui ayant ciblé les utilisateurs de FileZilla le mois dernier. Les fichiers originaux signés par CPUID n'ont pas été compromis. Les détections antivirus identifient les échantillons comme étant des chevaux de Troie de type Tedy ou Artemis. CPUID a corrigé la faille et les téléchargements sont à présent sains.
+## Plus de 20 000 victimes de fraude crypto identifiées lors d'un coup de filet international
+L'opération internationale "Atlantic", menée par la National Crime Agency (NCA) britannique avec le soutien des États-Unis et du Canada, a permis d'identifier plus de 20 000 victimes de fraudes aux crypto-monnaies. L'action s'est concentrée sur le démantèlement de réseaux pratiquant l'"approval phishing", où les escrocs trompent les victimes pour obtenir l'accès à leurs portefeuilles numériques. Plus de 12 millions de dollars de revenus criminels présumés ont été gelés et 45 millions de dollars de crypto-monnaies volées ont été identifiés. Ce coup de filet s'inscrit dans la nouvelle stratégie de lutte contre la fraude du gouvernement britannique, privilégiant le partenariat public-privé. En parallèle, le FBI rapporte une augmentation massive des plaintes liées aux investissements crypto en 2025, avec des pertes s'élevant à 7,2 milliards de dollars. L'opération a mobilisé des acteurs tels que le Secret Service américain et la Police provinciale de l'Ontario. Les autorités prévoient de poursuivre l'analyse des données recueillies pour engager d'autres poursuites.
 
-**Analyse de l'impact** : Impact élevé pour les utilisateurs de diagnostic matériel, avec un risque massif d'infection de machines d'administration et de serveurs. L'évasion des EDR via l'exécution en mémoire augmente la dangerosité.
+**Analyse de l'impact** : Impact financier massif avec des milliards de dollars de pertes annuelles. La confiance des utilisateurs dans les actifs numériques est érodée par des techniques de "pig butchering" et de phishing de plus en plus sophistiquées.
 
-**Recommandations** : Vérifier les hachages des fichiers CPU-Z/HWMonitor téléchargés entre le 9 et le 10 avril 2026. Rechercher la présence de fichiers suspects dans `C:\Users\Public`. Surveiller les processus MSBuild.exe ou PowerShell.exe effectuant des appels réseau inhabituels.
+**Recommandations** :
+* Éduquer les utilisateurs sur les risques de l'"approval phishing" et l'importance de ne jamais accorder de droits d'accès complets aux portefeuilles à des tiers inconnus.
+* Collaborer activement avec les plateformes d'échange pour geler rapidement les fonds signalés comme frauduleux.
+* Intégrer des outils de surveillance des transactions pour détecter les schémas de transfert suspects liés aux arnaques à l'investissement.
 
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (lié aux attaques FileZilla) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002: Supply Chain Compromise * T1027.002: Software Packing * T1055: Process Injection |
-| Observables & Indicateurs de compromission | ```* a8ba9ba93b4509a86e3d7dd40fd0652c2743e32277760c5f7942b788b74c5285 * 53c3e0f8627917e8972a627b9e68adf9c21966428a85cb1c28f47cb21db3c12b * HWiNFO_Monitor_Setup.zip``` |
-
-### Source (url) du ou des articles
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/)
-<br>
-<br>
-
-<div id="nearly-4000-us-industrial-devices-exposed-to-iranian-cyberattacks"></div>
-
-## Nearly 4,000 US industrial devices exposed to Iranian cyberattacks
-Des groupes de hackers liés à l'État iranien ciblent activement les automates programmables industriels (PLC) de marque Rockwell Automation/Allen-Bradley. Environ 4 000 de ces dispositifs sont actuellement exposés directement sur Internet aux États-Unis. Ces attaques, identifiées par le FBI, visent à extraire les fichiers de projet et à manipuler les données sur les écrans HMI/SCADA. Les campagnes ont commencé en mars 2026 en réponse aux hostilités régionales au Moyen-Orient. Censys rapporte que 74,6 % de l'exposition mondiale se situe aux États-Unis, souvent via des modems cellulaires. Les attaquants utilisent des ports OT spécifiques (44818, 2222, 502) pour pénétrer les réseaux. Ces incidents rappellent les vagues d'attaques des CyberAv3ngers contre les systèmes Unitronics l'année dernière. L'impact inclut des interruptions opérationnelles et des pertes financières significatives pour les secteurs de l'eau et de l'énergie.
-
-**Analyse de l'impact** : Menace critique sur la sécurité physique et la continuité des services essentiels (eau, électricité).
-
-**Recommandations** : Déconnecter immédiatement les PLC de l'Internet public. Utiliser des VPN avec MFA pour tout accès distant. Filtrer les adresses IP étrangères sur les pare-feu OT. Scanner les journaux pour toute activité sur le port 44818.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | APT liés à l'Iran (CyberAv3ngers, Handala) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0815: Asset Identification * T0831: Data Manipulation * T0883: Control Device Periphery |
-| Observables & Indicateurs de compromission | ```* Trafic entrant sur ports 44818, 2222, 102, 502 * Connexions depuis des hébergeurs étrangers vers l'OT``` |
-
-### Source (url) du ou des articles
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/nearly-4-000-us-industrial-devices-exposed-to-iranian-cyberattacks/)
-<br>
-<br>
-
-<div id="analysis-of-one-billion-cisa-kev-remediation-records"></div>
-
-## Analysis of one billion CISA KEV remediation records exposes limits of human-scale security
-Une étude de Qualys portant sur un milliard de rapports de remédiation montre que le modèle actuel de défense cyber atteint un "plafond humain". Le temps moyen d'exploitation (Time-to-Exploit) est désormais de moins sept jours, signifiant que l'exploitation précède souvent le correctif. 88 % des vulnérabilités critiques sont remédiées plus lentement qu'elles ne sont exploitées par les adversaires. Le volume de vulnérabilités a augmenté de 6,5 fois depuis 2022, rendant la gestion manuelle impossible. L'IA accélère encore ce décalage en permettant aux attaquants de découvrir et d'armer des failles instantanément. Le concept de "Risk Mass" (masse de risque) est proposé pour mesurer l'exposition réelle cumulée plutôt que le simple nombre de CVE. Les systèmes d'infrastructure (endpoints exclus) affichent des délais de remédiation médians dépassant 230 jours. La transition vers des centres d'opérations de risque (ROC) autonomes est jugée nécessaire.
-
-**Analyse de l'impact** : Dégradation structurelle de la posture de sécurité globale. Les entreprises perdent la "course à l'armement" temporelle contre les attaquants automatisés.
-
-**Recommandations** : Prioriser la remédiation basée sur l'exploitabilité réelle (CISA KEV) plutôt que le score CVSS seul. Automatiser les workflows de patch pour les actifs critiques. Implémenter des contrôles compensatoires (IPS/WAF) dès l'annonce d'une faille.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Non applicable (Étude statistique) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application * T1203: Exploitation for Client Execution |
+| Groupe ou acteur malveillant | Réseaux de fraude internationaux (non nommés spécifiquement) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002 : Spearphishing Link <br> * T1566.003 : Spearphishing Service |
 | Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni``` |
 
 ### Source (url) du ou des articles
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/)
-<br>
-<br>
+* https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/
 
-<div id="microsoft-canadian-employees-targeted-in-payroll-pirate-attacks"></div>
+<br/>
+<br/>
 
-## Microsoft: Canadian employees targeted in payroll pirate attacks
-L'acteur Storm-2755 mène des attaques sophistiquées de "piratage de paie" ciblant des employés au Canada. L'attaquant utilise des techniques d'Adversary-in-the-Middle (AiTM) pour voler des tokens de session et contourner la MFA. Les victimes sont attirées via de l'empoisonnement SEO vers de fausses pages de connexion Microsoft 365. Une fois l'accès obtenu, Storm-2755 crée des règles de boîte de réception pour cacher les emails de la RH. L'objectif est de modifier les informations de dépôt bancaire directement dans les plateformes comme Workday. Si l'accès logiciel échoue, l'acteur utilise l'ingénierie sociale pour tromper le personnel RH. Microsoft note que ces jetons volés permettent une réauthentification sans demande de credentials. Cette campagne s'inscrit dans une tendance de fraude BEC (Business Email Compromise) à haut rendement.
+<div id="censys-identifie-5-219-appareils-exposes-aux-attaques-des-apt-iraniens"></div>
 
-**Analyse de l'impact** : Impact financier direct pour les employés et risques de fraude interne pour les entreprises. Les méthodes MFA traditionnelles ne sont plus suffisantes.
+## Censys identifie 5 219 appareils exposés aux attaques des APT iraniens
+Des chercheurs de Censys ont découvert 5 219 automates programmables (PLC) Rockwell Automation exposés sur Internet, dont près de 75 % se situent aux États-Unis. Cette alerte fait suite à une mise en garde des agences américaines (FBI, CISA, NSA) concernant des groupes liés à l'Iran, comme CyberAv3ngers, ciblant ces dispositifs. Les attaquants manipulent les fichiers de projet et les données des systèmes HMI/SCADA, provoquant des interruptions opérationnelles dans les secteurs de l'eau, de l'énergie et des services gouvernementaux. De nombreux dispositifs sont connectés via des réseaux cellulaires (Verizon, AT&T), ce qui rend leur surveillance et leur correction difficiles. Les familles MicroLogix et CompactLogix sont les plus touchées, utilisant souvent des micrologiciels obsolètes. L'exposition permet une identification granulaire des modèles sans authentification. Les experts recommandent de déconnecter ces systèmes d'Internet ou d'utiliser des VPN sécurisés.
 
-**Recommandations** : Implémenter une MFA résistante au phishing (FIDO2/Passkeys). Bloquer les protocoles d'authentification hérités. Auditer régulièrement les règles de redirection d'emails suspectes.
+**Analyse de l'impact** : Risque critique de sabotage physique et d'interruption de services essentiels (eau, électricité). L'exposition directe de l'OT facilite grandement la reconnaissance pour les acteurs étatiques.
 
+**Recommandations** :
+* Déconnecter immédiatement les automates programmables (PLC) de l'Internet public.
+* Mettre en œuvre des passerelles sécurisées (VPN, accès ZTNA) si un accès distant est indispensable.
+* Mettre à jour les micrologiciels (firmware) des appareils Rockwell MicroLogix et CompactLogix.
+* Surveiller le port EtherNet/IP (44818) pour toute activité inhabituelle.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Storm-2755 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Spearphishing Link * T1557: Adversary-in-the-Middle * T1114.003: Email Forwarding Rule |
-| Observables & Indicateurs de compromission | ```* bluegraintours[.]com * Domaines usurpant Microsoft 365``` |
+| Groupe ou acteur malveillant | CyberAv3ngers (lié à l'IRGC iranien) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0883 : Screen Capture (HMI) <br> * T0833 : Modify Parameter <br> * T0866 : Softwate Discovery |
+| Observables & Indicateurs de compromission | ```Port 44818 (EtherNet/IP), protocoles Modbus, VNC exposés sur des IPs cellulaires.``` |
 
 ### Source (url) du ou des articles
-* [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-canadian-employees-targeted-in-payroll-pirate-attacks/)
-<br>
-<br>
+* https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html
 
-<div id="uat-10362-linked-to-lucidrook-attacks-targeting-taiwan"></div>
+<br/>
+<br/>
 
-## UAT-10362 linked to LucidRook attacks targeting Taiwan-based institutions
-Cisco Talos a identifié une nouvelle campagne de phishing ciblant des ONG et des universités à Taïwan. L'acteur, UAT-10362, déploie le malware LucidRook, un stager sophistiqué écrit en Lua et Rust. Les vecteurs d'infection utilisent des archives RAR protégées par mot de passe pour échapper aux analyses automatiques. Le malware utilise le "DLL sideloading" via un exécutable DISM légitime pour maintenir la discrétion. LucidRook collecte des données système, les chiffre avec RSA et les exfiltre via FTP en utilisant des serveurs publics abusés. Une variante nommée LucidKnight est également utilisée pour la reconnaissance via SMTP Gmail. Le malware vérifie la langue du système (Chinois traditionnel) avant de s'exécuter pour éviter les environnements de test. L'ingénierie logicielle témoigne d'un investissement significatif pour la furtivité.
+<div id="glassworm-evolue-avec-un-dropper-en-zig-pour-infecter-les-outils-de-developpement"></div>
 
-**Analyse de l'impact** : Risque d'espionnage et de vol de données pour les entités académiques et civiles dans une zone de haute tension géopolitique.
+## GlassWorm évolue avec un dropper en Zig pour infecter les outils de développement
+La campagne malveillante GlassWorm a franchi une nouvelle étape en utilisant un dropper compilé en langage Zig, dissimulé dans une fausse extension VS Code nommée "WakaTime Activity Tracker". Ce binaire s'exécute en dehors du bac à sable JavaScript et infecte silencieusement tous les IDE présents sur le système (VS Code, Cursor, VSCodium). Le logiciel malveillant télécharge ensuite une seconde extension depuis GitHub pour assurer sa persistance. GlassWorm évite les systèmes russes et communique avec un serveur de commande (C2) basé sur la blockchain Solana. Le payload final installe un cheval de troie d'accès à distance (RAT) et une extension Chrome malveillante pour voler des données. Cette attaque cible directement la chaîne d'approvisionnement logicielle en compromettant l'environnement de travail des développeurs. Aikido Security, à l'origine de la découverte, souligne la furtivité accrue de cette méthode.
 
-**Recommandations** : Surveiller l'utilisation anormale de l'outil DISM.exe. Bloquer les connexions FTP sortantes vers des hôtes inconnus. Rechercher des requêtes DNS vers `dnslog.ink`.
+**Analyse de l'impact** : Menace sérieuse sur l'intégrité du code source et des secrets (clés API, identifiants) détenus par les développeurs. La capacité d'infection multi-IDE augmente radicalement la portée de la compromission.
 
+**Recommandations** :
+* Auditer la liste des extensions installées dans les IDE (chercher "specstudio/code-wakatime-activity-tracker" ou "floktokbok.autoimport").
+* Réinitialiser tous les secrets et clés API si une extension suspecte est découverte.
+* Restreindre l'installation d'extensions provenant de sources non vérifiées ou tierces sur les postes de développement.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UAT-10362 |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1574.002: DLL Side-Loading * T1059.006: Python/Lua Bytecode * T1614: System Location Discovery |
-| Observables & Indicateurs de compromission | ```* dnslog[.]ink * archive1.zip * archive.zip``` |
+| Groupe ou acteur malveillant | GlassWorm |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002 : Supply Chain Compromise (Software Dependencies) <br> * T1547.001 : Boot or Logon Autostart Execution |
+| Observables & Indicateurs de compromission | ```Extensions : specstudio/code-wakatime-activity-tracker, floktokbok.autoimport. C2 lié à Solana.``` |
 
 ### Source (url) du ou des articles
-* [Security Affairs](https://securityaffairs.com/190598/security/uat-10362-linked-to-lucidrook-attacks-targeting-taiwan-based-institutions.html)
-<br>
-<br>
+* https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html
 
-<div id="unc6783-uses-fake-zendesk-and-okta-pages-to-bypass-mfa"></div>
+<br/>
+<br/>
 
-## UNC6783 Uses Fake Zendesk and Okta Pages to Bypass MFA and Steal Data
-Le groupe UNC6783 cible les prestataires d'externalisation de processus métier (BPO) pour voler des données d'entreprise. L'attaque commence par un chat en direct où les employés sont dirigés vers de fausses pages Zendesk ou Okta. Ces domaines utilisent des motifs prévisibles comme `<org>.zendesk-support<##>.com`. Le phishing kit utilisé est capable de voler le contenu du presse-papier pour intercepter les codes MFA. Une fois compromis, l'attaquant enregistre ses propres dispositifs pour maintenir un accès persistant. Des tickets de support, des documents internes et des données d'employés sont exfiltrés à des fins d'extorsion. Le groupe serait lié au persona cybercriminel "Mr. Raccoon". Les demandes de rançon sont envoyées via des comptes Proton Mail.
+<div id="cve-2026-39987-rce-sur-marimo-exploitee-quelques-heures-apres-sa-divulgation"></div>
 
-**Analyse de l'impact** : Risque élevé de fuite de données confidentielles et d'extorsion. Les processus de support deviennent un vecteur d'intrusion majeur.
+## CVE-2026-39987 : RCE sur Marimo exploitée quelques heures après sa divulgation
+Une vulnérabilité critique (CVE-2026-39987, score CVSS 9.3) dans l'outil de notebook Python open-source Marimo a été exploitée moins de dix heures après sa publication le 8 avril 2026. La faille réside dans l'absence d'authentification sur le terminal WebSocket (/terminal/ws), permettant à un attaquant distant d'obtenir un shell complet et d'exécuter des commandes système. L'équipe Sysdig a observé des tentatives d'exploitation réelles en seulement 9 heures et 41 minutes, suivies d'un vol de credentials en moins de trois minutes. Fait remarquable, aucun code d'exploitation public (PoC) n'existait au moment de l'attaque ; l'attaquant a construit son exploit directement à partir de l'avis de sécurité. L'activité enregistrée suggère un opérateur humain méthodique ciblant les fichiers .env et les clés SSH. Ce cas illustre la capacité des attaquants à surveiller et armer les vulnérabilités sur des logiciels de niche, probablement aidés par l'IA.
 
-**Recommandations** : Interdire le partage de liens d'authentification via les outils de chat. Utiliser des clés de sécurité matérielles (FIDO2). Surveiller l'enregistrement de nouveaux dispositifs MFA.
+**Analyse de l'impact** : Compromission totale des environnements de science des données et vol de secrets sensibles. Cette vélocité réduit à néant le temps de réaction traditionnel des équipes de sécurité.
 
+**Recommandations** :
+* Mettre à jour Marimo vers la version 0.23.0 ou supérieure immédiatement.
+* Isoler les instances de notebook derrière un VPN ou un proxy d'authentification robuste.
+* Surveiller les connexions WebSockets inhabituelles sur le endpoint /terminal/ws.
+
+Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UNC6783 (alias Raccoon) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.003: Spearphishing Service * T1098.005: Device Registration * T1213: Data from Information Repositories |
-| Observables & Indicateurs de compromission | ```* <org>[.]zendesk-support<##>[.]com * Emails provenant de Proton Mail pour l'extorsion``` |
+| Groupe ou acteur malveillant | Inconnu (opérateur humain qualifié) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1210 : Exploitation of Remote Services <br> * T1552.001 : Unsecured Credentials (Files) |
+| Observables & Indicateurs de compromission | ```Endpoint : /terminal/ws (WebSocket). Cibles : fichiers .env, clés SSH.``` |
 
 ### Source (url) du ou des articles
-* [Field Effect](https://fieldeffect.com/blog/fake-zendesk-okta-pages-to-bypass-mfa)
-<br>
-<br>
-
-<div id="potential-adobe-reader-zero-day-reported"></div>
-
-## Potential Adobe Reader Zero-Day Reported
-Un chercheur en sécurité a signalé une possible vulnérabilité zero-day dans Adobe Acrobat Reader. La faille permettrait d'accéder à des API JavaScript privilégiées (util.readFileIntoStream, RSS.addFeed) pour lire des fichiers locaux arbitraires. L'exploitation reposerait sur du JavaScript fortement obfusqué intégré dans des PDF. Des preuves suggèrent que cette activité pourrait dater de novembre 2025. Des leurres en langue russe liés au secteur de l'énergie (pétrole et gaz) ont été observés. Adobe n'a pas encore confirmé officiellement la vulnérabilité ni publié de correctif. Les noms de fichiers associés incluent `yummy_adobe_exploit_uwu.pdf` et `Invoice540.pdf`.
-
-**Analyse de l'impact** : Risque d'exfiltration de données et d'exécution de code à distance si la vulnérabilité est confirmée.
-
-**Recommandations** : Désactiver l'exécution du JavaScript dans Adobe Reader. Utiliser des visionneuses PDF natives (navigateurs) pour les fichiers provenant de sources externes. Surveiller les accès fichiers inhabituels par le processus `AcroRd32.exe`.
-
-| Indicateurs | Descriptions |
-|:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (indices de ciblage russe) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1203: Exploitation for Client Execution * T1027: Obfuscated Files or Information |
-| Observables & Indicateurs de compromission | ```* yummy_adobe_exploit_uwu.pdf * Invoice540.pdf``` |
-
-### Source (url) du ou des articles
-* [Field Effect](https://fieldeffect.com/blog/researcher-reports-potential-adobe-reader-zero-day)
+* https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html
