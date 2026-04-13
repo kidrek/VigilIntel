@@ -9,17 +9,19 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Plus de 20 000 victimes de fraude crypto identifiées lors d'un coup de filet international](#plus-de-20000-victimes-de-fraude-crypto-identifiees-lors-dun-coup-de-filet-international)
-  * [Censys identifie 5 219 appareils exposés aux attaques des APT iraniens](#censys-identifie-5-219-appareils-exposes-aux-attaques-des-apt-iraniens)
-  * [GlassWorm évolue avec un dropper en Zig pour infecter les outils de développement](#glassworm-evolue-avec-un-dropper-en-zig-pour-infecter-les-outils-de-developpement)
-  * [CVE-2026-39987 : RCE sur Marimo exploitée quelques heures après sa divulgation](#cve-2026-39987-rce-sur-marimo-exploitee-quelques-heures-apres-sa-divulgation)
+  * [Critique : vulnérabilité RCE pré-authentification dans Marimo exploitée en quelques heures](#critique-vulnerabilite-rce-pre-authentification-dans-marimo-exploitee-en-quelques-heures)
+  * [Adobe corrige la faille zero-day CVE-2026-34621 activement exploitée dans Acrobat Reader](#adobe-corrige-la-faille-zero-day-cve-2026-34621-activement-exploitee-dans-acrobat-reader)
+  * [Des pirates revendiquent le contrôle des pompes anti-inondation de Venise](#des-pirates-revendiquent-le-controle-des-pompes-anti-inondation-de-venise)
+  * [CVE-2026-40175 : une vulnérabilité critique dans Axios permet la prise de contrôle du cloud](#cve-2026-40175--une-vulnerabilite-critique-dans-axios-permet-la-prise-de-controle-du-cloud)
+  * [Sortie de Linux 7.0 : Linus Torvalds souligne l'impact de l'IA sur la découverte de bugs](#sortie-de-linux-70--linus-torvalds-souligne-limpact-de-lia-sur-la-decouverte-de-bugs)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage actuel des cybermenaces est marqué par une réduction drastique du délai entre la divulgation d'une vulnérabilité et son exploitation active, illustrée par le cas Marimo où des acteurs malveillants ont réagi en moins de dix heures. L'infrastructure critique, particulièrement aux États-Unis, subit une pression constante de la part d'acteurs étatiques comme l'Iran, qui tirent parti de l'exposition directe d'automates programmables (PLCs) sur Internet. Les attaques sur la chaîne d'approvisionnement évoluent également, ciblant désormais les développeurs via des extensions d'IDE compromises, une méthode furtive pour infiltrer des environnements de production. En parallèle, la cybercriminalité financière, bien que massive avec plus de 20 000 victimes de fraudes crypto, fait face à une réponse internationale de plus en plus coordonnée et efficace. Le secteur de la santé reste une cible de choix pour les opérations de rançongiciel (Anubis), provoquant des interruptions de soins critiques. Les organisations doivent prioriser la réduction de l'exposition de leurs actifs industriels et le durcissement de la surveillance des outils tiers. La coopération public-privé s'affirme comme le rempart le plus solide contre ces menaces transfrontalières.
+Le paysage actuel des menaces cybernétiques se caractérise par une réduction drastique du délai entre la divulgation d'une vulnérabilité et son exploitation active, comme l'illustre le cas Marimo (moins de 10 heures). L'exploitation de vulnérabilités "gadgets" dans des bibliothèques omniprésentes comme Axios démontre une sophistication croissante dans les attaques de la chaîne d'approvisionnement logicielle, capable de contourner les contrôles de sécurité cloud les plus robustes. Parallèlement, le ciblage des infrastructures critiques (système anti-inondation de Venise) souligne une convergence risquée entre l'activisme idéologique et les capacités de sabotage de l'OT (Operational Technology). L'intégration de l'IA dans les processus de recherche de bugs, mentionnée par Linus Torvalds, marque une étape charnière où l'automatisation s'accélère tant pour la défense que pour l'attaque. Les entreprises doivent impérativement passer d'une stratégie de correctifs réactifs à une posture de résilience proactive, intégrant le "secure-by-design" et la surveillance continue des actifs exposés. La menace persistante sur Adobe Acrobat Reader rappelle que le phishing via des documents PDF reste un vecteur d'accès initial privilégié et redoutablement efficace.
+
 <br>
 <br>
 <div id="syntheses"></div>
@@ -32,9 +34,11 @@ Le paysage actuel des cybermenaces est marqué par une réduction drastique du d
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Anubis | Santé / Hôpitaux | Ransomware-as-a-Service (RaaS), chiffrement de données | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
-| CyberAv3ngers (lié à l'Iran/IRGC) | Infrastructures critiques (Eau, Énergie, Gouv) | Exploitation de PLCs Rockwell Automation exposés, manipulation de données SCADA | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
-| GlassWorm | Développeurs de logiciels | Attaque supply chain via fausses extensions IDE (npm, VS Code), dropper Zig, C2 Solana | [Security Affairs](https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html) |
+| APT28 (Pawn Storm) | Gouvernements, infrastructures critiques | Exploitation de routeurs, détournement DNS, PRISMEX | [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html) |
+| CyberAv3ngers (lié à l'Iran) | Eaux, Énergie, Services gouvernementaux | Exploitation d'automates programmables (PLC) exposés | [SecurityAffairs](https://securityaffairs.com/190679/hacktivism/hackers-claim-control-over-venice-san-marco-anti-flood-pumps.html) |
+| Infrastructure Destruction Squad (Dark Engine) | Infrastructures hydrauliques et critiques | Accès administratif OT, chantage politique, vente d'accès root | [SecurityAffairs](https://securityaffairs.com/190679/hacktivism/hackers-claim-control-over-venice-san-marco-anti-flood-pumps.html) |
+| Kimsuky | Institutions gouvernementales, diplomatie | Utilisation de fichiers LNK malveillants, backdoors Python | [SecurityAffairs](https://securityaffairs.com/190672/malware/security-affairs-malware-newsletter-round-92.html) |
+| ShinyHunters | Retail, Services | Extorsion après vol de données sur des instances cloud (Salesforce) | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Hallmark) |
 
 <br/>
 <br/>
@@ -44,8 +48,9 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Étatique / Infrastructures | Cyber-espionnage / Sabotage | Des groupes liés à l'Iran ciblent activement des dispositifs de contrôle industriel (OT) aux États-Unis. | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
-| Finance / Justice internationale | Coopération policière | "Operation Atlantic" : action conjointe du Royaume-Uni, des États-Unis et du Canada contre la fraude crypto mondiale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
+| Gouvernemental | États-Unis / Iran | Échec des pourparlers de paix le 12 avril 2026 ; rejet des conditions par l'Iran et tensions accrues dans le détroit d'Ormuz. | [Social Media (Mastodon)](https://nerdculture.de/@youranonnewsirc/116394105151676373) |
+| Infrastructures Critiques | Italie / Activisme Chinois | Revendication de l'intrusion dans le système de pompage de Venise par un groupe s'exprimant en chinois à des fins de chantage politique. | [SecurityAffairs](https://securityaffairs.com/190679/hacktivism/hackers-claim-control-over-venice-san-marco-anti-flood-pumps.html) |
+| Militaire / Diplomatie | Moyen-Orient | Frappes israéliennes au Liban causant plus de 2 000 décès, alimentant les tensions régionales cyber et physiques. | [Social Media (Mastodon)](https://nerdculture.de/@youranonnewsirc/116394105151676373) |
 
 <br/>
 <br/>
@@ -56,7 +61,7 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
 | Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| Fraud Strategy (U.K. Government) | Gouvernement britannique | 11/04/2026 | Royaume-Uni | Stratégie Nationale contre la Fraude | Modèle de partenariat public-privé visant à connecter les données industrielles et l'expertise policière pour prévenir la fraude. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
+| Failure to adequately report CSAM | Sénat US | 12 Avril 2026 | États-Unis | Enquête parlementaire | Lancement d'une enquête visant 8 géants de la tech pour manquement au signalement des contenus pédopornographiques (CSAM). | [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html) |
 
 <br/>
 <br/>
@@ -66,8 +71,10 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Finance | 20 000+ particuliers | Victimes identifiées de fraudes à l'investissement et "approval phishing" à l'échelle internationale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
-| Santé | Brockton Hospital (Signature Healthcare) | Attaque par rançongiciel Anubis entraînant une interruption des services électroniques et des soins. | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
+| Automobile / Transport | Eurail | Violation de données impactant 308 777 personnes. | [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html) |
+| Loisirs / Services | Hallmark (Hallmark+) | Exposition de 1,7 million de comptes suite à un accès non autorisé à Salesforce ; noms, adresses et tickets de support volés. | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Hallmark) |
+| Santé | Signature Healthcare | Frappé par une cyberattaque impactant les services et les pharmacies. | [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html) |
+| Services en ligne | MyLovely.AI | Exposition de 113 000 prompts explicites liés à des identifiants utilisateurs. | [HelpNet Security](https://www.helpnetsecurity.com/2026/04/12/week-in-review-windows-zero-day-exploit-leaked-patch-tuesday-forecast/) |
 
 <br/>
 <br/>
@@ -77,13 +84,12 @@ Voici un tableau récapitulatif des violations de données constatées :
 Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
 | CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2026-4149 | 10.0 | Non spécifié | FALSE | Sonos Era 300 | Out-of-bounds Access (SMB) | Non mentionnées | Permet l'exécution de code à distance dans le contexte du noyau via le champ DataOffset des réponses SMB. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-4149) |
-| CVE-2026-5059 | 9.8 | Non spécifié | FALSE | aws-mcp-server | Command Injection | Non mentionnées | Injection de commande via la liste des commandes autorisées, permettant une RCE sans authentification. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5059) |
-| CVE-2026-5058 | 9.8 | Non spécifié | FALSE | aws-mcp-server | Command Injection | Non mentionnées | Similaire à la CVE-2026-5059, défaut de validation des chaînes fournies par l'utilisateur. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5058) |
-| CVE-2026-34621 | 9.6 | Non spécifié | FALSE | Adobe Acrobat Reader | Prototype Pollution | Non mentionnées | Modification non contrôlée des attributs du prototype d'objet permettant une RCE via l'ouverture d'un fichier malveillant. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-34621) |
-| CVE-2026-39987 | 9.3 | Non spécifié | FALSE | Marimo (Python notebook) | Pre-Auth RCE | Non mentionnées | Absence de validation d'authentification sur le terminal WebSocket (/terminal/ws) permettant un shell complet. | [Security Affairs](https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html) |
-| CVE-2026-31845 | 9.3 | Non spécifié | FALSE | Rukovoditel CRM | Reflected XSS | Non mentionnées | Injection de script via le paramètre 'zd_echo' de l'API Zadarma, permettant le vol de session. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-31845) |
-| CVE-2026-5144 | 8.8 | Non spécifié | FALSE | BuddyPress Groupblog | Privilege Escalation | Non mentionnées | Défaut de contrôle IDOR permettant à un simple abonné de devenir administrateur sur un réseau Multisite. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-5144) |
+| CVE-2026-40175 | 10.0 | N/A | FALSE | Axios | Prototype Pollution / Request Smuggling | T1210: Exploitation of Remote Services | Permet l'escalade d'une pollution de prototype en prise de contrôle totale du cloud ou RCE via injection de headers. | [SecurityOnline](https://securityonline.info/axios-vulnerability-cve-2026-40175-cloud-takeover-rce/) |
+| CVE-2026-6140 | 10.0 | N/A | FALSE | Totolink A7100RU | OS Command Injection | T1210: Exploitation of Remote Services | Injection de commande via l'argument FileName dans la fonction UploadFirmwareFile. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6140) |
+| CVE-2026-39987 | 9.3 | N/A | FALSE | Marimo | Pre-auth RCE | T1190: Exploit Public-Facing Application | WebSocket endpoint exposant un terminal interactif sans authentification. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-marimo-pre-auth-rce-flaw-now-under-active-exploitation/) |
+| CVE-2026-6137 | 9.0 | N/A | FALSE | Tenda F451 | Stack-based Buffer Overflow | T1210: Exploitation of Remote Services | Débordement de tampon dans la fonction de configuration WAN via l'argument wanmode. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6137) |
+| CVE-2026-34621 | 8.6 | N/A | TRUE | Adobe Acrobat Reader | Prototype Pollution | T1566.001: Phishing: Spearphishing Attachment | Exécution de code arbitraire via la manipulation d'objets JavaScript dans des documents PDF. | [SecurityAffairs](https://securityaffairs.com/190697/security/adobe-fixes-actively-exploited-acrobat-reader-flaw-cve-2026-34621.html) |
+| CVE-2026-34078 | 8.8 | N/A | FALSE | Flatpak | Sandbox Escape | T1059: Command and Scripting Interpreter | Évasion complète de sandbox permettant l'accès aux fichiers hôtes et l'exécution de code. | [HelpNet Security](https://www.helpnetsecurity.com/2026/04/12/week-in-review-windows-zero-day-exploit-leaked-patch-tuesday-forecast/) |
 
 <br/>
 <br/>
@@ -92,11 +98,11 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Over 20,000 crypto fraud victims identified in international crackdown | Action majeure de lutte contre la cybercriminalité financière mondiale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/) |
-| Brockton Hospital still dealing with aftermath of ransomware attack | Impact opérationnel réel d'un ransomware sur des services de santé critiques. | [DataBreaches](https://databreaches.net/2026/04/11/brockton-hospital-still-dealing-with-aftermath-of-ransomware-attack/) |
-| Censys finds 5,219 devices exposed to attacks by Iranian APTs | Menace étatique directe sur les infrastructures critiques (ICS/SCADA). | [Security Affairs](https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html) |
-| CVE-2026-39987: Marimo RCE exploited in hours after disclosure | Démonstration de la vélocité extrême d'exploitation des vulnérabilités actuelles. | [Security Affairs](https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html) |
-| GlassWorm evolves with Zig dropper to infect multiple developer tools | Attaque supply chain sophistiquée ciblant les environnements de développement. | [Security Affairs](https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html) |
+| Critical Marimo pre-auth RCE flaw now under active exploitation | Vulnérabilité critique (9.3) dans une plateforme Python populaire, exploitée activement pour du vol de secrets. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-marimo-pre-auth-rce-flaw-now-under-active-exploitation/) |
+| CVE-2026-40175 (CVSS 10): Critical Axios Vulnerability... | Faille critique (10) dans une bibliothèque JS omniprésente impactant la sécurité Cloud. | [SecurityOnline](https://securityonline.info/axios-vulnerability-cve-2026-40175-cloud-takeover-rce/) |
+| Adobe fixes actively exploited Acrobat Reader flaw CVE-2026-34621 | Correction d'une faille zero-day majeure exploitée depuis des mois par des attaquants sophistiqués. | [SecurityAffairs](https://securityaffairs.com/190697/security/adobe-fixes-actively-exploited-acrobat-reader-flaw-cve-2026-34621.html) |
+| Hackers claim control over Venice San Marco anti-flood pumps | Menace directe sur une infrastructure physique (OT) critique avec motivations politiques. | [SecurityAffairs](https://securityaffairs.com/190679/hacktivism/hackers-claim-control-over-venice-san-marco-anti-flood-pumps.html) |
+| Linux 7.0 debuts as Linus Torvalds ponders AI's bug-finding powers | Sortie d'une version majeure du noyau Linux avec des réflexions stratégiques sur l'IA et la sécurité. | [The Register](https://go.theregister.com/i/cfa/https://www.theregister.com/2026/04/13/linux_kernel_7_releaseed/) |
 
 <br/>
 <br/>
@@ -105,114 +111,139 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| 🚨 HIGH risk: Optimole WordPress plugin... | Publication provenant d'un réseau social (Mastodon). | [OffSeq](https://infosec.exchange/@offseq/116388792901284434) |
-| Comparison of Android-based Operating Systems | Publication provenant d'un réseau social (Mastodon). | [Mastodon](https://nerdculture.de/@anon_4601/116388577211771302) |
-| New security advisory: CVE-2026-39911 | Publication provenant d'un réseau social (Mastodon). | [Matchbook3469](https://mastodon.social/@Matchbook3469/116388561092693522) |
-| Поганые вещи в инфобезе (Opinion piece) | Publication provenant d'un réseau social (Mastodon). | [meowmashine](https://ioc.exchange/@meowmashine/116388931137974056) |
-| Red teamers don’t just rely on software... | Publication provenant d'un réseau social (Mastodon) / Contenu promotionnel. | [dan_nanni](https://mastodon.social/@dan_nanni/116388663072153035) |
-| Seen this mistake kill companies: hardcoded API keys | Publication provenant d'un réseau social (Mastodon). | [threatchain](https://mastodon.social/@threatchain/116388853720157844) |
-| What is NetBIOS and SMB Exploitation Techniques | Publication provenant d'un réseau social (Mastodon) / Guide technique général. | [halildeniz](https://mastodon.social/@halildeniz/116388885860868664) |
+| Breach alert just fired. Clock is ticking. | Contenu de réseau social sans analyse technique approfondie. | [Mastodon](https://mastodon.social/@threatchain/116394515231058579) |
+| ISC Stormcast For Monday, April 13th, 2026 | Simple annonce de podcast sans détails exploitables directement. | [SANS ISC](https://isc.sans.edu/podcastdetail/9888) |
+| SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 92 | Newsletter synthétique dont les points clés sont déjà traités par les articles spécifiques. | [SecurityAffairs](https://securityaffairs.com/190672/malware/security-affairs-malware-newsletter-round-92.html) |
+| Security Affairs newsletter Round 572 | Compilation d'articles déjà sélectionnés individuellement ou secondaires. | [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html) |
+| V8 Exploitation: From Libc Pwn to Browser Bugs | Lien bloqué ou nécessitant une connexion/authentification spécifique. | [Reddit](https://www.reddit.com/r/blueteamsec/comments/1sjqkp6/v8_exploitation_from_libc_pwn_to_browser_bugs/) |
 
 <br>
-<br>
+<br/>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="plus-de-20000-victimes-de-fraude-crypto-identifiees-lors-dun-coup-de-filet-international"></div>
+<div id="critique-vulnerabilite-rce-pre-authentification-dans-marimo-exploitee-en-quelques-heures"></div>
 
-## Plus de 20 000 victimes de fraude crypto identifiées lors d'un coup de filet international
-L'opération internationale "Atlantic", menée par la National Crime Agency (NCA) britannique avec le soutien des États-Unis et du Canada, a permis d'identifier plus de 20 000 victimes de fraudes aux crypto-monnaies. L'action s'est concentrée sur le démantèlement de réseaux pratiquant l'"approval phishing", où les escrocs trompent les victimes pour obtenir l'accès à leurs portefeuilles numériques. Plus de 12 millions de dollars de revenus criminels présumés ont été gelés et 45 millions de dollars de crypto-monnaies volées ont été identifiés. Ce coup de filet s'inscrit dans la nouvelle stratégie de lutte contre la fraude du gouvernement britannique, privilégiant le partenariat public-privé. En parallèle, le FBI rapporte une augmentation massive des plaintes liées aux investissements crypto en 2025, avec des pertes s'élevant à 7,2 milliards de dollars. L'opération a mobilisé des acteurs tels que le Secret Service américain et la Police provinciale de l'Ontario. Les autorités prévoient de poursuivre l'analyse des données recueillies pour engager d'autres poursuites.
+## Critique : vulnérabilité RCE pré-authentification dans Marimo exploitée en quelques heures
+La plateforme de notebooks Python open-source Marimo a été victime d'une exploitation de faille critique (CVE-2026-39987, score 9.3) seulement 10 heures après sa divulgation. La vulnérabilité réside dans le point de terminaison WebSocket `/terminal/ws`, qui expose un terminal interactif sans vérification d'authentification. Les attaquants ont mené des opérations manuelles de reconnaissance (`whoami`, `ls`) avant de cibler spécifiquement les fichiers `.env` et les clés SSH pour exfiltrer des identifiants cloud et des secrets d'application. Plus de 125 adresses IP ont été détectées en phase de reconnaissance dès les premières 12 heures. L'attaque semble avoir été menée par des opérateurs méthodiques plutôt que par des scripts automatisés. Les versions 0.20.4 et antérieures sont vulnérables, notamment lorsqu'elles sont déployées en mode édition ou exposées sur un réseau partagé via l'option `--host 0.0.0.0`. Marimo a publié la version 0.23.0 pour corriger ce défaut majeur.
 
-**Analyse de l'impact** : Impact financier massif avec des milliards de dollars de pertes annuelles. La confiance des utilisateurs dans les actifs numériques est érodée par des techniques de "pig butchering" et de phishing de plus en plus sophistiquées.
+**Analyse de l'impact** : Impact critique sur la confidentialité et l'intégrité des environnements de Data Science et de développement IA. Le vol de clés SSH et de secrets cloud permet des mouvements latéraux profonds dans l'infrastructure de l'entreprise.
 
-**Recommandations** :
-* Éduquer les utilisateurs sur les risques de l'"approval phishing" et l'importance de ne jamais accorder de droits d'accès complets aux portefeuilles à des tiers inconnus.
-* Collaborer activement avec les plateformes d'échange pour geler rapidement les fonds signalés comme frauduleux.
-* Intégrer des outils de surveillance des transactions pour détecter les schémas de transfert suspects liés aux arnaques à l'investissement.
+**Recommandations** : 
+* Mettre à jour immédiatement Marimo vers la version 0.23.0 ou supérieure.
+* Surveiller et bloquer les connexions WebSocket vers le endpoint `/terminal/ws`.
+* Réinitialiser et faire pivoter toutes les clés SSH et secrets contenus dans les fichiers `.env` potentiellement exposés.
+* Restreindre l'accès à l'interface Marimo via un pare-feu ou un VPN, en évitant l'exposition directe sur 0.0.0.0.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Réseaux de fraude internationaux (non nommés spécifiquement) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002 : Spearphishing Link <br> * T1566.003 : Spearphishing Service |
-| Observables & Indicateurs de compromission | ```Aucun IoC spécifique n'est fourni``` |
+| Groupe ou acteur malveillant | Non mentionné (Opérateurs méthodiques) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br> * T1552.001: Credentials In Files <br> * T1059.004: Unix Shell |
+| Observables & Indicateurs de compromission | * Endpoint: `/terminal/ws` <br> * Commandes: `pwd`, `whoami`, `ls`, accès au fichier `.env` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/police-identifies-20-000-victims-in-international-crypto-fraud-crackdown/
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-marimo-pre-auth-rce-flaw-now-under-active-exploitation/)
+* [SecurityAffairs](https://securityaffairs.com/190662/security/security-affairs-newsletter-round-572-by-pierluigi-paganini-international-edition.html)
 
-<br/>
-<br/>
+<br>
+<br>
 
-<div id="censys-identifie-5-219-appareils-exposes-aux-attaques-des-apt-iraniens"></div>
+<div id="adobe-corrige-la-faille-zero-day-cve-2026-34621-activement-exploitee-dans-acrobat-reader"></div>
 
-## Censys identifie 5 219 appareils exposés aux attaques des APT iraniens
-Des chercheurs de Censys ont découvert 5 219 automates programmables (PLC) Rockwell Automation exposés sur Internet, dont près de 75 % se situent aux États-Unis. Cette alerte fait suite à une mise en garde des agences américaines (FBI, CISA, NSA) concernant des groupes liés à l'Iran, comme CyberAv3ngers, ciblant ces dispositifs. Les attaquants manipulent les fichiers de projet et les données des systèmes HMI/SCADA, provoquant des interruptions opérationnelles dans les secteurs de l'eau, de l'énergie et des services gouvernementaux. De nombreux dispositifs sont connectés via des réseaux cellulaires (Verizon, AT&T), ce qui rend leur surveillance et leur correction difficiles. Les familles MicroLogix et CompactLogix sont les plus touchées, utilisant souvent des micrologiciels obsolètes. L'exposition permet une identification granulaire des modèles sans authentification. Les experts recommandent de déconnecter ces systèmes d'Internet ou d'utiliser des VPN sécurisés.
+## Adobe corrige la faille zero-day CVE-2026-34621 activement exploitée dans Acrobat Reader
+Adobe a publié une mise à jour d'urgence pour corriger la CVE-2026-34621, une vulnérabilité critique de pollution de prototype dans Acrobat Reader (CVSS 8.6). Cette faille permet l'exécution de code arbitraire via des documents PDF malveillants contenant du JavaScript sophistiqué. Les attaquants utilisent des API privilégiées comme `util.readFileIntoStream()` pour lire des fichiers locaux et `RSS.addFeed()` pour exfiltrer les données vers un serveur distant. Des preuves suggèrent que cette vulnérabilité est exploitée dans la nature depuis au moins décembre 2025 à des fins d'espionnage et de profilage de victimes. L'exploitation nécessite une interaction de l'utilisateur (ouverture du PDF) mais peut conduire à une évasion de sandbox. Les versions Acrobat DC et 2024 Classic sont affectées sur Windows et macOS. Adobe recommande une mise à jour immédiate vers les versions corrigées (ex: 26.001.21411).
 
-**Analyse de l'impact** : Risque critique de sabotage physique et d'interruption de services essentiels (eau, électricité). L'exposition directe de l'OT facilite grandement la reconnaissance pour les acteurs étatiques.
+**Analyse de l'impact** : Risque élevé de compromission de postes de travail via des campagnes de spearphishing. La capacité d'exfiltration de fichiers locaux rend cette menace particulièrement dangereuse pour la propriété intellectuelle.
 
-**Recommandations** :
-* Déconnecter immédiatement les automates programmables (PLC) de l'Internet public.
-* Mettre en œuvre des passerelles sécurisées (VPN, accès ZTNA) si un accès distant est indispensable.
-* Mettre à jour les micrologiciels (firmware) des appareils Rockwell MicroLogix et CompactLogix.
-* Surveiller le port EtherNet/IP (44818) pour toute activité inhabituelle.
+**Recommandations** : 
+* Déployer le correctif APSB26-43 sur l'ensemble du parc applicatif Adobe Acrobat/Reader.
+* Désactiver JavaScript dans Adobe Reader via les GPO si les processus métier le permettent.
+* Surveiller les processus enfants inhabituels générés par `AcroRd32.exe` ou `Acrobat.exe`.
+* Utiliser des solutions de sandboxing de messagerie pour analyser les PDF entrants.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | CyberAv3ngers (lié à l'IRGC iranien) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0883 : Screen Capture (HMI) <br> * T0833 : Modify Parameter <br> * T0866 : Softwate Discovery |
-| Observables & Indicateurs de compromission | ```Port 44818 (EtherNet/IP), protocoles Modbus, VNC exposés sur des IPs cellulaires.``` |
+| Groupe ou acteur malveillant | Non spécifié (Acteurs étatiques suspectés) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.001: Phishing: Spearphishing Attachment <br> * T1203: Exploitation for Client Execution <br> * T1041: Exfiltration Over C2 Channel |
+| Observables & Indicateurs de compromission | * API JS suspectes: `util.readFileIntoStream()`, `RSS.addFeed()` <br> * Hash VT (exemple mentionné): 13/64 détections |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html
+* [SecurityAffairs](https://securityaffairs.com/190697/security/adobe-fixes-actively-exploited-acrobat-reader-flaw-cve-2026-34621.html)
+* [TheCyberThrone](https://thecyberthrone.in/2026/04/12/cve-2026-34621-adobe-acrobat-reader-prototype-pollution-rce/)
+* [TheHackerNews](https://thehackernews.com/2026/04/adobe-patches-actively-exploited.html)
 
-<br/>
-<br/>
+<br>
+<br>
 
-<div id="glassworm-evolue-avec-un-dropper-en-zig-pour-infecter-les-outils-de-developpement"></div>
+<div id="des-pirates-revendiquent-le-controle-des-pompes-anti-inondation-de-venise"></div>
 
-## GlassWorm évolue avec un dropper en Zig pour infecter les outils de développement
-La campagne malveillante GlassWorm a franchi une nouvelle étape en utilisant un dropper compilé en langage Zig, dissimulé dans une fausse extension VS Code nommée "WakaTime Activity Tracker". Ce binaire s'exécute en dehors du bac à sable JavaScript et infecte silencieusement tous les IDE présents sur le système (VS Code, Cursor, VSCodium). Le logiciel malveillant télécharge ensuite une seconde extension depuis GitHub pour assurer sa persistance. GlassWorm évite les systèmes russes et communique avec un serveur de commande (C2) basé sur la blockchain Solana. Le payload final installe un cheval de troie d'accès à distance (RAT) et une extension Chrome malveillante pour voler des données. Cette attaque cible directement la chaîne d'approvisionnement logicielle en compromettant l'environnement de travail des développeurs. Aikido Security, à l'origine de la découverte, souligne la furtivité accrue de cette méthode.
+## Des pirates revendiquent le contrôle des pompes anti-inondation de Venise
+Le groupe "Infrastructure Destruction Squad" (ou Dark Engine) prétend avoir infiltré le système de gestion des pompes hydrauliques protégeant la place Saint-Marc à Venise. Les attaquants ont publié des captures d'écran des interfaces de contrôle et des états des vannes sur Telegram, affirmant pouvoir désactiver les défenses et provoquer des inondations côtières. Le groupe a proposé la vente de l'accès root au système pour seulement 600 USD, indiquant une volonté de disruption ou de chantage politique envers le gouvernement italien. Bien que les autorités affirment que les systèmes critiques de la Basilique n'ont pas été touchés, l'intrusion semble durer depuis plusieurs mois. Cette attaque illustre la vulnérabilité croissante des systèmes OT (Operational Technology) hérités, souvent non conçus pour résister à des cyberattaques directes. Parallèlement, le FBI et la CISA ont averti que des acteurs liés à l'Iran ciblaient également des automates programmables (PLC) aux États-Unis.
 
-**Analyse de l'impact** : Menace sérieuse sur l'intégrité du code source et des secrets (clés API, identifiants) détenus par les développeurs. La capacité d'infection multi-IDE augmente radicalement la portée de la compromission.
+**Analyse de l'impact** : Menace directe pour la sécurité publique et le patrimoine culturel mondial. Ce type d'attaque démontre que les vulnérabilités logicielles peuvent se traduire par des catastrophes physiques réelles.
 
-**Recommandations** :
-* Auditer la liste des extensions installées dans les IDE (chercher "specstudio/code-wakatime-activity-tracker" ou "floktokbok.autoimport").
-* Réinitialiser tous les secrets et clés API si une extension suspecte est découverte.
-* Restreindre l'installation d'extensions provenant de sources non vérifiées ou tierces sur les postes de développement.
+**Recommandations** : 
+* Isoler physiquement (Air-gap) ou logiquement les réseaux OT des réseaux IT.
+* Implémenter une authentification multi-facteurs (MFA) pour tout accès distant aux systèmes SCADA/HMI.
+* Auditer les interfaces d'administration exposées sur internet (via des outils comme Shodan/Censys).
+* Surveiller les changements de configuration inattendus dans les fichiers de projet des automates programmables.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | GlassWorm |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1195.002 : Supply Chain Compromise (Software Dependencies) <br> * T1547.001 : Boot or Logon Autostart Execution |
-| Observables & Indicateurs de compromission | ```Extensions : specstudio/code-wakatime-activity-tracker, floktokbok.autoimport. C2 lié à Solana.``` |
+| Groupe ou acteur malveillant | Infrastructure Destruction Squad / Dark Engine |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0819: Exploit Public-Facing Application (OT) <br> * T0831: Manipulation of Control Logic <br> * T0883: External Remote Services |
+| Observables & Indicateurs de compromission | ```Accès administratif au portail "SISTEMA DI RIDUZIONE RISCHIO ALLAGAMENTO"``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html
+* [SecurityAffairs](https://securityaffairs.com/190679/hacktivism/hackers-claim-control-over-venice-san-marco-anti-flood-pumps.html)
+* [HelpNet Security](https://www.helpnetsecurity.com/2026/04/12/week-in-review-windows-zero-day-exploit-leaked-patch-tuesday-forecast/)
 
-<br/>
-<br/>
+<br>
+<br>
 
-<div id="cve-2026-39987-rce-sur-marimo-exploitee-quelques-heures-apres-sa-divulgation"></div>
+<div id="cve-2026-40175--une-vulnerabilite-critique-dans-axios-permet-la-prise-de-controle-du-cloud"></div>
 
-## CVE-2026-39987 : RCE sur Marimo exploitée quelques heures après sa divulgation
-Une vulnérabilité critique (CVE-2026-39987, score CVSS 9.3) dans l'outil de notebook Python open-source Marimo a été exploitée moins de dix heures après sa publication le 8 avril 2026. La faille réside dans l'absence d'authentification sur le terminal WebSocket (/terminal/ws), permettant à un attaquant distant d'obtenir un shell complet et d'exécuter des commandes système. L'équipe Sysdig a observé des tentatives d'exploitation réelles en seulement 9 heures et 41 minutes, suivies d'un vol de credentials en moins de trois minutes. Fait remarquable, aucun code d'exploitation public (PoC) n'existait au moment de l'attaque ; l'attaquant a construit son exploit directement à partir de l'avis de sécurité. L'activité enregistrée suggère un opérateur humain méthodique ciblant les fichiers .env et les clés SSH. Ce cas illustre la capacité des attaquants à surveiller et armer les vulnérabilités sur des logiciels de niche, probablement aidés par l'IA.
+## CVE-2026-40175 : une vulnérabilité critique dans Axios permet la prise de contrôle du cloud
+Une vulnérabilité de score CVSS 10 a été découverte dans Axios, le client HTTP massivement utilisé dans les environnements Node.js et navigateurs. La faille (CVE-2026-40175) permet de transformer une simple pollution de prototype dans une bibliothèque tierce en une exécution de code à distance (RCE) ou une prise de contrôle totale du cloud. Axios agit ici comme un "gadget" : il ne nécessite pas d'entrée utilisateur directe pour être déclenché. La chaîne d'attaque exploite le fait qu'Axios échoue à filtrer les caractères CRLF (\r\n) lors de la fusion interne des configurations, permettant ainsi des injections de headers et du Request Smuggling. Cette technique peut être utilisée pour exfiltrer des jetons de session cloud (AWS IMDSv2) ou contourner l'authentification. Les versions antérieures à 1.13.2 sont affectées.
 
-**Analyse de l'impact** : Compromission totale des environnements de science des données et vol de secrets sensibles. Cette vélocité réduit à néant le temps de réaction traditionnel des équipes de sécurité.
+**Analyse de l'impact** : Risque systémique pour les applications web modernes. Une compromission via une dépendance mineure peut entraîner une élévation de privilèges catastrophique au niveau de l'infrastructure Cloud.
 
-**Recommandations** :
-* Mettre à jour Marimo vers la version 0.23.0 ou supérieure immédiatement.
-* Isoler les instances de notebook derrière un VPN ou un proxy d'authentification robuste.
-* Surveiller les connexions WebSockets inhabituelles sur le endpoint /terminal/ws.
+**Recommandations** : 
+* Mettre à jour Axios vers la version 1.15.0 ou supérieure immédiatement.
+* Auditer toutes les dépendances du projet pour identifier d'éventuelles failles de pollution de prototype (ex: `qs`, `minimist`).
+* Implémenter une validation stricte des en-têtes HTTP au niveau des adaptateurs lib/adapters/http.js.
+* Utiliser des outils d'analyse statique (SAST) et de composition logicielle (SCA) pour surveiller les bibliothèques vulnérables.
 
-Voici quelques indicateurs clés au sein du tableau ci-dessous :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Inconnu (opérateur humain qualifié) |
-| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1210 : Exploitation of Remote Services <br> * T1552.001 : Unsecured Credentials (Files) |
-| Observables & Indicateurs de compromission | ```Endpoint : /terminal/ws (WebSocket). Cibles : fichiers .env, clés SSH.``` |
+| Groupe ou acteur malveillant | Non applicable (Vulnérabilité de bibliothèque) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1190: Exploit Public-Facing Application <br> * T1210: Exploitation of Remote Services <br> * T1557: Adversary-in-the-Middle |
+| Observables & Indicateurs de compromission | ```Injections de headers avec caractères \r\n dans les requêtes sortantes Axios.``` |
 
 ### Source (url) du ou des articles
-* https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html
+* [SecurityOnline](https://securityonline.info/axios-vulnerability-cve-2026-40175-cloud-takeover-rce/)
+
+<br>
+<br>
+
+<div id="sortie-de-linux-70--linus-torvalds-souligne-limpact-de-lia-sur-la-decouverte-de-bugs"></div>
+
+## Sortie de Linux 7.0 : Linus Torvalds souligne l'impact de l'IA sur la découverte de bugs
+Linus Torvalds a officiellement publié la version 7.0 du noyau Linux. Bien que le changement de numéro de version soit principalement cosmétique (évitant d'atteindre x.20), cette version marque l'officialisation du support du langage Rust pour le développement du noyau. Torvalds a noté une augmentation significative du nombre de petits correctifs de sécurité, attribuant cette tendance à l'utilisation croissante d'outils d'IA par les chercheurs pour identifier des cas limites (corner cases). Greg Kroah-Hartman a confirmé que l'IA est devenue un outil précieux mais génère également une quantité massive de rapports qu'il faut filtrer. Cette version inclut également des améliorations pour les architectures ARM, RISC-V et Loongson, ainsi que des fonctionnalités de "self-healing" pour le système de fichiers XFS.
+
+**Analyse de l'impact** : L'arrivée de Rust promet une réduction à long terme des vulnérabilités de mémoire. Cependant, la prolifération de rapports de bugs assistés par IA pose un défi de gestion pour les mainteneurs, tout en accélérant potentiellement la découverte de failles par les attaquants.
+
+**Recommandations** : 
+* Planifier la migration vers le noyau 7.0 pour bénéficier des améliorations de robustesse du système de fichiers et du support Rust.
+* Renforcer les processus de revue de code interne en intégrant des outils d'analyse assistés par IA, en suivant l'exemple des mainteneurs du noyau.
+* Mettre à jour les procédures de signalement des bugs de sécurité selon les nouvelles documentations `security-bugs.rst`.
+
+| Indicateurs | Descriptions |
+|:---|:---|
+| Groupe ou acteur malveillant | Non applicable |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | Non mentionnées |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
+
+### Source (url) du ou des articles
+* [The Register](https://go.theregister.com/i/cfa/https://www.theregister.com/2026/04/13/linux_kernel_7_releaseed/)
