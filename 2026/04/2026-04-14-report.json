@@ -1,0 +1,674 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current threat landscape is characterized by a growing hybridization between geopolitical conflicts and cyber-offensive operations, notably around the US-Israel-Iran axis. Escalating tensions are manifesting as large-scale destructive attacks, such as those led by the Handala group against critical infrastructure in Dubai. Concurrently, there is an increased sophistication in supply chain attacks, illustrated by the compromise of the Axios package and the abuse of Obsidian plugins by state actors. Targeting of cloud environments through access token hijacking (Snowflake/Anodot) exposes data from millions of users at giants like Rockstar Games. Ransomware and extortion actors like SRG and Anubis maintain constant pressure on strategic health and legal sectors. Rapid exploitation of critical vulnerabilities (Marimo, Cisco FMC) strains organizational response capabilities. However, the takedown of the W3LL service highlights the effectiveness of international police cooperation against Phishing-as-a-Service. Finally, industrial systems (ICS) security remains a top priority against groups like CyberAv3ngers.",
+      "fr": "Le paysage actuel des menaces est marqué par une hybridation croissante entre conflits géopolitiques et opérations cyber-offensives, particulièrement autour de l'axe États-Unis-Israël-Iran. L'escalade des tensions se traduit par des attaques destructrices d'envergure, comme celles menées par le groupe Handala contre les infrastructures critiques de Dubaï. Parallèlement, on observe une sophistication accrue des attaques sur la chaîne d'approvisionnement, illustrée par la compromission du package Axios et l'abus des plugins de l'application Obsidian par des acteurs étatiques. Le ciblage des environnements cloud, notamment via le détournement de tokens d'accès (Snowflake/Anodot), expose les données de millions d'utilisateurs chez des géants tels que Rockstar Games. Les acteurs de ransomware et d'extorsion, comme SRG et Anubis, maintiennent une pression constante sur les secteurs stratégiques de la santé et du droit. La rapidité d'exploitation des vulnérabilités critiques (Marimo, Cisco FMC) met à rude épreuve les capacités de réponse des organisations. Le démantèlement du service W3LL souligne toutefois l'efficacité de la coopération policière internationale contre le Phishing-as-a-Service. Enfin, la sécurité des systèmes industriels (ICS) demeure une priorité absolue face aux activités de groupes comme CyberAv3ngers."
+    },
+    "date": "2026-04-14"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Naval Blockade and Cyber-Reprisals",
+        "fr": "Blocus naval et cyber-représailles"
+      },
+      "description": {
+        "en": "The United States established a naval blockade of Iranian ports via the Strait of Hormuz, triggering cyber-retaliation from groups like Handala targeting UAE infrastructures.",
+        "fr": "Les États-Unis ont instauré un blocus naval des ports iraniens via le détroit d'Ormuz, déclenchant des cyber-représailles de groupes comme Handala contre les infrastructures des EAU."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for retaliatory traffic from Iranian-linked hacktivist groups.",
+          "fr": "Surveiller le trafic de représailles provenant de groupes hacktivistes liés à l'Iran."
+        },
+        {
+          "en": "Ensure critical systems in the Middle East region have verified offline backups.",
+          "fr": "S'assurer que les systèmes critiques dans la région du Moyen-Orient disposent de sauvegardes hors ligne vérifiées."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Handala",
+        "Blockade"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télécom"
+        ]
+      },
+      "theme": {
+        "en": "National Internet Blackout",
+        "fr": "Blackout internet national"
+      },
+      "description": {
+        "en": "Iran has maintained a national internet blackout for over 45 days (exceeding 1000 hours) to control communications during the conflict.",
+        "fr": "L'Iran maintient un blackout internet national depuis plus de 45 jours (dépassant 1000 heures) pour contrôler les communications pendant le conflit."
+      },
+      "recommandations": [
+        {
+          "en": "Implement alternative communication channels for regional operations.",
+          "fr": "Mettre en œuvre des canaux de communication alternatifs pour les opérations régionales."
+        },
+        {
+          "en": "Assess the impact of prolonged connectivity loss on supply chain dependencies in the region.",
+          "fr": "Évaluer l'impact de la perte prolongée de connectivité sur les dépendances de la chaîne d'approvisionnement dans la région."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Internet Blackout",
+        "Connectivity"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Industrie_et_Fabrication",
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Critical Metals Strategy in Africa",
+        "fr": "Stratégie pour les métaux critiques en Afrique"
+      },
+      "description": {
+        "en": "The United States is escalating its mining strategy in Africa to secure critical metals against Chinese influence.",
+        "fr": "Les États-Unis montent en gamme leur stratégie minière en Afrique pour sécuriser les métaux critiques face à l'influence chinoise."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen cybersecurity for mining and resource extraction companies in Africa.",
+          "fr": "Renforcer la cybersécurité des entreprises minières et d'extraction de ressources en Afrique."
+        },
+        {
+          "en": "Monitor geopolitical shifts impacting resource supply chain security.",
+          "fr": "Surveiller les changements géopolitiques impactant la sécurité de la chaîne d'approvisionnement des ressources."
+        }
+      ],
+      "tags": [
+        "Mining",
+        "Africa",
+        "USA",
+        "China",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.iris-france.org/de-lobito-a-project-vault-la-montee-en-gamme-de-la-strategie-miniere-etats-unienne-en-afrique/"
+      ],
+      "date": "2026-04-13"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Dubai Courts, Dubai Land, RTA (UAE)",
+      "threat_actor": "Void Manticore",
+      "threat_actor_origin": "IRAN",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [
+        "Handala"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "description": {
+        "en": "Destructive attack claiming to have wiped 6PB of data and exfiltrated 149TB of classified documents from UAE government entities.",
+        "fr": "Attaque destructrice affirmant avoir effacé 6 Po de données et exfiltré 149 To de documents classifiés auprès d'entités gouvernementales des EAU."
+      },
+      "mitre_ttps": [
+        "T1565: Data Manipulation",
+        "T1485: Data Destruction",
+        "T1560: Archive Collected Data"
+      ],
+      "recommandations": [
+        {
+          "en": "Validate the integrity of air-gapped backups for government services.",
+          "fr": "Valider l'intégrité des sauvegardes hors ligne (air-gapped) pour les services gouvernementaux."
+        },
+        {
+          "en": "Harden remote access and monitor for unusual data movement in critical segments.",
+          "fr": "Sécuriser les accès distants et surveiller les mouvements de données inhabituels dans les segments critiques."
+        }
+      ],
+      "tags": [
+        "Wiper",
+        "Hack-and-leak",
+        "UAE",
+        "Dubaï"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict",
+        "https://securityaffairs.com/190716/hacking-iran-linked-group-handala-claims-to-have-breached-three-major-uae-organizations.html"
+      ],
+      "date": "2026-04-12"
+    },
+    {
+      "victim": "Wood Smith Henning & Berman",
+      "threat_actor": "Silent Ransom Group",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "SRG"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "description": {
+        "en": "Exfiltration of 3.6 GB of confidential legal data by Silent Ransom Group through encryptionless extortion.",
+        "fr": "Exfiltration de 3,6 Go de données juridiques confidentielles par Silent Ransom Group via une extorsion sans chiffrement."
+      },
+      "mitre_ttps": [
+        "T1020: Automated Exfiltration",
+        "T1659: Content Impersonation"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement Data Loss Prevention (DLP) to detect large-scale file exfiltration.",
+          "fr": "Mettre en œuvre une solution de prévention des pertes de données (DLP) pour détecter l'exfiltration massive de fichiers."
+        },
+        {
+          "en": "Audit access logs to sensitive legal repositories for unauthorized activity.",
+          "fr": "Auditer les journaux d'accès aux référentiels juridiques sensibles pour détecter toute activité non autorisée."
+        }
+      ],
+      "tags": [
+        "Law Firm",
+        "Extortion",
+        "Data Leak"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/13/a-silent-threat-loud-consequences-ransom-group-hits-law-firms-hard/"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "victim": "Rockstar Games",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Technologie_et_Télécom",
+          "Hôtellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Leak of 78 million player analytics records following a cloud token compromise via Anodot/Snowflake.",
+        "fr": "Fuite de 78 millions d'enregistrements d'analyses de joueurs suite à une compromission de tokens cloud via Anodot/Snowflake."
+      },
+      "mitre_ttps": [
+        "T1528: Steal Application Access Token",
+        "T1530: Data from Cloud Storage"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all Snowflake and Anodot authentication tokens immediately.",
+          "fr": "Renouveler immédiatement tous les jetons d'authentification Snowflake et Anodot."
+        },
+        {
+          "en": "Enforce Multi-Factor Authentication (MFA) for all administrative cloud portal access.",
+          "fr": "Imposer l'authentification multi-facteurs (MFA) pour tous les accès aux portails cloud administratifs."
+        }
+      ],
+      "tags": [
+        "Cloud Security",
+        "Gaming",
+        "Snowflake",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/stolen-rockstar-games-analytics-data-leaked-by-extortion-gang/"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "victim": "Basic-Fit",
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce_de_Détail_et_Consommation"
+        ]
+      },
+      "description": {
+        "en": "Data breach affecting 1 million members including names, emails, and bank details.",
+        "fr": "Violation de données touchant 1 million de membres, incluant noms, emails et coordonnées bancaires."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Notify affected users and monitor for phishing campaigns targeting banking info.",
+          "fr": "Notifier les utilisateurs concernés et surveiller les campagnes de phishing ciblant les informations bancaires."
+        },
+        {
+          "en": "Review database security and encryption of PII at rest.",
+          "fr": "Passer en revue la sécurité de la base de données et le chiffrement des données personnelles au repos."
+        }
+      ],
+      "tags": [
+        "PII",
+        "Banking Data",
+        "Fitness"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/13/fuite-de-donnees-chez-basic-fit-un-million-de-membres-concernes-des-coordonnees-bancaires-piratees_6679702_4408996.html"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "victim": "Signature Healthcare",
+      "threat_actor": "Anubis",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Theft of 2TB of patient data by Anubis ransomware group, forcing systems into degraded mode.",
+        "fr": "Vol de 2 To de données de patients par le groupe de ransomware Anubis, forçant les systèmes en mode dégradé."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1020: Automated Exfiltration"
+      ],
+      "recommandations": [
+        {
+          "en": "Activate clinical continuity plans to maintain patient safety during system downtime.",
+          "fr": "Activer les plans de continuité clinique pour maintenir la sécurité des patients pendant l'indisponibilité des systèmes."
+        },
+        {
+          "en": "Isolate remaining healthy network segments to prevent further ransomware spread.",
+          "fr": "Isoler les segments de réseau sains restants pour empêcher toute propagation supplémentaire du ransomware."
+        }
+      ],
+      "tags": [
+        "Hospital",
+        "Ransomware",
+        "Anubis"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-13"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-34621",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "8.6",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
+      "product": "Adobe Acrobat & Reader",
+      "vendor": "Adobe",
+      "description": {
+        "en": "Active exploitation of a zero-day flaw allowing PDF files to bypass sandbox restrictions via privileged JavaScript APIs for RCE and file theft.",
+        "fr": "Exploitation active d'une faille zero-day permettant à des fichiers PDF de contourner les restrictions de la sandbox via des API JavaScript privilégiées pour une exécution de code à distance et le vol de fichiers."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution",
+        "T1059.003: JavaScript"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Adobe Acrobat and Reader to versions 26.001.21411 (DC) or 24.001.30362 (2024).",
+          "fr": "Mettre à jour Adobe Acrobat et Reader vers les versions 26.001.21411 (DC) ou 24.001.30362 (2024)."
+        },
+        {
+          "en": "Isolate the opening of external PDF documents within virtualized or restricted environments (VDI).",
+          "fr": "Isoler l'ouverture de documents PDF externes dans des environnements virtualisés ou restreints (VDI)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "Adobe",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/adobe-rolls-out-emergency-fix-for-acrobat-reader-zero-day-flaw/",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0429/"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "cve_id": "CVE-2026-20131",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+      "product": "Cisco Secure FMC",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Untrusted data deserialization vulnerability allowing root-level arbitrary code execution.",
+        "fr": "Vulnérabilité de désérialisation de données non fiables permettant l'exécution de code arbitraire avec privilèges root."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Cisco emergency security patches for FMC immediately.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité d'urgence Cisco pour FMC."
+        },
+        {
+          "en": "Restrict access to the FMC management interface to trusted IP ranges.",
+          "fr": "Restreindre l'accès à l'interface de gestion FMC aux plages d'adresses IP de confiance."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "Deserialization"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/march-2026-cve-landscape"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "cve_id": "CVE-2021-22681",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:h:rockwellautomation:logix:*:*:*:*:*:*:*:*",
+      "product": "Rockwell Automation Logix",
+      "vendor": "Rockwell Automation",
+      "description": {
+        "en": "Authentication bypass using a hardcoded cryptographic key, exploited by CyberAv3ngers to manipulate industrial controllers.",
+        "fr": "Contournement d'authentification utilisant une clé cryptographique codée en dur, exploité par CyberAv3ngers pour manipuler des automates industriels."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services",
+        "T0812: Default Credentials"
+      ],
+      "recommandations": [
+        {
+          "en": "Disconnect PLC devices from the public internet.",
+          "fr": "Déconnecter les dispositifs PLC de l'Internet public."
+        },
+        {
+          "en": "Set the physical mode switch of Logix controllers to 'Run' to block remote logic changes.",
+          "fr": "Placer le commutateur de mode physique des contrôleurs Logix sur 'Run' pour bloquer les modifications logiques à distance."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "ICS",
+        "PLC",
+        "CyberAv3ngers"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/iran-linked-cyberav3ngers-sets-sights/"
+      ],
+      "date": "2026-04-13"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "PhantomPulse Campaign: Abuse of Obsidian Plugin Ecosystem",
+        "fr": "Campagne PhantomPulse : abus de l'écosystème de plugins d'Obsidian"
+      },
+      "description": {
+        "en": "Targeting of finance and crypto sectors using Obsidian 'vaults' containing malicious plugins to deploy the PHANTOMPULSE RAT.",
+        "fr": "Ciblage des secteurs de la finance et de la crypto utilisant des 'coffres' Obsidian contenant des plugins malveillants pour déployer le RAT PHANTOMPULSE."
+      },
+      "threat_actor": "REF6598",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Finance",
+          "Technologie_et_Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://panel.fefea22134.net"
+        ],
+        "IPv4": [
+          "195.3.222.251"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "panel.fefea22134.net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "70bbb38b70fd836d66e8166ec27be9aa8535b3876596fc80c45e3de4ce327980"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "syncobs.exe",
+          "PHANTOMPULSE",
+          "PHANTOMPULL",
+          "Obsidian"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003: Spearphishing via Service",
+        "T1059.001: PowerShell",
+        "T1584.005: Botnet"
+      ],
+      "analyse": {
+        "en": "Multi-platform attack using social engineering on LinkedIn/Telegram to deliver malicious notes vaults. The malware uses Ethereum blockchain for C2 resolution.",
+        "fr": "Attaque multiplateforme utilisant l'ingénierie sociale sur LinkedIn/Telegram pour diffuser des coffres de notes malveillants. Le malware utilise la blockchain Ethereum pour la résolution du C2."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for suspicious child processes spawned by Obsidian.exe.",
+          "fr": "Surveiller les processus enfants suspects générés par Obsidian.exe."
+        },
+        {
+          "en": "Restrict the use of unverified community plugins in productivity applications.",
+          "fr": "Restreindre l'utilisation de plugins communautaires non vérifiés dans les applications de productivité."
+        }
+      ],
+      "tags": [
+        "Obsidian",
+        "RAT",
+        "Blockchain C2",
+        "Social Engineering"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/phantom-in-the-vault"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "title": {
+        "en": "Axios Supply Chain Attack and OpenAI Impact",
+        "fr": "Attaque de la chaîne d'approvisionnement Axios et impact sur OpenAI"
+      },
+      "description": {
+        "en": "North Korean actor UNC1069 compromised the npm Axios package (v1.14.1), leading to OpenAI rotating macOS code-signing certificates.",
+        "fr": "L'acteur nord-coréen UNC1069 a compromis le package npm Axios (v1.14.1), conduisant OpenAI à renouveler ses certificats de signature de code macOS."
+      },
+      "threat_actor": "UNC1069",
+      "threat_actor_origin": "NORTH KOREA",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Axios v1.14.1"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Software Supply Chain Compromise",
+        "T1553.002: Code Signing",
+        "T1555: Credentials from Password Stores"
+      ],
+      "analyse": {
+        "en": "Compromised GitHub Actions workflow executed the malicious Axios package. Also involves CVE-2026-40175 for prototype pollution targeting AWS IAM metadata.",
+        "fr": "Un workflow GitHub Actions compromis a exécuté le package Axios malveillant. Implique également la CVE-2026-40175 pour une pollution de prototype ciblant les métadonnées AWS IAM."
+      },
+      "recommandations": [
+        {
+          "en": "Update Axios to version 1.15.0 or later.",
+          "fr": "Mettre à jour Axios vers la version 1.15.0 ou ultérieure."
+        },
+        {
+          "en": "Update OpenAI ChatGPT desktop applications for macOS immediately.",
+          "fr": "Mettre à jour immédiatement les applications de bureau OpenAI ChatGPT pour macOS."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "npm",
+        "OpenAI",
+        "UNC1069"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/openai-rotates-macos-certs-after-axios-attack-hit-code-signing-workflow/"
+      ],
+      "date": "2026-04-13"
+    },
+    {
+      "title": {
+        "en": "Takedown of W3LL Phishing Platform",
+        "fr": "Démantèlement de la plateforme de phishing W3LL"
+      },
+      "description": {
+        "en": "FBI and Indonesian authorities seized the W3LL Store infrastructure, a PhaaS platform facilitating MFA bypass.",
+        "fr": "Le FBI et les autorités indonésiennes ont saisi l'infrastructure de W3LL Store, une plateforme PhaaS facilitant le contournement du MFA."
+      },
+      "threat_actor": "W3LL",
+      "threat_actor_origin": "INDONESIA",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Finance"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "http://w3ll.store"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "w3ll.store"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "W3LL Panel"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002: Phishing: Spearphishing Link",
+        "T1556: Modify Authentication Process",
+        "T1557: Adversary-in-the-Middle"
+      ],
+      "analyse": {
+        "en": "The platform provided kits for Adversary-in-the-Middle (AitM) attacks, targeting over 25,000 Microsoft 365 accounts for BEC fraud.",
+        "fr": "La plateforme fournissait des kits pour des attaques Adversary-in-the-Middle (AitM), ciblant plus de 25 000 comptes Microsoft 365 pour de la fraude BEC."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt phishing-resistant MFA methods (FIDO2/Hardware keys).",
+          "fr": "Adopter des méthodes MFA résistantes au phishing (FIDO2/Clés matérielles)."
+        },
+        {
+          "en": "Configure strict Conditional Access policies for Microsoft 365 services.",
+          "fr": "Configurer des politiques d'accès conditionnel strictes pour les services Microsoft 365."
+        }
+      ],
+      "tags": [
+        "PhaaS",
+        "AitM",
+        "BEC",
+        "Takedown"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/fbi-takedown-of-w3ll-phishing-service-leads-to-developer-arrest/"
+      ],
+      "date": "2026-04-13"
+    }
+  ]
+}
