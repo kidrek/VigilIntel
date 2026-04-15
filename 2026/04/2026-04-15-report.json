@@ -1,13 +1,578 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "The provided report contains no threat intelligence data for analysis. As a result, no breach events, vulnerabilities, or threat campaigns have been identified.",
-      "fr": "Le rapport fourni ne contient aucune donnée de renseignement sur les menaces pour analyse. Par conséquent, aucun événement de violation, vulnérabilité ou campagne de menace n'a été identifié."
+      "en": "The cyber threat landscape in April 2026 is marked by an unprecedented convergence of extreme geopolitical tensions and the industrialization of supply chain attacks. The US-Israel-Iran conflict has escalated into massive digital sabotage by groups like Handala and Z-PENTEST. Simultaneously, Microsoft recorded a record Patch Tuesday with over 240 vulnerabilities, highlighting the exploitation of zero-days in critical infrastructure. Productivity tools (Obsidian) and development ecosystems (NPM) are being directly targeted for initial access, while cloud misconfigurations (Salesforce, Snowflake) remain a primary weakness exploited by groups like ShinyHunters.",
+      "fr": "Le paysage de la menace cyber en avril 2026 est marqué par une convergence sans précédent entre tensions géopolitiques extrêmes et industrialisation des attaques sur la chaîne d'approvisionnement. Le conflit US-Israël-Iran a basculé dans le sabotage numérique massif par des groupes comme Handala et Z-PENTEST. Parallèlement, Microsoft enregistre un Patch Tuesday record avec plus de 240 vulnérabilités, soulignant l'exploitation de failles zero-day dans les infrastructures critiques. Les outils de productivité (Obsidian) et de développement (NPM) sont ciblés pour l'accès initial, tandis que les mauvaises configurations cloud (Salesforce, Snowflake) demeurent une faiblesse majeure exploitée par des groupes comme ShinyHunters."
     },
     "date": "2026-04-15"
   },
-  "geopolitical_analyse": [],
-  "breach_analyse": [],
-  "vulnerabilities_analyse": [],
-  "threats_analyse": []
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Middle East Conflict Escalation",
+        "fr": "Escalade du conflit au Moyen-Orient"
+      },
+      "description": {
+        "en": "Handala claims the destruction of 6 petabytes of government data in Dubai in retaliation for regional political stances.",
+        "fr": "Handala revendique la destruction de 6 pétaoctets de données gouvernementales à Dubaï en représailles aux positions politiques régionales."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strictly offline backups and test restoration procedures for critical government data.",
+          "fr": "Mettre en œuvre des sauvegardes strictement hors ligne et tester les procédures de restauration des données gouvernementales critiques."
+        },
+        {
+          "en": "Enhance monitoring of abnormal data egress and destruction patterns on sensitive servers.",
+          "fr": "Renforcer la surveillance des flux de sortie de données anormaux et des schémas de destruction sur les serveurs sensibles."
+        }
+      ],
+      "tags": [
+        "Handala",
+        "Dubai",
+        "Data Destruction"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-14"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Industrial Sabotage (OT/ICS)",
+        "fr": "Sabotage industriel (OT/ICS)"
+      },
+      "description": {
+        "en": "Z-PENTEST Alliance claims control over an industrial water treatment system in South Korea.",
+        "fr": "Z-PENTEST Alliance prétend avoir pris le contrôle d'un système de traitement d'eau industriel en Corée du Sud."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate all PLC and HMI interfaces from the public internet immediately.",
+          "fr": "Isoler immédiatement tous les automates (PLC) et interfaces HMI du réseau internet public."
+        },
+        {
+          "en": "Implement multi-factor authentication for all remote access to industrial control systems.",
+          "fr": "Mettre en œuvre une authentification multi-facteurs pour tous les accès distants aux systèmes de contrôle industriels."
+        }
+      ],
+      "tags": [
+        "OT",
+        "ICS",
+        "Z-PENTEST",
+        "Water Treatment"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-14"
+    },
+    {
+      "sector": {
+        "en": [
+          "Agriculture_and_Environment",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Agriculture_et_Environnement",
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Naval Blockade and Energy Security",
+        "fr": "Blocus naval et sécurité énergétique"
+      },
+      "description": {
+        "en": "US naval blockade of Iranian ports leads to Iranian threats against all Gulf ports, impacting global maritime trade and energy.",
+        "fr": "Le blocus naval américain des ports iraniens entraîne des menaces iraniennes contre tous les ports du Golfe, impactant le commerce maritime mondial et l'énergie."
+      },
+      "recommandations": [
+        {
+          "en": "Advise maritime operators to increase cyber vigilance on vessel navigation systems (GNSS/AIS).",
+          "fr": "Conseiller aux opérateurs maritimes d'accroître la vigilance cyber sur les systèmes de navigation des navires (GNSS/AIS)."
+        },
+        {
+          "en": "Review continuity plans for energy supply chains in the event of regional logistics disruption.",
+          "fr": "Revoir les plans de continuité des chaînes d'approvisionnement énergétique en cas d'interruption logistique régionale."
+        }
+      ],
+      "tags": [
+        "Maritime",
+        "Iran",
+        "Energy"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/iran-war-future-scenario-and-business-improvements"
+      ],
+      "date": "2026-04-14"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Rockstar Games",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Leak of 8.1 GB of data including anti-cheat source code and financial data via a breach at a third-party analytics provider (Anodot/Snowflake).",
+        "fr": "Fuite de 8,1 Go de données, incluant le code source anti-triche et des données financières, via une brèche chez un fournisseur tiers d'analyses (Anodot/Snowflake)."
+      },
+      "mitre_ttps": [
+        "T1199: Trusted Relationship",
+        "T1537: Transfer Data to Cloud Account"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce MFA on all Snowflake and SaaS administrative accounts.",
+          "fr": "Imposer le MFA sur tous les comptes d'administration Snowflake et SaaS."
+        },
+        {
+          "en": "Audit and rotate all API keys and secrets shared with third-party partners.",
+          "fr": "Auditer et renouveler toutes les clés API et secrets partagés avec des partenaires tiers."
+        }
+      ],
+      "tags": [
+        "Snowflake",
+        "Gaming",
+        "Source Code Leak"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190796/data-breach/shinyhunters-claim-the-hack-of-rockstar-games-breach-and-started-leaking-data.html"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "victim": "McGraw-Hill",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Exposure of 45 million records via a Salesforce misconfiguration claimed by ShinyHunters.",
+        "fr": "Exposition de 45 millions d'enregistrements via une mauvaise configuration Salesforce revendiquée par ShinyHunters."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage",
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a security audit of Salesforce permission sets and public sharing rules.",
+          "fr": "Effectuer un audit de sécurité des ensembles de permissions et des règles de partage public de Salesforce."
+        },
+        {
+          "en": "Implement automated monitoring for large-scale data exports from CRM platforms.",
+          "fr": "Mettre en œuvre une surveillance automatisée des exports de données à grande échelle depuis les plateformes CRM."
+        }
+      ],
+      "tags": [
+        "Salesforce",
+        "Data Breach",
+        "Education"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/mcgraw-hill-confirms-data-breach-following-extortion-threat/"
+      ],
+      "date": "2026-04-14"
+    },
+    {
+      "victim": "Signature Healthcare",
+      "threat_actor": "Anubis",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Ransomware Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Ransomware attack resulting in the theft of 2 TB of patient data and systems downtime for 8 days.",
+        "fr": "Attaque par ransomware entraînant le vol de 2 To de données patients et un arrêt des systèmes pendant 8 jours."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1020: Automated Exfiltration"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure segmentation between patient management systems and general administrative networks.",
+          "fr": "Assurer une segmentation entre les systèmes de gestion des patients et les réseaux administratifs généraux."
+        },
+        {
+          "en": "Deploy endpoint detection and response (EDR) across all clinical workstations.",
+          "fr": "Déployer des solutions EDR sur tous les postes de travail cliniques."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Healthcare",
+        "Anubis"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-14"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-32201",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "6.5",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:*:*:*:*",
+      "product": "SharePoint Server",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "A spoofing vulnerability in Microsoft SharePoint Server is being actively exploited to deceive users and steal information.",
+        "fr": "Une vulnérabilité de spoofing dans Microsoft SharePoint Server est activement exploitée pour tromper les utilisateurs et voler des informations."
+      },
+      "mitre_ttps": [
+        "T1204.002: Malicious File"
+      ],
+      "recommandations": [
+        {
+          "en": "Prioritize patching SharePoint Server to address CVE-2026-32201 immediately.",
+          "fr": "Prioriser le déploiement du correctif pour SharePoint Server afin de traiter immédiatement la CVE-2026-32201."
+        },
+        {
+          "en": "Educate users to recognize signs of spoofed content within internal portals.",
+          "fr": "Sensibiliser les utilisateurs à reconnaître les signes de contenus falsifiés sur les portails internes."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "SharePoint",
+        "Spoofing"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/32898"
+      ],
+      "date": "2026-04-14"
+    },
+    {
+      "cve_id": "CVE-2026-34621",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "8.6",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
+      "product": "Acrobat Reader",
+      "vendor": "Adobe",
+      "description": {
+        "en": "Active exploitation of a prototype pollution vulnerability in Adobe Acrobat Reader allowing remote code execution.",
+        "fr": "Exploitation active d'une vulnérabilité de prototype pollution dans Adobe Acrobat Reader permettant l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Adobe Acrobat Reader to the latest version immediately.",
+          "fr": "Mettre à jour immédiatement Adobe Acrobat Reader vers la dernière version."
+        },
+        {
+          "en": "Implement application whitelisting to control the execution of suspicious binaries.",
+          "fr": "Mettre en œuvre une liste blanche d'applications pour contrôler l'exécution de binaires suspects."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Adobe",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190775/security/u-s-cisa-adds-adobe-fortinet-microsoft-windows-microsoft-exchange-server-and-microsoft-windows-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-04-14"
+    },
+    {
+      "cve_id": "CVE-2025-0520",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.4",
+      "epss": "0.00",
+      "cpe": "cpe:2.3:a:showdoc:showdoc:*:*:*:*:*:*:*:*",
+      "product": "ShowDoc",
+      "vendor": "ShowDoc",
+      "description": {
+        "en": "Unrestricted file upload vulnerability in ShowDoc allowing arbitrary PHP code execution.",
+        "fr": "Vulnérabilité de téléchargement de fichier non restreint dans ShowDoc permettant l'exécution de code PHP arbitraire."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest security updates to ShowDoc servers.",
+          "fr": "Appliquer les dernières mises à jour de sécurité aux serveurs ShowDoc."
+        },
+        {
+          "en": "Disable the file upload feature if not strictly required for business operations.",
+          "fr": "Désactiver la fonctionnalité de téléchargement de fichiers si elle n'est pas strictement nécessaire."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "ShowDoc"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190790/hacking/attackers-target-unpatched-showdoc-servers-via-cve-2025-0520.html"
+      ],
+      "date": "2026-04-14"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "PhantomPulse RAT Distributed via Obsidian Plugins",
+        "fr": "Le RAT PhantomPulse distribué via des plugins Obsidian"
+      },
+      "description": {
+        "en": "REF6598 targets finance and crypto sectors using social engineering on LinkedIn to share Obsidian vaults. Malicious plugins like 'Shell Commands' are used to execute the PhantomPulse RAT, which uses the Ethereum blockchain for C2 resolution.",
+        "fr": "REF6598 cible les secteurs de la finance et de la crypto via l'ingénierie sociale sur LinkedIn pour partager des coffres Obsidian. Des plugins malveillants comme 'Shell Commands' sont utilisés pour exécuter le RAT PhantomPulse, qui utilise la blockchain Ethereum pour la résolution du C2."
+      },
+      "threat_actor": "REF6598",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercrime / Espionage",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "panel.fefea22134.net"
+        ],
+        "IPv4": [
+          "195.3.222.251"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "panel.fefea22134.net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "70bbb38b70fd836d66e8166ec27be9aa8535b3876596fc80c45e3de4ce327980"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PhantomPulse",
+          "PhantomPull",
+          "Obsidian"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003: Spearphishing via Service",
+        "T1204.002: Malicious File",
+        "T1059.001: PowerShell",
+        "T1102.003: One-Way Communication"
+      ],
+      "analyse": {
+        "en": "The use of productivity tools like Obsidian bypasses traditional perimeter defenses. Blockchain-based C2 infrastructure makes blocking very difficult for standard security tools.",
+        "fr": "L'utilisation d'outils de productivité comme Obsidian contourne les défenses périmétriques traditionnelles. L'infrastructure C2 basée sur la blockchain rend le blocage très difficile pour les outils de sécurité standards."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for child processes (cmd.exe, powershell.exe) spawned by Obsidian.exe.",
+          "fr": "Surveiller les processus enfants (cmd.exe, powershell.exe) générés par Obsidian.exe."
+        },
+        {
+          "en": "Restrict third-party community plugin installations in productivity software.",
+          "fr": "Restreindre l'installation de plugins communautaires tiers dans les logiciels de productivité."
+        }
+      ],
+      "tags": [
+        "Obsidian",
+        "PhantomPulse",
+        "Blockchain C2",
+        "REF6598"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/phantom-in-the-vault"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "Stardrop NPM Supply Chain Attack",
+        "fr": "Attaque de la chaîne d'approvisionnement NPM Stardrop"
+      },
+      "description": {
+        "en": "Over 200 malicious NPM packages targeting AI and Finance sectors deploy 'Stardrop' infostealers to exfiltrate OpenAI/Anthropic API keys and AWS credentials.",
+        "fr": "Plus de 200 paquets NPM malveillants ciblant les secteurs de l'IA et de la Finance déploient l'infostealer 'Stardrop' pour exfiltrer les clés API OpenAI/Anthropic et les identifiants AWS."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie_et_Télécom",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "stardrop.dev",
+          "p9ia72yajp.us-east-1.awsapprunner.com"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "stardrop.dev"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "18e8742fb6fb5e70c0c91823d72f5d9074be1d1cba1cbfc0eca75b5427e544da"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Stardrop"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.001: Compromise Software Dependencies",
+        "T1552: Unsecured Credentials"
+      ],
+      "analyse": {
+        "en": "This campaign specifically targets AI developers, highlighting the high value of LLM API keys and model-related intellectual property.",
+        "fr": "Cette campagne cible spécifiquement les développeurs IA, soulignant la haute valeur des clés API LLM et de la propriété intellectuelle liée aux modèles."
+      },
+      "recommandations": [
+        {
+          "en": "Audit development environments for the presence of ~/.local/share/stardrop/auth.json.",
+          "fr": "Auditer les environnements de développement pour détecter la présence de ~/.local/share/stardrop/auth.json."
+        },
+        {
+          "en": "Use the --ignore-scripts flag when installing new NPM packages to prevent malicious post-install execution.",
+          "fr": "Utiliser l'option --ignore-scripts lors de l'installation de nouveaux paquets NPM pour empêcher l'exécution malveillante post-installation."
+        }
+      ],
+      "tags": [
+        "NPM",
+        "Supply Chain",
+        "AI",
+        "Infostealer"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/stardrop-attack"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "Fake Claude AI Installer Delivering PlugX RAT",
+        "fr": "Faux installateur Claude AI distribuant le RAT PlugX"
+      },
+      "description": {
+        "en": "A fraudulent website mimics the official Claude AI site to distribute a ZIP file that uses DLL side-loading to deploy the PlugX RAT.",
+        "fr": "Un site web frauduleux imite le site officiel de Claude AI pour distribuer un fichier ZIP qui utilise le DLL side-loading pour déployer le RAT PlugX."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "8.217.190.58"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PlugX",
+          "NOVUpdate.exe",
+          "avk.dll"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574.002: DLL Side-Loading",
+        "T1037.001: Logon Script (Startup folder)"
+      ],
+      "analyse": {
+        "en": "Exploiting the AI trend via social engineering is highly effective. The use of DLL side-loading with a signed binary (G DATA) increases the chance of bypassing antivirus products.",
+        "fr": "L'exploitation de la tendance IA via l'ingénierie sociale est très efficace. L'utilisation du DLL side-loading avec un binaire signé (G DATA) augmente les chances de contourner les produits antivirus."
+      },
+      "recommandations": [
+        {
+          "en": "Prohibit downloading executables from non-official or unverified websites.",
+          "fr": "Interdire le téléchargement d'exécutables depuis des sites web non officiels ou non vérifiés."
+        },
+        {
+          "en": "Scan the Windows Startup folder for the persistence indicator NOVUpdate.exe.",
+          "fr": "Rechercher l'indicateur de persistance NOVUpdate.exe dans le dossier de démarrage (Startup) de Windows."
+        }
+      ],
+      "tags": [
+        "PlugX",
+        "Claude AI",
+        "DLL Side-loading"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190754/malware/fake-claude-ai-installer-abuses-dll-sideloading-to-deploy-plugx.html"
+      ],
+      "date": "2026-04-15"
+    }
+  ]
 }
