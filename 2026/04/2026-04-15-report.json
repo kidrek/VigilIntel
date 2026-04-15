@@ -1,0 +1,13 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The provided report contains no threat intelligence data for analysis. As a result, no breach events, vulnerabilities, or threat campaigns have been identified.",
+      "fr": "Le rapport fourni ne contient aucune donnée de renseignement sur les menaces pour analyse. Par conséquent, aucun événement de violation, vulnérabilité ou campagne de menace n'a été identifié."
+    },
+    "date": "2026-04-15"
+  },
+  "geopolitical_analyse": [],
+  "breach_analyse": [],
+  "vulnerabilities_analyse": [],
+  "threats_analyse": []
+}
