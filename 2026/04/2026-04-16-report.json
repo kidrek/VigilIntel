@@ -1,0 +1,676 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The integration of generative AI into attack and defense cycles is redefining the threat landscape, illustrated by models like 'Mythos' uncovering 20-year-old vulnerabilities. Software supply chains remain a systemic weakness, with actors now targeting critical developer tools like GitHub Actions and AI integration packages. Concurrently, the Israel-Iran conflict has spilled into cyberspace with massive data destruction operations and direct threats against US tech firms. The use of legitimate code-signing certificates to disable antivirus software demonstrates increasing sophistication in adware. In Europe, the 'Digital Omnibus' proposal raises concerns about weakening GDPR and AI Act protections. The transport and logistics sector is becoming a priority target, where cybercrime now facilitates physical cargo theft. The professionalization of cyber-extortionists continues with intensive targeting of the German Mittelstand. Finally, the abuse of automation platforms like n8n allows attackers to bypass traditional security filters using trusted infrastructures.",
+      "fr": "L'intégration de l'IA générative dans les cycles d'attaque et de défense redéfinit la menace, illustrée par la capacité de modèles comme « Mythos » à déceler des failles logicielles vieilles de 20 ans. La chaîne d'approvisionnement logicielle reste la vulnérabilité systémique majeure, les acteurs ciblant désormais les outils de développement critiques comme GitHub Actions et les packages d'intégration IA. Parallèlement, le conflit israélo-iranien se transpose dans le cyberespace avec des opérations de destruction de données massives et des menaces directes contre les entreprises technologiques américaines. L'exploitation de certificats de signature légitimes pour désactiver les antivirus montre une sophistication accrue des logiciels malveillants. En Europe, la pression réglementaire via le « Digital Omnibus » suscite des inquiétudes sur l'affaiblissement potentiel du RGPD et de l'IA Act. Le secteur des transports et de la logistique émerge comme une cible prioritaire, où la cybercriminalité facilite désormais le vol de cargaisons physiques. La professionnalisation des cyber-extorqueurs se confirme avec un ciblage intensif des PME allemandes (Mittelstand). Enfin, l'abus des plateformes d'automatisation (n8n) permet aux attaquants de contourner les filtres de sécurité traditionnels."
+    },
+    "date": "2026-04-16"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Ukraine-Russia Conflict: PMCs",
+        "fr": "Conflit Ukraine-Russie : SMP"
+      },
+      "description": {
+        "en": "Analysis of the emergence of Ukrainian private military companies as a lever of post-war influence.",
+        "fr": "Analyse sur l'\u00e9mergence des soci\u00e9t\u00e9s militaires priv\u00e9es ukrainiennes comme levier d'influence post-guerre."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor the evolution of private military actors for potential supply chain and security service risks.",
+          "fr": "Surveiller l'\u00e9volution des acteurs militaires priv\u00e9s pour les risques potentiels sur la supply chain et les services de s\u00e9curit\u00e9."
+        },
+        {
+          "en": "Assess the geopolitical impact of non-state actors in Eastern European security frameworks.",
+          "fr": "\u00c9valuer l'impact g\u00e9opolitique des acteurs non \u00e9tatiques dans les cadres de s\u00e9curit\u00e9 d'Europe de l'Est."
+        }
+      ],
+      "tags": [
+        "Ukraine",
+        "PMC",
+        "Influence"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/les-societes-militaires-privees-ukrainiennes-entre-heritage-de-guerre-et-futur-levier-dinfluence-partie-2-2/"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "US-Israel-Iran Conflict",
+        "fr": "Conflit US-Isra\u00ebl-Iran"
+      },
+      "description": {
+        "en": "US naval blockade and retaliatory Iranian cyber-attacks, including a 47-day internet blackout in Iran.",
+        "fr": "Blocus naval am\u00e9ricain, cyber-attaques de r\u00e9torsion iraniennes et blackout internet en Iran (jour 47)."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen DDoS protections for critical infrastructure and international trade entities.",
+          "fr": "Renforcer les protections DDoS pour les infrastructures critiques et les entit\u00e9s de commerce international."
+        },
+        {
+          "en": "Establish business continuity plans for regions facing high internet instability.",
+          "fr": "\u00c9tablir des plans de continuit\u00e9 d'activit\u00e9 pour les r\u00e9gions confront\u00e9es \u00e0 une forte instabilit\u00e9 d'Internet."
+        }
+      ],
+      "tags": [
+        "Conflict",
+        "Blockade",
+        "Wiper"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Chile\u2019s Cybersecurity Framework Law",
+        "fr": "Loi-cadre sur la cybers\u00e9curit\u00e9 au Chili"
+      },
+      "description": {
+        "en": "Law No. 21,663 imposes strict detection and reporting obligations (3h to 72h) for critical operators.",
+        "fr": "La loi n\u00b0 21.663 impose des obligations de d\u00e9tection et de signalement (3h \u00e0 72h) pour les op\u00e9rateurs d'importance vitale."
+      },
+      "recommandations": [
+        {
+          "en": "Review incident response procedures to meet the new 3-hour reporting threshold for critical incidents.",
+          "fr": "Revoir les proc\u00e9dures de r\u00e9ponse aux incidents pour respecter le nouveau d\u00e9lai de 3 heures pour les incidents critiques."
+        },
+        {
+          "en": "Implement continuous monitoring systems to ensure rapid detection as required by Chilean law.",
+          "fr": "Mettre en \u0153uvre des syst\u00e8mes de surveillance continue pour garantir une d\u00e9tection rapide telle que requise par la loi chilienne."
+        }
+      ],
+      "tags": [
+        "Regulation",
+        "Chile",
+        "Compliance"
+      ],
+      "sources": [
+        "https://any.run/cybersecurity-blog/chile-cybersecurity-framework-law/"
+      ],
+      "date": "2026-04-15"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "McGraw Hill",
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "\u00c9ducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Leak of 13.5 million accounts (emails, names) due to a Salesforce misconfiguration.",
+        "fr": "Fuite de 13,5 millions de comptes (emails, noms) suite \u00e0 une mauvaise configuration Salesforce."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a security audit of Salesforce guest user permissions and sharing rules.",
+          "fr": "Effectuer un audit de s\u00e9curit\u00e9 des permissions d'utilisateurs invit\u00e9s et des r\u00e8gles de partage Salesforce."
+        },
+        {
+          "en": "Implement automated monitoring for public exposure of sensitive database objects.",
+          "fr": "Mettre en \u0153uvre une surveillance automatis\u00e9e de l'exposition publique des objets de base de donn\u00e9es sensibles."
+        }
+      ],
+      "tags": [
+        "DataLeak",
+        "Salesforce",
+        "Cloud"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/McGrawHill"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "victim": "St. Joseph County, Indiana",
+      "threat_actor": "Handala Hack",
+      "threat_actor_origin": "IRAN",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [
+        "Handala"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense",
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Theft of medical records and police reports via a compromised cloud fax server.",
+        "fr": "Vol de dossiers m\u00e9dicaux et de rapports de police via un serveur fax cloud compromis."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object",
+        "T1560: Archive Collected Data"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit third-party cloud communication providers for security compliance.",
+          "fr": "Auditer les fournisseurs tiers de communication cloud pour la conformit\u00e9 s\u00e9curit\u00e9."
+        },
+        {
+          "en": "Encrypt sensitive data both at rest and in transit within cloud faxing services.",
+          "fr": "Chiffrer les donn\u00e9es sensibles au repos et en transit dans les services de fax cloud."
+        }
+      ],
+      "tags": [
+        "Healthcare",
+        "Government",
+        "Fax",
+        "Exfiltration"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-39842",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:openremote:openremote:-:*:*:*:*:*:*:*",
+      "product": "OpenRemote",
+      "vendor": "OpenRemote",
+      "description": {
+        "en": "Code injection via Nashorn and Groovy engines without sandboxing.",
+        "fr": "Injection de code via les moteurs Nashorn et Groovy sans sandboxing."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update OpenRemote to the latest version immediately.",
+          "fr": "Mettre \u00e0 jour OpenRemote vers la derni\u00e8re version imm\u00e9diatement."
+        },
+        {
+          "en": "Implement a sandbox for all dynamic script execution engines.",
+          "fr": "Mettre en \u0153uvre un bac \u00e0 sable (sandbox) pour tous les moteurs d'ex\u00e9cution de scripts dynamiques."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "IoT"
+      ],
+      "sources": [
+        "https://securityonline.info/openremote-cvss-10-vulnerability-iot-security-rce/"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "cve_id": "CVE-2026-33032",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:be_fe_nginx:nginx-ui:*:*:*:*:*:*:*:*",
+      "product": "Nginx UI",
+      "vendor": "Nginx UI",
+      "description": {
+        "en": "Auth bypass on /mcp_message endpoint allows full server takeover.",
+        "fr": "Contournement d'authentification sur l'endpoint /mcp_message permettant une prise de contr\u00f4le totale."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Nginx UI to version 2.3.4 or later.",
+          "fr": "Mettre \u00e0 jour Nginx UI vers la version 2.3.4 ou ult\u00e9rieure."
+        },
+        {
+          "en": "Restrict access to the Nginx UI management port (default 9000) using a firewall or VPN.",
+          "fr": "Restreindre l'acc\u00e8s au port d'administration de Nginx UI (9000 par d\u00e9faut) via un pare-feu ou un VPN."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AuthBypass",
+        "Exploited"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/critical-nginx-ui-auth-bypass-flaw-now-actively-exploited-in-the-wild/"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "cve_id": "CVE-2026-33825",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:defender:*:*:*:*:*:*:*:*",
+      "product": "MS Defender",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "BlueHammer: Abuse of the signature update mechanism to obtain SYSTEM privileges.",
+        "fr": "BlueHammer : Abus du m\u00e9canisme de mise \u00e0 jour des signatures pour obtenir les privil\u00e8ges SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft's April 2026 security patches immediately.",
+          "fr": "Appliquer imm\u00e9diatement les correctifs de s\u00e9curit\u00e9 Microsoft d'avril 2026."
+        },
+        {
+          "en": "Monitor for unusual process activity originating from the Microsoft Defender signature update service.",
+          "fr": "Surveiller toute activit\u00e9 inhabituelle de processus provenant du service de mise \u00e0 jour des signatures de Microsoft Defender."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "PrivEsc",
+        "BlueHammer"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/microsoft-april-2026-patch-tuesday-bluehammer"
+      ],
+      "date": "2026-04-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "UAC-0247 Espionage Campaign Against Ukrainian Infrastructure",
+        "fr": "UAC-0247 : Campagne d'espionnage contre les infrastructures ukrainiennes"
+      },
+      "description": {
+        "en": "Intensification of attacks targeting Ukrainian municipalities and hospitals using phishing and the AgingFly malware.",
+        "fr": "Intensification des attaques ciblant les municipalit\u00e9s et les h\u00f4pitaux ukrainiens via phishing et le malware AgingFly."
+      },
+      "threat_actor": "UAC-0247",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "\u00c9tat",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant",
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "109[.]237.97.43"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "ukrvarta[.]online",
+          "nazk.linkpc[.]net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "57c6b2e25330b2385a0f3bcd8c7ae531b745a3e7e50657d7f78eaef7ad3d3f8d"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AgingFly",
+          "SilentLoop",
+          "ChromElevator",
+          "ZAPiDESK",
+          "RustScan",
+          "Ligolo-ng",
+          "Chisel"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001: Phishing: Spearphishing Attachment",
+        "T1218.005: System Binary Proxy Execution: Mshta",
+        "T1574.002: DLL Side-Loading",
+        "T1021.001: Remote Services: Remote Desktop Protocol",
+        "T1059.001: PowerShell"
+      ],
+      "analyse": {
+        "en": "The campaign uses multi-stage infection chains involving LNK, HTA, and dynamic handler compilation to evade detection. It focuses on exfiltrating credentials and communication data (WhatsApp) from critical infrastructure personnel.",
+        "fr": "La campagne utilise des cha\u00eenes d'infection \u00e0 plusieurs \u00e9tapes impliquant des fichiers LNK et HTA, ainsi que la compilation dynamique de handlers pour \u00e9vader la d\u00e9tection. Elle se concentre sur l'exfiltration d'identifiants et de donn\u00e9es WhatsApp."
+      },
+      "recommandations": [
+        {
+          "en": "Block .lnk and .hta extensions via software restriction policies (AppLocker).",
+          "fr": "Bloquer les extensions .lnk et .hta via des politiques de restriction logicielle (AppLocker)."
+        },
+        {
+          "en": "Monitor for the creation of tasks named 'OneDrive Updater' and directories in LocalAppData.",
+          "fr": "Surveiller la cr\u00e9ation de t\u00e2ches nomm\u00e9es 'OneDrive Updater' et de r\u00e9pertoires dans LocalAppData."
+        }
+      ],
+      "tags": [
+        "Espionage",
+        "Ukraine",
+        "Malware"
+      ],
+      "sources": [
+        "https://cert.gov.ua/article/6288271"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "TeamPCP Supply Chain Offensive on AI Tools",
+        "fr": "TeamPCP : Offensive majeure sur la supply chain logicielle et l'IA"
+      },
+      "description": {
+        "en": "Compromise of multiple software ecosystems, including LiteLLM and Checkmarx, to steal API keys and secrets.",
+        "fr": "Compromission de plusieurs \u00e9cosyst\u00e8mes logiciels, dont LiteLLM et Checkmarx, pour voler des cl\u00e9s API et des secrets."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "LiteLLM",
+          "GitHub Actions"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002: Supply Chain Compromise: Compromise Software Dependencies",
+        "T1552.001: Unsecured Credentials: Private Keys",
+        "T1199: Trusted Relationship"
+      ],
+      "analyse": {
+        "en": "TeamPCP exploits stolen GitHub credentials to poison CI/CD pipelines. This demonstrates a shift towards targeting the developer identity as the new security perimeter.",
+        "fr": "TeamPCP exploite des identifiants GitHub vol\u00e9s pour empoisonner les pipelines CI/CD. Cela d\u00e9montre un basculement vers le ciblage de l'identit\u00e9 du d\u00e9veloppeur."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce mandatory commit signing and artifact verification.",
+          "fr": "Imposer la signature obligatoire des commits et la v\u00e9rification des artefacts."
+        },
+        {
+          "en": "Rotate all API keys and secrets if LiteLLM or Checkmarx GitHub Actions are used.",
+          "fr": "Renouveler toutes les cl\u00e9s API et secrets si LiteLLM ou les GitHub Actions de Checkmarx sont utilis\u00e9s."
+        }
+      ],
+      "tags": [
+        "SupplyChain",
+        "GitHub",
+        "AI"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/your-supply-chain-breach-is-someone-else-payday"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "Dragon Boss Solutions: Abusing Signed Software to Neutralize AV",
+        "fr": "Dragon Boss Solutions : Abus de logiciels sign\u00e9s pour neutraliser les antivirus"
+      },
+      "description": {
+        "en": "Use of signed PUPs to deploy scripts that disable major security solutions on 23,500 hosts.",
+        "fr": "Utilisation de PUPs sign\u00e9s pour d\u00e9ployer des scripts d\u00e9sactivant les solutions de s\u00e9curit\u00e9 sur 23 500 h\u00f4tes."
+      },
+      "threat_actor": "Dragon Boss Solutions LLC",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Business_Services"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "chromsterabrowser[.]com",
+          "worldwidewebframework3[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Advanced Installer",
+          "ClockRemoval.ps1"
+        ]
+      },
+      "mitre_ttps": [
+        "T1562.001: Impair Defenses: Disable or Modify Tools",
+        "T1553.002: Subvert Trust Controls: Code Signing",
+        "T1053.005: Scheduled Task/Job: Scheduled Task"
+      ],
+      "analyse": {
+        "en": "The campaign uses the trust of digital certificates to bypass initial defenses and then aggressively uninstalls EDR/AV solutions, leaving systems vulnerable to further attacks.",
+        "fr": "La campagne utilise la confiance des certificats num\u00e9riques pour contourner les d\u00e9fenses initiales puis d\u00e9sinstalle agressivement les solutions EDR/AV."
+      },
+      "recommandations": [
+        {
+          "en": "Revoke or block execution of certificates signed by 'Dragon Boss Solutions LLC'.",
+          "fr": "R\u00e9voquer ou bloquer l'ex\u00e9cution des certificats sign\u00e9s par 'Dragon Boss Solutions LLC'."
+        },
+        {
+          "en": "Monitor for WMI event subscriptions containing 'MbRemoval' or 'MbSetup'.",
+          "fr": "Surveiller les abonnements d'\u00e9v\u00e9nements WMI contenant 'MbRemoval' ou 'MbSetup'."
+        }
+      ],
+      "tags": [
+        "Adware",
+        "DefenseEvasion",
+        "CodeSigning"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/signed-software-abused-to-deploy-antivirus-killing-scripts/"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "Mirax: Android RAT Evolving into Residential Proxies",
+        "fr": "Mirax : RAT Android \u00e9voluant vers les proxys r\u00e9sidentiels"
+      },
+      "description": {
+        "en": "Android RAT targeting Spanish-speaking users, turning infected devices into SOCKS5 proxy nodes.",
+        "fr": "RAT Android ciblant les utilisateurs hispanophones, transformant les appareils en n\u0153uds de proxy SOCKS5."
+      },
+      "threat_actor": "Mirax",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce_de_D\u00e9tail_et_Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Golden Encryption",
+          "WebSockets"
+        ]
+      },
+      "mitre_ttps": [
+        "T1470: User Execution",
+        "T1624.001: Event Triggered Execution: Accessibility Service",
+        "T1090: Proxy"
+      ],
+      "analyse": {
+        "en": "With 220,000 accounts affected, Mirax builds a massive botnet of residential proxies that facilitates fraud while hiding the attackers behind legitimate consumer IPs.",
+        "fr": "Avec 220 000 comptes touch\u00e9s, Mirax construit un botnet massif de proxys r\u00e9sidentiels qui facilite les fraudes tout en cachant les attaquants."
+      },
+      "recommandations": [
+        {
+          "en": "Disable application sideloading (APK) on corporate mobile devices via MDM.",
+          "fr": "D\u00e9sactiver le sideloading d'applications (APK) sur les terminaux mobiles via MDM."
+        },
+        {
+          "en": "Monitor for unusual outbound SOCKS5 traffic from mobile devices on Wi-Fi segments.",
+          "fr": "Surveiller le trafic SOCKS5 sortant inhabituel depuis les terminaux mobiles."
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Android",
+        "Proxy",
+        "Fraud"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190842/uncategorized/mirax-malware-campaign-hits-220k-accounts-enables-full-remote-control.html"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "title": {
+        "en": "The n8n n8mare: Misusing AI Automation for Phishing",
+        "fr": "The n8n n8mare : Abus de l'automatisation IA pour le phishing"
+      },
+      "description": {
+        "en": "Exploitation of n8n.cloud webhooks to bypass email reputation filters and deliver malware.",
+        "fr": "Exploitation des webhooks n8n.cloud pour contourner les filtres de r\u00e9putation d'emails."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "tti.app.n8n[.]cloud",
+          "centrastage[.]net",
+          "monicasue.app.n8n[.]cloud"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "n8n",
+          "ITarian RMM",
+          "Datto RMM"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002: Phishing: Spearphishing Link",
+        "T1204.001: User Execution: Malicious Link",
+        "T1071.001: Application Layer Protocol: Web Protocols"
+      ],
+      "analyse": {
+        "en": "Threat actors leverage low-code productivity tools to create credible, dynamic attack infrastructures. n8n webhooks provide a veneer of legitimacy to malicious URLs.",
+        "fr": "Les attaquants exploitent des outils low-code pour cr\u00e9er des infrastructures d'attaque dynamiques et cr\u00e9dibles via les webhooks n8n."
+      },
+      "recommandations": [
+        {
+          "en": "Alert on high traffic volumes to n8n.cloud from unauthorized internal sources.",
+          "fr": "Alerter sur les volumes de trafic \u00e9lev\u00e9s vers n8n.cloud depuis des sources internes non autoris\u00e9es."
+        },
+        {
+          "en": "Block unapproved Remote Management and Monitoring (RMM) tools at the endpoint level.",
+          "fr": "Bloquer les outils RMM non approuv\u00e9s au niveau des terminaux (endpoints)."
+        }
+      ],
+      "tags": [
+        "Phishing",
+        "Automation",
+        "SaaS",
+        "RMM"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/the-n8n-n8mare/"
+      ],
+      "date": "2026-04-15"
+    }
+  ]
+}
